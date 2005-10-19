@@ -1,5 +1,5 @@
 /*
- * $Id: LocalServletManager.java,v 1.14 2005-10-06 08:21:56 tlipkis Exp $
+ * $Id: LocalServletManager.java,v 1.15 2005-10-19 18:31:27 thib_gc Exp $
  */
 
 /*
@@ -200,8 +200,8 @@ public class LocalServletManager extends BaseServletManager {
 		       "org.lockss.servlet.AdminIpAccess");
     handler.addServlet("ProxyIpAccess", "/ProxyIpAccess",
 		       "org.lockss.servlet.ProxyIpAccess");
-    handler.addServlet("AccessControl", "/AccessControl",
-                       "org.lockss.servlet.AccessControl");
+    handler.addServlet("ProxyAndContent", "/ProxyAndContent",
+                       "org.lockss.servlet.ProxyAndContent");
     handler.addServlet("Hash CUS", "/HashCUS",
 		       "org.lockss.servlet.HashCUS");
     handler.addServlet("Raise Alert", "/RaiseAlert",

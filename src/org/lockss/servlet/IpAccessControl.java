@@ -1,5 +1,5 @@
 /*
- * $Id: IpAccessControl.java,v 1.30 2005-10-14 21:24:13 thib_gc Exp $
+ * $Id: IpAccessControl.java,v 1.31 2005-10-19 18:31:27 thib_gc Exp $
  */
 
 /*
@@ -156,11 +156,11 @@ public abstract class IpAccessControl extends LockssServlet {
 
     // Create and layout form
     Form form = newForm();
-    if (errMsg != null) { layoutIpAllowDenyError(form, errMsg); }
+    layoutErrorBlock(form);
     layoutIpAllowDenyTable(form, incl, excl, footIP, inclErrs,
         exclErrs, ALLOW_IPS_NAME, DENY_IPS_NAME);
     additionalFormLayout(form);
-    layoutIpAllowDenySubmit(form);
+    layoutSubmitButton(form, "Update");
     page.add(form);
 
     // Finish laying out page

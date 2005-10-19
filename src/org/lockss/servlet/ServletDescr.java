@@ -1,5 +1,5 @@
 /*
- * $Id: ServletDescr.java,v 1.5 2005-10-11 05:46:57 tlipkis Exp $
+ * $Id: ServletDescr.java,v 1.6 2005-10-19 18:31:27 thib_gc Exp $
  */
 
 /*
@@ -60,7 +60,7 @@ public class ServletDescr {
 
   public static final int IN_NAV = 0x1000;
   public static final int IN_UIHOME = 0x2000;
-  public static final int IN_ACCESSCONTROL = 0x4000;
+  public static final int IN_PROXYANDCONTENT = 0x4000; // Will probably go away now
 
 
   public ServletDescr(Class cls,
@@ -191,8 +191,9 @@ public class ServletDescr {
     return isFlagSet(IN_UIHOME);
   }
 
-  public boolean isInAccessControl() {
-    return isFlagSet(IN_ACCESSCONTROL);
+  public boolean isInProxyAndContent() {
+    // Will probably go away now
+    return isFlagSet(IN_PROXYANDCONTENT);
   }
 
   private boolean isFlagSet(int flag) {

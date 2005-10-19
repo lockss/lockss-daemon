@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.13 2005-10-14 21:24:13 thib_gc Exp $
+ * $Id: ServletUtil.java,v 1.14 2005-10-19 18:31:27 thib_gc Exp $
  */
 
 /*
@@ -45,18 +45,6 @@ import org.mortbay.html.*;
 
 public class ServletUtil {
 
-  private static final String ERRORBLOCK_STATUS_AFTER =
-    "<center><font size=\"+1\">";
-
-  private static final String ERRORBLOCK_ERROR_AFTER =
-    "</font></center><br>";
-
-  private static final String ERRORBLOCK_ERROR_BEFORE =
-    "<center><font color=\"red\" size=\"+1\">";
-
-  private static final String ERRORBLOCK_STATUS_BEFORE =
-    "<center><font color=\"red\" size=\"+1\">";
-
   /** Format to display date/time in headers */
   public static final DateFormat headerDf =
     new SimpleDateFormat("HH:mm:ss MM/dd/yy");
@@ -81,10 +69,10 @@ public class ServletUtil {
   private static final int ALLOWDENY_COLUMNS = 30;
 
   private static final String ALLOWDENY_ERROR_AFTER =
-    ERRORBLOCK_ERROR_AFTER;
+    "</font></center><br>";
 
   private static final String ALLOWDENY_ERROR_BEFORE =
-    ERRORBLOCK_ERROR_BEFORE;
+    "<center><font color=\"red\" size=\"+1\">";
 
   private static final int ALLOWDENY_LINES = 15;
 
@@ -99,6 +87,18 @@ public class ServletUtil {
 
   private static final String ALLOWDENYERRORS_BEFORE =
     "<font color=\"red\">";
+
+  private static final String ERRORBLOCK_ERROR_AFTER =
+    "</font></center><br>";
+
+  private static final String ERRORBLOCK_ERROR_BEFORE =
+    "<center><font color=\"red\" size=\"+1\">";
+
+  private static final String ERRORBLOCK_STATUS_AFTER =
+    "<center><font size=\"+1\">";
+
+  private static final String ERRORBLOCK_STATUS_BEFORE =
+    "<center><font color=\"red\" size=\"+1\">";
 
   private static final String EXPLANATION_ATTRIBUTES =
     "width=\"85%\"";
@@ -158,6 +158,12 @@ public class ServletUtil {
   private static final String PORT_ATTRIBUTES =
     ALLOWDENY_CELL_ATTRIBUTES;
 
+  private static final String SUBMIT_AFTER =
+    "</center>";
+
+  private static final String SUBMIT_BEFORE =
+    "<br><center>";
+
   public static void layoutEnablePortRow(LockssServlet servlet,
                                          Table table,
                                          String enableFieldName,
@@ -205,6 +211,11 @@ public class ServletUtil {
         table.add(StringUtil.separatedString(usablePorts, ", "));
       }
     }
+  }
+
+  public static void layoutErrorBlock(Composite composite,
+                                      String errMsg) {
+    layoutErrorBlock(composite, errMsg, null);
   }
 
   public static void layoutErrorBlock(Composite composite,
@@ -299,22 +310,6 @@ public class ServletUtil {
     page.add(comp);
   }
 
-  public static void layoutIpAllowDenyError(Composite composite,
-                                            String errMsg) {
-    Composite errcmp = new Composite();
-    errcmp.add(ALLOWDENY_ERROR_BEFORE);
-    errcmp.add(errMsg);
-    errcmp.add(ALLOWDENY_ERROR_AFTER);
-    composite.add(errcmp);
-  }
-
-  public static void layoutIpAllowDenySubmit(LockssServlet servlet,
-                                             Composite composite) {
-    Input submit = new Input(Input.Submit, "action", "Update");
-    servlet.setTabOrder(submit);
-    composite.add("<br><center>" + submit + "</center>");
-  }
-
   public static void layoutIpAllowDenyTable(LockssServlet servlet,
                                             Composite composite,
                                             Vector allow,
@@ -384,11 +379,12 @@ public class ServletUtil {
     page.add(table);
   }
 
-  public static void layoutUpdateButton(LockssServlet servlet,
-                                        Form form) {
-    Input submit = new Input(Input.Submit, "action", "Update");
+  public static void layoutSubmitButton(LockssServlet servlet,
+                                        Composite composite,
+                                        String value) {
+    Input submit = new Input(Input.Submit, "action", value);
     servlet.setTabOrder(submit);
-    form.add("<br><center>" + submit + "</center>");
+    composite.add(SUBMIT_BEFORE + submit + SUBMIT_AFTER);
   }
 
   public static Image makeImage(String file,

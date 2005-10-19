@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.73 2005-10-14 21:24:13 thib_gc Exp $
+ * $Id: LockssServlet.java,v 1.74 2005-10-19 18:31:27 thib_gc Exp $
  */
 
 /*
@@ -126,20 +126,20 @@ public abstract class LockssServlet extends HttpServlet
   protected static final ServletDescr SERVLET_ADMIN_ACCESS_CONTROL =
     new ServletDescr(AdminIpAccess.class,
                      "Admin Access Control",
-                     ServletDescr.IN_NAV | ServletDescr.IN_UIHOME | ServletDescr.IN_ACCESSCONTROL,
+                     ServletDescr.IN_NAV | ServletDescr.IN_UIHOME,
                      "Control access to the administrative UI");
   protected static final ServletDescr SERVLET_PROXY_ACCESS_CONTROL =
     new ServletDescr(ProxyIpAccess.class,
                      "Proxy Access Control",
                      ServletDescr.IN_NAV | ServletDescr.IN_UIHOME,
                      "Control access to the preserved content");
-  protected static final ServletDescr SERVLET_ACCESS_CONTROL =
-    new ServletDescr(AccessControl.class,
-                     "Access Control",
+  protected static final ServletDescr SERVLET_PROXY_AND_CONTENT =
+    new ServletDescr(ProxyAndContent.class,
+                     "Proxy Options and Content Access Control",
                      ServletDescr.NOT_IN_NAV /* ,
-                     "Control access to the cache's preserved"
+                     "Configure proxy options. Manage access to the"
                      + "<br>"
-                     + "content and administrative UI" */);
+                     + "content preserved by the cache." */);
   protected static final ServletDescr SERVLET_PROXY_INFO =
     new ServletDescr(ProxyConfig.class,
                      "Proxy Info",
@@ -209,7 +209,7 @@ public abstract class LockssServlet extends HttpServlet
      SERVLET_AU_CONFIG,
      SERVLET_ADMIN_ACCESS_CONTROL,
      SERVLET_PROXY_ACCESS_CONTROL,
-     SERVLET_ACCESS_CONTROL,
+     SERVLET_PROXY_AND_CONTENT,
      SERVLET_PROXY_INFO,
      SERVLET_DAEMON_STATUS,
      SERVLET_DISPLAY_CONTENT,
@@ -942,13 +942,8 @@ public abstract class LockssServlet extends HttpServlet
     }
   }
 
-  protected void layoutIpAllowDenyError(Composite composite,
-                                        String errMsg) {
-    ServletUtil.layoutIpAllowDenyError(composite, errMsg);
-  }
-
-  protected void layoutIpAllowDenySubmit(Composite composite) {
-    ServletUtil.layoutIpAllowDenySubmit(this, composite);
+  protected void layoutSubmitButton(Composite composite, String value) {
+    ServletUtil.layoutSubmitButton(this, composite, value);
   }
 
   protected void layoutIpAllowDenyTable(Composite composite,
@@ -1005,10 +1000,12 @@ public abstract class LockssServlet extends HttpServlet
     return HtmlUtil.encode(s, HtmlUtil.ENCODE_ATTR);
   }
 
-  /** Create message and error message block 
+  /** Create message and error message block
    * @param composite TODO*/
   protected void layoutErrorBlock(Composite composite) {
-    ServletUtil.layoutErrorBlock(composite, errMsg, statusMsg);
+    if (errMsg != null || statusMsg != null) {
+      ServletUtil.layoutErrorBlock(composite, errMsg, statusMsg);
+    }
   }
 
   /** Exception thrown if multipart form data is longer than the
