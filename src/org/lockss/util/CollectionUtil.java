@@ -1,5 +1,5 @@
 /*
- * $Id: CollectionUtil.java,v 1.11 2005-10-10 22:19:48 smorabito Exp $
+ * $Id: CollectionUtil.java,v 1.12 2005-10-19 17:05:19 tlipkis Exp $
  */
 
 /*
@@ -126,9 +126,13 @@ public class CollectionUtil {
     return next;
   }
 
+  private static LockssRandom random = new LockssRandom();
+
   /**
    * Randomly select <i>count</i> entries evenly distributed from
-   * collection <i>c</i>.
+   * collection <i>c</i> and return them in a random order.  If
+   * <i>count</i> is equal to <code>c.size()</code>, returns a random
+   * permutation of <i>c</i>
    *
    * @param c The collection from which to select entries.
    * @param count The number of items to return.
@@ -136,35 +140,57 @@ public class CollectionUtil {
    * @throws IllegalArgumentException if count is non-positive or
    *         greater than the size of the collection.
    */
-  public static Collection randomSelection(Collection c, int count) {
-    if (count <= 0 || count > c.size()) {
+  public static List randomSelection(Collection c, int count) {
+    int choiceSize = c.size();
+    if (count <= 0 || count > choiceSize) {
       throw new IllegalArgumentException("'count' must be greater than 0 "+
                                          "and smaller than or equal "+
                                          " to the size of the collection.");
     }
-    LockssRandom random = new LockssRandom();
-    ArrayList l = new ArrayList(c);
+    Object[] arr = c.toArray();
     ArrayList result = new ArrayList(count);
-    int lastIndex, idx;
-    while (--count >= 0) {
-      lastIndex = l.size() - 1;
-      idx = lastIndex == 0 ? 0 : random.nextInt(lastIndex);
-      result.add(l.get(idx));
-      l.set(idx, l.get(lastIndex)); // Swap item and last item.
-      l.remove(lastIndex);          // Delete last item.
+    while (--count > 0) {
+      int idx = random.nextInt(choiceSize);
+      result.add(arr[idx]);
+      arr[idx] = arr[choiceSize - 1]; // Replace chosen item with last item.
+      choiceSize--;
     }
+    result.add(arr[0]);
     return result;
   }
 
   /**
-   * Randomly select one item from a collection.
+   * Randomly permute a collection
+   * @param c The collection to permute
+   * @return a permuted collection
+   */
+  public static List randomPermutation(Collection c) {
+    return randomSelection(c, c.size());
+  }
+
+  /**
+   * Randomly select one item from a list.
+   *
+   * @param c The list from which to select an item.
+   * @return An item randomly selcted from the list.
+   */
+  public static Object randomSelection(List c) {
+    return c.get(random.nextInt(c.size()));
+  }
+
+  /**
+   * Randomly select one item from a collection.  It is more efficient to
+   * use {@link #randomSelection(List)} instead.
    *
    * @param c The collection from which to select an item.
    * @return An item randomly selcted from the collection.
    */
   public static Object randomSelection(Collection c) {
-    LockssRandom random = new LockssRandom();
-    Object[] arr = c.toArray();
-    return arr[random.nextInt(arr.length - 1)];
+    int idx = random.nextInt(c.size());
+    Iterator iter = c.iterator();
+    while (--idx >= 0) {
+      iter.next();
+    }
+    return iter.next();
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestCollectionUtil.java,v 1.10 2005-10-10 23:48:03 troberts Exp $
+ * $Id: TestCollectionUtil.java,v 1.11 2005-10-19 17:05:19 tlipkis Exp $
  */
 
 /*
@@ -150,6 +150,42 @@ public class TestCollectionUtil extends LockssTestCase {
     assertDoesNotContain(set, element);
   }
 
+  public static void assertNoDuplicates(Collection c) {
+    if (c.size() != SetUtil.theSet(c).size()) {
+      fail("Duplicates found in " + c);
+    }
+  }
+
+  public void testRandomSelectionFromColl() throws Exception {
+    assertSuccessRate(0.5, 10);
+    Collection coll = ListUtil.list("a", "b", "c", "d", "e");
+    Set set = new HashSet();
+    int rpt = 0;
+    while (++rpt < 100000) {
+      set.add(CollectionUtil.randomSelection(coll));
+      if (set.size() == coll.size()) {
+	log.debug(""+rpt);
+	return;
+      }
+    }
+    fail("Selected only " + set + " elements from " + coll);
+  }
+
+  public void testRandomSelectionFromList() throws Exception {
+    assertSuccessRate(0.5, 10);
+    List list = ListUtil.list("a", "b", "c", "d", "e");
+    Set set = new HashSet();
+    int rpt = 0;
+    while (++rpt < 100000) {
+      set.add(CollectionUtil.randomSelection(list));
+      if (set.size() == list.size()) {
+	log.debug(""+rpt);
+	return;
+      }
+    }
+    fail("Selected only " + set + " elements from " + list);
+  }
+
   public void testRandomSelection() throws Exception {
     Collection all = ListUtil.list("a", "b", "c");
     // Legal calls.
@@ -159,9 +195,11 @@ public class TestCollectionUtil extends LockssTestCase {
     Collection c2 = CollectionUtil.randomSelection(all, 2);
     assertEquals(2, c2.size());
     assertTrue(all.containsAll(c2));
+    assertNoDuplicates(c2);
     Collection c3 = CollectionUtil.randomSelection(all, 3);
     assertEquals(3, c3.size());
     assertTrue(all.containsAll(c3));
+    assertNoDuplicates(c3);
     // Illegal calls.
     try {
       // Too many!
@@ -185,4 +223,22 @@ public class TestCollectionUtil extends LockssTestCase {
       // expected
     }
   }
+
+  public void testRandomPermutation() throws Exception {
+    assertSuccessRate(0.5, 10);
+    Collection coll = ListUtil.list("a", "b", "c", "d", "e");
+    Set set = new HashSet();
+    int rpt = 0;
+    while (++rpt < 100000) {
+      set.add(CollectionUtil.randomPermutation(coll));
+      if (set.size() == 120) {
+	log.debug(""+rpt);
+	return;
+      }
+    }
+    fail("Created only " + set.size() + " permutations out of 120, in " +
+	 rpt + " tries");
+  }
+
+
 }
