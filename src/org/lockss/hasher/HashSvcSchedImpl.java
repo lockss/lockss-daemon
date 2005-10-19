@@ -1,5 +1,5 @@
 /*
- * $Id: HashSvcSchedImpl.java,v 1.21 2005-10-07 16:19:56 thib_gc Exp $
+ * $Id: HashSvcSchedImpl.java,v 1.21.2.1 2005-10-19 00:24:34 tlipkis Exp $
  */
 
 /*
@@ -308,6 +308,9 @@ public class HashSvcSchedImpl
     private void doFinished() {
       finished = true;
       try {
+	if (!urlsetHasher.finished()) {
+	  urlsetHasher.abortHash();
+	}
 	urlsetHasher.storeActualHashDuration(getTimeUsed(), getExcption());
       } catch (Exception e) {
 	log.error("Hasher threw", e);

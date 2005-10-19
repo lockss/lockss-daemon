@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.72 2005-10-04 22:58:06 tlipkis Exp $
+ * $Id: NullPlugin.java,v 1.72.2.1 2005-10-19 00:24:34 tlipkis Exp $
  */
 
 /*
@@ -446,6 +446,9 @@ public class NullPlugin {
 
     public boolean finished() {
       return false;
+    }
+
+    public void abortHash() {
     }
 
     public int hashStep(int numBytes) {

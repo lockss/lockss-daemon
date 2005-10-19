@@ -1,5 +1,5 @@
 /*
- * $Id: GenericContentHasher.java,v 1.24 2005-10-07 16:19:56 thib_gc Exp $
+ * $Id: GenericContentHasher.java,v 1.24.2.1 2005-10-19 00:24:34 tlipkis Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.util.*;
 import java.math.*;
 import java.security.*;
 
+import org.lockss.util.*;
 import org.lockss.plugin.*;
 /**
  * General class to handle content hashing
@@ -162,4 +163,9 @@ public class GenericContentHasher extends GenericHasher {
     return totalHashed;
   }
 
+  public void abortHash() {
+    IOUtil.safeClose(is);
+    is = null;
+    super.abortHash();
+  }
 }

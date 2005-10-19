@@ -1,5 +1,5 @@
 /*
- * $Id: BlockHasher.java,v 1.2 2005-10-07 16:19:56 thib_gc Exp $
+ * $Id: BlockHasher.java,v 1.2.2.1 2005-10-19 00:24:34 tlipkis Exp $
  */
 
 /*
@@ -131,6 +131,12 @@ public class BlockHasher extends GenericHasher {
     }
     if (isTrace) log.debug3(bytesHashed+" bytes hashed in this step");
     return bytesHashed;
+  }
+
+  public void abortHash() {
+    IOUtil.safeClose(is);
+    is = null;
+    super.abortHash();
   }
 
   private void updateDigests(byte[] content, int len) {

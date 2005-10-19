@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrlSetHasher.java,v 1.6 2005-08-11 06:33:18 tlipkis Exp $
+ * $Id: MockCachedUrlSetHasher.java,v 1.6.4.1 2005-10-19 00:24:34 tlipkis Exp $
  */
 
 /*
@@ -75,6 +75,9 @@ public class MockCachedUrlSetHasher implements CachedUrlSetHasher {
 
   public boolean finished() {
     return bytes <= 0;
+  }
+
+  public void abortHash() {
   }
 
   public int hashStep(int numBytes) {

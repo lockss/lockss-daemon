@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericContentHasher.java,v 1.25 2005-08-11 06:33:19 tlipkis Exp $
+ * $Id: TestGenericContentHasher.java,v 1.25.4.1 2005-10-19 00:24:34 tlipkis Exp $
  */
 
 /*
@@ -273,6 +273,32 @@ public class TestGenericContentHasher extends LockssTestCase {
     GenericContentHasher hasher = new GenericContentHasher(cus, dig);
     hasher.hashStep(100);
     assertTrue(hasher.finished());
+    assertTrue(is.isClosed());
+  }
+
+  public void testInputStreamIsClosedAfterAbort() throws IOException {
+    String name = "http://www.example.com";
+    MockCachedUrl cu = new MockCachedUrl(name);
+    MockInputStream is = new MockInputStream();
+    // ensure content is logner than name
+    is.setContent("Content" + name + name + name + "EndContent");
+    cu.setInputStream(is);
+    cu.setExists(true);
+
+    Vector files = new Vector();
+    files.add(cu);
+    MockArchivalUnit mau = newMockArchivalUnit(TEST_URL_BASE);
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    mau.addUrl(TEST_URL_BASE, true, true);
+    mau.addContent(TEST_URL_BASE,  TEST_FILE_CONTENT+" base");
+    cus.setHashIterator(files.iterator());
+
+    GenericContentHasher hasher = new GenericContentHasher(cus, dig);
+    // hash more bytes than the name, fewer than the entire node
+    hasher.hashStep(name.length() * 2);
+    assertFalse(hasher.finished());
+    assertFalse(is.isClosed());
+    hasher.abortHash();
     assertTrue(is.isClosed());
   }
 

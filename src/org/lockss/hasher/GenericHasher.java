@@ -1,5 +1,5 @@
 /*
- * $Id: GenericHasher.java,v 1.18 2005-10-11 05:44:24 tlipkis Exp $
+ * $Id: GenericHasher.java,v 1.18.2.1 2005-10-19 00:24:34 tlipkis Exp $
  */
 
 /*
@@ -52,6 +52,7 @@ public abstract class GenericHasher implements CachedUrlSetHasher {
 
   protected Iterator iterator = null;
   protected boolean isFinished = false;
+  protected boolean isAborted = false;
   protected boolean isTrace = log.isDebug3();
 
   protected GenericHasher(CachedUrlSet cus) {
@@ -129,6 +130,9 @@ public abstract class GenericHasher implements CachedUrlSetHasher {
    * @throws IOException
    */
   public int hashStep(int numBytes) throws IOException {
+    if (isAborted) {
+      throw new IllegalStateException("Hash step called after hasher aborted");
+    }
     int bytesLeftToHash = numBytes;
     if (finished()) {
       log.warning("Hash step called after hasher was finished");
@@ -188,4 +192,7 @@ public abstract class GenericHasher implements CachedUrlSetHasher {
     curCu = null;
   }
 
+  public void abortHash() {
+    isAborted = true;
+  }
 }
