@@ -1,5 +1,5 @@
 /*
- * $Id: IcpDecoderTester.java,v 1.5 2005-10-11 05:51:04 tlipkis Exp $
+ * $Id: IcpDecoderTester.java,v 1.6 2005-10-20 22:57:49 troberts Exp $
  */
 
 /*
@@ -88,7 +88,7 @@ public abstract class IcpDecoderTester extends LockssTestCase {
    * <p>Asserts that the argument message has desired properties with
    * respect to the expected message.</p>
    * @param expected An expected message.
-   * @param packet   An actual message.
+   * @param message   An actual message.
    */
   private static void expect(IcpMessage expected, IcpMessage message) {
     assertEquals(expected.getOpcode(), message.getOpcode());

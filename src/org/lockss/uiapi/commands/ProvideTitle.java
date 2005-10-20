@@ -1,5 +1,5 @@
 /*
- * $Id: ProvideTitle.java,v 1.3 2005-10-11 05:47:40 tlipkis Exp $
+ * $Id: ProvideTitle.java,v 1.4 2005-10-20 22:57:49 troberts Exp $
  */
 
 /*
@@ -232,7 +232,7 @@ public class ProvideTitle extends ApiActivityBase {
   /**
    * Render AUs and associated title configuration data
    * @param root All generated XML is appended here
-   * @param auTitle AU title
+   * @param journalTitle journal title
    * @param auList All available AUs
    */
   private void renderAuTitleXml(Element root,

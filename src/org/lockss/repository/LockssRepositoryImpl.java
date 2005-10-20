@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.68 2005-07-18 08:04:48 tlipkis Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.69 2005-10-20 22:57:49 troberts Exp $
  */
 
 /*
@@ -477,8 +477,8 @@ public class LockssRepositoryImpl
    * Finds the directory for this AU.  If none found in the map, designates
    * a new dir for it.
    * @param au the AU
-   * @param repoCachePath the cache path
-   * @return the dir String
+   * @param repoRoot root of the repository
+   * @return the dir {@link String}
    */
   static String getAuDir(ArchivalUnit au, String repoRoot, boolean create) {
     return getAuDir(au.getAuId(), repoRoot, create);
@@ -487,8 +487,8 @@ public class LockssRepositoryImpl
   /**
    * Finds the directory for this AU.  If none found in the map, designates
    * a new dir for it.
-   * @param au the AU
-   * @param repoCachePath the cache path
+   * @param auid AU id representing the au
+   * @param repoRoot path to the root of the repository
    * @return the dir String
    */
   static String getAuDir(String auid, String repoRoot, boolean create) {

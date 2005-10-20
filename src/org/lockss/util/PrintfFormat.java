@@ -1,5 +1,5 @@
 /*
- * $Id: PrintfFormat.java,v 1.3 2004-06-22 01:29:11 clairegriffin Exp $
+ * $Id: PrintfFormat.java,v 1.4 2005-10-20 22:57:48 troberts Exp $
  */
 
 //
@@ -2782,7 +2782,6 @@ public class PrintfFormat {
     /**
      * Check for a conversion character.  If it is
      * there, store it.
-     * @param x the String to format.
      * @return <code>true</code> if the conversion
      *     character is there, and
      *     <code>false</code> otherwise.

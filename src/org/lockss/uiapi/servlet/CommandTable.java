@@ -1,5 +1,5 @@
 /*
- * $Id: CommandTable.java,v 1.3 2005-10-11 05:47:56 tlipkis Exp $
+ * $Id: CommandTable.java,v 1.4 2005-10-20 22:57:49 troberts Exp $
  */
 
 /*
@@ -321,7 +321,7 @@ public class CommandTable implements ApiParameters, ClusterControlParameters {
   /**
    * Create a populated <code>CommandTable</code> object
    * @param command Command name (eg the name supplied by the client)
-   * @param commandClassName The name of a class to carry out the remote
+   * @param localCommandClassName The name of a class to carry out the remote
    *              client command
    * @param htmlClassName HTML renderer for this command
    * @param flags Command characteristics

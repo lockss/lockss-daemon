@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawlSpec.java,v 1.6 2005-10-20 16:43:31 troberts Exp $
+ * $Id: BaseCrawlSpec.java,v 1.7 2005-10-20 22:57:49 troberts Exp $
  */
 
 /*
@@ -54,7 +54,7 @@ public abstract class BaseCrawlSpec implements CrawlSpec {
    * @param permissionUrls a list of urls from which permission can be obtained.
    * @param rule filter to determine which URLs encountered in the crawl
    * should themselves be crawled.  A null rule is always true.
-   * @param permissionCheckers a list of permissionCheckers specify by the plugin
+   * @param permissionChecker a permissionChecker specified by the plugin
    * @throws IllegalArgumentException if the url list is empty.
    */
   protected BaseCrawlSpec(List permissionUrls,

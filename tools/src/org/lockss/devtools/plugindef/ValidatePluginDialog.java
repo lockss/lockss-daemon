@@ -61,8 +61,8 @@ public class ValidatePluginDialog extends JDialog {
 
   /**
    * ValidatePluginDialog
-   *
-   * @param editableDefinablePlugin EditableDefinablePlugin
+   * @param parent parent Frame
+   * @param plugin EditableDefinablePlugin
    */
   ValidatePluginDialog(Frame parent, EditableDefinablePlugin plugin) {
     this(parent,"Validate Plugin Parameters", false);

@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlWindowEditor.java,v 1.3 2005-10-11 05:53:07 tlipkis Exp $
+ * $Id: CrawlWindowEditor.java,v 1.4 2005-10-20 22:57:48 troberts Exp $
  */
 
 /*
@@ -399,8 +399,8 @@ public class CrawlWindowEditor extends JDialog implements EDPEditor{
     /**
      * moveData
      *
-     * @param row int
-     * @param i int
+     * @param curRow Old row for the data
+     * @param newRow New row for the data
      */
     private void moveData(int curRow, int newRow) {
 	/* int lastRow = m_tableData.size() -1;

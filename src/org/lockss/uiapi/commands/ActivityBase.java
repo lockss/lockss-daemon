@@ -1,5 +1,5 @@
 /*
- * $Id: ActivityBase.java,v 1.3 2005-10-11 05:47:42 tlipkis Exp $
+ * $Id: ActivityBase.java,v 1.4 2005-10-20 22:57:49 troberts Exp $
  */
 
 /*
@@ -218,7 +218,8 @@ public abstract class ActivityBase implements ApiParameters,
 
   /**
    * Add a response specific status option
-   * @param text Response information
+   * @param name name of the status option to set
+   * @param value Response information
    */
   protected void addResponseStatusOption(String name, String value) {
     if (_responseStatusOptions == null) {

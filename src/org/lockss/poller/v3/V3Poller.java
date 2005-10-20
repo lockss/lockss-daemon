@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.11 2005-10-20 21:46:35 troberts Exp $
+ * $Id: V3Poller.java,v 1.12 2005-10-20 22:57:49 troberts Exp $
  */
 
 /*
@@ -88,8 +88,6 @@ public class V3Poller extends BasePoll {
 
   /**
    * Common setup.
-   *
-   * @param key
    */
   private void commonSetUp() throws V3Serializer.PollSerializerException {
     theVoters = new LinkedHashMap();
@@ -315,7 +313,6 @@ public class V3Poller extends BasePoll {
    * Add a voter to the outer circle of the poll.
    *
    * @param id
-   * @param nominatedPeers
    */
   private PsmInterp addOuterCircleVoter(PeerIdentity id) {
     PsmInterp interp = makeInterp(id);
@@ -649,9 +646,8 @@ public class V3Poller extends BasePoll {
   /**
    * Called by participant state machines if an error occurs.
    *
-   * @param msg
-   * @param to
-   * @throws IOException
+   * @param id
+   * @param errorMsg
    */
   void handleError(PeerIdentity id, String errorMsg) {
     log.error("Peer " + id + " experienced an error. Error =" +

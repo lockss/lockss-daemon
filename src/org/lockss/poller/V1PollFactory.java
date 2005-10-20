@@ -1,5 +1,5 @@
 /*
- * $Id: V1PollFactory.java,v 1.19 2005-10-19 20:13:05 troberts Exp $
+ * $Id: V1PollFactory.java,v 1.20 2005-10-20 22:57:49 troberts Exp $
  */
 
 /*
@@ -126,9 +126,9 @@ public class V1PollFactory extends BasePollFactory {
 
   /**
    * cause a V1 poll by sending a request packet.
-   * @param pollspec the <code>PollSpec</code> used to define the range,
-   *                 version, and location of poll
-   * @param pm       the PollManager that called this method
+   * @param poll {@link Poll} for which we are sending a request
+   * @param pm the PollManager that called this method
+   * @param im {@link IdentityManager}
    * @throws IOException thrown if <code>LcapMessage</code> construction fails.
    */
   private void sendPollRequest(Poll poll,

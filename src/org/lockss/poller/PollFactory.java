@@ -1,5 +1,5 @@
 /*
-* $Id: PollFactory.java,v 1.8 2005-10-11 05:45:39 tlipkis Exp $
+* $Id: PollFactory.java,v 1.9 2005-10-20 22:57:49 troberts Exp $
  */
 
 /*
@@ -51,8 +51,7 @@ public interface PollFactory {
    * Call a poll.  Only used by the tree walk via the poll manager.
    * For V1 sends the poll request.
    * @param poll the <code>Poll</code> to be called
-   * @param pm the PollManager that called this method
-   * @param im the IdentityManager
+   * @param daemon LockssDaemon
    * @return true if the poll was successfuly called.
    */
   boolean callPoll(Poll poll,
@@ -63,14 +62,12 @@ public interface PollFactory {
    * createPoll is invoked when (a) an incoming message requires a new
    * Poll to be created (msg != null) and (b) when a new Poll is required
    * with no incoming message (msg == null).  V1 uses only case (a).
-   * @param pollspec the PollSpec for the poll.
-   * @param pm the PollManager that called this method
-   * @param im the IdentityManager
+   * @param pollspec the {@link PollSpec} for the poll.
+   * @param daemon {@link LockssDaemon}
    * @param orig the PeerIdentity that called the poll
-   * @param challenge the poll challenge
-   * @param verifier the poll verifier
    * @param duration the duration of the poll
    * @param hashAlg the hash algorithm in use
+   * @param msg {@link LcapMessage} that began this poll
    * @return a Poll object describing the new poll.
    */
   BasePoll createPoll(PollSpec pollspec,

@@ -1,5 +1,5 @@
 /*
- * $Id: KeyedList.java,v 1.2 2005-10-11 05:47:56 tlipkis Exp $
+ * $Id: KeyedList.java,v 1.3 2005-10-20 22:57:49 troberts Exp $
  */
 
 /*
@@ -122,9 +122,9 @@ public class KeyedList {
   }
 
   /**
-   * Verify name and value are non-null
-   * @param Object name Name to verify
-   * @param Object value Value to verify
+   * Verify that name is non-null
+   * @param name Name to verify
+   * @throws IllegalArgumentException if name is null
    */
   private void verifyName(Object name) {
     if (name == null) {

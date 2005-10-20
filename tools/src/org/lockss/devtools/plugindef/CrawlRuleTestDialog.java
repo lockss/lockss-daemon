@@ -51,8 +51,8 @@ public class CrawlRuleTestDialog extends JDialog {
 
   /**
    * CrawlRuleTestDialog
-   *
-   * @param editableDefinablePlugin EditableDefinablePlugin
+   * @param parent parent Frame
+   * @param plugin EditableDefinablePlugin
    */
   CrawlRuleTestDialog(Frame parent, EditableDefinablePlugin plugin) {
     this(parent,"Configure Crawl Rule Test", false);

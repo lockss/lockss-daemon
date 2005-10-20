@@ -1,5 +1,5 @@
 /*
- * $Id: V1TreeWalkImpl.java,v 1.6 2005-10-07 23:46:46 smorabito Exp $
+ * $Id: V1TreeWalkImpl.java,v 1.7 2005-10-20 22:57:49 troberts Exp $
  */
 
 /*
@@ -83,7 +83,7 @@ public class V1TreeWalkImpl implements TreeWalker {
   /**
    * Determines the sleep duration from the desired interval and cpu load.
    * @param interval desired interval
-   * @param desired cpu load, as percentage
+   * @param load desired cpu load, as percentage
    * @return long proper sleep duration
    */
   private long calculateSleepDuration(long interval, double load) {

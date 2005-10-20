@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawler.java,v 1.2 2005-10-20 16:43:31 troberts Exp $
+ * $Id: BaseCrawler.java,v 1.3 2005-10-20 22:57:49 troberts Exp $
  */
 
 /*
@@ -308,7 +308,6 @@ public abstract class BaseCrawler implements Crawler, PermissionMapSource {
    * objects.
    *
    * @param permissionPage String
-   * @param checker PermissionChecker
    * @return boolean iff permission was found for each object on the page.
    */
   private boolean checkPermission(String permissionPage) throws IOException {

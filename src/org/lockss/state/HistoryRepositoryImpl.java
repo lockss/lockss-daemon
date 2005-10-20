@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.64 2005-10-11 05:47:22 tlipkis Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.65 2005-10-20 22:57:49 troberts Exp $
  */
 
 /*
@@ -913,7 +913,7 @@ public class HistoryRepositoryImpl
   /**
    * <p>Might unwrap an object returning from serialization so that
    * it comes back in a form that is expected by
-   * {@link #loadNodeState}.</p>
+   * {@link HistoryRepositoryImpl#loadNodeState(CachedUrlSet)}.</p>
    * @param obj  The object returning from serialized form.
    * @param cus  The CachedUrlSet instance sometimes needed to unwrap
    *             obj.
