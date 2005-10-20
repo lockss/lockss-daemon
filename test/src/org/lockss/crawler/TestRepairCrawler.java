@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepairCrawler.java,v 1.35 2005-10-14 22:40:34 troberts Exp $
+ * $Id: TestRepairCrawler.java,v 1.36 2005-10-20 16:42:55 troberts Exp $
  */
 
 /*
@@ -90,7 +90,7 @@ public class TestRepairCrawler extends LockssTestCase {
     spec = new SpiderCrawlSpec(startUrls, ListUtil.list(permissionPage),
 			       crawlRule, 1);
 
-
+    mau.setCrawlSpec(spec);
     mau.addUrl(url1);
     mau.addUrl(permissionPage);
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestOaiCrawler.java,v 1.9 2005-10-14 22:40:34 troberts Exp $
+ * $Id: TestOaiCrawler.java,v 1.10 2005-10-20 16:42:55 troberts Exp $
  */
 
 /*
@@ -71,7 +71,11 @@ public class TestOaiCrawler extends LockssTestCase {
     crawlRule.addUrlToCrawl(handlerUrl);
     crawlRule.addUrlToCrawl(permissionUrl);
     mau.addUrl(permissionUrl);
+
     spec = new OaiCrawlSpec(handlerUrl, crawlRule, permissionList, false);
+
+    mau.setCrawlSpec(spec);
+
     crawler = new OaiCrawler(mau, spec, aus);
     ((BaseCrawler)crawler).daemonPermissionCheckers =
       ListUtil.list(new MyMockPermissionChecker(1));
@@ -193,7 +197,7 @@ public class TestOaiCrawler extends LockssTestCase {
   public void testSimpleCrawlHasContent() {
     //set the urls to be crawl
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
-    String url1="http://www.example.com/blah.html";
+    String url1 = "http://www.example.com/blah.html";
     mau.addUrl(url1, true, true); //exists, and should be cached
     crawlRule.addUrlToCrawl(url1);
 

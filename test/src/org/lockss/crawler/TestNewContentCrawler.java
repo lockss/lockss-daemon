@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.43 2005-10-14 22:40:34 troberts Exp $
+ * $Id: TestNewContentCrawler.java,v 1.44 2005-10-20 16:42:55 troberts Exp $
  */
 
 /*
@@ -90,7 +90,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     crawler = new MyNewContentCrawler(mau, spec, aus);
     ((BaseCrawler)crawler).daemonPermissionCheckers =
       ListUtil.list(new MockPermissionChecker(1));
-
+    mau.setCrawlSpec(spec);
     mau.setParser(parser);
     Properties p = new Properties();
     p.setProperty(NewContentCrawler.PARAM_RETRY_PAUSE, "0");
@@ -282,6 +282,8 @@ public class TestNewContentCrawler extends LockssTestCase {
     spec =
       new SpiderCrawlSpec(startUrls, ListUtil.list(permissionPage),
 			  crawlRule, 90);
+    mau.setCrawlSpec(spec);
+
     crawler = new MyNewContentCrawler(mau, spec, new MockAuState());
     ((BaseCrawler)crawler).daemonPermissionCheckers =
       ListUtil.list(new MockPermissionChecker(1));
@@ -591,6 +593,7 @@ public class TestNewContentCrawler extends LockssTestCase {
 			       ListUtil.list(permissionPage), crawlRule, 1);
     crawler = new MyNewContentCrawler(mau, spec, aus);
 
+    mau.setCrawlSpec(spec);
     mau.addUrl(permissionPage,
 	       new CacheException.RepositoryException("Test exception"),
  	       DEFAULT_RETRY_TIMES);
