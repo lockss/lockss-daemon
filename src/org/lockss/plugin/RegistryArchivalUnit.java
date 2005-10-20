@@ -1,5 +1,5 @@
 /*
- * $Id: RegistryArchivalUnit.java,v 1.15 2005-10-07 16:19:55 thib_gc Exp $
+ * $Id: RegistryArchivalUnit.java,v 1.16 2005-10-20 16:41:54 troberts Exp $
  */
 
 /*
@@ -186,7 +186,7 @@ public class RegistryArchivalUnit extends BaseArchivalUnit {
     CrawlRule rule = makeRules();
     List startUrls = ListUtil.list(startUrlString);
     return new SpiderCrawlSpec(startUrls, startUrls, rule,
-			       m_maxRefetchDepth, m_permissionCheckers, null);
+			       m_maxRefetchDepth, null, null);
   }
 
   /**
