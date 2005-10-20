@@ -1,5 +1,5 @@
 /*
- * $Id: Crawler.java,v 1.33 2005-10-11 05:44:15 tlipkis Exp $
+ * $Id: Crawler.java,v 1.34 2005-10-20 16:41:28 troberts Exp $
  */
 
 /*
@@ -59,7 +59,7 @@ public interface Crawler {
   public static final String STATUS_ERROR = "Error";
   public static final String STATUS_WINDOW_CLOSED = "Crawl window closed";
   public static final String STATUS_FETCH_ERROR = "Fetch error";
-  public static final String STATUS_PUB_PERMISSION = "No permission from publisher";
+  public static final String STATUS_NO_PUB_PERMISSION = "No permission from publisher";
   public static final String STATUS_REPO_ERR = "Repository error";
   //public static final String STATUS_UNKNOWN = "Unknown";
 
