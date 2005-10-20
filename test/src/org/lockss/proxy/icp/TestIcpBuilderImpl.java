@@ -1,5 +1,5 @@
 /*
- * $Id: TestIcpBuilderImpl.java,v 1.3 2005-10-11 05:51:04 tlipkis Exp $
+ * $Id: TestIcpBuilderImpl.java,v 1.4 2005-10-20 21:46:35 troberts Exp $
  */
 
 /*
@@ -35,7 +35,7 @@ package org.lockss.proxy.icp;
 import org.lockss.proxy.icp.IcpBuilder.Factory;
 
 /**
- * <p>Tests the {@link IcpFactoryImpl.IcpBuilderImpl} class.</p>
+ * <p>Test class for org.lockss.proxy.icp.IcpFactoryImpl#IcpBuilderImpl</p>
  * @author Thib Guicherd-Callin
  */
 public class TestIcpBuilderImpl extends IcpBuilderTester {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestIcpDecoderImpl.java,v 1.2 2005-09-08 01:24:41 thib_gc Exp $
+ * $Id: TestIcpDecoderImpl.java,v 1.3 2005-10-20 21:46:35 troberts Exp $
  */
 
 /*
@@ -35,7 +35,7 @@ package org.lockss.proxy.icp;
 import org.lockss.proxy.icp.IcpDecoder.Factory;
 
 /**
- * <p>Tests the {@link IcpFactoryImpl.IcpDecoderImpl} class.</p>
+ * <p>Test class for org.lockss.proxy.icp.IcpFactoryImpl.IcpDecoderImpl}</p>
  * @author Thib Guicherd-Callin
  */
 public class TestIcpDecoderImpl extends IcpDecoderTester {

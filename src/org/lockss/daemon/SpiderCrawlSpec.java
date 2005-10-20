@@ -1,5 +1,5 @@
 /*
- * $Id: SpiderCrawlSpec.java,v 1.4 2005-10-20 16:43:31 troberts Exp $
+ * $Id: SpiderCrawlSpec.java,v 1.5 2005-10-20 21:46:34 troberts Exp $
  */
 
 /*
@@ -73,7 +73,7 @@ public final class SpiderCrawlSpec extends BaseCrawlSpec {
    * @param rule filter to determine which URLs encountered in the crawl
    * should themselves be crawled.  A null rule is always true.
    * @param refetchDepth depth to always refetch
-   * @param permissionCheckers a list of permissionCheckers specify by plugin
+   * @param permissionChecker a permissionChecker specified by plugin
    * @throws IllegalArgumentException if the url list is empty.
    * @throws NullPointerException if any elements of startUrls is null.
    * @throws ClassCastException if any elements of startUrls is not a String.

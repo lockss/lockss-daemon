@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.10 2005-10-19 20:13:06 troberts Exp $
+ * $Id: V3Poller.java,v 1.11 2005-10-20 21:46:35 troberts Exp $
  */
 
 /*
@@ -340,7 +340,8 @@ public class V3Poller extends BasePoll {
    *
    * @param id
    * @param psmState
-   * @return
+   * @return PsmInterp for the specified peer, using the supplied
+   * PsmInterpStateBean
    */
   private PsmInterp makeInterp(PeerIdentity id, PsmInterpStateBean psmState) {
     PollerUserData ud = new PollerUserData(id, this, serializer);

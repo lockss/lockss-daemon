@@ -1,5 +1,5 @@
 /*
- * $Id: IcpBuilderTester.java,v 1.7 2005-10-19 20:13:05 troberts Exp $
+ * $Id: IcpBuilderTester.java,v 1.8 2005-10-20 21:46:35 troberts Exp $
  */
 
 /*
@@ -123,7 +123,6 @@ public abstract class IcpBuilderTester extends LockssTestCase {
 
   /**
    * <p>Tests {@link IcpBuilder#makeDiscoveryEcho}.</p>
-   * @throws Exception if an error occurs.
    */
   public void testMakeDiscoveryEcho() {
     // Unimplemented
@@ -146,7 +145,8 @@ public abstract class IcpBuilderTester extends LockssTestCase {
   }
 
   /**
-   * <p>Tests {@link IcpBuilder#makeHit}.</p>
+   * <p>Tests {@link IcpBuilder#makeHit(IcpMessage)} and
+   * {@link IcpBuilder#makeHit(IcpMessage, short)}.</p>
    * @throws Exception if an error occurs.
    */
   public void testMakeHit() throws Exception {
@@ -167,7 +167,8 @@ public abstract class IcpBuilderTester extends LockssTestCase {
   }
 
   /**
-   * <p>Tests {@link IcpBuilder#makeHitObj}.</p>
+   * <p>Tests {@link IcpBuilder#makeHitObj(IcpMessage, byte[])} and
+   * {@link IcpBuilder#makeHitObj(IcpMessage, short, byte[])}.</p>
    * @throws Exception if an error occurs.
    */
   public void testMakeHitObj() throws Exception {
@@ -202,7 +203,8 @@ public abstract class IcpBuilderTester extends LockssTestCase {
   }
 
   /**
-   * <p>Tests {@link IcpBuilder#makeMiss}.</p>
+   * <p>Tests {@link IcpBuilder#makeMiss(IcpMessage)} and
+   * {@link IcpBuilder#makeMiss(IcpMessage, short)}.</p>
    * @throws Exception if an error occurs.
    */
   public void testMakeMiss() throws Exception {
@@ -223,7 +225,8 @@ public abstract class IcpBuilderTester extends LockssTestCase {
   }
 
   /**
-   * <p>Tests {@link IcpBuilder#makeMissNoFetch}.</p>
+   * <p>Tests {@link IcpBuilder#makeMissNoFetch(IcpMessage)}.
+   * and {@link IcpBuilder#makeMissNoFetch(IcpMessage, short)}.</p>
    * @throws Exception if an error occurs.
    */
   public void testMakeMissNoFetch() throws Exception {
@@ -244,7 +247,7 @@ public abstract class IcpBuilderTester extends LockssTestCase {
   }
 
   /**
-   * <p>Tests {@link IcpBuilder#makeQuery}.</p>
+   * <p>Tests {@link IcpBuilder#makeQuery(IPAddr, String)}.</p>
    * @throws Exception if an error occurs.
    */
   public void testMakeQuery() throws Exception {

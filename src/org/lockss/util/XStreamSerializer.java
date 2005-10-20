@@ -1,5 +1,5 @@
 /*
- * $Id: XStreamSerializer.java,v 1.11 2005-10-11 05:48:29 tlipkis Exp $
+ * $Id: XStreamSerializer.java,v 1.12 2005-10-20 21:46:34 troberts Exp $
  */
 
 /*
@@ -185,7 +185,7 @@ public class XStreamSerializer extends ObjectSerializer {
      * @throws LockssNotSerializableException if obj is not
      *                                        {@link Serializable} or
      *                                        {@link LockssSerializable}.
-     * @see {@link ReferenceByXPathMarshaller#convertAnother}
+     *  @see ReferenceByXPathMarshaller#convertAnother
      */
     public void convertAnother(Object parent) {
       if ( !( parent instanceof Serializable ||

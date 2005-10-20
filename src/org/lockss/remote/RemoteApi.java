@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.44 2005-10-19 20:13:06 troberts Exp $
+ * $Id: RemoteApi.java,v 1.45 2005-10-20 21:46:35 troberts Exp $
  */
 
 /*
@@ -739,9 +739,6 @@ public class RemoteApi
   /** Restore AU config from an AU config backup file.
    * @param allAuConfig the Configuration to be restored
    * @return BatchAuStatus object describing the results.
-   * @throws RemoteApi.InvalidAuConfigBackupFile if the backup file is of
-   * an unknown format, unsupported version, or contains keys this
-   * operation isn't allowed to modify.
    */
   public BatchAuStatus batchAddAus(boolean isReactivate,
 				   Configuration allAuConfig,
