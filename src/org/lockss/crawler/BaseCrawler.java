@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawler.java,v 1.1 2005-10-14 22:40:34 troberts Exp $
+ * $Id: BaseCrawler.java,v 1.2 2005-10-20 16:43:31 troberts Exp $
  */
 
 /*
@@ -89,7 +89,7 @@ public abstract class BaseCrawler implements Crawler, PermissionMapSource {
 
   public static final String PARAM_ABORT_WHILE_PERMISSION_OTHER_THAN_OK =
     Configuration.PREFIX + "BaseCrawler.abortWhilePermissionOtherThanOk";
-  public static final boolean DEFAULT_ABORT_WHILE_PERMISSION_OTHER_THAN_OK = 
+  public static final boolean DEFAULT_ABORT_WHILE_PERMISSION_OTHER_THAN_OK =
     false;
 
   // Max amount we'll buffer up to avoid refetching the permissions page
@@ -119,7 +119,7 @@ public abstract class BaseCrawler implements Crawler, PermissionMapSource {
    */
   protected abstract String getTypeString();
 
-  protected ArrayList pluginPermissionCheckers = new ArrayList();
+  protected PermissionChecker pluginPermissionChecker;
   protected List daemonPermissionCheckers = null;
   protected AlertManager alertMgr;
 
@@ -156,16 +156,16 @@ public abstract class BaseCrawler implements Crawler, PermissionMapSource {
 
     //Specified by the plug-in, this can be a null set.  We must satisfy
     //all of these to crawl a site.
-    pluginPermissionCheckers.addAll(spec.getPermissionCheckers());
+    pluginPermissionChecker = spec.getPermissionChecker();
 
     alertMgr = (AlertManager)org.lockss.app.LockssDaemon.getManager(org.lockss.app.LockssDaemon.ALERT_MANAGER);
   }
 
   protected void setCrawlConfig(Configuration config) {
     long connectTimeout = config.getTimeInterval(PARAM_CONNECT_TIMEOUT,
-						 DEFAULT_CONNECT_TIMEOUT);
+                                                 DEFAULT_CONNECT_TIMEOUT);
     long dataTimeout = config.getTimeInterval(PARAM_DATA_TIMEOUT,
-					      DEFAULT_DATA_TIMEOUT);
+                                              DEFAULT_DATA_TIMEOUT);
     connectionPool.setConnectTimeout(connectTimeout);
     connectionPool.setDataTimeout(dataTimeout);
 
@@ -232,10 +232,7 @@ public abstract class BaseCrawler implements Crawler, PermissionMapSource {
       crawlStatus.setCrawlError("Nothing in permission list");
       return false;
     }
-    if (!checkPermissionList(permissionList)){
-      return false;
-    }
-    return true;
+    return checkPermissionList(permissionList);
   }
 
   /**
@@ -251,7 +248,7 @@ public abstract class BaseCrawler implements Crawler, PermissionMapSource {
   int crawlPermission(String permissionPage) {
 
     int crawl_ok = PermissionRecord.PERMISSION_UNCHECKED;
-    String err = Crawler.STATUS_PUB_PERMISSION;
+    String err = Crawler.STATUS_NO_PUB_PERMISSION;
     logger.debug("Checking for permissions on " + permissionPage);
     try {
       if (!au.shouldBeCached(permissionPage)) {
@@ -261,13 +258,10 @@ public abstract class BaseCrawler implements Crawler, PermissionMapSource {
 // 					 permissionPage +
 // 					 " is not within the crawl spec"));
         logger.warning("Permission page not within CrawlSpec: "+permissionPage);
-      }
-      else if ( (au.getCrawlSpec() != null)
-		&& !au.getCrawlSpec().inCrawlWindow()) {
+      } else if (!au.getCrawlSpec().inCrawlWindow()) {
         logger.debug("Couldn't start crawl due to crawl window.");
         err = Crawler.STATUS_WINDOW_CLOSED;
-      }
-      else {
+      } else {
 	// go off to fetch the url and check for the permission statement
         if(checkPermission(permissionPage)) {
           crawl_ok = PermissionRecord.PERMISSION_OK;
@@ -317,21 +311,21 @@ public abstract class BaseCrawler implements Crawler, PermissionMapSource {
    * @param checker PermissionChecker
    * @return boolean iff permission was found for each object on the page.
    */
-  private boolean checkPermission(String permissionPage) throws
-      IOException {
+  private boolean checkPermission(String permissionPage) throws IOException {
 
     PermissionChecker checker;
     // fetch and cache the permission page
     UrlCacher uc = makeUrlCacher(permissionPage);
     uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW_ON_HOST);
 
-    InputStream is = new BufferedInputStream(uc.getUncachedInputStream());
+    BufferedInputStream is =
+      new BufferedInputStream(uc.getUncachedInputStream());
     crawlStatus.signalUrlFetched(uc.getUrl());
     // allow us to reread contents if reasonable size
     boolean needPermission = true;
     try {
       // check the lockss checkers and find at least one checker that matches
-      for (Iterator it = daemonPermissionCheckers.iterator(); it.hasNext() && needPermission; ) {
+      for (Iterator it = daemonPermissionCheckers.iterator(); it.hasNext(); ) {
         is.mark(PERM_BUFFER_MAX);
         checker = (PermissionChecker) it.next();
         Reader reader = new InputStreamReader(is, Constants.DEFAULT_ENCODING);
@@ -355,19 +349,30 @@ public abstract class BaseCrawler implements Crawler, PermissionMapSource {
       //or the storeContent call will
       is = resetInputStream(is, permissionPage);
 
-      // now check for the required permission from the plugin
-      for (Iterator it = pluginPermissionCheckers.iterator(); it.hasNext(); ) {
-        is.mark(PERM_BUFFER_MAX);
-        checker = (PermissionChecker) it.next();
-        Reader reader = new InputStreamReader(is, Constants.DEFAULT_ENCODING);
-        if (!checker.checkPermission(reader, permissionPage)) {
-          logger.error("No plugin crawl permission on " + permissionPage);
-          is.close();
-          return false;
-        } else {
-	  is = resetInputStream(is, permissionPage);
-        }
+      is.mark(PERM_BUFFER_MAX);
+      Reader reader = new InputStreamReader(is, Constants.DEFAULT_ENCODING);
+      if (pluginPermissionChecker != null
+          && !pluginPermissionChecker.checkPermission(reader, permissionPage)) {
+        logger.error("No plugin crawl permission on " + permissionPage);
+        is.close();
+        return false;
+      } else {
+        is = resetInputStream(is, permissionPage);
       }
+
+      // now check for the required permission from the plugin
+//      for (Iterator it = pluginPermissionCheckers.iterator(); it.hasNext(); ) {
+//        is.mark(PERM_BUFFER_MAX);
+//        checker = (PermissionChecker) it.next();
+//        Reader reader = new InputStreamReader(is, Constants.DEFAULT_ENCODING);
+//        if (!checker.checkPermission(reader, permissionPage)) {
+//          logger.error("No plugin crawl permission on " + permissionPage);
+//          is.close();
+//          return false;
+//        } else {
+//	  is = resetInputStream(is, permissionPage);
+//        }
+//      }
       if (Configuration.getBooleanParam(PARAM_REFETCH_PERMISSIONS_PAGE,
                                         DEFAULT_REFETCH_PERMISSIONS_PAGE)) {
         logger.debug3("Permission granted. Caching permission page.");
@@ -471,8 +476,8 @@ public abstract class BaseCrawler implements Crawler, PermissionMapSource {
    * Try to reset the provided input stream, if we can't then return
    * new input stream for the given url
    */
-  private InputStream resetInputStream(InputStream is, String url)
-      throws IOException {
+  private BufferedInputStream resetInputStream(BufferedInputStream is,
+                                               String url) throws IOException {
     try {
       is.reset();
     } catch (IOException e) {
@@ -515,7 +520,7 @@ public abstract class BaseCrawler implements Crawler, PermissionMapSource {
 	  logger.debug3("Permission granted on host: " + UrlUtil.getHost(permissionPage));
 	}
 	// set permissionMap
-	permissionMap.putStatus(permissionPage, permissionStatus);
+        permissionMap.putStatus(permissionPage, permissionStatus);
       } catch (MalformedURLException e){
 	//XXX should catch this inside the permissionMap ?
 	logger.error("The permissionPage's URL is Malformed : "+ permissionPage);
@@ -600,6 +605,9 @@ public abstract class BaseCrawler implements Crawler, PermissionMapSource {
     return sb.toString();
   }
 
+/**
+ * Get the permission map from the crawler, creating it if it doesn't exist already
+ */
   //PermissionMapSource method
   public PermissionMap getPermissionMap() {
     if (permissionMap == null) {

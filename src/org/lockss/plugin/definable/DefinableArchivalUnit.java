@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.38 2005-10-11 05:45:12 tlipkis Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.39 2005-10-20 16:43:32 troberts Exp $
  */
 
 /*
@@ -241,8 +241,8 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
       boolean follow_links =
           definitionMap.getBoolean(DefinablePlugin.CM_FOLLOW_LINKS, true);
       return new OaiCrawlSpec(makeOaiData(), getPermissionPages(),
-                              Collections.EMPTY_LIST, rule, follow_links,
-			      makeLoginPageChecker());
+                              null, rule, follow_links,
+                              makeLoginPageChecker());
     }
     else  { // for now use the default spider crawl spec
       int depth = definitionMap.getInt(AU_CRAWL_DEPTH, DEFAULT_AU_CRAWL_DEPTH);
@@ -252,7 +252,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 //       return new SpiderCrawlSpec(ListUtil.list(startUrl),
       return new SpiderCrawlSpec(ListUtil.list(startUrlString),
 				 getPermissionPages(), rule, depth,
-				 makePermissionCheckers(),
+				 makePermissionChecker(),
 				 makeLoginPageChecker());
     }
   }
@@ -269,16 +269,22 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     return checker;
   }
 
-  protected List makePermissionCheckers() {
+  protected PermissionChecker makePermissionChecker() {
     String permissionCheckerFactoryClass =
       definitionMap.getString(AU_PERMISSION_CHECKER_FACTORY, null);
     if (permissionCheckerFactoryClass == null) {
-      return new ArrayList();
+      return null;
     }
     PermissionCheckerFactory fact =
       (PermissionCheckerFactory) loadClass(permissionCheckerFactoryClass,
 					   PermissionCheckerFactory.class);
-    return fact.createPermissionCheckers(this);
+    List permissionCheckers = fact.createPermissionCheckers(this);
+      if (permissionCheckers.size() > 1) {
+        log.critical("Plugin specifies multiple permission checkers, but we " +
+                        "only support one: " + this);
+
+      }
+    return (PermissionChecker)permissionCheckers.get(0);
   }
 
   protected CrawlWindow makeCrawlWindow() {

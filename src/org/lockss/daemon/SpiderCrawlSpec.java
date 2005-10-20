@@ -1,5 +1,5 @@
 /*
- * $Id: SpiderCrawlSpec.java,v 1.3 2005-10-11 05:44:15 tlipkis Exp $
+ * $Id: SpiderCrawlSpec.java,v 1.4 2005-10-20 16:43:31 troberts Exp $
  */
 
 /*
@@ -62,7 +62,7 @@ public final class SpiderCrawlSpec extends BaseCrawlSpec {
 		       int refetchDepth)
       throws ClassCastException {
     this(startUrls, permissionUrls, rule, refetchDepth,
-	 Collections.EMPTY_LIST, null);
+         null, null);
   }
 
   /**
@@ -82,10 +82,10 @@ public final class SpiderCrawlSpec extends BaseCrawlSpec {
 			 List permissionUrls,
 			 CrawlRule rule,
 			 int refetchDepth,
-			 List permissionCheckers,
+			 PermissionChecker permissionChecker,
 			 LoginPageChecker loginPageChecker)
       throws ClassCastException {
-    super(permissionUrls, rule, permissionCheckers, loginPageChecker);
+    super(permissionUrls, rule, permissionChecker, loginPageChecker);
     if(startUrls.isEmpty()) {
       throw new
           IllegalArgumentException("CrawlSpec starting url must not be empty");

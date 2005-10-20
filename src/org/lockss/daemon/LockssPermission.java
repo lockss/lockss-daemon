@@ -1,5 +1,5 @@
 /*
- * $Id: LockssPermission.java,v 1.2 2005-05-03 00:01:57 troberts Exp $
+ * $Id: LockssPermission.java,v 1.3 2005-10-20 16:43:31 troberts Exp $
  */
 
 /*
@@ -49,8 +49,9 @@ public class LockssPermission {
   ArrayList permissionList = new ArrayList();
 
   public LockssPermission() {
-    StringPermissionChecker spc = new StringPermissionChecker(
-        LOCKSS_PERMISSION_STRING, new StringPermissionChecker.StringFilterRule());
+    StringPermissionChecker spc =
+      new StringPermissionChecker(LOCKSS_PERMISSION_STRING,
+                                  new StringPermissionChecker.StringFilterRule());
     permissionList.add(spc);
     permissionList.add(new CreativeCommonsPermissionChecker());
   }

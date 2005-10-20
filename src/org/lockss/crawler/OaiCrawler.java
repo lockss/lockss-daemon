@@ -1,5 +1,5 @@
 /*
- * $Id: OaiCrawler.java,v 1.13 2005-10-19 20:13:05 troberts Exp $
+ * $Id: OaiCrawler.java,v 1.14 2005-10-20 16:43:31 troberts Exp $
  */
 
 /*
@@ -92,7 +92,7 @@ public class OaiCrawler extends FollowLinkCrawler {
    * link mode".
    * @returns false if the crawl encountered fatal errors, false otherwise
    */
-  protected boolean doCrawl0(){
+  protected boolean doCrawl0(){ //this shouldn't be there at all, as it does nothing
     if (shouldFollowLink() ) {
       logger.info("crawling in follow link mode");
     } else {

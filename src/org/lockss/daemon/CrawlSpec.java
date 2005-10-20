@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlSpec.java,v 1.17 2005-10-11 05:44:15 tlipkis Exp $
+ * $Id: CrawlSpec.java,v 1.18 2005-10-20 16:43:31 troberts Exp $
  */
 
 /*
@@ -85,7 +85,7 @@ public interface CrawlSpec {
    * Gets the list of permission checkers
    * @return a list of permission checkers
    */
-  public List getPermissionCheckers();
+  public PermissionChecker getPermissionChecker();
 
   /**
    * @return the LoginPageChecker for this crawl, or null if there isn't one

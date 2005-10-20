@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCrawlSpec.java,v 1.4 2005-10-11 05:49:28 tlipkis Exp $
+ * $Id: TestBaseCrawlSpec.java,v 1.5 2005-10-20 16:43:32 troberts Exp $
  */
 
 /*
@@ -78,18 +78,20 @@ public class TestBaseCrawlSpec extends LockssTestCase {
 
   public void testGetPermissionCheckers() throws LockssRegexpException {
     List foo = ListUtil.list("foo");
-    String checkers[] = {"one"};
+//    String checkers[] = {"one"};
+    PermissionChecker permissionChecker = new MockPermissionChecker(99);
     BaseCrawlSpec cs1 =
-      new TestableBaseCrawlSpec(foo, rule, ListUtil.list(checkers[0]), null);
-    assertIsomorphic(checkers, cs1.getPermissionCheckers());
-    BaseCrawlSpec cs2 =
-      new TestableBaseCrawlSpec(foo, rule, ListUtil.fromArray(checkers), null);
-    assertIsomorphic(checkers, cs2.getPermissionCheckers());
-    String otherCheckers[] = {"one", "two"};
-    BaseCrawlSpec cs3 =
-      new TestableBaseCrawlSpec(foo, rule,
-				ListUtil.fromArray(otherCheckers), null);
-    assertIsomorphic(otherCheckers, cs3.getPermissionCheckers());
+      new TestableBaseCrawlSpec(foo, rule, permissionChecker, null);
+//    assertIsomorphic(checkers, cs1.getPermissionChecker());
+    assertSame(permissionChecker, cs1.getPermissionChecker());
+//    BaseCrawlSpec cs2 =
+//      new TestableBaseCrawlSpec(foo, rule, ListUtil.fromArray(checkers), null);
+//    assertIsomorphic(checkers, cs2.getPermissionChecker());
+//    String otherCheckers[] = {"one", "two"};
+//    BaseCrawlSpec cs3 =
+//      new TestableBaseCrawlSpec(foo, rule,
+//				ListUtil.fromArray(otherCheckers), null);
+//    assertIsomorphic(otherCheckers, cs3.getPermissionChecker());
   }
 
   public void testNoModifyPermissionList() {
@@ -147,10 +149,10 @@ public class TestBaseCrawlSpec extends LockssTestCase {
 
   private static class TestableBaseCrawlSpec extends BaseCrawlSpec {
     protected TestableBaseCrawlSpec(List permissionUrls, CrawlRule rule,
-				    List permissionCheckers,
+				    PermissionChecker permissionChecker,
 				    LoginPageChecker loginPageChecker)
 	throws ClassCastException {
-      super(permissionUrls, rule, permissionCheckers, loginPageChecker);
+      super(permissionUrls, rule, permissionChecker, loginPageChecker);
     }
   }
 

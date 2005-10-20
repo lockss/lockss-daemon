@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.20 2005-10-11 05:50:15 tlipkis Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.21 2005-10-20 16:43:32 troberts Exp $
  */
 
 /*
@@ -315,15 +315,19 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 
 
   public void testMakePermissionCheckersNone() {
-    List permissionCheckers = cau.makePermissionCheckers();
-    assertEquals(0, permissionCheckers.size());
+    PermissionChecker permissionChecker = cau.makePermissionChecker();
+    assertNull(permissionChecker);
   }
 
+  /**
+   * Verify that the permission checker returned by makePermissionChecker
+   * is the same class that the factory would make
+   */
   public void testMakePermissionCheckers() {
     defMap.putString(DefinableArchivalUnit.AU_PERMISSION_CHECKER_FACTORY,
  		  "org.lockss.plugin.definable.TestDefinableArchivalUnit$MyPermissionCheckerFactory");
-    List permissionCheckers = cau.makePermissionCheckers();
-    assertEquals(1, permissionCheckers.size());
+    PermissionChecker permissionChecker = cau.makePermissionChecker();
+    assertTrue(permissionChecker instanceof MockPermissionChecker);
   }
 
   public static class MyPermissionCheckerFactory
