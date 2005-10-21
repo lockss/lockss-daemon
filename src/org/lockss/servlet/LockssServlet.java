@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.74 2005-10-19 18:31:27 thib_gc Exp $
+ * $Id: LockssServlet.java,v 1.75 2005-10-21 18:23:33 thib_gc Exp $
  */
 
 /*
@@ -953,8 +953,8 @@ public abstract class LockssServlet extends HttpServlet
         deny, ipFootnote, allowErrs, denyErrs, allowName, denyName);
   }
 
-  protected void layoutMenu(Page page, Iterator descrIterator) {
-    ServletUtil.layoutMenu(this, page, descrIterator);
+  protected void layoutMenu(Page page, Iterator linkIterator) {
+    ServletUtil.layoutMenu(page, linkIterator);
   }
 
   /** Return the app instance.

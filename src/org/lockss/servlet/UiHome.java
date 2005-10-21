@@ -1,5 +1,5 @@
 /*
- * $Id: UiHome.java,v 1.13 2005-10-11 05:46:57 tlipkis Exp $
+ * $Id: UiHome.java,v 1.14 2005-10-21 18:23:33 thib_gc Exp $
  */
 
 /*
@@ -37,8 +37,11 @@ import java.io.*;
 import java.util.Iterator;
 
 import org.apache.commons.collections.Predicate;
+import org.apache.commons.collections.Transformer;
 import org.apache.commons.collections.iterators.FilterIterator;
 import org.apache.commons.collections.iterators.ObjectArrayIterator;
+import org.apache.commons.collections.iterators.TransformIterator;
+import org.lockss.servlet.ServletUtil.LinkWithExplanation;
 import org.mortbay.html.*;
 
 /** UiHome servlet
@@ -72,14 +75,29 @@ public class UiHome extends LockssServlet {
     return tab;
   }
 
-  protected static Iterator getDescriptors() {
-    return new FilterIterator(
-        new ObjectArrayIterator(servletDescrs),
-        new Predicate() {
-          public boolean evaluate(Object obj) {
-            return ((ServletDescr)obj).isInUiHome();
-          }
-        });
+  protected Iterator getDescriptors() {
+    // Iterate over the servlet descriptors...
+    Iterator iterateOverDescr = new ObjectArrayIterator(servletDescrs);
+
+    // ...select those that appear in UiHome...
+    Predicate selectUiHome = new Predicate() {
+      public boolean evaluate(Object obj) {
+        return ((ServletDescr)obj).isInUiHome();
+      }
+    };
+
+    // ...and transform them into LinkWithExplanation pairs
+    Transformer fromDescrToLink = new Transformer() {
+      public Object transform(Object obj) {
+        ServletDescr d = (ServletDescr)obj;
+        return new LinkWithExplanation(srvLink(d, d.heading), d.getExplanation());
+      }
+    };
+
+    return new TransformIterator(
+        new FilterIterator(iterateOverDescr, selectUiHome),
+        fromDescrToLink
+    );
   }
 
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.15 2005-10-21 17:38:45 thib_gc Exp $
+ * $Id: ServletUtil.java,v 1.16 2005-10-21 18:23:33 thib_gc Exp $
  */
 
 /*
@@ -44,6 +44,27 @@ import org.lockss.util.TimeBase;
 import org.mortbay.html.*;
 
 public class ServletUtil {
+
+  public static class LinkWithExplanation {
+
+    private String explanation;
+
+    private String link;
+
+    public LinkWithExplanation(String link, String explanation) {
+      this.link = link;
+      this.explanation = explanation;
+    }
+
+    protected String getExplanation() {
+      return explanation;
+    }
+
+    protected String getLink() {
+      return link;
+    }
+
+  }
 
   /** Format to display date/time in headers */
   public static final DateFormat headerDf =
@@ -356,19 +377,18 @@ public class ServletUtil {
     composite.add(table);
   }
 
-  public static void layoutMenu(LockssServlet servlet,
-                                Page page,
-                                Iterator descrIterator) {
+  public static void layoutMenu(Page page,
+                                Iterator linkIterator) {
     Table table = new Table(MENU_BORDER, MENU_ATTRIBUTES);
-    while (descrIterator.hasNext()) {
-      ServletDescr descr = (ServletDescr)descrIterator.next();
+    while (linkIterator.hasNext()) {
+      LinkWithExplanation link = (LinkWithExplanation)linkIterator.next();
       table.newRow(MENU_ROW_ATTRIBUTES);
       table.newCell();
       table.add(MENU_ITEM_BEFORE);
-      table.add(servlet.srvLink(descr, descr.heading));
+      table.add(link.getLink());
       table.add(MENU_ITEM_AFTER);
       table.newCell();
-      table.add(descr.getExplanation());
+      table.add(link.getExplanation());
     }
     page.add(table);
   }
@@ -499,6 +519,7 @@ public class ServletUtil {
         "TD.colhead { font-weight: bold; background : #e0e0e0 }\n" +
         "--> </style>");
   }
+
 
   private static String multiline(String str) {
     return str.replaceAll("\n", "<br>");

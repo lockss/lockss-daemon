@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyAndContent.java,v 1.2 2005-10-21 17:38:45 thib_gc Exp $
+ * $Id: ProxyAndContent.java,v 1.3 2005-10-21 18:23:33 thib_gc Exp $
  */
 
 /*
@@ -289,8 +289,8 @@ public class ProxyAndContent extends LockssServlet {
   private static Logger logger = Logger.getLogger("IpAccessServlet");
 
   private static final String mainExplanation =
-    "Configure proxy options, such as the audit proxy and the ICP server"
-    + "(see below). Manage access groups and configure access rules for"
+    "Configure proxy options, such as the audit proxy and the ICP server "
+    + "(see below). Manage access groups and configure access rules for "
     + "the content preserved on this cache.";
 
   protected static Iterator getDescriptors_Main() {
@@ -298,6 +298,5 @@ public class ProxyAndContent extends LockssServlet {
         new ObjectArrayIterator(servletDescrs),
         PredicateUtils.falsePredicate());
   }
-
 
 }
