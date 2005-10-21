@@ -105,6 +105,8 @@
 	<value>gov.gpo.access.permanent.plugin.treasurybulletin.TreasuryBulletinPlugin</value>
 	<value>gov.gpo.access.permanent.plugin.socialsecuritybulletin.SocialSecurityBulletinPlugin</value>
 	<value>gov.gpo.access.permanent.plugin.nistjournalofresearch.NISTJournalOfResearchPlugin</value>
+	<value>gov.gpo.access.permanent.plugin.humanities.HumanitiesPlugin</value>
+	<value>gov.gpo.access.permanent.plugin.surveyofcurrentbusiness.SurveyOfCurrentBusinessPlugin</value>
 	<value>org.lockss.plugin.etd.vanderbiltetdplugin.VanderbiltETDPlugin</value>
 	<value>org.lockss.plugin.etd.vtetdplugin.VTETDPlugin</value>
 	<value>org.lockss.plugin.etd.vtetdplugin.VTETDLegacyPlugin</value>
@@ -226,6 +228,8 @@
 	  pluginName='gov.gpo.access.permanent.plugin.treasurybulletin.TreasuryBulletinPlugin'
 	  or pluginName='gov.gpo.access.permanent.plugin.socialsecuritybulletin.SocialSecurityBulletinPlugin'
 	  or pluginName='gov.gpo.access.permanent.plugin.nistjournalofresearch.NISTJournalOfResearchPlugin'
+	  or pluginName='gov.gpo.access.permanent.plugin.humanities.HumanitiesPlugin'
+	  or pluginName='gov.gpo.access.permanent.plugin.surveyofcurrentbusiness.SurveyOfCurrentBusinessPlugin'
 	  ]"
 	  />
       </property>
@@ -592,6 +596,34 @@
 	  <property name="value" value="volume110" />
 	</property>
         <property name="attributes.temp" value="warm" />
+      </property>
+
+      <property name="humanities2005">
+	<property name="title" value="Humanities 2005" />
+	<property name="journalTitle" value="Humanities" />
+	<property name="plugin" value="gov.gpo.access.permanent.plugin.humanities.HumanitiesPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://permanent.access.gpo.gov/lockss/Humanities/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2005" />
+	</property>
+      </property>
+
+      <property name="surveyofcurrentbusiness2005">
+	<property name="title" value="Survey of Current Business 2005" />
+	<property name="journalTitle" value="Survey of Current Business" />
+	<property name="plugin" value="gov.gpo.access.permanent.plugin.surveyofcurrentbusiness.SurveyOfCurrentBusinessPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://permanent.access.gpo.gov/lockss/Survey_of_Current_Business/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2005" />
+	</property>
       </property>
 
       <property name="mto1">
