@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.14 2005-10-19 18:31:27 thib_gc Exp $
+ * $Id: ServletUtil.java,v 1.15 2005-10-21 17:38:45 thib_gc Exp $
  */
 
 /*
@@ -67,12 +67,6 @@ public class ServletUtil {
     "align=\"center\"";
 
   private static final int ALLOWDENY_COLUMNS = 30;
-
-  private static final String ALLOWDENY_ERROR_AFTER =
-    "</font></center><br>";
-
-  private static final String ALLOWDENY_ERROR_BEFORE =
-    "<center><font color=\"red\" size=\"+1\">";
 
   private static final int ALLOWDENY_LINES = 15;
 
@@ -224,12 +218,12 @@ public class ServletUtil {
     Composite block = new Composite();
     if (errMsg != null) {
       block.add(ERRORBLOCK_ERROR_BEFORE);
-      block.add(errMsg);
+      block.add(multiline(errMsg));
       block.add(ERRORBLOCK_ERROR_AFTER);
     }
     if (statusMsg != null) {
       block.add(ERRORBLOCK_STATUS_BEFORE);
-      block.add(statusMsg);
+      block.add(multiline(statusMsg));
       block.add(ERRORBLOCK_STATUS_AFTER);
     }
     composite.add(block);
@@ -504,6 +498,10 @@ public class ServletUtil {
         "A.colhead, A.colhead:link, A.colhead:visited { text-decoration: none ; font-weight: bold ; color: blue }\n" +
         "TD.colhead { font-weight: bold; background : #e0e0e0 }\n" +
         "--> </style>");
+  }
+
+  private static String multiline(String str) {
+    return str.replaceAll("\n", "<br>");
   }
 
 }

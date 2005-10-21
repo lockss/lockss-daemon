@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyAndContent.java,v 1.1 2005-10-19 18:31:27 thib_gc Exp $
+ * $Id: ProxyAndContent.java,v 1.2 2005-10-21 17:38:45 thib_gc Exp $
  */
 
 /*
@@ -186,8 +186,9 @@ public class ProxyAndContent extends LockssServlet {
       try {
         processUpdate_Main_SaveChanges();
       }
-      catch (Exception exc) {
-
+      catch (IOException ioe) {
+        logger.error("Could not save changes", ioe);
+        errMsg = "Error: Could not save changes.\n" + ioe.toString();
       }
     }
 
