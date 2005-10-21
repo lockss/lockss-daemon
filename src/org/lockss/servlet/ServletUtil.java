@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.16 2005-10-21 18:23:33 thib_gc Exp $
+ * $Id: ServletUtil.java,v 1.17 2005-10-21 23:28:44 thib_gc Exp $
  */
 
 /*
@@ -37,10 +37,13 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.List;
 
+import org.lockss.daemon.TitleSet;
 import org.lockss.jetty.MyTextArea;
-import org.lockss.util.Constants;
-import org.lockss.util.StringUtil;
-import org.lockss.util.TimeBase;
+import org.lockss.remote.RemoteApi;
+import org.lockss.remote.RemoteApi.BatchAuStatus;
+import org.lockss.remote.RemoteApi.BatchAuStatus.Entry;
+import org.lockss.servlet.BatchAuConfig.Verb;
+import org.lockss.util.*;
 import org.mortbay.html.*;
 
 public class ServletUtil {
@@ -82,8 +85,6 @@ public class ServletUtil {
   static final String PAGE_BGCOLOR =
     "#ffffff";
 
-  private static final int ALLOWDENY_BORDER = 1;
-
   private static final String ALLOWDENY_CELL_ATTRIBUTES =
     "align=\"center\"";
 
@@ -97,11 +98,23 @@ public class ServletUtil {
   private static final String ALLOWDENY_TABLE_ATTRIBUTES =
     "align=\"center\" cellpadding=\"0\"";
 
+  private static final int ALLOWDENY_TABLE_BORDER = 1;
+
   private static final String ALLOWDENYERRORS_AFTER =
     "</font><br>";
 
   private static final String ALLOWDENYERRORS_BEFORE =
     "<font color=\"red\">";
+
+  private static final String CHOOSESETS_CELL_ATTRIBUTES = "valign=\"center\"";
+
+  private static final String CHOOSESETS_CHECKBOX_ATTRIBUTES =
+    "align=\"right\" valign=\"center\"";
+
+  private static final String CHOOSESETS_TABLE_ATTRIBUTES =
+    "align=\"center\" cellspacing=\"4\" cellpadding=\"0\"";
+
+  private static final int CHOOSESETS_TABLE_BORDER = 0;
 
   private static final String ERRORBLOCK_ERROR_AFTER =
     "</font></center><br>";
@@ -115,23 +128,18 @@ public class ServletUtil {
   private static final String ERRORBLOCK_STATUS_BEFORE =
     "<center><font color=\"red\" size=\"+1\">";
 
-  private static final String EXPLANATION_ATTRIBUTES =
-    "width=\"85%\"";
-
-  private static final int EXPLANATION_BORDER = 0;
-
   private static final String EXPLANATION_CELL_ATTRIBUTES =
     "align=\"center\"";
+
+  private static final String EXPLANATION_TABLE_ATTRIBUTES =
+    "width=\"85%\"";
+
+  private static final int EXPLANATION_TABLE_BORDER = 0;
 
   private static final String FOOTER_ATTRIBUTES =
     "cellspacing=\"0\" cellpadding=\"0\" align=\"center\"";
 
   private static final int FOOTER_BORDER = 0;
-
-  private static final String HEADER_ATTRIBUTES =
-    "cellspacing=\"2\" cellpadding=\"0\" width=\"100%\"";
-
-  private static final int HEADER_BORDER = 0;
 
   private static final String HEADER_HEADING_AFTER =
     "</b></font>";
@@ -139,13 +147,16 @@ public class ServletUtil {
   private static final String HEADER_HEADING_BEFORE =
     "<font size=\"+2\"><b>";
 
+  private static final String HEADER_TABLE_ATTRIBUTES =
+    "cellspacing=\"2\" cellpadding=\"0\" width=\"100%\"";
+
+  private static final int HEADER_TABLE_BORDER = 0;
+
   private static final Image IMAGE_LOCKSS_RED =
     makeImage("lockss-type-red.gif", 595, 31, 0);
 
   private static final String MENU_ATTRIBUTES =
     "cellspacing=\"2\" cellpadding=\"4\" align=\"center\"";
-
-  private static final int MENU_BORDER = 0;
 
   private static final String MENU_ITEM_AFTER =
     "</font>";
@@ -156,10 +167,12 @@ public class ServletUtil {
   private static final String MENU_ROW_ATTRIBUTES =
     "valign=\"top\"";
 
+  private static final int MENU_TABLE_BORDER = 0;
+
   private static final String NAVTABLE_ATTRIBUTES =
     "cellspacing=\"2\" cellpadding=\"0\"";
 
-  private static final int NAVTABLE_BORDER = 0;
+  private static final int NAVTABLE_TABLE_BORDER = 0;
 
   private static final String NOTES_BEGIN =
     "<p><b>Notes:</b>";
@@ -178,6 +191,42 @@ public class ServletUtil {
 
   private static final String SUBMIT_BEFORE =
     "<br><center>";
+
+//  public static void layoutChooseSets(LockssServlet servlet,
+//                                      RemoteApi remoteApi,
+//                                      Iterator setIterator,
+//                                      String checkboxGroup,
+//                                      Verb verb,
+//                                      boolean doGray,
+//                                      MutableInteger actualRows,
+//                                      MutableBoolean isAnySelectable) {
+//    actualRows.setValue(0);
+//    isAnySelectable.setValue(false);
+//
+//    Table tbl = new Table(CHOOSESETS_TABLE_BORDER, CHOOSESETS_TABLE_ATTRIBUTES);
+//    while (setIterator.hasNext()) {
+//      TitleSet set = (TitleSet)setIterator.next();
+//      if (verb.isTsAppropriateFor(set)) {
+//        BatchAuStatus bas = verb.findAusInSetForVerb(remoteApi, set);
+//        int numOk = 0;
+//        for (Iterator iter = bas.getStatusList().iterator(); iter.hasNext(); ) {
+//          if (((Entry)iter.next()).isOk()) { numOk++; }
+//        }
+//        if (numOk > 0 || doGray) {
+//          actualRows.add(1);
+//          tbl.newRow();
+//          tbl.newCell(CHOOSESETS_CHECKBOX_ATTRIBUTES);
+//          if (numOk > 0) {
+//            isAnySelectable.setValue(true);
+//            tbl.add(makeCheckbox(servlet, null, set.getName(), checkboxGroup, false));
+//          }
+//          tbl.newCell(CHOOSESETS_CELL_ATTRIBUTES);
+//          String txt = set.getName() + " (" + numOk + ")";
+//          tbl.add(numOk > 0 ? txt : gray(txt));
+//        }
+//      }
+//    }
+//  }
 
   public static void layoutEnablePortRow(LockssServlet servlet,
                                          Table table,
@@ -252,7 +301,7 @@ public class ServletUtil {
 
   public static void layoutExplanationBlock(Composite composite,
                                             String text) {
-    Table exp = new Table(EXPLANATION_BORDER, EXPLANATION_ATTRIBUTES);
+    Table exp = new Table(EXPLANATION_TABLE_BORDER, EXPLANATION_TABLE_ATTRIBUTES);
     exp.center();
     exp.newCell(EXPLANATION_CELL_ATTRIBUTES);
     exp.add(text);
@@ -299,7 +348,7 @@ public class ServletUtil {
                                   Date startDate,
                                   Iterator descrIterator) {
     Composite comp = new Composite();
-    Table table = new Table(HEADER_BORDER, HEADER_ATTRIBUTES);
+    Table table = new Table(HEADER_TABLE_BORDER, HEADER_TABLE_ATTRIBUTES);
     Image logo = isLargeLogo ? IMAGE_LOGO_LARGE : IMAGE_LOGO_SMALL;
 
     table.newRow();
@@ -334,7 +383,7 @@ public class ServletUtil {
                                             Vector denyErrs,
                                             String allowName,
                                             String denyName) {
-    Table table = new Table(ALLOWDENY_BORDER, ALLOWDENY_TABLE_ATTRIBUTES);
+    Table table = new Table(ALLOWDENY_TABLE_BORDER, ALLOWDENY_TABLE_ATTRIBUTES);
 
     table.newRow(ALLOWDENY_ROW_ATTRIBUTES);
     table.newCell(ALLOWDENY_CELL_ATTRIBUTES);
@@ -379,7 +428,7 @@ public class ServletUtil {
 
   public static void layoutMenu(Page page,
                                 Iterator linkIterator) {
-    Table table = new Table(MENU_BORDER, MENU_ATTRIBUTES);
+    Table table = new Table(MENU_TABLE_BORDER, MENU_ATTRIBUTES);
     while (linkIterator.hasNext()) {
       LinkWithExplanation link = (LinkWithExplanation)linkIterator.next();
       table.newRow(MENU_ROW_ATTRIBUTES);
@@ -440,6 +489,19 @@ public class ServletUtil {
     return page;
   }
 
+  /** Add html tags to grey the text */
+  private static String gray(String txt) {
+    return gray(txt, true);
+  }
+
+  /** Add html tags to grey the text if isGrey is true */
+  private static String gray(String txt, boolean isGray) {
+    if (isGray)
+      return "<font color=\"gray\">" + txt + "</font>";
+    else
+      return txt;
+  }
+
   private static void layoutFootnote(Composite comp,
                                      String footnote,
                                      int nth) {
@@ -475,7 +537,7 @@ public class ServletUtil {
                                      String machineNameClientAddr) {
     final String NAVTABLE_CELL_WIDTH = "width=\"15\"";
 
-    Table navTable = new Table(NAVTABLE_BORDER, NAVTABLE_ATTRIBUTES);
+    Table navTable = new Table(NAVTABLE_TABLE_BORDER, NAVTABLE_ATTRIBUTES);
     boolean clientTitle = false;
 
     while (descrIterator.hasNext()) {
@@ -520,6 +582,30 @@ public class ServletUtil {
         "--> </style>");
   }
 
+  /** Return a (possibly labelled) checkbox.
+   * @param label appears to right of checkbox if non null
+   * @param value value included in result set if box checked
+   * @param key form key to which result set is assigned
+   * @param checked if true, box is initially checked
+   * @return a checkbox Element
+   */
+  private static Element makeCheckbox(LockssServlet servlet,
+                                      String label,
+                                      String value,
+                                      String key,
+                                      boolean checked) {
+    Input in = new Input(Input.Checkbox, key, value);
+    if (checked) { in.check(); }
+    servlet.setTabOrder(in);
+    if (StringUtil.isNullString(label)) {
+      return in;
+    }
+    else {
+      Composite c = new Composite();
+      c.add(in); c.add(" "); c.add(label);
+      return c;
+    }
+  }
 
   private static String multiline(String str) {
     return str.replaceAll("\n", "<br>");
