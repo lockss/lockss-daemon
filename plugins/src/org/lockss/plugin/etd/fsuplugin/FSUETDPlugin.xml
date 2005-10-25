@@ -2,7 +2,7 @@
 <Elements>
 <MapElement>
 <ElementKey>plugin_version</ElementKey>
-<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">2</ElementValue>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">3</ElementValue>
 </MapElement>
 <MapElement>
 <ElementKey>plugin_crawl_type</ElementKey>
@@ -20,7 +20,7 @@
 <string xsi:type="java:java.lang.String">4,"^%s", base_url</string>
 <string xsi:type="java:java.lang.String">1,"%sETD-db/ETD-oai/oai.pl", base_url</string>
 <string xsi:type="java:java.lang.String">1,"%slockss/permission.html", base_url</string>
-<string xsi:type="java:java.lang.String">4,"%stheses/available/etd-.*%d-.*/restricted/.*", base_url, year</string>
+<string xsi:type="java:java.lang.String">2,"%stheses/available/etd-.*%d-.*/restricted/.*", base_url, year</string>
 <string xsi:type="java:java.lang.String">1,"%stheses/available/etd-.*%d-.*/", base_url, year</string>
 </ElementValue>
 </MapElement>
