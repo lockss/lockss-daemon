@@ -24,7 +24,7 @@
 </MapElement>
 <MapElement>
 <ElementKey>plugin_version</ElementKey>
-<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">5</ElementValue>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">6</ElementValue>
 </MapElement>
 <MapElement>
 <ElementKey>au_name</ElementKey>
@@ -46,6 +46,7 @@
 <string xsi:type="java:java.lang.String">2,".*ck=nck.*"</string>
 <string xsi:type="java:java.lang.String">2,".*adclick.*"</string>
 <string xsi:type="java:java.lang.String">2,".*/cgi/mailafriend.*"</string>
+<string xsi:type="java:java.lang.String">2,".*/cgi/external_ref.*"</string>
 <string xsi:type="java:java.lang.String">1,".*/content/current/.*"</string>
 <string xsi:type="java:java.lang.String">1,".*/content/vol%d/.*", volume</string>
 <string xsi:type="java:java.lang.String">1,".*/cgi/content/.*/%d/.*", volume</string>
