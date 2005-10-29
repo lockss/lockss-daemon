@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.17 2005-10-21 23:28:44 thib_gc Exp $
+ * $Id: ServletUtil.java,v 1.18 2005-10-29 00:09:50 thib_gc Exp $
  */
 
 /*
@@ -32,8 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.servlet;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
+import java.text.*;
 import java.util.*;
 import java.util.List;
 
@@ -106,10 +105,20 @@ public class ServletUtil {
   private static final String ALLOWDENYERRORS_BEFORE =
     "<font color=\"red\">";
 
-  private static final String CHOOSESETS_CELL_ATTRIBUTES = "valign=\"center\"";
+  private static final String BACKLINK_AFTER = "</center>";
+
+  private static final String BACKLINK_BEFORE = "<center>";
+
+  private static final String CHOOSESETS_BUTTONROW_ATTRIBUTES =
+    "align=\"center\" colspan=\"2\"";
+
+  private static final String CHOOSESETS_CELL_ATTRIBUTES =
+    "valign=\"center\"";
 
   private static final String CHOOSESETS_CHECKBOX_ATTRIBUTES =
     "align=\"right\" valign=\"center\"";
+
+  private static final int CHOOSESETS_ROW_THRESHOLD = 10;
 
   private static final String CHOOSESETS_TABLE_ATTRIBUTES =
     "align=\"center\" cellspacing=\"4\" cellpadding=\"0\"";
@@ -187,46 +196,32 @@ public class ServletUtil {
     ALLOWDENY_CELL_ATTRIBUTES;
 
   private static final String SUBMIT_AFTER =
-    "</center>";
+    BACKLINK_AFTER;
 
   private static final String SUBMIT_BEFORE =
     "<br><center>";
 
-//  public static void layoutChooseSets(LockssServlet servlet,
-//                                      RemoteApi remoteApi,
-//                                      Iterator setIterator,
-//                                      String checkboxGroup,
-//                                      Verb verb,
-//                                      boolean doGray,
-//                                      MutableInteger actualRows,
-//                                      MutableBoolean isAnySelectable) {
-//    actualRows.setValue(0);
-//    isAnySelectable.setValue(false);
-//
-//    Table tbl = new Table(CHOOSESETS_TABLE_BORDER, CHOOSESETS_TABLE_ATTRIBUTES);
-//    while (setIterator.hasNext()) {
-//      TitleSet set = (TitleSet)setIterator.next();
-//      if (verb.isTsAppropriateFor(set)) {
-//        BatchAuStatus bas = verb.findAusInSetForVerb(remoteApi, set);
-//        int numOk = 0;
-//        for (Iterator iter = bas.getStatusList().iterator(); iter.hasNext(); ) {
-//          if (((Entry)iter.next()).isOk()) { numOk++; }
-//        }
-//        if (numOk > 0 || doGray) {
-//          actualRows.add(1);
-//          tbl.newRow();
-//          tbl.newCell(CHOOSESETS_CHECKBOX_ATTRIBUTES);
-//          if (numOk > 0) {
-//            isAnySelectable.setValue(true);
-//            tbl.add(makeCheckbox(servlet, null, set.getName(), checkboxGroup, false));
-//          }
-//          tbl.newCell(CHOOSESETS_CELL_ATTRIBUTES);
-//          String txt = set.getName() + " (" + numOk + ")";
-//          tbl.add(numOk > 0 ? txt : gray(txt));
-//        }
-//      }
-//    }
-//  }
+  public static void layoutBackLink(LockssServlet servlet,
+                                    Page page,
+                                    String destination) {
+    page.add(BACKLINK_BEFORE);
+    page.add(servlet.srvLink(servlet.myServletDescr(),
+                             "Back to " + destination));
+    page.add(BACKLINK_AFTER);
+  }
+
+  public static void layoutChooseSets(LockssServlet servlet,
+                                      Page page,
+                                      Composite chooseSets,
+                                      String hiddenActionName,
+                                      String hiddenVerbName,
+                                      Verb verb) {
+    Form frm = newForm(servlet);
+    frm.add(new Input(Input.Hidden, hiddenActionName));
+    frm.add(new Input(Input.Hidden, hiddenVerbName, verb.valStr));
+    frm.add(chooseSets);
+    page.add(frm);
+  }
 
   public static void layoutEnablePortRow(LockssServlet servlet,
                                          Table table,
@@ -450,12 +445,80 @@ public class ServletUtil {
     composite.add(SUBMIT_BEFORE + submit + SUBMIT_AFTER);
   }
 
+  public static Composite makeChooseSets(LockssServlet servlet,
+                                         RemoteApi remoteApi,
+                                         Iterator titleSetITerator,
+                                         Verb verb,
+                                         String checkboxGroup,
+                                         boolean doGray,
+                                         MutableBoolean isAnySelectable,
+                                         String submitText,
+                                         String submitAction,
+                                         MutableInteger buttonNumber) {
+    int actualRows = 0;
+    isAnySelectable.setValue(false);
+    Composite topRow;
+
+    // Create table
+    Table tbl = new Table(CHOOSESETS_TABLE_BORDER, CHOOSESETS_TABLE_ATTRIBUTES);
+
+    // Create top row
+    tbl.newRow();
+    topRow = tbl.row();
+    tbl.newCell(CHOOSESETS_BUTTONROW_ATTRIBUTES);
+    buttonNumber.add(1);
+    tbl.add(makeSubmitButton(servlet, buttonNumber.intValue(),
+        submitText, submitAction));
+
+    // Iterate over title sets
+    while (titleSetITerator.hasNext()) {
+      TitleSet set = (TitleSet)titleSetITerator.next();
+      if (verb.isTsAppropriateFor(set)) {
+        BatchAuStatus bas = verb.findAusInSetForVerb(remoteApi, set);
+        int numOk = 0;
+        for (Iterator iter = bas.getStatusList().iterator(); iter.hasNext(); ) {
+          if (((Entry)iter.next()).isOk()) { numOk++; }
+        }
+        if (numOk > 0 || doGray) {
+          ++actualRows;
+          tbl.newRow();
+          tbl.newCell(CHOOSESETS_CHECKBOX_ATTRIBUTES);
+          if (numOk > 0) {
+            isAnySelectable.setValue(true);
+            tbl.add(makeCheckbox(servlet, null, set.getName(), checkboxGroup, false));
+          }
+          tbl.newCell(CHOOSESETS_CELL_ATTRIBUTES);
+          String txt = set.getName() + " (" + numOk + ")";
+          tbl.add(numOk > 0 ? txt : gray(txt));
+        }
+      }
+    }
+
+    if (isAnySelectable.booleanValue()) {
+      // Remove top row if unneeded
+      if (actualRows < CHOOSESETS_ROW_THRESHOLD) {
+        topRow.reset();
+      }
+
+      // Add bottom row
+      tbl.newRow();
+      tbl.newCell(CHOOSESETS_BUTTONROW_ATTRIBUTES);
+      buttonNumber.add(1);
+      tbl.add(makeSubmitButton(servlet, buttonNumber.intValue(),
+          submitText, submitAction));
+    }
+
+    return tbl;
+  }
+
   public static Image makeImage(String file,
                                 int width,
                                 int height,
                                 int border) {
     return new Image("/images/" + file, width, height, border);
   }
+
+
 
   /** create an image that will display the tooltip on mouse hover */
   public static Image makeImage(String file,
@@ -605,6 +668,52 @@ public class ServletUtil {
       c.add(in); c.add(" "); c.add(label);
       return c;
     }
+  }
+
+  /** Return a button that invokes javascript when clicked. */
+  private static Input makeJavascriptButton(LockssServlet servlet,
+                                            String label,
+                                            String js) {
+    Input btn = new Input("button", null);
+    btn.attribute("value", label);
+    servlet.setTabOrder(btn);
+    btn.attribute("onClick", js);
+    return btn;
+  }
+
+  /** Return a button that invokes the javascript submit routine with the
+   * specified action */
+  private static Element makeSubmitButton(LockssServlet servlet,
+                                          int buttonNumber,
+                                          String label,
+                                          String action) {
+    return makeSubmitButton(servlet, buttonNumber, label, action, null, null);
+  }
+
+  /** Return a button that invokes the javascript submit routine with the
+   * specified action, first storing the value in the specified form
+   * prop. */
+  private static Element makeSubmitButton(LockssServlet servlet,
+                                          int buttonNumber,
+                                          String label,
+                                          String action,
+                                          String prop,
+                                          String value) {
+    StringBuffer sb = new StringBuffer(40);
+    sb.append("lockssButton(this, '");
+    sb.append(action);
+    sb.append("'");
+    if (prop != null && value != null) {
+      sb.append(", '");
+      sb.append(prop);
+      sb.append("', '");
+      sb.append(value);
+      sb.append("'");
+    }
+    sb.append(")");
+    Input btn = makeJavascriptButton(servlet, label, sb.toString());
+    btn.attribute("id", "lsb." + buttonNumber);
+    return btn;
   }
 
   private static String multiline(String str) {

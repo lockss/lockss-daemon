@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.75 2005-10-21 18:23:33 thib_gc Exp $
+ * $Id: LockssServlet.java,v 1.76 2005-10-29 00:09:50 thib_gc Exp $
  */
 
 /*
@@ -106,7 +106,7 @@ public abstract class LockssServlet extends HttpServlet
   private String myName = null;
 
   // number submit buttons sequentially so unit tests can find them
-  private int submitButtonNumber = 0;
+  protected int submitButtonNumber = 0;
 
   // Descriptors for all servlets.
   protected static final ServletDescr SERVLET_HOME =

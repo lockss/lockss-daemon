@@ -1,5 +1,5 @@
 /*
- * $Id: BatchAuConfig.java,v 1.18 2005-10-14 21:24:13 thib_gc Exp $
+ * $Id: BatchAuConfig.java,v 1.19 2005-10-29 00:09:50 thib_gc Exp $
  */
 
 /*
@@ -239,6 +239,41 @@ public class BatchAuConfig extends LockssServlet {
     addMenuItem(tbl, linkText, expl, myServletDescr(),
 		ACTION_TAG + "=" + action + "", true);
   }
+
+//  private void chooseSets(Verb verb , boolean ARTIFICIAL_OVERLOADING)
+//      throws IOException {
+//
+//    this.verb = verb;
+//
+//    Page page = newPage();
+//    addJavaScript(page);
+//    layoutErrorBlock(page);
+//
+//    String grayAction = ConfigManager.getParam(PARAM_GREY_TITLESET_ACTION,
+//                                               DEFAULT_GREY_TITLESET_ACTION);
+//    boolean doGray = "All".equalsIgnoreCase(grayAction) ||
+//      (verb == VERB_ADD && "Add".equalsIgnoreCase(grayAction));
+//    MutableBoolean isAnySelectable = new MutableBoolean(false);
+//    MutableInteger buttonNumber = new MutableInteger(submitButtonNumber);
+//    Composite chooseSets = ServletUtil.makeChooseSets(this,
+//        remoteApi, pluginMgr.getTitleSets().iterator(), verb,
+//        KEY_TITLE_SET, doGray, isAnySelectable, "Select Titles",
+//        ACTION_SELECT_AUS, buttonNumber);
+//    submitButtonNumber = buttonNumber.intValue();
+//
+//    if (isAnySelectable.booleanValue()) {
+//      layoutExplanationBlock(page, "Select one or more collections of titles to "
+//          + verb.word + ", then click Select Titles.");
+//      ServletUtil.layoutChooseSets(this, page, chooseSets, ACTION_TAG,
+//          KEY_VERB, verb);
+//    }
+//    else {
+//      layoutExplanationBlock(page,
+//          "All titles in all predefined collections of titles already exist on this cache.");
+//    }
+//
+//    endPage(page);
+//  }
 
   private void chooseSets(Verb verb) throws IOException {
     this.verb = verb;
@@ -829,9 +864,7 @@ public class BatchAuConfig extends LockssServlet {
   /** Common and page adds Back link, footer */
   protected void endPage(Page page) throws IOException {
     if (action != null) {
-      page.add("<center>");
-      page.add(srvLink(myServletDescr(), "Back to Journal Configuration"));
-      page.add("</center>");
+      ServletUtil.layoutBackLink(this, page, "Journal Configuration");
     }
     layoutFooter(page);
     page.write(resp.getWriter());
