@@ -1,5 +1,5 @@
 /*
- * $Id: BatchAuConfig.java,v 1.19 2005-10-29 00:09:50 thib_gc Exp $
+ * $Id: BatchAuConfig.java,v 1.20 2005-11-02 18:15:07 thib_gc Exp $
  */
 
 /*
@@ -240,118 +240,37 @@ public class BatchAuConfig extends LockssServlet {
 		ACTION_TAG + "=" + action + "", true);
   }
 
-//  private void chooseSets(Verb verb , boolean ARTIFICIAL_OVERLOADING)
-//      throws IOException {
-//
-//    this.verb = verb;
-//
-//    Page page = newPage();
-//    addJavaScript(page);
-//    layoutErrorBlock(page);
-//
-//    String grayAction = ConfigManager.getParam(PARAM_GREY_TITLESET_ACTION,
-//                                               DEFAULT_GREY_TITLESET_ACTION);
-//    boolean doGray = "All".equalsIgnoreCase(grayAction) ||
-//      (verb == VERB_ADD && "Add".equalsIgnoreCase(grayAction));
-//    MutableBoolean isAnySelectable = new MutableBoolean(false);
-//    MutableInteger buttonNumber = new MutableInteger(submitButtonNumber);
-//    Composite chooseSets = ServletUtil.makeChooseSets(this,
-//        remoteApi, pluginMgr.getTitleSets().iterator(), verb,
-//        KEY_TITLE_SET, doGray, isAnySelectable, "Select Titles",
-//        ACTION_SELECT_AUS, buttonNumber);
-//    submitButtonNumber = buttonNumber.intValue();
-//
-//    if (isAnySelectable.booleanValue()) {
-//      layoutExplanationBlock(page, "Select one or more collections of titles to "
-//          + verb.word + ", then click Select Titles.");
-//      ServletUtil.layoutChooseSets(this, page, chooseSets, ACTION_TAG,
-//          KEY_VERB, verb);
-//    }
-//    else {
-//      layoutExplanationBlock(page,
-//          "All titles in all predefined collections of titles already exist on this cache.");
-//    }
-//
-//    endPage(page);
-//  }
-
   private void chooseSets(Verb verb) throws IOException {
+
     this.verb = verb;
-    Collection sets = pluginMgr.getTitleSets();
+
     Page page = newPage();
     addJavaScript(page);
     layoutErrorBlock(page);
-    Table tbl = new Table(0, "align=center cellspacing=4 cellpadding=0");
-    Block topSelButtonRow = null;
-    if (sets.size() >= 10) {
-      // add a top select button if more than 10 rows in table
-      tbl.newRow();
-      topSelButtonRow = tbl.row();
-      tbl.newCell("align=center colspan=2");
-      tbl.add(submitButton("Select Titles", ACTION_SELECT_AUS));
-    }
-    int actualRows = 0;
-    boolean isAnySelectable = false;
-    String greyAction =
-      ConfigManager.getParam(PARAM_GREY_TITLESET_ACTION,
-			     DEFAULT_GREY_TITLESET_ACTION);
-    boolean doGrey = "All".equalsIgnoreCase(greyAction) ||
-      (verb == VERB_ADD && "Add".equalsIgnoreCase(greyAction));
-    for (Iterator iter = sets.iterator(); iter.hasNext(); ) {
-      TitleSet ts = (TitleSet)iter.next();
-      if (verb.isTsAppropriateFor(ts)) {
-	RemoteApi.BatchAuStatus bas = verb.findAusInSetForVerb(remoteApi, ts);
-	int numOk = numOk(bas);
-	if (numOk > 0 || doGrey) {
-	  actualRows++;
-	  tbl.newRow();
-	  tbl.newCell("align=right valign=center");
-	  if (numOk > 0) {
-	    isAnySelectable = true;
-	    tbl.add(checkBox(null, ts.getName(), KEY_TITLE_SET, false));
-	  }
-	  tbl.newCell("valign=center");
-	  String txt = ts.getName() + " (" + numOk + ")";
-	  if (numOk > 0) {
-	    tbl.add(txt);
-	  } else {
-	    tbl.add(greyText(txt));
-	  }
-	}
-      }
-    }
-    if (isAnySelectable) {
-      if (topSelButtonRow != null && actualRows < 10) {
-	// we added a top select button, but there didn't turn out to be
-	// more than 10 actual rows, so remove the button.
-	topSelButtonRow.reset();
-      }
-      layoutExplanationBlock(page, "Select one or more collections of " +
-          "titles to " + verb.word + ", then click Select Titles.");
-      tbl.newRow();
-      tbl.newCell("align=center colspan=2");
-      tbl.add(submitButton("Select Titles", ACTION_SELECT_AUS));
-      Form frm = new Form(srvURL(myServletDescr()));
-      frm.method("POST");
-      frm.add(new Input(Input.Hidden, ACTION_TAG));
-      frm.add(new Input(Input.Hidden, KEY_VERB, verb.valStr));
-      frm.add(tbl);
-      page.add(frm);
-    } else {
-      layoutExplanationBlock(page, "All titles in all predefined collections"
-          + " of titles already exist on this cache.");
-    }
-    endPage(page);
-  }
 
-  private int numOk(RemoteApi.BatchAuStatus bas) {
-    int ok = 0;
-    for (Iterator iter = bas.getStatusList().iterator(); iter.hasNext(); ) {
-      RemoteApi.BatchAuStatus.Entry rs =
-	(RemoteApi.BatchAuStatus.Entry)iter.next();
-      if (rs.isOk()) ok++;
+    String grayAction = ConfigManager.getParam(PARAM_GREY_TITLESET_ACTION,
+                                               DEFAULT_GREY_TITLESET_ACTION);
+    boolean doGray = "All".equalsIgnoreCase(grayAction) ||
+      (verb == VERB_ADD && "Add".equalsIgnoreCase(grayAction));
+    MutableBoolean isAnySelectable = new MutableBoolean(false);
+    MutableInteger buttonNumber = new MutableInteger(submitButtonNumber);
+    Composite chooseSets = ServletUtil.makeChooseSets(this,
+        remoteApi, pluginMgr.getTitleSets().iterator(), verb,
+        KEY_TITLE_SET, doGray, isAnySelectable, "Select Titles",
+        ACTION_SELECT_AUS, buttonNumber);
+    submitButtonNumber = buttonNumber.intValue();
+
+    if (isAnySelectable.booleanValue()) {
+      layoutExplanationBlock(page, "Select one or more collections of titles to "
+          + verb.word + ", then click Select Titles.");
+      layoutChooseSets(page, chooseSets, ACTION_TAG, KEY_VERB, verb);
     }
-    return ok;
+    else {
+      layoutExplanationBlock(page,
+          "All titles in all predefined collections of titles already exist on this cache.");
+    }
+
+    endPage(page);
   }
 
   private void selectSetTitles() throws IOException {
