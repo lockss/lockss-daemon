@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManagerImpl.java,v 1.7 2005-10-19 20:13:05 troberts Exp $
+ * $Id: IdentityManagerImpl.java,v 1.8 2005-11-03 03:22:46 thib_gc Exp $
  */
 
 /*
@@ -209,12 +209,14 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
    * <p>All known identities (keys are PeerIdentity).</p>
    */
   private Map theIdentities;
+  // JAVA5: Map<PeerIdentity,LcapIdentity>
 
   /**
    * <p>All PeerIdentities (keys are strings).</p>
    */
   private Map thePeerIdentities;
-
+  // JAVA5: Map<String,PeerIdentity>
+  
   /**
    * <p>The IDDB file.</p>
    */
@@ -655,7 +657,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
    * other than at startup.</p>
    * @see #reloadIdentities(ObjectSerializer)
    */
-  private void reloadIdentities() {
+  void reloadIdentities() {
     reloadIdentities(makeIdentityListSerializer());
   }
 
@@ -665,7 +667,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
    * @param deserializer An ObjectSerializer instance.
    * @see #reloadIdentities()
    */
-  private void reloadIdentities(ObjectSerializer deserializer) {
+  void reloadIdentities(ObjectSerializer deserializer) {
     if (setupIddbFile() == null) {
       log.warning("Cannot load identities; no value for '"
           + PARAM_IDDB_DIR + "'.");
@@ -838,8 +840,9 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
    * @return An unwrapped identity map.
    */
   private HashMap unwrap(Object obj) {
+    HashMap map = new HashMap();
+
     if (obj instanceof IdentityListBean) {
-      HashMap map = new HashMap();
       // JAVA5: Use foreach
       Iterator beanIter = ((IdentityListBean)obj).getIdBeans().iterator();
       while (beanIter.hasNext()) {
@@ -847,18 +850,33 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
         String idKey = bean.getKey();
         try {
           PeerIdentity pid = findPeerIdentity(idKey);
-          LcapIdentity id = new LcapIdentity(pid, idKey, bean.getReputation());
-          map.put(pid, id);
+          LcapIdentity lid = new LcapIdentity(pid, idKey, bean.getReputation());
+          map.put(pid, lid);
         }
         catch (MalformedIdentityKeyException ex) {
           log.warning("Error reloading identity - Unknown host: " + idKey);
         }
       }
-      return map;
     }
     else {
-      return (HashMap)obj;
+      Iterator iter = ((HashMap)obj).entrySet().iterator();
+      while (iter.hasNext()) {
+        Map.Entry entry = (Map.Entry)iter.next();
+        PeerIdentity origPid = (PeerIdentity)entry.getKey();
+        LcapIdentity origLid = (LcapIdentity)entry.getValue();
+        String idKey = origPid.getIdString();
+        try {
+          PeerIdentity newPid = findPeerIdentity(idKey);
+          LcapIdentity newLid = new LcapIdentity(newPid, idKey, origLid.getReputation());
+          map.put(newPid, newLid);
+        }
+        catch (MalformedIdentityKeyException exc) {
+          log.warning("Error reloading identity - Unknown host: " + idKey);
+        }
+      }
     }
+
+    return map;
   }
 
   /**
@@ -1209,5 +1227,9 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
   protected String getLocalIpParam(Configuration config) {
     // overridable for testing
     return config.get(PARAM_LOCAL_IP);
+  }
+  
+  boolean areMapsEqualSize() {
+    return thePeerIdentities.size() == theIdentities.size();
   }
 }

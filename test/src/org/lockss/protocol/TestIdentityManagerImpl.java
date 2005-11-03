@@ -1,5 +1,5 @@
 /*
- * $Id: TestIdentityManagerImpl.java,v 1.6 2005-10-11 05:50:53 tlipkis Exp $
+ * $Id: TestIdentityManagerImpl.java,v 1.7 2005-11-03 03:22:46 thib_gc Exp $
  */
 
 /*
@@ -368,6 +368,21 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
   public void testStoreIdentities() throws Exception {
     setupPeer123();
     idmgr.storeIdentities();
+  }
+  
+  public void testLoadIdentities() throws Exception {
+    // Store
+    setupPeer123();
+    idmgr.storeIdentities();
+    
+    // Load
+    IdentityManagerImpl im = new IdentityManagerImpl();
+    im.setupLocalIdentities();
+    im.reloadIdentities();
+    im.findPeerIdentity("127.0.0.2");
+    assertTrue("The identity manager has maps of inconsistent sizes.",
+               im.areMapsEqualSize());
+    
   }
 
   public void testSignalAgreedThrowsOnNullAu() throws Exception {
