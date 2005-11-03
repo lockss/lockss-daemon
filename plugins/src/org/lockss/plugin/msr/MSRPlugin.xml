@@ -30,13 +30,6 @@
 <ElementKey>plugin_config_props</ElementKey>
 <ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 <ConfigParamDescr>
-<Key>volume</Key>
-<DisplayName>Volume No.</DisplayName>
-<Type>6</Type>
-<Size>8</Size>
-<Definitional>true</Definitional>
-</ConfigParamDescr>
-<ConfigParamDescr>
 <Key>base_url</Key>
 <DisplayName>Base URL</DisplayName>
 <Description>Usually of the form http://&lt;journal-name&gt;.com/</Description>
