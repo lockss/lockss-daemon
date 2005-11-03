@@ -157,6 +157,11 @@
 	  or journalTitle='Journal of Psychoeducational Assessment'
           ]" />
       </property>
+      <property name="sagenew">
+        <property name="name" value="All SAGE Titles new" />
+        <property name="class" value="xpath" />
+	<property name="xpath" value="[attributes/publisher='sage']" />
+      </property>
       <property name="oup">
         <property name="name" value="All Oxford University Press Titles" />
         <property name="class" value="xpath" />
@@ -829,10 +834,46 @@
       <property name="epr2001">
 	<property name="title" value="Electronic Poetry Review 2001" />
 	<property name="journalTitle" value="Electronic Poetry Review" />
-	<property name="plugin" value="edu.cornell.library.plugin.epr.EPRPlugin2001" />
+	<property name="plugin" value="edu.cornell.library.epr.EPRPlugin2001" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://www.poetry.org/" />
+	</property>
+      </property>
+
+      <property name="electronicpoetryreview2002">
+	<property name="title" value="Electronic Poetry Review 2002" />
+	<property name="journalTitle" value="Electronic Poetry Review" />
+	<property name="plugin" value="edu.cornell.library.epr.EPRPlugin2002On" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.poetry.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2002" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="num_issue_range" />
+	  <property name="value" value="3-4" />
+	</property>
+      </property>
+
+      <property name="electronicpoetryreview2003">
+	<property name="title" value="Electronic Poetry Review 2003" />
+	<property name="journalTitle" value="Electronic Poetry Review" />
+	<property name="plugin" value="edu.cornell.library.epr.EPRPlugin2002On" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.poetry.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2003" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="num_issue_range" />
+	  <property name="value" value="5-6" />
 	</property>
       </property>
 
@@ -1286,7 +1327,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="14" />
 	</property>
-        <property name="publisher" value="oup" />
+        <property name="attributes.publisher" value="oup" />
       </property>
 
       <property name="brain128">
@@ -1301,7 +1342,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="128" />
 	</property>
-        <property name="publisher" value="oup" />
+        <property name="attributes.publisher" value="oup" />
       </property>
 
       <property name="petrology46">
@@ -1316,7 +1357,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="46" />
 	</property>
-        <property name="publisher" value="oup" />
+        <property name="attributes.publisher" value="oup" />
       </property>
 
       <property name="americanliteraryhistory17">
@@ -1331,7 +1372,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="17" />
 	</property>
-        <property name="publisher" value="oup" />
+        <property name="attributes.publisher" value="oup" />
       </property>
 
       <property name="bioinformatics21">
@@ -1346,7 +1387,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="21" />
 	</property>
-        <property name="publisher" value="oup" />
+        <property name="attributes.publisher" value="oup" />
       </property>
 
       <property name="biostatistics6">
@@ -1361,7 +1402,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="6" />
 	</property>
-        <property name="publisher" value="oup" />
+        <property name="attributes.publisher" value="oup" />
       </property>
 
       <property name="brieftreatmentandcrisisintervention5">
@@ -1376,7 +1417,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="5" />
 	</property>
-        <property name="publisher" value="oup" />
+        <property name="attributes.publisher" value="oup" />
       </property>
 
       <property name="Carcinogenesis26">
@@ -1391,7 +1432,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="26" />
 	</property>
-        <property name="publisher" value="oup" />
+        <property name="attributes.publisher" value="oup" />
       </property>
 
       <property name="CerebralCortex15">
@@ -1406,7 +1447,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="15" />
 	</property>
-        <property name="publisher" value="oup" />
+        <property name="attributes.publisher" value="oup" />
       </property>
 
       <property name="ChemicalSenses30">
@@ -1421,7 +1462,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="30" />
 	</property>
-        <property name="publisher" value="oup" />
+        <property name="attributes.publisher" value="oup" />
       </property>
 
       <property name="ChineseJournalofInternationalLaw4">
@@ -1436,7 +1477,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="4" />
 	</property>
-        <property name="publisher" value="oup" />
+        <property name="attributes.publisher" value="oup" />
       </property>
 
       <property name="EarlyMusic33">
@@ -1451,7 +1492,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="33" />
 	</property>
-        <property name="publisher" value="oup" />
+        <property name="attributes.publisher" value="oup" />
       </property> 
 
       <property name="EssaysinCriticism55">
@@ -1466,7 +1507,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="55" />
 	</property>
-        <property name="publisher" value="oup" />
+        <property name="attributes.publisher" value="oup" />
       </property>
 
 
@@ -1482,7 +1523,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="16" />
 	</property>
-        <property name="publisher" value="oup" />
+        <property name="attributes.publisher" value="oup" />
       </property>
 
 
@@ -1498,7 +1539,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="15" />
 	</property>
-        <property name="publisher" value="oup" />
+        <property name="attributes.publisher" value="oup" />
       </property>
 
 
@@ -1514,7 +1555,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="20" />
 	</property>
-        <property name="publisher" value="oup" />
+        <property name="attributes.publisher" value="oup" />
       </property>
 
 
@@ -1530,7 +1571,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="20" />
 	</property>
-        <property name="publisher" value="oup" />
+        <property name="attributes.publisher" value="oup" />
       </property>
 
 
@@ -1546,7 +1587,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="5" />
 	</property>
-        <property name="publisher" value="oup" />
+        <property name="attributes.publisher" value="oup" />
       </property>
 
 
@@ -1562,7 +1603,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="13" />
 	</property>
-        <property name="publisher" value="oup" />
+        <property name="attributes.publisher" value="oup" />
       </property>
 
 
@@ -1578,7 +1619,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="19" />
 	</property>
-        <property name="publisher" value="oup" />
+        <property name="attributes.publisher" value="oup" />
       </property>
 
 
@@ -1594,7 +1635,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="17" />
 	</property>
-        <property name="publisher" value="oup" />
+        <property name="attributes.publisher" value="oup" />
       </property>
 
 
@@ -1610,7 +1651,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="1" />
 	</property>
-        <property name="publisher" value="oup" />
+        <property name="attributes.publisher" value="oup" />
       </property>
 
 
@@ -1626,7 +1667,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="10" />
 	</property>
-        <property name="publisher" value="oup" />
+        <property name="attributes.publisher" value="oup" />
       </property>
 
 
@@ -1642,7 +1683,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="10" />
 	</property>
-        <property name="publisher" value="oup" />
+        <property name="attributes.publisher" value="oup" />
       </property>
 
 
@@ -1658,7 +1699,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="5" />
 	</property>
-        <property name="publisher" value="oup" />
+        <property name="attributes.publisher" value="oup" />
       </property>
 
 
@@ -1674,7 +1715,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="17" />
 	</property>
-        <property name="publisher" value="oup" />
+        <property name="attributes.publisher" value="oup" />
       </property>
 
 
@@ -1690,7 +1731,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="3" />
 	</property>
-        <property name="publisher" value="oup" />
+        <property name="attributes.publisher" value="oup" />
       </property>
 
 
@@ -1706,7 +1747,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="8" />
 	</property>
-        <property name="publisher" value="oup" />
+        <property name="attributes.publisher" value="oup" />
       </property>
 
       <property name="JournalofLogicandComputation15">
@@ -1721,7 +1762,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="15" />
 	</property>
-        <property name="publisher" value="oup" />
+        <property name="attributes.publisher" value="oup" />
       </property>
 
 
@@ -1737,7 +1778,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="27" />
 	</property>
-        <property name="publisher" value="oup" />
+        <property name="attributes.publisher" value="oup" />
       </property>
 
 
@@ -1753,7 +1794,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="18" />
 	</property>
-        <property name="publisher" value="oup" />
+        <property name="attributes.publisher" value="oup" />
       </property>
 
 
@@ -1769,7 +1810,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="22" />
 	</property>
-        <property name="publisher" value="oup" />
+        <property name="attributes.publisher" value="oup" />
       </property>
 
 
@@ -1785,7 +1826,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="17" />
 	</property>
-        <property name="publisher" value="oup" />
+        <property name="attributes.publisher" value="oup" />
       </property>
 
 
@@ -1801,7 +1842,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="60" />
 	</property>
-        <property name="publisher" value="oup" />
+        <property name="attributes.publisher" value="oup" />
       </property>
 
 
@@ -1817,7 +1858,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="97" />
 	</property>
-        <property name="publisher" value="oup" />
+        <property name="attributes.publisher" value="oup" />
       </property>
 
 
@@ -1833,7 +1874,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="13" />
 	</property>
-        <property name="publisher" value="oup" />
+        <property name="attributes.publisher" value="oup" />
       </property>
 
 
@@ -1849,7 +1890,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="11" />
 	</property>
-        <property name="publisher" value="oup" />
+        <property name="attributes.publisher" value="oup" />
       </property>
 
 
@@ -1865,7 +1906,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="86" />
 	</property>
-        <property name="publisher" value="oup" />
+        <property name="attributes.publisher" value="oup" />
       </property>
 
 
@@ -1881,7 +1922,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="87" />
 	</property>
-        <property name="publisher" value="oup" />
+        <property name="attributes.publisher" value="oup" />
       </property>
 
 
@@ -1897,7 +1938,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="33" />
 	</property>
-        <property name="publisher" value="oup" />
+        <property name="attributes.publisher" value="oup" />
       </property>
 
 
@@ -1913,7 +1954,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="21" />
 	</property>
-        <property name="publisher" value="oup" />
+        <property name="attributes.publisher" value="oup" />
       </property>
 
 
@@ -1929,7 +1970,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="28" />
 	</property>
-        <property name="publisher" value="oup" />
+        <property name="attributes.publisher" value="oup" />
       </property>
 
 
@@ -1945,7 +1986,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="18" />
 	</property>
-        <property name="publisher" value="oup" />
+        <property name="attributes.publisher" value="oup" />
       </property>
 
 
@@ -1961,7 +2002,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="56" />
 	</property>
-        <property name="publisher" value="oup" />
+        <property name="attributes.publisher" value="oup" />
       </property>
 
 
@@ -1977,11 +2018,206 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="58" />
 	</property>
-        <property name="publisher" value="oup" />
+        <property name="attributes.publisher" value="oup" />
       </property>
 <!-- End OUP titles -->
 
 <!-- Begin SAGE titles -->
+      <property name="accountinghistory5">
+	<property name="title" value="Accounting History Volume 5" />
+	<property name="journalTitle" value="Accounting History" />
+	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://ach.sagepub.com/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="5" />
+	</property>
+        <property name="attributes.publisher" value="sage" />
+      </property>
+
+      <property name="ActaSociologica48">
+	<property name="title" value="Acta Sociologica Volume 48" />
+	<property name="journalTitle" value="Acta Sociologica" />
+	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://asj.sagepub.com/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="48" />
+	</property>
+        <property name="attributes.publisher" value="sage" />
+      </property>
+
+      <property name="ActionResearch3">
+	<property name="title" value="Action Research Volume 3" />
+	<property name="journalTitle" value="Action Research" />
+	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://arj.sagepub.com/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="3" />
+	</property>
+        <property name="attributes.publisher" value="sage" />
+      </property>
+
+      <property name="ActiveLearninginHigherEducation6">
+	<property name="title" value="Active Learning in Higher Education Volume 6" />
+	<property name="journalTitle" value="Active Learning in Higher Education" />
+	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://alh.sagepub.com/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="6" />
+	</property>
+        <property name="attributes.publisher" value="sage" />
+      </property>
+
+      <property name="AdaptiveBehavior13">
+	<property name="title" value="Adaptive Behavior Volume 13" />
+	<property name="journalTitle" value="Adaptive Behavior" />
+	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://adb.sagepub.com/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="13" />
+	</property>
+        <property name="attributes.publisher" value="sage" />
+      </property>
+
+      <property name="AdministrationSociety37">
+	<property name="title" value="Administration &amp; Society Volume 37" />
+	<property name="journalTitle" value="Administration &amp; Society" />
+	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://aas.sagepub.com/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="37" />
+	</property>
+        <property name="attributes.publisher" value="sage" />
+      </property>
+
+      <property name="AdultEducationQuarterly56">
+	<property name="title" value="Adult Education Quarterly Volume 56" />
+	<property name="journalTitle" value="Adult Education Quarterly" />
+	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://aeq.sagepub.com/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="56" />
+	</property>
+        <property name="attributes.publisher" value="sage" />
+      </property>
+
+      <property name="AdvancesinDevelopingHumanResources7">
+	<property name="title" value="Advances in Developing Human Resources Volume 7" />
+	<property name="journalTitle" value="Advances in Developing Human Resources" />
+	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://adh.sagepub.com/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="7" />
+	</property>
+        <property name="attributes.publisher" value="sage" />
+      </property>
+
+      <property name="Affilia20">
+	<property name="title" value="Affilia Volume 20" />
+	<property name="journalTitle" value="Affilia" />
+	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://aff.sagepub.com/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="20" />
+	</property>
+        <property name="attributes.publisher" value="sage" />
+      </property>
+
+      <property name="AmericanBehavioralScientist49">
+	<property name="title" value="American Behavioral Scientist Volume 49" />
+	<property name="journalTitle" value="American Behavioral Scientist" />
+	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://abs.sagepub.com/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="49" />
+	</property>
+        <property name="attributes.publisher" value="sage" />
+      </property>
+
+      <property name="AmericanJournalofEvaluation26">
+	<property name="title" value="American Journal of Evaluation Volume 26" />
+	<property name="journalTitle" value="American Journal of Evaluation" />
+	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://aje.sagepub.com/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="26" />
+	</property>
+        <property name="attributes.publisher" value="sage" />
+      </property>
+
+      <property name="AmericanJournalofMedicalQuality20">
+	<property name="title" value="American Journal of Medical Quality Volume 20" />
+	<property name="journalTitle" value="American Journal of Medical Quality" />
+	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://ajm.sagepub.com/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="20" />
+	</property>
+        <property name="attributes.publisher" value="sage" />
+      </property>
+
+      <property name="TheAmericanJournalofSportsMedicine33">
+	<property name="title" value="The American Journal of Sports Medicine Volume 33" />
+	<property name="journalTitle" value="The American Journal of Sports Medicine" />
+	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://ajs.sagepub.com/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="33" />
+	</property>
+        <property name="attributes.publisher" value="sage" />
+      </property>
+
       <property name="JournalofCasesinEducationalLeadership8">
 	<property name="title" value="Journal of Cases in Educational Leadership Volume 8" />
 	<property name="journalTitle" value="Journal of Cases in Educational Leadership" />
@@ -1994,7 +2230,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="8" />
 	</property>
-        <property name="publisher" value="sage" />
+        <property name="attributes.publisher" value="sage" />
       </property>
 
       <property name="JournalofHospitalityAndTourismResearch29">
@@ -2009,7 +2245,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="29" />
 	</property>
-        <property name="publisher" value="sage" />
+        <property name="attributes.publisher" value="sage" />
       </property>
 
       <property name="JournalofPsychoeducationalAssessment23">
@@ -2024,7 +2260,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="23" />
 	</property>
-        <property name="publisher" value="sage" />
+        <property name="attributes.publisher" value="sage" />
       </property>
 <!-- End SAGE titles -->
 
@@ -2391,6 +2627,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="60" />
 	</property>
+        <property name="attributes.publisher" value="JHU Press" />
       </property>
 
 
@@ -2411,6 +2648,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="91" />
 	</property>
+        <property name="attributes.publisher" value="JHU Press" />
       </property>
 
       <property name="pm13">
@@ -2430,6 +2668,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="13" />
 	</property>
+        <property name="attributes.publisher" value="JHU Press" />
       </property>
 
       <property name="pm14">
@@ -2449,6 +2688,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="25" />
 	</property>
+        <property name="attributes.publisher" value="JHU Press" />
       </property>
 
       <property name="pm15">
@@ -2468,6 +2708,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="25" />
 	</property>
+        <property name="attributes.publisher" value="JHU Press" />
       </property>
 
       <property name="pm16">
@@ -2487,6 +2728,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="6" />
 	</property>
+        <property name="attributes.publisher" value="JHU Press" />
       </property>
 
       <property name="pm17">
@@ -2506,6 +2748,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="44" />
 	</property>
+        <property name="attributes.publisher" value="JHU Press" />
       </property>
 
       <property name="pm20">
@@ -2525,6 +2768,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="4" />
 	</property>
+        <property name="attributes.publisher" value="JHU Press" />
       </property>
 
       <property name="pm19">
@@ -2544,6 +2788,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="14" />
 	</property>
+        <property name="attributes.publisher" value="JHU Press" />
       </property>
 
 
@@ -2564,6 +2809,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="49" />
 	</property>
+        <property name="attributes.publisher" value="JHU Press" />
       </property>
 
       <property name="pm22">
@@ -2583,6 +2829,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="11" />
 	</property>
+        <property name="attributes.publisher" value="JHU Press" />
       </property>
 
       <property name="pm23">
@@ -2602,6 +2849,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="21" />
 	</property>
+        <property name="attributes.publisher" value="JHU Press" />
       </property>
 
 
@@ -2622,6 +2870,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="64" />
 	</property>
+        <property name="attributes.publisher" value="JHU Press" />
       </property>
 
       <property name="pm25">
@@ -2641,6 +2890,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="41" />
 	</property>
+        <property name="attributes.publisher" value="JHU Press" />
       </property>
 
       <property name="pm26">
@@ -2660,6 +2910,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="15" />
 	</property>
+        <property name="attributes.publisher" value="JHU Press" />
       </property>
 
       <property name="pm27">
@@ -2679,6 +2930,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="13" />
 	</property>
+        <property name="attributes.publisher" value="JHU Press" />
       </property>
 
       <property name="pm28">
@@ -2698,6 +2950,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="24" />
 	</property>
+        <property name="attributes.publisher" value="JHU Press" />
       </property>
 
       <property name="pm29">
@@ -2717,6 +2970,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="27" />
 	</property>
+        <property name="attributes.publisher" value="JHU Press" />
       </property>
 
       <property name="pm30">
@@ -2736,6 +2990,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="22" />
 	</property>
+        <property name="attributes.publisher" value="JHU Press" />
       </property>
 
       <property name="pm31">
@@ -2755,6 +3010,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="118" />
 	</property>
+        <property name="attributes.publisher" value="JHU Press" />
       </property>
 
 
@@ -2774,6 +3030,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="12" />
 	</property>
+        <property name="attributes.publisher" value="JHU Press" />
       </property>
 
       <property name="new_literary_history35">
@@ -2792,6 +3049,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="35" />
 	</property>
+        <property name="attributes.publisher" value="JHU Press" />
       </property>
 
       <property name="perspectives_in_biology_and_medicine48">
@@ -2810,6 +3068,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="48" />
 	</property>
+        <property name="attributes.publisher" value="JHU Press" />
       </property>
 
       <property name="philosophy_and_literature28">
@@ -2828,6 +3087,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="28" />
 	</property>
+        <property name="attributes.publisher" value="JHU Press" />
       </property>
 
       <property name="philosophy_psychiatry_and_psychology11">
@@ -2846,6 +3106,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="11" />
 	</property>
+        <property name="attributes.publisher" value="JHU Press" />
       </property>
 
       <property name="portal_libraries_and_the_academy5">
@@ -2864,6 +3125,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="5" />
 	</property>
+        <property name="attributes.publisher" value="JHU Press" />
       </property>
 
       <property name="postmodern_culture15">
@@ -2882,6 +3144,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="15" />
 	</property>
+        <property name="attributes.publisher" value="JHU Press" />
       </property>
 
       <property name="review_of_higher_education28">
@@ -2900,6 +3163,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="28" />
 	</property>
+        <property name="attributes.publisher" value="JHU Press" />
       </property>
 
       <property name="reviews_in_american_history32">
@@ -2918,6 +3182,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="32" />
 	</property>
+        <property name="attributes.publisher" value="JHU Press" />
       </property>
 
       <property name="sais_review24">
@@ -2936,6 +3201,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="24" />
 	</property>
+        <property name="attributes.publisher" value="JHU Press" />
       </property>
 
       <property name="studies_in_english_literature">
@@ -2954,6 +3220,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="45" />
 	</property>
+        <property name="attributes.publisher" value="JHU Press" />
       </property>
 
       <property name="shakespeare_quarterly55">
@@ -2972,6 +3239,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="55" />
 	</property>
+        <property name="attributes.publisher" value="JHU Press" />
       </property>
 
       <property name="south_central_review21">
@@ -2990,6 +3258,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="21" />
 	</property>
+        <property name="attributes.publisher" value="JHU Press" />
       </property>
 
       <property name="spiritus4">
@@ -3008,6 +3277,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="4" />
 	</property>
+        <property name="attributes.publisher" value="JHU Press" />
       </property>
 
       <property name="technology_and_culture45">
@@ -3026,6 +3296,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="45" />
 	</property>
+        <property name="attributes.publisher" value="JHU Press" />
       </property>
 
       <property name="theatre_journal56">
@@ -3044,6 +3315,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="56" />
 	</property>
+        <property name="attributes.publisher" value="JHU Press" />
       </property>
 
       <property name="theatre_topics14">
@@ -3062,6 +3334,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="14" />
 	</property>
+        <property name="attributes.publisher" value="JHU Press" />
       </property>
 
       <property name="theory_and_event6">
@@ -3080,6 +3353,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="6" />
 	</property>
+        <property name="attributes.publisher" value="JHU Press" />
       </property>
 
       <property name="transactions_of_the_american_philological_association134">
@@ -3098,6 +3372,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="134" />
 	</property>
+        <property name="attributes.publisher" value="JHU Press" />
       </property>
 
       <property name="wide_angle21">
@@ -3116,6 +3391,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="21" />
 	</property>
+        <property name="attributes.publisher" value="JHU Press" />
       </property>
 
       <property name="world_politics56">
@@ -3134,6 +3410,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="56" />
 	</property>
+        <property name="attributes.publisher" value="JHU Press" />
       </property>
 
       <property name="yale_journal_of_criticism17">
@@ -3152,8 +3429,81 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="17" />
 	</property>
+        <property name="attributes.publisher" value="JHU Press" />
       </property>
 
+
+      <property name="ncaw1">
+	<property name="title" value="19th Century Art Worldwide Volume 1" />
+	<property name="journalTitle" value="19th Century Art Worldwide" />
+	<property name="plugin" value="edu.princeton.plugin.ncaw.19thCenturyArtWorldwidePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.19thc-artworldwide.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2002" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="1" />
+	</property>
+      </property>
+
+      <property name="ncaw2">
+	<property name="title" value="19th Century Art Worldwide Volume 2" />
+	<property name="journalTitle" value="19th Century Art Worldwide" />
+	<property name="plugin" value="edu.princeton.plugin.ncaw.19thCenturyArtWorldwidePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.19thc-artworldwide.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2003" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="2" />
+	</property>
+      </property>
+
+      <property name="ncaw3">
+	<property name="title" value="19th Century Art Worldwide Volume 3" />
+	<property name="journalTitle" value="19th Century Art Worldwide" />
+	<property name="plugin" value="edu.princeton.plugin.ncaw.19thCenturyArtWorldwidePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.19thc-artworldwide.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2004" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="3" />
+	</property>
+      </property>
+
+      <property name="ncaw4">
+	<property name="title" value="19th Century Art Worldwide Volume 4" />
+	<property name="journalTitle" value="19th Century Art Worldwide" />
+	<property name="plugin" value="edu.princeton.plugin.ncaw.19thCenturyArtWorldwidePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.19thc-artworldwide.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2005" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="4" />
+	</property>
+      </property>
 
       <property name="failbetter2004">
 	<property name="title" value="Failbetter 2004" />
@@ -4649,6 +4999,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="51" />
 	</property>
+        <property name="attributes.publisher" value="IU Press" />
       </property>
 
       <property name="eservice_journal">
@@ -4668,6 +5019,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="3" />
 	</property>
+        <property name="attributes.publisher" value="IU Press" />
       </property>
 
       <property name="history_and_memory16">
@@ -4687,6 +5039,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="16" />
 	</property>
+        <property name="attributes.publisher" value="IU Press" />
       </property>
 
       <property name="hypatia19">
@@ -4706,6 +5059,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="19" />
 	</property>
+        <property name="attributes.publisher" value="IU Press" />
       </property>
 
       <property name="ij_of_global_legal_studies">
@@ -4725,6 +5079,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="11" />
 	</property>
+        <property name="attributes.publisher" value="IU Press" />
       </property>
 
       <property name="israel_studies9">
@@ -4744,6 +5099,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="9" />
 	</property>
+        <property name="attributes.publisher" value="IU Press" />
       </property>
 
       <property name="jewish_social_studies10">
@@ -4763,6 +5119,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="10" />
 	</property>
+        <property name="attributes.publisher" value="IU Press" />
       </property>
 
       <property name="journal_of_folklore_research41">
@@ -4782,6 +5139,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="41" />
 	</property>
+        <property name="attributes.publisher" value="IU Press" />
       </property>
 
       <property name="journal_of_modern_literature27">
@@ -4801,6 +5159,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="27" />
 	</property>
+        <property name="attributes.publisher" value="IU Press" />
       </property>
 
       <property name="meridians4">
@@ -4820,6 +5179,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="4" />
 	</property>
+        <property name="attributes.publisher" value="IU Press" />
       </property>
 
       <property name="Nashim8">
@@ -4839,6 +5199,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="8" />
 	</property>
+        <property name="attributes.publisher" value="IU Press" />
       </property>
 
       <property name="NWSAJournal16">
@@ -4858,6 +5219,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="16" />
 	</property>
+        <property name="attributes.publisher" value="IU Press" />
       </property>
 
       <property name="PhilosophyofMusicEducationReview12">
@@ -4877,6 +5239,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="12" />
 	</property>
+        <property name="attributes.publisher" value="IU Press" />
       </property>
 
       <property name="Prooftexts24">
@@ -4896,6 +5259,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="24" />
 	</property>
+        <property name="attributes.publisher" value="IU Press" />
       </property>
 
       <property name="ResearchinAfricanLiteratures36">
@@ -4915,6 +5279,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="36" />
 	</property>
+        <property name="attributes.publisher" value="IU Press" />
       </property>
 
       <property name="SmallAxe8">
@@ -4934,6 +5299,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="8" />
 	</property>
+        <property name="attributes.publisher" value="IU Press" />
       </property>
 
       <property name="VictorianStudies46">
@@ -4953,6 +5319,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="46" />
 	</property>
+        <property name="attributes.publisher" value="IU Press" />
       </property>
 
       
@@ -5205,6 +5572,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="36" />
 	</property>
+        <property name="attributes.publisher" value="JHU Press" />
       </property>
 
       <!-- Title: American Imago (Project Muse) -->
@@ -5226,7 +5594,9 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="70" />
 	</property>
+        <property name="attributes.publisher" value="JHU Press" />
       </property>
+
       <!-- Title: American Journal of Mathematics (Project Muse) -->
       <property name="pm2">
 	<property name="title" value="American Journal of Mathematics Volume 125" />
@@ -5245,6 +5615,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="125" />
 	</property>
+        <property name="attributes.publisher" value="JHU Press" />
       </property>
 
       <!-- Title: American Journal of Philology (Project Muse) -->
@@ -5265,6 +5636,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="124" />
 	</property>
+        <property name="attributes.publisher" value="JHU Press" />
       </property>
 
       <!-- Title: American Quarterly (Project Muse) -->
@@ -5285,6 +5657,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="55" />
 	</property>
+        <property name="attributes.publisher" value="JHU Press" />
       </property>
 
       <!-- Title: Arethusa (Project Muse) -->
@@ -5305,7 +5678,9 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="36" />
 	</property>
+        <property name="attributes.publisher" value="JHU Press" />
       </property>
+
       <!-- Title: Bulletin of the History of Medicine (Project Muse) -->
       <property name="pm6">
 	<property name="title" value="Bulletin of the History of Medicine Volume 77" />
@@ -5324,6 +5699,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="77" />
 	</property>
+        <property name="attributes.publisher" value="JHU Press" />
       </property>
 
       <!-- Title: Callaloo (Project Muse) -->
@@ -5344,6 +5720,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="26" />
 	</property>
+        <property name="attributes.publisher" value="JHU Press" />
       </property>
 
       <!-- Title: Comparative Technology Transfer and Society (Project Muse) -->
@@ -5364,6 +5741,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="1" />
 	</property>
+        <property name="attributes.publisher" value="JHU Press" />
       </property>
 
       <!-- Title: Configurations (Project Muse) -->
@@ -5384,6 +5762,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="11" />
 	</property>
+        <property name="attributes.publisher" value="JHU Press" />
       </property>
 
       <property name="cjpcr13">
