@@ -1,34 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Elements>
 <MapElement>
-<ElementKey>au_name</ElementKey>
-<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"%s %d", base_url, year</ElementValue>
-</MapElement>
-<MapElement>
-<ElementKey>au_def_new_content_crawl</ElementKey>
-<ElementValue xsi:type="java:java.lang.Long" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">1209600000</ElementValue>
-</MapElement>
-<MapElement>
-<ElementKey>plugin_name</ElementKey>
-<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Electronic Poetry Review Plugin (2002-on)</ElementValue>
-</MapElement>
-<MapElement>
-<ElementKey>au_crawlrules</ElementKey>
-<ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-<string xsi:type="java:java.lang.String">4,"^%s", base_url</string>
-<string xsi:type="java:java.lang.String">1,"%sissues/issue3|4/.*", base_url</string>
-<string xsi:type="java:java.lang.String">1,"%slockss/manifest2002.html", base_url</string>
-<string xsi:type="java:java.lang.String">1,"%s.*/?images/.*", base_url</string>
-<string xsi:type="java:java.lang.String">1,"%s.*\.css$", base_url</string>
-<string xsi:type="java:java.lang.String">1,"%s.*alltext/.*", base_url</string>
-<string xsi:type="java:java.lang.String">1,"%s.*text/cnotes/.*", base_url</string>
-</ElementValue>
-</MapElement>
-<MapElement>
-<ElementKey>au_start_url</ElementKey>
-<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"%slockss/manifest%d.html", base_url, year</ElementValue>
-</MapElement>
-<MapElement>
 <ElementKey>plugin_identifier</ElementKey>
 <ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">edu.cornell.library.epr.EPRPlugin2002On</ElementValue>
 </MapElement>
@@ -37,13 +9,44 @@
 <ElementValue xsi:type="java:java.lang.Long" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">6000</ElementValue>
 </MapElement>
 <MapElement>
-<ElementKey>plugin_cache_result_handler</ElementKey>
-<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ElementKey>au_name</ElementKey>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"%s %d", base_url, year</ElementValue>
+</MapElement>
+<MapElement>
+<ElementKey>plugin_name</ElementKey>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Electronic Poetry Review Plugin 2002 On</ElementValue>
+</MapElement>
+<MapElement>
+<ElementKey>au_def_new_content_crawl</ElementKey>
+<ElementValue xsi:type="java:java.lang.Long" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">1209600000</ElementValue>
+</MapElement>
+<MapElement>
+<ElementKey>au_crawlrules</ElementKey>
+<ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<string xsi:type="java:java.lang.String">4,"^%s", base_url</string>
+<string xsi:type="java:java.lang.String">1,"%sissues/issue%s/.*", base_url, num_issue_range</string>
+<string xsi:type="java:java.lang.String">1,"%slockss/manifest%d.htm", base_url, year</string>
+<string xsi:type="java:java.lang.String">1,"%s.*/?images/.*", base_url</string>
+<string xsi:type="java:java.lang.String">1,"%s.*\.css$", base_url</string>
+<string xsi:type="java:java.lang.String">1,"%s.*alltext/.*", base_url</string>
+<string xsi:type="java:java.lang.String">1,"%s.*text/cnotes/.*", base_url</string>
 </ElementValue>
+</MapElement>
+<MapElement>
+<ElementKey>au_start_url</ElementKey>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"%slockss/manifest%d.htm", base_url, year</ElementValue>
 </MapElement>
 <MapElement>
 <ElementKey>plugin_config_props</ElementKey>
 <ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ConfigParamDescr>
+<Key>num_issue_range</Key>
+<DisplayName>Numeric Issue Range</DisplayName>
+<Description>A Range of issues in the form: min-max</Description>
+<Type>7</Type>
+<Size>20</Size>
+<Definitional>true</Definitional>
+</ConfigParamDescr>
 <ConfigParamDescr>
 <Key>year</Key>
 <DisplayName>Year</DisplayName>
