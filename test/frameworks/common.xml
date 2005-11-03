@@ -102,6 +102,7 @@
 	<value>org.lockss.plugin.msr.MSRPlugin</value>
 	<value>edu.cornell.library.jbe.JBEPlugin</value>
 	<value>edu.cornell.library.epr.EPRPlugin2001</value>
+	<value>edu.cornell.library.epr.EPRPlugin2002On</value>
 	<value>gov.gpo.access.permanent.plugin.treasurybulletin.TreasuryBulletinPlugin</value>
 	<value>gov.gpo.access.permanent.plugin.socialsecuritybulletin.SocialSecurityBulletinPlugin</value>
 	<value>gov.gpo.access.permanent.plugin.nistjournalofresearch.NISTJournalOfResearchPlugin</value>
@@ -292,7 +293,11 @@
 	  or pluginName='edu.jhu.library.plugin.MedievalForumPlugin'
 	  or pluginName='edu.cornell.library.jbe.JBEPlugin'
 	  or pluginName='edu.cornell.library.epr.EPRPlugin2001'
+	  or pluginName='edu.cornell.library.epr.EPRPlugin2002On'
 	  or pluginName='org.lockss.plugin.jmir.JMIRPlugin'
+	  or pluginName='edu.cornell.library.plugin.epr.EPRPlugin2001'
+	  or pluginName='edu.princeton.plugin.ncaw.19thCenturyArtWorldwidePlugin'
+	  or pluginName='org.lockss.plugin.msr.MSRPlugin'
 	  ]"
 	  />
       </property>
