@@ -1,5 +1,5 @@
 /*
- * $Id: TestIdentityManagerImpl.java,v 1.7 2005-11-03 03:22:46 thib_gc Exp $
+ * $Id: TestIdentityManagerImpl.java,v 1.8 2005-11-05 02:10:56 thib_gc Exp $
  */
 
 /*
@@ -129,6 +129,7 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
     p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
     p.setProperty(IdentityManager.PARAM_LOCAL_IP, LOCAL_IP);
+    p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath);
     return p;
   }
 
@@ -374,10 +375,12 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
     // Store
     setupPeer123();
     idmgr.storeIdentities();
-    
+
     // Load
+    MockLockssDaemon otherDaemon = getMockLockssDaemon();
     IdentityManagerImpl im = new IdentityManagerImpl();
-    im.setupLocalIdentities();
+    im.initService(otherDaemon);
+    otherDaemon.setIdentityManager(im);
     im.reloadIdentities();
     im.findPeerIdentity("127.0.0.2");
     assertTrue("The identity manager has maps of inconsistent sizes.",

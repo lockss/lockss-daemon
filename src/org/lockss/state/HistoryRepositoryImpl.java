@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.65 2005-10-20 22:57:49 troberts Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.66 2005-11-05 02:10:56 thib_gc Exp $
  */
 
 /*
@@ -814,7 +814,7 @@ public class HistoryRepositoryImpl
    * <p>Builds a new serializer for AU state.</p>
    * @return A serializer for AU state.
    */
-  private static ObjectSerializer makeAuStateSerializer() {
+  private ObjectSerializer makeAuStateSerializer() {
     // CASTOR: Phase out with Castor
     return makeObjectSerializer(AuStateBean.class);
   }
@@ -823,7 +823,7 @@ public class HistoryRepositoryImpl
    * <p>Builds a new serializer for damaged node sets.</p>
    * @return A serializer for damaged node sets.
    */
-  private static ObjectSerializer makeDamagedNodeSetSerializer() {
+  private ObjectSerializer makeDamagedNodeSetSerializer() {
     // CASTOR: Phase out with Castor
     return makeObjectSerializer(DamagedNodeSet.class);
   }
@@ -832,7 +832,7 @@ public class HistoryRepositoryImpl
    * <p>Builds a new serializer for identity agreement lists.</p>
    * @return A serializer for identity agreement lists..
    */
-  private static ObjectSerializer makeIdentityAgreementListSerializer() {
+  private ObjectSerializer makeIdentityAgreementListSerializer() {
     // CASTOR: Phase out with Castor
     return makeObjectSerializer(IdentityAgreementList.class);
   }
@@ -841,7 +841,7 @@ public class HistoryRepositoryImpl
    * <p>Builds a new serializer for poll histories.</p>
    * @return A serializer for poll histories.
    */
-  private static ObjectSerializer makeNodeStateSerializer() {
+  private ObjectSerializer makeNodeStateSerializer() {
     // CASTOR: Phase out with Castor
     return makeObjectSerializer(NodeStateBean.class);
   }
@@ -854,10 +854,10 @@ public class HistoryRepositoryImpl
    * @return A new object serializer ready to process objects of type
    *         <code>cla</code>.
    */
-  private static ObjectSerializer makeObjectSerializer(Class cla) {
+  private ObjectSerializer makeObjectSerializer(Class cla) {
     // CASTOR: Remove parameter; return an XStreamSerializer
     CXSerializer serializer =
-      new CXSerializer(CastorSerializer.getMapping(MAPPING_FILES), cla);
+      new CXSerializer(theDaemon, CastorSerializer.getMapping(MAPPING_FILES), cla);
     serializer.setCurrentMode(getSerializationMode());
     return serializer;
   }
@@ -866,7 +866,7 @@ public class HistoryRepositoryImpl
    * <p>Builds a new serializer for poll histories.</p>
    * @return A serializer for poll histories.
    */
-  private static ObjectSerializer makePollHistoriesSerializer() {
+  private ObjectSerializer makePollHistoriesSerializer() {
     // CASTOR: Phase out with Castor
     return makeObjectSerializer(NodeHistoryBean.class);
   }

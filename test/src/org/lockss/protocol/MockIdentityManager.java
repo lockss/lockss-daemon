@@ -1,5 +1,5 @@
 /*
-* $Id: MockIdentityManager.java,v 1.9 2005-10-19 20:13:05 troberts Exp $
+* $Id: MockIdentityManager.java,v 1.10 2005-11-05 02:10:56 thib_gc Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import org.lockss.app.*;
 import org.lockss.util.*;
 import org.lockss.config.*;
 import org.lockss.plugin.*;
+import org.lockss.protocol.IdentityManager.MalformedIdentityKeyException;
 
 /**
  * Mock override of IdentityManager.
@@ -295,6 +296,10 @@ public class MockIdentityManager implements IdentityManager {
   }
 
   public Collection getTcpPeerIdentities() {
+    throw new UnsupportedOperationException("not implemented");
+  }
+
+  public LcapIdentity findLcapIdentity(PeerIdentity pid, String key) {
     throw new UnsupportedOperationException("not implemented");
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestXStreamSerializer.java,v 1.8 2005-10-11 05:52:45 tlipkis Exp $
+ * $Id: TestXStreamSerializer.java,v 1.9 2005-11-05 02:10:56 thib_gc Exp $
  */
 
 /*
@@ -109,7 +109,7 @@ public class TestXStreamSerializer extends ObjectSerializerTester {
       explode1 = false; // defuse bomb
     }
 
-    protected Object postUnmarshalResolve() {
+    protected Object postUnmarshalResolve(LockssApp lockssContext) {
       super.postUnmarshalResolve();
       explode2 = false; // defuse bomb
       return this;
@@ -156,7 +156,7 @@ public class TestXStreamSerializer extends ObjectSerializerTester {
       this.invoked = false;
     }
 
-    protected Object postUnmarshalResolve() {
+    protected Object postUnmarshalResolve(LockssApp lockssContext) {
       singleton.invoked = true;
       return singleton;
     }

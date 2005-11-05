@@ -1,5 +1,5 @@
 /*
- * $Id: LcapIdentity.java,v 1.30 2005-09-06 23:24:53 thib_gc Exp $
+ * $Id: LcapIdentity.java,v 1.31 2005-11-05 02:10:56 thib_gc Exp $
  */
 
 /*
@@ -34,6 +34,8 @@ package org.lockss.protocol;
 
 import java.util.HashMap;
 import org.mortbay.util.B64Code;
+import org.lockss.app.*;
+import org.lockss.protocol.IdentityManager.MalformedIdentityKeyException;
 import org.lockss.util.*;
 
 /**
@@ -299,4 +301,16 @@ public class LcapIdentity implements LockssSerializable {
     return IDUtil.ipAddrToKey(addr, port);
   }
 
+  /**
+   * <p>Automatically substitutes the right singleton identity after
+   * deserialization.</p>
+   * @param lockssContext A {@link LockssApp} context object.
+   */
+  protected Object postUnmarshalResolve(LockssApp lockssContext)
+      throws MalformedIdentityKeyException {
+    IdentityManager idm =
+      (IdentityManager)lockssContext.getManagerByKey(LockssDaemon.IDENTITY_MANAGER);
+    return idm.findLcapIdentity(m_pid, m_idKey);
+  }
+  
 }

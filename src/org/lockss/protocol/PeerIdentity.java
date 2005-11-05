@@ -1,5 +1,5 @@
 /*
- * $Id: PeerIdentity.java,v 1.6 2005-09-06 23:24:53 thib_gc Exp $
+ * $Id: PeerIdentity.java,v 1.7 2005-11-05 02:10:56 thib_gc Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.protocol;
 
+import org.lockss.app.*;
 import org.lockss.util.*;
 
 /**
@@ -90,6 +91,17 @@ public class PeerIdentity implements LockssSerializable {
     return false;
   }
 
+  /**
+   * <p>Automatically substitutes the right singleton identity after
+   * deserialization.</p>
+   * @param lockssContext A {@link LockssApp} context object.
+   */
+  protected Object postUnmarshalResolve(LockssApp lockssContext) {
+    IdentityManager idm =
+      (IdentityManager)lockssContext.getManagerByKey(LockssDaemon.IDENTITY_MANAGER);
+    return idm.findPeerIdentity(key);
+  }
+  
   static class LocalIdentity extends PeerIdentity {
     LocalIdentity(String key) {
       super(key);

@@ -1,5 +1,5 @@
 /*
- * $Id: XStreamSerializer.java,v 1.12 2005-10-20 21:46:34 troberts Exp $
+ * $Id: XStreamSerializer.java,v 1.13 2005-11-05 02:10:56 thib_gc Exp $
  */
 
 /*
@@ -39,15 +39,10 @@ import java.util.HashMap;
 import org.lockss.app.LockssApp;
 
 import com.thoughtworks.xstream.XStream;
-import com.thoughtworks.xstream.alias.CannotResolveClassException;
-import com.thoughtworks.xstream.alias.ClassMapper;
-import com.thoughtworks.xstream.converters.ConversionException;
-import com.thoughtworks.xstream.converters.ConverterLookup;
-import com.thoughtworks.xstream.converters.DataHolder;
+import com.thoughtworks.xstream.alias.*;
+import com.thoughtworks.xstream.converters.*;
 import com.thoughtworks.xstream.core.*;
-import com.thoughtworks.xstream.io.HierarchicalStreamReader;
-import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
-import com.thoughtworks.xstream.io.StreamException;
+import com.thoughtworks.xstream.io.*;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 
 /**
@@ -326,19 +321,20 @@ public class XStreamSerializer extends ObjectSerializer {
     public Object convertAnother(Object parent, Class type) {
       Object ret = super.convertAnother(parent, type);
       if (ret instanceof LockssSerializable) {
+        Object[] parameters = new Object[] { lockssContext };
         invokeMethod(
             ret,
             POST_UNMARSHAL_METHOD,
             POST_UNMARSHAL_PARAMETERS,
             postUnmarshalCache,
-            new Object[] { lockssContext }
+            parameters
         );
         Object surrogate = invokeMethod(
             ret,
             POST_UNMARSHAL_RESOLVE_METHOD,
             POST_UNMARSHAL_RESOLVE_PARAMETERS,
             postUnmarshalResolveCache,
-            null
+            parameters
         );
         if (surrogate != null) {
           ret = surrogate;
@@ -451,26 +447,37 @@ public class XStreamSerializer extends ObjectSerializer {
 
     /**
      * <p>The String name of the method automagically called during
-     * post-deserialization of {@link LockssSerializable} objects.</p>
+     * post-deserialization of {@link LockssSerializable} objects
+     * to post-process deserialized objects.</p>
      * @see #POST_UNMARSHAL_PARAMETERS
      */
     private static final String POST_UNMARSHAL_METHOD =
       "postUnmarshal";
 
     /**
-     * <p>The list of parameter types of the method automagically
-     * called during post-deserialization of
-     * {@link LockssSerializable} objects.</p>
+     * <p>The list of parameter types of the method
+     * {@link #POST_UNMARSHAL_METHOD}.</p>
      * @see #POST_UNMARSHAL_METHOD
      */
     private static final Class[] POST_UNMARSHAL_PARAMETERS =
       new Class[] { LockssApp.class };
 
+    /**
+     * <p>The String name of the method automagically called during
+     * post-deserialization of {@link LockssSerializable} objects
+     * to perform object substitution.</p>
+     * @see #POST_UNMARSHAL_RESOLVE_PARAMETERS
+     */
     private static final String POST_UNMARSHAL_RESOLVE_METHOD =
       "postUnmarshalResolve";
 
+    /**
+     * <p>The list of parameter types of the method
+     * {@link #POST_UNMARSHAL_RESOLVE_METHOD}.</p>
+     * @see #POST_UNMARSHAL_RESOLVE_METHOD
+     */
     private static final Class[] POST_UNMARSHAL_RESOLVE_PARAMETERS =
-      new Class[0];
+      new Class[] { LockssApp.class };
 
   }
   /*

@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManagerImpl.java,v 1.8 2005-11-03 03:22:46 thib_gc Exp $
+ * $Id: IdentityManagerImpl.java,v 1.9 2005-11-05 02:10:56 thib_gc Exp $
  */
 
 /*
@@ -37,11 +37,9 @@ import java.net.UnknownHostException;
 import java.util.*;
 
 import org.lockss.app.*;
-import org.lockss.config.ConfigManager;
-import org.lockss.config.Configuration;
+import org.lockss.config.*;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.poller.*;
-import org.lockss.protocol.IdentityManager.*;
 import org.lockss.state.HistoryRepository;
 import org.lockss.util.*;
 
@@ -407,7 +405,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
   /**
    * <p>Finds or creates unique instances of LcapIdentity.</p>
    */
-  protected LcapIdentity findLcapIdentity(PeerIdentity pid, String key)
+  public LcapIdentity findLcapIdentity(PeerIdentity pid, String key)
       throws IdentityManager.MalformedIdentityKeyException {
     synchronized (theIdentities) {
       LcapIdentity lid = (LcapIdentity)theIdentities.get(pid);
@@ -729,10 +727,10 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
    * maps.</p>
    * @return An initialized ObjectSerializer instance.
    */
-  private static ObjectSerializer makeIdentityListSerializer() {
+  private ObjectSerializer makeIdentityListSerializer() {
     // CASTOR: Change to returning an XStreamSerializer
     CXSerializer serializer =
-      new CXSerializer(MAPPING_FILE_NAME, IdentityListBean.class);
+      new CXSerializer(theDaemon, MAPPING_FILE_NAME, IdentityListBean.class);
     serializer.setCurrentMode(getSerializationMode());
     return serializer;
   }
@@ -840,10 +838,8 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
    * @return An unwrapped identity map.
    */
   private HashMap unwrap(Object obj) {
-    HashMap map = new HashMap();
-
     if (obj instanceof IdentityListBean) {
-      // JAVA5: Use foreach
+      HashMap map = new HashMap();
       Iterator beanIter = ((IdentityListBean)obj).getIdBeans().iterator();
       while (beanIter.hasNext()) {
         IdentityBean bean = (IdentityBean)beanIter.next();
@@ -857,26 +853,11 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
           log.warning("Error reloading identity - Unknown host: " + idKey);
         }
       }
+      return map;
     }
     else {
-      Iterator iter = ((HashMap)obj).entrySet().iterator();
-      while (iter.hasNext()) {
-        Map.Entry entry = (Map.Entry)iter.next();
-        PeerIdentity origPid = (PeerIdentity)entry.getKey();
-        LcapIdentity origLid = (LcapIdentity)entry.getValue();
-        String idKey = origPid.getIdString();
-        try {
-          PeerIdentity newPid = findPeerIdentity(idKey);
-          LcapIdentity newLid = new LcapIdentity(newPid, idKey, origLid.getReputation());
-          map.put(newPid, newLid);
-        }
-        catch (MalformedIdentityKeyException exc) {
-          log.warning("Error reloading identity - Unknown host: " + idKey);
-        }
-      }
+      return (HashMap)obj;
     }
-
-    return map;
   }
 
   /**
