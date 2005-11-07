@@ -1,5 +1,5 @@
 /*
- * $Id: TestIcpManager.java,v 1.2 2005-10-11 05:51:04 tlipkis Exp $
+ * $Id: TestIcpManager.java,v 1.3 2005-11-07 22:03:09 thib_gc Exp $
  */
 
 /*
@@ -106,6 +106,7 @@ public class TestIcpManager extends LockssTestCase {
     testableIcpManager = new TestableIcpManager();
     mockLockssDaemon.setIcpManager(testableIcpManager);
     testableIcpManager.initService(mockLockssDaemon);
+    mockLockssDaemon.setDaemonInited(true);
     testableIcpManager.startService();
   }
 
