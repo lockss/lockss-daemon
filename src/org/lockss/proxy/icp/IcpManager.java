@@ -1,5 +1,5 @@
 /*
- * $Id: IcpManager.java,v 1.10 2005-10-10 16:34:39 thib_gc Exp $
+ * $Id: IcpManager.java,v 1.11 2005-11-07 19:57:20 thib_gc Exp $
  */
 
 /*
@@ -202,7 +202,7 @@ public class IcpManager
       boolean enable = newConfig.getBoolean(PARAM_ICP_ENABLED,
                                             DEFAULT_ICP_ENABLED);
       stopSocket();
-      if (enable) {
+      if (isDaemonInited() && enable) {
         startSocket();
       }
     }
