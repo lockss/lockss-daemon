@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssDaemon.java,v 1.52 2005-10-11 05:52:05 tlipkis Exp $
+ * $Id: MockLockssDaemon.java,v 1.53 2005-11-08 20:29:09 tlipkis Exp $
  */
 
 /*
@@ -709,11 +709,21 @@ public class MockLockssDaemon extends LockssDaemon {
     return daemonInited;
   }
 
+  // need to override this one too, inherited from LockssApp
+  public boolean isAppInited() {
+    return isDaemonInited();
+  }
+
   /**
    * @return true iff all managers have been started
    */
   public boolean isDaemonRunning() {
     return daemonRunning;
+  }
+
+  // need to override this one too, inherited from LockssApp
+  public boolean isAppRunning() {
+    return isDaemonRunning();
   }
 
   /** set daemonInited
