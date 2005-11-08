@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollerSerializer.java,v 1.4 2005-10-11 05:45:39 tlipkis Exp $
+ * $Id: V3PollerSerializer.java,v 1.5 2005-11-08 19:24:23 smorabito Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ package org.lockss.poller.v3;
 import java.io.*;
 import java.util.*;
 
+import org.lockss.app.*;
 import org.lockss.protocol.*;
 import org.lockss.protocol.psm.*;
 import org.lockss.util.*;
@@ -50,15 +51,17 @@ public class V3PollerSerializer extends V3Serializer {
   private File peerMappingFile;
   private LinkedHashMap peerMapping;
 
-  public V3PollerSerializer() throws PollSerializerException {
-    super(null);
+  public V3PollerSerializer(LockssDaemon daemon)
+      throws PollSerializerException {
+    super(daemon);
     this.pollerStateBeanFile = new File(pollDir, POLLER_STATE_BEAN);
     this.peerMappingFile = new File(pollDir, PEER_MAPPING_FILE);
     this.peerMapping = new LinkedHashMap();
   }
 
-  public V3PollerSerializer(String dir) throws PollSerializerException {
-    super(dir);
+  public V3PollerSerializer(LockssDaemon daemon, String dir)
+      throws PollSerializerException {
+    super(daemon, dir);
     this.pollerStateBeanFile = new File(pollDir, POLLER_STATE_BEAN);
     this.peerMappingFile = new File(pollDir, PEER_MAPPING_FILE);
     if (peerMappingFile.exists()) {

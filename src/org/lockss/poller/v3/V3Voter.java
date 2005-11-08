@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.6 2005-10-17 07:48:25 tlipkis Exp $
+ * $Id: V3Voter.java,v 1.7 2005-11-08 19:24:23 smorabito Exp $
  */
 
 /*
@@ -89,15 +89,15 @@ public class V3Voter extends BasePoll {
                  long duration, String hashAlg)
       throws V3Serializer.PollSerializerException {
     log.debug3("Creating V3 Voter for poll: " + key);
-    pollSerializer = new V3VoterSerializer();
+    this.theDaemon = daemon;
+    this.idManager = theDaemon.getIdentityManager();
+    pollSerializer = new V3VoterSerializer(theDaemon);
     this.voterUserData = new VoterUserData(spec, this, orig, key,
                                            duration, hashAlg,
                                            pollerNonce,
                                            makeVoterNonce(),
                                            introEffortProof,
                                            pollSerializer);
-    this.theDaemon = daemon;
-    this.idManager = theDaemon.getIdentityManager();
     this.pollManager = daemon.getPollManager();
     this.tally = new MockTally(Poll.V3_POLL, TimeBase.nowMs(), duration,
                                0, 0, 0, 0, 0, hashAlg, this);
@@ -126,7 +126,7 @@ public class V3Voter extends BasePoll {
    */
   public V3Voter(LockssDaemon daemon, String pollDir)
       throws V3Serializer.PollSerializerException {
-    pollSerializer = new V3VoterSerializer(pollDir);
+    pollSerializer = new V3VoterSerializer(daemon, pollDir);
     this.voterUserData = pollSerializer.loadVoterUserData();
     this.theDaemon = daemon;
     this.pollManager = daemon.getPollManager();

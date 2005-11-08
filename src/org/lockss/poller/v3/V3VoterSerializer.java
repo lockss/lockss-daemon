@@ -1,5 +1,5 @@
 /*
- * $Id: V3VoterSerializer.java,v 1.3 2005-10-11 05:45:39 tlipkis Exp $
+ * $Id: V3VoterSerializer.java,v 1.4 2005-11-08 19:24:23 smorabito Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ package org.lockss.poller.v3;
 
 import java.io.*;
 
+import org.lockss.app.*;
 import org.lockss.protocol.psm.*;
 
 public class V3VoterSerializer extends V3Serializer {
@@ -42,12 +43,14 @@ public class V3VoterSerializer extends V3Serializer {
   private File voterUserDataFile;
   private File voterStateTableFile;
 
-  public V3VoterSerializer() throws PollSerializerException {
-    this(null);
+  public V3VoterSerializer(LockssDaemon daemon)
+      throws PollSerializerException {
+    this(daemon, null);
   }
 
-  public V3VoterSerializer(String dir) throws PollSerializerException {
-    super(dir);
+  public V3VoterSerializer(LockssDaemon daemon, String dir)
+      throws PollSerializerException {
+    super(daemon, dir);
     this.voterUserDataFile = new File(pollDir, VOTER_USER_DATA_FILE);
     this.voterStateTableFile = new File(pollDir, VOTER_STATE_TABLE_FILE);
   }

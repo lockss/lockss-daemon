@@ -34,6 +34,7 @@ package org.lockss.poller.v3;
 
 import java.io.*;
 import java.util.*;
+import org.lockss.repository.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.config.*;
@@ -47,13 +48,21 @@ import org.lockss.protocol.psm.*;
 public class TestV3Serializer extends LockssTestCase {
 
   String tempDirPath;
+  MockLockssDaemon theDaemon;
+  IdentityManager idManager;
 
   public void setUp() throws Exception {
     super.setUp();
     tempDirPath = getTempDir().getAbsolutePath();
     Properties p = new Properties();
+    p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
+    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
     p.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
     ConfigurationUtil.setCurrentConfigFromProps(p);
+    this.theDaemon = getMockLockssDaemon();
+    this.idManager = theDaemon.getIdentityManager();
+    idManager.startService();
   }
 
   public void tearDown() throws Exception {
@@ -62,14 +71,14 @@ public class TestV3Serializer extends LockssTestCase {
 
   public void testClosePoll() throws Exception {
     // Ensure poll dir is deleted.
-    V3PollerSerializer pollerSerializer = new V3PollerSerializer();
+    V3PollerSerializer pollerSerializer = new V3PollerSerializer(theDaemon);
     File pollDir = (File)PrivilegedAccessor.getValue(pollerSerializer,
                                                      "pollDir");
     assertTrue(pollDir.exists());
     pollerSerializer.closePoll();
     assertFalse(pollDir.exists());
 
-    V3VoterSerializer voterSerializer = new V3VoterSerializer();
+    V3VoterSerializer voterSerializer = new V3VoterSerializer(theDaemon);
     pollDir = (File)PrivilegedAccessor.getValue(voterSerializer,
                                                 "pollDir");
     assertTrue(pollDir.exists());
@@ -78,21 +87,21 @@ public class TestV3Serializer extends LockssTestCase {
   }
 
   public void testSaveAndLoadPollerState() throws Exception {
-    V3PollerSerializer pollerSerializer = new V3PollerSerializer();
+    V3PollerSerializer pollerSerializer = new V3PollerSerializer(theDaemon);
     File pollDir = (File)PrivilegedAccessor.getValue(pollerSerializer,
                                                      "pollDir");
     PollerStateBean vsb1 = makePollerStateBean(pollerSerializer);
     pollerSerializer.savePollerState(vsb1);
     PollerStateBean vsb2 = pollerSerializer.loadPollerState();
     assertEqualPollerStateBeans(vsb1, vsb2);
-    pollerSerializer = new V3PollerSerializer(pollDir.getName());
+    pollerSerializer = new V3PollerSerializer(theDaemon, pollDir.getName());
     PollerStateBean vsb3 = pollerSerializer.loadPollerState();
     assertEqualPollerStateBeans(vsb1, vsb3);
   }
 
 
   public void testSaveAndLoadPollerUserData() throws Exception {
-    V3PollerSerializer pollerSerializer = new V3PollerSerializer();
+    V3PollerSerializer pollerSerializer = new V3PollerSerializer(theDaemon);
     File pollDir = (File)PrivilegedAccessor.getValue(pollerSerializer,
                                                      "pollDir");
     PollerUserData ud1 = makePollerUserData(pollerSerializer);
@@ -100,7 +109,7 @@ public class TestV3Serializer extends LockssTestCase {
     pollerSerializer.savePollerUserData(ud1);
     PollerUserData ud2 = pollerSerializer.loadPollerUserData(id);
     assertEqualPollerUserData(ud1, ud2);
-    pollerSerializer = new V3PollerSerializer(pollDir.getName());
+    pollerSerializer = new V3PollerSerializer(theDaemon, pollDir.getName());
     PollerUserData ud3 = pollerSerializer.loadPollerUserData(id);
     assertEqualPollerUserData(ud1, ud3);
     PeerIdentity id2 = new MockPeerIdentity("192.168.1.1:9999");
@@ -113,7 +122,7 @@ public class TestV3Serializer extends LockssTestCase {
   }
 
   public void testSaveAndLoadPollerInterpState() throws Exception {
-    V3PollerSerializer pollerSerializer = new V3PollerSerializer();
+    V3PollerSerializer pollerSerializer = new V3PollerSerializer(theDaemon);
     File pollDir  = (File)PrivilegedAccessor.getValue(pollerSerializer,
                                                       "pollDir");
     PsmInterpStateBean ub1 = new PsmInterpStateBean();
@@ -123,27 +132,27 @@ public class TestV3Serializer extends LockssTestCase {
     PsmInterpStateBean ub2 = pollerSerializer.loadPollerInterpState(id);
     assertEquals(ub1.getLastResumableStateName(),
                  ub2.getLastResumableStateName());
-    pollerSerializer = new V3PollerSerializer(pollDir.getName());
+    pollerSerializer = new V3PollerSerializer(theDaemon, pollDir.getName());
     PsmInterpStateBean ub3 = pollerSerializer.loadPollerInterpState(id);
     assertEquals(ub1.getLastResumableStateName(),
                  ub3.getLastResumableStateName());
   }
 
   public void testSaveAndLoadVoterUserData() throws Exception {
-    V3VoterSerializer voterSerializer = new V3VoterSerializer();
+    V3VoterSerializer voterSerializer = new V3VoterSerializer(theDaemon);
     File pollDir = (File)PrivilegedAccessor.getValue(voterSerializer,
                                                      "pollDir");
     VoterUserData ud1 = makeVoterUserData(voterSerializer);
     voterSerializer.saveVoterUserData(ud1);
     VoterUserData ud2 = voterSerializer.loadVoterUserData();
     assertEqualVoterUserData(ud1, ud2);
-    voterSerializer = new V3VoterSerializer(pollDir.getName());
+    voterSerializer = new V3VoterSerializer(theDaemon, pollDir.getName());
     VoterUserData ud3 = voterSerializer.loadVoterUserData();
     assertEqualVoterUserData(ud1, ud3);
   }
 
   public void testSaveAndLoadVoterInterpState() throws Exception {
-    V3VoterSerializer voterSerializer = new V3VoterSerializer();
+    V3VoterSerializer voterSerializer = new V3VoterSerializer(theDaemon);
     File pollDir = (File)PrivilegedAccessor.getValue(voterSerializer,
                                                      "pollDir");
     PsmInterpStateBean ub1 = new PsmInterpStateBean();
@@ -152,14 +161,14 @@ public class TestV3Serializer extends LockssTestCase {
     PsmInterpStateBean ub2 = voterSerializer.loadVoterInterpState();
     assertEquals(ub1.getLastResumableStateName(),
                  ub2.getLastResumableStateName());
-    voterSerializer = new V3VoterSerializer(pollDir.getName());
+    voterSerializer = new V3VoterSerializer(theDaemon, pollDir.getName());
     PsmInterpStateBean ub3 = voterSerializer.loadVoterInterpState();
     assertEquals(ub1.getLastResumableStateName(),
                  ub3.getLastResumableStateName());
   }
 
   public void testLoadInnerCircleStates() throws Exception {
-    V3PollerSerializer pollerSerializer = new V3PollerSerializer();
+    V3PollerSerializer pollerSerializer = new V3PollerSerializer(theDaemon);
     File pollDir = (File)PrivilegedAccessor.getValue(pollerSerializer,
                                                      "pollDir");
     ArrayList uds1 =
@@ -179,7 +188,7 @@ public class TestV3Serializer extends LockssTestCase {
     }
     List uds2 = pollerSerializer.loadVoterStates();
     assertEqualInnerCircles(uds1, uds2);
-    pollerSerializer = new V3PollerSerializer(pollDir.getName());
+    pollerSerializer = new V3PollerSerializer(theDaemon, pollDir.getName());
     List uds3 = pollerSerializer.loadVoterStates();
     assertEqualInnerCircles(uds1, uds3);
   }

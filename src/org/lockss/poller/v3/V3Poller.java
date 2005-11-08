@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.12 2005-10-20 22:57:49 troberts Exp $
+ * $Id: V3Poller.java,v 1.13 2005-11-08 19:24:23 smorabito Exp $
  */
 
 /*
@@ -87,21 +87,11 @@ public class V3Poller extends BasePoll {
   private static LockssRandom theRandom = new LockssRandom();
 
   /**
-   * Common setup.
-   */
-  private void commonSetUp() throws V3Serializer.PollSerializerException {
-    theVoters = new LinkedHashMap();
-    serializer = new V3PollerSerializer();
-  }
-
-  /**
    * Create a new V3 Poll.
    */
   public V3Poller(PollSpec spec, LockssDaemon daemon, PeerIdentity orig,
                   String key, long duration, String hashAlg)
       throws V3Serializer.PollSerializerException {
-    commonSetUp();
-
     // Determine the number of peers to invite into this poll.
     int minParticipants = Configuration.getIntParam(PARAM_MIN_POLL_SIZE,
                                                     DEFAULT_MIN_POLL_SIZE);
@@ -127,18 +117,20 @@ public class V3Poller extends BasePoll {
       int randCount = theRandom.nextInt(maxParticipants - minParticipants);
       pollSize = minParticipants + randCount;
     }
-    this.pollerState = new PollerStateBean(spec, orig, key, duration,
-                                           pollSize, maxNomineeCount,
-                                           quorum, hashAlg, serializer);
     this.theDaemon = daemon;
     this.pollManager = daemon.getPollManager();
     this.idManager = daemon.getIdentityManager();
+    this.serializer = new V3PollerSerializer(theDaemon);
+    this.pollerState = new PollerStateBean(spec, orig, key, duration,
+                                           pollSize, maxNomineeCount,
+                                           quorum, hashAlg, serializer);
     this.tally =
       new BlockTally(this, pollerState.getCreateTime(),
                      pollerState.getDeadline(), 0, 0, pollerState.getQuorum(),
                      pollerState.getHashAlgorithm());
     log.debug("Creating a new poll with a requested poll size of "
               + pollSize);
+    this.theVoters = new LinkedHashMap();
   }
 
   /**
@@ -146,7 +138,7 @@ public class V3Poller extends BasePoll {
    */
   public V3Poller(LockssDaemon daemon, String pollDir)
       throws V3Serializer.PollSerializerException {
-    this.serializer = new V3PollerSerializer(pollDir);
+    this.serializer = new V3PollerSerializer(daemon, pollDir);
     this.pollerState = serializer.loadPollerState();
     this.theDaemon = daemon;
     this.pollManager = daemon.getPollManager();
