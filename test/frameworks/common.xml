@@ -152,68 +152,12 @@
       <property name="sage">
         <property name="name" value="All SAGE Titles" />
         <property name="class" value="xpath" />
-        <property name="xpath" value="[
-          journalTitle='Journal of Cases in Educational Leadership' 
-	  or journalTitle='Journal of Hospitality &amp; Tourism Research' 
-	  or journalTitle='Journal of Psychoeducational Assessment'
-          ]" />
-      </property>
-      <property name="sagenew">
-        <property name="name" value="All SAGE Titles new" />
-        <property name="class" value="xpath" />
 	<property name="xpath" value="[attributes/publisher='sage']" />
       </property>
       <property name="oup">
         <property name="name" value="All Oxford University Press Titles" />
         <property name="class" value="xpath" />
-        <property name="xpath" value="[
-          journalTitle='Human Molecular Genetics' 
-	  or journalTitle='Brain' 
-	  or journalTitle='Journal of Petrology' 
-	  or journalTitle='American Literary History' 
-	  or journalTitle='Bioinformatics' 
-	  or journalTitle='Biostatistics' 
-	  or journalTitle='Brief Treatment and Crisis Intervention' 
-	  or journalTitle='Carcinogenesis' 
-	  or journalTitle='Cerebral Cortex' 
-	  or journalTitle='Chemical Senses' 
-	  or journalTitle='Chinese Journal of International Law' 
-	  or journalTitle='Early Music' 
-	  or journalTitle='Essays in Criticism' 
-	  or journalTitle='European Journal of International Law' 
-	  or journalTitle='Glycobiology' 
-	  or journalTitle='Health Education Research' 
-	  or journalTitle='Health Promotion International' 
-	  or journalTitle='Human Rights Law Review' 
-	  or journalTitle='International Journal of Law &amp; Information Technology' 
-	  or journalTitle='International Journal of Law, Policy and the Family' 
-	  or journalTitle='International Journal of Refugee' 
-	  or journalTitle='Journal of Competition, Law and Economics' 
-	  or journalTitle='Journal of Competition, Law and Economics' 
-	  or journalTitle='Journal of Conflict and Security Law' 
-	  or journalTitle='Journal of Deaf Studies and Deaf Education' 
-	  or journalTitle='Journal of Economic Geography' 
-	  or journalTitle='Journal of Environmental' 
-	  or journalTitle='Journal of Financial Econometrics' 
-	  or journalTitle='Journal of International Economic Law' 
-	  or journalTitle='Journal of Logic and Computation' 
-	  or journalTitle='Journal of Plankton Research' 
-	  or journalTitle='Journal of Refugee Studies' 
-	  or journalTitle='Journal of Semantics' 
-	  or journalTitle='Journal of the History of Collections' 
-	  or journalTitle='Journal of the History of Medicine and Allied Sciences' 
-	  or journalTitle='Journal of the National Cancer Institute' 
-	  or journalTitle='Medical Law Review' 
-	  or journalTitle='Molecular Human Reproduction' 
-	  or journalTitle='Music and Letters' 
-	  or journalTitle='The Musical Quarterly' 
-	  or journalTitle='Nucleic Acids Research' 
-	  or journalTitle='Opera Quarterly' 
-	  or journalTitle='Oxford Art Journal' 
-	  or journalTitle='Protein Engineering Design and Selection'
-	  or journalTitle='Quarterly Journal of Mathematics'
-	  or journalTitle='Quarterly Journal of Mechanics and Applied Mathematics'
-          ]" />
+	<property name="xpath" value="[attributes/publisher='oup']" />
       </property>
 
       <property name="highwire">
@@ -221,6 +165,7 @@
 	<property name="class" value="xpath" />
 	<property name="xpath" value="[pluginName='org.lockss.plugin.highwire.HighWirePlugin']" />
       </property>
+
       <property name="locksscard">
 	<property name="name" value="LOCKSS Card" />
 	<property name="class" value="xpath" />
@@ -2394,6 +2339,35 @@
       </property>
 <!-- End SAGE titles -->
 
+      <property name="bloodjournal106">
+	<property name="title" value="Blood Volume 106" />
+	<property name="journalTitle" value="Blood" />
+	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.bloodjournal.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="106" />
+	</property>
+        <property name="attributes.publisher" value="Hematology" />
+      </property>
+
+      <property name="plantcell17">
+	<property name="title" value="Plant Cell Volume 17" />
+	<property name="journalTitle" value="Plant Cell" />
+	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.plantcell.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="17" />
+	</property>
+        <property name="attributes.publisher" value="AmericanSocietyofPlantBiologists" />
+      </property>
 
       <property name="nejm352">
 	<property name="title" value="New England Journal of Medicine Volume 352" />
