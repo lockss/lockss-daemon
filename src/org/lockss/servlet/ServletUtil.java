@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.18 2005-10-29 00:09:50 thib_gc Exp $
+ * $Id: ServletUtil.java,v 1.19 2005-11-09 18:39:18 thib_gc Exp $
  */
 
 /*
@@ -447,7 +447,7 @@ public class ServletUtil {
 
   public static Composite makeChooseSets(LockssServlet servlet,
                                          RemoteApi remoteApi,
-                                         Iterator titleSetITerator,
+                                         Iterator titleSetIterator,
                                          Verb verb,
                                          String checkboxGroup,
                                          boolean doGray,
@@ -471,8 +471,8 @@ public class ServletUtil {
         submitText, submitAction));
 
     // Iterate over title sets
-    while (titleSetITerator.hasNext()) {
-      TitleSet set = (TitleSet)titleSetITerator.next();
+    while (titleSetIterator.hasNext()) {
+      TitleSet set = (TitleSet)titleSetIterator.next();
       if (verb.isTsAppropriateFor(set)) {
         BatchAuStatus bas = verb.findAusInSetForVerb(remoteApi, set);
         int numOk = 0;
