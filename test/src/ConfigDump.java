@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigDump.java,v 1.11 2005-07-18 08:02:48 tlipkis Exp $
+ * $Id: ConfigDump.java,v 1.12 2005-11-09 18:46:26 tlipkis Exp $
  */
 
 /*
@@ -104,7 +104,7 @@ public class ConfigDump {
       configUrls.add(localConfig);
     }
 
-    MockLockssDaemon daemon = new MockLockssDaemon();
+    MockLockssDaemon daemon = new MyMockLockssDaemon();
     ConfigManager mgr = ConfigManager.makeConfigManager();
     Configuration config = mgr.readConfig(configUrls, groupName);
     if (config == null) {
@@ -156,5 +156,10 @@ public class ConfigDump {
     System.err.println("         -k           enable .txt -> .xml kludge");
     System.err.println("         -o outfile   write to outfile, else stdout");
     System.exit(1);
+  }
+
+  /** Just here so we can create an instance of MockLockssDaemon, whose
+   * constructor is (deliberately) protected */
+  static class MyMockLockssDaemon extends MockLockssDaemon {
   }
 }

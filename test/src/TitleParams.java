@@ -1,5 +1,5 @@
 /*
- * $Id: TitleParams.java,v 1.6 2005-10-11 05:48:47 tlipkis Exp $
+ * $Id: TitleParams.java,v 1.7 2005-11-09 18:46:26 tlipkis Exp $
  */
 
 /*
@@ -64,7 +64,7 @@ public class TitleParams {
 
     PrintStream cout = System.err;
     Set uids = new HashSet();
-    MockLockssDaemon daemon = new MockLockssDaemon();
+    MockLockssDaemon daemon = new MyMockLockssDaemon();
     ConfigManager.makeConfigManager();
     PluginManager pluginMgr = daemon.getPluginManager();
     daemon.setDaemonInited(true);
@@ -193,5 +193,10 @@ public class TitleParams {
   static void usage() {
     System.err.println("Usage: TitleParams [-c config-file] [-o output-file]");
     System.exit(0);
+  }
+
+  /** Just here so we can create an instance of MockLockssDaemon, whose
+   * constructor is (deliberately) protected */
+  static class MyMockLockssDaemon extends MockLockssDaemon {
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerStatus.java,v 1.21 2005-10-11 05:49:13 tlipkis Exp $
+ * $Id: TestCrawlManagerStatus.java,v 1.22 2005-11-09 18:46:26 tlipkis Exp $
  */
 
 /*
@@ -95,7 +95,7 @@ public class TestCrawlManagerStatus extends LockssTestCase {
     // checks if AUs are internal or not (using
     // PluginManager.isInternalAu(foo))
     super.setUp();
-    MockLockssDaemon theDaemon = new MockLockssDaemon();
+    MockLockssDaemon theDaemon = getMockLockssDaemon();
     theDaemon.setPluginManager(new PluginManager());
 
     statusSource = new MockCrawlManagerStatusSource(theDaemon);

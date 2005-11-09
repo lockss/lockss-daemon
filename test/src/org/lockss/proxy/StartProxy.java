@@ -1,5 +1,5 @@
 /*
- * $Id: StartProxy.java,v 1.11 2005-05-12 00:22:23 troberts Exp $
+ * $Id: StartProxy.java,v 1.12 2005-11-09 18:46:26 tlipkis Exp $
  */
 
 /*
@@ -40,7 +40,7 @@ import org.lockss.test.*;
 
 public class StartProxy {
   public static void main(String args[]) {
-    MockLockssDaemon daemon = new MockLockssDaemon(null);
+    MockLockssDaemon daemon = new MyMockLockssDaemon();
     ArchivalUnit au = PTestPlugin.makeTestAu();
     PluginTestUtil.registerArchivalUnit(au);
 
@@ -56,5 +56,10 @@ public class StartProxy {
 
     manager.startProxy();
     System.err.println("Proxy started");
+  }
+
+  /** Just here so we can create an instance of MockLockssDaemon, whose
+   * constructor is (deliberately) protected */
+  static class MyMockLockssDaemon extends MockLockssDaemon {
   }
 }
