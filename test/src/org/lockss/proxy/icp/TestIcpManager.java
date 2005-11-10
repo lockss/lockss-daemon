@@ -1,5 +1,5 @@
 /*
- * $Id: TestIcpManager.java,v 1.3 2005-11-07 22:03:09 thib_gc Exp $
+ * $Id: TestIcpManager.java,v 1.4 2005-11-10 21:08:35 thib_gc Exp $
  */
 
 /*
@@ -37,9 +37,7 @@ import java.net.DatagramSocket;
 
 import org.lockss.config.Configuration;
 import org.lockss.config.Configuration.Differences;
-import org.lockss.test.ConfigurationUtil;
-import org.lockss.test.LockssTestCase;
-import org.lockss.test.MockLockssDaemon;
+import org.lockss.test.*;
 
 /**
  * <p>Tests the {@link IcpManager} class.</p>
