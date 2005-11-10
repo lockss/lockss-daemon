@@ -1,5 +1,5 @@
 /*
- * $Id: TestEditableDefinablePlugin.java,v 1.14 2005-10-19 16:52:54 thib_gc Exp $
+ * $Id: TestEditableDefinablePlugin.java,v 1.15 2005-11-10 21:20:01 thib_gc Exp $
  */
 
 /*
@@ -58,7 +58,7 @@ public class TestEditableDefinablePlugin
   protected void setUp() throws Exception {
     super.setUp();
     edPlugin = new EditableDefinablePlugin();
-    edPlugin.initPlugin(new MockLockssDaemon());
+    edPlugin.initPlugin(getMockLockssDaemon());
     tempDirPath = getTempDir().getAbsolutePath() + File.separator;
   }
 
