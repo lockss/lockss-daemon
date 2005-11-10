@@ -1,5 +1,5 @@
 /*
- * $Id: IcpManager.java,v 1.12 2005-11-07 22:03:09 thib_gc Exp $
+ * $Id: IcpManager.java,v 1.13 2005-11-10 21:08:01 thib_gc Exp $
  */
 
 /*
@@ -216,7 +216,7 @@ public class IcpManager
     boolean start = Configuration.getBooleanParam(PARAM_ICP_ENABLED,
                                                   DEFAULT_ICP_ENABLED);
     if (start) {
-      startSocket();
+      resetConfig();
     }
   }
 
