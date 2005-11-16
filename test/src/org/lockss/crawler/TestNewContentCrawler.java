@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.44 2005-10-20 16:42:55 troberts Exp $
+ * $Id: TestNewContentCrawler.java,v 1.45 2005-11-16 00:06:18 troberts Exp $
  */
 
 /*
@@ -376,6 +376,7 @@ public class TestNewContentCrawler extends LockssTestCase {
 
     List updatedStartUrls = ListUtil.list(startUrl, startUrl2);
     spec = new SpiderCrawlSpec(updatedStartUrls, permissionList, crawlRule, 1);
+    mau.setCrawlSpec(spec);
     crawler = new MyNewContentCrawler(mau, spec, new MockAuState());
     ((BaseCrawler)crawler).daemonPermissionCheckers = ListUtil.list(new MockPermissionChecker(2));
 
@@ -566,6 +567,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     mcus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     spec = new SpiderCrawlSpec(ListUtil.list(permissionPage),
 			       ListUtil.list(permissionPage), crawlRule, 1);
+    mau.setCrawlSpec(spec);
     crawler = new MyNewContentCrawler(mau, spec, aus);
 
     mau.addUrl(permissionPage,
@@ -643,6 +645,8 @@ public class TestNewContentCrawler extends LockssTestCase {
 
     List updatedStartUrls = ListUtil.list(startUrl, startUrl2);
     spec = new SpiderCrawlSpec(updatedStartUrls, permissionList, crawlRule, 1);
+    mau.setCrawlSpec(spec);
+
     crawler = new MyNewContentCrawler(mau, spec, new MockAuState());
     ((BaseCrawler)crawler).daemonPermissionCheckers = ListUtil.list(new MockPermissionChecker(2));
 
@@ -696,6 +700,8 @@ public class TestNewContentCrawler extends LockssTestCase {
 
     List updatedStartUrls = ListUtil.list(startUrl, startUrl2);
     spec = new SpiderCrawlSpec(updatedStartUrls, permissionList, crawlRule, 2);
+    mau.setCrawlSpec(spec);
+
     crawler = new MyNewContentCrawler(mau, spec, new MockAuState());
     ((BaseCrawler)crawler).daemonPermissionCheckers =
       ListUtil.list(new MockPermissionChecker(2));

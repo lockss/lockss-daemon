@@ -1,5 +1,5 @@
 /*
- * $Id: TestFollowLinkCrawler.java,v 1.11 2005-10-20 16:42:55 troberts Exp $
+ * $Id: TestFollowLinkCrawler.java,v 1.12 2005-11-16 00:06:18 troberts Exp $
  */
 
 /*
@@ -669,11 +669,13 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     mau.addUrl(startUrl, false, false);
 
     crawler.doCrawl();
-    assertEquals(0, cus.getCachedUrls().size());
+    assertEquals(SetUtil.set(), cus.getCachedUrls());
   }
 
   private MockCachedUrlSet permissionPageTestSetup(List permissionPages,
-      int passPermissionCheck, List urlsToCrawl, MockArchivalUnit mmau) {
+                                                   int passPermissionCheck,
+                                                   List urlsToCrawl,
+                                                   MockArchivalUnit mmau) {
    //set plugin
     mmau.setPlugin(new MockPlugin());
     mmau.setAuId("permissionPage au");
@@ -688,7 +690,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
 
     //set Crawl spec
     spec = new SpiderCrawlSpec(urlsToCrawl, permissionPages, crawlRule, 1);
-
+    mmau.setCrawlSpec(spec);
     //set Crawler
     crawler = new TestableFollowLinkCrawler(mmau, spec, new MockAuState());
     ((BaseCrawler)crawler).daemonPermissionCheckers = ListUtil.list(
@@ -755,7 +757,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
 
     String url1= "http://www.example.com/link1.html";
     String url3= "http://www.foo.com/link3.html";
-    List urls = ListUtil.list(url1,url3,permissionUrl1,permissionUrl2);
+    List urls = ListUtil.list(url1, url3, permissionUrl1, permissionUrl2);
 
     MyMockArchivalUnit mau = new MyMockArchivalUnit();
     mau.setCrawlSpec(spec);
@@ -763,8 +765,8 @@ public class TestFollowLinkCrawler extends LockssTestCase {
 
     setProperty(TestableFollowLinkCrawler.PARAM_ABORT_WHILE_PERMISSION_OTHER_THAN_OK,""+true);
 
-    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(
-        SetUtil.set(url1, url3));
+    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(SetUtil.set(url1,
+                                                                     url3));
     assertFalse(crawler.doCrawl());
     Set expected = SetUtil.set(permissionUrl1);
     assertEquals(expected, cus.getCachedUrls());
@@ -787,11 +789,10 @@ public class TestFollowLinkCrawler extends LockssTestCase {
 
     setProperty(BaseCrawler.PARAM_REFETCH_PERMISSIONS_PAGE, ""+true);
 
-    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(
-        SetUtil.fromList(urls));
+    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(SetUtil.fromList(urls));
 
     assertFalse(crawler.doCrawl());
-    assertEquals(SetUtil.set(permissionUrl2, url2) ,cus.getCachedUrls());
+    assertEquals(SetUtil.set(permissionUrl2, url2), cus.getCachedUrls());
   }
 
   public void testPermissionPageFailOnceAndOkAfterRefetch(){

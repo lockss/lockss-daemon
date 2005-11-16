@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.45 2005-10-20 16:43:32 troberts Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.46 2005-11-16 00:06:19 troberts Exp $
  */
 
 /*
@@ -92,8 +92,9 @@ public class TestBaseUrlCacher extends LockssTestCase {
     plugin.initPlugin(theDaemon);
     mau.setPlugin(plugin);
 
-    repo = (LockssRepository) theDaemon
-        .newAuManager(LockssDaemon.LOCKSS_REPOSITORY, mau);
+    repo =
+      (LockssRepository)theDaemon.newAuManager(LockssDaemon.LOCKSS_REPOSITORY,
+                                               mau);
     theDaemon.setLockssRepository(repo, mau);
 
     theDaemon.setNodeManager(nodeMgr, mau);
@@ -102,8 +103,9 @@ public class TestBaseUrlCacher extends LockssTestCase {
     mcus.setArchivalUnit(mau);
     mau.setAuCachedUrlSet(mcus);
     cacher = new MyMockBaseUrlCacher(mau, TEST_URL);
-    saveDefaultSuppressStackTrace = CacheException
-        .setDefaultSuppressStackTrace(false);
+    saveDefaultSuppressStackTrace =
+      CacheException.setDefaultSuppressStackTrace(false);
+    getMockLockssDaemon().getAlertManager();
   }
 
   public void tearDown() throws Exception {
@@ -536,10 +538,9 @@ public class TestBaseUrlCacher extends LockssTestCase {
   // Should follow redirection to URL in crawl spec
   public void testRedirectInSpec() throws Exception {
     String redTo = "http://somewhere.else/foo";
-    MockConnectionMockBaseUrlCacher muc = new MockConnectionMockBaseUrlCacher(
-                                                                              mau,
-                                                                              TEST_URL);
-    PermissionMap map = new PermissionMap();
+    MockConnectionMockBaseUrlCacher muc =
+      new MockConnectionMockBaseUrlCacher(mau, TEST_URL);
+    MockPermissionMap map = new MockPermissionMap();
     map.putStatus(TEST_URL, PermissionRecord.PERMISSION_OK);
     map.putStatus(redTo, PermissionRecord.PERMISSION_OK);
     muc.setPermissionMapSource(new MockPermissionMapSource(map));
@@ -584,7 +585,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
     MockConnectionMockBaseUrlCacher muc = new MockConnectionMockBaseUrlCacher(
                                                                               mau,
                                                                               TEST_URL);
-    PermissionMap map = new PermissionMap();
+    MockPermissionMap map = new MockPermissionMap();
     map.putStatus(TEST_URL, PermissionRecord.PERMISSION_OK);
     map.putStatus(redTo1, PermissionRecord.PERMISSION_OK);
     map.putStatus(redTo, PermissionRecord.PERMISSION_OK);
@@ -711,7 +712,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
     MockConnectionMockBaseUrlCacher muc = new MockConnectionMockBaseUrlCacher(
                                                                               mau,
                                                                               TEST_URL);
-    PermissionMap map = new PermissionMap();
+    MockPermissionMap map = new MockPermissionMap();
     map.putStatus(TEST_URL, PermissionRecord.PERMISSION_OK);
     map.putStatus(redTo, PermissionRecord.PERMISSION_OK);
     muc.setPermissionMapSource(new MockPermissionMapSource(map));
@@ -745,7 +746,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
     MockConnectionMockBaseUrlCacher muc = new MockConnectionMockBaseUrlCacher(
                                                                               mau,
                                                                               TEST_URL);
-    PermissionMap map = new PermissionMap();
+    MockPermissionMap map = new MockPermissionMap();
     map.putStatus(TEST_URL, PermissionRecord.PERMISSION_OK);
     map.putStatus(redTo1, PermissionRecord.PERMISSION_OK);
     muc.setPermissionMapSource(new MockPermissionMapSource(map));
@@ -788,7 +789,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
     MockConnectionMockBaseUrlCacher muc = new MockConnectionMockBaseUrlCacher(
                                                                               mau,
                                                                               TEST_URL);
-    PermissionMap map = new PermissionMap();
+    MockPermissionMap map = new MockPermissionMap();
     map.putStatus(TEST_URL, PermissionRecord.PERMISSION_OK);
     map.putStatus(redTo1, PermissionRecord.PERMISSION_OK);
     muc.setPermissionMapSource(new MockPermissionMapSource(map));
@@ -846,15 +847,14 @@ public class TestBaseUrlCacher extends LockssTestCase {
   }
 
   public void testDirRedirect() throws Exception {
-    PermissionMap map = new PermissionMap();
+    MockPermissionMap map = new MockPermissionMap();
     String content = "oft redirected content";
     mau.returnRealCachedUrl = true;
     String url = "http://a.b/bar";
     String redTo1 = "http://somewhere.else/foo";
     String redTo2 = "http://somewhere.else/foo/";
-    MockConnectionMockBaseUrlCacher muc = new MockConnectionMockBaseUrlCacher(
-                                                                              mau,
-                                                                              url);
+    MockConnectionMockBaseUrlCacher muc =
+      new MockConnectionMockBaseUrlCacher(mau, url);
     map.putStatus(url, PermissionRecord.PERMISSION_OK);
     map.putStatus(redTo1, PermissionRecord.PERMISSION_OK);
     muc.setPermissionMapSource(new MockPermissionMapSource(map));
@@ -1249,6 +1249,18 @@ public class TestBaseUrlCacher extends LockssTestCase {
   public static void main(String[] argv) {
     String[] testCaseList = { TestBaseUrlCacher.class.getName() };
     junit.swingui.TestRunner.main(testCaseList);
+  }
+
+  private static class MockPermissionMap extends PermissionMap {
+    public MockPermissionMap() {
+      super(new MockArchivalUnit(), new MockPermissionHelper(), new ArrayList());
+    }
+
+    protected void putStatus(String permissionUrl, int status)
+            throws MalformedURLException {
+      super.putStatus(permissionUrl, status);
+    }
+
   }
 
 }

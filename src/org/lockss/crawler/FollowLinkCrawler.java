@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.34 2005-10-14 22:40:34 troberts Exp $
+ * $Id: FollowLinkCrawler.java,v 1.35 2005-11-16 00:06:18 troberts Exp $
  */
 
 /*
@@ -274,7 +274,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
   }
 
   /** We always want our UrlCacher to store all redirected copies */
-  protected UrlCacher makeUrlCacher(String url) {
+  public UrlCacher makeUrlCacher(String url) {
     UrlCacher uc = super.makeUrlCacher(url);
     uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_STORE_ALL_IN_SPEC);
     uc.setPermissionMapSource(this);
@@ -309,7 +309,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	} else {
 
 	  // checking the crawl permission of the url's host
-	  if (!checkHostPermission(uc.getUrl(),true)){
+	  if (!permissionMap.checkHostPermission(uc.getUrl(), true, crawlStatus, this)){
 	    if (crawlStatus.getCrawlError() == null) {
 	      crawlStatus.setCrawlError("No permission to collect " + url);
 	    }
