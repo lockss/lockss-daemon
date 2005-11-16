@@ -1,5 +1,5 @@
 /*
- * $Id: TestPermissionMap.java,v 1.3 2005-10-11 05:49:13 tlipkis Exp $
+ * $Id: TestPermissionMap.java,v 1.4 2005-11-16 00:05:49 troberts Exp $
  */
 
 /*
@@ -31,18 +31,46 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.crawler;
+import java.util.ArrayList;
+
+import org.lockss.daemon.Crawler;
 import org.lockss.test.*;
+import org.lockss.util.ListUtil;
 
 public class TestPermissionMap extends LockssTestCase {
   private PermissionMap pMap;
   private String permissionUrl1 = "http://www.example.com/index.html";
   private String url1 = "http://www.example.com/link1.html";
 
+
   public void setUp() throws Exception {
     super.setUp();
-    pMap = new PermissionMap();
+
+    getMockLockssDaemon().getAlertManager(); //populates AlertManager
+
+    pMap = new PermissionMap(new MockArchivalUnit(),
+                             new MockPermissionHelper(), new ArrayList());
     pMap.putStatus(permissionUrl1, PermissionRecord.PERMISSION_OK);
   }
+
+  public void testConstructorNullAu() {
+    try {
+      new PermissionMap(null, new MockPermissionHelper(), null);
+      fail("Should have thrown an IllegalArgumentException");
+    } catch (IllegalArgumentException ex) {
+      //expected
+    }
+  }
+
+  public void testConstructorNullCrawler() {
+    try {
+      new PermissionMap(new MockArchivalUnit(), null, null);
+      fail("Should have thrown an IllegalArgumentException");
+    } catch (IllegalArgumentException ex) {
+      //expected
+    }
+  }
+
 
   public void testGetPermissionUrl() throws Exception {
     assertEquals(permissionUrl1, pMap.getPermissionUrl(url1));
