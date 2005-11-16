@@ -1,5 +1,5 @@
 /*
- * $Id: IcpManager.java,v 1.14 2005-11-16 04:19:53 thib_gc Exp $
+ * $Id: IcpManager.java,v 1.15 2005-11-16 16:34:50 thib_gc Exp $
  */
 
 /*
@@ -156,6 +156,10 @@ public class IcpManager
         // Send response
         try {
           icpSocket.send(response, message.getUdpAddress(), message.getUdpPort());
+        }
+        catch (NoRouteToHostException nrthe) {
+          logger.warning("NoRouteToHostException while sending ICP response", nrthe);
+          logger.debug("A NoRouteToHostException may indicate a problem related to packet filtering on the underlying platform.");
         }
         catch (IOException ioe) {
           logger.warning("IOException while sending ICP response", ioe);
