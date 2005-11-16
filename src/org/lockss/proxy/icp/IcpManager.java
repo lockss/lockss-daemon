@@ -1,5 +1,5 @@
 /*
- * $Id: IcpManager.java,v 1.13 2005-11-10 21:08:01 thib_gc Exp $
+ * $Id: IcpManager.java,v 1.14 2005-11-16 04:19:53 thib_gc Exp $
  */
 
 /*
@@ -33,19 +33,15 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.proxy.icp;
 
 import java.io.IOException;
-import java.net.DatagramSocket;
-import java.net.SocketException;
+import java.net.*;
 
-import org.lockss.app.BaseLockssDaemonManager;
-import org.lockss.app.ConfigurableManager;
+import org.lockss.app.*;
 import org.lockss.config.Configuration;
-import org.lockss.config.Configuration.Differences;
+import org.lockss.config.Configuration.*;
 import org.lockss.daemon.ResourceManager;
-import org.lockss.plugin.CachedUrl;
-import org.lockss.plugin.PluginManager;
+import org.lockss.plugin.*;
 import org.lockss.proxy.ProxyManager;
-import org.lockss.util.Logger;
-import org.lockss.util.RateLimiter;
+import org.lockss.util.*;
 
 /**
  * <p>A daemon manager that handles the ICP server.</p>
@@ -177,6 +173,10 @@ public class IcpManager
     }
   }
 
+  public boolean isIcpServerEnabled() {
+    return isIcpServerEnabled(Configuration.getCurrentConfig());
+  }
+
   /**
    * <p>Determines if the ICP server is currently running.</p>
    * @return True if and only if the ICP server is running.
@@ -189,21 +189,19 @@ public class IcpManager
   public void setConfig(Configuration newConfig,
                         Configuration prevConfig,
                         Differences changedKeys) {
-
     // ICP rate limiter
     if (changedKeys.contains(PARAM_ICP_INCOMING_RATE)) {
       limiter = RateLimiter.getConfiguredRateLimiter(newConfig,
           limiter, PARAM_ICP_INCOMING_RATE, DEFAULT_ICP_INCOMING_RATE);
     }
 
-    // ICP enabled/disabled and ICP port
-    if (   changedKeys.contains(PARAM_ICP_ENABLED)
+    if (   changedKeys.contains(PARAM_PLATFORM_ICP_ENABLED)
+        || changedKeys.contains(PARAM_PLATFORM_ICP_PORT)
+        || changedKeys.contains(PARAM_ICP_ENABLED)
         || changedKeys.contains(PARAM_ICP_PORT)) {
-      boolean enable = newConfig.getBoolean(PARAM_ICP_ENABLED,
-                                            DEFAULT_ICP_ENABLED);
       stopSocket();
-      if (theDaemon.isDaemonInited() && enable) {
-        startSocket();
+      if (theDaemon.isDaemonInited() && isIcpServerEnabled(newConfig)) {
+        startSocket(newConfig);
       }
     }
   }
@@ -213,9 +211,7 @@ public class IcpManager
     super.startService();
     pluginManager = getDaemon().getPluginManager();
     proxyManager = getDaemon().getProxyManager();
-    boolean start = Configuration.getBooleanParam(PARAM_ICP_ENABLED,
-                                                  DEFAULT_ICP_ENABLED);
-    if (start) {
+    if (isIcpServerEnabled()) {
       resetConfig();
     }
   }
@@ -229,11 +225,28 @@ public class IcpManager
   /**
    * <p>Starts the ICP socket.</p>
    */
-  protected void startSocket() {
+  protected void startSocket(Configuration theConfig) {
     try {
       logger.debug("startSocket in IcpManager: begin");
-      port = Configuration.getIntParam(PARAM_ICP_PORT,
-                                       DEFAULT_ICP_PORT);
+
+      // One of PARAM_ICP_ENABLED or PARAM_PLATFORM_ICP_ENABLED is true
+      try {
+        if (theConfig.getBoolean(PARAM_ICP_ENABLED, false)) {
+          port = theConfig.getInt(PARAM_ICP_PORT);
+        }
+        else {
+          port = theConfig.getInt(PARAM_PLATFORM_ICP_PORT);
+        }
+      } catch (InvalidParam ipe) {
+        StringBuffer buffer = new StringBuffer();
+        buffer.append(PARAM_ICP_PORT);
+        buffer.append(" and ");
+        buffer.append(PARAM_PLATFORM_ICP_PORT);
+        buffer.append(" are both unset in startSocket in IcpManager.");
+        logger.error(buffer.toString());
+        return; // do not start
+      }
+
       resourceManager = getDaemon().getResourceManager();
       if (!resourceManager.reserveUdpPort(port, getClass())) {
         logger.error("Could not reserve UDP port " + port);
@@ -285,6 +298,35 @@ public class IcpManager
     port = -1;
   }
 
+  private boolean isIcpServerEnabled(Configuration theConfig) {
+    boolean start = false;
+    try {
+      if (theConfig.getBoolean(PARAM_PLATFORM_ICP_ENABLED)) {
+        try {
+          int p = theConfig.getInt(PARAM_PLATFORM_ICP_PORT);
+          start = true; // can reach this statement; must start
+        }
+        catch (InvalidParam ipe) {
+          StringBuffer buffer = new StringBuffer();
+          buffer.append(PARAM_PLATFORM_ICP_ENABLED);
+          buffer.append(" is true but ");
+          buffer.append(PARAM_PLATFORM_ICP_PORT);
+          buffer.append(" is not set.");
+          logger.warning(buffer.toString());
+        }
+      }
+      else {
+        // not allowed to start
+      }
+    }
+    catch (InvalidParam ipe) {
+      // not set; allowed to start
+      start = theConfig.getBoolean(PARAM_ICP_ENABLED,
+                                   DEFAULT_ICP_ENABLED);
+    }
+    return start;
+  }
+
   /**
    * <p>The default ICP enabled flag.</p>
    */
@@ -306,6 +348,18 @@ public class IcpManager
    */
   public static final String PARAM_ICP_PORT =
     "org.lockss.proxy.icp.port";
+
+  /**
+   * <p>The ICP enabled parameter from the platform.</p>
+   */
+  public static final String PARAM_PLATFORM_ICP_ENABLED =
+    "org.lockss.platform.icp.enabled";
+
+  /**
+   * <p>The ICP port parameter from the platform.</p>
+   */
+  public static final String PARAM_PLATFORM_ICP_PORT =
+    "org.lockss.platform.icp.port";
 
   /**
    * <p>A logger for use by instances of this class.</p>

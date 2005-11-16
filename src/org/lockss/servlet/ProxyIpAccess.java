@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyIpAccess.java,v 1.16 2005-10-14 16:51:31 thib_gc Exp $
+ * $Id: ProxyIpAccess.java,v 1.17 2005-11-16 04:19:52 thib_gc Exp $
  */
 
 /*
@@ -177,19 +177,11 @@ public class ProxyIpAccess extends IpAccessControl {
   }
 
   private boolean getDefaultIcpEnable() {
-    if (isForm) {
-      return formIcpEnable;
-    }
-    return Configuration.getBooleanParam(IcpManager.PARAM_ICP_ENABLED,
-                                         IcpManager.DEFAULT_ICP_ENABLED);
+    return getLockssDaemon().getIcpManager().isIcpServerRunning();
   }
 
   private String getDefaultIcpPort() {
-    String port = formIcpPort;
-    if (StringUtil.isNullString(port)) {
-      port = Configuration.getParam(IcpManager.PARAM_ICP_PORT);
-    }
-    return port;
+    return Integer.toString(getLockssDaemon().getIcpManager().getCurrentPort());
   }
 
   private static final String AUDIT_FOOT =
@@ -220,9 +212,21 @@ public class ProxyIpAccess extends IpAccessControl {
     layoutEnablePortRow(tbl, AUDIT_ENABLE_NAME, getDefaultAuditEnable(), "audit proxy",
         AUDIT_FOOT, FILTER_FOOT, AUDIT_PORT_NAME, getDefaultAuditPort(),
         resourceMgr.getUsableTcpPorts(AuditProxyManager.SERVER_NAME));
-    layoutEnablePortRow(tbl, ICP_ENABLE_NAME, getDefaultIcpEnable(), "ICP server",
-        ICP_FOOT, FILTER_FOOT, ICP_PORT_NAME, getDefaultIcpPort(),
-        resourceMgr.getUsableUdpPorts(AuditProxyManager.SERVER_NAME));
+    if (Configuration.getBooleanParam(IcpManager.PARAM_PLATFORM_ICP_ENABLED,
+                                      true)) {
+      // unset: behave like true
+      layoutEnablePortRow(tbl, ICP_ENABLE_NAME, getDefaultIcpEnable(), "ICP server",
+          ICP_FOOT, FILTER_FOOT, ICP_PORT_NAME, getDefaultIcpPort(),
+          resourceMgr.getUsableUdpPorts(AuditProxyManager.SERVER_NAME));
+    }
+    else {
+      final String ICP_DISABLED_FOOT =
+        "To enable ICP you must perform a platform reconfiguration reboot.";
+      tbl.newRow(); tbl.newCell();
+      tbl.add("The platform is configured to disable the ICP server");
+      tbl.add(addFootnote(ICP_DISABLED_FOOT));
+      tbl.add(".");
+    }
     composite.add(tbl);
   }
 
