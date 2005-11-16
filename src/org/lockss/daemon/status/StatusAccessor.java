@@ -1,5 +1,5 @@
 /*
- * $Id: StatusAccessor.java,v 1.17 2005-10-11 05:44:14 tlipkis Exp $
+ * $Id: StatusAccessor.java,v 1.18 2005-11-16 04:25:52 tlipkis Exp $
  */
 
 /*
@@ -69,4 +69,11 @@ public interface StatusAccessor {
    * @return true if a key is required
    */
   public boolean requiresKey();
+
+  /**
+   * Marker interface for status accessors that should be included in the
+   * table of all tables only for the debug user
+   */
+  public interface DebugOnly extends StatusAccessor {
+  }
 }
