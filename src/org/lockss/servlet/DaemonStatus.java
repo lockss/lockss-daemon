@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.58 2005-10-14 21:24:13 thib_gc Exp $
+ * $Id: DaemonStatus.java,v 1.59 2005-11-16 04:25:21 tlipkis Exp $
  */
 
 /*
@@ -114,8 +114,8 @@ public class DaemonStatus extends LockssServlet {
     tableOptions = new BitSet();
 
     if (isDebugUser()) {
-      log.debug2("Debug user.  Setting OPTION_INCLUDE_INTERNAL_AUS");
-      tableOptions.set(StatusTable.OPTION_INCLUDE_INTERNAL_AUS);
+      log.debug2("Debug user.  Setting OPTION_DEBUG_USER");
+      tableOptions.set(StatusTable.OPTION_DEBUG_USER);
     }
 
     for (Iterator iter = StringUtil.breakAt(optionsParam, ',').iterator();

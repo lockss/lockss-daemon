@@ -1,5 +1,5 @@
 /*
- * $Id: PluginStatus.java,v 1.5 2005-07-09 21:56:37 tlipkis Exp $
+ * $Id: PluginStatus.java,v 1.6 2005-11-16 04:25:22 tlipkis Exp $
  */
 
 /*
@@ -126,7 +126,7 @@ class Plugins extends PluginStatus implements StatusAccessor {
   public void populateTable(StatusTable table) {
     table.setColumnDescriptors(colDescs);
     table.setDefaultSortRules(sortRules);
-    table.setRows(getRows(table.getOptions().get(StatusTable.OPTION_INCLUDE_INTERNAL_AUS)));
+    table.setRows(getRows(table.getOptions().get(StatusTable.OPTION_DEBUG_USER)));
   }
 
   public List getRows(boolean includeInternalAus) {

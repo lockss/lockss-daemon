@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerManager.java,v 1.9 2005-10-06 08:21:55 tlipkis Exp $
+ * $Id: NodeManagerManager.java,v 1.10 2005-11-16 04:25:20 tlipkis Exp $
  */
 
 /*
@@ -197,7 +197,7 @@ public class NodeManagerManager
         throws StatusService.NoSuchTableException {
       table.setColumnDescriptors(columnDescriptors);
       table.setDefaultSortRules(sortRules);
-      table.setRows(getRows(table.getOptions().get(StatusTable.OPTION_INCLUDE_INTERNAL_AUS)));
+      table.setRows(getRows(table.getOptions().get(StatusTable.OPTION_DEBUG_USER)));
     }
 
     public boolean requiresKey() {

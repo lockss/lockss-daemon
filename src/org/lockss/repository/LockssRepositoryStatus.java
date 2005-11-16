@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryStatus.java,v 1.21 2005-10-11 05:46:28 tlipkis Exp $
+ * $Id: LockssRepositoryStatus.java,v 1.22 2005-11-16 04:25:21 tlipkis Exp $
  */
 
 /*
@@ -112,7 +112,7 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
         throws StatusService.NoSuchTableException {
       table.setColumnDescriptors(columnDescriptors);
       table.setDefaultSortRules(sortRules);
-      table.setRows(getRows(table.getOptions().get(StatusTable.OPTION_INCLUDE_INTERNAL_AUS)));
+      table.setRows(getRows(table.getOptions().get(StatusTable.OPTION_DEBUG_USER)));
       table.setSummaryInfo(getSummaryInfo());
     }
 

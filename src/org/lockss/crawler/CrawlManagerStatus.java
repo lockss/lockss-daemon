@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerStatus.java,v 1.28 2005-10-11 05:43:54 tlipkis Exp $
+ * $Id: CrawlManagerStatus.java,v 1.29 2005-11-16 04:25:22 tlipkis Exp $
  */
 
 /*
@@ -210,7 +210,7 @@ public class CrawlManagerStatus implements StatusAccessor {
     String key = table.getKey();
     table.setColumnDescriptors(colDescs);
     boolean includeInternalAus =
-      table.getOptions().get(StatusTable.OPTION_INCLUDE_INTERNAL_AUS);
+      table.getOptions().get(StatusTable.OPTION_DEBUG_USER);
     table.setRows(getRows(key, includeInternalAus));
 
     table.setDefaultSortRules(makeSortRules());

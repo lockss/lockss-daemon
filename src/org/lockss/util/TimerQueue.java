@@ -1,5 +1,5 @@
 /*
- * $Id: TimerQueue.java,v 1.27 2005-10-11 05:48:29 tlipkis Exp $
+ * $Id: TimerQueue.java,v 1.28 2005-11-16 04:25:19 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -315,7 +315,7 @@ public class TimerQueue {
       for (Iterator iter = q.iterator(); iter.hasNext();) {
 	TimerQueue.Request req = (TimerQueue.Request)iter.next();
 	if (!req.cancelled ||
-	    table.getOptions().get(StatusTable.OPTION_INCLUDE_INTERNAL_AUS)) {
+	    table.getOptions().get(StatusTable.OPTION_DEBUG_USER)) {
 	  rows.add(makeRow(req));
 	}
       }
