@@ -1,5 +1,5 @@
 /*
- * $Id: V1PollFactory.java,v 1.20 2005-10-20 22:57:49 troberts Exp $
+ * $Id: V1PollFactory.java,v 1.21 2005-11-16 07:44:10 smorabito Exp $
  */
 
 /*
@@ -40,7 +40,9 @@ import org.lockss.app.*;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.lockss.poller.PollManager.*;
 import org.lockss.protocol.*;
+import org.lockss.state.*;
 import org.lockss.util.*;
 import org.lockss.hasher.HashService;
 import org.mortbay.util.B64Code;
@@ -165,7 +167,7 @@ public class V1PollFactory extends BasePollFactory {
 				   verifier,
 				   opcode,
 				   duration,
-				   im.getLocalPeerIdentity(PollSpec.V1_PROTOCOL));
+				   im.getLocalPeerIdentity(Poll.V1_PROTOCOL));
     // before we actually send the message make sure that another poll
     // isn't going to conflict with this and create a split poll
     if(checkForConflicts(cus, pm, ((BasePoll)poll)) == null) {
@@ -198,8 +200,42 @@ public class V1PollFactory extends BasePollFactory {
     BasePoll ret_poll = null;
     PollManager pm = daemon.getPollManager();
     IdentityManager im = daemon.getIdentityManager();
+    CachedUrlSet cus = pollspec.getCachedUrlSet();
+    ArchivalUnit au = cus.getArchivalUnit();
     byte[] challenge;
     byte[] verifier;
+    ActivityRegulator.Lock lock = null;
+
+    // check with regulator if not verify poll
+    if (pollspec.getPollType() != Poll.V1_VERIFY_POLL) {
+      // get expiration time for the lock
+      long expiration = 2 * duration;
+      if (AuUrl.isAuUrl(cus.getUrl())) {
+        lock = daemon.getActivityRegulator(au).
+          getAuActivityLock(ActivityRegulator.TOP_LEVEL_POLL, expiration);
+        if (lock==null) {
+          theLog.debug2("New top-level poll aborted due to activity lock.");
+          return null;
+        }
+      } else {
+        int activity = getPollActivity(pollspec, daemon.getPollManager());
+        ActivityRegulator ar = daemon.getActivityRegulator(au);
+        if (ar == null) {
+          theLog.warning("Activity regulator null for au: " + au.toString());
+          return null;
+        }
+        if (theLog.isDebug2()) {
+          theLog.debug2("about to get lock for " + cus.toString() + " act " +
+                        activity + " for " +
+                        StringUtil.timeIntervalToString(expiration));
+        }
+        lock = ar.getCusActivityLock(cus, activity, expiration);
+        if (lock==null) {
+          theLog.debug("New poll aborted due to activity lock.");
+          return null;
+        }
+      }
+    }
 
     if (msg == null) {
       challenge = makeVerifier(duration);
@@ -217,9 +253,9 @@ public class V1PollFactory extends BasePollFactory {
       return null;
     }
 
-    if (pollspec.getPollVersion() != 1) {
+    if (pollspec.getProtocolVersion() != 1) {
       throw new ProtocolException("V1PollFactory: bad version " +
-				  pollspec.getPollVersion());
+				  pollspec.getProtocolVersion());
     }
     if (duration <= 0) {
       throw new ProtocolException("V1Pollfactory: bad duration " + duration);
@@ -247,6 +283,29 @@ public class V1PollFactory extends BasePollFactory {
       throw new ProtocolException("Unknown poll type:" +
 				  pollspec.getPollType());
     }
+
+
+    NodeManager nm = daemon.getNodeManager(cus.getArchivalUnit());
+    if (pollspec.getPollType() != Poll.V1_VERIFY_POLL) {
+      if (!nm.shouldStartPoll(cus, ret_poll.getVoteTally())) {
+          theLog.debug("NodeManager said not to start poll: " + ret_poll);
+          // clear the lock
+          lock.expire();
+          return null;
+        }
+    }
+
+    if (pollspec.getPollType() != Poll.V1_VERIFY_POLL &&
+        !(pollspec.getPollType() == Poll.V1_NAME_POLL &&
+            pollspec.getLwrBound() != null)) {
+        // set the activity lock in the tally
+        ret_poll.getVoteTally().setActivityLock(lock);
+        nm.startPoll(cus, ret_poll.getVoteTally(), false);
+    }
+
+    ret_poll.startPoll();
+    theLog.debug2("Started new poll: " + ret_poll.getKey());
+
     return ret_poll;
   }
 
@@ -274,7 +333,6 @@ public class V1PollFactory extends BasePollFactory {
     }
     return true;
   }
-
 
   /**
    * getPollActivity returns the type of activity defined by ActivityRegulator

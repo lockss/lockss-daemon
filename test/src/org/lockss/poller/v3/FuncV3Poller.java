@@ -1,5 +1,5 @@
 /*
- * $Id: FuncV3Poller.java,v 1.3 2005-10-11 05:50:29 tlipkis Exp $
+ * $Id: FuncV3Poller.java,v 1.4 2005-11-16 07:44:08 smorabito Exp $
  */
 
 /*
@@ -228,7 +228,7 @@ public class FuncV3Poller extends LockssTestCase {
     final MyV3Poller v3Poller =
       new MyV3Poller(ps, theDaemon, pollerId,
 		     String.valueOf(B64Code.encode(key)),
-		     100000, "SHA-1");
+		     100000, "SHA-1", voters);
     v3Poller.startPoll();
 
     // In this scripted test, we play the part of a voter in a poll,
@@ -265,15 +265,18 @@ public class FuncV3Poller extends LockssTestCase {
     // For testing:  Hashmap of voter IDs to V3LcapMessages.
     private Map sentMsgs = Collections.synchronizedMap(new HashMap());
     private Map semaphores = new HashMap();
+    private PeerIdentity[] mockVoters;
 
     MyV3Poller(PollSpec spec, LockssDaemon daemon, PeerIdentity id,
-	       String pollkey, long duration, String hashAlg)
+	       String pollkey, long duration, String hashAlg,
+               PeerIdentity[] mockVoters)
         throws PollSerializerException {
       super(spec, daemon, id, pollkey, duration, hashAlg);
+      this.mockVoters = mockVoters;
     }
 
     Collection getReferenceList() {
-      return ListUtil.fromArray(voters);
+      return ListUtil.fromArray(mockVoters);
     }
 
     public void nominatePeers(PeerIdentity voter, List nominees) {
@@ -302,22 +305,20 @@ public class FuncV3Poller extends LockssTestCase {
     /**
      * Overridden to just agree.
      */
-    protected void tallyBlock(HashBlock block, int blockIndex) {
+    protected void tallyBlock(HashBlock block) {
       BlockTally tally = null;
       try {
         tally = (BlockTally)PrivilegedAccessor.getValue(this, "tally");
       } catch (Exception ex) {
         throw new RuntimeException(ex);
       }
-      List agreeVoters = new ArrayList();
-      for (Iterator iter = theVoters.values().iterator(); iter.hasNext();) {
-        PsmInterp interp = (PsmInterp)iter.next();
-        PeerIdentity voter = ((PollerUserData)interp.getUserData()).getVoterId();
+      tally.reset();
+      for (Iterator iter = theParticipants.values().iterator(); iter.hasNext();) {
+        ParticipantUserData ud = (ParticipantUserData)iter.next();
+        PeerIdentity voter = ud.getVoterId();
         log.debug2("Agreeing with voter " + voter);
-        agreeVoters.add(voter);
+        tally.addAgreeVoter(voter);
       }
-      tally.setAgreeVoters(agreeVoters);
-      tally.setDisagreeVoters(new ArrayList());
       tally.tallyVotes();
     }
   }

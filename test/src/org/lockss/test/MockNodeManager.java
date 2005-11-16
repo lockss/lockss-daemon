@@ -1,5 +1,5 @@
 /*
- * $Id: MockNodeManager.java,v 1.20 2005-07-19 00:14:11 troberts Exp $
+ * $Id: MockNodeManager.java,v 1.21 2005-11-16 07:44:08 smorabito Exp $
  */
 
 /*
@@ -80,7 +80,7 @@ public class MockNodeManager implements NodeManager {
   }
 
   public void startPoll(CachedUrlSet cus, Tallier state, boolean isReplay) {
-    logger.debug3("starting poll for cus: " + cus);
+    logger.debug3("starting V1 poll for cus: " + cus);
   }
 
   public boolean shouldStartPoll(CachedUrlSet cus, Tallier state) {

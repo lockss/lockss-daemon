@@ -1,5 +1,5 @@
 /*
-* $Id: BasePoll.java,v 1.17 2005-10-19 20:13:05 troberts Exp $
+* $Id: BasePoll.java,v 1.18 2005-11-16 07:44:10 smorabito Exp $
  */
 
 /*
@@ -75,18 +75,9 @@ public abstract class BasePoll implements Poll {
   abstract protected void receiveMessage(LcapMessage msg);
 
   /**
-   * start the poll.
-   */
-  abstract protected void startPoll();
-
-  /**
-   * Stop the poll when our deadline expired or our poll has ended in error.
-   */
-  abstract protected void stopPoll();
-
-  /**
    * Is our poll currently in an error state
    * @return true if the poll state is an error value
    */
   abstract protected boolean isErrorState();
+
 }

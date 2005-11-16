@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.134 2005-10-11 05:51:35 tlipkis Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.135 2005-11-16 07:44:08 smorabito Exp $
  */
 /*
  Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -154,7 +154,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     ArrayList polls = new ArrayList(1);
     polls.add(new PollState(1, "lwr1", "upr1", 1, 0, Deadline.MAX, false));
     // start the poll
-    assertNotNull(pollManager.callPoll(new PollSpec(cus, Poll.V1_CONTENT_POLL)));
+    assertNotNull(pollManager.callPoll(new PollSpec(cus, Poll.V1_NAME_POLL)));
     NodeStateImpl node = new NodeStateImpl(cus, 123,
         new CrawlState(-1, -1, -1), polls, historyRepo);
     historyRepo.storeNodeState(node);
@@ -1092,7 +1092,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     PeerIdentity testID = null;
     V1LcapMessage testmsg = null;
     if (isLocal) {
-      testID = idManager.getLocalPeerIdentity(PollSpec.V1_PROTOCOL);
+      testID = idManager.getLocalPeerIdentity(Poll.V1_PROTOCOL);
     } else {
       try {
         IPAddr testAddr = IPAddr.getByName("123.3.4.5");

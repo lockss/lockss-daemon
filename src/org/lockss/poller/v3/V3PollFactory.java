@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollFactory.java,v 1.2 2005-10-11 05:45:39 tlipkis Exp $
+ * $Id: V3PollFactory.java,v 1.3 2005-11-16 07:44:10 smorabito Exp $
  */
 
 /*
@@ -41,7 +41,9 @@ import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.poller.*;
 import org.lockss.protocol.*;
+import org.lockss.state.*;
 import org.lockss.util.*;
+import org.lockss.util.StringUtil;
 
 public class V3PollFactory extends BasePollFactory {
 
@@ -69,29 +71,45 @@ public class V3PollFactory extends BasePollFactory {
 
   public static Logger log = Logger.getLogger("V3PollFactory");
 
+
   public boolean callPoll(Poll poll, LockssDaemon daemon) {
-    // V3Poller handles all the dirty details of calling a poll,
-    // so this method need not do anything.
+    poll.startPoll();
     return true;
   }
 
   public BasePoll createPoll(PollSpec pollspec, LockssDaemon daemon,
-                             PeerIdentity orig, long duration, String hashAlg,
-                             LcapMessage msg)
+                             PeerIdentity orig, long duration,
+                             String hashAlg, LcapMessage msg)
       throws ProtocolException {
     BasePoll retPoll = null;
-    if (pollspec.getPollVersion() != PollSpec.V3_PROTOCOL) {
+    IdentityManager idManager = daemon.getIdentityManager();
+
+    CachedUrlSet cus = pollspec.getCachedUrlSet();
+    // check for presence of item in the cache
+    if (cus == null) {
+      log.debug2("Ignoring poll request, don't have AU: " + pollspec.getAuId());
+      return null;
+    }
+    ArchivalUnit au = cus.getArchivalUnit();
+    if (!pollspec.getPluginVersion().equals(au.getPlugin().getVersion())) {
+      log.debug("Ignoring poll request for " + au.getName() +
+                   ", plugin version mismatch; have: " +
+                   au.getPlugin().getVersion() +
+                   ", need: " + pollspec.getPluginVersion());
+      return null;
+    }
+    log.debug("Making poll from: " + pollspec);
+    if (pollspec.getProtocolVersion() != Poll.V3_PROTOCOL) {
       throw new ProtocolException("bad version " +
-                                  pollspec.getPollVersion());
+                                  pollspec.getProtocolVersion());
     }
     if (duration <= 0) {
       throw new ProtocolException("bad duration " + duration);
     }
     if (pollspec.getPollType() != Poll.V3_POLL) {
-      throw new ProtocolException("Unknown poll type:" +
+      throw new ProtocolException("Unexpected poll type:" +
                                   pollspec.getPollType());
     }
-    log.debug2("Creating V3 Content poll for " + pollspec);
     try {
       if (msg == null) {
         log.debug("Creating V3Poller to call a new poll...");
@@ -100,12 +118,19 @@ public class V3PollFactory extends BasePollFactory {
           String.valueOf(B64Code.encode(ByteArray.makeRandomBytes(20)));
         retPoll = new V3Poller(pollspec, daemon, orig, key, duration, hashAlg);
       } else {
+        // Ignore messages from ourself.
+        if (orig == idManager.getLocalPeerIdentity(Poll.V3_PROTOCOL)) {
+          log.info("Not responding to poll request from myself.");
+          return null;
+        }
+
         V3LcapMessage m = (V3LcapMessage)msg;
         PollSpec s = new PollSpec(m);
         log.debug("Creating V3Voter to participate in poll " + m.getKey());
         retPoll = new V3Voter(s, daemon, m.getOriginatorId(), m.getKey(),
                               m.getEffortProof(), m.getPollerNonce(),
                               m.getDuration(), m.getHashAlgorithm());
+        retPoll.startPoll(); // Voters need to be started immediately.
       }
     } catch (V3Serializer.PollSerializerException ex) {
       log.error("Serialization exception creating new V3Poller: ", ex);

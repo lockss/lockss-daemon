@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.91 2005-10-11 05:45:39 tlipkis Exp $
+* $Id: Poll.java,v 1.92 2005-11-16 07:44:10 smorabito Exp $
  */
 
 /*
@@ -31,15 +31,20 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.poller;
 
+import org.lockss.config.*;
 import org.lockss.plugin.*;
 import org.lockss.protocol.*;
 import org.lockss.util.*;
 
 public interface Poll {
   // Poll type names
-  public static final String[] PollName = {
+  public static final String[] POLL_NAME = {
     "V1 Name", "V1 Content", "V1 Verify",
-    "V3 Content", "V3 Header", "V3 Metadata"
+    "V3 Poller", "V3 Voter"
+  };
+
+  public static final String[] PROTOCOL_NAME = {
+    "Undefined", "V1", "V2", "V3"
   };
 
   // Poll type enum
@@ -47,6 +52,22 @@ public interface Poll {
   public static final int V1_CONTENT_POLL = 1;
   public static final int V1_VERIFY_POLL = 2;
   public static final int V3_POLL = 3;
+//  public static final int V3_POLLER = 3;
+//  public static final int V3_VOTER = 4;
+
+  // Protocol version enum
+  public static final int UNDEFINED_PROTOCOL = 0;
+  public static final int V1_PROTOCOL = 1;
+  public static final int V2_PROTOCOL = 2;
+  public static final int V3_PROTOCOL = 3;
+
+  public static final int MAX_PROTOCOL = 3;
+
+//  // Protocol version param
+//  public static final String PARAM_USE_PROTOCOL_VERSION =
+//    Configuration.PREFIX + "protocol.useProtocolVersion";
+//  public static final int DEFAULT_USE_PROTOCOL_VERSION = V1_PROTOCOL;
+
 
   /**
    * Error was return by hasher while attempting schedule hash - this
@@ -108,6 +129,37 @@ public interface Poll {
    * @return VoteTally for this poll
    */
   public PollTally getVoteTally();
+
+  /**
+   * Start a poll.
+   */
+  public void startPoll();
+
+  /**
+   * Stop a poll.
+   */
+  public void stopPoll();
+
+  /**
+   * Return the type of the poll.
+   *
+   * @return The type of the poll.
+   */
+  public int getType();
+
+  /**
+   * Return the AU associated with this poll.
+   *
+   * @return The AU associated with this poll.
+   */
+  public ArchivalUnit getAu();
+
+  /**
+   * Return the current status of this poll.
+   *
+   * @return  The current poll status.
+   */
+  public String getStatusString();
 
   /** Kludge for V1Name subpolls */
   public boolean isSubpollRunning();

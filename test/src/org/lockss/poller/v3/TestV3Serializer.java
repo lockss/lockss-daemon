@@ -37,6 +37,7 @@ import java.util.*;
 import org.lockss.repository.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
+import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.protocol.*;
 import org.lockss.protocol.psm.*;
@@ -48,20 +49,19 @@ import org.lockss.protocol.psm.*;
 public class TestV3Serializer extends LockssTestCase {
 
   String tempDirPath;
-  MockLockssDaemon theDaemon;
+  LockssDaemon theDaemon;
   IdentityManager idManager;
 
   public void setUp() throws Exception {
     super.setUp();
     tempDirPath = getTempDir().getAbsolutePath();
+    theDaemon = getMockLockssDaemon();
     Properties p = new Properties();
     p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
-    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
     p.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
     ConfigurationUtil.setCurrentConfigFromProps(p);
-    this.theDaemon = getMockLockssDaemon();
-    this.idManager = theDaemon.getIdentityManager();
+    idManager = theDaemon.getIdentityManager();
     idManager.startService();
   }
 
@@ -104,13 +104,13 @@ public class TestV3Serializer extends LockssTestCase {
     V3PollerSerializer pollerSerializer = new V3PollerSerializer(theDaemon);
     File pollDir = (File)PrivilegedAccessor.getValue(pollerSerializer,
                                                      "pollDir");
-    PollerUserData ud1 = makePollerUserData(pollerSerializer);
+    ParticipantUserData ud1 = makePollerUserData(pollerSerializer);
     PeerIdentity id = ud1.getVoterId();
     pollerSerializer.savePollerUserData(ud1);
-    PollerUserData ud2 = pollerSerializer.loadPollerUserData(id);
+    ParticipantUserData ud2 = pollerSerializer.loadPollerUserData(id);
     assertEqualPollerUserData(ud1, ud2);
     pollerSerializer = new V3PollerSerializer(theDaemon, pollDir.getName());
-    PollerUserData ud3 = pollerSerializer.loadPollerUserData(id);
+    ParticipantUserData ud3 = pollerSerializer.loadPollerUserData(id);
     assertEqualPollerUserData(ud1, ud3);
     PeerIdentity id2 = new MockPeerIdentity("192.168.1.1:9999");
     try {
@@ -119,23 +119,6 @@ public class TestV3Serializer extends LockssTestCase {
     } catch (V3Serializer.PollSerializerException ex) {
       // expected.
     }
-  }
-
-  public void testSaveAndLoadPollerInterpState() throws Exception {
-    V3PollerSerializer pollerSerializer = new V3PollerSerializer(theDaemon);
-    File pollDir  = (File)PrivilegedAccessor.getValue(pollerSerializer,
-                                                      "pollDir");
-    PsmInterpStateBean ub1 = new PsmInterpStateBean();
-    ub1.setLastResumableStateName("TestState");
-    PeerIdentity id = new MockPeerIdentity("10.1.2.3:8000");
-    pollerSerializer.savePollerInterpState(id, ub1);
-    PsmInterpStateBean ub2 = pollerSerializer.loadPollerInterpState(id);
-    assertEquals(ub1.getLastResumableStateName(),
-                 ub2.getLastResumableStateName());
-    pollerSerializer = new V3PollerSerializer(theDaemon, pollDir.getName());
-    PsmInterpStateBean ub3 = pollerSerializer.loadPollerInterpState(id);
-    assertEquals(ub1.getLastResumableStateName(),
-                 ub3.getLastResumableStateName());
   }
 
   public void testSaveAndLoadVoterUserData() throws Exception {
@@ -151,54 +134,39 @@ public class TestV3Serializer extends LockssTestCase {
     assertEqualVoterUserData(ud1, ud3);
   }
 
-  public void testSaveAndLoadVoterInterpState() throws Exception {
-    V3VoterSerializer voterSerializer = new V3VoterSerializer(theDaemon);
-    File pollDir = (File)PrivilegedAccessor.getValue(voterSerializer,
-                                                     "pollDir");
-    PsmInterpStateBean ub1 = new PsmInterpStateBean();
-    ub1.setLastResumableStateName("TestState");
-    voterSerializer.saveVoterInterpState(ub1);
-    PsmInterpStateBean ub2 = voterSerializer.loadVoterInterpState();
-    assertEquals(ub1.getLastResumableStateName(),
-                 ub2.getLastResumableStateName());
-    voterSerializer = new V3VoterSerializer(theDaemon, pollDir.getName());
-    PsmInterpStateBean ub3 = voterSerializer.loadVoterInterpState();
-    assertEquals(ub1.getLastResumableStateName(),
-                 ub3.getLastResumableStateName());
-  }
-
   public void testLoadInnerCircleStates() throws Exception {
     V3PollerSerializer pollerSerializer = new V3PollerSerializer(theDaemon);
     File pollDir = (File)PrivilegedAccessor.getValue(pollerSerializer,
                                                      "pollDir");
+
     ArrayList uds1 =
-      (ArrayList)ListUtil.list(makePollerUserData(new MockPeerIdentity("10.1.1.1:8000"),
+      (ArrayList)ListUtil.list(makePollerUserData("10.1.1.1:8000",
                                                   pollerSerializer),
-                               makePollerUserData(new MockPeerIdentity("10.1.1.2:8000"),
+                               makePollerUserData("10.1.1.2:8000",
                                                   pollerSerializer),
-                               makePollerUserData(new MockPeerIdentity("10.1.1.3:8000"),
+                               makePollerUserData("10.1.1.3:8000",
                                                   pollerSerializer),
-                               makePollerUserData(new MockPeerIdentity("10.1.1.4:8000"),
+                               makePollerUserData("10.1.1.4:8000",
                                                   pollerSerializer),
-                               makePollerUserData(new MockPeerIdentity("10.1.1.5:8000"),
+                               makePollerUserData("10.1.1.5:8000",
                                                   pollerSerializer));
 
     for (Iterator iter = uds1.iterator(); iter.hasNext(); ) {
-      pollerSerializer.savePollerUserData((PollerUserData)iter.next());
+      pollerSerializer.savePollerUserData((ParticipantUserData)iter.next());
     }
-    List uds2 = pollerSerializer.loadVoterStates();
+    Collection uds2 = pollerSerializer.loadVoterStates();
     assertEqualInnerCircles(uds1, uds2);
     pollerSerializer = new V3PollerSerializer(theDaemon, pollDir.getName());
-    List uds3 = pollerSerializer.loadVoterStates();
+    Collection uds3 = pollerSerializer.loadVoterStates();
     assertEqualInnerCircles(uds1, uds3);
   }
 
 
   private PollerStateBean makePollerStateBean(V3PollerSerializer serializer) {
-    PollerStateBean vsb = new PollerStateBean(serializer);
+    PollerStateBean vsb = new PollerStateBean();
     vsb.setAuId("testAu");
     vsb.setCachedUrlSet(new MockCachedUrlSet());
-    vsb.setDeadline(10000);
+    vsb.setDeadline(Deadline.in(10000));
     vsb.setHashAlgorithm("SHA1");
     vsb.setLastHashedBlock("http://www.example.com/file1.html");
     vsb.setPluginVersion("mock");
@@ -208,15 +176,15 @@ public class TestV3Serializer extends LockssTestCase {
     return vsb;
   }
 
-  private PollerUserData makePollerUserData(V3PollerSerializer serializer) {
-    return makePollerUserData(new MockPeerIdentity("127.0.0.1:8080"),
-                              serializer);
+  private ParticipantUserData makePollerUserData(V3PollerSerializer serializer) {
+    return makePollerUserData("127.0.0.1:8080", serializer);
   }
 
-  private PollerUserData makePollerUserData(PeerIdentity voterId,
+  private ParticipantUserData makePollerUserData(String voterId,
                                             V3PollerSerializer serializer) {
-    PollerUserData ud = new PollerUserData(serializer);
-    ud.setVoterId(voterId);
+    ParticipantUserData ud = new ParticipantUserData();
+    PeerIdentity id = idManager.findPeerIdentity(voterId);
+    ud.setVoterId(id);
     ud.setHashAlgorithm("SHA1");
     ud.setRepairTarget("http://www.example.com/file3.html");
     ud.setIntroEffortProof(ByteArray.makeRandomBytes(20));
@@ -241,9 +209,9 @@ public class TestV3Serializer extends LockssTestCase {
   }
 
   private VoterUserData makeVoterUserData(V3VoterSerializer serializer) {
-    VoterUserData ud = new VoterUserData(serializer);
+    VoterUserData ud = new VoterUserData();
     ud.setAuId("mockAu");
-    ud.setDeadline(10000L);
+    ud.setDeadline(Deadline.in(10000));
     ud.setHashAlgorithm("SHA1");
     ud.setIntroEffortProof(ByteArray.makeRandomBytes(20));
     ud.setNominees(ListUtil.list("10.1.0.1:8000", "10.1.0.2:8000"));
@@ -284,8 +252,8 @@ public class TestV3Serializer extends LockssTestCase {
     assertEquals(b1.allVotersReadyToTally(), b2.allVotersReadyToTally());
   }
 
-  private void assertEqualPollerUserData(PollerUserData d1,
-                                         PollerUserData d2) {
+  private void assertEqualPollerUserData(ParticipantUserData d1,
+                                         ParticipantUserData d2) {
     assertEquals(d1.getVoterId().getIdString(),
                  d2.getVoterId().getIdString());
     assertEquals(d1.getRepairTarget(), d2.getRepairTarget());
@@ -325,16 +293,35 @@ public class TestV3Serializer extends LockssTestCase {
     assertEquals(d1.getVoteBlocks().size(), d2.getVoteBlocks().size());
   }
 
-  private void assertEqualInnerCircles(List a, List b) {
+  private class PollerUserDataComparator implements Comparator {
+    // Simply sort by voterID
+    public int compare(Object a, Object b) {
+      String pidA = ((ParticipantUserData)a).getVoterId().getIdString();
+      String pidB = ((ParticipantUserData)b).getVoterId().getIdString();
+      return pidA.compareToIgnoreCase(pidB);
+    }
+  }
+
+  private void assertEqualInnerCircles(Collection a, Collection b) {
     if (a == null) {
       assertTrue(b == null);
       return;
     }
+    Comparator c = new PollerUserDataComparator();
+    ArrayList la = new ArrayList(a);
+    ArrayList lb = new ArrayList(b);
+    Collections.sort(la, c);
+    Collections.sort(lb, c);
     assertTrue(a.size() == b.size());
     for(int i = 0 ; i < a.size(); i++) {
-      PollerUserData ud1 = (PollerUserData)a.get(i);
-      PollerUserData ud2 = (PollerUserData)b.get(i);
+      ParticipantUserData ud1 = (ParticipantUserData)la.get(i);
+      ParticipantUserData ud2 = (ParticipantUserData)lb.get(i);
       assertEqualPollerUserData(ud1, ud2);
     }
+  }
+
+  public int compare(Object arg0, Object arg1) {
+    // TODO Auto-generated method stub
+    return 0;
   }
 }

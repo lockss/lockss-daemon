@@ -1,5 +1,5 @@
 /*
- * $Id: V1NamePoll.java,v 1.19 2005-10-07 23:46:50 smorabito Exp $
+ * $Id: V1NamePoll.java,v 1.20 2005-11-16 07:44:10 smorabito Exp $
  */
 
 /*
@@ -74,7 +74,7 @@ public class V1NamePoll extends V1Poll {
       return;
     }
     V1LcapMessage msg;
-    PeerIdentity local_id = idMgr.getLocalPeerIdentity(PollSpec.V1_PROTOCOL);
+    PeerIdentity local_id = idMgr.getLocalPeerIdentity(Poll.V1_PROTOCOL);
     long remainingTime = m_deadline.getRemainingTime();
     log.debug("castOurVote: " + local_id);
     try {
@@ -94,7 +94,7 @@ public class V1NamePoll extends V1Poll {
    *          the Message to handle
    */
   protected void receiveMessage(LcapMessage msg) {
-    if (msg.getPollVersion() != 1) {
+    if (msg.getProtocolVersion() != 1) {
       log.error("Not a V1 message: " + msg);
       return;
     }
@@ -279,7 +279,7 @@ public class V1NamePoll extends V1Poll {
     String base = cus.getUrl();
     ArchivalUnit au = cus.getArchivalUnit();
     CachedUrlSet newCus = au.makeCachedUrlSet(new RangeCachedUrlSetSpec(base, lwr, upr));
-    PollSpec spec = new PollSpec(newCus, lwr, upr, Poll.V1_NAME_POLL, PollSpec.V1_PROTOCOL);
+    PollSpec spec = new PollSpec(newCus, lwr, upr, Poll.V1_NAME_POLL);
     log.debug3("calling new name poll on: " + spec);
     Poll subPoll = m_pollmanager.callPoll(spec);
     if (subPoll != null) {
@@ -309,6 +309,21 @@ public class V1NamePoll extends V1Poll {
     NameVote v = new NameVote((NameVote) vote);
     v.agree = agree;
     return v;
+  }
+
+  /**
+   * Return the type of the poll, Poll.V1_NAME_POLL
+   */
+  public int getType() {
+    return Poll.V1_NAME_POLL;
+  }
+
+  public ArchivalUnit getAu() {
+    return m_tally.getArchivalUnit();
+  }
+
+  public String getStatusString() {
+    return m_tally.getStatusString();
   }
 
   static class NameVote extends Vote {

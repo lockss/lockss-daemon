@@ -1,5 +1,5 @@
 /*
- * $Id: LcapDatagramRouter.java,v 1.16 2005-10-11 05:46:14 tlipkis Exp $
+ * $Id: LcapDatagramRouter.java,v 1.17 2005-11-16 07:44:09 smorabito Exp $
  */
 
 /*
@@ -442,7 +442,7 @@ public class LcapDatagramRouter
   void sendNoOp() {
     try {
       V1LcapMessage noOp =
-        V1LcapMessage.makeNoOpMsg(idMgr.getLocalPeerIdentity(PollSpec.V1_PROTOCOL),
+        V1LcapMessage.makeNoOpMsg(idMgr.getLocalPeerIdentity(Poll.V1_PROTOCOL),
 				  ByteArray.makeRandomBytes(20));
       log.debug2("noop: " + noOp);
       send(noOp, null);

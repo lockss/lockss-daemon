@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.5 2005-10-11 05:50:29 tlipkis Exp $
+ * $Id: TestV3Poller.java,v 1.6 2005-11-16 07:44:08 smorabito Exp $
  */
 
 /*
@@ -224,20 +224,18 @@ public class TestV3Poller extends LockssTestCase {
 
   public void testInitHasherByteArrays() throws Exception {
     V3Poller v3Poller = makeInittedV3Poller("foo");
-    LinkedHashMap innerCircle = (LinkedHashMap) PrivilegedAccessor
-        .getValue(v3Poller, "theVoters");
+    Map innerCircle =
+      (Map)PrivilegedAccessor.getValue(v3Poller, "theParticipants");
     assertEquals(innerCircle.size(), voters.length);
-    byte[][] initBytes = (byte[][]) PrivilegedAccessor
-        .invokeMethod(v3Poller, "initHasherByteArrays");
+    byte[][] initBytes =
+      (byte[][])PrivilegedAccessor.invokeMethod(v3Poller, "initHasherByteArrays");
     assertEquals(initBytes.length, innerCircle.size());
     byte[][] compareBytes = new byte[innerCircle.size()][];
     int ix = 0;
     for (Iterator it = innerCircle.values().iterator(); it.hasNext();) {
-      PsmInterp interp = (PsmInterp) it.next();
-      PollerUserData proxy = (PollerUserData) interp.getUserData();
-
-      compareBytes[ix++] = ByteArray.concat(proxy.getPollerNonce(), proxy
-          .getVoterNonce());
+      ParticipantUserData proxy = (ParticipantUserData)it.next();
+      compareBytes[ix++] =
+        ByteArray.concat(proxy.getPollerNonce(), proxy.getVoterNonce());
     }
     for (int i = 0; i < initBytes.length; i++) {
       assertTrue(Arrays.equals(initBytes[i], compareBytes[i]));
@@ -246,11 +244,11 @@ public class TestV3Poller extends LockssTestCase {
 
   public void testInitMessageDigests() throws Exception {
     V3Poller v3Poller = makeInittedV3Poller("foo");
-    LinkedHashMap innerCircle = (LinkedHashMap) PrivilegedAccessor
-        .getValue(v3Poller, "theVoters");
+    Map innerCircle =
+      (Map)PrivilegedAccessor.getValue(v3Poller, "theParticipants");
     assertEquals(innerCircle.size(), voters.length);
-    MessageDigest[] digests = (MessageDigest[]) PrivilegedAccessor
-        .invokeMethod(v3Poller, "initHasherDigests");
+    MessageDigest[] digests =
+      (MessageDigest[])PrivilegedAccessor.invokeMethod(v3Poller, "initHasherDigests");
     assertEquals(digests.length, innerCircle.size());
     for (int i = 0; i < digests.length; i++) {
       assertEquals("SHA-1", digests[i].getAlgorithm());
@@ -259,17 +257,15 @@ public class TestV3Poller extends LockssTestCase {
 
   private MyMockV3Poller makeInittedV3Poller(String key) throws Exception {
     PollSpec ps = new MockPollSpec(testau, "http://www.test.org", null, null,
-                                   Poll.V1_CONTENT_POLL);
+                                   Poll.V3_POLL);
     MyMockV3Poller p = new MyMockV3Poller(ps, theDaemon, pollerId, key, 20000,
-                                          "SHA-1");
-    PrivilegedAccessor.invokeMethod(p, "constructInnerCircle");
-    LinkedHashMap innerCircle = (LinkedHashMap) PrivilegedAccessor
-        .getValue(p, "theVoters");
+                                          "SHA-1", voters);
+    p.constructInnerCircle(voters.length);
+    Map innerCircle = (Map)PrivilegedAccessor.getValue(p, "theParticipants");
     for (int ix = 0; ix < voters.length; ix++) {
       PeerIdentity pid = voters[ix];
-      PsmInterp interp = (PsmInterp) innerCircle.get(pid);
-      PollerUserData proxy = (PollerUserData) interp.getUserData();
-      proxy.setVoterNonce(voterNonces[ix]);
+      ParticipantUserData ud = (ParticipantUserData) innerCircle.get(pid);
+      ud.setVoterNonce(voterNonces[ix]);
     }
     return p;
   }
@@ -278,11 +274,14 @@ public class TestV3Poller extends LockssTestCase {
     // For testing:  Hashmap of voter IDs to V3LcapMessages.
     private Map sentMsgs = Collections.synchronizedMap(new HashMap());
     private Map semaphores = new HashMap();
+    private PeerIdentity[] mockVoters;
 
     MyMockV3Poller(PollSpec spec, LockssDaemon daemon, PeerIdentity id,
-               String pollkey, long duration, String hashAlg)
+               String pollkey, long duration, String hashAlg,
+               PeerIdentity[] voters)
         throws PollSerializerException {
       super(spec, daemon, id, pollkey, duration, hashAlg);
+      this.mockVoters = voters;
     }
 
     Collection getReferenceList() {

@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.34 2005-10-07 23:46:50 smorabito Exp $
+ * $Id: BasePlugin.java,v 1.35 2005-11-16 07:44:10 smorabito Exp $
  */
 
 /*
@@ -235,7 +235,7 @@ public abstract class BasePlugin
     }
     res.add(ConfigParamDescr.AU_CLOSED);
     res.add(ConfigParamDescr.PUB_DOWN);
-    res.add(ConfigParamDescr.POLL_VERSION);
+    res.add(ConfigParamDescr.PROTOCOL_VERSION);
     return res;
   }
 

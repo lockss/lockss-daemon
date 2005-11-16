@@ -1,5 +1,5 @@
 /*
- * $Id: PollerUserData.java,v 1.7 2005-10-17 07:48:25 tlipkis Exp $
+ * $Id: ParticipantUserData.java,v 1.1 2005-11-16 07:44:10 smorabito Exp $
  */
 
 /*
@@ -41,7 +41,7 @@ import java.util.*;
 /**
  * Persistent user data state object used by V3Poller state machine.
  */
-public class PollerUserData
+public class ParticipantUserData
   implements PsmInterp.Checkpointer, LockssSerializable {
 
   private PeerIdentity voterId;
@@ -51,46 +51,65 @@ public class PollerUserData
   private String target;
   private byte[] pollerNonce;
   private byte[] voterNonce;
-  // XXX: Effort proofs will not be byte arrays.
+  // XXX: Effort proofs will eventually not be byte arrays.
   private byte[] introEffortProof;
   private byte[] pollAckEffortProof;
   private byte[] remainingEffortProof;
   private byte[] repairEffortProof;
   private byte[] receiptEffortProof;
   private String errorMsg;
+  private boolean isVoteComplete = false;
+  private boolean isOuterCircle = false;
+  private PsmInterpStateBean psmState;
+  private int voteBlockIndex = 0;
 
   /** Transient non-serialized fields */
   private transient V3Poller poller;
-  private transient V3PollerSerializer serializer;
   private transient PollerStateBean pollState;
+  private transient PsmInterp psmInterp;
 
   private static Logger log = Logger.getLogger("PollerUserData");
 
-  /**
-   * Package-level constructor used for testing.
-   */
-  PollerUserData(V3PollerSerializer serializer) {
-    this.serializer = serializer;
-  }
+  protected ParticipantUserData() {}
 
   /**
    * Construct a new PollerUserData object.
    *
    * @param id
    * @param poller
-   * @param serializer
    */
-  public PollerUserData(PeerIdentity id, V3Poller poller,
-                        V3PollerSerializer serializer) {
+  public ParticipantUserData(PeerIdentity id, V3Poller poller) {
     this.voterId = id;
     this.poller = poller;
     this.pollState = poller.getPollerStateBean();
-    this.serializer = serializer;
+  }
+
+  public void isOuterCircle(boolean b) {
+    this.isOuterCircle = b;
+  }
+
+  public boolean isOuterCircle() {
+    return isOuterCircle;
+  }
+
+  public PsmInterp getPsmInterp() {
+    return psmInterp;
+  }
+
+  public void setPsmInterp(PsmInterp interp) {
+    this.psmInterp = interp;
+  }
+
+  public PsmInterpStateBean getPsmInterpState() {
+    return psmState;
+  }
+
+  public void setPsmInterpState(PsmInterpStateBean psmState) {
+    this.psmState = psmState;
   }
 
   public void setVoterId(PeerIdentity id) {
     this.voterId = id;
-    saveState();
   }
 
   public PeerIdentity getVoterId() {
@@ -99,7 +118,6 @@ public class PollerUserData
 
   public void setNominees(List l) {
     this.nominees = l;
-    saveState();
   }
 
   public List getNominees() {
@@ -116,7 +134,6 @@ public class PollerUserData
 
   public void setHashAlgorithm(String s) {
     this.hashAlgorithm = s;
-    saveState();
   }
 
   public String getHashAlgorithm() {
@@ -129,7 +146,6 @@ public class PollerUserData
 
   public void setPollerNonce(byte[] pollerNonce) {
     this.pollerNonce = pollerNonce;
-    saveState();
   }
 
   public byte[] getVoterNonce() {
@@ -138,12 +154,10 @@ public class PollerUserData
 
   public void setVoterNonce(byte[] voterNonce) {
     this.voterNonce = voterNonce;
-    saveState();
   }
 
   public void setIntroEffortProof(byte[] b) {
     this.introEffortProof = b;
-    saveState();
   }
 
   public byte[] getIntroEffortProof() {
@@ -152,7 +166,6 @@ public class PollerUserData
 
   public void setRemainingEffortProof(byte[] b) {
     this.remainingEffortProof = b;
-    saveState();
   }
 
   public byte[] getRemainingEffortProof() {
@@ -185,21 +198,30 @@ public class PollerUserData
 
   public void setVoteBlocks(VoteBlocks blocks) {
     voteBlocks = blocks;
-    saveState();
   }
 
   public VoteBlocks getVoteBlocks() {
     return voteBlocks;
   }
 
-  public VoteBlock getVoteBlock(int index)
-      throws VoteBlocks.NoSuchBlockException {
-    return voteBlocks.getVoteBlock(index);
+  public int getVoteBlockIndex() {
+    return voteBlockIndex;
+  }
+
+  public void setVoteBlockIndex(int i) {
+    this.voteBlockIndex = i;
+  }
+
+  /**
+   * Return the vote block iterator for this peer.
+   * @return the vote block iterator for this peer.
+   */
+  public ListIterator getVoteBlockIterator() {
+    return voteBlocks.listIterator();
   }
 
   public void setErrorMessage(String s) {
     this.errorMsg = s;
-    saveState();
   }
 
   public String getErrorMessage() {
@@ -219,6 +241,19 @@ public class PollerUserData
     return poller;
   }
 
+  /**
+   * Return true false this peer should be asked for another vote block.
+   *
+   * @return False if this peer should be asked for another vote block.
+   */
+  public boolean isVoteComplete() {
+    return isVoteComplete;
+  }
+
+  public void setVoteComplete(boolean b) {
+    this.isVoteComplete = b;
+  }
+
   /** Poller State delegate methods */
   public String getAuId() {
     return pollState.getAuId();
@@ -228,7 +263,7 @@ public class PollerUserData
     return pollState.getCachedUrlSet();
   }
 
-  public long getDeadline() {
+  public Deadline getDeadline() {
     return pollState.getDeadline();
   }
 
@@ -261,11 +296,14 @@ public class PollerUserData
     poller.sendMessageTo(msg, to);
   }
 
+  void removeParticipant() {
+    poller.removeParticipant(voterId);
+  }
+
   /*
    * Callbacks methods.
    */
   void nominatePeers(List peers) {
-    this.nominees = peers;
     poller.nominatePeers(getVoterId(), peers);
   }
 
@@ -286,17 +324,6 @@ public class PollerUserData
   /** State machine has entered resumable state; save state */
   public void checkpoint(PsmInterpStateBean resumeStateBean) {
     interpStateBean = resumeStateBean;
-    saveState();
-  }
-
-  /**
-   * Store the current V3VoterState
-   */
-  private void saveState() {
-    try {
-      serializer.savePollerUserData(this);
-    } catch (V3Serializer.PollSerializerException ex) {
-      log.error("Unable to save voter state for peer " + this.voterId, ex);
-    }
+//    poller.checkpointPollState();
   }
 }

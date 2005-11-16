@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBlockComparator.java,v 1.2 2005-09-07 03:06:29 smorabito Exp $
+ * $Id: VoteBlockComparator.java,v 1.3 2005-11-16 07:44:09 smorabito Exp $
  */
 
 /*
@@ -55,8 +55,8 @@ public class VoteBlockComparator implements Comparator {
 
     // Unfiltered lengths are equal, compare file names
 
-    String fn1 = ((VoteBlock)o1).getFileName();
-    String fn2 = ((VoteBlock)o2).getFileName();
+    String fn1 = ((VoteBlock)o1).getUrl();
+    String fn2 = ((VoteBlock)o2).getUrl();
 
     return fn1.compareTo(fn2);
   }

@@ -1,5 +1,5 @@
 /*
-* $Id: MockPollManager.java,v 1.18 2005-10-11 05:52:05 tlipkis Exp $
+* $Id: MockPollManager.java,v 1.19 2005-11-16 07:44:08 smorabito Exp $
  */
 
 /*
@@ -70,8 +70,8 @@ public class MockPollManager extends PollManager {
 
   public Poll callPoll(PollSpec pollspec) {
     Poll ret = null;
-    theLog.debug("MockPollManager: call V" + pollspec.getPollVersion() + " poll");
-    switch (pollspec.getPollVersion()) {
+    theLog.debug("MockPollManager: call V" + pollspec.getProtocolVersion() + " poll");
+    switch (pollspec.getProtocolVersion()) {
     case 1:
       try {
 	sendV1PollRequest(pollspec);
@@ -82,7 +82,7 @@ public class MockPollManager extends PollManager {
       }
       break;
     default:
-      theLog.error("No support for V" + pollspec.getPollVersion() + " yet");
+      theLog.error("No support for V" + pollspec.getProtocolVersion() + " yet");
       break;
     }
     theLog.debug("MockPollManager: call " +
@@ -107,7 +107,7 @@ public class MockPollManager extends PollManager {
     }
   }
 
-  public boolean isPollRunning(int opcode, PollSpec ps) {
+  public boolean isPollRunning(PollSpec ps) {
     boolean ret = thePolls.get(ps.getUrl()) != null;
     theLog.debug("MockPollManager: isPollRunning(" + ps.getUrl() + ") " + ret);
     return ret;

@@ -1,5 +1,5 @@
 /*
- * $Id: V1Poll.java,v 1.29 2005-10-11 05:45:39 tlipkis Exp $
+ * $Id: V1Poll.java,v 1.30 2005-11-16 07:44:10 smorabito Exp $
  */
 
 /*
@@ -277,7 +277,7 @@ public abstract class V1Poll extends BasePoll {
 				       verifier,
 				       V1LcapMessage.VERIFY_POLL_REQ,
 				       duration,
-				       idMgr.getLocalPeerIdentity(PollSpec.V1_PROTOCOL));
+				       idMgr.getLocalPeerIdentity(Poll.V1_PROTOCOL));
 
 	PeerIdentity originatorID = vote.getVoterIdentity();
 	log.debug2("sending our verification request to " +
@@ -335,7 +335,7 @@ public abstract class V1Poll extends BasePoll {
       return;
     }
     V1LcapMessage msg;
-    PeerIdentity local_id = idMgr.getLocalPeerIdentity(PollSpec.V1_PROTOCOL);
+    PeerIdentity local_id = idMgr.getLocalPeerIdentity(Poll.V1_PROTOCOL);
     long remainingTime = m_deadline.getRemainingTime();
     try {
       msg = V1LcapMessage.makeReplyMsg(m_msg, m_hash, m_verifier, null,
@@ -351,7 +351,7 @@ public abstract class V1Poll extends BasePoll {
   /**
    * start the poll.
    */
-  protected void startPoll() {
+  public void startPoll() {
     if (m_pollstate != PS_INITING)
       return;
     m_pollstate = PS_WAIT_HASH;
@@ -433,7 +433,7 @@ public abstract class V1Poll extends BasePoll {
    * finish the poll once the deadline has expired. we update our poll record
    * and prevent any more activity in this poll.
    */
-  protected void stopPoll() {
+  public void stopPoll() {
     if(isErrorState()) {
       log.debug("poll stopped with error: " + ERROR_STRINGS[ -m_pollstate]);
     }
@@ -567,7 +567,7 @@ public abstract class V1Poll extends BasePoll {
    * @return the poll version
    */
   public int getVersion() {
-    return m_pollspec.getPollVersion();
+    return m_pollspec.getProtocolVersion();
   }
 
   /**

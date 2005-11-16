@@ -1,5 +1,5 @@
 /*
-* $Id: PsmInterp.java,v 1.12 2005-10-17 07:49:03 tlipkis Exp $
+* $Id: PsmInterp.java,v 1.13 2005-11-16 07:44:09 smorabito Exp $
  */
 
 /*
@@ -80,11 +80,6 @@ public class PsmInterp {
    * before processing events. */
   public synchronized void start() throws PsmException {
     init();
-    // XXX hack remove this
-    if (hackResumeBean != null) {
-      resume(hackResumeBean);
-      return;
-    }
     stateBean = new PsmInterpStateBean();
     enterState(machine.getInitialState(), PsmEvents.Start, maxChainedEvents);
   }
@@ -108,14 +103,6 @@ public class PsmInterp {
       throw new PsmException.IllegalResumptionState("Not resumable: " + name);
     }
     enterState(state, PsmEvents.Resume, maxChainedEvents);
-  }
-
-  private PsmInterpStateBean hackResumeBean = null;
-  /** Temporary hack until V3Poller changed to call restore()
-   * @deprecated
-   */
-  public void setResumeStateHack(PsmInterpStateBean resumeStateBean) {
-    hackResumeBean = resumeStateBean;
   }
 
   private void init() {
@@ -296,7 +283,7 @@ public class PsmInterp {
 
     /** Send a Timeout event iff no events have been processed since the
      * timer was set.  If the event is not handled, log and ignore it */
-    void timerExpired() { 
+    void timerExpired() {
       synchronized (PsmInterp.this) {
 	timer = null;
 	if (timingEvent == curEventNum) {

@@ -13,9 +13,9 @@ public interface VoteBlocks extends LockssSerializable {
 
   public void addVoteBlock(VoteBlock b);
 
-  public VoteBlock getVoteBlock(int i) throws NoSuchBlockException;
+  public ListIterator listIterator();
 
-  public Iterator iterator();
+  public VoteBlock getVoteBlock(int i);
 
   public int size();
 

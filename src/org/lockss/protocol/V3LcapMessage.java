@@ -1,5 +1,5 @@
 /*
- * $Id: V3LcapMessage.java,v 1.12 2005-10-19 20:13:05 troberts Exp $
+ * $Id: V3LcapMessage.java,v 1.13 2005-11-16 07:44:09 smorabito Exp $
  */
 
 /*
@@ -103,7 +103,7 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
   public V3LcapMessage() {
     m_props = new EncodedProperty();
     m_voteBlocks = new MemoryVoteBlocks();
-    m_pollVersion = PollSpec.V3_PROTOCOL;
+    m_pollProtocol = Poll.V3_PROTOCOL;
   }
 
   public V3LcapMessage(int opcode, String key, PeerIdentity origin,
@@ -163,13 +163,13 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
       }
     }
     // read in the poll version byte and decode
-    m_pollVersion = -1;
+    m_pollProtocol = -1;
     byte ver = dis.readByte();
-    for (int i = 0; i < pollVersionByte.length; i++) {
-      if (pollVersionByte[i] == ver)
-        m_pollVersion = i + 1;
+    for (int i = 0; i < protocolByte.length; i++) {
+      if (protocolByte[i] == ver)
+        m_pollProtocol = i + 1;
     }
-    if (m_pollVersion <= 0) {
+    if (m_pollProtocol <= 0) {
       throw new ProtocolException("Unsupported inbound poll version: " + ver);
     }
     int prop_len = dis.readInt();
@@ -246,9 +246,9 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
 
   public byte[] encodeMsg() throws IOException {
     storeProps();
-    if (!isPollVersionSupported(m_pollVersion))
+    if (!isPollVersionSupported(m_pollProtocol))
       throw new ProtocolException("Unsupported outbound poll version: " +
-                                  m_pollVersion);
+                                  m_pollProtocol);
     byte[] prop_bytes = m_props.encode();
     byte[] hash_bytes = computeHash(prop_bytes);
     int enc_len = prop_bytes.length + hash_bytes.length + 6; // msg header is 6
@@ -256,7 +256,7 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     ByteArrayOutputStream baos = new ByteArrayOutputStream(enc_len);
     DataOutputStream dos = new DataOutputStream(baos);
     dos.write(signature);
-    dos.write(pollVersionByte[m_pollVersion - 1]);
+    dos.write(protocolByte[m_pollProtocol - 1]);
     dos.writeInt(prop_bytes.length);
     dos.write(hash_bytes);
     dos.write(prop_bytes);
@@ -336,7 +336,7 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     while (ix.hasNext()) {
       VoteBlock vb = (VoteBlock) ix.next();
       EncodedProperty vbProps = new EncodedProperty();
-      vbProps.setProperty("fn", vb.getFileName());
+      vbProps.setProperty("fn", vb.getUrl());
       vbProps.putInt("vt", vb.getVoteType());
       vbProps.putLong("fl", vb.getFilteredLength());
       vbProps.putLong("fo", vb.getFilteredOffset());
@@ -446,8 +446,8 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     m_voteBlocks.addVoteBlock(vb);
   }
 
-  public Iterator getVoteBlockIterator() {
-    return m_voteBlocks.iterator();
+  public ListIterator getVoteBlockIterator() {
+    return m_voteBlocks.listIterator();
   }
 
   public VoteBlocks getVoteBlocks() {
@@ -480,7 +480,7 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     msg.m_opcode = MSG_NO_OP;
     msg.m_pollerNonce = pollerNonce;
     msg.m_voterNonce = voterNonce;
-    msg.m_pollVersion = PollSpec.V1_PROTOCOL;
+    msg.m_pollProtocol = Poll.V1_PROTOCOL;
     return msg;
   }
 
@@ -507,10 +507,10 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
   static public V3LcapMessage makeRequestMsg(PollSpec ps, String key,
                                              byte[] pollerNonce,
                                              byte[] voterNonce, int opcode,
-                                             long deadline,
+                                             Deadline deadline,
                                              PeerIdentity origin) {
     return V3LcapMessage.makeRequestMsg(ps.getAuId(), key,
-                                        ps.getPollVersion(),
+                                        ps.getProtocolVersion(),
                                         ps.getPluginVersion(), ps.getUrl(),
                                         pollerNonce, voterNonce, opcode,
                                         deadline, origin);
@@ -521,10 +521,10 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
                                              String pluginVersion, String url,
                                              byte[] pollerNonce,
                                              byte[] voterNonce,
-                                             int opcode, long deadline,
+                                             int opcode, Deadline deadline,
                                              PeerIdentity origin) {
     long start = TimeBase.nowMs();
-    long stop = deadline;
+    long stop = deadline.getExpirationTime();
     V3LcapMessage msg = new V3LcapMessage(opcode, key, origin, url, start, stop,
                                           pollerNonce, voterNonce);
     msg.setKey(key);
@@ -558,7 +558,7 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
       sb.append(String.valueOf(B64Code.encode(m_voterNonce)));
       sb.append(" B:");
       sb.append(String.valueOf(m_voteBlocks.size()));
-      sb.append(" ver " + m_pollVersion);
+      sb.append(" ver " + m_pollProtocol);
     }
     sb.append("]");
     return sb.toString();

@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3LcapMessage.java,v 1.9 2005-10-11 05:50:53 tlipkis Exp $
+ * $Id: TestV3LcapMessage.java,v 1.10 2005-11-16 07:44:08 smorabito Exp $
  */
 
 /*
@@ -158,7 +158,7 @@ public class TestV3LcapMessage extends LockssTestCase {
   public void testRequestMessageCreation() throws Exception {
     PollSpec spec =
       new MockPollSpec("ArchivalID_2", "http://foo.com/", null, null,
-                       "Plug42", -1);
+                       "Plug42", Poll.V3_POLL);
     Deadline deadline = Deadline.in(10000);
     V3LcapMessage reqMsg =
       V3LcapMessage.makeRequestMsg(spec,
@@ -166,15 +166,15 @@ public class TestV3LcapMessage extends LockssTestCase {
 				   m_testBytes,
                                    m_testBytes,
 				   V3LcapMessage.MSG_REPAIR_REQ,
-				   deadline.getExpirationTime(),
+				   deadline,
 				   m_testID);
 
     for (Iterator ix = m_testVoteBlocks.iterator(); ix.hasNext(); ) {
       reqMsg.addVoteBlock((VoteBlock)ix.next());
     }
 
-    assertEquals(1, spec.getPollVersion());
-    assertEquals(1, reqMsg.getPollVersion());
+    assertEquals(3, spec.getProtocolVersion());
+    assertEquals(3, reqMsg.getProtocolVersion());
     assertEquals("Plug42", reqMsg.getPluginVersion());
     assertTrue(m_testID == reqMsg.getOriginatorId());
     assertEquals(V3LcapMessage.MSG_REPAIR_REQ, reqMsg.getOpcode());
@@ -267,7 +267,7 @@ public class TestV3LcapMessage extends LockssTestCase {
     assertEquals(a.getOpcode(), b.getOpcode());
     assertEquals(a.getTargetUrl(), b.getTargetUrl());
     assertEquals(a.getArchivalId(), b.getArchivalId());
-    assertEquals(a.getPollVersion(), b.getPollVersion());
+    assertEquals(a.getProtocolVersion(), b.getProtocolVersion());
     assertEquals(a.getPollerNonce(), b.getPollerNonce());
     assertEquals(a.getVoterNonce(), b.getVoterNonce());
     assertEquals(a.getPluginVersion(), b.getPluginVersion());

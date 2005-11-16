@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.7 2005-11-08 19:24:23 smorabito Exp $
+ * $Id: V3Voter.java,v 1.8 2005-11-16 07:44:09 smorabito Exp $
  */
 
 /*
@@ -42,6 +42,7 @@ import org.lockss.daemon.*;
 import org.lockss.hasher.*;
 import org.lockss.plugin.*;
 import org.lockss.poller.*;
+import org.lockss.poller.v3.V3Serializer.*;
 import org.lockss.protocol.*;
 import org.lockss.protocol.psm.*;
 import org.lockss.util.*;
@@ -68,6 +69,7 @@ public class V3Voter extends BasePoll {
 
   private PsmInterp stateMachine;
   private VoterUserData voterUserData;
+  private LockssRandom theRandom = new LockssRandom();
   private LockssDaemon theDaemon;
   private V3VoterSerializer pollSerializer;
   private PollManager pollManager;
@@ -75,32 +77,27 @@ public class V3Voter extends BasePoll {
   private boolean continuedPoll = false;
   private int nomineeCount;
 
-  private PollTally tally; // XXX: Refactor
-
-  private static final LockssRandom theRandom = new LockssRandom();
-
   private static final Logger log = Logger.getLogger("V3Voter");
 
   /**
-   * Create a new V3Voter.
+   * Create a new V3Voter to participate in a poll.
    */
   public V3Voter(PollSpec spec, LockssDaemon daemon, PeerIdentity orig,
                  String key, byte[] introEffortProof, byte[] pollerNonce,
                  long duration, String hashAlg)
       throws V3Serializer.PollSerializerException {
     log.debug3("Creating V3 Voter for poll: " + key);
+
     this.theDaemon = daemon;
-    this.idManager = theDaemon.getIdentityManager();
     pollSerializer = new V3VoterSerializer(theDaemon);
     this.voterUserData = new VoterUserData(spec, this, orig, key,
                                            duration, hashAlg,
                                            pollerNonce,
                                            makeVoterNonce(),
-                                           introEffortProof,
-                                           pollSerializer);
+                                           introEffortProof);
+    this.idManager = theDaemon.getIdentityManager();
+
     this.pollManager = daemon.getPollManager();
-    this.tally = new MockTally(Poll.V3_POLL, TimeBase.nowMs(), duration,
-                               0, 0, 0, 0, 0, hashAlg, this);
 
     int min = Configuration.getIntParam(PARAM_MIN_NOMINATION_SIZE,
                                         DEFAULT_MIN_NOMINATION_SIZE);
@@ -118,7 +115,8 @@ public class V3Voter extends BasePoll {
       nomineeCount = min + r;
     }
     log.debug2("Will choose " + nomineeCount +
-               " outer circle nominees to send to poller");
+    " outer circle nominees to send to poller");
+    stateMachine = makeStateMachine(voterUserData);
   }
 
   /**
@@ -126,9 +124,9 @@ public class V3Voter extends BasePoll {
    */
   public V3Voter(LockssDaemon daemon, String pollDir)
       throws V3Serializer.PollSerializerException {
-    pollSerializer = new V3VoterSerializer(daemon, pollDir);
-    this.voterUserData = pollSerializer.loadVoterUserData();
     this.theDaemon = daemon;
+    this.pollSerializer = new V3VoterSerializer(theDaemon, pollDir);
+    this.voterUserData = pollSerializer.loadVoterUserData();
     this.pollManager = daemon.getPollManager();
     this.continuedPoll = true;
     // Restore transient state.
@@ -138,48 +136,65 @@ public class V3Voter extends BasePoll {
       throw new NullPointerException("CUS for AU " + voterUserData.getAuId() +
                                      " is null!");
     }
+    // Restore transient state
     voterUserData.setCachedUrlSet(cus);
-    voterUserData.setSerializer(pollSerializer);
+    voterUserData.setPollSpec(new PollSpec(cus, Poll.V3_POLL));
     voterUserData.setVoter(this);
+
+    stateMachine = makeStateMachine(voterUserData);
+  }
+
+  private PsmInterp makeStateMachine(final VoterUserData ud) {
+    PsmMachine machine =
+      VoterStateMachineFactory.getMachine(getVoterActionsClass());
+    PsmInterp interp = new PsmInterp(machine, ud);
+    interp.setCheckpointer(new PsmInterp.Checkpointer() {
+      public void checkpoint(PsmInterpStateBean resumeStateBean) {
+        voterUserData.setPsmState(resumeStateBean);
+        try {
+          checkpointPoll();
+        } catch (PollSerializerException ex) {
+
+        }
+      }
+    });
+
+    return interp;
   }
 
   public void startPoll() {
     log.debug("Starting poll " + voterUserData.getPollKey());
-    PsmMachine machine = VoterStateMachineFactory.
-      getMachine(getVoterActionsClass());
-    stateMachine = new PsmInterp(machine, voterUserData);
-    stateMachine.setCheckpointer(voterUserData);
+    TimerQueue.schedule(voterUserData.getDeadline(),
+                        new PollTimerCallback(), this);
     if (continuedPoll) {
-      // XXX get interp state from voter state
-      PsmInterpStateBean resumeState = null;
-//       try {
-// 	// XXX
-// 	resumeState = pollSerializer.loadVoterInterpState();
-//       } catch (V3Serializer.PollSerializerException ex) {
-//         log.error("Unable to restore poll state!");
-//         stopPoll();
-//         return;
-//       }
       try {
-	stateMachine.resume(resumeState);
+	stateMachine.resume(voterUserData.getPsmState());
       } catch (PsmException e) {
-	log.warning("State machine error", e);
+	log.warning("Error resuming poll.", e);
+	abortPoll();
       }
     } else {
       try {
 	stateMachine.start();
       } catch (PsmException e) {
-	log.warning("State machine error", e);
+	log.warning("Error starting poll.", e);
+	abortPoll();
       }
     }
   }
 
   public void stopPoll() {
-    log.debug("Stopping poll " + voterUserData.getPollKey());
-    // XXX: Notify state machine to stop.
+    // XXX: Set proper status string (Complete / Sent Repair / ?)
+    voterUserData.setStatusString("Complete");
     pollSerializer.closePoll();
+    pollManager.closeThePoll(voterUserData.getPollKey());
+    log.debug2("Closed poll " + voterUserData.getPollKey());
   }
 
+  private void abortPoll() {
+    stopPoll();
+    voterUserData.setStatusString("Error");
+  }
 
   /**
    * Generate a random nonce.
@@ -209,23 +224,13 @@ public class V3Voter extends BasePoll {
    */
   public void receiveMessage(LcapMessage message) {
     V3LcapMessage msg = (V3LcapMessage)message;
-    int opcode = msg.getOpcode();
-    switch(opcode) {
-    case V3LcapMessage.MSG_POLL: // we won't actually see these, but for completeness...
-    case V3LcapMessage.MSG_POLL_PROOF:
-    case V3LcapMessage.MSG_VOTE_REQ:
-    case V3LcapMessage.MSG_REPAIR_REQ:
-    case V3LcapMessage.MSG_EVALUATION_RECEIPT:
-      PsmMsgEvent evt = V3Events.fromMessage(msg);
-      try {
-	stateMachine.handleEvent(evt);
-      } catch (PsmException e) {
-	log.warning("State machine error", e);
-      }
-      return;
-    default:
-      log.debug2("Ignoring message: " + msg);
-      return;
+    PeerIdentity sender = msg.getOriginatorId();
+    PsmMsgEvent evt = V3Events.fromMessage(msg);
+    try {
+      stateMachine.handleEvent(evt);
+    } catch (PsmException e) {
+      log.warning("State machine error", e);
+      abortPoll();
     }
   }
 
@@ -233,9 +238,8 @@ public class V3Voter extends BasePoll {
    * Generate a list of outer circle nominees.
    */
   public void nominatePeers() {
-    // XXX:  'allPeers' must contain only peers that have agreed with
-    //       us in the past for this au!  Change this signature to:
-    //       getTcpPeerIdentities(ArchivalUnit au);
+    // XXX:  'allPeers' should probably contain only peers that have agreed with
+    //       us in the past for this au.
     Collection allPeers = idManager.getTcpPeerIdentities();
     allPeers.remove(voterUserData.getPollerId()); // Never nominate the poller
     if (nomineeCount <= allPeers.size()) {
@@ -290,16 +294,13 @@ public class V3Voter extends BasePoll {
                                                 initHasherByteArrays(),
                                                 new BlockCompleteHandler());
     HashService hashService = theDaemon.getHashService();
-    return hashService.scheduleHash(hasher,
-                                    Deadline.at(voterUserData.getDeadline()),
+    return hashService.scheduleHash(hasher, voterUserData.getDeadline(),
                                     new HashingCompleteCallback(), null);
   }
 
   /**
    * Called by the HashService callback when hashing for this CU is
    * complete.
-   *
-   * XXX:  Multi-message voting TBD.
    */
   public void hashComplete() {
     log.debug("Hashing complete for poll " + voterUserData.getPollKey());
@@ -314,6 +315,7 @@ public class V3Voter extends BasePoll {
       }
     } catch (PsmException e) {
       log.warning("State machine error", e);
+      abortPoll();
     }
   }
 
@@ -342,20 +344,19 @@ public class V3Voter extends BasePoll {
   }
 
   public long getCreateTime() {
-    // TODO Auto-generated method stub
-    return 0;
+    return voterUserData.getCreateTime();
   }
 
   public PeerIdentity getCallerID() {
-    // TODO Auto-generated method stub
-    return null;
+    return voterUserData.getPollerId();
   }
 
+  // Not used by V3.
   protected boolean isErrorState() {
-    // TODO Auto-generated method stub
     return false;
   }
 
+  // Not used by V3.
   public boolean isMyPoll() {
     // Always return false
     return false;
@@ -382,11 +383,23 @@ public class V3Voter extends BasePoll {
   }
 
   public Deadline getDeadline() {
-    return Deadline.at(voterUserData.getDeadline());
+    return voterUserData.getDeadline();
+  }
+
+  public long getDuration() {
+    return voterUserData.getDuration();
+  }
+
+  public byte[] getPollerNonce() {
+    return voterUserData.getPollerNonce();
+  }
+
+  public byte[] getVoterNonce() {
+    return voterUserData.getVoterNonce();
   }
 
   public PollTally getVoteTally() {
-    return tally;
+    throw new UnsupportedOperationException("V3Voter does not have a tally.");
   }
 
   private class HashingCompleteCallback implements HashService.Callback {
@@ -401,7 +414,7 @@ public class V3Voter extends BasePoll {
         hashComplete();
       } else {
         log.warning("Hash failed : " + e.getMessage(), e);
-        stopPoll();
+        abortPoll();
       }
     }
   }
@@ -412,72 +425,39 @@ public class V3Voter extends BasePoll {
     }
   }
 
-  // XXX - only used as a stepping stone to get V3Voter working properly with
-  // the poll manager.  This should be refactored away in daemon 1.13.
-  private static class MockTally extends PollTally {
+  public int getType() {
+    return Poll.V3_POLL;
+  }
 
-    private BasePoll poll;
+  public String getStatusString() {
+    return voterUserData.getStatusString();
+  }
 
-    public MockTally(int type, long startTime, long duration,
-                     int numAgree, int numDisagree, int wtAgree, int wtDisagree,
-                     int quorum, String hashAlgorithm, V3Voter poll) {
-      super(type, startTime, duration, numAgree, numDisagree,
-            wtAgree, wtDisagree, quorum, hashAlgorithm);
-      this.poll = poll;
+  public ArchivalUnit getAu() {
+    return voterUserData.getCachedUrlSet().getArchivalUnit();
+  }
+
+  public PeerIdentity getPollerId() {
+    return voterUserData.getPollerId();
+  }
+
+  /**
+   * Checkpoint the current state of the voter.
+   * @throws PollSerializerException
+   */
+  private void checkpointPoll() throws PollSerializerException {
+    pollSerializer.saveVoterUserData(voterUserData);
+  }
+
+  private class PollTimerCallback implements TimerQueue.Callback {
+    /**
+     * Called when the timer for this poll expires.
+     *
+     * @param cookie data supplied by caller to schedule()
+     */
+    public void timerExpired(Object cookie) {
+      stopPoll();
     }
-
-    public int getErr() {
-      return 0;
-    }
-
-    public String getErrString() {
-      return "N/A";
-    }
-
-    public String getStatusString() {
-      return "N/A";
-    }
-
-    public BasePoll getPoll() {
-      return poll;
-    }
-
-    public PollSpec getPollSpec() {
-      return poll.getPollSpec();
-    }
-
-    public void tallyVotes() {
-      // do nothing
-    }
-
-    public boolean stateIsActive() {
-      return false;
-    }
-
-    public boolean stateIsFinished() {
-      return false;
-    }
-
-    public boolean stateIsSuspended() {
-      return false;
-    }
-
-    public void setStateSuspended() {
-      // do nothing
-    }
-
-    public void replayVoteCheck(Vote vote, Deadline deadline) {
-      // do nothing
-    }
-
-    public void adjustReputation(PeerIdentity voterID, int repDelta) {
-      // do nothing
-    }
-
-    public int getTallyResult() {
-      return 0;
-    }
-
   }
 
 }

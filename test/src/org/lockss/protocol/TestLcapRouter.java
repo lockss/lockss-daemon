@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapRouter.java,v 1.18 2005-09-07 03:06:29 smorabito Exp $
+ * $Id: TestLcapRouter.java,v 1.19 2005-11-16 07:44:08 smorabito Exp $
  */
 
 /*
@@ -92,7 +92,7 @@ public class TestLcapRouter extends LockssTestCase {
     assertEquals(a.getOpcode(), b.getOpcode());
     assertEquals(a.getTargetUrl(), b.getTargetUrl());
     assertEquals(a.getArchivalId(), b.getArchivalId());
-    assertEquals(a.getPollVersion(), b.getPollVersion());
+    assertEquals(a.getProtocolVersion(), b.getProtocolVersion());
     assertEquals(a.getPollerNonce(), b.getPollerNonce());
     assertEquals(a.getVoterNonce(), b.getVoterNonce());
     assertEquals(a.getPluginVersion(), b.getPluginVersion());

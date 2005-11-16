@@ -1,5 +1,5 @@
 /*
- * $Id: TestV1LcapMessage.java,v 1.4 2005-10-07 23:46:45 smorabito Exp $
+ * $Id: TestV1LcapMessage.java,v 1.5 2005-11-16 07:44:08 smorabito Exp $
  */
 
 /*
@@ -227,8 +227,8 @@ public class TestV1LcapMessage extends LockssTestCase {
 					   V1LcapMessage.CONTENT_POLL_REQ,
 					   100000,
 					   testID);
-    assertEquals(spec.getPollVersion(), 1);
-    assertEquals(1, req_msg.getPollVersion());
+    assertEquals(spec.getProtocolVersion(), 1);
+    assertEquals(1, req_msg.getProtocolVersion());
     assertEquals("Plug42", req_msg.getPluginVersion());
     assertTrue(testID == req_msg.m_originatorID);
     assertEquals(V1LcapMessage.CONTENT_POLL_REQ, req_msg.m_opcode);

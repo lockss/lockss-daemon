@@ -1,5 +1,5 @@
 /*
- * $Id: BlockTally.java,v 1.4 2005-10-11 05:45:39 tlipkis Exp $
+ * $Id: BlockTally.java,v 1.5 2005-11-16 07:44:10 smorabito Exp $
  */
 
 /*
@@ -41,83 +41,61 @@ import org.lockss.util.*;
 /**
  * Representation of the tally for an individual vote block.
  */
-public class BlockTally extends PollTally {
-  public static final int RESULT_NEED_MORE_BLOCKS = 10;
+public class BlockTally {
 
-  private List agreeVoters;
-  private List disagreeVoters;
-  private List needBlocksFrom;
+  public static final int RESULT_HASHING = 0;
+  public static final int RESULT_NOQUORUM = 1;
+  public static final int RESULT_TOO_CLOSE = 2;
+  public static final int RESULT_LOST = 3;
+  public static final int RESULT_LOST_EXTRA_BLOCK = 4;
+  public static final int RESULT_LOST_MISSING_BLOCK = 5;
+  public static final int RESULT_WON = 6;
+  public static final int RESULT_REPAIRED = 7;
 
-  private V3Poller poll;
+  // List of voters with whom we agree
+  private List agreeVoters = new ArrayList();
+  // List of voters with whom we disagree
+  private List disagreeVoters = new ArrayList();
+  // List of voters who we believe have an extra block.
+  private List extraBlockVoters = new ArrayList();
+  // List of voters who we believe are missing a block that we have.
+  private List missingBlockVoters = new ArrayList();
 
-  public BlockTally(V3Poller owner, long startTime, long duration,
-                    int wtAgree, int wtDisagree, int quorum,
-                    String hashAlgorithm) {
-    super(Poll.V3_POLL, startTime, duration, 0, 0, wtAgree, wtDisagree,
-          quorum, hashAlgorithm);
-    this.poll = owner;
-    this.pollSpec = owner.getPollSpec();
-    this.needBlocksFrom = new ArrayList();
-  }
+  private int result;
+  private int quorum;
 
-  // XXX: Refactor Tally into Status and Tally objects.
-  public int getErr() {
-    return 0;
-  }
-
-  // XXX: Refactor Tally into Status and Tally objects.
-  public String getErrString() {
-    return "N/A";
+  public BlockTally(int quorum) {
+    this.reset();
   }
 
   public String getStatusString() {
-    // TODO Refactor
     switch (result) {
-    case RESULT_ERROR:
-      return getErrString();
+    case RESULT_HASHING:
+      return "Hashing";
     case RESULT_NOQUORUM:
       return "No Quorum";
-    case RESULT_UNTRUSTED:
-      return "Untrusted Peers";
     case RESULT_TOO_CLOSE:
       return "Too Close";
-    case RESULT_WON:
-      if(replayDeadline != null) {
-        return "Repaired";
-      }
-      return "Won";
     case RESULT_LOST:
       return "Lost";
-    case RESULT_UNVERIFIED:
-      return "Unverified";
-    case RESULT_VERIFIED:
-      return "Verified";
-    case RESULT_DISOWNED:
-      return "Disowned";
-    case RESULT_NEED_MORE_BLOCKS:
-      return "Need More Blocks";
+    case RESULT_LOST_EXTRA_BLOCK:
+      return "Lost - Extra Block";
+    case RESULT_LOST_MISSING_BLOCK:
+      return "Lost - Missing Block";
+    case RESULT_WON:
+      return "Won";
+    case RESULT_REPAIRED:
+      return "Repaired";
     default:
-      return "Active";
+      return "Unknown";
     }
   }
 
-  public BasePoll getPoll() {
-    return poll;
-  }
-
-  public void addNeedBlocksFromPeer(PeerIdentity id) {
-    this.needBlocksFrom.add(id);
-  }
-
-  // XXX: Margins!
   public void tallyVotes() {
     int agree = agreeVoters.size();
     int disagree = disagreeVoters.size();
-
-    if (needBlocksFrom.size() > 0) {
-      result = RESULT_NEED_MORE_BLOCKS;
-      return;
-    }
+    int extraBlocks = extraBlockVoters.size();
+    int missingBlocks = missingBlockVoters.size();
 
     if (agree + disagree < quorum) {
       result = RESULT_NOQUORUM;
@@ -125,67 +103,59 @@ public class BlockTally extends PollTally {
     else if (agree > disagree) {
       result = RESULT_WON;
     }
+    // XXX: Margins!
     else if (agree < disagree) {
-      result = RESULT_LOST;
+      if (extraBlocks > quorum) {
+        result = RESULT_LOST_EXTRA_BLOCK;
+      } else if (missingBlocks > quorum) {
+        result = RESULT_LOST_MISSING_BLOCK;
+      } else {
+        result = RESULT_LOST;
+      }
     }
-  }
-
-  public boolean stateIsActive() {
-    return (result == RESULT_POLLING);
-  }
-
-  public boolean stateIsFinished() {
-    return (result != RESULT_POLLING);
-  }
-
-  public boolean stateIsSuspended() {
-    // TODO Auto-generated method stub
-    return false;
-  }
-
-  public void setStateSuspended() {
-    // TODO Auto-generated method stub
-  }
-
-  public void replayVoteCheck(Vote vote, Deadline deadline) {
-    // TODO Auto-generated method stub
-  }
-
-  public void adjustReputation(PeerIdentity voterID, int repDelta) {
-    // TODO Auto-generated method stub
   }
 
   public int getTallyResult() {
     return result;
   }
 
-  // V3 Specific Methods.
-
   public void reset() {
-    result = RESULT_POLLING;
-    disagreeVoters = null;
-    agreeVoters = null;
-    needBlocksFrom.clear();
+    result = RESULT_HASHING;
+    disagreeVoters.clear();
+    agreeVoters.clear();
+    missingBlockVoters.clear();
+    extraBlockVoters.clear();
   }
 
-  public List getNeedBlocksFrom() {
-    return needBlocksFrom;
-  }
-
-  public void setDisagreeVoters(List disagreeVoters) {
-    this.disagreeVoters = disagreeVoters;
+  public void addDisagreeVoter(PeerIdentity id) {
+    disagreeVoters.add(id);
   }
 
   public List getDisagreeVoters() {
     return disagreeVoters;
   }
 
-  public void setAgreeVoters(List agreeVoters) {
-    this.agreeVoters = agreeVoters;
+  public void addAgreeVoter(PeerIdentity id) {
+    agreeVoters.add(id);
   }
 
   public List getAgreeVoters() {
     return agreeVoters;
   }
 
+  public void addExtraBlockVoter(PeerIdentity id) {
+    extraBlockVoters.add(id);
+  }
+
+  public List getExtraBlockVoters() {
+    return extraBlockVoters;
+  }
+
+  public void addMissingBlockVoter(PeerIdentity id) {
+    missingBlockVoters.add(id);
+  }
+
+  public List getMissingBlockVoters() {
+    return missingBlockVoters;
+  }
 }

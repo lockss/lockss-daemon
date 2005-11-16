@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.160 2005-10-19 20:13:05 troberts Exp $
+ * $Id: PollManager.java,v 1.161 2005-11-16 07:44:10 smorabito Exp $
  */
 
 /*
@@ -46,6 +46,8 @@ import org.lockss.poller.v3.*;
 import org.lockss.protocol.*;
 import org.lockss.state.*;
 import org.lockss.util.*;
+
+import sun.security.krb5.internal.crypto.*;
 
 /**
  * <p>Class that manages the polling process.</p>
@@ -122,12 +124,21 @@ public class PollManager
     statusServ.registerStatusAccessor(PollerStatus.POLL_STATUS_TABLE_NAME,
 				      new PollerStatus.PollStatus(this));
     statusServ.registerObjectReferenceAccessor(PollerStatus.MANAGER_STATUS_TABLE_NAME,
-					       ArchivalUnit.class,
-					       new PollerStatus.ManagerStatusAuRef(this));
+                                               ArchivalUnit.class,
+                                               new PollerStatus.ManagerStatusAuRef(this));
+    // V3 status
+    statusServ.registerStatusAccessor(V3PollStatus.POLLER_STATUS_TABLE_NAME,
+                                      new V3PollStatus.V3PollerStatus(this));
+    statusServ.registerStatusAccessor(V3PollStatus.VOTER_STATUS_TABLE_NAME,
+                                      new V3PollStatus.V3VoterStatus(this));
+    statusServ.registerStatusAccessor(V3PollStatus.POLLER_DETAIL_TABLE_NAME,
+                                      new V3PollStatus.V3PollerStatusDetail(this));
+    statusServ.registerStatusAccessor(V3PollStatus.VOTER_DETAIL_TABLE_NAME,
+                                      new V3PollStatus.V3VoterStatusDetail(this));
   }
 
   /**
-   * stop the plugin manager
+   * stop the poll manager
    * @see org.lockss.app.LockssManager#stopService()
    */
   public void stopService() {
@@ -135,8 +146,12 @@ public class PollManager
     StatusService statusServ = theDaemon.getStatusService();
     statusServ.unregisterStatusAccessor(PollerStatus.MANAGER_STATUS_TABLE_NAME);
     statusServ.unregisterStatusAccessor(PollerStatus.POLL_STATUS_TABLE_NAME);
-    statusServ.unregisterObjectReferenceAccessor(
-						 PollerStatus.MANAGER_STATUS_TABLE_NAME, ArchivalUnit.class);
+    statusServ.unregisterStatusAccessor(V3PollStatus.POLLER_STATUS_TABLE_NAME);
+    statusServ.unregisterStatusAccessor(V3PollStatus.VOTER_STATUS_TABLE_NAME);
+    statusServ.unregisterStatusAccessor(V3PollStatus.POLLER_DETAIL_TABLE_NAME);
+    statusServ.unregisterStatusAccessor(V3PollStatus.VOTER_DETAIL_TABLE_NAME);
+    statusServ.unregisterObjectReferenceAccessor(PollerStatus.MANAGER_STATUS_TABLE_NAME,
+                                                 ArchivalUnit.class);
 
     // unregister our router
     theRouter.unregisterMessageHandler(m_msgHandler);
@@ -194,7 +209,7 @@ public class PollManager
       }
       try {
 	thePoll = makePoll(pollspec, duration,
-			   theIDManager.getLocalPeerIdentity(pollspec.getPollVersion()),
+			   theIDManager.getLocalPeerIdentity(pollspec.getProtocolVersion()),
 			   LcapMessage.getDefaultHashAlgorithm(),
                            null);
 	if (thePoll != null) {
@@ -215,15 +230,14 @@ public class PollManager
 
   /**
    * Is a poll of the given type and spec currently running
-   * @param type the type of the poll.
    * @param spec the PollSpec definining the location of the poll.
    * @return true if we have a poll which is running that matches pollspec
    */
-  public boolean isPollRunning(int type, PollSpec spec) {
+  public boolean isPollRunning(PollSpec spec) {
     synchronized (pollMapLock) {
       for (Iterator it = thePolls.values().iterator(); it.hasNext(); ) {
 	PollManagerEntry pme = (PollManagerEntry)it.next();
-	if(pme.isSamePoll(type,spec)) {
+	if (pme.isSamePoll(spec)) {
 	  return !pme.isPollCompleted();
 	}
       }
@@ -247,6 +261,7 @@ public class PollManager
     }
   }
 
+  // XXX: V3 -- Only required for V1 polls.
   public ActivityRegulator.Lock acquirePollLock(String key) {
     ActivityRegulator.Lock lock = null;
     PollManagerEntry pme = getCurrentOrRecentPollEntry(key);
@@ -264,6 +279,7 @@ public class PollManager
    * suspend a poll while we wait for a repair
    * @param key the identifier key of the poll to suspend
    */
+  // XXX: V3 -- Only required for V1 polls.
   public void suspendPoll(String key) {
     PollManagerEntry pme;
     synchronized (pollMapLock) {
@@ -287,6 +303,7 @@ public class PollManager
    * @param replayNeeded true we now need to replay the poll results
    * @param key the key of the suspended poll
    */
+  // XXX: V3 -- Only required for V1 polls.
   public void resumePoll(boolean replayNeeded,
 			 Object key,
 			 ActivityRegulator.Lock lock) {
@@ -296,7 +313,7 @@ public class PollManager
       return;
     }
     theLog.debug("resuming poll " + key);
-    PollTally tally = pme.poll.getVoteTally();
+    PollTally tally = pme.getPoll().getVoteTally();
     tally.setActivityLock(lock);
     long expiration = 0;
     Deadline d;
@@ -432,98 +449,22 @@ public class PollManager
     ArchivalUnit au = cus.getArchivalUnit();
     if (!spec.getPluginVersion().equals(au.getPlugin().getVersion())) {
       theLog.debug("Ignoring poll request for " + au.getName() +
-		   ", plugin version mismatch; have: " +
-		   au.getPlugin().getVersion() +
-		   ", need: " + spec.getPluginVersion());
+                   ", plugin version mismatch; have: " +
+                   au.getPlugin().getVersion() +
+                   ", need: " + spec.getPluginVersion());
       return null;
     }
     theLog.debug("Making poll from: " + spec);
-    ActivityRegulator.Lock lock = null;
-    PollFactory pollFact = getPollFactory(spec);
-    if (pollFact == null) {
-      return null;
-    }
-
-    // check with regulator if not verify poll
-    else if (spec.getPollType() != Poll.V1_VERIFY_POLL) {
-      // get expiration time for the lock
-      long expiration = 2 * duration;
-      if (AuUrl.isAuUrl(cus.getUrl())) {
-	lock = theDaemon.getActivityRegulator(au).
-	  getAuActivityLock(ActivityRegulator.TOP_LEVEL_POLL, expiration);
-	if (lock==null) {
-	  theLog.debug2("New top-level poll aborted due to activity lock.");
-	  return null;
-	}
-      } else {
-	int activity = pollFact.getPollActivity(spec, this);
-	ActivityRegulator ar = theDaemon.getActivityRegulator(au);
-	if (ar == null) {
-	  theLog.warning("Activity regulator null for au: " + au.toString());
-	  return null;
-	}
-	if (theLog.isDebug2()) {
-	  theLog.debug2("about to get lock for " + cus.toString() + " act " +
-			activity + " for " +
-			StringUtil.timeIntervalToString(expiration));
-	}
-	lock = ar.getCusActivityLock(cus, activity, expiration);
-	if (lock==null) {
-	  theLog.debug("New poll aborted due to activity lock.");
-	  return null;
-	}
-      }
-    }
-
     // create the appropriate poll for the message type
-    try {
-      ret_poll = pollFact.createPoll(spec, theDaemon,
-				     orig, duration, hashAlg, msg);
-    }
-    catch (Exception ex) {
-      if(ex instanceof ProtocolException) {
-	throw (ProtocolException) ex;
-      }
-      else {
-	theLog.error("Failed to create poll:" + ex);
-	if (lock!=null) {
-	  // clear the lock
-	  lock.expire();
-	}
-	return null;
-      }
-    }
+    PollFactory pollFact = getPollFactory(spec);
+    ret_poll = pollFact.createPoll(spec, theDaemon,
+                                   orig, duration, hashAlg, msg);
 
-    if (ret_poll != null) {
-      NodeManager nm = theDaemon.getNodeManager(cus.getArchivalUnit());
-      if (spec.getPollType() != Poll.V1_VERIFY_POLL) {
-        if (!nm.shouldStartPoll(cus, ret_poll.getVoteTally())) {
-	  theLog.debug("NodeManager said not to start poll: " + ret_poll);
-	  // clear the lock
-	  lock.expire();
-	  return null;
-	}
-      }
-
-      thePolls.put(ret_poll.getKey(), new PollManagerEntry(ret_poll));
-      if (spec.getPollType() != Poll.V1_VERIFY_POLL &&
-          !(spec.getPollType() == Poll.V1_NAME_POLL &&
-              spec.getLwrBound() != null)) {
-	// set the activity lock in the tally
-	ret_poll.getVoteTally().setActivityLock(lock);
-	nm.startPoll(cus, ret_poll.getVoteTally(), false);
-      }
-
-      ret_poll.startPoll();
-      theLog.debug2("Started new poll: " + ret_poll.getKey());
-      return ret_poll;
-    } else {
-      theLog.error("Got a null ret_poll from createPoll");
-      if (lock!=null) {
-	// clear the lock
-	lock.expire();
-      }
+    if (ret_poll == null) {
       return null;
+    } else {
+      thePolls.put(ret_poll.getKey(), new PollManagerEntry(ret_poll));
+      return ret_poll;
     }
   }
 
@@ -531,7 +472,7 @@ public class PollManager
    * close the poll from any further voting
    * @param key the poll signature
    */
-  void closeThePoll(String key)  {
+  public void closeThePoll(String key)  {
     PollManagerEntry pme = (PollManagerEntry)thePolls.remove(key);
     if(pme== null || pme.poll == null) {
       theLog.warning("Attempt to close unknown poll : " + key);
@@ -539,33 +480,40 @@ public class PollManager
     }
     // mark the poll completed because if we need to call a repair poll
     // we don't want this one to be in conflict with it.
-    PollTally tally = pme.poll.getVoteTally();
+    // PollTally tally = pme.poll.getVoteTally();
+    BasePoll p = pme.getPoll();
     pme.setPollCompleted();
     synchronized (pollMapLock) {
       theRecentPolls.put(key, pme);
     }
+
+    // XXX: V3 -- Only required for V1 polls.
+    //
     // Don't tell the node manager about verify polls
     // If closing a name poll that started ranged subpolls, don't tell
     // the node manager about it until all ranged subpolls have finished
-    if (tally.getType() != Poll.V1_VERIFY_POLL && !pme.poll.isSubpollRunning()) {
+    if ((p.getType() == Poll.V1_NAME_POLL ||
+        p.getType() == Poll.V1_CONTENT_POLL) &&
+        !p.isSubpollRunning()) {
+      V1PollTally tally = (V1PollTally)p.getVoteTally();
       // if closing last name poll, concatenate all the name lists into the
       // first tally and pass that to node manager
-      if (tally.getType() == Poll.V1_NAME_POLL && tally instanceof V1PollTally) {
-	V1PollTally lastTally = (V1PollTally)tally;
-	tally = lastTally.concatenateNameSubPollLists();
+      if (p.getType() == Poll.V1_NAME_POLL) {
+        V1PollTally lastTally = (V1PollTally)tally;
+        tally = lastTally.concatenateNameSubPollLists();
       }
       NodeManager nm = theDaemon.getNodeManager(tally.getArchivalUnit());
       theLog.debug("handing poll results to node manager: " + tally);
-      nm.updatePollResults(tally.getCachedUrlSet(), tally);
+      nm.updatePollResults(p.getCachedUrlSet(), tally);
       try {
-	theIDManager.storeIdentities();
+        theIDManager.storeIdentities();
       } catch (ProtocolException ex) {
-	theLog.error("Unable to write Identity DB file.");
+        theLog.error("Unable to write Identity DB file.");
       }
       // free the activity lock
       ActivityRegulator.Lock lock = tally.getActivityLock();
       if(lock != null) {
-	lock.expire();
+        lock.expire();
       }
     }
   }
@@ -656,11 +604,11 @@ public class PollManager
   }
 
   public PollFactory getPollFactory(PollSpec spec) {
-    return getPollFactory(spec.getPollVersion());
+    return getPollFactory(spec.getProtocolVersion());
   }
 
   public PollFactory getPollFactory(LcapMessage msg) {
-    return getPollFactory(msg.getPollVersion());
+    return getPollFactory(msg.getProtocolVersion());
   }
 
   public PollFactory getPollFactory(int version) {
@@ -673,19 +621,71 @@ public class PollManager
 
 
   //--------------- PollerStatus Accessors -----------------------------
-  Iterator getPolls() {
-    Map polls = new HashMap();
+  public Collection getV1Polls() {
+    Collection polls = new ArrayList();
     synchronized (pollMapLock) {
-      polls.putAll(thePolls);
-      polls.putAll(theRecentPolls);
+      for (Iterator it = thePolls.values().iterator(); it.hasNext(); ) {
+        PollManagerEntry pme = (PollManagerEntry)it.next();
+        if (pme.getType() == Poll.V1_CONTENT_POLL ||
+            pme.getType() == Poll.V1_NAME_POLL ||
+            pme.getType() == Poll.V1_VERIFY_POLL) {
+          polls.add(pme);
+        }
+      }
+      for (Iterator it = theRecentPolls.values().iterator(); it.hasNext(); ) {
+        PollManagerEntry pme = (PollManagerEntry)it.next();
+        if (pme.getType() == Poll.V1_CONTENT_POLL ||
+            pme.getType() == Poll.V1_NAME_POLL ||
+            pme.getType() == Poll.V1_VERIFY_POLL) {
+          polls.add(pme);
+        }
+      }
     }
-    return polls.values().iterator();
+    return polls;
   }
 
-  BasePoll getPoll(String key) {
+  public Collection getV3Pollers() {
+    Collection polls = new ArrayList();
+    synchronized (pollMapLock) {
+      for (Iterator it = thePolls.values().iterator(); it.hasNext(); ) {
+        PollManagerEntry pme = (PollManagerEntry)it.next();
+        if (pme.isV3Poll() && pme.getPoll() instanceof V3Poller) {
+          polls.add(pme.getPoll());
+        }
+      }
+      for (Iterator it = theRecentPolls.values().iterator(); it.hasNext(); ) {
+        PollManagerEntry pme = (PollManagerEntry)it.next();
+        if (pme.isV3Poll() && pme.getPoll() instanceof V3Poller) {
+          polls.add(pme.getPoll());
+        }
+      }
+    }
+    return polls;
+  }
+
+  public Collection getV3Voters() {
+    Collection polls = new ArrayList();
+    synchronized (pollMapLock) {
+      for (Iterator it = thePolls.values().iterator(); it.hasNext(); ) {
+        PollManagerEntry pme = (PollManagerEntry)it.next();
+        if (pme.isV3Poll() && pme.getPoll() instanceof V3Voter) {
+          polls.add(pme.getPoll());
+        }
+      }
+      for (Iterator it = theRecentPolls.values().iterator(); it.hasNext(); ) {
+        PollManagerEntry pme = (PollManagerEntry)it.next();
+        if (pme.isV3Poll() && pme.getPoll() instanceof V3Voter) {
+          polls.add(pme.getPoll());
+        }
+      }
+    }
+    return polls;
+  }
+
+  public BasePoll getPoll(String key) {
     PollManagerEntry pme = getCurrentOrRecentPollEntry(key);
     if(pme != null) {
-      return pme.poll;
+      return pme.getPoll();
     }
     return null;
   }
@@ -762,16 +762,17 @@ public class PollManager
   /**
    * <p>PollManagerEntry: </p>
    * <p>Description: Class to represent the data store in the polls table.
+   * Only used by V1 polls.</p>
    * @version 1.0
    */
 
-  static class PollManagerEntry {
-    BasePoll poll;
-    PollSpec spec;
-    int type;
-    Deadline pollDeadline;
-    Deadline deadline;
-    String key;
+  public static class PollManagerEntry {
+    private BasePoll poll;
+    private PollSpec spec;
+    private int type;
+    private Deadline pollDeadline;
+    private Deadline deadline;
+    private String key;
 
     PollManagerEntry(BasePoll p) {
       poll = p;
@@ -783,20 +784,26 @@ public class PollManager
     }
 
     boolean isPollActive() {
+      // Hack for V3
+      if (isV3Poll()) return true;
       return poll.getVoteTally().stateIsActive();
     }
 
     boolean isPollCompleted() {
+      if (isV3Poll()) return false;
       return poll.getVoteTally().stateIsFinished();
     }
 
     boolean isPollSuspended() {
+      if (isV3Poll()) return false;
       return poll.getVoteTally().stateIsSuspended();
     }
 
     synchronized void setPollCompleted() {
-      PollTally tally = poll.getVoteTally();
-      tally.tallyVotes();
+      if (!isV3Poll()) {
+        PollTally tally = poll.getVoteTally();
+        tally.tallyVotes();
+      }
     }
 
     synchronized void setPollSuspended() {
@@ -807,32 +814,70 @@ public class PollManager
       }
     }
 
-    String getStatusString() {
-      if (isPollCompleted()) {
-	return poll.getVoteTally().getStatusString();
+    public String getStatusString() {
+      // Hack for V3.
+      if (isV3Poll()) {
+        return poll.getStatusString();
+      } else {
+        if (isPollCompleted()) {
+          return poll.getVoteTally().getStatusString();
+        }
+        else if(isPollActive()) {
+          return "Active";
+        }
+        else if(isPollSuspended()) {
+          return "Repairing";
+        }
+        return "Unknown";
       }
-      else if(isPollActive()) {
-	return "Active";
-      }
-      else if(isPollSuspended()) {
-	return "Repairing";
-      }
-      return "Unknown";
     }
 
-    String getTypeString() {
-      return Poll.PollName[type];
+    public String getTypeString() {
+      return Poll.POLL_NAME[type];
     }
 
-    String getShortKey() {
+    public String getShortKey() {
       return(key.substring(0,10));
     }
 
-    boolean isSamePoll(int type, PollSpec spec) {
-      if(this.type == type) {
-	return this.spec.getCachedUrlSet().equals(spec.getCachedUrlSet());
+    public String getKey() {
+      return key;
+    }
+
+    public BasePoll getPoll() {
+      return poll;
+    }
+
+    public int getType() {
+      return type;
+    }
+
+    public PollSpec getPollSpec() {
+      return spec;
+    }
+
+    public Deadline getPollDeadline() {
+      return pollDeadline;
+    }
+
+    public Deadline getDeadline() {
+      return deadline;
+    }
+
+    public boolean isSamePoll(PollSpec otherSpec) {
+      if(this.type == otherSpec.getPollType()) {
+	return this.spec.getCachedUrlSet().equals(otherSpec.getCachedUrlSet());
       }
       return false;
+    }
+
+    /**
+     * Convenience method
+     * @return True iff this is a V3 poll.
+     */
+    // XXX: V3 -- Remove when V1 polling is no longer supported.
+    public boolean isV3Poll() {
+      return (this.type == Poll.V3_POLL);
     }
   }
 }

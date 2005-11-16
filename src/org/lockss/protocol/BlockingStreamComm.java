@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingStreamComm.java,v 1.11 2005-10-10 20:25:49 smorabito Exp $
+ * $Id: BlockingStreamComm.java,v 1.12 2005-11-16 07:44:09 smorabito Exp $
  */
 
 /*
@@ -308,7 +308,7 @@ public class BlockingStreamComm
 
   // overridable for testing
   protected PeerIdentity getLocalPeerIdentity() {
-    return idMgr.getLocalPeerIdentity(PollSpec.V3_PROTOCOL);
+    return idMgr.getLocalPeerIdentity(Poll.V3_PROTOCOL);
   }
 
   PeerIdentity findPeerIdentity(String idkey) {

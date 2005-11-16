@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.204 2005-10-11 05:47:22 tlipkis Exp $
+ * $Id: NodeManagerImpl.java,v 1.205 2005-11-16 07:44:09 smorabito Exp $
  */
 
 /*
@@ -41,6 +41,8 @@ import org.lockss.config.Configuration;
 import org.lockss.crawler.CrawlManager;
 import org.lockss.alert.*;
 import java.util.ArrayList;
+
+import sun.security.krb5.internal.*;
 
 /**
  * Implementation of the NodeManager.
@@ -165,7 +167,7 @@ public class NodeManagerImpl
                                          poll.getUprBound(),
 					 poll.type);
         // if poll isn't running and it was our poll
-        if (!pollManager.isPollRunning(poll.getType(), pollSpec)) {
+        if (!pollManager.isPollRunning(pollSpec)) {
           // transfer dead poll to history and let treewalk handle it
           // set duration to the deadline of the dead poll
           // this is important because it could still be running in other caches
@@ -255,6 +257,11 @@ public class NodeManagerImpl
     return true;
   }
 
+  /**
+   * XXX: V3
+   *
+   * This method is only called by V1PollFactory.  It is not called by V3.
+   */
   public void startPoll(CachedUrlSet cus, Tallier tally, boolean isReplayPoll) {
     NodeState nodeState = getNodeState(cus);
     PollSpec spec = tally.getPollSpec();
@@ -348,12 +355,10 @@ public class NodeManagerImpl
   }
 
   public void updatePollResults(CachedUrlSet cus, Tallier results) {
-    // node should be in 'active' list under poll key
     NodeState nodeState = (NodeState)activeNodes.get(results.getPollKey());
-    if (nodeState==null) {
+    if (nodeState == null) {
       nodeState = getNodeState(cus);
     }
-
     updateState(nodeState, results);
     // remove from active nodes
     activeNodes.remove(results.getPollKey());
@@ -872,9 +877,38 @@ public class NodeManagerImpl
   private void callNecessaryPolls(PollState lastOrCurrentPoll, Tallier results,
                                   NodeState nodeState, int stateToUse)
       throws IOException {
-    checkCurrentState(lastOrCurrentPoll, results, nodeState, stateToUse, false);
-  }
 
+    int protocolVersion = AuUtil.getProtocolVersion(managedAu);
+
+    // Here's where we sneak in V3.  If this is a V1 AU, go ahead and
+    // checkCurrentState.  If it's a V3 AU, and the node we're checking is
+    // the AU node, and there's no current V3 poll running on this AU,
+    // call a new poll.
+
+    switch (protocolVersion) {
+    case Poll.V1_PROTOCOL:
+      checkCurrentState(lastOrCurrentPoll, results, nodeState, stateToUse, false);
+      return;
+    case Poll.V3_PROTOCOL:
+      int pollType = Poll.V3_POLL;
+      CachedUrlSet cus = nodeState.getCachedUrlSet();
+      if (cus.getSpec().isAu()) {
+        PollSpec spec = new PollSpec(cus, pollType);
+        if (!pollManager.isPollRunning(spec)) {
+          logger.debug("Starting V3 poll for " + managedAu.getName());
+          callV3ContentPoll();
+        } else {
+          logger.debug("Already called poll on " + managedAu.getName()
+                       + ", skipping.");
+        }
+      }
+      return;
+    default:
+      logger.critical("Unsupported protocol version: " + protocolVersion);
+      // XXX: Alerts!
+      return;
+    }
+  }
 
   /**
    * Looks at the state of the node, and indicates if a poll needs to be called.
@@ -910,62 +944,6 @@ public class NodeManagerImpl
                             Tallier results, NodeState nodeState,
                             int stateToUse, boolean reportOnly)
       throws IOException {
-
-    // XXX: Kludge until a better V3 refactor.
-    int protocolVersion = AuUtil.getProtocolVersion(managedAu);
-
-    // only log when in treewalk (once) or updating results
-    if ((reportOnly) || (results!=null)) {
-      logger.debug3("Checking node: " + nodeState.getCachedUrlSet().getUrl());
-      logger.debug3("State: " + nodeState.getStateString());
-    }
-
-    switch(protocolVersion) {
-    case PollSpec.V3_PROTOCOL:
-      return v3CheckCurrentState(lastOrCurrentPoll, results, nodeState,
-                                 stateToUse, reportOnly);
-    case PollSpec.V1_PROTOCOL:
-    default:
-      return v1CheckCurrentState(lastOrCurrentPoll, results, nodeState,
-                                 stateToUse, reportOnly);
-    }
-  }
-
-  boolean v3CheckCurrentState(PollState lastOrCurrentPoll,
-                              Tallier results, NodeState nodeState,
-                              int stateToUse, boolean reportOnly)
-      throws IOException {
-    switch (stateToUse) {
-    case NodeState.INITIAL:
-    case NodeState.OK:
-      // check if toplevel poll needed when AU node
-      if (nodeState.getCachedUrlSet().getSpec().isAu()) {
-        // query the AU if a top level poll should be started.
-        // this changes the state regardless of the 'reportOnly' setting so
-        // as to avoid having to call 'shouldCallTopLevelPoll()' twice
-        if (managedAu.shouldCallTopLevelPoll(auState)) {
-          // switch to NEEDS_POLL if necessary to call toplevel poll
-          nodeState.setState(NodeState.NEEDS_POLL);
-          logger.debug("set state to call top level poll...");
-          return true;
-        }
-      }
-      return false;
-    default:
-      // call content poll
-      if (!reportOnly) {
-        callV3ContentPoll();
-        return true;
-      }
-    return false;
-    }
-  }
-
-  boolean v1CheckCurrentState(PollState lastOrCurrentPoll,
-                              Tallier results, NodeState nodeState,
-                              int stateToUse, boolean reportOnly)
-      throws IOException {
-
     switch (stateToUse) {
       case NodeState.NEEDS_POLL:
       case NodeState.NEEDS_REPLAY_POLL:
@@ -1022,7 +1000,7 @@ public class NodeManagerImpl
 					       lastHistory.getType());
           if ((lastHistory.isOurPoll())) {
             // if should recall and is our incomplete poll
-            if (pollManager.isPollRunning(lastHistory.getType(), lastPollSpec)) {
+            if (pollManager.isPollRunning(lastPollSpec)) {
               logger.debug2("unfinished poll already running, so not"+
                             " recalling.");
             } else {
@@ -1329,7 +1307,7 @@ public class NodeManagerImpl
       case PollState.RUNNING:
       case PollState.UNFINISHED:
         // if this poll should be running make sure it is running.
-        if (!pollManager.isPollRunning(lastHistory.getType(), lastPollSpec)) {
+        if (!pollManager.isPollRunning(lastPollSpec)) {
           // if should recall and is our incomplete poll
           if ((lastHistory.isOurPoll())) {
             // only restart if it has expired, since other caches will still be
@@ -1466,9 +1444,7 @@ public class NodeManagerImpl
    * Convenience method to call a top-level V3 content poll.
    */
   void callV3ContentPoll() {
-    PollSpec spec = new PollSpec(managedAu.getAuCachedUrlSet(),
-                                 Poll.V3_POLL,
-                                 PollSpec.V3_PROTOCOL);
+    PollSpec spec = new PollSpec(managedAu.getAuCachedUrlSet(), Poll.V3_POLL);
     logger.debug2("Calling a V3 Content Poll on " + spec);
     if (pollManager.callPoll(spec) == null) {
       if (logger.isDebug2()) {
@@ -1482,8 +1458,7 @@ public class NodeManagerImpl
    */
   void callTopLevelPoll() {
     PollSpec spec = new PollSpec(managedAu.getAuCachedUrlSet(),
-				 Poll.V1_CONTENT_POLL,
-                                 PollSpec.V1_PROTOCOL);
+				 Poll.V1_CONTENT_POLL);
     if (logger.isDebug2()) {
       logger.debug2("Calling a top level poll on " + spec);
     }
@@ -1692,15 +1667,15 @@ public class NodeManagerImpl
    */
   private void callLastPoll(PollSpec spec, PollState lastPoll) {
     if (spec.getPollType() != lastPoll.type)
-      logger.error("Re-calling a " + Poll.PollName[lastPoll.type] +
-		   " poll but spec is " + Poll.PollName[spec.getPollType()]);
+      logger.error("Re-calling a " + Poll.POLL_NAME[lastPoll.type] +
+		   " poll but spec is " + Poll.POLL_NAME[spec.getPollType()]);
     if (logger.isDebug2()) {
-      logger.debug2("Re-calling a " + Poll.PollName[lastPoll.type] +
+      logger.debug2("Re-calling a " + Poll.POLL_NAME[lastPoll.type] +
 		    " poll on " + spec);
     }
     if (pollManager.callPoll(spec) == null) {
       if (logger.isDebug2()) {
-	logger.debug2("Failed to re-call a " + Poll.PollName[lastPoll.type] +
+	logger.debug2("Failed to re-call a " + Poll.POLL_NAME[lastPoll.type] +
 		      " poll on " + spec);
       }
     }
@@ -1728,7 +1703,7 @@ public class NodeManagerImpl
   private void callNamePoll(PollSpec spec) {
     if (spec.getPollType() != Poll.V1_NAME_POLL) {
       logger.error("callNamePoll on spec for " +
-		   Poll.PollName[spec.getPollType()]);
+		   Poll.POLL_NAME[spec.getPollType()]);
     }
     callPoll(spec);
   }
@@ -1740,7 +1715,7 @@ public class NodeManagerImpl
   private void callContentPoll(PollSpec spec) {
     if (spec.getPollType() != Poll.V1_CONTENT_POLL) {
       logger.error("Calling a content poll on spec for " +
-		   Poll.PollName[spec.getPollType()]);
+		   Poll.POLL_NAME[spec.getPollType()]);
     }
     callPoll(spec);
   }

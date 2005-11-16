@@ -1,5 +1,5 @@
 /*
-* $Id: MockPoll.java,v 1.5 2005-10-11 05:52:05 tlipkis Exp $
+* $Id: MockPoll.java,v 1.6 2005-11-16 07:44:08 smorabito Exp $
  */
 
 /*
@@ -51,6 +51,14 @@ public class MockPoll implements Poll {
   boolean m_isMine;
 
   public MockPoll() {
+
+  }
+
+  public void startPoll() {
+
+  }
+
+  public void stopPoll() {
 
   }
 
@@ -174,6 +182,21 @@ public class MockPoll implements Poll {
    */
   public void setVoteTally(PollTally tally) {
     m_tally = tally;
+  }
+
+  /**
+   * get the type of the poll.
+   */
+  public int getType() {
+    return 0;
+  }
+
+  public ArchivalUnit getAu() {
+    throw new UnsupportedOperationException("Not implemented");
+  }
+
+  public String getStatusString() {
+    throw new UnsupportedOperationException("Not implemented");
   }
 
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: VoterUserData.java,v 1.7 2005-10-17 07:48:25 tlipkis Exp $
+ * $Id: VoterUserData.java,v 1.8 2005-11-16 07:44:09 smorabito Exp $
  */
 
 /*
@@ -46,16 +46,17 @@ import org.lockss.util.*;
  * Persistent user data state object used by V3Voter state machine.
  */
 public class VoterUserData
-  implements PsmInterp.Checkpointer, LockssSerializable {
+  implements LockssSerializable {
 
-  // XXX: May not be serializable after repair is implemented!
+  // XXX: LcapMessage may not be serializable after repair is implemented!
   private LcapMessage pollMessage;
   private PeerIdentity pollerId;
   private String auId;
   private String pollKey;
   private int pollVersion;
   private String pluginVersion;
-  private long deadline;
+  private long duration;
+  private Deadline deadline;
   private String hashAlgorithm;
   private VoteBlocks voteBlocks;
   private String url;
@@ -70,44 +71,41 @@ public class VoterUserData
   private boolean hashingDone = false;
   private boolean voteRequested = false;
   private long createTime;
+  private PsmInterpStateBean psmState;
+  private String statusString;
 
   /** Transient non-serialized fields */
   private transient PollSpec spec;
   private transient CachedUrlSet cus;
-  private transient V3VoterSerializer serializer;
   private transient V3Voter voter;
 
   private static Logger log = Logger.getLogger("VoterUserData");
 
-  /** Package-level constructor used in tests. */
-  VoterUserData(V3VoterSerializer serializer) {
-    this.serializer = serializer;
-  }
+  VoterUserData() {}
 
   public VoterUserData(PollSpec spec, V3Voter voter, PeerIdentity pollerId,
                        String pollKey, long duration, String hashAlgorithm,
                        byte[] pollerNonce, byte[] voterNonce,
-                       byte[] introEffortProof, V3VoterSerializer serializer)
-      throws V3Serializer.PollSerializerException {
+                       byte[] introEffortProof) {
     log.debug3("Creating V3 Voter User Data for poll " + pollKey);
     this.spec = spec;
     this.auId = spec.getAuId();
     this.url = spec.getUrl();
     this.cus = spec.getCachedUrlSet();
-    this.pollVersion = spec.getPollVersion();
+    this.pollVersion = spec.getProtocolVersion();
     this.pluginVersion = spec.getPluginVersion();
     this.voter = voter;
     this.pollerId = pollerId;
     this.pollKey = pollKey;
-    this.deadline = Deadline.in(duration).getExpirationTime();
+    this.duration = duration;
+    this.deadline = Deadline.in(duration);
     this.hashAlgorithm = hashAlgorithm;
     this.voterNonce = voterNonce;
     this.pollerNonce = pollerNonce;
     this.introEffortProof = introEffortProof;
-    this.serializer = serializer;
     this.voteBlocks = new MemoryVoteBlocks();
     this.createTime = TimeBase.nowMs();
-    saveState();
+    this.statusString = "Active";
   }
 
   public void setPollMessage(LcapMessage msg) {
@@ -128,7 +126,6 @@ public class VoterUserData
 
   public void setAuId(String auId) {
     this.auId = auId;
-    saveState();
   }
 
   public CachedUrlSet getCachedUrlSet() {
@@ -137,25 +134,30 @@ public class VoterUserData
 
   public void setCachedUrlSet(CachedUrlSet cus) {
     this.cus = cus;
-    // Transient - no need to save state.
   }
 
   public void setPollSpec(PollSpec spec) {
     this.spec = spec;
-    // Transient - no need to save state.
   }
 
   public PollSpec getPollSpec() {
     return spec;
   }
 
-  public long getDeadline() {
+  public long getDuration() {
+    return duration;
+  }
+
+  public void setDuration(long duration) {
+    this.duration = duration;
+  }
+
+  public Deadline getDeadline() {
     return deadline;
   }
 
-  public void setDeadline(long deadline) {
+  public void setDeadline(Deadline deadline) {
     this.deadline = deadline;
-    saveState();
   }
 
   public String getHashAlgorithm() {
@@ -164,7 +166,6 @@ public class VoterUserData
 
   public void setHashAlgorithm(String hashAlgorithm) {
     this.hashAlgorithm = hashAlgorithm;
-    saveState();
   }
 
   public byte[] getIntroEffortProof() {
@@ -173,7 +174,6 @@ public class VoterUserData
 
   public void setIntroEffortProof(byte[] introEffortProof) {
     this.introEffortProof = introEffortProof;
-    saveState();
   }
 
   public List getNominees() {
@@ -182,7 +182,6 @@ public class VoterUserData
 
   public void setNominees(List nominees) {
     this.nominees = nominees;
-    saveState();
   }
 
   public byte[] getPollAckEffortProof() {
@@ -191,7 +190,6 @@ public class VoterUserData
 
   public void setPollAckEffortProof(byte[] pollAckEffortProof) {
     this.pollAckEffortProof = pollAckEffortProof;
-    saveState();
   }
 
   public byte[] getReceiptEffortProof() {
@@ -200,7 +198,6 @@ public class VoterUserData
 
   public void setReceiptEffortProof(byte[] receiptEffortProof) {
     this.receiptEffortProof = receiptEffortProof;
-    saveState();
   }
 
   public byte[] getRemainingEffortProof() {
@@ -209,7 +206,6 @@ public class VoterUserData
 
   public void setRemainingEffortProof(byte[] remainingEffortProof) {
     this.remainingEffortProof = remainingEffortProof;
-    saveState();
   }
 
   public byte[] getRepairEffortProof() {
@@ -218,7 +214,6 @@ public class VoterUserData
 
   public void setRepairEffortProof(byte[] repairEffortProof) {
     this.repairEffortProof = repairEffortProof;
-    saveState();
   }
 
   public String getPluginVersion() {
@@ -227,7 +222,6 @@ public class VoterUserData
 
   public void setPluginVersion(String pluginVersion) {
     this.pluginVersion = pluginVersion;
-    saveState();
   }
 
   public int getPollVersion() {
@@ -236,7 +230,6 @@ public class VoterUserData
 
   public void setPollVersion(int pollVersion) {
     this.pollVersion = pollVersion;
-    saveState();
   }
 
   public PeerIdentity getPollerId() {
@@ -245,7 +238,6 @@ public class VoterUserData
 
   public void setPollerId(PeerIdentity pollerId) {
     this.pollerId = pollerId;
-    saveState();
   }
 
   public byte[] getPollerNonce() {
@@ -254,7 +246,6 @@ public class VoterUserData
 
   public void setPollerNonce(byte[] pollerNonce) {
     this.pollerNonce = pollerNonce;
-    saveState();
   }
 
   public String getPollKey() {
@@ -263,16 +254,6 @@ public class VoterUserData
 
   public void setPollKey(String pollKey) {
     this.pollKey = pollKey;
-    saveState();
-  }
-
-  public V3Serializer getSerializer() {
-    return serializer;
-  }
-
-  public void setSerializer(V3VoterSerializer serializer) {
-    this.serializer = serializer;
-    // Transient - no need to save state
   }
 
   public String getUrl() {
@@ -281,7 +262,6 @@ public class VoterUserData
 
   public void setUrl(String url) {
     this.url = url;
-    saveState();
   }
 
   public VoteBlocks getVoteBlocks() {
@@ -290,16 +270,22 @@ public class VoterUserData
 
   public void setVoteBlocks(VoteBlocks voteBlocks) {
     this.voteBlocks = voteBlocks;
-    saveState();
   }
 
   public V3Voter getVoter() {
     return voter;
   }
 
+  public PsmInterpStateBean getPsmState() {
+    return psmState;
+  }
+
+  public void setPsmState(PsmInterpStateBean psmState) {
+    this.psmState = psmState;
+  }
+
   public void setVoter(V3Voter voter) {
     this.voter = voter;
-    saveState();
   }
 
   public byte[] getVoterNonce() {
@@ -308,12 +294,10 @@ public class VoterUserData
 
   public void setVoterNonce(byte[] voterNonce) {
     this.voterNonce = voterNonce;
-    saveState();
   }
 
   public synchronized void hashingDone(boolean hashingDone) {
     this.hashingDone = hashingDone;
-    saveState();
   }
 
   public synchronized boolean hashingDone() {
@@ -322,7 +306,6 @@ public class VoterUserData
 
   public synchronized void voteRequested(boolean voteRequested) {
     this.voteRequested = voteRequested;
-    saveState();
   }
 
   public synchronized boolean voteRequested() {
@@ -344,23 +327,11 @@ public class VoterUserData
     return voter.generateVote();
   }
 
-  private PsmInterpStateBean interpStateBean;
-
-  /** State machine has entered resumable state; save state */
-  public void checkpoint(PsmInterpStateBean resumeStateBean) {
-    interpStateBean = resumeStateBean;
-    saveState();
+  public String getStatusString() {
+    return statusString;
   }
 
-  /* Utility methods */
-
-  private void saveState() {
-    try {
-      serializer.saveVoterUserData(this);
-    } catch (V3Serializer.PollSerializerException ex) {
-      log.error("Unable to save voter state in poll " + getPollKey());
-    }
+  public void setStatusString(String s) {
+    this.statusString = s;
   }
-
-
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManagerImpl.java,v 1.9 2005-11-05 02:10:56 thib_gc Exp $
+ * $Id: IdentityManagerImpl.java,v 1.10 2005-11-16 07:44:09 smorabito Exp $
  */
 
 /*
@@ -214,7 +214,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
    */
   private Map thePeerIdentities;
   // JAVA5: Map<String,PeerIdentity>
-  
+
   /**
    * <p>The IDDB file.</p>
    */
@@ -254,7 +254,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
    * implement instead.</p>
    */
   protected void setupLocalIdentities() {
-    localPeerIdentities = new PeerIdentity[PollSpec.MAX_POLL_PROTOCOL+1];
+    localPeerIdentities = new PeerIdentity[Poll.MAX_PROTOCOL + 1];
 
     // Create local PeerIdentity and LcapIdentity instances
     Configuration config = ConfigManager.getCurrentConfig();
@@ -273,7 +273,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
       throw new LockssAppException("IdentityManager: " + msg);
     }
     try {
-      localPeerIdentities[PollSpec.V1_PROTOCOL] =
+      localPeerIdentities[Poll.V1_PROTOCOL] =
         findLocalPeerIdentity(localV1IdentityStr);
     } catch (MalformedIdentityKeyException e) {
       String msg = "Cannot start: Can't create local identity:" +
@@ -292,7 +292,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
     }
     if (v3idstr != null) {
       try {
-        localPeerIdentities[PollSpec.V3_PROTOCOL] = findLocalPeerIdentity(v3idstr);
+        localPeerIdentities[Poll.V3_PROTOCOL] = findLocalPeerIdentity(v3idstr);
       } catch (MalformedIdentityKeyException e) {
         String msg = "Cannot start: Cannot create local V3 identity: " +
         v3idstr;
@@ -312,9 +312,9 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
     super.startService();
     reloadIdentities();
 
-    log.info("Local V1 identity: " + getLocalPeerIdentity(PollSpec.V1_PROTOCOL));
-    if (localPeerIdentities[PollSpec.V3_PROTOCOL] != null) {
-      log.info("Local V3 identity: " + getLocalPeerIdentity(PollSpec.V3_PROTOCOL));
+    log.info("Local V1 identity: " + getLocalPeerIdentity(Poll.V1_PROTOCOL));
+    if (localPeerIdentities[Poll.V3_PROTOCOL] != null) {
+      log.info("Local V3 identity: " + getLocalPeerIdentity(Poll.V3_PROTOCOL));
     }
     status = makeStatusAccessor(theIdentities);
     getDaemon().getStatusService().registerStatusAccessor("Identities",
@@ -445,7 +445,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
       log.warning("ipAddrToPeerIdentity(null) is deprecated.");
       log.warning("  Use getLocalPeerIdentity() to get a local identity");
       // XXX return V1 identity until all callers fixed
-      return localPeerIdentities[PollSpec.V1_PROTOCOL];
+      return localPeerIdentities[Poll.V1_PROTOCOL];
     }
     else {
       return findPeerIdentityAndData(addr, port);
@@ -470,7 +470,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
       log.warning("stringToPeerIdentity(null) is deprecated.");
       log.warning("  Use getLocalPeerIdentity() to get a local identity");
       // XXX return V1 identity until all callers fixed
-      return localPeerIdentities[PollSpec.V1_PROTOCOL];
+      return localPeerIdentities[Poll.V1_PROTOCOL];
     }
     else {
       return findPeerIdentityAndData(idKey);
@@ -1209,7 +1209,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
     // overridable for testing
     return config.get(PARAM_LOCAL_IP);
   }
-  
+
   boolean areMapsEqualSize() {
     return thePeerIdentities.size() == theIdentities.size();
   }

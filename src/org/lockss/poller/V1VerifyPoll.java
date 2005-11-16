@@ -1,5 +1,5 @@
 /*
- * $Id: V1VerifyPoll.java,v 1.15 2005-10-07 23:46:50 smorabito Exp $
+ * $Id: V1VerifyPoll.java,v 1.16 2005-11-16 07:44:10 smorabito Exp $
  */
 
 /*
@@ -105,7 +105,7 @@ class V1VerifyPoll extends V1Poll {
   /**
    * start the poll.  set a deadline in which to actually verify the message.
    */
-  protected void startPoll() {
+  public void startPoll() {
     log.debug("Starting new verify poll:" + m_key);
     if(!idMgr.isLocalIdentity(m_callerID)) {
       long now = TimeBase.nowMs();
@@ -203,13 +203,11 @@ class V1VerifyPoll extends V1Poll {
       return;
     }
     byte[] verifier = pf.makeVerifier(msg.getDuration());
-    V1LcapMessage repmsg = V1LcapMessage.makeReplyMsg(msg,
-						      secret,
-						      verifier,
-						      null,
-						      V1LcapMessage.VERIFY_POLL_REP,
-						      msg.getDuration(),
-						      idMgr.getLocalPeerIdentity(PollSpec.V1_PROTOCOL));
+    V1LcapMessage repmsg =
+      V1LcapMessage.makeReplyMsg(msg, secret, verifier, null,
+                                 V1LcapMessage.VERIFY_POLL_REP,
+                                 msg.getDuration(),
+                                 idMgr.getLocalPeerIdentity(Poll.V1_PROTOCOL));
 
     PeerIdentity originator = msg.getOriginatorId();
     log.debug("sending our verification reply to " + originator.toString());
@@ -228,6 +226,21 @@ class V1VerifyPoll extends V1Poll {
     log.debug("Waiting until at most " + deadline + " to verify");
     TimerQueue.schedule(deadline, new VerifyTimerCallback(), msg);
     m_pollstate = PS_WAIT_HASH;
+  }
+
+  /**
+   * Return the type of the poll, Poll.V1_VERIFY_POLL
+   */
+  public int getType() {
+    return Poll.V1_VERIFY_POLL;
+  }
+
+  public ArchivalUnit getAu() {
+    return m_tally.getArchivalUnit();
+  }
+
+  public String getStatusString() {
+    return m_tally.getStatusString();
   }
 
   class VerifyTimerCallback implements TimerQueue.Callback {

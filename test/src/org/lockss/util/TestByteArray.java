@@ -1,5 +1,5 @@
 /*
- * $Id: TestByteArray.java,v 1.5 2005-05-16 21:34:42 tlipkis Exp $
+ * $Id: TestByteArray.java,v 1.6 2005-11-16 07:44:08 smorabito Exp $
  */
 
 /*
@@ -52,6 +52,13 @@ public class TestByteArray extends LockssTestCase {
     String s2 = "I am an apteryx";
     byte c[] = ByteArray.concat(s1.getBytes(), s2.getBytes());
     assertEquals(s1.concat(s2), new String(c));
+  }
+
+  public void testToBase64() {
+    byte t1[] = {1, 0x42, 0x7e, (byte)0xff};
+    byte t2[] = {(byte)255, (byte)255, (byte)255, (byte)255};
+    assertEquals("AUJ+/w==", ByteArray.toBase64(t1));
+    assertEquals("/////w==", ByteArray.toBase64(t2));
   }
 
   public void testToHexString() {

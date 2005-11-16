@@ -1,5 +1,5 @@
 /*
-* $Id: PollerStatus.java,v 1.21 2005-10-11 05:45:39 tlipkis Exp $
+* $Id: PollerStatus.java,v 1.22 2005-11-16 07:44:10 smorabito Exp $
  */
 
 /*
@@ -125,11 +125,12 @@ public class PollerStatus {
 			      boolean generateRows)
 	throws StatusService.NoSuchTableException {
       ArrayList rowL = new ArrayList();
-      Iterator it = pollManager.getPolls();
-      while (it.hasNext()) {
+      // XXX: V3
+      Collection c = pollManager.getV1Polls();
+      for (Iterator it = c.iterator(); it.hasNext(); ) {
         PollManager.PollManagerEntry entry =
 	  (PollManager.PollManagerEntry)it.next();
-	cnts.incrAuIdCnt(entry.spec.getAuId());
+	cnts.incrAuIdCnt(entry.getPollSpec().getAuId());
         if (matchAu(entry, props)) {
 	  // include in counts if poll's AU matches filter
 	  cnts.incrStatusCnt(entry.getStatusString());
@@ -150,8 +151,6 @@ public class PollerStatus {
           return "C";
         case Poll.V1_VERIFY_POLL:
           return "V";
-        case Poll.V3_POLL:
-          return "V3";
         default:
           return "Unknown";
       }
@@ -159,7 +158,7 @@ public class PollerStatus {
 
     private Map makeRow(PollManager.PollManagerEntry entry) {
       HashMap rowMap = new HashMap();
-      PollSpec spec = entry.spec;
+      PollSpec spec = entry.getPollSpec();
       //"AuName"
       rowMap.put("AuName", spec.getCachedUrlSet().getArchivalUnit().getName());
       //"URL"
@@ -167,29 +166,29 @@ public class PollerStatus {
       //"Range"
       rowMap.put("Range", spec.getRangeString());
       //"PollType"
-      rowMap.put("PollType", getTypeCharString(entry.type));
+      rowMap.put("PollType", getTypeCharString(entry.getType()));
       //"Status"
       rowMap.put("Status", entry.getStatusString());
       //"Deadline"
-      if (entry.pollDeadline != null) {
-        rowMap.put("Deadline", entry.pollDeadline);
+      if (entry.getPollDeadline() != null) {
+        rowMap.put("Deadline", entry.getPollDeadline());
       }
       //"PollID"
       rowMap.put("PollID", PollStatus.makePollRef(entry.getShortKey(),
-						  entry.key));
+						  entry.getKey()));
       return rowMap;
     }
 
     private boolean matchAu(PollManager.PollManagerEntry entry,
 			    Properties props) {
-      PollSpec spec = entry.spec;
+      PollSpec spec = entry.getPollSpec();
       String val = props.getProperty("AU");
       return (val == null || spec.getAuId().equals(val));
     }
 
     private boolean matchKey(PollManager.PollManagerEntry entry,
 			     Properties props) {
-      PollSpec spec = entry.spec;
+      PollSpec spec = entry.getPollSpec();
       for (Iterator iter = props.keySet().iterator(); iter.hasNext(); ) {
 	String key = (String)iter.next();
 	String val = props.getProperty(key);
@@ -437,8 +436,8 @@ public class PollerStatus {
       list.add(new StatusTable.SummaryInfo("Duration",
 					   ColumnDescriptor.TYPE_TIME_INTERVAL,
 					   new Long(tally.duration)));
-      if (entry != null && entry.pollDeadline != null) {
-	long remain = TimeBase.msUntil(entry.pollDeadline.getExpirationTime());
+      if (entry != null && entry.getPollDeadline() != null) {
+	long remain = TimeBase.msUntil(entry.getPollDeadline().getExpirationTime());
 	if (remain >= 0) {
 	  list.add(new StatusTable.SummaryInfo("Remaining",
 					       ColumnDescriptor.TYPE_TIME_INTERVAL,
@@ -457,7 +456,7 @@ public class PollerStatus {
     private String getPollType(BasePoll poll) {
       if (poll instanceof V1Poll) {
         V1PollTally tally = (V1PollTally)poll.getVoteTally();
-        return V1Poll.PollName[tally.getType()];
+        return V1Poll.POLL_NAME[tally.getType()];
       } else if (poll instanceof V3Poller) {
         return "V3 Poll";
       }
@@ -532,10 +531,10 @@ public class PollerStatus {
     int howManyPollsRunning(ArchivalUnit au) {
       String auid = au.getAuId();
       int cnt = 0;
-      for (Iterator iter = pollManager.getPolls(); iter.hasNext(); ) {
+      for (Iterator iter = pollManager.getV1Polls().iterator(); iter.hasNext(); ) {
         PollManager.PollManagerEntry entry =
 	  (PollManager.PollManagerEntry)iter.next();
-	PollSpec spec = entry.spec;
+	PollSpec spec = entry.getPollSpec();
 	if (auid.equals(spec.getAuId())) {
 	  cnt++;
 	}

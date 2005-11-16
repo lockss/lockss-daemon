@@ -1,5 +1,5 @@
 /*
- * $Id: V3VoterSerializer.java,v 1.4 2005-11-08 19:24:23 smorabito Exp $
+ * $Id: V3VoterSerializer.java,v 1.5 2005-11-16 07:44:09 smorabito Exp $
  */
 
 /*
@@ -38,10 +38,8 @@ import org.lockss.protocol.psm.*;
 public class V3VoterSerializer extends V3Serializer {
 
   private static final String VOTER_USER_DATA_FILE = "voter_user_data.xml";
-  private static final String VOTER_STATE_TABLE_FILE = "voter_state_table.xml";
 
   private File voterUserDataFile;
-  private File voterStateTableFile;
 
   public V3VoterSerializer(LockssDaemon daemon)
       throws PollSerializerException {
@@ -52,7 +50,6 @@ public class V3VoterSerializer extends V3Serializer {
       throws PollSerializerException {
     super(daemon, dir);
     this.voterUserDataFile = new File(pollDir, VOTER_USER_DATA_FILE);
-    this.voterStateTableFile = new File(pollDir, VOTER_STATE_TABLE_FILE);
   }
 
   public void saveVoterUserData(VoterUserData data)
@@ -70,31 +67,6 @@ public class V3VoterSerializer extends V3Serializer {
       return (VoterUserData) xstr.deserialize(voterUserDataFile);
     } catch (Exception ex) {
       throw new PollSerializerException("Unable to restore VoterUserData", ex);
-    }
-  }
-
-  /**
-   * Save a PsmInterpStateBean for a V3Voter.
-   */
-  public void saveVoterInterpState(PsmInterpStateBean bean)
-      throws PollSerializerException {
-    try {
-      xstr.serialize(this.voterStateTableFile, bean);
-    } catch (Exception ex) {
-      throw new PollSerializerException("Unable to save PsmInterpStateBean", ex);
-    }
-  }
-
-  /**
-   * Restore a PsmInterpStateBean for a V3Voter.
-   */
-  public PsmInterpStateBean loadVoterInterpState()
-      throws PollSerializerException {
-    try {
-      return (PsmInterpStateBean) xstr.deserialize(this.voterStateTableFile);
-    } catch (Exception ex) {
-      throw new PollSerializerException("Unable to restore PsmInterpStateBean",
-                                        ex);
     }
   }
 }

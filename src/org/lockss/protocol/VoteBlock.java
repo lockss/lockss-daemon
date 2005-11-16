@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBlock.java,v 1.5 2005-10-11 05:46:14 tlipkis Exp $
+ * $Id: VoteBlock.java,v 1.6 2005-11-16 07:44:09 smorabito Exp $
  */
 
 /*
@@ -67,7 +67,7 @@ public class VoteBlock implements LockssSerializable {
     this.pollType = pollType;
   }
 
-  public String getFileName() {
+  public String getUrl() {
     return fileName;
   }
 

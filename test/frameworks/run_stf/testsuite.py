@@ -1172,17 +1172,17 @@ class SimpleV3PollTestCase(LockssTestCase):
                 peerIds.append("127.0.0.1;%d" % (baseV3Port + port))
 
             extraConf = {"org.lockss.auconfig.allowEditDefaultOnlyParams": "true",
+                         "org.lockss.comm.enabled": "false",
                          "org.lockss.scomm.enabled": "true",
-                         "org.lockss.scomm.maxMessageSize": "1048576", # 1MB
-                         "org.lockss.poll.v3.quorum": "1",
-                         "org.lockss.poll.v3.minPollSize": "2",
-                         "org.lockss.poll.v3.maxPollSize": "2",
-                         "org.lockss.poll.v3.minNominationSize": "3",
-                         "org.lockss.poll.v3.maxNominationSize": "3",
+                         "org.lockss.scomm.maxMessageSize": "1048576",  # 1MB
+                         "org.lockss.poll.v3.quorum": "3",
+                         "org.lockss.poll.v3.minPollSize": "4",
+                         "org.lockss.poll.v3.maxPollSize": "4",
+                         "org.lockss.poll.v3.minNominationSize": "1",
+                         "org.lockss.poll.v3.maxNominationSize": "1",
                          "org.lockss.poll.v3.minPollDuration": "5m",
                          "org.lockss.poll.v3.maxPollDuration": "6m",
                          "org.lockss.localV3Identity": "127.0.0.1;%d" % (baseV3Port + i),
-                         "org.lockss.comm.unicast.sendToAddr": "127.0.0.1",
                          "org.lockss.id.initialV3PeerList": (",".join(peerIds))}
 
             self.framework.appendLocalConfig(extraConf, self.clients[i])
@@ -1203,7 +1203,7 @@ class SimpleV3PollTestCase(LockssTestCase):
         # Reasonably complex AU for testing
         simAu = SimulatedAu('simContent', depth=0, branch=0,
                             numFiles=15, fileTypes=17,
-                            binFileSize=1048576, pollingVersion=3)
+                            binFileSize=1048576, protocolVersion=3)
 
         ##
         ## Create simulated AUs
@@ -1223,16 +1223,23 @@ class SimpleV3PollTestCase(LockssTestCase):
 
         client = self.clients[2]
         
+	##
+	## Damage the AU.
+	##
+	# node = client.randomDamageSingleNode(simAu)
+	# log.info("Damaged node %s" % node)
+
         # Request a tree walk (deactivate and reactivate AU)
         log.info("Requesting tree walk.")
         client.requestTreeWalk(simAu)
 
-## Currently, no status table to allow us to know that a poll has been
-## crawled.  Just wait for 20 minutes, or until the user cancels.  When
-## an XML status table for V3 polls is available, more comprehensive
-## test suites will follow
+        log.info("Waiting for a V3 poll to be called...")
+        client.waitForV3Poller(simAu)
 
-        log.info("Apoll should be running momentarily.")
+        log.info("Successfully called a V3 poll.")
+        
+        ## Just pause until we have better tests.
+
         log.info("Pausing for 20 minutes.  ^C to quit the test.")
         time.sleep(20 * 60)
         

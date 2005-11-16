@@ -124,7 +124,7 @@ class Framework:
         (name / value pairs) to the local config file for the specified
         client daemon 'client' """
         localConf = path.join(client.daemonDir, 'local.txt')
-        f = open(localConf, "a");
+        f = open(localConf, "a")
         for (key, value) in conf.items():
             f.write("%s=%s\n" % (key, value))
         f.close()
@@ -488,7 +488,7 @@ class Client:
 
     def isAuOK(self, au):
         """ Return true if the top level of the AU has been repaired. """
-        tab = self.getAuPolls(au)
+        tab = self.getAuV1Polls(au)
         for row in tab:
             if (row.has_key('Range') or not row['PollType'] == 'C'):
                 continue
@@ -499,7 +499,7 @@ class Client:
 
     def isContentRepaired(self, au, node):
         """ Return true if the AU has been repaired by a SNCUSS poll """
-        tab = self.getAuPolls(au)
+        tab = self.getAuV1Polls(au)
         for row in tab:
             if not row.has_key('Range'):
                 continue
@@ -536,7 +536,7 @@ class Client:
 
     def isNameRepaired(self, au, node=None):
         """ Return true if the AU has been repaired by non-ranged name poll """
-        tab = self.getAuPolls(au)
+        tab = self.getAuV1Polls(au)
         for row in tab:
             if row.has_key('Range') or not row['PollType'] == 'N':
                 continue
@@ -554,7 +554,7 @@ class Client:
 
     def isRangedNameRepaired(self, au, node=None):
         """ Return true if the AU has been repaired by a ranged name poll """
-        tab = self.getAuPolls(au)
+        tab = self.getAuV1Polls(au)
         for row in tab:
             rowPollType = row['PollType']
             # some rows do not have a range.
@@ -572,12 +572,22 @@ class Client:
         # Poll wasn't found
         return False
 
-    def getAuPolls(self, au, activeOnly=False):
+    def getAuV1Polls(self, au, activeOnly=False):
         """ Return the full poll status of an AU """
         key = 'AU~%s' % urllib.quote(au.auId) # requires a pre-quoted key
         if activeOnly:
             key = key + '&Status~Active'
         (summary, table) = self.__getStatusTable('PollManagerTable', key)
+        return table
+
+    def getAuV3Pollers(self, au):
+        key = 'AU~%s' % urllib.quote(au.auId) # requires a pre-quoted key
+        (summary, table) = self.__getStatusTable('V3PollerTable', key)
+        return table
+
+    def getAuV3Voters(self, au):
+        key = 'AU~%s' % urllib.quote(au.auId) # requires a pre-quoted key
+        (summary, table) = self.__getStatusTable('V3VoterTable', key)
         return table
 
     def getAuNodesWithContent(self, au):
@@ -628,11 +638,29 @@ class Client:
         urllib2.HTTPError """
         get = Get(self.url, self.username, self.password)
         return get.execute()
+
+    def hasV3Poller(self, au):
+        """ Return true if the client has an active V3 Poller """
+        tab = self.getAuV3Pollers(au)
+        for row in tab:
+            if row['auId'] == au.title:
+                return True
+        # Poll wasn't found.
+        return False
+
+    def hasV3Voter(self, au):
+        """ Return true if the client has an active V3 Poller """
+        tab = self.getAuV3Voters(au)
+        for row in tab:
+            if row['auId'] == au.title:
+                return True
+        # Poll wasn't found.
+        return False
             
     def hasTopLevelContentPoll(self, au):
         """ Return true if the client has an active or won top level
         content poll """
-        tab = self.getAuPolls(au)
+        tab = self.getAuV1Polls(au)
         for row in tab:
             if not row['PollType'] == 'C':
                 continue
@@ -644,7 +672,7 @@ class Client:
 
     def hasTopLevelNamePoll(self, au):
         """ Wait for a top level name poll to be called. """
-        tab = self.getAuPolls(au)
+        tab = self.getAuV1Polls(au)
         for row in tab:
             if not row['PollType'] == 'N':
                 continue
@@ -656,7 +684,7 @@ class Client:
 
     def hasSNCUSSPoll(self, au, node):
         """ Wait for a Single-Node CUSS poll for the given AU and node. """
-        tab = self.getAuPolls(au)
+        tab = self.getAuV1Polls(au)
         for row in tab:
             if not (row['PollType'] == 'C' and row.has_key('Range')):
                 continue
@@ -668,7 +696,7 @@ class Client:
 
     def hasLostTopLevelContentPoll(self, au):
         """ Return true if a top level content poll has been lost. """
-        tab = self.getAuPolls(au)
+        tab = self.getAuV1Polls(au)
         for row in tab:
             if not row['PollType'] == 'C':
                 continue
@@ -679,7 +707,7 @@ class Client:
 
     def hasWonTopLevelContentPoll(self, au):
         """ Return true if a top level content poll has been won. """
-        tab = self.getAuPolls(au)
+        tab = self.getAuV1Polls(au)
         for row in tab:
             if not row['PollType'] == 'C':
                 continue
@@ -690,7 +718,7 @@ class Client:
 
     def hasLostTopLevelNamePoll(self, au):
         """ Wait for a top level name poll to be lost. """
-        tab = self.getAuPolls(au)
+        tab = self.getAuV1Polls(au)
         for row in tab:
             if not row['PollType'] == 'N':
                 continue
@@ -701,7 +729,7 @@ class Client:
 
     def hasWonTopLevelNamePoll(self, au):
         """ Wait for a top level name poll to be won. """
-        tab = self.getAuPolls(au)
+        tab = self.getAuV1Polls(au)
         for row in tab:
             if not row['PollType'] == 'N':
                 continue
@@ -712,7 +740,7 @@ class Client:
 
     def hasNamePoll(self, au, node):
         """ Wait for a name poll to run on a given node (won or active) """
-        tab = self.getAuPolls(au)
+        tab = self.getAuV1Polls(au)
         for row in tab:
             if not row['PollType'] == 'N':
                 continue
@@ -728,7 +756,7 @@ class Client:
             url = au.baseUrl
         else:
             url = node.url
-        tab = self.getAuPolls(au)
+        tab = self.getAuV1Polls(au)
         for row in tab:
             if row.has_key('Range') or not row['PollType'] == 'N':
                 continue
@@ -743,7 +771,7 @@ class Client:
             url = au.baseUrl
         else:
             url = node.url
-        tab = self.getAuPolls(au)
+        tab = self.getAuV1Polls(au)
         for row in tab:
             if row.has_key('Range') or not row['PollType'] == 'N':
                 continue
@@ -758,7 +786,7 @@ class Client:
             url = au.baseUrl
         else:
             url = node.url
-        tab = self.getAuPolls(au)
+        tab = self.getAuV1Polls(au)
         for row in tab:
             if not (row['PollType'] == 'N' and row.has_key('Range')):
                 continue
@@ -773,7 +801,7 @@ class Client:
             url = au.baseUrl
         else:
             url = node.url
-        tab = self.getAuPolls(au)
+        tab = self.getAuV1Polls(au)
         for row in tab:
             if not (row['PollType'] == 'N' and row.has_key('Range')):
                 continue
@@ -788,7 +816,7 @@ class Client:
             url = au.baseUrl
         else:
             url = node.url
-        tab = self.getAuPolls(au)
+        tab = self.getAuV1Polls(au)
         for row in tab:
             if not (row['PollType'] == 'N' and row.has_key('Range')):
                 continue
@@ -800,7 +828,7 @@ class Client:
     def hasLostSNCUSSPoll(self, au, node):
         """ Wait for a Single-Node CUSS poll for the given AU and node
         to be lost """
-        tab = self.getAuPolls(au)
+        tab = self.getAuV1Polls(au)
         for row in tab:
             if not (row['PollType'] == 'C' and row.has_key('Range')):
                 continue
@@ -813,7 +841,7 @@ class Client:
     def hasWonSNCUSSContentPoll(self, au, node):
         """ Wait for a Single-Node CUSS poll for the given AU and node
         to be won """
-        tab = self.getAuPolls(au)
+        tab = self.getAuV1Polls(au)
         for row in tab:
             if not (row['PollType'] == 'C' and row.has_key('Range')):
                 continue
@@ -873,6 +901,16 @@ class Client:
             return tbl and tbl[0]['crawl_status'] == 'Successful'
         return self.wait(waitFunc, timeout, sleep)
 
+    def waitForV3Poller(self, au, timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):
+        def waitFunc():
+            return self.hasV3Poller(au)
+        return self.wait(waitFunc, timeout, sleep)
+
+    def waitForV3Voter(self, au, timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):
+        def waitFunc():
+            return self.hasV3Voter(au)
+        return self.wait(waitFunc, timeout, sleep)
+    
     def waitForTopLevelContentPoll(self, au, timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):
         def waitFunc():
             return self.hasTopLevelContentPoll(au)
@@ -915,7 +953,7 @@ class Client:
                                      sleep=DEF_SLEEP):
         """ Block until a top level name poll is lost. """
         def waitFunc():
-            return self.hasLostSNCUSSContentPoll(au, node)
+            return self.hasLostSNCUSSPoll(au, node)
         return self.wait(waitFunc, timeout, sleep)
 
     def waitForWonTopLevelContentPoll(self, au, timeout=DEF_TIMEOUT,
@@ -1292,8 +1330,8 @@ class Client:
             post.add('lfp.badFileNum', au.badFileNum)
         if (au.publisherDown):
             post.add('lfp.pub_down', 'true')
-        if (au.pollingVersion > 0):
-            post.add('lfp.poll_version', au.pollingVersion)
+        if (au.protocolVersion > 0):
+            post.add('lfp.protocol_version', au.protocolVersion)
         post.add('auid', au.auId)
 
         return post
@@ -1373,7 +1411,7 @@ class SimulatedAu:
     def __init__(self, root, depth=-1, branch=-1, numFiles=-1,
                  binFileSize=-1, maxFileName=-1, fileTypes=-1,
                  oddBranchContent=-1, badFileLoc=None, badFileNum=-1,
-                 publisherDown=False, pollingVersion=-1):
+                 publisherDown=False, protocolVersion=-1):
         self.root = root
         self.depth = depth
         self.branch = branch
@@ -1385,7 +1423,7 @@ class SimulatedAu:
         self.badFileLoc = badFileLoc
         self.badFileNum = badFileNum
         self.publisherDown = publisherDown
-        self.pollingVersion = pollingVersion
+        self.protocolVersion = protocolVersion
         self.baseUrl = 'http://www.example.com'
         self.dirStruct = path.join('www.example.com', 'http')
         self.pluginId = 'org.lockss.plugin.simulated.SimulatedPlugin'
@@ -1494,7 +1532,7 @@ class MultipartPost:
         SetCookie header was received. """
 
         (contentType, body) = self.encodeMultipartFormdata(self.postData, self.fileData)
-        length = str(len(body));
+        length = str(len(body))
         h = httplib.HTTP(self.host)
         h.putrequest('POST', self.selector)
         h.putheader("Authorization", self.authHeader)
@@ -1569,7 +1607,7 @@ org.lockss.log.default.level=%(logLevel)s
 #lockss config stuff
 org.lockss.platform.diskSpacePaths=./
 
-org.lockss.config.reloadInterval=2m
+org.lockss.config.reloadInterval=60m
 
 #comm settings
 org.lockss.ui.start=yes

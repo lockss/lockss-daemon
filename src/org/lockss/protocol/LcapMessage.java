@@ -1,5 +1,5 @@
 /*
- * $Id: LcapMessage.java,v 1.58 2005-10-07 23:46:47 smorabito Exp $
+ * $Id: LcapMessage.java,v 1.59 2005-11-16 07:44:09 smorabito Exp $
  */
 
 /*
@@ -58,10 +58,10 @@ public abstract class LcapMessage {
   public static final int SHA_LENGTH = 20;
   public static final byte[] EMPTY_BYTE_ARRAY = new byte[0];
   public static final byte[] signature = { 'l', 'p', 'm' };
-  public static final byte[] pollVersionByte = { '1', '2', '3' };
+  public static final byte[] protocolByte = { '1', '2', '3' };
 
   /* items that are not in the property list */
-  protected int m_pollVersion; // poll version number
+  protected int m_pollProtocol; // poll protocol number
 
   /* items that are in the property list */
   protected PeerIdentity m_originatorID; // the peer identity of the originator
@@ -201,12 +201,12 @@ public abstract class LcapMessage {
     m_pluginVersion = s;
   }
 
-  public int getPollVersion() {
-    return m_pollVersion;
+  public int getProtocolVersion() {
+    return m_pollProtocol;
   }
 
   public void setPollVersion(int vers) {
-    m_pollVersion = vers;
+    m_pollProtocol = vers;
   }
 
   public String getTargetUrl() {
@@ -290,7 +290,7 @@ public abstract class LcapMessage {
   }
 
   public boolean isPollVersionSupported(int vers) {
-    return (vers > 0 && vers <= pollVersionByte.length);
+    return (vers > 0 && vers <= protocolByte.length);
   }
 
 }

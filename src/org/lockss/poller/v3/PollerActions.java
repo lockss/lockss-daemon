@@ -1,5 +1,5 @@
 /*
- * $Id: PollerActions.java,v 1.6 2005-10-11 05:45:39 tlipkis Exp $
+ * $Id: PollerActions.java,v 1.7 2005-11-16 07:44:10 smorabito Exp $
  */
 
 /*
@@ -45,7 +45,7 @@ public class PollerActions {
 
   public static PsmEvent handleProveIntroEffort(PsmEvent evt,
                                                 PsmInterp interp) {
-    PollerUserData ud = getUserData(interp);
+    ParticipantUserData ud = getUserData(interp);
     log.debug("Proving intro effort for poll ID " + ud.getKey());
     // XXX: Generate real poll intro effort, TBD
     byte[] proof = ByteArray.makeRandomBytes(20);
@@ -54,7 +54,7 @@ public class PollerActions {
   }
 
   public static PsmEvent handleSendPoll(PsmEvent evt, PsmInterp interp) {
-    PollerUserData ud = getUserData(interp);
+    ParticipantUserData ud = getUserData(interp);
     log.debug("Sending poll to participant " + ud.getVoterId() + " in poll "
               + ud.getKey());
     try {
@@ -68,20 +68,30 @@ public class PollerActions {
 
   public static PsmEvent handleReceivePollAck(PsmMsgEvent evt,
                                               PsmInterp interp) {
-    PollerUserData ud = getUserData(interp);
+    ParticipantUserData ud = getUserData(interp);
     V3LcapMessage msg = (V3LcapMessage) evt.getMessage();
     log.debug("Received poll ACK from voter " + ud.getVoterId() + " in poll "
         + ud.getKey());
-    // XXX: Check whether the voter wants to participate or not.
-    // For now, assume it does.
+    // XXX: If either of these is null, the voter is declining to
+    // participate in the poll.  But effort is not implemented yet,
+    // so for now we're just checking the voter nonce.
+    byte[] voterPollAckEffortProof = msg.getEffortProof();
     byte[] voterNonce = msg.getVoterNonce();
-    ud.setVoterNonce(voterNonce);
-    return V3Events.evtOk;
+    if (voterNonce == null) {
+      log.debug("Peer " + ud.getVoterId() + " sent no voter nonce, "
+                + "declining to participate in the poll.");
+      // Remove the peer from the poll.
+      ud.removeParticipant();
+      return V3Events.evtError;
+    } else {
+      ud.setVoterNonce(voterNonce);
+      return V3Events.evtOk;
+    }
   }
 
   public static PsmEvent handleVerifyPollAckEffort(PsmEvent evt,
                                                    PsmInterp interp) {
-    PollerUserData ud = getUserData(interp);
+    ParticipantUserData ud = getUserData(interp);
     log.debug("Verifying poll ACK effort for voter " + ud.getVoterId()
         + " in poll " + ud.getKey());
     // XXX: Grab the poll ack effort proof from the Voter State and
@@ -91,7 +101,7 @@ public class PollerActions {
 
   public static PsmEvent handleProveRemainingEffort(PsmEvent evt,
                                                     PsmInterp interp) {
-    PollerUserData ud = getUserData(interp);
+    ParticipantUserData ud = getUserData(interp);
 
     log.debug("Proving remaining effort for voter " + ud.getVoterId()
         + " in poll " + ud.getKey());
@@ -103,7 +113,7 @@ public class PollerActions {
   }
 
   public static PsmEvent handleSendPollProof(PsmEvent evt, PsmInterp interp) {
-    PollerUserData ud = getUserData(interp);
+    ParticipantUserData ud = getUserData(interp);
     log.debug("Sending poll effort proof for voter " + ud.getVoterId()
         + " in poll " + ud.getKey());
     try {
@@ -118,7 +128,7 @@ public class PollerActions {
 
   public static PsmEvent handleReceiveNominate(PsmMsgEvent evt,
                                                PsmInterp interp) {
-    PollerUserData ud = getUserData(interp);
+    ParticipantUserData ud = getUserData(interp);
     V3LcapMessage msg = (V3LcapMessage) evt.getMessage();
     List nominees = msg.getNominees();
     log.debug("Received outer circle nominations from voter " + ud.getVoterId()
@@ -129,7 +139,7 @@ public class PollerActions {
 
   public static PsmEvent handleReceiveVoterReadyToVote(PsmMsgEvent evt,
                                                        PsmInterp interp) {
-    PollerUserData ud = getUserData(interp);
+    ParticipantUserData ud = getUserData(interp);
     V3LcapMessage msg = (V3LcapMessage) evt.getMessage();
     // XXX -- anything we need to verify here?
     return V3Events.evtOk;
@@ -137,7 +147,7 @@ public class PollerActions {
 
   public static PsmEvent handleSendVoteRequest(PsmEvent evt,
                                                PsmInterp interp) {
-    PollerUserData ud = getUserData(interp);
+    ParticipantUserData ud = getUserData(interp);
     V3LcapMessage msg = V3LcapMessageFactory.makeVoteRequestMsg(ud);
     log.debug("Sending vote request to voter " + ud.getVoterId() + " in poll "
         + ud.getKey());
@@ -152,16 +162,18 @@ public class PollerActions {
   }
 
   public static PsmEvent handleReceiveVote(PsmMsgEvent evt, PsmInterp interp) {
-    PollerUserData ud = getUserData(interp);
+    log.debug("Entering 'handleReceiveVote'...");
+    ParticipantUserData ud = getUserData(interp);
     V3LcapMessage msg = (V3LcapMessage) evt.getMessage();
     log.debug("Received vote from voter " + ud.getVoterId() + " in poll "
         + ud.getKey());
+    ud.setVoteComplete(msg.isVoteComplete());
     ud.setVoteBlocks(msg.getVoteBlocks());
     return V3Events.evtOk;
   }
 
   public static PsmEvent handleTallyVote(PsmEvent evt, PsmInterp interp) {
-    PollerUserData ud = getUserData(interp);
+    ParticipantUserData ud = getUserData(interp);
     log.debug("Tallying vote from voter " + ud.getVoterId() + " in poll "
         + ud.getKey());
     ud.tallyVoter();
@@ -170,7 +182,7 @@ public class PollerActions {
 
   public static PsmEvent handleProveRepairEffort(PsmEvent evt,
                                                  PsmInterp interp) {
-    PollerUserData ud = getUserData(interp);
+    ParticipantUserData ud = getUserData(interp);
     log.debug("Proving repair effort for voter " + ud.getVoterId()
         + " in poll " + ud.getKey());
     // XXX: Generate real repair effort proof, TBD
@@ -181,7 +193,7 @@ public class PollerActions {
 
   public static PsmEvent handleSendRepairRequest(PsmEvent evt,
                                                  PsmInterp interp) {
-    PollerUserData ud = getUserData(interp);
+    ParticipantUserData ud = getUserData(interp);
     log.debug("Sending repair request to voter " + ud.getVoterId()
         + " in poll " + ud.getKey());
     try {
@@ -197,7 +209,7 @@ public class PollerActions {
   public static PsmEvent handleReceiveRepair(PsmMsgEvent evt,
                                              PsmInterp interp) {
     // XXX: Implement.
-    PollerUserData ud = getUserData(interp);
+    ParticipantUserData ud = getUserData(interp);
     log.debug("Received repair from voter " + ud.getVoterId() + " in poll "
         + ud.getKey());
     return V3Events.evtOk;
@@ -205,14 +217,14 @@ public class PollerActions {
 
   public static PsmEvent handleProcessRepair(PsmEvent evt, PsmInterp interp) {
     // XXX: Implement.
-    PollerUserData ud = getUserData(interp);
+    ParticipantUserData ud = getUserData(interp);
     log.debug("Processing repair from voter " + ud.getVoterId() + " in poll "
         + ud.getKey());
     return V3Events.evtOk;
   }
 
   public static PsmEvent handleSendReceipt(PsmEvent evt, PsmInterp interp) {
-    PollerUserData ud = getUserData(interp);
+    ParticipantUserData ud = getUserData(interp);
     // XXX: Prove receipt effort, TBD. This should probably be in its own state,
     // something like ProveReceiptEffort.
     byte[] proof = ByteArray.makeRandomBytes(20);
@@ -231,13 +243,13 @@ public class PollerActions {
   }
 
   public static PsmEvent handleError(PsmEvent evt, PsmInterp interp) {
-    PollerUserData ud = getUserData(interp);
+    ParticipantUserData ud = getUserData(interp);
     ud.handleError();
     return V3Events.evtOk;
   }
 
   /* Convenience method to save typing the cast */
-  private static PollerUserData getUserData(PsmInterp interp) {
-    return (PollerUserData)interp.getUserData();
+  private static ParticipantUserData getUserData(PsmInterp interp) {
+    return (ParticipantUserData)interp.getUserData();
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: V1LcapMessage.java,v 1.5 2005-10-07 23:46:47 smorabito Exp $
+ * $Id: V1LcapMessage.java,v 1.6 2005-11-16 07:44:09 smorabito Exp $
  */
 
 /*
@@ -88,7 +88,7 @@ public class V1LcapMessage extends LcapMessage {
 
   protected V1LcapMessage() throws IOException {
     m_props = new EncodedProperty();
-    m_pollVersion = PollSpec.V1_PROTOCOL;
+    m_pollProtocol = Poll.V1_PROTOCOL;
     m_maxSize = Configuration.getIntParam(PARAM_MAX_PKT_SIZE,
 					  DEFAULT_MAX_PKT_SIZE);
   }
@@ -119,7 +119,7 @@ public class V1LcapMessage extends LcapMessage {
     m_opcode = opcode;
     m_entries = entries;
     m_hashAlgorithm = LcapMessage.getDefaultHashAlgorithm();
-    m_pollVersion = ps.getPollVersion();
+    m_pollProtocol = ps.getProtocolVersion();
     m_pluginVersion = ps.getPluginVersion();
     // null the remaining undefined data
     m_startTime = 0;
@@ -150,7 +150,7 @@ public class V1LcapMessage extends LcapMessage {
     m_startTime = 0;
     m_stopTime = 0;
     m_multicast = false;
-    m_pollVersion = trigger.getPollVersion();
+    m_pollProtocol = trigger.getProtocolVersion();
     m_pluginVersion = trigger.getPluginVersion();
   }
 
@@ -176,13 +176,13 @@ public class V1LcapMessage extends LcapMessage {
       }
     }
     // read in the poll version byte and decode
-    m_pollVersion = -1;
+    m_pollProtocol = -1;
     byte ver = dis.readByte();
-    for (int i = 0; i < pollVersionByte.length; i++) {
-      if (pollVersionByte[i] == ver)
-	m_pollVersion = i + 1;
+    for (int i = 0; i < protocolByte.length; i++) {
+      if (protocolByte[i] == ver)
+	m_pollProtocol = i + 1;
     }
-    if (m_pollVersion <= 0) {
+    if (m_pollProtocol <= 0) {
       throw new ProtocolException("Unsupported inbound poll version: " + ver);
     }
     m_multicast = dis.readBoolean();
@@ -231,9 +231,9 @@ public class V1LcapMessage extends LcapMessage {
    * @throws IOException if the packet can not be encoded
    */
   public byte[] encodeMsg() throws IOException {
-    if (!isPollVersionSupported(m_pollVersion))
+    if (!isPollVersionSupported(m_pollProtocol))
       throw new ProtocolException("Unsupported outbound poll version: "
-				  + m_pollVersion);
+				  + m_pollProtocol);
     byte[] prop_bytes = m_props.encode();
     byte[] hash_bytes = computeHash(prop_bytes);
     // build out the remaining packet
@@ -241,7 +241,7 @@ public class V1LcapMessage extends LcapMessage {
     ByteArrayOutputStream baos = new ByteArrayOutputStream(enc_len);
     DataOutputStream dos = new DataOutputStream(baos);
     dos.write(signature);
-    dos.write(pollVersionByte[m_pollVersion - 1]);
+    dos.write(protocolByte[m_pollProtocol - 1]);
     dos.writeBoolean(m_multicast);
     dos.writeByte(m_hopCount);
     dos.writeShort(prop_bytes.length);
@@ -405,8 +405,8 @@ public class V1LcapMessage extends LcapMessage {
 	sb.append(" H:");
 	sb.append(String.valueOf(B64Code.encode(m_hashed)));
       }
-      if (m_pollVersion > 1)
-	sb.append(" ver " + m_pollVersion);
+      if (m_pollProtocol > 1)
+	sb.append(" ver " + m_pollProtocol);
     }
     sb.append("]");
     return sb.toString();
@@ -515,7 +515,7 @@ public class V1LcapMessage extends LcapMessage {
       msg.m_opcode = NO_OP;
       msg.m_hopCount = 0;
       msg.m_verifier = verifier;
-      msg.m_pollVersion = PollSpec.V1_PROTOCOL;
+      msg.m_pollProtocol = Poll.V1_PROTOCOL;
     }
     msg.storeProps();
     return msg;
