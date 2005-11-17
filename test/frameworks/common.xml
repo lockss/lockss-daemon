@@ -722,6 +722,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="1" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
         <property name="attributes.temp" value="barely at a simmer" />
       </property>
 
@@ -742,6 +743,7 @@
 	  <property name="value" value="2" />
 	</property>
         <property name="attributes.color" value="red" />
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="mto3">
@@ -760,6 +762,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="3" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="mto4">
@@ -778,6 +781,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="4" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="mto5">
@@ -796,6 +800,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="5" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="mto6">
@@ -814,6 +819,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="6" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="mto7">
@@ -832,6 +838,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="7" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="mto8">
@@ -850,6 +857,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="8" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="mto9">
@@ -868,6 +876,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="9" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="mto10">
@@ -886,6 +895,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="10" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="mto11">
@@ -904,6 +914,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="11" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="epr2001">
@@ -914,6 +925,7 @@
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://www.poetry.org/" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="electronicpoetryreview2002">
@@ -932,6 +944,7 @@
 	  <property name="key" value="num_issue_range" />
 	  <property name="value" value="3-4" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="electronicpoetryreview2003">
@@ -950,6 +963,7 @@
 	  <property name="key" value="num_issue_range" />
 	  <property name="value" value="5-6" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="assa1">
@@ -968,6 +982,7 @@
 	  <property name="key" value="issue_no." />
 	  <property name="value" value="1" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="assa2">
@@ -986,6 +1001,7 @@
 	  <property name="key" value="issue_no." />
 	  <property name="value" value="2" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="assa3">
@@ -1004,6 +1020,7 @@
 	  <property name="key" value="issue_no." />
 	  <property name="value" value="3" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="assa4">
@@ -1022,6 +1039,7 @@
 	  <property name="key" value="issue_no." />
 	  <property name="value" value="4" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="assa5">
@@ -1040,6 +1058,7 @@
 	  <property name="key" value="issue_no." />
 	  <property name="value" value="5" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="assa6to7">
@@ -1058,6 +1077,7 @@
 	  <property name="key" value="issue_no." />
 	  <property name="value" value="6-7" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="assa8">
@@ -1076,6 +1096,7 @@
 	  <property name="key" value="issue_no." />
 	  <property name="value" value="8" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="assa9">
@@ -1094,6 +1115,7 @@
 	  <property name="key" value="issue_no." />
 	  <property name="value" value="9" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="assa10">
@@ -1112,6 +1134,7 @@
 	  <property name="key" value="issue_no." />
 	  <property name="value" value="10" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="assa11to12">
@@ -1130,6 +1153,7 @@
 	  <property name="key" value="issue_no." />
 	  <property name="value" value="11-12" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="assa13">
@@ -1148,6 +1172,7 @@
 	  <property name="key" value="issue_no." />
 	  <property name="value" value="13" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="assa14">
@@ -1166,6 +1191,7 @@
 	  <property name="key" value="issue_no." />
 	  <property name="value" value="14" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="WHR1">
@@ -1180,6 +1206,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="1" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="WHR2">
@@ -1194,6 +1221,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="2" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="WHR3">
@@ -1208,6 +1236,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="3" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="LeedsICS2002">
@@ -1226,6 +1255,7 @@
 	  <property name="key" value="volume_str" />
 	  <property name="value" value="2002" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="LeedsICS2003">
@@ -1244,6 +1274,7 @@
 	  <property name="key" value="volume_str" />
 	  <property name="value" value="2003" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="LeedsICS200304">
@@ -1262,6 +1293,7 @@
 	  <property name="key" value="volume_str" />
 	  <property name="value" value="200304" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="newjournalofphysics7">
@@ -1284,6 +1316,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="7" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="jopConf8">
@@ -1306,6 +1339,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="8" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <!-- Title: EMLS (Early Modern Literary Studies) -->
@@ -1322,6 +1356,7 @@
 	  <property name="key" value="volume" />
           <property name="value" value="9" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <!-- Title: Other Voices (Other Voices) -->
@@ -1337,6 +1372,7 @@
 	  <property name="key" value="volume" />
           <property name="value" value="2" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
       
       <property name="ahr108">
@@ -1371,6 +1407,7 @@
 	  <property name="key" value="year" />
           <property name="value" value="2003" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="jhc52">
@@ -2395,6 +2432,7 @@
 	  <property name="key" value="year" />
 	  <property name="value" value="2005" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="jimr2004">
@@ -2409,6 +2447,7 @@
 	  <property name="key" value="year" />
 	  <property name="value" value="2004" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="jimr2003">
@@ -2423,6 +2462,7 @@
 	  <property name="key" value="year" />
 	  <property name="value" value="2003" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="jimr2002">
@@ -2437,6 +2477,7 @@
 	  <property name="key" value="year" />
 	  <property name="value" value="2002" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="jimr2001">
@@ -2451,6 +2492,7 @@
 	  <property name="key" value="year" />
 	  <property name="value" value="2001" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="jimr2000">
@@ -2465,6 +2507,7 @@
 	  <property name="key" value="year" />
 	  <property name="value" value="2000" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="jimr1999">
@@ -2479,6 +2522,7 @@
 	  <property name="key" value="year" />
 	  <property name="value" value="1999" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="blackbird2">
@@ -2494,6 +2538,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="2" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="culturallogic2003">
@@ -2509,6 +2554,7 @@
 	  <property name="key" value="year" />
 	  <property name="value" value="2003" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="ecp2004">
@@ -2524,6 +2570,7 @@
           <property name="key" value="year" />
           <property name="value" value="2004" />
         </property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="ejp2004">
@@ -2539,6 +2586,7 @@
 	  <property name="key" value="year" />
 	  <property name="value" value="2004" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="ameriquests2004">
@@ -2588,6 +2636,7 @@
 	  <property name="key" value="year" />
 	  <property name="value" value="2004" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="bmcr2003">
@@ -2603,6 +2652,7 @@
 	  <property name="key" value="year" />
 	  <property name="value" value="2003" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="bmcr2002">
@@ -2618,6 +2668,7 @@
 	  <property name="key" value="year" />
 	  <property name="value" value="2002" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="bmcr2001">
@@ -2633,6 +2684,7 @@
 	  <property name="key" value="year" />
 	  <property name="value" value="2001" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="bmcr1990">
@@ -2648,6 +2700,7 @@
 	  <property name="key" value="year" />
 	  <property name="value" value="1990" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="clcweb2004">
@@ -2667,6 +2720,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="6" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="jcjpc10">
@@ -2682,6 +2736,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="10" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="jrs2004">
@@ -2697,6 +2752,7 @@
 	  <property name="key" value="year" />
 	  <property name="value" value="2004" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="urdu18">
@@ -2712,6 +2768,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="18" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="pm1">
@@ -3553,6 +3610,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="1" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="ncaw2">
@@ -3571,6 +3629,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="2" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="ncaw3">
@@ -3589,6 +3648,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="3" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="ncaw4">
@@ -3607,6 +3667,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="4" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="failbetter2004">
@@ -3621,6 +3682,7 @@
 	  <property name="key" value="year" />
 	  <property name="value" value="2004" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="failbetter2003">
@@ -3635,6 +3697,7 @@
 	  <property name="key" value="year" />
 	  <property name="value" value="2003" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="failbetter2002">
@@ -3649,6 +3712,7 @@
 	  <property name="key" value="year" />
 	  <property name="value" value="2002" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="failbetter2001">
@@ -3663,6 +3727,7 @@
 	  <property name="key" value="year" />
 	  <property name="value" value="2001" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="failbetter2000">
@@ -3677,6 +3742,7 @@
 	  <property name="key" value="year" />
 	  <property name="value" value="2000" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="poetrybay2004">
@@ -3692,6 +3758,7 @@
 	  <property name="key" value="year" />
 	  <property name="value" value="2004" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="poetrybay2005">
@@ -3707,6 +3774,7 @@
 	  <property name="key" value="year" />
 	  <property name="value" value="2005" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="wordswithoutborders2004">
@@ -3722,6 +3790,7 @@
 	  <property name="key" value="year" />
 	  <property name="value" value="2004" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="ambio33">
@@ -5518,6 +5587,7 @@
 	  <property name="key" value="year" />
 	  <property name="value" value="2004" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="arkivoc2003">
@@ -5533,6 +5603,7 @@
 	  <property name="key" value="year" />
 	  <property name="value" value="2003" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="arkivoc2002">
@@ -5548,6 +5619,7 @@
 	  <property name="key" value="year" />
 	  <property name="value" value="2002" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="arkivoc2001">
@@ -5563,6 +5635,7 @@
 	  <property name="key" value="year" />
 	  <property name="value" value="2001" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="arkivoc2000">
@@ -5578,6 +5651,7 @@
 	  <property name="key" value="year" />
 	  <property name="value" value="2000" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="disputatio2004">
@@ -5593,6 +5667,7 @@
 	  <property name="key" value="year" />
 	  <property name="value" value="2004" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="disputatio2003">
@@ -5608,6 +5683,7 @@
 	  <property name="key" value="year" />
 	  <property name="value" value="2003" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="molvis9">
@@ -5623,6 +5699,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="9" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="intermarium2004">
@@ -5642,6 +5719,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="7" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="mitejmes2004">
@@ -5657,6 +5735,7 @@
 	  <property name="key" value="year" />
 	  <property name="value" value="2004" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="pm10">
@@ -5882,6 +5961,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="13" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="jiws2004">
@@ -5897,6 +5977,7 @@
 	  <property name="key" value="year" />
 	  <property name="value" value="2004" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="jiws2005">
@@ -5912,6 +5993,7 @@
 	  <property name="key" value="year" />
 	  <property name="value" value="2005" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="jiws2003">
@@ -5927,6 +6009,7 @@
 	  <property name="key" value="year" />
 	  <property name="value" value="2003" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="jiws2002">
@@ -5942,6 +6025,7 @@
 	  <property name="key" value="year" />
 	  <property name="value" value="2002" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="jiws2001">
@@ -5957,6 +6041,7 @@
 	  <property name="key" value="year" />
 	  <property name="value" value="2001" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="jiws2000">
@@ -5972,6 +6057,7 @@
 	  <property name="key" value="year" />
 	  <property name="value" value="2000" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="cr2004">
@@ -5991,6 +6077,7 @@
 	  <property name="key" value="year" />
 	  <property name="value" value="2003" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="bb2">
@@ -6010,6 +6097,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="2" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
       
 
@@ -6030,6 +6118,7 @@
 	  <property name="key" value="num_issue_range" />
 	  <property name="value" value="39-40" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="genders2003">
@@ -6049,6 +6138,7 @@
 	  <property name="key" value="num_issue_range" />
 	  <property name="value" value="37-38" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="genders2002">
@@ -6068,6 +6158,7 @@
 	  <property name="key" value="num_issue_range" />
 	  <property name="value" value="35-36" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="genders2001">
@@ -6087,6 +6178,7 @@
 	  <property name="key" value="num_issue_range" />
 	  <property name="value" value="33-34" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="genders2000">
@@ -6106,6 +6198,7 @@
 	  <property name="key" value="num_issue_range" />
 	  <property name="value" value="31-32" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="genders1999">
@@ -6125,6 +6218,7 @@
 	  <property name="key" value="num_issue_range" />
 	  <property name="value" value="29-30" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="genders1998">
@@ -6144,6 +6238,7 @@
 	  <property name="key" value="num_issue_range" />
 	  <property name="value" value="27-28" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="locksscard2005">
@@ -6159,6 +6254,7 @@
 	  <property name="key" value="year" />
 	  <property name="value" value="2005" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="locksscard2005unpublished">
@@ -6174,6 +6270,7 @@
 	  <property name="key" value="year" />
 	  <property name="value" value="2005" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="MedievalForum4">
@@ -6189,6 +6286,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="4" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="MedievalForum3">
@@ -6204,6 +6302,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="3" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="MedievalForum2">
@@ -6219,6 +6318,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="2" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="MedievalForum1">
@@ -6234,6 +6334,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="1" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
       
       <property name="19thCAWW1">
@@ -6253,6 +6354,7 @@
 	  <property name="key" value="year" />
 	  <property name="value" value="2002" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="nsr1">
@@ -6267,6 +6369,7 @@
 	  <property name="key" value="volume_str" />
 	  <property name="value" value="1" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="nsr2">
@@ -6281,6 +6384,7 @@
 	  <property name="key" value="volume_str" />
 	  <property name="value" value="2" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="nsr3">
@@ -6295,6 +6399,7 @@
 	  <property name="key" value="volume_str" />
 	  <property name="value" value="3" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="nsr4">
@@ -6309,6 +6414,7 @@
 	  <property name="key" value="volume_str" />
 	  <property name="value" value="4" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="nsr4s1">
@@ -6323,6 +6429,7 @@
 	  <property name="key" value="volume_str" />
 	  <property name="value" value="4S1" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
       
       <property name="nsr5">
@@ -6337,6 +6444,7 @@
 	  <property name="key" value="volume_str" />
 	  <property name="value" value="5" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="nsr5s1">
@@ -6351,6 +6459,7 @@
 	  <property name="key" value="volume_str" />
 	  <property name="value" value="5S1" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
       
       <property name="nsr6">
@@ -6365,6 +6474,7 @@
 	  <property name="key" value="volume_str" />
 	  <property name="value" value="6" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="nsr7">
@@ -6379,6 +6489,7 @@
 	  <property name="key" value="volume_str" />
 	  <property name="value" value="7" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="nsr8">
@@ -6393,6 +6504,7 @@
 	  <property name="key" value="volume_str" />
 	  <property name="value" value="8" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="nsr9">
@@ -6407,6 +6519,7 @@
 	  <property name="key" value="volume_str" />
 	  <property name="value" value="9" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="nsr10">
@@ -6421,6 +6534,7 @@
 	  <property name="key" value="volume_str" />
 	  <property name="value" value="10" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="jbe10">
@@ -6439,6 +6553,7 @@
 	  <property name="key" value="year" />
 	  <property name="value" value="2003" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="jbe9">
@@ -6457,6 +6572,7 @@
 	  <property name="key" value="year" />
 	  <property name="value" value="2002" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="jbe8">
@@ -6475,6 +6591,7 @@
 	  <property name="key" value="year" />
 	  <property name="value" value="2001" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="jbe7">
@@ -6493,6 +6610,7 @@
 	  <property name="key" value="year" />
 	  <property name="value" value="2000" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="jbe6">
@@ -6511,6 +6629,7 @@
 	  <property name="key" value="year" />
 	  <property name="value" value="1999" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="jbe5">
@@ -6529,6 +6648,7 @@
 	  <property name="key" value="year" />
 	  <property name="value" value="1998" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="jbe4">
@@ -6547,6 +6667,7 @@
 	  <property name="key" value="year" />
 	  <property name="value" value="1997" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="jbe3">
@@ -6565,6 +6686,7 @@
 	  <property name="key" value="year" />
 	  <property name="value" value="1996" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="jbe2">
@@ -6583,6 +6705,7 @@
 	  <property name="key" value="year" />
 	  <property name="value" value="1995" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
       <property name="jbe1">
@@ -6601,6 +6724,7 @@
 	  <property name="key" value="year" />
 	  <property name="value" value="1994" />
 	</property>
+        <property name="attributes.rights" value="openaccess" />
       </property>
 
     </property>
