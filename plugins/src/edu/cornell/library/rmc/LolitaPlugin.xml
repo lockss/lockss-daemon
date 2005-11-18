@@ -17,6 +17,10 @@
 <ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">RMC-Lolita</ElementValue>
 </MapElement>
 <MapElement>
+<ElementKey>plugin_version</ElementKey>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">2</ElementValue>
+</MapElement>
+<MapElement>
 <ElementKey>au_def_new_content_crawl</ElementKey>
 <ElementValue xsi:type="java:java.lang.Long" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">31449600000</ElementValue>
 </MapElement>
@@ -24,13 +28,13 @@
 <ElementKey>au_crawlrules</ElementKey>
 <ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 <string xsi:type="java:java.lang.String">4,"^%s", base_url</string>
-<string xsi:type="java:java.lang.String">1,"%sRMC-LOCKSS-manifest.html", base_url</string>
+<string xsi:type="java:java.lang.String">1,"%slolita/RMC-LOCKSS-manifest.html", base_url</string>
 <string xsi:type="java:java.lang.String">1,"%slolita/", base_url</string>
 </ElementValue>
 </MapElement>
 <MapElement>
 <ElementKey>au_start_url</ElementKey>
-<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"%sRMC-LOCKSS-manifest.html", base_url</ElementValue>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"%slolita/RMC-LOCKSS-manifest.html", base_url</ElementValue>
 </MapElement>
 <MapElement>
 <ElementKey>plugin_config_props</ElementKey>
