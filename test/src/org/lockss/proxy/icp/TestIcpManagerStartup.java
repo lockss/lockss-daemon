@@ -62,10 +62,22 @@ public abstract class TestIcpManagerStartup extends LockssTestCase {
     }
   }
 
+  public static class PlatformDisabledPortSetDaemonEnabledPortUnset extends TestIcpManagerStartup {
+    protected void setConfig() {
+      expectedRunning = false;
+      expectedPort = 2048;
+      ConfigurationUtil.addFromArgs(IcpManager.PARAM_PLATFORM_ICP_ENABLED,
+                                    "false",
+                                    IcpManager.PARAM_PLATFORM_ICP_PORT,
+                                    Integer.toString(expectedPort),
+                                    IcpManager.PARAM_ICP_ENABLED,
+                                    "true");
+    }
+  }
+
   public static class PlatformEnabledDaemonDisabled extends TestIcpManagerStartup {
     protected void setConfig() {
-      expectedRunning = true;
-      expectedPort = 2048;
+      expectedRunning = false;
       ConfigurationUtil.addFromArgs(IcpManager.PARAM_PLATFORM_ICP_ENABLED,
                                     "true",
                                     IcpManager.PARAM_PLATFORM_ICP_PORT,
@@ -192,6 +204,7 @@ public abstract class TestIcpManagerStartup extends LockssTestCase {
     return variantSuites(new Class[] {
         PlatformDisabledDaemonDisabled.class,
         PlatformDisabledDaemonEnabled.class,
+        PlatformDisabledPortSetDaemonEnabledPortUnset.class,
         PlatformUnsetDaemonDisabled.class,
         PlatformUnsetDaemonEnabled.class,
         PlatformEnabledDaemonDisabled.class,

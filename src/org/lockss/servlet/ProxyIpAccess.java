@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyIpAccess.java,v 1.17 2005-11-16 04:19:52 thib_gc Exp $
+ * $Id: ProxyIpAccess.java,v 1.17.2.1 2005-11-18 18:43:16 thib_gc Exp $
  */
 
 /*
@@ -177,11 +177,15 @@ public class ProxyIpAccess extends IpAccessControl {
   }
 
   private boolean getDefaultIcpEnable() {
-    return getLockssDaemon().getIcpManager().isIcpServerRunning();
+    return isForm ? formIcpEnable : getLockssDaemon().getIcpManager().isIcpServerRunning();
   }
 
   private String getDefaultIcpPort() {
-    return Integer.toString(getLockssDaemon().getIcpManager().getCurrentPort());
+    String port = formIcpPort;
+    if (StringUtil.isNullString(port)) {
+      port = Integer.toString(getLockssDaemon().getIcpManager().getCurrentPort());
+    }
+    return port;
   }
 
   private static final String AUDIT_FOOT =
@@ -212,9 +216,7 @@ public class ProxyIpAccess extends IpAccessControl {
     layoutEnablePortRow(tbl, AUDIT_ENABLE_NAME, getDefaultAuditEnable(), "audit proxy",
         AUDIT_FOOT, FILTER_FOOT, AUDIT_PORT_NAME, getDefaultAuditPort(),
         resourceMgr.getUsableTcpPorts(AuditProxyManager.SERVER_NAME));
-    if (Configuration.getBooleanParam(IcpManager.PARAM_PLATFORM_ICP_ENABLED,
-                                      true)) {
-      // unset: behave like true
+    if (getLockssDaemon().getIcpManager().isIcpServerAllowed()) {
       layoutEnablePortRow(tbl, ICP_ENABLE_NAME, getDefaultIcpEnable(), "ICP server",
           ICP_FOOT, FILTER_FOOT, ICP_PORT_NAME, getDefaultIcpPort(),
           resourceMgr.getUsableUdpPorts(AuditProxyManager.SERVER_NAME));

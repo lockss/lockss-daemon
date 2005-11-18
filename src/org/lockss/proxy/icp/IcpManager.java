@@ -1,5 +1,5 @@
 /*
- * $Id: IcpManager.java,v 1.15 2005-11-16 16:34:50 thib_gc Exp $
+ * $Id: IcpManager.java,v 1.15.2.1 2005-11-18 18:43:16 thib_gc Exp $
  */
 
 /*
@@ -104,7 +104,15 @@ public class IcpManager
    *         number otherwise.
    */
   public int getCurrentPort() {
-    return isIcpServerRunning() ? port : -1;
+    return getCurrentPort(Configuration.getCurrentConfig());
+  }
+
+  public int getCurrentPort(Configuration theConfig) {
+    try { return theConfig.getInt(PARAM_ICP_PORT); }
+    catch (InvalidParam ipe) { /* drop down */ }
+    try { return theConfig.getInt(PARAM_PLATFORM_ICP_PORT); }
+    catch (InvalidParam ipe) { /* drop down */ }
+    return -1;
   }
 
   /**
@@ -177,8 +185,12 @@ public class IcpManager
     }
   }
 
-  public boolean isIcpServerEnabled() {
-    return isIcpServerEnabled(Configuration.getCurrentConfig());
+  public boolean isIcpServerAllowed() {
+    return isIcpServerAllowed(Configuration.getCurrentConfig());
+  }
+
+  public boolean isIcpServerAllowed(Configuration theConfig) {
+    return theConfig.getBoolean(PARAM_PLATFORM_ICP_ENABLED, true);
   }
 
   /**
@@ -204,10 +216,16 @@ public class IcpManager
         || changedKeys.contains(PARAM_ICP_ENABLED)
         || changedKeys.contains(PARAM_ICP_PORT)) {
       stopSocket();
-      if (theDaemon.isDaemonInited() && isIcpServerEnabled(newConfig)) {
+      if (theDaemon.isDaemonInited() && shouldIcpServerStart(newConfig)) {
         startSocket(newConfig);
       }
     }
+  }
+
+  public boolean shouldIcpServerStart(Configuration theConfig) {
+    return    isIcpServerAllowed(theConfig)
+           && theConfig.getBoolean(PARAM_ICP_ENABLED, false)
+           && getCurrentPort(theConfig) > 0;
   }
 
   /* Inherit documentation */
@@ -215,7 +233,7 @@ public class IcpManager
     super.startService();
     pluginManager = getDaemon().getPluginManager();
     proxyManager = getDaemon().getProxyManager();
-    if (isIcpServerEnabled()) {
+    if (shouldIcpServerStart(Configuration.getCurrentConfig())) {
       resetConfig();
     }
   }
@@ -233,22 +251,10 @@ public class IcpManager
     try {
       logger.debug("startSocket in IcpManager: begin");
 
-      // One of PARAM_ICP_ENABLED or PARAM_PLATFORM_ICP_ENABLED is true
-      try {
-        if (theConfig.getBoolean(PARAM_ICP_ENABLED, false)) {
-          port = theConfig.getInt(PARAM_ICP_PORT);
-        }
-        else {
-          port = theConfig.getInt(PARAM_PLATFORM_ICP_PORT);
-        }
-      } catch (InvalidParam ipe) {
-        StringBuffer buffer = new StringBuffer();
-        buffer.append(PARAM_ICP_PORT);
-        buffer.append(" and ");
-        buffer.append(PARAM_PLATFORM_ICP_PORT);
-        buffer.append(" are both unset in startSocket in IcpManager.");
-        logger.error(buffer.toString());
-        return; // do not start
+      port = getCurrentPort(theConfig);
+      if (port <= 0) {
+        logger.debug("startSocket() called but getCurrentPort() returns an invalid port number.");
+        return; // don't start
       }
 
       resourceManager = getDaemon().getResourceManager();
@@ -282,7 +288,7 @@ public class IcpManager
    * <p>Stops the ICP socket.</p>
    */
   protected void stopSocket() {
-    if (icpSocket != null) {
+    if (isIcpServerRunning()) {
       logger.debug2("stopSocket in IcpManager: action");
       icpSocket.requestStop();
       resourceManager.releaseUdpPort(port, getClass());
@@ -300,35 +306,6 @@ public class IcpManager
     resourceManager = null;
     limiter = null;
     port = -1;
-  }
-
-  private boolean isIcpServerEnabled(Configuration theConfig) {
-    boolean start = false;
-    try {
-      if (theConfig.getBoolean(PARAM_PLATFORM_ICP_ENABLED)) {
-        try {
-          int p = theConfig.getInt(PARAM_PLATFORM_ICP_PORT);
-          start = true; // can reach this statement; must start
-        }
-        catch (InvalidParam ipe) {
-          StringBuffer buffer = new StringBuffer();
-          buffer.append(PARAM_PLATFORM_ICP_ENABLED);
-          buffer.append(" is true but ");
-          buffer.append(PARAM_PLATFORM_ICP_PORT);
-          buffer.append(" is not set.");
-          logger.warning(buffer.toString());
-        }
-      }
-      else {
-        // not allowed to start
-      }
-    }
-    catch (InvalidParam ipe) {
-      // not set; allowed to start
-      start = theConfig.getBoolean(PARAM_ICP_ENABLED,
-                                   DEFAULT_ICP_ENABLED);
-    }
-    return start;
   }
 
   /**
