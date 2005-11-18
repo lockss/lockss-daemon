@@ -1,5 +1,5 @@
 /*
- * $$
+ * $Id: TestIcpManagerStartup.java,v 1.2 2005-11-18 21:40:02 thib_gc Exp $
  */
 
 /*
@@ -62,10 +62,39 @@ public abstract class TestIcpManagerStartup extends LockssTestCase {
     }
   }
 
+  public static class PlatformDisabledDaemonUnset extends TestIcpManagerStartup {
+    protected void setConfig() {
+      expectedRunning = false;
+      ConfigurationUtil.addFromArgs(IcpManager.PARAM_PLATFORM_ICP_ENABLED,
+                                    "false");
+    }
+  }
+
+  public static class PlatformDisabledPortSetDaemonEnabledPortUnset extends TestIcpManagerStartup {
+    protected void setConfig() {
+      expectedRunning = false;
+      ConfigurationUtil.addFromArgs(IcpManager.PARAM_PLATFORM_ICP_ENABLED,
+                                    "false",
+                                    IcpManager.PARAM_PLATFORM_ICP_PORT,
+                                    Integer.toString(2048),
+                                    IcpManager.PARAM_ICP_ENABLED,
+                                    "true");
+    }
+  }
+
+  public static class PlatformDisabledPortUnsetDaemonEnabledPortUnset extends TestIcpManagerStartup {
+    protected void setConfig() {
+      expectedRunning = false;
+      ConfigurationUtil.addFromArgs(IcpManager.PARAM_PLATFORM_ICP_ENABLED,
+                                    "false",
+                                    IcpManager.PARAM_ICP_ENABLED,
+                                    "true");
+    }
+  }
+
   public static class PlatformEnabledDaemonDisabled extends TestIcpManagerStartup {
     protected void setConfig() {
-      expectedRunning = true;
-      expectedPort = 2048;
+      expectedRunning = false;
       ConfigurationUtil.addFromArgs(IcpManager.PARAM_PLATFORM_ICP_ENABLED,
                                     "true",
                                     IcpManager.PARAM_PLATFORM_ICP_PORT,
@@ -87,6 +116,27 @@ public abstract class TestIcpManagerStartup extends LockssTestCase {
                                     "true",
                                     IcpManager.PARAM_ICP_PORT,
                                     Integer.toString(expectedPort));
+    }
+  }
+
+  public static class PlatformEnabledDaemonUnset extends TestIcpManagerStartup {
+    protected void setConfig() {
+      expectedRunning = false;
+      ConfigurationUtil.addFromArgs(IcpManager.PARAM_PLATFORM_ICP_ENABLED,
+                                    "true");
+    }
+  }
+
+  public static class PlatformEnabledPortSetDaemonEnabledPortUnset extends TestIcpManagerStartup {
+    protected void setConfig() {
+      expectedRunning = true;
+      expectedPort = 2048;
+      ConfigurationUtil.addFromArgs(IcpManager.PARAM_PLATFORM_ICP_ENABLED,
+                                    "true",
+                                    IcpManager.PARAM_PLATFORM_ICP_PORT,
+                                    Integer.toString(expectedPort),
+                                    IcpManager.PARAM_ICP_ENABLED,
+                                    "true");
     }
   }
 
@@ -116,6 +166,12 @@ public abstract class TestIcpManagerStartup extends LockssTestCase {
                                     "true",
                                     IcpManager.PARAM_ICP_PORT,
                                     Integer.toString(expectedPort));
+    }
+  }
+
+  public static class PlatformUnsetDaemonUnset extends TestIcpManagerStartup {
+    protected void setConfig() {
+      expectedRunning = false;
     }
   }
 
@@ -156,7 +212,7 @@ public abstract class TestIcpManagerStartup extends LockssTestCase {
 
   }
 
-  protected int expectedPort;
+  protected int expectedPort = -1;
 
   protected boolean expectedRunning;
 
@@ -189,14 +245,23 @@ public abstract class TestIcpManagerStartup extends LockssTestCase {
   protected abstract void setConfig();
 
   public static Test suite() {
+    // Suggestion:
+    // Use reflection to find all inner classes that extend this class
+    // and return the variant suite based on that.
     return variantSuites(new Class[] {
         PlatformDisabledDaemonDisabled.class,
         PlatformDisabledDaemonEnabled.class,
-        PlatformUnsetDaemonDisabled.class,
-        PlatformUnsetDaemonEnabled.class,
+        PlatformDisabledDaemonUnset.class,
+        PlatformDisabledPortSetDaemonEnabledPortUnset.class,
+        PlatformDisabledPortUnsetDaemonEnabledPortUnset.class,
         PlatformEnabledDaemonDisabled.class,
         PlatformEnabledDaemonEnabled.class,
-        PlatformEnabledPortUnsetDaemonEnabledPortUnset.class
+        PlatformEnabledDaemonUnset.class,
+        PlatformEnabledPortSetDaemonEnabledPortUnset.class,
+        PlatformEnabledPortUnsetDaemonEnabledPortUnset.class,
+        PlatformUnsetDaemonDisabled.class,
+        PlatformUnsetDaemonEnabled.class,
+        PlatformUnsetDaemonUnset.class,
     });
   }
 
