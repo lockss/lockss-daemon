@@ -1,5 +1,5 @@
 /*
- * $Id: IcpManager.java,v 1.16 2005-11-18 21:40:02 thib_gc Exp $
+ * $Id: IcpManager.java,v 1.17 2005-11-18 21:41:47 thib_gc Exp $
  */
 
 /*
@@ -107,18 +107,6 @@ public class IcpManager
   }
 
   /**
-   * <p>Determines the port on which the ICP server should be
-   * running, determined using the given configuration object.</p>
-   * @param theConfig a {@link Configuration} instance.
-   * @return A port number if set, a negative number otherwise.
-   */
-  protected int getCurrentPort(Configuration theConfig) {
-    return theConfig.getInt(PARAM_ICP_PORT,
-                            theConfig.getInt(PARAM_PLATFORM_ICP_PORT,
-                                             -1));
-  }
-
-  /**
    * <p>Returns a rate limiter governing the acceptable reception rate
    * of ICP messages.</p>
    * @return This manager's rate limiter.
@@ -192,10 +180,6 @@ public class IcpManager
     return isIcpServerAllowed(Configuration.getCurrentConfig());
   }
 
-  protected boolean isIcpServerAllowed(Configuration theConfig) {
-    return theConfig.getBoolean(PARAM_PLATFORM_ICP_ENABLED, true);
-  }
-
   /**
    * <p>Determines if the ICP server is currently running.</p>
    * @return True if and only if the ICP server is running.
@@ -225,18 +209,6 @@ public class IcpManager
     }
   }
 
-  protected boolean shouldIcpServerStart() {
-    return shouldIcpServerStart(Configuration.getCurrentConfig());
-  }
-
-  protected boolean shouldIcpServerStart(Configuration theConfig) {
-    return    isIcpServerAllowed(theConfig)
-           && theConfig.getBoolean(PARAM_ICP_ENABLED,
-                                   theConfig.getBoolean(PARAM_PLATFORM_ICP_ENABLED,
-                                                        false))
-           && getCurrentPort(theConfig) > 0;
-  }
-
   /* Inherit documentation */
   public void startService() {
     super.startService();
@@ -251,6 +223,34 @@ public class IcpManager
   public void stopService() {
     stopSocket();
     super.stopService();
+  }
+
+  /**
+   * <p>Determines the port on which the ICP server should be
+   * running, determined using the given configuration object.</p>
+   * @param theConfig a {@link Configuration} instance.
+   * @return A port number if set, a negative number otherwise.
+   */
+  protected int getCurrentPort(Configuration theConfig) {
+    return theConfig.getInt(PARAM_ICP_PORT,
+                            theConfig.getInt(PARAM_PLATFORM_ICP_PORT,
+                                             -1));
+  }
+
+  protected boolean isIcpServerAllowed(Configuration theConfig) {
+    return theConfig.getBoolean(PARAM_PLATFORM_ICP_ENABLED, true);
+  }
+
+  protected boolean shouldIcpServerStart() {
+    return shouldIcpServerStart(Configuration.getCurrentConfig());
+  }
+
+  protected boolean shouldIcpServerStart(Configuration theConfig) {
+    return    isIcpServerAllowed(theConfig)
+           && theConfig.getBoolean(PARAM_ICP_ENABLED,
+                                   theConfig.getBoolean(PARAM_PLATFORM_ICP_ENABLED,
+                                                        false))
+           && getCurrentPort(theConfig) > 0;
   }
 
   /**
