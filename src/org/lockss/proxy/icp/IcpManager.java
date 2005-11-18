@@ -1,5 +1,5 @@
 /*
- * $Id: IcpManager.java,v 1.15.2.1 2005-11-18 18:43:16 thib_gc Exp $
+ * $Id: IcpManager.java,v 1.15.2.2 2005-11-18 21:34:46 thib_gc Exp $
  */
 
 /*
@@ -98,21 +98,24 @@ public class IcpManager
   private DatagramSocket udpSocket;
 
   /**
-   * <p>Determines the port on which the ICP server is currently
+   * <p>Determines the port on which the ICP server should be
    * running.</p>
-   * @return A port number if the ICP server is running, a negative
-   *         number otherwise.
+   * @return A port number if set, a negative number otherwise.
    */
   public int getCurrentPort() {
     return getCurrentPort(Configuration.getCurrentConfig());
   }
 
-  public int getCurrentPort(Configuration theConfig) {
-    try { return theConfig.getInt(PARAM_ICP_PORT); }
-    catch (InvalidParam ipe) { /* drop down */ }
-    try { return theConfig.getInt(PARAM_PLATFORM_ICP_PORT); }
-    catch (InvalidParam ipe) { /* drop down */ }
-    return -1;
+  /**
+   * <p>Determines the port on which the ICP server should be
+   * running, determined using the given configuration object.</p>
+   * @param theConfig a {@link Configuration} instance.
+   * @return A port number if set, a negative number otherwise.
+   */
+  protected int getCurrentPort(Configuration theConfig) {
+    return theConfig.getInt(PARAM_ICP_PORT,
+                            theConfig.getInt(PARAM_PLATFORM_ICP_PORT,
+                                             -1));
   }
 
   /**
@@ -189,7 +192,7 @@ public class IcpManager
     return isIcpServerAllowed(Configuration.getCurrentConfig());
   }
 
-  public boolean isIcpServerAllowed(Configuration theConfig) {
+  protected boolean isIcpServerAllowed(Configuration theConfig) {
     return theConfig.getBoolean(PARAM_PLATFORM_ICP_ENABLED, true);
   }
 
@@ -222,9 +225,15 @@ public class IcpManager
     }
   }
 
-  public boolean shouldIcpServerStart(Configuration theConfig) {
+  protected boolean shouldIcpServerStart() {
+    return shouldIcpServerStart(Configuration.getCurrentConfig());
+  }
+
+  protected boolean shouldIcpServerStart(Configuration theConfig) {
     return    isIcpServerAllowed(theConfig)
-           && theConfig.getBoolean(PARAM_ICP_ENABLED, false)
+           && theConfig.getBoolean(PARAM_ICP_ENABLED,
+                                   theConfig.getBoolean(PARAM_PLATFORM_ICP_ENABLED,
+                                                        false))
            && getCurrentPort(theConfig) > 0;
   }
 
@@ -233,7 +242,7 @@ public class IcpManager
     super.startService();
     pluginManager = getDaemon().getPluginManager();
     proxyManager = getDaemon().getProxyManager();
-    if (shouldIcpServerStart(Configuration.getCurrentConfig())) {
+    if (shouldIcpServerStart()) {
       resetConfig();
     }
   }
@@ -312,11 +321,6 @@ public class IcpManager
    * <p>The default ICP enabled flag.</p>
    */
   public static final boolean DEFAULT_ICP_ENABLED = false;
-
-  /**
-   * <p>The default ICP port.</p>
-   */
-  public static final int DEFAULT_ICP_PORT = IcpMessage.ICP_PORT;
 
   /**
    * <p>The ICP enabled flag parameter.</p>

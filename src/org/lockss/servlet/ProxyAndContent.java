@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyAndContent.java,v 1.3 2005-10-21 18:23:33 thib_gc Exp $
+ * $Id: ProxyAndContent.java,v 1.3.2.1 2005-11-18 21:34:45 thib_gc Exp $
  */
 
 /*
@@ -139,17 +139,13 @@ public class ProxyAndContent extends LockssServlet {
   }
 
   private boolean getDefaultIcpEnable() {
-    if (isForm) {
-      return formIcpEnable;
-    }
-    return Configuration.getBooleanParam(IcpManager.PARAM_ICP_ENABLED,
-                                         IcpManager.DEFAULT_ICP_ENABLED);
+    return isForm ? formIcpEnable : getLockssDaemon().getIcpManager().isIcpServerRunning();
   }
 
   private String getDefaultIcpPort() {
     String port = formIcpPort;
     if (StringUtil.isNullString(port)) {
-      port = Configuration.getParam(IcpManager.PARAM_ICP_PORT);
+      port = Integer.toString(getLockssDaemon().getIcpManager().getCurrentPort());
     }
     return port;
   }
