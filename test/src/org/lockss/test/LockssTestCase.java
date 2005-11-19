@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.75 2005-10-19 20:13:06 troberts Exp $
+ * $Id: LockssTestCase.java,v 1.76 2005-11-19 07:14:08 thib_gc Exp $
  */
 
 /*
@@ -36,9 +36,14 @@ import java.util.*;
 import java.io.*;
 import java.net.*;
 import org.lockss.util.*;
+import org.lockss.util.ArrayIterator;
 import org.lockss.config.ConfigManager;
 import org.lockss.daemon.*;
 import junit.framework.*;
+
+import org.apache.commons.collections.*;
+import org.apache.commons.collections.functors.AndPredicate;
+import org.apache.commons.collections.iterators.*;
 import org.apache.oro.text.regex.*;
 
 
@@ -200,6 +205,39 @@ public class LockssTestCase extends TestCase {
       res.addTest(suites[ix]);
     }
     return res;
+  }
+
+  /**
+   * <p>Returns a test suite with the combined tests in all the
+   * nested classes found in <code>thisClass</code> that extend
+   * the <code>extendedClass</code> class.</p>
+   * <p>Typically this will lead to the parameters being
+   * <code>(myTestCase, myTestCase)</code> or
+   * <code>(myTestCase, myTesterClass)</code>.</p>
+   * @param thisClass     The class whose variant nested classes are
+   *                      being extracted by reflection.
+   * @param extendedClass The class that variant classes have to extend
+   *                      in order to be extracted by reflection.
+   * @return A test suite incorporating the tests of all the extracted
+   *         nested classes.
+   * @see #variantSuites(Class[])
+   */
+  public static Test variantSuites(Class thisClass, final Class extendedClass) {
+    ArrayList list = new ArrayList();
+    for (Iterator iter = new FilterIterator(
+            new ObjectArrayIterator(thisClass.getDeclaredClasses()),
+            new Predicate() {
+              public boolean evaluate(Object arg) {
+                return extendedClass.isAssignableFrom((Class)arg);
+              }
+            }) ;
+         iter.hasNext() ; ) {
+      list.add(iter.next());
+    }
+
+    Class[] classes = new Class[list.size()];
+    list.toArray(classes);
+    return variantSuites(classes);
   }
 
   // assertSuccessRate harness

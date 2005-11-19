@@ -1,5 +1,5 @@
 /*
- * $Id: TestIcpManagerStartup.java,v 1.2 2005-11-18 21:40:02 thib_gc Exp $
+ * $Id: TestIcpManagerStartup.java,v 1.3 2005-11-19 07:14:09 thib_gc Exp $
  */
 
 /*
@@ -245,24 +245,7 @@ public abstract class TestIcpManagerStartup extends LockssTestCase {
   protected abstract void setConfig();
 
   public static Test suite() {
-    // Suggestion:
-    // Use reflection to find all inner classes that extend this class
-    // and return the variant suite based on that.
-    return variantSuites(new Class[] {
-        PlatformDisabledDaemonDisabled.class,
-        PlatformDisabledDaemonEnabled.class,
-        PlatformDisabledDaemonUnset.class,
-        PlatformDisabledPortSetDaemonEnabledPortUnset.class,
-        PlatformDisabledPortUnsetDaemonEnabledPortUnset.class,
-        PlatformEnabledDaemonDisabled.class,
-        PlatformEnabledDaemonEnabled.class,
-        PlatformEnabledDaemonUnset.class,
-        PlatformEnabledPortSetDaemonEnabledPortUnset.class,
-        PlatformEnabledPortUnsetDaemonEnabledPortUnset.class,
-        PlatformUnsetDaemonDisabled.class,
-        PlatformUnsetDaemonEnabled.class,
-        PlatformUnsetDaemonUnset.class,
-    });
+    return variantSuites(TestIcpManagerStartup.class, TestIcpManagerStartup.class);
   }
 
 }

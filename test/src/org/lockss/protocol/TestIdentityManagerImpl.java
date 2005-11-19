@@ -1,5 +1,5 @@
 /*
- * $Id: TestIdentityManagerImpl.java,v 1.9 2005-11-16 07:44:08 smorabito Exp $
+ * $Id: TestIdentityManagerImpl.java,v 1.10 2005-11-19 07:14:09 thib_gc Exp $
  */
 
 /*
@@ -78,10 +78,7 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
   }
 
   public static Test suite() {
-    return variantSuites(new Class[] {
-        WithCastor.class,
-        WithXStream.class
-    });
+    return variantSuites(TestIdentityManagerImpl.class, TestIdentityManagerImpl.class);
   }
 
   Object testIdKey;
