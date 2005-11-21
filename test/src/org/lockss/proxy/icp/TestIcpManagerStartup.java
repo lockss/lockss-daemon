@@ -1,5 +1,5 @@
 /*
- * $Id: TestIcpManagerStartup.java,v 1.3 2005-11-19 07:14:09 thib_gc Exp $
+ * $Id: TestIcpManagerStartup.java,v 1.4 2005-11-21 16:33:28 thib_gc Exp $
  */
 
 /*
@@ -245,7 +245,7 @@ public abstract class TestIcpManagerStartup extends LockssTestCase {
   protected abstract void setConfig();
 
   public static Test suite() {
-    return variantSuites(TestIcpManagerStartup.class, TestIcpManagerStartup.class);
+    return variantSuites(TestIcpManagerStartup.class);
   }
 
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.76 2005-11-19 07:14:08 thib_gc Exp $
+ * $Id: LockssTestCase.java,v 1.77 2005-11-21 16:33:27 thib_gc Exp $
  */
 
 /*
@@ -32,19 +32,19 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.test;
 
-import java.util.*;
 import java.io.*;
 import java.net.*;
-import org.lockss.util.*;
-import org.lockss.util.ArrayIterator;
-import org.lockss.config.ConfigManager;
-import org.lockss.daemon.*;
+import java.util.*;
+
 import junit.framework.*;
 
-import org.apache.commons.collections.*;
-import org.apache.commons.collections.functors.AndPredicate;
+import org.apache.commons.collections.Predicate;
 import org.apache.commons.collections.iterators.*;
-import org.apache.oro.text.regex.*;
+import org.apache.oro.text.regex.Pattern;
+import org.lockss.config.ConfigManager;
+import org.lockss.daemon.LockssRunnable;
+import org.lockss.util.*;
+import org.lockss.util.ArrayIterator;
 
 
 public class LockssTestCase extends TestCase {
@@ -222,22 +222,34 @@ public class LockssTestCase extends TestCase {
    *         nested classes.
    * @see #variantSuites(Class[])
    */
-  public static Test variantSuites(Class thisClass, final Class extendedClass) {
+  public static Test variantSuites(Class thisClass, Class extendedClass) {
     ArrayList list = new ArrayList();
-    for (Iterator iter = new FilterIterator(
-            new ObjectArrayIterator(thisClass.getDeclaredClasses()),
-            new Predicate() {
-              public boolean evaluate(Object arg) {
-                return extendedClass.isAssignableFrom((Class)arg);
-              }
-            }) ;
+    for (Iterator iter = new ObjectArrayIterator(thisClass.getDeclaredClasses()) ;
          iter.hasNext() ; ) {
-      list.add(iter.next());
+      Class cla = (Class)iter.next();
+      if (extendedClass.isAssignableFrom(cla)) {
+        list.add(cla);
+      }
     }
 
     Class[] classes = new Class[list.size()];
     list.toArray(classes);
     return variantSuites(classes);
+  }
+
+  /**
+   * <p>Returns a test suite with the combined tests in all the
+   * nested classes found in <code>thisClass</code> that extend it.
+   * <p>This is a convenience call for
+   * <code>variantSuites(thisClass, thisClass)</code>.
+   * @param thisClass     The class whose variant nested subclasses are
+   *                      being extracted by reflection.
+   * @return A test suite incorporating the tests of all the extracted
+   *         nested subclasses.
+   * @see #variantSuites(Class, Class)
+   */
+  public static Test variantSuites(Class thisClass) {
+    return variantSuites(thisClass, thisClass);
   }
 
   // assertSuccessRate harness

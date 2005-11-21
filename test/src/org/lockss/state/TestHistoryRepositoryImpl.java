@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.55 2005-11-19 07:14:09 thib_gc Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.56 2005-11-21 16:33:27 thib_gc Exp $
  */
 
 /*
@@ -81,7 +81,7 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
   }
 
   public static Test suite() {
-    return variantSuites(TestHistoryRepositoryImpl.class, TestHistoryRepositoryImpl.class);
+    return variantSuites(TestHistoryRepositoryImpl.class);
   }
 
   private String tempDirPath;
