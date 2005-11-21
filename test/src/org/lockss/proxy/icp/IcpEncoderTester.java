@@ -1,5 +1,5 @@
 /*
- * $Id: IcpEncoderTester.java,v 1.6 2005-10-11 05:51:04 tlipkis Exp $
+ * $Id: IcpEncoderTester.java,v 1.7 2005-11-21 21:38:24 thib_gc Exp $
  */
 
 /*
@@ -70,8 +70,7 @@ public abstract class IcpEncoderTester extends LockssTestCase {
                        MockIcpMessage.getStandardDestination(),
                        MockIcpMessage.getStandardUdpPort());
       expect(MockIcpMessage.getTestPacket(test), packet);
-      logger.info("testEncoding: end test #" + test);
-
+      logger.info("testEncoding: PASSED test #" + test);
     }
   }
 
