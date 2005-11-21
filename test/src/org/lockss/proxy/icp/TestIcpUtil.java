@@ -1,5 +1,5 @@
 /*
- * $Id: TestIcpUtil.java,v 1.2 2005-10-11 05:51:04 tlipkis Exp $
+ * $Id: TestIcpUtil.java,v 1.3 2005-11-21 21:32:48 thib_gc Exp $
  */
 
 /*
@@ -32,13 +32,51 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.proxy.icp;
 
-import junit.framework.TestCase;
+import java.nio.ByteBuffer;
+
+import org.lockss.test.LockssTestCase;
 
 /**
  * <p>Tests the {@link IcpUtil} class.</p>
  * @author Thib Guicherd-Callin
  */
-public class TestIcpUtil extends TestCase {
+public class TestIcpUtil extends LockssTestCase {
+
+  /**
+   * <p>Tests the {@link IcpUtil#getIpFromBuffer(ByteBuffer, int)}
+   * method.</p>
+   * @throws Exception if something unexpected happens.
+   */
+  public void testGetIpFromBuffer() throws Exception {
+    byte[] array = {
+        (byte)0, (byte)0, (byte)0, (byte)0,
+        (byte)12, (byte)34, (byte)56, (byte)78,
+        (byte)0, (byte)0, (byte)0, (byte)0
+    };
+    ByteBuffer buffer = ByteBuffer.wrap(array);
+    assertEquals(new byte[] {(byte)12, (byte)34, (byte)56, (byte)78},
+                 IcpUtil.getIpFromBuffer(buffer, 4).getAddress());
+  }
+
+  /**
+   * <p>Tests the {@link IcpUtil#getUrlFromBuffer(ByteBuffer, int)}
+   * method.</p>
+   * @throws Exception if something unexpected happens.
+   */
+  public void testGetUrlFromBuffer() throws Exception {
+    byte[] array = {
+        (byte)0, (byte)0, (byte)0, (byte)0,
+        (byte)'h', (byte)'t', (byte)'t', (byte)'p', (byte)':',
+        (byte)'/', (byte)'/', (byte)'w', (byte)'w', (byte)'w',
+        (byte)'.', (byte)'l', (byte)'o', (byte)'c', (byte)'k',
+        (byte)'s', (byte)'s', (byte)'.', (byte)'o', (byte)'r',
+        (byte)'g', (byte)'/', (byte)0, (byte)0,
+        (byte)0, (byte)0, (byte)0, (byte)0
+    };
+    ByteBuffer buffer = ByteBuffer.wrap(array);
+    assertEquals("http://www.lockss.org/",
+                 IcpUtil.getUrlFromBuffer(buffer, 4));
+  }
 
   /**
    * <p>Tests the {@link IcpUtil#isValidOpcode} method.</p>

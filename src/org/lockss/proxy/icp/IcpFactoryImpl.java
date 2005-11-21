@@ -1,5 +1,5 @@
 /*
- * $Id: IcpFactoryImpl.java,v 1.12 2005-10-10 16:34:39 thib_gc Exp $
+ * $Id: IcpFactoryImpl.java,v 1.13 2005-11-21 21:32:48 thib_gc Exp $
  */
 
 /*
@@ -370,25 +370,25 @@ public class IcpFactoryImpl implements IcpFactory {
 
       try {
         // Unconditional processing
-        opcode = in.get(IcpUtil.OFFSET_BYTE_OPCODE);
+        opcode = IcpUtil.getOpcodeFromBuffer(in);
         if (!IcpUtil.isValidOpcode(opcode)) {
           throw new IcpProtocolException("Invalid opcode: " + opcode);
         }
-        version = in.get(IcpUtil.OFFSET_BYTE_VERSION);
+        version = IcpUtil.getVersionFromBuffer(in);
         if (version != IcpMessage.ICP_VERSION) {
           throw new IcpProtocolException("Unknown version: " + version);
         }
-        length = in.getShort(IcpUtil.OFFSET_SHORT_LENGTH);
-        requestNumber = in.getInt(IcpUtil.OFFSET_INT_REQUESTNUMBER);
-        options = in.getInt(IcpUtil.OFFSET_INT_OPTIONS);
-        optionData = in.getInt(IcpUtil.OFFSET_INT_OPTIONDATA);
-        sender = getIpFromStream(in, IcpUtil.OFFSET_INT_SENDER);
+        length = IcpUtil.getLengthFromBuffer(in);
+        requestNumber = IcpUtil.getRequestNumberFromBuffer(in);
+        options = IcpUtil.getOptionsFromBuffer(in);
+        optionData = IcpUtil.getOptionDataFromBuffer(in);
+        sender = IcpUtil.getSenderFromBuffer(in);
 
         switch (opcode) {
           // ... QUERY
           case IcpMessage.ICP_OP_QUERY:
-            requester = getIpFromStream(in, IcpUtil.OFFSET_INT_REQUESTER);
-            payloadUrl = getUrlFromStream(in, IcpUtil.OFFSET_PAYLOAD_QUERY);
+            requester = IcpUtil.getRequesterFromBuffer(in);
+            payloadUrl = IcpUtil.getPayloadUrlFromBuffer(in, true);
             ret = new IcpMessageImpl(opcode,
                                      version,
                                      length,
@@ -399,22 +399,16 @@ public class IcpFactoryImpl implements IcpFactory {
                                      requester,
                                      payloadUrl);
             break;
+
           // ... HIT_OBJECT
           case IcpMessage.ICP_OP_HIT_OBJ:
-            payloadUrl = getUrlFromStream(in, IcpUtil.OFFSET_PAYLOAD_NONQUERY);
-            final int OFFSET_SHORT_PAYLOADLENGTH =
-              IcpUtil.OFFSET_PAYLOAD_NONQUERY + IcpUtil.stringLength(payloadUrl) + 1;
-            payloadLength = in.getShort(OFFSET_SHORT_PAYLOADLENGTH);
-            final int OFFSET_PAYLOADOBJECT =
-              OFFSET_SHORT_PAYLOADLENGTH + 2;
+            payloadUrl = IcpUtil.getPayloadUrlFromBuffer(in, false);
+            payloadLength =
+              IcpUtil.getPayloadObjectLengthFromBuffer(in, payloadUrl);
             payloadObject = new byte[payloadLength];
             byte[] packetData = packet.getData();
-            if (packetData.length - OFFSET_PAYLOADOBJECT != payloadLength) {
-              throw new IcpProtocolException(
-                  "Error while extracting payload object");
-            }
-            System.arraycopy(packetData, OFFSET_PAYLOADOBJECT,
-                payloadObject, 0, payloadLength);
+            IcpUtil.getPayloadObjectFromBytes(
+                packetData, payloadUrl, payloadLength, payloadObject);
             ret = new IcpMessageImpl(opcode,
                                      version,
                                      length,
@@ -426,9 +420,10 @@ public class IcpFactoryImpl implements IcpFactory {
                                      payloadObject,
                                      payloadLength);
             break;
+
           // ... OTHER
           default:
-            payloadUrl = getUrlFromStream(in, IcpUtil.OFFSET_PAYLOAD_NONQUERY);
+            payloadUrl = IcpUtil.getPayloadUrlFromBuffer(in, false);
             ret = new IcpMessageImpl(opcode,
                                      version,
                                      length,
@@ -451,57 +446,6 @@ public class IcpFactoryImpl implements IcpFactory {
       catch (Exception exc) {
         throw new IcpProtocolException(
             "Error while decoding ICP packet", exc);
-      }
-    }
-
-    /**
-     * <p>Reads an IP address from the given stream.</p>
-     * @param in     A byte buffer.
-     * @param offset A byte offset.
-     * @return The IP address obtained from the next 4 bytes of the
-     *         argument stream.
-     * @throws IcpProtocolException if any exception arises.
-     */
-    private IPAddr getIpFromStream(ByteBuffer in, int offset)
-        throws IcpProtocolException {
-      try {
-        byte[] ipBytes = new byte[4];
-        int rawIpInt = in.getInt(offset);
-        for (int ii = ipBytes.length-1 ; ii >= 0 ; ii--) {
-          ipBytes[ii] = (byte)(rawIpInt & 0x000000ff);
-          rawIpInt >>>= 8;
-        }
-        return IPAddr.getByAddress(ipBytes);
-      }
-      catch (Exception exc) {
-        throw new IcpProtocolException(
-            "Error while parsing IP from byte buffer", exc);
-      }
-    }
-
-    /**
-     * <p>Reads a null-terminated URL from the given stream (and
-     * consumes the null byte).</p>
-     * @param in     A byte buffer.
-     * @param offset A byte offset.
-     * @return A URL string obtained from reading bytes from the
-     *         stream.
-     * @throws IcpProtocolException if any exception arises.
-     */
-    private String getUrlFromStream(ByteBuffer in, int offset)
-        throws IcpProtocolException {
-      try {
-        StringBuffer buffer = new StringBuffer();
-        byte one;
-        while ( (one = in.get(offset)) != (byte)0) {
-          buffer.append((char)one);
-          offset++;
-        }
-        return buffer.toString();
-      }
-      catch (Exception exc) {
-        throw new IcpProtocolException(
-            "Error while parsing URL from byte buffer", exc);
       }
     }
 
@@ -600,7 +544,7 @@ public class IcpFactoryImpl implements IcpFactory {
    * =========================
    */
   /**
-   * <p>Implements an ICP message.</p>
+   * <p>An implementation of {@link IcpMessage}.</p>
    * @author Thib Guicherd-Callin
    */
   private static class IcpMessageImpl implements IcpMessage {
@@ -608,68 +552,75 @@ public class IcpFactoryImpl implements IcpFactory {
     /**
      * <p>A length field.<p>
      */
-    private short length;
+    protected short length;
 
     /**
      * <p>An opcode field.</p>
      */
-    private byte opcode;
+    protected byte opcode;
 
     /**
      * <p>An options data field.</p>
      */
-    private int optionData;
+    protected int optionData;
 
     /**
      * <p>An options field.</p>
      */
-    private int options;
+    protected int options;
 
     /**
      * <p>A payload object field.</p>
      */
-    private byte[] payloadObject;
+    protected byte[] payloadObject;
 
     /**
      * <p>A payload length field, which may be different from
      * <code>payloadObject.length</code>.</p>
      */
-    private short payloadObjectLength;
+    protected short payloadObjectLength;
 
     /**
      * <p>A payload URL field.</p>
      */
-    private String payloadUrl;
+    protected String payloadUrl;
 
     /**
      * <p>A requester field.</p>
      */
-    private IPAddr requester;
+    protected IPAddr requester;
 
     /**
      * <p>A request number field.</p>
      */
-    private int requestNumber;
+    protected int requestNumber;
 
     /**
      * <p>A sender field.</p>
      */
-    private IPAddr sender;
+    protected IPAddr sender;
 
     /**
      * <p>A UDP sender field.</p>
      */
-    private IPAddr udpAddress;
+    protected IPAddr udpAddress;
 
     /**
      * <p>A UDP port field.</p>
      */
-    private int udpPort;
+    protected int udpPort;
 
     /**
      * <p>A version field.</p>
      */
-    private byte version;
+    protected byte version;
+
+    /**
+     * <p>Builds a completely shallow message.</p>
+     */
+    protected IcpMessageImpl() {
+      // Shallow object
+    }
 
     /**
      * <p>Builds an ICP query message by invoking
@@ -729,6 +680,7 @@ public class IcpFactoryImpl implements IcpFactory {
                              int optionData,
                              IPAddr sender,
                              String payloadUrl) {
+      this();
       this.opcode = opcode;
       this.version = version;
       this.requestNumber = requestNumber;
@@ -943,6 +895,279 @@ public class IcpFactoryImpl implements IcpFactory {
    * =======================
    */
 
+  /*
+   * begin STATIC NESTED CLASS
+   * =========================
+   */
+  /**
+   * <p>An implementation of {@link IcpDecoder} that returns
+   * ICP messages of type {@link LazyIcpMessageImpl}, which
+   * are parsed lazily.</p>
+   * @author Thib Guicherd-Callin
+   * @see LazyIcpMessageImpl
+   */
+  private static class LazyIcpDecoderImpl implements IcpDecoder {
+
+    /* Inherit documentation */
+    public IcpMessage parseIcp(DatagramPacket packet)
+        throws IcpProtocolException {
+      LazyIcpMessageImpl ret = new LazyIcpMessageImpl(packet);
+      ret.setUdpAddress(new IPAddr(packet.getAddress()));
+      ret.setUdpPort(packet.getPort());
+      return ret;
+    }
+
+  }
+  /*
+   * end STATIC NESTED CLASS
+   * =======================
+   */
+
+  /*
+   * begin STATIC NESTED CLASS
+   * =========================
+   */
+  /**
+   * <p>An implementation of {@link IcpMessage} that is lazily
+   * parsed from raw byte data.</p>
+   * @author Thib Guicherd-Callin
+   */
+  private static class LazyIcpMessageImpl extends IcpMessageImpl {
+
+    /**
+     * <p>The message's underlying raw bytes.</p>
+     */
+    protected byte[] bytes;
+
+    /**
+     * <p>A byte buffer wrapped around {@link bytes}.</p>
+     */
+    protected ByteBuffer in;
+
+    /**
+     * <p>A parsed flag for the length field.</p>
+     */
+    protected boolean parsedLength = false;
+
+    /**
+     * <p>A parsed flag for the opcode field.</p>
+     */
+    protected boolean parsedOpcode = false;
+
+    /**
+     * <p>A parsed flag for the options data field.</p>
+     */
+    protected boolean parsedOptionData = false;
+
+    /**
+     * <p>A parsed flag for the options field.</p>
+     */
+    protected boolean parsedOptions = false;
+
+    /**
+     * <p>A parsed flag for the payload object.</p>
+     */
+    protected boolean parsedPayloadObject = false;
+
+    /**
+     * <p>A parsed flag for the payload object length.</p>
+     */
+    protected boolean parsedPayloadObjectLength = false;
+
+    /**
+     * <p>A parsed flag for the payload URL.</p>
+     */
+    protected boolean parsedPayloadUrl = false;
+
+    /**
+     * <p>A parsed flag for the requester field.</p>
+     */
+    protected boolean parsedRequester = false;
+
+    /**
+     * <p>A parsed flag for the request number field.</p>
+     */
+    protected boolean parsedRequestNumber = false;
+
+    /**
+     * <p>A parsed flag for the sender field.</p>
+     */
+    protected boolean parsedSender = false;
+
+    /**
+     * <p>A parsed flag for the version field.</p>
+     */
+    protected boolean parsedVersion = false;
+
+    /**
+     * <p>Builds a new lazily parsed ICP message based on
+     * the given raw bytes (which are copied).</p>
+     * @param data An array of raw ICP bytes.
+     */
+    protected LazyIcpMessageImpl(byte[] data) {
+      super();
+      bytes = new byte[data.length];
+      System.arraycopy(data, 0, bytes, 0, data.length);
+      in = ByteBuffer.wrap(bytes);
+    }
+
+    /**
+     * <p>Builds a new lazily parsed ICP message based on
+     * the given datagram packet (whose raws bytes are copied).</p>
+     * @param data An ICP datagram packet.
+     * @see #LazyIcpMessageImpl(byte[])
+     */
+    protected LazyIcpMessageImpl(DatagramPacket packet) {
+      this(packet.getData());
+    }
+
+    /* Inherit documentation */
+    public short getLength() {
+      if (!parsedLength) {
+        length = IcpUtil.getLengthFromBuffer(in);
+        parsedLength = true;
+      }
+      return length;
+    }
+
+    /* Inherit documentation */
+    public byte getOpcode() {
+      if (!parsedOpcode) {
+        opcode = IcpUtil.getOpcodeFromBuffer(in);
+        parsedOpcode = true;
+      }
+      return opcode;
+    }
+
+    /* Inherit documentation */
+    public int getOptionData() {
+      if (!parsedOptionData) {
+        optionData = IcpUtil.getOptionDataFromBuffer(in);
+        parsedOptionData = true;
+      }
+      return optionData;
+    }
+
+    /* Inherit documentation */
+    public int getOptions() {
+      if (!parsedOptions) {
+        options = IcpUtil.getOptionsFromBuffer(in);
+        parsedOptions = true;
+      }
+      return options;
+    }
+
+    /* Inherit documentation */
+    public byte[] getPayloadObject() {
+      if (!parsedPayloadObject) {
+        if (getOpcode() == IcpMessage.ICP_OP_HIT_OBJ) {
+          payloadObject = new byte[getPayloadObjectLength()];
+          IcpUtil.getPayloadObjectFromBytes(
+              bytes, getPayloadUrl(), getPayloadObjectLength(), payloadObject);
+        }
+        parsedPayloadObject = true;
+      }
+      return payloadObject;
+    }
+
+    /* Inherit documentation */
+    public short getPayloadObjectLength() {
+      if (!parsedPayloadObjectLength) {
+        if (getOpcode() == IcpMessage.ICP_OP_HIT_OBJ) {
+          payloadObjectLength =
+            IcpUtil.getPayloadObjectLengthFromBuffer(in, getPayloadUrl());
+        }
+        parsedPayloadObjectLength = true;
+      }
+      return payloadObjectLength;
+    }
+
+    /* Inherit documentation */
+    public String getPayloadUrl() {
+      if (!parsedPayloadUrl) {
+        payloadUrl = IcpUtil.getPayloadUrlFromBuffer(in, isQuery());
+        parsedPayloadUrl = true;
+      }
+      return payloadUrl;
+    }
+
+    /* Inherit documentation */
+    public IPAddr getRequester() {
+      if (!parsedRequester) {
+        if (isQuery()) {
+          requester = IcpUtil.getRequesterFromBuffer(in);
+        }
+        parsedRequester = true;
+      }
+      return requester;
+    }
+
+    /* Inherit documentation */
+    public int getRequestNumber() {
+      if (!parsedRequestNumber) {
+        requestNumber = IcpUtil.getRequestNumberFromBuffer(in);
+        parsedRequestNumber = true;
+      }
+      return requestNumber;
+    }
+
+    /* Inherit documentation */
+    public IPAddr getSender() {
+      if (!parsedSender) {
+        sender = IcpUtil.getSenderFromBuffer(in);
+        parsedSender = true;
+      }
+      return sender;
+    }
+
+    /* Inherit documentation */
+    public byte getVersion() {
+      if (!parsedVersion) {
+        version = IcpUtil.getVersionFromBuffer(in);
+        parsedVersion = true;
+      }
+      return version;
+    }
+
+    /**
+     * <p>Returns a detailed string representation of this message
+     * (<strong>warning: causes the entire message to be parsed;
+     * the benefits of lazy parsing are lost after a call to this
+     * method</strong>).</p>
+     * @return A detailed string representation of this message, as
+     *         returned by the parent method
+     *         {@link IcpMessageImpl#toString}.
+     * @see #toString
+     * @see IcpMessageImpl#toString
+     */
+    public String toLongString() {
+      return super.toString();
+    }
+
+    /**
+     * <p>Returns a brief string representation of this message
+     * (with the least possible footprint on lazy parsing).</p>
+     * @return A brief string representation of this message.
+     * @see #toLongString
+     */
+    public String toString() {
+      StringBuffer sb = new StringBuffer();
+      sb.append("[");
+      sb.append(getClass().getName());
+      sb.append(";opcode=");
+      sb.append(getOpcode());
+      sb.append(";payloadUrl=");
+      sb.append(getPayloadUrl());
+      sb.append(";(call toLongString() for detailed string)]");
+      return sb.toString();
+    }
+
+  }
+  /*
+   * end STATIC NESTED CLASS
+   * =======================
+   */
+
   /**
    * <p>Cannot instantiate instances of this class; use static methods
    * instead to obtain service.</p>
@@ -998,6 +1223,11 @@ public class IcpFactoryImpl implements IcpFactory {
   private static IcpEncoder singletonEncoder;
 
   /**
+   * <p>A singleton instance of {@link LazyIcpDecoderImpl}.</p>
+   */
+  private static IcpDecoder singletonLazyDecoder;
+
+  /**
    * <p>Gets an instance of type {@link IcpBuilder.Factory}.</p>
    * @return An ICP builder factory.
    */
@@ -1027,6 +1257,19 @@ public class IcpFactoryImpl implements IcpFactory {
    */
   public static IcpFactory makeIcpFactory() {
     return makeSingleton();
+  }
+
+  /**
+   * <p>Builds a lazy ICP decoder.</p>
+   * <p>Eventually this direct method needs to find a better
+   * hiding place.</p>
+   * @return An instance of type {@link IcpDecoder}.
+   */
+  public static synchronized IcpDecoder makeLazyIcpDecoder() {
+    if (singletonLazyDecoder == null) {
+      singletonLazyDecoder = new LazyIcpDecoderImpl();
+    }
+    return singletonLazyDecoder;
   }
 
   /**

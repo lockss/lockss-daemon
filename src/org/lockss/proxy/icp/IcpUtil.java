@@ -1,5 +1,5 @@
 /*
- * $Id: IcpUtil.java,v 1.4 2005-10-10 16:34:39 thib_gc Exp $
+ * $Id: IcpUtil.java,v 1.5 2005-11-21 21:32:48 thib_gc Exp $
  */
 
 /*
@@ -32,6 +32,10 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.proxy.icp;
 
+import java.nio.ByteBuffer;
+
+import org.lockss.util.IPAddr;
+
 /**
  * <p>Provides utility methods to deal with ICP.</p>
  * @author Thib Guicherd-Callin
@@ -41,56 +45,56 @@ public class IcpUtil {
   /**
    * <p>The byte offset of the opcode field.</p>
    */
-  public static final int OFFSET_BYTE_OPCODE = 0;
+  static final int OFFSET_BYTE_OPCODE = 0;
 
   /**
    * <p>The byte offset of the version field.</p>
    */
-  public static final int OFFSET_BYTE_VERSION = 1;
-
-  /**
-   * <p>The byte offset of the options field.</p>
-   */
-  public static final int OFFSET_INT_OPTIONS = 8;
+  static final int OFFSET_BYTE_VERSION = 1;
 
   /**
    * <p>The byte offset of the option data field.</p>
    */
-  public static final int OFFSET_INT_OPTIONDATA = 12;
+  static final int OFFSET_INT_OPTIONDATA = 12;
+
+  /**
+   * <p>The byte offset of the options field.</p>
+   */
+  static final int OFFSET_INT_OPTIONS = 8;
 
   /**
    * <p>The byte offset of the requester field.</p>
    * <p>The requester field only makes sense if the ICP message is a
    * query.</p>
    */
-  public static final int OFFSET_INT_REQUESTER = 20;
+  static final int OFFSET_INT_REQUESTER = 20;
 
   /**
    * <p>The byte offset of the request number field.</p>
    */
-  public static final int OFFSET_INT_REQUESTNUMBER = 4;
+  static final int OFFSET_INT_REQUESTNUMBER = 4;
 
   /**
    * <p>The byte offset of the sender field.</p>
    */
-  public static final int OFFSET_INT_SENDER = 16;
+  static final int OFFSET_INT_SENDER = 16;
 
   /**
    * <p>The byte offset of the payload field, when the ICP message is
    * not a query.</p>
    */
-  public static final int OFFSET_PAYLOAD_NONQUERY = 20;
+  static final int OFFSET_PAYLOAD_NONQUERY = 20;
 
   /**
    * <p>The byte offset of the payload field, when the ICP message is
    * a query.</p>
    */
-  public static final int OFFSET_PAYLOAD_QUERY = 24;
+  static final int OFFSET_PAYLOAD_QUERY = 24;
 
   /**
    * <p>The byte offset of the length field.</p>
    */
-  public static final int OFFSET_SHORT_LENGTH = 2;
+  static final int OFFSET_SHORT_LENGTH = 2;
 
   /**
    * <p>An array of valid RFC2186 opcode, for fast lookup.</p>
@@ -144,6 +148,184 @@ public class IcpUtil {
   }
 
   /**
+   * <p>Reads an IP address from the given byte buffer.</p>
+   * @param in     A byte buffer.
+   * @param offset A byte offset.
+   * @return The IP address obtained from the 4 bytes at the given
+   *         offset of the argument buffer.
+   * @throws IcpProtocolException if any exception arises.
+   */
+  public static IPAddr getIpFromBuffer(ByteBuffer in, int offset)
+      throws IcpProtocolException {
+    try {
+      byte[] ipBytes = new byte[4];
+      int rawIpInt = in.getInt(offset);
+      for (int ii = ipBytes.length-1 ; ii >= 0 ; --ii) {
+        ipBytes[ii] = (byte)(rawIpInt & 0x000000ff);
+        rawIpInt >>>= 8;
+      }
+      return IPAddr.getByAddress(ipBytes);
+    }
+    catch (Exception exc) {
+      throw new IcpProtocolException(
+          "Error while parsing IP from byte buffer", exc);
+    }
+  }
+
+  /**
+   * <p>Extracts the length field from an ICP buffer.</p>
+   * @param in A byte buffer.
+   * @return The ICP buffer's length field.
+   */
+  public static short getLengthFromBuffer(ByteBuffer in) {
+    return in.getShort(OFFSET_SHORT_LENGTH);
+  }
+
+  /**
+   * <p>Extracts the opcode field from an ICP buffer.</p>
+   * @param in A byte buffer.
+   * @return The ICP buffer's opcode field.
+   */
+  public static byte getOpcodeFromBuffer(ByteBuffer in) {
+    return in.get(IcpUtil.OFFSET_BYTE_OPCODE);
+  }
+
+  /**
+   * <p>Extracts the option data field from an ICP buffer.</p>
+   * @param in A byte buffer.
+   * @return The ICP buffer's option data field.
+   */
+  public static int getOptionDataFromBuffer(ByteBuffer in) {
+    return in.getInt(IcpUtil.OFFSET_INT_OPTIONDATA);
+  }
+
+  /**
+   * <p>Extracts the options field from an ICP buffer.</p>
+   * @param in A byte buffer.
+   * @return The ICP buffer's options field.
+   */
+  public static int getOptionsFromBuffer(ByteBuffer in) {
+    return in.getInt(IcpUtil.OFFSET_INT_OPTIONS);
+  }
+
+  /**
+   * <p>Extracts the payload object from raw ICP bytes.</p>
+   * @param data                A byte array.
+   * @param payloadUrl          The payload URL.
+   * @param payloadObjectLength The length of the payload object.
+   * @param destination         A destination array.
+   * @return The ICP byte buffer's payload object.
+   */
+  public static void getPayloadObjectFromBytes(byte[] data,
+                                               String payloadUrl,
+                                               short payloadObjectLength,
+                                               byte[] destination) {
+    System.arraycopy(data,
+                     OFFSET_PAYLOAD_NONQUERY + stringLength(payloadUrl) + 3,
+                     destination,
+                     0,
+                     payloadObjectLength);
+  }
+
+  /**
+   * <p>Extracts the payload object length field from an ICP buffer.</p>
+   * @param in A byte buffer.
+   * @return The ICP buffer's payload object length field.
+   */
+  public static short getPayloadObjectLengthFromBuffer(ByteBuffer in,
+                                                       String payloadUrl) {
+    return in.getShort(OFFSET_PAYLOAD_NONQUERY + stringLength(payloadUrl) + 1);
+  }
+
+  /**
+   * <p>Extracts the payload URL from an ICP buffer.</p>
+   * @param in      A byte buffer.
+   * @param isQuery True if and only if the ICP message is a query.
+   * @return The ICP buffer's payload URL.
+   */
+  public static String getPayloadUrlFromBuffer(ByteBuffer in,
+                                               boolean isQuery) {
+    try {
+      return getUrlFromBuffer(
+          in, isQuery ? OFFSET_PAYLOAD_QUERY : OFFSET_PAYLOAD_NONQUERY);
+    }
+    catch (IcpProtocolException ipe) {
+      throw new IndexOutOfBoundsException(ipe.getMessage());
+    }
+  }
+
+  /**
+   * <p>Extracts the requester field from a query ICP buffer.</p>
+   * @param in A query ICP buffer.
+   * @return The ICP buffer's requester field.
+   */
+  public static IPAddr getRequesterFromBuffer(ByteBuffer in) {
+    try {
+      return getIpFromBuffer(in, OFFSET_INT_REQUESTER);
+    }
+    catch (IcpProtocolException ipe) {
+      throw new IndexOutOfBoundsException(ipe.getMessage());
+    }
+  }
+
+  /**
+   * <p>Extracts the request number field from an ICP buffer.</p>
+   * @param in A byte buffer.
+   * @return The ICP buffer's request number field.
+   */
+  public static int getRequestNumberFromBuffer(ByteBuffer in) {
+    return in.getInt(IcpUtil.OFFSET_INT_REQUESTNUMBER);
+  }
+
+  /**
+   * <p>Extracts the sender field from an ICP buffer.</p>
+   * @param in A byte buffer.
+   * @return The ICP buffer's sender field.
+   */
+  public static IPAddr getSenderFromBuffer(ByteBuffer in) {
+    try {
+      return getIpFromBuffer(in, OFFSET_INT_SENDER);
+    }
+    catch (IcpProtocolException ipe) {
+      throw new IndexOutOfBoundsException(ipe.getMessage());
+    }
+  }
+
+  /**
+   * <p>Reads a null-terminated URL from the given byte buffer.</p>
+   * @param in     A byte buffer.
+   * @param offset A byte offset.
+   * @return A URL string obtained from reading bytes from the
+   *         argument buffer, starting at the given offset.
+   * @throws IcpProtocolException if any exception arises.
+   */
+  public static String getUrlFromBuffer(ByteBuffer in, int offset)
+      throws IcpProtocolException {
+    try {
+      StringBuffer buffer = new StringBuffer();
+      byte one;
+      while ( (one = in.get(offset)) != (byte)0 ) {
+        buffer.append((char)one);
+        offset++;
+      }
+      return buffer.toString();
+    }
+    catch (Exception exc) {
+      throw new IcpProtocolException(
+          "Error while parsing URL from byte buffer", exc);
+    }
+  }
+
+  /**
+   * <p>Extracts the version field from an ICP buffer.</p>
+   * @param in A byte buffer.
+   * @return The ICP buffer's version field.
+   */
+  public static byte getVersionFromBuffer(ByteBuffer in) {
+    return in.get(IcpUtil.OFFSET_BYTE_VERSION);
+  }
+
+  /**
    * <p>Determines if an opcode is meaningful.</p>
    * @param opcode A potential opcode.
    * @return False if the opcode is unused in the ICP specification,
@@ -159,6 +341,12 @@ public class IcpUtil {
     }
   }
 
+  /**
+   * <p>Computes the length of a {@link String} with the assumption
+   * it was created byte by byte.</p>
+   * @param str A string.
+   * @return The length of the strong's underlying array of characters.
+   */
   public static int stringLength(String str) {
     return str.toCharArray().length;
   }

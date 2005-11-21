@@ -1,5 +1,5 @@
 /*
- * $Id: TestIcpDecoderImpl.java,v 1.4 2005-11-21 21:32:48 thib_gc Exp $
+ * $Id: TestLazyIcpDecoderImpl.java,v 1.1 2005-11-21 21:32:48 thib_gc Exp $
  */
 
 /*
@@ -36,14 +36,18 @@ import org.lockss.proxy.icp.IcpDecoder.Factory;
 
 /**
  * <p>Test class for
- * <code>org.lockss.proxy.icp.IcpFactoryImpl.IcpDecoderImpl</code>.</p>
+ * <code>org.lockss.proxy.icp.IcpFactoryImpl.LazyIcpDecoderImpl</code>.</p>
  * @author Thib Guicherd-Callin
  */
-public class TestIcpDecoderImpl extends IcpDecoderTester {
+public class TestLazyIcpDecoderImpl extends IcpDecoderTester {
 
   /* Inherit documentation */
   protected Factory makeFactory() {
-    return IcpFactoryImpl.makeDecoderFactory();
+    return new IcpDecoder.Factory() {
+      public IcpDecoder makeIcpDecoder() {
+        return IcpFactoryImpl.makeLazyIcpDecoder();
+      }
+    };
   }
 
 }

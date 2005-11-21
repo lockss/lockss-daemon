@@ -1,5 +1,5 @@
 /*
- * $Id: IcpProtocolException.java,v 1.3 2005-10-10 16:34:39 thib_gc Exp $
+ * $Id: IcpProtocolException.java,v 1.4 2005-11-21 21:32:48 thib_gc Exp $
  */
 
 /*
@@ -41,20 +41,34 @@ import java.net.ProtocolException;
  */
 public class IcpProtocolException extends ProtocolException {
 
-
+  /**
+   * <p>Builds a new IcpProtocolException instance.</p>
+   */
   public IcpProtocolException() {
     super();
   }
 
+  /**
+   * <p>Builds a new IcpProtocolException instance
+   * with the given message.</p>
+   */
   public IcpProtocolException(String message) {
     super(message);
   }
 
+  /**
+   * <p>Builds a new IcpProtocolException instance
+   * with the given message and cause.</p>
+   */
   public IcpProtocolException(String message, Throwable cause) {
     super(message);
     initCause(cause);
   }
 
+  /**
+   * <p>Builds a new IcpProtocolException instance
+   * with the given cause.</p>
+   */
   public IcpProtocolException(Throwable cause) {
     super();
     initCause(cause);
