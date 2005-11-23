@@ -1,5 +1,5 @@
 /*
- * $Id: IcpUtil.java,v 1.5 2005-11-21 21:32:48 thib_gc Exp $
+ * $Id: IcpUtil.java,v 1.6 2005-11-23 21:12:36 thib_gc Exp $
  */
 
 /*
@@ -32,9 +32,10 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.proxy.icp;
 
+import java.io.UnsupportedEncodingException;
 import java.nio.ByteBuffer;
 
-import org.lockss.util.IPAddr;
+import org.lockss.util.*;
 
 /**
  * <p>Provides utility methods to deal with ICP.</p>
@@ -136,13 +137,13 @@ public class IcpUtil {
   public static short computeLength(IcpMessage message) {
     int result =
       21 // 20-byte header + null terminator
-      + stringLength(message.getPayloadUrl()); // URL
+      + message.getPayloadUrl().length(); // URL
     if (message.isQuery()) {
       result += 4; // requester field
     }
     if (message.getOpcode() == IcpMessage.ICP_OP_HIT_OBJ) {
       byte[] obj = message.getPayloadObject();
-      result += (obj.length + 2);
+      result += (obj.length + 2); // paylod object length field
     }
     return (short)result;
   }
@@ -221,7 +222,7 @@ public class IcpUtil {
                                                short payloadObjectLength,
                                                byte[] destination) {
     System.arraycopy(data,
-                     OFFSET_PAYLOAD_NONQUERY + stringLength(payloadUrl) + 3,
+                     OFFSET_PAYLOAD_NONQUERY + payloadUrl.length() + 3,
                      destination,
                      0,
                      payloadObjectLength);
@@ -234,23 +235,62 @@ public class IcpUtil {
    */
   public static short getPayloadObjectLengthFromBuffer(ByteBuffer in,
                                                        String payloadUrl) {
-    return in.getShort(OFFSET_PAYLOAD_NONQUERY + stringLength(payloadUrl) + 1);
+    return in.getShort(OFFSET_PAYLOAD_NONQUERY + payloadUrl.length() + 1);
   }
 
   /**
    * <p>Extracts the payload URL from an ICP buffer.</p>
-   * @param in      A byte buffer.
+   * <p>This method is needed only to decode ICP packets whose opcode
+   * is {@link IcpMessage#ICP_OP_HIT_OBJ}. Because the length of the
+   * URL string cannot be inferred from the length field in that case,
+   * this method has to iterate byte by byte until the null terminator,
+   * which is not very efficient. In contrast, for all other already
+   * decoded ICP messages and for all ICP packets whose opcode is not
+   * {@link IcpMessage#ICP_OP_HIT_OBJ}, the length of the URL string can
+   * be computed by {@link #stringLength} and therefore it is much
+   * better to call {@link #getPayloadUrlFromBytes} instead.</p>
+   * @param in      An ICP buffer.
    * @param isQuery True if and only if the ICP message is a query.
    * @return The ICP buffer's payload URL.
+   * @see #getPayloadUrlFromBytes
    */
-  public static String getPayloadUrlFromBuffer(ByteBuffer in,
-                                               boolean isQuery) {
-    try {
-      return getUrlFromBuffer(
-          in, isQuery ? OFFSET_PAYLOAD_QUERY : OFFSET_PAYLOAD_NONQUERY);
+  public static String getPayloadUrlFromBuffer(ByteBuffer in, boolean isQuery) {
+    int offset = isQuery ? OFFSET_PAYLOAD_QUERY : OFFSET_PAYLOAD_NONQUERY;
+    StringBuffer buffer = new StringBuffer();
+    byte one;
+    while ( (one = in.get(offset)) != (byte)0 ) {
+      buffer.append((char)one);
+      offset++;
     }
-    catch (IcpProtocolException ipe) {
-      throw new IndexOutOfBoundsException(ipe.getMessage());
+    return buffer.toString();
+  }
+
+  /**
+   * <p>Lifts the payload URL from an ICP byte buffer.</p>
+   * <p>This method cannot be used in the case of an undecoded
+   * message of type {@link IcpMessage#ICP_OP_HIT_OBJ}, because in
+   * that case it is not possible to infer the length of the URL
+   * string directly; use m{@link #getPayloadUrlFromBuffer} instead,
+   * which is not very efficient.</p>
+   * @param bytes        An ICP byte buffer.
+   * @param isQuery      True if and only if the ICP message is a query.
+   * @param stringLength The length of the URL string.
+   * @return The ICP message's payload URL.
+   * @see #stringLength(short, boolean, boolean, short)
+   */
+  public static String getPayloadUrlFromBytes(byte[] bytes,
+                                              boolean isQuery,
+                                              int stringLength) {
+    try {
+      return new String(
+          bytes,
+          isQuery ? OFFSET_PAYLOAD_QUERY : OFFSET_PAYLOAD_NONQUERY,
+          stringLength,
+          Constants.URL_ENCODING);
+    }
+    catch (UnsupportedEncodingException uee) {
+      // This should never happen; US-ASCII is guaranteed to be available
+      throw new RuntimeException(uee);
     }
   }
 
@@ -292,31 +332,6 @@ public class IcpUtil {
   }
 
   /**
-   * <p>Reads a null-terminated URL from the given byte buffer.</p>
-   * @param in     A byte buffer.
-   * @param offset A byte offset.
-   * @return A URL string obtained from reading bytes from the
-   *         argument buffer, starting at the given offset.
-   * @throws IcpProtocolException if any exception arises.
-   */
-  public static String getUrlFromBuffer(ByteBuffer in, int offset)
-      throws IcpProtocolException {
-    try {
-      StringBuffer buffer = new StringBuffer();
-      byte one;
-      while ( (one = in.get(offset)) != (byte)0 ) {
-        buffer.append((char)one);
-        offset++;
-      }
-      return buffer.toString();
-    }
-    catch (Exception exc) {
-      throw new IcpProtocolException(
-          "Error while parsing URL from byte buffer", exc);
-    }
-  }
-
-  /**
    * <p>Extracts the version field from an ICP buffer.</p>
    * @param in A byte buffer.
    * @return The ICP buffer's version field.
@@ -342,13 +357,25 @@ public class IcpUtil {
   }
 
   /**
-   * <p>Computes the length of a {@link String} with the assumption
-   * it was created byte by byte.</p>
-   * @param str A string.
-   * @return The length of the strong's underlying array of characters.
+   * <p>Computes the length of the URL string in an ICP message.</p>
+   * @param lengthField       The length field of the message.
+   * @param isQuery           True if and only if the message is a query.
+   * @param isHitObj          True if and only if the message is a
+   *                          hit-object.
+   * @param hitObjLengthField If <code>isHitObj</code> is true, the
+   *                          hit object length field of the message.
+   *                          Ignored otherwise (<code>(short)0</code>
+   *                          is appropriate).
+   * @return The length of the message's URL string, excluding its null
+   *         terminator.
    */
-  public static int stringLength(String str) {
-    return str.toCharArray().length;
+  public static int stringLength(short lengthField,
+                                 boolean isQuery,
+                                 boolean isHitObj,
+                                 short hitObjLengthField) {
+    return   lengthField
+           - (isQuery ? 25 : 21) // incl. 1 for null terminator
+           - (isHitObj ? hitObjLengthField + 2 : 0); // incl. 2 for obj length field
   }
 
 }

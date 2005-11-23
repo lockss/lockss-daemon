@@ -1,10 +1,10 @@
 /*
- * $Id: StringUtil.java,v 1.64 2005-10-11 05:48:29 tlipkis Exp $
+ * $Id: StringUtil.java,v 1.65 2005-11-23 21:12:36 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -120,9 +120,24 @@ public class StringUtil {
    * @param separator - String to put between elements
    * @return Concatenated string
    */
-  public static String separatedString(Object arr[], String separator) {
+  public static String separatedString(Object[] arr, String separator) {
     return separatedString(ListUtil.fromArray(arr), "", separator, "",
 			   new StringBuffer()).toString();
+  }
+
+  /**
+   * Concatenate elements of int array into string, with separators
+   * @param arr - Array of int elements
+   * @param separator - String to put between elements
+   * @return Concatenated string
+   */
+  public static String separatedString(int[] arr, String separator) {
+    ArrayList col = new ArrayList(arr.length);
+    for (int ii = 0 ; ii < arr.length ; ++ii) {
+      col.add(Integer.toString(arr[ii]));
+    }
+    return separatedString(col, "", separator, "",
+                           new StringBuffer()).toString();
   }
 
   /**

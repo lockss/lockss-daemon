@@ -1,5 +1,5 @@
 /*
- * $Id: IcpFactoryImpl.java,v 1.13 2005-11-21 21:32:48 thib_gc Exp $
+ * $Id: IcpFactoryImpl.java,v 1.14 2005-11-23 21:12:36 thib_gc Exp $
  */
 
 /*
@@ -366,7 +366,8 @@ public class IcpFactoryImpl implements IcpFactory {
       short payloadLength;
       byte[] payloadObject = null;
       IcpMessage ret = null;
-      ByteBuffer in = ByteBuffer.wrap(packet.getData());
+      byte[] packetData = packet.getData();
+      ByteBuffer in = ByteBuffer.wrap(packetData);
 
       try {
         // Unconditional processing
@@ -388,7 +389,8 @@ public class IcpFactoryImpl implements IcpFactory {
           // ... QUERY
           case IcpMessage.ICP_OP_QUERY:
             requester = IcpUtil.getRequesterFromBuffer(in);
-            payloadUrl = IcpUtil.getPayloadUrlFromBuffer(in, true);
+            payloadUrl = IcpUtil.getPayloadUrlFromBytes(packetData,
+                true, IcpUtil.stringLength(length, true, false, (short)0));
             ret = new IcpMessageImpl(opcode,
                                      version,
                                      length,
@@ -406,7 +408,6 @@ public class IcpFactoryImpl implements IcpFactory {
             payloadLength =
               IcpUtil.getPayloadObjectLengthFromBuffer(in, payloadUrl);
             payloadObject = new byte[payloadLength];
-            byte[] packetData = packet.getData();
             IcpUtil.getPayloadObjectFromBytes(
                 packetData, payloadUrl, payloadLength, payloadObject);
             ret = new IcpMessageImpl(opcode,
@@ -423,7 +424,8 @@ public class IcpFactoryImpl implements IcpFactory {
 
           // ... OTHER
           default:
-            payloadUrl = IcpUtil.getPayloadUrlFromBuffer(in, false);
+            payloadUrl = IcpUtil.getPayloadUrlFromBytes(packetData,
+                false, IcpUtil.stringLength(length, false, false, (short)0));
             ret = new IcpMessageImpl(opcode,
                                      version,
                                      length,
@@ -1085,7 +1087,14 @@ public class IcpFactoryImpl implements IcpFactory {
     /* Inherit documentation */
     public String getPayloadUrl() {
       if (!parsedPayloadUrl) {
-        payloadUrl = IcpUtil.getPayloadUrlFromBuffer(in, isQuery());
+        if (getOpcode() == ICP_OP_HIT_OBJ) {
+          payloadUrl = IcpUtil.getPayloadUrlFromBuffer(in, false);
+        }
+        else {
+          boolean isQuery = isQuery();
+          payloadUrl = IcpUtil.getPayloadUrlFromBytes(bytes, isQuery,
+              IcpUtil.stringLength(getLength(), isQuery, false, (short)0));
+        }
         parsedPayloadUrl = true;
       }
       return payloadUrl;

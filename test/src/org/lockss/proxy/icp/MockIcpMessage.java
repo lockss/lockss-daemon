@@ -1,5 +1,5 @@
 /*
- * $Id: MockIcpMessage.java,v 1.6 2005-10-11 05:51:04 tlipkis Exp $
+ * $Id: MockIcpMessage.java,v 1.7 2005-11-23 21:12:36 thib_gc Exp $
  */
 
 /*
@@ -36,8 +36,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.*;
 import java.util.ArrayList;
 
-import org.lockss.util.Constants;
-import org.lockss.util.IPAddr;
+import org.lockss.util.*;
 
 /**
  * <p>Provides general facilities to generate lightweight mock ICP
@@ -507,21 +506,14 @@ public abstract class MockIcpMessage implements IcpMessage {
    * @return The resulting address.
    */
   private static IPAddr makeAddress(int i1, int i2, int i3, int i4) {
+    int [] arr = new int[] { i1, i2, i3, i4 };
     try {
-      return IPAddr.getByAddress(
-          new int[] { i1, i2, i3, i4} );
+      return IPAddr.getByAddress(arr);
     }
     catch (UnknownHostException uhe) {
-      final String dot = ".";
       StringBuffer buffer = new StringBuffer();
       buffer.append("Could not create mock IP address [");
-      buffer.append(Integer.toString(i1));
-      buffer.append(dot);
-      buffer.append(Integer.toString(i2));
-      buffer.append(dot);
-      buffer.append(Integer.toString(i3));
-      buffer.append(dot);
-      buffer.append(Integer.toString(i4));
+      buffer.append(StringUtil.separatedString(arr, "."));
       buffer.append("].");
       throw new RuntimeException(buffer.toString(), uhe);
     }

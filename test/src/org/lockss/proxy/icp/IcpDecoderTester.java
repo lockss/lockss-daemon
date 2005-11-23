@@ -1,5 +1,5 @@
 /*
- * $Id: IcpDecoderTester.java,v 1.7 2005-11-21 21:32:48 thib_gc Exp $
+ * $Id: IcpDecoderTester.java,v 1.8 2005-11-23 21:12:36 thib_gc Exp $
  */
 
 /*
@@ -33,6 +33,8 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.proxy.icp;
 
 import java.net.DatagramPacket;
+
+import junit.framework.AssertionFailedError;
 
 import org.lockss.proxy.icp.IcpDecoder;
 import org.lockss.proxy.icp.IcpDecoder.Factory;
@@ -70,8 +72,13 @@ public abstract class IcpDecoderTester extends LockssTestCase {
         IcpMessage message = decoder.parseIcp(packet);
         expect(MockIcpMessage.getTestMessage(test), message);
         logger.info("testDecoding: PASSED test #" + test);
-      } catch (IcpProtocolException ipe) {
-        logger.error("testDecoding: FAILED test #" + test);
+      }
+      catch (IcpProtocolException ipe) {
+        logger.error("testDecoding: FAILED test #" + test, ipe);
+        ++failed;
+      }
+      catch (AssertionFailedError afe) {
+        logger.error("testDecoding: FAILED test #" + test, afe);
         ++failed;
       }
     }
