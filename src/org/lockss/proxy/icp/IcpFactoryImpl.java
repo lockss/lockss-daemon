@@ -1,5 +1,5 @@
 /*
- * $Id: IcpFactoryImpl.java,v 1.14 2005-11-23 21:12:36 thib_gc Exp $
+ * $Id: IcpFactoryImpl.java,v 1.15 2005-11-28 17:08:32 thib_gc Exp $
  */
 
 /*
@@ -1237,35 +1237,14 @@ public class IcpFactoryImpl implements IcpFactory {
   private static IcpDecoder singletonLazyDecoder;
 
   /**
-   * <p>Gets an instance of type {@link IcpBuilder.Factory}.</p>
-   * @return An ICP builder factory.
-   */
-  public static IcpBuilder.Factory makeBuilderFactory() {
-    return makeSingleton();
-  }
-
-  /**
-   * <p>Gets an instance of type {@link IcpDecoder.Factory}.</p>
-   * @return An ICP decoder factory.
-   */
-  public static IcpDecoder.Factory makeDecoderFactory() {
-    return makeSingleton();
-  }
-
-  /**
-   * <p>Gets an instance of type {@link IcpEncoder}.</p>
-   * @return An ICP encoder factory.
-   */
-  public static IcpEncoder.Factory makeEncoderFactory() {
-    return makeSingleton();
-  }
-
-  /**
    * <p>Gets an instance of type {@link IcpFactory}.</p>
    * @return An ICP factory.
    */
-  public static IcpFactory makeIcpFactory() {
-    return makeSingleton();
+  public static IcpFactory getInstance() {
+    if (singleton == null) {
+      singleton = new IcpFactoryImpl();
+    }
+    return singleton;
   }
 
   /**
@@ -1279,17 +1258,6 @@ public class IcpFactoryImpl implements IcpFactory {
       singletonLazyDecoder = new LazyIcpDecoderImpl();
     }
     return singletonLazyDecoder;
-  }
-
-  /**
-   * <p>Makes a singleton instance of this class.</p>
-   * @return An ICP factory.
-   */
-  private static synchronized IcpFactory makeSingleton() {
-    if (singleton == null) {
-      singleton = new IcpFactoryImpl();
-    }
-    return singleton;
   }
 
 }

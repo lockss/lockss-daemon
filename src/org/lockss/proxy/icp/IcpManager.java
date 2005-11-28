@@ -1,5 +1,5 @@
 /*
- * $Id: IcpManager.java,v 1.17 2005-11-18 21:41:47 thib_gc Exp $
+ * $Id: IcpManager.java,v 1.18 2005-11-28 17:08:32 thib_gc Exp $
  */
 
 /*
@@ -273,12 +273,11 @@ public class IcpManager
       }
 
       udpSocket = new DatagramSocket(port);
-      icpFactory = IcpFactoryImpl.makeIcpFactory();
+      icpFactory = IcpFactoryImpl.getInstance();
       icpBuilder = icpFactory.makeIcpBuilder();
       icpSocket = new IcpSocketImpl("IcpSocketImpl",
                                     udpSocket,
-                                    icpFactory.makeIcpEncoder(),
-                                    icpFactory.makeIcpDecoder(),
+                                    icpFactory,
                                     this);
       icpSocket.addIcpHandler(this);
       limiter = RateLimiter.getConfiguredRateLimiter(

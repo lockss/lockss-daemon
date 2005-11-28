@@ -1,5 +1,5 @@
 /*
- * $Id: IcpSocketImpl.java,v 1.9 2005-11-18 21:40:02 thib_gc Exp $
+ * $Id: IcpSocketImpl.java,v 1.10 2005-11-28 17:08:29 thib_gc Exp $
  */
 
 /*
@@ -87,22 +87,20 @@ public class IcpSocketImpl extends LockssRunnable implements IcpSocket {
    * @param name       A name for the {@link LockssRunnable} thread.
    * @param socket     A UDP socket ready for a call to
    *                   {@link DatagramSocket#receive(DatagramPacket)}.
-   * @param encoder    An ICP encoder.
-   * @param decoder    An ICP decoder.
+   * @param factory    An ICP encoder.
    * @param icpManager A back reference to the ICP manager.
    */
   public IcpSocketImpl(String name,
                        DatagramSocket socket,
-                       IcpEncoder encoder,
-                       IcpDecoder decoder,
+                       IcpFactory factory,
                        IcpManager icpManager) {
     // Super constructor
     super(name);
 
     // Initialize
     this.socket = socket;
-    this.encoder = encoder;
-    this.decoder = decoder;
+    this.encoder = factory.makeIcpEncoder();
+    this.decoder = factory.makeIcpDecoder();
     this.handlers = new ArrayList();
     this.icpManager = icpManager;
     this.goOn = false;
