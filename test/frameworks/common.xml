@@ -116,6 +116,7 @@
 	<value>org.lockss.plugin.etd.ncstateplugin.NCStateETDLegacyPlugin</value>
 	<value>org.lockss.plugin.etd.gatechplugin.GATechETDPlugin</value>
 	<value>org.lockss.plugin.etd.ukyplugin.UKYETDPlugin</value>
+	<value>edu.cornell.library.rmc.LolitaPlugin</value> 
       </list>
     </property>
 
@@ -7013,6 +7014,16 @@
 	  <property name="value" value="1994" />
 	</property>
         <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="lolita">
+	<property name="title" value="Lolita Exhibition Site" />
+	<property name="journalTitle" value="Lolita Exhibition Site" />
+	<property name="plugin" value="edu.cornell.library.rmc.LolitaPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://rmc.library.cornell.edu/" />
+	</property>
       </property>
 
     </property>
