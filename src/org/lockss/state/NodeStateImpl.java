@@ -1,5 +1,5 @@
 /*
- * $Id: NodeStateImpl.java,v 1.30 2005-10-11 05:47:22 tlipkis Exp $
+ * $Id: NodeStateImpl.java,v 1.31 2005-12-01 23:28:05 troberts Exp $
  */
 
 /*
@@ -33,10 +33,11 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.state;
 
 import java.util.*;
-import org.lockss.util.*;
+
 import org.lockss.app.LockssDaemon;
+import org.lockss.config.*;
 import org.lockss.plugin.CachedUrlSet;
-import org.lockss.config.Configuration;
+import org.lockss.util.*;
 
 /**
  * NodeState contains the current state information for a node, as well as the
@@ -275,8 +276,9 @@ public class NodeStateImpl
         Collections.sort(pollHistories, new HistoryComparator());
       }
       // trim oldest off if exceeds max size
-      int maxHistoryCount = Configuration.getIntParam(
-          PARAM_POLL_HISTORY_MAX_COUNT, DEFAULT_POLL_HISTORY_MAX_COUNT);
+      int maxHistoryCount =
+        CurrentConfig.getIntParam(PARAM_POLL_HISTORY_MAX_COUNT,
+                                  DEFAULT_POLL_HISTORY_MAX_COUNT);
       if (maxHistoryCount <= 0) {
         maxHistoryCount = DEFAULT_POLL_HISTORY_MAX_COUNT;
       }
@@ -284,8 +286,8 @@ public class NodeStateImpl
         pollHistories.remove(maxHistoryCount);
       }
       // trim any remaining which exceed max age
-      long maxHistoryAge = Configuration.getLongParam(
-          PARAM_POLL_HISTORY_MAX_AGE, DEFAULT_POLL_HISTORY_MAX_AGE);
+      long maxHistoryAge = CurrentConfig.getLongParam(PARAM_POLL_HISTORY_MAX_AGE,
+                                                      DEFAULT_POLL_HISTORY_MAX_AGE);
       while (true) {
         int size = pollHistories.size();
         PollHistory history = (PollHistory)pollHistories.get(size-1);

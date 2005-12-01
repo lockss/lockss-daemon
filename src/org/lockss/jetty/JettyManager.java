@@ -1,5 +1,5 @@
 /*
- * $Id: JettyManager.java,v 1.20 2005-10-07 16:19:55 thib_gc Exp $
+ * $Id: JettyManager.java,v 1.21 2005-12-01 23:28:04 troberts Exp $
  */
 
 /*
@@ -32,11 +32,12 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.jetty;
 
-import org.lockss.app.*;
-import org.lockss.util.*;
-import org.lockss.config.Configuration;
-import org.lockss.daemon.*;
 import org.mortbay.http.*;
+
+import org.lockss.app.*;
+import org.lockss.config.*;
+import org.lockss.daemon.ResourceManager;
+import org.lockss.util.*;
 
 /**
  * Abstract base class for LOCKSS managers that use/start Jetty services.
@@ -172,7 +173,7 @@ public abstract class JettyManager
       prioParam = StringUtil.replaceString(PARAM_NAMED_SERVER_PRIORITY,
 					   "<name>", name);
     }
-    return Configuration.getIntParam(prioParam, -1);
+    return CurrentConfig.getIntParam(prioParam, -1);
   }
 
   private void releasePort(String serverName) {

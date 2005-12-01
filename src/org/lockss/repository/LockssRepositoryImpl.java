@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.69 2005-10-20 22:57:49 troberts Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.70 2005-12-01 23:28:02 troberts Exp $
  */
 
 /*
@@ -35,13 +35,11 @@ package org.lockss.repository;
 import java.io.*;
 import java.net.*;
 import java.util.*;
+
 import org.lockss.app.*;
-import org.lockss.config.Configuration;
-import org.lockss.daemon.*;
+import org.lockss.config.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
-import org.apache.commons.collections.map.LRUMap;
-import org.apache.commons.collections.map.ReferenceMap;
 
 /**
  * LockssRepository is used to organize the urls being cached.
@@ -380,7 +378,7 @@ public class LockssRepositoryImpl
 	return repoSpec;
       }
     }
-    return "local:" + Configuration.getParam(PARAM_CACHE_LOCATION);
+    return "local:" + CurrentConfig.getParam(PARAM_CACHE_LOCATION);
   }
 
   public static String getRepositoryRoot(ArchivalUnit au) {

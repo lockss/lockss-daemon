@@ -1,5 +1,5 @@
 /*
- * $Id: MockLcapDatagramComm.java,v 1.6 2005-10-05 23:12:41 troberts Exp $
+ * $Id: MockLcapDatagramComm.java,v 1.7 2005-12-01 23:28:04 troberts Exp $
  */
 
 /*
@@ -31,16 +31,15 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.protocol;
-import java.io.*;
+import java.io.IOException;
 import java.net.*;
-import java.util.*;
-import org.lockss.util.*;
-import org.lockss.util.Queue;
-import org.lockss.config.Configuration;
-import org.lockss.daemon.*;
+import java.util.Vector;
+
 import org.apache.commons.collections.map.LRUMap;
-import org.lockss.app.*;
-import org.lockss.plugin.*;
+
+import org.lockss.config.*;
+import org.lockss.plugin.ArchivalUnit;
+import org.lockss.util.*;
 
 /**
  * MockLcapDatagramComm fakes the LcapDatagramComm layer, storing "sent" packets on queues,
@@ -80,7 +79,7 @@ public class MockLcapDatagramComm extends LcapDatagramComm {
    */
   public void startService() {
     super.startService();
-    configure(Configuration.getCurrentConfig());
+    configure(CurrentConfig.getCurrentConfig());
     start();
   }
 

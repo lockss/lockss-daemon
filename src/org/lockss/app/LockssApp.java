@@ -1,5 +1,5 @@
 /*
- * $Id: LockssApp.java,v 1.11 2005-06-15 01:20:40 tlipkis Exp $
+ * $Id: LockssApp.java,v 1.12 2005-12-01 23:28:01 troberts Exp $
  */
 
 /*
@@ -34,8 +34,7 @@ package org.lockss.app;
 import java.util.*;
 import org.lockss.util.*;
 import org.lockss.mail.*;
-import org.lockss.config.ConfigManager;
-import org.lockss.config.Configuration;
+import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
 import org.lockss.scheduler.*;
@@ -296,7 +295,7 @@ public abstract class LockssApp {
    * @throws Exception if load fails
    */
   protected LockssManager initManager(ManagerDesc desc) throws Exception {
-    String managerName = Configuration.getParam(MANAGER_PREFIX + desc.key,
+    String managerName = CurrentConfig.getParam(MANAGER_PREFIX + desc.key,
 						desc.defaultClass);
     LockssManager mgr = instantiateManager(desc);
     try {
@@ -313,7 +312,7 @@ public abstract class LockssApp {
    * manager class name */
   protected LockssManager instantiateManager(ManagerDesc desc)
       throws Exception {
-    String managerName = Configuration.getParam(MANAGER_PREFIX + desc.key,
+    String managerName = CurrentConfig.getParam(MANAGER_PREFIX + desc.key,
 						desc.defaultClass);
     LockssManager mgr;
     try {
@@ -435,7 +434,7 @@ public abstract class LockssApp {
     configMgr.waitConfig();
     log.info("Config loaded");
 
-    prevExitOnce = Configuration.getBooleanParam(PARAM_APP_EXIT_ONCE,
+    prevExitOnce = CurrentConfig.getBooleanParam(PARAM_APP_EXIT_ONCE,
 						 DEFAULT_APP_EXIT_ONCE);
 
     Configuration.registerConfigurationCallback(new Configuration.Callback() {

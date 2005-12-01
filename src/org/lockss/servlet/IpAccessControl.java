@@ -1,5 +1,5 @@
 /*
- * $Id: IpAccessControl.java,v 1.31 2005-10-19 18:31:27 thib_gc Exp $
+ * $Id: IpAccessControl.java,v 1.32 2005-12-01 23:28:01 troberts Exp $
  */
 
 /*
@@ -32,14 +32,15 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.servlet;
 
-import javax.servlet.*;
-import java.io.*;
+import java.io.IOException;
 import java.util.*;
 
+import javax.servlet.*;
+
 import org.mortbay.html.*;
+
+import org.lockss.config.*;
 import org.lockss.util.*;
-import org.lockss.config.ConfigManager;
-import org.lockss.config.Configuration;
 
 /** Display and update IP access control lists.
  */
@@ -138,7 +139,7 @@ public abstract class IpAccessControl extends LockssServlet {
   }
 
   private Vector getListFromParam(String param) {
-    Configuration config = Configuration.getCurrentConfig();
+    Configuration config = CurrentConfig.getCurrentConfig();
     return new Vector(config.getList(param));
   }
 
@@ -225,7 +226,7 @@ public abstract class IpAccessControl extends LockssServlet {
     props.put(getIncludeParam(), incStr);
     props.put(getExcludeParam(), excStr);
     String plat =
-      Configuration.getParam(ConfigManager.PARAM_PLATFORM_ACCESS_SUBNET);
+      CurrentConfig.getParam(ConfigManager.PARAM_PLATFORM_ACCESS_SUBNET);
     if (!StringUtil.isNullString(plat)) {
       props.put(prefix + SUFFIX_PLATFORM_ACCESS, plat);
     }

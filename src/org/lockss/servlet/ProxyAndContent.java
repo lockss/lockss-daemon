@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyAndContent.java,v 1.4 2005-11-18 21:40:02 thib_gc Exp $
+ * $Id: ProxyAndContent.java,v 1.5 2005-12-01 23:28:01 troberts Exp $
  */
 
 /*
@@ -33,26 +33,19 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.servlet;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.Properties;
+import java.util.*;
 
-import javax.servlet.ServletConfig;
-import javax.servlet.ServletException;
+import javax.servlet.*;
 
 import org.apache.commons.collections.PredicateUtils;
-import org.apache.commons.collections.iterators.FilterIterator;
-import org.apache.commons.collections.iterators.ObjectArrayIterator;
-import org.lockss.config.ConfigManager;
-import org.lockss.config.Configuration;
+import org.apache.commons.collections.iterators.*;
+import org.mortbay.html.*;
+
+import org.lockss.config.*;
 import org.lockss.daemon.ResourceManager;
 import org.lockss.proxy.AuditProxyManager;
 import org.lockss.proxy.icp.IcpManager;
-import org.lockss.util.Logger;
-import org.lockss.util.StringUtil;
-import org.mortbay.html.Form;
-import org.mortbay.html.Page;
-import org.mortbay.html.Table;
+import org.lockss.util.*;
 
 /*
  * This file used to be called AccessControl.java
@@ -126,14 +119,14 @@ public class ProxyAndContent extends LockssServlet {
     if (isForm) {
       return formAuditEnable;
     }
-    return Configuration.getBooleanParam(PARAM_AUDIT_ENABLE,
+    return CurrentConfig.getBooleanParam(PARAM_AUDIT_ENABLE,
                                          DEFAULT_AUDIT_ENABLE);
   }
 
   private String getDefaultAuditPort() {
     String port = formAuditPort;
     if (StringUtil.isNullString(port)) {
-      port = Configuration.getParam(PARAM_AUDIT_PORT);
+      port = CurrentConfig.getParam(PARAM_AUDIT_PORT);
     }
     return port;
   }

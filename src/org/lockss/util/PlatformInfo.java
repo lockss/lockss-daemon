@@ -1,5 +1,5 @@
 /*
- * $Id: PlatformInfo.java,v 1.13 2005-10-11 05:48:30 tlipkis Exp $
+ * $Id: PlatformInfo.java,v 1.14 2005-12-01 23:28:00 troberts Exp $
  */
 
 /*
@@ -32,12 +32,11 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util;
 
-import java.lang.reflect.*;
-import java.util.*;
-import java.text.*;
 import java.io.*;
-import java.net.*;
-import org.lockss.config.Configuration;
+import java.text.*;
+import java.util.*;
+
+import org.lockss.config.*;
 
 /** Utilities to communicate with platform to get info or take action not
  * possible from Java */
@@ -83,17 +82,17 @@ public class PlatformInfo {
    * else java.io.tmpdir System property
    */
   public static String getSystemTempDir() {
-    Configuration config = Configuration.getCurrentConfig();
+    Configuration config = CurrentConfig.getCurrentConfig();
     return config.get(PARAM_TMPDIR, System.getProperty("java.io.tmpdir"));
   }
 
   public List getUnfilteredTcpPorts() {
-    Configuration config = Configuration.getCurrentConfig();
+    Configuration config = CurrentConfig.getCurrentConfig();
     return config.getList(PARAM_UNFILTERED_TCP_PORTS);
   }
 
   public List getUnfilteredUdpPorts() {
-    Configuration config = Configuration.getCurrentConfig();
+    Configuration config = CurrentConfig.getCurrentConfig();
     return config.getList(PARAM_UNFILTERED_UDP_PORTS);
   }
 

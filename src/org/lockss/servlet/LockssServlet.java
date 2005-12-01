@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.77 2005-11-02 18:15:07 thib_gc Exp $
+ * $Id: LockssServlet.java,v 1.78 2005-12-01 23:28:01 troberts Exp $
  */
 
 /*
@@ -32,22 +32,23 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.servlet;
 
-import javax.servlet.http.*;
-import javax.servlet.*;
 import java.io.*;
+import java.net.*;
 import java.util.*;
 import java.util.List;
-import java.net.*;
 
+import javax.servlet.*;
+import javax.servlet.http.*;
+
+import org.apache.commons.collections.Predicate;
+import org.apache.commons.collections.iterators.*;
 import org.mortbay.html.*;
 import org.mortbay.servlet.MultiPartRequest;
-import org.apache.commons.collections.Predicate;
-import org.apache.commons.collections.iterators.FilterIterator;
-import org.apache.commons.collections.iterators.ObjectArrayIterator;
+
 import org.lockss.app.*;
+import org.lockss.config.*;
 import org.lockss.servlet.BatchAuConfig.Verb;
 import org.lockss.util.*;
-import org.lockss.config.Configuration;
 
 /** Abstract base class for LOCKSS servlets
  */
@@ -278,7 +279,7 @@ public abstract class LockssServlet extends HttpServlet
       reqURL = new URL(UrlUtil.getRequestURL(req));
       adminAddr = req.getParameter("admin");
       if (adminAddr == null) {
-	adminAddr = Configuration.getParam(PARAM_ADMIN_ADDRESS);
+	adminAddr = CurrentConfig.getParam(PARAM_ADMIN_ADDRESS);
       }
       adminHost = reqURL.getHost();
       client = req.getParameter("client");
@@ -313,7 +314,7 @@ public abstract class LockssServlet extends HttpServlet
   }
 
   protected void setSessionTimeout(HttpSession session) {
-    Configuration config = Configuration.getCurrentConfig();
+    Configuration config = CurrentConfig.getCurrentConfig();
      long time = config.getTimeInterval(PARAM_UI_SESSION_TIMEOUT,
 					DEFAULT_UI_SESSION_TIMEOUT);
      if (session.isNew()) {
@@ -358,7 +359,7 @@ public abstract class LockssServlet extends HttpServlet
   // localIPAddress prop, might not really be our address (if we are
   // behind NAT).
   String getLcapIPAddr() {
-    String ip = Configuration.getParam(PARAM_LOCAL_IP);
+    String ip = CurrentConfig.getParam(PARAM_LOCAL_IP);
     if (ip.length() <= 0)  {
       return getLocalIPAddr();
     }
@@ -929,7 +930,7 @@ public abstract class LockssServlet extends HttpServlet
     ServletUtil.layoutChooseSets(this, page, chooseSets,
         hiddenActionName, hiddenVerbName, verb);
   }
-  
+
   protected void layoutEnablePortRow(Table table,
       String enableFieldName, boolean defaultEnable,
       String enableDescription, String enableFootnote,

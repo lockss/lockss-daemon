@@ -1,5 +1,5 @@
 /*
- * $Id: IcpManager.java,v 1.18 2005-11-28 17:08:32 thib_gc Exp $
+ * $Id: IcpManager.java,v 1.19 2005-12-01 23:28:02 troberts Exp $
  */
 
 /*
@@ -36,8 +36,8 @@ import java.io.IOException;
 import java.net.*;
 
 import org.lockss.app.*;
-import org.lockss.config.Configuration;
-import org.lockss.config.Configuration.*;
+import org.lockss.config.*;
+import org.lockss.config.Configuration.Differences;
 import org.lockss.daemon.ResourceManager;
 import org.lockss.plugin.*;
 import org.lockss.proxy.ProxyManager;
@@ -103,7 +103,7 @@ public class IcpManager
    * @return A port number if set, a negative number otherwise.
    */
   public int getCurrentPort() {
-    return getCurrentPort(Configuration.getCurrentConfig());
+    return getCurrentPort(CurrentConfig.getCurrentConfig());
   }
 
   /**
@@ -177,7 +177,7 @@ public class IcpManager
   }
 
   public boolean isIcpServerAllowed() {
-    return isIcpServerAllowed(Configuration.getCurrentConfig());
+    return isIcpServerAllowed(CurrentConfig.getCurrentConfig());
   }
 
   /**
@@ -242,7 +242,7 @@ public class IcpManager
   }
 
   protected boolean shouldIcpServerStart() {
-    return shouldIcpServerStart(Configuration.getCurrentConfig());
+    return shouldIcpServerStart(CurrentConfig.getCurrentConfig());
   }
 
   protected boolean shouldIcpServerStart(Configuration theConfig) {
@@ -281,7 +281,7 @@ public class IcpManager
                                     this);
       icpSocket.addIcpHandler(this);
       limiter = RateLimiter.getConfiguredRateLimiter(
-          Configuration.getCurrentConfig(), limiter,
+          CurrentConfig.getCurrentConfig(), limiter,
           PARAM_ICP_INCOMING_RATE, DEFAULT_ICP_INCOMING_RATE);
       new Thread(icpSocket).start();
       logger.debug("startSocket in IcpManager: end");

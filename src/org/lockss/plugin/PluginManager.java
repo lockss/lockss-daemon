@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.151 2005-10-19 20:13:05 troberts Exp $
+ * $Id: PluginManager.java,v 1.152 2005-12-01 23:28:01 troberts Exp $
  */
 
 /*
@@ -34,7 +34,7 @@ package org.lockss.plugin;
 
 import java.io.*;
 import java.net.*;
-import java.security.*;
+import java.security.KeyStore;
 import java.util.*;
 import java.util.jar.*;
 
@@ -42,10 +42,10 @@ import org.apache.commons.collections.*;
 
 import org.lockss.app.*;
 import org.lockss.config.*;
-import org.lockss.crawler.*;
+import org.lockss.crawler.CrawlManager;
 import org.lockss.daemon.*;
-import org.lockss.plugin.definable.*;
-import org.lockss.poller.*;
+import org.lockss.plugin.definable.DefinablePlugin;
+import org.lockss.poller.PollSpec;
 import org.lockss.repository.*;
 import org.lockss.util.*;
 
@@ -236,7 +236,7 @@ public class PluginManager
       return;
     }
 
-    Configuration config = Configuration.getCurrentConfig();
+    Configuration config = CurrentConfig.getCurrentConfig();
     log.debug("Initializing loadable plugin registries before starting AUs");
     initLoadablePluginRegistries(config.getList(PARAM_PLUGIN_REGISTRIES));
     initPluginRegistry(config);
@@ -1029,9 +1029,9 @@ public class PluginManager
    * (package-level access for unit testing)
    */
   int getPreferredPluginType() {
-    String preferredPlugin = Configuration.
-      getCurrentConfig().get(PARAM_PREFERRED_PLUGIN_TYPE,
-			     DEFAULT_PREFERRED_PLUGIN_TYPE);
+    String preferredPlugin =
+      CurrentConfig.getCurrentConfig().get(PARAM_PREFERRED_PLUGIN_TYPE,
+                                           DEFAULT_PREFERRED_PLUGIN_TYPE);
 
     if (StringUtil.equalStringsIgnoreCase(preferredPlugin.trim(), "xml")) {
       return PREFER_XML_PLUGIN;
@@ -1532,7 +1532,7 @@ public class PluginManager
    * Initialize the keystore.
    */
   private void initKeystore() {
-    Configuration config = Configuration.getCurrentConfig();
+    Configuration config = CurrentConfig.getCurrentConfig();
 
     try {
       String keystoreLoc =

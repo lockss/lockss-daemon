@@ -1,5 +1,5 @@
 /*
- * $Id: Logger.java,v 1.44 2005-10-05 23:12:40 troberts Exp $
+ * $Id: Logger.java,v 1.45 2005-12-01 23:28:00 troberts Exp $
  */
 
 /*
@@ -32,12 +32,10 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util;
 import java.util.*;
-import java.io.*;
-import java.net.*;
+
 import org.apache.commons.collections.map.ReferenceMap;
 
-import org.lockss.config.Configuration;
-import org.lockss.daemon.*;
+import org.lockss.config.*;
 
 /**
  * <code>Logger</code> provides message logging functions.
@@ -269,9 +267,9 @@ public class Logger {
   static int getConfiguredLevel(String name, String defaultParamName,
 				int defaultLevel) {
     String levelName =
-      Configuration.getParam(StringUtil.replaceString(PARAM_LOG_LEVEL,
-						      "<logname>", name),
-			     Configuration.getParam(defaultParamName));
+      CurrentConfig.getParam(StringUtil.replaceString(PARAM_LOG_LEVEL,
+                                                      "<logname>", name),
+                                                      CurrentConfig.getParam(defaultParamName));
     int level = defaultLevel;
     if (levelName != null) {
       try {
@@ -473,7 +471,7 @@ public class Logger {
    */
   private static void setLogTargets() {
     List tgts =
-      targetListFromString(Configuration.getParam(PARAM_LOG_TARGETS));
+      targetListFromString(CurrentConfig.getParam(PARAM_LOG_TARGETS));
     if (tgts != null && !tgts.isEmpty()) {
       setTargets(tgts);
     } else {

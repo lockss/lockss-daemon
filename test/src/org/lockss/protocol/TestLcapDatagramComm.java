@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapDatagramComm.java,v 1.6 2005-03-22 06:53:44 tlipkis Exp $
+ * $Id: TestLcapDatagramComm.java,v 1.7 2005-12-01 23:28:04 troberts Exp $
  */
 
 /*
@@ -32,18 +32,15 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.protocol;
 
-import java.util.*;
 import java.io.*;
 import java.net.*;
-import junit.framework.TestCase;
+import java.util.*;
 
-import org.lockss.config.Configuration;
-import org.lockss.daemon.*;
-import org.lockss.plugin.*;
-import org.lockss.util.*;
-import org.lockss.util.Queue;
-import org.lockss.test.*;
+import org.lockss.config.*;
+import org.lockss.plugin.ArchivalUnit;
 import org.lockss.repository.LockssRepositoryImpl;
+import org.lockss.test.*;
+import org.lockss.util.*;
 
 
 /**
@@ -133,7 +130,7 @@ public class TestLcapDatagramComm extends LockssTestCase {
     props.put(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
     props.put(PARAM_MULTI_VERIFY, "yes");
     ConfigurationUtil.setCurrentConfigFromProps(props);
-    config = Configuration.getCurrentConfig();
+    config = CurrentConfig.getCurrentConfig();
 //     config = Configuration.readConfig(ListUtil.list(FileUtil.urlOfString(c1)));
     comm = new LcapDatagramComm(fact, config);
     daemon.setDatagramCommManager(comm);

@@ -1,5 +1,5 @@
 /*
- * $Id: SystemMetrics.java,v 1.29 2005-08-11 06:37:12 tlipkis Exp $
+ * $Id: SystemMetrics.java,v 1.30 2005-12-01 23:28:01 troberts Exp $
  */
 
 /*
@@ -33,14 +33,15 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.daemon;
 
 import java.io.IOException;
-import java.util.*;
 import java.security.MessageDigest;
+import java.util.Hashtable;
+
 import org.lockss.app.*;
-import org.lockss.config.Configuration;
-import org.lockss.util.*;
-import org.lockss.hasher.*;
-import org.lockss.plugin.*;
+import org.lockss.config.*;
+import org.lockss.hasher.HashService;
+import org.lockss.plugin.PluginManager;
 import org.lockss.protocol.LcapMessage;
+import org.lockss.util.*;
 
 /**
  * A singleton class which provides access to various system calculations, such
@@ -180,11 +181,11 @@ public class SystemMetrics
     long bytesHashed = 0;
     boolean earlyFinish = false;
     long hashDuration =
-      Configuration.getTimeIntervalParam(PARAM_HASH_TEST_DURATION,
-					 DEFAULT_HASH_TEST_DURATION);
+      CurrentConfig.getTimeIntervalParam(PARAM_HASH_TEST_DURATION,
+                                         DEFAULT_HASH_TEST_DURATION);
     int hashStep =
-      Configuration.getIntParam(PARAM_HASH_TEST_BYTE_STEP,
-				DEFAULT_HASH_TEST_BYTE_STEP);
+      CurrentConfig.getIntParam(PARAM_HASH_TEST_BYTE_STEP,
+                                DEFAULT_HASH_TEST_BYTE_STEP);
 
     long startTime = TimeBase.nowMs();
     Deadline deadline = Deadline.in(hashDuration);
@@ -231,7 +232,7 @@ public class SystemMetrics
    * @return the slowest speed
    */
   public int getSlowestHashSpeed() {
-    return Configuration.getIntParam(PARAM_SLOWEST_RATE, DEFAULT_SLOWEST_RATE);
+    return CurrentConfig.getIntParam(PARAM_SLOWEST_RATE, DEFAULT_SLOWEST_RATE);
   }
 
   /** Exception thrown if no hash estimate is available. */

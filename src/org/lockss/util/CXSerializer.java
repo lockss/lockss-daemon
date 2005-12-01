@@ -1,5 +1,5 @@
 /*
- * $Id: CXSerializer.java,v 1.13 2005-10-12 16:40:58 thib_gc Exp $
+ * $Id: CXSerializer.java,v 1.14 2005-12-01 23:28:00 troberts Exp $
  */
 
 /*
@@ -35,8 +35,9 @@ package org.lockss.util;
 import java.io.*;
 
 import org.exolab.castor.mapping.Mapping;
+
 import org.lockss.app.LockssApp;
-import org.lockss.config.Configuration;
+import org.lockss.config.CurrentConfig;
 
 /**
  * <p>An adapter class implementing
@@ -341,7 +342,7 @@ public class CXSerializer extends ObjectSerializer {
    * @see #PARAM_COMPATIBILITY_MODE
    */
   public static int getModeFromConfiguration() {
-    return Configuration.getIntParam(PARAM_COMPATIBILITY_MODE,
+    return CurrentConfig.getIntParam(PARAM_COMPATIBILITY_MODE,
                                      DEFAULT_COMPATIBILITY_MODE);
   }
 

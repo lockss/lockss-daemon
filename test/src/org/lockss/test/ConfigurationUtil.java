@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurationUtil.java,v 1.16 2005-11-16 04:19:53 thib_gc Exp $
+ * $Id: ConfigurationUtil.java,v 1.17 2005-12-01 23:28:01 troberts Exp $
  *
 
 Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
@@ -30,7 +30,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.test;
 
-import java.io.*;
+import java.io.IOException;
 import java.util.*;
 
 import org.lockss.config.*;
@@ -185,22 +185,22 @@ public class ConfigurationUtil {
   /** Add the values to the current config
    */
   public static boolean addFromProps(Properties props) {
-    return installConfig(merge(Configuration.getCurrentConfig(),
-			       fromProps(props)));
+    return installConfig(merge(CurrentConfig.getCurrentConfig(),
+                               fromProps(props)));
   }
 
   /** Add the value to the current config
    */
   public static boolean addFromArgs(String prop, String val) {
-    return installConfig(merge(Configuration.getCurrentConfig(),
-			       fromArgs(prop, val)));
+    return installConfig(merge(CurrentConfig.getCurrentConfig(),
+                               fromArgs(prop, val)));
   }
 
   /** Add two values to the current config
    */
   public static boolean addFromArgs(String prop1, String val1,
-				    String prop2, String val2) {
-    return installConfig(merge(Configuration.getCurrentConfig(),
+                                    String prop2, String val2) {
+    return installConfig(merge(CurrentConfig.getCurrentConfig(),
 			       fromArgs(prop1, val1, prop2, val2)));
   }
 
@@ -210,7 +210,7 @@ public class ConfigurationUtil {
                                     String prop2, String val2,
                                     String prop3, String val3) {
     // JAVA5: merge addFromArgs variants into addFromArgs(String...) ?
-    return installConfig(merge(Configuration.getCurrentConfig(),
+    return installConfig(merge(CurrentConfig.getCurrentConfig(),
                                fromArgs(prop1, val1, prop2, val2, prop3, val3)));
   }
 
@@ -221,9 +221,9 @@ public class ConfigurationUtil {
                                     String prop3, String val3,
                                     String prop4, String val4) {
     // JAVA5: merge addFromArgs variants into addFromArgs(String...) ?
-    return installConfig(merge(Configuration.getCurrentConfig(),
+    return installConfig(merge(CurrentConfig.getCurrentConfig(),
                                fromArgs(prop1, val1, prop2, val2,
-                                   prop3, val3, prop4, val4)));
+                                        prop3, val3, prop4, val4)));
   }
 
   /** Install the supplied Configuration as the current configuration.

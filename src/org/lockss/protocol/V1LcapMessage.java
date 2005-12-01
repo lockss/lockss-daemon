@@ -1,5 +1,5 @@
 /*
- * $Id: V1LcapMessage.java,v 1.6 2005-11-16 07:44:09 smorabito Exp $
+ * $Id: V1LcapMessage.java,v 1.7 2005-12-01 23:28:00 troberts Exp $
  */
 
 /*
@@ -29,9 +29,9 @@ package org.lockss.protocol;
 import java.io.*;
 import java.util.*;
 
-import org.mortbay.util.*;
+import org.mortbay.util.B64Code;
 
-import org.lockss.config.*;
+import org.lockss.config.CurrentConfig;
 import org.lockss.poller.*;
 import org.lockss.util.*;
 
@@ -89,8 +89,8 @@ public class V1LcapMessage extends LcapMessage {
   protected V1LcapMessage() throws IOException {
     m_props = new EncodedProperty();
     m_pollProtocol = Poll.V1_PROTOCOL;
-    m_maxSize = Configuration.getIntParam(PARAM_MAX_PKT_SIZE,
-					  DEFAULT_MAX_PKT_SIZE);
+    m_maxSize = CurrentConfig.getIntParam(PARAM_MAX_PKT_SIZE,
+                                          DEFAULT_MAX_PKT_SIZE);
   }
 
   protected V1LcapMessage(byte[] encodedBytes) throws IOException {

@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.64 2005-07-18 08:04:48 tlipkis Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.65 2005-12-01 23:28:02 troberts Exp $
  */
 
 /*
@@ -33,12 +33,13 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.repository;
 
 import java.io.*;
-import java.util.*;
 import java.net.MalformedURLException;
-import org.lockss.util.*;
-import org.lockss.config.Configuration;
-import org.lockss.daemon.*;
+import java.util.*;
+
+import org.lockss.config.*;
+import org.lockss.daemon.CachedUrlSetSpec;
 import org.lockss.plugin.AuUrl;
+import org.lockss.util.*;
 
 /**
  * RepositoryNode is used to store the contents and meta-information of urls
@@ -471,7 +472,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
     newVersionOpen = true;
     versionTimeout = Deadline.in(
-      Configuration.getLongParam(PARAM_VERSION_TIMEOUT,
+      CurrentConfig.getLongParam(PARAM_VERSION_TIMEOUT,
                                  DEFAULT_VERSION_TIMEOUT));
   }
 
@@ -971,8 +972,8 @@ public class RepositoryNodeImpl implements RepositoryNode {
   }
 
   void maybeDeactivateInconsistentNode() {
-    if (Configuration.getBooleanParam(PARAM_DEACTIVATE_NODE_ON_ERROR,
-				      DEFAULT_DEACTIVATE_NODE_ON_ERROR)) {
+    if (CurrentConfig.getBooleanParam(PARAM_DEACTIVATE_NODE_ON_ERROR,
+                                      DEFAULT_DEACTIVATE_NODE_ON_ERROR)) {
 	    logger.debug3("Running consistency check on node '"+url+"'");
       repository.deactivateInconsistentNode(this);
     } else {
@@ -1356,8 +1357,8 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
     public synchronized void release() {
       if (is != null) {
-	if (Configuration.getBooleanParam(PARAM_ENABLE_RELEASE,
-					  DEFAULT_ENABLE_RELEASE)) {
+	if (CurrentConfig.getBooleanParam(PARAM_ENABLE_RELEASE,
+	                                  DEFAULT_ENABLE_RELEASE)) {
 	  try {
 	    is.close();
 	  } catch (IOException e) {
@@ -1380,8 +1381,8 @@ public class RepositoryNodeImpl implements RepositoryNode {
 	assertContent();
 	try {
 	  is = new BufferedInputStream(new FileInputStream(curInputFile));
-	  if (Configuration.getBooleanParam(PARAM_MONITOR_INPUT_STREAMS,
-					    DEFAULT_MONITOR_INPUT_STREAMS)) {
+	  if (CurrentConfig.getBooleanParam(PARAM_MONITOR_INPUT_STREAMS,
+	                                    DEFAULT_MONITOR_INPUT_STREAMS)) {
 	    is = new MonitoringInputStream(is, curInputFile.toString());
 	  }
 	  props = (Properties)curProps.clone();

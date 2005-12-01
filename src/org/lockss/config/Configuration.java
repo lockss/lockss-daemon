@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.15 2005-10-11 05:43:31 tlipkis Exp $
+ * $Id: Configuration.java,v 1.16 2005-12-01 23:28:00 troberts Exp $
  */
 
 /*
@@ -58,12 +58,7 @@ public abstract class Configuration {
   // Configuration to get Config log level.  (Others should NOT do this.)
   protected static Logger log =
     Logger.getLoggerWithInitialLevel("Config",
-				     Logger.getInitialDefaultLevel());
-
-  /** Return current configuration */
-  public static Configuration getCurrentConfig() {
-    return ConfigManager.getCurrentConfig();
-  }
+                                     Logger.getInitialDefaultLevel());
 
   /**
    * Register a {@link Configuration.Callback}, which will be called
@@ -589,99 +584,6 @@ public abstract class Configuration {
 
   // static convenience methods
 
-  /** Static convenience method to get param from current configuration.
-   * Don't accidentally use this on a <code>Configuration</code> instance.
-   */
-  public static String getParam(String key) {
-    return getCurrentConfig().get(key);
-  }
-
-  /** Static convenience method to get param from current configuration.
-   * Don't accidentally use this on a <code>Configuration</code> instance.
-   */
-  public static String getParam(String key, String dfault) {
-    return getCurrentConfig().get(key, dfault);
-  }
-
-  /** Static convenience method to get param from current configuration.
-   * Don't accidentally use this on a <code>Configuration</code> instance.
-   */
-  public static boolean getBooleanParam(String key) throws InvalidParam {
-    return getCurrentConfig().getBoolean(key);
-  }
-
-  /** Static convenience method to get param from current configuration.
-   * Don't accidentally use this on a <code>Configuration</code> instance.
-   */
-  public static boolean getBooleanParam(String key, boolean dfault) {
-    return getCurrentConfig().getBoolean(key, dfault);
-  }
-
-  /** Static convenience method to get param from current configuration.
-   * Don't accidentally use this on a <code>Configuration</code> instance.
-   */
-  public static int getIntParam(String key) throws InvalidParam {
-    return getCurrentConfig().getInt(key);
-  }
-
-  /** Static convenience method to get param from current configuration.
-   * Don't accidentally use this on a <code>Configuration</code> instance.
-   */
-  public static int getIntParam(String key, int dfault) {
-    return getCurrentConfig().getInt(key, dfault);
-  }
-
-  /** Static convenience method to get param from current configuration.
-   * Don't accidentally use this on a <code>Configuration</code> instance.
-   */
-  public static long getLongParam(String key) throws InvalidParam {
-    return getCurrentConfig().getLong(key);
-  }
-
-  /** Static convenience method to get param from current configuration.
-   * Don't accidentally use this on a <code>Configuration</code> instance.
-   */
-  public static long getLongParam(String key, long dfault) {
-    return getCurrentConfig().getLong(key, dfault);
-  }
-
-  /** Static convenience method to get param from current configuration.
-   * Don't accidentally use this on a <code>Configuration</code> instance.
-   */
-  public static long getTimeIntervalParam(String key) throws InvalidParam {
-    return getCurrentConfig().getTimeInterval(key);
-  }
-
-  /** Static convenience method to get param from current configuration.
-   * Don't accidentally use this on a <code>Configuration</code> instance.
-   */
-  public static long getTimeIntervalParam(String key, long dfault) {
-    return getCurrentConfig().getTimeInterval(key, dfault);
-  }
-
-  /** Static convenience method to get a <code>Configuration</code>
-   * subtree from the current configuration.
-   * Don't accidentally use this on a <code>Configuration</code> instance.
-   */
-  public static Configuration paramConfigTree(String key) {
-    return getCurrentConfig().getConfigTree(key);
-  }
-
-  /** Static convenience method to get key iterator from the
-   * current configuration.
-   * Don't accidentally use this on a <code>Configuration</code> instance.
-   */
-  public static Iterator paramKeyIterator() {
-    return getCurrentConfig().keyIterator();
-  }
-
-  /** Static convenience method to get a node iterator from the
-   * current configuration.
-   * Don't accidentally use this on a <code>Configuration</code> instance.
-   */
-  public static Iterator paramNodeIterator(String key) {
-    return getCurrentConfig().nodeIterator(key);
-  }
 
   /**
    * The <code>Configuration.Callback</code> interface defines the

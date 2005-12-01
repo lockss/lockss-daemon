@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.98 2005-10-11 05:45:12 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.99 2005-12-01 23:28:02 troberts Exp $
  */
 
 /*
@@ -33,15 +33,16 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.base;
 
 import java.net.*;
-import java.text.*;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 import org.apache.commons.collections.map.LRUMap;
-import org.lockss.config.Configuration;
+
+import org.lockss.config.*;
 import org.lockss.crawler.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
-import org.lockss.state.*;
+import org.lockss.state.AuState;
 import org.lockss.util.*;
 
 /**
@@ -715,7 +716,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 
 
   void checkNextPollInterval() {
-    Configuration config = Configuration.getCurrentConfig();
+    Configuration config = CurrentConfig.getCurrentConfig();
     long minPollInterval =
         config.getTimeInterval(PARAM_TOPLEVEL_POLL_INTERVAL_MIN,
                                DEFAULT_TOPLEVEL_POLL_INTERVAL_MIN);
@@ -734,7 +735,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   }
 
   void checkPollProb() {
-    Configuration config = Configuration.getCurrentConfig();
+    Configuration config = CurrentConfig.getCurrentConfig();
     double initialProb = config.getPercentage(
         PARAM_TOPLEVEL_POLL_PROB_INITIAL, DEFAULT_TOPLEVEL_POLL_PROB_INITIAL);
     double maxProb = config.getPercentage(
@@ -748,7 +749,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   }
 
   double incrementPollProb(double curProb) {
-    Configuration config = Configuration.getCurrentConfig();
+    Configuration config = CurrentConfig.getCurrentConfig();
     double topLevelPollProbMax =
         config.getPercentage(PARAM_TOPLEVEL_POLL_PROB_MAX,
                              DEFAULT_TOPLEVEL_POLL_PROB_MAX);

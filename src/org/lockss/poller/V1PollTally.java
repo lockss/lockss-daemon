@@ -1,5 +1,5 @@
 /*
- * $Id: V1PollTally.java,v 1.24 2005-10-11 05:45:39 tlipkis Exp $
+ * $Id: V1PollTally.java,v 1.25 2005-12-01 23:28:00 troberts Exp $
  */
 
 /*
@@ -32,15 +32,15 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.poller;
 
-import java.security.*;
+import java.security.MessageDigest;
 import java.util.*;
 
-import org.lockss.daemon.*;
-import org.lockss.alert.*;
-import org.lockss.config.*;
-import org.lockss.hasher.*;
-import org.lockss.plugin.*;
-import org.lockss.protocol.*;
+import org.lockss.alert.Alert;
+import org.lockss.config.CurrentConfig;
+import org.lockss.daemon.CachedUrlSetHasher;
+import org.lockss.hasher.HashService;
+import org.lockss.plugin.CachedUrlSet;
+import org.lockss.protocol.PeerIdentity;
 import org.lockss.util.*;
 
 /**
@@ -77,10 +77,10 @@ public class V1PollTally extends PollTally {
     this.idManager = poll.idMgr;
     this.key = poll.getKey();
     this.trustedWeight =
-      (double)Configuration.getIntParam(V1Poll.PARAM_TRUSTED_WEIGHT,
+      (double)CurrentConfig.getIntParam(V1Poll.PARAM_TRUSTED_WEIGHT,
                                         V1Poll.DEFAULT_TRUSTED_WEIGHT);
     this.voteMargin =
-      ((double)Configuration.getIntParam(V1Poll.PARAM_VOTE_MARGIN,
+      ((double)CurrentConfig.getIntParam(V1Poll.PARAM_VOTE_MARGIN,
                                          V1Poll.DEFAULT_VOTE_MARGIN)) / 100;
   }
 

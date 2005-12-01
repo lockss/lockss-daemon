@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingHtmlParser.java,v 1.34 2005-10-11 05:43:54 tlipkis Exp $
+ * $Id: GoslingHtmlParser.java,v 1.35 2005-12-01 23:28:01 troberts Exp $
  */
 
 /*
@@ -76,7 +76,7 @@ import java.io.*;
 
 import org.htmlparser.util.*;
 import org.lockss.util.*;
-import org.lockss.config.Configuration;
+import org.lockss.config.*;
 
 
 public class GoslingHtmlParser implements ContentParser {
@@ -142,10 +142,10 @@ public class GoslingHtmlParser implements ContentParser {
   private boolean malformedBaseUrl = false;
 
   public GoslingHtmlParser() {
-    ringCapacity = Configuration.getIntParam(PARAM_BUFFER_CAPACITY,
+    ringCapacity = CurrentConfig.getIntParam(PARAM_BUFFER_CAPACITY,
 					     DEFAULT_BUFFER_CAPACITY);
     shouldParseJavaScript =
-      Configuration.getBooleanParam(PARAM_PARSE_JS, DEFAULT_PARSE_JS);
+      CurrentConfig.getBooleanParam(PARAM_PARSE_JS, DEFAULT_PARSE_JS);
   }
 
   public GoslingHtmlParser(int ringCapacity) {

@@ -27,12 +27,10 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.util;
-import java.util.*;
+import java.io.IOException;
 import java.net.*;
-import java.io.*;
 
-import org.lockss.config.Configuration;
-import org.lockss.daemon.*;
+import org.lockss.config.*;
 
 public class SyslogTarget implements LogTarget{
 
@@ -70,9 +68,9 @@ public class SyslogTarget implements LogTarget{
   }
 
   private void setConfig(Configuration.Differences changedKeys) {
-    port = Configuration.getIntParam(PARAM_PORT, DEFAULT_PORT);
+    port = CurrentConfig.getIntParam(PARAM_PORT, DEFAULT_PORT);
     if (changedKeys.contains(PARAM_HOST)) {
-      hostname = Configuration.getParam(PARAM_HOST, DEFAULT_HOST);
+      hostname = CurrentConfig.getParam(PARAM_HOST, DEFAULT_HOST);
       host = null;			// force new name lookup
     }
   }

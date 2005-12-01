@@ -1,5 +1,5 @@
 /*
- * $Id: UrlUtil.java,v 1.35 2005-10-11 05:48:29 tlipkis Exp $
+ * $Id: UrlUtil.java,v 1.36 2005-12-01 23:28:00 troberts Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -30,16 +30,19 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util;
 
-import java.util.*;
 import java.io.*;
 import java.net.*;
+import java.util.*;
+
 import javax.servlet.http.HttpServletRequest;
-import org.lockss.plugin.*;
-import org.lockss.util.urlconn.*;
-import org.lockss.config.Configuration;
-import org.lockss.daemon.*;
+
 import org.apache.commons.httpclient.*;
-import org.apache.commons.httpclient.methods.*;
+import org.apache.commons.httpclient.methods.GetMethod;
+
+import org.lockss.config.CurrentConfig;
+import org.lockss.daemon.PluginBehaviorException;
+import org.lockss.plugin.ArchivalUnit;
+import org.lockss.util.urlconn.*;
 
 /** Utilities for URLs and URLConnections
  */
@@ -684,8 +687,8 @@ public class UrlUtil {
     LockssUrlConnection luc;
     if (isHttpUrl(urlString)) {
       boolean useHttpClient =
-	Configuration.getBooleanParam("org.lockss.UrlUtil.useHttpClient",
-				      true);
+        CurrentConfig.getBooleanParam("org.lockss.UrlUtil.useHttpClient",
+                                      true);
       if (useHttpClient) {
 	HttpClient client = null;
 	if (connectionPool != null) {

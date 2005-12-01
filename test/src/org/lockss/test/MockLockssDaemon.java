@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssDaemon.java,v 1.54 2005-11-09 18:46:25 tlipkis Exp $
+ * $Id: MockLockssDaemon.java,v 1.55 2005-12-01 23:28:01 troberts Exp $
  */
 
 /*
@@ -32,26 +32,28 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.test;
 
-import java.util.*;
-import org.lockss.util.*;
-import org.lockss.mail.*;
-import org.lockss.alert.*;
-import org.lockss.hasher.*;
-import org.lockss.scheduler.*;
-import org.lockss.protocol.*;
-import org.lockss.poller.*;
-import org.lockss.state.*;
-import org.lockss.repository.*;
-import org.lockss.proxy.*;
-import org.lockss.proxy.icp.IcpManager;
-import org.lockss.config.Configuration;
-import org.lockss.crawler.*;
-import org.lockss.plugin.*;
-import org.lockss.app.*;
-import org.lockss.daemon.*;
-import org.lockss.daemon.status.*;
-import org.lockss.remote.*;
+import java.util.List;
+
 import org.apache.commons.collections.map.LinkedMap;
+
+import org.lockss.alert.AlertManager;
+import org.lockss.app.*;
+import org.lockss.config.*;
+import org.lockss.crawler.CrawlManager;
+import org.lockss.daemon.*;
+import org.lockss.daemon.status.StatusService;
+import org.lockss.hasher.HashService;
+import org.lockss.mail.MailService;
+import org.lockss.plugin.*;
+import org.lockss.poller.PollManager;
+import org.lockss.protocol.*;
+import org.lockss.proxy.ProxyManager;
+import org.lockss.proxy.icp.IcpManager;
+import org.lockss.remote.RemoteApi;
+import org.lockss.repository.*;
+import org.lockss.scheduler.SchedService;
+import org.lockss.state.*;
+import org.lockss.util.Logger;
 
 public class MockLockssDaemon extends LockssDaemon {
   private static Logger log = Logger.getLogger("MockLockssDaemon");
@@ -142,8 +144,8 @@ public class MockLockssDaemon extends LockssDaemon {
       throw new LockssAppException("No ManagerDesc for: " + key);
     }
     if (log.isDebug2()) {
-      String mgr_name = Configuration.getParam(MANAGER_PREFIX + desc.getKey(),
-					       desc.getDefaultClass());
+      String mgr_name = CurrentConfig.getParam(MANAGER_PREFIX + desc.getKey(),
+                                               desc.getDefaultClass());
       log.debug2("Manager class: " + mgr_name);
     }
     try {

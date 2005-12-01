@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.80 2005-10-11 05:43:18 tlipkis Exp $
+ * $Id: LockssDaemon.java,v 1.81 2005-12-01 23:28:01 troberts Exp $
  */
 
 /*
@@ -45,7 +45,7 @@ import org.lockss.repository.*;
 import org.lockss.state.*;
 import org.lockss.proxy.*;
 import org.lockss.proxy.icp.IcpManager;
-import org.lockss.config.Configuration;
+import org.lockss.config.*;
 import org.lockss.crawler.*;
 import org.lockss.remote.*;
 import org.apache.commons.collections.map.LinkedMap;
@@ -645,7 +645,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
    * instances of a LockssAuManager */
   private LockssAuManager.Factory instantiateAuFactory(ManagerDesc desc)
       throws Exception {
-    String managerName = Configuration.getParam(MANAGER_PREFIX + desc.key,
+    String managerName = CurrentConfig.getParam(MANAGER_PREFIX + desc.key,
 						desc.defaultClass);
     LockssAuManager.Factory factory;
     try {
@@ -805,8 +805,8 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
       return;				// compiler doesn't know that
 					// System.exit() doesn't return
     }
-    if (Configuration.getBooleanParam(PARAM_APP_EXIT_IMM,
-				      DEFAULT_APP_EXIT_IMM)) {
+    if (CurrentConfig.getBooleanParam(PARAM_APP_EXIT_IMM,
+                                      DEFAULT_APP_EXIT_IMM)) {
       daemon.stop();
       System.exit(0);
     }

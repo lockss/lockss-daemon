@@ -1,5 +1,5 @@
 /*
- * $Id: FileTarget.java,v 1.7 2005-10-11 05:48:30 tlipkis Exp $
+ * $Id: FileTarget.java,v 1.8 2005-12-01 23:28:00 troberts Exp $
  */
 
 /*
@@ -32,11 +32,9 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util;
 
-import java.text.*;
 import java.io.*;
 
-import org.lockss.config.Configuration;
-import org.lockss.daemon.*;
+import org.lockss.config.*;
 
 /** A <code>LogTarget</code> implementation that outputs to a file, which
  * is closed and reopened periodically to allow for log file rotation.
@@ -69,9 +67,9 @@ public class FileTarget extends PrintStreamTarget {
   }
 
   public void init() {
-    Configuration config = Configuration.getCurrentConfig();
+    Configuration config = CurrentConfig.getCurrentConfig();
     reopenInterval = config.getTimeInterval(PARAM_REOPEN_INTERVAL,
-					    DEFAULT_REOPEN_INTERVAL);
+                                            DEFAULT_REOPEN_INTERVAL);
     if (filename == null) {
       filename = config.get(PARAM_FILE);
       if (filename == null) {

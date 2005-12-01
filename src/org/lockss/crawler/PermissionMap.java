@@ -1,5 +1,5 @@
 /*
- * $Id: PermissionMap.java,v 1.6 2005-11-16 00:05:49 troberts Exp $
+ * $Id: PermissionMap.java,v 1.7 2005-12-01 23:28:01 troberts Exp $
  */
 
 /*
@@ -34,7 +34,7 @@ import java.util.*;
 
 import org.lockss.alert.Alert;
 import org.lockss.alert.AlertManager;
-import org.lockss.config.Configuration;
+import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.daemon.Crawler.Status;
 import org.lockss.plugin.*;
@@ -140,7 +140,7 @@ public class PermissionMap {
   public boolean init() {
     List permissionList = au.getCrawlSpec().getPermissionPages();
     boolean abortWhilePermissionOtherThanOk =
-      Configuration.getBooleanParam(BaseCrawler.PARAM_ABORT_WHILE_PERMISSION_OTHER_THAN_OK,
+      CurrentConfig.getBooleanParam(BaseCrawler.PARAM_ABORT_WHILE_PERMISSION_OTHER_THAN_OK,
                                     BaseCrawler.DEFAULT_ABORT_WHILE_PERMISSION_OTHER_THAN_OK);
 
     logger.info("Checking permission on host(s) of " + au);
@@ -254,7 +254,7 @@ public class PermissionMap {
     }
   }
 
-  
+
 
   /**
    * checkPermission check the permission page for all of the required permission
@@ -314,7 +314,7 @@ public class PermissionMap {
         is = pHelper.resetInputStream(is, permissionPage);
       }
 
-      if (Configuration.getBooleanParam(BaseCrawler.PARAM_REFETCH_PERMISSIONS_PAGE,
+      if (CurrentConfig.getBooleanParam(BaseCrawler.PARAM_REFETCH_PERMISSIONS_PAGE,
                                         BaseCrawler.DEFAULT_REFETCH_PERMISSIONS_PAGE)) {
         logger.debug3("Permission granted. Caching permission page.");
         pHelper.refetchPermissionPage(permissionPage);
@@ -329,7 +329,7 @@ public class PermissionMap {
   }
 
 
-  
+
   /**
    * Method used by subclasses to check crawl permission
    *

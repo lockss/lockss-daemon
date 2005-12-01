@@ -1,5 +1,5 @@
 /*
- * $Id: RegistryArchivalUnit.java,v 1.16 2005-10-20 16:41:54 troberts Exp $
+ * $Id: RegistryArchivalUnit.java,v 1.17 2005-12-01 23:28:01 troberts Exp $
  */
 
 /*
@@ -32,20 +32,20 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin;
 
-import java.io.*;
+import java.io.FileNotFoundException;
 import java.net.*;
-import java.util.*;
+import java.util.List;
 
 import org.htmlparser.*;
-import org.htmlparser.tags.*;
-import org.htmlparser.util.*;
-import org.lockss.util.*;
-import org.lockss.daemon.*;
-import org.lockss.state.*;
-import org.lockss.plugin.base.*;
-import org.lockss.config.Configuration;
+import org.htmlparser.tags.TitleTag;
+import org.htmlparser.util.ParserException;
+
 import org.lockss.config.*;
-import org.lockss.crawler.*;
+import org.lockss.crawler.NewContentCrawler;
+import org.lockss.daemon.*;
+import org.lockss.plugin.base.BaseArchivalUnit;
+import org.lockss.state.*;
+import org.lockss.util.*;
 
 /**
  * <p>PluginArchivalUnit: The Archival Unit Class for PluginPlugin.
@@ -83,8 +83,8 @@ public class RegistryArchivalUnit extends BaseArchivalUnit {
   public RegistryArchivalUnit(RegistryPlugin plugin) {
     super(plugin);
     m_maxRefetchDepth =
-      Configuration.getIntParam(NewContentCrawler.PARAM_MAX_CRAWL_DEPTH,
-				NewContentCrawler.DEFAULT_MAX_CRAWL_DEPTH);
+      CurrentConfig.getIntParam(NewContentCrawler.PARAM_MAX_CRAWL_DEPTH,
+                                NewContentCrawler.DEFAULT_MAX_CRAWL_DEPTH);
   }
 
   public void loadAuConfigDescrs(Configuration config)

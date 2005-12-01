@@ -1,5 +1,5 @@
 /*
- * $Id: TestRemoteApi.java,v 1.15 2005-10-11 05:51:20 tlipkis Exp $
+ * $Id: TestRemoteApi.java,v 1.16 2005-12-01 23:28:04 troberts Exp $
  */
 
 /*
@@ -35,17 +35,14 @@ package org.lockss.remote;
 import java.io.*;
 import java.util.*;
 import java.util.zip.*;
-import junit.framework.*;
 
 import org.lockss.config.*;
-import org.lockss.daemon.*;
+import org.lockss.daemon.ConfigParamDescr;
+import org.lockss.mail.MimeMessage;
 import org.lockss.plugin.*;
-import org.lockss.protocol.*;
-import org.lockss.poller.*;
-import org.lockss.util.*;
+import org.lockss.protocol.MockIdentityManager;
 import org.lockss.test.*;
-import org.lockss.repository.*;
-import org.lockss.mail.*;
+import org.lockss.util.*;
 
 /**
  * Test class for org.lockss.remote.RemoteApi
@@ -234,8 +231,8 @@ public class TestRemoteApi extends LockssTestCase {
     ConfigurationUtil.setFromArgs(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
 				  tmpdir);
     String relConfigPath =
-      Configuration.getParam(ConfigManager.PARAM_CONFIG_PATH,
-			     ConfigManager.DEFAULT_CONFIG_PATH);
+      CurrentConfig.getParam(ConfigManager.PARAM_CONFIG_PATH,
+                             ConfigManager.DEFAULT_CONFIG_PATH);
     File cdir = new File(tmpdir, relConfigPath);
     File configFile = new File(cdir, cfileName);
     FileTestUtil.writeFile(configFile, s);

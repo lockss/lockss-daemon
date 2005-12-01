@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.9 2005-12-01 01:54:44 smorabito Exp $
+ * $Id: V3Voter.java,v 1.10 2005-12-01 23:28:01 troberts Exp $
  */
 
 /*
@@ -36,13 +36,13 @@ import java.io.*;
 import java.security.*;
 import java.util.*;
 
-import org.lockss.app.*;
+import org.lockss.app.LockssDaemon;
 import org.lockss.config.*;
-import org.lockss.daemon.*;
+import org.lockss.daemon.CachedUrlSetHasher;
 import org.lockss.hasher.*;
 import org.lockss.plugin.*;
 import org.lockss.poller.*;
-import org.lockss.poller.v3.V3Serializer.*;
+import org.lockss.poller.v3.V3Serializer.PollSerializerException;
 import org.lockss.protocol.*;
 import org.lockss.protocol.psm.*;
 import org.lockss.util.*;
@@ -100,9 +100,9 @@ public class V3Voter extends BasePoll {
 
     this.pollManager = daemon.getPollManager();
 
-    int min = Configuration.getIntParam(PARAM_MIN_NOMINATION_SIZE,
+    int min = CurrentConfig.getIntParam(PARAM_MIN_NOMINATION_SIZE,
                                         DEFAULT_MIN_NOMINATION_SIZE);
-    int max = Configuration.getIntParam(PARAM_MAX_NOMINATION_SIZE,
+    int max = CurrentConfig.getIntParam(PARAM_MAX_NOMINATION_SIZE,
                                         DEFAULT_MAX_NOMINATION_SIZE);
     if (min > max) {
       throw new IllegalArgumentException("Impossible nomination size range: "
@@ -456,7 +456,6 @@ public class V3Voter extends BasePoll {
 
   /**
    * Checkpoint the current state of the voter.
-   * @throws PollSerializerException
    */
   private void checkpointPoll() {
     try {

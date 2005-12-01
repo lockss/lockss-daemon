@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyInfo.java,v 1.12 2005-06-02 16:39:40 tlipkis Exp $
+ * $Id: ProxyInfo.java,v 1.13 2005-12-01 23:28:01 troberts Exp $
  */
 
 /*
@@ -31,17 +31,18 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.daemon;
-import java.util.*;
-import java.net.*;
 import java.io.*;
+import java.net.MalformedURLException;
+import java.util.*;
+
 import org.apache.oro.text.regex.*;
-import org.lockss.app.*;
-import org.lockss.config.ConfigManager;
-import org.lockss.config.Configuration;
-import org.lockss.util.*;
+
+import org.lockss.app.LockssDaemon;
+import org.lockss.config.*;
 import org.lockss.plugin.*;
-import org.lockss.proxy.*;
-import org.lockss.protocol.*;
+import org.lockss.protocol.IdentityManager;
+import org.lockss.proxy.ProxyManager;
+import org.lockss.util.*;
 
 /**
  * Generate config files for external proxies, specifying patterns of URLs
@@ -73,9 +74,9 @@ public class ProxyInfo {
   String getProxyHost() {
     if (proxyHost == null) {
       proxyHost =
-	Configuration.getParam(ConfigManager.PARAM_PLATFORM_FQDN,
-			       Configuration.getParam(IdentityManager.
-						      PARAM_LOCAL_IP));
+        CurrentConfig.getParam(ConfigManager.PARAM_PLATFORM_FQDN,
+                               CurrentConfig.getParam(IdentityManager.
+                                                      PARAM_LOCAL_IP));
     }
     return proxyHost;
   }
@@ -91,8 +92,8 @@ public class ProxyInfo {
 	  (ProxyManager)LockssDaemon.getManager(LockssDaemon.PROXY_MANAGER);
 	proxyPort = mgr.getProxyPort();
       } catch (IllegalArgumentException e) {
-	proxyPort = Configuration.getIntParam(ProxyManager.PARAM_PORT,
-					      ProxyManager.DEFAULT_PORT);
+	proxyPort = CurrentConfig.getIntParam(ProxyManager.PARAM_PORT,
+	                                      ProxyManager.DEFAULT_PORT);
       }
     }
     return proxyPort;

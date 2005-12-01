@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlTagFilter.java,v 1.7 2005-10-07 16:19:55 thib_gc Exp $
+ * $Id: HtmlTagFilter.java,v 1.8 2005-12-01 23:28:04 troberts Exp $
  */
 
 /*
@@ -33,10 +33,10 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.filter;
 
 import java.io.*;
-import java.util.*;
+import java.util.List;
 
+import org.lockss.config.*;
 import org.lockss.util.*;
-import org.lockss.config.Configuration;
 
 /**
  * This class is used to filter all content from a reader between two string
@@ -108,8 +108,8 @@ public class HtmlTagFilter extends Reader {
       maxTagLen = endLen;
       minTagLen = startLen;
     }
-    bufferCapacity = Configuration.getIntParam(PARAM_BUFFER_CAPACITY,
-					       DEFAULT_BUFFER_CAPACITY);
+    bufferCapacity = CurrentConfig.getIntParam(PARAM_BUFFER_CAPACITY,
+                                               DEFAULT_BUFFER_CAPACITY);
     if (maxTagLen > bufferCapacity) {
       bufferCapacity = maxTagLen;
     }

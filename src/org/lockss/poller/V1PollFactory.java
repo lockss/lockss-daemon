@@ -1,5 +1,5 @@
 /*
- * $Id: V1PollFactory.java,v 1.21 2005-11-16 07:44:10 smorabito Exp $
+ * $Id: V1PollFactory.java,v 1.22 2005-12-01 23:28:00 troberts Exp $
  */
 
 /*
@@ -32,20 +32,20 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.poller;
 
-import java.io.*;
+import java.io.IOException;
 import java.security.*;
-import java.util.*;
+import java.util.Iterator;
 
-import org.lockss.app.*;
-import org.lockss.config.Configuration;
-import org.lockss.daemon.*;
-import org.lockss.plugin.*;
-import org.lockss.poller.PollManager.*;
-import org.lockss.protocol.*;
-import org.lockss.state.*;
-import org.lockss.util.*;
-import org.lockss.hasher.HashService;
 import org.mortbay.util.B64Code;
+
+import org.lockss.app.LockssDaemon;
+import org.lockss.config.*;
+import org.lockss.daemon.ActivityRegulator;
+import org.lockss.hasher.HashService;
+import org.lockss.plugin.*;
+import org.lockss.protocol.*;
+import org.lockss.state.NodeManager;
+import org.lockss.util.*;
 
 /**
  * <p>Class that creates V1 Poll objects</p>
@@ -455,20 +455,20 @@ public class V1PollFactory extends BasePollFactory {
 						 DEFAULT_NAMEPOLL_DEADLINE);
     m_minNamePollDuration = aveDuration - aveDuration / 4;
     m_maxNamePollDuration = aveDuration + aveDuration / 4;
-
+    
     m_minContentPollDuration = newConfig.getTimeInterval(PARAM_CONTENTPOLL_MIN,
-							 DEFAULT_CONTENTPOLL_MIN);
+                                                         DEFAULT_CONTENTPOLL_MIN);
     m_maxContentPollDuration = newConfig.getTimeInterval(PARAM_CONTENTPOLL_MAX,
-							 DEFAULT_CONTENTPOLL_MAX);
-
-    m_quorum = Configuration.getIntParam(PARAM_QUORUM, DEFAULT_QUORUM);
-
+                                                         DEFAULT_CONTENTPOLL_MAX);
+    
+    m_quorum = CurrentConfig.getIntParam(PARAM_QUORUM, DEFAULT_QUORUM);
+    
     m_minDurationMultiplier =
-      Configuration.getIntParam(PARAM_DURATION_MULTIPLIER_MIN,
-				DEFAULT_DURATION_MULTIPLIER_MIN);
+      CurrentConfig.getIntParam(PARAM_DURATION_MULTIPLIER_MIN,
+                                DEFAULT_DURATION_MULTIPLIER_MIN);
     m_maxDurationMultiplier =
-      Configuration.getIntParam(PARAM_DURATION_MULTIPLIER_MAX,
-				DEFAULT_DURATION_MULTIPLIER_MAX);
+      CurrentConfig.getIntParam(PARAM_DURATION_MULTIPLIER_MAX,
+                                DEFAULT_DURATION_MULTIPLIER_MAX);
     m_verifierExpireTime =
       newConfig.getTimeInterval(PARAM_VERIFY_EXPIRATION,
                                 DEFAULT_VERIFY_EXPIRATION);

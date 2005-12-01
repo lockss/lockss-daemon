@@ -1,5 +1,5 @@
 /*
- * $Id: Cron.java,v 1.3 2005-10-11 05:44:15 tlipkis Exp $
+ * $Id: Cron.java,v 1.4 2005-12-01 23:28:01 troberts Exp $
  *
 
 Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
@@ -260,7 +260,7 @@ public class Cron
 
     public long nextTime(long lastTime) {
       String freq =
-	Configuration.getParam(RemoteApi.PARAM_BACKUP_EMAIL_FREQ,
+        CurrentConfig.getParam(RemoteApi.PARAM_BACKUP_EMAIL_FREQ,
 			       RemoteApi.DEFAULT_BACKUP_EMAIL_FREQ);
       if ("weekly".equalsIgnoreCase(freq)) {
 	return nextWeek(lastTime);

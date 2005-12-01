@@ -1,5 +1,5 @@
 /*
- * $Id: SmtpClient.java,v 1.7 2005-10-07 16:19:56 thib_gc Exp $
+ * $Id: SmtpClient.java,v 1.8 2005-12-01 23:28:00 troberts Exp $
  */
 
 /*
@@ -33,13 +33,13 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.mail;
 
-import java.io.*;
-import java.net.*;
+import java.io.IOException;
+import java.net.UnknownHostException;
+
+import org.lockss.config.*;
+import org.lockss.util.*;
 
 import sun.net.TransferProtocolClient;
-
-import org.lockss.util.*;
-import org.lockss.config.Configuration;
 
 /**
  * Simple SMTP client.
@@ -105,8 +105,8 @@ public class SmtpClient extends TransferProtocolClient  {
   }
 
   public int getSoTimeout() {
-    long time = Configuration.getTimeIntervalParam(PARAM_SMTP_DATA_TIMEOUT,
-						   DEFAULT_SMTP_DATA_TIMEOUT);
+    long time = CurrentConfig.getTimeIntervalParam(PARAM_SMTP_DATA_TIMEOUT,
+                                                   DEFAULT_SMTP_DATA_TIMEOUT);
     return time >= Integer.MAX_VALUE ? Integer.MAX_VALUE : (int)time;
   }
 

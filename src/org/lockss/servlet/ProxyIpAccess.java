@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyIpAccess.java,v 1.17 2005-11-16 04:19:52 thib_gc Exp $
+ * $Id: ProxyIpAccess.java,v 1.18 2005-12-01 23:28:01 troberts Exp $
  */
 
 /*
@@ -35,18 +35,15 @@ package org.lockss.servlet;
 import java.io.IOException;
 import java.util.Properties;
 
-import javax.servlet.ServletConfig;
-import javax.servlet.ServletException;
+import javax.servlet.*;
 
-import org.lockss.config.ConfigManager;
-import org.lockss.config.Configuration;
+import org.mortbay.html.*;
+
+import org.lockss.config.*;
 import org.lockss.daemon.ResourceManager;
-import org.lockss.proxy.AuditProxyManager;
-import org.lockss.proxy.ProxyManager;
+import org.lockss.proxy.*;
 import org.lockss.proxy.icp.IcpManager;
 import org.lockss.util.StringUtil;
-import org.mortbay.html.Composite;
-import org.mortbay.html.Table;
 
 /** Display and update proxy IP access control lists.
  */
@@ -164,14 +161,14 @@ public class ProxyIpAccess extends IpAccessControl {
     if (isForm) {
       return formAuditEnable;
     }
-    return Configuration.getBooleanParam(PARAM_AUDIT_ENABLE,
+    return CurrentConfig.getBooleanParam(PARAM_AUDIT_ENABLE,
                                          DEFAULT_AUDIT_ENABLE);
   }
 
   private String getDefaultAuditPort() {
     String port = formAuditPort;
     if (StringUtil.isNullString(port)) {
-      port = Configuration.getParam(PARAM_AUDIT_PORT);
+      port = CurrentConfig.getParam(PARAM_AUDIT_PORT);
     }
     return port;
   }
@@ -212,7 +209,7 @@ public class ProxyIpAccess extends IpAccessControl {
     layoutEnablePortRow(tbl, AUDIT_ENABLE_NAME, getDefaultAuditEnable(), "audit proxy",
         AUDIT_FOOT, FILTER_FOOT, AUDIT_PORT_NAME, getDefaultAuditPort(),
         resourceMgr.getUsableTcpPorts(AuditProxyManager.SERVER_NAME));
-    if (Configuration.getBooleanParam(IcpManager.PARAM_PLATFORM_ICP_ENABLED,
+    if (CurrentConfig.getBooleanParam(IcpManager.PARAM_PLATFORM_ICP_ENABLED,
                                       true)) {
       // unset: behave like true
       layoutEnablePortRow(tbl, ICP_ENABLE_NAME, getDefaultIcpEnable(), "ICP server",

@@ -1,5 +1,5 @@
 /*
- * $Id: SortScheduler.java,v 1.11 2005-10-11 05:46:42 tlipkis Exp $
+ * $Id: SortScheduler.java,v 1.12 2005-12-01 23:28:06 troberts Exp $
  */
 
 /*
@@ -33,9 +33,9 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.scheduler;
 
 import java.util.*;
+
+import org.lockss.config.*;
 import org.lockss.util.*;
-import org.lockss.config.Configuration;
-import org.lockss.daemon.*;
 
 /** This scheduler assigns tasks to intervals preferentially based on their
  * finish time */
@@ -72,7 +72,7 @@ public class SortScheduler implements Scheduler {
 
   /** Create a scheduler */
   public SortScheduler() {
-    Configuration config = Configuration.getCurrentConfig();
+    Configuration config = CurrentConfig.getCurrentConfig();
     maxBackgroundLoad = config.getPercentage(PARAM_MAX_BACKGROUND_LOAD,
 					     DEFAULT_MAX_BACKGROUND_LOAD);
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRunnable.java,v 1.11 2005-10-07 16:19:55 thib_gc Exp $
+ * $Id: LockssRunnable.java,v 1.12 2005-12-01 23:28:01 troberts Exp $
  */
 
 /*
@@ -35,7 +35,7 @@ package org.lockss.daemon;
 import java.util.*;
 
 import org.lockss.app.*;
-import org.lockss.config.Configuration;
+import org.lockss.config.*;
 import org.lockss.util.*;
 
 /** LockssRunnable abstracts out common features of LOCKSS daemon threads,
@@ -257,7 +257,7 @@ public abstract class LockssRunnable  implements LockssWatchdog, Runnable {
    * able to take some less drastic corrective action (e.g., close socket
    * for hung socket reads.) */
   protected void threadHung() {
-    if (Configuration.getBooleanParam(PARAM_THREAD_WDOG_HUNG_DUMP,
+    if (CurrentConfig.getBooleanParam(PARAM_THREAD_WDOG_HUNG_DUMP,
 				      DEFAULT_THREAD_WDOG_HUNG_DUMP)) {
       PlatformInfo.getInstance().threadDump();
       try {
@@ -309,9 +309,8 @@ public abstract class LockssRunnable  implements LockssWatchdog, Runnable {
     } else {
       ret = prop.equalsIgnoreCase("true");
     }
-    return (ret &&
-	    Configuration.getBooleanParam(PARAM_THREAD_WDOG_EXIT_IMM,
-					  DEFAULT_THREAD_WDOG_EXIT_IMM));
+    return (ret && CurrentConfig.getBooleanParam(PARAM_THREAD_WDOG_EXIT_IMM,
+                                                 DEFAULT_THREAD_WDOG_EXIT_IMM));
   }
 
   long getIntervalFromParam(String name, long defaultInterval) {
@@ -321,7 +320,7 @@ public abstract class LockssRunnable  implements LockssWatchdog, Runnable {
 				       "<name>", name);
       wdogParamNameMap.put(name, param);
     }
-    return Configuration.getTimeIntervalParam(param, defaultInterval);
+    return CurrentConfig.getTimeIntervalParam(param, defaultInterval);
   }
 
   int getPriorityFromParam(String name, int defaultInterval) {
@@ -331,7 +330,7 @@ public abstract class LockssRunnable  implements LockssWatchdog, Runnable {
 				       "<name>", name);
       prioParamNameMap.put(name, param);
     }
-    return Configuration.getIntParam(param, defaultInterval);
+    return CurrentConfig.getIntParam(param, defaultInterval);
   }
 
   private void logEvent(String event, boolean includeInterval) {

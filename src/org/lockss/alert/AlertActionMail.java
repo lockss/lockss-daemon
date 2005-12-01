@@ -1,5 +1,5 @@
 /*
- * $Id: AlertActionMail.java,v 1.8 2005-09-30 22:25:01 thib_gc Exp $
+ * $Id: AlertActionMail.java,v 1.9 2005-12-01 23:28:01 troberts Exp $
  */
 
 /*
@@ -36,8 +36,7 @@ import java.util.*;
 import java.text.*;
 
 import org.lockss.app.*;
-import org.lockss.config.ConfigManager;
-import org.lockss.config.Configuration;
+import org.lockss.config.*;
 import org.lockss.mail.*;
 import org.lockss.util.*;
 
@@ -104,7 +103,7 @@ public class AlertActionMail extends AbstractAlertAction {
     }
     if (alerts == null || alerts.isEmpty()) return;
     Alert firstAlert = (Alert)alerts.get(0);
-    Configuration config = Configuration.getCurrentConfig();
+    Configuration config = CurrentConfig.getCurrentConfig();
     if (config.getBoolean(PARAM_ENABLED, DEFAULT_ENABLED)) {
       StringBuffer sb = new StringBuffer();
       for (Iterator iter = alerts.iterator(); iter.hasNext(); ) {
@@ -120,7 +119,7 @@ public class AlertActionMail extends AbstractAlertAction {
 
   private void send(LockssDaemon daemon, Alert oneAlert,
 		    String subjSuff, String body) {
-    Configuration config = Configuration.getCurrentConfig();
+    Configuration config = CurrentConfig.getCurrentConfig();
     if (config.getBoolean(PARAM_ENABLED, DEFAULT_ENABLED)) {
       MailService mailSvc = daemon.getMailService();
       TextMessage msg = new TextMessage();

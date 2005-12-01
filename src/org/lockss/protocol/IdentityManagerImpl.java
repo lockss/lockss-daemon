@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManagerImpl.java,v 1.11 2005-12-01 01:54:43 smorabito Exp $
+ * $Id: IdentityManagerImpl.java,v 1.12 2005-12-01 23:28:00 troberts Exp $
  */
 
 /*
@@ -641,7 +641,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
 
   File setupIddbFile() {
     if (iddbFile == null) {
-      String iddbDir = Configuration.getParam(PARAM_IDDB_DIR);
+      String iddbDir = CurrentConfig.getParam(PARAM_IDDB_DIR);
       if (iddbDir != null) {
 	iddbFile = new File(iddbDir, IDDB_FILENAME);
       }
@@ -1195,7 +1195,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
    * XXX: V3 refactor.
    */
   private void configV3Identities() {
-    String refString = Configuration.getParam(PARAM_INITIAL_PEERS,
+    String refString = CurrentConfig.getParam(PARAM_INITIAL_PEERS,
                                               DEFAULT_INITIAL_PEERS);
     if (refString != null) {
       List l = StringUtil.breakAt(refString, ',');

@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDatagram.java,v 1.13 2005-01-26 18:21:40 tlipkis Exp $
+ * $Id: LockssDatagram.java,v 1.14 2005-12-01 23:28:00 troberts Exp $
  */
 
 /*
@@ -32,12 +32,11 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.protocol;
 import java.io.*;
-import java.net.*;
-import java.util.*;
-import java.util.zip.*;
+import java.net.DatagramPacket;
+import java.util.zip.GZIPOutputStream;
+
+import org.lockss.config.*;
 import org.lockss.util.*;
-import org.lockss.config.Configuration;
-import org.lockss.daemon.*;
 
 
 /** LockssDatagram describes the datagram packets exchanged between LOCKSS
@@ -150,7 +149,7 @@ public class LockssDatagram {
   }
 
   boolean isCompressed() {
-    Configuration config = Configuration.getCurrentConfig();
+    Configuration config = CurrentConfig.getCurrentConfig();
     return (config.getBoolean(LcapDatagramComm.PARAM_COMPRESS_PACKETS,
 			      LcapDatagramComm.DEFAULT_COMPRESS_PACKETS) &&
 	    payload.length >= config.getInt(LcapDatagramComm.PARAM_COMPRESS_MIN,

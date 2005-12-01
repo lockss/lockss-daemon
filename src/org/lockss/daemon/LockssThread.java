@@ -1,5 +1,5 @@
 /*
- * $Id: LockssThread.java,v 1.20 2005-10-11 05:44:15 tlipkis Exp $
+ * $Id: LockssThread.java,v 1.21 2005-12-01 23:28:01 troberts Exp $
  */
 
 /*
@@ -34,8 +34,8 @@ package org.lockss.daemon;
 
 import java.util.*;
 
-import org.lockss.app.*;
-import org.lockss.config.Configuration;
+import org.lockss.app.LockssDaemon;
+import org.lockss.config.*;
 import org.lockss.util.*;
 
 /** LockssThread abstracts out common features of LOCKSS daemon threads,
@@ -236,8 +236,8 @@ public abstract class LockssThread extends Thread implements LockssWatchdog {
    * able to take some less drastic corrective action (e.g., close socket
    * for hung socket reads.) */
   protected void threadHung() {
-    if (Configuration.getBooleanParam(PARAM_THREAD_WDOG_HUNG_DUMP,
-				      DEFAULT_THREAD_WDOG_HUNG_DUMP)) {
+    if (CurrentConfig.getBooleanParam(PARAM_THREAD_WDOG_HUNG_DUMP,
+                                      DEFAULT_THREAD_WDOG_HUNG_DUMP)) {
       PlatformInfo.getInstance().threadDump();
       try {
 	Thread.sleep(30 * Constants.SECOND);
@@ -287,7 +287,7 @@ public abstract class LockssThread extends Thread implements LockssWatchdog {
 				       "<name>", name);
       wdogParamNameMap.put(name, param);
     }
-    return Configuration.getTimeIntervalParam(param, defaultInterval);
+    return CurrentConfig.getTimeIntervalParam(param, defaultInterval);
   }
 
   int getPriorityFromParam(String name, int defaultInterval) {
@@ -297,7 +297,7 @@ public abstract class LockssThread extends Thread implements LockssWatchdog {
 				       "<name>", name);
       prioParamNameMap.put(name, param);
     }
-    return Configuration.getIntParam(param, defaultInterval);
+    return CurrentConfig.getIntParam(param, defaultInterval);
   }
 
   private void logEvent(String event, boolean includeInterval) {

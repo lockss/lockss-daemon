@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.42 2005-10-11 05:46:28 tlipkis Exp $
+ * $Id: ProxyHandler.java,v 1.43 2005-12-01 23:28:04 troberts Exp $
  */
 
 /*
@@ -32,33 +32,30 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.42 2005-10-11 05:46:28 tlipkis Exp $
+// $Id: ProxyHandler.java,v 1.43 2005-12-01 23:28:04 troberts Exp $
 // ========================================================================
 
 package org.lockss.proxy;
 
 import java.io.*;
-import java.net.Socket;
-import java.net.URL;
-import java.net.URLConnection;
+import java.net.*;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.util.Enumeration;
-import java.util.HashSet;
-import java.util.Set;
-import org.mortbay.http.*;
-import org.mortbay.http.handler.*;
-import org.mortbay.util.*;
-import org.mortbay.log.LogFactory;
-import org.apache.commons.logging.Log;
 
+import org.apache.commons.httpclient.util.*;
+import org.apache.commons.logging.Log;
+import org.mortbay.http.*;
+import org.mortbay.http.handler.AbstractHttpHandler;
+import org.mortbay.log.LogFactory;
+import org.mortbay.util.*;
+import org.mortbay.util.URI;
+
+import org.lockss.app.LockssDaemon;
+import org.lockss.config.*;
+import org.lockss.daemon.CuUrl;
+import org.lockss.plugin.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
-import org.lockss.app.*;
-import org.lockss.config.Configuration;
-import org.lockss.daemon.*;
-import org.lockss.plugin.*;
-import org.apache.commons.httpclient.util.*;
 
 /* ------------------------------------------------------------ */
 /** Proxy request handler.  A HTTP/1.1 Proxy with special handling for
@@ -98,8 +95,8 @@ public class ProxyHandler extends AbstractHttpHandler {
     theDaemon = daemon;
     pluginMgr = theDaemon.getPluginManager();
     proxyMgr = theDaemon.getProxyManager();
-    neverProxy = Configuration.getBooleanParam(PARAM_NEVER_PROXY,
-					       DEFAULT_NEVER_PROXY);
+    neverProxy = CurrentConfig.getBooleanParam(PARAM_NEVER_PROXY,
+                                               DEFAULT_NEVER_PROXY);
     hostname = Configuration.getPlatformHostname();
   }
 

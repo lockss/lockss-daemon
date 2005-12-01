@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigManager.java,v 1.11 2005-10-10 23:48:56 troberts Exp $
+ * $Id: TestConfigManager.java,v 1.12 2005-12-01 23:28:06 troberts Exp $
  */
 
 /*
@@ -32,14 +32,11 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.config;
 
-import java.util.*;
 import java.io.*;
-import java.net.*;
-import org.lockss.util.*;
-import org.lockss.config.ConfigFile;
-import org.lockss.config.ConfigManager;
-import org.lockss.config.Configuration;
+import java.util.*;
+
 import org.lockss.test.*;
+import org.lockss.util.*;
 
 /**
  * Test class for <code>org.lockss.config.ConfigManager</code>
@@ -92,14 +89,14 @@ public class TestConfigManager extends LockssTestCase {
     assertEquals(554, ConfigManager.getTimeIntervalParam("noparam", 554));
 
     // these should go once static param methods are removed from Configuration
-    assertEquals("12", Configuration.getParam("prop.p1"));
-    assertEquals("foobar", Configuration.getParam("prop.p2"));
-    assertTrue(Configuration.getBooleanParam("prop.p3.a", false));
-    assertEquals(12, Configuration.getIntParam("prop.p1"));
-    assertEquals(554, Configuration.getIntParam("propnot.p1", 554));
+    assertEquals("12", CurrentConfig.getParam("prop.p1"));
+    assertEquals("foobar", CurrentConfig.getParam("prop.p2"));
+    assertTrue(CurrentConfig.getBooleanParam("prop.p3.a", false));
+    assertEquals(12, CurrentConfig.getIntParam("prop.p1"));
+    assertEquals(554, CurrentConfig.getIntParam("propnot.p1", 554));
     assertEquals(2 * Constants.WEEK,
-		 Configuration.getTimeIntervalParam("timeint", 554));
-    assertEquals(554, Configuration.getTimeIntervalParam("noparam", 554));
+                 CurrentConfig.getTimeIntervalParam("timeint", 554));
+    assertEquals(554, CurrentConfig.getTimeIntervalParam("noparam", 554));
   }
 
   boolean setCurrentConfigFromUrlList(List l) {
@@ -334,11 +331,11 @@ public class TestConfigManager extends LockssTestCase {
     props.put(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tmpdir);
     ConfigurationUtil.setCurrentConfigFromProps(props);
     String relConfigPath =
-      Configuration.getParam(ConfigManager.PARAM_CONFIG_PATH,
-			     ConfigManager.DEFAULT_CONFIG_PATH);
+      CurrentConfig.getParam(ConfigManager.PARAM_CONFIG_PATH,
+                             ConfigManager.DEFAULT_CONFIG_PATH);
     File cdir = new File(tmpdir, relConfigPath);
     assertTrue(cdir.exists());
-    Configuration config = Configuration.getCurrentConfig();
+    Configuration config = CurrentConfig.getCurrentConfig();
   }
 
   public void testConfigVersionProp() {
@@ -353,8 +350,8 @@ public class TestConfigManager extends LockssTestCase {
     props.put(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tmpdir);
     ConfigurationUtil.setCurrentConfigFromProps(props);
     String relConfigPath =
-      Configuration.getParam(ConfigManager.PARAM_CONFIG_PATH,
-			     ConfigManager.DEFAULT_CONFIG_PATH);
+      CurrentConfig.getParam(ConfigManager.PARAM_CONFIG_PATH,
+                             ConfigManager.DEFAULT_CONFIG_PATH);
     File cdir = new File(tmpdir, relConfigPath);
     assertTrue(cdir.exists());
     Properties acprops = new Properties();
@@ -376,8 +373,8 @@ public class TestConfigManager extends LockssTestCase {
     ConfigurationUtil.setFromArgs(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
 				  tmpdir);
     String relConfigPath =
-      Configuration.getParam(ConfigManager.PARAM_CONFIG_PATH,
-			     ConfigManager.DEFAULT_CONFIG_PATH);
+      CurrentConfig.getParam(ConfigManager.PARAM_CONFIG_PATH,
+                             ConfigManager.DEFAULT_CONFIG_PATH);
     File cdir = new File(tmpdir, relConfigPath);
     assertTrue(cdir.exists());
     Properties acprops = new Properties();
@@ -385,11 +382,11 @@ public class TestConfigManager extends LockssTestCase {
     mgr.writeCacheConfigFile(acprops, ConfigManager.CONFIG_FILE_UI_IP_ACCESS,
 			     "this is a header");
 
-    Configuration config = Configuration.getCurrentConfig();
+    Configuration config = CurrentConfig.getCurrentConfig();
     assertNull(config.get("foo.bar"));
     ConfigurationUtil.setFromArgs(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
 				  tmpdir);
-    Configuration config2 = Configuration.getCurrentConfig();
+    Configuration config2 = CurrentConfig.getCurrentConfig();
     assertEquals("12345", config2.get("foo.bar"));
   }
 
@@ -404,7 +401,7 @@ public class TestConfigManager extends LockssTestCase {
     p.put("org.lockss.au.fooauid.bar", "222");
     p.put("org.lockss.au.fooauid.baz", "333");
 
-    Configuration config = Configuration.getCurrentConfig();
+    Configuration config = CurrentConfig.getCurrentConfig();
     assertNull(config.get("org.lockss.au.auid.foo"));
 
     // should create file first time
@@ -413,7 +410,7 @@ public class TestConfigManager extends LockssTestCase {
     // reinstall should load au config file
     ConfigurationUtil.setFromArgs(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
 				  tmpdir);
-    config = Configuration.getCurrentConfig();
+    config = CurrentConfig.getCurrentConfig();
     assertEquals("111", config.get("org.lockss.au.fooauid.foo"));
     assertEquals("222", config.get("org.lockss.au.fooauid.bar"));
     assertEquals("333", config.get("org.lockss.au.fooauid.baz"));
@@ -428,7 +425,7 @@ public class TestConfigManager extends LockssTestCase {
 
     ConfigurationUtil.setFromArgs(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
 				  tmpdir);
-    config = Configuration.getCurrentConfig();
+    config = CurrentConfig.getCurrentConfig();
     assertEquals("111", config.get("org.lockss.au.fooauid.foo"));
     assertEquals("222", config.get("org.lockss.au.fooauid.bar"));
     assertEquals("333", config.get("org.lockss.au.fooauid.baz"));
@@ -444,7 +441,7 @@ public class TestConfigManager extends LockssTestCase {
 
     ConfigurationUtil.setFromArgs(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
 				  tmpdir);
-    config = Configuration.getCurrentConfig();
+    config = CurrentConfig.getCurrentConfig();
     assertEquals("111", config.get("org.lockss.au.fooauid.foo"));
     assertEquals("222", config.get("org.lockss.au.fooauid.bar"));
     assertEquals(null, config.get("org.lockss.au.fooauid.baz"));

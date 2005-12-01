@@ -1,5 +1,5 @@
 /*
- * $Id: AuNodeImpl.java,v 1.9 2005-01-07 09:21:46 tlipkis Exp $
+ * $Id: AuNodeImpl.java,v 1.10 2005-12-01 23:28:02 troberts Exp $
  */
 
 /*
@@ -32,12 +32,13 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.repository;
 
-import java.io.*;
+import java.io.File;
 import java.net.*;
 import java.util.*;
-import org.lockss.daemon.CachedUrlSetSpec;
+
 import org.lockss.config.*;
-import org.lockss.util.*;
+import org.lockss.daemon.CachedUrlSetSpec;
+import org.lockss.util.PlatformInfo;
 
 /**
  * AuNode is used to represent the top-level contents of an ArchivalUnit.
@@ -146,8 +147,8 @@ public class AuNodeImpl extends RepositoryNodeImpl {
     long content = getTreeContentSize(null);
     if (isPropValid(cachedDu) && isPropValid(cachedDuContent)) {
       long maxDelta =
-	Configuration.getCurrentConfig().getSize(PARAM_RECOMPUTE_DU_DELTA,
-						 DEFAULT_RECOMPUTE_DU_DELTA);
+        CurrentConfig.getCurrentConfig().getSize(PARAM_RECOMPUTE_DU_DELTA,
+                                                 DEFAULT_RECOMPUTE_DU_DELTA);
       long duContent =  Long.parseLong(cachedDuContent);
       if (Math.abs(content - duContent) < maxDelta) {
 	long du =  Long.parseLong(cachedDu);

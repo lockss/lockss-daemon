@@ -1,5 +1,5 @@
 /*
- * $Id: V1Poll.java,v 1.30 2005-11-16 07:44:10 smorabito Exp $
+ * $Id: V1Poll.java,v 1.31 2005-12-01 23:28:00 troberts Exp $
  */
 
 /*
@@ -32,17 +32,17 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.poller;
 
-import java.io.*;
-import java.security.*;
-
-import org.lockss.config.Configuration;
-import org.lockss.daemon.*;
-import org.lockss.hasher.*;
-import org.lockss.plugin.*;
-import org.lockss.protocol.*;
-import org.lockss.util.*;
+import java.io.IOException;
+import java.security.MessageDigest;
 
 import org.mortbay.util.B64Code;
+
+import org.lockss.config.*;
+import org.lockss.daemon.CachedUrlSetHasher;
+import org.lockss.hasher.HashService;
+import org.lockss.plugin.CachedUrlSet;
+import org.lockss.protocol.*;
+import org.lockss.util.*;
 
 
 /**
@@ -191,10 +191,10 @@ public abstract class V1Poll extends BasePoll {
 
   void getConfigValues() {
     /* initialize with our parameters */
-    m_agreeVer = ((double)Configuration.getIntParam(PARAM_AGREE_VERIFY,
-						    DEFAULT_AGREE_VERIFY)) / 100;
-    m_disagreeVer = ((double)Configuration.getIntParam(PARAM_DISAGREE_VERIFY,
-						       DEFAULT_DISAGREE_VERIFY)) / 100;
+    m_agreeVer = ((double)CurrentConfig.getIntParam(PARAM_AGREE_VERIFY,
+                                                    DEFAULT_AGREE_VERIFY)) / 100;
+    m_disagreeVer = ((double)CurrentConfig.getIntParam(PARAM_DISAGREE_VERIFY,
+                                                       DEFAULT_DISAGREE_VERIFY)) / 100;
 
   }
 

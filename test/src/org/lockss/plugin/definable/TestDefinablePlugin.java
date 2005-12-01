@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinablePlugin.java,v 1.10 2005-07-18 08:14:28 tlipkis Exp $
+ * $Id: TestDefinablePlugin.java,v 1.11 2005-12-01 23:28:06 troberts Exp $
  */
 
 /*
@@ -31,15 +31,16 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.plugin.definable;
 
-import org.lockss.test.*;
-import org.lockss.plugin.*;
-import org.lockss.config.Configuration;
-import org.lockss.daemon.*;
 import java.util.*;
+
+import org.lockss.app.LockssDaemon;
+import org.lockss.config.*;
+import org.lockss.daemon.ConfigParamDescr;
+import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.base.BaseArchivalUnit;
+import org.lockss.test.*;
 import org.lockss.util.*;
-import org.lockss.app.*;
-import org.lockss.plugin.base.*;
-import org.lockss.util.urlconn.*;
+import org.lockss.util.urlconn.HttpResultMap;
 
 /**
  * <p>TestConfigurablePlugin: test case for ConfigurablePlugin</p>
@@ -75,7 +76,7 @@ public class TestDefinablePlugin extends LockssTestCase {
     map.putCollection(DefinableArchivalUnit.AU_RULES_KEY,rules);
     map.putString("au_start_url", "http://www.example.com/");
     ConfigurationUtil.setCurrentConfigFromProps(p);
-    Configuration auConfig = Configuration.getCurrentConfig();
+    Configuration auConfig = CurrentConfig.getCurrentConfig();
     ArchivalUnit actualReturn = definablePlugin.createAu(auConfig);
     assertTrue(actualReturn instanceof DefinableArchivalUnit);
     assertEquals("configuration", auConfig, actualReturn.getConfiguration());

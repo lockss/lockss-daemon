@@ -1,5 +1,5 @@
 /*
- * $Id: StatusActivityBase.java,v 1.4 2005-10-11 05:47:40 tlipkis Exp $
+ * $Id: StatusActivityBase.java,v 1.5 2005-12-01 23:28:01 troberts Exp $
  */
 
 /*
@@ -32,24 +32,15 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.uiapi.commands;
 
-import java.io.*;
-import java.net.*;
 import java.util.*;
 
-import javax.servlet.*;
-import javax.servlet.http.*;
-import javax.xml.parsers.*;
+import org.w3c.dom.Element;
 
-import org.w3c.dom.*;
-import org.xml.sax.*;
-
-import org.lockss.daemon.*;
 import org.lockss.config.*;
-import org.lockss.plugin.*;
+import org.lockss.plugin.PluginManager;
 import org.lockss.remote.*;
-import org.lockss.util.*;
-
 import org.lockss.uiapi.util.*;
+import org.lockss.util.*;
 
 /**
  * Fetch summary details for a LOCKSS machine
@@ -311,7 +302,7 @@ public class StatusActivityBase extends ApiActivityBase
    * @return Configuration reference
    */
   private Configuration getCurrentConfiguration() {
-    return Configuration.getCurrentConfig();
+    return CurrentConfig.getCurrentConfig();
   }
 }
 

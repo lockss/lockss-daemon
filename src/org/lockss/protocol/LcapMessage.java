@@ -1,5 +1,5 @@
 /*
- * $Id: LcapMessage.java,v 1.59 2005-11-16 07:44:09 smorabito Exp $
+ * $Id: LcapMessage.java,v 1.60 2005-12-01 23:28:00 troberts Exp $
  */
 
 /*
@@ -26,17 +26,12 @@
 
 package org.lockss.protocol;
 
-import java.security.MessageDigest;
-import java.util.StringTokenizer;
 import java.io.*;
 import java.security.*;
-import java.util.*;
+import java.util.Arrays;
 
-import org.lockss.poller.*;
+import org.lockss.config.*;
 import org.lockss.util.*;
-import org.lockss.config.Configuration;
-
-import org.mortbay.util.B64Code;
 
 /**
  * <p>Abstract base class for concrete implementations of LCAP message versions.</p>
@@ -237,8 +232,8 @@ public abstract class LcapMessage {
   }
 
   public static String getDefaultHashAlgorithm() {
-    String algorithm = Configuration.getParam(PARAM_HASH_ALGORITHM,
-					      DEFAULT_HASH_ALGORITHM);
+    String algorithm = CurrentConfig.getParam(PARAM_HASH_ALGORITHM,
+                                              DEFAULT_HASH_ALGORITHM);
     return algorithm;
   }
 

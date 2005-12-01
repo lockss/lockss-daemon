@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.162 2005-12-01 01:54:44 smorabito Exp $
+ * $Id: PollManager.java,v 1.163 2005-12-01 23:28:00 troberts Exp $
  */
 
 /*
@@ -39,16 +39,14 @@ import org.lockss.alert.*;
 import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
-import org.lockss.daemon.status.*;
-import org.lockss.hasher.*;
+import org.lockss.daemon.status.StatusService;
+import org.lockss.hasher.HashService;
 import org.lockss.plugin.*;
 import org.lockss.poller.v3.*;
-import org.lockss.poller.v3.V3Serializer.*;
+import org.lockss.poller.v3.V3Serializer.PollSerializerException;
 import org.lockss.protocol.*;
-import org.lockss.state.*;
+import org.lockss.state.NodeManager;
 import org.lockss.util.*;
-
-import sun.security.krb5.internal.crypto.*;
 
 /**
  * <p>Class that manages the polling process.</p>
@@ -630,7 +628,7 @@ public class PollManager
    */
   private void restoreV3Polls() {
     String relStateDir =
-      Configuration.getParam(V3Serializer.PARAM_V3_STATE_LOCATION,
+      CurrentConfig.getParam(V3Serializer.PARAM_V3_STATE_LOCATION,
                              V3Serializer.DEFAULT_V3_STATE_LOCATION);
 
     File stateDir =
