@@ -1,5 +1,5 @@
 /*
- * $Id: LcapDatagramComm.java,v 1.14 2005-10-11 05:46:14 tlipkis Exp $
+ * $Id: LcapDatagramComm.java,v 1.15 2005-12-01 01:54:43 smorabito Exp $
  */
 
 /*
@@ -58,13 +58,13 @@ public class LcapDatagramComm
     Configuration.PREFIX + "platform.localIPs";
 
   static final String PREFIX = Configuration.PREFIX + "comm.";
-  static final String PARAM_ENABLED = PREFIX + "enabled";
-  static final boolean DEFAULT_ENABLED = true;
+  public static final String PARAM_ENABLED = PREFIX + "enabled";
+  public static final boolean DEFAULT_ENABLED = true;
 
-  static final String PARAM_MULTI_GROUP = PREFIX + "multicast.group";
-  static final String PARAM_MULTI_PORT = PREFIX + "multicast.port";
-  static final String PARAM_MULTI_VERIFY = PREFIX + "multicast.verify";
-  static final boolean DEFAULT_MULTI_VERIFY = false;
+  public static final String PARAM_MULTI_GROUP = PREFIX + "multicast.group";
+  public static final String PARAM_MULTI_PORT = PREFIX + "multicast.port";
+  public static final String PARAM_MULTI_VERIFY = PREFIX + "multicast.verify";
+  public static final boolean DEFAULT_MULTI_VERIFY = false;
 
   /** If we receive no multicast packets (other than from ourself) for this
    * long, stop sending multicast */

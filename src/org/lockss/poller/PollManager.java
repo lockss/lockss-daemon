@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.161 2005-11-16 07:44:10 smorabito Exp $
+ * $Id: PollManager.java,v 1.162 2005-12-01 01:54:44 smorabito Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ import org.lockss.daemon.status.*;
 import org.lockss.hasher.*;
 import org.lockss.plugin.*;
 import org.lockss.poller.v3.*;
+import org.lockss.poller.v3.V3Serializer.*;
 import org.lockss.protocol.*;
 import org.lockss.state.*;
 import org.lockss.util.*;
@@ -135,6 +136,9 @@ public class PollManager
                                       new V3PollStatus.V3PollerStatusDetail(this));
     statusServ.registerStatusAccessor(V3PollStatus.VOTER_DETAIL_TABLE_NAME,
                                       new V3PollStatus.V3VoterStatusDetail(this));
+
+    // One time load of stored V3 polls.
+    restoreV3Polls();
   }
 
   /**
@@ -620,6 +624,61 @@ public class PollManager
   }
 
 
+  /**
+   * Load and start V3 polls that are found in a serialized state
+   * on the disk.
+   */
+  private void restoreV3Polls() {
+    String relStateDir =
+      Configuration.getParam(V3Serializer.PARAM_V3_STATE_LOCATION,
+                             V3Serializer.DEFAULT_V3_STATE_LOCATION);
+
+    File stateDir =
+      ConfigManager.getConfigManager().getPlatformDir(relStateDir);
+
+    File[] savedPolls = stateDir.listFiles();
+    if (savedPolls == null || savedPolls.length == 0) {
+      theLog.debug2("No saved polls found.");
+      return;
+    }
+    for (int ix = 0; ix < savedPolls.length; ix++) {
+      File poller = new File(savedPolls[ix],
+                             V3PollerSerializer.POLLER_STATE_BEAN);
+      if (poller != null && poller.exists()) {
+        theLog.debug2("Found serialized poller in file: " + poller);
+        // Restore poller
+        try {
+          V3Poller p = new V3Poller(theDaemon, savedPolls[ix]);
+          theLog.debug2("Restored poll: " + p.getKey());
+          addPoll(p);
+          p.startPoll();
+        } catch (PollSerializerException e) {
+          theLog.error("Unable to restore poller from: " + savedPolls[ix], e);
+          continue;
+        }
+      } else {
+        theLog.info("No serialized poller found.");
+      }
+      File voter = new File(savedPolls[ix],
+                            V3VoterSerializer.VOTER_USER_DATA_FILE);
+
+      if (voter != null && voter.exists()) {
+        theLog.info("Found serialized voter in file: " + voter);
+        try {
+          V3Voter v = new V3Voter(theDaemon, savedPolls[ix]);
+          theLog.debug2("Restoring voter: " + v.getKey());
+          addPoll(v);
+          v.startPoll();
+        } catch (PollSerializerException e) {
+          theLog.error("Unable to restore poller from: " + savedPolls[ix], e);
+          continue;
+        }
+      } else {
+        theLog.info("No serialized voter found.");
+      }
+    }
+  }
+
   //--------------- PollerStatus Accessors -----------------------------
   public Collection getV1Polls() {
     Collection polls = new ArrayList();
@@ -744,6 +803,7 @@ public class PollManager
     return thePolls.contains(key);
   }
 
+
   // ----------------  Callbacks -----------------------------------
 
   class RouterMessageHandler implements LcapRouter.MessageHandler {
@@ -784,14 +844,11 @@ public class PollManager
     }
 
     boolean isPollActive() {
-      // Hack for V3
-      if (isV3Poll()) return true;
-      return poll.getVoteTally().stateIsActive();
+      return poll.isPollActive();
     }
 
     boolean isPollCompleted() {
-      if (isV3Poll()) return false;
-      return poll.getVoteTally().stateIsFinished();
+      return poll.isPollCompleted();
     }
 
     boolean isPollSuspended() {

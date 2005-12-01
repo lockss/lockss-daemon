@@ -1,5 +1,5 @@
 /*
- * $Id: V1VerifyPoll.java,v 1.16 2005-11-16 07:44:10 smorabito Exp $
+ * $Id: V1VerifyPoll.java,v 1.17 2005-12-01 01:54:44 smorabito Exp $
  */
 
 /*
@@ -241,6 +241,14 @@ class V1VerifyPoll extends V1Poll {
 
   public String getStatusString() {
     return m_tally.getStatusString();
+  }
+
+  public boolean isPollActive() {
+    return m_tally.stateIsActive();
+  }
+
+  public boolean isPollCompleted() {
+    return m_tally.stateIsFinished();
   }
 
   class VerifyTimerCallback implements TimerQueue.Callback {

@@ -1,5 +1,5 @@
 /*
- * $Id: PollerStateBean.java,v 1.7 2005-11-16 07:44:10 smorabito Exp $
+ * $Id: PollerStateBean.java,v 1.8 2005-12-01 01:54:44 smorabito Exp $
  */
 
 /*
@@ -45,7 +45,7 @@ public class PollerStateBean implements LockssSerializable {
 
   private LcapMessage pollMessage;
   private String pollKey;
-  private Deadline deadline;
+  private long deadline;
   private long duration;
   private String auId;
   private String pluginVersion;
@@ -96,7 +96,7 @@ public class PollerStateBean implements LockssSerializable {
     this.pollerId = orig;
     this.pollKey = pollKey;
     this.duration = duration;
-    this.deadline = Deadline.in(duration);
+    this.deadline = Deadline.in(duration).getExpirationTime();
     this.pollSize = pollSize;
     this.hashReadyCounter = pollSize;
     this.nomineeCounter = pollSize;
@@ -214,11 +214,11 @@ public class PollerStateBean implements LockssSerializable {
     return hashAlgorithm;
   }
 
-  public void setDeadline(Deadline d) {
-    this.deadline = d;
+  public void setDeadline(long l) {
+    this.deadline = l;
   }
 
-  public Deadline getDeadline() {
+  public long getDeadline() {
     return deadline;
   }
 

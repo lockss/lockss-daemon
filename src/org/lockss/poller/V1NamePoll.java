@@ -1,5 +1,5 @@
 /*
- * $Id: V1NamePoll.java,v 1.20 2005-11-16 07:44:10 smorabito Exp $
+ * $Id: V1NamePoll.java,v 1.21 2005-12-01 01:54:44 smorabito Exp $
  */
 
 /*
@@ -324,6 +324,14 @@ public class V1NamePoll extends V1Poll {
 
   public String getStatusString() {
     return m_tally.getStatusString();
+  }
+
+  public boolean isPollActive() {
+    return m_tally.stateIsActive();
+  }
+
+  public boolean isPollCompleted() {
+    return m_tally.stateIsFinished();
   }
 
   static class NameVote extends Vote {

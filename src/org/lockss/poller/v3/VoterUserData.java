@@ -1,5 +1,5 @@
 /*
- * $Id: VoterUserData.java,v 1.8 2005-11-16 07:44:09 smorabito Exp $
+ * $Id: VoterUserData.java,v 1.9 2005-12-01 01:54:44 smorabito Exp $
  */
 
 /*
@@ -56,7 +56,7 @@ public class VoterUserData
   private int pollVersion;
   private String pluginVersion;
   private long duration;
-  private Deadline deadline;
+  private long deadline;
   private String hashAlgorithm;
   private VoteBlocks voteBlocks;
   private String url;
@@ -98,7 +98,7 @@ public class VoterUserData
     this.pollerId = pollerId;
     this.pollKey = pollKey;
     this.duration = duration;
-    this.deadline = Deadline.in(duration);
+    this.deadline = Deadline.in(duration).getExpirationTime();
     this.hashAlgorithm = hashAlgorithm;
     this.voterNonce = voterNonce;
     this.pollerNonce = pollerNonce;
@@ -152,11 +152,11 @@ public class VoterUserData
     this.duration = duration;
   }
 
-  public Deadline getDeadline() {
+  public long getDeadline() {
     return deadline;
   }
 
-  public void setDeadline(Deadline deadline) {
+  public void setDeadline(long deadline) {
     this.deadline = deadline;
   }
 

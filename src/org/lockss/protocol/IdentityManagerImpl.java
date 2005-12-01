@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManagerImpl.java,v 1.10 2005-11-16 07:44:09 smorabito Exp $
+ * $Id: IdentityManagerImpl.java,v 1.11 2005-12-01 01:54:43 smorabito Exp $
  */
 
 /*
@@ -165,9 +165,9 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
   /**
    * <p>The initial list of V3 peers for this cache.</p>
    */
-  public static String PARAM_INITIAL_PEERS = PREFIX + "initialV3PeerList";
+  public static final String PARAM_INITIAL_PEERS = PREFIX + "initialV3PeerList";
 
-  public static String DEFAULT_INITIAL_PEERS = "";
+  public static final String DEFAULT_INITIAL_PEERS = "";
 
   /**
    * <p>An instance of {@link LockssRandom} for use by this class.</p>
@@ -338,6 +338,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
     }
     catch (ProtocolException ex) {}
     super.stopService();
+    getDaemon().getStatusService().unregisterStatusAccessor("Identities");
     Vote.setIdentityManager(null);
     LcapMessage.setIdentityManager(null);
   }

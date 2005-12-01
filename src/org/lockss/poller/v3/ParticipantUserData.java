@@ -1,5 +1,5 @@
 /*
- * $Id: ParticipantUserData.java,v 1.1 2005-11-16 07:44:10 smorabito Exp $
+ * $Id: ParticipantUserData.java,v 1.2 2005-12-01 01:54:44 smorabito Exp $
  */
 
 /*
@@ -41,8 +41,7 @@ import java.util.*;
 /**
  * Persistent user data state object used by V3Poller state machine.
  */
-public class ParticipantUserData
-  implements PsmInterp.Checkpointer, LockssSerializable {
+public class ParticipantUserData implements LockssSerializable {
 
   private PeerIdentity voterId;
   private String hashAlgorithm;
@@ -263,7 +262,7 @@ public class ParticipantUserData
     return pollState.getCachedUrlSet();
   }
 
-  public Deadline getDeadline() {
+  public long getDeadline() {
     return pollState.getDeadline();
   }
 
@@ -289,6 +288,14 @@ public class ParticipantUserData
 
   public int hashCode() {
     return pollState.hashCode();
+  }
+
+  public void setPoller(V3Poller poller) {
+    this.poller = poller;
+  }
+
+  public void setPollState(PollerStateBean state) {
+    this.pollState = state;
   }
 
   /** Poller delegate methods */
@@ -320,10 +327,4 @@ public class ParticipantUserData
   }
 
   private PsmInterpStateBean interpStateBean;
-
-  /** State machine has entered resumable state; save state */
-  public void checkpoint(PsmInterpStateBean resumeStateBean) {
-    interpStateBean = resumeStateBean;
-//    poller.checkpointPollState();
-  }
 }

@@ -1,5 +1,5 @@
 /*
-* $Id: BasePoll.java,v 1.18 2005-11-16 07:44:10 smorabito Exp $
+* $Id: BasePoll.java,v 1.19 2005-12-01 01:54:44 smorabito Exp $
  */
 
 /*
@@ -79,5 +79,19 @@ public abstract class BasePoll implements Poll {
    * @return true if the poll state is an error value
    */
   abstract protected boolean isErrorState();
+
+  /**
+   * Is this poll currently active?
+   *
+   * @return True if the poll is active.
+   */
+  abstract protected boolean isPollActive();
+
+  /**
+   * Is this poll currently active?
+   *
+   * @return True if the poll is complete.
+   */
+  abstract protected boolean isPollCompleted();
 
 }

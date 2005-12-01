@@ -1,5 +1,5 @@
 /*
- * $Id: TestV1Poll.java,v 1.4 2005-10-07 23:46:45 smorabito Exp $
+ * $Id: TestV1Poll.java,v 1.5 2005-12-01 01:54:43 smorabito Exp $
  */
 
 /*
@@ -61,6 +61,10 @@ public class TestV1Poll extends LockssTestCase {
 
   protected void setUp() throws Exception {
     super.setUp();
+    String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    Properties p = new Properties();
+    p.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
+    ConfigurationUtil.setCurrentConfigFromProps(p);
     theDaemon = getMockLockssDaemon();
     pollmanager = theDaemon.getPollManager();
     idmgr = new MockIdentityManager();

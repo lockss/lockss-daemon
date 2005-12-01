@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.82 2005-11-16 07:44:08 smorabito Exp $
+ * $Id: TestPollManager.java,v 1.83 2005-12-01 01:54:43 smorabito Exp $
  */
 
 /*
@@ -35,6 +35,8 @@ package org.lockss.poller;
 import java.io.*;
 import java.security.*;
 import java.util.*;
+
+import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.poller.v3.*;
@@ -609,6 +611,7 @@ public class TestPollManager extends LockssTestCase {
     }
     p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
     p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    p.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
     p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
   }
 
@@ -650,12 +653,12 @@ public class TestPollManager extends LockssTestCase {
     PollSpec v3Spec = new MockPollSpec(testau, rooturls[0], null, null,
                                        Poll.V3_POLL);
     v3Testmsg[0] = V3LcapMessage.makeRequestMsg(v3Spec,
-                                              "http://www.test.com/",
-                                              ByteArray.makeRandomBytes(20),
-                                              ByteArray.makeRandomBytes(20),
-                                              V3LcapMessage.MSG_POLL,
-                                              Deadline.in(testduration),
-                                              testID);
+                                                "http://www.test.com/",
+                                                ByteArray.makeRandomBytes(20),
+                                                ByteArray.makeRandomBytes(20),
+                                                V3LcapMessage.MSG_POLL,
+                                                testduration,
+                                                testID);
   }
 
   /** Executes the test case

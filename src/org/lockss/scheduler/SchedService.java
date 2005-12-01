@@ -1,5 +1,5 @@
 /*
- * $Id: SchedService.java,v 1.11 2004-10-01 09:27:19 tlipkis Exp $
+ * $Id: SchedService.java,v 1.12 2005-12-01 01:54:43 smorabito Exp $
  */
 
 /*
@@ -74,6 +74,7 @@ public class SchedService extends BaseLockssManager {
     // TODO: checkpoint here.
     if (runner != null) {
       getApp().getStatusService().unregisterStatusAccessor("TaskRunner");
+      getApp().getStatusService().unregisterStatusAccessor("SchedQ");
       runner.stopService();
     }
     runner = null;

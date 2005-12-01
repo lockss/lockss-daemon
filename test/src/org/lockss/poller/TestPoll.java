@@ -1,5 +1,5 @@
 /*
- * $Id: TestPoll.java,v 1.93 2005-10-07 23:46:45 smorabito Exp $
+ * $Id: TestPoll.java,v 1.94 2005-12-01 01:54:43 smorabito Exp $
  */
 
 /*
@@ -473,6 +473,7 @@ public class TestPoll extends LockssTestCase {
     Properties p = new Properties();
     p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
     p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    p.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
     p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
     p.setProperty(ConfigManager.PARAM_NEW_SCHEDULER, "false");
     // XXX we need to disable verification of votes because the

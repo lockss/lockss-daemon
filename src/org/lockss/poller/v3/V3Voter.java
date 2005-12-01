@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.8 2005-11-16 07:44:09 smorabito Exp $
+ * $Id: V3Voter.java,v 1.9 2005-12-01 01:54:44 smorabito Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.poller.v3;
 
-import java.io.IOException;
+import java.io.*;
 import java.security.*;
 import java.util.*;
 
@@ -75,6 +75,7 @@ public class V3Voter extends BasePoll {
   private PollManager pollManager;
   private IdentityManager idManager;
   private boolean continuedPoll = false;
+  private boolean activePoll = true;
   private int nomineeCount;
 
   private static final Logger log = Logger.getLogger("V3Voter");
@@ -117,12 +118,13 @@ public class V3Voter extends BasePoll {
     log.debug2("Will choose " + nomineeCount +
     " outer circle nominees to send to poller");
     stateMachine = makeStateMachine(voterUserData);
+    checkpointPoll();
   }
 
   /**
    * Restore a V3Voter from a previously saved poll.
    */
-  public V3Voter(LockssDaemon daemon, String pollDir)
+  public V3Voter(LockssDaemon daemon, File pollDir)
       throws V3Serializer.PollSerializerException {
     this.theDaemon = daemon;
     this.pollSerializer = new V3VoterSerializer(theDaemon, pollDir);
@@ -151,11 +153,7 @@ public class V3Voter extends BasePoll {
     interp.setCheckpointer(new PsmInterp.Checkpointer() {
       public void checkpoint(PsmInterpStateBean resumeStateBean) {
         voterUserData.setPsmState(resumeStateBean);
-        try {
-          checkpointPoll();
-        } catch (PollSerializerException ex) {
-
-        }
+        checkpointPoll();
       }
     });
 
@@ -164,7 +162,7 @@ public class V3Voter extends BasePoll {
 
   public void startPoll() {
     log.debug("Starting poll " + voterUserData.getPollKey());
-    TimerQueue.schedule(voterUserData.getDeadline(),
+    TimerQueue.schedule(Deadline.at(voterUserData.getDeadline()),
                         new PollTimerCallback(), this);
     if (continuedPoll) {
       try {
@@ -186,6 +184,7 @@ public class V3Voter extends BasePoll {
   public void stopPoll() {
     // XXX: Set proper status string (Complete / Sent Repair / ?)
     voterUserData.setStatusString("Complete");
+    activePoll = false;
     pollSerializer.closePoll();
     pollManager.closeThePoll(voterUserData.getPollKey());
     log.debug2("Closed poll " + voterUserData.getPollKey());
@@ -257,6 +256,7 @@ public class V3Voter extends BasePoll {
       log.warning("Not enough peers to nominate.  Need " + nomineeCount +
                   ", only know about " + allPeers.size());
     }
+    checkpointPoll();
   }
 
   /**
@@ -294,7 +294,8 @@ public class V3Voter extends BasePoll {
                                                 initHasherByteArrays(),
                                                 new BlockCompleteHandler());
     HashService hashService = theDaemon.getHashService();
-    return hashService.scheduleHash(hasher, voterUserData.getDeadline(),
+    return hashService.scheduleHash(hasher,
+                                    Deadline.at(voterUserData.getDeadline()),
                                     new HashingCompleteCallback(), null);
   }
 
@@ -383,7 +384,7 @@ public class V3Voter extends BasePoll {
   }
 
   public Deadline getDeadline() {
-    return voterUserData.getDeadline();
+    return Deadline.at(voterUserData.getDeadline());
   }
 
   public long getDuration() {
@@ -441,12 +442,28 @@ public class V3Voter extends BasePoll {
     return voterUserData.getPollerId();
   }
 
+  public boolean isPollActive() {
+    return activePoll;
+  }
+
+  public boolean isPollCompleted() {
+    return !activePoll;
+  }
+
+  public VoterUserData getVoterUserData() {
+    return voterUserData;
+  }
+
   /**
    * Checkpoint the current state of the voter.
    * @throws PollSerializerException
    */
-  private void checkpointPoll() throws PollSerializerException {
-    pollSerializer.saveVoterUserData(voterUserData);
+  private void checkpointPoll() {
+    try {
+      pollSerializer.saveVoterUserData(voterUserData);
+    } catch (PollSerializerException ex) {
+      log.warning("Unable to save poller state!", ex);
+    }
   }
 
   private class PollTimerCallback implements TimerQueue.Callback {

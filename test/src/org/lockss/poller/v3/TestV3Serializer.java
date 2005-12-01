@@ -93,10 +93,10 @@ public class TestV3Serializer extends LockssTestCase {
     PollerStateBean vsb1 = makePollerStateBean(pollerSerializer);
     pollerSerializer.savePollerState(vsb1);
     PollerStateBean vsb2 = pollerSerializer.loadPollerState();
-    assertEqualPollerStateBeans(vsb1, vsb2);
-    pollerSerializer = new V3PollerSerializer(theDaemon, pollDir.getName());
+    V3TestUtil.assertEqualPollerStateBeans(vsb1, vsb2);
+    pollerSerializer = new V3PollerSerializer(theDaemon, pollDir);
     PollerStateBean vsb3 = pollerSerializer.loadPollerState();
-    assertEqualPollerStateBeans(vsb1, vsb3);
+    V3TestUtil.assertEqualPollerStateBeans(vsb1, vsb3);
   }
 
 
@@ -108,10 +108,10 @@ public class TestV3Serializer extends LockssTestCase {
     PeerIdentity id = ud1.getVoterId();
     pollerSerializer.savePollerUserData(ud1);
     ParticipantUserData ud2 = pollerSerializer.loadPollerUserData(id);
-    assertEqualPollerUserData(ud1, ud2);
-    pollerSerializer = new V3PollerSerializer(theDaemon, pollDir.getName());
+    V3TestUtil.assertEqualParticipantUserData(ud1, ud2);
+    pollerSerializer = new V3PollerSerializer(theDaemon, pollDir);
     ParticipantUserData ud3 = pollerSerializer.loadPollerUserData(id);
-    assertEqualPollerUserData(ud1, ud3);
+    V3TestUtil.assertEqualParticipantUserData(ud1, ud3);
     PeerIdentity id2 = new MockPeerIdentity("192.168.1.1:9999");
     try {
       pollerSerializer.loadPollerUserData(id2);
@@ -128,10 +128,10 @@ public class TestV3Serializer extends LockssTestCase {
     VoterUserData ud1 = makeVoterUserData(voterSerializer);
     voterSerializer.saveVoterUserData(ud1);
     VoterUserData ud2 = voterSerializer.loadVoterUserData();
-    assertEqualVoterUserData(ud1, ud2);
-    voterSerializer = new V3VoterSerializer(theDaemon, pollDir.getName());
+    V3TestUtil.assertEqualVoterUserData(ud1, ud2);
+    voterSerializer = new V3VoterSerializer(theDaemon, pollDir);
     VoterUserData ud3 = voterSerializer.loadVoterUserData();
-    assertEqualVoterUserData(ud1, ud3);
+    V3TestUtil.assertEqualVoterUserData(ud1, ud3);
   }
 
   public void testLoadInnerCircleStates() throws Exception {
@@ -156,7 +156,7 @@ public class TestV3Serializer extends LockssTestCase {
     }
     Collection uds2 = pollerSerializer.loadVoterStates();
     assertEqualInnerCircles(uds1, uds2);
-    pollerSerializer = new V3PollerSerializer(theDaemon, pollDir.getName());
+    pollerSerializer = new V3PollerSerializer(theDaemon, pollDir);
     Collection uds3 = pollerSerializer.loadVoterStates();
     assertEqualInnerCircles(uds1, uds3);
   }
@@ -166,7 +166,7 @@ public class TestV3Serializer extends LockssTestCase {
     PollerStateBean vsb = new PollerStateBean();
     vsb.setAuId("testAu");
     vsb.setCachedUrlSet(new MockCachedUrlSet());
-    vsb.setDeadline(Deadline.in(10000));
+    vsb.setDeadline(10000);
     vsb.setHashAlgorithm("SHA1");
     vsb.setLastHashedBlock("http://www.example.com/file1.html");
     vsb.setPluginVersion("mock");
@@ -211,7 +211,7 @@ public class TestV3Serializer extends LockssTestCase {
   private VoterUserData makeVoterUserData(V3VoterSerializer serializer) {
     VoterUserData ud = new VoterUserData();
     ud.setAuId("mockAu");
-    ud.setDeadline(Deadline.in(10000));
+    ud.setDeadline(10000);
     ud.setHashAlgorithm("SHA1");
     ud.setIntroEffortProof(ByteArray.makeRandomBytes(20));
     ud.setNominees(ListUtil.list("10.1.0.1:8000", "10.1.0.2:8000"));
@@ -239,60 +239,6 @@ public class TestV3Serializer extends LockssTestCase {
     return ud;
   }
 
-  private void assertEqualPollerStateBeans(PollerStateBean b1,
-                                           PollerStateBean b2) {
-    assertEquals(b1.getAuId(), b2.getAuId());
-    assertEquals(b1.getHashAlgorithm(), b2.getHashAlgorithm());
-    assertEquals(b1.getLastHashedBlock(), b2.getLastHashedBlock());
-    assertEquals(b1.getPluginVersion(), b2.getPluginVersion());
-    assertEquals(b1.getUrl(), b2.getUrl());
-    assertEquals(b1.getDeadline(), b2.getDeadline());
-    assertEquals(b1.getPollerId().getIdString(),
-                 b2.getPollerId().getIdString());
-    assertEquals(b1.allVotersReadyToTally(), b2.allVotersReadyToTally());
-  }
-
-  private void assertEqualPollerUserData(ParticipantUserData d1,
-                                         ParticipantUserData d2) {
-    assertEquals(d1.getVoterId().getIdString(),
-                 d2.getVoterId().getIdString());
-    assertEquals(d1.getRepairTarget(), d2.getRepairTarget());
-    // XXX: Could use a better comparison for vote blocks
-    assertEquals(d1.getVoteBlocks().size(),
-                 d2.getVoteBlocks().size());
-    assertEquals(d1.getNominees(), d2.getNominees());
-    assertEquals(d1.getHashAlgorithm(), d2.getHashAlgorithm());
-    assertEquals(d1.getPollerNonce(), d2.getPollerNonce());
-    assertEquals(d1.getVoterNonce(), d2.getVoterNonce());
-    assertEquals(d1.getPollAckEffortProof(), d2.getPollAckEffortProof());
-    assertEquals(d1.getIntroEffortProof(), d2.getIntroEffortProof());
-    assertEquals(d1.getReceiptEffortProof(), d2.getReceiptEffortProof());
-    assertEquals(d1.getRemainingEffortProof(), d2.getRemainingEffortProof());
-    assertEquals(d1.getRepairEffortProof(), d2.getRepairEffortProof());
-  }
-
-  private void assertEqualVoterUserData(VoterUserData d1,
-                                        VoterUserData d2) {
-    assertEquals(d1.getAuId(), d2.getAuId());
-    assertEquals(d1.getHashAlgorithm(), d2.getHashAlgorithm());
-    assertEquals(d1.getIntroEffortProof(), d2.getIntroEffortProof());
-    assertEquals(d1.getPluginVersion(), d2.getPluginVersion());
-    assertEquals(d1.getPollAckEffortProof(), d2.getPollAckEffortProof());
-    assertEquals(d1.getPollerNonce(), d2.getPollerNonce());
-    assertEquals(d1.getPollKey(), d2.getPollKey());
-    assertEquals(d1.getReceiptEffortProof(), d2.getReceiptEffortProof());
-    assertEquals(d1.getRemainingEffortProof(), d2.getRemainingEffortProof());
-    assertEquals(d1.getRepairEffortProof(), d2.getRepairEffortProof());
-    assertEquals(d1.getUrl(), d2.getUrl());
-    assertEquals(d1.getVoterNonce(), d2.getVoterNonce());
-    assertEquals(d1.getDeadline(), d2.getDeadline());
-    assertEquals(d1.getNominees(), d2.getNominees());
-    assertEquals(d1.getPollerId().getIdString(),
-                 d2.getPollerId().getIdString());
-    assertEquals(d1.getPollVersion(), d2.getPollVersion());
-    assertEquals(d1.getVoteBlocks().size(), d2.getVoteBlocks().size());
-  }
-
   private class PollerUserDataComparator implements Comparator {
     // Simply sort by voterID
     public int compare(Object a, Object b) {
@@ -316,7 +262,7 @@ public class TestV3Serializer extends LockssTestCase {
     for(int i = 0 ; i < a.size(); i++) {
       ParticipantUserData ud1 = (ParticipantUserData)la.get(i);
       ParticipantUserData ud2 = (ParticipantUserData)lb.get(i);
-      assertEqualPollerUserData(ud1, ud2);
+      V3TestUtil.assertEqualParticipantUserData(ud1, ud2);
     }
   }
 

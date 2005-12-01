@@ -1,5 +1,5 @@
 /*
- * $Id: FuncV3Voter.java,v 1.4 2005-10-11 05:50:29 tlipkis Exp $
+ * $Id: FuncV3Voter.java,v 1.5 2005-12-01 01:54:43 smorabito Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ import java.util.*;
 
 import org.lockss.app.*;
 import org.lockss.config.*;
+import org.lockss.config.Configuration.*;
 import org.lockss.hasher.*;
 import org.lockss.plugin.*;
 import org.lockss.poller.*;
@@ -78,18 +79,74 @@ public class FuncV3Voter extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
+    tempDirPath = null;
+    tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    startDaemon();
+  }
+
+  public void tearDown() throws Exception {
+    stopDaemon();
+    super.tearDown();
+  }
+
+  private void startDaemon() throws Exception {
     TimeBase.setSimulated();
     this.testau = setupAu();
-    initRequiredServices();
-
+    theDaemon = getMockLockssDaemon();
+    Properties p = new Properties();
+    p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
+    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
+    p.setProperty(ConfigManager.PARAM_NEW_SCHEDULER, "true");
+    p.setProperty(V3Poller.PARAM_MIN_POLL_SIZE, "4");
+    p.setProperty(V3Poller.PARAM_MAX_POLL_SIZE, "4");
+    p.setProperty(V3PollFactory.PARAM_POLL_DURATION_MIN, "5m");
+    p.setProperty(V3PollFactory.PARAM_POLL_DURATION_MAX, "6m");
+    p.setProperty(V3Poller.PARAM_QUORUM, "3");
+    p.setProperty(LcapStreamComm.PARAM_ENABLED, "true");
+    p.setProperty(LcapDatagramComm.PARAM_ENABLED, "false");
+    p.setProperty(IdentityManager.PARAM_LOCAL_V3_IDENTITY, "127.0.0.1;3456");
+    p.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
+    p.setProperty(IdentityManagerImpl.PARAM_INITIAL_PEERS,
+                  "127.0.0.2;3456,127.0.0.3;3456,"
+                  + "127.0.0.4;3456,127.0.0.5;3456,"
+                  + "127.0.0.6;3456,127.0.0.7;3456");
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+    idmgr = theDaemon.getIdentityManager();
+    pollmanager = theDaemon.getPollManager();
+    hashService = theDaemon.getHashService();
+    theDaemon.setStreamCommManager(new MyMockStreamCommManager(theDaemon));
+    theDaemon.setDatagramRouterManager(new MyMockLcapDatagramRouter());
+    theDaemon.setRouterManager(new MyMockLcapRouter());
+    theDaemon.setNodeManager(new MockNodeManager(), testau);
+    theDaemon.setPluginManager(new MyMockPluginManager(theDaemon, testau));
+    theDaemon.setDaemonInited(true);
+    theDaemon.getSchedService().startService();
+    theDaemon.getActivityRegulator(testau).startService();
+    idmgr.startService();
+    hashService.startService();
+    pollmanager.startService();
     this.pollerId = idmgr.stringToPeerIdentity("127.0.0.1");
-    this.voterId = idmgr.stringToPeerIdentity("10.0.0.1");
-
     this.msgPoll = makePollMsg();
     this.msgPollProof = makePollProofMsg();
     this.msgVoteRequest = makeVoteReqMsg();
     this.msgRepairRequest = makeRepairReqMsg();
     this.msgReceipt = makeReceiptMsg();
+  }
+
+  private void stopDaemon() throws Exception {
+    theDaemon.getPollManager().stopService();
+    theDaemon.getPluginManager().stopService();
+    theDaemon.getActivityRegulator(testau).stopService();
+    theDaemon.getSystemMetrics().stopService();
+    theDaemon.getRouterManager().stopService();
+    theDaemon.getDatagramRouterManager().stopService();
+    theDaemon.getHashService().stopService();
+    theDaemon.getSchedService().stopService();
+    theDaemon.getIdentityManager().stopService();
+    theDaemon.setDaemonInited(false);
+    this.testau = null;
+    TimeBase.setReal();
   }
 
   private MockArchivalUnit setupAu() {
@@ -113,7 +170,7 @@ public class FuncV3Voter extends LockssTestCase {
   public V3LcapMessage makePollMsg() {
     V3LcapMessage msg =
       new V3LcapMessage(V3LcapMessage.MSG_POLL,
-                        "key",
+                        "randomkeyforpoll",
                         pollerId,
                         "http://www.test.org",
                         123456789, 987654321,
@@ -126,7 +183,7 @@ public class FuncV3Voter extends LockssTestCase {
   public V3LcapMessage makePollProofMsg() {
     V3LcapMessage msg =
       new V3LcapMessage(V3LcapMessage.MSG_POLL_PROOF,
-                        "key",
+                        "randomkeyforpoll",
                         pollerId,
 			"http://www.test.org",
 			123456789, 987654321,
@@ -139,7 +196,7 @@ public class FuncV3Voter extends LockssTestCase {
   public V3LcapMessage makeVoteReqMsg() {
     V3LcapMessage msg =
       new V3LcapMessage(V3LcapMessage.MSG_VOTE_REQ,
-                        "key",
+                        "randomkeyforpoll",
                         pollerId,
 			"http://www.test.org",
 			123456789, 987654321,
@@ -151,7 +208,7 @@ public class FuncV3Voter extends LockssTestCase {
   public V3LcapMessage makeRepairReqMsg() {
     V3LcapMessage msg =
       new V3LcapMessage(V3LcapMessage.MSG_REPAIR_REQ,
-                        "key",
+                        "randomkeyforpoll",
                         pollerId,
 			"http://www.test.org",
 			123456789, 987654321,
@@ -163,23 +220,13 @@ public class FuncV3Voter extends LockssTestCase {
   public V3LcapMessage makeReceiptMsg() {
     V3LcapMessage msg =
       new V3LcapMessage(V3LcapMessage.MSG_EVALUATION_RECEIPT,
-                        "key",
+                        "randomkeyforpoll",
                         pollerId,
 			"http://www.test.org",
 			123456789, 987654321,
 			ByteArray.makeRandomBytes(20),
                         ByteArray.makeRandomBytes(20));
     return msg;
-  }
-
-  public void tearDown() throws Exception {
-    theDaemon.getLockssRepository(testau).stopService();
-    theDaemon.getHashService().stopService();
-    theDaemon.getDatagramRouterManager().stopService();
-    theDaemon.getRouterManager().stopService();
-    theDaemon.getSystemMetrics().stopService();
-    TimeBase.setReal();
-    super.tearDown();
   }
 
   public void testNonRepairPoll() throws Exception {
@@ -245,40 +292,160 @@ public class FuncV3Voter extends LockssTestCase {
     }
   }
 
-  private void initRequiredServices() {
-    theDaemon = getMockLockssDaemon();
-    pollmanager = theDaemon.getPollManager();
-    hashService = theDaemon.getHashService();
+  public void testRestorePoll() throws Exception {
+    PollSpec pollspec = new PollSpec(testau.getAuCachedUrlSet(),
+                                     Poll.V3_POLL);
+    V3LcapMessage myPollMsg =
+      V3LcapMessage.makeRequestMsg(pollspec, "arandomkey",
+                                   ByteArray.makeRandomBytes(20),
+                                   ByteArray.makeRandomBytes(20),
+                                   V3LcapMessage.MSG_POLL,
+                                   120000,
+                                   pollerId);
+    PrivilegedAccessor.invokeMethod(pollmanager,
+                                    "handleIncomingMessage",
+                                    myPollMsg);
+    Poll p1 = pollmanager.getPoll(myPollMsg.getKey());
+    assertNotNull(p1);
+    assertEquals(1, pollmanager.getV3Voters().size());
+    stopDaemon();
+    assertEquals(0, pollmanager.getV3Voters().size());
+    startDaemon();
+    assertEquals(1, pollmanager.getV3Voters().size());
+    Poll p2 = pollmanager.getPoll(p1.getKey());
+    assertNotNull(p2);
+    assertEquals(p2.getKey(), p1.getKey());
+    V3Voter p1V3 = (V3Voter)p1;
+    V3Voter p2V3 = (V3Voter)p2;
+    assertEquals(p1V3.getCallerID(), p2V3.getCallerID());
+    assertEquals(p1V3.getDeadline(), p2V3.getDeadline());
+    assertEquals(p1V3.getDuration(), p2V3.getDuration());
+    assertEquals(p1V3.getStatusString(), p2V3.getStatusString());
+    V3TestUtil.assertEqualVoterUserData(p1V3.getVoterUserData(),
+                                        p2V3.getVoterUserData());
+    pollmanager.cancelAuPolls(testau);
+  }
 
-    theDaemon.getPluginManager();
-
-    tempDirPath = null;
-    try {
-      tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+  class MyMockLcapRouter extends LcapRouter {
+    public void registerMessageHandler(org.lockss.protocol.LcapRouter.MessageHandler handler) {
     }
-    catch (IOException ex) {
-      fail("unable to create a temporary directory");
+
+    public void send(V1LcapMessage msg, ArchivalUnit au) throws IOException {
     }
 
-    Properties p = new Properties();
-    p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
-    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
-    p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
-    p.setProperty(ConfigManager.PARAM_NEW_SCHEDULER, "true");
-    p.setProperty(V3Poller.PARAM_MIN_POLL_SIZE, "4");
-    p.setProperty(V3Poller.PARAM_MAX_POLL_SIZE, "4");
-    p.setProperty(V3Poller.PARAM_QUORUM, "3");
-    p.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
-    ConfigurationUtil.setCurrentConfigFromProps(p);
-    idmgr = theDaemon.getIdentityManager();
-    idmgr.startService();
-    theDaemon.getSchedService().startService();
-    hashService.startService();
-    theDaemon.getDatagramRouterManager().startService();
-    theDaemon.getRouterManager().startService();
-    theDaemon.getSystemMetrics().startService();
-    theDaemon.getActivityRegulator(testau).startService();
-    theDaemon.setNodeManager(new MockNodeManager(), testau);
-    pollmanager.startService();
+    public void sendTo(V1LcapMessage msg, ArchivalUnit au, PeerIdentity id)
+        throws IOException {
+    }
+
+    public void sendTo(V3LcapMessage msg, PeerIdentity id) throws IOException {
+    }
+
+    public void setConfig(Configuration config, Configuration oldConfig,
+                          Differences changedKeys) {
+    }
+
+    public void startService() {
+    }
+
+    public void stopService() {
+    }
+
+    public void unregisterMessageHandler(org.lockss.protocol.LcapRouter.MessageHandler handler) {
+    }
+  }
+
+  class MyMockLcapDatagramRouter extends LcapDatagramRouter {
+    public void registerMessageHandler(MessageHandler handler) {
+    }
+    public void send(V1LcapMessage msg, ArchivalUnit au)
+        throws IOException {
+    }
+    public void sendTo(V1LcapMessage msg, ArchivalUnit au, PeerIdentity id)
+        throws IOException {
+    }
+    public void setConfig(Configuration config, Configuration oldConfig,
+                          Differences changedKeys) {
+    }
+    public void startService() {
+    }
+    public void stopService() {
+    }
+    public void unregisterMessageHandler(MessageHandler handler) {
+    }
+  }
+
+  class MyMockStreamCommManager extends BlockingStreamComm {
+    private LockssDaemon theDaemon;
+
+    public MyMockStreamCommManager(LockssDaemon daemon) {
+      this.theDaemon = daemon;
+    }
+    public void sendTo(PeerMessage msg, PeerIdentity id,
+                       RateLimiter limiter) throws IOException {
+      log.debug("sendTo: id=" + id);
+    }
+    public void setConfig(Configuration config, Configuration prevConfig,
+                          Differences changedKeys) {
+    }
+    public PeerMessage newPeerMessage() {
+      throw new UnsupportedOperationException("Not implemented");
+    }
+    public PeerMessage newPeerMessage(int estSize) {
+      throw new UnsupportedOperationException("Not implemented");
+    }
+    public void registerMessageHandler(int protocol, MessageHandler handler) {
+      log.debug("MockStreamCommManager: registerMessageHandler");
+    }
+    public void unregisterMessageHandler(int protocol) {
+      log.debug("MockStreamCommManager: unregisterMessageHandler");
+    }
+    public void startService() {
+      log.debug("MockStreamCommManager: startService()");
+    }
+    public void stopService() {
+      log.debug("MockStreamCommManager: stopService()");
+    }
+    public LockssDaemon getDaemon() {
+      return theDaemon;
+    }
+    public void initService(LockssApp app) throws LockssAppException {
+      log.debug("MockStreamCommManager: initService(app)");
+    }
+    public void initService(LockssDaemon daemon) throws LockssAppException {
+      log.debug("MockStreamCommManager: initService(daemon)");
+    }
+    public LockssApp getApp() {
+      log.debug("MockStreamCommManager: getApp()");
+      return null;
+    }
+    protected boolean isAppInited() {
+      return true;
+    }
+    protected void resetConfig() {
+      log.debug("MockStreamCommManager: resetConfig()");
+    }
+
+  }
+
+  class MyMockPluginManager extends PluginManager {
+    ArchivalUnit au;
+    LockssDaemon daemon;
+
+    public MyMockPluginManager(LockssDaemon daemon, ArchivalUnit au) {
+      this.daemon = daemon;
+      this.au = au;
+    }
+
+    public LockssDaemon getDaemon() {
+      return daemon;
+    }
+
+    public CachedUrlSet findCachedUrlSet(PollSpec spec) {
+      return au.getAuCachedUrlSet();
+    }
+
+    public CachedUrlSet findCachedUrlSet(String auId) {
+      return au.getAuCachedUrlSet();
+    }
   }
 }

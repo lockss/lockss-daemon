@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollerSerializer.java,v 1.6 2005-11-16 07:44:09 smorabito Exp $
+ * $Id: V3PollerSerializer.java,v 1.7 2005-12-01 01:54:44 smorabito Exp $
  */
 
 /*
@@ -40,9 +40,9 @@ import org.lockss.util.*;
 import org.lockss.util.ObjectSerializer.*;
 
 public class V3PollerSerializer extends V3Serializer {
-  private static final String POLLER_STATE_BEAN = "poller_state_bean.xml";
-  private static final String POLLER_USER_DATA_PREFIX = "participant_";
-  private static final String POLLER_USER_DATA_SUFFIX = ".xml";
+  public static final String POLLER_STATE_BEAN = "poller_state_bean.xml";
+  public static final String POLLER_USER_DATA_PREFIX = "participant_";
+  public static final String POLLER_USER_DATA_SUFFIX = ".xml";
 
   private File pollerStateBeanFile;
 
@@ -56,7 +56,7 @@ public class V3PollerSerializer extends V3Serializer {
   }
 
   public V3PollerSerializer(LockssDaemon daemon,
-                            String dir) throws PollSerializerException {
+                            File dir) throws PollSerializerException {
     super(daemon, dir);
     this.pollerStateBeanFile = new File(pollDir, POLLER_STATE_BEAN);
     this.peerMapping = new HashMap();

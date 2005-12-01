@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.14 2005-11-16 07:44:09 smorabito Exp $
+ * $Id: V3Poller.java,v 1.15 2005-12-01 01:54:44 smorabito Exp $
  */
 
 /*
@@ -90,6 +90,7 @@ public class V3Poller extends BasePoll {
   private V3PollerSerializer serializer;
   private BlockTally tally;
   private boolean resumedPoll;
+  private boolean activePoll = true;
   private boolean dropEmptyNominators = DEFAULT_DROP_EMPTY_NOMINATIONS;
 
   private static Logger log = Logger.getLogger("V3Poller");
@@ -113,15 +114,15 @@ public class V3Poller extends BasePoll {
                                          " is not supported");
     }
     this.serializer = new V3PollerSerializer(theDaemon);
-    Configuration c = theDaemon.getConfigManager().getCurrentConfig();
+    Configuration c = ConfigManager.getCurrentConfig();
     // Determine the number of peers to invite into this poll.
-    int minParticipants = c.getIntParam(PARAM_MIN_POLL_SIZE,
+    int minParticipants = c.getInt(PARAM_MIN_POLL_SIZE,
                                         DEFAULT_MIN_POLL_SIZE);
-    int maxParticipants = c.getIntParam(PARAM_MAX_POLL_SIZE,
+    int maxParticipants = c.getInt(PARAM_MAX_POLL_SIZE,
                                         DEFAULT_MAX_POLL_SIZE);
-    int outerCircleTarget = c.getIntParam(PARAM_TARGET_OUTER_CIRCLE_SIZE,
+    int outerCircleTarget = c.getInt(PARAM_TARGET_OUTER_CIRCLE_SIZE,
                                           DEFAULT_TARGET_OUTER_CIRCLE_SIZE);
-    int quorum = c.getIntParam(PARAM_QUORUM, DEFAULT_QUORUM);
+    int quorum = c.getInt(PARAM_QUORUM, DEFAULT_QUORUM);
     this.dropEmptyNominators = c.getBoolean(PARAM_DROP_EMPTY_NOMINATIONS,
                                             DEFAULT_DROP_EMPTY_NOMINATIONS);
 
@@ -140,11 +141,12 @@ public class V3Poller extends BasePoll {
   /**
    * Restore a V3 Poll from a serialized state.
    */
-  public V3Poller(LockssDaemon daemon, String pollDir)
+  public V3Poller(LockssDaemon daemon, File pollDir)
       throws V3Serializer.PollSerializerException {
+    this.theDaemon = daemon;
     this.serializer = new V3PollerSerializer(theDaemon, pollDir);
     this.pollerState = serializer.loadPollerState();
-    pollerState.setStatusString("Resuming");
+    setStatus("Resuming");
     // If the hash algorithm used when the poll was first created is
     // no longer available, fail the poll immediately.
     try {
@@ -154,10 +156,9 @@ public class V3Poller extends BasePoll {
                                          pollerState.getHashAlgorithm() +
                                          " is no longer supported");
     }
-    this.theDaemon = daemon;
     this.pollManager = daemon.getPollManager();
     this.idManager = daemon.getIdentityManager();
-    Configuration c = theDaemon.getConfigManager().getCurrentConfig();
+    Configuration c = ConfigManager.getCurrentConfig();
     this.dropEmptyNominators = c.getBoolean(PARAM_DROP_EMPTY_NOMINATIONS,
                                             DEFAULT_DROP_EMPTY_NOMINATIONS);
     this.tally = new BlockTally(pollerState.getQuorum());
@@ -208,11 +209,29 @@ public class V3Poller extends BasePoll {
       throws V3Serializer.PollSerializerException {
     Collection peers = serializer.loadVoterStates();
     for (Iterator iter = peers.iterator(); iter.hasNext();) {
-      ParticipantUserData voterState = (ParticipantUserData) iter.next();
+      final ParticipantUserData voterState = (ParticipantUserData) iter.next();
       PeerIdentity id = voterState.getVoterId();
       PsmInterpStateBean pisb = voterState.getPsmInterpState();
-      ParticipantUserData participant = makeParticipant(id, pisb);
-      theParticipants.put(id, participant);
+      PsmMachine machine =
+        PollerStateMachineFactory.getMachine(getPollerActionsClass());
+      PsmInterp interp = new PsmInterp(machine, voterState);
+      voterState.setPsmInterpState(pisb);
+      interp.setCheckpointer(new PsmInterp.Checkpointer() {
+        public void checkpoint(PsmInterpStateBean resumeStateBean) {
+          // Replace the statebean in this machine's state object.
+          voterState.setPsmInterpState(resumeStateBean);
+          try {
+            checkpointParticipant(voterState);
+          } catch (PollSerializerException ex) {
+            log.error("Unable to save participant state for peer " +
+                      voterState.getVoterId());
+          }
+        }
+      });
+      voterState.setPsmInterp(interp);
+      voterState.setPollState(pollerState);
+      voterState.setPoller(this);
+      theParticipants.put(id, voterState);
     }
   }
 
@@ -253,13 +272,15 @@ public class V3Poller extends BasePoll {
    * Start a poll.  Overrides BasePoll.startPoll().
    */
   public void startPoll() {
-    // Construct the initial inner circle.
-    constructInnerCircle(pollerState.getPollSize());
+    if (!resumedPoll) {
+      // Construct the initial inner circle only once
+      constructInnerCircle(pollerState.getPollSize());
+    }
     // Schedule the poll deadline
-    pollerState.setStatusString("Polling");
+    setStatus("Polling");
     log.debug("Scheduling V3 poll " + pollerState.getPollKey() +
               " to complete by " + pollerState.getDeadline());
-    TimerQueue.schedule(pollerState.getDeadline(),
+    TimerQueue.schedule(Deadline.at(pollerState.getDeadline()),
                         new PollTimerCallback(), this);
     for (Iterator it = theParticipants.values().iterator(); it.hasNext();) {
       ParticipantUserData ud = (ParticipantUserData)it.next();
@@ -286,7 +307,8 @@ public class V3Poller extends BasePoll {
    */
   public void stopPoll() {
     // XXX: Set a final status string -- OK / Repaired / Unrepairable
-    pollerState.setStatusString("Complete");
+    setStatus("Complete");
+    activePoll = false;
     serializer.closePoll();
     pollManager.closeThePoll(pollerState.getPollKey());
     log.debug("Closed poll " + pollerState.getPollKey());
@@ -294,7 +316,7 @@ public class V3Poller extends BasePoll {
 
   private void abortPoll() {
     stopPoll();
-    pollerState.setStatusString("Error");
+    setStatus("Error");
   }
 
   /**
@@ -374,33 +396,19 @@ public class V3Poller extends BasePoll {
     return participant;
   }
 
-  /**
-   * Create a PsmInterp for the specified peer.
-   *
-   * @param id
-   * @return PsmInterp
-   */
-  private ParticipantUserData makeParticipant(PeerIdentity id) {
-    return makeParticipant(id, null);
-  }
+
 
   /**
-   * Create a PsmInterp for the specified peer, giving it the supplied
-   * PsmInterpStateBean.
+   * Create a new ParticipantUserData state object for the specified peer.
    *
-   * @param id
-   * @param psmState
-   * @return PsmInterp for the specified peer, using the supplied
-   * PsmInterpStateBean
+   * @return ParticipantUserData for the specified peer
    */
-  private ParticipantUserData makeParticipant(final PeerIdentity id,
-                                         final PsmInterpStateBean psmState) {
+  private ParticipantUserData makeParticipant(final PeerIdentity id) {
     final ParticipantUserData participant = new ParticipantUserData(id, this);
     participant.setPollerNonce(makePollerNonce());
     PsmMachine machine =
       PollerStateMachineFactory.getMachine(getPollerActionsClass());
     PsmInterp interp = new PsmInterp(machine, participant);
-    participant.setPsmInterpState(psmState);
     interp.setCheckpointer(new PsmInterp.Checkpointer() {
       public void checkpoint(PsmInterpStateBean resumeStateBean) {
         // Replace the statebean in this machine's state object.
@@ -447,6 +455,7 @@ public class V3Poller extends BasePoll {
     // Store the nominees in the participant's userdata
     peer.setNominees(nominatedPeers);
     pollerState.signalVoterNominated(id);
+    checkpointPoll();
     if (pollerState.allVotersNominated()) {
       pollOuterCircle();
     }
@@ -458,6 +467,7 @@ public class V3Poller extends BasePoll {
    */
   boolean tallyVoter(PeerIdentity id) {
     pollerState.signalVoterReadyToTally(id);
+    checkpointPoll();
     if (pollerState.allVotersReadyToTally()) {
       log.debug2("Ready to schedule hash.");
       if (!scheduleHash()) {
@@ -481,7 +491,7 @@ public class V3Poller extends BasePoll {
    */
   protected boolean scheduleHash() {
     log.debug("Scheduling our hash for poll " + pollerState.getPollKey());
-    Deadline deadline = pollerState.getDeadline();
+    Deadline deadline = Deadline.at(pollerState.getDeadline());
     BlockHasher hasher = new BlockHasher(pollerState.getCachedUrlSet(),
                                          initHasherDigests(),
                                          initHasherByteArrays(),
@@ -489,7 +499,7 @@ public class V3Poller extends BasePoll {
     HashService hashService = theDaemon.getHashService();
     if (hashService.scheduleHash(hasher, deadline,
                                     new HashingCompleteCallback(), null)) {
-      pollerState.setStatusString("Hashing");
+      setStatus("Hashing");
       return true;
     } else {
       return false;
@@ -563,6 +573,7 @@ public class V3Poller extends BasePoll {
     String targetUrl = block.getUrl();
     // Store the most recent block targetUrl in the state bean
     pollerState.setLastHashedBlock(targetUrl);
+    checkpointPoll();
     // Compare with each participant's hash for this vote block,
     // then tally that participant's ID as either agree or disagree.
     tallyBlock(block);
@@ -596,7 +607,7 @@ public class V3Poller extends BasePoll {
                   + pollerState.getPollKey());
       // XXX: Alerts?
       abortPoll();
-      pollerState.setStatusString("Too Close");
+      setStatus("Too Close");
       break;
     default:
       log.warning("Unexpected results from tallying block " + targetUrl + ": "
@@ -615,12 +626,13 @@ public class V3Poller extends BasePoll {
    */
   protected void tallyBlock(HashBlock hb) {
     tally.reset();
-    pollerState.setStatusString("Tallying");
+    setStatus("Tallying");
 
     String blockUrl = hb.getUrl();
     log.debug2("Tallying block: " + blockUrl);
 
     int myIndex = pollerState.getNextVoteBlockIndex();
+    checkpointPoll();
 
     int digestIndex = -1;
     for (Iterator iter = theParticipants.values().iterator(); iter.hasNext(); ) {
@@ -768,6 +780,7 @@ public class V3Poller extends BasePoll {
       serializer.removePollerUserData(id);
       pollerState.signalVoterRemoved(id, ud.isOuterCircle());
       theParticipants.remove(id);
+      checkpointPoll();
       // XXX: To do, actually signal the poller's machine to stop!
     } catch (Exception ex) {
       // XXX: If this happens, the poll should probably be stopped.
@@ -777,10 +790,13 @@ public class V3Poller extends BasePoll {
 
   /**
    * Checkpoint the per-poll state.
-   * @throws PollSerializerException
    */
-  private void checkpointPoll() throws PollSerializerException {
-    serializer.savePollerState(pollerState);
+  private void checkpointPoll() {
+    try {
+      serializer.savePollerState(pollerState);
+    } catch (PollSerializerException ex) {
+      log.warning("Unable to save poller state!", ex);
+    }
   }
 
   /**
@@ -907,6 +923,14 @@ public class V3Poller extends BasePoll {
     return false;
   }
 
+  public boolean isPollActive() {
+    return activePoll;
+  }
+
+  public boolean isPollCompleted() {
+    return !activePoll;
+  }
+
   /**
    * Not used by V3
    */
@@ -957,7 +981,7 @@ public class V3Poller extends BasePoll {
   }
 
   public Deadline getDeadline() {
-    return pollerState.getDeadline();
+    return Deadline.at(pollerState.getDeadline());
   }
 
   public long getDuration() {
@@ -986,6 +1010,11 @@ public class V3Poller extends BasePoll {
 
   public String getStatusString() {
     return pollerState.getStatusString();
+  }
+
+  private void setStatus(String status) {
+    pollerState.setStatusString(status);
+    checkpointPoll();
   }
 
   /**
