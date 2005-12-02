@@ -1,5 +1,5 @@
 /*
- * $Id: XmlPropertyLoader.java,v 1.26 2005-10-14 23:19:10 smorabito Exp $
+ * $Id: XmlPropertyLoader.java,v 1.27 2005-12-02 22:59:20 smorabito Exp $
  */
 
 /*
@@ -259,11 +259,11 @@ public class XmlPropertyLoader {
       } else if (TAG_VALUE.equals(qName)) {
 	endValueTag();
       } else if (TAG_AND.equals(qName)) {
-	endCondTag();
+	endAndTag();
       } else if (TAG_OR.equals(qName)) {
-	endCondTag();
+	endOrTag();
       } else if (TAG_NOT.equals(qName)) {
-	endCondTag();
+	endNotTag();
       } else if (TAG_TEST.equals(qName)) {
 	endTestTag();
       } else if (TAG_LOCKSSCONFIG.equals(qName)) {
@@ -474,16 +474,37 @@ public class XmlPropertyLoader {
       m_charBuffer = null;
     }
 
-    /**
-     * Handle encountering the end of a boolean conditional.
-     */
-    private void endCondTag() {
+//    /**
+//     * Handle encountering the end of a boolean conditional (AND or OR).
+//     */
+//    private void endCondTag() {
+//      m_condStack.pop();
+//
+//      // Handle nesting by conding with previous boolean level.
+//      if (!m_condStack.isEmpty()) {
+//	evalCurrentCondStackLevel();
+//      }
+//    }
+
+    private void endAndTag() {
       m_condStack.pop();
 
-      // Handle nesting by conding with previous boolean level.
-      if (!m_condStack.isEmpty()) {
-	evalCurrentCondStackLevel();
-      }
+      If curIf = (If)m_ifStack.peek();
+      curIf.evalIf &= m_testEval;
+    }
+
+    private void endOrTag() {
+      m_condStack.pop();
+
+      If curIf = (If)m_ifStack.peek();
+      curIf.evalIf |= m_testEval;
+    }
+
+    private void endNotTag() {
+      m_condStack.pop();
+
+      If curIf = (If)m_ifStack.peek();
+      curIf.evalIf = !m_testEval;
     }
 
     /**
@@ -496,12 +517,12 @@ public class XmlPropertyLoader {
 	// apply the current test results
 	((If)m_ifStack.peek()).evalIf = m_testEval;
       } else {
-	evalCurrentCondStackLevel();
+	applyTestToCurrentCondStackLevel();
       }
     }
 
     // Utility method used by endCondTag and endTestTag
-    private void evalCurrentCondStackLevel() {
+    private void applyTestToCurrentCondStackLevel() {
       String cond = (String)m_condStack.peek();
       If curIf = (If)m_ifStack.peek();
       if (cond == TAG_AND) {

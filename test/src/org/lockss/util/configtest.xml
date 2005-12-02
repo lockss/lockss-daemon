@@ -55,18 +55,18 @@
   <property name="org.lockss">
     <property name="d">
       <list>
-	<value>1</value>
-	<value>2</value>
-	<value>3</value>
-	<value>4</value>
-	<value>5</value>
+        <value>1</value>
+        <value>2</value>
+        <value>3</value>
+        <value>4</value>
+        <value>5</value>
       </list>
     </property>
 
     <!-- Test for character chunking problems with list values -->
     <property name="listtest">
       <list>
-	<value>this&amp;should&amp;be&amp;one&amp;value</value>
+        <value>this&amp;should&amp;be&amp;one&amp;value</value>
       </list>
     </property>
 
@@ -165,10 +165,10 @@
     <if>
       <test unknownConditional="foo"/>
       <then>
-	<property name="test.unknown.b" value="foo"/>
+        <property name="test.unknown.b" value="foo"/>
       </then>
       <else>
-	<property name="test.unknown.b" value="bar"/>
+        <property name="test.unknown.b" value="bar"/>
       </else>
     </if>
     <!-- Combo of conditionals, unknown and known -->
@@ -182,44 +182,44 @@
     <!-- Test then/else -->
     <if group="beta">
       <then>
-	<property name="test.u" value="foo"/>
+        <property name="test.u" value="foo"/>
       </then>
       <else>
-	<property name="test.u" value="bar"/>
+        <property name="test.u" value="bar"/>
       </else>
     </if>
     <if group="dev">
       <then>
-	<property name="test.v" value="foo"/>
+        <property name="test.v" value="foo"/>
       </then>
       <else>
-	<property name="test.v" value="bar"/>
+        <property name="test.v" value="bar"/>
       </else>
     </if>
     <if platformName="Linux rpm">
       <then>
-	<property name="test.ifelse.platformName" value="linux" />
+        <property name="test.ifelse.platformName" value="linux" />
       </then>
       <else>
-	<property name="test.ifelse.platformName" value="openbsd" />
+        <property name="test.ifelse.platformName" value="openbsd" />
       </else>
     </if>
 
     <!-- Test a combination of conditionals -->
     <if platformVersion="134" group="beta">
       <then>
-	<property name="test.w" value="foo"/>
+        <property name="test.w" value="foo"/>
       </then>
       <else>
-	<property name="test.w" value="bar"/>
+        <property name="test.w" value="bar"/>
       </else>
     </if>
     <if platformVersion="135" group="beta">
       <then>
-	<property name="test.x" value="foo"/>
+        <property name="test.x" value="foo"/>
       </then>
       <else>
-	<property name="test.x" value="bar"/>
+        <property name="test.x" value="bar"/>
       </else>
     </if>
 
@@ -227,19 +227,19 @@
     <if>
       <test platformVersion="134" />
       <then>
-	<property name="test.y" value="foo"/>
+        <property name="test.y" value="foo"/>
       </then>
       <else>
-	<property name="test.y" value="bar"/>
+        <property name="test.y" value="bar"/>
       </else>
     </if>
     <if>
       <test platformVersion="135" />
       <then>
-	<property name="test.z" value="foo"/>
+        <property name="test.z" value="foo"/>
       </then>
       <else>
-	<property name="test.z" value="bar"/>
+        <property name="test.z" value="bar"/>
       </else>
     </if>
 
@@ -247,46 +247,46 @@
     <!-- Test the legal formats for "and" booleans -->
     <if>
       <and>
-	<test group="beta" />
-	<test hostname="testhost" />
+        <test group="beta" />
+        <test hostname="testhost" />
       </and>
       <property name="and.a" value="foo" />
     </if>
     <if>
       <and>
-	<test group="beta" />
-	<test hostname="bar" />
+        <test group="beta" />
+        <test hostname="bar" />
       </and>
       <property name="and.b" value="foo" />
     </if>
     <if>
       <and>
-	<test group="beta" />
-	<test hostname="testhost" />
+        <test group="beta" />
+        <test hostname="testhost" />
       </and>
       <then>
-	<property name="and.c" value="foo" />
+        <property name="and.c" value="foo" />
       </then>
     </if>
     <if>
       <and>
-	<test group="beta" />
-	<test hostname="foo" />
+        <test group="beta" />
+        <test hostname="foo" />
       </and>
       <then>
-	<property name="and.d" value="foo" />
+        <property name="and.d" value="foo" />
       </then>
     </if>
     <if>
       <and>
-	<test group="beta" />
-	<test hostname="foo" />
+        <test group="beta" />
+        <test hostname="foo" />
       </and>
       <then>
-	<property name="and.e" value="foo" />
+        <property name="and.e" value="foo" />
       </then>
       <else>
-	<property name="and.e" value="bar" />
+        <property name="and.e" value="bar" />
       </else>
     </if>
 
@@ -294,112 +294,112 @@
     <!-- Test the legal formats for "or" booleans -->
     <if>
       <or>
-	<test group="beta" />
-	<test group="foo" />
+        <test group="beta" />
+        <test group="foo" />
       </or>
       <property name="or.a" value="foo"/>
     </if>
     <if>
       <or>
-	<test group="foo" />
-	<test group="bar" />
+        <test group="foo" />
+        <test group="bar" />
       </or>
       <property name="or.b" value="foo"/>
     </if>
     <if>
       <or>
-	<test group="beta" />
-	<test group="foo" />
+        <test group="beta" />
+        <test group="foo" />
       </or>
       <then>
-	<property name="or.c" value="foo"/>
+        <property name="or.c" value="foo"/>
       </then>
     </if>
     <if>
       <or>
-	<test group="foo" />
-	<test group="bar" />
+        <test group="foo" />
+        <test group="bar" />
       </or>
       <then>
-	<property name="or.d" value="foo"/>
+        <property name="or.d" value="foo"/>
       </then>
     </if>
     <if>
       <or>
-	<test group="foo" />
-	<test group="bar" />
+        <test group="foo" />
+        <test group="bar" />
       </or>
       <then>
-	<property name="or.e" value="foo"/>
+        <property name="or.e" value="foo"/>
       </then>
       <else>
-	<property name="or.e" value="bar"/>
+        <property name="or.e" value="bar"/>
       </else>
     </if>
 
     <!-- Test the legal formats for "not" booleans -->
     <if>
       <not>
-	<test group="foo" />
+        <test group="foo" />
       </not>
       <property name="not.a" value="foo"/>
     </if>
     <if>
       <not>
-	<test group="beta" />
+        <test group="beta" />
       </not>
       <property name="not.b" value="foo"/>
     </if>
     <if>
       <not>
-	<test group="foo" />
+        <test group="foo" />
       </not>
       <then>
-	<property name="not.c" value="foo"/>
+        <property name="not.c" value="foo"/>
       </then>
     </if>
     <if>
       <not>
-	<test group="beta" />
+        <test group="beta" />
       </not>
       <then>
-	<property name="not.d" value="foo"/>
+        <property name="not.d" value="foo"/>
       </then>
     </if>
     <if>
       <not>
-	<test group="beta" />
+        <test group="beta" />
       </not>
       <then>
-	<property name="not.e" value="foo"/>
+        <property name="not.e" value="foo"/>
       </then>
       <else>
-	<property name="not.e" value="bar"/>
+        <property name="not.e" value="bar"/>
       </else>
     </if>
     <if>
       <not>
-	<test group="foo" />
-	<test group="bar" />
+        <test group="foo" />
+        <test group="bar" />
       </not>
       <then>
-	<property name="not.f" value="foo"/>
+        <property name="not.f" value="foo"/>
       </then>
       <else>
-	<property name="not.f" value="bar"/>
+        <property name="not.f" value="bar"/>
       </else>
     </if>
     <if>
       <not>
-	<test group="foo" />
-	<test group="beta" />
-	<test group="bar" />
-      </not>
+        <test group="foo" /> <!-- false -->
+        <test group="beta" /> <!-- true -->
+        <test group="bar" /> <!-- false -->
+      </not> <!-- true -->
       <then>
-	<property name="not.g" value="foo"/>
+        <property name="not.g" value="foo"/> <!-- expected value -->
       </then>
       <else>
-	<property name="not.g" value="bar"/>
+        <property name="not.g" value="bar"/>
       </else>
     </if>
 
@@ -407,7 +407,7 @@
     <if>
       <test hostname="testhost" /> <!-- true -->
       <then>
-      	<if>
+        <if>
           <test group="beta"/> <!-- true -->
           <then>
             <property name="nestedIf.a" value="foo" /> <!-- expected -->
@@ -416,7 +416,7 @@
             <property name="nestedIf.a" value="bar" />
           </else>
         </if>
-    	</then>
+      </then>
       <else>
         <property name="nestedIf.a" value="baz" />
       </else>
@@ -425,7 +425,7 @@
     <if>
       <test hostname="testhost" /> <!-- true -->
       <then>
-      	<if>
+        <if>
           <test group="prod"/> <!-- false -->
           <then>
             <property name="nestedIf.b" value="foo" />
@@ -443,7 +443,7 @@
     <if>
       <test hostname="badhost" /> <!-- false -->
       <then>
-      	<if>
+        <if>
           <test group="beta"/>
           <then>
             <property name="nestedIf.c" value="foo" />
@@ -452,7 +452,7 @@
             <property name="nestedIf.c" value="bar" />
           </else>
         </if>
-    	</then>
+      </then>
       <else>
         <property name="nestedIf.c" value="baz" /> <!-- expected -->
       </else>
@@ -461,7 +461,7 @@
     <if>
       <test hostname="badhost" /> <!-- false -->
       <then>
-      	<if>
+        <if>
           <test group="beta"/>
           <then>
             <property name="nestedIf.d" value="foo" />
@@ -470,7 +470,7 @@
             <property name="nestedIf.d" value="bar" />
           </else>
         </if>
-    	</then>
+      </then>
       <else>
         <if>
           <test group="beta"/> <!-- true -->
@@ -487,7 +487,7 @@
     <if>
       <test hostname="badhost" /> <!-- false -->
       <then>
-      	<if>
+        <if>
           <test group="beta"/>
           <then>
             <property name="nestedIf.e" value="foo" />
@@ -496,7 +496,7 @@
             <property name="nestedIf.e" value="bar" />
           </else>
         </if>
-    	</then>
+      </then>
       <else>
         <if>
           <test group="prod"/> <!-- false -->
@@ -516,69 +516,121 @@
     <!-- 1. Outer-level and -->
     <if>
       <and>
-	<not>
-	  <and>
-	    <test hostname="testhost" /> <!-- true -->
-	    <test daemonVersion="1.5.0" /> <!-- false -->
-	  </and> <!-- false -->
-	</not> <!-- true -->
-	<or>
-	  <test group="foo" /> <!-- false -->
-	  <test group="bar" /> <!-- false -->
-	  <test group="beta" /> <!-- true -->
-	</or> <!-- true -->
+        <not>
+          <and>
+            <test hostname="testhost" /> <!-- true -->
+            <test daemonVersion="1.5.0" /> <!-- false -->
+          </and> <!-- false -->
+        </not> <!-- true -->
+        <or>
+          <test group="foo" /> <!-- false -->
+          <test group="bar" /> <!-- false -->
+          <test group="beta" /> <!-- true -->
+        </or> <!-- true -->
       </and> <!-- true -->
       <then>
-	<property name="nested.a" value="foo" />
+        <property name="nested.a" value="foo" />
       </then>
       <else>
-	<property name="nested.a" value="bar" />
+        <property name="nested.a" value="bar" />
+      </else>
+    </if>
+
+    <if>
+      <not>
+        <test daemonVersionMin="1.4.0" /> <!-- false -->
+        <test group="foogroup" /> <!-- false -->
+      </not> <!-- true -->
+      <then>
+        <property name="nested.aa" value="foo" /> <!-- expected value -->
+      </then>
+      <else>
+        <property name="nested.aa" value="bar" />
+      </else>
+    </if>
+
+    <if>
+      <and>
+        <test daemonVersionMin="1.4.0" /> <!-- false -->
+        <test group="foogroup" /> <!-- false -->
+      </and> <!-- false -->
+      <then>
+        <property name="nested.ab" value="foo" />
+      </then>
+      <else>
+        <property name="nested.ab" value="bar" /> <!-- expected value -->
+      </else>
+    </if>
+
+    <if>
+      <and>
+        <test daemonVersionMin="1.2.8" /> <!-- true -->
+        <test group="foogroup" /> <!-- false -->
+      </and> <!-- false -->
+      <then>
+        <property name="nested.ac" value="foo" />
+      </then>
+      <else>
+        <property name="nested.ac" value="bar" /> <!-- expected value -->
+      </else>
+    </if>
+
+    <if>
+      <and>
+        <test daemonVersionMin="1.2.8" /> <!-- true -->
+        <test group="beta" /> <!-- true -->
+      </and> <!-- true -->
+      <then>
+        <property name="nested.ad" value="foo" /> <!-- expected value -->
+      </then>
+      <else>
+        <property name="nested.ad" value="bar" />
       </else>
     </if>
 
     <!-- 2. Outer-level or -->
     <if>
       <or>
-	<not>
-	  <test hostname="testhost" /> <!-- true -->
-	</not> <!-- false -->
-	<or>
-	  <test hostname="bar" /> <!-- false -->
-	  <test hostname="foo" /> <!-- false -->
-	</or> <!-- false -->
-	<and>
-	  <test daemonVersionMin="1.0.0" daemonVersionMax="2.0.0" /> <!-- true -->
-	  <test platformVersionMin="100" platformVersionMax="130" /> <!-- false -->
-	</and> <!-- false -->
+        <not>
+          <test hostname="testhost" /> <!-- true -->
+        </not> <!-- false -->
+        <or>
+          <test hostname="bar" /> <!-- false -->
+          <test hostname="foo" /> <!-- false -->
+        </or> <!-- false -->
+        <and>
+          <test daemonVersionMin="1.0.0" daemonVersionMax="2.0.0" /> <!-- true -->
+          <test platformVersionMin="100" platformVersionMax="130" /> <!-- false -->
+        </and> <!-- false -->
       </or><!-- false -->
       <then>
-	<property name="nested.b" value="foo" />
+        <property name="nested.b" value="foo" />
       </then>
       <else>
-	<property name="nested.b" value="bar" /> <!-- expected result -->
+        <property name="nested.b" value="bar" /> <!-- expected result -->
       </else>
     </if>
 
     <!-- 3. Outer-level not -->
     <if>
       <not>
-	<or>
-	  <test hostname="testhost1" /> <!-- false -->
-	  <or>
-	    <test group="foo" /> <!-- false -->
-	    <test group="bar" /> <!-- true -->
-	  </or> <!-- true -->
-	  <and>
-	    <test group="beta" /> <!-- true -->
-	    <test daemonVersionMin="1.0.0" daemonVersionMax="2.0.0" /> <!-- true -->
-	  </and> <!-- true -->
-	</or> <!-- true -->
+        <or>
+          <test hostname="testhost1" /> <!-- false -->
+          <or>
+            <test group="foo" /> <!-- false -->
+            <test group="bar" /> <!-- true -->
+          </or> <!-- true -->
+          <and>
+            <test group="beta" /> <!-- true -->
+            <test daemonVersionMin="1.0.0" daemonVersionMax="2.0.0" /> <!-- true -->
+          </and> <!-- true -->
+        </or> <!-- true -->
       </not> <!-- false -->
       <then>
-	<property name="nested.c" value="foo" />
+        <property name="nested.c" value="foo" />
       </then>
       <else>
-	<property name="nested.c" value="bar" /> <!-- expected result -->
+        <property name="nested.c" value="bar" /> <!-- expected result -->
       </else>
     </if>
 
@@ -586,60 +638,60 @@
     <!-- hostname -->
     <if hostname="testhost">
       <then>
-	<property name="nulltest.a" value="foo" />
+        <property name="nulltest.a" value="foo" />
       </then>
     </if>
     <if hostname="testhost">
       <then>
-	<property name="nulltest.b" value="foo" />
+        <property name="nulltest.b" value="foo" />
       </then>
       <else>
-	<property name="nulltest.b" value="bar" />
+        <property name="nulltest.b" value="bar" />
       </else>
     </if>
 
     <!-- group -->
     <if group="beta">
       <then>
-	<property name="nulltest.c" value="foo" />
+        <property name="nulltest.c" value="foo" />
       </then>
     </if>
     <if group="beta">
       <then>
-	<property name="nulltest.d" value="foo" />
+        <property name="nulltest.d" value="foo" />
       </then>
       <else>
-	<property name="nulltest.d" value="bar" />
+        <property name="nulltest.d" value="bar" />
       </else>
     </if>
 
     <!-- daemon version -->
     <if daemonVersion="1.2.8">
       <then>
-	<property name="nulltest.e" value="foo" />
+        <property name="nulltest.e" value="foo" />
       </then>
     </if>
     <if daemonVersion="1.2.8">
       <then>
-	<property name="nulltest.f" value="foo" />
+        <property name="nulltest.f" value="foo" />
       </then>
       <else>
-	<property name="nulltest.f" value="bar" />
+        <property name="nulltest.f" value="bar" />
       </else>
     </if>
 
     <!-- platform version -->
     <if platformVersion="135">
       <then>
-	<property name="nulltest.g" value="foo" />
+        <property name="nulltest.g" value="foo" />
       </then>
     </if>
     <if platformVersion="135">
       <then>
-	<property name="nulltest.h" value="foo" />
+        <property name="nulltest.h" value="foo" />
       </then>
       <else>
-	<property name="nulltest.h" value="bar" />
+        <property name="nulltest.h" value="bar" />
       </else>
     </if>
 
