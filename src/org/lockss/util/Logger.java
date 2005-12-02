@@ -1,5 +1,5 @@
 /*
- * $Id: Logger.java,v 1.45 2005-12-01 23:28:00 troberts Exp $
+ * $Id: Logger.java,v 1.46 2005-12-02 22:52:05 troberts Exp $
  */
 
 /*
@@ -269,7 +269,7 @@ public class Logger {
     String levelName =
       CurrentConfig.getParam(StringUtil.replaceString(PARAM_LOG_LEVEL,
                                                       "<logname>", name),
-                                                      CurrentConfig.getParam(defaultParamName));
+                             CurrentConfig.getParam(defaultParamName));
     int level = defaultLevel;
     if (levelName != null) {
       try {
