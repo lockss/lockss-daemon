@@ -117,6 +117,7 @@
 	<value>org.lockss.plugin.etd.gatechplugin.GATechETDPlugin</value>
 	<value>org.lockss.plugin.etd.ukyplugin.UKYETDPlugin</value>
 	<value>edu.cornell.library.rmc.LolitaPlugin</value> 
+	<value>us.ak.state.library.plugin.AlaskaStateDocsPlugin</value> 
       </list>
     </property>
 
@@ -315,6 +316,20 @@
     <property name="title">
 
 
+
+      <property name="AlaskaStateDocuments2006">
+	<property name="title" value="Alaska State Documents 2006" />
+	<property name="journalTitle" value="Alaska State Documents" />
+	<property name="plugin" value="us.ak.state.library.plugin.AlaskaStateDocsPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://library.state.ak.us/asp/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2006" />
+	</property>
+      </property>
 
       <property name="NCSU1997">
 	<property name="title" value="North Carolina State University ETD Collection 1997" />
