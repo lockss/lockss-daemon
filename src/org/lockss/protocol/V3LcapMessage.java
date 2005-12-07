@@ -1,5 +1,5 @@
 /*
- * $Id: V3LcapMessage.java,v 1.14 2005-12-01 01:54:43 smorabito Exp $
+ * $Id: V3LcapMessage.java,v 1.15 2005-12-07 21:12:01 smorabito Exp $
  */
 
 /*
@@ -93,8 +93,14 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
   private String m_lastVoteBlockURL;
 
   /*
-   * byte 0-3 signature 4-5 property length 6-25 SHA-1 hash of encoded
-   * properties 26-End encoded properties
+   * Common to all versions:
+   * bytes  0 -   2:  Signature ('lpm' in ASCII) (3 bytes)
+   * byte         3:  Protocol version (1 byte)
+   *
+   * Specific to V3:
+   * bytes  4 -   7:  Property length (4 bytes)
+   * bytes  8 -  27:  SHA-1 hash of encoded properties (20 bytes)
+   * bytes 28 - End:  Encoded properties (remainder)
    */
 
   /**
@@ -223,7 +229,8 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
           vb.setUnfilteredLength(vbProps.getLong("ul", 0));
           vb.setFilteredOffset(vbProps.getLong("fo", 0));
           vb.setUnfilteredOffset(vbProps.getLong("uo", 0));
-          vb.setHash(vbProps.getByteArray("ch", EMPTY_BYTE_ARRAY));
+          vb.setChallengeHash(vbProps.getByteArray("ch", EMPTY_BYTE_ARRAY));
+          vb.setPlainHash(vbProps.getByteArray("ph", EMPTY_BYTE_ARRAY));
           m_voteBlocks.addVoteBlock(vb);
         }
       }
@@ -342,7 +349,8 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
       vbProps.putLong("fo", vb.getFilteredOffset());
       vbProps.putLong("ul", vb.getUnfilteredLength());
       vbProps.putLong("uo", vb.getUnfilteredOffset());
-      vbProps.putByteArray("ch", vb.getHash());
+      vbProps.putByteArray("ch", vb.getChallengeHash());
+      vbProps.putByteArray("ph", vb.getPlainHash());
       encodedVoteBlocks.add(vbProps);
     }
     m_props.putEncodedPropertyList("voteblocks", encodedVoteBlocks);

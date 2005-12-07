@@ -198,9 +198,11 @@ public class TestV3Serializer extends LockssTestCase {
     blocks.addVoteBlock(new VoteBlock("http://www.example.com/file1.html",
                                       1000L, 0L, 1000L, 0L,
                                       ByteArray.makeRandomBytes(20),
+                                      ByteArray.makeRandomBytes(20),
                                       VoteBlock.CONTENT_VOTE));
     blocks.addVoteBlock(new VoteBlock("http://www.example.com/file2.html",
                                       1010L, 0L, 1010L, 0L,
+                                      ByteArray.makeRandomBytes(20),
                                       ByteArray.makeRandomBytes(20),
                                       VoteBlock.CONTENT_VOTE));
     ud.setVoteBlocks(blocks);
@@ -229,9 +231,11 @@ public class TestV3Serializer extends LockssTestCase {
     blocks.addVoteBlock(new VoteBlock("http://www.example.com/file1.html",
                                       1000L, 0L, 1000L, 0L,
                                       ByteArray.makeRandomBytes(20),
+                                      ByteArray.makeRandomBytes(20),
                                       VoteBlock.CONTENT_VOTE));
     blocks.addVoteBlock(new VoteBlock("http://www.example.com/file2.html",
                                       1010L, 0L, 1010L, 0L,
+                                      ByteArray.makeRandomBytes(20),
                                       ByteArray.makeRandomBytes(20),
                                       VoteBlock.CONTENT_VOTE));
     ud.setVoteBlocks(blocks);

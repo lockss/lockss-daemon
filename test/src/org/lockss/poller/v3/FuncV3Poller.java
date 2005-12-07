@@ -1,5 +1,5 @@
 /*
- * $Id: FuncV3Poller.java,v 1.5 2005-12-01 01:54:43 smorabito Exp $
+ * $Id: FuncV3Poller.java,v 1.6 2005-12-07 21:11:58 smorabito Exp $
  */
 
 /*
@@ -97,6 +97,7 @@ public class FuncV3Poller extends LockssTestCase {
     voteBlocks = new ArrayList();
     for (int ix = 2; ix < urls.length; ix++) {
       VoteBlock vb = new VoteBlock(urls[ix], 1024, 0, 1024, 0,
+                                   ByteArray.makeRandomBytes(20),
                                    ByteArray.makeRandomBytes(20),
                                    VoteBlock.CONTENT_VOTE);
       voteBlocks.add(vb);

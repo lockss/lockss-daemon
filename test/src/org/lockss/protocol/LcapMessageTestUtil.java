@@ -1,5 +1,5 @@
 /*
- * $Id: LcapMessageTestUtil.java,v 1.4 2005-10-07 23:46:45 smorabito Exp $
+ * $Id: LcapMessageTestUtil.java,v 1.5 2005-12-07 21:11:57 smorabito Exp $
  *
 
  Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -78,7 +78,7 @@ public class LcapMessageTestUtil {
       byte[] hash = computeHash(fileName);
       VoteBlock vb =
 	new VoteBlock("/test-" + ix + ".html", 1024, 0,
-		      1024, 0, hash, VoteBlock.CONTENT_VOTE);
+		      1024, 0, hash, hash, VoteBlock.CONTENT_VOTE);
       if (log.isDebug2()) {
 	log.debug2("Creating voteblock: " + vb);
       }

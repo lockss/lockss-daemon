@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.10 2005-12-01 23:28:01 troberts Exp $
+ * $Id: V3Voter.java,v 1.11 2005-12-07 21:12:01 smorabito Exp $
  */
 
 /*
@@ -261,18 +261,24 @@ public class V3Voter extends BasePoll {
 
   /**
    * Create an array of byte arrays containing hasher initializer bytes for
-   * this voter.  The initializer bytes are constructed by concatenating the
-   * voter's poller nonce and voter nonce.
-    *
+   * this voter.  The result will be an array of two byte arrays:  The first
+   * has no initializing bytes, and will be used for the plain hash.  The
+   * second is constructed by concatenating the poller nonce and voter nonce,
+   * and will be used for the challenge hash.
+   *
    * @return Block hasher initialization bytes.
    */
   private byte[][] initHasherByteArrays() {
-    return new byte[][] {ByteArray.concat(voterUserData.getPollerNonce(),
-                                          voterUserData.getVoterNonce())};
+    return new byte[][] {
+        {}, // Plain Hash
+        ByteArray.concat(voterUserData.getPollerNonce(),
+                         voterUserData.getVoterNonce()) // Challenge Hash
+    };
   }
 
   /**
-   * Create the message digester for this voter's hasher.
+   * Create the message digesters for this voter's hasher -- one for
+   * the plain hash, one for the challenge hash.
    *
    * @return An array of MessageDigest objects to be used by the BlockHasher.
    */
@@ -281,7 +287,10 @@ public class V3Voter extends BasePoll {
     if (hashAlg == null) {
       hashAlg = LcapMessage.DEFAULT_HASH_ALGORITHM;
     }
-    return new MessageDigest[] { MessageDigest.getInstance(hashAlg) };
+    return new MessageDigest[] {
+        MessageDigest.getInstance(hashAlg),
+        MessageDigest.getInstance(hashAlg)
+    };
   }
 
   /**
@@ -329,13 +338,15 @@ public class V3Voter extends BasePoll {
    */
   public void blockHashComplete(HashBlock block) {
     VoteBlocks blocks = voterUserData.getVoteBlocks();
-    MessageDigest digest = block.getDigests()[0];
+    MessageDigest plainDigest = block.getDigests()[0];
+    MessageDigest challengeDigest = block.getDigests()[1];
     VoteBlock vb = new VoteBlock(block.getUrl(),
                                  block.getFilteredLength(),
                                  block.getFilteredOffset(),
                                  block.getUnfilteredLength(),
                                  block.getUnfilteredOffset(),
-                                 digest.digest(),
+                                 plainDigest.digest(),
+                                 challengeDigest.digest(),
                                  VoteBlock.CONTENT_VOTE);
     blocks.addVoteBlock(vb);
   }

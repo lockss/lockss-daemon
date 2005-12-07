@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.15 2005-12-01 01:54:44 smorabito Exp $
+ * $Id: V3Poller.java,v 1.16 2005-12-07 21:12:01 smorabito Exp $
  */
 
 /*
@@ -712,7 +712,7 @@ public class V3Poller extends BasePoll {
   private void compareBlocks(VoteBlock vb, HashBlock hb,
                              int digestIndex, PeerIdentity voter,
                              BlockTally tally) {
-    byte[] voterResults = vb.getHash();
+    byte[] voterResults = vb.getChallengeHash();
     byte[] hasherResults = hb.getDigests()[digestIndex].digest();
     if (log.isDebug3()) {
       log.debug3("Comparing hashes for participant " + voter

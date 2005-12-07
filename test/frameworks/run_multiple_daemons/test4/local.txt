@@ -19,3 +19,4 @@ org.lockss.test.pollspec.url=lockssau:
 org.lockss.proxy.icp.enabled=true
 org.lockss.proxy.icp.port=3134
 
+org.lockss.localV3Identity=127.0.0.1;8804
