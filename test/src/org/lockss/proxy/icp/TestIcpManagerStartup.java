@@ -1,5 +1,5 @@
 /*
- * $Id: TestIcpManagerStartup.java,v 1.4 2005-11-21 16:33:28 thib_gc Exp $
+ * $Id: TestIcpManagerStartup.java,v 1.5 2005-12-10 23:15:08 thib_gc Exp $
  */
 
 /*
@@ -37,7 +37,13 @@ import junit.framework.Test;
 import org.lockss.config.Configuration;
 import org.lockss.config.Configuration.Differences;
 import org.lockss.test.*;
+import org.lockss.util.Logger;
 
+/**
+ * <p>Tests various combinations of startup-time parameters for the
+ * ICP manager.</p>
+ * @author Thib Guicherd-Callin
+ */
 public abstract class TestIcpManagerStartup extends LockssTestCase {
 
   public static class PlatformDisabledDaemonDisabled extends TestIcpManagerStartup {
@@ -58,7 +64,7 @@ public abstract class TestIcpManagerStartup extends LockssTestCase {
                                     IcpManager.PARAM_ICP_ENABLED,
                                     "true",
                                     IcpManager.PARAM_ICP_PORT,
-                                    Integer.toString(2048));
+                                    Integer.toString(getNewPort()));
     }
   }
 
@@ -76,7 +82,7 @@ public abstract class TestIcpManagerStartup extends LockssTestCase {
       ConfigurationUtil.addFromArgs(IcpManager.PARAM_PLATFORM_ICP_ENABLED,
                                     "false",
                                     IcpManager.PARAM_PLATFORM_ICP_PORT,
-                                    Integer.toString(2048),
+                                    Integer.toString(getNewPort()),
                                     IcpManager.PARAM_ICP_ENABLED,
                                     "true");
     }
@@ -95,10 +101,11 @@ public abstract class TestIcpManagerStartup extends LockssTestCase {
   public static class PlatformEnabledDaemonDisabled extends TestIcpManagerStartup {
     protected void setConfig() {
       expectedRunning = false;
+      int notExpectedPort = getNewPort();
       ConfigurationUtil.addFromArgs(IcpManager.PARAM_PLATFORM_ICP_ENABLED,
                                     "true",
                                     IcpManager.PARAM_PLATFORM_ICP_PORT,
-                                    Integer.toString(expectedPort),
+                                    Integer.toString(notExpectedPort),
                                     IcpManager.PARAM_ICP_ENABLED,
                                     "false");
     }
@@ -107,11 +114,12 @@ public abstract class TestIcpManagerStartup extends LockssTestCase {
   public static class PlatformEnabledDaemonEnabled extends TestIcpManagerStartup {
     protected void setConfig() {
       expectedRunning = true;
-      expectedPort = 2048;
+      expectedPort = getNewPort();
+      int notExpectedPort = getNewPort();
       ConfigurationUtil.addFromArgs(IcpManager.PARAM_PLATFORM_ICP_ENABLED,
                                     "true",
                                     IcpManager.PARAM_PLATFORM_ICP_PORT,
-                                    Integer.toString(expectedPort + 1),
+                                    Integer.toString(notExpectedPort),
                                     IcpManager.PARAM_ICP_ENABLED,
                                     "true",
                                     IcpManager.PARAM_ICP_PORT,
@@ -130,7 +138,7 @@ public abstract class TestIcpManagerStartup extends LockssTestCase {
   public static class PlatformEnabledPortSetDaemonEnabledPortUnset extends TestIcpManagerStartup {
     protected void setConfig() {
       expectedRunning = true;
-      expectedPort = 2048;
+      expectedPort = getNewPort();
       ConfigurationUtil.addFromArgs(IcpManager.PARAM_PLATFORM_ICP_ENABLED,
                                     "true",
                                     IcpManager.PARAM_PLATFORM_ICP_PORT,
@@ -161,7 +169,7 @@ public abstract class TestIcpManagerStartup extends LockssTestCase {
   public static class PlatformUnsetDaemonEnabled extends TestIcpManagerStartup {
     protected void setConfig() {
       expectedRunning = true;
-      expectedPort = 2048;
+      expectedPort = getNewPort();
       ConfigurationUtil.addFromArgs(IcpManager.PARAM_ICP_ENABLED,
                                     "true",
                                     IcpManager.PARAM_ICP_PORT,
@@ -221,6 +229,7 @@ public abstract class TestIcpManagerStartup extends LockssTestCase {
   private IcpManager testableIcpManager;
 
   public void setUp() throws Exception {
+    logger.info("BEGIN: " + getClass().getName());
     super.setUp();
     mockLockssDaemon = getMockLockssDaemon();
     testableIcpManager = new TestableIcpManager();
@@ -233,19 +242,33 @@ public abstract class TestIcpManagerStartup extends LockssTestCase {
 
   public void tearDown() {
     testableIcpManager.stopService();
+    logger.info("END: " + getClass().getName());
   }
 
   public void testStartedAsExpected() {
-    assertEquals(expectedRunning, testableIcpManager.isIcpServerRunning());
+    assertEquals("FAILED: " + getClass().getName(),
+                 expectedRunning,
+                 testableIcpManager.isIcpServerRunning());
     if (expectedRunning) {
-      assertEquals(expectedPort, testableIcpManager.getCurrentPort());
+      assertEquals("FAILED: " + getClass().getName(),
+                   expectedPort,
+                   testableIcpManager.getCurrentPort());
     }
+    logger.info("PASSED: " + getClass().getName());
   }
 
   protected abstract void setConfig();
 
+  private static Logger logger = Logger.getLogger("TestIcpManagerStartup");
+
+  private static int port = 65000;
+
   public static Test suite() {
     return variantSuites(TestIcpManagerStartup.class);
+  }
+
+  protected static int getNewPort() {
+    return port++;
   }
 
 }
