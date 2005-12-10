@@ -1,5 +1,5 @@
 /*
- * $Id: IcpFactoryImpl.java,v 1.16 2005-11-30 17:46:54 thib_gc Exp $
+ * $Id: IcpFactoryImpl.java,v 1.17 2005-12-10 00:20:58 thib_gc Exp $
  */
 
 /*
@@ -600,9 +600,10 @@ public class IcpFactoryImpl implements IcpFactory {
 
     /**
      * <p>Builds an ICP hit-object message by invoking
-     * {@link #IcpMessageImpl(byte, byte, short, int, int, int, IPAddr, String)}
-     * and by initializing the payload object and payload object
-     * length fields with the given arguments.</p>
+     * {@link IcpMessageImpl#IcpMessageImpl(byte, byte, short, int,
+     * int, int, IPAddr, IPAddr, String)} and by initializing the
+     * payload object and payload object length fields with the given
+     * arguments.</p>
      * @param opcode              An ICP opcode.
      * @param version             A version number.
      * @param length              An ICP message length.
@@ -841,6 +842,7 @@ public class IcpFactoryImpl implements IcpFactory {
         if (version != IcpMessage.ICP_VERSION) {
           throw new IcpProtocolException("Unknown version: " + version);
         }
+
         length = IcpUtil.getLengthFromBuffer(in);
         requestNumber = IcpUtil.getRequestNumberFromBuffer(in);
         options = IcpUtil.getOptionsFromBuffer(in);
