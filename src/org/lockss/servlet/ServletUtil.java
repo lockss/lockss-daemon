@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.19 2005-11-09 18:39:18 thib_gc Exp $
+ * $Id: ServletUtil.java,v 1.20 2005-12-10 00:16:51 thib_gc Exp $
  */
 
 /*
@@ -36,7 +36,7 @@ import java.text.*;
 import java.util.*;
 import java.util.List;
 
-import org.lockss.daemon.TitleSet;
+import org.lockss.daemon.*;
 import org.lockss.jetty.MyTextArea;
 import org.lockss.remote.RemoteApi;
 import org.lockss.remote.RemoteApi.BatchAuStatus;
@@ -73,19 +73,25 @@ public class ServletUtil {
     new SimpleDateFormat("HH:mm:ss MM/dd/yy");
 
   static final Image IMAGE_LOGO_LARGE =
-    makeImage("lockss-logo-large.gif", 160, 160, 0);
+    image("lockss-logo-large.gif", 160, 160, 0);
 
   static final Image IMAGE_LOGO_SMALL =
-    makeImage("lockss-logo-small.gif", 80, 81, 0);
+    image("lockss-logo-small.gif", 80, 81, 0);
 
   /* private */static final Image IMAGE_TM =
-    makeImage("tm.gif", 16, 16, 0);
+    image("tm.gif", 16, 16, 0);
 
-  static final String PAGE_BGCOLOR =
-    "#ffffff";
+  private static final String ALIGN_CENTER =
+    "align=\"center\""; /* (a) */
+
+  private static final String ALIGN_LEFT =
+    "align=\"left\""; /* (a) */
+
+  private static final String ALIGN_RIGHT =
+    "align=\"right\""; /* (a) */
 
   private static final String ALLOWDENY_CELL_ATTRIBUTES =
-    "align=\"center\"";
+    ALIGN_CENTER;
 
   private static final int ALLOWDENY_COLUMNS = 30;
 
@@ -105,9 +111,24 @@ public class ServletUtil {
   private static final String ALLOWDENYERRORS_BEFORE =
     "<font color=\"red\">";
 
-  private static final String BACKLINK_AFTER = "</center>";
+  private static final String BACKLINK_AFTER =
+    "</center>";
 
-  private static final String BACKLINK_BEFORE = "<center>";
+  private static final String BACKLINK_BEFORE =
+    "<center>";
+
+  private static final String CHOOSEAUS_ATTRIBUTES =
+    "align=\"center\" cellspacing=\"4\" cellpadding=\"0\"";
+
+  private static final int CHOOSEAUS_BORDER = 0;
+
+  private static final String CHOOSEAUS_CELL_ATTRIBUTES =
+    "align=\"right\" valign=\"center\"";
+
+  private static final String CHOOSEAUS_NONOPERABLE_ATTRIBUTES =
+    "align=\"center\" cellspacing=\"4\" cellpadding=\"0\"";
+
+  private static final int CHOOSEAUS_NONOPERABLE_BORDER = 0;
 
   private static final String CHOOSESETS_BUTTONROW_ATTRIBUTES =
     "align=\"center\" colspan=\"2\"";
@@ -118,12 +139,13 @@ public class ServletUtil {
   private static final String CHOOSESETS_CHECKBOX_ATTRIBUTES =
     "align=\"right\" valign=\"center\"";
 
-  private static final int CHOOSESETS_ROW_THRESHOLD = 10;
-
   private static final String CHOOSESETS_TABLE_ATTRIBUTES =
     "align=\"center\" cellspacing=\"4\" cellpadding=\"0\"";
 
   private static final int CHOOSESETS_TABLE_BORDER = 0;
+
+  private static final String COLOR_WHITE =
+    "#ffffff"; /* (a) */
 
   private static final String ERRORBLOCK_ERROR_AFTER =
     "</font></center><br>";
@@ -138,7 +160,7 @@ public class ServletUtil {
     "<center><font color=\"red\" size=\"+1\">";
 
   private static final String EXPLANATION_CELL_ATTRIBUTES =
-    "align=\"center\"";
+    ALIGN_CENTER;
 
   private static final String EXPLANATION_TABLE_ATTRIBUTES =
     "width=\"85%\"";
@@ -162,7 +184,7 @@ public class ServletUtil {
   private static final int HEADER_TABLE_BORDER = 0;
 
   private static final Image IMAGE_LOCKSS_RED =
-    makeImage("lockss-type-red.gif", 595, 31, 0);
+    image("lockss-type-red.gif", 595, 31, 0);
 
   private static final String MENU_ATTRIBUTES =
     "cellspacing=\"2\" cellpadding=\"4\" align=\"center\"";
@@ -192,14 +214,49 @@ public class ServletUtil {
   private static final String NOTES_LIST_BEFORE =
     "<ol><font size=\"-1\">";
 
+  private static final String PAGE_BGCOLOR =
+    COLOR_WHITE;
+
   private static final String PORT_ATTRIBUTES =
-    ALLOWDENY_CELL_ATTRIBUTES;
+    ALIGN_CENTER;
+
+  private static final String REPOTABLE_ATTRIBUTES =
+    "align=\"center\" cellspacing=\"4\" cellpadding=\"0\"";
+
+  private static final int REPOTABLE_BORDER = 0;
+
+  private static final String REPOTABLE_ROW_ATTRIBUTES =
+    ALIGN_CENTER;
+
+  private static final String SELECTALL_ATTRIBUTES =
+    "cellspacing=\"4\" cellpadding=\"0\"";
+
+  private static final int SELECTALL_BORDER = 0;
 
   private static final String SUBMIT_AFTER =
-    BACKLINK_AFTER;
+    "</center>";
 
   private static final String SUBMIT_BEFORE =
     "<br><center>";
+
+  public static Image image(String file,
+                            int width,
+                            int height,
+                            int border) {
+    return new Image("/images/" + file, width, height, border);
+  }
+
+  /** create an image that will display the tooltip on mouse hover */
+  public static Image image(String file,
+                            int width,
+                            int height,
+                            int border,
+                            String tooltip) {
+    Image img = image(file, width, height, border);
+    img.alt(tooltip);		 	// some browsers (IE) use alt tag
+    img.attribute("title", tooltip);	// some (Mozilla) use title tag
+    return img;
+  }
 
   public static void layoutBackLink(LockssServlet servlet,
                                     Page page,
@@ -445,6 +502,142 @@ public class ServletUtil {
     composite.add(SUBMIT_BEFORE + submit + SUBMIT_AFTER);
   }
 
+//  public static void layoutChooseAus(LockssServlet servlet,
+//                                     Page page,
+//                                     Composite chooseSets,
+//                                     String hiddenActionName,
+//                                     String hiddenVerbName,
+//                                     Verb verb,
+//                                     String buttonText,
+//                                     boolean isLong) {
+//    Form frm = newForm(servlet);
+//    frm.add(new Input(Input.Hidden, hiddenActionName));
+//    frm.add(new Input(Input.Hidden, hiddenVerbName, verb.valStr));
+//    frm.add(chooseSets);
+//    page.add(frm);
+//  }
+
+  public static Composite makeChooseAus(LockssServlet servlet,
+                                        Iterator basEntryIter,
+                                        Verb verb,
+                                        List repos,
+                                        Map auConfs,
+                                        String keyAuid,
+                                        String keyRepo,
+                                        String repoChoiceFootnote,
+                                        String buttonText,
+                                        MutableInteger buttonNumber,
+                                        boolean isLong) {
+    boolean isAdd = verb.isAdd;
+    boolean repoFlg = isAdd && repos.size() > 1;
+    int reposSize = repoFlg ? repos.size() : 0;
+    int maxCols = reposSize + (isAdd ? 3 : 2);
+    Block repoFootElement = null;
+
+    Table tbl = new Table(CHOOSEAUS_BORDER, CHOOSEAUS_ATTRIBUTES);
+
+    if (isLong) {
+      tbl.newRow();
+      tbl.newCell(ALIGN_CENTER + " colspan=\"" + maxCols + "\"");
+      buttonNumber.add(1);
+      tbl.add(submitButton(servlet, buttonNumber.intValue(),
+          buttonText, verb.action()));
+    }
+
+    tbl.newRow();
+    tbl.newCell();
+    tbl.add(layoutSelectAllButton(servlet));
+
+    tbl.newRow();
+    tbl.addHeading(verb.cap + "?", ALIGN_RIGHT + " rowspan=\"2\"");
+    if (repoFlg) {
+      tbl.addHeading("Disk", ALIGN_CENTER + " colspan=\"" + reposSize + "\"");
+      repoFootElement = tbl.cell();
+    }
+    tbl.addHeading("Archival Unit", ALIGN_CENTER + " rowspan=\"2\"");
+    if (isAdd) {
+      tbl.addHeading("Est. size (MB)", ALIGN_CENTER + " rowspan=\"2\"");
+    }
+
+    tbl.newRow(); // for rowspan=2 above
+    for (int ix = 1; ix <= reposSize; ++ix) {
+      tbl.addHeading(Integer.toString(ix), ALIGN_CENTER);
+    }
+
+    boolean isAnyAssignedRepo = false;
+    while (basEntryIter.hasNext()) {
+      // Get next entry
+      BatchAuStatus.Entry rs = (BatchAuStatus.Entry)basEntryIter.next();
+      if (rs.isOk()) {
+        String auid = rs.getAuId();
+        tbl.newRow();
+
+        tbl.newCell(CHOOSEAUS_CELL_ATTRIBUTES);
+        auConfs.put(auid, rs.getConfig());
+        Element cb = checkbox(servlet, keyAuid, auid, false);
+        cb.attribute("onClick", "if (this.checked) selectRepo(this, this.form);");
+        tbl.add(cb);
+
+        if (repoFlg) {
+          List existingRepoNames = rs.getRepoNames();
+          String firstRepo = null;
+          if (existingRepoNames != null && !existingRepoNames.isEmpty()) {
+            firstRepo = (String)existingRepoNames.get(0);
+            isAnyAssignedRepo = true;
+          }
+
+          int ix = 1;
+          for (Iterator riter = repos.iterator(); riter.hasNext(); ++ix) {
+            String repo = (String)riter.next();
+            tbl.newCell(ALIGN_CENTER);
+            if (firstRepo == null) {
+              tbl.add(radioButton(servlet, keyRepo + "_" + auid,
+                  Integer.toString(ix), null, false));
+            }
+            else if (repo.equals(firstRepo)) {
+              tbl.add(radioButton(servlet, keyRepo + "_" + auid,
+                  Integer.toString(ix), null, true));
+            }
+            else {
+              // nothing
+            }
+          }
+        }
+        else if (reposSize > 0) {
+          tbl.newCell("colspan=\"" + reposSize + "\"");
+        }
+
+        tbl.newCell();
+        tbl.add(rs.getName());
+        TitleConfig tc = rs.getTitleConfig();
+        long est;
+        if (isAdd && tc != null && (est = tc.getEstimatedSize()) != 0) {
+          tbl.newCell(ALIGN_RIGHT);
+          long mb = (est + (512 * 1024)) / (1024 * 1024);
+          tbl.add(Long.toString(Math.max(mb, 1L)));
+        }
+      }
+    }
+
+    if (isLong) {
+      tbl.newRow();
+      tbl.newCell();
+      tbl.add(layoutSelectAllButton(servlet));
+    }
+
+    if (repoFootElement != null && isAnyAssignedRepo) {
+      repoFootElement.add(servlet.addFootnote(repoChoiceFootnote));
+    }
+
+    tbl.newRow();
+    tbl.newCell(ALIGN_CENTER + " colspan=\"" + maxCols + "\"");
+    buttonNumber.add(1);
+    tbl.add(submitButton(servlet, buttonNumber.intValue(),
+        buttonText, verb.action()));
+
+    return tbl;
+  }
+
   public static Composite makeChooseSets(LockssServlet servlet,
                                          RemoteApi remoteApi,
                                          Iterator titleSetIterator,
@@ -454,7 +647,8 @@ public class ServletUtil {
                                          MutableBoolean isAnySelectable,
                                          String submitText,
                                          String submitAction,
-                                         MutableInteger buttonNumber) {
+                                         MutableInteger buttonNumber,
+                                         int atLeast) {
     int actualRows = 0;
     isAnySelectable.setValue(false);
     Composite topRow;
@@ -467,7 +661,7 @@ public class ServletUtil {
     topRow = tbl.row();
     tbl.newCell(CHOOSESETS_BUTTONROW_ATTRIBUTES);
     buttonNumber.add(1);
-    tbl.add(makeSubmitButton(servlet, buttonNumber.intValue(),
+    tbl.add(submitButton(servlet, buttonNumber.intValue(),
         submitText, submitAction));
 
     // Iterate over title sets
@@ -485,7 +679,7 @@ public class ServletUtil {
           tbl.newCell(CHOOSESETS_CHECKBOX_ATTRIBUTES);
           if (numOk > 0) {
             isAnySelectable.setValue(true);
-            tbl.add(makeCheckbox(servlet, null, set.getName(), checkboxGroup, false));
+            tbl.add(checkbox(servlet, checkboxGroup, set.getName(), false));
           }
           tbl.newCell(CHOOSESETS_CELL_ATTRIBUTES);
           String txt = set.getName() + " (" + numOk + ")";
@@ -496,7 +690,7 @@ public class ServletUtil {
 
     if (isAnySelectable.booleanValue()) {
       // Remove top row if unneeded
-      if (actualRows < CHOOSESETS_ROW_THRESHOLD) {
+      if (actualRows < atLeast) {
         topRow.reset();
       }
 
@@ -504,32 +698,87 @@ public class ServletUtil {
       tbl.newRow();
       tbl.newCell(CHOOSESETS_BUTTONROW_ATTRIBUTES);
       buttonNumber.add(1);
-      tbl.add(makeSubmitButton(servlet, buttonNumber.intValue(),
+      tbl.add(submitButton(servlet, buttonNumber.intValue(),
           submitText, submitAction));
     }
 
     return tbl;
   }
 
-  public static Image makeImage(String file,
-                                int width,
-                                int height,
-                                int border) {
-    return new Image("/images/" + file, width, height, border);
+  public static Composite makeNonOperableAuTable(String heading,
+                                                 Iterator basEntryIter) {
+      Composite comp = new Block(Block.Center);
+      comp.add("<br>");
+      comp.add(heading);
+
+      Table tbl = new Table(CHOOSEAUS_NONOPERABLE_BORDER, CHOOSEAUS_NONOPERABLE_ATTRIBUTES);
+      tbl.addHeading("Archival Unit");
+      tbl.addHeading("Reason");
+
+      while (basEntryIter.hasNext()) {
+        BatchAuStatus.Entry rs = (BatchAuStatus.Entry)basEntryIter.next();
+        if (!rs.isOk()) {
+          tbl.newRow();
+          tbl.newCell();
+          tbl.add(rs.getName());
+          tbl.newCell();
+          tbl.add(rs.getExplanation());
+        }
+      }
+
+      comp.add(tbl);
+      return comp;
   }
 
+  public static Element makeRepoTable(LockssServlet servlet,
+                                      Iterator repoIter,
+                                      String keyDefaultRepo) {
+    final String SPACE = "&nbsp;";
 
+    Table tbl = new Table(REPOTABLE_BORDER, REPOTABLE_ATTRIBUTES);
+    tbl.newRow();
+    tbl.addHeading("Available Disks", "colspan=\"6\"");
+    tbl.newRow();
+    tbl.addHeading("Default");
+    tbl.addHeading("Disk");
+    tbl.addHeading("Location");
+    tbl.addHeading("Size");
+    tbl.addHeading("Free");
+    tbl.addHeading("%Full");
 
-  /** create an image that will display the tooltip on mouse hover */
-  public static Image makeImage(String file,
-                                int width,
-                                int height,
-                                int border,
-                                String tooltip) {
-    Image img = makeImage(file, width, height, border);
-    img.alt(tooltip);			// some browsers (IE) use alt tag
-    img.attribute("title", tooltip);	// some (Mozilla) use title tag
-    return img;
+    // Populate repo key table
+    for (int ix = 1 ; repoIter.hasNext() ; ++ix) {
+      // Get entry
+      Map.Entry entry = (Map.Entry)repoIter.next();
+      String repo = (String)entry.getKey();
+      PlatformInfo.DF df = (PlatformInfo.DF)entry.getValue();
+
+      // Populate row for entry
+      tbl.newRow(REPOTABLE_ROW_ATTRIBUTES);
+      tbl.newCell(ALIGN_CENTER); // "Default"
+      tbl.add(radioButton(servlet, keyDefaultRepo, Integer.toString(ix),
+                  null, ix == 1));
+      tbl.newCell(ALIGN_RIGHT); // "Disk"
+      tbl.add(Integer.toString(ix) + "." + SPACE);
+      tbl.newCell(ALIGN_LEFT); // "Location"
+      tbl.add(repo);
+      if (df != null) {
+        tbl.newCell(ALIGN_RIGHT); // "Size"
+        tbl.add(SPACE);
+        tbl.add(StringUtil.sizeKBToString(df.getSize()));
+        tbl.newCell(ALIGN_RIGHT); // "Free"
+        tbl.add(SPACE);
+        tbl.add(StringUtil.sizeKBToString(df.getAvail()));
+        tbl.newCell(ALIGN_RIGHT); // "%Full"
+        tbl.add(SPACE);
+        tbl.add(df.getPercentString());
+      }
+    }
+
+    tbl.newRow();
+    tbl.newCell("colspan=\"6\"");
+    tbl.add(Break.rule);
+    return tbl;
   }
 
   public static Form newForm(LockssServlet servlet) {
@@ -552,6 +801,45 @@ public class ServletUtil {
     return page;
   }
 
+  /** Return a (possibly labelled) checkbox.
+   * @param servlet The servlet associated with the checkbox.
+   * @param key     Form key to which result set is assigned.
+   * @param value   Value included in result set if box checked.
+   * @param checked If true, the checkbox is initially checked.
+   * @return A checkbox {@link Element}.
+   */
+  private static Element checkbox(LockssServlet servlet,
+                                  String key,
+                                  String value,
+                                  boolean checked) {
+    return checkbox(servlet, key, value, null, checked);
+  }
+
+  /** Return a (possibly labelled) checkbox.
+   * @param key     Form key to which result set is assigned
+   * @param value   Value included in result set if box checked
+   * @param text    Appears to right of checkbox if non null
+   * @param checked If true, box is initially checked
+   * @return a checkbox Element
+   */
+  private static Element checkbox(LockssServlet servlet,
+                                  String key,
+                                  String value,
+                                  String text,
+                                  boolean checked) {
+    Input in = new Input(Input.Checkbox, key, value);
+    if (checked) { in.check(); }
+    servlet.setTabOrder(in);
+    if (StringUtil.isNullString(text)) {
+      return in;
+    }
+    else {
+      Composite c = new Composite();
+      c.add(in); c.add(" "); c.add(text);
+      return c;
+    }
+  }
+
   /** Add html tags to grey the text */
   private static String gray(String txt) {
     return gray(txt, true);
@@ -563,6 +851,17 @@ public class ServletUtil {
       return "<font color=\"gray\">" + txt + "</font>";
     else
       return txt;
+  }
+
+  /** Return a button that invokes javascript when clicked. */
+  private static Input javascriptButton(LockssServlet servlet,
+                                        String label,
+                                        String js) {
+    Input btn = new Input("button", null);
+    btn.attribute("value", label);
+    servlet.setTabOrder(btn);
+    btn.attribute("onClick", js);
+    return btn;
   }
 
   private static void layoutFootnote(Composite comp,
@@ -645,60 +944,59 @@ public class ServletUtil {
         "--> </style>");
   }
 
-  /** Return a (possibly labelled) checkbox.
-   * @param label appears to right of checkbox if non null
-   * @param value value included in result set if box checked
-   * @param key form key to which result set is assigned
-   * @param checked if true, box is initially checked
-   * @return a checkbox Element
-   */
-  private static Element makeCheckbox(LockssServlet servlet,
-                                      String label,
-                                      String value,
-                                      String key,
-                                      boolean checked) {
-    Input in = new Input(Input.Checkbox, key, value);
-    if (checked) { in.check(); }
-    servlet.setTabOrder(in);
-    if (StringUtil.isNullString(label)) {
-      return in;
-    }
-    else {
-      Composite c = new Composite();
-      c.add(in); c.add(" "); c.add(label);
-      return c;
-    }
+  private static Composite layoutSelectAllButton(LockssServlet servlet) {
+    Table tbl = new Table(SELECTALL_BORDER, SELECTALL_ATTRIBUTES);
+    tbl.newRow();
+    tbl.newCell(ALIGN_RIGHT);
+    tbl.add(javascriptButton(servlet, "Select All", "selectAll(this.form, 0);"));
+    tbl.newRow();
+    tbl.newCell(ALIGN_RIGHT);
+    tbl.add(javascriptButton(servlet, "Clear All", "selectAll(this.form, 1);"));
+    return tbl;
   }
 
-  /** Return a button that invokes javascript when clicked. */
-  private static Input makeJavascriptButton(LockssServlet servlet,
-                                            String label,
-                                            String js) {
-    Input btn = new Input("button", null);
-    btn.attribute("value", label);
-    servlet.setTabOrder(btn);
-    btn.attribute("onClick", js);
-    return btn;
+  private static String multiline(String str) {
+    return str.replaceAll("\n", "<br>");
+  }
+
+  private static Element radioButton(LockssServlet servlet,
+                                     String key,
+                                     String value,
+                                     boolean checked) {
+    return radioButton(servlet, key, value, value, checked);
+  }
+
+  private static Element radioButton(LockssServlet servlet,
+                                     String key,
+                                     String value,
+                                     String text,
+                                     boolean checked) {
+    Composite c = new Composite();
+    Input in = new Input(Input.Radio, key, value);
+    if (checked) { in.check(); }
+    servlet.setTabOrder(in);
+    c.add(in); c.add(" "); c.add(text);
+    return c;
   }
 
   /** Return a button that invokes the javascript submit routine with the
    * specified action */
-  private static Element makeSubmitButton(LockssServlet servlet,
-                                          int buttonNumber,
-                                          String label,
-                                          String action) {
-    return makeSubmitButton(servlet, buttonNumber, label, action, null, null);
+  private static Element submitButton(LockssServlet servlet,
+                                      int buttonNumber,
+                                      String label,
+                                      String action) {
+    return submitButton(servlet, buttonNumber, label, action, null, null);
   }
 
   /** Return a button that invokes the javascript submit routine with the
    * specified action, first storing the value in the specified form
    * prop. */
-  private static Element makeSubmitButton(LockssServlet servlet,
-                                          int buttonNumber,
-                                          String label,
-                                          String action,
-                                          String prop,
-                                          String value) {
+  private static Element submitButton(LockssServlet servlet,
+                                      int buttonNumber,
+                                      String label,
+                                      String action,
+                                      String prop,
+                                      String value) {
     StringBuffer sb = new StringBuffer(40);
     sb.append("lockssButton(this, '");
     sb.append(action);
@@ -711,13 +1009,9 @@ public class ServletUtil {
       sb.append("'");
     }
     sb.append(")");
-    Input btn = makeJavascriptButton(servlet, label, sb.toString());
+    Input btn = javascriptButton(servlet, label, sb.toString());
     btn.attribute("id", "lsb." + buttonNumber);
     return btn;
-  }
-
-  private static String multiline(String str) {
-    return str.replaceAll("\n", "<br>");
   }
 
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.46 2005-11-16 07:44:09 smorabito Exp $
+ * $Id: RemoteApi.java,v 1.47 2005-12-10 00:16:52 thib_gc Exp $
  */
 
 /*
@@ -1208,6 +1208,28 @@ public class RemoteApi
 	}
       }
       return false;
+    }
+
+    /**
+     * <p>Returns true if there are at least a given number
+     * of entries that are OK.</p>
+     * @param thatMany The minimum number for a "true" return value.
+     * @return true if there are at least that many entries that are OK.
+     */
+    public boolean hasAtLeast(int thatMany) {
+      if (hasNotOk()) {
+        int size = 0;
+        for (Iterator iter = getStatusList().iterator(); iter.hasNext(); ) {
+          BatchAuStatus.Entry rs =
+            (BatchAuStatus.Entry)iter.next();
+          if (rs.isOk()) {
+            if (++size >= thatMany) return true;
+          }
+        }
+        return false;
+      } else {
+        return getStatusList().size() >= thatMany;
+      }
     }
 
     public String toString() {

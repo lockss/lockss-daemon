@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.60 2005-12-01 23:28:01 troberts Exp $
+ * $Id: DaemonStatus.java,v 1.61 2005-12-10 00:16:51 thib_gc Exp $
  */
 
 /*
@@ -45,6 +45,7 @@ import org.lockss.config.CurrentConfig;
 import org.lockss.daemon.status.*;
 import org.lockss.plugin.PluginManager;
 import org.lockss.util.*;
+
 
 /**
  * DaemonStatus servlet
@@ -452,13 +453,13 @@ public class DaemonStatus extends LockssServlet {
     }
   }
 
-  static final Image UPARROW1 = ServletUtil.makeImage("uparrow1blue.gif", 16, 16, 0,
+  static final Image UPARROW1 = ServletUtil.image("uparrow1blue.gif", 16, 16, 0,
 				      "Primary sort column, ascending");
-  static final Image UPARROW2 = ServletUtil.makeImage("uparrow2blue.gif", 16, 16, 0,
+  static final Image UPARROW2 = ServletUtil.image("uparrow2blue.gif", 16, 16, 0,
 				      "Secondary sort column, ascending");
-  static final Image DOWNARROW1 = ServletUtil.makeImage("downarrow1blue.gif", 16, 16, 0,
+  static final Image DOWNARROW1 = ServletUtil.image("downarrow1blue.gif", 16, 16, 0,
 					"Primary sort column, descending");
-  static final Image DOWNARROW2 = ServletUtil.makeImage("downarrow2blue.gif", 16, 16, 0,
+  static final Image DOWNARROW2 = ServletUtil.image("downarrow2blue.gif", 16, 16, 0,
 					"Secondary sort column, descending");
 
   /** Create a column heading element:<ul>
