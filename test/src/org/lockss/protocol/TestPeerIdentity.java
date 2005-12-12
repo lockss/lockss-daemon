@@ -1,10 +1,10 @@
 /*
- * $Id: TestPeerIdentity.java,v 1.2 2004-09-29 06:39:14 tlipkis Exp $
+ * $Id: TestPeerIdentity.java,v 1.2.20.1 2005-12-12 23:34:04 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,13 +32,10 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.protocol;
 
-import java.io.*;
-import java.net.*;
-import org.lockss.daemon.*;
+import java.io.File;
+
 import org.lockss.test.*;
 import org.lockss.util.*;
-import java.util.*;
-
 
 /** Test case for class: org.lockss.protocol.PeerIdentity */
 public class TestPeerIdentity extends LockssTestCase {
@@ -73,6 +70,35 @@ public class TestPeerIdentity extends LockssTestCase {
     PeerIdentity id2 = new PeerIdentity.LocalIdentity("key2");
     assertFalse(id1.isLocalIdentity());
     assertTrue(id2.isLocalIdentity());
+  }
+
+  public void testSerializationRoundtrip() throws Exception {
+    MockLockssDaemon daemon = getMockLockssDaemon();
+    String host = "1.2.3.4";
+    String prop = "org.lockss.localIPAddress="+host;
+    ConfigurationUtil.
+      setCurrentConfigFromUrlList(ListUtil.list(FileTestUtil.urlOfString(prop)));
+    idmgr = daemon.getIdentityManager();
+
+    ObjectSerializer serializer = new XStreamSerializer();
+    ObjectSerializer deserializer = new XStreamSerializer(daemon);
+
+    File temp1 = File.createTempFile("tmp", ".xml");
+    temp1.deleteOnExit();
+    PeerIdentity pidv1 = new PeerIdentity("12.34.56.78");
+    serializer.serialize(temp1, pidv1);
+    PeerIdentity back1 = (PeerIdentity)deserializer.deserialize(temp1);
+    assertEquals(pidv1.getIdString(), back1.getIdString());
+    assertEquals(pidv1.getPeerAddress(), back1.getPeerAddress());
+
+    File temp3 = File.createTempFile("tmp", ".xml");
+    temp3.deleteOnExit();
+    PeerIdentity pidv3 =
+      new PeerIdentity("87.65.43.21" + IdentityManager.V3_ID_SEPARATOR_CHAR + "999");
+    serializer.serialize(temp3, pidv3);
+    PeerIdentity back3 = (PeerIdentity)deserializer.deserialize(temp3);
+    assertEquals(pidv3.getIdString(), back3.getIdString());
+    assertEquals(pidv3.getPeerAddress(), back3.getPeerAddress());
   }
 
 }

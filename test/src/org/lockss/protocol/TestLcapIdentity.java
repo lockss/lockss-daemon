@@ -1,10 +1,10 @@
 /*
- * $Id: TestLcapIdentity.java,v 1.32 2005-10-07 23:46:45 smorabito Exp $
+ * $Id: TestLcapIdentity.java,v 1.32.4.1 2005-12-12 23:34:04 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,11 +32,13 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.protocol;
 
+import java.io.File;
 import java.net.*;
 import org.mortbay.util.B64Code;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.poller.*;
+
 import java.util.*;
 
 
@@ -61,10 +63,6 @@ public class TestLcapIdentity extends LockssTestCase {
   LcapMessage testMsg= null;
   private MockLockssDaemon daemon;
   private IdentityManager idmgr;
-
-  public TestLcapIdentity(String _name) {
-    super(_name);
-  }
 
   /** setUp method for test case */
   protected void setUp() throws Exception {
@@ -137,6 +135,40 @@ public class TestLcapIdentity extends LockssTestCase {
     long duplicates = fakeId.m_duplPackets;
     fakeId.rememberDuplicate(testMsg);
     assertEquals(duplicates + 1, fakeId.m_duplPackets);
+  }
+
+  public void testSerializationRoundtrip() throws Exception {
+    ObjectSerializer serializer = new XStreamSerializer();
+    ObjectSerializer deserializer = new XStreamSerializer(daemon);
+
+    File temp1 = File.createTempFile("tmp", ".xml");
+    temp1.deleteOnExit();
+    PeerIdentity pidv1 = new PeerIdentity("12.34.56.78");
+    LcapIdentity lid1 = new LcapIdentity(pidv1, "12.34.56.78");
+    serializer.serialize(temp1, lid1);
+    LcapIdentity back1 = (LcapIdentity)deserializer.deserialize(temp1);
+    assertTrue(lid1.isEqual(back1));
+    assertEquals(lid1.m_address.getAddress(),
+                 back1.m_address.getAddress());
+
+    File temp3 = File.createTempFile("tmp", ".xml");
+    temp3.deleteOnExit();
+    PeerIdentity pidv3 =
+      new PeerIdentity("87.65.43.21" + IdentityManager.V3_ID_SEPARATOR_CHAR + "999");
+    LcapIdentity lid3 =
+      new LcapIdentity(pidv3, "87.65.43.21" + IdentityManager.V3_ID_SEPARATOR_CHAR + "999");
+    serializer.serialize(temp3, lid3);
+    LcapIdentity back3 = (LcapIdentity)deserializer.deserialize(temp3);
+    assertTrue(lid3.isEqual(back3));
+    assertEquals(lid3.m_address.getAddress(),
+                 back3.m_address.getAddress());
+  }
+
+  public void testFindLcapIdentity() throws Exception {
+    PeerIdentity pidv1 = new PeerIdentity("12.34.56.78");
+    LcapIdentity lid1 = idmgr.findLcapIdentity(pidv1, "12.34.56.78");
+    LcapIdentity lid2 = idmgr.findLcapIdentity(pidv1, "12.34.56.78");
+    assertSame(lid1, lid2);
   }
 
   public static void main(String[] argv) {

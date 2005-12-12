@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManagerImpl.java,v 1.10 2005-11-16 07:44:09 smorabito Exp $
+ * $Id: IdentityManagerImpl.java,v 1.10.2.1 2005-12-12 23:34:05 thib_gc Exp $
  */
 
 /*
@@ -410,7 +410,8 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
     synchronized (theIdentities) {
       LcapIdentity lid = (LcapIdentity)theIdentities.get(pid);
       if (lid == null) {
-        theIdentities.put(pid, new LcapIdentity(pid, key));
+        lid = new LcapIdentity(pid, key);
+        theIdentities.put(pid, lid);
       }
       return lid;
     }
@@ -425,7 +426,8 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
     synchronized (theIdentities) {
       LcapIdentity lid = (LcapIdentity)theIdentities.get(pid);
       if (lid == null) {
-        theIdentities.put(pid, new LcapIdentity(pid, addr, port));
+        lid = new LcapIdentity(pid, addr, port);
+        theIdentities.put(pid, lid);
       }
       return lid;
     }
