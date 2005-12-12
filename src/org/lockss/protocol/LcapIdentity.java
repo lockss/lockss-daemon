@@ -1,5 +1,5 @@
 /*
- * $Id: LcapIdentity.java,v 1.31 2005-11-05 02:10:56 thib_gc Exp $
+ * $Id: LcapIdentity.java,v 1.32 2005-12-12 23:44:00 thib_gc Exp $
  */
 
 /*
@@ -310,7 +310,11 @@ public class LcapIdentity implements LockssSerializable {
       throws MalformedIdentityKeyException {
     IdentityManager idm =
       (IdentityManager)lockssContext.getManagerByKey(LockssDaemon.IDENTITY_MANAGER);
-    return idm.findLcapIdentity(m_pid, m_idKey);
+    LcapIdentity ret = idm.findLcapIdentity(m_pid, m_idKey);
+    if (ret.m_address == null) {
+      m_address = ((PeerAddress.Ip)m_pid.getPeerAddress()).getIPAddr();
+    }
+    return ret;
   }
   
 }
