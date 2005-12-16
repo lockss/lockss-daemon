@@ -1,5 +1,5 @@
 /*
- * $Id: IcpManager.java,v 1.19 2005-12-01 23:28:02 troberts Exp $
+ * $Id: IcpManager.java,v 1.20 2005-12-16 22:29:06 thib_gc Exp $
  */
 
 /*
@@ -354,12 +354,12 @@ public class IcpManager
    * <p>The default ICP rate-limiting string.</p>
    */
   private static final String DEFAULT_ICP_INCOMING_RATE =
-    "50/1s";
+    "500/1s";
 
   /**
    * <p>The ICP rate-limiting string parameter.</p>
    */
   private static final String PARAM_ICP_INCOMING_RATE =
-  "org.lockss.proxy.icp.incomingRequestsPerSecond";
+  "org.lockss.proxy.icp.incomingRate";
 
 }
