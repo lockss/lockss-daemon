@@ -1,10 +1,10 @@
 /*
- * $Id: StringUtil.java,v 1.65 2005-11-23 21:12:36 thib_gc Exp $
+ * $Id: StringUtil.java,v 1.66 2006-01-03 22:12:10 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -707,10 +707,11 @@ public class StringUtil {
    */
   // tk - extend to accept combinations: xxHyyMzzS, etc.
   public static long parseTimeInterval(String str) {
+    String numstr = null;
+
     try {
       int len = str.length();
       char suffix = str.charAt(len - 1);
-      String numstr;
       long mult = 1;
       if (Character.isDigit(suffix)) {
 	numstr = str;
@@ -727,8 +728,10 @@ public class StringUtil {
 	}
       }
       return Long.parseLong(numstr) * mult;
-    } catch (IndexOutOfBoundsException e) {
-      throw new NumberFormatException("empty string");
+    } catch (IndexOutOfBoundsException ioobe) {
+      throw new NumberFormatException("Empty substring");
+    } catch (NumberFormatException nfe) {
+      throw new NumberFormatException("Invalid substring: " + numstr);
     }
   }
 

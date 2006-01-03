@@ -1,10 +1,10 @@
 /*
- * $Id: IcpFactoryImpl.java,v 1.17 2005-12-10 00:20:58 thib_gc Exp $
+ * $Id: IcpFactoryImpl.java,v 1.18 2006-01-03 22:12:11 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -42,7 +42,11 @@ import org.lockss.util.*;
  * <p>An implementation of the {@link IcpFactory} interface, which
  * defines its own ICP encoder, decoder and builder, as well as an
  * implementation of the {@link IcpMessage} interface.</p>
+ * <p>This class provides general-purpose ICP facilities; for an
+ * implementation that uses fast mutable ICP messages more customized
+ * for the LOCKSS daemon, see {@link LazyIcpFactoryImpl}.</p>
  * @author Thib Guicherd-Callin
+ * @see LazyIcpFactoryImpl
  */
 public class IcpFactoryImpl implements IcpFactory {
 

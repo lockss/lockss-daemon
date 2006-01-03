@@ -1,10 +1,10 @@
 /*
- * $Id: IcpManager.java,v 1.20 2005-12-16 22:29:06 thib_gc Exp $
+ * $Id: IcpManager.java,v 1.21 2006-01-03 22:12:11 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -176,6 +176,10 @@ public class IcpManager
     }
   }
 
+  /**
+   * <p>Determines whether an ICP server is allowed to run.</p>
+   * @return True if and only if and ICP server is allowed to run.
+   */
   public boolean isIcpServerAllowed() {
     return isIcpServerAllowed(CurrentConfig.getCurrentConfig());
   }
@@ -237,14 +241,35 @@ public class IcpManager
                                              -1));
   }
 
+  /**
+   * <p>Determines whether an ICP server is allowed to run based on
+   * the given {@link Configuration} instance.</p>
+   * @param theConfig A {@link Configuration} instance from which to
+   *                  obtain configuration information.
+   * @return True unless the platform indicates it prohibits ICP.
+   * @see #PARAM_PLATFORM_ICP_ENABLED
+   */
   protected boolean isIcpServerAllowed(Configuration theConfig) {
     return theConfig.getBoolean(PARAM_PLATFORM_ICP_ENABLED, true);
   }
 
+  /**
+   * <p>Determines whether the ICP server should start now.</p>
+   * @return True if and only if the ICP server should start now.
+   */
   protected boolean shouldIcpServerStart() {
     return shouldIcpServerStart(CurrentConfig.getCurrentConfig());
   }
 
+  /**
+   * <p>Determines whether the ICP server should start now,
+   * based on the given {@link Configuration} instance.</p>
+   * @param theConfig A {@link Configuration} instance from which to
+   *                  obtain configuration information.
+   * @return True if and only if the ICP server is allowed to start,
+   *         and is enabled, and has an a priori valid ICP port number
+   *         set.
+   */
   protected boolean shouldIcpServerStart(Configuration theConfig) {
     return    isIcpServerAllowed(theConfig)
            && theConfig.getBoolean(PARAM_ICP_ENABLED,
@@ -255,6 +280,8 @@ public class IcpManager
 
   /**
    * <p>Starts the ICP socket.</p>
+   * @param theConfig A {@link Configuration} instance from which to
+   *                  determine the current ICP port.
    */
   protected void startSocket(Configuration theConfig) {
     try {
@@ -272,8 +299,12 @@ public class IcpManager
         throw new SocketException();
       }
 
+      icpFactory =
+          CurrentConfig.getBooleanParam(PARAM_SLOW_ICP, DEFAULT_SLOW_ICP)
+        ? IcpFactoryImpl.getInstance()
+        : LazyIcpFactoryImpl.getInstance();
+
       udpSocket = new DatagramSocket(port);
-      icpFactory = IcpFactoryImpl.getInstance();
       icpBuilder = icpFactory.makeIcpBuilder();
       icpSocket = new IcpSocketImpl("IcpSocketImpl",
                                     udpSocket,
@@ -354,12 +385,23 @@ public class IcpManager
    * <p>The default ICP rate-limiting string.</p>
    */
   private static final String DEFAULT_ICP_INCOMING_RATE =
-    "500/1s";
+    "400/100"; // no suffix == milliseconds
+
+  /**
+   * <p>The default slow ICP flag.</p>
+   */
+  private static final boolean DEFAULT_SLOW_ICP = true;
 
   /**
    * <p>The ICP rate-limiting string parameter.</p>
    */
   private static final String PARAM_ICP_INCOMING_RATE =
-  "org.lockss.proxy.icp.incomingRate";
+    "org.lockss.proxy.icp.incomingRate";
+
+  /**
+   * <p>The slow ICP string parameter.</p>
+   */
+  private static final String PARAM_SLOW_ICP =
+    "org.lockss.proxy.icp.slow";
 
 }
