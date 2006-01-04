@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.167 2005-11-29 22:42:10 tlipkis Exp $
+ $Id: build.xml,v 1.168 2006-01-04 23:05:20 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -922,7 +922,7 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
 ULIMIT_MEMORY=unlimited
 ULIMIT_STACK=14000
 ULIMIT_FILES=512
-JAVA_COMMAND_ARGS="-Xmx150m -Dsun.net.inetaddr.ttl=3600 -Dorg.lockss.synchronizeDns=true -showversion"
+JAVA_COMMAND_ARGS="-server -Xmx150m -Dsun.net.inetaddr.ttl=3600 -Dorg.lockss.synchronizeDns=true -showversion"
 </echo>
     <!-- Write packing list file-->
     <pathconvert refid="prod.packing.list" property="tmp.packing.list"
