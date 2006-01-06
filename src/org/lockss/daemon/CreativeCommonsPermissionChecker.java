@@ -1,5 +1,5 @@
 /*
- * $Id: CreativeCommonsPermissionChecker.java,v 1.6 2005-10-11 05:44:15 tlipkis Exp $
+ * $Id: CreativeCommonsPermissionChecker.java,v 1.7 2006-01-06 05:09:44 smorabito Exp $
  */
 
 /*
@@ -63,26 +63,28 @@ public class CreativeCommonsPermissionChecker
 
   // Maximum size for the RDF buffer
   private static int RDF_BUF_LEN = 65535;
+  
+  private static String CC_NAMESPACE = "http://web.resource.org/cc/";
 
   // License resource
   private static final Resource LICENSE =
-    new ResourceImpl("http://web.resource.org/cc/license");
+    new ResourceImpl(CC_NAMESPACE + "License");
 
   // Permission-kind resources
   private static final Resource PERMITS =
-    new ResourceImpl("http://web.resource.org/cc/permits");
+    new ResourceImpl(CC_NAMESPACE + "permits");
   private static final Resource REQUIRES =
-    new ResourceImpl("http://web.resources.org/cc/requires");
+    new ResourceImpl(CC_NAMESPACE + "requires");
   private static final Resource PROHIBITS =
-    new ResourceImpl("http://web.resources.org/cc/prohibits");
+    new ResourceImpl(CC_NAMESPACE + "prohibits");
 
   // Permission labels
-  private static final String DERIVATIVE_WORKS =
-    "http://web.resource.org/cc/DerivativeWorks";
-  private static final String REPRODUCTION =
-    "http://web.resource.org/cc/Reproduction";
-  private static final String DISTRIBUTION =
-    "http://web.resource.org/cc/Distribution";
+  private static final Resource DERIVATIVE_WORKS =
+    new ResourceImpl(CC_NAMESPACE + "DerivativeWorks");
+  private static final Resource REPRODUCTION =
+    new ResourceImpl(CC_NAMESPACE + "Reproduction");
+  private static final Resource DISTRIBUTION =
+    new ResourceImpl(CC_NAMESPACE + "Distribution");
 
   private static final Logger log =
     Logger.getLogger("CreativeCommonsPermissionChecker");
@@ -104,10 +106,6 @@ public class CreativeCommonsPermissionChecker
    * the licenseURI must be "http://some.url/foo/", or the license will
    * not be considered valid.
    */
-  /*  public CreativeCommonsPermissionChecker(String licenseURI) {
-    m_licenseURI = licenseURI;
-  }
-  */
 
   public CreativeCommonsPermissionChecker() {
   }
@@ -119,8 +117,6 @@ public class CreativeCommonsPermissionChecker
   public boolean checkPermission(Reader reader, String permissionUrl) {
     if (reader == null) {
       throw new NullPointerException("Called with null reader");
-    } else if (permissionUrl == null) {
-      throw new NullPointerException("Called with null permissionUrl");
     }
 
     String rdfString;
@@ -138,7 +134,6 @@ public class CreativeCommonsPermissionChecker
       return false;
     }
 
-
     Model model = new RDFFactoryImpl().createModel();
 
     RDFParser parser = new SiRPAC();
@@ -148,8 +143,7 @@ public class CreativeCommonsPermissionChecker
     parser.setErrorHandler(new LoggingErrorHandler());
     try {
       InputSource source = new InputSource(new StringReader(rdfString));
-//       source.setSystemId(m_licenseURI);
-      source.setSystemId(permissionUrl);
+      source.setSystemId(CC_NAMESPACE);
       parser.parse(source, new ModelConsumer(model));
     } catch (Exception ex) {
       // Can throw SAXException or ModelException
@@ -160,44 +154,24 @@ public class CreativeCommonsPermissionChecker
     log.debug("Extracted RDF.");
 
     try {
-      // Find the license type to use as the subject key
-      // for obtaining "permission" triples from this RDF model.
-      Model license =
-// 	(Model)model.find(new ResourceImpl(m_licenseURI), LICENSE, null);
-	model.find(new ResourceImpl(permissionUrl), LICENSE, null);
-
-      if (license == null) {
-	log.warning("No 'license' resource.  Invalid CC RDF.");
-	return false;
+      // Find any statement in the RDF model that has the object LICENSE.
+      Resource licenseType = null;
+      for (Enumeration e = model.elements(); e.hasMoreElements(); ) {
+        Statement triple = (StatementImpl)e.nextElement();
+        if (triple.object().equals(LICENSE)) {
+          licenseType = triple.subject();
+          break;
+        }
       }
-
-      String licenseType = null;
-      for (Enumeration e = license.elements(); e.hasMoreElements(); ) {
-	Statement triple = (StatementImpl)e.nextElement();
-	// find the first valid license type.  It's not clear whether
-	// it would be valid to have more than one (seems unlikely),
-	// or what to do if it is valid.
-	licenseType = triple.object().getLabel();
-	break;
-      }
-
       if (licenseType == null) {
-	log.warning("No CC license type found.");
-	return false;
+        log.warning("No license type found.  Invalid CC RDF.");
+        return false;
       }
-
-      // Now loop through all the permission statement triples looking for one
-      // that permits redistribution.
-      Model permission = model.find(new ResourceImpl(licenseType), null, null);
-      for (Enumeration e = permission.elements(); e.hasMoreElements(); ) {
-	Statement triple = (StatementImpl)e.nextElement();
-	if (PERMITS.equals(triple.predicate()) &&
-	    DISTRIBUTION.equals(triple.object().getLabel())) {
-	  // Valid distribution permission found!
-	  log.debug("Permission granted.");
-	  return true;
-	}
-      }
+      StatementImpl permitsDistribution =
+        new StatementImpl(licenseType, PERMITS, DISTRIBUTION);
+      StatementImpl requiresDistribution =
+        new StatementImpl(licenseType, REQUIRES, DISTRIBUTION);
+      return model.contains(permitsDistribution) || model.contains(requiresDistribution);
     } catch (ModelException ex) {
       log.warning("Couldn't parse RDF", ex);
     }
@@ -233,37 +207,37 @@ public class CreativeCommonsPermissionChecker
     int c;
     while ((c = in.read()) != -1) {
       if (buf_pos > RDF_BUF_LEN) {
-	// Too long to fit in buffer.
-	log.warning("RDF block too long to fit in buffer.");
-	return null;
+        // Too long to fit in buffer.
+        log.warning("RDF block too long to fit in buffer.");
+        return null;
       }
 
       buf[buf_pos++] = (char)c;
 
       if (!found_start) {
-	if (c != RDF_START.charAt(in_pos++)) {
-	  in_pos = 0;
-	  buf_pos = 0;
-	  continue;
-	}
+        if (c != RDF_START.charAt(in_pos++)) {
+          in_pos = 0;
+          buf_pos = 0;
+          continue;
+        }
 
-	if (in_pos == start_len) {
-	  log.debug3("Found start of RDF");
-	  found_start = true;
-	  in_pos = 0;
-	  continue;
-	}
+        if (in_pos == start_len) {
+          log.debug3("Found start of RDF");
+          found_start = true;
+          in_pos = 0;
+          continue;
+        }
       } else {
-	// Found the starting token, read until
-	// the ending token is found.
-	if (c != RDF_END.charAt(in_pos++)) {
-	  in_pos = 0;
-	}
-	if (in_pos == end_len) {
-	  log.debug3("Found end of RDF");
-	  found_end = true;
-	  break; // done with this stream.
-	}
+        // Found the starting token, read until
+        // the ending token is found.
+        if (c != RDF_END.charAt(in_pos++)) {
+          in_pos = 0;
+        }
+        if (in_pos == end_len) {
+          log.debug3("Found end of RDF");
+          found_end = true;
+          break; // done with this stream.
+        }
       }
     }
 

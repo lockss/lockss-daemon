@@ -1,5 +1,5 @@
 /*
- * $Id: TestCreativeCommonsPermissionChecker.java,v 1.4 2005-10-11 05:49:28 tlipkis Exp $
+ * $Id: TestCreativeCommonsPermissionChecker.java,v 1.5 2006-01-06 05:09:44 smorabito Exp $
  */
 
 /*
@@ -138,6 +138,27 @@ public class TestCreativeCommonsPermissionChecker extends LockssTestCase {
     "</rdf:RDF>\n"+
     "\n"+
     "-->\n";
+    
+  private static final String boneFolderRDF = 
+    "<rdf:RDF xmlns=\"http://web.resource.org/cc/\"" + 
+    "    xmlns:dc=\"http://purl.org/dc/elements/1.1/\"" + 
+    "    xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\">" +
+    "<Work rdf:about=\"\">" +
+    "   <dc:type rdf:resource=\"http://purl.org/dc/dcmitype/Text\" />" +
+    "   <license rdf:resource=\"http://creativecommons.org/licenses/by-nc-sa/2.5/\" />" +
+    "</Work>" +
+    "" +
+    "<License rdf:about=\"http://creativecommons.org/licenses/by-nc-sa/2.5/\">" +
+    "   <permits rdf:resource=\"http://web.resource.org/cc/Reproduction\" />" +
+    "   <permits rdf:resource=\"http://web.resource.org/cc/Distribution\" />" +
+    "   <requires rdf:resource=\"http://web.resource.org/cc/Notice\" />" +
+    "   <requires rdf:resource=\"http://web.resource.org/cc/Attribution\" />" +
+    "   <prohibits rdf:resource=\"http://web.resource.org/cc/CommercialUse\" />" + 
+    "   <permits rdf:resource=\"http://web.resource.org/cc/DerivativeWorks\" />" +
+    "   <requires rdf:resource=\"http://web.resource.org/cc/ShareAlike\" />" +
+    "</License>" +
+    "" +
+    "</rdf:RDF>";
 
   // Imaginary URI.  The permission requires a valid URI for the SAX
   // parser.  If the CC RDF license contains a URI in the <Work
@@ -157,15 +178,6 @@ public class TestCreativeCommonsPermissionChecker extends LockssTestCase {
     }
   }
 
-  public void testNullPermissionUrl() {
-    try {
-      cc.checkPermission(new StringReader("Blah"), null);
-      fail("Calling checkPermission(reader, null) should throw");
-    } catch (NullPointerException npe) {
-    }
-  }
-
-
   public void testCheckGrantedPermissionRDFOnly() throws Exception {
     reader = new StringReader(grantedRDF);
     assertTrue(cc.checkPermission(reader, pageURI));
@@ -175,14 +187,6 @@ public class TestCreativeCommonsPermissionChecker extends LockssTestCase {
   public void testCheckGrantedPermissionRDFOnlyWithURI() throws Exception {
     reader = new StringReader(grantedRDFWithURI);
     assertTrue(cc.checkPermission(reader, pageURI));
-    reader.close();
-  }
-
-  public void testCheckDeniedPermissionRDFOnlyWithURI() throws Exception {
-    CreativeCommonsPermissionChecker cc1 =
-      new CreativeCommonsPermissionChecker();
-    reader = new StringReader(grantedRDFWithURI);
-    assertFalse(cc1.checkPermission(reader,"http://www.some-other-site.com/"));
     reader.close();
   }
 
@@ -218,6 +222,12 @@ public class TestCreativeCommonsPermissionChecker extends LockssTestCase {
 
   public void testCheckJMIR() throws Exception {
     reader = new StringReader(jmirRDF);
+    assertTrue(cc.checkPermission(reader, pageURI));
+    reader.close();
+  }
+  
+  public void testCheckBonefolder() throws Exception {
+    reader = new StringReader(boneFolderRDF);
     assertTrue(cc.checkPermission(reader, pageURI));
     reader.close();
   }
