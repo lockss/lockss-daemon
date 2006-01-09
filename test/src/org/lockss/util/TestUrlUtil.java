@@ -1,5 +1,5 @@
 /*
- * $Id: TestUrlUtil.java,v 1.23 2005-10-11 05:52:45 tlipkis Exp $
+ * $Id: TestUrlUtil.java,v 1.24 2006-01-09 21:57:36 tlipkis Exp $
  */
 
 /*
@@ -159,6 +159,18 @@ public class TestUrlUtil extends LockssTestCase {
     // query not removed
     assertEquals("http://a.com/dd?foo=bar",
 		 UrlUtil.normalizeUrl("http://a.com/dd?foo=bar"));
+
+    // no path normalization of query string
+    assertEquals("http://a.b/foo/bar?foo//bar",
+		 UrlUtil.normalizeUrl("http://a.b/foo//bar?foo//bar"));
+    assertEquals("http://a.b/bar?foo/../bar",
+		 UrlUtil.normalizeUrl("http://a.b/foo/../bar?foo/../bar"));
+
+    // remove newlines and leading whitespace
+    assertEquals("http://a.b/foo/bar?foo//bar",
+		 UrlUtil.normalizeUrl("ht\ntp://a.b/foo//bar?foo//bar"));
+    assertEquals("http://a .b/bar?foo/../bar",
+		 UrlUtil.normalizeUrl("  ht\n   tp://a .b/foo/../bar?foo/../bar"));
 
     try {
       String s = "http://a.com/xy/ab/../../../";

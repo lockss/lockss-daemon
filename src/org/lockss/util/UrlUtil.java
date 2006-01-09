@@ -1,5 +1,5 @@
 /*
- * $Id: UrlUtil.java,v 1.36 2005-12-01 23:28:00 troberts Exp $
+ * $Id: UrlUtil.java,v 1.37 2006-01-09 21:57:36 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -69,19 +69,21 @@ public class UrlUtil {
     if ("".equals(urlString)) {		// permit empty
       return urlString;
     }
+    urlString = StringUtil.trimNewlinesAndLeadingWhitespace(urlString);
     URL url = new URL(urlString);
 
     String protocol = url.getProtocol(); // returns lowercase proto
     String host = url.getHost();
     int port = url.getPort();
-    String file = url.getFile();
+    String path = url.getPath();
+    String query = url.getQuery();
     if (log.isDebug3()) {
       log.debug3("protocal: "+protocol);
       log.debug3("host: "+host);
       log.debug3("port: "+port);
-      log.debug3("file: "+file);
+      log.debug3("path: "+path);
+      log.debug3("query: "+query);
     }
-
 
     boolean changed = false;
 
@@ -104,14 +106,14 @@ public class UrlUtil {
       changed = true;
     }
 
-    if (StringUtil.isNullString(file)) {
-      file = "/";
+    if (StringUtil.isNullString(path)) {
+      path = "/";
       changed = true;
     } else {
-      String normPath = normalizePath(file);
-      if (!normPath.equals(file)) {
-	log.debug3("Normalized "+file+" to "+normPath);
-	file = normPath;
+      String normPath = normalizePath(path);
+      if (!normPath.equals(path)) {
+	log.debug3("Normalized "+path+" to "+normPath);
+	path = normPath;
 	changed = true;
       }
     }
@@ -121,12 +123,10 @@ public class UrlUtil {
     }
 //   }
     if (changed) {
-      urlString = new URL(protocol, host, port, file).toString();
-//       String query = url.getQuery();
-//       log.debug3("Has query string: "+query);
-//       if (query != null) {
-// 	urlString += "?" + query;
-//       }
+      urlString =
+	new URL(protocol, host, port,
+		(StringUtil.isNullString(query) ? path : (path + "?" + query))
+		).toString();
       log.debug3("Changed, so returning "+urlString);
     }
     return urlString;
@@ -226,7 +226,7 @@ public class UrlUtil {
 	  if (evenIfIllegal) {
 	    dotdotcnt++;
 	  } else {
-	    throw new MalformedURLException(path);
+	    throw new MalformedURLException("Illegal dir traversal: " + path);
 	  }
 	}
       } else {
