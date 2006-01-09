@@ -1,5 +1,5 @@
 /*
- * $Id: TestRemoteApi.java,v 1.16 2005-12-01 23:28:04 troberts Exp $
+ * $Id: TestRemoteApi.java,v 1.17 2006-01-09 21:56:16 tlipkis Exp $
  */
 
 /*
@@ -672,7 +672,8 @@ public class TestRemoteApi extends LockssTestCase {
 
   }
 
-  public void testBackupEmail(String extParam, String exp) throws Exception {
+  public void testBackupEmail(String extParam, String expectedExt)
+      throws Exception {
     writeAuConfigFile("org.lockss.au.FooPlugin.k~v.k=v\n");
     Properties p = new Properties();
     if (extParam != null) {
@@ -699,7 +700,10 @@ public class TestRemoteApi extends LockssTestCase {
       assertEquals(2, parts.length);
       assertMatchesRE("attached file is a backup",
 		      (String)parts[0].getContent());
-      assertMatchesRE("LOCKSS_Backup_.*\\." + exp, parts[1].getFileName());
+      assertMatchesRE("retrieve the file\nat http://lockss42.example.com:8081/BatchAuConfig\\?lockssAction=Backup ",
+		      (String)parts[0].getContent());
+      assertMatchesRE("LOCKSS_Backup_.*\\." + expectedExt,
+		      parts[1].getFileName());
       // zip file should start with "PK"
       assertMatchesRE("^PK",
 		      StringUtil.fromInputStream(parts[1].getInputStream()));

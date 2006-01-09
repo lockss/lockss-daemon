@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.47 2005-12-10 00:16:52 thib_gc Exp $
+ * $Id: RemoteApi.java,v 1.48 2006-01-09 21:56:16 tlipkis Exp $
  */
 
 /*
@@ -46,6 +46,7 @@ import org.lockss.repository.*;
 import org.lockss.servlet.ServletManager;
 import org.lockss.util.*;
 import org.lockss.mail.*;
+import org.lockss.servlet.ServletUtil;
 import org.apache.commons.collections.map.ReferenceMap;
 
 /**
@@ -1458,7 +1459,9 @@ public class RemoteApi
     "The attached file is a backup of configuration and state information\n" +
     "from LOCKSS cache %s (%s).\n" +
     "This file will be needed if the cache ever suffers a disk crash or\n" +
-    "other serious loss of content.\n";
+    "other serious loss of content.\n\n" +
+    "(If your mail system blocked the attachment, you may retrieve the file\n"+
+    "at %s )\n";
 
   static final String BACK_MAIL_MORE_INFO =
     "\nFor more information see %s\n";
@@ -1491,8 +1494,11 @@ public class RemoteApi
 
       PeerIdentity pid = idMgr.getLocalPeerIdentity(Poll.V1_PROTOCOL);
       String id = pid == null ? "unknown" : pid.getIdString();
-      String text = sprintf(BACK_MAIL_TEXT,
-			    new Object[] {machineName, id});
+      String text =
+	sprintf(BACK_MAIL_TEXT,
+		new Object[] {machineName,
+			      id,
+			      ServletUtil.backupFileUrl(machineName)});
       if (!StringUtil.isNullString(moreInfoUrl)) {
 	text += sprintf(BACK_MAIL_MORE_INFO,
 			new Object[] {moreInfoUrl});
