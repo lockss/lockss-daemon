@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.56 2005-10-11 05:52:45 tlipkis Exp $
+ * $Id: TestStringUtil.java,v 1.57 2006-01-09 21:57:15 tlipkis Exp $
  */
 
 /*
@@ -404,7 +404,6 @@ public class TestStringUtil extends LockssTestCase {
     String s = StringUtil.stackTraceString(new Exception());
     String exp = "java.lang.Exception" + Constants.EOL +
       "\tat org.lockss.util.TestStringUtil.testStackTraceString(TestStringUtil.java:";
-System.out.println("s: "+s);
     assertTrue(s.startsWith(exp));
   }
 
@@ -414,6 +413,23 @@ System.out.println("s: "+s);
     assertEquals("foo", StringUtil.trimBlankLines("\nfoo\n"));
     assertEquals("foo", StringUtil.trimBlankLines("\n\nfoo\n\n"));
     assertEquals("foo\nbar", StringUtil.trimBlankLines("\n\nfoo\nbar\n\n"));
+  }
+
+  public void testTrimLeadingWhitespace() {
+    assertSame("foo",
+	       StringUtil.trimNewlinesAndLeadingWhitespace("foo"));
+    assertEquals("foo",
+		 StringUtil.trimNewlinesAndLeadingWhitespace("f\noo"));
+    assertEquals("foo", 
+		 StringUtil.trimNewlinesAndLeadingWhitespace("f\n oo"));
+    assertEquals("foo",
+		 StringUtil.trimNewlinesAndLeadingWhitespace("f\n   oo"));
+    assertEquals("foo",
+		 StringUtil.trimNewlinesAndLeadingWhitespace("f\n\too"));
+    assertEquals("foo",
+		 StringUtil.trimNewlinesAndLeadingWhitespace("f\n\t \too"));
+    assertEquals("foo",
+		 StringUtil.trimNewlinesAndLeadingWhitespace("f\n \t \t oo"));
   }
 
   public void testTrimHostName() {
