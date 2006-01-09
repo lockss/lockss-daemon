@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.20 2005-12-10 00:16:51 thib_gc Exp $
+ * $Id: ServletUtil.java,v 1.21 2006-01-09 21:56:43 tlipkis Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ import org.lockss.remote.RemoteApi.BatchAuStatus;
 import org.lockss.remote.RemoteApi.BatchAuStatus.Entry;
 import org.lockss.servlet.BatchAuConfig.Verb;
 import org.lockss.util.*;
+import org.lockss.config.*;
 import org.mortbay.html.*;
 
 public class ServletUtil {
@@ -1012,6 +1013,27 @@ public class ServletUtil {
     Input btn = javascriptButton(servlet, label, sb.toString());
     btn.attribute("id", "lsb." + buttonNumber);
     return btn;
+  }
+
+  /** Return the URL of this machine's config backup file to download */
+  // This is a crock.  It's called from RemoteAPI, which has no servlet
+  // instance and thus can't use LockssServlet.srvURL().
+  public static String backupFileUrl(String hostname) {
+    ServletDescr backupServlet = LockssServlet.SERVLET_BATCH_AU_CONFIG;
+    int port = CurrentConfig.getIntParam(LocalServletManager.PARAM_PORT,
+					 LocalServletManager.DEFAULT_PORT);
+    StringBuffer sb = new StringBuffer();
+    sb.append("http://");
+    sb.append(hostname);
+    sb.append(":");
+    sb.append(port);
+    sb.append("/");
+    sb.append(backupServlet.getName());
+    sb.append("?");
+    sb.append(BatchAuConfig.ACTION_TAG);
+    sb.append("=");
+    sb.append(BatchAuConfig.ACTION_BACKUP);
+    return sb.toString();
   }
 
 }
