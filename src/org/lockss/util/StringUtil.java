@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.67 2006-01-09 21:57:15 tlipkis Exp $
+ * $Id: StringUtil.java,v 1.68 2006-01-09 23:08:26 thib_gc Exp $
  */
 
 /*
@@ -707,31 +707,28 @@ public class StringUtil {
    */
   // tk - extend to accept combinations: xxHyyMzzS, etc.
   public static long parseTimeInterval(String str) {
-    String numstr = null;
-
     try {
       int len = str.length();
       char suffix = str.charAt(len - 1);
+      String numstr;
       long mult = 1;
       if (Character.isDigit(suffix)) {
-	numstr = str;
+        numstr = str;
       } else {
-	numstr = str.substring(0, len - 1);
-	switch (Character.toUpperCase(suffix)) {
-	case 'S': mult = Constants.SECOND; break;
-	case 'M': mult = Constants.MINUTE; break;
-	case 'H': mult = Constants.HOUR; break;
-	case 'D': mult = Constants.DAY; break;
-	case 'W': mult = Constants.WEEK; break;
-	default:
-	  throw new NumberFormatException("Illegal time interval suffix");
-	}
+        numstr = str.substring(0, len - 1);
+        switch (Character.toUpperCase(suffix)) {
+        case 'S': mult = Constants.SECOND; break;
+        case 'M': mult = Constants.MINUTE; break;
+        case 'H': mult = Constants.HOUR; break;
+        case 'D': mult = Constants.DAY; break;
+        case 'W': mult = Constants.WEEK; break;
+        default:
+          throw new NumberFormatException("Illegal time interval suffix");
+        }
       }
       return Long.parseLong(numstr) * mult;
-    } catch (IndexOutOfBoundsException ioobe) {
-      throw new NumberFormatException("Empty substring");
-    } catch (NumberFormatException nfe) {
-      throw new NumberFormatException("Invalid substring: " + numstr);
+    } catch (IndexOutOfBoundsException e) {
+      throw new NumberFormatException("empty string");
     }
   }
 
