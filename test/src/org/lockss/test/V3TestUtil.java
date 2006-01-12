@@ -2,7 +2,7 @@ package org.lockss.test;
 
 import org.lockss.poller.v3.*;
 /*
- * $Id: V3TestUtil.java,v 1.1 2005-12-01 01:54:41 smorabito Exp $
+ * $Id: V3TestUtil.java,v 1.2 2006-01-12 03:13:30 smorabito Exp $
  */
 
 /*
@@ -115,7 +115,7 @@ public class V3TestUtil extends LockssTestCase {
     assertEquals(d1.getReceiptEffortProof(), d2.getReceiptEffortProof());
     assertEquals(d1.getRemainingEffortProof(), d2.getRemainingEffortProof());
     assertEquals(d1.getRepairEffortProof(), d2.getRepairEffortProof());
-    assertEquals(d1.getUrl(), d2.getUrl());
+    assertEquals(d1.getRepairTarget(), d2.getRepairTarget());
     assertEquals(d1.getVoterNonce(), d2.getVoterNonce());
     assertEquals(d1.getDeadline(), d2.getDeadline());
     assertEquals(d1.getNominees(), d2.getNominees());

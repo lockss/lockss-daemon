@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManagerImpl.java,v 1.13 2005-12-12 23:44:00 thib_gc Exp $
+ * $Id: IdentityManagerImpl.java,v 1.14 2006-01-12 03:13:30 smorabito Exp $
  */
 
 /*
@@ -166,8 +166,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
    * <p>The initial list of V3 peers for this cache.</p>
    */
   public static final String PARAM_INITIAL_PEERS = PREFIX + "initialV3PeerList";
-
-  public static final String DEFAULT_INITIAL_PEERS = "";
+  public static final List DEFAULT_INITIAL_PEERS = Collections.EMPTY_LIST;
 
   /**
    * <p>An instance of {@link LockssRandom} for use by this class.</p>
@@ -1194,17 +1193,14 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
   }
 
   /**
-   * XXX: V3 refactor.
+   * Configure initial list of V3 peers.
    */
   private void configV3Identities() {
-    String refString = CurrentConfig.getParam(PARAM_INITIAL_PEERS,
-                                              DEFAULT_INITIAL_PEERS);
-    if (refString != null) {
-      List l = StringUtil.breakAt(refString, ',');
-      for (Iterator iter = l.iterator(); iter.hasNext(); ) {
-        // Just ensure the peer is in the ID map.
-        findPeerIdentity((String)iter.next());
-      }
+    List ids = CurrentConfig.getList(PARAM_INITIAL_PEERS,
+                                     DEFAULT_INITIAL_PEERS);
+    for (Iterator iter = ids.iterator(); iter.hasNext(); ) {
+      // Just ensure the peer is in the ID map.
+      findPeerIdentity((String)iter.next());
     }
   }
 

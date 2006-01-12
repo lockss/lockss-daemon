@@ -1,5 +1,5 @@
 /*
- * $Id: CurrentConfig.java,v 1.1 2005-12-01 23:28:00 troberts Exp $
+ * $Id: CurrentConfig.java,v 1.2 2006-01-12 03:13:30 smorabito Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.config;
 
 import java.util.Iterator;
+import java.util.List;
 
 import org.lockss.config.Configuration.InvalidParam;
 
@@ -140,5 +141,20 @@ public class CurrentConfig {
   public static Iterator paramNodeIterator(String key) {
     return getCurrentConfig().nodeIterator(key);
   }
+  
+  /** Static convenience method to get a list from the current
+   * configuration.
+   * Don't accidently use this on a <code>Configuration</code> instance.
+   */
+   public static List getList(String key) {
+     return getCurrentConfig().getList(key);
+   }
 
+   /** Static convenience method to get a list from the current
+    * configuration.
+    * Don't accidently use this on a <code>Configuration</code> instance.
+    */
+   public static List getList(String key, List dfault) {
+     return getCurrentConfig().getList(key, dfault);
+   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.7 2005-12-07 21:11:58 smorabito Exp $
+ * $Id: TestV3Poller.java,v 1.8 2006-01-12 03:13:31 smorabito Exp $
  */
 
 /*
@@ -123,6 +123,7 @@ public class TestV3Poller extends LockssTestCase {
     MockPlugin plug = new MockPlugin();
     mau.setPlugin(plug);
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    cus.setEstimatedHashDuration(1000);
     List files = new ArrayList();
     for (int ix = 0; ix < urls.length; ix++) {
       MockCachedUrl cu = (MockCachedUrl)mau.addUrl(urls[ix], false, true);
@@ -230,9 +231,10 @@ public class TestV3Poller extends LockssTestCase {
     assertEquals(innerCircle.size(), voters.length);
     byte[][] initBytes =
       (byte[][])PrivilegedAccessor.invokeMethod(v3Poller, "initHasherByteArrays");
-    assertEquals(initBytes.length, innerCircle.size());
-    byte[][] compareBytes = new byte[innerCircle.size()][];
-    int ix = 0;
+    assertEquals(initBytes.length, innerCircle.size() + 1); // one for plain hash
+    byte[][] compareBytes = new byte[innerCircle.size() + 1][];
+    compareBytes[0] = new byte[0]; // Plain hash
+    int ix = 1;
     for (Iterator it = innerCircle.values().iterator(); it.hasNext();) {
       ParticipantUserData proxy = (ParticipantUserData)it.next();
       compareBytes[ix++] =
@@ -243,21 +245,22 @@ public class TestV3Poller extends LockssTestCase {
     }
   }
 
-  public void testInitMessageDigests() throws Exception {
+  public void testInitHasherDigests() throws Exception {
     V3Poller v3Poller = makeInittedV3Poller("foo");
     Map innerCircle =
       (Map)PrivilegedAccessor.getValue(v3Poller, "theParticipants");
     assertEquals(innerCircle.size(), voters.length);
     MessageDigest[] digests =
       (MessageDigest[])PrivilegedAccessor.invokeMethod(v3Poller, "initHasherDigests");
-    assertEquals(digests.length, innerCircle.size());
+    assertEquals(digests.length, innerCircle.size() + 1); // one for plain hash
     for (int i = 0; i < digests.length; i++) {
+      assertNotNull("Digest " + i + " unexpectedly null.", digests[i]);
       assertEquals("SHA-1", digests[i].getAlgorithm());
     }
   }
 
   private MyMockV3Poller makeInittedV3Poller(String key) throws Exception {
-    PollSpec ps = new MockPollSpec(testau, "http://www.test.org", null, null,
+    PollSpec ps = new MockPollSpec(testau.getAuCachedUrlSet(), null, null,
                                    Poll.V3_POLL);
     MyMockV3Poller p = new MyMockV3Poller(ps, theDaemon, pollerId, key, 20000,
                                           "SHA-1", voters);

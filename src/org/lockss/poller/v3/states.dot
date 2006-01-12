@@ -1,6 +1,6 @@
 /* -*- Mode: C -*- */
 /*
- * $Id: states.dot,v 1.4 2005-09-07 03:06:29 smorabito Exp $
+ * $Id: states.dot,v 1.5 2006-01-12 03:13:30 smorabito Exp $
  */
 /*
 Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
@@ -88,6 +88,7 @@ digraph StateMachine {
     WaitReceipt -> SendVote [label="msgVoteRequest",fontsize="10"];
     WaitReceipt -> SendRepair [label="msgRepairRequest",fontsize="10"];
     WaitReceipt -> ProcessReceipt [label="msgReceipt",fontsize="10"];
+    WaitReceipt -> WaitReceipt [label="evtNoSuchRepair",fontsize="10"];
     SendRepair -> WaitReceipt [label="evtOk",fontsize="10"];
     ProcessReceipt -> VoterFinalize [label="evtOk",fontsize="10"];
   }

@@ -1024,7 +1024,7 @@ class SimpleDamageRepairFromCacheTestCase(LockssTestCase):
         assert client.waitForWonTopLevelContentPoll(simAu, timeout=self.timeout),\
                "Never won top level content poll"
 
-	# Damage a node.
+        # Damage a node.
         node = client.randomDamageSingleNode(simAu)
         log.info("Damaged node %s on client %s" % (node.url, client))
 
@@ -1091,7 +1091,8 @@ class TinyUiTests(LockssTestCase):
     def runTest(self):
         tinyui = self.tinyUiClient.getAdminUi()
         html = tinyui.read()
-        p = re.compile('This LOCKSS cache has not started because it is unable to load configuration data', re.MULTILINE | re.DOTALL);
+        p = re.compile('This LOCKSS cache has not started because it is unable '
+                       'to load configuration data', re.MULTILINE | re.DOTALL);
         self.assertMatch(p, html)
         p = re.compile("Shouldn't happen", re.MULTILINE | re.DOTALL | re.I);
         self.assertNoMatch(p, html)
@@ -1183,7 +1184,7 @@ class SimpleV3PollTestCase(LockssTestCase):
                          "org.lockss.poll.v3.minPollDuration": "5m",
                          "org.lockss.poll.v3.maxPollDuration": "6m",
                          "org.lockss.localV3Identity": "tcp:[127.0.0.1]:%d" % (baseV3Port + i),
-                         "org.lockss.id.initialV3PeerList": (",".join(peerIds))}
+                         "org.lockss.id.initialV3PeerList": (";".join(peerIds))}
 
             self.framework.appendLocalConfig(extraConf, self.clients[i])
         
@@ -1223,11 +1224,11 @@ class SimpleV3PollTestCase(LockssTestCase):
 
         client = self.clients[2]
         
-	##
-	## Damage the AU.
-	##
-	# node = client.randomDamageSingleNode(simAu)
-	# log.info("Damaged node %s" % node)
+	      ##
+	      ## Damage the AU.
+	      ##
+        node = client.randomDamageSingleNode(simAu)
+        log.info("Damaged node %s on client %s" % (node.url, client))
 
         # Request a tree walk (deactivate and reactivate AU)
         log.info("Requesting tree walk.")

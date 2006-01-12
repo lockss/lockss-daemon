@@ -1,5 +1,5 @@
 /*
- * $Id: VoterUserData.java,v 1.9 2005-12-01 01:54:44 smorabito Exp $
+ * $Id: VoterUserData.java,v 1.10 2006-01-12 03:13:30 smorabito Exp $
  */
 
 /*
@@ -256,11 +256,11 @@ public class VoterUserData
     this.pollKey = pollKey;
   }
 
-  public String getUrl() {
+  public String getRepairTarget() {
     return url;
   }
 
-  public void setUrl(String url) {
+  public void setRepairTarget(String url) {
     this.url = url;
   }
 

@@ -1,5 +1,5 @@
 /*
-* $Id: PsmState.java,v 1.8 2005-10-17 07:49:03 tlipkis Exp $
+* $Id: PsmState.java,v 1.9 2006-01-12 03:13:30 smorabito Exp $
  */
 
 /*
@@ -197,7 +197,89 @@ public class PsmState {
 				     response5, response6,
 				     response7)));
   }
+  
+  /** Create a state with eight responses.
+   * @param name state name
+   * @param entryAction action to be performed upon entry into the state.
+   * This action is not considered to have a causitive event.
+   * @param response1 the first response
+   * @param response2 the second response
+   * @param response3 the third response
+   * @param response4 the fourth response
+   * @param response5 the fifth response
+   * @param response6 the sixth response
+   * @param response7 the seventh response
+   * @param response8 the eighth response
+   */
+  public PsmState(String name, PsmAction entryAction,
+		  PsmResponse response1, PsmResponse response2,
+		  PsmResponse response3, PsmResponse response4,
+		  PsmResponse response5, PsmResponse response6,
+		  PsmResponse response7, PsmResponse response8) {
+    this(name, entryAction,
+	 responseArray(ListUtil.list(response1, response2,
+				     response3, response4,
+				     response5, response6,
+				     response7, response8)));
+  }
 
+  /** Create a state with nine responses.
+   * @param name state name
+   * @param entryAction action to be performed upon entry into the state.
+   * This action is not considered to have a causitive event.
+   * @param response1 the first response
+   * @param response2 the second response
+   * @param response3 the third response
+   * @param response4 the fourth response
+   * @param response5 the fifth response
+   * @param response6 the sixth response
+   * @param response7 the seventh response
+   * @param response8 the eighth response
+   * @param response9 the nineth response   
+   */
+  public PsmState(String name, PsmAction entryAction,
+		  PsmResponse response1, PsmResponse response2,
+		  PsmResponse response3, PsmResponse response4,
+		  PsmResponse response5, PsmResponse response6,
+		  PsmResponse response7, PsmResponse response8,
+		  PsmResponse response9) {
+    this(name, entryAction,
+	 responseArray(ListUtil.list(response1, response2,
+				     response3, response4,
+				     response5, response6,
+				     response7, response8,
+				     response9)));
+  }
+
+  /** Create a state with ten responses.  (I would kill for varargs about now)
+   * @param name state name
+   * @param entryAction action to be performed upon entry into the state.
+   * This action is not considered to have a causitive event.
+   * @param response1 the first response
+   * @param response2 the second response
+   * @param response3 the third response
+   * @param response4 the fourth response
+   * @param response5 the fifth response
+   * @param response6 the sixth response
+   * @param response7 the seventh response
+   * @param response8 the eighth response
+   * @param response9 the nineth response   
+   * @param response10 the tenth response   
+   */
+  public PsmState(String name, PsmAction entryAction,
+		  PsmResponse response1, PsmResponse response2,
+		  PsmResponse response3, PsmResponse response4,
+		  PsmResponse response5, PsmResponse response6,
+		  PsmResponse response7, PsmResponse response8,
+		  PsmResponse response9, PsmResponse response10) {
+    this(name, entryAction,
+	 responseArray(ListUtil.list(response1, response2,
+				     response3, response4,
+				     response5, response6,
+				     response7, response8,
+				     response9, response10)));
+  }
+    
   /** Create a state with no responses and no entry action.  This state is
    * a final state.
    * @param name state name

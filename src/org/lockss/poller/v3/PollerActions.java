@@ -1,5 +1,5 @@
 /*
- * $Id: PollerActions.java,v 1.7 2005-11-16 07:44:10 smorabito Exp $
+ * $Id: PollerActions.java,v 1.8 2006-01-12 03:13:30 smorabito Exp $
  */
 
 /*
@@ -35,6 +35,9 @@ package org.lockss.poller.v3;
 import java.io.*;
 import java.util.*;
 
+import org.lockss.plugin.CachedUrl;
+import org.lockss.plugin.UrlCacher;
+import org.lockss.plugin.base.BaseUrlCacher;
 import org.lockss.protocol.psm.*;
 import org.lockss.protocol.*;
 import org.lockss.util.*;
@@ -46,7 +49,7 @@ public class PollerActions {
   public static PsmEvent handleProveIntroEffort(PsmEvent evt,
                                                 PsmInterp interp) {
     ParticipantUserData ud = getUserData(interp);
-    log.debug("Proving intro effort for poll ID " + ud.getKey());
+    log.debug2("Proving intro effort for poll ID " + ud.getKey());
     // XXX: Generate real poll intro effort, TBD
     byte[] proof = ByteArray.makeRandomBytes(20);
     ud.setIntroEffortProof(proof);
@@ -55,8 +58,8 @@ public class PollerActions {
 
   public static PsmEvent handleSendPoll(PsmEvent evt, PsmInterp interp) {
     ParticipantUserData ud = getUserData(interp);
-    log.debug("Sending poll to participant " + ud.getVoterId() + " in poll "
-              + ud.getKey());
+    log.debug2("Sending poll to participant " + ud.getVoterId() + " in poll "
+               + ud.getKey());
     try {
       ud.sendMessageTo(V3LcapMessageFactory.makePollMsg(ud), ud.getVoterId());
     } catch (IOException ex) {
@@ -70,8 +73,8 @@ public class PollerActions {
                                               PsmInterp interp) {
     ParticipantUserData ud = getUserData(interp);
     V3LcapMessage msg = (V3LcapMessage) evt.getMessage();
-    log.debug("Received poll ACK from voter " + ud.getVoterId() + " in poll "
-        + ud.getKey());
+    log.debug2("Received poll ACK from voter " + ud.getVoterId() + " in poll "
+               + ud.getKey());
     // XXX: If either of these is null, the voter is declining to
     // participate in the poll.  But effort is not implemented yet,
     // so for now we're just checking the voter nonce.
@@ -92,8 +95,8 @@ public class PollerActions {
   public static PsmEvent handleVerifyPollAckEffort(PsmEvent evt,
                                                    PsmInterp interp) {
     ParticipantUserData ud = getUserData(interp);
-    log.debug("Verifying poll ACK effort for voter " + ud.getVoterId()
-        + " in poll " + ud.getKey());
+    log.debug2("Verifying poll ACK effort for voter " + ud.getVoterId()
+              + " in poll " + ud.getKey());
     // XXX: Grab the poll ack effort proof from the Voter State and
     // verify it. Return appropriate event, TBD.
     return V3Events.evtOk;
@@ -103,8 +106,8 @@ public class PollerActions {
                                                     PsmInterp interp) {
     ParticipantUserData ud = getUserData(interp);
 
-    log.debug("Proving remaining effort for voter " + ud.getVoterId()
-        + " in poll " + ud.getKey());
+    log.debug2("Proving remaining effort for voter " + ud.getVoterId()
+               + " in poll " + ud.getKey());
     // XXX: Generate remaining effort, TBD
     byte[] proof = ByteArray.makeRandomBytes(20);
     ud.setRemainingEffortProof(proof);
@@ -114,8 +117,8 @@ public class PollerActions {
 
   public static PsmEvent handleSendPollProof(PsmEvent evt, PsmInterp interp) {
     ParticipantUserData ud = getUserData(interp);
-    log.debug("Sending poll effort proof for voter " + ud.getVoterId()
-        + " in poll " + ud.getKey());
+    log.debug2("Sending poll effort proof for voter " + ud.getVoterId()
+               + " in poll " + ud.getKey());
     try {
       ud.sendMessageTo(V3LcapMessageFactory.makePollProofMsg(ud),
                        ud.getVoterId());
@@ -131,8 +134,8 @@ public class PollerActions {
     ParticipantUserData ud = getUserData(interp);
     V3LcapMessage msg = (V3LcapMessage) evt.getMessage();
     List nominees = msg.getNominees();
-    log.debug("Received outer circle nominations from voter " + ud.getVoterId()
-        + " in poll " + ud.getKey());
+    log.debug2("Received outer circle nominations from voter " + ud.getVoterId()
+               + " in poll " + ud.getKey());
     ud.nominatePeers(nominees);
     return V3Events.evtOk;
   }
@@ -149,8 +152,8 @@ public class PollerActions {
                                                PsmInterp interp) {
     ParticipantUserData ud = getUserData(interp);
     V3LcapMessage msg = V3LcapMessageFactory.makeVoteRequestMsg(ud);
-    log.debug("Sending vote request to voter " + ud.getVoterId() + " in poll "
-        + ud.getKey());
+    log.debug2("Sending vote request to voter " + ud.getVoterId() + " in poll "
+               + ud.getKey());
     // XXX: Implement multiple-vote-message functionality
     try {
       ud.sendMessageTo(msg, ud.getVoterId());
@@ -165,8 +168,8 @@ public class PollerActions {
     log.debug("Entering 'handleReceiveVote'...");
     ParticipantUserData ud = getUserData(interp);
     V3LcapMessage msg = (V3LcapMessage) evt.getMessage();
-    log.debug("Received vote from voter " + ud.getVoterId() + " in poll "
-        + ud.getKey());
+    log.debug2("Received vote from voter " + ud.getVoterId() + " in poll "
+               + ud.getKey());
     ud.setVoteComplete(msg.isVoteComplete());
     ud.setVoteBlocks(msg.getVoteBlocks());
     return V3Events.evtOk;
@@ -174,8 +177,8 @@ public class PollerActions {
 
   public static PsmEvent handleTallyVote(PsmEvent evt, PsmInterp interp) {
     ParticipantUserData ud = getUserData(interp);
-    log.debug("Tallying vote from voter " + ud.getVoterId() + " in poll "
-        + ud.getKey());
+    log.debug2("Tallying vote from voter " + ud.getVoterId() + " in poll "
+               + ud.getKey());
     ud.tallyVoter();
     return V3Events.evtWaitBlockComplete;
   }
@@ -183,8 +186,8 @@ public class PollerActions {
   public static PsmEvent handleProveRepairEffort(PsmEvent evt,
                                                  PsmInterp interp) {
     ParticipantUserData ud = getUserData(interp);
-    log.debug("Proving repair effort for voter " + ud.getVoterId()
-        + " in poll " + ud.getKey());
+    log.debug2("Proving repair effort for voter " + ud.getVoterId()
+               + " in poll " + ud.getKey());
     // XXX: Generate real repair effort proof, TBD
     byte[] proof = ByteArray.makeRandomBytes(20);
     ud.setRepairEffortProof(proof);
@@ -194,8 +197,8 @@ public class PollerActions {
   public static PsmEvent handleSendRepairRequest(PsmEvent evt,
                                                  PsmInterp interp) {
     ParticipantUserData ud = getUserData(interp);
-    log.debug("Sending repair request to voter " + ud.getVoterId()
-        + " in poll " + ud.getKey());
+    log.debug2("Sending repair request to voter " + ud.getVoterId()
+               + " in poll " + ud.getKey());
     try {
       ud.sendMessageTo(V3LcapMessageFactory.makeRepairRequestMsg(ud),
                        ud.getVoterId());
@@ -206,20 +209,33 @@ public class PollerActions {
     return V3Events.evtOk;
   }
 
-  public static PsmEvent handleReceiveRepair(PsmMsgEvent evt,
-                                             PsmInterp interp) {
-    // XXX: Implement.
+  public static PsmEvent handleReceiveRepair(PsmMsgEvent evt, PsmInterp interp) {
     ParticipantUserData ud = getUserData(interp);
-    log.debug("Received repair from voter " + ud.getVoterId() + " in poll "
-        + ud.getKey());
+    V3LcapMessage msg = (V3LcapMessage)evt.getMessage();
+    log.debug2("Received repair from voter " + ud.getVoterId() + " in poll "
+               + ud.getKey());
+    // Apply the repair
+    String repairTarget = ud.getRepairTarget();
+    UrlCacher uc =
+      ud.getCachedUrlSet().getArchivalUnit().makeUrlCacher(repairTarget);
+    try {
+      // XXX: What should be done about the CIProperties? 
+      CIProperties props = uc.getUncachedProperties();
+      uc.storeContent(msg.getRepairDataInputStream(),  props);
+    } catch (IOException ex) {
+      log.error("Error attempting to store repair", ex);
+      return V3Events.evtError;
+    }
+    
+    ud.getPoller().receivedRepair(ud.getRepairTarget(), ud.getVoterId());
     return V3Events.evtOk;
   }
 
   public static PsmEvent handleProcessRepair(PsmEvent evt, PsmInterp interp) {
     // XXX: Implement.
     ParticipantUserData ud = getUserData(interp);
-    log.debug("Processing repair from voter " + ud.getVoterId() + " in poll "
-        + ud.getKey());
+    log.debug2("Processing repair from voter " + ud.getVoterId() + " in poll "
+               + ud.getKey());
     return V3Events.evtOk;
   }
 
@@ -230,8 +246,8 @@ public class PollerActions {
     byte[] proof = ByteArray.makeRandomBytes(20);
     ud.setReceiptEffortProof(proof);
     // Send the message.
-    log.debug("Sending evaluation receipt to voter " + ud.getVoterId()
-        + " in poll " + ud.getKey());
+    log.debug2("Sending evaluation receipt to voter " + ud.getVoterId()
+               + " in poll " + ud.getKey());
     try {
       ud.sendMessageTo(V3LcapMessageFactory.makeEvaluationReceiptMsg(ud),
                        ud.getVoterId());

@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.11 2005-12-07 21:12:01 smorabito Exp $
+ * $Id: V3Voter.java,v 1.12 2006-01-12 03:13:30 smorabito Exp $
  */
 
 /*
@@ -225,6 +225,7 @@ public class V3Voter extends BasePoll {
     V3LcapMessage msg = (V3LcapMessage)message;
     PeerIdentity sender = msg.getOriginatorId();
     PsmMsgEvent evt = V3Events.fromMessage(msg);
+    log.debug3("Received message: " + message.getOpcodeString() + " " + message);
     try {
       stateMachine.handleEvent(evt);
     } catch (PsmException e) {

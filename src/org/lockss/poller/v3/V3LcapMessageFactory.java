@@ -1,5 +1,5 @@
 /*
- * $Id: V3LcapMessageFactory.java,v 1.6 2005-11-16 07:44:10 smorabito Exp $
+ * $Id: V3LcapMessageFactory.java,v 1.7 2006-01-12 03:13:30 smorabito Exp $
  */
 
 /*
@@ -32,6 +32,9 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.poller.v3;
 
+import java.io.*;
+
+import org.lockss.plugin.*;
 import org.lockss.protocol.*;
 
 /**
@@ -61,14 +64,14 @@ public class V3LcapMessageFactory {
     V3LcapMessage msg =
       V3LcapMessage.makeRequestMsg(ud.getAuId(),
                                    ud.getKey(),
-				   ud.getPollVersion(),
-				   ud.getPluginVersion(),
-				   ud.getUrl(),
-				   ud.getPollerNonce(),
+                                   ud.getPollVersion(),
+                                   ud.getPluginVersion(),
+                                   ud.getUrl(),
+                                   ud.getPollerNonce(),
                                    ud.getVoterNonce(),
-				   V3LcapMessage.MSG_POLL_PROOF,
-				   ud.getDeadline(),
-				   ud.getPollerId());
+                                   V3LcapMessage.MSG_POLL_PROOF,
+                                   ud.getDeadline(),
+                                   ud.getPollerId());
     msg.setEffortProof(ud.getRemainingEffortProof());
     return msg;
   }
@@ -76,29 +79,29 @@ public class V3LcapMessageFactory {
   public static V3LcapMessage makeVoteRequestMsg(ParticipantUserData ud) {
     return V3LcapMessage.makeRequestMsg(ud.getAuId(),
                                         ud.getKey(),
-					ud.getPollVersion(),
-					ud.getPluginVersion(),
-					ud.getUrl(),
+                                        ud.getPollVersion(),
+                                        ud.getPluginVersion(),
+                                        ud.getUrl(),
                                         ud.getPollerNonce(),
-					ud.getVoterNonce(),
-					V3LcapMessage.MSG_VOTE_REQ,
-					ud.getDeadline(),
-					ud.getPollerId());
+                                        ud.getVoterNonce(),
+                                        V3LcapMessage.MSG_VOTE_REQ,
+                                        ud.getDeadline(),
+                                        ud.getPollerId());
   }
 
   public static V3LcapMessage makeRepairRequestMsg(ParticipantUserData ud) {
     V3LcapMessage msg =
       V3LcapMessage.makeRequestMsg(ud.getAuId(),
                                    ud.getKey(),
-				   ud.getPollVersion(),
-				   ud.getPluginVersion(),
-				   ud.getUrl(),
-				   ud.getPollerNonce(),
+                                   ud.getPollVersion(),
+                                   ud.getPluginVersion(),
+                                   ud.getUrl(),
+                                   ud.getPollerNonce(),
                                    ud.getVoterNonce(),
-				   V3LcapMessage.MSG_REPAIR_REQ,
-				   ud.getDeadline(),
-				   ud.getPollerId());
-    msg.setTarget(ud.getRepairTarget());
+                                   V3LcapMessage.MSG_REPAIR_REQ,
+                                   ud.getDeadline(),
+                                   ud.getPollerId());
+    msg.setTargetUrl(ud.getRepairTarget());
     msg.setEffortProof(ud.getRepairEffortProof());
     return msg;
   }
@@ -107,14 +110,14 @@ public class V3LcapMessageFactory {
     V3LcapMessage msg =
       V3LcapMessage.makeRequestMsg(ud.getAuId(),
                                    ud.getKey(),
-				   ud.getPollVersion(),
-				   ud.getPluginVersion(),
-				   ud.getUrl(),
-				   ud.getPollerNonce(),
+                                   ud.getPollVersion(),
+                                   ud.getPluginVersion(),
+                                   ud.getUrl(),
+                                   ud.getPollerNonce(),
                                    ud.getVoterNonce(),
-				   V3LcapMessage.MSG_EVALUATION_RECEIPT,
-				   ud.getDeadline(),
-				   ud.getPollerId());
+                                   V3LcapMessage.MSG_EVALUATION_RECEIPT,
+                                   ud.getDeadline(),
+                                   ud.getPollerId());
     msg.setEffortProof(ud.getReceiptEffortProof());
     return msg;
   }
@@ -125,7 +128,7 @@ public class V3LcapMessageFactory {
                                    ud.getPollKey(),
                                    ud.getPollVersion(),
                                    ud.getPluginVersion(),
-                                   ud.getUrl(),
+                                   ud.getRepairTarget(),
                                    ud.getPollerNonce(),
                                    ud.getVoterNonce(),
                                    V3LcapMessage.MSG_POLL_ACK,
@@ -141,7 +144,7 @@ public class V3LcapMessageFactory {
                                    ud.getPollKey(),
                                    ud.getPollVersion(),
                                    ud.getPluginVersion(),
-                                   ud.getUrl(),
+                                   ud.getRepairTarget(),
                                    ud.getPollerNonce(),
                                    ud.getVoterNonce(),
                                    V3LcapMessage.MSG_NOMINATE,
@@ -157,7 +160,7 @@ public class V3LcapMessageFactory {
                                    ud.getPollKey(),
                                    ud.getPollVersion(),
                                    ud.getPluginVersion(),
-                                   ud.getUrl(),
+                                   ud.getRepairTarget(),
                                    ud.getPollerNonce(),
                                    ud.getVoterNonce(),
                                    V3LcapMessage.MSG_VOTE,
@@ -167,4 +170,22 @@ public class V3LcapMessageFactory {
     return msg;
   }
 
+  public static V3LcapMessage makeRepairResponseMessage(VoterUserData ud)
+      throws IOException {
+    V3LcapMessage msg =
+      V3LcapMessage.makeRequestMsg(ud.getAuId(),
+                                   ud.getPollKey(),
+                                   ud.getPollVersion(),
+                                   ud.getPluginVersion(),
+                                   ud.getRepairTarget(),
+                                   ud.getPollerNonce(),
+                                   ud.getVoterNonce(),
+                                   V3LcapMessage.MSG_REPAIR_REP,
+                                   ud.getDeadline(),
+                                   ud.getPollerId());
+    ArchivalUnit au = ud.getCachedUrlSet().getArchivalUnit();
+    CachedUrl cu = au.makeCachedUrl(ud.getRepairTarget());
+    msg.setRepairDataFrom(cu);
+    return msg;
+  }
 }

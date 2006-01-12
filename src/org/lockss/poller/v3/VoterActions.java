@@ -1,5 +1,5 @@
 /*
- * $Id: VoterActions.java,v 1.7 2005-11-16 07:44:09 smorabito Exp $
+ * $Id: VoterActions.java,v 1.8 2006-01-12 03:13:30 smorabito Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.poller.v3;
 import java.io.IOException;
 import java.security.*;
 
+import org.lockss.plugin.*;
 import org.lockss.protocol.*;
 import org.lockss.protocol.psm.*;
 import org.lockss.util.*;
@@ -147,12 +148,32 @@ public class VoterActions {
   }
 
   public static PsmEvent handleReceiveRepairRequest(PsmMsgEvent evt, PsmInterp interp) {
-    // XXX: Implement.
-    return V3Events.evtRepairRequestOk;
+    VoterUserData ud = getUserData(interp);
+    V3LcapMessage msg = (V3LcapMessage)evt.getMessage();
+    String targetUrl = msg.getTargetUrl();
+    CachedUrlSet cus = ud.getCachedUrlSet();
+    if (cus.containsUrl(targetUrl)) {
+      // I have this repair and I'm willing to serve it.
+      log.debug2("Accepting repair request from " + ud.getPollerId() + " for URL: " + targetUrl);
+      ud.setRepairTarget(targetUrl);
+      return V3Events.evtRepairRequestOk;
+    } else {
+      // I don't have this repair
+      log.error("No repair available to serve for URL!" + targetUrl);
+      return V3Events.evtNoSuchRepair;
+    }
   }
 
   public static PsmEvent handleSendRepair(PsmEvent evt, PsmInterp interp) {
-    // XXX: Implement.
+    VoterUserData ud = getUserData(interp);
+    log.debug2("Sending repair to " + ud.getPollerId() + " for URL : " + ud.getRepairTarget());
+    try {
+      V3LcapMessage msg = V3LcapMessageFactory.makeRepairResponseMessage(ud);
+      ud.sendMessageTo(msg, ud.getPollerId());
+    } catch (IOException ex) {
+      log.error("Unable to send message: ", ex);
+      return V3Events.evtError;
+    }
     return V3Events.evtOk;
   }
 

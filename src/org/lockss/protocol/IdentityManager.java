@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManager.java,v 1.72 2006-01-12 00:48:39 tlipkis Exp $
+ * $Id: IdentityManager.java,v 1.73 2006-01-12 03:13:30 smorabito Exp $
  */
 
 /*
@@ -61,14 +61,14 @@ public interface IdentityManager extends LockssManager {
   /**
    * <p>The TCP port for the local V3 identity
    * (at org.lockss.localIPAddress). Can be overridden by
-   * org.lockss.localV3Identity.</p>
+   * org.lockss.platform.v3.port.</p>
    */
   public static final String PARAM_LOCAL_V3_PORT =
     Configuration.PREFIX + "localV3Port";
 
   /**
    * <p>Local V3 identity string. If this is set it will take
-   * precedence over org.lockss.localV3Port.</p> */
+   * precedence over org.lockss.platform.v3.identity.</p> */
   public static final String PARAM_LOCAL_V3_IDENTITY =
     Configuration.PREFIX + "localV3Identity";
 
@@ -192,7 +192,7 @@ public interface IdentityManager extends LockssManager {
    */
   public LcapIdentity findLcapIdentity(PeerIdentity pid, String key)
       throws MalformedIdentityKeyException;
-  
+
   /**
    * <p>Returns the peer identity matching the IP address and port;
    * An instance is created if necesary.</p>

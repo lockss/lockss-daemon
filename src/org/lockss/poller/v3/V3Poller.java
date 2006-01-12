@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.16 2005-12-07 21:12:01 smorabito Exp $
+ * $Id: V3Poller.java,v 1.17 2006-01-12 03:13:30 smorabito Exp $
  */
 
 /*
@@ -45,6 +45,8 @@ import org.lockss.poller.*;
 import org.lockss.poller.v3.V3Serializer.*;
 import org.lockss.protocol.*;
 import org.lockss.protocol.psm.*;
+import org.lockss.scheduler.*;
+import org.lockss.scheduler.Schedule.*;
 import org.lockss.util.*;
 
 /**
@@ -96,6 +98,8 @@ public class V3Poller extends BasePoll {
   private static Logger log = Logger.getLogger("V3Poller");
   private static LockssRandom theRandom = new LockssRandom();
 
+  private StepTask task;
+
   /**
    * Create a new V3 Poll.
    */
@@ -117,11 +121,11 @@ public class V3Poller extends BasePoll {
     Configuration c = ConfigManager.getCurrentConfig();
     // Determine the number of peers to invite into this poll.
     int minParticipants = c.getInt(PARAM_MIN_POLL_SIZE,
-                                        DEFAULT_MIN_POLL_SIZE);
+                                   DEFAULT_MIN_POLL_SIZE);
     int maxParticipants = c.getInt(PARAM_MAX_POLL_SIZE,
-                                        DEFAULT_MAX_POLL_SIZE);
+                                   DEFAULT_MAX_POLL_SIZE);
     int outerCircleTarget = c.getInt(PARAM_TARGET_OUTER_CIRCLE_SIZE,
-                                          DEFAULT_TARGET_OUTER_CIRCLE_SIZE);
+                                     DEFAULT_TARGET_OUTER_CIRCLE_SIZE);
     int quorum = c.getInt(PARAM_QUORUM, DEFAULT_QUORUM);
     this.dropEmptyNominators = c.getBoolean(PARAM_DROP_EMPTY_NOMINATIONS,
                                             DEFAULT_DROP_EMPTY_NOMINATIONS);
@@ -132,8 +136,19 @@ public class V3Poller extends BasePoll {
                                            pollSize, outerCircleTarget,
                                            quorum, hashAlg);
     this.tally = new BlockTally(pollerState.getQuorum());
-    log.debug("Creating a new poll with a requested poll size of "
-              + pollSize);
+
+    boolean scheduled =
+      reserveScheduleTime(maxParticipants + outerCircleTarget);
+
+    if (scheduled) {
+      log.debug("Scheduled time for a new poll with a requested poll size of "
+                + pollSize);
+    } else {
+      log.warning("Unable to schedule time for this poll!");
+      stopPoll();
+      return;
+    }
+
     // Checkpoint the poll.
     checkpointPoll();
   }
@@ -182,6 +197,38 @@ public class V3Poller extends BasePoll {
     log.debug2("Restored serialized poll " + pollerState.getPollKey());
   }
 
+  /**
+   * @param maxParticipants  The maximum number of participants that will
+   *        participate in this poll (invitees and outer circle)
+   */
+  boolean reserveScheduleTime(int maxParticipants) {
+    CachedUrlSet cus = this.getCachedUrlSet();
+    long estimatedHashDuration = cus.estimatedHashDuration();
+    long now = TimeBase.nowMs();
+    // XXX: A bit of a fudge.
+    // This assumes that all participants have roughly the same estimated
+    // hash duration for this CUS that we have.  It further assumes that
+    // no time has elapsed between scheduling time for the poll and all
+    // our participants starting to hash their content.
+    Deadline earliestStart = Deadline.at(now + estimatedHashDuration);
+    Deadline latestFinish =
+      Deadline.at(earliestStart.getExpirationTime() +
+                  (estimatedHashDuration * maxParticipants));
+    TaskCallback tc = new TaskCallback() {
+      public void taskEvent(SchedulableTask task, EventType type) {
+        // do nothing... yet!
+      }
+    };
+    this.task = new StepTask(earliestStart, latestFinish,
+                             estimatedHashDuration,
+                             tc, this) {
+      public int step(int n) {
+        // do nothing... yet!
+        return n;
+      }
+    };
+    return theDaemon.getSchedService().scheduleTask(task);
+  }
 
   /**
    * Build the initial set of inner circle peers.
@@ -309,6 +356,10 @@ public class V3Poller extends BasePoll {
     // XXX: Set a final status string -- OK / Repaired / Unrepairable
     setStatus("Complete");
     activePoll = false;
+    if (task != null && !task.isExpired()) {
+      log.debug2("Cancelling task");
+      task.cancel();
+    }
     serializer.closePoll();
     pollManager.closeThePoll(pollerState.getPollKey());
     log.debug("Closed poll " + pollerState.getPollKey());
@@ -396,8 +447,6 @@ public class V3Poller extends BasePoll {
     return participant;
   }
 
-
-
   /**
    * Create a new ParticipantUserData state object for the specified peer.
    *
@@ -471,8 +520,7 @@ public class V3Poller extends BasePoll {
     if (pollerState.allVotersReadyToTally()) {
       log.debug2("Ready to schedule hash.");
       if (!scheduleHash()) {
-        // XXX:  Reserve time to hash poll at START of poll, and abort
-        //       the poll if time is unavailable.
+        // XXX: Refactor when hash can be associated with existing step task.
         log.error("No time available to schedule our hash for poll "
                   + pollerState.getPollKey());
         stopPoll();
@@ -496,9 +544,15 @@ public class V3Poller extends BasePoll {
                                          initHasherDigests(),
                                          initHasherByteArrays(),
                                          new BlockCompleteHandler());
+
+    // XXX: Refactor when hash can be associated with existing step task.
+    // Cancel our previously scheduled task.
+    task.cancel();
+
+    // Now schedule the hash
     HashService hashService = theDaemon.getHashService();
     if (hashService.scheduleHash(hasher, deadline,
-                                    new HashingCompleteCallback(), null)) {
+                                 new HashingCompleteCallback(), null)) {
       setStatus("Hashing");
       return true;
     } else {
@@ -515,8 +569,9 @@ public class V3Poller extends BasePoll {
    */
   private byte[][] initHasherByteArrays() {
     int len = theParticipants.size();
-    byte[][] initBytes = new byte[len][];
-    int ix = 0;
+    byte[][] initBytes = new byte[len + 1][]; // One for plain hash
+    initBytes[0] = new byte[0];
+    int ix = 1;
     for (Iterator it = theParticipants.values().iterator(); it.hasNext();) {
       ParticipantUserData ud = (ParticipantUserData)it.next();
       log.debug2("Initting hasher byte arrays for voter " + ud.getVoterId());
@@ -536,7 +591,7 @@ public class V3Poller extends BasePoll {
    * @return An array of MessageDigest objects to be used by the BlockHasher.
    */
   private MessageDigest[] initHasherDigests() {
-    int len = theParticipants.size();
+    int len = theParticipants.size() + 1; // One for plain hash.
     MessageDigest[] digests = new MessageDigest[len];
     for (int ix = 0; ix < len; ix++) {
       try {
@@ -550,16 +605,6 @@ public class V3Poller extends BasePoll {
       }
     }
     return digests;
-  }
-
-  /**
-   * Signal the hash service to resume its hash, starting with the vote block
-   * specifed.
-   *
-   * XXX: TBD.
-   */
-  private void resumeHash(String target) {
-    log.debug2("Resuming hash for next block after: " + target);
   }
 
   /**
@@ -582,39 +627,71 @@ public class V3Poller extends BasePoll {
     switch(result) {
     case BlockTally.RESULT_WON:
       // Great, we won!  Do nothing.
-      log.debug2("Won poll for block " + targetUrl);
+      log.debug2("Won tally for block: " + targetUrl);
       break;
     case BlockTally.RESULT_LOST:
-      // XXX: Implement repairs.  Just log and abort the poll until then.
-      log.info("*** We believe we need to repair block " + block.getUrl());
-      abortPoll();
+      log.debug2("Lost tally for block: " + targetUrl);
+      requestRepair(block.getUrl(), tally);
       break;
     case BlockTally.RESULT_LOST_EXTRA_BLOCK:
-      // XXX: Implement repairs.  Just log and abort the poll until then.
-      log.info("*** We believe that the majority of voters do not have block " +
-               block.getUrl() + ". we should delete it");
-      abortPoll();
+      log.debug2("Lost tally. Removing extra block: " + targetUrl);
+      deleteBlock(block.getUrl());
       break;
     case BlockTally.RESULT_LOST_MISSING_BLOCK:
-      // XXX: Implement repairs.  Just log and abort the poll until then.
-      log.info("*** We believe that the majority of voters have a block " +
-               "that we do not.   We should retrieve it.");
-      abortPoll();
+      log.debug2("Lost tally. Requesting repair for missing block: " + targetUrl);
+      requestRepair(block.getUrl(), tally);
       break;
     case BlockTally.RESULT_NOQUORUM:
     case BlockTally.RESULT_TOO_CLOSE:
       log.warning("Tally was inconclusive.  Stopping poll "
                   + pollerState.getPollKey());
-      // XXX: Alerts?
       abortPoll();
       setStatus("Too Close");
       break;
     default:
       log.warning("Unexpected results from tallying block " + targetUrl + ": "
                   + tally.getStatusString());
-      // XXX: Alerts?
       abortPoll();
     }
+  }
+
+  /**
+   * Request a repair for the specified URL.
+   * @param url
+   * @param tally  Tally contaihning a list of disagreeing voters. 
+   */
+  // XXX:  Use plain hash as a hint for whom to requet a repair from.
+  private void requestRepair(String url, BlockTally tally) {
+    log.info("*** Requesting repair data for block " + url);
+    PeerIdentity repairFrom =
+      (PeerIdentity)CollectionUtil.randomSelection(tally.getDisagreeVoters());
+    log.debug2("Selected " + repairFrom + " to request repair from.");
+    ParticipantUserData voter =
+      (ParticipantUserData)theParticipants.get(repairFrom);
+    log.debug2("Sending evtNeedRepair to peer " + repairFrom);
+    voter.setRepairTarget(url);
+    try {
+      voter.getPsmInterp().handleEvent(V3Events.evtNeedRepair);
+    } catch (PsmException ex) {
+      log.error("State machine error", ex);
+      abortPoll();
+    }
+  }
+
+  private void deleteBlock(String url) {
+    log.info("*** Deleting block " + url);
+    // XXX: I'm afraid to actually do this until V3 has more testing.
+    //      Implement for daemon 1.15.
+  }
+
+  /**
+   * Callback used to schedule a small re-check hash
+   * when a repair has been received.
+   */
+  public void receivedRepair(String url, PeerIdentity voter) {
+    // XXX: Implement repair hash.
+    log.info("Received Repair from peer " + voter + " for block "
+      + url);
   }
 
   /**
@@ -634,8 +711,8 @@ public class V3Poller extends BasePoll {
     int myIndex = pollerState.getNextVoteBlockIndex();
     checkpointPoll();
 
-    int digestIndex = -1;
-    for (Iterator iter = theParticipants.values().iterator(); iter.hasNext(); ) {
+    int digestIndex = 0; // Skip the first digest, it's our plain hash
+    for (Iterator iter = theParticipants.values().iterator(); iter.hasNext();) {
       digestIndex++;
       ParticipantUserData voterState = (ParticipantUserData)iter.next();
       PeerIdentity voter = voterState.getVoterId();
@@ -656,9 +733,8 @@ public class V3Poller extends BasePoll {
         if (voterState.isVoteComplete()) {
           tally.addDisagreeVoter(voter);
         } else {
-          // XXX: Suspend / resume to be done.
-          log.info("*** Suspending hash and sending next vote request"
-                   + " to voter " + voter);
+          // XXX: Handle incomplete vote requests.
+          log.info("Sending next vote request to voter " + voter);
         }
       } else {
         // Is the voter's block the same file as ours?
@@ -675,9 +751,8 @@ public class V3Poller extends BasePoll {
             if (voterState.isVoteComplete()) {
               tally.addDisagreeVoter(voter);
             } else {
-              // XXX:  Suspend/resume to be done.
-              log.info("*** Suspending hash and sending next vote request"
-                       + " to voter " + voter);
+              // XXX: Handle incomplete vote requests
+              log.debug("Sending next vote request to voter " + voter);
             }
           } else {
             // The voter had another block for us to examine.
@@ -696,7 +771,6 @@ public class V3Poller extends BasePoll {
               // have.  We'll just decline to increment this voter's
               // block index, and disagree with him for now.  Also flag
               // that there is a block disagreement.
-              tally.addDisagreeVoter(voter);
               tally.addMissingBlockVoter(voter);
               continue;
             }
@@ -704,7 +778,6 @@ public class V3Poller extends BasePoll {
         }
       }
       voterState.setVoteBlockIndex(idx + 1);
-      log.debug("Just set voteBlockIndex to: " + voterState.getVoteBlockIndex());
     }
     tally.tallyVotes();
   }
@@ -738,21 +811,24 @@ public class V3Poller extends BasePoll {
    */
   private void hashComplete() {
     log.debug("Hashing is complete for this CUS.");
-    for (Iterator iter = theParticipants.values().iterator(); iter.hasNext();) {
-      ParticipantUserData ud = (ParticipantUserData)iter.next();
-      PsmInterp interp = ud.getPsmInterp();
-      try {
-        interp.handleEvent(V3Events.evtVoteComplete);
-      } catch (PsmException e) {
-        log.warning("State machine error", e);
-      }
-      if (log.isDebug2()) {
-        log.debug2("Gave peer " + ud.getVoterId()
-                   + " the Vote Complete event.");
+    synchronized(theParticipants) {
+      for (Iterator iter = theParticipants.values().iterator(); iter.hasNext();) {
+        ParticipantUserData ud = (ParticipantUserData)iter.next();
+        PsmInterp interp = ud.getPsmInterp();
+        try {
+          interp.handleEvent(V3Events.evtVoteComplete);
+        } catch (PsmException e) {
+          log.warning("State machine error", e);
+          abortPoll();
+        }
+        if (log.isDebug2()) {
+          log.debug2("Gave peer " + ud.getVoterId()
+              + " the Vote Complete event.");
+        }
       }
     }
   }
-
+  
   /**
    * Called by participant state machines if an error occurs.
    *
@@ -776,12 +852,13 @@ public class V3Poller extends BasePoll {
     log.debug("Removing voter " + id + " from poll " +
               pollerState.getPollKey());
     try {
-      ParticipantUserData ud = (ParticipantUserData)theParticipants.get(id);
-      serializer.removePollerUserData(id);
-      pollerState.signalVoterRemoved(id, ud.isOuterCircle());
-      theParticipants.remove(id);
-      checkpointPoll();
-      // XXX: To do, actually signal the poller's machine to stop!
+      synchronized(theParticipants) {
+        ParticipantUserData ud = (ParticipantUserData)theParticipants.get(id);
+        serializer.removePollerUserData(id);
+        pollerState.signalVoterRemoved(id, ud.isOuterCircle());
+        theParticipants.remove(id);
+        checkpointPoll();
+      }
     } catch (Exception ex) {
       // XXX: If this happens, the poll should probably be stopped.
       log.error("Unable to remove voter from poll!", ex);
@@ -833,9 +910,9 @@ public class V3Poller extends BasePoll {
     if (interp != null) {
       PsmMsgEvent evt = V3Events.fromMessage(msg);
       try {
-	interp.handleEvent(evt);
+        interp.handleEvent(evt);
       } catch (PsmException e) {
-	log.warning("State machine error", e);
+        log.warning("State machine error", e);
       }
     } else {
       log.error("No voter user data for peer.  May have " +

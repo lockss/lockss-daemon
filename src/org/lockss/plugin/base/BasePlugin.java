@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.35 2005-11-16 07:44:10 smorabito Exp $
+ * $Id: BasePlugin.java,v 1.36 2006-01-12 03:13:31 smorabito Exp $
  */
 
 /*
@@ -180,7 +180,6 @@ public abstract class BasePlugin
       for (Iterator iter = attrs.nodeIterator(); iter.hasNext(); ) {
 	String attr = (String)iter.next();
 	String val = attrs.get(attr);
-	log.info("attr: " +  attr + ", val: " + val);
 	attrMap.put(attr, val);
       }
       tc.setAttributes(attrMap);

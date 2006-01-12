@@ -1,5 +1,5 @@
 /*
- * $Id: TestPoll.java,v 1.94 2005-12-01 01:54:43 smorabito Exp $
+ * $Id: TestPoll.java,v 1.95 2006-01-12 03:13:31 smorabito Exp $
  */
 
 /*
@@ -75,6 +75,7 @@ public class TestPoll extends LockssTestCase {
     initRequiredServices();
 
     testau.setPlugin(new MockPlugin());
+    log.debug("*** testAu CUS: " + testau.getAuCachedUrlSet());
 
     initTestPeerIDs();
     initTestMsg();

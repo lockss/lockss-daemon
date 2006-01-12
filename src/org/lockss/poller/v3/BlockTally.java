@@ -1,5 +1,5 @@
 /*
- * $Id: BlockTally.java,v 1.5 2005-11-16 07:44:10 smorabito Exp $
+ * $Id: BlockTally.java,v 1.6 2006-01-12 03:13:30 smorabito Exp $
  */
 
 /*
@@ -145,6 +145,7 @@ public class BlockTally {
 
   public void addExtraBlockVoter(PeerIdentity id) {
     extraBlockVoters.add(id);
+    disagreeVoters.add(id);
   }
 
   public List getExtraBlockVoters() {
@@ -153,6 +154,7 @@ public class BlockTally {
 
   public void addMissingBlockVoter(PeerIdentity id) {
     missingBlockVoters.add(id);
+    disagreeVoters.add(id);
   }
 
   public List getMissingBlockVoters() {
