@@ -1,10 +1,10 @@
 /*
- * $Id: ServletManager.java,v 1.35 2005-08-30 18:24:31 tlipkis Exp $
+ * $Id: ServletManager.java,v 1.36 2006-01-12 01:12:50 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
