@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.168 2006-01-04 23:05:20 tlipkis Exp $
+ $Id: build.xml,v 1.169 2006-01-12 00:47:47 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -165,7 +165,7 @@ Args:
   <property name="activation.jar" value="${lib}/activation-1.0.2.jar"/>
   <property name="castor.jar"     value="${lib}/castor-0.9.4.1-xml.jar"/>
   <property name="xerces.jar"     value="${lib}/xercesImpl-2.7.1.jar"/>
-  <property name="xml-apis.jar"     value="${lib}/xml-apis.jar"/>
+  <property name="xml-apis.jar"   value="${lib}/xml-apis.jar"/>
   <property name="jimi.jar"       value="${lib}/JimiProClasses.jar"/>
   <property name="jetty.jar"      value="${lib}/jetty-5.1.5.jar"/>
   <property name="servlet.jar"    value="${lib}/javax.servlet.jar"/>
@@ -183,14 +183,16 @@ Args:
   <property name="commons.httpclient.jar"
   			value="${lib}/commons-httpclient-3.0-rc4.jar"/>
   <property name="commons.jxpath.jar"
-  				value="${lib}/commons-jxpath-1.2.jar"/>
+				  value="${lib}/commons-jxpath-1.2.jar"/>
   <property name="concurrent.jar" value="${lib}/concurrent.jar"/>
-  <property name="htmlparser.jar"  value="${lib}/htmlparser.jar"/>
-  <property name="rdf.jar" value="${lib}/rdf-api-2001-01-19.jar" /> <!-- W3C RDF Parser -->
-	<property name="xstream.jar" value="${lib}/xstream-1.1.2.jar" />
-	<property name="xmlunit.jar" value="${lib}/xmlunit1.0.jar" />
-  <!-- Needed by OAI harvester -->
+  <property name="htmlparser.jar" value="${lib}/htmlparser.jar"/>
+  <!-- W3C RDF Parser -->
+  <property name="rdf.jar"        value="${lib}/rdf-api-2001-01-19.jar" />
+  <property name="xstream.jar"    value="${lib}/xstream-1.1.2.jar" />
+  <property name="xmlunit.jar"    value="${lib}/xmlunit1.0.jar" />
   <property name="oai-harvester.jar" value="${lib}/harvester2-0.1.6L1.jar"/>
+  <!-- Needed by OAI harvester -->
+  <property name="xalan.jar"      value="${lib}/xalan.jar"/>
 
   <property name="junit.jar"      value="${test.lib}/junit.jar"/>
   <property name="junit.addons.jar" value="${test.lib}/junit-addons-1.4.jar"/>
@@ -271,8 +273,9 @@ Args:
     <pathelement path="${htmlparser.jar}" />
     <pathelement path="${rdf.jar}" />
   	<pathelement path="${xstream.jar}" />
-    <!-- jars need to run the Oai harvester -->
+    <!-- jars needed to run the OAI harvester -->
     <pathelement path="${oai-harvester.jar}" />
+    <pathelement path="${xalan.jar}" />
   </path>
 
   <path id="run.classpath">
