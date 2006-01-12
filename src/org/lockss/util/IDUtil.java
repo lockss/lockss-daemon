@@ -1,5 +1,5 @@
 /*
- * $Id: IDUtil.java,v 1.2 2005-10-11 05:48:30 tlipkis Exp $
+ * $Id: IDUtil.java,v 1.3 2006-01-12 00:48:39 tlipkis Exp $
  *
 
  Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -34,10 +34,27 @@ import java.util.*;
 import org.lockss.protocol.*;
 
 public class IDUtil {
+
+  private static final String V3_TCP_KEY_PREFIX =
+    IdentityManager.V3_ID_PROTOCOL_TCP +
+    IdentityManager.V3_ID_PROTOCOL_SUFFIX +
+    IdentityManager.V3_ID_TCP_ADDR_PREFIX;
+
+  private static final String V3_TCP_KEY_MIDDLE =
+    IdentityManager.V3_ID_TCP_ADDR_SUFFIX +
+    IdentityManager.V3_ID_TCP_IP_PORT_SEPARATOR;
+
   public static String ipAddrToKey(String addr, int port) {
-    return ((port == 0)
-	    ? addr
-	    : addr + IdentityManager.V3_ID_SEPARATOR + String.valueOf(port));
+    if (port == 0) {
+      // V1 key is IPAddr
+      return addr;
+    }
+    return ipAddrToKey(addr, String.valueOf(port));
+  }
+
+  public static String ipAddrToKey(String addr, String port) {
+    // V3 key is TCP:[ip]:port
+    return V3_TCP_KEY_PREFIX + addr + V3_TCP_KEY_MIDDLE + port;
   }
 
   public static String ipAddrToKey(IPAddr addr, int port) {

@@ -1,5 +1,5 @@
 /*
- * $Id: FuncV3Voter.java,v 1.5 2005-12-01 01:54:43 smorabito Exp $
+ * $Id: FuncV3Voter.java,v 1.6 2006-01-12 00:48:39 tlipkis Exp $
  */
 
 /*
@@ -105,12 +105,13 @@ public class FuncV3Voter extends LockssTestCase {
     p.setProperty(V3Poller.PARAM_QUORUM, "3");
     p.setProperty(LcapStreamComm.PARAM_ENABLED, "true");
     p.setProperty(LcapDatagramComm.PARAM_ENABLED, "false");
-    p.setProperty(IdentityManager.PARAM_LOCAL_V3_IDENTITY, "127.0.0.1;3456");
+    p.setProperty(IdentityManager.PARAM_LOCAL_V3_IDENTITY,
+		  "TCP:[127.0.0.1]:3456");
     p.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
     p.setProperty(IdentityManagerImpl.PARAM_INITIAL_PEERS,
-                  "127.0.0.2;3456,127.0.0.3;3456,"
-                  + "127.0.0.4;3456,127.0.0.5;3456,"
-                  + "127.0.0.6;3456,127.0.0.7;3456");
+                  "TCP:[127.0.0.2]:3456,TCP:[127.0.0.3]:3456,"
+                  + "TCP:[127.0.0.4]:3456,TCP:[127.0.0.5]:3456,"
+                  + "TCP:[127.0.0.6]:3456,TCP:[127.0.0.7]:3456");
     ConfigurationUtil.setCurrentConfigFromProps(p);
     idmgr = theDaemon.getIdentityManager();
     pollmanager = theDaemon.getPollManager();

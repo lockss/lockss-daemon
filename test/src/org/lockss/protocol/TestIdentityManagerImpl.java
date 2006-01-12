@@ -1,5 +1,5 @@
 /*
- * $Id: TestIdentityManagerImpl.java,v 1.11 2005-11-21 16:33:27 thib_gc Exp $
+ * $Id: TestIdentityManagerImpl.java,v 1.12 2006-01-12 00:48:38 tlipkis Exp $
  */
 
 /*
@@ -170,8 +170,8 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
     ConfigurationUtil.addFromArgs(IdentityManager.PARAM_LOCAL_V3_PORT,
                                   LOCAL_PORT,
                                   IdentityManager.PARAM_LOCAL_V3_IDENTITY,
-                                  IP_2 + IdentityManager.V3_ID_SEPARATOR
-                                  + (LOCAL_PORT_NUM + 123));
+                                  IDUtil.ipAddrToKey(IP_2,
+						     (LOCAL_PORT_NUM + 123)));
     IdentityManagerImpl mgr = new IdentityManagerImpl();
     mgr.setupLocalIdentities();
     PeerIdentity pid1 = mgr.localPeerIdentities[Poll.V3_PROTOCOL];
@@ -189,9 +189,7 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
     peer2 = idmgr.stringToPeerIdentity("127.0.0.2");
     assertNotNull(peer2);
     assertNotEquals(peer1, peer2);
-    peer3 = idmgr.stringToPeerIdentity("127.0.0.2" +
-				       IdentityManager.V3_ID_SEPARATOR +
-				       "300");
+    peer3 = idmgr.stringToPeerIdentity(IDUtil.ipAddrToKey("127.0.0.2", "300"));
     assertNotNull(peer3);
     assertNotEquals(peer3, peer2);
     assertNotEquals(peer3, peer1);
@@ -222,9 +220,9 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
     assertNotNull(peer3);
     assertNotEquals(peer3, peer2);
     assertNotEquals(peer3, peer1);
-    assertSame(peer3, idmgr.stringToPeerIdentity("127.0.0.2" +
-				       IdentityManager.V3_ID_SEPARATOR +
-				       "300"));
+    assertSame(peer3,
+	       idmgr.stringToPeerIdentity(IDUtil.ipAddrToKey("127.0.0.2",
+							     "300")));
   }
 
   // XXX this should go away
@@ -245,9 +243,7 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
   }
 
   public void testIdentityToIPAddrV3() throws Exception {
-    peer1 = idmgr.stringToPeerIdentity("127.0.0.1" +
-				       IdentityManager.V3_ID_SEPARATOR +
-				       "23");
+    peer1 = idmgr.stringToPeerIdentity(IDUtil.ipAddrToKey("127.0.0.1", "23"));
     try {
       idmgr.identityToIPAddr(peer1);
       fail("identityToIPAddr(V3PeerId) should throw");
@@ -867,10 +863,10 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
     Collection tcpPeers = idmgr.getTcpPeerIdentities();
     assertNotNull(tcpPeers);
     assertEquals(0, tcpPeers.size());
-    PeerIdentity id1 = idmgr.findPeerIdentity("127.0.0.1;8001");
-    PeerIdentity id2 = idmgr.findPeerIdentity("127.0.0.1;8002");
-    PeerIdentity id3 = idmgr.findPeerIdentity("127.0.0.1;8003");
-    PeerIdentity id4 = idmgr.findPeerIdentity("127.0.0.1;8004");
+    PeerIdentity id1 = idmgr.findPeerIdentity("tcp:[127.0.0.1]:8001");
+    PeerIdentity id2 = idmgr.findPeerIdentity("tcp:[127.0.0.1]:8002");
+    PeerIdentity id3 = idmgr.findPeerIdentity("tcp:[127.0.0.1]:8003");
+    PeerIdentity id4 = idmgr.findPeerIdentity("tcp:[127.0.0.1]:8004");
     idmgr.findPeerIdentity("127.0.0.2");
     idmgr.findPeerIdentity("127.0.0.3");
     idmgr.findPeerIdentity("127.0.0.4");

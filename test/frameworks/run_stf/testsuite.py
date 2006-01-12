@@ -1169,7 +1169,7 @@ class SimpleV3PollTestCase(LockssTestCase):
             for port in range(0, len(self.clients)):
                 if (port == (i)):
                     continue
-                peerIds.append("127.0.0.1;%d" % (baseV3Port + port))
+                peerIds.append("tcp:[127.0.0.1]:%d" % (baseV3Port + port))
 
             extraConf = {"org.lockss.auconfig.allowEditDefaultOnlyParams": "true",
                          "org.lockss.comm.enabled": "false",
@@ -1182,7 +1182,7 @@ class SimpleV3PollTestCase(LockssTestCase):
                          "org.lockss.poll.v3.maxNominationSize": "1",
                          "org.lockss.poll.v3.minPollDuration": "5m",
                          "org.lockss.poll.v3.maxPollDuration": "6m",
-                         "org.lockss.localV3Identity": "127.0.0.1;%d" % (baseV3Port + i),
+                         "org.lockss.localV3Identity": "tcp:[127.0.0.1]:%d" % (baseV3Port + i),
                          "org.lockss.id.initialV3PeerList": (",".join(peerIds))}
 
             self.framework.appendLocalConfig(extraConf, self.clients[i])

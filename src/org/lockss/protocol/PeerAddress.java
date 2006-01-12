@@ -1,5 +1,5 @@
 /*
- * $Id: PeerAddress.java,v 1.3 2005-10-11 05:46:14 tlipkis Exp $
+ * $Id: PeerAddress.java,v 1.4 2006-01-12 00:48:39 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.protocol;
 import java.util.*;
 import java.net.*;
 import org.lockss.util.*;
+import org.apache.oro.text.regex.*;
 
 /**
  * Abstraction of protocol-specific peer addresses, currently UDP (V1) or
@@ -47,6 +48,7 @@ import org.lockss.util.*;
 
 public abstract class PeerAddress {
   static Logger log = Logger.getLogger("PeerAddress");
+
   private String key;
 
   protected PeerAddress(String key) {
@@ -58,27 +60,31 @@ public abstract class PeerAddress {
     return makePeerAddress(pid.getIdString());
   }
 
+  private static Pattern V3_TCP_PAT =
+    RegexpUtil.uncheckedCompile("TCP:\\[([0-9a-f.:]+)\\]:([0-9]+)",
+				Perl5Compiler.CASE_INSENSITIVE_MASK);
+
+
   protected static PeerAddress makePeerAddress(String key)
       throws IdentityManager.MalformedIdentityKeyException {
+    // V3 addresses start with "TCP:", to allow for other protocols (e.g.,
+    // SOAP).
+
+    String ip;
     try {
-      List parts =
-	StringUtil.breakAt(key, IdentityManager.V3_ID_SEPARATOR_CHAR);
-      String ip;
-      switch (parts.size()) {
-      case 1:
-	ip = (String)parts.get(0);
+      Perl5Matcher matcher = RegexpUtil.getMatcher();
+      if (matcher.contains(key, V3_TCP_PAT)) {
+	// V3 identity
+	MatchResult matchResult = matcher.getMatch();
+	ip = matchResult.group(1);
+	int port = Integer.parseInt(matchResult.group(2));
+	return new Tcp(key, IPAddr.getByName(ip), port);
+      } else {
+	// assume V1 identity
+	ip = key;
 	checkIpAddr(ip);
 	return new Udp(key, IPAddr.getByName(ip));
-      case 2:
-	ip = (String)parts.get(0);
-	checkIpAddr(ip);
-	int port = Integer.parseInt((String)parts.get(1));
-	return new Tcp(key, IPAddr.getByName(ip), port);
-      default:
-	throw new
-	  IdentityManager.MalformedIdentityKeyException("Unparseable PeerId: "
-							+ key);
-      }
+      }      
     } catch (UnknownHostException e) {
       throw new
 	IdentityManager.MalformedIdentityKeyException("Unparseable PeerId: " +
@@ -180,8 +186,7 @@ public abstract class PeerAddress {
     }
 
     public String toString() {
-      return "[PeerAddr.Tcp: " + addr.getHostAddress() +
-	IdentityManager.V3_ID_SEPARATOR + port + "]";
+      return "[PeerAddr.Tcp: " + IDUtil.ipAddrToKey(addr, port) + "]";
     }
   }
 }

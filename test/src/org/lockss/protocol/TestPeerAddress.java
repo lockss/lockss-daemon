@@ -1,5 +1,5 @@
 /*
- * $Id: TestPeerAddress.java,v 1.3 2005-10-11 05:50:53 tlipkis Exp $
+ * $Id: TestPeerAddress.java,v 1.4 2006-01-12 00:48:38 tlipkis Exp $
  */
 
 /*
@@ -94,7 +94,7 @@ public class TestPeerAddress extends LockssTestCase {
 
   // test make from key
   public void testMakeTCPAddr() throws Exception {
-    String key = ipstr + IdentityManager.V3_ID_SEPARATOR + port;
+    String key = IDUtil.ipAddrToKey(ipstr, port);
     PeerAddress pa = PeerAddress.makePeerAddress(key);
     assertTrue(pa instanceof PeerAddress.Tcp);
     PeerAddress.Tcp paTcp = (PeerAddress.Tcp)pa;
@@ -102,6 +102,11 @@ public class TestPeerAddress extends LockssTestCase {
     assertEquals(port, paTcp.getPort());
     PeerIdentity pid = newPI(key);
     assertEquals(pa, pid.getPeerAddress());
+
+    String key2 = "tcp:" + key;
+    PeerAddress pa2 = PeerAddress.makePeerAddress(key2);
+    assertEquals(pa2, pa);
+
   }
 
   public void assertIllegal(String key) {
@@ -124,23 +129,16 @@ public class TestPeerAddress extends LockssTestCase {
     log.info(key + ": " + PeerAddress.makePeerAddress(key));
   }
 
-  static String SEP = IdentityManager.V3_ID_SEPARATOR;
-
   public void testIllegalIdKey() throws Exception {
     assertIllegal(null);
     assertIllegal("");
     assertLegal("1.2.3.4");
-    assertIllegal("1.2.3.4" + SEP);
-    assertLegal("1.2.3.4" + SEP + "65535");
-    assertIllegal("1.2.3.4" + SEP + "65536");
-    assertIllegal("1.2.3.4" + SEP + "x");
-    assertIllegal("1.2.3.4" + SEP + "-2");
-    assertIllegal("1.2.3.4" + SEP + "1234" + SEP);
-    assertIllegal("1.2.3.4" + SEP + "1234" + SEP + "1");
-    assertIllegal("1.2.3.4" + SEP);
-    assertIllegal("1.2.3.4" + SEP + SEP);
-    assertIllegal(SEP);
-    assertIllegal(SEP + "1");
+    assertIllegal("1.2.3.4" + ":");
+    assertLegal(IDUtil.ipAddrToKey("1.2.3.4", "65535"));
+    assertIllegal(IDUtil.ipAddrToKey("1.2.3.4", "65536"));
+    assertIllegal(IDUtil.ipAddrToKey("1.2.3.4", "X"));
+    assertIllegal(IDUtil.ipAddrToKey("1.2.3.4", "-2"));
+    assertIllegal(IDUtil.ipAddrToKey("1.2.3.4", "X"));
 
     // no abbreviated IP address
     assertIllegal("1");

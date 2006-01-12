@@ -1,5 +1,5 @@
 /*
- * $Id: TestPeerIdentity.java,v 1.3 2005-12-12 23:44:00 thib_gc Exp $
+ * $Id: TestPeerIdentity.java,v 1.4 2006-01-12 00:48:38 tlipkis Exp $
  */
 
 /*
@@ -94,7 +94,7 @@ public class TestPeerIdentity extends LockssTestCase {
     File temp3 = File.createTempFile("tmp", ".xml");
     temp3.deleteOnExit();
     PeerIdentity pidv3 =
-      new PeerIdentity("87.65.43.21" + IdentityManager.V3_ID_SEPARATOR_CHAR + "999");
+      new PeerIdentity(IDUtil.ipAddrToKey("87.65.43.21", "999"));
     serializer.serialize(temp3, pidv3);
     PeerIdentity back3 = (PeerIdentity)deserializer.deserialize(temp3);
     assertEquals(pidv3.getIdString(), back3.getIdString());

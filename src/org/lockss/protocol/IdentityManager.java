@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManager.java,v 1.71 2005-11-05 02:10:56 thib_gc Exp $
+ * $Id: IdentityManager.java,v 1.72 2006-01-12 00:48:39 tlipkis Exp $
  */
 
 /*
@@ -153,14 +153,29 @@ public interface IdentityManager extends LockssManager {
   public static final int VOTE_DISOWNED = 9;
 
   /**
-   * <p>The ID separator character in V3.</p>
+   * <p>Currently the only allowed V3 protocol.</p>
    */
-  public static final char V3_ID_SEPARATOR_CHAR = ';';
+  public static final String V3_ID_PROTOCOL_TCP = "TCP";
 
   /**
-   * <p>The ID separator string in V3.</p>
+   * <p>The V3 protocol separator.</p>
    */
-  public static final String V3_ID_SEPARATOR = ";";
+  public static final String V3_ID_PROTOCOL_SUFFIX = ":";
+
+  /**
+   * <p>The V3 TCP IP addr prefix.</p>
+   */
+  public static final String V3_ID_TCP_ADDR_PREFIX = "[";
+
+  /**
+   * <p>The V3 TCP IP addr suffix.</p>
+   */
+  public static final String V3_ID_TCP_ADDR_SUFFIX = "]";
+
+  /**
+   * <p>The V3 TCP IP / port separator.</p>
+   */
+  public static final String V3_ID_TCP_IP_PORT_SEPARATOR = ":";
 
   /**
    * <p>The initial reputation value.</p>
