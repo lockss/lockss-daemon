@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapRouter.java,v 1.19 2005-11-16 07:44:08 smorabito Exp $
+ * $Id: TestLcapRouter.java,v 1.20 2006-01-12 00:55:01 tlipkis Exp $
  */
 
 /*
@@ -65,7 +65,7 @@ public class TestLcapRouter extends LockssTestCase {
     // V3LcapMessage.decode needs idmgr
     daemon.getIdentityManager().startService();
     rtr = new MyLcapRouter();
-    pid1 = newPI("129.3.3.3" + IdentityManager.V3_ID_SEPARATOR + "4321");
+    pid1 = newPI(IDUtil.ipAddrToKey("129.3.3.3", "4321"));
   }
 
   public void tearDown() throws Exception {
