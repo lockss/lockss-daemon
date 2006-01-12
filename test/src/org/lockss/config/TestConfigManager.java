@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigManager.java,v 1.12 2005-12-01 23:28:06 troberts Exp $
+ * $Id: TestConfigManager.java,v 1.13 2006-01-12 00:50:46 tlipkis Exp $
  */
 
 /*
@@ -185,11 +185,14 @@ public class TestConfigManager extends LockssTestCase {
   public void testPlatformProps() throws Exception {
     Properties props = new Properties();
     props.put("org.lockss.platform.localIPAddress", "1.2.3.4");
+    props.put("org.lockss.platform.v3.identity", "tcp:[1.2.3.4]:4321");
     props.put("org.lockss.platform.logdirectory", "/var/log/foo");
     props.put("org.lockss.platform.logfile", "bar");
     ConfigurationUtil.setCurrentConfigFromProps(props);
     Configuration config = ConfigManager.getCurrentConfig();
     assertEquals("1.2.3.4", config.get("org.lockss.localIPAddress"));
+    assertEquals("tcp:[1.2.3.4]:4321",
+		 config.get("org.lockss.localV3Identity"));
     assertEquals(FileUtil.sysDepPath("/var/log/foo/bar"),
 		 config.get(FileTarget.PARAM_FILE));
   }
