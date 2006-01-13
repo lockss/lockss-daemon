@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.22 2006-01-13 22:44:31 thib_gc Exp $
+ * $Id: ServletUtil.java,v 1.23 2006-01-13 23:59:54 thib_gc Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.servlet;
 
+import java.io.IOException;
 import java.text.*;
 import java.util.*;
 import java.util.List;
@@ -112,14 +113,11 @@ public class ServletUtil {
   /* private */static final Image IMAGE_TM =
     image("tm.gif", 16, 16, 0);
 
-  private static final String ALIGN_CENTER =
-    "align=\"center\""; /* (a) */
+  private static final String ALIGN_CENTER = "align=\"center\""; /* (a) */
 
-  private static final String ALIGN_LEFT =
-    "align=\"left\""; /* (a) */
+  private static final String ALIGN_LEFT = "align=\"left\""; /* (a) */
 
-  private static final String ALIGN_RIGHT =
-    "align=\"right\""; /* (a) */
+  private static final String ALIGN_RIGHT = "align=\"right\""; /* (a) */
 
   private static final String ALLOWDENY_CELL_ATTRIBUTES =
     ALIGN_CENTER;
@@ -141,6 +139,11 @@ public class ServletUtil {
 
   private static final String ALLOWDENYERRORS_BEFORE =
     "<font color=\"red\">";
+
+  private static final String AUSTATUS_TABLE_ATTRIBUTES =
+    "align=\"center\" cellspacing=\"4\" cellpadding=\"0\"";
+
+  private static final int AUSTATUS_TABLE_BORDER = 0;
 
   private static final String BACKLINK_AFTER =
     "</center>";
@@ -175,8 +178,7 @@ public class ServletUtil {
 
   private static final int CHOOSESETS_TABLE_BORDER = 0;
 
-  private static final String COLOR_WHITE =
-    "#ffffff"; /* (a) */
+  private static final String COLOR_WHITE = "#ffffff"; /* (a) */
 
   private static final String ERRORBLOCK_ERROR_AFTER =
     "</font></center><br>";
@@ -268,6 +270,8 @@ public class ServletUtil {
     "cellspacing=\"4\" cellpadding=\"0\"";
 
   private static final int SELECTALL_BORDER = 0;
+
+  private static final String SPACE = "&nbsp;"; /* (a) */
 
   private static final String SUBMIT_AFTER =
     "</center>";
@@ -363,6 +367,29 @@ public class ServletUtil {
     img.alt(tooltip);		 	// some browsers (IE) use alt tag
     img.attribute("title", tooltip);	// some (Mozilla) use title tag
     return img;
+  }
+
+  public static void layoutAuStatus(Page page,
+                                    Iterator auStatusEntryIter) {
+    Table tbl = new Table(AUSTATUS_TABLE_BORDER, AUSTATUS_TABLE_ATTRIBUTES);
+    tbl.addHeading("Status");
+    tbl.addHeading("Archival Unit");
+    while (auStatusEntryIter.hasNext()) {
+      Entry stat = (Entry)auStatusEntryIter.next();
+      tbl.newRow();
+      tbl.newCell();
+      tbl.add(SPACE);
+      tbl.add(stat.getStatus());
+      tbl.add(SPACE);
+      tbl.newCell();
+      String name = stat.getName();
+      tbl.add(name != null ? name : stat.getAuId());
+      if (stat.getExplanation() != null) {
+        tbl.newCell();
+        tbl.add(stat.getExplanation());
+      }
+    }
+    page.add(tbl);
   }
 
   public static void layoutBackLink(LockssServlet servlet,
@@ -822,8 +849,6 @@ public class ServletUtil {
   public static Element makeRepoTable(LockssServlet servlet,
                                       Iterator repoIter,
                                       String keyDefaultRepo) {
-    final String SPACE = "&nbsp;";
-
     Table tbl = new Table(REPOTABLE_BORDER, REPOTABLE_ATTRIBUTES);
     tbl.newRow();
     tbl.addHeading("Available Disks", "colspan=\"6\"");

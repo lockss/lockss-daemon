@@ -1,5 +1,5 @@
 /*
- * $Id: BatchAuConfig.java,v 1.22 2006-01-13 22:44:32 thib_gc Exp $
+ * $Id: BatchAuConfig.java,v 1.23 2006-01-13 23:59:54 thib_gc Exp $
  */
 
 /*
@@ -619,33 +619,15 @@ public class BatchAuConfig extends LockssServlet {
 
   private void displayBatchAuStatus(BatchAuStatus status)
       throws IOException {
-    Page page = newPage();
-    layoutErrorBlock(page);
-    java.util.List statusList = status.getStatusList();
+    List statusList = status.getStatusList();
     int okCnt = status.getOkCnt();
     int errCnt = statusList.size() - okCnt;
+
+    Page page = newPage();
+    layoutErrorBlock(page);
     ServletUtil.layoutExplanationBlock(page, okCnt + " AUs " + verb.past +
         ", " + errCnt + " skipped");
-    Table tbl = new Table(0, "align=center cellspacing=4 cellpadding=0");
-    tbl.addHeading("Status");
-    tbl.addHeading("Archival Unit");
-    for (Iterator iter = statusList.iterator(); iter.hasNext(); ) {
-      BatchAuStatus.Entry stat =
-	(BatchAuStatus.Entry)iter.next();
-      tbl.newRow();
-      tbl.newCell();
-      tbl.add("&nbsp;");
-      tbl.add(stat.getStatus());
-      tbl.add("&nbsp;");
-      tbl.newCell();
-      String name = stat.getName();
-      tbl.add(name != null ? name : stat.getAuId());
-      if (stat.getExplanation() != null) {
-	tbl.newCell();
-	tbl.add(stat.getExplanation());
-      }
-    }
-    page.add(tbl);
+    ServletUtil.layoutAuStatus(page, statusList.iterator());
     endPage(page);
   }
 
