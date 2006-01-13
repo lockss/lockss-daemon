@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCrawler.java,v 1.2 2005-10-20 16:42:55 troberts Exp $
+ * $Id: TestBaseCrawler.java,v 1.3 2006-01-13 20:03:45 tlipkis Exp $
  */
 
 /*
@@ -51,7 +51,6 @@ import org.lockss.test.*;
  * @version 0.0
  */
 public class TestBaseCrawler extends LockssTestCase {
-  static final String PERMISSION_STRING = BaseCrawler.LOCKSS_PERMISSION_STRING;
 //   private PermissionChecker checker;
   private MockArchivalUnit mau = null;
   private List startUrls = null;

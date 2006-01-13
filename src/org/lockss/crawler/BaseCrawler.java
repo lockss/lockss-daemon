@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawler.java,v 1.4 2005-11-16 00:05:49 troberts Exp $
+ * $Id: BaseCrawler.java,v 1.5 2006-01-13 20:03:45 tlipkis Exp $
  */
 
 /*
@@ -83,9 +83,6 @@ public abstract class BaseCrawler
   public static final String PARAM_REFETCH_PERMISSIONS_PAGE =
     Configuration.PREFIX + "crawler.storePermissionsRefetch";
   public static final boolean DEFAULT_REFETCH_PERMISSIONS_PAGE = false;
-
-  public static final String LOCKSS_PERMISSION_STRING =
-  "LOCKSS system has permission to collect, preserve, and serve this Archival Unit";
 
   public static final String PARAM_ABORT_WHILE_PERMISSION_OTHER_THAN_OK =
     Configuration.PREFIX + "BaseCrawler.abortWhilePermissionOtherThanOk";
