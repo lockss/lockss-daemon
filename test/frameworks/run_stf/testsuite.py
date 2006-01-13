@@ -47,6 +47,9 @@ class LockssTestCase(unittest.TestCase):
 
     def getDaemonCount(self):
         return None
+
+    def getStartPort(self):
+        return None
     
     def setUp(self):
         ## Log start of test.
@@ -57,7 +60,9 @@ class LockssTestCase(unittest.TestCase):
         ##
         ## Create a framework for the test.
         ##
-        self.framework = Framework(self.getDaemonCount(), self.getConfigUrls())
+        self.framework = Framework(self.getDaemonCount(),
+                                   self.getConfigUrls(),
+                                   self.getStartPort())
 
         ## global ('static') reference to the current framework, so we
         ## can clean up after a user interruption
@@ -70,7 +75,6 @@ class LockssTestCase(unittest.TestCase):
         self.clients = self.framework.clientList
         
         unittest.TestCase.setUp(self)
-
 
     def tearDown(self):
         # dump threads and look for deadlocks.  This will happen
@@ -1087,6 +1091,9 @@ class TinyUiTests(LockssTestCase):
     
     def getConfigUrls(self):
         return (self.getTestUrl(),)
+
+    def getStartPort(self):
+        return 8081
 
     def runTest(self):
         tinyui = self.tinyUiClient.getAdminUi()
