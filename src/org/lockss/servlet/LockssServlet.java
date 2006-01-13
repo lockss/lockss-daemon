@@ -1,10 +1,10 @@
 /*
- * $Id: LockssServlet.java,v 1.79 2005-12-10 00:16:51 thib_gc Exp $
+ * $Id: LockssServlet.java,v 1.80 2006-01-13 22:44:32 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -619,20 +619,12 @@ public abstract class LockssServlet extends HttpServlet
     return d.isInNav() && (!d.isPerClient() || isPerClient());
   }
 
-  protected void layoutExplanationBlock(Composite composite, String text) {
-    ServletUtil.layoutExplanationBlock(composite, text);
-  }
-
   protected String getRequestKey() {
     String key = req.getPathInfo();
     if (key != null && key.startsWith("/")) {
       return key.substring(1);
     }
     return key;
-  }
-
-  protected Form newForm() {
-    return ServletUtil.newForm(this);
   }
 
   /** Common page setup. */
@@ -644,8 +636,7 @@ public abstract class LockssServlet extends HttpServlet
     }
 
     // Create page and layout header
-    Page page = ServletUtil.newPage(getPageTitle(),
-                                    isFramed());
+    Page page = ServletUtil.doNewPage(getPageTitle(), isFramed());
     FilterIterator inNavIterator = new FilterIterator(
         new ObjectArrayIterator(servletDescrs),
         new Predicate() {
@@ -665,8 +656,8 @@ public abstract class LockssServlet extends HttpServlet
   }
 
   protected Page addBarePageHeading(Page page) {
-// FIXME: Move the following line elsewhere
-// It causes the doctype stsatement to appear in the middle,
+// FIXME: Move the following fragment elsewhere
+// It causes the doctype statement to appear in the middle,
 // after the <body> tag.
     page.add("<!doctype html public \"-//w3c//dtd html 4.0 transitional//en\">");
     page.addHeader("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-1\">");
@@ -790,11 +781,6 @@ public abstract class LockssServlet extends HttpServlet
     return c;
   }
 
-  /** Add html tags to grey the text */
-  protected String greyText(String txt) {
-    return greyText(txt, true);
-  }
-
   /** Add html tags to grey the text if isGrey is true */
   protected String greyText(String txt, boolean isGrey) {
     if (!isGrey) {
@@ -877,6 +863,7 @@ public abstract class LockssServlet extends HttpServlet
    *  not all of the AUs have started yet.
    */
   protected void displayNotStarted() throws IOException {
+    // TODO: Look at HTML
     Page page = newPage();
     Composite warning = new Composite();
     warning.add("<center><font color=red size=+1>");
@@ -926,53 +913,13 @@ public abstract class LockssServlet extends HttpServlet
     return val;
   }
 
-  protected Composite makeChooseSets(RemoteApi remoteApi,
-      Iterator titleSetIterator, Verb verb, String checkboxGroup,
-      boolean doGray, MutableBoolean isAnySelectable, String submitText,
-      String submitAction, MutableInteger buttonNumber, int atLeast) {
-    return ServletUtil.makeChooseSets(this, remoteApi, titleSetIterator,
-        verb, checkboxGroup, doGray, isAnySelectable, submitText,
-        submitAction, buttonNumber, atLeast);
-  }
-
-  protected void layoutChooseSets(Page page, Composite chooseSets,
-      String hiddenActionName, String hiddenVerbName, Verb verb) {
-    ServletUtil.layoutChooseSets(this, page, chooseSets,
-        hiddenActionName, hiddenVerbName, verb);
-  }
-
-  protected void layoutEnablePortRow(Table table,
-      String enableFieldName, boolean defaultEnable,
-      String enableDescription, String enableFootnote,
-      String filterFootnote, String portFieldName, String defaultPort,
-      List usablePorts) {
-    ServletUtil.layoutEnablePortRow(this, table, enableFieldName,
-        defaultEnable, enableDescription, enableFootnote, filterFootnote,
-        portFieldName, defaultPort, usablePorts);
-  }
-
   protected void layoutFooter(Page page) {
-    ServletUtil.layoutFooter(page,
-                             (footnotes == null ? null : footnotes.iterator()),
-                             getLockssApp().getVersionInfo());
+    ServletUtil.doLayoutFooter(page,
+                              (footnotes == null ? null : footnotes.iterator()),
+                              getLockssApp().getVersionInfo());
     if (footnotes != null) {
       footnotes.removeAllElements();
     }
-  }
-
-  protected void layoutSubmitButton(Composite composite, String value) {
-    ServletUtil.layoutSubmitButton(this, composite, value);
-  }
-
-  protected void layoutIpAllowDenyTable(Composite composite,
-      Vector allow, Vector deny, String ipFootnote, Vector allowErrs,
-      Vector denyErrs, String allowName, String denyName) {
-    ServletUtil.layoutIpAllowDenyTable(this, composite, allow,
-        deny, ipFootnote, allowErrs, denyErrs, allowName, denyName);
-  }
-
-  protected void layoutMenu(Page page, Iterator linkIterator) {
-    ServletUtil.layoutMenu(page, linkIterator);
   }
 
   /** Return the app instance.

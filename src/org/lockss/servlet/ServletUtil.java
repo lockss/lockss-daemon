@@ -1,10 +1,10 @@
 /*
- * $Id: ServletUtil.java,v 1.21 2006-01-09 21:56:43 tlipkis Exp $
+ * $Id: ServletUtil.java,v 1.22 2006-01-13 22:44:31 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -48,21 +48,51 @@ import org.mortbay.html.*;
 
 public class ServletUtil {
 
+  /**
+   * <p>Keeps a link and an accompanying explanation of its purpose
+   * conveniently together, for use in menus.</p>
+   * @author Thib Guicherd-Callin
+   * @see ServletUtil#layoutMenu(Page, Iterator)
+   */
   public static class LinkWithExplanation {
 
+    /**
+     * <p>The text explaining what the linki does or where it goes.</p>
+     */
     private String explanation;
 
+    /**
+     * <p>A link string.</p>
+     */
     private String link;
 
+    /**
+     * <p>Builds a new link with explanation pair.</p>
+     * @param link        A link string. May be a fragment of HTML
+     *                    (most likely an anchor tag) or anything that
+     *                    can be used in lieu of a link (for instance,
+     *                    a fragment of gray text if the link is
+     *                    disabled).
+     * @param explanation Some text explaining the link (purpose,
+     *                    target).
+     */
     public LinkWithExplanation(String link, String explanation) {
       this.link = link;
       this.explanation = explanation;
     }
 
+    /**
+     * <p>Retrieves this link's explanation.</p>
+     * @return This link's explanation string.
+     */
     protected String getExplanation() {
       return explanation;
     }
 
+    /**
+     * <p>Retrieves this link's content.</p>
+     * @return This link's content string.
+     */
     protected String getLink() {
       return link;
     }
@@ -229,6 +259,11 @@ public class ServletUtil {
   private static final String REPOTABLE_ROW_ATTRIBUTES =
     ALIGN_CENTER;
 
+  private static final String RESTORE_TABLE_ATTRIBUTES =
+    "align=\"center\" cellspacing=\"4\" cellpadding=\"0\"";
+
+  private static final int RESTORE_TABLE_BORDER = 0;
+
   private static final String SELECTALL_ATTRIBUTES =
     "cellspacing=\"4\" cellpadding=\"0\"";
 
@@ -239,6 +274,77 @@ public class ServletUtil {
 
   private static final String SUBMIT_BEFORE =
     "<br><center>";
+
+  /** Return the URL of this machine's config backup file to download */
+  // This is a crock.  It's called from RemoteAPI, which has no servlet
+  // instance and thus can't use LockssServlet.srvURL().
+  public static String backupFileUrl(String hostname) {
+    ServletDescr backupServlet = LockssServlet.SERVLET_BATCH_AU_CONFIG;
+    int port = CurrentConfig.getIntParam(LocalServletManager.PARAM_PORT,
+					 LocalServletManager.DEFAULT_PORT);
+    StringBuffer sb = new StringBuffer();
+    sb.append("http://");
+    sb.append(hostname);
+    sb.append(":");
+    sb.append(port);
+    sb.append("/");
+    sb.append(backupServlet.getName());
+    sb.append("?");
+    sb.append(BatchAuConfig.ACTION_TAG);
+    sb.append("=");
+    sb.append(BatchAuConfig.ACTION_BACKUP);
+    return sb.toString();
+  }
+
+  // Common page footer
+  public static void doLayoutFooter(Page page,
+                                  Iterator notesIterator,
+                                  String versionInfo) {
+    Composite comp = new Composite();
+
+    if (notesIterator!= null && notesIterator.hasNext()) {
+      // if there are footnotes
+      comp.add(NOTES_BEGIN);
+      comp.add(NOTES_LIST_BEFORE);
+      for (int nth = 1 ; notesIterator.hasNext() ; nth++) {
+        layoutFootnote(comp, (String)notesIterator.next(), nth);
+      }
+      comp.add(NOTES_LIST_AFTER);
+    }
+
+    comp.add("<p>");
+
+    Table table = new Table(FOOTER_BORDER, FOOTER_ATTRIBUTES);
+    table.newRow("valign=\"top\"");
+    table.newCell();
+    table.add(IMAGE_LOCKSS_RED);
+    table.newCell();
+    table.add(IMAGE_TM);
+    table.newRow();
+    table.newCell("colspan=\"2\"");
+    table.add("<center><font size=\"-1\">" + versionInfo + "</font></center>");
+    comp.add(table);
+    page.add(comp);
+  }
+
+  public static Page doNewPage(String pageTitle,
+                               boolean isFramed) {
+    Page page = new Page();
+    layoutPageHeaders(page);
+
+    if (isFramed) {
+      page.addHeader("<base target=\"_top\">");
+    }
+    page.title(pageTitle);
+
+    page.attribute("bgcolor", PAGE_BGCOLOR);
+    return page;
+  }
+
+  /** Add html tags to grey the text */
+  public static String gray(String txt) {
+    return gray(txt, true);
+  }
 
   public static Image image(String file,
                             int width,
@@ -268,13 +374,13 @@ public class ServletUtil {
     page.add(BACKLINK_AFTER);
   }
 
-  public static void layoutChooseSets(LockssServlet servlet,
+  public static void layoutChooseSets(String url,
                                       Page page,
                                       Composite chooseSets,
                                       String hiddenActionName,
                                       String hiddenVerbName,
                                       Verb verb) {
-    Form frm = newForm(servlet);
+    Form frm = newForm(url);
     frm.add(new Input(Input.Hidden, hiddenActionName));
     frm.add(new Input(Input.Hidden, hiddenVerbName, verb.valStr));
     frm.add(chooseSets);
@@ -359,37 +465,6 @@ public class ServletUtil {
     exp.newCell(EXPLANATION_CELL_ATTRIBUTES);
     exp.add(text);
     composite.add(exp);
-  }
-
-  // Common page footer
-  public static void layoutFooter(Page page,
-                                  Iterator notesIterator,
-                                  String versionInfo) {
-    Composite comp = new Composite();
-
-    if (notesIterator!= null && notesIterator.hasNext()) {
-      // if there are footnotes
-      comp.add(NOTES_BEGIN);
-      comp.add(NOTES_LIST_BEFORE);
-      for (int nth = 1 ; notesIterator.hasNext() ; nth++) {
-        layoutFootnote(comp, (String)notesIterator.next(), nth);
-      }
-      comp.add(NOTES_LIST_AFTER);
-    }
-
-    comp.add("<p>");
-
-    Table table = new Table(FOOTER_BORDER, FOOTER_ATTRIBUTES);
-    table.newRow("valign=\"top\"");
-    table.newCell();
-    table.add(IMAGE_LOCKSS_RED);
-    table.newCell();
-    table.add(IMAGE_TM);
-    table.newRow();
-    table.newCell("colspan=\"2\"");
-    table.add("<center><font size=\"-1\">" + versionInfo + "</font></center>");
-    comp.add(table);
-    page.add(comp);
   }
 
   public static void layoutHeader(LockssServlet servlet,
@@ -495,6 +570,34 @@ public class ServletUtil {
     page.add(table);
   }
 
+  public static void layoutRestore(LockssServlet servlet,
+                                   Page page,
+                                   String hiddenActionName,
+                                   String hiddenVerbName,
+                                   Verb verb,
+                                   String backupFileFieldName,
+                                   MutableInteger buttonNumber,
+                                   String backupFileButtonAction) {
+    Form frm = newForm(servlet.srvURL(servlet.myServletDescr()));
+    frm.attribute("enctype", "multipart/form-data");
+    frm.add(new Input(Input.Hidden, hiddenActionName));
+    frm.add(new Input(Input.Hidden, hiddenVerbName, verb.valStr));
+    Table tbl = new Table(RESTORE_TABLE_BORDER, RESTORE_TABLE_ATTRIBUTES);
+    tbl.newRow();
+    tbl.newCell(ALIGN_CENTER);
+    tbl.add("Enter name of AU configuration backup file");
+    tbl.newRow();
+    tbl.newCell(ALIGN_CENTER);
+    tbl.add(new Input(Input.File, "AuConfigBackupContents"));
+    tbl.newRow();
+    tbl.newCell(ALIGN_CENTER);
+    buttonNumber.add(1);
+    tbl.add(submitButton(servlet, buttonNumber.intValue(),
+        "Restore", backupFileButtonAction));
+    frm.add(tbl);
+    page.add(frm);
+  }
+
   public static void layoutSubmitButton(LockssServlet servlet,
                                         Composite composite,
                                         String value) {
@@ -502,21 +605,6 @@ public class ServletUtil {
     servlet.setTabOrder(submit);
     composite.add(SUBMIT_BEFORE + submit + SUBMIT_AFTER);
   }
-
-//  public static void layoutChooseAus(LockssServlet servlet,
-//                                     Page page,
-//                                     Composite chooseSets,
-//                                     String hiddenActionName,
-//                                     String hiddenVerbName,
-//                                     Verb verb,
-//                                     String buttonText,
-//                                     boolean isLong) {
-//    Form frm = newForm(servlet);
-//    frm.add(new Input(Input.Hidden, hiddenActionName));
-//    frm.add(new Input(Input.Hidden, hiddenVerbName, verb.valStr));
-//    frm.add(chooseSets);
-//    page.add(frm);
-//  }
 
   public static Composite makeChooseAus(LockssServlet servlet,
                                         Iterator basEntryIter,
@@ -782,24 +870,15 @@ public class ServletUtil {
     return tbl;
   }
 
-  public static Form newForm(LockssServlet servlet) {
-    Form form = new Form(servlet.srvURL(servlet.myServletDescr()));
+  /**
+   * <p>Begins a new POST form with the given URL.</p>
+   * @param url The form's URL.
+   * @return A new form.
+   */
+  public static Form newForm(String url) {
+    Form form = new Form(url);
     form.method("POST");
     return form;
-  }
-
-  public static Page newPage(String pageTitle,
-                             boolean isFramed) {
-    Page page = new Page();
-    layoutPageHeaders(page);
-
-    if (isFramed) {
-      page.addHeader("<base target=\"_top\">");
-    }
-    page.title(pageTitle);
-
-    page.attribute("bgcolor", PAGE_BGCOLOR);
-    return page;
   }
 
   /** Return a (possibly labelled) checkbox.
@@ -839,11 +918,6 @@ public class ServletUtil {
       c.add(in); c.add(" "); c.add(text);
       return c;
     }
-  }
-
-  /** Add html tags to grey the text */
-  private static String gray(String txt) {
-    return gray(txt, true);
   }
 
   /** Add html tags to grey the text if isGrey is true */
@@ -1013,27 +1087,6 @@ public class ServletUtil {
     Input btn = javascriptButton(servlet, label, sb.toString());
     btn.attribute("id", "lsb." + buttonNumber);
     return btn;
-  }
-
-  /** Return the URL of this machine's config backup file to download */
-  // This is a crock.  It's called from RemoteAPI, which has no servlet
-  // instance and thus can't use LockssServlet.srvURL().
-  public static String backupFileUrl(String hostname) {
-    ServletDescr backupServlet = LockssServlet.SERVLET_BATCH_AU_CONFIG;
-    int port = CurrentConfig.getIntParam(LocalServletManager.PARAM_PORT,
-					 LocalServletManager.DEFAULT_PORT);
-    StringBuffer sb = new StringBuffer();
-    sb.append("http://");
-    sb.append(hostname);
-    sb.append(":");
-    sb.append(port);
-    sb.append("/");
-    sb.append(backupServlet.getName());
-    sb.append("?");
-    sb.append(BatchAuConfig.ACTION_TAG);
-    sb.append("=");
-    sb.append(BatchAuConfig.ACTION_BACKUP);
-    return sb.toString();
   }
 
 }

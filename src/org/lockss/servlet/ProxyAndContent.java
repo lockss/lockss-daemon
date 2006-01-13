@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyAndContent.java,v 1.6 2006-01-11 21:54:47 thib_gc Exp $
+ * $Id: ProxyAndContent.java,v 1.7 2006-01-13 22:44:31 thib_gc Exp $
  */
 
 /*
@@ -94,20 +94,20 @@ public class ProxyAndContent extends LockssServlet {
     final String ATTRIBUTES = "align=\"center\" cellpadding=\"10\"";
 
     Page page = newPage();
-    layoutExplanationBlock(page, mainExplanation);
+    ServletUtil.layoutExplanationBlock(page, mainExplanation);
     layoutErrorBlock(page);
-    layoutMenu(page, getDescriptors_Main());
+    ServletUtil.layoutMenu(page, getDescriptors_Main());
 
-    Form frm = newForm();
+    Form frm = ServletUtil.newForm(srvURL(myServletDescr()));
     Table tbl = new Table(BORDER, ATTRIBUTES);
-    layoutEnablePortRow(tbl, AUDIT_ENABLE_NAME, getDefaultAuditEnable(), "audit proxy",
-        AUDIT_FOOT, FILTER_FOOT, AUDIT_PORT_NAME, getDefaultAuditPort(),
+    ServletUtil.layoutEnablePortRow(this, tbl, AUDIT_ENABLE_NAME, getDefaultAuditEnable(),
+        "audit proxy", AUDIT_FOOT, FILTER_FOOT, AUDIT_PORT_NAME, getDefaultAuditPort(),
         resourceMgr.getUsableTcpPorts(AuditProxyManager.SERVER_NAME));
-    layoutEnablePortRow(tbl, ICP_ENABLE_NAME, getDefaultIcpEnable(), "ICP server",
-        ICP_FOOT, FILTER_FOOT, ICP_PORT_NAME, getDefaultIcpPort(),
+    ServletUtil.layoutEnablePortRow(this, tbl, ICP_ENABLE_NAME, getDefaultIcpEnable(),
+        "ICP server", ICP_FOOT, FILTER_FOOT, ICP_PORT_NAME, getDefaultIcpPort(),
         resourceMgr.getUsableUdpPorts(AuditProxyManager.SERVER_NAME));
     frm.add(tbl);
-    layoutSubmitButton(frm, "Update");
+    ServletUtil.layoutSubmitButton(this, frm, "Update");
     page.add(frm);
 
     layoutFooter(page);

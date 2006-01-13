@@ -1,10 +1,10 @@
 /*
- * $Id: DebugPanel.java,v 1.7 2005-10-14 21:24:13 thib_gc Exp $
+ * $Id: DebugPanel.java,v 1.8 2006-01-13 22:44:31 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2004 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -114,7 +114,7 @@ public class DebugPanel extends LockssServlet {
   private void displayPage() throws IOException {
     Page page = newPage();
     layoutErrorBlock(page);
-    layoutExplanationBlock(page, "Debug Actions");
+    ServletUtil.layoutExplanationBlock(page, "Debug Actions");
     page.add(makeForm());
     page.add("<br>");
     layoutFooter(page);

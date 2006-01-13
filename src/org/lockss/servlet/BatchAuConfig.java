@@ -1,10 +1,10 @@
 /*
- * $Id: BatchAuConfig.java,v 1.21 2005-12-10 00:16:51 thib_gc Exp $
+ * $Id: BatchAuConfig.java,v 1.22 2006-01-13 22:44:32 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -42,10 +42,11 @@ import javax.servlet.http.HttpSession;
 import org.apache.commons.collections.OrderedMap;
 import org.apache.commons.collections.map.LinkedMap;
 import org.lockss.config.*;
-import org.lockss.daemon.*;
+import org.lockss.daemon.TitleSet;
 import org.lockss.plugin.PluginManager;
 import org.lockss.remote.RemoteApi;
 import org.lockss.remote.RemoteApi.BatchAuStatus;
+import org.lockss.servlet.ServletUtil.LinkWithExplanation;
 import org.lockss.util.*;
 import org.mortbay.html.*;
 
@@ -186,62 +187,108 @@ public class BatchAuConfig extends LockssServlet {
     }
   }
 
-  /** Display top lebel batch config choices */
+  private Iterator getMenuDescriptors() {
+    String ACTION = ACTION_TAG + "=";
+    int numActive = remoteApi.getAllAus().size();
+    int numInactive = remoteApi.getInactiveAus().size();
+    ServletDescr myDescr = myServletDescr();
+    ArrayList list = new ArrayList(7); // at most 7 entries
+
+    // Add and remove
+    list.add(getMenuDescriptor(myDescr,
+                               "Add Titles",
+                               ACTION + ACTION_SELECT_SETS_TO_ADD,
+                               "Add one or more groups of titles"));
+    if (numActive > 0 || isDebugUser() ) {
+      list.add(getMenuDescriptor(myDescr,
+                                 "Remove Titles",
+                                 ACTION + ACTION_SELECT_SETS_TO_DEL,
+                                 "Remove selected titles",
+                                 numActive > 0));
+    }
+
+    if (isDebugUser() ) {
+      // Deactivate and reactivate
+      list.add(getMenuDescriptor(myDescr,
+                                 "Deactivate Titles",
+                                 ACTION + ACTION_SELECT_SETS_TO_DEACT,
+                                 "Deactivate selected titles",
+                                 numActive > 0));
+      list.add(getMenuDescriptor(myDescr,
+                                 "Reactivate Titles",
+                                 ACTION + ACTION_SELECT_SETS_TO_REACT,
+                                 "Reactivate selected titles",
+                                 numInactive > 0));
+    }
+
+    // Backup and restore
+    list.add(getMenuDescriptor(myDescr,
+                               "Backup",
+                               ACTION + ACTION_BACKUP,
+                               "Backup cache config to a file on your workstation",
+                               numActive > 0 || numInactive > 0));
+    list.add(getMenuDescriptor(myDescr,
+                               "Restore",
+                               ACTION + ACTION_RESTORE,
+                               "Restore cache config from a file on your workstation"));
+
+    // Manual edit
+    list.add(getMenuDescriptor(SERVLET_AU_CONFIG,
+                               "Manual Add/Edit",
+                               null,
+                               "Add, Edit or Delete an individual AU"));
+
+    return list.iterator();
+  }
+
+  /**
+   * <p>Makes a new link with explanation.</p>
+   * <p>The resulting link is always enabled.</p>
+   * @param descr    The link's servlet descriptor.
+   * @param linkText The text appearing in the link.
+   * @param action   The action associated with the servlet descriptor
+   *                 (can be null).
+   * @param expl     The explanation associated with the link.
+   * @return A {@link LinkWithExplanation} corresponding to the servlet
+   *         descriptor (optionally with an action), showing the given
+   *         text and explanation.
+   */
+  private LinkWithExplanation getMenuDescriptor(ServletDescr descr,
+                                                String linkText,
+                                                String action,
+                                                String expl) {
+    return getMenuDescriptor(descr, linkText, action, expl, true);
+  }
+
+  /**
+   * <p>Makes a new link with explanation.</p>
+   * @param descr    The link's servlet descriptor.
+   * @param linkText The text appearing in the link.
+   * @param action   The action associated with the servlet descriptor
+   *                 (can be null).
+   * @param expl     The explanation associated with the link.
+   * @param enabled  Whether or not the link is actually enabled.
+   * @return A {@link LinkWithExplanation} corresponding to the servlet
+   *         descriptor (optionally with an action), showing the given
+   *         text and explanation; the link is enabled or disabled
+   *         according to the parameter.
+   */
+  private LinkWithExplanation getMenuDescriptor(ServletDescr descr,
+                                                String linkText,
+                                                String action,
+                                                String expl,
+                                                boolean enabled) {
+    return new LinkWithExplanation(
+      enabled ? srvLink(descr, linkText, action) : ServletUtil.gray(linkText),
+      expl);
+  }
+
+  /** Display top level batch config choices */
   private void displayMenu() throws IOException {
     Page page = newPage();
     layoutErrorBlock(page);
-    int numActive = remoteApi.getAllAus().size();
-    int numInactive = remoteApi.getInactiveAus().size();
-
-
-    Table tbl = new Table(0, "align=center cellspacing=2 cellpadding=4");
-    addMenuItem(tbl, "Add Titles", ACTION_SELECT_SETS_TO_ADD,
-		"Add one or more groups of titles");
-    if (numActive > 0 || isDebugUser() ) {
-      addMenuItem(tbl, "Remove Titles", ACTION_SELECT_SETS_TO_DEL,
-		  "Remove selected titles", numActive > 0);
-    }
-    if (isDebugUser() ) {
-      addMenuItem(tbl, "Deactivate Titles", ACTION_SELECT_SETS_TO_DEACT,
-		  "Deactivate selected titles", numActive > 0);
-      addMenuItem(tbl, "Reactivate Titles", ACTION_SELECT_SETS_TO_REACT,
-		  "Reactivate selected titles", numInactive > 0);
-    }
-    addMenuItem(tbl, "Backup", ACTION_BACKUP,
-		"Backup cache config to a file on your workstation",
-		numActive > 0 || numInactive > 0);
-    addMenuItem(tbl, "Restore", ACTION_RESTORE,
-		"Restore cache config from a file on your workstation");
-    addMenuItem(tbl, "Manual Add/Edit", "Add, Edit or Delete an individual AU",
-		SERVLET_AU_CONFIG, null, true);
-    page.add(tbl);
+    ServletUtil.layoutMenu(page, getMenuDescriptors());
     endPage(page);
-  }
-
-  void addMenuItem(Table tbl, String linkText, String expl,
-		   ServletDescr descr, String params, boolean enabled) {
-    tbl.newRow("valign=top");
-    tbl.newCell();
-    tbl.add("<font size=+1>");
-    if (!enabled) {
-      tbl.add(greyText(linkText));
-    } else {
-      tbl.add(srvLink(descr, linkText, params));
-    }
-    tbl.add("</font>");
-    tbl.newCell();
-    tbl.add(expl);
-  }
-
-  void addMenuItem(Table tbl, String linkText, String action, String expl,
-		   boolean enabled) {
-    addMenuItem(tbl, linkText, expl, myServletDescr(),
-		ACTION_TAG + "=" + action + "", enabled);
-  }
-
-  void addMenuItem(Table tbl, String linkText, String action, String expl) {
-    addMenuItem(tbl, linkText, expl, myServletDescr(),
-		ACTION_TAG + "=" + action + "", true);
   }
 
   private void chooseSets(Verb verb) throws IOException {
@@ -259,7 +306,7 @@ public class BatchAuConfig extends LockssServlet {
       (verb == VERB_ADD && "Add".equalsIgnoreCase(grayAction));
     MutableBoolean isAnySelectable = new MutableBoolean(false);
     MutableInteger buttonNumber = new MutableInteger(submitButtonNumber);
-    Composite chooseSets = makeChooseSets(remoteApi,
+    Composite chooseSets = ServletUtil.makeChooseSets(this, remoteApi,
         pluginMgr.getTitleSets().iterator(), verb, KEY_TITLE_SET,
         doGray, isAnySelectable, "Select Titles", ACTION_SELECT_AUS,
         buttonNumber, 10);
@@ -267,13 +314,14 @@ public class BatchAuConfig extends LockssServlet {
 
     if (isAnySelectable.booleanValue()) {
       // Display set chooser
-      layoutExplanationBlock(page, "Select one or more collections of titles to "
-          + verb.word + ", then click \"Select Titles\".");
-      layoutChooseSets(page, chooseSets, ACTION_TAG, KEY_VERB, verb);
+      ServletUtil.layoutExplanationBlock(page,
+          "Select one or more collections of titles to " + verb.word + ", then click \"Select Titles\".");
+      ServletUtil.layoutChooseSets(srvURL(myServletDescr()), page,
+          chooseSets, ACTION_TAG, KEY_VERB, verb);
     }
     else {
       // Set chooser not needed
-      layoutExplanationBlock(page,
+      ServletUtil.layoutExplanationBlock(page,
           "All titles in all predefined collections of titles already exist on this cache.");
     }
 
@@ -348,10 +396,10 @@ public class BatchAuConfig extends LockssServlet {
       expl = "Select the AUs you wish to " + verb.word
         + ". Then click \"" + buttonText + "\".";
     }
-    layoutExplanationBlock(page, expl);
+    ServletUtil.layoutExplanationBlock(page, expl);
 
     // Start form
-    Form frm = newForm();
+    Form frm = ServletUtil.newForm(srvURL(myServletDescr()));
     frm.add(new Input(Input.Hidden, ACTION_TAG));
     frm.add(new Input(Input.Hidden, KEY_VERB, verb.valStr));
 
@@ -389,103 +437,6 @@ public class BatchAuConfig extends LockssServlet {
     page.add(ServletUtil.makeNonOperableAuTable(
         "No AUs in set can be " + verb.past, bas.getStatusList().iterator()));
     endPage(page);
-  }
-
-  Table getSelectAusTable(BatchAuStatus bas, java.util.List repos,
-			  Map auConfs) {
-    Table tbl = new Table(0, "align=center cellspacing=4 cellpadding=0");
-
-    tbl.newRow();
-    tbl.newCell();
-    tbl.add(getSelectAllButtons());
-    tbl.newRow();
-    tbl.addHeading(verb.cap + "?", "align=right rowSpan=2");
-    boolean repoFlg = verb.isAdd && repos.size() > 1;
-    int reposSize = repoFlg ? repos.size() : 0;
-    Block repoFootElement = null;
-    if (repoFlg) {
-      tbl.addHeading("Disk", "align=center colspan=" + reposSize);
-      repoFootElement = tbl.cell();
-    }
-    tbl.addHeading("Archival Unit", "align=center rowSpan=2");
-    boolean isAdd = verb.isAdd;
-    if (isAdd) {
-      tbl.addHeading("Est. size (MB)", "align=center rowSpan=2");
-    }
-    tbl.newRow();
-    for (int ix = 0; ix < reposSize; ix++) {
-      tbl.addHeading(Integer.toString(ix+1), "align=center");
-    }
-    boolean isAnyAssignedRepo = false;
-    for (Iterator iter = bas.getStatusList().iterator(); iter.hasNext(); ) {
-      BatchAuStatus.Entry rs =
-	(BatchAuStatus.Entry)iter.next();
-      if (rs.isOk()) {
-	String auid = rs.getAuId();
-	tbl.newRow();
-	tbl.newCell("align=right valign=center");
-	auConfs.put(auid, rs.getConfig());
-	Element cb = checkBox(null, auid, KEY_AUID, false);
-	cb.attribute("onClick",
-		     "if (this.checked) selectRepo(this, this.form);");
-	tbl.add(cb);
-	if (repoFlg) {
-	  java.util.List existingRepoNames = rs.getRepoNames();
-	  log.debug2("existingRepoNames: " + existingRepoNames + ", " + auid);
-	  String firstRepo = null;
-	  if (existingRepoNames != null && !existingRepoNames.isEmpty()) {
-	    firstRepo = (String)existingRepoNames.get(0);
-	    isAnyAssignedRepo = true;
-	  }
-	  int ix = 1;
-	  for (Iterator riter = repos.iterator(); riter.hasNext(); ix++) {
-	    String repo = (String)riter.next();
-	    tbl.newCell("align=center");
-	    if (firstRepo == null) {
-	      tbl.add(radioButton(null, Integer.toString(ix),
-				  KEY_REPO + "_" + auid, false));
-	    } else if (repo.equals(firstRepo)) {
-	      tbl.add(radioButton(null, Integer.toString(ix),
-				  KEY_REPO + "_" + auid, true));
-	    } else {
-	    }
-	  }
-	} else if (reposSize > 0) {
-	  tbl.newCell("colspan=" + reposSize);
-	}
-	tbl.newCell();
-	tbl.add(rs.getName());
-	TitleConfig tc = rs.getTitleConfig();
-	long est;
-	if (isAdd && tc != null && (est = tc.getEstimatedSize()) != 0) {
-	  tbl.newCell("align=right");
-	  long mb = (est + (512 * 1024)) / (1024 * 1024);
-	  tbl.add(Long.toString(Math.max(mb, 1)));
-	}
-      }
-    }
-
-    if (bas.hasAtLeast(LONG_TABLE_AT_LEAST)) {
-      tbl.newRow();
-      tbl.newCell();
-      tbl.add(getSelectAllButtons());
-    }
-
-    if (repoFootElement != null && isAnyAssignedRepo) {
-      repoFootElement.add(addFootnote(FOOT_REPO_CHOICE));
-    }
-    return tbl;
-  }
-
-  Table getSelectAllButtons() {
-    Table tbl = new Table(0, "cellspacing=4 cellpadding=0");
-    tbl.newRow();
-    tbl.newCell("align=right");
-    tbl.add(jsButton("Select All", "selectAll(this.form, 0);"));
-    tbl.newRow();
-    tbl.newCell("align=right");
-    tbl.add(jsButton("Clear All", "selectAll(this.form, 1);"));
-    return tbl;
   }
 
   Collection findTitleSetsFromNames(String[] names) {
@@ -632,48 +583,16 @@ public class BatchAuConfig extends LockssServlet {
     }
   }
 
-  // Character version - unused
-//   /** Serve the contents of the local AU config file, as
-//    * application/binary */
-//   private void doSaveAll0() throws IOException {
-//     try {
-//       InputStream is = remoteApi.getAuConfigBackupStream(getMachineName());
-//       Reader rdr = new InputStreamReader(is, Constants.DEFAULT_ENCODING);
-//       PrintWriter wrtr = resp.getWriter();
-//       resp.setContentType("application/binary");
-//       StreamUtil.copy(rdr, wrtr);
-//       rdr.close();
-//     } catch (FileNotFoundException e) {
-//       errMsg = "No AUs have been configured - nothing to backup";
-//       displayMenu();
-//     } catch (IOException e) {
-//       log.warning("doSaveAll()", e);
-//       throw e;
-//     }
-//   }
-
   /** Display the Restore page */
   private void displayRestore() throws IOException {
     Page page = newPage();
     addJavaScript(page);
     layoutErrorBlock(page);
-    Form frm = new Form(srvURL(myServletDescr()));
-    frm.method("POST");
-    frm.attribute("enctype", "multipart/form-data");
-    frm.add(new Input(Input.Hidden, ACTION_TAG));
-    frm.add(new Input(Input.Hidden, KEY_VERB, VERB_RESTORE.valStr));
-    Table tbl = new Table(0, "align=center cellspacing=4 cellpadding=0");
-    tbl.newRow();
-    tbl.newCell("align=center");
-    tbl.add("Enter name of AU configuration backup file");
-    tbl.newRow();
-    tbl.newCell("align=center");
-    tbl.add(new Input(Input.File, "AuConfigBackupContents"));
-    tbl.newRow();
-    tbl.newCell("align=center");
-    tbl.add(submitButton("Restore", ACTION_SELECT_RESTORE_TITLES));
-    frm.add(tbl);
-    page.add(frm);
+    MutableInteger buttonNumber = new MutableInteger(submitButtonNumber);
+    ServletUtil.layoutRestore(this, page, ACTION_TAG, KEY_VERB,
+        VERB_RESTORE, "AuConfigBackupContents", buttonNumber,
+        ACTION_SELECT_RESTORE_TITLES);
+    submitButtonNumber = buttonNumber.intValue();
     endPage(page);
   }
 
@@ -705,7 +624,7 @@ public class BatchAuConfig extends LockssServlet {
     java.util.List statusList = status.getStatusList();
     int okCnt = status.getOkCnt();
     int errCnt = statusList.size() - okCnt;
-    layoutExplanationBlock(page, okCnt + " AUs " + verb.past +
+    ServletUtil.layoutExplanationBlock(page, okCnt + " AUs " + verb.past +
         ", " + errCnt + " skipped");
     Table tbl = new Table(0, "align=center cellspacing=4 cellpadding=0");
     tbl.addHeading("Status");

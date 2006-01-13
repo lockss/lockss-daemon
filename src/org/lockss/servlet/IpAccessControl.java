@@ -1,10 +1,10 @@
 /*
- * $Id: IpAccessControl.java,v 1.32 2005-12-01 23:28:01 troberts Exp $
+ * $Id: IpAccessControl.java,v 1.33 2006-01-13 22:44:31 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -152,16 +152,16 @@ public abstract class IpAccessControl extends LockssServlet {
       throws IOException {
     // Create and start laying out page
     Page page = newPage();
-    layoutExplanationBlock(page, getExplanation());
+    ServletUtil.layoutExplanationBlock(page, getExplanation());
     page.add("<br>");
 
     // Create and layout form
-    Form form = newForm();
+    Form form = ServletUtil.newForm(srvURL(myServletDescr()));
     layoutErrorBlock(form);
-    layoutIpAllowDenyTable(form, incl, excl, footIP, inclErrs,
-        exclErrs, ALLOW_IPS_NAME, DENY_IPS_NAME);
+    ServletUtil.layoutIpAllowDenyTable(this, form, incl, excl, footIP,
+        inclErrs, exclErrs, ALLOW_IPS_NAME, DENY_IPS_NAME);
     additionalFormLayout(form);
-    layoutSubmitButton(form, "Update");
+    ServletUtil.layoutSubmitButton(this, form, "Update");
     page.add(form);
 
     // Finish laying out page

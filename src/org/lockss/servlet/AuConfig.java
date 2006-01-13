@@ -1,10 +1,10 @@
 /*
- * $Id: AuConfig.java,v 1.46 2005-10-14 21:24:13 thib_gc Exp $
+ * $Id: AuConfig.java,v 1.47 2006-01-13 22:44:31 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -178,7 +178,7 @@ public class AuConfig extends LockssServlet {
     Collection allAUs = remoteApi.getAllAus();
     addJavaScript(page);
     layoutErrorBlock(page);
-    layoutExplanationBlock(page, "Add a new Archival Unit" +
+    ServletUtil.layoutExplanationBlock(page, "Add a new Archival Unit" +
 	(allAUs.isEmpty() ? "." : ", or edit an existing one."));
 
     Form frm = new Form(srvURL(myServletDescr()));
@@ -238,7 +238,7 @@ public class AuConfig extends LockssServlet {
     fetchAuConfig(au);
 
     layoutErrorBlock(page);
-    layoutExplanationBlock(page,
+    ServletUtil.layoutExplanationBlock(page,
         "Editing configuration of: " + encodedAuName(au));
 
     java.util.List actions = ListUtil.list("Deactivate", "Delete");
@@ -256,7 +256,7 @@ public class AuConfig extends LockssServlet {
     fetchAuConfig(au);
 
     layoutErrorBlock(page);
-    layoutExplanationBlock(page,
+    ServletUtil.layoutExplanationBlock(page,
         "Restoring configuration of: " + encodedAuName(au));
 
     java.util.List actions =
@@ -279,7 +279,7 @@ public class AuConfig extends LockssServlet {
       return;
     }
     layoutErrorBlock(page);
-    layoutExplanationBlock(page,
+    ServletUtil.layoutExplanationBlock(page,
         "Reactivating: " + encodedAuName(au));
 
     java.util.List actions =
@@ -355,7 +355,7 @@ public class AuConfig extends LockssServlet {
       exp.append(" choose a repository, ");
     }
     exp.append("then click Create");
-    layoutExplanationBlock(page, exp.toString());
+    ServletUtil.layoutExplanationBlock(page, exp.toString());
 
     Form frm = createAuEditForm(ListUtil.list("Create"), null, true);
     // Ensure still have title info if come back here on error
@@ -376,7 +376,7 @@ public class AuConfig extends LockssServlet {
 		  + " plugin, then filling in a set of parameters.  "
 		  + "Predefined titles implicitly specify a plugin and "
 		  + "some of the parameter values.");
-    layoutExplanationBlock(page, addExp);
+    ServletUtil.layoutExplanationBlock(page, addExp);
 
     Form frm = new Form(srvURL(myServletDescr()));
     frm.method("POST");
@@ -769,7 +769,7 @@ public class AuConfig extends LockssServlet {
     fetchAuConfig(au);
 
     layoutErrorBlock(page);
-    layoutExplanationBlock(page, "Are you sure you want to delete" +
+    ServletUtil.layoutExplanationBlock(page, "Are you sure you want to delete" +
 	addFootnote(deleteFoot) + ": " + encodedAuName(au));
 
     Form frm = createAuEditForm(ListUtil.list("Confirm Delete"),
@@ -811,7 +811,7 @@ public class AuConfig extends LockssServlet {
     fetchAuConfig(au);
 
     layoutErrorBlock(page);
-    layoutExplanationBlock(page, "Are you sure you want to deactivate" +
+    ServletUtil.layoutExplanationBlock(page, "Are you sure you want to deactivate" +
         addFootnote(deactivateFoot) + ": " + encodedAuName(au));
 
     Form frm = createAuEditForm(ListUtil.list("Confirm Deactivate"),

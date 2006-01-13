@@ -1,10 +1,10 @@
 /*
- * $Id: ProxyIpAccess.java,v 1.19 2005-12-10 00:16:51 thib_gc Exp $
+ * $Id: ProxyIpAccess.java,v 1.20 2006-01-13 22:44:31 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -210,12 +210,12 @@ public class ProxyIpAccess extends IpAccessControl {
     final String ATTRIBUTES = "align=\"center\" cellpadding=\"10\"";
 
     Table tbl = new Table(BORDER, ATTRIBUTES);
-    layoutEnablePortRow(tbl, AUDIT_ENABLE_NAME, getDefaultAuditEnable(), "audit proxy",
-        AUDIT_FOOT, FILTER_FOOT, AUDIT_PORT_NAME, getDefaultAuditPort(),
+    ServletUtil.layoutEnablePortRow(this, tbl, AUDIT_ENABLE_NAME, getDefaultAuditEnable(),
+        "audit proxy", AUDIT_FOOT, FILTER_FOOT, AUDIT_PORT_NAME, getDefaultAuditPort(),
         resourceMgr.getUsableTcpPorts(AuditProxyManager.SERVER_NAME));
     if (getLockssDaemon().getIcpManager().isIcpServerAllowed()) {
-      layoutEnablePortRow(tbl, ICP_ENABLE_NAME, getDefaultIcpEnable(), "ICP server",
-          ICP_FOOT, FILTER_FOOT, ICP_PORT_NAME, getDefaultIcpPort(),
+      ServletUtil.layoutEnablePortRow(this, tbl, ICP_ENABLE_NAME, getDefaultIcpEnable(),
+          "ICP server", ICP_FOOT, FILTER_FOOT, ICP_PORT_NAME, getDefaultIcpPort(),
           resourceMgr.getUsableUdpPorts(AuditProxyManager.SERVER_NAME));
     }
     else {
