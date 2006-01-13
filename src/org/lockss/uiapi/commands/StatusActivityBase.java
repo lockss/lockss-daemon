@@ -1,5 +1,5 @@
 /*
- * $Id: StatusActivityBase.java,v 1.5 2005-12-01 23:28:01 troberts Exp $
+ * $Id: StatusActivityBase.java,v 1.6 2006-01-13 23:21:06 thib_gc Exp $
  */
 
 /*
@@ -114,7 +114,6 @@ public class StatusActivityBase extends ApiActivityBase
   /**
    * Get daemon uptime
    * @param rootElement Parent element for disk space detail
-   * @returns Formatted time since daemon start
    */
   protected void renderUptimeXml(Element rootElement) {
 

@@ -1,5 +1,5 @@
 /*
- * $Id: OaiCrawler.java,v 1.14 2005-10-20 16:43:31 troberts Exp $
+ * $Id: OaiCrawler.java,v 1.15 2006-01-13 23:21:06 thib_gc Exp $
  */
 
 /*
@@ -90,7 +90,7 @@ public class OaiCrawler extends FollowLinkCrawler {
    * options: just fetch those (as they match the crawl rules) or use those
    * as a starting point for the rest of our crawl.  We call the latter "follow
    * link mode".
-   * @returns false if the crawl encountered fatal errors, false otherwise
+   * @return false if the crawl encountered fatal errors, false otherwise
    */
   protected boolean doCrawl0(){ //this shouldn't be there at all, as it does nothing
     if (shouldFollowLink() ) {

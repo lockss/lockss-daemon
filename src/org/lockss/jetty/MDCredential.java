@@ -1,5 +1,5 @@
 /*
- * $Id: MDCredential.java,v 1.5 2005-10-11 05:44:38 tlipkis Exp $
+ * $Id: MDCredential.java,v 1.6 2006-01-13 23:21:06 thib_gc Exp $
  */
 
 /*
@@ -53,7 +53,7 @@ public class MDCredential extends Credential {
    * ALG:DIGEST
    * @param credential String representation of the credential
    * @return A MDCredential instance.
-   * @throw NoSuchAlgorithmException
+   * @throws NoSuchAlgorithmException
    */
   public static MDCredential makeCredential(String credential)
       throws NoSuchAlgorithmException {

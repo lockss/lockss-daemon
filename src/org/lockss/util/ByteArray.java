@@ -1,5 +1,5 @@
 /*
- * $Id: ByteArray.java,v 1.9 2005-11-16 07:44:09 smorabito Exp $
+ * $Id: ByteArray.java,v 1.10 2006-01-13 23:21:06 thib_gc Exp $
  */
 
 /*
@@ -137,7 +137,7 @@ public class ByteArray {
    * Return a pseudo-random array of bytes of length len.
    *
    * @param len The size of the array to return.
-   * @returns A pseudo-random array of bytes.
+   * @return A pseudo-random array of bytes.
    */
   public static byte[] makeRandomBytes(int len) {
     byte[] retVal = new byte[len];

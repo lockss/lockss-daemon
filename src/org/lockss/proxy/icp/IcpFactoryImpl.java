@@ -1,5 +1,5 @@
 /*
- * $Id: IcpFactoryImpl.java,v 1.18 2006-01-03 22:12:11 thib_gc Exp $
+ * $Id: IcpFactoryImpl.java,v 1.19 2006-01-13 23:21:06 thib_gc Exp $
  */
 
 /*
@@ -535,7 +535,7 @@ public class IcpFactoryImpl implements IcpFactory {
 
     /**
      * <p>Builds an ICP query message by invoking
-     * {@link #IcpMessageImpl(byte, byte, short, int, int, int, IPAddr, String)}
+     * <code>IcpMessageImpl#IcpMessageImpl(byte, byte, short, int, int, int, IPAddr, String)}</code>
      * and initializing the requester field with the given
      * argument.</p>
      * @param opcode        An ICP opcode.
@@ -604,8 +604,8 @@ public class IcpFactoryImpl implements IcpFactory {
 
     /**
      * <p>Builds an ICP hit-object message by invoking
-     * {@link IcpMessageImpl#IcpMessageImpl(byte, byte, short, int,
-     * int, int, IPAddr, IPAddr, String)} and by initializing the
+     * <code>IcpMessageImpl(byte, byte, short, int, int, int, IPAddr, IPAddr, String)}</code>
+     * and by initializing the
      * payload object and payload object length fields with the given
      * arguments.</p>
      * @param opcode              An ICP opcode.

@@ -1,5 +1,5 @@
 /*
- * $Id: ObjectSerializer.java,v 1.14 2005-12-01 23:28:00 troberts Exp $
+ * $Id: ObjectSerializer.java,v 1.15 2006-01-13 23:21:06 thib_gc Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import org.lockss.config.CurrentConfig;
  * to XML.</p>
  * <p>Unit tests for classes that extend this class must themselves
  * extend the abstract unit test for this class,
- * {@link ObjectSerializerTester}.</p>
+ * <code>org.lockss.util.ObjectSerializerTester</code>.</p>
  * @author Thib Guicherd-Callin
  */
 public abstract class ObjectSerializer {
