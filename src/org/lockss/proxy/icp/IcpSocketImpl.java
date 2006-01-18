@@ -1,5 +1,5 @@
 /*
- * $Id: IcpSocketImpl.java,v 1.12 2005-12-01 23:28:02 troberts Exp $
+ * $Id: IcpSocketImpl.java,v 1.13 2006-01-18 01:37:33 thib_gc Exp $
  */
 
 /*
@@ -140,10 +140,14 @@ public class IcpSocketImpl extends LockssRunnable implements IcpSocket {
    * and to exit cleanly <em>after closing the socket</em>.</p>
    */
   public void requestStop() {
+    logger.debug3("requestStop: begin");
     goOn = false;
     if (socket != null && !socket.isClosed()) {
+      logger.debug3("requestStop: before close(), port: " + socket.getPort());
       socket.close();
+      logger.debug3("requestStop: after close(), port: " + socket.getPort());
     }
+    logger.debug3("requestStop: end");
   }
 
   /* Inherit documentation */
