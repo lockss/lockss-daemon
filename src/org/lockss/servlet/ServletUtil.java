@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.23 2006-01-13 23:59:54 thib_gc Exp $
+ * $Id: ServletUtil.java,v 1.24 2006-01-19 00:32:07 thib_gc Exp $
  */
 
 /*
@@ -39,7 +39,8 @@ import java.util.List;
 
 import org.lockss.daemon.*;
 import org.lockss.jetty.MyTextArea;
-import org.lockss.remote.RemoteApi;
+import org.lockss.plugin.PluginManager;
+import org.lockss.remote.*;
 import org.lockss.remote.RemoteApi.BatchAuStatus;
 import org.lockss.remote.RemoteApi.BatchAuStatus.Entry;
 import org.lockss.servlet.BatchAuConfig.Verb;
@@ -144,6 +145,17 @@ public class ServletUtil {
     "align=\"center\" cellspacing=\"4\" cellpadding=\"0\"";
 
   private static final int AUSTATUS_TABLE_BORDER = 0;
+
+  private static final String AUSUMMARY_BUTTONCELL_ATTRIBUTES =
+    "align=\"right\" valign=\"center\"";
+
+  private static final String AUSUMMARY_TABLE_ATTRIBUTES =
+    "align=\"center\" cellspacing=\"4\" cellpadding=\"0\"";
+
+  private static final int AUSUMMARY_TABLE_BORDER = 0;
+
+  private static final String AUSUMMARY_TEXTCELL_ATTRIBUTES =
+    "valign=\"center\"";
 
   private static final String BACKLINK_AFTER =
     "</center>";
@@ -392,6 +404,72 @@ public class ServletUtil {
     page.add(tbl);
   }
 
+  /**
+   * <p>Lays out an HTML form onto the given page, with a button to
+   * add an AU, and many buttons to restore, reactivate or edit
+   * AUs.</p>
+   * @param servlet             The servlet building the form.
+   * @param buttonNumber        The servlet's button counter.
+   * @param remoteApi           A reference to the remote API.
+   * @param page                The page onto which the form will be
+   *                            built.
+   * @param formUrl             The form's POST URL.
+   * @param formId              The form's identifier.
+   * @param tableId             The table's identifier.
+   * @param hiddenActionName    The action parameter name.
+   * @param activeAuProxyIter   An iterator of {@link AuProxy}
+   *                            instances for the active AUs.
+   * @param inactiveAuProxyIter An iterator of {@link AuProxy}
+   *                            instances for the inactive AUs.
+   * @param auIdName            The AU ID parameter name.
+   * @param addAction           The "add" action name.
+   * @param restoreAction       The "restore" action name.
+   * @param reactivateAction    The "reactivate" action name.
+   * @param editAction          The "edit" action name.
+   */
+  public static void layoutAuSummary(LockssServlet servlet,
+                                     MutableInteger buttonNumber,
+                                     RemoteApi remoteApi,
+                                     Page page,
+                                     String formUrl,
+                                     String formId,
+                                     String tableId,
+                                     String hiddenActionName,
+                                     Iterator activeAuProxyIter,
+                                     Iterator inactiveAuProxyIter,
+                                     String auIdName,
+                                     String addAction,
+                                     String restoreAction,
+                                     String reactivateAction,
+                                     String editAction) {
+    // Start form
+    Form frm = newForm(formUrl);
+    frm.attribute("id", formId);
+    frm.add(new Input(Input.Hidden, hiddenActionName));
+    frm.add(new Input(Input.Hidden, auIdName, ""));
+
+    // Start table
+    Table tbl = new Table(AUSUMMARY_TABLE_BORDER, AUSUMMARY_TABLE_ATTRIBUTES);
+    tbl.attribute("id", tableId);
+    tbl.newRow();
+    tbl.newCell(AUSUMMARY_BUTTONCELL_ATTRIBUTES);
+    tbl.add(submitButton(servlet, buttonNumber, "Add", addAction));
+    tbl.newCell(AUSUMMARY_TEXTCELL_ATTRIBUTES);
+    tbl.add("Add new Archival Unit");
+
+    // Layout rows
+    layoutAuSummaryRows(servlet, buttonNumber, remoteApi, tbl,
+        activeAuProxyIter, auIdName, restoreAction,
+        reactivateAction, editAction);
+    layoutAuSummaryRows(servlet, buttonNumber, remoteApi, tbl,
+        inactiveAuProxyIter, auIdName, restoreAction,
+        reactivateAction, editAction);
+
+    // End
+    frm.add(tbl);
+    page.add(frm);
+  }
+
   public static void layoutBackLink(LockssServlet servlet,
                                     Page page,
                                     String destination) {
@@ -618,9 +696,7 @@ public class ServletUtil {
     tbl.add(new Input(Input.File, "AuConfigBackupContents"));
     tbl.newRow();
     tbl.newCell(ALIGN_CENTER);
-    buttonNumber.add(1);
-    tbl.add(submitButton(servlet, buttonNumber.intValue(),
-        "Restore", backupFileButtonAction));
+    tbl.add(submitButton(servlet, buttonNumber, "Restore", backupFileButtonAction));
     frm.add(tbl);
     page.add(frm);
   }
@@ -655,9 +731,7 @@ public class ServletUtil {
     if (isLong) {
       tbl.newRow();
       tbl.newCell(ALIGN_CENTER + " colspan=\"" + maxCols + "\"");
-      buttonNumber.add(1);
-      tbl.add(submitButton(servlet, buttonNumber.intValue(),
-          buttonText, verb.action()));
+      tbl.add(submitButton(servlet, buttonNumber, buttonText, verb.action()));
     }
 
     tbl.newRow();
@@ -747,9 +821,7 @@ public class ServletUtil {
 
     tbl.newRow();
     tbl.newCell(ALIGN_CENTER + " colspan=\"" + maxCols + "\"");
-    buttonNumber.add(1);
-    tbl.add(submitButton(servlet, buttonNumber.intValue(),
-        buttonText, verb.action()));
+    tbl.add(submitButton(servlet, buttonNumber, buttonText, verb.action()));
 
     return tbl;
   }
@@ -776,9 +848,7 @@ public class ServletUtil {
     tbl.newRow();
     topRow = tbl.row();
     tbl.newCell(CHOOSESETS_BUTTONROW_ATTRIBUTES);
-    buttonNumber.add(1);
-    tbl.add(submitButton(servlet, buttonNumber.intValue(),
-        submitText, submitAction));
+    tbl.add(submitButton(servlet, buttonNumber, submitText, submitAction));
 
     // Iterate over title sets
     while (titleSetIterator.hasNext()) {
@@ -813,9 +883,7 @@ public class ServletUtil {
       // Add bottom row
       tbl.newRow();
       tbl.newCell(CHOOSESETS_BUTTONROW_ATTRIBUTES);
-      buttonNumber.add(1);
-      tbl.add(submitButton(servlet, buttonNumber.intValue(),
-          submitText, submitAction));
+      tbl.add(submitButton(servlet, buttonNumber, submitText, submitAction));
     }
 
     return tbl;
@@ -964,6 +1032,56 @@ public class ServletUtil {
     return btn;
   }
 
+  /**
+   * <p>Lays out summary rows in the AU summary table, each row being
+   * either "restore", "reactivate" or "edit" depending on the AU.</p>
+   * @param servlet          The servlet building the form.
+   * @param buttonNumber     The servlet's button counter.
+   * @param remoteApi        A reference to the remote API.
+   * @param tbl              The table into which rows will be added.
+   * @param auProxyIter      An iterator of {@link AuProxy}
+   *                         instances for the AUs.
+   * @param auIdName         The AU ID parameter name.
+   * @param restoreAction    The "restore" action name.
+   * @param reactivateAction The "reactivate" action name.
+   * @param editAction       The "edit" action name.
+
+   * @see #layoutAuSummary(LockssServlet, MutableInteger, RemoteApi, Page, String, String, String, String, Iterator, Iterator, String, String, String, String, String)
+   */
+  private static void layoutAuSummaryRows(LockssServlet servlet,
+                                          MutableInteger buttonNumber,
+                                          RemoteApi remoteApi,
+                                          Table tbl,
+                                          Iterator auProxyIter,
+                                          String auIdName,
+                                          String restoreAction,
+                                          String reactivateAction,
+                                          String editAction) {
+    while (auProxyIter.hasNext()) {
+      AuProxy au = (AuProxy)auProxyIter.next();
+      Configuration cfg = remoteApi.getStoredAuConfiguration(au);
+      boolean isGray = true;
+      String act;
+
+      if (cfg.isEmpty()) {
+        act = restoreAction;
+      }
+      else if (cfg.getBoolean(PluginManager.AU_PARAM_DISABLED, false)) {
+        act = reactivateAction;
+      }
+      else {
+        act = editAction;
+        isGray = false;
+      }
+
+      tbl.newRow();
+      tbl.newCell(AUSUMMARY_BUTTONCELL_ATTRIBUTES);
+      tbl.add(submitButton(servlet, buttonNumber, act, act, auIdName, au.getAuId()));
+      tbl.newCell(AUSUMMARY_TEXTCELL_ATTRIBUTES);
+      tbl.add(gray(HtmlUtil.encode(au.getName(), HtmlUtil.ENCODE_TEXT), isGray));
+    }
+  }
+
   private static void layoutFootnote(Composite comp,
                                      String footnote,
                                      int nth) {
@@ -1082,7 +1200,7 @@ public class ServletUtil {
   /** Return a button that invokes the javascript submit routine with the
    * specified action */
   private static Element submitButton(LockssServlet servlet,
-                                      int buttonNumber,
+                                      MutableInteger buttonNumber,
                                       String label,
                                       String action) {
     return submitButton(servlet, buttonNumber, label, action, null, null);
@@ -1092,11 +1210,12 @@ public class ServletUtil {
    * specified action, first storing the value in the specified form
    * prop. */
   private static Element submitButton(LockssServlet servlet,
-                                      int buttonNumber,
+                                      MutableInteger buttonNumber,
                                       String label,
                                       String action,
                                       String prop,
                                       String value) {
+    buttonNumber.add(1);
     StringBuffer sb = new StringBuffer(40);
     sb.append("lockssButton(this, '");
     sb.append(action);

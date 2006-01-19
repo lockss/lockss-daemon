@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.47 2006-01-13 22:44:31 thib_gc Exp $
+ * $Id: AuConfig.java,v 1.48 2006-01-19 00:32:07 thib_gc Exp $
  */
 
 /*
@@ -32,22 +32,17 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.servlet;
 
-import javax.servlet.http.*;
-import javax.servlet.*;
-import java.io.*;
+import java.io.IOException;
 import java.util.*;
-import java.net.*;
-import java.text.*;
 
-import org.mortbay.html.*;
-import org.mortbay.servlet.MultiPartRequest;
-import org.lockss.util.*;
+import javax.servlet.*;
+
+import org.lockss.config.*;
+import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.remote.*;
-import org.lockss.config.ConfigManager;
-import org.lockss.config.Configuration;
-import org.lockss.daemon.*;
-import org.lockss.daemon.status.*;
+import org.lockss.util.*;
+import org.mortbay.html.*;
 
 /** Create and update AU configuration.
  */
@@ -71,6 +66,11 @@ public class AuConfig extends LockssServlet {
   // prefix added to config prop keys when used in form, to avoid
   // accidental collisions
   static final String FORM_PREFIX = "lfp.";
+
+  private static final String ACTION_ADD = "Add";
+  private static final String ACTION_RESTORE = "Restore";
+  private static final String ACTION_REACTIVATE = "Reactivate";
+  private static final String ACTION_EDIT = "Edit";
 
   private PluginManager pluginMgr;
   private ConfigManager configMgr;
@@ -167,69 +167,42 @@ public class AuConfig extends LockssServlet {
   /** Display "Add Archival Unit" button and list of configured AUs with Edit
    * buttons */
   private void displayAuSummary() throws IOException {
-    // If the AUs are not started, don't display any AU summary or
-    // any form inputs.
+    // If the AUs are not started, don't display any AU summary or any form inputs.
     if (!pluginMgr.areAusStarted()) {
       displayNotStarted();
       return;
     }
 
+    // Local variables
+    Collection allAus = remoteApi.getAllAus();
+    Collection inactiveAus = remoteApi.getInactiveAus();
+
     Page page = newPage();
-    Collection allAUs = remoteApi.getAllAus();
     addJavaScript(page);
     layoutErrorBlock(page);
-    ServletUtil.layoutExplanationBlock(page, "Add a new Archival Unit" +
-	(allAUs.isEmpty() ? "." : ", or edit an existing one."));
+    ServletUtil.layoutExplanationBlock(page,
+          "Add a new Archival Unit"
+        + (allAus.isEmpty() ? "." : ", or edit an existing one."));
 
-    Form frm = new Form(srvURL(myServletDescr()));
-    frm.method("POST");
-    // make form findable by unit tests
-    frm.attribute("id", "AuSummaryForm");
-    frm.add("<input type=hidden name=\"" + ACTION_TAG + "\">");
-    addAuId(frm, null);
-    Table tbl = new Table(0, "align=center cellspacing=4 cellpadding=0");
-    // make table findable by unit tests
-    tbl.attribute("id", "AuSummaryTable");
-    addAddAuRow(tbl);
-    for (Iterator iter = allAUs.iterator(); iter.hasNext(); ) {
-      addAuSummaryRow(tbl, (AuProxy)iter.next());
-    }
-    Collection inactiveAUs = remoteApi.getInactiveAus();
-    for (Iterator iter = inactiveAUs.iterator(); iter.hasNext(); ) {
-      addAuSummaryRow(tbl, (AuProxy)iter.next());
-    }
-    frm.add(tbl);
-    page.add(frm);
+    MutableInteger buttonNumber = new MutableInteger(submitButtonNumber);
+    ServletUtil.layoutAuSummary(this,
+                                buttonNumber,
+                                remoteApi,
+                                page,
+                                srvURL(myServletDescr()),
+                                "AuSummaryForm",
+                                "AuSummaryTable",
+                                ACTION_TAG,
+                                allAus.iterator(),
+                                inactiveAus.iterator(),
+                                "auid",
+                                ACTION_ADD,
+                                ACTION_RESTORE,
+                                ACTION_REACTIVATE,
+                                ACTION_EDIT);
+    submitButtonNumber = buttonNumber.intValue();
+
     endPage(page);
-  }
-
-  /** Add the "Add" row to the table */
-  private void addAddAuRow(Table tbl) {
-    tbl.newRow();
-    tbl.newCell("align=right valign=center");
-    tbl.add(submitButton("Add", "Add"));
-    tbl.newCell("valign=center");
-    tbl.add("Add new Archival Unit");
-  }
-
-  /** Add an Edit row to the table */
-  private void addAuSummaryRow(Table tbl, AuProxy au) {
-    Configuration cfg = remoteApi.getStoredAuConfiguration(au);
-    boolean isGrey = true;
-    String act;
-    if (cfg.isEmpty()) {
-      act = "Restore";
-    } else if (cfg.getBoolean(PluginManager.AU_PARAM_DISABLED, false)) {
-      act = "Reactivate";
-    } else {
-      act = "Edit";
-      isGrey = false;
-    }
-    tbl.newRow();
-    tbl.newCell("align=right valign=center");
-    tbl.add(submitButton(act, act, "auid", au.getAuId()));
-    tbl.newCell("valign=center");
-    tbl.add(greyText(encodedAuName(au), isGrey));
   }
 
   /** Display form to edit existing AU */
