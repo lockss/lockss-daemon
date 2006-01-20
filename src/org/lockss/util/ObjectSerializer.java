@@ -1,10 +1,10 @@
 /*
- * $Id: ObjectSerializer.java,v 1.15 2006-01-13 23:21:06 thib_gc Exp $
+ * $Id: ObjectSerializer.java,v 1.16 2006-01-20 19:01:03 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2002-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2002-2006 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

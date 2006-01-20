@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.169 2006-01-12 00:47:47 tlipkis Exp $
+ $Id: build.xml,v 1.170 2006-01-20 19:01:03 thib_gc Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -76,7 +76,7 @@ Args:
   -Dsign-alias=alias       Alias to use when signing loadable plugin JARs.
   -Dsign-keypass=pass      Keystore password to use when signing plugin JARs.
   -Dsign-storepass=pass    Private key password to use when signing plugin JARs.
-  -Dmock=pack/age          Specify package for generate-null-mock, 
+  -Dmock=pack/age          Specify package for generate-null-mock,
                               generate-unsupported-mock
 </description>
 
@@ -188,7 +188,7 @@ Args:
   <property name="htmlparser.jar" value="${lib}/htmlparser.jar"/>
   <!-- W3C RDF Parser -->
   <property name="rdf.jar"        value="${lib}/rdf-api-2001-01-19.jar" />
-  <property name="xstream.jar"    value="${lib}/xstream-1.1.2.jar" />
+  <property name="xstream.jar"    value="${lib}/xstream-1.1.3.jar" />
   <property name="xmlunit.jar"    value="${lib}/xmlunit1.0.jar" />
   <property name="oai-harvester.jar" value="${lib}/harvester2-0.1.6L1.jar"/>
   <!-- Needed by OAI harvester -->
@@ -306,14 +306,14 @@ Args:
   <path id="prod.run.classpath">
 <!--     <path refid="test.run.classpath" /> -->
     <path refid="run.classpath" />
-  </path> 
+  </path>
 
   <!-- Packing list isn't really a path but handy way to do it. -->
   <path id="prod.packing.list">
     <path refid="run.classpath" />
     <pathelement path="${production.classpath.file}" />
     <pathelement path="${run.props}" />
-  </path> 
+  </path>
 
   <path id="plugins.compile.classpath">
     <pathelement path="${lockss.jar}" />
@@ -852,7 +852,7 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
       <isset property="titledb" />
       <then>
 	<delete file="${tmp.titledb.file}" quiet="true" />
-      </then>      
+      </then>
     </if>
 
     <if>
@@ -866,7 +866,7 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
 		 alias="${sign-alias}"/>
       </then>
     </if>
-      
+
   </target>
 
   <!-- ==================================================================== -->
@@ -880,7 +880,7 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
 		 storepass="${sign-keypass}"
 		 alias="${sign-alias}"/>
   </target>
-	  
+
   <!-- ==================================================================== -->
 
   <target name="jar-tests" depends="compile-tests"
@@ -1145,7 +1145,7 @@ java -classpath &quot;${tmp.ptool.clspth.unix}&quot; org.lockss.devtools.plugind
 	     additionalparam="-d ${javadoc} -o paramdoc.html"
 	     classpathref="tools.run.classpath"
 	     access="private"/>
-  </target> 
+  </target>
 
   <target name="dot" depends="check.contrib,prepare-javadoc"
    description="Generate drawings from Graphviz DOT files.">
@@ -1880,7 +1880,7 @@ Test results in ${test.results}
   <!-- Additional targets for search -->
 
   <target name="javah" depends="jar-lockss">
-    <javah class="org.lockss.search.JavaUUID" 
+    <javah class="org.lockss.search.JavaUUID"
            outputFile="${tools.src}/JavaUUID.h">
       <classpath refid="test.run.classpath"/>
     </javah>

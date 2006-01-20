@@ -1,10 +1,10 @@
 /*
- * $Id: TestXStreamSerializer.java,v 1.10 2005-11-05 04:29:15 thib_gc Exp $
+ * $Id: TestXStreamSerializer.java,v 1.11 2006-01-20 19:01:02 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
