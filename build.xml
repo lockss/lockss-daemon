@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.170 2006-01-20 19:01:03 thib_gc Exp $
+ $Id: build.xml,v 1.171 2006-01-20 21:30:47 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -418,8 +418,8 @@ Test results in ${test.results}
        </echo>
       </then>
      </if>
-    <junit1 fork="no" printsummary="yes"
-         haltonfailure="${halt}" failureproperty="failed"
+    <junit1 fork="${fork}" printsummary="yes"
+         maxmemory="256m" haltonfailure="${halt}" failureproperty="failed"
          filtertrace="${filtertrace}" showoutput="${showoutput}">
       <junitelem/>
       <formatter type="plain" usefile="@{usefile}" />
@@ -1525,7 +1525,6 @@ Test results in ${test.results}
      <then>
       <dojunit cpid="one.test.run.classpath" usefile="false">
        <junitelem>
-        <jvmarg value="-Xmx128m"/>  <!-- no effect unless both fork=yes -->
         <test fork="${fork}" name="${class}" />
        </junitelem>
       </dojunit>
@@ -1546,7 +1545,6 @@ Test results in ${test.results}
       </if>
       <dojunit cpid="test.run.classpath" usefile="false">
        <junitelem>
-       <jvmarg value="-Xmx128m"/>  <!-- no effect unless both fork=yes -->
        <batchtest fork="${fork}">
 	 <fileset refid="test.one.filesetid"/>
        </batchtest>
