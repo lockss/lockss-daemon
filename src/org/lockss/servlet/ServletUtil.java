@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.24 2006-01-19 00:32:07 thib_gc Exp $
+ * $Id: ServletUtil.java,v 1.25 2006-01-24 00:57:49 thib_gc Exp $
  */
 
 /*
@@ -37,12 +37,12 @@ import java.text.*;
 import java.util.*;
 import java.util.List;
 
+import org.apache.commons.collections.CollectionUtils;
 import org.lockss.daemon.*;
 import org.lockss.jetty.MyTextArea;
 import org.lockss.plugin.PluginManager;
 import org.lockss.remote.*;
 import org.lockss.remote.RemoteApi.BatchAuStatus;
-import org.lockss.remote.RemoteApi.BatchAuStatus.Entry;
 import org.lockss.servlet.BatchAuConfig.Verb;
 import org.lockss.util.*;
 import org.lockss.config.*;
@@ -140,6 +140,20 @@ public class ServletUtil {
 
   private static final String ALLOWDENYERRORS_BEFORE =
     "<font color=\"red\">";
+
+  private static final String AUBUTTONS_TABLE_ATTRIBUTES = "align=\"center\" cellspacing=\"4\" cellpadding=\"0\"";
+
+  private static final int AUBUTTONS_TABLE_BORDER = 0;
+
+  private static final String AUPROPS_CELL_ATTRIBUTES =
+    "colspan=\"2\" align=\"center\"";
+
+  private static final String AUPROPS_PREFIX = "lfp.";
+
+  private static final String AUPROPS_TABLE_ATTRIBUTES =
+    "align=\"center\" cellspacing=\"4\" cellpadding=\"0\"";
+
+  private static final int AUPROPS_TABLE_BORDER = 0;
 
   private static final String AUSTATUS_TABLE_ATTRIBUTES =
     "align=\"center\" cellspacing=\"4\" cellpadding=\"0\"";
@@ -265,6 +279,14 @@ public class ServletUtil {
   private static final String PORT_ATTRIBUTES =
     ALIGN_CENTER;
 
+  private static final String REPOCHOICE_CELL_ATTRIBUTES =
+    "colspan=\"4\" align=\"center\"";
+
+  private static final String REPOCHOICE_TABLE_ATTRIBUTES =
+    "align=\"center\" cellspacing=\"4\" cellpadding=\"0\"";
+
+  private static final int REPOCHOICE_TABLE_BORDER = 0;
+
   private static final String REPOTABLE_ATTRIBUTES =
     "align=\"center\" cellspacing=\"4\" cellpadding=\"0\"";
 
@@ -381,13 +403,95 @@ public class ServletUtil {
     return img;
   }
 
+  public static void layoutAuId(Composite comp,
+                                AuProxy au,
+                                String auIdName) {
+    comp.add(new Input(Input.Hidden,
+                       auIdName,
+                       au != null ? au.getAuId() : ""));
+  }
+
+  public static void layoutAuPropsButtons(LockssServlet servlet,
+                                          Composite comp,
+                                          Iterator actionIter,
+                                          String actionTag) {
+    // Make a one-cell table
+    Table btnsTbl = new Table(AUBUTTONS_TABLE_BORDER, AUBUTTONS_TABLE_ATTRIBUTES);
+    btnsTbl.newRow();
+    btnsTbl.newCell(ALIGN_CENTER);
+
+    while (actionIter.hasNext()) {
+      Object act = actionIter.next();
+      if (act instanceof String) {
+        btnsTbl.add(servlet.setTabOrder(
+            new Input(Input.Submit, actionTag, (String)act)));
+      }
+      else {
+        if (act instanceof Element) {
+          Element ele = (Element)act;
+          servlet.setTabOrder(ele);
+        }
+        btnsTbl.add(act);
+      }
+
+      if (actionIter.hasNext()) {
+        btnsTbl.add(SPACE);
+      }
+    }
+
+    comp.add(btnsTbl);
+  }
+
+  public static void layoutAuPropsTable(LockssServlet servlet,
+                                        Composite comp,
+                                        Iterator configParamDescrIter,
+                                        Collection defKeys,
+                                        Configuration initVals,
+                                        Collection noEditKeys,
+                                        boolean isNew,
+                                        Collection editKeys,
+                                        boolean editable) {
+
+    Table tbl = new Table(AUPROPS_TABLE_BORDER, AUPROPS_TABLE_ATTRIBUTES);
+
+    tbl.newRow();
+    tbl.newCell(AUPROPS_CELL_ATTRIBUTES);
+    tbl.add("Archival Unit Definition");
+    layoutAuPropRows(servlet,
+                    tbl,
+                    configParamDescrIter,
+                    defKeys,
+                    initVals,
+                    isNew ? CollectionUtils.subtract(defKeys, noEditKeys) : null);
+
+    tbl.newRow();
+    if (editKeys.isEmpty()) {
+      if (!isNew && editable) {
+        // nothing
+      }
+    }
+    else {
+      tbl.newRow();
+      tbl.newCell(AUPROPS_CELL_ATTRIBUTES);
+      tbl.add("Other Parameters");
+      layoutAuPropRows(servlet,
+                       tbl,
+                       configParamDescrIter,
+                       editKeys,
+                       initVals,
+                       editable ? editKeys : null);
+    }
+
+    comp.add(tbl);
+  }
+
   public static void layoutAuStatus(Page page,
                                     Iterator auStatusEntryIter) {
     Table tbl = new Table(AUSTATUS_TABLE_BORDER, AUSTATUS_TABLE_ATTRIBUTES);
     tbl.addHeading("Status");
     tbl.addHeading("Archival Unit");
     while (auStatusEntryIter.hasNext()) {
-      Entry stat = (Entry)auStatusEntryIter.next();
+      BatchAuStatus.Entry stat = (BatchAuStatus.Entry)auStatusEntryIter.next();
       tbl.newRow();
       tbl.newCell();
       tbl.add(SPACE);
@@ -675,6 +779,60 @@ public class ServletUtil {
     page.add(table);
   }
 
+  public static void layoutPluginId(Composite comp,
+                                    PluginProxy plugin,
+                                    String pluginIdName) {
+    comp.add(new Input(Input.Hidden,
+                       pluginIdName,
+                       plugin.getPluginId()));
+  }
+
+  public static void layoutRepoChoice(LockssServlet servlet,
+                                      Composite comp,
+                                      RemoteApi remoteApi,
+                                      String repoFootnote,
+                                      String repoTag) {
+    Table tbl = new Table(REPOCHOICE_TABLE_BORDER, REPOCHOICE_TABLE_ATTRIBUTES);
+    List repos = remoteApi.getRepositoryList();
+
+    if (repos.size() > 1) {
+      tbl.newRow();
+      tbl.newCell(REPOCHOICE_CELL_ATTRIBUTES);
+      tbl.add("Select Repository");
+      tbl.add(servlet.addFootnote(repoFootnote));
+
+      tbl.newRow();
+      tbl.addHeading("Repository");
+      tbl.addHeading("Size");
+      tbl.addHeading("Free");
+      tbl.addHeading("%Full");
+
+      boolean first = true;
+      for (Iterator iter = repos.iterator(); iter.hasNext(); ) {
+        String repo = (String)iter.next();
+        PlatformInfo.DF df = remoteApi.getRepositoryDF(repo);
+
+        tbl.newRow();
+        tbl.newCell(ALIGN_LEFT); // "Repository"
+        tbl.add(radioButton(servlet, repo, repoTag, first));
+        if (df != null) {
+          tbl.newCell(ALIGN_RIGHT); // "Size"
+          tbl.add(SPACE);
+          tbl.add(StringUtil.sizeKBToString(df.getSize()));
+          tbl.newCell(ALIGN_RIGHT); // "Free"
+          tbl.add(SPACE);
+          tbl.add(StringUtil.sizeKBToString(df.getAvail()));
+          tbl.newCell(ALIGN_RIGHT); // "%Full"
+          tbl.add(SPACE);
+          tbl.add(df.getPercentString());
+        }
+        first = false;
+      }
+
+      comp.add(tbl);
+    }
+  }
+
   public static void layoutRestore(LockssServlet servlet,
                                    Page page,
                                    String hiddenActionName,
@@ -857,7 +1015,7 @@ public class ServletUtil {
         BatchAuStatus bas = verb.findAusInSetForVerb(remoteApi, set);
         int numOk = 0;
         for (Iterator iter = bas.getStatusList().iterator(); iter.hasNext(); ) {
-          if (((Entry)iter.next()).isOk()) { numOk++; }
+          if (((BatchAuStatus.Entry)iter.next()).isOk()) { numOk++; }
         }
         if (numOk > 0 || doGray) {
           ++actualRows;
@@ -1013,6 +1171,18 @@ public class ServletUtil {
     }
   }
 
+  private static String encodeAttr(String str) {
+    return HtmlUtil.encode(str, HtmlUtil.ENCODE_ATTR);
+  }
+
+  private static String encodeText(String str) {
+    return HtmlUtil.encode(str, HtmlUtil.ENCODE_TEXT);
+  }
+
+  private static String encodeTextArea(String str) {
+    return HtmlUtil.encode(str, HtmlUtil.ENCODE_TEXTAREA);
+  }
+
   /** Add html tags to grey the text if isGrey is true */
   private static String gray(String txt, boolean isGray) {
     if (isGray)
@@ -1030,6 +1200,47 @@ public class ServletUtil {
     servlet.setTabOrder(btn);
     btn.attribute("onClick", js);
     return btn;
+  }
+
+  private static void layoutAuPropRows(LockssServlet servlet,
+                                       Table tbl,
+                                       Iterator configParamDescrIter,
+                                       Collection keys,
+                                       Configuration initVals,
+                                       Collection editableKeys) {
+
+    while (configParamDescrIter.hasNext()) {
+      ConfigParamDescr descr = (ConfigParamDescr)configParamDescrIter.next();
+      if (keys.contains(descr.getKey())) {
+        String key = descr.getKey();
+
+        tbl.newRow();
+        tbl.newCell();
+        tbl.add(HtmlUtil.encode(descr.getDisplayName(), HtmlUtil.ENCODE_TEXT));
+        tbl.add(servlet.addFootnote(encodeText(descr.getDescription())));
+        tbl.add(": ");
+
+        tbl.newCell();
+        String val = initVals != null ? initVals.get(key) : null;
+
+        if (editableKeys != null && editableKeys.contains(key)) {
+          Input in = new Input(Input.Text,
+                               AUPROPS_PREFIX + descr.getKey(),
+                               encodeAttr(val));
+          if (descr.getSize() != 0) {
+            in.setSize(descr.getSize());
+          }
+          servlet.setTabOrder(in);
+          tbl.add(in);
+        }
+        else {
+          tbl.add(encodeText(val));
+          tbl.add(new Input(Input.Hidden,
+                            AUPROPS_PREFIX + descr.getKey(),
+                            encodeAttr(val)));
+        }
+      }
+    }
   }
 
   /**
@@ -1199,10 +1410,10 @@ public class ServletUtil {
 
   /** Return a button that invokes the javascript submit routine with the
    * specified action */
-  private static Element submitButton(LockssServlet servlet,
-                                      MutableInteger buttonNumber,
-                                      String label,
-                                      String action) {
+  public static Element submitButton(LockssServlet servlet,
+                                     MutableInteger buttonNumber,
+                                     String label,
+                                     String action) {
     return submitButton(servlet, buttonNumber, label, action, null, null);
   }
 

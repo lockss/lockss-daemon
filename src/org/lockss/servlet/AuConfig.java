@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.48 2006-01-19 00:32:07 thib_gc Exp $
+ * $Id: AuConfig.java,v 1.49 2006-01-24 00:57:49 thib_gc Exp $
  */
 
 /*
@@ -34,6 +34,8 @@ package org.lockss.servlet;
 
 import java.io.IOException;
 import java.util.*;
+import java.util.List;
+//import java.util.List;
 
 import javax.servlet.*;
 
@@ -69,8 +71,11 @@ public class AuConfig extends LockssServlet {
 
   private static final String ACTION_ADD = "Add";
   private static final String ACTION_RESTORE = "Restore";
+  private static final String ACTION_DO_RESTORE = "DoRestore";
   private static final String ACTION_REACTIVATE = "Reactivate";
+  private static final String ACTION_DO_REACTIVATE = "DoReactivate";
   private static final String ACTION_EDIT = "Edit";
+  private static final String ACTION_DELETE = "Delete";
 
   private PluginManager pluginMgr;
   private ConfigManager configMgr;
@@ -214,7 +219,7 @@ public class AuConfig extends LockssServlet {
     ServletUtil.layoutExplanationBlock(page,
         "Editing configuration of: " + encodedAuName(au));
 
-    java.util.List actions = ListUtil.list("Deactivate", "Delete");
+    List actions = ListUtil.list("Deactivate", "Delete");
     if (!getEditKeys().isEmpty()) {
       actions.add(0, "Update");
     }
@@ -232,9 +237,9 @@ public class AuConfig extends LockssServlet {
     ServletUtil.layoutExplanationBlock(page,
         "Restoring configuration of: " + encodedAuName(au));
 
-    java.util.List actions =
-      ListUtil.list(new Input(Input.Hidden, ACTION_TAG, "DoRestore"),
-		    new Input(Input.Submit, "button", "Restore"));
+    List actions = ListUtil.list(
+        new Input(Input.Hidden, ACTION_TAG, ACTION_DO_RESTORE),
+	new Input(Input.Submit, "button", "Restore"));
     Form frm = createAuEditForm(actions, au, true);
     page.add(frm);
     endPage(page);
@@ -251,13 +256,17 @@ public class AuConfig extends LockssServlet {
       displayAuSummary();
       return;
     }
+
     layoutErrorBlock(page);
     ServletUtil.layoutExplanationBlock(page,
         "Reactivating: " + encodedAuName(au));
 
-    java.util.List actions =
-      ListUtil.list(submitButton("Reactivate", "DoReactivate"),
-		    submitButton("Delete", "Delete"));
+    MutableInteger buttonNumber = new MutableInteger(submitButtonNumber);
+    List actions = ListUtil.list(
+        ServletUtil.submitButton(this, buttonNumber, "Reactivate", ACTION_DO_REACTIVATE),
+        ServletUtil.submitButton(this, buttonNumber, "Delete", ACTION_DELETE));
+    submitButtonNumber = buttonNumber.intValue();
+
     Form frm = createAuEditForm(actions, au, true);
     frm.add("<input type=hidden name=\"" + ACTION_TAG + "\">");
     page.add(frm);
@@ -475,164 +484,62 @@ public class AuConfig extends LockssServlet {
    * @param editable true if the form should be editable.  (Not all the
    * fields will be editable in any case).
    */
-  private Form createAuEditForm(java.util.List actions, AuProxy au,
+  private Form createAuEditForm(List actions,
+                                AuProxy au,
 				boolean editable)
       throws IOException {
-    boolean isNew = au == null;
 
-    Configuration initVals;
+    boolean isNew = au == null;
     Collection noEditKeys = Collections.EMPTY_SET;
+    Configuration initVals;
+
     if (titleConfig != null) {
       initVals = titleConfig.getConfig();
       noEditKeys = titleConfig.getUnEditableKeys();
-    } else if (formConfig != null) {
+    }
+    else if (formConfig != null) {
       initVals = formConfig;
-    } else if (auConfig != null) {
+    }
+    else if (auConfig != null) {
       initVals = auConfig;
-    } else {
+    }
+    else {
       initVals = ConfigManager.EMPTY_CONFIGURATION;
     }
 
-    Form frm = new Form(srvURL(myServletDescr()));
-    frm.method("POST");
+    Form frm = ServletUtil.newForm(srvURL(myServletDescr()));
 
-    Table tbl = new Table(0, "align=center cellspacing=4 cellpadding=0");
-    tbl.newRow();
-    tbl.newCell("colspan=2 align=center");
-    tbl.add("Archival Unit Definition");
-//     tbl.add(isNew ? "Defining Properties" : "Fixed Properties");
+    ServletUtil.layoutAuPropsTable(this,
+                                   frm,
+                                   getAuConfigParams().iterator(),
+                                   getDefKeys(),
+                                   initVals,
+                                   noEditKeys,
+                                   isNew,
+                                   getEditKeys(),
+                                   editable);
 
-//     addPropRows(tbl, getDefKeys(), initVals,
-//		(isNew ? getDefKeys() : null));
-    addPropRows(tbl, getDefKeys(), initVals,
-		(isNew
-		 ? (org.apache.commons.collections.CollectionUtils.
-		    subtract(getDefKeys(), noEditKeys))
-		 : null));
-
-    tbl.newRow();
-    Collection eKeys = getEditKeys();
-    if (eKeys.isEmpty()) {
-      if (!isNew && editable) {
-//	tbl.newRow();
-//	tbl.newCell("colspan=2 align=center");
-//	tbl.add("No Editable Properties");
-      }
-    } else {
-      tbl.newRow();
-      tbl.newCell("colspan=2 align=center");
-      tbl.add("Other Parameters");
-      addPropRows(tbl, eKeys, initVals, editable ? eKeys : null);
-    }
-    frm.add(tbl);
     if (isNew) {
       addRepoChoice(frm);
-    }
-
-    if (isNew) {
       addPlugId(frm, plugin);
     } else {
       addAuId(frm, au);
     }
-    Table btnsTbl = new Table(0, "align=center cellspacing=4 cellpadding=0");
-    btnsTbl.newRow();
-    btnsTbl.newCell("align=center");
-    for (Iterator iter = actions.iterator(); iter.hasNext(); ) {
-      Object act = iter.next();
-      if (act instanceof String) {
-	btnsTbl.add(setTabOrder(new Input(Input.Submit, ACTION_TAG,
-					  (String)act)));
-      } else {
-	if (act instanceof Element) {
-	  // this will include hidden inputs in tab order, but that seems
-	  // to be harmless.
-	  Element ele = (Element)act;
-	  setTabOrder(ele);
-	}
-	btnsTbl.add(act);
-      }
-      if (iter.hasNext()) {
-	btnsTbl.add("&nbsp;");
-      }
-    }
-    frm.add(btnsTbl);
+
+    ServletUtil.layoutAuPropsButtons(this,
+                                     frm,
+                                     actions.iterator(),
+                                     ACTION_TAG);
+
     return frm;
   }
 
   void addRepoChoice(Composite comp) {
-    Table tbl = new Table(0, "align=center cellspacing=4 cellpadding=0");
-    java.util.List repos = remoteApi.getRepositoryList();
-    if (repos.size() > 1) {
-      tbl.newRow();
-      tbl.newCell("colspan=4 align=center");
-      tbl.add("Select Repository");
-      tbl.add(addFootnote(FOOT_REPOSITORY));
-      tbl.newRow();
-      tbl.addHeading("Repository");
-      tbl.addHeading("Size");
-      tbl.addHeading("Free");
-      tbl.addHeading("%Full");
-      boolean first = true;
-      for (Iterator iter = repos.iterator(); iter.hasNext(); ) {
-	String repo = (String)iter.next();
-	PlatformInfo.DF df = remoteApi.getRepositoryDF(repo);
-	tbl.newRow();
-	tbl.newCell("align=left");
-	tbl.add(radioButton(repo, REPO_TAG, first));
-	if (df != null) {
-	  tbl.newCell("align=right");
-	  tbl.add("&nbsp;");
-	  tbl.add(StringUtil.sizeKBToString(df.getSize()));
-	  tbl.newCell("align=right");
-	  tbl.add("&nbsp;");
-	  tbl.add(StringUtil.sizeKBToString(df.getAvail()));
-	  tbl.newCell("align=right");
-	  tbl.add("&nbsp;");
-	  tbl.add(df.getPercentString());
-	}
-	first = false;
-      }
-      comp.add(tbl);
-    }
-  }
-
-  /** Add config props rows to edit AU table.
-   * @param tbl the table
-   * @param keys the kwys to include (subset of those from getAuConfigParams())
-   * @param initVals initial values of fields, or null
-   * @param editableKeys the keys whose values may be edited
-   */
-  private void addPropRows(Table tbl,
-                           Collection keys,
-                           Configuration initVals,
-                           Collection editableKeys) {
-    for (Iterator iter = getAuConfigParams().iterator(); iter.hasNext(); ) {
-      ConfigParamDescr descr = (ConfigParamDescr)iter.next();
-      if (!keys.contains(descr.getKey())) {
-	continue;
-      }
-      String key = descr.getKey();
-      tbl.newRow();
-      tbl.newCell();
-      tbl.add(encodeText(descr.getDisplayName()));
-      tbl.add(addFootnote(encodeText(descr.getDescription())));
-      tbl.add(": ");
-      tbl.newCell();
-      String val = initVals != null ? initVals.get(key) : null;
-      if (editableKeys != null && editableKeys.contains(key)) {
-	Input in = new Input(Input.Text, formKeyFromKey(descr.getKey()),
-			     encodeAttr(val));
-	if (descr.getSize() != 0) {
-	  in.setSize(descr.getSize());
-	}
-	setTabOrder(in);
-	tbl.add(in);
-      } else {
-	tbl.add(encodeText(val));
-	tbl.add(new Input(Input.Hidden, formKeyFromKey(descr.getKey()),
-			  encodeAttr(val)));
-      }
-    }
+    ServletUtil.layoutRepoChoice(this,
+                                 comp,
+                                 remoteApi,
+                                 FOOT_REPOSITORY,
+                                 REPO_TAG);
   }
 
   /** Process the Create button */
@@ -874,13 +781,12 @@ public class AuConfig extends LockssServlet {
 
   /** Add auid to form in a hidden field */
   private void addAuId(Composite comp, AuProxy au) {
-    comp.add(new Input(Input.Hidden, "auid",
-		       au != null ? au.getAuId() : ""));
+    ServletUtil.layoutAuId(comp, au, "auid");
   }
 
   /** Add plugin id to form in a hidden field */
   private void addPlugId(Composite comp, PluginProxy plugin) {
-    comp.add(new Input(Input.Hidden, "PluginId", plugin.getPluginId()));
+    ServletUtil.layoutPluginId(comp, plugin, "PluginId");
   }
 
   /** Common and page adds Back link, footer */
