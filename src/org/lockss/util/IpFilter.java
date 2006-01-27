@@ -1,5 +1,5 @@
 /*
- * $Id: IpFilter.java,v 1.8 2005-08-30 18:23:39 tlipkis Exp $
+ * $Id: IpFilter.java,v 1.9 2006-01-27 04:33:59 tlipkis Exp $
  */
 
 /*
@@ -46,21 +46,34 @@ import org.lockss.app.*;
 public class IpFilter {
   private static Logger log = Logger.getLogger("IpFilter");
 
-  public static char LIST_DELIM = ';';
-
   private Mask[] inclFilters;
   private Mask[] exclFilters;
 
+  /** Return the union of two filter lists */
+  public static String unionFilters(String filters1, String filters2) {
+    List lst1 =
+      StringUtil.breakAt(filters1, Constants.LIST_DELIM_CHAR, 0, true, true);
+    List lst2 =
+      StringUtil.breakAt(filters2, Constants.LIST_DELIM_CHAR, 0, true, true);
+    for (Iterator iter = lst2.iterator(); iter.hasNext(); ) {
+      Object o = iter.next();
+      if (!lst1.contains(o)) {
+	lst1.add(o);
+      }
+    }
+    return StringUtil.separatedString(lst1, Constants.LIST_DELIM);
+  }
+
   public static String addToFilterList(String filterList, String filter) {
     filter = filter.trim();
-    List lst = StringUtil.breakAt(filterList, LIST_DELIM, 0, true, true);
+    List lst = StringUtil.breakAt(filterList, Constants.LIST_DELIM_CHAR, 0, true, true);
     if (lst.isEmpty()) {
       return filter;
     }
     if (lst.contains(filter)) {
       return filterList;
     }
-    return filter + LIST_DELIM + filterList;
+    return filter + Constants.LIST_DELIM + filterList;
   }
 
 
@@ -68,8 +81,8 @@ public class IpFilter {
    */
   public void setFilters(String includeList, String excludeList)
       throws MalformedException {
-    setFilters(StringUtil.breakAt(includeList, LIST_DELIM),
-	       StringUtil.breakAt(excludeList, LIST_DELIM));
+    setFilters(StringUtil.breakAt(includeList, Constants.LIST_DELIM_CHAR),
+	       StringUtil.breakAt(excludeList, Constants.LIST_DELIM_CHAR));
   }
 
   /** Set include and exclude access lists from vectors of Mask strings.

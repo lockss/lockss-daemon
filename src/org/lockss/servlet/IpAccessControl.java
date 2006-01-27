@@ -1,5 +1,5 @@
 /*
- * $Id: IpAccessControl.java,v 1.33 2006-01-13 22:44:31 thib_gc Exp $
+ * $Id: IpAccessControl.java,v 1.34 2006-01-27 04:33:59 tlipkis Exp $
  */
 
 /*
@@ -225,6 +225,8 @@ public abstract class IpAccessControl extends LockssServlet {
 
     props.put(getIncludeParam(), incStr);
     props.put(getExcludeParam(), excStr);
+    // Save current value of platform param so can detect change (in
+    // ConfigManager.appendPlatformAccess()).
     String plat =
       CurrentConfig.getParam(ConfigManager.PARAM_PLATFORM_ACCESS_SUBNET);
     if (!StringUtil.isNullString(plat)) {
