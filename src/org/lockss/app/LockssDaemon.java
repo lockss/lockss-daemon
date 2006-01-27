@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.81 2005-12-01 23:28:01 troberts Exp $
+ * $Id: LockssDaemon.java,v 1.81.4.1 2006-01-27 04:23:05 tlipkis Exp $
  */
 
 /*
@@ -786,7 +786,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
       System.err.println("LOCKSS requires at least Java " + MIN_JAVA_VERSION +
 			 ", this is " + SystemUtils.JAVA_VERSION +
 			 ", exiting.");
-      System.exit(3);
+      System.exit(Constants.EXIT_CODE_JAVA_VERSION);
     }
 
     StartupOptions opts = getStartupOptions(args);
@@ -801,18 +801,18 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
 
     } catch (Throwable e) {
       log.error("Exception thrown in main loop", e);
-      System.exit(1);
+      System.exit(Constants.EXIT_CODE_EXCEPTION_IN_MAIN);
       return;				// compiler doesn't know that
 					// System.exit() doesn't return
     }
     if (CurrentConfig.getBooleanParam(PARAM_APP_EXIT_IMM,
                                       DEFAULT_APP_EXIT_IMM)) {
       daemon.stop();
-      System.exit(0);
+      System.exit(Constants.EXIT_CODE_NORMAL);
     }
     daemon.keepRunning();
     log.info("Exiting because time to die");
-    System.exit(0);
+    System.exit(Constants.EXIT_CODE_NORMAL);
   }
 
   /**

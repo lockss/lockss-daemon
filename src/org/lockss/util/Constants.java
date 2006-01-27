@@ -1,5 +1,5 @@
 /*
- * $Id: Constants.java,v 1.12 2005-10-11 05:48:30 tlipkis Exp $
+ * $Id: Constants.java,v 1.12.8.1 2006-01-27 04:23:05 tlipkis Exp $
  */
 
 /*
@@ -50,6 +50,11 @@ public interface Constants {
   /** The number of milliseconds in a week */
   public static final long WEEK = 7 * DAY;
 
+  /** List delimiter in strings */
+  public static String LIST_DELIM = ";";
+  /** List delimiter char in strings */
+  public static char LIST_DELIM_CHAR = ';';
+
   /** The default timezone, GMT */
   public static final TimeZone DEFAULT_TIMEZONE = TimeZone.getTimeZone("GMT");
 
@@ -87,5 +92,22 @@ public interface Constants {
   /** The real identity of a repairer sending a request to localhost, for
    * testing */
   public static String X_LOCKSS_REAL_ID = "X-Lockss-Id";
+
+  // Exit codes
+
+  /** Exit code - normal exit */
+  public static int EXIT_CODE_NORMAL = 0;
+
+  /** Exit code - thread hung */
+  public static int EXIT_CODE_THREAD_HUNG = 101;
+
+  /** Exit code - thread died */
+  public static int EXIT_CODE_THREAD_EXIT = 102;
+
+  /** Exit code - unsupported Java version */
+  public static int EXIT_CODE_JAVA_VERSION = 103;
+
+  /** Exit code - exception thrown in main loop */
+  public static int EXIT_CODE_EXCEPTION_IN_MAIN = 104;
 
 }
