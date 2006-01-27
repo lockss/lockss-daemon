@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlWindows.java,v 1.9.8.1 2006-01-27 23:09:01 thib_gc Exp $
+ * $Id: CrawlWindows.java,v 1.9.8.2 2006-01-27 23:26:50 thib_gc Exp $
  */
 
 /*
@@ -74,7 +74,7 @@ public class CrawlWindows {
   protected abstract static class BaseCrawlWindow implements CrawlWindow {
     protected transient TimeZone timeZone;
     protected String timeZoneId;
-    Calendar windowCal;
+    transient Calendar windowCal;
 
     /**
      * Constructor takes a {@link TimeZone} for the window.  Null defaults
@@ -119,13 +119,14 @@ public class CrawlWindows {
     protected abstract boolean isMatch(Calendar cal);
 
     protected void postUnmarshal(LockssApp lockssContext) {
-      if (timeZoneId != null && !StringUtil.isNullString(timeZoneId)) {
+      if (!StringUtil.isNullString(timeZoneId)) {
         timeZone = TimeZone.getTimeZone(timeZoneId);
       }
       else {
         timeZone = TimeZone.getDefault();
         timeZoneId = timeZone.getID();
       }
+      windowCal = Calendar.getInstance(timeZone);
     }
   }
 
