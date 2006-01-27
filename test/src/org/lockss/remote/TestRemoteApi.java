@@ -1,5 +1,5 @@
 /*
- * $Id: TestRemoteApi.java,v 1.17 2006-01-09 21:56:16 tlipkis Exp $
+ * $Id: TestRemoteApi.java,v 1.18 2006-01-27 04:34:24 tlipkis Exp $
  */
 
 /*
@@ -695,6 +695,8 @@ public class TestRemoteApi extends LockssTestCase {
       assertEquals("foo@bar", msg.getHeader("To"));
       assertEquals("Backup file for LOCKSS cache lockss42.example.com",
 		   msg.getHeader("Subject"));
+      assertMatchesRE("^\\w\\w\\w, ",
+		      msg.getHeader("Date"));
 
       javax.mail.internet.MimeBodyPart[] parts = msg.getParts();
       assertEquals(2, parts.length);

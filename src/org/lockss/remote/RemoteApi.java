@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.48 2006-01-09 21:56:16 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.49 2006-01-27 04:34:24 tlipkis Exp $
  */
 
 /*
@@ -1451,7 +1451,7 @@ public class RemoteApi
 
 
 
-  DateFormat headerDf = new SimpleDateFormat("EEE dd MMM yyyy HH:mm:ss zzz"
+  DateFormat headerDf = new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss zzz"
 					     /*, Locale.US */);
 //   headerDf.setTimeZone(TimeZone.getTimeZone("GMT"));
 
