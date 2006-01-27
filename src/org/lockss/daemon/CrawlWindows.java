@@ -1,10 +1,10 @@
 /*
- * $Id: CrawlWindows.java,v 1.9 2005-10-07 16:19:55 thib_gc Exp $
+ * $Id: CrawlWindows.java,v 1.9.8.1 2006-01-27 23:09:01 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,6 +34,7 @@ package org.lockss.daemon;
 
 import java.util.*;
 
+import org.lockss.app.LockssApp;
 import org.lockss.util.*;
 
 /**
@@ -71,7 +72,8 @@ public class CrawlWindows {
    * Abstract base window which handles timezone issues.
    */
   protected abstract static class BaseCrawlWindow implements CrawlWindow {
-    protected TimeZone timeZone;
+    protected transient TimeZone timeZone;
+    protected String timeZoneId;
     Calendar windowCal;
 
     /**
@@ -80,12 +82,7 @@ public class CrawlWindows {
      * @param windowTZ the window's TimeZone
      */
     public BaseCrawlWindow(TimeZone windowTZ) {
-      if (windowTZ==null) {
-        timeZone = TimeZone.getDefault();
-      } else {
-        timeZone = windowTZ;
-      }
-      windowCal = Calendar.getInstance(timeZone);
+      setWindowTimeZone(windowTZ);
     }
 
     /**
@@ -99,6 +96,7 @@ public class CrawlWindows {
       } else {
         timeZone = windowTZ;
       }
+      timeZoneId = timeZone.getID();
       windowCal = Calendar.getInstance(timeZone);
     }
 
@@ -119,6 +117,16 @@ public class CrawlWindows {
      * @return true iff matches criteria
      */
     protected abstract boolean isMatch(Calendar cal);
+
+    protected void postUnmarshal(LockssApp lockssContext) {
+      if (timeZoneId != null && !StringUtil.isNullString(timeZoneId)) {
+        timeZone = TimeZone.getTimeZone(timeZoneId);
+      }
+      else {
+        timeZone = TimeZone.getDefault();
+        timeZoneId = timeZone.getID();
+      }
+    }
   }
 
 
