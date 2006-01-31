@@ -1,5 +1,5 @@
 /*
- * $Id: TestIcpManagerStartup.java,v 1.6 2006-01-31 01:29:19 thib_gc Exp $
+ * $Id: TestIcpManagerStartup.java,v 1.7 2006-01-31 01:46:04 thib_gc Exp $
  */
 
 /*
@@ -230,7 +230,7 @@ public abstract class TestIcpManagerStartup extends LockssTestCase {
     return variantSuites(TestIcpManagerStartup.class);
   }
 
-  protected static int getNewPort() {
+  protected static synchronized int getNewPort() {
     return port++;
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestIcpManager.java,v 1.9 2006-01-31 01:29:19 thib_gc Exp $
+ * $Id: TestIcpManager.java,v 1.10 2006-01-31 01:46:04 thib_gc Exp $
  */
 
 /*
@@ -150,7 +150,7 @@ public class TestIcpManager extends LockssTestCase {
     assertNegative(testableIcpManager.getCurrentPort());
   }
 
-  private int getNewPort() {
+  private synchronized int getNewPort() {
     return port++;
   }
 
