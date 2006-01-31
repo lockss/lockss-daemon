@@ -1,5 +1,5 @@
 /*
- * $Id: LazyIcpFactoryImpl.java,v 1.2 2006-01-03 22:12:11 thib_gc Exp $
+ * $Id: LazyIcpFactoryImpl.java,v 1.3 2006-01-31 01:29:19 thib_gc Exp $
  */
 
 /*
@@ -38,125 +38,25 @@ import java.nio.ByteBuffer;
 import org.lockss.util.IPAddr;
 
 /**
- * <p>A customized version of {@link IcpFactoryImpl}, that attempts
- * to use fast mutable ICP messages (and uses the general-purpose
- * facilities provided by {@link IcpFactoryImpl} when it is not
- * possible to use fast mutable ICP messages).</p>
+ * <p>An implementation of {@link IcpFactory} that produces mutable
+ * ICP messages based directly on an underlyin UDP packet.</p>
+ * <p>Currently, the LOCKSS daemon uses this implementation when
+ * <code>org.lockss.proxy.icp.slow</code> is set to
+ * <code>true</code>.</p>
  * @author Thib Guicherd-Callin
  */
-public class LazyIcpFactoryImpl extends IcpFactoryImpl {
+public class LazyIcpFactoryImpl extends BaseIcpFactory {
 
   /*
-   * begin STATIC NESTED CLASS
-   * =========================
+   * begin PROTECTED STATIC NESTED CLASS
+   * ===================================
    */
   /**
-   * <p>An implementation of {@link IcpBuilder} customized for the
-   * LOCKSS daemon's {@link IcpManager}, that attempts to use
-   * fast mutable ICP messages.</p>
-   * @author Thib Guicherd-Callin
-   * @see LazyIcpMessageImpl
-   */
-  protected static class LazyIcpBuilderImpl extends IcpBuilderImpl {
-
-    /* Inherit documentation */
-    public IcpMessage makeDenied(IcpMessage query) throws IcpProtocolException {
-      if (!query.isQuery()) {
-        throw new IcpProtocolException(DENIED_NOT_QUERY_ERROR);
-      }
-      if (!(query instanceof LazyIcpMessageImpl)) {
-        return super.makeDenied(query);
-      }
-      IcpUtil.writeResponse(((LazyIcpMessageImpl)query).getByteBuffer(),
-                            IcpMessage.ICP_OP_DENIED);
-      return query;
-    }
-
-    /* Inherit documentation */
-    public IcpMessage makeError(IcpMessage query) throws IcpProtocolException {
-      if (!query.isQuery()) {
-        throw new IcpProtocolException(ERR_NOT_QUERY_ERROR);
-      }
-      if (!(query instanceof LazyIcpMessageImpl)) {
-        return super.makeError(query);
-      }
-      IcpUtil.writeResponse(((LazyIcpMessageImpl)query).getByteBuffer(),
-                            IcpMessage.ICP_OP_ERR);
-      return query;
-    }
-
-    /* Inherit documentation */
-    public IcpMessage makeHit(IcpMessage query) throws IcpProtocolException {
-      if (!query.isQuery()) {
-        throw new IcpProtocolException(HIT_NOT_QUERY_ERROR);
-      }
-      if (!(query instanceof LazyIcpMessageImpl)) {
-        return super.makeHit(query);
-      }
-      IcpUtil.writeResponse(((LazyIcpMessageImpl)query).getByteBuffer(),
-                            IcpMessage.ICP_OP_HIT);
-      return query;
-    }
-
-    /* Inherit documentation */
-    public IcpMessage makeMissNoFetch(IcpMessage query) throws IcpProtocolException {
-      if (!query.isQuery()) {
-        throw new IcpProtocolException(MISS_NOFETCH_NOT_QUERY_ERROR);
-      }
-      if (!(query instanceof LazyIcpMessageImpl))
-        return super.makeMissNoFetch(query);
-      IcpUtil.writeResponse(((LazyIcpMessageImpl)query).getByteBuffer(),
-                            IcpMessage.ICP_OP_MISS_NOFETCH);
-      return query;
-    }
-
-  }
-  /*
-   * end STATIC NESTED CLASS
-   * =======================
-   */
-
-  /*
-   * begin STATIC NESTED CLASS
-   * =========================
-   */
-  /**
-   * <p>An implementation of {@link IcpEncoder} that attempts to
-   * use fast mutable ICP messages.</p>
-   * @author Thib Guicherd-Callin
-   * @see LazyIcpMessageImpl
-   */
-  protected static class LazyIcpEncoderImpl extends IcpEncoderImpl {
-
-    /* Inherit documentation */
-    public DatagramPacket encode(IcpMessage message,
-                                 IPAddr recipient,
-                                 int port) {
-      if (!(message instanceof LazyIcpMessageImpl))
-        return super.encode(message, recipient, port);
-      DatagramPacket packet = ((LazyIcpMessageImpl)message).getUdpPacket();
-      packet.setLength(packet.getLength() - 4); // requester field gone
-      packet.setAddress(recipient.getInetAddr());
-      packet.setPort(port);
-      return packet;
-    }
-
-  }
-  /*
-   * end STATIC NESTED CLASS
-   * =======================
-   */
-
-  /*
-   * begin STATIC NESTED CLASS
-   * =========================
-   */
-  /**
-   * <p>A fast mutable implementation of {@link IcpMessage} that is
-   * lazily parsed from, and acts directly upon, a UDP packet.</p>
+   * <p>A mutable implementation of {@link IcpMessage} based directly
+   * on an underlyin UDP packet.</p>
    * @author Thib Guicherd-Callin
    */
-  protected static class LazyIcpMessageImpl extends IcpMessageImpl {
+  protected static class LazyIcpMessageImpl extends BaseIcpMessage {
 
     /**
      * <p>A byte buffer wrapped around the UDP packet's bytes.</p>
@@ -229,17 +129,9 @@ public class LazyIcpFactoryImpl extends IcpFactoryImpl {
      * @param packet An ICP datagram packet.
      */
     protected LazyIcpMessageImpl(DatagramPacket packet) {
-      super(); // builds a completely shallow message
+      super(new IPAddr(packet.getAddress()), packet.getPort());
       this.udpPacket = packet;
       this.byteBuffer = ByteBuffer.wrap(packet.getData());
-    }
-
-    /**
-     * <p>Retrieves this message's underlying byte buffer.</p>
-     * @return This message's byte buffer.
-     */
-    public ByteBuffer getByteBuffer() {
-      return byteBuffer;
     }
 
     /* Inherit documentation */
@@ -348,10 +240,6 @@ public class LazyIcpFactoryImpl extends IcpFactoryImpl {
       return sender;
     }
 
-    public DatagramPacket getUdpPacket() {
-      return udpPacket;
-    }
-
     /* Inherit documentation */
     public byte getVersion() {
       if (!parsedVersion) {
@@ -361,15 +249,99 @@ public class LazyIcpFactoryImpl extends IcpFactoryImpl {
       return version;
     }
 
+    /* Inherit documentation */
+    public IcpMessage makeDenied() throws IcpProtocolException {
+      if (!isQuery()) {
+        throw new IcpProtocolException(DENIED_NOT_QUERY_ERROR);
+      }
+      writeResponse(IcpMessage.ICP_OP_DENIED);
+      return this;
+    }
+
+    /* Inherit documentation */
+    public IcpMessage makeError() throws IcpProtocolException {
+      if (!isQuery()) {
+        throw new IcpProtocolException(ERR_NOT_QUERY_ERROR);
+      }
+      writeResponse(IcpMessage.ICP_OP_ERR);
+      return this;
+    }
+
+    /* Inherit documentation */
+    public IcpMessage makeHit() throws IcpProtocolException {
+      if (!isQuery()) {
+        throw new IcpProtocolException(HIT_NOT_QUERY_ERROR);
+      }
+      writeResponse(IcpMessage.ICP_OP_HIT);
+      return this;
+    }
+
+    /**
+     * <p>Not supported; throws an {@link UnsupportedOperationException}.</p>
+     */
+    public IcpMessage makeHit(short srcRttResponse) throws IcpProtocolException {
+      throw new UnsupportedOperationException(NOT_IMPLEMENTED_ERROR);
+    }
+
+    /**
+     * <p>Not supported; throws an {@link UnsupportedOperationException}.</p>
+     */
+    public IcpMessage makeHitObj(byte[] payloadObject) throws IcpProtocolException {
+      throw unsupported();
+    }
+
+    /**
+     * <p>Not supported; throws an {@link UnsupportedOperationException}.</p>
+     */
+    public IcpMessage makeHitObj(short srcRttResponse, byte[] payloadObject) throws IcpProtocolException {
+      throw unsupported();
+    }
+
+    /**
+     * <p>Not supported; throws an {@link UnsupportedOperationException}.</p>
+     */
+    public IcpMessage makeMiss() throws IcpProtocolException {
+      throw unsupported();
+    }
+
+    /**
+     * <p>Not supported; throws an {@link UnsupportedOperationException}.</p>
+     */
+    public IcpMessage makeMiss(short srcRttResponse) throws IcpProtocolException {
+      throw unsupported();
+    }
+
+    /* Inherit documentation */
+    public IcpMessage makeMissNoFetch() throws IcpProtocolException {
+      if (!isQuery()) {
+        throw new IcpProtocolException(MISS_NOFETCH_NOT_QUERY_ERROR);
+      }
+      writeResponse(IcpMessage.ICP_OP_MISS_NOFETCH);
+      return this;
+    }
+
+    /**
+     * <p>Not supported; throws an {@link UnsupportedOperationException}.</p>
+     */
+    public IcpMessage makeMissNoFetch(short srcRttResponse) throws IcpProtocolException {
+      throw new UnsupportedOperationException(NOT_IMPLEMENTED_ERROR);
+    }
+
+    /* Inherit documentation */
+    public DatagramPacket toDatagramPacket(IPAddr recipient, int port) {
+      udpPacket.setLength(udpPacket.getLength() - 4); // requester field gone
+      udpPacket.setAddress(recipient.getInetAddr());
+      udpPacket.setPort(port);
+      return udpPacket;
+    }
+
     /**
      * <p>Returns a detailed string representation of this message
      * (<strong>warning: causes the entire message to be parsed;
      * the benefits of lazy parsing are lost after a call to this
      * method</strong>).</p>
      * @return A detailed string representation of this message, as
-     *         returned by the parent method
-     *         {@link IcpMessageImpl#toString}.
-     * @see IcpMessageImpl#toString
+     *         returned by the parent <code>toString()</code> method.
      */
     public String toLongString() {
       return super.toString();
@@ -389,103 +361,95 @@ public class LazyIcpFactoryImpl extends IcpFactoryImpl {
       sb.append(getOpcode());
       sb.append(";payloadUrl=");
       sb.append(getPayloadUrl());
-      sb.append(";[call toLongString() for detailed string]]");
+      sb.append("]");
       return sb.toString();
     }
 
-  }
-  /*
-   * end STATIC NESTED CLASS
-   * =======================
-   */
+    /**
+     * <p>Alters an ICP query byte buffer so that it becomes an ICP
+     * response byte buffer with the specified opcode.</p>
+     * @param opcode     The opcode of the resultuing ICP response.
+     */
+    public void writeResponse(byte opcode) {
+      // Modify fields
+      this.opcode = opcode;
+      this.options = 0;
+      this.optionData = 0;
+      this.sender = ZERO_ADDRESS;
+      byteBuffer.put(IcpUtil.OFFSET_BYTE_OPCODE, this.opcode);
+      byteBuffer.putInt(IcpUtil.OFFSET_INT_OPTIONS, this.options);
+      byteBuffer.putInt(IcpUtil.OFFSET_INT_OPTIONDATA, this.optionData);
+      byteBuffer.putInt(IcpUtil.OFFSET_INT_SENDER, 0);
 
-  /*
-   * begin STATIC NESTED CLASS
-   * =========================
-   */
-  /**
-   * <p>An implementation of {@link IcpDecoder} that returns
-   * fast mutable ICP messages based directly on a UDP packet.</p>
-   * @author Thib Guicherd-Callin
-   * @see LazyIcpMessageImpl
-   */
-  private static class LazyIcpDecoderImpl implements IcpDecoder {
+      // Shift URL string
+      byte[] bytes = byteBuffer.array();
+      short length = IcpUtil.getLengthFromBuffer(byteBuffer);
+      int urlLength = IcpUtil.stringLength(length, true, false, (short)0);
+      System.arraycopy(bytes, 24, bytes, 20, urlLength + 1);
 
-    /* Inherit documentation */
-    public IcpMessage parseIcp(DatagramPacket packet)
-        throws IcpProtocolException {
-      LazyIcpMessageImpl ret = new LazyIcpMessageImpl(packet);
-      ret.setUdpAddress(new IPAddr(packet.getAddress()));
-      ret.setUdpPort(packet.getPort());
-      return ret;
+      /*
+       * Add 4 null bytes. Illustration:
+       *
+       * Index:            length-9 length-8 length-7 length-6 length-5 length-4 length-3 length-2 length-1
+       * Before arraycopy:    a        b        c        d        .        c        o        m        \0
+       * After arraycopy:     .        c        o        m        \0       c        o        m        \0
+       * Desired result:      .        c        o        m        \0       \0       \0       \0       \0
+       *                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+       */
+      byteBuffer.putInt(length - 5, 0);
+
+      // Shorten message
+      this.length = (short)(length - 4);
+      byteBuffer.putShort(IcpUtil.OFFSET_SHORT_LENGTH, this.length);
     }
 
   }
   /*
-   * end STATIC NESTED CLASS
-   * =======================
+   * end PROTECTED STATIC NESTED CLASS
+   * =================================
    */
 
-  /**
-   * <p>Cannot instantiate instances of this class; use static methods
-   * instead to obtain service.</p>
-   * @see #getInstance
-   */
-  protected LazyIcpFactoryImpl() {}
+  private LazyIcpFactoryImpl() {}
 
   /* Inherit documentation */
-  public synchronized IcpBuilder makeIcpBuilder() {
-    if (singletonBuilder == null) {
-      singletonBuilder = new LazyIcpBuilderImpl();
-    }
-    return singletonBuilder;
-  }
-
-  /* Inherit documentation */
-  public synchronized IcpDecoder makeIcpDecoder() {
-    if (singletonDecoder == null) {
-      singletonDecoder = new LazyIcpDecoderImpl();
-    }
-    return singletonDecoder;
-  }
-
-  /* Inherit documentation */
-  public synchronized IcpEncoder makeIcpEncoder() {
-    if (singletonEncoder == null) {
-      singletonEncoder = new LazyIcpEncoderImpl();
-    }
-    return singletonEncoder;
+  public IcpMessage makeMessage(DatagramPacket udpPacket)
+      throws IcpProtocolException {
+    return new LazyIcpMessageImpl(udpPacket);
   }
 
   /**
-   * <p>A singleton instance of {@link IcpFactoryImpl}.</p>
+   * <p>Not supported; throws an {@link UnsupportedOperationException}.</p>
    */
+  public IcpMessage makeQuery(IPAddr requesterAddress,
+                              String query,
+                              boolean requestSrcRtt,
+                              boolean requestHitObj) {
+    throw unsupported();
+  }
+
+  /**
+   * <p>An error message used for ICP operations that are not
+   * supported by this class.</p>
+   */
+  protected static final String NOT_IMPLEMENTED_ERROR = "Not implemented";
+
   private static IcpFactory singleton;
 
-  /**
-   * <p>A singleton instance of {@link LazyIcpBuilderImpl}.</p>
-   */
-  private static IcpBuilder singletonBuilder;
-
-  /**
-   * <p>A singleton instance of {@link LazyIcpDecoderImpl}.</p>
-   */
-  private static IcpDecoder singletonDecoder;
-
-  /**
-   * <p>A singleton instance of {@link LazyIcpEncoderImpl}.</p>
-   */
-  private static IcpEncoder singletonEncoder;
-
-  /**
-   * <p>Gets an instance of type {@link IcpFactory}.</p>
-   * @return An ICP factory.
-   */
-  public synchronized static IcpFactory getInstance() {
+  public static synchronized IcpFactory getInstance() {
     if (singleton == null) {
       singleton = new LazyIcpFactoryImpl();
     }
     return singleton;
+  }
+
+  /**
+   * <p>Returns an exception for errors related to ICP operations not
+   * supported by this class.</p>
+   * @return A new {@link UnsupportedOperationException}.
+   * @see #NOT_IMPLEMENTED_ERROR
+   */
+  protected static UnsupportedOperationException unsupported() {
+    return new UnsupportedOperationException(NOT_IMPLEMENTED_ERROR);
   }
 
 }

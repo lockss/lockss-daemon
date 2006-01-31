@@ -1,5 +1,5 @@
 /*
- * $Id: TestIcpManager.java,v 1.8 2006-01-10 01:17:19 thib_gc Exp $
+ * $Id: TestIcpManager.java,v 1.9 2006-01-31 01:29:19 thib_gc Exp $
  */
 
 /*
@@ -56,21 +56,8 @@ public class TestIcpManager extends LockssTestCase {
     public void setConfig(Configuration newConfig,
                           Configuration prevConfig,
                           Differences changedKeys) {
-      TestIcpManager.this.setConfigCalled = true;
+      setConfigCalled = true;
       super.setConfig(newConfig, prevConfig, changedKeys);
-    }
-
-    /* Inherit documentation */
-    protected void startSocket(Configuration theConfig) {
-      super.startSocket(theConfig);
-      if (icpSocket != null) {
-        logger.debug("startSocket in TestableIcpManager: waitRunning");
-        icpSocket.waitRunning(Deadline.in(TIMEOUT_SHOULDNT));
-        logger.debug("startSocket in TestableIcpManager: waitRunning done");
-      }
-      else {
-        logger.debug("startSocket in TestableIcpManager: icpSocket was null");
-      }
     }
 
   }
@@ -83,7 +70,7 @@ public class TestIcpManager extends LockssTestCase {
   /**
    * <p>The next port number to try.</p>
    */
-  private int nextPort = 2048;
+  private int port = 2048;
 
   /**
    * <p>Flag to indicate {@link IcpManager#setConfig} has been
@@ -103,7 +90,6 @@ public class TestIcpManager extends LockssTestCase {
                                   "debug3",
                                   "org.lockss.log.IcpSocketImpl.level",
                                   "debug3");
-
     setEnabled(false, BAD_PORT);
     setConfigCalled = false;
     mockLockssDaemon = getMockLockssDaemon();
@@ -125,18 +111,16 @@ public class TestIcpManager extends LockssTestCase {
    * @throws Exception if an unexpected error condition arises.
    */
   public void testChangeIcpPort() throws Exception {
-    int port = findUnboundUdpPort();
+    int port = getNewPort();
     setEnabled(true, port);
     assertTrue(testableIcpManager.isIcpServerRunning());
     assertEquals(port, testableIcpManager.getCurrentPort());
-    assertNotNull(testableIcpManager.getLimiter());
     setConfigCalled = false;
-    port = findUnboundUdpPort();
+    port = getNewPort();
     setEnabled(true, port);
     assertTrue(setConfigCalled);
     assertTrue(testableIcpManager.isIcpServerRunning());
     assertEquals(port, testableIcpManager.getCurrentPort());
-    assertNotNull(testableIcpManager.getLimiter());
   }
 
   /**
@@ -147,20 +131,18 @@ public class TestIcpManager extends LockssTestCase {
     assertFalse(testableIcpManager.isIcpServerRunning());
     assertNegative(testableIcpManager.getCurrentPort());
     setConfigCalled = false;
-    int port = findUnboundUdpPort();
+    int port = getNewPort();
     setEnabled(true, port);
     assertTrue(setConfigCalled);
     assertTrue(testableIcpManager.isIcpServerRunning());
     assertEquals(port, testableIcpManager.getCurrentPort());
-    assertNotNull(testableIcpManager.getLimiter());
   }
 
   public void testStopIcpServer() throws Exception {
-    int port = findUnboundUdpPort();
+    int port = getNewPort();
     setEnabled(true, port);
     assertTrue(testableIcpManager.isIcpServerRunning());
     assertEquals(port, testableIcpManager.getCurrentPort());
-    assertNotNull(testableIcpManager.getLimiter());
     setConfigCalled = false;
     setEnabled(false, BAD_PORT);
     assertTrue(setConfigCalled);
@@ -168,20 +150,8 @@ public class TestIcpManager extends LockssTestCase {
     assertNegative(testableIcpManager.getCurrentPort());
   }
 
-  private int findUnboundUdpPort() {
-    for (int p = nextPort; p < 65535; p++) {
-      try {
-        DatagramSocket sock = new DatagramSocket(p);
-        sock.close();
-        nextPort = p + 1;
-        return p;
-      }
-      catch (IOException ioe) {
-        // nothing; iterate
-      }
-    }
-    log.error("Couldn't find unused TCP port");
-    return BAD_PORT;
+  private int getNewPort() {
+    return port++;
   }
 
   private void setEnabled(boolean enabled, int port) {

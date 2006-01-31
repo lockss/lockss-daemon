@@ -1,5 +1,5 @@
 /*
- * $Id: TestIcpUtil.java,v 1.4 2005-11-23 21:12:36 thib_gc Exp $
+ * $Id: TestIcpUtil.java,v 1.5 2006-01-31 01:29:19 thib_gc Exp $
  */
 
 /*
@@ -371,15 +371,15 @@ public class TestIcpUtil extends LockssTestCase {
    * @throws Exception if something unexpected occurs.
    */
   protected void testGetSomethingFromBuffer(String testName,
-                                         GetSomethingTester tester)
+                                            GetSomethingTester tester)
       throws Exception {
-    final String testBegin = testName + ": begin test #";
-    final String testPassed = testName + ": PASSED test #";
-    final String testFailed = testName + ": FAILED test #";
+    String testBegin = testName + ": begin test #";
+    String testPassed = testName + ": PASSED test #";
+    String testFailed = testName + ": FAILED test #";
 
     int failed = 0;
 
-    for (int test = 0 ; test < MockIcpMessage.countTestPairs(); test++) {
+    for (int test = 0 ; test < MockIcpMessage.countTestPairs(); ++test) {
       try {
         logger.info(testBegin + test);
         ByteBuffer in =

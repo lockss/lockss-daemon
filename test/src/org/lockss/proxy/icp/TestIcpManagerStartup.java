@@ -1,10 +1,10 @@
 /*
- * $Id: TestIcpManagerStartup.java,v 1.5 2005-12-10 23:15:08 thib_gc Exp $
+ * $Id: TestIcpManagerStartup.java,v 1.6 2006-01-31 01:29:19 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -183,76 +183,39 @@ public abstract class TestIcpManagerStartup extends LockssTestCase {
     }
   }
 
-  /**
-   * <p>Instruments the ICP manager.</p>
-   * @author Thib Guicherd-Callin
-   */
-  public static class TestableIcpManager extends IcpManager {
-
-    /* Inherit documentation */
-    public void setConfig(Configuration newConfig,
-                          Configuration prevConfig,
-                          Differences changedKeys) {
-      super.setConfig(newConfig, prevConfig, changedKeys);
-    }
-
-    /* Inherit documentation */
-    public void stopService() {
-      IcpSocketImpl sock = icpSocket;
-      super.stopService();
-      if (sock != null) {
-        sock.waitExited();
-      }
-    }
-
-    /* Inherit documentation */
-    protected void startSocket(Configuration theConfig) {
-      super.startSocket(theConfig);
-      if (icpSocket != null) {
-        logger.debug("startSocket in TestableIcpManager: waitRunning");
-        icpSocket.waitRunning();
-        logger.debug("startSocket in TestableIcpManager: waitRunning done");
-      }
-      else {
-        logger.debug("startSocket in TestableIcpManager: icpSocket was null");
-      }
-    }
-
-  }
-
   protected int expectedPort = -1;
 
   protected boolean expectedRunning;
 
-  private MockLockssDaemon mockLockssDaemon;
+  private IcpManager icpManager;
 
-  private IcpManager testableIcpManager;
+  private MockLockssDaemon mockLockssDaemon;
 
   public void setUp() throws Exception {
     logger.info("BEGIN: " + getClass().getName());
     super.setUp();
     mockLockssDaemon = getMockLockssDaemon();
-    testableIcpManager = new TestableIcpManager();
+    icpManager = new IcpManager();
     setConfig();
-    mockLockssDaemon.setIcpManager(testableIcpManager);
-    testableIcpManager.initService(mockLockssDaemon);
+    mockLockssDaemon.setIcpManager(icpManager);
+    icpManager.initService(mockLockssDaemon);
     mockLockssDaemon.setDaemonInited(true);
-    testableIcpManager.startService();
+    icpManager.startService();
   }
 
   public void tearDown() {
-    testableIcpManager.stopService();
+    icpManager.stopService();
     logger.info("END: " + getClass().getName());
   }
 
   public void testStartedAsExpected() {
     assertEquals("FAILED: " + getClass().getName(),
                  expectedRunning,
-                 testableIcpManager.isIcpServerRunning());
+                 icpManager.isIcpServerRunning());
     if (expectedRunning) {
       assertEquals("FAILED: " + getClass().getName(),
                    expectedPort,
-                   testableIcpManager.getCurrentPort());
+                   icpManager.getCurrentPort());
     }
     logger.info("PASSED: " + getClass().getName());
   }

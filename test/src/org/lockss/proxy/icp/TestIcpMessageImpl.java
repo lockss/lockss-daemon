@@ -1,10 +1,10 @@
 /*
- * $Id: IcpSender.java,v 1.4 2005-10-10 16:34:39 thib_gc Exp $
+ * $Id: TestIcpMessageImpl.java,v 1.1 2006-01-31 01:29:19 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,40 +32,16 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.proxy.icp;
 
-import java.io.IOException;
-
-import org.lockss.util.IPAddr;
-
 /**
- * <p>An abstraction for classes that are able to send ICP messages
- * to recipients.</p>
+ * <p>Tests the {@link IcpMessage} implementation provided by
+ * {@link IcpFactoryImpl}.</p>
  * @author Thib Guicherd-Callin
  */
-public interface IcpSender {
+public class TestIcpMessageImpl extends IcpMessageTester {
 
-  /**
-   * <p>Sends the given message to the recipient, on the default ICP
-   * port.</p>
-   * @param message   An ICP message.
-   * @param recipient A recipient address.
-   * @throws IOException if an input/output error occurs.
-   * @see IcpMessage#ICP_PORT
-   * @see #send(IcpMessage, IPAddr, int)
-   */
-  void send(IcpMessage message,
-            IPAddr recipient)
-      throws IOException;
-
-  /**
-   * <p>Sned the given message to the recipient.</p>
-   * @param message   An ICP message.
-   * @param recipient A recipient address.
-   * @param port      A remote port number.
-   * @throws IOException if an input/output error occurs.
-   */
-  void send(IcpMessage message,
-            IPAddr recipient,
-            int port)
-      throws IOException;
+  /* Inherit documentation */
+  protected IcpFactory makeIcpFactory() {
+    return IcpFactoryImpl.getInstance();
+  }
 
 }

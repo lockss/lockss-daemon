@@ -1,10 +1,10 @@
 /*
- * $Id: IcpFactory.java,v 1.5 2005-10-10 16:34:39 thib_gc Exp $
+ * $Id: IcpFactory.java,v 1.6 2006-01-31 01:29:19 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,16 +32,53 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.proxy.icp;
 
-/**
- * <p>Denotes a class that is an ICP builder factory as well as an
- * ICP encoder and decoder factory.</p>
- * @author Thib Guicherd-Callin
- */
-public interface IcpFactory
-    extends IcpBuilder.Factory,
-            IcpDecoder.Factory,
-            IcpEncoder.Factory {
+import java.net.DatagramPacket;
 
-  // no new methods
+import org.lockss.util.IPAddr;
+
+/**
+ * <p>An abstraction for classes that are able to instantiate
+ * ICP messages.</p>
+ * @author Thib Guicherd-Callin
+ * @see IcpMessage
+ */
+public interface IcpFactory {
+
+  /**
+   * <p>Produces an ICP message from a received UDP packet.</p>
+   * @param udpPacket A UDP packet.
+   * @return An ICP message based on the UDP packet.
+   * @throws IcpProtocolException if the UDP packet cannot be parsed
+   *                              into an ICP message.
+   */
+  IcpMessage makeMessage(DatagramPacket udpPacket)
+      throws IcpProtocolException;
+
+  /**
+   * <p>Equivalent to calling
+   * {@link #makeQuery(IPAddr, String, boolean, boolean)} with the
+   * two boolean arguments being false.</p>
+   * @param requesterAddress
+   * @param query
+   * @return A query message.
+   * @see #makeQuery(IPAddr, String, boolean, boolean)
+   */
+  IcpMessage makeQuery(IPAddr requesterAddress,
+                       String query);
+
+  /**
+   * <p>Produces an ICP query using the given URL, with optional
+   * parameters.</p>
+   * @param requesterAddress The address of the original requester.
+   * @param query            A URL query.
+   * @param requestSrcRtt    Request a source return time trip.
+   * @param requestHitObj    Request a hit object.
+   * @return A query message.
+   * @see IcpMessage#getRequester
+   */
+  IcpMessage makeQuery(IPAddr requesterAddress,
+                       String query,
+                       boolean requestSrcRtt,
+                       boolean requestHitObj);
 
 }

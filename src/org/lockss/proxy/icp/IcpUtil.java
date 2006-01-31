@@ -1,10 +1,10 @@
 /*
- * $Id: IcpUtil.java,v 1.7 2005-11-30 17:46:54 thib_gc Exp $
+ * $Id: IcpUtil.java,v 1.8 2006-01-31 01:29:19 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -375,41 +375,6 @@ public class IcpUtil {
     return   lengthField
            - (isQuery ? 25 : 21) // incl. 1 for null terminator
            - (isHitObj ? hitObjLengthField + 2 : 0); // incl. 2 for obj length field
-  }
-
-  /**
-   * <p>Alters an ICP query byte buffer so that it becomes an ICP
-   * response byte buffer with the specified opcode.</p>
-   * @param byteBuffer A byte buffer which will be modified.
-   * @param opcode     The opcode of the resultuing ICP response.
-   */
-  public static void writeResponse(ByteBuffer byteBuffer,
-                                   byte opcode) {
-    // Modify fields
-    byteBuffer.put(OFFSET_BYTE_OPCODE, opcode);
-    byteBuffer.putInt(OFFSET_INT_OPTIONS, 0);
-    byteBuffer.putInt(OFFSET_INT_OPTIONDATA, 0);
-    byteBuffer.putInt(OFFSET_INT_SENDER, 0);
-
-    // Shift URL string
-    byte[] bytes = byteBuffer.array();
-    short length = getLengthFromBuffer(byteBuffer);
-    int urlLength = stringLength(length, true, false, (short)0);
-    System.arraycopy(bytes, 24, bytes, 20, urlLength + 1);
-    /*
-     * Add 4 null bytes. Illustration:
-     *
-     * Index:            length-9 length-8 length-7 length-6 length-5 length-4 length-3 length-2 length-1
-     * Before arraycopy:    a        b        c        d        .        c        o        m        \0
-     * After arraycopy:     .        c        o        m        \0       c        o        m        \0
-     * Desired result:      .        c        o        m        \0       \0       \0       \0       \0
-     *                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-     */
-    byteBuffer.putInt(length - 5, 0);
-
-    // Shorten message
-    length -= (short)4;
-    byteBuffer.putShort(OFFSET_SHORT_LENGTH, length);
   }
 
 }

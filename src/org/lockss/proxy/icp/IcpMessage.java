@@ -1,10 +1,10 @@
 /*
- * $Id: IcpMessage.java,v 1.5 2005-10-10 16:34:39 thib_gc Exp $
+ * $Id: IcpMessage.java,v 1.6 2006-01-31 01:29:19 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.proxy.icp;
 
-import java.net.*;
+import java.net.DatagramPacket;
 
 import org.lockss.util.IPAddr;
 
@@ -43,166 +43,9 @@ import org.lockss.util.IPAddr;
  * {@link <a href="http://www.ietf.org/rfc/rfc2187.txt">RFC2187</a>}.</p>
  * @author Thib Guicherd-Callin
  * @see #ICP_VERSION
- * @see IcpBuilder
+ * @see IcpFactory
  */
 public interface IcpMessage {
-
-  /**
-   * <p>If this message is an ICP response, determines if this message
-   * contains a source return trip time response.</p>
-   * @return True if and only if this message is an ICP response and
-   * has the source return trip time bit set.
-   * @see #isResponse
-   * @see #ICP_FLAG_SRC_RTT
-   */
-  public boolean containsSrcRttResponse();
-
-  /**
-   * <p>Returns the ICP length field of this message.</p>
-   * <p>The ICP length field is not the same as the length of the
-   * UDP packet.</p>
-   * @return The length field as reported by the ICP message.
-   */
-  public short getLength();
-
-  /**
-   * <p>Retrieves this message's opcode.</p>
-   * @return A byte representing the opcode of this message.
-   * @see #ICP_OP_DECHO
-   * @see #ICP_OP_DENIED
-   * @see #ICP_OP_ERR
-   * @see #ICP_OP_HIT
-   * @see #ICP_OP_HIT_OBJ
-   * @see #ICP_OP_INVALID
-   * @see #ICP_OP_MISS
-   * @see #ICP_OP_MISS_NOFETCH
-   * @see #ICP_OP_QUERY
-   * @see #ICP_OP_SECHO
-   */
-  public byte getOpcode();
-
-  /**
-   * <p>Retrieves the raw integer of option data.</p>
-   * @return The option data field.
-   * @see #getOptions()
-   * @see #getSrcRttResponse()
-   */
-  public int getOptionData();
-
-  /**
-   * <p>Retrieves the options bit field.</p>
-   * @return The options bit field.
-   * @see #containsSrcRttResponse
-   * @see #getOptionData
-   * @see #requestsHitObj
-   * @see #requestsSrcRtt
-   * @see #ICP_FLAG_HIT_OBJ
-   * @see #ICP_FLAG_SRC_RTT
-   */
-  public int getOptions();
-
-  /**
-   * <p>If this message has a hit-object opcode, retrieves this
-   * message's hit object as an array of bytes.</p>
-   * @return An array of bytes representing the object that piggy-
-   *         backed in the ICP packet if this message has a hit-object
-   *         opcode, null otherwise.
-   * @see #getOpcode
-   * @see #getPayloadObjectLength
-   */
-  public byte[] getPayloadObject();
-
-  /**
-   * <p>If this message has a hit-object opcode, retrieves this
-   * message's hit object length field.</p>
-   * <p>The return value should, but may not, be the same as the value
-   * of <code>getPayloadObject().length</code>.</p>
-   * @return The self-reported payload object length field if this
-   *         message has a hit-object opcode, 0 otheriwse.
-   * @see #getOpcode
-   * @see #getPayloadObject
-   */
-  public short getPayloadObjectLength();
-
-  /**
-   * <p>Retrieves the URL contained in this message.</p>
-   * @return This message's URL.
-   */
-  public String getPayloadUrl();
-
-  /**
-   * <p>If this message is an ICP query, retrieves the address of the
-   * initial requester.</p>
-   * <p>The requester is the originator of the request. It may not be
-   * the same as the IP from which this ICP message originated.</p>
-   * @return The IP of the original requester of the URL if this
-   *         message is a query, null otherwise.
-   * @see #getSender
-   * @see #getUdpAddress
-   * @see #getUdpPort
-   * @see #isQuery
-   */
-  public IPAddr getRequester();
-
-  /**
-   * <p>Retrieves the opaque request number.</p>
-   * @return The identifying number of this message.
-   */
-  public int getRequestNumber();
-
-  /**
-   * <p>Retrieves the ICP sender field.</p>
-   * <p>The ICP specification instructs implementors to trust the
-   * sender information reported by the UDP packet. It is likely that
-   * the address returned by this method is <code>0.0.0.0</code> or
-   * some other meaningless value.</p>
-   * @return The sender's IP address.
-   */
-  public IPAddr getSender();
-
-  /**
-   * <p>If this message is an ICP response and contains a source
-   * return trip time response, retrieves the latter from this
-   * message.</p>
-   * @return The source return trip time response if this message
-   *         contains one, 0 otherwise.
-   * @see #containsSrcRttResponse
-   * @see #isResponse
-   */
-  public short getSrcRttResponse();
-
-  /**
-   * <p>Retrieves the IP address from which the UDP packet carrying
-   * this message was received.</p>
-   * <p>If this message was not actually received from a UDP packet,
-   * the return value will be meaningless, and shold be null.</p>
-   * @return The sender's IP address as reported by the UDP packet;
-   *         null if not applicable.
-   * @see #getSender
-   * @see #getRequester
-   * @see #getUdpPort
-   */
-  public IPAddr getUdpAddress();
-
-  /**
-   * <p>Retrieves the port from which this message's sender sent the
-   * UDP packet.</p>
-   * <p>If this message was not actually received from a UDP packet,
-   * the return value will be meaningless, and shold be zero.</p>
-   * @return The origin's port number as reported by the UDP packet;
-   *         zero if not applicable.
-   * @see #getSender
-   * @see #getRequester
-   * @see #getUdpAddress
-   */
-  public int getUdpPort();
-
-  /**
-   * <p>Returns this message's ICP version field.</p>
-   * @return The ICP version field of this message.
-   * @see #ICP_VERSION
-   */
-  public byte getVersion();
 
   /**
    * <p>If this message is a query, determines if this message
@@ -225,21 +68,161 @@ public interface IcpMessage {
   public boolean requestsSrcRtt();
 
   /**
-   * <p>Sets this message's self-reported UDP sender address.</p>
-   * <p>This method should only be called when UDP packets are
-   * received and translated into IcpMessage instances.</p>
-   * @param udpAddress An IP address.
+   * <p>If this message is an ICP response, determines if this message
+   * contains a source return trip time response.</p>
+   * @return True if and only if this message is an ICP response and
+   * has the source return trip time bit set.
+   * @see #isResponse
+   * @see #ICP_FLAG_SRC_RTT
    */
-  public void setUdpAddress(IPAddr udpAddress);
+  boolean containsSrcRttResponse();
 
   /**
-   * <p>Sets this message's self-reported UDP port number.</p>
-   * <p>This method should only be called when UDP packets are
-   * received and translated into IcpMessage instances.</p>
-   * @param port A port number.
+   * <p>Returns the ICP length field of this message.</p>
+   * <p>The ICP length field is not the same as the length of the
+   * UDP packet.</p>
+   * @return The length field as reported by the ICP message.
+   */
+  short getLength();
+
+  /**
+   * <p>Retrieves this message's opcode.</p>
+   * @return A byte representing the opcode of this message.
+   * @see #ICP_OP_DECHO
+   * @see #ICP_OP_DENIED
+   * @see #ICP_OP_ERR
+   * @see #ICP_OP_HIT
+   * @see #ICP_OP_HIT_OBJ
+   * @see #ICP_OP_INVALID
+   * @see #ICP_OP_MISS
+   * @see #ICP_OP_MISS_NOFETCH
+   * @see #ICP_OP_QUERY
+   * @see #ICP_OP_SECHO
+   */
+  byte getOpcode();
+
+  /**
+   * <p>Retrieves the raw integer of option data.</p>
+   * @return The option data field.
+   * @see #getOptions()
+   * @see #getSrcRttResponse()
+   */
+  int getOptionData();
+
+  /**
+   * <p>Retrieves the options bit field.</p>
+   * @return The options bit field.
+   * @see #containsSrcRttResponse
+   * @see #getOptionData
+   * @see #requestsHitObj
+   * @see #requestsSrcRtt
+   * @see #ICP_FLAG_HIT_OBJ
+   * @see #ICP_FLAG_SRC_RTT
+   */
+  int getOptions();
+
+  /**
+   * <p>If this message has a hit-object opcode, retrieves this
+   * message's hit object as an array of bytes.</p>
+   * @return An array of bytes representing the object that piggy-
+   *         backed in the ICP packet if this message has a hit-object
+   *         opcode, null otherwise.
+   * @see #getOpcode
+   * @see #getPayloadObjectLength
+   */
+  byte[] getPayloadObject();
+
+  /**
+   * <p>If this message has a hit-object opcode, retrieves this
+   * message's hit object length field.</p>
+   * <p>The return value should, but may not, be the same as the value
+   * of <code>getPayloadObject().length</code>.</p>
+   * @return The self-reported payload object length field if this
+   *         message has a hit-object opcode, 0 otheriwse.
+   * @see #getOpcode
+   * @see #getPayloadObject
+   */
+  short getPayloadObjectLength();
+
+  /**
+   * <p>Retrieves the URL contained in this message.</p>
+   * @return This message's URL.
+   */
+  String getPayloadUrl();
+
+  /**
+   * <p>If this message is an ICP query, retrieves the address of the
+   * initial requester.</p>
+   * <p>The requester is the originator of the request. It may not be
+   * the same as the IP from which this ICP message originated.</p>
+   * @return The IP of the original requester of the URL if this
+   *         message is a query, null otherwise.
+   * @see #getSender
+   * @see #getUdpAddress
+   * @see #getUdpPort
+   * @see #isQuery
+   */
+  IPAddr getRequester();
+
+  /**
+   * <p>Retrieves the opaque request number.</p>
+   * @return The identifying number of this message.
+   */
+  int getRequestNumber();
+
+  /**
+   * <p>Retrieves the ICP sender field.</p>
+   * <p>The ICP specification instructs implementors to trust the
+   * sender information reported by the UDP packet. It is likely that
+   * the address returned by this method is <code>0.0.0.0</code> or
+   * some other meaningless value.</p>
+   * @return The sender's IP address.
+   */
+  IPAddr getSender();
+
+  /**
+   * <p>If this message is an ICP response and contains a source
+   * return trip time response, retrieves the latter from this
+   * message.</p>
+   * @return The source return trip time response if this message
+   *         contains one, 0 otherwise.
+   * @see #containsSrcRttResponse
+   * @see #isResponse
+   */
+  short getSrcRttResponse();
+
+  /**
+   * <p>Retrieves the IP address from which the UDP packet carrying
+   * this message was received.</p>
+   * <p>If this message was not actually received from a UDP packet,
+   * the return value will be meaningless, and shold be null.</p>
+   * @return The sender's IP address as reported by the UDP packet;
+   *         null if not applicable.
+   * @see #getSender
+   * @see #getRequester
    * @see #getUdpPort
    */
-  public void setUdpPort(int port);
+  IPAddr getUdpAddress();
+
+  /**
+   * <p>Retrieves the port from which this message's sender sent the
+   * UDP packet.</p>
+   * <p>If this message was not actually received from a UDP packet,
+   * the return value will be meaningless, and shold be zero.</p>
+   * @return The origin's port number as reported by the UDP packet;
+   *         zero if not applicable.
+   * @see #getSender
+   * @see #getRequester
+   * @see #getUdpAddress
+   */
+  int getUdpPort();
+
+  /**
+   * <p>Returns this message's ICP version field.</p>
+   * @return The ICP version field of this message.
+   * @see #ICP_VERSION
+   */
+  byte getVersion();
 
   /**
    * <p>Determines if this message is an ICP query.</p>
@@ -266,6 +249,134 @@ public interface IcpMessage {
    * @see #ICP_OP_MISS_NOFETCH
    */
   boolean isResponse();
+
+  /**
+   * <p>Produces a denied message in response to this message.</p>
+   * @return A denied message in response to the query.
+   * @throws IcpProtocolException if this message is not a query.
+   * @see #isQuery
+   */
+  IcpMessage makeDenied()
+      throws IcpProtocolException;
+
+  /**
+   * <p>Produces an error message in response to this message.</p>
+   * @return An error message in response to this message.
+   * @throws IcpProtocolException if this message is not a query.
+   * @see #isQuery
+   */
+  IcpMessage makeError()
+      throws IcpProtocolException;
+
+  /**
+   * <p>Produces a hit response to this message.</p>
+   * @return A hit response based on this message.
+   * @throws IcpProtocolException if this message is not a query.
+   * @see #isQuery
+   */
+  IcpMessage makeHit()
+      throws IcpProtocolException;
+
+  /**
+   * <p>Produces a hit response to this message, with the given source
+   * return trip time.</p>
+   * @param srcRttResponse A source return trip time.
+   * @return A hit response based on this message.
+   * @throws IcpProtocolException if this message is not a query, or
+   *                              if the query did not request a
+   *                              source return trip time response.
+   * @see #isQuery
+   * @see #requestsSrcRtt
+   */
+  IcpMessage makeHit(short srcRttResponse)
+      throws IcpProtocolException;
+
+  /**
+   * <p>Produces a hit-object response to this message using the given
+   * array of bytes.</p>
+   * @param payloadObject A payload as an array of bytes.
+   * @return A hit-object response based on this message.
+   * @throws IcpProtocolException if this message is not a query.
+   * @throws NullPointerException if payloadObject is null.
+   * @see #isQuery
+   */
+  IcpMessage makeHitObj(byte[] payloadObject)
+      throws IcpProtocolException;
+
+  /**
+   * <p>Produces a hit-object response to this message using the given
+   * array of bytes, with the given source return trip time.</p>
+   * @param srcRttResponse A source return trip time.
+   * @param payloadObject  A payload as an array of bytes.
+   * @return A hit response based on this message.
+   * @throws IcpProtocolException if this message is not a query, or
+   *                              if the query did not request a
+   *                              source return trip time response.
+   * @throws NullPointerException if payloadObject is null.
+   * @see #isQuery
+   * @see #requestsSrcRtt
+   */
+  IcpMessage makeHitObj(short srcRttResponse,
+                        byte[] payloadObject)
+      throws IcpProtocolException;
+
+  /**
+   * <p>Produces a miss response to this message.</p>
+   * @return A miss response based on this message.
+   * @throws IcpProtocolException if this message is not a query.
+   * @see #isQuery
+   */
+  IcpMessage makeMiss()
+      throws IcpProtocolException;
+
+  /**
+   * <p>Produces a miss response to this message, with the given
+   * source return trip time.</p>
+   * @param srcRttResponse A source return trip time.
+   * @return A miss response based on this message.
+   * @throws IcpProtocolException if this message is not a query, or
+   *                              if the query did not request a
+   *                              source return trip time response.
+   * @see #isQuery
+   * @see #requestsSrcRtt
+   */
+  IcpMessage makeMiss(short srcRttResponse)
+      throws IcpProtocolException;
+
+  /**
+   * <p>Produces a miss-no-fectch response to this message.</p>
+   * @return A miss-no-fetch response based on this message.
+   * @throws IcpProtocolException if this message is not a query.
+   * @see #isQuery
+   */
+  IcpMessage makeMissNoFetch()
+      throws IcpProtocolException;
+
+  /**
+   * <p>Produces a miss-no-fetch response to this message, with the
+   * given source return trip time.</p>
+   * @param srcRttResponse A source return trip time.
+   * @return A miss response based on this message.
+   * @throws IcpProtocolException if this message is not a query, or
+   *                              if the query did not request a
+   *                              source return trip time response.
+   * @see #isQuery
+   * @see #requestsSrcRtt
+   */
+  IcpMessage makeMissNoFetch(short srcRttResponse)
+      throws IcpProtocolException;
+
+  /**
+   * <p>Constructs a UDP packet to the given address and port, from
+   * this message.</p>
+   * @param recipient The destination IP.
+   * @param port      The destination port.
+   * @return A UDP packet <code>p</code> representing the message,
+   *         such that <code>p.getAddress() == recipient</code> and
+   *         <code>p.getPort() == port</code>.
+   */
+  DatagramPacket toDatagramPacket(IPAddr recipient,
+                                  int port);
 
   /**
    * <p>The hit object flag.</p>
@@ -331,11 +442,6 @@ public interface IcpMessage {
   static final byte ICP_OP_SECHO = 10;
 
   /**
-   * <p>The standard UDP port for ICP.</p>
-   */
-  static final int ICP_PORT = 3130;
-
-  /**
    * <p>The version of ICP reflected by this interface.</p>
    */
   static final byte ICP_VERSION = 2;
@@ -343,6 +449,6 @@ public interface IcpMessage {
   /**
    * <p>The maximum length of an ICP packet.</p>
    */
-  static final int MAX_LENGTH = 1450;
+  static final int MAX_LENGTH = 16384;
 
 }

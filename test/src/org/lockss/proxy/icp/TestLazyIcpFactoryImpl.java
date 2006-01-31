@@ -1,10 +1,10 @@
 /*
- * $Id: TestLazyIcpEncoderImpl.java,v 1.1 2005-11-30 17:46:54 thib_gc Exp $
+ * $Id: TestLazyIcpFactoryImpl.java,v 1.1 2006-01-31 01:29:19 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,16 +32,25 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.proxy.icp;
 
-import org.lockss.proxy.icp.IcpEncoder;
-
 /**
- * <p>Test class for
- * <code>org.lockss.proxy.icp.IcpFactoryImpl.IcpEncoderImpl</code>.</p>
+ * <p>Tests the {@link LazyIcpFactoryImpl} class.</p>
  * @author Thib Guicherd-Callin
  */
-public class TestLazyIcpEncoderImpl extends IcpEncoderTester {
+public class TestLazyIcpFactoryImpl extends IcpFactoryTester {
 
-  protected IcpEncoder.Factory makeFactory() {
+  /* Inherit documentation */
+  public void testMakeQuery() throws Exception {
+    try {
+     super.testMakeQuery();
+     fail("super.testMakeQuery() should have thrown an UnsupportedOperationException");
+    }
+    catch (UnsupportedOperationException uoe) {
+      // All is well
+    }
+  }
+
+  /* Inherit documentation */
+  protected IcpFactory makeIcpFactory() {
     return LazyIcpFactoryImpl.getInstance();
   }
 
