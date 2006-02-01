@@ -1,5 +1,5 @@
 /*
- * $Id: CurrentConfig.java,v 1.2 2006-01-12 03:13:30 smorabito Exp $
+ * $Id: CurrentConfig.java,v 1.3 2006-02-01 08:43:50 tlipkis Exp $
  */
 
 /*
@@ -49,70 +49,60 @@ public class CurrentConfig {
   }
 
   /** Static convenience method to get param from current configuration.
-   * Don't accidentally use this on a <code>Configuration</code> instance.
    */
   public static String getParam(String key) {
     return getCurrentConfig().get(key);
   }
 
   /** Static convenience method to get param from current configuration.
-   * Don't accidentally use this on a <code>Configuration</code> instance.
    */
   public static String getParam(String key, String dfault) {
     return getCurrentConfig().get(key, dfault);
   }
 
   /** Static convenience method to get param from current configuration.
-   * Don't accidentally use this on a <code>Configuration</code> instance.
    */
   public static boolean getBooleanParam(String key) throws InvalidParam {
     return getCurrentConfig().getBoolean(key);
   }
 
   /** Static convenience method to get param from current configuration.
-   * Don't accidentally use this on a <code>Configuration</code> instance.
    */
   public static boolean getBooleanParam(String key, boolean dfault) {
     return getCurrentConfig().getBoolean(key, dfault);
   }
 
   /** Static convenience method to get param from current configuration.
-   * Don't accidentally use this on a <code>Configuration</code> instance.
    */
   public static int getIntParam(String key) throws InvalidParam {
     return getCurrentConfig().getInt(key);
   }
 
   /** Static convenience method to get param from current configuration.
-   * Don't accidentally use this on a <code>Configuration</code> instance.
    */
   public static int getIntParam(String key, int dfault) {
     return getCurrentConfig().getInt(key, dfault);
   }
 
   /** Static convenience method to get param from current configuration.
-   * Don't accidentally use this on a <code>Configuration</code> instance.
    */
   public static long getLongParam(String key) throws InvalidParam {
     return getCurrentConfig().getLong(key);
   }
 
   /** Static convenience method to get param from current configuration.
-   * Don't accidentally use this on a <code>Configuration</code> instance.
    */
   public static long getLongParam(String key, long dfault) {
     return getCurrentConfig().getLong(key, dfault);
   }
 
   /** Static convenience method to get param from current configuration.
-   * Don't accidentally use this on a <code>Configuration</code> instance.
    */
   public static long getTimeIntervalParam(String key) throws InvalidParam {
     return getCurrentConfig().getTimeInterval(key);
   }
 
   /** Static convenience method to get param from current configuration.
-   * Don't accidentally use this on a <code>Configuration</code> instance.
    */
   public static long getTimeIntervalParam(String key, long dfault) {
     return getCurrentConfig().getTimeInterval(key, dfault);
@@ -120,7 +110,6 @@ public class CurrentConfig {
 
   /** Static convenience method to get a <code>Configuration</code>
    * subtree from the current configuration.
-   * Don't accidentally use this on a <code>Configuration</code> instance.
    */
   public static Configuration paramConfigTree(String key) {
     return getCurrentConfig().getConfigTree(key);
@@ -128,7 +117,6 @@ public class CurrentConfig {
 
   /** Static convenience method to get key iterator from the
    * current configuration.
-   * Don't accidentally use this on a <code>Configuration</code> instance.
    */
   public static Iterator paramKeyIterator() {
     return getCurrentConfig().keyIterator();
@@ -136,7 +124,6 @@ public class CurrentConfig {
 
   /** Static convenience method to get a node iterator from the
    * current configuration.
-   * Don't accidentally use this on a <code>Configuration</code> instance.
    */
   public static Iterator paramNodeIterator(String key) {
     return getCurrentConfig().nodeIterator(key);
@@ -144,7 +131,6 @@ public class CurrentConfig {
   
   /** Static convenience method to get a list from the current
    * configuration.
-   * Don't accidently use this on a <code>Configuration</code> instance.
    */
    public static List getList(String key) {
      return getCurrentConfig().getList(key);
@@ -152,7 +138,6 @@ public class CurrentConfig {
 
    /** Static convenience method to get a list from the current
     * configuration.
-    * Don't accidently use this on a <code>Configuration</code> instance.
     */
    public static List getList(String key, List dfault) {
      return getCurrentConfig().getList(key, dfault);
