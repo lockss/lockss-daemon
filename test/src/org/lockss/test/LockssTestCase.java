@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.78 2006-01-10 01:17:20 thib_gc Exp $
+ * $Id: LockssTestCase.java,v 1.79 2006-02-01 05:05:43 tlipkis Exp $
  */
 
 /*
@@ -165,8 +165,7 @@ public class LockssTestCase extends TestCase {
     }
     super.tearDown();
     if (Boolean.getBoolean("org.lockss.test.threadDump")) {
-      DebugUtils.getInstance().threadDump();
-      TimerUtil.guaranteedSleep(1000);
+      DebugUtils.getInstance().threadDump(true);
     }
     // don't reenable the watchdog; some threads may not have exited yet
 //     enableThreadWatchdog();
@@ -1485,8 +1484,7 @@ public class LockssTestCase extends TestCase {
 	    did = true;
 	    if (threadDump) {
 	      try {
-		DebugUtils.getInstance().threadDump();
-		TimerUtil.guaranteedSleep(1000);
+		DebugUtils.getInstance().threadDump(true);
 	      } catch (Exception e) {
 	      }
 	    }

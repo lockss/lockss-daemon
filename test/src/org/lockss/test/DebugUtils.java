@@ -1,5 +1,5 @@
 /*
- * $Id: DebugUtils.java,v 1.10 2005-10-11 05:52:05 tlipkis Exp $
+ * $Id: DebugUtils.java,v 1.11 2006-02-01 05:05:43 tlipkis Exp $
  */
 
 /*
@@ -83,8 +83,11 @@ public class DebugUtils {
 
   /** Request a thread dump of this JVM.  Dump is output to JVM's stderr,
    * which may not be the same as System.err.  If unsupported on this
-   * platform, logs an info message. */
-  public void threadDump() {
+   * platform, logs an info message.
+   * @param wait if true will attempt to wait until dump is complete before
+   * returning
+   */
+  public void threadDump(boolean wait) {
     int pid;
     try {
       pid = getMainPid();
@@ -101,6 +104,11 @@ public class DebugUtils {
 //     InputStream is = p.getInputStream();
 //     org.mortbay.util.IO.copy(is, System.out);
       p.waitFor();
+      if (wait) {
+	try {
+	  Thread.sleep(Constants.SECOND);
+	} catch (InterruptedException ignore) {}
+      }
     } catch (IOException e) {
       log.error("Couldn't exec '" + cmd + "'", e);
     } catch (InterruptedException e) {
@@ -110,14 +118,6 @@ public class DebugUtils {
 
   static Runtime rt() {
     return Runtime.getRuntime();
-  }
-
-  /** Make it easy for code in main source hierarchy to invoke a thread
-   * dump via reflection.  Should go away when that's no longer
-   * necessary. */
-  public static void staticThreadDump() {
-    getInstance().threadDump();
-    TimerUtil.guaranteedSleep(2000);
   }
 
   /** Linux implementation of platform-specific code */

@@ -1,5 +1,5 @@
 /*
- * $Id: ThreadDump.java,v 1.3 2006-01-12 01:12:50 thib_gc Exp $
+ * $Id: ThreadDump.java,v 1.4 2006-02-01 05:05:44 tlipkis Exp $
  */
 
 /*
@@ -49,7 +49,7 @@ public class ThreadDump extends LockssServlet {
 
   /** Handle a request */
   public void lockssHandleRequest() throws IOException {
-    platInfo.threadDump();
+    platInfo.threadDump(false);
     PrintWriter wrtr = resp.getWriter();
     resp.setContentType("text/plain");
 

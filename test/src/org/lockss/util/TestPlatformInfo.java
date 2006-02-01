@@ -1,5 +1,5 @@
 /*
- * $Id: TestPlatformInfo.java,v 1.9 2005-09-01 01:45:59 thib_gc Exp $
+ * $Id: TestPlatformInfo.java,v 1.10 2006-02-01 05:05:43 tlipkis Exp $
  */
 
 /*
@@ -129,7 +129,7 @@ public class TestPlatformInfo extends LockssTestCase {
   }
 
   public void xtestThreadDump() throws Exception {
-    info.threadDump();
+    info.threadDump(true);
   }
 
 }
