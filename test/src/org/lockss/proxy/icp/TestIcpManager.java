@@ -1,5 +1,5 @@
 /*
- * $Id: TestIcpManager.java,v 1.10 2006-01-31 01:46:04 thib_gc Exp $
+ * $Id: TestIcpManager.java,v 1.11 2006-02-01 05:33:57 tlipkis Exp $
  */
 
 /*
@@ -70,7 +70,7 @@ public class TestIcpManager extends LockssTestCase {
   /**
    * <p>The next port number to try.</p>
    */
-  private int port = 2048;
+  private static int port = 2048;
 
   /**
    * <p>Flag to indicate {@link IcpManager#setConfig} has been
