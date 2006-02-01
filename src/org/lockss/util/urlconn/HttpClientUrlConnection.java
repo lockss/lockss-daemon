@@ -1,5 +1,5 @@
 /*
- * $Id: HttpClientUrlConnection.java,v 1.21 2005-12-01 23:28:05 troberts Exp $
+ * $Id: HttpClientUrlConnection.java,v 1.22 2006-02-01 08:43:58 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -323,7 +323,7 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
     if (!isHeaderSet(method.getRequestHeader("Accept"))) {
       setRequestProperty("Accept", ACCEPT_STRING);
     }
-    if (!isHeaderSet(method.getRequestHeader("Connetion"))) {
+    if (!isHeaderSet(method.getRequestHeader("Connection"))) {
       setRequestProperty("Connection", "keep-alive");
     }
   }
