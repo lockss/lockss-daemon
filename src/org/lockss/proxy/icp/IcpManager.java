@@ -1,5 +1,5 @@
 /*
- * $Id: IcpManager.java,v 1.23 2006-01-31 01:29:19 thib_gc Exp $
+ * $Id: IcpManager.java,v 1.24 2006-02-01 06:33:11 thib_gc Exp $
  */
 
 /*
@@ -488,6 +488,7 @@ public class IcpManager extends BaseLockssDaemonManager implements ConfigurableM
       logger.debug("startSocket: waitRunning()");
       icpRunnable.waitRunning();
       logger.debug("startSocket: end");
+      success = true;
     }
     catch (SocketException se) {
       forget(); // revert instantions
