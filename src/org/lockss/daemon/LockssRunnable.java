@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRunnable.java,v 1.13 2006-01-27 04:32:34 tlipkis Exp $
+ * $Id: LockssRunnable.java,v 1.14 2006-02-01 05:04:40 tlipkis Exp $
  */
 
 /*
@@ -183,10 +183,13 @@ public abstract class LockssRunnable  implements LockssWatchdog, Runnable {
    */
   public void setPriority(String name, int defaultPriority) {
     int prio = getPriorityFromParam(name, defaultPriority);
-    if (prio != -1) {
-      log.debug("Setting priority of " + getName() + " thread to " + prio);
-      thread.setPriority(prio);
+    if (prio == -1) {
+      log.debug("Leaving priority of " + getName() +
+		" thread at " + thread.getPriority());
+      return;
     }
+    log.debug("Setting priority of " + getName() + " thread to " + prio);
+    thread.setPriority(prio);
   }
 
   /** Start a watchdog timer that will expire if not poked for interval
@@ -231,7 +234,7 @@ public abstract class LockssRunnable  implements LockssWatchdog, Runnable {
 
   /** Refresh the watchdog for another interval milliseconds. */
   public void pokeWDog() {
-    if (timerDead != null) {
+    if (timerDead != null && interval != 0) {
       timerDead.expireIn(interval);
       logEvent("Resetting", false);
     }
@@ -250,17 +253,20 @@ public abstract class LockssRunnable  implements LockssWatchdog, Runnable {
   }
 
   /** Called if thread is hung (hasn't poked the watchdog in too long).
-   * Default action is to exit the daemon; should be overridden if thread is
-   * able to take some less drastic corrective action (e.g., close socket
-   * for hung socket reads.) */
+   * Default action is to exit the daemon; should be overridden if thread
+   * is able to take some less drastic corrective action (e.g., close
+   * socket for hung socket reads.)  Unless
+   * org.lockss.thread.hungThreadDump is false, attempts to log a thread
+   * dump, waits 30 seconds and attempts another thread dump.
+   */
   protected void threadHung() {
     if (CurrentConfig.getBooleanParam(PARAM_THREAD_WDOG_HUNG_DUMP,
 				      DEFAULT_THREAD_WDOG_HUNG_DUMP)) {
-      PlatformInfo.getInstance().threadDump();
+      PlatformInfo.getInstance().threadDump(false);
       try {
 	Thread.sleep(30 * Constants.SECOND);
       } catch (InterruptedException ignore) {}
-      PlatformInfo.getInstance().threadDump();
+      PlatformInfo.getInstance().threadDump(true);
     }
     exitDaemon(Constants.EXIT_CODE_THREAD_HUNG,
 	       "Thread hung for " + StringUtil.timeIntervalToString(interval));
@@ -282,9 +288,9 @@ public abstract class LockssRunnable  implements LockssWatchdog, Runnable {
 	if (wdog != null) {
 	  wdog.forceStop();
 	}
-      } catch (IllegalArgumentException e) {
-	// can happen when stopping unit tests; don't let it prevent us
-	// from finding correct value for exitImm
+      } catch (RuntimeException e) {
+	// IllegalArgumentException can happen when stopping unit tests;
+	// don't let it prevent us from finding correct value for exitImm
       }
       log.error(msg + ": " + getName());
       exitImm = isExitImm();
@@ -327,7 +333,18 @@ public abstract class LockssRunnable  implements LockssWatchdog, Runnable {
 				       "<name>", name);
       prioParamNameMap.put(name, param);
     }
-    return CurrentConfig.getIntParam(param, defaultInterval);
+    int prio = CurrentConfig.getIntParam(param, defaultInterval);
+    if (prio < Thread.MIN_PRIORITY) {
+      log.warning("Thread " + getName() + ", priority " + prio +
+		  " less than min (" + Thread.MIN_PRIORITY + ")");
+      prio = Thread.MIN_PRIORITY;
+    }
+    if (prio > Thread.MAX_PRIORITY) {
+      log.warning("Thread " + getName() + ", priority " + prio +
+		  " greater than max (" + Thread.MAX_PRIORITY + ")");
+      prio = Thread.MAX_PRIORITY;
+    }
+    return prio;
   }
 
   private void logEvent(String event, boolean includeInterval) {
@@ -370,6 +387,8 @@ public abstract class LockssRunnable  implements LockssWatchdog, Runnable {
 	}
       } finally {
 	thread = null;
+	// Signal thread exited.  This is too early.  If it ever matters,
+	// use another thread to join() this one, then call nowExited();
 	nowExited();
       }
     }

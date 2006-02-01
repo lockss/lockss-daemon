@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssThread.java,v 1.10 2006-01-27 04:32:34 tlipkis Exp $
+ * $Id: TestLockssThread.java,v 1.11 2006-02-01 05:04:40 tlipkis Exp $
  */
 
 /*
@@ -85,13 +85,25 @@ public class TestLockssThread extends LockssTestCase {
   }
 
   public void testGetPriorityFromParam() {
-    Properties p = new Properties();
-    p.put("org.lockss.thread.foo.priority", "1");
-    ConfigurationUtil.setCurrentConfigFromProps(p);
-
+    int toolow = Thread.MIN_PRIORITY - 10;
+    int toohigh = Thread.MAX_PRIORITY + 10;
+    int justright = Thread.MIN_PRIORITY + 1;
     TestThread thr = new TestThread("Test");
-    assertEquals(432, thr.getPriorityFromParam("foobar", 432));
-    assertEquals(1, thr.getPriorityFromParam("foo", 432));
+
+    ConfigurationUtil.setFromArgs("org.lockss.thread.foo.priority",
+				  Integer.toString(toolow));
+    assertEquals(Thread.MIN_PRIORITY, thr.getPriorityFromParam("foo",
+								  9999));
+    ConfigurationUtil.setFromArgs("org.lockss.thread.foo.priority",
+				  Integer.toString(toohigh));
+    assertEquals(Thread.MAX_PRIORITY, thr.getPriorityFromParam("foo",
+								  9999));
+    ConfigurationUtil.setFromArgs("org.lockss.thread.foo.priority",
+				  Integer.toString(justright));
+    assertEquals(justright, thr.getPriorityFromParam("foo", 9999));
+
+    // not in config, use default
+    assertEquals(justright, thr.getPriorityFromParam("foobar", justright));
   }
 
   // ensure LockssThread gets started correctly

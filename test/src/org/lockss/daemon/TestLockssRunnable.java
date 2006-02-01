@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRunnable.java,v 1.5 2006-01-27 04:32:34 tlipkis Exp $
+ * $Id: TestLockssRunnable.java,v 1.6 2006-02-01 05:04:40 tlipkis Exp $
  */
 
 /*
@@ -84,13 +84,25 @@ public class TestLockssRunnable extends LockssTestCase {
   }
 
   public void testGetPriorityFromParam() {
-    Properties p = new Properties();
-    p.put("org.lockss.thread.foo.priority", "1");
-    ConfigurationUtil.setCurrentConfigFromProps(p);
-
+    int toolow = Thread.MIN_PRIORITY - 10;
+    int toohigh = Thread.MAX_PRIORITY + 10;
+    int justright = Thread.MIN_PRIORITY + 1;
     TestRunnable runabl = new TestRunnable("Test");
-    assertEquals(432, runabl.getPriorityFromParam("foobar", 432));
-    assertEquals(1, runabl.getPriorityFromParam("foo", 432));
+
+    ConfigurationUtil.setFromArgs("org.lockss.thread.foo.priority",
+				  Integer.toString(toolow));
+    assertEquals(Thread.MIN_PRIORITY, runabl.getPriorityFromParam("foo",
+								  9999));
+    ConfigurationUtil.setFromArgs("org.lockss.thread.foo.priority",
+				  Integer.toString(toohigh));
+    assertEquals(Thread.MAX_PRIORITY, runabl.getPriorityFromParam("foo",
+								  9999));
+    ConfigurationUtil.setFromArgs("org.lockss.thread.foo.priority",
+				  Integer.toString(justright));
+    assertEquals(justright, runabl.getPriorityFromParam("foo", 9999));
+
+    // not in config, use default
+    assertEquals(justright, runabl.getPriorityFromParam("foobar", justright));
   }
 
   Thread start(LockssRunnable run) {
