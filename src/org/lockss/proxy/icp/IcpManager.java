@@ -1,5 +1,5 @@
 /*
- * $Id: IcpManager.java,v 1.24 2006-02-01 06:33:11 thib_gc Exp $
+ * $Id: IcpManager.java,v 1.25 2006-02-02 00:33:54 thib_gc Exp $
  */
 
 /*
@@ -162,7 +162,7 @@ public class IcpManager extends BaseLockssDaemonManager implements ConfigurableM
         if (somethingBadHappened) {
           logger.debug("lockssRun: somethingBadHappened is true");
         }
-        logger.debug("lockssRun in IcpSocketImpl: end");
+        logger.debug("lockssRun: end");
       }
     }
 
