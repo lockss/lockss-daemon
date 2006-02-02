@@ -1,5 +1,5 @@
 /*
- * $Id: IcpManager.java,v 1.25 2006-02-02 00:33:54 thib_gc Exp $
+ * $Id: IcpManager.java,v 1.26 2006-02-02 01:00:01 thib_gc Exp $
  */
 
 /*
@@ -173,7 +173,6 @@ public class IcpManager extends BaseLockssDaemonManager implements ConfigurableM
         public void run() {
           try {
             stopSocket();
-            Thread.sleep(Constants.SECOND);
             if (shouldIcpServerStart()) {
               startSocket();
             }
@@ -253,8 +252,8 @@ public class IcpManager extends BaseLockssDaemonManager implements ConfigurableM
    * <p>Determines if the ICP server is currently running.</p>
    * @return True if and only if the ICP server is running.
    */
-  public boolean isIcpServerRunning() {
-    return udpSocket != null && icpRunning;
+  public synchronized boolean isIcpServerRunning() {
+    return icpRunnable != null && icpRunning;
   }
 
   /* Inherit documentation */
@@ -302,6 +301,7 @@ public class IcpManager extends BaseLockssDaemonManager implements ConfigurableM
    */
   protected synchronized void forget() {
     icpFactory = null;
+    icpRunnable = null;
     pluginManager = null;
     port = BAD_PORT;
     proxyManager = null;
@@ -483,9 +483,9 @@ public class IcpManager extends BaseLockssDaemonManager implements ConfigurableM
           CurrentConfig.getCurrentConfig(), rateLimiter,
           PARAM_ICP_INCOMING_RATE, DEFAULT_ICP_INCOMING_RATE);
 
-      IcpRunnable icpRunnable = new IcpRunnable();
+      icpRunnable = new IcpRunnable();
       new Thread(icpRunnable).start();
-      logger.debug("startSocket: waitRunning()");
+      logger.debug("startSocket: waitRunning");
       icpRunnable.waitRunning();
       logger.debug("startSocket: end");
       success = true;
@@ -510,12 +510,21 @@ public class IcpManager extends BaseLockssDaemonManager implements ConfigurableM
   protected synchronized void stopSocket() {
     if (isIcpServerRunning()) {
       logger.info(MESSAGE_STOPPING);
+
+      // Cause the ICP thread to exit
       icpRunning = false;
       if (udpSocket != null && !udpSocket.isClosed()) {
         udpSocket.close();
       }
+
+      // Wait for the thread to exit
+      logger.debug("stopSocket: waitExited");
+      icpRunnable.waitExited();
+
+      // Clean up
       resourceManager.releaseUdpPort(port, getClass());
       forget();
+      logger.debug("stopSocket: end");
     }
     else {
       logger.debug("stopSocket: the ICP server is not running");
@@ -649,5 +658,10 @@ public class IcpManager extends BaseLockssDaemonManager implements ConfigurableM
    */
   private static final String PARAM_SLOW_ICP =
     "org.lockss.proxy.icp.slow";
+
+  /**
+   * <p>The current ICP thread.</p>
+   */
+  private IcpRunnable icpRunnable;
 
 }
