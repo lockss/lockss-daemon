@@ -1,5 +1,5 @@
 /*
- * $Id: IcpManager.java,v 1.27 2006-02-03 20:31:33 thib_gc Exp $
+ * $Id: IcpManager.java,v 1.28 2006-02-03 21:33:09 thib_gc Exp $
  */
 
 /*
@@ -47,7 +47,35 @@ import org.lockss.util.*;
  * <p>A configurable daemon manager that controls the ICP server.</p>
  * @author Thib Guicherd-Callin
  */
-public class IcpManager extends BaseLockssDaemonManager implements ConfigurableManager {
+public class IcpManager
+    extends BaseLockssDaemonManager
+    implements ConfigurableManager {
+
+  /**
+   * <p>A name fragment for named parameters related to ICP.</p>
+   * @see LockssRunnable#PARAM_NAMED_THREAD_PRIORITY
+   * @see LockssRunnable#PARAM_NAMED_WDOG_INTERVAL
+   */
+  private static final String FRAGMENT_ICP =
+    "icp";
+
+  /**
+   * <p>A prefix fragment for parameters related to ICP.</p>
+   */
+  private static final String FRAGMENT_ICP_DOT =
+    FRAGMENT_ICP + ".";
+
+  /**
+   * <p>A prefix for daemon parameters related to ICP.</p>
+   */
+  private static final String PREFIX_ICP =
+    Configuration.PREFIX + FRAGMENT_ICP_DOT;
+
+  /**
+   * <p>A prefix for platform parameters related to ICP.</p>
+   */
+  private static final String PREFIX_PLATFORM =
+    Configuration.PLATFORM + FRAGMENT_ICP_DOT;
 
   /*
    * begin PRIVATE NESTED CLASS
@@ -61,10 +89,40 @@ public class IcpManager extends BaseLockssDaemonManager implements ConfigurableM
   private class IcpRunnable extends LockssRunnable {
 
     /**
+     * <p>A flag indicating that this thread has run into a relatively
+     * serious problem.</p>
+     */
+    protected boolean somethingHappened;
+
+    /**
+     * <p>A flag indicating whether the ICP thread is running in its
+     * main loop.</p>
+     */
+    private volatile boolean icpRunning;
+
+    /**
      * <p>Makes a new {@link IcpRunnable}.</p>
      */
     protected IcpRunnable() {
       super("IcpRunnable");
+      icpRunning = false;
+      somethingHappened = false;
+    }
+
+    /**
+     * <p>Determines whether the ICP thread is running in tis main
+     * loop.</p>
+     * @return True if and only if the ICP thread is running in its
+     *         main loop.
+     */
+    public boolean isRunning() {
+      return icpRunning;
+    }
+
+    /**
+     * <p>Requests that this thread stop.</p>
+     */
+    public void requestStop() {
       icpRunning = false;
     }
 
@@ -76,22 +134,21 @@ public class IcpManager extends BaseLockssDaemonManager implements ConfigurableM
                                                  DEFAULT_ICP_WDOG_INTERVAL);
       byte[] buffer = new byte[IcpMessage.MAX_LENGTH];
       DatagramPacket packet = new DatagramPacket(buffer, buffer.length);
-      icpRunning = true;
-      boolean somethingBadHappened = false;
       IcpMessage message = null;
 
-      setPriority(ICP_THREAD_PRIORITY_FRAGMENT,
-                  CurrentConfig.getIntParam(PARAM_ICP_THREAD_PRIORITY,
-                                            DEFAULT_ICP_THREAD_PRIORITY));
+      setPriority(FRAGMENT_ICP,
+                  DEFAULT_ICP_THREAD_PRIORITY);
 
       try {
         // Set up socket timeout
         udpSocket.setSoTimeout((int)interval / 2); // may throw
-        startWDog(ICP_WDOG_INTERVAL_FRAGMENT, interval);
+        triggerWDogOnExit(true);
+        startWDog(FRAGMENT_ICP, interval);
+        icpRunning = true;
         nowRunning();
 
         // Main loop
-        while (icpRunning && !somethingBadHappened) {
+        while (isRunning() && !somethingBadHappened()) {
           try {
             // Receive
             logger.debug2("lockssRun: listening");
@@ -120,6 +177,7 @@ public class IcpManager extends BaseLockssDaemonManager implements ConfigurableM
               processMessage(message);
             }
             else {
+              // Reject event
               logger.debug2("lockssRun: rate limiter");
             }
           }
@@ -140,48 +198,63 @@ public class IcpManager extends BaseLockssDaemonManager implements ConfigurableM
             }
           }
           catch (IOException ioe) {
-            if (icpRunning) {
-              logger.debug2("lockssRun: IOException", ioe);
+            if (isRunning()) {
+              logger.debug("lockssRun: IOException", ioe);
             }
-            somethingBadHappened = icpRunning && udpSocket.isClosed();
+            somethingHappened = isRunning() && udpSocket.isClosed();
           }
-          finally {
+
+          if (isRunning()) {
             pokeWDog();
           }
         } // end of main loop
 
         // Trigger watchdog if something bad happened
-        triggerWDogOnExit(somethingBadHappened);
       }
       catch (SocketException se) {
-        logger.debug("lockssRun: could not set socket timeout", se);
+        logger.warning("lockssRun: could not set socket timeout", se);
       }
-      finally {
-        // Clean up
-        stopWDog();
-        if (somethingBadHappened) {
-          logger.debug("lockssRun: somethingBadHappened is true");
-        }
-        logger.debug("lockssRun: end");
+
+      // Clean up
+      stopWDog();
+      if (somethingBadHappened()) {
+        logger.warning("lockssRun: something bad happened");
       }
+      else {
+        triggerWDogOnExit(false);
+      }
+      logger.debug("lockssRun: end");
+    }
+
+    /**
+     * <p>Determines if a relatively serious error condition has
+     * arisen in this thread's main loop.</p>
+     * @return False unless something serious has occurred in the main
+     *         loop of this thread.
+     */
+    protected boolean somethingBadHappened() {
+      return somethingHappened;
     }
 
     /* Inherit documentation */
     protected void threadExited() {
-      logger.debug(MESSAGE_THREAD_EXITED);
-      new Thread(new Runnable() {
-        public void run() {
-          try {
-            stopSocket();
-            if (shouldIcpServerStart()) {
-              startSocket();
+      logger.warning(MESSAGE_THREAD_EXITED);
+      if (somethingBadHappened()) {
+        // Restart
+        new Thread(new Runnable() {
+          public void run() {
+            try {
+              stopSocket();
+              if (shouldIcpServerStart()) {
+                startSocket();
+              }
+            }
+            catch (Exception exc) {
+              logger.warning("Could not restart the ICP manager", exc);
             }
           }
-          catch (Exception exc) {
-            logger.error("Could not restart the ICP manager", exc);
-          }
-        }
-      }).start();
+        }).start();
+      }
     }
 
   }
@@ -206,12 +279,6 @@ public class IcpManager extends BaseLockssDaemonManager implements ConfigurableM
   private IcpRunnable icpRunnable;
 
   /**
-   * <p>A flag indicating whether the ICP thread is running in its
-   * main loop.</p>
-   */
-  private volatile boolean icpRunning;
-
-  /**
    * <p>A reference to the plugin manager.</p>
    */
   private PluginManager pluginManager;
@@ -230,11 +297,6 @@ public class IcpManager extends BaseLockssDaemonManager implements ConfigurableM
    * <p>A rate limiter for use by the ICP socket.</p>
    */
   private RateLimiter rateLimiter;
-
-  /**
-   * <p>A reference to the resource manager.</p>
-   */
-  private ResourceManager resourceManager;
 
   /**
    * <p>Retrieves the current ICP port number.</p>
@@ -258,7 +320,7 @@ public class IcpManager extends BaseLockssDaemonManager implements ConfigurableM
    * @return True if and only if the ICP server is running.
    */
   public synchronized boolean isIcpServerRunning() {
-    return icpRunnable != null && icpRunning;
+    return icpRunnable != null && icpRunnable.isRunning();
   }
 
   /* Inherit documentation */
@@ -271,13 +333,8 @@ public class IcpManager extends BaseLockssDaemonManager implements ConfigurableM
           rateLimiter, PARAM_ICP_INCOMING_RATE, DEFAULT_ICP_INCOMING_RATE);
     }
 
-    if (   changedKeys.contains(PARAM_PLATFORM_ICP_ENABLED)
-        || changedKeys.contains(PARAM_PLATFORM_ICP_PORT)
-        || changedKeys.contains(PARAM_ICP_ENABLED)
-        || changedKeys.contains(PARAM_ICP_PORT)
-        || changedKeys.contains(PARAM_SLOW_ICP)
-        || changedKeys.contains(PARAM_ICP_THREAD_PRIORITY)
-        || changedKeys.contains(PARAM_ICP_WDOG_INTERVAL)) {
+    if (   changedKeys.contains(PREFIX_ICP)
+        || changedKeys.contains(PREFIX_PLATFORM)) {
       stopSocket();
       if (theDaemon.isDaemonInited() && shouldIcpServerStart(newConfig)) {
         startSocket(newConfig);
@@ -311,7 +368,6 @@ public class IcpManager extends BaseLockssDaemonManager implements ConfigurableM
     port = BAD_PORT;
     proxyManager = null;
     rateLimiter = null;
-    resourceManager = null;
     udpSocket = null;
   }
 
@@ -469,8 +525,7 @@ public class IcpManager extends BaseLockssDaemonManager implements ConfigurableM
         return; // go to finally block
       }
 
-      resourceManager = getDaemon().getResourceManager();
-      if (!resourceManager.reserveUdpPort(port, getClass())) {
+      if (!getDaemon().getResourceManager().reserveUdpPort(port, getClass())) {
         logger.debug("startSocket: could not reserve UDP port " + port);
         return; // go to finally block
       }
@@ -497,7 +552,7 @@ public class IcpManager extends BaseLockssDaemonManager implements ConfigurableM
     }
     catch (SocketException se) {
       forget(); // revert instantions
-      logger.debug("startSocket: SocketException", se);
+      logger.warning("startSocket: SocketException", se);
     }
     finally {
       if (success) {
@@ -517,7 +572,7 @@ public class IcpManager extends BaseLockssDaemonManager implements ConfigurableM
       logger.info(MESSAGE_STOPPING);
 
       // Cause the ICP thread to exit
-      icpRunning = false;
+      icpRunnable.requestStop();
       if (udpSocket != null && !udpSocket.isClosed()) {
         udpSocket.close();
       }
@@ -527,7 +582,7 @@ public class IcpManager extends BaseLockssDaemonManager implements ConfigurableM
       icpRunnable.waitExited();
 
       // Clean up
-      resourceManager.releaseUdpPort(port, getClass());
+      getDaemon().getResourceManager().releaseUdpPort(port, getClass());
       forget();
       logger.debug("stopSocket: end");
     }
@@ -540,25 +595,25 @@ public class IcpManager extends BaseLockssDaemonManager implements ConfigurableM
    * <p>The ICP enabled flag parameter.</p>
    */
   public static final String PARAM_ICP_ENABLED =
-    "org.lockss.proxy.icp.enabled";
+    PREFIX_ICP + "enabled";
 
   /**
    * <p>The ICP port parameter.</p>
    */
   public static final String PARAM_ICP_PORT =
-    "org.lockss.proxy.icp.port";
+    PREFIX_ICP + "port";
 
   /**
    * <p>The ICP enabled parameter from the platform.</p>
    */
   public static final String PARAM_PLATFORM_ICP_ENABLED =
-    "org.lockss.platform.icp.enabled";
+    PREFIX_PLATFORM + "enabled";
 
   /**
    * <p>The ICP port parameter from the platform.</p>
    */
   public static final String PARAM_PLATFORM_ICP_PORT =
-    "org.lockss.platform.icp.port";
+    PREFIX_PLATFORM + "port";
 
   /**
    * <p>A logger for use by instances of this class.</p>
@@ -599,18 +654,6 @@ public class IcpManager extends BaseLockssDaemonManager implements ConfigurableM
   private static final String ICP_THREAD_NAME = "IcpRunnable";
 
   /**
-   * <p>A name fragment for
-   * {@link LockssRunnable#PARAM_NAMED_THREAD_PRIORITY}.</p>
-   */
-  private static final String ICP_THREAD_PRIORITY_FRAGMENT = "icp";
-
-  /**
-   * <p>A name fragment for
-   * {@link LockssRunnable#PARAM_NAMED_WDOG_INTERVAL}.</p>
-   */
-  private static final String ICP_WDOG_INTERVAL_FRAGMENT = "icp";
-
-  /**
    * <p>A logging message.</p>
    */
   private static final String MESSAGE_COULD_NOT_START =
@@ -644,24 +687,24 @@ public class IcpManager extends BaseLockssDaemonManager implements ConfigurableM
    * <p>The ICP rate-limiting string parameter.</p>
    */
   private static final String PARAM_ICP_INCOMING_RATE =
-    "org.lockss.proxy.icp.rate";
+    PREFIX_ICP + "rate";
 
   /**
    * <p>The ICP thread priority parameter.</p>
    */
   private static final String PARAM_ICP_THREAD_PRIORITY =
-    "org.lockss.proxy.icp.priority";
+    PREFIX_ICP + "priority";
 
   /**
    * <p>The ICP watchdog interval parameter.</p>
    */
   private static final String PARAM_ICP_WDOG_INTERVAL =
-    "org.lockss.proxy.icp.interval";
+    PREFIX_ICP + "interval";
 
   /**
    * <p>The slow ICP string parameter.</p>
    */
   private static final String PARAM_SLOW_ICP =
-    "org.lockss.proxy.icp.slow";
+    PREFIX_ICP + "slow";
 
 }
