@@ -40,7 +40,7 @@
 
   <!-- enclosing "org.lockss" so we don't have to repeat it -->
   <property name="org.lockss">
-    
+
     <!-- Try to get a thread dump if a thread hangs -->
     <property name="thread.hungThreadDump" value="true"/>
 
@@ -48,7 +48,7 @@
     <!-- Use new UI Home servlet -->
     <property name="admin.redirectRoot" value="Home" />
 
-    <!-- Plugin Registery:
+    <!-- Plugin Registry:
     List the plugins that should be included in UI menus. -->
     <property name="plugin.registry">
       <list>
@@ -118,11 +118,11 @@
 	<value>org.lockss.plugin.etd.ncstateplugin.NCStateETDLegacyPlugin</value>
 	<value>org.lockss.plugin.etd.gatechplugin.GATechETDPlugin</value>
 	<value>org.lockss.plugin.etd.ukyplugin.UKYETDPlugin</value>
-	<value>edu.cornell.library.rmc.LolitaPlugin</value> 
-	<value>us.ak.state.library.plugin.AlaskaStateDocsPlugin</value> 
+	<value>edu.cornell.library.rmc.LolitaPlugin</value>
+	<value>us.ak.state.library.plugin.AlaskaStateDocsPlugin</value>
  	<value>edu.stanford.plugin.exquisitecorpse.ExquisiteCorpsePlugin</value>
-	<value>org.lockss.plugin.sfpoetrybroadside.SantaFePoetryBroadsidePlugin</value> 
-	<value>org.lockss.plugin.jscm.JSCMPlugin</value> 
+	<value>org.lockss.plugin.sfpoetrybroadside.SantaFePoetryBroadsidePlugin</value>
+	<value>org.lockss.plugin.jscm.JSCMPlugin</value>
 	<value>org.lockss.plugin.secrecynews.SecrecyNewsPlugin</value>
       </list>
     </property>
@@ -1549,8 +1549,8 @@
       </property>
 
       <property name="assa1">
-	<property name="title" value="Applied Semiotics / Semiotique appliquee Volume 1" />
-	<property name="journalTitle" value="Applied Semiotics / Semiotique appliquee" />
+	<property name="title" value="Applied Semiotics / S&#x00e9;miotique appliqu&#x00e9;e Volume 1" />
+	<property name="journalTitle" value="Applied Semiotics / S&#x00e9;miotique appliqu&#x00e9;e" />
 	<property name="plugin" value="edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
@@ -1568,8 +1568,8 @@
       </property>
 
       <property name="assa2">
-	<property name="title" value="Applied Semiotics / Semiotique appliquee Volume 2" />
-	<property name="journalTitle" value="Applied Semiotics / Semiotique appliquee" />
+	<property name="title" value="Applied Semiotics / S&#x00e9;miotique appliqu&#x00e9;e Volume 2" />
+	<property name="journalTitle" value="Applied Semiotics / S&#x00e9;miotique appliqu&#x00e9;e" />
 	<property name="plugin" value="edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
@@ -1587,8 +1587,8 @@
       </property>
 
       <property name="assa3">
-	<property name="title" value="Applied Semiotics / Semiotique appliquee Volume 3" />
-	<property name="journalTitle" value="Applied Semiotics / Semiotique appliquee" />
+	<property name="title" value="Applied Semiotics / S&#x00e9;miotique appliqu&#x00e9;e Volume 3" />
+	<property name="journalTitle" value="Applied Semiotics / S&#x00e9;miotique appliqu&#x00e9;e" />
 	<property name="plugin" value="edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
@@ -1606,8 +1606,8 @@
       </property>
 
       <property name="assa4">
-	<property name="title" value="Applied Semiotics / Semiotique appliquee Volume 4" />
-	<property name="journalTitle" value="Applied Semiotics / Semiotique appliquee" />
+	<property name="title" value="Applied Semiotics / S&#x00e9;miotique appliqu&#x00e9;e Volume 4" />
+	<property name="journalTitle" value="Applied Semiotics / S&#x00e9;miotique appliqu&#x00e9;e" />
 	<property name="plugin" value="edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
@@ -1625,8 +1625,8 @@
       </property>
 
       <property name="assa5">
-	<property name="title" value="Applied Semiotics / Semiotique appliquee Volume 5" />
-	<property name="journalTitle" value="Applied Semiotics / Semiotique appliquee" />
+	<property name="title" value="Applied Semiotics / S&#x00e9;miotique appliqu&#x00e9;e Volume 5" />
+	<property name="journalTitle" value="Applied Semiotics / S&#x00e9;miotique appliqu&#x00e9;e" />
 	<property name="plugin" value="edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
@@ -1644,8 +1644,8 @@
       </property>
 
       <property name="assa6to7">
-	<property name="title" value="Applied Semiotics / Semiotique appliquee Volume 6-7" />
-	<property name="journalTitle" value="Applied Semiotics / Semiotique appliquee" />
+	<property name="title" value="Applied Semiotics / S&#x00e9;miotique appliqu&#x00e9;e Volume 6-7" />
+	<property name="journalTitle" value="Applied Semiotics / S&#x00e9;miotique appliqu&#x00e9;e" />
 	<property name="plugin" value="edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
@@ -1663,8 +1663,8 @@
       </property>
 
       <property name="assa8">
-	<property name="title" value="Applied Semiotics / Semiotique appliquee Volume 8" />
-	<property name="journalTitle" value="Applied Semiotics / Semiotique appliquee" />
+	<property name="title" value="Applied Semiotics / S&#x00e9;miotique appliqu&#x00e9;e Volume 8" />
+	<property name="journalTitle" value="Applied Semiotics / S&#x00e9;miotique appliqu&#x00e9;e" />
 	<property name="plugin" value="edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
@@ -1682,8 +1682,8 @@
       </property>
 
       <property name="assa9">
-	<property name="title" value="Applied Semiotics / Semiotique appliquee Volume 9" />
-	<property name="journalTitle" value="Applied Semiotics / Semiotique appliquee" />
+	<property name="title" value="Applied Semiotics / S&#x00e9;miotique appliqu&#x00e9;e Volume 9" />
+	<property name="journalTitle" value="Applied Semiotics / S&#x00e9;miotique appliqu&#x00e9;e" />
 	<property name="plugin" value="edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
@@ -1701,8 +1701,8 @@
       </property>
 
       <property name="assa10">
-	<property name="title" value="Applied Semiotics / Semiotique appliquee Volume 10" />
-	<property name="journalTitle" value="Applied Semiotics / Semiotique appliquee" />
+	<property name="title" value="Applied Semiotics / S&#x00e9;miotique appliqu&#x00e9;e Volume 10" />
+	<property name="journalTitle" value="Applied Semiotics / S&#x00e9;miotique appliqu&#x00e9;e" />
 	<property name="plugin" value="edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
@@ -1720,8 +1720,8 @@
       </property>
 
       <property name="assa11to12">
-	<property name="title" value="Applied Semiotics / Semiotique appliquee Volume 11-12" />
-	<property name="journalTitle" value="Applied Semiotics / Semiotique appliquee" />
+	<property name="title" value="Applied Semiotics / S&#x00e9;miotique appliqu&#x00e9;e Volume 11-12" />
+	<property name="journalTitle" value="Applied Semiotics / S&#x00e9;miotique appliqu&#x00e9;e" />
 	<property name="plugin" value="edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
@@ -1739,8 +1739,8 @@
       </property>
 
       <property name="assa13">
-	<property name="title" value="Applied Semiotics / Semiotique appliquee Volume 13" />
-	<property name="journalTitle" value="Applied Semiotics / Semiotique appliquee" />
+	<property name="title" value="Applied Semiotics / S&#x00e9;miotique appliqu&#x00e9;e Volume 13" />
+	<property name="journalTitle" value="Applied Semiotics / S&#x00e9;miotique appliqu&#x00e9;e" />
 	<property name="plugin" value="edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
@@ -1758,8 +1758,8 @@
       </property>
 
       <property name="assa14">
-	<property name="title" value="Applied Semiotics / Semiotique appliquee Volume 14" />
-	<property name="journalTitle" value="Applied Semiotics / Semiotique appliquee" />
+	<property name="title" value="Applied Semiotics / S&#x00e9;miotique appliqu&#x00e9;e Volume 14" />
+	<property name="journalTitle" value="Applied Semiotics / S&#x00e9;miotique appliqu&#x00e9;e" />
 	<property name="plugin" value="edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
@@ -1956,7 +1956,7 @@
 	</property>
         <property name="attributes.rights" value="openaccess" />
       </property>
-      
+
       <property name="ahr108">
 	<property name="title" value="American Historical Review Volume 108" />
 	<property name="estSize" value="22MB" />
@@ -2187,7 +2187,7 @@
 	  <property name="value" value="33" />
 	</property>
         <property name="attributes.publisher" value="oup" />
-      </property> 
+      </property>
 
       <property name="EssaysinCriticism55">
 	<property name="title" value="Essays in Criticism Volume 55" />
@@ -2878,7 +2878,7 @@
 	  <property name="value" value="4" />
 	</property>
         <property name="attributes.publisher" value="oup" />
-      </property> 
+      </property>
 <!-- End OUP titles -->
 
 <!-- Begin SAGE titles -->
@@ -6338,7 +6338,7 @@
         <property name="attributes.publisher" value="IU Press" />
       </property>
 
-      
+
 
 
       <property name="teslej8">
@@ -6416,7 +6416,7 @@
 	</property>
       </property>
 
-      
+
       <property name="arkivoc2004">
 	<property name="title" value="Arkivoc 2004" />
 	<property name="estSize" value="110MB" />
@@ -6942,7 +6942,7 @@
 	</property>
         <property name="attributes.rights" value="openaccess" />
       </property>
-      
+
 
       <property name="genders2004">
 	<property name="title" value="Genders 2004" />
@@ -7179,7 +7179,7 @@
 	</property>
         <property name="attributes.rights" value="openaccess" />
       </property>
-      
+
       <property name="19thCAWW1">
 	<property name="title" value="19th Century Art Worldwide Volume 1" />
 	<property name="estSize" value="0.7MB" />
@@ -7274,7 +7274,7 @@
 	</property>
         <property name="attributes.rights" value="openaccess" />
       </property>
-      
+
       <property name="nsr5">
 	<property name="title" value="MRS Internet Journal of Nitride Semiconductor Research Volume 5" />
 	<property name="journalTitle" value="MRS Internet Journal of Nitride Semiconductor Research" />
@@ -7304,7 +7304,7 @@
 	</property>
         <property name="attributes.rights" value="openaccess" />
       </property>
-      
+
       <property name="nsr6">
 	<property name="title" value="MRS Internet Journal of Nitride Semiconductor Research Volume 6" />
 	<property name="journalTitle" value="MRS Internet Journal of Nitride Semiconductor Research" />
@@ -7582,8 +7582,8 @@
 
     </property>
       <!-- End title database -->
-    
+
   </property>
-  
+
   <!-- End org.lockss -->
 </lockss-config>
