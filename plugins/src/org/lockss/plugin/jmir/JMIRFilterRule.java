@@ -1,5 +1,5 @@
 /*
- * $Id: JMIRFilterRule.java,v 1.2 2005-09-30 22:25:01 thib_gc Exp $
+ * $Id: JMIRFilterRule.java,v 1.3 2006-02-03 18:17:51 troberts Exp $
  */
 
 /*
@@ -33,22 +33,40 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.jmir;
 
 import java.io.*;
+import java.util.*;
 
 import org.lockss.filter.*;
 import org.lockss.plugin.FilterRule;
+import org.lockss.util.*;
 
 public class JMIRFilterRule implements FilterRule {
-  public static final String CITATION_STRING =
-      "This article has been cited by other articles:";
-  public static final String MEDLINE_STRING = "[Medline]";
+  private static final String leftSideBarStart =
+    "<!-- ****************************** Google Ad ****************************** -->";
+
+  private static final String leftSideBarEnd =
+    "<!-- ****************************** Footer ****************************** -->";
+
+  private static final String rightSideBarStart =
+    "<!-- ****************************** Left/Article Menu ****************************** -->";
+
+  private static final String rightSideBarEnd =
+    "<!-- ****************************** Main Body ****************************** -->";
 
   public Reader createFilteredReader(Reader reader) {
-
-    HtmlTagFilter.TagPair pair =
-      new HtmlTagFilter.TagPair("This article has been viewed",
-				"times since",
-				true);
-    Reader tagFilter = new HtmlTagFilter(reader,pair);
+    List tagList =
+      ListUtil.list(
+		    new HtmlTagFilter.TagPair("This article has been viewed",
+					      "times since", true),
+		    new HtmlTagFilter.TagPair(leftSideBarStart,
+					      leftSideBarEnd, true),
+		    new HtmlTagFilter.TagPair(rightSideBarStart,
+					      rightSideBarEnd, true),
+		    new HtmlTagFilter.TagPair("Last update:",
+					      "</span>", true),
+		    new HtmlTagFilter.TagPair("<input type=\"hidden\"",
+					      "/>", true)
+		    );
+    Reader tagFilter = HtmlTagFilter.makeNestedFilter(reader, tagList);
     return new WhiteSpaceFilter(tagFilter);
   }
 }
