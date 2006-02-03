@@ -109,6 +109,8 @@
 	<value>gov.gpo.access.permanent.plugin.nistjournalofresearch.NISTJournalOfResearchPlugin</value>
 	<value>gov.gpo.access.permanent.plugin.humanities.HumanitiesPlugin</value>
 	<value>gov.gpo.access.permanent.plugin.surveyofcurrentbusiness.SurveyOfCurrentBusinessPlugin</value>
+	<value>gov.gpo.access.permanent.plugin.monthlyenergyreview.MonthlyEnergyReviewPlugin</value>
+	<value>gov.gpo.access.permanent.plugin.monthlylaborreview.MonthlyLaborReviewPlugin</value>
 	<value>org.lockss.plugin.etd.vanderbiltetdplugin.VanderbiltETDPlugin</value>
 	<value>org.lockss.plugin.etd.vtetdplugin.VTETDPlugin</value>
 	<value>org.lockss.plugin.etd.vtetdplugin.VTETDLegacyPlugin</value>
@@ -118,7 +120,9 @@
 	<value>org.lockss.plugin.etd.ukyplugin.UKYETDPlugin</value>
 	<value>edu.cornell.library.rmc.LolitaPlugin</value> 
 	<value>us.ak.state.library.plugin.AlaskaStateDocsPlugin</value> 
-	<value>edu.stanford.plugin.exquisitecorpse.ExquisiteCorpsePlugin</value>
+ 	<value>edu.stanford.plugin.exquisitecorpse.ExquisiteCorpsePlugin</value>
+	<value>org.lockss.plugin.sfpoetrybroadside.SantaFePoetryBroadsidePlugin</value> 
+	<value>org.lockss.plugin.jscm.JSCMPlugin</value> 
 	<value>org.lockss.plugin.secrecynews.SecrecyNewsPlugin</value>
       </list>
     </property>
@@ -188,6 +192,8 @@
 	  or pluginName='gov.gpo.access.permanent.plugin.nistjournalofresearch.NISTJournalOfResearchPlugin'
 	  or pluginName='gov.gpo.access.permanent.plugin.humanities.HumanitiesPlugin'
 	  or pluginName='gov.gpo.access.permanent.plugin.surveyofcurrentbusiness.SurveyOfCurrentBusinessPlugin'
+	  or pluginName='gov.gpo.access.permanent.plugin.monthlyenergyreview.MonthlyEnergyReviewPlugin'
+	  or pluginName='gov.gpo.access.permanent.plugin.monthlylaborreview.MonthlyLaborReviewPlugin'
 	  ]"
 	  />
       </property>
@@ -328,12 +334,10 @@
 	</property>
 	<property name="param.2">
 	  <property name="key" value="issue_set" />
-	  <property name="value" value="issue_1,issue_2,issue_3,issue_4,issue_5,issue_7,issue_8,issue_9,issue_10,issue_11,mississippi_corpse,issue_12,issue_14"
-	    />
+	  <property name="value" value="issue_1,issue_2,issue_3,issue_4,issue_5,issue_7,issue_8,issue_9,issue_10,issue_11,mississippi_corpse,issue_12,issue_14" />
 	</property>
-	<property name="attributes.rights" value="openaccess" />
+        <property name="attributes.rights" value="openaccess" />
       </property>
-
 
       <property name="AlaskaStateDocuments2006">
 	<property name="title" value="Alaska State Documents 2006" />
@@ -349,6 +353,276 @@
 	</property>
       </property>
 
+      <property name="JSCM10">
+	<property name="title" value="Journal of Seventeenth-Century Music Volume 10" />
+	<property name="journalTitle" value="Journal of Seventeenth-Century Music" />
+	<property name="plugin" value="org.lockss.plugin.jscm.JSCMPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://sscm-jscm.press.uiuc.edu/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="10" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="JSCM9">
+	<property name="title" value="Journal of Seventeenth-Century Music Volume 9" />
+	<property name="journalTitle" value="Journal of Seventeenth-Century Music" />
+	<property name="plugin" value="org.lockss.plugin.jscm.JSCMPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://sscm-jscm.press.uiuc.edu/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="9" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="JSCM8">
+	<property name="title" value="Journal of Seventeenth-Century Music Volume 8" />
+	<property name="journalTitle" value="Journal of Seventeenth-Century Music" />
+	<property name="plugin" value="org.lockss.plugin.jscm.JSCMPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://sscm-jscm.press.uiuc.edu/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="8" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="JSCM7">
+	<property name="title" value="Journal of Seventeenth-Century Music Volume 7" />
+	<property name="journalTitle" value="Journal of Seventeenth-Century Music" />
+	<property name="plugin" value="org.lockss.plugin.jscm.JSCMPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://sscm-jscm.press.uiuc.edu/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="7" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="JSCM6">
+	<property name="title" value="Journal of Seventeenth-Century Music Volume 6" />
+	<property name="journalTitle" value="Journal of Seventeenth-Century Music" />
+	<property name="plugin" value="org.lockss.plugin.jscm.JSCMPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://sscm-jscm.press.uiuc.edu/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="6" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="JSCM5">
+	<property name="title" value="Journal of Seventeenth-Century Music Volume 5" />
+	<property name="journalTitle" value="Journal of Seventeenth-Century Music" />
+	<property name="plugin" value="org.lockss.plugin.jscm.JSCMPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://sscm-jscm.press.uiuc.edu/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="5" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="JSCM4">
+	<property name="title" value="Journal of Seventeenth-Century Music Volume 4" />
+	<property name="journalTitle" value="Journal of Seventeenth-Century Music" />
+	<property name="plugin" value="org.lockss.plugin.jscm.JSCMPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://sscm-jscm.press.uiuc.edu/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="4" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="JSCM3">
+	<property name="title" value="Journal of Seventeenth-Century Music Volume 3" />
+	<property name="journalTitle" value="Journal of Seventeenth-Century Music" />
+	<property name="plugin" value="org.lockss.plugin.jscm.JSCMPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://sscm-jscm.press.uiuc.edu/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="3" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="JSCM2">
+	<property name="title" value="Journal of Seventeenth-Century Music Volume 2" />
+	<property name="journalTitle" value="Journal of Seventeenth-Century Music" />
+	<property name="plugin" value="org.lockss.plugin.jscm.JSCMPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://sscm-jscm.press.uiuc.edu/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="2" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="JSCM1">
+	<property name="title" value="Journal of Seventeenth-Century Music Volume 1" />
+	<property name="journalTitle" value="Journal of Seventeenth-Century Music" />
+	<property name="plugin" value="org.lockss.plugin.jscm.JSCMPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://sscm-jscm.press.uiuc.edu/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="1" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="SantaFePoetryBroadside2005">
+	<property name="title" value="Santa Fe Poetry Broadside 2005" />
+	<property name="journalTitle" value="Santa Fe Poetry Broadside" />
+	<property name="plugin" value="org.lockss.plugin.sfpoetrybroadside.SantaFePoetryBroadsidePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://sfpoetry.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2005" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="SantaFePoetryBroadside2004">
+	<property name="title" value="Santa Fe Poetry Broadside 2004" />
+	<property name="journalTitle" value="Santa Fe Poetry Broadside" />
+	<property name="plugin" value="org.lockss.plugin.sfpoetrybroadside.SantaFePoetryBroadsidePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://sfpoetry.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2004" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="SantaFePoetryBroadside2003">
+	<property name="title" value="Santa Fe Poetry Broadside 2003" />
+	<property name="journalTitle" value="Santa Fe Poetry Broadside" />
+	<property name="plugin" value="org.lockss.plugin.sfpoetrybroadside.SantaFePoetryBroadsidePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://sfpoetry.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2003" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="SantaFePoetryBroadside2002">
+	<property name="title" value="Santa Fe Poetry Broadside 2002" />
+	<property name="journalTitle" value="Santa Fe Poetry Broadside" />
+	<property name="plugin" value="org.lockss.plugin.sfpoetrybroadside.SantaFePoetryBroadsidePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://sfpoetry.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2002" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="SantaFePoetryBroadside2001">
+	<property name="title" value="Santa Fe Poetry Broadside 2001" />
+	<property name="journalTitle" value="Santa Fe Poetry Broadside" />
+	<property name="plugin" value="org.lockss.plugin.sfpoetrybroadside.SantaFePoetryBroadsidePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://sfpoetry.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2001" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="SantaFePoetryBroadside2000">
+	<property name="title" value="Santa Fe Poetry Broadside 2000" />
+	<property name="journalTitle" value="Santa Fe Poetry Broadside" />
+	<property name="plugin" value="org.lockss.plugin.sfpoetrybroadside.SantaFePoetryBroadsidePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://sfpoetry.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2000" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="SantaFePoetryBroadside1999">
+	<property name="title" value="Santa Fe Poetry Broadside 1999" />
+	<property name="journalTitle" value="Santa Fe Poetry Broadside" />
+	<property name="plugin" value="org.lockss.plugin.sfpoetrybroadside.SantaFePoetryBroadsidePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://sfpoetry.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="1999" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="SantaFePoetryBroadside1998">
+	<property name="title" value="Santa Fe Poetry Broadside 1998" />
+	<property name="journalTitle" value="Santa Fe Poetry Broadside" />
+	<property name="plugin" value="org.lockss.plugin.sfpoetrybroadside.SantaFePoetryBroadsidePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://sfpoetry.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="1998" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
       <property name="NCSU1997">
 	<property name="title" value="North Carolina State University ETD Collection 1997" />
 	<property name="journalTitle" value="North Carolina State University ETD" />
@@ -360,6 +634,42 @@
 	<property name="param.2">
 	  <property name="key" value="year" />
 	  <property name="value" value="1997" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="oai_request_url" />
+	  <property name="value" value="http://www.lib.ncsu.edu/ETD-db/oai/oai.pl" />
+	</property>
+      </property>
+
+      <property name="NCSU1998">
+	<property name="title" value="North Carolina State University ETD Collection 1998" />
+	<property name="journalTitle" value="North Carolina State University ETD" />
+	<property name="plugin" value="org.lockss.plugin.etd.ncstateplugin.NCStateETDLegacyPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.lib.ncsu.edu/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="1998" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="oai_request_url" />
+	  <property name="value" value="http://www.lib.ncsu.edu/ETD-db/oai/oai.pl" />
+	</property>
+      </property>
+
+      <property name="NCSU1999">
+	<property name="title" value="North Carolina State University ETD Collection 1999" />
+	<property name="journalTitle" value="North Carolina State University ETD" />
+	<property name="plugin" value="org.lockss.plugin.etd.ncstateplugin.NCStateETDLegacyPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.lib.ncsu.edu/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="1999" />
 	</property>
 	<property name="param.3">
 	  <property name="key" value="oai_request_url" />
@@ -416,6 +726,24 @@
 	<property name="param.2">
 	  <property name="key" value="year" />
 	  <property name="value" value="2004" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="oai_request_url" />
+	  <property name="value" value="http://scholar.lib.vt.edu/theses/OAI2/" />
+	</property>
+      </property>
+
+      <property name="VirginiaTechETD1997">
+	<property name="title" value="Virginia Tech ETD 1997" />
+	<property name="journalTitle" value="Virginia Tech ETD" />
+	<property name="plugin" value="org.lockss.plugin.etd.vtetdplugin.VTETDPlugin'" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://scholar.lib.vt.edu/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="1997" />
 	</property>
 	<property name="param.3">
 	  <property name="key" value="oai_request_url" />
@@ -791,6 +1119,34 @@
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://permanent.access.gpo.gov/lockss/Humanities/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2005" />
+	</property>
+      </property>
+
+      <property name="MonthlyEnergyReview2005">
+	<property name="title" value="Monthly Energy Review 2005" />
+	<property name="journalTitle" value="Monthly Energy Review" />
+	<property name="plugin" value="gov.gpo.access.permanent.plugin.monthlyenergyreview.MonthlyEnergyReviewPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://permanent.access.gpo.gov/lockss/Monthly_Energy_Review/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2005" />
+	</property>
+      </property>
+
+      <property name="MonthlyLaborReview2005">
+	<property name="title" value="Monthly Labor Review 2005" />
+	<property name="journalTitle" value="Monthly Labor Review" />
+	<property name="plugin" value="gov.gpo.access.permanent.plugin.monthlylaborreview.MonthlyLaborReviewPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://permanent.access.gpo.gov/lockss/Monthly_Labor_Review/" />
 	</property>
 	<property name="param.2">
 	  <property name="key" value="year" />
@@ -2358,6 +2714,171 @@
 	</property>
         <property name="attributes.publisher" value="oup" />
       </property>
+
+      <property name="RadiationProtectionDosimetry115">
+	<property name="title" value="Radiation Protection Dosimetry Volume 115" />
+	<property name="journalTitle" value="Radiation Protection Dosimetry" />
+	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://rpd.oxfordjournals.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="115" />
+	</property>
+        <property name="attributes.publisher" value="oup" />
+      </property>
+
+      <property name="RefugeeSurveyQuarterly24">
+	<property name="title" value="Refugee Survey Quarterly Volume 24" />
+	<property name="journalTitle" value="Refugee Survey Quarterly" />
+	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://rsq.oxfordjournals.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="24" />
+	</property>
+        <property name="attributes.publisher" value="oup" />
+      </property>
+
+      <property name="ReviewofEnglishStudies56">
+	<property name="title" value="Review of English Studies Volume 56" />
+	<property name="journalTitle" value="Review of English Studies" />
+	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://res.oxfordjournals.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="56" />
+	</property>
+        <property name="attributes.publisher" value="oup" />
+      </property>
+
+      <property name="ReviewofFinancialStudies19">
+	<property name="title" value="Review of Financial Studies Volume 19" />
+	<property name="journalTitle" value="Review of Financial Studies" />
+	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://rfs.oxfordjournals.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="19" />
+	</property>
+        <property name="attributes.publisher" value="oup" />
+      </property>
+
+      <property name="Rheumatology45">
+	<property name="title" value="Rheumatology Volume 45" />
+	<property name="journalTitle" value="Rheumatology" />
+	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://rheumatology.oxfordjournals.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="45" />
+	</property>
+        <property name="attributes.publisher" value="oup" />
+      </property>
+
+      <property name="SchizophreniaBulletin32">
+	<property name="title" value="Schizophrenia Bulletin Volume 32" />
+	<property name="journalTitle" value="Schizophrenia Bulletin" />
+	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://schizophreniabulletin.oxfordjournals.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="32" />
+	</property>
+        <property name="attributes.publisher" value="oup" />
+      </property>
+
+      <property name="Screen46">
+	<property name="title" value="Screen Volume46 " />
+	<property name="journalTitle" value="Screen" />
+	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://screen.oxfordjournals.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="46" />
+	</property>
+        <property name="attributes.publisher" value="oup" />
+      </property>
+
+      <property name="SocialHistoryofMedicine18">
+	<property name="title" value="Social History of Medicine Volume 18" />
+	<property name="journalTitle" value="Social History of Medicine" />
+	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://shm.oxfordjournals.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="18" />
+	</property>
+        <property name="attributes.publisher" value="oup" />
+      </property>
+
+      <property name="SocialPolitics12">
+	<property name="title" value="Social Politics Volume 12" />
+	<property name="journalTitle" value="Social Politics" />
+	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://sp.oxfordjournals.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="12" />
+	</property>
+        <property name="attributes.publisher" value="oup" />
+      </property>
+
+      <property name="SocialScienceJapanJournal8">
+	<property name="title" value="Social Science Japan Journal Volume 8" />
+	<property name="journalTitle" value="Social Science Japan Journal" />
+	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://ssjj.oxfordjournals.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="8" />
+	</property>
+        <property name="attributes.publisher" value="oup" />
+      </property>
+
+      <property name="Socio-EconomicReview4">
+	<property name="title" value="Socio-Economic Review Volume 4" />
+	<property name="journalTitle" value="Socio-Economic Review" />
+	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://ser.oxfordjournals.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="4" />
+	</property>
+        <property name="attributes.publisher" value="oup" />
+      </property> 
 <!-- End OUP titles -->
 
 <!-- Begin SAGE titles -->
