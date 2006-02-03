@@ -1,5 +1,5 @@
 /*
- * $Id: IcpManager.java,v 1.26 2006-02-02 01:00:01 thib_gc Exp $
+ * $Id: IcpManager.java,v 1.27 2006-02-03 20:31:33 thib_gc Exp $
  */
 
 /*
@@ -199,6 +199,11 @@ public class IcpManager extends BaseLockssDaemonManager implements ConfigurableM
    * <p>An ICP factory.</p>
    */
   private IcpFactory icpFactory;
+
+  /**
+   * <p>The current ICP thread.</p>
+   */
+  private IcpRunnable icpRunnable;
 
   /**
    * <p>A flag indicating whether the ICP thread is running in its
@@ -658,10 +663,5 @@ public class IcpManager extends BaseLockssDaemonManager implements ConfigurableM
    */
   private static final String PARAM_SLOW_ICP =
     "org.lockss.proxy.icp.slow";
-
-  /**
-   * <p>The current ICP thread.</p>
-   */
-  private IcpRunnable icpRunnable;
 
 }
