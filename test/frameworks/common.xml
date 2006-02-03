@@ -118,6 +118,8 @@
 	<value>org.lockss.plugin.etd.ukyplugin.UKYETDPlugin</value>
 	<value>edu.cornell.library.rmc.LolitaPlugin</value> 
 	<value>us.ak.state.library.plugin.AlaskaStateDocsPlugin</value> 
+	<value>edu.stanford.plugin.exquisitecorpse.ExquisiteCorpsePlugin</value>
+	<value>org.lockss.plugin.secrecynews.SecrecyNewsPlugin</value>
       </list>
     </property>
 
@@ -315,6 +317,22 @@
     <!-- Titles -->
     <property name="title">
 
+
+      <property name="corpse">
+	<property name="title" value="Exquisite Corpse" />
+	<property name="journalTitle" value="Exquisite Corpse" />
+	<property name="plugin" value="edu.stanford.plugin.exquisitecorpse.ExquisiteCorpsePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.corpse.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="issue_set" />
+	  <property name="value" value="issue_1,issue_2,issue_3,issue_4,issue_5,issue_7,issue_8,issue_9,issue_10,issue_11,mississippi_corpse,issue_12,issue_14"
+	    />
+	</property>
+	<property name="attributes.rights" value="openaccess" />
+      </property>
 
 
       <property name="AlaskaStateDocuments2006">
