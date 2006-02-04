@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlRuleTestApp.java,v 1.6 2004-12-09 08:21:44 tlipkis Exp $
+ * $Id: CrawlRuleTestApp.java,v 1.7 2006-02-04 05:34:57 tlipkis Exp $
  */
 
 /*
@@ -47,6 +47,8 @@ import org.lockss.util.*;
  */
 
 public class CrawlRuleTestApp {
+  private static Logger log = Logger.getLogger("CrawlRuleTestApp");
+
   private static String OUT_FILE_PROP = "OutputFile";
   private static String CRAWL_DEPTH_PROP = "CrawlDepth";
   private static String BASE_URL_PROP = "BaseUrl";
@@ -115,9 +117,11 @@ public class CrawlRuleTestApp {
       }
       long delay = config.getLong(CRAWL_DELAY_PROP, DEFAULT_CRAWL_DELAY);
       String base_url = config.get(BASE_URL_PROP);
+      CrawlRule rule = makeRules(config, base_url);
       CrawlSpec spec =
-	new SpiderCrawlSpec(base_url, makeRules(config, base_url),
+	new SpiderCrawlSpec(base_url, rule,
 			    config.getInt("BASE_CRAWL_DEPTH", 1));
+
       CrawlRuleTester tester = new CrawlRuleTester(output_file, crawl_depth,
           delay, base_url, spec);
       tester.run();
@@ -133,22 +137,29 @@ public class CrawlRuleTestApp {
     final int incl = CrawlRules.RE.MATCH_INCLUDE;
     final int excl = CrawlRules.RE.MATCH_EXCLUDE;
 
-    for (Iterator iter = config.keyIterator(); iter.hasNext(); ) {
-      String key = (String) iter.next();
-      String regexp = config.get(key);
+    Configuration allRules = config.getConfigTree("rule");
+    TreeSet sorted = new TreeSet(allRules.keySet());
+    for (Iterator iter = sorted.iterator(); iter.hasNext(); ) {
+      String key = (String)iter.next();
+      String val = allRules.get(key);
+      int pos = val.indexOf(":");
+      String op = val.substring(0, pos);
+      String regexp = val.substring(pos + 1);
       try {
-        if (key.startsWith("incl")) {
+        if (op.startsWith("incl")) {
           rules.add(new CrawlRules.RE(regexp, incl));
         }
-        else if (key.startsWith("excl")) {
+        else if (op.startsWith("excl")) {
           rules.add(new CrawlRules.RE(regexp, excl));
         }
-        else if (key.startsWith("nomatch_incl")) {
+        else if (op.startsWith("nomatch_incl")) {
           rules.add(new CrawlRules.RE(regexp, CrawlRules.RE.NO_MATCH_INCLUDE));
         }
-        else if (key.startsWith("nomatch_excl")) {
+        else if (op.startsWith("nomatch_excl")) {
           rules.add(new CrawlRules.RE(regexp, CrawlRules.RE.NO_MATCH_EXCLUDE));
         }
+	System.err.println("rule " + key + ": " + op + ": " + regexp);
+
       }
       catch (LockssRegexpException ex) {
         System.err.println("Error creating crawl rule: " + ex);
