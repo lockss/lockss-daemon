@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.99 2005-12-01 23:28:02 troberts Exp $
+ * $Id: BaseArchivalUnit.java,v 1.100 2006-02-04 05:34:07 tlipkis Exp $
  */
 
 /*
@@ -96,6 +96,8 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 
   public static final long
     DEFAULT_FETCH_DELAY = 6 * Constants.SECOND;
+  public static final long
+    MIN_FETCH_DELAY = 6 * Constants.SECOND;
 
   public static final String USE_CRAWL_WINDOW = "use_crawl_window";
   private static final boolean DEFAULT_USE_CRAWL_WINDOW = false;
@@ -116,7 +118,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   protected static final long DEFAULT_AU_MAX_SIZE = 0;
   protected static final long DEFAULT_AU_MAX_FILE_SIZE = 0;
 
-  protected long minFetchDelay = 6 * Constants.SECOND;
+  protected long minFetchDelay = MIN_FETCH_DELAY;
   protected long defaultFetchDelay = DEFAULT_FETCH_DELAY;
   protected String startUrlString;
   protected long newContentCrawlIntv;
