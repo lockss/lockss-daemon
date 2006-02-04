@@ -19,8 +19,8 @@ fi
 
 CLASSPATH=@CLASSPATH@
 DAEMON_CLASS=org.lockss.app.LockssDaemon
-if [ "X${LOCKSS_JAVA_SWITCHES}" != "X" ]; then
-    LOCKSS_JAVA_SWITCHES="-Xmx120m -Dsun.net.inetaddr.ttl=3600 -showversion"
+if [ "X${LOCKSS_JAVA_SWITCHES}" = "X" ]; then
+    LOCKSS_JAVA_SWITCHES="-server -Xmx120m -Dsun.net.inetaddr.ttl=3600 -showversion"
 fi
 
 LOCAL_TXT=~/local.txt
