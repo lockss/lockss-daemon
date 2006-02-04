@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.16 2005-12-01 23:28:00 troberts Exp $
+ * $Id: Configuration.java,v 1.17 2006-02-04 03:31:53 tlipkis Exp $
  */
 
 /*
@@ -607,14 +607,18 @@ public abstract class Configuration {
 				     Configuration.Differences changes);
   }
 
-  /** Differences represents the changes in a Configuration from the previous
-   * Configuration.  Its purpose is to allow Configuration callbacks to
-   * avoid unnecessary expensive work.
+  /** Differences represents the changes in a Configuration from the
+   * previous Configuration.  It allows Configuration.Callbacks to quickly
+   * determine whether a key of interest, or any key in a subtree of
+   * interest, has changed value since the previous call to
+   * configurationChanged().
    */
   public interface Differences {
     /** Determine whether the value of a key has changed.  Can also be used
-     * to termine whether there have been any changes in a named
-     * Configuration subtree.
+     * to determine whether there have been any changes in a named
+     * Configuration subtree.  (<i>Eg</i>, if contains() is true of
+     * "org.lockss.foo.bar", it will also be true of "org.lockss.foo.",
+     * "org.lockss.foo", "org.lockss.", "org.lockss", "org."  and "org".)
      * @param key the key or key prefix
      * @return true iff the value of the key, or any key in the tree below
      * it, has changed. */
