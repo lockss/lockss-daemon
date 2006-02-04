@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingHtmlParser.java,v 1.35 2005-12-01 23:28:01 troberts Exp $
+ * $Id: GoslingHtmlParser.java,v 1.36 2006-02-04 03:32:27 tlipkis Exp $
  */
 
 /*
@@ -269,8 +269,7 @@ public class GoslingHtmlParser implements ContentParser {
 	  if (tagBuf != null && tagBuf.length() >= MIN_TAG_LENGTH) {
 	    String nextLink = parseLink(tagBuf);
 	    if (nextLink != null) {
-	      return Translate.decode(nextLink);
-// 	      return nextLink;
+	      return nextLink;
 	    }
 	  }
 	}
@@ -424,7 +423,7 @@ public class GoslingHtmlParser implements ContentParser {
       }
       if (malformedBaseUrl) {
 	//if we have a malformed base URL, we can't interpret relative urls
-	//so we only will return absoluet ones
+	//so we only will return absolute ones
 	return UrlUtil.isAbsoluteUrl(returnStr) ? returnStr : null;
       }
       try {
@@ -472,11 +471,19 @@ public class GoslingHtmlParser implements ContentParser {
     return UrlUtil.resolveUri(base, relative);
   }
 
+  /** Return attribute value with any html entities decoded */
   protected String getAttributeValue(String attribute, StringBuffer sb) {
     return getAttributeValue(attribute, sb.toString());
   }
 
+  /** Return attribute value with any html entities decoded */
   protected String getAttributeValue(String attribute, String src) {
+    String val = getEncodedAttributeValue(attribute, src);
+    return val == null ? null : Translate.decode(val);
+  }
+
+  /** Return attribute value as it literally appears in source html */
+  protected String getEncodedAttributeValue(String attribute, String src) {
     if (isTrace) {
       logger.debug3("looking for "+attribute+" in "+src);
     }

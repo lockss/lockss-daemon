@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingHtmlParser.java,v 1.22 2005-10-11 05:49:13 tlipkis Exp $
+ * $Id: TestGoslingHtmlParser.java,v 1.23 2006-02-04 03:32:27 tlipkis Exp $
  */
 
 /*
@@ -386,7 +386,7 @@ public class TestGoslingHtmlParser extends LockssTestCase {
     String source =
       "<html><head><title>Test</title></head><body>"+
       "<a href=\""+url+"\">link3</a>";
-    assertEmpty(parseSingleSource(source));
+    assertEquals(SetUtil.set(url), parseSingleSource(source));
   }
 
   public void testParsesFileWithQuotedUrls() throws IOException {
@@ -448,7 +448,7 @@ public class TestGoslingHtmlParser extends LockssTestCase {
 //   }
 
 
-  public void testResolvedHtmlEntities()
+  public void testResolvesHtmlEntities()
       throws IOException {
     String url1=
       "http://www.example.com/bioone/?"+
@@ -459,9 +459,17 @@ public class TestGoslingHtmlParser extends LockssTestCase {
       "<a href=http://www.example.com/bioone/?"+
       "request=get-toc&#38;issn=0044-7447&#38;volume=32&issue=1>link1</a>";
     assertEquals(SetUtil.set(url1), parseSingleSource(source));
+
+    // ensure character entities processed before rel url resolution
+    source =
+      "<html><head><title>Test</title></head><body>"+
+      "<base href=http://www.example.com/foo/bar>"+
+      "<a href=&#46&#46/xxx>link1</a>";
+    assertEquals(SetUtil.set("http://www.example.com/xxx"),
+		 parseSingleSource(source));
   }
 
-  public void testInterpretatesBase() throws IOException {
+  public void testInterpretsBaseTag() throws IOException {
     String url1= "http://www.example.com/link1.html";
     String url2= "http://www.example2.com/link2.html";
     String url3= "http://www.example.com/link3.html";
@@ -480,7 +488,7 @@ public class TestGoslingHtmlParser extends LockssTestCase {
 
   //Relative URLs before a malforned base tag should be extracted, as well
   //as any absolute URLs after the malformed base tag
-  public void testInterpretatesMalformedBase() throws IOException {
+  public void testInterpretsMalformedBaseTag() throws IOException {
     String url1= "http://www.example.com/link1.html";
     String url2= "http://www.example2.com/link2.html";
     String url3= "http://www.example2.com/link3.html";
@@ -626,6 +634,7 @@ public class TestGoslingHtmlParser extends LockssTestCase {
     mcu.setContent(source);
 
 //     parser.parseForUrls(mcu, cb);
+    cb.reset();
     parser.parseForUrls(new StringReader(source),
 			"http://www.example.com", cb);
 
@@ -706,6 +715,10 @@ public class TestGoslingHtmlParser extends LockssTestCase {
 
     public Set getFoundUrls() {
       return foundUrls;
+    }
+
+    public void reset() {
+      foundUrls = new HashSet();
     }
   }
 
