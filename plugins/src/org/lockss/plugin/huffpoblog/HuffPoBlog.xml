@@ -1,0 +1,77 @@
+<map>
+  <entry>
+    <string>au_crawlwindow</string>
+    <org.lockss.daemon.CrawlWindows-Interval>
+      <start>
+        <time>1138996852480</time>
+        <timezone>US/Pacific</timezone>
+      </start>
+      <end>
+        <time>1139039992480</time>
+        <timezone>US/Pacific</timezone>
+      </end>
+      <fieldMask>3</fieldMask>
+      <timeZoneId>Etc/GMT+12</timeZoneId>
+    </org.lockss.daemon.CrawlWindows-Interval>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.huffpoblog.HuffPoBlog</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>au_crawl_depth</string>
+    <int>2</int>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;%s %d&quot;, base_url, year</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Huffington Post: The Blog</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;%syearly/%d/&quot;, base_url, year</string>
+      <string>1,&quot;^%s.*/.*_b_[0-9]+\.html$&quot;, base_url</string>
+      <string>1,&quot;^%s%d/[0-9]+/[0-9]+/.*_n_[0-9]+\.html$&quot;, base_url, year</string>
+      <string>1,&quot;^%scss/&quot;, base_url</string>
+      <string>1,&quot;^%simages/&quot;, base_url</string>
+      <string>1,&quot;^%s/include/lib/&quot;, base_url</string>
+      <string>2,&quot;^%s.*#$&quot;, base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%syearly/%d/&quot;, base_url, year</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+</map>
