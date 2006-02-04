@@ -1,5 +1,5 @@
 /*
- * $Id: TestUrlUtil.java,v 1.24 2006-01-09 21:57:36 tlipkis Exp $
+ * $Id: TestUrlUtil.java,v 1.25 2006-02-04 03:34:19 tlipkis Exp $
  */
 
 /*
@@ -309,26 +309,89 @@ public class TestUrlUtil extends LockssTestCase {
   }
 
   public void testResolveUrl() throws Exception {
+    // base ends with filename
     assertEquals("http://test.com/foo/bar/a.html",
 		 UrlUtil.resolveUri("ftp://gorp.org/xxx.jpg",
 				    "http://test.com/foo/bar/a.html"));
     assertEquals("http://test.com/foo/bar/a.html",
 		 UrlUtil.resolveUri("http://test.com/foo/bar/xxx.html",
 				    "a.html"));
+    assertEquals("http://test.com/a.html",
+		 UrlUtil.resolveUri("http://test.com/foo/bar/xxx.html",
+				    "/a.html"));
     assertEquals("http://test.com/foo/bar/a.html",
 		 UrlUtil.resolveUri("http://test.com/foo/bar/baz/xxx.html",
 				    "../a.html"));
+    assertEquals("http://test.com/foo/bar/baz/a.html",
+		 UrlUtil.resolveUri("http://test.com/foo/bar/baz/xxx.html",
+				    "./a.html"));
+
+    // According to RFC 1808, Firefox, IE, Opera, last component of base
+    // path (following final slash) is *not* removed if relative URL has
+    // null path.  RFC 2396 disagrees.
+    assertEquals("http://test.com/foo/bar/xxx.html?a=b",
+		 UrlUtil.resolveUri("http://test.com/foo/bar/xxx.html",
+				    "?a=b"));
+
+    // base ends with slash
+    assertEquals("http://test.com/foo/bar/a.html",
+		 UrlUtil.resolveUri("ftp://gorp.org/",
+				    "http://test.com/foo/bar/a.html"));
     assertEquals("http://test.com/foo/bar/a.html",
 		 UrlUtil.resolveUri("http://test.com/foo/bar/",
+				    "a.html"));
+    assertEquals("http://test.com/a.html",
+		 UrlUtil.resolveUri("http://test.com/foo/bar/",
+				    "/a.html"));
+    assertEquals("http://test.com/foo/a.html",
+		 UrlUtil.resolveUri("http://test.com/foo/bar/",
+				    "../a.html"));
+    assertEquals("http://test.com/foo/bar/a.html",
+		 UrlUtil.resolveUri("http://test.com/foo/bar/",
+				    "./a.html"));
+
+    assertEquals("http://test.com/foo/bar/?a=b",
+		 UrlUtil.resolveUri("http://test.com/foo/bar/",
+				    "?a=b"));
+
+
+    // truncated base (no slash after hostname)
+
+    // First, note how resolution relative to base with no path differs
+    // between java.net.URL:
+    assertEquals("http://test.com/a.html",
+		 new URL(new URL("http://test.com"), "a.html").toString());
+    // and java.net.URI:
+    URI u1 = new URI("http://test.com");
+    URI u2 = u1.resolve("a.html");
+    assertEquals("http://test.coma.html", u2.toString());
+
+    // make sure we add the missing slash
+    assertEquals("http://test.com/a.html",
+		 UrlUtil.resolveUri("http://test.com",
 				    "a.html"));
     // ensure query string preserved
     assertEquals("http://test.com/foo/bar/a.html?foo=bar",
 		 UrlUtil.resolveUri("http://test.com/foo/bar/",
 				    "a.html?foo=bar"));
-    try {
-      UrlUtil.resolveUri("foo", "bar");
-      fail("Should throw MalformedURLException");
-    } catch (MalformedURLException e) {}
+    // relative query string
+    assertEquals("http://test.com/prog.php?foo=bar",
+		 UrlUtil.resolveUri("http://test.com/prog.php",
+				    "?foo=bar"));
+    assertEquals("http://test.com/prog.php?foo=bar",
+		 UrlUtil.resolveUri("http://test.com/prog.php?fff=xxx",
+				    "?foo=bar"));
+
+    // With URL implementation this threw, URI version doesn't object.
+    // Don't think anyone should count on this behavior.
+    if (true) {
+      assertEquals("bar", UrlUtil.resolveUri("foo", "bar"));
+    } else {
+      try {
+	UrlUtil.resolveUri("foo", "bar");
+	fail("Should throw MalformedURLException");
+      } catch (MalformedURLException e) {}
+    }
   }
 
   //should trip leading and trailing whitespace from the second arg
