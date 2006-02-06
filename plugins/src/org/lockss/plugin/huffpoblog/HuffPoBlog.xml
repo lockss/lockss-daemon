@@ -35,6 +35,10 @@
     <string>Huffington Post: The Blog</string>
   </entry>
   <entry>
+    <string>html_filter</string>
+    <string>org.lockss.plugin.huffpoblog.HuffPoBlogFilterRule</string>
+  </entry>
+  <entry>
     <string>au_crawlrules</string>
     <list>
       <string>4,&quot;^%s&quot;, base_url</string>
@@ -43,7 +47,8 @@
       <string>1,&quot;^%s%d/[0-9]+/[0-9]+/.*_n_[0-9]+\.html$&quot;, base_url, year</string>
       <string>1,&quot;^%scss/&quot;, base_url</string>
       <string>1,&quot;^%simages/&quot;, base_url</string>
-      <string>1,&quot;^%s/include/lib/&quot;, base_url</string>
+      <string>1,&quot;^%scontributor/&quot;, base_url</string>
+      <string>1,&quot;^%sinclude/lib/&quot;, base_url</string>
       <string>2,&quot;^%s.*#$&quot;, base_url</string>
     </list>
   </entry>
