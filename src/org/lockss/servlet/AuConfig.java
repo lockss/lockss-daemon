@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.49 2006-01-24 00:57:49 thib_gc Exp $
+ * $Id: AuConfig.java,v 1.50 2006-02-06 21:43:14 thib_gc Exp $
  */
 
 /*
@@ -132,11 +132,13 @@ public class AuConfig extends LockssServlet {
     String auid = req.getParameter("auid");
 
     if (StringUtil.isNullString(action)) displayAuSummary();
-    else if (action.equals("Add")) displayAddAu();
+    else if (action.equals(ACTION_ADD)) displayAddAu();
     else if (action.equals("EditNew")) displayEditNew();
     else if (action.equals("Create")) createAu();
-    else if (action.equals("Reactivate") || action.equals("DoReactivate") ||
-	     action.equals("Delete") || action.equals("Confirm Delete")) {
+    else if (  action.equals(ACTION_REACTIVATE)
+             || action.equals(ACTION_DO_REACTIVATE)
+             || action.equals(ACTION_DELETE)
+             || action.equals("Confirm Delete")) {
       AuProxy au = getAuProxy(auid);
       if (au == null) {
 	au = getInactiveAuProxy(auid);
@@ -146,9 +148,9 @@ public class AuConfig extends LockssServlet {
 	  errMsg = "Invalid AuId: " + auid;
 	}
 	displayAuSummary();
-      } else if (action.equals("Reactivate")) displayReactivateAu(au);
-      else if (action.equals("DoReactivate")) doReactivateAu(au);
-      else if (action.equals("Delete")) confirmDeleteAu(au);
+      } else if (action.equals(ACTION_REACTIVATE)) displayReactivateAu(au);
+      else if (action.equals(ACTION_DO_REACTIVATE)) doReactivateAu(au);
+      else if (action.equals(ACTION_DELETE)) confirmDeleteAu(au);
       else if (action.equals("Confirm Delete")) doDeleteAu(au);
     } else {
       // all other actions require AU.  If missing, display summary page
@@ -156,9 +158,9 @@ public class AuConfig extends LockssServlet {
       if (au == null) {
 	errMsg = "Invalid AuId: " + auid;
 	displayAuSummary();
-      } else if (action.equals("Edit")) displayEditAu(au);
-      else if (action.equals("Restore")) displayRestoreAu(au);
-      else if (action.equals("DoRestore")) updateAu(au, "Restored");
+      } else if (action.equals(ACTION_EDIT)) displayEditAu(au);
+      else if (action.equals(ACTION_RESTORE)) displayRestoreAu(au);
+      else if (action.equals(ACTION_DO_RESTORE)) updateAu(au, "Restored");
       else if (action.equals("Update")) updateAu(au, "Updated");
       else if (action.equals("Deactivate")) confirmDeactivateAu(au);
       else if (action.equals("Confirm Deactivate")) doDeactivateAu(au);
