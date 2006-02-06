@@ -1,5 +1,5 @@
 /*
- * $Id: BatchAuConfig.java,v 1.23 2006-01-13 23:59:54 thib_gc Exp $
+ * $Id: BatchAuConfig.java,v 1.24 2006-02-06 23:54:40 thib_gc Exp $
  */
 
 /*
@@ -262,12 +262,12 @@ public class BatchAuConfig extends LockssServlet {
 
   /**
    * <p>Makes a new link with explanation.</p>
-   * @param descr    The link's servlet descriptor.
-   * @param linkText The text appearing in the link.
-   * @param action   The action associated with the servlet descriptor
-   *                 (can be null).
-   * @param expl     The explanation associated with the link.
-   * @param enabled  Whether or not the link is actually enabled.
+   * @param descr      The link's servlet descriptor.
+   * @param linkText   The text appearing in the link.
+   * @param linkAction The action associated with the servlet descriptor
+   *                   (can be null).
+   * @param linkExpl   The explanation associated with the link.
+   * @param enabled    Whether or not the link is actually enabled.
    * @return A {@link LinkWithExplanation} corresponding to the servlet
    *         descriptor (optionally with an action), showing the given
    *         text and explanation; the link is enabled or disabled
@@ -275,12 +275,12 @@ public class BatchAuConfig extends LockssServlet {
    */
   private LinkWithExplanation getMenuDescriptor(ServletDescr descr,
                                                 String linkText,
-                                                String action,
-                                                String expl,
+                                                String linkAction,
+                                                String linkExpl,
                                                 boolean enabled) {
     return new LinkWithExplanation(
-      enabled ? srvLink(descr, linkText, action) : ServletUtil.gray(linkText),
-      expl);
+      enabled ? srvLink(descr, linkText, linkAction) : ServletUtil.gray(linkText),
+      linkExpl);
   }
 
   /** Display top level batch config choices */

@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyAndContent.java,v 1.7 2006-01-13 22:44:31 thib_gc Exp $
+ * $Id: ProxyAndContent.java,v 1.8 2006-02-06 23:54:38 thib_gc Exp $
  */
 
 /*
@@ -45,6 +45,7 @@ import org.lockss.config.*;
 import org.lockss.daemon.ResourceManager;
 import org.lockss.proxy.AuditProxyManager;
 import org.lockss.proxy.icp.IcpManager;
+import org.lockss.servlet.ServletUtil.LinkWithExplanation;
 import org.lockss.util.*;
 
 /*
@@ -83,36 +84,64 @@ public class ProxyAndContent extends LockssServlet {
     action = req.getParameter(ACTION_TAG);
     isForm = !StringUtil.isNullString(action);
     errMsg = null;
-    statusMsg = null;
+
+    // FIXME: change this fake message
+    statusMsg = "WARNING: This screen is under construction. DO NOT USE.";
 
     if (StringUtil.isNullString(action)) displayMenu_Main();
-    else if (action.equals("Update")) processUpdate_Main();
+    else if (action.equals(ACTION_MAIN)) displayMenu_Main();
+    else if (action.equals(BAD_ACTION)) {
+      errMsg = "Unknown action (" + action + ")";
+      displayMenu_Main();
+    }
+    else if (action.equals(ACTION_PROXY)) displayProxy();
+    else if (action.equals(ACTION_CONTENT)) displayMenu_Content();
+    else if (action.equals(ACTION_UPDATE)) processUpdate_Main();
   }
 
-  private void displayMenu_Main() throws IOException {
-    final int BORDER = 0;
-    final String ATTRIBUTES = "align=\"center\" cellpadding=\"10\"";
-
+  private void displayMenu(String explanation,
+                           Iterator descriptorIter) throws IOException {
     Page page = newPage();
-    ServletUtil.layoutExplanationBlock(page, mainExplanation);
+    ServletUtil.layoutExplanationBlock(page, explanation);
     layoutErrorBlock(page);
-    ServletUtil.layoutMenu(page, getDescriptors_Main());
-
-    Form frm = ServletUtil.newForm(srvURL(myServletDescr()));
-    Table tbl = new Table(BORDER, ATTRIBUTES);
-    ServletUtil.layoutEnablePortRow(this, tbl, AUDIT_ENABLE_NAME, getDefaultAuditEnable(),
-        "audit proxy", AUDIT_FOOT, FILTER_FOOT, AUDIT_PORT_NAME, getDefaultAuditPort(),
-        resourceMgr.getUsableTcpPorts(AuditProxyManager.SERVER_NAME));
-    ServletUtil.layoutEnablePortRow(this, tbl, ICP_ENABLE_NAME, getDefaultIcpEnable(),
-        "ICP server", ICP_FOOT, FILTER_FOOT, ICP_PORT_NAME, getDefaultIcpPort(),
-        resourceMgr.getUsableUdpPorts(AuditProxyManager.SERVER_NAME));
-    frm.add(tbl);
-    ServletUtil.layoutSubmitButton(this, frm, "Update");
-    page.add(frm);
-
+    ServletUtil.layoutMenu(page, descriptorIter);
     layoutFooter(page);
     resp.setContentType("text/html");
     page.write(resp.getWriter());
+  }
+
+  private void displayMenu_Content() throws IOException {
+    displayMenu(CONTENT_EXPLANATION, getDescriptors_Content());
+  }
+
+  private void displayMenu_Main() throws IOException {
+    displayMenu(MAIN_EXPLANATION, getDescriptors_Main());
+  }
+
+  private void displayProxy() throws IOException {
+//  final int BORDER = 0;
+//  final String ATTRIBUTES = "align=\"center\" cellpadding=\"10\"";
+//
+//  Page page = newPage();
+//  ServletUtil.layoutExplanationBlock(page, mainExplanation);
+//  layoutErrorBlock(page);
+//  ServletUtil.layoutMenu(page, getDescriptors_Main());
+//
+//  Form frm = ServletUtil.newForm(srvURL(myServletDescr()));
+//  Table tbl = new Table(BORDER, ATTRIBUTES);
+//  ServletUtil.layoutEnablePortRow(this, tbl, AUDIT_ENABLE_NAME, getDefaultAuditEnable(),
+//      "audit proxy", AUDIT_FOOT, FILTER_FOOT, AUDIT_PORT_NAME, getDefaultAuditPort(),
+//      resourceMgr.getUsableTcpPorts(AuditProxyManager.SERVER_NAME));
+//  ServletUtil.layoutEnablePortRow(this, tbl, ICP_ENABLE_NAME, getDefaultIcpEnable(),
+//      "ICP server", ICP_FOOT, FILTER_FOOT, ICP_PORT_NAME, getDefaultIcpPort(),
+//      resourceMgr.getUsableUdpPorts(AuditProxyManager.SERVER_NAME));
+//  frm.add(tbl);
+//  ServletUtil.layoutSubmitButton(this, frm, ACTION_UPDATE);
+//  page.add(frm);
+//
+//  layoutFooter(page);
+//  resp.setContentType("text/html");
+//  page.write(resp.getWriter());
   }
 
   private boolean getDefaultAuditEnable() {
@@ -143,6 +172,37 @@ public class ProxyAndContent extends LockssServlet {
     return port;
   }
 
+  private Iterator getDescriptors_Content() {
+    return new ObjectArrayIterator(new LinkWithExplanation[] {
+        makeDescriptor("Edit Default Access Group",
+                       BAD_ACTION,
+                       "Edit the members of the default access group."),
+        makeDescriptor("Edit Access Group",
+                       BAD_ACTION,
+                       "Edit the members of an access group."),
+        makeDescriptor("Create Access Group",
+                       BAD_ACTION,
+                       "Create an access group."),
+        makeDescriptor("Delete Access Group",
+                       BAD_ACTION,
+                       "Delete an access group."),
+        makeDescriptor("Configure AU Access",
+                       BAD_ACTION,
+                       "Select the access groups associated with an archival unit."),
+    });
+  }
+
+  private Iterator getDescriptors_Main() {
+    return new ObjectArrayIterator(new LinkWithExplanation[] {
+        makeDescriptor("Proxy Options",
+                       ACTION_PROXY,
+                       "Configure the audit proxy and the ICP server."),
+        makeDescriptor("Content Access Control",
+                       ACTION_CONTENT,
+                       "Manage access groups and access control rules."),
+    });
+  }
+
   private boolean isLegalAuditPort(int port) {
     return port >= 1024 &&
         resourceMgr.isTcpPortAvailable(port, AuditProxyManager.SERVER_NAME);
@@ -151,6 +211,14 @@ public class ProxyAndContent extends LockssServlet {
   private boolean isLegalIcpPort(int port) {
     return port >= 1024 &&
         resourceMgr.isUdpPortAvailable(port, IcpManager.class);
+  }
+
+  private LinkWithExplanation makeDescriptor(String linkText,
+                                             String linkAction,
+                                             String linkExpl) {
+    return new LinkWithExplanation(
+        srvLink(myServletDescr(), linkText, ACTION_TAG + "=" + linkAction),
+        linkExpl);
   }
 
   private void processUpdate_Main() throws IOException {
@@ -238,54 +306,58 @@ public class ProxyAndContent extends LockssServlet {
         COMMENT_PROXY_IP_ACCESS);
   }
 
-  public static final String PARAM_AUDIT_ENABLE = AuditProxyManager.PARAM_START;
+  public static final String PARAM_AUDIT_ENABLE =
+    AuditProxyManager.PARAM_START;
 
-  public static final String PARAM_AUDIT_PORT = AuditProxyManager.PARAM_PORT;
+  public static final String PARAM_AUDIT_PORT =
+    AuditProxyManager.PARAM_PORT;
 
-  static final boolean DEFAULT_AUDIT_ENABLE = AuditProxyManager.DEFAULT_START;
+  static final boolean DEFAULT_AUDIT_ENABLE =
+    AuditProxyManager.DEFAULT_START;
 
-  private static final String AUDIT_ENABLE_NAME = "audit_ena";
+  private static final String ACTION_CONTENT = "Content";
+
+  private static final String ACTION_MAIN = "Main";
+
+  private static final String ACTION_PROXY = "Proxy";
+
+  private static final String ACTION_UPDATE = "Update";
+
+  private static final String AUDIT_ENABLE_NAME =
+    "audit_ena";
 
   private static final String AUDIT_FOOT =
-    "The audit proxy serves <b>only</b> cached content, and never " +
-    "forwards requests to the publisher or any other site.  " +
-    "By configuring a browser to proxy to this port, you can view the " +
-    "content stored on the cache.  All requests for content not on the " +
-    "cache will return a \"404 Not Found\" error.";
+    "The audit proxy serves <b>only</b> cached content, and never forwards requests to the publisher or any other site. By configuring a browser to proxy to this port, you can view the content stored on the cache.  All requests for content not on the cache will return a \"404 Not Found\" error.";
 
-  private static final String AUDIT_PORT_NAME = "audit_port";
+  private static final String AUDIT_PORT_NAME =
+    "audit_port";
+
+  private static final String BAD_ACTION = "foo";
 
   private static final String COMMENT_PROXY_IP_ACCESS =
     "Proxy IP Access Control";
 
-  private static final String FILTER_FOOT =
-    "Other ports can be configured but may not be reachable due to "
-    + "packet filters.";
+  private static final String CONTENT_EXPLANATION =
+    "Define access groups and manage access control rules for the content preserved on this cache.";
 
-  private static final String ICP_ENABLE_NAME = "icp_ena";
+  private static final String FILTER_FOOT =
+    "Other ports can be configured but may not be reachable due to packet filters.";
+
+  private static final String ICP_ENABLE_NAME =
+    "icp_ena";
 
   /**
    * <p>A footnote explaining the role of the ICP server.</p>
    */
   private static final String ICP_FOOT =
-    "The ICP server responds to queries sent by other proxies and caches "
-    + "to let them know if this cache has the content they are looking for. "
-    + "This is useful if you are integrating this cache into an existing "
-    + "network structure with other proxies and caches that support ICP.";
+    "The ICP server responds to queries sent by other proxies and caches to let them know if this cache has the content they are looking for. This is useful if you are integrating this cache into an existing network structure with other proxies and caches that support ICP.";
 
-  private static final String ICP_PORT_NAME = "icp_port";
+  private static final String ICP_PORT_NAME =
+    "icp_port";
 
-  private static Logger logger = Logger.getLogger("IpAccessServlet");
+  private static Logger logger = Logger.getLogger("ProxyAndContent");
 
-  private static final String mainExplanation =
-    "Configure proxy options, such as the audit proxy and the ICP server "
-    + "(see below). Manage access groups and configure access rules for "
-    + "the content preserved on this cache.";
-
-  protected static Iterator getDescriptors_Main() {
-    return new FilterIterator(
-        new ObjectArrayIterator(servletDescrs),
-        PredicateUtils.falsePredicate());
-  }
+  private static final String MAIN_EXPLANATION =
+    "Configure proxy options, such as the audit proxy and the ICP server. Manage access groups and configure access rules for the content preserved on this cache.";
 
 }
