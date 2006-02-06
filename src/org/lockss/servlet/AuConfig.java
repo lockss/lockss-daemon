@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.50 2006-02-06 21:43:14 thib_gc Exp $
+ * $Id: AuConfig.java,v 1.51 2006-02-06 22:14:56 thib_gc Exp $
  */
 
 /*
@@ -35,7 +35,6 @@ package org.lockss.servlet;
 import java.io.IOException;
 import java.util.*;
 import java.util.List;
-//import java.util.List;
 
 import javax.servlet.*;
 
@@ -50,6 +49,7 @@ import org.mortbay.html.*;
  */
 public class AuConfig extends LockssServlet {
 
+  private static final String ACTION_CREATE = "Create";
   static final String PARAM_INCLUDE_PLUGIN_IN_TITLE_SELECT =
     Configuration.PREFIX + "auconfig.includePluginInTitleSelect";
   static final boolean DEFAULT_INCLUDE_PLUGIN_IN_TITLE_SELECT = false;
@@ -76,6 +76,8 @@ public class AuConfig extends LockssServlet {
   private static final String ACTION_DO_REACTIVATE = "DoReactivate";
   private static final String ACTION_EDIT = "Edit";
   private static final String ACTION_DELETE = "Delete";
+  private static final String ACTION_DEACTIVATE = "Deactivate";
+  private static final String ACTION_CONFIRM_DELETE = "Confirm Delete";
 
   private PluginManager pluginMgr;
   private ConfigManager configMgr;
@@ -134,11 +136,11 @@ public class AuConfig extends LockssServlet {
     if (StringUtil.isNullString(action)) displayAuSummary();
     else if (action.equals(ACTION_ADD)) displayAddAu();
     else if (action.equals("EditNew")) displayEditNew();
-    else if (action.equals("Create")) createAu();
+    else if (action.equals(ACTION_CREATE)) createAu();
     else if (  action.equals(ACTION_REACTIVATE)
              || action.equals(ACTION_DO_REACTIVATE)
              || action.equals(ACTION_DELETE)
-             || action.equals("Confirm Delete")) {
+             || action.equals(ACTION_CONFIRM_DELETE)) {
       AuProxy au = getAuProxy(auid);
       if (au == null) {
 	au = getInactiveAuProxy(auid);
@@ -151,7 +153,7 @@ public class AuConfig extends LockssServlet {
       } else if (action.equals(ACTION_REACTIVATE)) displayReactivateAu(au);
       else if (action.equals(ACTION_DO_REACTIVATE)) doReactivateAu(au);
       else if (action.equals(ACTION_DELETE)) confirmDeleteAu(au);
-      else if (action.equals("Confirm Delete")) doDeleteAu(au);
+      else if (action.equals(ACTION_CONFIRM_DELETE)) doDeleteAu(au);
     } else {
       // all other actions require AU.  If missing, display summary page
       AuProxy au = getAuProxy(auid);
@@ -162,7 +164,7 @@ public class AuConfig extends LockssServlet {
       else if (action.equals(ACTION_RESTORE)) displayRestoreAu(au);
       else if (action.equals(ACTION_DO_RESTORE)) updateAu(au, "Restored");
       else if (action.equals("Update")) updateAu(au, "Updated");
-      else if (action.equals("Deactivate")) confirmDeactivateAu(au);
+      else if (action.equals(ACTION_DEACTIVATE)) confirmDeactivateAu(au);
       else if (action.equals("Confirm Deactivate")) doDeactivateAu(au);
       else {
 	errMsg = "Unknown action: " + action;
@@ -221,7 +223,7 @@ public class AuConfig extends LockssServlet {
     ServletUtil.layoutExplanationBlock(page,
         "Editing configuration of: " + encodedAuName(au));
 
-    List actions = ListUtil.list("Deactivate", "Delete");
+    List actions = ListUtil.list(ACTION_DEACTIVATE, ACTION_DELETE);
     if (!getEditKeys().isEmpty()) {
       actions.add(0, "Update");
     }
@@ -341,7 +343,7 @@ public class AuConfig extends LockssServlet {
     exp.append("then click Create");
     ServletUtil.layoutExplanationBlock(page, exp.toString());
 
-    Form frm = createAuEditForm(ListUtil.list("Create"), null, true);
+    Form frm = createAuEditForm(ListUtil.list(ACTION_CREATE), null, true);
     // Ensure still have title info if come back here on error
     frm.add(new Input(Input.Hidden, "Title", title));
     page.add(frm);
@@ -654,8 +656,9 @@ public class AuConfig extends LockssServlet {
     ServletUtil.layoutExplanationBlock(page, "Are you sure you want to delete" +
 	addFootnote(deleteFoot) + ": " + encodedAuName(au));
 
-    Form frm = createAuEditForm(ListUtil.list("Confirm Delete"),
-				au, false);
+    Form frm = createAuEditForm(ListUtil.list(ACTION_CONFIRM_DELETE),
+				au,
+				false);
     page.add(frm);
     endPage(page);
   }
