@@ -1,5 +1,5 @@
 /*
- * $Id: XStreamSerializer.java,v 1.14 2006-01-20 19:01:03 thib_gc Exp $
+ * $Id: XStreamSerializer.java,v 1.15 2006-02-08 23:05:15 thib_gc Exp $
  */
 
 /*
@@ -538,13 +538,10 @@ public class XStreamSerializer extends ObjectSerializer {
       throw failDeserialize(crce);
     }
     catch (BaseException be) {
-      /*
-       * Catches all others:
-       * com.thoughtworks.xstream.converters.ConversionException
-       * com.thoughtworks.xstream.converters.reflection.ObjectAccessException
-       * com.thoughtworks.xstream.converters.reflection.ReflectionConverter.DuplicateFieldException
-       */
       throw failDeserialize(be);
+    }
+    catch (InstantiationError ie) {
+      throw failDeserialize(ie);
     }
   }
 
@@ -566,12 +563,6 @@ public class XStreamSerializer extends ObjectSerializer {
       throw failSerialize(crce, obj);
     }
     catch (BaseException be) {
-      /*
-       * Catches all others:
-       * com.thoughtworks.xstream.converters.ConversionException
-       * com.thoughtworks.xstream.converters.reflection.ObjectAccessException
-       * com.thoughtworks.xstream.converters.reflection.ReflectionConverter.DuplicateFieldException
-       */
       throw failSerialize(be, obj);
     }
   }

@@ -1,10 +1,10 @@
 /*
- * $Id: ObjectSerializer.java,v 1.16 2006-01-20 19:01:03 thib_gc Exp $
+ * $Id: ObjectSerializer.java,v 1.17 2006-02-08 23:05:15 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2002-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -506,17 +506,17 @@ public abstract class ObjectSerializer {
   /**
    * <p>An exception message formatter used when deserialization
    * fails.</p>
-   * @param exc The exception thrown.
+   * @param thr The exception thrown.
    * @return A new SerializationException.
    */
-  protected static SerializationException failDeserialize(Exception exc) {
+  protected static SerializationException failDeserialize(Throwable thr) {
     StringBuffer buffer = new StringBuffer();
     buffer.append("Failed to deserialize an object (");
-    buffer.append(exc.getClass().getName());
+    buffer.append(thr.getClass().getName());
     buffer.append(").");
     String str = buffer.toString();
-    logger.debug1(str, exc);
-    return new SerializationException(str, exc);
+    logger.debug2(str, thr);
+    return new SerializationException(str, thr);
   }
 
   /**
