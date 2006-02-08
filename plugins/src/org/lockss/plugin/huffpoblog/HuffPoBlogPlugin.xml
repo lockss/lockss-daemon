@@ -43,13 +43,15 @@
     <list>
       <string>4,&quot;^%s&quot;, base_url</string>
       <string>1,&quot;%syearly/%d/&quot;, base_url, year</string>
+      <string>2,&quot;^%s.*#$&quot;, base_url</string>
+      <string>2,&quot;^%ssend/&quot;, base_url</string>
+      <string>2,&quot;^%scomment/&quot;, base_url</string>
       <string>1,&quot;^%s.*/.*_b_[0-9]+\.html$&quot;, base_url</string>
       <string>1,&quot;^%s%d/[0-9]+/[0-9]+/.*_n_[0-9]+\.html$&quot;, base_url, year</string>
       <string>1,&quot;^%scss/&quot;, base_url</string>
       <string>1,&quot;^%simages/&quot;, base_url</string>
       <string>1,&quot;^%scontributor/&quot;, base_url</string>
       <string>1,&quot;^%sinclude/lib/&quot;, base_url</string>
-      <string>2,&quot;^%s.*#$&quot;, base_url</string>
     </list>
   </entry>
   <entry>
