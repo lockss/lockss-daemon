@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.27 2006-02-09 00:40:07 thib_gc Exp $
+ * $Id: ServletUtil.java,v 1.28 2006-02-09 00:44:30 thib_gc Exp $
  */
 
 /*
@@ -217,7 +217,7 @@ public class ServletUtil {
     "<center><font color=\"red\" size=\"+1\">";
 
   private static final String ERRORBLOCK_STATUS_AFTER =
-    "<center><font size=\"+1\">";
+    "</font></center><br>";
 
   private static final String ERRORBLOCK_STATUS_BEFORE =
     "<center><font color=\"red\" size=\"+1\">";
