@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyIpAccess.java,v 1.20 2006-01-13 22:44:31 thib_gc Exp $
+ * $Id: ProxyIpAccess.java,v 1.21 2006-02-09 00:40:07 thib_gc Exp $
  */
 
 /*
@@ -170,6 +170,15 @@ public class ProxyIpAccess extends IpAccessControl {
     if (StringUtil.isNullString(port)) {
       port = CurrentConfig.getParam(PARAM_AUDIT_PORT);
     }
+    if (!StringUtil.isNullString(port)) {
+      try {
+        int portNumber = Integer.parseInt(port);
+        if (!(portNumber > 0)) {
+          port = "";
+        }
+      }
+      catch (NumberFormatException nfeIgnore) {}
+    }
     return port;
   }
 
@@ -180,7 +189,8 @@ public class ProxyIpAccess extends IpAccessControl {
   private String getDefaultIcpPort() {
     String port = formIcpPort;
     if (StringUtil.isNullString(port)) {
-      port = Integer.toString(getLockssDaemon().getIcpManager().getCurrentPort());
+      int portNumber = getLockssDaemon().getIcpManager().getCurrentPort();
+      port = portNumber > 0 ? Integer.toString(portNumber) : "";
     }
     return port;
   }
