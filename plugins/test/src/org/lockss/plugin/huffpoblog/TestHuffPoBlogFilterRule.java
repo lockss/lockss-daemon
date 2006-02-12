@@ -1,5 +1,5 @@
 /*
- * $Id: TestHuffPoBlogFilterRule.java,v 1.1 2006-02-06 20:32:14 dshr Exp $
+ * $Id: TestHuffPoBlogFilterRule.java,v 1.2 2006-02-12 01:00:39 dshr Exp $
  */
 
 /*
@@ -87,6 +87,57 @@ public class TestHuffPoBlogFilterRule extends LockssTestCase {
 	  "</center>\n" +
 	  "\n";
 
+  private static final String inst4 =
+	"<h3>Related News Stories</h3>\n" +
+	  "<ul class=\"relatedposts\"><li><a href=\"/2006/02/09/cheney-authorized-leaki_n_15361.html\">Cheney \"Authorized\" Leaking Of Classified Information...</a></li>\n" +
+	  "<li><a href=\"/2006/02/04/prosecutors-report-says-_n_15096.html\">Prosecutor\'s Report Says Cheney Aide In Broad Web Of Deception, Lied Repeatedly About CIA Outing...</a></li>\n" +
+	  "<li><a href=\"/2006/02/05/cia-was-making-specific-_n_15133.html\">CIA \"Was Making Specific Efforts To Conceal\" Plame\'s Covert Status When Outed...</a></li>\n" +
+	  "</ul>\n" +
+	  "\n" +
+	  "\n" +
+	"<h3>Related Blog Posts</h3>\n" +
+	  "<ul class=\"relatedposts\"><li><a href=\"/arianna-huffington/the-beginning-of-the-end_b_15389.html\"><b>Arianna Huffington</b>: The Beginning of the End?</a></li>\n" +
+	  "<li><a href=\"/jane-hamsher/time-magazine-spikes-the-_b_15279.html\"><b>Jane Hamsher</b>: Time Magazine Spikes the Plame Story</a></li>\n" +
+	  "<li><a href=\"/joe-fontaine/russert-still-hasnt-clar_b_15223.html\"><b>Joe Fontaine</b>: Russert Still Hasn\'t Clarified Plamegate Role</a></li>\n" +
+	  "</ul>\n" +
+	  "\n" +
+	  "\n" +
+	"<h3 id=\"comments\">\n" +
+	  "Posted Comments \n" +
+	"</h3>\n";
+
+  private static final String inst5 =
+	"<h3>Related News Stories</h3>\n" +
+	  "<ul class=\"relatedposts\"><li><a href=\"/2006/02/09/cheney-ordered-leaki_n_15361.html\">Cheney \"Ordered\" Leaking Of Classified Information...</a></li>\n" +
+	  "<li><a href=\"/2006/02/04/prosecutors-report-writes-_n_15096.html\">Prosecutor\'s Report Says Cheney In Broad Web Of Deception, Lied Repeatedly About CIA Outing...</a></li>\n" +
+	  "<li><a href=\"/2006/02/05/cia-was-making-frantic-_n_15133.html\">CIA \"Was Making Frantic Efforts To Conceal\" Plame\'s Covert Status When Outed...</a></li>\n" +
+	  "</ul>\n" +
+	  "\n" +
+	  "\n" +
+	"<h3>Related Blog Posts</h3>\n" +
+	  "<ul class=\"relatedposts\"><li><a href=\"/arianna-huffington/the-end-of-the-end_b_15389.html\"><b>Arianna Huffington</b>: The End of the End?</a></li>\n" +
+	  "<li><a href=\"/jane-hamsher/time-magazine-discards-the-_b_15279.html\"><b>Jane Hamsher</b>: Time Magazine Discards the Plame Story</a></li>\n" +
+	  "<li><a href=\"/joe-fontaine/russert-still-has-clar_b_15223.html\"><b>Joe Fontaine</b>: Russert Still Has Plamegate Role</a></li>\n" +
+	  "</ul>\n" +
+	  "\n" +
+	  "\n" +
+	"<h3 id=\"comments\">\n" +
+	  "Posted Comments \n" +
+	"</h3>\n";
+
+  private static final String inst6 =
+	  "Hello\n" +
+	  "<div class=\"relatedcats\">\n" +
+		"READ MORE: <a href=\"/news/iraq\">Iraq</a>, <a href=\"/news/dick-cheney\">Dick Cheney</a>, <a href=\"/news/scooter-libby\">Scooter Libby</a>, <a href=\"/news/patrick-fitzgerald\">Patrick Fitzgerald</a>, <a href=\"/news/investigations\">Investigations</a>, <a href=\"/news/george-w-bush\">George W. Bush</a>                  </div>\n" +
+	  "Goodbye\n";
+
+  private static final String inst7 =
+	  "Hello\n" +
+	  "<div class=\"relatedcats\">\n" +
+		"READ MORE: <a href=\"/news/iran\">Iran</a>, <a href=\"/news/dick-cheney\">Dick Cheney</a>, <a href=\"/news/scooter-libby\">Scooter Libby</a>, <a href=\"/news/patrick-fitzgerald\">Patrick Fitzgerald</a>, <a href=\"/news/george-w-bush\">George W. Bush</a>                  </div>\n" +
+	  "Goodbye\n";
+
+
   public void testAdvertFiltering() throws IOException {
     Reader reader1 = rule.createFilteredReader(new StringReader(inst1));
     Reader reader2 = rule.createFilteredReader(new StringReader(inst2));
@@ -98,5 +149,17 @@ public class TestHuffPoBlogFilterRule extends LockssTestCase {
     Reader reader3 = rule.createFilteredReader(new StringReader(inst3));
     assertEquals(StringUtil.fromReader(reader2),
 		 StringUtil.fromReader(reader3));
+  }
+  public void testRelatedPostFiltering() throws IOException {
+    Reader reader4 = rule.createFilteredReader(new StringReader(inst4));
+    Reader reader5 = rule.createFilteredReader(new StringReader(inst5));
+    assertEquals(StringUtil.fromReader(reader4),
+		 StringUtil.fromReader(reader5));
+  }
+  public void testRelatedCatFiltering() throws IOException {
+    Reader reader6 = rule.createFilteredReader(new StringReader(inst6));
+    Reader reader7 = rule.createFilteredReader(new StringReader(inst7));
+    assertEquals(StringUtil.fromReader(reader6),
+		 StringUtil.fromReader(reader7));
   }
 }

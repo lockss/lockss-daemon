@@ -1,5 +1,5 @@
 /*
- * $Id: HuffPoBlogFilterRule.java,v 1.1 2006-02-06 20:32:14 dshr Exp $
+ * $Id: HuffPoBlogFilterRule.java,v 1.2 2006-02-12 01:00:39 dshr Exp $
  */
 
 /*
@@ -50,7 +50,8 @@ public class HuffPoBlogFilterRule implements FilterRule {
 	new HtmlTagFilter.TagPair("<!-- begin ad tag -->", "<!-- End ad tag -->"),
 	new HtmlTagFilter.TagPair("<script", "</script>", true),
 	new HtmlTagFilter.TagPair("<table", "</table>", true),
-	new HtmlTagFilter.TagPair("<", ">")
+	new HtmlTagFilter.TagPair("<ul class=\"relatedposts\">", "</ul>", true),
+	new HtmlTagFilter.TagPair("<div class=\"relatedcats\">", "</div>", true)
         );
     Reader tagFilter = HtmlTagFilter.makeNestedFilter(reader, tagList);
     return new WhiteSpaceFilter(tagFilter);

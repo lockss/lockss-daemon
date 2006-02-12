@@ -46,7 +46,7 @@
       <string>2,&quot;^%s.*#$&quot;, base_url</string>
       <string>2,&quot;^%ssend/&quot;, base_url</string>
       <string>2,&quot;^%scomment/&quot;, base_url</string>
-      <string>1,&quot;^%s.*/.*_b_[0-9]+\.html$&quot;, base_url</string>
+      <string>1,&quot;^%s.*/.*_b_%s\.html$&quot;, base_url, num_issue_range</string>
       <string>1,&quot;^%s%d/[0-9]+/[0-9]+/.*_n_[0-9]+\.html$&quot;, base_url, year</string>
       <string>1,&quot;^%scss/&quot;, base_url</string>
       <string>1,&quot;^%simages/&quot;, base_url</string>
@@ -76,6 +76,15 @@
         <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
         <type>3</type>
         <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+            <org.lockss.daemon.ConfigParamDescr>
+        <key>num_issue_range</key>
+        <displayName>Numeric Issue Range</displayName>
+        <description>A Range of issues in the form: min-max</description>
+        <type>7</type>
+        <size>20</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
