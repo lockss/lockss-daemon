@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyAndContent.java,v 1.9 2006-02-09 00:40:07 thib_gc Exp $
+ * $Id: ProxyAndContent.java,v 1.10 2006-02-13 23:07:33 thib_gc Exp $
  */
 
 /*
@@ -249,37 +249,6 @@ public class ProxyAndContent extends LockssServlet {
         linkExpl);
   }
 
-  private void processUpdateProxy() throws IOException {
-    ArrayList errList = new ArrayList();
-
-    // Read form
-    processUpdate_Main_ReadForm();
-
-    // Process form
-    processUpdate_Main_Audit(errList);
-    processUpdate_Main_Icp(errList);
-
-    // Prepare error message
-    if (errList.size() > 0) {
-      // There were errors
-      StringBuffer buffer = new StringBuffer();
-      StringUtil.separatedString(errList, "<br>", buffer);
-      errMsg = buffer.toString();
-    }
-    else {
-      // There were no errors
-      try {
-        processUpdateProxy_SaveChanges();
-      }
-      catch (IOException ioe) {
-        logger.error("Could not save changes", ioe);
-        errMsg = "Error: Could not save changes.\n" + ioe.toString();
-      }
-    }
-
-    displayProxy();
-  }
-
   private void processUpdate_Main_Audit(ArrayList errList) {
     auditPort = -1;
     try {
@@ -318,6 +287,37 @@ public class ProxyAndContent extends LockssServlet {
     formAuditPort = req.getParameter(AUDIT_PORT_NAME);
     formIcpEnable = !StringUtil.isNullString(req.getParameter(ICP_ENABLE_NAME));
     formIcpPort = req.getParameter(ICP_PORT_NAME);
+  }
+
+  private void processUpdateProxy() throws IOException {
+    ArrayList errList = new ArrayList();
+
+    // Read form
+    processUpdate_Main_ReadForm();
+
+    // Process form
+    processUpdate_Main_Audit(errList);
+    processUpdate_Main_Icp(errList);
+
+    // Prepare error message
+    if (errList.size() > 0) {
+      // There were errors
+      StringBuffer buffer = new StringBuffer();
+      StringUtil.separatedString(errList, "<br>", buffer);
+      errMsg = buffer.toString();
+    }
+    else {
+      // There were no errors
+      try {
+        processUpdateProxy_SaveChanges();
+      }
+      catch (IOException ioe) {
+        logger.error("Could not save changes", ioe);
+        errMsg = "Error: Could not save changes.\n" + ioe.toString();
+      }
+    }
+
+    displayProxy();
   }
 
   private void processUpdateProxy_SaveChanges() throws IOException {
