@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.29 2006-02-13 23:47:10 thib_gc Exp $
+ * $Id: ServletUtil.java,v 1.30 2006-02-13 23:50:00 thib_gc Exp $
  */
 
 /*
@@ -220,7 +220,7 @@ public class ServletUtil {
     "</font></center><br>";
 
   private static final String ERRORBLOCK_STATUS_BEFORE =
-    "<center><font color=\"red\" size=\"+1\">";
+    "<center><font size=\"+1\">";
 
   private static final String EXPLANATION_CELL_ATTRIBUTES =
     ALIGN_CENTER;
