@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyAndContent.java,v 1.10 2006-02-13 23:07:33 thib_gc Exp $
+ * $Id: ProxyAndContent.java,v 1.11 2006-02-13 23:12:55 thib_gc Exp $
  */
 
 /*
@@ -249,55 +249,15 @@ public class ProxyAndContent extends LockssServlet {
         linkExpl);
   }
 
-  private void processUpdate_Main_Audit(ArrayList errList) {
-    auditPort = -1;
-    try {
-      auditPort = Integer.parseInt(formAuditPort);
-    } catch (NumberFormatException nfe) {
-      if (formAuditEnable) {
-        // bad number is an error only if enabling
-        errList.add("Audit proxy port must be a number: " + formAuditPort);
-      }
-    }
-    if (formAuditEnable && !isLegalAuditPort(auditPort)) {
-      errList.add("Illegal audit proxy port number: " + formAuditPort
-          + ", must be >=1024 and not in use");
-    }
-  }
-
-  private void processUpdate_Main_Icp(ArrayList errList) {
-    icpPort = -1;
-    try {
-      icpPort = Integer.parseInt(formIcpPort);
-    }
-    catch (NumberFormatException nfe) {
-      if (formIcpEnable) {
-        // bad number is an error only if enabling
-        errList.add("ICP port must be a number: " + formIcpPort);
-      }
-    }
-    if (formIcpEnable && !isLegalIcpPort(icpPort)) {
-      errList.add("Illegal ICP port number: " + formIcpPort
-          + ", must be >=1024 and not in use");
-    }
-  }
-
-  private void processUpdate_Main_ReadForm() {
-    formAuditEnable = !StringUtil.isNullString(req.getParameter(AUDIT_ENABLE_NAME));
-    formAuditPort = req.getParameter(AUDIT_PORT_NAME);
-    formIcpEnable = !StringUtil.isNullString(req.getParameter(ICP_ENABLE_NAME));
-    formIcpPort = req.getParameter(ICP_PORT_NAME);
-  }
-
   private void processUpdateProxy() throws IOException {
     ArrayList errList = new ArrayList();
 
     // Read form
-    processUpdate_Main_ReadForm();
+    processUpdateProxy_ReadForm();
 
     // Process form
-    processUpdate_Main_Audit(errList);
-    processUpdate_Main_Icp(errList);
+    processUpdateProxy_Audit(errList);
+    processUpdateProxy_Icp(errList);
 
     // Prepare error message
     if (errList.size() > 0) {
@@ -318,6 +278,46 @@ public class ProxyAndContent extends LockssServlet {
     }
 
     displayProxy();
+  }
+
+  private void processUpdateProxy_Audit(ArrayList errList) {
+    auditPort = -1;
+    try {
+      auditPort = Integer.parseInt(formAuditPort);
+    } catch (NumberFormatException nfe) {
+      if (formAuditEnable) {
+        // bad number is an error only if enabling
+        errList.add("Audit proxy port must be a number: " + formAuditPort);
+      }
+    }
+    if (formAuditEnable && !isLegalAuditPort(auditPort)) {
+      errList.add("Illegal audit proxy port number: " + formAuditPort
+          + ", must be >=1024 and not in use");
+    }
+  }
+
+  private void processUpdateProxy_Icp(ArrayList errList) {
+    icpPort = -1;
+    try {
+      icpPort = Integer.parseInt(formIcpPort);
+    }
+    catch (NumberFormatException nfe) {
+      if (formIcpEnable) {
+        // bad number is an error only if enabling
+        errList.add("ICP port must be a number: " + formIcpPort);
+      }
+    }
+    if (formIcpEnable && !isLegalIcpPort(icpPort)) {
+      errList.add("Illegal ICP port number: " + formIcpPort
+          + ", must be >=1024 and not in use");
+    }
+  }
+
+  private void processUpdateProxy_ReadForm() {
+    formAuditEnable = !StringUtil.isNullString(req.getParameter(AUDIT_ENABLE_NAME));
+    formAuditPort = req.getParameter(AUDIT_PORT_NAME);
+    formIcpEnable = !StringUtil.isNullString(req.getParameter(ICP_ENABLE_NAME));
+    formIcpPort = req.getParameter(ICP_PORT_NAME);
   }
 
   private void processUpdateProxy_SaveChanges() throws IOException {
