@@ -1,5 +1,5 @@
 /*
- * $Id: BatchAuConfig.java,v 1.24 2006-02-06 23:54:40 thib_gc Exp $
+ * $Id: BatchAuConfig.java,v 1.25 2006-02-13 23:47:11 thib_gc Exp $
  */
 
 /*
@@ -327,7 +327,8 @@ public class BatchAuConfig extends LockssServlet {
 
     // End page
     if (action != null) {
-      ServletUtil.layoutBackLink(this, page, "Journal Configuration");
+      ServletUtil.layoutBackLink(page,
+          srvLink(myServletDescr(), "Back to Journal Configuration"));
     }
     layoutFooter(page);
     page.write(resp.getWriter());
@@ -634,7 +635,8 @@ public class BatchAuConfig extends LockssServlet {
   /** Common and page adds Back link, footer */
   protected void endPage(Page page) throws IOException {
     if (action != null) {
-      ServletUtil.layoutBackLink(this, page, "Journal Configuration");
+      ServletUtil.layoutBackLink(page,
+          srvLink(myServletDescr(), "Back to Journal Configuration"));
     }
     layoutFooter(page);
     page.write(resp.getWriter());

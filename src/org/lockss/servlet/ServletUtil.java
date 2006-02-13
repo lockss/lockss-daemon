@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.28 2006-02-09 00:44:30 thib_gc Exp $
+ * $Id: ServletUtil.java,v 1.29 2006-02-13 23:47:10 thib_gc Exp $
  */
 
 /*
@@ -578,13 +578,11 @@ public class ServletUtil {
     page.add(frm);
   }
 
-  public static void layoutBackLink(LockssServlet servlet,
-                                    Page page,
-                                    String destination) {
-    page.add(BACKLINK_BEFORE);
-    page.add(servlet.srvLink(servlet.myServletDescr(),
-                             "Back to " + destination));
-    page.add(BACKLINK_AFTER);
+  public static void layoutBackLink(Composite comp,
+                                    String destinationLink) {
+    comp.add(BACKLINK_BEFORE);
+    comp.add(destinationLink);
+    comp.add(BACKLINK_AFTER);
   }
 
   public static void layoutChooseSets(String url,
