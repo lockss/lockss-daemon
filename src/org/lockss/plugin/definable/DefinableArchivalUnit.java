@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.39 2005-10-20 16:43:32 troberts Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.40 2006-02-14 05:20:58 tlipkis Exp $
  */
 
 /*
@@ -275,13 +275,17 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     if (permissionCheckerFactoryClass == null) {
       return null;
     }
+    log.debug3("Found PermissionCheckerFactory class: " +
+	       permissionCheckerFactoryClass);
+
     PermissionCheckerFactory fact =
       (PermissionCheckerFactory) loadClass(permissionCheckerFactoryClass,
 					   PermissionCheckerFactory.class);
+    log.debug("Loaded PermissionCheckerFactory: " + fact);
     List permissionCheckers = fact.createPermissionCheckers(this);
       if (permissionCheckers.size() > 1) {
-        log.critical("Plugin specifies multiple permission checkers, but we " +
-                        "only support one: " + this);
+        log.error("Plugin specifies multiple permission checkers, but we " +
+		  "only support one: " + this);
 
       }
     return (PermissionChecker)permissionCheckers.get(0);
