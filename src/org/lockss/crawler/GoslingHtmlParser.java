@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingHtmlParser.java,v 1.36 2006-02-04 03:32:27 tlipkis Exp $
+ * $Id: GoslingHtmlParser.java,v 1.37 2006-02-14 05:20:07 tlipkis Exp $
  */
 
 /*
@@ -529,10 +529,7 @@ public class GoslingHtmlParser implements ContentParser {
       if (token.equals(endStr)) {
 	break; //we've hit the end of the attribute value
       } else {
-	// browsers discard newlines in quoted urls
-	if (!isNewline(token)) {
-	  sb.append(token);
-	}
+	sb.append(token);
       }
     }
     return sb.toString();
