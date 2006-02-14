@@ -1,5 +1,5 @@
 /*
- * $Id: TestOaiCrawler.java,v 1.10 2005-10-20 16:42:55 troberts Exp $
+ * $Id: TestOaiCrawler.java,v 1.11 2006-02-14 05:22:46 tlipkis Exp $
  */
 
 /*
@@ -245,7 +245,8 @@ public class TestOaiCrawler extends LockssTestCase {
      * @param reader Reader
      * @return true numPermissionGranted times, then false
      */
-    public boolean checkPermission(Reader reader, String permissionUrl) {
+    public boolean checkPermission(Crawler.PermissionHelper pHelper,
+				   Reader reader, String permissionUrl) {
       if (numPermissionGranted-- > 0) {
         return true;
       } else {

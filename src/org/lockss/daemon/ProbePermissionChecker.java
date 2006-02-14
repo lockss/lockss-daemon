@@ -1,5 +1,5 @@
 /*
- * $Id: ProbePermissionChecker.java,v 1.9 2005-10-11 05:44:15 tlipkis Exp $
+ * $Id: ProbePermissionChecker.java,v 1.10 2006-02-14 05:22:46 tlipkis Exp $
  */
 
 /*
@@ -66,7 +66,8 @@ public class ProbePermissionChecker implements PermissionChecker {
     this.checker = checker;
   }
 
-  public boolean checkPermission(Reader inputReader, String permissionUrl) {
+  public boolean checkPermission(Crawler.PermissionHelper pHelper,
+				 Reader inputReader, String permissionUrl) {
     CustomHtmlParser parser = new CustomHtmlParser();
     logger.debug3("Checking permission on "+permissionUrl);
     try {
@@ -80,7 +81,9 @@ public class ProbePermissionChecker implements PermissionChecker {
     if (probeUrl != null) {
       logger.debug3("Found probeUrl "+probeUrl);
       try {
-	UrlCacher uc = au.makeUrlCacher(probeUrl);
+	UrlCacher uc = pHelper.makeUrlCacher(probeUrl);
+	// XXX is this the right redirect option?
+	uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW_ON_HOST);
  	InputStream is = new BufferedInputStream(uc.getUncachedInputStream());
 	Properties props = uc.getUncachedProperties();
 

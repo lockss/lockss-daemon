@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.21 2005-10-20 16:43:32 troberts Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.22 2006-02-14 05:22:46 tlipkis Exp $
  */
 
 /*
@@ -340,7 +340,8 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
   }
 
   private static class MockPermissionChecker implements PermissionChecker {
-    public boolean checkPermission(Reader inputReader, String url) {
+    public boolean checkPermission(Crawler.PermissionHelper pHelper,
+				   Reader inputReader, String url) {
       throw new UnsupportedOperationException("not implemented");
     }
   }

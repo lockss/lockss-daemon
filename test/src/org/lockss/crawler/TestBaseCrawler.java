@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCrawler.java,v 1.3 2006-01-13 20:03:45 tlipkis Exp $
+ * $Id: TestBaseCrawler.java,v 1.4 2006-02-14 05:22:46 tlipkis Exp $
  */
 
 /*
@@ -513,7 +513,8 @@ public class TestBaseCrawler extends LockssTestCase {
      * @param reader Reader
      * @return boolean
      */
-    public boolean checkPermission(Reader reader, String permissionUrl) {
+    public boolean checkPermission(Crawler.PermissionHelper pHelper,
+				   Reader reader, String permissionUrl) {
       return permission;
     }
 

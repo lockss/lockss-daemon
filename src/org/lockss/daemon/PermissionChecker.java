@@ -1,5 +1,5 @@
 /*
- * $Id: PermissionChecker.java,v 1.2 2005-05-03 00:02:41 troberts Exp $
+ * $Id: PermissionChecker.java,v 1.3 2006-02-14 05:22:46 tlipkis Exp $
  */
 
 /*
@@ -41,5 +41,6 @@ public interface PermissionChecker {
    * @param url url of the permission page we're checking
    * @return boolean true iff the permission object is found.
    */
-  public boolean checkPermission(Reader inputReader, String url);
+  public boolean checkPermission(Crawler.PermissionHelper pHelper,
+				 Reader inputReader, String url);
 }

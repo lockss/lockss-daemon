@@ -1,5 +1,5 @@
 /*
- * $Id: TestProbePermissionChecker.java,v 1.6 2005-10-11 05:49:28 tlipkis Exp $
+ * $Id: TestProbePermissionChecker.java,v 1.7 2006-02-14 05:22:46 tlipkis Exp $
  */
 
 /*
@@ -34,10 +34,13 @@ package org.lockss.daemon;
 import java.io.*;
 import java.util.*;
 import org.lockss.test.*;
+import org.lockss.plugin.*;
 
 public class TestProbePermissionChecker extends LockssTestCase {
 
   private ProbePermissionChecker pc;
+  MockArchivalUnit mau;
+  MyPermissionHelper helper;
 
   private static String htmlSourceWOLinkTag =
     "<html>\n"+
@@ -81,7 +84,11 @@ public class TestProbePermissionChecker extends LockssTestCase {
     "</html>\n";
 
 
-
+  public void setUp() throws Exception {
+    super.setUp();
+    mau = new MockArchivalUnit();
+    helper = new MyPermissionHelper(mau);
+  }
 
 
 
@@ -103,32 +110,30 @@ public class TestProbePermissionChecker extends LockssTestCase {
   }
 
   public void testNoLinkTag() {
-    MockArchivalUnit mau = new MockArchivalUnit();
     String url = "http://www.example.com";
     mau.addUrl(url, true, true);
     mau.addContent(url, htmlSourceWOProbe);
 
     pc = new ProbePermissionChecker(new MockLoginPageChecker(), mau);
     assertFalse("Incorrectly gave permission when there was no probe",
-		pc.checkPermission(new StringReader(htmlSourceWOLinkTag),
+		pc.checkPermission(helper,
+				   new StringReader(htmlSourceWOLinkTag),
 				   url));
   }
 
 
   public void testNoProbe() {
-    MockArchivalUnit mau = new MockArchivalUnit();
     String url = "http://www.example.com";
     mau.addUrl(url, true, true);
     mau.addContent(url, htmlSourceWOProbe);
 
     pc = new ProbePermissionChecker(new MockLoginPageChecker(), mau);
     assertFalse("Incorrectly gave permission when there was no probe",
-		pc.checkPermission(new StringReader(htmlSourceWOProbe),
+		pc.checkPermission(helper, new StringReader(htmlSourceWOProbe),
 				   url));
   }
 
   public void testProbe() {
-//     MockArchivalUnit mau = new MockArchivalUnit();
 //     String probeUrl = "http://www.example.com/cgi/content/full/14/9/1109";
 
 //     String url = "http://www.example.com";
@@ -142,12 +147,11 @@ public class TestProbePermissionChecker extends LockssTestCase {
 //     pc = new ProbePermissionChecker(mockLPC, mau);
     pc = makeProbePC(new MockLoginPageChecker(false));
     assertTrue("Didn't give permission when there was a probe",
-		pc.checkPermission(new StringReader(htmlSourceWProbe),
+		pc.checkPermission(helper, new StringReader(htmlSourceWProbe),
 				   "http://www.example.com"));
   }
 
   public void testProbeCheckerRefuses() {
-//     MockArchivalUnit mau = new MockArchivalUnit();
 //     String probeUrl = "http://www.example.com/cgi/content/full/14/9/1109";
 
 //     String url = "http://www.example.com";
@@ -160,13 +164,12 @@ public class TestProbePermissionChecker extends LockssTestCase {
 //     pc = new ProbePermissionChecker(mockLPC, mau);
     pc = makeProbePC(new MockLoginPageChecker(true));
     assertFalse("Gave permission when the nested checker denied it",
-	       pc.checkPermission(new StringReader(htmlSourceWProbe),
+	       pc.checkPermission(helper, new StringReader(htmlSourceWProbe),
 				  "http://www.example.com"));
 
   }
 
   private ProbePermissionChecker makeProbePC(LoginPageChecker lpc) {
-    MockArchivalUnit mau = new MockArchivalUnit();
     String probeUrl = "http://www.example.com/cgi/content/full/14/9/1109";
 
     String url = "http://www.example.com";
@@ -175,6 +178,18 @@ public class TestProbePermissionChecker extends LockssTestCase {
     mau.addUrl(probeUrl, true, true);
 
     return new ProbePermissionChecker(lpc, mau);
+  }
+
+  static class MyPermissionHelper extends MockPermissionHelper {
+    ArchivalUnit au;
+
+    MyPermissionHelper(ArchivalUnit au) {
+      this.au = au;
+    }
+
+    public UrlCacher makeUrlCacher(String url) {
+      return au.makeUrlCacher(url);
+    }
   }
 
   private static class MockLoginPageChecker implements LoginPageChecker {

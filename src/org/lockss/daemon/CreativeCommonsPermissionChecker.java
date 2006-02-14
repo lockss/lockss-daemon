@@ -1,5 +1,5 @@
 /*
- * $Id: CreativeCommonsPermissionChecker.java,v 1.7 2006-01-06 05:09:44 smorabito Exp $
+ * $Id: CreativeCommonsPermissionChecker.java,v 1.8 2006-02-14 05:22:46 tlipkis Exp $
  */
 
 /*
@@ -114,7 +114,8 @@ public class CreativeCommonsPermissionChecker
    * Check for "Distribution" permission granted by a Creative Commons
    * License.
    */
-  public boolean checkPermission(Reader reader, String permissionUrl) {
+  public boolean checkPermission(Crawler.PermissionHelper pHelper,
+				 Reader reader, String permissionUrl) {
     if (reader == null) {
       throw new NullPointerException("Called with null reader");
     }

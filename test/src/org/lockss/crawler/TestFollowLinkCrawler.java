@@ -1,5 +1,5 @@
 /*
- * $Id: TestFollowLinkCrawler.java,v 1.12 2005-11-16 00:06:18 troberts Exp $
+ * $Id: TestFollowLinkCrawler.java,v 1.13 2006-02-14 05:22:46 tlipkis Exp $
  */
 
 /*
@@ -954,7 +954,8 @@ public class TestFollowLinkCrawler extends LockssTestCase {
      * @param reader Reader
      * @return boolean
      */
-    public boolean checkPermission(Reader reader, String permissionUrl) {
+    public boolean checkPermission(Crawler.PermissionHelper pHelper,
+				   Reader reader, String permissionUrl) {
         if (numPermissionGranted-- > 0) {
           return true;
         } else {
