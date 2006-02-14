@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.68 2006-01-09 23:08:26 thib_gc Exp $
+ * $Id: StringUtil.java,v 1.69 2006-02-14 05:23:13 tlipkis Exp $
  */
 
 /*
@@ -790,7 +790,7 @@ public class StringUtil {
 
   /** Trim EOLs and leading whitespace from a block of text */
   public static String trimNewlinesAndLeadingWhitespace(String str) {
-    if (str.indexOf("\n") == -1) {
+    if (str.indexOf("\n") == -1 && str.indexOf("\r") == -1) {
       return str;
     }
     Substitution subst = new Perl5Substitution("");
