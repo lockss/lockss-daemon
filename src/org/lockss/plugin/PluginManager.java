@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.152 2005-12-01 23:28:01 troberts Exp $
+ * $Id: PluginManager.java,v 1.153 2006-02-14 05:20:44 tlipkis Exp $
  */
 
 /*
@@ -982,8 +982,10 @@ public class PluginManager
       xmlPlugin = (DefinablePlugin)c.newInstance();
       xmlPlugin.initPlugin(theDaemon, pluginName, loader);
       foundXmlPlugin = true;
+    } catch (FileNotFoundException ex) {
+      log.warning(pluginName + ": Couldn't find plugin: " + ex);
     } catch (Exception ex) {
-      log.debug3(pluginName + ": XML definition not found on classpath: " + ex);
+      log.warning(pluginName + ": Couldn't load plugin", ex);
     }
 
     // If both are found, decide which one to favor.
