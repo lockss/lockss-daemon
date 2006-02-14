@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.46 2005-11-16 00:06:19 troberts Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.47 2006-02-14 05:19:49 tlipkis Exp $
  */
 
 /*
@@ -1253,7 +1253,8 @@ public class TestBaseUrlCacher extends LockssTestCase {
 
   private static class MockPermissionMap extends PermissionMap {
     public MockPermissionMap() {
-      super(new MockArchivalUnit(), new MockPermissionHelper(), new ArrayList());
+      super(new MockArchivalUnit(), new MockPermissionHelper(),
+	    new ArrayList(), null);
     }
 
     protected void putStatus(String permissionUrl, int status)

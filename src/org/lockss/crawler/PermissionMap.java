@@ -1,5 +1,5 @@
 /*
- * $Id: PermissionMap.java,v 1.7 2005-12-01 23:28:01 troberts Exp $
+ * $Id: PermissionMap.java,v 1.8 2006-02-14 05:19:49 tlipkis Exp $
  */
 
 /*
@@ -59,7 +59,7 @@ public class PermissionMap {
 
   private Crawler.Status crawlStatus;
 
-  private AlertManager alertMgr = (AlertManager)org.lockss.app.LockssDaemon.getManager(org.lockss.app.LockssDaemon.ALERT_MANAGER);
+  private AlertManager alertMgr;
 
 
   private Crawler.PermissionHelper pHelper;
@@ -67,7 +67,8 @@ public class PermissionMap {
   static Logger logger = Logger.getLogger("PermissionMap");
 
   public PermissionMap(ArchivalUnit au, Crawler.PermissionHelper pHelper,
-                       List daemonPermissionCheckers) {
+                       List daemonPermissionCheckers,
+		       PermissionChecker pluginPermissionChecker) {
     if (au == null) {
       throw new IllegalArgumentException("Called with null AU");
     } else if (pHelper == null) {
@@ -78,6 +79,7 @@ public class PermissionMap {
     this.pHelper = pHelper;
     this.au = au;
     this.daemonPermissionCheckers = daemonPermissionCheckers;
+    this.pluginPermissionChecker = pluginPermissionChecker;
   }
 
   /**
@@ -89,7 +91,8 @@ public class PermissionMap {
    */
   protected void putStatus(String permissionUrl, int status)
         throws MalformedURLException {
-    hMap.put(UrlUtil.getHost(permissionUrl).toLowerCase(), new PermissionRecord(permissionUrl,status));
+    hMap.put(UrlUtil.getHost(permissionUrl).toLowerCase(),
+	     new PermissionRecord(permissionUrl,status));
   }
 
   /**
@@ -116,7 +119,6 @@ public class PermissionMap {
     return pr.getPermissionUrl();
   }
 
-
   /**
    * Get the host's permission status from a url
    *
@@ -129,6 +131,13 @@ public class PermissionMap {
       return PermissionRecord.PERMISSION_MISSING;
     }
     return pr.getPermissionStatus();
+  }
+
+  private void raiseAlert(Alert alert) {
+    if (alertMgr == null) {
+      alertMgr = (AlertManager)org.lockss.app.LockssDaemon.getManager(org.lockss.app.LockssDaemon.ALERT_MANAGER);
+    }
+    alertMgr.raiseAlert(alert);
   }
 
   /**
@@ -148,7 +157,7 @@ public class PermissionMap {
     while (permissionUrls.hasNext()) {
       String permissionPage = (String)permissionUrls.next();
       // it is the real thing that do the checking of permission, crawlPermission dwell in BaseCrawler.java
-      int permissionStatus = crawlPermission(pHelper, permissionPage);
+      int permissionStatus = crawlPermission(permissionPage);
       // if permission status is something other than OK and the abortWhilePermissionOtherThanOk flag is on
       if (permissionStatus != PermissionRecord.PERMISSION_OK &&
           abortWhilePermissionOtherThanOk) {
@@ -179,8 +188,7 @@ public class PermissionMap {
    */
   public boolean checkHostPermission(String url,
                                      boolean permissionFailedRetry,
-                                     Crawler.Status crawlStatus,
-                                     BaseCrawler crawler) {
+                                     Crawler.Status crawlStatus) {
     int urlPermissionStatus = -1;
     String urlPermissionUrl = null;
     logger.debug3("Checking permission for "+url);
@@ -224,14 +232,14 @@ public class PermissionMap {
           //refetch permission page
           logger.info("refetching permission page: " + urlPermissionUrl);
           try {
-            putStatus(urlPermissionUrl, crawlPermission(crawler, urlPermissionUrl));
+            putStatus(urlPermissionUrl, crawlPermission(urlPermissionUrl));
           } catch (MalformedURLException e){
             //XXX can we handle this better by centralizing the check of MalformedURL ?
             logger.error("Malformed urlPermissionUrl :" + urlPermissionUrl, e);
             crawlStatus.setCrawlError("MalFormedUrl :" + urlPermissionUrl);
             return false;
           }
-          return checkHostPermission(url, false, crawlStatus, crawler);
+          return checkHostPermission(url, false, crawlStatus);
         } else {
           logger.error("Cannot fetch permission page on the second attempt : " + urlPermissionUrl);
           crawlStatus.setCrawlError("Cannot fetch permission page on the second attempt :" + urlPermissionUrl);
@@ -283,7 +291,7 @@ public class PermissionMap {
         is.mark(BaseCrawler.PERM_BUFFER_MAX);
         checker = (PermissionChecker) it.next();
         Reader reader = new InputStreamReader(is, Constants.DEFAULT_ENCODING);
-        if (checker.checkPermission(reader, permissionPage)) {
+        if (checker.checkPermission(pHelper, reader, permissionPage)) {
           logger.debug3("Found permission on "+checker);
           needPermission = false;
           break; //we just need one permission to de sucessful here
@@ -306,7 +314,8 @@ public class PermissionMap {
       is.mark(BaseCrawler.PERM_BUFFER_MAX);
       Reader reader = new InputStreamReader(is, Constants.DEFAULT_ENCODING);
       if (pluginPermissionChecker != null
-          && !pluginPermissionChecker.checkPermission(reader, permissionPage)) {
+          && !pluginPermissionChecker.checkPermission(pHelper, reader,
+						      permissionPage)) {
         logger.error("No plugin crawl permission on " + permissionPage);
         is.close();
         return false;
@@ -340,8 +349,7 @@ public class PermissionMap {
    * statement on the specified page, PERMISSION_NOT_OK otherwise
    */
 
-  private int crawlPermission(Crawler.PermissionHelper pHelper,
-                              String permissionPage) {
+  private int crawlPermission(String permissionPage) {
 
     int crawl_ok = PermissionRecord.PERMISSION_UNCHECKED;
     String err = Crawler.STATUS_NO_PUB_PERMISSION;
@@ -362,13 +370,12 @@ public class PermissionMap {
         } else {
           logger.error("No crawl permission on " + permissionPage);
           crawl_ok = PermissionRecord.PERMISSION_NOT_OK;
-          alertMgr.raiseAlert(Alert.auAlert(Alert.NO_CRAWL_PERMISSION, au).
-                              setAttribute(Alert.ATTR_TEXT,
-                                           "The page at " + permissionPage +
-                                           "\ndoes not contain the " +
-                                           "LOCKSS permission statement.\n" +
-                                           "No collection was done."));
-
+          raiseAlert(Alert.auAlert(Alert.NO_CRAWL_PERMISSION, au).
+		     setAttribute(Alert.ATTR_TEXT,
+				  "The page at " + permissionPage +
+				  "\ndoes not contain the " +
+				  "LOCKSS permission statement.\n" +
+				  "No collection was done."));
         }
       }
     } catch (RepositoryException ex) {
@@ -378,13 +385,13 @@ public class PermissionMap {
       err = Crawler.STATUS_REPO_ERR;
     } catch (Exception ex) {
       logger.error("Exception reading permission page", ex);
-      alertMgr.raiseAlert(Alert.auAlert(Alert.PERMISSION_PAGE_FETCH_ERROR, au).
-                          setAttribute(Alert.ATTR_TEXT,
-                                       "The LOCKSS permission page at " +
-                                       permissionPage +
-                                       "\ncould not be fetched. " +
-                                       "The error was:\n" +
-                                       ex.getMessage() + "\n"));
+      raiseAlert(Alert.auAlert(Alert.PERMISSION_PAGE_FETCH_ERROR, au).
+		 setAttribute(Alert.ATTR_TEXT,
+			      "The LOCKSS permission page at " +
+			      permissionPage +
+			      "\ncould not be fetched. " +
+			      "The error was:\n" +
+			      ex.getMessage() + "\n"));
       crawl_ok = PermissionRecord.FETCH_PERMISSION_FAILED;
     }
 

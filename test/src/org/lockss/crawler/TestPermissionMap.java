@@ -1,5 +1,5 @@
 /*
- * $Id: TestPermissionMap.java,v 1.4 2005-11-16 00:05:49 troberts Exp $
+ * $Id: TestPermissionMap.java,v 1.5 2006-02-14 05:19:49 tlipkis Exp $
  */
 
 /*
@@ -32,9 +32,11 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.crawler;
 import java.util.ArrayList;
+import java.io.*;
 
 import org.lockss.daemon.Crawler;
 import org.lockss.test.*;
+import org.lockss.plugin.*;
 import org.lockss.util.ListUtil;
 
 public class TestPermissionMap extends LockssTestCase {
@@ -49,13 +51,14 @@ public class TestPermissionMap extends LockssTestCase {
     getMockLockssDaemon().getAlertManager(); //populates AlertManager
 
     pMap = new PermissionMap(new MockArchivalUnit(),
-                             new MockPermissionHelper(), new ArrayList());
+                             new MockPermissionHelper(),
+			     new ArrayList(), null);
     pMap.putStatus(permissionUrl1, PermissionRecord.PERMISSION_OK);
   }
 
   public void testConstructorNullAu() {
     try {
-      new PermissionMap(null, new MockPermissionHelper(), null);
+      new PermissionMap(null, new MockPermissionHelper(), null, null);
       fail("Should have thrown an IllegalArgumentException");
     } catch (IllegalArgumentException ex) {
       //expected
@@ -64,13 +67,45 @@ public class TestPermissionMap extends LockssTestCase {
 
   public void testConstructorNullCrawler() {
     try {
-      new PermissionMap(new MockArchivalUnit(), null, null);
+      new PermissionMap(new MockArchivalUnit(), null, null, null);
       fail("Should have thrown an IllegalArgumentException");
     } catch (IllegalArgumentException ex) {
       //expected
     }
   }
 
+  // XXX unfinished
+  public void testCheckPermission() throws Exception {
+    MockPermissionChecker checker1 = new MockPermissionChecker(1);
+    MockPermissionChecker checker2 = new MockPermissionChecker(1);
+    MyPermissionHelper helper = new MyPermissionHelper();
+    PermissionMap map = new PermissionMap(new MockArchivalUnit(),
+					  helper,
+					  ListUtil.list(checker1),
+					  checker2);
+  }
+
+  // XXX unfinished
+  class MyPermissionHelper extends MockPermissionHelper {
+    public UrlCacher makeUrlCacher(String url) {
+      
+      return new MockUrlCacher("foo", new MockArchivalUnit());
+    }
+
+    public BufferedInputStream resetInputStream(BufferedInputStream is,
+						String url) {
+      throw new UnsupportedOperationException("not implemented");
+    }
+
+    public void refetchPermissionPage(String url) {
+      throw new UnsupportedOperationException("not implemented");
+    }
+
+    public Crawler.Status getCrawlStatus() {
+      return new Crawler.Status(null, null, null);
+    }
+
+  }
 
   public void testGetPermissionUrl() throws Exception {
     assertEquals(permissionUrl1, pMap.getPermissionUrl(url1));

@@ -1,5 +1,5 @@
 /*
- * $Id: RepairCrawler.java,v 1.56 2005-12-01 23:28:01 troberts Exp $
+ * $Id: RepairCrawler.java,v 1.57 2006-02-14 05:19:49 tlipkis Exp $
  */
 
 /*
@@ -422,7 +422,7 @@ public class RepairCrawler extends BaseCrawler {
 
   protected void fetchFromPublisher(UrlCacher uc) throws IOException {
     if (repairNeedsPermission) {
-      if (!permissionMap.checkHostPermission(uc.getUrl(), true, crawlStatus, this)) {
+      if (!permissionMap.checkHostPermission(uc.getUrl(), true, crawlStatus)) {
         if (crawlStatus.getCrawlError() == null) {
           crawlStatus.setCrawlError("No permission to collect " + uc.getUrl());
         }

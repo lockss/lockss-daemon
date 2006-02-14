@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.36 2005-12-01 23:28:01 troberts Exp $
+ * $Id: FollowLinkCrawler.java,v 1.37 2006-02-14 05:19:49 tlipkis Exp $
  */
 
 /*
@@ -309,7 +309,8 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	} else {
 
 	  // checking the crawl permission of the url's host
-	  if (!permissionMap.checkHostPermission(uc.getUrl(), true, crawlStatus, this)){
+	  if (!permissionMap.checkHostPermission(uc.getUrl(), true,
+						 crawlStatus)){
 	    if (crawlStatus.getCrawlError() == null) {
 	      crawlStatus.setCrawlError("No permission to collect " + url);
 	    }
@@ -373,7 +374,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	    parser.parseForUrls(cu.openForReading(),
 				PluginUtil.getBaseUrl(cu),
 				new MyFoundUrlCallback(parsedPages,
-							   extractedUrls, au));
+						       extractedUrls, au));
 	    if (extractedUrls.remove(url)){
 	      logger.debug3("Removing self reference in "+url+" from the extracted list");
 	    }

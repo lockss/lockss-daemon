@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawler.java,v 1.5 2006-01-13 20:03:45 tlipkis Exp $
+ * $Id: BaseCrawler.java,v 1.6 2006-02-14 05:19:49 tlipkis Exp $
  */
 
 /*
@@ -222,7 +222,8 @@ public abstract class BaseCrawler
 
   protected boolean populatePermissionMap() {
       // get the permission list from crawl spec
-    permissionMap = new PermissionMap(au, this, daemonPermissionCheckers);
+    permissionMap = new PermissionMap(au, this, daemonPermissionCheckers,
+				      pluginPermissionChecker);
 //    List permissionList = spec.getPermissionPages();
 //    if (permissionList == null || permissionList.size() == 0) {
 //      logger.error("spec.getPermissionPages() return null list or nothing in the list!");
