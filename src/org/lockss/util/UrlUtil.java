@@ -1,5 +1,5 @@
 /*
- * $Id: UrlUtil.java,v 1.38 2006-02-04 03:34:19 tlipkis Exp $
+ * $Id: UrlUtil.java,v 1.39 2006-02-14 05:23:33 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -57,6 +57,12 @@ public class UrlUtil {
    */
   public static final char URL_PATH_SEPARATOR_CHAR = '/';
 
+  private static String trimNewlinesAndLeadingWhitespace(String urlString) {
+    urlString = urlString.trim();	// remove surrounding spaces
+    urlString = StringUtil.trimNewlinesAndLeadingWhitespace(urlString);
+    return urlString;
+  }
+
   /** Normalize URL to a canonical form: lowercase scheme and hostname,
    * normalize path.  Removes any reference part.  XXX need to add
    * character escaping
@@ -65,11 +71,10 @@ public class UrlUtil {
   public static String normalizeUrl(String urlString)
       throws MalformedURLException {
     log.debug3("Normalizing "+urlString);
-    urlString = urlString.trim();	// remove extra spaces
+    urlString = trimNewlinesAndLeadingWhitespace(urlString);
     if ("".equals(urlString)) {		// permit empty
       return urlString;
     }
-    urlString = StringUtil.trimNewlinesAndLeadingWhitespace(urlString);
     URL url = new URL(urlString);
 
     String protocol = url.getProtocol(); // returns lowercase proto
@@ -408,25 +413,49 @@ public class UrlUtil {
    */
   public static String resolveUri(String baseUrl, String possiblyRelativeUrl)
       throws MalformedURLException {
-    String encodedBase = minimallyEncodeUrl(baseUrl.trim());
-    String encodedChild = minimallyEncodeUrl(possiblyRelativeUrl.trim());
+    return resolveUri(new URL(baseUrl), possiblyRelativeUrl);
+  }
+
+  public static String resolveUri(URL baseUrl, String possiblyRelativeUrl)
+      throws MalformedURLException {
+    possiblyRelativeUrl =
+      trimNewlinesAndLeadingWhitespace(possiblyRelativeUrl);
+    String encodedChild = minimallyEncodeUrl(possiblyRelativeUrl);
+    URL url;
+    if (encodedChild.startsWith("?")) {
+      url = new URL(baseUrl.getProtocol(), baseUrl.getHost(),
+		    baseUrl.getPort(), baseUrl.getPath() + encodedChild);
+    } else {
+      url = new URL(baseUrl, encodedChild);
+    }
+    return url.toString();
+  }
+
+  // URI-based versions.  These produce different (but more canonicalized)
+  // results from URL, so can't be used unless/until we canonicalize all
+  // the existing caches file names.
+
+  /** Resolve possiblyRelativeUrl relative to baseUrl.
+   * @param baseUrl The base URL relative to which to resolve
+   * @param possiblyRelativeUrl resolved relative to baseUrl
+   * @return The URL formed by combining the two URLs
+   */
+  public static String resolveUri0(String baseUrl, String possiblyRelativeUrl)
+      throws MalformedURLException {
+    baseUrl = trimNewlinesAndLeadingWhitespace(baseUrl);
+    possiblyRelativeUrl =
+      trimNewlinesAndLeadingWhitespace(possiblyRelativeUrl);
+    String encodedBase = minimallyEncodeUrl(baseUrl);
+    String encodedChild = minimallyEncodeUrl(possiblyRelativeUrl);
     try {
       java.net.URI base = new java.net.URI(encodedBase);
       java.net.URI child = new java.net.URI(encodedChild);
-      java.net.URI res = resolveUri(base, child);
-      return res.toString();
+      java.net.URI res = resolveUri0(base, child);
+      return res.toASCIIString();
     } catch (URISyntaxException e) {
       throw newMalformedURLException(e);
     }
   }
-
-  // URL-based version.
-//   public static String resolveUri(URL baseUrl, String possiblyRelativeUrl)
-//       throws MalformedURLException {
-//     String encodedUri = minimallyEncodeUrl(possiblyRelativeUrl.trim());
-//     URL url = new URL(baseUrl, encodedUri);
-//     return url.toString();
-//   }
 
   private static MalformedURLException
     newMalformedURLException(Throwable cause) {
@@ -436,7 +465,7 @@ public class UrlUtil {
     return ex;
   }    
 
-  public static String resolveUri(URL baseUrl, String possiblyRelativeUrl)
+  public static String resolveUri0(URL baseUrl, String possiblyRelativeUrl)
       throws MalformedURLException {
     return resolveUri(baseUrl.toString(), possiblyRelativeUrl);
   }
@@ -452,10 +481,11 @@ public class UrlUtil {
   // java.net.URI.resolve(URI, URI) to detect those two cases, and defers
   // to the URI code for other cases.
 
-  private static java.net.URI resolveUri(java.net.URI base, java.net.URI child)
+  private static java.net.URI resolveUri0(java.net.URI base,
+					  java.net.URI child)
       throws MalformedURLException {
 
-    // check if child if opaque first so that NPE is thrown 
+    // check if child is opaque first so that NPE is thrown 
     // if child is null.
     if (child.isOpaque() || base.isOpaque()) {
       return child;
@@ -468,17 +498,25 @@ public class UrlUtil {
       String query = base.getQuery();
       String fragment = child.getFragment();
 
-      // If base has null path, java.net.URI.resolve() ensure authority is
-      // separated from path in result.  (java.net.URI would resolve
-      // ("http://foo.bar", "x.y") to http://foo.barx.y)
+      // If base has null path, ensure authority is separated from path in
+      // result.  (java.net.URI resolves ("http://foo.bar", "x.y") to
+      // http://foo.barx.y)
       if (StringUtil.isNullString(base.getPath())) {
 	path = "/";
 	base = new java.net.URI(scheme, authority, path, query, fragment);
       }
 
+      // Absolute child
+      if (child.getScheme() != null)
+	return child;
+
+      if (child.getAuthority() != null) {
+	// not relative, defer to URI
+	return base.resolve(child);
+      }
+
       // Fragment only, return base with this fragment
-      if ((child.getScheme() == null) && (child.getAuthority() == null)
-	  && child.getPath().equals("") && (child.getFragment() != null)
+      if (child.getPath().equals("") && (child.getFragment() != null)
 	  && (child.getQuery() == null)) {
 	if ((base.getFragment() != null)
 	    && child.getFragment().equals(base.getFragment())) {
@@ -489,20 +527,12 @@ public class UrlUtil {
 	return ru;
       }
 
-      // Absolute child
-      if (child.getScheme() != null)
-	return child;
-
       query = child.getQuery();
 
-      if (child.getAuthority() != null) {
-	// not relative, defer to URI
-	return base.resolve(child);
-      }
       authority = base.getAuthority();
 
       if (StringUtil.isNullString(child.getPath())) {
-	// don't truncate base path if child have no path
+	// don't truncate base path if child has no path
 	path = base.getPath();
       } else if (child.getPath().charAt(0) == '/') {
 	// Absolute child path

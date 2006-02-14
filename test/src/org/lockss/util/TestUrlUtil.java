@@ -1,5 +1,5 @@
 /*
- * $Id: TestUrlUtil.java,v 1.25 2006-02-04 03:34:19 tlipkis Exp $
+ * $Id: TestUrlUtil.java,v 1.26 2006-02-14 05:23:33 tlipkis Exp $
  */
 
 /*
@@ -308,6 +308,8 @@ public class TestUrlUtil extends LockssTestCase {
     assertEquals("%20foo%7c", UrlUtil.minimallyEncodeUrl(" foo|"));
   }
 
+  boolean uri=false;
+
   public void testResolveUrl() throws Exception {
     // base ends with filename
     assertEquals("http://test.com/foo/bar/a.html",
@@ -328,7 +330,7 @@ public class TestUrlUtil extends LockssTestCase {
 
     // According to RFC 1808, Firefox, IE, Opera, last component of base
     // path (following final slash) is *not* removed if relative URL has
-    // null path.  RFC 2396 disagrees.
+    // null path.  RFC 2396 disagrees, but we follow the browsers
     assertEquals("http://test.com/foo/bar/xxx.html?a=b",
 		 UrlUtil.resolveUri("http://test.com/foo/bar/xxx.html",
 				    "?a=b"));
@@ -381,10 +383,9 @@ public class TestUrlUtil extends LockssTestCase {
     assertEquals("http://test.com/prog.php?foo=bar",
 		 UrlUtil.resolveUri("http://test.com/prog.php?fff=xxx",
 				    "?foo=bar"));
-
     // With URL implementation this threw, URI version doesn't object.
     // Don't think anyone should count on this behavior.
-    if (true) {
+    if (uri) {
       assertEquals("bar", UrlUtil.resolveUri("foo", "bar"));
     } else {
       try {
@@ -406,12 +407,38 @@ public class TestUrlUtil extends LockssTestCase {
     assertEquals("http://test.com/foo/bar/a.html",
  		 UrlUtil.resolveUri("http://test.com/foo/bar/", "\na.html "));
     assertEquals("http://test.com/foo/bar/a.html",
+ 		 UrlUtil.resolveUri("http://test.com/foo/bar/",
+				    "\n\t\ta.html "));
+    assertEquals("http://test.com/foo/bar/a.html",
+		 UrlUtil.resolveUri("http://test.com/foo/bar/",
+				    "a.h\n\t\ttml "));
+    assertEquals("http://test.com/foo/bar/a.html",
+		 UrlUtil.resolveUri("http://test.com/foo/bar/",
+				    "a.h\n\n\n\t\t\t\t\ttml "));
+    assertEquals("http://test.com/foo/bar/a.html",
  		 UrlUtil.resolveUri("http://test.com/foo/bar/", "a.html\n "));
     assertEquals("http://test.com/foo/bar/a.html",
  		 UrlUtil.resolveUri("http://test.com/foo/bar/", "a.html\r "));
   }
 
-  public void testResolveUrlEncoding() throws MalformedURLException {
+  String enc(int i, boolean upper) {
+    StringBuffer sb = new StringBuffer();
+    sb.append("%");
+    sb.append(Character.forDigit((i >> 4) & 0xF, 16));
+    sb.append(Character.forDigit(i & 0xF, 16));
+    return upper ? sb.toString().toUpperCase() : sb.toString().toLowerCase();
+  }
+
+  public void testEnc() {
+    assertEquals("%01", enc(1, true));
+    assertEquals("%20", enc(32, true));
+    assertEquals("%FF", enc(255, true));
+    assertEquals("%01", enc(1, false));
+    assertEquals("%20", enc(32, false));
+    assertEquals("%ff", enc(255, false));
+  }
+
+  public void testResolveUrlEncodingOld() throws MalformedURLException {
     // Embedded space should be escaped
     assertEquals("http://test.com/foo/bar/a%20test.html",
 		 UrlUtil.resolveUri("http://test.com/foo/bar/",
@@ -420,6 +447,53 @@ public class TestUrlUtil extends LockssTestCase {
     assertEquals("http://test.com/foo/bar/a%20.html",
 		 UrlUtil.resolveUri("http://test.com/foo/bar/",
 				    "a%20.html"));
+  }
+
+  public void assertResolveUrl(String exp, String base, String rel)
+      throws MalformedURLException {
+    assertEquals(exp, exp, UrlUtil.resolveUri(base, rel));
+  }
+
+  public void testResolveUrlEncodingPat(int substChar, String expPat,
+					String basePat, String relPat)
+      throws MalformedURLException {
+    testResolveUrlEncodingPat(enc(substChar, false), expPat, basePat, relPat);
+    testResolveUrlEncodingPat(enc(substChar, true), expPat, basePat, relPat);
+  }
+
+  public void testResolveUrlEncodingPat(String subst, String expPat,
+					String basePat, String relPat)
+      throws MalformedURLException {
+    String pat = "##";
+    String exp = StringUtil.replaceString(expPat, pat, subst);
+    String base = StringUtil.replaceString(basePat, pat, subst);
+    String rel = StringUtil.replaceString(relPat, pat, subst);
+    assertResolveUrl(exp, base, rel);
+  }
+
+  public void testResolveUrlEncoding() throws MalformedURLException {
+//     assertResolveUrl("http://carcin.oxfordjournals.org/cgi/login?uri=%2Fcgi%2Fcontent%2Ffull%2F26%2F1%2F11",
+// 		     "http://carcin.oxfordjournals.org/",
+// 		     "/cgi/login?uri=%2Fcgi%2Fcontent%2Ffull%2F26%2F1%2F11");
+
+    for (int ix = 1; ix <= 254; ix++) {
+      testResolveUrlEncodingPat(ix,
+				"http://test.com/foo/bar/a##.html",
+				"http://test.com/foo/bar/",
+				"a##.html");
+      testResolveUrlEncodingPat(ix,
+				"http://test.com/foo/xx?a##b=c",
+				"http://test.com/foo/bar",
+				"xx?a##b=c");
+      testResolveUrlEncodingPat(ix,
+				"http://test.com/foo/xx?ab=##c",
+				"http://test.com/foo/bar",
+				"xx?ab=##c");
+      testResolveUrlEncodingPat(ix,
+				"http://test.com/cgi/xx?ab=##c",
+				"http://test.com/foo/bar",
+				"/cgi/xx?ab=##c");
+    }
   }
 
   public void testIsDirectoryRedirection() {
