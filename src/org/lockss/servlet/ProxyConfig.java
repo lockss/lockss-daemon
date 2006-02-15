@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyConfig.java,v 1.16 2006-01-12 01:12:50 thib_gc Exp $
+ * $Id: ProxyConfig.java,v 1.17 2006-02-15 05:40:07 tlipkis Exp $
  */
 
 /*
@@ -88,7 +88,7 @@ public class ProxyConfig extends LockssServlet {
     }
     if (StringUtil.isNullString(action)) {
       try {
-	getMultiPartRequest(100000);
+	getMultiPartRequest();
 	action = getParameter("action");
       } catch (FormDataTooLongException e) {
 	displayForm("Uploaded file too large: " + e.getMessage());

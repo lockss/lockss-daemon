@@ -1,5 +1,5 @@
 /*
- * $Id: BatchAuConfig.java,v 1.25 2006-02-13 23:47:11 thib_gc Exp $
+ * $Id: BatchAuConfig.java,v 1.26 2006-02-15 05:40:07 tlipkis Exp $
  */
 
 /*
@@ -147,7 +147,7 @@ public class BatchAuConfig extends LockssServlet {
     action = req.getParameter(ACTION_TAG);
     if (StringUtil.isNullString(action)) {
       try {
-	getMultiPartRequest(100000);
+	getMultiPartRequest();
 	if (multiReq != null) {
 	  action = multiReq.getString(ACTION_TAG);
 	  log.debug(ACTION_TAG + " = " + action);
