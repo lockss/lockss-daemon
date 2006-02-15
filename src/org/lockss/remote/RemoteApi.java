@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.49 2006-01-27 04:34:24 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.50 2006-02-15 05:39:45 tlipkis Exp $
  */
 
 /*
@@ -646,6 +646,9 @@ public class RemoteApi
       try {
 	BatchAuStatus bas = processSavedConfigProps(auin);
 	bas.setBackupInfo(buildBackupInfo(dir));
+	if (log.isDebug3()) {
+	  log.debug3("processSavedConfigZip: " + bas);
+	}
 	return bas;
       } finally {
 	IOUtil.safeClose(auin);
@@ -963,9 +966,20 @@ public class RemoteApi
       }
     }
     if (stat.getName() == null) {
-      stat.setName("Unknown");
+      stat.setName(titleFromDB(pluginp, auConfig));
+      if (stat.getName() == null) {
+	stat.setName("Unknown");
+      }
     }
     return stat;
+  }
+
+  String titleFromDB(PluginProxy pluginp, Configuration config) {
+    TitleConfig tc = AuUtil.findTitleConfig(config, pluginp.getPlugin());
+    if (tc != null) {
+      return tc.getDisplayName();
+    }
+    return null;
   }
 
   void restoreAuStateFiles(AuProxy aup, BackupInfo bi) throws IOException {
