@@ -1,5 +1,5 @@
 /*
- * $Id: AuUtil.java,v 1.11 2005-11-16 07:44:10 smorabito Exp $
+ * $Id: AuUtil.java,v 1.12 2006-02-15 05:40:24 tlipkis Exp $
  */
 
 /*
@@ -113,6 +113,29 @@ public class AuUtil {
       }
     }
     return true;
+  }
+
+  /** Search titles belonging to <i>plugin</i> in the title DB for one that
+   * matches the config.
+   * @param config an AU config (unqualified)
+   * @param plugin a plugin
+   * @return the matching TitleConfig, or null if none found
+   */
+  // Unit test for this is in TestBaseArchivalUnit
+  public static TitleConfig findTitleConfig(Configuration config,
+					    Plugin plugin) {
+    if (plugin.getSupportedTitles() == null)  {
+      return null;
+    }
+    for (Iterator iter = plugin.getSupportedTitles().iterator();
+	 iter.hasNext(); ) {
+      String title = (String)iter.next();
+      TitleConfig tc = plugin.getTitleConfig(title);
+      if (tc != null && tc.matchesConfig(config) && tc.isSingleAu(plugin)) {
+	return tc;
+      }
+    }
+    return null;
   }
 
   public static boolean isClosed(ArchivalUnit au) {

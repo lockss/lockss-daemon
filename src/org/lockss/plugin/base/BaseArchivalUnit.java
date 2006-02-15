@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.100 2006-02-04 05:34:07 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.101 2006-02-15 05:40:23 tlipkis Exp $
  */
 
 /*
@@ -286,18 +286,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   }
 
   TitleConfig findTitleConfig(Configuration config) {
-    if(plugin.getSupportedTitles() == null)  {
-      return null;
-    }
-    for (Iterator iter = plugin.getSupportedTitles().iterator();
-	 iter.hasNext(); ) {
-      String title = (String)iter.next();
-      TitleConfig tc = plugin.getTitleConfig(title);
-      if (tc != null && tc.matchesConfig(config) && tc.isSingleAu(plugin)) {
-	return tc;
-      }
-    }
-    return null;
+    return AuUtil.findTitleConfig(config, plugin);
   }
 
   /** Set up titledb-related data */
