@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.51 2006-02-22 00:49:55 thib_gc Exp $
+ * $Id: RemoteApi.java,v 1.52 2006-02-22 19:20:59 tlipkis Exp $
  */
 
 /*
@@ -97,6 +97,13 @@ public class RemoteApi
   static final String AU_BACK_PROP_AUID = "auid";
   static final String AU_BACK_PROP_REPOSPEC = "repospec";
   static final String AU_BACK_PROP_REPODIR = "repodir";
+
+  /** "Add new" opcode for batchAddAus(), batchProcessAus() */
+  public static int BATCH_ADD_ADD = 1;
+  /** "Reactivate" opcode for batchAddAus(), batchProcessAus() */
+  public static int BATCH_ADD_REACTIVATE = 2;
+  /** "Restore from backup" opcode for batchAddAus(), batchProcessAus() */
+  public static int BATCH_ADD_RESTORE = 3;
 
   private PluginManager pluginMgr;
   private ConfigManager configMgr;
@@ -703,7 +710,7 @@ public class RemoteApi
     Configuration allAuConfig =
       ConfigManager.fromPropertiesUnsealed(allAuProps);
     int ver = checkLegalAuConfigTree(allAuConfig);
-    return batchProcessAus(false, false, allAuConfig, null);
+    return batchProcessAus(false, BATCH_ADD_RESTORE, allAuConfig, null);
   }
 
   /** Throw InvalidAuConfigBackupFile if the config is of an unknown
@@ -744,15 +751,15 @@ public class RemoteApi
    * @param allAuConfig the Configuration to be restored
    * @return BatchAuStatus object describing the results.
    */
-  public BatchAuStatus batchAddAus(boolean isReactivate,
+  public BatchAuStatus batchAddAus(int addOp,
 				   Configuration allAuConfig,
 				   BackupInfo bi)
       throws IOException {
-    return batchProcessAus(true, isReactivate, allAuConfig, bi);
+    return batchProcessAus(true, addOp, allAuConfig, bi);
   }
 
   public BatchAuStatus batchProcessAus(boolean doCreate,
-				       boolean isReactivate,
+				       int addOp,
 				       Configuration allAuConfig,
 				       BackupInfo bi) {
     Configuration allPlugs = allAuConfig.getConfigTree(PARAM_AU_TREE);
@@ -766,7 +773,7 @@ public class RemoteApi
 	String auKey = (String)auIter.next();
 	Configuration auConf = pluginConf.getConfigTree(auKey);
 	String auid = PluginManager.generateAuId(pluginKey, auKey);
-	bas.add(batchProcessOneAu(doCreate, isReactivate,
+	bas.add(batchProcessOneAu(doCreate, addOp,
 				  pluginp, auid, auConf, bi));
       }
     }
@@ -855,7 +862,7 @@ public class RemoteApi
   }
 
   BatchAuStatus.Entry batchProcessOneAu(boolean doCreate,
-					boolean isReactivate,
+					int addOp,
 					PluginProxy pluginp,
 					String auid,
 					Configuration auConfig,
@@ -878,7 +885,7 @@ public class RemoteApi
 			  PluginManager.pluginNameFromAuId(auid));
       return stat;
     }
-    if (isReactivate) {
+    if (addOp == BATCH_ADD_REACTIVATE) {
       // make it look like we are just adding a new one
       auConfig = oldConfig;
       if (auConfig.isSealed()) {
@@ -965,11 +972,13 @@ public class RemoteApi
 	stat.setExplanation(e.getMessage());
       }
     }
-    if (stat.getName() == null) {
+    // If a restored AU config has no name, it's probably an old one.  Try
+    // to look up the name in the title DB
+    if (addOp == BATCH_ADD_RESTORE && stat.getName() == null) {
       stat.setName(titleFromDB(pluginp, auConfig));
-      if (stat.getName() == null) {
-	stat.setName("Unknown");
-      }
+    }
+    if (stat.getName() == null) {
+      stat.setName("Unknown");
     }
     return stat;
   }
@@ -1036,13 +1045,13 @@ public class RemoteApi
 	  String auid = PluginManager.generateAuId(pluginp.getPlugin(),
 						   tc.getConfig());
 	  stat =
-	    batchProcessOneAu(false, false, pluginp,
+	    batchProcessOneAu(false, BATCH_ADD_ADD, pluginp,
 			      auid, tc.getConfig(), null);
 	  stat.setTitleConfig(tc);
 	  if ("Unknown".equalsIgnoreCase(stat.getName())) {
 	    stat.setName(tc.getDisplayName());
 	  }
-          bas.add(stat); // moved from inside the above if
+          bas.add(stat);
 	} catch (RuntimeException e) {
 	  log.warning("Can't generate auid for: " + tc, e);
 	}
@@ -1126,7 +1135,7 @@ public class RemoteApi
 						   tc.getConfig());
 	  if (inactiveAuids.contains(auid)) {
 	    BatchAuStatus.Entry stat =
-	      batchProcessOneAu(false, true, pluginp,
+	      batchProcessOneAu(false, BATCH_ADD_REACTIVATE, pluginp,
 				auid, tc.getConfig(), null);
 	    stat.setTitleConfig(tc);
 	    if ("Unknown".equalsIgnoreCase(stat.getName())) {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestRemoteApi.java,v 1.18 2006-01-27 04:34:24 tlipkis Exp $
+ * $Id: TestRemoteApi.java,v 1.19 2006-02-22 19:20:58 tlipkis Exp $
  */
 
 /*
@@ -511,7 +511,8 @@ public class TestRemoteApi extends LockssTestCase {
       }
 
       idMgr.resetAgreeMap();
-      RemoteApi.BatchAuStatus addedbas = rapi.batchAddAus(false, addConfig, bi);
+      RemoteApi.BatchAuStatus addedbas =
+	rapi.batchAddAus(RemoteApi.BATCH_ADD_ADD, addConfig, bi);
       ArchivalUnit au1 = mpm.getAuFromId(auid1);
       assertNotNull(au1);
       assertEquals("zippity agree map 1", idMgr.getAgreeMap(au1));
