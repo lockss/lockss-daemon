@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.50 2006-02-15 05:39:45 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.51 2006-02-22 00:49:55 thib_gc Exp $
  */
 
 /*
@@ -1041,8 +1041,8 @@ public class RemoteApi
 	  stat.setTitleConfig(tc);
 	  if ("Unknown".equalsIgnoreCase(stat.getName())) {
 	    stat.setName(tc.getDisplayName());
-	    bas.add(stat);
 	  }
+          bas.add(stat); // moved from inside the above if
 	} catch (RuntimeException e) {
 	  log.warning("Can't generate auid for: " + tc, e);
 	}
