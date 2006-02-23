@@ -1,10 +1,10 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.84 2005-10-11 05:43:54 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.85 2006-02-23 06:43:37 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -130,6 +130,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   private static Logger logger = Logger.getLogger("CrawlManager");
   private Map repairRateLimiters = new HashMap();
   private Map newContentRateLimiters = new HashMap();
+  private AuEventHandler auEventHandler;
 
   /**
    * start the plugin manager.
@@ -143,6 +144,13 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     statusServ.registerStatusAccessor(CRAWL_STATUS_TABLE_NAME, cmStatus);
     statusServ.registerStatusAccessor(SINGLE_CRAWL_STATUS_TABLE_NAME,
 				      new SingleCrawlStatus(cmStatus));
+    // register our AU event handler
+    auEventHandler = new AuEventHandler.Base() {
+	public void auDeleted(ArchivalUnit au) {
+	  cancelAuCrawls(au);
+	}};
+    theDaemon.getPluginManager().registerAuEventHandler(auEventHandler);
+
   }
 
   /**
@@ -150,6 +158,10 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
    * @see org.lockss.app.LockssManager#stopService()
    */
   public void stopService() {
+    if (auEventHandler != null) {
+      theDaemon.getPluginManager().unregisterAuEventHandler(auEventHandler);
+      auEventHandler = null;
+    }
     // checkpoint here
     StatusService statusServ = theDaemon.getStatusService();
     if (statusServ != null) {
@@ -196,7 +208,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     }
   }
 
-  public void cancelAuCrawls(ArchivalUnit au) {
+  void cancelAuCrawls(ArchivalUnit au) {
     synchronized(runningCrawls) {
       Collection crawls = (Collection) runningCrawls.get(au);
       if (crawls != null) {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.57 2005-10-14 22:40:34 troberts Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.58 2006-02-23 06:43:37 tlipkis Exp $
  */
 
 /*
@@ -54,6 +54,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
   private MockCrawler crawler;
   private CachedUrlSet cus;
   private CrawlManager.StatusSource statusSource;
+  private PluginManager pluginMgr;
   private MockAuState maus;
   private Plugin plugin;
 
@@ -74,9 +75,12 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     nodeManager = new MockNodeManager();
     theDaemon.setNodeManager(nodeManager, mau);
 
-    theDaemon.setPluginManager(new PluginManager());
+    pluginMgr = new PluginManager();
+    pluginMgr.initService(theDaemon);
+    theDaemon.setPluginManager(pluginMgr);
 
-    activityRegulator = new MockActivityRegulator(mau);
+    PluginTestUtil.registerArchivalUnit(plugin, mau);
+    activityRegulator = new MyMockActivityRegulator(mau);
     activityRegulator.initService(theDaemon);
     theDaemon.setActivityRegulator(activityRegulator, mau);
     theDaemon.setLockssRepository(new MockLockssRepository(), mau);
@@ -136,7 +140,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 //     assertEquals(Deadline.MAX, crawler.getDeadline());
 //   }
 
-  public void testStoppingCrawlAbortsNewContentCrawl() {
+  public void testStoppingCrawlAbortsNewContentCrawl() throws Exception {
     SimpleBinarySemaphore finishedSem = new SimpleBinarySemaphore();
     //start the crawler, but use a crawler that will hang
 
@@ -152,7 +156,8 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 	       sem1.take(TIMEOUT_SHOULDNT));
     //we know that doCrawl started
 
-    crawlManager.cancelAuCrawls(mau);
+    // stopping AU should run AuEventHandler, which should cancel crawl
+    pluginMgr.stopAu(mau);
 
     assertTrue(crawler.wasAborted());
   }
@@ -573,6 +578,14 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 
     waitForCrawlToFinish(sem);
     assertNotEquals(lastCrawlTime, maus.getLastCrawlTime());
+  }
+
+  class MyMockActivityRegulator extends MockActivityRegulator {
+    public MyMockActivityRegulator(ArchivalUnit au) {
+      super(au);
+    }
+    public void stopService() {
+    }
   }
 
   private class TestCrawlCB implements CrawlManager.Callback {

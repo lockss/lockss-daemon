@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.65 2005-10-10 23:48:55 troberts Exp $
+ * $Id: TestPluginManager.java,v 1.66 2006-02-23 06:43:37 tlipkis Exp $
  */
 
 /*
@@ -334,6 +334,22 @@ public class TestPluginManager extends LockssTestCase {
     assertEquals(au1, mgr.getAuFromId(mauauid1));
   }
 
+  List createEvents = new ArrayList();
+  List deleteEvents = new ArrayList();
+  List reconfigEvents = new ArrayList();
+
+  class MyAuEventHandler extends AuEventHandler.Base {
+    public void auCreated(ArchivalUnit au) {
+      createEvents.add(au);
+    }
+    public void auDeleted(ArchivalUnit au) {
+      deleteEvents.add(au);
+    }
+    public void auReconfigured(ArchivalUnit au, Configuration oldAuConf) {
+      reconfigEvents.add(ListUtil.list(au, oldAuConf));
+    }
+  }
+
   public void testCreateAu() throws Exception {
     minimalConfig();
     String pid = new ThrowingMockPlugin().getPluginId();
@@ -341,6 +357,7 @@ public class TestPluginManager extends LockssTestCase {
     assertTrue(mgr.ensurePluginLoaded(key));
     ThrowingMockPlugin mpi = (ThrowingMockPlugin)mgr.getPlugin(key);
     assertNotNull(mpi);
+    mgr.registerAuEventHandler(new MyAuEventHandler());
     Configuration config = ConfigurationUtil.fromArgs("a", "b");
     ArchivalUnit au = mgr.createAu(mpi, config);
 
@@ -354,6 +371,11 @@ public class TestPluginManager extends LockssTestCase {
     assertEquals("b", auConfig.get("a"));
     assertEquals(1, auConfig.keySet().size());
     assertEquals(mpi, au.getPlugin());
+
+    // verify event handler run
+    assertEquals(ListUtil.list(au), createEvents);
+    assertEmpty(deleteEvents);
+    assertEmpty(reconfigEvents);
 
     // verify turns RuntimeException into ArchivalUnit.ConfigurationException
     mpi.setCfgEx(new ArchivalUnit.ConfigurationException("should be thrown"));
@@ -382,6 +404,7 @@ public class TestPluginManager extends LockssTestCase {
     assertTrue(mgr.ensurePluginLoaded(key));
     ThrowingMockPlugin mpi = (ThrowingMockPlugin)mgr.getPlugin(key);
     assertNotNull(mpi);
+    mgr.registerAuEventHandler(new MyAuEventHandler());
     Configuration config = ConfigurationUtil.fromArgs("a", "b");
     ArchivalUnit au = mgr.createAu(mpi, config);
 
@@ -389,11 +412,21 @@ public class TestPluginManager extends LockssTestCase {
     ArchivalUnit aux = mgr.getAuFromId(auid);
     assertSame(au, aux);
 
+    // verify event handler run
+    assertEquals(ListUtil.list(au), createEvents);
+    assertEmpty(deleteEvents);
+    assertEmpty(reconfigEvents);
+
     // verify can reconfig
     mgr.configureAu(mpi, ConfigurationUtil.fromArgs("a", "c"), auid);
     Configuration auConfig = au.getConfiguration();
     assertEquals("c", auConfig.get("a"));
     assertEquals(1, auConfig.keySet().size());
+
+    // verify event handler run
+    assertEquals(ListUtil.list(au), createEvents);
+    assertEmpty(deleteEvents);
+    assertEquals(ListUtil.list(ListUtil.list(au, config)), reconfigEvents);
 
     // verify turns RuntimeException into ArchivalUnit.ConfigurationException
     mpi.setCfgEx(new ArchivalUnit.ConfigurationException("should be thrown"));
@@ -449,8 +482,13 @@ public class TestPluginManager extends LockssTestCase {
     // should not throw.
     try {
       assertFalse(mgr.getInactiveAuIds().contains(auId));
+      mgr.registerAuEventHandler(new MyAuEventHandler());
       mgr.deactivateAu(au);
       assertTrue(mgr.getInactiveAuIds().contains(auId));
+      // verify event handler run
+      assertEmpty(createEvents);
+      assertEquals(ListUtil.list(au), deleteEvents);
+      assertEmpty(reconfigEvents);
     } catch (Exception ex) {
       fail("Deactivating au should not have thrown", ex);
     }

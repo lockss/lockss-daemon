@@ -1,10 +1,10 @@
 /*
- * $Id: PluginManager.java,v 1.153 2006-02-14 05:20:44 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.154 2006-02-23 06:43:37 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -174,6 +174,8 @@ public class PluginManager
 
   private Set inactiveAuIds = Collections.synchronizedSet(new HashSet());
 
+  private List auEventHandlers = new ArrayList();
+
   // Plugin registry processing
   private Map cuNodeVersionMap = Collections.synchronizedMap(new HashMap());
   // Map of plugin key to PluginInfo
@@ -221,6 +223,7 @@ public class PluginManager
       Plugin plugin = (Plugin)iter.next();
       plugin.stopPlugin();
     }
+    auEventHandlers = new ArrayList();
     PluginStatus.unregister(getDaemon());
     super.stopService();
   }
@@ -545,8 +548,12 @@ public class PluginManager
 
   void configureAu(Plugin plugin, Configuration auConf, String auId)
       throws ArchivalUnit.ConfigurationException {
+    Configuration oldConfig = null;
     try {
       ArchivalUnit oldAu = (ArchivalUnit)auMap.get(auId);
+      if (oldAu != null) {
+	oldConfig = oldAu.getConfiguration();
+      }
       ArchivalUnit au = plugin.configureAu(auConf, oldAu);
       if (oldAu != null && oldAu != au) {
 	String msg = "Plugin created new AU: " + au +
@@ -567,9 +574,11 @@ public class PluginManager
       }
       if (oldAu != null) {
 	log.debug("Reconfigured AU " + au);
+	signalAuEvent(au, AU_CHANGE_RECONFIG, oldConfig);
       } else {
 	log.debug("Configured AU " + au);
 	putAuInMap(au);
+	signalAuEvent(au, AU_CHANGE_CREATED, null);
       }
     } catch (ArchivalUnit.ConfigurationException e) {
       throw e;
@@ -609,6 +618,7 @@ public class PluginManager
 					      e);
       }
       putAuInMap(au);
+      signalAuEvent(au, AU_CHANGE_CREATED, null);
       return au;
     } catch (ArchivalUnit.ConfigurationException e) {
       throw e;
@@ -641,8 +651,7 @@ public class PluginManager
     auSet.remove(au);
     delHostAus(au);
 
-    theDaemon.getPollManager().cancelAuPolls(au);
-    theDaemon.getCrawlManager().cancelAuCrawls(au);
+    signalAuEvent(au, AU_CHANGE_DELETED, null);
 
     try {
       Plugin plugin = au.getPlugin();
@@ -655,6 +664,55 @@ public class PluginManager
       // managers don't stop cleanly.
     }
     return true;
+  }
+
+  static final int AU_CHANGE_CREATED = 1;
+  static final int AU_CHANGE_DELETED = 2;
+  static final int AU_CHANGE_RECONFIG = 3;
+
+  /**
+   * Register a handler for AU events: create, delete, reconfigure.  May be
+   * called after this manager's initService() (before startService()).
+   * @param aueh AuEventHandler to add
+   */
+  public void registerAuEventHandler(AuEventHandler aueh) {
+    log.debug3("registering " + aueh);
+    if (!auEventHandlers.contains(aueh)) {
+      auEventHandlers.add(aueh);
+    }
+  }
+
+  /**
+   * Unregister an AuEventHandler
+   * @param aueh AuEventHandler to remove
+   */
+  public void unregisterAuEventHandler(AuEventHandler aueh) {
+    log.debug3("unregistering " + aueh);
+    auEventHandlers.remove(aueh);
+  }
+
+  void signalAuEvent(ArchivalUnit au, int how, Configuration oldAuConfig) {
+    if (log.isDebug2()) log.debug2("AuEvent " + how + ": " + au);
+    // copy the list of handler as it could change during the loop.
+    List handlers = new ArrayList(auEventHandlers);
+    for (Iterator iter = handlers.iterator(); iter.hasNext();) {
+      try {
+	AuEventHandler hand = (AuEventHandler)iter.next();
+	switch (how) {
+	case AU_CHANGE_CREATED:
+	  hand.auCreated(au);
+	  break;
+	case AU_CHANGE_DELETED:
+	  hand.auDeleted(au);
+	  break;
+	case AU_CHANGE_RECONFIG:
+	  hand.auReconfigured(au, oldAuConfig);
+	  break;
+	}
+      } catch (Exception e) {
+	log.error("AuEventHandler threw", e);
+      }
+    }
   }
 
   protected void putAuInMap(ArchivalUnit au) {

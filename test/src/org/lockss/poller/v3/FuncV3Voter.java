@@ -1,5 +1,5 @@
 /*
- * $Id: FuncV3Voter.java,v 1.6 2006-01-12 00:48:39 tlipkis Exp $
+ * $Id: FuncV3Voter.java,v 1.7 2006-02-23 06:43:37 tlipkis Exp $
  */
 
 /*
@@ -324,7 +324,7 @@ public class FuncV3Voter extends LockssTestCase {
     assertEquals(p1V3.getStatusString(), p2V3.getStatusString());
     V3TestUtil.assertEqualVoterUserData(p1V3.getVoterUserData(),
                                         p2V3.getVoterUserData());
-    pollmanager.cancelAuPolls(testau);
+    theDaemon.getPluginManager().stopAu(testau);
   }
 
   class MyMockLcapRouter extends LcapRouter {

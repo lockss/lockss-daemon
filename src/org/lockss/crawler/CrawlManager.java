@@ -1,10 +1,10 @@
 /*
- * $Id: CrawlManager.java,v 1.25 2005-10-11 05:43:54 tlipkis Exp $
+ * $Id: CrawlManager.java,v 1.26 2006-02-23 06:43:37 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -71,11 +71,6 @@ public interface CrawlManager {
   public void startNewContentCrawl(ArchivalUnit au, CrawlManager.Callback cb,
                                    Object cookie, ActivityRegulator.Lock lock);
 
-
-  /**
-   * Expires the deadline on all crawls for the au
-   */
-  public void cancelAuCrawls(ArchivalUnit au);
 
   public interface Callback {
     /**

@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.163 2005-12-01 23:28:00 troberts Exp $
+ * $Id: PollManager.java,v 1.164 2006-02-23 06:43:37 tlipkis Exp $
  */
 
 /*
@@ -83,6 +83,7 @@ public class PollManager
   private static LcapRouter theRouter = null;
   private AlertManager theAlertManager = null;
   private static SystemMetrics theSystemMetrics = null;
+  private AuEventHandler auEventHandler;
 
   // our configuration variables
   protected long m_recentPollExpireTime = DEFAULT_RECENT_EXPIRATION;
@@ -135,6 +136,16 @@ public class PollManager
     statusServ.registerStatusAccessor(V3PollStatus.VOTER_DETAIL_TABLE_NAME,
                                       new V3PollStatus.V3VoterStatusDetail(this));
 
+    // register our AU event handler
+    auEventHandler = new AuEventHandler.Base() {
+	public void auCreated(ArchivalUnit au) {
+// 	  restoreAuPolls(au);
+	}
+	public void auDeleted(ArchivalUnit au) {
+	  cancelAuPolls(au);
+	}};
+    theDaemon.getPluginManager().registerAuEventHandler(auEventHandler);
+
     // One time load of stored V3 polls.
     restoreV3Polls();
   }
@@ -144,6 +155,10 @@ public class PollManager
    * @see org.lockss.app.LockssManager#stopService()
    */
   public void stopService() {
+    if (auEventHandler != null) {
+      theDaemon.getPluginManager().unregisterAuEventHandler(auEventHandler);
+      auEventHandler = null;
+    }
     // unregister our status
     StatusService statusServ = theDaemon.getStatusService();
     statusServ.unregisterStatusAccessor(PollerStatus.MANAGER_STATUS_TABLE_NAME);
@@ -171,7 +186,7 @@ public class PollManager
   /** Cancel all polls on the specified AU.
    * @param au the AU
    */
-  public void cancelAuPolls(ArchivalUnit au) {
+  void cancelAuPolls(ArchivalUnit au) {
     // first collect polls to cancel
     Set toCancel = new HashSet();
     synchronized (pollMapLock) {
