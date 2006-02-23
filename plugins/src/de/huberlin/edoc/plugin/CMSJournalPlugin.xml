@@ -23,16 +23,15 @@
     <string>au_crawlrules</string>
     <list>
       <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;%slockss/index.html&quot;, base_url</string>
+      <string>1,&quot;%slockss/.*&quot;, base_url</string>
       <string>1,&quot;%sbrowsing/cms-journal/index\.php\?l\[7]=Archiv&amp;_=b26f726380ad2c201dd663226b291a8c&quot;, base_url</string>
       <string>1,&quot;%sbrowsing/cms-journal/index\.php\?l\[7]=Archiv&amp;l\[8]=cms-journal\+Nr\.\+%s&quot;, base_url, num_issue_range</string>
       <string>1,&quot;%sdocviews/.*&quot;, base_url</string>
       <string>1,&quot;%se_rzm/%s/.*&quot;, base_url, num_issue_range</string>
       <string>1,&quot;%scmsj/%s/.*&quot;, base_url, num_issue_range</string>
+      <string>1,&quot;%se_modules/.*\.css&quot;, base_url</string>
       <string>1,&quot;%se_images/.*&quot;, base_url</string>
-      <string>1,&quot;%se_modules/edoc\.css&quot;, base_url</string>
-      <string>1,&quot;%scms-journal/hinweise\.php&quot;, base_url</string>
-      <string>1,&quot;%slockss/images/logo\.gif&quot;, base_url</string>
+      <string>1,&quot;%sicons/.*&quot;, base_url</string>
       <string>1,&quot;%sfavicon\.ico&quot;, base_url</string>
     </list>
   </entry>
