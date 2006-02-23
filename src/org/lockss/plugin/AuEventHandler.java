@@ -1,5 +1,5 @@
 /*
- * $Id: AuEventHandler.java,v 1.1 2006-02-23 06:46:54 tlipkis Exp $
+ * $Id: AuEventHandler.java,v 1.2 2006-02-23 06:57:02 tlipkis Exp $
  */
 
 /*
@@ -32,22 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin;
 
-import java.io.*;
-import java.net.*;
-import java.security.KeyStore;
-import java.util.*;
-import java.util.jar.*;
-
-import org.apache.commons.collections.*;
-
-import org.lockss.app.*;
 import org.lockss.config.*;
-import org.lockss.crawler.CrawlManager;
-import org.lockss.daemon.*;
-import org.lockss.plugin.definable.DefinablePlugin;
-import org.lockss.poller.PollSpec;
-import org.lockss.repository.*;
-import org.lockss.util.*;
 
 /**
  * Handler for AU transition events such as created, deleted, reconfigured.
