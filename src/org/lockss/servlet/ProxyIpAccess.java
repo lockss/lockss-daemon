@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyIpAccess.java,v 1.21 2006-02-09 00:40:07 thib_gc Exp $
+ * $Id: ProxyIpAccess.java,v 1.22 2006-02-25 01:01:02 thib_gc Exp $
  */
 
 /*
@@ -216,27 +216,28 @@ public class ProxyIpAccess extends IpAccessControl {
     "network structure with other proxies and caches that support ICP.";
 
   protected void additionalFormLayout(Composite composite) {
-    final int BORDER = 0;
-    final String ATTRIBUTES = "align=\"center\" cellpadding=\"10\"";
-
-    Table tbl = new Table(BORDER, ATTRIBUTES);
-    ServletUtil.layoutEnablePortRow(this, tbl, AUDIT_ENABLE_NAME, getDefaultAuditEnable(),
-        "audit proxy", AUDIT_FOOT, FILTER_FOOT, AUDIT_PORT_NAME, getDefaultAuditPort(),
-        resourceMgr.getUsableTcpPorts(AuditProxyManager.SERVER_NAME));
-    if (getLockssDaemon().getIcpManager().isIcpServerAllowed()) {
-      ServletUtil.layoutEnablePortRow(this, tbl, ICP_ENABLE_NAME, getDefaultIcpEnable(),
-          "ICP server", ICP_FOOT, FILTER_FOOT, ICP_PORT_NAME, getDefaultIcpPort(),
-          resourceMgr.getUsableUdpPorts(AuditProxyManager.SERVER_NAME));
-    }
-    else {
-      final String ICP_DISABLED_FOOT =
-        "To enable ICP you must perform a platform reconfiguration reboot.";
-      tbl.newRow(); tbl.newCell();
-      tbl.add("The platform is configured to disable the ICP server");
-      tbl.add(addFootnote(ICP_DISABLED_FOOT));
-      tbl.add(".");
-    }
-    composite.add(tbl);
+// FIXME: Disabled until after the 1.15 branch
+//    final int BORDER = 0;
+//    final String ATTRIBUTES = "align=\"center\" cellpadding=\"10\"";
+//
+//    Table tbl = new Table(BORDER, ATTRIBUTES);
+//    ServletUtil.layoutEnablePortRow(this, tbl, AUDIT_ENABLE_NAME, getDefaultAuditEnable(),
+//        "audit proxy", AUDIT_FOOT, FILTER_FOOT, AUDIT_PORT_NAME, getDefaultAuditPort(),
+//        resourceMgr.getUsableTcpPorts(AuditProxyManager.SERVER_NAME));
+//    if (getLockssDaemon().getIcpManager().isIcpServerAllowed()) {
+//      ServletUtil.layoutEnablePortRow(this, tbl, ICP_ENABLE_NAME, getDefaultIcpEnable(),
+//          "ICP server", ICP_FOOT, FILTER_FOOT, ICP_PORT_NAME, getDefaultIcpPort(),
+//          resourceMgr.getUsableUdpPorts(AuditProxyManager.SERVER_NAME));
+//    }
+//    else {
+//      final String ICP_DISABLED_FOOT =
+//        "To enable ICP you must perform a platform reconfiguration reboot.";
+//      tbl.newRow(); tbl.newCell();
+//      tbl.add("The platform is configured to disable the ICP server");
+//      tbl.add(addFootnote(ICP_DISABLED_FOOT));
+//      tbl.add(".");
+//    }
+//    composite.add(tbl);
   }
 
   protected void addConfigProps(Properties props) {

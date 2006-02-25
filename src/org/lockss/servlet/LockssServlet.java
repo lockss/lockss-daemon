@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.81 2006-02-15 05:40:07 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.82 2006-02-25 01:01:02 thib_gc Exp $
  */
 
 /*
@@ -143,11 +143,9 @@ public abstract class LockssServlet extends HttpServlet
                      "Control access to the preserved content");
   protected static final ServletDescr SERVLET_PROXY_AND_CONTENT =
     new ServletDescr(ProxyAndContent.class,
-                     "Proxy Options and Content Access Control",
-                     ServletDescr.NOT_IN_NAV /* ,
-                     "Configure proxy options. Manage access to the"
-                     + "<br>"
-                     + "content preserved by the cache." */);
+                     "Proxy Options",
+                     ServletDescr.IN_NAV | ServletDescr.IN_UIHOME,
+                     "Configure the audit proxy and the ICP server.");
   protected static final ServletDescr SERVLET_PROXY_INFO =
     new ServletDescr(ProxyConfig.class,
                      "Proxy Info",

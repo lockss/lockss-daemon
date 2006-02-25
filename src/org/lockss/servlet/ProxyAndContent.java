@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyAndContent.java,v 1.12 2006-02-13 23:47:08 thib_gc Exp $
+ * $Id: ProxyAndContent.java,v 1.13 2006-02-25 01:01:02 thib_gc Exp $
  */
 
 /*
@@ -82,19 +82,23 @@ public class ProxyAndContent extends LockssServlet {
     action = req.getParameter(ACTION_TAG);
     isForm = !StringUtil.isNullString(action);
     errMsg = null;
-
-    // FIXME: change this fake message
-    statusMsg = "WARNING: This screen is under construction. DO NOT USE.";
+    statusMsg = null;
 
     if (StringUtil.isNullString(action)) displayMenu_Main();
     else if (action.equals(ACTION_MAIN)) displayMenu_Main();
+    else if (action.equals(ACTION_PROXY)) displayProxy();
+// FIXME: disabled until after the 1.15 branch
+//    else if (action.equals(ACTION_CONTENT)) displayMenu_Content();
+    else if (action.equals(ACTION_UPDATE_PROXY)) processUpdateProxy();
     else if (action.equals(BAD_ACTION)) {
+      // FIXME: This error condition is artificially singled out for testing
+      errMsg = "Unimplemented (" + action + ")";
+      displayMenu_Main();
+    }
+    else {
       errMsg = "Unknown action (" + action + ")";
       displayMenu_Main();
     }
-    else if (action.equals(ACTION_PROXY)) displayProxy();
-    else if (action.equals(ACTION_CONTENT)) displayMenu_Content();
-    else if (action.equals(ACTION_UPDATE_PROXY)) processUpdateProxy();
   }
 
   private void displayMenu(String explanation,
@@ -150,16 +154,27 @@ public class ProxyAndContent extends LockssServlet {
                                     resourceMgr.getUsableTcpPorts(AuditProxyManager.SERVER_NAME));
 
     // ICP server
-    ServletUtil.layoutEnablePortRow(this,
-                                    tbl,
-                                    ICP_ENABLE_NAME,
-                                    getDefaultIcpEnable(),
-                                    "ICP server",
-                                    ICP_FOOT,
-                                    FILTER_FOOT,
-                                    ICP_PORT_NAME,
-                                    getDefaultIcpPort(),
-                                    resourceMgr.getUsableUdpPorts(AuditProxyManager.SERVER_NAME));
+    if (getLockssDaemon().getIcpManager().isIcpServerAllowed()) {
+      ServletUtil.layoutEnablePortRow(this,
+                                      tbl,
+                                      ICP_ENABLE_NAME,
+                                      getDefaultIcpEnable(),
+                                      "ICP server",
+                                      ICP_FOOT,
+                                      FILTER_FOOT,
+                                      ICP_PORT_NAME,
+                                      getDefaultIcpPort(),
+                                      resourceMgr.getUsableUdpPorts(AuditProxyManager.SERVER_NAME));
+    }
+    else {
+      final String ICP_DISABLED_FOOT =
+        "To enable ICP you must perform a platform reconfiguration reboot.";
+      tbl.newRow();
+      tbl.newCell();
+      tbl.add("The platform is configured to disable the ICP server");
+      tbl.add(addFootnote(ICP_DISABLED_FOOT));
+      tbl.add(".");
+    }
 
     // Put parts together
     frm.add(tbl);
@@ -237,9 +252,10 @@ public class ProxyAndContent extends LockssServlet {
         makeDescriptor("Proxy Options",
                        ACTION_PROXY,
                        "Configure the audit proxy and the ICP server."),
-        makeDescriptor("Content Access Control",
-                       ACTION_CONTENT,
-                       "Manage access groups and access control rules."),
+// FIXME: disabled until after the 1.15 branch
+//        makeDescriptor("Content Access Control",
+//                       ACTION_CONTENT,
+//                       "Manage access groups and access control rules."),
     });
   }
 
@@ -396,7 +412,9 @@ public class ProxyAndContent extends LockssServlet {
   private static Logger logger = Logger.getLogger("ProxyAndContent");
 
   private static final String MAIN_EXPLANATION =
-    "Configure proxy options, such as the audit proxy and the ICP server. Manage access groups and configure access rules for the content preserved on this cache.";
+// FIXME: change back after 1.15 branch
+//    "Configure proxy options, such as the audit proxy and the ICP server. Manage access groups and configure access rules for the content preserved on this cache.";
+    "Configure proxy options, such as the audit proxy and the ICP server.";
 
   private static final String PROXY_EXPLANATION =
     "Manage this cache's audit proxy and ICP server.";

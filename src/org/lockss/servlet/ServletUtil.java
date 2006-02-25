@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.30 2006-02-13 23:50:00 thib_gc Exp $
+ * $Id: ServletUtil.java,v 1.31 2006-02-25 01:01:02 thib_gc Exp $
  */
 
 /*
@@ -32,12 +32,12 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.servlet;
 
-import java.io.IOException;
 import java.text.*;
 import java.util.*;
 import java.util.List;
 
 import org.apache.commons.collections.CollectionUtils;
+import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.jetty.MyTextArea;
 import org.lockss.plugin.PluginManager;
@@ -45,7 +45,6 @@ import org.lockss.remote.*;
 import org.lockss.remote.RemoteApi.BatchAuStatus;
 import org.lockss.servlet.BatchAuConfig.Verb;
 import org.lockss.util.*;
-import org.lockss.config.*;
 import org.mortbay.html.*;
 
 public class ServletUtil {
