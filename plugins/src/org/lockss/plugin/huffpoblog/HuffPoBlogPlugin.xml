@@ -24,7 +24,7 @@
   </entry>
   <entry>
     <string>au_crawl_depth</string>
-    <int>2</int>
+    <int>1</int>
   </entry>
   <entry>
     <string>au_name</string>
@@ -43,7 +43,6 @@
     <list>
       <string>4,&quot;^%s&quot;, base_url</string>
       <string>1,&quot;%syearly/%d/&quot;, base_url, year</string>
-      <string>2,&quot;^%s.*#$&quot;, base_url</string>
       <string>2,&quot;^%ssend/&quot;, base_url</string>
       <string>2,&quot;^%scomment/&quot;, base_url</string>
       <string>1,&quot;^%s.*/.*_b_%s\.html$&quot;, base_url, num_issue_range</string>
