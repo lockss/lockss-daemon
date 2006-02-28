@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyAndContent.java,v 1.13 2006-02-25 01:01:02 thib_gc Exp $
+ * $Id: ProxyAndContent.java,v 1.14 2006-02-28 01:00:35 thib_gc Exp $
  */
 
 /*
@@ -351,15 +351,23 @@ public class ProxyAndContent extends LockssServlet {
   private void processUpdateProxy_SaveChanges() throws IOException {
     final String TRUE = "true";
     final String FALSE = "false";
+    Properties props;
 
-    Properties props = new Properties();
+    // Save audit proxy config
+    props = new Properties();
     props.setProperty(PARAM_AUDIT_ENABLE, formAuditEnable ? TRUE : FALSE);
     props.setProperty(PARAM_AUDIT_PORT, Integer.toString(auditPort));
+    configMgr.writeCacheConfigFile(props,
+                                   ConfigManager.CONFIG_FILE_AUDIT_PROXY,
+                                   CONFIG_FILE_COMMENT);
+
+    // Save ICP server config
+    props = new Properties();
     props.setProperty(IcpManager.PARAM_ICP_ENABLED, formIcpEnable ? TRUE : FALSE);
     props.setProperty(IcpManager.PARAM_ICP_PORT, Integer.toString(icpPort));
     configMgr.writeCacheConfigFile(props,
-                                   ConfigManager.CONFIG_FILE_PROXY_IP_ACCESS,
-                                   COMMENT_PROXY_IP_ACCESS);
+                                   ConfigManager.CONFIG_FILE_ICP_SERVER,
+                                   CONFIG_FILE_COMMENT);
   }
 
   public static final String PARAM_AUDIT_ENABLE =
@@ -390,6 +398,8 @@ public class ProxyAndContent extends LockssServlet {
 
   private static final String COMMENT_PROXY_IP_ACCESS =
     "Proxy Options";
+
+  private static final String CONFIG_FILE_COMMENT = "Proxy Options and Content Access Control";
 
   private static final String CONTENT_EXPLANATION =
     "Define access groups and manage access control rules for the content preserved on this cache.";

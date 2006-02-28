@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyIpAccess.java,v 1.22 2006-02-25 01:01:02 thib_gc Exp $
+ * $Id: ProxyIpAccess.java,v 1.23 2006-02-28 01:00:35 thib_gc Exp $
  */
 
 /*
@@ -48,36 +48,10 @@ import org.lockss.util.StringUtil;
 /** Display and update proxy IP access control lists.
  */
 public class ProxyIpAccess extends IpAccessControl {
-  public static final String PARAM_AUDIT_ENABLE =
-    AuditProxyManager.PARAM_START;
-  static final boolean DEFAULT_AUDIT_ENABLE = AuditProxyManager.DEFAULT_START;
-  public static final String PARAM_AUDIT_PORT = AuditProxyManager.PARAM_PORT;
-
   private static final String exp =
     "Enter the list of IP addresses that should be allowed to use this " +
     "cache as a proxy server, and access the content stored on it.  " +
     commonExp;
-
-  private ResourceManager resourceMgr;
-  private boolean formAuditEnable;
-  private String formAuditPort;
-  private boolean formIcpEnable;
-  private String formIcpPort;
-  private int auditPort;
-  private int icpPort;
-
-  protected void resetLocals() {
-    super.resetLocals();
-    formAuditEnable = false;
-    formAuditPort = null;
-    formIcpEnable = false;
-    formIcpPort = null;
-  }
-
-  public void init(ServletConfig config) throws ServletException {
-    super.init(config);
-    resourceMgr = getLockssApp().getResourceManager();
-  }
 
   protected String getExplanation() {
     return exp;
@@ -95,165 +69,4 @@ public class ProxyIpAccess extends IpAccessControl {
     return "Proxy IP Access Control";
   }
 
-  protected void readForm() {
-    formAuditEnable = !StringUtil.isNullString(req.getParameter(AUDIT_ENABLE_NAME));
-    formAuditPort = req.getParameter(AUDIT_PORT_NAME);
-    formIcpEnable = !StringUtil.isNullString(req.getParameter(ICP_ENABLE_NAME));
-    formIcpPort = req.getParameter(ICP_PORT_NAME);
-    super.readForm();
-  }
-
-  protected void doUpdate() throws IOException {
-    auditPort = -1;
-    try {
-      auditPort = Integer.parseInt(formAuditPort);
-    } catch (NumberFormatException nfe) {
-      if (formAuditEnable) {
-        // bad number is an error only if enabling
-        errMsg = "Audit proxy port must be a number: " + formAuditPort;
-        displayPage();
-        return;
-      }
-    }
-    if (formAuditEnable && !isLegalAuditPort(auditPort)) {
-      errMsg = "Illegal audit proxy port number: " + formAuditPort +
-      ", must be >=1024 and not in use";
-      displayPage();
-      return;
-    }
-
-    icpPort = -1;
-    try {
-      icpPort = Integer.parseInt(formIcpPort);
-    }
-    catch (NumberFormatException nfe) {
-      if (formIcpEnable) {
-        // bad number is an error only if enabling
-        errMsg = "ICP port must be a number: " + formIcpPort;
-        displayPage();
-        return;
-      }
-    }
-    if (formIcpEnable && !isLegalIcpPort(icpPort)) {
-      errMsg = "Illegal ICP port number: " + formIcpPort +
-      ", must be >=1024 and not in use";
-      displayPage();
-      return;
-    }
-
-    super.doUpdate();
-  }
-
-
-  private boolean isLegalAuditPort(int port) {
-    return port >= 1024 &&
-           resourceMgr.isTcpPortAvailable(
-               port, AuditProxyManager.SERVER_NAME);
-  }
-
-  private boolean isLegalIcpPort(int port) {
-    return port >= 1024 &&
-           resourceMgr.isUdpPortAvailable(
-               port, IcpManager.class);
-  }
-
-  private boolean getDefaultAuditEnable() {
-    if (isForm) {
-      return formAuditEnable;
-    }
-    return CurrentConfig.getBooleanParam(PARAM_AUDIT_ENABLE,
-                                         DEFAULT_AUDIT_ENABLE);
-  }
-
-  private String getDefaultAuditPort() {
-    String port = formAuditPort;
-    if (StringUtil.isNullString(port)) {
-      port = CurrentConfig.getParam(PARAM_AUDIT_PORT);
-    }
-    if (!StringUtil.isNullString(port)) {
-      try {
-        int portNumber = Integer.parseInt(port);
-        if (!(portNumber > 0)) {
-          port = "";
-        }
-      }
-      catch (NumberFormatException nfeIgnore) {}
-    }
-    return port;
-  }
-
-  private boolean getDefaultIcpEnable() {
-    return isForm ? formIcpEnable : getLockssDaemon().getIcpManager().isIcpServerRunning();
-  }
-
-  private String getDefaultIcpPort() {
-    String port = formIcpPort;
-    if (StringUtil.isNullString(port)) {
-      int portNumber = getLockssDaemon().getIcpManager().getCurrentPort();
-      port = portNumber > 0 ? Integer.toString(portNumber) : "";
-    }
-    return port;
-  }
-
-  private static final String AUDIT_FOOT =
-    "The audit proxy serves <b>only</b> cached content, and never " +
-    "forwards requests to the publisher or any other site.  " +
-    "By configuring a browser to proxy to this port, you can view the " +
-    "content stored on the cache.  All requests for content not on the " +
-    "cache will return a \"404 Not Found\" error.";
-
-  private static final String FILTER_FOOT =
-    "Other ports can be configured but may not be reachable due to " +
-    "packet filters.";
-
-  /**
-   * <p>A footnote explaining the role of the ICP server.</p>
-   */
-  private static final String ICP_FOOT =
-    "The ICP server responds to queries sent by other proxies and caches " +
-    "to let them know if this cache has the content they are looking for. " +
-    "This is useful if you are integrating this cache into an existing " +
-    "network structure with other proxies and caches that support ICP.";
-
-  protected void additionalFormLayout(Composite composite) {
-// FIXME: Disabled until after the 1.15 branch
-//    final int BORDER = 0;
-//    final String ATTRIBUTES = "align=\"center\" cellpadding=\"10\"";
-//
-//    Table tbl = new Table(BORDER, ATTRIBUTES);
-//    ServletUtil.layoutEnablePortRow(this, tbl, AUDIT_ENABLE_NAME, getDefaultAuditEnable(),
-//        "audit proxy", AUDIT_FOOT, FILTER_FOOT, AUDIT_PORT_NAME, getDefaultAuditPort(),
-//        resourceMgr.getUsableTcpPorts(AuditProxyManager.SERVER_NAME));
-//    if (getLockssDaemon().getIcpManager().isIcpServerAllowed()) {
-//      ServletUtil.layoutEnablePortRow(this, tbl, ICP_ENABLE_NAME, getDefaultIcpEnable(),
-//          "ICP server", ICP_FOOT, FILTER_FOOT, ICP_PORT_NAME, getDefaultIcpPort(),
-//          resourceMgr.getUsableUdpPorts(AuditProxyManager.SERVER_NAME));
-//    }
-//    else {
-//      final String ICP_DISABLED_FOOT =
-//        "To enable ICP you must perform a platform reconfiguration reboot.";
-//      tbl.newRow(); tbl.newCell();
-//      tbl.add("The platform is configured to disable the ICP server");
-//      tbl.add(addFootnote(ICP_DISABLED_FOOT));
-//      tbl.add(".");
-//    }
-//    composite.add(tbl);
-  }
-
-  protected void addConfigProps(Properties props) {
-    super.addConfigProps(props);
-
-    final String TRUE = "true";
-    final String FALSE = "false";
-
-    props.setProperty(PARAM_AUDIT_ENABLE,  formAuditEnable ? TRUE : FALSE);
-    props.put(PARAM_AUDIT_PORT, Integer.toString(auditPort));
-    props.setProperty(IcpManager.PARAM_ICP_ENABLED, formIcpEnable ? TRUE : FALSE);
-    props.put(IcpManager.PARAM_ICP_PORT, Integer.toString(icpPort));
-  }
-
-  private static final String AUDIT_ENABLE_NAME = "audit_ena";
-  private static final String AUDIT_PORT_NAME = "audit_port";
-  private static final String ICP_ENABLE_NAME = "icp_ena";
-  private static final String ICP_PORT_NAME = "icp_port";
 }

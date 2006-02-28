@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.28 2006-01-27 04:33:59 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.29 2006-02-28 01:00:35 thib_gc Exp $
  */
 
 /*
@@ -120,12 +120,18 @@ public class ConfigManager implements LockssManager {
   public static final String CONFIG_FILE_PROXY_IP_ACCESS = "proxy_ip_access.txt";
   public static final String CONFIG_FILE_AU_CONFIG = "au.txt";
   public static final String CONFIG_FILE_BUNDLED_TITLE_DB = "titledb.xml";
+  public static final String CONFIG_FILE_ICP_SERVER = "icp_server_config.txt"; // in use
+  public static final String CONFIG_FILE_AUDIT_PROXY = "audit_proxy_config.txt"; // in use
+  public static final String CONFIG_FILE_ACCESS_GROUPS = "access_groups_config.txt"; // not yet in use
 
   /** array of local cache config file names */
   static String cacheConfigFiles[] = {
     CONFIG_FILE_UI_IP_ACCESS,
     CONFIG_FILE_PROXY_IP_ACCESS,
     CONFIG_FILE_AU_CONFIG,
+    CONFIG_FILE_ICP_SERVER, // in use
+    CONFIG_FILE_AUDIT_PROXY, // in use
+    CONFIG_FILE_ACCESS_GROUPS, // not yet in use
   };
 
   // MUST pass in explicit log level to avoid recursive call back to
