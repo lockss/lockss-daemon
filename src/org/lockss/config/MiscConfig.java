@@ -1,5 +1,5 @@
 /*
- * $Id: MiscConfig.java,v 1.2 2005-07-25 01:18:31 tlipkis Exp $
+ * $Id: MiscConfig.java,v 1.3 2006-02-28 09:08:29 tlipkis Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.config;
 
+import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 
 /** Miscellaneous config actions.  Convenient for auxilliary components
@@ -45,6 +46,7 @@ public class MiscConfig {
 					 Configuration oldConfig,
 					 Configuration.Differences diffs) {
 	  HttpClientUrlConnection.setConfig(config, oldConfig, diffs);
+	  UrlUtil.setConfig(config, oldConfig, diffs);
 	}
       };
   }
