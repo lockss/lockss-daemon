@@ -1,5 +1,5 @@
 /*
- * $Id: TestUrlUtil.java,v 1.26 2006-02-14 05:23:33 tlipkis Exp $
+ * $Id: TestUrlUtil.java,v 1.27 2006-02-28 09:08:15 tlipkis Exp $
  */
 
 /*
@@ -45,7 +45,8 @@ public class TestUrlUtil extends LockssTestCase {
     switch (1) {
     case 1:
       try {
-	return UrlUtil.normalizePath(path, true);
+	return UrlUtil.normalizePath(path,
+				     UrlUtil.PATH_TRAVERSAL_ACTION_ALLOW);
       } catch (MalformedURLException e) {
 	throw new RuntimeException(e.toString());
       }
@@ -108,6 +109,8 @@ public class TestUrlUtil extends LockssTestCase {
 
     assertEquals("a/b", normalizePath("a/./b"));
     assertEquals("a/b", normalizePath("a/c/../b"));
+    assertEquals("a/b", normalizePath("a/c/./../b"));
+    assertEquals("a/b", normalizePath("a/c/./.././b"));
     assertEquals("a/b", normalizePath("a//b"));
     assertEquals("a/b", normalizePath("a///b"));
 
@@ -127,6 +130,102 @@ public class TestUrlUtil extends LockssTestCase {
     assertEquals("/", normalizePath("/a/.."));
 
     assertEquals("/../x", normalizePath("/a/c/../../../x"));
+  }
+
+  public void testNormalizePathTraversalAccept() throws Exception {
+    ConfigurationUtil.addFromArgs(UrlUtil.PARAM_PATH_TRAVERSAL_ACTION,
+				  "1");
+    assertEquals("..", UrlUtil.normalizePath(".."));
+    assertEquals("../", UrlUtil.normalizePath("../"));
+    assertEquals("/..", UrlUtil.normalizePath("/.."));
+    assertEquals("../a", UrlUtil.normalizePath("../a"));
+    assertEquals("/..", UrlUtil.normalizePath("/a/../.."));
+    assertEquals("/a/b", UrlUtil.normalizePath("/a/c/../b"));
+    assertEquals("/a/b/", UrlUtil.normalizePath("/a/c/../b/"));
+    assertEquals("a/b", UrlUtil.normalizePath("a/c/../b"));
+    assertEquals("a/b", UrlUtil.normalizePath("a/c/./../b"));
+    assertEquals("a/b", UrlUtil.normalizePath("a/c/./.././b"));
+    assertEquals("/", UrlUtil.normalizePath("/a/.."));
+    assertEquals("/a/", UrlUtil.normalizePath("/a/b/.."));
+    assertEquals("/a/", UrlUtil.normalizePath("/a/b/../"));
+    assertEquals("/", UrlUtil.normalizePath("/a/b/../.."));
+    assertEquals("/", UrlUtil.normalizePath("/a/b/../../"));
+    assertEquals("/a/b", UrlUtil.normalizePath("/a/c/d/../../b"));
+    assertEquals("/a/", UrlUtil.normalizePath("/a/c/d/../../b/../"));
+    assertEquals("/a/", UrlUtil.normalizePath("/a/c/d/../../b/.."));
+    assertEquals("/..", UrlUtil.normalizePath("/a/c/../../.."));
+    assertEquals("/../..", UrlUtil.normalizePath("/a/c/../../../.."));
+    assertEquals("/../", UrlUtil.normalizePath("/a/c/../../../"));
+    assertEquals("/../../", UrlUtil.normalizePath("/a/c/../../../../"));
+    assertEquals("/", UrlUtil.normalizePath("/a/.."));
+    assertEquals("/../x", UrlUtil.normalizePath("/a/c/../../../x"));
+  }
+
+  public void testNormalizePathTraversalRemove() throws Exception {
+    ConfigurationUtil.addFromArgs(UrlUtil.PARAM_PATH_TRAVERSAL_ACTION,
+				  "2");
+    assertEquals("", UrlUtil.normalizePath(".."));
+    assertEquals("/", UrlUtil.normalizePath("../"));
+    assertEquals("/", UrlUtil.normalizePath("/.."));
+    assertEquals("a", UrlUtil.normalizePath("../a"));
+    assertEquals("/", UrlUtil.normalizePath("/a/../.."));
+    assertEquals("/a/b", UrlUtil.normalizePath("/a/c/../b"));
+    assertEquals("/a/b/", UrlUtil.normalizePath("/a/c/../b/"));
+    assertEquals("a/b", UrlUtil.normalizePath("a/c/../b"));
+    assertEquals("a/b", UrlUtil.normalizePath("a/c/./../b"));
+    assertEquals("a/b", UrlUtil.normalizePath("a/c/./.././b"));
+    assertEquals("/", UrlUtil.normalizePath("/a/.."));
+    assertEquals("/a/", UrlUtil.normalizePath("/a/b/.."));
+    assertEquals("/a/", UrlUtil.normalizePath("/a/b/../"));
+    assertEquals("/", UrlUtil.normalizePath("/a/b/../.."));
+    assertEquals("/", UrlUtil.normalizePath("/a/b/../../"));
+    assertEquals("/a/b", UrlUtil.normalizePath("/a/c/d/../../b"));
+    assertEquals("/a/", UrlUtil.normalizePath("/a/c/d/../../b/../"));
+    assertEquals("/a/", UrlUtil.normalizePath("/a/c/d/../../b/.."));
+    assertEquals("/", UrlUtil.normalizePath("/a/c/../../.."));
+    assertEquals("/", UrlUtil.normalizePath("/a/c/../../../.."));
+    assertEquals("/", UrlUtil.normalizePath("/a/c/../../../"));
+    assertEquals("/", UrlUtil.normalizePath("/a/c/../../../../"));
+    assertEquals("/", UrlUtil.normalizePath("/a/.."));
+    assertEquals("/x", UrlUtil.normalizePath("/a/c/../../../x"));
+  }
+
+  void assertNormalizePathThrows(String path) {
+    try {
+      UrlUtil.normalizePath(path);
+      fail("normalizePath("+path+") should throw, returned " +
+	   UrlUtil.normalizePath(path));
+    } catch (MalformedURLException e) {
+    }
+  }
+
+  public void testNormalizePathTraversalThrow() throws Exception {
+    ConfigurationUtil.addFromArgs(UrlUtil.PARAM_PATH_TRAVERSAL_ACTION,
+				  "3");
+    assertNormalizePathThrows("..");
+    assertNormalizePathThrows("../");
+    assertNormalizePathThrows("/..");
+    assertNormalizePathThrows("../a");
+    assertNormalizePathThrows("/a/../..");
+    assertEquals("/a/b", UrlUtil.normalizePath("/a/c/../b"));
+    assertEquals("/a/b/", UrlUtil.normalizePath("/a/c/../b/"));
+    assertEquals("a/b", UrlUtil.normalizePath("a/c/../b"));
+    assertEquals("a/b", UrlUtil.normalizePath("a/c/./../b"));
+    assertEquals("a/b", UrlUtil.normalizePath("a/c/./.././b"));
+    assertEquals("/", UrlUtil.normalizePath("/a/.."));
+    assertEquals("/a/", UrlUtil.normalizePath("/a/b/.."));
+    assertEquals("/a/", UrlUtil.normalizePath("/a/b/../"));
+    assertEquals("/", UrlUtil.normalizePath("/a/b/../.."));
+    assertEquals("/", UrlUtil.normalizePath("/a/b/../../"));
+    assertEquals("/a/b", UrlUtil.normalizePath("/a/c/d/../../b"));
+    assertEquals("/a/", UrlUtil.normalizePath("/a/c/d/../../b/../"));
+    assertEquals("/a/", UrlUtil.normalizePath("/a/c/d/../../b/.."));
+    assertNormalizePathThrows("/a/c/../../..");
+    assertNormalizePathThrows("/a/c/../../../..");
+    assertNormalizePathThrows("/a/c/../../../");
+    assertNormalizePathThrows("/a/c/../../../../");
+    assertEquals("/", UrlUtil.normalizePath("/a/.."));
+    assertNormalizePathThrows("/a/c/../../../x");
   }
 
   public void assertSameNormalizeUrl(String s) throws MalformedURLException {
@@ -172,6 +271,42 @@ public class TestUrlUtil extends LockssTestCase {
     assertEquals("http://a .b/bar?foo/../bar",
 		 UrlUtil.normalizeUrl("  ht\n   tp://a .b/foo/../bar?foo/../bar"));
 
+    ConfigurationUtil.addFromArgs(UrlUtil.PARAM_PATH_TRAVERSAL_ACTION,
+				  "1");
+    assertMode1();
+    ConfigurationUtil.addFromArgs(UrlUtil.PARAM_PATH_TRAVERSAL_ACTION,
+				  "2");
+    assertMode2();
+    ConfigurationUtil.addFromArgs(UrlUtil.PARAM_PATH_TRAVERSAL_ACTION,
+				  "3");
+    assertMode3();
+  }
+
+  // mode 1 leaves extra ".."s alone.
+  void assertMode1() throws MalformedURLException {
+    assertEquals("http://a.com/../",
+		 UrlUtil.normalizeUrl("http://a.com/xy/ab/../../../"));
+    assertEquals("http://a.com/../../xxx",
+		 UrlUtil.normalizeUrl("http://a.com/xy/ab/../../../../xxx"));
+    assertEquals("http://a.com/../a/b/c/d",
+		 UrlUtil.normalizeUrl("http://a.com/xy/ab/../../../a/b/c/d"));
+    assertEquals("http://a.com/../a/b/c/d/",
+		 UrlUtil.normalizeUrl("http://a.com/xy/ab/../../../a/b/c/d/"));
+  }
+
+  // mode 2 removes extra ".."s.
+  void assertMode2() throws MalformedURLException {
+    assertEquals("http://a.com/",
+		 UrlUtil.normalizeUrl("http://a.com/xy/ab/../../../"));
+    assertEquals("http://a.com/a/b/c/d",
+		 UrlUtil.normalizeUrl("http://a.com/xy/ab/../../../a/b/c/d"));
+    assertEquals("http://a.com/a/b/c/d/",
+		 UrlUtil.normalizeUrl("http://a.com/xy/ab/../../../a/b/c/d/"));
+
+  }
+
+  // mode 3 throws on extra ".."s.
+  void assertMode3() throws MalformedURLException {
     try {
       String s = "http://a.com/xy/ab/../../../";
       UrlUtil.normalizeUrl(s);

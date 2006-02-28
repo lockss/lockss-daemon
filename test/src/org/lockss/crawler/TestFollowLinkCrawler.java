@@ -1,5 +1,5 @@
 /*
- * $Id: TestFollowLinkCrawler.java,v 1.13 2006-02-14 05:22:46 tlipkis Exp $
+ * $Id: TestFollowLinkCrawler.java,v 1.14 2006-02-28 09:08:15 tlipkis Exp $
  */
 
 /*
@@ -34,8 +34,7 @@ package org.lockss.crawler;
 import java.util.*;
 import java.io.*;
 
-import org.lockss.config.ConfigManager;
-import org.lockss.config.Configuration;
+import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
@@ -644,9 +643,20 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     mfuc.foundUrl("HTTP://www.example.com/SESSION/foo.bar");
     assertEquals(SetUtil.set("http://www.example.com/foo.bar"), extractedUrls);
     extractedUrls.clear();
-    // illegal url should not be added
+    // illegal url gets added depending on path traversal action
     mfuc.foundUrl("http://www.example.com/foo/../..");
-    assertEmpty(extractedUrls);
+    switch (CurrentConfig.getIntParam(UrlUtil.PARAM_PATH_TRAVERSAL_ACTION,
+				      UrlUtil.DEFAULT_PATH_TRAVERSAL_ACTION)) {
+    case UrlUtil.PATH_TRAVERSAL_ACTION_ALLOW:
+      assertEquals(SetUtil.set("http://www.example.com/../"), extractedUrls);
+      break;
+    case UrlUtil.PATH_TRAVERSAL_ACTION_REMOVE:
+      assertEquals(SetUtil.set("http://www.example.com/"), extractedUrls);
+      break;
+    case UrlUtil.PATH_TRAVERSAL_ACTION_THROW:
+      assertEmpty(extractedUrls);
+      break;
+    }
   }
 
   public void testWatchdogPokedForEachFetchAfterGetUrlsToFollow() {

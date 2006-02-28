@@ -1,5 +1,5 @@
 /*
- * $Id: UrlUtil.java,v 1.39 2006-02-14 05:23:33 tlipkis Exp $
+ * $Id: UrlUtil.java,v 1.40 2006-02-28 09:08:16 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -39,7 +39,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.apache.commons.httpclient.*;
 import org.apache.commons.httpclient.methods.GetMethod;
 
-import org.lockss.config.CurrentConfig;
+import org.lockss.config.*;
 import org.lockss.daemon.PluginBehaviorException;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.urlconn.*;
@@ -56,6 +56,45 @@ public class UrlUtil {
    * The separator char for URLs.
    */
   public static final char URL_PATH_SEPARATOR_CHAR = '/';
+
+  static final String PREFIX = Configuration.PREFIX + "UrlUtil.";
+
+  public static final int PATH_TRAVERSAL_ACTION_ALLOW = 1;
+  public static final int PATH_TRAVERSAL_ACTION_REMOVE = 2;
+  public static final int PATH_TRAVERSAL_ACTION_THROW = 3;
+
+  /** Determines normalizeUrl()s action on path traversals (extra ".." path
+   * components). <ul><li>PATH_TRAVERSAL_ACTION_ALLOW (1) - Allow them
+   * (leave the extra ".."s in the path). <li>PATH_TRAVERSAL_ACTION_REMOVE
+   * (2) Remove them (which is what browsers do)
+   * <li>PATH_TRAVERSAL_ACTION_THROW (3) throw
+   * MalformedURLException</ol> */
+  public static final String PARAM_PATH_TRAVERSAL_ACTION =
+    PREFIX + "pathTraversalAction";
+  public static final int DEFAULT_PATH_TRAVERSAL_ACTION =
+    PATH_TRAVERSAL_ACTION_REMOVE;
+
+  /** If true, use Apache Commons HttpClient, if false use native Java
+   * HttpURLConnection */
+  static final String PARAM_USE_HTTPCLIENT = PREFIX + "useHttpClient";
+  static final boolean DEFAULT_USE_HTTPCLIENT = true;
+
+  private static boolean useHttpClient = DEFAULT_USE_HTTPCLIENT;
+  private static int pathTraversalAction = DEFAULT_PATH_TRAVERSAL_ACTION;
+
+
+  /** Called by org.lockss.config.MiscConfig
+   */
+  public static void setConfig(Configuration config,
+			       Configuration oldConfig,
+			       Configuration.Differences diffs) {
+    if (diffs.contains(PREFIX)) {
+      useHttpClient = config.getBoolean(PARAM_USE_HTTPCLIENT,
+					DEFAULT_USE_HTTPCLIENT);
+      pathTraversalAction = config.getInt(PARAM_PATH_TRAVERSAL_ACTION,
+					  DEFAULT_PATH_TRAVERSAL_ACTION);
+    }
+  }
 
   private static String trimNewlinesAndLeadingWhitespace(String urlString) {
     urlString = urlString.trim();	// remove surrounding spaces
@@ -187,19 +226,24 @@ public class UrlUtil {
   }
 
   /** Normalize the path component.  Replaces multiple consecutive "/" with
-   *  a single "/", removes "." components and resolves ".."  * components.
-   *  Exactly mimics the behavior of Java 1.4 URI.normalize(), becuase we
-   *  don't want the canonical form to change if/when we switch to that. */
+   * a single "/", removes "." components and resolves ".."  components.
+   * If there are extra ".." components in the path, the behavior depends
+   * on the config parameter org.lockss.urlutil.pathTraversalAction, see
+   * {@link #PARAM_PATH_TRAVERSAL_ACTION}.
+   * @param path the path to normalize
+   */
   public static String normalizePath(String path)
       throws MalformedURLException {
-    return normalizePath(path, false);
+    return normalizePath(path, pathTraversalAction);
   }
 
-  /* Normalize the path component.  Replaces multiple consecutive "/" with
-   *  a single "/", removes "." components and resolves ".."  * components.
-   *  Exactly mimics the behavior of Java 1.4 URI.normalize(), becuase we
-   *  don't want the canonical form to change if/when we switch to that. */
-  public static String normalizePath(String path, boolean evenIfIllegal)
+  /** Normalize the path component.  Replaces multiple consecutive "/" with
+   * a single "/", removes "." components and resolves ".."  components.
+   * @param path the path to normalize
+   * @param pathTraversalAction what to do if extra ".." components, see
+   * {@link #PARAM_PATH_TRAVERSAL_ACTION}.
+   */
+  public static String normalizePath(String path, int pathTraversalAction)
       throws MalformedURLException {
     path = path.trim();
     // special case compatability with Java 1.4 URI
@@ -208,6 +252,8 @@ public class UrlUtil {
     }
     // quickly determine whether anything needs to be done
     if (! (path.endsWith("/.") || path.endsWith("/..") ||
+	   path.equals("..") || path.equals(".") ||
+	   path.startsWith("../") || path.startsWith("./") ||
 	   path.indexOf("/./") >= 0 || path.indexOf("/../") >= 0 ||
 	   path.indexOf("//") >= 0)) {
       return path;
@@ -228,10 +274,14 @@ public class UrlUtil {
 	  names.remove(names.size() - 1);
 	  prevdotdot = true;
 	} else {
-	  if (evenIfIllegal) {
-	    dotdotcnt++;
-	  } else {
+	  switch (pathTraversalAction) {
+	  case PATH_TRAVERSAL_ACTION_THROW:
 	    throw new MalformedURLException("Illegal dir traversal: " + path);
+	  case PATH_TRAVERSAL_ACTION_ALLOW:
+	    dotdotcnt++;
+	    break;
+	  case PATH_TRAVERSAL_ACTION_REMOVE:
+	    break;
 	  }
 	}
       } else {
@@ -550,12 +600,6 @@ public class UrlUtil {
     }
   }
 
-  /**
-   * Takes a javascript url of the following formats:
-   * javascript:newWindow('http://www.example.com/link3.html')
-   * javascript:popup('http://www.example.com/link3.html')
-   * and resolves it to a URL
-   */
 
   public static String[] supportedJSFunctions =
   {
@@ -563,6 +607,12 @@ public class UrlUtil {
     "popup"
   };
 
+  /**
+   * Takes a javascript url of the following formats:
+   * javascript:newWindow('http://www.example.com/link3.html')
+   * javascript:popup('http://www.example.com/link3.html')
+   * and resolves it to a URL
+   */
   public static String parseJavascriptUrl(String jsUrl) {
 
     int jsIdx = StringUtil.indexOfIgnoreCase(jsUrl, "javascript:");
@@ -818,9 +868,6 @@ public class UrlUtil {
       throws IOException {
     LockssUrlConnection luc;
     if (isHttpUrl(urlString)) {
-      boolean useHttpClient =
-        CurrentConfig.getBooleanParam("org.lockss.UrlUtil.useHttpClient",
-                                      true);
       if (useHttpClient) {
 	HttpClient client = null;
 	if (connectionPool != null) {
