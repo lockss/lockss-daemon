@@ -1,5 +1,5 @@
 /*
- * $Id: Cron.java,v 1.4 2005-12-01 23:28:01 troberts Exp $
+ * $Id: Cron.java,v 1.5 2006-02-28 09:09:12 tlipkis Exp $
  *
 
 Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
@@ -302,7 +302,7 @@ public class Cron
     public void execute() {
       RemoteApi rmtApi = daemon.getRemoteApi();
       try {
-	rmtApi.sendMailBackup();
+	rmtApi.sendMailBackup(false);
       } catch (IOException e) {
 	log.warning("Failed to mail backup file", e);
       }

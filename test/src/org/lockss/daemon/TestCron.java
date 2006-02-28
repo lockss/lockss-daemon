@@ -1,5 +1,5 @@
 /*
- * $Id: TestCron.java,v 1.3 2005-09-11 07:24:27 tlipkis Exp $
+ * $Id: TestCron.java,v 1.4 2006-02-28 09:09:12 tlipkis Exp $
  */
 
 /*
@@ -221,7 +221,7 @@ public class TestCron extends LockssTestCase {
   static class MyRemoteApi extends RemoteApi {
     boolean sent = false;
 
-    public void sendMailBackup() throws IOException {
+    public void sendMailBackup(boolean evenIfEmpty) throws IOException {
       sent = true;
     }
   }

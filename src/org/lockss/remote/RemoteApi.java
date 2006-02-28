@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.53 2006-02-22 19:34:40 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.54 2006-02-28 09:09:12 tlipkis Exp $
  */
 
 /*
@@ -513,7 +513,9 @@ public class RemoteApi
       zip.putNextEntry(new ZipEntry(IdentityManager.IDDB_FILENAME));
       try {
 	idMgr.writeIdentityDbTo(zip);
-      } catch (FileNotFoundException e) {}
+      } catch (FileNotFoundException e) {
+	log.debug2("Couldn't write iddb", e);
+      }
       zip.closeEntry();
       List aus = pluginMgr.getAllAus();
       // add a directory for each AU
@@ -1491,10 +1493,15 @@ public class RemoteApi
 
 
   public void sendMailBackup() throws IOException {
-    sendMailBackup(null);
+    sendMailBackup(true);
   }
 
-  public void sendMailBackup(String to) throws IOException {
+  public void sendMailBackup(boolean evenIfEmpty) throws IOException {
+    sendMailBackup(evenIfEmpty, null);
+  }
+
+  public void sendMailBackup(boolean evenIfEmpty, String to)
+      throws IOException {
     Configuration config = ConfigManager.getCurrentConfig();
     if (!config.getBoolean(PARAM_BACKUP_EMAIL_ENABLED,
 			   DEFAULT_BACKUP_EMAIL_ENABLED)) {
