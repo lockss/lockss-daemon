@@ -1,5 +1,5 @@
 /*
- * $Id: HashBlock.java,v 1.3 2006-03-01 02:50:14 smorabito Exp $
+ * $Id: HashBlock.java,v 1.4 2006-03-01 19:12:58 smorabito Exp $
  */
 
 /*
@@ -91,7 +91,7 @@ public class HashBlock implements LockssSerializable {
   public void setDigests(MessageDigest[] digests) {
     int len = digests.length;
     hashes = new byte[len][];
-    for (int i = 0; i < digests.length; i++) {
+    for (int i = 0; i < len; i++) {
       hashes[i] = digests[i].digest();
     }
   }
