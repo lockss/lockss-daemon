@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedArchivalUnit.java,v 1.54 2005-07-27 19:53:49 smorabito Exp $
+ * $Id: SimulatedArchivalUnit.java,v 1.55 2006-03-01 02:50:13 smorabito Exp $
  */
 
 /*
@@ -111,7 +111,7 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
    * @return null, since we don't filter by default
    */
   protected FilterRule constructFilterRule(String mimeType) {
-    log.info("constructFilterRule("+mimeType+")");
+    log.debug3("constructFilterRule("+mimeType+")");
     if (doFilter) {
       return new SimulatedFilterRule();
     }

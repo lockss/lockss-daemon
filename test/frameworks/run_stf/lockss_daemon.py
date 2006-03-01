@@ -8,6 +8,11 @@ from lockss_util import *
 
 DEF_TIMEOUT = 60 * 30  # 30 minute default timeout for waits.
 DEF_SLEEP = 10         # 10 second default sleep between loops.
+FILE_TYPE_TEXT = 1
+FILE_TYPE_HTML = 2
+FILE_TYPE_PDF = 4
+FILE_TYPE_JPEG = 8
+FILE_TYPE_BIN = 16
 
 # Statics
 frameworkCount = 0
@@ -59,7 +64,7 @@ class Framework:
         self.clientList = [] # ordered list of clients.
         self.daemonList = [] # ordered list of daemons.
         self.configCount = 0 # used when writing daemon properties
-        
+
         self.isRunning = False
 
         # Assert that the project directory exists and that
@@ -78,7 +83,7 @@ class Framework:
 
         # Copy the LOCKSS libs to a local working dir
         self.__setUpLibDir()
-        
+
         # Set up a each daemon and create a work directory for it.
         for port in range(self.startPort, self.startPort + self.daemonCount):
             daemonDir = path.abspath(path.join(self.frameworkDir,
@@ -96,7 +101,7 @@ class Framework:
                 daemonConfUrls = urlList + (localConfigFile,)
             daemon = LockssDaemon(daemonDir, self.__makeClasspath(),
                                   daemonConfUrls)
-            
+
             # create client for this daemon
             client = Client(daemon, self.hostname, port, self.username, self.password)
 
@@ -165,7 +170,7 @@ class Framework:
         shutil.copy(lockssTestJar, self.localLibDir)
         shutil.copy(lockssPluginJar, self.localLibDir)
 
-    def __makeClasspath(self): 
+    def __makeClasspath(self):
         """ Return a list of all *.jar and *.zip files under self.projectDir/lib,
         plus all *.jar and *.zip files under self.localLibDir. """
 
@@ -184,7 +189,7 @@ class Framework:
         digest = sha.new()
         digest.update(passwd)
         return digest.hexdigest()
-        
+
     def __findProjectDir(self):
         """ Walk up the tree until 'build.xml' is found.  Assume this
         is the root of the project. """
@@ -223,7 +228,8 @@ class Framework:
         frameworkCount += 1
         fwDir = path.join(self.workDir, 'testcase-' + str(frameworkCount))
         if path.isdir(fwDir):
-            raise LockssError("Directory %s already exists." % fwDir)
+            log.info("Caution:  Old directory exists.  Renaming to %s " % (fwDir + "-" + time.time().__str__()))
+            os.rename(fwDir, (fwDir + "-" + time.time().__str__()))
         os.mkdir(fwDir)
         return fwDir
 
@@ -351,7 +357,7 @@ class Client:
     ##
     ## Back up the configuration
     ##
-            
+
     def backupConfiguration(self):
         """ Very quick and dirty way to download the config backup. """
 
@@ -372,20 +378,20 @@ class Client:
         post.add("lockssAction", "SelectRestoreTitles")
         post.add("Verb", "5")
         post.addFile("AuConfigBackupContents", "configbackup.zip")
-                    
+
         (result, cookie) = post.execute()
 
         log.debug3("Got result from Batch AU Config servlet\n%s" % result)
-        
+
         # Expect to see the strings 'Simulated Content: foo' and
         # 'Restore Selected AUs' in the response.  FRAGILE, obviously
         # this will break if the servlet UI is changed.
 
         p = re.compile("%s.*Restore Selected AUs" % au.title, re.MULTILINE | re.DOTALL)
-        
+
         if not p.search(result):
             raise LockssError("Unexpected response from BatchAuConfig servlet")
-        
+
         # Now confirm the restoration.
 
         post = Post(self.url + "BatchAuConfig",
@@ -403,7 +409,7 @@ class Client:
     ##
     ## General status accessors
     ##
-    
+
     def getCrawlStatus(self, au=None):
         """
         Return the current crawl status of this cache.
@@ -487,7 +493,7 @@ class Client:
         (summary, table) = self.__getStatusTable('ArchivalUnitTable', au.auId)
         return (summary.has_key('Available From Publisher') and
                 summary['Available From Publisher'] == "No")
-        
+
 
     def isAuOK(self, au):
         """ Return true if the top level of the AU has been repaired. """
@@ -511,6 +517,22 @@ class Client:
             if row['URL'] == node.url:
                 return row['Status'] == 'Repaired'
         # Poll wasn't found
+        return False
+
+    def isV3Repaired(self, au, nodeList=[]):
+        """ Return true if the given content node has been repaired via V3 """
+        tab = self.getAuV3Pollers(au)
+        for row in tab:
+            if row['auId'] == au.title and row['status'] == "Complete":
+                # Found the right entry
+                pollKey = row['pollId']['key']
+                (summary, table) = self.getV3PollerDetail(pollKey)
+                reps = int(summary['Completed Repairs']['value'])
+                log.debug("isV3Repaired: Completed Repairs: %s" % reps)
+                return reps == len(nodeList)
+                # TODO: This will really need to be improved when the status
+                # tables are better!  Need a way to determine whether this particular NODE was
+                # repaired.
         return False
 
     def isContentRepairedFromCache(self, au, node=None):
@@ -593,6 +615,10 @@ class Client:
         (summary, table) = self.__getStatusTable('V3VoterTable', key)
         return table
 
+    def getV3PollerDetail(self, key):
+        """ Returns both the summary and table """
+        return self.__getStatusTable('V3PollerDetailTable', key)
+
     def getAuNodesWithContent(self, au):
         """ Return a list of all nodes that have content. """
         # Hack!  Pass the table a very large number for numrows, and
@@ -659,7 +685,7 @@ class Client:
                 return True
         # Poll wasn't found.
         return False
-            
+
     def hasTopLevelContentPoll(self, au):
         """ Return true if the client has an active or won top level
         content poll """
@@ -913,7 +939,7 @@ class Client:
         def waitFunc():
             return self.hasV3Voter(au)
         return self.wait(waitFunc, timeout, sleep)
-    
+
     def waitForTopLevelContentPoll(self, au, timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):
         def waitFunc():
             return self.hasTopLevelContentPoll(au)
@@ -1042,6 +1068,13 @@ class Client:
             return self.isContentRepaired(au, node)
         return self.wait(waitFunc, timeout, sleep)
 
+    def waitForV3Repair(self, au, nodeList=[], timeout=DEF_TIMEOUT,
+                        sleep=DEF_SLEEP):
+        """ Wait for a successful repair of the specified node by a V3 Poll """
+        def waitFunc():
+            return self.isV3Repaired(au, nodeList)
+        return self.wait(waitFunc, timeout, sleep)
+
     def waitForNameRepair(self, au, node=None, timeout=DEF_TIMEOUT,
                           sleep=DEF_SLEEP):
         """ Block until a node has been successfully repaired, or until
@@ -1097,6 +1130,7 @@ class Client:
         nodeList = self.__getRandomContentNodeList(au, minCount, maxCount)
         for node in nodeList:
             self.damageNode(node)
+        nodeList.sort()
         return nodeList
 
     def randomDelete(self, au):
@@ -1112,6 +1146,7 @@ class Client:
         nodeList = self.__getRandomContentNodeList(au, minCount, maxCount)
         for node in nodeList:
             self.deleteNode(node)
+        nodeList.sort()
         return nodeList
 
     def damageNode(self, node):
@@ -1150,7 +1185,7 @@ class Client:
             shutil.rmtree(pluginsDir)
         else:
             raise LockssError("Cache not in an expected state!")
-        
+
     def createFile(self, au, filespec):
         """ Create an extra file in the repository under the given AU and
         filespec.  The filespec should be relative to the AU's root, for example
@@ -1166,50 +1201,65 @@ class Client:
         f.close()
         return output
 
-    def createNode(self, au, filespec):
-        """ Create an extra node with no node properties under the
-        given AU. Returns the new node. """
-        root = self.getAuRoot(au)
-
-        nodeRoot = path.join(root, filespec)
-        os.mkdir(nodeRoot)
-        os.mkdir(path.join(nodeRoot, '#content'))
-        contentFile = path.join(nodeRoot, '#content', 'current')
-        f = open(contentFile, 'w')
-        f.write('Garbage File')
-        f.close()
-
-        url = au.baseUrl + '/' + filespec
-        return Node(url, nodeRoot)
-
-    def createChildNode(self, au, node, filename):
+    # NOTE!  These two methods are extremely dependent on the
+    # current implementation of the repository.  If that changes,
+    # thesee must change.
+    def createNode(self, au, filespec, node=None):
         """ Given a branch node, create a new child under it. """
-        root = node.file
-        nodeRoot = path.join(root, filename)
+        
+        if not node:
+            root = self.getAuRoot(au)
+        else:
+            root = node.file
+
+        now = time.strftime("%s000") # No ms precision
+        nowComment = time.strftime("#%a %b %d %H:%M:%S %Z %Y")
+        
+        auRoot = self.getAuRoot(au)
+        nodeRoot = path.join(root, filespec)
+        url = au.baseUrl + nodeRoot[len(auRoot):]
+        
         os.mkdir(nodeRoot)
         os.mkdir(path.join(nodeRoot, '#content'))
+        
         contentFile = path.join(nodeRoot, '#content', 'current')
         f = open(contentFile, 'w')
         f.write('Garbage File')
         f.close()
+        
+        propsFile = path.join(nodeRoot, '#content', 'current.props')
+        f = open(propsFile, 'w')
+        f.write("#HTTP headers for %s\n" % url)
+        f.write("%s\n" % nowComment)
+        f.write("last-modified=0\n")
+        f.write("org.lockss.version.number=1\n")
+        f.write("x-lockss-content-type=text/plain\n")
+        f.write("x-lockss-node-url=%s\n" % url)
+        f.write("x-lockss-orig-url=%s\n" % url)
+        f.write("x_lockss-server-date=%s\n" % now)
+        f.close()
+        
+        nodeProps = path.join(nodeRoot, '#node_props')
+        f = open(nodeProps, 'w')
+        f.write("#Node properties\n")
+        f.write("%s\n" % nowComment)
+        f.write("node.child.count=0\n")
+        f.write("node.tree.size=12\n")
+        f.close()
 
-        auRoot = self.getAuRoot(au)
-        url = au.baseUrl + nodeRoot[len(auRoot):]
-
-        log.debug2("Created file: %s" % nodeRoot)
         return Node(url, nodeRoot)
 
     def randomCreateRandomNodes(self, au, minCount=1, maxCount=5):
         """ Create a random number of between minCount and maxCount
         nodes on the given au.  Return the list of new nodes. """
-        nodeList = self.__getRandomBranchNodeList(au, minCount, maxCount)
-        returnList = []
-        ix = 0
-        for node in nodeList:
-            newNode = self.createChildNode(au, node, 'newfile-%s.txt' % ix)
-            returnList.append(newNode)
-            ix += 1
-        return returnList
+        nodeList = []
+        random.seed(time.time())
+        numNodes = random.randint(minCount, maxCount)
+        for nodeNum in range(minCount, maxCount+1):
+            newNode = self.createNode(au, '%sextrafile.txt' % nodeNum)
+            nodeList.append(newNode)
+        nodeList.sort()
+        return nodeList
 
 
     def getAuNode(self, au, url, checkForContent=False):
@@ -1261,9 +1311,20 @@ class Client:
         summaryDict = {}
         for summary in summaryList:
             summaryTitle = summary.getElementsByTagName('st:title')[0].firstChild.data
-            summaryValue = summary.getElementsByTagName('st:value')[0].firstChild.data
-            summaryDict[summaryTitle] = summaryValue
-            
+            summaryValue = summary.getElementsByTagName('st:value')[0]
+            # See if this is a reference, or CDATA
+            refList = summary.getElementsByTagName('st:reference')
+            if refList:
+                ref = refList[0] # should be only one!
+                name = ref.getElementsByTagName('st:name')[0].firstChild.data
+                key = ref.getElementsByTagName('st:key')[0].firstChild.data
+                value = ref.getElementsByTagName('st:value')[0].firstChild.data
+                summaryDict[summaryTitle] = {'name': name,
+                                             'key': key,
+                                             'value': value}
+            else:
+                summaryDict[summaryTitle] = summaryValue.firstChild.data
+
         rowList = doc.getElementsByTagName('st:row')
         data = []
         for row in rowList:
@@ -1300,7 +1361,7 @@ class Client:
         except Exception, e:
             log.debug2("Connect error: %s" % (e))
             return False
-        
+
     def __makePost(self, page, lockssAction=None):
         postUrl = self.url + page
         post = Post(postUrl, self.username, self.password)
@@ -1449,6 +1510,9 @@ class Node:
         self.url = url
         self.file = file
 
+    def __cmp__(self, other):
+        return cmp(self.url, other.url)
+
     def __str__(self):
         return "%s" % self.url
 
@@ -1525,7 +1589,7 @@ class MultipartPost:
 
     def add(self, key, val):
         self.postData.append((key, val))
-        
+
     def addFile(self, key, filename):
         f = open(filename, "r")
         self.fileData.append((key, filename, f.read()))
@@ -1550,14 +1614,14 @@ class MultipartPost:
         if responseCookie:
             responseCookie = responseCookie.split(';')[0]
         return (h.file.read(), responseCookie)
-        
-        
+
+
     def encodeMultipartFormdata(self, fields, files):
         """ fields is a sequence of (name, value) elements for regular
         form fields.  files is a sequence of (name, filename, value)
         elements for data to be uploaded as files Return (content_type,
         body) ready for httplib.HTTP instance """
-        
+
         boundary = mimetools.choose_boundary()
 
         content_type = 'multipart/form-data; boundary=%s' % boundary
@@ -1577,7 +1641,7 @@ class MultipartPost:
             data += '%s\r\n' % value
         data += '--%s--\r\n' % boundary
         data += '\r\n'
-        
+
         return (content_type, data)
 
     def getContentType(self, filename):
@@ -1596,7 +1660,7 @@ class Get:
         opener = urllib2.build_opener()
         log.debug2("Sending GET: %s" % self.request.get_full_url())
         return opener.open(self.request)
-        
+
 ###########################################################################
 ##
 ## Config file strings, used when creating default config files.

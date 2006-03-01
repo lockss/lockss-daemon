@@ -1,5 +1,5 @@
 /*
- * $Id: V3LcapMessage.java,v 1.16 2006-01-12 03:13:30 smorabito Exp $
+ * $Id: V3LcapMessage.java,v 1.17 2006-03-01 02:50:14 smorabito Exp $
  */
 
 /*
@@ -92,13 +92,14 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
    * XXX: This is, obviously, a hack.  This will need to be disk-based,
    *      not memory based.  It is useful only as a naive first implementation.
    */
+  private EncodedProperty m_repairProps;
   private byte[] m_repairData;
 
   /**
    * In Vote Request messages: the URL of the last vote block received. Null if
    * this is the first (or only) request.
    */
-  private String m_lastVoteBlockURL;	
+  private String m_lastVoteBlockURL;
 
   /*
    * Common to all versions:
@@ -218,6 +219,7 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     }
     m_lastVoteBlockURL = m_props.getProperty("lastvoteblockurl");
     m_voteComplete = m_props.getBoolean("votecomplete", false);
+    m_repairProps = m_props.getEncodedProperty("repairProps");
     m_repairData = m_props.getByteArray("repair", null);
 
     // Decode the list of vote blocks.
@@ -343,6 +345,9 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     if (m_repairData != null) {
       m_props.putByteArray("repair", m_repairData);
     }
+    if (m_repairProps != null) {
+      m_props.putEncodedProperty("repairProps", m_repairProps);
+    }
 
     // XXX: These should eventually be refactored out of the encoded
     // property object. The large size of some AUs will quickly lead
@@ -361,7 +366,7 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
       vbProps.putLong("fo", vb.getFilteredOffset());
       vbProps.putLong("ul", vb.getUnfilteredLength());
       vbProps.putLong("uo", vb.getUnfilteredOffset());
-      vbProps.putByteArray("ch", vb.getChallengeHash());
+      vbProps.putByteArray("ch", vb.getHash());
       vbProps.putByteArray("ph", vb.getPlainHash());
       encodedVoteBlocks.add(vbProps);
     }
@@ -434,6 +439,10 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     this.m_nominees = nominees;
   }
 
+  public void setVoteComplete(boolean val) {
+    this.m_voteComplete = val;
+  }
+
   /**
    * In Vote messages, determine whether more vote blocks are available.
    *
@@ -477,7 +486,7 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
   public void setVoteBlocks(VoteBlocks voteBlocks) {
     m_voteBlocks = voteBlocks;
   }
-    
+
   public void setRepairDataFrom(CachedUrl cu)
       throws IOException {
     long len = cu.getContentSize();
@@ -489,10 +498,22 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     m_repairData = new byte[(int)len];
     InputStream is = cu.getUnfilteredInputStream();
     StreamUtil.readBytes(is, m_repairData, (int)len);
+    CIProperties props = cu.getProperties();
+    if (props != null) {
+      m_repairProps = EncodedProperty.fromProps(props);
+    }
   }
-  
+
   public InputStream getRepairDataInputStream() {
     return new ByteArrayInputStream(m_repairData);
+  }
+
+  public CIProperties getRepairProperties() {
+    if (m_repairProps != null) {
+      return CIProperties.fromProperties(m_repairProps);
+    } else {
+      return null;
+    }
   }
 
   //

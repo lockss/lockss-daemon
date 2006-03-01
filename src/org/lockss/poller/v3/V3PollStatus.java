@@ -1,5 +1,5 @@
 /*
-* $Id: V3PollStatus.java,v 1.1 2005-11-16 07:44:10 smorabito Exp $
+* $Id: V3PollStatus.java,v 1.2 2006-03-01 02:50:14 smorabito Exp $
  */
 
 /*
@@ -53,6 +53,8 @@ public class V3PollStatus {
   public static final String VOTER_STATUS_TABLE_NAME = "V3VoterTable";
   public static final String POLLER_DETAIL_TABLE_NAME = "V3PollerDetailTable";
   public static final String VOTER_DETAIL_TABLE_NAME = "V3VoterDetailTable";
+  public static final String ACTIVE_REPAIRS_TABLE_NAME = "V3ActiveRepairsTable";
+  public static final String COMPLETED_REPAIRS_TABLE_NAME = "V3CompletedRepairsTable";
 
   protected PollManager pollManager;
   private static Logger theLog = Logger.getLogger("V3PollerStatus");
@@ -84,6 +86,10 @@ public class V3PollStatus {
                                          ColumnDescriptor.TYPE_INT),
                     new ColumnDescriptor("status", "Status",
                                          ColumnDescriptor.TYPE_STRING),
+                    new ColumnDescriptor("activeRepairs", "Repairs (A)",
+                                         ColumnDescriptor.TYPE_INT),
+                    new ColumnDescriptor("completedRepairs", "Repairs (C)",
+                                         ColumnDescriptor.TYPE_INT),
                     new ColumnDescriptor("start", "Start",
                                          ColumnDescriptor.TYPE_DATE),
                     new ColumnDescriptor("deadline", "Deadline",
@@ -124,6 +130,8 @@ public class V3PollStatus {
       row.put("auId", poller.getAu().getName());
       row.put("participants", new Integer(poller.getPollSize()));
       row.put("status", poller.getStatusString());
+      row.put("activeRepairs", new Integer(poller.getActiveRepairs().size()));
+      row.put("completedRepairs", new Integer(poller.getCompletedRepairs().size()));
       row.put("start", new Long(poller.getCreateTime()));
       row.put("deadline", poller.getDeadline());
       row.put("pollId",
@@ -219,10 +227,6 @@ public class V3PollStatus {
     private final List colDescs =
       ListUtil.list(new ColumnDescriptor("identity", "Identity",
                                          ColumnDescriptor.TYPE_STRING),
-                    new ColumnDescriptor("reputation", "Reputation",
-                                         ColumnDescriptor.TYPE_STRING),
-                    new ColumnDescriptor("agreement", "Agreement",
-                                         ColumnDescriptor.TYPE_STRING),
                     new ColumnDescriptor("pollerNonce", "Poller's Nonce",
                                          ColumnDescriptor.TYPE_DATE),
                     new ColumnDescriptor("voterNonce", "Voter's Nonce",
@@ -241,6 +245,7 @@ public class V3PollStatus {
         theLog.error("Expected V3Poller, but got " + poll.getClass().getName());
         return;
       }
+      if (poll == null) return;
       table.setColumnDescriptors(colDescs);
       table.setDefaultSortRules(sortRules);
       table.setSummaryInfo(getSummary(poll));
@@ -261,10 +266,12 @@ public class V3PollStatus {
     private Map makeRow(ParticipantUserData voter) {
       Map row = new HashMap();
       row.put("identity", voter.getVoterId().getIdString());
-      row.put("reputation", "TBD"); // XXX: Implement reputation management!
-      row.put("agreement", "TBD");  // XXX: Implement tracking of agreement / repairs!
-      row.put("pollerNonce", ByteArray.toBase64(voter.getPollerNonce()));
-      row.put("voterNonce", ByteArray.toBase64(voter.getVoterNonce()));
+      row.put("pollerNonce",
+              (voter.getPollerNonce() == null ? "N/A" :
+                ByteArray.toBase64(voter.getPollerNonce())));
+      row.put("voterNonce",
+              (voter.getVoterNonce() == null ? "N/A" :
+                ByteArray.toBase64(voter.getVoterNonce())));
       return row;
     }
 
@@ -282,6 +289,17 @@ public class V3PollStatus {
       summary.add(new SummaryInfo("Duration",
                                   ColumnDescriptor.TYPE_TIME_INTERVAL,
                                   new Long(poll.getDuration())));
+      summary.add(new SummaryInfo("Active Repairs",
+                                  ColumnDescriptor.TYPE_INT,
+                                  new StatusTable.Reference(new Integer(poll.getActiveRepairs().size()),
+                                                            "V3ActiveRepairsTable",
+                                                            poll.getKey())));
+      summary.add(new SummaryInfo("Completed Repairs",
+                                  ColumnDescriptor.TYPE_INT,
+                                  new StatusTable.Reference(new Integer(poll.getCompletedRepairs().size()),
+                                                            "V3CompletedRepairsTable",
+                                                            poll.getKey())));
+
       long remain = TimeBase.msUntil(poll.getDeadline().getExpirationTime());
       if (remain >= 0) {
         summary.add(new SummaryInfo("Remaining",
@@ -298,6 +316,106 @@ public class V3PollStatus {
       return TABLE_TITLE;
     }
 
+    public boolean requiresKey() {
+      return true;
+    }
+  }
+
+  public static class V3ActiveRepairs
+      extends V3PollStatus implements StatusAccessor.DebugOnly {
+    static final String TABLE_TITLE = "V3 Repairs (Active)";
+    private final List sortRules =
+      ListUtil.list(new StatusTable.SortRule("url",
+                                             CatalogueOrderComparator.SINGLETON));
+    private final List colDescs =
+      ListUtil.list(new ColumnDescriptor("url", "URL",
+                                         ColumnDescriptor.TYPE_STRING),
+                    new ColumnDescriptor("repairFrom", "Repair From",
+                                         ColumnDescriptor.TYPE_STRING));
+    public V3ActiveRepairs(PollManager manager) {
+      super(manager);
+    }
+    public void populateTable(StatusTable table) throws NoSuchTableException {
+      String key = table.getKey();
+      V3Poller poller = null;
+      try {
+        poller = (V3Poller)pollManager.getPoll(key);
+      } catch (ClassCastException ex) {
+        theLog.error("Expected V3Voter, but got " + poller.getClass().getName());
+        return;
+      }
+      if (poller == null) return;
+      table.setTitle("Active Repairs for Poll " + poller.getKey());
+      table.setColumnDescriptors(colDescs);
+      table.setDefaultSortRules(sortRules);
+      table.setRows(getRows(poller));
+    }
+    private List getRows(V3Poller poller) {
+      List rows = new ArrayList();
+      for (Iterator it = poller.getActiveRepairs().iterator(); it.hasNext(); ) {
+        PollerStateBean.Repair rp = (PollerStateBean.Repair)it.next();
+        Map row = new HashMap();
+        row.put("url", rp.getUrl());
+        row.put("repairFrom",
+                rp.getRepairFrom() == null ? 
+                    "N/A (Deleted File)": rp.getRepairFrom().getIdString());
+        rows.add(row);
+      }
+      return rows;
+    }
+    public String getDisplayName() {
+      return TABLE_TITLE;
+    }
+    public boolean requiresKey() {
+      return true;
+    }
+  }
+
+  public static class V3CompletedRepairs
+      extends V3PollStatus implements StatusAccessor.DebugOnly {
+    static final String TABLE_TITLE = "V3 Repairs (Completed)";
+    private final List sortRules =
+      ListUtil.list(new StatusTable.SortRule("url",
+                                             CatalogueOrderComparator.SINGLETON));
+    private final List colDescs =
+      ListUtil.list(new ColumnDescriptor("url", "URL",
+                                         ColumnDescriptor.TYPE_STRING),
+                    new ColumnDescriptor("repairFrom", "Repaired From",
+                                         ColumnDescriptor.TYPE_STRING));
+    public V3CompletedRepairs(PollManager manager) {
+      super(manager);
+    }
+    public void populateTable(StatusTable table) throws NoSuchTableException {
+      String key = table.getKey();
+      V3Poller poller = null;
+      try {
+        poller = (V3Poller)pollManager.getPoll(key);
+      } catch (ClassCastException ex) {
+        theLog.error("Expected V3Poller, but got " + poller.getClass().getName());
+        return;
+      }
+      if (poller == null) return;
+      table.setTitle("Completed Repairs for Poll " + poller.getKey());
+      table.setColumnDescriptors(colDescs);
+      table.setDefaultSortRules(sortRules);
+      table.setRows(getRows(poller));
+    }
+    private List getRows(V3Poller poller) {
+      List rows = new ArrayList();
+      for (Iterator it = poller.getCompletedRepairs().iterator(); it.hasNext(); ) {
+        PollerStateBean.Repair rp = (PollerStateBean.Repair)it.next();
+        Map row = new HashMap();
+        row.put("url", rp.getUrl());
+        row.put("repairFrom",
+                rp.getRepairFrom() == null ? 
+                    "N/A (Deleted File)" : rp.getRepairFrom().getIdString());
+        rows.add(row);
+      }
+      return rows;
+    }
+    public String getDisplayName() {
+      return TABLE_TITLE;
+    }
     public boolean requiresKey() {
       return true;
     }
@@ -329,6 +447,7 @@ public class V3PollStatus {
         theLog.error("Expected V3Voter, but got " + voter.getClass().getName());
         return;
       }
+      if (voter == null) return;
       table.setSummaryInfo(getSummary(voter));
       table.setTitle("Status for V3 Poll " + key);
     }

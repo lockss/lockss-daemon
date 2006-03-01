@@ -1,5 +1,5 @@
 /*
- * $Id: V3Events.java,v 1.7 2006-01-12 03:13:30 smorabito Exp $
+ * $Id: V3Events.java,v 1.8 2006-03-01 02:50:14 smorabito Exp $
  */
 
 /*
@@ -51,6 +51,7 @@ public class V3Events {
   public static class WaitHashingDone extends PsmEvent {}
   public static class WaitVoteRequest extends PsmEvent {}
   public static class NoSuchRepair extends PsmEvent {}
+  public static class WaitRepairRequestOrComplete extends PsmEvent {}
 
   // Each msg event here probably wants a corresponsing instance below, and
   // an entry in msgEvents mapping opcode to instance
@@ -81,6 +82,8 @@ public class V3Events {
   public static PsmEvent evtWaitHashingDone = new WaitHashingDone();
   public static PsmEvent evtWaitVoteRequest = new WaitVoteRequest();
   public static PsmEvent evtNoSuchRepair = new NoSuchRepair();
+  public static PsmEvent evtWaitRepairRequestOrComplete =
+    new WaitRepairRequestOrComplete();
 
   public static Poll msgPoll = new Poll();
   public static PollAck msgPollAck = new PollAck();

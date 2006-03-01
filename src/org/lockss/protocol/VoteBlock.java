@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBlock.java,v 1.7 2005-12-07 21:12:01 smorabito Exp $
+ * $Id: VoteBlock.java,v 1.8 2006-03-01 02:50:14 smorabito Exp $
  */
 
 /*
@@ -53,7 +53,7 @@ public class VoteBlock implements LockssSerializable {
   private long unfilteredLength = 0;
   private long unfilteredOffset = 0;
   private byte[] plainHash;
-  private byte[] challengeHash;
+  private byte[] noncedHash;
 
   public VoteBlock() {}
 
@@ -66,7 +66,7 @@ public class VoteBlock implements LockssSerializable {
     this.unfilteredLength = uLength;
     this.unfilteredOffset = uOffset;
     this.plainHash = plainHash;
-    this.challengeHash = challengeHash;
+    this.noncedHash = challengeHash;
     this.pollType = pollType;
   }
 
@@ -110,12 +110,12 @@ public class VoteBlock implements LockssSerializable {
     this.unfilteredOffset = l;
   }
 
-  public byte[] getChallengeHash() {
-    return challengeHash;
+  public byte[] getHash() {
+    return noncedHash;
   }
 
   public void setChallengeHash(byte[] b) {
-    this.challengeHash = b;
+    this.noncedHash = b;
   }
 
   public byte[] getPlainHash() {
@@ -150,12 +150,12 @@ public class VoteBlock implements LockssSerializable {
     sb.append("fo = " + filteredOffset + ", ");
     sb.append("ul = " + unfilteredLength + ", ");
     sb.append("uo = " + unfilteredOffset + ", ");
-    sb.append("ch = " +
-	      challengeHash == null ? "null" : new String(B64Code.encode(challengeHash))
+    sb.append("nh = " +
+	      (noncedHash == null ? "null" : new String(B64Code.encode(noncedHash)))
 	      + ", ");
     sb.append("ph = " +
-              plainHash == null ? "null" : new String(B64Code.encode(plainHash))
-              + ", ");
+              (plainHash == null ? "null" : new String(B64Code.encode(plainHash)))
+              + "]");
     return sb.toString();
   }
 
@@ -176,7 +176,7 @@ public class VoteBlock implements LockssSerializable {
       vb.unfilteredLength == unfilteredLength &&
       vb.unfilteredOffset == unfilteredOffset &&
       Arrays.equals(vb.plainHash, plainHash) &&
-      Arrays.equals(vb.challengeHash, challengeHash);
+      Arrays.equals(vb.noncedHash, noncedHash);
   }
 
   public int hashCode() {
@@ -190,8 +190,8 @@ public class VoteBlock implements LockssSerializable {
     for (int i = 0; i < plainHash.length; i++) {
       result = 37 * result + plainHash[i];
     }
-    for (int i = 0; i < challengeHash.length; i++) {
-      result = 37 * result + challengeHash[i];
+    for (int i = 0; i < noncedHash.length; i++) {
+      result = 37 * result + noncedHash[i];
     }
     return result;
   }

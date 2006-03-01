@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.12 2006-01-12 03:13:30 smorabito Exp $
+ * $Id: V3Voter.java,v 1.13 2006-03-01 02:50:14 smorabito Exp $
  */
 
 /*
@@ -302,7 +302,7 @@ public class V3Voter extends BasePoll {
     CachedUrlSetHasher hasher = new BlockHasher(voterUserData.getCachedUrlSet(),
                                                 initHasherDigests(),
                                                 initHasherByteArrays(),
-                                                new BlockCompleteHandler());
+                                                new BlockEventHandler());
     HashService hashService = theDaemon.getHashService();
     return hashService.scheduleHash(hasher,
                                     Deadline.at(voterUserData.getDeadline()),
@@ -339,15 +339,15 @@ public class V3Voter extends BasePoll {
    */
   public void blockHashComplete(HashBlock block) {
     VoteBlocks blocks = voterUserData.getVoteBlocks();
-    MessageDigest plainDigest = block.getDigests()[0];
-    MessageDigest challengeDigest = block.getDigests()[1];
+    byte[] plainDigest = block.getHashes()[0];
+    byte[] challengeDigest = block.getHashes()[1];
     VoteBlock vb = new VoteBlock(block.getUrl(),
                                  block.getFilteredLength(),
                                  block.getFilteredOffset(),
                                  block.getUnfilteredLength(),
                                  block.getUnfilteredOffset(),
-                                 plainDigest.digest(),
-                                 challengeDigest.digest(),
+                                 plainDigest,
+                                 challengeDigest,
                                  VoteBlock.CONTENT_VOTE);
     blocks.addVoteBlock(vb);
   }
@@ -396,7 +396,7 @@ public class V3Voter extends BasePoll {
   }
 
   public Deadline getDeadline() {
-    return Deadline.at(voterUserData.getDeadline());
+    return Deadline.restoreDeadlineAt(voterUserData.getDeadline());
   }
 
   public long getDuration() {
@@ -432,7 +432,8 @@ public class V3Voter extends BasePoll {
     }
   }
 
-  private class BlockCompleteHandler implements BlockHasher.EventHandler {
+  private class BlockEventHandler implements BlockHasher.EventHandler {
+    public void blockStart(HashBlock block) { /* do nothing */ }
     public void blockDone(HashBlock block) {
       blockHashComplete(block);
     }
@@ -473,7 +474,7 @@ public class V3Voter extends BasePoll {
     try {
       pollSerializer.saveVoterUserData(voterUserData);
     } catch (PollSerializerException ex) {
-      log.warning("Unable to save poller state!", ex);
+      log.warning("Unable to save voter state.");
     }
   }
 

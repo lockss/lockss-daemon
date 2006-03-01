@@ -1,5 +1,5 @@
 /*
- * $Id: HashBlock.java,v 1.2 2005-09-07 03:06:29 smorabito Exp $
+ * $Id: HashBlock.java,v 1.3 2006-03-01 02:50:14 smorabito Exp $
  */
 
 /*
@@ -34,11 +34,11 @@ package org.lockss.hasher;
 import java.security.*;
 
 import org.lockss.plugin.*;
+import org.lockss.util.LockssSerializable;
 
 /** Result of a single-block V3 hash, passed to the ContentHasher's
  * HashBlockCallback */
-public class HashBlock {
-  CachedUrl cu;
+public class HashBlock implements LockssSerializable {
   String url;
   long filteredOffset;
   long filteredLength;
@@ -46,18 +46,14 @@ public class HashBlock {
   long unfilteredLength;
   boolean endOfFile;
   boolean lastVersion;
-  MessageDigest[] digests;
+  byte[][] hashes;
 
   public HashBlock(CachedUrl cu) {
-    this.cu = cu;
+    this.url = cu.getUrl();
   }
-
-  public CachedUrl getCachedUrl() {
-    return cu;
-  }
-
+  
   public String getUrl() {
-    return cu.getUrl();
+    return url;
   }
 
   public void setFilteredOffset(long offset) {
@@ -93,11 +89,15 @@ public class HashBlock {
   }
 
   public void setDigests(MessageDigest[] digests) {
-    this.digests = digests;
+    int len = digests.length;
+    hashes = new byte[len][];
+    for (int i = 0; i < digests.length; i++) {
+      hashes[i] = digests[i].digest();
+    }
   }
-
-  public MessageDigest[] getDigests() {
-    return digests;
+  
+  public byte[][] getHashes() {
+    return hashes;
   }
 
   public void setEndOfFile(boolean val) {

@@ -2,7 +2,7 @@ package org.lockss.test;
 
 import org.lockss.poller.v3.*;
 /*
- * $Id: V3TestUtil.java,v 1.2 2006-01-12 03:13:30 smorabito Exp $
+ * $Id: V3TestUtil.java,v 1.3 2006-03-01 02:50:12 smorabito Exp $
  */
 
 /*
@@ -60,7 +60,6 @@ public class V3TestUtil extends LockssTestCase {
       assertEquals(a.getVoteBlocks().size(), b.getVoteBlocks().size());
     }
     assertEquals(a.isOuterCircle(), b.isOuterCircle());
-    assertEquals(a.getRepairTarget(), b.getRepairTarget());
     assertEquals(a.isVoteComplete(), b.isVoteComplete());
     if (a.getPsmInterpState() == null) {
       assertNull(b.getPsmInterpState());
@@ -94,7 +93,6 @@ public class V3TestUtil extends LockssTestCase {
     assertEquals(b1.getDeadline(), b2.getDeadline());
     assertEquals(b1.getPollerId().getIdString(),
                  b2.getPollerId().getIdString());
-    assertEquals(b1.allVotersReadyToTally(), b2.allVotersReadyToTally());
   }
 
   /**

@@ -1,5 +1,5 @@
 /*
- * $Id: BlockTally.java,v 1.6 2006-01-12 03:13:30 smorabito Exp $
+ * $Id: BlockTally.java,v 1.7 2006-03-01 02:50:14 smorabito Exp $
  */
 
 /*
@@ -46,26 +46,37 @@ public class BlockTally {
   public static final int RESULT_HASHING = 0;
   public static final int RESULT_NOQUORUM = 1;
   public static final int RESULT_TOO_CLOSE = 2;
-  public static final int RESULT_LOST = 3;
-  public static final int RESULT_LOST_EXTRA_BLOCK = 4;
-  public static final int RESULT_LOST_MISSING_BLOCK = 5;
-  public static final int RESULT_WON = 6;
-  public static final int RESULT_REPAIRED = 7;
+  public static final int RESULT_TOO_CLOSE_EXTRA_BLOCK = 3;
+  public static final int RESULT_TOO_CLOSE_MISSING_BLOCK = 4;
+  public static final int RESULT_LOST = 5;
+  public static final int RESULT_LOST_EXTRA_BLOCK = 6;
+  public static final int RESULT_LOST_MISSING_BLOCK = 7;
+  public static final int RESULT_WON = 8;
+  public static final int RESULT_REPAIRED = 9;
 
   // List of voters with whom we agree
   private List agreeVoters = new ArrayList();
   // List of voters with whom we disagree
   private List disagreeVoters = new ArrayList();
-  // List of voters who we believe have an extra block.
+  // List of voters who we believe do not have a block that we do.
   private List extraBlockVoters = new ArrayList();
-  // List of voters who we believe are missing a block that we have.
-  private List missingBlockVoters = new ArrayList();
+  // List of voters who we believe have an block that we do not.
+  // This is a map of URLs to peer identities.
+  // JAVA5: Map<String,Set<PeerIdentity>>
+  private Map missingBlockVoters = new HashMap();
+  // Ordered map of votes for this block.  The order is significant.
+  // JAVA5: OrderedHashMap<PeerIdentity,VoteBlock>
+  private LinkedHashMap votes = new LinkedHashMap();
+  // Name of the missing block, if any.
+  private String missingBlockUrl;
 
   private int result;
   private int quorum;
 
+  private static final Logger log = Logger.getLogger("BlockTally");
+
   public BlockTally(int quorum) {
-    this.reset();
+    this.quorum = quorum;
   }
 
   public String getStatusString() {
@@ -76,6 +87,10 @@ public class BlockTally {
       return "No Quorum";
     case RESULT_TOO_CLOSE:
       return "Too Close";
+    case RESULT_TOO_CLOSE_EXTRA_BLOCK:
+      return "Too Close - Extra Block";
+    case RESULT_TOO_CLOSE_MISSING_BLOCK:
+      return "Too Close - Missing Block";
     case RESULT_LOST:
       return "Lost";
     case RESULT_LOST_EXTRA_BLOCK:
@@ -95,36 +110,41 @@ public class BlockTally {
     int agree = agreeVoters.size();
     int disagree = disagreeVoters.size();
     int extraBlocks = extraBlockVoters.size();
-    int missingBlocks = missingBlockVoters.size();
+    int missingBlocks = getAllMissingBlockVoters().size();
 
     if (agree + disagree < quorum) {
       result = RESULT_NOQUORUM;
-    }
-    else if (agree > disagree) {
-      result = RESULT_WON;
-    }
-    // XXX: Margins!
-    else if (agree < disagree) {
-      if (extraBlocks > quorum) {
-        result = RESULT_LOST_EXTRA_BLOCK;
-      } else if (missingBlocks > quorum) {
-        result = RESULT_LOST_MISSING_BLOCK;
-      } else {
-        result = RESULT_LOST;
+    } else if (extraBlocks > quorum) {
+      result = RESULT_LOST_EXTRA_BLOCK;
+    } else if (missingBlocks > quorum) {
+      // Attempt to find the name of the missing block, if possible.
+      String missingUrl = null;
+      int maxMissingUrlCount = 0;
+      for (Iterator iter = missingBlockVoters.keySet().iterator(); iter.hasNext(); ) {
+        String url = (String)iter.next();
+        Set s = (Set)missingBlockVoters.get(url);
+        if (s.size() > maxMissingUrlCount) {
+          maxMissingUrlCount = s.size();
+          missingUrl = url;
+        }
       }
+      if (maxMissingUrlCount > quorum) {
+        log.debug("Found agreement on missing URL name: " + missingUrl);
+        result = RESULT_LOST_MISSING_BLOCK;
+        this.missingBlockUrl = missingUrl;
+      } else {
+        log.debug("Could not reach agreement on missing URL name: " + missingBlockVoters);
+        result = RESULT_TOO_CLOSE_MISSING_BLOCK;
+      }
+    } else if (agree > disagree) {
+      result = RESULT_WON;
+    } else {
+      result = RESULT_LOST;
     }
   }
 
   public int getTallyResult() {
     return result;
-  }
-
-  public void reset() {
-    result = RESULT_HASHING;
-    disagreeVoters.clear();
-    agreeVoters.clear();
-    missingBlockVoters.clear();
-    extraBlockVoters.clear();
   }
 
   public void addDisagreeVoter(PeerIdentity id) {
@@ -148,16 +168,52 @@ public class BlockTally {
     disagreeVoters.add(id);
   }
 
-  public List getExtraBlockVoters() {
+  public Collection getExtraBlockVoters() {
     return extraBlockVoters;
   }
+  
+  /**
+   * Return the name of the missing block, if any.
+   * 
+   * @return
+   */
+  public String getMissingBlockUrl() {
+    return missingBlockUrl;
+  }
 
-  public void addMissingBlockVoter(PeerIdentity id) {
-    missingBlockVoters.add(id);
+  public void addMissingBlockVoter(PeerIdentity id, String url) {
+    Set voters;
+    if ((voters = (Set)missingBlockVoters.get(url)) == null) {
+      voters = new HashSet();
+      missingBlockVoters.put(url, voters);
+    }
+    voters.add(id);
     disagreeVoters.add(id);
   }
 
-  public List getMissingBlockVoters() {
-    return missingBlockVoters;
+  private Collection getAllMissingBlockVoters() {
+    Set voters = new HashSet();
+    for (Iterator iter = missingBlockVoters.values().iterator(); iter.hasNext(); ) {
+      Set s = (Set)iter.next();
+      voters.addAll(s);
+    }
+    return voters;
+  }
+  
+  /**
+   * Return a set of all peers that claim to have the specified URL.
+   * @param url
+   * @return a set of all peers that claim to have the specified URL.
+   */
+  public Collection getMissingBlockVoters(String url) {
+    return (Set)missingBlockVoters.get(url);
+  }
+  
+  public void addVoteForBlock(PeerIdentity id, VoteBlock vb) {
+    votes.put(id, vb);
+  }
+  
+  public LinkedHashMap getVotesForBlock() {
+    return votes; 
   }
 }

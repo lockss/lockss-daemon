@@ -1,5 +1,5 @@
 /*
- * $Id: ParticipantUserData.java,v 1.2 2005-12-01 01:54:44 smorabito Exp $
+ * $Id: ParticipantUserData.java,v 1.3 2006-03-01 02:50:14 smorabito Exp $
  */
 
 /*
@@ -47,7 +47,6 @@ public class ParticipantUserData implements LockssSerializable {
   private String hashAlgorithm;
   private VoteBlocks voteBlocks;
   private List nominees;
-  private String target;
   private byte[] pollerNonce;
   private byte[] voterNonce;
   // XXX: Effort proofs will eventually not be byte arrays.
@@ -121,14 +120,6 @@ public class ParticipantUserData implements LockssSerializable {
 
   public List getNominees() {
     return nominees;
-  }
-
-  public void setRepairTarget(String target) {
-    this.target = target;
-  }
-
-  public String getRepairTarget() {
-    return target;
   }
 
   public void setHashAlgorithm(String s) {
@@ -209,6 +200,11 @@ public class ParticipantUserData implements LockssSerializable {
 
   public void setVoteBlockIndex(int i) {
     this.voteBlockIndex = i;
+  }
+  
+  // Convenience method.
+  public VoteBlock getVoteBlock(int index) {
+    return voteBlocks.getVoteBlock(index);
   }
 
   /**

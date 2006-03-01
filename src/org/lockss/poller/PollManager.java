@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.164 2006-02-23 06:43:37 tlipkis Exp $
+ * $Id: PollManager.java,v 1.165 2006-03-01 02:50:14 smorabito Exp $
  */
 
 /*
@@ -84,6 +84,8 @@ public class PollManager
   private AlertManager theAlertManager = null;
   private static SystemMetrics theSystemMetrics = null;
   private AuEventHandler auEventHandler;
+  private HashMap serializedPollers;
+  private HashMap serializedVoters;
 
   // our configuration variables
   protected long m_recentPollExpireTime = DEFAULT_RECENT_EXPIRATION;
@@ -135,19 +137,23 @@ public class PollManager
                                       new V3PollStatus.V3PollerStatusDetail(this));
     statusServ.registerStatusAccessor(V3PollStatus.VOTER_DETAIL_TABLE_NAME,
                                       new V3PollStatus.V3VoterStatusDetail(this));
+    statusServ.registerStatusAccessor(V3PollStatus.ACTIVE_REPAIRS_TABLE_NAME,
+                                      new V3PollStatus.V3ActiveRepairs(this));
+    statusServ.registerStatusAccessor(V3PollStatus.COMPLETED_REPAIRS_TABLE_NAME,
+                                      new V3PollStatus.V3CompletedRepairs(this));
 
     // register our AU event handler
     auEventHandler = new AuEventHandler.Base() {
 	public void auCreated(ArchivalUnit au) {
-// 	  restoreAuPolls(au);
+ 	  restoreAuPolls(au);
 	}
 	public void auDeleted(ArchivalUnit au) {
 	  cancelAuPolls(au);
 	}};
     theDaemon.getPluginManager().registerAuEventHandler(auEventHandler);
 
-    // One time load of stored V3 polls.
-    restoreV3Polls();
+    // One time load of an in-memory map of AU IDs to directories. 
+    preloadStoredPolls();
   }
 
   /**
@@ -167,6 +173,8 @@ public class PollManager
     statusServ.unregisterStatusAccessor(V3PollStatus.VOTER_STATUS_TABLE_NAME);
     statusServ.unregisterStatusAccessor(V3PollStatus.POLLER_DETAIL_TABLE_NAME);
     statusServ.unregisterStatusAccessor(V3PollStatus.VOTER_DETAIL_TABLE_NAME);
+    statusServ.unregisterStatusAccessor(V3PollStatus.ACTIVE_REPAIRS_TABLE_NAME);
+    statusServ.unregisterStatusAccessor(V3PollStatus.COMPLETED_REPAIRS_TABLE_NAME);
     statusServ.unregisterObjectReferenceAccessor(PollerStatus.MANAGER_STATUS_TABLE_NAME,
                                                  ArchivalUnit.class);
 
@@ -641,57 +649,111 @@ public class PollManager
    * Load and start V3 polls that are found in a serialized state
    * on the disk.
    */
-  private void restoreV3Polls() {
+  private void preloadStoredPolls() {
+    this.serializedPollers = new HashMap();
+    this.serializedVoters = new HashMap();
     String relStateDir =
       CurrentConfig.getParam(V3Serializer.PARAM_V3_STATE_LOCATION,
                              V3Serializer.DEFAULT_V3_STATE_LOCATION);
-
     File stateDir =
       ConfigManager.getConfigManager().getPlatformDir(relStateDir);
-
-    File[] savedPolls = stateDir.listFiles();
-    if (savedPolls == null || savedPolls.length == 0) {
+    File[] dirs = stateDir.listFiles();
+    if (dirs == null || dirs.length == 0) {
       theLog.debug2("No saved polls found.");
       return;
     }
-    for (int ix = 0; ix < savedPolls.length; ix++) {
-      File poller = new File(savedPolls[ix],
+    for (int ix = 0; ix < dirs.length; ix++) {
+      File poller = new File(dirs[ix],
                              V3PollerSerializer.POLLER_STATE_BEAN);
       if (poller != null && poller.exists()) {
-        theLog.debug2("Found serialized poller in file: " + poller);
-        // Restore poller
+        // Add this poll dir to the serialized polls map.
         try {
-          V3Poller p = new V3Poller(theDaemon, savedPolls[ix]);
-          theLog.debug2("Restored poll: " + p.getKey());
-          addPoll(p);
-          p.startPoll();
+          V3PollerSerializer pollSerializer =
+            new V3PollerSerializer(theDaemon, dirs[ix]);
+          PollerStateBean psb = pollSerializer.loadPollerState();
+          theLog.debug2("Found saved poll for AU " + psb.getAuId()
+                        + " in directory " + dirs[ix]);
+          Set pollsForAu = null;
+          if ((pollsForAu = (Set)serializedPollers.get(psb.getAuId())) == null) {
+            pollsForAu = new HashSet();
+            serializedPollers.put(psb.getAuId(), pollsForAu);
+          }
+          pollsForAu.add(dirs[ix]);
         } catch (PollSerializerException e) {
-          theLog.error("Unable to restore poller from: " + savedPolls[ix], e);
+          theLog.error("Unable to restore poller from: " + dirs[ix], e);
           continue;
         }
       } else {
-        theLog.info("No serialized poller found.");
+        theLog.warning("No serialized poller found in dir " + dirs[ix]);
       }
-      File voter = new File(savedPolls[ix],
+      File voter = new File(dirs[ix],
                             V3VoterSerializer.VOTER_USER_DATA_FILE);
 
       if (voter != null && voter.exists()) {
         theLog.info("Found serialized voter in file: " + voter);
         try {
-          V3Voter v = new V3Voter(theDaemon, savedPolls[ix]);
-          theLog.debug2("Restoring voter: " + v.getKey());
-          addPoll(v);
-          v.startPoll();
+          V3VoterSerializer voterSerializer =
+            new V3VoterSerializer(theDaemon, dirs[ix]);
+          VoterUserData vd = voterSerializer.loadVoterUserData();
+          theLog.debug2("Found saved poll for AU " + vd.getAuId()
+                        + " in directory " + dirs[ix]);
+          Set pollsForAu = null;
+          if ((pollsForAu = (Set)serializedVoters.get(vd.getAuId())) == null) {
+            pollsForAu = new HashSet();
+            serializedVoters.put(vd.getAuId(), pollsForAu);
+          }
+          pollsForAu.add(dirs[ix]);
         } catch (PollSerializerException e) {
-          theLog.error("Unable to restore poller from: " + savedPolls[ix], e);
+          theLog.error("Unable to restore voter from: " + dirs[ix], e);
           continue;
         }
       } else {
-        theLog.info("No serialized voter found.");
+        theLog.warning("No serialized voter found in dir " + dirs[ix]);
       }
     }
   }
 
+  public void restoreAuPolls(ArchivalUnit au) {
+    // Shouldn't happen.
+    if (serializedPollers == null) {
+      throw new NullPointerException("Null serialized poll map.");
+    }
+    if (serializedVoters == null) {
+      throw new NullPointerException("Null serialized voter map.");
+    }
+    // Restore any pollers for this AU.
+    Set pollDirs = (Set)serializedPollers.get(au.getAuId());
+    if (pollDirs != null) {
+      Iterator pollDirIter = pollDirs.iterator();
+      while (pollDirIter.hasNext()) {
+        File dir = (File)pollDirIter.next();
+        try {
+          V3Poller p = new V3Poller(theDaemon, dir);
+          addPoll(p);
+          p.startPoll();
+        } catch (PollSerializerException e) {
+          theLog.error("Unable to restore poller from dir: " + dir, e);
+        }
+      }
+    }
+    
+    // Restore any voters for this AU.
+    Set voterDirs = (Set)serializedVoters.get(au.getAuId());
+    if (voterDirs != null) {
+      Iterator voterDirIter = voterDirs.iterator();
+      while (voterDirIter.hasNext()) {
+        File dir = (File)voterDirIter.next();
+        try {
+          V3Voter v = new V3Voter(theDaemon, dir);
+          addPoll(v);
+          v.startPoll();
+        } catch (PollSerializerException e) {
+          theLog.error("Unable to restore poller from dir: " + dir, e);
+        }
+      }
+    }
+  }
+  
   //--------------- PollerStatus Accessors -----------------------------
   public Collection getV1Polls() {
     Collection polls = new ArrayList();

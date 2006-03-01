@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.205 2005-11-16 07:44:09 smorabito Exp $
+ * $Id: NodeManagerImpl.java,v 1.206 2006-03-01 02:50:13 smorabito Exp $
  */
 
 /*
@@ -618,10 +618,6 @@ public class NodeManagerImpl
         CachedUrlSet extraCus = getChildCus(url, nodeState);
         logger.debug("deleting node: " + url);
         deleteNode(extraCus);
-        //set crawl status to DELETED
-        logger.debug3("marking node: " + url + " deleted.");
-        NodeState extraState = getNodeState(extraCus);
-        extraState.getCrawlState().type = CrawlState.NODE_DELETED;
       } catch (Exception e) {
         logger.error("Couldn't delete node.", e);
         // the treewalk will fix this eventually
@@ -630,7 +626,7 @@ public class NodeManagerImpl
 
     // return false if any repairs were scheduled
     return repairsDone;
-  }
+  } 
 
   /**
    * Creates a CUS from the child url (typically a simple name) and its parent
@@ -1577,9 +1573,11 @@ public class NodeManagerImpl
    * @param cus CachedUrlSet
    * @throws IOException
    */
-  private void deleteNode(CachedUrlSet cus) throws IOException {
+  public void deleteNode(CachedUrlSet cus) throws IOException {
     LockssRepository repository = theDaemon.getLockssRepository(managedAu);
     repository.deleteNode(cus.getUrl());
+    NodeState extraState = getNodeState(cus);
+    extraState.getCrawlState().type = CrawlState.NODE_DELETED;
   }
 
   /**

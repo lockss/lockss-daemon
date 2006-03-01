@@ -1,5 +1,5 @@
 /*
- * $Id: V3LcapMessageFactory.java,v 1.7 2006-01-12 03:13:30 smorabito Exp $
+ * $Id: V3LcapMessageFactory.java,v 1.8 2006-03-01 02:50:14 smorabito Exp $
  */
 
 /*
@@ -89,7 +89,9 @@ public class V3LcapMessageFactory {
                                         ud.getPollerId());
   }
 
-  public static V3LcapMessage makeRepairRequestMsg(ParticipantUserData ud) {
+  public static V3LcapMessage makeRepairRequestMsg(ParticipantUserData ud,
+                                                   String targetUrl,
+                                                   byte[] repairEffortProof) {
     V3LcapMessage msg =
       V3LcapMessage.makeRequestMsg(ud.getAuId(),
                                    ud.getKey(),
@@ -101,8 +103,8 @@ public class V3LcapMessageFactory {
                                    V3LcapMessage.MSG_REPAIR_REQ,
                                    ud.getDeadline(),
                                    ud.getPollerId());
-    msg.setTargetUrl(ud.getRepairTarget());
-    msg.setEffortProof(ud.getRepairEffortProof());
+    msg.setTargetUrl(targetUrl);
+    msg.setEffortProof(repairEffortProof);
     return msg;
   }
 
@@ -166,6 +168,8 @@ public class V3LcapMessageFactory {
                                    V3LcapMessage.MSG_VOTE,
                                    ud.getDeadline(),
                                    ud.getPollerId());
+    // XXX: Fix when multiple-message voting is supported.
+    msg.setVoteComplete(true);
     msg.setVoteBlocks(ud.getVoteBlocks());
     return msg;
   }

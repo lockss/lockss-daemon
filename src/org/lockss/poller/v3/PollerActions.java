@@ -1,5 +1,5 @@
 /*
- * $Id: PollerActions.java,v 1.8 2006-01-12 03:13:30 smorabito Exp $
+ * $Id: PollerActions.java,v 1.9 2006-03-01 02:50:14 smorabito Exp $
  */
 
 /*
@@ -165,7 +165,6 @@ public class PollerActions {
   }
 
   public static PsmEvent handleReceiveVote(PsmMsgEvent evt, PsmInterp interp) {
-    log.debug("Entering 'handleReceiveVote'...");
     ParticipantUserData ud = getUserData(interp);
     V3LcapMessage msg = (V3LcapMessage) evt.getMessage();
     log.debug2("Received vote from voter " + ud.getVoterId() + " in poll "
@@ -183,59 +182,33 @@ public class PollerActions {
     return V3Events.evtWaitBlockComplete;
   }
 
-  public static PsmEvent handleProveRepairEffort(PsmEvent evt,
-                                                 PsmInterp interp) {
-    ParticipantUserData ud = getUserData(interp);
-    log.debug2("Proving repair effort for voter " + ud.getVoterId()
-               + " in poll " + ud.getKey());
-    // XXX: Generate real repair effort proof, TBD
-    byte[] proof = ByteArray.makeRandomBytes(20);
-    ud.setRepairEffortProof(proof);
-    return V3Events.evtOk;
-  }
-
-  public static PsmEvent handleSendRepairRequest(PsmEvent evt,
-                                                 PsmInterp interp) {
-    ParticipantUserData ud = getUserData(interp);
-    log.debug2("Sending repair request to voter " + ud.getVoterId()
-               + " in poll " + ud.getKey());
-    try {
-      ud.sendMessageTo(V3LcapMessageFactory.makeRepairRequestMsg(ud),
-                       ud.getVoterId());
-    } catch (IOException ex) {
-      log.error("Unable to send message: ", ex);
-      return V3Events.evtError;
-    }
-    return V3Events.evtOk;
-  }
-
   public static PsmEvent handleReceiveRepair(PsmMsgEvent evt, PsmInterp interp) {
     ParticipantUserData ud = getUserData(interp);
     V3LcapMessage msg = (V3LcapMessage)evt.getMessage();
-    log.debug2("Received repair from voter " + ud.getVoterId() + " in poll "
-               + ud.getKey());
+    log.debug2("Received repair from voter "
+               + msg.getOriginatorId() + " in poll "
+               + msg.getKey() + " for URL "
+               + msg.getTargetUrl());
     // Apply the repair
-    String repairTarget = ud.getRepairTarget();
+    String repairTarget = msg.getTargetUrl();
     UrlCacher uc =
       ud.getCachedUrlSet().getArchivalUnit().makeUrlCacher(repairTarget);
     try {
-      // XXX: What should be done about the CIProperties? 
-      CIProperties props = uc.getUncachedProperties();
-      uc.storeContent(msg.getRepairDataInputStream(),  props);
+      CIProperties props = msg.getRepairProperties();
+      if (props == null) {
+        log.warning("Warning:  No CIProperties included with repair " +
+                        "for block " + repairTarget);
+        // This probably isn't right
+        props = uc.getUncachedProperties();
+      }
+      uc.storeContent(msg.getRepairDataInputStream(),
+                      props);
     } catch (IOException ex) {
       log.error("Error attempting to store repair", ex);
       return V3Events.evtError;
     }
-    
-    ud.getPoller().receivedRepair(ud.getRepairTarget(), ud.getVoterId());
-    return V3Events.evtOk;
-  }
 
-  public static PsmEvent handleProcessRepair(PsmEvent evt, PsmInterp interp) {
-    // XXX: Implement.
-    ParticipantUserData ud = getUserData(interp);
-    log.debug2("Processing repair from voter " + ud.getVoterId() + " in poll "
-               + ud.getKey());
+    ud.getPoller().receivedRepair(msg.getTargetUrl(), msg.getOriginatorId());
     return V3Events.evtOk;
   }
 

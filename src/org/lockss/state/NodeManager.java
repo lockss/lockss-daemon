@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManager.java,v 1.31 2005-07-19 00:14:10 troberts Exp $
+ * $Id: NodeManager.java,v 1.32 2006-03-01 02:50:13 smorabito Exp $
  */
 
 /*
@@ -115,6 +115,13 @@ public interface NodeManager extends LockssAuManager {
    */
   public DamagedNodeSet getDamagedNodes();
 
+  /**
+   * Mark the given CachedUrlSet deleted.
+   * 
+   * @param cus The CUS to delete.
+   */
+  public void deleteNode(CachedUrlSet cus) throws IOException;
+  
   /**
    * Looks at the state of the node, and indicates if a poll needs to be called.
    * It does not schedule polls, which should be done via

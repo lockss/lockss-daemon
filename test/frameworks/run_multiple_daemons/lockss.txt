@@ -1,8 +1,16 @@
-# configure simulated AU
-org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~localA.branch=3
-org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~localA.depth=2
-org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~localA.numFiles=4
-org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~localA.root=localA
+# configure simulated AU for v1
+org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~V1.root=V1
+org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~V1.branch=3
+org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~V1.depth=2
+org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~V1.numFiles=4
+
+# AU suitable for V3 testing
+org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~V3.root=V3
+org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~V3.branch=1
+org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~V3.depth=0
+org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~V3.fileTypes=17
+org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~V3.numFiles=20
+org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~V3.binFileSize=2048
 
 # LOCKSS & LCAP tuning parameters
 org.lockss.log.default.level=debug
@@ -49,6 +57,22 @@ org.lockss.treewalk.start.delay=10s
 org.lockss.comm.router.beacon.interval=1m
 org.lockss.baseau.toplevel.poll.interval.min=5m
 org.lockss.baseau.toplevel.poll.interval.max=15m
+
+# V3
+org.lockss.scomm.enabled=true
+org.lockss.scomm.maxMessageSize=3355443
+org.lockss.poll.v3.quorum=3
+org.lockss.poll.minPollSize=3
+org.lockss.poll.maxPollSize=3
+org.lockss.poll.minNominationSize=1
+org.lockss.poll.maxNominationSize=1
+org.lockss.poll.minPollDuration=20m
+org.lockss.poll.maxPollDuration=1h
+org.lockss.id.initialV3PeerList=\
+    TCP:[127.0.0.1]:9720;\
+    TCP:[127.0.0.1]:9721;\
+    TCP:[127.0.0.1]:9722;\
+    TCP:[127.0.0.1]:9723
 
 org.lockss.metrics.slowest.hashrate = 250
 org.lockss.state.recall.delay=5m

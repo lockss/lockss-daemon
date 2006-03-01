@@ -1,5 +1,5 @@
 /*
- * $Id: TestPeerIdentity.java,v 1.4 2006-01-12 00:48:38 tlipkis Exp $
+ * $Id: TestPeerIdentity.java,v 1.5 2006-03-01 02:50:12 smorabito Exp $
  */
 
 /*
@@ -100,5 +100,4 @@ public class TestPeerIdentity extends LockssTestCase {
     assertEquals(pidv3.getIdString(), back3.getIdString());
     assertEquals(pidv3.getPeerAddress(), back3.getPeerAddress());
   }
-
 }

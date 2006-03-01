@@ -50,13 +50,13 @@ class LockssTestCase(unittest.TestCase):
 
     def getStartPort(self):
         return None
-    
+
     def setUp(self):
         ## Log start of test.
         log.info("==========================================================")
         log.info(self.__doc__)
         log.info("----------------------------------------------------------")
-        
+
         ##
         ## Create a framework for the test.
         ##
@@ -73,7 +73,7 @@ class LockssTestCase(unittest.TestCase):
         ## List of clients, one for each daemon
         ##
         self.clients = self.framework.clientList
-        
+
         unittest.TestCase.setUp(self)
 
     def tearDown(self):
@@ -95,7 +95,7 @@ class LockssTestCase(unittest.TestCase):
                     'Framework did not stop.')
 
         unittest.TestCase.tearDown(self)
-    
+
 class LockssAutoStartTestCase(LockssTestCase):
     """ Extension of LockssTestCase that automatically starts the
     framework in the setUp method.  Typically, you should extend this
@@ -129,7 +129,7 @@ class SucceedingTestTestCase(LockssAutoStartTestCase):
         return
 
 class FailingTestTestCase(LockssAutoStartTestCase):
-    " Test case that fails immediately after daemons start. "    
+    " Test case that fails immediately after daemons start. "
     def runTest(self):
         log.info("Failing immediately.")
         self.fail("Failed on purpose.")
@@ -155,7 +155,7 @@ class ImmediateFailingTestTestCase(unittest.TestCase):
 ##
 class SimpleDamageTestCase(LockssAutoStartTestCase):
     "Test recovery from random file damage."
-    
+
     def runTest(self):
         # Tiny AU for simple testing.
         simAu = SimulatedAu('simContent', 0, 0, 3)
@@ -232,7 +232,7 @@ class SimpleDamageTestCase(LockssAutoStartTestCase):
 ##
 class SimpleDeleteTestCase(LockssAutoStartTestCase):
     "Test recovery from a random file deletion."
-    
+
     def runTest(self):
         # Tiny AU for simple testing.
         simAu = SimulatedAu('simContent', 0, 0, 3)
@@ -741,7 +741,7 @@ class RandomizedDeleteTestCase(LockssAutoStartTestCase):
 class RandomizedExtraFileTestCase(LockssAutoStartTestCase):
     """ Test recovery from random node creation in a randomly sized AU. """
 
-    def runTest(self):    
+    def runTest(self):
 	random.seed(time.time())
         depth = random.randint(0, 2)
         branch = random.randint(0, 2)
@@ -838,7 +838,7 @@ class TotalLossRecoveryTestCase(LockssTestCase):
         log.info("Waiting for framework to come ready.")
         for client in self.clients:
             client.waitForDaemonReady()
-            
+
     def runTest(self):
         # Two AUs: One for before the loss, one for after.
         simAu = SimulatedAu('simContent', 0, 0, 0)
@@ -854,7 +854,7 @@ class TotalLossRecoveryTestCase(LockssTestCase):
             if not (client.waitForSuccessfulCrawl(simAu)):
                 self.fail("AUs never completed initial crawl.")
         log.info("AUs completed initial crawl.")
-        
+
         # Select the appropriate client
         client = self.damagedClient
 
@@ -876,7 +876,7 @@ class TotalLossRecoveryTestCase(LockssTestCase):
         log.info("Backing up cache configuration...")
         client.backupConfiguration()
         log.info("Backed up successfully.")
-        
+
         # All daemons should have recorded their agreeing peers at this
         # point, so stop the client we're going to damage.
         client.daemon.stop()
@@ -904,13 +904,13 @@ class TotalLossRecoveryTestCase(LockssTestCase):
                      "org.lockss.title.sim1.param.4.value": "0",
                      "org.lockss.title.sim1.param.5.key": "pub_down",
                      "org.lockss.title.sim1.param.5.value": "true"}
-        
-        self.framework.appendLocalConfig(extraConf, client) 
+
+        self.framework.appendLocalConfig(extraConf, client)
 
         time.sleep(3) # Give time for things to settle before starting again
-        
+
         client.daemon.start()
-        
+
         # Wait for the client to come up
         assert client.waitForDaemonReady(), "Daemon never became ready"
         log.info("Started daemon running on UI port %s" % client.port)
@@ -921,7 +921,7 @@ class TotalLossRecoveryTestCase(LockssTestCase):
         log.info("Restoring cache configuration...")
         client.restoreConfiguration(simAu)
         log.info("Restored successfully.")
-        
+
         # These should be equal AU IDs, so both should return true
         assert client.hasAu(simAu)
 
@@ -955,7 +955,7 @@ class TotalLossRecoveryTestCase(LockssTestCase):
 
         # Assert that the repair came from a cache, not from the publisher.
         assert client.isContentRepairedFromCache(simAu)
-        
+
         # End of test.
 
 ## Test repairs from a cache.  Create a small AU, damage it, and wait
@@ -963,7 +963,7 @@ class TotalLossRecoveryTestCase(LockssTestCase):
 ## 'LockssTestCase' instead of 'LockssAutoStartTestCase' so we can
 ## control adding extra parameters forcing repair from caches to the
 ## daemon to be damaged before starting up the test framework.
-        
+
 class SimpleDamageRepairFromCacheTestCase(LockssTestCase):
     """ Test repairing simple damage from another cache. """
     def setUp(self):
@@ -977,7 +977,7 @@ class SimpleDamageRepairFromCacheTestCase(LockssTestCase):
         extraConf = {"org.lockss.crawler.repair.repair_from_cache_percent": "100",
                      "org.lockss.crawler.repair_from_cache_addr": "127.0.0.1"}
         self.framework.appendLocalConfig(extraConf, self.damagedClient)
-        
+
         ##
         ## Start the framework.
         ##
@@ -1040,7 +1040,7 @@ class SimpleDamageRepairFromCacheTestCase(LockssTestCase):
         log.info("Waiting for top level content poll.")
         assert client.waitForTopLevelContentPoll(simAu, timeout=self.timeout),\
                "Never called top level content poll"
-        log.info("Called top level content poll.")	
+        log.info("Called top level content poll.")
 
         # expect to see the top level node marked repairing.
         log.info("Waiting for lockssau to be marked 'damaged'.")
@@ -1085,10 +1085,10 @@ class TinyUiTests(LockssTestCase):
         self.tinyUiClient = self.clients[0]
         time.sleep(2)
         self.tinyUiClient.waitForCanConnectToHost(sleep=2)
-            
+
     def getDaemonCount(self):
         return 1
-    
+
     def getConfigUrls(self):
         return (self.getTestUrl(),)
 
@@ -1124,7 +1124,7 @@ class TinyUiUnknownHostTestCase(TinyUiTests):
 
     def expectedPattern(self):
         return 'UnknownHostException.*unknownhost\.lockss\.org'
-        
+
 class TinyUiMalformedUrlTestCase(TinyUiTests):
     """ Test that malformed config URL gets Tiny UI """
     def getTestUrl(self):
@@ -1132,7 +1132,7 @@ class TinyUiMalformedUrlTestCase(TinyUiTests):
 
     def expectedPattern(self):
         return 'MalformedURLException'
-        
+
 class TinyUiForbiddenTestCase(TinyUiTests):
     """ Test that a forbidden config fetch gets Tiny UI """
     def getTestUrl(self):
@@ -1140,7 +1140,7 @@ class TinyUiForbiddenTestCase(TinyUiTests):
 
     def expectedPattern(self):
         return '403: Forbidden'
-        
+
 # XXX should find a guaranteed non-listening port (by binding?)
 class TinyUiRefusedTestCase(TinyUiTests):
     """ Test that a refused config connect gets Tiny UI """
@@ -1149,7 +1149,7 @@ class TinyUiRefusedTestCase(TinyUiTests):
 
     def expectedPattern(self):
         return 'ConnectException:.*Connection refused'
-        
+
 class TinyUiFileNotFoundTestCase(TinyUiTests):
     """ Test a config file not found gets Tiny UI """
     def getTestUrl(self):
@@ -1157,32 +1157,28 @@ class TinyUiFileNotFoundTestCase(TinyUiTests):
 
     def expectedPattern(self):
         return 'FileNotFoundException'
-        
-class SimpleV3PollTestCase(LockssTestCase):
-    """ Test a basic V3 Poll. """
-    def getDaemonCount(self):
-        return 5
 
+
+class V3TestCase(LockssTestCase):
     def setUp(self):
         LockssTestCase.setUp(self)
+        # V3 has a much shorter default timeout, 8 minutes.
+        self.timeout = int(config.get('timeout', 60 * 8))
         baseV3Port = 8801
 
         for i in range(0, len(self.clients)):
-
             # Generate an initial list of peers, minus ourselves
-            # (For now, V3 peers can't participate in polls that they
-            # call.  This must be fixed before release.
-
+            # (V3 polls are asynchronous)
             peerIds = []
             for port in range(0, len(self.clients)):
                 if (port == (i)):
                     continue
-                peerIds.append("tcp:[127.0.0.1]:%d" % (baseV3Port + port))
+                peerIds.append("TCP:[127.0.0.1]:%d" % (baseV3Port + port))
 
             extraConf = {"org.lockss.auconfig.allowEditDefaultOnlyParams": "true",
                          "org.lockss.comm.enabled": "false",
                          "org.lockss.scomm.enabled": "true",
-                         "org.lockss.scomm.maxMessageSize": "1048576",  # 1MB
+                         "org.lockss.scomm.maxMessageSize": "33554432",  # 32MB
                          "org.lockss.poll.v3.quorum": "3",
                          "org.lockss.poll.v3.minPollSize": "4",
                          "org.lockss.poll.v3.maxPollSize": "4",
@@ -1190,11 +1186,11 @@ class SimpleV3PollTestCase(LockssTestCase):
                          "org.lockss.poll.v3.maxNominationSize": "1",
                          "org.lockss.poll.v3.minPollDuration": "5m",
                          "org.lockss.poll.v3.maxPollDuration": "6m",
-                         "org.lockss.localV3Identity": "tcp:[127.0.0.1]:%d" % (baseV3Port + i),
+                         "org.lockss.localV3Identity": "TCP:[127.0.0.1]:%d" % (baseV3Port + i),
                          "org.lockss.id.initialV3PeerList": (";".join(peerIds))}
 
             self.framework.appendLocalConfig(extraConf, self.clients[i])
-        
+
         ##
         ## Start the framework.
         ##
@@ -1207,11 +1203,17 @@ class SimpleV3PollTestCase(LockssTestCase):
         for client in self.clients:
             client.waitForDaemonReady()
 
+    def getDaemonCount(self):
+        return 5
+
+class SimpleDamageV3TestCase(V3TestCase):
+    """ Test a basic V3 Poll. """
     def runTest(self):
-        # Reasonably complex AU for testing
+        # Reasonably complex AU for testing.
         simAu = SimulatedAu('simContent', depth=0, branch=0,
-                            numFiles=15, fileTypes=17,
-                            binFileSize=1048576, protocolVersion=3)
+                            numFiles=15,
+                            fileTypes=(FILE_TYPE_TEXT + FILE_TYPE_BIN),
+                            binFileSize=1024, protocolVersion=3)
 
         ##
         ## Create simulated AUs
@@ -1230,10 +1232,10 @@ class SimpleV3PollTestCase(LockssTestCase):
         log.info("AUs completed initial crawl.")
 
         client = self.clients[2]
-        
-	      ##
-	      ## Damage the AU.
-	      ##
+
+	    ##
+	    ## Damage the AU.
+	    ##
         node = client.randomDamageSingleNode(simAu)
         log.info("Damaged node %s on client %s" % (node.url, client))
 
@@ -1245,14 +1247,378 @@ class SimpleV3PollTestCase(LockssTestCase):
         client.waitForV3Poller(simAu)
 
         log.info("Successfully called a V3 poll.")
-        
+
         ## Just pause until we have better tests.
+        log.info("Waiting for V3 repair...")
+        # waitForV3Repair takes a list of nodes
+        client.waitForV3Repair(simAu, [node], timeout=self.timeout)
+        log.info("AU successfully repaired.")
 
-        log.info("Pausing for 20 minutes.  ^C to quit the test.")
-        time.sleep(20 * 60)
-        
+def simpleDamageV3TestCase():
+    return SimpleDamageV3TestCase()
 
-    
+class RandomDamageV3TestCase(V3TestCase):
+    """ Test a V3 Poll with a random size and number of damaged AUs """
+    def runTest(self):
+        # Reasonably complex AU for testing.
+        simAu = SimulatedAu('simContent', depth=1, branch=1,
+                            numFiles=10,
+                            fileTypes=(FILE_TYPE_TEXT + FILE_TYPE_BIN),
+                            binFileSize=1024, protocolVersion=3)
+
+        ##
+        ## Create simulated AUs
+        ##
+        log.info("Creating V3 simulated AUs.")
+        for client in self.clients:
+            client.createAu(simAu)
+
+        ##
+        ## Assert that the AUs have been crawled.
+        ##
+        log.info("Waiting for simulated AUs to crawl.")
+        for client in self.clients:
+            if not (client.waitForSuccessfulCrawl(simAu)):
+                self.fail("AUs never completed initial crawl.")
+        log.info("AUs completed initial crawl.")
+
+        client = self.clients[2]
+
+        ##
+        ## Damage the AU.
+        ##
+        nodeList = client.randomDamageRandomNodes(simAu, 15, 20)
+        log.info("Damaged the following nodes on client %s:\n        %s" %
+            (client, '\n        '.join([str(n) for n in nodeList])))
+
+        # Request a tree walk (deactivate and reactivate AU)
+        log.info("Requesting tree walk.")
+        client.requestTreeWalk(simAu)
+
+        log.info("Waiting for a V3 poll to be called...")
+        client.waitForV3Poller(simAu)
+
+        log.info("Successfully called a V3 poll.")
+
+        ## Just pause until we have better tests.
+        log.info("Waiting for V3 repair...")
+        # waitForV3Repair takes a list of nodes
+        client.waitForV3Repair(simAu, nodeList, timeout=self.timeout)
+
+        log.info("AU successfully repaired.")
+
+def randomDamageV3TestCase():
+    return RandomDamageV3TestCase()
+
+class SimpleDeleteV3TestCase(V3TestCase):
+    """ Test repair of a missing file. """
+    def runTest(self):
+        # Reasonably complex AU for testing.
+        simAu = SimulatedAu('simContent', depth=0, branch=0,
+                            numFiles=15,
+                            fileTypes=(FILE_TYPE_TEXT + FILE_TYPE_BIN),
+                            binFileSize=1024, protocolVersion=3)
+        ##
+        ## Create simulated AUs
+        ##
+        log.info("Creating V3 simulated AUs.")
+        for client in self.clients:
+            client.createAu(simAu)
+
+        ##
+        ## Assert that the AUs have been crawled.
+        ##
+        log.info("Waiting for simulated AUs to crawl.")
+        for client in self.clients:
+            if not (client.waitForSuccessfulCrawl(simAu)):
+                self.fail("AUs never completed initial crawl.")
+        log.info("AUs completed initial crawl.")
+
+        client = self.clients[2]
+
+        ##
+        ## Damage the AU.
+        ##
+        node = client.randomDelete(simAu)
+        log.info("Deleted node %s on client %s" % (node.url, client))
+
+        # Request a tree walk (deactivate and reactivate AU)
+        log.info("Requesting tree walk.")
+        client.requestTreeWalk(simAu)
+
+        log.info("Waiting for a V3 poll to be called...")
+        client.waitForV3Poller(simAu)
+
+        log.info("Successfully called a V3 poll.")
+
+        ## Just pause until we have better tests.
+        log.info("Waiting for V3 repair...")
+        # waitForV3Repair takes a list of nodes
+        client.waitForV3Repair(simAu, [node], timeout=self.timeout)
+        log.info("AU successfully repaired.")
+
+def simpleDeleteV3TestCase():
+    return SimpleDeleteV3TestCase()
+
+
+class LastFileDeleteV3TestCase(V3TestCase):
+    " Ensure that the deletion of the last (alphabetically) file in the AU can be repaired. "
+    def runTest(self):
+        # Reasonably complex AU for testing.
+        simAu = SimulatedAu('simContent', depth=0, branch=0,
+                            numFiles=15,
+                            fileTypes=(FILE_TYPE_TEXT + FILE_TYPE_BIN),
+                            binFileSize=1024, protocolVersion=3)
+        ##
+        ## Create simulated AUs
+        ##
+        log.info("Creating V3 simulated AUs.")
+        for client in self.clients:
+            client.createAu(simAu)
+
+        ##
+        ## Assert that the AUs have been crawled.
+        ##
+        log.info("Waiting for simulated AUs to crawl.")
+        for client in self.clients:
+            if not (client.waitForSuccessfulCrawl(simAu)):
+                self.fail("AUs never completed initial crawl.")
+        log.info("AUs completed initial crawl.")
+
+        client = self.clients[2]
+
+        ##
+        ## Damage the AU.
+        ##
+        node = client.getAuNode(simAu, "http://www.example.com/index.html")
+        client.deleteNode(node)
+        log.info("Deleted node %s on client %s" % (node.url, client))
+
+        # Request a tree walk (deactivate and reactivate AU)
+        log.info("Requesting tree walk.")
+        client.requestTreeWalk(simAu)
+
+        log.info("Waiting for a V3 poll to be called...")
+        client.waitForV3Poller(simAu)
+
+        log.info("Successfully called a V3 poll.")
+
+        ## Just pause until we have better tests.
+        log.info("Waiting for V3 repair...")
+        # waitForV3Repair takes a list of nodes
+        client.waitForV3Repair(simAu, [node], timeout=self.timeout)
+        log.info("AU successfully repaired.")
+
+def lastFileDeleteV3TestCase():
+    return LastFileDeleteV3TestCase()
+
+
+class RandomDeleteV3TestCase(V3TestCase):
+    "Test recovery by V3 from randomly deleted nodes in our cache."
+    def runTest(self):
+        # Reasonably complex AU for testing.
+        simAu = SimulatedAu('simContent', depth=1, branch=1,
+                            numFiles=15,
+                            fileTypes=(FILE_TYPE_TEXT + FILE_TYPE_BIN),
+                            binFileSize=1024, protocolVersion=3)
+        ##
+        ## Create simulated AUs
+        ##
+        log.info("Creating V3 simulated AUs.")
+        for client in self.clients:
+            client.createAu(simAu)
+
+        ##
+        ## Assert that the AUs have been crawled.
+        ##
+        log.info("Waiting for simulated AUs to crawl.")
+        for client in self.clients:
+            if not (client.waitForSuccessfulCrawl(simAu)):
+                self.fail("AUs never completed initial crawl.")
+        log.info("AUs completed initial crawl.")
+
+        client = self.clients[2]
+
+        ##
+        ## Damage the AU.
+        ##
+        nodeList = client.randomDeleteRandomNodes(simAu, 5, 15)
+        log.info("Damaged the following nodes on client %s:\n        %s" %
+            (client, '\n        '.join([str(n) for n in nodeList])))
+
+        # Request a tree walk (deactivate and reactivate AU)
+        log.info("Requesting tree walk.")
+        client.requestTreeWalk(simAu)
+
+        log.info("Waiting for a V3 poll to be called...")
+        client.waitForV3Poller(simAu)
+
+        log.info("Successfully called a V3 poll.")
+
+        ## Just pause until we have better tests.
+        log.info("Waiting for V3 repair...")
+        # waitForV3Repair takes a list of nodes
+        client.waitForV3Repair(simAu, nodeList, timeout=self.timeout)
+        log.info("AU successfully repaired.")
+
+def randomDeleteV3TestCase():
+    return RandomDeleteV3TestCase()
+
+class SimpleExtraFileV3TestCase(V3TestCase):
+    "Test recovery by V3 from an extra node in our cache"
+    def runTest(self):
+        # Reasonably complex AU for testing
+        simAu = SimulatedAu('simContent', depth=0, branch=0,
+                            fileTypes=(FILE_TYPE_TEXT + FILE_TYPE_BIN),
+                            binFileSize=1024,
+                            numFiles=20, protocolVersion=3)
+        ##
+        ## Create simulated AUs
+        ##
+        log.info("Creating V3 simulated AUs.")
+        for client in self.clients:
+            client.createAu(simAu)
+
+        ##
+        ## Assert that the AUs have been crawled.
+        ##
+        log.info("Waiting for simulated AUs to crawl.")
+        for client in self.clients:
+            if not (client.waitForSuccessfulCrawl(simAu)):
+                self.fail("AUs never completed initial crawl.")
+        log.info("AUs completed initial crawl.")
+
+        client = self.clients[2]
+
+        ##
+        ## Damage the AU by creating an extra node.
+        ##
+        node = client.createNode(simAu, '004extrafile.txt')
+        log.info("Created file %s on client %s" % (node.url, client))
+
+        # Request a tree walk (deactivate and reactivate AU)
+        log.info("Requesting tree walk.")
+        client.requestTreeWalk(simAu)
+
+        log.info("Waiting for a V3 poll to be called...")
+        client.waitForV3Poller(simAu)
+
+        log.info("Successfully called a V3 poll.")
+
+        ## Just pause until we have better tests.
+        log.info("Waiting for V3 repair...")
+        # waitForV3Repair takes a list of nodes
+        client.waitForV3Repair(simAu, [node], timeout=self.timeout)
+        log.info("AU successfully repaired.")
+
+def simpleExtraFileV3TestCase():
+    return SimpleExtraFileV3TestCase()
+
+
+class LastFileExtraV3TestCase(V3TestCase):
+    "Test recovery by V3 from an extra last-file node in our cache"
+    def runTest(self):
+        # Reasonably complex AU for testing
+        simAu = SimulatedAu('simContent', depth=0, branch=0,
+                            fileTypes=(FILE_TYPE_TEXT + FILE_TYPE_BIN),
+                            binFileSize=1024,
+                            numFiles=20, protocolVersion=3)
+        ##
+        ## Create simulated AUs
+        ##
+        log.info("Creating V3 simulated AUs.")
+        for client in self.clients:
+            client.createAu(simAu)
+
+        ##
+        ## Assert that the AUs have been crawled.
+        ##
+        log.info("Waiting for simulated AUs to crawl.")
+        for client in self.clients:
+            if not (client.waitForSuccessfulCrawl(simAu)):
+                self.fail("AUs never completed initial crawl.")
+        log.info("AUs completed initial crawl.")
+
+        client = self.clients[2]
+
+        ##
+        ## Damage the AU by creating an extra node that should sort LAST
+        ## in the list of CachedUrls..
+        ##
+        node = client.createNode(simAu, 'zzzzzzzzzzzzz.txt')
+        log.info("Created file %s on client %s" % (node.url, client))
+
+        # Request a tree walk (deactivate and reactivate AU)
+        log.info("Requesting tree walk.")
+        client.requestTreeWalk(simAu)
+
+        log.info("Waiting for a V3 poll to be called...")
+        client.waitForV3Poller(simAu)
+
+        log.info("Successfully called a V3 poll.")
+
+        ## Just pause until we have better tests.
+        log.info("Waiting for V3 repair...")
+        # waitForV3Repair takes a list of nodes
+        client.waitForV3Repair(simAu, [node], timeout=self.timeout)
+        log.info("AU successfully repaired.")
+
+def lastFileExtraV3TestCase():
+    return LastFileExtraV3TestCase()
+
+class RandomExtraFileV3TestCase(V3TestCase):
+    "Test recovery by V3 from a random number of extra nodes in our cache"
+    def runTest(self):
+        # Reasonably complex AU for testing
+        simAu = SimulatedAu('simContent', depth=1, branch=1,
+                            fileTypes=(FILE_TYPE_TEXT + FILE_TYPE_BIN),
+                            binFileSize=1024,
+                            numFiles=20, protocolVersion=3)
+
+        ##
+        ## Create simulated AUs
+        ##
+        log.info("Creating simulated AUs.")
+        for client in self.clients:
+            client.createAu(simAu)
+
+        ##
+        ## Assert that the AUs have been crawled.
+        ##
+        log.info("Waiting for simulated AUs to crawl.")
+        for client in self.clients:
+            if not (client.waitForSuccessfulCrawl(simAu)):
+                self.fail("AUs never completed initial crawl.")
+        log.info("AUs completed initial crawl.")
+
+        ## To use a specific client, uncomment this line.
+        client = self.clients[2]
+
+        ##
+        ## Damage the AU by creating an extra node.
+        ##
+        nodeList = client.randomCreateRandomNodes(simAu, 5, 15)
+        log.info("Created the following nodes on client %s:\n        %s" %
+                 (client, '\n        '.join([str(n) for n in nodeList])))
+
+        # Request a tree walk (deactivate and reactivate AU)
+        log.info("Requesting tree walk.")
+        client.requestTreeWalk(simAu)
+
+        log.info("Waiting for a V3 poll to be called...")
+        client.waitForV3Poller(simAu)
+
+        log.info("Successfully called a V3 poll.")
+
+        ## Just pause until we have better tests.
+        log.info("Waiting for V3 repair...")
+        # waitForV3Repair takes a list of nodes
+        client.waitForV3Repair(simAu, nodeList, timeout=self.timeout)
+        log.info("AU successfully repaired.")
+
+def randomExtraFileV3TestCase():
+    return RandomExtraFileV3TestCase()
+
 ###########################################################################
 ### Functions that build and return test suites.  These can be
 ### called by name when running this test script.
@@ -1297,9 +1663,26 @@ def tinyUiTests():
     suite.addTest(TinyUiFileNotFoundTestCase())
     return suite
 
+def simpleV3Tests():
+    suite = unittest.TestSuite()
+    suite.addTest(SimpleDamageV3TestCase())
+    suite.addTest(SimpleDeleteV3TestCase())
+    suite.addTest(SimpleExtraFileV3TestCase())
+    suite.addTest(LastFileDeleteV3TestCase())
+    suite.addTest(LastFileExtraV3TestCase())
+    return suite
+
+def randomV3Tests():
+    suite = unittest.TestSuite()
+    suite.addTest(RandomDamageV3TestCase())
+    suite.addTest(RandomDeleteV3TestCase())
+    suite.addTest(RandomExtraFileV3TestCase())
+    return suite
+
 def v3Tests():
     suite = unittest.TestSuite()
-    suite.addTest(SimpleV3PollTestCase())
+    suite.addTest(simpleV3Tests())
+    suite.addTest(randomV3Tests())
     return suite
 
 ##
@@ -1337,9 +1720,10 @@ def postTagTests():
     suite.addTest(tinyUiTests())
     suite.addTest(repairFromCacheTests())
     suite.addTest(totalLossRecoveryTests())
+    suite.addTest(v3Tests())
     return suite
 
- 
+
 ###########################################################################
 ### Main entry point for this test suite.
 ###########################################################################
@@ -1367,7 +1751,7 @@ if __name__ == "__main__":
     except KeyboardInterrupt:
         for fw in frameworkList:
             if fw.isRunning: fw.stop()
-            
+
     except Exception, e:
         # Unhandled exception occured.
         log.error("%s" % e)

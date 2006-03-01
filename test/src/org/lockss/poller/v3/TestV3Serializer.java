@@ -186,7 +186,6 @@ public class TestV3Serializer extends LockssTestCase {
     PeerIdentity id = idManager.findPeerIdentity(voterId);
     ud.setVoterId(id);
     ud.setHashAlgorithm("SHA1");
-    ud.setRepairTarget("http://www.example.com/file3.html");
     ud.setIntroEffortProof(ByteArray.makeRandomBytes(20));
     ud.setNominees(ListUtil.list("10.0.0.1:8999", "10.0.0.2:8999"));
     ud.setPollAckEffortProof(ByteArray.makeRandomBytes(20));

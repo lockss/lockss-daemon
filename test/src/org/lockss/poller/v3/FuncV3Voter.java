@@ -1,5 +1,5 @@
 /*
- * $Id: FuncV3Voter.java,v 1.7 2006-02-23 06:43:37 tlipkis Exp $
+ * $Id: FuncV3Voter.java,v 1.8 2006-03-01 02:50:13 smorabito Exp $
  */
 
 /*
@@ -291,40 +291,6 @@ public class FuncV3Voter extends LockssTestCase {
       log.debug2("Got message: " + msg);
       return msg;
     }
-  }
-
-  public void testRestorePoll() throws Exception {
-    PollSpec pollspec = new PollSpec(testau.getAuCachedUrlSet(),
-                                     Poll.V3_POLL);
-    V3LcapMessage myPollMsg =
-      V3LcapMessage.makeRequestMsg(pollspec, "arandomkey",
-                                   ByteArray.makeRandomBytes(20),
-                                   ByteArray.makeRandomBytes(20),
-                                   V3LcapMessage.MSG_POLL,
-                                   120000,
-                                   pollerId);
-    PrivilegedAccessor.invokeMethod(pollmanager,
-                                    "handleIncomingMessage",
-                                    myPollMsg);
-    Poll p1 = pollmanager.getPoll(myPollMsg.getKey());
-    assertNotNull(p1);
-    assertEquals(1, pollmanager.getV3Voters().size());
-    stopDaemon();
-    assertEquals(0, pollmanager.getV3Voters().size());
-    startDaemon();
-    assertEquals(1, pollmanager.getV3Voters().size());
-    Poll p2 = pollmanager.getPoll(p1.getKey());
-    assertNotNull(p2);
-    assertEquals(p2.getKey(), p1.getKey());
-    V3Voter p1V3 = (V3Voter)p1;
-    V3Voter p2V3 = (V3Voter)p2;
-    assertEquals(p1V3.getCallerID(), p2V3.getCallerID());
-    assertEquals(p1V3.getDeadline(), p2V3.getDeadline());
-    assertEquals(p1V3.getDuration(), p2V3.getDuration());
-    assertEquals(p1V3.getStatusString(), p2V3.getStatusString());
-    V3TestUtil.assertEqualVoterUserData(p1V3.getVoterUserData(),
-                                        p2V3.getVoterUserData());
-    theDaemon.getPluginManager().stopAu(testau);
   }
 
   class MyMockLcapRouter extends LcapRouter {

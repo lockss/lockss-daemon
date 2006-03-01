@@ -1,5 +1,5 @@
 /*
- * $Id: EncodedProperty.java,v 1.10 2005-06-04 19:21:32 tlipkis Exp $
+ * $Id: EncodedProperty.java,v 1.11 2006-03-01 02:50:13 smorabito Exp $
  */
 
 /*
@@ -49,6 +49,21 @@ public class EncodedProperty extends Properties {
   public static final byte[] EMPTY_BYTE_ARRAY = new byte[0];
 
   private static final Logger log = Logger.getLogger("EncodedProperty");
+
+
+  /**
+   * Construct a new property map from an existing Properties object.
+   *
+   * @param  props  The properties object to clone.
+   */
+  public static EncodedProperty fromProps(Properties props) {
+    EncodedProperty res = new EncodedProperty();
+    for (Iterator iter = props.keySet().iterator(); iter.hasNext(); ) {
+      String key = (String)iter.next();
+      res.setProperty(key, props.getProperty(key));
+    }
+    return res;
+  }
 
   /**
    * Constructs a new, empty property map.

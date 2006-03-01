@@ -1,5 +1,5 @@
 /*
- * $Id: PollerStateBean.java,v 1.8 2005-12-01 01:54:44 smorabito Exp $
+ * $Id: PollerStateBean.java,v 1.9 2006-03-01 02:50:14 smorabito Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ package org.lockss.poller.v3;
 
 import java.util.*;
 
+import org.lockss.hasher.HashBlock;
 import org.lockss.plugin.*;
 import org.lockss.poller.*;
 import org.lockss.protocol.*;
@@ -56,15 +57,17 @@ public class PollerStateBean implements LockssSerializable {
   private long createTime;
   private int pollSize;
   private int quorum;
-  private int currentDigestIndex;
+  private int hashBlockIndex;
   private int outerCircleTarget;
   private String statusString;
+  private RepairQueue repairQueue;
+  private ArrayList hashedBlocks; // This will need to be disk-based in 1.16!
+  private boolean hashStarted;
+  private Collection votedPeers;
 
   /* Non-serializable transient fields */
   private transient PollSpec spec;
   private transient CachedUrlSet cus;
-  private List agreeingPeers;
-  private List disagreeingPeers;
 
   private static Logger log = Logger.getLogger("PollerStateBean");
 
@@ -73,7 +76,7 @@ public class PollerStateBean implements LockssSerializable {
    * block to hash. When the poller checks to see if it can start hashing the
    * next block, it will consult this counter and only proceed if it is '0'.
    */
-  private volatile int hashReadyCounter;
+  //private volatile int hashReadyCounter;
 
   /**
    * Counter of participants who have not yet nominated any peers.
@@ -98,7 +101,7 @@ public class PollerStateBean implements LockssSerializable {
     this.duration = duration;
     this.deadline = Deadline.in(duration).getExpirationTime();
     this.pollSize = pollSize;
-    this.hashReadyCounter = pollSize;
+    //this.hashReadyCounter = pollSize;
     this.nomineeCounter = pollSize;
     this.outerCircleTarget = outerCircleTarget;
     this.auId = spec.getAuId();
@@ -110,8 +113,11 @@ public class PollerStateBean implements LockssSerializable {
     this.hashAlgorithm = hashAlg;
     this.createTime = TimeBase.nowMs();
     this.quorum = quorum;
-    this.currentDigestIndex = 0;
+    this.hashBlockIndex = 0;
     this.statusString = "Initializing";
+    this.repairQueue = new RepairQueue();
+    this.hashedBlocks = new ArrayList();
+    this.votedPeers = new ArrayList();
   }
 
   public void setPollMessage(LcapMessage msg) {
@@ -237,6 +243,23 @@ public class PollerStateBean implements LockssSerializable {
   public void setQuorum(int quorum) {
     this.quorum = quorum;
   }
+  
+  public boolean hashStarted() {
+    return hashStarted;
+  }
+  
+  public void hashStarted(boolean b) {
+    this.hashStarted = b;
+  }
+  
+  // Simple counter
+  public void addVotedPeer(PeerIdentity id) {
+    votedPeers.add(id);
+  }
+  
+  public Collection getVotedPeers() {
+    return votedPeers;
+  }
 
   public int getOuterCircleTarget() {
     return outerCircleTarget;
@@ -246,11 +269,6 @@ public class PollerStateBean implements LockssSerializable {
     this.outerCircleTarget = outerCircleTargetSize;
   }
 
-  public int getNextVoteBlockIndex() {
-    int idx = currentDigestIndex++;
-    return idx;
-  }
-
   public void signalVoterNominated(PeerIdentity id) {
     nomineeCounter--;
   }
@@ -258,28 +276,16 @@ public class PollerStateBean implements LockssSerializable {
   public boolean allVotersNominated() {
     return nomineeCounter == 0;
   }
-
-  public void signalVoterRemoved(PeerIdentity id, boolean outerCircle) {
-    if (!outerCircle) {
-      nomineeCounter--; // No longer expect any nominees from this peer.
-    }
-    hashReadyCounter--; // No longer expect this peer to take part in hashing.
+  
+  /**
+   * Return the ordered list of hashed blocks.
+   */
+  public ArrayList getHashedBlocks() {
+    return hashedBlocks;
   }
-
-  public void signalVoterAdded(PeerIdentity id) {
-    hashReadyCounter++;
-  }
-
-  public void signalVoterReadyToTally(PeerIdentity id) {
-    hashReadyCounter--;
-  }
-
-  public void signalVoterNotReadyToTally(PeerIdentity id) {
-    hashReadyCounter++;
-  }
-
-  public boolean allVotersReadyToTally() {
-    return hashReadyCounter == 0;
+  
+  public void addHashBlock(HashBlock hb) {
+    hashedBlocks.add(hb);
   }
 
   public String toString() {
@@ -296,4 +302,101 @@ public class PollerStateBean implements LockssSerializable {
   public void setStatusString(String s) {
     this.statusString = s;
   }
+
+  public RepairQueue getRepairQueue() {
+    return repairQueue;
+  }
+
+  public static class Repair implements LockssSerializable {
+    protected PeerIdentity repairFrom;
+    protected String url;
+    protected LinkedHashMap previousVotes;
+
+    public Repair(String url, PeerIdentity repairFrom, LinkedHashMap previousVotes) {
+      this.url = url;
+      this.repairFrom = repairFrom;
+      this.previousVotes = previousVotes;
+    }
+
+    public LinkedHashMap getPreviousVotes() {
+      return previousVotes;
+    }
+
+    public void setPreviousVotes(LinkedHashMap previousVotes) {
+      this.previousVotes = previousVotes;
+    }
+
+    public PeerIdentity getRepairFrom() {
+      return repairFrom;
+    }
+
+    public void setRepairFrom(PeerIdentity repairFrom) {
+      this.repairFrom = repairFrom;
+    }
+
+    public String getUrl() {
+      return url;
+    }
+
+    public void setUrl(String url) {
+      this.url = url;
+    }
+  }
+  
+  public static class RepairQueue implements LockssSerializable {
+    private Map activeRepairs;
+    private List completedRepairs;
+
+    public RepairQueue() {
+      this.activeRepairs = new HashMap();
+      this.completedRepairs = new ArrayList();
+    }
+
+    public synchronized List getActiveRepairs() {
+      return new ArrayList(activeRepairs.values());
+    }
+
+    public synchronized List getCompletedRepairs() {
+      return completedRepairs;
+    }
+
+    public synchronized void addActiveRepair(String url,
+                                             PeerIdentity repairFrom,
+                                             LinkedHashMap votesForBlock) {
+      activeRepairs.put(url, new Repair(url, repairFrom, votesForBlock));
+    }
+
+    public synchronized void markComplete(String url) {
+      if (!activeRepairs.keySet().contains(url)) {
+        throw new IllegalArgumentException(url + " is not active!");
+      }
+      // We don't care about the previous votes once this repairs is complete.
+      // Null them out and let them get GC'd.
+      Repair repair = (Repair)activeRepairs.get(url);
+      repair.setPreviousVotes(null);
+      activeRepairs.remove(url);
+      completedRepairs.add(repair);
+    }
+    
+    // Currently only used when deleting a file from the repository
+    // after losing a tally on a block.
+    public synchronized void addCompletedRepair(String url) {
+      Repair repair = new Repair(url, null, null);
+      completedRepairs.add(repair);
+    }
+
+    public synchronized Map getVotesForBlock(String url) {
+      Repair rep = (Repair)activeRepairs.get(url);
+      if (rep != null) {
+        return rep.getPreviousVotes();
+      } else {
+        return null;
+      }
+    }
+
+    public synchronized boolean hasActiveRepairs() {
+      return activeRepairs.size() > 0;
+    }
+  }
+
 }
