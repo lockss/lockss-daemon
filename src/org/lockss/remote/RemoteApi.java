@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.48 2006-01-09 21:56:16 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.48.2.2 2006-02-15 04:07:42 tlipkis Exp $
  */
 
 /*
@@ -646,6 +646,9 @@ public class RemoteApi
       try {
 	BatchAuStatus bas = processSavedConfigProps(auin);
 	bas.setBackupInfo(buildBackupInfo(dir));
+	if (log.isDebug3()) {
+	  log.debug3("processSavedConfigZip: " + bas);
+	}
 	return bas;
       } finally {
 	IOUtil.safeClose(auin);
@@ -963,10 +966,38 @@ public class RemoteApi
       }
     }
     if (stat.getName() == null) {
-      stat.setName("Unknown");
+      stat.setName(titleFromDB(pluginp, auConfig));
+      if (stat.getName() == null) {
+	stat.setName("Unknown");
+      }
     }
     return stat;
   }
+
+  TitleConfig findTitleConfig(PluginProxy pluginp, Configuration config) {
+    Plugin plugin = pluginp.getPlugin();
+    if(plugin.getSupportedTitles() == null)  {
+      return null;
+    }
+    for (Iterator iter = plugin.getSupportedTitles().iterator();
+	 iter.hasNext(); ) {
+      String title = (String)iter.next();
+      TitleConfig tc = plugin.getTitleConfig(title);
+      if (tc != null && tc.matchesConfig(config) && tc.isSingleAu(plugin)) {
+	return tc;
+      }
+    }
+    return null;
+  }
+
+  String titleFromDB(PluginProxy pluginp, Configuration config) {
+    TitleConfig tc = findTitleConfig(pluginp, config);
+    if (tc != null) {
+      return tc.getDisplayName();
+    }
+    return null;
+  }
+
 
   void restoreAuStateFiles(AuProxy aup, BackupInfo bi) throws IOException {
     if (bi != null) {
@@ -1451,7 +1482,7 @@ public class RemoteApi
 
 
 
-  DateFormat headerDf = new SimpleDateFormat("EEE dd MMM yyyy HH:mm:ss zzz"
+  DateFormat headerDf = new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss zzz"
 					     /*, Locale.US */);
 //   headerDf.setTimeZone(TimeZone.getTimeZone("GMT"));
 

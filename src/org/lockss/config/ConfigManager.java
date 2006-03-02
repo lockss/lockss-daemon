@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.27 2006-01-12 00:50:47 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.27.2.1 2006-01-27 04:24:40 tlipkis Exp $
  */
 
 /*
@@ -647,7 +647,7 @@ public class ConfigManager implements LockssManager {
       return;
     }
     String includeIps = config.get(accessParam);
-    includeIps = IpFilter.addToFilterList(includeIps, platformAccess);
+    includeIps = IpFilter.unionFilters(platformAccess, includeIps);
     config.put(accessParam, includeIps);
   }
 

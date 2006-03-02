@@ -1,5 +1,5 @@
 /*
- * $Id: IcpManager.java,v 1.21 2006-01-03 22:12:11 thib_gc Exp $
+ * $Id: IcpManager.java,v 1.21.2.1 2006-01-18 01:37:13 thib_gc Exp $
  */
 
 /*
@@ -304,7 +304,9 @@ public class IcpManager
         ? IcpFactoryImpl.getInstance()
         : LazyIcpFactoryImpl.getInstance();
 
+      logger.debug3("DatagramSocket with port: " + port);
       udpSocket = new DatagramSocket(port);
+      logger.debug3("DatagramSocket bound with port: " + port);
       icpBuilder = icpFactory.makeIcpBuilder();
       icpSocket = new IcpSocketImpl("IcpSocketImpl",
                                     udpSocket,

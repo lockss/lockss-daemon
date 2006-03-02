@@ -1,5 +1,5 @@
 /*
- * $Id: TestIpFilter.java,v 1.6 2005-08-30 18:23:39 tlipkis Exp $
+ * $Id: TestIpFilter.java,v 1.6.10.1 2006-01-27 04:24:37 tlipkis Exp $
  */
 
 /*
@@ -189,18 +189,22 @@ public class TestIpFilter extends LockssTestCase {
     assertNotAllowed("1.1.1.1");
   }
 
-  public void testAddToFilterList() throws Exception {
-    try {
-      IpFilter.addToFilterList(null, null);
-      fail("addToFilterList(x, null) should throw");
-    } catch (NullPointerException e) {
-    }
-    assertEquals("", IpFilter.addToFilterList(null, ""));
-    assertEquals("1.2.3.4", IpFilter.addToFilterList(null, "1.2.3.4"));
+  public void testUnionFilters() throws Exception {
+    assertEquals("", IpFilter.unionFilters(null, null));
+    assertEquals("", IpFilter.unionFilters(null, ""));
+    assertEquals("1.2.3.4", IpFilter.unionFilters(null, "1.2.3.4"));
+    assertEquals("1.2.3.4", IpFilter.unionFilters("1.2.3.4", null));
     assertEquals("1.2.3.4;2.2.2.2/2",
-		 IpFilter.addToFilterList("2.2.2.2/2", "1.2.3.4"));
-    assertEquals("44.33.22.11/55;2.2.2.2/2;5.4.3.2",
-		 IpFilter.addToFilterList("2.2.2.2/2;5.4.3.2",
-					  "44.33.22.11/55"));
+		 IpFilter.unionFilters("1.2.3.4", "2.2.2.2/2"));
+    assertEquals("2.2.2.2/2;5.4.3.2;44.33.22.11/55",
+		 IpFilter.unionFilters("2.2.2.2/2;5.4.3.2",
+				       "44.33.22.11/55"));
+    assertEquals("1.2.3.4", IpFilter.unionFilters("1.2.3.4", "1.2.3.4"));
+    assertEquals("1.2.3.4;1.1.1.0/24",
+		 IpFilter.unionFilters("1.2.3.4;1.1.1.0/24",
+				       "1.2.3.4;1.1.1.0/24"));
+    assertEquals("1.2.3.4;1.2.3.5;1.1.1.0/24",
+		 IpFilter.unionFilters("1.2.3.4;1.2.3.5",
+				       "1.2.3.4;1.1.1.0/24"));
   }
 }

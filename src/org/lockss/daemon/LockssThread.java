@@ -1,5 +1,5 @@
 /*
- * $Id: LockssThread.java,v 1.21 2005-12-01 23:28:01 troberts Exp $
+ * $Id: LockssThread.java,v 1.21.4.1 2006-01-27 04:23:05 tlipkis Exp $
  */
 
 /*
@@ -43,9 +43,6 @@ import org.lockss.util.*;
  * only from the thread.
  */
 public abstract class LockssThread extends Thread implements LockssWatchdog {
-  static final int EXIT_CODE_THREAD_HUNG = 1;
-  static final int EXIT_CODE_THREAD_EXIT = 2;
-
   static final String PREFIX = Configuration.PREFIX + "thread.";
 
   static final String PARAM_THREAD_WDOG_HUNG_DUMP = PREFIX + "hungThreadDump";
@@ -244,7 +241,7 @@ public abstract class LockssThread extends Thread implements LockssWatchdog {
       } catch (InterruptedException ignore) {}
       PlatformInfo.getInstance().threadDump();
     }
-    exitDaemon(EXIT_CODE_THREAD_HUNG,
+    exitDaemon(Constants.EXIT_CODE_THREAD_HUNG,
 	       "Thread hung for " + StringUtil.timeIntervalToString(interval));
   }
 
@@ -252,7 +249,7 @@ public abstract class LockssThread extends Thread implements LockssWatchdog {
    * daemon; can be overridden is thread is able to take some less drastic
    * corrective action. */
   protected void threadExited() {
-    exitDaemon(EXIT_CODE_THREAD_EXIT, "Thread exited");
+    exitDaemon(Constants.EXIT_CODE_THREAD_EXIT, "Thread exited");
   }
 
   protected void exitDaemon(int exitCode, String msg) {

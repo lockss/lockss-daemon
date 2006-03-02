@@ -34,7 +34,7 @@ class Framework:
     clients, one per daemon.  These clients are used to perform
     functional test interactions with the daemons.
     """
-    def __init__(self, daemonCount = None, urlList = None):
+    def __init__(self, daemonCount = None, urlList = None, startPort = None):
         self.workDir = path.abspath(config.get('workDir', './'))
         self.frameworkDir = self.__makeTestDir()
         self.projectDir = config.get('projectDir')
@@ -47,7 +47,10 @@ class Framework:
             self.daemonCount = int(config.get('daemonCount', 4))
         else:
             self.daemonCount = daemonCount
-        self.startPort = int(config.get('startPort', 8041))
+        if not startPort:
+            self.startPort = int(config.get('startPort', 8041))
+        else:
+            self.startPort = startPort
         self.username = config.get('username', 'testuser')
         self.password = config.get('password', 'testpass')
         self.logLevel = config.get('daemonLogLevel', 'debug3')
