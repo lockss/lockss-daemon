@@ -1,10 +1,10 @@
 /*
- * $Id: LockssDaemon.java,v 1.82 2006-01-27 04:32:34 tlipkis Exp $
+ * $Id: LockssDaemon.java,v 1.82.2.1 2006-03-02 19:41:17 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2002 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -799,6 +799,11 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
       // locked out and fail to exit when told.
       Thread.currentThread().setPriority(Thread.NORM_PRIORITY + 2);
 
+    } catch (ResourceUnavailableException e) {
+      log.error("Exiting because required resource is unavailable", e);
+      System.exit(Constants.EXIT_CODE_RESOURCE_UNAVAILABLE);
+      return;				// compiler doesn't know that
+					// System.exit() doesn't return
     } catch (Throwable e) {
       log.error("Exception thrown in main loop", e);
       System.exit(Constants.EXIT_CODE_EXCEPTION_IN_MAIN);
