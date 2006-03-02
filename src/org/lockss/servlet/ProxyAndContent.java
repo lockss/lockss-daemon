@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyAndContent.java,v 1.14 2006-02-28 01:00:35 thib_gc Exp $
+ * $Id: ProxyAndContent.java,v 1.15 2006-03-02 01:45:34 thib_gc Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import java.util.*;
 import javax.servlet.*;
 
 import org.apache.commons.collections.iterators.ObjectArrayIterator;
+import org.lockss.app.LockssApp;
 import org.lockss.config.*;
 import org.lockss.daemon.ResourceManager;
 import org.lockss.proxy.AuditProxyManager;
@@ -348,14 +349,19 @@ public class ProxyAndContent extends LockssServlet {
     formIcpPort = req.getParameter(ICP_PORT_NAME);
   }
 
-  private void processUpdateProxy_SaveChanges() throws IOException {
+  /* package */ static void saveAuditAndIcp(ConfigManager configMgr,
+                                            boolean auditEnable,
+                                            int auditPort,
+                                            boolean icpEnable,
+                                            int icpPort)
+        throws IOException {
     final String TRUE = "true";
     final String FALSE = "false";
     Properties props;
 
     // Save audit proxy config
     props = new Properties();
-    props.setProperty(PARAM_AUDIT_ENABLE, formAuditEnable ? TRUE : FALSE);
+    props.setProperty(PARAM_AUDIT_ENABLE, auditEnable ? TRUE : FALSE);
     props.setProperty(PARAM_AUDIT_PORT, Integer.toString(auditPort));
     configMgr.writeCacheConfigFile(props,
                                    ConfigManager.CONFIG_FILE_AUDIT_PROXY,
@@ -363,11 +369,16 @@ public class ProxyAndContent extends LockssServlet {
 
     // Save ICP server config
     props = new Properties();
-    props.setProperty(IcpManager.PARAM_ICP_ENABLED, formIcpEnable ? TRUE : FALSE);
+    props.setProperty(IcpManager.PARAM_ICP_ENABLED, icpEnable ? TRUE : FALSE);
     props.setProperty(IcpManager.PARAM_ICP_PORT, Integer.toString(icpPort));
     configMgr.writeCacheConfigFile(props,
                                    ConfigManager.CONFIG_FILE_ICP_SERVER,
                                    CONFIG_FILE_COMMENT);
+  }
+
+  private void processUpdateProxy_SaveChanges() throws IOException {
+    // temporary measure
+    saveAuditAndIcp(configMgr, formAuditEnable, auditPort, formIcpEnable, icpPort);
   }
 
   public static final String PARAM_AUDIT_ENABLE =
@@ -395,9 +406,6 @@ public class ProxyAndContent extends LockssServlet {
   private static final String AUDIT_PORT_NAME = "audit_port";
 
   private static final String BAD_ACTION = "Unknown_Action";
-
-  private static final String COMMENT_PROXY_IP_ACCESS =
-    "Proxy Options";
 
   private static final String CONFIG_FILE_COMMENT = "Proxy Options and Content Access Control";
 
