@@ -1,5 +1,5 @@
 /*
- * $Id: PermissionMap.java,v 1.8 2006-02-14 05:19:49 tlipkis Exp $
+ * $Id: PermissionMap.java,v 1.8.2.1 2006-03-02 06:27:00 tlipkis Exp $
  */
 
 /*
@@ -329,6 +329,10 @@ public class PermissionMap {
         pHelper.refetchPermissionPage(permissionPage);
       } else {
         uc.storeContent(is, uc.getUncachedProperties());
+	CachedUrl cu = uc.getCachedUrl();
+	if (cu != null && cu.hasContent()) {
+	  crawlStatus.addContentBytesFetched(cu.getContentSize());
+	}
       }
     } finally {
       IOUtil.safeClose(is);

@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerStatus.java,v 1.22 2005-11-09 18:46:26 tlipkis Exp $
+ * $Id: TestCrawlManagerStatus.java,v 1.22.8.1 2006-03-02 06:26:59 tlipkis Exp $
  */
 
 /*
@@ -48,6 +48,7 @@ public class TestCrawlManagerStatus extends LockssTestCase {
   private static final String CRAWL_TYPE = "crawl_type";
   private static final String START_TIME_COL_NAME = "start";
   private static final String END_TIME_COL_NAME = "end";
+  private static final String CONTENT_BYTES_FETCHED = "content_bytes_fetched";
   private static final String NUM_URLS_PARSED = "num_urls_parsed";
   private static final String NUM_URLS_FETCHED = "num_urls_fetched";
   private static final String NUM_URLS_WITH_ERRORS = "num_urls_with_errors";
@@ -63,30 +64,35 @@ public class TestCrawlManagerStatus extends LockssTestCase {
   private static final String STATUS_SUCCESSFUL = "Successful";
 
   private static List expectedColDescs =
-    ListUtil.list(
-		  new ColumnDescriptor(AU_COL_NAME, "Journal Volume",
-				       ColumnDescriptor.TYPE_STRING),
-		  new ColumnDescriptor(CRAWL_TYPE, "Crawl Type",
-				       ColumnDescriptor.TYPE_STRING),
-		  new ColumnDescriptor(START_TIME_COL_NAME, "Start Time",
-				       ColumnDescriptor.TYPE_DATE),
-		  new ColumnDescriptor(END_TIME_COL_NAME, "End Time",
-				       ColumnDescriptor.TYPE_DATE),
-		  new ColumnDescriptor(CRAWL_STATUS, "Crawl Status",
-				       ColumnDescriptor.TYPE_STRING),
-		  new ColumnDescriptor(NUM_URLS_PARSED, "Parsed",
-				       ColumnDescriptor.TYPE_INT),
-		  new ColumnDescriptor(NUM_URLS_FETCHED, "Fetched",
-				       ColumnDescriptor.TYPE_INT),
-		  new ColumnDescriptor(NUM_URLS_WITH_ERRORS, "Errors",
-				       ColumnDescriptor.TYPE_INT),
-		  new ColumnDescriptor(NUM_URLS_NOT_MODIFIED, "Not Modified ",
-				       ColumnDescriptor.TYPE_INT),
-		  new ColumnDescriptor(START_URLS, "Starting Url(s)",
-				       ColumnDescriptor.TYPE_STRING),
-		  new ColumnDescriptor(SOURCES, "Source(s)",
-				       ColumnDescriptor.TYPE_STRING)
-		  );
+    ListUtil.fromArray(new ColumnDescriptor[] {
+      new ColumnDescriptor(AU_COL_NAME, "Journal Volume",
+			   ColumnDescriptor.TYPE_STRING),
+      new ColumnDescriptor(CRAWL_TYPE, "Crawl Type",
+			   ColumnDescriptor.TYPE_STRING),
+      new ColumnDescriptor(START_TIME_COL_NAME, "Start Time",
+			   ColumnDescriptor.TYPE_DATE),
+      new ColumnDescriptor(END_TIME_COL_NAME, "End Time",
+			   ColumnDescriptor.TYPE_DATE),
+      new ColumnDescriptor(CRAWL_STATUS, "Crawl Status",
+			   ColumnDescriptor.TYPE_STRING),
+      new ColumnDescriptor(CONTENT_BYTES_FETCHED, "Bytes Fetched",
+			   ColumnDescriptor.TYPE_INT,
+			   "Number of content bytes collected from server " +
+			   "during crawl.  Does not include HTTP headers " +
+			   "or other network overhead."),
+      new ColumnDescriptor(NUM_URLS_FETCHED, "Pages Fetched",
+			   ColumnDescriptor.TYPE_INT),
+      new ColumnDescriptor(NUM_URLS_PARSED, "Pages Parsed",
+			   ColumnDescriptor.TYPE_INT),
+      new ColumnDescriptor(NUM_URLS_NOT_MODIFIED, "Not Modified",
+			   ColumnDescriptor.TYPE_INT),
+      new ColumnDescriptor(NUM_URLS_WITH_ERRORS, "Errors",
+			   ColumnDescriptor.TYPE_INT),
+      new ColumnDescriptor(START_URLS, "Starting Url(s)",
+			   ColumnDescriptor.TYPE_STRING),
+      new ColumnDescriptor(SOURCES, "Source(s)",
+			   ColumnDescriptor.TYPE_STRING),
+    });
 
 
   public void setUp() throws Exception {
