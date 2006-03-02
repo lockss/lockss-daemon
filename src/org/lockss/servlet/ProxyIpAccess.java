@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyIpAccess.java,v 1.23 2006-02-28 01:00:35 thib_gc Exp $
+ * $Id: ProxyIpAccess.java,v 1.23.2.1 2006-03-02 01:38:16 thib_gc Exp $
  */
 
 /*
@@ -48,6 +48,7 @@ import org.lockss.util.StringUtil;
 /** Display and update proxy IP access control lists.
  */
 public class ProxyIpAccess extends IpAccessControl {
+
   private static final String exp =
     "Enter the list of IP addresses that should be allowed to use this " +
     "cache as a proxy server, and access the content stored on it.  " +
@@ -68,5 +69,18 @@ public class ProxyIpAccess extends IpAccessControl {
   protected String getConfigFileComment() {
     return "Proxy IP Access Control";
   }
+
+  protected void saveChanges() throws IOException {
+    boolean auditEnable = CurrentConfig.getBooleanParam(
+        ProxyAndContent.PARAM_AUDIT_ENABLE, ProxyAndContent.DEFAULT_AUDIT_ENABLE);
+    int auditPort = CurrentConfig.getIntParam(ProxyAndContent.PARAM_AUDIT_PORT, 0);
+    boolean icpEnable = getLockssDaemon().getIcpManager().isIcpServerRunning();
+    int icpPort = getLockssDaemon().getIcpManager().getCurrentPort();
+    ProxyAndContent.saveAuditAndIcp(configMgr,
+        auditEnable, auditPort, icpEnable, icpPort);
+    super.saveChanges();
+  }
+
+
 
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: IpAccessControl.java,v 1.34 2006-01-27 04:33:59 tlipkis Exp $
+ * $Id: IpAccessControl.java,v 1.34.2.1 2006-03-02 01:38:16 thib_gc Exp $
  */
 
 /*
@@ -65,7 +65,7 @@ public abstract class IpAccessControl extends LockssServlet {
 
   static Logger log = Logger.getLogger("IpAccessServlet");
 
-  private ConfigManager configMgr;
+  protected ConfigManager configMgr;
 
   // Values read from form
   private Vector formIncl;
