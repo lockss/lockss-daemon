@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerStatus.java,v 1.29 2005-11-16 04:25:22 tlipkis Exp $
+ * $Id: CrawlManagerStatus.java,v 1.30 2006-03-02 06:59:19 tlipkis Exp $
  */
 
 /*
@@ -46,6 +46,7 @@ public class CrawlManagerStatus implements StatusAccessor {
   private static final String CRAWL_TYPE = "crawl_type";
   private static final String START_TIME_COL_NAME = "start";
   private static final String END_TIME_COL_NAME = "end";
+  private static final String CONTENT_BYTES_FETCHED = "content_bytes_fetched";
   private static final String NUM_URLS_PARSED = "num_urls_parsed";
   private static final String NUM_URLS_FETCHED = "num_urls_fetched";
   private static final String NUM_URLS_WITH_ERRORS = "num_urls_with_errors";
@@ -57,31 +58,40 @@ public class CrawlManagerStatus implements StatusAccessor {
   private List sortRules = null;
 
   private List colDescs =
-    ListUtil.list(
-		  new ColumnDescriptor(AU_COL_NAME, "Journal Volume",
-				       ColumnDescriptor.TYPE_STRING)
-		  .setComparator(CatalogueOrderComparator.SINGLETON),
-		  new ColumnDescriptor(CRAWL_TYPE, "Crawl Type",
-				       ColumnDescriptor.TYPE_STRING),
-		  new ColumnDescriptor(START_TIME_COL_NAME, "Start Time",
-				       ColumnDescriptor.TYPE_DATE),
-		  new ColumnDescriptor(END_TIME_COL_NAME, "End Time",
-				       ColumnDescriptor.TYPE_DATE),
-		  new ColumnDescriptor(CRAWL_STATUS, "Crawl Status",
-				       ColumnDescriptor.TYPE_STRING),
-		  new ColumnDescriptor(NUM_URLS_PARSED, "Parsed",
-				       ColumnDescriptor.TYPE_INT),
-		  new ColumnDescriptor(NUM_URLS_FETCHED, "Fetched",
-				       ColumnDescriptor.TYPE_INT),
-		  new ColumnDescriptor(NUM_URLS_WITH_ERRORS, "Errors",
-				       ColumnDescriptor.TYPE_INT),
-		  new ColumnDescriptor(NUM_URLS_NOT_MODIFIED, "Not Modified ",
-				       ColumnDescriptor.TYPE_INT),
-		  new ColumnDescriptor(START_URLS, "Starting Url(s)",
-				       ColumnDescriptor.TYPE_STRING),
-		  new ColumnDescriptor(SOURCES, "Source(s)",
-				       ColumnDescriptor.TYPE_STRING)
-		  );
+    ListUtil.fromArray(new ColumnDescriptor[] {
+      new ColumnDescriptor(AU_COL_NAME, "Journal Volume",
+			   ColumnDescriptor.TYPE_STRING)
+      .setComparator(CatalogueOrderComparator.SINGLETON),
+      new ColumnDescriptor(CRAWL_TYPE, "Crawl Type",
+			   ColumnDescriptor.TYPE_STRING),
+      new ColumnDescriptor(START_TIME_COL_NAME, "Start Time",
+			   ColumnDescriptor.TYPE_DATE),
+      new ColumnDescriptor(END_TIME_COL_NAME, "End Time",
+			   ColumnDescriptor.TYPE_DATE),
+      new ColumnDescriptor(CRAWL_STATUS, "Crawl Status",
+			   ColumnDescriptor.TYPE_STRING),
+      new ColumnDescriptor(CONTENT_BYTES_FETCHED, "Bytes Fetched",
+			   ColumnDescriptor.TYPE_INT,
+			   "Number of content bytes collected from server " +
+			   "during crawl.  Does not include HTTP headers " +
+			   "or other network overhead."),
+      new ColumnDescriptor(NUM_URLS_FETCHED, "Pages Fetched",
+			   ColumnDescriptor.TYPE_INT,
+			   "Number of pages successfully fetched from server"),
+      new ColumnDescriptor(NUM_URLS_PARSED, "Pages Parsed",
+			   ColumnDescriptor.TYPE_INT,
+			   "Number of (html, etc.) pages scanned for URLs"),
+      new ColumnDescriptor(NUM_URLS_NOT_MODIFIED, "Not Modified",
+			   ColumnDescriptor.TYPE_INT,
+			   "Number of pages for which we already had current content"),
+      new ColumnDescriptor(NUM_URLS_WITH_ERRORS, "Errors",
+			   ColumnDescriptor.TYPE_INT,
+			   "Number of pages that could not be fetched"),
+      new ColumnDescriptor(START_URLS, "Starting Url(s)",
+			   ColumnDescriptor.TYPE_STRING),
+      new ColumnDescriptor(SOURCES, "Source(s)",
+			   ColumnDescriptor.TYPE_STRING),
+    });
 
 
   private CrawlManager.StatusSource statusSource;
@@ -164,6 +174,7 @@ public class CrawlManagerStatus implements StatusAccessor {
     row.put(CRAWL_TYPE, status.getType());
     row.put(START_TIME_COL_NAME, new Long(status.getStartTime()));
     row.put(END_TIME_COL_NAME, new Long(status.getEndTime()));
+    row.put(CONTENT_BYTES_FETCHED, new Long(status.getContentBytesFetched()));
     row.put(NUM_URLS_FETCHED,
 	    makeRef(status.getNumFetched(),
 		    "single_crawl_status", "fetched."+key));

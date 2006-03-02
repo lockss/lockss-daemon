@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawler.java,v 1.6 2006-02-14 05:19:49 tlipkis Exp $
+ * $Id: BaseCrawler.java,v 1.7 2006-03-02 06:59:19 tlipkis Exp $
  */
 
 /*
@@ -264,6 +264,10 @@ public abstract class BaseCrawler
     switch (cacheResult) {
     case UrlCacher.CACHE_RESULT_FETCHED:
       crawlStatus.signalUrlFetched(uc.getUrl());
+      CachedUrl cu = uc.getCachedUrl();
+      if (cu != null && cu.hasContent()) {
+	crawlStatus.addContentBytesFetched(cu.getContentSize());
+      }
       break;
     case UrlCacher.CACHE_RESULT_NOT_MODIFIED:
       crawlStatus.signalUrlNotModified(uc.getUrl());
