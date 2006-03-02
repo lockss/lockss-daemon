@@ -1,10 +1,10 @@
 /*
- * $Id: Constants.java,v 1.13 2006-01-27 04:32:34 tlipkis Exp $
+ * $Id: Constants.java,v 1.14 2006-03-02 19:45:00 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -109,5 +109,8 @@ public interface Constants {
 
   /** Exit code - exception thrown in main loop */
   public static int EXIT_CODE_EXCEPTION_IN_MAIN = 104;
+
+  /** Exit code - required resource unavailable */
+  public static int EXIT_CODE_RESOURCE_UNAVAILABLE = 105;
 
 }

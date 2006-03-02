@@ -1,10 +1,10 @@
 /*
- * $Id: LcapDatagramComm.java,v 1.15 2005-12-01 01:54:43 smorabito Exp $
+ * $Id: LcapDatagramComm.java,v 1.16 2006-03-02 19:45:00 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -445,6 +445,8 @@ public class LcapDatagramComm
       } catch (IOException e) {
 	log.error("Can't create unicast socket", e);
 	noCommAlert("Can't create unicast socket: " + e.getMessage());
+	throw
+	  new ResourceUnavailableException("Can't bind unicast socket", e);
       }
     } else {
       log.error("Unicast port not configured, not starting unicast receive");
