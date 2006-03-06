@@ -1,5 +1,5 @@
 /*
- * $Id: Cron.java,v 1.5 2006-02-28 09:09:12 tlipkis Exp $
+ * $Id: Cron.java,v 1.5.2.1 2006-03-06 17:44:14 tlipkis Exp $
  *
 
 Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
@@ -133,6 +133,7 @@ public class Cron
 
   void storeState(File file) {
     try {
+      if (log.isDebug2()) log.debug2("Storing in " + file + ": " + state);
       makeObjectSerializer().serialize(file, state);
     } catch (Exception e) {
       log.error("Couldn't store cron state, disabling cron: ", e);
@@ -193,9 +194,10 @@ public class Cron
       for (Iterator iter = tasks.iterator(); iter.hasNext(); ) {
 	Cron.Task task = (Cron.Task)iter.next();
 	if (task.nextTime(state.getLastTime(task.getId())) <= now) {
-	  executeTask(task);
-	  state.setLastTime(task.getId(), now);
-	  needStore = true;
+	  if (executeTask(task)) {
+	    state.setLastTime(task.getId(), now);
+	    needStore = true;
+	  }
 	}
       }
       if (needStore) {
@@ -207,9 +209,9 @@ public class Cron
     }
   }
 
-  private void executeTask(Task task) {
+  private boolean executeTask(Task task) {
     try {
-      task.execute();
+      return task.execute();
     } catch (Exception e) {
       try {
 	log.error("Error executing task " + task, e);
@@ -218,12 +220,13 @@ public class Cron
 	log.error("Error executing task", e);
       }
     }
+    return true;
   }
 
   /** Interface that cron tasks must implement */
   public interface Task {
     String getId();
-    void execute();
+    boolean execute();
     long nextTime(long lastTime);
   }
 
@@ -299,13 +302,14 @@ public class Cron
       return cal.getTimeInMillis();
     }
 
-    public void execute() {
+    public boolean execute() {
       RemoteApi rmtApi = daemon.getRemoteApi();
       try {
-	rmtApi.sendMailBackup(false);
+	return rmtApi.sendMailBackup(false);
       } catch (IOException e) {
 	log.warning("Failed to mail backup file", e);
       }
+      return true;
     }
   }
 }
