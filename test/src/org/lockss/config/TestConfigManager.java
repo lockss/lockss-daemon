@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigManager.java,v 1.15 2006-01-27 04:51:29 tlipkis Exp $
+ * $Id: TestConfigManager.java,v 1.15.2.1 2006-03-06 17:43:49 tlipkis Exp $
  */
 
 /*
@@ -499,6 +499,38 @@ public class TestConfigManager extends LockssTestCase {
     assertEquals("xxx", config.get("prop2"));
     assertTrue(config.getBoolean("prop3", false));
     assertEquals("yyy", config.get("prop4"));
+  }
+
+  public void testHasLocalCacheConfig() throws Exception {
+    assertFalse(mgr.hasLocalCacheConfig());
+    // set up local config dir
+    String tmpdir = getTempDir().toString();
+    Properties props = new Properties();
+    props.put(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tmpdir);
+    ConfigurationUtil.setCurrentConfigFromProps(props);
+    String relConfigPath =
+      CurrentConfig.getParam(ConfigManager.PARAM_CONFIG_PATH,
+                             ConfigManager.DEFAULT_CONFIG_PATH);
+    File cdir = new File(tmpdir, relConfigPath);
+    assertTrue(cdir.exists());
+
+    assertFalse(mgr.hasLocalCacheConfig());
+
+    // loading local shouldn't set flag because no files
+    Configuration config = new ConfigurationPropTreeImpl();
+    mgr.loadCacheConfigInto(config);
+    assertFalse(mgr.hasLocalCacheConfig());
+
+    // write a local config file
+    mgr.writeCacheConfigFile(props, ConfigManager.CONFIG_FILE_AU_CONFIG,
+			     "this is a header");
+
+    assertFalse(mgr.hasLocalCacheConfig());
+
+    // load it to set flag
+    mgr.loadCacheConfigInto(config);
+
+    assertTrue(mgr.hasLocalCacheConfig());
   }
 
   public void testFromProperties() throws Exception {
