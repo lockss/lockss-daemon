@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.29 2006-02-28 01:00:35 thib_gc Exp $
+ * $Id: ConfigManager.java,v 1.30 2006-03-06 17:46:46 tlipkis Exp $
  */
 
 /*
@@ -727,6 +727,7 @@ public class ConfigManager implements LockssManager {
 
   boolean cacheConfigInited = false;
   File cacheConfigDir = null;
+  boolean hasLocalCacheConfig = false;
 
   boolean isUnitTesting() {
     return Boolean.getBoolean("org.lockss.unitTesting");
@@ -809,12 +810,18 @@ public class ConfigManager implements LockssManager {
       boolean gotIt = loadList(config, ListUtil.list(cfile.toString()),
 			       true, true);
       if (gotIt) {
+	hasLocalCacheConfig = true;
 	res.add(cfile.toString());
       }
     }
     return res;
   }
 
+  /** Return true if any daemon config has been done on this machine */
+  public boolean hasLocalCacheConfig() {
+    return hasLocalCacheConfig;
+  }
+      
   /** Load the current list of bundled TitleDB config files into the
       given config object.  This will <em>not</em> overwrite any keys
       in the config object.  */
