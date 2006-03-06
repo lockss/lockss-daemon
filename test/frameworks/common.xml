@@ -126,6 +126,7 @@
 	<value>org.lockss.plugin.secrecynews.SecrecyNewsPlugin</value>
 	<value>org.lockss.plugin.huffpoblog.HuffPoBlogPlugin</value>
 	<value>de.huberlin.edoc.plugin.cmsjournal.CMSJournalPlugin</value>
+	<value>org.lockss.plugin.etd.humboldtplugin.HumboldtPlugin</value>
       </list>
     </property>
 
@@ -7581,6 +7582,98 @@
 	  <property name="value" value="http://rmc.library.cornell.edu/" />
 	</property>
       </property>
+
+      <property name="humboldt2002">
+	<property name="title" value="Humboldt-Universität zu Berlin ETD Collection 2002" />
+	<property name="journalTitle" value="Humboldt-Universität zu Berlin ETD Collection" />
+	<property name="plugin" value="org.lockss.plugin.etd.humboldtplugin.HumboldtPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://edoc.hu-berlin.de/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2002" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="oai_request_url" />
+	  <property name="value" value="http://edoc.hu-berlin.de/OAI-2.0" />
+	</property>
+      </property>
+
+      <property name="humboldt2003">
+	<property name="title" value="Humboldt-Universität zu Berlin ETD Collection 2003" />
+	<property name="journalTitle" value="Humboldt-Universität zu Berlin ETD Collection" />
+	<property name="plugin" value="org.lockss.plugin.etd.humboldtplugin.HumboldtPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://edoc.hu-berlin.de/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2003" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="oai_request_url" />
+	  <property name="value" value="http://edoc.hu-berlin.de/OAI-2.0" />
+	</property>
+      </property>
+
+      <property name="humboldt2004">
+	<property name="title" value="Humboldt-Universität zu Berlin ETD Collection 2004" />
+	<property name="journalTitle" value="Humboldt-Universität zu Berlin ETD Collection" />
+	<property name="plugin" value="org.lockss.plugin.etd.humboldtplugin.HumboldtPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://edoc.hu-berlin.de/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2004" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="oai_request_url" />
+	  <property name="value" value="http://edoc.hu-berlin.de/OAI-2.0" />
+	</property>
+      </property>
+
+      <property name="humboldt2005">
+	<property name="title" value="Humboldt-Universität zu Berlin ETD Collection 2005" />
+	<property name="journalTitle" value="Humboldt-Universität zu Berlin ETD Collection" />
+	<property name="plugin" value="org.lockss.plugin.etd.humboldtplugin.HumboldtPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://edoc.hu-berlin.de/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2005" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="oai_request_url" />
+	  <property name="value" value="http://edoc.hu-berlin.de/OAI-2.0" />
+	</property>
+      </property>
+
+<!--
+      <property name="humboldt2006">
+	<property name="title" value="Humboldt-Universität zu Berlin ETD Collection 2006" />
+	<property name="journalTitle" value="Humboldt-Universität zu Berlin ETD Collection" />
+	<property name="plugin" value="org.lockss.plugin.etd.humboldtplugin.HumboldtPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://edoc.hu-berlin.de/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2006" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="oai_request_url" />
+	  <property name="value" value="http://edoc.hu-berlin.de/OAI-2.0" />
+	</property>
+      </property>
+-->
 
     </property>
       <!-- End title database -->
