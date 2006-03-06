@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.54 2006-02-28 09:09:12 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.55 2006-03-06 17:47:20 tlipkis Exp $
  */
 
 /*
@@ -1492,20 +1492,24 @@ public class RemoteApi
     "\nFor more information see %s\n";
 
 
-  public void sendMailBackup() throws IOException {
-    sendMailBackup(true);
+  public boolean sendMailBackup() throws IOException {
+    return sendMailBackup(true);
   }
 
-  public void sendMailBackup(boolean evenIfEmpty) throws IOException {
-    sendMailBackup(evenIfEmpty, null);
+  public boolean sendMailBackup(boolean evenIfEmpty) throws IOException {
+    return sendMailBackup(evenIfEmpty, null);
   }
 
-  public void sendMailBackup(boolean evenIfEmpty, String to)
+  public boolean sendMailBackup(boolean evenIfEmpty, String to)
       throws IOException {
+    if (!configMgr.hasLocalCacheConfig()) {
+      log.info("Not mailing config backup because no local config");
+      return false;
+    }
     Configuration config = ConfigManager.getCurrentConfig();
     if (!config.getBoolean(PARAM_BACKUP_EMAIL_ENABLED,
 			   DEFAULT_BACKUP_EMAIL_ENABLED)) {
-      return;
+      return false;
     }
     String machineName = ConfigManager.getPlatformHostname();
     if (StringUtil.isNullString(machineName)) {
@@ -1544,6 +1548,7 @@ public class RemoteApi
       //     msg.addHeader("X-Mailer", getXMailer());
       mailSvc.sendMail(getBackEmailSender(config), to, msg);
       log.info("sent");
+      return true;
     } finally {
       try {
 	if (false && bfile != null) bfile.delete();
