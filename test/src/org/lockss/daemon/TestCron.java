@@ -1,5 +1,5 @@
 /*
- * $Id: TestCron.java,v 1.4 2006-02-28 09:09:12 tlipkis Exp $
+ * $Id: TestCron.java,v 1.5 2006-03-06 17:47:05 tlipkis Exp $
  */
 
 /*
@@ -112,14 +112,24 @@ public class TestCron extends LockssTestCase {
     cron.startService();
     TimeBase.step(10);
     assertEquals(ListUtil.list(new Long(1010)), task.getTrace());
+    assertEquals(1010, cron.getState().getLastTime("TestTask"));
     TimeBase.step(10);
     assertEquals(ListUtil.list(new Long(1010)), task.getTrace());
     TimeBase.step(10);
     assertEquals(ListUtil.list(new Long(1010)), task.getTrace());
     TimeBase.step(70);
     assertEquals(ListUtil.list(new Long(1010)), task.getTrace());
+    task.setRet(false);
     TimeBase.step(20);
+    // task should have run again, but not updated next run time
     assertEquals(ListUtil.list(new Long(1010), new Long(1120)),
+		 task.getTrace());
+    assertEquals(1010, cron.getState().getLastTime("TestTask"));
+    task.setRet(true);
+    TimeBase.step(10);
+    // now it should have run again and updated next run time
+    assertEquals(1130, cron.getState().getLastTime("TestTask"));
+    assertEquals(ListUtil.list(new Long(1010), new Long(1120), new Long(1130)),
 		 task.getTrace());
   }
 
@@ -196,6 +206,7 @@ public class TestCron extends LockssTestCase {
 
   static class TestTask implements Cron.Task {
     List trace = new ArrayList();
+    boolean ret = true;
 
     TestTask(LockssDaemon daemon) {
     }
@@ -208,12 +219,17 @@ public class TestCron extends LockssTestCase {
       return lastTime + 100;
     }
 
-    public void execute() {
+    public boolean execute() {
       trace.add(new Long(TimeBase.nowMs()));
+      return ret;
     }
 
     List getTrace() {
       return trace;
+    }
+
+    void setRet(boolean ret) {
+      this.ret = ret;
     }
   }
 
@@ -221,8 +237,9 @@ public class TestCron extends LockssTestCase {
   static class MyRemoteApi extends RemoteApi {
     boolean sent = false;
 
-    public void sendMailBackup(boolean evenIfEmpty) throws IOException {
+    public boolean sendMailBackup(boolean evenIfEmpty) throws IOException {
       sent = true;
+      return true;
     }
   }
 
