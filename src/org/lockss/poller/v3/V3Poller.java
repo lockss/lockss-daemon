@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.18 2006-03-01 02:50:14 smorabito Exp $
+ * $Id: V3Poller.java,v 1.19 2006-03-07 02:35:07 smorabito Exp $
  */
 
 /*
@@ -999,6 +999,8 @@ public class V3Poller extends BasePoll {
       log.error("No voter user data for peer.  May have " +
                 "been removed from poll: " + msg.getOriginatorId());
     }
+    // Finally, clean up after the V3LcapMessage
+    msg.delete();
   }
 
   public PollerStateBean getPollerStateBean() {

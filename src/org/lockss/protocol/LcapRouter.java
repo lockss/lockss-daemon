@@ -1,5 +1,5 @@
 /*
- * $Id: LcapRouter.java,v 1.45 2005-10-07 23:46:47 smorabito Exp $
+ * $Id: LcapRouter.java,v 1.46 2006-03-07 02:35:07 smorabito Exp $
  */
 
 /*
@@ -51,6 +51,13 @@ import org.lockss.poller.*;
 public class LcapRouter
   extends BaseLockssDaemonManager implements ConfigurableManager {
 
+  private static final String PREFIX =
+    Configuration.PREFIX + "comm.";
+  private static final String PARAM_V3_LCAP_MESSAGE_DATA_DIR =
+    PREFIX + "v3LcapMessageDataDir";
+  private static final String DEFAULT_V3_LCAP_MESSAGE_DATA_DIR =
+    System.getProperty("java.io.tmpdir");
+  
   static Logger log = Logger.getLogger("Router");
 
   private IdentityManager idMgr;
@@ -59,6 +66,7 @@ public class LcapRouter
   private LcapDatagramRouter.MessageHandler drouterHandler;
 
   private List messageHandlers = new ArrayList();
+  private File dataDir = null;
 
   public void startService() {
     super.startService();
@@ -101,6 +109,18 @@ public class LcapRouter
 
   public void setConfig(Configuration config, Configuration oldConfig,
 			Configuration.Differences changedKeys) {
+    if (changedKeys.contains(PARAM_V3_LCAP_MESSAGE_DATA_DIR)) {
+        String paramDataDir = config.get(PARAM_V3_LCAP_MESSAGE_DATA_DIR,
+                                         DEFAULT_V3_LCAP_MESSAGE_DATA_DIR);
+        File dir = new File(paramDataDir);
+        if (dir.exists() || dir.mkdirs()) {
+          dataDir = dir;
+          log.debug2("V3LcapMessage data dir: " + dataDir);
+        } else {
+          log.warning("No V3LcapMessage data dir: " + dir);
+          dataDir = null;
+        }
+    }
   }
 
   /** Multicast a message to all peers.  Only supported for V1 messages
@@ -158,7 +178,7 @@ public class LcapRouter
     InputStream in = null;
     try {
       in = pmsg.getInputStream();
-      V3LcapMessage lmsg = new V3LcapMessage(in);
+      V3LcapMessage lmsg = new V3LcapMessage(in, dataDir);
       lmsg.setOriginatorId(pmsg.getSender());
       return lmsg;
     } finally {
