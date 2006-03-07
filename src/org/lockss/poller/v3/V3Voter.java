@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.13 2006-03-01 02:50:14 smorabito Exp $
+ * $Id: V3Voter.java,v 1.13.2.1 2006-03-07 02:27:52 smorabito Exp $
  */
 
 /*
@@ -232,6 +232,8 @@ public class V3Voter extends BasePoll {
       log.warning("State machine error", e);
       abortPoll();
     }
+    // Finally, clean up after the V3LcapMessage
+    msg.delete();    
   }
 
   /**

@@ -1,5 +1,5 @@
 /*
- * $Id: V3LcapMessageFactory.java,v 1.8 2006-03-01 02:50:14 smorabito Exp $
+ * $Id: V3LcapMessageFactory.java,v 1.8.2.1 2006-03-07 02:27:52 smorabito Exp $
  */
 
 /*
@@ -189,7 +189,9 @@ public class V3LcapMessageFactory {
                                    ud.getPollerId());
     ArchivalUnit au = ud.getCachedUrlSet().getArchivalUnit();
     CachedUrl cu = au.makeCachedUrl(ud.getRepairTarget());
-    msg.setRepairDataFrom(cu);
+    msg.setRepairDataLength(cu.getContentSize());
+    msg.setRepairProps(cu.getProperties());
+    msg.setInputStream(cu.getUnfilteredInputStream());
     return msg;
   }
 }
