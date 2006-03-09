@@ -1,5 +1,5 @@
 /*
- * $Id: V3LcapMessage.java,v 1.18 2006-03-07 02:35:07 smorabito Exp $
+ * $Id: V3LcapMessage.java,v 1.19 2006-03-09 00:11:27 thib_gc Exp $
  */
 
 /*
@@ -93,11 +93,11 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
    */
   private EncodedProperty m_repairProps;
   private long m_repairDataLen = 0;
-  
+
   // XXX: A kludge.  InputStream from which to read repair data
   //      when encoding this message.
   private transient InputStream m_repairDataInputStream;
-  
+
   /** File used to store vote blocks, repair data, etc. */
   private transient File m_dataFile;
 
@@ -117,10 +117,10 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
    * bytes  5  -  8:  Property length (4 bytes)
    * bytes  9  - 16:  Repair Data length (8 bytes)
    * bytes  17 - 36:  SHA-1 hash of encoded properties (20 bytes)
-   * 
+   *
    * Variable length V3 Fields
    * bytes  37 - <property_length>:  Encoded properties
-   * <property_length+1>   - <repair_data_length>: Repair data 
+   * <property_length+1>   - <repair_data_length>: Repair data
    */
 
   /**
@@ -219,7 +219,7 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
                     "but no temporary file to store it in!");
       }
     }
-    // 
+    //
     // decode the properties
     m_props.decode(prop_bytes);
     // the immutable stuff
@@ -511,16 +511,16 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
   public void setVoteBlocks(VoteBlocks voteBlocks) {
     m_voteBlocks = voteBlocks;
   }
-  
+
   public void setRepairProps(CIProperties props) {
     if (props != null) {
       m_repairProps = EncodedProperty.fromProps(props);
     }
   }
-  
+
   /**
    * Set the size of the repair data.
-   * 
+   *
    * @param len
    */
   public void setRepairDataLength(long len) {
@@ -529,22 +529,20 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
 
   /**
    * Return the size of the repair data.
-   * 
-   * @return
    */
   public long getRepairDataLength() {
     return m_repairDataLen;
   }
-  
+
   /**
-   * 
+   *
    */
   public void setInputStream(InputStream is) {
     this.m_repairDataInputStream = is;
   }
 
   /**
-   * 
+   *
    * @return Input stream from which to read repair data.
    */
   public InputStream getRepairDataInputStream() throws IOException {
