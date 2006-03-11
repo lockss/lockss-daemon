@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyAndContent.java,v 1.14.2.1 2006-03-02 01:38:16 thib_gc Exp $
+ * $Id: ProxyAndContent.java,v 1.14.2.2 2006-03-11 00:49:04 thib_gc Exp $
  */
 
 /*
@@ -250,7 +250,7 @@ public class ProxyAndContent extends LockssServlet {
 
   private Iterator getDescriptors_Main() {
     return new ObjectArrayIterator(new LinkWithExplanation[] {
-        makeDescriptor("Proxy Options",
+        makeDescriptor("Configure Proxy Options",
                        ACTION_PROXY,
                        "Configure the audit proxy and the ICP server."),
 // FIXME: disabled until after the 1.15 branch
