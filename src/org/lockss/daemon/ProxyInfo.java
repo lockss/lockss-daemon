@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyInfo.java,v 1.15 2006-03-13 21:12:27 thib_gc Exp $
+ * $Id: ProxyInfo.java,v 1.16 2006-03-13 21:25:38 thib_gc Exp $
  */
 
 /*
@@ -277,11 +277,15 @@ public class ProxyInfo {
   }
 
   public String generateSquidFile(Map urlStems) {
-    SortedSet stems = new TreeSet(urlStems.keySet());
+    SortedSet stems = new TreeSet();
+    for (Iterator iter = urlStems.keySet().iterator() ; iter.hasNext() ; ) {
+      stems.add(generateSquidEntry((String)iter.next()));
+    }
+
     StringBuffer sb = new StringBuffer();
-    for (Iterator iter = stems.iterator(); iter.hasNext(); ) {
-      String stem = (String)iter.next();
-      generateSquidEntry(sb, stem);
+    for (Iterator iter = stems.iterator() ; iter.hasNext() ; ) {
+      sb.append((String)iter.next());
+      sb.append('\n');
     }
     sb.append('\n');
     return sb.toString();
@@ -301,16 +305,14 @@ public class ProxyInfo {
     sb.append("\n\n");
   }
 
-  void generateSquidEntry(StringBuffer sb, String stem) {
+  String generateSquidEntry(String stem) {
     final String PROTOCOL_SUBSTRING = "://";
     final String WWW_DOT = "www.";
     int begin = stem.indexOf(PROTOCOL_SUBSTRING) + PROTOCOL_SUBSTRING.length();
     if (stem.substring(begin).startsWith(WWW_DOT)) {
       begin += WWW_DOT.length();
     }
-    sb.append('.');
-    sb.append(stem.substring(begin));
-    sb.append('\n');
+    return "." + stem.substring(begin);
   }
 
 }

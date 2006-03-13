@@ -1,5 +1,5 @@
 /*
- * $Id: TestProxyInfo.java,v 1.11 2006-03-13 09:34:13 thib_gc Exp $
+ * $Id: TestProxyInfo.java,v 1.12 2006-03-13 21:25:38 thib_gc Exp $
  */
 
 /*
@@ -229,24 +229,16 @@ public class TestProxyInfo extends LockssTestCase {
   public void testGenerateSquidEntry() throws Exception {
     final String PROTOCOL = "anyproto://";
     final String DOT = ".";
-    final String NEWLINE = "\n";
     final String NOTWWW = "notwww";
     final String WWW = "www";
     final String JOURNALX_DOT_COM = "journalx.com";
 
-    StringBuffer sb;
-
-    sb = new StringBuffer();
-    pi.generateSquidEntry(sb, PROTOCOL + JOURNALX_DOT_COM);
-    assertEquals(sb.toString(), DOT + JOURNALX_DOT_COM + NEWLINE);
-
-    sb = new StringBuffer();
-    pi.generateSquidEntry(sb, PROTOCOL + NOTWWW + DOT + JOURNALX_DOT_COM);
-    assertEquals(sb.toString(), DOT + NOTWWW + DOT + JOURNALX_DOT_COM + NEWLINE);
-
-    sb = new StringBuffer();
-    pi.generateSquidEntry(sb, PROTOCOL + WWW + DOT + JOURNALX_DOT_COM);
-    assertEquals(sb.toString(), DOT + JOURNALX_DOT_COM + NEWLINE);
+    assertEquals(DOT + JOURNALX_DOT_COM,
+                 pi.generateSquidEntry(PROTOCOL + JOURNALX_DOT_COM));
+    assertEquals(DOT + NOTWWW + DOT + JOURNALX_DOT_COM,
+                 pi.generateSquidEntry(PROTOCOL + NOTWWW + DOT + JOURNALX_DOT_COM));
+    assertEquals(DOT + JOURNALX_DOT_COM,
+                 pi.generateSquidEntry(PROTOCOL + WWW + DOT + JOURNALX_DOT_COM));
   }
 
   String removeCommentLines(String s) {
