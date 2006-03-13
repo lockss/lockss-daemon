@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyConfig.java,v 1.18 2006-03-13 09:34:14 thib_gc Exp $
+ * $Id: ProxyConfig.java,v 1.19 2006-03-13 21:12:27 thib_gc Exp $
  */
 
 /*
@@ -32,19 +32,19 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.servlet;
 
-import javax.servlet.http.*;
-import javax.servlet.*;
 import java.io.*;
-import java.util.*;
-import java.net.*;
-import java.text.*;
-import org.mortbay.http.*;
+import java.net.UnknownHostException;
+import java.util.Map;
+
+import javax.servlet.*;
+import javax.servlet.http.HttpServletResponse;
+
+import org.lockss.daemon.ProxyInfo;
+import org.lockss.jetty.MyTextArea;
+import org.lockss.plugin.PluginManager;
+import org.lockss.util.StringUtil;
 import org.mortbay.html.*;
-import org.mortbay.servlet.MultiPartRequest;
-import org.lockss.util.*;
-import org.lockss.daemon.*;
-import org.lockss.jetty.*;
-import org.lockss.plugin.*;
+import org.mortbay.http.HttpFields;
 
 /** ProxyConfig servlet supplies configuration files or fragments for
  * configuring browsers or external proxies to use the lockss cache as a
@@ -52,6 +52,7 @@ import org.lockss.plugin.*;
  */
 public class ProxyConfig extends LockssServlet {
 
+  private static final String TAG_SQUID = "squid";
   private static final String TAG_EZPROXY = "ezproxy";
   private static final String TAG_COMBINED_PAC = "Combined PAC";
   private static final String TAG_PAC = "pac";
@@ -174,7 +175,7 @@ public class ProxyConfig extends LockssServlet {
       return;
     }
 
-    if (format.equalsIgnoreCase("squid")) {
+    if (format.equalsIgnoreCase(TAG_SQUID)) {
       generateSquidFile();
       return;
     }
@@ -275,7 +276,7 @@ public class ProxyConfig extends LockssServlet {
     frm.add("<ul>");
     addFmtElement(frm, "EZproxy config fragment", TAG_EZPROXY,
 	       "Generate text to insert into an EZproxy config file (#)");
-    addFmtElement(frm, "Generate a dstdomain file for Squid", "squid",
+    addFmtElement(frm, "Generate a dstdomain file for Squid", TAG_SQUID,
                "Generate text that can be used to create a file for a Squid \"dstdomain\" rule (#)");
     addFmtElement(frm, "PAC file", TAG_PAC,
 	       "Automatic proxy configuration for browsers. " +
