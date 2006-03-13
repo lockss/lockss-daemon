@@ -1,5 +1,5 @@
 /*
- * $Id: TestProxyInfo.java,v 1.12 2006-03-13 21:25:38 thib_gc Exp $
+ * $Id: TestProxyInfo.java,v 1.13 2006-03-13 22:35:54 thib_gc Exp $
  */
 
 /*
@@ -229,16 +229,10 @@ public class TestProxyInfo extends LockssTestCase {
   public void testGenerateSquidEntry() throws Exception {
     final String PROTOCOL = "anyproto://";
     final String DOT = ".";
-    final String NOTWWW = "notwww";
-    final String WWW = "www";
     final String JOURNALX_DOT_COM = "journalx.com";
 
     assertEquals(DOT + JOURNALX_DOT_COM,
                  pi.generateSquidEntry(PROTOCOL + JOURNALX_DOT_COM));
-    assertEquals(DOT + NOTWWW + DOT + JOURNALX_DOT_COM,
-                 pi.generateSquidEntry(PROTOCOL + NOTWWW + DOT + JOURNALX_DOT_COM));
-    assertEquals(DOT + JOURNALX_DOT_COM,
-                 pi.generateSquidEntry(PROTOCOL + WWW + DOT + JOURNALX_DOT_COM));
   }
 
   String removeCommentLines(String s) {

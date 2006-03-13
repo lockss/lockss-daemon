@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyInfo.java,v 1.16 2006-03-13 21:25:38 thib_gc Exp $
+ * $Id: ProxyInfo.java,v 1.17 2006-03-13 22:35:54 thib_gc Exp $
  */
 
 /*
@@ -307,12 +307,8 @@ public class ProxyInfo {
 
   String generateSquidEntry(String stem) {
     final String PROTOCOL_SUBSTRING = "://";
-    final String WWW_DOT = "www.";
-    int begin = stem.indexOf(PROTOCOL_SUBSTRING) + PROTOCOL_SUBSTRING.length();
-    if (stem.substring(begin).startsWith(WWW_DOT)) {
-      begin += WWW_DOT.length();
-    }
-    return "." + stem.substring(begin);
+    return "." + stem.substring(
+        stem.indexOf(PROTOCOL_SUBSTRING) + PROTOCOL_SUBSTRING.length());
   }
 
 }
