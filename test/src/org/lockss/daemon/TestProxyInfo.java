@@ -1,10 +1,10 @@
 /*
- * $Id: TestProxyInfo.java,v 1.10 2005-06-02 16:39:40 tlipkis Exp $
+ * $Id: TestProxyInfo.java,v 1.11 2006-03-13 09:34:13 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,15 +32,13 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.daemon;
 
-import java.io.IOException;
 import java.util.*;
-import org.lockss.app.*;
+
 import org.lockss.config.ConfigManager;
-import org.lockss.util.*;
-import org.lockss.protocol.*;
 import org.lockss.plugin.*;
+import org.lockss.protocol.IdentityManager;
 import org.lockss.test.*;
-import org.apache.oro.text.regex.*;
+import org.lockss.util.*;
 
 /**
  * Test class for ProxyInfo.
@@ -226,6 +224,29 @@ public class TestProxyInfo extends LockssTestCase {
     String s = pi.generateEZProxyFragment(makeUrlStemMap());
     assertTrue(s.startsWith("#"));
     assertEquals(frag, removeCommentLines(s));
+  }
+
+  public void testGenerateSquidEntry() throws Exception {
+    final String PROTOCOL = "anyproto://";
+    final String DOT = ".";
+    final String NEWLINE = "\n";
+    final String NOTWWW = "notwww";
+    final String WWW = "www";
+    final String JOURNALX_DOT_COM = "journalx.com";
+
+    StringBuffer sb;
+
+    sb = new StringBuffer();
+    pi.generateSquidEntry(sb, PROTOCOL + JOURNALX_DOT_COM);
+    assertEquals(sb.toString(), DOT + JOURNALX_DOT_COM + NEWLINE);
+
+    sb = new StringBuffer();
+    pi.generateSquidEntry(sb, PROTOCOL + NOTWWW + DOT + JOURNALX_DOT_COM);
+    assertEquals(sb.toString(), DOT + NOTWWW + DOT + JOURNALX_DOT_COM + NEWLINE);
+
+    sb = new StringBuffer();
+    pi.generateSquidEntry(sb, PROTOCOL + WWW + DOT + JOURNALX_DOT_COM);
+    assertEquals(sb.toString(), DOT + JOURNALX_DOT_COM + NEWLINE);
   }
 
   String removeCommentLines(String s) {

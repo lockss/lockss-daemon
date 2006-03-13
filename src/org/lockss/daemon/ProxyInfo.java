@@ -1,10 +1,10 @@
 /*
- * $Id: ProxyInfo.java,v 1.13 2005-12-01 23:28:01 troberts Exp $
+ * $Id: ProxyInfo.java,v 1.14 2006-03-13 09:34:13 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -31,12 +31,12 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.daemon;
+
 import java.io.*;
 import java.net.MalformedURLException;
 import java.util.*;
 
 import org.apache.oro.text.regex.*;
-
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.*;
 import org.lockss.plugin.*;
@@ -276,6 +276,17 @@ public class ProxyInfo {
     return sb.toString();
   }
 
+  public String generateSquidFile(Map urlStems) {
+    StringBuffer sb = new StringBuffer();
+    for (Iterator iter = urlStems.entrySet().iterator(); iter.hasNext(); ) {
+      Map.Entry entry = (Map.Entry)iter.next();
+      String stem = (String)entry.getKey();
+      generateSquidEntry(sb, stem);
+    }
+    sb.append('\n');
+    return sb.toString();
+  }
+
   void generateEZProxyEntry(StringBuffer sb, String urlStem, String title) {
     sb.append("Title ");
     sb.append(title);
@@ -288,6 +299,18 @@ public class ProxyInfo {
       sb.append("???");
     }
     sb.append("\n\n");
+  }
+
+  void generateSquidEntry(StringBuffer sb, String stem) {
+    final String PROTOCOL_SUBSTRING = "://";
+    final String WWW_DOT = "www.";
+    int begin = stem.indexOf(PROTOCOL_SUBSTRING) + PROTOCOL_SUBSTRING.length();
+    if (stem.substring(begin).startsWith(WWW_DOT)) {
+      begin += WWW_DOT.length();
+    }
+    sb.append('.');
+    sb.append(stem.substring(begin));
+    sb.append('\n');
   }
 
 }

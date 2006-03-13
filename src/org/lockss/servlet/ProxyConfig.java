@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyConfig.java,v 1.17 2006-02-15 05:40:07 tlipkis Exp $
+ * $Id: ProxyConfig.java,v 1.18 2006-03-13 09:34:14 thib_gc Exp $
  */
 
 /*
@@ -52,6 +52,9 @@ import org.lockss.plugin.*;
  */
 public class ProxyConfig extends LockssServlet {
 
+  private static final String TAG_EZPROXY = "ezproxy";
+  private static final String TAG_COMBINED_PAC = "Combined PAC";
+  private static final String TAG_PAC = "pac";
   private String action;
   private String auth;
   private PrintWriter wrtr = null;
@@ -146,7 +149,7 @@ public class ProxyConfig extends LockssServlet {
       return;
     }
 
-    if (format.equalsIgnoreCase("pac")) {
+    if (format.equalsIgnoreCase(TAG_PAC)) {
       if (urlStems.isEmpty()) {
 	wrtr = resp.getWriter();
 	wrtr.println("// No URLs cached on this LOCKSS cache");
@@ -155,11 +158,13 @@ public class ProxyConfig extends LockssServlet {
       }
       return;
     }
-    if (format.equalsIgnoreCase("Combined PAC")) {
+
+    if (format.equalsIgnoreCase(TAG_COMBINED_PAC)) {
       generateEncapsulatedPacFile();
       return;
     }
-    if (format.equalsIgnoreCase("ezproxy")) {
+
+    if (format.equalsIgnoreCase(TAG_EZPROXY)) {
       if (urlStems.isEmpty()) {
 	wrtr = resp.getWriter();
 	wrtr.println("# No URLs cached on this LOCKSS cache");
@@ -168,6 +173,12 @@ public class ProxyConfig extends LockssServlet {
       }
       return;
     }
+
+    if (format.equalsIgnoreCase("squid")) {
+      generateSquidFile();
+      return;
+    }
+
     displayForm("Unknown proxy config format: " + format);
   }
 
@@ -177,7 +188,7 @@ public class ProxyConfig extends LockssServlet {
 
     // Serve as PAC mime type if requested
     String mime = getParameter("mime");
-    if ("pac".equalsIgnoreCase(mime)) {
+    if (TAG_PAC.equalsIgnoreCase(mime)) {
       resp.setContentType("application/x-ns-proxy-autoconfig");
     }
 
@@ -221,7 +232,7 @@ public class ProxyConfig extends LockssServlet {
 
       // Serve as PAC mime type if requested
       String mime = getParameter("mime");
-      if ("pac".equalsIgnoreCase(mime)) {
+      if (TAG_PAC.equalsIgnoreCase(mime)) {
 	resp.setContentType("application/x-ns-proxy-autoconfig");
       }
       wrtr.print(pac);
@@ -236,6 +247,12 @@ public class ProxyConfig extends LockssServlet {
     String ez = pi.generateEZProxyFragment(urlStems);
     wrtr = resp.getWriter();
     wrtr.print(ez);
+  }
+
+  void generateSquidFile() throws IOException {
+    String sq = pi.generateSquidFile(urlStems);
+    wrtr = resp.getWriter();
+    wrtr.print(sq);
   }
 
   void generateHelpPage(String error) throws IOException {
@@ -256,9 +273,11 @@ public class ProxyConfig extends LockssServlet {
     }
     frm.add("<p>Choose a supported format: ");
     frm.add("<ul>");
-    addFmtElement(frm, "EZproxy config fragment", "ezproxy",
-	       "Text to insert into EZproxy config file (#)");
-    addFmtElement(frm, "PAC file", "pac",
+    addFmtElement(frm, "EZproxy config fragment", TAG_EZPROXY,
+	       "Generate text to insert into an EZproxy config file (#)");
+    addFmtElement(frm, "Generate a dstdomain file for Squid", "squid",
+               "Generate text that can be used to create a file for a Squid \"dstdomain\" rule (#)");
+    addFmtElement(frm, "PAC file", TAG_PAC,
 	       "Automatic proxy configuration for browsers. " +
 	       "Place the contents of this file on a server for your users " +
 	       "to configure their browsers (#)" +
@@ -270,7 +289,7 @@ public class ProxyConfig extends LockssServlet {
 			    (url != null ? url : ""));
     urlin.setSize(40);
     urlform.add(urlin);
-    urlform.add(new Input(Input.Submit, "action", "Combined PAC"));
+    urlform.add(new Input(Input.Submit, "action", TAG_COMBINED_PAC));
 
     addFmtElement(frm, "Combined PAC file", "pacform", urlform);
     page.add(frm);
@@ -306,7 +325,7 @@ public class ProxyConfig extends LockssServlet {
     frm.method("POST");
     frm.attribute("enctype", "multipart/form-data");
     frm.add(new Input(Input.Hidden, "pacform", "1"));
-    frm.add(new Input(Input.Hidden, "action", "Combined PAC"));
+    frm.add(new Input(Input.Hidden, "action", TAG_COMBINED_PAC));
 //     frm.add(new Input(Input.Hidden, ACTION_TAG));
     Table tbl = new Table(0, "align=center cellspacing=16 cellpadding=0");
     tbl.newRow();
