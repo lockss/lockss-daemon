@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.31 2006-02-25 01:01:02 thib_gc Exp $
+ * $Id: ServletUtil.java,v 1.31.2.1 2006-03-14 01:48:16 smorabito Exp $
  */
 
 /*
@@ -447,7 +447,7 @@ public class ServletUtil {
 
   public static void layoutAuPropsTable(LockssServlet servlet,
                                         Composite comp,
-                                        Iterator configParamDescrIter,
+                                        Collection configParamDescrs,
                                         Collection defKeys,
                                         Configuration initVals,
                                         Collection noEditKeys,
@@ -462,7 +462,7 @@ public class ServletUtil {
     tbl.add("Archival Unit Definition");
     layoutAuPropRows(servlet,
                     tbl,
-                    configParamDescrIter,
+                    configParamDescrs.iterator(),
                     defKeys,
                     initVals,
                     isNew ? CollectionUtils.subtract(defKeys, noEditKeys) : null);
@@ -479,7 +479,7 @@ public class ServletUtil {
       tbl.add("Other Parameters");
       layoutAuPropRows(servlet,
                        tbl,
-                       configParamDescrIter,
+                       configParamDescrs.iterator(),
                        editKeys,
                        initVals,
                        editable ? editKeys : null);

@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.52 2006-02-15 05:40:07 tlipkis Exp $
+ * $Id: AuConfig.java,v 1.52.2.1 2006-03-14 01:48:16 smorabito Exp $
  */
 
 /*
@@ -515,7 +515,7 @@ public class AuConfig extends LockssServlet {
 
     ServletUtil.layoutAuPropsTable(this,
                                    frm,
-                                   getAuConfigParams().iterator(),
+                                   getAuConfigParams(),
                                    getDefKeys(),
                                    initVals,
                                    noEditKeys,

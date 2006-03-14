@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.35 2005-11-16 04:25:20 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.35.8.1 2006-03-14 01:48:15 smorabito Exp $
  */
 
 /*
@@ -531,6 +531,9 @@ public class ArchivalUnitStatus
 //             new StatusTable.SummaryInfo("Volume Complete",
 //                                         ColumnDescriptor.TYPE_STRING,
 //                                         (AuUtil.isClosed(au) ? "Yes" : "No")),
+	    new StatusTable.SummaryInfo("Polling Protocol Version",
+					ColumnDescriptor.TYPE_INT,
+					new Integer(AuUtil.getProtocolVersion(au))),
             new StatusTable.SummaryInfo("Last Crawl Time",
                                         ColumnDescriptor.TYPE_DATE,
                                         new Long(state.getLastCrawlTime())),
