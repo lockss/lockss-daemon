@@ -127,6 +127,8 @@
 	<value>org.lockss.plugin.huffpoblog.HuffPoBlogPlugin</value>
 	<value>de.huberlin.edoc.plugin.cmsjournal.CMSJournalPlugin</value>
 	<value>org.lockss.plugin.etd.humboldtplugin.HumboldtPlugin</value>
+	<value>gov.gpo.access.permanent.plugin.amberwaves.Amber_WavesPlugin</value>
+	<value>gov.gpo.access.permanent.plugin.fbilawenforcementbulletin.FBI_Law_Enforcement_BulletinPlugin</value>
       </list>
     </property>
 
@@ -1150,6 +1152,34 @@
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://permanent.access.gpo.gov/lockss/Monthly_Labor_Review/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2005" />
+	</property>
+      </property>
+
+      <property name="FBILawEnforcementBulletin2005">
+	<property name="title" value="FBI Law Enforcement Bulletin 2005" />
+	<property name="journalTitle" value="FBI Law Enforcement Bulletin" />
+	<property name="plugin" value="gov.gpo.access.permanent.plugin.fbilawenforcementbulletin.FBI_Law_Enforcement_BulletinPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://permanent.access.gpo.gov/lockss/FBI_Law_Enforcement_Bulletin" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2005" />
+	</property>
+      </property>
+
+      <property name="AmberWaves2005">
+	<property name="title" value="Amber Waves 2005" />
+	<property name="journalTitle" value="Amber Waves" />
+	<property name="plugin" value="gov.gpo.access.permanent.plugin.amberwaves.Amber_WavesPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://permanent.access.gpo.gov/lockss/Amber_Waves" />
 	</property>
 	<property name="param.2">
 	  <property name="key" value="year" />
