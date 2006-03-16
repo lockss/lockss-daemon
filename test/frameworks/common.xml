@@ -2839,7 +2839,7 @@
       </property>
 
       <property name="Screen46">
-	<property name="title" value="Screen Volume46 " />
+	<property name="title" value="Screen Volume 46 " />
 	<property name="journalTitle" value="Screen" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
 	<property name="param.1">
@@ -7614,8 +7614,8 @@
       </property>
 
       <property name="humboldt2002">
-	<property name="title" value="Humboldt-Universit&#00e4;t zu Berlin ETD Collection 2002" />
-	<property name="journalTitle" value="Humboldt-Universit&#00e4;t zu Berlin ETD Collection" />
+	<property name="title" value="Humboldt-Universit&#x00e4;t zu Berlin ETD Collection 2002" />
+	<property name="journalTitle" value="Humboldt-Universit&#x00e4;t zu Berlin ETD Collection" />
 	<property name="plugin" value="org.lockss.plugin.etd.humboldtplugin.HumboldtPlugin" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
@@ -7632,8 +7632,8 @@
       </property>
 
       <property name="humboldt2003">
-	<property name="title" value="Humboldt-Universit&#00e4;t zu Berlin ETD Collection 2003" />
-	<property name="journalTitle" value="Humboldt-Universit&#00e4;t zu Berlin ETD Collection" />
+	<property name="title" value="Humboldt-Universit&#x00e4;t zu Berlin ETD Collection 2003" />
+	<property name="journalTitle" value="Humboldt-Universit&#x00e4;t zu Berlin ETD Collection" />
 	<property name="plugin" value="org.lockss.plugin.etd.humboldtplugin.HumboldtPlugin" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
@@ -7650,8 +7650,8 @@
       </property>
 
       <property name="humboldt2004">
-	<property name="title" value="Humboldt-Universit&#00e4;t zu Berlin ETD Collection 2004" />
-	<property name="journalTitle" value="Humboldt-Universit&#00e4;t zu Berlin ETD Collection" />
+	<property name="title" value="Humboldt-Universit&#x00e4;t zu Berlin ETD Collection 2004" />
+	<property name="journalTitle" value="Humboldt-Universit&#x00e4;t zu Berlin ETD Collection" />
 	<property name="plugin" value="org.lockss.plugin.etd.humboldtplugin.HumboldtPlugin" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
@@ -7668,8 +7668,8 @@
       </property>
 
       <property name="humboldt2005">
-	<property name="title" value="Humboldt-Universit&#00e4;t zu Berlin ETD Collection 2005" />
-	<property name="journalTitle" value="Humboldt-Universit&#00e4;t zu Berlin ETD Collection" />
+	<property name="title" value="Humboldt-Universit&#x00e4;t zu Berlin ETD Collection 2005" />
+	<property name="journalTitle" value="Humboldt-Universit&#x00e4;t zu Berlin ETD Collection" />
 	<property name="plugin" value="org.lockss.plugin.etd.humboldtplugin.HumboldtPlugin" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
@@ -7687,8 +7687,8 @@
 
 <!--
       <property name="humboldt2006">
-	<property name="title" value="Humboldt-Universit&#00e4;t zu Berlin ETD Collection 2006" />
-	<property name="journalTitle" value="Humboldt-Universit&#00e4;t zu Berlin ETD Collection" />
+	<property name="title" value="Humboldt-Universit&#x00e4;t zu Berlin ETD Collection 2006" />
+	<property name="journalTitle" value="Humboldt-Universit&#x00e4;t zu Berlin ETD Collection" />
 	<property name="plugin" value="org.lockss.plugin.etd.humboldtplugin.HumboldtPlugin" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
