@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.174 2006-03-13 08:36:50 tlipkis Exp $
+ $Id: build.xml,v 1.175 2006-03-16 10:03:36 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
@@ -68,6 +68,7 @@ Args:
 
  Javadoc targets (javadoc, javadoc-test)
   -Dauthor=true            Include author info in javadoc.
+  -Duse=false              Exclude Class use info from javadoc.
   -Dversion=true           Include version info in javadoc.
   -Dscript=name            Script run by jdftp.  Default is lockss-jdftp.
 
@@ -93,6 +94,7 @@ Args:
   <property name="exclude" value="" />
   <property name="halt" value="true" />
   <property name="author" value="false" />
+  <property name="use" value="true" />
   <property name="version" value="false" />
 
   <!--  Options for jikes, have no effect otherwise -->
@@ -1109,7 +1111,7 @@ java -classpath &quot;${tmp.ptool.clspth.unix}&quot; org.lockss.devtools.plugind
    description="Build the LOCKSS javadoc">
   </target>
 
-  <target name="-do-javadoc" depends="prepare-javadoc,jar-tests,-load-build-info,-param-docs-if-1.4">
+  <target name="-do-javadoc" depends="jar-tests,prepare-javadoc,-load-build-info,-param-docs-if-1.4">
     <property name="javadoc.header"
               value="Built ${build.timestamp} on ${build.host}" />
     <!-- Write the text param doc into the doc tree -->
@@ -1122,6 +1124,7 @@ java -classpath &quot;${tmp.ptool.clspth.unix}&quot; org.lockss.devtools.plugind
              packagenames="org.lockss.*"
              sourcepath="${src}"
              destdir="${javadoc}"
+             use="${use}"
              author="${author}"
              version="${version}"
 	     access="protected"
@@ -1130,7 +1133,7 @@ java -classpath &quot;${tmp.ptool.clspth.unix}&quot; org.lockss.devtools.plugind
              verbose="false"
              overview="${src}/overview.html"
              header="${javadoc.header}"
-             bottom="Copyright &#169; 2000-2003 Board of Trustees of Leland Stanford Jr. University, all rights reserved.">
+             bottom="Copyright &amp;copy; 2000-2006 Board of Trustees of Leland Stanford Jr. University, all rights reserved.">
        <classpath refid="compile.classpath" />
     </javadoc>
   </target>
@@ -1140,7 +1143,7 @@ java -classpath &quot;${tmp.ptool.clspth.unix}&quot; org.lockss.devtools.plugind
    <antcall target="param-docs"  />
   </target>
 
-  <target name="param-docs" depends="prepare-javadoc,jar-tools"
+  <target name="param-docs" depends="jar-tools,prepare-javadoc"
    description="Generate an HTML summary of LOCKSS configuration parameters.">
     <!-- Write the HTML param doc into the doc tree -->
     <javadoc sourcepath="${src}"
@@ -1214,13 +1217,14 @@ java -classpath &quot;${tmp.ptool.clspth.unix}&quot; org.lockss.devtools.plugind
 	     failonerror="true"
              sourcepath="${test.src}"
              destdir="${test.javadoc}"
+             use="${use}"
              author="${author}"
              version="${version}"
 	     access="protected"
              windowtitle="LOCKSS test classes API"
              doctitle="LOCKSS test"
              header="${javadoc.test.header}"
-             bottom="Copyright &#169; 2000-2003 Board of Trustees of Leland Stanford Jr. University, all rights reserved.">
+             bottom="Copyright &amp;copy; 2000-2006 Board of Trustees of Leland Stanford Jr. University, all rights reserved.">
 <!--         <fileset dir="${test.src}" includes="**/*.java"/> -->
        <fileset dir="${test.src}" includes="**/*.java" excludes="**/Test*.java"/>
        <classpath refid="test.compile.classpath" />
