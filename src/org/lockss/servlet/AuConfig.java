@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.53 2006-03-14 01:46:43 smorabito Exp $
+ * $Id: AuConfig.java,v 1.54 2006-03-16 01:41:19 thib_gc Exp $
  */
 
 /*
@@ -802,7 +802,7 @@ public class AuConfig extends LockssServlet {
       page.add("</center>");
     }
     layoutFooter(page);
-    page.write(resp.getWriter());
+    ServletUtil.writePage(resp, page);
   }
 
   /** Return AU name, encoded for html text */

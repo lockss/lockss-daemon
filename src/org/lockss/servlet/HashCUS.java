@@ -1,5 +1,5 @@
 /*
- * $Id: HashCUS.java,v 1.30 2006-01-13 22:44:32 thib_gc Exp $
+ * $Id: HashCUS.java,v 1.31 2006-03-16 01:41:19 thib_gc Exp $
  */
 
 /*
@@ -281,7 +281,7 @@ public class HashCUS extends LockssServlet {
       page.add(makeResult());
     }
     layoutFooter(page);
-    page.write(resp.getWriter());
+    ServletUtil.writePage(resp, page);
   }
 
   private static final NumberFormat fmt_2dec = new DecimalFormat("0.00");

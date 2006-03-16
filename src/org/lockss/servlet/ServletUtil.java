@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.32 2006-03-14 01:46:43 smorabito Exp $
+ * $Id: ServletUtil.java,v 1.33 2006-03-16 01:41:19 thib_gc Exp $
  */
 
 /*
@@ -32,9 +32,12 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.servlet;
 
+import java.io.IOException;
 import java.text.*;
 import java.util.*;
 import java.util.List;
+
+import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.collections.CollectionUtils;
 import org.lockss.config.*;
@@ -48,10 +51,6 @@ import org.lockss.util.*;
 import org.mortbay.html.*;
 
 public class ServletUtil {
-
-  private static final String ENABLEPORT_TABLE_ATTRIBUTES = "align=\"center\" cellpadding=\"10\"";
-
-  private static final int ENABLEPORT_TABLE_BORDER = 0;
 
   /**
    * <p>Keeps a link and an accompanying explanation of its purpose
@@ -209,6 +208,16 @@ public class ServletUtil {
 
   private static final String COLOR_WHITE = "#ffffff"; /* (a) */
 
+  private static final String DOCTYPE =
+    "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">";
+
+  private static final String ENABLEPORT_CELL_ATTRIBUTES =
+    ALIGN_CENTER;
+
+  private static final String ENABLEPORT_TABLE_ATTRIBUTES = "align=\"center\" cellpadding=\"10\"";
+
+  private static final int ENABLEPORT_TABLE_BORDER = 0;
+
   private static final String ERRORBLOCK_ERROR_AFTER =
     "</font></center><br>";
 
@@ -278,9 +287,6 @@ public class ServletUtil {
 
   private static final String PAGE_BGCOLOR =
     COLOR_WHITE;
-
-  private static final String ENABLEPORT_CELL_ATTRIBUTES =
-    ALIGN_CENTER;
 
   private static final String REPOCHOICE_CELL_ATTRIBUTES =
     "colspan=\"4\" align=\"center\"";
@@ -1143,6 +1149,23 @@ public class ServletUtil {
     return form;
   }
 
+  /** Return a button that invokes the javascript submit routine with the
+   * specified action */
+  public static Element submitButton(LockssServlet servlet,
+                                     MutableInteger buttonNumber,
+                                     String label,
+                                     String action) {
+    return submitButton(servlet, buttonNumber, label, action, null, null);
+  }
+
+  public static void writePage(HttpServletResponse response,
+                               Page page)
+      throws IOException {
+    response.setContentType("text/html");
+    response.getWriter().println(DOCTYPE);
+    page.write(response.getWriter());
+  }
+
   /** Return a (possibly labelled) checkbox.
    * @param servlet The servlet associated with the checkbox.
    * @param key     Form key to which result set is assigned.
@@ -1373,15 +1396,14 @@ public class ServletUtil {
   }
 
   private static void layoutPageHeaders(Page page) {
-    page.add("<!doctype html public \"-//w3c//dtd html 4.0 transitional//en\">");
     page.addHeader("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-1\">");
     page.addHeader("<meta http-equiv=\"content-type\" content=\"text/html;charset=ISO-8859-1\">");
     page.addHeader("<link rel=\"shortcut icon\" href=\"/favicon.ico\" type=\"image/x-icon\" />");
-    page.addHeader("<style type=\"text/css\"><!--\n" +
-        "sup {font-weight: normal; vertical-align: super}\n" +
-        "A.colhead, A.colhead:link, A.colhead:visited { text-decoration: none ; font-weight: bold ; color: blue }\n" +
-        "TD.colhead { font-weight: bold; background : #e0e0e0 }\n" +
-        "--> </style>");
+    page.addHeader(  "<style type=\"text/css\"> <!--\n"
+                   + "sup {font-weight: normal; vertical-align: super; }\n"
+                   + "a.colhead, a.colhead:link, a.colhead:visited { text-decoration: none; font-weight: bold; color: blue; }\n"
+                   + "td.colhead { font-weight: bold; background: #e0e0e0; }\n"
+                   + "--> </style>");
   }
 
   private static Composite layoutSelectAllButton(LockssServlet servlet) {
@@ -1417,15 +1439,6 @@ public class ServletUtil {
     servlet.setTabOrder(in);
     c.add(in); c.add(" "); c.add(text);
     return c;
-  }
-
-  /** Return a button that invokes the javascript submit routine with the
-   * specified action */
-  public static Element submitButton(LockssServlet servlet,
-                                     MutableInteger buttonNumber,
-                                     String label,
-                                     String action) {
-    return submitButton(servlet, buttonNumber, label, action, null, null);
   }
 
   /** Return a button that invokes the javascript submit routine with the

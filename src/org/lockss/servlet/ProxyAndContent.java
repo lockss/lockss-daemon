@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyAndContent.java,v 1.15 2006-03-02 01:45:34 thib_gc Exp $
+ * $Id: ProxyAndContent.java,v 1.16 2006-03-16 01:41:19 thib_gc Exp $
  */
 
 /*
@@ -118,8 +118,7 @@ public class ProxyAndContent extends LockssServlet {
       ServletUtil.layoutBackLink(page, backLink);
     }
     layoutFooter(page);
-    resp.setContentType("text/html");
-    page.write(resp.getWriter());
+    ServletUtil.writePage(resp, page);
   }
 
   private void displayMenu_Content() throws IOException {
@@ -186,8 +185,7 @@ public class ProxyAndContent extends LockssServlet {
     ServletUtil.layoutBackLink(page,
         srvLink(myServletDescr(), "Back to Proxy Options and Content Access Control"));
     layoutFooter(page);
-    resp.setContentType("text/html");
-    page.write(resp.getWriter());
+    ServletUtil.writePage(resp, page);
   }
 
   private boolean getDefaultAuditEnable() {

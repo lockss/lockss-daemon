@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyConfig.java,v 1.19 2006-03-13 21:12:27 thib_gc Exp $
+ * $Id: ProxyConfig.java,v 1.20 2006-03-16 01:41:19 thib_gc Exp $
  */
 
 /*
@@ -258,7 +258,7 @@ public class ProxyConfig extends LockssServlet {
 
   void generateHelpPage(String error) throws IOException {
     Page page = newPage();
-    resp.setContentType("text/html");
+
     //    table = new Table(0, "ALIGN=CENTER CELLSPACING=2 CELLPADDING=0");
     Form frm = new Form(srvURL(myServletDescr()));
     // use GET so user can copy parameterized URL
@@ -295,7 +295,7 @@ public class ProxyConfig extends LockssServlet {
     addFmtElement(frm, "Combined PAC file", "pacform", urlform);
     page.add(frm);
     layoutFooter(page);
-    page.write(resp.getWriter());
+    ServletUtil.writePage(resp, page);
   }
 
   void addFmtElement(Composite comp, String title, String format,
@@ -321,7 +321,6 @@ public class ProxyConfig extends LockssServlet {
 
   void generateEncapForm(String error) throws IOException {
     Page page = newPage();
-    resp.setContentType("text/html");
     Form frm = new Form(srvURL(myServletDescr()));
     frm.method("POST");
     frm.attribute("enctype", "multipart/form-data");
@@ -372,7 +371,7 @@ public class ProxyConfig extends LockssServlet {
     frm.add(tbl);
     page.add(frm);
     layoutFooter(page);
-    page.write(resp.getWriter());
-  }
+    ServletUtil.writePage(resp, page);
+    }
 
 }
