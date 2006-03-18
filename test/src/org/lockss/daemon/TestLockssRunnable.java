@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRunnable.java,v 1.6 2006-02-01 05:04:40 tlipkis Exp $
+ * $Id: TestLockssRunnable.java,v 1.6.2.1 2006-03-18 08:46:47 tlipkis Exp $
  */
 
 /*
@@ -87,6 +87,7 @@ public class TestLockssRunnable extends LockssTestCase {
     int toolow = Thread.MIN_PRIORITY - 10;
     int toohigh = Thread.MAX_PRIORITY + 10;
     int justright = Thread.MIN_PRIORITY + 1;
+    int dontchange = -1;
     TestRunnable runabl = new TestRunnable("Test");
 
     ConfigurationUtil.setFromArgs("org.lockss.thread.foo.priority",
@@ -101,8 +102,18 @@ public class TestLockssRunnable extends LockssTestCase {
 				  Integer.toString(justright));
     assertEquals(justright, runabl.getPriorityFromParam("foo", 9999));
 
+    ConfigurationUtil.setFromArgs("org.lockss.thread.foo.priority",
+				  Integer.toString(dontchange));
+    assertEquals(dontchange, runabl.getPriorityFromParam("foo", 9999));
+
     // not in config, use default
     assertEquals(justright, runabl.getPriorityFromParam("foobar", justright));
+    assertEquals(Thread.MIN_PRIORITY,
+		 runabl.getPriorityFromParam("foobar", toolow));
+    assertEquals(Thread.MAX_PRIORITY,
+		 runabl.getPriorityFromParam("foobar", toohigh));
+    assertEquals(dontchange,
+		 runabl.getPriorityFromParam("foobar", dontchange));
   }
 
   Thread start(LockssRunnable run) {
