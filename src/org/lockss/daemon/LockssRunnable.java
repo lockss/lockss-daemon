@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRunnable.java,v 1.14 2006-02-01 05:04:40 tlipkis Exp $
+ * $Id: LockssRunnable.java,v 1.15 2006-03-18 08:45:56 tlipkis Exp $
  */
 
 /*
@@ -334,6 +334,7 @@ public abstract class LockssRunnable  implements LockssWatchdog, Runnable {
       prioParamNameMap.put(name, param);
     }
     int prio = CurrentConfig.getIntParam(param, defaultInterval);
+    if (prio == -1) return prio;
     if (prio < Thread.MIN_PRIORITY) {
       log.warning("Thread " + getName() + ", priority " + prio +
 		  " less than min (" + Thread.MIN_PRIORITY + ")");

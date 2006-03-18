@@ -1,5 +1,5 @@
 /*
- * $Id: LockssThread.java,v 1.23 2006-02-01 05:04:40 tlipkis Exp $
+ * $Id: LockssThread.java,v 1.24 2006-03-18 08:45:56 tlipkis Exp $
  */
 
 /*
@@ -302,6 +302,7 @@ public abstract class LockssThread extends Thread implements LockssWatchdog {
       prioParamNameMap.put(name, param);
     }
     int prio = CurrentConfig.getIntParam(param, defaultInterval);
+    if (prio == -1) return prio;
     if (prio < Thread.MIN_PRIORITY) {
       log.warning("Thread " + getName() + ", priority " + prio +
 		  " less than min (" + Thread.MIN_PRIORITY + ")");
