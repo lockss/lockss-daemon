@@ -1,7 +1,7 @@
 #! /bin/sh
 
 # "." here is the test<n> dir
-PROP_URL_LIST="../../common.xml ../lockss.txt ../lockss.opt local.txt local.opt"
+PROP_URL_LIST="../../common.xml ../../title_db_files/*.xml ../lockss.txt ../lockss.opt local.txt local.opt"
 
 if [ "X${PROJECT_DIR}" = "X" ]
 then

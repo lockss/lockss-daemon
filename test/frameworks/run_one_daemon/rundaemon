@@ -46,7 +46,7 @@ if [ -z "$args" ]; then
   args=-Dorg.lockss.defaultLogLevel=DEBUG
 fi
 
-PROP_URL_LIST="../common.xml lockss.txt lockss.opt"
+PROP_URL_LIST="../common.xml ../title_db_files/*.xml lockss.txt lockss.opt"
 
 # local copy of lockss jars allows recompile while we're running
 mkdir -p lib
