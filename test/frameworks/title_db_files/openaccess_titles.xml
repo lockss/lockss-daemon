@@ -1,0 +1,2718 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE lockss-config [
+  <!ELEMENT lockss-config (if|property)+>
+  <!ELEMENT property (property|list|value|if)*>
+  <!ELEMENT list (value)+>
+  <!ELEMENT value (#PCDATA)>
+  <!ELEMENT test EMPTY>
+  <!ELEMENT and (and|or|not|test)*>
+  <!ELEMENT or (and|or|not|test)*>
+  <!ELEMENT not (and|or|not|test)*>
+  <!ELEMENT if (and|or|not|then|else|property)*>
+  <!ELEMENT then (property)*>
+  <!ELEMENT else (property)*>
+  <!ATTLIST property name CDATA #REQUIRED>
+  <!ATTLIST property value CDATA #IMPLIED>
+  <!ATTLIST test hostname CDATA #IMPLIED>
+  <!ATTLIST test group CDATA #IMPLIED>
+  <!ATTLIST test daemonVersionMin CDATA #IMPLIED>
+  <!ATTLIST test daemonVersionMax CDATA #IMPLIED>
+  <!ATTLIST test daemonVersion CDATA #IMPLIED>
+  <!ATTLIST test platformVersionMin CDATA #IMPLIED>
+  <!ATTLIST test platformVersionMax CDATA #IMPLIED>
+  <!ATTLIST test platformVersion CDATA #IMPLIED>
+  <!ATTLIST if hostname CDATA #IMPLIED>
+  <!ATTLIST if group CDATA #IMPLIED>
+  <!ATTLIST if daemonVersionMin CDATA #IMPLIED>
+  <!ATTLIST if daemonVersionMax CDATA #IMPLIED>
+  <!ATTLIST if daemonVersion CDATA #IMPLIED>
+  <!ATTLIST if platformVersionMin CDATA #IMPLIED>
+  <!ATTLIST if platformVersionMax CDATA #IMPLIED>
+  <!ATTLIST if platformVersion CDATA #IMPLIED>
+]>
+
+<!-- LOCKSS & LCAP tuning parameters -->
+<!-- Common config for all test frameworks -->
+<!-- This is included in the list of prop files by all the run_xxx_daemon -->
+<!-- scripts -->
+
+  <lockss-config>
+    <!-- Titles -->
+    <property name="org.lockss.title">
+      <property name="corpse">
+	<property name="title" value="Exquisite Corpse" />
+	<property name="journalTitle" value="Exquisite Corpse" />
+	<property name="plugin" value="edu.stanford.plugin.exquisitecorpse.ExquisiteCorpsePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.corpse.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="issue_set" />
+	  <property name="value" value="issue_1,issue_2,issue_3,issue_4,issue_5,issue_7,issue_8,issue_9,issue_10,issue_11,mississippi_corpse,issue_12,issue_14" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="JSCM10">
+	<property name="title" value="Journal of Seventeenth-Century Music Volume 10" />
+	<property name="journalTitle" value="Journal of Seventeenth-Century Music" />
+	<property name="plugin" value="org.lockss.plugin.jscm.JSCMPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://sscm-jscm.press.uiuc.edu/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="10" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="JSCM9">
+	<property name="title" value="Journal of Seventeenth-Century Music Volume 9" />
+	<property name="journalTitle" value="Journal of Seventeenth-Century Music" />
+	<property name="plugin" value="org.lockss.plugin.jscm.JSCMPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://sscm-jscm.press.uiuc.edu/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="9" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="JSCM8">
+	<property name="title" value="Journal of Seventeenth-Century Music Volume 8" />
+	<property name="journalTitle" value="Journal of Seventeenth-Century Music" />
+	<property name="plugin" value="org.lockss.plugin.jscm.JSCMPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://sscm-jscm.press.uiuc.edu/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="8" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="JSCM7">
+	<property name="title" value="Journal of Seventeenth-Century Music Volume 7" />
+	<property name="journalTitle" value="Journal of Seventeenth-Century Music" />
+	<property name="plugin" value="org.lockss.plugin.jscm.JSCMPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://sscm-jscm.press.uiuc.edu/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="7" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="JSCM6">
+	<property name="title" value="Journal of Seventeenth-Century Music Volume 6" />
+	<property name="journalTitle" value="Journal of Seventeenth-Century Music" />
+	<property name="plugin" value="org.lockss.plugin.jscm.JSCMPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://sscm-jscm.press.uiuc.edu/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="6" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="JSCM5">
+	<property name="title" value="Journal of Seventeenth-Century Music Volume 5" />
+	<property name="journalTitle" value="Journal of Seventeenth-Century Music" />
+	<property name="plugin" value="org.lockss.plugin.jscm.JSCMPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://sscm-jscm.press.uiuc.edu/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="5" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="JSCM4">
+	<property name="title" value="Journal of Seventeenth-Century Music Volume 4" />
+	<property name="journalTitle" value="Journal of Seventeenth-Century Music" />
+	<property name="plugin" value="org.lockss.plugin.jscm.JSCMPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://sscm-jscm.press.uiuc.edu/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="4" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="JSCM3">
+	<property name="title" value="Journal of Seventeenth-Century Music Volume 3" />
+	<property name="journalTitle" value="Journal of Seventeenth-Century Music" />
+	<property name="plugin" value="org.lockss.plugin.jscm.JSCMPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://sscm-jscm.press.uiuc.edu/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="3" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="JSCM2">
+	<property name="title" value="Journal of Seventeenth-Century Music Volume 2" />
+	<property name="journalTitle" value="Journal of Seventeenth-Century Music" />
+	<property name="plugin" value="org.lockss.plugin.jscm.JSCMPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://sscm-jscm.press.uiuc.edu/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="2" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="JSCM1">
+	<property name="title" value="Journal of Seventeenth-Century Music Volume 1" />
+	<property name="journalTitle" value="Journal of Seventeenth-Century Music" />
+	<property name="plugin" value="org.lockss.plugin.jscm.JSCMPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://sscm-jscm.press.uiuc.edu/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="1" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="SantaFePoetryBroadside2005">
+	<property name="title" value="Santa Fe Poetry Broadside 2005" />
+	<property name="journalTitle" value="Santa Fe Poetry Broadside" />
+	<property name="plugin" value="org.lockss.plugin.sfpoetrybroadside.SantaFePoetryBroadsidePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://sfpoetry.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2005" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="SantaFePoetryBroadside2004">
+	<property name="title" value="Santa Fe Poetry Broadside 2004" />
+	<property name="journalTitle" value="Santa Fe Poetry Broadside" />
+	<property name="plugin" value="org.lockss.plugin.sfpoetrybroadside.SantaFePoetryBroadsidePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://sfpoetry.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2004" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="SantaFePoetryBroadside2003">
+	<property name="title" value="Santa Fe Poetry Broadside 2003" />
+	<property name="journalTitle" value="Santa Fe Poetry Broadside" />
+	<property name="plugin" value="org.lockss.plugin.sfpoetrybroadside.SantaFePoetryBroadsidePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://sfpoetry.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2003" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="SantaFePoetryBroadside2002">
+	<property name="title" value="Santa Fe Poetry Broadside 2002" />
+	<property name="journalTitle" value="Santa Fe Poetry Broadside" />
+	<property name="plugin" value="org.lockss.plugin.sfpoetrybroadside.SantaFePoetryBroadsidePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://sfpoetry.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2002" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="SantaFePoetryBroadside2001">
+	<property name="title" value="Santa Fe Poetry Broadside 2001" />
+	<property name="journalTitle" value="Santa Fe Poetry Broadside" />
+	<property name="plugin" value="org.lockss.plugin.sfpoetrybroadside.SantaFePoetryBroadsidePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://sfpoetry.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2001" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="SantaFePoetryBroadside2000">
+	<property name="title" value="Santa Fe Poetry Broadside 2000" />
+	<property name="journalTitle" value="Santa Fe Poetry Broadside" />
+	<property name="plugin" value="org.lockss.plugin.sfpoetrybroadside.SantaFePoetryBroadsidePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://sfpoetry.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2000" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="SantaFePoetryBroadside1999">
+	<property name="title" value="Santa Fe Poetry Broadside 1999" />
+	<property name="journalTitle" value="Santa Fe Poetry Broadside" />
+	<property name="plugin" value="org.lockss.plugin.sfpoetrybroadside.SantaFePoetryBroadsidePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://sfpoetry.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="1999" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="SantaFePoetryBroadside1998">
+	<property name="title" value="Santa Fe Poetry Broadside 1998" />
+	<property name="journalTitle" value="Santa Fe Poetry Broadside" />
+	<property name="plugin" value="org.lockss.plugin.sfpoetrybroadside.SantaFePoetryBroadsidePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://sfpoetry.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="1998" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="usenix1997">
+	<property name="title" value="USENIX ;login: 1997" />
+	<property name="journalTitle" value="USENIX ;login:" />
+	<property name="plugin" value="org.lockss.plugin.usenix.UsenixPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.usenix.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="1997" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="usenix1998">
+	<property name="title" value="USENIX ;login: 1998" />
+	<property name="journalTitle" value="USENIX ;login:" />
+	<property name="plugin" value="org.lockss.plugin.usenix.UsenixPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.usenix.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="1998" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="usenix1999">
+	<property name="title" value="USENIX ;login: 1999" />
+	<property name="journalTitle" value="USENIX ;login:" />
+	<property name="plugin" value="org.lockss.plugin.usenix.UsenixPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.usenix.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="1999" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="usenix2000">
+	<property name="title" value="USENIX ;login: 2000" />
+	<property name="journalTitle" value="USENIX ;login:" />
+	<property name="plugin" value="org.lockss.plugin.usenix.UsenixPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.usenix.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2000" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="usenix2001">
+	<property name="title" value="USENIX ;login: 2001" />
+	<property name="journalTitle" value="USENIX ;login:" />
+	<property name="plugin" value="org.lockss.plugin.usenix.UsenixPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.usenix.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2001" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="usenix2002">
+	<property name="title" value="USENIX ;login: 2002" />
+	<property name="journalTitle" value="USENIX ;login:" />
+	<property name="plugin" value="org.lockss.plugin.usenix.UsenixPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.usenix.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2002" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="usenix2003">
+	<property name="title" value="USENIX ;login: 2003" />
+	<property name="journalTitle" value="USENIX ;login:" />
+	<property name="plugin" value="org.lockss.plugin.usenix.UsenixPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.usenix.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2003" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="usenix2004">
+	<property name="title" value="USENIX ;login: 2004" />
+	<property name="journalTitle" value="USENIX ;login:" />
+	<property name="plugin" value="org.lockss.plugin.usenix.UsenixPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.usenix.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2004" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+      <property name="mto1">
+	<property name="title" value="Music Theory Online Volume 1" />
+	<property name="journalTitle" value="Music Theory Online" />
+	<property name="plugin" value="edu.indiana.lib.plugin.mto.MTOPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.societymusictheory.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="1995" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="1" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+        <property name="attributes.temp" value="barely at a simmer" />
+      </property>
+
+      <property name="mto2">
+	<property name="title" value="Music Theory Online Volume 2" />
+	<property name="journalTitle" value="Music Theory Online" />
+	<property name="plugin" value="edu.indiana.lib.plugin.mto.MTOPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.societymusictheory.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="1996" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="2" />
+	</property>
+        <property name="attributes.color" value="red" />
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="mto3">
+	<property name="title" value="Music Theory Online Volume 3" />
+	<property name="journalTitle" value="Music Theory Online" />
+	<property name="plugin" value="edu.indiana.lib.plugin.mto.MTOPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.societymusictheory.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="1997" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="3" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="mto4">
+	<property name="title" value="Music Theory Online Volume 4" />
+	<property name="journalTitle" value="Music Theory Online" />
+	<property name="plugin" value="edu.indiana.lib.plugin.mto.MTOPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.societymusictheory.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="1998" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="4" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="mto5">
+	<property name="title" value="Music Theory Online Volume 5" />
+	<property name="journalTitle" value="Music Theory Online" />
+	<property name="plugin" value="edu.indiana.lib.plugin.mto.MTOPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.societymusictheory.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="1999" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="5" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="mto6">
+	<property name="title" value="Music Theory Online Volume 6" />
+	<property name="journalTitle" value="Music Theory Online" />
+	<property name="plugin" value="edu.indiana.lib.plugin.mto.MTOPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.societymusictheory.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2000" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="6" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="mto7">
+	<property name="title" value="Music Theory Online Volume 7" />
+	<property name="journalTitle" value="Music Theory Online" />
+	<property name="plugin" value="edu.indiana.lib.plugin.mto.MTOPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.societymusictheory.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2001" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="7" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="mto8">
+	<property name="title" value="Music Theory Online Volume 8" />
+	<property name="journalTitle" value="Music Theory Online" />
+	<property name="plugin" value="edu.indiana.lib.plugin.mto.MTOPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.societymusictheory.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2002" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="8" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="mto9">
+	<property name="title" value="Music Theory Online Volume 9" />
+	<property name="journalTitle" value="Music Theory Online" />
+	<property name="plugin" value="edu.indiana.lib.plugin.mto.MTOPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.societymusictheory.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2003" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="9" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="mto10">
+	<property name="title" value="Music Theory Online Volume 10" />
+	<property name="journalTitle" value="Music Theory Online" />
+	<property name="plugin" value="edu.indiana.lib.plugin.mto.MTOPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.societymusictheory.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2004" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="10" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="mto11">
+	<property name="title" value="Music Theory Online Volume 11" />
+	<property name="journalTitle" value="Music Theory Online" />
+	<property name="plugin" value="edu.indiana.lib.plugin.mto.MTOPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.societymusictheory.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2005" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="11" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="epr2001">
+	<property name="title" value="Electronic Poetry Review 2001" />
+	<property name="journalTitle" value="Electronic Poetry Review" />
+	<property name="plugin" value="edu.cornell.library.epr.EPRPlugin2001" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.poetry.org/" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="electronicpoetryreview2002">
+	<property name="title" value="Electronic Poetry Review 2002" />
+	<property name="journalTitle" value="Electronic Poetry Review" />
+	<property name="plugin" value="edu.cornell.library.epr.EPRPlugin2002On" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.poetry.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2002" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="num_issue_range" />
+	  <property name="value" value="3-4" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="electronicpoetryreview2003">
+	<property name="title" value="Electronic Poetry Review 2003" />
+	<property name="journalTitle" value="Electronic Poetry Review" />
+	<property name="plugin" value="edu.cornell.library.epr.EPRPlugin2002On" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.poetry.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2003" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="num_issue_range" />
+	  <property name="value" value="5-6" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="assa1">
+	<property name="title" value="Applied Semiotics / S&#x00e9;miotique appliqu&#x00e9;e Volume 1" />
+	<property name="journalTitle" value="Applied Semiotics / S&#x00e9;miotique appliqu&#x00e9;e" />
+	<property name="plugin" value="edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.chass.utoronto.ca/french/as-sa/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="issue_dir" />
+	  <property name="value" value="No1" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="issue_no." />
+	  <property name="value" value="1" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="assa2">
+	<property name="title" value="Applied Semiotics / S&#x00e9;miotique appliqu&#x00e9;e Volume 2" />
+	<property name="journalTitle" value="Applied Semiotics / S&#x00e9;miotique appliqu&#x00e9;e" />
+	<property name="plugin" value="edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.chass.utoronto.ca/french/as-sa/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="issue_dir" />
+	  <property name="value" value="No2" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="issue_no." />
+	  <property name="value" value="2" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="assa3">
+	<property name="title" value="Applied Semiotics / S&#x00e9;miotique appliqu&#x00e9;e Volume 3" />
+	<property name="journalTitle" value="Applied Semiotics / S&#x00e9;miotique appliqu&#x00e9;e" />
+	<property name="plugin" value="edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.chass.utoronto.ca/french/as-sa/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="issue_dir" />
+	  <property name="value" value="No3" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="issue_no." />
+	  <property name="value" value="3" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="assa4">
+	<property name="title" value="Applied Semiotics / S&#x00e9;miotique appliqu&#x00e9;e Volume 4" />
+	<property name="journalTitle" value="Applied Semiotics / S&#x00e9;miotique appliqu&#x00e9;e" />
+	<property name="plugin" value="edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.chass.utoronto.ca/french/as-sa/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="issue_dir" />
+	  <property name="value" value="No4" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="issue_no." />
+	  <property name="value" value="4" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="assa5">
+	<property name="title" value="Applied Semiotics / S&#x00e9;miotique appliqu&#x00e9;e Volume 5" />
+	<property name="journalTitle" value="Applied Semiotics / S&#x00e9;miotique appliqu&#x00e9;e" />
+	<property name="plugin" value="edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.chass.utoronto.ca/french/as-sa/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="issue_dir" />
+	  <property name="value" value="No5" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="issue_no." />
+	  <property name="value" value="5" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="assa6to7">
+	<property name="title" value="Applied Semiotics / S&#x00e9;miotique appliqu&#x00e9;e Volume 6-7" />
+	<property name="journalTitle" value="Applied Semiotics / S&#x00e9;miotique appliqu&#x00e9;e" />
+	<property name="plugin" value="edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.chass.utoronto.ca/french/as-sa/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="issue_dir" />
+	  <property name="value" value="6-7" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="issue_no." />
+	  <property name="value" value="6-7" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="assa8">
+	<property name="title" value="Applied Semiotics / S&#x00e9;miotique appliqu&#x00e9;e Volume 8" />
+	<property name="journalTitle" value="Applied Semiotics / S&#x00e9;miotique appliqu&#x00e9;e" />
+	<property name="plugin" value="edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.chass.utoronto.ca/french/as-sa/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="issue_dir" />
+	  <property name="value" value="No8" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="issue_no." />
+	  <property name="value" value="8" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="assa9">
+	<property name="title" value="Applied Semiotics / S&#x00e9;miotique appliqu&#x00e9;e Volume 9" />
+	<property name="journalTitle" value="Applied Semiotics / S&#x00e9;miotique appliqu&#x00e9;e" />
+	<property name="plugin" value="edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.chass.utoronto.ca/french/as-sa/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="issue_dir" />
+	  <property name="value" value="No9" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="issue_no." />
+	  <property name="value" value="9" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="assa10">
+	<property name="title" value="Applied Semiotics / S&#x00e9;miotique appliqu&#x00e9;e Volume 10" />
+	<property name="journalTitle" value="Applied Semiotics / S&#x00e9;miotique appliqu&#x00e9;e" />
+	<property name="plugin" value="edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.chass.utoronto.ca/french/as-sa/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="issue_dir" />
+	  <property name="value" value="No10" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="issue_no." />
+	  <property name="value" value="10" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="assa11to12">
+	<property name="title" value="Applied Semiotics / S&#x00e9;miotique appliqu&#x00e9;e Volume 11-12" />
+	<property name="journalTitle" value="Applied Semiotics / S&#x00e9;miotique appliqu&#x00e9;e" />
+	<property name="plugin" value="edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.chass.utoronto.ca/french/as-sa/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="issue_dir" />
+	  <property name="value" value="11-12" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="issue_no." />
+	  <property name="value" value="11-12" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="assa13">
+	<property name="title" value="Applied Semiotics / S&#x00e9;miotique appliqu&#x00e9;e Volume 13" />
+	<property name="journalTitle" value="Applied Semiotics / S&#x00e9;miotique appliqu&#x00e9;e" />
+	<property name="plugin" value="edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.chass.utoronto.ca/french/as-sa/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="issue_dir" />
+	  <property name="value" value="No13" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="issue_no." />
+	  <property name="value" value="13" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="assa14">
+	<property name="title" value="Applied Semiotics / S&#x00e9;miotique appliqu&#x00e9;e Volume 14" />
+	<property name="journalTitle" value="Applied Semiotics / S&#x00e9;miotique appliqu&#x00e9;e" />
+	<property name="plugin" value="edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.chass.utoronto.ca/french/as-sa/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="issue_dir" />
+	  <property name="value" value="No14" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="issue_no." />
+	  <property name="value" value="14" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="WHR1">
+	<property name="title" value="World Haiku Review Volume 1" />
+	<property name="journalTitle" value="World Haiku Review" />
+	<property name="plugin" value="edu.harvard.plugin.WorldHaikuReview.WorldHaikuReviewPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.worldhaikureview.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="1" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="WHR2">
+	<property name="title" value="World Haiku Review Volume 2" />
+	<property name="journalTitle" value="World Haiku Review" />
+	<property name="plugin" value="edu.harvard.plugin.WorldHaikuReview.WorldHaikuReviewPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.worldhaikureview.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="2" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="WHR3">
+	<property name="title" value="World Haiku Review Volume 3" />
+	<property name="journalTitle" value="World Haiku Review" />
+	<property name="plugin" value="edu.harvard.plugin.WorldHaikuReview.WorldHaikuReviewPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.worldhaikureview.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="3" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="LeedsICS2002">
+	<property name="title" value="Leeds International Classical Studies 2002" />
+	<property name="journalTitle" value="Leeds International Classical Studies" />
+	<property name="plugin" value="edu.nyu.plugin.LeedsICSPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.leeds.ac.uk/classics/lics" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2002" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume_str" />
+	  <property name="value" value="2002" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="LeedsICS2003">
+	<property name="title" value="Leeds International Classical Studies 2003" />
+	<property name="journalTitle" value="Leeds International Classical Studies" />
+	<property name="plugin" value="edu.nyu.plugin.LeedsICSPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.leeds.ac.uk/classics/lics" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2003" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume_str" />
+	  <property name="value" value="2003" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="LeedsICS200304">
+	<property name="title" value="Leeds International Classical Studies 2004" />
+	<property name="journalTitle" value="Leeds International Classical Studies" />
+	<property name="plugin" value="edu.nyu.plugin.LeedsICSPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.leeds.ac.uk/classics/lics" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2004" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume_str" />
+	  <property name="value" value="200304" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="newjournalofphysics7">
+	<property name="title" value="New Journal of Physics Volume 7" />
+	<property name="journalTitle" value="New Journal of Physics" />
+	<property name="plugin" value="org.lockss.plugin.iop.IOPPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.iop.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="base_url2" />
+	  <property name="value" value="http://ej.iop.org/" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="journal_id" />
+	  <property name="value" value="1367-2630" />
+	</property>
+	<property name="param.4">
+	  <property name="key" value="volume" />
+	  <property name="value" value="7" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="jopConf8">
+	<property name="title" value="Journal of Physics: Conference Series Volume 8" />
+	<property name="journalTitle" value="Journal of Physics: Conference Series" />
+	<property name="plugin" value="org.lockss.plugin.iop.IOPPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.iop.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="base_url2" />
+	  <property name="value" value="http://ej.iop.org/" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="journal_id" />
+	  <property name="value" value="1742-6596" />
+	</property>
+	<property name="param.4">
+	  <property name="key" value="volume" />
+	  <property name="value" value="8" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <!-- Title: EMLS (Early Modern Literary Studies) -->
+      <property name="emls9">
+	<property name="title" value="EMLS Volume 9" />
+	<property name="estSize" value="2MB" />
+	<property name="journalTitle" value="EMLS" />
+	<property name="plugin" value="org.lockss.plugin.emls.EmlsPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+          <property name="value" value="http://www.shu.ac.uk/emls/" />
+        </property>
+        <property name="param.2">
+	  <property name="key" value="volume" />
+          <property name="value" value="9" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <!-- Title: Other Voices (Other Voices) -->
+      <property name="othervoices2">
+	<property name="title" value="Other Voices Volume 2" />
+	<property name="journalTitle" value="Other Voices" />
+	<property name="plugin" value="org.lockss.plugin.othervoices.OtherVoicesPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+          <property name="value" value="http://www.othervoices.org/" />
+        </property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+          <property name="value" value="2" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="ahr108">
+	<property name="title" value="American Historical Review Volume 108" />
+	<property name="estSize" value="22MB" />
+	<property name="journalTitle" value="American Historical Review" />
+	<property name="plugin" value="org.lockss.plugin.histcoop.HistoryCooperativePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.historycooperative.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="journal_dir"/>
+	  <property name="value" value="ahr" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="108" />
+	</property>
+      </property>
+
+      <property name="alr2003">
+	<property name="title" value="ALR 2003" />
+	<property name="estSize" value="1.5MB" />
+	<property name="journalTitle" value="ALR" />
+	<property name="plugin" value="org.lockss.plugin.absinthe.AbsinthePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+          <property name="value" value="http://absinthe-literary-review.com/" />
+        </property>
+        <property name="param.2">
+	  <property name="key" value="year" />
+          <property name="value" value="2003" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="jimr2005">
+	<property name="title" value="Journal of Medical Internet Research 2005" />
+	<property name="journalTitle" value="Journal of Medical Internet Research" />
+	<property name="plugin" value="org.lockss.plugin.jmir.JMIRPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.jmir.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2005" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="jimr2004">
+	<property name="title" value="Journal of Medical Internet Research 2004" />
+	<property name="journalTitle" value="Journal of Medical Internet Research" />
+	<property name="plugin" value="org.lockss.plugin.jmir.JMIRPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.jmir.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2004" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="jimr2003">
+	<property name="title" value="Journal of Medical Internet Research 2003" />
+	<property name="journalTitle" value="Journal of Medical Internet Research" />
+	<property name="plugin" value="org.lockss.plugin.jmir.JMIRPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.jmir.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2003" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="jimr2002">
+	<property name="title" value="Journal of Medical Internet Research 2002" />
+	<property name="journalTitle" value="Journal of Medical Internet Research" />
+	<property name="plugin" value="org.lockss.plugin.jmir.JMIRPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.jmir.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2002" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="jimr2001">
+	<property name="title" value="Journal of Medical Internet Research 2001" />
+	<property name="journalTitle" value="Journal of Medical Internet Research" />
+	<property name="plugin" value="org.lockss.plugin.jmir.JMIRPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.jmir.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2001" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="jimr2000">
+	<property name="title" value="Journal of Medical Internet Research 2000" />
+	<property name="journalTitle" value="Journal of Medical Internet Research" />
+	<property name="plugin" value="org.lockss.plugin.jmir.JMIRPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.jmir.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2000" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="jimr1999">
+	<property name="title" value="Journal of Medical Internet Research 1999" />
+	<property name="journalTitle" value="Journal of Medical Internet Research" />
+	<property name="plugin" value="org.lockss.plugin.jmir.JMIRPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.jmir.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="1999" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="blackbird2">
+	<property name="title" value="Blackbird Volume 2" />
+	<property name="estSize" value="1.7GB" />
+	<property name="journalTitle" value="Blackbird" />
+	<property name="plugin" value="org.lockss.plugin.blackbird.BlackbirdPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+          <property name="value" value="http://www.blackbird.vcu.edu/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="2" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="culturallogic2003">
+	<property name="title" value="Cultural Logic 2003" />
+	<property name="estSize" value="6MB" />
+	<property name="journalTitle" value="Cultural Logic" />
+	<property name="plugin" value="org.lockss.plugin.clogic.CulturalLogicPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://eserver.org/clogic/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2003" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="ecp2004">
+        <property name="title" value="Electronic Communications In Probability 2004" />
+	<property name="estSize" value="4.5MB" />
+        <property name="journalTitle" value="Electronic Communications In Probability" />
+        <property name="plugin" value="org.lockss.plugin.ojs.OJSPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://www.math.washington.edu/~ejpecp/ECP/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="year" />
+          <property name="value" value="2004" />
+        </property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="ejp2004">
+	<property name="title" value="Electronic Journal Of Probability 2004" />
+	<property name="estSize" value="11MB" />
+	<property name="journalTitle" value="Electronic Journal Of Probability" />
+	<property name="plugin" value="org.lockss.plugin.ojs.OJSPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.math.washington.edu/~ejpecp/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2004" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="ameriquests2004">
+	<property name="title" value="AmeriQuests 2004" />
+	<property name="estSize" value="11MB" />
+	<property name="journalTitle" value="AmeriQuests" />
+	<property name="plugin" value="org.lockss.plugin.ojs.OJSPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://ejournals.library.vanderbilt.edu/ameriquests/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2004" />
+	</property>
+      </property>
+      <property name="bmcr2004">
+	<property name="title" value="Bryn Mawr Classical Review 2004" />
+	<property name="estSize" value="7MB" />
+	<property name="journalTitle" value="Bryn Mawr Classical Review" />
+	<property name="plugin" value="edu.princeton.plugin.bmcr.BMCRPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://ccat.sas.upenn.edu/bmcr/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2004" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="bmcr2003">
+	<property name="title" value="Bryn Mawr Classical Review 2003" />
+	<property name="estSize" value="7MB" />
+	<property name="journalTitle" value="Bryn Mawr Classical Review" />
+	<property name="plugin" value="edu.princeton.plugin.bmcr.BMCRPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://ccat.sas.upenn.edu/bmcr/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2003" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="bmcr2002">
+	<property name="title" value="Bryn Mawr Classical Review 2002" />
+	<property name="estSize" value="7MB" />
+	<property name="journalTitle" value="Bryn Mawr Classical Review" />
+	<property name="plugin" value="edu.princeton.plugin.bmcr.BMCRPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://ccat.sas.upenn.edu/bmcr/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2002" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="bmcr2001">
+	<property name="title" value="Bryn Mawr Classical Review 2001" />
+	<property name="estSize" value="6MB" />
+	<property name="journalTitle" value="Bryn Mawr Classical Review" />
+	<property name="plugin" value="edu.princeton.plugin.bmcr.BMCRPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://ccat.sas.upenn.edu/bmcr/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2001" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="bmcr1990">
+	<property name="title" value="Bryn Mawr Classical Review 1990" />
+	<property name="estSize" value="300KB" />
+	<property name="journalTitle" value="Bryn Mawr Classical Review" />
+	<property name="plugin" value="edu.princeton.plugin.bmcr.BMCRPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://ccat.sas.upenn.edu/bmcr/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="1990" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="clcweb2004">
+	<property name="title" value="CLCWeb Volume 6 (2004)" />
+	<property name="estSize" value="4MB" />
+	<property name="journalTitle" value="CLCWeb" />
+	<property name="plugin" value="edu.upenn.library.plugin.clcweb.CLCWebPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://clcwebjournal.lib.purdue.edu/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2004" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="6" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="jcjpc10">
+	<property name="title" value="Journal of Criminal Justice and Popular Culture Volume 10" />
+	<property name="estSize" value="8MB" />
+	<property name="journalTitle" value="Journal of Criminal Justice and Popular Culture" />
+	<property name="plugin" value="edu.indiana.lib.plugin.jcjpc.JcjpcPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.albany.edu/scj/jcjpc/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="10" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="jrs2004">
+	<property name="title" value="Journal of Religion and Society 2004" />
+	<property name="estSize" value="2MB" />
+	<property name="journalTitle" value="Journal of Religion and Society" />
+	<property name="plugin" value="edu.harvard.plugin.jrs.JRSPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://moses.creighton.edu/JRS/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2004" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="urdu18">
+	<property name="title" value="The Annual of Urdu Studies Volume 18 (2003)" />
+	<property name="estSize" value="7MB" />
+	<property name="journalTitle" value="The Annual of Urdu Studies" />
+	<property name="plugin" value="edu.upenn.library.plugin.annualofurdustudies.AnnualOfUrduStudiesPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.urdustudies.com/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="18" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="ncaw1">
+	<property name="title" value="19th Century Art Worldwide Volume 1" />
+	<property name="journalTitle" value="19th Century Art Worldwide" />
+	<property name="plugin" value="edu.princeton.plugin.ncaw.19thCenturyArtWorldwidePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.19thc-artworldwide.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2002" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="1" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="ncaw2">
+	<property name="title" value="19th Century Art Worldwide Volume 2" />
+	<property name="journalTitle" value="19th Century Art Worldwide" />
+	<property name="plugin" value="edu.princeton.plugin.ncaw.19thCenturyArtWorldwidePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.19thc-artworldwide.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2003" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="2" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="ncaw3">
+	<property name="title" value="19th Century Art Worldwide Volume 3" />
+	<property name="journalTitle" value="19th Century Art Worldwide" />
+	<property name="plugin" value="edu.princeton.plugin.ncaw.19thCenturyArtWorldwidePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.19thc-artworldwide.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2004" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="3" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="ncaw4">
+	<property name="title" value="19th Century Art Worldwide Volume 4" />
+	<property name="journalTitle" value="19th Century Art Worldwide" />
+	<property name="plugin" value="edu.princeton.plugin.ncaw.19thCenturyArtWorldwidePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.19thc-artworldwide.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2005" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="4" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+
+      <property name="shampoo2004">
+	<property name="title" value="Shampoo 2004" />
+	<property name="journalTitle" value="Shampoo" />
+	<property name="plugin" value="org.nypl.plugin.shampoo.ShampooPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.shampoopoetry.com/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2004" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="issue_set" />
+	  <property name="value" value="Twentytwo, Twentyone, Twenty" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="shampoo2003">
+	<property name="title" value="Shampoo 2003" />
+	<property name="journalTitle" value="Shampoo" />
+	<property name="plugin" value="org.nypl.plugin.shampoo.ShampooPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.shampoopoetry.com/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2003" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="issue_set" />
+	  <property name="value" value="Sixteen, Seventeen, Eighteen, Nineteen" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="shampoo2002">
+	<property name="title" value="Shampoo 2002" />
+	<property name="journalTitle" value="Shampoo" />
+	<property name="plugin" value="org.nypl.plugin.shampoo.ShampooPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.shampoopoetry.com/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2002" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="issue_set" />
+	  <property name="value" value="Ten, Eleven, Twelve, Thirteen, Fourteen, Fifteen" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="shampoo2001">
+	<property name="title" value="Shampoo 2001" />
+	<property name="journalTitle" value="Shampoo" />
+	<property name="plugin" value="org.nypl.plugin.shampoo.ShampooPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.shampoopoetry.com/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2001" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="issue_set" />
+	  <property name="value" value="Four, Five, Six, Seven, Eight, Nine" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="shampoo2000">
+	<property name="title" value="Shampoo 2000" />
+	<property name="journalTitle" value="Shampoo" />
+	<property name="plugin" value="org.nypl.plugin.shampoo.ShampooPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.shampoopoetry.com/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2000" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="issue_set" />
+	  <property name="value" value="One, Two, Three" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="failbetter2004">
+	<property name="title" value="Failbetter 2004" />
+	<property name="journalTitle" value="Failbetter" />
+	<property name="plugin" value="org.nypl.plugin.failbetter.FailbetterPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.failbetter.com/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2004" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="failbetter2003">
+	<property name="title" value="Failbetter 2003" />
+	<property name="journalTitle" value="Failbetter" />
+	<property name="plugin" value="org.nypl.plugin.failbetter.FailbetterPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.failbetter.com/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2003" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="failbetter2002">
+	<property name="title" value="Failbetter 2002" />
+	<property name="journalTitle" value="Failbetter" />
+	<property name="plugin" value="org.nypl.plugin.failbetter.FailbetterPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.failbetter.com/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2002" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="failbetter2001">
+	<property name="title" value="Failbetter 2001" />
+	<property name="journalTitle" value="Failbetter" />
+	<property name="plugin" value="org.nypl.plugin.failbetter.FailbetterPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.failbetter.com/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2001" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="failbetter2000">
+	<property name="title" value="Failbetter 2000" />
+	<property name="journalTitle" value="Failbetter" />
+	<property name="plugin" value="org.nypl.plugin.failbetter.FailbetterPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.failbetter.com/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2000" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="poetrybay2004">
+	<property name="title" value="Poetry Bay 2004" />
+	<property name="estSize" value="1MB" />
+	<property name="journalTitle" value="Poetry Bay" />
+	<property name="plugin" value="org.nypl.plugin.PoetryBayPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.poetrybay.com/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2004" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="poetrybay2005">
+	<property name="title" value="Poetry Bay 2005" />
+	<property name="estSize" value="1MB" />
+	<property name="journalTitle" value="Poetry Bay" />
+	<property name="plugin" value="org.nypl.plugin.PoetryBayPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.poetrybay.com/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2005" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="wordswithoutborders2004">
+	<property name="title" value="Words Without Borders 2004" />
+	<property name="estSize" value="7MB" />
+	<property name="journalTitle" value="Words Without Borders" />
+	<property name="plugin" value="org.nypl.plugin.WordsWithoutBordersPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.wordswithoutborders.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2004" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="arkivoc2004">
+	<property name="title" value="Arkivoc 2004" />
+	<property name="estSize" value="110MB" />
+	<property name="journalTitle" value="Arkivoc" />
+	<property name="plugin" value="edu.fcla.plugin.arkivoc.ArkivocPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.arkat-usa.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2004" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="arkivoc2003">
+	<property name="title" value="Arkivoc 2003" />
+	<property name="estSize" value="110MB" />
+	<property name="journalTitle" value="Arkivoc" />
+	<property name="plugin" value="edu.fcla.plugin.arkivoc.ArkivocPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.arkat-usa.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2003" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="arkivoc2002">
+	<property name="title" value="Arkivoc 2002" />
+	<property name="estSize" value="110MB" />
+	<property name="journalTitle" value="Arkivoc" />
+	<property name="plugin" value="edu.fcla.plugin.arkivoc.ArkivocPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.arkat-usa.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2002" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="arkivoc2001">
+	<property name="title" value="Arkivoc 2001" />
+	<property name="estSize" value="110MB" />
+	<property name="journalTitle" value="Arkivoc" />
+	<property name="plugin" value="edu.fcla.plugin.arkivoc.ArkivocPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.arkat-usa.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2001" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="arkivoc2000">
+	<property name="title" value="Arkivoc 2000" />
+	<property name="estSize" value="110MB" />
+	<property name="journalTitle" value="Arkivoc" />
+	<property name="plugin" value="edu.fcla.plugin.arkivoc.ArkivocPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.arkat-usa.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2000" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="disputatio2004">
+	<property name="title" value="Disputatio 2004" />
+	<property name="estSize" value="500KB" />
+	<property name="journalTitle" value="Disputatio" />
+	<property name="plugin" value="org.lockss.plugin.disputatio.DisputatioPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://disputatio.com/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2004" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="disputatio2003">
+	<property name="estSize" value="4MB" />
+	<property name="title" value="Disputatio 2003" />
+	<property name="journalTitle" value="Disputatio" />
+	<property name="plugin" value="org.lockss.plugin.disputatio.DisputatioPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://disputatio.com/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2003" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="molvis9">
+	<property name="title" value="Molecular Vision Volume 9" />
+	<property name="estSize" value="40MB" />
+	<property name="journalTitle" value="Molecular Vision" />
+	<property name="plugin" value="org.molvis.plugin.MolVisPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.molvis.org/molvis/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="9" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="intermarium2004">
+	<property name="title" value="Intermarium 2004" />
+	<property name="estSize" value="1MB" />
+	<property name="journalTitle" value="Intermarium" />
+	<property name="plugin" value="edu.yale.library.lockss.plugin.intermarium.IntermariumPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.columbia.edu/cu/sipa/REGIONAL/ECE/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2004" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="7" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="mitejmes2004">
+	<property name="title" value="MIT E-journal of Middle East Studies 2004" />
+	<property name="estSize" value="2.2MB" />
+	<property name="journalTitle" value="MIT E-journal of Middle East Studies" />
+	<property name="plugin" value="edu.yale.library.lockss.plugin.mitejmes.MITEJMESPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://web.mit.edu/cis/www/mitejmes/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2004" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+      <property name="cjpcr13">
+	<property name="title" value="Cyberjournal for Pentecostal-Charismatic Research Issue 13" />
+	<property name="estSize" value="1MB" />
+	<property name="journalTitle" value="Cyberjournal for Pentecostal-Charismatic Research" />
+	<property name="plugin" value="gov.loc.plugin.CJPentecostalCharismaticResearchPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.pctii.org/cyberj/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="13" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="jiws2004">
+	<property name="title" value="Journal of International Women's Studies 2004" />
+	<property name="estSize" value="4MB" />
+	<property name="journalTitle" value="Journal of International Women's Studies" />
+	<property name="plugin" value="edu.columbia.plugin.JiwsPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.bridgew.edu/SoAS/jiws/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2004" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="jiws2005">
+	<property name="title" value="Journal of International Women's Studies 2005" />
+	<property name="estSize" value="4MB" />
+	<property name="journalTitle" value="Journal of International Women's Studies" />
+	<property name="plugin" value="edu.columbia.plugin.JiwsPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.bridgew.edu/SoAS/jiws/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2005" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="jiws2003">
+	<property name="title" value="Journal of International Women's Studies 2003" />
+	<property name="estSize" value="4MB" />
+	<property name="journalTitle" value="Journal of International Women's Studies" />
+	<property name="plugin" value="edu.columbia.plugin.JiwsPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.bridgew.edu/SoAS/jiws/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2003" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="jiws2002">
+	<property name="title" value="Journal of International Women's Studies 2002" />
+	<property name="estSize" value="4MB" />
+	<property name="journalTitle" value="Journal of International Women's Studies" />
+	<property name="plugin" value="edu.columbia.plugin.JiwsPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.bridgew.edu/SoAS/jiws/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2002" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="jiws2001">
+	<property name="title" value="Journal of International Women's Studies 2001" />
+	<property name="estSize" value="4MB" />
+	<property name="journalTitle" value="Journal of International Women's Studies" />
+	<property name="plugin" value="edu.columbia.plugin.JiwsPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.bridgew.edu/SoAS/jiws/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2001" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="jiws2000">
+	<property name="title" value="Journal of International Women's Studies 2000" />
+	<property name="estSize" value="4MB" />
+	<property name="journalTitle" value="Journal of International Women's Studies" />
+	<property name="plugin" value="edu.columbia.plugin.JiwsPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.bridgew.edu/SoAS/jiws/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2000" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="cr2004">
+	<property name="title" value="Cortland Review 2004" />
+	<property name="estSize" value="1MB" />
+	<property name="journalTitle" value="Cortland Review" />
+	<property name="plugin" value="edu.wisc.library.plugin.CortlandReviewPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.cortlandreview.com/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="num_issue_range" />
+	  <property name="value" value="22-24" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="year" />
+	  <property name="value" value="2003" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="bb2">
+	<property name="title" value="Big Bridge Volume 2" />
+	<property name="estSize" value="37MB" />
+	<property name="journalTitle" value="Big Bridge" />
+	<property name="plugin" value="edu.wisc.library.plugin.BigBridgePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.bigbridge.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="num_issue_range" />
+	  <property name="value" value="5-8" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="2" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+
+      <property name="genders2004">
+	<property name="title" value="Genders 2004" />
+	<property name="estSize" value="2MB" />
+	<property name="journalTitle" value="Genders" />
+	<property name="plugin" value="org.lockss.plugin.GendersPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.genders.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2004" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="num_issue_range" />
+	  <property name="value" value="39-40" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="genders2003">
+	<property name="title" value="Genders 2003" />
+	<property name="estSize" value="4MB" />
+	<property name="journalTitle" value="Genders" />
+	<property name="plugin" value="org.lockss.plugin.GendersPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.genders.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2003" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="num_issue_range" />
+	  <property name="value" value="37-38" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="genders2002">
+	<property name="title" value="Genders 2002" />
+	<property name="estSize" value="4.8MB" />
+	<property name="journalTitle" value="Genders" />
+	<property name="plugin" value="org.lockss.plugin.GendersPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.genders.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2002" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="num_issue_range" />
+	  <property name="value" value="35-36" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="genders2001">
+	<property name="title" value="Genders 2001" />
+	<property name="estSize" value="6.4MB" />
+	<property name="journalTitle" value="Genders" />
+	<property name="plugin" value="org.lockss.plugin.GendersPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.genders.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2001" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="num_issue_range" />
+	  <property name="value" value="33-34" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="genders2000">
+	<property name="title" value="Genders 2000" />
+	<property name="estSize" value="4.1MB" />
+	<property name="journalTitle" value="Genders" />
+	<property name="plugin" value="org.lockss.plugin.GendersPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.genders.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2000" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="num_issue_range" />
+	  <property name="value" value="31-32" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="genders1999">
+	<property name="title" value="Genders 1999" />
+	<property name="estSize" value="2.6MB" />
+	<property name="journalTitle" value="Genders" />
+	<property name="plugin" value="org.lockss.plugin.GendersPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.genders.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="1999" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="num_issue_range" />
+	  <property name="value" value="29-30" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="genders1998">
+	<property name="title" value="Genders 1998" />
+	<property name="estSize" value="4.5MB" />
+	<property name="journalTitle" value="Genders" />
+	<property name="plugin" value="org.lockss.plugin.GendersPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.genders.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="1998" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="num_issue_range" />
+	  <property name="value" value="27-28" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="locksscard2005">
+	<property name="title" value="LOCKSS Card 2005" />
+	<property name="estSize" value="4.5MB" />
+	<property name="journalTitle" value="LOCKSS Card" />
+	<property name="plugin" value="org.lockss.plugin.locksscard.LockssCardPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.lockss.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2005" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="locksscard2005unpublished">
+	<property name="title" value="LOCKSS Card 2005 Unpublished" />
+	<property name="estSize" value="4.5MB" />
+	<property name="journalTitle" value="LOCKSS Card" />
+	<property name="plugin" value="org.lockss.plugin.locksscard.LockssCardPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.lockss.org/unpublished/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2005" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="MedievalForum4">
+	<property name="title" value="Medieval Forum Volume 4" />
+	<property name="estSize" value="0.7MB" />
+	<property name="journalTitle" value="Medieval Forum" />
+	<property name="plugin" value="edu.jhu.library.plugin.MedievalForumPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.sfsu.edu/~medieval/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="4" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="MedievalForum3">
+	<property name="title" value="Medieval Forum Volume 3" />
+	<property name="estSize" value="0.7MB" />
+	<property name="journalTitle" value="Medieval Forum" />
+	<property name="plugin" value="edu.jhu.library.plugin.MedievalForumPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.sfsu.edu/~medieval/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="3" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="MedievalForum2">
+	<property name="title" value="Medieval Forum Volume 2" />
+	<property name="estSize" value="0.7MB" />
+	<property name="journalTitle" value="Medieval Forum" />
+	<property name="plugin" value="edu.jhu.library.plugin.MedievalForumPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.sfsu.edu/~medieval/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="2" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="MedievalForum1">
+	<property name="title" value="Medieval Forum Volume 1" />
+	<property name="estSize" value="0.7MB" />
+	<property name="journalTitle" value="Medieval Forum" />
+	<property name="plugin" value="edu.jhu.library.plugin.MedievalForumPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.sfsu.edu/~medieval/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="1" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="19thCAWW1">
+	<property name="title" value="19th Century Art Worldwide Volume 1" />
+	<property name="estSize" value="0.7MB" />
+	<property name="journalTitle" value="19th Century Art Worldwide" />
+	<property name="plugin" value="edu.princeton.plugin.ncaw.19thCenturyArtWorldwidePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://19thc-artworldwide.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="1" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="year" />
+	  <property name="value" value="2002" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="nsr1">
+	<property name="title" value="MRS Internet Journal of Nitride Semiconductor Research Volume 1" />
+	<property name="journalTitle" value="MRS Internet Journal of Nitride Semiconductor Research" />
+	<property name="plugin" value="org.lockss.plugin.msr.MSRPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://nsr.mij.mrs.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume_str" />
+	  <property name="value" value="1" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="nsr2">
+	<property name="title" value="MRS Internet Journal of Nitride Semiconductor Research Volume 2" />
+	<property name="journalTitle" value="MRS Internet Journal of Nitride Semiconductor Research" />
+	<property name="plugin" value="org.lockss.plugin.msr.MSRPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://nsr.mij.mrs.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume_str" />
+	  <property name="value" value="2" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="nsr3">
+	<property name="title" value="MRS Internet Journal of Nitride Semiconductor Research Volume 3" />
+	<property name="journalTitle" value="MRS Internet Journal of Nitride Semiconductor Research" />
+	<property name="plugin" value="org.lockss.plugin.msr.MSRPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://nsr.mij.mrs.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume_str" />
+	  <property name="value" value="3" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="nsr4">
+	<property name="title" value="MRS Internet Journal of Nitride Semiconductor Research Volume 4" />
+	<property name="journalTitle" value="MRS Internet Journal of Nitride Semiconductor Research" />
+	<property name="plugin" value="org.lockss.plugin.msr.MSRPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://nsr.mij.mrs.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume_str" />
+	  <property name="value" value="4" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="nsr4s1">
+	<property name="title" value="MRS Internet Journal of Nitride Semiconductor Research Volume 4 Supplement 1" />
+	<property name="journalTitle" value="MRS Internet Journal of Nitride Semiconductor Research" />
+	<property name="plugin" value="org.lockss.plugin.msr.MSRPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://nsr.mij.mrs.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume_str" />
+	  <property name="value" value="4S1" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="nsr5">
+	<property name="title" value="MRS Internet Journal of Nitride Semiconductor Research Volume 5" />
+	<property name="journalTitle" value="MRS Internet Journal of Nitride Semiconductor Research" />
+	<property name="plugin" value="org.lockss.plugin.msr.MSRPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://nsr.mij.mrs.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume_str" />
+	  <property name="value" value="5" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="nsr5s1">
+	<property name="title" value="MRS Internet Journal of Nitride Semiconductor Research Volume 5 Supplement 1" />
+	<property name="journalTitle" value="MRS Internet Journal of Nitride Semiconductor Research" />
+	<property name="plugin" value="org.lockss.plugin.msr.MSRPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://nsr.mij.mrs.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume_str" />
+	  <property name="value" value="5S1" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="nsr6">
+	<property name="title" value="MRS Internet Journal of Nitride Semiconductor Research Volume 6" />
+	<property name="journalTitle" value="MRS Internet Journal of Nitride Semiconductor Research" />
+	<property name="plugin" value="org.lockss.plugin.msr.MSRPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://nsr.mij.mrs.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume_str" />
+	  <property name="value" value="6" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="nsr7">
+	<property name="title" value="MRS Internet Journal of Nitride Semiconductor Research Volume 7" />
+	<property name="journalTitle" value="MRS Internet Journal of Nitride Semiconductor Research" />
+	<property name="plugin" value="org.lockss.plugin.msr.MSRPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://nsr.mij.mrs.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume_str" />
+	  <property name="value" value="7" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="nsr8">
+	<property name="title" value="MRS Internet Journal of Nitride Semiconductor Research Volume 8" />
+	<property name="journalTitle" value="MRS Internet Journal of Nitride Semiconductor Research" />
+	<property name="plugin" value="org.lockss.plugin.msr.MSRPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://nsr.mij.mrs.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume_str" />
+	  <property name="value" value="8" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="nsr9">
+	<property name="title" value="MRS Internet Journal of Nitride Semiconductor Research Volume 9" />
+	<property name="journalTitle" value="MRS Internet Journal of Nitride Semiconductor Research" />
+	<property name="plugin" value="org.lockss.plugin.msr.MSRPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://nsr.mij.mrs.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume_str" />
+	  <property name="value" value="9" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="nsr10">
+	<property name="title" value="MRS Internet Journal of Nitride Semiconductor Research Volume 10" />
+	<property name="journalTitle" value="MRS Internet Journal of Nitride Semiconductor Research" />
+	<property name="plugin" value="org.lockss.plugin.msr.MSRPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://nsr.mij.mrs.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume_str" />
+	  <property name="value" value="10" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="jbe10">
+	<property name="title" value="Journal of Buddhist Ethics Volume 10" />
+	<property name="journalTitle" value="Journal of Buddhist Ethics" />
+	<property name="plugin" value="edu.cornell.library.jbe.JBEPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://jbe.gold.ac.uk/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="10" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="year" />
+	  <property name="value" value="2003" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="jbe9">
+	<property name="title" value="Journal of Buddhist Ethics Volume 9" />
+	<property name="journalTitle" value="Journal of Buddhist Ethics" />
+	<property name="plugin" value="edu.cornell.library.jbe.JBEPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://jbe.gold.ac.uk/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="9" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="year" />
+	  <property name="value" value="2002" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="jbe8">
+	<property name="title" value="Journal of Buddhist Ethics Volume 8" />
+	<property name="journalTitle" value="Journal of Buddhist Ethics" />
+	<property name="plugin" value="edu.cornell.library.jbe.JBEPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://jbe.gold.ac.uk/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="8" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="year" />
+	  <property name="value" value="2001" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="jbe7">
+	<property name="title" value="Journal of Buddhist Ethics Volume 7" />
+	<property name="journalTitle" value="Journal of Buddhist Ethics" />
+	<property name="plugin" value="edu.cornell.library.jbe.JBEPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://jbe.gold.ac.uk/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="7" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="year" />
+	  <property name="value" value="2000" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="jbe6">
+	<property name="title" value="Journal of Buddhist Ethics Volume 6" />
+	<property name="journalTitle" value="Journal of Buddhist Ethics" />
+	<property name="plugin" value="edu.cornell.library.jbe.JBEPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://jbe.gold.ac.uk/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="6" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="year" />
+	  <property name="value" value="1999" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="jbe5">
+	<property name="title" value="Journal of Buddhist Ethics Volume 5" />
+	<property name="journalTitle" value="Journal of Buddhist Ethics" />
+	<property name="plugin" value="edu.cornell.library.jbe.JBEPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://jbe.gold.ac.uk/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="5" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="year" />
+	  <property name="value" value="1998" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="jbe4">
+	<property name="title" value="Journal of Buddhist Ethics Volume 4" />
+	<property name="journalTitle" value="Journal of Buddhist Ethics" />
+	<property name="plugin" value="edu.cornell.library.jbe.JBEPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://jbe.gold.ac.uk/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="4" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="year" />
+	  <property name="value" value="1997" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="jbe3">
+	<property name="title" value="Journal of Buddhist Ethics Volume 3" />
+	<property name="journalTitle" value="Journal of Buddhist Ethics" />
+	<property name="plugin" value="edu.cornell.library.jbe.JBEPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://jbe.gold.ac.uk/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="3" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="year" />
+	  <property name="value" value="1996" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="jbe2">
+	<property name="title" value="Journal of Buddhist Ethics Volume 2" />
+	<property name="journalTitle" value="Journal of Buddhist Ethics" />
+	<property name="plugin" value="edu.cornell.library.jbe.JBEPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://jbe.gold.ac.uk/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="2" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="year" />
+	  <property name="value" value="1995" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="jbe1">
+	<property name="title" value="Journal of Buddhist Ethics Volume 1" />
+	<property name="journalTitle" value="Journal of Buddhist Ethics" />
+	<property name="plugin" value="edu.cornell.library.jbe.JBEPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://jbe.gold.ac.uk/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="1" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="year" />
+	  <property name="value" value="1994" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+    </property>
+</lockss-config>
