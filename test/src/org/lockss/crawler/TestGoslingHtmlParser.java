@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingHtmlParser.java,v 1.24 2006-02-14 05:24:43 tlipkis Exp $
+ * $Id: TestGoslingHtmlParser.java,v 1.24.2.1 2006-03-23 21:34:15 troberts Exp $
  */
 
 /*
@@ -370,6 +370,8 @@ public class TestGoslingHtmlParser extends LockssTestCase {
     // dangling quoted strings
     assertEquals("", parser.getAttributeValue("href", "a href=\""));
     assertEquals("xy", parser.getAttributeValue("href", "a href=\"xy"));
+    assertEquals("/cgi/reprint/21/1/2.pdf", parser.getAttributeValue("href", "a target=\"_self\" href=\"/cgi/reprint/21/1/2.pdf\" onclick=\"cancelLoadPDF()\""));
+
   }
 
   public void testEmptyAttribute() throws IOException {
@@ -505,6 +507,36 @@ public class TestGoslingHtmlParser extends LockssTestCase {
       "<base href=http://www.example3.com>"+
       "<a href=link3.html>link4</a>";
     assertEquals(SetUtil.set(url1, url3, url4), parseSingleSource(source));
+  }
+
+  public void testInterpretsIgnoresNullHrefInBaseTag() throws IOException {
+    String url1= "http://www.example.com/link1.html";
+    String url2= "http://www.example.com/link2.html";
+    String url3= "http://www.example.com/link3.html";
+
+    String source =
+      "<html><head><title>Test</title></head><body>"+
+      "<a href=link1.html>link1</a>"+
+      "Filler, with <b>bold</b> tags and<i>others</i>"+
+      "<base blah=blah>"+
+      "<a href=link2.html>link2</a>"+
+      "<a href=link3.html>link3</a>";
+    assertEquals(SetUtil.set(url1, url2, url3), parseSingleSource(source));
+  }
+
+  public void testInterpretsIgnoresEmptyHrefInBaseTag() throws IOException {
+    String url1= "http://www.example.com/link1.html";
+    String url2= "http://www.example.com/link2.html";
+    String url3= "http://www.example.com/link3.html";
+
+    String source =
+      "<html><head><title>Test</title></head><body>"+
+      "<a href=link1.html>link1</a>"+
+      "Filler, with <b>bold</b> tags and<i>others</i>"+
+      "<base href=\"\" blah=blah>"+
+      "<a href=link2.html>link2</a>"+
+      "<a href=link3.html>link3</a>";
+    assertEquals(SetUtil.set(url1, url2, url3), parseSingleSource(source));
   }
 
   public void testSkipsComments() throws IOException {
