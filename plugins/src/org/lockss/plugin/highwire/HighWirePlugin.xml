@@ -51,6 +51,8 @@
 <string xsi:type="java:java.lang.String">1,".*/content/vol%d/.*", volume</string>
 <string xsi:type="java:java.lang.String">1,".*/cgi/content/.*/%d/.*", volume</string>
 <string xsi:type="java:java.lang.String">1,".*/cgi/reprint/%d/.*", volume</string>
+<string xsi:type="java:java.lang.String">1,".*/cgi/reprintframed/%d/.*", volume</string>
+<string xsi:type="java:java.lang.String">1,".*/cgi/reprintsidebar/%d/.*", volume</string>
 <string xsi:type="java:java.lang.String">1,".*/icons.*"</string>
 <string xsi:type="java:java.lang.String">1,".*/math.*"</string>
 <string xsi:type="java:java.lang.String">2,"http://.*/.*/.*"</string>
