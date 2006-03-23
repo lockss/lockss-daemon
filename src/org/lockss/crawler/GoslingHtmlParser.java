@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingHtmlParser.java,v 1.37 2006-02-14 05:20:07 tlipkis Exp $
+ * $Id: GoslingHtmlParser.java,v 1.38 2006-03-23 22:44:47 troberts Exp $
  */
 
 /*
@@ -362,16 +362,19 @@ public class GoslingHtmlParser implements ContentParser {
           returnStr = getAttributeValue(BACKGROUNDSRC, link);
         } else if (beginsWithTag(link, BASETAG)) {
 	  String newBase = getAttributeValue(HREF, link);
-	  if (UrlUtil.isMalformedUrl(newBase)) {
-	    malformedBaseUrl = true;
-	  }  else {
-  	    malformedBaseUrl = false;
-	    if (UrlUtil.isAbsoluteUrl(newBase)) {
-	      logger.debug3("base tag found, setting srcUrl to: " + newBase);
-	      srcUrl = newBase;
-	      baseUrl = null;
+	  if (newBase != null && !"".equals(newBase)) {
+	    if (UrlUtil.isMalformedUrl(newBase)) {
+	      logger.debug3("base tag found, but has malformed URL: "+newBase);
+	      malformedBaseUrl = true;
+	    }  else {
+	      malformedBaseUrl = false;
+	      if (UrlUtil.isAbsoluteUrl(newBase)) {
+		logger.debug3("base tag found, setting srcUrl to: " + newBase);
+		srcUrl = newBase;
+		baseUrl = null;
+	      }
 	    }
- 	  }
+	  }
 	}
         break;
       case 's': //<script src=blah.js>
@@ -424,6 +427,8 @@ public class GoslingHtmlParser implements ContentParser {
       if (malformedBaseUrl) {
 	//if we have a malformed base URL, we can't interpret relative urls
 	//so we only will return absolute ones
+	logger.debug2("Malformed base URL: " + srcUrl +
+		      " checking if URL is abolute " + returnStr);
 	return UrlUtil.isAbsoluteUrl(returnStr) ? returnStr : null;
       }
       try {

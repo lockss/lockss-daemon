@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingHtmlParser.java,v 1.24 2006-02-14 05:24:43 tlipkis Exp $
+ * $Id: TestGoslingHtmlParser.java,v 1.25 2006-03-23 22:44:47 troberts Exp $
  */
 
 /*
@@ -370,6 +370,8 @@ public class TestGoslingHtmlParser extends LockssTestCase {
     // dangling quoted strings
     assertEquals("", parser.getAttributeValue("href", "a href=\""));
     assertEquals("xy", parser.getAttributeValue("href", "a href=\"xy"));
+    assertEquals("/cgi/reprint/21/1/2.pdf", parser.getAttributeValue("href", "a target=\"_self\" href=\"/cgi/reprint/21/1/2.pdf\" onclick=\"cancelLoadPDF()\""));
+
   }
 
   public void testEmptyAttribute() throws IOException {
@@ -426,6 +428,22 @@ public class TestGoslingHtmlParser extends LockssTestCase {
     + "<a href = javascript:popup('http://www.example.com/link2.html')</a>"
     + "<img src = javascript:popup('" + url3 + "') </img>";
     assertEquals(SetUtil.set(url, url2, url3), parseSingleSource(source));
+  }
+
+  /**
+   * Included to test a chunk of HighWire HTML that we're not parsing correctly
+   */
+  public void testParseHWPDF() throws IOException {
+//     Properties p = new Properties();
+//     p.setProperty(GoslingHtmlParser.PARAM_PARSE_JS, "true");
+//     ConfigurationUtil.setCurrentConfigFromProps(p);
+//     parser = new GoslingHtmlParser();
+
+    String url= "http://www.example.com/cgi/reprint/21/1/2.pdf";
+
+    String source =
+      "<table cellspacing=\"0\" cellpadding=\"10\" width=\"250\" border=\"0\"><tr><td align=center bgcolor=\"#DBDBDB\">\n\n	<font face=\"verdana,arial,helvetica,sans-serif\"><strong><font size=+1>Automatic download</font><br>\n	<font size=\"-1\">[<a target=\"_self\" href=\"/cgi/reprint/21/1/2.pdf\" onclick=\"cancelLoadPDF()\">Begin manual download</a>]</strong></font>\n";
+    assertEquals(SetUtil.set(url), parseSingleSource(source));
   }
 
 //   public void testDoHrefInAnchorJavascript() throws IOException {
@@ -505,6 +523,36 @@ public class TestGoslingHtmlParser extends LockssTestCase {
       "<base href=http://www.example3.com>"+
       "<a href=link3.html>link4</a>";
     assertEquals(SetUtil.set(url1, url3, url4), parseSingleSource(source));
+  }
+
+  public void testIgnoresNullHrefInBaseTag() throws IOException {
+    String url1= "http://www.example.com/link1.html";
+    String url2= "http://www.example.com/link2.html";
+    String url3= "http://www.example.com/link3.html";
+
+    String source =
+      "<html><head><title>Test</title></head><body>"+
+      "<a href=link1.html>link1</a>"+
+      "Filler, with <b>bold</b> tags and<i>others</i>"+
+      "<base blah=blah>"+
+      "<a href=link2.html>link2</a>"+
+      "<a href=link3.html>link3</a>";
+    assertEquals(SetUtil.set(url1, url2, url3), parseSingleSource(source));
+  }
+
+  public void testIgnoresEmptyHrefInBaseTag() throws IOException {
+    String url1= "http://www.example.com/link1.html";
+    String url2= "http://www.example.com/link2.html";
+    String url3= "http://www.example.com/link3.html";
+
+    String source =
+      "<html><head><title>Test</title></head><body>"+
+      "<a href=link1.html>link1</a>"+
+      "Filler, with <b>bold</b> tags and<i>others</i>"+
+      "<base href=\"\" blah=blah>"+
+      "<a href=link2.html>link2</a>"+
+      "<a href=link3.html>link3</a>";
+    assertEquals(SetUtil.set(url1, url2, url3), parseSingleSource(source));
   }
 
   public void testSkipsComments() throws IOException {
