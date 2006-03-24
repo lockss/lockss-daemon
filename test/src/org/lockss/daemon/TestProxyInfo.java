@@ -1,5 +1,5 @@
 /*
- * $Id: TestProxyInfo.java,v 1.14 2006-03-24 20:23:53 thib_gc Exp $
+ * $Id: TestProxyInfo.java,v 1.15 2006-03-24 23:20:55 thib_gc Exp $
  */
 
 /*
@@ -235,9 +235,9 @@ public class TestProxyInfo extends LockssTestCase {
     assertEquals("foo.com", FragmentBuilder.removeProtocol(url2));
     assertNegative(builder.compare(url1, null, url2, null));
     assertPositive(builder.compare(url2, null, url1, null));
-    assertZero(builder.compare(url1, null, url1, null));
-    assertZero(builder.compare(url1, null, url1.replaceAll("http", "ftp"), null));
-    assertZero(builder.compare(url1, null, url1.toUpperCase(), null));
+    assertEquals(0, builder.compare(url1, null, url1, null));
+    assertEquals(0, builder.compare(url1, null, url1.replaceAll("http", "ftp"), null));
+    assertEquals(0, builder.compare(url1, null, url1.toUpperCase(), null));
 
     StringBuffer buffer;
 
