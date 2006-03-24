@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyIpAccess.java,v 1.24 2006-03-02 01:45:34 thib_gc Exp $
+ * $Id: ProxyIpAccess.java,v 1.25 2006-03-24 23:56:24 thib_gc Exp $
  */
 
 /*
@@ -80,7 +80,5 @@ public class ProxyIpAccess extends IpAccessControl {
         auditEnable, auditPort, icpEnable, icpPort);
     super.saveChanges();
   }
-
-
 
 }

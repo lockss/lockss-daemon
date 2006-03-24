@@ -1,5 +1,5 @@
 /*
- * $Id: IcpManager.java,v 1.28 2006-02-03 21:33:09 thib_gc Exp $
+ * $Id: IcpManager.java,v 1.29 2006-03-24 23:56:24 thib_gc Exp $
  */
 
 /*
@@ -68,13 +68,13 @@ public class IcpManager
   /**
    * <p>A prefix for daemon parameters related to ICP.</p>
    */
-  private static final String PREFIX_ICP =
+  public static final String PREFIX_ICP =
     Configuration.PREFIX + FRAGMENT_ICP_DOT;
 
   /**
    * <p>A prefix for platform parameters related to ICP.</p>
    */
-  private static final String PREFIX_PLATFORM =
+  public static final String PREFIX_PLATFORM =
     Configuration.PLATFORM + FRAGMENT_ICP_DOT;
 
   /*
