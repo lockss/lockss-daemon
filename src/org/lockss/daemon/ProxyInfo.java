@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyInfo.java,v 1.17 2006-03-13 22:35:54 thib_gc Exp $
+ * $Id: ProxyInfo.java,v 1.18 2006-03-24 20:23:53 thib_gc Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.daemon;
 import java.io.*;
 import java.net.MalformedURLException;
 import java.util.*;
+import java.util.Map.Entry;
 
 import org.apache.oro.text.regex.*;
 import org.lockss.app.LockssDaemon;
@@ -49,11 +50,12 @@ import org.lockss.util.*;
  * that should be directed to this cache.
  */
 public class ProxyInfo {
-  public static final int MAX_ENCAPSULATED_PAC_SIZE = 100 * 1024;
   protected static Logger log = Logger.getLogger("ProxyInfo");
 
   private String proxyHost;
   private int proxyPort = -1;
+
+  static final int MAX_ENCAPSULATED_PAC_SIZE = 100 * 1024;
 
   /** Create a ProxyInfo using the local IP address as the proxy host */
   public ProxyInfo() {
@@ -133,28 +135,24 @@ public class ProxyInfo {
 
   /** Generate a PAC file string from the URL stem map */
   public String generatePacFile(Map urlStems) {
-    StringBuffer sb = new StringBuffer();
-    sb.append("// PAC file generated ");
-    sb.append(TimeBase.nowDate().toString());
-    sb.append(" by LOCKSS cache ");
-    sb.append(getProxyHost());
-    sb.append("\n\n");
-    generatePacFunction(sb, urlStems);
-    return sb.toString();
+    return new PacFileFragmentBuilder().generateFragment(urlStems);
   }
 
   /** Generate a PAC file string from the URL stem map, delegating to the
    * FindProxyForURL function in the pacFileToBeEncapsulated if no match is
    * found. */
-  public String encapsulatePacFileFromURL(Map urlStems, String url)
+  public String generateEncapsulatedPacFileFromURL(Map urlStems,
+                                                   String url)
       throws IOException {
     InputStream bis = null;
     try {
       InputStream istr = UrlUtil.openInputStream(url);
       bis = new BufferedInputStream(istr);
       String old = StringUtil.fromInputStream(bis, MAX_ENCAPSULATED_PAC_SIZE);
-      return encapsulatePacFile(urlStems, old, " (generated from " + url + ")");
-    } finally {
+      return generateEncapsulatedPacFile(urlStems, old,
+          " (generated from " + url + ")");
+    }
+    finally {
       if (bis != null) {
 	bis.close();
       }
@@ -164,151 +162,505 @@ public class ProxyInfo {
   /** Generate a PAC file string from the URL stem map, delegating to the
    * FindProxyForURL function in the pacFileToBeEncapsulated if no match is
    * found. */
-  public String encapsulatePacFile(Map urlStems,
-				   String pacFileToBeEncapsulated,
-				   String message) {
-    try {
-      String encapsulatedName = findUnusedName(pacFileToBeEncapsulated);
-      String encapsulated =
-	jsReplace(pacFileToBeEncapsulated, "FindProxyForURL",
-		  encapsulatedName);
-      StringBuffer sb = new StringBuffer();
-      sb.append("// PAC file generated ");
-      sb.append(TimeBase.nowDate().toString());
-      sb.append(" by LOCKSS cache ");
-      sb.append(getProxyHost());
-      sb.append("\n\n");
-      generatePacFunction(sb, urlStems,
-			  " return " + encapsulatedName + "(url, host);\n");
-      sb.append("// Encapsulated PAC file follows");
-      if (message != null) {
-	sb.append(message);
-      }
-      sb.append("\n");
-      if (encapsulated.equals(pacFileToBeEncapsulated)) {
-	sb.append("// File is unmodified; it doesn't look like a PAC file\n");
-      }
-      sb.append("\n");
-      sb.append(encapsulated);
-      return sb.toString();
-    } catch (MalformedPatternException e) {
-      log.error("PAC file patterns", e);
-      throw new RuntimeException("Unexpected malformed pattern: " +
-				 e.toString());
-    }
-  }
-
-  void generatePacFunction(StringBuffer sb, Map urlStems) {
-    generatePacFunction(sb, urlStems, " return \"DIRECT\";\n");
-  }
-
-  void generatePacFunction(StringBuffer sb, Map urlStems, String elseStmt) {
-    sb.append("function FindProxyForURL(url, host) {\n");
-    for (Iterator iter = urlStems.keySet().iterator(); iter.hasNext(); ) {
-      String urlStem = (String)iter.next();
-      generatePacEntry(sb, urlStem);
-    }
-    sb.append(elseStmt);
-    sb.append("}\n");
-  }
-
-  /** Generate a single if clause for a PAC file */
-  void generatePacEntry(StringBuffer sb, String urlStem) {
-    sb.append(" if (shExpMatch(url, \"");
-    sb.append(shPattern(urlStem));
-    sb.append("\"))\n { return \"PROXY ");
-    sb.append(getProxyHost());
-    sb.append(":");
-    sb.append(getProxyPort());
-    sb.append("\"; }\n\n");
-  }
-
-  /** Turn a stem into a shell pattern */
-  private String shPattern(String urlStem) {
-    return urlStem + "/*";
-  }
-
-  String findUnusedName(String js) throws MalformedPatternException {
-    return findUnusedName(js, "FindProxyForURL_");
-  }
-
-  String findUnusedName(String js, String base)
-      throws MalformedPatternException {
-    for (int suff = 0; true; suff++) {
-      Pattern pat =
-	RegexpUtil.getCompiler().compile("\\b" + base + suff + "\\b");
-      if (!RegexpUtil.getMatcher().contains(js, pat)) {
-	return base + suff;
-      }
-    }
-  }
-
-  String jsReplace(String js, String oldname, String newname)
-      throws MalformedPatternException {
-    Pattern fromPat =
-      RegexpUtil.getCompiler().compile("\\b" + oldname + "\\b");
-    Substitution subst = new Perl5Substitution(newname);
-    return Util.substitute(RegexpUtil.getMatcher(), fromPat, subst, js,
-			   Util.SUBSTITUTE_ALL);
+  public String generateEncapsulatedPacFile(Map urlStems,
+				            String pacFileToBeEncapsulated,
+				            String message) {
+    return new EncapsulatedPacFileFragmentBuilder(
+        pacFileToBeEncapsulated, message).generateFragment(urlStems);
   }
 
   /** Generate an EZproxy config fragment from the URL stem map */
   public String generateEZProxyFragment(Map urlStems) {
-    StringBuffer sb = new StringBuffer();
-    sb.append("# EZproxy config generated ");
-    sb.append(TimeBase.nowDate().toString());
-    sb.append(" by LOCKSS cache ");
-    sb.append(getProxyHost());
-    sb.append("\n");
-    sb.append("Proxy ");
-    sb.append(getProxyHost());
-    sb.append(":");
-    sb.append(getProxyPort());
-    sb.append("\n\n");
-    for (Iterator iter = urlStems.entrySet().iterator(); iter.hasNext(); ) {
-      Map.Entry entry = (Map.Entry)iter.next();
-      String urlStem = (String)entry.getKey();
-      ArchivalUnit au = (ArchivalUnit)entry.getValue();
-      generateEZProxyEntry(sb, urlStem, au.getName());
-    }
-    sb.append("Proxy\n");
-    sb.append("# End of LOCKSS config\n");
-    return sb.toString();
+    return new EZProxyFragmentBuilder().generateFragment(urlStems);
   }
 
-  public String generateSquidFile(Map urlStems) {
-    SortedSet stems = new TreeSet();
-    for (Iterator iter = urlStems.keySet().iterator() ; iter.hasNext() ; ) {
-      stems.add(generateSquidEntry((String)iter.next()));
-    }
-
-    StringBuffer sb = new StringBuffer();
-    for (Iterator iter = stems.iterator() ; iter.hasNext() ; ) {
-      sb.append((String)iter.next());
-      sb.append('\n');
-    }
-    sb.append('\n');
-    return sb.toString();
+  public String generateSquidConfigFragment(Map urlStems) {
+    return new SquidConfigFragmentBuilder().generateFragment(urlStems);
   }
 
-  void generateEZProxyEntry(StringBuffer sb, String urlStem, String title) {
-    sb.append("Title ");
-    sb.append(title);
-    sb.append("\nURL ");
-    sb.append(urlStem);
-    sb.append("\nDomain ");
-    try {
-      sb.append(UrlUtil.getHost(urlStem));
-    } catch (MalformedURLException e) {
-      sb.append("???");
-    }
-    sb.append("\n\n");
+  public String generateExternalSquidFragment(Map urlStems) {
+    return new ExternalSquidFragmentBuilder().generateFragment(urlStems);
   }
 
-  String generateSquidEntry(String stem) {
-    final String PROTOCOL_SUBSTRING = "://";
-    return "." + stem.substring(
-        stem.indexOf(PROTOCOL_SUBSTRING) + PROTOCOL_SUBSTRING.length());
+  /**
+   * <p>A version of {@link PacFileFragmentBuilder} specialized to
+   * combine the fragment it generates with an existing PAC file.</p>
+   * @author Thib Guicherd-Callin
+   */
+  class EncapsulatedPacFileFragmentBuilder extends PacFileFragmentBuilder {
+
+    /**
+     * <p>The PAC file being encapsulated.</p>
+     */
+    protected String pacFileToBeEncapsulated;
+
+    /**
+     * <p>An additional message.</p>
+     */
+    protected String message;
+
+    /**
+     * <p>Builds a new {@link EncapsulatedPacFileFragmentBuilder}
+     * instance.</p>
+     * @param pacFileToBeEncapsulated The PAC file being encapsulated.
+     * @param message                 An additional message.
+     */
+    public EncapsulatedPacFileFragmentBuilder(String pacFileToBeEncapsulated,
+                                              String message) {
+      this.pacFileToBeEncapsulated = pacFileToBeEncapsulated;
+      this.message = message;
+    }
+
+    /* Inherit documentation */
+    public void generateEnd(StringBuffer buffer) {
+      try {
+        String encapsulatedName = findUnusedName(pacFileToBeEncapsulated);
+        String encapsulated = jsReplace(pacFileToBeEncapsulated,
+            "FindProxyForURL", encapsulatedName);
+
+        buffer.append(" return " + encapsulatedName + "(url, host);\n");
+        buffer.append("}\n\n");
+        buffer.append("// Encapsulated PAC file follows ");
+        if (!StringUtil.isNullString(message)) {
+          buffer.append(message);
+        }
+        buffer.append("\n\n");
+
+        if (encapsulated.equals(pacFileToBeEncapsulated)) {
+          buffer.append("// File is unmodified; it doesn't look like a PAC file\n");
+        }
+        buffer.append(encapsulated);
+      }
+      catch (MalformedPatternException exc) {
+        log.error("PAC file patterns", exc);
+        throw new RuntimeException(
+            "Unexpected malformed pattern: " + exc.toString());
+      }
+    }
+
+    String findUnusedName(String js) throws MalformedPatternException {
+      return findUnusedName(js, "FindProxyForURL_");
+    }
+
+    String findUnusedName(String js, String base)
+        throws MalformedPatternException {
+      for (int suff = 0; true; suff++) {
+        Pattern pat =
+          RegexpUtil.getCompiler().compile("\\b" + base + suff + "\\b");
+        if (!RegexpUtil.getMatcher().contains(js, pat)) {
+          return base + suff;
+        }
+      }
+    }
+
+    String jsReplace(String js, String oldname, String newname)
+        throws MalformedPatternException {
+      Pattern fromPat =
+        RegexpUtil.getCompiler().compile("\\b" + oldname + "\\b");
+      Substitution subst = new Perl5Substitution(newname);
+      return Util.substitute(RegexpUtil.getMatcher(), fromPat, subst, js,
+          		   Util.SUBSTITUTE_ALL);
+    }
+
+  }
+
+  /**
+   * <p>A version of {@link FragmentBuilder} specialized to generate
+   * a PAC file.</p>
+   * @author Thib Guicherd-Callin
+   */
+  class PacFileFragmentBuilder extends FragmentBuilder {
+
+    /* Inherit documentation */
+    public void generateBeginning(StringBuffer buffer) {
+      commonHeader(buffer);
+      buffer.append("function FindProxyForURL(url, host) {\n");
+    }
+
+    /**
+     * <p>Generates a typical header.</p>
+     * @param buffer A {@link StringBuffer} instance to output into.
+     */
+    protected void commonHeader(StringBuffer buffer) {
+      buffer.append("// PAC file\n");
+      buffer.append("// Generated ");
+      buffer.append(TimeBase.nowDate().toString());
+      buffer.append(" by LOCKSS cache ");
+      buffer.append(getProxyHost());
+      buffer.append("\n\n");
+    }
+
+    /* Inherit documentation */
+    public void generateEntry(StringBuffer buffer, String urlStem, ArchivalUnit au) {
+      buffer.append(" // ");
+      buffer.append(au.getName());
+      buffer.append('\n');
+      buffer.append(" if (shExpMatch(url, \"");
+      buffer.append(shPattern(urlStem));
+      buffer.append("\"))\n");
+      buffer.append(" { return \"PROXY ");
+      buffer.append(getProxyHost());
+      buffer.append(":");
+      buffer.append(getProxyPort());
+      buffer.append("\"; }\n\n");
+    }
+
+    /* Inherit documentation */
+    public void generateEnd(StringBuffer buffer) {
+      buffer.append(" return \"DIRECT\";\n");
+      buffer.append("}\n");
+    }
+
+    /* Inherit documentation */
+    public void generateEmpty(StringBuffer buffer) {
+      commonHeader(buffer);
+      buffer.append("// No URLs cached on this LOCKSS cache\n\n");
+    }
+
+    /**
+     * <p>Turns a stem into a shell pattern.</p>
+     * @param urlStem A URL stem.
+     * @return The URL stem followed by <code>/*</code>.
+     */
+    String shPattern(String urlStem) {
+      return urlStem + "/*";
+    }
+
+  }
+
+  /**
+   * <p>A version of {#link FragmentBuilder} specialized for Squid
+   * configuration fragments.</p>
+   * @author Thib Guicherd-Callin
+   */
+  abstract class SquidFragmentBuilder extends FragmentBuilder {
+
+    /**
+     * <p>Encodes this cache's host name with dashes to produce an
+     * ACL name for Squid.</p>
+     * @return This cache's host name with dots replaced by dashes
+     *         and the suffix <code>-domains</code>.
+     */
+    protected String encodeAclName() {
+      return getProxyHost().replaceAll("\\.", "-") + "-domains";
+    }
+
+    /**
+     * <p>Generates the typical usage instructions.</p>
+     * @param buffer         A {@link StringBuffer} instance to output
+     *                       into.
+     * @param beforeCommands A string to prepend in front of the
+     *                       various Squid commands. For example, if
+     *                       this prefix starts with <code>#</code>
+     *                       then the commands are merely disabled,
+     *                       otherwise they may be picked up by
+     *                       Squid.
+     */
+    protected void commonUsage(StringBuffer buffer, String beforeCommands) {
+      if (beforeCommands == null) {
+        beforeCommands = "";
+      }
+
+      buffer.append(beforeCommands + "acl anyone src 0.0.0.0/0.0.0.0\n");
+      buffer.append(beforeCommands + "cache_peer " + getProxyHost() + " parent <PROXYPORT> <ICPPORT> proxy-only\n");
+      buffer.append(beforeCommands + "cache_peer_access " + getProxyHost() + " allow " + encodeAclName() + "\n");
+      buffer.append(beforeCommands + "cache_peer_access " + getProxyHost() + " deny anyone\n");
+
+      buffer.append("# Replace <PROXYPORT> by the port number used by your LOCKSS box\n");
+      buffer.append("#  for proxy requests (typically 9090).\n");
+      buffer.append("# Replace <ICPPORT> by the port number used by your LOCKSS box\n");
+      buffer.append("#  for ICP requests (typically 3130).\n");
+      buffer.append("# If you already have \"acl XYZ src 0.0.0.0/0.0.0.0\" or equivalent elsewhere,\n");
+      buffer.append("#  do not include \"acl anyone src 0.0.0.0/0.0.0.0\" and replace\n");
+      buffer.append("#  \"deny anyone\" by \"deny XYZ\".\n\n");
+    }
+
+    /**
+     * <p>Generates a typical header.</p>
+     * @param buffer A {@link StringBuffer} instance to output into.
+     */
+    protected void commonHeader(StringBuffer buffer) {
+      buffer.append("# Generated " + TimeBase.nowDate().toString() + " by LOCKSS cache " + getProxyHost() + "\n\n");
+    }
+
+  }
+
+  /**
+   * <p>A version of {@link SquidFragmentBuilder} specialized to
+   * generate an external dstdomain file.</p>
+   * @author Thib Guicherd-Callin
+   */
+  class ExternalSquidFragmentBuilder extends SquidFragmentBuilder {
+
+    /* Inherit documentation */
+    public void generateEmpty(StringBuffer buffer) {
+      generateBeginning(buffer);
+      buffer.append("# No URLs cached on this LOCKSS cache.\n\n");
+    }
+
+    /* Inherit documentation */
+    public void generateEntry(StringBuffer buffer, String urlStem, ArchivalUnit au) {
+      buffer.append("# " + au.getName() + "\n");
+      buffer.append(removeProtocol(urlStem) + "\n\n");
+    }
+
+    /* Inherit documentation */
+    public void generateBeginning(StringBuffer buffer) {
+      buffer.append("# LOCKSS dstdomain file for Squid\n");
+      commonHeader(buffer);
+      buffer.append("# Suggested file name: " + encodeAclName() + ".txt\n\n");
+      buffer.append("# Suggested use is Squid config file:\n");
+      buffer.append("#     acl " + encodeAclName() + " dstdomain \"/the/path/to/" + encodeAclName() + ".txt\"\n");
+      commonUsage(buffer, "#     ");
+    }
+
+  }
+
+  /**
+   * <p>A version of {@link SquidFragmentBuilder} specialized to
+   * generate dstdomain rules suitable for insertion directly into a
+   * Squid configuration file.</p>
+   * @author Thib Guicherd-Callin
+   */
+  class SquidConfigFragmentBuilder extends SquidFragmentBuilder {
+
+    /* Inherit documentation */
+    public void generateBeginning(StringBuffer buffer) {
+      buffer.append("# LOCKSS configuration fragment for Squid\n");
+      commonHeader(buffer);
+      buffer.append("# SCROLL DOWN past all the following \"dstdomain\" lines for further instructions.\n\n");
+    }
+
+    /* Inherit documentation */
+    public void generateEmpty(StringBuffer buffer) {
+      buffer.append("# LOCKSS configuration fragment for Squid\n");
+      commonHeader(buffer);
+      buffer.append("# No URLs cached on this LOCKSS cache.\n\n");
+    }
+
+    /* Inherit documentation */
+    public void generateEntry(StringBuffer buffer, String urlStem, ArchivalUnit au) {
+      buffer.append("# " + au.getName() + "\n");
+      buffer.append("acl " + encodeAclName() + " dstdomain " + removeProtocol(urlStem) + "\n\n");
+    }
+
+    /* Inherit documentation */
+    public void generateEnd(StringBuffer buffer) {
+      buffer.append("#\n");
+      buffer.append("# CONTINUED: LOCKSS cache config\n");
+      buffer.append("#\n");
+      commonUsage(buffer, "");
+    }
+
+  }
+
+  /**
+   * <p>A version of {@link FragmentBuilder} specialized to generate
+   * an EZProxy configuration fragment.</p>
+   * @author Thib Guicherd-Callin
+   */
+  class EZProxyFragmentBuilder extends FragmentBuilder {
+
+    /* Inherit documentation */
+    public void generateEmpty(StringBuffer buffer) {
+      commonHeader(buffer);
+      buffer.append("# No URLs cached on this LOCKSS cache.\n");
+    }
+
+    /* Inherit documentation */
+    public void generateBeginning(StringBuffer buffer) {
+      commonHeader(buffer);
+      buffer.append("Proxy ");
+      buffer.append(getProxyHost());
+      buffer.append(':');
+      buffer.append(getProxyPort());
+      buffer.append("\n\n");
+    }
+
+    /**
+     * <p>Generates a typical header.</p>
+     * @param buffer A {@link StringBuffer} instance to output into.
+     */
+    protected void commonHeader(StringBuffer buffer) {
+      buffer.append("# EZproxy config generated ");
+      buffer.append(TimeBase.nowDate().toString());
+      buffer.append(" by LOCKSS cache ");
+      buffer.append(getProxyHost());
+      buffer.append('\n');
+    }
+
+    /* Inherit documentation */
+    public void generateEnd(StringBuffer buffer) {
+      buffer.append("Proxy\n");
+      buffer.append("# End of LOCKSS config\n");
+    }
+
+    /* Inherit documentation */
+    public void generateEntry(StringBuffer buffer, String urlStem, ArchivalUnit au) {
+      buffer.append("Title " + au.getName() + "\n");
+      buffer.append("URL " + urlStem + "\n");
+      buffer.append("Domain ");
+      try {
+        buffer.append(UrlUtil.getHost(urlStem));
+      }
+      catch (MalformedURLException e) {
+        buffer.append("???");
+      }
+      buffer.append("\n\n");
+    }
+
+  }
+
+  /**
+   * <p>An abstraction for classes that produce configuration
+   * fragments based on all the URL stems being cached.</p>
+   * <p>{@link #generateFragment} is the template method;
+   * {@link #generateBeginning}, {@link #generateEntry},
+   * {@link #generateEnd} and {@link #generateEmpty} are the
+   * submethods.</p>
+   * @author Thib Guicherd-Callin
+   * @see #generateFragment
+   */
+  public static abstract class FragmentBuilder {
+
+    /**
+     * <p>Removes the protocol and its <code>://</code> component
+     * from a URL stem.</p>
+     * <p>Assumption: url stems always start with a protocol.</p>
+     * @param stem A URL stem.
+     * @return A new URL stem with the protocol removed.
+     */
+    protected static String removeProtocol(String stem) {
+      final String PROTOCOL_SUBSTRING = "://";
+      return stem.substring(
+          stem.indexOf(PROTOCOL_SUBSTRING) + PROTOCOL_SUBSTRING.length());
+    }
+
+    /**
+     * <p>Generates the leading part of the fragment.</p>
+     * @param buffer A {@link StringBuffer} instance to output into.
+     */
+    protected void generateBeginning(StringBuffer buffer) {}
+
+    /**
+     * <p>Generates the closing part of the fragment.</p>
+     * @param buffer A {@link StringBuffer} instance to output into.
+     */
+    protected void generateEnd(StringBuffer buffer) {}
+
+    /**
+     * <p>Generates a part of the fragment for one URL stem and its
+     * associated archival unit.</p>
+     * @param buffer  A {@link StringBuffer} instance to output into.
+     * @param urlStem A url stem.
+     * @param au      The stem's corresponding archival unit.
+     */
+    protected abstract void generateEntry(StringBuffer buffer,
+                                          String urlStem,
+                                          ArchivalUnit au);
+
+    /**
+     * <p>Generates a fragment appropriate for an empty url stem
+     * map.</p>
+     * @param buffer A {@link StringBuffer} instance to output into.
+     */
+    protected void generateEmpty(StringBuffer buffer) {}
+
+    /**
+     * <p>Compares two URL/AU pairs, to determine in which order
+     * the entries should appear in the fragment.</p>
+     * <p>The convention used is the same as that for
+     * {@link Comparable#compareTo}.</p>
+     * @param urlStem1 The first entry's URL stem.
+     * @param au1      The first entry's archival unit.
+     * @param urlStem2 The second entry's URL stem.
+     * @param au2      The second entry's archival unit.
+     * @return A negative integer if the first entry comes before the
+     *         second entry, a positive integer if the first entry
+     *         comes after the second entry, and zero if the two
+     *         entries are equivalent.
+     */
+    protected int compare(String urlStem1,
+                          ArchivalUnit au1,
+                          String urlStem2,
+                          ArchivalUnit au2) {
+      return removeProtocol(urlStem1).compareToIgnoreCase(removeProtocol(urlStem2));
+    }
+
+    /**
+     * <p>A template method that generates a fragment from a map of
+     * URL stems.</p>
+     * <p>The template runs in the following manner.</p>
+     * <ol>
+     *  <li>If the URL stem map is empty, call
+     *  {@link #generateEmpty}.</li>
+     *  <li>Otherwise,
+     *   <ol>
+     *    <li>Sort the URLs.</li>
+     *    <li>Call {@link #generateBeginning}.</li>
+     *    <li>For each URL/AU pair in the map, call
+     *    {@link #generateEntry}.</li>
+     *    <li>Call {@link #generateEnd}.</li>
+     *   </ol>
+     *  </li>
+     * </ol>
+     * <p>Note that the default implementations of
+     * {@link #generateBeginning}, {@link #generateEnd} and
+     * {@link #generateEmpty} provided by this class do nothing,
+     * and that the default behavior of {@link #compare} as
+     * implemented in this class is to compare the URLs alphabetically
+     * (ignoring case) with the protocol removed.</p>
+     * @param urlStems The URL stem map.
+     * @return A generated fragment, as a string.
+     */
+    public String generateFragment(Map urlStems) {
+      StringBuffer buffer = new StringBuffer();
+
+      // Bail if empty
+      if (urlStems.isEmpty()) {
+        generateEmpty(buffer);
+        return buffer.toString();
+      }
+
+      // Sort entries
+      Set entries;
+      try {
+        entries = new TreeSet(new Comparator() {
+          public int compare(Object obj1, Object obj2) {
+            Entry entry1 = (Entry)obj1;
+            Entry entry2 = (Entry)obj2;
+            return FragmentBuilder.this.compare((String)entry1.getKey(),
+                                                (ArchivalUnit)entry1.getValue(),
+                                                (String)entry2.getKey(),
+                                                (ArchivalUnit)entry2.getValue());
+          }
+          public boolean equals(Object obj) {
+            return obj == this;
+          }
+        });
+        entries.addAll(urlStems.entrySet());
+      }
+      catch (Exception exc) {
+        entries = urlStems.entrySet(); // cannot order entries
+      }
+
+      // Generate beginning
+      generateBeginning(buffer);
+
+      // Generate entries
+      for (Iterator iter = entries.iterator() ; iter.hasNext() ; ) {
+        Entry entry = (Entry)iter.next();
+        generateEntry(buffer,
+                      (String)entry.getKey(),
+                      (ArchivalUnit)entry.getValue());
+      }
+
+      // Generate end
+      generateEnd(buffer);
+
+      return buffer.toString();
+    }
+
   }
 
 }

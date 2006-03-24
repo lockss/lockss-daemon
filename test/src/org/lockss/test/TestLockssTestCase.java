@@ -1,10 +1,10 @@
 /*
- * $Id: TestLockssTestCase.java,v 1.9 2004-08-04 23:46:29 tlipkis Exp $
+ * $Id: TestLockssTestCase.java,v 1.10 2006-03-24 20:23:53 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,6 +35,7 @@ package org.lockss.test;
 import java.util.*;
 import java.io.*;
 import junit.framework.*;
+
 import org.lockss.util.*;
 import org.lockss.test.*;
 
@@ -322,4 +323,77 @@ public class TestLockssTestCase extends LockssTestCase {
     assertMatchesRE("bar", "foobar");
     assertNotMatchesRE("bar", "baz");
   }
+
+  public void testAssertPositive() {
+    final String failed = "Asserted that this value was positive: ";
+
+    for (int val = Integer.MAX_VALUE ; val > 0 ; val >>= 1) {
+      assertPositive(val);
+    }
+
+    try {
+      assertPositive(0);
+      fail(failed + 0);
+    } catch (AssertionFailedError afe) {
+      // All is well
+    }
+
+    for (int val = Integer.MIN_VALUE ; val != -1 ; val >>= 1) {
+      try {
+        assertPositive(val);
+        fail(failed + val);
+      } catch (AssertionFailedError afe) {
+        // All is well
+      }
+    }
+  }
+
+  public void testAssertNegative() {
+    final String failed = "Asserted that this value was negative: ";
+
+    for (int val = Integer.MIN_VALUE ; val != -1 ; val >>= 1) {
+      assertNegative(val);
+    }
+
+    try {
+      assertNegative(0);
+      fail(failed + 0);
+    } catch (AssertionFailedError afe) {
+      // All is well
+    }
+
+    for (int val = Integer.MAX_VALUE ; val > 0 ; val >>= 1) {
+      try {
+        assertNegative(val);
+        fail(failed + val);
+      } catch (AssertionFailedError afe) {
+        // All is well
+      }
+    }
+  }
+
+  public void testAssertZero() {
+    final String failed = "Asserted that this value was zero: ";
+
+    assertZero(0);
+
+    for (int val = Integer.MAX_VALUE ; val > 0 ; val >>= 1) {
+      try {
+        assertZero(val);
+        fail(failed + val);
+      } catch (AssertionFailedError afe) {
+        // All is well
+      }
+    }
+
+    for (int val = Integer.MIN_VALUE ; val != -1 ; val >>= 1) {
+      try {
+        assertZero(val);
+        fail(failed + val);
+      } catch (AssertionFailedError afe) {
+        // All is well
+      }
+    }
+  }
+
 }

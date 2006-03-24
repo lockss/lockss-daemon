@@ -1,5 +1,5 @@
 /*
- * $Id: TestProxyInfo.java,v 1.13 2006-03-13 22:35:54 thib_gc Exp $
+ * $Id: TestProxyInfo.java,v 1.14 2006-03-24 20:23:53 thib_gc Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.daemon;
 import java.util.*;
 
 import org.lockss.config.ConfigManager;
+import org.lockss.daemon.ProxyInfo.*;
 import org.lockss.plugin.*;
 import org.lockss.protocol.IdentityManager;
 import org.lockss.test.*;
@@ -74,10 +75,12 @@ public class TestProxyInfo extends LockssTestCase {
   }
 
   String ifsRE =
-    " if \\(shExpMatch\\(url, \\\"http://foo\\.bar/\\*\\\"\\)\\)\\n" +
-    " { return \\\"PROXY host\\.org:9090\\\"; }\\n\\n" +
-    " if \\(shExpMatch\\(url, \\\"http://x\\.com/\\*\\\"\\)\\)\\n" +
-    " { return \\\"PROXY host\\.org:9090\\\"; }\\n\\n";
+      " // .*\\n"
+    + " if \\(shExpMatch\\(url, \\\"http://foo\\.bar/\\*\\\"\\)\\)\\n"
+    + " { return \\\"PROXY " + HOST + ":9090\\\"; }\\n\\n"
+    + " // .*\\n"
+    + " if \\(shExpMatch\\(url, \\\"http://x\\.com/\\*\\\"\\)\\)\\n"
+    + " { return \\\"PROXY " + HOST + ":9090\\\"; }\\n\\n";
 
   List urlStems = ListUtil.list("http://foo.bar", "http://x.com");
 
@@ -130,81 +133,41 @@ public class TestProxyInfo extends LockssTestCase {
     }
   }
 
-  public void testGeneratePacEntry() throws Exception {
-    StringBuffer sb = new StringBuffer();
-    for (Iterator iter = urlStems.iterator(); iter.hasNext(); ) {
-      String urlStem = (String)iter.next();
-      pi.generatePacEntry(sb, urlStem);
-    }
-    assertMatchesRE("Fragments didn't match RE:\n" + sb.toString(),
-		    ifsRE, sb.toString());
-  }
-
   public void testGeneratePacFile() throws Exception {
-    String headRE =
-      "// PAC file generated .* by LOCKSS cache .*\\n\\n" +
-      "function FindProxyForURL\\(url, host\\) {\\n";
-    String tailRE = " return \\\"DIRECT\\\";\\n}\\n";
+    final String headRE =
+        "// PAC file\\n"
+      + "// Generated .* by LOCKSS cache .*\\n\\n"
+      + "function FindProxyForURL\\(url, host\\) {\\n";
+    final String tailRE =
+        " return \\\"DIRECT\\\";\\n"
+      + "}\\n";
     String pf = pi.generatePacFile(makeUrlStemMap());
     assertMatchesRE("PAC file didn't match RE.  File contents:\n" + pf,
 		    headRE + ifsRE + tailRE, pf);
   }
 
   public void testGenerateEncapsulatedPacFile() throws Exception {
-    String oldfile = "# foo\n" +
+    final String oldfile = "# foo\n" +
       "function FindProxyForURL(url, host) {\n" +
       "return some_logic(url, host);\n}\n";
-    String encapsulated = "# foo\n" +
+    final String encapsulated = "# foo\n" +
       "function FindProxyForURL_0(url, host) {\n" +
       "return some_logic(url, host);\n}\n";
 
-    String headRE =
-      "// PAC file generated .* by LOCKSS cache .*\\n\\n" +
-      "function FindProxyForURL\\(url, host\\) {\\n";
-    String tailRE = " return FindProxyForURL_0\\(url, host\\);\\n}\\n" +
-      "// Encapsulated PAC file follows \\(msg\\)\\n\\n";
-    String pat = headRE + ifsRE + tailRE +
-      StringUtil.escapeNonAlphaNum(encapsulated);
-    String pf = pi.encapsulatePacFile(makeUrlStemMap(), oldfile, " (msg)");
+    final String headRE =
+        "// PAC file\\n"
+      + "// Generated .* by LOCKSS cache .*\\n\\n"
+      + "function FindProxyForURL\\(url, host\\) {\\n";
+    final String tailRE =
+        " return FindProxyForURL_0\\(url, host\\);\\n"
+      + "}\\n\\n"
+      + "// Encapsulated PAC file follows \\(msg\\)\\n\\n";
+    final String pat =
+      headRE + ifsRE + tailRE + StringUtil.escapeNonAlphaNum(encapsulated);
+
+    String pf = pi.generateEncapsulatedPacFile(makeUrlStemMap(), oldfile, "(msg)");
     assertMatchesRE("PAC file didn't match RE.  File contents:\n" + pf,
 		    pat, pf);
-  }
-
-  String entry = "Title foo\n" +
-    "URL http://foo.bar\n" +
-    "Domain foo.bar\n\n";
-
-  String frag =
-    "Proxy host.org:9090\n" +
-    "\n" +
-    "Title MockAU\n" +
-    "URL http://foo.bar\n" +
-    "Domain foo.bar\n" +
-    "\n" +
-    "Title MockAU\n" +
-    "URL http://x.com\n" +
-    "Domain x.com\n" +
-    "\n" +
-    "Proxy\n";
-
-
-  public void testFindUnusedName() throws Exception {
-    String js1 = "function func0(foo, bar) { stmt; }\n";
-    String js2 = "function func1(foo, bar) { stmt; }\n";
-    String js3 = "function func00(foo, bar) { stmt; }\n";
-    assertEquals("newname0", pi.findUnusedName(js1, "newname"));
-    assertEquals("func1", pi.findUnusedName(js1, "func"));
-    assertEquals("func2", pi.findUnusedName(js1 + js2, "func"));
-    assertEquals("func0", pi.findUnusedName(js3, "func"));
-    assertEquals("func01", pi.findUnusedName(js3, "func0"));
-  }
-
-  public void testJSReplace() throws Exception {
-    String js1 =
-      "function func(foo, bar) { func(bar, foo); func0(1,2); func_3(1) }\n";
-    String exp =
-      "function func1(foo, bar) { func1(bar, foo); func0(1,2); func_3(1) }\n";
-    assertEquals(exp, pi.jsReplace(js1, "func", "func1"));
   }
 
   public void testRemoveCommentLines() {
@@ -213,33 +176,44 @@ public class TestProxyInfo extends LockssTestCase {
     assertEquals("foo\n", removeCommentLines("#bar\nfoo\n####\n"));
   }
 
-
-  public void testGenerateEZProxyEntry() throws Exception {
-    StringBuffer sb = new StringBuffer();
-    pi.generateEZProxyEntry(sb, "http://foo.bar", "foo");
-    assertEquals(entry, sb.toString());
-  }
-
   public void testGenerateEZProxyFragment() throws Exception {
+    final String frag =
+        "Proxy host.org:9090\n"
+      + "\n"
+      + "Title MockAU\n"
+      + "URL http://foo.bar\n"
+      + "Domain foo.bar\n"
+      + "\n"
+      + "Title MockAU\n"
+      + "URL http://x.com\n"
+      + "Domain x.com\n"
+      + "\n"
+      + "Proxy\n";
+
     String s = pi.generateEZProxyFragment(makeUrlStemMap());
     assertTrue(s.startsWith("#"));
     assertEquals(frag, removeCommentLines(s));
   }
 
-  public void testGenerateSquidEntry() throws Exception {
-    final String PROTOCOL = "anyproto://";
-    final String DOT = ".";
-    final String JOURNALX_DOT_COM = "journalx.com";
-
-    assertEquals(DOT + JOURNALX_DOT_COM,
-                 pi.generateSquidEntry(PROTOCOL + JOURNALX_DOT_COM));
+  String removeCommentLines(String str) {
+    return removeCommentLines(str, "#");
   }
 
-  String removeCommentLines(String s) {
-    List lines = StringUtil.breakAt(s, '\n');
+  String removeCommentLines(String str, String beginComment) {
+    List lines = StringUtil.breakAt(str, '\n');
     for (ListIterator iter = lines.listIterator(); iter.hasNext(); ) {
-      if (((String)iter.next()).startsWith("#")) {
+      if (((String)iter.next()).startsWith(beginComment)) {
 	iter.remove();
+      }
+    }
+    return StringUtil.separatedString(lines, "\n");
+  }
+
+  String removeEmptyLines(String str) {
+    List lines = StringUtil.breakAt(str, '\n');
+    for (ListIterator iter = lines.listIterator(); iter.hasNext(); ) {
+      if (((String)iter.next()).length() == 0) {
+        iter.remove();
       }
     }
     return StringUtil.separatedString(lines, "\n");
@@ -249,4 +223,167 @@ public class TestProxyInfo extends LockssTestCase {
     String[] testCaseList = { TestProxyInfo.class.getName()};
     junit.swingui.TestRunner.main(testCaseList);
   }
+
+  public void testFragmentBuilder() {
+    final String url1 = "http://bar.com";
+    final String url2 = "http://foo.com";
+
+    FragmentBuilder builder = new FragmentBuilder() {
+      protected void generateEntry(StringBuffer buffer, String urlStem, ArchivalUnit au) {}
+    };
+
+    assertEquals("foo.com", FragmentBuilder.removeProtocol(url2));
+    assertNegative(builder.compare(url1, null, url2, null));
+    assertPositive(builder.compare(url2, null, url1, null));
+    assertZero(builder.compare(url1, null, url1, null));
+    assertZero(builder.compare(url1, null, url1.replaceAll("http", "ftp"), null));
+    assertZero(builder.compare(url1, null, url1.toUpperCase(), null));
+
+    StringBuffer buffer;
+
+    buffer = new StringBuffer();
+    builder.generateBeginning(buffer);
+    assertEquals("", buffer.toString());
+
+    buffer = new StringBuffer();
+    builder.generateEnd(buffer);
+    assertEquals("", buffer.toString());
+
+    buffer = new StringBuffer();
+    builder.generateEmpty(buffer);
+    assertEquals("", buffer.toString());
+  }
+
+  public void testSquidFragmentBuilder() {
+    SquidFragmentBuilder builder = pi.new SquidFragmentBuilder() {
+      protected void generateEntry(StringBuffer buffer, String urlStem, ArchivalUnit au) {}
+    };
+
+    assertEquals(HOST.replaceAll("\\.", "-") + "-domains",
+                 builder.encodeAclName());
+
+    StringBuffer buffer;
+
+    buffer = new StringBuffer();
+    builder.commonHeader(buffer);
+    assertEveryLineMatchesRE(buffer.toString(), "^#");
+
+    buffer = new StringBuffer();
+    builder.commonUsage(buffer, "#");
+    assertEveryLineMatchesRE(buffer.toString(), "^#");
+
+    buffer = new StringBuffer();
+    builder.commonUsage(buffer, "\u263a");
+    assertEveryLineMatchesRE(removeCommentLines(buffer.toString()), "^\u263a");
+  }
+
+  public void testExternalSquidFragmentBuilder() {
+    ExternalSquidFragmentBuilder builder = pi.new ExternalSquidFragmentBuilder();
+
+    StringBuffer buffer;
+
+    buffer = new StringBuffer();
+    builder.generateEntry(
+        buffer,
+        "http://foo.com",
+        new MockArchivalUnit() {
+          public String getName() { return "Foo"; }
+        }
+    );
+    assertMatchesRE(
+          "# Foo\\n"
+        + "foo.com",
+        removeEmptyLines(buffer.toString())
+    );
+  }
+
+  public void testSquidConfigFragmentBuilder() {
+    SquidConfigFragmentBuilder builder = pi.new SquidConfigFragmentBuilder();
+
+    StringBuffer buffer;
+
+    buffer = new StringBuffer();
+    builder.generateEntry(
+        buffer,
+        "http://foo.com",
+        new MockArchivalUnit() {
+          public String getName() { return "Foo"; }
+        }
+    );
+    assertMatchesRE(
+          "# Foo\\n"
+        + "acl " + builder.encodeAclName() + " dstdomain foo.com",
+        removeEmptyLines(buffer.toString())
+    );
+  }
+
+  public void testEZProxyFragmentBuilder() {
+    EZProxyFragmentBuilder builder = pi.new EZProxyFragmentBuilder();
+
+    StringBuffer buffer;
+
+    buffer = new StringBuffer();
+    builder.generateEntry(
+        buffer,
+        "http://foo.com",
+        new MockArchivalUnit() {
+          public String getName() { return "Foo"; }
+        }
+    );
+    assertMatchesRE(
+          "Title Foo\\n"
+        + "URL http://foo.com\\n"
+        + "Domain foo.com",
+        removeEmptyLines(buffer.toString())
+    );
+  }
+
+  public void testPacFileFragmentBuilder() {
+    PacFileFragmentBuilder builder = pi.new PacFileFragmentBuilder();
+
+    StringBuffer buffer;
+
+    buffer = new StringBuffer();
+    builder.generateEntry(
+        buffer,
+        "http://foo.com",
+        new MockArchivalUnit() {
+          public String getName() { return "Foo"; }
+        }
+    );
+    assertMatchesRE(
+          " // Foo\\n"
+        + " if \\(shExpMatch\\(url, \\\"http://foo\\.com/\\*\\\"\\)\\)\\n"
+        + " { return \\\"PROXY " + HOST + ":9090\\\"; }",
+        removeEmptyLines(buffer.toString())
+    );
+  }
+
+  public void testEncapsulatedPacFileFragmentBuilder() throws Exception {
+    EncapsulatedPacFileFragmentBuilder builder =
+      pi.new EncapsulatedPacFileFragmentBuilder(null, null);
+
+    final String js1 = "function func0(foo, bar) { stmt; }\n";
+    final String js2 = "function func1(foo, bar) { stmt; }\n";
+    final String js3 = "function func00(foo, bar) { stmt; }\n";
+    assertEquals("newname0", builder.findUnusedName(js1, "newname"));
+    assertEquals("func1", builder.findUnusedName(js1, "func"));
+    assertEquals("func2", builder.findUnusedName(js1 + js2, "func"));
+    assertEquals("func0", builder.findUnusedName(js3, "func"));
+    assertEquals("func01", builder.findUnusedName(js3, "func0"));
+
+    final String js4 =
+      "function func(foo, bar) { func(bar, foo); func0(1,2); func_3(1) }\n";
+    final String exp =
+      "function func1(foo, bar) { func1(bar, foo); func0(1,2); func_3(1) }\n";
+    assertEquals(exp, builder.jsReplace(js4, "func", "func1"));
+  }
+
+  protected static void assertEveryLineMatchesRE(String lines, String regex) {
+    String[] line = lines.split("\\n");
+    for (int ix = 0 ; ix < line.length ; ++ix) {
+      assertMatchesRE(regex, line[ix]);
+    }
+  }
+
 }

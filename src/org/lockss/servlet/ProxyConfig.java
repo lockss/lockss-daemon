@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyConfig.java,v 1.20 2006-03-16 01:41:19 thib_gc Exp $
+ * $Id: ProxyConfig.java,v 1.21 2006-03-24 20:23:53 thib_gc Exp $
  */
 
 /*
@@ -52,7 +52,10 @@ import org.mortbay.http.HttpFields;
  */
 public class ProxyConfig extends LockssServlet {
 
+  private static final String MIME_TYPE_PAC = "application/x-ns-proxy-autoconfig";
+  private static final String TAG_MIME = "mime";
   private static final String TAG_SQUID = "squid";
+  private static final String TAG_SQUID_CONFIG = "squidconfig";
   private static final String TAG_EZPROXY = "ezproxy";
   private static final String TAG_COMBINED_PAC = "Combined PAC";
   private static final String TAG_PAC = "pac";
@@ -147,53 +150,49 @@ public class ProxyConfig extends LockssServlet {
 
     if (!pluginMgr.areAusStarted()) {
       resp.sendError(HttpServletResponse.SC_SERVICE_UNAVAILABLE);
-      return;
     }
-
-    if (format.equalsIgnoreCase(TAG_PAC)) {
-      if (urlStems.isEmpty()) {
-	wrtr = resp.getWriter();
-	wrtr.println("// No URLs cached on this LOCKSS cache");
-      } else {
-	generatePacFile();
-      }
-      return;
+    else if (format.equalsIgnoreCase(TAG_PAC)) {
+      generatePacFile();
     }
-
-    if (format.equalsIgnoreCase(TAG_COMBINED_PAC)) {
+    else if (format.equalsIgnoreCase(TAG_COMBINED_PAC)) {
       generateEncapsulatedPacFile();
-      return;
     }
-
-    if (format.equalsIgnoreCase(TAG_EZPROXY)) {
-      if (urlStems.isEmpty()) {
-	wrtr = resp.getWriter();
-	wrtr.println("# No URLs cached on this LOCKSS cache");
-      } else {
-	generateEZProxyFile();
-      }
-      return;
+    else if (format.equalsIgnoreCase(TAG_EZPROXY)) {
+      generateEZProxyFile();
     }
-
-    if (format.equalsIgnoreCase(TAG_SQUID)) {
-      generateSquidFile();
-      return;
+    else if (format.equalsIgnoreCase(TAG_SQUID)) {
+      generateExternalSquidFragment();
     }
+    else if (format.equalsIgnoreCase(TAG_SQUID_CONFIG)) {
+      generateSquidConfigFragment();
+    }
+    else {
+      displayForm("Unknown proxy config format: " + format);
+    }
+  }
 
-    displayForm("Unknown proxy config format: " + format);
+  void generateExternalSquidFragment()
+      throws IOException {
+    wrtr = resp.getWriter();
+    wrtr.print(pi.generateExternalSquidFragment(urlStems));
+  }
+
+  void generateSquidConfigFragment()
+      throws IOException {
+    wrtr = resp.getWriter();
+    wrtr.print(pi.generateSquidConfigFragment(urlStems));
   }
 
   void generatePacFile() throws IOException {
-    String pac = pi.generatePacFile(urlStems);
     wrtr = resp.getWriter();
 
     // Serve as PAC mime type if requested
-    String mime = getParameter("mime");
+    String mime = getParameter(TAG_MIME);
     if (TAG_PAC.equalsIgnoreCase(mime)) {
-      resp.setContentType("application/x-ns-proxy-autoconfig");
+      resp.setContentType(MIME_TYPE_PAC);
     }
 
-    wrtr.print(pac);
+    wrtr.print(pi.generatePacFile(urlStems));
   }
 
   void generateEncapsulatedPacFile() throws IOException {
@@ -213,11 +212,11 @@ public class ProxyConfig extends LockssServlet {
 	  displayForm("Please provide an existing PAC file in one of the three fields below");
 	  return;
 	}
-	pac = pi.encapsulatePacFile(urlStems, encap, null);
+	pac = pi.generateEncapsulatedPacFile(urlStems, encap, null);
       } else {
 	try {
 // 	  pac = pi.encapsulatePacFileFromURL(urlStems, url, auth);
-	  pac = pi.encapsulatePacFileFromURL(urlStems, url);
+	  pac = pi.generateEncapsulatedPacFileFromURL(urlStems, url);
 	} catch (UnknownHostException e) {
 	  displayForm("Error reading PAC file from URL: " + url +
 		      "<br>No such host: " + e.getMessage());
@@ -232,9 +231,9 @@ public class ProxyConfig extends LockssServlet {
       wrtr = resp.getWriter();
 
       // Serve as PAC mime type if requested
-      String mime = getParameter("mime");
+      String mime = getParameter(TAG_MIME);
       if (TAG_PAC.equalsIgnoreCase(mime)) {
-	resp.setContentType("application/x-ns-proxy-autoconfig");
+	resp.setContentType(MIME_TYPE_PAC);
       }
       wrtr.print(pac);
     } catch (Exception e) {
@@ -244,16 +243,10 @@ public class ProxyConfig extends LockssServlet {
     }
   }
 
-  void generateEZProxyFile() throws IOException {
-    String ez = pi.generateEZProxyFragment(urlStems);
+  void generateEZProxyFile()
+      throws IOException {
     wrtr = resp.getWriter();
-    wrtr.print(ez);
-  }
-
-  void generateSquidFile() throws IOException {
-    String sq = pi.generateSquidFile(urlStems);
-    wrtr = resp.getWriter();
-    wrtr.print(sq);
+    wrtr.print(pi.generateEZProxyFragment(urlStems));
   }
 
   void generateHelpPage(String error) throws IOException {
@@ -267,22 +260,27 @@ public class ProxyConfig extends LockssServlet {
 	     "information for browsers and other proxies, " +
 	     "to inform them which URLs " +
 	     "should be proxied through this cache.");
+
     if (error != null) {
       frm.add("<p><font color=red>");
       frm.add(error);
       frm.add("</font>");
     }
+
     frm.add("<p>Choose a supported format: ");
     frm.add("<ul>");
     addFmtElement(frm, "EZproxy config fragment", TAG_EZPROXY,
-	       "Generate text to insert into an EZproxy config file (#)");
+	"Generate text to insert into an EZproxy config file (#)");
     addFmtElement(frm, "Generate a dstdomain file for Squid", TAG_SQUID,
-               "Generate text that can be used to create a file for a Squid \"dstdomain\" rule (#)");
+        "Generate a text file that can be used for a Squid \"dstdomain\" rule (#)");
+    addFmtElement(frm, "Generate a configuration fragment for Squid", TAG_SQUID_CONFIG,
+        "Generate text to insert into a Squid configuration file (#)");
     addFmtElement(frm, "PAC file", TAG_PAC,
-	       "Automatic proxy configuration for browsers. " +
-	       "Place the contents of this file on a server for your users " +
-	       "to configure their browsers (#)" +
-	       srvAbsLink(myServletDescr(), ".", "action=pac&mime=pac"));
+	"Automatic proxy configuration for browsers. " +
+	"Place the contents of this file on a server for your users " +
+	"to configure their browsers (#)" +
+	srvAbsLink(myServletDescr(), ".", "action=pac&mime=pac"));
+
     Composite urlform = new Composite();
     urlform.add("PAC file that combines rules in an existing PAC file with the rules for this cache.<br>PAC file URL: ");
     String url = getParameter("encapsulated_url");
