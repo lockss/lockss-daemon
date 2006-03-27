@@ -1,0 +1,2714 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE lockss-config [
+  <!ELEMENT lockss-config (if|property)+>
+  <!ELEMENT property (property|list|value|if)*>
+  <!ELEMENT list (value)+>
+  <!ELEMENT value (#PCDATA)>
+  <!ELEMENT test EMPTY>
+  <!ELEMENT and (and|or|not|test)*>
+  <!ELEMENT or (and|or|not|test)*>
+  <!ELEMENT not (and|or|not|test)*>
+  <!ELEMENT if (and|or|not|then|else|property)*>
+  <!ELEMENT then (property)*>
+  <!ELEMENT else (property)*>
+  <!ATTLIST property name CDATA #REQUIRED>
+  <!ATTLIST property value CDATA #IMPLIED>
+  <!ATTLIST test hostname CDATA #IMPLIED>
+  <!ATTLIST test group CDATA #IMPLIED>
+  <!ATTLIST test daemonVersionMin CDATA #IMPLIED>
+  <!ATTLIST test daemonVersionMax CDATA #IMPLIED>
+  <!ATTLIST test daemonVersion CDATA #IMPLIED>
+  <!ATTLIST test platformVersionMin CDATA #IMPLIED>
+  <!ATTLIST test platformVersionMax CDATA #IMPLIED>
+  <!ATTLIST test platformVersion CDATA #IMPLIED>
+  <!ATTLIST if hostname CDATA #IMPLIED>
+  <!ATTLIST if group CDATA #IMPLIED>
+  <!ATTLIST if daemonVersionMin CDATA #IMPLIED>
+  <!ATTLIST if daemonVersionMax CDATA #IMPLIED>
+  <!ATTLIST if daemonVersion CDATA #IMPLIED>
+  <!ATTLIST if platformVersionMin CDATA #IMPLIED>
+  <!ATTLIST if platformVersionMax CDATA #IMPLIED>
+  <!ATTLIST if platformVersion CDATA #IMPLIED>
+]>
+
+<!-- LOCKSS &amp; LCAP tuning parameters -->
+<!-- Common config for all test frameworks -->
+<!-- This is included in the list of prop files by all the run_xxx_daemon -->
+<!-- scripts -->
+
+  <lockss-config>
+  <!-- Titles -->
+  <property name="org.lockss.title">
+    <property name="TheOncologist11">
+      <property name="title" value="The Oncologist Volume 11" />
+      <property name="journalTitle" value="The Oncologist" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="estSize" value="280MB" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://theoncologist.alphamedpress.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="11" />
+      </property>
+      <property name="attributes.publisher" value="AlphaMed Press" />
+    </property>
+    
+    <property name="StemCells24">
+      <property name="title" value="Stem Cells Volume 24" />
+      <property name="journalTitle" value="Stem Cells" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="estSize" value="600MB" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://stemcells.alphamedpress.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="24" />
+      </property>
+      <property name="attributes.publisher" value="AlphaMed Press" />
+    </property>
+    
+    <property name="AAPGrandRounds15">
+      <property name="title" value="AAP Grand Rounds Volume 15" />
+      <property name="journalTitle" value="AAP Grand Rounds" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://aapgrandrounds.aappublications.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="15" />
+      </property>
+      <property name="attributes.publisher" value="American Academy of Pediatrics" />
+    </property>
+    
+    <property name="AAPNews27">
+      <property name="title" value="AAP News Volume 27" />
+      <property name="journalTitle" value="AAP News" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://aapnews.aappublications.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="27" />
+      </property>
+      <property name="attributes.publisher" value="American Academy of Pediatrics" />
+    </property>
+    
+    <property name="NeoReviews7">
+      <property name="title" value="NeoReviews Volume 7" />
+      <property name="journalTitle" value="NeoReviews" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://neoreviews.aappublications.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="7" />
+      </property>
+      <property name="attributes.publisher" value="American Academy of Pediatrics" />
+    </property>
+    
+    <property name="Pediatrics117">
+      <property name="title" value="Pediatrics Volume 117" />
+      <property name="journalTitle" value="Pediatrics" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://pediatrics.aappublications.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="117" />
+      </property>
+      <property name="attributes.publisher" value="American Academy of Pediatrics" />
+    </property>
+    
+    <property name="PediatricsinReview27">
+      <property name="title" value="Pediatrics in Review Volume 27" />
+      <property name="journalTitle" value="Pediatrics in Review" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://pedsinreview.aappublications.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="27" />
+      </property>
+      <property name="attributes.publisher" value="American Academy of Pediatrics" />
+    </property>
+    
+    <property name="ClinicalChemistry524">
+      <property name="title" value="Clinical Chemistry Volume 524" />
+      <property name="journalTitle" value="Clinical Chemistry" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.clinchem.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="524" />
+      </property>
+      <property name="attributes.publisher" value="American Association for Clinical Chemistry" />
+    </property>
+    
+    <property name="Science311">
+      <property name="title" value="Science Volume 311" />
+      <property name="journalTitle" value="Science" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.sciencemag.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="311" />
+      </property>
+      <property name="attributes.publisher" value="American Association for the Advancement of Science" />
+    </property>
+    
+    <property name="TheJournalofImmunology176">
+      <property name="title" value="The Journal of Immunology Volume 176" />
+      <property name="journalTitle" value="The Journal of Immunology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.jimmunol.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="176" />
+      </property>
+      <property name="attributes.publisher" value="American Association of Immunologists" />
+    </property>
+    
+    <property name="TheJournaloftheAmericanDentalAssociation137">
+      <property name="title" value="The Journal of the American Dental Association Volume 137" />
+      <property name="journalTitle" value="The Journal of the American Dental Association" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://jada.ada.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="137" />
+      </property>
+      <property name="attributes.publisher" value="American Dental Association" />
+    </property>
+    
+    <property name="ArteriosclerosisThrombosisandVascularBiology26">
+      <property name="title" value="Arteriosclerosis, Thrombosis, and Vascular Biology Volume 26" />
+      <property name="journalTitle" value="Arteriosclerosis, Thrombosis, and Vascular Biology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://atvb.ahajournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="26" />
+      </property>
+      <property name="attributes.publisher" value="American Heart Association" />
+    </property>
+    
+    <property name="Circulation113">
+      <property name="title" value="Circulation Volume 113" />
+      <property name="journalTitle" value="Circulation" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://circ.ahajournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="113" />
+      </property>
+      <property name="attributes.publisher" value="American Heart Association" />
+    </property>
+    
+    <property name="CirculationResearch98">
+      <property name="title" value="Circulation Research Volume 98" />
+      <property name="journalTitle" value="Circulation Research" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://circres.ahajournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="98" />
+      </property>
+      <property name="attributes.publisher" value="American Heart Association" />
+    </property>
+    
+    <property name="Hypertension47">
+      <property name="title" value="Hypertension Volume 47" />
+      <property name="journalTitle" value="Hypertension" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://hyper.ahajournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="47" />
+      </property>
+      <property name="attributes.publisher" value="American Heart Association" />
+    </property>
+    
+    <property name="Stroke37">
+      <property name="title" value="Stroke Volume 37" />
+      <property name="journalTitle" value="Stroke" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://stroke.ahajournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="37" />
+      </property>
+      <property name="attributes.publisher" value="American Heart Association" />
+    </property>
+    
+    <property name="JournalofUltrasoundinMedicine25">
+      <property name="title" value="Journal of Ultrasound in Medicine Volume 25" />
+      <property name="journalTitle" value="Journal of Ultrasound in Medicine" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.jultrasoundmed.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="25" />
+      </property>
+      <property name="attributes.publisher" value="American Institute of Ultrasound in Medicine" />
+    </property>
+    
+    <property name="AdvancesinPhysiologyEducation30">
+      <property name="title" value="Advances in Physiology Education Volume 30" />
+      <property name="journalTitle" value="Advances in Physiology Education" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://advan.physiology.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="30" />
+      </property>
+      <property name="attributes.publisher" value="American Physiological Society" />
+    </property>
+    
+    <property name="AmericanJournalofPhysiologyCellPhysiology290">
+      <property name="title" value="American Journal of Physiology - Cell Physiology Volume 290" />
+      <property name="journalTitle" value="American Journal of Physiology - Cell Physiology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://ajpcell.physiology.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="290" />
+      </property>
+      <property name="attributes.publisher" value="American Physiological Society" />
+    </property>
+    
+    <property name="AmericanJournalofPhysiologyEndocrinologyAndMetabolism290">
+      <property name="title" value="American Journal of Physiology - Endocrinology And Metabolism Volume 290" />
+      <property name="journalTitle" value="American Journal of Physiology - Endocrinology And Metabolism" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://ajpendo.physiology.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="290" />
+      </property>
+      <property name="attributes.publisher" value="American Physiological Society" />
+    </property>
+    
+    <property name="AmericanJournalofPhysiologyGastrointestinalandLiverPhysiology290">
+      <property name="title" value="American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 290" />
+      <property name="journalTitle" value="American Journal of Physiology - Gastrointestinal and Liver Physiology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://ajpgi.physiology.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="290" />
+      </property>
+      <property name="attributes.publisher" value="American Physiological Society" />
+    </property>
+    
+    <property name="AmericanJournalofPhysiologyHeartandCirculatoryPhysiology290">
+      <property name="title" value="American Journal of Physiology - Heart and Circulatory Physiology Volume 290" />
+      <property name="journalTitle" value="American Journal of Physiology - Heart and Circulatory Physiology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://ajpheart.physiology.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="290" />
+      </property>
+      <property name="attributes.publisher" value="American Physiological Society" />
+    </property>
+    
+    <property name="AmericanJournalofPhysiologyLungCellularandMolecularPhysiology290">
+      <property name="title" value="American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 290" />
+      <property name="journalTitle" value="American Journal of Physiology - Lung Cellular and Molecular Physiology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://ajplung.physiology.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="290" />
+      </property>
+      <property name="attributes.publisher" value="American Physiological Society" />
+    </property>
+    
+    <property name="AmericanJournalofPhysiologyRegulatoryIntegrativeandComparativePhysiology290">
+      <property name="title" value="American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 290" />
+      <property name="journalTitle" value="American Journal of Physiology - Regulatory, Integrative and Comparative Physiology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://ajpregu.physiology.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="290" />
+      </property>
+      <property name="attributes.publisher" value="American Physiological Society" />
+    </property>
+    
+    <property name="AmericanJournalofPhysiologyRenalPhysiology290">
+      <property name="title" value="American Journal of Physiology - Renal Physiology Volume 290" />
+      <property name="journalTitle" value="American Journal of Physiology - Renal Physiology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://ajprenal.physiology.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="290" />
+      </property>
+      <property name="attributes.publisher" value="American Physiological Society" />
+    </property>
+    
+    <property name="JournalofAppliedPhysiology100">
+      <property name="title" value="Journal of Applied Physiology Volume 100" />
+      <property name="journalTitle" value="Journal of Applied Physiology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://jap.physiology.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="100" />
+      </property>
+      <property name="attributes.publisher" value="American Physiological Society" />
+    </property>
+    
+    <property name="JournalofNeurophysiology95">
+      <property name="title" value="Journal of Neurophysiology Volume 95" />
+      <property name="journalTitle" value="Journal of Neurophysiology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://jn.physiology.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="95" />
+      </property>
+      <property name="attributes.publisher" value="American Physiological Society" />
+    </property>
+    
+    <property name="PhysiologicalGenomics25">
+      <property name="title" value="Physiological Genomics Volume 25" />
+      <property name="journalTitle" value="Physiological Genomics" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://physiolgenomics.physiology.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="25" />
+      </property>
+      <property name="attributes.publisher" value="American Physiological Society" />
+    </property>
+    
+    <property name="PhysiologicalReviews86">
+      <property name="title" value="Physiological Reviews Volume 86" />
+      <property name="journalTitle" value="Physiological Reviews" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://physrev.physiology.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="86" />
+      </property>
+      <property name="attributes.publisher" value="American Physiological Society" />
+    </property>
+    
+    <property name="Physiology21">
+      <property name="title" value="Physiology Volume 21" />
+      <property name="journalTitle" value="Physiology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://physiologyonline.physiology.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="21" />
+      </property>
+      <property name="attributes.publisher" value="American Physiological Society" />
+    </property>
+    
+    <property name="AcademicPsychiatry30">
+      <property name="title" value="Academic Psychiatry Volume 30" />
+      <property name="journalTitle" value="Academic Psychiatry" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://ap.psychiatryonline.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="30" />
+      </property>
+      <property name="attributes.publisher" value="American Psychiatric Publishing Inc." />
+    </property>
+    
+    <property name="AmericanJournalofPsychiatry163">
+      <property name="title" value="American Journal of Psychiatry Volume 163" />
+      <property name="journalTitle" value="American Journal of Psychiatry" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://ajp.psychiatryonline.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="163" />
+      </property>
+      <property name="attributes.publisher" value="American Psychiatric Publishing Inc." />
+    </property>
+    
+    <property name="Focus3">
+      <property name="title" value="Focus Volume 3" />
+      <property name="journalTitle" value="Focus" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://focus.psychiatryonline.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="3" />
+      </property>
+      <property name="attributes.publisher" value="American Psychiatric Publishing Inc." />
+    </property>
+    
+    <property name="JournalofNeuropsychiatryandClinicalNeurosciences18">
+      <property name="title" value="Journal of Neuropsychiatry and Clinical Neurosciences Volume 18" />
+      <property name="journalTitle" value="Journal of Neuropsychiatry and Clinical Neurosciences" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://neuro.psychiatryonline.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="18" />
+      </property>
+      <property name="attributes.publisher" value="American Psychiatric Publishing Inc." />
+    </property>
+    
+    <property name="JournalofPsychotherapyPracticeandResearch10">
+      <property name="title" value="Journal of Psychotherapy Practice and Research Volume 10" />
+      <property name="journalTitle" value="Journal of Psychotherapy Practice and Research" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://jppr.psychiatryonline.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="10" />
+      </property>
+      <property name="attributes.publisher" value="American Psychiatric Publishing Inc." />
+    </property>
+    
+    <property name="PsychiatricNews41">
+      <property name="title" value="Psychiatric News Volume 41" />
+      <property name="journalTitle" value="Psychiatric News" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://pn.psychiatryonline.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="41" />
+      </property>
+      <property name="attributes.publisher" value="American Psychiatric Publishing Inc." />
+    </property>
+    
+    <property name="PsychiatricServices57">
+      <property name="title" value="Psychiatric Services Volume 57" />
+      <property name="journalTitle" value="Psychiatric Services" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://psychservices.psychiatryonline.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="57" />
+      </property>
+      <property name="attributes.publisher" value="American Psychiatric Publishing Inc." />
+    </property>
+    
+    <property name="Psychosomatics47">
+      <property name="title" value="Psychosomatics Volume 47" />
+      <property name="journalTitle" value="Psychosomatics" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://psy.psychiatryonline.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="47" />
+      </property>
+      <property name="attributes.publisher" value="American Psychiatric Publishing Inc." />
+    </property>
+    
+    <property name="AmericanJournalofPublicHealth96">
+      <property name="title" value="American Journal of Public Health Volume 96" />
+      <property name="journalTitle" value="American Journal of Public Health" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.ajph.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="96" />
+      </property>
+      <property name="attributes.publisher" value="American Public Health Association" />
+    </property>
+    
+    <property name="BiochemistryandMolecularBiologyEducation34">
+      <property name="title" value="Biochemistry and Molecular Biology Education Volume 34" />
+      <property name="journalTitle" value="Biochemistry and Molecular Biology Education" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.bambed.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="34" />
+      </property>
+      <property name="attributes.publisher" value="American Society for Biochemistry and Molecular Biology" />
+    </property>
+    
+    <property name="JournalofBiologicalChemistry281">
+      <property name="title" value="Journal of Biological Chemistry Volume 281" />
+      <property name="journalTitle" value="Journal of Biological Chemistry" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.jbc.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="281" />
+      </property>
+      <property name="attributes.publisher" value="American Society for Biochemistry and Molecular Biology" />
+    </property>
+    
+    <property name="TheJournalofLipidResearch47">
+      <property name="title" value="The Journal of Lipid Research Volume 47" />
+      <property name="journalTitle" value="The Journal of Lipid Research" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.jlr.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="47" />
+      </property>
+      <property name="attributes.publisher" value="American Society for Biochemistry and Molecular Biology" />
+    </property>
+    
+    <property name="MolecularCellularProteomics5">
+      <property name="title" value="Molecular &amp; Cellular Proteomics Volume 5" />
+      <property name="journalTitle" value="Molecular &amp; Cellular Proteomics" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.mcponline.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="5" />
+      </property>
+      <property name="attributes.publisher" value="American Society for Biochemistry and Molecular Biology" />
+    </property>
+    
+    <property name="MolecularBiologyoftheCell17">
+      <property name="title" value="Molecular Biology of the Cell Volume 17" />
+      <property name="journalTitle" value="Molecular Biology of the Cell" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.molbiolcell.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="17" />
+      </property>
+      <property name="attributes.publisher" value="American Society for Cell Biology" />
+    </property>
+    
+    <property name="JournalofClinicalInvestigation116">
+      <property name="title" value="Journal of Clinical Investigation Volume 116" />
+      <property name="journalTitle" value="Journal of Clinical Investigation" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.jci.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="116" />
+      </property>
+      <property name="attributes.publisher" value="American Society for Clinical Investigation" />
+    </property>
+    
+    <property name="AmericanJournalofClinicalNutrition83">
+      <property name="title" value="American Journal of Clinical Nutrition Volume 83" />
+      <property name="journalTitle" value="American Journal of Clinical Nutrition" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.ajcn.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="83" />
+      </property>
+      <property name="attributes.publisher" value="American Society for Clinical Nutrition" />
+    </property>
+    
+    <property name="AmericanJournalOfPathology168">
+      <property name="title" value="American Journal Of Pathology Volume 168" />
+      <property name="journalTitle" value="American Journal Of Pathology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://ajp.amjpathol.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="168" />
+      </property>
+      <property name="attributes.publisher" value="American Society for Investigative Pathology" />
+    </property>
+    
+    <property name="JournalofMolecularDiagnostics8">
+      <property name="title" value="Journal of Molecular Diagnostics Volume 8" />
+      <property name="journalTitle" value="Journal of Molecular Diagnostics" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://jmd.amjpathol.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="8" />
+      </property>
+      <property name="attributes.publisher" value="American Society for Investigative Pathology" />
+    </property>
+    
+    <property name="AntimicrobialAgentsandChemotherapy50">
+      <property name="title" value="Antimicrobial Agents and Chemotherapy Volume 50" />
+      <property name="journalTitle" value="Antimicrobial Agents and Chemotherapy" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://aac.asm.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="50" />
+      </property>
+      <property name="attributes.publisher" value="American Society for Microbiology" />
+    </property>
+    
+    <property name="AppliedandEnvironmentalMicrobiology72">
+      <property name="title" value="Applied and Environmental Microbiology Volume 72" />
+      <property name="journalTitle" value="Applied and Environmental Microbiology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://aem.asm.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="72" />
+      </property>
+      <property name="attributes.publisher" value="American Society for Microbiology" />
+    </property>
+    
+    <property name="ClinicalandVaccineImmunology13">
+      <property name="title" value="Clinical and Vaccine Immunology Volume 13" />
+      <property name="journalTitle" value="Clinical and Vaccine Immunology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://cvi.asm.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="13" />
+      </property>
+      <property name="attributes.publisher" value="American Society for Microbiology" />
+    </property>
+    
+    <property name="ClinicalMicrobiologyReviews19">
+      <property name="title" value="Clinical Microbiology Reviews Volume 19" />
+      <property name="journalTitle" value="Clinical Microbiology Reviews" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://cmr.asm.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="19" />
+      </property>
+      <property name="attributes.publisher" value="American Society for Microbiology" />
+    </property>
+    
+    <property name="EukaryoticCell5">
+      <property name="title" value="Eukaryotic Cell Volume 5" />
+      <property name="journalTitle" value="Eukaryotic Cell" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://ec.asm.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="5" />
+      </property>
+      <property name="attributes.publisher" value="American Society for Microbiology" />
+    </property>
+    
+    <property name="InfectionandImmunity74">
+      <property name="title" value="Infection and Immunity Volume 74" />
+      <property name="journalTitle" value="Infection and Immunity" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://iai.asm.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="74" />
+      </property>
+      <property name="attributes.publisher" value="American Society for Microbiology" />
+    </property>
+    
+    <property name="JournalofBacteriology188">
+      <property name="title" value="Journal of Bacteriology Volume 188" />
+      <property name="journalTitle" value="Journal of Bacteriology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://jb.asm.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="188" />
+      </property>
+      <property name="attributes.publisher" value="American Society for Microbiology" />
+    </property>
+    
+    <property name="JournalofClinicalMicrobiology44">
+      <property name="title" value="Journal of Clinical Microbiology Volume 44" />
+      <property name="journalTitle" value="Journal of Clinical Microbiology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://jcm.asm.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="44" />
+      </property>
+      <property name="attributes.publisher" value="American Society for Microbiology" />
+    </property>
+    
+    <property name="JournalofVirology80">
+      <property name="title" value="Journal of Virology Volume 80" />
+      <property name="journalTitle" value="Journal of Virology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://jvi.asm.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="80" />
+      </property>
+      <property name="attributes.publisher" value="American Society for Microbiology" />
+    </property>
+    
+    <property name="MicrobiologyandMolecularBiologyReviews70">
+      <property name="title" value="Microbiology and Molecular Biology Reviews Volume 70" />
+      <property name="journalTitle" value="Microbiology and Molecular Biology Reviews" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://mmbr.asm.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="70" />
+      </property>
+      <property name="attributes.publisher" value="American Society for Microbiology" />
+    </property>
+    
+    <property name="MolecularandCellularBiology26">
+      <property name="title" value="Molecular and Cellular Biology Volume 26" />
+      <property name="journalTitle" value="Molecular and Cellular Biology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://mcb.asm.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="26" />
+      </property>
+      <property name="attributes.publisher" value="American Society for Microbiology" />
+    </property>
+    
+    <property name="JournalofNutrition136">
+      <property name="title" value="Journal of Nutrition Volume 136" />
+      <property name="journalTitle" value="Journal of Nutrition" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nutrition.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="136" />
+      </property>
+      <property name="attributes.publisher" value="American Society for Nutritional Sciences" />
+    </property>
+    
+    <property name="DrugMetabolismandDisposition34">
+      <property name="title" value="Drug Metabolism and Disposition Volume 34" />
+      <property name="journalTitle" value="Drug Metabolism and Disposition" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://dmd.aspetjournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="34" />
+      </property>
+      <property name="attributes.publisher" value="American Society for Pharmacology and Experimental Therapeutics" />
+    </property>
+    
+    <property name="JournalofPharmacologyandExperimentalTherapeutics317">
+      <property name="title" value="Journal of Pharmacology and Experimental Therapeutics Volume 317" />
+      <property name="journalTitle" value="Journal of Pharmacology and Experimental Therapeutics" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://jpet.aspetjournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="317" />
+      </property>
+      <property name="attributes.publisher" value="American Society for Pharmacology and Experimental Therapeutics" />
+    </property>
+    
+    <property name="MolecularInterventions6">
+      <property name="title" value="Molecular Interventions Volume 6" />
+      <property name="journalTitle" value="Molecular Interventions" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://molinterv.aspetjournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="6" />
+      </property>
+      <property name="attributes.publisher" value="American Society for Pharmacology and Experimental Therapeutics" />
+    </property>
+    
+    <property name="MolecularPharmacology69">
+      <property name="title" value="Molecular Pharmacology Volume 69" />
+      <property name="journalTitle" value="Molecular Pharmacology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://molpharm.aspetjournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="69" />
+      </property>
+      <property name="attributes.publisher" value="American Society for Pharmacology and Experimental Therapeutics" />
+    </property>
+    
+    <property name="PharmacologicalReviews58">
+      <property name="title" value="Pharmacological Reviews Volume 58" />
+      <property name="journalTitle" value="Pharmacological Reviews" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://pharmrev.aspetjournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="58" />
+      </property>
+      <property name="attributes.publisher" value="American Society for Pharmacology and Experimental Therapeutics" />
+    </property>
+    
+    <property name="AmericanSocietyofPlantBiologistshttp://www.plantphysiol.org/">
+      <property name="title" value=" American Society of Plant Biologists Volume http://www.plantphysiol.org/" />
+      <property name="journalTitle" value=" American Society of Plant Biologists" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="Plant Physiology" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="http://www.plantphysiol.org/" />
+      </property>
+      <property name="attributes.publisher" value="American Society of Plant Biologists" />
+    </property>
+    
+    <property name="ASHEducationProgramBook2005">
+      <property name="title" value="ASH Education Program Book Volume 2005" />
+      <property name="journalTitle" value="ASH Education Program Book" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.asheducationbook.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="2005" />
+      </property>
+      <property name="attributes.publisher" value="American Society of Hematology" />
+    </property>
+    
+    <property name="AmericanJournalofNeuroradiology27">
+      <property name="title" value="American Journal of Neuroradiology Volume 27" />
+      <property name="journalTitle" value="American Journal of Neuroradiology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.ajnr.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="27" />
+      </property>
+      <property name="attributes.publisher" value="American Society of Neuroradiology" />
+    </property>
+    
+    <property name="TheAmericanJournalofTropicalMedicineandHygiene73">
+      <property name="title" value="The American Journal of Tropical Medicine and Hygiene Volume 73" />
+      <property name="journalTitle" value="The American Journal of Tropical Medicine and Hygiene" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.ajtmh.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="73" />
+      </property>
+      <property name="attributes.publisher" value="American Society of Tropical Medicine and Hygiene" />
+    </property>
+    
+    <property name="AmericanJournalofRespiratoryandCriticalCareMedicine">
+      <property name="title" value="American Journal of Respiratory and Critical Care Medicine Volume " />
+      <property name="journalTitle" value="American Journal of Respiratory and Critical Care Medicine" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="" />
+      </property>
+      <property name="attributes.publisher" value="American Thoracic Society" />
+    </property>
+    
+    <property name="AmericanJournalofRespiratoryCellandMolecularBiology173">
+      <property name="title" value="American Journal of Respiratory Cell and Molecular Biology Volume 173" />
+      <property name="journalTitle" value="American Journal of Respiratory Cell and Molecular Biology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://ajrccm.atsjournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="173" />
+      </property>
+      <property name="attributes.publisher" value="American Thoracic Society" />
+    </property>
+    
+    <property name="httpajrcmbatsjournalsorg">
+      <property name="title" value="http://ajrcmb.atsjournals.org/ Volume " />
+      <property name="journalTitle" value="http://ajrcmb.atsjournals.org/" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="34" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="" />
+      </property>
+      <property name="attributes.publisher" value="Association for Research in Vision and Ophthalmology" />
+    </property>
+    
+    <property name="BiophysicalJournal90">
+      <property name="title" value="Biophysical Journal Volume 90" />
+      <property name="journalTitle" value="Biophysical Journal" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.biophysj.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="90" />
+      </property>
+      <property name="attributes.publisher" value="Biophysical Society" />
+    </property>
+    
+    <property name="AmericanJournalofBotany93">
+      <property name="title" value="American Journal of Botany Volume 93" />
+      <property name="journalTitle" value="American Journal of Botany" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.amjbot.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="93" />
+      </property>
+      <property name="attributes.publisher" value="Botanical Society of America" />
+    </property>
+    
+    <property name="JournalofBoneJointSurgeryBritishVolume88-B">
+      <property name="title" value="Journal of Bone &amp; Joint Surgery, British Volume Volume 88-B" />
+      <property name="journalTitle" value="Journal of Bone &amp; Joint Surgery, British Volume" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.jbjs.org.uk/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="88-B" />
+      </property>
+      <property name="attributes.publisher" value="British Editorial Society of Bone and Joint Surgery" />
+    </property>
+    <property name="AnnalsoftheRheumaticDiseases65">
+      <property name="title" value="Annals of the Rheumatic Diseases Volume 65" />
+      <property name="journalTitle" value="Annals of the Rheumatic Diseases" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://ard.bmjjournals.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="65" />
+      </property>
+      <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
+    </property>
+    
+    <property name="ArchivesofDiseaseinChildhood91">
+      <property name="title" value="Archives of Disease in Childhood Volume 91" />
+      <property name="journalTitle" value="Archives of Disease in Childhood" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://adc.bmjjournals.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="91" />
+      </property>
+      <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
+    </property>
+    
+    <property name="ArchivesofDiseaseinChildhoodEducationandPractice91">
+      <property name="title" value="Archives of Disease in Childhood - Education and Practice Volume 91" />
+      <property name="journalTitle" value="Archives of Disease in Childhood - Education and Practice" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://ep.bmjjournals.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="91" />
+      </property>
+      <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
+    </property>
+    
+    <property name="ArchivesofDiseaseinChildhoodFetalandNeonatalEdition91">
+      <property name="title" value="Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 91" />
+      <property name="journalTitle" value="Archives of Disease in Childhood - Fetal and Neonatal Edition" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://fn.bmjjournals.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="91" />
+      </property>
+      <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
+    </property>
+    
+    <property name="BMJ332">
+      <property name="title" value="BMJ Volume 332" />
+      <property name="journalTitle" value="BMJ" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://bmj.bmjjournals.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="332" />
+      </property>
+      <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
+    </property>
+    
+    <property name="BMJCareerFocus332">
+      <property name="title" value="BMJ Career Focus Volume 332" />
+      <property name="journalTitle" value="BMJ Career Focus" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://careerfocus.bmjjournals.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="332" />
+      </property>
+      <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
+    </property>
+    
+    <property name="BritishJournalofOphthalmology90">
+      <property name="title" value="British Journal of Ophthalmology Volume 90" />
+      <property name="journalTitle" value="British Journal of Ophthalmology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://bjo.bmjjournals.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="90" />
+      </property>
+      <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
+    </property>
+    
+    <property name="BritishJournalofSportsMedicine40">
+      <property name="title" value="British Journal of Sports Medicine Volume 40" />
+      <property name="journalTitle" value="British Journal of Sports Medicine" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://bjsm.bmjjournals.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="40" />
+      </property>
+      <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
+    </property>
+    
+    <property name="EmergencyMedicineJournal23">
+      <property name="title" value="Emergency Medicine Journal Volume 23" />
+      <property name="journalTitle" value="Emergency Medicine Journal" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://emj.bmjjournals.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="23" />
+      </property>
+      <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
+    </property>
+    
+    <property name="EvidenceBasedMedicine11">
+      <property name="title" value="Evidence-Based Medicine Volume 11" />
+      <property name="journalTitle" value="Evidence-Based Medicine" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://ebm.bmjjournals.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="11" />
+      </property>
+      <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
+    </property>
+    
+    <property name="EvidenceBasedMentalHealth9">
+      <property name="title" value="Evidence-Based Mental Health Volume 9" />
+      <property name="journalTitle" value="Evidence-Based Mental Health" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://ebmh.bmjjournals.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="9" />
+      </property>
+      <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
+    </property>
+    
+    <property name="EvidenceBasedNursing9">
+      <property name="title" value="Evidence-Based Nursing Volume 9" />
+      <property name="journalTitle" value="Evidence-Based Nursing" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://ebn.bmjjournals.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="9" />
+      </property>
+      <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
+    </property>
+    
+    <property name="Gut55">
+      <property name="title" value="Gut Volume 55" />
+      <property name="journalTitle" value="Gut" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://gut.bmjjournals.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="55" />
+      </property>
+      <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
+    </property>
+    
+    <property name="Heart92">
+      <property name="title" value="Heart Volume 92" />
+      <property name="journalTitle" value="Heart" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://heart.bmjjournals.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="92" />
+      </property>
+      <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
+    </property>
+    
+    <property name="InjuryPrevention12">
+      <property name="title" value="Injury Prevention Volume 12" />
+      <property name="journalTitle" value="Injury Prevention" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://ip.bmjjournals.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="12" />
+      </property>
+      <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
+    </property>
+    
+    <property name="JournalofClinicalPathology59">
+      <property name="title" value="Journal of Clinical Pathology Volume 59" />
+      <property name="journalTitle" value="Journal of Clinical Pathology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://jcp.bmjjournals.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="59" />
+      </property>
+      <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
+    </property>
+    
+    <property name="JournalofEpidemiologyCommunityHealth60">
+      <property name="title" value="Journal of Epidemiology &amp; Community Health Volume 60" />
+      <property name="journalTitle" value="Journal of Epidemiology &amp; Community Health" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://jech.bmjjournals.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="60" />
+      </property>
+      <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
+    </property>
+    
+    <property name="JournalofMedicalEthics32">
+      <property name="title" value="Journal of Medical Ethics Volume 32" />
+      <property name="journalTitle" value="Journal of Medical Ethics" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://jme.bmjjournals.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="32" />
+      </property>
+      <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
+    </property>
+    
+    <property name="JournalofMedicalGenetics43">
+      <property name="title" value="Journal of Medical Genetics Volume 43" />
+      <property name="journalTitle" value="Journal of Medical Genetics" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://jmg.bmjjournals.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="43" />
+      </property>
+      <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
+    </property>
+    
+    <property name="JournalofNeurologyNeurosurgeryPsychiatry77">
+      <property name="title" value="Journal of Neurology, Neurosurgery &amp; Psychiatry Volume 77" />
+      <property name="journalTitle" value="Journal of Neurology, Neurosurgery &amp; Psychiatry" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://jnnp.bmjjournals.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="77" />
+      </property>
+      <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
+    </property>
+    
+    <property name="MedicalHumanities31">
+      <property name="title" value="Medical Humanities Volume 31" />
+      <property name="journalTitle" value="Medical Humanities" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://mh.bmjjournals.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="31" />
+      </property>
+      <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
+    </property>
+    
+    <property name="OccupationalandEnvironmentalMedicine63">
+      <property name="title" value="Occupational and Environmental Medicine Volume 63" />
+      <property name="journalTitle" value="Occupational and Environmental Medicine" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://oem.bmjjournals.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="63" />
+      </property>
+      <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
+    </property>
+    
+    <property name="PostgraduateMedicalJournal82">
+      <property name="title" value="Postgraduate Medical Journal Volume 82" />
+      <property name="journalTitle" value="Postgraduate Medical Journal" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://pmj.bmjjournals.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="82" />
+      </property>
+      <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
+    </property>
+    
+    <property name="QualityandSafetyinHealthCare15">
+      <property name="title" value="Quality and Safety in Health Care Volume 15" />
+      <property name="journalTitle" value="Quality and Safety in Health Care" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://qhc.bmjjournals.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="15" />
+      </property>
+      <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
+    </property>
+    
+    <property name="SexuallyTransmittedInfections82">
+      <property name="title" value="Sexually Transmitted Infections Volume 82" />
+      <property name="journalTitle" value="Sexually Transmitted Infections" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://sti.bmjjournals.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="82" />
+      </property>
+      <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
+    </property>
+    
+    <property name="Thorax61">
+      <property name="title" value="Thorax Volume 61" />
+      <property name="journalTitle" value="Thorax" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://thorax.bmjjournals.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="61" />
+      </property>
+      <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
+    </property>
+    
+    <property name="TobaccoControl15">
+      <property name="title" value="Tobacco Control Volume 15" />
+      <property name="journalTitle" value="Tobacco Control" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://tc.bmjjournals.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="15" />
+      </property>
+      <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
+    </property>
+    
+    <property name="CanadianMedicalAssociationJournal174">
+      <property name="title" value="Canadian Medical Association Journal Volume 174" />
+      <property name="journalTitle" value="Canadian Medical Association Journal" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.cmaj.ca/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="174" />
+      </property>
+      <property name="attributes.publisher" value="Canadian Medical Association" />
+    </property>
+    
+    <property name="GenesDevelopment20">
+      <property name="title" value="Genes &amp; Development Volume 20" />
+      <property name="journalTitle" value="Genes &amp; Development" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.genesdev.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="20" />
+      </property>
+      <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+    </property>
+    
+    <property name="GenomeResearch16">
+      <property name="title" value="Genome Research Volume 16" />
+      <property name="journalTitle" value="Genome Research" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.genome.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="16" />
+      </property>
+      <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+    </property>
+    
+    <property name="LearningMemory13">
+      <property name="title" value="Learning &amp; Memory Volume 13" />
+      <property name="journalTitle" value="Learning &amp; Memory" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.learnmem.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="13" />
+      </property>
+      <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+    </property>
+    
+    <property name="ProteinScience15">
+      <property name="title" value="Protein Science Volume 15" />
+      <property name="journalTitle" value="Protein Science" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.proteinscience.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="15" />
+      </property>
+      <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+    </property>
+    
+    <property name="RNA12">
+      <property name="title" value="RNA Volume 12" />
+      <property name="journalTitle" value="RNA" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.rnajournal.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="12" />
+      </property>
+      <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
+    </property>
+    
+    <property name="Development133">
+      <property name="title" value="Development Volume 133" />
+      <property name="journalTitle" value="Development" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://dev.biologists.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="133" />
+      </property>
+      <property name="attributes.publisher" value="Company of Biologists" />
+    </property>
+    
+    <property name="JournalofCellScience119">
+      <property name="title" value="Journal of Cell Science Volume 119" />
+      <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://jcs.biologists.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="119" />
+      </property>
+      <property name="attributes.publisher" value="Company of Biologists" />
+    </property>
+    
+    <property name="JournalofExperimentalBiology209">
+      <property name="title" value="Journal of Experimental Biology Volume 209" />
+      <property name="journalTitle" value="Journal of Experimental Biology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://jeb.biologists.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="209" />
+      </property>
+      <property name="attributes.publisher" value="Company of Biologists" />
+    </property>
+    
+    <property name="AmericanLiteraryScholarship2003">
+      <property name="title" value="American Literary Scholarship Volume 2003" />
+      <property name="journalTitle" value="American Literary Scholarship" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://als.dukejournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="2003" />
+      </property>
+      <property name="attributes.publisher" value="Duke University Press" />
+    </property>
+    
+    <property name="AmericanLiterature78">
+      <property name="title" value="American Literature Volume 78" />
+      <property name="journalTitle" value="American Literature" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://americanliterature.dukejournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="78" />
+      </property>
+      <property name="attributes.publisher" value="Duke University Press" />
+    </property>
+    
+    <property name="AmericanSpeech81">
+      <property name="title" value="American Speech Volume 81" />
+      <property name="journalTitle" value="American Speech" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://americanspeech.dukejournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="81" />
+      </property>
+      <property name="attributes.publisher" value="Duke University Press" />
+    </property>
+    
+    <property name="boundary233">
+      <property name="title" value="boundary 2 Volume 33" />
+      <property name="journalTitle" value="boundary 2" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://boundary2.dukejournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="33" />
+      </property>
+      <property name="attributes.publisher" value="Duke University Press" />
+    </property>
+    
+    <property name="CameraObscuraFeminismCultureandMediaStudies20">
+      <property name="title" value="Camera Obscura: Feminism, Culture, and Media Studies Volume 20" />
+      <property name="journalTitle" value="Camera Obscura: Feminism, Culture, and Media Studies" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://cameraobscura.dukejournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="20" />
+      </property>
+      <property name="attributes.publisher" value="Duke University Press" />
+    </property>
+    
+    <property name="CommonKnowledge12">
+      <property name="title" value="Common Knowledge Volume 12" />
+      <property name="journalTitle" value="Common Knowledge" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://commonknowledge.dukejournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="12" />
+      </property>
+      <property name="attributes.publisher" value="Duke University Press" />
+    </property>
+    
+    <property name="ComparativeStudiesofSouthAsiaAfricaandtheMiddleEast25">
+      <property name="title" value="Comparative Studies of South Asia, Africa and the Middle East Volume 25" />
+      <property name="journalTitle" value="Comparative Studies of South Asia, Africa and the Middle East" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://cssaame.dukejournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="25" />
+      </property>
+      <property name="attributes.publisher" value="Duke University Press" />
+    </property>
+    
+    <property name="differences16">
+      <property name="title" value="differences Volume 16" />
+      <property name="journalTitle" value="differences" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://differences.dukejournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="16" />
+      </property>
+      <property name="attributes.publisher" value="Duke University Press" />
+    </property>
+    
+    <property name="EighteenthCenturyLife30">
+      <property name="title" value="Eighteenth-Century Life Volume 30" />
+      <property name="journalTitle" value="Eighteenth-Century Life" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://ecl.dukejournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="30" />
+      </property>
+      <property name="attributes.publisher" value="Duke University Press" />
+    </property>
+    
+    <property name="Ethnohistory53">
+      <property name="title" value="Ethnohistory Volume 53" />
+      <property name="journalTitle" value="Ethnohistory" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://ethnohistory.dukejournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="53" />
+      </property>
+      <property name="attributes.publisher" value="Duke University Press" />
+    </property>
+    
+    <property name="FrenchHistoricalStudies29">
+      <property name="title" value="French Historical Studies Volume 29" />
+      <property name="journalTitle" value="French Historical Studies" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://fhs.dukejournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="29" />
+      </property>
+      <property name="attributes.publisher" value="Duke University Press" />
+    </property>
+    
+    <property name="GLQAJournalofLesbianandGayStudies12">
+      <property name="title" value="GLQ: A Journal of Lesbian and Gay Studies Volume 12" />
+      <property name="journalTitle" value="GLQ: A Journal of Lesbian and Gay Studies" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://glq.dukejournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="12" />
+      </property>
+      <property name="attributes.publisher" value="Duke University Press" />
+    </property>
+    
+    <property name="HispanicAmericanHistoricalReview86">
+      <property name="title" value="Hispanic American Historical Review Volume 86" />
+      <property name="journalTitle" value="Hispanic American Historical Review" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://hahr.dukejournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="86" />
+      </property>
+      <property name="attributes.publisher" value="Duke University Press" />
+    </property>
+    
+    <property name="HistoryofPoliticalEconomy38">
+      <property name="title" value="History of Political Economy Volume 38" />
+      <property name="journalTitle" value="History of Political Economy" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://hope.dukejournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="38" />
+      </property>
+      <property name="attributes.publisher" value="Duke University Press" />
+    </property>
+    
+    <property name="JournalofHealthPoliticsPolicyandLaw31">
+      <property name="title" value="Journal of Health Politics, Policy and Law Volume 31" />
+      <property name="journalTitle" value="Journal of Health Politics, Policy and Law" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://jhppl.dukejournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="31" />
+      </property>
+      <property name="attributes.publisher" value="Duke University Press" />
+    </property>
+    
+    <property name="JournalofMedievalandEarlyModernStudies36">
+      <property name="title" value="Journal of Medieval and Early Modern Studies Volume 36" />
+      <property name="journalTitle" value="Journal of Medieval and Early Modern Studies" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://jmems.dukejournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="36" />
+      </property>
+      <property name="attributes.publisher" value="Duke University Press" />
+    </property>
+    
+    <property name="LaborStudiesinWorkingClassHistoryoftheAmericas2">
+      <property name="title" value="Labor: Studies in Working-Class History of the Americas Volume 2" />
+      <property name="journalTitle" value="Labor: Studies in Working-Class History of the Americas" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://labor.dukejournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="2" />
+      </property>
+      <property name="attributes.publisher" value="Duke University Press" />
+    </property>
+    
+    <property name="MediterraneanQuarterly17">
+      <property name="title" value="Mediterranean Quarterly Volume 17" />
+      <property name="journalTitle" value="Mediterranean Quarterly" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://mq.dukejournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="17" />
+      </property>
+      <property name="attributes.publisher" value="Duke University Press" />
+    </property>
+    
+    <property name="ModernLanguageQuarterly67">
+      <property name="title" value="Modern Language Quarterly Volume 67" />
+      <property name="journalTitle" value="Modern Language Quarterly" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://mlq.dukejournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="67" />
+      </property>
+      <property name="attributes.publisher" value="Duke University Press" />
+    </property>
+    
+    <property name="NeuroOncology8">
+      <property name="title" value="Neuro-Oncology Volume 8" />
+      <property name="journalTitle" value="Neuro-Oncology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://neuro-oncology.dukejournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="8" />
+      </property>
+      <property name="attributes.publisher" value="Duke University Press" />
+    </property>
+    
+    <property name="PedagogyCriticalApproachestoTeachingLiteratureLanguageCompositionandCulture6">
+      <property name="title" value="Pedagogy: Critical Approaches to Teaching Literature, Language, Composition, and Culture Volume 6" />
+      <property name="journalTitle" value="Pedagogy: Critical Approaches to Teaching Literature, Language, Composition, and Culture" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://pedagogy.dukejournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="6" />
+      </property>
+      <property name="attributes.publisher" value="Duke University Press" />
+    </property>
+    
+    <property name="PoeticsToday26">
+      <property name="title" value="Poetics Today Volume 26" />
+      <property name="journalTitle" value="Poetics Today" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://poeticstoday.dukejournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="26" />
+      </property>
+      <property name="attributes.publisher" value="Duke University Press" />
+    </property>
+    
+    <property name="positionseastasiaculturescritique13">
+      <property name="title" value="positions: east asia cultures critique Volume 13" />
+      <property name="journalTitle" value="positions: east asia cultures critique" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://positions.dukejournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="13" />
+      </property>
+      <property name="attributes.publisher" value="Duke University Press" />
+    </property>
+    
+    <property name="PublicCulture18">
+      <property name="title" value="Public Culture Volume 18" />
+      <property name="journalTitle" value="Public Culture" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://publicculture.dukejournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="18" />
+      </property>
+      <property name="attributes.publisher" value="Duke University Press" />
+    </property>
+    
+    <property name="RadicalHistoryReview2006">
+      <property name="title" value="Radical History Review Volume 2006" />
+      <property name="journalTitle" value="Radical History Review" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://rhr.dukejournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="2006" />
+      </property>
+      <property name="attributes.publisher" value="Duke University Press" />
+    </property>
+    
+    <property name="SocialScienceHistory29">
+      <property name="title" value="Social Science History Volume 29" />
+      <property name="journalTitle" value="Social Science History" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://ssh.dukejournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="29" />
+      </property>
+      <property name="attributes.publisher" value="Duke University Press" />
+    </property>
+    
+    <property name="SocialText23">
+      <property name="title" value="Social Text Volume 23" />
+      <property name="journalTitle" value="Social Text" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://socialtext.dukejournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="23" />
+      </property>
+      <property name="attributes.publisher" value="Duke University Press" />
+    </property>
+    
+    <property name="SouthAtlanticQuarterly105">
+      <property name="title" value="South Atlantic Quarterly Volume 105" />
+      <property name="journalTitle" value="South Atlantic Quarterly" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://saq.dukejournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="105" />
+      </property>
+      <property name="attributes.publisher" value="Duke University Press" />
+    </property>
+    
+    <property name="Theater36">
+      <property name="title" value="Theater Volume 36" />
+      <property name="journalTitle" value="Theater" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://theater.dukejournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="36" />
+      </property>
+      <property name="attributes.publisher" value="Duke University Press" />
+    </property>
+    
+    <property name="EndocrineReviews27">
+      <property name="title" value="Endocrine Reviews Volume 27" />
+      <property name="journalTitle" value="Endocrine Reviews" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://edrv.endojournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="27" />
+      </property>
+      <property name="attributes.publisher" value="Endocrine Society" />
+    </property>
+    
+    <property name="Endocrinology147">
+      <property name="title" value="Endocrinology Volume 147" />
+      <property name="journalTitle" value="Endocrinology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://endo.endojournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="147" />
+      </property>
+      <property name="attributes.publisher" value="Endocrine Society" />
+    </property>
+    
+    <property name="JournalofClinicalEndocrinologyMetabolism91">
+      <property name="title" value="Journal of Clinical Endocrinology &amp; Metabolism Volume 91" />
+      <property name="journalTitle" value="Journal of Clinical Endocrinology &amp; Metabolism" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://jcem.endojournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="91" />
+      </property>
+      <property name="attributes.publisher" value="Endocrine Society" />
+    </property>
+    
+    <property name="MolecularEndocrinology20">
+      <property name="title" value="Molecular Endocrinology Volume 20" />
+      <property name="journalTitle" value="Molecular Endocrinology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://mend.endojournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="20" />
+      </property>
+      <property name="attributes.publisher" value="Endocrine Society" />
+    </property>
+    
+    <property name="RecentProgressinHormoneResearch59">
+      <property name="title" value="Recent Progress in Hormone Research Volume 59" />
+      <property name="journalTitle" value="Recent Progress in Hormone Research" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://rphr.endojournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="59" />
+      </property>
+      <property name="attributes.publisher" value="Endocrine Society" />
+    </property>
+    
+    <property name="TheFASEBJournal20">
+      <property name="title" value="The FASEB Journal Volume 20" />
+      <property name="journalTitle" value="The FASEB Journal" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.fasebj.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="20" />
+      </property>
+      <property name="attributes.publisher" value="Federation of American Societies for Experimental Biology" />
+    </property>
+    
+    <property name="Genetics172">
+      <property name="title" value="Genetics Volume 172" />
+      <property name="journalTitle" value="Genetics" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.genetics.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="172" />
+      </property>
+      <property name="attributes.publisher" value="Genetics Society of America" />
+    </property>
+    
+    <property name="HealthAffairs25">
+      <property name="title" value="Health Affairs Volume 25" />
+      <property name="journalTitle" value="Health Affairs" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.healthaffairs.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="25" />
+      </property>
+      <property name="attributes.publisher" value="Project HOPE - The People-to-People Health Foundation, Inc." />
+    </property>
+    
+    <property name="JournalofHistochemistryandCytochemistry54">
+      <property name="title" value="Journal of Histochemistry and Cytochemistry Volume 54" />
+      <property name="journalTitle" value="Journal of Histochemistry and Cytochemistry" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.jhc.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="54" />
+      </property>
+      <property name="attributes.publisher" value="Histochemical Society" />
+    </property>
+    
+    <property name="TheBiologicalBulletin210">
+      <property name="title" value="The Biological Bulletin Volume 210" />
+      <property name="journalTitle" value="The Biological Bulletin" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.biolbull.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="210" />
+      </property>
+      <property name="attributes.publisher" value="Marine Biological Laboratory" />
+    </property>
+    
+    <property name="JournalWatchCardiology2006">
+      <property name="title" value="Journal Watch Cardiology Volume 2006" />
+      <property name="journalTitle" value="Journal Watch Cardiology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://cardiology.jwatch.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="2006" />
+      </property>
+      <property name="attributes.publisher" value="Massachusetts Medical Society" />
+    </property>
+    
+    <property name="JournalWatchDermatology2006">
+      <property name="title" value="Journal Watch Dermatology Volume 2006" />
+      <property name="journalTitle" value="Journal Watch Dermatology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://dermatology.jwatch.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="2006" />
+      </property>
+      <property name="attributes.publisher" value="Massachusetts Medical Society" />
+    </property>
+    
+    <property name="JournalWatchEmergencyMedicine2006">
+      <property name="title" value="Journal Watch Emergency Medicine Volume 2006" />
+      <property name="journalTitle" value="Journal Watch Emergency Medicine" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://emergency-medicine.jwatch.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="2006" />
+      </property>
+      <property name="attributes.publisher" value="Massachusetts Medical Society" />
+    </property>
+    
+    <property name="JournalWatchGastroenterology2006">
+      <property name="title" value="Journal Watch Gastroenterology Volume 2006" />
+      <property name="journalTitle" value="Journal Watch Gastroenterology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://gastroenterology.jwatch.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="2006" />
+      </property>
+      <property name="attributes.publisher" value="Massachusetts Medical Society" />
+    </property>
+    
+    <property name="JournalWatchGeneral2006">
+      <property name="title" value="Journal Watch (General) Volume 2006" />
+      <property name="journalTitle" value="Journal Watch (General)" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://general-medicine.jwatch.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="2006" />
+      </property>
+      <property name="attributes.publisher" value="Massachusetts Medical Society" />
+    </property>
+    
+    <property name="JournalWatchInfectiousDiseases2006">
+      <property name="title" value="Journal Watch Infectious Diseases Volume 2006" />
+      <property name="journalTitle" value="Journal Watch Infectious Diseases" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://infectious-diseases.jwatch.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="2006" />
+      </property>
+      <property name="attributes.publisher" value="Massachusetts Medical Society" />
+    </property>
+    
+    <property name="JournalWatchNeurology2006">
+      <property name="title" value="Journal Watch Neurology Volume 2006" />
+      <property name="journalTitle" value="Journal Watch Neurology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://neurology.jwatch.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="2006" />
+      </property>
+      <property name="attributes.publisher" value="Massachusetts Medical Society" />
+    </property>
+    
+    <property name="JournalWatchPediatricsandAdolescentMedicine2006">
+      <property name="title" value="Journal Watch Pediatrics and Adolescent Medicine Volume 2006" />
+      <property name="journalTitle" value="Journal Watch Pediatrics and Adolescent Medicine" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://pediatrics.jwatch.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="2006" />
+      </property>
+      <property name="attributes.publisher" value="Massachusetts Medical Society" />
+    </property>
+    
+    <property name="JournalWatchPsychiatry2006">
+      <property name="title" value="Journal Watch Psychiatry Volume 2006" />
+      <property name="journalTitle" value="Journal Watch Psychiatry" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://psychiatry.jwatch.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="2006" />
+      </property>
+      <property name="attributes.publisher" value="Massachusetts Medical Society" />
+    </property>
+    
+    <property name="JournalWatchWomensHealth2006">
+      <property name="title" value="Journal Watch Women's Health Volume 2006" />
+      <property name="journalTitle" value="Journal Watch Women's Health" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://womens-health.jwatch.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="2006" />
+      </property>
+      <property name="attributes.publisher" value="Massachusetts Medical Society" />
+    </property>
+    
+    <property name="NewEnglandJournalofMedicine354">
+      <property name="title" value="New England Journal of Medicine Volume 354" />
+      <property name="journalTitle" value="New England Journal of Medicine" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://content.nejm.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="354" />
+      </property>
+      <property name="attributes.publisher" value="Massachusetts Medical Society" />
+    </property>
+    
+    <property name="PNAS103">
+      <property name="title" value="PNAS Volume 103" />
+      <property name="journalTitle" value="PNAS" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.pnas.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="103" />
+      </property>
+      <property name="attributes.publisher" value="National Academy of Sciences" />
+    </property>
+    
+    <property name="AnnalsoftheNewYorkAcademyofSciences1066">
+      <property name="title" value="Annals of the New York Academy of Sciences Volume 1066" />
+      <property name="journalTitle" value="Annals of the New York Academy of Sciences" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.annalsnyas.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="1066" />
+      </property>
+      <property name="attributes.publisher" value="New York Academy of Sciences" />
+    </property>
+    
+    <property name="RadioGraphics26">
+      <property name="title" value="RadioGraphics Volume 26" />
+      <property name="journalTitle" value="RadioGraphics" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://radiographics.rsnajnls.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="26" />
+      </property>
+      <property name="attributes.publisher" value="Radiological Society of North America" />
+    </property>
+    
+    <property name="Radiology238">
+      <property name="title" value="Radiology Volume 238" />
+      <property name="journalTitle" value="Radiology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://radiology.rsnajnls.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="238" />
+      </property>
+      <property name="attributes.publisher" value="Radiological Society of North America" />
+    </property>
+    
+    <property name="TheJournalofCellBiology172">
+      <property name="title" value="The Journal of Cell Biology Volume 172" />
+      <property name="journalTitle" value="The Journal of Cell Biology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.jcb.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="172" />
+      </property>
+      <property name="attributes.publisher" value="Rockefeller University Press" />
+    </property>
+    
+    <property name="JournalofExperimentalMedicine203">
+      <property name="title" value="Journal of Experimental Medicine Volume 203" />
+      <property name="journalTitle" value="Journal of Experimental Medicine" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.jem.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="203" />
+      </property>
+      <property name="attributes.publisher" value="Rockefeller University Press" />
+    </property>
+    
+    <property name="TheJournalofGeneralPhysiology127">
+      <property name="title" value="The Journal of General Physiology Volume 127" />
+      <property name="journalTitle" value="The Journal of General Physiology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.jgp.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="127" />
+      </property>
+      <property name="attributes.publisher" value="Rockefeller University Press" />
+    </property>
+    
+    <property name="AdvancesinPsychiatricTreatment12">
+      <property name="title" value="Advances in Psychiatric Treatment Volume 12" />
+      <property name="journalTitle" value="Advances in Psychiatric Treatment" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://apt.rcpsych.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="12" />
+      </property>
+      <property name="attributes.publisher" value="Royal College of Psychiatrists" />
+    </property>
+    
+    <property name="TheBritishJournalofPsychiatry188">
+      <property name="title" value="The British Journal of Psychiatry Volume 188" />
+      <property name="journalTitle" value="The British Journal of Psychiatry" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://bjp.rcpsych.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="188" />
+      </property>
+      <property name="attributes.publisher" value="Royal College of Psychiatrists" />
+    </property>
+    
+    <property name="PsychiatricBulletin30">
+      <property name="title" value="Psychiatric Bulletin Volume 30" />
+      <property name="journalTitle" value="Psychiatric Bulletin" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://pb.rcpsych.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="30" />
+      </property>
+      <property name="attributes.publisher" value="Royal College of Psychiatrists" />
+    </property>
+    
+    <property name="InternationalJournalofSystematicandEvolutionaryMicrobiology56">
+      <property name="title" value="International Journal of Systematic and Evolutionary Microbiology Volume 56" />
+      <property name="journalTitle" value="International Journal of Systematic and Evolutionary Microbiology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://ijs.sgmjournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="56" />
+      </property>
+      <property name="attributes.publisher" value="Society for General Microbiology" />
+    </property>
+    
+    <property name="JournalofGeneralVirology87">
+      <property name="title" value="Journal of General Virology Volume 87" />
+      <property name="journalTitle" value="Journal of General Virology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://vir.sgmjournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="87" />
+      </property>
+      <property name="attributes.publisher" value="Society for General Microbiology" />
+    </property>
+    
+    <property name="JournalofMedicalMicrobiology55">
+      <property name="title" value="Journal of Medical Microbiology Volume 55" />
+      <property name="journalTitle" value="Journal of Medical Microbiology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://jmm.sgmjournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="55" />
+      </property>
+      <property name="attributes.publisher" value="Society for General Microbiology" />
+    </property>
+    
+    <property name="Microbiology152">
+      <property name="title" value="Microbiology Volume 152" />
+      <property name="journalTitle" value="Microbiology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://mic.sgmjournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="152" />
+      </property>
+      <property name="attributes.publisher" value="Society for General Microbiology" />
+    </property>
+    
+    <property name="JournalofLeukocyteBiology79">
+      <property name="title" value="Journal of Leukocyte Biology Volume 79" />
+      <property name="journalTitle" value="Journal of Leukocyte Biology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.jleukbio.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="79" />
+      </property>
+      <property name="attributes.publisher" value="Society for Leukocyte Biology" />
+    </property>
+    
+    <property name="JournalofNeuroscience26">
+      <property name="title" value="Journal of Neuroscience Volume 26" />
+      <property name="journalTitle" value="Journal of Neuroscience" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.jneurosci.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="26" />
+      </property>
+      <property name="attributes.publisher" value="Society for Neuroscience" />
+    </property>
+    
+    <property name="BiologyofReproduction74">
+      <property name="title" value="Biology of Reproduction Volume 74" />
+      <property name="journalTitle" value="Biology of Reproduction" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.biolreprod.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="74" />
+      </property>
+      <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+    </property>
+
+  </property>
+</lockss-config>
