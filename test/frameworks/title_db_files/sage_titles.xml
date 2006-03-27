@@ -223,6 +223,7 @@
 	<property name="title" value="The American Journal of Sports Medicine Volume 34" />
 	<property name="journalTitle" value="The American Journal of Sports Medicine" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="450MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://ajs.sagepub.com/" />
@@ -268,6 +269,7 @@
 	<property name="title" value="Journal of Psychoeducational Assessment Volume 23" />
 	<property name="journalTitle" value="Journal of Psychoeducational Assessment" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="14MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://jpa.sagepub.com/" />
@@ -313,6 +315,7 @@
 	<property name="title" value="The ANNALS of the American Academy of Political and Social Science Volume 604" />
 	<property name="journalTitle" value="The ANNALS of the American Academy of Political and Social Science" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="10MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://ann.sagepub.com/" />
@@ -343,6 +346,7 @@
 	<property name="title" value="Applied Psychological Measurement Volume 30" />
 	<property name="journalTitle" value="Applied Psychological Measurement" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="10MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://apm.sagepub.com/" />
@@ -373,6 +377,7 @@
 	<property name="title" value="Armed Forces &amp; Society Volume 32" />
 	<property name="journalTitle" value="Armed Forces &amp; Society" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="10MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://afs.sagepub.com/" />
@@ -478,6 +483,7 @@
 	<property name="title" value="Behavior Modification Volume 30" />
 	<property name="journalTitle" value="Behavior Modification" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="10MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://bmo.sagepub.com/" />
@@ -523,6 +529,7 @@
 	<property name="title" value="Body &amp; Society Volume 12" />
 	<property name="journalTitle" value="Body &amp; Society" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="6MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://bod.sagepub.com/" />
@@ -568,6 +575,7 @@
 	<property name="title" value="Bulletin of Science, Technology &amp; Society Volume 26" />
 	<property name="journalTitle" value="Bulletin of Science, Technology &amp; Society" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="11MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://bst.sagepub.com/" />
@@ -1138,6 +1146,7 @@
 	<property name="title" value="The Diabetes Educator Volume 32" />
 	<property name="journalTitle" value="The Diabetes Educator" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="60MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://tde.sagepub.com/" />
@@ -1318,6 +1327,7 @@
 	<property name="title" value="Educational Management Administration &amp; Leadership Volume 34" />
 	<property name="journalTitle" value="Educational Management Administration &amp; Leadership" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="12MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://ema.sagepub.com/" />
@@ -1333,6 +1343,7 @@
 	<property name="title" value="Educational Policy Volume 20" />
 	<property name="journalTitle" value="Educational Policy" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="8MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://epx.sagepub.com/" />
@@ -1663,6 +1674,7 @@
 	<property name="title" value="Experimental Mechanics Volume 45" />
 	<property name="journalTitle" value="Experimental Mechanics" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="40MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://exm.sagepub.com/" />
@@ -1678,6 +1690,7 @@
 	<property name="title" value="The Expository Times Volume 117" />
 	<property name="journalTitle" value="The Expository Times" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="30MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://ext.sagepub.com/" />
@@ -1723,6 +1736,7 @@
 	<property name="title" value="Feminism &amp; Psychology Volume 16" />
 	<property name="journalTitle" value="Feminism &amp; Psychology" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="8MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://fap.sagepub.com/" />
@@ -1738,6 +1752,7 @@
 	<property name="title" value="Feminist Criminology Volume 1" />
 	<property name="journalTitle" value="Feminist Criminology" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="8MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://fcx.sagepub.com/" />
@@ -1798,6 +1813,7 @@
 	<property name="title" value="First Language Volume 26" />
 	<property name="journalTitle" value="First Language" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="8MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://fla.sagepub.com/" />
@@ -1828,6 +1844,7 @@
 	<property name="title" value="French Cultural Studies Volume 17" />
 	<property name="journalTitle" value="French Cultural Studies" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="6MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://frc.sagepub.com/" />
@@ -1843,6 +1860,7 @@
 	<property name="title" value="Games and Culture Volume 1" />
 	<property name="journalTitle" value="Games and Culture" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="12MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://gac.sagepub.com/" />
@@ -1978,6 +1996,7 @@
 	<property name="title" value="Group Processes &amp; Intergroup Relations Volume 9" />
 	<property name="journalTitle" value="Group Processes &amp; Intergroup Relations" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="8MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://gpi.sagepub.com/" />
@@ -2008,6 +2027,7 @@
 	<property name="title" value="Health Education &amp; Behavior Volume 33" />
 	<property name="journalTitle" value="Health Education &amp; Behavior" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="15MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://heb.sagepub.com/" />
@@ -2113,6 +2133,7 @@
 	<property name="title" value="History of the Human Sciences Volume 19" />
 	<property name="journalTitle" value="History of the Human Sciences" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="8MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://hhs.sagepub.com/" />
@@ -2158,6 +2179,7 @@
 	<property name="title" value="Human Relations Volume 59" />
 	<property name="journalTitle" value="Human Relations" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="8MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://hum.sagepub.com/" />
@@ -2218,6 +2240,7 @@
 	<property name="title" value="Indian Economic &amp; Social History Review Volume 42" />
 	<property name="journalTitle" value="Indian Economic &amp; Social History Review" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="12MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://ier.sagepub.com/" />
@@ -2233,6 +2256,7 @@
 	<property name="title" value="Indian Journal of Gender Studies Volume 12" />
 	<property name="journalTitle" value="Indian Journal of Gender Studies" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="25MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://ijg.sagepub.com/" />
@@ -2293,6 +2317,7 @@
 	<property name="title" value="International Communication Gazette Volume 68" />
 	<property name="journalTitle" value="International Communication Gazette" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="8MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://gaz.sagepub.com/" />
@@ -2323,6 +2348,7 @@
 	<property name="title" value="International Journal of Behavioral Development Volume 30" />
 	<property name="journalTitle" value="International Journal of Behavioral Development" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="8MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://jbd.sagepub.com/" />
@@ -2338,6 +2364,7 @@
 	<property name="title" value="International Journal of Comparative Sociology Volume 47" />
 	<property name="journalTitle" value="International Journal of Comparative Sociology" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="8MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://cos.sagepub.com/" />
@@ -2368,6 +2395,7 @@
 	<property name="title" value="International Journal of Cultural Studies Volume 9" />
 	<property name="journalTitle" value="International Journal of Cultural Studies" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="8MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://ics.sagepub.com/" />
@@ -2443,6 +2471,7 @@
 	<property name="title" value="International Journal of Offender Therapy and Comparative Criminology Volume 50" />
 	<property name="journalTitle" value="International Journal of Offender Therapy and Comparative Criminology" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="12MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://ijo.sagepub.com/" />
@@ -2458,6 +2487,7 @@
 	<property name="title" value="The International Journal of Robotics Research Volume 25" />
 	<property name="journalTitle" value="The International Journal of Robotics Research" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="13MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://ijr.sagepub.com/" />
@@ -2488,6 +2518,7 @@
 	<property name="title" value="International Journal of Social Psychiatry Volume 52" />
 	<property name="journalTitle" value="International Journal of Social Psychiatry" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="8MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://isp.sagepub.com/" />
@@ -2518,6 +2549,7 @@
 	<property name="title" value="International Regional Science Review Volume 29" />
 	<property name="journalTitle" value="International Regional Science Review" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="8MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://irx.sagepub.com/" />
@@ -2578,6 +2610,7 @@
 	<property name="title" value="International Review of Administrative Sciences Volume 71" />
 	<property name="journalTitle" value="International Review of Administrative Sciences" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="24MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://ras.sagepub.com/" />
@@ -2638,6 +2671,7 @@
 	<property name="title" value="International Studies Volume 42" />
 	<property name="journalTitle" value="International Studies" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="12MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://isq.sagepub.com/" />
@@ -2668,6 +2702,7 @@
 	<property name="title" value="Journal for the Study of the New Testament Volume 28" />
 	<property name="journalTitle" value="Journal for the Study of the New Testament" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="10MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://jnt.sagepub.com/" />
@@ -2683,6 +2718,7 @@
 	<property name="title" value="Journal for the Study of the Old Testament Volume 30" />
 	<property name="journalTitle" value="Journal for the Study of the Old Testament" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="11MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://jot.sagepub.com/" />
@@ -2713,6 +2749,7 @@
 	<property name="title" value="Journal of Adolescent Research Volume 21" />
 	<property name="journalTitle" value="Journal of Adolescent Research" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="8MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://jar.sagepub.com/" />
@@ -2788,6 +2825,7 @@
 	<property name="title" value="Journal of Asian and African Studies Volume 41" />
 	<property name="journalTitle" value="Journal of Asian and African Studies" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="8MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://jas.sagepub.com/" />
@@ -2833,6 +2871,7 @@
 	<property name="title" value="Journal of Biological Rhythms Volume 21" />
 	<property name="journalTitle" value="Journal of Biological Rhythms" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="10MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://jbr.sagepub.com/" />
@@ -2878,6 +2917,7 @@
 	<property name="title" value="Journal of Black Psychology Volume 32" />
 	<property name="journalTitle" value="Journal of Black Psychology" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="20MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://jbp.sagepub.com/" />
@@ -2893,6 +2933,7 @@
 	<property name="title" value="Journal of Black Studies Volume 36" />
 	<property name="journalTitle" value="Journal of Black Studies" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="20MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://jbs.sagepub.com/" />
@@ -2953,6 +2994,7 @@
 	<property name="title" value="Journal of Career Assessment Volume 14" />
 	<property name="journalTitle" value="Journal of Career Assessment" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="9MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://jca.sagepub.com/" />
@@ -2968,6 +3010,7 @@
 	<property name="title" value="Journal of Career Development Volume 32" />
 	<property name="journalTitle" value="Journal of Career Development" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="15MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://jcd.sagepub.com/" />
@@ -3058,6 +3101,7 @@
 	<property name="title" value="The Journal of Commonwealth Literature Volume 41" />
 	<property name="journalTitle" value="The Journal of Commonwealth Literature" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="5MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://jcl.sagepub.com/" />
@@ -3088,6 +3132,7 @@
 	<property name="title" value="Journal of Composite Materials Volume 40" />
 	<property name="journalTitle" value="Journal of Composite Materials" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="20MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://jcm.sagepub.com/" />
@@ -3163,6 +3208,7 @@
 	<property name="title" value="Journal of Contemporary History Volume 41" />
 	<property name="journalTitle" value="Journal of Contemporary History" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="6MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://jch.sagepub.com/" />
@@ -3178,6 +3224,7 @@
 	<property name="title" value="Journal of Cross-Cultural Psychology Volume 37" />
 	<property name="journalTitle" value="Journal of Cross-Cultural Psychology" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="10MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://jcc.sagepub.com/" />
@@ -3223,6 +3270,7 @@
 	<property name="title" value="The Journal of Early Adolescence Volume 26" />
 	<property name="journalTitle" value="The Journal of Early Adolescence" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="8MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://jea.sagepub.com/" />
@@ -3298,6 +3346,7 @@
 	<property name="title" value="Journal of English Linguistics Volume 33" />
 	<property name="journalTitle" value="Journal of English Linguistics" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="12MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://eng.sagepub.com/" />
@@ -3328,6 +3377,7 @@
 	<property name="title" value="The Journal of Environment &amp; Development Volume 15" />
 	<property name="journalTitle" value="The Journal of Environment &amp; Development" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="8MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://jed.sagepub.com/" />
@@ -3343,6 +3393,7 @@
 	<property name="title" value="Journal of European Social Policy Volume 16" />
 	<property name="journalTitle" value="Journal of European Social Policy" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="8MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://esp.sagepub.com/" />
@@ -3373,6 +3424,7 @@
 	<property name="title" value="Journal of Family History Volume 31" />
 	<property name="journalTitle" value="Journal of Family History" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="8MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://jfh.sagepub.com/" />
@@ -3448,6 +3500,7 @@
 	<property name="title" value="Journal of Geriatric Psychiatry and Neurology Volume 19" />
 	<property name="journalTitle" value="Journal of Geriatric Psychiatry and Neurology" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="8MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://jgp.sagepub.com/" />
@@ -3493,6 +3546,7 @@
 	<property name="title" value="Journal of Hispanic Higher Education Volume 5" />
 	<property name="journalTitle" value="Journal of Hispanic Higher Education" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="10MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://jhh.sagepub.com/" />
@@ -3553,6 +3607,7 @@
 	<property name="title" value="Journal of Humanistic Psychology Volume 46" />
 	<property name="journalTitle" value="Journal of Humanistic Psychology" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="8MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://jhp.sagepub.com/" />
@@ -3568,6 +3623,7 @@
 	<property name="title" value="Journal of Industrial Relations Volume 48" />
 	<property name="journalTitle" value="Journal of Industrial Relations" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="8MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://jir.sagepub.com/" />
@@ -3628,6 +3684,7 @@
 	<property name="title" value="Journal of Intelligent Material Systems and Structures Volume 17" />
 	<property name="journalTitle" value="Journal of Intelligent Material Systems and Structures" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="16MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://jim.sagepub.com/" />
@@ -3658,6 +3715,7 @@
 	<property name="title" value="Journal of Interpersonal Violence Volume 21" />
 	<property name="journalTitle" value="Journal of Interpersonal Violence" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="20MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://jiv.sagepub.com/" />
@@ -3673,6 +3731,7 @@
 	<property name="title" value="Journal of Language and Social Psychology Volume 25" />
 	<property name="journalTitle" value="Journal of Language and Social Psychology" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="8MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://jls.sagepub.com/" />
@@ -3688,6 +3747,7 @@
 	<property name="title" value="Journal of Librarianship and Information Science Volume 38" />
 	<property name="journalTitle" value="Journal of Librarianship and Information Science" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="8MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://lis.sagepub.com/" />
@@ -3718,6 +3778,7 @@
 	<property name="title" value="Journal of Management Volume 32" />
 	<property name="journalTitle" value="Journal of Management" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="6MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://jom.sagepub.com/" />
@@ -3778,6 +3839,7 @@
 	<property name="title" value="Journal of Material Culture Volume 10" />
 	<property name="journalTitle" value="Journal of Material Culture" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="12MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://mcu.sagepub.com/" />
@@ -3913,6 +3975,7 @@
 	<property name="title" value="Journal of Planning History Volume 5" />
 	<property name="journalTitle" value="Journal of Planning History" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="8MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://jph.sagepub.com/" />
@@ -3973,6 +4036,7 @@
 	<property name="title" value="Journal of Reinforced Plastics and Composites Volume 25" />
 	<property name="journalTitle" value="Journal of Reinforced Plastics and Composites" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="20MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://jrp.sagepub.com/" />
@@ -3988,6 +4052,7 @@
 	<property name="title" value="Journal of Research in Crime and Delinquency Volume 43" />
 	<property name="journalTitle" value="Journal of Research in Crime and Delinquency" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="8MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://jrc.sagepub.com/" />
@@ -4048,6 +4113,7 @@
 	<property name="title" value="Journal of Service Research Volume 8" />
 	<property name="journalTitle" value="Journal of Service Research" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="14MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://jsr.sagepub.com/" />
@@ -4063,6 +4129,7 @@
 	<property name="title" value="Journal of Social and Personal Relationships Volume 23" />
 	<property name="journalTitle" value="Journal of Social and Personal Relationships" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="8MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://spr.sagepub.com/" />
@@ -4078,6 +4145,7 @@
 	<property name="title" value="Journal of Social Archaeology Volume 6" />
 	<property name="journalTitle" value="Journal of Social Archaeology" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="6MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://jsa.sagepub.com/" />
@@ -4138,6 +4206,7 @@
 	<property name="title" value="Journal of Sports Economics Volume 7" />
 	<property name="journalTitle" value="Journal of Sports Economics" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="8MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://jse.sagepub.com/" />
@@ -4168,6 +4237,7 @@
 	<property name="title" value="Journal of Teacher Education Volume 57" />
 	<property name="journalTitle" value="Journal of Teacher Education" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="10MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://jte.sagepub.com/" />
@@ -4183,6 +4253,7 @@
 	<property name="title" value="Journal of the Academy of Marketing Science Volume 34" />
 	<property name="journalTitle" value="Journal of the Academy of Marketing Science" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="8MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://jam.sagepub.com/" />
@@ -4198,6 +4269,7 @@
 	<property name="title" value="Journal of the American Psychiatric Nurses Association Volume 11" />
 	<property name="journalTitle" value="Journal of the American Psychiatric Nurses Association" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="23MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://jap.sagepub.com/" />
@@ -4213,6 +4285,7 @@
 	<property name="title" value="Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 4" />
 	<property name="journalTitle" value="Journal of the International Association of Physicians in AIDS Care (JIAPAC)" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="10MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://jia.sagepub.com/" />
@@ -4303,6 +4376,7 @@
 	<property name="title" value="Journal of Urban History Volume 32" />
 	<property name="journalTitle" value="Journal of Urban History" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="8MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://juh.sagepub.com/" />
@@ -4348,6 +4422,7 @@
 	<property name="title" value="Journal of Visual Culture Volume 4" />
 	<property name="journalTitle" value="Journal of Visual Culture" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="14MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://vcu.sagepub.com/" />
@@ -4393,6 +4468,7 @@
 	<property name="title" value="Language and Literature Volume 15" />
 	<property name="journalTitle" value="Language and Literature" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="6MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://lal.sagepub.com/" />
@@ -4408,6 +4484,7 @@
 	<property name="title" value="Latin American Perspectives Volume 33" />
 	<property name="journalTitle" value="Latin American Perspectives" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="12MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://lap.sagepub.com/" />
@@ -4438,6 +4515,7 @@
 	<property name="title" value="Management &amp; Organizational History Volume 1" />
 	<property name="journalTitle" value="Management &amp; Organizational History" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="8MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://moh.sagepub.com/" />
@@ -4453,6 +4531,7 @@
 	<property name="title" value="Management Communication Quarterly Volume 19" />
 	<property name="journalTitle" value="Management Communication Quarterly" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="15MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://mcq.sagepub.com/" />
@@ -4543,6 +4622,7 @@
 	<property name="title" value="Medical Decision Making Volume 26" />
 	<property name="journalTitle" value="Medical Decision Making" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="14MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://mdm.sagepub.com/" />
@@ -4588,6 +4668,7 @@
 	<property name="title" value="Modern China Volume 32" />
 	<property name="journalTitle" value="Modern China" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="8MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://mcx.sagepub.com/" />
@@ -4603,6 +4684,7 @@
 	<property name="title" value="NASSP Bulletin Volume 90" />
 	<property name="journalTitle" value="NASSP Bulletin" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="8MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://bul.sagepub.com/" />
@@ -4618,6 +4700,7 @@
 	<property name="title" value="National Institute Economic Review Volume 195" />
 	<property name="journalTitle" value="National Institute Economic Review" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="8MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://ner.sagepub.com/" />
@@ -4648,6 +4731,7 @@
 	<property name="title" value="The Neuroscientist Volume 12" />
 	<property name="journalTitle" value="The Neuroscientist" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="14MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://nro.sagepub.com/" />
@@ -4678,6 +4762,7 @@
 	<property name="title" value="Nonprofit and Voluntary Sector Quarterly Volume 35" />
 	<property name="journalTitle" value="Nonprofit and Voluntary Sector Quarterly" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="8MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://nvs.sagepub.com/" />
@@ -4708,6 +4793,7 @@
 	<property name="title" value="Organization Volume 13" />
 	<property name="journalTitle" value="Organization" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="11MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://org.sagepub.com/" />
@@ -4723,6 +4809,7 @@
 	<property name="title" value="Organization &amp; Environment Volume 19" />
 	<property name="journalTitle" value="Organization &amp; Environment" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="8MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://oae.sagepub.com/" />
@@ -4738,6 +4825,7 @@
 	<property name="title" value="Organization Studies Volume 27" />
 	<property name="journalTitle" value="Organization Studies" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="14MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://oss.sagepub.com/" />
@@ -4783,6 +4871,7 @@
 	<property name="title" value="Personality and Social Psychology Bulletin Volume 32" />
 	<property name="journalTitle" value="Personality and Social Psychology Bulletin" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="22MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://psp.sagepub.com/" />
@@ -4798,6 +4887,7 @@
 	<property name="title" value="Philosophy &amp; Social Criticism Volume 32" />
 	<property name="journalTitle" value="Philosophy &amp; Social Criticism" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="8MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://psc.sagepub.com/" />
@@ -4813,6 +4903,7 @@
 	<property name="title" value="Philosophy of the Social Sciences Volume 36" />
 	<property name="journalTitle" value="Philosophy of the Social Sciences" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="6MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://pos.sagepub.com/" />
@@ -4858,6 +4949,7 @@
 	<property name="title" value="Policy, Politics, &amp; Nursing Practice Volume 7" />
 	<property name="journalTitle" value="Policy, Politics, &amp; Nursing Practice" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="8MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://ppn.sagepub.com/" />
@@ -4978,6 +5070,7 @@
 	<property name="title" value="Public Finance Review Volume 34" />
 	<property name="journalTitle" value="Public Finance Review" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="8MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://pfr.sagepub.com/" />
@@ -4993,6 +5086,7 @@
 	<property name="title" value="Public Understanding of Science Volume 15" />
 	<property name="journalTitle" value="Public Understanding of Science" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="8MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://pus.sagepub.com/" />
@@ -5050,6 +5144,7 @@
       </property>
  
       <property name="QualitativeInquiry12">
+	<property name="estSize" value="8MB" />
 	<property name="title" value="Qualitative Inquiry Volume 12" />
 	<property name="journalTitle" value="Qualitative Inquiry" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
@@ -5098,6 +5193,7 @@
 	<property name="title" value="Race &amp; Class Volume 47" />
 	<property name="journalTitle" value="Race &amp; Class" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="16MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://rac.sagepub.com/" />
@@ -5113,6 +5209,7 @@
 	<property name="title" value="Rationality and Society Volume 18" />
 	<property name="journalTitle" value="Rationality and Society" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="16MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://rss.sagepub.com/" />
@@ -5128,6 +5225,7 @@
 	<property name="title" value="RELC Journal Volume 36" />
 	<property name="journalTitle" value="RELC Journal" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="16MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://rel.sagepub.com/" />
@@ -5143,6 +5241,7 @@
 	<property name="title" value="Research on Aging Volume 28" />
 	<property name="journalTitle" value="Research on Aging" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="10MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://roa.sagepub.com/" />
@@ -5173,6 +5272,7 @@
 	<property name="title" value="Reuse/Recycle Newsletter Volume 34" />
 	<property name="journalTitle" value="Reuse/Recycle Newsletter" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="8MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://rrn.sagepub.com/" />
@@ -5203,6 +5303,7 @@
 	<property name="title" value="Review of Radical Political Economics Volume 38" />
 	<property name="journalTitle" value="Review of Radical Political Economics" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="6MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://rrp.sagepub.com/" />
@@ -5233,6 +5334,7 @@
 	<property name="title" value="School Psychology International Volume 27" />
 	<property name="journalTitle" value="School Psychology International" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="8MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://spi.sagepub.com/" />
@@ -5248,6 +5350,7 @@
 	<property name="title" value="Science Communication Volume 27" />
 	<property name="journalTitle" value="Science Communication" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="14MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://scx.sagepub.com/" />
@@ -5278,6 +5381,7 @@
 	<property name="title" value="Science, Technology &amp; Human Values Volume 31" />
 	<property name="journalTitle" value="Science, Technology &amp; Human Values" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="8MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://sth.sagepub.com/" />
@@ -5338,6 +5442,7 @@
 	<property name="title" value="SIMULATION Volume 81" />
 	<property name="journalTitle" value="SIMULATION" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="34MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://sim.sagepub.com/" />
@@ -5353,6 +5458,7 @@
 	<property name="title" value="Simulation &amp; Gaming Volume 37" />
 	<property name="journalTitle" value="Simulation &amp; Gaming" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="8MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://sag.sagepub.com/" />
@@ -5368,6 +5474,7 @@
 	<property name="title" value="Small Group Research Volume 37" />
 	<property name="journalTitle" value="Small Group Research" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="8MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://sgr.sagepub.com/" />
@@ -5413,6 +5520,7 @@
 	<property name="title" value="Social Science Computer Review Volume 24" />
 	<property name="journalTitle" value="Social Science Computer Review" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="8MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://ssc.sagepub.com/" />
@@ -5458,6 +5566,7 @@
 	<property name="title" value="Sociological Methods &amp; Research Volume 34" />
 	<property name="journalTitle" value="Sociological Methods &amp; Research" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="10MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://smr.sagepub.com/" />
@@ -5488,6 +5597,7 @@
 	<property name="title" value="South Asia Economic Journal Volume 6" />
 	<property name="journalTitle" value="South Asia Economic Journal" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="10MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://sae.sagepub.com/" />
@@ -5548,6 +5658,7 @@
 	<property name="title" value="Strategic Organization Volume 4" />
 	<property name="journalTitle" value="Strategic Organization" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="8MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://soq.sagepub.com/" />
@@ -5563,6 +5674,7 @@
 	<property name="title" value="Structural Health Monitoring Volume 5" />
 	<property name="journalTitle" value="Structural Health Monitoring" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="8MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://shm.sagepub.com/" />
@@ -5578,6 +5690,7 @@
 	<property name="title" value="Studies in Christian Ethics Volume 19" />
 	<property name="journalTitle" value="Studies in Christian Ethics" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="8MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://sce.sagepub.com/" />
@@ -5668,6 +5781,7 @@
 	<property name="title" value="Theoretical Criminology Volume 10" />
 	<property name="journalTitle" value="Theoretical Criminology" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="8MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://tcr.sagepub.com/" />
@@ -5698,6 +5812,7 @@
 	<property name="title" value="Theory and Research in Education Volume 4" />
 	<property name="journalTitle" value="Theory and Research in Education" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="8MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://tre.sagepub.com/" />
@@ -5773,6 +5888,7 @@
 	<property name="title" value="Transcultural Psychiatry Volume 42" />
 	<property name="journalTitle" value="Transcultural Psychiatry" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="24MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://tps.sagepub.com/" />
@@ -5803,6 +5919,7 @@
 	<property name="title" value="Urban Affairs Review Volume 41" />
 	<property name="journalTitle" value="Urban Affairs Review" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="18MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://uar.sagepub.com/" />
@@ -5818,6 +5935,7 @@
 	<property name="title" value="Urban Education Volume 41" />
 	<property name="journalTitle" value="Urban Education" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="8MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://uex.sagepub.com/" />
@@ -5863,6 +5981,7 @@
 	<property name="title" value="Waste Management &amp; Research Volume 24" />
 	<property name="journalTitle" value="Waste Management &amp; Research" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="8MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://wmr.sagepub.com/" />
@@ -5878,6 +5997,7 @@
 	<property name="title" value="Western Journal of Nursing Research Volume 28" />
 	<property name="journalTitle" value="Western Journal of Nursing Research" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="15MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://wjn.sagepub.com/" />
@@ -5893,6 +6013,7 @@
 	<property name="title" value="Work and Occupations Volume 33" />
 	<property name="journalTitle" value="Work and Occupations" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="estSize" value="8MB" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://wox.sagepub.com/" />
