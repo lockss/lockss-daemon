@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.30 2006-03-06 17:46:46 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.31 2006-03-27 08:49:13 tlipkis Exp $
  */
 
 /*
@@ -192,11 +192,6 @@ public class ConfigManager implements LockssManager {
 
   public ConfigCache getConfigCache() {
     return configCache;
-  }
-
-  // Used only for testing.
-  public void resetConfigCache() {
-    configCache = new ConfigCache();
   }
 
   public void initService(LockssApp app) throws LockssAppException {
@@ -682,19 +677,20 @@ public class ConfigManager implements LockssManager {
    * the titledbUrlList.
    */
   public void addTitleDbConfigFrom(Collection classloaders) {
-    if (classloaders.isEmpty()) return;
+    boolean needReload = false;
 
     for (Iterator it = classloaders.iterator(); it.hasNext(); ) {
       ClassLoader cl = (ClassLoader)it.next();
       URL titleDbUrl = cl.getResource(CONFIG_FILE_BUNDLED_TITLE_DB);
       if (titleDbUrl != null) {
 	titledbUrlList.add(titleDbUrl);
+	needReload = true;
       }
     }
     // Force a config reload -- this is required to make the bundled
     // title configs immediately available, otherwise they will not be
     // available until the next config reload.
-    if (handlerThread != null) {
+    if (needReload && handlerThread != null) {
       handlerThread.forceReload();
     }
   }
