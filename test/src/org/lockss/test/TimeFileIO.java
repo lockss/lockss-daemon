@@ -1,5 +1,5 @@
 /*
- * $Id: TimeFileIO.java,v 1.2 2006-01-28 07:00:31 tlipkis Exp $
+ * $Id: TimeFileIO.java,v 1.3 2006-03-27 08:50:49 tlipkis Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.test;
 import java.io.*;
 import java.util.*;
+import java.util.zip.*;
 import java.nio.*;
 import java.nio.channels.*;
 import java.security.MessageDigest;
@@ -86,6 +87,7 @@ public class TimeFileIO extends LockssTiming {
   private boolean isWalk;
   private boolean isOpen;
   private boolean isRead;
+  private boolean isGzip;
   private boolean isHash;
   private boolean isDaemonHash;
   private boolean isNio;
@@ -198,10 +200,14 @@ public class TimeFileIO extends LockssTiming {
     if (isNio) {
       doReadNio(file);
     } else {
+      InputStream is;
       FileInputStream fis = new FileInputStream(file);
-      BufferedInputStream bis = new BufferedInputStream(fis);
+      is = new BufferedInputStream(fis);
+      if (isGzip) {
+	is = new GZIPInputStream(is);
+      }
       long n;
-      while ((n = bis.read(bArray)) > 0) {
+      while ((n = is.read(bArray)) > 0) {
 	if (isHash) {
 	  doHash(bArray, n);
 	}
@@ -217,8 +223,6 @@ public class TimeFileIO extends LockssTiming {
     FileChannel channel;
     RandomAccessFile raf = new RandomAccessFile (file, "r");
     char mode = bufferMode;
-    if (mode == 'a') {
-    }
     switch (mode) {
     case '0':
       while ((n = raf.read(bArray)) > 0) {
@@ -370,6 +374,8 @@ public class TimeFileIO extends LockssTiming {
 	  }
 	} else if (arg.equals("-p")) {
 	  isPrint = true;
+	} else if (arg.equals("-z")) {
+	  isGzip = true;
 	} else if (arg.equals("-n")) {
 	  isNio = true;
 	  ioMsg = "nio";
@@ -518,6 +524,7 @@ public class TimeFileIO extends LockssTiming {
     o.println("   -r      read files");
     o.println("   -h      hash files");
     o.println("   -hn     hash files n times in parallel ");
+    o.println("   -z      wrap InputStream in GZIPInputStream");
     o.println("   -a      run all tests (mostly)");
     o.println("   -at      run all tests sequentially in separate threads");
     o.println("  I/O Mode.  One of:");
