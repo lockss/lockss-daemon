@@ -1,5 +1,5 @@
 /*
- * $Id: HTTPConfigFile.java,v 1.6 2005-10-11 05:43:31 tlipkis Exp $
+ * $Id: HTTPConfigFile.java,v 1.7 2006-03-27 08:49:55 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.config;
 
 import java.io.*;
 import java.net.*;
+import java.util.zip.*;
 
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
@@ -44,6 +45,16 @@ import org.lockss.util.urlconn.*;
  */
 public class HTTPConfigFile extends ConfigFile {
 
+  public static final String PREFIX = Configuration.PREFIX + "config.";
+
+  // Connect and data timeouts
+  /** Connect Timeout for property server */
+  public static final String PARAM_CONNECT_TIMEOUT = PREFIX+ "timeout.connect";
+  /** Data timeout for property server */
+  public static final long DEFAULT_CONNECT_TIMEOUT = 1 * Constants.MINUTE;
+  public static final String PARAM_DATA_TIMEOUT = PREFIX + "timeout.data";
+  public static final long DEFAULT_DATA_TIMEOUT = 10 * Constants.MINUTE;
+
   private String m_httpLastModifiedString = null;
 
   public HTTPConfigFile(String url) {
@@ -53,7 +64,17 @@ public class HTTPConfigFile extends ConfigFile {
   // overridden for testing
   protected LockssUrlConnection openUrlConnection(String url)
       throws IOException {
-    return UrlUtil.openConnection(url);
+    // XXX If/when more than one file is fetched from props server, this
+    // should use a common connection pool so connection gets resused.
+    // XXX should do something about closing connection promptly
+    LockssUrlConnectionPool connPool = new LockssUrlConnectionPool();
+    Configuration conf = ConfigManager.getCurrentConfig();
+
+    connPool.setConnectTimeout(conf.getTimeInterval(PARAM_CONNECT_TIMEOUT,
+						    DEFAULT_CONNECT_TIMEOUT));
+    connPool.setDataTimeout(conf.getTimeInterval(PARAM_DATA_TIMEOUT,
+						 DEFAULT_DATA_TIMEOUT));
+    return UrlUtil.openConnection(url, connPool);
   }
 
   /** Don't check for new file on every load, only when asked.
@@ -76,6 +97,7 @@ public class HTTPConfigFile extends ConfigFile {
       log.debug2("Setting request if-modified-since to: " + m_lastModified);
       conn.setIfModifiedSince(m_lastModified);
     }
+    conn.setRequestProperty("Accept-Encoding", "gzip");
 
     conn.execute();
 
@@ -89,6 +111,12 @@ public class HTTPConfigFile extends ConfigFile {
       in = conn.getResponseInputStream();
       log.debug2("New file, or file changed.  Loading file from " +
 		 "remote connection:" + url);
+      String encoding = conn.getResponseContentEncoding();
+      if ("gzip".equalsIgnoreCase(encoding) ||
+	  "x-gzip".equalsIgnoreCase(encoding)) {
+	log.debug3("Wrapping in GZIPInputStream");
+	in = new GZIPInputStream(in);
+      }
       break;
     case HttpURLConnection.HTTP_NOT_MODIFIED:
       m_loadError = null;

@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigFile.java,v 1.1 2005-07-09 22:26:30 tlipkis Exp $
+ * $Id: TestConfigFile.java,v 1.2 2006-03-27 08:49:55 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.config;
 
 import java.io.*;
 import java.util.*;
+import java.util.zip.*;
 import java.net.*;
 import junit.framework.*;
 
@@ -320,12 +321,23 @@ public abstract class TestConfigFile extends LockssTestCase {
       hcf.setResponseCode(403);
       testCantRead(hcf, "403");
     }
+
+    public void testGzip() throws IOException {
+      InputStream zin = new GZIPpedInputStream(xml1);
+      MyHttpConfigFile hcf =
+	new MyHttpConfigFile("http://foo.bar/lockss.xml", zin);
+      hcf.setContentEncoding("gzip");
+      Configuration config = hcf.getConfiguration();
+      assertTrue(hcf.isLoaded());
+    }
+
   }
 
   /** HTTPConfigFile that uses a programmable MockLockssUrlConnection */
   static class MyHttpConfigFile extends HTTPConfigFile {
     Map map = new HashMap();
     String lastModified;
+    String contentEncoding = null;
     int resp = 200;
     IOException executeExecption;
 
@@ -334,6 +346,12 @@ public abstract class TestConfigFile extends LockssTestCase {
     }
 
     public MyHttpConfigFile(String url, String content) {
+      super(url);
+      map.put(url, content);
+      lastModified = dateString(TimeBase.nowMs());
+    }
+
+    public MyHttpConfigFile(String url, InputStream content) {
       super(url);
       map.put(url, content);
       lastModified = dateString(TimeBase.nowMs());
@@ -359,14 +377,18 @@ public abstract class TestConfigFile extends LockssTestCase {
       executeExecption = e;
     }
 
+    void setContentEncoding(String encoding) {
+      contentEncoding = encoding;
+    }
+
     class MyMockLockssUrlConnection extends MockLockssUrlConnection {
 
       public void execute() throws IOException {
 	super.execute();
 	String url = getURL();
 
-	String s = (String)map.get(url);
-	if (s == null) {
+	Object o = map.get(url);
+	if (o == null) {
 	  this.setResponseCode(404);
 	} else {
 	  if (executeExecption != null) {
@@ -376,11 +398,24 @@ public abstract class TestConfigFile extends LockssTestCase {
 	  if (ifSinze != null && ifSinze.equalsIgnoreCase(lastModified)) {
 	    this.setResponseCode(HttpURLConnection.HTTP_NOT_MODIFIED);
 	  } else {
-	    this.setResponseInputStream(new StringInputStream(s));
+	    if (o instanceof String) {
+	      this.setResponseInputStream(new StringInputStream((String)o));
+	    } else if (o instanceof InputStream) {
+	      this.setResponseInputStream((InputStream)o);
+	    } else {
+	      throw new UnsupportedOperationException("Unknown result stream type " + o.getClass());
+	    }
 	    this.setResponseHeader("last-modified", lastModified);
+	    if (contentEncoding != null) {
+	      this.setResponseHeader("Content-Encoding", contentEncoding);
+	    }
 	    this.setResponseCode(resp);
 	  }
 	}
+      }
+
+      public String getResponseContentEncoding() {
+	return contentEncoding;
       }
     }
   }
