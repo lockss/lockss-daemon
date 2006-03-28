@@ -1,10 +1,10 @@
 /*
- * $Id: ConfigManager.java,v 1.31 2006-03-27 08:49:13 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.32 2006-03-28 00:26:01 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2001-2002 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -817,7 +817,7 @@ public class ConfigManager implements LockssManager {
   public boolean hasLocalCacheConfig() {
     return hasLocalCacheConfig;
   }
-      
+
   /** Load the current list of bundled TitleDB config files into the
       given config object.  This will <em>not</em> overwrite any keys
       in the config object.  */
@@ -982,6 +982,45 @@ public class ConfigManager implements LockssManager {
     }
     writeCacheConfigFile(fileConfig, CONFIG_FILE_AU_CONFIG,
 			 "AU Configuration");
+  }
+
+  /**
+   * <p>Adds or overwrites configuration values in a cache config
+   * file.</p>
+   * @param config              A Configuration instance containing
+   *                            keys that will be added to the file
+   *                            if they do not exist or whose values
+   *                            will be overridden if they do.
+   * @param cacheConfigFileName A config file name (without path).
+   * @param header              A file header string.
+   * @throws IOException if an I/O error occurs.
+   * @see #cacheConfigFiles
+   */
+  public synchronized void modifyCacheConfigFile(Configuration config,
+                                                 String cacheConfigFileName,
+                                                 String header)
+      throws IOException {
+    Configuration fileConfig;
+
+    // Get config from file
+    try {
+      fileConfig = readCacheConfigFile(cacheConfigFileName);
+    }
+    catch (FileNotFoundException fnfeIgnore) {
+      fileConfig = newConfiguration();
+    }
+    if (fileConfig.isSealed()) {
+      fileConfig = fileConfig.copy();
+    }
+
+    // Add or overwrite values
+    for (Iterator iter = config.keyIterator() ; iter.hasNext() ; ) {
+      String key = (String)iter.next();
+      fileConfig.put(key, config.get(key));
+    }
+
+    // Write out file
+    writeCacheConfigFile(fileConfig, cacheConfigFileName, header);
   }
 
 

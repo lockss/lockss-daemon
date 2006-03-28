@@ -1,10 +1,10 @@
 /*
- * $Id: TestConfigManager.java,v 1.16 2006-03-06 17:46:46 tlipkis Exp $
+ * $Id: TestConfigManager.java,v 1.17 2006-03-28 00:26:01 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -464,6 +464,36 @@ public class TestConfigManager extends LockssTestCase {
     assertEquals(null, config.get("org.lockss.au.fooauid.baz"));
     assertEquals("11", config.get("org.lockss.au.auid.foo"));
     assertEquals("22", config.get("org.lockss.au.auid.bar"));
+  }
+
+  public void testModifyCacheConfigFile() throws Exception {
+    // Use some config file; for instance the ICP server config file
+    final String FILE = ConfigManager.CONFIG_FILE_ICP_SERVER;
+
+    String tmpdir = getTempDir().toString();
+    ConfigurationUtil.setFromArgs(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
+                                  tmpdir);
+    assertNull(CurrentConfig.getParam("foo"));
+    assertNull(CurrentConfig.getParam("bar"));
+    assertNull(CurrentConfig.getParam("baz"));
+
+    mgr.modifyCacheConfigFile(ConfigurationUtil.fromArgs("foo", "1", "bar", "2"),
+                              FILE,
+                              null);
+    ConfigurationUtil.setFromArgs(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
+                                  tmpdir); // force reload
+    assertEquals("1", CurrentConfig.getParam("foo"));
+    assertEquals("2", CurrentConfig.getParam("bar"));
+    assertNull(CurrentConfig.getParam("baz"));
+
+    mgr.modifyCacheConfigFile(ConfigurationUtil.fromArgs("foo", "111", "baz", "333"),
+                              FILE,
+                              null);
+    ConfigurationUtil.setFromArgs(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
+                                  tmpdir); // force reload
+    assertEquals("111", CurrentConfig.getParam("foo")); // foo has changed
+    assertEquals("2", CurrentConfig.getParam("bar"));   // bar has not changed
+    assertEquals("333", CurrentConfig.getParam("baz")); // baz has appeared
   }
 
   public void testReadAuConfigFile() throws Exception {
