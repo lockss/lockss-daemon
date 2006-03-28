@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingHtmlParser.java,v 1.25 2006-03-23 22:44:47 troberts Exp $
+ * $Id: TestGoslingHtmlParser.java,v 1.26 2006-03-28 17:41:07 troberts Exp $
  */
 
 /*
@@ -563,6 +563,18 @@ public class TestGoslingHtmlParser extends LockssTestCase {
       "<!--<a href=http://www.example.com/link1.html>link1</a>"+
       "Filler, with <b>bold</b> tags and<i>others</i>"+
       "<a href=http://www.example.com/link2.html>link2</a>-->"+
+      "<a href=http://www.example.com/link3.html>link3</a>";
+    assertEquals(SetUtil.set(url), parseSingleSource(source));
+  }
+
+  public void testSkipsMalformedComments() throws IOException {
+    String url= "http://www.example.com/link3.html";
+
+    String source =
+      "<html><head><title>Test</title></head><body>"+
+      "<!--<a href=http://www.example.com/link1.html>link1</a>"+
+      "Filler, with <b>bold</b> tags and<i>others</i>"+
+      "<a href=http://www.example.com/link2.html>link2</a>--!>"+
       "<a href=http://www.example.com/link3.html>link3</a>";
     assertEquals(SetUtil.set(url), parseSingleSource(source));
   }

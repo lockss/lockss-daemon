@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingHtmlParser.java,v 1.38 2006-03-23 22:44:47 troberts Exp $
+ * $Id: GoslingHtmlParser.java,v 1.39 2006-03-28 17:41:07 troberts Exp $
  */
 
 /*
@@ -226,15 +226,20 @@ public class GoslingHtmlParser implements ContentParser {
 	  while (true) {
 	    if (!refill()) return null;
 	    idx = ring.indexOf(">", -1, false);
-	    if (idx >= 2 && ring.get(idx-1) == '-' && ring.get(idx-2) == '-') {
+	    if (idx >= 2 && 
+		((ring.get(idx-1) == '-' && ring.get(idx-2) == '-') ||
+		(ring.get(idx-1) == '!' && ring.get(idx-2) == '-' 
+		 && ring.get(idx-3) == '-'))) {
+	      if (isTrace) logger.debug3("Found end of comment");
 	      break;
 	    }
 	    if (idx >= 0) {
 	      // found a > that doesn't close the comment.  Skip past it.
 	      ring.skip(idx + 1);
 	    } else {
-	      // No > in ring.  Leave last two chars in case they're "--"
-	      ring.skip(ring.size() - 2);
+	      // No > in ring.  
+	      // Leave last three chars in case they're "--" or "!--"
+	      ring.skip(ring.size() - 3);
 	    }
 	  }
 	} else {
