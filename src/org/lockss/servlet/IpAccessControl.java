@@ -1,5 +1,5 @@
 /*
- * $Id: IpAccessControl.java,v 1.36 2006-03-16 01:41:19 thib_gc Exp $
+ * $Id: IpAccessControl.java,v 1.37 2006-03-28 23:24:43 thib_gc Exp $
  */
 
 /*
@@ -81,7 +81,7 @@ public abstract class IpAccessControl extends LockssServlet {
     configMgr = getLockssApp().getConfigManager();
   }
 
-  public void lockssHandleRequest() throws IOException {
+  protected void lockssHandleRequest() throws IOException {
     String action = req.getParameter("action");
     isForm = !StringUtil.isNullString(action);
 
