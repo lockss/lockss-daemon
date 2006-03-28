@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.32 2006-03-28 00:26:01 thib_gc Exp $
+ * $Id: ConfigManager.java,v 1.33 2006-03-28 23:24:13 thib_gc Exp $
  */
 
 /*
@@ -985,18 +985,80 @@ public class ConfigManager implements LockssManager {
   }
 
   /**
-   * <p>Adds or overwrites configuration values in a cache config
-   * file.</p>
-   * @param config              A Configuration instance containing
-   *                            keys that will be added to the file
-   *                            if they do not exist or whose values
-   *                            will be overridden if they do.
+   * <p>Calls {@link #modifyCacheConfigFile(Configuration, Set, String, String)}
+   * with a <code>null</code> delete set.</p>
+   * @param updateConfig        A {@link Configuration} instance
+   *                            containing keys that will be added or
+   *                            updated in the file (see above). Can
+   *                            be <code>null</code> if no keys are to
+   *                            be added or updated.
    * @param cacheConfigFileName A config file name (without path).
    * @param header              A file header string.
    * @throws IOException if an I/O error occurs.
+   * @see #modifyCacheConfigFile(Configuration, Set, String, String)
+   */
+  public synchronized void modifyCacheConfigFile(Configuration updateConfig,
+                                                 String cacheConfigFileName,
+                                                 String header)
+      throws IOException {
+    modifyCacheConfigFile(updateConfig, null, cacheConfigFileName, header);
+  }
+
+  /**
+   * <p>Modifies configuration values in a cache config file.</p>
+   * <table>
+   *  <thead>
+   *   <tr>
+   *    <td>Precondition</td>
+   *    <td>Postcondition</td>
+   *   </tr>
+   *  </thead>
+   *  <tbody>
+   *   <tr>
+   *    <td><code>deleteConfig</code> contains key <code>k</code></td>
+   *    <td>The file does not contain key <code>k</code></td>
+   *   </tr>
+   *   <tr>
+   *    <td>
+   *     <code>updateConfig</code> maps key <code>k</code> to a value
+   *     <code>v</code>, and <code>deleteConfig</code> does not
+   *     contain key <code>k</code>
+   *    </td>
+   *    <td>The file maps <code>k</code> to <code>v</code></td>
+   *   </tr>
+   *   <tr>
+   *    <td>
+   *     <code>updateConfig</code> and <code>deleteConfig</code> do
+   *     not contain key <code>k</code>
+   *    </td>
+   *    <td>
+   *     The file does not contain <code>k</code> if it did not
+   *     originally contain <code>k</code>, or maps <code>k</code> to
+   *     <code>w</code> if it originally mapped <code>k</code> to
+   *     <code>w</code>
+   *    </td>
+   *   </tr>
+   *  </tbody>
+   * </table>
+   * @param updateConfig        A {@link Configuration} instance
+   *                            containing keys that will be added or
+   *                            updated in the file (see above). Can
+   *                            be <code>null</code> if no keys are to
+   *                            be added or updated.
+   * @param deleteSet        A set of keys that will be deleted
+   *                            in the file (see above). Can be
+   *                            <code>null</code> if no keys are to be
+   *                            deleted.
+   * @param cacheConfigFileName A config file name (without path).
+   * @param header              A file header string.
+   * @throws IOException              if an I/O error occurs.
+   * @throws IllegalArgumentException if a key appears both in
+   *                                  <code>updateConfig</code> and
+   *                                  in <code>deleteSet</code>.
    * @see #cacheConfigFiles
    */
-  public synchronized void modifyCacheConfigFile(Configuration config,
+  public synchronized void modifyCacheConfigFile(Configuration updateConfig,
+                                                 Set deleteSet,
                                                  String cacheConfigFileName,
                                                  String header)
       throws IOException {
@@ -1013,10 +1075,28 @@ public class ConfigManager implements LockssManager {
       fileConfig = fileConfig.copy();
     }
 
-    // Add or overwrite values
-    for (Iterator iter = config.keyIterator() ; iter.hasNext() ; ) {
-      String key = (String)iter.next();
-      fileConfig.put(key, config.get(key));
+    // Add or update
+    if (updateConfig != null && !updateConfig.isEmpty()) {
+      for (Iterator iter = updateConfig.keyIterator() ; iter.hasNext() ; ) {
+        String key = (String)iter.next();
+        fileConfig.put(key, updateConfig.get(key));
+      }
+    }
+
+    // Delete
+    if (deleteSet != null && !deleteSet.isEmpty()) {
+      if (updateConfig == null) {
+        updateConfig = ConfigManager.newConfiguration();
+      }
+      for (Iterator iter = deleteSet.iterator() ; iter.hasNext() ; ) {
+        String key = (String)iter.next();
+        if (updateConfig.containsKey(key)) {
+          throw new IllegalArgumentException("The following key appears in the update set and in the delete set: " + key);
+        }
+        else {
+          fileConfig.remove(key);
+        }
+      }
     }
 
     // Write out file

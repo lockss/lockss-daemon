@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigManager.java,v 1.17 2006-03-28 00:26:01 thib_gc Exp $
+ * $Id: TestConfigManager.java,v 1.18 2006-03-28 23:24:13 thib_gc Exp $
  */
 
 /*
@@ -491,9 +491,29 @@ public class TestConfigManager extends LockssTestCase {
                               null);
     ConfigurationUtil.setFromArgs(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
                                   tmpdir); // force reload
-    assertEquals("111", CurrentConfig.getParam("foo")); // foo has changed
-    assertEquals("2", CurrentConfig.getParam("bar"));   // bar has not changed
-    assertEquals("333", CurrentConfig.getParam("baz")); // baz has appeared
+    assertEquals("111", CurrentConfig.getParam("foo"));
+    assertEquals("2", CurrentConfig.getParam("bar"));
+    assertEquals("333", CurrentConfig.getParam("baz"));
+
+    mgr.modifyCacheConfigFile(ConfigurationUtil.fromArgs("bar", "222"),
+                              SetUtil.set("foo"),
+                              FILE,
+                              null);
+    ConfigurationUtil.setFromArgs(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
+                                  tmpdir); // force reload
+    assertFalse(CurrentConfig.getCurrentConfig().containsKey("foo"));
+    assertEquals("222", CurrentConfig.getParam("bar"));
+    assertEquals("333", CurrentConfig.getParam("baz"));
+
+    try {
+      mgr.modifyCacheConfigFile(ConfigurationUtil.fromArgs("foo", "1"),
+                                SetUtil.set("foo"),
+                                FILE,
+                                null);
+      fail("Failed to throw an IllegalArgumentException when a key was both in the update set and in the delete set");
+    } catch (IllegalArgumentException iae) {
+      // All is well
+    }
   }
 
   public void testReadAuConfigFile() throws Exception {
