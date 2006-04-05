@@ -1,5 +1,5 @@
 /*
- * $Id: TestTitleConfig.java,v 1.9 2005-10-11 05:49:28 tlipkis Exp $
+ * $Id: TestTitleConfig.java,v 1.10 2006-04-05 22:51:15 tlipkis Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.test.*;
 import org.lockss.util.*;
+import org.lockss.plugin.*;
 
 /**
  * This is the test class for org.lockss.daemon.TitleConfig
@@ -45,7 +46,8 @@ import org.lockss.util.*;
 
 public class TestTitleConfig extends LockssTestCase {
 
-  public void setUp() {
+  public void setUp() throws Exception {
+    super.setUp();
   }
 
   public void testConstructors() {
@@ -163,6 +165,21 @@ public class TestTitleConfig extends LockssTestCase {
     assertTrue(tc1.isSingleAu(mp));
     mp.setAuConfigDescrs(ListUtil.list(d1, d2, d3));
     assertTrue(tc1.isSingleAu(mp));
+  }
+
+  public void testGetAuId() {
+    PluginManager pmgr = getMockLockssDaemon().getPluginManager();
+    MockPlugin mp = new MockPlugin();
+    mp.setPluginId("pid");
+    ConfigParamDescr d1 = new ConfigParamDescr("base_url");
+    ConfigParamDescr d2 = new ConfigParamDescr("volume");
+    ConfigParamAssignment a1 = new ConfigParamAssignment(d1, "a");
+    ConfigParamAssignment a2 = new ConfigParamAssignment(d2, "foo");
+    TitleConfig tc1 = new TitleConfig("a", "b");
+    tc1.setParams(ListUtil.list(a1, a2));
+    String auid = tc1.getAuId(pmgr, mp);
+    assertEquals("pid&base_url~a&volume~foo", auid);
+    assertSame(auid, tc1.getAuId(pmgr, mp));
   }
 
   public void testEqualsHashWithNulls() {

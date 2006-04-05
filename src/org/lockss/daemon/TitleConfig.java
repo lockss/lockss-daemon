@@ -1,5 +1,5 @@
 /*
- * $Id: TitleConfig.java,v 1.12 2005-10-07 16:19:56 thib_gc Exp $
+ * $Id: TitleConfig.java,v 1.13 2006-04-05 22:51:15 tlipkis Exp $
  */
 
 /*
@@ -144,6 +144,27 @@ public class TitleConfig {
    */
   public String getPluginVersion() {
     return pluginVersion;
+  }
+
+  private String auid = null;
+
+  public String getAuId(PluginManager pluginMgr) {
+    if (auid != null) {
+      return auid;
+    }
+    Plugin plugin =
+      pluginMgr.getPlugin(pluginMgr.pluginKeyFromId(getPluginName()));
+    return getAuId(pluginMgr, plugin);
+  }
+
+  public String getAuId(PluginManager pluginMgr, Plugin plugin) {
+    if (auid == null) {
+      if (plugin == null) {
+	throw new RuntimeException("No such plugin " + getPluginName());
+      }
+      auid = pluginMgr.generateAuId(plugin, getConfig());
+    }
+    return auid;
   }
 
   /**
