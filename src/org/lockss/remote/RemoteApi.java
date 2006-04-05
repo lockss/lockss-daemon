@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.55 2006-03-06 17:47:20 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.56 2006-04-05 22:55:04 tlipkis Exp $
  */
 
 /*
@@ -766,18 +766,26 @@ public class RemoteApi
 				       BackupInfo bi) {
     Configuration allPlugs = allAuConfig.getConfigTree(PARAM_AU_TREE);
     BatchAuStatus bas = new BatchAuStatus();
-    for (Iterator iter = allPlugs.nodeIterator(); iter.hasNext(); ) {
-      String pluginKey = (String)iter.next();
-      PluginProxy pluginp = findPluginProxy(pluginKey);
-      // Do not dereference pluginp before null check in batchProcessOneAu()
-      Configuration pluginConf = allPlugs.getConfigTree(pluginKey);
-      for (Iterator auIter = pluginConf.nodeIterator(); auIter.hasNext(); ) {
-	String auKey = (String)auIter.next();
-	Configuration auConf = pluginConf.getConfigTree(auKey);
-	String auid = PluginManager.generateAuId(pluginKey, auKey);
-	bas.add(batchProcessOneAu(doCreate, addOp,
-				  pluginp, auid, auConf, bi));
+    try {
+      configMgr.doingAuBatch(true);
+      for (Iterator iter = allPlugs.nodeIterator(); iter.hasNext(); ) {
+	String pluginKey = (String)iter.next();
+	PluginProxy pluginp = findPluginProxy(pluginKey);
+	// Do not dereference pluginp before null check in batchProcessOneAu()
+	Configuration pluginConf = allPlugs.getConfigTree(pluginKey);
+	for (Iterator auIter = pluginConf.nodeIterator(); auIter.hasNext(); ) {
+	  String auKey = (String)auIter.next();
+	  Configuration auConf = pluginConf.getConfigTree(auKey);
+	  String auid = PluginManager.generateAuId(pluginKey, auKey);
+	  bas.add(batchProcessOneAu(doCreate, addOp,
+				    pluginp, auid, auConf, bi));
+	}
       }
+    } finally {
+      configMgr.doingAuBatch(false);
+    }	       
+    if (doCreate) {
+      configMgr.requestReload();
     }
     return bas;
   }
@@ -1044,8 +1052,7 @@ public class RemoteApi
 	stat.setExplanation("Plugin not found: " + plugName);
       } else {
 	try {
-	  String auid = PluginManager.generateAuId(pluginp.getPlugin(),
-						   tc.getConfig());
+ 	  String auid = tc.getAuId(pluginMgr, pluginp.getPlugin());
 	  stat =
 	    batchProcessOneAu(false, BATCH_ADD_ADD, pluginp,
 			      auid, tc.getConfig(), null);
