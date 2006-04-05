@@ -1,5 +1,5 @@
 /*
- * $Id: FuncNewContentCrawler.java,v 1.15 2005-10-06 23:42:45 troberts Exp $
+ * $Id: FuncNewContentCrawler.java,v 1.16 2006-04-05 22:34:54 tlipkis Exp $
  */
 
 /*
@@ -35,6 +35,9 @@ package org.lockss.crawler;
 import java.io.*;
 import java.util.*;
 
+import org.apache.commons.collections.Bag;
+import org.apache.commons.collections.bag.*;
+import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.simulated.*;
@@ -43,6 +46,8 @@ import org.lockss.test.*;
 import org.lockss.util.*;
 
 public class FuncNewContentCrawler extends LockssTestCase {
+  static Logger log = Logger.getLogger("FuncNewContentCrawler");
+
   private SimulatedArchivalUnit sau;
   private MockLockssDaemon theDaemon;
   private static final int DEFAULT_MAX_DEPTH = 1000;
@@ -71,7 +76,7 @@ public class FuncNewContentCrawler extends LockssTestCase {
   public void setUp(int max) throws Exception {
 
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    String auId = "org|lockss|plugin|simulated|SimulatedPlugin.root~" +
+    String auId = "org|lockss|crawler|FuncNewContentCrawler$MySimulatedPlugin.root~" +
       PropKeyEncoder.encode(tempDirPath);
     Properties props = new Properties();
     props.setProperty(NewContentCrawler.PARAM_MAX_CRAWL_DEPTH, ""+max);
@@ -126,14 +131,13 @@ public class FuncNewContentCrawler extends LockssTestCase {
     File dir = new File(simDir);
     if(dir.isDirectory()) {
        File f[] = dir.listFiles();
-       System.out.println("Starting to check through the simulated content. " +
-			  "Be patient to let it finish.");
+       log.debug("Checking simulated content.");
        checkThruFileTree(f, myCUS);
 
-       System.out.println("Check finish.");
+       log.debug("Check finished.");
     } else {
-      System.out.println("Error: The root path of the simulated" +
-			 " content ["+ dir +"] is not a directory");
+      log.error("Error: The root path of the simulated" +
+		" content ["+ dir +"] is not a directory");
     }
 
     // Test PluginManager.getAuContentSize(), just because this is a
@@ -141,7 +145,17 @@ public class FuncNewContentCrawler extends LockssTestCase {
     // end.)  If the simulated AU params are changed, or
     // SimulatedContentGenerator is changed, this number may have to
     // change.
-    assertEquals(25126, AuUtil.getAuContentSize(sau));
+    assertEquals(25598, AuUtil.getAuContentSize(sau));
+
+    List sbc = ((MySimulatedArchivalUnit)sau).sbc;
+    Bag b = new HashBag(sbc);
+    Set uniq = new HashSet(b.uniqueSet());
+    for (Iterator iter = uniq.iterator(); iter.hasNext(); ) {
+      b.remove(iter.next(), 1);
+    }
+    // Permission pages get checked twice.  Hard to avoid that, so allow it
+    b.removeAll(sau.getCrawlSpec().getPermissionPages());
+    assertEmpty("shouldBeCached() called multiple times on same URLs.", b);
   }
 
   //recursive caller to check through the whole file tree
@@ -155,11 +169,10 @@ public class FuncNewContentCrawler extends LockssTestCase {
 	   // get the f[ix] 's level information
 	   String fileUrl = sau.mapContentFileNameToUrl(f[ix].getAbsolutePath());
 	   int fileLevel = sau.getLinkDepth(fileUrl);
-	   System.out.println("File: " + fileUrl + " in Level " + fileLevel);
+	   log.debug2("File: " + fileUrl + " in Level " + fileLevel);
 
 	   CachedUrl cu = sau.makeCachedUrl(fileUrl);
 	   if (fileLevel <= maxDepth) {
-// 	     assertTrue(cu !=null && cu.hasContent());
 	     assertTrue(cu + " has no content", cu.hasContent());
 	   } else {
 	     assertFalse(cu + " has content when it shouldn't",
@@ -171,18 +184,38 @@ public class FuncNewContentCrawler extends LockssTestCase {
   }
 
   private void createContent() {
-    System.out.println("Generating tree of size 3x1x2 with "+fileSize
-                       +"byte files...");
+    log.debug("Generating tree of size 3x1x2 with "+fileSize
+	      +"byte files...");
     sau.generateContentTree();
   }
 
   private void crawlContent() {
-    System.out.println("Crawling tree...");
+    log.debug("Crawling tree...");
     CrawlSpec spec = new SpiderCrawlSpec(SimulatedArchivalUnit.SIMULATED_URL_START, null);
     Crawler crawler = new NewContentCrawler(sau, spec, new MockAuState());
     crawler.doCrawl();
   }
 
+  public static class MySimulatedPlugin extends SimulatedPlugin {
+    public ArchivalUnit createAu(Configuration auConfig)
+	throws ArchivalUnit.ConfigurationException {
+      ArchivalUnit au = new MySimulatedArchivalUnit(this);
+      au.setConfiguration(auConfig);
+      return au;
+    }
+  }
+
+  public static class MySimulatedArchivalUnit extends SimulatedArchivalUnit {
+    List sbc = new ArrayList();
+
+    public MySimulatedArchivalUnit(Plugin owner) {
+      super(owner);
+    }
+
+    public boolean shouldBeCached(String url) {
+      sbc.add(url);
+      return super.shouldBeCached(url);
+    }
+  }
 
 }
-

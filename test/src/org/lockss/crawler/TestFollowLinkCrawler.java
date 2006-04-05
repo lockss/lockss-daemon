@@ -1,5 +1,5 @@
 /*
- * $Id: TestFollowLinkCrawler.java,v 1.14 2006-02-28 09:08:15 tlipkis Exp $
+ * $Id: TestFollowLinkCrawler.java,v 1.15 2006-04-05 22:34:54 tlipkis Exp $
  */
 
 /*
@@ -52,7 +52,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
   private MockCrawlRule crawlRule = null;
   private String startUrl = "http://www.example.com/index.html";
   private List startUrls = ListUtil.list(startUrl);
-  private BaseCrawler crawler = null;
+  private TestableFollowLinkCrawler crawler = null;
   private MockContentParser parser = new MockContentParser();
 
   private static final String PARAM_RETRY_TIMES =
@@ -636,7 +636,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
       };
     Set extractedUrls = new HashSet();
     TestableFollowLinkCrawler.MyFoundUrlCallback mfuc =
-      new TestableFollowLinkCrawler.MyFoundUrlCallback(Collections.EMPTY_SET,
+      crawler.newFoundUrlCallback(Collections.EMPTY_SET,
 					       extractedUrls, mau);
     mfuc.foundUrl("http://www.example.com/foo.bar");
     mfuc.foundUrl("http://www.example.com/SESSION/foo.bar");
@@ -860,7 +860,6 @@ public class TestFollowLinkCrawler extends LockssTestCase {
       lastMmuc = new MyMockUrlCacher(url, this);
       return lastMmuc;
     }
-
   }
 
 
@@ -986,6 +985,12 @@ public class TestFollowLinkCrawler extends LockssTestCase {
       crawlStatus = new Crawler.Status(au,
 		    ((SpiderCrawlSpec)spec).getStartingUrls(),
 		    null);
+    }
+
+    MyFoundUrlCallback newFoundUrlCallback(Set parsedPages,
+					   Collection extractedUrls,
+					   ArchivalUnit au) {
+      return new MyFoundUrlCallback(parsedPages, extractedUrls, au);
     }
 
     protected boolean shouldFollowLink(){

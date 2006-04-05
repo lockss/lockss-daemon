@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.37 2006-02-14 05:19:49 tlipkis Exp $
+ * $Id: FollowLinkCrawler.java,v 1.38 2006-04-05 22:34:54 tlipkis Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.crawler;
 import java.util.*;
 import java.net.*;
 import java.io.*;
+import org.apache.commons.collections.map.LRUMap;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.config.*;
@@ -50,7 +51,15 @@ import org.lockss.state.*;
 public abstract class FollowLinkCrawler extends BaseCrawler {
 
   static Logger logger = Logger.getLogger("FollowLinkCrawler");
+
+  // Cache recent negative results from au.shouldBeCached().  This is set
+  // to an LRUMsp when crawl is initialzed, it's initialized here to a
+  // simple map for the sake of test code, which doesn't call
+  // this.setCrawlConfig().  If we want to report all excluded URLs, this
+  // can be changed to a simple Set.
+  private Map excludedUrlCache = new HashMap();
   private Set failedUrls = new HashSet();
+  private Set urlsToCrawl = Collections.EMPTY_SET;
 
   private static final String PARAM_RETRY_TIMES =
     Configuration.PREFIX + "BaseCrawler.numCacheRetries";
@@ -67,6 +76,10 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
   public static final String PARAM_PERSIST_CRAWL_LIST =
     Configuration.PREFIX + "BaseCrawler.persist_crawl_list";
   public static final boolean DEFAULT_PERSIST_CRAWL_LIST = false;
+
+  public static final String PARAM_EXCLUDED_CACHE_SIZE =
+    Configuration.PREFIX + "BaseCrawler.excluded_cache_size";
+  public static final int DEFAULT_EXCLUDED_CACHE_SIZE = 1000;
 
   public static final String PARAM_REFETCH_DEPTH =
     Configuration.PREFIX + "crawler.refetchDepth.au.<auid>";
@@ -122,6 +135,11 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
     maxDepth = config.getInt(PARAM_MAX_CRAWL_DEPTH, DEFAULT_MAX_CRAWL_DEPTH);
     maxRetries = config.getInt(PARAM_RETRY_TIMES, DEFAULT_RETRY_TIMES);
 
+    excludedUrlCache =
+      new LRUMap(config.getInt(PARAM_EXCLUDED_CACHE_SIZE,
+			       DEFAULT_EXCLUDED_CACHE_SIZE));
+
+
     fetchFlags = new BitSet();
     if (config.getBoolean(PARAM_CLEAR_DAMAGE_ON_FETCH,
  			  DEFAULT_CLEAR_DAMAGE_ON_FETCH)) {
@@ -162,6 +180,8 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
       return aborted();
     }
 
+    urlsToCrawl = Collections.EMPTY_SET;
+
     // get the Urls to follow from either NewContentCrawler or OaiCrawler
     extractedUrls = getUrlsToFollow();
     logger.debug3("Urls extracted from getUrlsToFollow() : "
@@ -170,10 +190,6 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
     if (crawlAborted) {
         return aborted();
     }
-
-    //we don't alter the crawl list from AuState until we've enumerated the
-    //urls that need to be recrawled.
-    Set urlsToCrawl;
 
     if (usePersistantList) {
       urlsToCrawl = aus.getCrawlUrls();
@@ -189,22 +205,13 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
       extractedUrls = new HashSet(); // level (N+1)'s Urls
 
       while (!urlsToCrawl.isEmpty() && !crawlAborted) {
-	//XXX Could we have a SetUtil.removeElement() instead ?
-	String nextUrl = (String)CollectionUtil.removeElement(urlsToCrawl);
+ 	String nextUrl = (String)CollectionUtil.getAnElement(urlsToCrawl);
 
 	logger.debug3("Trying to process " + nextUrl);
 
 	// check crawl window during crawl
 	if (!withinCrawlWindow()) {
 	  crawlStatus.setCrawlError(Crawler.STATUS_WINDOW_CLOSED);
-	  if (usePersistantList) {
-	    // add the nextUrl back to the collection
-	    urlsToCrawl.add(nextUrl);
-
-	    //XXX we can actually do this in another way, which is not update the
-	    // the crawlUrls in AuState, however, I do not know when crawlUrls is
-	    // being updated.
-	  }
 	  return false;
 	}
 	boolean crawlRes = false;
@@ -214,6 +221,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	} catch (RuntimeException e) {
 	  logger.warning("Unexpected exception in crawl", e);
 	}
+	urlsToCrawl.remove(nextUrl);
 	if  (!crawlRes) {
 	  if (crawlStatus.getCrawlError() == null) {
 	    crawlStatus.setCrawlError(Crawler.STATUS_ERROR);
@@ -248,8 +256,6 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
     } else {
       logger.info("Finished crawl of "+au.getName());
     }
-
-    logCrawlSpecCacheRate();
 
     doCrawlEndActions();
     return (crawlStatus.getCrawlError() == null);
@@ -380,8 +386,8 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	    }
 	    crawlStatus.signalUrlParsed(uc.getUrl());
 	  }
+	  parsedPages.add(uc.getUrl());
 	}
-	parsedPages.add(uc.getUrl());
 	cu.release();
       }
     } catch (IOException ioe) {
@@ -482,11 +488,11 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
     return null;
   }
 
-  static class MyFoundUrlCallback
+  class MyFoundUrlCallback
     implements ContentParser.FoundUrlCallback {
-    Set parsedPages = null;
-    Collection extractedUrls = null;
-    ArchivalUnit au = null;
+    Set parsedPages;
+    Collection extractedUrls;
+    ArchivalUnit au;
 
     public MyFoundUrlCallback(Set parsedPages, Collection extractedUrls,
 			      ArchivalUnit au) {
@@ -509,23 +515,33 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	  logger.debug3("Found "+url);
 	  logger.debug3("Normalized to "+normUrl);
 	}
+	// au.shouldBeCached() is expensive, don't call it if we already
+	// know the answer
 	if (!parsedPages.contains(normUrl)
-	    && !extractedUrls.contains(normUrl)
-	    && au.shouldBeCached(normUrl)) {
-	  if (logger.isDebug2()) {
-	    logger.debug2("Adding to extracted urls "+normUrl);
+ 	    && !extractedUrls.contains(normUrl)
+ 	    && !urlsToCrawl.contains(normUrl)
+	    && !excludedUrlCache.containsKey(normUrl)
+	    && !failedUrls.contains(normUrl)) {
+	  if (au.shouldBeCached(normUrl)) {
+	    if (logger.isDebug2()) {
+	      logger.debug2("Included url: "+normUrl);
+	    }
+	    extractedUrls.add(normUrl);
+	  } else {
+	    if (logger.isDebug2()) {
+	      logger.debug2("Excluded url: "+normUrl);
+	    }
+	    excludedUrlCache.put(normUrl, "");
 	  }
-	  extractedUrls.add(normUrl);
 	} else if (logger.isDebug3()) {
-	  logger.debug3("Didn't cache "+normUrl+" because:");
-	  if (!au.shouldBeCached(normUrl)) {
-	    logger.debug3(normUrl+" didn't match crawl rules");
-	  }
 	  if (extractedUrls.contains(normUrl)) {
-	    logger.debug3(normUrl+" already extracted");
+	    logger.debug3("Already extracted url: " + normUrl);
 	  }
 	  if (parsedPages.contains(normUrl)) {
-	    logger.debug3(normUrl+" already parsed");
+	    logger.debug3("Already processed url: " + normUrl);
+	  }
+	  if (failedUrls.contains(normUrl)) {
+	    logger.debug3("Already failed url: " + normUrl);
 	  }
 	}
       } catch (MalformedURLException e) {
