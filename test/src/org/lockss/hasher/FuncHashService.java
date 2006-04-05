@@ -1,5 +1,5 @@
 /*
- * $Id: FuncHashService.java,v 1.12 2005-10-19 00:23:55 tlipkis Exp $
+ * $Id: FuncHashService.java,v 1.13 2006-04-05 22:26:39 tlipkis Exp $
  */
 
 /*
@@ -37,7 +37,7 @@ import java.io.*;
 import java.security.MessageDigest;
 import junit.framework.*;
 
-import org.lockss.config.ConfigManager;
+import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
@@ -163,7 +163,7 @@ public class FuncHashService extends LockssTestCase {
   }
 
   int stepBytes() {
-    return ConfigManager.getIntParam(HashService.PARAM_STEP_BYTES,
+    return CurrentConfig.getIntParam(HashService.PARAM_STEP_BYTES,
 				     HashService.DEFAULT_STEP_BYTES);
   }
 

@@ -53,7 +53,7 @@ public class SyslogTarget implements LogTarget{
 
   /** Initialize this log target */
   public void init() {
-    Configuration.registerConfigurationCallback(new Configuration.Callback() {
+    ConfigManager.getConfigManager().registerConfigurationCallback(new Configuration.Callback() {
 	public void configurationChanged(Configuration newConfig,
 					 Configuration oldConfig,
 					 Configuration.Differences changedKeys) {

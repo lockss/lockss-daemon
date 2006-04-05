@@ -1,5 +1,5 @@
 /*
- * $Id: TestTaskRunner.java,v 1.13 2005-10-11 05:51:20 tlipkis Exp $
+ * $Id: TestTaskRunner.java,v 1.14 2006-04-05 22:26:38 tlipkis Exp $
  */
 
 /*
@@ -61,6 +61,7 @@ public class TestTaskRunner extends LockssTestCase {
     removedTasks = new ArrayList();
     fact = new SchedFact(null);
     tr = new MyMockTaskRunner(fact);
+    tr.initService(getMockLockssDaemon());
     tr.startService();
   }
 
@@ -602,6 +603,7 @@ public class TestTaskRunner extends LockssTestCase {
       tr.stopService();
     }
     tr = newTr;
+    tr.initService(getMockLockssDaemon());
     tr.startService();
   }
 

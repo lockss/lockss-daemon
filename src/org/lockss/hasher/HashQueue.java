@@ -1,5 +1,5 @@
 /*
- * $Id: HashQueue.java,v 1.49 2005-10-19 00:23:55 tlipkis Exp $
+ * $Id: HashQueue.java,v 1.50 2006-04-05 22:26:41 tlipkis Exp $
  */
 
 /*
@@ -41,7 +41,7 @@ import java.text.*;
 import java.math.*;
 import java.security.MessageDigest;
 
-import org.lockss.config.Configuration;
+import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
 import org.lockss.util.*;
@@ -289,7 +289,7 @@ class HashQueue {
 
   // Register config callback
   private void registerConfigCallback() {
-    Configuration.registerConfigurationCallback(new Configuration.Callback() {
+    ConfigManager.getConfigManager().registerConfigurationCallback(new Configuration.Callback() {
 	public void configurationChanged(Configuration newConfig,
 					 Configuration oldConfig,
 					 Configuration.Differences changedKeys) {

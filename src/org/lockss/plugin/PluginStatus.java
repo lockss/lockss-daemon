@@ -1,5 +1,5 @@
 /*
- * $Id: PluginStatus.java,v 1.6 2005-11-16 04:25:22 tlipkis Exp $
+ * $Id: PluginStatus.java,v 1.7 2006-04-05 22:26:41 tlipkis Exp $
  */
 
 /*
@@ -211,7 +211,7 @@ class PluginDetail extends PluginStatus implements StatusAccessor {
     if (plug instanceof DefinablePlugin) {
       DefinablePlugin dplug = (DefinablePlugin)plug;
       plugDef = dplug.getDefinitionMap();
-      if (ConfigManager.getBooleanParam(PARAM_PLUGIN_SHOWDEF,
+      if (CurrentConfig.getBooleanParam(PARAM_PLUGIN_SHOWDEF,
 					DEFAULT_PLUGIN_DHOWDEF)) {
 	table.setColumnDescriptors(colDescs);
 	table.setRows(getRows(dplug, plugDef));

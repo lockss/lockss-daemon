@@ -1,5 +1,5 @@
 /*
- * $Id: BatchAuConfig.java,v 1.28 2006-03-16 01:41:19 thib_gc Exp $
+ * $Id: BatchAuConfig.java,v 1.29 2006-04-05 22:26:39 tlipkis Exp $
  */
 
 /*
@@ -303,7 +303,7 @@ public class BatchAuConfig extends LockssServlet {
     layoutErrorBlock(page);
 
     // Prepare sets
-    String grayAction = ConfigManager.getParam(PARAM_GREY_TITLESET_ACTION,
+    String grayAction = CurrentConfig.getParam(PARAM_GREY_TITLESET_ACTION,
                                                DEFAULT_GREY_TITLESET_ACTION);
     boolean doGray = "All".equalsIgnoreCase(grayAction) ||
       (verb == VERB_ADD && "Add".equalsIgnoreCase(grayAction));

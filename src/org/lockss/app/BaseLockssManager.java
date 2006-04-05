@@ -1,5 +1,5 @@
 /*
- * $Id: BaseLockssManager.java,v 1.18 2005-12-01 23:28:01 troberts Exp $
+ * $Id: BaseLockssManager.java,v 1.19 2006-04-05 22:26:42 tlipkis Exp $
  */
 
 /*
@@ -101,19 +101,20 @@ public abstract class BaseLockssManager implements LockssManager {
 				       + callback);
     }
     configCallback = callback;
-    Configuration.registerConfigurationCallback(configCallback);
+
+    theApp.getConfigManager().registerConfigurationCallback(configCallback);
   }
 
   private void registerDefaultConfigCallback() {
     if (this instanceof ConfigurableManager) {
       configCallback = new DefaultConfigCallback((ConfigurableManager)this);
-      Configuration.registerConfigurationCallback(configCallback);
+      theApp.getConfigManager().registerConfigurationCallback(configCallback);
     }
   }
 
   private void unregisterConfig() {
     if(configCallback != null) {
-      Configuration.unregisterConfigurationCallback(configCallback);
+      theApp.getConfigManager().unregisterConfigurationCallback(configCallback);
       configCallback = null;
     }
   }

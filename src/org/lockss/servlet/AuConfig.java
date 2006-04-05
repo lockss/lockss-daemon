@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.54 2006-03-16 01:41:19 thib_gc Exp $
+ * $Id: AuConfig.java,v 1.55 2006-04-05 22:26:40 tlipkis Exp $
  */
 
 /*
@@ -372,7 +372,7 @@ public class AuConfig extends LockssServlet {
     java.util.List titles = remoteApi.findAllTitles();
     if (!titles.isEmpty()) {
       boolean includePluginInTitleSelect =
-	ConfigManager.getBooleanParam(PARAM_INCLUDE_PLUGIN_IN_TITLE_SELECT,
+	CurrentConfig.getBooleanParam(PARAM_INCLUDE_PLUGIN_IN_TITLE_SELECT,
 				      DEFAULT_INCLUDE_PLUGIN_IN_TITLE_SELECT);
       tbl.newRow();
       tbl.newCell("align=center");
@@ -827,7 +827,7 @@ public class AuConfig extends LockssServlet {
     defKeys = new ArrayList();
     editKeys = new ArrayList();
     boolean allowEditDefaultOnly =
-      ConfigManager.getBooleanParam(PARAM_ALLOW_EDIT_DEFAULT_ONLY_PARAMS,
+      CurrentConfig.getBooleanParam(PARAM_ALLOW_EDIT_DEFAULT_ONLY_PARAMS,
 				    DEFAULT_ALLOW_EDIT_DEFAULT_ONLY_PARAMS);
     for (Iterator iter = auConfigParams.iterator(); iter.hasNext(); ) {
       ConfigParamDescr descr = (ConfigParamDescr)iter.next();

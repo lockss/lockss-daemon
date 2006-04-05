@@ -1,5 +1,5 @@
 /*
- * $Id: SchedService.java,v 1.12 2005-12-01 01:54:43 smorabito Exp $
+ * $Id: SchedService.java,v 1.13 2006-04-05 22:26:41 tlipkis Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.scheduler;
 import java.io.*;
 import java.util.*;
+import org.lockss.app.*;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
 import org.lockss.util.*;
@@ -43,7 +44,7 @@ import org.lockss.app.*;
  * Currently a single TaskRunner is used; this could be changed to take
  * advantage of multiprocessors.
  */
-public class SchedService extends BaseLockssManager {
+public class SchedService extends BaseLockssDaemonManager {
   protected static Logger log = Logger.getLogger("SchedService");
 
   private TaskRunner runner = null;
@@ -61,6 +62,7 @@ public class SchedService extends BaseLockssManager {
 	public Scheduler createScheduler() {
 	  return new SortScheduler();
 	}});
+    runner.initService(getDaemon());
     runner.startService();
     getApp().getStatusService().
       registerStatusAccessor("SchedQ", runner.getStatusAccessor());
