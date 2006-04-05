@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.81 2006-03-24 23:20:55 thib_gc Exp $
+ * $Id: LockssTestCase.java,v 1.82 2006-04-05 22:08:53 tlipkis Exp $
  */
 
 /*
@@ -1171,6 +1171,22 @@ public class LockssTestCase extends TestCase {
     assertTrue("Expected "+expected+" but was "+actual,
 	       org.apache.commons.collections.
 	       CollectionUtils.isEqualCollection(expected, actual));
+  }
+
+  /**
+   * Asserts that the collection contains no duplicate elements
+   */
+  public static void assertNoDuplicates(Collection c) {
+    assertNoDuplicates("Duplicates found", c);
+  }
+
+  /**
+   * Asserts that the collection contains no duplicate elements
+   */
+  public static void assertNoDuplicates(String message, Collection c) {
+    if (c.size() != SetUtil.theSet(c).size()) {
+      fail(message + ": "  + c);
+    }
   }
 
   /**

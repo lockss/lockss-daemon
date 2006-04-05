@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssTestCase.java,v 1.11 2006-03-24 23:20:55 thib_gc Exp $
+ * $Id: TestLockssTestCase.java,v 1.12 2006-04-05 22:08:53 tlipkis Exp $
  */
 
 /*
@@ -262,6 +262,19 @@ public class TestLockssTestCase extends LockssTestCase {
     }
     if (!exceptionThrown) {
       fail("assertNotEquals should have thrown an AssertionFailedException");
+    }
+  }
+
+  public void testAssertNoDuplicates() {
+    try {
+      assertNoDuplicates(ListUtil.list("a", "b", "c"));
+    } catch (AssertionFailedError afe) {
+      fail("assertNoDuplicates([\"a\", \"b\", \"c\"]) failed");
+    }
+    try {
+      assertNoDuplicates(ListUtil.list("a", "b", "a"));
+      fail("assertNoDuplicates([\"a\", \"b\", \"a\"]) should have failed");
+    } catch (AssertionFailedError afe) {
     }
   }
 
