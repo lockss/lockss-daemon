@@ -1,5 +1,5 @@
 /*
- * $Id: JarConfigFile.java,v 1.4 2005-09-22 18:36:13 thib_gc Exp $
+ * $Id: JarConfigFile.java,v 1.5 2006-04-05 22:29:09 tlipkis Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import java.util.jar.*;
  * JAR Urls should look something like:
  *    jar:file:///path/to/jar!/some/resource
  */
-public class JarConfigFile extends ConfigFile {
+public class JarConfigFile extends BaseConfigFile {
   private File m_jarFile;
 //   private String m_entryTime;
 

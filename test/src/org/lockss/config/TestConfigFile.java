@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigFile.java,v 1.2 2006-03-27 08:49:55 tlipkis Exp $
+ * $Id: TestConfigFile.java,v 1.3 2006-04-05 22:29:09 tlipkis Exp $
  */
 
 /*
@@ -199,6 +199,30 @@ public abstract class TestConfigFile extends LockssTestCase {
     testIllContent(badConfig, true, "SAXParseException");
   }
 
+  public void testGeneration() throws IOException {
+    ConfigFile cf = makeConfigFile("aa=54", false);
+
+    assertFalse(cf.isLoaded());
+    ConfigFile.Generation gen = cf.getGeneration();
+    assertTrue(cf.isLoaded());
+    assertEquals(cf.getConfiguration(), gen.getConfig());
+
+    TimerUtil.guaranteedSleep(1);
+    assertEquals(gen.getGeneration(), cf.getGeneration().getGeneration());
+    assertEquals(gen.getUrl(), cf.getGeneration().getUrl());
+    assertEquals(gen.getConfig(), cf.getGeneration().getConfig());
+
+    TimerUtil.guaranteedSleep(1);
+    cf.setNeedsReload();
+    assertEquals(cf.getConfiguration(), gen.getConfig());
+
+    updateLastModified(cf, TimeBase.nowMs() + Constants.SECOND);
+    cf.setNeedsReload();
+    ConfigFile.Generation gen2 = cf.getGeneration();
+    assertEquals(gen.getGeneration() + 1, gen2.getGeneration());
+    assertEqualsNotSame(gen.getConfig(), gen2.getConfig());
+  }
+
   /** Test FileConfigFile */
   public static class TestFile extends TestConfigFile {
     public TestFile(String name) {
@@ -227,6 +251,29 @@ public abstract class TestConfigFile extends LockssTestCase {
     public void testNotFound() throws IOException {
       testCantRead(new FileConfigFile("/file/not/found"),
 		   "FileNotFoundException");
+    }
+
+    // Ensure storedConfig() of a sealed config doesn't make a copy
+    public void testStoredConfigSealed() throws IOException {
+      FileConfigFile fcf = (FileConfigFile)makeConfigFile("a=1\nb1=a", false);
+      Configuration c = fcf.getConfiguration();
+      Configuration c2 = ConfigurationUtil.fromArgs("x", "y");
+      assertSame(c, fcf.getConfiguration());
+      assertNotSame(c2, fcf.getConfiguration());
+      c2.seal();
+      fcf.storedConfig(c2);
+      assertSame(c2, fcf.getConfiguration());
+    }
+
+    // Ensure storedConfig() of an unsealed config does make a copy
+    public void testStoredConfigUnsealed() throws IOException {
+      FileConfigFile fcf = (FileConfigFile)makeConfigFile("a=1\nb1=a", false);
+      Configuration c = fcf.getConfiguration();
+      Configuration c2 = ConfigurationUtil.fromArgs("x", "y");
+      assertSame(c, fcf.getConfiguration());
+      assertNotSame(c2, fcf.getConfiguration());
+      fcf.storedConfig(c2);
+      assertEqualsNotSame(c2, fcf.getConfiguration());
     }
   }
 

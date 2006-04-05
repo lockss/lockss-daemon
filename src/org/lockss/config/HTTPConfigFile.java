@@ -1,5 +1,5 @@
 /*
- * $Id: HTTPConfigFile.java,v 1.7 2006-03-27 08:49:55 tlipkis Exp $
+ * $Id: HTTPConfigFile.java,v 1.8 2006-04-05 22:29:12 tlipkis Exp $
  */
 
 /*
@@ -43,7 +43,7 @@ import org.lockss.util.urlconn.*;
  * A ConfigFile loaded from a URL.
  *
  */
-public class HTTPConfigFile extends ConfigFile {
+public class HTTPConfigFile extends BaseConfigFile {
 
   public static final String PREFIX = Configuration.PREFIX + "config.";
 

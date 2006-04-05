@@ -1,5 +1,5 @@
 /*
- * $Id: FileConfigFile.java,v 1.7 2005-09-22 18:36:13 thib_gc Exp $
+ * $Id: FileConfigFile.java,v 1.8 2006-04-05 22:29:12 tlipkis Exp $
  */
 
 /*
@@ -41,7 +41,7 @@ import org.lockss.util.*;
  * generic Configuration loaded from disk.
  */
 
-public class FileConfigFile extends ConfigFile {
+public class FileConfigFile extends BaseConfigFile {
   private File m_fileFile;
 
   public FileConfigFile(String url)  {
@@ -70,12 +70,20 @@ public class FileConfigFile extends ConfigFile {
    * can remember the modification time. */
   // XXX ConfigFile should handle file writing internally
   public void storedConfig(Configuration newConfig) throws IOException {
-    ConfigurationPropTreeImpl nc = new ConfigurationPropTreeImpl();
-    nc.copyFrom(newConfig);
+      
+    ConfigurationPropTreeImpl nc;
+    if (newConfig.isSealed() &&
+	newConfig instanceof ConfigurationPropTreeImpl) {
+      nc = (ConfigurationPropTreeImpl)newConfig;
+    } else {
+      nc = new ConfigurationPropTreeImpl();
+      nc.copyFrom(newConfig);
+    }
     nc.seal();
     m_config = nc;
     m_lastModified = Long.toString(m_fileFile.lastModified());
     log.debug2("storedConfig at: " + m_lastModified);
+    m_generation++;
   }
 
    protected InputStream openInputStream() throws IOException {
