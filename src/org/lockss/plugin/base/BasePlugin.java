@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.36 2006-01-12 03:13:31 smorabito Exp $
+ * $Id: BasePlugin.java,v 1.37 2006-04-05 22:54:41 tlipkis Exp $
  */
 
 /*
@@ -48,7 +48,7 @@ public abstract class BasePlugin
   // Below org.lockss.title.xxx.
   static final String TITLE_PARAM_TITLE = "title";
   static final String TITLE_PARAM_JOURNAL = "journalTitle";
-  static final String TITLE_PARAM_PLUGIN = "plugin";
+  public static final String TITLE_PARAM_PLUGIN = "plugin";
   static final String TITLE_PARAM_PLUGIN_VERSION = "pluginVersion";
   static final String TITLE_PARAM_EST_SIZE = "estSize";
   static final String TITLE_PARAM_ATTRIBUTES = "attributes";
@@ -75,12 +75,16 @@ public abstract class BasePlugin
     theDaemon = daemon;
     pluginMgr = theDaemon.getPluginManager();
 
-    Configuration.registerConfigurationCallback(new Configuration.Callback() {
+    theDaemon.getConfigManager().registerConfigurationCallback(new Configuration.Callback() {
 	public void configurationChanged(Configuration newConfig,
 					 Configuration prevConfig,
 					 Configuration.Differences changedKeys) {
 	  setConfig(newConfig, prevConfig, changedKeys);
-	}});
+	}
+	public String toString() {
+	  return getPluginId();
+	}
+      });
     initResultMap();
   }
 
@@ -132,29 +136,29 @@ public abstract class BasePlugin
 			   Configuration prevConfig,
 			   Configuration.Differences changedKeys) {
     if (changedKeys.contains(PARAM_TITLE_DB)) {
-      setTitleConfigFromConfig(newConfig.getConfigTree(PARAM_TITLE_DB));
+      setTitleConfig(newConfig);
     }
   }
 
-  private void setTitleConfigFromConfig(Configuration allTitles) {
+  private void setTitleConfig(Configuration config) {
     String myName = getPluginId();
     Map titleMap = new HashMap();
-    for (Iterator iter = allTitles.nodeIterator(); iter.hasNext(); ) {
-      String titleKey = (String)iter.next();
-      Configuration titleConfig = allTitles.getConfigTree(titleKey);
-      String pluginName = titleConfig.get(TITLE_PARAM_PLUGIN);
-      if (myName.equals(pluginName)) {
-	if (log.isDebug2()) {
-	  log.debug2("my titleKey: " + titleKey);
-	  log.debug2("my titleConfig: " + titleConfig);
-	}
-	String title = titleConfig.get(TITLE_PARAM_TITLE);
-	TitleConfig tc = initOneTitle(titleConfig);
-	titleMap.put(title, tc);
-      } else {
-	if (log.isDebug3()) {
-	  log.debug3("titleKey: " + titleKey);
-	  log.debug3("titleConfig: " + titleConfig);
+    Collection myTitles = config.getTitleConfigs(myName);
+    if (myTitles != null) {
+      for (Iterator iter = myTitles.iterator(); iter.hasNext(); ) {
+	Configuration titleConfig = (Configuration)iter.next();
+	String pluginName = titleConfig.get(TITLE_PARAM_PLUGIN);
+	if (myName.equals(pluginName)) {
+	  if (log.isDebug2()) {
+	    log.debug2("my titleConfig: " + titleConfig);
+	  }
+	  String title = titleConfig.get(TITLE_PARAM_TITLE);
+	  TitleConfig tc = initOneTitle(titleConfig);
+	  titleMap.put(title, tc);
+	} else {
+	  if (log.isDebug3()) {
+	    log.debug3("titleConfig: " + titleConfig);
+	  }
 	}
       }
     }
