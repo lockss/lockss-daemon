@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigManager.java,v 1.18 2006-03-28 23:24:13 thib_gc Exp $
+ * $Id: TestConfigManager.java,v 1.19 2006-04-05 22:30:18 tlipkis Exp $
  */
 
 /*
@@ -70,7 +70,7 @@ public class TestConfigManager extends LockssTestCase {
     "otherprop.p3.b=foo\n";
 
   private ConfigFile loadFCF(String url) throws IOException {
-    ConfigFile cf = new FileConfigFile(url);
+    FileConfigFile cf = new FileConfigFile(url);
     cf.reload();
     return cf;
   }
@@ -79,16 +79,7 @@ public class TestConfigManager extends LockssTestCase {
     Configuration config = ConfigManager.newConfiguration();
     config.load(loadFCF(FileTestUtil.urlOfString(c2)));
     mgr.setCurrentConfig(config);
-    assertEquals("12", ConfigManager.getParam("prop.p1"));
-    assertEquals("foobar", ConfigManager.getParam("prop.p2"));
-    assertTrue(ConfigManager.getBooleanParam("prop.p3.a", false));
-    assertEquals(12, ConfigManager.getIntParam("prop.p1"));
-    assertEquals(554, ConfigManager.getIntParam("propnot.p1", 554));
-    assertEquals(2 * Constants.WEEK,
-		 ConfigManager.getTimeIntervalParam("timeint", 554));
-    assertEquals(554, ConfigManager.getTimeIntervalParam("noparam", 554));
 
-    // these should go once static param methods are removed from Configuration
     assertEquals("12", CurrentConfig.getParam("prop.p1"));
     assertEquals("foobar", CurrentConfig.getParam("prop.p2"));
     assertTrue(CurrentConfig.getBooleanParam("prop.p3.a", false));
@@ -99,7 +90,7 @@ public class TestConfigManager extends LockssTestCase {
     assertEquals(554, CurrentConfig.getTimeIntervalParam("noparam", 554));
   }
 
-  boolean setCurrentConfigFromUrlList(List l) {
+  boolean setCurrentConfigFromUrlList(List l) throws IOException {
     Configuration config = mgr.readConfig(l);
     return mgr.installConfig(config);
   }
@@ -113,7 +104,7 @@ public class TestConfigManager extends LockssTestCase {
     assertTrue(setCurrentConfigFromUrlList(ListUtil.
 					   list(FileTestUtil.urlOfString(c1),
 						FileTestUtil.urlOfString(c1a))));
-    assertEquals("12", ConfigManager.getParam("prop1"));
+    assertEquals("12", CurrentConfig.getParam("prop1"));
     Configuration config = ConfigManager.getCurrentConfig();
     assertEquals("12", config.get("prop1"));
     assertEquals("12", config.get("prop1", "wrong"));
@@ -121,7 +112,7 @@ public class TestConfigManager extends LockssTestCase {
     assertTrue(config.getBoolean("prop3", false));
     assertEquals("yyy", config.get("prop4"));
     assertEquals("def", config.get("noprop", "def"));
-    assertEquals("def", ConfigManager.getParam("noprop", "def"));
+    assertEquals("def", CurrentConfig.getParam("noprop", "def"));
   }
 
   volatile Configuration.Differences cbDiffs = null;
@@ -195,6 +186,17 @@ public class TestConfigManager extends LockssTestCase {
 		 config.get("org.lockss.localV3Identity"));
     assertEquals(FileUtil.sysDepPath("/var/log/foo/bar"),
 		 config.get(FileTarget.PARAM_FILE));
+  }
+
+  public void testPlatformConfig() throws Exception {
+    Properties props = new Properties();
+    props.put("org.lockss.platform.localIPAddress", "1.2.3.4");
+    props.put("org.lockss.platform.v3.identity", "tcp:[1.2.3.4]:4321");
+    ConfigurationUtil.setCurrentConfigFromProps(props);
+    Configuration config = ConfigManager.getPlatformConfig();
+    assertEquals("1.2.3.4", config.get("org.lockss.localIPAddress"));
+    assertEquals("tcp:[1.2.3.4]:4321",
+		 config.get("org.lockss.localV3Identity"));
   }
 
   public void testGroup() throws Exception {
@@ -399,11 +401,10 @@ public class TestConfigManager extends LockssTestCase {
     mgr.writeCacheConfigFile(acprops, ConfigManager.CONFIG_FILE_UI_IP_ACCESS,
 			     "this is a header");
 
-    Configuration config = CurrentConfig.getCurrentConfig();
+    Configuration config = ConfigManager.getCurrentConfig();
     assertNull(config.get("foo.bar"));
-    ConfigurationUtil.setFromArgs(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
-				  tmpdir);
-    Configuration config2 = CurrentConfig.getCurrentConfig();
+    assertTrue(mgr.updateConfig());
+    Configuration config2 = ConfigManager.getCurrentConfig();
     assertEquals("12345", config2.get("foo.bar"));
   }
 
@@ -424,9 +425,8 @@ public class TestConfigManager extends LockssTestCase {
     // should create file first time
     mgr.updateAuConfigFile(p, "org.lockss.au.fooauid");
 
-    // reinstall should load au config file
-    ConfigurationUtil.setFromArgs(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
-				  tmpdir);
+    // next update should load au config file
+    assertTrue(mgr.updateConfig());
     config = CurrentConfig.getCurrentConfig();
     assertEquals("111", config.get("org.lockss.au.fooauid.foo"));
     assertEquals("222", config.get("org.lockss.au.fooauid.bar"));
@@ -438,10 +438,13 @@ public class TestConfigManager extends LockssTestCase {
     p = new Properties();
     p.put("org.lockss.au.auid.foo", "11");
     p.put("org.lockss.au.auid.bar", "22");
+
+    updateAuLastModified(TimeBase.nowMs() + Constants.SECOND);
+
     mgr.updateAuConfigFile(p, "org.lockss.au.auid");
 
-    ConfigurationUtil.setFromArgs(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
-				  tmpdir);
+    // next update should load au config file
+    assertTrue(mgr.updateConfig());
     config = CurrentConfig.getCurrentConfig();
     assertEquals("111", config.get("org.lockss.au.fooauid.foo"));
     assertEquals("222", config.get("org.lockss.au.fooauid.bar"));
@@ -456,14 +459,23 @@ public class TestConfigManager extends LockssTestCase {
 
     mgr.updateAuConfigFile(p, "org.lockss.au.fooauid");
 
-    ConfigurationUtil.setFromArgs(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
-				  tmpdir);
+    assertTrue(mgr.updateConfig());
     config = CurrentConfig.getCurrentConfig();
     assertEquals("111", config.get("org.lockss.au.fooauid.foo"));
     assertEquals("222", config.get("org.lockss.au.fooauid.bar"));
     assertEquals(null, config.get("org.lockss.au.fooauid.baz"));
     assertEquals("11", config.get("org.lockss.au.auid.foo"));
     assertEquals("22", config.get("org.lockss.au.auid.bar"));
+  }
+
+  void updateAuLastModified(long time) {
+    for (Iterator iter = mgr.getCacheConfigFiles().iterator();
+	 iter.hasNext(); ) {
+      File file = (File)iter.next();
+      if (ConfigManager.CONFIG_FILE_AU_CONFIG.equals(file.getName())) {
+	file.setLastModified(time);
+      }
+    }
   }
 
   public void testModifyCacheConfigFile() throws Exception {
@@ -540,11 +552,28 @@ public class TestConfigManager extends LockssTestCase {
     assertEquals("333", c2.get("org.lockss.au.fooauid.baz"));
   }
 
+  public void testIsChanged() throws IOException {
+    List gens;
+
+    String u1 = FileTestUtil.urlOfString("a=1");
+    String u2 = FileTestUtil.urlOfString("a=2");
+    gens = mgr.getConfigGenerations(ListUtil.list(u1, u2), true, "test");
+    assertTrue(mgr.isChanged(gens));
+    mgr.updateGenerations(gens);
+    assertFalse(mgr.isChanged(gens));
+    FileConfigFile cf = (FileConfigFile)mgr.getConfigCache().find(u2);
+    cf.storedConfig(newConfiguration());
+    gens = mgr.getConfigGenerations(ListUtil.list(u1, u2), true, "test");
+    assertTrue(mgr.isChanged(gens));
+  }
+
   public void testLoadList() throws IOException {
     Configuration config = newConfiguration();
-    mgr.loadList(config, ListUtil.list(FileTestUtil.urlOfString(c1),
-				       FileTestUtil.urlOfString(c1a)),
-		 true, false);
+    List gens =
+      mgr.getConfigGenerations(ListUtil.list(FileTestUtil.urlOfString(c1),
+					     FileTestUtil.urlOfString(c1a)),
+			       true, "props");
+    mgr.loadList(config, gens);
     assertEquals("12", config.get("prop1"));
     assertEquals("xxx", config.get("prop2"));
     assertTrue(config.getBoolean("prop3", false));
@@ -567,8 +596,7 @@ public class TestConfigManager extends LockssTestCase {
     assertFalse(mgr.hasLocalCacheConfig());
 
     // loading local shouldn't set flag because no files
-    Configuration config = new ConfigurationPropTreeImpl();
-    mgr.loadCacheConfigInto(config);
+    mgr.getCacheConfigGenerations();
     assertFalse(mgr.hasLocalCacheConfig());
 
     // write a local config file
@@ -578,7 +606,7 @@ public class TestConfigManager extends LockssTestCase {
     assertFalse(mgr.hasLocalCacheConfig());
 
     // load it to set flag
-    mgr.loadCacheConfigInto(config);
+    mgr.getCacheConfigGenerations();
 
     assertTrue(mgr.hasLocalCacheConfig());
   }

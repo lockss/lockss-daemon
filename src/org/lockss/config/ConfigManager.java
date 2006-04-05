@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.33 2006-03-28 23:24:13 thib_gc Exp $
+ * $Id: ConfigManager.java,v 1.34 2006-04-05 22:30:18 tlipkis Exp $
  */
 
 /*
@@ -150,7 +150,9 @@ public class ConfigManager implements LockssManager {
 
   private List configChangedCallbacks = new ArrayList();
 
+  private List cacheConfigFileList = null;
   private List configUrlList;	// list of config file urls
+  // XXX needs synchronization
   private List titledbUrlList;  // list of titledb JAR urls
   private String groupName;     // daemon group name
 
@@ -379,7 +381,7 @@ public class ConfigManager implements LockssManager {
     }
   }
 
-  public Configuration readConfig(List urlList) {
+  public Configuration readConfig(List urlList) throws IOException {
     return readConfig(urlList, null);
   }
 
@@ -387,10 +389,12 @@ public class ConfigManager implements LockssManager {
    * Return a new <code>Configuration</code> instance loaded from the
    * url list
    */
-  public Configuration readConfig(List urlList, String groupName) {
+  public Configuration readConfig(List urlList, String groupName)
+      throws IOException {
     if (urlList == null) {
       return null;
     }
+
     Configuration newConfig = newConfiguration();
 
     // Add platform-like params before calling loadList() as they affect
@@ -398,74 +402,8 @@ public class ConfigManager implements LockssManager {
     if (groupName != null) {
       newConfig.put(PARAM_DAEMON_GROUP, groupName);
     }
-    try {
-      boolean gotIt = loadList(newConfig, urlList, true, false);
-      if (gotIt) {
-	recentLoadError = null;
-	return newConfig;
-      } else {
-	recentLoadError =
-	  getLoadErrorMessage(newConfig.getFirstErrorFile(urlList));
-	return null;
-      }
-    } catch (Exception e) {
-      log.error("Error loading config", e);
-      recentLoadError = e.toString();
-      return null;
-    }
-  }
-
-  /**
-   * Try to load config from a list or urls
-   * @return true iff properties were successfully loaded
-   */
-  boolean loadList(Configuration config, List urls,
-		   boolean reload, boolean failOk) {
-    // Complete kludge until platform support changed.  Load local.txt
-    // first so can use values from it to control parsing of other files.
-    // Also save it so we can get local config values later even if
-    // rest of load fails
-    for (Iterator iter = urls.iterator(); iter.hasNext();) {
-      String url = (String)iter.next();
-      ConfigFile cf = configCache.find(url);
-      if (reload) {
-	// set reload flag on all files
-	cf.setNeedsReload();
-      }
-      if (cf.isPlatformFile()) {
-	try {
-	  config.load(cf);
-	} catch (IOException e) {
-	  log.warning("Couldn't preload platform file " + cf.getFileUrl(), e);
-	}
-      }
-    }
-    // do this even if no local.txt, to ensure platform-like params (e.g.,
-    // group) in initial config get into platformConfig even during testing.
-    platformConfig = config.copy();
-    platformConfig.seal();
-
-    // Load all of the config files in order.
-    for (Iterator iter = urls.iterator(); iter.hasNext();) {
-      String url = (String)iter.next();
-      try {
-	ConfigFile cf = configCache.find(url);
-	config.load(cf);
-      } catch (IOException e) {
-	if (e instanceof FileNotFoundException &&
-	    StringUtil.endsWithIgnoreCase(url, ".opt")) {
-	  log.info("Not loading props from nonexistent optional file: " + url);
-	} else {
-	  // This load failed.  Fail the whole thing.
-	  if (!failOk) {
-	    log.warning("Couldn't load props from " + url, e);
-	    config.reset();  // ensure config is empty
-	  }
-	  return false;
-	}
-      }
-    }
-    return true;
+    loadList(newConfig, getConfigGenerations(urlList, true, "props"));
+    return newConfig;
   }
 
   String getLoadErrorMessage(ConfigFile cf) {
@@ -483,18 +421,191 @@ public class ConfigManager implements LockssManager {
     }
   }
 
-  boolean updateConfig() {
-    Configuration newConfig = readConfig(configUrlList, groupName);
-    return installConfig(newConfig);
+  private Map generationMap = new HashMap();
+
+  int getGeneration(String url) {
+    Integer gen = (Integer)generationMap.get(url);
+    if (gen == null) return -1;
+    return gen.intValue();
   }
 
+  void setGeneration(String url, int gen) {
+    generationMap.put(url, new Integer(gen));
+  }
+
+  ConfigFile.Generation getConfigGeneration(String url, boolean required,
+					    String msg)
+      throws IOException {
+    log.debug2("Loading " + msg + " from: " + url);
+    return getConfigGeneration(configCache.find(url), required, msg);
+  }
+
+  ConfigFile.Generation getConfigGeneration(ConfigFile cf, boolean required,
+					    String msg)
+      throws IOException {
+    try {
+      cf.setNeedsReload();
+      return cf.getGeneration();
+    } catch (IOException e) {
+      String url = cf.getFileUrl();
+      if (e instanceof FileNotFoundException &&
+	  StringUtil.endsWithIgnoreCase(url, ".opt")) {
+	log.info("Not loading props from nonexistent optional file: " + url);
+	return null;
+      } else if (required) {
+	// This load failed.  Fail the whole thing.
+	log.warning("Couldn't load props from " + url, e);
+	recentLoadError = getLoadErrorMessage(cf);
+	throw e;
+      } else {
+	if (e instanceof FileNotFoundException) {
+	  log.debug3("Non-required file not found " + url);
+	} else {
+	  log.debug3("Unexpected error loaded non-required file " + url, e);
+	}
+	return null;
+      }
+    }
+  }
+
+  boolean isChanged(ConfigFile.Generation gen) {
+    boolean val = (gen.getGeneration() != getGeneration(gen.getUrl()));
+    return (gen.getGeneration() != getGeneration(gen.getUrl()));
+  }
+
+  boolean isChanged(Collection gens) {
+    for (Iterator iter = gens.iterator(); iter.hasNext(); ) {
+      ConfigFile.Generation gen = (ConfigFile.Generation)iter.next();
+      if (gen != null && isChanged(gen)) {
+	return true;
+      }
+    }
+    return false;
+  }
+
+  List getConfigGenerations(Collection urls, boolean required, String msg)
+      throws IOException {
+    if (urls == null) return Collections.EMPTY_LIST;
+    List res = new ArrayList(urls.size());
+    for (Iterator iter = urls.iterator(); iter.hasNext(); ) {
+      Object o = iter.next();
+      ConfigFile.Generation gen;
+      if (o instanceof ConfigFile) {
+	gen = getConfigGeneration((ConfigFile)o, required, msg);
+      } else {
+	String url = o.toString();
+	gen = getConfigGeneration(url, required, msg);
+      }
+      if (gen != null) {
+	res.add(gen);
+      }      
+    }
+    return res;
+  }
+
+  List getStandardConfigGenerations(List urls) throws IOException {
+    List res = new ArrayList(20);
+    res.addAll(getConfigGenerations(titledbUrlList, false, "bundled titledb"));
+    List configGens = getConfigGenerations(urls, true, "props");
+    res.addAll(configGens);
+    initCacheConfig(configGens);
+    res.addAll(getCacheConfigGenerations());
+    return res;
+  }
+
+  List getCacheConfigGenerations() throws IOException {
+    List localGens = getConfigGenerations(getCacheConfigFiles(), false,
+					  "cache config");
+    if (!localGens.isEmpty()) {
+      hasLocalCacheConfig = true;
+    }
+    return localGens;
+  }
+
+  boolean updateConfig() {
+    return updateConfig(configUrlList);
+  }
+
+  public boolean updateConfig(List urls) {
+    if (currentConfig.isEmpty()) {
+      // first load preceded by platform config setup
+      setupPlatformConfig(urls);
+    }
+    List gens;
+    try {
+      gens = getStandardConfigGenerations(urls);
+    } catch (IOException e) {
+      log.error("Error loading config", e);
+//       recentLoadError = e.toString();
+      return false;
+    }
+
+    if (!isChanged(gens)) {
+      if (reloadInterval >= 10 * Constants.MINUTE) {
+	log.info("Config up tp date, not updated");
+      }
+      return false;
+    }
+    Configuration newConfig = newConfiguration();
+    // Add platform-like params before calling loadList() as they affect
+    // conditional processing
+    if (groupName != null) {
+      newConfig.put(PARAM_DAEMON_GROUP, groupName);
+    }
+    loadList(newConfig, gens);
+
+    return installConfig(newConfig, gens);
+  }
+
+  void loadList(Configuration intoConfig, Collection gens) {
+    for (Iterator iter = gens.iterator(); iter.hasNext(); ) {
+      ConfigFile.Generation gen = (ConfigFile.Generation)iter.next();
+      if (gen != null) {
+	intoConfig.copyFrom(gen.getConfig());
+      }
+    }
+  }
+
+  void setupPlatformConfig(List urls) {
+    Configuration platConfig = newConfiguration();
+    // Add platform-like params before calling loadList() as they affect
+    // conditional processing
+    if (groupName != null) {
+      platConfig.put(PARAM_DAEMON_GROUP, groupName);
+    }
+    for (Iterator iter = urls.iterator(); iter.hasNext();) {
+      Object o = iter.next();
+      ConfigFile cf;
+      if (o instanceof ConfigFile) {
+	cf = (ConfigFile)o;
+      } else {
+	cf = configCache.find((String)o);
+      }
+      if (cf.isPlatformFile()) {
+	try {
+	  cf.setNeedsReload();
+	  platConfig.load(cf);
+	} catch (IOException e) {
+	  log.warning("Couldn't preload platform file " + cf.getFileUrl(), e);
+	}
+      }
+    }
+    // do this even if no local.txt, to ensure platform-like params (e.g.,
+    // group) in initial config get into platformConfig even during testing.
+    platConfig.seal();
+    this.platformConfig = platConfig;
+  }
+
+
+  // used by testing utilities
   boolean installConfig(Configuration newConfig) {
+    return installConfig(newConfig, Collections.EMPTY_LIST);
+  }
+
+  boolean installConfig(Configuration newConfig, List gens) {
     if (newConfig == null) {
       return false;
     }
-    initCacheConfig(newConfig);
-    List loadedTitleDbFiles = loadTitleDbConfigInto(newConfig);
-    List loadedCacheFiles = loadCacheConfigInto(newConfig);
     copyPlatformParams(newConfig);
     newConfig.seal();
     Configuration oldConfig = currentConfig;
@@ -502,23 +613,39 @@ public class ConfigManager implements LockssManager {
       if (reloadInterval >= 10 * Constants.MINUTE) {
 	log.info("Config unchanged, not updated");
       }
+      updateGenerations(gens);
       return false;
     }
-    setCurrentConfig(newConfig);
     Configuration.Differences diffs = newConfig.differences(oldConfig);
-    logConfigLoaded(newConfig, oldConfig, diffs,
-		    loadedCacheFiles, loadedTitleDbFiles);
+    if (diffs.contains(PARAM_TITLE_DB)) {
+      newConfig.setTitleConfig(newConfig.getConfigTree(PARAM_TITLE_DB));
+    } else {
+      newConfig.setAllTitleConfigs(oldConfig.getAllTitleConfigs());
+    }
+    // XXX for test utils.  ick
+    initCacheConfig(newConfig);
+    setCurrentConfig(newConfig);
+    updateGenerations(gens);
+    logConfigLoaded(newConfig, oldConfig, diffs, gens);
     runCallbacks(newConfig, oldConfig, diffs);
     haveConfig.fill();
     return true;
   }
 
+  void updateGenerations(List gens) {
+    for (Iterator iter = gens.iterator(); iter.hasNext(); ) {
+      ConfigFile.Generation gen = (ConfigFile.Generation)iter.next();
+      setGeneration(gen.getUrl(), gen.getGeneration());
+    }
+  }
+
+
   public void configurationChanged(Configuration config,
 				   Configuration oldConfig,
 				   Configuration.Differences changedKeys) {
 
-    reloadInterval = getTimeIntervalParam(PARAM_RELOAD_INTERVAL,
-					  DEFAULT_RELOAD_INTERVAL);
+    reloadInterval = config.getTimeInterval(PARAM_RELOAD_INTERVAL,
+					    DEFAULT_RELOAD_INTERVAL);
     if (changedKeys.contains(PARAM_PLATFORM_VERSION)) {
       platVer = null;
     }
@@ -527,22 +654,20 @@ public class ConfigManager implements LockssManager {
   private void logConfigLoaded(Configuration newConfig,
 			       Configuration oldConfig,
 			       Configuration.Differences diffs,
-			       List loadedCacheFiles,
-			       List loadedTitleDbFiles) {
-    StringBuffer sb = new StringBuffer("Config updated");
-    if (configUrlList != null || loadedCacheFiles != null) {
+			       List gens) {
+    StringBuffer sb = new StringBuffer("Config updated, ");
+    sb.append(newConfig.keySet().size());
+    sb.append(" keys");
+    if (gens != null && !gens.isEmpty()) {
+      List names = new ArrayList(gens.size());
+      for (Iterator iter = gens.iterator(); iter.hasNext(); ) {
+	ConfigFile.Generation gen = (ConfigFile.Generation)iter.next();
+	if (gen != null) {
+	  names.add(gen.getUrl());
+	}
+      }
       sb.append(" from ");
-      if (configUrlList != null) {
-	sb.append(StringUtil.separatedString(configUrlList, ", "));
-      }
-      if (loadedCacheFiles != null && !loadedCacheFiles.isEmpty()) {
-	sb.append("; ");
-	sb.append(StringUtil.separatedString(loadedCacheFiles, ", "));
-      }
-      if (loadedTitleDbFiles != null && !loadedTitleDbFiles.isEmpty()) {
-	sb.append("; ");
-	sb.append(StringUtil.separatedString(loadedTitleDbFiles, ", "));
-      }
+      sb.append(StringUtil.separatedString(names, ", "));
     }
     log.info(sb.toString());
     if (log.isDebug()) {
@@ -660,7 +785,7 @@ public class ConfigManager implements LockssManager {
     int numDiffs = keys.size();
     for (Iterator iter = keys.iterator(); iter.hasNext(); ) {
       String key = (String)iter.next();
-      if (numDiffs <= 40 || log.isDebug2() ||
+      if (numDiffs <= 40 || log.isDebug3() ||
 	  (!key.startsWith(PARAM_TITLE_DB) &&
 	   !key.startsWith(PluginManager.PARAM_AU_TREE))) {
 	if (config.containsKey(key)) {
@@ -690,7 +815,13 @@ public class ConfigManager implements LockssManager {
     // Force a config reload -- this is required to make the bundled
     // title configs immediately available, otherwise they will not be
     // available until the next config reload.
-    if (needReload && handlerThread != null) {
+    if (needReload) {
+      requestReload();
+    }
+  }
+
+  public void requestReload() {
+    if (handlerThread != null) {
       handlerThread.forceReload();
     }
   }
@@ -729,11 +860,22 @@ public class ConfigManager implements LockssManager {
     return Boolean.getBoolean("org.lockss.unitTesting");
   }
 
-  private void initCacheConfig(Configuration newConfig) {
+  private String getFromGenerations(List configGenerations, String param,
+				    String dfault) {
+    for (Iterator iter = configGenerations.iterator(); iter.hasNext(); ) {
+      ConfigFile.Generation gen = (ConfigFile.Generation)iter.next();
+      if (gen != null) {
+	String val = gen.getConfig().get(param);
+	if (val != null) {
+	  return val;
+	}
+      }
+    }
+    return dfault;
+  }
+
+  private void initCacheConfig(String dspace, String relConfigPath) {
     if (cacheConfigInited) return;
-    String dspace = newConfig.get(PARAM_PLATFORM_DISK_SPACE_LIST);
-    String relConfigPath = newConfig.get(PARAM_CONFIG_PATH,
-					 DEFAULT_CONFIG_PATH);
     Vector v = StringUtil.breakAt(dspace, ';');
     if (!isUnitTesting() && v.size() == 0) {
       log.error(PARAM_PLATFORM_DISK_SPACE_LIST +
@@ -760,6 +902,25 @@ public class ConfigManager implements LockssManager {
     cacheConfigInited = true;
   }
 
+  private void initCacheConfig(List configGenerations) {
+    if (cacheConfigInited) return;
+    String dspace = getFromGenerations(configGenerations,
+				       PARAM_PLATFORM_DISK_SPACE_LIST,
+				       null);
+    String relConfigPath = getFromGenerations(configGenerations,
+					      PARAM_CONFIG_PATH,
+					      DEFAULT_CONFIG_PATH);
+    initCacheConfig(dspace, relConfigPath);
+  }
+
+  private void initCacheConfig(Configuration newConfig) {
+    if (cacheConfigInited) return;
+    String dspace = newConfig.get(PARAM_PLATFORM_DISK_SPACE_LIST);
+    String relConfigPath = newConfig.get(PARAM_CONFIG_PATH,
+					 DEFAULT_CONFIG_PATH);
+    initCacheConfig(dspace, relConfigPath);
+  }
+
   /**
    * <p>Return a directory under the platform disk space list.  Does
    * not create the directory, client code is expected to handle that.</p>
@@ -782,12 +943,15 @@ public class ConfigManager implements LockssManager {
 
   /** Return the list of cache config file names */
   public List getCacheConfigFiles() {
-    List res = new ArrayList();
-    for (int ix = 0; ix < cacheConfigFiles.length; ix++) {
-      File cfile = new File(cacheConfigDir, cacheConfigFiles[ix]);
-      res.add(cfile);
+    if (cacheConfigFileList == null) {
+      List res = new ArrayList();
+      for (int ix = 0; ix < cacheConfigFiles.length; ix++) {
+	File cfile = new File(cacheConfigDir, cacheConfigFiles[ix]);
+	res.add(cfile);
+      }
+      cacheConfigFileList = res;
     }
-    return res;
+    return cacheConfigFileList;
   }
 
   /** Return a File for the named cache config file */
@@ -795,41 +959,9 @@ public class ConfigManager implements LockssManager {
     return new File(cacheConfigDir, cacheConfigFileName);
   }
 
-  List loadCacheConfigInto(Configuration config) {
-    if (cacheConfigDir == null) {
-      return null;
-    }
-    List res = new ArrayList();
-    for (int ix = 0; ix < cacheConfigFiles.length; ix++) {
-      File cfile = new File(cacheConfigDir, cacheConfigFiles[ix]);
-      log.debug2("Loading cache config from " + cfile);
-      boolean gotIt = loadList(config, ListUtil.list(cfile.toString()),
-			       true, true);
-      if (gotIt) {
-	hasLocalCacheConfig = true;
-	res.add(cfile.toString());
-      }
-    }
-    return res;
-  }
-
   /** Return true if any daemon config has been done on this machine */
   public boolean hasLocalCacheConfig() {
     return hasLocalCacheConfig;
-  }
-
-  /** Load the current list of bundled TitleDB config files into the
-      given config object.  This will <em>not</em> overwrite any keys
-      in the config object.  */
-  List loadTitleDbConfigInto(Configuration config) {
-    List res = new ArrayList();
-    for (Iterator iter = titledbUrlList.iterator(); iter.hasNext(); ) {
-      URL url = (URL)iter.next();
-      Configuration titledb = readTitledbConfigFile(url);
-      config.copyFromNonDestructively(titledb);
-      res.add(url.toString());
-    }
-    return res;
   }
 
   /**
@@ -865,7 +997,6 @@ public class ConfigManager implements LockssManager {
     }
 
     String cfile = new File(cacheConfigDir, cacheConfigFileName).toString();
-    log.debug2("Reading cache config file: " + cfile);
     ConfigFile cf = configCache.find(cfile);
     Configuration res = cf.getConfiguration();
     return res;
@@ -910,6 +1041,21 @@ public class ConfigManager implements LockssManager {
 						String cacheConfigFileName,
 						String header)
       throws IOException {
+    writeCacheConfigFile(config, cacheConfigFileName, header, false, false);
+  }
+
+  /** Write the named local cache config file into the previously determined
+   * cache config directory.
+   * @param config Configuration with properties to write
+   * @param cacheConfigFileName filename, no path
+   * @param header file header string
+   */
+  public synchronized void writeCacheConfigFile(Configuration config,
+						String cacheConfigFileName,
+						String header,
+						boolean suppressReload,
+						boolean mayAlterConfig)
+      throws IOException {
     if (cacheConfigDir == null) {
       log.warning("Attempting to write cache config file: " +
 		  cacheConfigFileName + ", but no cache config dir exists");
@@ -920,9 +1066,15 @@ public class ConfigManager implements LockssManager {
     File tempfile = File.createTempFile("tmp_config", ".tmp", cacheConfigDir);
     OutputStream os = new FileOutputStream(tempfile);
 
-    // make a copy and add the config file version number, write the copy
-    Configuration tmpConfig = config.copy();
+    Configuration tmpConfig;
+    if (mayAlterConfig && !config.isSealed()) {
+      tmpConfig = config;
+    } else {
+      // make a copy and add the config file version number, write the copy
+      tmpConfig = config.copy();
+    }
     tmpConfig.put(configVersionProp(cacheConfigFileName), "1");
+    tmpConfig.seal();
     tmpConfig.store(os, header);
     os.close();
     if (!tempfile.renameTo(cfile)) {
@@ -936,8 +1088,8 @@ public class ConfigManager implements LockssManager {
     } else {
       log.warning("Not a FileConfigFile: " + cf);
     }
-    if (handlerThread != null) {
-      handlerThread.forceReload();
+    if (!suppressReload) {
+      requestReload();
     }
   }
 
@@ -981,7 +1133,7 @@ public class ConfigManager implements LockssManager {
       fileConfig.put(key, auConfig.get(key));
     }
     writeCacheConfigFile(fileConfig, CONFIG_FILE_AU_CONFIG,
-			 "AU Configuration");
+			 "AU Configuration", isDoingAuBatch, true);
   }
 
   /**
@@ -1103,105 +1255,15 @@ public class ConfigManager implements LockssManager {
     writeCacheConfigFile(fileConfig, cacheConfigFileName, header);
   }
 
+  private boolean isDoingAuBatch = false;
 
-  // static convenience methods
-
-  /** Static convenience method to get param from current configuration.
-   * Don't accidentally use this on a <code>Configuration</code> instance.
-   */
-  public static String getParam(String key) {
-    return getCurrentConfig().get(key);
-  }
-
-  /** Static convenience method to get param from current configuration.
-   * Don't accidentally use this on a <code>Configuration</code> instance.
-   */
-  public static String getParam(String key, String dfault) {
-    return getCurrentConfig().get(key, dfault);
-  }
-
-  /** Static convenience method to get param from current configuration.
-   * Don't accidentally use this on a <code>Configuration</code> instance.
-   */
-  public static boolean getBooleanParam(String key)
-      throws Configuration.InvalidParam {
-    return getCurrentConfig().getBoolean(key);
-  }
-
-  /** Static convenience method to get param from current configuration.
-   * Don't accidentally use this on a <code>Configuration</code> instance.
-   */
-  public static boolean getBooleanParam(String key, boolean dfault) {
-    return getCurrentConfig().getBoolean(key, dfault);
-  }
-
-  /** Static convenience method to get param from current configuration.
-   * Don't accidentally use this on a <code>Configuration</code> instance.
-   */
-  public static int getIntParam(String key)
-      throws Configuration.InvalidParam {
-    return getCurrentConfig().getInt(key);
-  }
-
-  /** Static convenience method to get param from current configuration.
-   * Don't accidentally use this on a <code>Configuration</code> instance.
-   */
-  public static int getIntParam(String key, int dfault) {
-    return getCurrentConfig().getInt(key, dfault);
-  }
-
-  /** Static convenience method to get param from current configuration.
-   * Don't accidentally use this on a <code>Configuration</code> instance.
-   */
-  public static long getLongParam(String key)
-      throws Configuration.InvalidParam {
-    return getCurrentConfig().getLong(key);
-  }
-
-  /** Static convenience method to get param from current configuration.
-   * Don't accidentally use this on a <code>Configuration</code> instance.
-   */
-  public static long getLongParam(String key, long dfault) {
-    return getCurrentConfig().getLong(key, dfault);
-  }
-
-  /** Static convenience method to get param from current configuration.
-   * Don't accidentally use this on a <code>Configuration</code> instance.
-   */
-  public static long getTimeIntervalParam(String key)
-      throws Configuration.InvalidParam {
-    return getCurrentConfig().getTimeInterval(key);
-  }
-
-  /** Static convenience method to get param from current configuration.
-   * Don't accidentally use this on a <code>Configuration</code> instance.
-   */
-  public static long getTimeIntervalParam(String key, long dfault) {
-    return getCurrentConfig().getTimeInterval(key, dfault);
-  }
-
-  /** Static convenience method to get a <code>Configuration</code>
-   * subtree from the current configuration.
-   * Don't accidentally use this on a <code>Configuration</code> instance.
-   */
-  public static Configuration paramConfigTree(String key) {
-    return getCurrentConfig().getConfigTree(key);
-  }
-
-  /** Static convenience method to get key iterator from the
-   * current configuration.
-   * Don't accidentally use this on a <code>Configuration</code> instance.
-   */
-  public static Iterator paramKeyIterator() {
-    return getCurrentConfig().keyIterator();
-  }
-
-  /** Static convenience method to get a node iterator from the
-   * current configuration.
-   * Don't accidentally use this on a <code>Configuration</code> instance.
-   */
-  public static Iterator paramNodeIterator(String key) {
-    return getCurrentConfig().nodeIterator(key);
+  /** hack to allow batch AU config operations to prevent a config reload
+   * from being triggered each time the AU config file is rewritten.
+   * Clients who set this true <b>must</b> reset it false when they are
+   * done (in a <code>finally</code>), and call requestReload() if
+   * appropriate */
+  public void doingAuBatch(boolean flg) {
+    isDoingAuBatch = flg;
   }
 
   TinyUi tiny = null;
