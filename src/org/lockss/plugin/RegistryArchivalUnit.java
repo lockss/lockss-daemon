@@ -1,5 +1,5 @@
 /*
- * $Id: RegistryArchivalUnit.java,v 1.17 2005-12-01 23:28:01 troberts Exp $
+ * $Id: RegistryArchivalUnit.java,v 1.18 2006-04-05 22:53:10 tlipkis Exp $
  */
 
 /*
@@ -38,7 +38,8 @@ import java.util.List;
 
 import org.htmlparser.*;
 import org.htmlparser.tags.TitleTag;
-import org.htmlparser.util.ParserException;
+import org.htmlparser.filters.NodeClassFilter;
+import org.htmlparser.util.*;
 
 import org.lockss.config.*;
 import org.lockss.crawler.NewContentCrawler;
@@ -96,11 +97,11 @@ public class RegistryArchivalUnit extends BaseArchivalUnit {
       ListUtil.list(new CreativeCommonsPermissionChecker());
 
     paramMap.putLong(TreeWalkManager.PARAM_TREEWALK_START_DELAY,
-		     ConfigManager
+		     CurrentConfig
 		     .getTimeIntervalParam(PARAM_REGISTRY_TREEWALK_START,
 					   DEFAULT_REGISTRY_TREEWALK_START));
     paramMap.putLong(AU_NEW_CRAWL_INTERVAL,
-		     ConfigManager
+		     CurrentConfig
 		     .getTimeIntervalParam(PARAM_REGISTRY_CRAWL_INTERVAL,
 					   DEFAULT_REGISTRY_CRAWL_INTERVAL));
     if (log.isDebug2()) {
@@ -108,7 +109,7 @@ public class RegistryArchivalUnit extends BaseArchivalUnit {
 		 StringUtil.timeIntervalToString(paramMap.getLong(AU_NEW_CRAWL_INTERVAL)));
     }
     paramMap.putLong(AU_FETCH_DELAY,
-		     ConfigManager
+		     CurrentConfig
 		     .getTimeIntervalParam(PARAM_REGISTRY_FETCH_DELAY,
 					   DEFAULT_REGISTRY_FETCH_DELAY));
   }
@@ -141,7 +142,9 @@ public class RegistryArchivalUnit extends BaseArchivalUnit {
       if (cu == null) return null;
       URL cuUrl = CuUrl.fromCu(cu);
       Parser parser = new Parser(cuUrl.toString());
-      Node nodes [] = parser.extractAllNodesThatAre(TitleTag.class);
+      NodeList nodelst =
+	parser.extractAllNodesThatMatch(new NodeClassFilter(TitleTag.class));
+      Node nodes [] = nodelst.toNodeArray();
       recomputeRegName = false;
       if (nodes.length < 1) return null;
       // Get the first title found
