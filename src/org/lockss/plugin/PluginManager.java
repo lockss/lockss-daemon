@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.154 2006-02-23 06:43:37 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.155 2006-04-05 22:52:30 tlipkis Exp $
  */
 
 /*
@@ -309,7 +309,7 @@ public class PluginManager
 
   private void configureAllPlugins(Configuration config) {
     Configuration allPlugs = config.getConfigTree(PARAM_AU_TREE);
-    if (!allPlugs.equals(currentAllPlugs)) {
+    if (!allPlugs.isEmpty() && !allPlugs.equals(currentAllPlugs)) {
       List plugList = ListUtil.fromIterator(allPlugs.nodeIterator());
       plugList = CollectionUtil.randomPermutation(plugList);
       for (Iterator iter = plugList.iterator(); iter.hasNext(); ) {
@@ -922,7 +922,7 @@ public class PluginManager
   }
 
   public boolean isRemoveStoppedAus() {
-    return ConfigManager.getBooleanParam(PARAM_REMOVE_STOPPED_AUS,
+    return CurrentConfig.getBooleanParam(PARAM_REMOVE_STOPPED_AUS,
 					 DEFAULT_REMOVE_STOPPED_AUS);
   }
 
@@ -1394,7 +1394,6 @@ public class PluginManager
     }
 
     if (urls.isEmpty()) {
-      // if loop below is empty, it waits on semaphore that's never posted
       return;
     }
 
@@ -1403,6 +1402,8 @@ public class PluginManager
     RegistryCallback regCallback = new RegistryCallback(urls, bs);
 
     List loadAus = new ArrayList();
+    // XXX shouldn't make a new RegistryPlugin each time this is run.  Does
+    // it hurt anything?
     RegistryPlugin registryPlugin = new RegistryPlugin();
     String pluginKey = pluginKeyFromName("org.lockss.plugin.RegistryPlugin");
     registryPlugin.initPlugin(theDaemon);
@@ -1421,7 +1422,7 @@ public class PluginManager
 	  configureAu(registryPlugin, auConf, auId);
 	} catch (ArchivalUnit.ConfigurationException ex) {
 	  log.error("Failed to configure AU " + auKey, ex);
-	  regCallback.processPluginsIfReady(url);
+	  regCallback.crawlCompleted(url);
 	  continue;
 	}
 
@@ -1443,21 +1444,19 @@ public class PluginManager
 	  if (log.isDebug2()) {
 	    log.debug2("Don't need to do a crawl of AU: " + registryAu.getName());
 	  }
-	  regCallback.processPluginsIfReady(url);
+	  regCallback.crawlCompleted(url);
 	}
       } else {
 	log.debug2("We already have this AU configured, notifying callback.");
-	regCallback.processPluginsIfReady(url);
+	regCallback.crawlCompleted(url);
       }
     }
 
-    // Wait for the AU crawls to complete, or for the BinarySemaphore
-    // to time out, then process all the registries in the load list.
+    // Wait for a while for the AU crawls to complete, then process all the
+    // registries in the load list.
     log.debug("Waiting for loadable plugins to finish loading...");
     try {
-      // The registry crawls may have already completed, in which case there is
-      // no need to wait.
-      if (regCallback.needsWait() && !bs.take(Deadline.in(registryTimeout))) {
+      if (!bs.take(Deadline.in(registryTimeout))) {
 	log.warning("Timed out while waiting for registries to finish loading. " +
 		    "Remaining registry URL list: " + regCallback.getRegistryUrls());
       }
@@ -1886,8 +1885,9 @@ public class PluginManager
       setPlugin(key, info.getPlugin());
     }
 
-    // Add the JAR's bundled titledb config (if any)
-    // to the ConfigManager.
+    // Add the JAR's bundled titledb config (if any) to the ConfigManager.
+    // Do this once at the end so as not to trigger more than one config
+    // update & reload.
     configMgr.addTitleDbConfigFrom(classloaders);
 
     // Cleanup as a hint to GC.
@@ -1899,39 +1899,44 @@ public class PluginManager
    * CrawlManager callback that is responsible for handling Registry
    * AUs when they're finished with their initial crawls.
    */
-  private static class RegistryCallback implements CrawlManager.Callback {
+  static class RegistryCallback implements CrawlManager.Callback {
     private BinarySemaphore bs;
 
-    List registryUrls = Collections.synchronizedList(new ArrayList());
+    List registryUrls;
 
     /*
      * Set the initial size of the list of registry URLs to process.
      */
     public RegistryCallback(List registryUrls, BinarySemaphore bs) {
-      synchronized(registryUrls) {
-	this.registryUrls.addAll(registryUrls);
-      }
+      this.registryUrls =
+	Collections.synchronizedList(new ArrayList(registryUrls));
       this.bs = bs;
-    }
+      if (log.isDebug2()) log.debug2("RegistryCallback: " + registryUrls);
+      if (registryUrls.isEmpty()) {
+	bs.give();
+      }
+    }    
 
     public void signalCrawlAttemptCompleted(boolean success, Set urlsFetched,
 					    Object cookie,
 					    Crawler.Status status) {
       String url = (String)cookie;
 
-      processPluginsIfReady(url);
+      crawlCompleted(url);
     }
 
-    public void processPluginsIfReady(String url) {
-      // Keep decrementing registryUrls.  When it's size 0 we're done
-      // running crawls on all the plugin registries, and we can load
-      // the plugin classes.
-      synchronized(registryUrls) {
-	registryUrls.remove(url);
-
-	if (registryUrls.size() == 0) {
-	  bs.give();
-	}
+    public void crawlCompleted(String url) {
+      // Remove urls from registryUrls as they finish crawling (or it is
+      // determine that they don't need to be crawled).  When registryUrls
+      // is empty signal the waiting process that it may proceed to load
+      // plugins we're done running crawls on all the plugin registries,
+      // and we can load the plugin classes.
+      registryUrls.remove(url);
+      if (log.isDebug2()) log.debug2("Registry crawl complete: " + url +
+				     ", " + registryUrls.size() + " left");
+      if (registryUrls.isEmpty()) {
+	if (log.isDebug2()) log.debug2("Registry crawls complete");
+	bs.give();
       }
     }
 
@@ -1941,14 +1946,6 @@ public class PluginManager
      */
     public List getRegistryUrls() {
       return registryUrls;
-    }
-
-    /**
-     * Returns true if there is any reason to wait for this callback to
-     * give() its binary semephore.
-     */
-    public boolean needsWait() {
-      return (0 != registryUrls.size());
     }
   }
 

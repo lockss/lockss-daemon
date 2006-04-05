@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.66 2006-02-23 06:43:37 tlipkis Exp $
+ * $Id: TestPluginManager.java,v 1.67 2006-04-05 22:52:30 tlipkis Exp $
  */
 
 /*
@@ -873,6 +873,25 @@ public class TestPluginManager extends LockssTestCase {
     ks.load(ClassLoader.getSystemClassLoader().
 	    getResourceAsStream(name), pass.toCharArray());
     return ks;
+  }
+
+  public void testEmptyRegistryCallback() throws Exception {
+    BinarySemaphore bs = new BinarySemaphore();
+    PluginManager.RegistryCallback cb =
+      new PluginManager.RegistryCallback(Collections.EMPTY_LIST, bs);
+    assertTrue(bs.take(Deadline.in(0)));
+  }
+
+  public void testRegistryCallback() throws Exception {
+    BinarySemaphore bs = new BinarySemaphore();
+    PluginManager.RegistryCallback cb =
+      new PluginManager.RegistryCallback(ListUtil.list("foo", "bar"), bs);
+    assertFalse(bs.take(Deadline.in(0)));
+    cb.crawlCompleted("foo");
+    cb.crawlCompleted("bletch");
+    assertFalse(bs.take(Deadline.in(0)));
+    cb.crawlCompleted("bar");
+    assertTrue(bs.take(Deadline.in(0)));
   }
 
   private void prepareLoadablePluginTests(Properties p) throws Exception {
