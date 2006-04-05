@@ -1,5 +1,5 @@
 /*
- * $Id: RaiseAlert.java,v 1.12 2006-03-16 01:41:19 thib_gc Exp $
+ * $Id: RaiseAlert.java,v 1.13 2006-04-05 22:55:25 tlipkis Exp $
  */
 
 /*
@@ -169,7 +169,7 @@ public class RaiseAlert extends LockssServlet {
     autbl.add(sel);
 
     Table alrtbl = new Table(0, "cellpadding=0");
-      alrtbl.newRow();
+    alrtbl.newRow();
     alrtbl.addHeading("Select Alert Name");
     Select sel2 = new Select(KEY_NAME_SEL, false);
     sel2.add("", auid == null, "");
