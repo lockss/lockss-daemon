@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArchivalUnit.java,v 1.29 2005-10-11 05:50:16 tlipkis Exp $
+ * $Id: TestBaseArchivalUnit.java,v 1.30 2006-04-05 22:54:10 tlipkis Exp $
  */
 
 /*
@@ -45,12 +45,6 @@ import java.net.*;
 import org.lockss.plugin.ArchivalUnit.ConfigurationException;
 import org.lockss.plugin.base.BaseArchivalUnit.*;
 
-/**
- * This is the test class for org.lockss.plugin.simulated.GenericFileUrlCacher
- *
- * @author  Emil Aalto
- * @version 0.0
- */
 public class TestBaseArchivalUnit extends LockssTestCase {
   private MyMockBaseArchivalUnit mbau;
   private MyMockPlugin mplug;
