@@ -1,5 +1,5 @@
 /*
- * $Id: TestCollectionUtil.java,v 1.11 2005-10-19 17:05:19 tlipkis Exp $
+ * $Id: TestCollectionUtil.java,v 1.12 2006-04-05 22:22:34 tlipkis Exp $
  */
 
 /*
@@ -138,7 +138,7 @@ public class TestCollectionUtil extends LockssTestCase {
     }
   }
 
-  public void testRemoveElementThrowsIfEmptyCollection() {
+  public void testRemoveElementEmptyCollection() {
     assertNull(CollectionUtil.removeElement(SetUtil.set()));
   }
 
@@ -150,10 +150,31 @@ public class TestCollectionUtil extends LockssTestCase {
     assertDoesNotContain(set, element);
   }
 
-  public static void assertNoDuplicates(Collection c) {
-    if (c.size() != SetUtil.theSet(c).size()) {
-      fail("Duplicates found in " + c);
+  public void testGetAnElementThrowsIfNullCollection() {
+    try {
+      CollectionUtil.getAnElement(null);
+      fail("getAnElement should have thrown for a null collection");
+    } catch (IllegalArgumentException e) {
     }
+  }
+
+  public void testGetAnElementEmptyCollection() {
+    assertNull(CollectionUtil.getAnElement(SetUtil.set()));
+  }
+
+  public void testGetAnElement() {
+    Set set = SetUtil.set("str1", "str2", "str3");
+    Set expectedElements = SetUtil.set("str1", "str2", "str3");
+    Set s = new HashSet();
+    while (!set.isEmpty()) {
+      String element = (String)CollectionUtil.getAnElement(set);
+      assertContains(set, element);
+      assertContains(expectedElements, element);
+      set.remove(element);
+      assertDoesNotContain(set, element);
+      s.add(element);
+    }
+    assertEquals(expectedElements, s);
   }
 
   public void testRandomSelectionFromColl() throws Exception {
