@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfiguration.java,v 1.8 2005-10-11 05:48:56 tlipkis Exp $
+ * $Id: TestConfiguration.java,v 1.9 2006-04-05 22:30:54 tlipkis Exp $
  */
 
 /*
@@ -302,6 +302,23 @@ public class TestConfiguration extends LockssTestCase {
     return mapFromIter(config.keyIterator(), config);
   }
 
+  public void testSubTree() {
+    Properties props = new Properties();
+    props.put("p1", "1");
+    props.put("p2", "2");
+    props.put("p1.a", "1a");
+    props.put("p1.b", "1b");
+    props.put("p2.a", "2a");
+    Configuration config = ConfigurationUtil.fromProps(props);
+    Configuration sub = config.getConfigTree("p1");
+    assertEquals("1a", sub.get("a"));
+    assertEquals("1a", config.get("p1.a"));
+    sub.put("a", "xx");
+    assertEquals("xx", sub.get("a"));
+    assertEquals("1a", config.get("p1.a"));
+  }
+
+
   public void testStruct() throws IOException {
     Configuration config = newConfiguration();
     config.load(loadFCF(FileTestUtil.urlOfString(c2)));
@@ -444,8 +461,59 @@ public class TestConfiguration extends LockssTestCase {
     assertEquals("b", c3.get("foo.bar.p2"));
   }
 
+  public void testSetTitleConfig() throws Exception {
+    Properties p1 = new Properties();
+    Properties p2 = new Properties();
+    Properties p3 = new Properties();
+    String tprf = ConfigManager.PARAM_TITLE_DB;
+    p1.put("title", "T1");
+    p1.put("plugin", "o|l|p1");
+    p1.put("param.1.key", "k1");
+    p1.put("param.1.value", "v1");
+    p1.put("param.2.key", "k2");
+    p1.put("param.2.value", "v2");
+
+    p2.put("title", "T2");
+    p2.put("plugin", "o|l|p1");
+    p2.put("param.1.key", "k1");
+    p2.put("param.1.value", "v1a");
+    p2.put("param.2.key", "k2");
+    p2.put("param.2.value", "v2a");
+
+    p3.put("title", "T3");
+    p3.put("plugin", "o|l|p2");
+    p3.put("param.1.key", "x1");
+    p3.put("param.1.value", "v1b");
+    p3.put("param.2.key", "x2");
+    p3.put("param.2.value", "v2b");
+
+    Configuration all = ConfigManager.newConfiguration();
+    all.addAsSubTree(ConfigurationUtil.fromProps(p1), tprf + ".one");
+    all.addAsSubTree(ConfigurationUtil.fromProps(p2), tprf + ".two");
+    all.addAsSubTree(ConfigurationUtil.fromProps(p3), tprf + ".three");
+    assertEquals("x2", all.get("org.lockss.title.three.param.2.key"));
+
+    all.setTitleConfig(all.getConfigTree(ConfigManager.PARAM_TITLE_DB));
+    Collection t1 = all.getTitleConfigs("o|l|p1");
+    Collection t2 = all.getTitleConfigs("o|l|p2");
+    assertEquals(ConfigurationUtil.fromProps(p3), new ArrayList(t2).get(0));
+
+    // Should be two titles in t1, but since Configuration doesn't
+    // implement hashCode() we can't make a set for orderless compare
+    List exp = ListUtil.list(ConfigurationUtil.fromProps(p1),
+			     ConfigurationUtil.fromProps(p2));
+    for (Iterator iter = t1.iterator(); iter.hasNext(); ) {
+      Configuration onetitle = (Configuration)iter.next();
+      if (!exp.contains(onetitle)) {
+	fail("Didn't find " + onetitle + " in " + exp);
+      }
+      exp.remove(onetitle);
+    }
+    assertEmpty(exp);
+  }
+
   private ConfigFile loadFCF(String url) throws IOException {
-    ConfigFile cf = new FileConfigFile(url);
+    FileConfigFile cf = new FileConfigFile(url);
     cf.reload();
     return cf;
   }

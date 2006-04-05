@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.17 2006-02-04 03:31:53 tlipkis Exp $
+ * $Id: Configuration.java,v 1.18 2006-04-05 22:30:57 tlipkis Exp $
  */
 
 /*
@@ -34,8 +34,10 @@ package org.lockss.config;
 
 import java.io.*;
 import java.util.*;
+import org.apache.commons.collections.*;
 
 import org.lockss.util.*;
+import org.lockss.plugin.base.*;
 
 /** <code>Configuration</code> provides access to the LOCKSS configuration
  * parameters.  Instances of (concrete subclasses of)
@@ -60,24 +62,6 @@ public abstract class Configuration {
     Logger.getLoggerWithInitialLevel("Config",
                                      Logger.getInitialDefaultLevel());
 
-  /**
-   * Register a {@link Configuration.Callback}, which will be called
-   * whenever the current configuration has changed.  If a configuration is
-   * present when a callback is registered, the callback will be called
-   * immediately.
-   * @param c <code>Configuration.Callback</code> to add.  */
-  public static void registerConfigurationCallback(Callback c) {
-    ConfigManager.getConfigManager().registerConfigurationCallback(c);
-  }
-
-  /**
-   * Unregister a <code>Configuration.Callback</code>.
-   * @param c <code>Configuration.Callback</code> to remove.
-   */
-  public static void unregisterConfigurationCallback(Callback c) {
-    ConfigManager.getConfigManager().unregisterConfigurationCallback(c);
-  }
-
   /** A Configuration.Differences object representing a totally different
    * Configuration */
   public static final Differences DIFFERENCES_ALL = new DifferencesAll();
@@ -99,6 +83,40 @@ public abstract class Configuration {
 
   public static String getPlatformHostname() {
     return ConfigManager.getPlatformHostname();
+  }
+
+  // Support for the title db config subtree.  Finding relevant entries
+  // when title subtree changes allows plugins to retrieve their entries
+  // without excessive copying.
+
+  private MultiHashMap titleMap;
+
+  /** Returns a list of configs for the plugin's title DB entries  */
+  public Collection getTitleConfigs(String pluginName) {
+    return (Collection)titleMap.getCollection(pluginName);
+  }
+
+  /** Returns the map of plugin -> list of title db configs */
+  MultiHashMap getAllTitleConfigs() {
+    return titleMap;
+  }
+
+  /** Replace the map of plugin -> list of title db configs */
+  void setAllTitleConfigs(MultiHashMap map) {
+    titleMap = map;
+  }
+
+  /** Build map of plugin name -> list of title db config entries */
+  void setTitleConfig(Configuration tc) {
+    if (tc == null) return;
+    MultiHashMap titleMap = new MultiHashMap();
+    for (Iterator iter = tc.nodeIterator(); iter.hasNext(); ) {
+      String titleKey = (String)iter.next();
+      Configuration titleConfig = tc.getConfigTree(titleKey);
+      String pluginName = titleConfig.get(BasePlugin.TITLE_PARAM_PLUGIN);
+      titleMap.put(pluginName, titleConfig);
+    }
+    this.titleMap = titleMap;
   }
 
   /** Return a copy of the configuration with the specified prefix
@@ -165,7 +183,7 @@ public abstract class Configuration {
    * the Config File.
    */
   void load(ConfigFile cf) throws IOException {
-    copyConfigTreeFrom(cf.getConfiguration());
+    copyFrom(cf.getConfiguration());
   }
 
   /** Return the first ConfigFile that got an error */
@@ -503,21 +521,6 @@ public abstract class Configuration {
     }
     if (fromConfig.containsKey(root)) {
       put(root, fromConfig.get(root));
-    }
-  }
-
-  /**
-   * Copy the entire contents of another configuration into this one.
-   * @param fromConfig The Configuration from which to copy.
-   */
-  public void copyConfigTreeFrom(Configuration fromConfig) {
-    if (fromConfig.isEmpty()) {
-      return;
-    }
-
-    for (Iterator iter = fromConfig.keyIterator(); iter.hasNext(); ) {
-      String key = (String)iter.next();
-      put(key, fromConfig.get(key));
     }
   }
 
