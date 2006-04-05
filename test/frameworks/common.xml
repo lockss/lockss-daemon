@@ -479,6 +479,7 @@
 	<property name="class" value="xpath" />
 	<property name="xpath" value="[pluginName='org.lockss.plugin.locksscard.LockssCardPlugin']" />
       </property>
+
       <property name="gpo">
 	<property name="name" value="All GPO Pilot Titles" />
 	<property name="class" value="xpath" />
