@@ -1,10 +1,10 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.66 2005-11-05 02:10:56 thib_gc Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.67 2006-04-05 21:09:14 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -151,11 +151,9 @@ public class HistoryRepositoryImpl
    *                                  exception.
    */
   AuState loadAuState(ObjectSerializer deserializer) {
-    if (logger.isDebug3()) {
-      logger.debug3("Loading state for AU '"
-          + storedAu.getName() + "'.");
-    }
+    logger.debug3("Loading state for AU '" + storedAu.getName() + "'");
     File auFile = new File(rootLocation, AU_FILE_NAME);
+    String errorString = "Could not load AU state for AU '" + storedAu.getName() + "'";
 
     try {
       // CASTOR: remove unwrap() when Castor is phased out
@@ -168,17 +166,16 @@ public class HistoryRepositoryImpl
                          this);
     }
     catch (FileNotFoundException fnfe) {
+      logger.debug2(errorString, fnfe);
       // drop down to return default
     }
     catch (SerializationException se) {
-      logger.error("Marshalling exception for AU state '"
-          + storedAu.getName() + "'", se);
+      logger.error(errorString, se);
       // drop down to return default
     }
-    catch (Exception e) {
-      logger.error("Could not load AU state '"
-          + storedAu.getName() + "'", e);
-      throw new RepositoryStateException("Could not load AU state.");
+    catch (Exception exc) {
+      logger.error(errorString, exc);
+      throw new RepositoryStateException(errorString, exc);
     }
 
     // Default: return default
@@ -206,11 +203,9 @@ public class HistoryRepositoryImpl
    *                                  exception.
    */
   DamagedNodeSet loadDamagedNodeSet(ObjectSerializer deserializer) {
-    if (logger.isDebug3()) {
-      logger.debug3("Loading damaged nodes for AU '"
-          + storedAu.getName() + "'.");
-    }
+    logger.debug3("Loading damaged nodes for AU '" + storedAu.getName() + "'");
     File damFile = new File(rootLocation, DAMAGED_NODES_FILE_NAME);
+    String errorString = "Could not load damaged nodes '" + storedAu.getName() + "'";
 
     try {
       // CASTOR: NO CHANGE after Castor is phased out
@@ -221,20 +216,16 @@ public class HistoryRepositoryImpl
       return damNodes;
     }
     catch (FileNotFoundException fnfe) {
-      if (logger.isDebug2()) {
-        logger.debug2("No damaged node file for AU '"
-            + storedAu.getName() + "'.");
-      }
+      logger.debug2("No damaged node file for AU '" + storedAu.getName() + "'");
       // drop down to return empty set
     }
     catch (SerializationException se) {
-      logger.error("Marshalling exception for damaged nodes for '"
-          + storedAu.getName() + "'", se);
+      logger.error(errorString, se);
       // drop down to return empty set
     }
-    catch (Exception e) {
-      logger.error("Could not load damaged nodes", e);
-      throw new RepositoryStateException("Could not load damaged nodes.");
+    catch (Exception exc) {
+      logger.error(errorString, exc);
+      throw new RepositoryStateException(errorString, exc);
     }
 
     // Default: return empty set
@@ -260,28 +251,25 @@ public class HistoryRepositoryImpl
    *                                  exception.
    */
   List loadIdentityAgreements(ObjectSerializer deserializer) {
-    if (logger.isDebug3()) {
-      logger.debug3("Loading identity agreements for AU '"
-          + storedAu.getName() + "'.");
-    }
+    logger.debug3("Loading identity agreements for AU '" + storedAu.getName() + "'");
     File idFile = getIdentityAgreementFile();
+    String errorString = "Could not load identity agreements for AU '" + storedAu.getName() + "'";
 
     try {
       // CASTOR: remove unwrap() when Castor is phased out
       return (List)unwrap(deserializer.deserialize(idFile));
     }
     catch (FileNotFoundException fnfe) {
-      logger.debug2("No identities file for AU '"
-          + storedAu.getName() + "'.");
+      logger.debug2("No identities file for AU '" + storedAu.getName() + "'");
       // drop down to return empty list
     }
     catch (SerializationException se) {
-      logger.error("Marshalling exception for identity agreements", se);
+      logger.error(errorString, se);
       // drop down to return empty list
     }
-    catch (Exception e) {
-      logger.error("Could not load identity agreements", e);
-      throw new RepositoryStateException("Could not load identity agreements.");
+    catch (Exception exc) {
+      logger.error(errorString, exc);
+      throw new RepositoryStateException(errorString, exc);
     }
 
     // Default: return empty list
@@ -312,9 +300,8 @@ public class HistoryRepositoryImpl
    */
   NodeState loadNodeState(ObjectSerializer deserializer,
                           CachedUrlSet cus) {
-    if (logger.isDebug3()) {
-      logger.debug3("Loading state for CUS '" + cus.getUrl() + "'.");
-    }
+    logger.debug3("Loading state for CUS '" + cus.getUrl() + "'");
+    String errorString = "Could not load node state for CUS '" + cus.getUrl() + "'";
 
     try {
       // Can throw MalformedURLException
@@ -331,17 +318,16 @@ public class HistoryRepositoryImpl
       return nodeState;
     }
     catch (FileNotFoundException fnfe) {
-      logger.debug3("No node state file for node '" + cus.getUrl() + "'.");
+      logger.debug3("No node state file for node '" + cus.getUrl() + "'");
       // drop down to return default value
     }
     catch (SerializationException se) {
-      logger.error("Marshalling exception on node state for '"
-          + cus.getUrl() + "'", se);
+      logger.error(errorString, se);
       // drop down to return default value
     }
-    catch (Exception e) {
-      logger.error("Could not load node state", e);
-      throw new RepositoryStateException("Could not load node state.");
+    catch (Exception exc) {
+      logger.error(errorString, exc);
+      throw new RepositoryStateException(errorString, exc);
     }
 
     // Default value
@@ -387,12 +373,10 @@ public class HistoryRepositoryImpl
      */
 
     CachedUrlSet cus = nodeState.getCachedUrlSet();
-    if (logger.isDebug3()) {
-      logger.debug3("Loading histories for CUS '"
-          + cus.getUrl() + "'.");
-    }
+    logger.debug3("Loading histories for CUS '" + cus.getUrl() + "'");
     File nodeFile = null;
     NodeStateImpl impl = (NodeStateImpl)nodeState; // eww
+    String errorString = "Could not load poll history for CUS '" + cus.getUrl() + "'";
 
     try {
       // Can throw MalformedURLException
@@ -401,7 +385,7 @@ public class HistoryRepositoryImpl
       // CASTOR: remove unwrap() when Castor is phased out
       List hist = (List)unwrap(deserializer.deserialize(nodeFile));
       if (hist.size() == 0) {
-        logger.debug3("Empty history list loaded.");
+        logger.debug3("Empty history list loaded '" + cus.getUrl() + "'");
         // drop down to the default setter
       }
       else {
@@ -410,24 +394,22 @@ public class HistoryRepositoryImpl
       }
     }
     catch (FileNotFoundException fnfe) {
-      logger.debug3("No histories to load.");
+      logger.debug2("No histories to load for CUS '" + cus.getUrl() + "'");
       // drop down to the default setter
     }
     catch (SerializationException se) {
-      logger.error("Cannot parse poll history (SerializationException): "
-          + nodeFile, se);
+      logger.error(errorString, se);
       // rename file and drop down to default setter
       nodeFile.renameTo(new File(nodeFile.getAbsolutePath()+".old"));
     }
     catch (IOException ioe) {
-      logger.error("Cannot parse poll history (IOException): "
-          + nodeFile, ioe);
+      logger.error(errorString, ioe);
       // rename file and drop down to default setter
       nodeFile.renameTo(new File(nodeFile.getAbsolutePath()+".old"));
     }
-    catch (Exception e) {
-      logger.error("Could not load poll history", e);
-      throw new RepositoryStateException("Could not load history.");
+    catch (Exception exc) {
+      logger.error(errorString, exc);
+      throw new RepositoryStateException(errorString, exc);
     }
 
     // Default setter
@@ -468,19 +450,17 @@ public class HistoryRepositoryImpl
    */
   void storeAuState(ObjectSerializer serializer,
                     AuState auState) {
-    if (logger.isDebug3()) {
-      logger.debug3("Storing state for AU '"
-          + auState.getArchivalUnit().getName() + "'.");
-    }
+    logger.debug3("Storing state for AU '" + auState.getArchivalUnit().getName() + "'");
     File file = prepareFile(rootLocation, AU_FILE_NAME);
 
     try {
       // CASTOR: remove wrap() when Castor is phased out
       serializer.serialize(file, wrap(auState));
     }
-    catch (Exception e) {
-      logger.error("Could not store AU state", e);
-      throw new RepositoryStateException("Could not store AU state.");
+    catch (Exception exc) {
+      String errorString = "Could not store AU state for AU '" + auState.getArchivalUnit().getName() + "'";
+      logger.error(errorString, exc);
+      throw new RepositoryStateException(errorString, exc);
     }
   }
 
@@ -502,10 +482,7 @@ public class HistoryRepositoryImpl
    */
   void storeDamagedNodeSet(ObjectSerializer serializer,
                            DamagedNodeSet nodeSet) {
-    if (logger.isDebug3()) {
-      logger.debug3("Storing damaged nodes for AU '" +
-                    nodeSet.theAu.getName() + "'.");
-    }
+    logger.debug3("Storing damaged nodes for AU '" + nodeSet.theAu.getName() + "'");
     File file = prepareFile(rootLocation, DAMAGED_NODES_FILE_NAME);
 
     try {
@@ -513,8 +490,9 @@ public class HistoryRepositoryImpl
       serializer.serialize(file, nodeSet);
     }
     catch (Exception exc) {
-      logger.error("Could not store damaged nodes", exc);
-      throw new RepositoryStateException("Could not store damaged nodes");
+      String errorString = "Could not store damaged nodes for AU '" + nodeSet.theAu.getName() + "'";
+      logger.error(errorString, exc);
+      throw new RepositoryStateException(errorString, exc);
     }
   }
 
@@ -537,10 +515,7 @@ public class HistoryRepositoryImpl
    */
   void storeIdentityAgreements(ObjectSerializer serializer,
                                List idList) {
-    if (logger.isDebug3()) {
-      logger.debug3("Storing identity agreements for AU '"
-          + storedAu.getName() + "'.");
-    }
+    logger.debug3("Storing identity agreements for AU '" + storedAu.getName() + "'");
     File file = prepareFile(rootLocation, IDENTITY_AGREEMENT_FILE_NAME);
 
     try {
@@ -548,8 +523,9 @@ public class HistoryRepositoryImpl
       serializer.serialize(file, wrap(idList));
     }
     catch (Exception exc) {
-      logger.error("Could not store identity agreements", exc);
-      throw new RepositoryStateException("Could not store identity agreements");
+      String errorString = "Could not store identity agreements for AU '" + storedAu.getName() + "'";
+      logger.error(errorString, exc);
+      throw new RepositoryStateException(errorString, exc);
     }
   }
 
@@ -572,10 +548,7 @@ public class HistoryRepositoryImpl
   void storeNodeState(ObjectSerializer serializer,
                       NodeState nodeState) {
     CachedUrlSet cus = nodeState.getCachedUrlSet();
-    if (logger.isDebug3()) {
-      logger.debug3("Storing state for CUS '"
-          + cus.getUrl() + "'.");
-    }
+    logger.debug3("Storing state for CUS '" + cus.getUrl() + "'");
 
     try {
       // Can throw MalformedURLException
@@ -584,9 +557,10 @@ public class HistoryRepositoryImpl
       // CASTOR: remove wrap() when Castor is phased out
       serializer.serialize(file, wrap(nodeState));
     }
-    catch (Exception e) {
-      logger.error("Could not store node state", e);
-      throw new RepositoryStateException("Could not store node state.");
+    catch (Exception exc) {
+      String errorString = "Could not store node state for CUS '" + cus.getUrl() + "'";
+      logger.error(errorString, exc);
+      throw new RepositoryStateException(errorString, exc);
     }
   }
 
@@ -610,9 +584,7 @@ public class HistoryRepositoryImpl
   void storePollHistories(ObjectSerializer serializer,
                           NodeState nodeState) {
     CachedUrlSet cus = nodeState.getCachedUrlSet();
-    if (logger.isDebug3()) {
-      logger.debug3("Storing histories for CUS '" + cus.getUrl() + "'.");
-    }
+    logger.debug3("Storing histories for CUS '" + cus.getUrl() + "'");
 
     try {
       // Can throw MalformedURLException
@@ -632,9 +604,10 @@ public class HistoryRepositoryImpl
         );
       }
     }
-    catch (Exception e) {
-      logger.error("Could not store poll history", e);
-      throw new RepositoryStateException("Could not store poll history.");
+    catch (Exception exc) {
+      String errorString = "Could not store poll history for CUS '" + cus.getUrl() + "'";
+      logger.error(errorString, exc);
+      throw new RepositoryStateException(errorString, exc);
     }
   }
 
