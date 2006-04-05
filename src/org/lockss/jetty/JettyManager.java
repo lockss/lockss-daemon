@@ -1,5 +1,5 @@
 /*
- * $Id: JettyManager.java,v 1.22 2006-04-05 22:51:54 tlipkis Exp $
+ * $Id: JettyManager.java,v 1.23 2006-04-05 23:12:23 tlipkis Exp $
  */
 
 /*
@@ -53,6 +53,7 @@ public abstract class JettyManager
   public static final String PARAM_NAMED_SERVER_PRIORITY =
     PREFIX + "<name>.priority";
 
+  /** The maximum form data size that Jetty will accept */
   public static final String PARAM_MAX_FORM_SIZE =
     PREFIX + "MaxFormSize";
 
