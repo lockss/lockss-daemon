@@ -1,5 +1,5 @@
 /*
- * $Id: JettyManager.java,v 1.21 2005-12-01 23:28:04 troberts Exp $
+ * $Id: JettyManager.java,v 1.22 2006-04-05 22:51:54 tlipkis Exp $
  */
 
 /*
@@ -53,6 +53,11 @@ public abstract class JettyManager
   public static final String PARAM_NAMED_SERVER_PRIORITY =
     PREFIX + "<name>.priority";
 
+  public static final String PARAM_MAX_FORM_SIZE =
+    PREFIX + "MaxFormSize";
+
+  public static final String DEFAULT_MAX_FORM_SIZE = "400000";
+
   private String prioParam;
 
   private static Logger log = Logger.getLogger("JettyMgr");
@@ -94,6 +99,9 @@ public abstract class JettyManager
       // Tell Jetty to allow symbolic links in file resources
       System.setProperty("org.mortbay.util.FileResource.checkAliases",
 			 "false");
+      System.setProperty("org.mortbay.http.HttpRequest.maxFormContentSize",
+			 CurrentConfig.getParam(PARAM_MAX_FORM_SIZE,
+						DEFAULT_MAX_FORM_SIZE));
       isJettyInited = true;
     }
   }
