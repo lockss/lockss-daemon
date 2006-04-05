@@ -1,5 +1,5 @@
 /*
- * $Id: TestBinarySemaphore.java,v 1.8 2003-06-20 22:34:56 claire Exp $
+ * $Id: TestBinarySemaphore.java,v 1.9 2006-04-05 22:08:28 tlipkis Exp $
  */
 
 /*
@@ -223,21 +223,21 @@ public class TestBinarySemaphore extends LockssTestCase {
     sem.give();
     Interrupter intr = null;
     try {
-      intr = interruptMeIn(TIMEOUT_SHOULDNT, true);
+      intr = interruptMeIn(TIMEOUT_SHOULDNT * 2, true);
       Date start = new Date();
-      if (!sem.take(Deadline.in(1000))) {
-	fail("take(1000) of full returned false");
-      }
+      boolean res = sem.take(Deadline.in(TIMEOUT_SHOULDNT));
       long delay = TimerUtil.timeSince(start);
-      // bogus - it returned true; ok if it took longer than expected
-//       if (delay > 750) {
-// 	fail("take(1000) of full timed out in " + delay);
-//       }
+      if (!res) {
+	fail("take(" +TIMEOUT_SHOULDNT+ ") of full returned false in "+delay);
+      }
+      if (delay > TIMEOUT_SHOULDNT) {
+	fail("take(" + TIMEOUT_SHOULDNT + ") of full correctly returned TRUE, but not until timer expired in " + delay);
+      }
       intr.cancel();
     } catch (InterruptedException e) {
     } finally {
       if (intr.did()) {
-	fail("take(1000) of full failed to return");
+	fail("take(" + TIMEOUT_SHOULDNT + ") of full failed to return");
       }
     }
   }

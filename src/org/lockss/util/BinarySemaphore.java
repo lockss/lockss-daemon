@@ -1,5 +1,5 @@
 /*
- * $Id: BinarySemaphore.java,v 1.7 2004-08-31 04:07:12 tlipkis Exp $
+ * $Id: BinarySemaphore.java,v 1.8 2006-04-05 22:08:29 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -64,7 +64,9 @@ public class BinarySemaphore {
 	while (!timer.expired()) {
 	  long sleep = timer.getSleepTime();
 	  synchronized (this) {
-	    this.wait(sleep);
+	    if (!state) {
+	      this.wait(sleep);
+	    }
 	    if (state) {
 	      state = false;
 	      return true;
