@@ -1,5 +1,5 @@
 /*
- * $Id: PropertyTree.java,v 1.5 2005-10-19 20:13:05 troberts Exp $
+ * $Id: PropertyTree.java,v 1.6 2006-04-05 22:56:04 tlipkis Exp $
  */
 
 /*
@@ -35,7 +35,7 @@ in this Software without prior written authorization from Stanford University.
 
 // ========================================================================
 // Copyright (c) 1999 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: PropertyTree.java,v 1.5 2005-10-19 20:13:05 troberts Exp $
+// $Id: PropertyTree.java,v 1.6 2006-04-05 22:56:04 tlipkis Exp $
 // ========================================================================
 
 package org.lockss.util;
@@ -279,46 +279,46 @@ public class PropertyTree extends Properties
   /** Enumerate non wild tree node names below given node.
    * @return Enumeration of tree node names.
    */
-  public Enumeration getRealNodes()
-  {
-    return getRealNodes("");
-  }
+//   public Enumeration getRealNodes()
+//   {
+//     return getRealNodes("");
+//   }
 
   /* ------------------------------------------------------------ */
   /** Enumerate non wild tree node names below given node.
    * @param key Key of the node.
    * @return Enumeration of tree node names.
    */
-  public Enumeration getRealNodes(String key)
-  {
-    if (!key.endsWith(".") && key.length()>0)
-      key+=".";
+//   public Enumeration getRealNodes(String key)
+//   {
+//     if (!key.endsWith(".") && key.length()>0)
+//       key+=".";
 
-    // find the root tree.
-    PropertyTree tree=this;
-    while (tree.parent!=null)
-      {
-	key=tree.prefix+key;
-	tree=tree.parent;
-      }
+//     // find the root tree.
+//     PropertyTree tree=this;
+//     while (tree.parent!=null)
+//       {
+// 	key=tree.prefix+key;
+// 	tree=tree.parent;
+//       }
 
-    // find not wild keys
-    Hashtable keySet=new Hashtable(tree.size()*2);
-    Enumeration e= tree.keys();
-    while (e.hasMoreElements())
-      {
-	String k=(String)e.nextElement();
-	if (!k.startsWith(key))
-	  continue;
-	String s=k.substring(key.length());
-	int d=s.indexOf(".");
-	if (d>=0)
-	  s=s.substring(0,d);
-	keySet.put(s,s);
-      }
+//     // find not wild keys
+//     Hashtable keySet=new Hashtable(tree.size()*2);
+//     Enumeration e= tree.keys();
+//     while (e.hasMoreElements())
+//       {
+// 	String k=(String)e.nextElement();
+// 	if (!k.startsWith(key))
+// 	  continue;
+// 	String s=k.substring(key.length());
+// 	int d=s.indexOf(".");
+// 	if (d>=0)
+// 	  s=s.substring(0,d);
+// 	keySet.put(s,s);
+//       }
 
-    return keySet.keys();
-  }
+//     return keySet.keys();
+//   }
 
   /* ------------------------------------------------------------ */
   /** Get Vector of values.
@@ -478,7 +478,7 @@ public class PropertyTree extends Properties
 	String key=(String)keyMap.get(subKey);
 	put(subKey,parent.get(key));
       }
-    this.parent=parent;
+//     this.parent=parent;
   }
 
   /* ------------------------------------------------------------ */
