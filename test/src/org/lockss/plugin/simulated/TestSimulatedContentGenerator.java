@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimulatedContentGenerator.java,v 1.25 2005-10-11 05:50:15 tlipkis Exp $
+ * $Id: TestSimulatedContentGenerator.java,v 1.26 2006-04-05 22:57:37 tlipkis Exp $
  */
 
 /*
@@ -122,7 +122,7 @@ public class TestSimulatedContentGenerator extends LockssTestCase {
                                "</a>")>=0);
     assertTrue(content.indexOf("<a href=\".\">.</a>")>=0);
     //test for no extra links
-    assertEquals(5, StringUtil.countOccurences(content, "<a href="));
+    assertEquals(8, StringUtil.countOccurences(content, "<a href="));
   }
 
   public void testGetHtmlFileContent() {

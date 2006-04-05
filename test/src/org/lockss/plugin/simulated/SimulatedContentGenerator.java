@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedContentGenerator.java,v 1.21 2006-01-13 20:03:45 tlipkis Exp $
+ * $Id: SimulatedContentGenerator.java,v 1.22 2006-04-05 22:57:37 tlipkis Exp $
  */
 
 /*
@@ -637,6 +637,14 @@ public class SimulatedContentGenerator {
       file_content += "<BR><A HREF=\"" + FileUtil.sysIndepPath(subLink) +
           "\">" + subLink + "</A>";
     }
+    // insert a link to parent to ensure there are some duplicate links
+    file_content += "<BR><A HREF=\"../index.html\">" + "parent" + "</A>";
+    // insert a link to a fixed excluded URL to ensure there are some
+    // duplicate excluded links
+    file_content += "<BR><A HREF=\"/xxxexcluded.html\">" + "excluded" + "</A>";
+    // insert a link to a fixed failing URL to ensure there are some
+    // duplicate failing links
+    file_content += "<BR><A HREF=\"/xxxfail.html\">" + "fail" + "</A>";
     file_content += "</BODY></HTML>";
     return file_content;
   }

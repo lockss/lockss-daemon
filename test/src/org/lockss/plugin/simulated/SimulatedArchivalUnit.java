@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedArchivalUnit.java,v 1.55 2006-03-01 02:50:13 smorabito Exp $
+ * $Id: SimulatedArchivalUnit.java,v 1.56 2006-04-05 22:57:37 tlipkis Exp $
  */
 
 /*
@@ -331,13 +331,25 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
       paramMap.putUrl(AU_BASE_URL, baseUrl);
     }
     catch (MalformedURLException murle) {
-      throw new ConfigurationException("Bad URL for " + SIMULATED_URL_START, murle);
+      throw new ConfigurationException("Bad URL for " + SIMULATED_URL_START,
+				       murle);
     }
     paramMap.putLong(AU_FETCH_DELAY, 0);
     newContentCrawlIntv = config.getTimeInterval(NEW_CONTENT_CRAWL_KEY,
                                                  defaultContentCrawlIntv);
     paramMap.putLong(AU_NEW_CRAWL_INTERVAL, newContentCrawlIntv);
-    crawlSpec = new SpiderCrawlSpec(SIMULATED_URL_START, null);
+    try {
+      CrawlRule rule1 =
+	new CrawlRules.RE("xxxexclude", CrawlRules.RE.MATCH_EXCLUDE);
+      CrawlRule rule2 =
+	new CrawlRules.RE(".*", CrawlRules.RE.MATCH_INCLUDE);
+      CrawlRule rules =
+	new CrawlRules.FirstMatch(ListUtil.list(rule1, rule2));
+      crawlSpec =
+	new SpiderCrawlSpec(SIMULATED_URL_START, rules);
+    } catch (LockssRegexpException e) {
+      throw new ConfigurationException(e.toString());
+    }
     paramMap.setMapElement(AU_CRAWL_SPEC, crawlSpec);
     startUrlString = makeStartUrl();
     paramMap.putString(AU_START_URL, startUrlString);

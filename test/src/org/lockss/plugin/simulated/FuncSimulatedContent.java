@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSimulatedContent.java,v 1.72 2005-10-11 05:50:15 tlipkis Exp $
+ * $Id: FuncSimulatedContent.java,v 1.73 2006-04-05 22:57:37 tlipkis Exp $
  */
 
 /*
@@ -239,9 +239,9 @@ public class FuncSimulatedContent extends LockssTestCase {
     checkHashSet(true, true,
 		 fromHex("6AB258B4E1FFD9F9B45316B4F54111FF5E5948D2"));
     checkHashSet(false, false,
-		 fromHex("36D4DA81357674FD3F2D31C751C0FC8F3C825A1B"));
+		 fromHex("409893F1A603F4C276632694DB1621B639BD5164"));
     checkHashSet(false, true,
-		 fromHex("4BE438B3212938D2643423EE7F9AF45D17736526"));
+		 fromHex("85E6213C3771BEAC5A4602CAF7982C6C222800D5"));
   }
 
   private void checkDepth() {
