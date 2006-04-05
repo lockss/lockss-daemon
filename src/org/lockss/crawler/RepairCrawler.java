@@ -1,5 +1,5 @@
 /*
- * $Id: RepairCrawler.java,v 1.57 2006-02-14 05:19:49 tlipkis Exp $
+ * $Id: RepairCrawler.java,v 1.58 2006-04-05 22:35:15 tlipkis Exp $
  */
 
 /*
@@ -241,7 +241,6 @@ public class RepairCrawler extends BaseCrawler {
     } else {
       logger.info("Finished crawl of "+au);
     }
-    logCrawlSpecCacheRate();
     return (crawlStatus.getCrawlError() == null);
   }
 

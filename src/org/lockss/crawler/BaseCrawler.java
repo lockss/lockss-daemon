@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawler.java,v 1.7 2006-03-02 06:59:19 tlipkis Exp $
+ * $Id: BaseCrawler.java,v 1.8 2006-04-05 22:35:15 tlipkis Exp $
  */
 
 /*
@@ -272,21 +272,6 @@ public abstract class BaseCrawler
     case UrlCacher.CACHE_RESULT_NOT_MODIFIED:
       crawlStatus.signalUrlNotModified(uc.getUrl());
       break;
-    }
-  }
-
-  protected void logCrawlSpecCacheRate() {
-    if (au instanceof BaseArchivalUnit) {
-      BaseArchivalUnit bau = (BaseArchivalUnit)au;
-      long cacheHits = bau.getCrawlSpecCacheHits();
-      long cacheMisses = bau.getCrawlSpecCacheMisses();
-      if (cacheHits == 0) {
-	logger.info(cacheHits + "/" + cacheMisses + " cache hits");
-      } else {
-	float per = (float)cacheHits / (float)(cacheHits + cacheMisses);
-	logger.info(cacheHits + "/" + cacheMisses + " cache hits (" +
-		    Integer.toString(Math.round(per * 100)) + "%)");
-      }
     }
   }
 
