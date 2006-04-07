@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.34 2006-04-05 22:30:18 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.35 2006-04-07 21:44:27 thib_gc Exp $
  */
 
 /*
@@ -593,7 +593,7 @@ public class ConfigManager implements LockssManager {
     // do this even if no local.txt, to ensure platform-like params (e.g.,
     // group) in initial config get into platformConfig even during testing.
     platConfig.seal();
-    this.platformConfig = platConfig;
+    platformConfig = platConfig;
   }
 
 

@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.18 2006-04-05 22:30:57 tlipkis Exp $
+ * $Id: Configuration.java,v 1.19 2006-04-07 21:44:26 thib_gc Exp $
  */
 
 /*
@@ -604,7 +604,7 @@ public abstract class Configuration {
      * @param oldConfig  the previous <code>Configuration</code>, or null
      *                   if there was no previous config.
      * @param changes  the set of keys whose value has changed.
-     * @see Configuration#registerConfigurationCallback */
+     */
     public void configurationChanged(Configuration newConfig,
 				     Configuration oldConfig,
 				     Configuration.Differences changes);
