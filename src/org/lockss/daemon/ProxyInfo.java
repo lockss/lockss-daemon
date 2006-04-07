@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyInfo.java,v 1.19 2006-03-24 23:17:23 thib_gc Exp $
+ * $Id: ProxyInfo.java,v 1.20 2006-04-07 20:26:45 thib_gc Exp $
  */
 
 /*
@@ -38,11 +38,12 @@ import java.util.*;
 import java.util.Map.Entry;
 
 import org.apache.oro.text.regex.*;
-import org.lockss.app.LockssDaemon;
+import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.plugin.*;
 import org.lockss.protocol.IdentityManager;
-import org.lockss.proxy.ProxyManager;
+import org.lockss.proxy.*;
+import org.lockss.proxy.icp.*;
 import org.lockss.util.*;
 
 /**
@@ -197,8 +198,8 @@ public class ProxyInfo {
      */
     protected static String removeProtocol(String stem) {
       final String PROTOCOL_SUBSTRING = "://";
-      return stem.substring(
-          stem.indexOf(PROTOCOL_SUBSTRING) + PROTOCOL_SUBSTRING.length());
+      return stem.substring(stem.indexOf(PROTOCOL_SUBSTRING)
+                            + PROTOCOL_SUBSTRING.length());
     }
 
   }
@@ -301,9 +302,12 @@ public class ProxyInfo {
       try {
         String encapsulatedName = findUnusedName(pacFileToBeEncapsulated);
         String encapsulated = jsReplace(pacFileToBeEncapsulated,
-            "FindProxyForURL", encapsulatedName);
+                                        "FindProxyForURL",
+                                        encapsulatedName);
 
-        buffer.append(" return " + encapsulatedName + "(url, host);\n");
+        buffer.append(" return ");
+        buffer.append(encapsulatedName);
+        buffer.append("(url, host);\n");
         buffer.append("}\n\n");
         buffer.append("// Encapsulated PAC file follows ");
         if (!StringUtil.isNullString(message)) {
@@ -318,8 +322,8 @@ public class ProxyInfo {
       }
       catch (MalformedPatternException exc) {
         log.error("PAC file patterns", exc);
-        throw new RuntimeException(
-            "Unexpected malformed pattern: " + exc.toString());
+        throw new RuntimeException("Unexpected malformed pattern: "
+                                   + exc.toString());
       }
     }
 
@@ -343,8 +347,8 @@ public class ProxyInfo {
       Pattern fromPat =
         RegexpUtil.getCompiler().compile("\\b" + oldname + "\\b");
       Substitution subst = new Perl5Substitution(newname);
-      return Util.substitute(RegexpUtil.getMatcher(), fromPat, subst, js,
-          		   Util.SUBSTITUTE_ALL);
+      return Util.substitute(RegexpUtil.getMatcher(), fromPat, subst,
+                             js, Util.SUBSTITUTE_ALL);
     }
 
   }
@@ -380,8 +384,12 @@ public class ProxyInfo {
 
     /* Inherit documentation */
     public void generateEntry(StringBuffer buffer, String urlStem, ArchivalUnit au) {
-      buffer.append("Title " + au.getName() + "\n");
-      buffer.append("URL " + urlStem + "\n");
+      buffer.append("Title ");
+      buffer.append(au.getName());
+      buffer.append("\n");
+      buffer.append("URL ");
+      buffer.append(urlStem);
+      buffer.append("\n");
       buffer.append("Domain ");
       try {
         buffer.append(UrlUtil.getHost(urlStem));
@@ -418,7 +426,11 @@ public class ProxyInfo {
      * @param buffer A {@link StringBuffer} instance to output into.
      */
     protected void commonHeader(StringBuffer buffer) {
-      buffer.append("# Generated " + TimeBase.nowDate().toString() + " by LOCKSS cache " + getProxyHost() + "\n\n");
+      buffer.append("# Generated ");
+      buffer.append(TimeBase.nowDate().toString());
+      buffer.append(" by LOCKSS cache ");
+      buffer.append(getProxyHost());
+      buffer.append("\n\n");
     }
 
     /**
@@ -437,18 +449,78 @@ public class ProxyInfo {
         beforeCommands = "";
       }
 
-      buffer.append(beforeCommands + "acl anyone src 0.0.0.0/0.0.0.0\n");
-      buffer.append(beforeCommands + "cache_peer " + getProxyHost() + " parent <PROXYPORT> <ICPPORT> proxy-only\n");
-      buffer.append(beforeCommands + "cache_peer_access " + getProxyHost() + " allow " + encodeAclName() + "\n");
-      buffer.append(beforeCommands + "cache_peer_access " + getProxyHost() + " deny anyone\n");
+      buffer.append(beforeCommands);
+      buffer.append('\n');
 
-      buffer.append("# Replace <PROXYPORT> by the port number used by your LOCKSS box\n");
-      buffer.append("#  for proxy requests (typically 9090).\n");
-      buffer.append("# Replace <ICPPORT> by the port number used by your LOCKSS box\n");
-      buffer.append("#  for ICP requests (typically 3130).\n");
+      // Define a catch-all ACL
+      buffer.append(beforeCommands);
       buffer.append("# If you already have \"acl XYZ src 0.0.0.0/0.0.0.0\" or equivalent elsewhere,\n");
-      buffer.append("#  do not include \"acl anyone src 0.0.0.0/0.0.0.0\" and replace\n");
-      buffer.append("#  \"deny anyone\" by \"deny XYZ\".\n\n");
+      buffer.append(beforeCommands);
+      buffer.append("# comment out this next line and replace \"deny anyone\" by \"deny XYZ\" in\n");
+      buffer.append(beforeCommands);
+      buffer.append("# \"cache_peer_access ");
+      buffer.append(getProxyHost());
+      buffer.append(" deny anyone\" (see below).\n");
+      buffer.append(beforeCommands);
+      buffer.append("acl anyone src 0.0.0.0/0.0.0.0\n");
+      buffer.append(beforeCommands);
+      buffer.append('\n');
+
+      // Declare the LOCKSS cache to be a parent peer
+      buffer.append(beforeCommands);
+      buffer.append("cache_peer ");
+      buffer.append(getProxyHost());
+      buffer.append(" parent ");
+      buffer.append(CurrentConfig.getIntParam(ProxyManager.PARAM_PORT,
+                                              ProxyManager.DEFAULT_PORT));
+      buffer.append(' ');
+      int port = CurrentConfig.getIntParam(IcpManager.PARAM_ICP_PORT,
+                                           CurrentConfig.getIntParam(IcpManager.PARAM_PLATFORM_ICP_PORT,
+                                                                     -1));
+      buffer.append(port > 0 ? Integer.toString(port) : "???");
+      buffer.append(" proxy-only\n");
+
+      // Additional explanation if ICP is not quite ready
+      if (CurrentConfig.getBooleanParam(IcpManager.PARAM_PLATFORM_ICP_ENABLED, false)) {
+        buffer.append(beforeCommands);
+        buffer.append("# (The platform on ");
+        buffer.append(getProxyHost());
+        buffer.append(" is configured to disallow ICP.\n");
+        buffer.append(beforeCommands);
+        buffer.append("# To enable ICP you must perform a platform reconfiguration reboot.)\n");
+      }
+      else if (!(port > 0)) {
+        buffer.append(beforeCommands);
+        buffer.append("# (The ICP server is not running on ");
+        buffer.append(getProxyHost());
+        buffer.append(".\n");
+        buffer.append(beforeCommands);
+        buffer.append("# Replace \"???\" by the ICP port after setting it up.)\n");
+      }
+      buffer.append(beforeCommands);
+      buffer.append('\n');
+
+      // Allow the domain list
+      buffer.append(beforeCommands);
+      buffer.append("cache_peer_access ");
+      buffer.append(getProxyHost());
+      buffer.append(" allow ");
+      buffer.append(encodeAclName());
+      buffer.append('\n');
+      buffer.append(beforeCommands);
+      buffer.append('\n');
+
+      // Deny everything else
+      buffer.append(beforeCommands);
+      buffer.append("# If you already have \"acl XYZ src 0.0.0.0/0.0.0.0\" or equivalent elsewhere,\n");
+      buffer.append(beforeCommands);
+      buffer.append("# replace \"deny anyone\" by \"deny XYZ\" (see above).\n");
+      buffer.append(beforeCommands);
+      buffer.append("cache_peer_access ");
+      buffer.append(getProxyHost());
+      buffer.append(" deny anyone\n");
+      buffer.append(beforeCommands);
+      buffer.append("\n\n");
     }
 
     /**
@@ -473,11 +545,24 @@ public class ProxyInfo {
     /* Inherit documentation */
     public void generateBeginning(StringBuffer buffer) {
       buffer.append("# LOCKSS dstdomain file for Squid\n");
+
       commonHeader(buffer);
-      buffer.append("# Suggested file name: " + encodeAclName() + ".txt\n\n");
-      buffer.append("# Suggested use is Squid config file:\n");
-      buffer.append("#     acl " + encodeAclName() + " dstdomain \"/the/path/to/" + encodeAclName() + ".txt\"\n");
-      commonUsage(buffer, "#     ");
+
+      buffer.append("# Suggested file name: ");
+      buffer.append(encodeAclName());
+      buffer.append(".txt\n\n");
+
+      buffer.append("# Suggested use in Squid config file:\n");
+      buffer.append("#\n");
+
+      buffer.append("#    # Edit the path accordingly\n");
+      buffer.append("#    acl ");
+      buffer.append(encodeAclName());
+      buffer.append(" dstdomain \"/the/path/to/");
+      buffer.append(encodeAclName());
+      buffer.append(".txt\"\n");
+
+      commonUsage(buffer, "#    ");
     }
 
     /* Inherit documentation */
@@ -506,7 +591,7 @@ public class ProxyInfo {
     public void generateBeginning(StringBuffer buffer) {
       buffer.append("# LOCKSS configuration fragment for Squid\n");
       commonHeader(buffer);
-      buffer.append("# SCROLL DOWN past all the following \"dstdomain\" lines for further instructions.\n\n");
+      buffer.append("# Go look for further instructions after all the following \"dstdomain\" lines.\n\n");
     }
 
     /* Inherit documentation */
@@ -519,7 +604,7 @@ public class ProxyInfo {
     /* Inherit documentation */
     public void generateEnd(StringBuffer buffer) {
       buffer.append("#\n");
-      buffer.append("# CONTINUED: LOCKSS cache config\n");
+      buffer.append("# LOCKSS CACHE CONFIG\n");
       buffer.append("#\n");
       commonUsage(buffer, "");
     }
