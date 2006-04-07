@@ -1,5 +1,5 @@
 /*
- * $Id: ObjectSerializerTester.java,v 1.4 2006-04-07 00:16:14 thib_gc Exp $
+ * $Id: ObjectSerializerTester.java,v 1.5 2006-04-07 22:13:59 thib_gc Exp $
  */
 
 /*
@@ -240,9 +240,9 @@ public abstract class ObjectSerializerTester extends XMLTestCase {
           throw new InterruptedIOException();
         }
       });
-      fail("Should have thrown a RuntimeException");
+      fail("Should have thrown an InterruptedIOException");
     }
-    catch (RuntimeException reIgnore) {
+    catch (InterruptedIOException reIgnore) {
       // All is well
     }
   }

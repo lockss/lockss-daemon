@@ -1,5 +1,5 @@
 /*
- * $Id: ObjectSerializer.java,v 1.18 2006-04-07 00:16:14 thib_gc Exp $
+ * $Id: ObjectSerializer.java,v 1.19 2006-04-07 22:13:59 thib_gc Exp $
  */
 
 /*
@@ -524,10 +524,11 @@ public abstract class ObjectSerializer {
    * fails.</p>
    * @param exc The exception thrown.
    * @return A new {@link SerializationException}, or a new
-   *         {@link RuntimeException} if the argument is of type
-   *         {@link InterruptedIOException}.
+   *         {@link InterruptedIOException} if the argument is or
+   *         contains an {@link InterruptedIOException}.
    */
-  protected static SerializationException failDeserialize(Exception exc) {
+  protected static SerializationException failDeserialize(Exception exc)
+      throws InterruptedIOException {
     StringBuffer buffer = new StringBuffer();
     buffer.append("Failed to deserialize an object (");
     buffer.append(exc.getClass().getName());
@@ -535,7 +536,7 @@ public abstract class ObjectSerializer {
     String str = buffer.toString();
     logger.debug2(str, exc);
 
-    // Throw RuntimeException if cause InterruptedIOException
+    // Throw RuntimeException if cause is InterruptedIOException
     throwIfInterrupted(exc);
     // Otherwise, return new SerializationException
     return new SerializationException(str, exc);
@@ -546,10 +547,13 @@ public abstract class ObjectSerializer {
    * fails and the original file is known.</p>
    * @param exc  The exception thrown.
    * @param file The file that was being read.
-   * @return A new SerializationException.
+   * @return A new {@link SerializationException}, or a new
+   *         {@link InterruptedIOException} if the argument is or
+   *         contains an {@link InterruptedIOException}.
    */
   protected static SerializationException failDeserialize(Exception exc,
-                                                          File file) {
+                                                          File file)
+      throws InterruptedIOException {
     StringBuffer buffer = new StringBuffer();
     buffer.append("Failed to deserialize an object from ");
     buffer.append(file.getAbsolutePath());
@@ -558,6 +562,10 @@ public abstract class ObjectSerializer {
     buffer.append(").");
     String str = buffer.toString();
     logger.debug(str, exc);
+
+    // Throw RuntimeException if cause is InterruptedIOException
+    throwIfInterrupted(exc);
+    // Otherwise, return new SerializationException
     return new SerializationException(str, exc);
   }
 
@@ -587,10 +595,13 @@ public abstract class ObjectSerializer {
    * @param exc The exception thrown.
    * @throws NullPointerException if <code>obj</code> is <code>null</code>.
    */
-  protected static void throwIfInterrupted(Exception exc) {
+  protected static void throwIfInterrupted(Exception exc)
+      throws InterruptedIOException {
     for (Throwable cause = exc ; cause != null ; cause = cause.getCause()) {
       if (cause instanceof InterruptedIOException) {
-        throw new RuntimeException(exc);
+        logger.debug2("Exception contains InterruptedIOException", exc);
+        logger.debug2("Nested InterruptedException", cause);
+        throw new InterruptedIOException();
       }
     }
   }
