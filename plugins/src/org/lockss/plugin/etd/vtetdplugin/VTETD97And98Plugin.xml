@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Elements>
+<MapElement>
+<ElementKey>plugin_crawl_type</ElementKey>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">OAI</ElementValue>
+</MapElement>
+<MapElement>
+<ElementKey>au_manifest</ElementKey>
+<ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<string xsi:type="java:java.lang.String">"%slockss_permission.html", base_url</string>
+</ElementValue>
+</MapElement>
+<MapElement>
+<ElementKey>au_crawlrules</ElementKey>
+<ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<string xsi:type="java:java.lang.String">4,"^%s", base_url</string>
+<string xsi:type="java:java.lang.String">1,"%slockss_permission.html", base_url</string>
+<string xsi:type="java:java.lang.String">1,"%stheses/OAI2/", base_url</string>
+<string xsi:type="java:java.lang.String">1,"%stheses/.*/etd-[0-9]{2}%02d-[0-9]*/.*", base_url, au_short_year</string>
+</ElementValue>
+</MapElement>
+<MapElement>
+<ElementKey>plugin_name</ElementKey>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Virginia Tech ETD Plugin (1997-1998)</ElementValue>
+</MapElement>
+<MapElement>
+<ElementKey>au_name</ElementKey>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"Virginia Tech ETD Collection %d", year</ElementValue>
+</MapElement>
+<MapElement>
+<ElementKey>au_start_url</ElementKey>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"%stheses/OAI2/", base_url</ElementValue>
+</MapElement>
+<MapElement>
+<ElementKey>plugin_identifier</ElementKey>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">org.lockss.plugin.etd.vtetdplugin.VTETD97And98Plugin</ElementValue>
+</MapElement>
+<MapElement>
+<ElementKey>plugin_config_props</ElementKey>
+<ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ConfigParamDescr>
+<Key>base_url</Key>
+<DisplayName>Base URL</DisplayName>
+<Description>Usually of the form http://&lt;journal-name&gt;.com/</Description>
+<Type>3</Type>
+<Size>40</Size>
+<Definitional>true</Definitional>
+</ConfigParamDescr>
+<ConfigParamDescr>
+<Key>year</Key>
+<DisplayName>Year</DisplayName>
+<Description>Four digit year (e.g., 2004)</Description>
+<Type>4</Type>
+<Size>4</Size>
+<Definitional>true</Definitional>
+</ConfigParamDescr>
+<ConfigParamDescr>
+<Key>oai_request_url</Key>
+<DisplayName>OAI Request URL</DisplayName>
+<Description>Usually of the form http://&lt;journal-name&gt;.com/</Description>
+<Type>3</Type>
+<Size>40</Size>
+<Definitional>true</Definitional>
+</ConfigParamDescr>
+</ElementValue>
+</MapElement>
+</Elements>
