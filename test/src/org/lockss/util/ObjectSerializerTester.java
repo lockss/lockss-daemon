@@ -1,10 +1,10 @@
 /*
- * $Id: ObjectSerializerTester.java,v 1.3 2006-01-20 19:01:02 thib_gc Exp $
+ * $Id: ObjectSerializerTester.java,v 1.4 2006-04-07 00:16:14 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2002-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,9 +34,11 @@ package org.lockss.util;
 
 import java.io.*;
 import java.net.URL;
+import java.nio.CharBuffer;
 
 import org.custommonkey.xmlunit.XMLTestCase;
 import org.custommonkey.xmlunit.XMLUnit;
+import org.lockss.util.ObjectSerializer.SerializationException;
 
 /**
  * <p>Tests the {@link org.lockss.util.ObjectSerializer} abstract
@@ -53,8 +55,7 @@ import org.custommonkey.xmlunit.XMLUnit;
  * {@link junit.framework.TestCase}.</p>
  * @author Thib Guicherd-Callin
  */
-public abstract class ObjectSerializerTester
-    extends XMLTestCase {
+public abstract class ObjectSerializerTester extends XMLTestCase {
 
   /**
    * <p>Tests whether the same input data deserialized into two new
@@ -228,6 +229,21 @@ public abstract class ObjectSerializerTester
     }
     catch (NullPointerException npe) {
       // succeed
+    }
+  }
+
+  public void testInterruptedIOExceptionThrown() throws Exception {
+    ObjectSerializer serializer = makeObjectSerializer_ExtMapBean();
+    try {
+      serializer.deserialize(new StringReader("") {
+        public int read(char[] cbuf, int off, int len) throws IOException {
+          throw new InterruptedIOException();
+        }
+      });
+      fail("Should have thrown a RuntimeException");
+    }
+    catch (RuntimeException reIgnore) {
+      // All is well
     }
   }
 

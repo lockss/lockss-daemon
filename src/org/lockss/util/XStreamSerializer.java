@@ -1,5 +1,5 @@
 /*
- * $Id: XStreamSerializer.java,v 1.15 2006-02-08 23:05:15 thib_gc Exp $
+ * $Id: XStreamSerializer.java,v 1.16 2006-04-07 00:16:14 thib_gc Exp $
  */
 
 /*
@@ -532,7 +532,9 @@ public class XStreamSerializer extends ObjectSerializer {
       return xs.fromXML(reader);
     }
     catch (StreamException se) {
-      throw new IOException(se.getMessage());
+      logger.debug2("Deserialization failed; StreamException thrown", se);
+      throwIfInterrupted(se);
+      throw new IOException(se.toString());
     }
     catch (CannotResolveClassException crce) {
       throw failDeserialize(crce);
@@ -541,7 +543,7 @@ public class XStreamSerializer extends ObjectSerializer {
       throw failDeserialize(be);
     }
     catch (InstantiationError ie) {
-      throw failDeserialize(ie);
+      throw failDeserialize(new Exception(ie));
     }
   }
 

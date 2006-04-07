@@ -1,5 +1,5 @@
 /*
- * $Id: ObjectSerializer.java,v 1.17 2006-02-08 23:05:15 thib_gc Exp $
+ * $Id: ObjectSerializer.java,v 1.18 2006-04-07 00:16:14 thib_gc Exp $
  */
 
 /*
@@ -47,11 +47,18 @@ import org.lockss.config.CurrentConfig;
  */
 public abstract class ObjectSerializer {
 
-  /** Set true to keep temporary serialization files that either aren't
-   * successfully written or can't be renamed.  Normally they are deleted. */
+  /**
+   * <p>The default value for {@link #PARAM_SAVE_FAILED_TEMPFILES}.</p>
+   */
+  public static final boolean DEFAULT_SAVE_FAILED_TEMPFILES = false;
+
+  /**
+   * <p>Set true to keep temporary serialization files that either
+   * are not successfully written or cannot be renamed. Normally they
+   * are deleted.</p>
+   */
   public static final String PARAM_SAVE_FAILED_TEMPFILES =
     "org.lockss.serialization.saveFailedTempfiles";
-  public static final boolean DEFAULT_SAVE_FAILED_TEMPFILES = false;
 
   /*
    * begin PUBLIC STATIC INNER CLASS
@@ -71,12 +78,21 @@ public abstract class ObjectSerializer {
    */
   public static class SerializationException extends Exception {
 
-    public SerializationException() { super(); }
-    public SerializationException(String message) { super(message); }
+    public SerializationException() {
+      super();
+    }
+
+    public SerializationException(String message) {
+      super(message);
+    }
+
     public SerializationException(String message, Throwable cause) {
       super(message, cause);
     }
-    public SerializationException(Throwable cause) { super(cause); }
+
+    public SerializationException(Throwable cause) {
+      super(cause);
+    }
 
   }
   /*
@@ -361,6 +377,14 @@ public abstract class ObjectSerializer {
     serialize(writer, (Object)obj);
   }
 
+  void maybeDelTempFile(File file) {
+    if (!CurrentConfig.getBooleanParam(PARAM_SAVE_FAILED_TEMPFILES,
+                                       DEFAULT_SAVE_FAILED_TEMPFILES)) {
+      logger.warning("Deleting unsuccessful serial file " + file);
+      file.delete();
+    }
+  }
+
   /**
    * <p>Retrieves the serialization context.</p>
    * @return The {@link org.lockss.app.LockssApp} context.
@@ -417,14 +441,6 @@ public abstract class ObjectSerializer {
       } else {
 	maybeDelTempFile(tempFile);
       }
-    }
-  }
-
-  void maybeDelTempFile(File file) {
-    if (!CurrentConfig.getBooleanParam(PARAM_SAVE_FAILED_TEMPFILES,
-                                       DEFAULT_SAVE_FAILED_TEMPFILES)) {
-      logger.warning("Deleting unsuccessful serial file " + file);
-      file.delete();
     }
   }
 
@@ -506,17 +522,23 @@ public abstract class ObjectSerializer {
   /**
    * <p>An exception message formatter used when deserialization
    * fails.</p>
-   * @param thr The exception thrown.
-   * @return A new SerializationException.
+   * @param exc The exception thrown.
+   * @return A new {@link SerializationException}, or a new
+   *         {@link RuntimeException} if the argument is of type
+   *         {@link InterruptedIOException}.
    */
-  protected static SerializationException failDeserialize(Throwable thr) {
+  protected static SerializationException failDeserialize(Exception exc) {
     StringBuffer buffer = new StringBuffer();
     buffer.append("Failed to deserialize an object (");
-    buffer.append(thr.getClass().getName());
+    buffer.append(exc.getClass().getName());
     buffer.append(").");
     String str = buffer.toString();
-    logger.debug2(str, thr);
-    return new SerializationException(str, thr);
+    logger.debug2(str, exc);
+
+    // Throw RuntimeException if cause InterruptedIOException
+    throwIfInterrupted(exc);
+    // Otherwise, return new SerializationException
+    return new SerializationException(str, exc);
   }
 
   /**
@@ -526,7 +548,8 @@ public abstract class ObjectSerializer {
    * @param file The file that was being read.
    * @return A new SerializationException.
    */
-  protected static SerializationException failDeserialize(Exception exc, File file) {
+  protected static SerializationException failDeserialize(Exception exc,
+                                                          File file) {
     StringBuffer buffer = new StringBuffer();
     buffer.append("Failed to deserialize an object from ");
     buffer.append(file.getAbsolutePath());
@@ -534,7 +557,7 @@ public abstract class ObjectSerializer {
     buffer.append(exc.getClass().getName());
     buffer.append(").");
     String str = buffer.toString();
-    logger.debug1(str, exc);
+    logger.debug(str, exc);
     return new SerializationException(str, exc);
   }
 
@@ -545,7 +568,8 @@ public abstract class ObjectSerializer {
    * @param obj The object being serialized.
    * @return A new SerializationException.
    */
-  protected static SerializationException failSerialize(Exception exc, Object obj) {
+  protected static SerializationException failSerialize(Exception exc,
+                                                        Object obj) {
     StringBuffer buffer = new StringBuffer();
     buffer.append("Failed to serialize ");
     buffer.append(obj.toString());
@@ -553,8 +577,22 @@ public abstract class ObjectSerializer {
     buffer.append(exc.getClass().getName());
     buffer.append(").");
     String str = buffer.toString();
-    logger.debug1(str, exc);
+    logger.debug(str, exc);
     return new SerializationException(str, exc);
+  }
+
+  /**
+   * <p>Throws a {@link RuntimeException} if the argument is or has
+   * a nested InterruptedIOException.</p>
+   * @param exc The exception thrown.
+   * @throws NullPointerException if <code>obj</code> is <code>null</code>.
+   */
+  protected static void throwIfInterrupted(Exception exc) {
+    for (Throwable cause = exc ; cause != null ; cause = cause.getCause()) {
+      if (cause instanceof InterruptedIOException) {
+        throw new RuntimeException(exc);
+      }
+    }
   }
 
   /**
@@ -565,7 +603,7 @@ public abstract class ObjectSerializer {
    */
   protected static void throwIfNull(Object obj) {
     if (obj == null) {
-      logger.debug1("Attempting to marshal null");
+      logger.debug("Attempting to serialize null");
       throw new NullPointerException();
     }
   }

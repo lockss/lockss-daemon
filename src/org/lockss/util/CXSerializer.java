@@ -1,5 +1,5 @@
 /*
- * $Id: CXSerializer.java,v 1.15 2006-01-20 19:01:03 thib_gc Exp $
+ * $Id: CXSerializer.java,v 1.16 2006-04-07 00:16:14 thib_gc Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import org.exolab.castor.mapping.Mapping;
 
 import org.lockss.app.LockssApp;
 import org.lockss.config.CurrentConfig;
+import org.lockss.util.ObjectSerializer.SerializationException;
 
 /**
  * <p>An adapter class implementing
@@ -210,17 +211,21 @@ public class CXSerializer extends ObjectSerializer {
     final String recognizeCastor = "<?xml";
 
     // Make rewinding possible
-    BufferedReader bufReader =
-      new BufferedReader(reader);
+    BufferedReader bufReader = new BufferedReader(reader);
 
     // Peek at beginning of input
     char[] buffer = new char[recognizeCastor.length()];
-    bufReader.mark(recognizeCastor.length() + 1);
-    if (StreamUtil.readChars(bufReader, buffer, buffer.length) != buffer.length) {
-      throw new SerializationException("Could not peek at first "
-          + buffer.length + " bytes");
+    try {
+      bufReader.mark(recognizeCastor.length() + 1);
+      if (StreamUtil.readChars(bufReader, buffer, buffer.length) != buffer.length) {
+        throw new SerializationException("Could not peek at first "
+            + buffer.length + " bytes");
+      }
+      bufReader.reset();
     }
-    bufReader.reset();
+    catch (Exception exc) {
+      throwIfInterrupted(exc); // otherwise keep going
+    }
 
     // Guess format and deserialize
     ObjectSerializer deserializer;
