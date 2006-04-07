@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlackbirdArchivalUnit.java,v 1.2 2005-10-06 23:42:46 troberts Exp $
+ * $Id: TestBlackbirdArchivalUnit.java,v 1.3 2006-04-07 22:48:40 troberts Exp $
  */
 
 /*
@@ -46,8 +46,7 @@ import org.lockss.state.AuState;
 import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.plugin.definable.*;
 
-public class TestBlackbirdArchivalUnit extends LockssTestCase {
-  private MockLockssDaemon theDaemon;
+public class TestBlackbirdArchivalUnit extends LockssPluginTestCase {
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
   static final String YEAR_KEY = ConfigParamDescr.YEAR.getKey();
   static final String VOL_KEY = ConfigParamDescr.VOLUME_NUMBER.getKey();
@@ -168,19 +167,6 @@ public class TestBlackbirdArchivalUnit extends LockssTestCase {
 
     // other site
     shouldCacheTest("http://www.real.com/", false, bbAu, cus);
-  }
-
-  private void shouldCacheTest(String url, boolean shouldCache,
-			       ArchivalUnit au, CachedUrlSet cus) {
-    UrlCacher uc = au.makeUrlCacher(url);
-    if (shouldCache) {
-      assertTrue(url+" incorrectly marked as shouldn't cache",
-		 uc.shouldBeCached());
-    } else {
-      assertFalse(url+" incorrectly marked as should cache",
-		  uc.shouldBeCached());
-    }
-//     assertTrue(uc.shouldBeCached()==shouldCache);
   }
 
   public void testStartUrlConstruction() throws Exception {
