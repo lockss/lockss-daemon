@@ -21,11 +21,11 @@
 </MapElement>
 <MapElement>
 <ElementKey>plugin_name</ElementKey>
-<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Virginia Tech ETD Plugin</ElementValue>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Virginia Tech Legacy ETD Plugin</ElementValue>
 </MapElement>
 <MapElement>
 <ElementKey>au_name</ElementKey>
-<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"Virginia Tech ETD Collection %d", year</ElementValue>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"Virginia Tech Legacy ETD Collection"</ElementValue>
 </MapElement>
 <MapElement>
 <ElementKey>au_start_url</ElementKey>
@@ -33,7 +33,7 @@
 </MapElement>
 <MapElement>
 <ElementKey>plugin_identifier</ElementKey>
-<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">org.lockss.plugin.etd.vtetdplugin.VTETDPlugin</ElementValue>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">org.lockss.plugin.etd.vtetdplugin.VTETDLegacyPlugin</ElementValue>
 </MapElement>
 <MapElement>
 <ElementKey>plugin_config_props</ElementKey>
