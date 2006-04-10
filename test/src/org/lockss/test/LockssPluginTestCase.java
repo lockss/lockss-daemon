@@ -1,5 +1,5 @@
 /*
- * $Id: LockssPluginTestCase.java,v 1.1 2006-04-07 22:48:26 troberts Exp $
+ * $Id: LockssPluginTestCase.java,v 1.2 2006-04-10 23:10:52 troberts Exp $
  */
 
 /*
@@ -40,35 +40,41 @@ import org.lockss.plugin.definable.*;
 
 public class LockssPluginTestCase extends LockssTestCase {
 
-  protected MockLockssDaemon theDaemon;
-
   public DefinableArchivalUnit makeAu(Properties props, String pluginID)
       throws Exception {
     Configuration config = ConfigurationUtil.fromProps(props);
     DefinablePlugin ap = new DefinablePlugin();
-    ap.initPlugin(theDaemon, pluginID);
+    ap.initPlugin(getMockLockssDaemon(), pluginID);
     DefinableArchivalUnit au = (DefinableArchivalUnit)ap.createAu(config);
     return au;
   }
 
-  public void shouldCacheTest(String url, boolean shouldCache,
-			       ArchivalUnit au, CachedUrlSet cus) {
+  public void assertShouldCache(String url, ArchivalUnit au, CachedUrlSet cus) {
     UrlCacher uc = au.makeUrlCacher(url);
-    if (shouldCache) {
-      assertTrue(url+" incorrectly marked as shouldn't cache",
-		 uc.shouldBeCached());
-    } else {
-      assertFalse(url+" incorrectly marked as should cache",
-		  uc.shouldBeCached());
-    }
+    assertTrue(url+" incorrectly marked as shouldn't cache",
+               uc.shouldBeCached());
   }
 
-  public void shouldCacheTest(Set urls, boolean shouldCache, 
-                              ArchivalUnit au, CachedUrlSet cus) {
-    Iterator it = urls.iterator(); 
-    while (it.hasNext()) {
-      shouldCacheTest((String)it.next(), shouldCache, au, cus);
-    }
-  }
+  public void assertShouldNotCache(String url, 
+                                   ArchivalUnit au, CachedUrlSet cus) {
+     UrlCacher uc = au.makeUrlCacher(url);
+     assertFalse(url+" incorrectly marked as should cache",
+                 uc.shouldBeCached());
+   }
+
   
+  public void assertShouldCache(Set urls, ArchivalUnit au, CachedUrlSet cus) {
+      Iterator it = urls.iterator(); 
+      while (it.hasNext()) {
+        assertShouldCache((String)it.next(), au, cus);
+      }
+    }
+    
+  public void assertShouldNotCache(Set urls, ArchivalUnit au, CachedUrlSet cus) {
+      Iterator it = urls.iterator(); 
+      while (it.hasNext()) {
+        assertShouldNotCache((String)it.next(), au, cus);
+      }
+    }
+    
 }
