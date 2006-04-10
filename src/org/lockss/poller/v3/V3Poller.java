@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.19 2006-03-07 02:35:07 smorabito Exp $
+ * $Id: V3Poller.java,v 1.20 2006-04-10 05:31:01 smorabito Exp $
  */
 
 /*
@@ -38,7 +38,10 @@ import java.util.*;
 
 import org.lockss.app.*;
 import org.lockss.config.*;
+import org.lockss.crawler.*;
+import org.lockss.crawler.CrawlManager.*;
 import org.lockss.daemon.*;
+import org.lockss.daemon.Crawler.*;
 import org.lockss.hasher.*;
 import org.lockss.plugin.*;
 import org.lockss.poller.*;
@@ -81,6 +84,14 @@ public class V3Poller extends BasePoll {
   public static String PARAM_DROP_EMPTY_NOMINATIONS =
     PREFIX + "dropEmptyNominations";
   public static boolean DEFAULT_DROP_EMPTY_NOMINATIONS = false;
+  
+  /**
+   * Directory in which to store message data.
+   */
+  public static String PARAM_V3_MESSAGE_DIR =
+    PREFIX + "messageDir";
+  public static String DEFAULT_V3_MESSAGE_DIR =
+    System.getProperty("java.io.tmpdir");
 
   // Global state for the poll.
   private PollerStateBean pollerState;
@@ -93,10 +104,16 @@ public class V3Poller extends BasePoll {
   private RepositoryManager repositoryManager;
   private IdentityManager idManager;
   private V3PollerSerializer serializer;
-  // private BlockTally tally;
   private boolean resumedPoll;
   private boolean activePoll = true;
   private boolean dropEmptyNominators = DEFAULT_DROP_EMPTY_NOMINATIONS;
+  private File messageDir;
+
+  // Used by setConfig when setting or restoring state
+  private int minParticipants;
+  private int maxParticipants;
+  private int quorum;
+  private int outerCircleTarget;
 
   private static Logger log = Logger.getLogger("V3Poller");
   private static LockssRandom theRandom = new LockssRandom();
@@ -122,26 +139,18 @@ public class V3Poller extends BasePoll {
                                          " is not supported");
     }
     this.serializer = new V3PollerSerializer(theDaemon);
-    Configuration c = ConfigManager.getCurrentConfig();
-    // Determine the number of peers to invite into this poll.
-    int minParticipants = c.getInt(PARAM_MIN_POLL_SIZE,
-                                   DEFAULT_MIN_POLL_SIZE);
-    int maxParticipants = c.getInt(PARAM_MAX_POLL_SIZE,
-                                   DEFAULT_MAX_POLL_SIZE);
-    int outerCircleTarget = c.getInt(PARAM_TARGET_OUTER_CIRCLE_SIZE,
-                                     DEFAULT_TARGET_OUTER_CIRCLE_SIZE);
-    int quorum = c.getInt(PARAM_QUORUM, DEFAULT_QUORUM);
-    this.dropEmptyNominators = c.getBoolean(PARAM_DROP_EMPTY_NOMINATIONS,
-                                            DEFAULT_DROP_EMPTY_NOMINATIONS);
 
-    int pollSize = getInnerCircleSize(minParticipants, maxParticipants, quorum);
-
-    this.pollerState = new PollerStateBean(spec, orig, key, duration,
-                                           pollSize, outerCircleTarget,
-                                           quorum, hashAlg);
+    // Get set-up information from config.
+    setConfig();
+    
+    int pollSize = getInnerCircleSize(minParticipants,
+                                      maxParticipants, 
+                                      quorum);
+    pollerState = new PollerStateBean(spec, orig, key, duration,
+                                      pollSize, outerCircleTarget,
+                                      quorum, hashAlg);
     boolean scheduled =
       reserveScheduleTime(maxParticipants + outerCircleTarget);
-
     if (scheduled) {
       log.debug("Scheduled time for a new poll with a requested poll size of "
                 + pollSize);
@@ -160,10 +169,10 @@ public class V3Poller extends BasePoll {
    */
   public V3Poller(LockssDaemon daemon, File pollDir)
       throws V3Serializer.PollSerializerException {
-    this.theDaemon = daemon;
-    this.serializer = new V3PollerSerializer(theDaemon, pollDir);
-    this.pollerState = serializer.loadPollerState();
-    this.repositoryManager = daemon.getRepositoryManager();
+    theDaemon = daemon;
+    serializer = new V3PollerSerializer(theDaemon, pollDir);
+    pollerState = serializer.loadPollerState();
+    repositoryManager = daemon.getRepositoryManager();
     setStatus("Resuming");
     // If the hash algorithm used when the poll was first created is
     // no longer available, fail the poll immediately.
@@ -174,11 +183,9 @@ public class V3Poller extends BasePoll {
                                          pollerState.getHashAlgorithm() +
                                          " is no longer supported");
     }
-    this.pollManager = daemon.getPollManager();
-    this.idManager = daemon.getIdentityManager();
-    Configuration c = ConfigManager.getCurrentConfig();
-    this.dropEmptyNominators = c.getBoolean(PARAM_DROP_EMPTY_NOMINATIONS,
-                                            DEFAULT_DROP_EMPTY_NOMINATIONS);
+    pollManager = daemon.getPollManager();
+    idManager = daemon.getIdentityManager();
+    setConfig();
     // Restore transient cus and pollspec in the poller state.
     PluginManager plugMgr = theDaemon.getPluginManager();
     CachedUrlSet cus = plugMgr.findCachedUrlSet(pollerState.getAuId());
@@ -195,10 +202,30 @@ public class V3Poller extends BasePoll {
       log.error("Unable to restore poll state!");
     }
 
-    // XXX:  Restore active repairs!
-
-    this.resumedPoll = true;
+    resumedPoll = true;
     log.debug2("Restored serialized poll " + pollerState.getPollKey());
+  }
+  
+  private void setConfig() {
+    Configuration c = ConfigManager.getCurrentConfig();
+    // Determine the number of peers to invite into this poll.
+    minParticipants = c.getInt(PARAM_MIN_POLL_SIZE,
+                                   DEFAULT_MIN_POLL_SIZE);
+    maxParticipants = c.getInt(PARAM_MAX_POLL_SIZE,
+                                   DEFAULT_MAX_POLL_SIZE);
+    outerCircleTarget = c.getInt(PARAM_TARGET_OUTER_CIRCLE_SIZE,
+                                     DEFAULT_TARGET_OUTER_CIRCLE_SIZE);
+    quorum = c.getInt(PARAM_QUORUM, DEFAULT_QUORUM);
+    dropEmptyNominators = c.getBoolean(PARAM_DROP_EMPTY_NOMINATIONS,
+                                            DEFAULT_DROP_EMPTY_NOMINATIONS);
+    messageDir =
+      new File(c.get(PARAM_V3_MESSAGE_DIR, DEFAULT_V3_MESSAGE_DIR));
+    if (!messageDir.exists() || !messageDir.canWrite()) {
+      throw new IllegalArgumentException("Configured V3 data directory " +
+                                         messageDir +
+                                         " does not exist or cannot be " +
+                                         "written to.");
+    }
   }
 
   /**
@@ -455,7 +482,8 @@ public class V3Poller extends BasePoll {
    * @return ParticipantUserData for the specified peer
    */
   private ParticipantUserData makeParticipant(final PeerIdentity id) {
-    final ParticipantUserData participant = new ParticipantUserData(id, this);
+    final ParticipantUserData participant =
+      new ParticipantUserData(id, this, messageDir);
     participant.setPollerNonce(makePollerNonce());
     PsmMachine machine =
       PollerStateMachineFactory.getMachine(getPollerActionsClass());
@@ -479,10 +507,10 @@ public class V3Poller extends BasePoll {
   /**
    * Called by a participant's state machine when it receives a set of nominees
    * from a voter.
-   *
+   * 
    * @param id The PeerIdentity of the participant sending the nominees.
    * @param nominatedPeers A list of string representations of PeerIdendities
-   *                       the peer is nominating.
+   *          the peer is nominating.
    */
   void nominatePeers(PeerIdentity id, List nominatedPeers) {
     // Only honor nominations if this is an inner circle peer.
@@ -615,60 +643,68 @@ public class V3Poller extends BasePoll {
    * <p>Check the tally for a block, and perform repairs if necessary.</p>
    *
    * @param tally The tally to check.
-   * @param targetUrl The target URL for any possible repairs.
+   * @param url The target URL for any possible repairs.
    * @param markComplete  If true, mark this as a completed repair in the
    *                      status table.
    */
   private void checkTally(BlockTally tally,
-                          String targetUrl,
+                          String url,
                           boolean markComplete) {
     int result = tally.getTallyResult();
+    PollerStateBean.TallyStatus tallyStatus = pollerState.getTallyStatus();
+    
     // Linked hash map - order is significant
     LinkedHashMap votesForBlock = tally.getVotesForBlock();
     String pollKey = pollerState.getPollKey();
     switch(result) {
     case BlockTally.RESULT_WON:
+      tallyStatus.addAgreedUrl(url);
       // Great, we won!  Do nothing.
-      log.debug3("Won tally for block: " + targetUrl + " in poll " + pollKey);
+      log.debug3("Won tally for block: " + url + " in poll " + pollKey);
       // If this is the result of a previous repair, mark it complete.
-      if (markComplete) pollerState.getRepairQueue().markComplete(targetUrl);
+      if (markComplete) pollerState.getRepairQueue().markComplete(url);
       break;
     case BlockTally.RESULT_LOST:
-      log.debug3("Lost tally for block: " + targetUrl);
-      requestRepair(targetUrl, tally.getDisagreeVoters(), votesForBlock);
+      tallyStatus.addDisagreedUrl(url);
+      log.debug3("Lost tally for block: " + url);
+      requestRepair(url, tally.getDisagreeVoters(), votesForBlock);
       break;
     case BlockTally.RESULT_LOST_EXTRA_BLOCK:
-      log.debug3("Lost tally. Removing extra block " + targetUrl +
+      tallyStatus.addDisagreedUrl(url);
+      log.debug3("Lost tally. Removing extra block " + url +
                  " in poll " + pollKey);
-      deleteBlock(targetUrl);
+      deleteBlock(url);
       break;
     case BlockTally.RESULT_LOST_MISSING_BLOCK:
       log.debug3("Lost tally. Requesting repair for missing block: "
-                 + targetUrl + " in poll " + pollKey);
+                 + url + " in poll " + pollKey);
+      tallyStatus.addDisagreedUrl(url);
       String missingURL = tally.getMissingBlockUrl();
       requestRepair(missingURL,
                     tally.getMissingBlockVoters(missingURL),
                     votesForBlock);
       break;
     case BlockTally.RESULT_NOQUORUM:
-      log.warning("No Quorum for block " + targetUrl
+      tallyStatus.addNoQuorumUrl(url);
+      log.warning("No Quorum for block " + url
                   + " in poll " + pollKey);
       // If this is the result of a previous repair, mark it complete.
-      if (markComplete) pollerState.getRepairQueue().markComplete(targetUrl);
+      if (markComplete) pollerState.getRepairQueue().markComplete(url);
       break;
     case BlockTally.RESULT_TOO_CLOSE:
     case BlockTally.RESULT_TOO_CLOSE_MISSING_BLOCK:
     case BlockTally.RESULT_TOO_CLOSE_EXTRA_BLOCK:
-      log.warning("Tally was inconclusive for block " + targetUrl
+      tallyStatus.addTooCloseUrl(url);
+      log.warning("Tally was inconclusive for block " + url
                   + " in poll " + pollKey);
       // If this is the result of a previous repair, mark it complete.
-      if (markComplete) pollerState.getRepairQueue().markComplete(targetUrl);
+      if (markComplete) pollerState.getRepairQueue().markComplete(url);
       break;
     default:
-      log.warning("Unexpected results from tallying block " + targetUrl + ": "
+      log.warning("Unexpected results from tallying block " + url + ": "
                   + tally.getStatusString());
       // If this is the result of a previous repair, mark it complete.
-      if (markComplete) pollerState.getRepairQueue().markComplete(targetUrl);
+      if (markComplete) pollerState.getRepairQueue().markComplete(url);
     }
   }
 
@@ -780,9 +816,40 @@ public class V3Poller extends BasePoll {
    * @param disagreeingVoters Set of disagreeing voters.
    * @param votesForBlock Ordered map of votes previously collected for this block
    */
-  private void requestRepair(String url,
-                             Collection disagreeingVoters,
-                             LinkedHashMap votesForBlock) {
+  private void requestRepair(final String url,
+                             final Collection disagreeingVoters,
+                             final LinkedHashMap votesForBlock) {
+    log.debug("Attempting to repair url " + url + " from the publisher.");
+
+    CrawlManager cm = theDaemon.getCrawlManager();
+
+    CrawlManager.Callback cb = new CrawlManager.Callback() {
+      public void signalCrawlAttemptCompleted(boolean success, Set urlsFetched,
+                                              Object cookie, Status status) {
+        if (success) {
+          // Check the repair
+          receivedRepair(url);
+        } else {
+          // If that didn't work, request a repair from a voter.
+          // XXX: Need to check status before doing this!
+          requestRepairFromPeer(url, disagreeingVoters, votesForBlock);
+        }
+      }
+    };
+
+    // Set this repair active.
+    PollerStateBean.Repair r = new PollerStateBean.Repair(url, votesForBlock);
+    r.setRepairFromPublisher();
+    pollerState.getRepairQueue().addActiveRepair(url, r);
+
+    cm.startRepair(getAu(), ListUtil.list(url),
+                   cb, null, null);
+    
+  }
+  
+  private void requestRepairFromPeer(String url,
+                                     Collection disagreeingVoters,
+                                     LinkedHashMap votesForBlock) {
     // XXX:  Use plain hash as a hint for who to requet a repair from.
     PeerIdentity repairVoter =
       (PeerIdentity)CollectionUtil.randomSelection(disagreeingVoters);
@@ -793,8 +860,9 @@ public class V3Poller extends BasePoll {
                                                  votesForBlock);
     ParticipantUserData ud =
       (ParticipantUserData)theParticipants.get(repairVoter);
-    V3LcapMessage msg =
-      V3LcapMessageFactory.makeRepairRequestMsg(ud, url, null);
+    V3LcapMessage msg = ud.makeMessage(V3LcapMessage.MSG_REPAIR_REQ);
+    msg.setTargetUrl(url);
+    msg.setEffortProof(null);
     try {
       sendMessageTo(msg, repairVoter);
     } catch (IOException ex) {
@@ -802,7 +870,7 @@ public class V3Poller extends BasePoll {
       // XXX: Alerts, retry
     }
   }
-
+  
   /**
    * Delete (deactivate) the block in our repository.
    * @param url The block to be deleted.
@@ -826,7 +894,7 @@ public class V3Poller extends BasePoll {
    * Callback used to schedule a small re-check hash
    * when a repair has been received.
    */
-  public void receivedRepair(final String url, final PeerIdentity voter) {
+  public void receivedRepair(final String url) {
     BlockHasher.EventHandler blockDone =
       new BlockHasher.EventHandler() {
         public void blockDone(HashBlock hblock) {
@@ -883,10 +951,10 @@ public class V3Poller extends BasePoll {
                  + ByteArray.toBase64(voterResults));
     }
     if (Arrays.equals(voterResults, hasherResults)) {
-      log.debug3("I agree with " + voter + " on block");
+      log.debug3("I agree with " + voter);
       tally.addAgreeVoter(voter);
     } else {
-      log.debug3("I disagree with " + voter + " on block");
+      log.debug3("I disagree with " + voter);
       tally.addDisagreeVoter(voter);
     }
   }
@@ -1195,6 +1263,31 @@ public class V3Poller extends BasePoll {
 
   public PollerStateBean.RepairQueue getRepairQueue() {
     return pollerState.getRepairQueue();
+  }
+  
+  public List getTalliedUrls() {
+    List allUrls = new ArrayList();
+    allUrls.addAll(getAgreedUrls());
+    allUrls.addAll(getDisagreedUrls());
+    allUrls.addAll(getTooCloseUrls());
+    allUrls.addAll(getNoQuorumUrls());
+    return allUrls;
+  }
+  
+  public Set getAgreedUrls() {
+    return pollerState.getTallyStatus().agreedUrls;
+  }
+  
+  public Set getDisagreedUrls() {
+    return pollerState.getTallyStatus().disagreedUrls;
+  }
+  
+  public Set getTooCloseUrls() {
+    return pollerState.getTallyStatus().tooCloseUrls;
+  }
+  
+  public Set getNoQuorumUrls() {
+    return pollerState.getTallyStatus().noQuorumUrls;
   }
 
   /**

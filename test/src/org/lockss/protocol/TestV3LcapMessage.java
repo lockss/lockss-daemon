@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3LcapMessage.java,v 1.13 2006-03-07 02:35:07 smorabito Exp $
+ * $Id: TestV3LcapMessage.java,v 1.14 2006-04-10 05:31:01 smorabito Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import java.io.*;
 import java.util.*;
 import org.lockss.test.*;
 import org.lockss.poller.*;
+import org.lockss.poller.v3.V3Events;
 import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.util.*;
 import org.lockss.app.LockssDaemon;
@@ -58,12 +59,12 @@ public class TestV3LcapMessage extends LockssTestCase {
   private Comparator m_comparator;
 
   private LockssDaemon theDaemon;
-  
+
   private File tempDir;
 
   private byte[] m_testBytes =
     new byte[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 0,
-      1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
+                1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
   
   private byte[] m_repairData =
     ByteArray.makeRandomBytes(1000);
@@ -79,7 +80,8 @@ public class TestV3LcapMessage extends LockssTestCase {
     p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
     p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
-    // p.setProperty(PollSpec.PARAM_USE_V3_POLL_VERSION, "1");
+    p.setProperty(V3LcapMessage.PARAM_REPAIR_DATA_THRESHOLD, "4096");
+    p.setProperty(V3LcapMessage.PARAM_VOTE_BLOCK_THRESHOLD, "20");
     ConfigurationUtil.setCurrentConfigFromProps(p);
     IdentityManager idmgr = theDaemon.getIdentityManager();
     idmgr.startService();
@@ -93,9 +95,8 @@ public class TestV3LcapMessage extends LockssTestCase {
     m_repairProps.setProperty("key2", "val2");
     m_repairProps.setProperty("key3", "val3");
     
-    // Construct a test message used by several tests.
-    m_testVoteBlocks = makeVoteBlockList(10);
-    m_testMsg = makeTestVoteMessage(m_testVoteBlocks);
+    m_testVoteBlocks = V3TestUtils.makeVoteBlockList(10);
+    m_testMsg = this.makeTestVoteMessage(m_testVoteBlocks);
   }
 
   public void testNoOpMessageCreation() throws Exception {
@@ -136,11 +137,10 @@ public class TestV3LcapMessage extends LockssTestCase {
 
   public void testTestMessageToString() throws IOException {
     String expectedResult = "[V3LcapMessage: from " + m_testID.toString() +
-      ", http://www.example.com Vote " +
-      "Key:key " +
+      ", Vote Key:key " +
       "PN:AQIDBAUGBwgJAAECAwQFBgcICQA= " +
       "VN:AQIDBAUGBwgJAAECAwQFBgcICQA= " +
-      "B:10 ver 3 rev 1]";
+      "B:10 ver 3 rev 2]";
     assertEquals(expectedResult, m_testMsg.toString());
   }
 
@@ -148,9 +148,8 @@ public class TestV3LcapMessage extends LockssTestCase {
     V3LcapMessage noopMsg = V3LcapMessage.makeNoOpMsg(m_testID,
                                                       m_testBytes,
                                                       m_testBytes);
-    byte[] encodedBytes = noopMsg.encodeMsg();
-
-    V3LcapMessage msg = new V3LcapMessage(encodedBytes, tempDir);
+    InputStream fromMsg = noopMsg.getInputStream();
+    V3LcapMessage msg = new V3LcapMessage(fromMsg, tempDir);
     // now test to see if we got back what we started with
     assertTrue(m_testID == msg.getOriginatorId());
     assertEquals(V3LcapMessage.MSG_NO_OP, msg.getOpcode());
@@ -158,36 +157,43 @@ public class TestV3LcapMessage extends LockssTestCase {
     assertEquals(m_testBytes, msg.getVoterNonce());
   }
 
-  public void testRepairMessage() throws Exception {
-    V3LcapMessage src = makeRepairMessage();
-    byte[] encodedData = src.encodeMsg();
-    V3LcapMessage copy = new V3LcapMessage(encodedData, tempDir);
+  public void testMemoryRepairMessage() throws Exception {
+    V3LcapMessage src = makeRepairMessage(10 * 1024);
+    InputStream srcStream = src.getInputStream();
+    V3LcapMessage copy = new V3LcapMessage(srcStream, tempDir);
     assertEqualMessages(src, copy);
     InputStream in = copy.getRepairDataInputStream();
-    ByteArrayOutputStream out = new ByteArrayOutputStream(); 
+    ByteArrayOutputStream out = new ByteArrayOutputStream();
     StreamUtil.copy(in, out);
     byte[] repairCopy = out.toByteArray();
     assertEquals(m_repairData, repairCopy);
   }
-  
+
+  public void testDiskRepairMessage() throws Exception {
+    V3LcapMessage src = makeRepairMessage(100 * 1024);
+    InputStream srcStream = src.getInputStream();
+    V3LcapMessage copy = new V3LcapMessage(srcStream, tempDir);
+    assertEqualMessages(src, copy);
+    InputStream in = copy.getRepairDataInputStream();
+    ByteArrayOutputStream out = new ByteArrayOutputStream();
+    StreamUtil.copy(in, out);
+    byte[] repairCopy = out.toByteArray();
+    assertEquals(m_repairData, repairCopy);
+  }
+
   public void testRequestMessageCreation() throws Exception {
-    PollSpec spec =
-      new MockPollSpec("ArchivalID_2", "http://foo.com/", null, null,
-                       "Plug42", Poll.V3_POLL);
     V3LcapMessage reqMsg =
-      V3LcapMessage.makeRequestMsg(spec,
-                                   "key",
-				   m_testBytes,
-                                   m_testBytes,
-				   V3LcapMessage.MSG_REPAIR_REQ,
-				   10000,
-				   m_testID);
+      new V3LcapMessage("ArchivalID_2", "key", "Plug42",
+                        m_testBytes,
+                        m_testBytes,
+                        V3LcapMessage.MSG_REPAIR_REQ,
+                        987654321, m_testID, tempDir);
+    reqMsg.setTargetUrl("http://foo.com/");
 
     for (Iterator ix = m_testVoteBlocks.iterator(); ix.hasNext(); ) {
       reqMsg.addVoteBlock((VoteBlock)ix.next());
     }
 
-    assertEquals(3, spec.getProtocolVersion());
     assertEquals(3, reqMsg.getProtocolVersion());
     assertEquals("Plug42", reqMsg.getPluginVersion());
     assertTrue(m_testID == reqMsg.getOriginatorId());
@@ -196,30 +202,37 @@ public class TestV3LcapMessage extends LockssTestCase {
     assertEquals("http://foo.com/", reqMsg.getTargetUrl());
     assertEquals(m_testBytes, reqMsg.getPollerNonce());
     assertEquals(m_testBytes, reqMsg.getVoterNonce());
-    List testMsgVoteBlocks = ListUtil.fromIterator(m_testMsg.getVoteBlockIterator());
-    List reqMsgVoteBlocks = ListUtil.fromIterator(reqMsg.getVoteBlockIterator());
+    List testMsgVoteBlocks =
+      ListUtil.fromIterator(m_testMsg.getVoteBlockIterator());
+    List reqMsgVoteBlocks =
+      ListUtil.fromIterator(reqMsg.getVoteBlockIterator());
     assertTrue(testMsgVoteBlocks.equals(reqMsgVoteBlocks));
     assertTrue(m_testVoteBlocks.equals(reqMsgVoteBlocks));
   }
-
-  public void testMessageByteEncoding() throws Exception {
+  
+  public void testMemoryBasedStreamEncodingTest() throws Exception {
+    List testVoteBlocks = V3TestUtils.makeVoteBlockList(19);
+    V3LcapMessage testMsg = makeTestVoteMessage(testVoteBlocks);
+    assertTrue(testMsg.m_voteBlocks instanceof MemoryVoteBlocks);
     // Encode the test message.
-    byte[] msgbytes = m_testMsg.encodeMsg();
-
-    // Construct a new msg from the encoded bytes.
-    V3LcapMessage decodedMsg = new V3LcapMessage(msgbytes, tempDir);
-
-    // Ensure that the decoded message matches the test message.
-    assertEqualMessages(m_testMsg, decodedMsg);
-  }
-
-  public void testMsgStreamEncoding() throws Exception {
-    // Encode the test message.
-    InputStream is = m_testMsg.getInputStream();
+    InputStream is = testMsg.getInputStream();
     V3LcapMessage decodedMsg  = new V3LcapMessage(is, tempDir);
-
     // Ensure that the decoded message matches the test message.
-    assertEqualMessages(m_testMsg, decodedMsg);
+    assertEqualMessages(testMsg, decodedMsg);    
+  }
+  
+  public void testDiskBasedStreamEncodingTest() throws Exception {
+    // Make a list of vote blocks large enough to trigger on-disk
+    // vote message creation.
+    List testVoteBlocks = V3TestUtils.makeVoteBlockList(21);
+    V3LcapMessage testMsg = makeTestVoteMessage(testVoteBlocks);
+    assertTrue(testMsg.m_voteBlocks instanceof DiskVoteBlocks);
+    // Encode the test message.
+    InputStream is = testMsg.getInputStream();
+    V3LcapMessage decodedMsg  = new V3LcapMessage(is, tempDir);
+    // Ensure that the decoded message matches the test message.
+    assertEqualMessages(testMsg, decodedMsg);
+    
   }
 
   public void testSortVoteBlocks() {
@@ -273,10 +286,11 @@ public class TestV3LcapMessage extends LockssTestCase {
 				      int uLength, int uOffset,
 				      int fLength, int fOffset) {
     return new VoteBlock(fName, uLength, uOffset, fLength, fOffset,
-			 computeHash(fName), computeHash(fName),
+			 V3TestUtils.computeHash(fName),
+                         V3TestUtils.computeHash(fName),
                          VoteBlock.CONTENT_VOTE);
   }
-  
+
   private void assertEqualMessages(V3LcapMessage a, V3LcapMessage b) {
     assertTrue(a.getOriginatorId() == b.getOriginatorId());
     assertEquals(a.getOpcode(), b.getOpcode());
@@ -298,13 +312,14 @@ public class TestV3LcapMessage extends LockssTestCase {
     // TODO: Figure out how to test time.
 
   }
-  private V3LcapMessage makeRepairMessage() {
-    V3LcapMessage msg = new V3LcapMessage(V3LcapMessage.MSG_REPAIR_REP, "key",
-                                          m_testID,
-                                          m_url, 123456789, 987654321,
+  private V3LcapMessage makeRepairMessage(int size) {
+    V3LcapMessage msg = new V3LcapMessage("ArchivalID_2", "key", "Plug42",
                                           m_testBytes,
-                                          m_testBytes);
+                                          m_testBytes,
+                                          V3LcapMessage.MSG_REPAIR_REP,
+                                          987654321, m_testID, tempDir);
     msg.setHashAlgorithm(LcapMessage.getDefaultHashAlgorithm());
+    msg.setTargetUrl(m_url);
     msg.setArchivalId(m_archivalID);
     msg.setPluginVersion("PlugVer42");
     msg.setRepairDataLength(m_repairData.length);
@@ -314,45 +329,20 @@ public class TestV3LcapMessage extends LockssTestCase {
   }
 
   private V3LcapMessage makeTestVoteMessage(Collection voteBlocks) {
-    V3LcapMessage msg = new V3LcapMessage(V3LcapMessage.MSG_VOTE, "key",
-                                          m_testID,
-                                          m_url, 123456789, 987654321,
-                                          m_testBytes, m_testBytes);
+    V3LcapMessage msg = new V3LcapMessage("ArchivalID_2", "key", "Plug42",
+                                          m_testBytes,
+                                          m_testBytes,
+                                          V3LcapMessage.MSG_VOTE,
+                                          987654321, m_testID, tempDir);
 
     // Set msg vote blocks.
     for (Iterator ix = voteBlocks.iterator(); ix.hasNext(); ) {
       msg.addVoteBlock((VoteBlock)ix.next());
     }
+
     msg.setHashAlgorithm(LcapMessage.getDefaultHashAlgorithm());
     msg.setArchivalId(m_archivalID);
     msg.setPluginVersion("PlugVer42");
     return msg;
-  }
-
-  private List makeVoteBlockList(int size) {
-    ArrayList vbList = new ArrayList();
-    for (int ix = 0; ix < size; ix++) {
-      String fileName = "/test-" + ix + ".html";
-      byte[] hash = computeHash(fileName);
-      VoteBlock vb =
-	new VoteBlock("/test-" + ix + ".html", 1024, 0,
-		      1024, 0, hash, hash, VoteBlock.CONTENT_VOTE);
-      if (log.isDebug2()) {
-	log.debug2("Creating voteblock: " + vb);
-      }
-      vbList.add(vb);
-    }
-    return vbList;
-  }
-
-  private byte[] computeHash(String s) {
-    try {
-      MessageDigest digest = MessageDigest.getInstance("SHA");
-      digest.update(s.getBytes());
-      byte[] hashed = digest.digest();
-      return hashed;
-    } catch (java.security.NoSuchAlgorithmException e) {
-      return new byte[0];
-    }
   }
 }

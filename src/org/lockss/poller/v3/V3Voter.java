@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.14 2006-03-07 02:35:07 smorabito Exp $
+ * $Id: V3Voter.java,v 1.15 2006-04-10 05:31:01 smorabito Exp $
  */
 
 /*
@@ -64,8 +64,16 @@ public class V3Voter extends BasePoll {
   public static int DEFAULT_MIN_NOMINATION_SIZE = 1;
 
   /** The minimum number of peers to select for a nomination message. */
-  public static String PARAM_MAX_NOMINATION_SIZE = PREFIX + "maxNominationSize";
+  public static String PARAM_MAX_NOMINATION_SIZE = 
+    PREFIX + "maxNominationSize";
   public static int DEFAULT_MAX_NOMINATION_SIZE = 5;
+  
+  /**
+   * Directory in which to store message data.
+   */
+  public static String PARAM_V3_MESSAGE_DIR = V3Poller.PARAM_V3_MESSAGE_DIR;
+  public static String DEFAULT_V3_MESSAGE_DIR = 
+    V3Poller.DEFAULT_V3_MESSAGE_DIR;
 
   private PsmInterp stateMachine;
   private VoterUserData voterUserData;
@@ -77,6 +85,7 @@ public class V3Voter extends BasePoll {
   private boolean continuedPoll = false;
   private boolean activePoll = true;
   private int nomineeCount;
+  private File messageDir;
 
   private static final Logger log = Logger.getLogger("V3Voter");
 
@@ -89,13 +98,24 @@ public class V3Voter extends BasePoll {
       throws V3Serializer.PollSerializerException {
     log.debug3("Creating V3 Voter for poll: " + key);
 
+    
     this.theDaemon = daemon;
     pollSerializer = new V3VoterSerializer(theDaemon);
+    this.messageDir =
+      new File(CurrentConfig.getParam(PARAM_V3_MESSAGE_DIR,
+                                      DEFAULT_V3_MESSAGE_DIR));
+    if (!messageDir.exists() || !messageDir.canWrite()) {
+      throw new IllegalArgumentException("Configured V3 data directory " +
+                                         messageDir +
+                                         " does not exist or cannot be " +
+                                         "written to.");
+    }
     this.voterUserData = new VoterUserData(spec, this, orig, key,
                                            duration, hashAlg,
                                            pollerNonce,
                                            makeVoterNonce(),
-                                           introEffortProof);
+                                           introEffortProof,
+                                           messageDir);
     this.idManager = theDaemon.getIdentityManager();
 
     this.pollManager = daemon.getPollManager();
@@ -104,6 +124,7 @@ public class V3Voter extends BasePoll {
                                         DEFAULT_MIN_NOMINATION_SIZE);
     int max = CurrentConfig.getIntParam(PARAM_MAX_NOMINATION_SIZE,
                                         DEFAULT_MAX_NOMINATION_SIZE);
+    
     if (min > max) {
       throw new IllegalArgumentException("Impossible nomination size range: "
       + (max - min));

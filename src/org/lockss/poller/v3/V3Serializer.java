@@ -1,5 +1,5 @@
 /*
- * $Id: V3Serializer.java,v 1.10 2005-12-01 23:28:01 troberts Exp $
+ * $Id: V3Serializer.java,v 1.11 2006-04-10 05:31:01 smorabito Exp $
  */
 
 /*
@@ -56,9 +56,10 @@ public abstract class V3Serializer {
   }
 
   /**
-   * Create a new PollSerializer.  The parameter pollDir is optional.  If it is
-   * specified, it must be a poll serialization directory that already exists.
-   * If it is null, a new poll serialization directory will be created.
+   * Create a new PollSerializer.  The parameter pollDir is optional.  If it
+   * is specified, it must be a poll serialization directory that already
+   * exists.  If it is null, a new poll serialization directory will be
+   * created.
    *
    * @param dir Optionally, a pre-existing serialization directory to use.
    * @throws PollSerializerException

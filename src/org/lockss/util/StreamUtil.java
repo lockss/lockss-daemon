@@ -1,5 +1,5 @@
 /*
- * $Id: StreamUtil.java,v 1.12 2005-10-11 05:48:29 tlipkis Exp $
+ * $Id: StreamUtil.java,v 1.13 2006-04-10 05:31:01 smorabito Exp $
  */
 
 /*
@@ -63,6 +63,30 @@ public class StreamUtil {
     while ((byteCount = is.read(bytes)) > 0) {
       totalByteCount += byteCount;
       os.write(bytes, 0, byteCount);
+    }
+    os.flush();
+    return totalByteCount;
+  }
+
+  /**
+   * This function copies up to len bytes from the contents of in InputStream
+   * to an Outputstream. It is <b>not</b> buffered, and closes neither stream.
+   * @param is input
+   * @param os output
+   * @param len The number of bytes to copy
+   * @return number of bytes copied
+   * @throws IOException
+   */
+  public static long copy(InputStream is, OutputStream os, long len)
+      throws IOException {
+    if (is == null || os == null || len == 0) {
+      return 0;
+    }
+    long totalByteCount = 0;
+    int in = 0;
+    while (totalByteCount < len && (in = is.read()) > -1 ) {
+      os.write(in);
+      totalByteCount++;
     }
     os.flush();
     return totalByteCount;

@@ -1,6 +1,7 @@
 package org.lockss.protocol;
 
 import java.util.*;
+import java.io.*;
 
 import org.lockss.util.*;
 
@@ -14,10 +15,14 @@ public interface VoteBlocks extends LockssSerializable {
   public void addVoteBlock(VoteBlock b);
 
   public ListIterator listIterator();
+  
+  public InputStream getInputStream() throws IOException;
 
   public VoteBlock getVoteBlock(int i);
 
   public int size();
+  
+  public void delete();
 
   public static class NoSuchBlockException extends Exception {
     NoSuchBlockException() { super(); }

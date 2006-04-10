@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.8 2006-01-12 03:13:31 smorabito Exp $
+ * $Id: TestV3Poller.java,v 1.9 2006-04-10 05:31:01 smorabito Exp $
  */
 
 /*
@@ -47,7 +47,6 @@ import org.lockss.poller.v3.FuncV3Poller.MyV3Poller;
 import org.lockss.poller.v3.V3Serializer.*;
 import org.lockss.test.*;
 import org.lockss.hasher.*;
-import org.lockss.hasher.HashService;
 import org.lockss.repository.LockssRepositoryImpl;
 import org.mortbay.util.B64Code;
 
@@ -71,6 +70,8 @@ public class TestV3Poller extends LockssTestCase {
 
   private byte[][] pollerNonces;
   private byte[][] voterNonces;
+  
+  private File tempDir;
 
   private static final String BASE_URL = "http://www.test.org/";
 
@@ -105,6 +106,7 @@ public class TestV3Poller extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     TimeBase.setSimulated();
+    this.tempDir = getTempDir();
     this.testau = setupAu();
     initRequiredServices();
     this.pollerId = idmgr.stringToPeerIdentity("127.0.0.1");
@@ -155,11 +157,14 @@ public class TestV3Poller extends LockssTestCase {
   private V3LcapMessage[] makePollAckMessages() {
     V3LcapMessage[] msgs = new V3LcapMessage[voters.length];
     for (int i = 0; i < voters.length; i++) {
-      msgs[i] = new V3LcapMessage(V3LcapMessage.MSG_POLL_ACK, "key", voters[i],
-                                  "http://www.test.org",
-                                  123456789, 987654321,
-                                  pollerNonces[i],
-                                  voterNonces[i]);
+      msgs[i] = 
+        new V3LcapMessage("auid", "key", "1",
+                          ByteArray.makeRandomBytes(20),
+                          ByteArray.makeRandomBytes(20),
+                          V3LcapMessage.MSG_POLL_ACK,
+                          987654321,
+                          voters[i],
+                          tempDir);
     }
     return msgs;
   }
@@ -167,12 +172,13 @@ public class TestV3Poller extends LockssTestCase {
   private V3LcapMessage[] makeNominateMessages() {
     V3LcapMessage[] msgs = new V3LcapMessage[voters.length];
     for (int i = 0; i < voters.length; i++) {
-      V3LcapMessage msg = new V3LcapMessage(V3LcapMessage.MSG_NOMINATE, "key",
+      V3LcapMessage msg = new V3LcapMessage("auid", "key", "1",
+                                            ByteArray.makeRandomBytes(20),
+                                            ByteArray.makeRandomBytes(20),
+                                            V3LcapMessage.MSG_NOMINATE,
+                                            987654321,
                                             voters[i],
-                                            "http://www.test.org",
-                                            123456789, 987654321,
-                                            pollerNonces[i],
-                                            voterNonces[i]);
+                                            tempDir);
       msg.setNominees(ListUtil.list("10.0." + i + ".1",
                                     "10.0." + i + ".2",
                                     "10.0." + i + ".3",
@@ -185,12 +191,13 @@ public class TestV3Poller extends LockssTestCase {
   private V3LcapMessage[] makeVoteMessages() {
     V3LcapMessage[] msgs = new V3LcapMessage[voters.length];
     for (int i = 0; i < voters.length; i++) {
-      V3LcapMessage msg = new V3LcapMessage(V3LcapMessage.MSG_VOTE, "key",
+      V3LcapMessage msg = new V3LcapMessage("auid", "key", "1",
+                                            ByteArray.makeRandomBytes(20),
+                                            ByteArray.makeRandomBytes(20),
+                                            V3LcapMessage.MSG_VOTE,
+                                            987654321,
                                             voters[i],
-                                            "http://www.test.org",
-                                            123456789, 987654321,
-                                            pollerNonces[i],
-                                            voterNonces[i]);
+                                            tempDir);
       for (Iterator it = voteBlocks.iterator(); it.hasNext(); ) {
         msg.addVoteBlock((VoteBlock)it.next());
       }
@@ -202,13 +209,13 @@ public class TestV3Poller extends LockssTestCase {
   private V3LcapMessage[] makeRepairMessages() {
     V3LcapMessage[] msgs = new V3LcapMessage[voters.length];
     for (int i = 0; i < voters.length; i++) {
-      V3LcapMessage msg = new V3LcapMessage(V3LcapMessage.MSG_REPAIR_REP,
-                                            "key",
+      V3LcapMessage msg = new V3LcapMessage("auid", "key", "1",
+                                            ByteArray.makeRandomBytes(20),
+                                            ByteArray.makeRandomBytes(20),
+                                            V3LcapMessage.MSG_REPAIR_REP,
+                                            987654321,
                                             voters[i],
-                                            "http://www.test.org",
-                                            123456789, 987654321,
-                                            pollerNonces[i],
-                                            voterNonces[i]);
+                                            tempDir);
       msgs[i] = msg;
     }
     return msgs;

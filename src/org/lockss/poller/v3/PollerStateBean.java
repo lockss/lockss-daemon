@@ -1,5 +1,5 @@
 /*
- * $Id: PollerStateBean.java,v 1.9 2006-03-01 02:50:14 smorabito Exp $
+ * $Id: PollerStateBean.java,v 1.10 2006-04-10 05:31:01 smorabito Exp $
  */
 
 /*
@@ -64,6 +64,7 @@ public class PollerStateBean implements LockssSerializable {
   private ArrayList hashedBlocks; // This will need to be disk-based in 1.16!
   private boolean hashStarted;
   private Collection votedPeers;
+  private TallyStatus tallyStatus;
 
   /* Non-serializable transient fields */
   private transient PollSpec spec;
@@ -118,6 +119,7 @@ public class PollerStateBean implements LockssSerializable {
     this.repairQueue = new RepairQueue();
     this.hashedBlocks = new ArrayList();
     this.votedPeers = new ArrayList();
+    this.tallyStatus = new TallyStatus();
   }
 
   public void setPollMessage(LcapMessage msg) {
@@ -306,15 +308,68 @@ public class PollerStateBean implements LockssSerializable {
   public RepairQueue getRepairQueue() {
     return repairQueue;
   }
+  
+  public TallyStatus getTallyStatus() {
+    return tallyStatus;
+  }
 
+  /**
+   * Simple object to hold tally status.
+   */
+  public static class TallyStatus {
+    public Set agreedUrls;
+    public Set disagreedUrls;
+    public Set tooCloseUrls;
+    public Set noQuorumUrls;
+    
+    public TallyStatus() {
+      agreedUrls = new HashSet();
+      disagreedUrls = new HashSet();
+      tooCloseUrls = new HashSet();
+      noQuorumUrls = new HashSet();
+    }
+    
+    public void addAgreedUrl(String url) {
+      removeUrl(url);
+      agreedUrls.add(url);
+    }
+    
+    public void addDisagreedUrl(String url) {
+      removeUrl(url);
+      disagreedUrls.add(url);
+    }
+    
+    public void addTooCloseUrl(String url) {
+      removeUrl(url);
+      tooCloseUrls.add(url);
+    }
+    
+    public void addNoQuorumUrl(String url) {
+      removeUrl(url);
+      noQuorumUrls.add(url);
+    }
+    
+    private void removeUrl(String url) {
+      agreedUrls.remove(url);
+      disagreedUrls.remove(url);
+      tooCloseUrls.remove(url);
+      noQuorumUrls.remove(url);
+    }
+  }
+  
+  /**
+   * Simple object to hold status for a repair.
+   */
   public static class Repair implements LockssSerializable {
+    // If null, repairing from the publisher.
     protected PeerIdentity repairFrom;
     protected String url;
     protected LinkedHashMap previousVotes;
+    protected boolean deletedFile = false;
+    protected boolean repairFromPublisher = false;
 
-    public Repair(String url, PeerIdentity repairFrom, LinkedHashMap previousVotes) {
+    public Repair(String url, LinkedHashMap previousVotes) {
       this.url = url;
-      this.repairFrom = repairFrom;
       this.previousVotes = previousVotes;
     }
 
@@ -331,7 +386,19 @@ public class PollerStateBean implements LockssSerializable {
     }
 
     public void setRepairFrom(PeerIdentity repairFrom) {
+      this.repairFromPublisher = false;
       this.repairFrom = repairFrom;
+    }
+    
+    public void setRepairFromPublisher() {
+      this.repairFrom = null;
+      this.repairFromPublisher = true;
+    }
+    
+    public void setDeletedFile() {
+      this.repairFromPublisher = false;
+      this.repairFrom = null;
+      this.deletedFile = true;
     }
 
     public String getUrl() {
@@ -341,8 +408,19 @@ public class PollerStateBean implements LockssSerializable {
     public void setUrl(String url) {
       this.url = url;
     }
+    
+    public boolean isDeletedFile() {
+      return this.deletedFile;
+    }
+    
+    public boolean isRepairedFromPublisher() {
+      return this.repairFromPublisher;
+    }
   }
   
+  /**
+   * Collection of repairs, active and completed.
+   */
   public static class RepairQueue implements LockssSerializable {
     private Map activeRepairs;
     private List completedRepairs;
@@ -360,10 +438,26 @@ public class PollerStateBean implements LockssSerializable {
       return completedRepairs;
     }
 
+    public synchronized void addActiveRepair(String url, Repair r) {
+      activeRepairs.put(url, r);
+    }
+    
+    public synchronized Repair getRepairForUrl(String url) {
+      return (Repair)activeRepairs.get(url);
+    }
+    
     public synchronized void addActiveRepair(String url,
                                              PeerIdentity repairFrom,
                                              LinkedHashMap votesForBlock) {
-      activeRepairs.put(url, new Repair(url, repairFrom, votesForBlock));
+      // If we're already working on this repair, just mark it as being
+      // retargeted to the publisher, or a new peer
+      Repair activeRepair = (Repair)activeRepairs.get(url);
+      if (activeRepair != null) {
+        activeRepair.setRepairFrom(repairFrom);
+      } else {
+        Repair r = new Repair(url, votesForBlock);
+        r.setRepairFrom(repairFrom);
+      }
     }
 
     public synchronized void markComplete(String url) {
@@ -381,7 +475,8 @@ public class PollerStateBean implements LockssSerializable {
     // Currently only used when deleting a file from the repository
     // after losing a tally on a block.
     public synchronized void addCompletedRepair(String url) {
-      Repair repair = new Repair(url, null, null);
+      Repair repair = new Repair(url, null);
+      repair.setDeletedFile();
       completedRepairs.add(repair);
     }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestVoterStateMachineFactory.java,v 1.8 2006-03-01 02:50:13 smorabito Exp $
+ * $Id: TestVoterStateMachineFactory.java,v 1.9 2006-04-10 05:31:01 smorabito Exp $
  */
 
 /*
@@ -58,10 +58,12 @@ public class TestVoterStateMachineFactory extends LockssTestCase {
   private PsmMsgEvent msgRepairRequest;
   private PsmMsgEvent msgReceipt;
   private PsmMsgEvent msgNoOp;
-
+  private File tempDir;
+  
   public void setUp() throws Exception {
     super.setUp();
 
+    tempDir = getTempDir();
     // Set properties.
     Properties p = new Properties();
     p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
@@ -72,45 +74,40 @@ public class TestVoterStateMachineFactory extends LockssTestCase {
 
     this.id = theIdMgr.stringToPeerIdentity("127.0.0.1");
     this.msgPoll =
-      V3Events.fromMessage(new V3LcapMessage(V3LcapMessage.MSG_POLL,
-                                             "key",
-                                             this.id,
-                                             "http://www.test.com/",
-                                             123456789, 987654321,
+      V3Events.fromMessage(new V3LcapMessage("auid", "key", "1",
                                              ByteArray.makeRandomBytes(20),
-                                             ByteArray.makeRandomBytes(20)));
+                                             ByteArray.makeRandomBytes(20),
+                                             V3LcapMessage.MSG_POLL,
+                                             987654321,
+                                             this.id, tempDir));
     this.msgPollProof =
-      V3Events.fromMessage(new V3LcapMessage(V3LcapMessage.MSG_POLL_PROOF,
-                                             "key",
-					     this.id,
-					     "http://www.test.com/",
-					     123456789, 987654321,
-					     ByteArray.makeRandomBytes(20),
-                                             ByteArray.makeRandomBytes(20)));
+      V3Events.fromMessage(new V3LcapMessage("auid", "key", "1",
+                                             ByteArray.makeRandomBytes(20),
+                                             ByteArray.makeRandomBytes(20),
+                                             V3LcapMessage.MSG_POLL_PROOF,
+                                             987654321,
+                                             this.id, tempDir));
     this.msgVoteRequest =
-      V3Events.fromMessage(new V3LcapMessage(V3LcapMessage.MSG_VOTE_REQ,
-                                             "key",
-					     this.id,
-					     "http://www.test.com/",
-					     123456789, 987654321,
-					     ByteArray.makeRandomBytes(20),
-                                             ByteArray.makeRandomBytes(20)));
+      V3Events.fromMessage(new V3LcapMessage("auid", "key", "1",
+                                             ByteArray.makeRandomBytes(20),
+                                             ByteArray.makeRandomBytes(20),
+                                             V3LcapMessage.MSG_VOTE_REQ,
+                                             987654321,
+                                             this.id, tempDir));
     this.msgRepairRequest =
-      V3Events.fromMessage(new V3LcapMessage(V3LcapMessage.MSG_REPAIR_REQ,
-                                             "key",
-					     this.id,
-					     "http://www.test.com/",
-					     123456789, 987654321,
-					     ByteArray.makeRandomBytes(20),
-                                             ByteArray.makeRandomBytes(20)));
+      V3Events.fromMessage(new V3LcapMessage("auid", "key", "1",
+                                             ByteArray.makeRandomBytes(20),
+                                             ByteArray.makeRandomBytes(20),
+                                             V3LcapMessage.MSG_REPAIR_REQ,
+                                             987654321,
+                                             this.id, tempDir));
     this.msgReceipt =
-      V3Events.fromMessage(new V3LcapMessage(V3LcapMessage.MSG_EVALUATION_RECEIPT,
-                                             "key",
-					     this.id,
-					     "http://www.test.com/",
-					     123456789, 987654321,
-					     ByteArray.makeRandomBytes(20),
-                                             ByteArray.makeRandomBytes(20)));
+      V3Events.fromMessage(new V3LcapMessage("auid", "key", "1",
+                                             ByteArray.makeRandomBytes(20),
+                                             ByteArray.makeRandomBytes(20),
+                                             V3LcapMessage.MSG_EVALUATION_RECEIPT,
+                                             987654321,
+                                             this.id, tempDir));
 
     this.msgNoOp = V3Events.fromMessage(V3LcapMessage.makeNoOpMsg(this.id));
 

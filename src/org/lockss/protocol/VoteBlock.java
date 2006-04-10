@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBlock.java,v 1.8 2006-03-01 02:50:14 smorabito Exp $
+ * $Id: VoteBlock.java,v 1.9 2006-04-10 05:31:01 smorabito Exp $
  */
 
 /*
@@ -27,6 +27,7 @@
 package org.lockss.protocol;
 
 import java.util.*;
+import java.io.*;
 
 import org.mortbay.util.*;
 
@@ -37,6 +38,15 @@ import org.lockss.util.StringUtil;
  * A simple bean representing a V3 vote block -- a file, or part of a file.
  */
 public class VoteBlock implements LockssSerializable {
+
+  public static final String VB_FILENAME = "fn"; // File name
+  public static final String VB_VT = "vt"; // Vote type (content, metadata, etc.)
+  public static final String VB_FLEN = "fl"; // Filtered length
+  public static final String VB_FOFFSET = "fo"; // Filtered offset
+  public static final String VB_ULEN = "ul"; // Unfiltered length
+  public static final String VB_UOFFSET = "uo"; // Unfiltered offset
+  public static final String VB_NH = "nh"; // Nonced hash
+  public static final String VB_PH = "ph"; // Plain hash
 
   /** Vote type enum.  Is this a vote on content, headers, or metadata? */
   public static final int CONTENT_VOTE = 0;
@@ -56,6 +66,37 @@ public class VoteBlock implements LockssSerializable {
   private byte[] noncedHash;
 
   public VoteBlock() {}
+
+  /**
+   * Special constructor to create a VoteBlock from an EncodedProperty.
+   *
+   * @param encodedForm Encoded form for an EncodedProperty object.
+   */
+  public VoteBlock(byte[] encodedForm) throws IOException {
+    EncodedProperty props = new EncodedProperty();
+    props.decode(encodedForm);
+    fileName = props.getProperty(VB_FILENAME);
+    pollType = props.getInt(VB_VT, CONTENT_VOTE);
+    unfilteredLength = props.getLong(VB_ULEN, unfilteredLength);
+    unfilteredOffset = props.getLong(VB_UOFFSET, unfilteredOffset);
+    filteredLength = props.getLong(VB_FLEN, filteredLength);
+    filteredOffset = props.getLong(VB_FOFFSET, filteredOffset);
+    plainHash = props.getByteArray(VB_PH, ByteArray.EMPTY_BYTE_ARRAY);
+    noncedHash = props.getByteArray(VB_NH, ByteArray.EMPTY_BYTE_ARRAY);
+  }
+
+  public byte[] getEncoded() throws IOException {
+    EncodedProperty props = new EncodedProperty();
+    props.put(VB_FILENAME, fileName);
+    props.putInt(VB_VT, pollType);
+    props.putLong(VB_ULEN, unfilteredLength);
+    props.putLong(VB_UOFFSET, unfilteredOffset);
+    props.putLong(VB_FLEN, filteredLength);
+    props.putLong(VB_FOFFSET, filteredOffset);
+    props.putByteArray(VB_PH, plainHash);
+    props.putByteArray(VB_NH, noncedHash);
+    return props.encode();
+  }
 
   public VoteBlock(String fileName, long fLength, long fOffset,
 		   long uLength, long uOffset, byte[] plainHash,

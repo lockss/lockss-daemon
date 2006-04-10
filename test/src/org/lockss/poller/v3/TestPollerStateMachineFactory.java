@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollerStateMachineFactory.java,v 1.6 2006-03-01 02:50:13 smorabito Exp $
+ * $Id: TestPollerStateMachineFactory.java,v 1.7 2006-04-10 05:31:01 smorabito Exp $
  */
 
 /*
@@ -58,6 +58,7 @@ public class TestPollerStateMachineFactory extends LockssTestCase {
   private PsmMsgEvent msgVote;
   private PsmMsgEvent msgRepair;
   private PsmMsgEvent msgNoOp;
+  private File tempDir;
 
   public void setUp() throws Exception {
     super.setUp();
@@ -66,6 +67,8 @@ public class TestPollerStateMachineFactory extends LockssTestCase {
     Properties p = new Properties();
     p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
     ConfigurationUtil.setCurrentConfigFromProps(p);
+    
+    this.tempDir = getTempDir();
 
     this.theDaemon = getMockLockssDaemon();
     this.theIdMgr = theDaemon.getIdentityManager();
@@ -73,37 +76,33 @@ public class TestPollerStateMachineFactory extends LockssTestCase {
     this.id = theIdMgr.stringToPeerIdentity("127.0.0.1");
 
     this.msgPollAck =
-      V3Events.fromMessage(new V3LcapMessage(V3LcapMessage.MSG_POLL_ACK,
-                                             "key",
-					     this.id,
-					     "http://www.test.com/",
-					     123456789, 987654321,
-					     ByteArray.makeRandomBytes(20),
-                                             ByteArray.makeRandomBytes(20)));
+      V3Events.fromMessage(new V3LcapMessage("auid", "key", "1",
+                                             ByteArray.makeRandomBytes(20),
+                                             ByteArray.makeRandomBytes(20),
+                                             V3LcapMessage.MSG_POLL_ACK,
+					     987654321,
+                                             this.id, tempDir));
     this.msgNominate =
-      V3Events.fromMessage(new V3LcapMessage(V3LcapMessage.MSG_NOMINATE,
-                                             "key",
-					     this.id,
-					     "http://www.test.com/",
-					     123456789, 987654321,
-					     ByteArray.makeRandomBytes(20),
-                                             ByteArray.makeRandomBytes(20)));
+      V3Events.fromMessage(new V3LcapMessage("auid", "key", "1",
+                                             ByteArray.makeRandomBytes(20),
+                                             ByteArray.makeRandomBytes(20),
+                                             V3LcapMessage.MSG_NOMINATE,
+                                             987654321,
+                                             this.id, tempDir));
     this.msgVote =
-      V3Events.fromMessage(new V3LcapMessage(V3LcapMessage.MSG_VOTE,
-                                             "key",
-					     this.id,
-					     "http://www.test.com/",
-					     123456789, 987654321,
-					     ByteArray.makeRandomBytes(20),
-                                             ByteArray.makeRandomBytes(20)));
+      V3Events.fromMessage(new V3LcapMessage("auid", "key", "1",
+                                             ByteArray.makeRandomBytes(20),
+                                             ByteArray.makeRandomBytes(20),
+                                             V3LcapMessage.MSG_VOTE,
+                                             987654321,
+                                             this.id, tempDir));
     this.msgRepair =
-      V3Events.fromMessage(new V3LcapMessage(V3LcapMessage.MSG_REPAIR_REP,
-                                             "key",
-					     this.id,
-					     "http://www.test.com/",
-					     123456789, 987654321,
-					     ByteArray.makeRandomBytes(20),
-                                             ByteArray.makeRandomBytes(20)));
+      V3Events.fromMessage(new V3LcapMessage("auid", "key", "1",
+                                             ByteArray.makeRandomBytes(20),
+                                             ByteArray.makeRandomBytes(20),
+                                             V3LcapMessage.MSG_REPAIR_REP,
+                                             987654321,
+                                             this.id, tempDir));
     this.msgNoOp =
       new PsmMsgEvent(V3LcapMessage.makeNoOpMsg(this.id));
   }

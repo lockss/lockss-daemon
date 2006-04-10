@@ -33,6 +33,7 @@ for i in 1 2 3 4 ; do
             rm -rf history
             rm -rf V1
             rm -rf V3
+            rm -rf localA
             rm -rf v3state
             rm -rf plugins
             rm -rf iddb

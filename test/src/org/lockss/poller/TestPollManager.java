@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.83 2005-12-01 01:54:43 smorabito Exp $
+ * $Id: TestPollManager.java,v 1.84 2006-04-10 05:31:01 smorabito Exp $
  */
 
 /*
@@ -70,11 +70,13 @@ public class TestPollManager extends LockssTestCase {
   protected V3LcapMessage[] v3Testmsg;
   protected LocalMockPollManager pollmanager;
   protected IdentityManager idmanager;
+  private File tempDir;
 
   protected void setUp() throws Exception {
     super.setUp();
 
-    String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    File tempDir = getTempDir();
+    String tempDirPath = tempDir.getAbsolutePath() + File.separator;
     Properties p = new Properties();
     p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
     p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.1.2.3");
@@ -650,15 +652,14 @@ public class TestPollManager extends LockssTestCase {
 
     // V3 Messages.
     v3Testmsg = new V3LcapMessage[1];
-    PollSpec v3Spec = new MockPollSpec(testau, rooturls[0], null, null,
-                                       Poll.V3_POLL);
-    v3Testmsg[0] = V3LcapMessage.makeRequestMsg(v3Spec,
-                                                "http://www.test.com/",
-                                                ByteArray.makeRandomBytes(20),
-                                                ByteArray.makeRandomBytes(20),
-                                                V3LcapMessage.MSG_POLL,
-                                                testduration,
-                                                testID);
+//    PollSpec v3Spec = new MockPollSpec(testau, rooturls[0], null, null,
+//                                       Poll.V3_POLL);
+    v3Testmsg[0] = new V3LcapMessage(testau.getAuId(), "testpollid", "2",
+                                     ByteArray.makeRandomBytes(20),
+                                     ByteArray.makeRandomBytes(20),
+                                     V3LcapMessage.MSG_POLL,
+                                     12345678, testID, tempDir);
+    v3Testmsg[0].setArchivalId(testau.getAuId());
   }
 
   /** Executes the test case

@@ -1,5 +1,5 @@
 /*
- * $Id: ParticipantUserData.java,v 1.3 2006-03-01 02:50:14 smorabito Exp $
+ * $Id: ParticipantUserData.java,v 1.4 2006-04-10 05:31:01 smorabito Exp $
  */
 
 /*
@@ -49,7 +49,7 @@ public class ParticipantUserData implements LockssSerializable {
   private List nominees;
   private byte[] pollerNonce;
   private byte[] voterNonce;
-  // XXX: Effort proofs will eventually not be byte arrays.
+  // XXX: Effort proofs may eventually not be byte arrays.
   private byte[] introEffortProof;
   private byte[] pollAckEffortProof;
   private byte[] remainingEffortProof;
@@ -60,11 +60,14 @@ public class ParticipantUserData implements LockssSerializable {
   private boolean isOuterCircle = false;
   private PsmInterpStateBean psmState;
   private int voteBlockIndex = 0;
+  private String statusString;
 
   /** Transient non-serialized fields */
   private transient V3Poller poller;
   private transient PollerStateBean pollState;
   private transient PsmInterp psmInterp;
+  private transient File messageDir;
+  
 
   private static Logger log = Logger.getLogger("PollerUserData");
 
@@ -76,10 +79,12 @@ public class ParticipantUserData implements LockssSerializable {
    * @param id
    * @param poller
    */
-  public ParticipantUserData(PeerIdentity id, V3Poller poller) {
+  public ParticipantUserData(PeerIdentity id, V3Poller poller,
+                             File messageDir) {
     this.voterId = id;
     this.poller = poller;
     this.pollState = poller.getPollerStateBean();
+    this.messageDir = messageDir;
   }
 
   public void isOuterCircle(boolean b) {
@@ -121,7 +126,16 @@ public class ParticipantUserData implements LockssSerializable {
   public List getNominees() {
     return nominees;
   }
-
+  
+  // Pretty display for the status tables.
+  public void setStatusString(String s) {
+    this.statusString = s;
+  }
+  
+  public String getStatusString() {
+    return statusString;
+  }
+  
   public void setHashAlgorithm(String s) {
     this.hashAlgorithm = s;
   }
@@ -201,7 +215,7 @@ public class ParticipantUserData implements LockssSerializable {
   public void setVoteBlockIndex(int i) {
     this.voteBlockIndex = i;
   }
-  
+
   // Convenience method.
   public VoteBlock getVoteBlock(int index) {
     return voteBlocks.getVoteBlock(index);
@@ -318,9 +332,17 @@ public class ParticipantUserData implements LockssSerializable {
     poller.handleError(getVoterId(), getErrorMessage());
   }
 
-  void handleRepair() {
-    // XXX: TBD
+  /*
+   * Implementation of V3LcapMessage.Factory
+   */
+  public V3LcapMessage makeMessage(int opcode) {
+    return new V3LcapMessage(getAuId(), getKey(), getPluginVersion(),
+                             getPollerNonce(), getVoterNonce(), opcode,
+                             getDeadline(), getPollerId(), messageDir);
   }
 
-  private PsmInterpStateBean interpStateBean;
+  public V3LcapMessage makeMessage(int opcode, long sizeEst) {
+    return makeMessage(opcode);
+  }
+
 }

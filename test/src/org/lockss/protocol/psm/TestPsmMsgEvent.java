@@ -1,5 +1,5 @@
 /*
- * $Id: TestPsmMsgEvent.java,v 1.4 2005-10-11 05:50:53 tlipkis Exp $
+ * $Id: TestPsmMsgEvent.java,v 1.5 2006-04-10 05:31:00 smorabito Exp $
  */
 
 /*
@@ -32,12 +32,21 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.protocol.psm;
 
+import java.io.File;
 import java.util.*;
 import org.lockss.test.*;
+import org.lockss.util.ByteArray;
 import org.lockss.protocol.*;
 
 
 public class TestPsmMsgEvent extends LockssTestCase {
+
+  File tempDir;
+
+  public void setUp() throws Exception {
+    super.setUp();
+    tempDir = getTempDir();
+  }
 
   class MsgEventInvitation extends PsmMsgEvent {
   }
@@ -50,7 +59,7 @@ public class TestPsmMsgEvent extends LockssTestCase {
 
 
   public void testMessage() {
-    LcapMessage msg1 = new V3LcapMessage();
+    LcapMessage msg1 = new V3LcapMessage(null);
     PsmMsgEvent e = new PsmMsgEvent();
     assertEquals(null, e.getMessage());
     PsmMsgEvent e2 = e.withMessage(msg1);
@@ -60,7 +69,10 @@ public class TestPsmMsgEvent extends LockssTestCase {
   }
 
   V3LcapMessage makeMsg(int opcode) {
-    return new V3LcapMessage(opcode, "key", null, null, 0, 0, null, null);
+    return new V3LcapMessage("ArchivalID_2", "key", "Plug42",
+                             ByteArray.makeRandomBytes(20),
+                             ByteArray.makeRandomBytes(20),
+                             opcode, 987654321, null, tempDir);
   }
 
   public void testFromMessage() {

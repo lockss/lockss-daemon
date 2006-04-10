@@ -1,5 +1,5 @@
 /*
- * $Id: FuncV3Voter.java,v 1.8 2006-03-01 02:50:13 smorabito Exp $
+ * $Id: FuncV3Voter.java,v 1.9 2006-04-10 05:31:01 smorabito Exp $
  */
 
 /*
@@ -44,7 +44,6 @@ import org.lockss.protocol.*;
 import org.lockss.repository.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
-import org.lockss.util.Queue;
 
 public class FuncV3Voter extends LockssTestCase {
 
@@ -64,6 +63,7 @@ public class FuncV3Voter extends LockssTestCase {
   private V3LcapMessage msgVoteRequest;
   private V3LcapMessage msgRepairRequest;
   private V3LcapMessage msgReceipt;
+  private File tempDir;
 
   private static final String BASE_URL = "http://www.test.org/";
 
@@ -79,8 +79,8 @@ public class FuncV3Voter extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-    tempDirPath = null;
-    tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    tempDir = getTempDir();
+    tempDirPath = tempDir.getAbsolutePath() + File.separator;
     startDaemon();
   }
 
@@ -170,63 +170,48 @@ public class FuncV3Voter extends LockssTestCase {
 
   public V3LcapMessage makePollMsg() {
     V3LcapMessage msg =
-      new V3LcapMessage(V3LcapMessage.MSG_POLL,
-                        "randomkeyforpoll",
-                        pollerId,
-                        "http://www.test.org",
-                        123456789, 987654321,
+      new V3LcapMessage("auid", "key", "3", ByteArray.makeRandomBytes(20),
                         ByteArray.makeRandomBytes(20),
-                        ByteArray.makeRandomBytes(20));
+                        V3LcapMessage.MSG_POLL,
+                        123456789, pollerId, tempDir);
     msg.setEffortProof(ByteArray.makeRandomBytes(20));
     return msg;
   }
 
   public V3LcapMessage makePollProofMsg() {
     V3LcapMessage msg =
-      new V3LcapMessage(V3LcapMessage.MSG_POLL_PROOF,
-                        "randomkeyforpoll",
-                        pollerId,
-			"http://www.test.org",
-			123456789, 987654321,
-			ByteArray.makeRandomBytes(20),
-                        ByteArray.makeRandomBytes(20));
+      new V3LcapMessage("auid", "key", "3", ByteArray.makeRandomBytes(20),
+                        ByteArray.makeRandomBytes(20),
+                        V3LcapMessage.MSG_POLL_PROOF,
+                        123456789, pollerId, tempDir);
     msg.setEffortProof(ByteArray.makeRandomBytes(20));
     return msg;
   }
 
   public V3LcapMessage makeVoteReqMsg() {
     V3LcapMessage msg =
-      new V3LcapMessage(V3LcapMessage.MSG_VOTE_REQ,
-                        "randomkeyforpoll",
-                        pollerId,
-			"http://www.test.org",
-			123456789, 987654321,
-			ByteArray.makeRandomBytes(20),
-                        ByteArray.makeRandomBytes(20));
+      new V3LcapMessage("auid", "key", "3", ByteArray.makeRandomBytes(20),
+                        ByteArray.makeRandomBytes(20),
+                        V3LcapMessage.MSG_VOTE_REQ,
+                        123456789, pollerId, tempDir);
     return msg;
   }
 
   public V3LcapMessage makeRepairReqMsg() {
     V3LcapMessage msg =
-      new V3LcapMessage(V3LcapMessage.MSG_REPAIR_REQ,
-                        "randomkeyforpoll",
-                        pollerId,
-			"http://www.test.org",
-			123456789, 987654321,
-			ByteArray.makeRandomBytes(20),
-                        ByteArray.makeRandomBytes(20));
+      new V3LcapMessage("auid", "key", "3", ByteArray.makeRandomBytes(20),
+                        ByteArray.makeRandomBytes(20),
+                        V3LcapMessage.MSG_REPAIR_REQ,
+                        123456789, pollerId, tempDir);
     return msg;
   }
 
   public V3LcapMessage makeReceiptMsg() {
     V3LcapMessage msg =
-      new V3LcapMessage(V3LcapMessage.MSG_EVALUATION_RECEIPT,
-                        "randomkeyforpoll",
-                        pollerId,
-			"http://www.test.org",
-			123456789, 987654321,
-			ByteArray.makeRandomBytes(20),
-                        ByteArray.makeRandomBytes(20));
+      new V3LcapMessage("auid", "key", "3", ByteArray.makeRandomBytes(20),
+                        ByteArray.makeRandomBytes(20),
+                        V3LcapMessage.MSG_EVALUATION_RECEIPT,
+                        123456789, pollerId, tempDir);
     return msg;
   }
 
@@ -271,7 +256,7 @@ public class FuncV3Voter extends LockssTestCase {
   }
 
   private class MyMockV3Voter extends V3Voter {
-    private Queue sentMessages = new FifoQueue();
+    private FifoQueue sentMessages = new FifoQueue();
 
     public MyMockV3Voter(PollSpec spec, LockssDaemon daemon, PeerIdentity orig,
                          String key, byte[] introEffortProof,

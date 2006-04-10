@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapRouter.java,v 1.20 2006-01-12 00:55:01 tlipkis Exp $
+ * $Id: TestLcapRouter.java,v 1.21 2006-04-10 05:31:01 smorabito Exp $
  */
 
 /*
@@ -57,9 +57,11 @@ public class TestLcapRouter extends LockssTestCase {
   MyLcapRouter rtr;
 
   PeerIdentity pid1;
+  File tempDir;
 
   public void setUp() throws Exception {
     super.setUp();
+    tempDir = getTempDir();
     ConfigurationUtil.setFromArgs(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
     daemon = getMockLockssDaemon();
     // V3LcapMessage.decode needs idmgr
@@ -79,7 +81,8 @@ public class TestLcapRouter extends LockssTestCase {
 
 
   public void testMakePeerMessage() throws Exception {
-    V3LcapMessage lmsg = LcapMessageTestUtil.makeTestVoteMessage(pid1);
+    V3LcapMessage lmsg =
+      LcapMessageTestUtil.makeTestVoteMessage(pid1, tempDir);
     PeerMessage pmsg = rtr.makePeerMessage(lmsg);
     assertNull(pmsg.getSender());
     pmsg.setSender(pid1);

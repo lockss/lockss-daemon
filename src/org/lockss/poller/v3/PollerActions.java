@@ -1,5 +1,5 @@
 /*
- * $Id: PollerActions.java,v 1.9 2006-03-01 02:50:14 smorabito Exp $
+ * $Id: PollerActions.java,v 1.10 2006-04-10 05:31:01 smorabito Exp $
  */
 
 /*
@@ -61,7 +61,10 @@ public class PollerActions {
     log.debug2("Sending poll to participant " + ud.getVoterId() + " in poll "
                + ud.getKey());
     try {
-      ud.sendMessageTo(V3LcapMessageFactory.makePollMsg(ud), ud.getVoterId());
+      V3LcapMessage msg = ud.makeMessage(V3LcapMessage.MSG_POLL);
+      msg.setPollerNonce(ud.getPollerNonce());
+      msg.setEffortProof(ud.getIntroEffortProof());
+      ud.sendMessageTo(msg, ud.getVoterId());
     } catch (IOException ex) {
       log.error("Unable to send message: ", ex);
       return V3Events.evtError;
@@ -120,8 +123,10 @@ public class PollerActions {
     log.debug2("Sending poll effort proof for voter " + ud.getVoterId()
                + " in poll " + ud.getKey());
     try {
-      ud.sendMessageTo(V3LcapMessageFactory.makePollProofMsg(ud),
-                       ud.getVoterId());
+      V3LcapMessage msg1 = ud.makeMessage(V3LcapMessage.MSG_POLL_PROOF);
+      msg1.setEffortProof(ud.getRemainingEffortProof());
+      V3LcapMessage msg = msg1;
+      ud.sendMessageTo(msg, ud.getVoterId());
     } catch (IOException ex) {
       log.error("Unable to send message: ", ex);
       return V3Events.evtError;
@@ -151,7 +156,7 @@ public class PollerActions {
   public static PsmEvent handleSendVoteRequest(PsmEvent evt,
                                                PsmInterp interp) {
     ParticipantUserData ud = getUserData(interp);
-    V3LcapMessage msg = V3LcapMessageFactory.makeVoteRequestMsg(ud);
+    V3LcapMessage msg = ud.makeMessage(V3LcapMessage.MSG_VOTE_REQ);
     log.debug2("Sending vote request to voter " + ud.getVoterId() + " in poll "
                + ud.getKey());
     // XXX: Implement multiple-vote-message functionality
@@ -208,7 +213,7 @@ public class PollerActions {
       return V3Events.evtError;
     }
 
-    ud.getPoller().receivedRepair(msg.getTargetUrl(), msg.getOriginatorId());
+    ud.getPoller().receivedRepair(msg.getTargetUrl());
     return V3Events.evtOk;
   }
 
@@ -221,9 +226,10 @@ public class PollerActions {
     // Send the message.
     log.debug2("Sending evaluation receipt to voter " + ud.getVoterId()
                + " in poll " + ud.getKey());
+    V3LcapMessage msg = ud.makeMessage(V3LcapMessage.MSG_EVALUATION_RECEIPT);
+    msg.setEffortProof(ud.getReceiptEffortProof());
     try {
-      ud.sendMessageTo(V3LcapMessageFactory.makeEvaluationReceiptMsg(ud),
-                       ud.getVoterId());
+      ud.sendMessageTo(msg, ud.getVoterId());
     } catch (IOException ex) {
       log.error("Unable to send message: ", ex);
       return V3Events.evtError;

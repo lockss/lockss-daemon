@@ -1,5 +1,5 @@
 /*
- * $Id: VoterActions.java,v 1.8 2006-01-12 03:13:30 smorabito Exp $
+ * $Id: VoterActions.java,v 1.9 2006-04-10 05:31:01 smorabito Exp $
  */
 
 /*
@@ -44,12 +44,17 @@ public class VoterActions {
   private static final Logger log = Logger.getLogger("VoterActions");
 
   // Start participating in a V3 poll when a POLL message is received
-  public static PsmEvent handleReceivePoll(PsmMsgEvent evt, PsmInterp interp) {
+  public static PsmEvent handleReceivePoll(PsmMsgEvent evt,
+                                           PsmInterp interp) {
     return V3Events.evtOk;
   }
 
-  public static PsmEvent handleVerifyPollEffort(PsmEvent evt, PsmInterp interp) {
-    // XXX: Implement effort service
+  public static PsmEvent handleVerifyPollEffort(PsmEvent evt, 
+                                                PsmInterp interp) {
+    // XXX: Implement effort service.
+    //
+    // If we don't want to participate, just send back a pollack
+    // with null effort proof at this point.
     return V3Events.evtOk;
   }
 
@@ -61,12 +66,8 @@ public class VoterActions {
   }
 
   public static PsmEvent handleSendPollAck(PsmEvent evt, PsmInterp interp) {
-    // XXX: If we decide we don't want to participate in this poll,
-    // for whatever reason, we should send a PollAck with an empty
-    // pollAckEffortProof and voterNonce.  For now, we just agree to
-    // participate in every poll.
     VoterUserData ud = getUserData(interp);
-    V3LcapMessage msg = V3LcapMessageFactory.makePollAckMsg(ud);
+    V3LcapMessage msg = ud.makeMessage(V3LcapMessage.MSG_POLL_ACK);
     msg.setEffortProof(ud.getPollAckEffortProof());
     msg.setVoterNonce(ud.getVoterNonce());
     try {
@@ -79,7 +80,8 @@ public class VoterActions {
     return V3Events.evtOk;
   }
 
-  public static PsmEvent handleReceivePollProof(PsmMsgEvent evt, PsmInterp interp) {
+  public static PsmEvent handleReceivePollProof(PsmMsgEvent evt,
+                                                PsmInterp interp) {
     log.debug2("Received PollProof message");
     VoterUserData ud = getUserData(interp);
     V3LcapMessage msg = (V3LcapMessage)evt.getMessage();
@@ -87,7 +89,8 @@ public class VoterActions {
     return V3Events.evtOk;
   }
 
-  public static PsmEvent handleVerifyPollProof(PsmEvent evt, PsmInterp interp) {
+  public static PsmEvent handleVerifyPollProof(PsmEvent evt,
+                                               PsmInterp interp) {
     VoterUserData ud = getUserData(interp);
     // XXX: Implement effort service
     // After effort has been proven, prepare to nominate some peers.
@@ -97,7 +100,8 @@ public class VoterActions {
 
   public static PsmEvent handleSendNominate(PsmEvent evt, PsmInterp interp) {
     VoterUserData ud = getUserData(interp);
-    V3LcapMessage msg = V3LcapMessageFactory.makeNominateMessage(ud);
+    V3LcapMessage msg = ud.makeMessage(V3LcapMessage.MSG_NOMINATE);
+    msg.setNominees(ud.getNominees());
     try {
       ud.sendMessageTo(msg, ud.getPollerId());
     } catch (IOException ex) {
@@ -121,7 +125,8 @@ public class VoterActions {
     }
   }
 
-  public static PsmEvent handleReceiveVoteRequest(PsmMsgEvent evt, PsmInterp interp) {
+  public static PsmEvent handleReceiveVoteRequest(PsmMsgEvent evt,
+                                                  PsmInterp interp) {
     VoterUserData ud = getUserData(interp);
     // If we're ready to cast our vote right away, do so.  Otherwise, wait
     // until V3Voter tells us to.
@@ -135,8 +140,11 @@ public class VoterActions {
 
   public static PsmEvent handleSendVote(PsmEvent evt, PsmInterp interp) {
     VoterUserData ud = getUserData(interp);
+    V3LcapMessage msg = ud.makeMessage(V3LcapMessage.MSG_VOTE);
+    // XXX: Fix when multiple-message voting is supported.
+    msg.setVoteComplete(true);
+    msg.setVoteBlocks(ud.getVoteBlocks());
     // Actually cast our vote.
-    V3LcapMessage msg = V3LcapMessageFactory.makeVoteMessage(ud);
     try {
       ud.sendMessageTo(msg, ud.getPollerId());
     } catch (IOException ex) {
@@ -147,14 +155,16 @@ public class VoterActions {
     return V3Events.evtOk;
   }
 
-  public static PsmEvent handleReceiveRepairRequest(PsmMsgEvent evt, PsmInterp interp) {
+  public static PsmEvent handleReceiveRepairRequest(PsmMsgEvent evt,
+                                                    PsmInterp interp) {
     VoterUserData ud = getUserData(interp);
     V3LcapMessage msg = (V3LcapMessage)evt.getMessage();
     String targetUrl = msg.getTargetUrl();
     CachedUrlSet cus = ud.getCachedUrlSet();
     if (cus.containsUrl(targetUrl)) {
       // I have this repair and I'm willing to serve it.
-      log.debug2("Accepting repair request from " + ud.getPollerId() + " for URL: " + targetUrl);
+      log.debug2("Accepting repair request from " + ud.getPollerId() +
+                 " for URL: " + targetUrl);
       ud.setRepairTarget(targetUrl);
       return V3Events.evtRepairRequestOk;
     } else {
@@ -166,9 +176,16 @@ public class VoterActions {
 
   public static PsmEvent handleSendRepair(PsmEvent evt, PsmInterp interp) {
     VoterUserData ud = getUserData(interp);
-    log.debug2("Sending repair to " + ud.getPollerId() + " for URL : " + ud.getRepairTarget());
+    log.debug2("Sending repair to " + ud.getPollerId() + " for URL : " +
+               ud.getRepairTarget());
     try {
-      V3LcapMessage msg = V3LcapMessageFactory.makeRepairResponseMessage(ud);
+      V3LcapMessage msg = ud.makeMessage(V3LcapMessage.MSG_REPAIR_REP);
+      ArchivalUnit au = ud.getCachedUrlSet().getArchivalUnit();
+      CachedUrl cu = au.makeCachedUrl(ud.getRepairTarget());
+      msg.setTargetUrl(ud.getRepairTarget());
+      msg.setRepairDataLength(cu.getContentSize());
+      msg.setRepairProps(cu.getProperties());
+      msg.setInputStream(cu.getUnfilteredInputStream());
       ud.sendMessageTo(msg, ud.getPollerId());
     } catch (IOException ex) {
       log.error("Unable to send message: ", ex);

@@ -1,5 +1,5 @@
 /*
- * $Id: PollSpec.java,v 1.34 2005-11-16 07:44:10 smorabito Exp $
+ * $Id: PollSpec.java,v 1.35 2006-04-10 05:31:02 smorabito Exp $
  */
 
 /*
@@ -122,7 +122,11 @@ public class PollSpec {
   public PollSpec(V3LcapMessage msg) {
     auId = msg.getArchivalId();
     pluginVersion = msg.getPluginVersion();
-    url = msg.getTargetUrl();
+    if (msg.getTargetUrl() == null) {
+      url = "lockssau:";
+    } else {
+      url = msg.getTargetUrl();
+    }
     protocolVersion = msg.getProtocolVersion();
     pollType = Poll.V3_POLL;
     cus = getPluginManager().findCachedUrlSet(this);

@@ -1,5 +1,5 @@
 /*
-* $Id: V3PollStatus.java,v 1.2 2006-03-01 02:50:14 smorabito Exp $
+* $Id: V3PollStatus.java,v 1.3 2006-04-10 05:31:01 smorabito Exp $
  */
 
 /*
@@ -86,10 +86,14 @@ public class V3PollStatus {
                                          ColumnDescriptor.TYPE_INT),
                     new ColumnDescriptor("status", "Status",
                                          ColumnDescriptor.TYPE_STRING),
+                    new ColumnDescriptor("talliedUrls", "URLs Tallied",
+                                         ColumnDescriptor.TYPE_INT),
                     new ColumnDescriptor("activeRepairs", "Repairs (A)",
                                          ColumnDescriptor.TYPE_INT),
                     new ColumnDescriptor("completedRepairs", "Repairs (C)",
                                          ColumnDescriptor.TYPE_INT),
+                    new ColumnDescriptor("agreement", "Agreement",
+                                         ColumnDescriptor.TYPE_PERCENT),
                     new ColumnDescriptor("start", "Start",
                                          ColumnDescriptor.TYPE_DATE),
                     new ColumnDescriptor("deadline", "Deadline",
@@ -127,11 +131,22 @@ public class V3PollStatus {
 
     private Map makeRow(V3Poller poller) {
       Map row = new HashMap();
+      
+      float agreeingUrls = (float)poller.getAgreedUrls().size();
+      float talliedUrls = (float)poller.getTalliedUrls().size();
+      float agreement;
+      if (agreeingUrls > 0)
+        agreement = agreeingUrls / talliedUrls;
+      else
+        agreement = 0;
+      
       row.put("auId", poller.getAu().getName());
       row.put("participants", new Integer(poller.getPollSize()));
       row.put("status", poller.getStatusString());
+      row.put("talliedUrls", new Integer(poller.getTalliedUrls().size()));
       row.put("activeRepairs", new Integer(poller.getActiveRepairs().size()));
       row.put("completedRepairs", new Integer(poller.getCompletedRepairs().size()));
+      row.put("agreement", new Float(agreement));
       row.put("start", new Long(poller.getCreateTime()));
       row.put("deadline", poller.getDeadline());
       row.put("pollId",
@@ -225,12 +240,10 @@ public class V3PollStatus {
       ListUtil.list(new StatusTable.SortRule("identity",
                                              CatalogueOrderComparator.SINGLETON));
     private final List colDescs =
-      ListUtil.list(new ColumnDescriptor("identity", "Identity",
+      ListUtil.list(new ColumnDescriptor("identity", "Peer",
                                          ColumnDescriptor.TYPE_STRING),
-                    new ColumnDescriptor("pollerNonce", "Poller's Nonce",
-                                         ColumnDescriptor.TYPE_DATE),
-                    new ColumnDescriptor("voterNonce", "Voter's Nonce",
-                                         ColumnDescriptor.TYPE_DATE));
+                    new ColumnDescriptor("peerStatus", "Status",
+                                         ColumnDescriptor.TYPE_STRING));
 
     public V3PollerStatusDetail(PollManager pollManager) {
       super(pollManager);
@@ -266,12 +279,7 @@ public class V3PollStatus {
     private Map makeRow(ParticipantUserData voter) {
       Map row = new HashMap();
       row.put("identity", voter.getVoterId().getIdString());
-      row.put("pollerNonce",
-              (voter.getPollerNonce() == null ? "N/A" :
-                ByteArray.toBase64(voter.getPollerNonce())));
-      row.put("voterNonce",
-              (voter.getVoterNonce() == null ? "N/A" :
-                ByteArray.toBase64(voter.getVoterNonce())));
+      row.put("peerStatus", voter.getStatusString());
       return row;
     }
 
@@ -289,6 +297,21 @@ public class V3PollStatus {
       summary.add(new SummaryInfo("Duration",
                                   ColumnDescriptor.TYPE_TIME_INTERVAL,
                                   new Long(poll.getDuration())));
+      summary.add(new SummaryInfo("Total URLs In Vote",
+                                  ColumnDescriptor.TYPE_INT,
+                                  new Integer(poll.getTalliedUrls().size())));
+      summary.add(new SummaryInfo("Agreeing URLs",
+                                  ColumnDescriptor.TYPE_INT,
+                                  new Integer(poll.getAgreedUrls().size())));
+      summary.add(new SummaryInfo("Disagreeing URLs",
+                                  ColumnDescriptor.TYPE_INT,
+                                  new Integer(poll.getDisagreedUrls().size())));
+      summary.add(new SummaryInfo("No Quorum URLs",
+                                  ColumnDescriptor.TYPE_INT,
+                                  new Integer(poll.getNoQuorumUrls().size())));
+      summary.add(new SummaryInfo("Too Close URLs",
+                                  ColumnDescriptor.TYPE_INT,
+                                  new Integer(poll.getTooCloseUrls().size())));
       summary.add(new SummaryInfo("Active Repairs",
                                   ColumnDescriptor.TYPE_INT,
                                   new StatusTable.Reference(new Integer(poll.getActiveRepairs().size()),
@@ -299,7 +322,6 @@ public class V3PollStatus {
                                   new StatusTable.Reference(new Integer(poll.getCompletedRepairs().size()),
                                                             "V3CompletedRepairsTable",
                                                             poll.getKey())));
-
       long remain = TimeBase.msUntil(poll.getDeadline().getExpirationTime());
       if (remain >= 0) {
         summary.add(new SummaryInfo("Remaining",
@@ -356,9 +378,13 @@ public class V3PollStatus {
         PollerStateBean.Repair rp = (PollerStateBean.Repair)it.next();
         Map row = new HashMap();
         row.put("url", rp.getUrl());
-        row.put("repairFrom",
-                rp.getRepairFrom() == null ? 
-                    "N/A (Deleted File)": rp.getRepairFrom().getIdString());
+        if (rp.isDeletedFile()) {
+          row.put("repairFrom", "N/A (Removed File)");
+        } else if (rp.isRepairedFromPublisher()) {
+          row.put("repairFrom", "Publisher");
+        } else {
+          row.put("repairFrom", rp.getRepairFrom().getIdString());
+        }
         rows.add(row);
       }
       return rows;
@@ -406,9 +432,13 @@ public class V3PollStatus {
         PollerStateBean.Repair rp = (PollerStateBean.Repair)it.next();
         Map row = new HashMap();
         row.put("url", rp.getUrl());
-        row.put("repairFrom",
-                rp.getRepairFrom() == null ? 
-                    "N/A (Deleted File)" : rp.getRepairFrom().getIdString());
+        if (rp.isDeletedFile()) {
+          row.put("repairFrom", "N/A (Removed File)");
+        } else if (rp.isRepairedFromPublisher()) {
+          row.put("repairFrom", "Publisher");
+        } else {
+          row.put("repairFrom", rp.getRepairFrom().getIdString());
+        }
         rows.add(row);
       }
       return rows;

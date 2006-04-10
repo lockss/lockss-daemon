@@ -1,5 +1,5 @@
 /*
- * $Id: VoterUserData.java,v 1.10 2006-01-12 03:13:30 smorabito Exp $
+ * $Id: VoterUserData.java,v 1.11 2006-04-10 05:31:01 smorabito Exp $
  */
 
 /*
@@ -78,6 +78,7 @@ public class VoterUserData
   private transient PollSpec spec;
   private transient CachedUrlSet cus;
   private transient V3Voter voter;
+  private transient File messageDir;
 
   private static Logger log = Logger.getLogger("VoterUserData");
 
@@ -86,7 +87,7 @@ public class VoterUserData
   public VoterUserData(PollSpec spec, V3Voter voter, PeerIdentity pollerId,
                        String pollKey, long duration, String hashAlgorithm,
                        byte[] pollerNonce, byte[] voterNonce,
-                       byte[] introEffortProof) {
+                       byte[] introEffortProof, File messageDir) {
     log.debug3("Creating V3 Voter User Data for poll " + pollKey);
     this.spec = spec;
     this.auId = spec.getAuId();
@@ -106,6 +107,7 @@ public class VoterUserData
     this.voteBlocks = new MemoryVoteBlocks();
     this.createTime = TimeBase.nowMs();
     this.statusString = "Active";
+    this.messageDir = messageDir;
   }
 
   public void setPollMessage(LcapMessage msg) {
@@ -333,5 +335,18 @@ public class VoterUserData
 
   public void setStatusString(String s) {
     this.statusString = s;
+  }
+  
+  /*
+   * Implementation of V3LcapMessage.Factory
+   */
+  public V3LcapMessage makeMessage(int opcode) {
+    return new V3LcapMessage(getAuId(), getPollKey(), getPluginVersion(),
+                             getPollerNonce(), getVoterNonce(), opcode,
+                             getDeadline(), getPollerId(), messageDir);
+  }
+  
+  public V3LcapMessage makeMessage(int opcode, long sizeEst) {
+    return makeMessage(opcode);
   }
 }

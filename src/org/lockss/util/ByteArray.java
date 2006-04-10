@@ -1,5 +1,5 @@
 /*
- * $Id: ByteArray.java,v 1.10 2006-01-13 23:21:06 thib_gc Exp $
+ * $Id: ByteArray.java,v 1.11 2006-04-10 05:31:01 smorabito Exp $
  */
 
 /*
@@ -41,6 +41,8 @@ import org.mortbay.util.*;
  * Byte array utilities
  */
 public class ByteArray {
+  public static final byte[] EMPTY_BYTE_ARRAY = new byte[]{};
+
   private static final char[] HEX_CHARS = {
     '0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'
   };
