@@ -1,0 +1,701 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE lockss-config [
+  <!ELEMENT lockss-config (if|property)+>
+  <!ELEMENT property (property|list|value|if)*>
+  <!ELEMENT list (value)+>
+  <!ELEMENT value (#PCDATA)>
+  <!ELEMENT test EMPTY>
+  <!ELEMENT and (and|or|not|test)*>
+  <!ELEMENT or (and|or|not|test)*>
+  <!ELEMENT not (and|or|not|test)*>
+  <!ELEMENT if (and|or|not|then|else|property)*>
+  <!ELEMENT then (property)*>
+  <!ELEMENT else (property)*>
+  <!ATTLIST property name CDATA #REQUIRED>
+  <!ATTLIST property value CDATA #IMPLIED>
+  <!ATTLIST test hostname CDATA #IMPLIED>
+  <!ATTLIST test group CDATA #IMPLIED>
+  <!ATTLIST test daemonVersionMin CDATA #IMPLIED>
+  <!ATTLIST test daemonVersionMax CDATA #IMPLIED>
+  <!ATTLIST test daemonVersion CDATA #IMPLIED>
+  <!ATTLIST test platformVersionMin CDATA #IMPLIED>
+  <!ATTLIST test platformVersionMax CDATA #IMPLIED>
+  <!ATTLIST test platformVersion CDATA #IMPLIED>
+  <!ATTLIST if hostname CDATA #IMPLIED>
+  <!ATTLIST if group CDATA #IMPLIED>
+  <!ATTLIST if daemonVersionMin CDATA #IMPLIED>
+  <!ATTLIST if daemonVersionMax CDATA #IMPLIED>
+  <!ATTLIST if daemonVersion CDATA #IMPLIED>
+  <!ATTLIST if platformVersionMin CDATA #IMPLIED>
+  <!ATTLIST if platformVersionMax CDATA #IMPLIED>
+  <!ATTLIST if platformVersion CDATA #IMPLIED>
+]>
+
+<!-- LOCKSS & LCAP tuning parameters -->
+<!-- Common config for all test frameworks -->
+<!-- This is included in the list of prop files by all the run_xxx_daemon -->
+<!-- scripts -->
+
+  <lockss-config>
+  <!-- Titles -->
+  <property name="org.lockss.title">
+    <property name="NCSU1997">
+      <property name="title" value="North Carolina State University ETD Collection 1997" />
+      <property name="journalTitle" value="North Carolina State University ETD" />
+      <property name="plugin" value="org.lockss.plugin.etd.ncstateplugin.NCStateETDLegacyPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.lib.ncsu.edu/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="year" />
+	<property name="value" value="1997" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="oai_request_url" />
+	<property name="value" value="http://www.lib.ncsu.edu/ETD-db/oai/oai.pl" />
+      </property>
+    </property>
+
+    <property name="NCSU1998">
+      <property name="title" value="North Carolina State University ETD Collection 1998" />
+      <property name="journalTitle" value="North Carolina State University ETD" />
+      <property name="plugin" value="org.lockss.plugin.etd.ncstateplugin.NCStateETDLegacyPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.lib.ncsu.edu/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="year" />
+	<property name="value" value="1998" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="oai_request_url" />
+	<property name="value" value="http://www.lib.ncsu.edu/ETD-db/oai/oai.pl" />
+      </property>
+    </property>
+
+    <property name="NCSU1999">
+      <property name="title" value="North Carolina State University ETD Collection 1999" />
+      <property name="journalTitle" value="North Carolina State University ETD" />
+      <property name="plugin" value="org.lockss.plugin.etd.ncstateplugin.NCStateETDLegacyPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.lib.ncsu.edu/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="year" />
+	<property name="value" value="1999" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="oai_request_url" />
+	<property name="value" value="http://www.lib.ncsu.edu/ETD-db/oai/oai.pl" />
+      </property>
+    </property>
+
+    <property name="FSUETD2003">
+      <property name="title" value="Florida State University ETD Collection 2003" />
+      <property name="journalTitle" value="Florida State University ETD" />
+      <property name="plugin" value="org.lockss.plugin.etd.fsuplugin.FSUETDPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://etd.lib.fsu.edu/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="year" />
+	<property name="value" value="2003" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="oai_request_url" />
+	<property name="value" value="http://etd.lib.fsu.edu/ETD-db/ETD-oai/oai.pl" />
+      </property>
+    </property>
+
+    <property name="FSUETD2004">
+      <property name="title" value="Florida State University ETD Collection 2004" />
+      <property name="journalTitle" value="Florida State University ETD" />
+      <property name="plugin" value="org.lockss.plugin.etd.fsuplugin.FSUETDPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://etd.lib.fsu.edu/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="year" />
+	<property name="value" value="2004" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="oai_request_url" />
+	<property name="value" value="http://etd.lib.fsu.edu/ETD-db/ETD-oai/oai.pl" />
+      </property>
+    </property>
+
+    <property name="FSUETD2005">
+      <property name="title" value="Florida State University ETD Collection 2005" />
+      <property name="journalTitle" value="Florida State University ETD" />
+      <property name="plugin" value="org.lockss.plugin.etd.fsuplugin.FSUETDPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://etd.lib.fsu.edu/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="year" />
+	<property name="value" value="2005" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="oai_request_url" />
+	<property name="value" value="http://etd.lib.fsu.edu/ETD-db/ETD-oai/oai.pl" />
+      </property>
+    </property>
+
+    <property name="VirginiaTechETDLegacy">
+      <property name="title" value="Virginia Tech ETD Legacy" />
+      <property name="journalTitle" value="Virginia Tech ETD" />
+      <property name="plugin" value="org.lockss.plugin.etd.vtetdplugin.VTETDLegacyPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://scholar.lib.vt.edu/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="year" />
+	<property name="value" value="2004" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="oai_request_url" />
+	<property name="value" value="http://scholar.lib.vt.edu/theses/OAI2/" />
+      </property>
+      <property name="attributes.color" value="red" />
+      <property name="attributes.temp" value="hot" />
+    </property>
+
+    <property name="VirginiaTechETD1997">
+      <property name="title" value="Virginia Tech ETD 1997" />
+      <property name="journalTitle" value="Virginia Tech ETD" />
+      <property name="plugin" value="org.lockss.plugin.etd.vtetdplugin.VTETD97And98Plugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://scholar.lib.vt.edu/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="year" />
+	<property name="value" value="1997" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="oai_request_url" />
+	<property name="value" value="http://scholar.lib.vt.edu/theses/OAI2/" />
+      </property>
+    </property>
+
+    <property name="VirginiaTechETD1998">
+      <property name="title" value="Virginia Tech ETD 1998" />
+      <property name="journalTitle" value="Virginia Tech ETD" />
+      <property name="plugin" value="org.lockss.plugin.etd.vtetdplugin.VTETD97And98Plugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://scholar.lib.vt.edu/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="year" />
+	<property name="value" value="1998" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="oai_request_url" />
+	<property name="value" value="http://scholar.lib.vt.edu/theses/OAI2/" />
+      </property>
+    </property>
+
+    <property name="VirginiaTechETD1999">
+      <property name="title" value="Virginia Tech ETD 1999" />
+      <property name="journalTitle" value="Virginia Tech ETD" />
+      <property name="plugin" value="org.lockss.plugin.etd.vtetdplugin.VTETDPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://scholar.lib.vt.edu/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="year" />
+	<property name="value" value="1999" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="oai_request_url" />
+	<property name="value" value="http://scholar.lib.vt.edu/theses/OAI2/" />
+      </property>
+    </property>
+
+    <property name="VirginiaTechETD2000">
+      <property name="title" value="Virginia Tech ETD 2000" />
+      <property name="journalTitle" value="Virginia Tech ETD" />
+      <property name="plugin" value="org.lockss.plugin.etd.vtetdplugin.VTETDPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://scholar.lib.vt.edu/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="year" />
+	<property name="value" value="2000" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="oai_request_url" />
+	<property name="value" value="http://scholar.lib.vt.edu/theses/OAI2/" />
+      </property>
+    </property>
+
+    <property name="VirginiaTechETD2001">
+      <property name="title" value="Virginia Tech ETD 2001" />
+      <property name="journalTitle" value="Virginia Tech ETD" />
+      <property name="plugin" value="org.lockss.plugin.etd.vtetdplugin.VTETDPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://scholar.lib.vt.edu/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="year" />
+	<property name="value" value="2001" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="oai_request_url" />
+	<property name="value" value="http://scholar.lib.vt.edu/theses/OAI2/" />
+      </property>
+    </property>
+
+    <property name="VirginiaTechETD2002">
+      <property name="title" value="Virginia Tech ETD 2002" />
+      <property name="journalTitle" value="Virginia Tech ETD" />
+      <property name="plugin" value="org.lockss.plugin.etd.vtetdplugin.VTETDPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://scholar.lib.vt.edu/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="year" />
+	<property name="value" value="2002" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="oai_request_url" />
+	<property name="value" value="http://scholar.lib.vt.edu/theses/OAI2/" />
+      </property>
+    </property>
+
+    <property name="VirginiaTechETD2003">
+      <property name="title" value="Virginia Tech ETD 2003" />
+      <property name="journalTitle" value="Virginia Tech ETD" />
+      <property name="plugin" value="org.lockss.plugin.etd.vtetdplugin.VTETDPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://scholar.lib.vt.edu/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="year" />
+	<property name="value" value="2003" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="oai_request_url" />
+	<property name="value" value="http://scholar.lib.vt.edu/theses/OAI2/" />
+      </property>
+    </property>
+
+    <property name="VirginiaTechETD2004">
+      <property name="title" value="Virginia Tech ETD 2004" />
+      <property name="journalTitle" value="Virginia Tech ETD" />
+      <property name="plugin" value="org.lockss.plugin.etd.vtetdplugin.VTETDPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://scholar.lib.vt.edu/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="year" />
+	<property name="value" value="2004" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="oai_request_url" />
+	<property name="value" value="http://scholar.lib.vt.edu/theses/OAI2/" />
+      </property>
+    </property>
+
+    <property name="VirginiaTechETD2005">
+      <property name="title" value="Virginia Tech ETD 2005" />
+      <property name="journalTitle" value="Virginia Tech ETD" />
+      <property name="plugin" value="org.lockss.plugin.etd.vtetdplugin.VTETDPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://scholar.lib.vt.edu/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="year" />
+	<property name="value" value="2005" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="oai_request_url" />
+	<property name="value" value="http://scholar.lib.vt.edu/theses/OAI2/" />
+      </property>
+    </property>
+
+    <property name="VirginiaTechETD2006">
+      <property name="title" value="Virginia Tech ETD 2006" />
+      <property name="journalTitle" value="Virginia Tech ETD" />
+      <property name="plugin" value="org.lockss.plugin.etd.vtetdplugin.VTETDPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://scholar.lib.vt.edu/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="year" />
+	<property name="value" value="2006" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="oai_request_url" />
+	<property name="value" value="http://scholar.lib.vt.edu/theses/OAI2/" />
+      </property>
+    </property>
+
+    <property name="vanderbiltetd1999">
+      <property name="title" value="Vanderbilt ETD 1999" />
+      <property name="journalTitle" value="Vanderbilt ETD" />
+      <property name="plugin" value="org.lockss.plugin.etd.vanderbiltetdplugin.VanderbiltETDPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://etd.library.vanderbilt.edu/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="year" />
+	<property name="value" value="1999" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="oai_request_url" />
+	<property name="value" value="http://etd.library.vanderbilt.edu/ETD-db/NDLTD-OAI/oai.pl" />
+        <property name="attributes.color" value="green" />
+      </property>
+    </property>
+
+    <property name="vanderbiltetd2000">
+      <property name="title" value="Vanderbilt ETD 2000" />
+      <property name="journalTitle" value="Vanderbilt ETD" />
+      <property name="plugin" value="org.lockss.plugin.etd.vanderbiltetdplugin.VanderbiltETDPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://etd.library.vanderbilt.edu/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="year" />
+	<property name="value" value="2000" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="oai_request_url" />
+	<property name="value" value="http://etd.library.vanderbilt.edu/ETD-db/NDLTD-OAI/oai.pl" />
+      </property>
+      <property name="attributes.color" value="green" />
+    </property>
+
+    <property name="vanderbiltetd2001">
+      <property name="title" value="Vanderbilt ETD 2001" />
+      <property name="journalTitle" value="Vanderbilt ETD" />
+      <property name="plugin" value="org.lockss.plugin.etd.vanderbiltetdplugin.VanderbiltETDPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://etd.library.vanderbilt.edu/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="year" />
+	<property name="value" value="2001" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="oai_request_url" />
+	<property name="value" value="http://etd.library.vanderbilt.edu/ETD-db/NDLTD-OAI/oai.pl" />
+      </property>
+      <property name="attributes.color" value="green" />
+    </property>
+
+    <property name="vanderbiltetd2002">
+      <property name="title" value="Vanderbilt ETD 2002" />
+      <property name="journalTitle" value="Vanderbilt ETD" />
+      <property name="plugin" value="org.lockss.plugin.etd.vanderbiltetdplugin.VanderbiltETDPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://etd.library.vanderbilt.edu/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="year" />
+	<property name="value" value="2002" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="oai_request_url" />
+	<property name="value" value="http://etd.library.vanderbilt.edu/ETD-db/NDLTD-OAI/oai.pl" />
+      </property>
+    </property>
+
+    <property name="vanderbiltetd2003">
+      <property name="title" value="Vanderbilt ETD 2003" />
+      <property name="journalTitle" value="Vanderbilt ETD" />
+      <property name="plugin" value="org.lockss.plugin.etd.vanderbiltetdplugin.VanderbiltETDPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://etd.library.vanderbilt.edu/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="year" />
+	<property name="value" value="2003" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="oai_request_url" />
+	<property name="value" value="http://etd.library.vanderbilt.edu/ETD-db/NDLTD-OAI/oai.pl" />
+      </property>
+    </property>
+
+    <property name="vanderbiltetd2004">
+      <property name="title" value="Vanderbilt ETD 2004" />
+      <property name="journalTitle" value="Vanderbilt ETD" />
+      <property name="plugin" value="org.lockss.plugin.etd.vanderbiltetdplugin.VanderbiltETDPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://etd.library.vanderbilt.edu/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="year" />
+	<property name="value" value="2004" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="oai_request_url" />
+	<property name="value" value="http://etd.library.vanderbilt.edu/ETD-db/NDLTD-OAI/oai.pl" />
+      </property>
+    </property>
+
+    <property name="vanderbiltetd2005">
+      <property name="title" value="Vanderbilt ETD 2005" />
+      <property name="journalTitle" value="Vanderbilt ETD" />
+      <property name="plugin" value="org.lockss.plugin.etd.vanderbiltetdplugin.VanderbiltETDPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://etd.library.vanderbilt.edu/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="year" />
+	<property name="value" value="2005" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="oai_request_url" />
+	<property name="value" value="http://etd.library.vanderbilt.edu/ETD-db/NDLTD-OAI/oai.pl" />
+      </property>
+    </property>
+
+    <property name="vanderbiltetd2006">
+      <property name="title" value="Vanderbilt ETD 2006" />
+      <property name="journalTitle" value="Vanderbilt ETD" />
+      <property name="plugin" value="org.lockss.plugin.etd.vanderbiltetdplugin.VanderbiltETDPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://etd.library.vanderbilt.edu/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="year" />
+	<property name="value" value="2006" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="oai_request_url" />
+	<property name="value" value="http://etd.library.vanderbilt.edu/ETD-db/NDLTD-OAI/oai.pl" />
+      </property>
+    </property>
+
+    <property name="ukyetd2000">
+      <property name="title" value="University of Kentucky ETD Collection 2000" />
+      <property name="journalTitle" value="University of Kentucky ETD Collection" />
+      <property name="plugin" value="org.lockss.plugin.etd.ukyplugin.UKYETDPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://kdl.kyvl.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="base_url2" />
+	<property name="value" value="http://lib.uky.edu/" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="2000" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="oai_request_url" />
+	<property name="value" value="http://kdl.kyvl.org/cgi-bin-oai22/XMLFile/uketds/oai.pl/" />
+      </property>
+    </property>
+
+    <property name="ukyetd2001">
+      <property name="title" value="University of Kentucky ETD Collection 2001" />
+      <property name="journalTitle" value="University of Kentucky ETD Collection" />
+      <property name="plugin" value="org.lockss.plugin.etd.ukyplugin.UKYETDPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://kdl.kyvl.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="base_url2" />
+	<property name="value" value="http://lib.uky.edu/" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="2001" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="oai_request_url" />
+	<property name="value" value="http://kdl.kyvl.org/cgi-bin-oai22/XMLFile/uketds/oai.pl/" />
+      </property>
+    </property>
+
+    <property name="ukyetd2002">
+      <property name="title" value="University of Kentucky ETD Collection 2002" />
+      <property name="journalTitle" value="University of Kentucky ETD Collection" />
+      <property name="plugin" value="org.lockss.plugin.etd.ukyplugin.UKYETDPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://kdl.kyvl.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="base_url2" />
+	<property name="value" value="http://lib.uky.edu/" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="2002" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="oai_request_url" />
+	<property name="value" value="http://kdl.kyvl.org/cgi-bin-oai22/XMLFile/uketds/oai.pl/" />
+      </property>
+    </property>
+
+    <property name="ukyetd2003">
+      <property name="title" value="University of Kentucky ETD Collection 2003" />
+      <property name="journalTitle" value="University of Kentucky ETD Collection" />
+      <property name="plugin" value="org.lockss.plugin.etd.ukyplugin.UKYETDPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://kdl.kyvl.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="base_url2" />
+	<property name="value" value="http://lib.uky.edu/" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="2003" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="oai_request_url" />
+	<property name="value" value="http://kdl.kyvl.org/cgi-bin-oai22/XMLFile/uketds/oai.pl/" />
+      </property>
+    </property>
+
+    <property name="ukyetd2004">
+      <property name="title" value="University of Kentucky ETD Collection 2004" />
+      <property name="journalTitle" value="University of Kentucky ETD Collection" />
+      <property name="plugin" value="org.lockss.plugin.etd.ukyplugin.UKYETDPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://kdl.kyvl.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="base_url2" />
+	<property name="value" value="http://lib.uky.edu/" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="2004" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="oai_request_url" />
+	<property name="value" value="http://kdl.kyvl.org/cgi-bin-oai22/XMLFile/uketds/oai.pl/" />
+      </property>
+    </property>
+
+    <property name="ukyetd2005">
+      <property name="title" value="University of Kentucky ETD Collection 2005" />
+      <property name="journalTitle" value="University of Kentucky ETD Collection" />
+      <property name="plugin" value="org.lockss.plugin.etd.ukyplugin.UKYETDPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://kdl.kyvl.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="base_url2" />
+	<property name="value" value="http://lib.uky.edu/" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="2005" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="oai_request_url" />
+	<property name="value" value="http://kdl.kyvl.org/cgi-bin-oai22/XMLFile/uketds/oai.pl/" />
+      </property>
+    </property>
+
+    <property name="gatech2003">
+      <property name="title" value="Georgia Institute of Technology ETD Collection 2003" />
+      <property name="journalTitle" value="Georgia Institute of Technology ETD Collection" />
+      <property name="plugin" value="org.lockss.plugin.etd.gatechplugin.GATechETDPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://etd.gatech.edu/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="year" />
+	<property name="value" value="2003" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="oai_request_url" />
+	<property name="value" value="http://etd.gatech.edu/ETD-db/OAI2/oai.pl" />
+      </property>
+    </property>
+
+    <property name="gatech2004">
+      <property name="title" value="Georgia Institute of Technology ETD Collection 2004" />
+      <property name="journalTitle" value="Georgia Institute of Technology ETD Collection" />
+      <property name="plugin" value="org.lockss.plugin.etd.gatechplugin.GATechETDPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://etd.gatech.edu/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="year" />
+	<property name="value" value="2004" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="oai_request_url" />
+	<property name="value" value="http://etd.gatech.edu/ETD-db/OAI2/oai.pl" />
+      </property>
+    </property>
+
+    <property name="gatech2005">
+      <property name="title" value="Georgia Institute of Technology ETD Collection 2005" />
+      <property name="journalTitle" value="Georgia Institute of Technology ETD Collection" />
+      <property name="plugin" value="org.lockss.plugin.etd.gatechplugin.GATechETDPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://etd.gatech.edu/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="year" />
+	<property name="value" value="2005" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="oai_request_url" />
+	<property name="value" value="http://etd.gatech.edu/ETD-db/OAI2/oai.pl" />
+      </property>
+    </property>
+
+    <property name="gatech2006">
+      <property name="title" value="Georgia Institute of Technology ETD Collection 2006" />
+      <property name="journalTitle" value="Georgia Institute of Technology ETD Collection" />
+      <property name="plugin" value="org.lockss.plugin.etd.gatechplugin.GATechETDPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://etd.gatech.edu/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="year" />
+	<property name="value" value="2006" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="oai_request_url" />
+	<property name="value" value="http://etd.gatech.edu/ETD-db/OAI2/oai.pl" />
+      </property>
+    </property>
+  </property>
+</lockss-config>
