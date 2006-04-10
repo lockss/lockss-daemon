@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlackbirdArchivalUnit.java,v 1.3 2006-04-07 22:48:40 troberts Exp $
+ * $Id: TestBlackbirdArchivalUnit.java,v 1.4 2006-04-10 23:12:28 troberts Exp $
  */
 
 /*
@@ -53,6 +53,8 @@ public class TestBlackbirdArchivalUnit extends LockssPluginTestCase {
 
   static final String ROOT_URL = "http://www.blackbird.vcu.edu/";
 
+  private MockLockssDaemon theDaemon;
+  
   public void setUp() throws Exception {
     super.setUp();
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
@@ -106,67 +108,66 @@ public class TestBlackbirdArchivalUnit extends LockssPluginTestCase {
     String baseUrl = ROOT_URL + "v2n1/";
 
     // root pages
-    shouldCacheTest(baseUrl+"index.htm", true, bbAu, cus);
-    shouldCacheTest(ROOT_URL+"v2n2/index.htm", true, bbAu, cus);
+    assertShouldCache(baseUrl+"index.htm", bbAu, cus);
+    assertShouldCache(ROOT_URL+"v2n2/index.htm", bbAu, cus);
 
     // volume pages
-    shouldCacheTest(baseUrl+"poetry.htm", true, bbAu, cus);
-    shouldCacheTest(baseUrl+"gallery.htm", true, bbAu, cus);
+    assertShouldCache(baseUrl+"poetry.htm", bbAu, cus);
+    assertShouldCache(baseUrl+"gallery.htm", bbAu, cus);
 
     // info pages
-    shouldCacheTest(baseUrl+"new.htm", true, bbAu, cus);
-    shouldCacheTest(baseUrl+"editorial_policy.htm", true, bbAu, cus);
-    shouldCacheTest(ROOT_URL+"v2n2/acknowledgements.htm", true, bbAu, cus);
+    assertShouldCache(baseUrl+"new.htm", bbAu, cus);
+    assertShouldCache(baseUrl+"editorial_policy.htm", bbAu, cus);
+    assertShouldCache(ROOT_URL+"v2n2/acknowledgements.htm", bbAu, cus);
 
     // article html
-    shouldCacheTest(baseUrl+"gallery/burnside_c/index.htm", true, bbAu, cus);
-    shouldCacheTest(baseUrl+"gallery/burnside_c/retrospective.htm", true,
+    assertShouldCache(baseUrl+"gallery/burnside_c/index.htm", bbAu, cus);
+    assertShouldCache(baseUrl+"gallery/burnside_c/retrospective.htm", 
                     bbAu, cus);
-    shouldCacheTest(baseUrl+"nonfiction/dillard_r/going.htm", true, bbAu, cus);
-    shouldCacheTest(baseUrl+"poetry/black_s/index.htm", true, bbAu, cus);
+    assertShouldCache(baseUrl+"nonfiction/dillard_r/going.htm", bbAu, cus);
+    assertShouldCache(baseUrl+"poetry/black_s/index.htm", bbAu, cus);
 
     // images
-    shouldCacheTest(baseUrl+"images/spacer.gif", true, bbAu, cus);
-    shouldCacheTest(baseUrl+"images/audio.gif", true, bbAu, cus);
-    shouldCacheTest(baseUrl+"gallery/burnside_c/burnside6_125.jpg", true,
+    assertShouldCache(baseUrl+"images/spacer.gif", bbAu, cus);
+    assertShouldCache(baseUrl+"images/audio.gif", bbAu, cus);
+    assertShouldCache(baseUrl+"gallery/burnside_c/burnside6_125.jpg", 
                     bbAu, cus);
 
     // stylesheet
-    shouldCacheTest(baseUrl+"blkbird.css", true, bbAu, cus);
-    shouldCacheTest(baseUrl+"poetry/blkbird.css", true, bbAu, cus);
+    assertShouldCache(baseUrl+"blkbird.css", bbAu, cus);
+    assertShouldCache(baseUrl+"poetry/blkbird.css", bbAu, cus);
 
 
     // ram files
-    shouldCacheTest(baseUrl+"gallery/burnside_c/interview_part1.ram", true,
+    assertShouldCache(baseUrl+"gallery/burnside_c/interview_part1.ram",
                     bbAu, cus);
-    shouldCacheTest(baseUrl+"gallery/burnside_c/interview_part1.rm", true,
-                    bbAu, cus);
-    shouldCacheTest(baseUrl+"gallery/burnside_c_091603/lucy1.ram", true,
-                    bbAu, cus);
+    assertShouldCache(baseUrl+"gallery/burnside_c/interview_part1.rm", 
+                      bbAu, cus);
+    assertShouldCache(baseUrl+"gallery/burnside_c_091603/lucy1.ram", bbAu, cus);
 
-    shouldCacheTest(ROOT_URL+"lockss_media/v2n2/gallery/burnside_c/interview_part1.rm",
-		    true, bbAu, cus);
+    assertShouldCache(ROOT_URL+"lockss_media/v2n2/gallery/burnside_c/interview_part1.rm",
+		    bbAu, cus);
 
-    shouldCacheTest(ROOT_URL+"v1n2/gallery/burnside_c/interview_part1.ram",
-		    false, bbAu, cus);
+    assertShouldNotCache(ROOT_URL+"v1n2/gallery/burnside_c/interview_part1.ram",
+		    bbAu, cus);
 
     // current issue
-    shouldCacheTest(ROOT_URL, false, bbAu, cus);
-    shouldCacheTest(ROOT_URL+"index.htm", false, bbAu, cus);
+    assertShouldNotCache(ROOT_URL, bbAu, cus);
+    assertShouldNotCache(ROOT_URL+"index.htm", bbAu, cus);
 
     // index links
 
     // archived root page
-    shouldCacheTest(ROOT_URL+"v1n1/index.htm", false, bbAu, cus);
+    assertShouldNotCache(ROOT_URL+"v1n1/index.htm", bbAu, cus);
 
     // archived volume page
-    shouldCacheTest(ROOT_URL+"v1n2/gallery/example.htm", false, bbAu, cus);
+    assertShouldNotCache(ROOT_URL+"v1n2/gallery/example.htm", bbAu, cus);
 
     // LOCKSS
-    shouldCacheTest("http://lockss.stanford.edu", false, bbAu, cus);
+    assertShouldNotCache("http://lockss.stanford.edu", bbAu, cus);
 
     // other site
-    shouldCacheTest("http://www.real.com/", false, bbAu, cus);
+    assertShouldNotCache("http://www.real.com/", bbAu, cus);
   }
 
   public void testStartUrlConstruction() throws Exception {

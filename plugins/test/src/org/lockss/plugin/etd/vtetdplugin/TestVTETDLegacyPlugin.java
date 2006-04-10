@@ -6,7 +6,7 @@ import org.lockss.daemon.*;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.base.BaseCachedUrlSet;
 import org.lockss.plugin.definable.*;
-import org.lockss.test.LockssPluginTestCase;
+import org.lockss.test.*;
 import org.lockss.util.SetUtil;
 
 public class TestVTETDLegacyPlugin extends LockssPluginTestCase {
@@ -21,10 +21,6 @@ public class TestVTETDLegacyPlugin extends LockssPluginTestCase {
     "org.lockss.plugin.etd.vtetdplugin.VTETDLegacyPlugin";
 
   private DefinablePlugin plugin;
-  public void setUp() throws Exception {
-    super.setUp();
-    theDaemon = getMockLockssDaemon();
-  }
 
   private Properties makeProps(String url, int year, String oaiProvider) {
     Properties props = new Properties();
@@ -38,6 +34,7 @@ public class TestVTETDLegacyPlugin extends LockssPluginTestCase {
     int year = 1998;
     ArchivalUnit bbAu = 
       makeAu(makeProps(ROOT_URL, year, OAI_PROVIDER), PLUGIN_ID);
+    MockLockssDaemon theDaemon = getMockLockssDaemon();
     theDaemon.getLockssRepository(bbAu);
     theDaemon.getNodeManager(bbAu);
     BaseCachedUrlSet cus = 
@@ -50,7 +47,7 @@ public class TestVTETDLegacyPlugin extends LockssPluginTestCase {
                   "http://scholar.lib.vt.edu/theses/available/etd-3034112939721181/unrestricted/etd.pdf"
                   );
     
-    shouldCacheTest(urlsToCache, true, bbAu, cus);
+    assertShouldCache(urlsToCache, bbAu, cus);
 
     Set urlsNotToCache = 
       SetUtil.set(
@@ -65,7 +62,7 @@ public class TestVTETDLegacyPlugin extends LockssPluginTestCase {
                   "http://scholar.lib.vt.edu/theses/available/etd-07012003-215241/"
                   );
     
-    shouldCacheTest(urlsNotToCache, false, bbAu, cus);
+    assertShouldNotCache(urlsNotToCache, bbAu, cus);
   }
 
   public void testGetName() throws Exception {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestVTETDPlugin.java,v 1.1 2006-04-07 22:51:53 troberts Exp $
+ * $Id: TestVTETDPlugin.java,v 1.2 2006-04-10 23:12:28 troberts Exp $
  */
 
 /*
@@ -54,10 +54,6 @@ public class TestVTETDPlugin extends LockssPluginTestCase {
     "org.lockss.plugin.etd.vtetdplugin.VTETDPlugin";
 
   private DefinablePlugin plugin;
-  public void setUp() throws Exception {
-    super.setUp();
-    theDaemon = getMockLockssDaemon();
-  }
 
   private Properties makeProps(String url, int year, String oaiProvider) {
     Properties props = new Properties();
@@ -71,6 +67,7 @@ public class TestVTETDPlugin extends LockssPluginTestCase {
     int year = 1999;
     ArchivalUnit bbAu = 
       makeAu(makeProps(ROOT_URL, year, OAI_PROVIDER), PLUGIN_ID);
+    MockLockssDaemon theDaemon = getMockLockssDaemon();
     theDaemon.getLockssRepository(bbAu);
     theDaemon.getNodeManager(bbAu);
     BaseCachedUrlSet cus = 
@@ -83,7 +80,7 @@ public class TestVTETDPlugin extends LockssPluginTestCase {
                   "http://scholar.lib.vt.edu/theses/available/etd-10121999-224043/unrestricted/HafnerThesis.pdf"
                   );
     
-    shouldCacheTest(urlsToCache, true, bbAu, cus);
+    assertShouldCache(urlsToCache, bbAu, cus);
 
     Set urlsNotToCache = 
       SetUtil.set(
@@ -97,7 +94,7 @@ public class TestVTETDPlugin extends LockssPluginTestCase {
                   "http://scholar.lib.vt.edu/theses/available/etd-07012003-215241/"
                   );
     
-    shouldCacheTest(urlsNotToCache, false, bbAu, cus);
+    assertShouldNotCache(urlsNotToCache, bbAu, cus);
   }
 
   public void testGetName() throws Exception {
