@@ -1676,9 +1676,6 @@ globalConfigTemplate = """\
 # LOCKSS & LCAP tuning parameters
 org.lockss.log.default.level=%(logLevel)s
 
-#lockss config stuff
-org.lockss.platform.diskSpacePaths=./
-
 org.lockss.config.reloadInterval=60m
 
 #comm settings

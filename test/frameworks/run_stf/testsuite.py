@@ -461,6 +461,9 @@ class RangedNamePollDeleteTestCase(LockssAutoStartTestCase):
                "AU not repaired by ranged name poll."
         log.info("AU repaired by ranged name poll.")
 
+def rangedNamePollDeleteTestCase():
+    return RangedNamePollDeleteTestCase()
+
 
 ##
 ## Ensure that the cache can recover following an extra file being
