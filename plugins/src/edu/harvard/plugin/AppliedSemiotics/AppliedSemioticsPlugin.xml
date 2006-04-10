@@ -1,67 +1,69 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Elements>
-<MapElement>
-<ElementKey>plugin_identifier</ElementKey>
-<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin</ElementValue>
-</MapElement>
-<MapElement>
-<ElementKey>au_name</ElementKey>
-<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"%s Issue %s", base_url, issue_no.</ElementValue>
-</MapElement>
-<MapElement>
-<ElementKey>plugin_name</ElementKey>
-<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Applied Semiotics / Semiotique Appliquee</ElementValue>
-</MapElement>
-<MapElement>
-<ElementKey>au_def_new_content_crawl</ElementKey>
-<ElementValue xsi:type="java:java.lang.Long" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">7862400000</ElementValue>
-</MapElement>
-<MapElement>
-<ElementKey>au_crawlrules</ElementKey>
-<ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-<string xsi:type="java:java.lang.String">4,"^%s", base_url</string>
-<string xsi:type="java:java.lang.String">1,"%sASSA-%s/index-n%s.html", base_url, issue_dir, issue_no.</string>
-<string xsi:type="java:java.lang.String">1,"^%sASSA-%s/.*", base_url, issue_dir</string>
-<string xsi:type="java:java.lang.String">2,"^%sASSA-.*/.*", base_url</string>
-<string xsi:type="java:java.lang.String">2,"^%s$", base_url</string>
-<string xsi:type="java:java.lang.String">2,"^%s.*.html", base_url</string>
-<string xsi:type="java:java.lang.String">1,"^%s.*.jpg", base_url</string>
-<string xsi:type="java:java.lang.String">1,"^%s.*.gif", base_url</string>
-</ElementValue>
-</MapElement>
-<MapElement>
-<ElementKey>au_start_url</ElementKey>
-<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"%sASSA-%s/index-n%s.html", base_url, issue_dir, issue_no.</ElementValue>
-</MapElement>
-<MapElement>
-<ElementKey>plugin_config_props</ElementKey>
-<ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-<ConfigParamDescr>
-<Key>issue_no.</Key>
-<DisplayName>Issue No. (e.g. 1, 6-7)</DisplayName>
-<Description>
-</Description>
-<Type>1</Type>
-<Size>10</Size>
-<Definitional>true</Definitional>
-</ConfigParamDescr>
-<ConfigParamDescr>
-<Key>base_url</Key>
-<DisplayName>Base URL</DisplayName>
-<Description>Usually of the form http://&lt;journal-name&gt;.com/</Description>
-<Type>3</Type>
-<Size>40</Size>
-<Definitional>true</Definitional>
-</ConfigParamDescr>
-<ConfigParamDescr>
-<Key>issue_dir</Key>
-<DisplayName>Issue Directory (e.g. No1 or 6-7)</DisplayName>
-<Description>
-</Description>
-<Type>1</Type>
-<Size>10</Size>
-<Definitional>true</Definitional>
-</ConfigParamDescr>
-</ElementValue>
-</MapElement>
-</Elements>
+<map>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;%s Issue %s&quot;, base_url, issue_no.</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>7862400000</long>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Applied Semiotics / S&#x00e9;miotique Appliqu&#x00e9;e</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;%sASSA-%s/index-n%s.html&quot;, base_url, issue_dir, issue_no.</string>
+      <string>1,&quot;^%sASSA-%s/.*&quot;, base_url, issue_dir</string>
+      <string>2,&quot;^%sASSA-.*/.*&quot;, base_url</string>
+      <string>2,&quot;^%s$&quot;, base_url</string>
+      <string>2,&quot;^%s.*.html&quot;, base_url</string>
+      <string>1,&quot;^%s.*.jpg&quot;, base_url</string>
+      <string>1,&quot;^%s.*.gif&quot;, base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%sASSA-%s/index-n%s.html&quot;, base_url, issue_dir, issue_no.</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>issue_no.</key>
+        <displayName>Issue No. (e.g. 1, 6-7)</displayName>
+        <description>
+</description>
+        <type>1</type>
+        <size>10</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>issue_dir</key>
+        <displayName>Issue Directory (e.g. No1 or 6-7)</displayName>
+        <description>
+</description>
+        <type>1</type>
+        <size>10</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+</map>
