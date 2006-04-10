@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.40 2006-02-14 05:20:58 tlipkis Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.41 2006-04-10 22:24:33 smorabito Exp $
  */
 
 /*
@@ -215,16 +215,21 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 
   protected OaiRequestData makeOaiData() {
     URL oai_request_url =
-        paramMap.getUrl(ConfigParamDescr.OAI_REQUEST_URL.getKey());
+      paramMap.getUrl(ConfigParamDescr.OAI_REQUEST_URL.getKey());
     String oaiRequestUrlStr = oai_request_url.toString();
     String oai_au_spec = null;
-//         paramMap.getString(ConfigParamDescr.OAI_SPEC.getKey());
+    try {
+      oai_au_spec = paramMap.getString(ConfigParamDescr.OAI_SPEC.getKey());
+    } catch (NoSuchElementException ex) {
+      // This is acceptable.  Null value will fetch all entries.
+      log.debug("No oai_spec for this plugin.");
+    }
     log.debug3("Creating OaiRequestData with oaiRequestUrlStr" +
 	       oaiRequestUrlStr + " and oai_au_spec " + oai_au_spec);
     return new OaiRequestData(oaiRequestUrlStr,
                       "http://purl.org/dc/elements/1.1/",
                       "identifier",
-			      oai_au_spec,
+                      oai_au_spec,
                       "oai_dc"
                       );
 
