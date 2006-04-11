@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.155 2006-04-05 22:52:30 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.156 2006-04-11 08:29:06 tlipkis Exp $
  */
 
 /*
@@ -244,8 +244,8 @@ public class PluginManager
     initLoadablePluginRegistries(config.getList(PARAM_PLUGIN_REGISTRIES));
     initPluginRegistry(config);
     configureAllPlugins(config);
-
     loadablePluginsReady = true;
+    theDaemon.getCrawlManager().enableCrawlStarter();
   }
 
   public void setLoadablePluginsReady(boolean val) {
@@ -309,7 +309,7 @@ public class PluginManager
 
   private void configureAllPlugins(Configuration config) {
     Configuration allPlugs = config.getConfigTree(PARAM_AU_TREE);
-    if (!allPlugs.isEmpty() && !allPlugs.equals(currentAllPlugs)) {
+    if (!allPlugs.equals(currentAllPlugs)) {
       List plugList = ListUtil.fromIterator(allPlugs.nodeIterator());
       plugList = CollectionUtil.randomPermutation(plugList);
       for (Iterator iter = plugList.iterator(); iter.hasNext(); ) {
@@ -1399,7 +1399,8 @@ public class PluginManager
 
     BinarySemaphore bs = new BinarySemaphore();
 
-    RegistryCallback regCallback = new RegistryCallback(urls, bs);
+    InitialRegistryCallback regCallback =
+      new InitialRegistryCallback(urls, bs);
 
     List loadAus = new ArrayList();
     // XXX shouldn't make a new RegistryPlugin each time this is run.  Does
@@ -1899,7 +1900,7 @@ public class PluginManager
    * CrawlManager callback that is responsible for handling Registry
    * AUs when they're finished with their initial crawls.
    */
-  static class RegistryCallback implements CrawlManager.Callback {
+  static class InitialRegistryCallback implements CrawlManager.Callback {
     private BinarySemaphore bs;
 
     List registryUrls;
@@ -1907,11 +1908,12 @@ public class PluginManager
     /*
      * Set the initial size of the list of registry URLs to process.
      */
-    public RegistryCallback(List registryUrls, BinarySemaphore bs) {
+    public InitialRegistryCallback(List registryUrls, BinarySemaphore bs) {
       this.registryUrls =
 	Collections.synchronizedList(new ArrayList(registryUrls));
       this.bs = bs;
-      if (log.isDebug2()) log.debug2("RegistryCallback: " + registryUrls);
+      if (log.isDebug2()) log.debug2("InitialRegistryCallback: " +
+				     registryUrls);
       if (registryUrls.isEmpty()) {
 	bs.give();
       }
@@ -1946,6 +1948,29 @@ public class PluginManager
      */
     public List getRegistryUrls() {
       return registryUrls;
+    }
+  }
+
+  /**
+   * CrawlManager callback that causes a check for new plugins.  Meant to
+   * be used for asynchronous registry crawls
+   */
+  public static class RegistryCallback implements CrawlManager.Callback {
+    private PluginManager pluginMgr;
+    private ArchivalUnit registryAu;
+
+    public RegistryCallback(PluginManager pluginMgr, ArchivalUnit au) {
+      this.pluginMgr = pluginMgr;
+      this.registryAu = au;
+    }
+
+    public void signalCrawlAttemptCompleted(boolean success, Set urlsFetched,
+					    Object cookie,
+					    Crawler.Status status) {
+      if (success) {
+	log.debug2("Registry crawl completed successfully, checking for new plugins");
+	pluginMgr.processRegistryAus(ListUtil.list(registryAu));
+      }
     }
   }
 
