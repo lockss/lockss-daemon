@@ -1,5 +1,5 @@
 /*
- * $Id: TimerQueue.java,v 1.28 2005-11-16 04:25:19 tlipkis Exp $
+ * $Id: TimerQueue.java,v 1.29 2006-04-11 08:30:03 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -135,6 +135,10 @@ public class TimerQueue {
 	  public void changed(Deadline deadline) {
 	    deadlineChanged(deadline);
 	  }};
+    }
+
+    public Deadline getDeadline() {
+      return deadline;
     }
 
     public int compareTo(Object o) {
