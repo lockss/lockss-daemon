@@ -2,6 +2,8 @@
 
 group="dev"
 
+arg_mem="-Xmx250m"
+
 while true ; do
   case "$1" in
     "-classpath" )
@@ -47,6 +49,9 @@ while true ; do
       export PATH
       echo JAVA_HOME="$JAVA_HOME"
       shift; continue;;
+    "-Xmx" )
+      arg_mem="$1"
+      shift; continue;;
     -* )
       args="$args $1"
       shift; continue;;
@@ -69,10 +74,9 @@ cp ${PROJECT_DIR}/lib/lockss-plugins.jar lib
 CLASSPATH=lib/lockss.jar:lib/lockss-test.jar:lib/lockss-plugins.jar:`cat ${PROJECT_DIR}/test/test-classpath`
 export CLASSPATH
 #echo CLASSPATH=$CLASSPATH
-JVM_ARGS="-Xmx120m -Dsun.net.inetaddr.ttl=3600"
 
 echo running at `date`
-java $args org.lockss.app.LockssDaemon -g $group ${PROP_URL_LIST} >>test.out 2>&1 &
+java $args $arg_mem -Dsun.net.inetaddr.ttl=3600 org.lockss.app.LockssDaemon -g $group ${PROP_URL_LIST} >>test.out 2>&1 &
 echo $! >dpid
 wait `cat dpid`
 echo stopped with status $? at `date`
