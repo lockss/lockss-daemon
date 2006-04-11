@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManager.java,v 1.26 2006-02-23 06:43:37 tlipkis Exp $
+ * $Id: CrawlManager.java,v 1.27 2006-04-11 08:33:33 tlipkis Exp $
  */
 
 /*
@@ -72,6 +72,9 @@ public interface CrawlManager {
                                    Object cookie, ActivityRegulator.Lock lock);
 
 
+  /** Enable the periodic crawl starter */
+  public void enableCrawlStarter();
+
   public interface Callback {
     /**
      * Called when the crawl is completed
@@ -86,29 +89,11 @@ public interface CrawlManager {
   }
 
   public interface StatusSource {
-//     /**
-//      * return a collection of ArchivalUnits that have crawl history (either
-//      * active or completed crawls)
-//      * @return collection of AUs that have crawl history (either active or
-//      * completed crawls)
-//      */
-//     public Collection getActiveAus();
 
     /**
-     * Return a list of all the Crawler.Status objects for existing crawls
+     * Return the CrawlManager's status object
      */
-    public List getCrawlStatusList();
-
-    /**
-     * return a <code>Collection</code> of {@link CrawlManagerStatus}
-     * objects for any repair crawls for <code>au</code>
-     *
-     * @param auid id of ArchivalUnit to get {@link CrawlManagerStatus} objects
-     * for any repair crawls for
-     * @return <code>Collection</code> of {@link CrawlManagerStatus}
-     * objects for <code>au</code>
-     */
-//     public Collection getCrawlStatus(String auid);
+    public CrawlManagerStatus getStatus();
 
     /** Return the dameon instance */
     public LockssDaemon getDaemon();

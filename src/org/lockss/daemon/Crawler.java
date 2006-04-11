@@ -1,5 +1,5 @@
 /*
- * $Id: Crawler.java,v 1.36 2006-03-02 06:59:19 tlipkis Exp $
+ * $Id: Crawler.java,v 1.37 2006-04-11 08:33:33 tlipkis Exp $
  */
 
 /*
@@ -56,6 +56,7 @@ public interface Crawler {
   public static final int BACKGROUND = 2;
   public static final int OAI = 3;
 
+  public static final String STATUS_QUEUED = "Pending";
   public static final String STATUS_INCOMPLETE = "Active";
   public static final String STATUS_SUCCESSFUL = "Successful";
   public static final String STATUS_ERROR = "Error";
@@ -266,12 +267,18 @@ public interface Crawler {
       return startUrls;
     }
 
-    private boolean isCrawlActive() {
-      return getCrawlStatus() == Crawler.STATUS_INCOMPLETE;
+    public boolean isCrawlWaiting() {
+      return (startTime == -1);
+    }
+
+    public boolean isCrawlActive() {
+      return (startTime != -1) && (endTime == -1);
     }
 
     public String getCrawlStatus() {
-      if (endTime == -1) {
+      if (startTime == -1) {
+	return Crawler.STATUS_QUEUED;
+      } else if (endTime == -1) {
 	return Crawler.STATUS_INCOMPLETE;
       } else if (crawlError != null) {
 	return crawlError;
@@ -301,7 +308,8 @@ public interface Crawler {
   }
 
   /**
-   * Encapsulation for the methods that the PermissionMap needs from a crawler
+   * Encapsulation for the methods that the PermissionMap needs from a
+   * crawler
    *
    * @author troberts
    *

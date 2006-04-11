@@ -1,10 +1,10 @@
 /*
- * $Id: MockCrawlManager.java,v 1.19 2006-02-23 06:43:37 tlipkis Exp $
+ * $Id: MockCrawlManager.java,v 1.20 2006-04-11 08:33:33 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -91,21 +91,11 @@ public class MockCrawlManager implements CrawlManager, LockssManager {
     scheduleNewContentCrawl(au, cb, cookie);
   }
 
-  public void setShouldCrawlNewContent(boolean shouldCrawlNewContent) {
-    this.shouldCrawlNewContent = shouldCrawlNewContent;
+  public void enableCrawlStarter() {
   }
 
-  /**
-   * Currently returns true iff last crawl time less than 0.
-   * @param au the ArchivalUnit
-   * @param ns the NodeState
-   * @return true if last crawl time < 0.
-   */
-  public boolean shouldRecrawl(ArchivalUnit au, NodeState ns) {
-    if (ns.getCrawlState().getStartTime() < 0) {
-      return true;
-    }
-    return false;
+  public void setShouldCrawlNewContent(boolean shouldCrawlNewContent) {
+    this.shouldCrawlNewContent = shouldCrawlNewContent;
   }
 
   public String getUrlStatus(String url) {

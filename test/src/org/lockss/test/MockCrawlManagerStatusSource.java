@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawlManagerStatusSource.java,v 1.5 2005-01-11 01:55:15 troberts Exp $
+ * $Id: MockCrawlManagerStatusSource.java,v 1.6 2006-04-11 08:33:33 tlipkis Exp $
  */
 
 /*
@@ -62,8 +62,8 @@ public class MockCrawlManagerStatusSource
 //     map.put(auid, crawlStatus);
 //   }
 
-  public List getCrawlStatusList() {
-    return crawlStatusList;
+  public CrawlManagerStatus getStatus() {
+    return new MyCrawlManagerStatus(crawlStatusList);
   }
 
   public void setCrawlStatusList(List crawlStatusList) {
@@ -72,5 +72,16 @@ public class MockCrawlManagerStatusSource
 
   public LockssDaemon getDaemon() {
     return daemon;
+  }
+
+  static class MyCrawlManagerStatus extends CrawlManagerStatus {
+    List clist;
+    MyCrawlManagerStatus(List clist) {
+      super(2);
+      this.clist = clist;
+    }
+    public List getCrawlStatusList() {
+      return clist;
+    }
   }
 }

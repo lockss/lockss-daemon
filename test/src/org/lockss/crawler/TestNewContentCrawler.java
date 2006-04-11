@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.45 2005-11-16 00:06:18 troberts Exp $
+ * $Id: TestNewContentCrawler.java,v 1.46 2006-04-11 08:33:33 tlipkis Exp $
  */
 
 /*
@@ -532,7 +532,13 @@ public class TestNewContentCrawler extends LockssTestCase {
     assertEquals(4, crawlStatus.getNumParsed());
   }
 
+  public void testGetStatusNotStarted() {
+    assertEquals(Crawler.STATUS_QUEUED,
+		 crawler.getStatus().getCrawlStatus());
+  }
+
   public void testGetStatusIncomplete() {
+    crawler.getStatus().signalCrawlStarted();
     assertEquals(Crawler.STATUS_INCOMPLETE,
 		 crawler.getStatus().getCrawlStatus());
   }

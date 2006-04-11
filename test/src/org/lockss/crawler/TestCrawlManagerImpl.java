@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.58 2006-02-23 06:43:37 tlipkis Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.59 2006-04-11 08:33:33 tlipkis Exp $
  */
 
 /*
@@ -34,7 +34,7 @@ package org.lockss.crawler;
 
 import java.io.*;
 import java.util.*;
-import junit.framework.TestCase;
+import junit.framework.Test;
 import org.lockss.util.*;
 import org.lockss.test.*;
 import org.lockss.state.*;
@@ -46,21 +46,17 @@ import org.lockss.daemon.*;
  */
 public class TestCrawlManagerImpl extends LockssTestCase {
   public static final String GENERIC_URL = "http://www.example.com/index.html";
-  private TestableCrawlManagerImpl crawlManager = null;
-  private MockArchivalUnit mau = null;
-  private MockLockssDaemon theDaemon;
-  private MockNodeManager nodeManager;
-  private MockActivityRegulator activityRegulator;
-  private MockCrawler crawler;
-  private CachedUrlSet cus;
-  private CrawlManager.StatusSource statusSource;
-  private PluginManager pluginMgr;
-  private MockAuState maus;
-  private Plugin plugin;
-
-  public TestCrawlManagerImpl(String msg) {
-    super(msg);
-  }
+  protected TestableCrawlManagerImpl crawlManager = null;
+  protected MockArchivalUnit mau = null;
+  protected MockLockssDaemon theDaemon;
+  protected MockNodeManager nodeManager;
+  protected MockActivityRegulator activityRegulator;
+  protected MockCrawler crawler;
+  protected CachedUrlSet cus;
+  protected CrawlManager.StatusSource statusSource;
+  protected PluginManager pluginMgr;
+  protected MockAuState maus;
+  protected Plugin plugin;
 
   public void setUp() throws Exception {
     super.setUp();
@@ -86,7 +82,6 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     theDaemon.setLockssRepository(new MockLockssRepository(), mau);
 
     crawlManager.initService(theDaemon);
-    crawlManager.startService();
 
     cus = mau.makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(GENERIC_URL));
     activityRegulator.setStartCusActivity(cus, true);
@@ -110,474 +105,658 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       StringUtil.timeIntervalToString(time);
   }
 
-  public void testNullAuForIsCrawlingAu() {
-    try {
-      TestCrawlCB cb = new TestCrawlCB(new SimpleBinarySemaphore());
-      crawlManager.startNewContentCrawl(null, cb, "blah", null);
-      fail("Didn't throw an IllegalArgumentException on a null AU");
-    } catch (IllegalArgumentException iae) {
-    }
-  }
-
-  public void testShouldRecrawlReturnsFalse() {
-    //for now shouldRecrawl() should always return false
-    assertFalse(crawlManager.shouldRecrawl(mau, null));
-  }
-
-
-  private void waitForCrawlToFinish(SimpleBinarySemaphore sem) {
+  protected void waitForCrawlToFinish(SimpleBinarySemaphore sem) {
     if (!sem.take(TIMEOUT_SHOULDNT)) {
       fail(didntMsg("finish", TIMEOUT_SHOULDNT));
     }
   }
 
-//   public void testNewCrawlDeadlineIsMax() {
-//     SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
+  public static class TestsWithAutoStart extends TestCrawlManagerImpl {
+    public void setUp() throws Exception {
+      super.setUp();
+      crawlManager.startService();
+    }
 
-//     crawlManager.startNewContentCrawl(mau, new TestCrawlCB(sem), null, null);
+    public void testNullAuForIsCrawlingAu() {
+      try {
+	TestCrawlCB cb = new TestCrawlCB(new SimpleBinarySemaphore());
+	crawlManager.startNewContentCrawl(null, cb, "blah", null);
+	fail("Didn't throw an IllegalArgumentException on a null AU");
+      } catch (IllegalArgumentException iae) {
+      }
+    }
 
-//     waitForCrawlToFinish(sem);
-//     assertEquals(Deadline.MAX, crawler.getDeadline());
-//   }
+    //   public void testNewCrawlDeadlineIsMax() {
+    //     SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
 
-  public void testStoppingCrawlAbortsNewContentCrawl() throws Exception {
-    SimpleBinarySemaphore finishedSem = new SimpleBinarySemaphore();
-    //start the crawler, but use a crawler that will hang
+    //     crawlManager.startNewContentCrawl(mau, new TestCrawlCB(sem), null, null);
 
-    TestCrawlCB cb = new TestCrawlCB(finishedSem);
-    SimpleBinarySemaphore sem1 = new SimpleBinarySemaphore();
-    SimpleBinarySemaphore sem2 = new SimpleBinarySemaphore();
-    //gives sem1 when doCrawl is entered, then takes sem2
-    MockCrawler crawler = new HangingCrawler(sem1, sem2);
-    crawlManager.setTestCrawler(crawler);
+    //     waitForCrawlToFinish(sem);
+    //     assertEquals(Deadline.MAX, crawler.getDeadline());
+    //   }
 
-    crawlManager.startNewContentCrawl(mau, cb, null, null);
-    assertTrue(didntMsg("start", TIMEOUT_SHOULDNT),
-	       sem1.take(TIMEOUT_SHOULDNT));
-    //we know that doCrawl started
+    public void testStoppingCrawlAbortsNewContentCrawl() throws Exception {
+      SimpleBinarySemaphore finishedSem = new SimpleBinarySemaphore();
+      //start the crawler, but use a crawler that will hang
 
-    // stopping AU should run AuEventHandler, which should cancel crawl
-    pluginMgr.stopAu(mau);
+      TestCrawlCB cb = new TestCrawlCB(finishedSem);
+      SimpleBinarySemaphore sem1 = new SimpleBinarySemaphore();
+      SimpleBinarySemaphore sem2 = new SimpleBinarySemaphore();
+      //gives sem1 when doCrawl is entered, then takes sem2
+      MockCrawler crawler =
+	new HangingCrawler("testStoppingCrawlAbortsNewContentCrawl",
+			   sem1, sem2);
+      crawlManager.setTestCrawler(crawler);
 
-    assertTrue(crawler.wasAborted());
-  }
+      assertFalse(sem1.take(0));
+      crawlManager.startNewContentCrawl(mau, cb, null, null);
+      assertTrue(didntMsg("start", TIMEOUT_SHOULDNT),
+		 sem1.take(TIMEOUT_SHOULDNT));
+      //we know that doCrawl started
 
-  public void testStoppingCrawlDoesntAbortCompletedCrawl() {
-    SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
+      // stopping AU should run AuEventHandler, which should cancel crawl
+      pluginMgr.stopAu(mau);
 
-    crawlManager.startNewContentCrawl(mau, new TestCrawlCB(sem), null, null);
+      assertTrue(crawler.wasAborted());
+    }
 
-    waitForCrawlToFinish(sem);
-    assertTrue("doCrawl() not called", crawler.doCrawlCalled());
+    public void testStoppingCrawlDoesntAbortCompletedCrawl() {
+      SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
 
-    crawlManager.cancelAuCrawls(mau);
+      crawlManager.startNewContentCrawl(mau, new TestCrawlCB(sem), null, null);
 
-    assertFalse(crawler.wasAborted());
-  }
+      waitForCrawlToFinish(sem);
+      assertTrue("doCrawl() not called", crawler.doCrawlCalled());
 
-  public void testStoppingCrawlAbortsRepairCrawl() {
-    String url1 = "http://www.example.com/index1.html";
-    String url2 = "http://www.example.com/index2.html";
-    List urls = ListUtil.list(url1, url2);
+      crawlManager.cancelAuCrawls(mau);
 
-    SimpleBinarySemaphore finishedSem = new SimpleBinarySemaphore();
-    //start the crawler, but use a crawler that will hang
+      assertFalse(crawler.wasAborted());
+    }
 
-    TestCrawlCB cb = new TestCrawlCB(finishedSem);
-    SimpleBinarySemaphore sem1 = new SimpleBinarySemaphore();
-    SimpleBinarySemaphore sem2 = new SimpleBinarySemaphore();
-    //gives sem1 when doCrawl is entered, then takes sem2
-    MockCrawler crawler = new HangingCrawler(sem1, sem2);
-    crawlManager.setTestCrawler(crawler);
+    public void testStoppingCrawlAbortsRepairCrawl() {
+      String url1 = "http://www.example.com/index1.html";
+      String url2 = "http://www.example.com/index2.html";
+      List urls = ListUtil.list(url1, url2);
 
-    crawlManager.startRepair(mau, urls, cb, null, null);
-    assertTrue(didntMsg("start", TIMEOUT_SHOULDNT),
-	       sem1.take(TIMEOUT_SHOULDNT));
-    //we know that doCrawl started
+      SimpleBinarySemaphore finishedSem = new SimpleBinarySemaphore();
+      //start the crawler, but use a crawler that will hang
 
-    crawlManager.cancelAuCrawls(mau);
+      TestCrawlCB cb = new TestCrawlCB(finishedSem);
+      SimpleBinarySemaphore sem1 = new SimpleBinarySemaphore();
+      SimpleBinarySemaphore sem2 = new SimpleBinarySemaphore();
+      //gives sem1 when doCrawl is entered, then takes sem2
+      MockCrawler crawler =
+	new HangingCrawler("testStoppingCrawlAbortsRepairCrawl",
+			   sem1, sem2);
+      crawlManager.setTestCrawler(crawler);
 
-    assertTrue(crawler.wasAborted());
-  }
+      crawlManager.startRepair(mau, urls, cb, null, null);
+      assertTrue(didntMsg("start", TIMEOUT_SHOULDNT),
+		 sem1.take(TIMEOUT_SHOULDNT));
+      //we know that doCrawl started
 
+      crawlManager.cancelAuCrawls(mau);
 
-  public void testDoesntNCCrawlWhenNotAllowed() {
-    SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
-    activityRegulator.setStartAuActivity(false);
-
-    crawlManager.startNewContentCrawl(mau, new TestCrawlCB(sem), null, null);
-
-    waitForCrawlToFinish(sem);
-    assertFalse("doCrawl() called", crawler.doCrawlCalled());
-  }
+      assertTrue(crawler.wasAborted());
+    }
 
 
-  private void setNewContentRateLimit(int events, long interval) {
-    ConfigurationUtil.
-      setFromArgs(CrawlManagerImpl.PARAM_MAX_NEW_CONTENT_CRAWLS_PER_INTERVAL,
-		  events+"",
-		  CrawlManagerImpl.PARAM_MAX_NEW_CONTENT_CRAWLS_INTERVAL,
-		  interval+"");
-  }
+    public void testDoesntNCCrawlWhenNotAllowed() {
+      SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
+      activityRegulator.setStartAuActivity(false);
 
-  private void setRepairRateLimit(int events, long interval) {
-    ConfigurationUtil.
-      setFromArgs(CrawlManagerImpl.PARAM_MAX_REPAIR_CRAWLS_PER_INTERVAL,
-		  events+"",
-		  CrawlManagerImpl.PARAM_MAX_REPAIR_CRAWLS_INTERVAL,
-		  interval+"");
-  }
+      crawlManager.startNewContentCrawl(mau, new TestCrawlCB(sem), null, null);
 
-  private void assertDoesCrawlNew() {
-    crawler.setDoCrawlCalled(false);
-    SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
-    crawlManager.startNewContentCrawl(mau, new TestCrawlCB(sem), null, null);
-    waitForCrawlToFinish(sem);
-    assertTrue("doCrawl() not called at time " + TimeBase.nowMs(),
-	       crawler.doCrawlCalled());
-  }
+      waitForCrawlToFinish(sem);
+      assertFalse("doCrawl() called", crawler.doCrawlCalled());
+    }
 
-  private void assertDoesNotCrawlNew() {
-    crawler.setDoCrawlCalled(false);
-    SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
-    crawlManager.startNewContentCrawl(mau, new TestCrawlCB(sem), null, null);
-    waitForCrawlToFinish(sem);
-    assertFalse("doCrawl() called at time " + TimeBase.nowMs(),
-		crawler.doCrawlCalled());
-  }
 
-  private void assertDoesCrawlRepair() {
-    crawler.setDoCrawlCalled(false);
-    SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
-    crawlManager.startRepair(mau, ListUtil.list(GENERIC_URL),
-			     new TestCrawlCB(sem), null, null);
-    waitForCrawlToFinish(sem);
-    assertTrue("doCrawl() not called at time " + TimeBase.nowMs(),
-	       crawler.doCrawlCalled());
-  }
+    private void setNewContentRateLimit(int events, long interval) {
+      ConfigurationUtil.
+	setFromArgs(CrawlManagerImpl.PARAM_MAX_NEW_CONTENT_RATE,
+		    events+"/"+interval);
+    }
 
-  private void assertDoesNotCrawlRepair() {
-    crawler.setDoCrawlCalled(false);
-    SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
-    crawlManager.startRepair(mau, ListUtil.list(GENERIC_URL),
-			     new TestCrawlCB(sem), null, null);
-    waitForCrawlToFinish(sem);
-    assertFalse("doCrawl() called at time " + TimeBase.nowMs(),
-		crawler.doCrawlCalled());
-  }
+    private void setRepairRateLimit(int events, long interval) {
+      ConfigurationUtil.
+	setFromArgs(CrawlManagerImpl.PARAM_MAX_REPAIR_RATE,
+		    events+"/"+interval);
+    }
 
-  public void testNewContentRateLimiter() {
-    TimeBase.setSimulated(100);
-    setNewContentRateLimit(4, 100);
-    activityRegulator.setStartAuActivity(true);
-    for (int ix = 1; ix <= 4; ix++) {
+    private void assertDoesCrawlNew() {
+      crawler.setDoCrawlCalled(false);
+      SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
+      crawlManager.startNewContentCrawl(mau, new TestCrawlCB(sem), null, null);
+      waitForCrawlToFinish(sem);
+      assertTrue("doCrawl() not called at time " + TimeBase.nowMs(),
+		 crawler.doCrawlCalled());
+    }
+
+    private void assertDoesNotCrawlNew() {
+      crawler.setDoCrawlCalled(false);
+      SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
+      crawlManager.startNewContentCrawl(mau, new TestCrawlCB(sem), null, null);
+      waitForCrawlToFinish(sem);
+      assertFalse("doCrawl() called at time " + TimeBase.nowMs(),
+		  crawler.doCrawlCalled());
+    }
+
+    private void assertDoesCrawlRepair() {
+      crawler.setDoCrawlCalled(false);
+      SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
+      crawlManager.startRepair(mau, ListUtil.list(GENERIC_URL),
+			       new TestCrawlCB(sem), null, null);
+      waitForCrawlToFinish(sem);
+      assertTrue("doCrawl() not called at time " + TimeBase.nowMs(),
+		 crawler.doCrawlCalled());
+    }
+
+    private void assertDoesNotCrawlRepair() {
+      crawler.setDoCrawlCalled(false);
+      SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
+      crawlManager.startRepair(mau, ListUtil.list(GENERIC_URL),
+			       new TestCrawlCB(sem), null, null);
+      waitForCrawlToFinish(sem);
+      assertFalse("doCrawl() called at time " + TimeBase.nowMs(),
+		  crawler.doCrawlCalled());
+    }
+
+    public void testNewContentRateLimiter() {
+      TimeBase.setSimulated(100);
+      setNewContentRateLimit(4, 100);
+      activityRegulator.setStartAuActivity(true);
+      for (int ix = 1; ix <= 4; ix++) {
+	assertDoesCrawlNew();
+	TimeBase.step(10);
+      }
+      assertDoesNotCrawlNew();
+      TimeBase.step(10);
+      assertDoesNotCrawlNew();
+      TimeBase.step(50);
       assertDoesCrawlNew();
-      TimeBase.step(10);
+      TimeBase.step(500);
+      // ensure RateLimiter changes when config does
+      setNewContentRateLimit(2, 5);
+      assertDoesCrawlNew();
+      assertDoesCrawlNew();
+      assertDoesNotCrawlNew();
+      TimeBase.step(5);
+      assertDoesCrawlNew();
     }
-    assertDoesNotCrawlNew();
-    TimeBase.step(10);
-    assertDoesNotCrawlNew();
-    TimeBase.step(50);
-    assertDoesCrawlNew();
-    TimeBase.step(500);
-    // ensure RateLimiter changes when config does
-    setNewContentRateLimit(2, 5);
-    assertDoesCrawlNew();
-    assertDoesCrawlNew();
-    assertDoesNotCrawlNew();
-    TimeBase.step(5);
-    assertDoesCrawlNew();
-  }
 
-  public void testRepairRateLimiter() {
-    TimeBase.setSimulated(100);
-    setRepairRateLimit(6, 200);
-    activityRegulator.setStartAuActivity(true);
-    for (int ix = 1; ix <= 6; ix++) {
+    public void testRepairRateLimiter() {
+      TimeBase.setSimulated(100);
+      setRepairRateLimit(6, 200);
+      activityRegulator.setStartAuActivity(true);
+      for (int ix = 1; ix <= 6; ix++) {
+	assertDoesCrawlRepair();
+	TimeBase.step(10);
+      }
+      assertDoesNotCrawlRepair();
+      TimeBase.step(10);
+      assertDoesNotCrawlRepair();
+      TimeBase.step(130);
       assertDoesCrawlRepair();
-      TimeBase.step(10);
+      TimeBase.step(500);
+      // ensure RateLimiter changes when config does
+      setRepairRateLimit(2, 5);
+      assertDoesCrawlRepair();
+      assertDoesCrawlRepair();
+      assertDoesNotCrawlRepair();
+      TimeBase.step(5);
+      assertDoesCrawlRepair();
     }
-    assertDoesNotCrawlRepair();
-    TimeBase.step(10);
-    assertDoesNotCrawlRepair();
-    TimeBase.step(130);
-    assertDoesCrawlRepair();
-    TimeBase.step(500);
-    // ensure RateLimiter changes when config does
-    setRepairRateLimit(2, 5);
-    assertDoesCrawlRepair();
-    assertDoesCrawlRepair();
-    assertDoesNotCrawlRepair();
-    TimeBase.step(5);
-    assertDoesCrawlRepair();
-  }
 
-  public void testRateLimitedNewContentCrawlDoesntGrabLocks() {
-    TimeBase.setSimulated(100);
-    setNewContentRateLimit(1, 200);
-    assertDoesCrawlNew();
-    activityRegulator.resetLastActivityLock();
-    assertDoesNotCrawlNew();
-    assertEquals(null, activityRegulator.getLastActivityLock());
-  }
-
-  public void testRateLimitedRepairCrawlDoesntGrabLocks() {
-    TimeBase.setSimulated(100);
-    setRepairRateLimit(1, 200);
-    assertDoesCrawlRepair();
-    activityRegulator.resetLastActivityLock();
-    assertDoesNotCrawlRepair();
-    assertEquals(null, activityRegulator.getLastActivityLock());
-  }
-
-  public void testBasicNewContentCrawl() {
-    SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
-
-    crawlManager.startNewContentCrawl(mau, new TestCrawlCB(sem), null, null);
-
-    waitForCrawlToFinish(sem);
-    assertTrue("doCrawl() not called", crawler.doCrawlCalled());
-  }
-
-  public void testNCCrawlFreesActivityLockWhenDone() {
-    activityRegulator.resetLastActivityLock();
-    SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
-
-    crawlManager.startNewContentCrawl(mau, new TestCrawlCB(sem), null, null);
-    assertNotNull(activityRegulator.getLastActivityLock());
-
-    waitForCrawlToFinish(sem);
-    activityRegulator.assertNewContentCrawlFinished();
-  }
-
-  public void testNCCrawlFreesActivityLockWhenError() {
-    SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
-    crawler = new ThrowingCrawler(new RuntimeException("Blah"));
-    crawlManager.setTestCrawler(crawler);
-
-    crawlManager.startNewContentCrawl(mau, new TestCrawlCB(sem), null, null);
-
-    waitForCrawlToFinish(sem);
-    activityRegulator.assertNewContentCrawlFinished();
-  }
-
-  //If the AU throws, the crawler should trap it and call the callbacks
-  public void testCallbacksCalledWhenPassedThrowingAU() {
-    SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
-    TestCrawlCB cb = new TestCrawlCB(sem);
-    ThrowingAU au = new ThrowingAU();
-    theDaemon.setActivityRegulator(activityRegulator, au);
-    crawlManager.startNewContentCrawl(au, cb, null, null);
-    assertTrue(cb.wasTriggered());
-  }
-
-  public void testRepairCrawlFreesActivityLockWhenDone() {
-    String url1 = "http://www.example.com/index1.html";
-    String url2 = "http://www.example.com/index2.html";
-    List urls = ListUtil.list(url1, url2);
-
-    SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
-    TestCrawlCB cb = new TestCrawlCB(sem);
-    CachedUrlSet cus1 =
-      mau.makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(url1));
-    CachedUrlSet cus2 =
-      mau.makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(url2));
-
-    activityRegulator.setStartCusActivity(cus1, true);
-    activityRegulator.setStartCusActivity(cus2, true);
-
-    crawlManager.startRepair(mau, urls, cb, null, null);
-
-    waitForCrawlToFinish(sem);
-    activityRegulator.assertRepairCrawlFinished(cus1);
-    activityRegulator.assertRepairCrawlFinished(cus2);
-  }
-
-
-  public void testNewContentCallbackTriggered() {
-    SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
-
-    TestCrawlCB cb = new TestCrawlCB(sem);
-    crawlManager.startNewContentCrawl(mau, cb, null, null);
-
-    waitForCrawlToFinish(sem);
-    assertTrue("Callback wasn't triggered", cb.wasTriggered());
-  }
-
-
-  public void testNewContentCrawlCallbackReturnsCookie() {
-    SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
-
-    String cookie = "cookie string";
-
-    TestCrawlCB cb = new TestCrawlCB(sem);
-    crawlManager.startNewContentCrawl(mau, cb, cookie, null);
-
-    waitForCrawlToFinish(sem);
-    assertEquals(cookie, (String)cb.getCookie());
-  }
-
-  public void testNewContentCrawlCallbackReturnsNullCookie() {
-    SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
-    String cookie = null;
-
-    TestCrawlCB cb = new TestCrawlCB(sem);
-    crawlManager.startNewContentCrawl(mau, cb, cookie, null);
-
-    waitForCrawlToFinish(sem);
-    assertEquals(cookie, (String)cb.getCookie());
-  }
-
-  public void testKicksOffNewThread() {
-    SimpleBinarySemaphore finishedSem = new SimpleBinarySemaphore();
-    //start the crawler, but use a crawler that will hang
-    //if we aren't running it in another thread we'll hang too
-
-    TestCrawlCB cb = new TestCrawlCB(finishedSem);
-    SimpleBinarySemaphore sem1 = new SimpleBinarySemaphore();
-    SimpleBinarySemaphore sem2 = new SimpleBinarySemaphore();
-    //gives sem1 when doCrawl is entered, then takes sem2
-    MockCrawler crawler = new HangingCrawler(sem1, sem2);
-    crawlManager.setTestCrawler(crawler);
-
-    crawlManager.startNewContentCrawl(mau, cb, null, null);
-    assertTrue(didntMsg("start", TIMEOUT_SHOULDNT),
-	       sem1.take(TIMEOUT_SHOULDNT));
-    //we know that doCrawl started
-
-    //if the callback was triggered, the crawl completed
-    assertFalse("Callback was triggered", cb.wasTriggered());
-    sem2.give();
-    waitForCrawlToFinish(finishedSem);
-  }
-
-  public void testScheduleRepairNullAu() {
-    try{
-      crawlManager.startRepair(null, ListUtil.list("http://www.example.com"),
-                               new TestCrawlCB(), "blah", null);
-      fail("Didn't throw IllegalArgumentException on null AU");
-    } catch (IllegalArgumentException iae) {
+    public void testRateLimitedNewContentCrawlDoesntGrabLocks() {
+      TimeBase.setSimulated(100);
+      setNewContentRateLimit(1, 200);
+      assertDoesCrawlNew();
+      activityRegulator.resetLastActivityLock();
+      assertDoesNotCrawlNew();
+      assertEquals(null, activityRegulator.getLastActivityLock());
     }
-  }
 
-  public void testScheduleRepairNullUrls() {
-    try{
-      crawlManager.startRepair(mau, (Collection)null,
-                               new TestCrawlCB(), "blah", null);
-      fail("Didn't throw IllegalArgumentException on null URL list");
-    } catch (IllegalArgumentException iae) {
+    public void testRateLimitedRepairCrawlDoesntGrabLocks() {
+      TimeBase.setSimulated(100);
+      setRepairRateLimit(1, 200);
+      assertDoesCrawlRepair();
+      activityRegulator.resetLastActivityLock();
+      assertDoesNotCrawlRepair();
+      assertEquals(null, activityRegulator.getLastActivityLock());
     }
+
+    public void testBasicNewContentCrawl() {
+      SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
+
+      crawlManager.startNewContentCrawl(mau, new TestCrawlCB(sem), null, null);
+
+      waitForCrawlToFinish(sem);
+      assertTrue("doCrawl() not called", crawler.doCrawlCalled());
+    }
+
+    public void testNCCrawlFreesActivityLockWhenDone() {
+      activityRegulator.resetLastActivityLock();
+      SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
+
+      crawlManager.startNewContentCrawl(mau, new TestCrawlCB(sem), null, null);
+      assertNotNull(activityRegulator.getLastActivityLock());
+
+      waitForCrawlToFinish(sem);
+      activityRegulator.assertNewContentCrawlFinished();
+    }
+
+    public void testNCCrawlFreesActivityLockWhenError() {
+      SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
+      crawler = new ThrowingCrawler(new RuntimeException("Blah"));
+      crawlManager.setTestCrawler(crawler);
+
+      crawlManager.startNewContentCrawl(mau, new TestCrawlCB(sem), null, null);
+
+      waitForCrawlToFinish(sem);
+      activityRegulator.assertNewContentCrawlFinished();
+    }
+
+    //If the AU throws, the crawler should trap it and call the callbacks
+    public void testCallbacksCalledWhenPassedThrowingAU() {
+      SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
+      TestCrawlCB cb = new TestCrawlCB(sem);
+      ThrowingAU au = new ThrowingAU();
+      theDaemon.setActivityRegulator(activityRegulator, au);
+      crawlManager.startNewContentCrawl(au, cb, null, null);
+      assertTrue(cb.wasTriggered());
+    }
+
+    public void testRepairCrawlFreesActivityLockWhenDone() {
+      String url1 = "http://www.example.com/index1.html";
+      String url2 = "http://www.example.com/index2.html";
+      List urls = ListUtil.list(url1, url2);
+
+      SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
+      TestCrawlCB cb = new TestCrawlCB(sem);
+      CachedUrlSet cus1 =
+	mau.makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(url1));
+      CachedUrlSet cus2 =
+	mau.makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(url2));
+
+      activityRegulator.setStartCusActivity(cus1, true);
+      activityRegulator.setStartCusActivity(cus2, true);
+
+      crawlManager.startRepair(mau, urls, cb, null, null);
+
+      waitForCrawlToFinish(sem);
+      activityRegulator.assertRepairCrawlFinished(cus1);
+      activityRegulator.assertRepairCrawlFinished(cus2);
+    }
+
+
+    public void testNewContentCallbackTriggered() {
+      SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
+
+      TestCrawlCB cb = new TestCrawlCB(sem);
+      crawlManager.startNewContentCrawl(mau, cb, null, null);
+
+      waitForCrawlToFinish(sem);
+      assertTrue("Callback wasn't triggered", cb.wasTriggered());
+    }
+
+
+    public void testNewContentCrawlCallbackReturnsCookie() {
+      SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
+
+      String cookie = "cookie string";
+
+      TestCrawlCB cb = new TestCrawlCB(sem);
+      crawlManager.startNewContentCrawl(mau, cb, cookie, null);
+
+      waitForCrawlToFinish(sem);
+      assertEquals(cookie, (String)cb.getCookie());
+    }
+
+    public void testNewContentCrawlCallbackReturnsNullCookie() {
+      SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
+      String cookie = null;
+
+      TestCrawlCB cb = new TestCrawlCB(sem);
+      crawlManager.startNewContentCrawl(mau, cb, cookie, null);
+
+      waitForCrawlToFinish(sem);
+      assertEquals(cookie, (String)cb.getCookie());
+    }
+
+    public void testKicksOffNewThread() {
+      SimpleBinarySemaphore finishedSem = new SimpleBinarySemaphore();
+      //start the crawler, but use a crawler that will hang
+      //if we aren't running it in another thread we'll hang too
+
+      TestCrawlCB cb = new TestCrawlCB(finishedSem);
+      SimpleBinarySemaphore sem1 = new SimpleBinarySemaphore();
+      SimpleBinarySemaphore sem2 = new SimpleBinarySemaphore();
+      //gives sem1 when doCrawl is entered, then takes sem2
+      MockCrawler crawler = new HangingCrawler("testKicksOffNewThread",
+					       sem1, sem2);
+      crawlManager.setTestCrawler(crawler);
+
+      crawlManager.startNewContentCrawl(mau, cb, null, null);
+      assertTrue(didntMsg("start", TIMEOUT_SHOULDNT),
+		 sem1.take(TIMEOUT_SHOULDNT));
+      //we know that doCrawl started
+
+      //if the callback was triggered, the crawl completed
+      assertFalse("Callback was triggered", cb.wasTriggered());
+      sem2.give();
+      waitForCrawlToFinish(finishedSem);
+    }
+
+    public void testScheduleRepairNullAu() {
+      try{
+	crawlManager.startRepair(null, ListUtil.list("http://www.example.com"),
+				 new TestCrawlCB(), "blah", null);
+	fail("Didn't throw IllegalArgumentException on null AU");
+      } catch (IllegalArgumentException iae) {
+      }
+    }
+
+    public void testScheduleRepairNullUrls() {
+      try{
+	crawlManager.startRepair(mau, (Collection)null,
+				 new TestCrawlCB(), "blah", null);
+	fail("Didn't throw IllegalArgumentException on null URL list");
+      } catch (IllegalArgumentException iae) {
+      }
+    }
+
+    public void testNoRepairIfNotAllowed() {
+      String url1 = "http://www.example.com/index1.html";
+      String url2 = "http://www.example.com/index2.html";
+      Set urls = SetUtil.set(url1, url2);
+
+      SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
+      TestCrawlCB cb = new TestCrawlCB(sem);
+      CachedUrlSet cus1 =
+	mau.makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(url1));
+      CachedUrlSet cus2 =
+	mau.makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(url2));
+
+      activityRegulator.setStartCusActivity(cus1, true);
+      activityRegulator.setStartCusActivity(cus2, false);
+
+      crawlManager.startRepair(mau, urls, cb, null, null);
+
+      waitForCrawlToFinish(sem);
+      assertTrue("doCrawl() not called", crawler.doCrawlCalled());
+      assertIsomorphic(SetUtil.set(url1), crawler.getStartUrls());
+    }
+
+    public void testBasicRepairCrawl() {
+      SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
+      TestCrawlCB cb = new TestCrawlCB(sem);
+
+      crawlManager.startRepair(mau, ListUtil.list(GENERIC_URL), cb, null, null);
+
+      waitForCrawlToFinish(sem);
+      assertTrue("doCrawl() not called", crawler.doCrawlCalled());
+    }
+
+    public void testRepairCallbackTriggered() {
+      SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
+      TestCrawlCB cb = new TestCrawlCB(sem);
+
+      crawlManager.startRepair(mau, ListUtil.list(GENERIC_URL), cb, null, null);
+
+      waitForCrawlToFinish(sem);
+      assertTrue("Callback wasn't triggered", cb.wasTriggered());
+    }
+
+    public void testRepairCrawlUnsuccessfulIfCantGetAllLocks() {
+      String url1 = "http://www.example.com/index1.html";
+      String url2 = "http://www.example.com/index2.html";
+      List urls = ListUtil.list(url1, url2);
+
+      SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
+      TestCrawlCB cb = new TestCrawlCB(sem);
+      CachedUrlSet cus1 =
+	mau.makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(url1));
+      CachedUrlSet cus2 =
+	mau.makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(url2));
+
+      activityRegulator.setStartCusActivity(cus1, true);
+      activityRegulator.setStartCusActivity(cus2, false);
+
+      crawlManager.startRepair(mau, urls, cb, null, null);
+
+      waitForCrawlToFinish(sem);
+      assertTrue("Callback wasn't triggered", cb.wasTriggered());
+      assertFalse("Crawl was successful even though we couldn't lock everything",
+		  cb.wasSuccessful());
+    }
+
+    public void testRepairCallbackGetsCookie() {
+      String cookie = "test cookie str";
+      SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
+      TestCrawlCB cb = new TestCrawlCB(sem);
+
+      crawlManager.startRepair(mau, ListUtil.list(GENERIC_URL), cb, cookie, null);
+
+      waitForCrawlToFinish(sem);
+      assertEquals(cookie, cb.getCookie());
+    }
+
+    public void testCompletedCrawlUpdatesLastCrawlTime() {
+      long lastCrawlTime = maus.getLastCrawlTime();
+
+      SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
+      TestCrawlCB cb = new TestCrawlCB(sem);
+      crawlManager.startNewContentCrawl(mau, cb, null, null);
+
+      waitForCrawlToFinish(sem);
+      assertNotEquals(lastCrawlTime, maus.getLastCrawlTime());
+    }
+
+    public void testUnsuccessfulCrawlDoesntUpdateLastCrawlTime() {
+      long lastCrawlTime = maus.getLastCrawlTime();
+
+      crawler.setCrawlSuccessful(false);
+
+      SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
+      TestCrawlCB cb = new TestCrawlCB(sem);
+      crawlManager.startNewContentCrawl(mau, cb, null, null);
+
+      waitForCrawlToFinish(sem);
+      assertEquals(lastCrawlTime, maus.getLastCrawlTime());
+    }
+
+    public void testCompletedCrawlUpdatesLastCrawlTimeIfFNFExceptionThrown() {
+      long lastCrawlTime = maus.getLastCrawlTime();
+
+      SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
+      TestCrawlCB cb = new TestCrawlCB(sem);
+      crawlManager.startNewContentCrawl(mau, cb, null, null);
+
+      waitForCrawlToFinish(sem);
+      assertNotEquals(lastCrawlTime, maus.getLastCrawlTime());
+    }
+
+    //StatusSource tests
+
+    public void testGetCrawlStatusListReturnsEmptyListIfNoCrawls() {
+      List list = statusSource.getStatus().getCrawlStatusList();
+      assertEquals(0, list.size());
+    }
+
+
+    public void testGetCrawlsOneRepairCrawl() {
+      SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
+      crawlManager.startRepair(mau, ListUtil.list(GENERIC_URL),
+			       new TestCrawlCB(sem), null, null);
+      List actual = statusSource.getStatus().getCrawlStatusList();
+      List expected = ListUtil.list(crawler.getStatus());
+
+      assertEquals(expected, actual);
+      waitForCrawlToFinish(sem);
+    }
+
+    public void testGetCrawlsOneNCCrawl() {
+      SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
+      crawlManager.startNewContentCrawl(mau, new TestCrawlCB(sem), null, null);
+      List actual = statusSource.getStatus().getCrawlStatusList();
+      List expected = ListUtil.list(crawler.getStatus());
+      assertEquals(expected, actual);
+      waitForCrawlToFinish(sem);
+    }
+
+    public void testGetCrawlsMulti() {
+      SimpleBinarySemaphore sem1 = new SimpleBinarySemaphore();
+      SimpleBinarySemaphore sem2 = new SimpleBinarySemaphore();
+      crawlManager.startRepair(mau, ListUtil.list(GENERIC_URL),
+			       new TestCrawlCB(sem1), null, null);
+
+      MockCrawler crawler2 = new MockCrawler();
+      crawlManager.setTestCrawler(crawler2);
+      crawlManager.startNewContentCrawl(mau, new TestCrawlCB(sem2), null, null);
+
+      List actual = statusSource.getStatus().getCrawlStatusList();
+      List expected = ListUtil.list(crawler.getStatus(), crawler2.getStatus());
+      assertEquals(expected, actual);
+      waitForCrawlToFinish(sem1);
+      waitForCrawlToFinish(sem2);
+    }
+
   }
 
-  public void testNoRepairIfNotAllowed() {
-    String url1 = "http://www.example.com/index1.html";
-    String url2 = "http://www.example.com/index2.html";
-    Set urls = SetUtil.set(url1, url2);
+  public static class TestsWithoutAutoStart extends TestCrawlManagerImpl {
 
-    SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
-    TestCrawlCB cb = new TestCrawlCB(sem);
-    CachedUrlSet cus1 =
-      mau.makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(url1));
-    CachedUrlSet cus2 =
-      mau.makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(url2));
+    public void testNoQueuePoolSize(int max) {
+      Properties p = new Properties();
+      p.put(CrawlManagerImpl.PARAM_CRAWLER_QUEUE_ENABLED,
+	    "false");
+      p.put(CrawlManagerImpl.PARAM_CRAWLER_THREAD_POOL_MAX,
+	    Integer.toString(max));
+      p.put(CrawlManagerImpl.PARAM_MAX_NEW_CONTENT_RATE, (max*2)+"/1h");
+      ConfigurationUtil.setCurrentConfigFromProps(p);
+      crawlManager.startService();
+      SimpleBinarySemaphore[] startSem = new SimpleBinarySemaphore[max];
+      SimpleBinarySemaphore[] endSem = new SimpleBinarySemaphore[max];
+      SimpleBinarySemaphore[] finishedSem = new SimpleBinarySemaphore[max];
+      TestCrawlCB[] cb = new TestCrawlCB[max];
+      for (int ix = 0; ix < max; ix++) {
+        finishedSem[ix] = new SimpleBinarySemaphore();
+        //start a crawler that hangs until we post its semaphore
+        cb[ix] = new TestCrawlCB(finishedSem[ix]);
+        startSem[ix] = new SimpleBinarySemaphore();
+        endSem[ix] = new SimpleBinarySemaphore();
+        //gives sem1 when doCrawl is entered, then takes sem2
+        MockCrawler crawler = new HangingCrawler("testNoQueuePoolSize " + ix,
+						 startSem[ix], endSem[ix]);
+        crawlManager.setTestCrawler(crawler);
 
-    activityRegulator.setStartCusActivity(cus1, true);
-    activityRegulator.setStartCusActivity(cus2, false);
+        crawlManager.startNewContentCrawl(mau, cb[ix], null, null);
+      }
+      for (int ix = 0; ix < max; ix++) {
+        assertTrue(didntMsg("start("+ix+")", TIMEOUT_SHOULDNT),
+		   startSem[ix].take(TIMEOUT_SHOULDNT));
+        //we know that doCrawl started
+      }
+      MockCrawler crawler = new HangingCrawler("testNoQueuePoolSize ix+1",
+					       new SimpleBinarySemaphore(),
+					       new SimpleBinarySemaphore());
+      crawlManager.setTestCrawler(crawler);
+      TestCrawlCB onecb = new TestCrawlCB();
+      crawlManager.startNewContentCrawl(mau, onecb, null, null);
+      assertTrue("Callback for non schedulable crawl wasn't triggered",
+		 onecb.wasTriggered());
+      assertFalse("Non schedulable crawl succeeded",
+		 onecb.wasSuccessful());
 
-    crawlManager.startRepair(mau, urls, cb, null, null);
+      for (int ix = 0; ix < max; ix++) {
+        //if the callback was triggered, the crawl completed
+	assertFalse("Callback was triggered", cb[ix].wasTriggered());
+        endSem[ix].give();
+        waitForCrawlToFinish(finishedSem[ix]);
+      }
+    }
 
-    waitForCrawlToFinish(sem);
-    assertTrue("doCrawl() not called", crawler.doCrawlCalled());
-    assertIsomorphic(SetUtil.set(url1), crawler.getStartUrls());
-  }
+    public void testNoQueueBoundedPool() {
+      testNoQueuePoolSize(5);
+    }
 
-  public void testBasicRepairCrawl() {
-    SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
-    TestCrawlCB cb = new TestCrawlCB(sem);
+    public void testQueuedPool(int qMax, int poolMax) {
+      int tot = qMax + poolMax;
+      Properties p = new Properties();
+      p.put(CrawlManagerImpl.PARAM_CRAWLER_QUEUE_ENABLED,
+	    "true");
+      p.put(CrawlManagerImpl.PARAM_CRAWLER_THREAD_POOL_MAX,
+	    Integer.toString(poolMax));
+      p.put(CrawlManagerImpl.PARAM_CRAWLER_THREAD_POOL_QUEUE_SIZE,
+	    Integer.toString(qMax));
+      p.put(CrawlManagerImpl.PARAM_MAX_NEW_CONTENT_RATE, (tot*2)+"/1h");
+      ConfigurationUtil.setCurrentConfigFromProps(p);
+      crawlManager.startService();
+      SimpleBinarySemaphore[] startSem = new SimpleBinarySemaphore[tot];
+      SimpleBinarySemaphore[] endSem = new SimpleBinarySemaphore[tot];
+      SimpleBinarySemaphore[] finishedSem = new SimpleBinarySemaphore[tot];
+      TestCrawlCB[] cb = new TestCrawlCB[tot];
+      for (int ix = 0; ix < tot; ix++) {
+        finishedSem[ix] = new SimpleBinarySemaphore();
+        //start a crawler that hangs until we post its semaphore
+        cb[ix] = new TestCrawlCB(finishedSem[ix]);
+        startSem[ix] = new SimpleBinarySemaphore();
+        endSem[ix] = new SimpleBinarySemaphore();
+        //gives sem1 when doCrawl is entered, then takes sem2
+        MockCrawler crawler = new HangingCrawler("testQueuedPool " + ix,
+						 startSem[ix], endSem[ix]);
+        crawlManager.setTestCrawler(crawler);
 
-    crawlManager.startRepair(mau, ListUtil.list(GENERIC_URL), cb, null, null);
+        crawlManager.startNewContentCrawl(mau, cb[ix], null, null);
+      }
+      for (int ix = 0; ix < tot; ix++) {
+	if (ix < poolMax) {
+	  assertTrue(didntMsg("start("+ix+")", TIMEOUT_SHOULDNT),
+		     startSem[ix].take(TIMEOUT_SHOULDNT));
+	  startSem[ix] = null;
+	} else {
+	  assertFalse("Wasn't queued "+ix, cb[ix].wasTriggered());
+	  assertFalse("Shouldn't have started " + ix, 
+		     startSem[ix].take(0));
+	}
+      }
+      MockCrawler crawler = new HangingCrawler("testNoQueuePoolSize ix+1",
+					       new SimpleBinarySemaphore(),
+					       new SimpleBinarySemaphore());
+      crawlManager.setTestCrawler(crawler);
+      TestCrawlCB onecb = new TestCrawlCB();
+      crawlManager.startNewContentCrawl(mau, onecb, null, null);
+      assertTrue("Callback for non schedulable crawl wasn't triggered",
+		 onecb.wasTriggered());
+      assertFalse("Non schedulable crawl succeeded",
+		 onecb.wasSuccessful());
 
-    waitForCrawlToFinish(sem);
-    assertTrue("doCrawl() not called", crawler.doCrawlCalled());
-  }
+      for (int ix = poolMax; ix < tot; ix++) {
+	int poke = randomActive(startSem, endSem);
+	assertFalse("Shouldnt have finished "+poke, cb[poke].wasTriggered());
+        endSem[poke].give();
+        waitForCrawlToFinish(finishedSem[poke]);
+	endSem[poke] = null;
+	assertTrue(didntMsg("start("+ix+")", TIMEOUT_SHOULDNT),
+		   startSem[ix].take(TIMEOUT_SHOULDNT));
+	startSem[ix] = null;
+      }
+    }
 
-  public void testRepairCallbackTriggered() {
-    SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
-    TestCrawlCB cb = new TestCrawlCB(sem);
+    static LockssRandom random = new LockssRandom();
 
-    crawlManager.startRepair(mau, ListUtil.list(GENERIC_URL), cb, null, null);
+    int randomActive(SimpleBinarySemaphore[] startSem,
+		     SimpleBinarySemaphore[] endSem) {
+      while (true) {
+	int x = random.nextInt(startSem.length);
+	if (startSem[x] == null && endSem[x] != null) return x;
+      }
+    }
 
-    waitForCrawlToFinish(sem);
-    assertTrue("Callback wasn't triggered", cb.wasTriggered());
-  }
+    public void testQueuedPool() {
+      testQueuedPool(10, 3);
+    }
 
-  public void testRepairCrawlUnsuccessfulIfCantGetAllLocks() {
-    String url1 = "http://www.example.com/index1.html";
-    String url2 = "http://www.example.com/index2.html";
-    List urls = ListUtil.list(url1, url2);
-
-    SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
-    TestCrawlCB cb = new TestCrawlCB(sem);
-    CachedUrlSet cus1 =
-      mau.makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(url1));
-    CachedUrlSet cus2 =
-      mau.makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(url2));
-
-    activityRegulator.setStartCusActivity(cus1, true);
-    activityRegulator.setStartCusActivity(cus2, false);
-
-    crawlManager.startRepair(mau, urls, cb, null, null);
-
-    waitForCrawlToFinish(sem);
-    assertTrue("Callback wasn't triggered", cb.wasTriggered());
-    assertFalse("Crawl was successful even though we couldn't lock everything",
-		cb.wasSuccessful());
-  }
-
-  public void testRepairCallbackGetsCookie() {
-    String cookie = "test cookie str";
-    SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
-    TestCrawlCB cb = new TestCrawlCB(sem);
-
-    crawlManager.startRepair(mau, ListUtil.list(GENERIC_URL), cb, cookie, null);
-
-    waitForCrawlToFinish(sem);
-    assertEquals(cookie, cb.getCookie());
-  }
-
-  public void testCompletedCrawlUpdatesLastCrawlTime() {
-    long lastCrawlTime = maus.getLastCrawlTime();
-
-    SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
-    TestCrawlCB cb = new TestCrawlCB(sem);
-    crawlManager.startNewContentCrawl(mau, cb, null, null);
-
-    waitForCrawlToFinish(sem);
-    assertNotEquals(lastCrawlTime, maus.getLastCrawlTime());
-  }
-
-  public void testUnsuccessfulCrawlDoesntUpdateLastCrawlTime() {
-    long lastCrawlTime = maus.getLastCrawlTime();
-
-    crawler.setCrawlSuccessful(false);
-
-    SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
-    TestCrawlCB cb = new TestCrawlCB(sem);
-    crawlManager.startNewContentCrawl(mau, cb, null, null);
-
-    waitForCrawlToFinish(sem);
-    assertEquals(lastCrawlTime, maus.getLastCrawlTime());
-  }
-
-  public void testCompletedCrawlUpdatesLastCrawlTimeIfFNFExceptionThrown() {
-    long lastCrawlTime = maus.getLastCrawlTime();
-
-    SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
-    TestCrawlCB cb = new TestCrawlCB(sem);
-    crawlManager.startNewContentCrawl(mau, cb, null, null);
-
-    waitForCrawlToFinish(sem);
-    assertNotEquals(lastCrawlTime, maus.getLastCrawlTime());
   }
 
   class MyMockActivityRegulator extends MockActivityRegulator {
@@ -630,51 +809,6 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     }
   }
 
-  //StatusSource tests
-
-  public void testGetCrawlStatusListReturnsEmptyListIfNoCrawls() {
-    List list = statusSource.getCrawlStatusList();
-    assertEquals(0, list.size());
-  }
-
-
-  public void testGetCrawlsOneRepairCrawl() {
-    SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
-    crawlManager.startRepair(mau, ListUtil.list(GENERIC_URL),
-			     new TestCrawlCB(sem), null, null);
-    List actual = statusSource.getCrawlStatusList();
-    List expected = ListUtil.list(crawler.getStatus());
-
-    assertEquals(expected, actual);
-    waitForCrawlToFinish(sem);
-  }
-
-  public void testGetCrawlsOneNCCrawl() {
-    SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
-    crawlManager.startNewContentCrawl(mau, new TestCrawlCB(sem), null, null);
-    List actual = statusSource.getCrawlStatusList();
-    List expected = ListUtil.list(crawler.getStatus());
-    assertEquals(expected, actual);
-    waitForCrawlToFinish(sem);
-  }
-
-  public void testGetCrawlsMulti() {
-    SimpleBinarySemaphore sem1 = new SimpleBinarySemaphore();
-    SimpleBinarySemaphore sem2 = new SimpleBinarySemaphore();
-    crawlManager.startRepair(mau, ListUtil.list(GENERIC_URL),
-			     new TestCrawlCB(sem1), null, null);
-
-    MockCrawler crawler2 = new MockCrawler();
-    crawlManager.setTestCrawler(crawler2);
-    crawlManager.startNewContentCrawl(mau, new TestCrawlCB(sem2), null, null);
-
-    List actual = statusSource.getCrawlStatusList();
-    List expected = ListUtil.list(crawler.getStatus(), crawler2.getStatus());
-    assertEquals(expected, actual);
-    waitForCrawlToFinish(sem1);
-    waitForCrawlToFinish(sem2);
-  }
-
   private static class TestableCrawlManagerImpl extends CrawlManagerImpl {
     private MockCrawler mockCrawler;
     protected Crawler makeNewContentCrawler(ArchivalUnit au, CrawlSpec spec) {
@@ -715,18 +849,24 @@ public class TestCrawlManagerImpl extends LockssTestCase {
   }
 
   private static class HangingCrawler extends MockCrawler {
+    String name;
     SimpleBinarySemaphore sem1;
     SimpleBinarySemaphore sem2;
-    public HangingCrawler(SimpleBinarySemaphore sem1,
+    public HangingCrawler(String name,
+			  SimpleBinarySemaphore sem1,
 			  SimpleBinarySemaphore sem2) {
+      this.name = name;
       this.sem1 = sem1;
       this.sem2 = sem2;
     }
 
     public boolean doCrawl() {
       sem1.give();
-      sem2.take();
-      return true;
+      return sem2.take();
+    }
+
+    public String toString() {
+      return "HangingCrawler " + name;
     }
   }
 
@@ -774,6 +914,10 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     public Plugin getPlugin() {
       throw new ExpectedRuntimeException("I throw");
     }
+  }
+
+  public static Test suite() {
+    return variantSuites(TestCrawlManagerImpl.class);
   }
 
   public static void main(String[] argv) {
