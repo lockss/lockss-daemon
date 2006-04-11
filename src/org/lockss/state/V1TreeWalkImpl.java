@@ -1,5 +1,5 @@
 /*
- * $Id: V1TreeWalkImpl.java,v 1.7 2005-10-20 22:57:49 troberts Exp $
+ * $Id: V1TreeWalkImpl.java,v 1.8 2006-04-11 08:29:24 tlipkis Exp $
  */
 
 /*
@@ -126,11 +126,11 @@ public class V1TreeWalkImpl implements TreeWalker {
       if (theAu.shouldCrawlForNewContent(nodeMgr.getAuState())) {
 	treeWalkAborted = true;
 	log.debug("Starting new content crawl.  Ending treewalk.");
-	RegistryCallback rc = null;
+	CrawlManager.Callback rc = null;
 	if (theAu instanceof RegistryArchivalUnit) {
 	  log.debug("AU " + theAu.getName() +
 		       " is a registry, adding callback.");
-	  rc = new RegistryCallback(theAu);
+	  rc = new PluginManager.RegistryCallback(pluginMgr, theAu);
 	}
 	crawlMgr.startNewContentCrawl(theAu, rc, null, activityLock);
       } else if (nodeMgr.repairsNeeded()) {
@@ -304,24 +304,6 @@ public class V1TreeWalkImpl implements TreeWalker {
       // null these values for next treewalk
       cachedHistory = null;
       cachedNode = null;
-    }
-  }
-
-
-  private class RegistryCallback implements CrawlManager.Callback {
-    private ArchivalUnit registryAu;
-
-    public RegistryCallback(ArchivalUnit au) {
-      this.registryAu = au;
-    }
-
-    public void signalCrawlAttemptCompleted(boolean success, Set urlsFetched,
-					    Object cookie,
-					    Crawler.Status status) {
-      if (success) {
-	log.debug2("Registry crawl completed successfully, loading new plugins (if any)...");
-	pluginMgr.processRegistryAus(ListUtil.list(registryAu));
-      }
     }
   }
 }
