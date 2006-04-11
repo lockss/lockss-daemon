@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.176 2006-03-27 08:48:53 tlipkis Exp $
+ $Id: build.xml,v 1.177 2006-04-11 08:27:34 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
@@ -80,6 +80,9 @@ Args:
   -Dmock=pack/age          Specify package for generate-null-mock,
                               generate-unsupported-mock
 </description>
+
+   <!-- User defaults -->
+  <property file="${user.home}/lockss.properties"/>
 
   <!-- Defaults -->
   <property name="loglevel" value="" />
@@ -1706,6 +1709,7 @@ Test results in ${test.results}
 	   inheritAll="false">
        <property name="ant-contrib.loaded" value="${ant-contrib.loaded}" />
        <property name="halt" value="${halt}" />
+       <property name="build.compiler" value="${build.compiler}" />
      </ant>
      <echo>Build was successful, deleting "${temp.build.dir}"</echo>
      <delete dir="${temp.build.dir}" quiet="true"/>
