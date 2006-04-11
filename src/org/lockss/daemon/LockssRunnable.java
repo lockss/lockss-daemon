@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRunnable.java,v 1.15 2006-03-18 08:45:56 tlipkis Exp $
+ * $Id: LockssRunnable.java,v 1.16 2006-04-11 08:28:39 tlipkis Exp $
  */
 
 /*
@@ -363,11 +363,27 @@ public abstract class LockssRunnable  implements LockssWatchdog, Runnable {
     }
   }
 
+  /** Interrupt the thread this runnable is running in, if any */
+  public void interruptThread() {
+    Thread th = thread;
+    if (th != null) {
+      th.interrupt();
+    }
+  }
+
   /** Invoke the subclass's lockssRun() method, then cancel any outstanding
    * thread watchdog */
   public final void run() {
     try {
       thread = Thread.currentThread();
+      if (name != null) {
+	String oldName = thread.getName();
+	if (!oldName.equals(name)) {
+	  thread.setName(name);
+	  log.threadNameChanged();
+	}
+      }
+
       lockssRun();
       String msg = getName() + " lockssRun() returned";
       if (triggerOnExit) {
