@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingHtmlParser.java,v 1.39 2006-03-28 17:41:07 troberts Exp $
+ * $Id: GoslingHtmlParser.java,v 1.40 2006-04-11 08:28:19 tlipkis Exp $
  */
 
 /*
@@ -461,11 +461,19 @@ public class GoslingHtmlParser implements ContentParser {
    */
   protected String resolveUri(URL base, String relative)
       throws MalformedURLException {
-    if(base != null && "javascript".equalsIgnoreCase(base.getProtocol())
-       ||
-       relative != null && StringUtil.startsWithIgnoreCase(relative,
-							   "javascript:")) {
+    String baseProto = null;
+    if (base != null) {
+      baseProto = base.getProtocol();
+    }
+    if ("javascript".equalsIgnoreCase(baseProto) ||
+	relative != null && StringUtil.startsWithIgnoreCase(relative,
+							    "javascript:")) {
       return resolveJavascriptUrl(base, relative);
+    }
+    if ("mailto".equalsIgnoreCase(baseProto) ||
+	relative != null && StringUtil.startsWithIgnoreCase(relative,
+							    "mailto:")) {
+      return null;
     }
     return UrlUtil.resolveUri(baseUrl, relative);
   }
@@ -473,7 +481,7 @@ public class GoslingHtmlParser implements ContentParser {
   protected String resolveJavascriptUrl(URL base, String relative)
       throws MalformedURLException {
     if (!shouldParseJavaScript) {
-      logger.debug("Configured to ignore javascript urls, so skipping");
+      logger.debug3("Configured to ignore javascript urls, so skipping");
       return null;
     }
     logger.debug("Tried to resolve javascript URI "+base+" "+relative);
