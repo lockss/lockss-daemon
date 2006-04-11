@@ -1,5 +1,5 @@
 /*
- * $Id: TestCollectionUtil.java,v 1.12 2006-04-05 22:22:34 tlipkis Exp $
+ * $Id: TestCollectionUtil.java,v 1.13 2006-04-11 08:29:47 tlipkis Exp $
  */
 
 /*
@@ -210,6 +210,9 @@ public class TestCollectionUtil extends LockssTestCase {
   public void testRandomSelection() throws Exception {
     Collection all = ListUtil.list("a", "b", "c");
     // Legal calls.
+    Collection c0 = CollectionUtil.randomSelection(all, 0);
+    assertEmpty(c0);
+    assertEquals(0, c0.size());
     Collection c1 = CollectionUtil.randomSelection(all, 1);
     assertEquals(1, c1.size());
     assertTrue(all.containsAll(c1));
@@ -231,18 +234,15 @@ public class TestCollectionUtil extends LockssTestCase {
     }
     try {
       // Too few!
-      Collection c5 = CollectionUtil.randomSelection(all, 0);
-      fail("Expected IllegalArgumentException");
-    } catch (IllegalArgumentException ex) {
-      // expected
-    }
-    try {
-      // Even more too few!
       Collection c6 = CollectionUtil.randomSelection(all, -1);
       fail("Expected IllegalArgumentException");
     } catch (IllegalArgumentException ex) {
       // expected
     }
+  }
+
+  public void testRandomPermutationEmpty() throws Exception {
+    assertEmpty(CollectionUtil.randomPermutation(Collections.EMPTY_LIST));
   }
 
   public void testRandomPermutation() throws Exception {

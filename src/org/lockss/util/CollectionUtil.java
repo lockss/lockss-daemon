@@ -1,5 +1,5 @@
 /*
- * $Id: CollectionUtil.java,v 1.13 2006-04-05 22:22:35 tlipkis Exp $
+ * $Id: CollectionUtil.java,v 1.14 2006-04-11 08:29:47 tlipkis Exp $
  */
 
 /*
@@ -149,10 +149,12 @@ public class CollectionUtil {
    */
   public static List randomSelection(Collection c, int count) {
     int choiceSize = c.size();
-    if (count <= 0 || count > choiceSize) {
-      throw new IllegalArgumentException("'count' must be greater than 0 "+
-                                         "and smaller than or equal "+
-                                         " to the size of the collection.");
+    if (count < 0 || count > choiceSize) {
+      throw new IllegalArgumentException("'count' negative "+
+                                         "or greater than collection size.");
+    }
+    if (count == 0) {
+      return Collections.EMPTY_LIST;
     }
     Object[] arr = c.toArray();
     ArrayList result = new ArrayList(count);
