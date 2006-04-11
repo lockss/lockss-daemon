@@ -1,5 +1,5 @@
 /*
- * $Id: TestLogger.java,v 1.26 2005-10-11 05:52:45 tlipkis Exp $
+ * $Id: TestLogger.java,v 1.27 2006-04-11 08:30:55 tlipkis Exp $
  */
 
 /*
@@ -260,7 +260,8 @@ public class TestLogger extends LockssTestCase {
       System.err.println((String)iter.next());
     }
     assertIsomorphic(ListUtil.list("Warning: 1-test-log1: msg2 warning",
-				   "Error: 1-test-log1: msg3 error"),
+				   "Error: 1-test-log1: msg3 error",
+				   "Info: 1-Config: Config updated, 3 keys from foo"),
 		     target.getMessages());
   }
 

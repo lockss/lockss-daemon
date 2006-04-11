@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.82 2006-04-05 22:08:53 tlipkis Exp $
+ * $Id: LockssTestCase.java,v 1.83 2006-04-11 08:30:56 tlipkis Exp $
  */
 
 /*
@@ -116,7 +116,7 @@ public class LockssTestCase extends TestCase {
 
   /** Create a fresh config manager, MockLockssDaemon */
   protected void setUp() throws Exception {
-//     Logger.resetLogs();
+    Logger.resetLogs();
     mockDaemon = new MockLockssDaemon();
     super.setUp();
     disableThreadWatchdog();
