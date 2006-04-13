@@ -1,5 +1,5 @@
 /*
- * $Id: TestOaiCrawler.java,v 1.11 2006-02-14 05:22:46 tlipkis Exp $
+ * $Id: TestOaiCrawler.java,v 1.11.4.1 2006-04-13 23:20:49 troberts Exp $
  */
 
 /*
@@ -218,6 +218,36 @@ public class TestOaiCrawler extends LockssTestCase {
     assertEquals(SetUtil.set(), cus.getForceCachedUrls());
   }
 
+  /**
+   * OaiHandler throws exceptions, verify that this causes the crawl to fail
+   *
+   */
+  public void testExceptionsInOaiHandler() {
+    //set the urls to be crawl
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    String url1 = "http://www.example.com/blah.html";
+    mau.addUrl(url1, true, true); //exists, and should be cached
+    crawlRule.addUrlToCrawl(url1);
+
+    MockOaiHandler oaiHandler = 
+      new MyMockOaiHandler(new ExpectedRuntimeException());
+//    oaiHandler.setUpdatedUrls(SetUtil.set(url1));
+
+    //set the crawler
+    MyOaiCrawler crawler = new MyOaiCrawler(mau, spec, aus);
+    crawler.setOaiHandler(oaiHandler);
+//    crawler.daemonPermissionCheckers =
+//      ListUtil.list(new MyMockPermissionChecker(1));
+
+    //do the crawl
+    assertFalse(crawler.doCrawl());
+    //verify the crawl result
+//    Set expected = SetUtil.set(url1, permissionUrl);
+//    assertEquals(expected, cus.getCachedUrls());
+//    assertEquals(SetUtil.set(), cus.getForceCachedUrls());
+  }
+
+  
 
   /**
    * Testing the simple accessor methods
@@ -276,6 +306,17 @@ public class TestOaiCrawler extends LockssTestCase {
     }
   }
 
+  private class MyMockOaiHandler extends MockOaiHandler {
+    RuntimeException ex;
+    public MyMockOaiHandler(RuntimeException ex) {
+      this.ex = ex;
+    }
+    
+    public void processResponse(int maxRetries) {
+      throw ex;
+    }
+  }
+  
   public static void main(String[] argv) {
     String[] testCaseList = {TestOaiCrawler.class.getName()};
     junit.textui.TestRunner.main(testCaseList);

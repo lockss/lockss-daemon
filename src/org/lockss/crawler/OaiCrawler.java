@@ -1,5 +1,5 @@
 /*
- * $Id: OaiCrawler.java,v 1.15 2006-01-13 23:21:06 thib_gc Exp $
+ * $Id: OaiCrawler.java,v 1.15.4.1 2006-04-13 23:20:49 troberts Exp $
  */
 
 /*
@@ -119,9 +119,15 @@ public class OaiCrawler extends FollowLinkCrawler {
     OaiRequestData oaiRequestData = spec.getOaiRequestData();
 
     OaiHandler oaiHandler = getOaiHandler();
-    oaiHandler.issueRequest(oaiRequestData, getFromTime(), getUntilTime());
-    oaiHandler.processResponse(maxOaiRetries);
-
+    try {
+      oaiHandler.issueRequest(oaiRequestData, getFromTime(), getUntilTime());
+      oaiHandler.processResponse(maxOaiRetries);
+    } catch (RuntimeException ex) {
+      logger.error("Error while trying to process the OAI request", ex);
+      crawlStatus.setCrawlError("Error in processing Oai Request");
+      return extractedUrls;
+    }
+    
     List errList = oaiHandler.getErrors();
     if ( !errList.isEmpty() ){
       crawlStatus.setCrawlError("Error in processing Oai Records");
