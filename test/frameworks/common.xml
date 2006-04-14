@@ -2381,26 +2381,17 @@
 	</property>
       </property>
 
-<!--
-      <property name="humboldt2006">
-	<property name="title" value="Humboldt-Universit&#x00e4;t zu Berlin ETD Collection 2006" />
-	<property name="journalTitle" value="Humboldt-Universit&#x00e4;t zu Berlin ETD Collection" />
-	<property name="plugin" value="org.lockss.plugin.etd.humboldtplugin.HumboldtPlugin" />
+
+      <!-- PUC Rio ETD Collection -->
+      <property name="pucrio_etd1">
+	<property name="title" value="LAMBDA - DEE - PUC-Rio ETD Collection" />
+	<property name="journalTitle" value="LAMBDA - DEE - PUC-Rio ETD Collection" />
+	<property name="plugin" value="org.lockss.plugin.etd.pucrio.PUCRioPlugin" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
-	  <property name="value" value="http://edoc.hu-berlin.de/" />
-	</property>
-	<property name="param.2">
-	  <property name="key" value="year" />
-	  <property name="value" value="2006" />
-	</property>
-	<property name="param.3">
-	  <property name="key" value="oai_request_url" />
-	  <property name="value" value="http://edoc.hu-berlin.de/OAI-2.0" />
+	  <property name="value" value="http://www.maxwell.lambda.ele.puc-rio.br/" />
 	</property>
       </property>
--->
-
     </property>
       <!-- End title database -->
 
