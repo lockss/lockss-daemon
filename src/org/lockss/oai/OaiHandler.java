@@ -1,5 +1,5 @@
 /*
- * $Id: OaiHandler.java,v 1.11 2005-10-11 05:45:13 tlipkis Exp $
+ * $Id: OaiHandler.java,v 1.11.12.1 2006-04-14 15:16:56 troberts Exp $
  */
 
 /*
@@ -199,8 +199,10 @@ public class OaiHandler {
 
 
       //see what is inside the lisRecord
-      logger.debug3("The content of listRecord : \n" + listRecords.toString() );
-
+//      logger.debug3("The content of listRecord : \n" + listRecords.toString() );
+      //toString on ListRecords is currently not thread safe, so I commented this out
+      //TSR 4/13/06
+      
       //collect and store all the oai records
 //       collectOaiRecords(listRecords); //XXX info collected is not being used now,
                                       //can turn off to increase performance
