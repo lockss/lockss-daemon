@@ -1,0 +1,71 @@
+<map>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>orgs.lockss.plugin.etd.uctetdplugin.UCTETDPlugin</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;University of Cape Town ETD Collection&quot;</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>University of Cape Town ETD Collection</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;^%slockss/manifest.html&quot;, base_url</string>
+      <string>1,&quot;^%sview/type/thesis\.html&quot;, base_url</string>
+      <string>1,&quot;^%sarchive/00000.*\.pdf&quot;, base_url</string>
+      <string>1,&quot;^%sarchive/00000[0-9]+/&quot;, base_url</string>
+      <string>1,&quot;^%s$&quot;, base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%slockss/manifest.html&quot;, base_url</string>
+  </entry>
+  <entry>
+    <string>plugin_crawl_type</string>
+    <string>OAI</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>oai_request_url</key>
+        <displayName>OAI Request URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/&lt;OAI-application&gt;</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>oai_spec</key>
+        <displayName>OAI Journal Spec</displayName>
+        <description>Spec for journal in the OAI crawl</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_manifest</string>
+    <list>
+      <string>&quot;%slockss/manifest.html&quot;, base_url</string>
+    </list>
+  </entry>
+</map>

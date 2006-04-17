@@ -128,6 +128,8 @@
 	<value>org.lockss.plugin.huffpoblog.HuffPoBlogPlugin</value>
 	<value>de.huberlin.edoc.plugin.cmsjournal.CMSJournalPlugin</value>
 	<value>org.lockss.plugin.etd.humboldtplugin.HumboldtPlugin</value>
+	<value>org.lockss.plugin.etd.uctetdplugin.UCTETDPlugin</value>
+	<value>org.lockss.plugin.etd.pucrio.PUCRioPlugin</value>
 	<value>gov.gpo.access.permanent.plugin.amberwaves.Amber_WavesPlugin</value>
 	<value>gov.gpo.access.permanent.plugin.fbilawenforcementbulletin.FBI_Law_Enforcement_BulletinPlugin</value>
       </list>
@@ -2378,6 +2380,25 @@
 	<property name="param.3">
 	  <property name="key" value="oai_request_url" />
 	  <property name="value" value="http://edoc.hu-berlin.de/OAI-2.0" />
+	</property>
+      </property>
+
+      <!-- University of Cape Town ETD Collection -->
+      <property name="uctetd1">
+	<property name="title" value="University of Cape Town ETD Collection" />
+	<property name="journalTitle" value="University of Cape Town ETD Collection" />
+	<property name="plugin" value="org.lockss.plugin.etd.uctetdplugin.UCTETDPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://pubs.cs.uct.ac.za/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="oai_spec" />
+	  <property name="value" value="747970653D746865736973" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="oai_request_url" />
+	  <property name="value" value="http://pubs.cs.uct.ac.za/perl/oai2" />
 	</property>
       </property>
 
