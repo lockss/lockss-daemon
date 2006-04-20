@@ -1,5 +1,5 @@
 /*
- * $Id: ObjectSerializer.java,v 1.19 2006-04-07 22:13:59 thib_gc Exp $
+ * $Id: ObjectSerializer.java,v 1.19.2.1 2006-04-20 19:33:25 thib_gc Exp $
  */
 
 /*
@@ -415,33 +415,23 @@ public abstract class ObjectSerializer {
       throws FileNotFoundException, IOException, SerializationException {
     File tempFile = File.createTempFile("tmp", ".xml", outputFile.getParentFile());
     FileOutputStream outStream = new FileOutputStream(tempFile);
-    boolean success = false;
 
-    try {
-      serialize(outStream, obj);
-      success = true;
+    serialize(outStream, obj);
+    outStream.close();
+    if (!tempFile.renameTo(outputFile)) {
+      // File renaming failed
+      StringBuffer buffer = new StringBuffer();
+      buffer.append("Could not rename from ");
+      buffer.append(tempFile.getAbsolutePath());
+      buffer.append(" to ");
+      buffer.append(outputFile.getAbsolutePath());
+      String str = buffer.toString();
+      logger.error(str);
+      maybeDelTempFile(tempFile);
+      throw new IOException(str);
     }
-    finally {
-      IOUtil.safeClose(outStream);
-      if (success) {
-        /* Serialization succeeded */
-        success = tempFile.renameTo(outputFile);
-        if (!success) {
-          // File renaming failed
-          StringBuffer buffer = new StringBuffer();
-          buffer.append("Could not rename from ");
-          buffer.append(tempFile.getAbsolutePath());
-          buffer.append(" to ");
-          buffer.append(outputFile.getAbsolutePath());
-          String str = buffer.toString();
-          logger.error(str);
-	  maybeDelTempFile(tempFile);
-          throw new IOException(str);
-        }
-      } else {
-	maybeDelTempFile(tempFile);
-      }
-    }
+    maybeDelTempFile(tempFile);
+
   }
 
   /**
@@ -463,9 +453,8 @@ public abstract class ObjectSerializer {
    */
   protected void serialize(OutputStream outputStream, Object obj)
       throws IOException, SerializationException {
-    BufferedWriter writer =
-      new BufferedWriter(
-          new OutputStreamWriter(outputStream, Constants.DEFAULT_ENCODING));
+    BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(outputStream,
+                                                                      Constants.DEFAULT_ENCODING));
     serialize(writer, obj);
   }
 
@@ -563,7 +552,7 @@ public abstract class ObjectSerializer {
     String str = buffer.toString();
     logger.debug(str, exc);
 
-    // Throw RuntimeException if cause is InterruptedIOException
+    // Throw InterruptedIOException if cause is InterruptedIOException
     throwIfInterrupted(exc);
     // Otherwise, return new SerializationException
     return new SerializationException(str, exc);
@@ -591,9 +580,10 @@ public abstract class ObjectSerializer {
 
   /**
    * <p>Throws a {@link RuntimeException} if the argument is or has
-   * a nested InterruptedIOException.</p>
+   * a nested {@link InterruptedIOException}.</p>
    * @param exc The exception thrown.
-   * @throws NullPointerException if <code>obj</code> is <code>null</code>.
+   * @throws InterruptedIOException if <code>exc</code> is or has a
+   * nested {@link InterruptedIOException}.
    */
   protected static void throwIfInterrupted(Exception exc)
       throws InterruptedIOException {
@@ -601,7 +591,7 @@ public abstract class ObjectSerializer {
       if (cause instanceof InterruptedIOException) {
         logger.debug2("Exception contains InterruptedIOException", exc);
         logger.debug2("Nested InterruptedException", cause);
-        throw new InterruptedIOException();
+        throw new InterruptedIOException(exc.toString());
       }
     }
   }
