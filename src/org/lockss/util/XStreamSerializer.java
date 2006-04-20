@@ -1,5 +1,5 @@
 /*
- * $Id: XStreamSerializer.java,v 1.16 2006-04-07 00:16:14 thib_gc Exp $
+ * $Id: XStreamSerializer.java,v 1.17 2006-04-20 09:02:35 thib_gc Exp $
  */
 
 /*
@@ -559,6 +559,7 @@ public class XStreamSerializer extends ObjectSerializer {
       throw new NotSerializableException(lnse.getMessage());
     }
     catch (StreamException se) {
+      logger.debug("StreamException", se);
       throw new IOException(se.getMessage());
     }
     catch (CannotResolveClassException crce) {
