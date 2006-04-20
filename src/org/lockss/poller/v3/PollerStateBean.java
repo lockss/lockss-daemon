@@ -1,5 +1,5 @@
 /*
- * $Id: PollerStateBean.java,v 1.10 2006-04-10 05:31:01 smorabito Exp $
+ * $Id: PollerStateBean.java,v 1.10.2.1 2006-04-20 07:13:49 smorabito Exp $
  */
 
 /*
@@ -316,7 +316,7 @@ public class PollerStateBean implements LockssSerializable {
   /**
    * Simple object to hold tally status.
    */
-  public static class TallyStatus {
+  public static class TallyStatus implements LockssSerializable {
     public Set agreedUrls;
     public Set disagreedUrls;
     public Set tooCloseUrls;

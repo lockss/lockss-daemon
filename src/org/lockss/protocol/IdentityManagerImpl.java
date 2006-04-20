@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManagerImpl.java,v 1.14 2006-01-12 03:13:30 smorabito Exp $
+ * $Id: IdentityManagerImpl.java,v 1.14.6.1 2006-04-20 07:13:49 smorabito Exp $
  */
 
 /*
@@ -352,7 +352,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
     PeerIdentity pid;
     synchronized (thePeerIdentities) {
       pid = (PeerIdentity)thePeerIdentities.get(key);
-      if (pid == null) {
+      if (pid == null || !pid.isLocalIdentity()) {
         pid = new PeerIdentity.LocalIdentity(key);
         thePeerIdentities.put(key, pid);
       }

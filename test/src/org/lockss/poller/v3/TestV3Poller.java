@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.9 2006-04-10 05:31:01 smorabito Exp $
+ * $Id: TestV3Poller.java,v 1.9.2.1 2006-04-20 07:13:48 smorabito Exp $
  */
 
 /*
@@ -229,6 +229,16 @@ public class TestV3Poller extends LockssTestCase {
     theDaemon.getSystemMetrics().stopService();
     TimeBase.setReal();
     super.tearDown();
+  }
+
+  /* Test for a specific bug fix. */
+  public void testNullNomineesShouldntThrow() throws Exception {
+    V3Poller v3Poller = makeInittedV3Poller("foo");
+    try {
+      v3Poller.nominatePeers(voters[2], null);
+    } catch (NullPointerException ex) {
+      fail("Should not have caused NullPointerException");
+    }
   }
 
   public void testInitHasherByteArrays() throws Exception {
