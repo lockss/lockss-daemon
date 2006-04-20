@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.20 2006-04-10 05:31:01 smorabito Exp $
+ * $Id: V3Poller.java,v 1.21 2006-04-20 07:17:13 smorabito Exp $
  */
 
 /*
@@ -520,7 +520,9 @@ public class V3Poller extends BasePoll {
       return;
     }
     // Peers should never be allowed to nominate themsevles.
-    nominatedPeers.remove(id);
+    if (nominatedPeers != null) {
+      nominatedPeers.remove(id);
+    }
     log.debug2("Received nominations from inner circle voter: " + id +
                "; Nominations = " + nominatedPeers);
     // If the peer has sent us no nominations, decide whether to drop him.
