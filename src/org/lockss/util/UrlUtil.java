@@ -1,5 +1,5 @@
 /*
- * $Id: UrlUtil.java,v 1.40 2006-02-28 09:08:16 tlipkis Exp $
+ * $Id: UrlUtil.java,v 1.41 2006-04-20 23:22:04 troberts Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -429,6 +429,8 @@ public class UrlUtil {
     url = StringUtil.replaceString(url, " ", "%20");
     url = StringUtil.replaceString(url, "\"", "%22");
     url = StringUtil.replaceString(url, "|", "%7c");
+    url = StringUtil.replaceString(url, "[", "%5b");
+    url = StringUtil.replaceString(url, "]", "%5d");
     return url;
   }
 
