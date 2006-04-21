@@ -42,7 +42,7 @@ echo Please run /etc/lockss/hostconfig .  See /etc/lockss/README for details.
 %files
 %defattr(-,root,root)
 /usr/share/lockss
-%attr(755,-,-) /etc/lockss
-%attr(755,-,-) /etc/init.d/lockss
+%attr(755,root,root) /etc/lockss
+%attr(755,root,root) /etc/init.d/lockss
 /etc/logrotate.d/lockss
 
