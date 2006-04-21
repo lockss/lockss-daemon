@@ -2263,7 +2263,7 @@
 
       <property name="locksscard2006">
 	<property name="title" value="LOCKSS Card 2006" />
-	<property name="estSize" value="4.5MB" />
+	<property name="estSize" value="59MB" />
 	<property name="journalTitle" value="LOCKSS Card" />
 	<property name="plugin" value="org.lockss.plugin.locksscard.LockssCardPlugin" />
 	<property name="param.1">
