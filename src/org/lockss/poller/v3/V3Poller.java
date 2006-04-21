@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.20.2.1 2006-04-20 07:13:49 smorabito Exp $
+ * $Id: V3Poller.java,v 1.20.2.2 2006-04-21 07:28:31 smorabito Exp $
  */
 
 /*
@@ -85,6 +85,14 @@ public class V3Poller extends BasePoll {
     PREFIX + "dropEmptyNominations";
   public static boolean DEFAULT_DROP_EMPTY_NOMINATIONS = false;
   
+  /** If true, just log a message rather than deleting files that are
+   * considered to be missing from a majority of peers.
+   */
+  public static String PARAM_DELETE_EXTRA_FILES =
+    PREFIX + "deleteExtraFiles";
+  public static boolean DEFAULT_DELETE_EXTRA_FILES =
+    false;
+  
   /**
    * Directory in which to store message data.
    */
@@ -107,6 +115,7 @@ public class V3Poller extends BasePoll {
   private boolean resumedPoll;
   private boolean activePoll = true;
   private boolean dropEmptyNominators = DEFAULT_DROP_EMPTY_NOMINATIONS;
+  private boolean deleteExtraFiles = DEFAULT_DELETE_EXTRA_FILES;
   private File messageDir;
 
   // Used by setConfig when setting or restoring state
@@ -218,6 +227,8 @@ public class V3Poller extends BasePoll {
     quorum = c.getInt(PARAM_QUORUM, DEFAULT_QUORUM);
     dropEmptyNominators = c.getBoolean(PARAM_DROP_EMPTY_NOMINATIONS,
                                             DEFAULT_DROP_EMPTY_NOMINATIONS);
+    deleteExtraFiles = c.getBoolean(PARAM_DELETE_EXTRA_FILES,
+                                    DEFAULT_DELETE_EXTRA_FILES);
     messageDir =
       new File(c.get(PARAM_V3_MESSAGE_DIR, DEFAULT_V3_MESSAGE_DIR));
     if (!messageDir.exists() || !messageDir.canWrite()) {
@@ -586,7 +597,19 @@ public class V3Poller extends BasePoll {
           continue;
         }
         int idx = voter.getVoteBlockIndex();
-        VoteBlock vb = voter.getVoteBlock(idx);
+        
+        // XXX: This may throw if there is a low level error getting the
+        //      vote block.  This is enough to cause the poll to be stopped,
+        //      and an alert to be issued.  This needs to be refactored for 1.17.
+        VoteBlock vb = null;
+        try {
+          vb = voter.getVoteBlock(idx);
+        } catch (RuntimeException ex) {
+          abortPoll();
+          setStatus("Error");
+          return;
+        }
+        
         // Hang on to votes in case a repair check is needed.
         tally.addVoteForBlock(voter.getVoterId(), vb);
         if (vb == null) {
@@ -878,15 +901,20 @@ public class V3Poller extends BasePoll {
    * @param url The block to be deleted.
    */
   private void deleteBlock(String url) {
-    CachedUrlSetSpec cuss =
-      new SingleNodeCachedUrlSetSpec(url);
-    CachedUrlSet cus = getAu().makeCachedUrlSet(cuss);
-    NodeManager nm = theDaemon.getNodeManager(getAu());
-    try {
-      log.debug("Marking block deleted: " + url);
-      nm.deleteNode(cus);
-    } catch (IOException ex) {
-      log.warning("Unable to mark CUS deleted: ", ex);
+    if (deleteExtraFiles) {
+      CachedUrlSetSpec cuss =
+        new SingleNodeCachedUrlSetSpec(url);
+      CachedUrlSet cus = getAu().makeCachedUrlSet(cuss);
+      NodeManager nm = theDaemon.getNodeManager(getAu());
+      try {
+        log.debug("Marking block deleted: " + url);
+        nm.deleteNode(cus);
+      } catch (IOException ex) {
+        log.warning("Unable to mark CUS deleted: ", ex);
+      }
+    } else {
+      log.info("Asked to mark file " + url + " deleted in poll " +
+               pollerState.getPollKey());
     }
 
     pollerState.getRepairQueue().addCompletedRepair(url);

@@ -64,9 +64,21 @@ public class DiskVoteBlocks implements VoteBlocks {
     synchronized(fileLock) {
       File f = new File(filePath);
       FileInputStream fis = null;
+      DataInputStream dis = null;
       try {
         fis = new FileInputStream(f);
-        DataInputStream dis = new DataInputStream(fis);
+        dis = new DataInputStream(fis);
+      } catch (IOException ex) {
+        // This would be bad.  For 1.16, just log and throw RuntimeException.
+        // XXX: Implement better exception handling.  Unfortunately has to be 
+        // a runtime exception to work with the ListIterator interface below.
+        log.error("IOException trying to open VoteBlock file " +
+                  filePath, ex);
+        throw new RuntimeException("Unable to open VoteBlock file" +
+                                   filePath);
+      }
+      
+      try {
         // Seek until we find block i.
         for (int idx = 0; idx < i; idx++) {
           short len = dis.readShort();
@@ -76,14 +88,17 @@ public class DiskVoteBlocks implements VoteBlocks {
         short len = dis.readShort();
         byte[] encodedBlock = new byte[len];
         dis.read(encodedBlock);
-        return new VoteBlock(encodedBlock); 
+        return new VoteBlock(encodedBlock);
       } catch (IOException ex) {
-        log.error("IOError while trying to find vote block #" + i);
+        // This probably means that we've run out of blocks, so we should
+        // return null.
+        log.warning("Unable to find block " + i + " while seeking " +
+                    "DiskVoteBlocks file " + filePath);
+        return null;
       } finally {
         IOUtil.safeClose(fis);
       }
     }
-    return null;
   }
 
   public int size() {
