@@ -1,5 +1,5 @@
 /*
- * $Id: XStreamSerializer.java,v 1.17 2006-04-20 09:02:35 thib_gc Exp $
+ * $Id: XStreamSerializer.java,v 1.18 2006-04-22 18:30:42 thib_gc Exp $
  */
 
 /*
@@ -92,8 +92,7 @@ public class XStreamSerializer extends ObjectSerializer {
    * {@link XStreamSerializer} only.</p>
    * @author Thib Guicherd-Callin
    */
-  private static class LockssNotSerializableException
-      extends RuntimeException {
+  private static class LockssNotSerializableException extends RuntimeException {
 
     /*
      * IMPLEMENTATION NOTES
@@ -534,7 +533,9 @@ public class XStreamSerializer extends ObjectSerializer {
     catch (StreamException se) {
       logger.debug2("Deserialization failed; StreamException thrown", se);
       throwIfInterrupted(se);
-      throw new IOException(se.toString());
+      IOException ioe = new IOException();
+      ioe.initCause(se);
+      throw ioe;
     }
     catch (CannotResolveClassException crce) {
       throw failDeserialize(crce);
@@ -556,11 +557,17 @@ public class XStreamSerializer extends ObjectSerializer {
       xs.toXML(obj, writer); // lazy instantiation
     }
     catch (LockssNotSerializableException lnse) {
-      throw new NotSerializableException(lnse.getMessage());
+      logger.error("Not Serializable or LockssSerializable", lnse);
+      NotSerializableException nse = new NotSerializableException();
+      nse.initCause(lnse);
+      throw nse;
     }
     catch (StreamException se) {
-      logger.debug("StreamException", se);
-      throw new IOException(se.getMessage());
+      logger.debug("Serialization failed; StreamException thrown", se);
+      throwIfInterrupted(se);
+      IOException ioe = new IOException();
+      ioe.initCause(se);
+      throw ioe;
     }
     catch (CannotResolveClassException crce) {
       throw failSerialize(crce, obj);

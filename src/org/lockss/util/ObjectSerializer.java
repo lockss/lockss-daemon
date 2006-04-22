@@ -1,5 +1,5 @@
 /*
- * $Id: ObjectSerializer.java,v 1.21 2006-04-22 07:18:12 thib_gc Exp $
+ * $Id: ObjectSerializer.java,v 1.22 2006-04-22 18:30:42 thib_gc Exp $
  */
 
 /*
@@ -160,9 +160,8 @@ public abstract class ObjectSerializer {
    */
   public Object deserialize(InputStream inputStream)
       throws IOException, SerializationException {
-    BufferedReader reader =
-      new BufferedReader(
-          new InputStreamReader(inputStream, Constants.DEFAULT_ENCODING));
+    BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream,
+                                                                     Constants.DEFAULT_ENCODING));
     return deserialize(reader);
   }
 
@@ -425,10 +424,16 @@ public abstract class ObjectSerializer {
         logger.error(str);
         throw new IOException(str);
       }
-    } catch (IOException exc) {
+    }
+    catch (IOException exc) {
       maybeDelTempFile(tempFile);
       throw exc;
-    } catch (SerializationException exc) {
+    }
+    catch (SerializationException exc) {
+      maybeDelTempFile(tempFile);
+      throw exc;
+    }
+    catch (RuntimeException exc) {
       maybeDelTempFile(tempFile);
       throw exc;
     }
@@ -525,7 +530,7 @@ public abstract class ObjectSerializer {
     String str = buffer.toString();
     logger.debug2(str, exc);
 
-    // Throw RuntimeException if cause is InterruptedIOException
+    // Throw InterruptedIOException if cause is InterruptedIOException
     throwIfInterrupted(exc);
     // Otherwise, return new SerializationException
     return new SerializationException(str, exc);
@@ -563,10 +568,13 @@ public abstract class ObjectSerializer {
    * fails.</p>
    * @param exc The exception thrown.
    * @param obj The object being serialized.
-   * @return A new SerializationException.
+   * @return A new {@link SerializationException}, or a new
+   *         {@link InterruptedIOException} if the argument is or
+   *         contains an {@link InterruptedIOException}.
    */
   protected static SerializationException failSerialize(Exception exc,
-                                                        Object obj) {
+                                                        Object obj)
+      throws InterruptedIOException {
     StringBuffer buffer = new StringBuffer();
     buffer.append("Failed to serialize ");
     buffer.append(obj.toString());
@@ -575,6 +583,7 @@ public abstract class ObjectSerializer {
     buffer.append(").");
     String str = buffer.toString();
     logger.debug(str, exc);
+    throwIfInterrupted(exc);
     return new SerializationException(str, exc);
   }
 
@@ -590,8 +599,9 @@ public abstract class ObjectSerializer {
     for (Throwable cause = exc ; cause != null ; cause = cause.getCause()) {
       if (cause instanceof InterruptedIOException) {
         logger.debug2("Exception contains InterruptedIOException", exc);
-        logger.debug2("Nested InterruptedException", cause);
-        throw new InterruptedIOException(exc.toString());
+        InterruptedIOException iioe = new InterruptedIOException();
+        iioe.initCause(exc);
+        throw iioe;
       }
     }
   }
