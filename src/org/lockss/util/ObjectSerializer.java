@@ -1,5 +1,5 @@
 /*
- * $Id: ObjectSerializer.java,v 1.19.2.1 2006-04-20 19:33:25 thib_gc Exp $
+ * $Id: ObjectSerializer.java,v 1.19.2.2 2006-04-22 07:15:25 thib_gc Exp $
  */
 
 /*
@@ -416,22 +416,22 @@ public abstract class ObjectSerializer {
     File tempFile = File.createTempFile("tmp", ".xml", outputFile.getParentFile());
     FileOutputStream outStream = new FileOutputStream(tempFile);
 
-    serialize(outStream, obj);
-    outStream.close();
-    if (!tempFile.renameTo(outputFile)) {
-      // File renaming failed
-      StringBuffer buffer = new StringBuffer();
-      buffer.append("Could not rename from ");
-      buffer.append(tempFile.getAbsolutePath());
-      buffer.append(" to ");
-      buffer.append(outputFile.getAbsolutePath());
-      String str = buffer.toString();
-      logger.error(str);
+    try {
+      serialize(outStream, obj);
+      outStream.close();
+      if (!tempFile.renameTo(outputFile)) {
+        // File renaming failed
+        String str = "Could not rename from " + tempFile.getAbsolutePath() + " to " + outputFile.getAbsolutePath();
+        logger.error(str);
+        throw new IOException(str);
+      }
+    } catch (IOException exc) {
       maybeDelTempFile(tempFile);
-      throw new IOException(str);
+      throw exc;
+    } catch (SerializationException exc) {
+      maybeDelTempFile(tempFile);
+      throw exc;
     }
-    maybeDelTempFile(tempFile);
-
   }
 
   /**
