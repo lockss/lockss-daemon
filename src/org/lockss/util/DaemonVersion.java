@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonVersion.java,v 1.4 2005-07-22 23:46:33 tlipkis Exp $
+ * $Id: DaemonVersion.java,v 1.4.14.1 2006-04-23 05:45:29 tlipkis Exp $
  */
 
 /*
@@ -107,5 +107,9 @@ public class DaemonVersion implements Version {
       throw new IllegalArgumentException("Token is too long: " + intPart);
     }
     return Integer.parseInt(intPart, 10);
+  }
+
+  public String toString() {
+    return "[DaemonVersion " + toLong() + "]";
   }
 }
