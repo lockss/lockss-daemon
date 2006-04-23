@@ -1,5 +1,5 @@
 /*
- * $Id: PermissionMap.java,v 1.9 2006-03-02 06:59:19 tlipkis Exp $
+ * $Id: PermissionMap.java,v 1.9.2.1 2006-04-23 05:44:45 tlipkis Exp $
  */
 
 /*
@@ -313,14 +313,15 @@ public class PermissionMap {
 
       is.mark(BaseCrawler.PERM_BUFFER_MAX);
       Reader reader = new InputStreamReader(is, Constants.DEFAULT_ENCODING);
-      if (pluginPermissionChecker != null
-          && !pluginPermissionChecker.checkPermission(pHelper, reader,
-						      permissionPage)) {
-        logger.error("No plugin crawl permission on " + permissionPage);
-        is.close();
-        return false;
-      } else {
-        is = pHelper.resetInputStream(is, permissionPage);
+      if (pluginPermissionChecker != null) {
+	if (!pluginPermissionChecker.checkPermission(pHelper, reader,
+						     permissionPage)) {
+	  logger.error("No plugin crawl permission on " + permissionPage);
+	  is.close();
+	  return false;
+	} else {
+	  is = pHelper.resetInputStream(is, permissionPage);
+	}
       }
 
       if (CurrentConfig.getBooleanParam(BaseCrawler.PARAM_REFETCH_PERMISSIONS_PAGE,
