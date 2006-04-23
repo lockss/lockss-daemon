@@ -1,5 +1,5 @@
 /*
- * $Id: StringPermissionChecker.java,v 1.7 2006-02-14 05:22:46 tlipkis Exp $
+ * $Id: StringPermissionChecker.java,v 1.7.4.1 2006-04-23 05:45:09 tlipkis Exp $
  */
 
 /*
@@ -82,8 +82,7 @@ public class StringPermissionChecker implements PermissionChecker {
       return StringUtil.containsString(reader, m_matchString,
 				       m_flags.get(IGNORE_CASE));
     } catch (IOException ex) {
-      m_logger.warning("Exception occured while checking for permission: "
-                       + ex.toString());
+      m_logger.warning("Error checking permission at " + permissionUrl, ex);
     }
 
     return false;
