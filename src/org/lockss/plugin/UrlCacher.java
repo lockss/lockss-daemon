@@ -1,5 +1,5 @@
 /*
- * $Id: UrlCacher.java,v 1.22 2005-10-19 20:13:05 troberts Exp $
+ * $Id: UrlCacher.java,v 1.23 2006-04-23 05:51:13 tlipkis Exp $
  */
 
 /*
@@ -150,7 +150,8 @@ public interface UrlCacher {
   public int cache() throws IOException;
 
   /**
-   * Gets an InputStream for this URL.
+   * Gets an InputStream for this URL, issuing a request if not already
+   * done.  This may only be called once!
    * @return the InputStream
    * @throws IOException
    */
