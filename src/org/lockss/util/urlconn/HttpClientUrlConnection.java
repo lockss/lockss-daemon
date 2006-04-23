@@ -1,5 +1,5 @@
 /*
- * $Id: HttpClientUrlConnection.java,v 1.22 2006-02-01 08:43:58 tlipkis Exp $
+ * $Id: HttpClientUrlConnection.java,v 1.23 2006-04-23 05:56:36 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -121,14 +121,21 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
     } catch (IllegalArgumentException e) {
       // HttpMethodBase throws IllegalArgumentException on illegal URLs
       // Canonicalize that to Java's MalformedURLException
-      throw new java.net.MalformedURLException(urlString);
+      throw newMalformedURLException(urlString, e);
     } catch (IllegalStateException e) {
       // HttpMethodBase throws IllegalArgumentException on illegal protocols
       // Canonicalize that to Java's MalformedURLException
-      throw new java.net.MalformedURLException(urlString);
+      throw newMalformedURLException(urlString, e);
     }
   }
 
+  java.net.MalformedURLException newMalformedURLException(String msg,
+ 							  Throwable cause) {
+    java.net.MalformedURLException e = new java.net.MalformedURLException(msg);
+    e.initCause(cause);
+    return e;
+  }
+ 
   /** for testing */
   protected HttpClientUrlConnection(String urlString, HttpClient client,
 				    LockssGetMethod method) {
