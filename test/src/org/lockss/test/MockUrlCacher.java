@@ -1,5 +1,5 @@
 /*
- * $Id: MockUrlCacher.java,v 1.30 2005-10-11 05:52:05 tlipkis Exp $
+ * $Id: MockUrlCacher.java,v 1.30.12.1 2006-04-23 05:46:13 tlipkis Exp $
  */
 
 /*
@@ -60,7 +60,6 @@ public class MockUrlCacher implements UrlCacher {
   private IOException cachingException = null;
   private RuntimeException cachingRuntimException = null;
   private int numTimesToThrow = 1;
-  private int timesThrown = 0;
 //   private boolean forceRefetch = false;
   private BitSet fetchFlags = new BitSet();
   private PermissionMapSource permissionMapSource;
@@ -166,21 +165,22 @@ public class MockUrlCacher implements UrlCacher {
 
   public void setCachingException(RuntimeException e, int numTimesToThrow) {
     this.cachingRuntimException = e;
+    this.numTimesToThrow = numTimesToThrow;
   }
 
   private void throwExceptionIfSet() throws IOException {
     logger.debug3("Deciding whether to throw an exception");
-    if (cachingException != null && timesThrown < numTimesToThrow) {
-      timesThrown++;
+    if (cachingException != null && numTimesToThrow > 0) {
+      numTimesToThrow--;
       throw cachingException;
     } else {
       logger.debug3("No cachingException set");
     }
-    if (cachingRuntimException != null) {
+    if (cachingRuntimException != null && numTimesToThrow > 0) {
       // Get a stack trace from here, not from the test case where the
       // exception was created
       cachingRuntimException.fillInStackTrace();
-      timesThrown++;
+      numTimesToThrow--;
       throw cachingRuntimException;
     } else {
       logger.debug3("No cachingRuntimeException set");
@@ -195,7 +195,7 @@ public class MockUrlCacher implements UrlCacher {
       cus.signalCacheAttempt(url);
     }
 
-    throwExceptionIfSet();
+    getUncachedInputStream();
 
     if (cus != null) {
       if (fetchFlags.get(UrlCacher.REFETCH_FLAG)) {
@@ -222,8 +222,21 @@ public class MockUrlCacher implements UrlCacher {
     return CACHE_RESULT_FETCHED;
   }
 
+  private boolean executed = false;
+
+  void setNotExecuted() {
+    executed = false;
+  }
+
   public InputStream getUncachedInputStream() throws IOException {
+    if (executed) {
+      throw new IllegalStateException("getUncachedInputStream() called twice");
+    }
+    executed = true;
     throwExceptionIfSet();
+    if (uncachedIS == null && cu != null) {
+      return cu.getUnfilteredInputStream();
+    }
     return uncachedIS;
   }
 
