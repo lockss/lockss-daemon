@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.65 2005-10-11 05:52:05 tlipkis Exp $
+ * $Id: MockArchivalUnit.java,v 1.66 2006-04-23 05:52:04 tlipkis Exp $
  */
 
 /*
@@ -156,6 +156,12 @@ public class MockArchivalUnit implements ArchivalUnit {
     UrlCacher uc = null;
     if (ucHash != null) {
       uc = (UrlCacher)ucHash.get(url);
+      // MockUrlCacher checks that getUncachedInputStream() isn't called
+      // more than once.  But we return the same UrlCacher multiple times
+      // here, so make it ok to call getUncachedInputStream() again.  The
+      // semantics of makeUrlCacher() is that it makes a new one each
+      // time.)
+      ((MockUrlCacher)uc).setNotExecuted();
       logger.debug(uc+" came from ucHash");
     } else {
       logger.debug("ucHash is null, so makeUrlCacher is returning null");
