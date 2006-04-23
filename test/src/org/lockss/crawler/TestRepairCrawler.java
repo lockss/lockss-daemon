@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepairCrawler.java,v 1.36 2005-10-20 16:42:55 troberts Exp $
+ * $Id: TestRepairCrawler.java,v 1.36.10.1 2006-04-23 05:45:52 tlipkis Exp $
  */
 
 /*
@@ -65,7 +65,7 @@ public class TestRepairCrawler extends LockssTestCase {
   private MockLockssDaemon theDaemon = getMockLockssDaemon();
 
   private String permissionPage = "http://example.com/permission.html";
-  private String permissionPage2 = "http://example.com/permission.html";
+  private String permissionPage2 = "http://example.com/permission2.html";
 
   private List permissionPages = ListUtil.list(permissionPage, permissionPage2);
 
@@ -92,7 +92,7 @@ public class TestRepairCrawler extends LockssTestCase {
 
     mau.setCrawlSpec(spec);
     mau.addUrl(url1);
-    mau.addUrl(permissionPage);
+    mau.addUrl(permissionPage, "noperm");
 
     mau.setPlugin(new MockPlugin());
 
@@ -262,9 +262,9 @@ public class TestRepairCrawler extends LockssTestCase {
 
   public void testPluginThrowsRuntimeException() {
     String repairUrl = "http://example.com/forcecache.html";
-    mau.addUrl(repairUrl, new ExpectedRuntimeException("Test exception"), 0);
+    mau.addUrl(repairUrl, new ExpectedRuntimeException("Test exception"), 1);
     List repairUrls = ListUtil.list(repairUrl);
-     crawlRule.addUrlToCrawl(repairUrl);
+    crawlRule.addUrlToCrawl(repairUrl);
     spec = new SpiderCrawlSpec(startUrls, startUrls, crawlRule, 1);
     crawler = new RepairCrawler(mau, spec, aus, repairUrls, 0);
 
@@ -685,7 +685,7 @@ public class TestRepairCrawler extends LockssTestCase {
   public void testPluginThrowsRuntimeExceptionDoesntUpdateStatus() {
     setRepairNeedsPermission(true);
     String repairUrl = "http://example.com/forcecache.html";
-    mau.addUrl(repairUrl, new ExpectedRuntimeException("Test exception"), 0);
+    mau.addUrl(repairUrl, new ExpectedRuntimeException("Test exception"), 1);
     List repairUrls = ListUtil.list(repairUrl);
     crawlRule.addUrlToCrawl(repairUrl);
     spec = new SpiderCrawlSpec(startUrls, permissionPages, crawlRule, 1);
@@ -883,23 +883,18 @@ public class TestRepairCrawler extends LockssTestCase {
 			   float percentFetchFromCache) {
       super(au, spec, aus, repairUrls, percentFetchFromCache);
     }
-    /*
-    protected UrlCacher makeUrlCacher(CachedUrlSet cus, String url) {
-      MockUrlCacher uc = new MyMockUrlCacher(url, (MockArchivalUnit)au);
-      uc.setForceRefetch(true);
-      return uc;
-    }
-    */
-    protected void fetchFromCache(UrlCacher uc, PeerIdentity id)
+
+    protected void fetchFromCache(String url, PeerIdentity id)
 	throws IOException {
       fetchCacheCnt++;
       cacheLastCall = ++fetchSequence;
-      contentMap.put(uc.getUrl(),id);
+      contentMap.put(url,id);
+      UrlCacher uc = makeRepairUrlCacher(url);
       if (timesToThrow > 0) {
 	timesToThrow--;
-	throw new LockssUrlConnection.CantProxyException("Test");
+	((MockUrlCacher)uc).setCachingException(new LockssUrlConnection.CantProxyException("Expected from cache"), 1);
       }
-      super.fetchFromCache(uc, id);
+      fetchFromCache(uc, id);
     }
 
     /**
@@ -914,16 +909,17 @@ public class TestRepairCrawler extends LockssTestCase {
       return fetchCacheCnt;
     }
 
-    protected void fetchFromPublisher(UrlCacher uc) throws IOException {
+    protected void fetchFromPublisher(String url) throws IOException {
+      UrlCacher uc = makeRepairUrlCacher(url);
       fetchPubCnt++;
       pubLastCall = ++fetchSequence;
 
       if (timesToThrow > 0) {
 	timesToThrow--;
-	throw new CacheException("Test");
+	((MockUrlCacher)uc).setCachingException(new CacheException("Expected from publisher"), 1);
       }
 
-      super.fetchFromPublisher(uc);
+      fetchFromPublisher(uc);
     }
 
     protected int getFetchPubCnt(){

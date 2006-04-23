@@ -1,5 +1,5 @@
 /*
- * $Id: TestFollowLinkCrawler.java,v 1.15 2006-04-05 22:34:54 tlipkis Exp $
+ * $Id: TestFollowLinkCrawler.java,v 1.15.2.1 2006-04-23 05:45:52 tlipkis Exp $
  */
 
 /*
@@ -902,9 +902,9 @@ public class TestFollowLinkCrawler extends LockssTestCase {
       super(url, au);
     }
 
-    public InputStream getUncachedInputStream() {
+    public InputStream getUncachedInputStream() throws IOException {
       checkAbort();
-      return new StringInputStream("");
+      return super.getUncachedInputStream();
     }
     public int cache() throws IOException {
       checkAbort();
