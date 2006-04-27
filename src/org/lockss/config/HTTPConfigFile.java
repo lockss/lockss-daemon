@@ -1,5 +1,5 @@
 /*
- * $Id: HTTPConfigFile.java,v 1.8 2006-04-05 22:29:12 tlipkis Exp $
+ * $Id: HTTPConfigFile.java,v 1.8.2.1 2006-04-27 03:19:58 tlipkis Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import java.util.zip.*;
 
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
+import org.apache.oro.text.regex.*;
 
 /**
  * A ConfigFile loaded from a URL.
@@ -124,14 +125,54 @@ public class HTTPConfigFile extends BaseConfigFile {
       IOUtil.safeRelease(conn);
       break;
     case HttpURLConnection.HTTP_NOT_FOUND:
-      m_loadError = conn.getResponseMessage();
+      m_loadError = resp + ": " + respMsg;
       throw new FileNotFoundException(m_loadError);
+    case HttpURLConnection.HTTP_FORBIDDEN:
+      m_loadError = findErrorMessage(resp, conn);
+      throw new IOException(m_loadError);
     default:
       m_loadError = resp + ": " + respMsg;
       throw new IOException(m_loadError);
     }
 
     return in;
+  }
+
+  private static Pattern HINT_PAT =
+    RegexpUtil.uncheckedCompile("LOCKSSHINT: (.+) ENDHINT",
+				Perl5Compiler.CASE_INSENSITIVE_MASK);
+
+
+  // If there is a response body, include any text between LOCKSSHINT: and
+  // ENDHINT in the error message.
+  private String findErrorMessage(int resp, LockssUrlConnection conn) {
+    String msg = resp + ": " + conn.getResponseMessage();
+    try {
+      long len = conn.getResponseContentLength();
+      if (len == 0 || len > 10000) {
+	return msg;
+      }
+      InputStream in = conn.getResponseInputStream();
+      // XXX should use the charset parameter in the Content-Type: header
+      // if any
+      Reader rdr = new InputStreamReader(in, Constants.DEFAULT_ENCODING);
+      String body = StringUtil.fromReader(rdr, 10000);
+      if (StringUtil.isNullString(body)) {
+	return msg;
+      }
+      Perl5Matcher matcher = RegexpUtil.getMatcher();
+      if (matcher.contains(body, HINT_PAT)) {
+	MatchResult matchResult = matcher.getMatch();
+	String hint = matchResult.group(1);
+	return msg + "<br>" + hint;
+      }
+      return msg;
+    } catch (Exception e) {
+      log.warning("Error finding hint", e);
+      return msg;
+    } finally {
+      IOUtil.safeRelease(conn);
+    }
   }
 
   protected InputStream openInputStream() throws IOException {

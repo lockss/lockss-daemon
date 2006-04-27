@@ -63,7 +63,7 @@ if [ -z "$args" ]; then
   args=-Dorg.lockss.defaultLogLevel=DEBUG
 fi
 
-#PROP_URL_LIST="-p http://cepe/03042003_dev/lockss.txt -p http://props.lockss.org:8001/daemon/lockss.xml -p local.txt"
+#PROP_URL_LIST="-p http://props.lockss.org:8001/daemon/forbidden.xml -p local.txt"
 PROP_URL_LIST="-p http://props.lockss.org:8001/daemon/lockss.xml -p local.txt"
 
 # local copy of lockss jars allows recompile while we're running

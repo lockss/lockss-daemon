@@ -1,5 +1,5 @@
 /*
- * $Id: BaseConfigFile.java,v 1.1 2006-04-05 22:29:13 tlipkis Exp $
+ * $Id: BaseConfigFile.java,v 1.1.2.1 2006-04-27 03:19:58 tlipkis Exp $
  */
 
 /*
@@ -150,14 +150,16 @@ public abstract class BaseConfigFile implements ConfigFile {
 	}
       }
     } catch (FileNotFoundException ex) {
-      log.debug("File not found: " + m_fileUrl);
+      log.debug2("File not found: " + m_fileUrl);
       m_IOException = ex;
       m_loadError = ex.toString();
       throw ex;
     } catch (IOException ex) {
       log.warning("Unexpected exception loading " + m_fileUrl + ": " + ex);
       m_IOException = ex;
-      m_loadError = ex.toString();
+      if (m_loadError == null || !ex.getMessage().equals(m_loadError)) {
+	m_loadError = ex.toString();
+      }
       throw ex;
     }
   }
