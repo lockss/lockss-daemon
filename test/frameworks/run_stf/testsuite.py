@@ -1136,13 +1136,17 @@ class TinyUiMalformedUrlTestCase(TinyUiTests):
     def expectedPattern(self):
         return 'MalformedURLException'
 
+# The forbidden test relies on the URL returning a 403, with a specially
+# crafted body containing hint text.  See HTTPConfigFile.java and
+# http://props.lockss.org:8001/daemon/README
+
 class TinyUiForbiddenTestCase(TinyUiTests):
-    """ Test that a forbidden config fetch gets Tiny UI """
+    """ Test that a forbidden config fetch gets Tiny UI with the proper hint """
     def getTestUrl(self):
-        return "http://props.lockss.org:8001/forbidden/"
+        return "http://props.lockss.org:8001/daemon/forbidden/"
 
     def expectedPattern(self):
-        return '403: Forbidden'
+        return '403: Forbidden.*LOCKSS team.*access list'
 
 # XXX should find a guaranteed non-listening port (by binding?)
 class TinyUiRefusedTestCase(TinyUiTests):

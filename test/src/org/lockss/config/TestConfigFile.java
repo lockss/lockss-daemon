@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigFile.java,v 1.3 2006-04-05 22:29:09 tlipkis Exp $
+ * $Id: TestConfigFile.java,v 1.4 2006-04-27 03:21:45 tlipkis Exp $
  */
 
 /*
@@ -362,11 +362,26 @@ public abstract class TestConfigFile extends LockssTestCase {
       hcf = new MyHttpConfigFile(url);
       hcf.setExecuteException(new MalformedURLException(url));
       testCantRead(hcf, "MalformedURLException");
+    }
+
+    public void testForbidden() throws IOException {
+      String url;
+      MyHttpConfigFile hcf;
 
       url = "http://a.b/forbidden";
-      hcf = new MyHttpConfigFile(url);
+      hcf = new MyHttpConfigFile(url,
+				 "Error page with no hint, shouldn't " +
+				 "end up in config file error msg");
       hcf.setResponseCode(403);
-      testCantRead(hcf, "403");
+      hcf.setResponseMessage("Forbidden");
+      testCantRead(hcf, "403: Forbidden$");
+
+      hcf = new MyHttpConfigFile(url,
+				 "foobar \n" +
+				 "locksshint: this is a hint endhint");
+      hcf.setResponseCode(403);
+      hcf.setResponseMessage("Forbidden");
+      testCantRead(hcf, "403: Forbidden<br>this is a hint$");
     }
 
     public void testGzip() throws IOException {
@@ -386,6 +401,7 @@ public abstract class TestConfigFile extends LockssTestCase {
     String lastModified;
     String contentEncoding = null;
     int resp = 200;
+    String respMsg = null;
     IOException executeExecption;
 
     public MyHttpConfigFile(String url) {
@@ -418,6 +434,10 @@ public abstract class TestConfigFile extends LockssTestCase {
 
     void setResponseCode(int code) {
       resp = code;
+    }
+
+    void setResponseMessage(String msg) {
+      respMsg = msg;
     }
 
     void setExecuteException(IOException e) {
@@ -457,12 +477,22 @@ public abstract class TestConfigFile extends LockssTestCase {
 	      this.setResponseHeader("Content-Encoding", contentEncoding);
 	    }
 	    this.setResponseCode(resp);
+	    this.setResponseMessage(respMsg);
 	  }
 	}
       }
 
       public String getResponseContentEncoding() {
 	return contentEncoding;
+      }
+      public long getResponseContentLength() {
+	String url = getURL();
+
+	Object o = map.get(url);
+	if (o != null &&o instanceof String) {
+	  return ((String)o).length();
+	}
+	return 0;
       }
     }
   }
