@@ -533,8 +533,7 @@ class Client:
                 log.debug("isV3Repaired: All URLs: %s" % allUrls)                
                 log.debug("isV3Repaired: Agreeing URLs: %s" % agreeUrls)
                 log.debug("isV3Repaired: Repaired URLs: %s" % repairs)
-#XXX:                return (allUrls == agreeUrls)
-                return (repairs == len(nodeList))
+                return (allUrls == agreeUrls)
                 # TODO: This will really need to be improved when the status
                 # tables are better!  Need a way to determine whether this particular NODE was
                 # repaired.

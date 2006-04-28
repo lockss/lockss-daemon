@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3LcapMessage.java,v 1.14 2006-04-10 05:31:01 smorabito Exp $
+ * $Id: TestV3LcapMessage.java,v 1.15 2006-04-28 07:21:13 smorabito Exp $
  */
 
 /*
@@ -108,7 +108,7 @@ public class TestV3LcapMessage extends LockssTestCase {
     assertTrue(m_testID == noopMsg.getOriginatorId());
     assertEquals(m_testBytes, noopMsg.getPollerNonce());
     assertEquals(m_testBytes, noopMsg.getVoterNonce());
-    assertEmpty(ListUtil.fromIterator(noopMsg.getVoteBlockIterator()));
+    assertEquals(0, noopMsg.getVoteBlocks().size());
   }
 
   public void testRandomNoOpMessageCreation() throws Exception {
@@ -122,8 +122,8 @@ public class TestV3LcapMessage extends LockssTestCase {
     assertTrue(noopMsg1.getOriginatorId() == noopMsg2.getOriginatorId());
     assertFalse(noopMsg1.getPollerNonce() == noopMsg2.getPollerNonce());
     assertFalse(noopMsg1.getVoterNonce() == noopMsg2.getVoterNonce());
-    assertEmpty(ListUtil.fromIterator(noopMsg1.getVoteBlockIterator()));
-    assertEmpty(ListUtil.fromIterator(noopMsg2.getVoteBlockIterator()));
+    assertEquals(0, noopMsg1.getVoteBlocks().size());
+    assertEquals(0, noopMsg2.getVoteBlocks().size());
   }
 
   public void testNoOpMessageToString() throws IOException {
@@ -202,12 +202,15 @@ public class TestV3LcapMessage extends LockssTestCase {
     assertEquals("http://foo.com/", reqMsg.getTargetUrl());
     assertEquals(m_testBytes, reqMsg.getPollerNonce());
     assertEquals(m_testBytes, reqMsg.getVoterNonce());
-    List testMsgVoteBlocks =
-      ListUtil.fromIterator(m_testMsg.getVoteBlockIterator());
-    List reqMsgVoteBlocks =
-      ListUtil.fromIterator(reqMsg.getVoteBlockIterator());
-    assertTrue(testMsgVoteBlocks.equals(reqMsgVoteBlocks));
-    assertTrue(m_testVoteBlocks.equals(reqMsgVoteBlocks));
+    List aBlocks = new ArrayList();
+    List bBlocks = new ArrayList();
+    for (VoteBlocksIterator iter = m_testMsg.getVoteBlockIterator(); iter.hasNext(); ) {
+      aBlocks.add(iter.next());
+    }
+    for (VoteBlocksIterator iter = reqMsg.getVoteBlockIterator(); iter.hasNext(); ) {
+      bBlocks.add(iter.next());
+    }
+    assertEquals(aBlocks, bBlocks);
   }
   
   public void testMemoryBasedStreamEncodingTest() throws Exception {
@@ -291,7 +294,8 @@ public class TestV3LcapMessage extends LockssTestCase {
                          VoteBlock.CONTENT_VOTE);
   }
 
-  private void assertEqualMessages(V3LcapMessage a, V3LcapMessage b) {
+  private void assertEqualMessages(V3LcapMessage a, V3LcapMessage b)
+      throws Exception {
     assertTrue(a.getOriginatorId() == b.getOriginatorId());
     assertEquals(a.getOpcode(), b.getOpcode());
     assertEquals(a.getTargetUrl(), b.getTargetUrl());
@@ -305,12 +309,16 @@ public class TestV3LcapMessage extends LockssTestCase {
     assertEquals(a.getRepairDataLength(), b.getRepairDataLength());
     assertEquals(a.getLastVoteBlockURL(), b.getLastVoteBlockURL());
     assertIsomorphic(a.getNominees(), b.getNominees());
-    List aVoteBlocks = ListUtil.fromIterator(a.getVoteBlockIterator());
-    List bVoteBlocks = ListUtil.fromIterator(b.getVoteBlockIterator());
-    assertTrue(aVoteBlocks.equals(bVoteBlocks));
-
+    List aBlocks = new ArrayList();
+    List bBlocks = new ArrayList();
+    for (VoteBlocksIterator iter = a.getVoteBlockIterator(); iter.hasNext(); ) {
+      aBlocks.add(iter.next());
+    }
+    for (VoteBlocksIterator iter = b.getVoteBlockIterator(); iter.hasNext(); ) {
+      bBlocks.add(iter.next());
+    }
+    assertEquals(aBlocks, bBlocks);
     // TODO: Figure out how to test time.
-
   }
   private V3LcapMessage makeRepairMessage(int size) {
     V3LcapMessage msg = new V3LcapMessage("ArchivalID_2", "key", "Plug42",
@@ -328,7 +336,8 @@ public class TestV3LcapMessage extends LockssTestCase {
     return msg;
   }
 
-  private V3LcapMessage makeTestVoteMessage(Collection voteBlocks) {
+  private V3LcapMessage makeTestVoteMessage(Collection voteBlocks)
+      throws IOException {
     V3LcapMessage msg = new V3LcapMessage("ArchivalID_2", "key", "Plug42",
                                           m_testBytes,
                                           m_testBytes,

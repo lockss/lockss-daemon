@@ -1,5 +1,5 @@
 /*
- * $Id: V3LcapMessage.java,v 1.20 2006-04-10 05:31:01 smorabito Exp $
+ * $Id: V3LcapMessage.java,v 1.21 2006-04-28 07:21:13 smorabito Exp $
  */
 
 /*
@@ -524,17 +524,7 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     return m_lastVoteBlockURL;
   }
 
-  // Vote Block accessors and iterator
-  //
-  // NOTE: For now, the list of vote blocks is implemented as an in-memory
-  // array list. It will be desirable to refactor this into on-disk storage
-  // because of the size of this list
-  //
-
-  public void addVoteBlock(VoteBlock vb) {
-    log.debug("*** addVoteBlock.  m_voteBlockThreshold=" +
-              m_voteBlockThreshold + ", m_voteBlocks.size()=" +
-              m_voteBlocks.size());
+  public void addVoteBlock(VoteBlock vb) throws IOException {
     if ((m_voteBlocks instanceof MemoryVoteBlocks) &&
         m_voteBlocks.size() >= m_voteBlockThreshold) {
       try {
@@ -542,7 +532,7 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
         log.debug("Disk threshold passed.  Converting from memory-based vote " +
         "blocks to disk-backed vote blocks.");
         DiskVoteBlocks nvb = new DiskVoteBlocks(m_messageDir);
-        for (Iterator iter = m_voteBlocks.listIterator(); iter.hasNext(); ) {
+        for (VoteBlocksIterator iter = m_voteBlocks.iterator(); iter.hasNext(); ) {
           nvb.addVoteBlock((VoteBlock)iter.next());
         }
       m_voteBlocks = nvb;
@@ -554,8 +544,8 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     m_voteBlocks.addVoteBlock(vb);
   }
 
-  public ListIterator getVoteBlockIterator() {
-    return m_voteBlocks.listIterator();
+  public VoteBlocksIterator getVoteBlockIterator() {
+    return m_voteBlocks.iterator();
   }
 
   public VoteBlocks getVoteBlocks() {
@@ -627,7 +617,6 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
         repairDataFile.delete();
       }
     }
-    m_voteBlocks.delete();
   }
 
   //

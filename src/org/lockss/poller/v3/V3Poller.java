@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.22 2006-04-21 07:29:05 smorabito Exp $
+ * $Id: V3Poller.java,v 1.23 2006-04-28 07:21:13 smorabito Exp $
  */
 
 /*
@@ -400,7 +400,15 @@ public class V3Poller extends BasePoll {
       log.debug2("Cancelling task");
       task.cancel();
     }
+    // Clean up any lingering participants.
     serializer.closePoll();
+    for (Iterator voters = theParticipants.values().iterator(); voters.hasNext(); ) {
+      ParticipantUserData ud = (ParticipantUserData)voters.next();
+      VoteBlocks vb = ud.getVoteBlocks();
+      if (vb != null) {
+        vb.release();
+      }
+    }
     pollManager.closeThePoll(pollerState.getPollKey());
     log.debug("Closed poll " + pollerState.getPollKey());
   }
@@ -604,7 +612,9 @@ public class V3Poller extends BasePoll {
         VoteBlock vb = null;
         try {
           vb = voter.getVoteBlock(idx);
-        } catch (RuntimeException ex) {
+        } catch (IOException ex) {
+          log.critical("Unexpected IOException while getting VoteBlock at " +
+                        "index " + idx + ".  Aborting  poll.", ex);
           abortPoll();
           setStatus("Error");
           return;
@@ -1034,6 +1044,11 @@ public class V3Poller extends BasePoll {
     try {
       synchronized(theParticipants) {
         ParticipantUserData ud = (ParticipantUserData)theParticipants.get(id);
+        // Release used resources.
+        VoteBlocks vb = ud.getVoteBlocks();
+        if (vb != null) {
+          vb.release();
+        }
         serializer.removePollerUserData(id);
         theParticipants.remove(id);
         checkpointPoll();

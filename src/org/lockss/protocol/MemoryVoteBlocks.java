@@ -11,12 +11,7 @@ import org.lockss.util.*;
  * </p>
  */
 
-/*
- * At the moment, this class is purely memory-based. In the long run, it will
- * need to be refactored so that it is partially memory-based, and partially
- * disk based.
- */
-public class MemoryVoteBlocks implements VoteBlocks {
+public class MemoryVoteBlocks extends BaseVoteBlocks {
 
   // ArrayList<VoteBlock>
   private ArrayList voteBlocks;
@@ -40,7 +35,7 @@ public class MemoryVoteBlocks implements VoteBlocks {
    */
   public MemoryVoteBlocks(int blocksToRead, InputStream from)
       throws IOException {
-    this();
+    this(blocksToRead);
     DataInputStream dis = new DataInputStream(from);
     for (int blocksRead = 0; blocksRead < blocksToRead; blocksRead++) {
       short len = dis.readShort();
@@ -51,35 +46,19 @@ public class MemoryVoteBlocks implements VoteBlocks {
     }
   }
 
-  /**
-   * this vote block.
-   *
-   * @return
-   */
-  public byte[] getEncodedByteArray() {
-    return null;
-  }
-
   public void addVoteBlock(VoteBlock b) {
     voteBlocks.add(b);
   }
 
   public VoteBlock getVoteBlock(int i) {
-    if (i < voteBlocks.size())
-      return (VoteBlock)voteBlocks.get(i);
-    else
-      return null;
-  }
-
-  public ListIterator listIterator() {
-    return voteBlocks.listIterator();
+    return (VoteBlock)voteBlocks.get(i);
   }
 
   public int size() {
     return voteBlocks.size();
   }
   
-  public void delete() {
+  public void release() {
     ; // do nothing
   }
   
@@ -89,14 +68,13 @@ public class MemoryVoteBlocks implements VoteBlocks {
     ByteArrayOutputStream bos = new ByteArrayOutputStream();
     DataOutputStream dos = new DataOutputStream(bos);
     
-    for (Iterator iter = listIterator(); iter.hasNext(); ) {
+    for (VoteBlocksIterator iter = iterator(); iter.hasNext(); ) {
       VoteBlock vb = (VoteBlock)iter.next();
       byte[] encoded = vb.getEncoded();
       dos.writeShort((short)encoded.length);
-      dos.write(vb.getEncoded());
+      dos.write(encoded);
     }
     
     return new ByteArrayInputStream(bos.toByteArray());
   }
-
 }

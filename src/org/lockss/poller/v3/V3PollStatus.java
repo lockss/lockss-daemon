@@ -1,5 +1,5 @@
 /*
-* $Id: V3PollStatus.java,v 1.3 2006-04-10 05:31:01 smorabito Exp $
+* $Id: V3PollStatus.java,v 1.4 2006-04-28 07:21:13 smorabito Exp $
  */
 
 /*
@@ -87,11 +87,15 @@ public class V3PollStatus {
                     new ColumnDescriptor("status", "Status",
                                          ColumnDescriptor.TYPE_STRING),
                     new ColumnDescriptor("talliedUrls", "URLs Tallied",
-                                         ColumnDescriptor.TYPE_INT),
+                                         ColumnDescriptor.TYPE_INT,
+                                         "Total number of URLs examined so " +
+                                         "far in this poll."),
                     new ColumnDescriptor("activeRepairs", "Repairs (A)",
-                                         ColumnDescriptor.TYPE_INT),
+                                         ColumnDescriptor.TYPE_INT,
+                                         "Active repairs."),
                     new ColumnDescriptor("completedRepairs", "Repairs (C)",
-                                         ColumnDescriptor.TYPE_INT),
+                                         ColumnDescriptor.TYPE_INT,
+                                         "Completed repairs."),
                     new ColumnDescriptor("agreement", "Agreement",
                                          ColumnDescriptor.TYPE_PERCENT),
                     new ColumnDescriptor("start", "Start",

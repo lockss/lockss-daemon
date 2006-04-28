@@ -1178,8 +1178,6 @@ class V3TestCase(LockssTestCase):
             # (V3 polls are asynchronous)
             peerIds = []
             for port in range(0, len(self.clients)):
-                if (port == (i)):
-                    continue
                 peerIds.append("TCP:[127.0.0.1]:%d" % (baseV3Port + port))
 
             extraConf = {"org.lockss.auconfig.allowEditDefaultOnlyParams": "true",

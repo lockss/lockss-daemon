@@ -1,5 +1,5 @@
 /*
- * $Id: LcapMessageTestUtil.java,v 1.6 2006-04-10 05:31:01 smorabito Exp $
+ * $Id: LcapMessageTestUtil.java,v 1.7 2006-04-28 07:21:13 smorabito Exp $
  *
 
  Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -49,13 +49,15 @@ public class LcapMessageTestUtil {
   };
 
   public static V3LcapMessage makeTestVoteMessage(PeerIdentity peer,
-                                                  File tempDir) {
+                                                  File tempDir) 
+      throws IOException {
     return makeTestVoteMessage(peer, null, tempDir);
   }
 
   public static V3LcapMessage makeTestVoteMessage(PeerIdentity peer,
 						  Collection voteBlocks,
-                                                  File tempDir) {
+                                                  File tempDir)
+      throws IOException {
     V3LcapMessage msg = new V3LcapMessage("ArchivalID_2", "key", "Plug42",
                                           ByteArray.makeRandomBytes(20),
                                           ByteArray.makeRandomBytes(20),
