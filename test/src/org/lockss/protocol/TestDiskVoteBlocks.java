@@ -4,6 +4,7 @@ import java.io.*;
 import java.util.*;
 
 import org.lockss.test.*;
+import org.lockss.util.*;
 
 
 public class TestDiskVoteBlocks extends LockssTestCase {
@@ -68,112 +69,49 @@ public class TestDiskVoteBlocks extends LockssTestCase {
   }
 
   /*
-   * Test method for 'org.lockss.protocol.DiskVoteBlocks.listIterator()'
+   * Test method for 'org.lockss.protocol.DiskVoteBlocks.iterator()'
    */
-  public void testListIterator() throws Exception {
+  public void testIterator() throws Exception {
     
     List voteBlockList = V3TestUtils.makeVoteBlockList(3);
     
     DiskVoteBlocks dvb = makeDiskVoteBlocks(voteBlockList);
     
-    ListIterator iter = dvb.listIterator();
-    
+    VoteBlocksIterator iter = dvb.iterator();
+
     // First
     assertTrue(iter.hasNext());
-    assertFalse(iter.hasPrevious());
-    assertEquals(0, iter.nextIndex());
-    assertEquals(-1, iter.previousIndex());
+    // Be sure peek works.
+    VoteBlock p1 = (VoteBlock)iter.peek();
+    VoteBlock p2 = (VoteBlock)iter.peek();
+    VoteBlock p3 = (VoteBlock)iter.peek();
     VoteBlock vb0 = (VoteBlock)iter.next();
+    assertEquals(p1, vb0);
+    assertEquals(p2, vb0);
+    assertEquals(p3, vb0);
     assertNotNull(vb0);
     assertEquals(vb0, (VoteBlock)voteBlockList.get(0));
     
     // Second
     assertTrue(iter.hasNext());
-    assertTrue(iter.hasPrevious());
-    assertEquals(1, iter.nextIndex());
-    assertEquals(0, iter.previousIndex());
     VoteBlock vb1 = (VoteBlock)iter.next();
     assertNotNull(vb1);
     assertEquals(vb1, (VoteBlock)voteBlockList.get(1));
     
     // Third
     assertTrue(iter.hasNext());
-    assertTrue(iter.hasPrevious());
-    assertEquals(2, iter.nextIndex());
-    assertEquals(1, iter.previousIndex());
     VoteBlock vb2 = (VoteBlock)iter.next();
     assertNotNull(vb2);
     assertEquals(vb2, (VoteBlock)voteBlockList.get(2));
     
     // Shouldn't be a next.
     assertFalse(iter.hasNext());
-    assertTrue(iter.hasPrevious());
-    assertEquals(3, iter.nextIndex());
-    assertEquals(2, iter.previousIndex());
 
     // Shouldn't increment
     assertNull(iter.next());
-    assertEquals(3, iter.nextIndex());
-    assertEquals(2, iter.previousIndex());
     assertNull(iter.next());
-    assertEquals(3, iter.nextIndex());
-    assertEquals(2, iter.previousIndex());
     assertNull(iter.next());
-    assertEquals(3, iter.nextIndex());
-    assertEquals(2, iter.previousIndex());
 
-    // Backtrack one.
-    VoteBlock vb3 = (VoteBlock)iter.previous();
-    assertNotNull(vb3);
-    assertEquals(2, iter.nextIndex());
-    assertEquals(1, iter.previousIndex());
-    assertEquals(vb3, (VoteBlock)voteBlockList.get(2));
-    
-    // Backtrack two.
-    VoteBlock vb4 = (VoteBlock)iter.previous();
-    assertNotNull(vb4);
-    assertEquals(1, iter.nextIndex());
-    assertEquals(0, iter.previousIndex());
-    assertEquals(vb4, (VoteBlock)voteBlockList.get(1));
-    
-    // Backtrack three.
-    VoteBlock vb5 = (VoteBlock)iter.previous();
-    assertNotNull(vb5);
-    assertEquals(0, iter.nextIndex());
-    assertEquals(-1, iter.previousIndex());
-    assertEquals(vb5, (VoteBlock)voteBlockList.get(0));
-    
-    // No previous.
-    assertFalse(iter.hasPrevious());
-    assertTrue(iter.hasNext());
-    
-    assertNull(iter.previous());
-    
-    assertEquals(0, iter.nextIndex());
-    assertEquals(-1, iter.previousIndex());
-    
-    // Ensure we can go forward and backward.
-    // Not implemented
-    try {
-      iter.add(new Object());
-      fail("Should have thrown UnsupportedOperationException");
-    } catch (UnsupportedOperationException ex) {
-      ; // expected
-    }
-    // Not implemented
-    try {
-      iter.remove();
-      fail("Should have thrown UnsupportedOperationException");
-    } catch (UnsupportedOperationException ex) {
-      ; // expected
-    }
-    // Not implemented
-    try {
-      iter.set(new Object());
-      fail("Should have thrown UnsupportedOperationException");
-    } catch (UnsupportedOperationException ex) {
-      ; // expected
-    }
   }
 
   /*

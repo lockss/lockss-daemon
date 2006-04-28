@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.9.2.1 2006-04-20 07:13:48 smorabito Exp $
+ * $Id: TestV3Poller.java,v 1.9.2.2 2006-04-28 07:06:42 smorabito Exp $
  */
 
 /*
@@ -188,7 +188,7 @@ public class TestV3Poller extends LockssTestCase {
     return msgs;
   }
 
-  private V3LcapMessage[] makeVoteMessages() {
+  private V3LcapMessage[] makeVoteMessages() throws IOException {
     V3LcapMessage[] msgs = new V3LcapMessage[voters.length];
     for (int i = 0; i < voters.length; i++) {
       V3LcapMessage msg = new V3LcapMessage("auid", "key", "1",

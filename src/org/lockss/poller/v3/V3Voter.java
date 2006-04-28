@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.15 2006-04-10 05:31:01 smorabito Exp $
+ * $Id: V3Voter.java,v 1.15.2.1 2006-04-28 07:06:42 smorabito Exp $
  */
 
 /*
@@ -372,7 +372,13 @@ public class V3Voter extends BasePoll {
                                  plainDigest,
                                  challengeDigest,
                                  VoteBlock.CONTENT_VOTE);
-    blocks.addVoteBlock(vb);
+    try {
+      blocks.addVoteBlock(vb);
+    } catch (IOException ex) {
+      log.critical("Unexpected IO Exception trying to add vote block.  " +
+                   "Aborting our participation.", ex);
+      abortPoll();
+    }
   }
 
   public void setMessage(LcapMessage msg) {

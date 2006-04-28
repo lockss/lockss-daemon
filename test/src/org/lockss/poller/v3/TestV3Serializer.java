@@ -176,12 +176,14 @@ public class TestV3Serializer extends LockssTestCase {
     return vsb;
   }
 
-  private ParticipantUserData makePollerUserData(V3PollerSerializer serializer) {
+  private ParticipantUserData makePollerUserData(V3PollerSerializer serializer)
+      throws IOException {
     return makePollerUserData("127.0.0.1:8080", serializer);
   }
 
   private ParticipantUserData makePollerUserData(String voterId,
-                                            V3PollerSerializer serializer) {
+                                                 V3PollerSerializer serializer)
+                                                 throws IOException {
     ParticipantUserData ud = new ParticipantUserData();
     PeerIdentity id = idManager.findPeerIdentity(voterId);
     ud.setVoterId(id);
@@ -209,7 +211,8 @@ public class TestV3Serializer extends LockssTestCase {
     return ud;
   }
 
-  private VoterUserData makeVoterUserData(V3VoterSerializer serializer) {
+  private VoterUserData makeVoterUserData(V3VoterSerializer serializer)
+      throws IOException {
     VoterUserData ud = new VoterUserData();
     ud.setAuId("mockAu");
     ud.setDeadline(10000);

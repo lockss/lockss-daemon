@@ -12,22 +12,58 @@ import org.lockss.util.*;
 
 public interface VoteBlocks extends LockssSerializable {
 
-  public void addVoteBlock(VoteBlock b);
+  /**
+   * Add a VoteBlock to this collection.
+   * 
+   * @param b VoteBlock to add.
+   */
+  public void addVoteBlock(VoteBlock b) throws IOException;
 
-  public ListIterator listIterator();
+  /**
+   * Return the VoteBlock at a given index.
+   * 
+   * @param The index of the VoteBlock to return.
+   * @return  The VoteBlock at the given index.
+   */
+  public VoteBlock getVoteBlock(int i) throws IOException;
   
+  /**
+   * <p>Get a representation of this collection suitable for streaming
+   * to a V3LcapMessage at encode time.</p>
+   * 
+   * <p>To be considered compatible with the encoded form of a V3LcapMessage,
+   * this method <b>must</b> guarantee that it returns a stream consisting
+   * of the following byte sequence, one per VoteBlock object:</p>
+   * 
+   * <ul>
+   *   <li><b>One Byte</b>: The length of the encoded VoteBlock</li>
+   *   <li><b><i>len</i> Bytes</b>: The result of calling <tt>getEncoded()</tt>
+   *   on the VoteBlock.</li>
+   * </ul>
+   * 
+   * @return An InputStream from which to read the encoded form of
+   *         this VoteBlock collection.
+   *
+   * @throws IOException  If an error occurs while opening the stream.
+   */
   public InputStream getInputStream() throws IOException;
 
-  public VoteBlock getVoteBlock(int i);
+  /**
+   * Obtain an iterator over the VoteBlocks collection.
+   * 
+   * @return An iterator representing the VoteBlocks.
+   */
+  public VoteBlocksIterator iterator();
 
+  /**
+   * Return the number of VoteBlock objects contained in this collection.
+   *
+   * @return The size of the VoteBlocks.
+   */
   public int size();
   
-  public void delete();
-
-  public static class NoSuchBlockException extends Exception {
-    NoSuchBlockException() { super(); }
-    NoSuchBlockException(String msg) { super(msg); }
-    NoSuchBlockException(Throwable t) { super(t); }
-    NoSuchBlockException(String msg, Throwable t) { super(msg, t); }
-  }
+  /**
+   * Ask the object to release resources it is holding.
+   */
+  public void release();
 }
