@@ -1143,7 +1143,7 @@ class TinyUiMalformedUrlTestCase(TinyUiTests):
 class TinyUiForbiddenTestCase(TinyUiTests):
     """ Test that a forbidden config fetch gets Tiny UI with the proper hint """
     def getTestUrl(self):
-        return "http://props.lockss.org:8001/daemon/forbidden/"
+        return "http://props.lockss.org:8001/daemon/forbidden.xml"
 
     def expectedPattern(self):
         return '403: Forbidden.*LOCKSS team.*access list'
