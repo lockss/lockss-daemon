@@ -204,6 +204,21 @@
         <property name="attributes.rights" value="openaccess" />
       </property>
 
+      <property name="SantaFePoetryBroadside2006">
+	<property name="title" value="Santa Fe Poetry Broadside 2006" />
+	<property name="journalTitle" value="Santa Fe Poetry Broadside" />
+	<property name="plugin" value="org.lockss.plugin.sfpoetrybroadside.SantaFePoetryBroadsidePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://sfpoetry.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2006" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
       <property name="SantaFePoetryBroadside2005">
 	<property name="title" value="Santa Fe Poetry Broadside 2005" />
 	<property name="journalTitle" value="Santa Fe Poetry Broadside" />
