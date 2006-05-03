@@ -1,5 +1,5 @@
 /*
- * $Id: TestXmlPropertyLoader.java,v 1.18 2005-12-02 22:59:20 smorabito Exp $
+ * $Id: TestXmlPropertyLoader.java,v 1.19 2006-05-03 03:22:42 smorabito Exp $
  */
 
 /*
@@ -170,24 +170,36 @@ public class TestXmlPropertyLoader extends LockssTestCase {
 
     props = new PropertyTree();
     istr = new ReaderInputStream(new StringReader(sb.toString()));
+    setVersions("1.13.1", "OpenBSD CD-200", "testhost", "dev");
+    m_xmlPropertyLoader.loadProperties(props, istr);
+    assertNull(props.getProperty("org.lockss.serialization.compatibilityMode"));
+
+    props = new PropertyTree();
+    istr = new ReaderInputStream(new StringReader(sb.toString()));
     setVersions("1.12.3", "OpenBSD CD-200", "testhost", "beta");
     m_xmlPropertyLoader.loadProperties(props, istr);
     assertEquals("1", props.getProperty("org.lockss.serialization.compatibilityMode"));
 
     props = new PropertyTree();
     istr = new ReaderInputStream(new StringReader(sb.toString()));
-    setVersions("1.13.1", "OpenBSD CD-200", "testhost", "dev");
+    setVersions("1.12.3", "OpenBSD CD-200", "testhost", "dev");
     m_xmlPropertyLoader.loadProperties(props, istr);
-    assertNull(props.getProperty("org.lockss.serialization.compatibilityMode"));
+    assertEquals("1", props.getProperty("org.lockss.serialization.compatibilityMode"));
 
+    props = new PropertyTree();
+    istr = new ReaderInputStream(new StringReader(sb.toString()));
+    setVersions("1.13.1", "OpenBSD CD-200", "testhost", "beta");
+    m_xmlPropertyLoader.loadProperties(props, istr);
+    assertEquals("1", props.getProperty("org.lockss.serialization.compatibilityMode"));
 
+    // This should be equivalent, implicit <and>
     sb = new StringBuffer();
     sb.append("<lockss-config>\n");
     sb.append("  <property name=\"org.lockss\">\n");
     sb.append("    <if>\n");
     sb.append("      <not>\n");
-    sb.append("        <test group=\"dev\" />\n");
     sb.append("        <test daemonVersionMin=\"1.13.0\"/>\n");
+    sb.append("        <test group=\"dev\"/>\n");
     sb.append("      </not>\n");
     sb.append("      <then>\n");
     sb.append("        <property name=\"serialization.compatibilityMode\" value=\"1\" />\n");
@@ -196,28 +208,43 @@ public class TestXmlPropertyLoader extends LockssTestCase {
     sb.append("  </property>\n");
     sb.append("</lockss-config>\n");
 
-    props = new PropertyTree();
-    istr = new ReaderInputStream(new StringReader(sb.toString()));
-    setVersions("1.12.3", "OpenBSD CD-200", "testhost", "beta");
-    m_xmlPropertyLoader.loadProperties(props, istr);
-    assertEquals("1", props.getProperty("org.lockss.serialization.compatibilityMode"));
-
+    // T T
     props = new PropertyTree();
     istr = new ReaderInputStream(new StringReader(sb.toString()));
     setVersions("1.13.1", "OpenBSD CD-200", "testhost", "dev");
     m_xmlPropertyLoader.loadProperties(props, istr);
     assertNull(props.getProperty("org.lockss.serialization.compatibilityMode"));
 
+    // F F
+    props = new PropertyTree();
+    istr = new ReaderInputStream(new StringReader(sb.toString()));
+    setVersions("1.12.3", "OpenBSD CD-200", "testhost", "beta");
+    m_xmlPropertyLoader.loadProperties(props, istr);
+    assertEquals("1", props.getProperty("org.lockss.serialization.compatibilityMode"));
 
-    // This should ALSO be equivalent!!
+    // F T
+    props = new PropertyTree();
+    istr = new ReaderInputStream(new StringReader(sb.toString()));
+    setVersions("1.12.3", "OpenBSD CD-200", "testhost", "dev");
+    m_xmlPropertyLoader.loadProperties(props, istr);
+    assertEquals("1", props.getProperty("org.lockss.serialization.compatibilityMode"));
+
+    // T F
+    props = new PropertyTree();
+    istr = new ReaderInputStream(new StringReader(sb.toString()));
+    setVersions("1.13.1", "OpenBSD CD-200", "testhost", "beta");
+    m_xmlPropertyLoader.loadProperties(props, istr);
+    assertEquals("1", props.getProperty("org.lockss.serialization.compatibilityMode"));
+
+    // This should be equivalent!!
     sb = new StringBuffer();
     sb.append("<lockss-config>\n");
     sb.append("  <property name=\"org.lockss\">\n");
     sb.append("    <if>\n");
     sb.append("      <not>\n");
     sb.append("        <and>\n");
-    sb.append("          <test group=\"dev\"/>\n");
     sb.append("          <test daemonVersionMin=\"1.13.0\"/>\n");
+    sb.append("          <test group=\"dev\"/>\n");
     sb.append("        </and>\n");
     sb.append("      </not>\n");
     sb.append("      <then>\n");
@@ -227,22 +254,322 @@ public class TestXmlPropertyLoader extends LockssTestCase {
     sb.append("  </property>\n");
     sb.append("</lockss-config>\n");
 
-    log.info("*** Questionable test, run 1: ");
-    props = new PropertyTree();
-    istr = new ReaderInputStream(new StringReader(sb.toString()));
-    setVersions("1.12.3", "OpenBSD CD-200", "testhost", "beta");
-    m_xmlPropertyLoader.loadProperties(props, istr);
-    assertEquals("1", props.getProperty("org.lockss.serialization.compatibilityMode"));
-
-    log.info("*** Questionable test, run 2: ");
+    // T T
     props = new PropertyTree();
     istr = new ReaderInputStream(new StringReader(sb.toString()));
     setVersions("1.13.1", "OpenBSD CD-200", "testhost", "dev");
     m_xmlPropertyLoader.loadProperties(props, istr);
     assertNull(props.getProperty("org.lockss.serialization.compatibilityMode"));
 
-  }
+    // F F
+    props = new PropertyTree();
+    istr = new ReaderInputStream(new StringReader(sb.toString()));
+    setVersions("1.12.3", "OpenBSD CD-200", "testhost", "beta");
+    m_xmlPropertyLoader.loadProperties(props, istr);
+    assertEquals("1", props.getProperty("org.lockss.serialization.compatibilityMode"));
 
+    // F T
+    props = new PropertyTree();
+    istr = new ReaderInputStream(new StringReader(sb.toString()));
+    setVersions("1.12.3", "OpenBSD CD-200", "testhost", "dev");
+    m_xmlPropertyLoader.loadProperties(props, istr);
+    assertEquals("1", props.getProperty("org.lockss.serialization.compatibilityMode"));
+
+    // T F
+    props = new PropertyTree();
+    istr = new ReaderInputStream(new StringReader(sb.toString()));
+    setVersions("1.13.1", "OpenBSD CD-200", "testhost", "beta");
+    m_xmlPropertyLoader.loadProperties(props, istr);
+    assertEquals("1", props.getProperty("org.lockss.serialization.compatibilityMode"));
+  }
+  
+  public void testExplicitAndCombinatorics() throws Exception {
+    PropertyTree props;
+    InputStream istr;
+    StringBuffer sb;
+
+    sb = new StringBuffer();
+    sb.append("<lockss-config>\n");
+    sb.append("  <if>\n");
+    sb.append("    <and>\n");
+    sb.append("      <test platformVersion=\"200\" />\n");
+    sb.append("      <test group=\"dev\" />\n");
+    sb.append("    </and>\n");
+    sb.append("   <then>\n");
+    sb.append("      <property name=\"test\" value=\"foo\" />\n");
+    sb.append("    </then>\n");
+    sb.append("    <else>\n");
+    sb.append("      <property name=\"test\" value=\"bar\" />\n");
+    sb.append("    </else>\n");
+    sb.append("  </if>\n");
+    sb.append("</lockss-config>\n");
+
+    // T T
+    props = new PropertyTree();
+    istr = new ReaderInputStream(new StringReader(sb.toString()));
+    setVersions("1.13.1", "OpenBSD CD-200", "testhost", "dev");
+    m_xmlPropertyLoader.loadProperties(props, istr);
+    assertEquals("foo", props.getProperty("test"));
+    
+    // T F
+    props = new PropertyTree();
+    istr = new ReaderInputStream(new StringReader(sb.toString()));
+    setVersions("1.13.1", "OpenBSD CD-200", "testhost", "beta");
+    m_xmlPropertyLoader.loadProperties(props, istr);
+    assertEquals("bar", props.getProperty("test"));
+    
+    // F T
+    props = new PropertyTree();
+    istr = new ReaderInputStream(new StringReader(sb.toString()));
+    setVersions("1.13.1", "OpenBSD CD-500", "testhost", "dev");
+    m_xmlPropertyLoader.loadProperties(props, istr);
+    assertEquals("bar", props.getProperty("test"));
+    
+    // F F
+    props = new PropertyTree();
+    istr = new ReaderInputStream(new StringReader(sb.toString()));
+    setVersions("1.13.1", "OpenBSD CD-500", "testhost", "beta");
+    m_xmlPropertyLoader.loadProperties(props, istr);
+    assertEquals("bar", props.getProperty("test"));
+  }
+  
+  public void testImplicitAndCombinatorics() throws Exception {
+    PropertyTree props;
+    InputStream istr;
+    StringBuffer sb;
+
+    sb = new StringBuffer();
+    sb.append("<lockss-config>\n");
+    sb.append("  <if>\n");
+    sb.append("    <test platformVersion=\"200\" />\n");
+    sb.append("    <test group=\"dev\" />\n");
+    sb.append("    <then>\n");
+    sb.append("      <property name=\"test\" value=\"foo\" />\n");
+    sb.append("    </then>\n");
+    sb.append("    <else>\n");
+    sb.append("      <property name=\"test\" value=\"bar\" />\n");
+    sb.append("    </else>\n");
+    sb.append("  </if>\n");
+    sb.append("</lockss-config>\n");
+
+    // T T
+    props = new PropertyTree();
+    istr = new ReaderInputStream(new StringReader(sb.toString()));
+    setVersions("1.13.1", "OpenBSD CD-200", "testhost", "dev");
+    m_xmlPropertyLoader.loadProperties(props, istr);
+    assertEquals("foo", props.getProperty("test"));
+    
+    // T F
+    props = new PropertyTree();
+    istr = new ReaderInputStream(new StringReader(sb.toString()));
+    setVersions("1.13.1", "OpenBSD CD-200", "testhost", "beta");
+    m_xmlPropertyLoader.loadProperties(props, istr);
+    assertEquals("bar", props.getProperty("test"));
+    
+    // F T
+    props = new PropertyTree();
+    istr = new ReaderInputStream(new StringReader(sb.toString()));
+    setVersions("1.13.1", "OpenBSD CD-500", "testhost", "dev");
+    m_xmlPropertyLoader.loadProperties(props, istr);
+    assertEquals("bar", props.getProperty("test"));
+    
+    // F F
+    props = new PropertyTree();
+    istr = new ReaderInputStream(new StringReader(sb.toString()));
+    setVersions("1.13.1", "OpenBSD CD-500", "testhost", "beta");
+    m_xmlPropertyLoader.loadProperties(props, istr);
+    assertEquals("bar", props.getProperty("test"));
+  }
+  
+  public void testOrCombinatorics() throws Exception {
+    PropertyTree props;
+    InputStream istr;
+    StringBuffer sb;
+
+    sb = new StringBuffer();
+    sb.append("<lockss-config>\n");
+    sb.append("  <if>\n");
+    sb.append("    <or>\n");
+    sb.append("      <test platformVersion=\"200\" />\n");
+    sb.append("      <test group=\"dev\" />\n");
+    sb.append("    </or>\n");
+    sb.append("    <then>\n");
+    sb.append("      <property name=\"test\" value=\"foo\" />\n");
+    sb.append("    </then>\n");
+    sb.append("    <else>\n");
+    sb.append("      <property name=\"test\" value=\"bar\" />\n");
+    sb.append("    </else>\n");
+    sb.append("  </if>\n");
+    sb.append("</lockss-config>\n");
+
+    // T T
+    props = new PropertyTree();
+    istr = new ReaderInputStream(new StringReader(sb.toString()));
+    setVersions("1.13.1", "OpenBSD CD-200", "testhost", "dev");
+    m_xmlPropertyLoader.loadProperties(props, istr);
+    assertEquals("foo", props.getProperty("test"));
+    
+    // T F
+    props = new PropertyTree();
+    istr = new ReaderInputStream(new StringReader(sb.toString()));
+    setVersions("1.13.1", "OpenBSD CD-200", "testhost", "beta");
+    m_xmlPropertyLoader.loadProperties(props, istr);
+    assertEquals("foo", props.getProperty("test"));
+    
+    // F T
+    props = new PropertyTree();
+    istr = new ReaderInputStream(new StringReader(sb.toString()));
+    setVersions("1.13.1", "OpenBSD CD-500", "testhost", "dev");
+    m_xmlPropertyLoader.loadProperties(props, istr);
+    assertEquals("foo", props.getProperty("test"));
+    
+    // F F
+    props = new PropertyTree();
+    istr = new ReaderInputStream(new StringReader(sb.toString()));
+    setVersions("1.13.1", "OpenBSD CD-500", "testhost", "beta");
+    m_xmlPropertyLoader.loadProperties(props, istr);
+    assertEquals("bar", props.getProperty("test"));
+  }
+  
+  public void testSimpleNot() throws Exception {
+    PropertyTree props;
+    InputStream istr;
+    StringBuffer sb;
+
+    sb = new StringBuffer();
+    sb.append("<lockss-config>\n");
+    sb.append("  <if>\n");
+    sb.append("    <not>\n");
+    sb.append("      <test platformVersion=\"200\" />\n");
+    sb.append("    </not>\n");
+    sb.append("    <then>\n");
+    sb.append("      <property name=\"test\" value=\"foo\" />\n");
+    sb.append("    </then>\n");
+    sb.append("    <else>\n");
+    sb.append("      <property name=\"test\" value=\"bar\" />\n");
+    sb.append("    </else>\n");
+    sb.append("  </if>\n");
+    sb.append("</lockss-config>\n");
+    
+    // F
+    props = new PropertyTree();
+    istr = new ReaderInputStream(new StringReader(sb.toString()));
+    setVersions("1.13.1", "OpenBSD CD-500", "testhost", "beta");
+    m_xmlPropertyLoader.loadProperties(props, istr);
+    assertEquals("foo", props.getProperty("test"));
+    
+    // T
+    props = new PropertyTree();
+    istr = new ReaderInputStream(new StringReader(sb.toString()));
+    setVersions("1.13.1", "OpenBSD CD-200", "testhost", "beta");
+    m_xmlPropertyLoader.loadProperties(props, istr);
+    assertEquals("bar", props.getProperty("test"));
+  }
+  
+  public void testNotWithAnd() throws Exception {
+    PropertyTree props;
+    InputStream istr;
+    StringBuffer sb;
+
+    sb = new StringBuffer();
+    sb.append("<lockss-config>\n");
+    sb.append("  <if>\n");
+    sb.append("    <not>\n");
+    sb.append("      <and>\n");
+    sb.append("        <test platformVersion=\"200\" />\n");
+    sb.append("        <test group=\"dev\" />\n");
+    sb.append("      </and>\n");
+    sb.append("    </not>\n");
+    sb.append("    <then>\n");
+    sb.append("      <property name=\"test\" value=\"foo\" />\n");
+    sb.append("    </then>\n");
+    sb.append("    <else>\n");
+    sb.append("      <property name=\"test\" value=\"bar\" />\n");
+    sb.append("    </else>\n");
+    sb.append("  </if>\n");
+    sb.append("</lockss-config>\n");
+    
+    // T T
+    props = new PropertyTree();
+    istr = new ReaderInputStream(new StringReader(sb.toString()));
+    setVersions("1.13.1", "OpenBSD CD-200", "testhost", "dev");
+    m_xmlPropertyLoader.loadProperties(props, istr);
+    assertEquals("bar", props.getProperty("test"));
+    
+    // T F
+    props = new PropertyTree();
+    istr = new ReaderInputStream(new StringReader(sb.toString()));
+    setVersions("1.13.1", "OpenBSD CD-200", "testhost", "beta");
+    m_xmlPropertyLoader.loadProperties(props, istr);
+    assertEquals("foo", props.getProperty("test"));
+    
+    // F T
+    props = new PropertyTree();
+    istr = new ReaderInputStream(new StringReader(sb.toString()));
+    setVersions("1.13.1", "OpenBSD CD-500", "testhost", "dev");
+    m_xmlPropertyLoader.loadProperties(props, istr);
+    assertEquals("foo", props.getProperty("test"));
+    
+    // T F
+    props = new PropertyTree();
+    istr = new ReaderInputStream(new StringReader(sb.toString()));
+    setVersions("1.13.1", "OpenBSD CD-500", "testhost", "beta");
+    m_xmlPropertyLoader.loadProperties(props, istr);
+    assertEquals("foo", props.getProperty("test"));
+  }
+  
+  public void testNotWithOr() throws Exception {
+    PropertyTree props;
+    InputStream istr;
+    StringBuffer sb;
+
+    sb = new StringBuffer();
+    sb.append("<lockss-config>\n");
+    sb.append("  <if>\n");
+    sb.append("    <not>\n");
+    sb.append("      <or>\n");
+    sb.append("        <test platformVersion=\"200\" />\n");
+    sb.append("        <test group=\"dev\" />\n");
+    sb.append("      </or>\n");
+    sb.append("    </not>\n");
+    sb.append("    <then>\n");
+    sb.append("      <property name=\"test\" value=\"foo\" />\n");
+    sb.append("    </then>\n");
+    sb.append("    <else>\n");
+    sb.append("      <property name=\"test\" value=\"bar\" />\n");
+    sb.append("    </else>\n");
+    sb.append("  </if>\n");
+    sb.append("</lockss-config>\n");
+    
+    // T T
+    props = new PropertyTree();
+    istr = new ReaderInputStream(new StringReader(sb.toString()));
+    setVersions("1.13.1", "OpenBSD CD-200", "testhost", "dev");
+    m_xmlPropertyLoader.loadProperties(props, istr);
+    assertEquals("bar", props.getProperty("test"));
+    
+    // T F
+    props = new PropertyTree();
+    istr = new ReaderInputStream(new StringReader(sb.toString()));
+    setVersions("1.13.1", "OpenBSD CD-200", "testhost", "beta");
+    m_xmlPropertyLoader.loadProperties(props, istr);
+    assertEquals("bar", props.getProperty("test"));
+    
+    // F T
+    props = new PropertyTree();
+    istr = new ReaderInputStream(new StringReader(sb.toString()));
+    setVersions("1.13.1", "OpenBSD CD-500", "testhost", "dev");
+    m_xmlPropertyLoader.loadProperties(props, istr);
+    assertEquals("bar", props.getProperty("test"));
+    
+    // T F
+    props = new PropertyTree();
+    istr = new ReaderInputStream(new StringReader(sb.toString()));
+    setVersions("1.13.1", "OpenBSD CD-500", "testhost", "beta");
+    m_xmlPropertyLoader.loadProperties(props, istr);
+    assertEquals("foo", props.getProperty("test"));
+  }
+  
   /**
    * Test basic non-nested property getting from the static config.
    */

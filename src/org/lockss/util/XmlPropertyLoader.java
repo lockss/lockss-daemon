@@ -1,5 +1,5 @@
 /*
- * $Id: XmlPropertyLoader.java,v 1.27 2005-12-02 22:59:20 smorabito Exp $
+ * $Id: XmlPropertyLoader.java,v 1.28 2006-05-03 03:22:42 smorabito Exp $
  */
 
 /*
@@ -115,7 +115,7 @@ public class XmlPropertyLoader {
   private static final class If {
     public boolean inThen = false;
     public boolean inElse = false;
-    public boolean evalIf = false;
+    public boolean evalIf = true;
   }
 
   /**
@@ -135,8 +135,8 @@ public class XmlPropertyLoader {
     // present) being evaluated.
     private Stack m_ifStack = new Stack();
 
-    // The current state of the test.
-    private boolean m_testEval = false;
+    // The state of the current test.  i.e.:
+    private boolean m_testEval = true;
 
     // When building a list of configuration values for a single key.
     private List m_propList = null;
@@ -336,6 +336,8 @@ public class XmlPropertyLoader {
 	curIf.evalIf = evaluateAttributes(attrs);
       }
       m_ifStack.push(curIf);
+      // Reset m_testEval
+      m_testEval = true;
     }
 
     /**
@@ -364,11 +366,8 @@ public class XmlPropertyLoader {
      * Handle encountering a starting "and" tag.
      */
     private void startAndTag() {
-      if (m_condStack.isEmpty()) {
-	((If)m_ifStack.peek()).evalIf = true; // 'and' expressions start out true
-      }
-
       m_condStack.push(TAG_AND);
+      m_testEval = true;
     }
 
     /**
@@ -376,9 +375,10 @@ public class XmlPropertyLoader {
      */
     private void startOrTag() {
       if (m_condStack.isEmpty()) {
-        ((If)m_ifStack.peek()).evalIf = false; // 'or' expressions start out false
+        // 'or' expressions start out false
+        ((If)m_ifStack.peek()).evalIf &= false;
       }
-
+      m_testEval = false;
       m_condStack.push(TAG_OR);
     }
 
@@ -386,10 +386,6 @@ public class XmlPropertyLoader {
      * Handle encountering a starting "not" tag.
      */
     private void startNotTag() {
-      if (m_condStack.isEmpty()) {
-        ((If)m_ifStack.peek()).evalIf = true;
-      }
-
       m_condStack.push(TAG_NOT);
     }
 
@@ -399,7 +395,14 @@ public class XmlPropertyLoader {
      */
     private void startTestTag(Attributes attrs) {
       if (attrs.getLength() > 0) {
-	m_testEval = evaluateAttributes(attrs);
+        // Find the curent conditional
+        if (m_condStack.isEmpty() ||
+            m_condStack.peek() == TAG_AND ||
+            m_condStack.peek() == TAG_NOT) {
+          m_testEval &= evaluateAttributes(attrs);
+        } else if (m_condStack.peek() == TAG_OR) {
+          m_testEval |= evaluateAttributes(attrs);
+        }
       }
     }
 
@@ -474,18 +477,6 @@ public class XmlPropertyLoader {
       m_charBuffer = null;
     }
 
-//    /**
-//     * Handle encountering the end of a boolean conditional (AND or OR).
-//     */
-//    private void endCondTag() {
-//      m_condStack.pop();
-//
-//      // Handle nesting by conding with previous boolean level.
-//      if (!m_condStack.isEmpty()) {
-//	evalCurrentCondStackLevel();
-//      }
-//    }
-
     private void endAndTag() {
       m_condStack.pop();
 
@@ -507,17 +498,18 @@ public class XmlPropertyLoader {
       curIf.evalIf = !m_testEval;
     }
 
+    
     /**
      * Handle encountering the end of a "test" tag.
      */
     private void endTestTag() {
       if (m_condStack.isEmpty()) {
-	// If we're not in a conditional at all, this should be a single
-	// <test>, i.e. <if><test foo="bar"/><then>...</then></if>. Just
-	// apply the current test results
-	((If)m_ifStack.peek()).evalIf = m_testEval;
+        // If we're not in a conditional at all, this should be a single
+        // <test>, i.e. <if><test foo="bar"/><then>...</then></if>. Just
+        // apply the current test results
+        ((If)m_ifStack.peek()).evalIf &= m_testEval;
       } else {
-	applyTestToCurrentCondStackLevel();
+        applyTestToCurrentCondStackLevel();
       }
     }
 
@@ -526,9 +518,9 @@ public class XmlPropertyLoader {
       String cond = (String)m_condStack.peek();
       If curIf = (If)m_ifStack.peek();
       if (cond == TAG_AND) {
-	curIf.evalIf &= m_testEval;
+        curIf.evalIf &= m_testEval;
       } else if (cond == TAG_OR) {
-	curIf.evalIf |= m_testEval;
+        curIf.evalIf |= m_testEval;
       } else if (cond == TAG_NOT) {
         curIf.evalIf &= !m_testEval;
       }
