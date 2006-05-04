@@ -39,36 +39,23 @@
   <lockss-config>
   <!-- Titles -->
   <property name="org.lockss.title">
-    <property name="TheOncologist11">
-      <property name="title" value="The Oncologist Volume 11" />
-      <property name="journalTitle" value="The Oncologist" />
+    <!-- Begin Ready for beta -->
+    <!-- End Ready for beta -->
+
+    <!-- Begin no manifest -->
+    <property name="ClinicalChemistry524">
+      <property name="title" value="Clinical Chemistry Volume 524" />
+      <property name="journalTitle" value="Clinical Chemistry" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
-      <property name="estSize" value="280MB" />
       <property name="param.1">
 	<property name="key" value="base_url" />
-	<property name="value" value="http://theoncologist.alphamedpress.org/" />
+	<property name="value" value="http://www.clinchem.org/" />
       </property>
       <property name="param.2">
 	<property name="key" value="volume" />
-	<property name="value" value="11" />
+	<property name="value" value="524" />
       </property>
-      <property name="attributes.publisher" value="AlphaMed Press" />
-    </property>
-    
-    <property name="StemCells24">
-      <property name="title" value="Stem Cells Volume 24" />
-      <property name="journalTitle" value="Stem Cells" />
-      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
-      <property name="estSize" value="600MB" />
-      <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://stemcells.alphamedpress.org/" />
-      </property>
-      <property name="param.2">
-	<property name="key" value="volume" />
-	<property name="value" value="24" />
-      </property>
-      <property name="attributes.publisher" value="AlphaMed Press" />
+      <property name="attributes.publisher" value="American Association for Clinical Chemistry" />
     </property>
     
     <property name="AAPGrandRounds15">
@@ -131,49 +118,19 @@
       <property name="attributes.publisher" value="American Academy of Pediatrics" />
     </property>
     
-    <property name="PediatricsinReview27">
-      <property name="title" value="Pediatrics in Review Volume 27" />
-      <property name="journalTitle" value="Pediatrics in Review" />
+    <property name="JournalofUltrasoundinMedicine25">
+      <property name="title" value="Journal of Ultrasound in Medicine Volume 25" />
+      <property name="journalTitle" value="Journal of Ultrasound in Medicine" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
-	<property name="value" value="http://pedsinreview.aappublications.org/" />
+	<property name="value" value="http://www.jultrasoundmed.org/" />
       </property>
       <property name="param.2">
 	<property name="key" value="volume" />
-	<property name="value" value="27" />
+	<property name="value" value="25" />
       </property>
-      <property name="attributes.publisher" value="American Academy of Pediatrics" />
-    </property>
-    
-    <property name="ClinicalChemistry524">
-      <property name="title" value="Clinical Chemistry Volume 524" />
-      <property name="journalTitle" value="Clinical Chemistry" />
-      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
-      <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://www.clinchem.org/" />
-      </property>
-      <property name="param.2">
-	<property name="key" value="volume" />
-	<property name="value" value="524" />
-      </property>
-      <property name="attributes.publisher" value="American Association for Clinical Chemistry" />
-    </property>
-    
-    <property name="Science311">
-      <property name="title" value="Science Volume 311" />
-      <property name="journalTitle" value="Science" />
-      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
-      <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://www.sciencemag.org/" />
-      </property>
-      <property name="param.2">
-	<property name="key" value="volume" />
-	<property name="value" value="311" />
-      </property>
-      <property name="attributes.publisher" value="American Association for the Advancement of Science" />
+      <property name="attributes.publisher" value="American Institute of Ultrasound in Medicine" />
     </property>
     
     <property name="TheJournalofImmunology176">
@@ -191,21 +148,24 @@
       <property name="attributes.publisher" value="American Association of Immunologists" />
     </property>
     
-    <property name="TheJournaloftheAmericanDentalAssociation137">
-      <property name="title" value="The Journal of the American Dental Association Volume 137" />
-      <property name="journalTitle" value="The Journal of the American Dental Association" />
+    <property name="Science311">
+      <property name="title" value="Science Volume 311" />
+      <property name="journalTitle" value="Science" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
-	<property name="value" value="http://jada.ada.org/" />
+	<property name="value" value="http://www.sciencemag.org/" />
       </property>
       <property name="param.2">
 	<property name="key" value="volume" />
-	<property name="value" value="137" />
+	<property name="value" value="311" />
       </property>
-      <property name="attributes.publisher" value="American Dental Association" />
+      <property name="attributes.publisher" value="American Association for the Advancement of Science" />
     </property>
     
+    <!-- End no manifest -->
+
+    <!-- Begin no subscription -->
     <property name="ArteriosclerosisThrombosisandVascularBiology26">
       <property name="title" value="Arteriosclerosis, Thrombosis, and Vascular Biology Volume 26" />
       <property name="journalTitle" value="Arteriosclerosis, Thrombosis, and Vascular Biology" />
@@ -219,6 +179,100 @@
 	<property name="value" value="26" />
       </property>
       <property name="attributes.publisher" value="American Heart Association" />
+    </property>
+    
+    <property name="Physiology21">
+      <property name="title" value="Physiology Volume 21" />
+      <property name="journalTitle" value="Physiology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://physiologyonline.physiology.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="21" />
+      </property>
+      <property name="attributes.publisher" value="American Physiological Society" />
+    </property>
+    
+    <property name="PhysiologicalReviews86">
+      <property name="title" value="Physiological Reviews Volume 86" />
+      <property name="journalTitle" value="Physiological Reviews" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://physrev.physiology.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="86" />
+      </property>
+      <property name="attributes.publisher" value="American Physiological Society" />
+    </property>
+    
+    <!-- End no subscription -->
+
+    <property name="TheOncologist11">
+      <property name="title" value="The Oncologist Volume 11" />
+      <property name="journalTitle" value="The Oncologist" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="estSize" value="280MB" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://theoncologist.alphamedpress.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="11" />
+      </property>
+      <property name="attributes.publisher" value="AlphaMed Press" />
+    </property>
+    
+    <property name="StemCells24">
+      <property name="title" value="Stem Cells Volume 24" />
+      <property name="journalTitle" value="Stem Cells" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="estSize" value="600MB" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://stemcells.alphamedpress.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="24" />
+      </property>
+      <property name="attributes.publisher" value="AlphaMed Press" />
+    </property>
+    
+    <property name="PediatricsinReview27">
+      <property name="title" value="Pediatrics in Review Volume 27" />
+      <property name="journalTitle" value="Pediatrics in Review" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://pedsinreview.aappublications.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="27" />
+      </property>
+      <property name="attributes.publisher" value="American Academy of Pediatrics" />
+    </property>
+    
+    <property name="TheJournaloftheAmericanDentalAssociation137">
+      <property name="title" value="The Journal of the American Dental Association Volume 137" />
+      <property name="journalTitle" value="The Journal of the American Dental Association" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://jada.ada.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="137" />
+      </property>
+      <property name="attributes.publisher" value="American Dental Association" />
     </property>
     
     <property name="Circulation113">
@@ -279,21 +333,6 @@
 	<property name="value" value="37" />
       </property>
       <property name="attributes.publisher" value="American Heart Association" />
-    </property>
-    
-    <property name="JournalofUltrasoundinMedicine25">
-      <property name="title" value="Journal of Ultrasound in Medicine Volume 25" />
-      <property name="journalTitle" value="Journal of Ultrasound in Medicine" />
-      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
-      <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://www.jultrasoundmed.org/" />
-      </property>
-      <property name="param.2">
-	<property name="key" value="volume" />
-	<property name="value" value="25" />
-      </property>
-      <property name="attributes.publisher" value="American Institute of Ultrasound in Medicine" />
     </property>
     
     <property name="AdvancesinPhysiologyEducation30">
@@ -457,36 +496,6 @@
       <property name="param.2">
 	<property name="key" value="volume" />
 	<property name="value" value="25" />
-      </property>
-      <property name="attributes.publisher" value="American Physiological Society" />
-    </property>
-    
-    <property name="PhysiologicalReviews86">
-      <property name="title" value="Physiological Reviews Volume 86" />
-      <property name="journalTitle" value="Physiological Reviews" />
-      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
-      <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://physrev.physiology.org/" />
-      </property>
-      <property name="param.2">
-	<property name="key" value="volume" />
-	<property name="value" value="86" />
-      </property>
-      <property name="attributes.publisher" value="American Physiological Society" />
-    </property>
-    
-    <property name="Physiology21">
-      <property name="title" value="Physiology Volume 21" />
-      <property name="journalTitle" value="Physiology" />
-      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
-      <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://physiologyonline.physiology.org/" />
-      </property>
-      <property name="param.2">
-	<property name="key" value="volume" />
-	<property name="value" value="21" />
       </property>
       <property name="attributes.publisher" value="American Physiological Society" />
     </property>
@@ -1016,17 +1025,32 @@
       <property name="attributes.publisher" value="American Society for Pharmacology and Experimental Therapeutics" />
     </property>
     
-    <property name="AmericanSocietyofPlantBiologistshttp://www.plantphysiol.org/">
-      <property name="title" value=" American Society of Plant Biologists Volume http://www.plantphysiol.org/" />
-      <property name="journalTitle" value=" American Society of Plant Biologists" />
+    <property name="PlantPhysiology140">
+      <property name="title" value="Plant Physiology Volume 140" />
+      <property name="journalTitle" value="Plant Physiology" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
-	<property name="value" value="Plant Physiology" />
+	<property name="value" value="http://www.plantphysiol.org/" />
       </property>
       <property name="param.2">
 	<property name="key" value="volume" />
-	<property name="value" value="http://www.plantphysiol.org/" />
+	<property name="value" value="140" />
+      </property>
+      <property name="attributes.publisher" value="American Society of Plant Biologists" />
+    </property>
+
+    <property name="BiophysicalJournal90">
+      <property name="title" value="Biophysical Journal Volume 90" />
+      <property name="journalTitle" value="Biophysical Journal" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.biophysj.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="90" />
       </property>
       <property name="attributes.publisher" value="American Society of Plant Biologists" />
     </property>
