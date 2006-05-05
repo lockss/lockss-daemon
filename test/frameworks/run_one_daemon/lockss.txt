@@ -60,3 +60,5 @@ org.lockss.daemon.exit=false
 org.lockss.proxy.icp.enabled=true
 org.lockss.proxy.icp.port=3131
 
+org.lockss.crawler.startCrawlsInterval=5m
+org.lockss.crawler.threadPool.max=5
