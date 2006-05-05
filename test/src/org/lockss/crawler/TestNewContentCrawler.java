@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.46 2006-04-11 08:33:33 tlipkis Exp $
+ * $Id: TestNewContentCrawler.java,v 1.47 2006-05-05 22:46:23 troberts Exp $
  */
 
 /*
@@ -583,8 +583,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     crawler.doCrawl();
     Crawler.Status crawlStatus = crawler.getStatus();
 
-    assertEquals("Cannot fetch permission page on the second attempt :"
-		 +permissionPage,
+    assertEquals("Cannot fetch permission page.", 
 		 crawlStatus.getCrawlStatus());
     Map expectedErrors = MapUtil.map(permissionPage,
 				     "Cannot fetch permission page on the second attempt");

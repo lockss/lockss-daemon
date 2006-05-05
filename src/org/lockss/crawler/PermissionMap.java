@@ -1,5 +1,5 @@
 /*
- * $Id: PermissionMap.java,v 1.10 2006-04-23 05:50:34 tlipkis Exp $
+ * $Id: PermissionMap.java,v 1.11 2006-05-05 22:46:23 troberts Exp $
  */
 
 /*
@@ -214,7 +214,7 @@ public class PermissionMap {
       case PermissionRecord.PERMISSION_NOT_OK:
         logger.error("No permission statement is found at: " +
                      urlPermissionUrl);
-        crawlStatus.setCrawlError("No permission statement at: " + urlPermissionUrl);
+        crawlStatus.setCrawlError("No permission statement on manifest page.");
         //abort crawl or skip all the url with this host ?
         //currently we just ignore urls with this host.
         return false;
@@ -236,18 +236,18 @@ public class PermissionMap {
           } catch (MalformedURLException e){
             //XXX can we handle this better by centralizing the check of MalformedURL ?
             logger.error("Malformed urlPermissionUrl :" + urlPermissionUrl, e);
-            crawlStatus.setCrawlError("MalFormedUrl :" + urlPermissionUrl);
+            crawlStatus.setCrawlError("MalformedUrl :" + urlPermissionUrl);
             return false;
           }
           return checkHostPermission(url, false, crawlStatus);
         } else {
           logger.error("Cannot fetch permission page on the second attempt : " + urlPermissionUrl);
-          crawlStatus.setCrawlError("Cannot fetch permission page on the second attempt :" + urlPermissionUrl);
+          crawlStatus.setCrawlError("Cannot fetch permission page.");
           //abort crawl or skip all the url with this host?
           //currently we just ignore urls with this host.
           crawlStatus.signalErrorForUrl(urlPermissionUrl,
                                         "Cannot fetch permission page " +
-          "on the second attempt");
+					"on the second attempt");
           return false;
         }
       case PermissionRecord.REPOSITORY_ERROR:
