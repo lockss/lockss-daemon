@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE lockss-config [
+  <!ELEMENT lockss-config (if|property)+>
+  <!ELEMENT property (property|list|value|if)*>
+  <!ELEMENT list (value)+>
+  <!ELEMENT value (#PCDATA)>
+  <!ELEMENT test EMPTY>
+  <!ELEMENT and (and|or|not|test)*>
+  <!ELEMENT or (and|or|not|test)*>
+  <!ELEMENT not (and|or|not|test)*>
+  <!ELEMENT if (and|or|not|then|else|property)*>
+  <!ELEMENT then (property)*>
+  <!ELEMENT else (property)*>
+  <!ATTLIST property name CDATA #REQUIRED>
+  <!ATTLIST property value CDATA #IMPLIED>
+  <!ATTLIST test hostname CDATA #IMPLIED>
+  <!ATTLIST test group CDATA #IMPLIED>
+  <!ATTLIST test daemonVersionMin CDATA #IMPLIED>
+  <!ATTLIST test daemonVersionMax CDATA #IMPLIED>
+  <!ATTLIST test daemonVersion CDATA #IMPLIED>
+  <!ATTLIST test platformVersionMin CDATA #IMPLIED>
+  <!ATTLIST test platformVersionMax CDATA #IMPLIED>
+  <!ATTLIST test platformVersion CDATA #IMPLIED>
+  <!ATTLIST if hostname CDATA #IMPLIED>
+  <!ATTLIST if group CDATA #IMPLIED>
+  <!ATTLIST if daemonVersionMin CDATA #IMPLIED>
+  <!ATTLIST if daemonVersionMax CDATA #IMPLIED>
+  <!ATTLIST if daemonVersion CDATA #IMPLIED>
+  <!ATTLIST if platformVersionMin CDATA #IMPLIED>
+  <!ATTLIST if platformVersionMax CDATA #IMPLIED>
+  <!ATTLIST if platformVersion CDATA #IMPLIED>
+]>
+
+<!-- LOCKSS & LCAP tuning parameters -->
+<!-- Common config for all test frameworks -->
+<!-- This is included in the list of prop files by all the run_xxx_daemon -->
+<!-- scripts -->
+
+  <lockss-config>
+  <!-- Titles -->
+  <property name="org.lockss.title">
+
+    <property name="JournaloftheAtmosphericSciences63">
+      <property name="title" value="Journal of the Atmospheric Sciences Volume 63" />
+      <property name="journalTitle" value="Journal of the Atmospheric Sciences" />
+      <property name="plugin" value="org.lockss.plugin.ams.AMSPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://ams.allenpress.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="1520-0469" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="volume" />
+	<property name="value" value="63" />
+      </property>
+    </property>
+  </property>
+
+</lockss-config>
