@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.86 2006-04-11 08:33:33 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.87 2006-05-05 22:46:03 troberts Exp $
  */
 
 /*
@@ -489,7 +489,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 		     PARAM_MAX_NEW_CONTENT_RATE,
 		     DEFAULT_MAX_NEW_CONTENT_RATE);
     if (!limiter.isEventOk()) {
-      logger.debug("New content aborted due to rate limiter.");
+      logger.debug("New content aborted due to rate limiter: "+au);
       callCallback(cb, cookie, false, null);
       return;
     }
@@ -501,7 +501,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     }
     if (lock == null) {
       logger.debug("Couldn't schedule new content crawl due "+
-		   "to activity lock.");
+		   "to activity lock: "+au);
       callCallback(cb, cookie, false, null);
       return;
     }
