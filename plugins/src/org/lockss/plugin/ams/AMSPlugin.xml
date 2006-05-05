@@ -1,0 +1,69 @@
+<map>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.ams.AMSPlugin</string>
+  </entry>
+  <entry>
+    <string>text/html_filter</string>
+    <string>org.lockss.plugin.bioone.BioOneFilterRule</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;AMS %s Volume %d&quot;, journal_id, volume</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>American Meteorological Society Plugin</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;%samsonline/\?request=get-archive&amp;issn=%s&amp;volume=%d&quot;, base_url, journal_id, volume</string>
+      <string>1,&quot;%samsonline/\?request=get-copyright&amp;issn=%s&amp;volume=%d&quot;, base_url, journal_id, volume</string>
+      <string>1,&quot;%samsonline/\?request=(get-author-index|get-toc)&amp;issn=%s&amp;volume=%d&amp;issue=[0-9]+&quot;, base_url, journal_id, volume</string>
+      <string>1,&quot;%simages/.*&quot;, base_url</string>
+      <string>1,&quot;%samsonline/\?request=(get-abstract|get-document).*&quot;, base_url</string>
+      <string>1,&quot;%spdfserv/.*&quot;, base_url</string>
+      <string>1,&quot;%samsonline/\?request=get-moreinfo&amp;issn=%s&quot;, base_url, journal_id</string>
+      <string>1,&quot;%scharent/.*&quot;, base_url</string>
+      <string>1,&quot;%sarchive/%s/%d/.*&quot;, base_url, journal_id, volume</string>
+      <string>1,&quot;%samsonline/\?request=display-figures&amp;name=i%s-%d-.*&quot;, base_url, journal_id, volume</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%samsonline/?request=get-archive&amp;issn=%s&amp;volume=%d&quot;, base_url, journal_id, volume</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume</key>
+        <displayName>Volume No.</displayName>
+        <type>6</type>
+        <size>8</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_id</key>
+        <displayName>Journal Identifier</displayName>
+        <description>Identifier for journal (often used as part of file names)</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+</map>
