@@ -132,6 +132,7 @@
 	<value>org.lockss.plugin.etd.pucrio.PUCRioPlugin</value>
 	<value>gov.gpo.access.permanent.plugin.amberwaves.Amber_WavesPlugin</value>
 	<value>gov.gpo.access.permanent.plugin.fbilawenforcementbulletin.FBI_Law_Enforcement_BulletinPlugin</value>
+	<value>org.lockss.plugin.ams.AMSPlugin</value>
       </list>
     </property>
 
@@ -162,6 +163,11 @@
 	<property name="name" value="All BioOne Titles" />
 	<property name="class" value="xpath" />
 	<property name="xpath" value="[pluginName='org.lockss.plugin.bioone.BioOnePlugin']" />
+      </property>
+      <property name="ams">
+	<property name="name" value="All AMS Titles" />
+	<property name="class" value="xpath" />
+	<property name="xpath" value="[pluginName='org.lockss.plugin.ams.AMSPlugin']" />
       </property>
       <property name="iop">
 	<property name="name" value="All IOP Titles" />
