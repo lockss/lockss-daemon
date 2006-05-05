@@ -776,67 +776,6 @@
 	</property>
       </property>
 
-      <property name="jhc52">
-	<property name="title" value="JHC Volume 52" />
-	<property name="estSize" value="290MB" />
-	<property name="journalTitle" value="JHC" />
-	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
-	<property name="param.1">
-	  <property name="key" value="base_url" />
-          <property name="value" value="http://www.jhc.org/" />
-	</property>
-	<property name="param.2">
-	  <property name="key" value="volume" />
-	  <property name="value" value="52" />
-	</property>
-      </property>
-
-
-      <property name="bloodjournal106">
-	<property name="title" value="Blood Volume 106" />
-	<property name="journalTitle" value="Blood" />
-	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
-	<property name="param.1">
-	  <property name="key" value="base_url" />
-	  <property name="value" value="http://www.bloodjournal.org/" />
-	</property>
-	<property name="param.2">
-	  <property name="key" value="volume" />
-	  <property name="value" value="106" />
-	</property>
-        <property name="attributes.publisher" value="Hematology" />
-      </property>
-
-      <property name="plantcell17">
-	<property name="title" value="Plant Cell Volume 17" />
-	<property name="journalTitle" value="Plant Cell" />
-	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
-	<property name="param.1">
-	  <property name="key" value="base_url" />
-	  <property name="value" value="http://www.plantcell.org/" />
-	</property>
-	<property name="param.2">
-	  <property name="key" value="volume" />
-	  <property name="value" value="17" />
-	</property>
-        <property name="attributes.publisher" value="AmericanSocietyofPlantBiologists" />
-      </property>
-
-      <property name="nejm352">
-	<property name="title" value="New England Journal of Medicine Volume 352" />
-	<property name="journalTitle" value="New England Journal of Medicine" />
-	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
-	<property name="param.1">
-	  <property name="key" value="base_url" />
-	  <property name="value" value="http://content.nejm.org/" />
-	</property>
-	<property name="param.2">
-	  <property name="key" value="volume" />
-	  <property name="value" value="352" />
-	</property>
-      </property>
-
-
       <property name="snde8">
 	<property name="title" value="Studies in Nonlinear Dynamics and Econometrics Volume 8" />
 	<property name="estSize" value="22MB" />
