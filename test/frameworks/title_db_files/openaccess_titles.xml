@@ -2356,26 +2356,6 @@
         <property name="attributes.rights" value="openaccess" />
       </property>
 
-      <property name="19thCAWW1">
-	<property name="title" value="19th Century Art Worldwide Volume 1" />
-	<property name="estSize" value="0.7MB" />
-	<property name="journalTitle" value="19th Century Art Worldwide" />
-	<property name="plugin" value="edu.princeton.plugin.ncaw.19thCenturyArtWorldwidePlugin" />
-	<property name="param.1">
-	  <property name="key" value="base_url" />
-	  <property name="value" value="http://19thc-artworldwide.org/" />
-	</property>
-	<property name="param.2">
-	  <property name="key" value="volume" />
-	  <property name="value" value="1" />
-	</property>
-	<property name="param.3">
-	  <property name="key" value="year" />
-	  <property name="value" value="2002" />
-	</property>
-        <property name="attributes.rights" value="openaccess" />
-      </property>
-
       <property name="nsr1">
 	<property name="title" value="MRS Internet Journal of Nitride Semiconductor Research Volume 1" />
 	<property name="journalTitle" value="MRS Internet Journal of Nitride Semiconductor Research" />
