@@ -927,6 +927,54 @@
       </property>
     </property>
 
+  <property name="BritishJournalofAesthetics46">
+    <property name="title" value="British Journal of Aesthetics Volume 46" />
+    <property name="journalTitle" value="British Journal of Aesthetics" />
+    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+    <property name="param.1">
+      <property name="key" value="base_url" />
+      <property name="value" value="http://bjaesthetics.oxfordjournals.org/" />
+    </property>
+    <property name="param.2">
+      <property name="key" value="volume" />
+      <property name="value" value="46" />
+    </property>
+    <property name="attributes.publisher" value="oup" />
+  </property>
+
+
+  <property name="JournalofAntimicrobialChemotherapy57">
+    <property name="title" value="Journal of Antimicrobial Chemotherapy Volume 57" />
+    <property name="journalTitle" value="Journal of Antimicrobial Chemotherapy" />
+    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+    <property name="param.1">
+      <property name="key" value="base_url" />
+      <property name="value" value="http://jac.oxfordjournals.org/" />
+    </property>
+    <property name="param.2">
+      <property name="key" value="volume" />
+      <property name="value" value="57" />
+    </property>
+    <property name="attributes.publisher" value="oup" />
+  </property>
+
+  <property name="TheJournalofBiochemistry139">
+    <property name="title" value="The Journal of Biochemistry Volume 139" />
+    <property name="journalTitle" value="" />
+    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+    <property name="param.1">
+      <property name="key" value="base_url" />
+      <property name="value" value="http://jb.oxfordjournals.org/" />
+    </property>
+    <property name="param.2">
+      <property name="key" value="volume" />
+      <property name="value" value="139" />
+    </property>
+    <property name="attributes.publisher" value="oup" />
+  </property>
+
+
+
       <!-- Start down titles -->
       <property name="JournalofEnvironmentalLaw17">
 	<property name="title" value="Journal of Environmental Law Volume 17" />
