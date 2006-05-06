@@ -1,5 +1,5 @@
 /*
- * $Id: Deadline.java,v 1.36 2005-09-06 23:24:53 thib_gc Exp $
+ * $Id: Deadline.java,v 1.37 2006-05-06 17:28:13 tlipkis Exp $
  */
 
 /*
@@ -50,7 +50,7 @@ public class Deadline implements Comparable, LockssSerializable {
   private static LockssRandom random = null;
   protected Date expiration;
   protected long duration;		// only for testing
-  private List subscribers;		// those who wish to be notified
+  private transient List subscribers;	// those who wish to be notified
 					// if/when this Deadline's duration
 					// changes
 
