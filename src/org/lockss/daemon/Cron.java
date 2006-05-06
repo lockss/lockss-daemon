@@ -1,5 +1,5 @@
 /*
- * $Id: Cron.java,v 1.6 2006-03-06 17:47:05 tlipkis Exp $
+ * $Id: Cron.java,v 1.7 2006-05-06 17:25:17 tlipkis Exp $
  *
 
 Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
@@ -275,7 +275,11 @@ public class Cron
     // return the first day of the next week
     public long nextWeek(long lastTime) {
       int day = Calendar.MONDAY;
-      Calendar cal = Calendar.getInstance(Constants.DEFAULT_TIMEZONE);
+      // calculations below are dependent on calendar's firstDayOfWeek,
+      // etc. values, which vary in different locales.  Ensure we're using
+      // expected Locale
+      Calendar cal = Calendar.getInstance(Constants.DEFAULT_TIMEZONE,
+					  Locale.US);
       cal.setTimeInMillis(lastTime);
       if (cal.get(Calendar.DAY_OF_WEEK) >= day) {
 	cal.add(Calendar.WEEK_OF_MONTH, 1);
@@ -290,7 +294,8 @@ public class Cron
     // return the first day of the next month
     public long nextMonth(long lastTime) {
       int day = 1;
-      Calendar cal = Calendar.getInstance(Constants.DEFAULT_TIMEZONE);
+      Calendar cal = Calendar.getInstance(Constants.DEFAULT_TIMEZONE,
+					  Locale.US);
       cal.setTimeInMillis(lastTime);
       if (cal.get(Calendar.DAY_OF_MONTH) >= day) {
 	cal.add(Calendar.MONTH, 1);
