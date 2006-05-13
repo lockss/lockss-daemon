@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.86 2006-04-11 08:33:33 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.86.2.1 2006-05-13 23:08:38 tlipkis Exp $
  */
 
 /*
@@ -511,9 +511,9 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       crawler = makeNewContentCrawler(au, spec);
       CrawlRunner runner =
 	new CrawlRunner(crawler, cb, cookie, SetUtil.set(lock), limiter);
-      addToStatusList(crawler.getStatus());
       addToRunningCrawls(au, crawler);
       execute(runner);
+      addToStatusList(crawler.getStatus());
     } catch (RuntimeException e) {
       logger.warning("Couldn't start/schedule " + au + " crawl: " +
 		     e.toString());
@@ -721,7 +721,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 			   " is a registry, adding callback.");
 	      rc = new PluginManager.RegistryCallback(pluginMgr, au);
 	    }
-	    startNewContentCrawl(au, null, null, null);
+	    startNewContentCrawl(au, rc, null, null);
 	  }
 	  if (poolQueue.capacity() == poolQueue.size()) {
 	    break;
