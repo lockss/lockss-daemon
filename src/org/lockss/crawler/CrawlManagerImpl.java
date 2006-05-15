@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.87 2006-05-05 22:46:03 troberts Exp $
+ * $Id: CrawlManagerImpl.java,v 1.88 2006-05-15 00:11:55 tlipkis Exp $
  */
 
 /*
@@ -92,11 +92,6 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     PREFIX + "queue.enabled";
   static final boolean DEFAULT_CRAWLER_QUEUE_ENABLED = true;
 
-  /** Min threads in crawler thread pool. */
-  public static final String PARAM_CRAWLER_THREAD_POOL_MIN =
-    PREFIX + "threadPool.min";
-  static final int DEFAULT_CRAWLER_THREAD_POOL_MIN = 15;
-
   /** Max threads in crawler thread pool. */
   public static final String PARAM_CRAWLER_THREAD_POOL_MAX =
     PREFIX + "threadPool.max";
@@ -119,19 +114,30 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     PREFIX + "startCrawlsInterval";
   static final long DEFAULT_START_CRAWLS_INTERVAL = 1 * Constants.HOUR;
 
-  /** Interval at which we check AUs to see if they need a new content
-   * crawl. */
+  /** Initial delay after AUs started before crawl starter first runs. */
   public static final String PARAM_START_CRAWLS_INITIAL_DELAY =
     PREFIX + "startCrawlsInitialDelay";
   static final long DEFAULT_START_CRAWLS_INITIAL_DELAY = 2 * Constants.MINUTE;
 
+  /** Maximum rate at which we will start repair crawls for any particular
+   * AU */
   public static final String PARAM_MAX_REPAIR_RATE =
     PREFIX + "maxRepairRate";
   public static final String DEFAULT_MAX_REPAIR_RATE = "50/1d";
 
+  /** Maximum rate at which we will start new content crawls for any
+   * particular AU */
   public static final String PARAM_MAX_NEW_CONTENT_RATE =
     PREFIX + "maxNewContentRate";
   public static final String DEFAULT_MAX_NEW_CONTENT_RATE = "1/18h";
+
+  /** Maximum rate at which we will start any new content crawl, to keep
+   * multiple crawls from starting at exactly the same time and all
+   * fatching in synch.  Should be one event per less than a second,
+   * relatively prime to fetch delay. */
+  public static final String PARAM_NEW_CONTENT_START_RATE =
+    PREFIX + "newContentStartRate";
+  public static final String DEFAULT_NEW_CONTENT_START_RATE = "1/730";
 
   /** Number of most recent crawls for which status will be available.
    * This must be at larger than the thread pool + queue size or status
@@ -162,7 +168,6 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   private float percentRepairFromCache;
   private boolean crawlerEnabled = DEFAULT_CRAWLER_ENABLED;
   private boolean paramQueueEnabled = DEFAULT_CRAWLER_QUEUE_ENABLED;
-  private int paramMinPoolSize = DEFAULT_CRAWLER_THREAD_POOL_MIN;
   private int paramMaxPoolSize = DEFAULT_CRAWLER_THREAD_POOL_MAX;
   private int paramPoolQueueSize = DEFAULT_CRAWLER_THREAD_POOL_QUEUE_SIZE;
   private long paramPoolKeepaliveTime = DEFAULT_CRAWLER_THREAD_POOL_KEEPALIVE;
@@ -171,6 +176,8 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     DEFAULT_START_CRAWLS_INITIAL_DELAY;
   private Map repairRateLimiters = new HashMap();
   private Map newContentRateLimiters = new HashMap();
+  private RateLimiter newContentStartRateLimiter;
+
   private AuEventHandler auEventHandler;
 
   PooledExecutor pool;
@@ -204,13 +211,18 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       poolQueue = null;
       pool = new PooledExecutor(paramMaxPoolSize);
     }
-    pool.setMinimumPoolSize(paramMinPoolSize);
+    // Thread pool favors queueing once min threads exist, so must set min
+    // threads equal to max threads
+    pool.setMinimumPoolSize(paramMaxPoolSize);
     pool.setKeepAliveTime(paramPoolKeepaliveTime);
     pool.abortWhenBlocked();
     logger.debug2("Crawler thread pool min, max, queuelen: " +
 		  pool.getMinimumPoolSize() + ", " +
 		  pool.getMaximumPoolSize() + ", " +
 		  (poolQueue != null ? poolQueue.capacity() : 0));
+    if (paramStartCrawlsInterval > 0) {
+      enableCrawlStarter();
+    }
   }
 
   /**
@@ -256,14 +268,12 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 			  DEFAULT_CRAWLER_QUEUE_ENABLED);
       paramMaxPoolSize = config.getInt(PARAM_CRAWLER_THREAD_POOL_MAX,
 				       DEFAULT_CRAWLER_THREAD_POOL_MAX);
-      paramMinPoolSize = config.getInt(PARAM_CRAWLER_THREAD_POOL_MIN,
-				       paramMaxPoolSize);
       paramPoolKeepaliveTime =
 	config.getTimeInterval(PARAM_CRAWLER_THREAD_POOL_KEEPALIVE,
 			       DEFAULT_CRAWLER_THREAD_POOL_KEEPALIVE);
       if (pool != null) {
 	pool.setMaximumPoolSize(paramMaxPoolSize);
-	pool.setMinimumPoolSize(paramMinPoolSize);
+	pool.setMinimumPoolSize(paramMaxPoolSize);
 	pool.setKeepAliveTime(paramPoolKeepaliveTime);
       }
       paramPoolQueueSize =
@@ -281,7 +291,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 	  config.getTimeInterval(PARAM_START_CRAWLS_INTERVAL,
 				 DEFAULT_START_CRAWLS_INTERVAL);
 	if (paramStartCrawlsInterval > 0) {
-	  if (isCrawlStarterEnabled && theApp.isAppRunning()) {
+	  if (theApp.isAppRunning()) {
 	    enableCrawlStarter();
 	  }
 	} else {
@@ -299,6 +309,13 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 			  PARAM_MAX_NEW_CONTENT_RATE,
 			  DEFAULT_MAX_NEW_CONTENT_RATE);
       }
+      if (changedKeys.contains(PARAM_NEW_CONTENT_START_RATE)) {
+	newContentStartRateLimiter =
+	  RateLimiter.getConfiguredRateLimiter(config,
+					       newContentStartRateLimiter,
+					       PARAM_NEW_CONTENT_START_RATE,
+					       DEFAULT_NEW_CONTENT_START_RATE);
+      }
       if (changedKeys.contains(PARAM_HISTORY_MAX) ) {
 	int cMax = config.getInt(PARAM_HISTORY_MAX, DEFAULT_HISTORY_MAX);
 	cmStatus.setHistSize(cMax);
@@ -312,7 +329,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
    * @throws InterruptedException
    * @throws RuntimeException if no pool thread or queue space is available
    */
-  void execute(Runnable run) {
+  protected void execute(Runnable run) {
     try {
       pool.execute(run);
       if (logger.isDebug3()) logger.debug3("Queued/started " + run);
@@ -465,9 +482,9 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       }
       if (lock != null) {
         locks.put(url, lock);
-        logger.debug3("Locked "+url);
+        if (logger.isDebug3()) logger.debug3("Locked "+url);
       } else {
-        logger.debug3("Couldn't lock "+url);
+        if (logger.isDebug3()) logger.debug3("Couldn't lock "+url);
       }
     }
     return locks;
@@ -510,13 +527,24 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       CrawlSpec spec = au.getCrawlSpec();
       crawler = makeNewContentCrawler(au, spec);
       CrawlRunner runner =
-	new CrawlRunner(crawler, cb, cookie, SetUtil.set(lock), limiter);
-      addToStatusList(crawler.getStatus());
+	new CrawlRunner(crawler, cb, cookie, SetUtil.set(lock),
+			limiter, newContentStartRateLimiter);
+      // To avoid race, must add to running crawls before starting
+      // execution
       addToRunningCrawls(au, crawler);
       execute(runner);
+      // Add to status only if successfully queued or started.  (No race
+      // here; appearance in status might be delayed.)
+      addToStatusList(crawler.getStatus());
     } catch (RuntimeException e) {
-      logger.warning("Couldn't start/schedule " + au + " crawl: " +
-		     e.toString());
+      // thrown by pool if can't execute (pool & queue full, or poll full
+      // and no queue)
+      if (e.getMessage().endsWith("Pool is blocked")) {
+	logger.warning("Couldn't start/schedule " + au + " crawl: " +
+		       e.toString());
+      } else {
+	logger.warning("Couldn't start/schedule " + au + " crawl", e);
+      }
       logger.debug("Freeing crawl lock");
       lock.expire();
       removeFromRunningCrawls(crawler);
@@ -537,7 +565,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       try {
 	cb.signalCrawlAttemptCompleted(successful, null, cookie, status);
       } catch (Exception e) {
-	logger.error("Callback threw", e);
+	logger.error("Crawl callback threw", e);
       }
     }
   }
@@ -546,10 +574,10 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     NodeManager nodeManager = theDaemon.getNodeManager(au);
     //check CrawlSpec if it is Oai Type then create OaiCrawler Instead of NewContentCrawler
     if (spec instanceof OaiCrawlSpec) {
-      logger.debug("creating OaiCrawler : AU = " + au.toString());
+      logger.debug("Creating OaiCrawler for " + au);
       return new OaiCrawler(au, spec, nodeManager.getAuState());
     } else {
-      logger.debug("creating NewContentCrawler : AU = " + au.toString());
+      logger.debug("Creating NewContentCrawler for " + au);
       return new NewContentCrawler(au, spec, nodeManager.getAuState());
     }
   }
@@ -568,16 +596,26 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     private Crawler crawler;
     private CrawlManager.Callback cb;
     private Collection locks;
-    private RateLimiter limiter;
+    private RateLimiter auRateLimiter;
+    private RateLimiter startRateLimiter;
 
     private CrawlRunner(Crawler crawler, CrawlManager.Callback cb,
-			Object cookie, Collection locks, RateLimiter limiter) {
+			Object cookie, Collection locks,
+			RateLimiter auRateLimiter) {
+      this(crawler, cb, cookie, locks, auRateLimiter, null);
+    }
+
+    private CrawlRunner(Crawler crawler, CrawlManager.Callback cb,
+			Object cookie, Collection locks,
+			RateLimiter auRateLimiter,
+			RateLimiter startRateLimiter) {
       super(crawler.toString());
       this.cb = cb;
       this.cookie = cookie;
       this.crawler = crawler;
       this.locks = locks;
-      this.limiter = limiter;
+      this.auRateLimiter = auRateLimiter;
+      this.startRateLimiter = startRateLimiter;
     }
 
     public void lockssRun() {
@@ -595,11 +633,25 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 	  setPriority(PRIORITY_PARAM_CRAWLER, PRIORITY_DEFAULT_CRAWLER);
 	  crawler.setWatchdog(this);
 	  startWDog(WDOG_PARAM_CRAWLER, WDOG_DEFAULT_CRAWLER);
-	  if (limiter != null) {
-	    limiter.event();
+	  if (auRateLimiter != null) {
+	    auRateLimiter.event();
 	  }
 	  nowRunning();
 
+	  if (startRateLimiter != null) {
+	    // Use RateLimiter to ensure at least a small amount of time
+	    // between crawl starts, so they don't start out doing their
+	    // fetches in synch.  This imposes an arbitrary ordering on
+	    // crawl threads that are ready to start.
+	    synchronized (startRateLimiter) {
+	      startRateLimiter.waitUntilEventOk();
+	      instrumentBeforeStartRateLimiterEvent(crawler);
+	      startRateLimiter.event();
+	      if (logger.isDebug3()) {
+		logger.debug3("Proceeding from start rate limiter");
+	      }
+	    }
+	  }
 	  crawlSuccessful = crawler.doCrawl();
 
 	  if (crawler.isWholeAU()) {
@@ -610,19 +662,19 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 	    }
 	  }
 	}
+      } catch (InterruptedException ignore) {
+	// no action
       } finally {
         // free all locks, regardless of exceptions
         if (locks != null) {
 	  try {
-	    Iterator lockIt = locks.iterator();
-	    while (lockIt.hasNext()) {
-	      // loop through expiring all locks
+	    for (Iterator lockIt = locks.iterator(); lockIt.hasNext(); ) {
 	      ActivityRegulator.Lock lock =
 		(ActivityRegulator.Lock)lockIt.next();
 	      lock.expire();
 	    }
-	  } catch (Exception e) {
-	    logger.warning("Threw freeing locks", e);
+	  } catch (RuntimeException e) {
+	    logger.warning("Couldn't free locks", e);
 	  }
         }
 	removeFromRunningCrawls(crawler);
@@ -632,6 +684,10 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     }
   }
 
+  // For testing only.  See TestCrawlManagerImpl
+  protected void instrumentBeforeStartRateLimiterEvent(Crawler crawler) {
+  }
+
   // Crawl starter thread.
 
   private CrawlStarter crawlStarter = null;
@@ -639,7 +695,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 
   public void enableCrawlStarter() {
     if (crawlStarter != null) {
-      logger.warning("Crawl starter already running; stopping old one first");
+      logger.debug("Crawl starter already running; stopping old one first");
       disableCrawlStarter();
     } else {
       logger.info("Starting crawl starter");
@@ -662,7 +718,6 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 
   private class CrawlStarter extends LockssRunnable {
     private boolean goOn = false;
-    private Deadline timer;
 
     private CrawlStarter() {
       super("CrawlStarter");
@@ -671,18 +726,25 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     public void lockssRun() {
       setPriority(PRIORITY_PARAM_CRAWLER, PRIORITY_DEFAULT_CRAWLER);
       goOn = true;
+      // Crawl start interval is configurable, so watchdog timeout would
+      // have to be also.  Crawl starter is so simple; not sure it really
+      // needs a watchdog.
 //       startWDog(WDOG_PARAM_CRAWL_STARTER, WDOG_DEFAULT_CRAWL_STARTER);
-//       triggerWDogOnExit(true);
+      triggerWDogOnExit(true);
 
-      try {
-	Deadline.in(paramStartCrawlsInitialDelay).sleep();
-      } catch (InterruptedException e) {
-	// just wakeup and check for exit
+      if (goOn) {
+	try {
+	  logger.debug("Waiting until AUs started");
+	  theDaemon.waitUntilAusStarted();
+	  Deadline.in(paramStartCrawlsInitialDelay).sleep();
+	} catch (InterruptedException e) {
+	  // just wakeup and check for exit
+	}
       }
       while (goOn) {
 // 	pokeWDog();
 	startSomeCrawls();
-	timer = Deadline.in(paramStartCrawlsInterval);
+	Deadline timer = Deadline.in(paramStartCrawlsInterval);
 	if (goOn) {
 	  try {
 	    timer.sleep();
@@ -691,37 +753,49 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 	  }
 	}
       }
+      if (!goOn) {
+	triggerWDogOnExit(false);
+      }
     }
 
     private void stopCrawlStarter() {
       goOn = false;
       interruptThread();
     }
-
-    void forceRun() {
-      if (timer != null) {
-	timer.expire();
-      }
-    }
   }
+
+  // Each invocation of startSomeCrawls() tries to fill queue with AUs that
+  // need a crawl.  The same random iterator is used across multiple
+  // invocations to ensure we examine all AUs before starting over with a
+  // new random order.
+
+  private Iterator crawlStartIter = null;
 
   void startSomeCrawls() {
     if (poolQueue != null) {
-      int n = poolQueue.capacity() - poolQueue.size();
       if (poolQueue.capacity() > poolQueue.size()) {
 	logger.debug("Checking for AUs that need crawls");
-	List aus = pluginMgr.getAllAus();
-	List randAus = CollectionUtil.randomPermutation(aus);
-	for (Iterator iter = randAus.iterator(); iter.hasNext(); ) {
-	  ArchivalUnit au = (ArchivalUnit)iter.next();
+	// get a new iterator if don't have one or if have exhausted
+	// previous one
+	if (crawlStartIter == null || !crawlStartIter.hasNext()) {
+	  crawlStartIter = pluginMgr.getRandomizedAus().iterator();
+	}
+	while (crawlStartIter.hasNext()) {
+	  ArchivalUnit au = (ArchivalUnit)crawlStartIter.next();
+	  if (logger.isDebug3()) logger.debug3("checking au: " + au.getAuId());
 	  if (shouldCrawlForNewContent(au)) {
 	    CrawlManager.Callback rc = null;
 	    if (au instanceof RegistryArchivalUnit) {
-	      logger.debug("AU " + au.getName() +
-			   " is a registry, adding callback.");
+	      if (logger.isDebug3()) {
+		logger.debug3("AU " + au.getName() +
+			      " is a registry, adding callback.");
+	      }
 	      rc = new PluginManager.RegistryCallback(pluginMgr, au);
 	    }
-	    startNewContentCrawl(au, null, null, null);
+	    // Activity lock prevents AUs with pending crawls from being
+	    // queued twice.  If ActivityRegulator goes away some other
+	    // mechanism will be needed.
+	    startNewContentCrawl(au, rc, null, null);
 	  }
 	  if (poolQueue.capacity() == poolQueue.size()) {
 	    break;
