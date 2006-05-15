@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssDaemon.java,v 1.55 2005-12-01 23:28:01 troberts Exp $
+ * $Id: MockLockssDaemon.java,v 1.56 2006-05-15 00:10:56 tlipkis Exp $
  */
 
 /*
@@ -53,7 +53,7 @@ import org.lockss.remote.RemoteApi;
 import org.lockss.repository.*;
 import org.lockss.scheduler.SchedService;
 import org.lockss.state.*;
-import org.lockss.util.Logger;
+import org.lockss.util.*;
 
 public class MockLockssDaemon extends LockssDaemon {
   private static Logger log = Logger.getLogger("MockLockssDaemon");
@@ -748,4 +748,11 @@ public class MockLockssDaemon extends LockssDaemon {
     daemonRunning = val;
   }
 
+  public void setAusStarted(boolean val) {
+    if (val) {
+      ausStarted.fill();
+    } else {
+      ausStarted = new OneShotSemaphore();
+    }
+  }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.83 2006-03-02 19:45:01 tlipkis Exp $
+ * $Id: LockssDaemon.java,v 1.84 2006-05-15 00:10:56 tlipkis Exp $
  */
 
 /*
@@ -695,6 +695,8 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
 
   // Daemon start, stop
 
+  protected OneShotSemaphore ausStarted = new OneShotSemaphore();
+
   protected void startDaemon() throws Exception {
     startApp();
 
@@ -702,6 +704,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     getPluginManager().startLoadablePlugins();
 
     log.info("Started");
+    ausStarted.fill();
   }
 
 
@@ -716,6 +719,13 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     stopAllAuManagers();
 
     super.stop();
+  }
+
+  /** Wait until the initial set of AUs have been started.  This must be
+   * called only from your own thread (<i>eg</i>, not the startup
+   * thread.) */
+  public void waitUntilAusStarted() throws InterruptedException {
+    ausStarted.waitFull(Deadline.MAX);
   }
 
   protected void setConfig(Configuration config, Configuration prevConfig,
