@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawler.java,v 1.12 2005-10-10 23:27:27 tlipkis Exp $
+ * $Id: MockCrawler.java,v 1.13 2006-05-15 00:13:00 tlipkis Exp $
  */
 
 /*
@@ -122,9 +122,9 @@ public class MockCrawler extends NullCrawler {
     return urls;
   }
 
-//   public void setStartTime(long time) {
-//     startTime = time;
-//   }
+  public void setStartTime(long time) {
+    startTime = time;
+  }
 
 //   public void setEndTime(long time) {
 //     endTime = time;
@@ -138,9 +138,9 @@ public class MockCrawler extends NullCrawler {
 //     numParsed = num;
 //   }
 
-//   public long getStartTime() {
-//     return startTime;
-//   }
+  public long getStartTime() {
+    return startTime;
+  }
 
 //   public long getEndTime() {
 //     return endTime;
