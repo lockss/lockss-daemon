@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.179 2006-05-15 00:10:39 tlipkis Exp $
+ $Id: build.xml,v 1.180 2006-05-15 00:51:22 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
@@ -1672,8 +1672,32 @@ Test results in ${test.results}
      <if>
       <isfalse value="${nocvs}" />
       <then>
-	<cvs command="-z3 -Q checkout" package="${cvs.module}"
-	     dest="${temp.build.dir}" tag="${cvs.co.tag}" failonerror="true"/>
+	<loadfile property="cvs.root" srcfile="${basedir}/CVS/Root"
+         failonerror="no">
+          <filterchain> <striplinebreaks/> </filterchain>
+        </loadfile>
+        <if>
+         <or>
+          <not> <isset property="cvs.root" /> </not>
+          <equals arg1="${cvs.root}" arg2="" />
+         </or>
+         <then>
+          <echo message="from default CVSROOT"/>
+	  <cvs command="-z3 -Q checkout"
+               package="${cvs.module}"
+	       dest="${temp.build.dir}"
+               tag="${cvs.co.tag}"
+               failonerror="true"/>
+         </then>
+         <else>
+          <echo message="CVSROOT=${cvs.root}"/>
+	  <cvs command="-z3 -d ${cvs.root} -Q checkout"
+               package="${cvs.module}"
+	       dest="${temp.build.dir}"
+               tag="${cvs.co.tag}"
+               failonerror="true"/>
+         </else>
+        </if>
       </then>
       <else>
 	<echo>No cvs, copying from ${basedir}</echo>
