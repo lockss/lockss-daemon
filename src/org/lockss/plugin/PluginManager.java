@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.156 2006-04-11 08:29:06 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.157 2006-05-15 00:12:26 tlipkis Exp $
  */
 
 /*
@@ -167,7 +167,7 @@ public class PluginManager
   // maps auid to AU
   private Map auMap = Collections.synchronizedMap(new HashMap());
   // A set of all aus sorted by title.  The UI relies on this behavior.
-  private Set auSet = Collections.synchronizedSet(new TreeSet(auComparator));
+  private Set auSet = new TreeSet(auComparator);
   // maps host to collections of AUs.  Used to quickly locate candidate AUs
   // for incoming URLs
   private MultiMap hostAus = new MultiHashMap();
@@ -245,7 +245,6 @@ public class PluginManager
     initPluginRegistry(config);
     configureAllPlugins(config);
     loadablePluginsReady = true;
-    theDaemon.getCrawlManager().enableCrawlStarter();
   }
 
   public void setLoadablePluginsReady(boolean val) {
@@ -647,8 +646,10 @@ public class PluginManager
     log.debug("Deactivating AU: " + au.getName());
     // remove from map first, so no new activity can start (poll messages,
     // RemoteAPI, etc.)
-    auMap.remove(auid);
-    auSet.remove(au);
+    synchronized (auSet) {
+      auMap.remove(auid);
+      auSet.remove(au);
+    }
     delHostAus(au);
 
     signalAuEvent(au, AU_CHANGE_DELETED, null);
@@ -717,8 +718,10 @@ public class PluginManager
 
   protected void putAuInMap(ArchivalUnit au) {
     log.debug2("putAuMap(" + au.getAuId() +", " + au);
-    auMap.put(au.getAuId(), au);
-    auSet.add(au);
+    synchronized (auSet) {
+      auMap.put(au.getAuId(), au);
+      auSet.add(au);
+    }
     addHostAus(au);
   }
 
@@ -1283,7 +1286,20 @@ public class PluginManager
    * @return the List of aus
    */
   public List getAllAus() {
-    return new ArrayList(auSet);
+    synchronized (auSet) {
+      return new ArrayList(auSet);
+    }
+  }
+
+  /**
+   * Return a randomly ordered list of all AUs.
+   */
+  // putting this here in PluginManager saves having to make an extra copy
+  // of auSet
+  public List getRandomizedAus() {
+    synchronized (auSet) {
+      return CollectionUtil.randomPermutation(auSet);
+    }
   }
 
   public Collection getInactiveAuIds() {
@@ -1917,7 +1933,7 @@ public class PluginManager
       if (registryUrls.isEmpty()) {
 	bs.give();
       }
-    }    
+    }
 
     public void signalCrawlAttemptCompleted(boolean success, Set urlsFetched,
 					    Object cookie,

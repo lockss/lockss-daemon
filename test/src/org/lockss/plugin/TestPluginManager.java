@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.68 2006-04-11 08:29:06 tlipkis Exp $
+ * $Id: TestPluginManager.java,v 1.69 2006-05-15 00:12:25 tlipkis Exp $
  */
 
 /*
@@ -556,6 +556,21 @@ public class TestPluginManager extends LockssTestCase {
     mgr.putAuInMap(mau3);
     mgr.putAuInMap(mau1);
     assertEquals(ListUtil.list(mau1, mau2, mau3, mau4, mau5), mgr.getAllAus());
+  }
+
+  public void testgetRandomizedAus() throws Exception {
+    MockArchivalUnit mau1 = new MockArchivalUnit();
+    MockArchivalUnit mau2 = new MockArchivalUnit();
+    MockArchivalUnit mau3 = new MockArchivalUnit();
+    MockArchivalUnit mau4 = new MockArchivalUnit();
+    MockArchivalUnit mau5 = new MockArchivalUnit();
+    mgr.putAuInMap(mau5);
+    mgr.putAuInMap(mau4);
+    mgr.putAuInMap(mau2);
+    mgr.putAuInMap(mau3);
+    mgr.putAuInMap(mau1);
+    Set aus = SetUtil.theSet(mgr.getRandomizedAus());
+    assertEquals(SetUtil.set(mau1, mau2, mau3, mau4, mau5), aus);
   }
 
   public void testTitleSets() throws Exception {
