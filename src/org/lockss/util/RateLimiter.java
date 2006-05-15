@@ -1,5 +1,5 @@
 /*
- * $Id: RateLimiter.java,v 1.8 2006-01-03 22:12:10 thib_gc Exp $
+ * $Id: RateLimiter.java,v 1.9 2006-05-15 00:12:49 tlipkis Exp $
  */
 
 /*
@@ -36,9 +36,24 @@ import java.util.*;
 import org.lockss.config.Configuration;
 
 /**
- * RateLimiter is used to limit the rate at which some class of events occur.
+ * RateLimiter is used to limit the rate at which some class of events
+ * occur.  Individual operations on this class are synchronized, so safe to
+ * use from multiple threads.  However, in order to ensure the rate isn't
+ * exceeded, multithreaded use requires the pair of calls {@link
+ * #isEventOk()} and {@link #event()}, or the pair  {@link
+ * #waitUntilEventOk()} and {@link #event()} to be synchronized as a unit:<pre>
+    synchronized (rateLimiter) {
+      rateLimiter.isEventOk();
+      rateLimiter.event();
+    }</pre>
  */
 public class RateLimiter {
+  static Logger log = Logger.getLogger("RateLimiter");
+
+  /** An instance of a RateLimiter that allows events at an unlimited
+   * rate. */
+  public static RateLimiter UNLIMITED = new RateLimiter.Unlimited();
+
   private int limit;			// limit on events / interval
   private long interval;
   private long time[];			// history of (limit) event times
@@ -87,10 +102,15 @@ public class RateLimiter {
     getConfiguredRateLimiter(Configuration config, RateLimiter currentLimiter,
 			     String param, String dfault) {
     String rate = config.get(param, dfault);
+    if ("unlimited".equalsIgnoreCase(rate)) {
+      return UNLIMITED;
+    }
     Ept ept;
     try {
       ept = new Ept(rate);
     } catch (RuntimeException e) {
+      log.warning("Configured rate (" + param + "=" + rate +
+		  ") illegal, using default (" + dfault + ")");
       ept = new Ept(dfault);
     }
     if (currentLimiter == null ||
@@ -145,19 +165,52 @@ public class RateLimiter {
   }
 
   /** Record an occurrence of the event */
-  public void event() {
+  public synchronized void event() {
     time[count] = TimeBase.nowMs();
     count = (count + 1) % limit;
   }
 
   /** Return true if an event could occur now without exceeding the limit */
-  public boolean isEventOk() {
+  public synchronized boolean isEventOk() {
     return time[count] == 0 || TimeBase.msSince(time[count]) >= interval;
   }
 
   /** Return the amount of time until the next event is allowed */
-  public long timeUntilEventOk() {
+  public synchronized long timeUntilEventOk() {
     long res = TimeBase.msUntil(time[count] + interval);
     return (res > 0) ? res : 0;
   }
+
+  /** Wait until the next event is allowed */
+  public synchronized boolean waitUntilEventOk() throws InterruptedException {
+    long time = timeUntilEventOk();
+    if (time <= 0) {
+      return true;
+    }
+    Deadline.in(time).sleep();
+    return true;
+  }
+
+  /** A RateLimiter that imposes no limit */
+  static class Unlimited extends RateLimiter {
+    public Unlimited() {
+      super(1, 1);
+    }
+    public void event() {
+    }
+    public boolean isEventOk() {
+      return true;
+    }
+    public long timeUntilEventOk() {
+      return 0;
+    }
+    public int getLimit() {
+      return 0;
+    }
+
+    public long getInterval() {
+      return 0;
+    }
+  }
+
 }
