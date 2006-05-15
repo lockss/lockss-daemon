@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.178 2006-04-14 15:41:41 troberts Exp $
+ $Id: build.xml,v 1.179 2006-05-15 00:10:39 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
@@ -1856,28 +1856,47 @@ Test results in ${test.results}
   <target name="jcover"
    depends="prepare.run.test,jar-tests"
    description="Run a set of test classes through jcoverage, named by the 'include' property." >
+    <fail unless="include">
+Use -Dinclude= to specify tests to be run,
+optionally -Dtests= for classes to be instrumented.
+    </fail>
+
     <property name="tests" value="${include}/Test*" />
+    <fileset id="coverage.tests.filesetid" dir="${test.src}">
+      <include name="${tests}"/>
+      <exclude name="${exclude}"/>
+    </fileset>
+    <!-- test whether fileset is empty by converting it to a string -->
+    <pathconvert refid="coverage.tests.filesetid"
+      property="coverage.tests.files"
+      targetos="${detected.os}" />
+    <if>
+     <equals arg1="${coverage.tests.files}" arg2="" />
+     <then>
+      <fail message="Pattern '${tests}' does not match any test classes" />
+     </then>
+    </if>
+
     <taskdef classpath="${jcoverage.jar}" resource="tasks.properties"/>
     <delete file="${jcoverage.ser}" quiet="true" />
     <delete dir="${instrumented}" quiet="true" />
+    <echo message="Instrumenting classes: ${include}"/>
     <instrument todir="${instrumented}">
       <classpath refid="jcover.run.classpath" />
-      <fileset dir="${classes}">
-         <include name="${include}"/>
-         <exclude name="${exclude}"/>
+      <fileset id="coverage.instrument.filesetid" dir="${classes}">
+        <include name="${include}"/>
+        <exclude name="${exclude}"/>
       </fileset>
     </instrument>
     <path id="jcover.classpath">
      <path location="${instrumented}"/>
      <path refid="jcover.run.classpath" />
     </path>
+    <echo message="Running tests: ${tests}"/>
     <dojunit cpid="jcover.classpath">
      <junitelem>
       <batchtest fork="${fork}" todir="${test.results}">
-        <fileset dir="${test.src}">
-          <include name="${tests}"/>
-          <exclude name="${exclude}"/>
-        </fileset>
+       <fileset  refid="coverage.tests.filesetid"/>
       </batchtest>
      </junitelem>
     </dojunit>
