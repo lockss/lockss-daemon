@@ -1,5 +1,5 @@
 /*
- * $Id: TestVTETDPlugin.java,v 1.2 2006-04-10 23:12:28 troberts Exp $
+ * $Id: TestVTETDPlugin.java,v 1.3 2006-05-15 01:09:37 tlipkis Exp $
  */
 
 /*
@@ -54,6 +54,13 @@ public class TestVTETDPlugin extends LockssPluginTestCase {
     "org.lockss.plugin.etd.vtetdplugin.VTETDPlugin";
 
   private DefinablePlugin plugin;
+
+  public void setUp() throws Exception {
+    super.setUp();
+    String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    ConfigurationUtil.setFromArgs(LockssRepositoryImpl.PARAM_CACHE_LOCATION,
+				  tempDirPath);
+  }
 
   private Properties makeProps(String url, int year, String oaiProvider) {
     Properties props = new Properties();

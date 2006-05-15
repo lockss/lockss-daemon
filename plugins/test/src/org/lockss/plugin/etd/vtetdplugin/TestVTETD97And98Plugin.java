@@ -1,12 +1,14 @@
 package org.lockss.plugin.etd.vtetdplugin;
 
 import java.util.*;
+import java.io.File;
 
 import org.lockss.daemon.*;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.base.BaseCachedUrlSet;
 import org.lockss.plugin.definable.*;
 import org.lockss.test.*;
+import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.util.SetUtil;
 
 public class TestVTETD97And98Plugin extends LockssPluginTestCase {
@@ -21,6 +23,13 @@ public class TestVTETD97And98Plugin extends LockssPluginTestCase {
     "org.lockss.plugin.etd.vtetdplugin.VTETD97And98Plugin";
 
   private DefinablePlugin plugin;
+
+  public void setUp() throws Exception {
+    super.setUp();
+    String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    ConfigurationUtil.setFromArgs(LockssRepositoryImpl.PARAM_CACHE_LOCATION,
+				  tempDirPath);
+  }
 
   private Properties makeProps(String url, int year, String oaiProvider) {
     Properties props = new Properties();
