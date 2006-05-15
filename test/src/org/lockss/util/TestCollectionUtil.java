@@ -1,5 +1,5 @@
 /*
- * $Id: TestCollectionUtil.java,v 1.13 2006-04-11 08:29:47 tlipkis Exp $
+ * $Id: TestCollectionUtil.java,v 1.14 2006-05-15 00:13:40 tlipkis Exp $
  */
 
 /*
@@ -251,7 +251,9 @@ public class TestCollectionUtil extends LockssTestCase {
     Set set = new HashSet();
     int rpt = 0;
     while (++rpt < 100000) {
-      set.add(CollectionUtil.randomPermutation(coll));
+      List lst = CollectionUtil.randomPermutation(coll);
+      assertEquals(5, lst.size());
+      set.add(lst);
       if (set.size() == 120) {
 	log.debug(""+rpt);
 	return;
