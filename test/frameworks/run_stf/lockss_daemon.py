@@ -533,11 +533,17 @@ class Client:
                 log.debug("isV3Repaired: All URLs: %s" % allUrls)                
                 log.debug("isV3Repaired: Agreeing URLs: %s" % agreeUrls)
                 log.debug("isV3Repaired: Repaired URLs: %s" % repairs)
-#XXX:                return (allUrls == agreeUrls)
-                return (repairs == len(nodeList))
+                return (len(nodeList) == repairs)
                 # TODO: This will really need to be improved when the status
                 # tables are better!  Need a way to determine whether this particular NODE was
                 # repaired.
+        return False
+    
+    def isV3NoQuorum(self, au):
+        tab = self.getAuV3Pollers(au)
+        for row in tab:
+            if row['auId'] == au.title:
+                return row['status'] == "No Quorum"
         return False
 
     def isContentRepairedFromCache(self, au, node=None):
@@ -1078,6 +1084,12 @@ class Client:
         """ Wait for a successful repair of the specified node by a V3 Poll """
         def waitFunc():
             return self.isV3Repaired(au, nodeList)
+        return self.wait(waitFunc, timeout, sleep)
+        
+    def waitForV3NoQuorum(self, au, timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):
+        """ Wait for a V3 poll to be marked No Quorum """
+        def waitFunc():
+            return self.isV3NoQuorum(au)
         return self.wait(waitFunc, timeout, sleep)
 
     def waitForNameRepair(self, au, node=None, timeout=DEF_TIMEOUT,

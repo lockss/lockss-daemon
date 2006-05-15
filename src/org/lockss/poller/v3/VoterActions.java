@@ -1,5 +1,5 @@
 /*
- * $Id: VoterActions.java,v 1.9 2006-04-10 05:31:01 smorabito Exp $
+ * $Id: VoterActions.java,v 1.9.2.1 2006-05-15 22:19:19 smorabito Exp $
  */
 
 /*
@@ -46,6 +46,9 @@ public class VoterActions {
   // Start participating in a V3 poll when a POLL message is received
   public static PsmEvent handleReceivePoll(PsmMsgEvent evt,
                                            PsmInterp interp) {
+    V3LcapMessage msg = (V3LcapMessage)evt.getMessage();
+    VoterUserData ud = getUserData(interp);
+    ud.setVoteDeadline(msg.getVoteDeadline());
     return V3Events.evtOk;
   }
 

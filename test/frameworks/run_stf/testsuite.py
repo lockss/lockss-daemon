@@ -1171,21 +1171,13 @@ class V3TestCase(LockssTestCase):
         LockssTestCase.setUp(self)
         # V3 has a much shorter default timeout, 8 minutes.
         self.timeout = int(config.get('timeout', 60 * 8))
-        baseV3Port = 8801
 
         for i in range(0, len(self.clients)):
-            # Generate an initial list of peers, minus ourselves
-            # (V3 polls are asynchronous)
-            peerIds = []
-            for port in range(0, len(self.clients)):
-                if (port == (i)):
-                    continue
-                peerIds.append("TCP:[127.0.0.1]:%d" % (baseV3Port + port))
-
             extraConf = {"org.lockss.auconfig.allowEditDefaultOnlyParams": "true",
                          "org.lockss.comm.enabled": "false",
                          "org.lockss.scomm.enabled": "true",
                          "org.lockss.scomm.maxMessageSize": "33554432",  # 32MB
+                         "org.lockss.poll.v3.deleteExtraFiles": "true",
                          "org.lockss.poll.v3.quorum": "3",
                          "org.lockss.poll.v3.minPollSize": "4",
                          "org.lockss.poll.v3.maxPollSize": "4",
@@ -1193,8 +1185,10 @@ class V3TestCase(LockssTestCase):
                          "org.lockss.poll.v3.maxNominationSize": "1",
                          "org.lockss.poll.v3.minPollDuration": "5m",
                          "org.lockss.poll.v3.maxPollDuration": "6m",
-                         "org.lockss.localV3Identity": "TCP:[127.0.0.1]:%d" % (baseV3Port + i),
-                         "org.lockss.id.initialV3PeerList": (";".join(peerIds))}
+                         "org.lockss.poll.v3.voteDeadlinePadding": "30s",
+                         "org.lockss.localV3Identity": "TCP:[127.0.0.1]:%d" % (self.getBaseV3Port() + i),
+                         "org.lockss.id.initialV3PeerList": self.getInitialPeerList() }
+            extraConf.update(self.getTestLocalConf())
 
             self.framework.appendLocalConfig(extraConf, self.clients[i])
 
@@ -1212,6 +1206,19 @@ class V3TestCase(LockssTestCase):
 
     def getDaemonCount(self):
         return 5
+
+    def getInitialPeerList(self):
+        peerIds = []
+        for port in range(0, len(self.clients)):
+            peerIds.append("TCP:[127.0.0.1]:%d" % (self.getBaseV3Port() + port))
+        return ";".join(peerIds)
+        
+    def getTestLocalConf(self):
+        "Override this method to append local per-test configuration"
+        return {}
+    
+    def getBaseV3Port(self):
+        return 8801
 
 class SimpleDamageV3TestCase(V3TestCase):
     """ Test a basic V3 Poll. """
@@ -1626,6 +1633,133 @@ class RandomExtraFileV3TestCase(V3TestCase):
 def randomExtraFileV3TestCase():
     return RandomExtraFileV3TestCase()
 
+
+class VotersDontParticipateV3TestCase(V3TestCase):
+    """ Test a V3 poll where some peers do not participate. """
+    def getInitialPeerList(self):
+        """ Return the real participant list, plus some that do not really
+        exist """
+        return "%s;TCP:[127.0.0.1]:65520;TCP:[127.0.0.1]:65521;TCP:[127.0.0.1]:65522" % V3TestCase.getInitialPeerList(self)
+    
+    def getTestLocalConf(self):
+        return {"org.lockss.poll.v3.quorum": "3",
+                "org.lockss.poll.v3.minPollSize": "8",
+                "org.lockss.poll.v3.maxPollSize": "8"}
+
+    def runTest(self):
+        # Reasonably complex AU for testing
+        simAu = SimulatedAu('simContent', depth=1, branch=1,
+                            fileTypes=(FILE_TYPE_TEXT + FILE_TYPE_BIN),
+                            binFileSize=1024,
+                            numFiles=20, protocolVersion=3)
+
+        ##
+        ## Create simulated AUs
+        ##
+        log.info("Creating simulated AUs.")
+        for client in self.clients:
+            client.createAu(simAu)
+
+        ##
+        ## Assert that the AUs have been crawled.
+        ##
+        log.info("Waiting for simulated AUs to crawl.")
+        for client in self.clients:
+            if not (client.waitForSuccessfulCrawl(simAu)):
+                self.fail("AUs never completed initial crawl.")
+        log.info("AUs completed initial crawl.")
+
+        ## To use a specific client, uncomment this line.
+        client = self.clients[2]
+
+        ##
+        ## Damage the AU by creating an extra node.
+        ##
+        nodeList = client.randomCreateRandomNodes(simAu, 5, 15)
+        log.info("Created the following nodes on client %s:\n        %s" %
+                 (client, '\n        '.join([str(n) for n in nodeList])))
+
+        # Request a tree walk (deactivate and reactivate AU)
+        log.info("Requesting tree walk.")
+        client.requestTreeWalk(simAu)
+
+        log.info("Waiting for a V3 poll to be called...")
+        client.waitForV3Poller(simAu)
+
+        log.info("Successfully called a V3 poll.")
+
+        ## Just pause until we have better tests.
+        log.info("Waiting for V3 repair...")
+        # waitForV3Repair takes a list of nodes
+        client.waitForV3Repair(simAu, nodeList, timeout=self.timeout)
+        log.info("AU successfully repaired.")
+    
+def votersDontParticipateV3TestCase():
+    return VotersDontParticipateV3TestCase()
+
+class NoQuorumV3TestCase(V3TestCase):
+    """ Be sure a V3 poll with too few participants ends in No Quorum """
+    def getInitialPeerList(self):
+        """ Return the real participant list, plus some that do not really
+        exist """
+        return "%s;TCP:[127.0.0.1]:65520;TCP:[127.0.0.1]:65521;TCP:[127.0.0.1]:65522" % V3TestCase.getInitialPeerList(self)
+    
+    def getTestLocalConf(self):
+        return {"org.lockss.poll.v3.quorum": "6",
+                "org.lockss.poll.v3.minPollSize": "8",
+                "org.lockss.poll.v3.maxPollSize": "8"}
+
+    def runTest(self):
+        # Reasonably complex AU for testing
+        simAu = SimulatedAu('simContent', depth=1, branch=1,
+                            fileTypes=(FILE_TYPE_TEXT + FILE_TYPE_BIN),
+                            binFileSize=1024,
+                            numFiles=20, protocolVersion=3)
+
+        ##
+        ## Create simulated AUs
+        ##
+        log.info("Creating simulated AUs.")
+        for client in self.clients:
+            client.createAu(simAu)
+
+        ##
+        ## Assert that the AUs have been crawled.
+        ##
+        log.info("Waiting for simulated AUs to crawl.")
+        for client in self.clients:
+            if not (client.waitForSuccessfulCrawl(simAu)):
+                self.fail("AUs never completed initial crawl.")
+        log.info("AUs completed initial crawl.")
+
+        ## To use a specific client, uncomment this line.
+        client = self.clients[2]
+
+        ##
+        ## Damage the AU by creating an extra node.
+        ##
+        nodeList = client.randomCreateRandomNodes(simAu, 5, 15)
+        log.info("Created the following nodes on client %s:\n        %s" %
+                 (client, '\n        '.join([str(n) for n in nodeList])))
+
+        # Request a tree walk (deactivate and reactivate AU)
+        log.info("Requesting tree walk.")
+        client.requestTreeWalk(simAu)
+
+        log.info("Waiting for a V3 poll to be called...")
+        client.waitForV3Poller(simAu)
+
+        log.info("Successfully called a V3 poll.")
+
+        ## Just pause until we have better tests.
+        log.info("Waiting for V3 poll to report no quorum...")
+        # waitForV3Repair takes a list of nodes
+        client.waitForV3NoQuorum(simAu)
+        log.info("AU successfully reported No Quorum.")
+    
+def noQuorumV3TestCase():
+    return NoQuorumV3TestCase()
+
 ###########################################################################
 ### Functions that build and return test suites.  These can be
 ### called by name when running this test script.
@@ -1677,6 +1811,8 @@ def simpleV3Tests():
     suite.addTest(SimpleExtraFileV3TestCase())
     suite.addTest(LastFileDeleteV3TestCase())
     suite.addTest(LastFileExtraV3TestCase())
+    suite.addTest(VotersDontParticipateV3TestCase())
+    suite.addTest(NoQuorumV3TestCase())
     return suite
 
 def randomV3Tests():

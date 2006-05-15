@@ -1,5 +1,5 @@
 /*
- * $Id: V3LcapMessage.java,v 1.20.2.1 2006-04-28 07:06:42 smorabito Exp $
+ * $Id: V3LcapMessage.java,v 1.20.2.2 2006-05-15 22:19:19 smorabito Exp $
  */
 
 /*
@@ -93,6 +93,9 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
 
   /** In Vote messages: A list of vote blocks for this vote. */
   VoteBlocks m_voteBlocks;
+  
+  /** For poll messages, the required vote time for participants. */
+  long m_voteDeadline;
 
   /**
    * In Nominate messages: The list of outer circle nominees, in the form of
@@ -501,6 +504,14 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
 
   public void setVoteComplete(boolean val) {
     this.m_voteComplete = val;
+  }
+  
+  public long getVoteDeadline() {
+    return m_voteDeadline;
+  }
+  
+  public void setVoteDeadline(long l) {
+    m_voteDeadline = l;
   }
 
   /**

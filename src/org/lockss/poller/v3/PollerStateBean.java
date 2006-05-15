@@ -1,5 +1,5 @@
 /*
- * $Id: PollerStateBean.java,v 1.10.2.1 2006-04-20 07:13:49 smorabito Exp $
+ * $Id: PollerStateBean.java,v 1.10.2.2 2006-05-15 22:19:19 smorabito Exp $
  */
 
 /*
@@ -44,13 +44,20 @@ import org.lockss.util.*;
  */
 public class PollerStateBean implements LockssSerializable {
 
-  private LcapMessage pollMessage;
+  /* Unique poll identifier. */
   private String pollKey;
-  private long deadline;
+  /* The time by which the poll must have completed. */
+  private long pollDeadline;
+  /* The time by which all voters must have voted. */
+  private long voteDeadline;
+  /* The requested duration of this poll. */
   private long duration;
+  /* The ArchivalUnit identifier. */
   private String auId;
+  /* The version of the plugin used by the AU. */
   private String pluginVersion;
-  private int pollVersion;
+  /* The version of the polling protocol to use. */
+  private int protocolVersion;
   private String url;
   private PeerIdentity pollerId;
   private String hashAlgorithm;
@@ -100,13 +107,13 @@ public class PollerStateBean implements LockssSerializable {
     this.pollerId = orig;
     this.pollKey = pollKey;
     this.duration = duration;
-    this.deadline = Deadline.in(duration).getExpirationTime();
+    this.pollDeadline = Deadline.in(duration).getExpirationTime();
     this.pollSize = pollSize;
     //this.hashReadyCounter = pollSize;
     this.nomineeCounter = pollSize;
     this.outerCircleTarget = outerCircleTarget;
     this.auId = spec.getAuId();
-    this.pollVersion = spec.getProtocolVersion();
+    this.protocolVersion = spec.getProtocolVersion();
     this.pluginVersion = spec.getPluginVersion();
     this.url = spec.getUrl();
     this.cus = spec.getCachedUrlSet();
@@ -120,14 +127,6 @@ public class PollerStateBean implements LockssSerializable {
     this.hashedBlocks = new ArrayList();
     this.votedPeers = new ArrayList();
     this.tallyStatus = new TallyStatus();
-  }
-
-  public void setPollMessage(LcapMessage msg) {
-    this.pollMessage = msg;
-  }
-
-  public LcapMessage getPollMessage() {
-    return pollMessage;
   }
 
   public long getCreateTime() {
@@ -174,12 +173,12 @@ public class PollerStateBean implements LockssSerializable {
     return auId;
   }
 
-  public void setPollVersion(int pollVersion) {
-    this.pollVersion = pollVersion;
+  public void setProtocolVersion(int protocolVersion) {
+    this.protocolVersion = protocolVersion;
   }
 
-  public int getPollVersion() {
-    return pollVersion;
+  public int getProtocolVersion() {
+    return protocolVersion;
   }
 
   public void setPluginVersion(String pluginVersion) {
@@ -222,12 +221,20 @@ public class PollerStateBean implements LockssSerializable {
     return hashAlgorithm;
   }
 
-  public void setDeadline(long l) {
-    this.deadline = l;
+  public void setPollDeadline(long l) {
+    this.pollDeadline = l;
   }
 
-  public long getDeadline() {
-    return deadline;
+  public long getPollDeadline() {
+    return pollDeadline;
+  }
+  
+  public void setVoteDeadline(long l) {
+    this.voteDeadline = l;
+  }
+  
+  public long getVoteDeadline() {
+    return this.voteDeadline;
   }
 
   public long getDuration() {
@@ -275,8 +282,13 @@ public class PollerStateBean implements LockssSerializable {
     nomineeCounter--;
   }
 
-  public boolean allVotersNominated() {
-    return nomineeCounter == 0;
+  /**
+   * Return true if the V3Poller should proceed to request votes.
+   * 
+   * @return true if the poller should proceed to requesting votes.
+   */
+  public boolean sufficientPeers() {
+    return nomineeCounter >= getQuorum();
   }
   
   /**
@@ -293,7 +305,7 @@ public class PollerStateBean implements LockssSerializable {
   public String toString() {
     StringBuffer sb = new StringBuffer("[V3PollerState: ");
     sb.append("pollKey=" + pollKey + ", ");
-    sb.append("deadline=" + deadline + "]");
+    sb.append("deadline=" + pollDeadline + "]");
     return sb.toString();
   }
 

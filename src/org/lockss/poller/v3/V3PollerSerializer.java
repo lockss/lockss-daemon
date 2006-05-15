@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollerSerializer.java,v 1.8 2006-03-01 02:50:14 smorabito Exp $
+ * $Id: V3PollerSerializer.java,v 1.8.4.1 2006-05-15 22:19:19 smorabito Exp $
  */
 
 /*
@@ -50,7 +50,7 @@ public class V3PollerSerializer extends V3Serializer {
   private HashMap peerMapping;
 
   public V3PollerSerializer(LockssDaemon daemon) throws PollSerializerException {
-    super(daemon, null);
+    super(daemon);
     this.pollerStateBeanFile = new File(pollDir, POLLER_STATE_BEAN);
     this.peerMapping = new HashMap();
   }

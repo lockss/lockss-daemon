@@ -1,5 +1,5 @@
 /*
- * $Id: ParticipantUserData.java,v 1.4.2.1 2006-04-28 07:06:42 smorabito Exp $
+ * $Id: ParticipantUserData.java,v 1.4.2.2 2006-05-15 22:19:19 smorabito Exp $
  */
 
 /*
@@ -60,14 +60,13 @@ public class ParticipantUserData implements LockssSerializable {
   private boolean isOuterCircle = false;
   private PsmInterpStateBean psmState;
   private int voteBlockIndex = 0;
-  private String statusString;
+  private String statusString = V3Poller.PEER_STATUS_INITIALIZED;
 
   /** Transient non-serialized fields */
   private transient V3Poller poller;
   private transient PollerStateBean pollState;
   private transient PsmInterp psmInterp;
   private transient File messageDir;
-  
 
   private static Logger log = Logger.getLogger("PollerUserData");
 
@@ -273,7 +272,7 @@ public class ParticipantUserData implements LockssSerializable {
   }
 
   public long getDeadline() {
-    return pollState.getDeadline();
+    return pollState.getPollDeadline();
   }
 
   public String getLastHashedBlock() {
@@ -289,7 +288,7 @@ public class ParticipantUserData implements LockssSerializable {
   }
 
   public int getPollVersion() {
-    return pollState.getPollVersion();
+    return pollState.getProtocolVersion();
   }
 
   public String getUrl() {
