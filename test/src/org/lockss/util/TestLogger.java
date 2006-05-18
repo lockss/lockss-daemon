@@ -1,5 +1,5 @@
 /*
- * $Id: TestLogger.java,v 1.27 2006-04-11 08:30:55 tlipkis Exp $
+ * $Id: TestLogger.java,v 1.28 2006-05-18 00:14:42 tlipkis Exp $
  */
 
 /*
@@ -100,25 +100,40 @@ public class TestLogger extends LockssTestCase {
 //     }
 //   }
 
-  public void testNames() {
-    assertEquals("Critical", Logger.nameOf(Logger.LEVEL_CRITICAL));
-    assertEquals("Info", Logger.nameOf(Logger.LEVEL_INFO));
+  public void testLevelOf() {
+    assertEquals(Logger.LEVEL_CRITICAL, Logger.levelOf("critical"));
+    assertEquals(Logger.LEVEL_ERROR, Logger.levelOf("error"));
+    assertEquals(Logger.LEVEL_SITE_ERROR, Logger.levelOf("siteError"));
     assertEquals(Logger.LEVEL_WARNING, Logger.levelOf("warning"));
+    assertEquals(Logger.LEVEL_SITE_WARNING, Logger.levelOf("siteWarning"));
     assertEquals(Logger.LEVEL_DEBUG, Logger.levelOf("debug"));
     assertEquals(Logger.LEVEL_DEBUG1, Logger.levelOf("debug1"));
     assertEquals(Logger.LEVEL_DEBUG2, Logger.levelOf("debug2"));
     assertEquals(Logger.LEVEL_DEBUG3, Logger.levelOf("debug3"));
   }
 
-  public void testLevels() {
+  public void testNameOf() {
+    assertEquals("Critical", Logger.nameOf(Logger.LEVEL_CRITICAL));
+    assertEquals("Error", Logger.nameOf(Logger.LEVEL_ERROR));
+    assertEquals("SiteError", Logger.nameOf(Logger.LEVEL_SITE_ERROR));
+    assertEquals("Warning", Logger.nameOf(Logger.LEVEL_WARNING));
+    assertEquals("SiteWarning", Logger.nameOf(Logger.LEVEL_SITE_WARNING));
+    assertEquals("Info", Logger.nameOf(Logger.LEVEL_INFO));
+    assertEquals("Debug", Logger.nameOf(Logger.LEVEL_DEBUG));
+    assertEquals("Debug", Logger.nameOf(Logger.LEVEL_DEBUG1));
+    assertEquals("Debug2", Logger.nameOf(Logger.LEVEL_DEBUG2));
+    assertEquals("Debug3", Logger.nameOf(Logger.LEVEL_DEBUG3));
+  }
+
+  public void testIsLevel() {
     Logger l = Logger.getLogger("test-log");
     l.setLevel(Logger.LEVEL_WARNING);
     assertTrue(l.isLevel(Logger.LEVEL_WARNING));
     assertTrue(l.isLevel(Logger.LEVEL_ERROR));
     assertTrue(l.isLevel(Logger.LEVEL_CRITICAL));
-    assertTrue( ! l.isLevel(Logger.LEVEL_INFO));
-    assertTrue( ! l.isLevel(Logger.LEVEL_DEBUG));
-    assertTrue( ! l.isLevel(Logger.LEVEL_DEBUG3));
+    assertFalse(l.isLevel(Logger.LEVEL_INFO));
+    assertFalse(l.isLevel(Logger.LEVEL_DEBUG));
+    assertFalse(l.isLevel(Logger.LEVEL_DEBUG3));
   }
 
   public void testTargetInit() {
@@ -209,6 +224,33 @@ public class TestLogger extends LockssTestCase {
       System.err.println((String)iter.next());
     }
     assertIsomorphic(testOutputOutput, target.getMessages());
+  }
+
+  public void testStackTrace() {
+    Logger l = Logger.getLogger("test-log");
+    MockLogTarget target = new MockLogTarget();
+    Logger.setTarget(target);
+    // at warning level...
+    l.setLevel(Logger.LEVEL_WARNING);
+    target.resetMessages();
+    // log.error should produce stack trace
+    l.error("errmsg", new ExpectedRuntimeException("ex msg"));
+    assertMatchesRE("at.*testStackTrace", (String)target.getMessages().get(0));
+    // log.warning should not produce stack trace
+    target.resetMessages();
+    l.warning("errmsg", new ExpectedRuntimeException("ex msg2"));
+    assertNotMatchesRE("at.*testStackTrace",
+		       (String)target.getMessages().get(0));
+    // but at debug level...
+    l.setLevel(Logger.LEVEL_DEBUG);
+    target.resetMessages();
+    // log.error should produce stack trace
+    l.error("errmsg", new ExpectedRuntimeException("ex msg"));
+    assertMatchesRE("at.*testStackTrace", (String)target.getMessages().get(0));
+    // and log.warning should produce stack trace
+    target.resetMessages();
+    l.warning("errmsg", new ExpectedRuntimeException("ex msg2"));
+    assertMatchesRE("at.*testStackTrace", (String)target.getMessages().get(0));
   }
 
   private static final String c1 = "prop1=12\nprop2=foobar\nprop3=true\n";

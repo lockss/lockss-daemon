@@ -1,5 +1,5 @@
 /*
- * $Id: Logger.java,v 1.46 2005-12-02 22:52:05 troberts Exp $
+ * $Id: Logger.java,v 1.47 2006-05-18 00:14:42 tlipkis Exp $
  */
 
 /*
@@ -71,32 +71,44 @@ public class Logger {
   /** Errors indicate that the system may not operate correctly, but won't
    * damage anything. */
   public static final int LEVEL_ERROR = 2;
+  /** Errors caused by misbehavior of some server out of our control. */
+  public static final int LEVEL_SITE_ERROR = 3;
   /** Warnings are conditions that should not normally arise but don't
       prevent the system from continuing to run correctly. */
-  public static final int LEVEL_WARNING = 3;
+  public static final int LEVEL_WARNING = 4;
+  /** Warnings about misbehavior of some server out of our control. */
+  public static final int LEVEL_SITE_WARNING = 5;
   /** Informative messages that should normally be logged. */
-  public static final int LEVEL_INFO = 4;
+  public static final int LEVEL_INFO = 6;
   /** Debugging messages. */
-  public static final int LEVEL_DEBUG = 5;
+  public static final int LEVEL_DEBUG = 7;
   /** Debugging messages. */
-  public static final int LEVEL_DEBUG1 = 5;
+  public static final int LEVEL_DEBUG1 = 7;
   /** Detailed debugging that would not produce a ridiculous amount of
    * output if it were enabled system-wide. */
-  public static final int LEVEL_DEBUG2 = 6;
+  public static final int LEVEL_DEBUG2 = 8;
   /** Debugging messages that produce more output than would be reasonable
    * if this level were enabled system-wide.  (<i>Eg</i>, messages in inner
    * loops, or per-file, per-hash step, etc.) */
-  public static final int LEVEL_DEBUG3 = 7;
+  public static final int LEVEL_DEBUG3 = 9;
 
   /** Log level (numeric) at which stack traces will be included */
   static final String PARAM_STACKTRACE_LEVEL = PREFIX + "stackTraceLevel";
   static final int DEFAULT_STACKTRACE_LEVEL = LEVEL_DEBUG;
 
+  /** Log severity (numeric) for which stack traces will be included no
+   * matter what the current log level */
+  static final String PARAM_STACKTRACE_SEVERITY =
+    PREFIX + "stackTraceSeverity";
+  static final int DEFAULT_STACKTRACE_SEVERITY = LEVEL_ERROR;
+
   // Mapping between numeric level and string
   static LevelDescr levelDescrs[] = {
     new LevelDescr(LEVEL_CRITICAL, "Critical"),
     new LevelDescr(LEVEL_ERROR, "Error"),
+    new LevelDescr(LEVEL_SITE_ERROR, "SiteError"),
     new LevelDescr(LEVEL_WARNING, "Warning"),
+    new LevelDescr(LEVEL_SITE_WARNING, "SiteWarning"),
     new LevelDescr(LEVEL_INFO, "Info"),
     // There must be entries for both "Debug" and "Debug1" in table.
     // Whichever string is last will be used in messages
@@ -110,6 +122,7 @@ public class Logger {
   private static final int DEFAULT_LEVEL = LEVEL_INFO;
 
   private static int paramStackTraceLevel = DEFAULT_STACKTRACE_LEVEL;
+  private static int paramStackTraceSeverity = DEFAULT_STACKTRACE_SEVERITY;
 
   private static/* final*/ Map logs = new HashMap();
   private static List targets = new ArrayList();
@@ -452,6 +465,9 @@ public class Logger {
 	    }
 	    paramStackTraceLevel = newConfig.getInt(PARAM_STACKTRACE_LEVEL,
 						    DEFAULT_STACKTRACE_LEVEL);
+	    paramStackTraceSeverity =
+	      newConfig.getInt(PARAM_STACKTRACE_SEVERITY,
+			       DEFAULT_STACKTRACE_SEVERITY);
 	  }
 	}
       };
@@ -584,7 +600,8 @@ public class Logger {
 	String emsg = e.toString();
 	sb.append(": ");
 	sb.append(emsg);
-	if (isLevel(paramStackTraceLevel)) {
+	if (level <= paramStackTraceSeverity ||
+	    isLevel(paramStackTraceLevel)) {
 	  sb.append("\n    ");
 	  sb.append(StringUtil.trimStackTrace(emsg,
 					      StringUtil.stackTraceString(e)));
@@ -682,6 +699,16 @@ public class Logger {
     log(LEVEL_ERROR, msg, e);
   }
 
+  /** Log a site error message */
+  public void siteError(String msg) {
+    log(LEVEL_SITE_ERROR, msg, null);
+  }
+
+  /** Log a site error message with an exception backtrace */
+  public void siteError(String msg, Throwable e) {
+    log(LEVEL_SITE_ERROR, msg, e);
+  }
+
   /** Log a warning message */
   public void warning(String msg) {
     log(LEVEL_WARNING, msg, null);
@@ -690,6 +717,16 @@ public class Logger {
   /** Log a warning message with an exception backtrace */
   public void warning(String msg, Throwable e) {
     log(LEVEL_WARNING, msg, e);
+  }
+
+  /** Log a site warning message */
+  public void siteWarning(String msg) {
+    log(LEVEL_SITE_WARNING, msg, null);
+  }
+
+  /** Log a site warning message with an exception backtrace */
+  public void siteWarning(String msg, Throwable e) {
+    log(LEVEL_SITE_WARNING, msg, e);
   }
 
   /** Log an information message */
