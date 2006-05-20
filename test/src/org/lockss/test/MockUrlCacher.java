@@ -1,5 +1,5 @@
 /*
- * $Id: MockUrlCacher.java,v 1.31 2006-04-23 05:52:04 tlipkis Exp $
+ * $Id: MockUrlCacher.java,v 1.32 2006-05-20 19:27:55 tlipkis Exp $
  */
 
 /*
@@ -51,9 +51,7 @@ public class MockUrlCacher implements UrlCacher {
   private MockCachedUrlSet cus = null;
   private MockCachedUrl cu;
   private String url;
-  private InputStream cachedIS;
   private InputStream uncachedIS;
-  private CIProperties cachedProp;
   private CIProperties uncachedProp;
 
   private boolean shouldBeCached = false;
@@ -132,22 +130,14 @@ public class MockUrlCacher implements UrlCacher {
     setCachedUrl(cu);
   }
 
-  // Read interface - used by the proxy.
-
-  public InputStream openForReading(){
-    return cachedIS;
-  }
-
-  public CIProperties getProperties(){
-    return cachedProp;
-  }
-
     // Write interface - used by the crawler.
 
   public void storeContent(InputStream input,
 			   CIProperties headers) throws IOException{
-    cachedIS = input;
-    cachedProp = headers;
+    MockCachedUrl cu = (MockCachedUrl)getCachedUrl();
+    if (cu != null) {
+      cu.setExists(true);
+    }
     if (cus != null) {
       if (fetchFlags.get(UrlCacher.REFETCH_FLAG)) {
 //       if (forceRefetch) {
@@ -247,16 +237,8 @@ public class MockUrlCacher implements UrlCacher {
 
   //mock specific acessors
 
-  public void setCachedInputStream(InputStream is){
-    cachedIS = is;
-  }
-
   public void setUncachedInputStream(InputStream is){
     uncachedIS = is;
-  }
-
-  public void setCachedProperties(CIProperties prop){
-    cachedProp = prop;
   }
 
   public void setUncachedProperties(CIProperties prop){
