@@ -1,5 +1,5 @@
 /*
- * $Id: BaseServletManager.java,v 1.14 2006-01-12 01:12:50 thib_gc Exp $
+ * $Id: BaseServletManager.java,v 1.15 2006-05-20 23:26:00 tlipkis Exp $
  */
 
 /*
@@ -215,11 +215,12 @@ public abstract class BaseServletManager
   }
 
 
-  protected void setupLogContext(HttpServer server, UserRealm realm,
-				 String contextPath, String logdir)
+  protected void setupDirContext(HttpServer server, UserRealm realm,
+				 String contextPath, String dir,
+				 FilenameFilter filter)
       throws MalformedURLException {
     HttpContext context = server.getContext(contextPath);
-    // Don't consume memory with cached log files
+    // Don't consume memory with cached files
     context.setMaxCachedFileSize(0);
 
     // IpAccessHandler is always first handler
@@ -229,17 +230,32 @@ public abstract class BaseServletManager
     setContextAuthHandler(context, realm);
 
     // log dir resource
-    String logdirname = (logdir != null) ? logdir : "";
-    URL logResourceUrl=new URL("file", null,
-			       new File(logdirname).getAbsolutePath());
-    log.debug("Log Resource URL: " + logResourceUrl);
-    context.setResourceBase(logResourceUrl.toString());
-    ResourceHandler logRHandler = new ResourceHandler();
-    logRHandler.setDirAllowed(true);
-    //    logRHandler.setPutAllowed(false);
+    String dirname = (dir != null) ? dir : "";
+    URL url = new URL("file", null,
+		      new File(dirname).getAbsolutePath());
+    if (filter != null) {
+      try {
+	org.mortbay.util.Resource res =
+	  new FilteredDirFileResource(url, filter);
+	context.setBaseResource(res);
+      } catch (IOException e) {
+	throw new
+	  MalformedURLException("Can't create " +
+				"FilteredDirFileResource: " + e.toString());
+      } catch (URISyntaxException e) {
+	throw new
+	  MalformedURLException("Can't create " +
+				"FilteredDirFileResource: " + e.toString());
+      }
+    } else {
+      context.setResourceBase(url.toString());
+    }
+    ResourceHandler dirRHandler = new ResourceHandler();
+    dirRHandler.setDirAllowed(true);
+    //    dirRHandler.setPutAllowed(false);
     //       rHandler.setDelAllowed(false);
     //       rHandler.setAcceptRanges(true);
-    context.addHandler(logRHandler);
+    context.addHandler(dirRHandler);
     for (int ix = 0; ix < textMimes.length; ix++) {
       context.setMimeMapping(textMimes[ix], "text/plain");
     }
@@ -248,6 +264,12 @@ public abstract class BaseServletManager
 
     // NotFoundHandler
     context.addHandler(new NotFoundHandler());
+  }
+
+  protected void setupLogContext(HttpServer server, UserRealm realm,
+				 String contextPath, String logdir)
+      throws MalformedURLException {
+    setupDirContext(server, realm, contextPath, logdir, null);
   }
 
   // Add a servlet if its class can be loaded.
