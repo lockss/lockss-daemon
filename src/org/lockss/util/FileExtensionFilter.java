@@ -1,5 +1,5 @@
 /*
- * $Id: FileExtensionFilter.java,v 1.1 2006-05-20 23:24:48 tlipkis Exp $
+ * $Id: FileExtensionFilter.java,v 1.2 2006-05-20 23:32:28 tlipkis Exp $
  */
 
 /*
@@ -39,7 +39,6 @@ import java.io.*;
  */
 
 public class FileExtensionFilter implements FilenameFilter {
-  static Logger log = Logger.getLogger("FileExtensionFilter");
 
   private String ext;
 
@@ -48,7 +47,6 @@ public class FileExtensionFilter implements FilenameFilter {
   }
 
   public boolean accept(File dir, String name) {
-    log.debug(name + ": " + name.endsWith(ext));
     return name.endsWith(ext);
   }
 
