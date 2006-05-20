@@ -1,5 +1,5 @@
 /*
- * $Id: LocalServletManager.java,v 1.17 2006-05-12 18:27:22 thib_gc Exp $
+ * $Id: LocalServletManager.java,v 1.18 2006-05-20 23:26:14 tlipkis Exp $
  */
 
 /*
@@ -51,6 +51,11 @@ public class LocalServletManager extends BaseServletManager {
 
   static final String PREFIX = Configuration.PREFIX + "admin.";
 
+  /** Absolute path to directory in which configured platform ISO images
+   * are stored */
+  public static final String PARAM_ISODIR =
+    Configuration.PREFIX +  "platform.isodirectory";
+
   static final String PARAM_CONTACT_ADDR = PREFIX + "contactEmail";
   static final String DEFAULT_CONTACT_ADDR = "contactnotset@notset";
 
@@ -72,6 +77,7 @@ public class LocalServletManager extends BaseServletManager {
 
 
   private String redirectRootTo = DEFAULT_REDIRECT_ROOT;
+  protected String isodir;
   private LockssResourceHandler rootResourceHandler;
   private MDHashUserRealm realm;
   private List inFrameContentTypes;
@@ -83,6 +89,7 @@ public class LocalServletManager extends BaseServletManager {
   public void setConfig(Configuration config, Configuration prevConfig,
 			Configuration.Differences changedKeys) {
     super.setConfig(config, prevConfig, changedKeys);
+    isodir = config.get(PARAM_ISODIR);
     if (changedKeys.contains(PARAM_REDIRECT_ROOT)) {
       redirectRootTo = config.get(PARAM_REDIRECT_ROOT, DEFAULT_REDIRECT_ROOT);
       if (rootResourceHandler != null) {
@@ -155,8 +162,13 @@ public class LocalServletManager extends BaseServletManager {
   public void configureAdminContexts(HttpServer server) {
     try {
       if (true || logdir != null) {
-	// Create a context
+	// Create context for serving log files and directory
 	setupLogContext(server, realm, "/log/", logdir);
+      }
+      if (isodir != null) {
+	// Create context for serving ISO files and directory
+	setupDirContext(server, realm, "/iso/", isodir,
+			new FileExtensionFilter(".iso"));
       }
       // info currently has same auth as /, but could be different
       setupInfoContext(server);
