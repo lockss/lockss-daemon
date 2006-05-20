@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.83 2006-03-16 01:41:19 thib_gc Exp $
+ * $Id: LockssServlet.java,v 1.84 2006-05-20 23:26:26 tlipkis Exp $
  */
 
 /*
@@ -172,6 +172,14 @@ public abstract class LockssServlet extends HttpServlet
                      "Logs",
                      "log",
                      ServletDescr.IN_NAV | ServletDescr.DEBUG_ONLY);
+  // XXX This should be moved elsewhere.  If it stays in nav table it needs
+  // to at least be conditional on existence of ISO context (param set), or
+  // better, existence of any .iso files
+  protected static final ServletDescr LINK_ISOS =
+    new ServletDescr(null,
+                     "ISOs",
+                     "iso",
+                     ServletDescr.IN_NAV | ServletDescr.DEBUG_ONLY);
   protected static final ServletDescr SERVLET_THREAD_DUMP =
     new ServletDescr("org.lockss.servlet.ThreadDump",
                      "Thread Dump",
@@ -221,6 +229,7 @@ public abstract class LockssServlet extends HttpServlet
      SERVLET_DISPLAY_CONTENT,
      SERVLET_HASH_CUS,
      LINK_LOGS,
+     LINK_ISOS,
      SERVLET_THREAD_DUMP,
      SERVLET_RAISE_ALERT,
      SERVLET_DEBUG_PANEL,
