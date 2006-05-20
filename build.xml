@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.180 2006-05-15 00:51:22 tlipkis Exp $
+ $Id: build.xml,v 1.181 2006-05-20 05:55:54 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
@@ -1690,10 +1690,17 @@ Test results in ${test.results}
                failonerror="true"/>
          </then>
          <else>
-          <echo message="CVSROOT=${cvs.root}"/>
-	  <cvs command="-z3 -d ${cvs.root} -Q checkout"
+          <!-- Eclipse creates CVS/Root files with :extssh: as the access
+               method.  Turn these into :ssh:  -->
+	  <propertyregex property="cvs.root1"
+	     input="${cvs.root}"
+	     regexp="^(:ext)ssh(:.*)$"
+	     replace="\1\2"
+             defaultValue="${cvs.root}" />
+          <echo message="CVSROOT=${cvs.root1}"/>
+          <cvs command="-z3 -d ${cvs.root1} -Q checkout"
                package="${cvs.module}"
-	       dest="${temp.build.dir}"
+               dest="${temp.build.dir}"
                tag="${cvs.co.tag}"
                failonerror="true"/>
          </else>
