@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.47 2006-05-05 22:46:23 troberts Exp $
+ * $Id: TestNewContentCrawler.java,v 1.48 2006-05-20 19:27:14 tlipkis Exp $
  */
 
 /*
@@ -454,9 +454,9 @@ public class TestNewContentCrawler extends LockssTestCase {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     mau.addUrl(startUrl);
     parser.addUrlSetToReturn(startUrl, SetUtil.set(url1, url2, url3));
-    mau.addUrl(url1);
-    mau.addUrl(url2);
-    mau.addUrl(url3);
+    mau.addUrl(url1).setContentSize(42);
+    mau.addUrl(url2).setContentSize(3);;
+    mau.addUrl(url3).setContentSize(1000);;
     crawlRule.addUrlToCrawl(url1);
     crawlRule.addUrlToCrawl(url2);
     crawlRule.addUrlToCrawl(url3);
@@ -471,6 +471,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     assertEquals(SetUtil.set(startUrl, url1, url2, url3, permissionPage),
 		 crawlStatus.getUrlsFetched());
     assertEquals(4, crawlStatus.getNumParsed());
+    assertEquals(1045, crawlStatus.getContentBytesFetched());
     assertEquals(SetUtil.set("Publisher"), crawlStatus.getSources());
   }
 

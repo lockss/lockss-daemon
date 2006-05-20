@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepairCrawler.java,v 1.37 2006-04-23 05:51:51 tlipkis Exp $
+ * $Id: TestRepairCrawler.java,v 1.38 2006-05-20 19:27:14 tlipkis Exp $
  */
 
 /*
@@ -293,7 +293,7 @@ public class TestRepairCrawler extends LockssTestCase {
 
     String repairUrl = "http://example.com/blah.html";
 
-    mau.addUrl(repairUrl);
+    mau.addUrl(repairUrl).setContentSize(1234);
     MockUrlCacher muc = (MockUrlCacher)mau.makeUrlCacher(repairUrl);
     muc.setUncachedInputStream(new StringInputStream("blah"));
     muc.setUncachedProperties(new CIProperties());
@@ -318,6 +318,7 @@ public class TestRepairCrawler extends LockssTestCase {
     Crawler.Status status = crawler.getStatus();
     assertEquals(SetUtil.set("127.0.0.1"), status.getSources());
     assertEquals("Successful", status.getCrawlStatus());
+    assertEquals(1234, status.getContentBytesFetched());
   }
 
   public void testFetchFromACacheOnlyPercent()
@@ -506,7 +507,7 @@ public class TestRepairCrawler extends LockssTestCase {
     MyRepairCrawler crawler =
       makeCrawlerWPermission(mau, spec, aus, ListUtil.list(repairUrl),0);
 
-    mau.addUrl(repairUrl);
+    mau.addUrl(repairUrl).setContentSize(4321);
     crawlRule.addUrlToCrawl(repairUrl);
 
     Properties p = new Properties();
@@ -521,6 +522,7 @@ public class TestRepairCrawler extends LockssTestCase {
 	       crawler.getFetchPubCnt(), crawler.getFetchPubCnt() == 1);
     Crawler.Status status = crawler.getStatus();
     assertEquals(SetUtil.set("Publisher"), status.getSources());
+    assertEquals(4321, status.getContentBytesFetched());
   }
 
   public void testFetchFromPublisherOnlyFailure()

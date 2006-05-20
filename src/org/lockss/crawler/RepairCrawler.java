@@ -1,5 +1,5 @@
 /*
- * $Id: RepairCrawler.java,v 1.59 2006-04-23 05:50:49 tlipkis Exp $
+ * $Id: RepairCrawler.java,v 1.60 2006-05-20 19:27:14 tlipkis Exp $
  */
 
 /*
@@ -313,9 +313,7 @@ public class RepairCrawler extends BaseCrawler {
 	  }
 	}
       }
-      if (error == null) {
-	crawlStatus.signalUrlFetched(url);
-      } else {
+      if (error != null) {
 	crawlStatus.signalErrorForUrl(url, error);
       }
 
@@ -355,7 +353,9 @@ public class RepairCrawler extends BaseCrawler {
     for (Iterator it = repairers.iterator();
 	 it.hasNext() && (iz < numCacheRetries); ) {
       PeerIdentity cacheId = (PeerIdentity)it.next();
-      logger.debug3("Trying repair "+iz+" of "+numCacheRetries
+      logger.debug3("Trying repair "+iz+
+		    (numCacheRetries != Integer.MAX_VALUE
+		     ? (" of "+numCacheRetries) : "")
 		    +" from "+cacheId);
       if (idm.isLocalIdentity(cacheId)) {
 	logger.debug("Got local peer identity, skipping");
@@ -394,7 +394,7 @@ public class RepairCrawler extends BaseCrawler {
     uc.setProxy(addr, getProxyPort());
     uc.setRequestProperty(Constants.X_LOCKSS, Constants.X_LOCKSS_REPAIR);
     try {
-      cache(uc, addr);
+      updateCacheStats(cache(uc, addr), uc);
       crawlStatus.addSource(addr);
     } catch (IOException e) {
       logger.warning("Repair from cache failed", e);
@@ -443,7 +443,7 @@ public class RepairCrawler extends BaseCrawler {
     if (proxyHost != null) {
       uc.setProxy(proxyHost, proxyPort);
     }
-    uc.cache();
+    updateCacheStats(uc.cache(), uc);
     crawlStatus.addSource("Publisher");
   }
 
