@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.157 2006-05-15 00:12:26 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.158 2006-05-22 23:24:14 tlipkis Exp $
  */
 
 /*
@@ -328,7 +328,6 @@ public class PluginManager
     Map map = new HashMap();
     TreeSet list = new TreeSet();
     Configuration allSets = config.getConfigTree(PARAM_TITLE_SETS);
-    log.debug("configureTitleSets() " + allSets);
     for (Iterator iter = allSets.nodeIterator(); iter.hasNext(); ) {
       String id = (String)iter.next();
       Configuration setDef = allSets.getConfigTree(id);
@@ -1704,187 +1703,10 @@ public class PluginManager
 
     for (Iterator iter = registryAus.iterator(); iter.hasNext(); ) {
       ArchivalUnit au = (ArchivalUnit)iter.next();
-
-      CachedUrlSet cus = au.getAuCachedUrlSet();
-      LockssRepository repo = theDaemon.getLockssRepository(au);
-
-      for (Iterator cusIter = cus.contentHashIterator(); cusIter.hasNext(); ) {
-	CachedUrlSetNode cusn = (CachedUrlSetNode)cusIter.next();
-
-	// TODO: Eventually this should be replaced with
-	// "cusn.hasContent()", which will add another loop if it is a
-	// CachedUrlSet.
-
-	if (cusn.isLeaf()) {
-
-	  // This CachedUrl represents a plugin JAR, validate it and
-	  // process the plugins it contains.
-
-	  CachedUrl cu = (CachedUrl)cusn;
-	  String url = cu.getUrl();
-
-	  if (StringUtil.endsWithIgnoreCase(url, ".jar")) {
-	    RepositoryNode repoNode = null;
-	    Integer curVersion = null;
-
-	    try {
-	      repoNode = repo.getNode(url);
-	      curVersion = new Integer(repoNode.getCurrentVersion());
-	    } catch (MalformedURLException ex) {
-	      log.error("Malformed URL: Unable to get repository node " +
-			"for cu URL " + url + ", skipping.");
-	      continue;
-	    }
-
-	    if (cuNodeVersionMap.get(url) == null) {
-	      cuNodeVersionMap.put(url, new Integer(-1));
-	    }
-
-	    // If we've already visited this CU, skip it unless the current
-	    // repository node is a different version (older OR newer)
-	    Integer oldVersion = (Integer)cuNodeVersionMap.get(url);
-
-	    if (oldVersion.equals(curVersion)) {
-	      log.debug2(url + ": JAR repository and map versions are identical.  Skipping...");
-	      continue;
-	    }
-
-	    File blessedJar = null;
-	    try {
-	      // Validate and bless the JAR file from the CU.
-	      blessedJar = jarValidator.getBlessedJar(cu);
-	    } catch (IOException ex) {
-	      log.error("Error processing jar file: " + url, ex);
-	      continue;
-	    } catch (JarValidator.JarValidationException ex) {
-	      log.error("CachedUrl did not validate.", ex);
-	      continue;
-	    }
-
-	    // Update the cuNodeVersion map now that we have the blessed Jar.
-	    cuNodeVersionMap.put(url, curVersion);
-
-	    if (blessedJar != null) {
-	      // Get the list of plugins to load from this jar.
-	      List loadPlugins = null;
-	      try {
-		loadPlugins = getJarPluginClasses(blessedJar);
-	      } catch (IOException ex) {
-		log.error("Error while getting list of plugins for " +
-			  blessedJar);
-		continue; // skip this CU.
-
-	      }
-
-	      // Although this -should- never happen, it's possible.
-	      if (loadPlugins.size() == 0) {
-		log.warning("Jar " + blessedJar +
-			    " does not contain any plugins.  Skipping...");
-		continue; // skip this CU.
-	      }
-
-	      // Load the plugin classes
-	      ClassLoader pluginLoader = null;
-	      URL blessedUrl;
-	      try {
-		blessedUrl = blessedJar.toURL();
-		URL[] urls = new URL[] { blessedUrl };
-		pluginLoader =
-		  preferLoadablePlugin
-		  ? new LoadablePluginClassLoader(urls)
-		  : new URLClassLoader(urls);
-	      } catch (MalformedURLException ex) {
-		log.error("Malformed URL exception attempting to create " +
-			  "classloader for plugin JAR " + blessedJar);
-		continue; // skip this CU.
-	      }
-
-	      String pluginName = null;
-
-	      for (Iterator pluginIter = loadPlugins.iterator();
-		   pluginIter.hasNext();) {
-		pluginName = (String)pluginIter.next();
-		String key = pluginKeyFromName(pluginName);
-
-		Plugin plugin;
-		PluginInfo info;
-		try {
-		  info = retrievePlugin(pluginName, pluginLoader);
-		  info.setCuUrl(url);
-		  info.setRegistryAu(au);
-		  String jar = info.getJarUrl();
-		  if (jar != null) {
-		    // If the blessed jar path is a substring of the jar:
-		    // url from which the actual plugin resource or class
-		    // was loaded, then it is a loadable plugin.
-		    boolean isLoadable =
-		      jar.indexOf(blessedUrl.getFile()) > 0;
-		    info.setIsOnLoadablePath(isLoadable);
-		  }
-		  plugin = info.getPlugin();
-		} catch (Exception ex) {
-		  log.error("Unable to load plugin " + pluginName +
-			    ", skipping: " + ex.getMessage());
-		  continue;
-		}
-
-		PluginVersion version = null;
-
-		try {
-		  version = new PluginVersion(plugin.getVersion());
-		  info.setVersion(version);
-		} catch (IllegalArgumentException ex) {
-		  // Don't let this runtime exception stop the daemon.  Skip the plugin.
-		  log.error("Skipping plugin " + pluginName + ": " + ex.getMessage());
-		  continue;
-		}
-
-		if (pluginMap.containsKey(key)) {
-		  // Plugin already exists in the global plugin map.
-		  // Replace it with a new version if one is available.
-		  log.debug2("Plugin " + key + " is already in global pluginMap.");
-		  Plugin otherPlugin = getPlugin(key);
-		  PluginVersion otherVer =
-		    new PluginVersion(otherPlugin.getVersion());
-		  if (version.toLong() > otherVer.toLong()) {
-		    if (log.isDebug2()) {
-		      log.debug2("Existing plugin " + plugin.getPluginId() +
-				 ": Newer version " + version + " found.");
-		    }
-		    tmpMap.put(key, info);
-		  } else {
-		    if (log.isDebug2()) {
-		      log.debug2("Existing plugin " + plugin.getPluginId() +
-				 ": No newer version found.");
-		    }
-		  }
-		} else if (!tmpMap.containsKey(key)) {
-		  // Plugin doesn't yet exist in the temporary map, add it.
-		  tmpMap.put(key, info);
-
-		  if (log.isDebug2()) {
-		    log.debug2("Plugin " + plugin.getPluginId() +
-			       ": No previous version in temp map.");
-		  }
-		} else {
-		  // Plugin already exists in the temporary map, use whichever
-		  // version is higher.
-		  PluginVersion otherVer = ((PluginInfo)tmpMap.get(key)).getVersion();
-
-		  if (version.toLong() > otherVer.toLong()) {
-		    if (log.isDebug2()) {
-		      log.debug2("Plugin " + plugin.getPluginId() + ": version " +
-				version + " is newer than version " + otherVer +
-				" already in temp map, overwriting.");
-		    }
-		    // Overwrite old key in temp map
-		    tmpMap.put(key, info);
-		  }
-		}
-	      }
-	    }
-	  }
-	}
+      try {
+	processOneRegistryAu(au, tmpMap);
+      } catch (RuntimeException e) {
+	log.error("Error processing plugin registry AU: " + au, e);
       }
     }
 
@@ -1910,6 +1732,198 @@ public class PluginManager
     // Cleanup as a hint to GC.
     tmpMap.clear();
     tmpMap = null;
+  }
+
+  protected void processOneRegistryAu(ArchivalUnit au, Map tmpMap) {
+    CachedUrlSet cus = au.getAuCachedUrlSet();
+
+    for (Iterator cusIter = cus.contentHashIterator(); cusIter.hasNext(); ) {
+      CachedUrlSetNode cusn = (CachedUrlSetNode)cusIter.next();
+
+      // TODO: Eventually this should be replaced with
+      // "cusn.hasContent()", which will add another loop if it is a
+      // CachedUrlSet.
+
+      if (cusn.isLeaf()) {
+
+	// This CachedUrl represents a plugin JAR, validate it and
+	// process the plugins it contains.
+
+	CachedUrl cu = (CachedUrl)cusn;
+	String url = cu.getUrl();
+	if (StringUtil.endsWithIgnoreCase(url, ".jar")) {
+	  try {
+	    processOneRegistryJar(cu, url, au, tmpMap);
+	  } catch (RuntimeException e) {
+	    log.error("Error processing plugin jar: " + cu, e);
+	  }
+	}
+      }
+    }
+  }
+
+  protected void processOneRegistryJar(CachedUrl cu, String url,
+				       ArchivalUnit au, Map tmpMap) {
+    LockssRepository repo = theDaemon.getLockssRepository(au);
+    RepositoryNode repoNode = null;
+    Integer curVersion = null;
+
+    try {
+      repoNode = repo.getNode(url);
+      curVersion = new Integer(repoNode.getCurrentVersion());
+    } catch (MalformedURLException ex) {
+      log.error("Malformed URL: Unable to get repository node " +
+		"for cu URL " + url + ", skipping.");
+      return;
+    }
+
+    if (cuNodeVersionMap.get(url) == null) {
+      cuNodeVersionMap.put(url, new Integer(-1));
+    }
+
+    // If we've already visited this CU, skip it unless the current
+    // repository node is a different version (older OR newer)
+    Integer oldVersion = (Integer)cuNodeVersionMap.get(url);
+
+    if (oldVersion.equals(curVersion)) {
+      log.debug2(url + ": JAR repository and map versions are identical.  Skipping...");
+      return;
+    }
+
+    File blessedJar = null;
+    try {
+      // Validate and bless the JAR file from the CU.
+      blessedJar = jarValidator.getBlessedJar(cu);
+    } catch (IOException ex) {
+      log.error("Error processing jar file: " + url, ex);
+      return;
+    } catch (JarValidator.JarValidationException ex) {
+      log.error("CachedUrl did not validate: " + cu, ex);
+      return;
+    }
+
+    // Update the cuNodeVersion map now that we have the blessed Jar.
+    cuNodeVersionMap.put(url, curVersion);
+
+    if (blessedJar != null) {
+      // Get the list of plugins to load from this jar.
+      List loadPlugins = null;
+      try {
+	loadPlugins = getJarPluginClasses(blessedJar);
+      } catch (IOException ex) {
+	log.error("Error while getting list of plugins for " +
+		  blessedJar);
+	return; // skip this CU.
+
+      }
+
+      // Although this -should- never happen, it's possible.
+      if (loadPlugins.size() == 0) {
+	log.warning("Jar " + blessedJar +
+		    " does not contain any plugins.  Skipping...");
+	return; // skip this CU.
+      }
+
+      // Load the plugin classes
+      ClassLoader pluginLoader = null;
+      URL blessedUrl;
+      try {
+	blessedUrl = blessedJar.toURL();
+	URL[] urls = new URL[] { blessedUrl };
+	pluginLoader =
+	  preferLoadablePlugin
+	  ? new LoadablePluginClassLoader(urls)
+	  : new URLClassLoader(urls);
+      } catch (MalformedURLException ex) {
+	log.error("Malformed URL exception attempting to create " +
+		  "classloader for plugin JAR " + blessedJar);
+	return; // skip this CU.
+      }
+
+      String pluginName = null;
+
+      for (Iterator pluginIter = loadPlugins.iterator();
+	   pluginIter.hasNext();) {
+	pluginName = (String)pluginIter.next();
+	String key = pluginKeyFromName(pluginName);
+
+	Plugin plugin;
+	PluginInfo info;
+	try {
+	  info = retrievePlugin(pluginName, pluginLoader);
+	  info.setCuUrl(url);
+	  info.setRegistryAu(au);
+	  String jar = info.getJarUrl();
+	  if (jar != null) {
+	    // If the blessed jar path is a substring of the jar:
+	    // url from which the actual plugin resource or class
+	    // was loaded, then it is a loadable plugin.
+	    boolean isLoadable =
+	      jar.indexOf(blessedUrl.getFile()) > 0;
+	    info.setIsOnLoadablePath(isLoadable);
+	  }
+	  plugin = info.getPlugin();
+	} catch (Exception ex) {
+	  log.error("Unable to load plugin " + pluginName +
+		    ", skipping: " + ex.getMessage());
+	  return;
+	}
+
+	PluginVersion version = null;
+
+	try {
+	  version = new PluginVersion(plugin.getVersion());
+	  info.setVersion(version);
+	} catch (IllegalArgumentException ex) {
+	  // Don't let this runtime exception stop the daemon.  Skip the plugin.
+	  log.error("Skipping plugin " + pluginName + ": " + ex.getMessage());
+	  return;
+	}
+
+	if (pluginMap.containsKey(key)) {
+	  // Plugin already exists in the global plugin map.
+	  // Replace it with a new version if one is available.
+	  log.debug2("Plugin " + key + " is already in global pluginMap.");
+	  Plugin otherPlugin = getPlugin(key);
+	  PluginVersion otherVer =
+	    new PluginVersion(otherPlugin.getVersion());
+	  if (version.toLong() > otherVer.toLong()) {
+	    if (log.isDebug2()) {
+	      log.debug2("Existing plugin " + plugin.getPluginId() +
+			 ": Newer version " + version + " found.");
+	    }
+	    tmpMap.put(key, info);
+	  } else {
+	    if (log.isDebug2()) {
+	      log.debug2("Existing plugin " + plugin.getPluginId() +
+			 ": No newer version found.");
+	    }
+	  }
+	} else if (!tmpMap.containsKey(key)) {
+	  // Plugin doesn't yet exist in the temporary map, add it.
+	  tmpMap.put(key, info);
+
+	  if (log.isDebug2()) {
+	    log.debug2("Plugin " + plugin.getPluginId() +
+		       ": No previous version in temp map.");
+	  }
+	} else {
+	  // Plugin already exists in the temporary map, use whichever
+	  // version is higher.
+	  PluginVersion otherVer = ((PluginInfo)tmpMap.get(key)).getVersion();
+
+	  if (version.toLong() > otherVer.toLong()) {
+	    if (log.isDebug2()) {
+	      log.debug2("Plugin " + plugin.getPluginId() + ": version " +
+			 version + " is newer than version " + otherVer +
+			 " already in temp map, overwriting.");
+	    }
+	    // Overwrite old key in temp map
+	    tmpMap.put(key, info);
+	  }
+	}
+      }
+    }
   }
 
   /**

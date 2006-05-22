@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.69 2006-05-15 00:12:25 tlipkis Exp $
+ * $Id: TestPluginManager.java,v 1.70 2006-05-22 23:24:14 tlipkis Exp $
  */
 
 /*
@@ -90,7 +90,7 @@ public class TestPluginManager extends LockssTestCase {
 
   private String tempDirPath;
 
-  PluginManager mgr;
+  MyPluginManager mgr;
 
   public TestPluginManager(String msg) {
     super(msg);
@@ -646,8 +646,30 @@ public class TestPluginManager extends LockssTestCase {
   }
 
   static class MyPluginManager extends PluginManager {
+    private ArchivalUnit processOneRegistryAuThrowIf = null;
+    private String processOneRegistryJarThrowIf = null;
+
     protected String getConfigurablePluginName() {
       return MyMockConfigurablePlugin.class.getName();
+    }
+    protected void processOneRegistryAu(ArchivalUnit au, Map tmpMap) {
+      if (au == processOneRegistryAuThrowIf) {
+	throw new ExpectedRuntimeException("fake error for " + au);
+      }
+      super.processOneRegistryAu(au, tmpMap);
+    }
+    protected void processOneRegistryJar(CachedUrl cu, String url,
+					 ArchivalUnit au, Map tmpMap) {
+      if (url.equals(processOneRegistryJarThrowIf)) {
+	throw new ExpectedRuntimeException("fake error for " + url);
+      }
+      super.processOneRegistryJar(cu, url, au, tmpMap);
+    }
+    void processOneRegistryAuThrowIf(ArchivalUnit au) {
+      processOneRegistryAuThrowIf = au;
+    }
+    void processOneRegistryJarThrowIf(String url) {
+      processOneRegistryJarThrowIf = url;
     }
   }
 
@@ -950,13 +972,41 @@ public class TestPluginManager extends LockssTestCase {
   }
 
   /** Load a loadable plugin, preferring the loadable version. */
-  public void testLoadLoadablePlugin() throws Exception {
+  public void testLoadLoadablePluginPreferLoadable() throws Exception {
     testLoadLoadablePlugin(true);
   }
 
   /** Load a loadable plugin, preferring the library jar version. */
-  public void testLoadLoadablePlugin2() throws Exception {
+  public void testLoadLoadablePluginPreferLibJar() throws Exception {
     testLoadLoadablePlugin(false);
+  }
+
+  /** Runtime errors loading plugins should be caught. */
+  public void testErrorProcessingRegistryAu() throws Exception {
+    String badplug = "org/lockss/test/bad-plugin.jar";
+    Properties p = new Properties();
+    p.setProperty(PluginManager.PARAM_PREFER_LOADABLE_PLUGIN, "true");
+    prepareLoadablePluginTests(p);
+    String pluginKey = "org|lockss|test|MockConfigurablePlugin";
+    // Set up a MyMockRegistryArchivalUnit with the right data.
+    MyMockRegistryArchivalUnit mmau1 =
+      new MyMockRegistryArchivalUnit(ListUtil.list(badplug));
+    MyMockRegistryArchivalUnit mmau2 =
+      new MyMockRegistryArchivalUnit(ListUtil.list(badplug, pluginJar));
+    // Make processOneRegistryAu throw on the first au
+    mgr.processOneRegistryAuThrowIf(mmau1);
+    // Make processOneRegistryJar throw on the first jar in the second au
+    mgr.processOneRegistryJarThrowIf(mmau2.getNthUrl(1));
+    assertNull(mgr.getPlugin(pluginKey));
+    mgr.processRegistryAus(ListUtil.list(mmau1, mmau2));
+    // ensure that the one plugin was still loaded
+    Plugin mockPlugin = mgr.getPlugin(pluginKey);
+    assertNotNull(mockPlugin);
+    assertEquals("1", mockPlugin.getVersion());
+    PluginManager.PluginInfo info = mgr.getLoadablePluginInfo(mockPlugin);
+    assertEquals(mmau2.getNthUrl(2), info.getCuUrl());
+    assertTrue(info.isOnLoadablePath());
+    assertSame(mockPlugin, info.getPlugin());
   }
 
   public static Test suite() {
