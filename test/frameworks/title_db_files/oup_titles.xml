@@ -279,6 +279,26 @@
 	<property name="key" value="volume" />
 	<property name="value" value="15" />
       </property>
+      <property name="param.99">
+	<property name="key" value="pub_down" />
+	<property name="value" value="true" />
+      </property>
+      <property name="attributes.publisher" value="oup" />
+    </property>
+
+
+    <property name="Glycobiology16">
+      <property name="title" value="Glycobiology Volume 16" />
+      <property name="journalTitle" value="Glycobiology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://glycob.oxfordjournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="16" />
+      </property>
       <property name="attributes.publisher" value="oup" />
     </property>
 
@@ -503,8 +523,28 @@
 	<property name="key" value="volume" />
 	<property name="value" value="15" />
       </property>
+      <property name="param.99">
+	<property name="key" value="pub_down" />
+	<property name="value" value="true" />
+      </property>
       <property name="attributes.publisher" value="oup" />
     </property>
+
+    <property name="JournalofLogicandComputation16">
+      <property name="title" value="Journal of Logic and Computation Volume 16" />
+      <property name="journalTitle" value="Journal of Logic and Computation" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://logcom.oxfordjournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="16" />
+      </property>
+      <property name="attributes.publisher" value="oup" />
+    </property>
+
 
 
     <property name="JournalofPlanktonResearch27">
@@ -631,6 +671,25 @@
 	<property name="key" value="volume" />
 	<property name="value" value="11" />
       </property>
+      <property name="param.99">
+	<property name="key" value="pub_down" />
+	<property name="value" value="true" />
+      </property>
+      <property name="attributes.publisher" value="oup" />
+    </property>
+
+    <property name="MolecularHumanReproduction12">
+      <property name="title" value="Molecular Human Reproduction Volume 12" />
+      <property name="journalTitle" value="Molecular Human Reproduction" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://molehr.oxfordjournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="12" />
+      </property>
       <property name="attributes.publisher" value="oup" />
     </property>
 
@@ -678,6 +737,25 @@
       <property name="param.2">
 	<property name="key" value="volume" />
 	<property name="value" value="33" />
+      </property>
+      <property name="param.99">
+	<property name="key" value="pub_down" />
+	<property name="value" value="true" />
+      </property>
+      <property name="attributes.publisher" value="oup" />
+    </property>
+
+    <property name="NucleicAcidsResearch34">
+      <property name="title" value="Nucleic Acids Research Volume 34" />
+      <property name="journalTitle" value="Nucleic Acids Research" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://nar.oxfordjournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="34" />
       </property>
       <property name="attributes.publisher" value="oup" />
     </property>
@@ -758,6 +836,26 @@
       <property name="param.2">
 	<property name="key" value="volume" />
 	<property name="value" value="58" />
+      </property>
+      <property name="param.99">
+	<property name="key" value="pub_down" />
+	<property name="value" value="true" />
+      </property>
+      <property name="attributes.publisher" value="oup" />
+    </property>
+
+
+    <property name="QuarterlyJournalofMechanicsandAppliedMathematics59">
+      <property name="title" value="Quarterly Journal of Mechanics and Applied Mathematics Volume 59" />
+      <property name="journalTitle" value="Quarterly Journal of Mechanics and Applied Mathematics" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://qjmam.oxfordjournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="59" />
       </property>
       <property name="attributes.publisher" value="oup" />
     </property>
@@ -982,6 +1080,7 @@
     <property name="AfricanAffairs105">
       <property name="title" value="African Affairs Volume 105" />
       <property name="journalTitle" value="African Affairs" />
+      <property name="estSize" value="10MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -997,6 +1096,7 @@
     <property name="AgeandAgeing35">
       <property name="title" value="Age and Ageing Volume 35" />
       <property name="journalTitle" value="Age and Ageing" />
+      <property name="estSize" value="50MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -1160,10 +1260,10 @@
       <property name="attributes.publisher" value="oup" />
     </property>
     
-    <property name="BritishJnlforthePhilosophyofSci57">
-      <property name="title" value="British Jnl. for the Philosophy of Sci. Volume 57" />
+    <property name="BritishJournalforthePhilosophyofSci57">
+      <property name="title" value="British Journal for the Philosophy of Sci. Volume 57" />
       <property name="estSize" value="20MB" />
-      <property name="journalTitle" value="British Jnl. for the Philosophy of Sci." />
+      <property name="journalTitle" value="British Journal for the Philosophy of Sci." />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -1256,6 +1356,7 @@
     <property name="CambridgeJournalofEconomics30">
       <property name="title" value="Cambridge Journal of Economics Volume 30" />
       <property name="journalTitle" value="Cambridge Journal of Economics" />
+      <property name="estSize" value="25MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -1287,6 +1388,7 @@
     <property name="CESifoEconomicStudies52">
       <property name="title" value="CESifo Economic Studies Volume 52" />
       <property name="journalTitle" value="CESifo Economic Studies" />
+      <property name="estSize" value="12MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -1426,6 +1528,7 @@
     <property name="EconomicInquiry44">
       <property name="title" value="Economic Inquiry Volume 44" />
       <property name="journalTitle" value="Economic Inquiry" />
+      <property name="estSize" value="45MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -1441,6 +1544,7 @@
     <property name="ELTJournal60">
       <property name="title" value="ELT Journal Volume 60" />
       <property name="journalTitle" value="ELT Journal" />
+      <property name="estSize" value="30MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -1534,6 +1638,7 @@
     <property name="EuropeanHeartJournalSupplements8">
       <property name="title" value="European Heart Journal Supplements Volume 8" />
       <property name="journalTitle" value="European Heart Journal Supplements" />
+      <property name="estSize" value="30MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -1609,6 +1714,7 @@
     <property name="EuropeanSociologicalReview22">
       <property name="title" value="European Sociological Review Volume 22" />
       <property name="journalTitle" value="European Sociological Review" />
+      <property name="estSize" value="20MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -1624,6 +1730,7 @@
     <property name="EvidencebasedComplandAltMedicine3">
       <property name="title" value="Evidence-based Compl. and Alt. Medicine Volume 3" />
       <property name="journalTitle" value="Evidence-based Compl. and Alt. Medicine" />
+      <property name="estSize" value="40MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -1684,6 +1791,7 @@
     <property name="FrenchHistory20">
       <property name="title" value="French History Volume 20" />
       <property name="journalTitle" value="French History" />
+      <property name="estSize" value="7MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -1699,6 +1807,7 @@
     <property name="FrenchStudies60">
       <property name="title" value="French Studies Volume 60" />
       <property name="journalTitle" value="French Studies" />
+      <property name="estSize" value="10MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -1774,6 +1883,7 @@
     <property name="HistoryWorkshopJournal61">
       <property name="title" value="History Workshop Journal Volume 61" />
       <property name="journalTitle" value="History Workshop Journal" />
+      <property name="estSize" value="40MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -1789,6 +1899,7 @@
     <property name="HumanCommunicationResearch31">
       <property name="title" value="Human Communication Research Volume 31" />
       <property name="journalTitle" value="Human Communication Research" />
+      <property name="estSize" value="12MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -1894,6 +2005,7 @@
     <property name="IMAJournalofAppliedMathematics71">
       <property name="title" value="IMA Journal of Applied Mathematics Volume 71" />
       <property name="journalTitle" value="IMA Journal of Applied Mathematics" />
+      <property name="estSize" value="20MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -1921,9 +2033,9 @@
       <property name="attributes.publisher" value="oup" />
     </property>
     
-    <property name="IMAJnlofMathsControlInformation23">
-      <property name="title" value="IMA Jnl of Maths. Control &amp; Information Volume 23" />
-      <property name="journalTitle" value="IMA Jnl of Maths. Control &amp; Information" />
+    <property name="IMAJournalofMathsControlInformation23">
+      <property name="title" value="IMA Journal of Maths. Control &amp; Information Volume 23" />
+      <property name="journalTitle" value="IMA Journal of Maths. Control &amp; Information" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -1939,6 +2051,7 @@
     <property name="IMAJournalofNumericalAnalysis26">
       <property name="title" value="IMA Journal of Numerical Analysis Volume 26" />
       <property name="journalTitle" value="IMA Journal of Numerical Analysis" />
+      <property name="estSize" value="20MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -2027,8 +2140,8 @@
     </property>
     
     <property name="IntJournalforQualityinHealthCare18">
-      <property name="title" value="Int. Journal for Quality in Health Care Volume 18" />
-      <property name="journalTitle" value="Int. Journal for Quality in Health Care" />
+      <property name="title" value="International Journal for Quality in Health Care Volume 18" />
+      <property name="journalTitle" value="International Journal for Quality in Health Care" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -2041,9 +2154,9 @@
       <property name="attributes.publisher" value="oup" />
     </property>
     
-    <property name="IntJnlofConstitutionalLaw4">
-      <property name="title" value="Int. Jnl. of Constitutional Law Volume 4" />
-      <property name="journalTitle" value="Int. Jnl. of Constitutional Law" />
+    <property name="IntJournalofConstitutionalLaw4">
+      <property name="title" value="International Journal of Constitutional Law Volume 4" />
+      <property name="journalTitle" value="International Journal of Constitutional Law" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -2071,9 +2184,9 @@
       <property name="attributes.publisher" value="oup" />
     </property>
     
-    <property name="IntJnlofLawandInfoTechnology14">
-      <property name="title" value="Int. Jnl. of Law and Info. Technology Volume 14" />
-      <property name="journalTitle" value="Int. Jnl. of Law and Info. Technology" />
+    <property name="IntJournalofLawandInfoTechnology14">
+      <property name="title" value="International Journal of Law and Information Technology Volume 14" />
+      <property name="journalTitle" value="International Journal of Law and Information Technology" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -2083,12 +2196,31 @@
 	<property name="key" value="volume" />
 	<property name="value" value="14" />
       </property>
+      <property name="param.99">
+	<property name="key" value="pub_down" />
+	<property name="value" value="true" />
+      </property>
       <property name="attributes.publisher" value="oup" />
     </property>
     
-    <property name="IntJnlofLawPolicyandtheFamily20">
-      <property name="title" value="Int. Jnl. of Law, Policy and the Family Volume 20" />
-      <property name="journalTitle" value="Int. Jnl. of Law, Policy and the Family" />
+    <property name="IntJournalofLawandInfoTechnology14">
+      <property name="title" value="International Journal of Law and Information Technology Volume 15" />
+      <property name="journalTitle" value="International Journal of Law and Information Technology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://ijlit.oxfordjournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="15" />
+      </property>
+      <property name="attributes.publisher" value="oup" />
+    </property>
+    
+    <property name="IntJournalofLawPolicyandtheFamily20">
+      <property name="title" value="International Journal of Law, Policy and the Family Volume 20" />
+      <property name="journalTitle" value="International Journal of Law, Policy and the Family" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -2117,8 +2249,8 @@
     </property>
     
     <property name="IntJournalofPublicOpinionResearch18">
-      <property name="title" value="Int. Journal of Public Opinion Research Volume 18" />
-      <property name="journalTitle" value="Int. Journal of Public Opinion Research" />
+      <property name="title" value="International Journal of Public Opinion Research Volume 18" />
+      <property name="journalTitle" value="International Journal of Public Opinion Research" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -2147,8 +2279,8 @@
     </property>
     
     <property name="IntRelationsoftheAsiaPacific6">
-      <property name="title" value="Int. Relations of the Asia-Pacific Volume 6" />
-      <property name="journalTitle" value="Int. Relations of the Asia-Pacific" />
+      <property name="title" value="International Relations of the Asia-Pacific Volume 6" />
+      <property name="journalTitle" value="International Relations of the Asia-Pacific" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -2239,6 +2371,7 @@
     <property name="JournalofCommunication55">
       <property name="title" value="Journal of Communication Volume 55" />
       <property name="journalTitle" value="Journal of Communication" />
+      <property name="estSize" value="35MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -2251,9 +2384,9 @@
       <property name="attributes.publisher" value="oup" />
     </property>
     
-    <property name="JnlofCompetitionLawandEconomics2">
-      <property name="title" value="Jnl of Competition Law and Economics Volume 2" />
-      <property name="journalTitle" value="Jnl of Competition Law and Economics" />
+    <property name="JournalofCompetitionLawandEconomics2">
+      <property name="title" value="Journal of Competition Law and Economics Volume 2" />
+      <property name="journalTitle" value="Journal of Competition Law and Economics" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -2284,6 +2417,7 @@
     <property name="JournalofDesignHistory19">
       <property name="title" value="Journal of Design History Volume 19" />
       <property name="journalTitle" value="Journal of Design History" />
+      <property name="estSize" value="60MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -2356,9 +2490,9 @@
       <property name="attributes.publisher" value="oup" />
     </property>
     
-    <property name="JnlofFinancialEconometrics4">
-      <property name="title" value="Jnl of Financial Econometrics Volume 4" />
-      <property name="journalTitle" value="Jnl of Financial Econometrics" />
+    <property name="JournalofFinancialEconometrics4">
+      <property name="title" value="Journal of Financial Econometrics Volume 4" />
+      <property name="journalTitle" value="Journal of Financial Econometrics" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -2386,9 +2520,9 @@
       <property name="attributes.publisher" value="oup" />
     </property>
     
-    <property name="JnlofIntellectualPropertyLawPractice1">
-      <property name="title" value="Jnl of Intellectual Property Law &amp; Practice Volume 1" />
-      <property name="journalTitle" value="Jnl of Intellectual Property Law &amp; Practice" />
+    <property name="JournalofIntellectualPropertyLawPractice1">
+      <property name="title" value="Journal of Intellectual Property Law &amp; Practice Volume 1" />
+      <property name="journalTitle" value="Journal of Intellectual Property Law &amp; Practice" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -2434,6 +2568,7 @@
     <property name="JournalofIslamicStudies17">
       <property name="title" value="Journal of Islamic Studies Volume 17" />
       <property name="journalTitle" value="Journal of Islamic Studies" />
+      <property name="estSize" value="30MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -2446,9 +2581,9 @@
       <property name="attributes.publisher" value="oup" />
     </property>
     
-    <property name="JnlofLawEconomicsandOrganization22">
-      <property name="title" value="Jnl. of Law, Economics, and Organization Volume 22" />
-      <property name="journalTitle" value="Jnl. of Law, Economics, and Organization" />
+    <property name="JournalofLawEconomicsandOrganization22">
+      <property name="title" value="Journal of Law, Economics, and Organization Volume 22" />
+      <property name="journalTitle" value="Journal of Law, Economics, and Organization" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -2464,6 +2599,7 @@
     <property name="JournalofMolluscanStudies72">
       <property name="title" value="Journal of Molluscan Studies Volume 72" />
       <property name="journalTitle" value="Journal of Molluscan Studies" />
+      <property name="estSize" value="150MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -2491,9 +2627,10 @@
       <property name="attributes.publisher" value="oup" />
     </property>
     
-    <property name="JnlofPublicAdminResearchandTheory16">
-      <property name="title" value="Jnl. of Public Admin. Research and Theory Volume 16" />
-      <property name="journalTitle" value="Jnl. of Public Admin. Research and Theory" />
+    <property name="JournalofPublicAdminResearchandTheory16">
+      <property name="title" value="Journal of Public Admininistration Research and Theory Volume 16" />
+      <property name="journalTitle" value="Journal of Public Admininistration Research and Theory" />
+      <property name="estSize" value="30MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -2551,9 +2688,9 @@
       <property name="attributes.publisher" value="oup" />
     </property>
     
-    <property name="JnloftheAmericanAcademyofReligion74">
-      <property name="title" value="Jnl of the American Academy of Religion Volume 74" />
-      <property name="journalTitle" value="Jnl of the American Academy of Religion" />
+    <property name="JournaloftheAmericanAcademyofReligion74">
+      <property name="title" value="Journal of the American Academy of Religion Volume 74" />
+      <property name="journalTitle" value="Journal of the American Academy of Religion" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -2599,6 +2736,7 @@
     <property name="JournaloftheRoyalMusicalAssociation130">
       <property name="title" value="Journal of the Royal Musical Association Volume 130" />
       <property name="journalTitle" value="Journal of the Royal Musical Association" />
+      <property name="estSize" value="50MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -2629,6 +2767,7 @@
     <property name="JournalofTropicalPediatrics52">
       <property name="title" value="Journal of Tropical Pediatrics Volume 52" />
       <property name="journalTitle" value="Journal of Tropical Pediatrics" />
+      <property name="estSize" value="50MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -2659,6 +2798,7 @@
     <property name="Library7">
       <property name="title" value="Library Volume 7" />
       <property name="journalTitle" value="Library" />
+      <property name="estSize" value="20MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -2674,6 +2814,7 @@
     <property name="LiteraryandLinguisticComputing21">
       <property name="title" value="Literary and Linguistic Computing Volume 21" />
       <property name="journalTitle" value="Literary and Linguistic Computing" />
+      <property name="estSize" value="35MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -2689,6 +2830,7 @@
     <property name="LiteratureandTheology20">
       <property name="title" value="Literature and Theology Volume 20" />
       <property name="journalTitle" value="Literature and Theology" />
+      <property name="estSize" value="15MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -2749,6 +2891,7 @@
     <property name="Mind115">
       <property name="title" value="Mind Volume 115" />
       <property name="journalTitle" value="Mind" />
+      <property name="estSize" value="10MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -2764,6 +2907,7 @@
     <property name="ModernJudaism26">
       <property name="title" value="Modern Judaism Volume 26" />
       <property name="journalTitle" value="Modern Judaism" />
+      <property name="estSize" value="15MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -3019,6 +3163,7 @@
     <property name="PublicOpinionQuarterly70">
       <property name="title" value="Public Opinion Quarterly Volume 70" />
       <property name="journalTitle" value="Public Opinion Quarterly" />
+      <property name="estSize" value="15MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -3111,6 +3256,7 @@
     <property name="ReviewofFinancialStudies19">
       <property name="title" value="Review of Financial Studies Volume 19" />
       <property name="journalTitle" value="Review of Financial Studies" />
+      <property name="estSize" value="45MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
