@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.84 2006-05-20 23:26:26 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.85 2006-05-23 02:59:18 tlipkis Exp $
  */
 
 /*
@@ -92,6 +92,7 @@ public abstract class LockssServlet extends HttpServlet
   protected ServletContext context;
 
   private LockssApp theApp = null;
+  private ServletManager servletMgr;
 
   // Request-local storage.  Convenient, but requires servlet instances
   // to be single threaded, and must ensure reset them to avoid carrying
@@ -172,14 +173,23 @@ public abstract class LockssServlet extends HttpServlet
                      "Logs",
                      "log",
                      ServletDescr.IN_NAV | ServletDescr.DEBUG_ONLY);
-  // XXX This should be moved elsewhere.  If it stays in nav table it needs
-  // to at least be conditional on existence of ISO context (param set), or
-  // better, existence of any .iso files
+  // Link to ISOs only appears if there are actually any ISOs
   protected static final ServletDescr LINK_ISOS =
     new ServletDescr(null,
                      "ISOs",
                      "iso",
-                     ServletDescr.IN_NAV | ServletDescr.DEBUG_ONLY);
+                     ServletDescr.IN_NAV | ServletDescr.IN_UIHOME,
+		     "Download configured platform CD image") {
+      public boolean isInNav(LockssServlet servlet) {
+	ServletManager mgr = servlet.getServletManager();
+	return (mgr instanceof LocalServletManager) &&
+	  ((LocalServletManager)mgr).hasIsoFiles();
+      }
+      public boolean isInUiHome(LockssServlet servlet) {
+	ServletManager mgr = servlet.getServletManager();
+	return (mgr instanceof LocalServletManager) &&
+	  ((LocalServletManager)mgr).hasIsoFiles();
+      }};
   protected static final ServletDescr SERVLET_THREAD_DUMP =
     new ServletDescr("org.lockss.servlet.ThreadDump",
                      "Thread Dump",
@@ -271,6 +281,11 @@ public abstract class LockssServlet extends HttpServlet
     super.init(config);
     context = config.getServletContext();
     theApp = (LockssApp)context.getAttribute("LockssApp");
+    servletMgr = theApp.getServletManager();
+  }
+
+  public ServletManager getServletManager() {
+    return servletMgr;
   }
 
   /** Servlets must implement this method. */
@@ -629,7 +644,7 @@ public abstract class LockssServlet extends HttpServlet
   protected boolean isServletInNav(ServletDescr d) {
     if (!isDebugUser() && d.isDebugOnly()) return false;
     if (d.cls == ServletDescr.UNAVAILABLE_SERVLET_MARKER) return false;
-    return d.isInNav() && (!d.isPerClient() || isPerClient());
+    return d.isInNav(this) && (!d.isPerClient() || isPerClient());
   }
 
   protected String getRequestKey() {

@@ -1,5 +1,5 @@
 /*
- * $Id: LocalServletManager.java,v 1.18 2006-05-20 23:26:14 tlipkis Exp $
+ * $Id: LocalServletManager.java,v 1.19 2006-05-23 02:59:18 tlipkis Exp $
  */
 
 /*
@@ -81,6 +81,7 @@ public class LocalServletManager extends BaseServletManager {
   private LockssResourceHandler rootResourceHandler;
   private MDHashUserRealm realm;
   private List inFrameContentTypes;
+  private boolean hasIsoFiles = false;
 
   public LocalServletManager() {
     super(SERVER_NAME);
@@ -120,6 +121,11 @@ public class LocalServletManager extends BaseServletManager {
 
   List inFrameContentTypes() {
     return inFrameContentTypes;
+  }
+
+  /** Return true iff there are any platform ISO files to point to */
+  public boolean hasIsoFiles() {
+    return hasIsoFiles;
   }
 
   public void startServlets() {
@@ -167,8 +173,13 @@ public class LocalServletManager extends BaseServletManager {
       }
       if (isodir != null) {
 	// Create context for serving ISO files and directory
-	setupDirContext(server, realm, "/iso/", isodir,
-			new FileExtensionFilter(".iso"));
+	FilenameFilter filt = new FileExtensionFilter(".iso");
+	setupDirContext(server, realm, "/iso/", isodir, filt);
+	String[] isofiles = new File(isodir).list(filt);
+	if (isofiles != null) {
+	  log.debug("isofiles: " + ListUtil.fromArray(isofiles));
+	  hasIsoFiles = isofiles.length != 0;
+	}
       }
       // info currently has same auth as /, but could be different
       setupInfoContext(server);

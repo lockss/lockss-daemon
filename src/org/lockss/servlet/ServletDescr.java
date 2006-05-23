@@ -1,5 +1,5 @@
 /*
- * $Id: ServletDescr.java,v 1.7 2006-01-11 21:54:47 thib_gc Exp $
+ * $Id: ServletDescr.java,v 1.8 2006-05-23 02:59:18 tlipkis Exp $
  */
 
 /*
@@ -167,10 +167,6 @@ public class ServletDescr {
     return (flags & ON_CLIENT) != 0;
   }
 
-  boolean isInNavTable() {
-    return (flags & NOT_IN_NAV) == 0;
-  }
-
   boolean isDebugOnly() {
     return (flags & DEBUG_ONLY) != 0;
   }
@@ -183,11 +179,13 @@ public class ServletDescr {
     return (flags & NAME_IS_URL) != 0;
   }
 
-  public boolean isInNav() {
+  /** return true if servlet should be in the nav table of ofServlet */
+  public boolean isInNav(LockssServlet ofServlet) {
     return isFlagSet(IN_NAV);
   }
 
-  public boolean isInUiHome() {
+  /** return true if servlet should be in UI home page */
+  public boolean isInUiHome(LockssServlet uiHomeServlet) {
     return isFlagSet(IN_UIHOME);
   }
 
