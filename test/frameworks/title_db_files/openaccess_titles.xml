@@ -2292,6 +2292,22 @@
         <property name="attributes.rights" value="openaccess" />
       </property>
 
+      <property name="MedievalForum5">
+	<property name="title" value="Medieval Forum Volume 5" />
+	<property name="estSize" value="0.7MB" />
+	<property name="journalTitle" value="Medieval Forum" />
+	<property name="plugin" value="edu.jhu.library.plugin.MedievalForumPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.sfsu.edu/~medieval/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="5" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
       <property name="MedievalForum4">
 	<property name="title" value="Medieval Forum Volume 4" />
 	<property name="estSize" value="0.7MB" />
