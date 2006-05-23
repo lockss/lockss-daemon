@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyManager.java,v 1.36 2005-10-11 05:46:28 tlipkis Exp $
+ * $Id: ProxyManager.java,v 1.37 2006-05-23 02:58:49 tlipkis Exp $
  */
 
 /*
@@ -67,6 +67,16 @@ public class ProxyManager extends BaseProxyManager {
     IP_ACCESS_PREFIX + "logForbidden";
   public static final boolean DEFAULT_LOG_FORBIDDEN = true;
 
+  /** If true, successive accesses to recently accessed content on the
+   * cache does not trigger a request to the publisher */
+  static final String PARAM_URL_CACHE_ENABLED = PREFIX + "urlCache.enabled";
+  static final boolean DEFAULT_URL_CACHE_ENABLED = false;
+
+  /** Duration during which successive accesses to a recently accessed URL
+   * does not trigger a request to the publisher */
+  static final String PARAM_URL_CACHE_DURATION = PREFIX + "urlCache.duration";
+  static final long DEFAULT_URL_CACHE_DURATION = 10 * Constants.MINUTE;
+
   /** The amount of time after which the "down" status of a host is
    * cleared, so that a request will once again cause a connection
    * attempt */
@@ -130,6 +140,9 @@ public class ProxyManager extends BaseProxyManager {
   private int paramHostDownAction = HOST_DOWN_NO_CACHE_ACTION_DEFAULT;
   private FixedTimedMap hostsDown = new FixedTimedMap(paramHostDownRetryTime);
   private Set hostsEverDown = new HashSet();
+  private FixedTimedMap urlCache;
+  private boolean paramUrlCacheEnabled = DEFAULT_URL_CACHE_ENABLED;
+  private long paramUrlCacheDuration = DEFAULT_URL_CACHE_DURATION;
 
   public void setConfig(Configuration config, Configuration prevConfig,
 			Configuration.Differences changedKeys) {
@@ -150,9 +163,26 @@ public class ProxyManager extends BaseProxyManager {
 	paramHostDownRetryTime =
 	  config.getTimeInterval(PARAM_HOST_DOWN_RETRY,
 				 DEFAULT_HOST_DOWN_RETRY);
-	hostsDown.setInterval(paramHostDownRetryTime);
+	synchronized (hostsDown) {
+	  hostsDown.setInterval(paramHostDownRetryTime);
+	}
 	paramHostDownAction =   config.getInt(PARAM_HOST_DOWN_ACTION,
 					      DEFAULT_HOST_DOWN_ACTION);
+
+	paramUrlCacheEnabled = config.getBoolean(PARAM_URL_CACHE_ENABLED,
+						 DEFAULT_URL_CACHE_ENABLED);
+	if (paramUrlCacheEnabled) {
+	  paramUrlCacheDuration =
+	    config.getTimeInterval(PARAM_URL_CACHE_DURATION,
+				   DEFAULT_URL_CACHE_DURATION);
+	  if (urlCache == null) {
+	    urlCache = new FixedTimedMap(paramUrlCacheDuration);
+	  } else {
+	    synchronized (urlCache) {
+	      urlCache.setInterval(paramUrlCacheDuration);
+	    }
+	  }
+	}
 
 	if (!isServerRunning() && getDaemon().isDaemonRunning()) {
 	  startProxy();
@@ -222,7 +252,9 @@ public class ProxyManager extends BaseProxyManager {
 
   /** Check whether the host is known to have been down recently */
   public boolean isHostDown(String host) {
-    return hostsDown.containsKey(host);
+    synchronized (hostsDown) {
+      return hostsDown.containsKey(host);
+    }
   }
 
   /** Remember that the host is down.
@@ -231,10 +263,32 @@ public class ProxyManager extends BaseProxyManager {
    * means we have some of its content).
    */
   public void setHostDown(String host, boolean isInCache) {
-    if (isInCache || hostsEverDown.contains(host)) {
-      if (log.isDebug2()) log.debug2("Set host down: " + host);
-      hostsDown.put(host, "");
-      hostsEverDown.add(host);
+    synchronized (hostsDown) {
+      if (isInCache || hostsEverDown.contains(host)) {
+	if (log.isDebug2()) log.debug2("Set host down: " + host);
+	hostsDown.put(host, "");
+	hostsEverDown.add(host);
+      }
+    }
+  }
+
+  /** Mark the url as having been accessed recently */
+  public void setRecentlyAccessedUrl(String url) {
+    if (paramUrlCacheEnabled && urlCache != null) {
+      synchronized (urlCache) {
+	urlCache.put(url, "");
+      }
+    }
+  }
+
+  /** Return true if the url has been accessed recently */
+  public boolean isRecentlyAccessedUrl(String url) {
+    if (paramUrlCacheEnabled && urlCache != null) {
+      synchronized (urlCache) {
+	return urlCache.containsKey(url);
+      }
+    } else {
+      return false;
     }
   }
 

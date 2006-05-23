@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.43 2005-12-01 23:28:04 troberts Exp $
+ * $Id: ProxyHandler.java,v 1.44 2006-05-23 02:58:49 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.43 2005-12-01 23:28:04 troberts Exp $
+// $Id: ProxyHandler.java,v 1.44 2006-05-23 02:58:49 tlipkis Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -437,6 +437,14 @@ public class ProxyHandler extends AbstractHttpHandler {
 
     LockssUrlConnection conn = null;
     try {
+      // If we recently served this url from the cache, don't check with
+      // publisher for newer content.
+      // XXX This needs to forward the request to the publisher (but not
+      // wait for the result) so the publisher can count the access.
+      if (isInCache && proxyMgr.isRecentlyAccessedUrl(urlString)) {
+	serveFromCache(pathInContext, pathParams, request, response, cu);
+	return;
+      }      
       boolean useQuick =
 	(isInCache ||
 	 (proxyMgr.isHostDown(request.getURI().getHost()) &&
@@ -563,6 +571,7 @@ public class ProxyHandler extends AbstractHttpHandler {
       }
       // We got a response, should we prefer it to what's in the cache?
       if (isInCache && preferCacheOverPubResponse(cu, conn)) {
+	proxyMgr.setRecentlyAccessedUrl(urlString);
 	serveFromCache(pathInContext, pathParams, request,
 		       response, cu);
 	return;

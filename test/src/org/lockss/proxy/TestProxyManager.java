@@ -1,5 +1,5 @@
 /*
- * $Id: TestProxyManager.java,v 1.2 2005-08-30 18:22:20 tlipkis Exp $
+ * $Id: TestProxyManager.java,v 1.3 2006-05-23 02:58:48 tlipkis Exp $
  */
 
 /*
@@ -89,6 +89,33 @@ public class TestProxyManager extends LockssTestCase {
     assertFalse(mgr.isHostDown("foo"));
     mgr.setHostDown("foo", false);
     assertTrue(mgr.isHostDown("foo"));
+  }
+
+  public void testIsRecentlyAccessedUrlNotConfigured() throws Exception {
+    ConfigurationUtil.setFromArgs(ProxyManager.PARAM_URL_CACHE_ENABLED,
+				  "false");
+    String url = "http://foo.bar/blecch";
+    assertFalse(mgr.isRecentlyAccessedUrl(url));
+    mgr.setRecentlyAccessedUrl(url);
+    assertFalse(mgr.isRecentlyAccessedUrl(url));
+  }
+
+  public void testIsRecentlyAccessedUrl() throws Exception {
+    ConfigurationUtil.setFromArgs(ProxyManager.PARAM_URL_CACHE_ENABLED,
+				  "true",
+				  ProxyManager.PARAM_URL_CACHE_DURATION,
+				  "1000");
+    String url1 = "http://foo.bar/blecch";
+    String url2 = "http://foo.bar/froople";
+    TimeBase.setSimulated(1000);
+    assertFalse(mgr.isRecentlyAccessedUrl(url1));
+    mgr.setRecentlyAccessedUrl(url1);
+    assertTrue(mgr.isRecentlyAccessedUrl(url1));
+    assertFalse(mgr.isRecentlyAccessedUrl(url2));
+    TimeBase.step(500);
+    assertTrue(mgr.isRecentlyAccessedUrl(url1));
+    TimeBase.step(600);
+    assertFalse(mgr.isRecentlyAccessedUrl(url1));
   }
 
   class MyProxyManager extends ProxyManager {
