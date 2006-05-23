@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssDaemon.java,v 1.56 2006-05-15 00:10:56 tlipkis Exp $
+ * $Id: MockLockssDaemon.java,v 1.57 2006-05-23 03:16:52 tlipkis Exp $
  */
 
 /*
@@ -52,6 +52,7 @@ import org.lockss.proxy.icp.IcpManager;
 import org.lockss.remote.RemoteApi;
 import org.lockss.repository.*;
 import org.lockss.scheduler.SchedService;
+import org.lockss.servlet.*;
 import org.lockss.state.*;
 import org.lockss.util.*;
 
@@ -71,6 +72,7 @@ public class MockLockssDaemon extends LockssDaemon {
   LcapDatagramRouter datagramRouterManager = null;
   LcapRouter routerManager = null;
   ProxyManager proxyManager = null;
+  ServletManager servletManager = null;
   CrawlManager crawlManager = null;
   RepositoryManager repositoryManager = null;
   TreeWalkManager treeWalkManager = null;
@@ -315,6 +317,18 @@ public class MockLockssDaemon extends LockssDaemon {
       managerMap.put(LockssDaemon.PROXY_MANAGER, proxyManager);
     }
     return proxyManager;
+  }
+
+  /**
+   * return the servlet manager instance
+   * @return the ServletManager
+   */
+  public ServletManager getServletManager() {
+    if (servletManager == null) {
+      servletManager = (ServletManager)newManager(LockssDaemon.SERVLET_MANAGER);
+      managerMap.put(LockssDaemon.SERVLET_MANAGER, servletManager);
+    }
+    return servletManager;
   }
 
   /**
@@ -565,6 +579,15 @@ public class MockLockssDaemon extends LockssDaemon {
   public void setProxyManager(ProxyManager proxyMgr) {
     proxyManager = proxyMgr;
     managerMap.put(LockssDaemon.PROXY_MANAGER, proxyManager);
+  }
+
+  /**
+   * Set the ServletManager
+   * @param servletMgr the new manager
+   */
+  public void setServletManager(ServletManager servletMgr) {
+    servletManager = servletMgr;
+    managerMap.put(LockssDaemon.SERVLET_MANAGER, servletManager);
   }
 
   /**
