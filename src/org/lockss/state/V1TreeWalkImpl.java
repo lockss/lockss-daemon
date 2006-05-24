@@ -1,5 +1,5 @@
 /*
- * $Id: V1TreeWalkImpl.java,v 1.8 2006-04-11 08:29:24 tlipkis Exp $
+ * $Id: V1TreeWalkImpl.java,v 1.9 2006-05-24 23:04:05 tlipkis Exp $
  */
 
 /*
@@ -125,14 +125,18 @@ public class V1TreeWalkImpl implements TreeWalker {
       // do we need to do a new content crawl?
       if (theAu.shouldCrawlForNewContent(nodeMgr.getAuState())) {
 	treeWalkAborted = true;
-	log.debug("Starting new content crawl.  Ending treewalk.");
-	CrawlManager.Callback rc = null;
-	if (theAu instanceof RegistryArchivalUnit) {
-	  log.debug("AU " + theAu.getName() +
-		       " is a registry, adding callback.");
-	  rc = new PluginManager.RegistryCallback(pluginMgr, theAu);
+	if (crawlMgr.isCrawlStarterEnabled()) {
+	  log.debug("New content crawl needed.  Ending treewalk.");
+	} else {
+	  log.debug("Starting new content crawl.  Ending treewalk.");
+	  CrawlManager.Callback rc = null;
+	  if (theAu instanceof RegistryArchivalUnit) {
+	    log.debug("AU " + theAu.getName() +
+		      " is a registry, adding callback.");
+	    rc = new PluginManager.RegistryCallback(pluginMgr, theAu);
+	  }
+	  crawlMgr.startNewContentCrawl(theAu, rc, null, activityLock);
 	}
-	crawlMgr.startNewContentCrawl(theAu, rc, null, activityLock);
       } else if (nodeMgr.repairsNeeded()) {
 	// schedule repairs if needed
 	treeWalkAborted = true;

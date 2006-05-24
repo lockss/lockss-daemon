@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManager.java,v 1.27 2006-04-11 08:33:33 tlipkis Exp $
+ * $Id: CrawlManager.java,v 1.28 2006-05-24 23:04:05 tlipkis Exp $
  */
 
 /*
@@ -72,8 +72,8 @@ public interface CrawlManager {
                                    Object cookie, ActivityRegulator.Lock lock);
 
 
-  /** Enable the periodic crawl starter */
-  public void enableCrawlStarter();
+  /** Return true if the periodic crawl starter is running */
+  public boolean isCrawlStarterEnabled();
 
   public interface Callback {
     /**

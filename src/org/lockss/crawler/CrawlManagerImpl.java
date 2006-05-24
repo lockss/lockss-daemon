@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.88 2006-05-15 00:11:55 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.89 2006-05-24 23:04:05 tlipkis Exp $
  */
 
 /*
@@ -97,7 +97,13 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     PREFIX + "threadPool.max";
   static final int DEFAULT_CRAWLER_THREAD_POOL_MAX = 15;
 
-  /** Max number of queued crawls.  Can be changed on the fly */
+  /** Max size of crawl queue, cannot be changed except at startup */
+  public static final String PARAM_CRAWLER_THREAD_POOL_MAX_QUEUE_SIZE =
+    PREFIX + "threadPool.maxQueueSize";
+  static final int DEFAULT_CRAWLER_THREAD_POOL_MAX_QUEUE_SIZE = 200;
+
+  /** Max number of queued crawls; can be changed on the fly up to the max
+   * set by {@link PARAM_CRAWLER_THREAD_POOL_MAX_QUEUE_SIZE} */
   public static final String PARAM_CRAWLER_THREAD_POOL_QUEUE_SIZE =
     PREFIX + "threadPool.queueSize";
   static final int DEFAULT_CRAWLER_THREAD_POOL_QUEUE_SIZE = 100;
@@ -170,6 +176,8 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   private boolean paramQueueEnabled = DEFAULT_CRAWLER_QUEUE_ENABLED;
   private int paramMaxPoolSize = DEFAULT_CRAWLER_THREAD_POOL_MAX;
   private int paramPoolQueueSize = DEFAULT_CRAWLER_THREAD_POOL_QUEUE_SIZE;
+  private int paramPoolMaxQueueSize =
+    DEFAULT_CRAWLER_THREAD_POOL_MAX_QUEUE_SIZE;
   private long paramPoolKeepaliveTime = DEFAULT_CRAWLER_THREAD_POOL_KEEPALIVE;
   private long paramStartCrawlsInterval = DEFAULT_START_CRAWLS_INTERVAL;
   private long paramStartCrawlsInitialDelay =
@@ -181,7 +189,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   private AuEventHandler auEventHandler;
 
   PooledExecutor pool;
-  BoundedLinkedQueue poolQueue;
+  BoundedPriorityQueue poolQueue;
 
   /**
    * start the crawl manager.
@@ -205,7 +213,8 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     pluginMgr.registerAuEventHandler(auEventHandler);
 
     if (paramQueueEnabled) {
-      poolQueue = new BoundedLinkedQueue(paramPoolQueueSize);
+      poolQueue = new BoundedPriorityQueue(paramPoolQueueSize,
+					   new CrawlQueueComparator());
       pool = new PooledExecutor(poolQueue, paramMaxPoolSize);
     } else {
       poolQueue = null;
@@ -279,8 +288,11 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       paramPoolQueueSize =
 	config.getInt(PARAM_CRAWLER_THREAD_POOL_QUEUE_SIZE,
 		      DEFAULT_CRAWLER_THREAD_POOL_QUEUE_SIZE);
+      paramPoolMaxQueueSize =
+	config.getInt(PARAM_CRAWLER_THREAD_POOL_MAX_QUEUE_SIZE,
+		      DEFAULT_CRAWLER_THREAD_POOL_MAX_QUEUE_SIZE);
       if (poolQueue != null && paramPoolQueueSize != poolQueue.capacity()) {
-	poolQueue.setCapacity(paramPoolQueueSize);
+// 	poolQueue.setCapacity(paramPoolQueueSize);
       }
 
       paramStartCrawlsInitialDelay =
@@ -591,6 +603,8 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 			     repairUrls, percentRepairFromCache);
   }
 
+  private static int createIndex = 0;
+
   public class CrawlRunner extends LockssRunnable {
     private Object cookie;
     private Crawler crawler;
@@ -598,6 +612,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     private Collection locks;
     private RateLimiter auRateLimiter;
     private RateLimiter startRateLimiter;
+    private int sortOrder;
 
     private CrawlRunner(Crawler crawler, CrawlManager.Callback cb,
 			Object cookie, Collection locks,
@@ -616,6 +631,16 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       this.locks = locks;
       this.auRateLimiter = auRateLimiter;
       this.startRateLimiter = startRateLimiter;
+      // queue in order created
+      this.sortOrder = ++createIndex;
+      if (crawler.getAu() instanceof RegistryArchivalUnit) {
+	// except for registry AUs, which always come first
+	sortOrder = -sortOrder;
+      }
+    }
+
+    public int getSortOrder() {
+      return sortOrder;
     }
 
     public void lockssRun() {
@@ -716,6 +741,19 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     isCrawlStarterEnabled = false;
   }
 
+  public boolean isCrawlStarterEnabled() {
+    return isCrawlStarterEnabled;
+  }
+
+  /** Orders CrawlRunners according to the sort order they specify */
+  static class CrawlQueueComparator implements Comparator {
+    public int compare(Object a, Object b) {
+      CrawlManagerImpl.CrawlRunner ra = (CrawlManagerImpl.CrawlRunner)a;
+      CrawlManagerImpl.CrawlRunner rb = (CrawlManagerImpl.CrawlRunner)b;
+      return ra.getSortOrder() - rb.getSortOrder();
+    }
+  }
+
   private class CrawlStarter extends LockssRunnable {
     private boolean goOn = false;
 
@@ -773,14 +811,15 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 
   void startSomeCrawls() {
     if (poolQueue != null) {
-      if (poolQueue.capacity() > poolQueue.size()) {
+      if (poolQueue.size() < paramPoolQueueSize) {
 	logger.debug("Checking for AUs that need crawls");
 	// get a new iterator if don't have one or if have exhausted
 	// previous one
 	if (crawlStartIter == null || !crawlStartIter.hasNext()) {
 	  crawlStartIter = pluginMgr.getRandomizedAus().iterator();
 	}
-	while (crawlStartIter.hasNext()) {
+	while (crawlStartIter.hasNext() &&
+	       poolQueue.size() < paramPoolQueueSize) {
 	  ArchivalUnit au = (ArchivalUnit)crawlStartIter.next();
 	  if (logger.isDebug3()) logger.debug3("checking au: " + au.getAuId());
 	  if (shouldCrawlForNewContent(au)) {
@@ -796,9 +835,6 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 	    // queued twice.  If ActivityRegulator goes away some other
 	    // mechanism will be needed.
 	    startNewContentCrawl(au, rc, null, null);
-	  }
-	  if (poolQueue.capacity() == poolQueue.size()) {
-	    break;
 	  }
 	}
       }
