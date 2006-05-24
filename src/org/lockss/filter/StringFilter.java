@@ -1,5 +1,5 @@
 /*
- * $Id: StringFilter.java,v 1.10 2005-12-01 23:28:04 troberts Exp $
+ * $Id: StringFilter.java,v 1.11 2006-05-24 23:04:17 tlipkis Exp $
  */
 
 /*
@@ -38,6 +38,8 @@ import java.util.List;
 import org.lockss.config.*;
 import org.lockss.util.*;
 
+/** Filter that removes all instances of a string, or replaces all
+ * instances of a string with another string */
 public class StringFilter extends Reader {
 
   public static final int DEFAULT_BUFFER_CAPACITY = 4096;
@@ -58,13 +60,6 @@ public class StringFilter extends Reader {
   private int toReplace = 0;
   private boolean isClosed = false;
   private boolean isTrace = logger.isDebug3();
-
-  public StringFilter(Reader reader) {
-    if (reader == null) {
-      throw new IllegalArgumentException("Called with a null reader");
-    }
-    this.reader = reader;
-  }
 
   public StringFilter(Reader reader, String str) {
     this(reader, -1, str, null);
