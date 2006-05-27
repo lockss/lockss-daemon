@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCachedUrl.java,v 1.15 2006-05-27 06:36:04 tlipkis Exp $
+ * $Id: TestBaseCachedUrl.java,v 1.16 2006-05-27 06:54:41 tlipkis Exp $
  */
 
 /*
@@ -403,7 +403,7 @@ public class TestBaseCachedUrl extends LockssTestCase {
       assertEquals(4, noncu.getVersion());
       try {
 	noncu.getContentSize();
-	fail("No version 4, getCuVersion() should throw");
+	fail("No version 4, getContentSize() should throw");
       } catch (UnsupportedOperationException e) { }
       try {
 	noncu.getUnfilteredInputStream();
