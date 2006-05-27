@@ -393,6 +393,22 @@ public class CrawlRuleTester extends Thread {
       return url;
     }
 
+    public CachedUrl getCuVersion(int version) {
+      throw new UnsupportedOperationException("Not implemented");
+    }
+
+    public CachedUrl[] getCuVersions() {
+      throw new UnsupportedOperationException("Not implemented");
+    }
+
+    public CachedUrl[] getCuVersions(int maxVersions) {
+      throw new UnsupportedOperationException("Not implemented");
+    }
+
+    public int getVersion() {
+      return 1;
+    }
+
     public Reader openForReading() {
       return reader;
     }

@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.158 2006-05-22 23:24:14 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.159 2006-05-27 06:36:04 tlipkis Exp $
  */
 
 /*
@@ -46,7 +46,6 @@ import org.lockss.crawler.CrawlManager;
 import org.lockss.daemon.*;
 import org.lockss.plugin.definable.DefinablePlugin;
 import org.lockss.poller.PollSpec;
-import org.lockss.repository.*;
 import org.lockss.util.*;
 
 /**
@@ -1764,18 +1763,7 @@ public class PluginManager
 
   protected void processOneRegistryJar(CachedUrl cu, String url,
 				       ArchivalUnit au, Map tmpMap) {
-    LockssRepository repo = theDaemon.getLockssRepository(au);
-    RepositoryNode repoNode = null;
-    Integer curVersion = null;
-
-    try {
-      repoNode = repo.getNode(url);
-      curVersion = new Integer(repoNode.getCurrentVersion());
-    } catch (MalformedURLException ex) {
-      log.error("Malformed URL: Unable to get repository node " +
-		"for cu URL " + url + ", skipping.");
-      return;
-    }
+    Integer curVersion = new Integer(cu.getVersion());
 
     if (cuNodeVersionMap.get(url) == null) {
       cuNodeVersionMap.put(url, new Integer(-1));

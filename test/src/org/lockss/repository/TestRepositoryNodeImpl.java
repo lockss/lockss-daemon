@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.47 2005-10-11 05:51:20 tlipkis Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.48 2006-05-27 06:36:04 tlipkis Exp $
  */
 
 /*
@@ -354,6 +354,10 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
       fail("Cannot get content size if no content.");
     } catch (UnsupportedOperationException uoe) { }
     try {
+      leaf.getNodeContents();
+      fail("Cannot get RepositoryNodeContents if no content.");
+    } catch (UnsupportedOperationException uoe) { }
+    try {
       leaf.sealNewVersion();
       fail("Cannot seal version if not open.");
     } catch (UnsupportedOperationException uoe) { }
@@ -582,6 +586,131 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
 
     props = leaf.getNodeContents().getProperties();
     assertEquals("value 2", props.getProperty("test 1"));
+  }
+
+  static String cntnt(int ix) {
+    return "content " + ix + "ABCDEFGHIJKLMNOPQRSTUVWXYZ".substring(0, ix);
+  }
+  static int lngth(int ix) {
+    return cntnt(ix).length();
+  }
+
+  public void testGetNodeVersion() throws Exception {
+    int max = 5;
+    String url = "http://www.example.com/versionedcontent.txt";
+    String key = "key";
+    String val = "grrl";
+    Properties props = new Properties();
+
+    RepositoryNode leaf = repo.createNewNode(url);
+    // create several versions
+    for (int ix = 1; ix <= max; ix++) {
+      props.setProperty(key, val+ix);
+      createContentVersion(leaf, cntnt(ix), props);
+    }
+    // getNodeVersion(current) should return the main node
+    assertEquals(leaf, leaf.getNodeVersion(leaf.getCurrentVersion()));
+
+    // loop through other versions checking version, content, props
+    for (int ix = 1; ix < max; ix++) {
+      RepositoryNodeVersion nodeVer = leaf.getNodeVersion(ix);
+      log.debug("ver: " + nodeVer.getVersion() + ", content: " +
+		getLeafContent(nodeVer));
+      assertEquals(ix, nodeVer.getVersion());
+
+      assertEquals(cntnt(ix), getLeafContent(nodeVer));
+      assertEquals(lngth(ix), nodeVer.getContentSize());
+      props = nodeVer.getNodeContents().getProperties();
+      assertEquals(val+ix, props.getProperty(key));
+    }
+  }
+
+  public void testGetNodeVersions() throws Exception {
+    int max = 5;
+    String url = "http://www.example.com/versionedcontent.txt";
+    String key = "key";
+    String val = "grrl";
+    Properties props = new Properties();
+
+    RepositoryNode leaf = repo.createNewNode(url);
+    // create several versions
+    for (int ix = 1; ix <= max; ix++) {
+      props.setProperty(key, val+ix);
+      createContentVersion(leaf, cntnt(ix), props);
+    }
+    // check expected current version number
+    assertEquals(max, leaf.getCurrentVersion());
+    assertEquals(max, leaf.getVersion());
+
+    // checking version, content, props of current version
+    assertEquals(cntnt(max), getLeafContent(leaf));
+    assertEquals(lngth(max), leaf.getContentSize());
+    props = leaf.getNodeContents().getProperties();
+    assertEquals(val+max, props.getProperty(key));
+
+    // ask for all older versions
+    RepositoryNodeVersion[] vers = leaf.getNodeVersions();
+    assertEquals(max, vers.length);
+    // loop through them checking version, content, props
+    for (int ix = 0; ix < max-1; ix++) {
+      int exp = max - ix;
+      RepositoryNodeVersion nodeVer = vers[ix];
+      log.debug("ver: " + nodeVer.getVersion() + ", content: " +
+		getLeafContent(nodeVer));
+      assertEquals(exp, nodeVer.getVersion());
+
+      assertEquals(cntnt(exp), getLeafContent(nodeVer));
+      assertEquals(lngth(exp), nodeVer.getContentSize());
+      props = nodeVer.getNodeContents().getProperties();
+      assertEquals(val+exp, props.getProperty(key));
+    }
+
+    // now ask for and check a subset of the older versions
+    assertTrue("max must be at least 4 for this test", max >= 4);
+    int numver = max - 2;
+    vers = leaf.getNodeVersions(numver);
+    assertEquals(numver, vers.length);
+    for (int ix = 0; ix < numver-1; ix++) {
+      int exp = max - ix;
+      RepositoryNodeVersion nodeVer = vers[ix];
+      log.debug("ver: " + nodeVer.getVersion() + ", content: " +
+		getLeafContent(nodeVer));
+      assertEquals(exp, nodeVer.getVersion());
+
+      assertEquals(cntnt(exp), getLeafContent(nodeVer));
+      assertEquals(lngth(exp), nodeVer.getContentSize());
+      props = nodeVer.getNodeContents().getProperties();
+      assertEquals(val+exp, props.getProperty(key));
+    }
+  }
+
+  public void testIllegalVersionOperations() throws Exception {
+    RepositoryNode.RepositoryNodeContents rnc;
+    RepositoryNodeVersion nv;
+
+    RepositoryNode leaf =
+      repo.createNewNode("http://www.example.com/testDir/test.cache");
+    try {
+      nv = leaf.getNodeVersion(7);
+      fail("No content, shouldn't be able to get versioned node: " + nv);
+    } catch (UnsupportedOperationException e) { }
+    // create first version
+    Properties props = new Properties();
+    props.setProperty("key", "val1");
+    createContentVersion(leaf, cntnt(1), props);
+
+    // We're allowed to get a RepositoryNodeVersion when the version
+    // doesn't exist ...
+    nv = leaf.getNodeVersion(7);
+    // but all operations on it should throw
+    try {
+      nv.getContentSize();
+      fail("No version; shouldn't get content size");
+    } catch (UnsupportedOperationException e) { }
+    try {
+      rnc = nv.getNodeContents();
+      fail("No version; shouldn't get RepositoryNodeContents");
+    } catch (UnsupportedOperationException e) { }
   }
 
   public void testDirContent() throws Exception {
@@ -1197,6 +1326,13 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
   public static RepositoryNode createLeaf(LockssRepository repo, String url,
       String content, Properties props) throws Exception {
     RepositoryNode leaf = repo.createNewNode(url);
+    createContentVersion(leaf, content, props);
+    return leaf;
+  }
+
+  public static void createContentVersion(RepositoryNode leaf,
+					  String content, Properties props)
+      throws Exception {
     leaf.makeNewVersion();
     writeToLeaf(leaf, content);
     if (props==null) {
@@ -1204,7 +1340,6 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     }
     leaf.setNewProperties(props);
     leaf.sealNewVersion();
-    return leaf;
   }
 
   public static void writeToLeaf(RepositoryNode leaf, String content)
@@ -1219,8 +1354,14 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     is.close();
   }
 
-  public static String getLeafContent(RepositoryNode leaf) throws IOException {
-    InputStream is = leaf.getNodeContents().getInputStream();
+  public static String getLeafContent(RepositoryNodeVersion leaf)
+      throws IOException {
+    return getRNCContent(leaf.getNodeContents());
+  }
+
+  public static String getRNCContent(RepositoryNode.RepositoryNodeContents rnc)
+      throws IOException {
+    InputStream is = rnc.getInputStream();
     OutputStream baos = new ByteArrayOutputStream(20);
     StreamUtil.copy(is, baos);
     is.close();

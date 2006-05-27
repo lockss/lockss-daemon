@@ -1,5 +1,5 @@
 /*
- * $Id: CachedUrl.java,v 1.16 2005-10-07 16:19:55 thib_gc Exp $
+ * $Id: CachedUrl.java,v 1.17 2006-05-27 06:36:04 tlipkis Exp $
  */
 
 /*
@@ -86,6 +86,41 @@ public interface CachedUrl extends CachedUrlSetNode {
   public static final String PROPERTY_FETCH_TIME = "X_Lockss-server-date";
 
   public static final String PROPERTY_LAST_MODIFIED = "last-modified";
+
+  /**
+   * Return a version-specific CachedUrl for the specified content version
+   * @throws UnsupportedOperationException if node has no versions
+   * @return a {@link CachedUrl} bound to the specified version
+   */
+  public CachedUrl getCuVersion(int version);
+
+  /**
+   * Return an array of version-specific CachedUrls for all versions of
+   * content/props at this URL.  The result is sorted from most to least
+   * recent; the CachedUrl for current version is the first element in the
+   * array.
+   * @throws UnsupportedOperationException if node has no versions
+   * @return array of {@link CachedUrl}
+   */
+  public CachedUrl[] getCuVersions();
+
+  /**
+   * Return an array of version-specific CachedUrls for the most recent
+   * <code>maxVersions</code> versions of content/props at this URL.  The
+   * result is sorted from most to least recent; the CachedUrl for current
+   * version is the first element in the array.
+   * @throws UnsupportedOperationException if node has no versions
+   * @return array of {@link CachedUrl}
+   */
+  public CachedUrl[] getCuVersions(int maxVersions);
+
+  /**
+   * Return the version number.  This is the current version if the
+   * CachedUrl isn't bound to a particular version
+   * @throws UnsupportedOperationException if node has no versions
+   * @return version number
+   */
+  public int getVersion();
 
   /**
   * Get an object from which the content of the url can be read

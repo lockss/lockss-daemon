@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.73 2005-10-19 00:23:55 tlipkis Exp $
+ * $Id: NullPlugin.java,v 1.74 2006-05-27 06:36:04 tlipkis Exp $
  */
 
 /*
@@ -145,6 +145,22 @@ public class NullPlugin {
 
     public int getType() {
       return CachedUrlSetNode.TYPE_CACHED_URL;
+    }
+
+    public CachedUrl getCuVersion(int version) {
+      throw new UnsupportedOperationException("Not implemented");
+    }
+
+    public CachedUrl[] getCuVersions() {
+      return new CachedUrl[0];
+    }
+
+    public CachedUrl[] getCuVersions(int maxVersions) {
+      return new CachedUrl[0];
+    }
+
+    public int getVersion() {
+      return 1;
     }
 
     public InputStream getUnfilteredInputStream() {

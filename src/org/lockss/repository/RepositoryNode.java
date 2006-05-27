@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNode.java,v 1.18 2004-04-19 02:18:36 tlipkis Exp $
+ * $Id: RepositoryNode.java,v 1.19 2006-05-27 06:36:04 tlipkis Exp $
  */
 
 /*
@@ -40,7 +40,7 @@ import org.lockss.daemon.CachedUrlSetSpec;
  * RepositoryNode is used to store the contents and
  * meta-information of urls being cached.
  */
-public interface RepositoryNode {
+public interface RepositoryNode extends RepositoryNodeVersion {
   /**
    * Returns the url represented by this node.
    * @return the node's url
@@ -167,6 +167,33 @@ public interface RepositoryNode {
    * @throws UnsupportedOperationException
    */
   public void restoreLastVersion();
+
+  /**
+   * Return an array of RepositoryNodeVersion for all versions of
+   * content/props at this node.  The result is sorted from most to least
+   * recent; the RepositoryNodeVersion for current version is the first
+   * element in the array.
+   * @throws UnsupportedOperationException if node has no versions
+   * @return array of {@link RepositoryNodeVersion}
+   */
+  public RepositoryNodeVersion[] getNodeVersions();
+
+  /**
+   * Return an array of RepositoryNodeVersion for the most recent
+   * <code>maxVersions</code> versions of content/props at this node.  The
+   * result is sorted from most to least recent; the RepositoryNodeVersion
+   * for current version is the first element in the array.
+   * @throws UnsupportedOperationException if node has no versions
+   * @return array of {@link RepositoryNodeVersion}
+   */
+  public RepositoryNodeVersion[] getNodeVersions(int maxVersions);
+
+  /**
+   * Return a RepositoryNodeVersion for the specified content version
+   * @throws UnsupportedOperationException if node has no versions
+   * @return a {@link RepositoryNodeVersion} bound to the specified version
+   */
+  public RepositoryNodeVersion getNodeVersion(int version);
 
   /**
    * Return a <code>RepositoryNodeContents</code> object which accesses the

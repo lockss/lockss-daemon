@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrl.java,v 1.31 2006-05-20 19:27:25 tlipkis Exp $
+ * $Id: MockCachedUrl.java,v 1.32 2006-05-27 06:36:04 tlipkis Exp $
  */
 
 /*
@@ -89,6 +89,22 @@ public class MockCachedUrl implements CachedUrl {
 
   public String getUrl() {
     return url;
+  }
+
+  public CachedUrl getCuVersion(int version) {
+    throw new UnsupportedOperationException("Not implemented");
+  }
+
+  public CachedUrl[] getCuVersions() {
+    throw new UnsupportedOperationException("Not implemented");
+  }
+
+  public CachedUrl[] getCuVersions(int maxVersions) {
+    throw new UnsupportedOperationException("Not implemented");
+  }
+
+  public int getVersion() {
+    return 1;
   }
 
   public Reader openForReading() {

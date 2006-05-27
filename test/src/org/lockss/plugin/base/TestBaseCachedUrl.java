@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCachedUrl.java,v 1.14 2005-08-11 06:35:10 tlipkis Exp $
+ * $Id: TestBaseCachedUrl.java,v 1.15 2006-05-27 06:36:04 tlipkis Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.plugin.base;
 import java.io.*;
 import java.util.*;
 import java.math.BigInteger;
+import junit.framework.*;
 import org.lockss.plugin.*;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
@@ -42,15 +43,27 @@ import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.repository.*;
 
+/** Variants test "current" BaseCachedUrl and version-specific
+ * BaseCachedUrl instances */
 public class TestBaseCachedUrl extends LockssTestCase {
   private static final String PARAM_SHOULD_FILTER_HASH_STREAM =
-      Configuration.PREFIX+"baseCachedUrl.filterHashStream";
+    Configuration.PREFIX+"baseCachedUrl.filterHashStream";
 
-  private LockssRepository repo;
-  private MockArchivalUnit mau;
-  private MockLockssDaemon theDaemon;
-  private CachedUrlSet cus;
-  private MockPlugin plugin;
+  protected LockssRepository repo;
+  protected MockArchivalUnit mau;
+  protected MockLockssDaemon theDaemon;
+  protected MockPlugin plugin;
+
+  String url1 = "http://www.example.com/testDir/leaf1";
+  String url2 = "http://www.example.com/testDir/leaf2";
+  String url3 = "http://www.example.com/testDir/leaf3";
+  String urlparent = "http://www.example.com/testDir";
+  String content1 = "test content 1";
+  String content2 = "test content 2 longer";
+  String badcontent = "this is the wrong content string";
+
+  TestBaseCachedUrl() {
+  }
 
   public void setUp() throws Exception {
     super.setUp();
@@ -69,9 +82,6 @@ public class TestBaseCachedUrl extends LockssTestCase {
 
     repo = theDaemon.getLockssRepository(mau);
     theDaemon.getNodeManager(mau);
-    CachedUrlSetSpec rSpec =
-        new RangeCachedUrlSetSpec("http://www.example.com/testDir");
-    cus = mau.makeCachedUrlSet(rSpec);
   }
 
   public void tearDown() throws Exception {
@@ -79,232 +89,357 @@ public class TestBaseCachedUrl extends LockssTestCase {
     super.tearDown();
   }
 
-  public void testFilterParamDefault() {
-     MyCachedUrl cu = new MyCachedUrl(new MyAu(), null);
-     cu.openForHashing();
-     assertFalse(cu.gotUnfilteredStream());
-   }
+  /** Tests that are independent of versioning */
+  public static class NotVersionedTests extends TestBaseCachedUrl {
+    public NotVersionedTests() {
+    }
 
-   public void testFilterParamFilterOn() throws IOException {
-     String config = PARAM_SHOULD_FILTER_HASH_STREAM+"=true";
-     ConfigurationUtil.setCurrentConfigFromString(config);
-     MyCachedUrl cu = new MyCachedUrl(new MyAu(), null);
-     cu.openForHashing();
-     assertFalse(cu.gotUnfilteredStream());
-   }
+    public void testFilterParamDefault() {
+      MyCachedUrl cu = new MyCachedUrl(new MyAu(), null);
+      cu.openForHashing();
+      assertFalse(cu.gotUnfilteredStream());
+    }
 
-   public void testFilterParamFilterOff() throws IOException {
-     String config = PARAM_SHOULD_FILTER_HASH_STREAM+"=false";
-     ConfigurationUtil.setCurrentConfigFromString(config);
-     MyCachedUrl cu = new MyCachedUrl(new MyAu(), null);
-     cu.openForHashing();
-     assertTrue(cu.gotUnfilteredStream());
-   }
+    public void testFilterParamFilterOn() throws IOException {
+      String config = PARAM_SHOULD_FILTER_HASH_STREAM+"=true";
+      ConfigurationUtil.setCurrentConfigFromString(config);
+      MyCachedUrl cu = new MyCachedUrl(new MyAu(), null);
+      cu.openForHashing();
+      assertFalse(cu.gotUnfilteredStream());
+    }
 
-   public void testGetUrl() throws Exception {
-     createLeaf("http://www.example.com/testDir/leaf1", "test stream", null);
-
-     CachedUrl url =
-       mau.makeCachedUrl("http://www.example.com/testDir/leaf1");
-     assertEquals("http://www.example.com/testDir/leaf1", url.getUrl());
-   }
-
-   public void testIsLeaf() throws Exception {
-     createLeaf("http://www.example.com/testDir/leaf1", "test stream", null);
-     createLeaf("http://www.example.com/testDir/leaf2", null, null);
-
-     CachedUrl url =
-       mau.makeCachedUrl("http://www.example.com/testDir/leaf1");
-     assertTrue(url.isLeaf());
-     url = mau.makeCachedUrl("http://www.example.com/testDir/leaf2");
-     assertTrue(url.isLeaf());
-   }
-
-   public void testGetContentSize() throws Exception {
-     createLeaf("http://www.example.com/testDir/leaf1", "test stream", null);
-     createLeaf("http://www.example.com/testDir/leaf2", "test stream2", null);
-     createLeaf("http://www.example.com/testDir/leaf3", "", null);
-
-     CachedUrl url =
-       mau.makeCachedUrl("http://www.example.com/testDir/leaf1");
-     assertEquals(11, url.getContentSize());
-
-     url = mau.makeCachedUrl("http://www.example.com/testDir/leaf2");
-     assertEquals(12, url.getContentSize());
-
-     url = mau.makeCachedUrl("http://www.example.com/testDir/leaf3");
-     assertEquals(0, url.getContentSize());
-   }
-
-   public void testOpenForReading() throws Exception {
-     createLeaf("http://www.example.com/testDir/leaf1", "test stream", null);
-     createLeaf("http://www.example.com/testDir/leaf2", "test stream2", null);
-     createLeaf("http://www.example.com/testDir/leaf3", "", null);
-
-     CachedUrl url =
-       mau.makeCachedUrl("http://www.example.com/testDir/leaf1");
-     InputStream urlIs = url.getUnfilteredInputStream();
-     ByteArrayOutputStream baos = new ByteArrayOutputStream(11);
-     StreamUtil.copy(urlIs, baos);
-     assertEquals("test stream", baos.toString());
-
-     url = mau.makeCachedUrl("http://www.example.com/testDir/leaf2");
-     urlIs = url.getUnfilteredInputStream();
-     baos = new ByteArrayOutputStream(12);
-     StreamUtil.copy(urlIs, baos);
-     assertEquals("test stream2", baos.toString());
-
-     url = mau.makeCachedUrl("http://www.example.com/testDir/leaf3");
-     urlIs = url.getUnfilteredInputStream();
-     baos = new ByteArrayOutputStream(0);
-     StreamUtil.copy(urlIs, baos);
-     assertEquals("", baos.toString());
-   }
-
-  public void testOpenForHashingDefaultsToNoFiltering() throws Exception {
-    createLeaf("http://www.example.com/testDir/leaf1", "<test stream>", null);
-    String str = "This is a filtered stream";
-    mau.setFilterRule(new MyMockFilterRule(new StringReader(str)));
-
-    CachedUrl url =
-      mau.makeCachedUrl("http://www.example.com/testDir/leaf1");
-    InputStream urlIs = url.getUnfilteredInputStream();
-    assertNotEquals(str, StringUtil.fromInputStream(urlIs));
+    public void testFilterParamFilterOff() throws IOException {
+      String config = PARAM_SHOULD_FILTER_HASH_STREAM+"=false";
+      ConfigurationUtil.setCurrentConfigFromString(config);
+      MyCachedUrl cu = new MyCachedUrl(new MyAu(), null);
+      cu.openForHashing();
+      assertTrue(cu.gotUnfilteredStream());
+    }
   }
 
-  public void testOpenForHashingWontFilterIfConfiguredNotTo()
-      throws Exception {
-    String config = PARAM_SHOULD_FILTER_HASH_STREAM+"=false";
-    ConfigurationUtil.setCurrentConfigFromString(config);
-    createLeaf("http://www.example.com/testDir/leaf1", "<test stream>", null);
-    String str = "This is a filtered stream";
-    mau.setFilterRule(new MyMockFilterRule(new StringReader(str)));
+  // helper for above tests
+  private class MyCachedUrl extends BaseCachedUrl {
+    private boolean gotUnfilteredStream = false;
+    private CIProperties props = new CIProperties();
 
-    CachedUrl url =
-      mau.makeCachedUrl("http://www.example.com/testDir/leaf1");
-    InputStream urlIs = url.openForHashing();
-    assertNotEquals(str, StringUtil.fromInputStream(urlIs));
+    public MyCachedUrl(ArchivalUnit au, String url) {
+      super(au, url);
+      props.setProperty(PROPERTY_CONTENT_TYPE, "text/html");
+    }
+
+
+    public InputStream getUnfilteredInputStream() {
+      gotUnfilteredStream = true;
+      return null;
+    }
+
+    public boolean gotUnfilteredStream() {
+      return gotUnfilteredStream;
+    }
+
+    public boolean hasContent() {
+      throw new UnsupportedOperationException("Not implemented");
+    }
+
+    public Reader openForReading() {
+      return new StringReader("Test");
+    }
+
+    public CIProperties getProperties() {
+      return props;
+    }
+
+    public void setProperties(CIProperties props) {
+      this.props = props;
+    }
   }
 
-   public void testOpenForHashingWillFilterIfConfiguredTo()
-       throws Exception {
-     String config = PARAM_SHOULD_FILTER_HASH_STREAM + "=true";
-     ConfigurationUtil.setCurrentConfigFromString(config);
-     createLeaf("http://www.example.com/testDir/leaf1", "blah <test stream>", null);
-     String str = "This is a filtered stream";
-     mau.setFilterRule(new MyMockFilterRule(new StringReader(str)));
+  /** Tests that run with the current version and with an older version */
+  public abstract static class VersionedTests extends TestBaseCachedUrl {
+    public VersionedTests() {
+    }
 
-     CachedUrl url =
-         mau.makeCachedUrl("http://www.example.com/testDir/leaf1");
-     InputStream urlIs = url.openForHashing();
-     assertEquals(str, StringUtil.fromInputStream(urlIs));
-   }
+    /** Concrete class must create either a single version or multiple
+     * versions here */
+    abstract void createLeaf(String url, String content, CIProperties props)
+	throws Exception;
 
-   public void testGetProperties() throws Exception {
-     CIProperties newProps = new CIProperties();
-     newProps.setProperty("test", "value");
-     newProps.setProperty("test2", "value2");
-     createLeaf("http://www.example.com/testDir/leaf1", null, newProps);
+    /** Concrete class must return either the current version or an older
+     * version here */
+    abstract CachedUrl getTestCu(String url);
 
-     CachedUrl url =
-       mau.makeCachedUrl("http://www.example.com/testDir/leaf1");
-     CIProperties urlProps = url.getProperties();
-     assertEquals("value", urlProps.getProperty("test"));
-     assertEquals("value2", urlProps.getProperty("test2"));
-   }
+    public void testGetUrl() throws Exception {
+      createLeaf(url1, content1, null);
+
+      CachedUrl cu = getTestCu(url1);
+      assertEquals(url1, cu.getUrl());
+    }
+
+    public void testIsLeaf() throws Exception {
+      createLeaf(url1, content1, null);
+      createLeaf(url2, null, null);
+
+      CachedUrl cu = getTestCu(url1);
+      assertTrue(cu.isLeaf());
+      cu = getTestCu(url2);
+      assertTrue(cu.isLeaf());
+    }
+
+    public void testOpenForReading() throws Exception {
+      createLeaf(url1, content1, null);
+      createLeaf(url2, content2, null);
+      createLeaf(url3, "", null);
+
+      CachedUrl cu = getTestCu(url1);
+      InputStream urlIs = cu.getUnfilteredInputStream();
+      assertEquals(content1, StringUtil.fromInputStream(urlIs));
+
+      cu = getTestCu(url2);
+      urlIs = cu.getUnfilteredInputStream();
+      assertEquals(content2, StringUtil.fromInputStream(urlIs));
+
+      cu = getTestCu(url3);
+      urlIs = cu.getUnfilteredInputStream();
+      assertEquals("", StringUtil.fromInputStream(urlIs));
+    }
+
+    public void testOpenForHashingDefaultsToNoFiltering() throws Exception {
+      createLeaf(url1, "<test stream>", null);
+      String str = "This is a filtered stream";
+      mau.setFilterRule(new MyMockFilterRule(new StringReader(str)));
+
+      CachedUrl cu = getTestCu(url1);
+      InputStream urlIs = cu.getUnfilteredInputStream();
+      assertNotEquals(str, StringUtil.fromInputStream(urlIs));
+    }
+
+    public void testOpenForHashingWontFilterIfConfiguredNotTo()
+	throws Exception {
+      String config = PARAM_SHOULD_FILTER_HASH_STREAM+"=false";
+      ConfigurationUtil.setCurrentConfigFromString(config);
+      createLeaf(url1, "<test stream>", null);
+      String str = "This is a filtered stream";
+      mau.setFilterRule(new MyMockFilterRule(new StringReader(str)));
+
+      CachedUrl cu = getTestCu(url1);
+      InputStream urlIs = cu.openForHashing();
+      assertNotEquals(str, StringUtil.fromInputStream(urlIs));
+    }
+
+    public void testOpenForHashingWillFilterIfConfiguredTo()
+	throws Exception {
+      String config = PARAM_SHOULD_FILTER_HASH_STREAM + "=true";
+      ConfigurationUtil.setCurrentConfigFromString(config);
+      createLeaf(url1, "blah <test stream>", null);
+      String str = "This is a filtered stream";
+      mau.setFilterRule(new MyMockFilterRule(new StringReader(str)));
+
+      CachedUrl cu = getTestCu(url1);
+      InputStream urlIs = cu.openForHashing();
+      assertEquals(str, StringUtil.fromInputStream(urlIs));
+    }
+
+    public void testGetContentSize() throws Exception {
+      createLeaf(url1, content1, null);
+      createLeaf(url2, content2, null);
+      createLeaf(url3, "", null);
+
+      CachedUrl cu = getTestCu(url1);
+      assertEquals(content1.length(), cu.getContentSize());
+
+      cu = getTestCu(url2);
+      assertEquals(content2.length(), cu.getContentSize());
+
+      cu = getTestCu(url3);
+      assertEquals(0, cu.getContentSize());
+    }
+
+    public void testGetProperties() throws Exception {
+      CIProperties newProps = new CIProperties();
+      newProps.setProperty("test", "value");
+      newProps.setProperty("test2", "value2");
+      createLeaf(url1, null, newProps);
+
+      CachedUrl cu = getTestCu(url1);
+      CIProperties urlProps = cu.getProperties();
+      assertEquals("value", urlProps.getProperty("test"));
+      assertEquals("value2", urlProps.getProperty("test2"));
+    }
 
     public void testGetReader() throws Exception {
-     createLeaf("http://www.example.com/testDir/leaf1", "test stream", null);
+      createLeaf(url1, content1, null);
 
-     CachedUrl cu =
-       mau.makeCachedUrl("http://www.example.com/testDir/leaf1");
-     Reader reader = cu.openForReading();
-     CharArrayWriter writer = new CharArrayWriter(11);
-     StreamUtil.copy(reader, writer);
-     assertEquals("test stream", writer.toString());
-   }
+      CachedUrl cu = getTestCu(url1);
+      Reader reader = cu.openForReading();
+      assertEquals(content1, StringUtil.fromReader(reader));
+    }
+  }
 
-   private RepositoryNode createLeaf(String url, String content,
-                                     CIProperties props) throws Exception {
-     return TestRepositoryNodeImpl.createLeaf(repo, url, content, props);
-   }
+  class MyMockArchivalUnit extends MockArchivalUnit {
+    public CachedUrlSet makeCachedUrlSet(CachedUrlSetSpec cuss) {
+      return new BaseCachedUrlSet(this, cuss);
+    }
 
-   private class MyMockArchivalUnit extends MockArchivalUnit {
-     public CachedUrlSet makeCachedUrlSet(CachedUrlSetSpec cuss) {
-       return new BaseCachedUrlSet(this, cuss);
-     }
+    public CachedUrl makeCachedUrl(String url) {
+      return new BaseCachedUrl(this, url);
+    }
 
-     public CachedUrl makeCachedUrl(String url) {
-       return new BaseCachedUrl(this, url);
-     }
+    public UrlCacher makeUrlCacher(String url) {
+      return new BaseUrlCacher(this, url);
+    }
+  }
 
-     public UrlCacher makeUrlCacher(String url) {
-       return new BaseUrlCacher(this, url);
-     }
-   }
+  class MyMockFilterRule
+    implements FilterRule {
+    Reader reader;
 
-   private class MyMockFilterRule
-       implements FilterRule {
-     Reader reader;
+    public MyMockFilterRule(Reader reader) {
+      this.reader = reader;
+    }
 
-     public MyMockFilterRule(Reader reader) {
-       this.reader = reader;
-     }
+    public Reader createFilteredReader(Reader reader) {
+      return this.reader;
+    }
+  }
 
-     public Reader createFilteredReader(Reader reader) {
-       return this.reader;
-     }
-   }
+  class MyAu extends NullPlugin.ArchivalUnit {
+    public FilterRule getFilterRule(String mimeType) {
+      return new FilterRule() {
+	  public Reader createFilteredReader(Reader reader) {
+	    return reader;
+	  }
+	};
+    }
+  }
 
-    private class MyAu extends NullPlugin.ArchivalUnit {
-     public FilterRule getFilterRule(String mimeType) {
-       return new FilterRule() {
-        public Reader createFilteredReader(Reader reader) {
-          return reader;
-        }
-      };
-     }
-   }
+  /** Varient that performs the tests when there's only a single version */
+  public static class OnlyVersion extends VersionedTests {
+    public OnlyVersion() {
+    }
 
-   private class MyCachedUrl extends BaseCachedUrl {
-     private boolean gotUnfilteredStream = false;
-     private CIProperties props = new CIProperties();
+    protected void createLeaf(String url, String content,
+			      CIProperties props) throws Exception {
+      TestRepositoryNodeImpl.createLeaf(repo, url, content, props);
+    }
 
-     public MyCachedUrl(ArchivalUnit au, String url) {
-       super(au, url);
-       props.setProperty(PROPERTY_CONTENT_TYPE, "text/html");
-     }
+    CachedUrl getTestCu(String url) {
+      return mau.makeCachedUrl(url);
+    }
+
+    public void testVersionNumber() throws Exception {
+      createLeaf(url1, content1, null);
+      CachedUrl cu = getTestCu(url1);
+      assertEquals(1, cu.getVersion());
+    }      
+  }
+
+  /** Varient that performx the tests with the current version when there's
+   * a previous version */
+  public static class CurrentVersion extends VersionedTests {
+    public CurrentVersion() {
+    }
+
+    protected void createLeaf(String url, String content,
+			      CIProperties props) throws Exception {
+      Properties p = new Properties();
+      p.put("wrongkey", "wrongval");
+      RepositoryNode node =
+	TestRepositoryNodeImpl.createLeaf(repo, url, badcontent+"1", p);
+      TestRepositoryNodeImpl.createContentVersion(node, content, props);
+    }
+
+    CachedUrl getTestCu(String url) {
+      CachedUrl cu = mau.makeCachedUrl(url);
+      return cu;
+    }
+
+    public void testVersionNumber() throws Exception {
+      createLeaf(url1, content1, null);
+      CachedUrl cu = getTestCu(url1);
+      CachedUrl curcu = mau.makeCachedUrl(url1);
+      assertEquals(2, cu.getVersion());
+      assertEquals(2, curcu.getVersion());
+    }      
+  }
+
+  /** Varient that performs the tests with version 2 of 3 versions */
+  public static class PreviousVersion extends VersionedTests {
+    public PreviousVersion() {
+    }
+
+    protected void createLeaf(String url, String content,
+			      CIProperties props) throws Exception {
+      Properties p = new Properties();
+      p.put("wrongkey", "wrongval");
+      RepositoryNode node =
+	TestRepositoryNodeImpl.createLeaf(repo, url, badcontent+"1", p);
+      TestRepositoryNodeImpl.createContentVersion(node, content, props);
+      TestRepositoryNodeImpl.createContentVersion(node, badcontent+"3", p);
+    }
+
+    CachedUrl getTestCu(String url) {
+      CachedUrl cu = mau.makeCachedUrl(url);
+      CachedUrl[] all = cu.getCuVersions();
+      assertEquals(3, all.length);
+      
+      return all[1];
+    }
+
+    public void testVersionNumber() throws Exception {
+      createLeaf(url1, content1, null);
+      CachedUrl cu = getTestCu(url1);
+      CachedUrl curcu = mau.makeCachedUrl(url1);
+      assertEquals(2, cu.getVersion());
+      assertEquals(3, curcu.getVersion());
+    }      
+
+    public void testGetCuVersion() throws Exception {
+      createLeaf(url1, content1, null);
+      CachedUrl cu = mau.makeCachedUrl(url1);
+      assertEquals(1, cu.getCuVersion(1).getVersion());
+      assertEquals(2, cu.getCuVersion(2).getVersion());
+      assertEquals(3, cu.getCuVersion(3).getVersion());
+      CachedUrl noncu = cu.getCuVersion(4);
+      assertEquals(4, noncu.getVersion());
+      try {
+	noncu.getContentSize();
+	fail("No version 4, getCuVersion() should throw");
+      } catch (UnsupportedOperationException e) { }
+      try {
+	noncu.getUnfilteredInputStream();
+	fail("No version 4, getUnfilteredInputStream() should throw");
+      } catch (UnsupportedOperationException e) { }
+    }      
+
+    public void testGetCuVersions() throws Exception {
+      createLeaf(url1, content1, null);
+      CachedUrl cu = mau.makeCachedUrl(url1);
+      CachedUrl[] all = cu.getCuVersions();
+      assertEquals(3, all.length);
+      assertEquals(3, all[0].getVersion());
+      assertEquals(2, all[1].getVersion());
+      assertEquals(1, all[2].getVersion());
+    }      
+
+    public void testGetCuVersionsMax() throws Exception {
+      createLeaf(url1, content1, null);
+      CachedUrl cu = mau.makeCachedUrl(url1);
+      CachedUrl[] all = cu.getCuVersions(2);
+      assertEquals(2, all.length);
+      assertEquals(3, all[0].getVersion());
+      assertEquals(2, all[1].getVersion());
+    }      
 
 
-     public InputStream getUnfilteredInputStream() {
-       gotUnfilteredStream = true;
-       return null;
-     }
 
-     public boolean gotUnfilteredStream() {
-       return gotUnfilteredStream;
-     }
+  }
 
-     public boolean hasContent() {
-       throw new UnsupportedOperationException("Not implemented");
-     }
+  public static Test suite() {
+    return variantSuites(new Class[] {NotVersionedTests.class,
+				      OnlyVersion.class,
+				      CurrentVersion.class,
+				      PreviousVersion.class,
+				      });
+  }
 
-     public Reader openForReading() {
-       return new StringReader("Test");
-     }
-
-     public CIProperties getProperties() {
-       return props;
-     }
-
-     public void setProperties(CIProperties props) {
-       this.props = props;
-     }
-   }
-
-   public static void main(String[] argv) {
-     String[] testCaseList = {
-         TestBaseCachedUrl.class.getName()};
-     junit.textui.TestRunner.main(testCaseList);
-   }
- }
+}

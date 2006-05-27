@@ -1,5 +1,5 @@
 /*
- * $Id: PTestPlugin.java,v 1.21 2005-08-11 06:35:10 tlipkis Exp $
+ * $Id: PTestPlugin.java,v 1.22 2006-05-27 06:36:04 tlipkis Exp $
  */
 
 /*
@@ -85,6 +85,22 @@ public class PTestPlugin {
 
     public int getType() {
       return CachedUrlSetNode.TYPE_CACHED_URL;
+    }
+
+    public CachedUrl getCuVersion(int version) {
+      throw new UnsupportedOperationException("Not implemented");
+    }
+
+    public CachedUrl[] getCuVersions() {
+      throw new UnsupportedOperationException("Not implemented");
+    }
+
+    public CachedUrl[] getCuVersions(int maxVersions) {
+      throw new UnsupportedOperationException("Not implemented");
+    }
+
+    public int getVersion() {
+      return 1;
     }
 
     public InputStream getUnfilteredInputStream() {

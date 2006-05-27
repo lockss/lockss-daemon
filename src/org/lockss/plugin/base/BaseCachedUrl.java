@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrl.java,v 1.24 2005-12-01 23:28:03 troberts Exp $
+ * $Id: BaseCachedUrl.java,v 1.25 2006-05-27 06:36:04 tlipkis Exp $
  */
 
 /*
@@ -90,6 +90,34 @@ public class BaseCachedUrl implements CachedUrl {
     return au;
   }
 
+  protected RepositoryNodeVersion getNodeVersion() {
+    ensureLeafLoaded();
+    return leaf;
+  }
+
+  public CachedUrl getCuVersion(int version) {
+    ensureLeafLoaded();
+    return new Version(au, url, leaf.getNodeVersion(version));
+  }
+
+  public CachedUrl[] getCuVersions() {
+    return getCuVersions(Integer.MAX_VALUE);
+  }
+
+  public CachedUrl[] getCuVersions(int maxVersions) {
+    ensureLeafLoaded();
+    RepositoryNodeVersion[] nodeVers = leaf.getNodeVersions(maxVersions);
+    CachedUrl[] res = new CachedUrl[nodeVers.length];
+    for (int ix = res.length - 1; ix >= 0; ix--) {
+      res[ix] = new Version(au, url, nodeVers[ix]);
+    }
+    return res;
+  }
+
+  public int getVersion() {
+    return getNodeVersion().getVersion();
+  }
+
   /**
    * Return a stream suitable for hashing.  This may be a filtered stream.
    * @return an InputStream
@@ -145,8 +173,7 @@ public class BaseCachedUrl implements CachedUrl {
   }
 
   public long getContentSize() {
-    ensureLeafLoaded();
-    return leaf.getContentSize();
+    return getNodeVersion().getContentSize();
   }
 
   public void release() {
@@ -156,9 +183,8 @@ public class BaseCachedUrl implements CachedUrl {
   }
 
   private void ensureRnc() {
-    ensureLeafLoaded();
     if (rnc == null) {
-      rnc = leaf.getNodeContents();
+      rnc = getNodeVersion().getNodeContents();
     }
   }
 
@@ -193,4 +219,25 @@ public class BaseCachedUrl implements CachedUrl {
     }
     return getUnfilteredInputStream();
   }
+
+  /** A CachedUrl that's bound to a specific version. */
+  static class Version extends BaseCachedUrl {
+    private RepositoryNodeVersion nodeVer;
+
+    public Version(ArchivalUnit owner, String url,
+		   RepositoryNodeVersion nodeVer) {
+      super(owner, url);
+      this.nodeVer = nodeVer;
+    }
+
+    protected RepositoryNodeVersion getNodeVersion() {
+      return nodeVer;
+    }
+
+    public boolean hasContent() {
+      return getNodeVersion().hasContent();
+    }
+
+  }
+
 }

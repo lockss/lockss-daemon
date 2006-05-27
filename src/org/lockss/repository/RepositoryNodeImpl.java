@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.65 2005-12-01 23:28:02 troberts Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.66 2006-05-27 06:36:04 tlipkis Exp $
  */
 
 /*
@@ -423,10 +423,14 @@ public class RepositoryNodeImpl implements RepositoryNode {
     return buffer.toString();
   }
 
+  public int getVersion() {
+    return getCurrentVersion();
+  }
+
   public int getCurrentVersion() {
     if ((!hasContent()) && ((!isContentInactive() && !isDeleted()))) {
       logger.error("Cannot get version if no content: "+url);
-      throw new UnsupportedOperationException("No content to version.");
+      throw new UnsupportedOperationException("No content, so no version.");
     }
     return currentVersion;
   }
@@ -513,12 +517,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
         // add the 'was inactive' property so the knowledge isn't lost
         try {
-          Properties myProps = new SortedProperties();
-          // make sure to close all streams or will fail on Windows
-          InputStream is =
-              new BufferedInputStream(new FileInputStream(currentPropsFile));
-          myProps.load(is);
-          is.close();
+          Properties myProps = loadProps(currentPropsFile);
           myProps.setProperty(NODE_WAS_INACTIVE_PROPERTY, "true");
           OutputStream os =
               new BufferedOutputStream(new FileOutputStream(currentPropsFile));
@@ -610,12 +609,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
         // (done this way to make property writing more efficient for
         // non-identical cases)
         try {
-          Properties myProps = new SortedProperties();
-          // make sure to close all streams or will fail on Windows
-          InputStream is = new BufferedInputStream(new FileInputStream(
-              tempPropsFile));
-          myProps.load(is);
-          is.close();
+          Properties myProps = loadProps(tempPropsFile);
           myProps.setProperty(LOCKSS_VERSION_NUMBER,
                               Integer.toString(currentVersion));
           OutputStream os = new BufferedOutputStream(new FileOutputStream(
@@ -825,6 +819,23 @@ public class RepositoryNodeImpl implements RepositoryNode {
     }
   }
 
+  SortedProperties loadProps(File propsFile)
+      throws FileNotFoundException, IOException {
+    SortedProperties props = new SortedProperties();
+    loadPropsInto(propsFile, props);
+    return props;
+  }
+
+  void loadPropsInto(File propsFile, Properties props)
+      throws FileNotFoundException, IOException {
+    InputStream is = new BufferedInputStream(new FileInputStream(propsFile));
+    try {
+      props.load(is);
+    } finally {
+      is.close();
+    }
+  }
+
   public void setNewProperties(Properties newProps) {
     if (!newVersionOpen) {
       throw new UnsupportedOperationException("New version not initialized.");
@@ -918,10 +929,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
   void loadNodeProps(boolean okIfNotThere) {
     try {
       // check properties to see if deleted
-      InputStream is =
-          new BufferedInputStream(new FileInputStream(nodePropsFile));
-      nodeProps.load(is);
-      is.close();
+      loadPropsInto(nodePropsFile, nodeProps);
       nodePropsLoaded = true;
     } catch (FileNotFoundException e) {
       if (!okIfNotThere) {
@@ -947,11 +955,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
       }
       if (curProps==null) {
 	try {
-	  InputStream is =
-	    new BufferedInputStream(new FileInputStream(currentPropsFile));
-	  curProps = new Properties();
-	  curProps.load(is);
-	  is.close();
+	  curProps = loadProps(currentPropsFile);
 	} catch (FileNotFoundException e) {
 	  // No error if file not found, just don't load props
 	} catch (Exception e) {
@@ -1023,9 +1027,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
     if (inactivePropFile.exists()) {
       Properties oldProps = new Properties();
       try {
-        InputStream is = new BufferedInputStream(new FileInputStream(inactivePropFile));
-        oldProps.load(is);
-        is.close();
+	loadPropsInto(inactivePropFile, oldProps);
       } catch (Exception e) {
         logger.error("Error loading last active version from "+
                       inactivePropFile.getPath()+".");
@@ -1301,6 +1303,45 @@ public class RepositoryNodeImpl implements RepositoryNode {
     return contentDir;
   }
 
+  // return array of version numbers of all present previous versions
+  int[] getVersionNumbers() {
+    String[] names = getContentDir().list(NumericFilenameFilter.INSTANCE);
+    int[] res = new int[names.length];
+    for (int ix = names.length - 1; ix >= 0; ix--) {
+      try {
+	res[ix] = Integer.parseInt(names[ix]);
+      } catch (NumberFormatException e) {
+	logger.warning("Non-numeric numeric filename: " +
+		       names[ix] + ": " + e.getMessage());
+      }
+    }
+    return res;
+  }
+
+  public RepositoryNodeVersion[] getNodeVersions() {
+    return getNodeVersions(Integer.MAX_VALUE);
+  }
+
+  public RepositoryNodeVersion[] getNodeVersions(int maxVersions) {
+    int[] vers = getVersionNumbers();
+    Arrays.sort(vers);
+    int size = vers.length + 1;
+    if (size > maxVersions) size = maxVersions;
+    RepositoryNodeVersion[] res = new RepositoryNodeVersion[size];
+    res[0] = this;		  // most recent version (current) is first
+    for (int ix = 1; ix < size; ix++) {
+      res[ix] = new RepositoryNodeVersionImpl(vers[vers.length - ix]);
+    }
+    return res;
+  }
+
+  public RepositoryNodeVersion getNodeVersion(int version) {
+    if (version == getCurrentVersion()) {
+      return this;
+    }
+    return new RepositoryNodeVersionImpl(version);
+  }
+
   // functions to get a 'versioned' content or props file, such as
   // '1', '1.props', or '1.props-123135131' (the dated props)
 
@@ -1328,12 +1369,82 @@ public class RepositoryNodeImpl implements RepositoryNode {
     return "[reponode: " + url + "]";
   }
 
+  public class RepositoryNodeVersionImpl implements RepositoryNodeVersion {
+    private int version;
+    private File contentFile = null;
+
+    RepositoryNodeVersionImpl(int version) {
+      this.version = version;
+    }
+
+    public boolean hasContent() {
+      return getContentFile().exists();
+    }
+
+    private File getContentFile() {
+      if (contentFile == null) {
+	contentFile = getVersionedCacheFile(version);
+      }
+      return contentFile;
+    }
+
+    public long getContentSize() {
+      if (!hasContent()) {
+	throw new UnsupportedOperationException("Version has no content");
+      }
+      return getContentFile().length();
+    }
+
+    public int getVersion() {
+      return version;
+    }
+
+    public RepositoryNode.RepositoryNodeContents getNodeContents() {
+      if (!hasContent()) {
+	throw new UnsupportedOperationException("No content for version " +
+						getVersion() + "of " + url);
+      }
+      return new VRepositoryNodeContentsImpl(version);
+    }
+
+    class VRepositoryNodeContentsImpl extends RepositoryNodeContentsImpl {
+      private int version;
+      private Properties props = null;
+
+      private VRepositoryNodeContentsImpl(int version) {
+	this.version = version;
+      }
+
+      protected File getContentFile() {
+	return RepositoryNodeVersionImpl.this.getContentFile();
+      }
+
+      protected Properties getProps() {
+	if (props == null) {
+	  File propsFile = getVersionedPropsFile(version);
+	  try {
+	    props = loadProps(propsFile);
+	  } catch (IOException e) {
+	    throw new LockssRepository.RepositoryStateException("Couldn't load versioned properties file: " + propsFile, e);
+	  }
+	}
+	return props;
+      }
+
+      protected void handleOpenError(IOException e) {
+      }
+  }
+
+  }
+
+
+
   /**
    * Intended to ensure props and stream reflect a consistent view of a
    * single version.  This version gurantees that only if the stream is
    * fetched only once.
    */
-  public class RepositoryNodeContentsImpl implements RepositoryNodeContents {
+  class RepositoryNodeContentsImpl implements RepositoryNodeContents {
     private Properties props;
     private InputStream is;
 
@@ -1376,22 +1487,34 @@ public class RepositoryNodeImpl implements RepositoryNode {
       }
     }
 
+    protected File getContentFile() {
+      return curInputFile;
+    }
+
+    protected Properties getProps() {
+      return (Properties)curProps.clone();
+    }
+
+    protected void handleOpenError(IOException e) {
+      if (!FileUtil.isTemporaryResourceException(e)) {
+	maybeDeactivateInconsistentNode();
+      }
+    }
+
     private void ensureInputStream() {
       if (is == null) {
 	assertContent();
 	try {
-	  is = new BufferedInputStream(new FileInputStream(curInputFile));
+	  is = new BufferedInputStream(new FileInputStream(getContentFile()));
 	  if (CurrentConfig.getBooleanParam(PARAM_MONITOR_INPUT_STREAMS,
 	                                    DEFAULT_MONITOR_INPUT_STREAMS)) {
-	    is = new MonitoringInputStream(is, curInputFile.toString());
+	    is = new MonitoringInputStream(is, getContentFile().toString());
 	  }
-	  props = (Properties)curProps.clone();
+	  props = getProps();
 	} catch (IOException e) {
 	  logger.error("Couldn't get inputstream for '" +
-		       curInputFile.getPath() + "'");
-	  if (!FileUtil.isTemporaryResourceException(e)) {
-	    maybeDeactivateInconsistentNode();
-	  }
+		       getContentFile().getPath() + "'");
+	  handleOpenError(e);
 	  throw new LockssRepository.RepositoryStateException ("Couldn't open InputStream: " + e.toString());
 	}
       }
