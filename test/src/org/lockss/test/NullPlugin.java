@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.74 2006-05-27 06:36:04 tlipkis Exp $
+ * $Id: NullPlugin.java,v 1.75 2006-05-30 23:09:53 tlipkis Exp $
  */
 
 /*
@@ -147,16 +147,16 @@ public class NullPlugin {
       return CachedUrlSetNode.TYPE_CACHED_URL;
     }
 
-    public CachedUrl getCuVersion(int version) {
+    public org.lockss.plugin.CachedUrl getCuVersion(int version) {
       throw new UnsupportedOperationException("Not implemented");
     }
 
-    public CachedUrl[] getCuVersions() {
-      return new CachedUrl[0];
+    public org.lockss.plugin.CachedUrl[] getCuVersions() {
+      return new org.lockss.plugin.CachedUrl[0];
     }
 
-    public CachedUrl[] getCuVersions(int maxVersions) {
-      return new CachedUrl[0];
+    public org.lockss.plugin.CachedUrl[] getCuVersions(int maxVersions) {
+      return new org.lockss.plugin.CachedUrl[0];
     }
 
     public int getVersion() {
