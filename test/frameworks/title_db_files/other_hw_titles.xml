@@ -818,6 +818,7 @@
     <property name="ClinicalMicrobiologyReviews19">
       <property name="title" value="Clinical Microbiology Reviews Volume 19" />
       <property name="journalTitle" value="Clinical Microbiology Reviews" />
+      <property name="estSize" value="60MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -833,6 +834,7 @@
     <property name="EukaryoticCell5">
       <property name="title" value="Eukaryotic Cell Volume 5" />
       <property name="journalTitle" value="Eukaryotic Cell" />
+      <property name="estSize" value="700MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -908,6 +910,7 @@
     <property name="MicrobiologyandMolecularBiologyReviews70">
       <property name="title" value="Microbiology and Molecular Biology Reviews Volume 70" />
       <property name="journalTitle" value="Microbiology and Molecular Biology Reviews" />
+      <property name="estSize" value="100MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -1732,6 +1735,7 @@
     <property name="AmericanLiteraryScholarship2003">
       <property name="title" value="American Literary Scholarship Volume 2003" />
       <property name="journalTitle" value="American Literary Scholarship" />
+      <property name="estSize" value="10MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -1747,6 +1751,7 @@
     <property name="AmericanLiterature78">
       <property name="title" value="American Literature Volume 78" />
       <property name="journalTitle" value="American Literature" />
+      <property name="estSize" value="10MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -1762,6 +1767,7 @@
     <property name="AmericanSpeech81">
       <property name="title" value="American Speech Volume 81" />
       <property name="journalTitle" value="American Speech" />
+      <property name="estSize" value="10MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -1777,6 +1783,7 @@
     <property name="boundary233">
       <property name="title" value="boundary 2 Volume 33" />
       <property name="journalTitle" value="boundary 2" />
+      <property name="estSize" value="5MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -1792,6 +1799,7 @@
     <property name="CameraObscuraFeminismCultureandMediaStudies20">
       <property name="title" value="Camera Obscura: Feminism, Culture, and Media Studies Volume 20" />
       <property name="journalTitle" value="Camera Obscura: Feminism, Culture, and Media Studies" />
+      <property name="estSize" value="60MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -1822,6 +1830,7 @@
     <property name="ComparativeStudiesofSouthAsiaAfricaandtheMiddleEast25">
       <property name="title" value="Comparative Studies of South Asia, Africa and the Middle East Volume 25" />
       <property name="journalTitle" value="Comparative Studies of South Asia, Africa and the Middle East" />
+      <property name="estSize" value="30MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -1837,6 +1846,7 @@
     <property name="differences16">
       <property name="title" value="differences Volume 16" />
       <property name="journalTitle" value="differences" />
+      <property name="estSize" value="50MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -1852,6 +1862,7 @@
     <property name="EighteenthCenturyLife30">
       <property name="title" value="Eighteenth-Century Life Volume 30" />
       <property name="journalTitle" value="Eighteenth-Century Life" />
+      <property name="estSize" value="5MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -1867,6 +1878,7 @@
     <property name="Ethnohistory53">
       <property name="title" value="Ethnohistory Volume 53" />
       <property name="journalTitle" value="Ethnohistory" />
+      <property name="estSize" value="20MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -1896,6 +1908,7 @@
     
     <property name="GLQAJournalofLesbianandGayStudies12">
       <property name="title" value="GLQ: A Journal of Lesbian and Gay Studies Volume 12" />
+      <property name="estSize" value="100MB" />
       <property name="journalTitle" value="GLQ: A Journal of Lesbian and Gay Studies" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
@@ -1927,6 +1940,7 @@
     <property name="HistoryofPoliticalEconomy38">
       <property name="title" value="History of Political Economy Volume 38" />
       <property name="journalTitle" value="History of Political Economy" />
+      <property name="estSize" value="20MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -1957,6 +1971,7 @@
     <property name="JournalofMedievalandEarlyModernStudies36">
       <property name="title" value="Journal of Medieval and Early Modern Studies Volume 36" />
       <property name="journalTitle" value="Journal of Medieval and Early Modern Studies" />
+      <property name="estSize" value="40MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -1972,6 +1987,7 @@
     <property name="LaborStudiesinWorkingClassHistoryoftheAmericas2">
       <property name="title" value="Labor: Studies in Working-Class History of the Americas Volume 2" />
       <property name="journalTitle" value="Labor: Studies in Working-Class History of the Americas" />
+      <property name="estSize" value="200MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -1987,6 +2003,7 @@
     <property name="MediterraneanQuarterly17">
       <property name="title" value="Mediterranean Quarterly Volume 17" />
       <property name="journalTitle" value="Mediterranean Quarterly" />
+      <property name="estSize" value="10MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -2002,6 +2019,7 @@
     <property name="ModernLanguageQuarterly67">
       <property name="title" value="Modern Language Quarterly Volume 67" />
       <property name="journalTitle" value="Modern Language Quarterly" />
+      <property name="estSize" value="20MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -2047,6 +2065,7 @@
     <property name="PoeticsToday26">
       <property name="title" value="Poetics Today Volume 26" />
       <property name="journalTitle" value="Poetics Today" />
+      <property name="estSize" value="40MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -2062,6 +2081,7 @@
     <property name="positionseastasiaculturescritique13">
       <property name="title" value="positions: east asia cultures critique Volume 13" />
       <property name="journalTitle" value="positions: east asia cultures critique" />
+      <property name="estSize" value="200MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -2077,6 +2097,7 @@
     <property name="PublicCulture18">
       <property name="title" value="Public Culture Volume 18" />
       <property name="journalTitle" value="Public Culture" />
+      <property name="estSize" value="60MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -2092,6 +2113,7 @@
     <property name="RadicalHistoryReview2006">
       <property name="title" value="Radical History Review Volume 2006" />
       <property name="journalTitle" value="Radical History Review" />
+      <property name="estSize" value="70MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -2122,6 +2144,7 @@
     <property name="SocialText23">
       <property name="title" value="Social Text Volume 23" />
       <property name="journalTitle" value="Social Text" />
+      <property name="estSize" value="40MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -2137,6 +2160,7 @@
     <property name="SouthAtlanticQuarterly105">
       <property name="title" value="South Atlantic Quarterly Volume 105" />
       <property name="journalTitle" value="South Atlantic Quarterly" />
+      <property name="estSize" value="20MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -2152,6 +2176,7 @@
     <property name="Theater36">
       <property name="title" value="Theater Volume 36" />
       <property name="journalTitle" value="Theater" />
+      <property name="estSize" value="150MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
