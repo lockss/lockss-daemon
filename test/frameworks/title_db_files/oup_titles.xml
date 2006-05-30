@@ -1464,7 +1464,7 @@
     <property name="ContemporaryEconomicPolicy24">
       <property name="title" value="Contemporary Economic Policy Volume 24" />
       <property name="journalTitle" value="Contemporary Economic Policy" />
-      <property name="estSize" value="60MB" /
+      <property name="estSize" value="60MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
