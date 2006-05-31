@@ -12,14 +12,13 @@
 <ElementKey>au_crawlrules</ElementKey>
 <ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 <string xsi:type="java:java.lang.String">4,"^%s", base_url</string>
-<string xsi:type="java:java.lang.String">1,"%s/LOCKSS_Manifests/manifest%d.html", base_url, year</string>
+<string xsi:type="java:java.lang.String">1,"%sLOCKSS_Manifests/manifest%d.html", base_url, year</string>
 <string xsi:type="java:java.lang.String">1,"^%s.*$", base_url</string>
 </ElementValue>
 </MapElement>
 <MapElement>
 <ElementKey>au_start_url</ElementKey>
-<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"!
- %s/LOCKSS_Manifests/manifest%d.html", base_url, year</ElementValue>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"%sLOCKSS_Manifests/manifest%d.html", base_url, year</ElementValue>
 </MapElement>
 <MapElement>
 <ElementKey>plugin_config_props</ElementKey>
