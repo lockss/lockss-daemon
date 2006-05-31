@@ -1048,6 +1048,114 @@
         <property name="attributes.rights" value="openaccess" />
       </property>
 
+
+      <property name="Bonefolder1">
+	<property name="title" value="The Bonefolder Volume 1" />
+	<property name="journalTitle" value="The Bonefolder" />
+	<property name="plugin" value="edu.nyu.plugin.bonefolder.BonefolderPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.philobiblon.com/bonefolder/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="1" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+
+
+      <property name="ElectronicJournalofContemporaryJapaneseStudies2006">
+	<property name="title" value="Electronic Journal of Contemporary Japanese Studies 2006" />
+	<property name="journalTitle" value="Electronic Journal of Contemporary Japanese Studies" />
+	<property name="plugin" value="edu.nyu.plugin.ejcjs.EJCJSPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.japanesestudies.org.uk/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2006" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="ElectronicJournalofContemporaryJapaneseStudies2005">
+	<property name="title" value="Electronic Journal of Contemporary Japanese Studies 2005" />
+	<property name="journalTitle" value="Electronic Journal of Contemporary Japanese Studies" />
+	<property name="plugin" value="edu.nyu.plugin.ejcjs.EJCJSPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.japanesestudies.org.uk/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2005" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="ElectronicJournalofContemporaryJapaneseStudies2004">
+	<property name="title" value="Electronic Journal of Contemporary Japanese Studies 2004" />
+	<property name="journalTitle" value="Electronic Journal of Contemporary Japanese Studies" />
+	<property name="plugin" value="edu.nyu.plugin.ejcjs.EJCJSPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.japanesestudies.org.uk/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2004" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="ElectronicJournalofContemporaryJapaneseStudies2003">
+	<property name="title" value="Electronic Journal of Contemporary Japanese Studies 2003" />
+	<property name="journalTitle" value="Electronic Journal of Contemporary Japanese Studies" />
+	<property name="plugin" value="edu.nyu.plugin.ejcjs.EJCJSPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.japanesestudies.org.uk/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2003" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="ElectronicJournalofContemporaryJapaneseStudies2002">
+	<property name="title" value="Electronic Journal of Contemporary Japanese Studies 2002" />
+	<property name="journalTitle" value="Electronic Journal of Contemporary Japanese Studies" />
+	<property name="plugin" value="edu.nyu.plugin.ejcjs.EJCJSPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.japanesestudies.org.uk/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2002" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="ElectronicJournalofContemporaryJapaneseStudies2001">
+	<property name="title" value="Electronic Journal of Contemporary Japanese Studies 2001" />
+	<property name="journalTitle" value="Electronic Journal of Contemporary Japanese Studies" />
+	<property name="plugin" value="edu.nyu.plugin.ejcjs.EJCJSPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.japanesestudies.org.uk/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2001" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
       <property name="newjournalofphysics7">
 	<property name="title" value="New Journal of Physics Volume 7" />
 	<property name="journalTitle" value="New Journal of Physics" />
