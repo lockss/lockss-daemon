@@ -1,10 +1,10 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.57 2006-05-08 04:41:10 tlipkis Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.58 2006-05-31 17:54:50 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -39,6 +39,7 @@ import java.util.*;
 
 import junit.framework.Test;
 
+import org.lockss.config.CurrentConfig;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.poller.Vote;
@@ -283,7 +284,8 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
     repository.loadPollHistories(nodeState);
     assertEquals(0, nodeState.pollHistories.size());
     assertFalse(xmlFile.exists());
-    xmlFile = new File(filePath + ".old");
+    xmlFile = new File(filePath + CurrentConfig.getParam(ObjectSerializer.PARAM_FAILED_DESERIALIZATION_EXTENSION,
+                                                         ObjectSerializer.DEFAULT_FAILED_DESERIALIZATION_EXTENSION));
     assertTrue(xmlFile.exists());
   }
 
@@ -482,6 +484,59 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
     assertSame(testID2, idmgr.stringToPeerIdentity(id2.getId()));
     assertEquals(456, id2.getLastAgree());
     assertEquals(654, id2.getLastDisagree());
+  }
+
+  /**
+   * <p>Verifies that the serializers in use by the history repository
+   * are in the correct modes.</p>
+   * @throws Exception if an unexpected error occurs
+   */
+  public void testSerializerModes() throws Exception {
+    abstract class SerializerFactory {
+      public abstract ObjectSerializer makeSerializer();
+    }
+
+    SerializerFactory[] actions = new SerializerFactory[] {
+        new SerializerFactory() {
+          public ObjectSerializer makeSerializer() {
+            return repository.makeAuStateSerializer();
+          }
+        },
+        new SerializerFactory() {
+          public ObjectSerializer makeSerializer() {
+            return repository.makeDamagedNodeSetSerializer();
+          }
+        },
+        new SerializerFactory() {
+          public ObjectSerializer makeSerializer() {
+            return repository.makeIdentityAgreementListSerializer();
+          }
+        },
+        new SerializerFactory() {
+          public ObjectSerializer makeSerializer() {
+            return repository.makeNodeStateSerializer();
+          }
+        },
+        new SerializerFactory() {
+          public ObjectSerializer makeSerializer() {
+            return repository.makePollHistoriesSerializer();
+          }
+        },
+    };
+
+    // For each variant action...
+    for (int action = 0 ; action < actions.length ; ++action) {
+      log.debug("Starting with action " + action);
+      ObjectSerializer serializer = actions[action].makeSerializer();
+      assertEquals(ObjectSerializer.FAILED_DESERIALIZATION_RENAME,
+                   serializer.getFailedDeserializationMode());
+
+      // CASTOR: Which concrete class is returned may change over time
+      assertTrue(serializer instanceof CXSerializer);
+      CXSerializer cxSerializer = (CXSerializer)serializer;
+      assertEquals(CXSerializer.getCompatibilityModeFromConfiguration(),
+                   cxSerializer.getCompatibilityMode());
+    }
   }
 
   private PollHistoryBean createPollHistoryBean(int voteCount) throws Exception {

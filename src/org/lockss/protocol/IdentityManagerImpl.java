@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManagerImpl.java,v 1.15 2006-04-20 07:17:13 smorabito Exp $
+ * $Id: IdentityManagerImpl.java,v 1.16 2006-05-31 17:54:50 thib_gc Exp $
  */
 
 /*
@@ -733,7 +733,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
     // CASTOR: Change to returning an XStreamSerializer
     CXSerializer serializer =
       new CXSerializer(theDaemon, MAPPING_FILE_NAME, IdentityListBean.class);
-    serializer.setCurrentMode(getSerializationMode());
+    serializer.setCompatibilityMode(getSerializationMode());
     return serializer;
   }
 
@@ -765,7 +765,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
    * @return A mode constant from {@link CXSerializer}.
    */
   private static int getSerializationMode() {
-    return CXSerializer.getModeFromConfiguration();
+    return CXSerializer.getCompatibilityModeFromConfiguration();
   }
 
   /**

@@ -1,5 +1,5 @@
 /*
- * $Id: CXSerializer.java,v 1.17 2006-04-20 09:02:35 thib_gc Exp $
+ * $Id: CXSerializer.java,v 1.18 2006-05-31 17:54:49 thib_gc Exp $
  */
 
 /*
@@ -37,8 +37,8 @@ import java.io.*;
 import org.exolab.castor.mapping.Mapping;
 
 import org.lockss.app.LockssApp;
-import org.lockss.config.CurrentConfig;
-import org.lockss.util.ObjectSerializer.SerializationException;
+import org.lockss.config.*;
+import org.lockss.util.SerializationException;
 
 /**
  * <p>An adapter class implementing
@@ -64,19 +64,45 @@ import org.lockss.util.ObjectSerializer.SerializationException;
 public class CXSerializer extends ObjectSerializer {
 
   /**
+   * <p>A {@link SerializationException} used when XStream overwrite
+   * mode is in effect but the overwrite fails after the
+   * deserialization has succeeded.</p>
+   * @author Thib Guicherd-Callin
+   */
+  protected static class OverwriteFailed extends SerializationException {
+
+    public OverwriteFailed() {
+      super();
+    }
+
+    public OverwriteFailed(String message) {
+      super(message);
+    }
+
+    public OverwriteFailed(String message, Throwable cause) {
+      super(message, cause);
+    }
+
+    public OverwriteFailed(Throwable cause) {
+      super(cause);
+    }
+
+  }
+
+  /**
    * <p>A {@link CastorSerializer} adaptee.</p>
    */
   private CastorSerializer castor;
 
   /**
-   * <p>This serializer's current mode.</p>
+   * <p>This serializer's current compatibility mode.</p>
    * <p>Must be one of the three mode constants {@link #CASTOR_MODE},
    * {@link #XSTREAM_MODE} or {@link #XSTREAM_OVERWRITE_MODE}.</p>
    * @see #CASTOR_MODE
    * @see #XSTREAM_MODE
    * @see #XSTREAM_OVERWRITE_MODE
    */
-  private int currentMode;
+  private int compatibilityMode;
 
   /**
    * <p>An {@link XStreamSerializer} adaptee.</p>
@@ -91,6 +117,7 @@ public class CXSerializer extends ObjectSerializer {
    *                      processing by this serializer.
    * @param targetClass   The Class of objects intended for processing
    *                      by this serializer.
+   * @see ObjectSerializer#ObjectSerializer(LockssApp)
    */
   public CXSerializer(LockssApp lockssContext,
                       Mapping targetMapping,
@@ -98,7 +125,33 @@ public class CXSerializer extends ObjectSerializer {
     super(lockssContext);
     this.castor = new CastorSerializer(lockssContext, targetMapping, targetClass);
     this.xstream = new XStreamSerializer(lockssContext);
-    setCurrentMode(getModeFromConfiguration());
+    setCompatibilityMode(getCompatibilityModeFromConfiguration());
+  }
+
+  /**
+   * <p>Builds a new CXSerializer instance with the given reference
+   * mapping and class, and with the given context.</p>
+   * @param lockssContext A serialization context object.
+   * @param targetMapping             The {@link Mapping} of objects
+   *                                  intended for processing by this
+   *                                  serializer.
+   * @param targetClass               The Class of objects intended for
+   *                                  processing by this serializer.
+   * @param saveTempFiles             A failed serialization mode.
+   * @param failedDeserializationMode A failed deserialization mode.
+   * @see ObjectSerializer#ObjectSerializer(LockssApp, boolean, int)
+   */
+  public CXSerializer(LockssApp lockssContext,
+                      Mapping targetMapping,
+                      Class targetClass,
+                      boolean saveTempFiles,
+                      int failedDeserializationMode) {
+    super(lockssContext,
+          saveTempFiles,
+          failedDeserializationMode);
+    this.castor = new CastorSerializer(lockssContext, targetMapping, targetClass);
+    this.xstream = new XStreamSerializer(lockssContext);
+    setCompatibilityMode(getCompatibilityModeFromConfiguration());
   }
 
   /**
@@ -115,23 +168,35 @@ public class CXSerializer extends ObjectSerializer {
   public CXSerializer(LockssApp lockssContext,
                       String mappingFilename,
                       Class targetClass) {
-    this(lockssContext, CastorSerializer.getMapping(mappingFilename), targetClass);
+    this(lockssContext,
+         CastorSerializer.getMapping(mappingFilename),
+         targetClass);
   }
 
   /**
    * <p>Builds a new CXSerializer instance with the given reference
-   * mapping and class, and with a null context.</p>
-   * @param targetMapping The
-   *                      {@link org.exolab.castor.mapping.Mapping}
-   *                      of objects intended for processing by this
-   *                      serializer.
-   * @param targetClass   The Class of objects intended for processing
-   *                      by this serializer.
-   * @see #CXSerializer(LockssApp, Mapping, Class)
+   * mapping and class, and with the given context.</p>
+   * @param lockssContext             A serialization context object.
+   * @param mappingFilename           A filename where the mapping
+   *                                  file for objects intended for
+   *                                  processing by this serializer
+   *                                  can be located.
+   * @param targetClass               The Class of objects intended for
+   *                                  processing by this serializer.
+   * @param saveTempFiles             A failed serialization mode.
+   * @param failedDeserializationMode A failed deserialization mode.
+   * @see #CXSerializer(LockssApp, Mapping, Class, boolean, int)
    */
-  public CXSerializer(Mapping targetMapping,
-                      Class targetClass) {
-    this(null, targetMapping, targetClass);
+  public CXSerializer(LockssApp lockssContext,
+                      String mappingFilename,
+                      Class targetClass,
+                      boolean saveTempFiles,
+                      int failedDeserializationMode) {
+    this(lockssContext,
+         CastorSerializer.getMapping(mappingFilename),
+         targetClass,
+         saveTempFiles,
+         failedDeserializationMode);
   }
 
   /**
@@ -146,7 +211,33 @@ public class CXSerializer extends ObjectSerializer {
    */
   public CXSerializer(String mappingFilename,
                       Class targetClass) {
-    this(null, mappingFilename, targetClass);
+    this(null,
+         mappingFilename,
+         targetClass);
+  }
+
+  /**
+   * <p>Builds a new CXSerializer instance with the given reference
+   * mapping and class, and with a null context.</p>
+   * @param mappingFilename           A filename where the mapping
+   *                                  file for objects intended for
+   *                                  processing by this serializer
+   *                                  can be located.
+   * @param targetClass               The Class of objects intended for
+   *                                  processing by this serializer.
+   * @param saveTempFiles             A failed serialization mode.
+   * @param failedDeserializationMode A failed deserialization mode.
+   * @see #CXSerializer(LockssApp, String, Class, boolean, int)
+   */
+  public CXSerializer(String mappingFilename,
+                      Class targetClass,
+                      boolean saveTempFiles,
+                      int failedDeserializationMode) {
+    this(null,
+         mappingFilename,
+         targetClass,
+         saveTempFiles,
+         failedDeserializationMode);
   }
 
   /**
@@ -156,39 +247,74 @@ public class CXSerializer extends ObjectSerializer {
    * <p>See {@link ObjectSerializer#deserialize(File)} for a
    * description of this method's specification.</p>
    * @param inputFile {@inheritDoc}
-   * @throws FileNotFoundException  {@inheritDoc}
-   * @throws IOException            {@inheritDoc}
-   * @throws SerializationException {@inheritDoc}
+   * @throws SerializationException.FileNotFound {@inheritDoc}
+   * @throws SerializationException              {@inheritDoc}
+   * @throws InterruptedIOException              {@inheritDoc}
    */
   public Object deserialize(File inputFile)
-      throws FileNotFoundException, IOException, SerializationException {
-    BufferedReader reader = new BufferedReader(new FileReader(inputFile));
+      throws SerializationException,
+             InterruptedIOException {
+    // Open reader
+    BufferedReader reader = null;
+    try {
+      reader = new BufferedReader(new FileReader(inputFile));
+    }
+    catch (FileNotFoundException fnfe) {
+      throw new SerializationException.FileNotFound(fnfe);
+    }
+
+    // Local variables
     MutableBoolean wasCastor = new MutableBoolean(false);
-    boolean success = false;
     Object ret = null;
 
+    // Deserialize
     try {
       ret = deserialize(reader, wasCastor);
-      success = true;
-      return ret;
     }
     catch (SerializationException se) {
       throw failDeserialize(se, inputFile);
     }
+    catch (InterruptedIOException iioe) {
+      throw failDeserialize(iioe, inputFile);
+    }
     finally {
       IOUtil.safeClose(reader);
-      if (   getCurrentMode() == XSTREAM_OVERWRITE_MODE
-          && wasCastor.booleanValue()
-          && success) {
-        // Overwrite
+    }
+
+    // Overwrite
+    if (getCompatibilityMode() == XSTREAM_OVERWRITE_MODE && wasCastor.booleanValue()) {
+      boolean shouldThrow = CurrentConfig.getBooleanParam(PARAM_FAILED_OVERWRITE_THROWS,
+                                                          DEFAULT_FAILED_OVERWRITE_THROWS);
+      try {
         serialize(inputFile, ret);
       }
+      catch (SerializationException se) {
+        logger.debug("Overwrite failed", se);
+        if (shouldThrow) {
+          throw failDeserialize(se, inputFile);
+        }
+      }
+      catch (InterruptedIOException iioe) {
+        logger.debug("Overwrite interrupted", iioe);
+        if (shouldThrow) {
+          throw failDeserialize(iioe, inputFile);
+        }
+      }
+      catch (RuntimeException re) {
+        logger.debug("Overwrite caused runtime exception", re);
+        if (shouldThrow) {
+          throw re;
+        }
+      }
     }
+
+    return ret;
   }
 
   /* Inherit documentation */
   public Object deserialize(Reader reader)
-      throws IOException, SerializationException {
+      throws SerializationException,
+             InterruptedIOException {
     return deserialize(reader, new MutableBoolean(false));
   }
 
@@ -201,12 +327,14 @@ public class CXSerializer extends ObjectSerializer {
    *                  Castor format, false otherwise.
    * @return An Object reference whose field were populated from the
    *         data found in the XML file.
-   * @throws IOException            if input or output fails.
-   * @throws SerializationException if an internal serialization error
-   *                                occurs.
+   * @throws SerializationException   if input or output fails.
+   * @throws InterruptedIOException   if input or output is
+   *                                  interrupted.
    */
-  public Object deserialize(Reader reader, MutableBoolean wasCastor)
-      throws IOException, SerializationException {
+  public Object deserialize(Reader reader,
+                            MutableBoolean wasCastor)
+      throws SerializationException,
+             InterruptedIOException {
     // Constants
     final String recognizeCastor = "<?xml";
 
@@ -218,13 +346,13 @@ public class CXSerializer extends ObjectSerializer {
     try {
       bufReader.mark(recognizeCastor.length() + 1);
       if (StreamUtil.readChars(bufReader, buffer, buffer.length) != buffer.length) {
-        throw new SerializationException("Could not peek at first "
-                                         + buffer.length + " bytes");
+        throw failDeserialize(new SerializationException("Could not peek at first "
+                                                         + buffer.length + " bytes"));
       }
       bufReader.reset();
     }
     catch (IOException exc) {
-      failDeserialize(exc);
+      throw failDeserialize(exc);
     }
 
     // Guess format and deserialize
@@ -243,9 +371,10 @@ public class CXSerializer extends ObjectSerializer {
   /**
    * <p>Returns the current mode for this serializer.</p>
    * @return The current mode constant for this serializer.
+   * @see #PARAM_COMPATIBILITY_MODE
    */
-  public int getCurrentMode() {
-    return currentMode;
+  public int getCompatibilityMode() {
+    return compatibilityMode;
   }
 
   /**
@@ -254,28 +383,37 @@ public class CXSerializer extends ObjectSerializer {
    * {@link #XSTREAM_MODE} or {@link #XSTREAM_OVERWRITE_MODE}.
    * If the argument is not a valid mode, no action is taken.</p>
    * @param mode The mode to which this serializer should be set.
-   * @see #CASTOR_MODE
-   * @see #XSTREAM_MODE
-   * @see #XSTREAM_OVERWRITE_MODE
+   * @see #PARAM_COMPATIBILITY_MODE
    */
-  public void setCurrentMode(int mode) {
+  public void setCompatibilityMode(int mode) {
     switch (mode) {
-      case CASTOR_MODE: case XSTREAM_MODE: case XSTREAM_OVERWRITE_MODE:
-        this.currentMode = mode;
+      case CASTOR_MODE:
+      case XSTREAM_MODE:
+      case XSTREAM_OVERWRITE_MODE:
+        this.compatibilityMode = mode;
         break;
       default:
-        logger.error("Attempt to set CXSerializer mode to " + mode);
-        break; // ignore
+        String errorString = "Attempt to set CXSerializer mode to " + mode;
+        logger.error(errorString);
+        throw new IllegalArgumentException(errorString);
     }
   }
 
   /* Inherit documentation */
-  protected void serialize(Writer writer, Object obj)
-      throws IOException, SerializationException {
+  protected void serialize(Writer writer,
+                           Object obj)
+      throws SerializationException,
+             InterruptedIOException {
     throwIfNull(obj);
-    ObjectSerializer serializer;
-    if (getCurrentMode() == CASTOR_MODE) { serializer = castor; }
-    else                                 { serializer = xstream; }
+
+    ObjectSerializer serializer = null;
+    if (getCompatibilityMode() == CASTOR_MODE) {
+      serializer = castor;
+    }
+    else {
+      serializer = xstream;
+    }
+
     serializer.serialize(writer, obj);
   }
 
@@ -286,38 +424,44 @@ public class CXSerializer extends ObjectSerializer {
 
   /**
    * <p>A configuration parameter that governs the mode of operation
-   * of instances of this class. Must be one of:
+   * of instances of this class. Must be one of:</p>
    * <table>
-   * <thead>
-   * <tr>
-   * <td>Value</td>
-   * <td>Reference</td>
-   * <td>Description</td>
-   * </tr>
-   * </thead>
-   * <tbody>
-   * <tr>
-   * <td>1</td>
-   * <td>{@link #CASTOR_MODE}</td>
-   * <td>Always write output in Castor format.</td>
-   * </tr>
-   * <tr>
-   * <td>2</td>
-   * <td>{@link #XSTREAM_MODE}</td>
-   * <td>Always write output in XStream format.</td>
-   * </tr>
-   * <tr>
-   * <td>3</td>
-   * <td>{@link #XSTREAM_OVERWRITE_MODE}</td>
-   * <td>Always write output in XStream format, and overwrite any
-   * files read in Castor format by files in XStream format.</td>
-   * </tr>
-   * </tbody>
+   *  <thead>
+   *   <tr>
+   *    <td>Value</td>
+   *    <td>Reference</td>
+   *    <td>Description</td>
+   *   </tr>
+   *  </thead>
+   *  <tbody>
+   *   <tr>
+   *    <td>1</td>
+   *    <td>{@link #CASTOR_MODE}</td>
+   *    <td>Always write output in Castor format.</td>
+   *   </tr>
+   *   <tr>
+   *    <td>2</td>
+   *    <td>{@link #XSTREAM_MODE}</td>
+   *    <td>Always write output in XStream format.</td>
+   *   </tr>
+   *   <tr>
+   *    <td>3</td>
+   *    <td>{@link #XSTREAM_OVERWRITE_MODE}</td>
+   *    <td>Always write output in XStream format, and overwrite any
+   *    files read in Castor format by files in XStream format.</td>
+   *   </tr>
+   *  </tbody>
    * </table>
-   * </p>
    */
-  public static final String PARAM_COMPATIBILITY_MODE =
-    "org.lockss.serialization.compatibilityMode";
+  public static final String PARAM_COMPATIBILITY_MODE = PREFIX + "compatibilityMode";
+
+  /**
+   * <p>A parameter that controls if failure to overwrite a file
+   * while in XStream Overwrite mode causes the whole deserialization
+   * to fail by throwing (true) or to be logged without throwing
+   * (false).</p>
+   */
+  public static final String PARAM_FAILED_OVERWRITE_THROWS = PREFIX + "failedOverwriteThrows";
 
   /**
    * <p>Serialization always in XStream format.</p>
@@ -327,7 +471,7 @@ public class CXSerializer extends ObjectSerializer {
   /**
    * <p>Serialization always in XStream format; additionally, any
    * deserialization performed on a {@link File} or {@link String}
-   * (ie filename) also results in the corresponding file being
+   * (i.e. file name) also results in the corresponding file being
    * overwritten by one in XStream format if it is in Castor
    * format. (Does not work for other <code>deserialize</code>
    * calls.)</p>
@@ -343,11 +487,17 @@ public class CXSerializer extends ObjectSerializer {
   private static final int DEFAULT_COMPATIBILITY_MODE = XSTREAM_MODE;
 
   /**
+   * <p>The default value of {@link #PARAM_FAILED_OVERWRITE_THROWS}
+   * (currently true).</p>
+   */
+  public static final boolean DEFAULT_FAILED_OVERWRITE_THROWS = true;
+
+  /**
    * <p>Returns the mode for this class from the configuration.</p>
    * @return The mode constant currently in the configuration.
    * @see #PARAM_COMPATIBILITY_MODE
    */
-  public static int getModeFromConfiguration() {
+  public static int getCompatibilityModeFromConfiguration() {
     return CurrentConfig.getIntParam(PARAM_COMPATIBILITY_MODE,
                                      DEFAULT_COMPATIBILITY_MODE);
   }

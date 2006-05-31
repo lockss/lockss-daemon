@@ -1,5 +1,5 @@
 /*
- * $Id: CastorSerializer.java,v 1.8 2006-01-20 19:01:03 thib_gc Exp $
+ * $Id: CastorSerializer.java,v 1.9 2006-05-31 17:54:49 thib_gc Exp $
  */
 
 /*
@@ -119,11 +119,36 @@ public class CastorSerializer extends ObjectSerializer {
    *                      serializer.
    * @param targetClass   The Class of objects intended for processing
    *                      by this serializer.
+   * @see ObjectSerializer#ObjectSerializer(LockssApp)
    */
   public CastorSerializer(LockssApp lockssContext,
                           Mapping targetMapping,
                           Class targetClass) {
     super(lockssContext);
+    this.targetMapping = targetMapping;
+    this.targetClass = targetClass;
+  }
+
+  /**
+   * <p>Builds a new CastorSerializer instance.</p>
+   * @param lockssContext A serialization context object.
+   * @param targetMapping             The {@link Mapping} of objects
+   *                                  intended for processing by this
+   *                                  serializer.
+   * @param targetClass               The Class of objects intended
+   *                                  for processing by this serializer.
+   * @param saveTempFiles             A failed serialization mode.
+   * @param failedDeserializationMode A failed deserialization mode.
+   * @see ObjectSerializer#ObjectSerializer(LockssApp, boolean, int)
+   */
+  public CastorSerializer(LockssApp lockssContext,
+                          Mapping targetMapping,
+                          Class targetClass,
+                          boolean saveTempFiles,
+                          int failedDeserializationMode) {
+    super(lockssContext,
+          saveTempFiles,
+          failedDeserializationMode);
     this.targetMapping = targetMapping;
     this.targetClass = targetClass;
   }
@@ -141,23 +166,34 @@ public class CastorSerializer extends ObjectSerializer {
   public CastorSerializer(LockssApp lockssContext,
                           String mappingFilename,
                           Class targetClass) {
-    this(lockssContext, getMapping(mappingFilename), targetClass);
+    this(lockssContext,
+         getMapping(mappingFilename),
+         targetClass);
   }
 
   /**
    * <p>Builds a new CastorSerializer instance.</p>
-   * <p>Uses a null context.</p>
-   * @param targetMapping The
-   *                      {@link org.exolab.castor.mapping.Mapping}
-   *                      of objects intended for processing by this
-   *                      serializer.
-   * @param targetClass   The Class of objects intended for processing
-   *                      by this serializer.
-   * @see #CastorSerializer(LockssApp, Mapping, Class)
+   * @param lockssContext             A serialization context object.
+   * @param mappingFilename           A filename where the mapping
+   *                                  file for objects intended for
+   *                                  processing by this serializer
+   *                                  can be located.
+   * @param targetClass               The Class of objects intended for
+   *                                  processing by this serializer.
+   * @param saveTempFiles             A failed serialization mode.
+   * @param failedDeserializationMode A failed deserialization mode.
+   * @see #CastorSerializer(LockssApp, Mapping, Class, boolean, int)
    */
-  public CastorSerializer(Mapping targetMapping,
-                          Class targetClass) {
-    this(null, targetMapping, targetClass);
+  public CastorSerializer(LockssApp lockssContext,
+                          String mappingFilename,
+                          Class targetClass,
+                          boolean saveTempFiles,
+                          int failedDeserializationMode) {
+    this(lockssContext,
+         getMapping(mappingFilename),
+         targetClass,
+         saveTempFiles,
+         failedDeserializationMode);
   }
 
   /**
@@ -172,14 +208,40 @@ public class CastorSerializer extends ObjectSerializer {
    */
   public CastorSerializer(String mappingFilename,
                           Class targetClass) {
-    this(null, mappingFilename, targetClass);
+    this(null,
+         mappingFilename,
+         targetClass);
+  }
+
+  /**
+   * <p>Builds a new CastorSerializer instance.</p>
+   * <p>Uses a null context.</p>
+   * @param mappingFilename           A filename where the mapping
+   *                                  file for objects intended for
+   *                                  processing by this serializer
+   *                                  can be located.
+   * @param targetClass               The Class of objects intended for
+   *                                  processing by this serializer.
+   * @param saveTempFiles             A failed serialization mode.
+   * @param failedDeserializationMode A failed deserialization mode.
+   * @see #CastorSerializer(LockssApp, String, Class, boolean, int)
+   */
+  public CastorSerializer(String mappingFilename,
+                          Class targetClass,
+                          boolean saveTempFiles,
+                          int failedDeserializationMode) {
+    this(null,
+         mappingFilename,
+         targetClass,
+         saveTempFiles,
+         failedDeserializationMode);
   }
 
   /* Inherit documentation */
   public Object deserialize(Reader reader)
-      throws IOException, SerializationException {
-    Unmarshaller unmarshaller = new Unmarshaller(targetClass);
+      throws SerializationException, InterruptedIOException {
     try {
+      Unmarshaller unmarshaller = new Unmarshaller(targetClass);
       unmarshaller.setMapping(targetMapping);
       return unmarshaller.unmarshal(reader);
     }
@@ -187,10 +249,27 @@ public class CastorSerializer extends ObjectSerializer {
       throw failDeserialize(mappingEx);
     }
     catch (MarshalException marshalEx) {
-      throw failDeserialize(marshalEx);
+      Exception inner = marshalEx.getException();
+      if (inner != null && inner instanceof InterruptedIOException) {
+        throw failDeserialize(inner);
+      }
+      else {
+        throw failDeserialize(marshalEx);
+      }
     }
     catch (ValidationException ve) {
       throw failDeserialize(ve);
+    }
+    catch (RuntimeException re) {
+      /*
+       * This is a testing artifact. Castor does not throw a runtime
+       * exception whose cause is InterruptedIOException, but testing
+       * code does. Always rethrow; turn into an InterruptedIOException
+       * to satisfy testing code that the serializer is paying
+       * attention.
+       */
+      throwIfInterrupted(re);
+      throw re;
     }
   }
 
@@ -211,22 +290,43 @@ public class CastorSerializer extends ObjectSerializer {
   }
 
   /* Inherit documentation */
-  protected void serialize(Writer writer, Object obj)
-      throws IOException, SerializationException {
+  protected void serialize(Writer writer,
+                           Object obj)
+      throws SerializationException,
+             InterruptedIOException {
     throwIfNull(obj);
-    Marshaller marshaller = new Marshaller(writer);
+    String errorString = "Failed to serialize an object of type " + obj.getClass().getName();
+
     try {
+      Marshaller marshaller = new Marshaller(writer);
       marshaller.setMapping(targetMapping);
       marshaller.marshal(obj);
     }
-    catch (MappingException mappingE) {
-      throw failSerialize(mappingE, obj);
+    catch (IOException ioe) {
+      throw failSerialize(errorString,
+                         ioe,
+                         new SerializationException(errorString));
     }
-    catch (MarshalException marshalE) {
-      throw failSerialize(marshalE, obj);
+    catch (MappingException mappingEx) {
+      throw failSerialize(errorString,
+                          mappingEx,
+                          new SerializationException(errorString));
     }
-    catch (ValidationException validationE) {
-      throw failSerialize(validationE, obj);
+    catch (CastorException ce) {
+      throw failSerialize(errorString,
+                          ce,
+                          new SerializationException(errorString));
+    }
+    catch (RuntimeException re) {
+      /*
+       * This is a testing artifact. Castor does not throw a runtime
+       * exception whose cause is InterruptedIOException, but testing
+       * code does. Always rethrow; turn into an InterruptedIOException
+       * to satisfy testing code that the serializer is paying
+       * attention to InterruptedIOException.
+       */
+      throwIfInterrupted(re);
+      throw re;
     }
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestXStreamSerializer.java,v 1.12 2006-02-08 23:05:14 thib_gc Exp $
+ * $Id: TestXStreamSerializer.java,v 1.13 2006-05-31 17:54:50 thib_gc Exp $
  */
 
 /*
@@ -36,7 +36,8 @@ import java.io.*;
 import java.nio.CharBuffer;
 
 import org.lockss.app.LockssApp;
-import org.lockss.util.ObjectSerializer.SerializationException;
+import org.lockss.test.StringInputStream;
+import org.lockss.util.ObjectSerializerTester.DoRoundTrip;
 
 /**
  * <p>Tests the {@link org.lockss.util.XStreamSerializer} class.</p>
@@ -131,6 +132,11 @@ public class TestXStreamSerializer extends ObjectSerializerTester {
 
   }
 
+  /**
+   * <p>A specialized version of {@link ExtMapBean} whose instances
+   * require post-deserialization.</p>
+   * @author Thib Guicherd-Callin
+   */
   private static class PostUnmarshalExtMapBean
       extends ExtMapBean
       implements LockssSerializable {
@@ -147,6 +153,11 @@ public class TestXStreamSerializer extends ObjectSerializerTester {
 
   }
 
+  /**
+   * <p>A specialized version of {@link ExtMapBean} whose instances
+   * require post-deserialization resolving.</p>
+   * @author Thib Guicherd-Callin
+   */
   private static class PostUnmarshalResolveExtMapBean
       extends ExtMapBean
       implements LockssSerializable {
@@ -177,9 +188,7 @@ public class TestXStreamSerializer extends ObjectSerializerTester {
    * levels get called.</p>
    * @throws Exception if an unexpected or unhandled problem arises.
    */
-  public void testPostDeserialization_TortureTest()
-      throws Exception {
-
+  public void testPostDeserialization_TortureTest() throws Exception {
     // Set up object graph
     ClassD d1 = new ClassD();
     ClassD d2 = new ClassD();
@@ -191,106 +200,172 @@ public class TestXStreamSerializer extends ObjectSerializerTester {
     d3.first = d1; d3.second = d2;
     d4.first = d2; d4.second = d5;
     d5.first = d2; d5.second = d3;
+    final ClassD original = d1;
 
-    // Set up needed objects
-    ObjectSerializer serializer = new XStreamSerializer(null);
-    ObjectSerializer deserializer = new XStreamSerializer(null);
-    StringWriter writer = new StringWriter();
-    StringReader reader;
+    DoRoundTrip[] actions = getRoundTripActions(original);
 
-    // Round trip
-    serializer.serialize(writer, d1);
-    reader = new StringReader(writer.toString());
-    ClassD d = (ClassD)deserializer.deserialize(reader);
-
-    // Tests
-    d.detonate(); // aka d1
-    d.first.detonate(); // aka d2
-    d.first.first.detonate(); // aka d3
-    d.second.detonate(); // aka d4
-    d.second.second.detonate(); // aka d5
+    for (int action = 0 ; action < actions.length ; ++action) {
+      logger.debug("Begin with action " + action);
+      ObjectSerializer[] serializers = getObjectSerializers_ExtMapBean();
+      ObjectSerializer[] deserializers = getObjectSerializers_ExtMapBean();
+      for (int serializer = 0 ; serializer < serializers.length ; ++serializer) {
+        logger.debug("Begin with serializer/deserializer " + serializer);
+        actions[action].doRoundTrip(serializers[serializer],
+                                    deserializers[serializer]);
+        ClassD clone = (ClassD)actions[action].result;
+        clone.detonate(); // aka d1
+        clone.first.detonate(); // aka d2
+        clone.first.first.detonate(); // aka d3
+        clone.second.detonate(); // aka d4
+        clone.second.second.detonate(); // aka d5
+      }
+    }
   }
 
+  /**
+   * <p>Tests the behavior of the post-unmarshal mechanism.</p>
+   * @throws Exception if an unexpected or unhandled problem arises.
+   */
   public void testPostUnmarshal() throws Exception {
-    // Set up needed objects
-    ObjectSerializer serializer = makeObjectSerializer_ExtMapBean();
-    ObjectSerializer deserializer = makeObjectSerializer_ExtMapBean();
-    PostUnmarshalExtMapBean original = new PostUnmarshalExtMapBean();
+
+    // Make a sample object
+    final PostUnmarshalExtMapBean original = new PostUnmarshalExtMapBean();
     original.setMap(makeSample_TypedEntryMap().m_map);
-    PostUnmarshalExtMapBean clone;
-    StringWriter writer = new StringWriter();
-    StringReader reader;
 
-    // Round trip
-    serializer.serialize(writer, (LockssSerializable)original);
-    reader = new StringReader(writer.toString());
-    clone = (PostUnmarshalExtMapBean)deserializer.deserialize(reader);
+    // Define variant actions
+    DoRoundTrip[] actions = getRoundTripActions(original);
 
-    // Tests
-    assertEquals(original.getMap(), clone.getMap());
-    assertTrue("postUnmarshal was not invoked", clone.invoked);
+    // For each variant action...
+    for (int action = 0 ; action < actions.length ; ++action) {
+      logger.debug("Begin with action " + action);
+
+      // For each serializer/deserializer pair...
+      ObjectSerializer[] serializers = getObjectSerializers_ExtMapBean();
+      ObjectSerializer[] deserializers = getObjectSerializers_ExtMapBean();
+      for (int serializer = 0 ; serializer < serializers.length ; ++serializer) {
+        logger.debug("Begin with serializer/deserializer " + serializer);
+
+        // Perform variant action
+        actions[action].doRoundTrip(serializers[serializer],
+                                    deserializers[serializer]);
+
+        // Verify results
+        PostUnmarshalExtMapBean clone = (PostUnmarshalExtMapBean)actions[action].result;
+        assertEquals(original.getMap(), clone.getMap());
+        assertTrue("postUnmarshal was not invoked", clone.invoked);
+      }
+    }
   }
 
+  /**
+   * <p>Tests the behavior of the post-unmarshal resolving
+   * mechanism.</p>
+   * @throws Exception if an unexpected or unhandled problem arises.
+   */
   public void testPostUnmarshalResolve() throws Exception {
-    // Set up needed objects
-    ObjectSerializer serializer = makeObjectSerializer_ExtMapBean();
-    ObjectSerializer deserializer = makeObjectSerializer_ExtMapBean();
-    PostUnmarshalResolveExtMapBean original = new PostUnmarshalResolveExtMapBean();
+
+    // Make a sample object
+    final PostUnmarshalResolveExtMapBean original = new PostUnmarshalResolveExtMapBean();
     original.setMap(makeSample_TypedEntryMap().m_map);
-    PostUnmarshalResolveExtMapBean clone;
-    StringWriter writer = new StringWriter();
-    StringReader reader;
 
-    // Round trip
-    serializer.serialize(writer, (LockssSerializable)original);
-    reader = new StringReader(writer.toString());
-    clone = (PostUnmarshalResolveExtMapBean)deserializer.deserialize(reader);
+    // Define vairant actions
+    DoRoundTrip[] actions = getRoundTripActions(original);
 
-    // Tests
-    assertTrue("postUnmarshalResolve was not invoked", clone.invoked);
-    assertSame(
-        "The object substitution was not performed by postUnmarshalResolve",
-        PostUnmarshalResolveExtMapBean.singleton,
-        clone
-    );
+    // For each variant action...
+    for (int action = 0 ; action < actions.length ; ++action) {
+      logger.debug("Begin with action " + action);
+
+      // For each serializer/deserializer pair...
+      ObjectSerializer[] serializers = getObjectSerializers_ExtMapBean();
+      ObjectSerializer[] deserializers = getObjectSerializers_ExtMapBean();
+      for (int serializer = 0 ; serializer < serializers.length ; ++serializer) {
+        logger.debug("Begin with serializer/deserializer " + serializer);
+
+        // Perform variant action
+        actions[action].doRoundTrip(serializers[serializer],
+                                    deserializers[serializer]);
+
+        // Verify results
+        PostUnmarshalResolveExtMapBean clone = (PostUnmarshalResolveExtMapBean)actions[action].result;
+        assertTrue("postUnmarshalResolve was not invoked", clone.invoked);
+        assertSame("The object substitution was not performed by postUnmarshalResolve",
+                   PostUnmarshalResolveExtMapBean.singleton,
+                   clone);
+      }
+    }
   }
 
+  /**
+   * <p>Checks that {@link InstantiationError} are handled
+   * gracefully.</p>
+   * @throws Exception if an unexpected or unhandled problem arises.
+   */
   public void testSupportsInstantiationError() throws Exception {
-    /*
-     * begin LOCAL CLASS
-     * =================
-     */
-    class InstantiationErrorReader extends Reader {
-      private void die() { throw new InstantiationError(); }
-      public void close() { die(); }
-      public void mark(int i) { die(); }
-      public boolean markSupported() { die(); return false; }
-      public int read() { die(); return 0; }
-      public int read(char[] c, int i, int j) { die(); return 0; }
-      public int read(char[] c) { die(); return 0; }
-      public int read(CharBuffer c) { die(); return 0; }
-      public boolean ready() { die(); return false; }
-      public void reset() { die(); }
-      public long skip(long n) { die(); return 0L; }
-    }
-    /*
-     * end LOCAL CLASS
-     * ===============
-     */
 
-    XStreamSerializer deserializer = new XStreamSerializer();
-    Reader bomb = new InstantiationErrorReader();
-    try {
-      deserializer.deserialize(bomb);
-      fail("Should have thrown a SerializationException");
-    }
-    catch (SerializationException seIgnore) {
-      // all is well
+    // Define variant actions
+    DoSomething[] actions = new DoSomething[] {
+        // With a Reader
+        new DoSomething() {
+          public void doSomething(ObjectSerializer serializer) throws Exception {
+            serializer.deserialize(new StringReader("") {
+              public int read(char[] cbuf, int off, int len) throws IOException {
+                throw new InstantiationError();
+              }
+            });
+          }
+        },
+        // With an InputStream
+        new DoSomething() {
+          public void doSomething(ObjectSerializer serializer) throws Exception {
+            serializer.deserialize(new StringInputStream("") {
+              public int read(byte[] b, int off, int len) throws IOException {
+                throw new InstantiationError();
+              }
+            });
+          }
+        },
+    };
+
+    // For each variant action...
+    for (int action = 0 ; action < actions.length ; ++action) {
+      logger.debug("Begin with action " + action);
+
+      // For each type for deserializer...
+      ObjectSerializer[] deserializers = getObjectSerializers_ExtMapBean();
+      for (int deserializer = 0 ; deserializer < deserializers.length ; ++deserializer) {
+        logger.debug("Begin with deserializer " + deserializer);
+
+        try {
+          // Perform variant action
+          actions[action].doSomething(deserializers[deserializer]);
+        }
+        catch (SerializationException ignore) {
+          try {
+            Throwable thr = ignore.getCause().getCause();
+            if (thr instanceof InstantiationError) {
+              // expected; success
+            }
+            else {
+              throw ignore; // unexpected
+            }
+          }
+          catch (NullPointerException npe) {
+            throw ignore; // unexpected
+          }
+        }
+      }
     }
   }
 
-  protected ObjectSerializer makeObjectSerializer_ExtMapBean() {
-    return new XStreamSerializer();
+  /* Inherit documentation */
+  protected ObjectSerializer[] getObjectSerializers_ExtMapBean() {
+    return getMinimalObjectSerializers_ExtMapBean();
+  }
+
+  /* Inherit documentation */
+  protected ObjectSerializer makeObjectSerializer_ExtMapBean(boolean saveTempFiles,
+                                                             int failedDeserializationMode) {
+    return new XStreamSerializer(saveTempFiles, failedDeserializationMode);
   }
 
 }

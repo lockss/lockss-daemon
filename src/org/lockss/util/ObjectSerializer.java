@@ -1,5 +1,5 @@
 /*
- * $Id: ObjectSerializer.java,v 1.23 2006-04-28 17:51:01 thib_gc Exp $
+ * $Id: ObjectSerializer.java,v 1.24 2006-05-31 17:54:49 thib_gc Exp $
  */
 
 /*
@@ -35,351 +35,377 @@ package org.lockss.util;
 import java.io.*;
 
 import org.lockss.app.LockssApp;
-import org.lockss.config.CurrentConfig;
+import org.lockss.config.*;
+import org.lockss.util.SerializationException;
 
 /**
  * <p>Specifies an interface for serializers that marshal Java objects
  * to XML.</p>
+ * <p>By convention, subclasses throw either
+ * {@link SerializationException} or one of a set of distinguished
+ * exception classes. Currently these are:</p>
+ * <ul>
+ *  <li>{@link InterruptedIOException}</li>
+ * </ul>
  * <p>Unit tests for classes that extend this class must themselves
  * extend the abstract unit test for this class,
  * <code>org.lockss.util.ObjectSerializerTester</code>.</p>
  * @author Thib Guicherd-Callin
+ * @see SerializationException
  */
 public abstract class ObjectSerializer {
 
-  /**
-   * <p>The default value for {@link #PARAM_SAVE_FAILED_TEMPFILES}.</p>
-   */
-  public static final boolean DEFAULT_SAVE_FAILED_TEMPFILES = false;
+  protected interface TempFileFactory {
 
-  /**
-   * <p>Set true to keep temporary serialization files that either
-   * are not successfully written or cannot be renamed. Normally they
-   * are deleted.</p>
-   */
-  public static final String PARAM_SAVE_FAILED_TEMPFILES =
-    "org.lockss.serialization.saveFailedTempfiles";
-
-  /*
-   * begin PUBLIC STATIC INNER CLASS
-   * ===============================
-   */
-  /**
-   * <p>Denotes serious marshalling/unmarshalling error conditions
-   * caused by failures of the underlying serialization mechanism.</p>
-   * <p>Other well-known exception subclasses, such as
-   * {@link FileNotFoundException} or {@link IOException}, are thrown
-   * if they arise, as they better describe the problem they flag than
-   * this class. This exception is intended for unrecoverable internal
-   * error conditions that client code cannot easily have control over
-   * but should still reasonably expect.</p>
-   * @author Thib Guicherd-Callin
-   * @see Exception
-   */
-  public static class SerializationException extends Exception {
-
-    public SerializationException() {
-      super();
-    }
-
-    public SerializationException(String message) {
-      super(message);
-    }
-
-    public SerializationException(String message, Throwable cause) {
-      super(message, cause);
-    }
-
-    public SerializationException(Throwable cause) {
-      super(cause);
-    }
+    /**
+     * <p>Creates a temporary file.</p>
+     * @param prefix    A file name prefix.
+     * @param suffix    A file name suffix.
+     * @param directory A parent directory.
+     * @return          A new temporary file.
+     * @throws IOException as thrown by {@link File#createTempFile(String, String, File)}.
+     * @see File#createTempFile(String, String, File)
+     */
+    File createTempFile(String prefix,
+                        String suffix,
+                        File directory)
+        throws IOException;
 
   }
-  /*
-   * end PUBLIC STATIC INNER CLASS
-   * =============================
-   */
 
   /**
    * <p>Saved reference to a serialization context object.</p>
    */
-  private LockssApp lockssContext;
+  protected LockssApp lockssContext;
 
   /**
-   * <p>Builds a new ObjectSerializer instance.</p>
+   * <p>A temporary file factory.</p>
+   * @see ObjectSerializer.TempFileFactory
+   */
+  protected TempFileFactory tempFileFactory;
+
+  /**
+   * <p>Builds a new {@link ObjectSerializer} instance with the
+   * current default failed serialization and deserialization modes.
    * @param lockssContext A serialization context object.
+   * @see #PARAM_FAILED_DESERIALIZATION_MODE
+   * @see #PARAM_FAILED_SERIALIZATION_MODE
    */
   public ObjectSerializer(LockssApp lockssContext) {
+    this(lockssContext,
+         CurrentConfig.getBooleanParam(PARAM_FAILED_SERIALIZATION_MODE,
+                                       DEFAULT_FAILED_SERIALIZATION_MODE),
+         CurrentConfig.getIntParam(PARAM_FAILED_DESERIALIZATION_MODE,
+                                   DEFAULT_FAILED_DESERIALIZATION_MODE));
+  }
+
+  /**
+   * <p>Builds a new {@link ObjectSerializer} instance with the given
+   * failed deserialization mode.</p>
+   * @param lockssContext             A serialization context object.
+   * @param saveTempFiles             A failed serialization mode.
+   * @param failedDeserializationMode A failed deserialization mode.
+   * @see #PARAM_FAILED_DESERIALIZATION_MODE
+   */
+  public ObjectSerializer(LockssApp lockssContext,
+                          boolean saveTempFiles,
+                          int failedDeserializationMode) {
     this.lockssContext = lockssContext;
+    setFailedSerializationMode(saveTempFiles);
+    setFailedDeserializationMode(failedDeserializationMode);
+    this.tempFileFactory = new TempFileFactory() {
+      public File createTempFile(String prefix, String suffix, File directory) throws IOException {
+        return File.createTempFile(prefix, suffix, directory);
+      }
+    };
   }
 
   /**
    * <p>Convenience method to unmarshal a Java object from an XML file
-   * that accepts a File instead of a Reader.</p>
+   * that accepts a {@link File} instead of a {@link Reader}.</p>
    * <p>The result of deserializing an object with a file must be the
    * same as deserializing it with a {@link Reader} on the
-   * same file, in the sense of the {@link Object#equals} method.
+   * same file.
    * @param inputFile A File instance representing the XML file where
    *                  the object is serialized.
-   * @return An Object reference whose field were populated from the
-   *         data found in the XML file.
-   * @throws FileNotFoundException  if the given file is invalid.
-   * @throws IOException            if input or output fails.
-   * @throws SerializationException if an internal serialization error
-   *                                occurs.
+   * @return An {@link Object} reference whose fields were populated
+   *         from the data found in the XML file.
+   * @throws SerializationException.FileNotFound if the given file is
+   *                                             invalid.
+   * @throws SerializationException              if input or output
+   *                                             fails.
+   * @throws InterruptedIOException              if input or output is
+   *                                             interrupted.
    * @see #deserialize(InputStream)
    */
   public Object deserialize(File inputFile)
-      throws FileNotFoundException, IOException, SerializationException {
-    FileInputStream inStream = new FileInputStream(inputFile);
+      throws SerializationException.FileNotFound,
+             SerializationException,
+             InterruptedIOException {
+    FileInputStream inputStream = null;
     try {
-      return deserialize(inStream);
+      inputStream = new FileInputStream(inputFile);
+    }
+    catch (FileNotFoundException fnfe) {
+      String errorString = "File not found: " + inputFile;
+      logger.debug2(errorString);
+      throw new SerializationException.FileNotFound(errorString, fnfe);
+    }
+
+    try {
+      return deserialize(inputStream);
     }
     catch (SerializationException se) {
       throw failDeserialize(se, inputFile);
     }
+    catch (InterruptedIOException iioe) {
+      throw failDeserialize(iioe, inputFile);
+    }
     finally {
-      IOUtil.safeClose(inStream);
+      IOUtil.safeClose(inputStream);
     }
   }
 
   /**
    * <p>Convenience method to unmarshal a Java object from an XML file
-   * that accepts an InputStream instead of a Reader.</p>
+   * that accepts an {@link InputStream} instead of a
+   * {@link Reader}.</p>
    * <p>The result of deserializing an object with a stream must be
    * the same as deserializing it with a {@link Reader} on the
-   * same file, in the sense of the {@link Object#equals} method.
-   * @param inputStream An input stream instance from which the
+   * same file.
+   * @param inputStream An {@link InputStream} instance from which the
    *                    serialized object is to be read.
-   * @return An Object reference whose field were populated from the
-   *         data found in the XML file.
-   * @throws IOException            if input or output fails.
-   * @throws SerializationException if an internal serialization error
-   *                                occurs.
+   * @return An {@link Object} reference whose fields were populated
+   *         from the data found in the XML file.
+   * @throws SerializationException if input or output fails.
+   * @throws InterruptedIOException if input or output is
+   *                                interrupted.
    * @see #deserialize(Reader)
    */
   public Object deserialize(InputStream inputStream)
-      throws IOException, SerializationException {
-    BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream,
-                                                                     Constants.DEFAULT_ENCODING));
-    return deserialize(reader);
+      throws SerializationException,
+             InterruptedIOException {
+    BufferedReader reader = null;
+    try {
+      reader = new BufferedReader(new InputStreamReader(inputStream,
+                                                        Constants.DEFAULT_ENCODING));
+    }
+    catch (UnsupportedEncodingException shouldnt) {
+      logger.error("InputStreamReader did not accept " + Constants.DEFAULT_ENCODING,
+                   shouldnt);
+      throw new RuntimeException(shouldnt);
+    }
+
+    try {
+      return deserialize(reader);
+    }
+    finally {
+      IOUtil.safeClose(reader);
+    }
   }
 
   /**
    * <p>Unmarshals a Java object from an XML file through the given
-   * Reader argument.</p>
-   * @param reader A Reader instance ready to read the XML file where
-   *               the object is serialized.
-   * @return An Object reference whose field were populated from the
-   *         data found in the XML file.
-   * @throws IOException            if input or output fails.
-   * @throws SerializationException if an internal serialization error
-   *                                occurs.
+   * {@link Reader} argument.</p>
+   * @param reader A {@link Reader} instance ready to read the XML
+   *               file where the object is serialized.
+   * @return An {@link Object} reference whose fields were populated
+   *         from the data found in the XML file.
+   * @throws SerializationException   if input or output fails.
+   * @throws InterruptedIOException   if input or output is
+   *                                  interrupted.
    */
   public abstract Object deserialize(Reader reader)
-      throws IOException, SerializationException;
+      throws SerializationException,
+             InterruptedIOException;
 
   /**
    * <p>Convenience method to unmarshal a Java object from an XML file
-   * that accepts a filename instead of a Reader.</p>
+   * that accepts a filename instead of a {@link Reader}.</p>
    * <p>The result of deserializing an object with a filename must be
-   * the same as deserializing it with a {@link java.io.Reader} on the
-   * same filename, in the sense of the {@link Object#equals}
-   * method.
+   * the same as deserializing it with a {@link Reader} on the same
+   * filename.
    * @param inputFilename A filename representing the XML file where
    *                      the object is serialized.
-   * @return An Object reference whose field were populated from the
-   *         data found in the XML file.
-   * @throws FileNotFoundException  if the given filename is invalid.
-   * @throws IOException            if input or output fails.
-   * @throws SerializationException if an internal serialization error
-   *                                occurs.
+   * @return An {@link Object} reference whose field were populated
+   *         from the data found in the XML file.
+   * @throws SerializationException.FileNotFound if the given file is
+   *                                             invalid.
+   * @throws SerializationException              if input or output
+   *                                             fails.
+   * @throws InterruptedIOException              if input or output is
+   *                                             interrupted.
    * @see #deserialize(File)
    */
   public Object deserialize(String inputFilename)
-      throws IOException, SerializationException {
+      throws SerializationException.FileNotFound,
+             SerializationException,
+             InterruptedIOException {
     File inputFile = new File(inputFilename);
     return deserialize(inputFile);
   }
 
   /**
    * <p>Convenience method to marshal a Java object to an XML file
-   * that accepts a File instead of a Writer.</p>
+   * that accepts a {@link File} instead of a {@link Writer}.</p>
    * <p>The result of serializing an object with a file must be the
-   * same as serializing it with a {@link java.io.Writer} on the
-   * same file, in the sense of deserialization.</p>
-   * @param outputFile A File instance representing the file into
-   *                   which the object is being serialized.
-   * @param obj    An object to be serialized.
-   * @throws NullPointerException    if obj is null.
-   * @throws NotSerializableException if the object graph is not
-   *                                  serializable.
-   * @throws FileNotFoundException    if the given file is invalid.
-   * @throws IOException              if input or output fails.
-   * @throws SerializationException   if an internal serialization error
-   *                                  occurs.
+   * same as serializing it with a {@link Writer} on the same
+   * file.</p>
+   * @param outputFile A {@link File} instance representing the file
+   *                   into which the object is to be serialized.
+   * @param obj An object to be serialized.
+   * @throws NullPointerException   if obj is null.
+   * @throws SerializationException if input or output fails.
+   * @throws InterruptedIOException if input or output is
+   *                                interrupted.
    * @see #serialize(File, Object)
    */
-  public void serialize(File outputFile, LockssSerializable obj)
-      throws FileNotFoundException, IOException, SerializationException {
+  public void serialize(File outputFile,
+                        LockssSerializable obj)
+      throws SerializationException,
+             InterruptedIOException {
+    throwIfNull(obj);
     serialize(outputFile, (Object)obj);
   }
 
   /**
    * <p>Convenience method to marshal a Java object to an XML file
-   * that accepts a File instead of a Writer.</p>
+   * that accepts a {@link File} instead of a {@link Writer}.</p>
    * <p>The result of serializing an object with a file must be the
-   * same as serializing it with a {@link java.io.Writer} on the
-   * same file, in the sense of deserialization.</p>
-   * @param outputFile A File instance representing the file into
-   *                   which the object is being serialized.
-   * @param obj    An object to be serialized.
-   * @throws NullPointerException    if obj is null.
-   * @throws NotSerializableException if the object graph is not
-   *                                  serializable.
-   * @throws FileNotFoundException    if the given file is invalid.
-   * @throws IOException              if input or output fails.
-   * @throws SerializationException   if an internal serialization error
-   *                                  occurs.
+   * same as serializing it with a {@link Writer} on the same
+   * file.</p>
+   * @param outputFile A {@link File} instance representing the file
+   *                   into which the object is to be serialized.
+   * @param obj An object to be serialized.
+   * @throws NullPointerException   if obj is null.
+   * @throws SerializationException if input or output fails.
+   * @throws InterruptedIOException if input or output is
+   *                                interrupted.
    * @see #serialize(File, Object)
    */
-  public void serialize(File outputFile, Serializable obj)
-      throws FileNotFoundException, IOException, SerializationException {
+  public void serialize(File outputFile,
+                        Serializable obj)
+      throws SerializationException,
+             InterruptedIOException {
+    throwIfNull(obj);
     serialize(outputFile, (Object)obj);
   }
 
   /**
    * <p>Convenience method to marshal a Java object to an XML file
-   * that accepts an OutputStream instead of a Writer.</p>
-   * <p>The result of serializing an object with a file must be the
-   * same as serializing it with a {@link java.io.Writer} on the
-   * same file, in the sense of deserialization.</p>
-   * @param outputStream An output stream instance into which the
-   *                     object is being serialized.
-   * @param obj          An object to be serialized.
-   * @throws NullPointerException    if obj is null.
-   * @throws NotSerializableException if the object graph is not
-   *                                  serializable.
-   * @throws IOException              if input or output fails.
-   * @throws SerializationException   if an internal serialization error
-   *                                  occurs.
-   * @see #serialize(OutputStream, Object)
-   */
-  protected void serialize(OutputStream outputStream, LockssSerializable obj)
-      throws IOException, SerializationException {
-    serialize(outputStream, (Object)obj);
-  }
-
-  /**
-   * <p>Convenience method to marshal a Java object to an XML file
-   * that accepts an OutputStream instead of a Writer.</p>
-   * <p>The result of serializing an object with a file must be the
-   * same as serializing it with a {@link java.io.Writer} on the
-   * same file, in the sense of deserialization.</p>
-   * @param outputStream An output stream instance into which the
-   *                     object is being serialized.
-   * @param obj          An object to be serialized.
-   * @throws NullPointerException    if obj is null.
-   * @throws NotSerializableException if the object graph is not
-   *                                  serializable.
-   * @throws IOException              if input or output fails.
-   * @throws SerializationException   if an internal serialization error
-   *                                  occurs.
-   * @see #serialize(OutputStream, Object)
-   */
-  protected void serialize(OutputStream outputStream, Serializable obj)
-      throws IOException, SerializationException {
-    serialize(outputStream, (Object)obj);
-  }
-
-  /**
-   * <p>Convenience method to marshal a Java object to an XML file
-   * that accepts a file name instead of a Writer.</p>
+   * that accepts a file name instead of a {@link Writer}.</p>
    * <p>The result of serializing an object with a filename must be
-   * the same as serializing it with a {@link java.io.Writer} on
-   * the same filename, in the sense of deserialization.</p>
-   * @param outputFilename A file name representing the file into which
-   *                       the object is being serialized.
-   * @param obj            An object to be serialized.
-   * @throws NullPointerException    if obj is null.
-   * @throws NotSerializableException if the object graph is not
-   *                                  serializable.
-   * @throws FileNotFoundException    if the given file is invalid.
-   * @throws IOException              if input or output fails.
-   * @throws SerializationException   if an internal serialization error
-   *                                  occurs.
+   * the same as serializing it with a {@link Writer} on the same
+   * filename.</p>
+   * @param outputFilename A file name representing the file into
+   *                       which the object is to be serialized.
+   * @param obj An object to be serialized.
+   * @throws NullPointerException   if obj is null.
+   * @throws SerializationException if input or output fails.
+   * @throws InterruptedIOException if input or output is
+   *                                interrupted.
    * @see #serialize(String, Object)
    */
-  public void serialize(String outputFilename, LockssSerializable obj)
-      throws FileNotFoundException, IOException, SerializationException {
+  public void serialize(String outputFilename,
+                        LockssSerializable obj)
+      throws SerializationException,
+             InterruptedIOException {
+    throwIfNull(obj);
     serialize(outputFilename, (Object)obj);
   }
 
   /**
    * <p>Convenience method to marshal a Java object to an XML file
-   * that accepts a file name instead of a Writer.</p>
+   * that accepts a file name instead of a {@link Writer}.</p>
    * <p>The result of serializing an object with a filename must be
-   * the same as serializing it with a {@link java.io.Writer} on
-   * the same filename, in the sense of deserialization.</p>
-   * @param outputFilename A file name representing the file into which
-   *                       the object is being serialized.
-   * @param obj            An object to be serialized.
-   * @throws NullPointerException    if obj is null.
-   * @throws NotSerializableException if the object graph is not
-   *                                  serializable.
-   * @throws FileNotFoundException    if the given file is invalid.
-   * @throws IOException              if input or output fails.
-   * @throws SerializationException   if an internal serialization error
-   *                                  occurs.
+   * the same as serializing it with a {@link Writer} on the same
+   * filename.</p>
+   * @param outputFilename A file name representing the file into
+   *                       which the object is to be serialized.
+   * @param obj An object to be serialized.
+   * @throws NullPointerException   if obj is null.
+   * @throws SerializationException if input or output fails.
+   * @throws InterruptedIOException if input or output is
+   *                                interrupted.
    * @see #serialize(String, Object)
    */
-  public void serialize(String outputFilename, Serializable obj)
-      throws FileNotFoundException, IOException, SerializationException {
+  public void serialize(String outputFilename,
+                        Serializable obj)
+      throws SerializationException,
+             InterruptedIOException {
     serialize(outputFilename, (Object)obj);
+    throwIfNull(obj);
   }
 
   /**
-   * <p>Marshals a Java object to an XML file through the given
-   * Writer argument.</p>
-   * @param writer A Writer instance ready to write to the XML file
-   *               into which the object is being serialized.
-   * @param obj    An object to be serialized.
-   * @throws NullPointerException    if obj is null.
-   * @throws NotSerializableException if the object graph is not
-   *                                  serializable.
-   * @throws IOException              if input or output fails.
-   * @throws SerializationException   if an internal serialization error
-   *                                  occurs.
-   * @see #serialize(Writer, Object)
+   * <p>This serializer's failed serialization mode.</p>
+   * @see #PARAM_FAILED_SERIALIZATION_MODE
+   * @see #getFailedSerializationMode
+   * @see #setFailedSerializationMode
    */
-  protected void serialize(Writer writer, LockssSerializable obj)
-      throws IOException, SerializationException {
-    serialize(writer, (Object)obj);
+  protected boolean failedSerializationMode;
+
+  /**
+   * <p>Returns this instance's failed serialization mode.</p>
+   * @return The current failed serialization mode for this
+   *         instance.
+   * @see #PARAM_FAILED_SERIALIZATION_MODE
+   */
+  public boolean getFailedSerializationMode() {
+    return failedSerializationMode;
   }
 
   /**
-   * <p>Marshals a Java object to an XML file through the given
-   * Writer argument.</p>
-   * @param writer A Writer instance ready to write to the XML file
-   *               into which the object is being serialized.
-   * @param obj    An object to be serialized.
-   * @throws NullPointerException    if obj is null.
-   * @throws NotSerializableException if the object graph is not
-   *                                  serializable.
-   * @throws IOException              if input or output fails.
-   * @throws SerializationException   if an internal serialization error
-   *                                  occurs.
-   * @see #serialize(Writer, Object)
+   * <p>Sets the failed serialization mode for this instance.</p>
+   * @param saveTempFiles A failed serialization mode.
+   * @see #PARAM_FAILED_SERIALIZATION_MODE
    */
-  protected void serialize(Writer writer, Serializable obj)
-      throws IOException, SerializationException {
-    serialize(writer, (Object)obj);
+  public void setFailedSerializationMode(boolean saveTempFiles) {
+    failedSerializationMode = saveTempFiles;
   }
 
-  void maybeDelTempFile(File file) {
-    if (!CurrentConfig.getBooleanParam(PARAM_SAVE_FAILED_TEMPFILES,
-                                       DEFAULT_SAVE_FAILED_TEMPFILES)) {
-      logger.warning("Deleting unsuccessful serial file " + file);
+  /**
+   * <p>This serializer's current failed deserialization mode.</p>
+   * @see #PARAM_FAILED_DESERIALIZATION_MODE
+   * @see #getFailedDeserializationMode
+   * @see #setFailedDeserializationMode
+   */
+  protected int failedDeserializationMode;
+
+  /**
+   * <p>Returns this instance's failed deserialization mode.</p>
+   * @return The current failed deserialization mode for this
+   *         instance.
+   * @see #PARAM_FAILED_DESERIALIZATION_MODE
+   */
+  public int getFailedDeserializationMode() {
+    return failedDeserializationMode;
+  }
+
+  /**
+   * <p>Sets the failed deserialization mode for this instance.</p>
+   * @param mode A failed deserialization mode.
+   * @throws IllegalArgumentException if <code>mode</code> is not a
+   *                                  valid mode.
+   * @see #PARAM_FAILED_DESERIALIZATION_MODE
+   */
+  public void setFailedDeserializationMode(int mode) {
+    switch (mode) {
+      case FAILED_DESERIALIZATION_IGNORE:
+      case FAILED_DESERIALIZATION_RENAME:
+      case FAILED_DESERIALIZATION_COPY:
+        this.failedDeserializationMode = mode;
+        break;
+      default:
+        String errorString = "Attempt to set failed deserialization mode to " + mode;
+        logger.error(errorString);
+        throw new IllegalArgumentException(errorString);
+    }
+  }
+
+  protected void maybeDelTempFile(File file) {
+    if (!getFailedSerializationMode()) {
+      logger.warning("Deleting unsuccessful serialization file " + file);
       file.delete();
     }
   }
@@ -394,146 +420,409 @@ public abstract class ObjectSerializer {
 
   /**
    * <p>Convenience method to marshal a Java object to an XML file
-   * that accepts a File instead of a Writer.</p>
+   * that accepts a {@link File} instead of a {@link Writer}.</p>
    * <p>The result of serializing an object with a file must be the
-   * same as serializing it with a {@link java.io.Writer} on the
-   * same file, in the sense of deserialization.</p>
-   * @param outputFile A File instance representing the file into
-   *                   which the object is being serialized.
-   * @param obj    An object to be serialized.
-   * @throws NullPointerException    if obj is null.
-   * @throws NotSerializableException if the object graph is not
-   *                                  serializable.
-   * @throws FileNotFoundException    if the given file is invalid.
-   * @throws IOException              if input or output fails.
-   * @throws SerializationException   if an internal serialization error
-   *                                  occurs.
-   * @see #serialize(OutputStream, Object)
-   */
-  protected void serialize(File outputFile, Object obj)
-      throws FileNotFoundException, IOException, SerializationException {
-    File tempFile = File.createTempFile("tmp", ".xml", outputFile.getParentFile());
-    FileOutputStream outStream = new FileOutputStream(tempFile);
-
-    try {
-      serialize(outStream, obj);
-      outStream.close();
-      if (!tempFile.renameTo(outputFile)) {
-        // File renaming failed
-        String str = "Could not rename from " + tempFile.getAbsolutePath() + " to " + outputFile.getAbsolutePath();
-        logger.error(str);
-        throw new IOException(str);
-      }
-    }
-    catch (IOException exc) {
-      maybeDelTempFile(tempFile);
-      throw exc;
-    }
-    catch (SerializationException exc) {
-      maybeDelTempFile(tempFile);
-      throw exc;
-    }
-    catch (RuntimeException exc) {
-      maybeDelTempFile(tempFile);
-      throw exc;
-    }
-  }
-
-  /**
-   * <p>Convenience method to marshal a Java object to an XML file
-   * that accepts an OutputStream instead of a Writer.</p>
-   * <p>The result of serializing an object with a file must be the
-   * same as serializing it with a {@link java.io.Writer} on the
-   * same file, in the sense of deserialization.</p>
-   * @param outputStream An output stream instance into which the
-   *                     object is being serialized.
-   * @param obj          An object to be serialized.
-   * @throws NullPointerException    if obj is null.
-   * @throws NotSerializableException if the object graph is not
-   *                                  serializable.
-   * @throws IOException              if input or output fails.
-   * @throws SerializationException   if an internal serialization error
-   *                                  occurs.
-   * @see #serialize(Writer, Object)
-   */
-  protected void serialize(OutputStream outputStream, Object obj)
-      throws IOException, SerializationException {
-    BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(outputStream,
-                                                                      Constants.DEFAULT_ENCODING));
-    serialize(writer, obj);
-  }
-
-  /**
-   * <p>Convenience method to marshal a Java object to an XML file
-   * that accepts a file name instead of a Writer.</p>
-   * <p>The result of serializing an object with a filename must be
-   * the same as serializing it with a {@link java.io.Writer} on
-   * the same filename, in the sense of deserialization.</p>
-   * @param outputFilename A file name representing the file into which
-   *                       the object is being serialized.
-   * @param obj            An object to be serialized.
-   * @throws NullPointerException    if obj is null.
-   * @throws NotSerializableException if the object graph is not
-   *                                  serializable.
-   * @throws FileNotFoundException    if the given file is invalid.
-   * @throws IOException              if input or output fails.
-   * @throws SerializationException   if an internal serialization error
-   *                                  occurs.
+   * same as serializing it with a {@link Writer} on the same
+   * file.</p>
+   * @param outputFile A {@link File} instance representing the file
+   *                   into which the object is to be serialized.
+   * @param obj An object to be serialized.
+   * @throws NullPointerException   if obj is null.
+   * @throws SerializationException if input or output fails.
+   * @throws InterruptedIOException if input or output is
+   *                                interrupted.
    * @see #serialize(File, Object)
    */
-  protected void serialize(String outputFilename, Object obj)
-      throws FileNotFoundException, IOException, SerializationException {
+  protected void serialize(File outputFile,
+                           Object obj)
+      throws SerializationException,
+             InterruptedIOException {
+    // Bail if null
+    throwIfNull(obj);
+
+    // Create temporary file
+    File temporaryFile = null;
+    try {
+      temporaryFile = tempFileFactory.createTempFile(outputFile.getName(),
+                                                     CurrentConfig.getParam(PARAM_TEMPFILE_SERIALIZATION_EXTENSION,
+                                                                            DEFAULT_TEMPFILE_SERIALIZATION_EXTENSION),
+                                                     outputFile.getParentFile());
+    }
+    catch (IOException ioe) {
+      throw failSerialize("IOException while setting up temporary serialization file",
+                          ioe,
+                          new SerializationException(ioe));
+    }
+
+    // Create stream
+    FileOutputStream outputStream = null;
+    try {
+      outputStream = new FileOutputStream(temporaryFile);
+    }
+    catch (IOException ioe) {
+      throw failSerialize("IOException while setting up serialization stream",
+                          ioe,
+                          new SerializationException(ioe),
+                          temporaryFile);
+    }
+    catch (RuntimeException re) {
+      maybeDelTempFile(temporaryFile);
+      throw re;
+    }
+
+    // Serialize object
+    try {
+      serialize(outputStream, obj);
+    }
+    catch (InterruptedIOException iioe) {
+      IOUtil.safeClose(outputStream);
+      maybeDelTempFile(temporaryFile);
+      throwIfInterrupted(iioe);
+    }
+    catch (SerializationException se) {
+      IOUtil.safeClose(outputStream);
+      throw failSerialize("Failed to serialize an object of type " + obj.getClass().getName(),
+                          se,
+                          new SerializationException(se),
+                          temporaryFile);
+    }
+    catch (RuntimeException re) {
+      IOUtil.safeClose(outputStream);
+      maybeDelTempFile(temporaryFile);
+      throw re;
+    }
+
+    // Close stream
+    try {
+      outputStream.close();
+    }
+    catch (IOException ioe) {
+      throw failSerialize("Could not close " + temporaryFile,
+                          ioe,
+                          new SerializationException.CloseFailed(ioe),
+                          temporaryFile);
+    }
+    catch (RuntimeException re) {
+      maybeDelTempFile(temporaryFile);
+      throw re;
+    }
+
+    // Rename temporary file
+    if (!temporaryFile.renameTo(outputFile)) {
+      String errorString = "Could not rename from " + temporaryFile + " to " + outputFile;
+      throw failSerialize(errorString,
+                          null,
+                          new SerializationException.RenameFailed(errorString),
+                          temporaryFile);
+    }
+  }
+
+  /**
+   * <p>Convenience method to marshal a Java object to an XML file
+   * that accepts an {@link OutputStream} instead of a
+   * {@link Writer}.</p>
+   * <p>The result of serializing an object with a file must be the
+   * same as serializing it with a {@link Writer} on the same
+   * file.</p>
+   * @param outputStream An {@link OutputStream} instance into which
+   *                     the object is to be serialized.
+   * @param obj An object to be serialized.
+   * @throws NullPointerException   if obj is null.
+   * @throws SerializationException if input or output fails.
+   * @throws InterruptedIOException if input or output is
+   *                                interrupted.
+   * @see #serialize(OutputStream, Object)
+   */
+  protected void serialize(OutputStream outputStream,
+                           LockssSerializable obj)
+      throws SerializationException,
+             InterruptedIOException {
+    throwIfNull(obj);
+    serialize(outputStream, (Object)obj);
+  }
+
+  /**
+   * <p>Convenience method to marshal a Java object to an XML file
+   * that accepts an {@link OutputStream} instead of a
+   * {@link Writer}.</p>
+   * <p>The result of serializing an object with a file must be the
+   * same as serializing it with a {@link Writer} on the same
+   * file.</p>
+   * @param outputStream An {@link OutputStream} instance into which
+   *                     the object is to be serialized.
+   * @param obj An object to be serialized.
+   * @throws NullPointerException   if obj is null.
+   * @throws SerializationException if input or output fails.
+   * @throws InterruptedIOException if input or output is
+   *                                interrupted.
+   * @see #serialize(OutputStream, Object)
+   */
+  protected void serialize(OutputStream outputStream,
+                           Object obj)
+      throws SerializationException,
+             InterruptedIOException {
+    throwIfNull(obj);
+
+    BufferedWriter writer = null;
+    try {
+      writer = new BufferedWriter(new OutputStreamWriter(outputStream,
+                                                         Constants.DEFAULT_ENCODING));
+    }
+    catch (UnsupportedEncodingException shouldnt) {
+      logger.error("OutputStreamWriter did not accept " + Constants.DEFAULT_ENCODING,
+                   shouldnt);
+      throw new RuntimeException(shouldnt);
+    }
+
+    try {
+      serialize(writer, obj);
+    }
+    finally {
+      IOUtil.safeClose(writer);
+    }
+  }
+
+  /**
+   * <p>Convenience method to marshal a Java object to an XML file
+   * that accepts an {@link OutputStream} instead of a
+   * {@link Writer}.</p>
+   * <p>The result of serializing an object with a file must be the
+   * same as serializing it with a {@link Writer} on the same
+   * file.</p>
+   * @param outputStream An {@link OutputStream} instance into which
+   *                     the object is to be serialized.
+   * @param obj An object to be serialized.
+   * @throws NullPointerException   if obj is null.
+   * @throws SerializationException if input or output fails.
+   * @throws InterruptedIOException if input or output is
+   *                                interrupted.
+   * @see #serialize(OutputStream, Object)
+   */
+  protected void serialize(OutputStream outputStream,
+                           Serializable obj)
+      throws SerializationException,
+             InterruptedIOException {
+    throwIfNull(obj);
+    serialize(outputStream, (Object)obj);
+  }
+
+  /**
+   * <p>Convenience method to marshal a Java object to an XML file
+   * that accepts a file name instead of a {@link Writer}.</p>
+   * <p>The result of serializing an object with a filename must be
+   * the same as serializing it with a {@link Writer} on the same
+   * file name.</p>
+   * @param outputFilename A file name representing the file into
+   *                       which the object is to be serialized.
+   * @param obj An object to be serialized.
+   * @throws NullPointerException   if obj is null.
+   * @throws SerializationException if input or output fails.
+   * @throws InterruptedIOException if input or output is
+   *                                interrupted.
+   * @see #serialize(File, Object)
+   */
+  protected void serialize(String outputFilename,
+                           Object obj)
+      throws SerializationException,
+             InterruptedIOException {
     File outputFile = new File(outputFilename);
+    throwIfNull(obj);
     serialize(outputFile, obj);
   }
 
   /**
    * <p>Marshals a Java object to an XML file through the given
-   * Writer argument.</p>
+   * {@link Writer} argument.</p>
    * <p>This contract mandates that the entire object graph be
    * {@link Serializable} or {@link LockssSerializable} but it is
    * not always easy to enforce. If the object graph is not fully
-   * serializable, a {@link NotSerializableException} should be
-   * thrown by subclasses.</p>
-   * @param writer A Writer instance ready to write to the XML file
-   *               into which the object is being serialized.
+   * serializable, a
+   * {@link SerializationException.NotSerializableOrLockssSerializable}
+   * exception should be thrown by subclasses.</p>
+   * @param writer A {@link Writer} instance ready to write to the XML
+   *               file into which the object is to be serialized.
    * @param obj    An object to be serialized.
-   * @throws NullPointerException    if obj is null.
-   * @throws NotSerializableException if the object graph is not
-   *                                  serializable.
-   * @throws IOException              if input or output fails.
-   * @throws SerializationException   if an internal serialization error
-   *                                  occurs.
+   * @throws NullPointerException   if obj is null.
+   * @throws SerializationException if input or output fails.
+   * @throws InterruptedIOException if input or output is
+   *                                interrupted.
+   * @see #serialize(Writer, Object)
    */
-  protected abstract void serialize(Writer writer, Object obj)
-      throws IOException, SerializationException;
+  protected void serialize(Writer writer,
+                           LockssSerializable obj)
+      throws SerializationException,
+             InterruptedIOException {
+    throwIfNull(obj);
+    serialize(writer, (Object)obj);
+  }
 
   /**
-   * <p>A logger for use by this class and subclasses.</p>
+   * <p>Marshals a Java object to an XML file through the given
+   * {@link Writer} argument.</p>
+   * <p>This contract mandates that the entire object graph be
+   * {@link Serializable} or {@link LockssSerializable} but it is
+   * not always easy to enforce. If the object graph is not fully
+   * serializable, a
+   * {@link SerializationException.NotSerializableOrLockssSerializable}
+   * exception should be thrown by subclasses.</p>
+   * @param writer A {@link Writer} instance ready to write to the XML
+   *               file into which the object is to be serialized.
+   * @param obj    An object to be serialized.
+   * @throws NullPointerException   if obj is null.
+   * @throws SerializationException if input or output fails.
+   * @throws InterruptedIOException if input or output is
+   *                                interrupted.
+   * @see #serialize(Writer, Object)
+   */
+  protected abstract void serialize(Writer writer,
+                                    Object obj)
+      throws SerializationException,
+             InterruptedIOException;
+
+  /**
+   * <p>Marshals a Java object to an XML file through the given
+   * {@link Writer} argument.</p>
+   * <p>This contract mandates that the entire object graph be
+   * {@link Serializable} or {@link LockssSerializable} but it is
+   * not always easy to enforce. If the object graph is not fully
+   * serializable, a
+   * {@link SerializationException.NotSerializableOrLockssSerializable}
+   * exception should be thrown by subclasses.</p>
+   * @param writer A {@link Writer} instance ready to write to the XML
+   *               file into which the object is to be serialized.
+   * @param obj    An object to be serialized.
+   * @throws NullPointerException   if obj is null.
+   * @throws SerializationException if input or output fails.
+   * @throws InterruptedIOException if input or output is
+   *                                interrupted.
+   * @see #serialize(Writer, Object)
+   */
+  protected void serialize(Writer writer,
+                           Serializable obj)
+      throws SerializationException,
+             InterruptedIOException {
+    throwIfNull(obj);
+    serialize(writer, (Object)obj);
+  }
+
+  /**
+   * <p>A configuration prefix for serialization classes.</p>
+   */
+  public static final String PREFIX = Configuration.PREFIX + "serialization.";
+
+  /**
+   * <p>This mode controls what happens when a file being deserialized
+   * causes the deserialization to fail. It does not apply to
+   * deserialization at the {@link InputStream} or {@link Reader}
+   * level.</p>
+   * <p>The possible values are:</p>
+   * <dl>
+   *  <dt>{@link #FAILED_DESERIALIZATION_IGNORE}</dt>
+   *  <dd>Ignore, that is do not do anything specific to remember
+   *  the current state other than logging and throwing an
+   *  exception. (Not recommended.)</dd>
+   *  <dt>{@link #FAILED_DESERIALIZATION_RENAME}</dt>
+   *  <dd>Rename the faulty input file (in the same directory).</dd>
+   *  <dt>{@link #FAILED_DESERIALIZATION_COPY}</dt>
+   *  <dd>Copy the faulty input file (int the same directory).</dd>
+   * </dl>
+   * @see #FAILED_DESERIALIZATION_COPY
+   * @see #FAILED_DESERIALIZATION_IGNORE
+   * @see #FAILED_DESERIALIZATION_RENAME
+   * @see #getFailedDeserializationMode
+   * @see #setFailedDeserializationMode
+   */
+  public static final String PARAM_FAILED_DESERIALIZATION_MODE = PREFIX + "failedDeserializationMode";
+
+  /**
+   * <p>A value for {@link #PARAM_FAILED_DESERIALIZATION_MODE}.</p>
+   * @see #PARAM_FAILED_DESERIALIZATION_MODE
+   */
+  public static final int FAILED_DESERIALIZATION_COPY = 1;
+
+  /**
+   * <p>A value for {@link #PARAM_FAILED_DESERIALIZATION_MODE}.</p>
+   * @see #PARAM_FAILED_DESERIALIZATION_MODE
+   */
+  public static final int FAILED_DESERIALIZATION_IGNORE = 2;
+
+  /**
+   * <p>A value for {@link #PARAM_FAILED_DESERIALIZATION_MODE}.</p>
+   * @see #PARAM_FAILED_DESERIALIZATION_MODE
+   */
+  public static final int FAILED_DESERIALIZATION_RENAME = 3;
+
+  /**
+   * <p>The default value for
+   * {@link #PARAM_FAILED_DESERIALIZATION_MODE}.</p>
+   * @see #PARAM_FAILED_DESERIALIZATION_MODE
+   */
+  public static final int DEFAULT_FAILED_DESERIALIZATION_MODE = FAILED_DESERIALIZATION_RENAME;
+
+  /**
+   * <p>The extension appended to files being renamed when the failed
+   * deserialization mode is
+   * {@link #FAILED_DESERIALIZATION_RENAME}.</p>
+   * @see #PARAM_FAILED_DESERIALIZATION_MODE
+   */
+  public static final String PARAM_FAILED_DESERIALIZATION_EXTENSION = PREFIX + "failedDeserializationExtension";
+
+  /**
+   * <p>The default value for
+   * {@link #PARAM_FAILED_DESERIALIZATION_EXTENSION}.</p>
+   * @see #PARAM_FAILED_DESERIALIZATION_EXTENSION
+   */
+  public static final String DEFAULT_FAILED_DESERIALIZATION_EXTENSION = ".deser.old";
+
+  /**
+   * <p>The extension appended to files being renamed when
+   * {@link #PARAM_FAILED_SERIALIZATION_MODE} is true.</p>
+   * @see #PARAM_FAILED_SERIALIZATION_MODE
+   */
+  public static final String PARAM_TEMPFILE_SERIALIZATION_EXTENSION = PREFIX + "failedSerializationExtension";
+
+  /**
+   * <p>The default value for
+   * {@link #PARAM_TEMPFILE_SERIALIZATION_EXTENSION}.</p>
+   * @see #PARAM_TEMPFILE_SERIALIZATION_EXTENSION
+   */
+  public static final String DEFAULT_TEMPFILE_SERIALIZATION_EXTENSION = ".ser.tmp";
+
+  /**
+   * <p>Set true to keep temporary serialization files that either
+   * are not successfully written or cannot be renamed. Normally they
+   * are deleted.</p>
+   */
+  public static final String PARAM_FAILED_SERIALIZATION_MODE = PREFIX + "saveFailedTempSerializationFiles";
+
+  /**
+   * <p>The default value for {@link #PARAM_FAILED_SERIALIZATION_MODE}.</p>
+   */
+  public static final boolean DEFAULT_FAILED_SERIALIZATION_MODE = false;
+
+  /**
+   * <p>A logger for use by this serializer.</p>
    */
   protected static Logger logger = Logger.getLogger("ObjectSerializer");
 
   /**
    * <p>An exception message formatter used when deserialization
    * fails.</p>
-   * @param exc The exception thrown.
-   * @return A new {@link SerializationException}, or a new
-   *         {@link InterruptedIOException} if the argument is or
-   *         contains an {@link InterruptedIOException}.
+   * @param cause The exception thrown.
    */
-  protected static SerializationException failDeserialize(Exception exc)
+  protected SerializationException failDeserialize(Exception cause)
       throws InterruptedIOException {
+    // Throw InterruptedIOException if cause is InterruptedIOException
+    throwIfInterrupted(cause);
+
     StringBuffer buffer = new StringBuffer();
     buffer.append("Failed to deserialize an object (");
-    buffer.append(exc.getClass().getName());
-    buffer.append(").");
+    buffer.append(cause.getClass().getName());
+    buffer.append(")");
     String str = buffer.toString();
-    logger.debug2(str, exc);
+    logger.debug(str, cause);
 
-    // Throw InterruptedIOException if cause is InterruptedIOException
-    throwIfInterrupted(exc);
-    // Otherwise, return new SerializationException
-    return new SerializationException(str, exc);
+    return new SerializationException(str, cause);
   }
 
   /**
@@ -541,60 +830,112 @@ public abstract class ObjectSerializer {
    * fails and the original file is known.</p>
    * @param exc  The exception thrown.
    * @param file The file that was being read.
-   * @return A new {@link SerializationException}, or a new
-   *         {@link InterruptedIOException} if the argument is or
-   *         contains an {@link InterruptedIOException}.
    */
-  protected static SerializationException failDeserialize(Exception exc,
-                                                          File file)
+  protected SerializationException failDeserialize(Exception exc,
+                                                   File file)
       throws InterruptedIOException {
-    StringBuffer buffer = new StringBuffer();
-    buffer.append("Failed to deserialize an object from ");
-    buffer.append(file.getAbsolutePath());
-    buffer.append(" (");
-    buffer.append(exc.getClass().getName());
-    buffer.append(").");
-    String str = buffer.toString();
-    logger.debug(str, exc);
-
     // Throw InterruptedIOException if cause is InterruptedIOException
     throwIfInterrupted(exc);
-    // Otherwise, return new SerializationException
-    return new SerializationException(str, exc);
-  }
 
-  /**
-   * <p>An exception message formatter used when serialization
-   * fails.</p>
-   * @param exc The exception thrown.
-   * @param obj The object being serialized.
-   * @return A new {@link SerializationException}, or a new
-   *         {@link InterruptedIOException} if the argument is or
-   *         contains an {@link InterruptedIOException}.
-   */
-  protected static SerializationException failSerialize(Exception exc,
-                                                        Object obj)
-      throws InterruptedIOException {
     StringBuffer buffer = new StringBuffer();
-    buffer.append("Failed to serialize ");
-    buffer.append(obj.toString());
+    buffer.append("Failed to deserialize an object from ");
+    buffer.append(file);
     buffer.append(" (");
     buffer.append(exc.getClass().getName());
-    buffer.append(").");
+    buffer.append("); the file ");
+
+    // Take action
+    switch (getFailedDeserializationMode()) {
+
+      // Ignore
+      case FAILED_DESERIALIZATION_IGNORE:
+        buffer.append(" was left alone");
+        break;
+
+      // Rename
+      case FAILED_DESERIALIZATION_RENAME:
+        String renamed = file + CurrentConfig.getParam(PARAM_FAILED_DESERIALIZATION_EXTENSION,
+                                                       DEFAULT_FAILED_DESERIALIZATION_EXTENSION);
+        boolean success = file.renameTo(new File(renamed));
+        if (success) {
+          // Rename succeeded
+          buffer.append(" was renamed ");
+          buffer.append(renamed);
+        }
+        else {
+          // Rename failed
+          logger.error("Failed to rename from " + file + " to " + renamed);
+          buffer.append(" could not be renamed ");
+          buffer.append(renamed);
+          return new SerializationException.RenameFailed(buffer.toString(), exc);
+        }
+        break;
+
+      // Copy
+      case FAILED_DESERIALIZATION_COPY:
+        String copied = file
+                        + CurrentConfig.getParam(PARAM_FAILED_DESERIALIZATION_EXTENSION,
+                                                 DEFAULT_FAILED_DESERIALIZATION_EXTENSION)
+                        + "."
+                        + Long.toString(System.currentTimeMillis());
+        try {
+          InputStream inputStream = new FileInputStream(file);
+          OutputStream outputStream = new FileOutputStream(copied);
+          StreamUtil.copy(inputStream, outputStream);
+          IOUtil.safeClose(inputStream);
+          outputStream.close();
+          // Copy succeeded
+          buffer.append(" was copied to ");
+          buffer.append(copied);
+        }
+        catch (IOException ioe) {
+          // Copy failed
+          logger.error("Failed to copy from " + file + " to " + copied);
+          buffer.append(" could not be copied to ");
+          buffer.append(copied);
+          return new SerializationException.CopyFailed(buffer.toString(), exc);
+        }
+        break;
+
+      // Safety net
+      default:
+        logger.error("Invalid failed deserialization mode: " + getFailedDeserializationMode());
+        buffer.append(" invalid failed deserialization mode: " + getFailedDeserializationMode());
+        break;
+    }
+
+    // Log and return a new SerializationException
     String str = buffer.toString();
     logger.debug(str, exc);
-    throwIfInterrupted(exc);
     return new SerializationException(str, exc);
   }
 
+  protected SerializationException failSerialize(String errorString,
+                                                 Exception cause,
+                                                 SerializationException consequence,
+                                                 File temporaryFile)
+      throws InterruptedIOException {
+    maybeDelTempFile(temporaryFile);
+    return failSerialize(errorString, cause, consequence);
+  }
+
+  protected SerializationException failSerialize(String errorString,
+                                                 Exception cause,
+                                                 SerializationException consequence)
+      throws InterruptedIOException {
+    throwIfInterrupted(cause);
+    logger.error(errorString, cause);
+    return consequence;
+  }
+
   /**
-   * <p>Throws a {@link RuntimeException} if the argument is or has
-   * a nested {@link InterruptedIOException}.</p>
+   * <p>Throws an {@link InterruptedIOException} if the argument is or
+   * has a nested {@link InterruptedIOException}.</p>
    * @param exc The exception thrown.
    * @throws InterruptedIOException if <code>exc</code> is or has a
    * nested {@link InterruptedIOException}.
    */
-  protected static void throwIfInterrupted(Exception exc)
+  protected void throwIfInterrupted(Exception exc)
       throws InterruptedIOException {
     for (Throwable cause = exc ; cause != null ; cause = cause.getCause()) {
       if (cause instanceof InterruptedIOException) {
@@ -612,7 +953,7 @@ public abstract class ObjectSerializer {
    * @param obj Any object reference.
    * @throws NullPointerException if <code>obj</code> is <code>null</code>.
    */
-  protected static void throwIfNull(Object obj) {
+  protected void throwIfNull(Object obj) {
     if (obj == null) {
       logger.debug("Attempting to serialize null");
       throw new NullPointerException();

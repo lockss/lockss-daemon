@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.67 2006-04-05 21:09:14 thib_gc Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.68 2006-05-31 17:54:50 thib_gc Exp $
  */
 
 /*
@@ -48,7 +48,6 @@ import org.lockss.protocol.IdentityManager;
 import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.repository.LockssRepository.RepositoryStateException;
 import org.lockss.util.*;
-import org.lockss.util.ObjectSerializer.SerializationException;
 
 /**
  * HistoryRepository is an inner layer of the NodeManager which handles the
@@ -165,17 +164,17 @@ public class HistoryRepositoryImpl
                          auState.getCrawlUrls(),
                          this);
     }
-    catch (FileNotFoundException fnfe) {
-      logger.debug2(errorString, fnfe);
+    catch (SerializationException.FileNotFound fnf) {
+      logger.debug2(errorString, fnf);
       // drop down to return default
     }
     catch (SerializationException se) {
       logger.error(errorString, se);
       // drop down to return default
     }
-    catch (Exception exc) {
-      logger.error(errorString, exc);
-      throw new RepositoryStateException(errorString, exc);
+    catch (InterruptedIOException iioe) {
+      logger.error(errorString, iioe);
+      throw new RepositoryStateException(errorString, iioe);
     }
 
     // Default: return default
@@ -215,7 +214,7 @@ public class HistoryRepositoryImpl
       damNodes.repository = this;
       return damNodes;
     }
-    catch (FileNotFoundException fnfe) {
+    catch (SerializationException.FileNotFound fnf) {
       logger.debug2("No damaged node file for AU '" + storedAu.getName() + "'");
       // drop down to return empty set
     }
@@ -223,7 +222,7 @@ public class HistoryRepositoryImpl
       logger.error(errorString, se);
       // drop down to return empty set
     }
-    catch (Exception exc) {
+    catch (InterruptedIOException exc) {
       logger.error(errorString, exc);
       throw new RepositoryStateException(errorString, exc);
     }
@@ -259,7 +258,7 @@ public class HistoryRepositoryImpl
       // CASTOR: remove unwrap() when Castor is phased out
       return (List)unwrap(deserializer.deserialize(idFile));
     }
-    catch (FileNotFoundException fnfe) {
+    catch (SerializationException.FileNotFound fnf) {
       logger.debug2("No identities file for AU '" + storedAu.getName() + "'");
       // drop down to return empty list
     }
@@ -267,7 +266,7 @@ public class HistoryRepositoryImpl
       logger.error(errorString, se);
       // drop down to return empty list
     }
-    catch (Exception exc) {
+    catch (InterruptedIOException exc) {
       logger.error(errorString, exc);
       throw new RepositoryStateException(errorString, exc);
     }
@@ -303,9 +302,10 @@ public class HistoryRepositoryImpl
     logger.debug3("Loading state for CUS '" + cus.getUrl() + "'");
     String errorString = "Could not load node state for CUS '" + cus.getUrl() + "'";
 
+    File file = null;
     try {
       // Can throw MalformedURLException
-      File file = new File(getNodeLocation(cus), NODE_FILE_NAME);
+      file = new File(getNodeLocation(cus), NODE_FILE_NAME);
 
       // CASTOR: remove unwrap() when Castor is phased out
       NodeStateImpl nodeState = (NodeStateImpl)unwrap(deserializer.deserialize(file),
@@ -317,7 +317,7 @@ public class HistoryRepositoryImpl
       // nodeState.repository = this;
       return nodeState;
     }
-    catch (FileNotFoundException fnfe) {
+    catch (SerializationException.FileNotFound fnf) {
       logger.debug3("No node state file for node '" + cus.getUrl() + "'");
       // drop down to return default value
     }
@@ -325,7 +325,8 @@ public class HistoryRepositoryImpl
       logger.error(errorString, se);
       // drop down to return default value
     }
-    catch (Exception exc) {
+    catch (IOException exc) {
+      // IOException = InterruptedIOException + MalformedURLException
       logger.error(errorString, exc);
       throw new RepositoryStateException(errorString, exc);
     }
@@ -393,21 +394,16 @@ public class HistoryRepositoryImpl
         return;
       }
     }
-    catch (FileNotFoundException fnfe) {
+    catch (SerializationException.FileNotFound fnf) {
       logger.debug2("No histories to load for CUS '" + cus.getUrl() + "'");
       // drop down to the default setter
     }
     catch (SerializationException se) {
       logger.error(errorString, se);
-      // rename file and drop down to default setter
-      nodeFile.renameTo(new File(nodeFile.getAbsolutePath()+".old"));
+      // drop down to the default setter
     }
-    catch (IOException ioe) {
-      logger.error(errorString, ioe);
-      // rename file and drop down to default setter
-      nodeFile.renameTo(new File(nodeFile.getAbsolutePath()+".old"));
-    }
-    catch (Exception exc) {
+    catch (IOException exc) {
+      // IOException = InterruptedIOException + MalformedURLException
       logger.error(errorString, exc);
       throw new RepositoryStateException(errorString, exc);
     }
@@ -767,9 +763,9 @@ public class HistoryRepositoryImpl
    * <p>Retrieves the current serialization mode.</p>
    * @return A mode constant from {@link CXSerializer}.
    */
-  private static int getSerializationMode() {
+  protected static int getCompatibilityMode() {
     // CASTOR: Phase out with Castor
-    return CXSerializer.getModeFromConfiguration();
+    return CXSerializer.getCompatibilityModeFromConfiguration();
   }
 
   /**
@@ -779,15 +775,15 @@ public class HistoryRepositoryImpl
    *         configured to run in Castor mode.
    * @see CXSerializer#CASTOR_MODE
    */
-  private static boolean isCastorMode() {
-    return getSerializationMode() == CXSerializer.CASTOR_MODE;
+  protected static boolean isCastorMode() {
+    return getCompatibilityMode() == CXSerializer.CASTOR_MODE;
   }
 
   /**
    * <p>Builds a new serializer for AU state.</p>
    * @return A serializer for AU state.
    */
-  private ObjectSerializer makeAuStateSerializer() {
+  protected ObjectSerializer makeAuStateSerializer() {
     // CASTOR: Phase out with Castor
     return makeObjectSerializer(AuStateBean.class);
   }
@@ -796,7 +792,7 @@ public class HistoryRepositoryImpl
    * <p>Builds a new serializer for damaged node sets.</p>
    * @return A serializer for damaged node sets.
    */
-  private ObjectSerializer makeDamagedNodeSetSerializer() {
+  protected ObjectSerializer makeDamagedNodeSetSerializer() {
     // CASTOR: Phase out with Castor
     return makeObjectSerializer(DamagedNodeSet.class);
   }
@@ -805,7 +801,7 @@ public class HistoryRepositoryImpl
    * <p>Builds a new serializer for identity agreement lists.</p>
    * @return A serializer for identity agreement lists..
    */
-  private ObjectSerializer makeIdentityAgreementListSerializer() {
+  protected ObjectSerializer makeIdentityAgreementListSerializer() {
     // CASTOR: Phase out with Castor
     return makeObjectSerializer(IdentityAgreementList.class);
   }
@@ -814,7 +810,7 @@ public class HistoryRepositoryImpl
    * <p>Builds a new serializer for poll histories.</p>
    * @return A serializer for poll histories.
    */
-  private ObjectSerializer makeNodeStateSerializer() {
+  protected ObjectSerializer makeNodeStateSerializer() {
     // CASTOR: Phase out with Castor
     return makeObjectSerializer(NodeStateBean.class);
   }
@@ -827,11 +823,13 @@ public class HistoryRepositoryImpl
    * @return A new object serializer ready to process objects of type
    *         <code>cla</code>.
    */
-  private ObjectSerializer makeObjectSerializer(Class cla) {
+  protected ObjectSerializer makeObjectSerializer(Class cla) {
     // CASTOR: Remove parameter; return an XStreamSerializer
-    CXSerializer serializer =
-      new CXSerializer(theDaemon, CastorSerializer.getMapping(MAPPING_FILES), cla);
-    serializer.setCurrentMode(getSerializationMode());
+    CXSerializer serializer = new CXSerializer(theDaemon,
+                                               CastorSerializer.getMapping(MAPPING_FILES),
+                                               cla);
+    serializer.setFailedDeserializationMode(CXSerializer.FAILED_DESERIALIZATION_RENAME);
+    serializer.setCompatibilityMode(getCompatibilityMode());
     return serializer;
   }
 
@@ -839,7 +837,7 @@ public class HistoryRepositoryImpl
    * <p>Builds a new serializer for poll histories.</p>
    * @return A serializer for poll histories.
    */
-  private ObjectSerializer makePollHistoriesSerializer() {
+  protected ObjectSerializer makePollHistoriesSerializer() {
     // CASTOR: Phase out with Castor
     return makeObjectSerializer(NodeHistoryBean.class);
   }

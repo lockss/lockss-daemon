@@ -1,5 +1,5 @@
 /*
- * $Id: AlertManagerImpl.java,v 1.16 2005-10-11 05:41:07 tlipkis Exp $
+ * $Id: AlertManagerImpl.java,v 1.17 2006-05-31 17:54:50 thib_gc Exp $
  *
 
  Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
@@ -38,7 +38,6 @@ import org.lockss.app.ConfigurableManager;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.util.*;
-import org.lockss.util.ObjectSerializer.SerializationException;
 
 /**
  * <p>Matches alerts against configured filters and invokes the

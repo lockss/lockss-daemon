@@ -1,5 +1,5 @@
 /*
- * $Id: TestCastorSerializer.java,v 1.5 2006-04-07 00:16:13 thib_gc Exp $
+ * $Id: TestCastorSerializer.java,v 1.6 2006-05-31 17:54:50 thib_gc Exp $
  */
 
 /*
@@ -32,25 +32,25 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util;
 
+/**
+ * <p>Tests {@link CastorSerializer} instances.</p>
+ * @author Thib Guicherd-Callin
+ */
 public class TestCastorSerializer extends ObjectSerializerTester {
 
-  protected ObjectSerializer makeObjectSerializer_ExtMapBean() {
-    return new CastorSerializer(
-        null, ExternalizableMap.MAPPING_FILE_NAME, ExtMapBean.class);
+  /* Inherit documentation */
+  protected ObjectSerializer[] getObjectSerializers_ExtMapBean() {
+    return getMinimalObjectSerializers_ExtMapBean();
   }
 
-  public void testInterruptedIOExceptionThrown() throws Exception {
-    /*
-     * Castor hides the InterruptedIOException (it is not in the
-     * chain of Throwable causes). This test will never work for
-     * Castor.
-     *
-     * The way the test code is written in the parent method makes it
-     * possible for the test to succeed in CXSerializer. This is
-     * because the artificially thrown InterruptedIOException is
-     * caught before the delegated call to CastorSerializer, so the
-     * intended behavior is produced.
-     */
+  /* Inherit documentation */
+  protected ObjectSerializer makeObjectSerializer_ExtMapBean(boolean saveTempFiles,
+                                                             int failedDeserializationMode) {
+    return new CastorSerializer(null,
+                                ExternalizableMap.MAPPING_FILE_NAME,
+                                ExtMapBean.class,
+                                saveTempFiles,
+                                failedDeserializationMode);
   }
 
 }

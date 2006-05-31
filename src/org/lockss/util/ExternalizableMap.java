@@ -1,5 +1,5 @@
 /*
- * $Id: ExternalizableMap.java,v 1.17 2005-10-11 05:48:30 tlipkis Exp $
+ * $Id: ExternalizableMap.java,v 1.18 2006-05-31 17:54:49 thib_gc Exp $
  */
 
 /*
@@ -235,7 +235,7 @@ public class ExternalizableMap extends TypedEntryMap {
    * @return A mode constant from {@link CXSerializer}.
    */
   private static int getSerializationMode() {
-    return CXSerializer.getModeFromConfiguration();
+    return CXSerializer.getCompatibilityModeFromConfiguration();
   }
 
   /**
@@ -248,7 +248,7 @@ public class ExternalizableMap extends TypedEntryMap {
     // CASTOR: Change to returning an XStreamSerializer
     CXSerializer serializer =
       new CXSerializer(MAPPING_FILE_NAME, ExtMapBean.class);
-    serializer.setCurrentMode(getSerializationMode());
+    serializer.setCompatibilityMode(getSerializationMode());
     return serializer;
   }
 

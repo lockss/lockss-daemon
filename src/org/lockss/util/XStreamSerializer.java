@@ -1,5 +1,5 @@
 /*
- * $Id: XStreamSerializer.java,v 1.18 2006-04-22 18:30:42 thib_gc Exp $
+ * $Id: XStreamSerializer.java,v 1.19 2006-05-31 17:54:49 thib_gc Exp $
  */
 
 /*
@@ -34,13 +34,16 @@ package org.lockss.util;
 
 import java.io.*;
 import java.lang.reflect.Method;
-import java.util.HashMap;
+import java.text.ParseException;
+import java.util.*;
 
 import org.lockss.app.LockssApp;
+import org.lockss.util.SerializationException;
 
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.alias.*;
 import com.thoughtworks.xstream.converters.*;
+import com.thoughtworks.xstream.converters.basic.*;
 import com.thoughtworks.xstream.core.*;
 import com.thoughtworks.xstream.io.*;
 import com.thoughtworks.xstream.io.xml.DomDriver;
@@ -81,6 +84,53 @@ public class XStreamSerializer extends ObjectSerializer {
    * implementations of serialization. Before ObjectSerializer existed
    * there was Castor-aware code in several data structures that just
    * had no business knowing about XML mappings.)
+   */
+
+  /*
+   * begin PRIVATE STATIC INNER CLASS
+   * ================================
+   */
+  /**
+   * <p>A replacement for XStream's
+   * {@link com.thoughtworks.xstream.converters.basic.DateConverter}
+   * which uses 'z' for the time zone instead of 'Z'.</p>
+   * <p>The problematic discrepancies between 'z' and 'Z' were the
+   * subject of Java Bug Report #709654.</p>
+   * @author Thib Guicherd-Callin
+   * @see com.thoughtworks.xstream.converters.basic.DateConverter
+   * @see com.thoughtworks.xstream.converters.basic.ThreadSafeSimpleDateFormat
+   */
+  private static class LockssDateConverter implements Converter {
+
+    protected static final ThreadSafeSimpleDateFormat formatter = new ThreadSafeSimpleDateFormat("yyyy-MM-dd HH:mm:ss.S Z",
+                                                                                                 4,
+                                                                                                 20);
+
+    public boolean canConvert(Class type) {
+      return type.equals(Date.class);
+    }
+
+    public void marshal(Object obj,
+                        HierarchicalStreamWriter writer,
+                        MarshallingContext context) {
+      writer.setValue(formatter.format((Date)obj));
+    }
+
+    public Object unmarshal(HierarchicalStreamReader reader,
+                            UnmarshallingContext context) {
+      String value = reader.getValue();
+      try {
+        return formatter.parse(value);
+      }
+      catch (ParseException pe) {
+        throw new ConversionException("Cannot parse date: " + value);
+      }
+    }
+
+  }
+  /*
+   * end PRIVATE STATIC INNER CLASS
+   * ==============================
    */
 
   /*
@@ -501,21 +551,23 @@ public class XStreamSerializer extends ObjectSerializer {
   private XStream xs;
 
   /**
-   * <p>Builds a new XStreamSerializer instance.</p>
+   * <p>Builds a new XStreamSerializer instance with a null context.</p>
    * <p>It is safe to use the same XStreamSerializer instance for
    * multiple unrelated marshalling and unmarshalling operations.</p>
-   * <p>Uses a null context.</p>
-   * @see #XStreamSerializer(org.lockss.app.LockssApp)
+   * @see #XStreamSerializer(LockssApp)
    */
   public XStreamSerializer() {
     this(null);
   }
 
   /**
-   * <p>Builds a new XStreamSerializer instance.</p>
+   * <p>Builds a new XStreamSerializer instance with the given
+   * context, with default failed serialization and deserialization
+   * modes.</p>
    * <p>It is safe to use the same XStreamSerializer instance for
    * multiple unrelated marshalling and unmarshalling operations.</p>
    * @param lockssContext A serialization context object.
+   * @see ObjectSerializer#ObjectSerializer(LockssApp)
    */
   public XStreamSerializer(LockssApp lockssContext) {
     super(lockssContext);
@@ -523,19 +575,51 @@ public class XStreamSerializer extends ObjectSerializer {
     this.lockssContext = lockssContext;
   }
 
+  /**
+   * <p>Builds a new XStreamSerializer instance with a null
+   * context, and with the given failed serialization and
+   * deserialization modes.</p>
+   * <p>It is safe to use the same XStreamSerializer instance for
+   * multiple unrelated marshalling and unmarshalling operations.</p>
+   * @param saveTempFiles             A failed serialization mode.
+   * @param failedDeserializationMode A failed deserialization mode.
+   * @see ObjectSerializer#ObjectSerializer(LockssApp, boolean, int)
+   */
+  public XStreamSerializer(boolean saveTempFiles,
+                           int failedDeserializationMode) {
+    this(null,
+         saveTempFiles,
+         failedDeserializationMode);
+  }
+
+  /**
+   * <p>Builds a new XStreamSerializer instance with the given
+   * context, failed serialization mode and failed deserialization
+   * mode.</p>
+   * <p>It is safe to use the same XStreamSerializer instance for
+   * multiple unrelated marshalling and unmarshalling operations.</p>
+   * @param lockssContext             A serialization context object.
+   * @param saveTempFiles             A failed serialization mode.
+   * @param failedDeserializationMode A failed deserialization mode.
+   * @see ObjectSerializer#ObjectSerializer(LockssApp, boolean, int)
+   */
+  public XStreamSerializer(LockssApp lockssContext,
+                           boolean saveTempFiles,
+                           int failedDeserializationMode) {
+    super(lockssContext,
+          saveTempFiles,
+          failedDeserializationMode);
+    this.initialized = false; // lazy instantiation, see init()
+    this.lockssContext = lockssContext;
+  }
+
   /* Inherit documentation */
   public Object deserialize(Reader reader)
-      throws IOException, SerializationException {
+      throws SerializationException,
+             InterruptedIOException {
     try {
       init(); // lazy instantiation
       return xs.fromXML(reader);
-    }
-    catch (StreamException se) {
-      logger.debug2("Deserialization failed; StreamException thrown", se);
-      throwIfInterrupted(se);
-      IOException ioe = new IOException();
-      ioe.initCause(se);
-      throw ioe;
     }
     catch (CannotResolveClassException crce) {
       throw failDeserialize(crce);
@@ -543,37 +627,51 @@ public class XStreamSerializer extends ObjectSerializer {
     catch (BaseException be) {
       throw failDeserialize(be);
     }
+    catch (RuntimeException re) {
+      throwIfInterrupted(re);
+      throw re;
+    }
     catch (InstantiationError ie) {
       throw failDeserialize(new Exception(ie));
     }
   }
 
   /* Inherit documentation */
-  protected void serialize(Writer writer, Object obj)
-      throws IOException, SerializationException {
+  protected void serialize(Writer writer,
+                           Object obj)
+      throws SerializationException,
+             InterruptedIOException {
     throwIfNull(obj);
+    String errorString = "Failed to serialize an object of type " + obj.getClass().getName();
+
     try {
-      init();
-      xs.toXML(obj, writer); // lazy instantiation
+      init(); // lazy instantiation
+      xs.toXML(obj, writer);
     }
     catch (LockssNotSerializableException lnse) {
-      logger.error("Not Serializable or LockssSerializable", lnse);
-      NotSerializableException nse = new NotSerializableException();
-      nse.initCause(lnse);
-      throw nse;
+      throw failSerialize("Not Serializable or LockssSerializable",
+                          lnse,
+                          new SerializationException.NotSerializableOrLockssSerializable(lnse));
+
     }
     catch (StreamException se) {
-      logger.debug("Serialization failed; StreamException thrown", se);
-      throwIfInterrupted(se);
-      IOException ioe = new IOException();
-      ioe.initCause(se);
-      throw ioe;
+      throw failSerialize(errorString,
+                          se,
+                          new SerializationException(se));
     }
     catch (CannotResolveClassException crce) {
-      throw failSerialize(crce, obj);
+      throw failSerialize(errorString,
+                          crce,
+                          new SerializationException(crce));
     }
     catch (BaseException be) {
-      throw failSerialize(be, obj);
+      throw failSerialize(errorString,
+                          be,
+                          new SerializationException(be));
+    }
+    catch (RuntimeException re) {
+      throwIfInterrupted(re);
+      throw re;
     }
   }
 
@@ -584,8 +682,8 @@ public class XStreamSerializer extends ObjectSerializer {
     if (!initialized) {
       initialized = true;
       xs = new XStream(new DomDriver());
-      xs.setMarshallingStrategy(
-          new LockssReferenceByXPathMarshallingStrategy(lockssContext));
+      xs.setMarshallingStrategy(new LockssReferenceByXPathMarshallingStrategy(lockssContext));
+      xs.registerConverter(new LockssDateConverter());
     }
   }
 
