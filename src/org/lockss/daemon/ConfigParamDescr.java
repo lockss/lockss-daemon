@@ -1,10 +1,10 @@
 /*
- * $Id: ConfigParamDescr.java,v 1.26 2005-11-16 07:44:10 smorabito Exp $
+ * $Id: ConfigParamDescr.java,v 1.27 2006-05-31 20:29:23 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,6 +34,7 @@ package org.lockss.daemon;
 
 import java.net.*;
 
+import org.lockss.app.LockssApp;
 import org.lockss.util.*;
 import java.util.*;
 
@@ -512,6 +513,57 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
    * starts with <code>reserved.</code>) */
   public static boolean isReservedParam(String key) {
     return key.startsWith(PREFIX_RESERVED);
+  }
+
+  /**
+   * <p>A map of canonicalized instances (see caveat in
+   * {@link #postUnmarshalResolve}).</p>
+   * @see #postUnmarshalResolve
+   */
+  protected static Map uniqueInstances;
+
+  /**
+   * <p>A post-deserialization resolution method for serializers that
+   * support it.</p>
+   * <p>This class ({@link ConfigParamDescr}) does not use the context
+   * argument.</p>
+   * <p><em>Caveat.</em> The various instances of this class are
+   * unique in principle, but the class itself allows for mutable
+   * instances. The instance cache implemented as part of this
+   * post-deserialization mechanism may hold on to instances for
+   * ever if their canonical representation (as evaluated by
+   * {@link #hashCode} and {@link #equals}) changes. The loss is
+   * acceptable for reasonable use cases of the pre-defined
+   * instances of this class.</p>
+   * @param context A context instance.
+   * @return A canonicalized object (see caveat above).
+   */
+  protected Object postUnmarshalResolve(LockssApp context) {
+    return uniqueInstance(this);
+  }
+
+  /**
+   * <p>Implements {@link #postUnmarshalResolve}.</p>
+   * @param descr A candidate descriptor.
+   * @return A canonicalized descriptor (see caveat in
+   * {@link #postUnmarshalResolve})
+   * @see #postUnmarshalResolve
+   */
+  protected static synchronized Object uniqueInstance(ConfigParamDescr descr) {
+    /* Access to the map is protected by the synchronization */
+    // Lazy instantiation
+    if (uniqueInstances == null) {
+      uniqueInstances = new HashMap();
+      for (int ix = 0 ; ix < DEFAULT_DESCR_ARRAY.length ; ++ix) {
+        uniqueInstances.put(DEFAULT_DESCR_ARRAY[ix], DEFAULT_DESCR_ARRAY[ix]);
+      }
+    }
+    // Possibly add new canonical representation
+    if (!uniqueInstances.containsKey(descr)) {
+      uniqueInstances.put(descr, descr);
+    }
+    // Return canonical representation
+    return uniqueInstances.get(descr);
   }
 
   public static class InvalidFormatException extends Exception {

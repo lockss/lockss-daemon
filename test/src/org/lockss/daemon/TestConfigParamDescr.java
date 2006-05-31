@@ -1,10 +1,10 @@
 /*
- * $Id: TestConfigParamDescr.java,v 1.4 2005-07-18 08:10:09 tlipkis Exp $
+ * $Id: TestConfigParamDescr.java,v 1.5 2006-05-31 20:29:21 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.daemon;
 
+import java.io.*;
 import java.util.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
@@ -39,7 +40,6 @@ import org.lockss.util.*;
 /**
  * This is the test class for org.lockss.daemon.ConfigParamDescr
  */
-
 public class TestConfigParamDescr extends LockssTestCase {
   ConfigParamDescr d1;
   ConfigParamDescr d2;
@@ -136,6 +136,23 @@ public class TestConfigParamDescr extends LockssTestCase {
     ConfigParamDescr d1 = new ConfigParamDescr("foo");
     ConfigParamDescr d2 = new ConfigParamDescr("foo");
     assertEquals(d1.hashCode(), d2.hashCode());
+  }
+
+  /**
+   * <p>Tests that {@link ConfigParamDescr#postUnmarshalResolve}
+   * works at least for the elements of
+   * {@link ConfigParamDescr#DEFAULT_DESCR_ARRAY}.</p>
+   * @throws Exception if an unexpected error occurs.
+   */
+  public void testPostMarshalUnresolve() throws Exception {
+    XStreamSerializer serializer = new XStreamSerializer();
+    for (int ix = 0 ; ix < ConfigParamDescr.DEFAULT_DESCR_ARRAY.length ; ++ix) {
+      File file = File.createTempFile("testfile", ".xml");
+      file.deleteOnExit();
+      serializer.serialize(file, ConfigParamDescr.DEFAULT_DESCR_ARRAY[ix]);
+      assertSame(ConfigParamDescr.DEFAULT_DESCR_ARRAY[ix],
+                 serializer.deserialize(file));
+    }
   }
 
 }
