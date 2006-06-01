@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigFile.java,v 1.4 2006-04-27 03:21:45 tlipkis Exp $
+ * $Id: TestConfigFile.java,v 1.5 2006-06-01 23:47:41 tlipkis Exp $
  */
 
 /*
@@ -391,6 +391,22 @@ public abstract class TestConfigFile extends LockssTestCase {
       hcf.setContentEncoding("gzip");
       Configuration config = hcf.getConfiguration();
       assertTrue(hcf.isLoaded());
+    }
+
+    // Ensure null message in exception doesn't cause problems
+    // Not specific to HTTPConfigFile, but handy to test here because we can
+    // make the subclass throw
+    public void testNullExceptionMessage() throws IOException {
+      MyHttpConfigFile hcf =
+	new MyHttpConfigFile("http://foo.bar/lockss.xml", "");
+      hcf.setExecuteException(new IOException(null));
+      try {
+	Configuration config = hcf.getConfiguration();
+	fail("Should throw");
+      } catch (NullPointerException e) {
+	fail("Null exception message caused", e);
+      } catch (IOException e) {
+      }
     }
 
   }
