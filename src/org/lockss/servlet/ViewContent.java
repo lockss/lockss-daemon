@@ -1,5 +1,5 @@
 /*
- * $Id: ViewContent.java,v 1.12 2006-03-16 01:41:19 thib_gc Exp $
+ * $Id: ViewContent.java,v 1.13 2006-06-01 23:48:21 tlipkis Exp $
  */
 
 /*
@@ -47,7 +47,6 @@ import org.lockss.daemon.*;
 import org.lockss.jetty.*;
 import org.lockss.plugin.*;
 import org.lockss.state.*;
-import org.lockss.repository.*;
 
 /** ViewContent servlet displays cached content
  */
@@ -167,7 +166,6 @@ public class ViewContent extends LockssServlet {
   }
 
   void displaySummary(boolean contentInOtherFrame) throws IOException {
-    LockssRepository repo = getLockssDaemon().getLockssRepository(au);
     Page page = newPage();
 
     Table tbl = new Table(0, "ALIGN=CENTER CELLSPACING=2 CELLPADDING=0");
@@ -191,10 +189,9 @@ public class ViewContent extends LockssServlet {
 	       props.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE));
     addPropRow(tbl, "Length", clen);
     try {
-      RepositoryNode node = repo.getNode(cu.getUrl());
-      addPropRow(tbl, "Version #", node.getCurrentVersion());
-    } catch (MalformedURLException e) {
-      log.warning("Can't get repo node: " + cu.getUrl(), e);
+      addPropRow(tbl, "Version #", cu.getVersion());
+    } catch (RuntimeException e) {
+      log.warning("Can't get cu version: " + cu.getUrl(), e);
     }
     try {
       long sdate =
