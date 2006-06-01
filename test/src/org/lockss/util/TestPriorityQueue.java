@@ -1,5 +1,5 @@
 /*
- * $Id: TestPriorityQueue.java,v 1.10 2004-09-19 01:38:51 tlipkis Exp $
+ * $Id: TestPriorityQueue.java,v 1.11 2006-06-01 23:57:09 tlipkis Exp $
  */
 
 /*
@@ -248,6 +248,19 @@ public class TestPriorityQueue extends LockssTestCase {
       if (intr.did()) {
 	fail("get(0) of full timed out");
       }
+    }
+  }
+
+  public void testThrowsInterruptedException() {
+    PriorityQueue q = new PriorityQueue();
+    try {
+      interruptMeIn(100);
+      Date start = new Date();
+      Object obj = q.get(timer(TIMEOUT_SHOULDNT));
+      long delay = TimerUtil.timeSince(start);
+      fail("get(" + TIMEOUT_SHOULDNT +
+	   ") of empty interrupted queue returned "+ obj + " in " + delay);
+    } catch (InterruptedException e) {
     }
   }
 

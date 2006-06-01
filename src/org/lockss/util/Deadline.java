@@ -1,5 +1,5 @@
 /*
- * $Id: Deadline.java,v 1.37 2006-05-06 17:28:13 tlipkis Exp $
+ * $Id: Deadline.java,v 1.38 2006-06-01 23:57:09 tlipkis Exp $
  */
 
 /*
@@ -539,6 +539,43 @@ public class Deadline implements Comparable, LockssSerializable {
     public void changed(Deadline deadline);
   }
 
+  /**
+   * A Deadline.Callback that interrupts a thread.  Example use:<pre>
+    Deadline.InterruptCallback cb = new Deadline.InterruptCallback();
+    try {
+      deadline.registerCallback(cb);
+      while (queue.isEmpty() && !deadline.expired()) {
+	this.wait(deadline.getSleepTime());
+      }
+    } finally {
+      cb.disable();
+      deadline.unregisterCallback(cb);
+    }<pre>
+  */
+  public static class InterruptCallback implements Callback {
+    private Thread thread;
+
+    public InterruptCallback() {
+      thread = Thread.currentThread();
+    }
+    public synchronized void changed(Deadline deadline) {
+      if (thread != null) thread.interrupt();
+    }
+    /** Assumed to be called from the thread that no longer wants to be
+     * interrupted if the deadline changes */
+    public synchronized void disable() {
+      thread = null;
+      // Guarantee that thread's interrupted status is false when this
+      // returns.  This is necessary in the case whee a deadline was
+      // changed just after the wait() returns, but before disable is
+      // called.  If the interrup status were allowed to persist, an
+      // ensuing IO operation would be erroneously interrupted.  Note that
+      // this won't (and shouldn't) interfere with any InterruptedException
+      // that's already in the process of being thrown.
+      Thread.interrupted();
+    }
+  }
+
   /** Sleep, returning when the deadline is reached, or possibly earlier.
    * In order to guarantee that the deadline has actually been reached, this
    * must be called in a <code>while (!deadline.expired()) { ... }</code>
@@ -551,11 +588,7 @@ public class Deadline implements Comparable, LockssSerializable {
     if (expired()) {
       return;
     }
-    final Thread thread = Thread.currentThread();
-    Callback cb = new Callback() {
-	public void changed(Deadline deadline) {
-	  thread.interrupt();
-	}};
+    InterruptCallback cb = new InterruptCallback();
     long nap;
     try {
       registerCallback(cb);
@@ -563,6 +596,7 @@ public class Deadline implements Comparable, LockssSerializable {
 	Thread.sleep(getSleepTime());
       }
     } finally {
+      cb.disable();
       unregisterCallback(cb);
     }
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestDeadline.java,v 1.16 2004-10-08 06:58:38 tlipkis Exp $
+ * $Id: TestDeadline.java,v 1.17 2006-06-01 23:57:09 tlipkis Exp $
  */
 
 /*
@@ -345,6 +345,26 @@ public class TestDeadline extends LockssTestCase {
     assertSame(null, called);
     d1.expire();
     assertSame(d1, called);
+  }
+
+  public void testInterruptedCallback() {
+    Deadline.InterruptCallback cb = new Deadline.InterruptCallback();
+    Expirer expr = null;
+    Deadline d = Deadline.in(100);
+    try {
+      d.registerCallback(cb);
+      Date start = new Date();
+      // expire the deadline at about the same time it's supposed to go
+      // off.  If there's a race condition in the interrupt handling,
+      // hopefully this will occasionally trigger it
+      expr = expireIn(99, d);
+      d.sleep();
+    } catch (InterruptedException e) {
+    } finally {
+      cb.disable();
+      d.unregisterCallback(cb);
+    }
+    assertFalse(Thread.currentThread().isInterrupted());
   }
 
 

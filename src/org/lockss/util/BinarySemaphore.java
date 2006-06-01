@@ -1,5 +1,5 @@
 /*
- * $Id: BinarySemaphore.java,v 1.8 2006-04-05 22:08:29 tlipkis Exp $
+ * $Id: BinarySemaphore.java,v 1.9 2006-06-01 23:57:09 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -54,11 +54,7 @@ public class BinarySemaphore {
       // Don't call any methods on the timer while holding the semaphore's
       // lock, or we create a potential deadlock.
 
-      final Thread thread = Thread.currentThread();
-      Deadline.Callback cb = new Deadline.Callback() {
-	  public void changed(Deadline deadline) {
-	    thread.interrupt();
-	  }};
+      Deadline.InterruptCallback cb = new Deadline.InterruptCallback();
       try {
 	timer.registerCallback(cb);
 	while (!timer.expired()) {
@@ -74,6 +70,7 @@ public class BinarySemaphore {
 	  }
 	}
       } finally {
+	cb.disable();
 	timer.unregisterCallback(cb);
       }
     }

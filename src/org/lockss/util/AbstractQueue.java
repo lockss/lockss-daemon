@@ -1,5 +1,5 @@
 /*
- * $Id: AbstractQueue.java,v 1.2 2004-09-19 01:28:37 tlipkis Exp $
+ * $Id: AbstractQueue.java,v 1.3 2006-06-01 23:57:09 tlipkis Exp $
  */
 
 /*
@@ -75,17 +75,14 @@ public abstract class AbstractQueue implements Queue {
    */
   public synchronized Object peekWait(Deadline timer)
       throws InterruptedException {
-    final Thread thread = Thread.currentThread();
-    Deadline.Callback cb = new Deadline.Callback() {
-	public void changed(Deadline deadline) {
-	  thread.interrupt();
-	}};
+    Deadline.InterruptCallback cb = new Deadline.InterruptCallback();
     try {
       timer.registerCallback(cb);
       while (queue.isEmpty() && !timer.expired()) {
 	this.wait(timer.getSleepTime());
       }
     } finally {
+      cb.disable();
       timer.unregisterCallback(cb);
     }
     if (!queue.isEmpty()) {

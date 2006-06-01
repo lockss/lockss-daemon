@@ -1,5 +1,5 @@
 /*
- * $Id: TestBinarySemaphore.java,v 1.9 2006-04-05 22:08:28 tlipkis Exp $
+ * $Id: TestBinarySemaphore.java,v 1.10 2006-06-01 23:57:09 tlipkis Exp $
  */
 
 /*
@@ -184,10 +184,8 @@ public class TestBinarySemaphore extends LockssTestCase {
     } catch (InterruptedException e) {
     } finally {
       if (intr.did()) {
-	System.out.println("pre fail 2");
 	fail("take(" + t + ") of empty failed to timeout in " +
 	     TimerUtil.timeSince(start));
-	System.out.println("post fail 2");
       }
     }
   }
@@ -266,6 +264,19 @@ public class TestBinarySemaphore extends LockssTestCase {
       if (intr.did()) {
 	fail("take(1000), given in 100, neither returned nor timed out");
       }
+    }
+  }
+
+  public void testThrowsInterruptedException() {
+    BinarySemaphore sem = new BinarySemaphore();
+    try {
+      interruptMeIn(100);
+      Date start = new Date();
+      boolean val = sem.take(Deadline.in(TIMEOUT_SHOULDNT));
+      long delay = TimerUtil.timeSince(start);
+      fail("take(" + TIMEOUT_SHOULDNT + ") of interrupted semaphore returned "+
+	   val + " in " + delay);
+    } catch (InterruptedException e) {
     }
   }
 }

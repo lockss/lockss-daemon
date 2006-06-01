@@ -1,5 +1,5 @@
 /*
- * $Id: OneShotSemaphore.java,v 1.3 2005-10-11 05:48:30 tlipkis Exp $
+ * $Id: OneShotSemaphore.java,v 1.4 2006-06-01 23:57:09 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -51,17 +51,14 @@ public class OneShotSemaphore {
   synchronized public boolean waitFull(Deadline timer)
       throws InterruptedException {
     if (timer != null) {
-      final Thread thread = Thread.currentThread();
-      Deadline.Callback cb = new Deadline.Callback() {
-	  public void changed(Deadline deadline) {
-	    thread.interrupt();
-	  }};
+      Deadline.InterruptCallback cb = new Deadline.InterruptCallback();
       try {
 	timer.registerCallback(cb);
 	while (!state && !timer.expired()) {
 	  this.wait(timer.getSleepTime());
 	}
       } finally {
+	cb.disable();
 	timer.unregisterCallback(cb);
       }
     }

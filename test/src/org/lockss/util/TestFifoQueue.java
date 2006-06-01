@@ -1,5 +1,5 @@
 /*
- * $Id: TestFifoQueue.java,v 1.1 2004-07-12 06:22:29 tlipkis Exp $
+ * $Id: TestFifoQueue.java,v 1.2 2006-06-01 23:57:09 tlipkis Exp $
  */
 
 /*
@@ -221,6 +221,19 @@ public class TestFifoQueue extends LockssTestCase {
       if (intr.did()) {
 	fail("get(0) of full timed out");
       }
+    }
+  }
+
+  public void testThrowsInterruptedException() {
+    FifoQueue q = new FifoQueue();
+    try {
+      interruptMeIn(100);
+      Date start = new Date();
+      Object obj = q.get(timer(TIMEOUT_SHOULDNT));
+      long delay = TimerUtil.timeSince(start);
+      fail("get(" + TIMEOUT_SHOULDNT +
+	   ") of empty interrupted queue returned "+ obj + " in " + delay);
+    } catch (InterruptedException e) {
     }
   }
 
