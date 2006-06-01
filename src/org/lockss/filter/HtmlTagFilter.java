@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlTagFilter.java,v 1.8 2005-12-01 23:28:04 troberts Exp $
+ * $Id: HtmlTagFilter.java,v 1.9 2006-06-01 21:35:48 troberts Exp $
  */
 
 /*
@@ -55,6 +55,11 @@ public class HtmlTagFilter extends Reader {
   public static final String PARAM_BUFFER_CAPACITY =
     Configuration.PREFIX + "filter.buffer_capacity";
 
+  private static final boolean DEFAULT_THROW_ON_TRAILING_TAG = false;
+  private static final String PARAM_THROW_ON_TRAILING_TAG =
+    Configuration.PREFIX + "HtmlTagFilter.throwOnTrailingTag";
+
+  
   Reader reader;
   CharRing charBuffer = null;
   int ringSize;
@@ -72,6 +77,7 @@ public class HtmlTagFilter extends Reader {
   private boolean isClosed = false;
   private boolean isTrace = logger.isDebug3();
 
+  private boolean throwOnTrailingTag;
 
   private HtmlTagFilter(Reader reader) {
     if (reader == null) {
@@ -115,6 +121,10 @@ public class HtmlTagFilter extends Reader {
     }
     charBuffer = new CharRing(bufferCapacity);
     ringSize = charBuffer.size();
+ 
+    throwOnTrailingTag = 
+      CurrentConfig.getBooleanParam(PARAM_THROW_ON_TRAILING_TAG,
+                                    DEFAULT_THROW_ON_TRAILING_TAG);
   }
 
   /**
@@ -216,6 +226,11 @@ public class HtmlTagFilter extends Reader {
       charBuffer.skip(nskip);
       ringSize -= nskip;
     }
+    if (throwOnTrailingTag && tagNesting > 0 && streamDone && ringSize == 0) {
+      //We've burned throught the rest of the file and we're still in the string
+      //pair
+      throw new TrailingTagException("Trailing tag: "+endTag);
+    }    
   }
 
   public void close() throws IOException {
@@ -223,6 +238,12 @@ public class HtmlTagFilter extends Reader {
     reader.close();
   }
 
+  public static class TrailingTagException extends IOException {
+    public TrailingTagException(String msg) {
+      super(msg);
+    }
+  }
+  
   public static class TagPair {
     String start = null;
     String end = null;
