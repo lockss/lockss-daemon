@@ -15,6 +15,15 @@ public abstract class BaseVoteBlocks implements VoteBlocks {
     return new BaseVoteBlocks.Iterator();
   }
   
+  /**
+   * Return the VoteBlock at a given index.  Concrete subclasses must
+   * provide an implementation of this.
+   *
+   * @param The index of the VoteBlock to return.
+   * @return  The VoteBlock at the given index.
+   */
+  abstract protected VoteBlock getVoteBlock(int i) throws IOException;
+  
   private class Iterator implements VoteBlocksIterator {
     private int cursor = 0;
     /* For efficiency purposes, store the most recently peeked voteblock. */

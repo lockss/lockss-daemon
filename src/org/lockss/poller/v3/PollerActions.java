@@ -1,5 +1,5 @@
 /*
- * $Id: PollerActions.java,v 1.10 2006-04-10 05:31:01 smorabito Exp $
+ * $Id: PollerActions.java,v 1.11 2006-06-02 20:27:15 smorabito Exp $
  */
 
 /*
@@ -64,7 +64,9 @@ public class PollerActions {
       V3LcapMessage msg = ud.makeMessage(V3LcapMessage.MSG_POLL);
       msg.setPollerNonce(ud.getPollerNonce());
       msg.setEffortProof(ud.getIntroEffortProof());
+      msg.setVoteDeadline(ud.getPoller().getVoteDeadline());
       ud.sendMessageTo(msg, ud.getVoterId());
+      ud.setStatusString(V3Poller.PEER_STATUS_WAITING_POLL_ACK);
     } catch (IOException ex) {
       log.error("Unable to send message: ", ex);
       return V3Events.evtError;
@@ -91,6 +93,7 @@ public class PollerActions {
       return V3Events.evtError;
     } else {
       ud.setVoterNonce(voterNonce);
+      ud.setStatusString(V3Poller.PEER_STATUS_ACCEPTED_POLL);
       return V3Events.evtOk;
     }
   }
@@ -141,6 +144,7 @@ public class PollerActions {
     List nominees = msg.getNominees();
     log.debug2("Received outer circle nominations from voter " + ud.getVoterId()
                + " in poll " + ud.getKey());
+    ud.setStatusString(V3Poller.PEER_STATUS_NOMINATED);
     ud.nominatePeers(nominees);
     return V3Events.evtOk;
   }
@@ -162,6 +166,7 @@ public class PollerActions {
     // XXX: Implement multiple-vote-message functionality
     try {
       ud.sendMessageTo(msg, ud.getVoterId());
+      ud.setStatusString(V3Poller.PEER_STATUS_WAITING_VOTE);
     } catch (IOException ex) {
       log.error("Unable to send message: ", ex);
       return V3Events.evtError;
@@ -174,6 +179,7 @@ public class PollerActions {
     V3LcapMessage msg = (V3LcapMessage) evt.getMessage();
     log.debug2("Received vote from voter " + ud.getVoterId() + " in poll "
                + ud.getKey());
+    ud.setStatusString(V3Poller.PEER_STATUS_VOTED);
     ud.setVoteComplete(msg.isVoteComplete());
     ud.setVoteBlocks(msg.getVoteBlocks());
     return V3Events.evtOk;
@@ -230,6 +236,7 @@ public class PollerActions {
     msg.setEffortProof(ud.getReceiptEffortProof());
     try {
       ud.sendMessageTo(msg, ud.getVoterId());
+      ud.setStatusString(V3Poller.PEER_STATUS_COMPLETE);
     } catch (IOException ex) {
       log.error("Unable to send message: ", ex);
       return V3Events.evtError;
@@ -239,7 +246,7 @@ public class PollerActions {
 
   public static PsmEvent handleError(PsmEvent evt, PsmInterp interp) {
     ParticipantUserData ud = getUserData(interp);
-    ud.handleError();
+    ud.setStatusString(V3Poller.PEER_STATUS_ERROR);
     return V3Events.evtOk;
   }
 

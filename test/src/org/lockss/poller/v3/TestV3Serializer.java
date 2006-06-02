@@ -69,6 +69,15 @@ public class TestV3Serializer extends LockssTestCase {
     super.tearDown();
   }
 
+  public void testNullDirThrows() throws Exception {
+    try {
+      V3PollerSerializer ser = new V3PollerSerializer(theDaemon, null);
+      fail("Should have thrown NullPointerException");
+    } catch (NullPointerException ex) {
+      // Expected
+    }
+  }
+
   public void testClosePoll() throws Exception {
     // Ensure poll dir is deleted.
     V3PollerSerializer pollerSerializer = new V3PollerSerializer(theDaemon);
@@ -166,13 +175,13 @@ public class TestV3Serializer extends LockssTestCase {
     PollerStateBean vsb = new PollerStateBean();
     vsb.setAuId("testAu");
     vsb.setCachedUrlSet(new MockCachedUrlSet());
-    vsb.setDeadline(10000);
+    vsb.setPollDeadline(10000);
     vsb.setHashAlgorithm("SHA1");
     vsb.setLastHashedBlock("http://www.example.com/file1.html");
     vsb.setPluginVersion("mock");
     vsb.setPollerId(new MockPeerIdentity("127.0.0.1:8080"));
     vsb.setPollKey("mock-poll-1");
-    vsb.setPollVersion(1);
+    vsb.setProtocolVersion(1);
     return vsb;
   }
 
@@ -196,16 +205,8 @@ public class TestV3Serializer extends LockssTestCase {
     ud.setRemainingEffortProof(ByteArray.makeRandomBytes(20));
     ud.setRepairEffortProof(ByteArray.makeRandomBytes(20));
     VoteBlocks blocks = new MemoryVoteBlocks();
-    blocks.addVoteBlock(new VoteBlock("http://www.example.com/file1.html",
-                                      1000L, 0L, 1000L, 0L,
-                                      ByteArray.makeRandomBytes(20),
-                                      ByteArray.makeRandomBytes(20),
-                                      VoteBlock.CONTENT_VOTE));
-    blocks.addVoteBlock(new VoteBlock("http://www.example.com/file2.html",
-                                      1010L, 0L, 1010L, 0L,
-                                      ByteArray.makeRandomBytes(20),
-                                      ByteArray.makeRandomBytes(20),
-                                      VoteBlock.CONTENT_VOTE));
+    blocks.addVoteBlock(V3TestUtils.makeVoteBlock("http://www.example.com/file1.html"));
+    blocks.addVoteBlock(V3TestUtils.makeVoteBlock("http://www.example.com/file2.html"));
     ud.setVoteBlocks(blocks);
     ud.setVoterNonce(ByteArray.makeRandomBytes(20));
     return ud;
@@ -230,16 +231,8 @@ public class TestV3Serializer extends LockssTestCase {
     ud.setRepairEffortProof(ByteArray.makeRandomBytes(20));
     ud.setRepairTarget("http://www.example.com/file1.html");
     VoteBlocks blocks = new MemoryVoteBlocks();
-    blocks.addVoteBlock(new VoteBlock("http://www.example.com/file1.html",
-                                      1000L, 0L, 1000L, 0L,
-                                      ByteArray.makeRandomBytes(20),
-                                      ByteArray.makeRandomBytes(20),
-                                      VoteBlock.CONTENT_VOTE));
-    blocks.addVoteBlock(new VoteBlock("http://www.example.com/file2.html",
-                                      1010L, 0L, 1010L, 0L,
-                                      ByteArray.makeRandomBytes(20),
-                                      ByteArray.makeRandomBytes(20),
-                                      VoteBlock.CONTENT_VOTE));
+    blocks.addVoteBlock(V3TestUtils.makeVoteBlock("http://www.example.com/file1.html"));
+    blocks.addVoteBlock(V3TestUtils.makeVoteBlock("http://www.example.com/file2.html"));
     ud.setVoteBlocks(blocks);
     ud.setVoterNonce(ByteArray.makeRandomBytes(20));
     return ud;

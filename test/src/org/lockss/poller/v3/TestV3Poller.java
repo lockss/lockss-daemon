@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.11 2006-04-28 07:21:13 smorabito Exp $
+ * $Id: TestV3Poller.java,v 1.12 2006-06-02 20:27:16 smorabito Exp $
  */
 
 /*
@@ -95,10 +95,7 @@ public class TestV3Poller extends LockssTestCase {
   static {
     voteBlocks = new ArrayList();
     for (int ix = 0; ix < urls.length; ix++) {
-      VoteBlock vb = new VoteBlock(urls[ix], 1024, 0, 1024, 0,
-                                   ByteArray.makeRandomBytes(20),
-                                   ByteArray.makeRandomBytes(20),
-                                   VoteBlock.CONTENT_VOTE);
+      VoteBlock vb = V3TestUtils.makeVoteBlock(urls[ix]); 
       voteBlocks.add(vb);
     }
   }
@@ -275,7 +272,172 @@ public class TestV3Poller extends LockssTestCase {
       assertEquals("SHA-1", digests[i].getAlgorithm());
     }
   }
+  
+  private HashBlock makeHashBlock(String url) {
+    MockCachedUrl cu = new MockCachedUrl(url);
+    return new HashBlock(cu);
+  }
 
+  private static int hbVersionNum = 1;
+  private void addVersion(HashBlock block, String content) throws Exception {
+    MessageDigest[] digests = new MessageDigest[5];  // 1 plain hash, plus 4 voters
+    // fake "Plain Hash"
+    digests[0] = MessageDigest.getInstance("SHA1");
+    digests[0].update(content.getBytes());
+    // fake "Nonced Hash" for voter 1
+    digests[1] = MessageDigest.getInstance("SHA1");
+    digests[1].update(content.getBytes());
+    // fake "Nonced Hash" for voter 2
+    digests[2] = MessageDigest.getInstance("SHA1");
+    digests[2].update(content.getBytes());
+    // fake "Nonced Hash" for voter 3
+    digests[3] = MessageDigest.getInstance("SHA1");
+    digests[3].update(content.getBytes());
+    // fake "Nonced Hash" for voter 4
+    digests[4] = MessageDigest.getInstance("SHA1");
+    digests[4].update(content.getBytes());
+    
+    block.addVersion(0, content.length(), 
+                     0, content.length(), 
+                     digests, TestV3Poller.hbVersionNum++);    
+  }
+  
+  private VoteBlock makeVoteBlock(String url) {
+    VoteBlock vb = new VoteBlock(url);
+    return vb;
+  }
+  
+  private void addVersion(VoteBlock block, String content) throws Exception {
+    MessageDigest md = MessageDigest.getInstance("SHA1");
+    md.update(content.getBytes());
+    byte[] hash = md.digest();
+    block.addVersion(0, content.length(), 
+                     0, content.length(),
+                     hash, hash);
+  }
+  
+  public void testCheckBlockWin() throws Exception {
+    IdentityManager idMgr = theDaemon.getIdentityManager();
+
+    V3Poller v3Poller = makeV3Poller("key");
+    
+    PeerIdentity id1 = idMgr.findPeerIdentity("TCP:[127.0.0.1]:8990");
+    PeerIdentity id2 = idMgr.findPeerIdentity("TCP:[127.0.0.1]:8991");
+    PeerIdentity id3 = idMgr.findPeerIdentity("TCP:[127.0.0.1]:8992");
+    PeerIdentity id4 = idMgr.findPeerIdentity("TCP:[127.0.0.1]:8993");
+    
+    
+    String url = "http://www.test.com/example.txt";
+    
+    String n1v1 = "This is node 1, version 1.  It's the oldest.";
+    String n1v2 = "This is node 2, version 2.  It's slightly older.";
+    String n1v3 = "This is node 1, version 3.  This is the current version!";
+
+    // Our hash block only has v1 and v3
+    HashBlock hb1 = makeHashBlock(url);
+    addVersion(hb1, n1v1);
+    addVersion(hb1, n1v3);
+
+    BlockTally blockTally = new BlockTally(3);  // quorum of 3
+
+    // Should agree on n1v1.
+    VoteBlock vb1 = makeVoteBlock(url);
+    addVersion(vb1, n1v1);
+    assertDoesNotContain(blockTally.getAgreeVoters(), id1);
+    v3Poller.compareBlocks(id1, 1, vb1, hb1, blockTally);
+    assertContains(blockTally.getAgreeVoters(), id1);
+
+    // Should agree on n1v3.
+    VoteBlock vb2 = makeVoteBlock(url);
+    addVersion(vb2, n1v1);
+    addVersion(vb2, n1v3);
+    assertDoesNotContain(blockTally.getAgreeVoters(), id3);
+    v3Poller.compareBlocks(id2, 2, vb2, hb1, blockTally);
+    assertContains(blockTally.getAgreeVoters(), id2);
+    
+    // Should agree on n1v3.
+    VoteBlock vb3 = makeVoteBlock(url);
+    addVersion(vb3, n1v2);
+    addVersion(vb3, n1v3);
+    assertDoesNotContain(blockTally.getAgreeVoters(), id3);
+    v3Poller.compareBlocks(id3, 3, vb3, hb1, blockTally);
+    assertContains(blockTally.getAgreeVoters(), id3);
+    
+    // Should not agree on any version.
+    VoteBlock vb4 = makeVoteBlock(url);
+    addVersion(vb4, n1v2);
+    assertDoesNotContain(blockTally.getAgreeVoters(), id4);
+    v3Poller.compareBlocks(id4, 4, vb4, hb1, blockTally);
+    assertDoesNotContain(blockTally.getAgreeVoters(), id4);
+    
+    blockTally.tallyVotes();
+    
+    assertEquals(blockTally.getTallyResult(), BlockTally.RESULT_WON);
+  }
+  
+  public void testCheckBlockLose() throws Exception {
+    IdentityManager idMgr = theDaemon.getIdentityManager();
+
+    V3Poller v3Poller = makeV3Poller("key");
+    
+    PeerIdentity id1 = idMgr.findPeerIdentity("TCP:[127.0.0.1]:8990");
+    PeerIdentity id2 = idMgr.findPeerIdentity("TCP:[127.0.0.1]:8991");
+    PeerIdentity id3 = idMgr.findPeerIdentity("TCP:[127.0.0.1]:8992");
+    PeerIdentity id4 = idMgr.findPeerIdentity("TCP:[127.0.0.1]:8993");
+    
+    
+    String url = "http://www.test.com/example.txt";
+    
+    String n1v1 = "This is node 1, version 1.  It's the oldest.";
+    String n1v2 = "This is node 2, version 2.  It's slightly older.";
+    String n1v3 = "This is node 1, version 3.  This is the current version!";
+
+    // Our hash block only has v1 and v3
+    HashBlock hb1 = makeHashBlock(url);
+    addVersion(hb1, n1v1);
+    addVersion(hb1, n1v3);
+
+    BlockTally blockTally = new BlockTally(3);  // quorum of 3
+
+    // Should agree on n1v1.
+    VoteBlock vb1 = makeVoteBlock(url);
+    addVersion(vb1, n1v1);
+    assertDoesNotContain(blockTally.getAgreeVoters(), id1);
+    v3Poller.compareBlocks(id1, 1, vb1, hb1, blockTally);
+    assertContains(blockTally.getAgreeVoters(), id1);
+
+    // Should not agree on any version.
+    VoteBlock vb2 = makeVoteBlock(url);
+    addVersion(vb2, n1v2);
+    assertDoesNotContain(blockTally.getAgreeVoters(), id3);
+    v3Poller.compareBlocks(id2, 2, vb2, hb1, blockTally);
+    assertDoesNotContain(blockTally.getAgreeVoters(), id2);
+    
+    // Should not agree on any version.
+    VoteBlock vb3 = makeVoteBlock(url);
+    addVersion(vb3, n1v2);
+    assertDoesNotContain(blockTally.getAgreeVoters(), id3);
+    v3Poller.compareBlocks(id3, 3, vb3, hb1, blockTally);
+    assertDoesNotContain(blockTally.getAgreeVoters(), id3);
+    
+    // Should not agree on any version.
+    VoteBlock vb4 = makeVoteBlock(url);
+    addVersion(vb4, n1v2);
+    assertDoesNotContain(blockTally.getAgreeVoters(), id4);
+    v3Poller.compareBlocks(id4, 4, vb4, hb1, blockTally);
+    assertDoesNotContain(blockTally.getAgreeVoters(), id4);
+    
+    blockTally.tallyVotes();
+    
+    assertEquals(blockTally.getTallyResult(), BlockTally.RESULT_LOST);
+  }
+  
+  private V3Poller makeV3Poller(String key) throws Exception {
+    PollSpec ps = new MockPollSpec(testau.getAuCachedUrlSet(), null, null,
+                                   Poll.V3_POLL);
+    return new V3Poller(ps, theDaemon, pollerId, key, 20000, "SHA-1");
+  }
+  
   private MyMockV3Poller makeInittedV3Poller(String key) throws Exception {
     PollSpec ps = new MockPollSpec(testau.getAuCachedUrlSet(), null, null,
                                    Poll.V3_POLL);

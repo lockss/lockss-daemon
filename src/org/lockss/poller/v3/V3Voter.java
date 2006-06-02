@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.16 2006-04-28 07:21:13 smorabito Exp $
+ * $Id: V3Voter.java,v 1.17 2006-06-02 20:27:15 smorabito Exp $
  */
 
 /*
@@ -361,17 +361,23 @@ public class V3Voter extends BasePoll {
    * for one block.
    */
   public void blockHashComplete(HashBlock block) {
+    // Add each hash block version to this vote block.
+    VoteBlock vb = new VoteBlock(block.getUrl());
+    Iterator hashVersionIter = block.versionIterator();
+    while(hashVersionIter.hasNext()) {
+      HashBlock.Version ver = (HashBlock.Version)hashVersionIter.next();
+      byte[] plainDigest = ver.getHashes()[0];
+      byte[] challengeDigest = ver.getHashes()[1];
+      vb.addVersion(ver.getFilteredOffset(),
+                    ver.getFilteredLength(),
+                    ver.getUnfilteredOffset(),
+                    ver.getUnfilteredLength(),
+                    plainDigest,
+                    challengeDigest);
+    }
+    
+    // Add this vote block to our hash block container.
     VoteBlocks blocks = voterUserData.getVoteBlocks();
-    byte[] plainDigest = block.getHashes()[0];
-    byte[] challengeDigest = block.getHashes()[1];
-    VoteBlock vb = new VoteBlock(block.getUrl(),
-                                 block.getFilteredLength(),
-                                 block.getFilteredOffset(),
-                                 block.getUnfilteredLength(),
-                                 block.getUnfilteredOffset(),
-                                 plainDigest,
-                                 challengeDigest,
-                                 VoteBlock.CONTENT_VOTE);
     try {
       blocks.addVoteBlock(vb);
     } catch (IOException ex) {

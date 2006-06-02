@@ -1,5 +1,5 @@
 /*
- * $Id: V3Serializer.java,v 1.11 2006-04-10 05:31:01 smorabito Exp $
+ * $Id: V3Serializer.java,v 1.12 2006-06-02 20:27:15 smorabito Exp $
  */
 
 /*
@@ -50,9 +50,25 @@ public abstract class V3Serializer {
   protected ObjectSerializer xstr;
 
   static final Logger log = Logger.getLogger("V3Serializer");
-
+  
   public V3Serializer(LockssDaemon daemon) throws PollSerializerException {
-    this(daemon, null);
+    this.xstr = new XStreamSerializer(daemon);
+    
+    Configuration config = CurrentConfig.getCurrentConfig();
+    String path = config.get(PARAM_V3_STATE_LOCATION,
+                             DEFAULT_V3_STATE_LOCATION);
+    File stateDir =
+        ConfigManager.getConfigManager().getPlatformDir(path);
+      if (!stateDir.exists() && !stateDir.mkdirs()) {
+        throw new PollSerializerException("Could not create state directory "
+                                          + stateDir);
+      }
+      try {
+        this.pollDir = FileUtil.createTempDir("pollstate-", "", stateDir);
+      } catch (IOException ex) {
+        throw new PollSerializerException("Cannot create state directory "
+                                          + stateDir, ex);
+      }
   }
 
   /**
@@ -66,37 +82,23 @@ public abstract class V3Serializer {
    */
   public V3Serializer(LockssDaemon daemon, File dir)
       throws PollSerializerException {
-    this.xstr = new XStreamSerializer(daemon);
-    Configuration config = CurrentConfig.getCurrentConfig();
-    String relStateDir = config.get(PARAM_V3_STATE_LOCATION,
-                                    DEFAULT_V3_STATE_LOCATION);
     if (dir == null) {
-      File stateDir =
-        ConfigManager.getConfigManager().getPlatformDir(relStateDir);
-      if (!stateDir.exists() && !stateDir.mkdirs()) {
-        throw new PollSerializerException("Could not create state directory "
-                                          + stateDir);
-      }
-      try {
-	this.pollDir = FileUtil.createTempDir("pollstate-", "", stateDir);
-      } catch (IOException ex) {
-	throw new PollSerializerException("Cannot create state directory "
-					  + stateDir, ex);
-      }
-    } else {
-      this.pollDir = dir;
-      if (!pollDir.exists()) {
-	throw new IllegalArgumentException("Poll directories passed as"
-					   + "arguments must already exist");
-      }
+      throw new NullPointerException("Poll serialization directory must not "
+                                     + "be null");
+    }
+    this.xstr = new XStreamSerializer(daemon);
+    this.pollDir = dir;
+    if (!pollDir.exists()) {
+      throw new IllegalArgumentException("Poll directories passed as"
+                                         + "arguments must already exist");
     }
   }
-
+  
   /**
    * Clean up all resources used by this poll. Removes the poll directory.
    */
   public void closePoll() {
-    if (!FileUtil.delTree(pollDir))
+    if (pollDir != null && pollDir.isDirectory() && !FileUtil.delTree(pollDir))
       log.warning("Unable to delete poll state directory: " + pollDir);
   }
 

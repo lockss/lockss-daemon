@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3LcapMessage.java,v 1.15 2006-04-28 07:21:13 smorabito Exp $
+ * $Id: TestV3LcapMessage.java,v 1.16 2006-06-02 20:27:16 smorabito Exp $
  */
 
 /*
@@ -56,7 +56,6 @@ public class TestV3LcapMessage extends LockssTestCase {
   private PeerIdentity m_testID;
   private V3LcapMessage m_testMsg;
   private List m_testVoteBlocks;
-  private Comparator m_comparator;
 
   private LockssDaemon theDaemon;
 
@@ -75,7 +74,6 @@ public class TestV3LcapMessage extends LockssTestCase {
     theDaemon = getMockLockssDaemon();
     tempDir = getTempDir();
     String tempDirPath = tempDir.getAbsolutePath();
-    m_comparator = new VoteBlockComparator();
     Properties p = new Properties();
     p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
     p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
@@ -140,7 +138,7 @@ public class TestV3LcapMessage extends LockssTestCase {
       ", Vote Key:key " +
       "PN:AQIDBAUGBwgJAAECAwQFBgcICQA= " +
       "VN:AQIDBAUGBwgJAAECAwQFBgcICQA= " +
-      "B:10 ver 3 rev 2]";
+      "B:10 ver 3 rev 3]";
     assertEquals(expectedResult, m_testMsg.toString());
   }
 
@@ -236,62 +234,6 @@ public class TestV3LcapMessage extends LockssTestCase {
     // Ensure that the decoded message matches the test message.
     assertEqualMessages(testMsg, decodedMsg);
     
-  }
-
-  public void testSortVoteBlocks() {
-
-    // Ensure sorting by unfiltered size works and
-    // is preferred.
-    VoteBlock vb1 =  makeTestVoteBlock("a", 2, 0, 1, 0);
-    VoteBlock vb2 =  makeTestVoteBlock("b", 3, 0, 2, 0);
-    VoteBlock vb3 =  makeTestVoteBlock("c", 1, 0, 3, 0);
-
-    List msgs = ListUtil.list(vb1, vb2, vb3);
-    List expectedOrder = ListUtil.list(vb3, vb1, vb2);
-
-    Collections.sort(msgs, m_comparator);
-    assertIsomorphic(expectedOrder, msgs);
-
-    // Ensure sorting by filtered size works if
-    // unfiltered sizes are the same.
-    VoteBlock vb4 = makeTestVoteBlock("a", 1, 0, 2, 0);
-    VoteBlock vb5 = makeTestVoteBlock("b", 1, 0, 3, 0);
-    VoteBlock vb6 = makeTestVoteBlock("c", 1, 0, 1, 0);
-
-    msgs = ListUtil.list(vb4, vb5, vb6);
-    expectedOrder = ListUtil.list(vb6, vb4, vb5);
-
-    Collections.sort(msgs, m_comparator);
-    assertIsomorphic(expectedOrder, msgs);
-
-    // Ensure sorting by file name works if filtered sizes
-    // and unfiltered sizes are the same.
-    VoteBlock vb7 = makeTestVoteBlock("c", 1, 0, 2, 0);
-    VoteBlock vb8 = makeTestVoteBlock("a", 1, 0, 2, 0);
-    VoteBlock vb9 = makeTestVoteBlock("b", 1, 0, 2, 0);
-
-    msgs = ListUtil.list(vb7, vb8, vb9);
-    expectedOrder = ListUtil.list(vb8, vb9, vb7);
-
-    Collections.sort(msgs, m_comparator);
-    assertIsomorphic(expectedOrder, msgs);
-  }
-
-  //
-  // Utility methods
-  //
-
-  /**
-   * Construct a VoteBlock useful for testing with.  Hashes are completely
-   * contrived.
-   */
-  private VoteBlock makeTestVoteBlock(String fName,
-				      int uLength, int uOffset,
-				      int fLength, int fOffset) {
-    return new VoteBlock(fName, uLength, uOffset, fLength, fOffset,
-			 V3TestUtils.computeHash(fName),
-                         V3TestUtils.computeHash(fName),
-                         VoteBlock.CONTENT_VOTE);
   }
 
   private void assertEqualMessages(V3LcapMessage a, V3LcapMessage b)

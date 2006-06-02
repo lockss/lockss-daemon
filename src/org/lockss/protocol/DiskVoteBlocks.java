@@ -77,7 +77,7 @@ public class DiskVoteBlocks extends BaseVoteBlocks {
     fos.close();
   }
 
-  public synchronized VoteBlock getVoteBlock(int i) throws IOException {
+  protected synchronized VoteBlock getVoteBlock(int i) throws IOException {
     // Read from the file until we reach VoteBlock i, or run out of blocks.
     FileInputStream fis = null;
     DataInputStream dis = null;

@@ -519,6 +519,24 @@ class Client:
         # Poll wasn't found
         return False
 
+    def isCompleteV3Repaired(self, au):
+        """ Return true if the given AU has had all its nodes repaired by V3.
+            Used in testing complete loss recovery via V3 """
+        tab = self.getAuV3Pollers(au)
+        for row in tab:
+            if row['auId'] == au.title and row['status'] == "Complete":
+                # Found the right entry
+                pollKey = row['pollId']['key']
+                (summary, table) = self.getV3PollerDetail(pollKey)
+                allUrls = int(summary['Total URLs In Vote'])
+                agreeUrls = int(summary['Agreeing URLs'])
+                repairs = int(summary['Completed Repairs']['value'])
+                return ((repairs == allUrls) and (agreeUrls == allUrls))
+                
+    def hasWonV3Poll(self, au):
+        """ Return true if a poll has been called, and no repairs have been made. """
+        return self.isV3Repaired(au, [])
+    
     def isV3Repaired(self, au, nodeList=[]):
         """ Return true if the given content node has been repaired via V3 """
         tab = self.getAuV3Pollers(au)
@@ -530,13 +548,17 @@ class Client:
                 allUrls = int(summary['Total URLs In Vote'])
                 agreeUrls = int(summary['Agreeing URLs'])
                 repairs = int(summary['Completed Repairs']['value'])
-                log.debug("isV3Repaired: All URLs: %s" % allUrls)                
-                log.debug("isV3Repaired: Agreeing URLs: %s" % agreeUrls)
-                log.debug("isV3Repaired: Repaired URLs: %s" % repairs)
-                return (allUrls == agreeUrls)
+                return (len(nodeList) == repairs and (agreeUrls == allUrls))
                 # TODO: This will really need to be improved when the status
                 # tables are better!  Need a way to determine whether this particular NODE was
                 # repaired.
+        return False
+    
+    def isV3NoQuorum(self, au):
+        tab = self.getAuV3Pollers(au)
+        for row in tab:
+            if row['auId'] == au.title:
+                return row['status'] == "No Quorum"
         return False
 
     def isContentRepairedFromCache(self, au, node=None):
@@ -938,6 +960,16 @@ class Client:
         def waitFunc():
             return self.hasV3Poller(au)
         return self.wait(waitFunc, timeout, sleep)
+        
+    def waitForWonV3Poll(self, au, timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):
+        def waitFunc():
+            return self.hasWonV3Poll(au)
+        return self.wait(waitFunc, timeout, sleep)
+        
+    def waitForCompleteV3Repair(self, au, timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):
+        def waitFunc():
+            return self.isCompleteV3Repaired(au)
+        return self.wait(waitFunc, timeout, sleep)
 
     def waitForV3Voter(self, au, timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):
         def waitFunc():
@@ -1078,6 +1110,12 @@ class Client:
         def waitFunc():
             return self.isV3Repaired(au, nodeList)
         return self.wait(waitFunc, timeout, sleep)
+        
+    def waitForV3NoQuorum(self, au, timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):
+        """ Wait for a V3 poll to be marked No Quorum """
+        def waitFunc():
+            return self.isV3NoQuorum(au)
+        return self.wait(waitFunc, timeout, sleep)
 
     def waitForNameRepair(self, au, node=None, timeout=DEF_TIMEOUT,
                           sleep=DEF_SLEEP):
@@ -1179,13 +1217,11 @@ class Client:
         very destructive. """
         cacheDir = path.join(self.daemonDir, "cache")
         configDir = path.join(self.daemonDir, "config")
-        iddbDir = path.join(self.daemonDir, "iddb")
         pluginsDir = path.join(self.daemonDir, "plugins")
-        if path.isdir(cacheDir) and path.isdir(configDir) \
-               and path.isdir(iddbDir) and path.isdir(pluginsDir):
+        if path.isdir(cacheDir) and path.isdir(configDir)\
+               and path.isdir(pluginsDir):
             shutil.rmtree(cacheDir)
             shutil.rmtree(configDir)
-            shutil.rmtree(iddbDir)
             shutil.rmtree(pluginsDir)
         else:
             raise LockssError("Cache not in an expected state!")

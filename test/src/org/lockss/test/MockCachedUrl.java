@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrl.java,v 1.32 2006-05-27 06:36:04 tlipkis Exp $
+ * $Id: MockCachedUrl.java,v 1.33 2006-06-02 20:27:16 smorabito Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.test;
 
 import java.io.*;
 import java.math.*;
+import java.util.*;
 
 import org.lockss.plugin.*;
 import org.lockss.util.*;
@@ -46,6 +47,8 @@ import org.lockss.util.*;
  */
 
 public class MockCachedUrl implements CachedUrl {
+  Logger log = Logger.getLogger("MockCachedUrl");
+  private ArrayList versions;
   private ArchivalUnit au;
   private String url;
   private InputStream cachedIS;
@@ -59,8 +62,10 @@ public class MockCachedUrl implements CachedUrl {
   private Reader reader = null;
   private String cachedFile = null;
   private boolean isResource;
+  private int version = 0;
 
   public MockCachedUrl(String url) {
+    this.versions = new ArrayList();
     this.url = url;
   }
 
@@ -92,19 +97,56 @@ public class MockCachedUrl implements CachedUrl {
   }
 
   public CachedUrl getCuVersion(int version) {
-    throw new UnsupportedOperationException("Not implemented");
+    if (version == 0) {
+      return this;
+    } else if (versions.isEmpty()) {
+      throw new UnsupportedOperationException("No versions.");
+    } else {
+      return (CachedUrl)versions.get(version); 
+    }
   }
 
   public CachedUrl[] getCuVersions() {
-    throw new UnsupportedOperationException("Not implemented");
+    // Always supply this as the current version
+    CachedUrl[] retVal = new CachedUrl[versions.size() + 1];
+    retVal[0] = this;
+    if (versions.size() > 0) {
+      System.arraycopy((CachedUrl[])versions.toArray(new CachedUrl[versions.size()]),
+                       0, retVal, 1, versions.size());
+    }
+    return retVal;
   }
 
   public CachedUrl[] getCuVersions(int maxVersions) {
-    throw new UnsupportedOperationException("Not implemented");
+    int min = Math.min(maxVersions, versions.size() + 1);
+    // Always supply this as the current version
+    CachedUrl[] retVal = new CachedUrl[min];
+    retVal[0] = this;
+    if (min > 1) {
+      System.arraycopy((CachedUrl[])versions.toArray(new CachedUrl[min]),
+                       0, retVal, 1, min - 1);
+    }
+    return retVal;
   }
 
+  public void setVersion(int version) {
+    this.version = version;
+  }
+  
   public int getVersion() {
-    return 1;
+    return version;
+  }
+  
+  public void addVersion(String content) {
+    // Special case: If this is the first version, alias for 'addContent'
+    if (this.content == null) {
+      this.content = content;
+    } else {
+      MockCachedUrl cus = new MockCachedUrl(url, au);
+      cus.content = content;
+      cus.version = versions.size() + 1;
+      versions.add(cus);
+    }
   }
 
   public Reader openForReading() {

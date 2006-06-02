@@ -18,14 +18,6 @@ public interface VoteBlocks extends LockssSerializable {
    * @param b VoteBlock to add.
    */
   public void addVoteBlock(VoteBlock b) throws IOException;
-
-  /**
-   * Return the VoteBlock at a given index.
-   * 
-   * @param The index of the VoteBlock to return.
-   * @return  The VoteBlock at the given index.
-   */
-  public VoteBlock getVoteBlock(int i) throws IOException;
   
   /**
    * <p>Get a representation of this collection suitable for streaming

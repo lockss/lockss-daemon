@@ -1,5 +1,5 @@
 /*
- * $Id: MockMessageDigest.java,v 1.9 2004-04-05 08:03:12 tlipkis Exp $
+ * $Id: MockMessageDigest.java,v 1.10 2006-06-02 20:27:16 smorabito Exp $
  */
 
 /*
@@ -41,7 +41,7 @@ import java.util.*;
  * @version 0.0
  */
 
-public class MockMessageDigest extends MessageDigest {
+public class MockMessageDigest extends MessageDigest implements Cloneable {
 
   Vector inputList;
 
@@ -169,5 +169,12 @@ public class MockMessageDigest extends MessageDigest {
     return bytes;
   }
 
-
+  /**
+   * BlockHasher requires cloneable message digests. 
+   */
+  public Object clone() {
+    MockMessageDigest retVal = new MockMessageDigest();
+    retVal.inputList = (Vector)inputList.clone();
+    return retVal;
+  }
 }

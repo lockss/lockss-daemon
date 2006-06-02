@@ -1,5 +1,5 @@
 /*
- * $Id: VoterUserData.java,v 1.11 2006-04-10 05:31:01 smorabito Exp $
+ * $Id: VoterUserData.java,v 1.12 2006-06-02 20:27:15 smorabito Exp $
  */
 
 /*
@@ -57,6 +57,7 @@ public class VoterUserData
   private String pluginVersion;
   private long duration;
   private long deadline;
+  private long voteDeadline;
   private String hashAlgorithm;
   private VoteBlocks voteBlocks;
   private String url;
@@ -160,6 +161,14 @@ public class VoterUserData
 
   public void setDeadline(long deadline) {
     this.deadline = deadline;
+  }
+  
+  public long getVoteDeadline() {
+    return deadline;
+  }
+  
+  public void setVoteDeadline(long voteDeadline) {
+    this.voteDeadline = deadline;
   }
 
   public String getHashAlgorithm() {

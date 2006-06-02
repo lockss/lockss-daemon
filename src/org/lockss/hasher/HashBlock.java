@@ -1,5 +1,5 @@
 /*
- * $Id: HashBlock.java,v 1.4 2006-03-01 19:12:58 smorabito Exp $
+ * $Id: HashBlock.java,v 1.5 2006-06-02 20:27:15 smorabito Exp $
  */
 
 /*
@@ -28,100 +28,231 @@ Except as contained in this notice, the name of Stanford University shall not
 be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
-*/
+ */
 
 package org.lockss.hasher;
 import java.security.*;
+import java.util.*;
 
 import org.lockss.plugin.*;
 import org.lockss.util.LockssSerializable;
 
 /** Result of a single-block V3 hash, passed to the ContentHasher's
- * HashBlockCallback */
+ * HashBlockCallback.  A block contains multiple versions, which can be
+ * iterated over or returned as an array.  This array is sorted and iterated
+ * in the order <i>newest</i> to <i>oldest</i> version. */
 public class HashBlock implements LockssSerializable {
   String url;
-  long filteredOffset;
-  long filteredLength;
-  long unfilteredOffset;
-  long unfilteredLength;
-  boolean endOfFile;
-  boolean lastVersion;
-  byte[][] hashes;
+  TreeSet versions;
 
   public HashBlock(CachedUrl cu) {
+    this.versions = new TreeSet();
     this.url = cu.getUrl();
   }
-  
+
   public String getUrl() {
     return url;
-  }
-
-  public void setFilteredOffset(long offset) {
-    filteredOffset = offset;
-  }
-
-  public long getFilteredOffset() {
-    return filteredOffset;
-  }
-
-  public void setFilteredLength(long length) {
-    filteredLength = length;
-  }
-
-  public long getFilteredLength() {
-    return filteredLength;
-  }
-
-  public void setUnfilteredOffset(long offset) {
-    unfilteredOffset = offset;
-  }
-
-  public long getUnfilteredOffset() {
-    return unfilteredOffset;
-  }
-
-  public void setUnfilteredLength(long length) {
-    unfilteredLength = length;
-  }
-
-  public long getUnfilteredLength() {
-    return unfilteredLength;
-  }
-
-  public void setDigests(MessageDigest[] digests) {
-    int len = digests.length;
-    hashes = new byte[len][];
-    for (int i = 0; i < len; i++) {
-      hashes[i] = digests[i].digest();
-    }
-  }
-  
-  public byte[][] getHashes() {
-    return hashes;
-  }
-
-  public void setEndOfFile(boolean val) {
-    endOfFile = val;
-  }
-
-  public boolean isEndOfFile() {
-    return endOfFile;
-  }
-
-  public void setLastVersion(boolean val) {
-    lastVersion = val;
-  }
-
-  public boolean isLastVersion() {
-    return lastVersion;
-  }
-
-  public boolean isWholeFile() {
-    return unfilteredOffset == 0 && endOfFile;
   }
 
   public String toString() {
     return "[HBlock: " + getUrl() + "]";
   }
+  
+  public void addVersion(long unfilteredOffset,
+                         long unfilteredLength,
+                         long filteredOffset,
+                         long filteredLength,
+                         MessageDigest[] digests,
+                         int repositoryVersion) {
+    versions.add(new HashBlock.Version(unfilteredOffset, unfilteredLength,
+                                       filteredOffset, filteredLength,
+                                       digests, repositoryVersion));
+  }
+  
+  public int size() {
+    return versions.size();
+  }
+  
+  public Iterator versionIterator() {
+    return versions.iterator();
+  }
+  
+  public HashBlock.Version currentVersion() {
+    if (versions.size() > 0) {
+      return (HashBlock.Version)versions.first();
+    } else {
+      return null;
+    }
+  }
+  
+  public HashBlock.Version lastVersion() {
+    if (versions.size() > 0) {
+      return (HashBlock.Version)versions.last();
+    } else {
+      return null;
+    }
+  }
+  
+  public HashBlock.Version[] getVersions() {
+    Version[] retVal =
+      (Version[])versions.toArray(new Version[versions.size()]); 
+    return retVal;
+  }
+   
 
+  /**
+   * Internal representation of a version of a hash block.  Natural sort
+   * order is by repository version.
+   *
+   */
+  public class Version implements Comparable {
+    long filteredOffset;
+    long filteredLength;
+    long unfilteredOffset;
+    long unfilteredLength;
+    boolean endOfFile;
+    boolean lastVersion;
+    byte[][] hashes;
+    int repositoryVersion;
+    
+    public Version(long unfilteredOffset, long unfilteredLength,
+                   long filteredOffset, long filteredLength,
+                   MessageDigest[] digests, int repositoryVersion) {
+      this.unfilteredOffset = unfilteredOffset;
+      this.unfilteredLength = unfilteredLength;
+      this.filteredOffset = filteredOffset;
+      this.filteredLength = filteredLength;
+      this.repositoryVersion = repositoryVersion;
+      setDigests(digests);
+    }
+
+    public void setFilteredOffset(long offset) {
+      filteredOffset = offset;
+    }
+
+    public long getFilteredOffset() {
+      return filteredOffset;
+    }
+
+    public void setFilteredLength(long length) {
+      filteredLength = length;
+    }
+
+    public long getFilteredLength() {
+      return filteredLength;
+    }
+
+    public void setUnfilteredOffset(long offset) {
+      unfilteredOffset = offset;
+    }
+
+    public long getUnfilteredOffset() {
+      return unfilteredOffset;
+    }
+
+    public void setUnfilteredLength(long length) {
+      unfilteredLength = length;
+    }
+
+    public long getUnfilteredLength() {
+      return unfilteredLength;
+    }
+
+    public void setDigests(MessageDigest[] digests) {
+      int len = digests.length;
+      hashes = new byte[len][];
+      for (int i = 0; i < len; i++) {
+        hashes[i] = digests[i].digest();
+      }
+    }
+
+    public byte[][] getHashes() {
+      return hashes;
+    }
+
+    public void setEndOfFile(boolean val) {
+      endOfFile = val;
+    }
+
+    public boolean isEndOfFile() {
+      return endOfFile;
+    }
+
+    public void setLastVersion(boolean val) {
+      lastVersion = val;
+    }
+
+    public boolean isLastVersion() {
+      return lastVersion;
+    }
+
+    public boolean isWholeFile() {
+      return unfilteredOffset == 0 && endOfFile;
+    }
+    
+    public int getRepositoryVersion() {
+      return repositoryVersion;
+    }
+    
+    // This mess is necessary because BlockHasher may add versions in
+    // an arbitrary order, but we must be sure to iterate over them
+    // in a predictable order.  The blocks are therefore held in a sorted
+    // set, ordered by repository version number, from most recent to least
+    // recent.
+
+    public boolean equals(Object o) {
+      if (!(o instanceof HashBlock.Version)) {
+        return false;
+      }
+      if (this == o) {
+        return true;
+      }
+      HashBlock.Version v = (HashBlock.Version)o;
+      return (this.endOfFile == v.endOfFile &&
+              this.lastVersion == v.lastVersion && 
+              this.filteredLength == v.filteredLength &&
+              this.filteredOffset == v.filteredOffset &&
+              this.unfilteredLength == v.unfilteredLength &&
+              this.unfilteredOffset == v.unfilteredOffset &&
+              this.repositoryVersion == v.repositoryVersion);
+    }
+    
+    public int hashCode() {
+      int result = 17;
+      result = result * 37 + repositoryVersion;
+      result = result * 37 + (int)(unfilteredOffset ^ (unfilteredOffset >>> 32));
+      result = result * 37 + (int)(unfilteredLength ^ (unfilteredLength >>> 32));
+      result = result * 37 + (int)(filteredOffset ^ (filteredOffset >>> 32));
+      result = result * 37 + (int)(filteredLength ^ (filteredLength >>> 32));
+      result = result * 37 + (endOfFile ? 1 : 0);
+      result = result * 37 + (lastVersion ? 1 : 0);
+      return result;
+    }
+    
+    public int compareTo(Object o) {
+      final int BEFORE = -1;
+      final int EQUAL = 0;
+      final int AFTER = 1;
+      
+      if (!(o instanceof HashBlock.Version)) {
+        throw new ClassCastException();
+      }
+      
+      if (this == o) {
+        return 0;
+      }
+
+      HashBlock.Version v = (HashBlock.Version)o;
+      
+      if (this.repositoryVersion > v.repositoryVersion) {
+        return BEFORE;
+      }
+      
+      if (this.repositoryVersion < v.repositoryVersion) {
+        return AFTER;
+      }
+      
+      return EQUAL;
+    }
+  }
 }

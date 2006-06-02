@@ -1,5 +1,5 @@
 /*
- * $Id: ParticipantUserData.java,v 1.5 2006-04-28 07:21:13 smorabito Exp $
+ * $Id: ParticipantUserData.java,v 1.6 2006-06-02 20:27:15 smorabito Exp $
  */
 
 /*
@@ -55,19 +55,17 @@ public class ParticipantUserData implements LockssSerializable {
   private byte[] remainingEffortProof;
   private byte[] repairEffortProof;
   private byte[] receiptEffortProof;
-  private String errorMsg;
   private boolean isVoteComplete = false;
   private boolean isOuterCircle = false;
   private PsmInterpStateBean psmState;
-  private int voteBlockIndex = 0;
-  private String statusString;
+  private String statusString = V3Poller.PEER_STATUS_INITIALIZED;
+  private VoteBlocksIterator voteBlockIterator;
 
   /** Transient non-serialized fields */
   private transient V3Poller poller;
   private transient PollerStateBean pollState;
   private transient PsmInterp psmInterp;
   private transient File messageDir;
-  
 
   private static Logger log = Logger.getLogger("PollerUserData");
 
@@ -208,33 +206,15 @@ public class ParticipantUserData implements LockssSerializable {
     return voteBlocks;
   }
 
-  public int getVoteBlockIndex() {
-    return voteBlockIndex;
-  }
-
-  public void setVoteBlockIndex(int i) {
-    this.voteBlockIndex = i;
-  }
-
-  // Convenience method.
-  public VoteBlock getVoteBlock(int index) throws IOException {
-    return voteBlocks.getVoteBlock(index);
-  }
-
   /**
    * Return the vote block iterator for this peer.
    * @return the vote block iterator for this peer.
    */
   public VoteBlocksIterator getVoteBlockIterator() {
-    return voteBlocks.iterator();
-  }
-
-  public void setErrorMessage(String s) {
-    this.errorMsg = s;
-  }
-
-  public String getErrorMessage() {
-    return errorMsg;
+    if (voteBlockIterator == null && voteBlocks != null) {
+      voteBlockIterator = voteBlocks.iterator();
+    }
+    return voteBlockIterator;
   }
 
   public String toString() {
@@ -273,7 +253,7 @@ public class ParticipantUserData implements LockssSerializable {
   }
 
   public long getDeadline() {
-    return pollState.getDeadline();
+    return pollState.getPollDeadline();
   }
 
   public String getLastHashedBlock() {
@@ -289,7 +269,7 @@ public class ParticipantUserData implements LockssSerializable {
   }
 
   public int getPollVersion() {
-    return pollState.getPollVersion();
+    return pollState.getProtocolVersion();
   }
 
   public String getUrl() {
@@ -326,10 +306,6 @@ public class ParticipantUserData implements LockssSerializable {
 
   void tallyVoter() {
     poller.tallyVoter(getVoterId());
-  }
-
-  public void handleError() {
-    poller.handleError(getVoterId(), getErrorMessage());
   }
 
   /*

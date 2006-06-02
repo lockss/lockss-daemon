@@ -1,5 +1,5 @@
 /*
- * $Id: V3VoterSerializer.java,v 1.6 2005-12-01 01:54:44 smorabito Exp $
+ * $Id: V3VoterSerializer.java,v 1.7 2006-06-02 20:27:15 smorabito Exp $
  */
 
 /*
@@ -43,7 +43,8 @@ public class V3VoterSerializer extends V3Serializer {
 
   public V3VoterSerializer(LockssDaemon daemon)
       throws PollSerializerException {
-    this(daemon, null);
+    super(daemon);
+    this.voterUserDataFile = new File(pollDir, VOTER_USER_DATA_FILE);
   }
 
   public V3VoterSerializer(LockssDaemon daemon, File dir)

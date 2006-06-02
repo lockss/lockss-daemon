@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockHasher.java,v 1.4 2006-03-01 02:50:13 smorabito Exp $
+ * $Id: TestBlockHasher.java,v 1.5 2006-06-02 20:27:16 smorabito Exp $
  */
 
 /*
@@ -65,7 +65,7 @@ public class TestBlockHasher extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-    dig = new MockMessageDigest();
+    dig = new MockMessageDigest(); 
   }
 
   MockArchivalUnit setupContentTree() {
@@ -89,6 +89,11 @@ public class TestBlockHasher extends LockssTestCase {
   void addContent(MockArchivalUnit mau, String url, String content) {
     MockCachedUrl cu = (MockCachedUrl)mau.makeCachedUrl(url);
     cu.setContent(content);
+  }
+  
+  void addVersion(MockArchivalUnit mau, String url, String content) {
+    MockCachedUrl cu = (MockCachedUrl)mau.makeCachedUrl(url);
+    cu.addVersion(content);
   }
 
   private long hashToEnd(CachedUrlSetHasher hasher, int stepSize)
@@ -130,9 +135,15 @@ public class TestBlockHasher extends LockssTestCase {
     Event event = (Event)eventObj;
     HashBlock hblock = event.hblock;
     assertEquals(expectedUrl, hblock.getUrl());
-    assertEquals(expectedLength, hblock.getUnfilteredLength());
+    assertEquals(expectedLength, hblock.currentVersion().getUnfilteredLength());
     for (int ix = 0; ix < event.byteArrays.length; ix++) {
       assertEquals(expectedHashed[ix], event.byteArrays[ix]);
+    }
+  }
+  
+  void assertEqualBytes(byte[] expectedHashed, byte[][] actualHash) {
+    for (int ix = 0; ix < actualHash.length; ix++) {
+      assertEquals(expectedHashed, actualHash[ix]);
     }
   }
 
@@ -189,6 +200,30 @@ public class TestBlockHasher extends LockssTestCase {
     assertEmpty(handRec.getEvents());
   }
 
+  public void testSetConfig() throws Exception {
+    MockCachedUrlSet cus = new MockCachedUrlSet();
+    cus.setHashIterator(CollectionUtil.EMPTY_ITERATOR);
+    cus.setFlatIterator(null);
+    cus.setEstimatedHashDuration(54321);
+    MessageDigest[] digs = { dig, dig };
+    byte[][] inits = {null, null};
+    
+    // First hasher should have default hashUpTo
+    BlockHasher hasher = new BlockHasher(cus, digs, inits, hand0);
+    assertEquals(hasher.getMaxVersions(),
+                 BlockHasher.DEFAULT_HASH_MAX_VERSIONS);
+    
+    ConfigurationUtil.setFromArgs(BlockHasher.PARAM_HASH_MAX_VERSIONS, "99");
+    
+    BlockHasher hasher2 = new BlockHasher(cus, digs, inits, hand0);
+    assertEquals(hasher2.getMaxVersions(), 99);
+    
+    ConfigurationUtil.setFromArgs(BlockHasher.PARAM_HASH_MAX_VERSIONS, "18");
+
+    BlockHasher hasher3 = new BlockHasher(cus, digs, inits, hand0);
+    assertEquals(hasher3.getMaxVersions(), 18);
+  }
+
   public void testAccessors() throws IOException {
     MockCachedUrlSet cus = new MockCachedUrlSet();
     cus.setHashIterator(CollectionUtil.EMPTY_ITERATOR);
@@ -231,11 +266,71 @@ public class TestBlockHasher extends LockssTestCase {
     assertEquals(1, events.size());
     assertEvent(urls[4], 3, ListUtil.list(bytes("foo")), events.get(0));
   }
-
+  
+  /**
+   * Ensure that MessageDigests implementations used on the test platform
+   * are Cloneable.  This is fairly fragile, since the underlying implementation
+   * of the MessageDigests may or may not be the same between VMs,
+   * but this seems to be the only way to test for it.
+   * 
+   * @throws Exception
+   */
+  public void tesMessageDigestImplementationsAreCloneable() throws Exception {
+    MessageDigest md5 = MessageDigest.getInstance("MD5");
+    MessageDigest sha1 = MessageDigest.getInstance("SHA1");
+    MessageDigest sha = MessageDigest.getInstance("SHA");
+    
+    MessageDigest[] testDigs = {md5, sha1, sha};
+    byte[][] inits = {null, null, null};
+    
+    CaptureBlocksEventHandler blockHandler = 
+      new CaptureBlocksEventHandler();
+    MockArchivalUnit mau = setupContentTree();
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    // Should NOT throw IllegalArgumentException.
+    CachedUrlSetHasher hasher =
+      new BlockHasher(cus, testDigs, inits, blockHandler);
+  }
+  
   public void testOneContent() throws Exception {
     testOneContent(1);
     testOneContent(3);
     testOneContent(100);
+  }
+  
+  public void testOneContentThreeVersions(int stepSize) throws Exception {
+    CaptureBlocksEventHandler blockHandler = 
+      new CaptureBlocksEventHandler();
+    MockArchivalUnit mau = setupContentTree();
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    
+    // Adding versions, from least recent to most recent.
+    addVersion(mau, urls[2], "aaaa");
+    addVersion(mau, urls[2], "bb");
+    addVersion(mau, urls[2], "ccc");
+    
+    MessageDigest[] digs = { dig };
+    byte[][] inits = {null};
+    CachedUrlSetHasher hasher = new BlockHasher(cus, digs, inits, blockHandler);
+    // 9 bytes total for all three versions.
+    assertEquals(9, hashToEnd(hasher, stepSize));
+    assertTrue(hasher.finished());
+    List blocks = blockHandler.getBlocks();
+    assertEquals(1, blocks.size());
+    HashBlock b = (HashBlock)blocks.get(0);
+    assertEquals(3, b.size());
+    
+    HashBlock.Version[] versions = b.getVersions();
+
+    assertEqualBytes(bytes("ccc"), versions[0].getHashes());
+    assertEqualBytes(bytes("bb"), versions[1].getHashes());
+    assertEqualBytes(bytes("aaaa"), versions[2].getHashes());
+  }
+  
+  public void testOneContentThreeVersions() throws Exception {
+    testOneContentThreeVersions(1);
+    testOneContentThreeVersions(3);
+    testOneContentThreeVersions(100);
   }
 
   public void testInputStreamIsClosed() throws IOException {
@@ -319,7 +414,76 @@ public class TestBlockHasher extends LockssTestCase {
     testSeveralContent(3);
     testSeveralContent(10000);
   }
+  
+  public void testSeveralContentSeveralVersions(int stepSize) throws Exception {
+    CaptureBlocksEventHandler handler = new CaptureBlocksEventHandler();
+    
+    MockArchivalUnit mau = setupContentTree();
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    
+    // Added from least recent to most recent...
+    String url4v1 = "This is some kind of content for url4, version 1";
+    String url4v2 = "This is some kind of content for url4, version 2";
+    String url4v3 = "This is some kind of content for url4, version 3";
+    String url4v4 = "This is some kind of content for url4, version 4";
+    
+    String url5v1 = "And here's some more content for version 1 of url5";
+    String url5v2 = "And here's some content for version 2 of url5";
+    
+    String url6v1 = "Let's not forget some content for version 1 of url6";
+    String url6v2 = "This version was much shorter!";
+    String url6v3 = "This was version 3 of url6.  It was a good version.";
+    
+    addVersion(mau, urls[4], url4v1);
+    addVersion(mau, urls[4], url4v2);
+    addVersion(mau, urls[4], url4v3);
+    addVersion(mau, urls[4], url4v4);
 
+    addVersion(mau, urls[5], url5v1);
+    addVersion(mau, urls[5], url5v2);
+
+    addVersion(mau, urls[6], url6v1);
+    addVersion(mau, urls[6], url6v2);
+    addVersion(mau, urls[6], url6v3);
+    
+    MessageDigest[] digs = { dig };
+    byte[][] inits = {null};
+    CachedUrlSetHasher hasher = new BlockHasher(cus, digs, inits, handler);
+    int len = url4v1.length() + url4v2.length() + url4v3.length() + 
+              url4v3.length() + url5v1.length() + url5v2.length() +
+              url6v1.length() + url6v2.length() + url6v3.length();
+              
+    assertEquals(len, hashToEnd(hasher, stepSize));
+    assertTrue(hasher.finished());
+    
+    List blocks = handler.getBlocks();
+    assertEquals(3, blocks.size());
+    
+    HashBlock block1 = (HashBlock)blocks.get(0);
+    assertEquals(4, block1.size());
+    assertEqualBytes(bytes(url4v4), block1.getVersions()[0].getHashes());
+    assertEqualBytes(bytes(url4v3), block1.getVersions()[1].getHashes());
+    assertEqualBytes(bytes(url4v2), block1.getVersions()[2].getHashes());
+    assertEqualBytes(bytes(url4v1), block1.getVersions()[3].getHashes());
+  
+    HashBlock block2 = (HashBlock)blocks.get(1);
+    assertEquals(2, block2.size());
+    assertEqualBytes(bytes(url5v2), block2.getVersions()[0].getHashes());
+    assertEqualBytes(bytes(url5v1), block2.getVersions()[1].getHashes());
+
+    HashBlock block3 = (HashBlock)blocks.get(2);
+    assertEquals(3, block3.size());
+    assertEqualBytes(bytes(url6v3), block3.getVersions()[0].getHashes());
+    assertEqualBytes(bytes(url6v2), block3.getVersions()[1].getHashes());
+    assertEqualBytes(bytes(url6v1), block3.getVersions()[2].getHashes());
+  }
+
+  public void testSeveralContentSeveralVersions() throws Exception {
+    testSeveralContentSeveralVersions(1);
+    testSeveralContentSeveralVersions(3);
+    testSeveralContentSeveralVersions(100);
+    testSeveralContentSeveralVersions(10000);
+  }
   public void testInitBytes(int stepSize) throws Exception {
     String chal = "challenge";
     RecordingEventHandler handRec = new RecordingEventHandler();
@@ -421,13 +585,25 @@ public class TestBlockHasher extends LockssTestCase {
     }
   }
 
+  class CaptureBlocksEventHandler implements BlockHasher.EventHandler {
+    List blocks = new ArrayList();
+    
+    public void blockDone(HashBlock hblock) {
+      blocks.add(hblock);
+    }
+
+    public List getBlocks() {
+      return blocks;
+    }
+  }
+  
   class RecordingEventHandler implements BlockHasher.EventHandler {
     List events = new ArrayList();
 
     public void blockDone(HashBlock hblock) {
-      events.add(new Event(hblock, hblock.getHashes()));
+      events.add(new Event(hblock, hblock.currentVersion().getHashes()));
     }
-
+ 
     public void reset() {
       events = new ArrayList();
     }
@@ -436,5 +612,4 @@ public class TestBlockHasher extends LockssTestCase {
       return events;
     }
   }
-
 }

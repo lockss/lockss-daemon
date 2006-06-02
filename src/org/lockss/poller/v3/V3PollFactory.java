@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollFactory.java,v 1.3 2005-11-16 07:44:10 smorabito Exp $
+ * $Id: V3PollFactory.java,v 1.4 2006-06-02 20:27:15 smorabito Exp $
  */
 
 /*
@@ -58,11 +58,13 @@ public class V3PollFactory extends BasePollFactory {
     PREFIX + "maxMultiplier";
   public static final int DEFAULT_DURATION_MULTIPLIER_MAX = 7;
   /** The minimum duration for a V3 poll */
-  public static final String PARAM_POLL_DURATION_MIN = PREFIX + "minPollDuration";
-  public static long DEFAULT_POLL_DURATION_MIN = 3 * Constants.MINUTE;
+  public static final String PARAM_POLL_DURATION_MIN =
+    PREFIX + "minPollDuration";
+  public static long DEFAULT_POLL_DURATION_MIN = 24 * Constants.HOUR;
   /** The maximum duration for a V3 poll */
-  public static final String PARAM_POLL_DURATION_MAX = PREFIX + "maxPollDuration";
-  public static long DEFAULT_POLL_DURATION_MAX = 5 * Constants.DAY;
+  public static final String PARAM_POLL_DURATION_MAX = 
+    PREFIX + "maxPollDuration";
+  public static long DEFAULT_POLL_DURATION_MAX = 5 * Constants.WEEK;
 
   private int minDurationMultiplier = DEFAULT_DURATION_MULTIPLIER_MIN;
   private int maxDurationMultiplier = DEFAULT_DURATION_MULTIPLIER_MAX;

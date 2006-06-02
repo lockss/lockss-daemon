@@ -2,11 +2,12 @@ package org.lockss.protocol;
 
 import java.util.*;
 import java.io.*;
+import org.lockss.util.*;
 
 /**
  * Provide an Iterator with a <tt>peek</tt> method.
  */
-public interface VoteBlocksIterator {
+public interface VoteBlocksIterator extends LockssSerializable {
 
   /**
    * Return true if the iteration has more VoteBlock objects.

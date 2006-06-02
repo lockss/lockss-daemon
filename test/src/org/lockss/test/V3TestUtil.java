@@ -2,7 +2,7 @@ package org.lockss.test;
 
 import org.lockss.poller.v3.*;
 /*
- * $Id: V3TestUtil.java,v 1.3 2006-03-01 02:50:12 smorabito Exp $
+ * $Id: V3TestUtil.java,v 1.4 2006-06-02 20:27:16 smorabito Exp $
  */
 
 /*
@@ -90,7 +90,7 @@ public class V3TestUtil extends LockssTestCase {
     assertEquals(b1.getLastHashedBlock(), b2.getLastHashedBlock());
     assertEquals(b1.getPluginVersion(), b2.getPluginVersion());
     assertEquals(b1.getUrl(), b2.getUrl());
-    assertEquals(b1.getDeadline(), b2.getDeadline());
+    assertEquals(b1.getPollDeadline(), b2.getPollDeadline());
     assertEquals(b1.getPollerId().getIdString(),
                  b2.getPollerId().getIdString());
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.165 2006-03-01 02:50:14 smorabito Exp $
+ * $Id: PollManager.java,v 1.166 2006-06-02 20:27:15 smorabito Exp $
  */
 
 /*
@@ -30,6 +30,7 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
+
 package org.lockss.poller;
 
 import java.io.*;
@@ -47,6 +48,7 @@ import org.lockss.poller.v3.V3Serializer.PollSerializerException;
 import org.lockss.protocol.*;
 import org.lockss.state.NodeManager;
 import org.lockss.util.*;
+import EDU.oswego.cs.dl.util.concurrent.*;
 
 /**
  * <p>Class that manages the polling process.</p>
@@ -86,6 +88,10 @@ public class PollManager
   private AuEventHandler auEventHandler;
   private HashMap serializedPollers;
   private HashMap serializedVoters;
+  
+  // Executor used to carry out serialized poll operations. 
+  // Implementations include a queued poll executor and a pooled poll executor.
+  private PollRunner theTaskRunner;
 
   // our configuration variables
   protected long m_recentPollExpireTime = DEFAULT_RECENT_EXPIRATION;
@@ -107,6 +113,9 @@ public class PollManager
    */
   public void startService() {
     super.startService();
+    // Create a poll runner.
+    theTaskRunner = new PollRunner();
+    
     // the services we use on an ongoing basis
     theIDManager = theDaemon.getIdentityManager();
     theHashService = theDaemon.getHashService();
@@ -182,6 +191,7 @@ public class PollManager
     theRouter.unregisterMessageHandler(m_msgHandler);
 
     // null anything which might cause problems
+    theTaskRunner = null;
     theIDManager = null;
     theHashService = null;
     theSystemMetrics = null;
@@ -569,6 +579,13 @@ public class PollManager
     theAlertManager.raiseAlert(alert);
   }
 
+  /**
+   * Ask that the specified poll runner task be executed.
+   */
+  public void runTask(PollRunner.Task task) {
+    theTaskRunner.runTask(task);
+  }
+  
   /**
    * send a message to the multicast address for this archival unit
    * @param msg the LcapMessage to send

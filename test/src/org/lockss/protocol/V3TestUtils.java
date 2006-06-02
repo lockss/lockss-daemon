@@ -11,9 +11,7 @@ public class V3TestUtils {
     for (int ix = 0; ix < count; ix++) {
       String fileName = "/test-" + ix + ".html";
       byte[] hash = V3TestUtils.computeHash(fileName);
-      VoteBlock vb =
-        new VoteBlock("/test-" + ix + ".html", 1024, 0,
-                      1024, 0, hash, hash, VoteBlock.CONTENT_VOTE);
+      VoteBlock vb = V3TestUtils.makeVoteBlock("/test-" + ix + ".html");
       vbList.add(vb);
     }
     return vbList;
@@ -28,5 +26,19 @@ public class V3TestUtils {
     } catch (java.security.NoSuchAlgorithmException e) {
       return new byte[0];
     }
+  }
+  
+  public static VoteBlock makeVoteBlock(String url) {
+    return V3TestUtils.makeVoteBlock(url, 1);
+  }
+
+  public static VoteBlock makeVoteBlock(String url, int versions) {
+    VoteBlock vb = new VoteBlock(url, VoteBlock.CONTENT_VOTE);
+    for (int ix = 0; ix < versions; ix++) {
+      vb.addVersion(0L, 1000L, 0L, 1000L,
+                    ByteArray.makeRandomBytes(20),
+                    ByteArray.makeRandomBytes(20));
+    }
+    return vb;
   }
 }

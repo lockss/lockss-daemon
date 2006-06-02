@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.75 2006-05-30 23:09:53 tlipkis Exp $
+ * $Id: NullPlugin.java,v 1.76 2006-06-02 20:27:16 smorabito Exp $
  */
 
 /*

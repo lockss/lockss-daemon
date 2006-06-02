@@ -871,8 +871,8 @@ class TotalLossRecoveryTestCase(LockssTestCase):
                "Never called top level content poll"
         log.info("Called top level content poll.")
 
-	log.info("Waiting to win top level content poll.")
-	assert client.waitForWonTopLevelContentPoll(simAu, timeout=self.timeout),\
+        log.info("Waiting to win top level content poll.")
+        assert client.waitForWonTopLevelContentPoll(simAu, timeout=self.timeout),\
 	       "Never won top level content poll"
         log.info("Won top level content poll.")
 
@@ -1171,19 +1171,13 @@ class V3TestCase(LockssTestCase):
         LockssTestCase.setUp(self)
         # V3 has a much shorter default timeout, 8 minutes.
         self.timeout = int(config.get('timeout', 60 * 8))
-        baseV3Port = 8801
 
         for i in range(0, len(self.clients)):
-            # Generate an initial list of peers, minus ourselves
-            # (V3 polls are asynchronous)
-            peerIds = []
-            for port in range(0, len(self.clients)):
-                peerIds.append("TCP:[127.0.0.1]:%d" % (baseV3Port + port))
-
             extraConf = {"org.lockss.auconfig.allowEditDefaultOnlyParams": "true",
                          "org.lockss.comm.enabled": "false",
                          "org.lockss.scomm.enabled": "true",
                          "org.lockss.scomm.maxMessageSize": "33554432",  # 32MB
+                         "org.lockss.poll.v3.deleteExtraFiles": "true",
                          "org.lockss.poll.v3.quorum": "3",
                          "org.lockss.poll.v3.minPollSize": "4",
                          "org.lockss.poll.v3.maxPollSize": "4",
@@ -1191,8 +1185,10 @@ class V3TestCase(LockssTestCase):
                          "org.lockss.poll.v3.maxNominationSize": "1",
                          "org.lockss.poll.v3.minPollDuration": "5m",
                          "org.lockss.poll.v3.maxPollDuration": "6m",
-                         "org.lockss.localV3Identity": "TCP:[127.0.0.1]:%d" % (baseV3Port + i),
-                         "org.lockss.id.initialV3PeerList": (";".join(peerIds))}
+                         "org.lockss.poll.v3.voteDeadlinePadding": "30s",
+                         "org.lockss.localV3Identity": "TCP:[127.0.0.1]:%d" % (self.getBaseV3Port() + i),
+                         "org.lockss.id.initialV3PeerList": self.getInitialPeerList() }
+            extraConf.update(self.getTestLocalConf())
 
             self.framework.appendLocalConfig(extraConf, self.clients[i])
 
@@ -1210,6 +1206,19 @@ class V3TestCase(LockssTestCase):
 
     def getDaemonCount(self):
         return 5
+
+    def getInitialPeerList(self):
+        peerIds = []
+        for port in range(0, len(self.clients)):
+            peerIds.append("TCP:[127.0.0.1]:%d" % (self.getBaseV3Port() + port))
+        return ";".join(peerIds)
+        
+    def getTestLocalConf(self):
+        "Override this method to append local per-test configuration"
+        return {}
+    
+    def getBaseV3Port(self):
+        return 8801
 
 class SimpleDamageV3TestCase(V3TestCase):
     """ Test a basic V3 Poll. """
@@ -1624,6 +1633,247 @@ class RandomExtraFileV3TestCase(V3TestCase):
 def randomExtraFileV3TestCase():
     return RandomExtraFileV3TestCase()
 
+
+class VotersDontParticipateV3TestCase(V3TestCase):
+    """ Test a V3 poll where some peers do not participate. """
+    def getInitialPeerList(self):
+        """ Return the real participant list, plus some that do not really
+        exist """
+        return "%s;TCP:[127.0.0.1]:65520;TCP:[127.0.0.1]:65521;TCP:[127.0.0.1]:65522" % V3TestCase.getInitialPeerList(self)
+    
+    def getTestLocalConf(self):
+        return {"org.lockss.poll.v3.quorum": "3",
+                "org.lockss.poll.v3.minPollSize": "8",
+                "org.lockss.poll.v3.maxPollSize": "8"}
+
+    def runTest(self):
+        # Reasonably complex AU for testing
+        simAu = SimulatedAu('simContent', depth=1, branch=1,
+                            fileTypes=(FILE_TYPE_TEXT + FILE_TYPE_BIN),
+                            binFileSize=1024,
+                            numFiles=20, protocolVersion=3)
+
+        ##
+        ## Create simulated AUs
+        ##
+        log.info("Creating simulated AUs.")
+        for client in self.clients:
+            client.createAu(simAu)
+
+        ##
+        ## Assert that the AUs have been crawled.
+        ##
+        log.info("Waiting for simulated AUs to crawl.")
+        for client in self.clients:
+            if not (client.waitForSuccessfulCrawl(simAu)):
+                self.fail("AUs never completed initial crawl.")
+        log.info("AUs completed initial crawl.")
+
+        ## To use a specific client, uncomment this line.
+        client = self.clients[2]
+
+        ##
+        ## Damage the AU by creating an extra node.
+        ##
+        nodeList = client.randomCreateRandomNodes(simAu, 5, 15)
+        log.info("Created the following nodes on client %s:\n        %s" %
+                 (client, '\n        '.join([str(n) for n in nodeList])))
+
+        # Request a tree walk (deactivate and reactivate AU)
+        log.info("Requesting tree walk.")
+        client.requestTreeWalk(simAu)
+
+        log.info("Waiting for a V3 poll to be called...")
+        client.waitForV3Poller(simAu)
+
+        log.info("Successfully called a V3 poll.")
+
+        ## Just pause until we have better tests.
+        log.info("Waiting for V3 repair...")
+        # waitForV3Repair takes a list of nodes
+        client.waitForV3Repair(simAu, nodeList, timeout=self.timeout)
+        log.info("AU successfully repaired.")
+    
+def votersDontParticipateV3TestCase():
+    return VotersDontParticipateV3TestCase()
+
+class NoQuorumV3TestCase(V3TestCase):
+    """ Be sure a V3 poll with too few participants ends in No Quorum """
+    def getInitialPeerList(self):
+        """ Return the real participant list, plus some that do not really
+        exist """
+        return "%s;TCP:[127.0.0.1]:65520;TCP:[127.0.0.1]:65521;TCP:[127.0.0.1]:65522" % V3TestCase.getInitialPeerList(self)
+    
+    def getTestLocalConf(self):
+        return {"org.lockss.poll.v3.quorum": "6",
+                "org.lockss.poll.v3.minPollSize": "8",
+                "org.lockss.poll.v3.maxPollSize": "8"}
+
+    def runTest(self):
+        # Reasonably complex AU for testing
+        simAu = SimulatedAu('simContent', depth=1, branch=1,
+                            fileTypes=(FILE_TYPE_TEXT + FILE_TYPE_BIN),
+                            binFileSize=1024,
+                            numFiles=20, protocolVersion=3)
+
+        ##
+        ## Create simulated AUs
+        ##
+        log.info("Creating simulated AUs.")
+        for client in self.clients:
+            client.createAu(simAu)
+
+        ##
+        ## Assert that the AUs have been crawled.
+        ##
+        log.info("Waiting for simulated AUs to crawl.")
+        for client in self.clients:
+            if not (client.waitForSuccessfulCrawl(simAu)):
+                self.fail("AUs never completed initial crawl.")
+        log.info("AUs completed initial crawl.")
+
+        ## To use a specific client, uncomment this line.
+        client = self.clients[2]
+
+        ##
+        ## Damage the AU by creating an extra node.
+        ##
+        nodeList = client.randomCreateRandomNodes(simAu, 5, 15)
+        log.info("Created the following nodes on client %s:\n        %s" %
+                 (client, '\n        '.join([str(n) for n in nodeList])))
+
+        # Request a tree walk (deactivate and reactivate AU)
+        log.info("Requesting tree walk.")
+        client.requestTreeWalk(simAu)
+
+        log.info("Waiting for a V3 poll to be called...")
+        client.waitForV3Poller(simAu)
+
+        log.info("Successfully called a V3 poll.")
+
+        ## Just pause until we have better tests.
+        log.info("Waiting for V3 poll to report no quorum...")
+        # waitForV3Repair takes a list of nodes
+        client.waitForV3NoQuorum(simAu)
+        log.info("AU successfully reported No Quorum.")
+    
+def noQuorumV3TestCase():
+    return NoQuorumV3TestCase()
+
+class TotalLossRecoveryV3TestCase(V3TestCase):
+    """ Test repairing a cache under V3 that has lost all its contents """
+    def runTest(self):
+        # Pick a client to damage.
+        self.damagedClient = self.clients[0]
+        
+        # Two AUs: One for before the loss, one for after.
+        simAu = SimulatedAu('simContent', 0, 0, 0, protocolVersion=3)
+
+        ## Create simulated AUs
+        log.info("Creating simulated AUs.")
+        for client in self.clients:
+            client.createAu(simAu)
+
+        ## Assert that the AUs have been crawled.
+        log.info("Waiting for simulated AUs to crawl.")
+        for client in self.clients:
+            if not (client.waitForSuccessfulCrawl(simAu)):
+                self.fail("AUs never completed initial crawl.")
+        log.info("AUs completed initial crawl.")
+
+        # Select the appropriate client
+        client = self.damagedClient
+
+        # Request a tree walk (deactivate and reactivate AU)
+        log.info("Requesting tree walk.")
+        client.requestTreeWalk(simAu)
+
+        # expect to see a top level content poll called
+        log.info("Waiting for a V3 poll.")
+        assert client.waitForV3Poller(simAu),\
+            "Never called V3 poll."
+        log.info("Called V3 poll.")
+
+        log.info("Waiting to win V3 poll.")
+        assert client.waitForWonV3Poll(simAu, timeout=self.timeout),\
+           "Never won V3 poll"
+        log.info("Won V3 poll.")
+
+        log.info("Backing up cache configuration...")
+        client.backupConfiguration()
+        log.info("Backed up successfully.")
+
+        # All daemons should have recorded their agreeing peers at this
+        # point, so stop the client we're going to damage.
+        client.daemon.stop()
+        log.info("Stopped daemon running on UI port %s" % client.port)
+
+        client.simulateDiskFailure()
+        log.info("Deleted entire contents of cache on stopped daemon.")
+
+        #
+        # Write out a TitleDB entry for the simulated AU so it will be marked
+        # 'publisher down' when it is restored.
+        #
+        extraConf = {"org.lockss.auconfig.allowEditDefaultOnlyParams": "true",
+                     "org.lockss.plugin.registry": "org.lockss.plugin.simulated.SimulatedPlugin",
+                     "org.lockss.title.sim1.title": "Simulated Content: simContent",
+                     "org.lockss.title.sim1.journalTitle": "Simulated Content",
+                     "org.lockss.title.sim1.plugin": "org.lockss.plugin.simulated.SimulatedPlugin",
+                     "org.lockss.title.sim1.param.1.key": "root",
+                     "org.lockss.title.sim1.param.1.value": "simContent",
+                     "org.lockss.title.sim1.param.2.key": "depth",
+                     "org.lockss.title.sim1.param.2.value": "0",
+                     "org.lockss.title.sim1.param.3.key": "branch",
+                     "org.lockss.title.sim1.param.3.value": "0",
+                     "org.lockss.title.sim1.param.4.key": "numFiles",
+                     "org.lockss.title.sim1.param.4.value": "0",
+                     "org.lockss.title.sim1.param.5.key": "pub_down",
+                     "org.lockss.title.sim1.param.5.value": "true",
+                     "org.lockss.title.sim1.param.6.key": "protocol_version",
+                     "org.lockss.title.sim1.param.6.value": "3"}
+
+        self.framework.appendLocalConfig(extraConf, client)
+
+        time.sleep(5) # Give time for things to settle before starting again
+
+        client.daemon.start()
+
+        # Wait for the client to come up
+        assert client.waitForDaemonReady(), "Daemon never became ready"
+        log.info("Started daemon running on UI port %s" % client.port)
+
+        assert not client.hasAu(simAu)
+
+        # Now restore the backup file
+        log.info("Restoring cache configuration...")
+        client.restoreConfiguration(simAu)
+        log.info("Restored successfully.")
+
+        # These should be equal AU IDs, so both should return true
+        assert client.hasAu(simAu)
+
+        # Request a tree walk.
+        log.info("Requesting tree walk.")
+        client.requestTreeWalk(simAu)
+        
+        # expect to see a V3 poll called
+        log.info("Waiting for a V3 poll.")
+        assert client.waitForV3Poller(simAu),\
+            "Never called V3 poll."
+        log.info("Called V3 poll.")
+
+        # expect to see the AU successfully repaired
+        log.info("Waiting for successful V3 repair of AU.")
+        assert client.waitForCompleteV3Repair(simAu, timeout=self.timeout),\
+               "AU never repaired by V3."
+        log.info("AU successfully repaired by V3.")
+
+        # End of test.
+
+def totalLossRecoveryV3TestCase():
+    return TotalLossRecoveryV3TestCase()
+
 ###########################################################################
 ### Functions that build and return test suites.  These can be
 ### called by name when running this test script.
@@ -1675,6 +1925,8 @@ def simpleV3Tests():
     suite.addTest(SimpleExtraFileV3TestCase())
     suite.addTest(LastFileDeleteV3TestCase())
     suite.addTest(LastFileExtraV3TestCase())
+    suite.addTest(VotersDontParticipateV3TestCase())
+    suite.addTest(NoQuorumV3TestCase())
     return suite
 
 def randomV3Tests():

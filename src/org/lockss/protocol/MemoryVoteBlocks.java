@@ -50,8 +50,12 @@ public class MemoryVoteBlocks extends BaseVoteBlocks {
     voteBlocks.add(b);
   }
 
-  public VoteBlock getVoteBlock(int i) {
-    return (VoteBlock)voteBlocks.get(i);
+  protected VoteBlock getVoteBlock(int i) {
+    if (i >= 0 && i < voteBlocks.size()) {
+      return (VoteBlock)voteBlocks.get(i);
+    } else {
+      return null;
+    }
   }
 
   public int size() {
