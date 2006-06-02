@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrl.java,v 1.33 2006-06-02 20:27:16 smorabito Exp $
+ * $Id: MockCachedUrl.java,v 1.34 2006-06-02 23:01:11 smorabito Exp $
  */
 
 /*
@@ -105,16 +105,9 @@ public class MockCachedUrl implements CachedUrl {
       return (CachedUrl)versions.get(version); 
     }
   }
-
+  
   public CachedUrl[] getCuVersions() {
-    // Always supply this as the current version
-    CachedUrl[] retVal = new CachedUrl[versions.size() + 1];
-    retVal[0] = this;
-    if (versions.size() > 0) {
-      System.arraycopy((CachedUrl[])versions.toArray(new CachedUrl[versions.size()]),
-                       0, retVal, 1, versions.size());
-    }
-    return retVal;
+    return getCuVersions(Integer.MAX_VALUE);
   }
 
   public CachedUrl[] getCuVersions(int maxVersions) {
