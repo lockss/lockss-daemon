@@ -1,5 +1,5 @@
 /*
- * $Id: Deadline.java,v 1.38 2006-06-01 23:57:09 tlipkis Exp $
+ * $Id: Deadline.java,v 1.39 2006-06-02 19:59:29 tlipkis Exp $
  */
 
 /*
@@ -414,7 +414,7 @@ public class Deadline implements Comparable, LockssSerializable {
     subscribers.remove(callback);
   }
 
-  /** Call deadlineChanged() method of all sunbscribers.  NB: This must not
+  /** Call deadlineChanged() method of all subscribers.  NB: This must not
    * be synchronized, nor called from a synchronized method  */
   protected void changed() {
     // Make copy so can iterate unsynchronized
