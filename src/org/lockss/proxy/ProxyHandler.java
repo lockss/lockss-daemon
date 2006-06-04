@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.44 2006-05-23 02:58:49 tlipkis Exp $
+ * $Id: ProxyHandler.java,v 1.45 2006-06-04 04:00:07 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.44 2006-05-23 02:58:49 tlipkis Exp $
+// $Id: ProxyHandler.java,v 1.45 2006-06-04 04:00:07 tlipkis Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -571,7 +571,20 @@ public class ProxyHandler extends AbstractHttpHandler {
       }
       // We got a response, should we prefer it to what's in the cache?
       if (isInCache && preferCacheOverPubResponse(cu, conn)) {
+	// Remember that we served this URL from the cache, so that for a
+	// while we can serve it quickly, without incurring the cost of
+	// first checking with the publisher.
+
+	// XXX It's likely that the policy for determining when (and for
+	// how long) to put the URL in the recently-accessed-URL cache
+	// should differ from the policy for determining whether to serve
+	// the content from the cache.  E.g., if the publisher responds
+	// with 200, we should perhaps cache the URL if the content
+	// returned is the same as what we have (in case the publisher
+	// doesn't support if-modified-since).
+
 	proxyMgr.setRecentlyAccessedUrl(urlString);
+
 	serveFromCache(pathInContext, pathParams, request,
 		       response, cu);
 	return;
@@ -645,6 +658,8 @@ public class ProxyHandler extends AbstractHttpHandler {
     // Current policy is to serve from cache unless server supplied content.
     switch (code) {
     case HttpResponse.__200_OK:
+      // XXX Should run the plugin's login page checker here, as we want to
+      // serve out of cache in that case
       return false;
     }
     return true;

@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyManager.java,v 1.37 2006-05-23 02:58:49 tlipkis Exp $
+ * $Id: ProxyManager.java,v 1.38 2006-06-04 04:00:07 tlipkis Exp $
  */
 
 /*
@@ -75,7 +75,7 @@ public class ProxyManager extends BaseProxyManager {
   /** Duration during which successive accesses to a recently accessed URL
    * does not trigger a request to the publisher */
   static final String PARAM_URL_CACHE_DURATION = PREFIX + "urlCache.duration";
-  static final long DEFAULT_URL_CACHE_DURATION = 10 * Constants.MINUTE;
+  static final long DEFAULT_URL_CACHE_DURATION = 1 * Constants.HOUR;
 
   /** The amount of time after which the "down" status of a host is
    * cleared, so that a request will once again cause a connection
