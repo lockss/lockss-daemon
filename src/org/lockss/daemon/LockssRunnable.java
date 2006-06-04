@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRunnable.java,v 1.16 2006-04-11 08:28:39 tlipkis Exp $
+ * $Id: LockssRunnable.java,v 1.17 2006-06-04 06:26:17 tlipkis Exp $
  */
 
 /*
@@ -392,9 +392,9 @@ public abstract class LockssRunnable  implements LockssWatchdog, Runnable {
 	log.debug2(msg);
       }
     } catch (Exception e) {
-      log.warning("Thread threw", e);
+      log.error("Thread threw", e);
     } catch (Throwable e) {
-      log.warning("Thread threw Throwable", e);
+      log.error("Thread threw Throwable", e);
     } finally {
       try {
 	if (triggerOnExit) {
