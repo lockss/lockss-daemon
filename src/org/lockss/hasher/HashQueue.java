@@ -1,5 +1,5 @@
 /*
- * $Id: HashQueue.java,v 1.50 2006-04-05 22:26:41 tlipkis Exp $
+ * $Id: HashQueue.java,v 1.51 2006-06-04 06:26:32 tlipkis Exp $
  */
 
 /*
@@ -337,6 +337,9 @@ class HashQueue {
       this.deadline = deadline;
       this.callback = callback;
       this.cookie = cookie;
+      if (urlsetHasher == null) {
+	throw new NullPointerException("CachedUrlSetHasher is null");
+      }
       this.urlsetHasher = urlsetHasher;
       this.origEst = estimatedDuration;
       this.typeString = urlsetHasher.typeString();
