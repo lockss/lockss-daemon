@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.66 2006-04-23 05:52:04 tlipkis Exp $
+ * $Id: MockArchivalUnit.java,v 1.67 2006-06-04 06:27:38 tlipkis Exp $
  */
 
 /*
@@ -71,6 +71,10 @@ public class MockArchivalUnit implements ArchivalUnit {
   private TypedEntryMap propertyMap = new TypedEntryMap();
   private static final Logger logger = Logger.getLogger("MockArchivalUnit");
   public MockArchivalUnit(){
+  }
+
+  public MockArchivalUnit(String auId) {
+    this.auId = auId;
   }
 
   public MockArchivalUnit(Plugin plugin) {
