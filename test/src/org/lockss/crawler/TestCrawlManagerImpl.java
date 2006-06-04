@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.60 2006-05-15 00:11:54 tlipkis Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.61 2006-06-04 06:27:02 tlipkis Exp $
  */
 
 /*
@@ -59,9 +59,11 @@ public class TestCrawlManagerImpl extends LockssTestCase {
   protected MockAuState maus;
   protected Plugin plugin;
   protected Properties cprops = new Properties();
+  protected List semsToGive;
 
   public void setUp() throws Exception {
     super.setUp();
+    semsToGive = new ArrayList();
     // some tests start the service, but most don't want the crawl starter
     // to run.
     cprops.put(CrawlManagerImpl.PARAM_START_CRAWLS_INTERVAL, "0");
@@ -102,10 +104,25 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 
   public void tearDown() throws Exception {
     TimeBase.setReal();
+    for (Iterator iter = semsToGive.iterator(); iter.hasNext(); ) {
+      SimpleBinarySemaphore sem = (SimpleBinarySemaphore)iter.next();
+      sem.give();
+    }
     nodeManager.stopService();
     crawlManager.stopService();
     theDaemon.stopDaemon();
     super.tearDown();
+  }
+
+  MockArchivalUnit newMockArchivalUnit(String auid) {
+    MockArchivalUnit mau = new MockArchivalUnit(auid);
+    theDaemon.setNodeManager(nodeManager, mau);
+    return mau;
+  }
+
+  SimpleBinarySemaphore semToGive(SimpleBinarySemaphore sem) {
+    semsToGive.add(sem);
+    return sem;
   }
 
   String didntMsg(String what, long time) {
@@ -115,6 +132,8 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 
   protected void waitForCrawlToFinish(SimpleBinarySemaphore sem) {
     if (!sem.take(TIMEOUT_SHOULDNT)) {
+      DebugUtils.getInstance().threadDump(true);
+      TimerUtil.guaranteedSleep(1000);
       fail(didntMsg("finish", TIMEOUT_SHOULDNT));
     }
   }
@@ -154,6 +173,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       MockCrawler crawler =
 	new HangingCrawler("testStoppingCrawlAbortsNewContentCrawl",
 			   sem1, sem2);
+      semToGive(sem2);
       crawlManager.setTestCrawler(crawler);
 
       assertFalse(sem1.take(0));
@@ -196,6 +216,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       MockCrawler crawler =
 	new HangingCrawler("testStoppingCrawlAbortsRepairCrawl",
 			   sem1, sem2);
+      semToGive(sem2);
       crawlManager.setTestCrawler(crawler);
 
       crawlManager.startRepair(mau, urls, cb, null, null);
@@ -442,6 +463,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       //gives sem1 when doCrawl is entered, then takes sem2
       MockCrawler crawler = new HangingCrawler("testKicksOffNewThread",
 					       sem1, sem2);
+      semToGive(sem2);
       crawlManager.setTestCrawler(crawler);
 
       crawlManager.startNewContentCrawl(mau, cb, null, null);
@@ -654,6 +676,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
         //gives sem1 when doCrawl is entered, then takes sem2
         MockCrawler crawler = new HangingCrawler("testNoQueuePoolSize " + ix,
 						 startSem[ix], endSem[ix]);
+	semToGive(endSem[ix]);
         crawlManager.setTestCrawler(crawler);
 
         crawlManager.startNewContentCrawl(mau, cb[ix], null, null);
@@ -663,9 +686,10 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 		   startSem[ix].take(TIMEOUT_SHOULDNT));
         //we know that doCrawl started
       }
-      MockCrawler crawler = new HangingCrawler("testNoQueuePoolSize ix+1",
-					       new SimpleBinarySemaphore(),
-					       new SimpleBinarySemaphore());
+      MockCrawler crawler =
+	new HangingCrawler("testNoQueuePoolSize ix+1",
+			   new SimpleBinarySemaphore(),
+			   semToGive(new SimpleBinarySemaphore()));
       crawlManager.setTestCrawler(crawler);
       TestCrawlCB onecb = new TestCrawlCB();
       crawlManager.startNewContentCrawl(mau, onecb, null, null);
@@ -716,6 +740,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 	//gives sem1 when doCrawl is entered, then takes sem2
 	crawler[ix] = new HangingCrawler("testQueuedPool " + ix,
 					 startSem[ix], endSem[ix]);
+	semToGive(endSem[ix]);
 	// queue the crawl directly
 	crawlManager.setTestCrawler(crawler[ix]);
 	crawlManager.startNewContentCrawl(mau, cb[ix], null, null);
@@ -751,7 +776,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       MockCrawler failcrawler =
 	new HangingCrawler("testNoQueuePoolSize ix+1",
 			   new SimpleBinarySemaphore(),
-			   new SimpleBinarySemaphore());
+			   semToGive(new SimpleBinarySemaphore()));
       crawlManager.setTestCrawler(failcrawler);
       TestCrawlCB onecb = new TestCrawlCB();
       crawlManager.startNewContentCrawl(mau, onecb, null, null);
@@ -789,6 +814,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       crawlManager.startService();
       HangingCrawler[] crawler = new HangingCrawler[tot];
       SimpleBinarySemaphore endSem = new SimpleBinarySemaphore();
+      semToGive(endSem);
       crawlManager.recordExecute(true);
       // Create AUs and build the pieces necessary for the crawl starter to
       // get the list of AUs from the PluginManager and a NodeManager and
@@ -798,13 +824,13 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       for (int ix = 0; ix < tot; ix++) {
 	crawler[ix] = new HangingCrawler("testQueuedPool " + ix,
 					 null, endSem);
-	MockArchivalUnit au = new MockArchivalUnit();
-	au.setAuId("mau" + ix);
+	MockArchivalUnit au = newMockArchivalUnit("mau" + ix);
+// 	au.setAuId("mau" + ix);
 	au.setCrawlSpec(crawlSpec);
 	MockActivityRegulator act = new MockActivityRegulator(au);
 	act.setStartAuActivity(true);
 	theDaemon.setActivityRegulator(act, au);
-	theDaemon.setNodeManager(new MockNodeManager(), au);
+// 	theDaemon.setNodeManager(new MockNodeManager(), au);
 	crawlManager.setTestCrawler(au, crawler[ix]);
 	PluginTestUtil.registerArchivalUnit(plugin, au);
       }
