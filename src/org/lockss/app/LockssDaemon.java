@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.84 2006-05-15 00:10:56 tlipkis Exp $
+ * $Id: LockssDaemon.java,v 1.85 2006-06-04 06:24:18 tlipkis Exp $
  */
 
 /*
@@ -189,7 +189,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   };
 
   // Maps au to sequenced map of managerKey -> manager instance
-  protected static HashMap auManagerMaps = new HashMap();
+  protected HashMap auManagerMaps = new HashMap();
 
   // Maps managerKey -> LockssAuManager.Factory instance
   protected HashMap auManagerFactoryMap = new HashMap();
@@ -422,7 +422,20 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
    * @return a LockssAuManager
    * @throws IllegalArgumentException if the manager is not available.
    */
-  public static LockssAuManager getAuManager(String key, ArchivalUnit au) {
+  public static LockssAuManager getStaticAuManager(String key,
+						   ArchivalUnit au) {
+    return theDaemon.getAuManager(key, au);
+  }
+
+  /**
+   * Return an AU-specific lockss manager. This will need to be cast to the
+   * appropriate class.
+   * @param key the name of the manager
+   * @param au the AU
+   * @return a LockssAuManager
+   * @throws IllegalArgumentException if the manager is not available.
+   */
+  public LockssAuManager getAuManager(String key, ArchivalUnit au) {
     LockssAuManager mgr = null;
     LinkedMap auMgrMap =
       (LinkedMap)auManagerMaps.get(au);

@@ -1,5 +1,5 @@
 /*
- * $Id: NodeStateImpl.java,v 1.31 2005-12-01 23:28:05 troberts Exp $
+ * $Id: NodeStateImpl.java,v 1.32 2006-06-04 06:24:18 tlipkis Exp $
  */
 
 /*
@@ -211,9 +211,9 @@ public class NodeStateImpl
   }
 
   public boolean hasDamage() {
-    NodeManagerImpl nodeMan =
-        (NodeManagerImpl)LockssDaemon.getAuManager(LockssDaemon.NODE_MANAGER,
-                                                   cus.getArchivalUnit());
+    NodeManagerImpl nodeMan = (NodeManagerImpl)
+      LockssDaemon.getStaticAuManager(LockssDaemon.NODE_MANAGER,
+				      cus.getArchivalUnit());
     return nodeMan.hasDamage(cus);
   }
 

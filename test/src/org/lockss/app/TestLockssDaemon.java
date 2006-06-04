@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssDaemon.java,v 1.11 2005-10-11 05:48:56 tlipkis Exp $
+ * $Id: TestLockssDaemon.java,v 1.12 2006-06-04 06:24:17 tlipkis Exp $
  */
 
 /*
@@ -178,8 +178,8 @@ public class TestLockssDaemon extends LockssTestCase {
     TestAuMgr.clearEvents();
     daemon.startOrReconfigureAuManagers(mau1, config);
 
-    TestAuMgr1 mgr11 = (TestAuMgr1)LockssDaemon.getAuManager("MgrKey1", mau1);
-    TestAuMgr2 mgr21 = (TestAuMgr2)LockssDaemon.getAuManager("MgrKey2", mau1);
+    TestAuMgr1 mgr11 = (TestAuMgr1)daemon.getAuManager("MgrKey1", mau1);
+    TestAuMgr2 mgr21 = (TestAuMgr2)daemon.getAuManager("MgrKey2", mau1);
     assertSame(mau1, mgr11.getAu());
     assertSame(mau1, mgr21.getAu());
     assertEquals(ListUtil.list(mgr11), daemon.getAuManagersOfType("MgrKey1"));
@@ -204,13 +204,13 @@ public class TestLockssDaemon extends LockssTestCase {
     assertIsomorphic(exp2, TestAuMgr.getEvents());
 
     try {
-      LockssDaemon.getAuManager("MgrKey1", mau2);
+      daemon.getAuManager("MgrKey1", mau2);
     } catch (IllegalArgumentException e) {
     }
 
     daemon.startOrReconfigureAuManagers(mau2, config2);
-    TestAuMgr1 mgr12 = (TestAuMgr1)LockssDaemon.getAuManager("MgrKey1", mau2);
-    TestAuMgr2 mgr22 = (TestAuMgr2)LockssDaemon.getAuManager("MgrKey2", mau2);
+    TestAuMgr1 mgr12 = (TestAuMgr1)daemon.getAuManager("MgrKey1", mau2);
+    TestAuMgr2 mgr22 = (TestAuMgr2)daemon.getAuManager("MgrKey2", mau2);
     assertSame(mau2, mgr12.getAu());
     assertSame(mau2, mgr22.getAu());
     assertEquals(SetUtil.set(mgr11, mgr12),
