@@ -1,5 +1,5 @@
 /*
- * $Id: PollTestPlugin.java,v 1.14 2005-08-11 06:33:18 tlipkis Exp $
+ * $Id: PollTestPlugin.java,v 1.15 2006-06-04 06:27:17 tlipkis Exp $
  */
 
 /*
@@ -84,11 +84,11 @@ public class PollTestPlugin {
     }
 
     public CachedUrlSetHasher getContentHasher(MessageDigest digest) {
-      return new CusHasher(duration, bytes);
+      return new CusHasher(digest, duration, bytes);
     }
 
     public CachedUrlSetHasher getNameHasher(MessageDigest digest) {
-      return new CusHasher(duration, bytes);
+      return new CusHasher(digest, duration, bytes);
     }
   }
 
@@ -97,11 +97,12 @@ public class PollTestPlugin {
  * programmable number of bytes.
  */
   static class CusHasher extends NullPlugin.CachedUrlSetHasher {
-
+    MessageDigest digest;
     long duration;
     int bytes;
 
-    public CusHasher(long duration, int bytes) {
+    public CusHasher(MessageDigest digest, long duration, int bytes) {
+      this.digest = digest;
       this.duration = duration;
       this.bytes = bytes;
     }
@@ -124,6 +125,11 @@ public class PollTestPlugin {
       bytes -= numBytes;
       return numBytes;
     }
+
+    public MessageDigest[] getDigests() {
+      return new MessageDigest[] {digest};
+    }
+
   }
 
   public static class PTArchivalUnit extends MockArchivalUnit {
