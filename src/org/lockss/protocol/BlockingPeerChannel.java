@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingPeerChannel.java,v 1.12 2005-10-11 05:46:14 tlipkis Exp $
+ * $Id: BlockingPeerChannel.java,v 1.13 2006-06-04 06:25:53 tlipkis Exp $
  */
 
 /*
@@ -824,7 +824,7 @@ class BlockingPeerChannel implements PeerChannel {
   abstract class ChannelRunner extends LockssRunnable {
     volatile Thread thread;
     TimerQueue.Request timerReq;
-    boolean goOn = true;
+    private volatile boolean goOn = true;
 
     public ChannelRunner() {
       super("Runner");

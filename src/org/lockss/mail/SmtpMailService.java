@@ -1,5 +1,5 @@
 /*
- * $Id: SmtpMailService.java,v 1.11 2005-10-11 05:44:51 tlipkis Exp $
+ * $Id: SmtpMailService.java,v 1.12 2006-06-04 06:25:53 tlipkis Exp $
  *
 
  Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
@@ -247,7 +247,7 @@ public class SmtpMailService
   }
 
   private class MailThread extends LockssThread {
-    private boolean goOn = false;
+    private volatile boolean goOn = true;
 
     private MailThread(String name) {
       super(name);
@@ -256,7 +256,6 @@ public class SmtpMailService
     public void lockssRun() {
       triggerWDogOnExit(true);
       setPriority(PRIORITY_PARAM_MAILQ, PRIORITY_DEFAULT_MAILQ);
-      goOn = true;
       nowRunning();
 
       while (goOn) {

@@ -1,5 +1,5 @@
 /*
- * $Id: MockLcapDatagramComm.java,v 1.7 2005-12-01 23:28:04 troberts Exp $
+ * $Id: MockLcapDatagramComm.java,v 1.8 2006-06-04 06:25:53 tlipkis Exp $
  */
 
 /*
@@ -371,7 +371,7 @@ public class MockLcapDatagramComm extends LcapDatagramComm {
 
   // Receive thread
   private class ReceiveThread extends Thread {
-    private boolean goOn = true;
+    private volatile boolean goOn = true;
     private long sleep = Constants.MINUTE;
     private Deadline timeout = Deadline.in(sleep);
 

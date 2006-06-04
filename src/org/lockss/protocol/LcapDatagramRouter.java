@@ -1,5 +1,5 @@
 /*
- * $Id: LcapDatagramRouter.java,v 1.17 2005-11-16 07:44:09 smorabito Exp $
+ * $Id: LcapDatagramRouter.java,v 1.18 2006-06-04 06:25:53 tlipkis Exp $
  */
 
 /*
@@ -488,7 +488,7 @@ public class LcapDatagramRouter
 
   // Beacon thread
   private class BeaconThread extends LockssThread {
-    private boolean goOn = false;
+    private volatile boolean goOn = true;
 
     private BeaconThread(String name) {
       super(name);
@@ -496,7 +496,6 @@ public class LcapDatagramRouter
 
     public void lockssRun() {
       setPriority(PRIORITY_PARAM_BEACON, PRIORITY_DEFAULT_BEACON);
-      goOn = true;
       nowRunning();
 
       while (goOn) {

@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.35 2006-04-07 21:44:27 thib_gc Exp $
+ * $Id: ConfigManager.java,v 1.36 2006-06-04 06:25:53 tlipkis Exp $
  */
 
 /*
@@ -1319,7 +1319,7 @@ public class ConfigManager implements LockssManager {
 
   private class HandlerThread extends LockssThread {
     private long lastReload = 0;
-    private boolean goOn = false;
+    private volatile boolean goOn = true;
     private Deadline nextReload;
 
     private HandlerThread(String name) {
@@ -1328,7 +1328,6 @@ public class ConfigManager implements LockssManager {
 
     public void lockssRun() {
       Thread.currentThread().setPriority(Thread.NORM_PRIORITY + 1);
-      goOn = true;
       startWDog(WDOG_PARAM_CONFIG, WDOG_DEFAULT_CONFIG);
       triggerWDogOnExit(true);
 

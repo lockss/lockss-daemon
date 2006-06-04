@@ -1,5 +1,5 @@
 /*
- * $Id: TimerQueue.java,v 1.29 2006-04-11 08:30:03 tlipkis Exp $
+ * $Id: TimerQueue.java,v 1.30 2006-06-04 06:25:53 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -211,7 +211,7 @@ public class TimerQueue {
   // on the TimerQueue not being hung.)
 
   private class TimerThread extends LockssThread {
-    private boolean goOn = false;
+    private volatile boolean goOn = true;
 
     private TimerThread(String name) {
       super(name);
@@ -220,7 +220,6 @@ public class TimerQueue {
     public void lockssRun() {
       triggerWDogOnExit(true);
       setPriority(PRIORITY_PARAM_TIMERQUEUE, PRIORITY_DEFAULT_TIMERQUEUE);
-      goOn = true;
       nowRunning();
 
       while (goOn) {
