@@ -1,5 +1,5 @@
 /*
- * $Id: TestServletUtil.java,v 1.1 2006-01-09 21:56:43 tlipkis Exp $
+ * $Id: TestServletUtil.java,v 1.2 2006-06-08 06:03:39 tlipkis Exp $
  */
 
 /*
@@ -33,8 +33,14 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.servlet;
 
 import java.util.*;
+import java.io.*;
+import org.mortbay.html.*;
+import org.apache.oro.text.regex.*;
+
 import org.lockss.test.*;
 import org.lockss.util.*;
+import org.lockss.plugin.*;
+import org.lockss.daemon.*;
 
 /**
  * Test class for org.lockss.servlet.ServletUtil
@@ -51,4 +57,42 @@ public class TestServletUtil extends LockssTestCase {
 
   }
 
+  public void testManifestIndex() throws Exception {
+    MockLockssDaemon daemon = getMockLockssDaemon();
+    daemon.getPluginManager();
+
+    Plugin pl = new MockPlugin();
+    String m1 = "http://foo.bar/manifest1.html";
+    String m2 = "http://foo.bax/manifest2.html";
+    String au1 = "Journal of Journalistics 1776";
+    String au2 = "xyz";
+    MockArchivalUnit mau;
+    mau = new MockArchivalUnit();
+    mau.setName(au1);
+    mau.setPlugin(pl);
+    mau.setCrawlSpec(new SpiderCrawlSpec(m1, new MockCrawlRule()));
+    PluginTestUtil.registerArchivalUnit(pl, mau);
+
+    mau = new MockArchivalUnit();
+    mau.setName(au2);
+    mau.setPlugin(pl);
+    mau.setCrawlSpec(new SpiderCrawlSpec(m2, new MockCrawlRule()));
+    PluginTestUtil.registerArchivalUnit(pl, mau);
+    Element ele = ServletUtil.manifestIndex(daemon, "host.edu");
+    StringWriter sw = new StringWriter();
+    ele.write(sw);
+    sw.flush();
+    String s0 = sw.toString();
+    String s = StringUtil.trimNewlinesAndLeadingWhitespace(s0);
+    String pats = "<table.*><tr><td align=\"center\" colspan=\"2\">" +
+      "<font size=\"\\+2\"><b>Volume Manifests on host.edu</b></font>" +
+      "</td></tr><tr><th>Archival Unit</th><th>Manifest</th></tr>" +
+      "<tr><td align=\"left\">" + au1 + "</td.*><td align=\"left\">" +
+      "<a href=\"" + m1 + "\">" + m1 + "</a></td></tr>" +
+      "<tr><td align=\"left\">" + au2 + "</td><td align=\"left\">" +
+      "<a href=\"" + m2 + "\">" + m2 + "</a></td></tr></table>";
+    Pattern pat =
+      RegexpUtil.uncheckedCompile(pats, Perl5Compiler.MULTILINE_MASK);
+    assertMatchesRE(pat, s);
+  }
 }

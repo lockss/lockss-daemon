@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.45 2006-06-04 04:00:07 tlipkis Exp $
+ * $Id: ProxyHandler.java,v 1.46 2006-06-08 06:03:40 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.45 2006-06-04 04:00:07 tlipkis Exp $
+// $Id: ProxyHandler.java,v 1.46 2006-06-08 06:03:40 tlipkis Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -49,6 +49,7 @@ import org.mortbay.http.handler.AbstractHttpHandler;
 import org.mortbay.log.LogFactory;
 import org.mortbay.util.*;
 import org.mortbay.util.URI;
+import org.mortbay.html.*;
 
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.*;
@@ -56,6 +57,7 @@ import org.lockss.daemon.CuUrl;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
+import org.lockss.servlet.ServletUtil;
 
 /* ------------------------------------------------------------ */
 /** Proxy request handler.  A HTTP/1.1 Proxy with special handling for
@@ -227,6 +229,10 @@ public class ProxyHandler extends AbstractHttpHandler {
     }
 
     String urlString = uri.toString();
+    if ("/".equals(urlString)) {
+      sendIndexPage(request, response);
+      return;
+    }
     CachedUrl cu = pluginMgr.findOneCachedUrl(urlString);
     try {
       boolean isRepairRequest = proxyMgr.isRepairRequest(request);
@@ -922,4 +928,29 @@ public class ProxyHandler extends AbstractHttpHandler {
 
     request.setHandled(true);
   }
+
+  void sendIndexPage(HttpRequest request,
+		     HttpResponse response)
+      throws HttpException, IOException {
+    try {
+      response.setStatus(HttpResponse.__200_OK);
+      //     response.setReason(respMsg);
+
+      response.setContentType(HttpFields.__TextHtml);
+
+      Element ele = ServletUtil.manifestIndex(theDaemon, hostname);
+      Page page = new Page();
+      page.add(ele);
+      Writer wrtr = new OutputStreamWriter(response.getOutputStream());
+      page.write(wrtr);
+      wrtr.flush();
+      //     response.setContentLength(wrtr.size());
+
+      request.setHandled(true);
+    } catch (RuntimeException e) {
+      log.error("sendIndexPage", e);
+      throw e;
+    }
+  }
+
 }

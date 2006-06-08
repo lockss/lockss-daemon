@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.33 2006-03-16 01:41:19 thib_gc Exp $
+ * $Id: ServletUtil.java,v 1.34 2006-06-08 06:03:40 tlipkis Exp $
  */
 
 /*
@@ -41,9 +41,10 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.collections.CollectionUtils;
 import org.lockss.config.*;
+import org.lockss.app.*;
 import org.lockss.daemon.*;
 import org.lockss.jetty.MyTextArea;
-import org.lockss.plugin.PluginManager;
+import org.lockss.plugin.*;
 import org.lockss.remote.*;
 import org.lockss.remote.RemoteApi.BatchAuStatus;
 import org.lockss.servlet.BatchAuConfig.Verb;
@@ -1468,4 +1469,42 @@ public class ServletUtil {
     return btn;
   }
 
+  /** Return an index of all the manifest pages.  Used by the ProxyHandler;
+   * here because it's convenient and easier to test */
+  public static Element manifestIndex(LockssDaemon daemon, String hostname) {
+    PluginManager pluginMgr = daemon.getPluginManager();
+    Table tbl = new Table(AUSUMMARY_TABLE_BORDER, AUSUMMARY_TABLE_ATTRIBUTES);
+    tbl.newRow();
+    tbl.newCell("align=\"center\" colspan=\"2\"");
+    tbl.add(HEADER_HEADING_BEFORE);
+    tbl.add("Volume Manifests on ");
+    tbl.add(hostname);
+    tbl.add(HEADER_HEADING_AFTER);
+    tbl.newRow();
+    tbl.addHeading("Archival Unit");
+    tbl.addHeading("Manifest");
+    for (Iterator iter = pluginMgr.getAllAus().iterator(); iter.hasNext(); ) {
+      ArchivalUnit au = (ArchivalUnit)iter.next();
+      CrawlSpec spec = au.getCrawlSpec();
+      tbl.newRow();
+      tbl.newCell(ALIGN_LEFT);
+      tbl.add(au.getName());
+      tbl.newCell(ALIGN_LEFT);
+      if (spec instanceof SpiderCrawlSpec) {
+	List urls = ((SpiderCrawlSpec)spec).getStartingUrls();
+	for (Iterator uiter = urls.iterator(); uiter.hasNext(); ) {
+	  String url = (String)uiter.next();
+	  tbl.add(new Link(url, url));
+	  if (uiter.hasNext()) {
+	    tbl.add("<br>");
+	  }
+	}
+      } else if (spec instanceof OaiCrawlSpec) {
+	tbl.add("(OAI)");
+      } else {
+	tbl.add("(Unknown CrawlSpec type)");
+      }
+    }
+    return tbl;
+  }
 }
