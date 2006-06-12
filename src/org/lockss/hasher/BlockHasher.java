@@ -1,5 +1,5 @@
 /*
- * $Id: BlockHasher.java,v 1.4 2006-06-02 20:27:15 smorabito Exp $
+ * $Id: BlockHasher.java,v 1.4.2.1 2006-06-12 21:41:44 smorabito Exp $
  */
 
 /*
@@ -163,10 +163,7 @@ public class BlockHasher extends GenericHasher {
       startNode(curCu.getCuVersions(getMaxVersions()));
     }
     CachedUrl[] cuVersions = curCu.getCuVersions(getMaxVersions());
-    
-    if (contentBytes == null) {
-      contentBytes = new byte[cuVersions.length][];
-    }
+    contentBytes = new byte[cuVersions.length][];
 
     outer:
     for (int ix = 0; ix < cuVersions.length; ix++) {

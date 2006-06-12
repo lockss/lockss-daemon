@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockHasher.java,v 1.5 2006-06-02 20:27:16 smorabito Exp $
+ * $Id: TestBlockHasher.java,v 1.5.2.1 2006-06-12 21:41:44 smorabito Exp $
  */
 
 /*
@@ -422,60 +422,69 @@ public class TestBlockHasher extends LockssTestCase {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     
     // Added from least recent to most recent...
-    String url4v1 = "This is some kind of content for url4, version 1";
-    String url4v2 = "This is some kind of content for url4, version 2";
-    String url4v3 = "This is some kind of content for url4, version 3";
-    String url4v4 = "This is some kind of content for url4, version 4";
+    String url4v1 = "This URL has only one version.";
     
-    String url5v1 = "And here's some more content for version 1 of url5";
-    String url5v2 = "And here's some content for version 2 of url5";
+    String url5v1 = "This is some kind of content for url5, version 1";
+    String url5v2 = "This is some kind of content for url5, version 2";
+    String url5v3 = "This is some kind of content for url5, version 3";
+    String url5v4 = "This is some kind of content for url5, version 4";
     
-    String url6v1 = "Let's not forget some content for version 1 of url6";
-    String url6v2 = "This version was much shorter!";
-    String url6v3 = "This was version 3 of url6.  It was a good version.";
+    String url6v1 = "And here's some more content for version 1 of url6";
+    String url6v2 = "And here's some content for version 2 of url5";
+    
+    String url7v1 = "Let's not forget some content for version 1 of url7";
+    String url7v2 = "This version was much shorter!";
+    String url7v3 = "This was version 3 of url6.  It was a good version.";
     
     addVersion(mau, urls[4], url4v1);
-    addVersion(mau, urls[4], url4v2);
-    addVersion(mau, urls[4], url4v3);
-    addVersion(mau, urls[4], url4v4);
 
     addVersion(mau, urls[5], url5v1);
     addVersion(mau, urls[5], url5v2);
+    addVersion(mau, urls[5], url5v3);
+    addVersion(mau, urls[5], url5v4);
 
     addVersion(mau, urls[6], url6v1);
     addVersion(mau, urls[6], url6v2);
-    addVersion(mau, urls[6], url6v3);
+
+    addVersion(mau, urls[7], url7v1);
+    addVersion(mau, urls[7], url7v2);
+    addVersion(mau, urls[7], url7v3);
     
     MessageDigest[] digs = { dig };
     byte[][] inits = {null};
     CachedUrlSetHasher hasher = new BlockHasher(cus, digs, inits, handler);
-    int len = url4v1.length() + url4v2.length() + url4v3.length() + 
-              url4v3.length() + url5v1.length() + url5v2.length() +
-              url6v1.length() + url6v2.length() + url6v3.length();
+    int len = url4v1.length() + url5v1.length() + url5v2.length() + 
+              url5v3.length() + url5v3.length() + url6v1.length() +
+              url6v2.length() + url7v1.length() + url7v2.length() +
+              url7v3.length();
               
     assertEquals(len, hashToEnd(hasher, stepSize));
     assertTrue(hasher.finished());
     
     List blocks = handler.getBlocks();
-    assertEquals(3, blocks.size());
+    assertEquals(4, blocks.size());
     
-    HashBlock block1 = (HashBlock)blocks.get(0);
+    HashBlock block0 = (HashBlock)blocks.get(0);
+    assertEquals(1, block0.size());
+    assertEqualBytes(bytes(url4v1), block0.getVersions()[0].getHashes());
+    
+    HashBlock block1 = (HashBlock)blocks.get(1);
     assertEquals(4, block1.size());
-    assertEqualBytes(bytes(url4v4), block1.getVersions()[0].getHashes());
-    assertEqualBytes(bytes(url4v3), block1.getVersions()[1].getHashes());
-    assertEqualBytes(bytes(url4v2), block1.getVersions()[2].getHashes());
-    assertEqualBytes(bytes(url4v1), block1.getVersions()[3].getHashes());
+    assertEqualBytes(bytes(url5v4), block1.getVersions()[0].getHashes());
+    assertEqualBytes(bytes(url5v3), block1.getVersions()[1].getHashes());
+    assertEqualBytes(bytes(url5v2), block1.getVersions()[2].getHashes());
+    assertEqualBytes(bytes(url5v1), block1.getVersions()[3].getHashes());
   
-    HashBlock block2 = (HashBlock)blocks.get(1);
+    HashBlock block2 = (HashBlock)blocks.get(2);
     assertEquals(2, block2.size());
-    assertEqualBytes(bytes(url5v2), block2.getVersions()[0].getHashes());
-    assertEqualBytes(bytes(url5v1), block2.getVersions()[1].getHashes());
+    assertEqualBytes(bytes(url6v2), block2.getVersions()[0].getHashes());
+    assertEqualBytes(bytes(url6v1), block2.getVersions()[1].getHashes());
 
-    HashBlock block3 = (HashBlock)blocks.get(2);
+    HashBlock block3 = (HashBlock)blocks.get(3);
     assertEquals(3, block3.size());
-    assertEqualBytes(bytes(url6v3), block3.getVersions()[0].getHashes());
-    assertEqualBytes(bytes(url6v2), block3.getVersions()[1].getHashes());
-    assertEqualBytes(bytes(url6v1), block3.getVersions()[2].getHashes());
+    assertEqualBytes(bytes(url7v3), block3.getVersions()[0].getHashes());
+    assertEqualBytes(bytes(url7v2), block3.getVersions()[1].getHashes());
+    assertEqualBytes(bytes(url7v1), block3.getVersions()[2].getHashes());
   }
 
   public void testSeveralContentSeveralVersions() throws Exception {
