@@ -1052,6 +1052,7 @@
       <property name="Bonefolder1">
 	<property name="title" value="The Bonefolder Volume 1" />
 	<property name="journalTitle" value="The Bonefolder" />
+	<property name="estSize" value="5MB" />
 	<property name="plugin" value="edu.nyu.plugin.bonefolder.BonefolderPlugin" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
@@ -1069,6 +1070,7 @@
       <property name="ElectronicJournalofContemporaryJapaneseStudies2006">
 	<property name="title" value="Electronic Journal of Contemporary Japanese Studies 2006" />
 	<property name="journalTitle" value="Electronic Journal of Contemporary Japanese Studies" />
+	<property name="estSize" value="5MB" />
 	<property name="plugin" value="edu.nyu.plugin.ejcjs.EJCJSPlugin" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
@@ -1084,6 +1086,7 @@
       <property name="ElectronicJournalofContemporaryJapaneseStudies2005">
 	<property name="title" value="Electronic Journal of Contemporary Japanese Studies 2005" />
 	<property name="journalTitle" value="Electronic Journal of Contemporary Japanese Studies" />
+	<property name="estSize" value="5MB" />
 	<property name="plugin" value="edu.nyu.plugin.ejcjs.EJCJSPlugin" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
@@ -1099,6 +1102,7 @@
       <property name="ElectronicJournalofContemporaryJapaneseStudies2004">
 	<property name="title" value="Electronic Journal of Contemporary Japanese Studies 2004" />
 	<property name="journalTitle" value="Electronic Journal of Contemporary Japanese Studies" />
+	<property name="estSize" value="5MB" />
 	<property name="plugin" value="edu.nyu.plugin.ejcjs.EJCJSPlugin" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
@@ -1114,6 +1118,7 @@
       <property name="ElectronicJournalofContemporaryJapaneseStudies2003">
 	<property name="title" value="Electronic Journal of Contemporary Japanese Studies 2003" />
 	<property name="journalTitle" value="Electronic Journal of Contemporary Japanese Studies" />
+	<property name="estSize" value="5MB" />
 	<property name="plugin" value="edu.nyu.plugin.ejcjs.EJCJSPlugin" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
@@ -1129,6 +1134,7 @@
       <property name="ElectronicJournalofContemporaryJapaneseStudies2002">
 	<property name="title" value="Electronic Journal of Contemporary Japanese Studies 2002" />
 	<property name="journalTitle" value="Electronic Journal of Contemporary Japanese Studies" />
+	<property name="estSize" value="5MB" />
 	<property name="plugin" value="edu.nyu.plugin.ejcjs.EJCJSPlugin" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
@@ -1144,6 +1150,7 @@
       <property name="ElectronicJournalofContemporaryJapaneseStudies2001">
 	<property name="title" value="Electronic Journal of Contemporary Japanese Studies 2001" />
 	<property name="journalTitle" value="Electronic Journal of Contemporary Japanese Studies" />
+	<property name="estSize" value="5MB" />
 	<property name="plugin" value="edu.nyu.plugin.ejcjs.EJCJSPlugin" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
