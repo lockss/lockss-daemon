@@ -4,16 +4,20 @@
     <string>edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin</string>
   </entry>
   <entry>
+    <string>plugin_version</string>
+    <string>2</string>
+  </entry>
+  <entry>
     <string>au_name</string>
     <string>&quot;%s Issue %s&quot;, base_url, issue_no.</string>
   </entry>
   <entry>
-    <string>au_def_new_content_crawl</string>
-    <long>7862400000</long>
-  </entry>
-  <entry>
     <string>plugin_name</string>
     <string>Applied Semiotics / S&#x00e9;miotique Appliqu&#x00e9;e</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>7862400000</long>
   </entry>
   <entry>
     <string>au_crawlrules</string>
