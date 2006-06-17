@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.206 2006-03-01 02:50:13 smorabito Exp $
+ * $Id: NodeManagerImpl.java,v 1.207 2006-06-17 02:20:00 smorabito Exp $
  */
 
 /*
@@ -890,12 +890,13 @@ public class NodeManagerImpl
       CachedUrlSet cus = nodeState.getCachedUrlSet();
       if (cus.getSpec().isAu()) {
         PollSpec spec = new PollSpec(cus, pollType);
-        if (!pollManager.isPollRunning(spec)) {
+        // Don't call a poll on this if we're already running a V3 poll on it.
+        if (!pollManager.isV3PollerRunning(spec) &&
+            getAuState().getLastCrawlTime() > 0) {
           logger.debug("Starting V3 poll for " + managedAu.getName());
           callV3ContentPoll();
         } else {
-          logger.debug("Already called poll on " + managedAu.getName()
-                       + ", skipping.");
+          logger.debug("Not calling poll on " + managedAu.getName());
         }
       }
       return;
