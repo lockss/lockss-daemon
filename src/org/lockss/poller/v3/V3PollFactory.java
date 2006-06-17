@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollFactory.java,v 1.4 2006-06-02 20:27:15 smorabito Exp $
+ * $Id: V3PollFactory.java,v 1.4.2.1 2006-06-17 02:15:05 smorabito Exp $
  */
 
 /*
@@ -89,7 +89,7 @@ public class V3PollFactory extends BasePollFactory {
     CachedUrlSet cus = pollspec.getCachedUrlSet();
     // check for presence of item in the cache
     if (cus == null) {
-      log.debug2("Ignoring poll request, don't have AU: " + pollspec.getAuId());
+      log.debug("Ignoring poll request, don't have AU: " + pollspec.getAuId());
       return null;
     }
     ArchivalUnit au = cus.getArchivalUnit();
@@ -128,11 +128,18 @@ public class V3PollFactory extends BasePollFactory {
 
         V3LcapMessage m = (V3LcapMessage)msg;
         PollSpec s = new PollSpec(m);
-        log.debug("Creating V3Voter to participate in poll " + m.getKey());
-        retPoll = new V3Voter(s, daemon, m.getOriginatorId(), m.getKey(),
-                              m.getEffortProof(), m.getPollerNonce(),
-                              m.getDuration(), m.getHashAlgorithm());
-        retPoll.startPoll(); // Voters need to be started immediately.
+        // Only participate if we have and have successfully crawled this AU.
+        NodeManager nm = daemon.getNodeManager(au);
+        if (nm.getAuState().getLastCrawlTime() > 0) { 
+          log.debug("Creating V3Voter to participate in poll " + m.getKey());
+          retPoll = new V3Voter(s, daemon, m.getOriginatorId(), m.getKey(),
+                                m.getEffortProof(), m.getPollerNonce(),
+                                m.getDuration(), m.getHashAlgorithm());
+          retPoll.startPoll(); // Voters need to be started immediately.
+        } else {
+          log.debug("Have not completed new content crawl.  Not " +
+                    "participating in vote.");
+        }
       }
     } catch (V3Serializer.PollSerializerException ex) {
       log.error("Serialization exception creating new V3Poller: ", ex);

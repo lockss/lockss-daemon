@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.166 2006-06-02 20:27:15 smorabito Exp $
+ * $Id: PollManager.java,v 1.166.2.1 2006-06-17 02:15:05 smorabito Exp $
  */
 
 /*
@@ -275,6 +275,19 @@ public class PollManager
 	if (pme.isSamePoll(spec)) {
 	  return !pme.isPollCompleted();
 	}
+      }
+    }
+    return false;
+  }
+  
+  public boolean isV3PollerRunning(PollSpec spec) {
+    synchronized (pollMapLock) {
+      for (Iterator it = thePolls.values().iterator(); it.hasNext(); ) {
+        PollManagerEntry pme = (PollManagerEntry)it.next();
+        if (pme.getPoll() instanceof V3Poller &&
+            pme.getPollSpec().getAuId().equals(spec.getAuId())) {
+          return !pme.isPollCompleted();
+        }
       }
     }
     return false;
