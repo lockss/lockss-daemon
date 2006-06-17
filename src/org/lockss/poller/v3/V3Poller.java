@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.24 2006-06-02 20:27:15 smorabito Exp $
+ * $Id: V3Poller.java,v 1.24.2.1 2006-06-17 05:02:37 smorabito Exp $
  */
 
 /*
@@ -1079,7 +1079,7 @@ public class V3Poller extends BasePoll {
                        + " the Vote Complete event.");
           }
         }
-        setStatus(POLLER_STATUS_COMPLETE);
+        stopPoll(POLLER_STATUS_COMPLETE);
       }
     });
   }
