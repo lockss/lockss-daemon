@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Elements>
+<MapElement>
+<ElementKey>plugin_identifier</ElementKey>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">edu.cornell.library.rmc.joyce.JoycePlugin</ElementValue>
+</MapElement>
+<MapElement>
+<ElementKey>au_def_pause_time</ElementKey>
+<ElementValue xsi:type="java:java.lang.Long" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">1000</ElementValue>
+</MapElement>
+<MapElement>
+<ElementKey>au_name</ElementKey>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">""</ElementValue>
+</MapElement>
+<MapElement>
+<ElementKey>au_def_new_content_crawl</ElementKey>
+<ElementValue xsi:type="java:java.lang.Long" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">1209600000</ElementValue>
+</MapElement>
+<MapElement>
+<ElementKey>plugin_name</ElementKey>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Joyce</ElementValue>
+</MapElement>
+<MapElement>
+<ElementKey>au_crawlrules</ElementKey>
+<ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<string xsi:type="java:java.lang.String">1,"%sRMC-LOCKSS-manifest.html", base_url</string>
+<string xsi:type="java:java.lang.String">1,"%s.*", base_url</string>
+<string xsi:type="java:java.lang.String">1,"http://rmc.library.cornell.edu/css/.*"</string>
+<string xsi:type="java:java.lang.String">1,"http://rmc.library.cornell.edu/scripts/main.js"</string>
+<string xsi:type="java:java.lang.String">1,"http://rmc.library.cornell.edu/icons/.*\.gif"</string>
+<string xsi:type="java:java.lang.String">1,"http://rmc.library.cornell.edu/images/.*"</string>
+<string xsi:type="java:java.lang.String">4,"^%s", base_url</string>
+</ElementValue>
+</MapElement>
+<MapElement>
+<ElementKey>au_start_url</ElementKey>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"%sRMC-LOCKSS-manifest.html", base_url</ElementValue>
+</MapElement>
+<MapElement>
+<ElementKey>plugin_config_props</ElementKey>
+<ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ConfigParamDescr>
+<Key>base_url</Key>
+<DisplayName>Base URL</DisplayName>
+<Description>Usually of the form http://&lt;journal-name&gt;.com/</Description>
+<Type>3</Type>
+<Size>40</Size>
+<Definitional>true</Definitional>
+</ConfigParamDescr>
+</ElementValue>
+</MapElement>
+</Elements>
