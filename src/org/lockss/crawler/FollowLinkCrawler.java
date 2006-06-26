@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.38 2006-04-05 22:34:54 tlipkis Exp $
+ * $Id: FollowLinkCrawler.java,v 1.38.4.1 2006-06-26 22:33:18 troberts Exp $
  */
 
 /*
@@ -175,6 +175,13 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
     crawlStatus.addSource("Publisher");
     cus = au.getAuCachedUrlSet();
     parsedPages = new HashSet();
+
+    //XXX short term hack to work around populatePermissionMap not 
+    //indicating when a crawl window is the problem
+    if (!withinCrawlWindow()) {
+      crawlStatus.setCrawlError(Crawler.STATUS_WINDOW_CLOSED);
+      abortCrawl();
+    } 
 
     if (!populatePermissionMap()) {
       return aborted();
