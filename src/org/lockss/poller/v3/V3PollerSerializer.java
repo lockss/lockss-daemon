@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollerSerializer.java,v 1.9 2006-06-02 20:27:15 smorabito Exp $
+ * $Id: V3PollerSerializer.java,v 1.10 2006-06-26 23:55:08 smorabito Exp $
  */
 
 /*
@@ -93,7 +93,8 @@ public class V3PollerSerializer extends V3Serializer {
     try {
       xstr.serialize(pollerStateBeanFile, state);
     } catch (Exception ex) {
-      throw new PollSerializerException("Unable to save state for poll", ex);
+      throw new PollSerializerException("Unable to save state for poll.  " +
+                                        "Caused by: " + ex, ex);
     }
   }
 

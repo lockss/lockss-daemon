@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.25 2006-06-17 05:04:20 smorabito Exp $
+ * $Id: V3Poller.java,v 1.26 2006-06-26 23:55:08 smorabito Exp $
  */
 
 /*
@@ -446,8 +446,9 @@ public class V3Poller extends BasePoll {
    */
   public void stopPoll(final String status) {
     // Want this action to be serialized.
-    pollManager.runTask(new V3PollerTask() {
-      public void run() {
+    pollManager.runTask(new PollRunner.Task("Stopping Poll", getKey()) {
+      public void lockssRun() {
+        log.info("Stopping poll " + getKey() + " with status " + status);
         setStatus(status);
         activePoll = false;
         if (task != null && !task.isExpired()) {
@@ -752,21 +753,21 @@ public class V3Poller extends BasePoll {
       // Great, we won!  Do nothing.
       log.debug3("Won tally for block: " + url + " in poll " + pollKey);
       // If this is the result of a previous repair, mark it complete.
-      if (markComplete) pollerState.getRepairQueue().markComplete(url);
+//      if (markComplete) pollerState.getRepairQueue().markComplete(url);
       break;
     case BlockTally.RESULT_LOST:
       tallyStatus.addDisagreedUrl(url);
-      log.debug3("Lost tally for block: " + url);
+      log.info("Lost tally for block " + url + " in poll " + getKey());
       requestRepair(url, tally.getDisagreeVoters(), votesForBlock);
       break;
     case BlockTally.RESULT_LOST_EXTRA_BLOCK:
-      log.debug3("Lost tally. Removing extra block " + url +
-                 " in poll " + pollKey);
+      log.info("Lost tally. Removing extra block " + url +
+               " in poll " + getKey());
       deleteBlock(url);
       break;
     case BlockTally.RESULT_LOST_MISSING_BLOCK:
-      log.debug3("Lost tally. Requesting repair for missing block: "
-                 + url + " in poll " + pollKey);
+      log.info("Lost tally. Requesting repair for missing block: " +
+               url + " in poll " + getKey());
       tallyStatus.addDisagreedUrl(url);
       String missingURL = tally.getMissingBlockUrl();
       requestRepair(missingURL,
@@ -775,26 +776,28 @@ public class V3Poller extends BasePoll {
       break;
     case BlockTally.RESULT_NOQUORUM:
       tallyStatus.addNoQuorumUrl(url);
-      log.warning("No Quorum for block " + url
-                  + " in poll " + pollKey);
+      log.warning("No Quorum for block " + url + " in poll " + getKey());
       // If this is the result of a previous repair, mark it complete.
-      if (markComplete) pollerState.getRepairQueue().markComplete(url);
+//      if (markComplete) pollerState.getRepairQueue().markComplete(url);
       break;
     case BlockTally.RESULT_TOO_CLOSE:
     case BlockTally.RESULT_TOO_CLOSE_MISSING_BLOCK:
     case BlockTally.RESULT_TOO_CLOSE_EXTRA_BLOCK:
       tallyStatus.addTooCloseUrl(url);
-      log.warning("Tally was inconclusive for block " + url
-                  + " in poll " + pollKey);
+      log.warning("Tally was inconclusive for block " + url + " in poll " +
+                  getKey());
       // If this is the result of a previous repair, mark it complete.
-      if (markComplete) pollerState.getRepairQueue().markComplete(url);
+//      if (markComplete) pollerState.getRepairQueue().markComplete(url);
       break;
     default:
       log.warning("Unexpected results from tallying block " + url + ": "
                   + tally.getStatusString());
       // If this is the result of a previous repair, mark it complete.
-      if (markComplete) pollerState.getRepairQueue().markComplete(url);
+//  if (markComplete) pollerState.getRepairQueue().markComplete(url);
     }
+
+    // Mark this repair complete if this is a re-check after a repair
+    if (markComplete) pollerState.getRepairQueue().markComplete(url);
   }
 
   /**
@@ -1063,25 +1066,21 @@ public class V3Poller extends BasePoll {
 
   // The vote is over.
   private void voteComplete() {
-    pollManager.runTask(new V3PollerTask() {
-      public void run() {
-        for (Iterator iter = theParticipants.values().iterator(); iter.hasNext();) {
-          ParticipantUserData ud = (ParticipantUserData)iter.next();
-          PsmInterp interp = ud.getPsmInterp();
-          try {
-            interp.handleEvent(V3Events.evtVoteComplete);
-          } catch (PsmException e) {
-            log.warning("State machine error", e);
-            stopPoll(POLLER_STATUS_ERROR);
-          }
-          if (log.isDebug2()) {
-            log.debug2("Gave peer " + ud.getVoterId()
-                       + " the Vote Complete event.");
-          }
-        }
-        stopPoll(POLLER_STATUS_COMPLETE);
+    for (Iterator iter = theParticipants.values().iterator(); iter.hasNext();) {
+      ParticipantUserData ud = (ParticipantUserData)iter.next();
+      PsmInterp interp = ud.getPsmInterp();
+      try {
+        interp.handleEvent(V3Events.evtVoteComplete);
+      } catch (PsmException e) {
+        log.warning("State machine error", e);
+        stopPoll(POLLER_STATUS_ERROR);
       }
-    });
+      if (log.isDebug2()) {
+        log.debug2("Gave peer " + ud.getVoterId()
+                   + " the Vote Complete event.");
+      }
+    }
+    stopPoll(POLLER_STATUS_COMPLETE);
   }
 
   /**
@@ -1456,18 +1455,5 @@ public class V3Poller extends BasePoll {
    */
   private byte[] makePollerNonce() {
     return ByteArray.makeRandomBytes(20);
-  }
-  
-  /**
-   * Base class for V3Poller Tasks
-   */
-  
-  private abstract class V3PollerTask implements PollRunner.Task {
-    public String toString() {
-      return "[V3PollerTask poll=" + getPollId() + "]";
-    }
-    public String getPollId() {
-      return getKey();
-    }
   }
 }
