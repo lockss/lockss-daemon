@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.48 2006-05-20 19:27:14 tlipkis Exp $
+ * $Id: TestNewContentCrawler.java,v 1.48.2.1 2006-06-26 22:33:36 troberts Exp $
  */
 
 /*
@@ -753,7 +753,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     String url2 = "http://www.example.com/link2.html";
     String url3 = "http://www.example.com/link3.html";
 
-    spec.setCrawlWindow(new MyMockCrawlWindow(3));
+    spec.setCrawlWindow(new MyMockCrawlWindow(4));
     mau.setCrawlSpec(spec);
 
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
