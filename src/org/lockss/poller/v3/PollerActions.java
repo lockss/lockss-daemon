@@ -1,5 +1,5 @@
 /*
- * $Id: PollerActions.java,v 1.11 2006-06-02 20:27:15 smorabito Exp $
+ * $Id: PollerActions.java,v 1.11.2.1 2006-06-26 23:45:09 smorabito Exp $
  */
 
 /*
@@ -56,10 +56,19 @@ public class PollerActions {
     return V3Events.evtOk;
   }
 
+  /**
+   * Send an invitation to participate in this poll.
+   * 
+   * @param evt  The event that triggered this state.
+   * @param interp  The state machine interpreter.
+   * @return  The next event.
+   */
   public static PsmEvent handleSendPoll(PsmEvent evt, PsmInterp interp) {
     ParticipantUserData ud = getUserData(interp);
-    log.debug2("Sending poll to participant " + ud.getVoterId() + " in poll "
-               + ud.getKey());
+    // For auditing purposes, log the poller nonce.
+    log.info("Inviting peer " + ud.getVoterId() + " into poll " +
+             ud.getKey() + " with poller nonce " +
+             ByteArray.toBase64(ud.getPollerNonce()));
     try {
       V3LcapMessage msg = ud.makeMessage(V3LcapMessage.MSG_POLL);
       msg.setPollerNonce(ud.getPollerNonce());
@@ -86,14 +95,17 @@ public class PollerActions {
     byte[] voterPollAckEffortProof = msg.getEffortProof();
     byte[] voterNonce = msg.getVoterNonce();
     if (voterNonce == null) {
-      log.debug("Peer " + ud.getVoterId() + " sent no voter nonce, "
-                + "declining to participate in the poll.");
+      log.info("Peer " + ud.getVoterId() + " sent no voter nonce, "
+               + "declining to participate in the poll.");
       // Remove the peer from the poll.
       ud.removeParticipant();
       return V3Events.evtError;
     } else {
       ud.setVoterNonce(voterNonce);
       ud.setStatusString(V3Poller.PEER_STATUS_ACCEPTED_POLL);
+      log.info("Peer " + ud.getVoterId() + " accepted invitation for poll " + 
+               ud.getKey() + " and sent voter nonce " +
+               ByteArray.toBase64(voterNonce));
       return V3Events.evtOk;
     }
   }

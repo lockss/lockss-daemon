@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.166.2.1 2006-06-17 02:15:05 smorabito Exp $
+ * $Id: PollManager.java,v 1.166.2.2 2006-06-26 23:45:10 smorabito Exp $
  */
 
 /*
@@ -189,6 +189,11 @@ public class PollManager
 
     // unregister our router
     theRouter.unregisterMessageHandler(m_msgHandler);
+
+    // Stop the poll runner.
+    if (theTaskRunner != null) {
+      theTaskRunner.stop();
+    }
 
     // null anything which might cause problems
     theTaskRunner = null;

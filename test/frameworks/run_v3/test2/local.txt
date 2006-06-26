@@ -1,0 +1,23 @@
+org.lockss.proxy.start=no
+org.lockss.ui.port=8082
+
+org.lockss.localIPAddress=2.2.2.2
+org.lockss.comm.unicast.port=9002
+org.lockss.comm.unicast.sendToPort=9002
+org.lockss.comm.unicast.sendToAddr=127.0.0.1
+
+#test settings
+org.lockss.test.doTreewalk=false
+org.lockss.test.treewalk.auId=org|lockss|plugin|simulated|SimulatedPlugin&root~localA
+
+org.lockss.test.doPoll=false
+org.lockss.test.polltype=2
+org.lockss.test.pollspec.auId=org|lockss|plugin|simulated|SimulatedPlugin&root~localA
+org.lockss.test.pollspec.url=lockssau:
+#org.lockss.test.pollspec.lwrBound=
+#org.lockss.test.pollspec.uprBound=
+
+org.lockss.proxy.icp.enabled=true
+org.lockss.proxy.icp.port=3132
+
+org.lockss.localV3Identity=TCP:[127.0.0.1]:9722

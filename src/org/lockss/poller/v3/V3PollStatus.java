@@ -1,5 +1,5 @@
 /*
-* $Id: V3PollStatus.java,v 1.4 2006-04-28 07:21:13 smorabito Exp $
+* $Id: V3PollStatus.java,v 1.4.2.1 2006-06-26 23:45:09 smorabito Exp $
  */
 
 /*
@@ -76,9 +76,9 @@ public class V3PollStatus {
 
     static final String TABLE_TITLE = "V3 Polls (Mine)";
 
+    // Sort by deadline, descending
     private final List sortRules =
-      ListUtil.list(new StatusTable.SortRule("pollId",
-                                             CatalogueOrderComparator.SINGLETON));
+      ListUtil.list(new StatusTable.SortRule("deadline", false));
     private final List colDescs =
       ListUtil.list(new ColumnDescriptor("auId", "Volume",
                                          ColumnDescriptor.TYPE_STRING),
@@ -170,9 +170,9 @@ public class V3PollStatus {
 
     static final String TABLE_TITLE = "V3 Polls (Others)";
 
+    // Sort by deadline, descending
     private final List sortRules =
-      ListUtil.list(new StatusTable.SortRule("pollId",
-                                             CatalogueOrderComparator.SINGLETON));
+      ListUtil.list(new StatusTable.SortRule("deadline", false));
     private final List colDescs =
       ListUtil.list(new ColumnDescriptor("auId", "Volume",
                                          ColumnDescriptor.TYPE_STRING),

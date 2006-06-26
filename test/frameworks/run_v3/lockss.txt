@@ -1,0 +1,67 @@
+# LOCKSS & LCAP tuning parameters
+org.lockss.log.default.level=debug
+
+#lockss config stuff
+org.lockss.platform.diskSpacePaths=./
+
+org.lockss.config.reloadInterval=30m
+
+#hasher settings
+#org.lockss.hasher.numSteps
+#org.lockss.hasher.priority
+#org.lockss.hasher.stepBytes
+
+#comm settings
+org.lockss.ui.start=yes
+org.lockss.proxy.start=no
+org.lockss.comm.multicast.group=239.4.5.6
+#org.lockss.comm.multicast.port=3456
+org.lockss.comm.multicast.port=localIp
+org.lockss.comm.unicast.port=1025
+org.lockss.comm.multicast.verify=no
+
+# lcap protocol settings
+org.lockss.protocol.ttl=2
+org.lockss.protocol.hashAlgorithm=SHA-1
+
+# poll settings
+org.lockss.poll.maxpolls=20
+org.lockss.poll.quorum=3
+org.lockss.poll.agreeVerify=10
+org.lockss.poll.disagreeVerify=50
+org.lockss.poll.voteMargin=51
+org.lockss.poll.trustedWeight=350
+org.lockss.poll.namepoll.deadline=5m
+
+org.lockss.poll.contentpoll.min=4m
+org.lockss.poll.contentpoll.max=12m
+
+org.lockss.treewalk.initial.estimate=10s
+org.lockss.treewalk.interval.min=1m
+org.lockss.treewalk.interval.max=2m
+org.lockss.treewalk.start.delay=10s
+org.lockss.comm.router.beacon.interval=1m
+org.lockss.baseau.toplevel.poll.prob.initial=100
+org.lockss.baseau.toplevel.poll.interval.min=5m
+org.lockss.baseau.toplevel.poll.interval.max=15m
+
+# V3
+org.lockss.scomm.enabled=true
+org.lockss.scomm.maxMessageSize=3355443
+org.lockss.poll.v3.quorum=3
+org.lockss.poll.v3.minPollSize=4
+org.lockss.poll.v3.maxPollSize=5
+org.lockss.poll.v3.minNominationSize=0
+org.lockss.poll.v3.maxNominationSize=0
+org.lockss.poll.v3.minPollDuration=10m
+org.lockss.poll.v3.maxPollDuration=30m
+org.lockss.poll.v3.voteDeadlinePadding=5m
+org.lockss.id.initialV3PeerList=\
+    TCP:[127.0.0.1]:9721;\
+    TCP:[127.0.0.1]:9722;\
+    TCP:[127.0.0.1]:9723;\
+    TCP:[127.0.0.1]:9724;\
+    TCP:[127.0.0.1]:9725
+
+org.lockss.metrics.slowest.hashrate = 250
+org.lockss.state.recall.delay=5m

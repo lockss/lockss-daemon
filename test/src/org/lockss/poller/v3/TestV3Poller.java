@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.12 2006-06-02 20:27:16 smorabito Exp $
+ * $Id: TestV3Poller.java,v 1.12.2.1 2006-06-26 23:45:09 smorabito Exp $
  */
 
 /*
@@ -224,6 +224,7 @@ public class TestV3Poller extends LockssTestCase {
     theDaemon.getDatagramRouterManager().stopService();
     theDaemon.getRouterManager().stopService();
     theDaemon.getSystemMetrics().stopService();
+    theDaemon.getPollManager().stopService();
     TimeBase.setReal();
     super.tearDown();
   }
