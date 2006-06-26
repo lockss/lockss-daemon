@@ -1,85 +1,86 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Elements>
-<MapElement>
-<ElementKey>au_crawlwindow</ElementKey>
-<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">org.lockss.plugin.highwire.HighwireCrawlWindow</ElementValue>
-</MapElement>
-<MapElement>
-<ElementKey>plugin_cache_result_list</ElementKey>
-<ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-<string xsi:type="java:java.lang.String">404=org.lockss.util.urlconn.CacheException$RetryDeadLinkException</string>
-</ElementValue>
-</MapElement>
-<MapElement>
-<ElementKey>au_permission_checker_factory</ElementKey>
-<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">org.lockss.plugin.highwire.HighWirePermissionCheckerFactory</ElementValue>
-</MapElement> 
-<MapElement>
-<ElementKey>text/html_filter</ElementKey>
-<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">org.lockss.plugin.highwire.HighWireFilterRule</ElementValue>
-</MapElement>
-<MapElement>
-<ElementKey>au_login_page_checker</ElementKey>
-<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">org.lockss.plugin.highwire.HighWireLoginPageChecker</ElementValue>
-</MapElement>
-<MapElement>
-<ElementKey>plugin_version</ElementKey>
-<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">8</ElementValue>
-</MapElement>
-<MapElement>
-<ElementKey>au_name</ElementKey>
-<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"%s, vol. %d", base_url_host, volume</ElementValue>
-</MapElement>
-<MapElement>
-<ElementKey>au_def_new_content_crawl</ElementKey>
-<ElementValue xsi:type="java:java.lang.Long" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">259200000</ElementValue>
-</MapElement>
-<MapElement>
-<ElementKey>plugin_name</ElementKey>
-<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">HighWire Press</ElementValue>
-</MapElement>
-<MapElement>
-<ElementKey>au_crawlrules</ElementKey>
-<ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-<string xsi:type="java:java.lang.String">4,"^%s", base_url</string>
-<string xsi:type="java:java.lang.String">1,"%slockss-manifest/vol_%d_manifest.dtl", base_url, volume</string>
-<string xsi:type="java:java.lang.String">2,".*ck=nck.*"</string>
-<string xsi:type="java:java.lang.String">2,".*adclick.*"</string>
-<string xsi:type="java:java.lang.String">2,".*/cgi/mailafriend.*"</string>
-<string xsi:type="java:java.lang.String">2,".*/cgi/external_ref.*"</string>
-<string xsi:type="java:java.lang.String">1,".*/content/current/.*"</string>
-<string xsi:type="java:java.lang.String">1,".*/content/vol%d/.*", volume</string>
-<string xsi:type="java:java.lang.String">1,".*/cgi/content/.*/%d/.*", volume</string>
-<string xsi:type="java:java.lang.String">1,".*/cgi/reprint/%d/.*", volume</string>
-<string xsi:type="java:java.lang.String">1,".*/cgi/reprintframed/%d/.*", volume</string>
-<string xsi:type="java:java.lang.String">1,".*/cgi/reprintsidebar/%d/.*", volume</string>
-<string xsi:type="java:java.lang.String">1,".*/icons.*"</string>
-<string xsi:type="java:java.lang.String">1,".*/math.*"</string>
-<string xsi:type="java:java.lang.String">2,"http://.*/.*/.*"</string>
-</ElementValue>
-</MapElement>
-<MapElement>
-<ElementKey>au_start_url</ElementKey>
-<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"%slockss-manifest/vol_%d_manifest.dtl", base_url, volume</ElementValue>
-</MapElement>
-<MapElement>
-<ElementKey>plugin_config_props</ElementKey>
-<ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-<ConfigParamDescr>
-<Key>volume</Key>
-<DisplayName>Volume No.</DisplayName>
-<Type>6</Type>
-<Size>8</Size>
-<Definitional>true</Definitional>
-</ConfigParamDescr>
-<ConfigParamDescr>
-<Key>base_url</Key>
-<DisplayName>Base URL</DisplayName>
-<Description>Usually of the form http://&lt;journal-name&gt;.com/</Description>
-<Type>3</Type>
-<Size>40</Size>
-<Definitional>true</Definitional>
-</ConfigParamDescr>
-</ElementValue>
-</MapElement>
-</Elements>
+<map>
+  <entry>
+    <string>au_crawlwindow</string>
+    <string>org.lockss.plugin.highwire.HighwireCrawlWindow</string>
+  </entry>
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <string>404=org.lockss.util.urlconn.CacheException$RetryDeadLinkException</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_permission_checker_factory</string>
+    <string>org.lockss.plugin.highwire.HighWirePermissionCheckerFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_filter</string>
+    <string>org.lockss.plugin.highwire.HighWireFilterRule</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>9</string>
+  </entry>
+  <entry>
+    <string>au_login_page_checker</string>
+    <string>org.lockss.plugin.highwire.HighWireLoginPageChecker</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;%s, vol. %d&quot;, base_url_host, volume</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>HighWire Press</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>259200000</long>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;%slockss-manifest/vol_%d_manifest.dtl&quot;, base_url, volume</string>
+      <string>2,&quot;.*ck=nck.*&quot;</string>
+      <string>2,&quot;.*adclick.*&quot;</string>
+      <string>2,&quot;.*/cgi/mailafriend.*&quot;</string>
+      <string>2,&quot;.*/cgi/external_ref.*&quot;</string>
+      <string>1,&quot;.*/content/current/.*&quot;</string>
+      <string>1,&quot;.*/content/vol%d/.*&quot;, volume</string>
+      <string>1,&quot;.*/cgi/content/.*/%d/.*&quot;, volume</string>
+      <string>1,&quot;.*/cgi/reprint/%d/.*&quot;, volume</string>
+      <string>1,&quot;.*/cgi/reprintframed/%d/.*&quot;, volume</string>
+      <string>1,&quot;.*/cgi/reprintsidebar/%d/.*&quot;, volume</string>
+      <string>1,&quot;.*/icons.*&quot;</string>
+      <string>1,&quot;.*/math.*&quot;</string>
+      <string>2,&quot;http://.*/.*/.*&quot;</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%slockss-manifest/vol_%d_manifest.dtl&quot;, base_url, volume</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume</key>
+        <displayName>Volume No.</displayName>
+        <type>6</type>
+        <size>8</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+</map>

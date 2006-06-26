@@ -1,5 +1,5 @@
 /*
- * $Id: EditableDefinablePlugin.java,v 1.18 2006-06-26 17:46:56 thib_gc Exp $
+ * $Id: EditableDefinablePlugin.java,v 1.19 2006-06-26 23:30:58 thib_gc Exp $
  */
 
 /*
@@ -68,7 +68,9 @@ public class EditableDefinablePlugin
   static final protected String AU_RULES
     = DefinableArchivalUnit.AU_RULES_KEY;
   static final protected String AU_CRAWL_WINDOW
-    = DefinableArchivalUnit.AU_CRAWL_WINDOW_KEY;
+  = DefinableArchivalUnit.AU_CRAWL_WINDOW_KEY;
+  static final protected String AU_CRAWL_WINDOW_SPEC
+  = DefinableArchivalUnit.AU_CRAWL_WINDOW_SPEC_KEY;
   static final protected String AU_EXPECTED_PATH
     = DefinableArchivalUnit.AU_EXPECTED_PATH;
   static final protected String AU_CRAWL_DEPTH
@@ -223,7 +225,7 @@ public class EditableDefinablePlugin
     }
 
   }
-    /*
+
   public void setAuCrawlWindow(String crawlWindow) {
 
     try {
@@ -243,27 +245,27 @@ public class EditableDefinablePlugin
   public void removeAuCrawlWindow() {
     definitionMap.removeMapElement(AU_CRAWL_WINDOW);
   }
-*/
-  public void setAuCrawlWindow(CrawlWindow crawlWindow){
+
+  public void setAuCrawlWindowSpec(CrawlWindow crawlWindow){
       try {
-	  definitionMap.setMapElement(AU_CRAWL_WINDOW, crawlWindow);
+	  definitionMap.setMapElement(AU_CRAWL_WINDOW_SPEC, crawlWindow);
       }
       catch (Exception ex) {
 	  throw new DefinablePlugin.InvalidDefinitionException(
-           "Unable to create crawl window class: " + crawlWindow, ex);
+           "Unable to set crawl window spec: " + crawlWindow, ex);
       }
 
   }
 
-  public CrawlWindow getAuCrawlWindow() {
+  public CrawlWindow getAuCrawlWindowSpec() {
 
-      return (CrawlWindow) (definitionMap.getMapElement(AU_CRAWL_WINDOW));
+      return (CrawlWindow) (definitionMap.getMapElement(AU_CRAWL_WINDOW_SPEC));
 
   }
 
-  public void removeAuCrawlWindow() {
+  public void removeAuCrawlWindowSpec() {
 
-      definitionMap.removeMapElement(AU_CRAWL_WINDOW);
+      definitionMap.removeMapElement(AU_CRAWL_WINDOW_SPEC);
 
   }
 
@@ -449,23 +451,23 @@ public class EditableDefinablePlugin
       if (type == ConfigParamDescr.TYPE_YEAR) {
 	key = DefinableArchivalUnit.AU_SHORT_YEAR_PREFIX + key;
 	ConfigParamDescr descr = copyDescr(cpd);
-	descr.setDescription(cpd.getDescription() + " (2 digit)");
-	descr.setDisplayName(cpd.getDisplayName() + " (2 digit)");
+	descr.setDescription(cpd.getDescription() + " (2 digits)");
+	descr.setDisplayName(cpd.getDisplayName() + " (2 digits)");
 	descr.setKey(key);
 	pd_map.put(key, descr);
       }
       else if (type == ConfigParamDescr.TYPE_URL) {
 	String mod_key = key + DefinableArchivalUnit.AU_HOST_SUFFIX;
 	ConfigParamDescr descr = copyDescr(cpd);
-	descr.setDescription(cpd.getDescription() + " (Host)");
-	descr.setDisplayName(cpd.getDisplayName() + " (Host)");
-	descr.setKey(key);
+	descr.setDescription(cpd.getDescription() + " (host only)");
+	descr.setDisplayName(cpd.getDisplayName() + " (host only)");
+	descr.setKey(mod_key);
 	pd_map.put(mod_key, descr);
 	mod_key = key + DefinableArchivalUnit.AU_PATH_SUFFIX;
 	descr = copyDescr(cpd);
-	descr.setDescription(cpd.getDescription() + " (Path)");
-	descr.setDisplayName(cpd.getDisplayName() + " (Path)");
-	descr.setKey(key);
+	descr.setDescription(cpd.getDescription() + " (path only)");
+	descr.setDisplayName(cpd.getDisplayName() + " (path only)");
+	descr.setKey(mod_key);
 	pd_map.put(mod_key, descr);
       }
     }

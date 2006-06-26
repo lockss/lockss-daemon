@@ -1,5 +1,5 @@
 /*
- * $Id: TestEditableDefinablePlugin.java,v 1.15 2005-11-10 21:20:01 thib_gc Exp $
+ * $Id: TestEditableDefinablePlugin.java,v 1.16 2006-06-26 23:30:59 thib_gc Exp $
  */
 
 /*
@@ -228,7 +228,7 @@ public class TestEditableDefinablePlugin
 
     edPlugin.setPluginName(name);
     edPlugin.setPluginVersion(version);
-    edPlugin.setAuCrawlWindow(makeCrawlWindow());
+    edPlugin.setAuCrawlWindowSpec(makeCrawlWindow());
     edPlugin.writeMap(location, mapFile);
     // remove the items so we know we really loaded them
     edPlugin.removePluginName();
@@ -282,17 +282,17 @@ public class TestEditableDefinablePlugin
     CrawlWindow expWindow = makeCrawlWindow();
 
     // test default
-    actWindow = (CrawlWindow) edPlugin.getMap().getMapElement(EditableDefinablePlugin.AU_CRAWL_WINDOW);
+    actWindow = (CrawlWindow) edPlugin.getMap().getMapElement(EditableDefinablePlugin.AU_CRAWL_WINDOW_SPEC);
     assertEquals("default window", defWindow, actWindow);
 
     // test good class name is ok
-    edPlugin.setAuCrawlWindow(expWindow);
-    actWindow = (CrawlWindow) edPlugin.getMap().getMapElement(EditableDefinablePlugin.AU_CRAWL_WINDOW);
+    edPlugin.setAuCrawlWindowSpec(expWindow);
+    actWindow = (CrawlWindow) edPlugin.getMap().getMapElement(EditableDefinablePlugin.AU_CRAWL_WINDOW_SPEC);
     assertEquals("set window", expWindow, actWindow);
 
     // test remove
-    edPlugin.removeAuCrawlWindow();
-    actWindow = (CrawlWindow) edPlugin.getMap().getMapElement(EditableDefinablePlugin.AU_CRAWL_WINDOW);
+    edPlugin.removeAuCrawlWindowSpec();
+    actWindow = (CrawlWindow) edPlugin.getMap().getMapElement(EditableDefinablePlugin.AU_CRAWL_WINDOW_SPEC);
     assertEquals("default window", defWindow, actWindow);
   }
 

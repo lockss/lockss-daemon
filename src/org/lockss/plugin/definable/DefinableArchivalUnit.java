@@ -1,9 +1,9 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.41 2006-04-10 22:24:33 smorabito Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.42 2006-06-26 23:30:59 thib_gc Exp $
  */
 
 /*
- Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -28,6 +28,7 @@
  in this Software without prior written authorization from Stanford University.
 
  */
+
 package org.lockss.plugin.definable;
 
 import java.net.*;
@@ -59,6 +60,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
   static final public String AU_NAME_KEY = "au_name";
   static final public String AU_RULES_KEY = "au_crawlrules";
   static final public String AU_CRAWL_WINDOW_KEY = "au_crawlwindow";
+  static final public String AU_CRAWL_WINDOW_SPEC_KEY = "au_crawlwindowspec";
   static final public String AU_EXPECTED_PATH = "au_expected_base_path";
   static final public String AU_CRAWL_DEPTH = "au_crawl_depth";
   static final public String AU_MANIFEST_KEY = "au_manifest";
@@ -149,8 +151,8 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
         if (descr.getType() == ConfigParamDescr.TYPE_URL) {
           URL url = paramMap.getUrl(key, null);
           if(url != null) {
-            paramMap.putString(key+AU_HOST_SUFFIX, url.getHost());
-            paramMap.putString(key+AU_PATH_SUFFIX, url.getPath());
+            paramMap.putString(key + AU_HOST_SUFFIX, url.getHost());
+            paramMap.putString(key + AU_PATH_SUFFIX, url.getPath());
           }
         }
       } catch (ConfigurationException ex) {
@@ -297,16 +299,20 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
   }
 
   protected CrawlWindow makeCrawlWindow() {
-    CrawlWindow window = null;
-    String window_class;
-    window_class = definitionMap.getString(AU_CRAWL_WINDOW_KEY, null);
+    CrawlWindow window = (CrawlWindow)definitionMap.getMapElement(AU_CRAWL_WINDOW_SPEC_KEY);
+    if (window != null) {
+      return window;
+    }
+
+    String window_class = definitionMap.getString(AU_CRAWL_WINDOW_KEY, null);
     if (window_class != null) {
       ConfigurableCrawlWindow ccw =
           (ConfigurableCrawlWindow) loadClass(window_class,
                                               ConfigurableCrawlWindow.class);
-       window = ccw.makeCrawlWindow();
-     }
-    return window;
+      return ccw.makeCrawlWindow();
+    }
+
+    return null;
   }
 
   protected UrlNormalizer makeUrlNormalizer() {

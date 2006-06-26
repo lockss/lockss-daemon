@@ -1,5 +1,5 @@
 /*
- * $Id: EDPInspectorCellEditor.java,v 1.8 2006-06-26 17:46:56 thib_gc Exp $
+ * $Id: EDPInspectorCellEditor.java,v 1.9 2006-06-26 23:30:58 thib_gc Exp $
  */
 
 /*
@@ -54,7 +54,7 @@ public class EDPInspectorCellEditor extends AbstractCellEditor
   protected static final String AUNAME = "auname";
   protected static final String STARTURL = "starturl";
   protected static final String CRAWLRULE = "rules";
-  protected static final String CRAWLWINDOW = "window";
+  protected static final String CRAWLWINDOWSPEC = "windowspec";
   protected static final String FILTERS = "filters";
   protected static final String EXCEPTIONS = "exceptions";
   protected static final String PAUSETIME = "pausetime";
@@ -70,13 +70,14 @@ public class EDPInspectorCellEditor extends AbstractCellEditor
   protected static final int PLUGIN_AUNAME = 6;
   protected static final int PLUGIN_CRAWLRULES = 7;
   protected static final int PLUGIN_CRAWLWINDOW = 8;
-  protected static final int PLUGIN_PAUSETIME = 9;
-  protected static final int PLUGIN_CRAWLINTV = 10;
-  protected static final int PLUGIN_CRAWLDEPTH = 11;
-  protected static final int PLUGIN_FILTER = 12;
-  protected static final int PLUGIN_EXCEPTION = 13;
-  protected static final int PLUGIN_EXMAP = 14;
-  protected static final int NUMEDITORS = 15;
+  protected static final int PLUGIN_CRAWLWINDOWSPEC = 9;
+  protected static final int PLUGIN_PAUSETIME = 10;
+  protected static final int PLUGIN_CRAWLINTV = 11;
+  protected static final int PLUGIN_CRAWLDEPTH = 12;
+  protected static final int PLUGIN_FILTER = 13;
+  protected static final int PLUGIN_EXCEPTION = 14;
+  protected static final int PLUGIN_EXMAP = 15;
+  protected static final int NUMEDITORS = 16;
 
   protected CellEditorEntry[] editorEntries;
 
@@ -115,9 +116,9 @@ public class EDPInspectorCellEditor extends AbstractCellEditor
       new CellEditorEntry(CRAWLRULE, new CrawlRuleEditor(parentFrame),
 			  makeButton(CRAWLRULE));
     // crawl window
-    editorEntries[PLUGIN_CRAWLWINDOW]=
-	new CellEditorEntry(CRAWLWINDOW, new CrawlWindowEditor(parentFrame),
-			    makeButton(CRAWLWINDOW));
+    editorEntries[PLUGIN_CRAWLWINDOWSPEC]=
+	new CellEditorEntry(CRAWLWINDOWSPEC, new CrawlWindowEditor(parentFrame),
+			    makeButton(CRAWLWINDOWSPEC));
     // pause between fetch
     editorEntries[PLUGIN_PAUSETIME] =
       new CellEditorEntry(PAUSETIME, new TimeEditor(parentFrame),
