@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.102 2006-04-05 22:54:11 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.102.4.1 2006-06-26 17:49:10 troberts Exp $
  */
 
 /*
@@ -99,6 +99,12 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   public static final long
     MIN_FETCH_DELAY = 6 * Constants.SECOND;
 
+  //Short term conf parameter to get around the fact that DefinablePlugins
+  //don't load crawl windows
+  public static final String PARAM_USE_CRAWL_WINDOW_BY_DEFAULT = 
+    Configuration.PREFIX+"baseau.useCrawlWindowByDefault";
+  public static final boolean DEFAULT_USE_CRAWL_WINDOW_BY_DEFAULT = false;
+  
   public static final String USE_CRAWL_WINDOW = "use_crawl_window";
   private static final boolean DEFAULT_USE_CRAWL_WINDOW = false;
 
@@ -253,6 +259,8 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     startUrlString = makeStartUrl();
     paramMap.putString(AU_START_URL, startUrlString);
 
+    
+    
     // get crawl window setting
     boolean useCrawlWindow =
       (config.containsKey(USE_CRAWL_WINDOW)
@@ -261,12 +269,21 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
        paramMap.getBoolean(AU_USE_CRAWL_WINDOW, DEFAULT_USE_CRAWL_WINDOW));
     paramMap.putBoolean(AU_USE_CRAWL_WINDOW, useCrawlWindow);
 
+    
+    if (CurrentConfig.getBooleanParam(PARAM_USE_CRAWL_WINDOW_BY_DEFAULT, 
+                                      DEFAULT_USE_CRAWL_WINDOW_BY_DEFAULT)) {
+      logger.debug3(PARAM_USE_CRAWL_WINDOW_BY_DEFAULT+
+                    " set to true, so using as default.");
+      useCrawlWindow = true; //XXX hack for now
+    }
+    
     // make our crawl spec
     try {
       crawlSpec = makeCrawlSpec();
       if (useCrawlWindow) {
         CrawlWindow window = makeCrawlWindow();
 	//XXX need to get rid of setCrawlWindow and set that in constructor
+        logger.debug3("Setting crawl window to "+window);
         crawlSpec.setCrawlWindow(window);
       }
     } catch (LockssRegexpException e) {
