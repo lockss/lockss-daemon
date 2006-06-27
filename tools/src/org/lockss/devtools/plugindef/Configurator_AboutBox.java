@@ -1,5 +1,5 @@
 /*
- * $Id: Configurator_AboutBox.java,v 1.5 2006-06-26 17:46:56 thib_gc Exp $
+ * $Id: Configurator_AboutBox.java,v 1.6 2006-06-27 22:28:15 thib_gc Exp $
  */
 
 /*
@@ -54,8 +54,8 @@ public class Configurator_AboutBox extends JDialog implements ActionListener {
   FlowLayout flowLayout1 = new FlowLayout();
   GridLayout gridLayout1 = new GridLayout();
   String product = "LOCKSS-Definable Plugin Application";
-  String version = "Version 1.0 beta 1";
-  String copyright = "Copyright (c) 2000-2004" +
+  String version = "Version 0.8";
+  String copyright = "Copyright (c) 2000-2006" +
       " Board of Trustees of Leland Stanford Jr. University," +
       " all rights reserved.";
   String comments = "LOCKSS - Lots of Copies Keep Stuff Safe";

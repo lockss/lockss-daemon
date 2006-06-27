@@ -1,5 +1,5 @@
 /*
- * $Id: EDPCellData.java,v 1.11 2006-06-26 23:30:58 thib_gc Exp $
+ * $Id: EDPCellData.java,v 1.12 2006-06-27 22:28:15 thib_gc Exp $
  */
 
 /*
@@ -213,10 +213,6 @@ public class EDPCellData {
       m_data = data;
       m_plugin.setAuCrawlWindow((String)m_data);
     }
-//    else if(m_key.equals(EditableDefinablePlugin.AU_CRAWL_WINDOW_SPEC)) {
-//      m_data = data;
-//      m_plugin.setAuCrawlWindowSpec((CrawlWindow)m_data);
-//    }
     else if(m_key.equals(EditableDefinablePlugin.AU_PAUSE_TIME)) {
       m_data = new Long(data);
       m_plugin.setAuPauseTime(((Long)m_data).longValue());
