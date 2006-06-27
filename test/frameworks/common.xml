@@ -799,25 +799,6 @@
 	</property>
       </property>
 
-      <property name="teslej8">
-	<property name="title" value="TESL-EJ Volume 8" />
-	<property name="estSize" value="1.8MB" />
-	<property name="journalTitle" value="TESL-EJ" />
-	<property name="plugin" value="gov.loc.plugin.TESLEJPlugin" />
-	<property name="param.1">
-	  <property name="key" value="base_url" />
-	  <property name="value" value="http://writing.berkeley.edu/TESL-EJ/" />
-	</property>
-	<property name="param.2">
-	  <property name="key" value="volume" />
-	  <property name="value" value="8" />
-	</property>
-	<property name="param.3">
-	  <property name="key" value="num_issue_range" />
-	  <property name="value" value="29-32" />
-	</property>
-      </property>
-
       <property name="shadowsmall">
 	<property name="title" value="Shadow Small" />
 	<property name="journalTitle" value="Shadow" />
