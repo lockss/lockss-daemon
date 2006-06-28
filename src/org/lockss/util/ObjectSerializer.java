@@ -1,5 +1,5 @@
 /*
- * $Id: ObjectSerializer.java,v 1.24 2006-05-31 17:54:49 thib_gc Exp $
+ * $Id: ObjectSerializer.java,v 1.25 2006-06-28 18:01:03 thib_gc Exp $
  */
 
 /*
@@ -849,7 +849,7 @@ public abstract class ObjectSerializer {
 
       // Ignore
       case FAILED_DESERIALIZATION_IGNORE:
-        buffer.append(" was left alone");
+        buffer.append("was left alone");
         break;
 
       // Rename
@@ -859,13 +859,13 @@ public abstract class ObjectSerializer {
         boolean success = file.renameTo(new File(renamed));
         if (success) {
           // Rename succeeded
-          buffer.append(" was renamed ");
+          buffer.append("was renamed ");
           buffer.append(renamed);
         }
         else {
           // Rename failed
           logger.error("Failed to rename from " + file + " to " + renamed);
-          buffer.append(" could not be renamed ");
+          buffer.append("could not be renamed ");
           buffer.append(renamed);
           return new SerializationException.RenameFailed(buffer.toString(), exc);
         }
@@ -885,13 +885,13 @@ public abstract class ObjectSerializer {
           IOUtil.safeClose(inputStream);
           outputStream.close();
           // Copy succeeded
-          buffer.append(" was copied to ");
+          buffer.append("was copied to ");
           buffer.append(copied);
         }
         catch (IOException ioe) {
           // Copy failed
           logger.error("Failed to copy from " + file + " to " + copied);
-          buffer.append(" could not be copied to ");
+          buffer.append("could not be copied to ");
           buffer.append(copied);
           return new SerializationException.CopyFailed(buffer.toString(), exc);
         }
@@ -900,7 +900,7 @@ public abstract class ObjectSerializer {
       // Safety net
       default:
         logger.error("Invalid failed deserialization mode: " + getFailedDeserializationMode());
-        buffer.append(" invalid failed deserialization mode: " + getFailedDeserializationMode());
+        buffer.append("--- Invalid failed deserialization mode: " + getFailedDeserializationMode());
         break;
     }
 
