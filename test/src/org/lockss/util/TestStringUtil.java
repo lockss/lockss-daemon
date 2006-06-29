@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.58 2006-02-14 05:23:13 tlipkis Exp $
+ * $Id: TestStringUtil.java,v 1.59 2006-06-29 23:47:50 troberts Exp $
  */
 
 /*
@@ -783,6 +783,14 @@ public class TestStringUtil extends LockssTestCase {
     assertTrue("Didn't find string when it should",
                StringUtil.containsString(new StringReader(readerStr),
                                          stringToFind));
+  }
+
+  public void testFindStringMatchInMiddle() throws IOException {
+    String stringToFind = "abcdef";
+    String readerStr = "pwpwpwallplplplplp";
+    assertFalse("Found string when it shouldn't",
+                StringUtil.containsString(new StringReader(readerStr),
+                                          stringToFind, 7));
   }
 
 

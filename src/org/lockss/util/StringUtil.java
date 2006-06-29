@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.69 2006-02-14 05:23:13 tlipkis Exp $
+ * $Id: StringUtil.java,v 1.70 2006-06-29 23:47:50 troberts Exp $
  */
 
 /*
@@ -40,8 +40,6 @@ import org.apache.oro.text.regex.*;
 /**
  * This is a class to contain generic string utilities
  *
- * @author  Thomas S. Robertson
- * @version 0.0
  */
 
 public class StringUtil {
@@ -1040,12 +1038,9 @@ public class StringUtil {
     while ((bcount = StreamUtil.readChars(reader, buff, buff.length)) > 0) {
       if (numPartialMatch > 0 && bcount > (str.length() - numPartialMatch)) {
 	//we previously matched this many chars at the end of the last buff
-	for (int ix=0; ix<(str.length()-numPartialMatch); ix++) {
-	  if (str.charAt(ix+numPartialMatch) != buff[ix]) {
-	    break;
-	  }
+	if (startsWith(buff, str.substring(numPartialMatch))) {
+	  return true;
 	}
-	return true;
       }
       if (bm.search(buff, 0, bcount) >= 0) {
 	return true;
@@ -1055,4 +1050,18 @@ public class StringUtil {
     }
     return false;
   }
+
+  /**
+   * 
+   * @return true if the first str.length() chars in buffer match str
+   */
+  private static boolean startsWith(char[]buffer, String str) {
+    for (int ix=0; ix<(str.length()); ix++) {
+      if (str.charAt(ix) != buffer[ix]) {
+	return false;
+      }
+    }
+    return true;
+  }
 }
+
