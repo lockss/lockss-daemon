@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.71 2006-06-30 18:51:25 troberts Exp $
+ * $Id: StringUtil.java,v 1.72 2006-06-30 19:26:24 troberts Exp $
  */
 
 /*
@@ -1038,19 +1038,21 @@ public class StringUtil {
     while ((bcount = StreamUtil.readChars(reader, buff, buff.length)) > 0) {
       if (numPartialMatch > 0 && bcount > (str.length() - numPartialMatch)) {
 	//we previously matched this many chars at the end of the last buff
-	log.debug3("Found a partial match before in last buffer: "+
-		   str.substring(numPartialMatch)+"; looking for the rest");
+	if (log.isDebug3()) {
+	  log.debug3("Found a partial match before in last buffer: "+
+	             str.substring(numPartialMatch)+"; looking for the rest");
+	}
 	if (startsWith(buff, str.substring(numPartialMatch), ignoreCase)) {
-	  log.debug3("Found the second half of a partial match");
+	  if (log.isDebug3()) {log.debug3("Found the second half of a partial match");}
 	  return true;
 	}
       }
       if (bm.search(buff, 0, bcount) >= 0) {
-	log.debug3("Found a full match in one buffer");
+	if (log.isDebug3()) {log.debug3("Found a full match in one buffer");}
 	return true;
       } else {
 	numPartialMatch = bm.partialMatch();
-	if (numPartialMatch > 0) {
+	if (log.isDebug3() && numPartialMatch > 0) {
 	  log.debug3("Found a partial match of "+numPartialMatch);
 	}
       }
@@ -1067,7 +1069,7 @@ public class StringUtil {
     for (int ix=0; ix<(str.length()); ix++) {
       if (Character.toLowerCase(str.charAt(ix))
 	  != Character.toLowerCase(buffer[ix])) {
-	log.debug3(str.charAt(ix)+" didn't match "+ buffer[ix]);
+	if (log.isDebug3()) {log.debug3(str.charAt(ix)+" didn't match "+ buffer[ix]);}
 	return false;
       }
     }
