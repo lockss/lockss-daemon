@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.59 2006-06-29 23:47:50 troberts Exp $
+ * $Id: TestStringUtil.java,v 1.60 2006-06-30 18:51:25 troberts Exp $
  */
 
 /*
@@ -759,9 +759,18 @@ public class TestStringUtil extends LockssTestCase {
 					 "BLAH", true));
   }
 
-  public void testContainsStringPartialMatch() throws IOException {
-    String testStr = "123456aaaaaaaaa1234";
-    String searchStr = "aaaaaaaaa";
+  public void testContainsStringPartialMatchPartialBuffer() throws IOException {
+    String testStr = "123456abcdefghi1234";
+    String searchStr = "abcdefghi";
+    assertTrue("Didn't find string when it should",
+	       StringUtil.containsString(new StringReader(testStr),
+					 searchStr, 10));
+
+  }
+
+  public void testContainsStringPartialMatchFullBuffer() throws IOException {
+    String testStr = "123456abcdefghi1234567890";
+    String searchStr = "abcdefGHI";
     assertTrue("Didn't find string when it should",
 	       StringUtil.containsString(new StringReader(testStr),
 					 searchStr, 10));
