@@ -46,7 +46,7 @@
         <key>num_issue_range</key>
         <displayName>Numeric Issue Range</displayName>
         <description>A Range of issues in the form: min-max</description>
-        <type>7</type>
+        <type>8</type>
         <size>20</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
