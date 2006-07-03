@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.58 2006-02-14 05:23:13 tlipkis Exp $
+ * $Id: TestStringUtil.java,v 1.58.8.1 2006-07-03 19:50:29 thib_gc Exp $
  */
 
 /*
@@ -759,9 +759,18 @@ public class TestStringUtil extends LockssTestCase {
 					 "BLAH", true));
   }
 
-  public void testContainsStringPartialMatch() throws IOException {
-    String testStr = "123456aaaaaaaaa1234";
-    String searchStr = "aaaaaaaaa";
+  public void testContainsStringPartialMatchPartialBuffer() throws IOException {
+    String testStr = "123456abcdefghi1234";
+    String searchStr = "abcdefghi";
+    assertTrue("Didn't find string when it should",
+	       StringUtil.containsString(new StringReader(testStr),
+					 searchStr, 10));
+
+  }
+
+  public void testContainsStringPartialMatchFullBuffer() throws IOException {
+    String testStr = "123456abcdefghi1234567890";
+    String searchStr = "abcdefGHI";
     assertTrue("Didn't find string when it should",
 	       StringUtil.containsString(new StringReader(testStr),
 					 searchStr, 10));
@@ -783,6 +792,14 @@ public class TestStringUtil extends LockssTestCase {
     assertTrue("Didn't find string when it should",
                StringUtil.containsString(new StringReader(readerStr),
                                          stringToFind));
+  }
+
+  public void testFindStringMatchInMiddle() throws IOException {
+    String stringToFind = "abcdef";
+    String readerStr = "pwpwpwallplplplplp";
+    assertFalse("Found string when it shouldn't",
+                StringUtil.containsString(new StringReader(readerStr),
+                                          stringToFind, 7));
   }
 
 

@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.69 2006-02-14 05:23:13 tlipkis Exp $
+ * $Id: StringUtil.java,v 1.69.8.1 2006-07-03 19:50:29 thib_gc Exp $
  */
 
 /*
@@ -40,8 +40,6 @@ import org.apache.oro.text.regex.*;
 /**
  * This is a class to contain generic string utilities
  *
- * @author  Thomas S. Robertson
- * @version 0.0
  */
 
 public class StringUtil {
@@ -1040,19 +1038,42 @@ public class StringUtil {
     while ((bcount = StreamUtil.readChars(reader, buff, buff.length)) > 0) {
       if (numPartialMatch > 0 && bcount > (str.length() - numPartialMatch)) {
 	//we previously matched this many chars at the end of the last buff
-	for (int ix=0; ix<(str.length()-numPartialMatch); ix++) {
-	  if (str.charAt(ix+numPartialMatch) != buff[ix]) {
-	    break;
-	  }
+	if (log.isDebug3()) {
+	  log.debug3("Found a partial match before in last buffer: "+
+	             str.substring(numPartialMatch)+"; looking for the rest");
 	}
-	return true;
+	if (startsWith(buff, str.substring(numPartialMatch), ignoreCase)) {
+	  if (log.isDebug3()) {log.debug3("Found the second half of a partial match");}
+	  return true;
+	}
       }
       if (bm.search(buff, 0, bcount) >= 0) {
+	if (log.isDebug3()) {log.debug3("Found a full match in one buffer");}
 	return true;
       } else {
 	numPartialMatch = bm.partialMatch();
+	if (log.isDebug3() && numPartialMatch > 0) {
+	  log.debug3("Found a partial match of "+numPartialMatch);
+	}
       }
     }
     return false;
   }
+
+  /**
+   * 
+   * @return true if the first str.length() chars in buffer match str
+   */
+  private static boolean startsWith(char[]buffer, String str,
+				    boolean ignoreCase) {
+    for (int ix=0; ix<(str.length()); ix++) {
+      if (Character.toLowerCase(str.charAt(ix))
+	  != Character.toLowerCase(buffer[ix])) {
+	if (log.isDebug3()) {log.debug3(str.charAt(ix)+" didn't match "+ buffer[ix]);}
+	return false;
+      }
+    }
+    return true;
+  }
 }
+
