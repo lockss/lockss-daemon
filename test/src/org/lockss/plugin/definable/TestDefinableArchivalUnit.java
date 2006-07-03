@@ -1,10 +1,10 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.22 2006-02-14 05:22:46 tlipkis Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.22.8.1 2006-07-03 19:36:37 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -50,8 +50,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
   private DefinableArchivalUnit cau = null;
   private TypedEntryMap configMap;
   private ExternalizableMap defMap;
-  private List configProps = ListUtil.list(ConfigParamDescr.BASE_URL,
-                                           ConfigParamDescr.VOLUME_NUMBER);
+  private List configProps;
   private List crawlRules = ListUtil.list("1,\"%s\", base_url",
                                           "1,\".*\\.gif\"");
 
@@ -63,6 +62,9 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 
   protected void setUp() throws Exception {
     super.setUp();
+
+    configProps = ListUtil.list(ConfigParamDescr.BASE_URL,
+                                ConfigParamDescr.VOLUME_NUMBER);
 
     cp = new DefinablePlugin();
     defMap = cp.getDefinitionMap();
@@ -164,6 +166,10 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     vec.add(0, "aaa");
     vec.add(1, "hhh");
     configMap.setMapElement(key, vec);
+
+    configProps.add(ConfigParamDescr.ISSUE_RANGE);
+    defMap.putCollection(DefinablePlugin.CM_CONFIG_PROPS_KEY, configProps);
+
     String rule = "1,\"http://www.example.com/%sissue.html\", " + key;
     CrawlRule actualReturn = cau.convertRule(rule);
     assertEquals(CrawlRule.INCLUDE,
@@ -177,6 +183,10 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     vec.add(0, new Long(10));
     vec.add(1, new Long(20));
     configMap.setMapElement(key, vec);
+
+    configProps.add(ConfigParamDescr.NUM_ISSUE_RANGE);
+    defMap.putCollection(DefinablePlugin.CM_CONFIG_PROPS_KEY, configProps);
+
     String rule = "1,\"http://www.example.com/issue%s.html\", " + key;
     CrawlRule actualReturn = cau.convertRule(rule);
     assertEquals(CrawlRule.INCLUDE,
@@ -189,10 +199,14 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     Vector vec = new Vector();
     String key = ConfigParamDescr.ISSUE_SET.getKey();
     vec.add("apple");
-    vec.add("bananna");
+    vec.add("banana");
     vec.add("grape");
     vec.add("fig");
     configMap.setMapElement(key, vec);
+
+    configProps.add(ConfigParamDescr.ISSUE_SET);
+    defMap.putCollection(DefinablePlugin.CM_CONFIG_PROPS_KEY, configProps);
+
     String rule = "1,\"http://www.example.com/%sissue.html\", " + key;
     CrawlRule actualReturn = cau.convertRule(rule);
     assertEquals(CrawlRule.INCLUDE,

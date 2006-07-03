@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.42 2006-06-26 23:30:59 thib_gc Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.42.2.1 2006-07-03 19:36:38 thib_gc Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.plugin.definable;
 import java.net.*;
 import java.util.*;
 
+import org.apache.commons.collections.*;
 import org.lockss.config.Configuration;
 import org.lockss.crawler.*;
 import org.lockss.daemon.*;
@@ -126,8 +127,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 
   protected void loadAuConfigDescrs(Configuration config) throws
       ConfigurationException {
-    List descrList = plugin.getAuConfigDescrs();
-    for (Iterator it = descrList.iterator(); it.hasNext(); ) {
+    for (Iterator it = plugin.getAuConfigDescrs().iterator() ; it.hasNext() ; ) {
       ConfigParamDescr descr = (ConfigParamDescr) it.next();
       String key = descr.getKey();
       log.debug3("loading value for key: "+key);
@@ -360,7 +360,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     return super.getContentParser(mimeType);
   }
 
-  // ---------------------------------------------------------------------
+// ---------------------------------------------------------------------
 //   CLASS LOADING SUPPORT ROUTINES
 // ---------------------------------------------------------------------
 
@@ -432,31 +432,49 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     String val_str = printfString.substring(0, printfString.indexOf(","));
     int value = Integer.valueOf(val_str).intValue();
     Vector vec;
-    if (rule.indexOf(RANGE_SUBSTITUTION_STRING) != -1 ||
-        rule.indexOf(NUM_SUBSTITUTION_STRING) != -1) {
-      // check for one range or set
-      vec = (Vector) paramMap.getMapElement(ConfigParamDescr.ISSUE_RANGE.
-                                                 getKey());
-      if (vec != null) {
-        return new CrawlRules.REMatchRange(rule, value,
-                                           (String) vec.elementAt(0),
-                                           (String) vec.elementAt(1));
+    if (rule.indexOf(RANGE_SUBSTITUTION_STRING) != -1
+        || rule.indexOf(NUM_SUBSTITUTION_STRING) != -1) {
+      // Check for range or set
+
+      for (Iterator iter = plugin.getAuConfigDescrs().iterator() ; iter.hasNext() ; ) {
+        ConfigParamDescr descr = (ConfigParamDescr)iter.next();
+        switch (descr.getType()) {
+          case ConfigParamDescr.TYPE_RANGE:
+            vec = (Vector)paramMap.getMapElement(descr.getKey());
+            if (vec != null) {
+              return new CrawlRules.REMatchRange(rule,
+                                                 value,
+                                                 (String)vec.elementAt(0),
+                                                 (String)vec.elementAt(1));
+            }
+            break;
+          case ConfigParamDescr.TYPE_NUM_RANGE:
+            vec = (Vector)paramMap.getMapElement(descr.getKey());
+            if (vec != null) {
+              return new CrawlRules.REMatchRange(rule,
+                                                 value,
+                                                 ((Long)vec.elementAt(0)).longValue(),
+                                                 ((Long)vec.elementAt(1)).longValue());
+            }
+            break;
+          case ConfigParamDescr.TYPE_SET:
+            vec = (Vector)paramMap.getMapElement(descr.getKey());
+            if (vec != null) {
+              return new CrawlRules.REMatchSet(rule,
+                                               value,
+                                               new HashSet(vec));
+            }
+            break;
+        }
       }
-      else if ( (vec = (Vector) paramMap.getMapElement(
-          ConfigParamDescr.ISSUE_SET.getKey())) != null) {
-        return new CrawlRules.REMatchSet(rule, value, new HashSet(vec));
-      }
-      else if ( (vec = (Vector) paramMap.getMapElement(
-          ConfigParamDescr.NUM_ISSUE_RANGE.getKey())) != null) {
-        return new CrawlRules.REMatchRange(rule, value,
-                                           ( (Long) vec.elementAt(0)).longValue(),
-                                           ( (Long) vec.elementAt(1)).longValue());
-      }
+
     }
+
     return new CrawlRules.RE(rule, value);
   }
 
   public interface ConfigurableCrawlWindow {
     public CrawlWindow makeCrawlWindow();
   }
+
 }

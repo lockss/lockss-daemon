@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescr.java,v 1.28 2006-06-02 16:58:37 thib_gc Exp $
+ * $Id: ConfigParamDescr.java,v 1.28.4.1 2006-07-03 19:36:37 thib_gc Exp $
  */
 
 /*
@@ -86,7 +86,7 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
     new ConfigParamDescr()
     .setKey("num_issue_range")
     .setDisplayName("Numeric Issue Range")
-    .setType(TYPE_RANGE)
+    .setType(TYPE_NUM_RANGE)
     .setSize(20)
     .setDescription("A Range of issues in the form: min-max");
 
@@ -436,6 +436,17 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
           throw new InvalidFormatException("Invalid Boolean: " + val);
         break;
       case TYPE_RANGE:
+      { // case block
+        ret_val = StringUtil.breakAt(val,'-',2,true, true);
+        String s_min = (String)((Vector)ret_val).firstElement();
+        String s_max = (String)((Vector)ret_val).lastElement();
+        if( !(s_min.compareTo(s_max) < 0) ) {
+          throw new InvalidFormatException("Invalid Range: " + val);
+        }
+        break;
+      } // case block
+      case TYPE_NUM_RANGE:
+      { // case block
         ret_val = StringUtil.breakAt(val,'-',2,true, true);
         String s_min = (String)((Vector)ret_val).firstElement();
         String s_max = (String)((Vector)ret_val).lastElement();
@@ -453,13 +464,15 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
             break;
           }
         }
-        throw new InvalidFormatException("Invalid Range: " + val);
+        throw new InvalidFormatException("Invalid  Numeric Range: " + val);
+      } // case block
       case TYPE_SET:
         ret_val = StringUtil.breakAt(val,',', 50, true, true);
         break;
       default:
         throw new InvalidFormatException("Unknown type: " + type);
     }
+
     return ret_val;
   }
 
