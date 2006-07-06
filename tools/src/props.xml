@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lockss-config>
+ <property name="org.lockss.log.targets" value="org.lockss.util.FileTarget" />
+ <property name="org.lockss.log.target.FileTarget.file" value="log.txt" />
+</lockss-config>

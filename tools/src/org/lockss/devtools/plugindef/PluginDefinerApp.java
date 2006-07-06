@@ -1,5 +1,5 @@
 /*
- * $Id: PluginDefinerApp.java,v 1.5 2006-06-26 17:46:56 thib_gc Exp $
+ * $Id: PluginDefinerApp.java,v 1.5.2.1 2006-07-06 18:08:14 thib_gc Exp $
  */
 
 /*
@@ -29,12 +29,18 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
 */
+
 package org.lockss.devtools.plugindef;
 
-import java.awt.*;
 import javax.swing.*;
-import java.util.logging.*;
+
+import org.lockss.config.ConfigManager;
+import org.lockss.util.*;
+
+import java.util.List;
+import java.awt.*;
 import java.io.IOException;
+import java.net.URL;
 
 public class PluginDefinerApp {
   static final String LOG_ROOT = "org.lockss.devtools.plugindef";
@@ -68,14 +74,32 @@ public class PluginDefinerApp {
   //Main method
   public static void main(String[] args) {
     try {
+      //System.out.println(org.lockss.util.Logger.class.getName());
+      initConfig();
       JFrame.setDefaultLookAndFeelDecorated(true);
       JDialog.setDefaultLookAndFeelDecorated(true);
-      FileHandler fh = new FileHandler("%t/plugindef%u.log");
-      Logger.getLogger(LOG_ROOT).addHandler(fh);
     }
     catch (Exception e) {
       e.printStackTrace();
     }
     new PluginDefinerApp();
   }
+
+  protected static void initConfig() {
+    // Kludge
+    Logger lll = Logger.getLoggerWithInitialLevel("PluginTool", Logger.LEVEL_INFO);
+    lll.info("Plugin Tool starting up");
+
+    // Get resources from JAR "props.xml"
+    ClassLoader classLoader = PluginDefinerApp.class.getClassLoader();
+    URL propsFile = classLoader.getResource("props.xml");
+    if (propsFile != null) {
+      List propsUrls = ListUtil.list(propsFile.toString());
+      ConfigManager configMgr = ConfigManager.makeConfigManager(propsUrls);
+      configMgr.initService(null);
+      configMgr.startService();
+      configMgr.waitConfig();
+    }
+  }
+
 }
