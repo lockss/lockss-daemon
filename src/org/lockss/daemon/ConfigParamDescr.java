@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescr.java,v 1.28.4.1 2006-07-03 19:36:37 thib_gc Exp $
+ * $Id: ConfigParamDescr.java,v 1.28.4.2 2006-07-06 17:21:50 thib_gc Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.daemon;
 
 import java.net.*;
 
+import org.apache.commons.lang.math.NumberUtils;
 import org.lockss.app.LockssApp;
 import org.lockss.util.*;
 import java.util.*;
@@ -451,8 +452,8 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
         String s_min = (String)((Vector)ret_val).firstElement();
         String s_max = (String)((Vector)ret_val).lastElement();
         try {
-          Long l_min = Long.valueOf(s_min);
-          Long l_max = Long.valueOf(s_max);
+          Long l_min = NumberUtils.createLong(s_min);
+          Long l_max = NumberUtils.createLong(s_max);
           if(l_min.compareTo(l_max) < 0) {
             ((Vector)ret_val).setElementAt(l_min, 0);
             ((Vector)ret_val).setElementAt(l_max, 1);

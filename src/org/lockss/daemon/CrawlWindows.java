@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlWindows.java,v 1.10 2006-01-27 23:21:39 thib_gc Exp $
+ * $Id: CrawlWindows.java,v 1.10.8.1 2006-07-06 17:21:50 thib_gc Exp $
  */
 
 /*
@@ -240,8 +240,8 @@ public class CrawlWindows {
     }
 
     public String toString() {
-      return "[CrawlWindows.Interval: field: " + fieldMask +
-          ", "+start+", "+end+"]";
+      return "[CrawlWindows.Interval: field: " + fieldMask
+             + ", start: " + start + ", end: " + end + "]";
     }
   }
 

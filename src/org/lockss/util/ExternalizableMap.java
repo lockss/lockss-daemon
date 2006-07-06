@@ -1,5 +1,5 @@
 /*
- * $Id: ExternalizableMap.java,v 1.18 2006-05-31 17:54:49 thib_gc Exp $
+ * $Id: ExternalizableMap.java,v 1.18.4.1 2006-07-06 17:21:50 thib_gc Exp $
  */
 
 /*
@@ -59,16 +59,16 @@ public class ExternalizableMap extends TypedEntryMap {
   /**
    * <p>The last message resulting from a failure to load a file.</p>
    */
-  private String loadErr = "";
+  private String errorString = "";
 
   /**
-   * <p>Retrieves the last message resulting from a failure to load a
-   * file.</p>
-   * @return An error message dating back to the last load operation;
-   *         may be null if no error occurred.
+   * <p>Retrieves the last message resulting from a failure to load
+   * or store a file.</p>
+   * @return An error message dating back to the last load or store
+   *         operation; may be null if no error occurred.
    */
-  public String getLoadErr() {
-    return loadErr;
+  public String getErrorString() {
+    return errorString;
   }
 
   /**
@@ -103,7 +103,7 @@ public class ExternalizableMap extends TypedEntryMap {
   public void loadMap(ObjectSerializer deserializer,
                       String mapLocation,
                       String mapName) {
-    loadErr = null;
+    errorString = null;
     File mapFile = new File(mapLocation, mapName);
 
     try {
@@ -112,8 +112,8 @@ public class ExternalizableMap extends TypedEntryMap {
       m_map = map;
     }
     catch (Exception e) {
-      loadErr = "Exception loading XML file: " + e.toString();
-      logger.error(loadErr);
+      errorString = "Exception loading XML file: " + e.toString();
+      logger.error(errorString);
     }
   }
 
@@ -147,11 +147,11 @@ public class ExternalizableMap extends TypedEntryMap {
                                   String mapLocation,
                                   ClassLoader loader)
       throws FileNotFoundException {
-    loadErr = null;
+    errorString = null;
     InputStream mapStream = loader.getResourceAsStream(mapLocation);
     if (mapStream == null) {
-      loadErr = "Unable to load: " + mapLocation;
-      throw new FileNotFoundException(loadErr);
+      errorString = "Unable to load: " + mapLocation;
+      throw new FileNotFoundException(errorString);
     }
 
     try {
@@ -161,8 +161,8 @@ public class ExternalizableMap extends TypedEntryMap {
     }
     catch (Exception e) {
       logger.warning("Could not load: " + mapLocation, e);
-      loadErr = "Exception loading XML file: " + e.toString();
-      throw new FileNotFoundException(loadErr);
+      errorString = "Exception loading XML file: " + e.toString();
+      throw new FileNotFoundException(errorString);
     }
   }
 
@@ -195,7 +195,7 @@ public class ExternalizableMap extends TypedEntryMap {
   public void storeMap(ObjectSerializer serializer,
                        String mapLocation,
                        String mapName) {
-    loadErr = null;
+    errorString = null;
     File mapDir = new File(mapLocation);
     if (!mapDir.exists()) { mapDir.mkdirs(); }
     File mapFile = new File(mapDir, mapName);
@@ -205,8 +205,8 @@ public class ExternalizableMap extends TypedEntryMap {
       serializer.serialize(mapFile, wrap(m_map));
     }
     catch (Exception e) {
-      loadErr = "Exception storing map: " + e.toString();
-      logger.error(loadErr);
+      errorString = "Exception storing map: " + e.toString();
+      logger.error(errorString);
     }
   }
 
