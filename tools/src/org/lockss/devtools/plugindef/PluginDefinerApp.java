@@ -1,5 +1,5 @@
 /*
- * $Id: PluginDefinerApp.java,v 1.6 2006-07-06 18:11:34 thib_gc Exp $
+ * $Id: PluginDefinerApp.java,v 1.7 2006-07-06 18:37:53 thib_gc Exp $
  */
 
 /*
@@ -94,7 +94,7 @@ public class PluginDefinerApp {
     ClassLoader classLoader = PluginDefinerApp.class.getClassLoader();
     URL propsFile = classLoader.getResource("props.xml");
     if (propsFile != null) {
-      List propsUrls = ListUtil.list(propsFile.toString());
+      List propsUrls = ListUtil.list(propsFile.toString(), "props.opt");
       ConfigManager configMgr = ConfigManager.makeConfigManager(propsUrls);
       configMgr.initService(null);
       configMgr.startService();
