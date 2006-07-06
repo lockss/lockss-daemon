@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.36 2006-06-04 06:25:53 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.37 2006-07-06 17:38:54 thib_gc Exp $
  */
 
 /*
@@ -179,7 +179,7 @@ public class ConfigManager implements LockssManager {
   }
 
   public ConfigManager(List urls) {
-    this(null, null);
+    this(urls, null);
   }
 
   public ConfigManager(List urls, String groupName) {
@@ -498,7 +498,7 @@ public class ConfigManager implements LockssManager {
       }
       if (gen != null) {
 	res.add(gen);
-      }      
+      }
     }
     return res;
   }

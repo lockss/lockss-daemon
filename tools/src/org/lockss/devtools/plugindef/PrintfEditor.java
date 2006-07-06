@@ -1,5 +1,5 @@
 /*
- * $Id: PrintfEditor.java,v 1.21 2006-06-26 17:46:56 thib_gc Exp $
+ * $Id: PrintfEditor.java,v 1.22 2006-07-06 17:38:54 thib_gc Exp $
  */
 
 /*
@@ -310,6 +310,7 @@ public class PrintfEditor extends JDialog implements EDPEditor, ConfigParamListe
           }
           break;
         case ConfigParamDescr.TYPE_RANGE:
+        case ConfigParamDescr.TYPE_NUM_RANGE:
         case ConfigParamDescr.TYPE_SET:
           format = "%s";
           break;

@@ -1,5 +1,5 @@
 /*
- * $Id: EditableDefinablePlugin.java,v 1.19 2006-06-26 23:30:58 thib_gc Exp $
+ * $Id: EditableDefinablePlugin.java,v 1.20 2006-07-06 17:38:54 thib_gc Exp $
  */
 
 /*
@@ -89,7 +89,7 @@ public class EditableDefinablePlugin
   static public String[] CONFIG_PARAM_TYPES = ConfigParamDescr.TYPE_STRINGS;
 
   static public Map DEFAULT_CONFIG_PARAM_DESCRS = getDefaultConfigParamDescrs();
-  static Logger log = Logger.getLogger(PluginDefinerApp.LOG_ROOT +
+  static Logger logger = Logger.getLogger(PluginDefinerApp.LOG_ROOT +
 				       ".editableDefinablePlugin");
   protected PersistentPluginState pluginState;
 
@@ -99,12 +99,13 @@ public class EditableDefinablePlugin
 
   // for reading map files
   public void loadMap(String location, String name) throws Exception {
-    log.info("loading definition map: " + location + "/" + name);
+    logger.info("Loading definition map: " + location + "/" + name);
     definitionMap.loadMap(location, name);
-    String err = definitionMap.getLoadErr();
-    if(err != null) {
-      log.error(err);
-      throw new Exception(err);
+    String err = definitionMap.getErrorString();
+    if (err != null) {
+      Exception exc = new Exception(err);
+      logger.error("Error while loading definition map", exc);
+      throw exc;
     }
   }
 
@@ -116,12 +117,13 @@ public class EditableDefinablePlugin
       definitionMap.removeMapElement((String)it.next());
     }
     // store the configuration map
-    log.info("storing definition map: " + location + "/" + name);
+    logger.info("Storing definition map: " + location + "/" + name);
     definitionMap.storeMap(location, name);
-    String err = definitionMap.getLoadErr();
-    if(err != null) {
-      log.error(err);
-      throw new Exception(err);
+    String err = definitionMap.getErrorString();
+    if (err != null) {
+      Exception exc = new Exception(err);
+      logger.error("Error while storing definition map", exc);
+      throw exc;
     }
   }
 
@@ -147,11 +149,14 @@ public class EditableDefinablePlugin
   }
 
   public void setCrawlType(String crawlType) {
+    logger.info("Setting crawl type to " + crawlType);
     definitionMap.putString(CM_CRAWL_TYPE, crawlType);
   }
 
   public String getCrawlType() {
-    return definitionMap.getString(CM_CRAWL_TYPE, CRAWL_TYPES[0]);
+    String ret = definitionMap.getString(CM_CRAWL_TYPE, CRAWL_TYPES[0]);
+    logger.debug("The crawl type is " + ret);
+    return ret;
   }
 
   public void removeCrawlType() {
@@ -159,12 +164,14 @@ public class EditableDefinablePlugin
   }
 
   public void setAuStartURL(String startUrl) {
+    logger.info("Setting the AU start URL to " + startUrl);
     definitionMap.putString(AU_START_URL, startUrl);
   }
 
   public String getAuStartUrl() {
-
-    return definitionMap.getString(AU_START_URL, null);
+    String ret = definitionMap.getString(AU_START_URL, null);
+    logger.debug("The AU start URL is " + ret);
+    return ret;
   }
 
   public void removeAuStartURL() {
@@ -172,11 +179,14 @@ public class EditableDefinablePlugin
   }
 
   public void setAuName(String name) {
+    logger.info("Setting the AU name to " + name);
     definitionMap.putString(AU_NAME, name);
   }
 
   public String getAuName() {
-    return definitionMap.getString(AU_NAME, null);
+    String ret = definitionMap.getString(AU_NAME, null);
+    logger.debug("The AU name is " + ret);
+    return ret;
   }
 
   public void removeAuName() {
@@ -202,65 +212,74 @@ public class EditableDefinablePlugin
   }
 
   public void addCrawlRule(String rule) {
+    String logMessage = "Adding crawl rule " + rule;
     List rules = (List) definitionMap.getCollection(AU_RULES, new ArrayList());
     for (Iterator it = rules.iterator(); it.hasNext(); ) {
       String str = (String) it.next();
       if (str.equals(rule)) {
+        logger.info(logMessage + "; already in collection");
 	return;
       }
     }
+    logger.info(logMessage);
     rules.add(rule);
     definitionMap.putCollection(AU_RULES, rules);
   }
 
   public void removeCrawlRule(String rule) {
-    List rules = (List) definitionMap.getCollection(AU_RULES, null);
-    if (rules == null)return;
+    String logMessage = "Removing crawl rule " + rule;
+    List rules = (List)definitionMap.getCollection(AU_RULES, null);
+    if (rules == null) {
+      logger.error(logMessage + "; no crawl rules");
+      return;
+    }
 
+    int counter = 0;
     for (Iterator it = rules.iterator(); it.hasNext(); ) {
       String str = (String) it.next();
       if (str.equals(rule)) {
-	it.remove();
+        ++counter;
+        it.remove();
       }
     }
 
+    logger.info(logMessage + "; found " + counter + " matches");
   }
 
-  public void setAuCrawlWindow(String crawlWindow) {
-
+  public void setAuCrawlWindow(String crawlWindowClass) {
+    String logMessage = "Setting crawl window class to " + crawlWindowClass;
     try {
-      definitionMap.putString(AU_CRAWL_WINDOW, crawlWindow);
-      CrawlWindow win = (CrawlWindow) Class.forName(crawlWindow).newInstance();
+      definitionMap.putString(AU_CRAWL_WINDOW, crawlWindowClass);
+      CrawlWindow win = (CrawlWindow)Class.forName(crawlWindowClass).newInstance();
+      logger.info(logMessage);
     }
     catch (Exception ex) {
-      throw new DefinablePlugin.InvalidDefinitionException(
-							   "Unable to create crawl window class: " + crawlWindow, ex);
+      logger.error(logMessage + " failed", ex);
+      throw new DefinablePlugin.InvalidDefinitionException("Unable to create crawl window class: "
+                                                           + crawlWindowClass,
+                                                           ex);
     }
   }
 
   public String getAuCrawlWindow() {
-    return definitionMap.getString(AU_CRAWL_WINDOW, null);
+    String ret = definitionMap.getString(AU_CRAWL_WINDOW, null);
+    logger.debug("The crawl window class is " + ret);
+    return ret;
   }
 
   public void removeAuCrawlWindow() {
     definitionMap.removeMapElement(AU_CRAWL_WINDOW);
   }
 
-  public void setAuCrawlWindowSpec(CrawlWindow crawlWindow){
-      try {
-	  definitionMap.setMapElement(AU_CRAWL_WINDOW_SPEC, crawlWindow);
-      }
-      catch (Exception ex) {
-	  throw new DefinablePlugin.InvalidDefinitionException(
-           "Unable to set crawl window spec: " + crawlWindow, ex);
-      }
-
+  public void setAuCrawlWindowSpec(CrawlWindow crawlWindowSpec) {
+    logger.info("Setting crawl window spec to " + crawlWindowSpec);
+    definitionMap.setMapElement(AU_CRAWL_WINDOW_SPEC, crawlWindowSpec);
   }
 
   public CrawlWindow getAuCrawlWindowSpec() {
-
-      return (CrawlWindow) (definitionMap.getMapElement(AU_CRAWL_WINDOW_SPEC));
-
+    CrawlWindow ret = (CrawlWindow)(definitionMap.getMapElement(AU_CRAWL_WINDOW_SPEC));
+    logger.debug("The crawl window spec is " + ret);
+    return ret;
   }
 
   public void removeAuCrawlWindowSpec() {
@@ -334,12 +353,16 @@ public class EditableDefinablePlugin
   }
 
   public void setNewContentCrawlIntv(long crawlIntv) {
+    logger.info("Setting new content crawl itnerval to " + crawlIntv);
     definitionMap.putLong(AU_NEWCONTENT_CRAWL, crawlIntv);
   }
 
   public long getNewContentCrawlIntv() {
-    return definitionMap.getLong(AU_NEWCONTENT_CRAWL,
-				 DefinableArchivalUnit.DEFAULT_NEW_CONTENT_CRAWL_INTERVAL);
+    // FIXME: Uses daemon default
+    long ret = definitionMap.getLong(AU_NEWCONTENT_CRAWL,
+                                     DefinableArchivalUnit.DEFAULT_NEW_CONTENT_CRAWL_INTERVAL);
+    logger.debug("The new contetn crawl interval is " + ret);
+    return ret;
   }
 
   public  void removeNewContentCrawlIntv() {
@@ -347,12 +370,15 @@ public class EditableDefinablePlugin
   }
 
   public void setAuCrawlDepth(int depth) {
+    logger.info("Setting the AU crawl depth to " + depth);
     definitionMap.putInt(AU_CRAWL_DEPTH, depth);
   }
 
   public int getAuCrawlDepth() {
-    return definitionMap.getInt(AU_CRAWL_DEPTH,
-				DefinableArchivalUnit.DEFAULT_AU_CRAWL_DEPTH);
+    int ret = definitionMap.getInt(AU_CRAWL_DEPTH,
+                                   DefinableArchivalUnit.DEFAULT_AU_CRAWL_DEPTH);
+    logger.debug("The AU crawl depth is " + ret);
+    return ret;
   }
 
   public void removeAuCrawlDepth() {
@@ -360,12 +386,16 @@ public class EditableDefinablePlugin
   }
 
   public void setAuPauseTime(long pausetime) {
+    logger.info("Setting the AU pause time to " + pausetime);
     definitionMap.putLong(AU_PAUSE_TIME, pausetime);
   }
 
   public long getAuPauseTime() {
-    return definitionMap.getLong(AU_PAUSE_TIME,
-				 DefinableArchivalUnit.DEFAULT_FETCH_DELAY);
+    // FIXME: Uses daemon default
+    long ret = definitionMap.getLong(AU_PAUSE_TIME,
+                                     DefinableArchivalUnit.DEFAULT_FETCH_DELAY);
+    logger.debug("The AU pause time is " + ret);
+    return ret;
   }
 
   public void removeAuPauseTime() {
@@ -385,11 +415,14 @@ public class EditableDefinablePlugin
   }
 
   public void setPluginName(String name) {
+    logger.info("Setting the plugin name to " + name);
     definitionMap.putString(PLUGIN_NAME, name);
   }
 
   public String getPluginName() {
-    return definitionMap.getString(PLUGIN_NAME, "UNKNOWN");
+    String ret = definitionMap.getString(PLUGIN_NAME, "UNKNOWN");
+    logger.debug("The plugin name is " + ret);
+    return ret;
   }
 
   public void removePluginName() {
@@ -397,11 +430,14 @@ public class EditableDefinablePlugin
   }
 
   public void setPluginIdentifier(String name) {
+    logger.info("Setting the plugin identifier to " + name);
     definitionMap.putString(PLUGIN_IDENTIFIER, name);
   }
 
   public String getPluginIdentifier() {
-    return definitionMap.getString(PLUGIN_IDENTIFIER, "UNKNOWN");
+    String ret = definitionMap.getString(PLUGIN_IDENTIFIER, "UNKNOWN");
+    logger.debug("The plugin identifier is " + ret);
+    return ret;
   }
 
   public void removePluginIdentifier() {
@@ -409,12 +445,16 @@ public class EditableDefinablePlugin
   }
 
   public void setPluginVersion(String version) {
+    logger.info("Setting the plugin version to " + version);
     definitionMap.putString(PLUGIN_VERSION, version);
   }
 
   public String getPluginVersion() {
-    return definitionMap.getString(PLUGIN_VERSION,
-				   DefinablePlugin.DEFAULT_PLUGIN_VERSION);
+    // FIXME: Uses daemon default
+    String ret = definitionMap.getString(PLUGIN_VERSION,
+                                         DefinablePlugin.DEFAULT_PLUGIN_VERSION);
+    logger.debug(ret);
+    return ret;
   }
 
   public void removePluginVersion() {
@@ -422,11 +462,20 @@ public class EditableDefinablePlugin
   }
 
   public void setPluginNotes(String notes) {
+    logger.info("Setting plugin notes to "
+                + (notes != null && notes.length() > 50
+                    ? notes.substring(0, 50) + "[...]"
+                    : notes));
     definitionMap.putString(PLUGIN_NOTES, notes);
   }
 
   public String getPluginNotes() {
-    return definitionMap.getString(PLUGIN_NOTES, null);
+    String ret = definitionMap.getString(PLUGIN_NOTES, null);
+    logger.debug("The plugin notes are "
+                 + (ret != null && ret.length() > 50
+                     ? ret.substring(0, 50) + "[...]"
+                     : ret));
+    return ret;
   }
 
   public void removePluginNotes() {
@@ -490,20 +539,24 @@ public class EditableDefinablePlugin
   }
 
   public void setPluginExceptionHandler(String handler) {
+    String logMessage = "Setting the plugin exception handler to " + handler;
     try {
       definitionMap.putString(PLUGIN_EXCEPTION_HANDLER, handler);
       CacheResultHandler obj =
 	(CacheResultHandler) Class.forName(handler).newInstance();
+      logger.info(logMessage);
     }
     catch (Exception ex) {
-      throw new DefinablePlugin.InvalidDefinitionException(
-							   "Unable to create exception handler " + handler, ex);
+      logger.error(logMessage + "; failed", ex);
+      throw new DefinablePlugin.InvalidDefinitionException("Unable to create exception handler " + handler, ex);
     }
 
   }
 
   public String getPluginExceptionHandler() {
-    return definitionMap.getString(PLUGIN_EXCEPTION_HANDLER, null);
+    String ret = definitionMap.getString(PLUGIN_EXCEPTION_HANDLER, null);
+    logger.debug("The plugin exception handler is " + ret);
+    return ret;
   }
 
   public void removePluginExceptionHandler() {

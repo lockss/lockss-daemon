@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescr.java,v 1.28 2006-06-02 16:58:37 thib_gc Exp $
+ * $Id: ConfigParamDescr.java,v 1.29 2006-07-06 17:38:55 thib_gc Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.daemon;
 
 import java.net.*;
 
+import org.apache.commons.lang.math.NumberUtils;
 import org.lockss.app.LockssApp;
 import org.lockss.util.*;
 import java.util.*;
@@ -86,7 +87,7 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
     new ConfigParamDescr()
     .setKey("num_issue_range")
     .setDisplayName("Numeric Issue Range")
-    .setType(TYPE_RANGE)
+    .setType(TYPE_NUM_RANGE)
     .setSize(20)
     .setDescription("A Range of issues in the form: min-max");
 
@@ -436,12 +437,23 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
           throw new InvalidFormatException("Invalid Boolean: " + val);
         break;
       case TYPE_RANGE:
+      { // case block
+        ret_val = StringUtil.breakAt(val,'-',2,true, true);
+        String s_min = (String)((Vector)ret_val).firstElement();
+        String s_max = (String)((Vector)ret_val).lastElement();
+        if( !(s_min.compareTo(s_max) < 0) ) {
+          throw new InvalidFormatException("Invalid Range: " + val);
+        }
+        break;
+      } // case block
+      case TYPE_NUM_RANGE:
+      { // case block
         ret_val = StringUtil.breakAt(val,'-',2,true, true);
         String s_min = (String)((Vector)ret_val).firstElement();
         String s_max = (String)((Vector)ret_val).lastElement();
         try {
-          Long l_min = Long.valueOf(s_min);
-          Long l_max = Long.valueOf(s_max);
+          Long l_min = NumberUtils.createLong(s_min);
+          Long l_max = NumberUtils.createLong(s_max);
           if(l_min.compareTo(l_max) < 0) {
             ((Vector)ret_val).setElementAt(l_min, 0);
             ((Vector)ret_val).setElementAt(l_max, 1);
@@ -453,13 +465,15 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
             break;
           }
         }
-        throw new InvalidFormatException("Invalid Range: " + val);
+        throw new InvalidFormatException("Invalid  Numeric Range: " + val);
+      } // case block
       case TYPE_SET:
         ret_val = StringUtil.breakAt(val,',', 50, true, true);
         break;
       default:
         throw new InvalidFormatException("Unknown type: " + type);
     }
+
     return ret_val;
   }
 
