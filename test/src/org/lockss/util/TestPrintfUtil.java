@@ -36,6 +36,12 @@ import org.lockss.test.LockssTestCase;
 
 public class TestPrintfUtil extends LockssTestCase {
 
+  public void testStringToPrintf() throws Exception {
 
+  }
+
+  public void testPrintfToString() throws Exception {
+
+  }
 
 }
