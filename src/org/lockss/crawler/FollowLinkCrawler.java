@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.39 2006-06-26 22:36:19 troberts Exp $
+ * $Id: FollowLinkCrawler.java,v 1.40 2006-07-10 18:01:25 troberts Exp $
  */
 
 /*
@@ -538,6 +538,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	    if (logger.isDebug2()) {
 	      logger.debug2("Excluded url: "+normUrl);
 	    }
+	    crawlStatus.signalUrlExcluded(normUrl);
 	    excludedUrlCache.put(normUrl, "");
 	  }
 	} else if (logger.isDebug3()) {

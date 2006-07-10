@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.49 2006-06-26 22:36:32 troberts Exp $
+ * $Id: TestNewContentCrawler.java,v 1.50 2006-07-10 18:01:25 troberts Exp $
  */
 
 /*
@@ -470,6 +470,40 @@ public class TestNewContentCrawler extends LockssTestCase {
     assertEquals(5, crawlStatus.getNumFetched());
     assertEquals(SetUtil.set(startUrl, url1, url2, url3, permissionPage),
 		 crawlStatus.getUrlsFetched());
+    assertEquals(0, crawlStatus.getNumExcluded());
+    assertEquals(new HashSet(), crawlStatus.getUrlsExcluded());
+    assertEquals(4, crawlStatus.getNumParsed());
+    assertEquals(1045, crawlStatus.getContentBytesFetched());
+    assertEquals(SetUtil.set("Publisher"), crawlStatus.getSources());
+  }
+
+  public void testGetStatusCrawlDoneExcluded() {
+    String url1 = "http://www.example.com/link1.html";
+    String url2 = "http://www.example.com/link2.html";
+    String url3 = "http://www.example.com/link3.html";
+    String url4 = "http://www.example.com/link4.html";
+
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    mau.addUrl(startUrl);
+    parser.addUrlSetToReturn(startUrl, SetUtil.set(url1, url2, url3, url4));
+    mau.addUrl(url1).setContentSize(42);
+    mau.addUrl(url2).setContentSize(3);;
+    mau.addUrl(url3).setContentSize(1000);;
+    crawlRule.addUrlToCrawl(url1);
+    crawlRule.addUrlToCrawl(url2);
+    crawlRule.addUrlToCrawl(url3);
+
+    long expectedStart = TimeBase.nowMs();
+    crawler.doCrawl();
+    long expectedEnd = TimeBase.nowMs();
+    Crawler.Status crawlStatus = crawler.getStatus();
+    assertEquals(expectedStart, crawlStatus.getStartTime());
+    assertEquals(expectedEnd, crawlStatus.getEndTime());
+    assertEquals(5, crawlStatus.getNumFetched());
+    assertEquals(SetUtil.set(startUrl, url1, url2, url3, permissionPage),
+		 crawlStatus.getUrlsFetched());
+    assertEquals(1, crawlStatus.getNumExcluded());
+    assertEquals(SetUtil.set(url4), crawlStatus.getUrlsExcluded());
     assertEquals(4, crawlStatus.getNumParsed());
     assertEquals(1045, crawlStatus.getContentBytesFetched());
     assertEquals(SetUtil.set("Publisher"), crawlStatus.getSources());

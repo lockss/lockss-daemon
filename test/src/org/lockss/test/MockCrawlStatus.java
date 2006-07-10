@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawlStatus.java,v 1.10 2005-10-10 23:27:27 tlipkis Exp $
+ * $Id: MockCrawlStatus.java,v 1.11 2006-07-10 18:01:25 troberts Exp $
  */
 
 /*
@@ -44,10 +44,12 @@ public class MockCrawlStatus extends Crawler.Status {
   long numFetched = 0;
   long numErrors = 0;
   long numNotModified = 0;
+  long numExcluded = 0;
 
   Collection urlsFetched = null;
   Collection urlsParsed = null;
   Collection urlsNotModified = null;
+  Collection urlsExcluded = null;
   Map errorUrls = null;
 
 
@@ -86,6 +88,21 @@ public class MockCrawlStatus extends Crawler.Status {
     return numFetched;
   }
 
+  public void setNumExcluded(int numExcluded) {
+    this.numExcluded = numExcluded;
+  }
+
+  public long getNumExcluded() {
+    if (urlsExcluded != null) {
+      return urlsExcluded.size();
+    }
+    return numExcluded;
+  }
+
+  public Collection getUrlsExcluded() {
+    return urlsExcluded;
+  }
+
   public void setUrlsWithErrors(Map errorUrls) {
     this.errorUrls = errorUrls;
   }
@@ -96,6 +113,10 @@ public class MockCrawlStatus extends Crawler.Status {
 
   public void setUrlsNotModified(Collection urlsNotModified) {
     this.urlsNotModified = urlsNotModified;
+  }
+
+  public void setUrlsExcluded(Collection urlsExcluded) {
+    this.urlsExcluded = urlsExcluded;
   }
 
   public Collection getUrlsParsed() {

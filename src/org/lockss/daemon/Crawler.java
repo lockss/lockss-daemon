@@ -1,5 +1,5 @@
 /*
- * $Id: Crawler.java,v 1.37 2006-04-11 08:33:33 tlipkis Exp $
+ * $Id: Crawler.java,v 1.38 2006-07-10 18:01:25 troberts Exp $
  */
 
 /*
@@ -122,6 +122,7 @@ public interface Crawler {
 
     protected Map urlsWithErrors = new LinkedMap();
     protected Set urlsFetched = new ListOrderedSet();
+    protected Set urlsExcluded = new ListOrderedSet();
     protected Set urlsNotModified = new ListOrderedSet();
     protected Set urlsParsed = new ListOrderedSet();
 
@@ -175,6 +176,16 @@ public interface Crawler {
     }
 
     /**
+     * Return the number of urls that have been excluded because they didn't 
+     * match the crawl rules
+     * @return number of urls that have been excluded because they didn't 
+     * match the crawl rules
+     */
+    public synchronized long getNumExcluded() {
+      return urlsExcluded.size();
+    }
+
+    /**
      * Return the number of urls whose GETs returned 304 not modified
      * @return number of urls whose contents were not modified
      */
@@ -184,6 +195,10 @@ public interface Crawler {
 
     public synchronized void signalUrlFetched(String url) {
       urlsFetched.add(url);
+    }
+
+    public synchronized void signalUrlExcluded(String url) {
+      urlsExcluded.add(url);
     }
 
     public synchronized void signalUrlNotModified(String url) {
@@ -235,6 +250,14 @@ public interface Crawler {
 	return new ArrayList(urlsNotModified);
       } else {
 	return urlsNotModified;
+      }
+    }
+
+    public synchronized Collection getUrlsExcluded() {
+      if (isCrawlActive()) {
+ 	return new ArrayList(urlsExcluded);
+      } else {
+ 	return urlsExcluded;
       }
     }
 
