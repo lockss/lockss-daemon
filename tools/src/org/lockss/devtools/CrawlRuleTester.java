@@ -158,6 +158,9 @@ public class CrawlRuleTester extends Thread {
     depth_parsed = new int[m_crawlDepth];
     long start_time = TimeBase.nowMs();
     for (int depth = 1; depth <= m_crawlDepth; depth++) {
+      if (interrupted()) {
+        return;
+      }
       m_curDepth = depth;
       if (crawlList.isEmpty() && depth <= m_crawlDepth) {
 	outputMessage("\nNothing left to crawl, exiting after depth " +
@@ -168,6 +171,9 @@ public class CrawlRuleTester extends Thread {
       crawlList.clear();
       outputMessage("\nDepth " + depth, PLAIN_MESSAGE);
       for (int ix = 0; ix < urls.length; ix++) {
+        if (interrupted()) {
+          return;
+        }
         pauseBeforeFetch();
         String urlstr = urls[ix];
 
@@ -346,8 +352,8 @@ public class CrawlRuleTester extends Thread {
 
 
   public interface MessageHandler {
-
     void outputMessage(String message, int messageType);
+    void close();
   }
 
   private class MyFoundUrlCallback

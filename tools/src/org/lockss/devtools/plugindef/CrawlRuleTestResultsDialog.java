@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlRuleTestResultsDialog.java,v 1.10 2006-06-26 17:46:56 thib_gc Exp $
+ * $Id: CrawlRuleTestResultsDialog.java,v 1.11 2006-07-10 23:21:40 thib_gc Exp $
  */
 
 /*
@@ -38,8 +38,10 @@ import org.lockss.plugin.*;
 import org.lockss.devtools.*;
 import javax.swing.text.*;
 import org.lockss.util.*;
+
 import java.awt.event.*;
 import java.beans.*;
+import java.io.*;
 
 /**
  * <p>Title: </p>
@@ -86,8 +88,12 @@ public class CrawlRuleTestResultsDialog extends JDialog {
   JScrollPane outputScrollPane = new JScrollPane();
   JTextPane outputTextPane = new JTextPane();
 
+  protected JCheckBox fileCheckBox;
+  protected JLabel fileLabel;
+  protected CrawlRuleTester crawlRuleTesterThread;
+
   private ArchivalUnit m_au;
-  private CrawlRuleTester.MessageHandler m_msgHandler = new myMessageHandler();
+  private CrawlRuleTester.MessageHandler m_msgHandler;
   JPanel btnPanel = new JPanel();
   JButton checkButton = new JButton();
   JButton cancelButton = new JButton();
@@ -133,8 +139,8 @@ public class CrawlRuleTestResultsDialog extends JDialog {
     startUrlTextField.setText("");
     startUrlTextField.addKeyListener(new CrawlRuleTestResultsDialog_startUrlTextField_keyAdapter(this));
 
-    infoPanel.setMinimumSize(new Dimension(300, 80));
-    infoPanel.setPreferredSize(new Dimension(400, 90));
+    infoPanel.setMinimumSize(new Dimension(300, 100));
+    infoPanel.setPreferredSize(new Dimension(400, 120));
     infoPanel.setLayout(gridBagLayout1);
     delayLabel.setText("Fetch Delay:");
     depthLabel.setText("Test Depth:");
@@ -180,6 +186,9 @@ public class CrawlRuleTestResultsDialog extends JDialog {
     infoPanel.add(depthTextField, new GridBagConstraints(1, 1, 1, 1, 1.0, 0.0
         , GridBagConstraints.WEST, GridBagConstraints.HORIZONTAL,
         new Insets(10, 7, 5, 0), -11, 0));
+
+    addFileChooser();
+
     panel1.add(outputScrollPane, BorderLayout.CENTER);
     outputScrollPane.getViewport().add(outputTextPane, null);
     panel1.add(btnPanel,  BorderLayout.SOUTH);
@@ -189,35 +198,55 @@ public class CrawlRuleTestResultsDialog extends JDialog {
 
   void checkButton_actionPerformed(ActionEvent e) {
     String startUrl = startUrlTextField.getText();
-    if(StringUtil.isNullString(startUrl)){
+    if (StringUtil.isNullString(startUrl)){
       JOptionPane.showMessageDialog(this,
                                     "Missing starting url.",
                                     "CrawlRule TestError",
                                     JOptionPane.ERROR_MESSAGE);
       return;
     }
-    int depth = Integer.parseInt(depthTextField.getText());
-    long delay = Integer.parseInt(delayTextField.getText()) * Constants.SECOND;
-    outputTextPane.setText("");
-    outputTextPane.update(outputTextPane.getGraphics());
+
+    String fileName = fileLabel.getText();
+    if (fileCheckBox.isSelected() && StringUtil.isNullString(fileName)) {
+      JOptionPane.showMessageDialog(this,
+                                    "Please choose an output file.",
+                                    "Output file not chosen",
+                                    JOptionPane.ERROR_MESSAGE);
+      return;
+    }
+
     try {
-      CrawlRuleTester tester = new CrawlRuleTester(m_msgHandler, depth, delay,
-          startUrl, m_au.getCrawlSpec());
-      tester.start();
+      int depth = Integer.parseInt(depthTextField.getText());
+      long delay = Integer.parseInt(delayTextField.getText()) * Constants.SECOND;
+      outputTextPane.setText("");
+      outputTextPane.update(outputTextPane.getGraphics());
+
+      synchronized(this) {
+        if (crawlRuleTesterThread != null) {
+          crawlRuleTesterThread.interrupt();
+          m_msgHandler.close();
+        }
+        m_msgHandler = new MyMessageHandler();
+        crawlRuleTesterThread = new CrawlRuleTester(m_msgHandler, depth, delay,
+                                                    startUrl, m_au.getCrawlSpec());
+        crawlRuleTesterThread.start();
+      }
     }
     catch (Exception ex) {
       String msg = ex.getCause() !=
-          null ? ex.getCause().getMessage() : ex.getMessage();
-      JOptionPane.showMessageDialog(this,
-                                    "Error occured while checking crawl rules:\n"
-                                    + msg,
-                                    "CrawlRule Test Error",
-                                    JOptionPane.ERROR_MESSAGE);
-      ex.printStackTrace();
+        null ? ex.getCause().getMessage() : ex.getMessage();
+        JOptionPane.showMessageDialog(this,
+                                      "Error occured while checking crawl rules:\n"
+                                      + msg,
+                                      "CrawlRule Test Error",
+                                      JOptionPane.ERROR_MESSAGE);
+        ex.printStackTrace();
     }
   }
 
-  void cancelButton_actionPerformed(ActionEvent e) {
+  synchronized void cancelButton_actionPerformed(ActionEvent e) {
+    crawlRuleTesterThread.interrupt();
+    m_msgHandler.close();
     setVisible(false);
   }
 
@@ -228,7 +257,18 @@ public class CrawlRuleTestResultsDialog extends JDialog {
 
   }
 
-  private class myMessageHandler implements CrawlRuleTester.MessageHandler {
+  private class MyMessageHandler implements CrawlRuleTester.MessageHandler {
+
+    private Writer writer;
+
+    public MyMessageHandler() throws IOException {
+      String fileName = fileLabel.getText();
+      if (fileCheckBox.isSelected() && !StringUtil.isNullString(fileName)) {
+        File file = new File(fileName);
+        writer = new BufferedWriter(new FileWriter(file, file.exists()));
+      }
+    }
+
     /**
      * outputMessage
      *
@@ -241,11 +281,73 @@ public class CrawlRuleTestResultsDialog extends JDialog {
             outputTextPane.getDocument().getLength(), message,
             m_attributes[messageType]);
         outputTextPane.scrollToReference(message);
+
+        try {
+          if (writer != null) {
+            writer.write(message);
+          }
+        }
+        catch (IOException exc) {
+          // FIXME: add logging statement
+        }
       }
       catch (BadLocationException ex) {
         ex.printStackTrace();
       }
     }
+
+    public void close() {
+      if (writer != null) {
+        IOUtil.safeClose(writer);
+      }
+    }
+
+  }
+
+  protected void addFileChooser() {
+    Box fileBox = Box.createVerticalBox();
+    Box first = Box.createHorizontalBox();
+    Box second = Box.createHorizontalBox();
+
+    // Add checkbox and label
+    this.fileCheckBox = new JCheckBox();
+    fileCheckBox.setSelected(false);
+    fileCheckBox.setEnabled(false);
+    first.add(fileCheckBox);
+    first.add(new JLabel("Save output"));
+    first.add(Box.createHorizontalGlue());
+
+    // Add button and set up file chooser interaction
+    JButton fileButton = new JButton("Choose file...");
+    fileButton.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent event) {
+        JFileChooser chooser = new JFileChooser();
+        chooser.setSelectedFile(new File("plugin-tool-output.txt"));
+        int returnVal = chooser.showOpenDialog(CrawlRuleTestResultsDialog.this);
+        if(returnVal == JFileChooser.APPROVE_OPTION) {
+          fileLabel.setText(chooser.getSelectedFile().getAbsolutePath());
+          fileCheckBox.setEnabled(true);
+        }
+      }
+    });
+    first.add(fileButton);
+
+    // Add file label
+    this.fileLabel = new JLabel();
+    second.add(fileLabel);
+    second.add(Box.createHorizontalGlue());
+
+    // Put panel together
+    fileBox.add(first);
+    fileBox.add(second);
+    infoPanel.add(fileBox,
+                  new GridBagConstraints(0, 2,
+                                         4, 2,
+                                         1.0, 1.0,
+                                         GridBagConstraints.WEST,
+                                         GridBagConstraints.HORIZONTAL,
+                                         new Insets(5, 5, 5, 5),
+                                         0, 0));
   }
 
 }
