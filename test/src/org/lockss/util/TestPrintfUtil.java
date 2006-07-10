@@ -32,16 +32,58 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util;
 
-import org.lockss.test.LockssTestCase;
+import java.util.Iterator;
 
+import org.lockss.test.LockssTestCase;
+import org.lockss.util.PrintfUtil.*;
+
+/**
+ * <p>Tests the <code>org.lockss.util.PrintfUtil</code> class.</p>
+ * @author Thib Guicherd-Callin
+ */
 public class TestPrintfUtil extends LockssTestCase {
 
   public void testStringToPrintf() throws Exception {
+    PrintfData printfData = PrintfUtil.stringToPrintf("\"foo%dbar%sbaz%%\", my_int, my_str");
 
+    assertEquals("foo%dbar%sbaz%%",
+                 printfData.getFormat());
+
+    Iterator /* of String */ iter = printfData.getArguments().iterator();
+    assertEquals("my_int", iter.next());
+    assertEquals("my_str", iter.next());
   }
 
   public void testPrintfToString() throws Exception {
+    PrintfData printfData = new PrintfData();
+    printfData.setFormat("foo%dbar%sbaz%%");
+    printfData.addArgument("my_int");
+    printfData.addArgument("my_str");
+    assertEquals("\"foo%dbar%sbaz%%\", my_int, my_str",
+                 PrintfUtil.printfToString(printfData));
+  }
 
+  public void testPrintfToElements() throws Exception {
+    PrintfData printfData = new PrintfData();
+    printfData.setFormat("foo%dbar%sbaz%%");
+    printfData.addArgument("my_int");
+    printfData.addArgument("my_str");
+    PrintfElement[] printfElements = PrintfUtil.printfToElements(printfData);
+
+    assertEquals(6, printfElements.length);
+    PrintfElement[] expected = new PrintfElement[] {
+      new PrintfElement(PrintfElement.NONE, "foo"),
+      new PrintfElement("%d", "my_int"),
+      new PrintfElement(PrintfElement.NONE, "bar"),
+      new PrintfElement("%s", "my_str"),
+      new PrintfElement(PrintfElement.NONE, "baz"),
+      new PrintfElement(PrintfElement.NONE, "%%"),
+    };
+
+    for (int ix = 0 ; ix < expected.length ; ++ix) {
+      assertEquals(expected[ix].getFormat(), printfElements[ix].getFormat());
+      assertEquals(expected[ix].getElement(), printfElements[ix].getElement());
+    }
   }
 
 }

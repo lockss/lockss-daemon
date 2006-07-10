@@ -1,5 +1,5 @@
 /*
- * $Id: PrintfEditor.java,v 1.22 2006-07-06 17:38:54 thib_gc Exp $
+ * $Id: PrintfEditor.java,v 1.23 2006-07-10 16:54:46 thib_gc Exp $
  */
 
 /*
@@ -552,7 +552,7 @@ public class PrintfEditor extends JDialog implements EDPEditor, ConfigParamListe
       java.util.List elements = editableTemplate.getPrintfElements();
       for(Iterator it = elements.iterator(); it.hasNext(); ) {
         PrintfUtil.PrintfElement el = (PrintfUtil.PrintfElement) it.next();
-        if(el.getFormat().equals("\0")) {
+        if(el.getFormat().equals(PrintfUtil.PrintfElement.NONE)) {
           appendText(el.getElement(), PLAIN_ATTR);
         }
         else {
@@ -563,9 +563,9 @@ public class PrintfEditor extends JDialog implements EDPEditor, ConfigParamListe
       }
     }
     catch(Exception ex) {
-      JOptionPane.showMessageDialog(this,"Invalid Format:" + ex.getMessage(),
+      JOptionPane.showMessageDialog(this, "Invalid Format: " + ex.getMessage(),
                                     "Invalid Printf Format",
-                                    JOptionPane.WARNING_MESSAGE);
+                                    JOptionPane.ERROR_MESSAGE);
 
       selectedPane = 1;
       printfTabPane.setSelectedIndex(selectedPane);

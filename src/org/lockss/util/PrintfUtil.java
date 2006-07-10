@@ -1,5 +1,5 @@
 /*
- * $Id: PrintfUtil.java,v 1.4 2006-07-08 00:05:05 thib_gc Exp $
+ * $Id: PrintfUtil.java,v 1.5 2006-07-10 16:54:46 thib_gc Exp $
  */
 
 /*
@@ -68,7 +68,7 @@ public class PrintfUtil {
     return printf_buf.toString();
   }
 
-  public static Object[] printfToElements(PrintfData data) {
+  public static PrintfElement[] printfToElements(PrintfData data) {
     ArrayList printf_elements = new ArrayList();
     PrintfFormat pf = new PrintfFormat(data.getFormat());
     Iterator it_frm = pf.getFormatElements().iterator();
@@ -79,17 +79,22 @@ public class PrintfUtil {
       cs = (PrintfFormat.ConversionSpecification) it_frm.next();
       c = cs.getConversionCharacter();
       if (c == '\0') {
-        printf_elements.add(new PrintfElement("\0", cs.getLiteral()));
+        // Last ConversionSpecification is not useful
+        if (!cs.getLiteral().equals("") && it_frm.hasNext()) {
+          printf_elements.add(new PrintfElement(PrintfElement.NONE, cs.getLiteral()));
+        }
       }
       else if (c == '%') {
-        printf_elements.add(new PrintfElement("\0", "%"));
+        printf_elements.add(new PrintfElement(PrintfElement.NONE, "%%"));
       }
       else {
         printf_elements.add(new PrintfElement(cs.getFormat(),
                                               (String) it_args.next()));
       }
     }
-    return printf_elements.toArray();
+
+    PrintfElement[] ret = new PrintfElement[printf_elements.size()];
+    return (PrintfElement[])printf_elements.toArray(ret);
   }
 
   public static class PrintfData {
@@ -105,14 +110,14 @@ public class PrintfUtil {
       m_format = format;
     }
 
-    public void setArguments(Object[] arg) {
+    public void setArguments(String[] arg) {
       m_arguments.clear();
       for (int i = 0; i < arg.length; i++) {
         m_arguments.add(arg[i]);
       }
     }
 
-    public void addArgument(Object arg) {
+    public void addArgument(String arg) {
       m_arguments.add(arg);
     }
 
@@ -131,7 +136,10 @@ public class PrintfUtil {
   }
 
   public static class PrintfElement {
-    String m_format = "\0";
+
+    public static final String NONE = "\0";
+
+    String m_format = NONE;
     String m_element = "";
 
     public PrintfElement(String format, String element) {
