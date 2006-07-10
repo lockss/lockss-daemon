@@ -1,5 +1,5 @@
 /*
- * $Id: PluginDefinerApp.java,v 1.5.2.2 2006-07-06 18:35:40 thib_gc Exp $
+ * $Id: PluginDefinerApp.java,v 1.5.2.3 2006-07-10 21:36:27 thib_gc Exp $
  */
 
 /*
@@ -92,9 +92,9 @@ public class PluginDefinerApp {
 
     // Get resources from JAR "props.xml"
     ClassLoader classLoader = PluginDefinerApp.class.getClassLoader();
-    URL propsFile = classLoader.getResource("props.xml");
+    URL propsFile = classLoader.getResource("plugin-tool-props.xml");
     if (propsFile != null) {
-      List propsUrls = ListUtil.list(propsFile.toString(), "props.opt");
+      List propsUrls = ListUtil.list(propsFile.toString(), "plugin-tool-props.opt");
       ConfigManager configMgr = ConfigManager.makeConfigManager(propsUrls);
       configMgr.initService(null);
       configMgr.startService();
