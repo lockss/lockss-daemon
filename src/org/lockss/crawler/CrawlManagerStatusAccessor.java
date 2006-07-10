@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerStatusAccessor.java,v 1.1 2006-04-11 08:33:33 tlipkis Exp $
+ * $Id: CrawlManagerStatusAccessor.java,v 1.2 2006-07-10 18:01:53 troberts Exp $
  */
 
 /*
@@ -49,6 +49,7 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
   private static final String CONTENT_BYTES_FETCHED = "content_bytes_fetched";
   private static final String NUM_URLS_PARSED = "num_urls_parsed";
   private static final String NUM_URLS_FETCHED = "num_urls_fetched";
+  private static final String NUM_URLS_EXCLUDED = "num_urls_excluded";
   private static final String NUM_URLS_WITH_ERRORS = "num_urls_with_errors";
   private static final String NUM_URLS_NOT_MODIFIED = "num_urls_not_modified";
   private static final String START_URLS = "start_urls";
@@ -87,6 +88,9 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
       new ColumnDescriptor(NUM_URLS_PARSED, "Pages Parsed",
 			   ColumnDescriptor.TYPE_INT,
 			   "Number of (html, etc.) pages scanned for URLs"),
+      new ColumnDescriptor(NUM_URLS_EXCLUDED, "Pages Excluded",
+			   ColumnDescriptor.TYPE_INT,
+			   "Number of pages that didn't match the crawl rules"),
       new ColumnDescriptor(NUM_URLS_NOT_MODIFIED, "Not Modified",
 			   ColumnDescriptor.TYPE_INT,
 			   "Number of pages for which we already had current content"),
@@ -192,6 +196,9 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
       row.put(NUM_URLS_PARSED,
 	      makeRef(status.getNumParsed(),
 		      "single_crawl_status", "parsed."+key));
+      row.put(NUM_URLS_EXCLUDED,
+	      makeRef(status.getNumExcluded(),
+		      "single_crawl_status", "excluded."+key));
       if (status.getEndTime() > 0) {
 	row.put(END_TIME_COL_NAME, new Long(status.getEndTime()));
 	row.put(SORT_KEY, new Integer(SORT_BASE_DONE));
