@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescr.java,v 1.29 2006-07-06 17:38:55 thib_gc Exp $
+ * $Id: ConfigParamDescr.java,v 1.30 2006-07-10 21:18:57 thib_gc Exp $
  */
 
 /*
@@ -452,6 +452,12 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
         String s_min = (String)((Vector)ret_val).firstElement();
         String s_max = (String)((Vector)ret_val).lastElement();
         try {
+          /*
+           * Caution: org.apache.commons.lang.math.NumberUtils.createLong(String)
+           * (which returns Long) throws NumberFormatException, whereas
+           * org.apache.commons.lang.math.NumberUtils.toLong(String)
+           * (which returns long) returns 0L when parsing fails.
+           */
           Long l_min = NumberUtils.createLong(s_min);
           Long l_max = NumberUtils.createLong(s_max);
           if(l_min.compareTo(l_max) < 0) {
