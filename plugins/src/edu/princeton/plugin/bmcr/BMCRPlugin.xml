@@ -1,2 +1,59 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Elements><MapElement><ElementKey>plugin_identifier</ElementKey><ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">edu.princeton.plugin.bmcr.BMCRPlugin</ElementValue></MapElement><MapElement><ElementKey>au_name</ElementKey><ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"%s %d", base_url, year</ElementValue></MapElement><MapElement><ElementKey>plugin_name</ElementKey><ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Bryn Mawr Classical Review</ElementValue></MapElement><MapElement><ElementKey>au_crawlrules</ElementKey><ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><string xsi:type="java:java.lang.String">4,"^%s", base_url</string><string xsi:type="java:java.lang.String">1,"%smanifest%d.html", base_url, year</string><string xsi:type="java:java.lang.String">2,"^lockss[0-9]+\.html"</string><string xsi:type="java:java.lang.String">2,"^manifest[0-9]+\.html$"</string><string xsi:type="java:java.lang.String">1,"^%s%d/?$", base_url, year</string><string xsi:type="java:java.lang.String">1,"^%sd/index\.html$", base_url, year</string><string xsi:type="java:java.lang.String">1,"%s.*\.gif", base_url</string><string xsi:type="java:java.lang.String">2,"^%s$", base_url</string><string xsi:type="java:java.lang.String">2,"^%sindex\.html$", base_url</string><string xsi:type="java:java.lang.String">1,"^%s\.html$", base_url</string><string xsi:type="java:java.lang.String">1,"%s%d/%d-[0-9]+-[0-9]+.*\.html", base_url, year, year</string><string xsi:type="java:java.lang.String">1,"%s%d/[0-9]+.[0-9]+.[0-9]+.*\.html", base_url, year</string></ElementValue></MapElement><MapElement><ElementKey>au_start_url</ElementKey><ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"%smanifest%d.html", base_url, year</ElementValue></MapElement><MapElement><ElementKey>plugin_config_props</ElementKey><ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><ConfigParamDescr><Key>base_url</Key><DisplayName>Base URL</DisplayName><Description>Usually of the form http://&lt;journal-name&gt;.com/</Description><Type>3</Type><Size>40</Size><Definitional>true</Definitional></ConfigParamDescr><ConfigParamDescr><Key>year</Key><DisplayName>Year</DisplayName><Description>Four digit year (e.g., 2004)</Description><Type>4</Type><Size>4</Size><Definitional>true</Definitional></ConfigParamDescr></ElementValue></MapElement></Elements>
+<map>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>edu.princeton.plugin.bmcr.BMCRPlugin</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;%s %d&quot;, base_url, year</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Bryn Mawr Classical Review</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;%smanifest%d&quot;, base_url, year</string>
+      <string>1,&quot;%s%d/indexb.html&quot;, base_url, year</string>
+      <string>1,&quot;^lockss[0-9]+\.html&quot;</string>
+      <string>1,&quot;^manifest[0-9]+\.html$&quot;</string>
+      <string>1,&quot;^%s%d/?$&quot;, base_url, year</string>
+      <string>1,&quot;^%sd/index\.html$&quot;, base_url, year</string>
+      <string>1,&quot;%s.*\.gif&quot;, base_url</string>
+      <string>1,&quot;^%s$&quot;, base_url</string>
+      <string>2,&quot;^%sindex\.html$&quot;, base_url</string>
+      <string>1,&quot;^%s\.html$&quot;, base_url</string>
+      <string>1,&quot;%s%d/%d-[0-9]+-[0-9]+.*\.html&quot;, base_url, year, year</string>
+      <string>1,&quot;%s%d/[0-9]+.[0-9]+.[0-9]+.*\.html&quot;, base_url, year</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%smanifest%d.html&quot;, base_url, year</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+</map>
