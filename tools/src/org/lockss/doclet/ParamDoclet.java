@@ -1,10 +1,10 @@
 /*
- * $Id: ParamDoclet.java,v 1.6 2005-06-23 05:26:18 tlipkis Exp $
+ * $Id: ParamDoclet.java,v 1.7 2006-07-11 17:42:24 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2002 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

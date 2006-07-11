@@ -1,10 +1,10 @@
 /*
- * $Id: WrapperGenerator.java,v 1.4 2004-12-09 08:21:44 tlipkis Exp $
+ * $Id: WrapperGenerator.java,v 1.5 2006-07-11 17:42:24 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
