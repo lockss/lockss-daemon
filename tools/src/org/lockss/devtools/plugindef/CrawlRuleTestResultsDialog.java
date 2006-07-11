@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlRuleTestResultsDialog.java,v 1.12 2006-07-11 16:11:38 thib_gc Exp $
+ * $Id: CrawlRuleTestResultsDialog.java,v 1.13 2006-07-11 18:39:26 thib_gc Exp $
  */
 
 /*
@@ -159,7 +159,7 @@ public class CrawlRuleTestResultsDialog extends JDialog {
         checkButton_actionPerformed(e);
       }
     });
-    cancelButton.setText("Cancel");
+    cancelButton.setText("Close");
     cancelButton.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(ActionEvent e) {
         cancelButton_actionPerformed(e);
@@ -223,13 +223,11 @@ public class CrawlRuleTestResultsDialog extends JDialog {
       outputTextPane.update(outputTextPane.getGraphics());
 
       synchronized(this) {
-        if (crawlRuleTesterThread != null) {
-          crawlRuleTesterThread.interrupt();
-          m_msgHandler.close();
-        }
+        stop();
         m_msgHandler = new MyMessageHandler();
         crawlRuleTesterThread = new CrawlRuleTester(m_msgHandler, depth, delay,
                                                     startUrl, m_au.getCrawlSpec());
+        cancelButton.setText("Stop");
         crawlRuleTesterThread.start();
       }
     }
@@ -242,15 +240,31 @@ public class CrawlRuleTestResultsDialog extends JDialog {
                                       "CrawlRule Test Error",
                                       JOptionPane.ERROR_MESSAGE);
         ex.printStackTrace();
+        stop();
     }
   }
 
   synchronized void cancelButton_actionPerformed(ActionEvent e) {
     if (crawlRuleTesterThread != null) {
-      crawlRuleTesterThread.interrupt();
-      m_msgHandler.close();
+      stop();
+      JOptionPane.showMessageDialog(this,
+                                    "The crawl rule test was interrupted.",
+                                    "Stop",
+                                    JOptionPane.INFORMATION_MESSAGE);
     }
-    setVisible(false);
+    else {
+      setVisible(false);
+    }
+  }
+
+  protected synchronized void stop() {
+    if (crawlRuleTesterThread != null) {
+      crawlRuleTesterThread.interrupt();
+      crawlRuleTesterThread = null;
+      m_msgHandler.close();
+      m_msgHandler = null;
+      cancelButton.setText("Close");
+    }
   }
 
   void startUrlTextField_keyReleased(KeyEvent e) {
@@ -281,8 +295,8 @@ public class CrawlRuleTestResultsDialog extends JDialog {
     public void outputMessage(String message, int messageType) {
       try {
         outputTextPane.getDocument().insertString(
-            outputTextPane.getDocument().getLength(), message,
-            m_attributes[messageType]);
+                                                  outputTextPane.getDocument().getLength(), message,
+                                                  m_attributes[messageType]);
         outputTextPane.scrollToReference(message);
 
         try {
@@ -303,6 +317,7 @@ public class CrawlRuleTestResultsDialog extends JDialog {
       if (writer != null) {
         IOUtil.safeClose(writer);
       }
+      cancelButton.setText("Close");
     }
 
   }
