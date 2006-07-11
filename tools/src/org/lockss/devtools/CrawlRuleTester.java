@@ -98,18 +98,25 @@ public class CrawlRuleTester extends Thread {
   }
 
   public void run() {
-    if(m_outWriter == null && m_msgHandler == null) {
-      useLocalWriter = true;
+    try {
+      if(m_outWriter == null && m_msgHandler == null) {
+        useLocalWriter = true;
+      }
+      else {
+        useLocalWriter = false;
+      }
+      if(useLocalWriter) {
+        openOutputFile();
+      }
+      checkRules();
+      if(useLocalWriter) {
+        closeOutputFile();
+      }
     }
-    else {
-      useLocalWriter = false;
-    }
-    if(useLocalWriter) {
-      openOutputFile();
-    }
-    checkRules();
-    if(useLocalWriter) {
-      closeOutputFile();
+    finally {
+      if (m_msgHandler != null) {
+        m_msgHandler.close();
+      }
     }
   }
 

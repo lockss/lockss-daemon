@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlRuleTestResultsDialog.java,v 1.11 2006-07-10 23:21:40 thib_gc Exp $
+ * $Id: CrawlRuleTestResultsDialog.java,v 1.12 2006-07-11 16:11:38 thib_gc Exp $
  */
 
 /*
@@ -89,7 +89,8 @@ public class CrawlRuleTestResultsDialog extends JDialog {
   JTextPane outputTextPane = new JTextPane();
 
   protected JCheckBox fileCheckBox;
-  protected JLabel fileLabel;
+  protected JTextField fileTextField;
+  protected JButton fileButton;
   protected CrawlRuleTester crawlRuleTesterThread;
 
   private ArchivalUnit m_au;
@@ -206,7 +207,7 @@ public class CrawlRuleTestResultsDialog extends JDialog {
       return;
     }
 
-    String fileName = fileLabel.getText();
+    String fileName = fileTextField.getText();
     if (fileCheckBox.isSelected() && StringUtil.isNullString(fileName)) {
       JOptionPane.showMessageDialog(this,
                                     "Please choose an output file.",
@@ -245,8 +246,10 @@ public class CrawlRuleTestResultsDialog extends JDialog {
   }
 
   synchronized void cancelButton_actionPerformed(ActionEvent e) {
-    crawlRuleTesterThread.interrupt();
-    m_msgHandler.close();
+    if (crawlRuleTesterThread != null) {
+      crawlRuleTesterThread.interrupt();
+      m_msgHandler.close();
+    }
     setVisible(false);
   }
 
@@ -262,7 +265,7 @@ public class CrawlRuleTestResultsDialog extends JDialog {
     private Writer writer;
 
     public MyMessageHandler() throws IOException {
-      String fileName = fileLabel.getText();
+      String fileName = fileTextField.getText();
       if (fileCheckBox.isSelected() && !StringUtil.isNullString(fileName)) {
         File file = new File(fileName);
         writer = new BufferedWriter(new FileWriter(file, file.exists()));
@@ -310,32 +313,36 @@ public class CrawlRuleTestResultsDialog extends JDialog {
     Box second = Box.createHorizontalBox();
 
     // Add checkbox and label
-    this.fileCheckBox = new JCheckBox();
-    fileCheckBox.setSelected(false);
-    fileCheckBox.setEnabled(false);
+    fileCheckBox = new JCheckBox();
+    fileCheckBox.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent event) {
+        boolean selected = fileCheckBox.isSelected();
+        fileTextField.setEnabled(selected);
+        fileButton.setEnabled(selected);
+      }
+    });
     first.add(fileCheckBox);
-    first.add(new JLabel("Save output"));
+    first.add(new JLabel("Save the output to a file"));
     first.add(Box.createHorizontalGlue());
 
-    // Add button and set up file chooser interaction
-    JButton fileButton = new JButton("Choose file...");
+    // Add text field and button, and set up file chooser interaction
+    fileTextField = new JTextField();
+    fileTextField.setEnabled(false);
+    second.add(fileTextField);
+    fileButton = new JButton("Choose file");
+    fileButton.setEnabled(false);
     fileButton.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent event) {
         JFileChooser chooser = new JFileChooser();
         chooser.setSelectedFile(new File("plugin-tool-output.txt"));
         int returnVal = chooser.showOpenDialog(CrawlRuleTestResultsDialog.this);
         if(returnVal == JFileChooser.APPROVE_OPTION) {
-          fileLabel.setText(chooser.getSelectedFile().getAbsolutePath());
-          fileCheckBox.setEnabled(true);
+          fileTextField.setText(chooser.getSelectedFile().getAbsolutePath());
         }
       }
     });
-    first.add(fileButton);
-
-    // Add file label
-    this.fileLabel = new JLabel();
-    second.add(fileLabel);
-    second.add(Box.createHorizontalGlue());
+    second.add(Box.createHorizontalStrut(10));
+    second.add(fileButton);
 
     // Put panel together
     fileBox.add(first);
