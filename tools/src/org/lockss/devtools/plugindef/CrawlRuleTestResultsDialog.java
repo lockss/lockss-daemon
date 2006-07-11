@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlRuleTestResultsDialog.java,v 1.13 2006-07-11 18:39:26 thib_gc Exp $
+ * $Id: CrawlRuleTestResultsDialog.java,v 1.14 2006-07-11 21:04:19 thib_gc Exp $
  */
 
 /*
@@ -33,15 +33,16 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.devtools.plugindef;
 
 import java.awt.*;
-import javax.swing.*;
-import org.lockss.plugin.*;
-import org.lockss.devtools.*;
-import javax.swing.text.*;
-import org.lockss.util.*;
-
 import java.awt.event.*;
 import java.beans.*;
 import java.io.*;
+import javax.swing.*;
+import javax.swing.text.*;
+
+import org.lockss.devtools.*;
+import org.lockss.plugin.*;
+import org.lockss.util.*;
+
 
 /**
  * <p>Title: </p>
@@ -97,7 +98,8 @@ public class CrawlRuleTestResultsDialog extends JDialog {
   private CrawlRuleTester.MessageHandler m_msgHandler;
   JPanel btnPanel = new JPanel();
   JButton checkButton = new JButton();
-  JButton cancelButton = new JButton();
+  JButton closeButton = new JButton();
+  JButton stopButton = new JButton();
 
   public CrawlRuleTestResultsDialog(Frame frame, String title, boolean modal) {
     super(frame, title, modal);
@@ -159,10 +161,17 @@ public class CrawlRuleTestResultsDialog extends JDialog {
         checkButton_actionPerformed(e);
       }
     });
-    cancelButton.setText("Close");
-    cancelButton.addActionListener(new java.awt.event.ActionListener() {
+    closeButton.setText("Close");
+    closeButton.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(ActionEvent e) {
-        cancelButton_actionPerformed(e);
+        closeButton_actionPerformed(e);
+      }
+    });
+    stopButton.setText("Stop");
+    stopButton.setEnabled(false);
+    stopButton.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent event) {
+        stopButton_actionPerformed(event);
       }
     });
     outputTextPane.setEditable(false);
@@ -194,7 +203,8 @@ public class CrawlRuleTestResultsDialog extends JDialog {
     outputScrollPane.getViewport().add(outputTextPane, null);
     panel1.add(btnPanel,  BorderLayout.SOUTH);
     btnPanel.add(checkButton, null);
-    btnPanel.add(cancelButton, null);
+    btnPanel.add(stopButton, null);
+    btnPanel.add(closeButton, null);
   }
 
   void checkButton_actionPerformed(ActionEvent e) {
@@ -227,7 +237,7 @@ public class CrawlRuleTestResultsDialog extends JDialog {
         m_msgHandler = new MyMessageHandler();
         crawlRuleTesterThread = new CrawlRuleTester(m_msgHandler, depth, delay,
                                                     startUrl, m_au.getCrawlSpec());
-        cancelButton.setText("Stop");
+        stopButton.setEnabled(true);
         crawlRuleTesterThread.start();
       }
     }
@@ -244,16 +254,18 @@ public class CrawlRuleTestResultsDialog extends JDialog {
     }
   }
 
-  synchronized void cancelButton_actionPerformed(ActionEvent e) {
+  synchronized void closeButton_actionPerformed(ActionEvent e) {
+    stopButton_actionPerformed(e);
+    setVisible(false);
+  }
+
+  synchronized void stopButton_actionPerformed(ActionEvent e) {
     if (crawlRuleTesterThread != null) {
       stop();
       JOptionPane.showMessageDialog(this,
                                     "The crawl rule test was interrupted.",
                                     "Stop",
                                     JOptionPane.INFORMATION_MESSAGE);
-    }
-    else {
-      setVisible(false);
     }
   }
 
@@ -263,7 +275,7 @@ public class CrawlRuleTestResultsDialog extends JDialog {
       crawlRuleTesterThread = null;
       m_msgHandler.close();
       m_msgHandler = null;
-      cancelButton.setText("Close");
+      stopButton.setEnabled(false);
     }
   }
 
@@ -317,7 +329,7 @@ public class CrawlRuleTestResultsDialog extends JDialog {
       if (writer != null) {
         IOUtil.safeClose(writer);
       }
-      cancelButton.setText("Close");
+      stop();
     }
 
   }
