@@ -1,5 +1,5 @@
 /*
- * $Id: EDPInspectorTableModel.java,v 1.12 2006-07-12 17:18:43 thib_gc Exp $
+ * $Id: EDPInspectorTableModel.java,v 1.13 2006-07-12 17:24:21 thib_gc Exp $
  */
 
 /*
@@ -82,7 +82,7 @@ public class EDPInspectorTableModel extends AbstractTableModel
     new InspectorEntry(EditableDefinablePlugin.AU_CRAWL_WINDOW,
 		       "Configurable Crawl Window Class", null),
     new InspectorEntry(EditableDefinablePlugin.AU_CRAWL_WINDOW_SER,
-                       "Crawl Window Spec", inspectorCellEditor),
+                       "Crawl Window", inspectorCellEditor),
     new InspectorEntry(EditableDefinablePlugin.AU_PAUSE_TIME,
 		       "Pause Time Between Fetches", inspectorCellEditor),
     new InspectorEntry( EditableDefinablePlugin.AU_NEWCONTENT_CRAWL,
