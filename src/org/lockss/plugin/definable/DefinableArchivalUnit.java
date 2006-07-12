@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.43 2006-07-06 17:38:55 thib_gc Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.44 2006-07-12 17:18:43 thib_gc Exp $
  */
 
 /*
@@ -61,7 +61,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
   static final public String AU_NAME_KEY = "au_name";
   static final public String AU_RULES_KEY = "au_crawlrules";
   static final public String AU_CRAWL_WINDOW_KEY = "au_crawlwindow";
-  static final public String AU_CRAWL_WINDOW_SPEC_KEY = "au_crawlwindowspec";
+  static final public String AU_CRAWL_WINDOW_SER_KEY = "au_crawlwindow_ser";
   static final public String AU_EXPECTED_PATH = "au_expected_base_path";
   static final public String AU_CRAWL_DEPTH = "au_crawl_depth";
   static final public String AU_MANIFEST_KEY = "au_manifest";
@@ -299,7 +299,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
   }
 
   protected CrawlWindow makeCrawlWindow() {
-    CrawlWindow window = (CrawlWindow)definitionMap.getMapElement(AU_CRAWL_WINDOW_SPEC_KEY);
+    CrawlWindow window = (CrawlWindow)definitionMap.getMapElement(AU_CRAWL_WINDOW_SER_KEY);
     if (window != null) {
       return window;
     }
@@ -369,14 +369,17 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
       try {
         obj = Class.forName(className, true, classLoader).newInstance();
       } catch (Exception ex) {
+        log.error("Could not load " + className, ex);
         throw new InvalidDefinitionException(
             auName + " unable to create " + loadedClass + ": " + className, ex);
       } catch (LinkageError le) {
+        log.error("Could not load " + className, le);
         throw new InvalidDefinitionException(
             auName + " unable to create " + loadedClass + ": " + className, le);
 
       }
       if(!loadedClass.isInstance(obj)) {
+        log.error(className + " is not a " + loadedClass.getName());
         throw new InvalidDefinitionException(auName + "wrong class type for "
             + loadedClass + ": " + className);
       }

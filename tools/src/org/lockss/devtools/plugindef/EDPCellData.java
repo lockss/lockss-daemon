@@ -1,5 +1,5 @@
 /*
- * $Id: EDPCellData.java,v 1.12 2006-06-27 22:28:15 thib_gc Exp $
+ * $Id: EDPCellData.java,v 1.13 2006-07-12 17:18:43 thib_gc Exp $
  */
 
 /*
@@ -86,8 +86,8 @@ public class EDPCellData {
     else if(key.equals(EditableDefinablePlugin.AU_CRAWL_WINDOW)) {
       m_data = edp.getAuCrawlWindow();
     }
-    else if(key.equals(EditableDefinablePlugin.AU_CRAWL_WINDOW_SPEC)) {
-      m_data = edp.getAuCrawlWindowSpec();
+    else if(key.equals(EditableDefinablePlugin.AU_CRAWL_WINDOW_SER)) {
+      m_data = edp.getAuCrawlWindowSer();
     }
     else if(key.equals(EditableDefinablePlugin.AU_FILTER_SUFFIX)) {
       m_data = edp.getAuFilters();
