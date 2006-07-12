@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlWindowEditor.java,v 1.6 2006-06-26 23:30:58 thib_gc Exp $
+ * $Id: CrawlWindowEditor.java,v 1.6.2.1 2006-07-12 16:59:33 thib_gc Exp $
  */
 
 /*
@@ -222,7 +222,7 @@ public class CrawlWindowEditor extends JDialog implements EDPEditor{
 
     void setData(EDPCellData data) {
       m_data = data;
-      m_window = data.getPlugin().getAuCrawlWindowSpec();
+      m_window = data.getPlugin().getAuCrawlWindowSer();
       m_tableData.clear();
       Object[] entry;
       entry = new Object[m_columns.length];
@@ -317,9 +317,9 @@ public class CrawlWindowEditor extends JDialog implements EDPEditor{
 
 	CrawlWindows.Interval window = new CrawlWindows.Interval(start,end,CrawlWindows.TIME,timezone);
 	if(crawl)
-	    m_data.getPlugin().setAuCrawlWindowSpec(window);
+	    m_data.getPlugin().setAuCrawlWindowSer(window);
 	else
-	    m_data.getPlugin().setAuCrawlWindowSpec(new CrawlWindows.Not(window));
+	    m_data.getPlugin().setAuCrawlWindowSer(new CrawlWindows.Not(window));
     }
 
     /**

@@ -1,5 +1,5 @@
 /*
- * $Id: EditableDefinablePlugin.java,v 1.19.2.1 2006-07-06 17:34:12 thib_gc Exp $
+ * $Id: EditableDefinablePlugin.java,v 1.19.2.2 2006-07-12 16:59:33 thib_gc Exp $
  */
 
 /*
@@ -69,8 +69,8 @@ public class EditableDefinablePlugin
     = DefinableArchivalUnit.AU_RULES_KEY;
   static final protected String AU_CRAWL_WINDOW
   = DefinableArchivalUnit.AU_CRAWL_WINDOW_KEY;
-  static final protected String AU_CRAWL_WINDOW_SPEC
-  = DefinableArchivalUnit.AU_CRAWL_WINDOW_SPEC_KEY;
+  static final protected String AU_CRAWL_WINDOW_SER
+  = DefinableArchivalUnit.AU_CRAWL_WINDOW_SER_KEY;
   static final protected String AU_EXPECTED_PATH
     = DefinableArchivalUnit.AU_EXPECTED_PATH;
   static final protected String AU_CRAWL_DEPTH
@@ -271,20 +271,20 @@ public class EditableDefinablePlugin
     definitionMap.removeMapElement(AU_CRAWL_WINDOW);
   }
 
-  public void setAuCrawlWindowSpec(CrawlWindow crawlWindowSpec) {
-    logger.info("Setting crawl window spec to " + crawlWindowSpec);
-    definitionMap.setMapElement(AU_CRAWL_WINDOW_SPEC, crawlWindowSpec);
+  public void setAuCrawlWindowSer(CrawlWindow crawlWindow) {
+    logger.info("Setting (serialized) crawl window to " + crawlWindow);
+    definitionMap.setMapElement(AU_CRAWL_WINDOW_SER, crawlWindow);
   }
 
-  public CrawlWindow getAuCrawlWindowSpec() {
-    CrawlWindow ret = (CrawlWindow)(definitionMap.getMapElement(AU_CRAWL_WINDOW_SPEC));
-    logger.debug("The crawl window spec is " + ret);
+  public CrawlWindow getAuCrawlWindowSer() {
+    CrawlWindow ret = (CrawlWindow)(definitionMap.getMapElement(AU_CRAWL_WINDOW_SER));
+    logger.debug("The (serialized) crawl window is " + ret);
     return ret;
   }
 
-  public void removeAuCrawlWindowSpec() {
+  public void removeAuCrawlWindowSer() {
 
-      definitionMap.removeMapElement(AU_CRAWL_WINDOW_SPEC);
+      definitionMap.removeMapElement(AU_CRAWL_WINDOW_SER);
 
   }
 

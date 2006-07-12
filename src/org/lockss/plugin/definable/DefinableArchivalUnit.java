@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.42.2.1 2006-07-03 19:36:38 thib_gc Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.42.2.2 2006-07-12 16:59:33 thib_gc Exp $
  */
 
 /*
@@ -61,7 +61,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
   static final public String AU_NAME_KEY = "au_name";
   static final public String AU_RULES_KEY = "au_crawlrules";
   static final public String AU_CRAWL_WINDOW_KEY = "au_crawlwindow";
-  static final public String AU_CRAWL_WINDOW_SPEC_KEY = "au_crawlwindowspec";
+  static final public String AU_CRAWL_WINDOW_SER_KEY = "au_crawlwindow_ser";
   static final public String AU_EXPECTED_PATH = "au_expected_base_path";
   static final public String AU_CRAWL_DEPTH = "au_crawl_depth";
   static final public String AU_MANIFEST_KEY = "au_manifest";
@@ -299,7 +299,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
   }
 
   protected CrawlWindow makeCrawlWindow() {
-    CrawlWindow window = (CrawlWindow)definitionMap.getMapElement(AU_CRAWL_WINDOW_SPEC_KEY);
+    CrawlWindow window = (CrawlWindow)definitionMap.getMapElement(AU_CRAWL_WINDOW_SER_KEY);
     if (window != null) {
       return window;
     }
