@@ -1,5 +1,5 @@
 /*
- * $Id: TestPoll.java,v 1.96 2006-06-02 20:27:16 smorabito Exp $
+ * $Id: TestPoll.java,v 1.97 2006-07-12 20:28:06 smorabito Exp $
  */
 
 /*
@@ -377,7 +377,7 @@ public class TestPoll extends LockssTestCase {
     np.m_tally.tallyVotes();
     return np;
   }
-
+                                               
   public static V1Poll createCompletedPoll(LockssDaemon daemon,
 					   ArchivalUnit au,
 					   V1LcapMessage testmsg,

@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.84 2006-04-10 05:31:01 smorabito Exp $
+ * $Id: TestPollManager.java,v 1.85 2006-07-12 20:28:06 smorabito Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.io.*;
 import java.security.*;
 import java.util.*;
 
+import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
@@ -486,7 +487,56 @@ public class TestPollManager extends LockssTestCase {
     assertFalse(pollmanager.isPollSuspended(key));
   }
 
+  /** Test for getPollsForAu(String auId) */
+  public void testGetV3PollStatus() throws Exception {
+    String auId = testau.getAuId();
+    PollManager.V3PollStatusAccessor accessor = 
+      pollmanager.getV3Status();
+    
+    assertEquals(0, accessor.getNumPolls(auId));
+    assertEquals(0.0, accessor.getAgreement(auId), 0.001);
+    assertEquals(-1, accessor.getLastPollTime(auId));
 
+    addCompletedV3Poll(100000L, 0.99f);
+    assertEquals(1, accessor.getNumPolls(auId));
+    assertEquals(0.99, accessor.getAgreement(auId), 0.001);
+    assertEquals(100000L, accessor.getLastPollTime(auId));
+    
+    addCompletedV3Poll(987654321L, 1.0f);
+    assertEquals(2, accessor.getNumPolls(auId));
+    assertEquals(1.0, accessor.getAgreement(auId), 0.001);
+    assertEquals(987654321L, accessor.getLastPollTime(auId));
+    
+    addCompletedV3Poll(1000L, 0.25f);
+    assertEquals(3, accessor.getNumPolls(auId));
+    assertEquals(0.25, accessor.getAgreement(auId), 0.001);
+    assertEquals(1000L, accessor.getLastPollTime(auId));
+  }
+  
+  private void addCompletedV3Poll(long timestamp, 
+                                  float agreement) throws Exception {
+    PollSpec spec = new MockPollSpec(testau, rooturls[0], lwrbnd, uprbnd,
+                                     Poll.V3_POLL);
+    V3Poller poll = new V3Poller(spec, theDaemon, testID, "akeyforthispoll",
+                                 1234567, "SHA-1");
+    poll.stopPoll();
+    pollmanager.addPoll(poll);
+    PollManager.V3PollStatusAccessor v3status =
+      pollmanager.getV3Status();
+    v3status.incrementNumPolls(testau.getAuId());
+    v3status.setAgreement(testau.getAuId(), agreement);
+    v3status.setLastPollTime(testau.getAuId(), timestamp);
+  }
+  
+  private BasePoll makeTestV3Voter() throws Exception {
+    PollSpec spec = new MockPollSpec(testau, rooturls[0], lwrbnd, uprbnd,
+                                     Poll.V3_POLL);
+    return new V3Voter(spec, theDaemon, testID, "akeyforthispoll",
+                       ByteArray.makeRandomBytes(20),
+                       ByteArray.makeRandomBytes(20),
+                       1234567890, "SHA-1");
+  }
+  
   // XXX:  Move these tests to TestV1PollFactory
   /** test for method getMessageDigest(..) */
   public void testGetMessageDigest() {

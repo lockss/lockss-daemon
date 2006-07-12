@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.36 2006-03-14 01:46:43 smorabito Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.37 2006-07-12 20:28:06 smorabito Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import org.lockss.plugin.*;
 import org.lockss.util.*;
 import org.lockss.app.*;
 import org.lockss.poller.*;
+import org.lockss.poller.v3.*;
 import org.lockss.protocol.*;
 import org.lockss.repository.*;
 import org.lockss.servlet.LockssServlet;
@@ -189,6 +190,12 @@ public class ArchivalUnitStatus
     private Map makeRow(ArchivalUnit au, AuState auState,
 			NodeState topNodeState) {
       HashMap rowMap = new HashMap();
+      PollManager.V3PollStatusAccessor v3status =
+        theDaemon.getPollManager().getV3Status();
+      // If this is a v3 AU, we cannot access some of the poll 
+      // status through the nodestate.  Eventually, this will be totally
+      // refactored.
+      boolean isV3 = AuUtil.getProtocolVersion(au) == Poll.V3_PROTOCOL;
       //"AuID"
       rowMap.put("AuName", AuStatus.makeAuRef(au.getName(), au.getAuId()));
 //       rowMap.put("AuNodeCount", new Integer(-1));
@@ -196,29 +203,51 @@ public class ArchivalUnitStatus
       rowMap.put("DiskUsage", new Double(((double)AuUtil.getAuDiskUsage(au)) / (1024*1024)));
       rowMap.put("AuLastCrawl", new Long(auState.getLastCrawlTime()));
       rowMap.put("Peers", PeerRepair.makeAuRef("peers", au.getAuId()));
-      rowMap.put("AuPolls",
-		 theDaemon.getStatusService().
-		 getReference(PollerStatus.MANAGER_STATUS_TABLE_NAME,
-			      au));
-      rowMap.put("AuLastPoll", new Long(auState.getLastTopLevelPollTime()));
       rowMap.put("AuLastTreeWalk", new Long(auState.getLastTreeWalkTime()));
-      Object stat = topNodeState.hasDamage()
-	? DAMAGE_STATE_DAMAGED : DAMAGE_STATE_OK;
+      
+      StringBuffer damaged = new StringBuffer();
+      if (isV3) {
+        String auId = au.getAuId();
+        Integer numPolls = new Integer(v3status.getNumPolls(auId));
+        rowMap.put("AuPolls",
+                   new StatusTable.Reference(numPolls,
+                                             V3PollStatus.POLLER_STATUS_TABLE_NAME,
+                                             auId));
+        rowMap.put("AuLastPoll",
+                   new Long(v3status.getLastPollTime(auId)));
+        // Percent damaged
+        float fv = v3status.getAgreement(auId);
+        // It's scary to see "0% Agreement" if no polls have completed.
+        if (numPolls.intValue() == 0) {
+          damaged.append("Waiting");
+        } else {
+          damaged.append(Integer.toString(Math.round(fv * 100)) + "% Agreement");
+        }
+      } else {
+        rowMap.put("AuPolls",
+                   theDaemon.getStatusService().
+                   getReference(PollerStatus.MANAGER_STATUS_TABLE_NAME,
+                                au));
+        rowMap.put("AuLastPoll", new Long(auState.getLastTopLevelPollTime()));
+        damaged.append(topNodeState.hasDamage()
+                       ? DAMAGE_STATE_DAMAGED : DAMAGE_STATE_OK);
+      }
+
       boolean isPubDown = AuUtil.isPubDown(au);
       boolean isClosed = AuUtil.isClosed(au);
-
+        
       if (isPubDown || isClosed) {
-	List val = ListUtil.list(stat, " (");
-	if (isClosed) {
-	  val.add("C");
-	}
-	if (isPubDown) {
-	  val.add("D");
-	}
-	val.add(")");
-	stat = val;
+        damaged.append(" (");
+        if (isClosed) {
+          damaged.append("C");
+        }
+        if (isPubDown) {
+          damaged.append("D");
+        }
+        damaged.append(")");
       }
-      rowMap.put("Damaged", stat);
+
+      rowMap.put("Damaged", damaged.toString());
       return rowMap;
     }
   }

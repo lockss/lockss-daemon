@@ -1,5 +1,5 @@
 /*
- * $Id: BlockTally.java,v 1.8 2006-03-09 00:11:27 thib_gc Exp $
+ * $Id: BlockTally.java,v 1.9 2006-07-12 20:28:06 smorabito Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.util.*;
 import org.lockss.poller.*;
 import org.lockss.protocol.*;
 import org.lockss.util.*;
+import org.lockss.config.*;
 
 /**
  * Representation of the tally for an individual vote block.
@@ -72,11 +73,19 @@ public class BlockTally {
 
   private int result;
   private int quorum;
+  private double trustedWeight;
+  private double voteMargin;
 
   private static final Logger log = Logger.getLogger("BlockTally");
 
   public BlockTally(int quorum) {
     this.quorum = quorum;
+    this.trustedWeight =
+      (double)CurrentConfig.getIntParam(V3Poller.PARAM_V3_TRUSTED_WEIGHT,
+                                        V3Poller.DEFAULT_V3_TRUSTED_WEIGHT);
+    this.voteMargin =
+      ((double)CurrentConfig.getIntParam(V3Poller.PARAM_V3_VOTE_MARGIN,
+                                         V3Poller.DEFAULT_V3_VOTE_MARGIN)) / 100;
   }
 
   public String getStatusString() {
@@ -198,6 +207,25 @@ public class BlockTally {
     return voters;
   }
 
+  boolean isWithinMargin() {
+    int numAgree = agreeVoters.size();
+    int numDisagree = disagreeVoters.size();
+    double num_votes = numAgree + numDisagree;
+    double req_margin = voteMargin;
+    double act_margin;
+
+    if (numAgree > numDisagree) {
+      act_margin = (double) numAgree / num_votes;
+    }
+    else {
+      act_margin = (double) numDisagree / num_votes;
+    }
+    if (act_margin < req_margin) {
+      return false;
+    }
+    return true;
+  }
+  
   /**
    * Return a set of all peers that claim to have the specified URL.
    * @param url

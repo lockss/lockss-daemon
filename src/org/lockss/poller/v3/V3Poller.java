@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.26 2006-06-26 23:55:08 smorabito Exp $
+ * $Id: V3Poller.java,v 1.27 2006-07-12 20:28:06 smorabito Exp $
  */
 
 /*
@@ -129,7 +129,17 @@ public class V3Poller extends BasePoll {
     PREFIX + "voteDeadlinePadding";
   public static final long DEFAULT_VOTE_DEADLINE_PADDING =
     1000 * 60 * 10; // ten minutes 
+  
+  public static final String PARAM_V3_TRUSTED_WEIGHT =
+    PREFIX + "trustedWeight";
+  public static final int DEFAULT_V3_TRUSTED_WEIGHT =
+    350;
 
+  public static final String PARAM_V3_VOTE_MARGIN =
+    PREFIX + "voteMargin";
+  public static final int DEFAULT_V3_VOTE_MARGIN =
+    75;
+  
   // Global state for the poll.
   private PollerStateBean pollerState;
   // Map of PeerIdentity => ParticipantState for all participants in
@@ -481,7 +491,6 @@ public class V3Poller extends BasePoll {
   /**
    * <p>Stop the poll.  Overrides BasePoll.stopPoll().</p>
    *
-   * <p>May be called by the PollManager, or internally to abort the poll.</p>
    */
   public void stopPoll() {
     stopPoll(POLLER_STATUS_COMPLETE);
@@ -1080,7 +1089,30 @@ public class V3Poller extends BasePoll {
                    + " the Vote Complete event.");
       }
     }
+    // Tell the PollManager to hang on to our statistics for this poll.
+    PollManager.V3PollStatusAccessor stats = pollManager.getV3Status();
+    String auId = getAu().getAuId();
+    
+    stats.setAgreement(auId, getPercentAgreement());
+    stats.setLastPollTime(auId, TimeBase.nowMs());
+    stats.incrementNumPolls(auId);
     stopPoll(POLLER_STATUS_COMPLETE);
+  }
+  
+  /**
+   * Return the percent agreement for this poll.  Used by the ArchivalUnitStatus
+   * accessor, and the V3PollStatus accessor
+   * @return
+   */
+  public float getPercentAgreement() {
+    float agreeingUrls = (float)getAgreedUrls().size();
+    float talliedUrls = (float)getTalliedUrls().size();
+    float agreement;
+    if (agreeingUrls > 0)
+      agreement = agreeingUrls / talliedUrls;
+    else
+      agreement = 0.0f;
+    return agreement;
   }
 
   /**

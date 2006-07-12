@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.168 2006-06-26 23:55:07 smorabito Exp $
+ * $Id: PollManager.java,v 1.169 2006-07-12 20:28:06 smorabito Exp $
  */
 
 /*
@@ -88,6 +88,7 @@ public class PollManager
   private AuEventHandler auEventHandler;
   private HashMap serializedPollers;
   private HashMap serializedVoters;
+  private V3PollStatusAccessor v3Status;
   
   // Executor used to carry out serialized poll operations. 
   // Implementations include a queued poll executor and a pooled poll executor.
@@ -161,6 +162,10 @@ public class PollManager
 	}};
     theDaemon.getPluginManager().registerAuEventHandler(auEventHandler);
 
+    // Maintain the state of V3 polls, since these do not use the V1 per-node
+    // history mechanism.
+    v3Status = new V3PollStatusAccessor();
+    
     // One time load of an in-memory map of AU IDs to directories. 
     preloadStoredPolls();
   }
@@ -202,6 +207,7 @@ public class PollManager
     theSystemMetrics = null;
     thePolls.clear();
     theRecentPolls.clear();
+    v3Status.clear();
     super.stopService();
   }
 
@@ -858,7 +864,7 @@ public class PollManager
     }
     return null;
   }
-
+  
   //-------------- TestPollManager Accessors ----------------------------
   /**
    * remove the poll represented by the given key from the poll table and
@@ -912,7 +918,10 @@ public class PollManager
   public boolean hasPoll(String key) {
     return thePolls.contains(key);
   }
-
+  
+  public V3PollStatusAccessor getV3Status() {
+    return v3Status;
+  }
 
   // ----------------  Callbacks -----------------------------------
 
@@ -927,7 +936,6 @@ public class PollManager
       }
     }
   }
-
 
   /**
    * <p>PollManagerEntry: </p>
@@ -1047,4 +1055,108 @@ public class PollManager
       return (this.type == Poll.V3_POLL);
     }
   }
+  
+  /*
+   * XXX:  This is a temporary class to hold AU-specific status for
+   *       V3 polls.  Eventually, the goal is to replace the current
+   *       node and poll history with a centralized V3-centric poll
+   *       history mechanism.  Until then, this in-memory structure will
+   *       hold poll history for V3 AUs between reboots.
+   */
+  public class V3PollStatusAccessor {
+    HashMap map;
+    
+    public V3PollStatusAccessor() {
+      map = new HashMap();
+    }
+    
+    private V3PollStatusAccessorEntry getEntry(String auId) {
+      V3PollStatusAccessorEntry e = (V3PollStatusAccessorEntry)map.get(auId);
+      if (e == null) {
+        e = new V3PollStatusAccessorEntry();
+        map.put(auId, e);
+      }
+      return e;
+    }
+    
+    /**
+     * Set the last completed V3 poll time for an AU.
+     * 
+     * @param auId The ID of the Archival Unit.
+     * @param lastPollTime The timestamp of the last completed V3 poll.
+     */
+    public void setLastPollTime(String auId, long lastPollTime) {
+      getEntry(auId).lastPollTime = lastPollTime;
+    }
+    
+    /**
+     * Get the last completed V3 poll time for an AU.
+     * 
+     * @param auId The ID of the Archival Unit.
+     * @return The timestamp of the last completed V3 poll.
+     */
+    public long getLastPollTime(String auId) {
+      return getEntry(auId).lastPollTime;
+    }
+
+    /**
+     * Increment the number of completed V3 polls for an AU.
+     * 
+     * @param auId The ID of the Archival Unit.
+     */
+    public void incrementNumPolls(String auId) {
+      getEntry(auId).numPolls++;
+    }
+    
+    /**
+     * Return the number of polls (since the last restart) for
+     * an Archival Unit.
+     * 
+     * @param auId  The ID of the Archival Unit.
+     * @return The number of completed V3 polls since the last
+     *         daemon restart.
+     */
+    public int getNumPolls(String auId) {
+      return getEntry(auId).numPolls;
+    }
+    
+    /**
+     * Set the percent agreement for an archival unit as of the
+     * last completed V3 poll.
+     * 
+     * @param auId The ID of the Archival Unit.
+     * @param agreement  The percent agreement as of the last completed V3 poll.
+     */
+    public void setAgreement(String auId, float agreement) {
+      getEntry(auId).agreement = agreement;
+    }
+
+    /**
+     * Return the percent agreement for an archival unit as of the last
+     * completed V3 poll.
+     * 
+     * @param auId The ID of the Archival Unit.
+     * @return The percent agreement as of the last completed V3 poll.
+     */
+    public float getAgreement(String auId) {
+      return getEntry(auId).agreement;
+    }
+
+    /**
+     * Clear the poll history map.
+     */
+    public void clear() {
+      map.clear();
+    }
+  }
+
+  /*
+   * Just a struct to hold status information per-au
+   */
+  private class V3PollStatusAccessorEntry {
+    public long lastPollTime = -1;
+    public int numPolls = 0;
+    public float agreement = 0.0f;
+  }
+
 }

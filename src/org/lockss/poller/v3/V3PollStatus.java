@@ -1,5 +1,5 @@
 /*
-* $Id: V3PollStatus.java,v 1.5 2006-06-26 23:55:08 smorabito Exp $
+* $Id: V3PollStatus.java,v 1.6 2006-07-12 20:28:06 smorabito Exp $
  */
 
 /*
@@ -115,20 +115,25 @@ public class V3PollStatus {
 
     public void populateTable(StatusTable table)
         throws StatusService.NoSuchTableException {
+      String key = table.getKey();
       table.setColumnDescriptors(colDescs);
       table.setDefaultSortRules(sortRules);
-      table.setRows(getRows());
+      table.setRows(getRows(key));
     }
 
     public boolean requiresKey() {
       return false;
     }
 
-    private List getRows() {
+    private List getRows(String key) {
       List rows = new ArrayList();
       Collection v3Pollers = pollManager.getV3Pollers();
       for (Iterator it = v3Pollers.iterator(); it.hasNext(); ) {
-        rows.add(makeRow((V3Poller)it.next()));
+        V3Poller poller = (V3Poller)it.next();
+        if ((key != null && key.equals(poller.getAu().getAuId())) || 
+            key == null) {
+          rows.add(makeRow(poller));
+        }
       }
       return rows;
     }
@@ -136,21 +141,13 @@ public class V3PollStatus {
     private Map makeRow(V3Poller poller) {
       Map row = new HashMap();
       
-      float agreeingUrls = (float)poller.getAgreedUrls().size();
-      float talliedUrls = (float)poller.getTalliedUrls().size();
-      float agreement;
-      if (agreeingUrls > 0)
-        agreement = agreeingUrls / talliedUrls;
-      else
-        agreement = 0;
-      
       row.put("auId", poller.getAu().getName());
       row.put("participants", new Integer(poller.getPollSize()));
       row.put("status", poller.getStatusString());
       row.put("talliedUrls", new Integer(poller.getTalliedUrls().size()));
       row.put("activeRepairs", new Integer(poller.getActiveRepairs().size()));
       row.put("completedRepairs", new Integer(poller.getCompletedRepairs().size()));
-      row.put("agreement", new Float(agreement));
+      row.put("agreement", new Float(poller.getPercentAgreement()));
       row.put("start", new Long(poller.getCreateTime()));
       row.put("deadline", poller.getDeadline());
       row.put("pollId",
