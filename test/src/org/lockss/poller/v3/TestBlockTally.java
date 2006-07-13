@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockTally.java,v 1.3 2005-10-11 05:50:29 tlipkis Exp $
+ * $Id: TestBlockTally.java,v 1.4 2006-07-13 22:04:20 smorabito Exp $
  */
 
 /*
@@ -45,106 +45,242 @@ import java.io.*;
 public class TestBlockTally extends LockssTestCase {
   private IdentityManager idmgr;
   private LockssDaemon theDaemon;
+  private PeerIdentity[] testPeers;
 
-//  public void setUp() throws Exception {
-//    super.setUp();
-//    String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-//    theDaemon = getMockLockssDaemon();
-//    Properties p = new Properties();
-//    p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
-//    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
-//    p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
-//    p.setProperty(BlockTally.PARAM_VOTE_MARGIN, "73");
-//    p.setProperty(BlockTally.PARAM_QUORUM, "5");
-//    p.setProperty(BlockTally.PARAM_TRUSTED_WEIGHT, "300");
-//    ConfigurationUtil.setCurrentConfigFromProps(p);
-//    idmgr = theDaemon.getIdentityManager();
-//    idmgr.startService();
-//  }
-//
-//  public void tearDown() throws Exception {
-//    idmgr.stopService();
-//    super.tearDown();
-//  }
-//
-//  public void testConstructPollTally() throws Exception {
-//    BlockTally tally = new BlockTally();
-//    assertTrue(0.73 == tally.m_voteMargin);
-//    assertTrue(300.0 == tally.m_trustedWeight);
-//    assertEquals(5, tally.m_quorum);
-//    assertEquals(BlockTally.RESULT_POLLING, tally.getResult());
-//  }
-//
-//  public void testWonPoll() throws Exception {
-//    BlockTally tally = new BlockTally();
-//    tally.addDisagreeVote(idmgr.stringToPeerIdentity("192.168.0.1"));
-//    tally.addAgreeVote(idmgr.stringToPeerIdentity("192.168.0.2"));
-//    tally.addAgreeVote(idmgr.stringToPeerIdentity("192.168.0.3"));
-//    tally.addAgreeVote(idmgr.stringToPeerIdentity("192.168.0.4"));
-//    tally.addAgreeVote(idmgr.stringToPeerIdentity("192.168.0.5"));
-//    tally.tallyVotes();
-//    assertEquals(BlockTally.RESULT_WON, tally.getResult());
-//  }
-//
-//  public void testLostPoll() throws Exception {
-//    BlockTally tally = new BlockTally();
-//    tally.addAgreeVote(idmgr.stringToPeerIdentity("192.168.0.1"));
-//    tally.addDisagreeVote(idmgr.stringToPeerIdentity("192.168.0.2"));
-//    tally.addDisagreeVote(idmgr.stringToPeerIdentity("192.168.0.3"));
-//    tally.addDisagreeVote(idmgr.stringToPeerIdentity("192.168.0.4"));
-//    tally.addDisagreeVote(idmgr.stringToPeerIdentity("192.168.0.5"));
-//    tally.tallyVotes();
-//    assertEquals(BlockTally.RESULT_LOST, tally.getResult());
-//  }
-//
-//  public void testResultTooCloseUnder() throws Exception {
-//    BlockTally tally = new BlockTally();
-//    tally.addDisagreeVote(idmgr.stringToPeerIdentity("192.168.0.1"));
-//    tally.addDisagreeVote(idmgr.stringToPeerIdentity("192.168.0.2"));
-//    tally.addAgreeVote(idmgr.stringToPeerIdentity("192.168.0.3"));
-//    tally.addAgreeVote(idmgr.stringToPeerIdentity("192.168.0.4"));
-//    tally.addAgreeVote(idmgr.stringToPeerIdentity("192.168.0.5"));
-//    tally.addAgreeVote(idmgr.stringToPeerIdentity("192.168.0.6"));
-//    tally.tallyVotes();
-//    assertEquals(BlockTally.RESULT_TOO_CLOSE, tally.getResult());
-//  }
-//
-//  public void testResultTooCloseOver() throws Exception {
-//    BlockTally tally = new BlockTally();
-//    tally.addAgreeVote(idmgr.stringToPeerIdentity("192.168.0.1"));
-//    tally.addAgreeVote(idmgr.stringToPeerIdentity("192.168.0.2"));
-//    tally.addDisagreeVote(idmgr.stringToPeerIdentity("192.168.0.3"));
-//    tally.addDisagreeVote(idmgr.stringToPeerIdentity("192.168.0.4"));
-//    tally.addDisagreeVote(idmgr.stringToPeerIdentity("192.168.0.5"));
-//    tally.addDisagreeVote(idmgr.stringToPeerIdentity("192.168.0.6"));
-//    tally.tallyVotes();
-//    assertEquals(BlockTally.RESULT_TOO_CLOSE, tally.getResult());
-//  }
-//
-//  public void testResultTooCloseEqual() throws Exception {
-//    BlockTally tally = new BlockTally();
-//    tally.addAgreeVote(idmgr.stringToPeerIdentity("192.168.0.1"));
-//    tally.addAgreeVote(idmgr.stringToPeerIdentity("192.168.0.2"));
-//    tally.addAgreeVote(idmgr.stringToPeerIdentity("192.168.0.3"));
-//    tally.addDisagreeVote(idmgr.stringToPeerIdentity("192.168.0.4"));
-//    tally.addDisagreeVote(idmgr.stringToPeerIdentity("192.168.0.5"));
-//    tally.addDisagreeVote(idmgr.stringToPeerIdentity("192.168.0.6"));
-//    tally.tallyVotes();
-//    assertEquals(BlockTally.RESULT_TOO_CLOSE, tally.getResult());
-//  }
-//
-//  public void testNoQuorum() throws Exception {
-//    BlockTally tally = new BlockTally();
-//    tally.addAgreeVote(idmgr.stringToPeerIdentity("192.168.0.1"));
-//    tally.addAgreeVote(idmgr.stringToPeerIdentity("192.168.0.2"));
-//    tally.addAgreeVote(idmgr.stringToPeerIdentity("192.168.0.3"));
-//    tally.addAgreeVote(idmgr.stringToPeerIdentity("192.168.0.4"));
-//    tally.tallyVotes();
-//    assertEquals(BlockTally.RESULT_NOQUORUM, tally.getResult());
-//  }
+  public void setUp() throws Exception {
+    super.setUp();
+    String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    theDaemon = getMockLockssDaemon();
+    Properties p = new Properties();
+    p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
+    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
+    p.setProperty(V3Poller.PARAM_V3_VOTE_MARGIN, "73");
+    p.setProperty(V3Poller.PARAM_V3_TRUSTED_WEIGHT, "300");
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+    idmgr = theDaemon.getIdentityManager();
+    idmgr.startService();
+    setupPeers();
+  }
+  
+  private void setupPeers() throws Exception {
+    testPeers = new PeerIdentity[10];
+    testPeers[0] = idmgr.stringToPeerIdentity("TCP:[192.168.0.1]:9900");
+    testPeers[1] = idmgr.stringToPeerIdentity("TCP:[192.168.0.1]:9901");
+    testPeers[2] = idmgr.stringToPeerIdentity("TCP:[192.168.0.1]:9902");
+    testPeers[3] = idmgr.stringToPeerIdentity("TCP:[192.168.0.1]:9903");
+    testPeers[4] = idmgr.stringToPeerIdentity("TCP:[192.168.0.1]:9904");
+    testPeers[5] = idmgr.stringToPeerIdentity("TCP:[192.168.0.1]:9905");
+    testPeers[6] = idmgr.stringToPeerIdentity("TCP:[192.168.0.1]:9906");
+    testPeers[7] = idmgr.stringToPeerIdentity("TCP:[192.168.0.1]:9907");
+    testPeers[8] = idmgr.stringToPeerIdentity("TCP:[192.168.0.1]:9908");
+    testPeers[9] = idmgr.stringToPeerIdentity("TCP:[192.168.0.1]:9909");
+  }
 
-  public void testFoo() throws Exception {
-    //
+  public void tearDown() throws Exception {
+    idmgr.stopService();
+    super.tearDown();
+  }
+
+  public void testConstructPollTally() throws Exception {
+    BlockTally tally = new BlockTally(5);
+    assertEquals(0.73, tally.voteMargin, 0.001);
+    assertEquals(300.0, tally.trustedWeight, 0.001);
+    assertEquals(5, tally.quorum);
+    assertEquals(BlockTally.RESULT_HASHING, tally.getTallyResult());
+  }
+  
+  public void testIsWithinMargin() throws Exception {
+    BlockTally tally = null;
+    
+    tally = new BlockTally(4);
+    tally.voteMargin = 0.5;
+    tally.addAgreeVoter(testPeers[0]);
+    tally.addAgreeVoter(testPeers[1]);
+    tally.addAgreeVoter(testPeers[2]);
+    tally.addAgreeVoter(testPeers[3]);
+    assertTrue(tally.isWithinMargin());
+
+    tally = new BlockTally(4);
+    tally.voteMargin = 0.5;
+    tally.addDisagreeVoter(testPeers[0]);
+    tally.addAgreeVoter(testPeers[1]);
+    tally.addAgreeVoter(testPeers[2]);
+    tally.addAgreeVoter(testPeers[3]);
+    assertTrue(tally.isWithinMargin());
+    
+    tally = new BlockTally(4);
+    tally.voteMargin = 0.5;
+    tally.addDisagreeVoter(testPeers[0]);
+    tally.addDisagreeVoter(testPeers[1]);
+    tally.addAgreeVoter(testPeers[2]);
+    tally.addAgreeVoter(testPeers[3]);
+    assertTrue(tally.isWithinMargin());
+    
+    tally = new BlockTally(4);
+    tally.voteMargin = 0.5;
+    tally.addDisagreeVoter(testPeers[0]);
+    tally.addDisagreeVoter(testPeers[1]);
+    tally.addDisagreeVoter(testPeers[2]);
+    tally.addAgreeVoter(testPeers[3]);
+    assertTrue(tally.isWithinMargin());
+
+    tally = new BlockTally(4);
+    tally.voteMargin = 0.5;
+    tally.addDisagreeVoter(testPeers[0]);
+    tally.addDisagreeVoter(testPeers[1]);
+    tally.addDisagreeVoter(testPeers[2]);
+    tally.addDisagreeVoter(testPeers[3]);
+    assertTrue(tally.isWithinMargin());
+    
+    
+    tally = new BlockTally(4);
+    tally.voteMargin = 0.75;
+    tally.addAgreeVoter(testPeers[0]);
+    tally.addAgreeVoter(testPeers[1]);
+    tally.addAgreeVoter(testPeers[2]);
+    tally.addAgreeVoter(testPeers[3]);
+    assertTrue(tally.isWithinMargin());
+
+    tally = new BlockTally(4);
+    tally.voteMargin = 0.75;
+    tally.addDisagreeVoter(testPeers[0]);
+    tally.addAgreeVoter(testPeers[1]);
+    tally.addAgreeVoter(testPeers[2]);
+    tally.addAgreeVoter(testPeers[3]);
+    assertTrue(tally.isWithinMargin());
+    
+    tally = new BlockTally(4);
+    tally.voteMargin = 0.75;
+    tally.addDisagreeVoter(testPeers[0]);
+    tally.addDisagreeVoter(testPeers[1]);
+    tally.addAgreeVoter(testPeers[2]);
+    tally.addAgreeVoter(testPeers[3]);
+    assertFalse(tally.isWithinMargin());
+    
+    tally = new BlockTally(4);
+    tally.voteMargin = 0.75;
+    tally.addDisagreeVoter(testPeers[0]);
+    tally.addDisagreeVoter(testPeers[1]);
+    tally.addDisagreeVoter(testPeers[2]);
+    tally.addAgreeVoter(testPeers[3]);
+    assertTrue(tally.isWithinMargin());
+
+    tally = new BlockTally(4);
+    tally.voteMargin = 0.75;
+    tally.addDisagreeVoter(testPeers[0]);
+    tally.addDisagreeVoter(testPeers[1]);
+    tally.addDisagreeVoter(testPeers[2]);
+    tally.addDisagreeVoter(testPeers[3]);
+    assertTrue(tally.isWithinMargin());
+    
+    tally = new BlockTally(4);
+    tally.voteMargin = 0.80;
+    tally.addAgreeVoter(testPeers[0]);
+    tally.addAgreeVoter(testPeers[1]);
+    tally.addAgreeVoter(testPeers[2]);
+    tally.addAgreeVoter(testPeers[3]);
+    assertTrue(tally.isWithinMargin());
+
+    tally = new BlockTally(4);
+    tally.voteMargin = 0.80;
+    tally.addDisagreeVoter(testPeers[0]);
+    tally.addAgreeVoter(testPeers[1]);
+    tally.addAgreeVoter(testPeers[2]);
+    tally.addAgreeVoter(testPeers[3]);
+    assertFalse(tally.isWithinMargin());
+    
+    tally = new BlockTally(4);
+    tally.voteMargin = 0.80;
+    tally.addDisagreeVoter(testPeers[0]);
+    tally.addDisagreeVoter(testPeers[1]);
+    tally.addAgreeVoter(testPeers[2]);
+    tally.addAgreeVoter(testPeers[3]);
+    assertFalse(tally.isWithinMargin());
+    
+    tally = new BlockTally(4);
+    tally.voteMargin = 0.80;
+    tally.addDisagreeVoter(testPeers[0]);
+    tally.addDisagreeVoter(testPeers[1]);
+    tally.addDisagreeVoter(testPeers[2]);
+    tally.addAgreeVoter(testPeers[3]);
+    assertFalse(tally.isWithinMargin());
+
+    tally = new BlockTally(4);
+    tally.voteMargin = 0.80;
+    tally.addDisagreeVoter(testPeers[0]);
+    tally.addDisagreeVoter(testPeers[1]);
+    tally.addDisagreeVoter(testPeers[2]);
+    tally.addDisagreeVoter(testPeers[3]);
+    assertTrue(tally.isWithinMargin());
+  }
+
+  public void testWonPoll() throws Exception {
+    BlockTally tally = new BlockTally(5);
+    tally.addDisagreeVoter(testPeers[0]);
+    tally.addAgreeVoter(testPeers[1]);
+    tally.addAgreeVoter(testPeers[2]);
+    tally.addAgreeVoter(testPeers[3]);
+    tally.addAgreeVoter(testPeers[4]);
+    tally.tallyVotes();
+    assertEquals(BlockTally.RESULT_WON, tally.getTallyResult());
+  }
+
+  public void testLostPoll() throws Exception {
+    BlockTally tally = new BlockTally(5);
+    tally.addAgreeVoter(testPeers[0]);
+    tally.addDisagreeVoter(testPeers[1]);
+    tally.addDisagreeVoter(testPeers[2]);
+    tally.addDisagreeVoter(testPeers[3]);
+    tally.addDisagreeVoter(testPeers[4]);
+    tally.tallyVotes();
+    assertEquals(BlockTally.RESULT_LOST, tally.getTallyResult());
+  }
+
+  public void testResultTooCloseUnder() throws Exception {
+    BlockTally tally = new BlockTally(5);
+    tally.addDisagreeVoter(testPeers[0]);
+    tally.addDisagreeVoter(testPeers[1]);
+    tally.addAgreeVoter(testPeers[2]);
+    tally.addAgreeVoter(testPeers[3]);
+    tally.addAgreeVoter(testPeers[4]);
+    tally.addAgreeVoter(testPeers[5]);
+    tally.tallyVotes();
+    assertEquals(BlockTally.RESULT_TOO_CLOSE, tally.getTallyResult());
+  }
+
+  public void testResultTooCloseOver() throws Exception {
+    BlockTally tally = new BlockTally(5);
+    tally.addAgreeVoter(testPeers[0]);
+    tally.addAgreeVoter(testPeers[1]);
+    tally.addDisagreeVoter(testPeers[2]);
+    tally.addDisagreeVoter(testPeers[3]);
+    tally.addDisagreeVoter(testPeers[4]);
+    tally.addDisagreeVoter(testPeers[5]);
+    tally.tallyVotes();
+    assertEquals(BlockTally.RESULT_TOO_CLOSE, tally.getTallyResult());
+  }
+
+  public void testResultTooCloseEqual() throws Exception {
+    BlockTally tally = new BlockTally(5);
+    tally.addAgreeVoter(testPeers[0]);
+    tally.addAgreeVoter(testPeers[1]);
+    tally.addAgreeVoter(testPeers[2]);
+    tally.addDisagreeVoter(testPeers[3]);
+    tally.addDisagreeVoter(testPeers[4]);
+    tally.addDisagreeVoter(testPeers[5]);
+    tally.tallyVotes();
+    assertEquals(BlockTally.RESULT_TOO_CLOSE, tally.getTallyResult());
+  }
+
+  public void testNoQuorum() throws Exception {
+    BlockTally tally = new BlockTally(5);
+    tally.addAgreeVoter(testPeers[0]);
+    tally.addAgreeVoter(testPeers[1]);
+    tally.addAgreeVoter(testPeers[2]);
+    tally.addAgreeVoter(testPeers[3]);
+    tally.tallyVotes();
+    assertEquals(BlockTally.RESULT_NOQUORUM, tally.getTallyResult());
   }
 
   // XXX: Tests for reputation system.
