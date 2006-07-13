@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.19 2006-04-07 21:44:26 thib_gc Exp $
+ * $Id: Configuration.java,v 1.20 2006-07-13 22:16:18 smorabito Exp $
  */
 
 /*
@@ -34,7 +34,7 @@ package org.lockss.config;
 
 import java.io.*;
 import java.util.*;
-import org.apache.commons.collections.*;
+import org.apache.commons.collections.map.*;
 
 import org.lockss.util.*;
 import org.lockss.plugin.base.*;
@@ -89,7 +89,7 @@ public abstract class Configuration {
   // when title subtree changes allows plugins to retrieve their entries
   // without excessive copying.
 
-  private MultiHashMap titleMap;
+  private MultiValueMap titleMap;
 
   /** Returns a list of configs for the plugin's title DB entries  */
   public Collection getTitleConfigs(String pluginName) {
@@ -97,19 +97,19 @@ public abstract class Configuration {
   }
 
   /** Returns the map of plugin -> list of title db configs */
-  MultiHashMap getAllTitleConfigs() {
+  MultiValueMap getAllTitleConfigs() {
     return titleMap;
   }
 
   /** Replace the map of plugin -> list of title db configs */
-  void setAllTitleConfigs(MultiHashMap map) {
+  void setAllTitleConfigs(MultiValueMap map) {
     titleMap = map;
   }
 
   /** Build map of plugin name -> list of title db config entries */
   void setTitleConfig(Configuration tc) {
     if (tc == null) return;
-    MultiHashMap titleMap = new MultiHashMap();
+    MultiValueMap titleMap = new MultiValueMap();
     for (Iterator iter = tc.nodeIterator(); iter.hasNext(); ) {
       String titleKey = (String)iter.next();
       Configuration titleConfig = tc.getConfigTree(titleKey);

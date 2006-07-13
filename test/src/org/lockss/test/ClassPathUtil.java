@@ -1,5 +1,5 @@
 /*
- * $Id: ClassPathUtil.java,v 1.2 2005-10-11 05:52:05 tlipkis Exp $
+ * $Id: ClassPathUtil.java,v 1.3 2006-07-13 22:16:18 smorabito Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.util.*;
 import java.util.jar.*;
 import java.util.zip.*;
 import org.apache.commons.collections.*;
+import org.apache.commons.collections.map.*;
 import org.lockss.util.*;
 
 /**
@@ -94,7 +95,7 @@ public class ClassPathUtil {
   // build map of resource name -> list of jars that contain it
   private static Map m_map;
   private static void buildMap() {
-    m_map = new MultiHashMap();
+    m_map = new MultiValueMap();
     for (Iterator iter = getClasspath().iterator(); iter.hasNext(); ) {
       String element = (String)iter.next();
       File file = new File(element);

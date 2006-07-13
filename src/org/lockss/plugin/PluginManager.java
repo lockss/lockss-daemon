@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.159 2006-05-27 06:36:04 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.160 2006-07-13 22:16:18 smorabito Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import java.util.*;
 import java.util.jar.*;
 
 import org.apache.commons.collections.*;
+import org.apache.commons.collections.map.*;
 
 import org.lockss.app.*;
 import org.lockss.config.*;
@@ -169,7 +170,7 @@ public class PluginManager
   private Set auSet = new TreeSet(auComparator);
   // maps host to collections of AUs.  Used to quickly locate candidate AUs
   // for incoming URLs
-  private MultiMap hostAus = new MultiHashMap();
+  private MultiMap hostAus = new MultiValueMap();
 
   private Set inactiveAuIds = Collections.synchronizedSet(new HashSet());
 
@@ -1355,7 +1356,7 @@ public class PluginManager
   }
 
   Map buildTitleMap() {
-    Map map = new MultiHashMap();
+    Map map = new MultiValueMap();
     synchronized (pluginMap) {
       for (Iterator iter = getRegisteredPlugins().iterator();
 	   iter.hasNext();) {

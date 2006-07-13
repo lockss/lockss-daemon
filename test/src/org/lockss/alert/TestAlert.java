@@ -1,5 +1,5 @@
 /*
- * $Id: TestAlert.java,v 1.3 2005-10-11 05:48:47 tlipkis Exp $
+ * $Id: TestAlert.java,v 1.4 2006-07-13 22:16:18 smorabito Exp $
  */
 
 /*
@@ -161,7 +161,7 @@ public class TestAlert extends LockssTestCase {
   }
 
   public void testGroupHash() {
-    Map map = new org.apache.commons.collections.MultiHashMap();
+    Map map = new org.apache.commons.collections.map.MultiValueMap();
     Alert a1 = new Alert("Name1")
       .setAttribute(Alert.ATTR_IS_CONTENT, true)
       .setAttribute(Alert.ATTR_AUID, "AUID 1")
