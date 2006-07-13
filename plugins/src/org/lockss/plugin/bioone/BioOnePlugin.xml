@@ -1,66 +1,75 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Elements>
-<MapElement>
-<ElementKey>plugin_config_props</ElementKey>
-<ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-<ConfigParamDescr>
-<Key>base_url</Key>
-<DisplayName>Base URL</DisplayName>
-<Description>Usually of the form http://&lt;journal-name&gt;.com/</Description>
-<Type>3</Type>
-<Size>40</Size>
-<Definitional>true</Definitional>
-</ConfigParamDescr>
-<ConfigParamDescr>
-<Key>journal_id</Key>
-<DisplayName>Journal Identifier</DisplayName>
-<Description>Identifier for journal (often used as part of file names)</Description>
-<Type>1</Type>
-<Size>40</Size>
-<Definitional>true</Definitional>
-</ConfigParamDescr>
-<ConfigParamDescr>
-<Key>volume</Key>
-<DisplayName>Volume No.</DisplayName>
-<Type>6</Type>
-<Size>8</Size>
-<Definitional>true</Definitional>
-</ConfigParamDescr>
-</ElementValue>
-</MapElement>
-<MapElement>
-<ElementKey>text/html_filter</ElementKey>
-<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">org.lockss.plugin.bioone.BioOneFilterRule</ElementValue>
-</MapElement>
-<MapElement>
-<ElementKey>plugin_version</ElementKey>
-<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">3</ElementValue>
-</MapElement>
-<MapElement>
-<ElementKey>au_crawlrules</ElementKey>
-<ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-<string xsi:type="java:java.lang.String">4,"^%s", base_url</string>
-<string xsi:type="java:java.lang.String">1,"%sperlserv/\?request=archive-lockss&amp;issn=%s&amp;volume=%.03d", base_url, journal_id, volume</string>
-<string xsi:type="java:java.lang.String">1,"%sbioone/\?request=get-toc&amp;issn=%s&amp;volume=%d.*", base_url, journal_id, volume</string>
-<string xsi:type="java:java.lang.String">1,"%sbioone/\?request=(get-abstract|get-document)&amp;issn=%s&amp;volume=%.03d.*", base_url, journal_id, volume</string>
-<string xsi:type="java:java.lang.String">1,"%simages/.*", base_url</string>
-<string xsi:type="java:java.lang.String">1,"%spdfserv/i%s-%.03d-[0-9]+-[0-9]+\.pdf", base_url, journal_id, volume</string>
-</ElementValue>
-</MapElement>
-<MapElement>
-<ElementKey>au_start_url</ElementKey>
-<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"%sperlserv/?request=archive-lockss&amp;issn=%s&amp;volume=%.03d", base_url, journal_id, volume</ElementValue>
-</MapElement>
-<MapElement>
-<ElementKey>plugin_name</ElementKey>
-<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">BioOne</ElementValue>
-</MapElement>
-<MapElement>
-<ElementKey>au_name</ElementKey>
-<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"BioOne %s Volume %d", journal_id, volume</ElementValue>
-</MapElement>
-<MapElement>
-<ElementKey>plugin_identifier</ElementKey>
-<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">org.lockss.plugin.bioone.BioOnePlugin</ElementValue>
-</MapElement>
-</Elements>
+<map>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.bioone.BioOnePlugin</string>
+  </entry>
+  <entry>
+    <string>text/html_filter</string>
+    <string>org.lockss.plugin.bioone.BioOneFilterRule</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>4</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;BioOne %s Volume %d&quot;, journal_id, volume</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>BioOne</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;%sperlserv/\?request=archive-lockss&amp;issn=%s&amp;volume=%.03d&quot;, base_url, journal_id, volume</string>
+      <string>1,&quot;%sperlserv/\?request=get-toc&amp;issn=%s&amp;volume=%d.*&quot;, base_url, journal_id, volume</string>
+      <string>1,&quot;%sperlserv/\?request=(get-abstract|get-pdf|get-document)&amp;doi=[0-9]+\.[0-9]+%%2F%s%%28[0-9]+%%29%.03d&quot;, base_url, journal_id, volume</string>
+      <string>1,&quot;%sbioone/\?request=get-toc&amp;issn=%s&amp;volume=%d.*&quot;, base_url, journal_id, volume</string>
+      <string>1,&quot;%sbioone/\?request=(get-abstract|get-document)&amp;issn=%s&amp;volume=%.03d.*&quot;, base_url, journal_id, volume</string>
+      <string>1,&quot;%simages/.*&quot;, base_url</string>
+      <string>1,&quot;%spdfserv/i%s-%.03d-[0-9]+-[0-9]+\.pdf&quot;, base_url, journal_id, volume</string>
+      <string>1,&quot;%s(css|js)/.*&quot;, base_url</string>
+      <string>1,&quot;%sarchive/%s/cover/.*&quot;, base_url, journal_id</string>
+      <string>1,&quot;%sperlserv/\?request=display-figures&amp;name=i%s-%d.*&quot;, base_url, journal_id, volume</string>
+      <string>1,&quot;%sarchive/%s/%d/.*&quot;, base_url, journal_id, volume</string>
+      <string>1,&quot;%sperlserv/\?request=get-moreinfo&amp;issn=%s&quot;, base_url, journal_id</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%sperlserv/?request=archive-lockss&amp;issn=%s&amp;volume=%.03d&quot;, base_url, journal_id, volume</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_id</key>
+        <displayName>Journal Identifier</displayName>
+        <description>Identifier for journal (often used as part of file names)</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume</key>
+        <displayName>Volume No.</displayName>
+        <type>6</type>
+        <size>8</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+</map>
