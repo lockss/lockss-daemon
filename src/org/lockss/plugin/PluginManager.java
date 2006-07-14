@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.160 2006-07-13 22:16:18 smorabito Exp $
+ * $Id: PluginManager.java,v 1.161 2006-07-14 04:33:10 smorabito Exp $
  */
 
 /*
@@ -278,7 +278,13 @@ public class PluginManager
 
     // If the keystore or password has changed, update.
     if (changedKeys.contains(KEYSTORE_PREFIX)) {
-      initKeystore();
+      String keystoreLoc =
+        config.get(PARAM_KEYSTORE_LOCATION,
+                   DEFAULT_KEYSTORE_LOCATION);
+      String keystorePass =
+        config.get(PARAM_KEYSTORE_PASSWORD,
+                   DEFAULT_KEYSTORE_PASSWORD);
+      keystore = initKeystore(keystoreLoc, keystorePass);
     }
 
     // Process any changed TitleSets
@@ -1405,7 +1411,16 @@ public class PluginManager
   void initLoadablePluginRegistries(List urls) {
     // Load the keystore if necessary
     if (!isKeystoreInited()) {
-      initKeystore();
+      String keystoreLoc =
+        CurrentConfig.getParam(PARAM_KEYSTORE_LOCATION,
+                               DEFAULT_KEYSTORE_LOCATION);
+      String keystorePass =
+        CurrentConfig.getParam(PARAM_KEYSTORE_PASSWORD,
+                               DEFAULT_KEYSTORE_PASSWORD);
+      keystore = initKeystore(keystoreLoc, keystorePass);
+      if (keystore != null) {
+        keystoreInited = true;
+      }
     }
 
     if (urls.isEmpty()) {
@@ -1604,41 +1619,38 @@ public class PluginManager
    */
 
   /**
-   * Initialize the keystore.
+   * Initialize and return the keystore.
    */
-  private void initKeystore() {
+  KeyStore initKeystore(String keystoreLoc, String keystorePass) {
     Configuration config = CurrentConfig.getCurrentConfig();
-
+    KeyStore ks = null;
     try {
-      String keystoreLoc =
-	config.get(PARAM_KEYSTORE_LOCATION,
-		   DEFAULT_KEYSTORE_LOCATION);
-      String keystorePass =
-	config.get(PARAM_KEYSTORE_PASSWORD,
-		   DEFAULT_KEYSTORE_PASSWORD);
       if (keystoreLoc == null || keystorePass == null) {
 	log.error("Unable to load keystore!  Loadable plugins will " +
 		  "not be available.");
       } else {
-	keystore = KeyStore.getInstance("JKS", "SUN");
+        ks = KeyStore.getInstance("JKS", "SUN");
 	if (keystoreLoc.startsWith(File.separator)) {
-	  keystore.load(new FileInputStream(new File(keystoreLoc)),
-			keystorePass.toCharArray());
-	} else {
-	  keystore.load(getClass().getClassLoader().getResourceAsStream(keystoreLoc),
-			keystorePass.toCharArray());
+	  ks.load(new FileInputStream(new File(keystoreLoc)),
+	          keystorePass.toCharArray());
+	} else if (UrlUtil.isHttpUrl(keystoreLoc) ||
+                   UrlUtil.isFileUrl(keystoreLoc)) {
+	  URL keystoreUrl = new URL(keystoreLoc);
+          ks.load(keystoreUrl.openStream(), keystorePass.toCharArray());
+        } else {
+	  ks.load(getClass().getClassLoader().getResourceAsStream(keystoreLoc),
+	          keystorePass.toCharArray());
 	}
       }
 
     } catch (Exception ex) {
       // ensure the keystore is null.
-      keystore = null;
       log.error("Unable to load keystore", ex);
-      return;
+      return null;
     }
 
     log.debug("Keystore successfully initialized.");
-    keystoreInited = true;
+    return ks;
   }
 
   private boolean isKeystoreInited() {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.70 2006-05-22 23:24:14 tlipkis Exp $
+ * $Id: TestPluginManager.java,v 1.71 2006-07-14 04:33:10 smorabito Exp $
  */
 
 /*
@@ -911,7 +911,68 @@ public class TestPluginManager extends LockssTestCase {
 	    getResourceAsStream(name), pass.toCharArray());
     return ks;
   }
+  
+  private File copyKeystoreFileToKnownLocation(String source) throws Exception {
+    File keystoreFile = new File(tempDirPath, "copied.keystore");
+    InputStream in = ClassLoader.getSystemClassLoader().
+                     getResourceAsStream(source);
+    StreamUtil.copy(in, new FileOutputStream(keystoreFile)); 
+    return keystoreFile;
+  }
+  
+  public void testInitKeystoreAsFile() throws Exception {
+    minimalConfig();
+    File keystoreFile =
+      copyKeystoreFileToKnownLocation("org/lockss/test/public.keystore");
+    KeyStore ks = mgr.initKeystore(keystoreFile.getAbsolutePath(),
+                                   "f00bar");
+    assertNotNull(ks);
+    assertTrue(ks.containsAlias("goodguy"));
+  }
+  
+  public void testInitKeystoreAsFileBadPasswordFails() throws Exception {
+    minimalConfig();
+    File keystoreFile =
+      copyKeystoreFileToKnownLocation("org/lockss/test/public.keystore");
+    KeyStore ks = mgr.initKeystore(keystoreFile.getAbsolutePath(),
+                                   "f00barrrr"); // bad password
+    assertNull(ks);
+  }
+  
+  public void testInitKeystoreAsResource() throws Exception {
+    minimalConfig();
+    KeyStore ks = mgr.initKeystore("org/lockss/test/public.keystore",
+                                   "f00bar");
+    assertNotNull(ks);
+    assertTrue(ks.containsAlias("goodguy"));
+  }
+  
+  public void testInitKeystoreAsResourceBadPasswordFails() throws Exception {
+    minimalConfig();
+    KeyStore ks = mgr.initKeystore("org/lockss/test/public.keystore",
+                                   "f00barrrrr");
+    assertNull(ks);
+  }
+  
+  public void testInitKeystoreAsURL() throws Exception {
+    minimalConfig();
+    File keystoreFile =
+      copyKeystoreFileToKnownLocation("org/lockss/test/public.keystore");
+    String keystoreUrl = "file://" + keystoreFile.getAbsolutePath();
+    KeyStore ks = mgr.initKeystore(keystoreUrl, "f00bar");
+    assertNotNull(ks);
+    assertTrue(ks.containsAlias("goodguy"));
+  }
 
+  public void testInitKeystoreAsURLBadPasswordFails() throws Exception {
+    minimalConfig();
+    File keystoreFile =
+      copyKeystoreFileToKnownLocation("org/lockss/test/public.keystore");
+    String keystoreUrl = "file://" + keystoreFile.getAbsolutePath();
+    KeyStore ks = mgr.initKeystore(keystoreUrl, "f00barrrrr");
+    assertNull(ks);
+  }
+  
   public void testEmptyInitialRegistryCallback() throws Exception {
     BinarySemaphore bs = new BinarySemaphore();
     PluginManager.InitialRegistryCallback cb =
