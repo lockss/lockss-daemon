@@ -1,8 +1,8 @@
 /*
- * $Id: ResourceManager.java,v 1.7 2005-10-11 05:44:15 tlipkis Exp $
+ * $Id: ResourceManager.java,v 1.8 2006-07-14 17:40:35 thib_gc Exp $
  *
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,8 +35,7 @@ import java.util.*;
 import org.lockss.app.BaseLockssManager;
 import org.lockss.app.LockssApp;
 import org.lockss.app.LockssAppException;
-import org.lockss.util.Logger;
-import org.lockss.util.PlatformInfo;
+import org.lockss.util.*;
 
 /**
  * <p>Arbitrates ownership of resources such as TCP listen ports and
@@ -184,48 +183,79 @@ public class ResourceManager extends BaseLockssManager  {
     return release(UDP_PREFIX + port, token);
   }
 
-  /** Return list of unfiltered tcp ports not already assigned to another
-   * server */
-  public List getUsableTcpPorts(Object serverToken) {
-    List unfilteredPorts = PlatformInfo.getInstance().getUnfilteredTcpPorts();
-    if (unfilteredPorts == null || unfilteredPorts.isEmpty()) {
+  protected interface PortAvailable {
+    boolean isAvailable(int port, Object token);
+  }
+
+  protected List parseUsablePortList(List portList,
+                                     Object serverToken,
+                                     PortAvailable portAvailable) {
+    if (portList == null || portList.isEmpty()) {
       return null;
     }
+
     List res = new ArrayList();
-    for (Iterator iter = unfilteredPorts.iterator(); iter.hasNext(); ) {
+    for (Iterator iter = portList.iterator() ; iter.hasNext() ; ) {
       String str = (String)iter.next();
       try {
+        // Try a single port
         int port = Integer.parseInt(str);
-        if (isTcpPortAvailable(port, serverToken)){
+        if (portAvailable.isAvailable(port, serverToken)) {
           res.add(str);
         }
-      } catch (NumberFormatException e) {
-        // allow port number ranges, not checked for availability
-        res.add(str);
+      } catch (NumberFormatException exc1) {
+        try {
+          // Try a port range
+          Vector parts = StringUtil.breakAt(str, '-', 2);
+          if (parts.size() != 2) {
+            throw new NumberFormatException("Not a valid range: " + str);
+          }
+          int lo = Integer.parseInt((String)parts.get(0));
+          int hi = Integer.parseInt((String)parts.get(1));
+          ArrayList scratch = new ArrayList();
+          for (int ix = lo ; ix <= hi ; ++ix) {
+            if (portAvailable.isAvailable(ix, serverToken)) {
+              scratch.add(Integer.toString(ix));
+            }
+          }
+          if (scratch.size() == hi - lo + 1) {
+            // Whole range available
+            res.add(str);
+          }
+          else {
+            // Some not available in range
+            res.addAll(scratch);
+          }
+        }
+        catch (NumberFormatException exc2) {
+          // Neither a single port nor a port range
+          res.add("(" + str + ")");
+        }
       }
     }
     return res;
   }
 
+  /** Return list of unfiltered tcp ports not already assigned to another
+   * server */
+  public List getUsableTcpPorts(Object serverToken) {
+    List unfilteredPorts = PlatformInfo.getInstance().getUnfilteredTcpPorts();
+    PortAvailable udpAvailable = new PortAvailable() {
+      public boolean isAvailable(int port, Object token) {
+        return isTcpPortAvailable(port, token);
+      }
+    };
+    return parseUsablePortList(unfilteredPorts, serverToken, udpAvailable);
+  }
+
   public List getUsableUdpPorts(Object serverToken) {
     List unfilteredPorts = PlatformInfo.getInstance().getUnfilteredUdpPorts();
-    if (unfilteredPorts == null || unfilteredPorts.isEmpty()) {
-      return null;
-    }
-    List res = new ArrayList();
-    for (Iterator iter = unfilteredPorts.iterator(); iter.hasNext(); ) {
-      String str = (String)iter.next();
-      try {
-        int port = Integer.parseInt(str);
-        if (isUdpPortAvailable(port, serverToken)){
-          res.add(str);
-        }
-      } catch (NumberFormatException e) {
-        // allow port number ranges, not checked for availability
-        res.add(str);
+    PortAvailable udpAvailable = new PortAvailable() {
+      public boolean isAvailable(int port, Object token) {
+        return isUdpPortAvailable(port, token);
       }
-    }
-    return res;
+    };
+    return parseUsablePortList(unfilteredPorts, serverToken, udpAvailable);
   }
 
   /**

@@ -1,10 +1,10 @@
 /*
- * $Id: TestResourceManager.java,v 1.5 2005-10-13 22:43:49 troberts Exp $
+ * $Id: TestResourceManager.java,v 1.6 2006-07-14 17:40:35 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -134,9 +134,12 @@ public class TestResourceManager extends LockssTestCase {
     assertTrue(rmgr.reserveTcpPort(1235, "another service"));
     assertEquals(ListUtil.list("9900", "1234"), rmgr.getUsableTcpPorts(srvr));
     ConfigurationUtil.setFromArgs(PlatformInfo.PARAM_UNFILTERED_TCP_PORTS,
-				  "9900;1234;1235;333-444");
-    assertEquals(ListUtil.list("9900", "1234", "333-444"),
+				  "9900;1234;1235;333-335");
+    assertEquals(ListUtil.list("9900", "1234", "333-335"),
 		 rmgr.getUsableTcpPorts(srvr));
+    assertTrue(rmgr.reserveTcpPort(334, "not server"));
+    assertEquals(ListUtil.list("9900", "1234", "333", "335"),
+                 rmgr.getUsableTcpPorts(srvr));
   }
 
   public void testGetUsableUdpPorts() {
@@ -152,8 +155,11 @@ public class TestResourceManager extends LockssTestCase {
     assertTrue(rmgr.reserveUdpPort(1235, "another service"));
     assertEquals(ListUtil.list("9900", "1234"), rmgr.getUsableUdpPorts(srvr));
     ConfigurationUtil.setFromArgs(PlatformInfo.PARAM_UNFILTERED_UDP_PORTS,
-                                  "9900;1234;1235;333-444");
-    assertEquals(ListUtil.list("9900", "1234", "333-444"),
+                                  "9900;1234;1235;333-335");
+    assertEquals(ListUtil.list("9900", "1234", "333-335"),
+                 rmgr.getUsableUdpPorts(srvr));
+    assertTrue(rmgr.reserveUdpPort(334, "not server"));
+    assertEquals(ListUtil.list("9900", "1234", "333", "335"),
                  rmgr.getUsableUdpPorts(srvr));
   }
 
