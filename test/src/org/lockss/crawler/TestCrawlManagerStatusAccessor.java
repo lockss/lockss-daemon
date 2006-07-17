@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerStatusAccessor.java,v 1.2 2006-07-10 18:01:53 troberts Exp $
+ * $Id: TestCrawlManagerStatusAccessor.java,v 1.3 2006-07-17 05:05:43 tlipkis Exp $
  */
 
 /*
@@ -48,6 +48,7 @@ public class TestCrawlManagerStatusAccessor extends LockssTestCase {
   private static final String CRAWL_TYPE = "crawl_type";
   private static final String START_TIME_COL_NAME = "start";
   private static final String END_TIME_COL_NAME = "end";
+  private static final String DURATION_COL_NAME = "dur";
   private static final String CONTENT_BYTES_FETCHED = "content_bytes_fetched";
   private static final String NUM_URLS_PARSED = "num_urls_parsed";
   private static final String NUM_URLS_FETCHED = "num_urls_fetched";
@@ -72,8 +73,10 @@ public class TestCrawlManagerStatusAccessor extends LockssTestCase {
 			   ColumnDescriptor.TYPE_STRING),
       new ColumnDescriptor(START_TIME_COL_NAME, "Start Time",
 			   ColumnDescriptor.TYPE_DATE),
-      new ColumnDescriptor(END_TIME_COL_NAME, "End Time",
-			   ColumnDescriptor.TYPE_DATE),
+//       new ColumnDescriptor(END_TIME_COL_NAME, "End Time",
+// 			   ColumnDescriptor.TYPE_DATE),
+      new ColumnDescriptor(DURATION_COL_NAME, "Duration",
+			   ColumnDescriptor.TYPE_TIME_INTERVAL),
       new ColumnDescriptor(CRAWL_STATUS, "Status",
 			   ColumnDescriptor.TYPE_STRING),
       new ColumnDescriptor(CONTENT_BYTES_FETCHED, "Bytes Fetched",
@@ -197,7 +200,8 @@ public class TestCrawlManagerStatusAccessor extends LockssTestCase {
 
     Map map = (Map)rows.get(0);
     assertEquals(new Long(1), map.get(START_TIME_COL_NAME));
-    assertEquals(new Long(2), map.get(END_TIME_COL_NAME));
+//     assertEquals(new Long(2), map.get(END_TIME_COL_NAME));
+    assertEquals(new Long(1), map.get(DURATION_COL_NAME));
 
     StatusTable.Reference ref  =
       (StatusTable.Reference)map.get(NUM_URLS_FETCHED);
@@ -241,7 +245,8 @@ public class TestCrawlManagerStatusAccessor extends LockssTestCase {
 
     Map map = (Map)rows.get(1);
     assertEquals(new Long(1), map.get(START_TIME_COL_NAME));
-    assertEquals(new Long(2), map.get(END_TIME_COL_NAME));
+//     assertEquals(new Long(2), map.get(END_TIME_COL_NAME));
+    assertEquals(new Long(1), map.get(DURATION_COL_NAME));
 
     StatusTable.Reference ref  =
       (StatusTable.Reference)map.get(NUM_URLS_FETCHED);
@@ -273,7 +278,8 @@ public class TestCrawlManagerStatusAccessor extends LockssTestCase {
 
     map = (Map)rows.get(0);
     assertEquals(new Long(7), map.get(START_TIME_COL_NAME));
-    assertEquals(new Long(8), map.get(END_TIME_COL_NAME));
+//     assertEquals(new Long(8), map.get(END_TIME_COL_NAME));
+    assertEquals(new Long(1), map.get(DURATION_COL_NAME));
 
     ref = (StatusTable.Reference)map.get(NUM_URLS_FETCHED);
     assertEquals(new Long(9), ref.getValue());
@@ -352,15 +358,18 @@ public class TestCrawlManagerStatusAccessor extends LockssTestCase {
 
     Map map = (Map)rows.get(0);
     assertEquals(new Long(2), map.get(START_TIME_COL_NAME));
-    assertEquals(new Long(4), map.get(END_TIME_COL_NAME));
+//     assertEquals(new Long(4), map.get(END_TIME_COL_NAME));
+    assertEquals(new Long(2), map.get(DURATION_COL_NAME));
 
     map = (Map)rows.get(1);
     assertEquals(new Long(2), map.get(START_TIME_COL_NAME));
-    assertEquals(new Long(2), map.get(END_TIME_COL_NAME));
+//     assertEquals(new Long(2), map.get(END_TIME_COL_NAME));
+    assertEquals(new Long(0), map.get(DURATION_COL_NAME));
 
     map = (Map)rows.get(2);
     assertEquals(new Long(1), map.get(START_TIME_COL_NAME));
-    assertEquals(new Long(2), map.get(END_TIME_COL_NAME));
+//     assertEquals(new Long(2), map.get(END_TIME_COL_NAME));
+    assertEquals(new Long(1), map.get(DURATION_COL_NAME));
   }
 
 
