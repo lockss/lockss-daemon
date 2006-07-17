@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArchivalUnit.java,v 1.30 2006-04-05 22:54:10 tlipkis Exp $
+ * $Id: TestBaseArchivalUnit.java,v 1.31 2006-07-17 05:12:41 tlipkis Exp $
  */
 
 /*
@@ -38,7 +38,7 @@ import org.lockss.daemon.*;
 import org.lockss.test.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
-import org.lockss.config.Configuration;
+import org.lockss.config.*;
 import org.lockss.crawler.*;
 import org.lockss.plugin.ArchivalUnit.*;
 import java.net.*;
@@ -48,7 +48,7 @@ import org.lockss.plugin.base.BaseArchivalUnit.*;
 public class TestBaseArchivalUnit extends LockssTestCase {
   private MyMockBaseArchivalUnit mbau;
   private MyMockPlugin mplug;
-  private String baseUrl = "http://www.example.com";
+  private String baseUrl = "http://www.example.com/foo/";
   private String startUrl = baseUrl + "/index.html";
   private String auName = "MockBaseArchivalUnit";
   private CrawlRule crawlRule = null;
@@ -71,7 +71,6 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     CrawlRule rule = new CrawlRules.FirstMatch(rules);
     mplug = new MyMockPlugin();
     mbau =  new MyMockBaseArchivalUnit(mplug, auName, rule, startUrl);
-
   }
 
   public void tearDown() throws Exception {
@@ -80,28 +79,119 @@ public class TestBaseArchivalUnit extends LockssTestCase {
   }
 
 
-  public void testConfiguration() throws ConfigurationException {
+  public void testIllConst() {
+    try {
+      new MyMockBaseArchivalUnit(new MyNullPlugin());
+      fail("new BaseArchivalUnit(non-BasePlugin) should throw");
+    } catch (IllegalArgumentException ex) {
+    }
+  }  
+
+  public void testSetConfiguration() throws ConfigurationException {
     // unconfigured  - return null
-    Configuration expectedReturn = null;
-    Configuration actualReturn = mbau.getConfiguration();
-    assertEquals("return value", expectedReturn, actualReturn);
+    assertEquals(null, mbau.getConfiguration());
 
     // null configuration throws when set
     try {
       mbau.setConfiguration(null);
-      assertTrue("null value should throw", true);    }
-    catch (ConfigurationException ex) {
-    }
+      fail("null value should throw");
+    } catch (ConfigurationException ex) {}
 
     // cofiguration return by getConfiguration same as one previously set
     Properties props = new Properties();
     props.setProperty(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
     props.setProperty(ConfigParamDescr.VOLUME_NUMBER.getKey(), "10");
-    expectedReturn = ConfigurationUtil.fromProps(props);
-    mbau.setConfiguration(expectedReturn);
-    actualReturn = mbau.getConfiguration();
-    assertEquals("return value", expectedReturn, actualReturn);
+    Configuration exp = ConfigurationUtil.fromProps(props);
+    mbau.setConfiguration(exp);
+    assertEquals(exp, mbau.getConfiguration());
+    BaseArchivalUnit.ParamHandlerMap paramMap = mbau.getParamMap();
+    assertEquals(baseUrl,
+		 paramMap.getUrl(BaseArchivalUnit.AU_BASE_URL).toString());
+    assertEquals("www.example.com",
+		 paramMap.getString(ConfigParamDescr.BASE_URL.getKey() +
+				    BaseArchivalUnit.AU_HOST_SUFFIX));
+    assertEquals("/foo/",
+		 paramMap.getString(ConfigParamDescr.BASE_URL.getKey() +
+				    BaseArchivalUnit.AU_PATH_SUFFIX));
+  }
 
+  public void testSetConfigurationShortYear(int year, int exp)
+      throws ConfigurationException {
+    mplug.setAuConfigDescrs(ListUtil.list(ConfigParamDescr.BASE_URL,
+					  ConfigParamDescr.YEAR));
+    Properties props = new Properties();
+    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
+    props.setProperty(ConfigParamDescr.YEAR.getKey(), Integer.toString(year));
+    Configuration config = ConfigurationUtil.fromProps(props);
+    mbau = new MyMockBaseArchivalUnit(mplug);
+    mbau.setConfiguration(config);
+    BaseArchivalUnit.ParamHandlerMap paramMap = mbau.getParamMap();
+    assertEquals(baseUrl,
+		 paramMap.getUrl(BaseArchivalUnit.AU_BASE_URL).toString());
+    assertEquals("www.example.com",
+		 paramMap.getString(ConfigParamDescr.BASE_URL.getKey() +
+				    BaseArchivalUnit.AU_HOST_SUFFIX));
+    assertEquals(year,
+		 paramMap.getInt(ConfigParamDescr.YEAR.getKey()));
+    assertEquals(exp,
+		 paramMap.getInt(BaseArchivalUnit.AU_SHORT_YEAR_PREFIX +
+				    ConfigParamDescr.YEAR.getKey()));
+  }
+
+  public void testSetConfigurationShortYear() throws ConfigurationException {
+    testSetConfigurationShortYear(1984, 84);
+    testSetConfigurationShortYear(1999, 99);
+    testSetConfigurationShortYear(2000, 0);
+    testSetConfigurationShortYear(2003, 3);
+    testSetConfigurationShortYear(2012, 12);
+    testSetConfigurationShortYear(2212, 12);
+  }
+
+  public void testIncompleteConfiguration() throws ConfigurationException {
+    Configuration config = ConfigManager.EMPTY_CONFIGURATION;
+    try {
+      mbau.setConfiguration(config);
+      fail("Empty config should throw");
+    } catch (ConfigurationException ex) {}
+    try {
+      config =
+	ConfigurationUtil.fromArgs(ConfigParamDescr.BASE_URL.getKey(),
+				   baseUrl);
+      mbau.setConfiguration(config);
+      fail("Missing required param (volume) should throw");
+    } catch (ConfigurationException ex) {}
+    try {
+      config =
+	ConfigurationUtil.fromArgs(ConfigParamDescr.VOLUME_NUMBER.getKey(),
+				   "32");
+      mbau.setConfiguration(config);
+      fail("Missing required param (base_url) should throw");
+    } catch (ConfigurationException ex) {}
+  }
+
+  public void testIllConfigChange() throws ConfigurationException {
+    Properties props = new Properties();
+    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
+    props.setProperty(ConfigParamDescr.VOLUME_NUMBER.getKey(), "10");
+    Configuration exp = ConfigurationUtil.fromProps(props);
+    mbau.setConfiguration(exp);
+    assertEquals(exp, mbau.getConfiguration());
+
+    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), "not" + baseUrl);
+    try {
+      mbau.setConfiguration(ConfigurationUtil.fromProps(props));
+      fail("Changing definitional param (base_url) should throw");
+    } catch (ConfigurationException ex) {}
+    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
+    mbau.setConfiguration(exp);
+    props.setProperty(ConfigParamDescr.VOLUME_NUMBER.getKey(), "11");
+    try {
+      mbau.setConfiguration(ConfigurationUtil.fromProps(props));
+      fail("Changing definitional param (volume) should throw");
+    } catch (ConfigurationException ex) {}
+    props.setProperty(ConfigParamDescr.VOLUME_NUMBER.getKey(), "10");
+    props.setProperty(ConfigParamDescr.PUBLISHER_NAME.getKey(), "PubCo");
+    mbau.setConfiguration(exp);
   }
 
   public void testLoadConfigInt() {
@@ -168,7 +258,7 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     Configuration config = ConfigurationUtil.fromProps(props);
     mbau.setConfiguration(config);
     String expectedReturn =
-        "org|lockss|plugin|base|TestBaseArchivalUnit$MyMockPlugin&base_url~http%3A%2F%2Fwww%2Eexample%2Ecom&volume~10";
+        "org|lockss|plugin|base|TestBaseArchivalUnit$MyMockPlugin&base_url~http%3A%2F%2Fwww%2Eexample%2Ecom%2Ffoo%2F&volume~10";
     String actualReturn = mbau.getAuId();
     assertEquals("return value", expectedReturn, actualReturn);
   }
@@ -176,8 +266,131 @@ public class TestBaseArchivalUnit extends LockssTestCase {
   public void testGetFetchDelay() {
     long expectedReturn =
         BaseArchivalUnit.DEFAULT_FETCH_DELAY;
-    long actualReturn = mbau.getFetchDelay();
+    long actualReturn = mbau.findFetchRateLimiter().getInterval();
     assertEquals("return value", expectedReturn, actualReturn);
+  }
+
+  public void testFindFetchRateLimiterDefault() throws Exception {
+    RateLimiter limit = mbau.findFetchRateLimiter();
+    assertEquals("1/6000ms", limit.getRate());
+    assertSame(limit, mbau.findFetchRateLimiter());
+  }
+
+  public void testFindFetchRateLimiterAu() throws Exception {
+    Properties props = new Properties();
+    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
+    props.setProperty(ConfigParamDescr.VOLUME_NUMBER.getKey(), "10");
+    Configuration config = ConfigurationUtil.fromProps(props);
+
+    mbau.getParamMap().putString(BaseArchivalUnit.AU_FETCH_RATE_LIMITER_SOURCE,
+				 "au");
+    mbau.setConfiguration(config);
+    RateLimiter limit = mbau.findFetchRateLimiter();
+    assertEquals("1/6000ms", limit.getRate());
+    assertSame(limit, mbau.findFetchRateLimiter());
+    config.put(BaseArchivalUnit.PAUSE_TIME_KEY, "7s");
+    mbau.setConfiguration(config);
+    assertEquals("1/7000ms", limit.getRate());
+    assertSame(limit, mbau.findFetchRateLimiter());
+  }
+
+  public void testFindFetchRateLimiterPlugin() throws Exception {
+    MyMockBaseArchivalUnit mbau2 = new MyMockBaseArchivalUnit(mplug);
+    MyMockBaseArchivalUnit mbau3 =
+      new MyMockBaseArchivalUnit(new MyMockPlugin());
+
+    mbau.getParamMap().putString(BaseArchivalUnit.AU_FETCH_RATE_LIMITER_SOURCE,
+				 "plugin");
+    mbau2.getParamMap().putString(BaseArchivalUnit.AU_FETCH_RATE_LIMITER_SOURCE,
+				  "plugin");
+    mbau3.getParamMap().putString(BaseArchivalUnit.AU_FETCH_RATE_LIMITER_SOURCE,
+				  "plugin");
+    RateLimiter limit = mbau.findFetchRateLimiter();
+    RateLimiter limit2 = mbau2.findFetchRateLimiter();
+    RateLimiter limit3 = mbau3.findFetchRateLimiter();
+    assertEquals("1/6000ms", limit.getRate());
+    assertSame(limit, limit2);
+    assertNotSame(limit, limit3);
+  }
+
+  public void testFindFetchRateLimiterHost() throws Exception {
+    MyMockBaseArchivalUnit mbau2 = new MyMockBaseArchivalUnit(mplug);
+    MyMockBaseArchivalUnit mbau3 =
+      new MyMockBaseArchivalUnit(new MyMockPlugin());
+    mbau.getParamMap().putString(BaseArchivalUnit.AU_FETCH_RATE_LIMITER_SOURCE,
+				 "host:base_url");
+    mbau2.getParamMap().putString(BaseArchivalUnit.AU_FETCH_RATE_LIMITER_SOURCE,
+				  "host:base_url");
+    mbau3.getParamMap().putString(BaseArchivalUnit.AU_FETCH_RATE_LIMITER_SOURCE,
+				  "host:base_url");
+    Properties props = new Properties();
+    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
+    props.setProperty(ConfigParamDescr.VOLUME_NUMBER.getKey(), "10");
+    mbau.setConfiguration(ConfigurationUtil.fromProps(props));
+    props.setProperty(ConfigParamDescr.VOLUME_NUMBER.getKey(), "12");
+    mbau2.setConfiguration(ConfigurationUtil.fromProps(props));
+    props.setProperty(ConfigParamDescr.BASE_URL.getKey(),
+		      "http://examplenot.com/bar");
+    mbau3.setConfiguration(ConfigurationUtil.fromProps(props));
+
+    RateLimiter limit = mbau.findFetchRateLimiter();
+    RateLimiter limit2 = mbau2.findFetchRateLimiter();
+    RateLimiter limit3 = mbau3.findFetchRateLimiter();
+    assertEquals("1/6000ms", limit.getRate());
+    assertSame(limit, limit2);
+    assertNotSame(limit, limit3);
+    RateLimiter.Pool pool = RateLimiter.getPool();
+    assertSame(pool.findNamedRateLimiter("host:www.example.com", 1, 1),
+	       limit);
+    assertSame(pool.findNamedRateLimiter("host:examplenot.com", 1, 1),
+	       limit3);
+  }
+
+  public void testFindFetchRateLimiterTitleAttr() throws Exception {
+    String src = BaseArchivalUnit.AU_FETCH_RATE_LIMITER_SOURCE;
+    MyMockBaseArchivalUnit mbau2 = new MyMockBaseArchivalUnit(mplug);
+    MyMockBaseArchivalUnit mbau3 = new MyMockBaseArchivalUnit(mplug);
+    MyMockBaseArchivalUnit mbau4 = new MyMockBaseArchivalUnit(mplug);
+    mbau.getParamMap().putString(src, "title_attribute:server");
+    mbau2.getParamMap().putString(src, "title_attribute:server");
+    mbau3.getParamMap().putString(src, "title_attribute:client");
+    mbau4.getParamMap().putString(src, "title_attribute:server");
+    setTCAttrs(mbau, "server", "s1");
+    setTCAttrs(mbau2, "server", "s2");
+    setTCAttrs(mbau3, "server", "s1").put("client", "s1");
+    setTCAttrs(mbau4, "server", "s1");
+    Properties props = new Properties();
+    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
+    props.setProperty(ConfigParamDescr.VOLUME_NUMBER.getKey(), "10");
+    Configuration config = ConfigurationUtil.fromProps(props);
+    mbau.setConfiguration(config);
+    mbau2.setConfiguration(config);
+    mbau3.setConfiguration(config);
+    mbau4.setConfiguration(config);
+
+    RateLimiter limit = mbau.findFetchRateLimiter();
+    RateLimiter limit2 = mbau2.findFetchRateLimiter();
+    RateLimiter limit3 = mbau3.findFetchRateLimiter();
+    RateLimiter limit4 = mbau4.findFetchRateLimiter();
+    assertNotSame(limit, limit2);
+    assertNotSame(limit, limit3);
+    assertSame(limit, limit4);
+    RateLimiter.Pool pool = RateLimiter.getPool();
+    assertSame(pool.findNamedRateLimiter("server:s1", 1, 1),
+	       limit);
+    assertSame(pool.findNamedRateLimiter("server:s2", 1, 1),
+	       limit2);
+    assertSame(pool.findNamedRateLimiter("client:s1", 1, 1),
+	       limit3);
+  }
+
+  public Map setTCAttrs(MyMockBaseArchivalUnit mau, String key, String val) {
+    TitleConfig tc = new TitleConfig("foo", new MockPlugin());
+    Map attrs = new HashMap();
+    attrs.put(key, val);
+    tc.setAttributes(attrs);
+    mau.setTitleConfig(tc);
+    return attrs;
   }
 
   public void testGetName() throws ConfigurationException {
@@ -292,11 +505,13 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     props.setProperty(BaseArchivalUnit.NEW_CONTENT_CRAWL_KEY, "10000");
     Configuration config = ConfigurationUtil.fromProps(props);
     mbau.setBaseAuParams(config);
-    assertEquals(10000, mbau.getFetchDelay());
+    assertEquals(10000, mbau.findFetchRateLimiter().getInterval());
     assertEquals(10000, mbau.newContentCrawlIntv);
     assertEquals(auName,mbau.getName());
     assertEquals(ListUtil.list(startUrl), mbau.getNewContentCrawlUrls());
-    assertTrue(mbau.getCrawlSpec().getCrawlWindow() instanceof MyMockCrawlWindow);
+    assertTrue(mbau.getCrawlSpec().getCrawlWindow()
+	       instanceof MyMockCrawlWindow);
+    assertEquals("1/10s", mbau.findFetchRateLimiter().getRate());
   }
 
   public void testSetBaseAuParamsDefaults()
@@ -306,7 +521,7 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     props.setProperty(ConfigParamDescr.VOLUME_NUMBER.getKey(), "10");
     Configuration config = ConfigurationUtil.fromProps(props);
     mbau.setBaseAuParams(config);
-    assertEquals(BaseArchivalUnit.DEFAULT_FETCH_DELAY, mbau.getFetchDelay());
+    assertEquals(BaseArchivalUnit.DEFAULT_FETCH_DELAY, mbau.findFetchRateLimiter().getInterval());
     assertEquals(BaseArchivalUnit.DEFAULT_NEW_CONTENT_CRAWL_INTERVAL,
 		 mbau.newContentCrawlIntv);
     assertEquals(ListUtil.list(startUrl), mbau.getNewContentCrawlUrls());
@@ -331,7 +546,7 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     props.setProperty(BaseArchivalUnit.NEW_CONTENT_CRAWL_KEY, "67890");
     Configuration config2 = ConfigurationUtil.fromProps(props);
     mbau.setBaseAuParams(config2);
-    assertEquals(55555, mbau.getFetchDelay());
+    assertEquals(55555, mbau.findFetchRateLimiter().getInterval());
     assertEquals(67890, mbau.newContentCrawlIntv);
     assertNull(mbau.getCrawlSpec().getCrawlWindow());
   }
@@ -421,7 +636,8 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     // mark publisher down; should then return false
     Configuration conf =
       ConfigurationUtil.fromArgs(ConfigParamDescr.PUB_DOWN.getKey(), "true",
-				 ConfigParamDescr.BASE_URL.getKey(), baseUrl);
+				 ConfigParamDescr.BASE_URL.getKey(), baseUrl,
+				 ConfigParamDescr.VOLUME_NUMBER.getKey(),"42");
     mbau.setConfiguration(conf);
     assertFalse(mbau.shouldCrawlForNewContent(state));
   }
@@ -573,6 +789,9 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     }
   }
 
+  static class MyNullPlugin extends NullPlugin.Plugin {
+  }
+
   static class MyMockPlugin extends MockPlugin {
     TitleConfig tc;
     List titles;
@@ -623,6 +842,7 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     private CrawlRule m_rules = null;
     private String m_startUrl ="http://www.example.com/index.html";
     private boolean setAuParams = false;
+    TitleConfig tc = null;
 
     private String mimeTypeCalledWith = null;
 
@@ -673,7 +893,9 @@ public class TestBaseArchivalUnit extends LockssTestCase {
       setAuParams = ena;
     }
 
-    protected void loadAuConfigDescrs(Configuration config) {
+    protected void loadAuConfigDescrs(Configuration config)
+	throws ArchivalUnit.ConfigurationException {
+      super.loadAuConfigDescrs(config);
       if (setAuParams) {
 	paramMap.putLong(AU_NEW_CRAWL_INTERVAL, 12345);
 	paramMap.putLong(AU_FETCH_DELAY, 54321);
@@ -684,6 +906,15 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     protected FilterRule constructFilterRule(String mimeType) {
       cacheMiss++;
       return rule;
+    }
+
+    public TitleConfig getTitleConfig() {
+      if (tc != null) return tc;
+      return super.getTitleConfig();
+    }
+
+    public void setTitleConfig(TitleConfig tc) {
+      this.tc = tc;
     }
   }
 }

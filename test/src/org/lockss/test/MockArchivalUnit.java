@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.67 2006-06-04 06:27:38 tlipkis Exp $
+ * $Id: MockArchivalUnit.java,v 1.68 2006-07-17 05:12:40 tlipkis Exp $
  */
 
 /*
@@ -364,8 +364,8 @@ public class MockArchivalUnit implements ArchivalUnit {
     }
   }
 
-  public long getFetchDelay() {
-    return 0;
+  public RateLimiter findFetchRateLimiter() {
+    return RateLimiter.UNLIMITED;
   }
 
   public void setPauseCallback(MockObjectCallback callback) {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestEmlsArchivalUnit.java,v 1.2 2005-10-07 16:19:57 thib_gc Exp $
+ * $Id: TestEmlsArchivalUnit.java,v 1.3 2006-07-17 05:12:41 tlipkis Exp $
  */
 
 /*
@@ -184,7 +184,7 @@ public class TestEmlsArchivalUnit extends LockssTestCase {
 
   public void testDefPauseTime() throws Exception {
     DefinableArchivalUnit au = makeAu(new URL(ROOT_URL), 3);
-    assertEquals(10 * Constants.SECOND, au.getFetchDelay());
+    assertEquals("1/10000", au.findFetchRateLimiter().toString());
   }
 
   public static void main(String[] argv) {

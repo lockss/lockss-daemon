@@ -1,5 +1,5 @@
 /*
- * $Id: OaiArchivalUnit.java,v 1.2 2005-10-07 16:19:55 thib_gc Exp $
+ * $Id: OaiArchivalUnit.java,v 1.3 2006-07-17 05:12:41 tlipkis Exp $
  */
 
 /*
@@ -62,6 +62,7 @@ public class OaiArchivalUnit extends BaseArchivalUnit {
 
   public void loadAuConfigDescrs(Configuration config)
       throws ConfigurationException {
+    super.loadAuConfigDescrs(config);
     this.m_oaiHandlerUrl = config.get(ConfigParamDescr.BASE_URL.getKey());
   }
 

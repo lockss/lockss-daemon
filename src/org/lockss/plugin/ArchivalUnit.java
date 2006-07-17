@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.34 2005-02-02 09:42:30 tlipkis Exp $
+ * $Id: ArchivalUnit.java,v 1.35 2006-07-17 05:12:41 tlipkis Exp $
  */
 
 /*
@@ -55,6 +55,7 @@ import org.lockss.plugin.base.*;
 public interface ArchivalUnit {
   public String AU_BASE_URL  = "au_base_url";
   public String AU_FETCH_DELAY = "au_fetch_delay";
+  public String AU_FETCH_RATE_LIMITER_SOURCE = "au_fetch_rate_limiter_source";
   public String AU_USE_CRAWL_WINDOW = "au_use_crawl_window";
   public String AU_NEW_CRAWL_INTERVAL = "au_new_crawl_interval";
   public String AU_START_URL = "au_start_url";
@@ -161,11 +162,12 @@ public interface ArchivalUnit {
   public void pauseBeforeFetch();
 
   /**
-   * Returns the minimum delay between page fetches from the publisher's
-   * server.
-   * @return the delay between fetches, in milliseconds
+   * Return the RateLimiter for page fetches from the publisher's server.
+   * Will be called when AU is started or reconfigured.  May return an
+   * AU-local limiter, a plugin-local limiter, or any other shared limiter.
+   * @return the RateLimiter
    */
-  public long getFetchDelay();
+  public RateLimiter findFetchRateLimiter();
 
   /**
    * Return a list of urls which need to be recrawled during a new content

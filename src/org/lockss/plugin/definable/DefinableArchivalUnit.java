@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.44 2006-07-12 17:18:43 thib_gc Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.45 2006-07-17 05:12:41 tlipkis Exp $
  */
 
 /*
@@ -52,10 +52,7 @@ import org.lockss.oai.*;
  * @version 1.0
  */
 public class DefinableArchivalUnit extends BaseArchivalUnit {
-  static final public String AU_SHORT_YEAR_PREFIX = "au_short_";
   static final public String AU_NUMERIC_PREFIX = "numeric_";
-  static final public String AU_HOST_SUFFIX = "_host";
-  static final public String AU_PATH_SUFFIX = "_path";
   static final public int DEFAULT_AU_CRAWL_DEPTH = 1;
   static final public String AU_START_URL_KEY = "au_start_url";
   static final public String AU_NAME_KEY = "au_name";
@@ -127,40 +124,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 
   protected void loadAuConfigDescrs(Configuration config) throws
       ConfigurationException {
-    for (Iterator it = plugin.getAuConfigDescrs().iterator() ; it.hasNext() ; ) {
-      ConfigParamDescr descr = (ConfigParamDescr) it.next();
-      String key = descr.getKey();
-      log.debug3("loading value for key: "+key);
-
-      try {
-	if (!config.containsKey(key)) {
-	  if (descr.isDefinitional()) {
-	    throw new ConfigurationException("Missing required parameter: " +
-					     key);
-	  } else {
-	    continue;
-	  }
-	}
-        Object val = descr.getValueOfType(config.get(key));
-        paramMap.setMapElement(key, val);
-        // we store years in two formats - short and long
-        if (descr.getType() == ConfigParamDescr.TYPE_YEAR) {
-          int year = ((Integer)val).intValue() % 100;
-          paramMap.putInt(AU_SHORT_YEAR_PREFIX + key, year);
-        }
-        if (descr.getType() == ConfigParamDescr.TYPE_URL) {
-          URL url = paramMap.getUrl(key, null);
-          if(url != null) {
-            paramMap.putString(key + AU_HOST_SUFFIX, url.getHost());
-            paramMap.putString(key + AU_PATH_SUFFIX, url.getPath());
-          }
-        }
-      } catch (ConfigurationException ex) {
-	throw ex;
-      } catch (Exception ex) {
-        throw new ConfigurationException("Error configuring: " + key, ex);
-      }
-    }
+    super.loadAuConfigDescrs(config);
     // override any defaults
     defaultFetchDelay = definitionMap.getLong(AU_DEFAULT_PAUSE_TIME,
         DEFAULT_FETCH_DELAY);

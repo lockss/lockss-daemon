@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.76 2006-06-02 20:27:16 smorabito Exp $
+ * $Id: NullPlugin.java,v 1.77 2006-07-17 05:12:40 tlipkis Exp $
  */
 
 /*
@@ -401,8 +401,8 @@ public class NullPlugin {
     public void pauseBeforeFetch() {
     }
 
-    public long getFetchDelay() {
-      return 0;
+    public RateLimiter findFetchRateLimiter() {
+      return RateLimiter.UNLIMITED;
     }
 
     public int hashCode() {

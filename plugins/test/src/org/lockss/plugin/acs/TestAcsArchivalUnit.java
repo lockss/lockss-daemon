@@ -1,5 +1,5 @@
 /*
- * $Id: TestAcsArchivalUnit.java,v 1.4 2005-10-06 23:42:45 troberts Exp $
+ * $Id: TestAcsArchivalUnit.java,v 1.5 2006-07-17 05:12:41 tlipkis Exp $
  */
 
 /*
@@ -291,7 +291,7 @@ public class TestAcsArchivalUnit
     URL a_url = new URL(ARTICLE_ROOT);
     URL base = new URL(ROOT_URL);
     DefinableArchivalUnit au = makeAu(base, a_url, JOURNAL_KEY, VOL_ID, VOL_YEAR);
-    assertEquals(10 * Constants.SECOND, au.getFetchDelay());
+    assertEquals("1/10000", au.findFetchRateLimiter().toString());
   }
 
   public static void main(String[] argv) {
