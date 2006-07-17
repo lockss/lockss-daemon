@@ -1,5 +1,5 @@
 /*
- * $Id: AuUtil.java,v 1.13 2006-06-17 02:20:00 smorabito Exp $
+ * $Id: AuUtil.java,v 1.14 2006-07-17 05:06:13 tlipkis Exp $
  */
 
 /*
@@ -167,6 +167,25 @@ public class AuUtil {
     return getIntValue(getAuParamOrTitleDefault(au, ConfigParamDescr.PROTOCOL_VERSION),
                        CurrentConfig.getIntParam(PARAM_POLL_PROTOCOL_VERSION,
                                                  DEFAULT_POLL_PROTOCOL_VERSION));
+  }
+
+  /** Return an attribute value from the AU's title DB entry, if any */
+  public static String getTitleAttribute(ArchivalUnit au, String key) {
+    TitleConfig tc = au.getTitleConfig();
+    if (tc != null) {
+      Map attrs = tc.getAttributes();
+      if (attrs != null) {
+	return (String)attrs.get(key);
+      }
+    }
+    return null;
+  }
+
+  /** Return an attribute value from the AU's title DB entry, if any */
+  public static String getTitleAttribute(ArchivalUnit au, String key,
+					 String dfault) {
+    String res = getTitleAttribute(au, key);
+    return (res != null) ? res : dfault;
   }
 
   public static boolean getBoolValue(Object value, boolean dfault) {

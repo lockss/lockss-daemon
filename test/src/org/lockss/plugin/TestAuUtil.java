@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuUtil.java,v 1.3 2005-07-25 01:18:51 tlipkis Exp $
+ * $Id: TestAuUtil.java,v 1.4 2006-07-17 05:06:13 tlipkis Exp $
  */
 
 /*
@@ -113,6 +113,25 @@ public class TestAuUtil extends LockssTestCase {
 						 "false")));
     assertFalse(AuUtil.isPubDown(makeTitleConfig(ConfigParamDescr.BASE_URL,
 						 "http://foo.bar/")));
+  }
+
+  public void testGetTitleAttribute() {
+    LocalMockArchivalUnit mau = new LocalMockArchivalUnit();
+    TitleConfig tc = makeTitleConfig(ConfigParamDescr.PUB_DOWN, "false");
+    mau.setTitleConfig(tc);
+    assertNull(AuUtil.getTitleAttribute(mau, null));
+    assertNull(AuUtil.getTitleAttribute(mau, "foo"));
+    assertEquals("7", AuUtil.getTitleAttribute(mau, null, "7"));
+    assertEquals("7", AuUtil.getTitleAttribute(mau, "foo", "7"));
+    Map attrs = new HashMap();
+    tc.setAttributes(attrs);
+    assertNull(AuUtil.getTitleAttribute(mau, null));
+    assertNull(AuUtil.getTitleAttribute(mau, "foo"));
+    assertEquals("7", AuUtil.getTitleAttribute(mau, null, "7"));
+    assertEquals("7", AuUtil.getTitleAttribute(mau, "foo", "7"));
+    attrs.put("foo", "bar");
+    assertEquals("bar", AuUtil.getTitleAttribute(mau, "foo"));
+    assertEquals("bar", AuUtil.getTitleAttribute(mau, "foo", "7"));
   }
 
   public void testIsConfigCompatibleWithPlugin() {
