@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.104 2006-07-17 05:12:41 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.105 2006-07-17 07:43:33 tlipkis Exp $
  */
 
 /*
@@ -185,8 +185,8 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     checkLegalConfigChange(config);
     auConfig = config;
     loadAuConfigDescrs(config);
-    setBaseAuParams(config);
     addImpliedConfigParams();
+    setBaseAuParams(config);
     fetchRateLimiter = recomputeFetchRateLimiter(fetchRateLimiter);
   }
 
