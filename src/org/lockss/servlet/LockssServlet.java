@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.85 2006-05-23 02:59:18 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.86 2006-07-17 07:13:38 tlipkis Exp $
  */
 
 /*
@@ -289,7 +289,8 @@ public abstract class LockssServlet extends HttpServlet
   }
 
   /** Servlets must implement this method. */
-  protected abstract void lockssHandleRequest() throws ServletException, IOException;
+  protected abstract void lockssHandleRequest()
+      throws ServletException, IOException;
 
   /** Common request handling. */
   public void service(HttpServletRequest req, HttpServletResponse resp)
@@ -318,8 +319,16 @@ public abstract class LockssServlet extends HttpServlet
 
       submitButtonNumber = 0;
       lockssHandleRequest();
-    }
-    finally {
+    } catch (ServletException e) {
+      log.error("Servlet threw", e);
+      throw e;
+    } catch (IOException e) {
+      log.error("Servlet threw", e);
+      throw e;
+    } catch (RuntimeException e) {
+      log.error("Servlet threw", e);
+      throw e;
+    } finally {
       resetMyLocals();
       resetLocals();
     }
