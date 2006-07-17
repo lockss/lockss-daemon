@@ -1,5 +1,5 @@
 /*
- * $Id: TestRateLimiter.java,v 1.7 2006-05-15 00:12:49 tlipkis Exp $
+ * $Id: TestRateLimiter.java,v 1.8 2006-07-17 05:07:44 tlipkis Exp $
  */
 
 /*
@@ -76,10 +76,19 @@ public class TestRateLimiter extends LockssTestCase {
     }
   }
 
-  public void testConstructor() {
+  public void testAccessors() {
     RateLimiter lim = new RateLimiter(10, 100);
     assertEquals(10, lim.getLimit());
     assertEquals(100, lim.getInterval());
+    String rate = lim.getRate();
+    assertEquals("10/100ms", rate);
+    assertSame(rate, lim.getRate());
+    assertTrue(lim.isRate(10, 100));
+    assertFalse(lim.isRate(1, 100));
+    assertFalse(lim.isRate(10, 1000));
+    assertTrue(lim.isRate("10/100ms"));
+    assertFalse(lim.isRate("10/100"));
+    assertFalse(lim.isUnlimited());
   }
 
   public void testLimit() {
@@ -130,6 +139,10 @@ public class TestRateLimiter extends LockssTestCase {
 
   public void testUnlimited() throws InterruptedException {
     RateLimiter lim = RateLimiter.UNLIMITED;
+    assertTrue(lim.isUnlimited());
+    assertEquals(0, lim.getLimit());
+    assertEquals(0, lim.getInterval());
+
     assertTrue(lim.isEventOk());
     assertEquals(0, lim.timeUntilEventOk());
     assertTrue(lim.waitUntilEventOk());
@@ -137,6 +150,112 @@ public class TestRateLimiter extends LockssTestCase {
     assertTrue(lim.isEventOk());
     lim.event();
     assertTrue(lim.isEventOk());
+
+  }
+
+  public void testResizeEventArray() {
+    RateLimiter lim = new RateLimiter(1, 1);
+    assertEquals(new long[]{2},
+		 lim.resizeEventArray(new long[]{2}, 0, 1));
+    assertEquals(new long[]{2, 3},
+		 lim.resizeEventArray(new long[]{2, 3}, 0, 2));
+    assertEquals(new long[]{3, 2},
+		 lim.resizeEventArray(new long[]{2, 3}, 1, 2));
+    assertEquals(new long[]{0, 2},
+		 lim.resizeEventArray(new long[]{2}, 0, 2));
+    assertEquals(new long[]{0, 2, 3},
+		 lim.resizeEventArray(new long[]{2, 3}, 0, 3));
+    assertEquals(new long[]{0, 3, 2},
+		 lim.resizeEventArray(new long[]{2, 3}, 1, 3));
+    assertEquals(new long[]{0, 0, 2, 3},
+		 lim.resizeEventArray(new long[]{2, 3}, 0, 4));
+    assertEquals(new long[]{0, 0, 3, 2},
+		 lim.resizeEventArray(new long[]{2, 3}, 1, 4));
+    assertEquals(new long[]{3, 4, 5},
+		 lim.resizeEventArray(new long[]{2, 3, 4, 5, 6}, 4, 3));
+    assertEquals(new long[]{2, 3, 4},
+		 lim.resizeEventArray(new long[]{2, 3, 4, 5, 6}, 3, 3));
+    assertEquals(new long[]{6, 2, 3},
+		 lim.resizeEventArray(new long[]{2, 3, 4, 5, 6}, 2, 3));
+    assertEquals(new long[]{5, 6, 2},
+		 lim.resizeEventArray(new long[]{2, 3, 4, 5, 6}, 1, 3));
+    assertEquals(new long[]{4, 5, 6},
+		 lim.resizeEventArray(new long[]{2, 3, 4, 5, 6}, 0, 3));
+    assertEquals(new long[]{3},
+		 lim.resizeEventArray(new long[]{2, 3}, 0, 1));
+    assertEquals(new long[]{2},
+		 lim.resizeEventArray(new long[]{2, 3}, 1, 1));
+  }
+
+  public void testSetRate1() {
+    TimeBase.setSimulated(1000);
+    RateLimiter lim = new RateLimiter(4, 10);
+    lim.event();
+    TimeBase.step(15);
+    lim.event();
+    TimeBase.step(1);
+    assertTrue(lim.isEventOk());
+    assertEquals("4/10ms", lim.getRate());
+    lim.setRate(2, 20);
+    assertEquals(2, lim.getLimit());
+    assertEquals(20, lim.getInterval());
+    assertEquals("2/20ms", lim.getRate());
+    assertFalse(lim.isEventOk());
+    assertEquals(4, lim.timeUntilEventOk());
+    TimeBase.step(5);
+    assertTrue(lim.isEventOk());
+    lim.event();
+    assertEquals(14, lim.timeUntilEventOk());
+  }
+
+  public void testSetRate2() {
+    TimeBase.setSimulated(1000);
+    RateLimiter lim = new RateLimiter(4, 10);
+    lim.event();
+    TimeBase.step(15);
+    lim.event();
+    TimeBase.step(1);
+    assertTrue(lim.isEventOk());
+    assertEquals("4/10ms", lim.getRate());
+    lim.setRate("2/20");
+    assertEquals(2, lim.getLimit());
+    assertEquals(20, lim.getInterval());
+    assertEquals("2/20", lim.getRate());
+    assertFalse(lim.isEventOk());
+    assertEquals(4, lim.timeUntilEventOk());
+    TimeBase.step(5);
+    assertTrue(lim.isEventOk());
+    lim.event();
+    assertEquals(14, lim.timeUntilEventOk());
+  }
+
+  public void testSetRateIll() {
+    RateLimiter lim = new RateLimiter(4, 10);
+    try {
+      lim.setRate("2/d");
+      fail("illegal interval");
+    } catch (IllegalArgumentException e) {}
+    try {
+      lim.setRate(0, 20);
+      fail("setRate(0, ...) should throw");
+    } catch (IllegalArgumentException e) {}
+    try {
+      lim.setRate(2, 0);
+      fail("setRate(..., 0) should throw");
+    } catch (IllegalArgumentException e) {}
+  }
+
+  public void testGetRate() {
+    RateLimiter lim = new RateLimiter(4, 10);
+    assertEquals("4/10ms", lim.getRate());
+    lim.setRate("4/10");
+    assertEquals("4/10", lim.getRate());
+    lim.setRate(10, 50000);
+    assertEquals("10/50s", lim.getRate());
+    lim = RateLimiter.makeRateLimiter("4/10");
+    assertEquals("4/10", lim.getRate());
+    lim.setRate(70, 10000);
+    assertEquals("70/10s", lim.getRate());
   }
 
   public void testGetFromConfig1() {
@@ -152,14 +271,26 @@ public class TestRateLimiter extends LockssTestCase {
 							 "interval", 200));
 
     config = ConfigurationUtil.fromArgs("events", "7");
-    lim = RateLimiter.getConfiguredRateLimiter(config, null,
-					       "events", 3, "interval", 200);
+    RateLimiter lim2 = RateLimiter.getConfiguredRateLimiter(config, lim,
+							    "events", 3,
+							    "interval", 200);
+    assertSame(lim, lim2);
     assertEquals(7, lim.getLimit());
     assertEquals(200, lim.getInterval());
 
     config = ConfigurationUtil.fromArgs("foo", "7");
     lim = RateLimiter.getConfiguredRateLimiter(config, null,
 					       "events", 3, "interval", 200);
+    assertEquals(3, lim.getLimit());
+    assertEquals(200, lim.getInterval());
+  }
+
+  public void testGetFromConfig2Err() {
+    RateLimiter lim;
+    Configuration config;
+    config = ConfigurationUtil.fromArgs("rate1", "7/10m/22");
+    lim = RateLimiter.getConfiguredRateLimiter(config, null,
+					       "rate1", "3/200");
     assertEquals(3, lim.getLimit());
     assertEquals(200, lim.getInterval());
   }
@@ -204,5 +335,85 @@ public class TestRateLimiter extends LockssTestCase {
     RateLimiter lim = RateLimiter.getConfiguredRateLimiter(config, null,
 					       "rate1", "3/200");
     assertSame(RateLimiter.UNLIMITED, lim);
+  }
+
+  public void testRateString() {
+    Configuration config = ConfigurationUtil.fromArgs("foo", "7/3s");
+    RateLimiter lim = RateLimiter.getConfiguredRateLimiter(config, null,
+							   "foo", "3/2");
+    assertEquals("7/3000ms", lim.rateString());
+  }
+
+  public void testToString() {
+    Configuration config = ConfigurationUtil.fromArgs("foo", "7/3s");
+    RateLimiter lim = RateLimiter.getConfiguredRateLimiter(config, null,
+							   "foo", "3/2");
+    assertEquals("[RL: 7/3s]", lim.toString());
+  }
+
+  public void testPool1() {
+    String r1 = "7/20s";
+    String r2 = "2/123";
+
+    RateLimiter.Pool pool = RateLimiter.getPool();
+    assertSame(pool, RateLimiter.getPool());
+
+    RateLimiter l1 = pool.findNamedRateLimiter("one", r1);
+    assertEquals(r1, l1.getRate());
+
+    RateLimiter l2 = pool.findNamedRateLimiter("one", r1);
+    assertSame(l1, l2);
+    assertEquals(r1, l2.getRate());
+
+    RateLimiter l3 = pool.findNamedRateLimiter("one", r2);
+    assertSame(l1, l3);
+    assertEquals(r2, l1.getRate());
+
+    RateLimiter lb = pool.findNamedRateLimiter("b", r1);
+    assertNotSame(l1, lb);
+    assertEquals(r1, lb.getRate());
+
+    RateLimiter lc = pool.findNamedRateLimiter("c", r1);
+    assertNotSame(l1, lc);
+    assertEquals(r1, lc.getRate());
+
+    RateLimiter l4 = pool.findNamedRateLimiter("one", r1);
+    assertNotSame(lb, l4);
+    assertNotSame(lc, l4);
+    assertEquals(r1, l4.getRate());
+  }
+
+  public void testPool2() {
+    int e1 = 7, i1 = 20000;
+    int e2 = 2, i2 = 123;
+    String r1 = "7/20s";
+    String r2 = "2/123ms";
+
+    RateLimiter.Pool pool = RateLimiter.getPool();
+    assertSame(pool, RateLimiter.getPool());
+
+    RateLimiter l1 = pool.findNamedRateLimiter("111", e1, i1);
+    assertEquals(r1, l1.getRate());
+
+    RateLimiter l2 = pool.findNamedRateLimiter("111", e1, i1);
+    assertSame(l1, l2);
+    assertEquals(r1, l2.getRate());
+
+    RateLimiter l3 = pool.findNamedRateLimiter("111", e2, i2);
+    assertSame(l1, l3);
+    assertEquals(r2, l1.getRate());
+
+    RateLimiter lb = pool.findNamedRateLimiter("bbb", e1, i1);
+    assertNotSame(l1, lb);
+    assertEquals(r1, lb.getRate());
+
+    RateLimiter lc = pool.findNamedRateLimiter("ccc", e1, i1);
+    assertNotSame(l1, lc);
+    assertEquals(r1, lc.getRate());
+
+    RateLimiter l4 = pool.findNamedRateLimiter("111", e1, i1);
+    assertNotSame(lb, l4);
+    assertNotSame(lc, l4);
+    assertEquals(r1, l4.getRate());
   }
 }
