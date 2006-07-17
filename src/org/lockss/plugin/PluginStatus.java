@@ -1,5 +1,5 @@
 /*
- * $Id: PluginStatus.java,v 1.7 2006-04-05 22:26:41 tlipkis Exp $
+ * $Id: PluginStatus.java,v 1.8 2006-07-17 05:06:53 tlipkis Exp $
  */
 
 /*
@@ -208,16 +208,23 @@ class PluginDetail extends PluginStatus implements StatusAccessor {
     table.setTitle(getTitle(plug));
     table.setDefaultSortRules(sortRules);
     ExternalizableMap plugDef = null;
+    boolean enableShowdef = false;
     if (plug instanceof DefinablePlugin) {
       DefinablePlugin dplug = (DefinablePlugin)plug;
       plugDef = dplug.getDefinitionMap();
-      if (CurrentConfig.getBooleanParam(PARAM_PLUGIN_SHOWDEF,
-					DEFAULT_PLUGIN_DHOWDEF)) {
+      Properties tprops = table.getProperties();
+      if ((tprops != null &&
+	  !StringUtil.isNullString(tprops.getProperty("showdef")))) {
 	table.setColumnDescriptors(colDescs);
 	table.setRows(getRows(dplug, plugDef));
+      } else {
+	enableShowdef =
+	  table.getOptions().get(StatusTable.OPTION_DEBUG_USER) ||
+	  CurrentConfig.getBooleanParam(PARAM_PLUGIN_SHOWDEF,
+					DEFAULT_PLUGIN_DHOWDEF);
       }
     }
-    table.setSummaryInfo(getSummaryInfo(plug, plugDef));
+    table.setSummaryInfo(getSummaryInfo(plug, plugDef, enableShowdef));
   }
 
   public List getRows(DefinablePlugin plug, ExternalizableMap plugDef) {
@@ -234,7 +241,8 @@ class PluginDetail extends PluginStatus implements StatusAccessor {
     return rows;
   }
 
-  private List getSummaryInfo(Plugin plug, ExternalizableMap plugDef) {
+  private List getSummaryInfo(Plugin plug, ExternalizableMap plugDef,
+			      boolean showDefLink) {
     List res = new ArrayList();
     res.add(new StatusTable.SummaryInfo("Name",
 					ColumnDescriptor.TYPE_STRING,
@@ -281,6 +289,13 @@ class PluginDetail extends PluginStatus implements StatusAccessor {
 	}
       }
     }
+    if (showDefLink && plugDef != null) {
+      StatusTable.Reference link = makePlugRef("Definition", plug);
+      link.setProperty("showdef", "1");
+      res.add(new StatusTable.SummaryInfo(null,
+					  ColumnDescriptor.TYPE_STRING,
+					  link));
+    }
     return res;
   }
 
@@ -290,7 +305,6 @@ class PluginDetail extends PluginStatus implements StatusAccessor {
     String key = PluginManager.pluginKeyFromId(plug.getPluginId());
     return new StatusTable.Reference(value, PLUGIN_DETAIL, key);
   }
-
 }
 
 
