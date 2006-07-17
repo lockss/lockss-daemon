@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.37 2006-07-12 20:28:06 smorabito Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.38 2006-07-17 07:13:54 tlipkis Exp $
  */
 
 /*
@@ -205,7 +205,7 @@ public class ArchivalUnitStatus
       rowMap.put("Peers", PeerRepair.makeAuRef("peers", au.getAuId()));
       rowMap.put("AuLastTreeWalk", new Long(auState.getLastTreeWalkTime()));
       
-      StringBuffer damaged = new StringBuffer();
+      Object stat;
       if (isV3) {
         String auId = au.getAuId();
         Integer numPolls = new Integer(v3status.getNumPolls(auId));
@@ -219,9 +219,9 @@ public class ArchivalUnitStatus
         float fv = v3status.getAgreement(auId);
         // It's scary to see "0% Agreement" if no polls have completed.
         if (numPolls.intValue() == 0) {
-          damaged.append("Waiting");
+	  stat = "Waiting";
         } else {
-          damaged.append(Integer.toString(Math.round(fv * 100)) + "% Agreement");
+          stat = Integer.toString(Math.round(fv * 100)) + "% Agreement";
         }
       } else {
         rowMap.put("AuPolls",
@@ -229,25 +229,26 @@ public class ArchivalUnitStatus
                    getReference(PollerStatus.MANAGER_STATUS_TABLE_NAME,
                                 au));
         rowMap.put("AuLastPoll", new Long(auState.getLastTopLevelPollTime()));
-        damaged.append(topNodeState.hasDamage()
-                       ? DAMAGE_STATE_DAMAGED : DAMAGE_STATE_OK);
+	stat = topNodeState.hasDamage()
+	  ? DAMAGE_STATE_DAMAGED : DAMAGE_STATE_OK;
       }
 
       boolean isPubDown = AuUtil.isPubDown(au);
       boolean isClosed = AuUtil.isClosed(au);
         
       if (isPubDown || isClosed) {
-        damaged.append(" (");
-        if (isClosed) {
-          damaged.append("C");
-        }
-        if (isPubDown) {
-          damaged.append("D");
-        }
-        damaged.append(")");
+	List val = ListUtil.list(stat, " (");
+	if (isClosed) {
+	  val.add("C");
+	}
+	if (isPubDown) {
+	  val.add("D");
+	}
+	val.add(")");
+	stat = val;
       }
 
-      rowMap.put("Damaged", damaged.toString());
+      rowMap.put("Damaged", stat);
       return rowMap;
     }
   }
