@@ -1,5 +1,5 @@
 /*
- * $Id: ObjectSerializerTester.java,v 1.6 2006-05-31 17:54:50 thib_gc Exp $
+ * $Id: ObjectSerializerTester.java,v 1.7 2006-07-17 22:06:40 thib_gc Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.util;
 import java.io.*;
 import java.net.URL;
 
+import org.apache.commons.lang.StringUtils;
 import org.custommonkey.xmlunit.XMLTestCase;
 import org.custommonkey.xmlunit.XMLUnit;
 import org.lockss.config.CurrentConfig;
@@ -652,13 +653,35 @@ public abstract class ObjectSerializerTester extends XMLTestCase {
             File[] files = actions[action].file.getParentFile().listFiles();
             File copy = null;
             for (int file = 0 ; file < files.length ; ++file) {
-              if (files[file].toString().startsWith(actions[action].file.toString())) {
-                copy = files[file];
+              String candidate = files[file].toString();
+              if (!candidate.startsWith(actions[action].file.toString())) {
+                continue; // not the right file
               }
+              if (!StringUtils.contains(candidate,
+                                        CurrentConfig.getParam(ObjectSerializer.PARAM_FAILED_DESERIALIZATION_EXTENSION,
+                                                               ObjectSerializer.DEFAULT_FAILED_DESERIALIZATION_EXTENSION))) {
+                continue; // not the right file
+              }
+              String timestamp = StringUtils.substringAfterLast(candidate, ".");
+              if (StringUtil.isNullString(timestamp)) {
+                continue; // not the right file
+              }
+              try {
+                long time = Long.parseLong(timestamp);
+              }
+              catch (NumberFormatException nfe) {
+                continue; // not the right file
+              }
+              copy = files[file]; // right file found
+              break;
             }
-            assertNotNull(copy);
+            assertNotNull("FAILED_DESERIALIZATION_COPY: copy not found ("
+                          + action + "," + deserializer + ")",
+                          copy);
             copy.deleteOnExit(); // clean up
-            assertTrue(FileUtil.isContentEqual(actions[action].file, copy));
+            assertTrue("FAILED_DESERIALIZATION_COPY: copy does not match ("
+                       + action + "," + deserializer + ")",
+                       FileUtil.isContentEqual(actions[action].file, copy));
             break;
           case ObjectSerializer.FAILED_DESERIALIZATION_IGNORE:
             // nothing; keep going
@@ -667,7 +690,9 @@ public abstract class ObjectSerializerTester extends XMLTestCase {
             File rename = new File(actions[action].file.toString()
                                    + CurrentConfig.getParam(ObjectSerializer.PARAM_FAILED_DESERIALIZATION_EXTENSION,
                                                             ObjectSerializer.DEFAULT_FAILED_DESERIALIZATION_EXTENSION));
-            assertTrue(rename.exists());
+            assertTrue("FAILED_DESERIALIZATION_RENAME: renamed file did not exist ("
+                       + action + "," + deserializer + ")",
+                       rename.exists());
             rename.deleteOnExit(); // clean up
             break;
           default: // shouldn't happen
