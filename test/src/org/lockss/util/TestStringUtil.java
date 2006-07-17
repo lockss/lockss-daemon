@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.60 2006-06-30 18:51:25 troberts Exp $
+ * $Id: TestStringUtil.java,v 1.61 2006-07-17 05:08:14 tlipkis Exp $
  */
 
 /*
@@ -131,6 +131,8 @@ public class TestStringUtil extends LockssTestCase {
 						     ",", "[", "]"));
     String a[] = {"a", "b", "c"};
     assertEquals("a,b,c", StringUtil.separatedString(a, ","));
+    assertEquals("2,6,3", StringUtil.separatedString(new int[]{2,6,3}, ","));
+    assertEquals("2,6,3", StringUtil.separatedString(new long[]{2,6,3}, ","));
   }
 
   public void testEscapeNonAlphaNum() {

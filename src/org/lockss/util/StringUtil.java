@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.72 2006-06-30 19:26:24 troberts Exp $
+ * $Id: StringUtil.java,v 1.73 2006-07-17 05:08:14 tlipkis Exp $
  */
 
 /*
@@ -133,6 +133,21 @@ public class StringUtil {
     ArrayList col = new ArrayList(arr.length);
     for (int ii = 0 ; ii < arr.length ; ++ii) {
       col.add(Integer.toString(arr[ii]));
+    }
+    return separatedString(col, "", separator, "",
+                           new StringBuffer()).toString();
+  }
+
+  /**
+   * Concatenate elements of long array into string, with separators
+   * @param arr - Array of int elements
+   * @param separator - String to put between elements
+   * @return Concatenated string
+   */
+  public static String separatedString(long[] arr, String separator) {
+    ArrayList col = new ArrayList(arr.length);
+    for (int ii = 0 ; ii < arr.length ; ++ii) {
+      col.add(Long.toString(arr[ii]));
     }
     return separatedString(col, "", separator, "",
                            new StringBuffer()).toString();
