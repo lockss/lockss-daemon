@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.55 2006-04-05 22:26:40 tlipkis Exp $
+ * $Id: AuConfig.java,v 1.56 2006-07-17 07:13:24 tlipkis Exp $
  */
 
 /*
@@ -383,10 +383,16 @@ public class AuConfig extends LockssServlet {
       sel.add("-no selection-", true, "");
       for (Iterator iter = titles.iterator(); iter.hasNext(); ) {
 	String title = (String)iter.next();
+	PluginProxy titlePlugin = getTitlePlugin(title);
+	if (titlePlugin != null) {
+	  TitleConfig tc = titlePlugin.getTitleConfig(title);
+	  if (tc != null && AuUtil.isPubDown(tc)) {
+	    continue;
+	  }
+	}
 	String selText = encodeText(title);
 	String dispText = selText;
 	if (includePluginInTitleSelect) {
-	  PluginProxy titlePlugin = getTitlePlugin(title);
 	  if (titlePlugin != null) {
 	    String plugName = titlePlugin.getPluginName();
 	    dispText = selText + " (" + plugName + ")";
