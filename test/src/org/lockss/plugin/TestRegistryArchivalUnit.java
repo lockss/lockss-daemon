@@ -1,5 +1,5 @@
 /*
- * $Id: TestRegistryArchivalUnit.java,v 1.3 2005-06-02 16:39:40 tlipkis Exp $
+ * $Id: TestRegistryArchivalUnit.java,v 1.4 2006-07-17 05:09:43 tlipkis Exp $
  */
 
 /*
@@ -83,19 +83,22 @@ public class TestRegistryArchivalUnit extends LockssTestCase {
 		      "93m");
     props.setProperty(RegistryArchivalUnit.PARAM_REGISTRY_CRAWL_INTERVAL,
 		      "107m");
-    props.setProperty(RegistryArchivalUnit.PARAM_REGISTRY_FETCH_DELAY,
-		      "12s");
+    props.setProperty(RegistryArchivalUnit.PARAM_REGISTRY_FETCH_RATE,
+		      "4/2s");
     ConfigurationUtil.setCurrentConfigFromProps(props);
-    MyRegistryArchivalUnit au = new MyRegistryArchivalUnit(regPlugin);
-    au.setConfiguration(auConfig);
+    ArchivalUnit au = regPlugin.createAu(auConfig);
     TypedEntryMap paramMap = au.getProperties();
     assertEquals(93 * Constants.MINUTE,
 		 paramMap.getLong(TreeWalkManager.PARAM_TREEWALK_START_DELAY));
     assertEquals(107 * Constants.MINUTE,
 		 paramMap.getLong(ArchivalUnit.AU_NEW_CRAWL_INTERVAL));
-    assertEquals(12 * Constants.SECOND,
-		 paramMap.getLong(ArchivalUnit.AU_FETCH_DELAY));
+    RateLimiter limiter = au.findFetchRateLimiter();
+    assertEquals("4/2s", limiter.getRate());
     assertEquals("org|lockss|plugin|TestRegistryArchivalUnit$MyRegistryPlugin&base_url~http%3A%2F%2Ffoo%2Ecom%2Fbar", au.getAuId());
+    props.setProperty(RegistryArchivalUnit.PARAM_REGISTRY_FETCH_RATE,
+		      "3/7s");
+    ConfigurationUtil.setCurrentConfigFromProps(props);
+    assertEquals("3/7s", au.findFetchRateLimiter().getRate());
   }
 
   public void testShouldCallTopLevelPoll() throws Exception {
@@ -154,10 +157,6 @@ public class TestRegistryArchivalUnit extends LockssTestCase {
     regPlugin.setTitleConfigFromConfig(null);
   }
 
-  public void testSetConfig() throws Exception {
-    regPlugin.setConfig(null, null, null);
-  }
-
   static class MyRegistryPlugin
     extends RegistryPlugin implements PluginTestable{
     public void registerArchivalUnit(ArchivalUnit au) {
@@ -166,6 +165,10 @@ public class TestRegistryArchivalUnit extends LockssTestCase {
 
     public void unregisterArchivalUnit(ArchivalUnit au) {
       aus.remove(au);
+    }
+
+    protected RegistryArchivalUnit newRegistryArchivalUnit() {
+      return new MyRegistryArchivalUnit(this);
     }
   }
 

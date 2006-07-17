@@ -1,5 +1,5 @@
 /*
- * $Id: TestRegistryPlugin.java,v 1.5 2005-07-18 08:14:28 tlipkis Exp $
+ * $Id: TestRegistryPlugin.java,v 1.6 2006-07-17 05:09:43 tlipkis Exp $
  */
 
 /*
@@ -98,9 +98,4 @@ public class TestRegistryPlugin extends LockssTestCase {
   public void testSetTitleConfigFromConfig() throws Exception {
     m_plugin.setTitleConfigFromConfig(null);
   }
-
-  public void testSetConfig() throws Exception {
-    m_plugin.setConfig(null, null, null);
-  }
-
 }

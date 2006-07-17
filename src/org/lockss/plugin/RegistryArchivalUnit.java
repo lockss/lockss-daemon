@@ -1,5 +1,5 @@
 /*
- * $Id: RegistryArchivalUnit.java,v 1.18 2006-04-05 22:53:10 tlipkis Exp $
+ * $Id: RegistryArchivalUnit.java,v 1.19 2006-07-17 05:09:43 tlipkis Exp $
  */
 
 /*
@@ -61,18 +61,18 @@ public class RegistryArchivalUnit extends BaseArchivalUnit {
   /** The interval between recrawls of the loadable plugin
       registry AUs.  */
   static final String PARAM_REGISTRY_CRAWL_INTERVAL =
-    Configuration.PREFIX + "plugin.registries.crawlInterval";
+    RegistryPlugin.PREFIX + "crawlInterval";
   static final long DEFAULT_REGISTRY_CRAWL_INTERVAL = Constants.DAY;
 
   /** Limits fetch rate of registry crawls */
-  static final String PARAM_REGISTRY_FETCH_DELAY =
-    Configuration.PREFIX + "plugin.registries.fetchDelay";
-  static final long DEFAULT_REGISTRY_FETCH_DELAY = 500;
+  static final String PARAM_REGISTRY_FETCH_RATE =
+    RegistryPlugin.PREFIX + "fetchRate";
+  static final String DEFAULT_REGISTRY_FETCH_RATE = "20/10s";
 
   /** Delay after startup for registry treewalks.  Can be much longer than
    * for normal AUs, as a crawl is automatically run on startup */
   static final String PARAM_REGISTRY_TREEWALK_START =
-    Configuration.PREFIX + "plugin.registries.treewalk.start.delay";
+    RegistryPlugin.PREFIX + "treewalk.start.delay";
   static final long DEFAULT_REGISTRY_TREEWALK_START = 12 * Constants.HOUR;
 
   private String m_registryUrl = null;
@@ -83,13 +83,22 @@ public class RegistryArchivalUnit extends BaseArchivalUnit {
 
   public RegistryArchivalUnit(RegistryPlugin plugin) {
     super(plugin);
+  }
+
+  // Called by RegistryPlugin iff any config below RegistryPlugin.PREFIX
+  // has changed
+  protected void setConfig(Configuration config,
+			   Configuration prevConfig,
+			   Configuration.Differences changedKeys) {
     m_maxRefetchDepth =
-      CurrentConfig.getIntParam(NewContentCrawler.PARAM_MAX_CRAWL_DEPTH,
-                                NewContentCrawler.DEFAULT_MAX_CRAWL_DEPTH);
+      config.getInt(NewContentCrawler.PARAM_MAX_CRAWL_DEPTH,
+		    NewContentCrawler.DEFAULT_MAX_CRAWL_DEPTH);
+    fetchRateLimiter = recomputeFetchRateLimiter(fetchRateLimiter);
   }
 
   public void loadAuConfigDescrs(Configuration config)
       throws ConfigurationException {
+    super.loadAuConfigDescrs(config);
     this.m_registryUrl = config.get(ConfigParamDescr.BASE_URL.getKey());
     // Now we can construct a valid CC permission checker.
     m_permissionCheckers =
@@ -108,10 +117,6 @@ public class RegistryArchivalUnit extends BaseArchivalUnit {
       log.debug2("Setting Registry AU recrawl interval to " +
 		 StringUtil.timeIntervalToString(paramMap.getLong(AU_NEW_CRAWL_INTERVAL)));
     }
-    paramMap.putLong(AU_FETCH_DELAY,
-		     CurrentConfig
-		     .getTimeIntervalParam(PARAM_REGISTRY_FETCH_DELAY,
-					   DEFAULT_REGISTRY_FETCH_DELAY));
   }
 
   /**
@@ -207,6 +212,15 @@ public class RegistryArchivalUnit extends BaseArchivalUnit {
       recomputeRegName = true;
     }
     return super.makeUrlCacher(url);
+  }
+
+  protected synchronized RateLimiter
+    recomputeFetchRateLimiter(RateLimiter oldLimiter) {
+    return
+      RateLimiter.getConfiguredRateLimiter(CurrentConfig.getCurrentConfig(),
+					   oldLimiter,
+					   PARAM_REGISTRY_FETCH_RATE,
+					   DEFAULT_REGISTRY_FETCH_RATE);
   }
 
   // Registry AU crawl rule implementation
