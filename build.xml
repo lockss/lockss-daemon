@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.183 2006-07-14 23:59:17 thib_gc Exp $
+ $Id: build.xml,v 1.184 2006-07-17 05:04:51 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
@@ -934,7 +934,7 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
 ULIMIT_MEMORY=unlimited
 ULIMIT_STACK=14000
 ULIMIT_FILES=512
-JAVA_COMMAND_ARGS="-server -Xmx250m -Dsun.net.inetaddr.ttl=3600 -Dorg.lockss.synchronizeDns=true -showversion"
+JAVA_COMMAND_ARGS="-server -Xmx500m -Dsun.net.inetaddr.ttl=3600 -Dorg.lockss.synchronizeDns=true -showversion"
 </echo>
     <!-- Write packing list file-->
     <pathconvert refid="prod.packing.list" property="tmp.packing.list"
@@ -1888,8 +1888,8 @@ Test results in ${test.results}
    depends="prepare.run.test,jar-tests"
    description="Run a set of test classes through jcoverage, named by the 'include' property." >
     <fail unless="include">
-Use -Dinclude= to specify tests to be run,
-optionally -Dtests= for classes to be instrumented.
+Use -Dinclude= to specify classes to be instrumented,
+optionally -Dtests= for tests to be run.
     </fail>
 
     <property name="tests" value="${include}/Test*" />
