@@ -1,5 +1,5 @@
 /*
- * $Id: TypedEntryMap.java,v 1.5 2005-05-24 07:23:06 tlipkis Exp $
+ * $Id: TypedEntryMap.java,v 1.6 2006-07-17 05:08:43 tlipkis Exp $
  */
 
 /*
@@ -43,44 +43,51 @@ public class TypedEntryMap {
   }
 
   public Set keySet() {
-   return m_map.keySet();
- }
+    return m_map.keySet();
+  }
 
- public Set entrySet() {
-   return m_map.entrySet();
- }
+  public Set entrySet() {
+    return m_map.entrySet();
+  }
+
+  public boolean containsKey(String key) {
+    return m_map.containsKey(key);
+  }
+
+  public String toString() {
+    return m_map.toString();
+  }
+
+  public Object getMapElement(String descrKey) {
+    synchronized(m_map) {
+      return m_map.get(descrKey);
+    }
+  }
+
+  public void setMapElement(String descrKey, Object descrElement) {
+    synchronized(m_map) {
+      if (descrElement instanceof URL) {
+	m_map.put(descrKey, descrElement.toString());
+      } else {
+	m_map.put(descrKey, descrElement);
+      }
+    }
+  }
 
 
- public Object getMapElement(String descrKey) {
-   synchronized(m_map) {
-     return m_map.get(descrKey);
-   }
- }
+  public Object removeMapElement(String descrKey) {
+    synchronized(m_map) {
+      return m_map.remove(descrKey);
+    }
+  }
 
- public void setMapElement(String descrKey, Object descrElement) {
-   synchronized(m_map) {
-     if (descrElement instanceof URL) {
-       m_map.put(descrKey, descrElement.toString());
-     } else {
-       m_map.put(descrKey, descrElement);
-     }
-   }
- }
+  public String getStringElement(String descrKey) {
+    synchronized(m_map) {
+      return m_map.get(descrKey).toString();
+    }
+  }
 
-
- public Object removeMapElement(String descrKey) {
-   synchronized(m_map) {
-     return m_map.remove(descrKey);
-   }
- }
-
- public String getStringElement(String descrKey) {
-   synchronized(m_map) {
-     return m_map.get(descrKey).toString();
-   }
- }
-
- /*
+  /*
    *
    *  methods for retrieving typed data or returning a default
    *
@@ -185,9 +192,9 @@ public class TypedEntryMap {
   }
 
   /*
-     methods for return typed date which will throw an exception if item is not
-     found
-   */
+    methods for return typed date which will throw an exception if item is not
+    found
+  */
   public String getString(String key) {
     String value = (String)getMapElement(key);
     if (value != null) {

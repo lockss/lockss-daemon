@@ -1,5 +1,5 @@
 /*
- * $Id: TestTypedEntryMap.java,v 1.2 2004-09-20 17:47:39 clairegriffin Exp $
+ * $Id: TestTypedEntryMap.java,v 1.3 2006-07-17 05:08:43 tlipkis Exp $
  */
 
 /*
@@ -51,15 +51,18 @@ public class TestTypedEntryMap extends LockssTestCase {
     String value = "test_value";
     assertEquals(Collections.EMPTY_SET, map.entrySet());
     assertEquals(Collections.EMPTY_SET, map.keySet());
+    assertFalse(map.containsKey(key));
 
     map.setMapElement(key, value);
     assertEquals(1, map.entrySet().size());
     assertEquals(1, map.keySet().size());
     assertEquals(value, map.getMapElement(key));
+    assertTrue(map.containsKey(key));
 
     map.removeMapElement(key);
     assertEquals(Collections.EMPTY_SET, map.entrySet());
     assertEquals(Collections.EMPTY_SET, map.keySet());
+    assertFalse(map.containsKey(key));
   }
 
 
