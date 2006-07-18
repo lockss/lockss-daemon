@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.71 2006-07-14 04:33:10 smorabito Exp $
+ * $Id: TestPluginManager.java,v 1.72 2006-07-18 19:12:20 tlipkis Exp $
  */
 
 /*
@@ -671,6 +671,12 @@ public class TestPluginManager extends LockssTestCase {
     void processOneRegistryJarThrowIf(String url) {
       processOneRegistryJarThrowIf = url;
     }
+
+    protected void possiblyStartRegistryAuCrawl(ArchivalUnit au,
+						String url,
+						PluginManager.InitialRegistryCallback cb) {
+      cb.crawlCompleted(url);
+    }
   }
 
   static class MyMockConfigurablePlugin extends DefinablePlugin {
@@ -697,14 +703,14 @@ public class TestPluginManager extends LockssTestCase {
     public void setCfgEx(ArchivalUnit.ConfigurationException cfgEx) {
       this.cfgEx = cfgEx;
     }
-    public ArchivalUnit createAu(Configuration config)
+    public ArchivalUnit createAu0(Configuration config)
 	throws ArchivalUnit.ConfigurationException {
       if (rtEx != null) {
 	throw rtEx;
       } else if (cfgEx != null) {
 	throw cfgEx;
       } else {
-	return super.createAu(config);
+	return super.createAu0(config);
       }
     }
     public ArchivalUnit configureAu(Configuration config, ArchivalUnit au)
@@ -1005,6 +1011,27 @@ public class TestPluginManager extends LockssTestCase {
     p.setProperty(PluginManager.PARAM_PLUGIN_REGISTRIES,
 		  "");
     ConfigurationUtil.setCurrentConfigFromProps(p);
+  }
+
+
+  public void testInitLoadablePluginRegistries() throws Exception {
+    Properties p = new Properties();
+    prepareLoadablePluginTests(p);
+    List urls = ListUtil.list("http://plug1.example.com/blueplugs/",
+			      "http://plug1.example.com/redplugs/");
+    List urls2 = ListUtil.list("http://plug2.example.com/blueplugs/");
+    assertEmpty(mgr.getAllRegistryAus());
+    assertEmpty(mgr.getAllAus());
+    mgr.initLoadablePluginRegistries(urls);
+    assertEquals(SetUtil.theSet(mgr.getAllAus()),
+		 SetUtil.theSet(mgr.getAllRegistryAus()));
+    assertEquals(2, mgr.getAllRegistryAus().size());
+    // ensure that a second call to initLoadablePluginRegistries() adds to
+    // the same list of AUs (i.e., uses the same plugin)
+    mgr.initLoadablePluginRegistries(urls2);
+    assertEquals(SetUtil.theSet(mgr.getAllAus()),
+		 SetUtil.theSet(mgr.getAllRegistryAus()));
+    assertEquals(3, mgr.getAllRegistryAus().size());
   }
 
 

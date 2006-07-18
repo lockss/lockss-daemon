@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.161 2006-07-14 04:33:10 smorabito Exp $
+ * $Id: PluginManager.java,v 1.162 2006-07-18 19:12:20 tlipkis Exp $
  */
 
 /*
@@ -47,6 +47,7 @@ import org.lockss.crawler.CrawlManager;
 import org.lockss.daemon.*;
 import org.lockss.plugin.definable.DefinablePlugin;
 import org.lockss.poller.PollSpec;
+import org.lockss.state.NodeManager;
 import org.lockss.util.*;
 
 /**
@@ -180,6 +181,7 @@ public class PluginManager
   private Map cuNodeVersionMap = Collections.synchronizedMap(new HashMap());
   // Map of plugin key to PluginInfo
   private Map pluginfoMap = Collections.synchronizedMap(new HashMap());
+  private RegistryPlugin regPlugin;
 
   private KeyStore keystore;
   private JarValidator jarValidator;
@@ -1311,6 +1313,12 @@ public class PluginManager
     return inactiveAuIds;
   }
 
+  /** Return a collection of all RegistryArchivalUnits.  This is a subset
+   * of getAllAus() */
+  public Collection getAllRegistryAus() {
+    return new ArrayList(getRegistryPlugin().getAllAus());
+  }
+
   /** Return all the known titles from the title db, sorted by title */
   public List findAllTitles() {
     if (allTitles == null) {
@@ -1433,24 +1441,19 @@ public class PluginManager
       new InitialRegistryCallback(urls, bs);
 
     List loadAus = new ArrayList();
-    // XXX shouldn't make a new RegistryPlugin each time this is run.  Does
-    // it hurt anything?
-    RegistryPlugin registryPlugin = new RegistryPlugin();
-    String pluginKey = pluginKeyFromName("org.lockss.plugin.RegistryPlugin");
-    registryPlugin.initPlugin(theDaemon);
-    setPlugin(pluginKey, registryPlugin);
+
     for (Iterator iter = urls.iterator(); iter.hasNext(); ) {
       String url = (String)iter.next();
       Configuration auConf = ConfigManager.newConfiguration();
       auConf.put(ConfigParamDescr.BASE_URL.getKey(), url);
-      String auId = generateAuId(registryPlugin, auConf);
+      String auId = generateAuId(getRegistryPlugin(), auConf);
       String auKey = auKeyFromAuId(auId);
 
       // Only process this registry if it is new.
       if (!auMap.containsKey(auId)) {
 
 	try {
-	  configureAu(registryPlugin, auConf, auId);
+	  configureAu(getRegistryPlugin(), auConf, auId);
 	} catch (ArchivalUnit.ConfigurationException ex) {
 	  log.error("Failed to configure AU " + auKey, ex);
 	  regCallback.crawlCompleted(url);
@@ -1462,21 +1465,7 @@ public class PluginManager
 	loadAus.add(registryAu);
 
 	// Trigger a new content crawl if required.
-	if (registryAu.
-	    shouldCrawlForNewContent(theDaemon.getNodeManager(registryAu).getAuState())) {
-	  if (log.isDebug2()) {
-	    log.debug2("Starting a new crawl of AU: " + registryAu.getName());
-	  }
-	  theDaemon.getCrawlManager().startNewContentCrawl(registryAu, regCallback,
-							   url, null);
-
-	} else {
-	  // If we're not going to crawl this AU, let the callback know.
-	  if (log.isDebug2()) {
-	    log.debug2("Don't need to do a crawl of AU: " + registryAu.getName());
-	  }
-	  regCallback.crawlCompleted(url);
-	}
+	possiblyStartRegistryAuCrawl(registryAu, url, regCallback);
       } else {
 	log.debug2("We already have this AU configured, notifying callback.");
 	regCallback.crawlCompleted(url);
@@ -1497,6 +1486,33 @@ public class PluginManager
     }
 
     processRegistryAus(loadAus);
+  }
+
+  private synchronized RegistryPlugin getRegistryPlugin() {
+    if (regPlugin == null) {
+      regPlugin = new RegistryPlugin();
+      String pluginKey = pluginKeyFromName("org.lockss.plugin.RegistryPlugin");
+      regPlugin.initPlugin(theDaemon);
+      setPlugin(pluginKey, regPlugin);
+    }
+    return regPlugin;
+  }
+
+  // Trigger a new content crawl on the registry AU if required.
+  protected void possiblyStartRegistryAuCrawl(ArchivalUnit registryAu,
+					      String url,
+					      InitialRegistryCallback cb) {
+    NodeManager nodeMgr = theDaemon.getNodeManager(registryAu);
+    if (registryAu.shouldCrawlForNewContent(nodeMgr.getAuState())) {
+      if (log.isDebug2()) log.debug2("Starting new crawl:: " + registryAu);
+      theDaemon.getCrawlManager().startNewContentCrawl(registryAu, cb,
+						       url, null);
+    } else {
+      if (log.isDebug2()) log.debug2("No crawl needed: " + registryAu);
+
+      // If we're not going to crawl this AU, let the callback know.
+      cb.crawlCompleted(url);
+    }
   }
 
   // Synch the plugin registry with the plugins listed in names
@@ -1756,19 +1772,18 @@ public class PluginManager
       // "cusn.hasContent()", which will add another loop if it is a
       // CachedUrlSet.
 
-      if (cusn.isLeaf()) {
+      String url = cusn.getUrl();
+	if (StringUtil.endsWithIgnoreCase(url, ".jar") &&
+	    cusn.isLeaf()) {
 
 	// This CachedUrl represents a plugin JAR, validate it and
 	// process the plugins it contains.
 
 	CachedUrl cu = (CachedUrl)cusn;
-	String url = cu.getUrl();
-	if (StringUtil.endsWithIgnoreCase(url, ".jar")) {
-	  try {
-	    processOneRegistryJar(cu, url, au, tmpMap);
-	  } catch (RuntimeException e) {
-	    log.error("Error processing plugin jar: " + cu, e);
-	  }
+	try {
+	  processOneRegistryJar(cu, url, au, tmpMap);
+	} catch (RuntimeException e) {
+	  log.error("Error processing plugin jar: " + cu, e);
 	}
       }
     }
