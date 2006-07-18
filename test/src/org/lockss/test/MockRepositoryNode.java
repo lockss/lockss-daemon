@@ -1,5 +1,5 @@
 /*
- * $Id: MockRepositoryNode.java,v 1.12 2006-05-27 06:36:04 tlipkis Exp $
+ * $Id: MockRepositoryNode.java,v 1.13 2006-07-18 19:11:52 tlipkis Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.io.*;
 import java.util.*;
 import org.lockss.daemon.CachedUrlSetSpec;
 import org.lockss.repository.*;
+import org.lockss.util.*;
 
 /**
  * Mock version of the RepositoryNode.
@@ -111,6 +112,7 @@ public class MockRepositoryNode implements RepositoryNode {
   }
 
   public Iterator listChildren(CachedUrlSetSpec filter, boolean includeInactive) {
+    if (children == null) return CollectionUtil.EMPTY_ITERATOR;
     return children.iterator();
   }
 
