@@ -1,5 +1,5 @@
 /*
- * $Id: TestBasePlugin.java,v 1.11 2005-10-05 07:12:16 tlipkis Exp $
+ * $Id: TestBasePlugin.java,v 1.12 2006-07-18 19:14:09 tlipkis Exp $
  */
 
 /*
@@ -137,7 +137,7 @@ public class TestBasePlugin extends LockssTestCase {
     }
 
 
-    public ArchivalUnit createAu(Configuration auConfig) throws
+    protected ArchivalUnit createAu0(Configuration auConfig) throws
         ConfigurationException {
       TestBaseArchivalUnit.MyMockBaseArchivalUnit mau =
           new TestBaseArchivalUnit.MyMockBaseArchivalUnit(this);

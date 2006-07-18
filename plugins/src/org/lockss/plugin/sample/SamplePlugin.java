@@ -1,5 +1,5 @@
 /*
- * $Id: SamplePlugin.java,v 1.1 2005-03-15 07:43:30 tlipkis Exp $
+ * $Id: SamplePlugin.java,v 1.2 2006-07-18 19:14:10 tlipkis Exp $
  */
 
 /*
@@ -67,7 +67,7 @@ public class SamplePlugin extends DefinablePlugin {
     super.initPlugin(daemon);
   }
 
-  public ArchivalUnit createAu(Configuration auConfig)
+  public ArchivalUnit createAu0(Configuration auConfig)
       throws ArchivalUnit.ConfigurationException {
     // create a new archival unit
     ArchivalUnit au = new SampleArchivalUnit(this, definitionMap);

@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.15 2005-10-07 16:19:55 thib_gc Exp $
+ * $Id: DefinablePlugin.java,v 1.16 2006-07-18 19:14:09 tlipkis Exp $
  */
 
 /*
@@ -126,7 +126,7 @@ public class DefinablePlugin extends BasePlugin {
     return auConfigDescrs;
   }
 
-  public ArchivalUnit createAu(Configuration auConfig)
+  protected ArchivalUnit createAu0(Configuration auConfig)
       throws ArchivalUnit.ConfigurationException {
     DefinableArchivalUnit au =
       new DefinableArchivalUnit(this, definitionMap, classLoader);

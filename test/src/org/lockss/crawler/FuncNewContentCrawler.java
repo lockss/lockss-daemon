@@ -1,5 +1,5 @@
 /*
- * $Id: FuncNewContentCrawler.java,v 1.16 2006-04-05 22:34:54 tlipkis Exp $
+ * $Id: FuncNewContentCrawler.java,v 1.17 2006-07-18 19:14:09 tlipkis Exp $
  */
 
 /*
@@ -197,7 +197,7 @@ public class FuncNewContentCrawler extends LockssTestCase {
   }
 
   public static class MySimulatedPlugin extends SimulatedPlugin {
-    public ArchivalUnit createAu(Configuration auConfig)
+    public ArchivalUnit createAu0(Configuration auConfig)
 	throws ArchivalUnit.ConfigurationException {
       ArchivalUnit au = new MySimulatedArchivalUnit(this);
       au.setConfiguration(auConfig);

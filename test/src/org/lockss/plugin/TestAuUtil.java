@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuUtil.java,v 1.4 2006-07-17 05:06:13 tlipkis Exp $
+ * $Id: TestAuUtil.java,v 1.5 2006-07-18 19:14:09 tlipkis Exp $
  */
 
 /*
@@ -193,7 +193,7 @@ public class TestAuUtil extends LockssTestCase {
       this.configDescrs = configDescrs;
     }
 
-    public ArchivalUnit createAu(Configuration auConfig) throws
+    protected ArchivalUnit createAu0(Configuration auConfig) throws
         ConfigurationException {
       MockArchivalUnit mau = new MockArchivalUnit();
       mau.setConfiguration(auConfig);

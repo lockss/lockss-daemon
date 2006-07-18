@@ -1,5 +1,5 @@
 /*
- * $Id: OaiPlugin.java,v 1.4 2005-10-11 05:45:13 tlipkis Exp $
+ * $Id: OaiPlugin.java,v 1.5 2006-07-18 19:14:10 tlipkis Exp $
  */
 
 /*
@@ -55,7 +55,7 @@ public class OaiPlugin extends BasePlugin {
   public OaiPlugin() {
   }
 
-  public ArchivalUnit createAu(Configuration auConfig)
+  protected ArchivalUnit createAu0(Configuration auConfig)
       throws ArchivalUnit.ConfigurationException {
     // create a new archival unit
     ArchivalUnit au = new OaiArchivalUnit(this);

@@ -1,5 +1,5 @@
 /*
- * $Id: RegistryPlugin.java,v 1.6 2006-07-17 05:09:43 tlipkis Exp $
+ * $Id: RegistryPlugin.java,v 1.7 2006-07-18 19:14:10 tlipkis Exp $
  */
 
 /*
@@ -60,7 +60,7 @@ public class RegistryPlugin extends BasePlugin {
   public RegistryPlugin() {
   }
 
-  public ArchivalUnit createAu(Configuration auConfig)
+  protected ArchivalUnit createAu0(Configuration auConfig)
       throws ArchivalUnit.ConfigurationException {
     // create a new archival unit
     ArchivalUnit au = newRegistryArchivalUnit();
@@ -68,7 +68,6 @@ public class RegistryPlugin extends BasePlugin {
     // Now configure it.
     au.setConfiguration(auConfig);
 
-    aus.add(au);
     return au;
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedPlugin.java,v 1.23 2005-07-27 18:23:22 smorabito Exp $
+ * $Id: SimulatedPlugin.java,v 1.24 2006-07-18 19:14:09 tlipkis Exp $
  */
 
 /*
@@ -285,7 +285,7 @@ public class SimulatedPlugin extends BasePlugin implements PluginTestable {
    * @throws ArchivalUnit.ConfigurationException if the configuration is
    * illegal in any way.
    */
-  public ArchivalUnit createAu(Configuration auConfig)
+  protected ArchivalUnit createAu0(Configuration auConfig)
       throws ArchivalUnit.ConfigurationException {
     log.debug("createAU(" + auConfig + ")");
     ArchivalUnit au = new SimulatedArchivalUnit(this);
