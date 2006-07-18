@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.91 2006-07-13 22:16:18 smorabito Exp $
+ * $Id: CrawlManagerImpl.java,v 1.92 2006-07-18 19:12:56 tlipkis Exp $
  */
 
 /*
@@ -553,7 +553,8 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     } catch (RuntimeException e) {
       // thrown by pool if can't execute (pool & queue full, or poll full
       // and no queue)
-      if (e.getMessage().endsWith("Pool is blocked")) {
+      if (e.getMessage() != null &&
+	  e.getMessage().endsWith("Pool is blocked")) {
 	logger.warning("Couldn't start/schedule " + au + " crawl: " +
 		       e.toString());
       } else {
@@ -639,6 +640,10 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 	// except for registry AUs, which always come first
 	sortOrder = -sortOrder;
       }
+    }
+
+    public Crawler getCrawler() {
+      return crawler;
     }
 
     public int getSortOrder() {
@@ -820,26 +825,36 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 	if (crawlStartIter == null || !crawlStartIter.hasNext()) {
 	  crawlStartIter = pluginMgr.getRandomizedAus().iterator();
 	}
+	for (Iterator iter = pluginMgr.getAllRegistryAus().iterator();
+	     iter.hasNext() && poolQueue.size() < paramPoolQueueSize; ) {
+	  ArchivalUnit au = (ArchivalUnit)iter.next();
+	  possiblyStartCrawl(au);
+	}
 	while (crawlStartIter.hasNext() &&
 	       poolQueue.size() < paramPoolQueueSize) {
 	  ArchivalUnit au = (ArchivalUnit)crawlStartIter.next();
-	  if (logger.isDebug3()) logger.debug3("checking au: " + au.getAuId());
-	  if (shouldCrawlForNewContent(au)) {
-	    CrawlManager.Callback rc = null;
-	    if (au instanceof RegistryArchivalUnit) {
-	      if (logger.isDebug3()) {
-		logger.debug3("AU " + au.getName() +
-			      " is a registry, adding callback.");
-	      }
-	      rc = new PluginManager.RegistryCallback(pluginMgr, au);
-	    }
-	    // Activity lock prevents AUs with pending crawls from being
-	    // queued twice.  If ActivityRegulator goes away some other
-	    // mechanism will be needed.
-	    startNewContentCrawl(au, rc, null, null);
+	  if (!pluginMgr.isInternalAu(au)) {
+	    possiblyStartCrawl(au);
 	  }
 	}
       }
+    }
+  }
+
+  void possiblyStartCrawl(ArchivalUnit au) {
+    if (logger.isDebug3()) logger.debug3("checking au: " + au.getAuId());
+    if (shouldCrawlForNewContent(au)) {
+      CrawlManager.Callback rc = null;
+      if (au instanceof RegistryArchivalUnit) {
+	if (logger.isDebug3()) {
+	  logger.debug3("Adding callback to registry AU: " + au.getName());
+	}
+	rc = new PluginManager.RegistryCallback(pluginMgr, au);
+      }
+      // Activity lock prevents AUs with pending crawls from being
+      // queued twice.  If ActivityRegulator goes away some other
+      // mechanism will be needed.
+      startNewContentCrawl(au, rc, null, null);
     }
   }
 

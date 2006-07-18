@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.61 2006-06-04 06:27:02 tlipkis Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.62 2006-07-18 19:12:56 tlipkis Exp $
  */
 
 /*
@@ -55,7 +55,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
   protected CachedUrlSet cus;
   protected CrawlSpec crawlSpec;
   protected CrawlManager.StatusSource statusSource;
-  protected PluginManager pluginMgr;
+  protected MyPluginManager pluginMgr;
   protected MockAuState maus;
   protected Plugin plugin;
   protected Properties cprops = new Properties();
@@ -68,21 +68,27 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     // to run.
     cprops.put(CrawlManagerImpl.PARAM_START_CRAWLS_INTERVAL, "0");
 
-    mau = new MockArchivalUnit();
-    mau.setPlugin(new MockPlugin());
+    plugin = new MockPlugin();
     crawlSpec = new SpiderCrawlSpec("blah", new MockCrawlRule());
-    mau.setCrawlSpec(crawlSpec);
-    plugin = mau.getPlugin();
 
     crawlManager = new TestableCrawlManagerImpl();
     statusSource = (CrawlManager.StatusSource)crawlManager;
     theDaemon = getMockLockssDaemon();
     nodeManager = new MockNodeManager();
-    theDaemon.setNodeManager(nodeManager, mau);
 
-    pluginMgr = new PluginManager();
+    pluginMgr = new MyPluginManager();
     pluginMgr.initService(theDaemon);
     theDaemon.setPluginManager(pluginMgr);
+
+    crawlManager.initService(theDaemon);
+
+  }
+
+  void setUpMockAu() {
+    mau = new MockArchivalUnit();
+    mau.setPlugin(plugin);
+    mau.setCrawlSpec(crawlSpec);
+    theDaemon.setNodeManager(nodeManager, mau);
 
     PluginTestUtil.registerArchivalUnit(plugin, mau);
     activityRegulator = new MyMockActivityRegulator(mau);
@@ -90,7 +96,6 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     theDaemon.setActivityRegulator(activityRegulator, mau);
     theDaemon.setLockssRepository(new MockLockssRepository(), mau);
 
-    crawlManager.initService(theDaemon);
 
     cus = mau.makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(GENERIC_URL));
     activityRegulator.setStartCusActivity(cus, true);
@@ -141,6 +146,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
   public static class TestsWithAutoStart extends TestCrawlManagerImpl {
     public void setUp() throws Exception {
       super.setUp();
+      setUpMockAu();
       crawlManager.startService();
     }
 
@@ -655,7 +661,12 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 
   public static class TestsWithoutAutoStart extends TestCrawlManagerImpl {
 
+    public void setUp() throws Exception {
+      super.setUp();
+    }
+
     public void testNoQueuePoolSize(int max) {
+      setUpMockAu();
       cprops.put(CrawlManagerImpl.PARAM_CRAWLER_QUEUE_ENABLED, "false");
       cprops.put(CrawlManagerImpl.PARAM_CRAWLER_THREAD_POOL_MAX,
 		 Integer.toString(max));
@@ -711,6 +722,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     }
 
     public void testQueuedPool(int qMax, int poolMax) {
+      setUpMockAu();
       int tot = qMax + poolMax;
       cprops.put(CrawlManagerImpl.PARAM_CRAWLER_QUEUE_ENABLED, "true");
       cprops.put(CrawlManagerImpl.PARAM_CRAWLER_THREAD_POOL_MAX,
@@ -798,6 +810,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     }
 
     public void testCrawlStarter(int qMax, int poolMax) {
+      assertEmpty(pluginMgr.getAllAus());
       int tot = qMax + poolMax;
       Properties p = new Properties();
       p.put(CrawlManagerImpl.PARAM_CRAWLER_QUEUE_ENABLED,
@@ -816,24 +829,28 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       SimpleBinarySemaphore endSem = new SimpleBinarySemaphore();
       semToGive(endSem);
       crawlManager.recordExecute(true);
+      assertEmpty(pluginMgr.getAllAus());
       // Create AUs and build the pieces necessary for the crawl starter to
       // get the list of AUs from the PluginManager and a NodeManager and
       // Activityregulator for each.  The crawl starter should then shortly
       // start poolMax of them.  We only check that it called
       // startNewContentCrawl() on each.
-      for (int ix = 0; ix < tot; ix++) {
+      for (int ix = 0; ix < tot-1; ix++) {
 	crawler[ix] = new HangingCrawler("testQueuedPool " + ix,
 					 null, endSem);
 	MockArchivalUnit au = newMockArchivalUnit("mau" + ix);
-// 	au.setAuId("mau" + ix);
 	au.setCrawlSpec(crawlSpec);
-	MockActivityRegulator act = new MockActivityRegulator(au);
-	act.setStartAuActivity(true);
-	theDaemon.setActivityRegulator(act, au);
-// 	theDaemon.setNodeManager(new MockNodeManager(), au);
-	crawlManager.setTestCrawler(au, crawler[ix]);
+	setupAuToCrawl(au, crawler[ix]);
 	PluginTestUtil.registerArchivalUnit(plugin, au);
       }
+      // Last one is a RegistryArchivalUnit crawl
+      RegistryArchivalUnit rau =
+	new MyRegistryArchivalUnit(new RegistryPlugin());
+      crawler[tot-1] = new HangingCrawler("testQueuedPool(reg au) " + (tot-1),
+					 null, endSem);
+      setupAuToCrawl(rau, crawler[tot-1]);
+      pluginMgr.addRegistryAu(rau);
+      
       // Ensure they all got queued
       List exe = Collections.EMPTY_LIST;
       Interrupter intr = interruptMeIn(TIMEOUT_SHOULDNT, true);
@@ -848,6 +865,28 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 		    intr.did());
       }
       intr.cancel();
+      assertEquals(SetUtil.fromArray(crawler),
+		   SetUtil.theSet(crawlersOf(exe)));
+      // The registry au crawl should always be first
+      assertEquals(crawler[tot-1], crawlersOf(exe).get(0));
+    }
+
+    void setupAuToCrawl(ArchivalUnit au, MockCrawler crawler) {
+      MockActivityRegulator act = new MockActivityRegulator(au);
+      act.setStartAuActivity(true);
+      theDaemon.setActivityRegulator(act, au);
+      theDaemon.setNodeManager(new MockNodeManager(), au);
+      crawlManager.setTestCrawler(au, crawler);
+    }
+
+    List crawlersOf(List runners) {
+      List res = new ArrayList();
+      for (Iterator iter = runners.iterator(); iter.hasNext(); ) {
+	CrawlManagerImpl.CrawlRunner runner =
+	  (CrawlManagerImpl.CrawlRunner)iter.next();
+	res.add(runner.getCrawler());
+      }
+      return res;
     }
 
     static LockssRandom random = new LockssRandom();
@@ -868,6 +907,34 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       testCrawlStarter(10, 3);
     }
 
+  }
+
+  class MyRegistryArchivalUnit extends RegistryArchivalUnit {
+    MyRegistryArchivalUnit(RegistryPlugin plugin) {
+      super(plugin);
+      try {
+	setConfiguration(ConfigurationUtil.fromArgs(ConfigParamDescr.BASE_URL.getKey(), "http://foo.bar/"));
+      } catch (ArchivalUnit.ConfigurationException e) {
+	throw new RuntimeException("setConfiguration()", e);
+      }
+    }
+  }
+
+  class MyPluginManager extends PluginManager {
+    private List registryAus;
+    public Collection getAllRegistryAus() {
+      if (registryAus == null) {
+	return super.getAllRegistryAus();
+      } else {
+	return registryAus;
+      }
+    }
+    public void addRegistryAu(ArchivalUnit au) {
+      if (registryAus == null) {
+	registryAus = new ArrayList();
+      }
+      registryAus.add(au);
+    }
   }
 
   class MyMockActivityRegulator extends MockActivityRegulator {
@@ -950,6 +1017,10 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       return crawler;
     }
 
+    protected boolean shouldCrawlForNewContent(ArchivalUnit au) {
+      return true;
+    }
+
     protected void execute(Runnable run) {
       if (recordExecute) {
 	executed.add(run);
@@ -1019,11 +1090,8 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 
     public boolean doCrawl() {
       if (sem1 != null) sem1.give();
-      if (sem2 != null) {
-	return sem2.take();
-      } else {
-	return true;
-      }
+      if (sem2 != null) sem2.take();
+      return false;
     }
 
     public String toString() {
