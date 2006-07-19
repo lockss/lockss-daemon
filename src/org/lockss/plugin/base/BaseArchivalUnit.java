@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.105 2006-07-17 07:43:33 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.106 2006-07-19 05:56:22 tlipkis Exp $
  */
 
 /*
@@ -99,7 +99,12 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   public static final long
     MIN_FETCH_DELAY = 6 * Constants.SECOND;
 
-  public static final String DEFAULT_FETCH_RATE_LIMITER_SOURCE = "au";
+  /** Default fetch rate limiter source for plugins that don't specify
+   * au_fetch_rate_limiter_source.  Can be "au" or "plugin"; default is
+   * "au". */
+  public static final String PARAM_DEFAULT_FETCH_RATE_LIMITER_SOURCE = 
+    Configuration.PREFIX+"baseau.defaultFetchRateLimiterSource";
+  public static final String DEFAULT_DEFAULT_FETCH_RATE_LIMITER_SOURCE = "au";
 
   //Short term conf parameter to get around the fact that DefinablePlugins
   //don't load crawl windows
@@ -497,9 +502,11 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   protected RateLimiter recomputeFetchRateLimiter(RateLimiter oldLimiter) {
     RateLimiter limit;
     long interval = paramMap.getLong(AU_FETCH_DELAY, defaultFetchDelay);
+    String defaultSource =
+      CurrentConfig.getParam(PARAM_DEFAULT_FETCH_RATE_LIMITER_SOURCE,
+			     DEFAULT_DEFAULT_FETCH_RATE_LIMITER_SOURCE);
     String limiterSource = 
-      paramMap.getString(AU_FETCH_RATE_LIMITER_SOURCE,
-			 DEFAULT_FETCH_RATE_LIMITER_SOURCE);
+      paramMap.getString(AU_FETCH_RATE_LIMITER_SOURCE, defaultSource);
     if (logger.isDebug3()) logger.debug3("Limiter source: " + limiterSource);
     if ("au".equalsIgnoreCase(limiterSource)) {
       limit = getLimiterWithRate(oldLimiter, 1, interval);
