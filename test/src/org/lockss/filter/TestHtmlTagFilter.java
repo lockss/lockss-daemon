@@ -1,5 +1,5 @@
 /*
- * $Id: TestHtmlTagFilter.java,v 1.4 2006-06-01 21:35:48 troberts Exp $
+ * $Id: TestHtmlTagFilter.java,v 1.5 2006-07-19 20:33:44 tlipkis Exp $
  */
 
 /*
@@ -36,7 +36,7 @@ import java.io.*;
 import java.util.*;
 
 import org.lockss.config.Configuration;
-import org.lockss.filter.HtmlTagFilter.TrailingTagException;
+import org.lockss.filter.HtmlTagFilter.MissingEndTagException;
 import org.lockss.test.*;
 import org.lockss.util.*;
 
@@ -53,8 +53,8 @@ public class TestHtmlTagFilter extends LockssTestCase {
   private static final HtmlTagFilter.TagPair tagPair2 =
     new HtmlTagFilter.TagPair(startTag2, endTag2);
 
-  private static final String PARAM_THROW_ON_TRAILING_TAG =
-    Configuration.PREFIX + "HtmlTagFilter.throwOnTrailingTag";
+  private static final String PARAM_THROW_IF_NO_END_TAG =
+    Configuration.PREFIX + "HtmlTagFilter.throwIfNoEndTag";
 
 
   
@@ -222,22 +222,26 @@ public class TestHtmlTagFilter extends LockssTestCase {
 		       new HtmlTagFilter.TagPair(startTag1, endTag1, true));
   }
 
-  public void testFiltersIgnoreEndTagWithNoStartTag() throws IOException {
+  public void testIgnoreEndTagWithNoStartTag() throws IOException {
     String content = "This is test "+endTag1+"content";
     String expectedContent = "This is test "+endTag1+"content";
     assertFilterString(expectedContent, content, tagPair1);
   }
 
-  public void testFiltersTrailingTagDefault() throws IOException {
+  public void testNoEndTagDefault() throws IOException {
     String content = "This "+startTag1+"is test content";
     String expectedContent = "This ";
-    assertFilterString(expectedContent, content, tagPair1);
+    try {
+      assertFilterString(expectedContent, content, tagPair1);
+      fail("Trying to filter content with missing end tag should throw");
+    } catch (HtmlTagFilter.MissingEndTagException ex) {
+      //expected
+    }
   }
-
   
-  public void testFiltersTrailingTagParamFalse() throws IOException {
+  public void testNoEndTagParamFalse() throws IOException {
     Properties p = new Properties();
-    p.setProperty(PARAM_THROW_ON_TRAILING_TAG, "false");
+    p.setProperty(PARAM_THROW_IF_NO_END_TAG, "false");
     ConfigurationUtil.setCurrentConfigFromProps(p);
 
     String content = "This "+startTag1+"is test content";
@@ -245,17 +249,17 @@ public class TestHtmlTagFilter extends LockssTestCase {
     assertFilterString(expectedContent, content, tagPair1);
   }
 
-  public void testFiltersTrailingTagParamTrue() throws IOException {
+  public void testNoEndTagParamTrue() throws IOException {
     Properties p = new Properties();
-    p.setProperty(PARAM_THROW_ON_TRAILING_TAG, "true");
+    p.setProperty(PARAM_THROW_IF_NO_END_TAG, "true");
     ConfigurationUtil.setCurrentConfigFromProps(p);
 
     String content = "This "+startTag1+"is test content";
     String expectedContent = "This ";
     try {
       assertFilterString(expectedContent, content, tagPair1);
-      fail("Trying to filter content without a trailing tag should throw");
-    } catch (HtmlTagFilter.TrailingTagException ex) {
+      fail("Trying to filter content with missing end tag should throw");
+    } catch (HtmlTagFilter.MissingEndTagException ex) {
       //expected
     }
   }

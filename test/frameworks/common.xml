@@ -41,9 +41,6 @@
   <!-- enclosing "org.lockss" so we don't have to repeat it -->
   <property name="org.lockss">
 
-    <!-- For release testing, throw if filter pair runs off the end -->
-    <property name="HtmlTagFilter.throwOnTrailingTag" value="true" />
-
     <!-- Try to get a thread dump if a thread hangs -->
     <property name="thread.hungThreadDump" value="true"/>
 

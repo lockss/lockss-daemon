@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlTagFilter.java,v 1.9 2006-06-01 21:35:48 troberts Exp $
+ * $Id: HtmlTagFilter.java,v 1.10 2006-07-19 20:33:44 tlipkis Exp $
  */
 
 /*
@@ -55,9 +55,9 @@ public class HtmlTagFilter extends Reader {
   public static final String PARAM_BUFFER_CAPACITY =
     Configuration.PREFIX + "filter.buffer_capacity";
 
-  private static final boolean DEFAULT_THROW_ON_TRAILING_TAG = false;
-  private static final String PARAM_THROW_ON_TRAILING_TAG =
-    Configuration.PREFIX + "HtmlTagFilter.throwOnTrailingTag";
+  public static final String PARAM_THROW_IF_NO_END_TAG =
+    Configuration.PREFIX + "HtmlTagFilter.throwIfNoEndTag";
+  public static final boolean DEFAULT_THROW_IF_NO_END_TAG = true;
 
   
   Reader reader;
@@ -77,7 +77,7 @@ public class HtmlTagFilter extends Reader {
   private boolean isClosed = false;
   private boolean isTrace = logger.isDebug3();
 
-  private boolean throwOnTrailingTag;
+  private boolean throwIfNoEndTag;
 
   private HtmlTagFilter(Reader reader) {
     if (reader == null) {
@@ -122,9 +122,9 @@ public class HtmlTagFilter extends Reader {
     charBuffer = new CharRing(bufferCapacity);
     ringSize = charBuffer.size();
  
-    throwOnTrailingTag = 
-      CurrentConfig.getBooleanParam(PARAM_THROW_ON_TRAILING_TAG,
-                                    DEFAULT_THROW_ON_TRAILING_TAG);
+    throwIfNoEndTag = 
+      CurrentConfig.getBooleanParam(PARAM_THROW_IF_NO_END_TAG,
+                                    DEFAULT_THROW_IF_NO_END_TAG);
   }
 
   /**
@@ -226,10 +226,11 @@ public class HtmlTagFilter extends Reader {
       charBuffer.skip(nskip);
       ringSize -= nskip;
     }
-    if (throwOnTrailingTag && tagNesting > 0 && streamDone && ringSize == 0) {
+    if (throwIfNoEndTag && tagNesting > 0 &&
+	streamDone && ringSize == 0) {
       //We've burned throught the rest of the file and we're still in the string
       //pair
-      throw new TrailingTagException("Trailing tag: "+endTag);
+      throw new MissingEndTagException("End tag not found: "+endTag);
     }    
   }
 
@@ -238,8 +239,8 @@ public class HtmlTagFilter extends Reader {
     reader.close();
   }
 
-  public static class TrailingTagException extends IOException {
-    public TrailingTagException(String msg) {
+  public static class MissingEndTagException extends IOException {
+    public MissingEndTagException(String msg) {
       super(msg);
     }
   }
