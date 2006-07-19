@@ -1,10 +1,10 @@
 /*
- * $Id: Crawler.java,v 1.38 2006-07-10 18:01:25 troberts Exp $
+ * $Id: Crawler.java,v 1.39 2006-07-19 00:47:53 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -57,9 +57,10 @@ public interface Crawler {
   public static final int OAI = 3;
 
   public static final String STATUS_QUEUED = "Pending";
-  public static final String STATUS_INCOMPLETE = "Active";
+  public static final String STATUS_ACTIVE = "Active";
   public static final String STATUS_SUCCESSFUL = "Successful";
   public static final String STATUS_ERROR = "Error";
+  public static final String STATUS_ABORTED = "Aborted";
   public static final String STATUS_WINDOW_CLOSED = "Crawl window closed";
   public static final String STATUS_FETCH_ERROR = "Fetch error";
   public static final String STATUS_NO_PUB_PERMISSION = "No permission from publisher";
@@ -302,7 +303,7 @@ public interface Crawler {
       if (startTime == -1) {
 	return Crawler.STATUS_QUEUED;
       } else if (endTime == -1) {
-	return Crawler.STATUS_INCOMPLETE;
+	return Crawler.STATUS_ACTIVE;
       } else if (crawlError != null) {
 	return crawlError;
       }
@@ -315,6 +316,10 @@ public interface Crawler {
 
     public synchronized void signalErrorForUrl(String url, String error) {
       urlsWithErrors.put(url, error);
+    }
+
+    public synchronized String getErrorForUrl(String url) {
+      return (String)urlsWithErrors.get(url);
     }
 
     public String getCrawlError() {

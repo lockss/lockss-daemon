@@ -1,10 +1,10 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.40 2006-07-10 18:01:25 troberts Exp $
+ * $Id: FollowLinkCrawler.java,v 1.41 2006-07-19 00:47:53 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -206,7 +206,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
       urlsToCrawl = extractedUrls;
     }
 
-    while (lvlCnt <= maxDepth && !urlsToCrawl.isEmpty() ) {
+    while (lvlCnt <= maxDepth && !urlsToCrawl.isEmpty() && !crawlAborted) {
 
       logger.debug2("Crawling at level " + lvlCnt);
       extractedUrls = new HashSet(); // level (N+1)'s Urls
@@ -226,6 +226,10 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	  crawlRes = fetchAndParse(nextUrl, extractedUrls,
 				   parsedPages, false, alwaysReparse);
 	} catch (RuntimeException e) {
+	  if (crawlAborted) {
+	    logger.debug("Expected exception while aborting crawl: " + e);
+	    return aborted();
+	  }
 	  logger.warning("Unexpected exception in crawl", e);
 	}
 	urlsToCrawl.remove(nextUrl);
@@ -244,7 +248,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
       lvlCnt++;
     } // end of outer while
 
-    if (!urlsToCrawl.isEmpty() ) {
+    if (!urlsToCrawl.isEmpty() && !crawlAborted) {
       //when there are more Url to crawl in  new content crawl or follow link moded oai crawl
       logger.error("Site depth exceeds max. crawl depth. Stopped Crawl of " +
 		   au.getName() + " at depth " + lvlCnt);
@@ -254,7 +258,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
     logger.info("Crawled depth = " + lvlCnt);
 
     if (crawlAborted) {
-        return aborted();
+      return aborted();
     }
 
     if (crawlStatus.getCrawlError() != null) {
@@ -354,13 +358,16 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	  return false;
 	}
       } catch (Exception ex) {
-	failedUrls.add(uc.getUrl());
-	crawlStatus.signalErrorForUrl(uc.getUrl(), ex.toString());
-	//XXX not expected
-	logger.error("Unexpected Exception during crawl, continuing", ex);
-	error = Crawler.STATUS_FETCH_ERROR;
+	if (crawlAborted) {
+	  logger.debug("Expected exception while aborting crawl: " + ex);
+	} else {
+	  failedUrls.add(uc.getUrl());
+	  crawlStatus.signalErrorForUrl(uc.getUrl(), ex.toString());
+	  //XXX not expected
+	  logger.error("Unexpected Exception during crawl, continuing", ex);
+	  error = Crawler.STATUS_FETCH_ERROR;
+	}
       }
-
     } else {
       if (wdog != null) {
 	wdog.pokeWDog();

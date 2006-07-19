@@ -1,10 +1,10 @@
 /*
- * $Id: TestCrawlManagerStatusAccessor.java,v 1.3 2006-07-17 05:05:43 tlipkis Exp $
+ * $Id: TestCrawlManagerStatusAccessor.java,v 1.4 2006-07-19 00:47:53 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -312,7 +312,7 @@ public class TestCrawlManagerStatusAccessor extends LockssTestCase {
     StatusTable table = new StatusTable("test");
 
     MockCrawlStatus status = makeStatus(NC_TYPE,
-					Crawler.STATUS_INCOMPLETE);
+					Crawler.STATUS_ACTIVE);
 
     MockCrawlStatus status2 = makeStatus(REPAIR_TYPE,
 					Crawler.STATUS_SUCCESSFUL);
