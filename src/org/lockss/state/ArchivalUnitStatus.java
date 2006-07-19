@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.39 2006-07-19 00:45:33 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.40 2006-07-19 05:55:45 tlipkis Exp $
  */
 
 /*
@@ -296,14 +296,20 @@ public class ArchivalUnitStatus
         throws StatusService.NoSuchTableException {
       table.setColumnDescriptors(columnDescriptors);
       table.setDefaultSortRules(sortRules);
-      table.setRows(getRows(table));
+      Stats stats = new Stats();
+      table.setRows(getRows(table, stats));
+      table.setSummaryInfo(getSummaryInfo(stats));
     }
 
     public boolean requiresKey() {
       return false;
     }
 
-    private List getRows(StatusTable table) {
+    class Stats {
+      int aus = 0;
+    }
+
+    private List getRows(StatusTable table, Stats stats) {
       PluginManager pluginMgr = theDaemon.getPluginManager();
 
       boolean includeInternalAus =
@@ -317,6 +323,7 @@ public class ArchivalUnitStatus
 	}
 	try {
 	  rowL.add(makeRow(au));
+	  stats.aus++;
 	} catch (Exception e) {
 	  logger.warning("Unexpected expection building row", e);
 	}
@@ -329,6 +336,15 @@ public class ArchivalUnitStatus
       rowMap.put("AuId", au.getAuId());
       rowMap.put("AuName", au.getName());
       return rowMap;
+    }
+
+    private List getSummaryInfo(Stats stats) {
+      String numaus = StringUtil.numberOfUnits(stats.aus, "Archival Unit",
+					       "Archival Units");
+      return
+	ListUtil.list(new StatusTable.SummaryInfo(null,
+						  ColumnDescriptor.TYPE_STRING,
+						  numaus));
     }
   }
 
