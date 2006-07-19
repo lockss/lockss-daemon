@@ -1,5 +1,5 @@
 /*
- * $Id: RateLimiter.java,v 1.10 2006-07-17 05:07:44 tlipkis Exp $
+ * $Id: RateLimiter.java,v 1.11 2006-07-19 05:55:28 tlipkis Exp $
  */
 
 /*
@@ -50,20 +50,20 @@ import org.lockss.config.Configuration;
 public class RateLimiter {
   static Logger log = Logger.getLogger("RateLimiter");
 
-  /** An instance of a RateLimiter that allows events at an unlimited
-   * rate. */
-  public static RateLimiter UNLIMITED = new RateLimiter.Unlimited();
+  /** A RateLimiter that allows events at an unlimited rate. */
+  public final static RateLimiter UNLIMITED = new Constant("unlimited");
 
   private int events;			// limit on events / interval
   private long interval;
-  private long time[];			// history of (events) event times
+  private long time[];			// history of (events) event times,
+					// or null if unlimited
   private int count = 0;
   private String rate;
 
   /** Create a RateLimiter according to the specified configuration parameters.
    * @param config the Configuration object
-   * @param currentLimiter optional existing RateLimiter, return if it
-   * matches the current config values
+   * @param currentLimiter optional existing RateLimiter, modified if
+   * necessary
    * @param maxEventsParam name of the parameter specifying the maximum
    * number of events per interval
    * @param intervalParam name of the parameter specifying the length of
@@ -71,7 +71,8 @@ public class RateLimiter {
    * @param maxEvantDefault default maximum number of events per interval,
    * if config param has no value
    * @param intervalDefault default interval, if config param has no value
-   * @return a new RateLimiter, or the existing one if it's the same
+   * @return a new RateLimiter iff currentLimiter is null, else
+   * currentLimiter, possible reset to a new rate
    */
   public static RateLimiter
     getConfiguredRateLimiter(Configuration config, RateLimiter currentLimiter,
@@ -92,13 +93,14 @@ public class RateLimiter {
    * parameter, whose value should be a string:
    * <i>events</i>/<i>time-interval</i>.
    * @param config the Configuration object
-   * @param currentLimiter optional existing RateLimiter, return if it
-   * matches the current config value
+   * @param currentLimiter optional existing RateLimiter, modified if
+   * necessary
    * @param param name of the rate string config parameter
    * @param dfault default rate string
-   * @return a new RateLimiter, or the existing one if it's the same
-   * @throws RuntimeException iff the default string is unparseable and the
-   * parameter value is either empty or unparseable.
+   * @return a new RateLimiter iff currentLimiter is null, else
+   * currentLimiter, possible reset to a new rate
+   * @throws RuntimeException if the parameter value is either empty or
+   * unparseable and the default string is unparseable
    */
   public static RateLimiter
     getConfiguredRateLimiter(Configuration config, RateLimiter currentLimiter,
@@ -116,31 +118,18 @@ public class RateLimiter {
   /** Create a RateLimiter according to the rate string:
    * <i>events</i>/<i>time-interval</i>.
    * @param rate the rate string
+   * @param dfault default rate string
    * @return a new RateLimiter
-   * @throws RuntimeException iff the dfault rate string is illegal
-   */
-   public static RateLimiter makeRateLimiter(String rate) {
-    if ("unlimited".equalsIgnoreCase(rate)) {
-      return UNLIMITED;
-    }
-    Ept ept = new Ept(rate);
-    return new RateLimiter(ept.events, ept.interval, rate);
-  }
-
-  /** Create a RateLimiter according to the rate string:
-   * <i>events</i>/<i>time-interval</i>.
-   * @param rate the rate string
-   * @return a new RateLimiter, or the existing one if it's the same
    * @throws RuntimeException iff the rate string is either empty or
-   * unparseable.
+   * unparseable and the default string is unparseable.
    */
    public static RateLimiter makeRateLimiter(String rate, String dfault) {
     try {
-      return makeRateLimiter(rate);
+      return new RateLimiter(rate);
     } catch (RuntimeException e) {
       log.warning("Rate (" + rate +
 		  ") illegal, using default (" + dfault + ")");
-      return makeRateLimiter(dfault);
+      return new RateLimiter(dfault);
     }
   }
 
@@ -149,12 +138,17 @@ public class RateLimiter {
     private int events;
     private long interval;
     Ept(String rate) {
-      List pair = StringUtil.breakAt(rate, '/', 3, false, true);
-      if (pair.size() != 2) {
-	throw new IllegalArgumentException("Rate not n/interval: " + rate);
+      if ("unlimited".equalsIgnoreCase(rate)) {
+	events = 0;
+	interval = 0;
+      } else {
+	List pair = StringUtil.breakAt(rate, '/', 3, false, true);
+	if (pair.size() != 2) {
+	  throw new IllegalArgumentException("Rate not n/interval: " + rate);
+	}
+	events = Integer.parseInt((String)pair.get(0));
+	interval = StringUtil.parseTimeInterval((String)pair.get(1));
       }
-      events = Integer.parseInt((String)pair.get(0));
-      interval = StringUtil.parseTimeInterval((String)pair.get(1));
     }
   }
 
@@ -164,19 +158,36 @@ public class RateLimiter {
    * @param interval length of interval in milliseconds
    */
   public RateLimiter(int events, long interval) {
-    checkRate(events, interval);
-    this.events = events;
-    this.interval = interval;
-    time = new long[events];
-    Arrays.fill(time, 0);
+    checkRate(events, interval, false);
+    init(events, interval);
   }
 
-  private RateLimiter(int events, long interval, String rate) {
-    this(events, interval);
+  /** Create a RateLimiter that limits events to the specified rate
+   * @param rate the rate string, <i>events</i>/<i>time-interval</i>.
+   */
+  public RateLimiter(String rate) {
+    Ept ept = new Ept(rate);
+    checkRate(ept.events, ept.interval, true);
+    init(ept.events, ept.interval);
     this.rate = rate;
   }
 
-  private void checkRate(int events, long interval) {
+  private void init(int events, long interval) {
+    this.events = events;
+    this.interval = interval;
+    if (interval != 0) {
+      time = new long[events];
+      Arrays.fill(time, 0);
+    } else {
+      time = null;
+    }
+    count = 0;
+  }
+
+  private void checkRate(int events, long interval, boolean allowUnlimited) {
+    if (allowUnlimited && events == 0 && interval == 0) {
+      return;
+    }
     if (events < 1) {
       throw new IllegalArgumentException("events: " + events);
     }
@@ -215,13 +226,14 @@ public class RateLimiter {
 
   /** Return true iff the rate limiter imposes no limit */
   public boolean isUnlimited() {
-    return false;
+    return time == null;
   }
 
   /** Change the rate */
   public synchronized void setRate(String newRate) {
     if (!isRate(newRate)) {
       Ept ept = new Ept(newRate);
+      checkRate(ept.events, ept.interval, true);
       setRate0(ept.events, ept.interval);
       rate = newRate;
     }
@@ -233,11 +245,13 @@ public class RateLimiter {
       Ept ept;
       try {
 	ept = new Ept(newRate);
+	checkRate(ept.events, ept.interval, true);
       } catch (RuntimeException e) {
 	log.warning("Configured rate (" + rate +
 		    ") illegal, using default (" + dfault + ")");
 	newRate = dfault;
 	ept = new Ept(newRate);
+	checkRate(ept.events, ept.interval, true);
       }
       setRate0(ept.events, ept.interval);
       rate = newRate;
@@ -247,14 +261,21 @@ public class RateLimiter {
   /** Change the rate */
   public synchronized void setRate(int newEvents, long newInterval) {
     if (!isRate(newEvents, newInterval)) {
+      checkRate(newEvents, newInterval, false);
       setRate0(newEvents, newInterval);
       rate = null;
     }
   }
 
   private void setRate0(int newEvents, long newInterval) {
-    checkRate(newEvents, newInterval);
-    this.interval = newInterval;
+    if (newInterval != this.interval) {
+      if (newInterval == 0 || this.interval == 0) {
+	init(newEvents, newInterval);
+	return;
+      } else {
+	this.interval = newInterval;
+      }
+    }
     if (events != newEvents) {
       this.time = resizeEventArray(time, count, newEvents);
       this.events = newEvents;
@@ -287,17 +308,25 @@ public class RateLimiter {
 
   /** Record an occurrence of the event */
   public synchronized void event() {
-    time[count] = TimeBase.nowMs();
-    count = (count + 1) % events;
+    if (!isUnlimited()) {
+      time[count] = TimeBase.nowMs();
+      count = (count + 1) % events;
+    }
   }
 
   /** Return true if an event could occur now without exceeding the limit */
   public synchronized boolean isEventOk() {
+    if (isUnlimited()) {
+      return true;
+    }
     return time[count] == 0 || TimeBase.msSince(time[count]) >= interval;
   }
 
   /** Return the amount of time until the next event is allowed */
   public synchronized long timeUntilEventOk() {
+    if (isUnlimited()) {
+      return 0;
+    }
     long res = TimeBase.msUntil(time[count] + interval);
     return (res > 0) ? res : 0;
   }
@@ -313,6 +342,9 @@ public class RateLimiter {
   }
 
   public String rateString() {
+    if (isUnlimited()) {
+      return "unlimited";
+    }
     return events + "/" + StringUtil.timeIntervalToString(interval);
   }
 
@@ -320,35 +352,37 @@ public class RateLimiter {
     return "[RL: " + getRate() + "]";
   }
 
-  /** A RateLimiter that imposes no limit */
-  static class Unlimited extends RateLimiter {
-    public Unlimited() {
-      super(1, 1);
-    }
-    public void event() {
-    }
-    public boolean isEventOk() {
-      return true;
-    }
-    public long timeUntilEventOk() {
-      return 0;
-    }
-    public int getLimit() {
-      return 0;
+  /** A RateLimiter whose rate cannot be reset */
+  static class Constant extends RateLimiter {
+    public Constant(int events, long interval) {
+      super(events, interval);
     }
 
-    public long getInterval() {
-      return 0;
+    public Constant(String rate) {
+      super(rate);
     }
 
-    public boolean isUnlimited() {
-      return true;
+    public void setRate(String newRate) {
+      ill();
+    }
+
+    public void setRate(String newRate, String dfault) {
+      ill();
+    }
+
+    public void setRate(int newEvents, long newInterval) {
+      ill();
+    }
+
+    private void ill() {
+      throw new
+	UnsupportedOperationException("Can't change constant RateLimiter");
     }
   }
 
   private static Pool pool = new Pool();
 
-  /** Return the pool of shared, named RateLimiters */
+  /** Return the {@link RateLimiter.Pool} of shared, named RateLimiters */
   public static Pool getPool() {
     return pool;
   }
@@ -380,7 +414,7 @@ public class RateLimiter {
      * server name)
      * @param rate the rate to which a new RateLimiter will be set, or an
      * existing one reset.
-     * @param rate the default rate to use if the rate is illegal.
+     * @param dfault the default rate to use if the rate is illegal.
      * @throws IllegalArgumentException if the default rate if illegal */
     public synchronized RateLimiter findNamedRateLimiter(Object key,
 							 String rate,
@@ -399,7 +433,7 @@ public class RateLimiter {
      * @param key An object that identifies the shared resource which which
      * the RateLimiter should be associated (<i>eg</i>, plugin, host name,
      * server name)
-     * @param event the numerator of the rate to which a new RateLimiter
+     * @param events the numerator of the rate to which a new RateLimiter
      * will be set, or an existing one reset.
      * @param interval the denominator of the rate to which a new
      * RateLimiter will be set, or an existing one reset.
@@ -416,6 +450,5 @@ public class RateLimiter {
       }
       return limiter;
     }
-
   }
 }
