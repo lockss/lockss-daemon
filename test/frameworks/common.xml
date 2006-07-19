@@ -530,104 +530,10 @@
 	  ]"
 	  />
       </property>
-      <property name="freenew">
-        <property name="name" value="All Free Titles new" />
+      <property name="free">
+        <property name="name" value="All Open Access Titles" />
         <property name="class" value="xpath" />
 	<property name="xpath" value="[attributes/rights='openaccess']" />
-      </property>
-      <property name="free">
-	<property name="name" value="All Free Titles" />
-	<property name="class" value="xpath" />
-	<property name="xpath"
-	  value="[
-	  pluginName='org.lockss.plugin.absinthe.AbsinthePlugin'
-	  or pluginName='edu.upenn.library.plugin.annualofurdustudies.AnnualOfUrduStudiesPlugin'
-	  or pluginName='edu.upenn.library.plugin.hnet.HNetPlugin'
-	  or pluginName='edu.fcla.plugin.arkivoc.ArkivocPlugin'
-	  or pluginName='edu.wisc.library.plugin.BigBridgePlugin'
-	  or pluginName='edu.wisc.library.plugin.BigBridgeVol1Plugin'
-	  or pluginName='edu.princeton.plugin.bmcr.BMCRPlugin'
-	  or pluginName='edu.upenn.library.plugin.clcweb.CLCWebPlugin'
-	  or pluginName='edu.wisc.library.plugin.CortlandReviewPlugin'
-	  or pluginName='edu.wisc.library.plugin.CortlandReview00Plugin'
-	  or pluginName='edu.wisc.library.plugin.CortlandReview99Plugin'
-	  or pluginName='edu.wisc.library.plugin.CortlandReview98Plugin'
-	  or pluginName='org.lockss.plugin.clogic.CulturalLogicPlugin'
-	  or pluginName='gov.loc.plugin.CJPentecostalCharismaticResearchPlugin'
-	  or pluginName='org.lockss.plugin.disputatio.DisputatioPlugin'
-	  or pluginName='org.lockss.plugin.emls.EmlsPlugin'
-	  or pluginName='org.lockss.plugin.ojs.OJSPlugin'
-	  or pluginName='org.lockss.plugin.GendersPlugin'
-	  or pluginName='edu.yale.library.lockss.plugin.intermarium.IntermariumPlugin'
-	  or pluginName='edu.indiana.lib.plugin.jcjpc.JcjpcPlugin'
-	  or pluginName='edu.indiana.lib.plugin.mto.MTOPlugin'
-	  or pluginName='edu.columbia.plugin.JiwsPlugin'
-	  or pluginName='edu.harvard.plugin.jrs.JRSPlugin'
-	  or pluginName='edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin'
-	  or pluginName='edu.harvard.plugin.WorldHaikuReview.WorldHaikuReviewPlugin'
-  	  or pluginName='edu.yale.library.lockss.plugin.mitejmes.MITEJMESPlugin'
-	  or pluginName='org.molvis.plugin.MolVisPlugin'
-	  or pluginName='org.lockss.plugin.othervoices.OtherVoicesPlugin'
-	  or pluginName='org.nypl.plugin.failbetter.FailbetterPlugin'
-	  or pluginName='org.nypl.plugin.PoetryBayPlugin'
-	  or pluginName='gov.loc.plugin.TESLEJPlugin'
-	  or pluginName='org.nypl.plugin.WordsWithoutBordersPlugin'
-	  or pluginName='edu.nyu.plugin.LeedsICSPlugin'
-	  or pluginName='edu.jhu.library.plugin.MedievalForumPlugin'
-	  or pluginName='edu.cornell.library.jbe.JBEPlugin'
-	  or pluginName='edu.cornell.library.epr.EPRPlugin2001'
-	  or pluginName='edu.cornell.library.epr.EPRPlugin2002On'
-	  or pluginName='org.lockss.plugin.jmir.JMIRPlugin'
-	  or pluginName='edu.cornell.library.plugin.epr.EPRPlugin2001'
-	  or pluginName='edu.princeton.plugin.ncaw.19thCenturyArtWorldwidePlugin'
-	  or pluginName='org.lockss.plugin.msr.MSRPlugin'
-	  ]"
-	  />
-      </property>
-
-      <property name="humanities">
-	<property name="name" value="All Humanities Project Titles" />
-	<property name="class" value="xpath" />
-	<property name="xpath"
-	  value="[
-	  pluginName='org.lockss.plugin.absinthe.AbsinthePlugin'
-	  or pluginName='edu.upenn.library.plugin.annualofurdustudies.AnnualOfUrduStudiesPlugin'
-	  or pluginName='edu.upenn.library.plugin.hnet.HNetPlugin'
-	  or pluginName='edu.fcla.plugin.arkivoc.ArkivocPlugin'
-	  or pluginName='edu.wisc.library.plugin.BigBridgePlugin'
-	  or pluginName='edu.wisc.library.plugin.BigBridgeVol1Plugin'
-	  or pluginName='edu.princeton.plugin.bmcr.BMCRPlugin'
-	  or pluginName='edu.upenn.library.plugin.clcweb.CLCWebPlugin'
-	  or pluginName='edu.wisc.library.plugin.CortlandReviewPlugin'
-	  or pluginName='edu.wisc.library.plugin.CortlandReview00Plugin'
-	  or pluginName='edu.wisc.library.plugin.CortlandReview99Plugin'
-	  or pluginName='edu.wisc.library.plugin.CortlandReview98Plugin'
-	  or pluginName='org.lockss.plugin.clogic.CulturalLogicPlugin'
-	  or pluginName='gov.loc.plugin.CJPentecostalCharismaticResearchPlugin'
-	  or pluginName='org.lockss.plugin.disputatio.DisputatioPlugin'
-	  or pluginName='org.lockss.plugin.emls.EmlsPlugin'
-	  or pluginName='org.lockss.plugin.ojs.OJSPlugin'
-	  or pluginName='org.lockss.plugin.GendersPlugin'
-	  or pluginName='edu.yale.library.lockss.plugin.intermarium.IntermariumPlugin'
-	  or pluginName='edu.indiana.lib.plugin.jcjpc.JcjpcPlugin'
-	  or pluginName='edu.indiana.lib.plugin.mto.MTOPlugin'
-	  or pluginName='edu.columbia.plugin.JiwsPlugin'
-	  or pluginName='edu.harvard.plugin.jrs.JRSPlugin'
-	  or pluginName='edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin'
-	  or pluginName='edu.harvard.plugin.WorldHaikuReview.WorldHaikuReviewPlugin'
-  	  or pluginName='edu.yale.library.lockss.plugin.mitejmes.MITEJMESPlugin'
-	  or pluginName='org.molvis.plugin.MolVisPlugin'
-	  or pluginName='org.lockss.plugin.othervoices.OtherVoicesPlugin'
-	  or pluginName='org.nypl.plugin.failbetter.FailbetterPlugin'
-	  or pluginName='org.nypl.plugin.PoetryBayPlugin'
-	  or pluginName='gov.loc.plugin.TESLEJPlugin'
-	  or pluginName='org.nypl.plugin.WordsWithoutBordersPlugin'
-	  or pluginName='edu.nyu.plugin.LeedsICSPlugin'
-	  or pluginName='edu.jhu.library.plugin.MedievalForumPlugin'
-	  or pluginName='edu.cornell.library.jbe.JBEPlugin'
-	  or pluginName='edu.cornell.library.epr.EPRPlugin2001'
-	  ]"
-	  />
       </property>
 <!--
       <property name="2">
