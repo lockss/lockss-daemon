@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.92 2006-07-18 19:12:56 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.93 2006-07-19 00:47:00 tlipkis Exp $
  */
 
 /*
@@ -729,13 +729,14 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     if (crawlStarter != null) {
       logger.debug("Crawl starter already running; stopping old one first");
       disableCrawlStarter();
-    } else {
-      logger.info("Starting crawl starter");
     }
     if (paramStartCrawlsInterval > 0) {
+      logger.info("Starting crawl starter");
       crawlStarter = new CrawlStarter();
       new Thread(crawlStarter).start();
       isCrawlStarterEnabled = true;
+    } else {
+      logger.info("Crawl starter not enabled");
     }
   }
 
@@ -781,7 +782,9 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 	try {
 	  logger.debug("Waiting until AUs started");
 	  theDaemon.waitUntilAusStarted();
-	  Deadline.in(paramStartCrawlsInitialDelay).sleep();
+	  Deadline initial = Deadline.in(paramStartCrawlsInitialDelay);
+	  cmStatus.setNextCrawlStarter(initial);
+	  initial.sleep();
 	} catch (InterruptedException e) {
 	  // just wakeup and check for exit
 	}
@@ -790,6 +793,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 // 	pokeWDog();
 	startSomeCrawls();
 	Deadline timer = Deadline.in(paramStartCrawlsInterval);
+	cmStatus.setNextCrawlStarter(timer);
 	if (goOn) {
 	  try {
 	    timer.sleep();

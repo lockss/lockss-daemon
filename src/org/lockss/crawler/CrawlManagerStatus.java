@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerStatus.java,v 1.31 2006-04-11 08:33:33 tlipkis Exp $
+ * $Id: CrawlManagerStatus.java,v 1.32 2006-07-19 00:47:00 tlipkis Exp $
  */
 
 /*
@@ -45,6 +45,7 @@ public class CrawlManagerStatus {
   private HistoryList crawlList;
   private int successful = 0;
   private int failed = 0;
+  private Deadline nextCrawlStarter;
 
   public CrawlManagerStatus(int histSize) {
     this.crawlList = new HistoryList(histSize);
@@ -54,6 +55,14 @@ public class CrawlManagerStatus {
     synchronized (crawlList) {
       crawlList.setMax(histMax);
     }
+  }
+
+  public void setNextCrawlStarter(Deadline nextCrawlStarter) {
+    this.nextCrawlStarter = nextCrawlStarter;
+  }
+
+  public Deadline getNextCrawlStarter() {
+    return nextCrawlStarter;
   }
 
   public List getCrawlStatusList() {
