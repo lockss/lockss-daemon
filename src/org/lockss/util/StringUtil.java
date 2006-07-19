@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.73 2006-07-17 05:08:14 tlipkis Exp $
+ * $Id: StringUtil.java,v 1.74 2006-07-19 00:45:14 tlipkis Exp $
  */
 
 /*
@@ -1090,5 +1090,17 @@ public class StringUtil {
     }
     return true;
   }
+  /** Return a string like "0 units", "1 unit", "n units"
+   * @param number the number of whatever units
+   * @param unit Single form of unit
+   * @param pluralUnit plural form of unit
+   */
+  public static String numberOfUnits(int number, String unit,
+				     String pluralUnit) {
+    if (number == 1) {
+      return number + " " + unit;
+    } else {
+      return number + " " + pluralUnit;
+    }
+  }
 }
-

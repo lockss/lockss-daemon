@@ -1,10 +1,10 @@
 /*
- * $Id: TestStringUtil.java,v 1.61 2006-07-17 05:08:14 tlipkis Exp $
+ * $Id: TestStringUtil.java,v 1.62 2006-07-19 00:45:14 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -815,6 +815,12 @@ public class TestStringUtil extends LockssTestCase {
                                          stringToFind));
   }
 
+  public void testNumberOfUnit() {
+    assertEquals("0 boxes", StringUtil.numberOfUnits(0, "box", "boxes"));
+    assertEquals("1 box", StringUtil.numberOfUnits(1, "box", "boxes"));
+    assertEquals("2 boxes", StringUtil.numberOfUnits(2, "box", "boxes"));
+    assertEquals("-3 boxes", StringUtil.numberOfUnits(-3, "box", "boxes"));
+  }
 
   private static class SlowStringReader extends StringReader {
     public SlowStringReader(String str) {
