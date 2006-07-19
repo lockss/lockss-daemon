@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.93 2006-07-19 00:47:00 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.94 2006-07-19 18:01:00 tlipkis Exp $
  */
 
 /*
@@ -104,7 +104,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   static final int DEFAULT_CRAWLER_THREAD_POOL_MAX_QUEUE_SIZE = 200;
 
   /** Max number of queued crawls; can be changed on the fly up to the max
-   * set by {@link PARAM_CRAWLER_THREAD_POOL_MAX_QUEUE_SIZE} */
+   * set by {@link #PARAM_CRAWLER_THREAD_POOL_MAX_QUEUE_SIZE} */
   public static final String PARAM_CRAWLER_THREAD_POOL_QUEUE_SIZE =
     PREFIX + "threadPool.queueSize";
   static final int DEFAULT_CRAWLER_THREAD_POOL_QUEUE_SIZE = 100;

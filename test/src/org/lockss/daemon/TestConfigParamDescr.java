@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigParamDescr.java,v 1.5 2006-05-31 20:29:21 thib_gc Exp $
+ * $Id: TestConfigParamDescr.java,v 1.6 2006-07-19 18:01:00 tlipkis Exp $
  */
 
 /*
@@ -139,7 +139,7 @@ public class TestConfigParamDescr extends LockssTestCase {
   }
 
   /**
-   * <p>Tests that {@link ConfigParamDescr#postUnmarshalResolve}
+   * <p>Tests that {@link ConfigParamDescr#postUnmarshalResolve(LockssApp)}
    * works at least for the elements of
    * {@link ConfigParamDescr#DEFAULT_DESCR_ARRAY}.</p>
    * @throws Exception if an unexpected error occurs.

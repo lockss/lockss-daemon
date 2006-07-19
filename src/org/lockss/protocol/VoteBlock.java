@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBlock.java,v 1.10 2006-06-02 20:27:16 smorabito Exp $
+ * $Id: VoteBlock.java,v 1.11 2006-07-19 18:01:00 tlipkis Exp $
  */
 
 /*
@@ -69,9 +69,8 @@ public class VoteBlock implements LockssSerializable {
 
   /**
    * Construct a new VoteBlock with <em>versionCount</em> versions.
-   * @param versionCount The number of versions this VoteBlock will hold.
    * @param url The URL for this block.
-   * @param pollType The type of the vote.
+   * @param voteType The type of the vote.
    */
   public VoteBlock(String url, int voteType) {
     this.versions = new ArrayList();

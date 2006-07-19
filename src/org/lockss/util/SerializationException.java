@@ -1,5 +1,5 @@
 /*
- * $Id: SerializationException.java,v 1.1 2006-05-31 17:54:49 thib_gc Exp $
+ * $Id: SerializationException.java,v 1.2 2006-07-19 18:01:00 tlipkis Exp $
  */
 
 /*
@@ -38,7 +38,7 @@ import java.io.*;
  * <p>Denotes marshalling/unmarshalling error conditions.</p>
  * <p>By convention, {@link ObjectSerializer} throws either
  * {@link SerializationException}, or one of a possible set of
- * distinguished exceptions (see {@ObjectSerializer}'s documentation
+ * distinguished exceptions (see {@link ObjectSerializer}'s documentation
  * for details).</p>
  * @author Thib Guicherd-Callin
  * @see ObjectSerializer

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.62 2005-10-11 05:45:12 tlipkis Exp $
+ * $Id: BaseUrlCacher.java,v 1.63 2006-07-19 18:01:00 tlipkis Exp $
  */
 
 /*
@@ -52,7 +52,6 @@ import org.lockss.crawler.*;
  * extend this to achieve, <i>eg</i>, specialized host connection or
  * authentication.  The redirection semantics offered here must be
  * preserved.
- * @todo remove use of CachedUrlSet and replace with ArchivalUnit
  */
 public class BaseUrlCacher implements UrlCacher {
   protected static Logger logger = Logger.getLogger("UrlCacher");

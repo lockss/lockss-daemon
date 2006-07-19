@@ -19,7 +19,7 @@ public abstract class BaseVoteBlocks implements VoteBlocks {
    * Return the VoteBlock at a given index.  Concrete subclasses must
    * provide an implementation of this.
    *
-   * @param The index of the VoteBlock to return.
+   * @param i The index of the VoteBlock to return.
    * @return  The VoteBlock at the given index.
    */
   abstract protected VoteBlock getVoteBlock(int i) throws IOException;
