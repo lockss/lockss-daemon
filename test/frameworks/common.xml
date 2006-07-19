@@ -47,6 +47,8 @@
 
     <!-- Use new UI Home servlet -->
     <property name="admin.redirectRoot" value="Home" />
+    <!-- Allow backup files up to 1MB to be uploaded -->
+    <property name="ui.maxUploadFileSize" value="1048576" />
 
     <!-- Plugin Registry:
     List the plugins that should be included in UI menus. -->
