@@ -1,9 +1,9 @@
 /*
- * $Id: LockssRepositoryStatus.java,v 1.23 2005-12-01 23:28:02 troberts Exp $
+ * $Id: LockssRepositoryStatus.java,v 1.24 2006-07-19 00:45:48 tlipkis Exp $
  */
 
 /*
- Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
@@ -110,15 +110,18 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
         throws StatusService.NoSuchTableException {
       table.setColumnDescriptors(columnDescriptors);
       table.setDefaultSortRules(sortRules);
-      table.setRows(getRows(table.getOptions().get(StatusTable.OPTION_DEBUG_USER)));
-      table.setSummaryInfo(getSummaryInfo());
+      Stats stats = new Stats();
+      table.setRows(getRows(table, stats));
+      table.setSummaryInfo(getSummaryInfo(stats));
     }
 
     public boolean requiresKey() {
       return false;
     }
 
-    private List getRows(boolean includeInternalAus) {
+    private List getRows(StatusTable table, Stats stats) {
+      boolean includeInternalAus =
+	table.getOptions().get(StatusTable.OPTION_DEBUG_USER);
       List rows = new ArrayList();
       TreeSet roots = new TreeSet();
       List repos = daemon.getRepositoryManager().getRepositoryList();
@@ -133,7 +136,7 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
       for (Iterator iter = roots.iterator(); iter.hasNext(); ) {
 	String root = (String)iter.next();
 	addRows(rows, LockssRepositoryImpl.extendCacheLocation(root),
-		includeInternalAus);
+		includeInternalAus, stats);
       }
       return rows;
     }
@@ -142,8 +145,15 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
       return CurrentConfig.getParam(LockssRepositoryImpl.PARAM_CACHE_LOCATION);
     }
 
+    class Stats {
+      int active = 0;
+      int inactive = 0;
+      int deleted = 0;
+      int orphaned = 0;
+    }
+
     private void addRows(Collection rows, String root,
-			 boolean includeInternalAus) {
+			 boolean includeInternalAus, Stats stats) {
       File dir = new File(root);
       File[] subs = dir.listFiles();
       if (subs != null) {
@@ -162,13 +172,13 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
 		}
 	      }
 	    }
-	    rows.add(makeRow(sub, auid));
+	    rows.add(makeRow(sub, auid, stats));
 	  }
 	}
       }
     }
 
-    Map makeRow(File dir, String auid) {
+    Map makeRow(File dir, String auid, Stats stats) {
       String dirString = dir.toString();
       Map row = new HashMap();
       row.put("dir", dirString);
@@ -199,6 +209,7 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
 
 	if (au != null) {
 	  row.put("status", "Active");
+	  stats.active++;
 	  addDu(row, AuUtil.getAuDiskUsage(au));
 	  row.put("au", new StatusTable.Reference(name,
 						  AU_STATUS_TABLE_NAME,
@@ -224,15 +235,23 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
 	  }
 	  if (isOrphaned(auid, auidProps)) {
 	    row.put("status", "Orphaned");
+	    stats.orphaned++;
 	  } else {
 	    if (config == null || config.isEmpty()) {
 	      row.put("status", "Deleted");
+	      stats.deleted++;
 	    } else {
 	      row.put("params", config);
+	      boolean isInactive =
+		config.getBoolean(PluginManager.AU_PARAM_DISABLED, false);
+	      if (isInactive) {
+		stats.inactive++;
+	      } else {
+		stats.deleted++;
+	      }	  
 	      name = config.get(PluginManager.AU_PARAM_DISPLAY_NAME);
 	      row.put("status",
-		      (config.getBoolean(PluginManager.AU_PARAM_DISABLED,
-					 false)
+		      (isInactive
 		       ? "Inactive" : "Deleted"));
 	    }
 	  }
@@ -279,12 +298,21 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
       return "Repositories";
     }
 
-    private List getSummaryInfo() {
+    private List getSummaryInfo(Stats stats) {
       List res = new ArrayList();
-//       res.add(new StatusTable.SummaryInfo("Tasks accepted",
-// 					  ColumnDescriptor.TYPE_STRING,
-// 					  combStats(STAT_ACCEPTED)));
+      addIfNonZero(res, "Active", stats.active);
+      addIfNonZero(res, "Inactive", stats.inactive);
+      addIfNonZero(res, "Deleted", stats.deleted);
+      addIfNonZero(res, "Orphaned", stats.orphaned);
       return res;
+    }
+
+    private void addIfNonZero(List res, String head, int val) {
+      if (val != 0) {
+	res.add(new StatusTable.SummaryInfo(head,
+					    ColumnDescriptor.TYPE_INT,
+					    new Long(val)));
+      }
     }
   }
 
