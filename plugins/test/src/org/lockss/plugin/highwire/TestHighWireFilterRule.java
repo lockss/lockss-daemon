@@ -1,10 +1,10 @@
 /*
- * $Id: TestHighWireFilterRule.java,v 1.1 2005-09-23 18:12:56 troberts Exp $
+ * $Id: TestHighWireFilterRule.java,v 1.2 2006-07-19 16:57:14 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,10 +33,12 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.highwire;
 
 import java.io.*;
+
 import org.lockss.util.*;
 import org.lockss.test.LockssTestCase;
 
 public class TestHighWireFilterRule extends LockssTestCase {
+
   private HighWireFilterRule rule;
 
   public void setUp() throws Exception {
@@ -48,11 +50,21 @@ public class TestHighWireFilterRule extends LockssTestCase {
 
   private static final String inst2 = "<FONT SIZE=\"-2\" FACE=\"verdana,arial,helvetica\">\n	<NOBR><STRONG>Institution: Stanford University Libraries</STRONG></NOBR>\n	<NOBR><A TARGET=\"_top\" HREF=\"/cgi/login?uri=%2Fcgi%2Fcontent%2Ffull%2F4%2F1%2F121\">Sign In as Personal Subscriber</A></NOBR>";
 
+  private static final String inst3 = "<FONT SIZE=\"-2\" FACE=\"verdana,arial,helvetica\">\n    <NOBR><STRONG>Institution: Stanford University Libraries</STRONG></NOBR>\n      <NOBR><A TARGET=\"_top\" HREF=\"/cgi/login?uri=%2Fcgi%2Fcontent%2Ffull%2F4%2F1%2F121\">Sign In as SOMETHING SOMETHING</A></NOBR>";
 
   public void testFiltering() throws IOException {
-    Reader reader1 = rule.createFilteredReader(new StringReader(inst1));
-    Reader reader2 = rule.createFilteredReader(new StringReader(inst2));
-    assertEquals(StringUtil.fromReader(reader1),
-		 StringUtil.fromReader(reader2));
+    Reader readerA;
+    Reader readerB;
+
+    readerA = rule.createFilteredReader(new StringReader(inst1));
+    readerB = rule.createFilteredReader(new StringReader(inst2));
+    assertEquals(StringUtil.fromReader(readerA),
+                 StringUtil.fromReader(readerB));
+
+    readerA = rule.createFilteredReader(new StringReader(inst1));
+    readerB = rule.createFilteredReader(new StringReader(inst3));
+    assertEquals(StringUtil.fromReader(readerA),
+                 StringUtil.fromReader(readerB));
   }
+
 }

@@ -1,10 +1,10 @@
 /*
- * $Id: HighWireFilterRule.java,v 1.2 2005-09-23 18:12:56 troberts Exp $
+ * $Id: HighWireFilterRule.java,v 1.3 2006-07-19 16:57:14 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -54,7 +54,7 @@ public class HighWireFilterRule implements FilterRule {
     List tagList = ListUtil.list(
 //        new HtmlTagFilter.TagPair("<!--", "-->", true),
         new HtmlTagFilter.TagPair("Institution:",
-				  "Sign In as Personal Subscriber", true),
+				  "</A></NOBR>", true),
         new HtmlTagFilter.TagPair("<script", "</script>", true),
         new HtmlTagFilter.TagPair("<table", "</table>", true),
         new HtmlTagFilter.TagPair("<", ">")
