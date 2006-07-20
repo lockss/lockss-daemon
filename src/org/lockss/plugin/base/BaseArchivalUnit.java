@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.106 2006-07-19 05:56:22 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.106.2.1 2006-07-20 16:14:25 tlipkis Exp $
  */
 
 /*
@@ -110,7 +110,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   //don't load crawl windows
   public static final String PARAM_USE_CRAWL_WINDOW_BY_DEFAULT = 
     Configuration.PREFIX+"baseau.useCrawlWindowByDefault";
-  public static final boolean DEFAULT_USE_CRAWL_WINDOW_BY_DEFAULT = false;
+  public static final boolean DEFAULT_USE_CRAWL_WINDOW_BY_DEFAULT = true;
   
   public static final String USE_CRAWL_WINDOW = "use_crawl_window";
   private static final boolean DEFAULT_USE_CRAWL_WINDOW = false;
