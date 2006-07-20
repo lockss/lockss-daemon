@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.184 2006-07-17 05:04:51 tlipkis Exp $
+ $Id: build.xml,v 1.185 2006-07-20 15:50:35 thib_gc Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
@@ -210,6 +210,7 @@ Args:
   <property name="oro.jar"  value="${test.lib}/jakarta-oro-2.0.8.jar"/>
   <property name="getopt.jar"  value="${test.lib}/java-getopt-1.0.9.jar"/>
   <property name="ant-contrib.jar"      value="${lib}/ant-contrib-0.6.jar"/>
+  <property name="pdfbox.jar" value="${lib}/PDFBox-0.7.2.jar" />
 
   <!-- Jars we create -->
   <property name="lockss.jar"     value="${lib}/lockss.jar"/>
