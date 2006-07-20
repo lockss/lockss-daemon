@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigParamDescr.java,v 1.6 2006-07-19 18:01:00 tlipkis Exp $
+ * $Id: TestConfigParamDescr.java,v 1.7 2006-07-20 18:26:48 thib_gc Exp $
  */
 
 /*
@@ -34,6 +34,8 @@ package org.lockss.daemon;
 
 import java.io.*;
 import java.util.*;
+
+import org.lockss.app.LockssApp;
 import org.lockss.test.*;
 import org.lockss.util.*;
 

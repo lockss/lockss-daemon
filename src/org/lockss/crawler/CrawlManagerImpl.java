@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.94 2006-07-19 18:01:00 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.95 2006-07-20 18:26:48 thib_gc Exp $
  */
 
 /*
@@ -340,7 +340,6 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   /**
    * Execute the runnable in a pool thread
    * @param run the Runnable to be run
-   * @throws InterruptedException
    * @throws RuntimeException if no pool thread or queue space is available
    */
   protected void execute(Runnable run) {
