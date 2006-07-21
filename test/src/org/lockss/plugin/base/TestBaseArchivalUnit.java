@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArchivalUnit.java,v 1.32 2006-07-19 05:56:22 tlipkis Exp $
+ * $Id: TestBaseArchivalUnit.java,v 1.33 2006-07-21 07:51:16 tlipkis Exp $
  */
 
 /*
@@ -551,7 +551,8 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     assertEquals(BaseArchivalUnit.DEFAULT_NEW_CONTENT_CRAWL_INTERVAL,
 		 mbau.newContentCrawlIntv);
     assertEquals(ListUtil.list(startUrl), mbau.getNewContentCrawlUrls());
-    assertNull(mbau.getCrawlSpec().getCrawlWindow());
+    assertTrue(mbau.getCrawlSpec().getCrawlWindow()
+	       instanceof MyMockCrawlWindow);
   }
 
   // Check that setBaseAuParams() doesn't overwrite values already set in
@@ -562,7 +563,9 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     props.setProperty(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
     props.setProperty(ConfigParamDescr.VOLUME_NUMBER.getKey(), "10");
     props.setProperty(BaseArchivalUnit.PAUSE_TIME_KEY, "10000");
-    props.setProperty(BaseArchivalUnit.USE_CRAWL_WINDOW, "true");
+    // per-plugin or per-au crawl window settings are overridden by the
+    // o.l.baseau.useCrawlWindowByDefault
+    props.setProperty(BaseArchivalUnit.USE_CRAWL_WINDOW, "false");
     props.setProperty(BaseArchivalUnit.NEW_CONTENT_CRAWL_KEY, "10000");
     Configuration config = ConfigurationUtil.fromProps(props);
     mbau.doSetAuParams(true);
@@ -574,7 +577,9 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     mbau.setBaseAuParams(config2);
     assertEquals(55555, mbau.findFetchRateLimiter().getInterval());
     assertEquals(67890, mbau.newContentCrawlIntv);
-    assertNull(mbau.getCrawlSpec().getCrawlWindow());
+    assertTrue(mbau.getCrawlSpec().getCrawlWindow()
+	       instanceof MyMockCrawlWindow);
+//     assertNull(mbau.getCrawlSpec().getCrawlWindow());
   }
 
   public void testCheckNextPollInterval() {
