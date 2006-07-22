@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.185 2006-07-20 15:50:35 thib_gc Exp $
+ $Id: build.xml,v 1.186 2006-07-22 22:31:18 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
@@ -59,6 +59,7 @@ Args:
   -Dnonetwork=true         Skip tests that require a working network
   -Dnowarn=true            Turn off compiler warnings.
   -Dshowoutput=yes         With test-one, show System.err output as it happens.
+  -Dsuite=suite-name       Specify stf suite name.
   -Dtimeout=msecs          Override the default test failure timeout.
   -Dtitledb=file           Title DB config file to bundle with a plugin JAR.
 
@@ -124,6 +125,7 @@ Args:
   <property name="test.lib"       value="${lib}"/>
   <property name="test.results"   value="${test}/results"/>
   <property name="test.native"    value="${test}/native"/>
+  <property name="framework.stf"    value="${test}/frameworks/run_stf"/>
 
   <property name="plugins"           value="${basedir}/plugins"/>
   <property name="plugins.src"       value="${plugins}/src"/>
@@ -1583,6 +1585,23 @@ Test results in ${test.results}
      </junitelem>
     </dojunit>
     <fail if="failed" message="Test(s) failed" />
+  </target>
+
+  <!-- ==================================================================== -->
+  <target name="test-stf"
+   depends="prepare.run.test,jar-tools-tests,jar-plugins-tests"
+   description="Run an stf test suite" >
+   <if>
+     <isset property="suite" />
+     <else>
+      <fail message="The test suite must be specified with -Dsuite=&lt;suite name&gt;" />
+     </else>
+   </if>
+    <exec executable="python" dir="${framework.stf}"
+           failonerror="true">
+      <arg value="testsuite.py"/>
+      <arg value="${suite}"/>
+    </exec>
   </target>
 
   <!-- ==================================================================== -->
