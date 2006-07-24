@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.56 2006-07-17 07:13:24 tlipkis Exp $
+ * $Id: AuConfig.java,v 1.56.2.1 2006-07-24 06:54:48 tlipkis Exp $
  */
 
 /*
@@ -162,7 +162,7 @@ public class AuConfig extends LockssServlet {
 	displayAuSummary();
       } else if (action.equals(ACTION_EDIT)) displayEditAu(au);
       else if (action.equals(ACTION_RESTORE)) displayRestoreAu(au);
-      else if (action.equals(ACTION_DO_RESTORE)) updateAu(au, "Restored");
+      else if (action.equals(ACTION_DO_RESTORE)) doRestoreAu(au);
       else if (action.equals("Update")) updateAu(au, "Updated");
       else if (action.equals(ACTION_DEACTIVATE)) confirmDeactivateAu(au);
       else if (action.equals("Confirm Deactivate")) doDeactivateAu(au);
@@ -620,15 +620,25 @@ public class AuConfig extends LockssServlet {
     displayEditNew();
   }
 
+  private void doRestoreAu(AuProxy au) throws IOException {
+    updateAu0(au, "Restored", true);
+  }
+
+  private void updateAu(AuProxy au, String msg)
+      throws IOException {
+    updateAu0(au, msg, false);
+  }
+
   /** Process the Update button */
-  private void updateAu(AuProxy au, String msg) throws IOException {
+  private void updateAu0(AuProxy au, String msg, boolean forceUpdate)
+      throws IOException {
     fetchAuConfig(au);
     Configuration formAuConfig = getAuConfigFromForm(false);
-    // compare new config against current only, not stored config.  AU
-    // config params set in global props file (for forcing crawl, etc.)
+    // AU config params set in global props file (for forcing crawl, etc.)
     // cause latter to see changes even when we don't need to update.
+    // compare new config against current only, not stored config.  AU
     boolean checkStored = false;
-    if (isChanged(auConfig, formAuConfig) ||
+    if (forceUpdate || isChanged(auConfig, formAuConfig) ||
 	(checkStored &&
 	 isChanged(remoteApi.getStoredAuConfiguration(au), formAuConfig))) {
       try {
