@@ -17,6 +17,7 @@
       <string>4,&quot;^%s&quot;, base_url</string>
       <string>1,&quot;^%s%s/Home&quot;, base_url, au_subdirectory</string>
       <string>2,&quot;^%s%swiki/.*action=edit&quot;, base_url, au_subdirectory</string>
+      <string>2,&quot;^%s.*(Image|Special):&quot;, base_url, au_subdirectory</string>
       <string>1,&quot;^%s%s/&quot;, base_url, au_subdirectory</string>
       <string>1,&quot;^%s%swiki/&quot;, base_url, au_subdirectory</string>
       <string>1,&quot;^%sfavicon\.ico&quot;, base_url</string>
