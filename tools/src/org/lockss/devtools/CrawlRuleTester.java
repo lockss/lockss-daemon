@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlRuleTester.java,v 1.16 2006-07-11 18:39:26 thib_gc Exp $
+ * $Id: CrawlRuleTester.java,v 1.17 2006-07-24 06:51:11 tlipkis Exp $
  */
 
 /*
@@ -43,8 +43,20 @@ import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
+import org.lockss.config.*;
 
 public class CrawlRuleTester extends Thread {
+  protected static Logger log = Logger.getLogger("CrawlRuleTester");
+
+  /** Proxy host */
+  public static final String PARAM_PROXY_HOST =
+    Configuration.PREFIX + "crawltest.proxy.host";
+
+  /** Proxy port */
+  public static final String PARAM_PROXY_PORT =
+    Configuration.PREFIX + "crawltest.proxy.port";
+  public static final int DEFAULT_PROXY_PORT = -1;
+
   /* Message Types */
   public static final int ERROR_MESSAGE = 0;
   public static final int WARNING_MESSAGE = 1;
@@ -66,6 +78,8 @@ public class CrawlRuleTester extends Thread {
   private MessageHandler m_msgHandler;
   private LockssUrlConnectionPool connectionPool =
     new LockssUrlConnectionPool();
+  private String proxyHost;
+  private int proxyPort;
 
   // our storage for extracted urls
   private TreeSet m_extracted = new TreeSet();
@@ -132,6 +146,7 @@ public class CrawlRuleTester extends Thread {
 
   public void run() {
     try {
+      setConfig(ConfigManager.getCurrentConfig());
       if(m_outWriter == null && m_msgHandler == null) {
         useLocalWriter = true;
       }
@@ -153,6 +168,17 @@ public class CrawlRuleTester extends Thread {
     }
   }
 
+  void setConfig(Configuration config) {
+    log.debug("config: " + config);
+    proxyHost = config.get(PARAM_PROXY_HOST);
+    proxyPort = config.getInt(PARAM_PROXY_PORT, DEFAULT_PROXY_PORT);
+    if (StringUtil.isNullString(proxyHost) || proxyPort <= 0) {
+      proxyHost = null;
+    } else {
+      if (log.isDebug()) log.debug("Proxying through " + proxyHost
+					 + ":" + proxyPort);
+    }
+  }
 
   private void openOutputFile() {
     if (m_outputFile != null) {
@@ -238,7 +264,11 @@ public class CrawlRuleTester extends Thread {
 //       String type = conn.getContentType();
 //       type = conn.getHeaderField("content-type");
 //       InputStream istr = conn.getInputStream();
+
       LockssUrlConnection conn = UrlUtil.openConnection(url, connectionPool);
+      if (proxyHost != null) {
+	conn.setProxy(proxyHost, proxyPort);
+      }
       try {
 	conn.execute();
 	int resp = conn.getResponseCode();
