@@ -1,0 +1,77 @@
+<map>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.highwire.ClockssHighWirePlugin</string>
+  </entry>
+  <entry>
+    <string>au_crawlwindow</string>
+    <string>org.lockss.plugin.highwire.HighwireCrawlWindow</string>
+  </entry>
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <string>404=org.lockss.util.urlconn.CacheException$RetryDeadLinkException</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_permission_checker_factory</string>
+    <string>org.lockss.plugin.highwire.HighWirePermissionCheckerFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_filter</string>
+    <string>org.lockss.plugin.highwire.HighWireFilterRule</string>
+  </entry>
+  <entry>
+    <string>au_login_page_checker</string>
+    <string>org.lockss.plugin.highwire.HighWireLoginPageChecker</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;%s Volume %s&quot;, base_url, volume_name</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>HighWire Press</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>259200000</long>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;^%sclockss-manifest/vol_%s_manifest\.dtl$&quot;, base_url, volume_name</string>
+      <string>1,&quot;^%scontent/vol%s/&quot;, base_url, volume_name</string>
+      <string>1,&quot;^%scgi/(content|content-nw|issue_pdf)/.*/%s/&quot;, base_url, volume_name</string>
+      <string>1,&quot;^%scgi/(data|eletters|framedreprint|reprint|reprintframed|reprintsidebar|screenpdf|this_week)/%s/&quot;, base_url, volume_name</string>
+      <string>1,&quot;^%s(icons|javascript|math|portal_imgs|resource/css|resource/image|resource/js|shared/icons)/&quot;, base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%sclockss-manifest/vol_%s_manifest.dtl&quot;, base_url, volume_name</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume_name</key>
+        <displayName>Volume Name</displayName>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+</map>
