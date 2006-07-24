@@ -4,6 +4,10 @@
     <string>org.lockss.plugin.LockssWebSitePlugin</string>
   </entry>
   <entry>
+    <string>text/html_filter</string>
+    <string>org.lockss.plugin.LockssWebSiteFilterRule</string>
+  </entry>
+  <entry>
     <string>au_name</string>
     <string>&quot;%s%s&quot;, base_url, au_subdirectory</string>
   </entry>
