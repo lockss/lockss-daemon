@@ -35,15 +35,35 @@ package org.lockss.plugin;
 import java.io.Reader;
 import java.util.List;
 
-import org.lockss.filter.HtmlTagFilter;
+import org.lockss.filter.*;
 import org.lockss.util.ListUtil;
 
 public class LockssWebSiteFilterRule implements FilterRule {
 
   public Reader createFilteredReader(Reader reader) {
+    // Remove meta KEYWORDS tag
+    // Remove the parser cache comment "<!-- Saved in parser cache with key wikidb:pcache:idhash:1481-0!1!0!0!!en!2 and timestamp 20060724164541 -->"
     // Remove the timer comment "<!-- Served by www1 in 0.26 secs. -->"
-    List tagList = ListUtil.list(new HtmlTagFilter.TagPair("<!-- Served by", "-->", true));
-    return HtmlTagFilter.makeNestedFilter(reader, tagList);
+    // Remove the list item "This page has been accessed 15.124 times."
+    List tagList = ListUtil.list(new HtmlTagFilter.TagPair("<meta name=\"KEYWORDS\"",
+                                                           "/>",
+                                                           false),
+                                 new HtmlTagFilter.TagPair("<!-- Saved in parser cache with key",
+                                                           "-->",
+                                                           false),
+                                 new HtmlTagFilter.TagPair("<!-- Served by",
+                                                           "-->",
+                                                           false),
+                                 new HtmlTagFilter.TagPair("<li id=\"f-viewcount\">",
+                                                           "</li>",
+                                                           false));
+    Reader htmlTagReader = HtmlTagFilter.makeNestedFilter(reader, tagList);
+    // Normalize whitespace
+    Reader removeWhiteSpaceReader = new WhiteSpaceFilter(htmlTagReader);
+    Reader addWhiteSpaceReader = new StringFilter(removeWhiteSpaceReader,
+                                                  "><",
+                                                  "> <");
+    return addWhiteSpaceReader;
   }
 
 }
