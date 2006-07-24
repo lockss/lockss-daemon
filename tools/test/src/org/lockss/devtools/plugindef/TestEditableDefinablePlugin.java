@@ -1,5 +1,5 @@
 /*
- * $Id: TestEditableDefinablePlugin.java,v 1.17 2006-07-12 17:18:43 thib_gc Exp $
+ * $Id: TestEditableDefinablePlugin.java,v 1.18 2006-07-24 06:50:52 tlipkis Exp $
  */
 
 /*
@@ -194,6 +194,7 @@ public class TestEditableDefinablePlugin
   public void testGetKnownConfigParamDescrs() {
     Collection set = new HashSet();
     set.add(ConfigParamDescr.VOLUME_NUMBER);
+    set.add(ConfigParamDescr.VOLUME_NAME);
     set.add(ConfigParamDescr.YEAR);
     set.add(ConfigParamDescr.BASE_URL);
     set.add(ConfigParamDescr.JOURNAL_ID);
