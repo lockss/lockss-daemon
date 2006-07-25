@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.186 2006-07-22 22:31:18 tlipkis Exp $
+ $Id: build.xml,v 1.187 2006-07-25 00:04:32 thib_gc Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
@@ -281,6 +281,7 @@ Args:
     <pathelement path="${htmlparser.jar}" />
     <pathelement path="${rdf.jar}" />
     <pathelement path="${xstream.jar}" />
+    <pathelement path="${pdfbox.jar}" />
     <!-- jars needed to run the OAI harvester -->
     <pathelement path="${oai-harvester.jar}" />
     <pathelement path="${xalan.jar}" />
