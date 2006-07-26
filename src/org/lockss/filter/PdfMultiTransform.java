@@ -35,10 +35,13 @@ package org.lockss.filter;
 import java.io.IOException;
 import java.util.*;
 
-import org.lockss.util.Logger;
-import org.pdfbox.pdfparser.PDFParser;
+import org.lockss.util.*;
 
 public class PdfMultiTransform implements PdfTransform {
+
+  public PdfMultiTransform() {
+    this.pdfTransforms = new ArrayList();
+  }
 
   /**
    * <p>A list of registered {@link PdfTransform} instances.</p>
@@ -58,7 +61,7 @@ public class PdfMultiTransform implements PdfTransform {
   }
 
   /* Inherit documentation */
-  public synchronized void transform(PDFParser pdfParser,
+  public synchronized void transform(PdfDocument pdfDocument,
                                      Logger logger)
       throws IOException {
     if (logger == null) {
@@ -67,7 +70,7 @@ public class PdfMultiTransform implements PdfTransform {
     }
     for (Iterator iter = pdfTransforms.iterator() ; iter.hasNext() ; ) {
       PdfTransform pdfTransform = (PdfTransform)iter.next();
-      pdfTransform.transform(pdfParser, logger);
+      pdfTransform.transform(pdfDocument, logger);
     }
   }
 
