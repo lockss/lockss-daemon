@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlRuleTester.java,v 1.17 2006-07-24 06:51:11 tlipkis Exp $
+ * $Id: CrawlRuleTester.java,v 1.18 2006-07-26 17:41:09 tlipkis Exp $
  */
 
 /*
@@ -57,6 +57,10 @@ public class CrawlRuleTester extends Thread {
     Configuration.PREFIX + "crawltest.proxy.port";
   public static final int DEFAULT_PROXY_PORT = -1;
 
+  /** User-Agent */
+  public static final String PARAM_USER_AGENT =
+    Configuration.PREFIX + "crawltest.userAgent";
+
   /* Message Types */
   public static final int ERROR_MESSAGE = 0;
   public static final int WARNING_MESSAGE = 1;
@@ -79,6 +83,7 @@ public class CrawlRuleTester extends Thread {
   private LockssUrlConnectionPool connectionPool =
     new LockssUrlConnectionPool();
   private String proxyHost;
+  private String userAgent;
   private int proxyPort;
 
   // our storage for extracted urls
@@ -175,8 +180,13 @@ public class CrawlRuleTester extends Thread {
     if (StringUtil.isNullString(proxyHost) || proxyPort <= 0) {
       proxyHost = null;
     } else {
-      if (log.isDebug()) log.debug("Proxying through " + proxyHost
-					 + ":" + proxyPort);
+      log.debug("Proxying through " + proxyHost + ":" + proxyPort);
+    }
+    userAgent = config.get(PARAM_USER_AGENT);
+    if (StringUtil.isNullString(userAgent)) {
+      userAgent = null;
+    } else {
+      log.debug("Setting User-Agent to " + userAgent);
     }
   }
 
@@ -268,6 +278,9 @@ public class CrawlRuleTester extends Thread {
       LockssUrlConnection conn = UrlUtil.openConnection(url, connectionPool);
       if (proxyHost != null) {
 	conn.setProxy(proxyHost, proxyPort);
+      }
+      if (userAgent != null) {
+	conn.setRequestProperty("user-agent", userAgent);
       }
       try {
 	conn.execute();
