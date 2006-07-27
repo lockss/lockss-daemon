@@ -39,6 +39,121 @@
   <lockss-config>
     <!-- Titles -->
     <property name="org.lockss.title">
+
+      <property name="journalofglobalbuddhism6">
+	<property name="title" value="The Journal of Global Buddhism Volume 6" />
+	<property name="journalTitle" value="The Journal of Global Buddhism" />
+	<property name="plugin" value="edu.nyu.plugin.journalofglobalbuddhism.JournalOfGlobalBuddhismPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.globalbuddhism.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="6" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="year" />
+	  <property name="value" value="2005" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="journalofglobalbuddhism5">
+	<property name="title" value="The Journal of Global Buddhism Volume 5" />
+	<property name="journalTitle" value="The Journal of Global Buddhism" />
+	<property name="plugin" value="edu.nyu.plugin.journalofglobalbuddhism.JournalOfGlobalBuddhismPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.globalbuddhism.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="5" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="year" />
+	  <property name="value" value="2004" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="journalofglobalbuddhism4">
+	<property name="title" value="The Journal of Global Buddhism Volume 4" />
+	<property name="journalTitle" value="The Journal of Global Buddhism" />
+	<property name="plugin" value="edu.nyu.plugin.journalofglobalbuddhism.JournalOfGlobalBuddhismPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.globalbuddhism.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="4" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="year" />
+	  <property name="value" value="2003" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="journalofglobalbuddhism3">
+	<property name="title" value="The Journal of Global Buddhism Volume 3" />
+	<property name="journalTitle" value="The Journal of Global Buddhism" />
+	<property name="plugin" value="edu.nyu.plugin.journalofglobalbuddhism.JournalOfGlobalBuddhismPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.globalbuddhism.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="3" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="year" />
+	  <property name="value" value="2002" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="journalofglobalbuddhism2">
+	<property name="title" value="The Journal of Global Buddhism Volume 2" />
+	<property name="journalTitle" value="The Journal of Global Buddhism" />
+	<property name="plugin" value="edu.nyu.plugin.journalofglobalbuddhism.JournalOfGlobalBuddhismPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.globalbuddhism.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="2" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="year" />
+	  <property name="value" value="2001" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="journalofglobalbuddhism1">
+	<property name="title" value="The Journal of Global Buddhism Volume 1" />
+	<property name="journalTitle" value="The Journal of Global Buddhism" />
+	<property name="plugin" value="edu.nyu.plugin.journalofglobalbuddhism.JournalOfGlobalBuddhismPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.globalbuddhism.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="1" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="year" />
+	  <property name="value" value="2000" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
       <property name="corpse">
 	<property name="title" value="Exquisite Corpse" />
 	<property name="journalTitle" value="Exquisite Corpse" />
