@@ -48,7 +48,7 @@ org.lockss.poll.trustedWeight=350
 org.lockss.poll.namepoll.deadline=5m
 
 org.lockss.poll.contentpoll.min=4m
-org.lockss.poll.contentpoll.max=12m
+org.lockss.poll.contentpoll.max=12h
 
 org.lockss.treewalk.initial.estimate=1m
 org.lockss.treewalk.interval.min=1m
