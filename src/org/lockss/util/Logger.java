@@ -1,5 +1,5 @@
 /*
- * $Id: Logger.java,v 1.47 2006-05-18 00:14:42 tlipkis Exp $
+ * $Id: Logger.java,v 1.48 2006-07-29 03:15:46 tlipkis Exp $
  */
 
 /*
@@ -655,6 +655,10 @@ public class Logger {
 
   int getThreadMapSize() {
     return threadIds.size();
+  }
+
+  public String toString() {
+    return "[Logger " + name + "]";
   }
 
   // Invoke all the targets to write a message.
