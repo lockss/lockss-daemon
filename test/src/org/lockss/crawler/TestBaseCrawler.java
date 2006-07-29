@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCrawler.java,v 1.4 2006-02-14 05:22:46 tlipkis Exp $
+ * $Id: TestBaseCrawler.java,v 1.5 2006-07-29 02:58:09 tlipkis Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import java.net.*;
 
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
+import org.lockss.config.*;
 import org.lockss.plugin.*;
 import org.lockss.state.*;
 import org.lockss.util.*;
@@ -101,8 +102,8 @@ public class TestBaseCrawler extends LockssTestCase {
 
     getMockLockssDaemon().getAlertManager();
     crawler = new TestableBaseCrawler(mau, spec, aus);
-    ((BaseCrawler)crawler).daemonPermissionCheckers =
-      ListUtil.list(new MyMockPermissionChecker(true));
+    List checkers = ListUtil.list(new MyMockPermissionChecker(true));
+    setDaemonPermissionCheckers(checkers);
 
     mau.setParser(parser);
     mau.addUrl(startUrl);
@@ -110,6 +111,10 @@ public class TestBaseCrawler extends LockssTestCase {
     Properties p = new Properties();
     p.setProperty(NewContentCrawler.PARAM_RETRY_PAUSE, "0");
     ConfigurationUtil.setCurrentConfigFromProps(p);
+  }
+
+  void setDaemonPermissionCheckers(List lst) {
+    ((BaseCrawler)crawler).daemonPermissionCheckers = lst;
   }
 
   public void testConstructorNullAu() {
@@ -199,6 +204,34 @@ public class TestBaseCrawler extends LockssTestCase {
     assertSameElements(ListUtil.list(permissionPage), cachedUrls);
   }
 
+  public void testGetDaemonPermissionCheckers() throws IOException {
+    setDaemonPermissionCheckers(null);
+
+    assertTrue(MiscTestUtil.
+	       hasPermission(crawler.getDaemonPermissionCheckers(),
+			     LockssPermission.LOCKSS_PERMISSION_STRING));
+    assertFalse(MiscTestUtil.
+	       hasPermission(crawler.getDaemonPermissionCheckers(),
+			     ClockssPermission.CLOCKSS_PERMISSION_STRING));
+    ConfigurationUtil.setFromArgs(ConfigManager.PARAM_PLATFORM_PROJECT,
+				  "clockss");
+    setDaemonPermissionCheckers(null);
+    assertFalse(MiscTestUtil.
+	       hasPermission(crawler.getDaemonPermissionCheckers(),
+			     LockssPermission.LOCKSS_PERMISSION_STRING));
+    assertTrue(MiscTestUtil.
+	       hasPermission(crawler.getDaemonPermissionCheckers(),
+			     ClockssPermission.CLOCKSS_PERMISSION_STRING));
+    ConfigurationUtil.setFromArgs(ConfigManager.PARAM_PLATFORM_PROJECT,
+				  "lockss");
+    setDaemonPermissionCheckers(null);
+    assertTrue(MiscTestUtil.
+	       hasPermission(crawler.getDaemonPermissionCheckers(),
+			     LockssPermission.LOCKSS_PERMISSION_STRING));
+    assertFalse(MiscTestUtil.
+	       hasPermission(crawler.getDaemonPermissionCheckers(),
+			     ClockssPermission.CLOCKSS_PERMISSION_STRING));
+  }
 
   public void testToString() {
     assertTrue(crawler.toString().startsWith("[BaseCrawler:"));

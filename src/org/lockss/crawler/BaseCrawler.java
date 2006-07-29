@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawler.java,v 1.9 2006-07-19 00:47:53 tlipkis Exp $
+ * $Id: BaseCrawler.java,v 1.10 2006-07-29 02:58:09 tlipkis Exp $
  */
 
 /*
@@ -148,9 +148,6 @@ public abstract class BaseCrawler
      restrictive, but not less.
     */
 
-    //At least one of these checkers must satisfied for us to crawl a site
-    daemonPermissionCheckers = new LockssPermission().getCheckers();
-
     //Specified by the plug-in, this can be a null set.  We must satisfy
     //all of these to crawl a site.
     pluginPermissionChecker = spec.getPermissionChecker();
@@ -174,6 +171,19 @@ public abstract class BaseCrawler
       if (logger.isDebug()) logger.debug("Proxying through " + proxyHost
 					 + ":" + proxyPort);
     }
+
+  }
+
+  List getDaemonPermissionCheckers() {
+    if (daemonPermissionCheckers == null) {
+      String proj = ConfigManager.getPlatformProject();
+      if ("clockss".equalsIgnoreCase(proj)) {
+	daemonPermissionCheckers = new ClockssPermission().getCheckers();
+      } else {
+	daemonPermissionCheckers = new LockssPermission().getCheckers();
+      }
+    }
+    return daemonPermissionCheckers;
   }
 
   public ArchivalUnit getAu() {
@@ -224,7 +234,7 @@ public abstract class BaseCrawler
 
   protected boolean populatePermissionMap() {
       // get the permission list from crawl spec
-    permissionMap = new PermissionMap(au, this, daemonPermissionCheckers,
+    permissionMap = new PermissionMap(au, this, getDaemonPermissionCheckers(),
 				      pluginPermissionChecker);
 //    List permissionList = spec.getPermissionPages();
 //    if (permissionList == null || permissionList.size() == 0) {
