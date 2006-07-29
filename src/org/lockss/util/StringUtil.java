@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.74 2006-07-19 00:45:14 tlipkis Exp $
+ * $Id: StringUtil.java,v 1.75 2006-07-29 02:59:45 tlipkis Exp $
  */
 
 /*
@@ -1051,7 +1051,7 @@ public class StringUtil {
     int numPartialMatch = 0;
 
     while ((bcount = StreamUtil.readChars(reader, buff, buff.length)) > 0) {
-      if (numPartialMatch > 0 && bcount > (str.length() - numPartialMatch)) {
+      if (numPartialMatch > 0 && bcount >= (str.length() - numPartialMatch)) {
 	//we previously matched this many chars at the end of the last buff
 	if (log.isDebug3()) {
 	  log.debug3("Found a partial match before in last buffer: "+
@@ -1067,7 +1067,7 @@ public class StringUtil {
 	return true;
       } else {
 	numPartialMatch = bm.partialMatch();
-	if (log.isDebug3() && numPartialMatch > 0) {
+	if (log.isDebug3() && numPartialMatch != 0) {
 	  log.debug3("Found a partial match of "+numPartialMatch);
 	}
       }
@@ -1090,6 +1090,7 @@ public class StringUtil {
     }
     return true;
   }
+
   /** Return a string like "0 units", "1 unit", "n units"
    * @param number the number of whatever units
    * @param unit Single form of unit
