@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.37 2006-07-06 17:38:54 thib_gc Exp $
+ * $Id: ConfigManager.java,v 1.38 2006-07-29 02:58:40 tlipkis Exp $
  */
 
 /*
@@ -87,6 +87,10 @@ public class ConfigManager implements LockssManager {
   public static final String PARAM_PLATFORM_VERSION = PLATFORM + "version";
   /** Platform host name (fqdn). */
   public static final String PARAM_PLATFORM_FQDN = PLATFORM + "fqdn";
+
+  /** Project name (CLOCKSS or LOCKSS) */
+  public static final String PARAM_PLATFORM_PROJECT = PLATFORM + "project";
+  public static final String DEFAULT_PLATFORM_PROJECT = "lockss";
 
   /** Group name, for group= config file conditional */
   public static final String PARAM_DAEMON_GROUP = DAEMON + "group";
@@ -329,6 +333,11 @@ public class ConfigManager implements LockssManager {
 
   public static String getPlatformHostname() {
     return getPlatformConfig().get(PARAM_PLATFORM_FQDN);
+  }
+
+  public static String getPlatformProject() {
+    return getPlatformConfig().get(PARAM_PLATFORM_PROJECT,
+				   DEFAULT_PLATFORM_PROJECT);
   }
 
   /** Wait until the system is configured.  (<i>Ie</i>, until the first
