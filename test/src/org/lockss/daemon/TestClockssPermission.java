@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssPermission.java,v 1.2 2006-07-29 02:56:36 tlipkis Exp $
+ * $Id: TestClockssPermission.java,v 1.1 2006-07-29 02:56:36 tlipkis Exp $
  */
 
 /*
@@ -35,17 +35,17 @@ import java.util.*;
 
 import org.lockss.test.*;
 
-public class TestLockssPermission extends LockssTestCase {
+public class TestClockssPermission extends LockssTestCase {
 
-  private String PERM_STRING = "LOCKSS system has permission to collect, " +
+  private String PERM_STRING = "CLOCKSS system has permission to ingest, " +
     "preserve, and serve this Archival Unit";
 
   public void testString() {
-    assertEquals(PERM_STRING, LockssPermission.LOCKSS_PERMISSION_STRING);
+    assertEquals(PERM_STRING, ClockssPermission.CLOCKSS_PERMISSION_STRING);
   }
 
   private boolean hasPermission(String page) throws IOException {
-    return MiscTestUtil.hasPermission(new LockssPermission().getCheckers(),
+    return MiscTestUtil.hasPermission(new ClockssPermission().getCheckers(),
 				      page);
   }
 
@@ -53,16 +53,16 @@ public class TestLockssPermission extends LockssTestCase {
     assertFalse(hasPermission("LOCKSS system does not have permission to collect, preserve, and serve this Archival Unit"));
   }
 
-  public void testLockssPermission() throws IOException {
+  public void testClockssPermission() throws IOException {
     String padding = org.apache.commons.lang.StringUtils.repeat("Blah ", 50);
-    assertTrue(hasPermission("LOCKSS system has permission to collect, preserve, and serve this Archival Unit"));
-    assertTrue(hasPermission(padding + "LOCKSS system has permission to collect, preserve, and serve this Archival Unit"));
-    assertTrue(hasPermission("LOCKSS system has permission to collect, preserve, and serve this Archival Unit" + padding));
-    assertTrue(hasPermission(padding + "LOCKSS system has permission to collect, preserve, and serve this Archival Unit" + padding));
+    assertTrue(hasPermission("CLOCKSS system has permission to ingest, preserve, and serve this Archival Unit"));
+    assertTrue(hasPermission(padding + "CLOCKSS system has permission to ingest, preserve, and serve this Archival Unit"));
+    assertTrue(hasPermission("CLOCKSS system has permission to ingest, preserve, and serve this Archival Unit" + padding));
+    assertTrue(hasPermission(padding + "CLOCKSS system has permission to ingest, preserve, and serve this Archival Unit" + padding));
   }
 
-  public void testNoMatchClockssPermission() throws IOException {
-    assertFalse(hasPermission(ClockssPermission.CLOCKSS_PERMISSION_STRING));
+  public void testNoMatchLockssPermission() throws IOException {
+    assertFalse(hasPermission(LockssPermission.LOCKSS_PERMISSION_STRING));
   }
 
   /**
@@ -72,7 +72,7 @@ public class TestLockssPermission extends LockssTestCase {
    * 2) A CreativeCommonsPermissionChecker
    */
   public void testGetCheckersHasProperCheckers() {
-    List checkers = new LockssPermission().getCheckers();
+    List checkers = new ClockssPermission().getCheckers();
     assertEquals("Expected two Permission checkers, but only found one",
 		 2, checkers.size());
     assertTrue("First checker wasn't a StringPermission Checker",
