@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.188 2006-07-31 06:48:16 tlipkis Exp $
+ $Id: build.xml,v 1.189 2006-07-31 21:50:54 thib_gc Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
@@ -1144,7 +1144,12 @@ java -classpath &quot;${tmp.ptool.clspth.unix}&quot; org.lockss.devtools.plugind
              header="${javadoc.header}"
              bottom="Copyright &amp;copy; 2000-2006 Board of Trustees of Leland Stanford Jr. University, all rights reserved.">
        <classpath refid="compile.classpath" />
+       <link href="${ext.javadoc}/commons-collections-3.2/docs/apidocs" />
+       <link href="${ext.javadoc}/commons-httpclient-2.0.2/docs/apidocs" />
+       <link href="${ext.javadoc}/commons-lang-2.1/docs/api" />
+       <link href="${ext.javadoc}/commons-logging-1.1/docs/apidocs" />
        <link href="${ext.javadoc}/htmlparser-1.6/docs/javadoc" />
+       <link href="${ext.javadoc}/xstream-1.1.3/javadoc" />
     </javadoc>
   </target>
 
