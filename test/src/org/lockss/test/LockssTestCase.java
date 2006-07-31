@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.83 2006-04-11 08:30:56 tlipkis Exp $
+ * $Id: LockssTestCase.java,v 1.84 2006-07-31 06:43:15 tlipkis Exp $
  */
 
 /*
@@ -1194,7 +1194,7 @@ public class LockssTestCase extends TestCase {
    */
   public static void assertReaderMatchesString(String expected, Reader reader)
       throws IOException{
-    int len = expected.length() * 2;
+    int len = Math.max(1, expected.length() * 2);
     char[] ca = new char[len];
     StringBuffer actual = new StringBuffer(expected.length());
 
@@ -1231,7 +1231,7 @@ public class LockssTestCase extends TestCase {
 						     Reader reader,
 						     int chunkLen)
       throws IOException {
-    char[] ca = new char[expected.length() * 4];
+    char[] ca = new char[Math.max(1, expected.length() * 4)];
     int off = 0;
     int n;
     while ((n = reader.read(ca, off, Math.min(chunkLen, ca.length - off)))
