@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.187 2006-07-25 00:04:32 thib_gc Exp $
+ $Id: build.xml,v 1.188 2006-07-31 06:48:16 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
@@ -192,7 +192,7 @@ Args:
   <property name="commons.jxpath.jar"
 				  value="${lib}/commons-jxpath-1.2.jar"/>
   <property name="concurrent.jar" value="${lib}/concurrent.jar"/>
-  <property name="htmlparser.jar" value="${lib}/htmlparser.jar"/>
+  <property name="htmlparser.jar" value="${lib}/htmlparser-1.6.jar"/>
   <!-- W3C RDF Parser -->
   <property name="rdf.jar"        value="${lib}/rdf-api-2001-01-19.jar" />
   <property name="xstream.jar"    value="${lib}/xstream-1.1.3.jar" />
@@ -213,6 +213,9 @@ Args:
   <property name="getopt.jar"  value="${test.lib}/java-getopt-1.0.9.jar"/>
   <property name="ant-contrib.jar"      value="${lib}/ant-contrib-0.6.jar"/>
   <property name="pdfbox.jar" value="${lib}/PDFBox-0.7.2.jar" />
+
+  <property name="ext.javadoc"
+                      value="http://documents.lockss.org/gamma-libs/" />
 
   <!-- Jars we create -->
   <property name="lockss.jar"     value="${lib}/lockss.jar"/>
@@ -1141,6 +1144,7 @@ java -classpath &quot;${tmp.ptool.clspth.unix}&quot; org.lockss.devtools.plugind
              header="${javadoc.header}"
              bottom="Copyright &amp;copy; 2000-2006 Board of Trustees of Leland Stanford Jr. University, all rights reserved.">
        <classpath refid="compile.classpath" />
+       <link href="${ext.javadoc}/htmlparser-1.6/docs/javadoc" />
     </javadoc>
   </target>
 
@@ -1428,7 +1432,7 @@ java -classpath &quot;${tmp.ptool.clspth.unix}&quot; org.lockss.devtools.plugind
 
   <!-- ==================================================================== -->
   <target name="test-all"
-   depends="package,test-unit,test-func,test-plugins"
+   depends="package,test-unit,test-func,test-plugins,test-tools"
    description="Run all unit tests, functional tests and plugin unit tests" >
   </target>
 
