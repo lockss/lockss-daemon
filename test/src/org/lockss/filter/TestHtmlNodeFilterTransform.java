@@ -1,5 +1,5 @@
 /*
- * $Id: TestHtmlNodeFilterTransform.java,v 1.1 2006-07-31 06:47:25 tlipkis Exp $
+ * $Id: TestHtmlNodeFilterTransform.java,v 1.2 2006-07-31 07:24:45 tlipkis Exp $
  */
 
 /*
@@ -69,7 +69,6 @@ public class TestHtmlNodeFilterTransform extends LockssTestCase {
   }
 
   public void testSimple() throws IOException {
-//     RegexFilter f0 = new RegexFilter(".*");
     assertFiltersOut("<html>foo</html>",
 		       "<html>foo</html>",
 		       new FalseFilter());
