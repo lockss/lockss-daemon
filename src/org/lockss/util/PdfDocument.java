@@ -1,5 +1,5 @@
 /*
- * $Id: PdfDocument.java,v 1.1 2006-07-26 22:40:15 thib_gc Exp $
+ * $Id: PdfDocument.java,v 1.2 2006-07-31 23:54:48 thib_gc Exp $
  */
 
 /*
@@ -52,7 +52,9 @@ import org.pdfbox.pdmodel.fdf.FDFDocument;
  * API more related to the PDF document under the parser.</p>
  * @author Thib Guicherd-Callin
  */
-public class PdfDocument extends PDFParser {
+public class PdfDocument {
+
+  protected PDFParser pdfParser;
 
   /**
    * <p>Builds a new PDF document (actually a new PDF parser).</p>
@@ -64,8 +66,8 @@ public class PdfDocument extends PDFParser {
    * @see PDFParser#PDFParser(InputStream)
    */
   public PdfDocument(InputStream inputStream) throws IOException {
-    super(inputStream);
-    super.parse(); // do not call this.parse(), call super.parse()
+    this.pdfParser = new PDFParser(inputStream);
+    this.pdfParser.parse();
   }
 
   /**
@@ -75,31 +77,26 @@ public class PdfDocument extends PDFParser {
    * @see PDDocument#close
    */
   public void close() throws IOException {
-    getPDDocument().close();
+    pdfParser.getPDDocument().close();
   }
 
   public PDPage getPage(int index) throws IOException {
-    return (PDPage)getPDDocument().getDocumentCatalog().getAllPages().get(index);
+    return (PDPage)pdfParser.getPDDocument().getDocumentCatalog().getAllPages().get(index);
   }
 
   public Iterator /* of PDPage */ getPageIterator() throws IOException {
-    return getPDDocument().getDocumentCatalog().getAllPages().iterator();
+    return pdfParser.getPDDocument().getDocumentCatalog().getAllPages().iterator();
   }
 
   /**
-   * <p><em>Do not explicitly call this method as it is already called
-   * by the constructor.</em></p>
-   * <p>There is no harm in an accidental call; calling this method
-   * has no effect.</p>
-   * @see #PdfDocument(InputStream)
+   * <p>Provides access to the underlying {@link PDDocument}
+   * instance.</p>
+   * @return The underlying {@link PDDocument} instance, pulled from
+   *         hte underlying {@link PDFParser} instance.
+   * @throws IOException if any processing error occurs.
    */
-  public void parse() throws IOException {
-    /*
-     * Let clients forget that they have to build the object first and
-     * then parse it. Give the illusion that building a PdfDocument
-     * builds the whole PDF object graph. The constructor calls
-     * super.parse().
-     */
+  public PDDocument getPDDocument() throws IOException {
+    return pdfParser.getPDDocument();
   }
 
   /**
@@ -111,13 +108,17 @@ public class PdfDocument extends PDFParser {
    */
   public void save(OutputStream outputStream) throws IOException {
     try {
-      getPDDocument().save(outputStream);
+      pdfParser.getPDDocument().save(outputStream);
     }
     catch (COSVisitorException cve) {
       IOException ioe = new IOException();
       ioe.initCause(cve);
       throw ioe;
     }
+  }
+
+  public COSDocument getCOSDocument() throws IOException {
+    return pdfParser.getDocument();
   }
 
 }

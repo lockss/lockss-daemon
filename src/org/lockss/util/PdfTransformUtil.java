@@ -1,5 +1,5 @@
 /*
- * $Id: PdfTransformUtil.java,v 1.1 2006-07-26 22:40:14 thib_gc Exp $
+ * $Id: PdfTransformUtil.java,v 1.2 2006-07-31 23:54:48 thib_gc Exp $
  */
 
 /*
@@ -33,17 +33,10 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 
 import java.io.*;
-import java.util.*;
+import java.util.Iterator;
 
-import org.apache.commons.collections.IteratorUtils;
-import org.apache.commons.collections.buffer.CircularFifoBuffer;
-import org.lockss.filter.PdfTransform;
-import org.pdfbox.cos.*;
-import org.pdfbox.pdfparser.PDFStreamParser;
-import org.pdfbox.pdfwriter.ContentStreamWriter;
+import org.lockss.filter.*;
 import org.pdfbox.pdmodel.PDPage;
-import org.pdfbox.pdmodel.common.PDStream;
-import org.pdfbox.util.PDFOperator;
 
 /**
  * <p>Utility classes and methods to deal with PDF transforms.</p>
@@ -53,98 +46,151 @@ import org.pdfbox.util.PDFOperator;
 public class PdfTransformUtil {
 
   /**
-   * <p>The "show text" PDF operator (<code>Tj</code>).</p>
-   */
-  public static final String SHOW_TEXT = "Tj";
-
-  /**
-   * <p>The "begin text object" PDF operator (<code>BT</code>).</p>
-   */
-  public static final String BEGIN_TEXT_OBJECT = "BT";
-
-  /**
-   * <p>The "end text object" PDF operator (<code>ET</code>).</p>
-   */
-  public static final String END_TEXT_OBJECT = "ET";
-
-  /**
-   * <p>A PDF transform that does nothing.</p>
+   * <p>A PDF transform decorator that applies a given PDF transform
+   * only if the PDF document to be transformed is identified by the
+   * {@link #identify} method.</p>
    * @author Thib Guicherd-Callin
    */
-  public static class IdentityPdfTransform implements PdfTransform {
+  public static abstract class PdfConditionalTransform implements PdfTransform {
 
-    public void transform(PdfDocument pdfDocument,
-                          Logger logger)
-        throws IOException {
-      (logger == null ? defaultLogger : logger).debug("Identity PDF transform");
+    /**
+     * <p>The PDF transform to be applied conditionally.</p>
+     */
+    protected PdfTransform pdfTransform;
+
+    /**
+     * <p>Decorates the given PDF transform.</p>
+     * @param pdfTransform A PDF transform to be applied conditionally.
+     */
+    public PdfConditionalTransform(PdfTransform pdfTransform) {
+      this.pdfTransform = pdfTransform;
     }
 
-  }
+    /**
+     * <p>Determines if the argument should be transformed by this
+     * transform.</p>
+     * @param pdfDocument A PDF document (from {@link #transform}).
+     * @return True if the underlying PDF transform should be applied,
+     *         false otherwise.
+     * @throws IOException if any processing error occurs.
+     */
+    public abstract boolean identify(PdfDocument pdfDocument) throws IOException;
 
-  public interface PdfTokenSubstreamMatcher {
-
-    boolean isLastSubstreamToken(Object candidateToken);
-
-    boolean tokenSubstreamMatches(Object[] pdfTokens,
-                                  Logger logger);
-
-    int tokenSubstreamSize();
-
-  }
-
-  public interface PdfTokenSubstreamMutator extends PdfTokenSubstreamMatcher {
-
-    void processTokenSubstream(Object[] pdfTokens,
-                               Logger logger)
-        throws IOException;
+    /* Inherit documentation */
+    public void transform(PdfDocument pdfDocument) throws IOException {
+      if (identify(pdfDocument)) {
+        pdfTransform.transform(pdfDocument);
+      }
+    }
 
   }
 
   /**
-   * <p>A logger for use by {@link PdfTransform#transform} methods
-   * when no logger is passed by the caller.</p>
+   * <p>A PDF transform that applies a PDF page transform to each page
+   * of the PDF document except the first page.</p>
+   * @author Thib Guicherd-Callin
    */
-  protected static Logger defaultLogger = Logger.getLogger("PdfMultiTransform");
+  public static class PdfEachPageExceptFirstTransform implements PdfTransform {
 
-  public static String getPdfString(Object candidateToken) {
-    return ((COSString)candidateToken).getString();
-  }
+    /**
+     * <p>A PDF page transform.</p>
+     */
+    protected PdfPageTransform pdfPageTransform;
 
-  public static void replacePdfString(Object candidateToken,
-                                      String newString)
-      throws IOException {
-    replacePdfString(candidateToken, newString, null);
-  }
-
-  public static void replacePdfString(Object candidateToken,
-                                      String newString,
-                                      Logger logger)
-      throws IOException {
-    if (logger != null && logger.isDebug3()) {
-      StringBuffer buffer = new StringBuffer();
-      buffer.append("Replacing \"");
-      buffer.append(PdfTransformUtil.getPdfString(candidateToken));
-      buffer.append("\" by \"");
-      buffer.append(newString);
-      buffer.append("\"");
-      logger.debug3(buffer.toString());
+    /**
+     * <p>Builds a new PDF transform with the given PDF page
+     * transform.</p>
+     * @param pdfPageTransform A PDF page transform.
+     */
+    public PdfEachPageExceptFirstTransform(PdfPageTransform pdfPageTransform) {
+      this.pdfPageTransform = pdfPageTransform;
     }
-    COSString cosString = (COSString)candidateToken;
-    cosString.reset();
-    cosString.append(newString.getBytes());
-  }
 
-  public static boolean isPdfOperator(Object candidateToken,
-                                      String expectedOperator) {
-    if (candidateToken instanceof PDFOperator) {
-      return ((PDFOperator)candidateToken).getOperation().equals(expectedOperator);
+    /* Inherit documentation */
+    public void transform(PdfDocument pdfDocument) throws IOException {
+      Iterator iter = pdfDocument.getPageIterator();
+      iter.next(); // skip first page
+      while (iter.hasNext()) {
+        pdfPageTransform.transform(pdfDocument, (PDPage)iter.next());
+      }
     }
-    return false;
+
   }
 
-  public static boolean isPdfString(Object candidateToken) {
-    return candidateToken instanceof COSString;
+  /**
+   * <p>A PDF transform that applies a PDF page transform to each page
+   * of the PDF document.</p>
+   * @author Thib Guicherd-Callin
+   */
+  public static class PdfEachPageTransform implements PdfTransform {
+
+    /**
+     * <p>A PDF page transform.</p>
+     */
+    protected PdfPageTransform pdfPageTransform;
+
+    /**
+     * <p>Builds a new PDF transform with the given PDF page
+     * transform.</p>
+     * @param pdfPageTransform A PDF page transform.
+     */
+    public PdfEachPageTransform(PdfPageTransform pdfPageTransform) {
+      this.pdfPageTransform = pdfPageTransform;
+    }
+
+    /* Inherit documentation */
+    public void transform(PdfDocument pdfDocument) throws IOException {
+      for (Iterator iter = pdfDocument.getPageIterator() ; iter.hasNext() ; ) {
+        pdfPageTransform.transform(pdfDocument, (PDPage)iter.next());
+      }
+    }
+
   }
+
+  /**
+   * <p>A PDF transform that applies a PDF page transform to the
+   * first page of the PDF document.</p>
+   * @author Thib Guicherd-Callin
+   */
+  public static class PdfFirstPageTransform implements PdfTransform {
+
+    /**
+     * <p>A PDF page transform.</p>
+     */
+    protected PdfPageTransform pdfPageTransform;
+
+    /**
+     * <p>Builds a new PDF transform with the given PDF page
+     * transform.</p>
+     * @param pdfPageTransform A PDF page transform.
+     */
+    public PdfFirstPageTransform(PdfPageTransform pdfPageTransform) {
+      this.pdfPageTransform = pdfPageTransform;
+    }
+
+    /* Inherit documentation */
+    public void transform(PdfDocument pdfDocument) throws IOException {
+      pdfPageTransform.transform(pdfDocument,
+                                 (PDPage)pdfDocument.getPageIterator().next());
+    }
+
+  }
+
+  /**
+   * <p>A PDF transform that does nothing, for testing.</p>
+   * @author Thib Guicherd-Callin
+   */
+  public static class PdfIdentityTransform implements PdfTransform {
+
+    /* Inherit documentation */
+    public void transform(PdfDocument pdfDocument)
+        throws IOException {
+      logger.debug("Identity PDF transform");
+    }
+
+  }
+
+  protected static Logger logger = Logger.getLogger("PdfTransformUtil");
 
   /**
    * <p>Parses a PDF document from an input stream, applies a
@@ -170,7 +216,7 @@ public class PdfTransformUtil {
       mustReleaseResources = true;
 
       // Transform
-      pdfTransform.transform(pdfDocument, logger);
+      pdfTransform.transform(pdfDocument);
 
       // Save
       pdfDocument.save(pdfOutputStream);
@@ -179,85 +225,6 @@ public class PdfTransformUtil {
       if (mustReleaseResources) {
         pdfDocument.close();
       }
-    }
-  }
-
-  public static boolean runPdfTokenSubstreamMatcher(PdfTokenSubstreamMatcher matcher,
-                                                    PDPage pdPage,
-                                                    Logger logger)
-      throws IOException {
-    // Parse stream
-    PDStream pdStream = pdPage.getContents();
-    COSStream cosStream = pdStream.getStream();
-    PDFStreamParser pdfStreamParser = new PDFStreamParser(cosStream);
-    pdfStreamParser.parse();
-
-    // Prepare iteration
-    Iterator iter = pdfStreamParser.getTokens().iterator();
-    CircularFifoBuffer buffer = new CircularFifoBuffer(matcher.tokenSubstreamSize());
-
-    // Look for match
-    while (iter.hasNext()) {
-      Object candidateToken = iter.next();
-      buffer.add(candidateToken);
-      if (matcher.isLastSubstreamToken(candidateToken)
-          && buffer.size() <= matcher.tokenSubstreamSize()) {
-        Object[] pdfTokens = IteratorUtils.toArray(buffer.iterator());
-        if (matcher.tokenSubstreamMatches(pdfTokens, logger)) {
-          return true;
-        }
-      }
-    }
-    return false;
-  }
-
-  public static void runPdfTokenSubstreamMutator(PdfTokenSubstreamMutator mutator,
-                                                 PdfDocument pdfDocument,
-                                                 PDPage pdPage,
-                                                 boolean stopAfterFirstMatch,
-                                                 Logger logger)
-      throws IOException {
-    logger.debug2("Running PDF token substream mutator");
-
-    // Parse stream
-    PDStream pdStream = pdPage.getContents();
-    COSStream cosStream = pdStream.getStream();
-    PDFStreamParser pdfStreamParser = new PDFStreamParser(cosStream);
-    pdfStreamParser.parse();
-
-    // Prepare iteration
-    List tokens = pdfStreamParser.getTokens();
-    Iterator iter = tokens.iterator();
-    CircularFifoBuffer buffer = new CircularFifoBuffer(mutator.tokenSubstreamSize());
-    boolean atLeastOneMatch = false;
-
-    // Look for matches
-    while (iter.hasNext()) {
-      Object candidateToken = iter.next();
-      buffer.add(candidateToken);
-      if (mutator.isLastSubstreamToken(candidateToken)
-          && buffer.size() <= mutator.tokenSubstreamSize()) {
-        logger.debug3("Found candidate match");
-        Object[] pdfTokens = IteratorUtils.toArray(buffer.iterator());
-        if (mutator.tokenSubstreamMatches(pdfTokens, logger)) {
-          logger.debug3("Applying transform to match");
-          atLeastOneMatch = true;
-          mutator.processTokenSubstream(pdfTokens, logger);
-          if (stopAfterFirstMatch) {
-            logger.debug2("Stop after first match requested");
-            break;
-          }
-        }
-      }
-    }
-
-    if (atLeastOneMatch) {
-      logger.debug2("At least one match; saving stream");
-      PDStream updatedStream = new PDStream(pdfDocument.getPDDocument());
-      OutputStream out = updatedStream.createOutputStream();
-      ContentStreamWriter tokenWriter = new ContentStreamWriter(out);
-      tokenWriter.writeTokens(tokens);
-      pdPage.setContents(updatedStream);
     }
   }
 

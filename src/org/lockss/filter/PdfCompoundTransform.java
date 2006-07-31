@@ -1,5 +1,5 @@
 /*
- * $Id$
+ * $Id: PdfCompoundTransform.java,v 1.1 2006-07-31 23:54:48 thib_gc Exp $
  */
 
 /*
@@ -37,11 +37,7 @@ import java.util.*;
 
 import org.lockss.util.*;
 
-public class PdfMultiTransform implements PdfTransform {
-
-  public PdfMultiTransform() {
-    this.pdfTransforms = new ArrayList();
-  }
+public class PdfCompoundTransform implements PdfTransform {
 
   /**
    * <p>A list of registered {@link PdfTransform} instances.</p>
@@ -49,8 +45,50 @@ public class PdfMultiTransform implements PdfTransform {
   protected ArrayList /* of PdfTransform */ pdfTransforms;
 
   /**
+   * <p>Builds a new compound transform.</p>
+   */
+  public PdfCompoundTransform() {
+    this((PdfTransform[])null);
+  }
+
+  /**
+   * <p>Builds a new compound transform, starting with the given
+   * transform.</p>
+   * @param pdfTransform A transform.
+   */
+  public PdfCompoundTransform(PdfTransform pdfTransform) {
+    this(new PdfTransform[] { pdfTransform });
+  }
+
+  /**
+   * <p>Builds a new compound transform, starting with the given
+   * transforms.</p>
+   * @param pdfTransform1 A transform.
+   * @param pdfTransform2 A transform.
+   */
+  public PdfCompoundTransform(PdfTransform pdfTransform1,
+                              PdfTransform pdfTransform2) {
+    this(new PdfTransform[] { pdfTransform1, pdfTransform2 } );
+  }
+
+  /**
+   * <p>Builds a new compound transform, starting with the given
+   * transforms.</p>
+   * @param pdfTransforms An array of transforms. Can be null for no
+   *                      initial transforms.
+   */
+  public PdfCompoundTransform(PdfTransform[] pdfTransforms) {
+    this.pdfTransforms = new ArrayList();
+    if (pdfTransforms != null) {
+      for (int transform = 0 ; transform < pdfTransforms.length ; ++transform) {
+        addPdfTransform(pdfTransforms[transform]);
+      }
+    }
+  }
+
+  /**
    * <p>Registers a new {@link PdfTransform} instance with
-   * this multi-transform.</p>
+   * this compound transform.</p>
    * <p>When transforming a PDF document, the actions performed by the
    * registered tranforms are applied in the order the transforms
    * were registered with this method.</p>
@@ -61,8 +99,7 @@ public class PdfMultiTransform implements PdfTransform {
   }
 
   /* Inherit documentation */
-  public synchronized void transform(PdfDocument pdfDocument,
-                                     Logger logger)
+  public synchronized void transform(PdfDocument pdfDocument)
       throws IOException {
     if (logger == null) {
       logger = defaultLogger;
@@ -70,7 +107,7 @@ public class PdfMultiTransform implements PdfTransform {
     }
     for (Iterator iter = pdfTransforms.iterator() ; iter.hasNext() ; ) {
       PdfTransform pdfTransform = (PdfTransform)iter.next();
-      pdfTransform.transform(pdfDocument, logger);
+      pdfTransform.transform(pdfDocument);
     }
   }
 
@@ -79,5 +116,7 @@ public class PdfMultiTransform implements PdfTransform {
    * logger is passed by the caller.</p>
    */
   protected static Logger defaultLogger = Logger.getLogger("PdfMultiTransform");
+
+  protected static Logger logger = Logger.getLogger("CompoundPdfTransform");
 
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: PdfTransform.java,v 1.3 2006-07-31 23:54:48 thib_gc Exp $
+ * $Id: PdfPageTransform.java,v 1.1 2006-07-31 23:54:48 thib_gc Exp $
  */
 
 /*
@@ -35,20 +35,22 @@ package org.lockss.filter;
 import java.io.IOException;
 
 import org.lockss.util.PdfDocument;
+import org.pdfbox.pdmodel.PDPage;
 
 /**
- * <p>Specifies classes that are able to transform a PDF object graph
- * via a {@link PdfDocument}.</p>
+ * <p>Specifies classes that are able to transform a PDF page
+ * via a {@link PDPage}.</p>
  * @author Thib Guicherd-Callin
  * @see PdfDocument
  */
-public interface PdfTransform {
+public interface PdfPageTransform {
 
   /**
-   * <p>Applies a transform to a PDF document.</p>
-   * @param pdfDocument A PDF document.
+   * <p>Applies a transform to a PDF page.</p>
+   * @param pdfDocument A parent PDF document.
+   * @param pdfPage     A PDF page (belonging to the PDF document).
    * @throws IOException if any processing error occurs.
    */
-  void transform(PdfDocument pdfDocument) throws IOException;
+  void transform(PdfDocument pdfDocument, PDPage pdfPage) throws IOException;
 
 }
