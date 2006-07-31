@@ -1,11 +1,11 @@
 <map>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.LockssWebSitePlugin</string>
+    <string>org.lockss.plugin.lockss.LockssWebSitePlugin</string>
   </entry>
   <entry>
     <string>text/html_filter</string>
-    <string>org.lockss.plugin.LockssWebSiteFilterRule</string>
+    <string>org.lockss.plugin.lockss.LockssWebSiteFilterRule</string>
   </entry>
   <entry>
     <string>au_name</string>
