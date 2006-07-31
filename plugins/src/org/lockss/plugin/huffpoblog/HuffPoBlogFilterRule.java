@@ -1,5 +1,5 @@
 /*
- * $Id: HuffPoBlogFilterRule.java,v 1.2 2006-02-12 01:00:39 dshr Exp $
+ * $Id: HuffPoBlogFilterRule.java,v 1.3 2006-07-31 07:20:46 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,9 @@ package org.lockss.plugin.huffpoblog;
 
 import java.io.*;
 import java.util.List;
+import org.htmlparser.*;
+import org.htmlparser.filters.*;
+
 import org.lockss.util.*;
 import org.lockss.filter.*;
 import org.lockss.plugin.FilterRule;
@@ -56,4 +59,43 @@ public class HuffPoBlogFilterRule implements FilterRule {
     Reader tagFilter = HtmlTagFilter.makeNestedFilter(reader, tagList);
     return new WhiteSpaceFilter(tagFilter);
   }
+
+  public Reader xcreateFilteredReader(Reader reader) {
+    /*
+     * Initial attempt - remove everything between the begin and end
+     * ad tag comments
+     */
+
+    List tagList = ListUtil.list(
+	new HtmlTagFilter.TagPair("<!-- begin ad tag -->", "<!-- End ad tag -->"),
+	new HtmlTagFilter.TagPair("<script", "</script>", true),
+	new HtmlTagFilter.TagPair("<table", "</table>", true),
+	new HtmlTagFilter.TagPair("<ul class=\"relatedposts\">", "</ul>", true),
+	new HtmlTagFilter.TagPair("<div class=\"relatedcats\">", "</div>", true)
+        );
+    Reader tagFilter = HtmlTagFilter.makeNestedFilter(reader, tagList);
+
+    NodeFilter adStart =
+      HtmlNodeFilters.commentWithString("begin ad tag", true);
+    NodeFilter adEnd =
+      HtmlNodeFilters.commentWithString("End ad tag", true);
+    HtmlTransform xform1 =
+      HtmlNodeSequenceTransform.excludeSequence(adStart, adEnd);
+
+    OrFilter filter = new OrFilter();
+    filter.setPredicates(new NodeFilter[] {
+      new TagNameFilter("script"),
+      new TagNameFilter("table"),
+      HtmlNodeFilters.tagWithAttribute("ul", "class", "relatedposts"),
+      HtmlNodeFilters.tagWithAttribute("div", "class", "relatedcats"),
+    });
+    HtmlTransform xform2 = HtmlNodeFilterTransform.exclude(filter);
+
+    HtmlTransform xform = new HtmlCompoundTransform(xform1, xform2);
+
+    Reader htmlFilter = new HtmlFilterReader(reader, xform);
+    return new WhiteSpaceFilter(htmlFilter);
+  }
+
+
 }
