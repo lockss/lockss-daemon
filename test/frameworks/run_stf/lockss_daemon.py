@@ -1,5 +1,5 @@
 import base64, glob, os, httplib, random, re, sha, shutil, signal, socket
-import mimetools, mimetypes, sys, time, types, urllib, urllib2, urlparse
+import mimetools, mimetypes, sys, time, traceback, types, urllib, urllib2, urlparse
 from os import path
 from xml.dom import minidom
 from lockss_util import *
@@ -632,8 +632,12 @@ class Client:
         return table
 
     def getAuV3Pollers(self, au):
-        key = 'AU~%s' % urllib.quote(au.auId) # requires a pre-quoted key
-        (summary, table) = self.__getStatusTable('V3PollerTable', key)
+# Mea culpa:  I broke accessing V3 Pollers by key when I was enabling
+# status references from the AU table to the V3 Poller table.  It should
+# be OK just to comment this out permanently. [sethm]
+#        key = 'AU~%s' % urllib.quote(au.auId) # requires a pre-quoted key
+#        (summary, table) = self.__getStatusTable('V3PollerTable', key)
+        (summary, table) = self.__getStatusTable('V3PollerTable')
         return table
 
     def getAuV3Voters(self, au):
@@ -685,6 +689,7 @@ class Client:
             raise e
         except Exception, e:
             ## On any other error, just return false.
+            log.debug("Got exception: %s" % e)
             return False
 
     def getAdminUi(self):
@@ -1343,18 +1348,23 @@ class Client:
         post.add('output', 'xml')
 
         xml = post.execute().read()
-        log.debug3("Received XML response: \n" + xml)
+        log.debug2("Received XML response: \n" + xml)
         doc = minidom.parseString(xml)
         doc.normalize() # required for python 2.2
 
         summaryList = doc.getElementsByTagName('st:summaryinfo')
         summaryDict = {}
+        summaryTitle = None
+        summaryValue = None
         for summary in summaryList:
-            summaryTitle = summary.getElementsByTagName('st:title')[0].firstChild.data
-            summaryValue = summary.getElementsByTagName('st:value')[0]
+            if summary.getElementsByTagName('st:title')[0] and \
+               summary.getElementsByTagName('st:title')[0].firstChild:
+                summaryTitle = summary.getElementsByTagName('st:title')[0].firstChild.data
+            if summary.getElementsByTagName('st:value')[0]:
+                summaryValue = summary.getElementsByTagName('st:value')[0]
             # See if this is a reference, or CDATA
             refList = summary.getElementsByTagName('st:reference')
-            if refList:
+            if summaryTitle and refList:
                 ref = refList[0] # should be only one!
                 name = ref.getElementsByTagName('st:name')[0].firstChild.data
                 key = ref.getElementsByTagName('st:key')[0].firstChild.data
@@ -1362,7 +1372,7 @@ class Client:
                 summaryDict[summaryTitle] = {'name': name,
                                              'key': key,
                                              'value': value}
-            else:
+            elif summaryTitle and summaryValue:
                 summaryDict[summaryTitle] = summaryValue.firstChild.data
 
         rowList = doc.getElementsByTagName('st:row')
@@ -1616,7 +1626,7 @@ class Post:
         opener = urllib2.build_opener()
         log.debug2("Sending POST: %s?%s" % (self.request.get_full_url(), args))
         return opener.open(self.request, args)
-
+ 
 class MultipartPost:
     def __init__(self, url='', username=None, password=None, cookie=None):
         urlparts = urlparse.urlsplit(url)
