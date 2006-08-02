@@ -1,5 +1,5 @@
 /*
- * $Id: TestHttpClientUrlConnection.java,v 1.15 2006-08-02 02:51:40 tlipkis Exp $
+ * $Id: TestHttpClientUrlConnection.java,v 1.16 2006-08-02 03:00:28 tlipkis Exp $
  */
 
 /*
@@ -221,8 +221,9 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     hdr = method.getRequestHeader("accept");
     assertEquals(HttpClientUrlConnection.ACCEPT_STRING, hdr.getValue());
     HostConfiguration hc = client.getHostConfiguration();
-    assertEquals(null, hc.getLocalAddress());
+    assertEquals("phost", hc.getProxyHost());
     assertEquals(9009, hc.getProxyPort());
+    assertEquals(null, hc.getLocalAddress());
   }
 
   public void testResponse() throws Exception {
