@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlackwellArchivalUnit.java,v 1.1 2006-08-02 02:10:39 tlipkis Exp $
+ * $Id: TestBlackwellArchivalUnit.java,v 1.2 2006-08-02 02:14:51 tlipkis Exp $
  */
 
 /*
@@ -171,8 +171,6 @@ public class TestBlackwellArchivalUnit extends LockssPluginTestCase {
     DefinableArchivalUnit bwAu = makeAu(ROOT_URL, "pace", 2);
     assertEquals(expectedStr,
 		 ((SpiderCrawlSpec)bwAu.getCrawlSpec()).getStartingUrls().get(0));
-//                  bwAu.getProperties().getString(ArchivalUnit.AU_START_URL, null));
-    //au.getCrawlSpec().getStartingUrls()
   }
 
   public void testGetUrlStems() throws Exception {
