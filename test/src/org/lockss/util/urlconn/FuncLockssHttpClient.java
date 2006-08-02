@@ -1,5 +1,5 @@
 /*
- * $Id: FuncLockssHttpClient.java,v 1.5 2005-10-19 20:13:06 troberts Exp $
+ * $Id: FuncLockssHttpClient.java,v 1.6 2006-08-02 02:51:40 tlipkis Exp $
  */
 
 /*
@@ -237,6 +237,46 @@ public class FuncLockssHttpClient extends LockssTestCase {
     assertHeaderLine("^User-Agent: Jakarta Commons-HttpClient", req);
 
     assertEquals(200, conn.getResponseCode());
+    conn.release();
+    th.stopServer();
+    assertEquals(1, th.getNumConnects());
+  }
+
+  public void testDontBindLocalAddress() throws Exception {
+    int port = TcpTestUtil.findUnboundTcpPort();
+    ServerSocket server = new ServerSocket(port);
+    ServerThread th = new ServerThread(server);
+    th.setResponses(resp(RESP_200));
+    th.setMaxReads(10);
+    th.start();
+    conn = UrlUtil.openConnection(LockssUrlConnection.METHOD_GET,
+				  localurl(port), connectionPool);
+    aborter = abortIn(TIMEOUT_SHOULDNT, conn);
+    conn.execute();
+    aborter.cancel();
+    InetSocketAddress client = th.getClient(0);
+    assertEquals(InetAddress.getByName("127.0.0.1"), client.getAddress());
+    conn.release();
+    th.stopServer();
+    assertEquals(1, th.getNumConnects());
+  }
+
+  public void testBindLocalAddress() throws Exception {
+    String local ="127.3.42.6";
+    int port = TcpTestUtil.findUnboundTcpPort();
+    ServerSocket server = new ServerSocket(port);
+    ServerThread th = new ServerThread(server);
+    th.setResponses(resp(RESP_200));
+    th.setMaxReads(10);
+    th.start();
+    conn = UrlUtil.openConnection(LockssUrlConnection.METHOD_GET,
+				  localurl(port), connectionPool);
+    conn.setLocalAddress(IPAddr.getByName(local));
+    aborter = abortIn(TIMEOUT_SHOULDNT, conn);
+    conn.execute();
+    aborter.cancel();
+    InetSocketAddress client = th.getClient(0);
+    assertEquals(InetAddress.getByName(local), client.getAddress());
     conn.release();
     th.stopServer();
     assertEquals(1, th.getNumConnects());
@@ -488,6 +528,7 @@ public class FuncLockssHttpClient extends LockssTestCase {
     int maxreads = 10;
     List responses;
     List requests = new ArrayList();
+    List clients = new ArrayList();
     boolean delayClose = false;
 
     ServerThread(ServerSocket srvSock) {
@@ -500,6 +541,7 @@ public class FuncLockssHttpClient extends LockssTestCase {
 	for (int ix = 0; ix < maxaccepts; ix++) {
 	  sock = srvSock.accept();
 	  log.debug3("accepted");
+	  clients.add(sock.getRemoteSocketAddress());
 	  nconnects++;
 	  try {
 	    InputStream ins = sock.getInputStream();
@@ -570,6 +612,10 @@ public class FuncLockssHttpClient extends LockssTestCase {
 
     String getRequest(int n) {
       return (String)requests.get(n);
+    }
+
+    InetSocketAddress getClient(int n) {
+      return (InetSocketAddress)clients.get(n);
     }
   }
 

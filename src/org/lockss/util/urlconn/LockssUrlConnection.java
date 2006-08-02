@@ -1,5 +1,5 @@
 /*
- * $Id: LockssUrlConnection.java,v 1.9 2005-10-03 06:03:49 tlipkis Exp $
+ * $Id: LockssUrlConnection.java,v 1.10 2006-08-02 02:51:40 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -32,6 +32,7 @@ package org.lockss.util.urlconn;
 
 import java.util.*;
 import java.io.*;
+import org.lockss.util.*;
 import org.lockss.config.Configuration;
 
 /** Encapsulates and abstracts a URL connection, using either Sun's
@@ -87,6 +88,9 @@ public interface LockssUrlConnection {
    * @throws UnsupportedOperationException if canProxy() returns false
    */
   public void setProxy(String host, int port) throws CantProxyException ;
+
+  /** Set the local address to be used when creating connections. */
+  public void setLocalAddress(IPAddr localAddress);
 
   /** Set the user-agent request header */
   public void setUserAgent(String value);

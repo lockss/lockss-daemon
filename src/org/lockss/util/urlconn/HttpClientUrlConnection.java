@@ -1,5 +1,5 @@
 /*
- * $Id: HttpClientUrlConnection.java,v 1.23 2006-04-23 05:56:36 tlipkis Exp $
+ * $Id: HttpClientUrlConnection.java,v 1.24 2006-08-02 02:51:40 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -158,9 +158,12 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
     if (methodCode != LockssUrlConnection.METHOD_PROXY) {
       mimicSunRequestHeaders();
     }
+    HostConfiguration hostConfig = client.getHostConfiguration();
     if (proxyHost != null) {
-      HostConfiguration hostConfig = client.getHostConfiguration();
       hostConfig.setProxy(proxyHost, proxyPort);
+    }
+    if (localAddress != null) {
+      hostConfig.setLocalAddress(localAddress.getInetAddr());
     }
     isExecuted = true;
     responseCode = executeOnce(method);

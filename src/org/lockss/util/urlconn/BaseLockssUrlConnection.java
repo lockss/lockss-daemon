@@ -1,5 +1,5 @@
 /*
- * $Id: BaseLockssUrlConnection.java,v 1.6 2005-02-02 09:42:21 tlipkis Exp $
+ * $Id: BaseLockssUrlConnection.java,v 1.7 2006-08-02 02:51:40 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -46,6 +46,7 @@ public abstract class BaseLockssUrlConnection implements LockssUrlConnection {
   protected boolean isExecuted = false;
   protected String proxyHost = null;
   protected int proxyPort;
+  protected IPAddr localAddress = null;
 
   /** Return the URL
    * @return the URL
@@ -79,6 +80,11 @@ public abstract class BaseLockssUrlConnection implements LockssUrlConnection {
     assertNotExecuted();
     proxyHost = host;
     proxyPort = port;
+  }
+
+  public void setLocalAddress(IPAddr localAddress) {
+    assertNotExecuted();
+    this.localAddress = localAddress;
   }
 
   public void setFollowRedirects(boolean followRedirects) {

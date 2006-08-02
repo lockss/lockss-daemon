@@ -1,5 +1,5 @@
 /*
- * $Id: TestHttpClientUrlConnection.java,v 1.14 2005-10-04 22:58:06 tlipkis Exp $
+ * $Id: TestHttpClientUrlConnection.java,v 1.15 2006-08-02 02:51:40 tlipkis Exp $
  */
 
 /*
@@ -221,7 +221,7 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     hdr = method.getRequestHeader("accept");
     assertEquals(HttpClientUrlConnection.ACCEPT_STRING, hdr.getValue());
     HostConfiguration hc = client.getHostConfiguration();
-    assertEquals("phost", hc.getProxyHost());
+    assertEquals(null, hc.getLocalAddress());
     assertEquals(9009, hc.getProxyPort());
   }
 
@@ -249,6 +249,22 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     eprops.put("x_date", datestr);
     eprops.put("x_content-encoding", "text/html");
     assertEquals(eprops, props);
+  }
+
+  public void testBindLocalAddress() throws Exception {
+    String local ="127.3.42.6";
+    client.setRes(202);
+    conn.setLocalAddress(IPAddr.getByName(local));
+    conn.execute();
+    assertTrue(conn.isExecuted());
+    assertEquals(202, conn.getResponseCode());
+    Header hdr;
+    hdr = method.getRequestHeader("connection");
+    assertEquals("keep-alive", hdr.getValue());
+    hdr = method.getRequestHeader("accept");
+    assertEquals(HttpClientUrlConnection.ACCEPT_STRING, hdr.getValue());
+    HostConfiguration hc = client.getHostConfiguration();
+    assertEquals(InetAddress.getByName(local), hc.getLocalAddress());
   }
 
   class MyMockHttpClient extends HttpClient {
