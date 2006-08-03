@@ -2,33 +2,39 @@ package org.lockss.protocol;
 
 import java.util.*;
 import java.io.*;
+
+import org.lockss.app.LockssApp;
 import org.lockss.util.*;
 
 /**
  * This is a VoteBlocks data structure backed by a disk file.
  * 
  * @author sethm
- *
+ * 
  */
 public class DiskVoteBlocks extends BaseVoteBlocks {
-  
+
   private String filePath;
   private transient File file;
   private int size = 0;
-  
+
   // Hint to allow seeking to the correct point in the InputStream
   private transient long nextVoteBlockAddress = 0;
   private transient int nextVoteBlockIndex = 0;
-  
+
   private static final Logger log = Logger.getLogger("DiskVoteBlocks");
 
   /**
-   * <p>Decode a DiskVoteBlocks object from the supplied inputstream,
-   * to be stored in the supplied directory.</p>
+   * <p>
+   * Decode a DiskVoteBlocks object from the supplied inputstream, to be stored
+   * in the supplied directory.
+   * </p>
    * 
-   * <p>This method is used when decoding V3LcapMessages.</p>
+   * <p>
+   * This method is used when decoding V3LcapMessages.
+   * </p>
    * 
-   * @param blocksToRead  Number of blocks to read from the InputStream.
+   * @param blocksToRead Number of blocks to read from the InputStream.
    * @param from Input stream from which to read.
    * @param toDir Directory to use as temporary storage.
    * @throws IOException
@@ -46,8 +52,8 @@ public class DiskVoteBlocks extends BaseVoteBlocks {
   }
 
   /**
-   * Create a new VoteBlocks collection to be backed by a file in the
-   * supplied directory.
+   * Create a new VoteBlocks collection to be backed by a file in the supplied
+   * directory.
    * 
    * @param toDir Directory to use as temporary storage.
    * @throws IOException
@@ -56,12 +62,19 @@ public class DiskVoteBlocks extends BaseVoteBlocks {
     file = FileUtil.createTempFile("voteblocks-", ".bin", toDir);
     filePath = file.getAbsolutePath();
   }
-  
+
   /**
    * Automagically restore File object following deserialization.
    */
-  public void postUnmarshalResolve() {
+  protected Object postUnmarshalResolve(LockssApp lockssContext) {
     file = new File(filePath);
+    // Sanity Check
+    if (!file.exists()) {
+      throw new IllegalArgumentException("Unable to restore DiskVoteBlocks, "
+                                         + "because target voteblocks file "
+                                         + filePath + " does not " + "exist.");
+    }
+    return this;
   }
 
   public synchronized void addVoteBlock(VoteBlock b) throws IOException {
@@ -107,8 +120,8 @@ public class DiskVoteBlocks extends BaseVoteBlocks {
     } catch (IOException ex) {
       // This probably means that we've run out of blocks, so we should
       // return null.
-      log.warning("Unable to find block " + i + " while seeking " +
-                  "DiskVoteBlocks file " + filePath);
+      log.warning("Unable to find block " + i + " while seeking "
+                  + "DiskVoteBlocks file " + filePath);
       return null;
     }
   }
@@ -116,16 +129,15 @@ public class DiskVoteBlocks extends BaseVoteBlocks {
   public int size() {
     return size;
   }
-  
+
   public synchronized void release() {
-    if (!file.delete()) {
+    if (file != null && !file.delete()) {
       log.warning("Unable to delete file: " + file);
     }
   }
-  
+
   public synchronized InputStream getInputStream() throws IOException {
     return new BufferedInputStream(new FileInputStream(file));
   }
-  
 
 }

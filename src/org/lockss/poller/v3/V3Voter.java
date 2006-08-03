@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.17 2006-06-02 20:27:15 smorabito Exp $
+ * $Id: V3Voter.java,v 1.18 2006-08-03 01:19:16 smorabito Exp $
  */
 
 /*
@@ -183,8 +183,23 @@ public class V3Voter extends BasePoll {
 
   public void startPoll() {
     log.debug("Starting poll " + voterUserData.getPollKey());
-    TimerQueue.schedule(Deadline.at(voterUserData.getDeadline()),
-                        new PollTimerCallback(), this);
+    Deadline pollDeadline = null;
+    if (!continuedPoll) {
+      // Skip sanity check
+      pollDeadline = Deadline.at(voterUserData.getDeadline());
+    } else {
+      pollDeadline = Deadline.restoreDeadlineAt(voterUserData.getDeadline());
+    }
+    
+    // If this poll has already expired, don't start it.
+    if (pollDeadline.expired()) {
+      log.info("Not restoring expired voter for poll " +
+               voterUserData.getPollKey());
+      stopPoll();
+      return;
+    }
+
+    TimerQueue.schedule(pollDeadline, new PollTimerCallback(), this);
     if (continuedPoll) {
       try {
 	stateMachine.resume(voterUserData.getPsmState());
