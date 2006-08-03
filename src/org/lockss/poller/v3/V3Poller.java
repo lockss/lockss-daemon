@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.27 2006-07-12 20:28:06 smorabito Exp $
+ * $Id: V3Poller.java,v 1.27.2.1 2006-08-03 01:19:20 smorabito Exp $
  */
 
 /*
@@ -420,19 +420,53 @@ public class V3Poller extends BasePoll {
     if (!resumedPoll) {
       // Construct the initial inner circle only once
       constructInnerCircle(pollerState.getPollSize());
+      setStatus(V3Poller.POLLER_STATUS_INVITING_PEERS);
     }
-    setStatus(V3Poller.POLLER_STATUS_INVITING_PEERS);
+  
     log.debug("Scheduling V3 poll " + pollerState.getPollKey() +
               " to complete by " + pollerState.getPollDeadline());
-    // Schedule the poll deadline.  The poll must complete by this time.
-    pollCompleteRequest =
-      TimerQueue.schedule(Deadline.at(pollerState.getPollDeadline()),
-                          new PollCompleteCallback(), this);
+  
+    Deadline voteCompleteDeadline = null;
+    Deadline pollDeadline = null;
+  
+    if (resumedPoll) {
+      // Bypass sanity check.
+      voteCompleteDeadline = Deadline.restoreDeadlineAt(pollerState.getVoteDeadline());
+      pollDeadline = Deadline.restoreDeadlineAt(pollerState.getPollDeadline());
+    } else {
+      // Sanity check
+      voteCompleteDeadline = Deadline.at(pollerState.getVoteDeadline());
+      pollDeadline = Deadline.at(pollerState.getPollDeadline());
+    }
+    
     // Schedule the vote tally callback.  The poll will tally votes no earlier
-    // than this deadline.
-    voteCompleteRequest =
-      TimerQueue.schedule(Deadline.at(pollerState.getVoteDeadline()),
-                          new VoteTallyCallback(), this);
+    // than this deadline.    
+    if (voteCompleteDeadline.expired() &&
+        (pollerState.getVotedPeers().size() <= pollerState.getQuorum())) {
+      log.info("Not enough pollers voted before restoring poll " + 
+               pollerState.getPollKey());
+      stopPoll();
+      return;
+    } else {
+      voteCompleteRequest =
+        TimerQueue.schedule(voteCompleteDeadline,
+                            new VoteTallyCallback(), this);      
+    }
+    
+    // Check to see if we're restoring a poll whose deadline has already
+    // passed.
+    if (pollDeadline.expired()) {
+      log.info("Not restoring expired poll " + pollerState.getPollKey());
+      stopPoll();
+      return;
+    } else {
+      // Schedule the poll deadline.  The poll must complete by this time.
+      pollCompleteRequest =
+        TimerQueue.schedule(pollDeadline,
+                            new PollCompleteCallback(), this);      
+    }
+    
+  
     for (Iterator it = theParticipants.values().iterator(); it.hasNext();) {
       ParticipantUserData ud = (ParticipantUserData)it.next();
       if (!ud.isOuterCircle()) { // Start polling only inner circle members.
@@ -1253,7 +1287,7 @@ public class V3Poller extends BasePoll {
         log.debug2("Vote Tally deadline reached.  Scheduling hash.");
         // XXX: Refactor when our hash can be associated with an
         //      existing step task.
-        task.cancel();
+        if (task != null) task.cancel();
         if (!scheduleHash(pollerState.getCachedUrlSet(),
                           Deadline.at(pollerState.getPollDeadline()),
                           new HashingCompleteCallback(),
