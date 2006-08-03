@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.94 2006-07-19 18:01:00 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.94.2.1 2006-08-03 00:07:35 tlipkis Exp $
  */
 
 /*
@@ -452,7 +452,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       crawler = makeRepairCrawler(au, au.getCrawlSpec(),
 				  locks.keySet(), percentRepairFromCache);
       CrawlRunner runner =
-	new CrawlRunner(crawler, cb, cookie, locks.values(), limiter);
+	new CrawlRunner(crawler, null, cb, cookie, locks.values(), limiter);
       addToStatusList(crawler.getStatus());
       addToRunningCrawls(au, crawler);
       new Thread(runner).start();
@@ -514,13 +514,30 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     if (au == null) {
       throw new IllegalArgumentException("Called with null AU");
     }
-    // check rate limiter before obtaining lock
+    // check crawl window and rate limiter before obtaining lock
+    CrawlSpec spec;
+    try {
+      spec = au.getCrawlSpec();
+    } catch (RuntimeException e) {
+      // not clear this can ever happen in real use, but some tests force
+      // getCrawlSpec() to throw
+      logger.error("Couldn't get CrawlSpec: " + au, e);
+      callCallback(cb, cookie, false, null);
+      return;
+    }
+    if (spec != null && !spec.inCrawlWindow()) {
+      logger.debug("Not starting new content crawl due to crawl window: "
+		   + au);
+      callCallback(cb, cookie, false, null);
+      return;
+    }
     RateLimiter limiter =
       getRateLimiter(au, newContentRateLimiters,
 		     PARAM_MAX_NEW_CONTENT_RATE,
 		     DEFAULT_MAX_NEW_CONTENT_RATE);
     if (!limiter.isEventOk()) {
-      logger.debug("New content aborted due to rate limiter: "+au);
+      logger.debug("Not starting new content crawl due to rate limiter: "
+		   + au);
       callCallback(cb, cookie, false, null);
       return;
     }
@@ -531,17 +548,16 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
                           contentCrawlExpiration);
     }
     if (lock == null) {
-      logger.debug("Couldn't schedule new content crawl due "+
-		   "to activity lock: "+au);
+      logger.debug("Not starting new content crawl due to activity lock: "
+		   + au);
       callCallback(cb, cookie, false, null);
       return;
     }
     Crawler crawler = null;
     try {
-      CrawlSpec spec = au.getCrawlSpec();
       crawler = makeNewContentCrawler(au, spec);
       CrawlRunner runner =
-	new CrawlRunner(crawler, cb, cookie, SetUtil.set(lock),
+	new CrawlRunner(crawler, spec, cb, cookie, SetUtil.set(lock),
 			limiter, newContentStartRateLimiter);
       // To avoid race, must add to running crawls before starting
       // execution
@@ -615,15 +631,18 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     private Collection locks;
     private RateLimiter auRateLimiter;
     private RateLimiter startRateLimiter;
+    private CrawlSpec spec;
     private int sortOrder;
 
-    private CrawlRunner(Crawler crawler, CrawlManager.Callback cb,
+    private CrawlRunner(Crawler crawler, CrawlSpec spec,
+			CrawlManager.Callback cb,
 			Object cookie, Collection locks,
 			RateLimiter auRateLimiter) {
-      this(crawler, cb, cookie, locks, auRateLimiter, null);
+      this(crawler, spec, cb, cookie, locks, auRateLimiter, null);
     }
 
-    private CrawlRunner(Crawler crawler, CrawlManager.Callback cb,
+    private CrawlRunner(Crawler crawler, CrawlSpec spec,
+			CrawlManager.Callback cb,
 			Object cookie, Collection locks,
 			RateLimiter auRateLimiter,
 			RateLimiter startRateLimiter) {
@@ -634,6 +653,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       this.locks = locks;
       this.auRateLimiter = auRateLimiter;
       this.startRateLimiter = startRateLimiter;
+      this.spec = spec;
       // queue in order created
       this.sortOrder = ++createIndex;
       if (crawler.getAu() instanceof RegistryArchivalUnit) {
@@ -665,8 +685,11 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 	  setPriority(PRIORITY_PARAM_CRAWLER, PRIORITY_DEFAULT_CRAWLER);
 	  crawler.setWatchdog(this);
 	  startWDog(WDOG_PARAM_CRAWLER, WDOG_DEFAULT_CRAWLER);
-	  if (auRateLimiter != null) {
-	    auRateLimiter.event();
+	  // don't record event if crawl is going to abort immediately
+	  if (spec == null || spec.inCrawlWindow()) {
+	    if (auRateLimiter != null) {
+	      auRateLimiter.event();
+	    }
 	  }
 	  nowRunning();
 
