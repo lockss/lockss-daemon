@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.62 2006-07-18 19:12:56 tlipkis Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.63 2006-08-03 00:09:26 tlipkis Exp $
  */
 
 /*
@@ -236,17 +236,6 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     }
 
 
-    public void testDoesntNCCrawlWhenNotAllowed() {
-      SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
-      activityRegulator.setStartAuActivity(false);
-
-      crawlManager.startNewContentCrawl(mau, new TestCrawlCB(sem), null, null);
-
-      waitForCrawlToFinish(sem);
-      assertFalse("doCrawl() called", crawler.doCrawlCalled());
-    }
-
-
     private void setNewContentRateLimit(String rate, String startRate) {
       cprops.put(CrawlManagerImpl.PARAM_MAX_NEW_CONTENT_RATE, rate);
       cprops.put(CrawlManagerImpl.PARAM_NEW_CONTENT_START_RATE, startRate);
@@ -294,6 +283,26 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       waitForCrawlToFinish(sem);
       assertFalse("doCrawl() called at time " + TimeBase.nowMs(),
 		  crawler.doCrawlCalled());
+    }
+
+    public void testDoesNCCrawl() {
+      assertDoesCrawlNew();
+    }
+
+    public void testDoesntNCCrawlWhenCantGetLock() {
+      activityRegulator.setStartAuActivity(false);
+      assertDoesNotCrawlNew();
+    }
+
+    public void testDoesntNCCrawlWhenOutsideWindow() {
+      crawlSpec.setCrawlWindow(new CrawlWindow() {
+	  public boolean canCrawl() {
+	    return false;
+	  }
+	  public boolean canCrawl(Date x) {
+	    return false;
+	  }});
+      assertDoesNotCrawlNew();
     }
 
     public void testNewContentRateLimiter() {
