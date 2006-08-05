@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescr.java,v 1.31 2006-07-24 06:50:52 tlipkis Exp $
+ * $Id: ConfigParamDescr.java,v 1.32 2006-08-05 19:01:52 tlipkis Exp $
  */
 
 /*
@@ -146,6 +146,14 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
     .setSize(40)
     .setDescription("Identifier for journal (often used as part of file names)");
 
+  public static final ConfigParamDescr JOURNAL_ISSN =
+    new ConfigParamDescr()
+    .setKey("journal_issn")
+    .setDisplayName("Journal ISSN")
+    .setType(TYPE_STRING)
+    .setSize(20)
+    .setDescription("International Standard Serial Number.");
+
   public static final ConfigParamDescr PUBLISHER_NAME =
     new ConfigParamDescr()
     .setKey("publisher_name")
@@ -200,7 +208,7 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
                     + "for V1 polling, or '3' for V3 polling)");
 
   public static final ConfigParamDescr[] DEFAULT_DESCR_ARRAY = {
-      BASE_URL, VOLUME_NUMBER, VOLUME_NAME, YEAR, JOURNAL_ID,
+      BASE_URL, VOLUME_NUMBER, VOLUME_NAME, YEAR, JOURNAL_ID, JOURNAL_ISSN,
       PUBLISHER_NAME, ISSUE_RANGE, NUM_ISSUE_RANGE, ISSUE_SET, OAI_REQUEST_URL,
       OAI_SPEC
   };
