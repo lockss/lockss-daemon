@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigManager.java,v 1.19 2006-04-05 22:30:18 tlipkis Exp $
+ * $Id: TestConfigManager.java,v 1.20 2006-08-07 07:39:36 tlipkis Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.util.*;
 
 import org.lockss.test.*;
 import org.lockss.util.*;
+import org.lockss.clockss.*;
 
 /**
  * Test class for <code>org.lockss.config.ConfigManager</code>
@@ -198,6 +199,29 @@ public class TestConfigManager extends LockssTestCase {
     assertEquals("tcp:[1.2.3.4]:4321",
 		 config.get("org.lockss.localV3Identity"));
   }
+
+  public void testPlatformClockss() throws Exception {
+    Properties props = new Properties();
+    ConfigurationUtil.setCurrentConfigFromProps(props);
+    Configuration config = ConfigManager.getCurrentConfig();
+    assertNull(config.get(ClockssParams.PARAM_CLOCKSS_SUBSCRIPTION_ADDR));
+    assertNull(config.get(ClockssParams.PARAM_INSTITUTION_SUBSCRIPTION_ADDR));
+    props.put("org.lockss.platform.localIPAddress", "1.1.1.1");
+    ConfigurationUtil.setCurrentConfigFromProps(props);
+    config = ConfigManager.getCurrentConfig();
+    assertEquals("1.1.1.1",
+		 config.get(ClockssParams.PARAM_INSTITUTION_SUBSCRIPTION_ADDR));
+    assertNull(config.get(ClockssParams.PARAM_CLOCKSS_SUBSCRIPTION_ADDR));
+
+    props.put("org.lockss.platform.secondIP", "2.2.2.2");
+    ConfigurationUtil.setCurrentConfigFromProps(props);
+    config = ConfigManager.getCurrentConfig();
+    assertEquals("1.1.1.1",
+		 config.get(ClockssParams.PARAM_INSTITUTION_SUBSCRIPTION_ADDR));
+    assertEquals("2.2.2.2",
+		 config.get(ClockssParams.PARAM_CLOCKSS_SUBSCRIPTION_ADDR));
+  }
+
 
   public void testGroup() throws Exception {
     Properties props = new Properties();

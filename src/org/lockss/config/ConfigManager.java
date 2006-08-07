@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.38 2006-07-29 02:58:40 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.39 2006-08-07 07:39:36 tlipkis Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.util.*;
 import java.net.URL;
 
 import org.lockss.app.*;
+import org.lockss.clockss.*;
 import org.lockss.daemon.*;
 import org.lockss.hasher.*;
 import org.lockss.mail.*;
@@ -99,6 +100,10 @@ public class ConfigManager implements LockssManager {
   /** Local (routable) IP address, for lcap identity */
   public static final String PARAM_PLATFORM_IP_ADDRESS =
     PLATFORM + "localIPAddress";
+
+  /** Second IP address, for CLOCKSS subscription detection */
+  public static final String PARAM_PLATFORM_SECOND_IP_ADDRESS =
+    PLATFORM + "secondIP";
 
   /** V3 identity string */
   public static final String PARAM_PLATFORM_LOCAL_V3_IDENTITY =
@@ -706,6 +711,12 @@ public class ConfigManager implements LockssManager {
 
     conditionalPlatformOverride(config, PARAM_PLATFORM_IP_ADDRESS,
 				IdentityManager.PARAM_LOCAL_IP);
+
+    conditionalPlatformOverride(config, PARAM_PLATFORM_IP_ADDRESS,
+				ClockssParams.PARAM_INSTITUTION_SUBSCRIPTION_ADDR);
+    conditionalPlatformOverride(config, PARAM_PLATFORM_SECOND_IP_ADDRESS,
+				ClockssParams.PARAM_CLOCKSS_SUBSCRIPTION_ADDR);
+
     conditionalPlatformOverride(config, PARAM_PLATFORM_LOCAL_V3_IDENTITY,
 				IdentityManager.PARAM_LOCAL_V3_IDENTITY);
 
