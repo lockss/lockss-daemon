@@ -1,30 +1,27 @@
 <map>
   <entry>
-    <string>plugin_name</string>
-    <string>Blackwell</string>
+    <string>au_crawlwindow</string>
+    <string>org.lockss.plugin.blackwell.BlackwellCrawlWindow</string>
   </entry>
   <entry>
     <string>text/html_filter</string>
     <string>org.lockss.plugin.blackwell.BlackwellHtmlFilterRule</string>
   </entry>
   <entry>
-    <string>au_crawlwindow</string>
-    <string>org.lockss.plugin.blackwell.BlackwellCrawlWindow</string>
-  </entry>
-  <entry>
-    <string>au_url_normalizer</string>
-    <string>org.lockss.plugin.blackwell.BlackwellUrlNormalizer</string>
-  </entry>
-  <entry>
     <string>au_name</string>
     <string>&quot;%s, vol. %s&quot;, journal_id, volume_name</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Blackwell</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
     <list>
       <string>4,&quot;^%s&quot;, base_url</string>
       <string>1,&quot;^%s.*\.(css|ico|gif|jpg|jpeg|png)$&quot;, base_url</string>
-      <string>1,&quot;^%s(doi|template|help)&quot;, base_url</string>
+      <string>1,&quot;^%s(template|help)&quot;, base_url</string>
+      <string>1,&quot;^%sdoi/.*/.*%s\.%d&quot;, base_url, journal_issn, year</string>
       <string>1,&quot;^%stoc/%s/%s/&quot;, base_url, journal_id, volume_name</string>
       <string>1,&quot;^%sclockss/%s/%s/manifest.html&quot;, base_url, journal_id, volume_name</string>
     </list>
@@ -55,6 +52,15 @@
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_issn</key>
+        <displayName>Journal ISSN</displayName>
+        <description>International Standard Serial Number.</description>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
         <key>volume_name</key>
         <displayName>Volume Name</displayName>
         <type>1</type>
@@ -62,6 +68,19 @@
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
     </list>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.blackwell.BlackwellUrlNormalizer</string>
   </entry>
 </map>

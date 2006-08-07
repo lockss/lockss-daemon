@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlackwellArchivalUnit.java,v 1.2 2006-08-02 02:14:51 tlipkis Exp $
+ * $Id: TestBlackwellArchivalUnit.java,v 1.3 2006-08-07 07:34:30 tlipkis Exp $
  */
 
 /*
@@ -48,10 +48,16 @@ import org.lockss.plugin.definable.*;
 
 public class TestBlackwellArchivalUnit extends LockssPluginTestCase {
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
-  static final String JOURNAL_KEY = "journal_id";
-  static final String VOL_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
+  static final String JOURNAL_ID_KEY = "journal_id";
+  static final String JOURNAL_ISSN_KEY = "journal_issn";
+  static final String VOLUME_NAME_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
+  static final String YEAR_KEY = ConfigParamDescr.YEAR.getKey();
 
-  static final String ROOT_URL = "http://blackwell-synergy.com/";
+  static final String BASE_URL = "http://blackwell-synergy.com/";
+  static final String JOURNAL_ID = "pace";
+  static final String ISSN = "1540-8159";
+  static final String VOLUME = "78";
+  static final String YEAR = "2005";
 
   private MockLockssDaemon theDaemon;
   
@@ -66,156 +72,197 @@ public class TestBlackwellArchivalUnit extends LockssPluginTestCase {
     theDaemon.getHashService();
   }
 
-  private DefinableArchivalUnit makeAu(String url, String journal, int volume)
-      throws Exception {
-    return makeAu(url, journal, Integer.toString(volume));
+  private Properties stdConfig() {
+    return makeConfig(BASE_URL, JOURNAL_ID, ISSN, YEAR, VOLUME);
+  }
+
+  private Properties makeConfig(String url, String journal, String issn,
+				String year, String volume) {
+    Properties props = new Properties();
+    props.setProperty(BASE_URL_KEY, url);
+    props.setProperty(JOURNAL_ID_KEY, journal);
+    props.setProperty(JOURNAL_ISSN_KEY, issn);
+    props.setProperty(YEAR_KEY, year);
+    props.setProperty(VOLUME_NAME_KEY, volume);
+    return props;
   }
 
   private DefinableArchivalUnit makeAu(String url, String journal,
-				       String volume)
+				       String issn, String year, String volume)
       throws Exception {
-    Properties props = new Properties();
-    if (url!=null) {
-      props.setProperty(BASE_URL_KEY, url);
-    }
-    props.setProperty(JOURNAL_KEY, journal);
-    props.setProperty(VOL_KEY, volume);
+    return makeAu(makeConfig(url, journal, issn, year, volume));
+  }
+
+  private DefinableArchivalUnit makeAu(Properties props) throws Exception {
     Configuration config = ConfigurationUtil.fromProps(props);
-    DefinablePlugin ap = new DefinablePlugin();
-    ap.initPlugin(theDaemon,"org.lockss.plugin.blackwell.BlackwellPlugin");
-    DefinableArchivalUnit au = (DefinableArchivalUnit)ap.createAu(config);
+    DefinablePlugin plugin = new DefinablePlugin();
+    plugin.initPlugin(theDaemon,"org.lockss.plugin.blackwell.BlackwellPlugin");
+    DefinableArchivalUnit au = (DefinableArchivalUnit)plugin.createAu(config);
     return au;
   }
 
-  public void testConstructNullUrl() throws Exception {
-    try {
-      makeAu(null, "pace", 78);
-      fail("Should have thrown ArchivalUnit.ConfigurationException");
-    } catch (ArchivalUnit.ConfigurationException e) { }
+  public void testGoodConfig() throws Exception {
+    ArchivalUnit au = makeAu(stdConfig());
+    Configuration auconf = au.getConfiguration();
   }
-/*
-  public void testConstructNullVolume() throws Exception {
-    try {
-      makeAu(ROOT_URL, "pace", null);
-      fail("Should have thrown ArchivalUnit.ConfigurationException");
-    } catch (ArchivalUnit.ConfigurationException e) { }
+
+
+  public void testNullParam(String key) throws Exception {
+    testIllParam(key, null);
   }
-*/
+
+  public void testIllParam(String key, String val) throws Exception {
+    Properties p = stdConfig();
+    if (val == null) {
+      p.remove(key);
+    } else {
+      p.put(key, val);
+    }
+    try {
+      makeAu(p);
+      fail("Shouldn't create AU with null param: " + key);
+    } catch (ArchivalUnit.ConfigurationException e) {
+    }
+  }
+
+  public void testNullParams() throws Exception {
+    testNullParam(BASE_URL_KEY);
+    testNullParam(JOURNAL_ID_KEY);
+    testNullParam(JOURNAL_ISSN_KEY);
+    testNullParam(VOLUME_NAME_KEY);
+    testNullParam(YEAR_KEY);
+  }
+
+  public void testIllParams() throws Exception {
+    testIllParam(BASE_URL_KEY, "not a url");
+    testIllParam(JOURNAL_ID_KEY, "");
+    testIllParam(JOURNAL_ISSN_KEY, "");
+    testIllParam(VOLUME_NAME_KEY, "");
+    testIllParam(YEAR_KEY, "12345");
+  }
+
 
   public void testShouldCacheProperPages() throws Exception {
-    ArchivalUnit bwAu = makeAu(ROOT_URL, "pace", 42);
-    theDaemon.getLockssRepository(bwAu);
-    theDaemon.getNodeManager(bwAu);
-    BaseCachedUrlSet cus =
-      new BaseCachedUrlSet(bwAu, new RangeCachedUrlSetSpec(ROOT_URL));
+    DefinableArchivalUnit au = makeAu(BASE_URL, JOURNAL_ID, ISSN,
+				      YEAR, "42");
 
-    String baseUrl = ROOT_URL;
+    theDaemon.getLockssRepository(au);
+    theDaemon.getNodeManager(au);
+    BaseCachedUrlSet cus =
+      new BaseCachedUrlSet(au, new RangeCachedUrlSetSpec(BASE_URL));
+
+    String baseUrl = BASE_URL;
 
     // manifest page
-    List manifests = ((SpiderCrawlSpec)bwAu.getCrawlSpec()).getStartingUrls();
+    List manifests = ((SpiderCrawlSpec)au.getCrawlSpec()).getStartingUrls();
     for (Iterator iter = manifests.iterator(); iter.hasNext();) {
       String url = (String)iter.next();
-      log.info("man: " + url);
-      assertShouldCache(url, bwAu, cus);
+      assertShouldCache(url, au, cus);
     }
-    assertShouldCache(baseUrl+"clockss/pace/42/manifest.html", bwAu, cus);
-    assertShouldNotCache(baseUrl+"clockss/pace/41/manifest.html", bwAu, cus);
+    assertShouldCache(baseUrl+"clockss/pace/42/manifest.html", au, cus);
+    assertShouldNotCache(baseUrl+"clockss/pace/41/manifest.html", au, cus);
 
     // issue toc pages
-    assertShouldCache(baseUrl+"toc/pace/42/6", bwAu, cus);
-    assertShouldCache(baseUrl+"toc/pace/42/1", bwAu, cus);
-    assertShouldCache(baseUrl+"toc/pace/42/2s", bwAu, cus);
-    assertShouldNotCache(baseUrl+"toc/pace/41/5", bwAu, cus);
-    assertShouldNotCache(baseUrl+"toc/pace/43", bwAu, cus);
+    assertShouldCache(baseUrl+"toc/pace/42/6", au, cus);
+    assertShouldCache(baseUrl+"toc/pace/42/1", au, cus);
+    assertShouldCache(baseUrl+"toc/pace/42/2s", au, cus);
+    assertShouldNotCache(baseUrl+"toc/pace/41/5", au, cus);
+    assertShouldNotCache(baseUrl+"toc/pace/43", au, cus);
 
     // abs, full text, etc.
-    assertShouldCache(baseUrl+"doi/abs/10.1111/j.1467-6494.2005.00355",
-		      bwAu, cus);
-    assertShouldCache(baseUrl+"doi/ref/10.1111/j.1467-6494.2005.00355",
-		      bwAu, cus);
-    assertShouldCache(baseUrl+"doi/full/10.1111/j.1467-6494.2005.00355",
-		      bwAu, cus);
-    assertShouldCache(baseUrl+"doi/pdf/10.1111/j.1467-6494.2005.00355",
-		      bwAu, cus);
+    assertShouldCache(baseUrl+"doi/abs/10.1111/j.1540-8159.2005.00355",
+		      au, cus);
+    assertShouldCache(baseUrl+"doi/ref/10.1111/j.1540-8159.2005.00355",
+		      au, cus);
+    assertShouldCache(baseUrl+"doi/full/10.1111/j.1540-8159.2005.00355",
+		      au, cus);
+    assertShouldCache(baseUrl+"doi/pdf/10.1111/j.1540-8159.2005.00355",
+		      au, cus);
+    // ISSN and volue must match
+    assertShouldNotCache(baseUrl+"doi/pdf/10.1111/j.1540-7234.2005.00355",
+			 au, cus);
+    assertShouldNotCache(baseUrl+"doi/pdf/10.1111/j.1540-8159.2006.00355",
+			 au, cus);
 
-    assertShouldCache(baseUrl+"template", bwAu, cus);
-    assertShouldCache(baseUrl+"help", bwAu, cus);
-    assertShouldCache(baseUrl+"template/foo", bwAu, cus);
-    assertShouldCache(baseUrl+"help/foo", bwAu, cus);
+    assertShouldCache(baseUrl+"template", au, cus);
+    assertShouldCache(baseUrl+"help", au, cus);
+    assertShouldCache(baseUrl+"template/foo", au, cus);
+    assertShouldCache(baseUrl+"help/foo", au, cus);
 
 
-    assertShouldNotCache(baseUrl+"feedback", bwAu, cus);
-    assertShouldNotCache(baseUrl+"servlet", bwAu, cus);
-    assertShouldNotCache(baseUrl+"search", bwAu, cus);
-    assertShouldNotCache(baseUrl+"feedback/", bwAu, cus);
-    assertShouldNotCache(baseUrl+"servlet/", bwAu, cus);
-    assertShouldNotCache(baseUrl+"search/", bwAu, cus);
+    assertShouldNotCache(baseUrl+"feedback", au, cus);
+    assertShouldNotCache(baseUrl+"servlet", au, cus);
+    assertShouldNotCache(baseUrl+"search", au, cus);
+    assertShouldNotCache(baseUrl+"feedback/", au, cus);
+    assertShouldNotCache(baseUrl+"servlet/", au, cus);
+    assertShouldNotCache(baseUrl+"search/", au, cus);
 
     // images, css, others by file extension
-    assertShouldCache(baseUrl+"images/spacer.gif", bwAu, cus);
-    assertShouldCache(baseUrl+"foo/bar.css", bwAu, cus);
-    assertShouldCache(baseUrl+"foo/bar.ico", bwAu, cus);
-    assertShouldCache(baseUrl+"foo.gif", bwAu, cus);
-    assertShouldCache(baseUrl+"foo/bar.jpg", bwAu, cus);
-    assertShouldCache(baseUrl+"foo/bar.jpeg", bwAu, cus);
-    assertShouldCache(baseUrl+"foo/bar.png", bwAu, cus);
+    assertShouldCache(baseUrl+"images/spacer.gif", au, cus);
+    assertShouldCache(baseUrl+"foo/bar.css", au, cus);
+    assertShouldCache(baseUrl+"foo/bar.ico", au, cus);
+    assertShouldCache(baseUrl+"foo.gif", au, cus);
+    assertShouldCache(baseUrl+"foo/bar.jpg", au, cus);
+    assertShouldCache(baseUrl+"foo/bar.jpeg", au, cus);
+    assertShouldCache(baseUrl+"foo/bar.png", au, cus);
 
-    assertShouldNotCache(baseUrl+"images/spacer.gof", bwAu, cus);
-    assertShouldNotCache(baseUrl+"foo/bar.noncss", bwAu, cus);
+    assertShouldNotCache(baseUrl+"images/spacer.gof", au, cus);
+    assertShouldNotCache(baseUrl+"foo/bar.noncss", au, cus);
   }
 
   public void testStartUrlConstruction() throws Exception {
-    URL url = new URL(ROOT_URL);
+    URL url = new URL(BASE_URL);
 
-    String expectedStr = ROOT_URL+"clockss/pace/2/manifest.html";
-    DefinableArchivalUnit bwAu = makeAu(ROOT_URL, "pace", 2);
+    String expectedStr = BASE_URL+"clockss/pace/25/manifest.html";
+    DefinableArchivalUnit au = makeAu(BASE_URL, JOURNAL_ID, ISSN,
+				      YEAR, "25");
     assertEquals(expectedStr,
-		 ((SpiderCrawlSpec)bwAu.getCrawlSpec()).getStartingUrls().get(0));
+		 ((SpiderCrawlSpec)au.getCrawlSpec()).getStartingUrls().get(0));
   }
 
   public void testGetUrlStems() throws Exception {
     String stem1 = "http://www.blackwell.com";
-    DefinableArchivalUnit bwAu1 = makeAu(stem1 + "/", "pace", 2);
-    assertEquals(ListUtil.list(stem1), bwAu1.getUrlStems());
+    DefinableArchivalUnit au1 = makeAu(stem1 + "/", JOURNAL_ID, ISSN, YEAR, "2");
+    assertEquals(ListUtil.list(stem1), au1.getUrlStems());
     String stem2 = "http://www.blackwell.com:8080";
-    DefinableArchivalUnit bwAu2 = makeAu(stem2 + "/", "pace", 2);
-    assertEquals(ListUtil.list(stem2), bwAu2.getUrlStems());
+    DefinableArchivalUnit au2 = makeAu(stem2 + "/", JOURNAL_ID, ISSN, YEAR, "2");
+    assertEquals(ListUtil.list(stem2), au2.getUrlStems());
   }
 
   public void testShouldDoNewContentCrawlTooEarly() throws Exception {
-    ArchivalUnit bwAu = makeAu(ROOT_URL, "pace", 2);
+    ArchivalUnit au = makeAu(BASE_URL, JOURNAL_ID, ISSN, YEAR, "2");
     AuState aus = new MockAuState(null, TimeBase.nowMs(), -1, -1, null);
-    assertFalse(bwAu.shouldCrawlForNewContent(aus));
+    assertFalse(au.shouldCrawlForNewContent(aus));
   }
 
   public void testShouldDoNewContentCrawlForZero() throws Exception {
-    ArchivalUnit bwAu = makeAu(ROOT_URL, "pace", 2);
+    ArchivalUnit au = makeAu(BASE_URL, JOURNAL_ID, ISSN, YEAR, "2");
     AuState aus = new MockAuState(null, 0, -1, -1, null);
-    assertTrue(bwAu.shouldCrawlForNewContent(aus));
+    assertTrue(au.shouldCrawlForNewContent(aus));
   }
 
   public void testShouldDoNewContentCrawlEachMonth() throws Exception {
-    ArchivalUnit bwAu = makeAu(ROOT_URL, "pace", 2);
+    ArchivalUnit au = makeAu(BASE_URL, JOURNAL_ID, ISSN, YEAR, "2");
     AuState aus = new MockAuState(null, 4 * Constants.WEEK, -1, -1, null);
-    assertTrue(bwAu.shouldCrawlForNewContent(aus));
+    assertTrue(au.shouldCrawlForNewContent(aus));
   }
 
   public void testGetName() throws Exception {
-    DefinableArchivalUnit au = makeAu(ROOT_URL, "pace", 7);
+    ArchivalUnit au = makeAu(BASE_URL, JOURNAL_ID, ISSN, YEAR, "7");
     assertEquals("pace, vol. 7", au.getName());
-    DefinableArchivalUnit au1 = makeAu("http://www.foo.com/", "jopy", 3);
+    ArchivalUnit au1 = makeAu(BASE_URL, "jopy", ISSN, YEAR, "3");
     assertEquals("jopy, vol. 3", au1.getName());
   }
 
   public void testGetFilterRules() throws Exception {
-    DefinableArchivalUnit au = makeAu(ROOT_URL, "pace", 2);
+    ArchivalUnit au = makeAu(BASE_URL, JOURNAL_ID, ISSN, YEAR, "2");
     assertNull(au.getFilterRule(null));
     assertNull(au.getFilterRule("jpg"));
     assertNotNull(au.getFilterRule("text/html"));
   }
 
   public void testCrawlWindow() throws Exception {
-    DefinableArchivalUnit au = makeAu(ROOT_URL, "pace", 2);
+    ArchivalUnit au = makeAu(BASE_URL, JOURNAL_ID, ISSN, YEAR, "2");
     CrawlWindow window = au.getCrawlSpec().getCrawlWindow();
     assertNotNull(window);
     log.info("window: " + window.getClass());

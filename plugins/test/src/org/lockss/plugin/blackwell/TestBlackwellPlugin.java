@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlackwellPlugin.java,v 1.1 2006-08-02 02:10:39 tlipkis Exp $
+ * $Id: TestBlackwellPlugin.java,v 1.2 2006-08-07 07:34:30 tlipkis Exp $
  */
 
 /*
@@ -63,41 +63,6 @@ public class TestBlackwellPlugin extends LockssTestCase {
     } catch (ArchivalUnit.ConfigurationException e) { }
   }
 
-  private DefinableArchivalUnit makeAuFromProps(Properties props)
-      throws ArchivalUnit.ConfigurationException {
-    Configuration config = ConfigurationUtil.fromProps(props);
-    return (DefinableArchivalUnit)plugin.configureAu(config, null);
-  }
-
-  public void testGetAuHandlesBadUrl()
-      throws ArchivalUnit.ConfigurationException, MalformedURLException {
-    Properties props = new Properties();
-    props.setProperty(BASE_URL_KEY, "blah");
-    props.setProperty(JOURNAL_KEY, "jopy");
-    props.setProperty(VOL_KEY, "78");
-
-    try {
-      DefinableArchivalUnit au = makeAuFromProps(props);
-      fail ("Didn't throw InstantiationException when given a bad url");
-    } catch (ArchivalUnit.ConfigurationException auie) {
-      ConfigParamDescr.InvalidFormatException murle =
-        (ConfigParamDescr.InvalidFormatException)auie.getNestedException();
-      assertNotNull(auie.getNestedException());
-    }
-  }
-
-  public void testGetAuConstructsProperAU()
-      throws ArchivalUnit.ConfigurationException, MalformedURLException {
-    Properties props = new Properties();
-    props.setProperty(BASE_URL_KEY,
-                      "http://it.doesnt.matter/");
-    props.setProperty(JOURNAL_KEY, "jopy");
-    props.setProperty(VOL_KEY, "78");
-
-    DefinableArchivalUnit au = makeAuFromProps(props);
-    assertEquals("jopy, vol. 78", au.getName());
-  }
-
   public void testGetPluginId() {
     assertEquals("org.lockss.plugin.blackwell.BlackwellPlugin",
 		 plugin.getPluginId());
@@ -105,9 +70,13 @@ public class TestBlackwellPlugin extends LockssTestCase {
 
   public void testGetAuConfigProperties() {
     List descrs = plugin.getLocalAuConfigDescrs();
-    assertContains(descrs, ConfigParamDescr.BASE_URL);
-    assertContains(descrs, ConfigParamDescr.VOLUME_NAME);
-    assertEquals(3, descrs.size());
+    log.debug("descrs: " + descrs);
+    assertEquals(SetUtil.set(ConfigParamDescr.BASE_URL,
+			     ConfigParamDescr.VOLUME_NAME,
+			     ConfigParamDescr.YEAR,
+			     ConfigParamDescr.JOURNAL_ID,
+			     ConfigParamDescr.JOURNAL_ISSN),
+		 SetUtil.theSet(descrs));
   }
 
 }
