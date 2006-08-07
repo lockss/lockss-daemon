@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuUtil.java,v 1.5 2006-07-18 19:14:09 tlipkis Exp $
+ * $Id: TestAuUtil.java,v 1.6 2006-08-07 07:41:08 tlipkis Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.util.*;
 import org.lockss.app.*;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
+import org.lockss.state.*;
 import org.lockss.test.*;
 import org.lockss.plugin.base.*;
 import org.lockss.util.*;
@@ -74,6 +75,20 @@ public class TestAuUtil extends LockssTestCase {
     TitleConfig tc = new TitleConfig("foo", new MockPlugin());
     tc.setParams(ListUtil.list(new ConfigParamAssignment(descr, val)));
     return tc;
+  }
+
+  public void testGetDaemon()  {
+    LocalMockArchivalUnit mau = new LocalMockArchivalUnit(mbp);
+    assertSame(getMockLockssDaemon(), AuUtil.getDaemon(mau));
+  }
+
+  public void testGetAuState() throws IOException {
+    setUpDiskPaths();
+    LocalMockArchivalUnit mau = new LocalMockArchivalUnit(mbp);
+    getMockLockssDaemon().getNodeManager(mau).startService();
+    AuState aus = AuUtil.getAuState(mau);
+    assertEquals(AuState.CLOCKSS_SUB_UNKNOWN,
+		 aus.getClockssSubscriptionStatus());
   }
 
   public void testIsClosed() throws Exception {
@@ -164,6 +179,15 @@ public class TestAuUtil extends LockssTestCase {
 
   private static class LocalMockArchivalUnit extends MockArchivalUnit {
     TitleConfig tc = null;
+
+    LocalMockArchivalUnit() {
+      super();
+    }
+
+    LocalMockArchivalUnit(Plugin plugin) {
+      super(plugin);
+    }
+
     public TitleConfig getTitleConfig() {
       return tc;
     }

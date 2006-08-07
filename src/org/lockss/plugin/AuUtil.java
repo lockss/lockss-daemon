@@ -1,5 +1,5 @@
 /*
- * $Id: AuUtil.java,v 1.14 2006-07-17 05:06:13 tlipkis Exp $
+ * $Id: AuUtil.java,v 1.15 2006-08-07 07:41:08 tlipkis Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
+import org.lockss.state.*;
 import org.lockss.poller.*;
 import org.lockss.repository.*;
 
@@ -61,6 +62,16 @@ public class AuUtil {
 
   public static LockssDaemon getDaemon(ArchivalUnit au) {
     return au.getPlugin().getDaemon();
+  }
+
+  /**
+   * Return the AuState object for the AU
+   * @param au the AU
+   * @return the AuState
+   */
+  public static AuState getAuState(ArchivalUnit au) {
+    NodeManager nodeManager = getDaemon(au).getNodeManager(au);
+    return nodeManager.getAuState();
   }
 
   /**
