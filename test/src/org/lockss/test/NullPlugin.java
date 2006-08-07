@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.78 2006-08-07 07:42:20 tlipkis Exp $
+ * $Id: NullPlugin.java,v 1.79 2006-08-07 18:24:07 tlipkis Exp $
  */
 
 /*
@@ -203,7 +203,7 @@ public class NullPlugin {
       return null;
     }
 
-    public ArchivalUnit getArchivalUnit() {
+    public org.lockss.plugin.ArchivalUnit getArchivalUnit() {
       return null;
     }
     /** @deprecated */
