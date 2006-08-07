@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.96 2006-08-03 00:09:26 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.97 2006-08-07 18:47:49 tlipkis Exp $
  */
 
 /*
@@ -601,14 +601,13 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   }
 
   protected Crawler makeNewContentCrawler(ArchivalUnit au, CrawlSpec spec) {
-    NodeManager nodeManager = theDaemon.getNodeManager(au);
     //check CrawlSpec if it is Oai Type then create OaiCrawler Instead of NewContentCrawler
     if (spec instanceof OaiCrawlSpec) {
       logger.debug("Creating OaiCrawler for " + au);
-      return new OaiCrawler(au, spec, nodeManager.getAuState());
+      return new OaiCrawler(au, spec, AuUtil.getAuState(au));
     } else {
       logger.debug("Creating NewContentCrawler for " + au);
-      return new NewContentCrawler(au, spec, nodeManager.getAuState());
+      return new NewContentCrawler(au, spec, AuUtil.getAuState(au));
     }
   }
 
@@ -616,8 +615,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 				      CrawlSpec spec,
 				      Collection  repairUrls,
 				      float percentRepairFromCache) {
-    NodeManager nodeManager = theDaemon.getNodeManager(au);
-    return new RepairCrawler(au, spec, nodeManager.getAuState(),
+    return new RepairCrawler(au, spec, AuUtil.getAuState(au),
 			     repairUrls, percentRepairFromCache);
   }
 
@@ -885,8 +883,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   }
 
   boolean shouldCrawlForNewContent(ArchivalUnit au) {
-    NodeManager mgr = theDaemon.getNodeManager(au);
-    return au.shouldCrawlForNewContent(mgr.getAuState());
+    return au.shouldCrawlForNewContent(AuUtil.getAuState(au));
   }
 
   private static class FailingCallbackWrapper

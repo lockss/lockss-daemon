@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.162 2006-07-18 19:12:20 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.163 2006-08-07 18:47:48 tlipkis Exp $
  */
 
 /*
@@ -47,7 +47,6 @@ import org.lockss.crawler.CrawlManager;
 import org.lockss.daemon.*;
 import org.lockss.plugin.definable.DefinablePlugin;
 import org.lockss.poller.PollSpec;
-import org.lockss.state.NodeManager;
 import org.lockss.util.*;
 
 /**
@@ -1502,8 +1501,7 @@ public class PluginManager
   protected void possiblyStartRegistryAuCrawl(ArchivalUnit registryAu,
 					      String url,
 					      InitialRegistryCallback cb) {
-    NodeManager nodeMgr = theDaemon.getNodeManager(registryAu);
-    if (registryAu.shouldCrawlForNewContent(nodeMgr.getAuState())) {
+    if (registryAu.shouldCrawlForNewContent(AuUtil.getAuState(registryAu))) {
       if (log.isDebug2()) log.debug2("Starting new crawl:: " + registryAu);
       theDaemon.getCrawlManager().startNewContentCrawl(registryAu, cb,
 						       url, null);

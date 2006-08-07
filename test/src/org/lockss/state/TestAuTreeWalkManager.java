@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuTreeWalkManager.java,v 1.10 2005-05-12 00:22:23 troberts Exp $
+ * $Id: TestAuTreeWalkManager.java,v 1.11 2006-08-07 18:47:48 tlipkis Exp $
  */
 
 /*
@@ -54,7 +54,9 @@ public class TestAuTreeWalkManager extends LockssTestCase {
     stdConfig();
 
     mau = new MockArchivalUnit();
-    mau.setPlugin(new MockPlugin());
+    MockPlugin mp = new MockPlugin();
+    mp.initPlugin(theDaemon);
+    mau.setPlugin(mp);
     theDaemon.getPluginManager();
     PluginTestUtil.registerArchivalUnit(mau);
 

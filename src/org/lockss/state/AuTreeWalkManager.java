@@ -1,5 +1,5 @@
 /*
- * $Id: AuTreeWalkManager.java,v 1.13 2005-06-04 18:59:51 tlipkis Exp $
+ * $Id: AuTreeWalkManager.java,v 1.14 2006-08-07 18:47:48 tlipkis Exp $
  */
 
 /*
@@ -50,7 +50,6 @@ public class AuTreeWalkManager
 
   ArchivalUnit au;
   TreeWalkManager twm;
-  NodeManager nodeMgr;
   SchedService schedSvc;
 
   // The currently scheduled or running task.  If null, there is no task
@@ -73,7 +72,6 @@ public class AuTreeWalkManager
     LockssDaemon daemon = getDaemon();
     twm = daemon.getTreeWalkManager();
     schedSvc = daemon.getSchedService();
-    nodeMgr = daemon.getNodeManager(au);
 
     scheduleFirst();
   }
@@ -295,7 +293,7 @@ public class AuTreeWalkManager
     // Don't completely rely on time in state, which might not get updated
     // in unit test
     long lastTreeWalkTime =
-      Math.min(nodeMgr.getAuState().getLastTreeWalkTime(),
+      Math.min(AuUtil.getAuState(au).getLastTreeWalkTime(),
 	       lastStartTime);
     if ((now - lastTreeWalkTime) > twm.paramTreeWalkIntervalMax) {
       return now + Constants.HOUR;

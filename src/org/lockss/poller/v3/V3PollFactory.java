@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollFactory.java,v 1.5 2006-06-17 02:20:00 smorabito Exp $
+ * $Id: V3PollFactory.java,v 1.6 2006-08-07 18:47:48 tlipkis Exp $
  */
 
 /*
@@ -129,8 +129,7 @@ public class V3PollFactory extends BasePollFactory {
         V3LcapMessage m = (V3LcapMessage)msg;
         PollSpec s = new PollSpec(m);
         // Only participate if we have and have successfully crawled this AU.
-        NodeManager nm = daemon.getNodeManager(au);
-        if (nm.getAuState().getLastCrawlTime() > 0) { 
+        if (AuUtil.getAuState(au).getLastCrawlTime() > 0) { 
           log.debug("Creating V3Voter to participate in poll " + m.getKey());
           retPoll = new V3Voter(s, daemon, m.getOriginatorId(), m.getKey(),
                                 m.getEffortProof(), m.getPollerNonce(),
