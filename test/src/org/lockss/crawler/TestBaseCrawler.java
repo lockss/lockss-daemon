@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCrawler.java,v 1.5 2006-07-29 02:58:09 tlipkis Exp $
+ * $Id: TestBaseCrawler.java,v 1.6 2006-08-07 07:40:21 tlipkis Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ import org.lockss.plugin.*;
 import org.lockss.state.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
+import org.lockss.clockss.*;
 import org.lockss.test.*;
 
 /**

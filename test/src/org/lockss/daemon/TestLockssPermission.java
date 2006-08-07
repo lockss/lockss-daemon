@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssPermission.java,v 1.2 2006-07-29 02:56:36 tlipkis Exp $
+ * $Id: TestLockssPermission.java,v 1.3 2006-08-07 07:40:21 tlipkis Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ package org.lockss.daemon;
 import java.io.*;
 import java.util.*;
 
+import org.lockss.clockss.*;
 import org.lockss.test.*;
 
 public class TestLockssPermission extends LockssTestCase {
