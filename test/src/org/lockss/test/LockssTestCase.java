@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.84 2006-07-31 06:43:15 tlipkis Exp $
+ * $Id: LockssTestCase.java,v 1.85 2006-08-07 07:43:57 tlipkis Exp $
  */
 
 /*
@@ -169,6 +169,12 @@ public class LockssTestCase extends TestCase {
     }
     // don't reenable the watchdog; some threads may not have exited yet
 //     enableThreadWatchdog();
+  }
+
+  public void setUpDiskPaths() throws IOException {
+    String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    ConfigurationUtil.setFromArgs(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
+				  tempDirPath);
   }
 
   public static boolean isKeepTempFiles() {
