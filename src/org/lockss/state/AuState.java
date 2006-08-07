@@ -1,5 +1,5 @@
 /*
- * $Id: AuState.java,v 1.19 2005-09-06 23:24:53 thib_gc Exp $
+ * $Id: AuState.java,v 1.20 2006-08-07 07:42:46 tlipkis Exp $
  */
 
 /*
@@ -144,6 +144,30 @@ public class AuState implements LockssSerializable {
     if (forceWrite || (urlUpdateCntr >= URL_UPDATE_LIMIT)) {
       historyRepo.storeAuState(this);
       urlUpdateCntr = 0;
+    }
+  }
+
+  // CLOCKSS status
+
+  protected int clockssSubscriptionStatus = CLOCKSS_SUB_UNKNOWN;
+
+  public static final int CLOCKSS_SUB_UNKNOWN = 0;
+  public static final int CLOCKSS_SUB_YES = 1;
+  public static final int CLOCKSS_SUB_NO = 2;
+  public static final int CLOCKSS_SUB_INACCESSIBLE = 3;
+
+  /**
+   * Return the CLOCKSS subscription status: CLOCKSS_SUB_UNKNOWN,
+   * CLOCKSS_SUB_YES, CLOCKSS_SUB_NO
+   */
+  public int getClockssSubscriptionStatus() {
+    return clockssSubscriptionStatus;
+  }
+
+  public void setClockssSubscriptionStatus(int val) {
+    if (clockssSubscriptionStatus != val) {
+      clockssSubscriptionStatus = val;
+      historyRepo.storeAuState(this);
     }
   }
 
