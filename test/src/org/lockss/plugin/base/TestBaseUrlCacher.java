@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.47 2006-02-14 05:19:49 tlipkis Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.48 2006-08-07 07:42:20 tlipkis Exp $
  */
 
 /*
@@ -195,7 +195,6 @@ public class TestBaseUrlCacher extends LockssTestCase {
     cacher._input = new StringInputStream("test stream");
     cacher._headers = cachedProps;
     // should still cache
-    // cacher.setForceRefetch(true);
     BitSet bs = new BitSet();
     bs.set(REFETCH_FLAG);
     cacher.setFetchFlags(bs);
@@ -412,6 +411,28 @@ public class TestBaseUrlCacher extends LockssTestCase {
     assertEquals(126, mconn.proxyPort);
   }
 
+  public void testLocalAddr() throws Exception {
+    IPAddr addr = IPAddr.getByName("127.7.42.33");
+    MockConnectionMockBaseUrlCacher muc =
+      new MockConnectionMockBaseUrlCacher(mau, TEST_URL);
+    MyMockLockssUrlConnection mconn = makeConn(200, "", null, "foo");
+    muc.addConnection(mconn);
+    muc.setLocalAddress(addr);
+    muc.cache();
+    assertEquals(TEST_URL, mconn.getURL());
+    assertEquals(addr, mconn.localAddr);
+  }
+
+  public void testNoLocalAddr() throws Exception {
+    MockConnectionMockBaseUrlCacher muc =
+      new MockConnectionMockBaseUrlCacher(mau, TEST_URL);
+    MyMockLockssUrlConnection mconn = makeConn(200, "", null, "foo");
+    muc.addConnection(mconn);
+    muc.cache();
+    assertEquals(TEST_URL, mconn.getURL());
+    assertEquals(null, mconn.localAddr);
+  }
+
   public void testSetReqProp() throws Exception {
     MockConnectionMockBaseUrlCacher muc = new MockConnectionMockBaseUrlCacher(
                                                                               mau,
@@ -431,7 +452,9 @@ public class TestBaseUrlCacher extends LockssTestCase {
                                                                               TEST_URL);
     MockLockssUrlConnection mconn = makeConn(200, "", null, "foo");
     muc.addConnection(mconn);
-    muc.setForceRefetch(false);
+    BitSet fetchFlags = new BitSet();
+    fetchFlags.clear(UrlCacher.REFETCH_FLAG);
+    muc.setFetchFlags(fetchFlags);
     muc.cache();
     assertEquals(TEST_URL, mconn.getURL());
     assertNull("444332", mconn.getRequestProperty("if-modified-since"));
@@ -455,19 +478,20 @@ public class TestBaseUrlCacher extends LockssTestCase {
     MockConnectionMockBaseUrlCacher muc = makeMucWithContent();
     MockLockssUrlConnection mconn = makeConn(200, "", null, "foo");
     muc.addConnection(mconn);
-    muc.setForceRefetch(false);
+    BitSet fetchFlags = new BitSet();
+    fetchFlags.clear(UrlCacher.REFETCH_FLAG);
+    muc.setFetchFlags(fetchFlags);
     muc.cache();
     assertEquals(TEST_URL, mconn.getURL());
     assertEquals("Thu, 01 Jan 1970 03:25:45 GMT", mconn
         .getRequestProperty("if-modified-since"));
   }
 
-  // Shouldn't generate if-modified-since header because forceRefetch true
+  // Shouldn't generate if-modified-since header because REFETCH_FLAG set
   public void testForcedConnection() throws Exception {
     MockConnectionMockBaseUrlCacher muc = makeMucWithContent();
     MockLockssUrlConnection mconn = makeConn(200, "", null, "foo");
     muc.addConnection(mconn);
-    // muc.setForceRefetch(true);
     BitSet bs = new BitSet();
     bs.set(REFETCH_FLAG);
     muc.setFetchFlags(bs);
@@ -959,7 +983,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
     // should cache
     try {
       cacher.cache();
-      fail("Should have thrown a CacheException.UnretryableException");
+      fail("Should have thrown a CacheException.PermissionException");
     } catch (CacheException.PermissionException ex) {
     }
   }
@@ -1154,10 +1178,15 @@ public class TestBaseUrlCacher extends LockssTestCase {
   private class MyMockLockssUrlConnection extends MockLockssUrlConnection {
     String proxyHost = null;
     int proxyPort = -1;
+    IPAddr localAddr = null;
 
     public void setProxy(String host, int port) {
       proxyHost = host;
       proxyPort = port;
+    }
+
+    public void setLocalAddress(IPAddr addr) {
+      localAddr = addr;
     }
   }
 

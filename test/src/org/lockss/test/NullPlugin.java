@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.77 2006-07-17 05:12:40 tlipkis Exp $
+ * $Id: NullPlugin.java,v 1.78 2006-08-07 07:42:20 tlipkis Exp $
  */
 
 /*
@@ -203,6 +203,9 @@ public class NullPlugin {
       return null;
     }
 
+    public ArchivalUnit getArchivalUnit() {
+      return null;
+    }
     /** @deprecated */
     public org.lockss.plugin.CachedUrlSet getCachedUrlSet() {
       return null;
@@ -245,7 +248,14 @@ public class NullPlugin {
       return new CIProperties();
     }
 
+    public void reset() {
+    }
+
     public void setConnectionPool(LockssUrlConnectionPool connectionPool) {
+      throw new UnsupportedOperationException();
+    }
+
+    public void setLocalAddress(IPAddr addr) {
       throw new UnsupportedOperationException();
     }
 

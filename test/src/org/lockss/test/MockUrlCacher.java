@@ -1,5 +1,5 @@
 /*
- * $Id: MockUrlCacher.java,v 1.32 2006-05-20 19:27:55 tlipkis Exp $
+ * $Id: MockUrlCacher.java,v 1.33 2006-08-07 07:42:20 tlipkis Exp $
  */
 
 /*
@@ -58,7 +58,6 @@ public class MockUrlCacher implements UrlCacher {
   private IOException cachingException = null;
   private RuntimeException cachingRuntimException = null;
   private int numTimesToThrow = 1;
-//   private boolean forceRefetch = false;
   private BitSet fetchFlags = new BitSet();
   private PermissionMapSource permissionMapSource;
 
@@ -70,6 +69,10 @@ public class MockUrlCacher implements UrlCacher {
 
   public String getUrl() {
     return url;
+  }
+
+  public ArchivalUnit getArchivalUnit() {
+    return au;
   }
 
   /** @deprecated */
@@ -103,9 +106,8 @@ public class MockUrlCacher implements UrlCacher {
   public void setProxy(String proxyHost, int proxyPort) {
   }
 
-//   public void setForceRefetch(boolean force) {
-//     this.forceRefetch = force;
-//   }
+  public void setLocalAddress(IPAddr addr) {
+  }
 
   public void setFetchFlags(BitSet fetchFlags) {
     this.fetchFlags = fetchFlags;
@@ -140,7 +142,6 @@ public class MockUrlCacher implements UrlCacher {
     }
     if (cus != null) {
       if (fetchFlags.get(UrlCacher.REFETCH_FLAG)) {
-//       if (forceRefetch) {
 	cus.addForceCachedUrl(url);
       } else {
 	cus.addCachedUrl(url);
@@ -189,7 +190,6 @@ public class MockUrlCacher implements UrlCacher {
 
     if (cus != null) {
       if (fetchFlags.get(UrlCacher.REFETCH_FLAG)) {
-// 	  if (forceRefetch) {
 	cus.addForceCachedUrl(url);
       } else {
 	cus.addCachedUrl(url);
@@ -199,7 +199,6 @@ public class MockUrlCacher implements UrlCacher {
 
     //XXX messy
     //content already there, so we should be doing a not modified response
-//     if (!forceRefetch && cu.hasContent()) {
     if (cu.hasContent()) {
       return CACHE_RESULT_NOT_MODIFIED;
     }
@@ -235,7 +234,10 @@ public class MockUrlCacher implements UrlCacher {
     return uncachedProp;
   }
 
-  //mock specific acessors
+  public void reset() {
+  }
+
+ //mock specific acessors
 
   public void setUncachedInputStream(InputStream is){
     uncachedIS = is;

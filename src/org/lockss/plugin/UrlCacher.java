@@ -1,5 +1,5 @@
 /*
- * $Id: UrlCacher.java,v 1.23 2006-04-23 05:51:13 tlipkis Exp $
+ * $Id: UrlCacher.java,v 1.24 2006-08-07 07:42:20 tlipkis Exp $
  */
 
 /*
@@ -90,6 +90,12 @@ public interface UrlCacher {
 
 
   /**
+   * Return the ArchivalUnit to which this UrlCacher belongs.
+   * @return the ArchivalUnit
+   */
+  public ArchivalUnit getArchivalUnit();
+
+  /**
    * Return the url being represented
    * @return the {@link String} url being represented.
    */
@@ -120,6 +126,10 @@ public interface UrlCacher {
   /** Set the shared connection pool object to be used by this UrlCacher */
   public void setConnectionPool(LockssUrlConnectionPool connectionPool);
 
+  /** For multihomed machines, determines which local address will be the
+   * sorce of outgoing URL connections */
+  public void setLocalAddress(IPAddr localAddr);
+
   /** Set the host and port the UrlCache should proxy through */
   public void setProxy(String proxyHost, int proxyPort);
 
@@ -141,7 +151,7 @@ public interface UrlCacher {
 
   /**
    * Copies the content and properties from the source into the cache.
-   * If forceRefetch is false, only caches if the content has been modified.
+   * Fetches content with if-modified-since unless REFETCH_FLAG is set.
    * @return CACHE_RESULT_FETCHED if the content was fetched and stored,
    * CACHE_RESULT_NOT_MODIFIED if the server reported the contents as
    * unmodified.
@@ -167,6 +177,12 @@ public interface UrlCacher {
 
   public void storeContent(InputStream input, CIProperties headers)
       throws IOException;
+
+  /**
+   * Reset the UrlCacher to its pre-opened state, so that it can be
+   * reopened.
+   */
+  public void reset();
 
   public void setPermissionMapSource(PermissionMapSource permissionMapSource);
 

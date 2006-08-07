@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.63 2006-07-19 18:01:00 tlipkis Exp $
+ * $Id: BaseUrlCacher.java,v 1.64 2006-08-07 07:42:20 tlipkis Exp $
  */
 
 /*
@@ -67,20 +67,21 @@ public class BaseUrlCacher implements UrlCacher {
     GMT_DATE_FORMAT.setTimeZone(TimeZone.getTimeZone("GMT"));
   }
 
-  protected ArchivalUnit au;
-  protected String origUrl;		// URL with which I was created
+  protected final ArchivalUnit au;
+  protected final String origUrl;		// URL with which I was created
   protected String fetchUrl;		// possibly affected by redirects
   private List otherNames;
-  protected boolean forceRefetch = false;
   protected int redirectOptions = REDIRECT_OPTION_FOLLOW_AUTO;
   private LockssUrlConnectionPool connectionPool;
   private LockssUrlConnection conn;
-  private LockssRepository repository;
-  private CacheResultMap resultMap;
+  private final LockssRepository repository;
+  private final NodeManager nodeMgr;
+  private final CacheResultMap resultMap;
   private CIProperties uncachedProperties;
   private PermissionMapSource permissionMapSource;
   private String proxyHost = null;
   private int proxyPort;
+  private IPAddr localAddr = null;
   private Properties reqProps;
 
   private BitSet fetchFlags = new BitSet();
@@ -92,9 +93,6 @@ public class BaseUrlCacher implements UrlCacher {
   // Max amount we'll buffer up to avoid refetching a page when we check if it's
   // a login page
   static final int LOGIN_BUFFER_MAX = 16 * 1024;
-
-
-  private NodeManager nodeMgr;
 
   public BaseUrlCacher(ArchivalUnit owner, String url) {
     this.origUrl = url;
@@ -136,7 +134,7 @@ public class BaseUrlCacher implements UrlCacher {
   }
 
   /**
-   * Return the ArchivalUnit to which this CachedUrl belongs.
+   * Return the ArchivalUnit to which this UrlCacher belongs.
    * @return the owner ArchivalUnit
    */
   public ArchivalUnit getArchivalUnit() {
@@ -171,8 +169,8 @@ public class BaseUrlCacher implements UrlCacher {
     this.proxyPort = proxyPort;
   }
 
-  public void setForceRefetch(boolean force) {
-    this.forceRefetch = force;
+  public void setLocalAddress(IPAddr localAddr) {
+    this.localAddr = localAddr;
   }
 
   public void setFetchFlags(BitSet fetchFlags) {
@@ -202,7 +200,6 @@ public class BaseUrlCacher implements UrlCacher {
     String lastModified = null;
     if (!fetchFlags.get(REFETCH_FLAG) &&
 	!(fetchFlags.get(REFETCH_IF_DAMAGE_FLAG) && isDamaged())) {
-//     if (!forceRefetch) {
       CachedUrl cachedVersion = getCachedUrl();
 
       // if it's been cached, get the last modified date and use that
@@ -264,6 +261,17 @@ public class BaseUrlCacher implements UrlCacher {
 	input.close();
       }
     }
+  }
+
+  /**
+   * Reset the UrlCacher to its pre-opened state, so that it can be
+   * reopened.
+   */
+  public void reset() {
+    releaseConnection();
+    fetchUrl = origUrl;
+    otherNames = null;
+    uncachedProperties = null;
   }
 
   /**
@@ -546,6 +554,9 @@ public class BaseUrlCacher implements UrlCacher {
 	if (logger.isDebug3()) logger.debug3("Proxying through " + proxyHost
 					     + ":" + proxyPort);
 	conn.setProxy(proxyHost, proxyPort);
+      }
+      if (localAddr != null) {
+	conn.setLocalAddress(localAddr);
       }
       if (reqProps != null) {
 	for (Iterator iter = reqProps.keySet().iterator(); iter.hasNext(); ) {
