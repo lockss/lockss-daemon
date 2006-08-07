@@ -1,5 +1,5 @@
 /*
- * $Id: CacheException.java,v 1.9 2005-10-11 05:48:29 tlipkis Exp $
+ * $Id: CacheException.java,v 1.10 2006-08-07 07:40:44 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -344,7 +344,7 @@ public class CacheException extends IOException {
     }
   }
 
-  /** Unretryable errors that are expectd to happen in normal operation and
+  /** Unretryable errors that are expected to happen in normal operation and
    * don't necessarily indicate anything is wrong. */
   public static class ExpectedNoRetryException
       extends UnretryableException {

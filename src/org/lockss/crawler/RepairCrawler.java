@@ -1,5 +1,5 @@
 /*
- * $Id: RepairCrawler.java,v 1.61 2006-07-19 00:47:53 tlipkis Exp $
+ * $Id: RepairCrawler.java,v 1.62 2006-08-07 07:40:44 tlipkis Exp $
  */
 
 /*
@@ -167,12 +167,11 @@ public class RepairCrawler extends BaseCrawler {
   /** Create a UrlCacher that follows redirects in crawl spec, but stores
    * only the one node we requested.  This should *not* override
    * super.makeUrlCacher(), as that is called from other places in the
-   * crawl (e.e.g, PermissionMap), which don't want the special options for
+   * crawl (e.g, PermissionMap), which don't want the special options for
    * fetching repairs */
   protected UrlCacher makeRepairUrlCacher(String url) {
     UrlCacher uc = makeUrlCacher(url);
     uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW_IN_SPEC);
-//     uc.setForceRefetch(true);
     BitSet fetchFlags = new BitSet();
     fetchFlags.set(UrlCacher.REFETCH_FLAG);
     uc.setFetchFlags(fetchFlags);
