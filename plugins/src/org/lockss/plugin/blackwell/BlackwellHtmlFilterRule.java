@@ -1,5 +1,5 @@
 /*
- * $Id: BlackwellHtmlFilterRule.java,v 1.1 2006-08-01 05:21:51 tlipkis Exp $
+ * $Id: BlackwellHtmlFilterRule.java,v 1.2 2006-08-07 07:34:50 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,8 @@ package org.lockss.plugin.blackwell;
 
 import java.io.*;
 import java.util.List;
+import org.htmlparser.*;
+import org.htmlparser.filters.*;
 
 import org.lockss.util.*;
 import org.lockss.filter.*;
@@ -53,4 +55,24 @@ public class BlackwellHtmlFilterRule implements FilterRule {
     return tagFilter;
 //     return new WhiteSpaceFilter(tagFilter);
   }
+
+
+//   public Reader xcreateFilteredReader(Reader reader) {
+//     /*
+//      * Remove inverse citations
+//      */
+
+//     // <option value="#citart1">This article is cited by the following
+//     // articles in Blackwell Synergy and CrossRef</option>
+
+//     NodeFilter invCiteSelOption =
+//       HtmlNodeFilters.tagWithText("article is cited by", true);
+//     HtmlTransform xform1 =
+//       HtmlNodeFilterTransform.exclude(invCiteSelOption);
+
+//     // Still need to remove actual inverse citation section
+
+//     Reader htmlFilter = new HtmlFilterReader(reader, xform1);
+//     return new WhiteSpaceFilter(htmlFilter);
+//   }
 }
