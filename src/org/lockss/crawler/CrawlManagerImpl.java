@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.97 2006-08-07 18:47:49 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.98 2006-08-07 18:58:34 tlipkis Exp $
  */
 
 /*
@@ -801,7 +801,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       if (goOn) {
 	try {
 	  logger.debug("Waiting until AUs started");
-	  theDaemon.waitUntilAusStarted();
+	  waitUntilAusStarted();
 	  Deadline initial = Deadline.in(paramStartCrawlsInitialDelay);
 	  cmStatus.setNextCrawlStarter(initial);
 	  initial.sleep();
@@ -831,6 +831,11 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       goOn = false;
       interruptThread();
     }
+  }
+
+  // Separate so can override for testing
+  void waitUntilAusStarted() throws InterruptedException {
+    theDaemon.waitUntilAusStarted();
   }
 
   // Each invocation of startSomeCrawls() tries to fill queue with AUs that

@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.63 2006-08-03 00:09:26 tlipkis Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.64 2006-08-07 18:58:34 tlipkis Exp $
  */
 
 /*
@@ -833,6 +833,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       p.put(CrawlManagerImpl.PARAM_START_CRAWLS_INTERVAL, "1s");
       theDaemon.setAusStarted(true);
       ConfigurationUtil.setCurrentConfigFromProps(p);
+      crawlManager.ausStartedSem = new SimpleBinarySemaphore();
       crawlManager.startService();
       HangingCrawler[] crawler = new HangingCrawler[tot];
       SimpleBinarySemaphore endSem = new SimpleBinarySemaphore();
@@ -860,6 +861,8 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       setupAuToCrawl(rau, crawler[tot-1]);
       pluginMgr.addRegistryAu(rau);
       
+      // now let the crawl starter proceed
+      crawlManager.ausStartedSem.give();
       // Ensure they all got queued
       List exe = Collections.EMPTY_LIST;
       Interrupter intr = interruptMeIn(TIMEOUT_SHOULDNT, true);
@@ -1002,6 +1005,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     private boolean recordExecute = false;
     private List executed = new ArrayList();
     private SimpleBinarySemaphore executedSem = new SimpleBinarySemaphore();
+    private SimpleBinarySemaphore ausStartedSem;
 
     protected Crawler makeNewContentCrawler(ArchivalUnit au, CrawlSpec spec) {
       MockCrawler crawler = getCrawler(au);
@@ -1037,6 +1041,15 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       }
       super.execute(run);
     }    
+
+    void waitUntilAusStarted() throws InterruptedException {
+      if (ausStartedSem != null) {
+	ausStartedSem.take();
+      }
+      else {
+	super.waitUntilAusStarted();
+      }
+    }
 
     public void recordExecute(boolean val) {
       recordExecute = val;
