@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssApp.java,v 1.3 2005-10-05 23:12:41 troberts Exp $
+ * $Id: TestLockssApp.java,v 1.4 2006-08-07 07:36:55 tlipkis Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import org.lockss.plugin.*;
  * This is the test class for org.lockss.util.LockssApp
  */
 public class TestLockssApp extends LockssTestCase {
-  LockssApp app;
+  MyMockLockssApp app;
 
   public void setUp() throws Exception {
     super.setUp();
@@ -101,6 +101,40 @@ public class TestLockssApp extends LockssTestCase {
     }
   }
 
+  public void testInitManagers() throws Exception {
+    LockssApp.ManagerDesc[] descrs = {
+      new LockssApp.ManagerDesc("mgr_1", MockMgr1.class.getName()),
+      new LockssApp.ManagerDesc("mgr_2", MockMgr2.class.getName()) {
+      public boolean shouldStart() {
+	return false;
+      }},
+      new LockssApp.ManagerDesc("mgr_3", MockMgr3.class.getName()),
+    };
+    app.setDescrs(descrs);
+
+    app.initManagers();
+
+    MockLockssManager mgr1 = (MockLockssManager)app.getManager("mgr_1");
+    assertTrue(mgr1 instanceof MockMgr1);
+    assertEquals(1, mgr1.inited);
+    assertEquals(1, mgr1.started);
+    assertEquals(0, mgr1.stopped);
+    MockLockssManager mgr3 = (MockLockssManager)app.getManager("mgr_3");
+    assertTrue(mgr3 instanceof MockMgr3);
+    assertEquals(1, mgr3.inited);
+    assertEquals(1, mgr3.started);
+    assertEquals(0, mgr3.stopped);
+    try {
+      app.getManager("mgr_2");
+      fail("mgr_2 shouldn't have been created");
+    } catch (IllegalArgumentException e) {
+    }
+
+    app.stop();
+    assertEquals(1, mgr1.stopped);
+    assertEquals(1, mgr3.stopped);
+  }
+
   static final String mockMgrName = "org.lockss.app.TestLockssApp$MyMockMgr";
   static class MyMockMgr implements LockssManager {
     boolean isInited = false;
@@ -151,15 +185,49 @@ public class TestLockssApp extends LockssTestCase {
   List events;
 
   static class MyMockLockssApp extends LockssApp {
+    ManagerDesc[] descrs = null;
+
     MyMockLockssApp(List propUrls) {
       super(propUrls);
     }
 
     protected ManagerDesc[] getManagerDescs() {
-      return null;
+      return descrs;
     }
 
+    void setDescrs(ManagerDesc[] descrs) {
+      this.descrs = descrs;
+    }
   }
 
+  static class MockLockssManager implements LockssManager {
+    int inited = 0;
+    int started = 0;
+    int stopped = 0;
 
+    public void initService(LockssApp app) throws LockssAppException {
+      inited++;
+    }
+
+    public void startService() {
+      started++;
+    }
+
+    public void stopService() {
+      stopped++;
+    }
+
+    public LockssApp getApp() {
+      return null;
+    }
+  }
+
+  static class MockMgr1 extends MockLockssManager {
+  }
+
+  static class MockMgr2 extends MockLockssManager {
+  }
+
+  static class MockMgr3 extends MockLockssManager {
+  }
 }

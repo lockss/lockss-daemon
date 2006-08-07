@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.85 2006-06-04 06:24:18 tlipkis Exp $
+ * $Id: LockssDaemon.java,v 1.86 2006-08-07 07:36:55 tlipkis Exp $
  */
 
 /*
@@ -48,6 +48,7 @@ import org.lockss.proxy.icp.IcpManager;
 import org.lockss.config.*;
 import org.lockss.crawler.*;
 import org.lockss.remote.*;
+import org.lockss.clockss.*;
 import org.apache.commons.collections.map.LinkedMap;
 
 /**
@@ -119,10 +120,11 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   public static final String ARCHIVAL_UNIT_STATUS = "ArchivalUnitStatus";
   public static final String ICP_MANAGER = "IcpManager";
   public static final String CRON = "Cron";
+  public static final String CLOCKSS_PARAMS = "ClockssParams";
 
   // Manager descriptors.  The order of this table determines the order in
   // which managers are initialized and started.
-  protected static final ManagerDesc[] managerDescs = {
+  protected final ManagerDesc[] managerDescs = {
     new ManagerDesc(RESOURCE_MANAGER, DEFAULT_RESOURCE_MANAGER),
     new ManagerDesc(MAIL_SERVICE, DEFAULT_MAIL_SERVICE),
     new ManagerDesc(ALERT_MANAGER, "org.lockss.alert.AlertManagerImpl"),
@@ -165,6 +167,10 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     new ManagerDesc(REPOSITORY_STATUS,
 		    "org.lockss.repository.LockssRepositoryStatus"),
     new ManagerDesc(CRON, "org.lockss.daemon.Cron"),
+    new ManagerDesc(CLOCKSS_PARAMS, "org.lockss.clockss.ClockssParams") {
+      public boolean shouldStart() {
+	return isClockss();
+      }},
     // watchdog last
     new ManagerDesc(WATCHDOG_SERVICE, DEFAULT_WATCHDOG_SERVICE),
   };
@@ -195,6 +201,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   protected HashMap auManagerFactoryMap = new HashMap();
 
   private static LockssDaemon theDaemon;
+  private boolean isClockss;
 
   protected LockssDaemon(List propUrls) {
     super(propUrls);
@@ -232,6 +239,12 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     return LOCKSS_USER_AGENT;
   }
 
+  /**
+   * True if running as a CLOCKSS daemon
+   */
+  public boolean isClockss() {
+    return isClockss();
+  }
 
   /** Stop the daemon.  Currently only used in testing. */
   public void stopDaemon() {
@@ -412,6 +425,15 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     return (ArchivalUnitStatus) getManager(ARCHIVAL_UNIT_STATUS);
   }
 
+  /**
+   * return the ClockssParams instance.
+   * @return ClockssParams instance.
+   * @throws IllegalArgumentException if the manager is not available.
+   */
+  public ClockssParams getClockssParams() {
+    return (ClockssParams) getManager(CLOCKSS_PARAMS);
+  }
+
   // LockssAuManager accessors
 
   /**
@@ -580,14 +602,16 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     ManagerDesc descs[] = getAuManagerDescs();
     for (int ix = 0; ix < descs.length; ix++) {
       ManagerDesc desc = descs[ix];
-      try {
-	LockssAuManager mgr = initAuManager(desc, au);
-	auMgrMap.put(desc.key, mgr);
-      } catch (Exception e) {
-	log.error("Couldn't init AU manager " + desc.key + " for " + au,
-		  e);
-	// don't try to init remaining managers
-	throw e;
+      if (desc.shouldStart()) {
+	try {
+	  LockssAuManager mgr = initAuManager(desc, au);
+	  auMgrMap.put(desc.key, mgr);
+	} catch (Exception e) {
+	  log.error("Couldn't init AU manager " + desc.key + " for " + au,
+		    e);
+	  // don't try to init remaining managers
+	  throw e;
+	}
       }
     }
   }
@@ -732,6 +756,12 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     stopAllAuManagers();
 
     super.stop();
+  }
+
+  protected void initProperties() {
+    super.initProperties();
+    String proj = ConfigManager.getPlatformProject();
+    isClockss = "clockss".equalsIgnoreCase(proj);
   }
 
   /** Wait until the initial set of AUs have been started.  This must be
