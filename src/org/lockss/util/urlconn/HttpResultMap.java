@@ -1,5 +1,5 @@
 /*
- * $Id: HttpResultMap.java,v 1.5 2004-11-11 00:40:45 troberts Exp $
+ * $Id: HttpResultMap.java,v 1.6 2006-08-07 07:43:17 tlipkis Exp $
  */
 
 /*
@@ -44,7 +44,8 @@ public class HttpResultMap implements CacheResultMap {
   int[] MovePermCodes = {301};
   int[] MoveTempCodes = { 307, 303, 302};
   int[] UnimplementedCodes = {};
-  int[] ExpectedCodes = { 305, 401, 402, 403,  407};
+  int[] PermissionCodes = { 401, 403,  407};
+  int[] ExpectedCodes = { 305, 402};
   int[] RetryDeadLinkCodes = {};
   int[] NoRetryDeadLinkCodes= {204, 300, 404, 405, 406, 410};
   int[] UnexpectedFailCodes = {
@@ -68,6 +69,8 @@ public class HttpResultMap implements CacheResultMap {
                       CacheException.NoRetryTempUrlException.class);
     storeArrayEntries(UnimplementedCodes,
                       CacheException.UnimplementedCodeException.class);
+    storeArrayEntries(PermissionCodes,
+                      CacheException.PermissionException.class);
     storeArrayEntries(ExpectedCodes,
                       CacheException.ExpectedNoRetryException.class);
     storeArrayEntries(UnexpectedFailCodes,

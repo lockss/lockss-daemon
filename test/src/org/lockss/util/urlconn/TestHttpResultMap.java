@@ -1,5 +1,5 @@
 /*
- * $Id: TestHttpResultMap.java,v 1.4 2004-09-21 21:25:03 dshr Exp $
+ * $Id: TestHttpResultMap.java,v 1.5 2006-08-07 07:43:17 tlipkis Exp $
  */
 
 /*
@@ -48,6 +48,11 @@ public class TestHttpResultMap extends LockssTestCase {
     super.tearDown();
   }
 
+  void assertX(int code, Class cls) {
+    CacheException exception = resultMap.mapException(null, code, "foo");
+    assertTrue("code:" + code, cls.isInstance(exception));
+  }
+
   public void testGetException() {
     CacheException exception;
     int[] checkArray;
@@ -60,68 +65,54 @@ public class TestHttpResultMap extends LockssTestCase {
 	       exception instanceof CacheException.UnknownCodeException);
 
     // check Success result codes
-    checkArray = resultMap.SuccessCodes;
-    for(ic = 0; ic < checkArray.length; ic++) {
-      result_code = checkArray[ic];
-      exception = resultMap.mapException(null, result_code, "foo");
-      assertNull("code " + result_code + ": " + exception, exception);
-    }
+    exception = resultMap.mapException(null, 200, "foo");
+    assertNull("code " + result_code + ": " + exception, exception);
+    exception = resultMap.mapException(null, 203, "foo");
+    assertNull("code " + result_code + ": " + exception, exception);
+    exception = resultMap.mapException(null, 304, "foo");
+    assertNull("code " + result_code + ": " + exception, exception);
 
     // check RetrySameUrlExceptions
-    checkArray = resultMap.SameUrlCodes;
-    for(ic =0; ic < checkArray.length; ic++) {
-      result_code = checkArray[ic];
-      exception = resultMap.mapException(null,result_code, "foo");
-      assertTrue("code:" + result_code, exception instanceof
-                 CacheException.RetrySameUrlException);
-    }
+    assertX(408, CacheException.RetrySameUrlException.class);
+    assertX(409, CacheException.RetrySameUrlException.class);
+    assertX(413, CacheException.RetrySameUrlException.class);
+    assertX(500, CacheException.RetrySameUrlException.class);
+    assertX(502, CacheException.RetrySameUrlException.class);
+    assertX(503, CacheException.RetrySameUrlException.class);
+    assertX(504, CacheException.RetrySameUrlException.class);
 
-    // test the RetryPermUrlException
-    checkArray = resultMap.MovePermCodes;
-    for(ic =0; ic < checkArray.length; ic++) {
-      result_code = checkArray[ic];
-      exception = resultMap.mapException(null,result_code, "foo");
-      assertTrue("code:" + result_code, exception instanceof
-                 CacheException.NoRetryPermUrlException);
-    }
+    // test the moved permanently codes
+    assertX(301, CacheException.NoRetryPermUrlException.class);
 
-    // test the RetryTempUrlException
-    checkArray = resultMap.MoveTempCodes;
-    for(ic =0; ic < checkArray.length; ic++) {
-      result_code = checkArray[ic];
-      exception = resultMap.mapException(null,result_code, "foo");
-      assertTrue("code:" + result_code, exception instanceof
-                 CacheException.NoRetryTempUrlException);
-    }
+    // test the moved temporarily codes
+    assertX(307, CacheException.NoRetryTempUrlException.class);
+    assertX(303, CacheException.NoRetryTempUrlException.class);
+    assertX(302, CacheException.NoRetryTempUrlException.class);
 
     // test the UnimplementedCodeException
-    checkArray = resultMap.UnimplementedCodes;
-    for(ic =0; ic < checkArray.length; ic++) {
-      result_code = checkArray[ic];
-      exception = resultMap.mapException(null, result_code, "foo");
-      assertTrue("code:" + result_code, exception instanceof
-                 CacheException.UnimplementedCodeException);
-    }
 
     // test the ExpectedNoRetryException
-    checkArray = resultMap.ExpectedCodes;
-    for(ic =0; ic < checkArray.length; ic++) {
-      result_code = checkArray[ic];
-      exception = resultMap.mapException(null,result_code, "foo");
-      assertTrue("code:" + result_code, exception instanceof
-                 CacheException.ExpectedNoRetryException);
-    }
+    assertX(305, CacheException.ExpectedNoRetryException.class);
+    assertX(402, CacheException.ExpectedNoRetryException.class);
 
-    // test the UnexpectedNoRetryException
-    checkArray = resultMap.UnexpectedFailCodes;
-    for(ic =0; ic < checkArray.length; ic++) {
-      result_code = checkArray[ic];
-      exception = resultMap.mapException(null,result_code, "foo");
-      assertTrue("code:" + result_code, exception instanceof
-                 CacheException.UnexpectedNoRetryFailException);
-    }
+    // test the PermissionException codes
+    assertX(401, CacheException.PermissionException.class);
+    assertX(403, CacheException.PermissionException.class);
+    assertX(407, CacheException.PermissionException.class);
 
-
+    // test the UnexpectedNoRetryException codes
+    assertX(201, CacheException.UnexpectedNoRetryFailException.class);
+    assertX(202, CacheException.UnexpectedNoRetryFailException.class);
+    assertX(205, CacheException.UnexpectedNoRetryFailException.class);
+    assertX(206, CacheException.UnexpectedNoRetryFailException.class);
+    assertX(306, CacheException.UnexpectedNoRetryFailException.class);
+    assertX(400, CacheException.UnexpectedNoRetryFailException.class);
+    assertX(411, CacheException.UnexpectedNoRetryFailException.class);
+    assertX(412, CacheException.UnexpectedNoRetryFailException.class);
+    assertX(416, CacheException.UnexpectedNoRetryFailException.class);
+    assertX(417, CacheException.UnexpectedNoRetryFailException.class);
+    assertX(501, CacheException.UnexpectedNoRetryFailException.class);
+    assertX(505, CacheException.UnexpectedNoRetryFailException.class);
   }
 
 
