@@ -1,5 +1,5 @@
 /*
- * $Id: TestHtmlNodeFilters.java,v 1.1 2006-07-31 06:47:25 tlipkis Exp $
+ * $Id: TestHtmlNodeFilters.java,v 1.2 2006-08-07 07:33:20 tlipkis Exp $
  */
 
 /*
@@ -44,6 +44,21 @@ import org.htmlparser.filters.*;
 public class TestHtmlNodeFilters extends LockssTestCase {
   static Logger log = Logger.getLogger("TestHtmlNodeFilters");
 
+  public void testAssumptions() throws Exception {
+    NodeList nl = parse("<option value=\"val1\">blue 13</option>");
+    Node node = nl.elementAt(0);
+    log.info("class: " + node.getClass());
+    log.info("text: " + node.getText());
+    assertTrue(node instanceof CompositeTag);
+    assertEquals("blue 13", ((CompositeTag)node).getStringText());
+
+    nl = parse("some text");
+    node = nl.elementAt(0);
+    log.info("class: " + node.getClass());
+    log.info("text: " + node.getText());
+    assertFalse(node instanceof CompositeTag);
+  }
+
   public void testIll() {
     try {
       HtmlNodeFilters.tagWithAttribute(null, "attr", "aval");
@@ -87,6 +102,57 @@ public class TestHtmlNodeFilters extends LockssTestCase {
     assertFalse(filt2.accept(divWithAttr("attr", "abbbbc")));
   }
 
+  public void testTagWithText() throws Exception {
+    String opt = "This article is cited by the following articles in ...";
+    NodeFilter filt = HtmlNodeFilters.tagWithText("option",
+						  "article is cited by");
+    NodeList nl = parse("<b><option value=\"#citart1\">" + opt + "</option>");
+    nl = nl.extractAllNodesThatMatch(filt);
+    assertEquals("Should have one element: " + nl, 1, nl.size());
+    Node node = nl.elementAt(0);
+    assertTrue(node instanceof OptionTag);
+    assertEquals(opt, ((OptionTag)node).getStringText());
+
+    nl = parse("<b><script value=\"#citart1\">" + opt + "</script>");
+    nl = nl.extractAllNodesThatMatch(filt);
+    assertEquals("should be empty: " + nl, 0, nl.size());
+
+    nl = parse("some text");
+    nl = nl.extractAllNodesThatMatch(filt);
+    assertEquals("Should be empty: " + nl, 0, nl.size());
+
+    nl = parse("<b><option value=\"#citart1\">this article isn't cited by anyone</option>");
+    nl = nl.extractAllNodesThatMatch(filt);
+    assertEquals("should be empty: " + nl, 0, nl.size());
+
+  }
+
+  public void testTagWithTextRegex() throws Exception {
+    String opt = "This article is cited by the following articles in ...";
+    NodeFilter filt =
+      HtmlNodeFilters.tagWithTextRegex("option",
+				       "article [is]+ cited by.*ll.*l");
+    NodeList nl = parse("<b><option value=\"#citart1\">" + opt + "</option>");
+    nl = nl.extractAllNodesThatMatch(filt);
+    assertEquals("Should have one element: " + nl, 1, nl.size());
+    Node node = nl.elementAt(0);
+    assertTrue(node instanceof OptionTag);
+    assertEquals(opt, ((OptionTag)node).getStringText());
+
+    nl = parse("<b><script value=\"#citart1\">" + opt + "</script>");
+    nl = nl.extractAllNodesThatMatch(filt);
+    assertEquals("should be empty: " + nl, 0, nl.size());
+
+    nl = parse("some text");
+    nl = nl.extractAllNodesThatMatch(filt);
+    assertEquals("Should be empty: " + nl, 0, nl.size());
+
+    nl = parse("<b><option value=\"#citart1\">this article isn't cited by anyone</option>");
+    nl = nl.extractAllNodesThatMatch(filt);
+    assertEquals("should be empty: " + nl, 0, nl.size());
+
+  }
+
   public void testCommentWithString() throws Exception {
     NodeFilter filt = HtmlNodeFilters.commentWithString("sub String");
     NodeList nl = parse("foo<b>bar sub String <!-- dub String -->");
@@ -94,8 +160,7 @@ public class TestHtmlNodeFilters extends LockssTestCase {
 		 0, nl.extractAllNodesThatMatch(filt).size());
     nl = parse("foo<b>bar<!-- sub String -->baz");
     nl = nl.extractAllNodesThatMatch(filt);
-    assertEquals("Should have one element: " + nl,
-		 1, nl.extractAllNodesThatMatch(filt).size());
+    assertEquals("Should have one element: " + nl, 1, nl.size());
     Node node = nl.elementAt(0);
     assertTrue(node instanceof org.htmlparser.nodes.RemarkNode);
     assertEquals(" sub String ", node.getText());
@@ -122,8 +187,7 @@ public class TestHtmlNodeFilters extends LockssTestCase {
 		 0, nl.extractAllNodesThatMatch(filt).size());
     nl = parse("foo<b>bar<!-- Begin ad 42 -->baz");
     nl = nl.extractAllNodesThatMatch(filt);
-    assertEquals("Should have one element: " + nl,
-		 1, nl.extractAllNodesThatMatch(filt).size());
+    assertEquals("Should have one element: " + nl, 1, nl.size());
     Node node = nl.elementAt(0);
     assertTrue(node instanceof org.htmlparser.nodes.RemarkNode);
     assertEquals(" Begin ad 42 ", node.getText());
@@ -146,7 +210,10 @@ public class TestHtmlNodeFilters extends LockssTestCase {
 
   NodeList parse(String in) throws Exception {
     Parser p = ParserUtils.createParserParsingAnInputString(in);
-    return p.parse(null);
+    NodeList nl = p.parse(null);
+    if (log.isDebug3()) log.debug3("parsed (" + nl.size() + "):\n" +
+				   HtmlFilterReader.nodeString(nl));
+    return nl;
   }
 
   Node divWithAttr(String attr, String val) throws Exception {

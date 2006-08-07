@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlFilterReader.java,v 1.1 2006-07-31 06:47:26 tlipkis Exp $
+ * $Id: HtmlFilterReader.java,v 1.2 2006-08-07 07:33:20 tlipkis Exp $
  */
 
 /*
@@ -134,7 +134,7 @@ public class HtmlFilterReader extends Reader {
     return parser;
   }
 
-  String nodeString(NodeList nl) {
+  public static String nodeString(NodeList nl) {
     return StringUtil.separatedString(nl.toNodeArray(), "\n----------\n");
   }
 

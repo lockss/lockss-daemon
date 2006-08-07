@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlNodeFilters.java,v 1.1 2006-07-31 06:47:26 tlipkis Exp $
+ * $Id: HtmlNodeFilters.java,v 1.2 2006-08-07 07:33:20 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,8 @@ package org.lockss.filter;
 
 import org.apache.oro.text.regex.*;
 import org.htmlparser.*;
+import org.htmlparser.tags.*;
+import org.htmlparser.nodes.*;
 import org.htmlparser.filters.*;
 import org.htmlparser.filters.StringFilter;
 import org.lockss.util.*;
@@ -94,6 +96,43 @@ public class HtmlNodeFilters {
     return new AndFilter(new TagNameFilter(tag),
 			 new HasAttributeRegexFilter(attr, valRegexp,
 						     ignoreCase));
+  }
+
+  /** Create a NodeFilter that matches tags with a specified tagname and
+   * nested text containing a substring.  <i>Eg,</i> in <code>
+   * &lt;select&gt;&lt;option value="1"&gt;Option text
+   * 1&lt;/option&gt;...&lt;/select&gt;</code>, <code>tagWithText("option", "Option text") </code>would match the <code>&lt;option&gt; </code>node.
+   */
+  public static NodeFilter tagWithText(String tag, String text) {
+    return new AndFilter(new TagNameFilter(tag),
+			 new CompositeStringFilter(text));
+  }
+
+  /** Create a NodeFilter that matches tags with a specified tagname and
+   * nested text containing a substring.
+   */
+  public static NodeFilter tagWithText(String tag, String text,
+				       boolean ignoreCase) {
+    return new AndFilter(new TagNameFilter(tag),
+			 new CompositeStringFilter(text, ignoreCase));
+  }
+
+  /** Create a NodeFilter that matches composite tags with a specified
+   * tagname and nested text matching a regex.  <i>Eg</i>,  <code> */
+  public static NodeFilter tagWithTextRegex(String tag, String regex) {
+    return new AndFilter(new TagNameFilter(tag),
+			 new CompositeRegexFilter(regex));
+  }
+
+  /** Create a NodeFilter that matches tags with a specified tagname and
+   * nested text matching a regex.  Equivalant to
+   * <pre>new AndFilter(new TagNameFilter(tag),
+              new RegexFilter(regex))</pre> */
+  public static NodeFilter tagWithTextRegex(String tag,
+					    String regex,
+					    boolean ignoreCase) {
+    return new AndFilter(new TagNameFilter(tag),
+			 new CompositeRegexFilter(regex, ignoreCase));
   }
 
   /**
@@ -172,6 +211,44 @@ public class HtmlNodeFilters {
   }
 
   /**
+   * This class accepts all composite nodes containing the given string.
+   */
+  public static class CompositeStringFilter implements NodeFilter {
+    private String string;
+    private boolean ignoreCase = false;
+
+    /**
+     * Creates a CompositeStringFilter that accepts composite nodes
+     * containing the specified string.  The match is case sensitive.
+     * @param substring The string to look for
+     */
+    public CompositeStringFilter(String substring) {
+      this(substring, false);
+    }
+
+    /**
+     * Creates a CompositeStringFilter that accepts composite nodes
+     * containing the specified string.
+     * @param substring The string to look for
+     * @param ignoreCase If true, match is case insensitive
+     */
+    public CompositeStringFilter(String substring, boolean ignoreCase) {
+      this.string = substring;
+      this.ignoreCase = ignoreCase;
+    }
+
+    public boolean accept(Node node) {
+      if (node instanceof CompositeTag) {
+	String nodestr = ((CompositeTag)node).getStringText();
+	return -1 != (ignoreCase
+		      ? StringUtil.indexOfIgnoreCase(nodestr, string)
+		      : nodestr.indexOf(string));
+      }
+      return false;
+    }
+  }
+
+  /**
    * Abstract class for regex filters
    */
   public abstract static class BaseRegexFilter implements NodeFilter {
@@ -236,6 +313,39 @@ public class HtmlNodeFilters {
     public boolean accept(Node node) {
       if (node instanceof Remark) {
 	String nodestr = ((Remark)node).getText();
+	return matcher.contains(nodestr, pat);
+      }
+      return false;
+    }
+  }
+
+  /**
+   * This class accepts all composite nodes whose text contains a match for
+   * the regex.
+   */
+  public static class CompositeRegexFilter extends BaseRegexFilter {
+    /**
+     * Creates a CompositeRegexFilter that accepts composite nodes whose
+     * text contains a match for the regex.  The match is case sensitive.
+     * @param regex The pattern to match.
+     */
+    public CompositeRegexFilter(String regex) {
+      super(regex);
+    }
+
+    /**
+     * Creates a CompositeRegexFilter that accepts composite nodes whose
+     * text contains a match for the regex.
+     * @param regex The pattern to match.
+     * @param ignoreCase If true, match is case insensitive
+     */
+    public CompositeRegexFilter(String regex, boolean ignoreCase) {
+      super(regex, ignoreCase);
+    }
+
+    public boolean accept(Node node) {
+      if (node instanceof CompositeTag) {
+	String nodestr = ((CompositeTag)node).getStringText();
 	return matcher.contains(nodestr, pat);
       }
       return false;
