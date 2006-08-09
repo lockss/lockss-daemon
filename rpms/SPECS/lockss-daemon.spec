@@ -6,7 +6,7 @@ Summary: LOCKSS daemon and configuration files
 Name: %{name}
 Version: %{version}
 Release: %{release}
-Copyright: BSD
+License: BSD
 Group: Archiving
 BuildArch: noarch
 BuildRoot: %{_builddir}/%{name}-root
