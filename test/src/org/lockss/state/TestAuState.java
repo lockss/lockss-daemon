@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuState.java,v 1.3 2005-10-07 21:48:48 troberts Exp $
+ * $Id: TestAuState.java,v 1.4 2006-08-09 02:50:00 tlipkis Exp $
  */
 
 /*
@@ -137,6 +137,29 @@ public class TestAuState extends LockssTestCase {
       assertNotNull(historyRepo.theAuState);
     }
   }
+
+  public void testClockssSubscriptionStatus() {
+    AuState aus = new AuState(mau, historyRepo);
+    assertEquals(AuState.CLOCKSS_SUB_UNKNOWN,
+		 aus.getClockssSubscriptionStatus());
+    assertEquals("Unknown", aus.getClockssSubscriptionStatusString());
+
+    aus.setClockssSubscriptionStatus(AuState.CLOCKSS_SUB_YES);
+    assertEquals(AuState.CLOCKSS_SUB_YES,
+		 aus.getClockssSubscriptionStatus());
+    assertEquals("Yes", aus.getClockssSubscriptionStatusString());
+
+    aus.setClockssSubscriptionStatus(AuState.CLOCKSS_SUB_NO);
+    assertEquals(AuState.CLOCKSS_SUB_NO,
+		 aus.getClockssSubscriptionStatus());
+    assertEquals("No", aus.getClockssSubscriptionStatusString());
+
+    aus.setClockssSubscriptionStatus(AuState.CLOCKSS_SUB_INACCESSIBLE);
+    assertEquals(AuState.CLOCKSS_SUB_INACCESSIBLE,
+		 aus.getClockssSubscriptionStatus());
+    assertEquals("Inaccessible", aus.getClockssSubscriptionStatusString());
+  }    
+
 
   public static void main(String[] argv) {
     String[] testCaseList = { TestAuState.class.getName()};

@@ -1,5 +1,5 @@
 /*
- * $Id: AuState.java,v 1.21 2006-08-09 02:05:12 tlipkis Exp $
+ * $Id: AuState.java,v 1.22 2006-08-09 02:50:01 tlipkis Exp $
  */
 
 /*
@@ -166,6 +166,17 @@ public class AuState implements LockssSerializable {
    */
   public int getClockssSubscriptionStatus() {
     return clockssSubscriptionStatus;
+  }
+
+  public String getClockssSubscriptionStatusString() {
+    int status = getClockssSubscriptionStatus();
+    switch (status) {
+    case CLOCKSS_SUB_UNKNOWN: return "Unknown";
+    case CLOCKSS_SUB_YES: return "Yes";
+    case CLOCKSS_SUB_NO: return "No";
+    case CLOCKSS_SUB_INACCESSIBLE: return "Inaccessible";
+    default: return "Unknown status " + status;
+    }
   }
 
   public void setClockssSubscriptionStatus(int val) {
