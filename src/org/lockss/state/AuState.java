@@ -1,5 +1,5 @@
 /*
- * $Id: AuState.java,v 1.20 2006-08-07 07:42:46 tlipkis Exp $
+ * $Id: AuState.java,v 1.21 2006-08-09 02:05:12 tlipkis Exp $
  */
 
 /*
@@ -53,6 +53,10 @@ public class AuState implements LockssSerializable {
 
   /** The number of updates between writing to file */
   static final int URL_UPDATE_LIMIT = 1;
+
+  public AuState(ArchivalUnit au, HistoryRepository historyRepo) {
+    this(au, -1, -1, -1, null, historyRepo);
+  }
 
   protected AuState(ArchivalUnit au, long lastCrawlTime, long lastTopLevelPoll,
                     long lastTreeWalk, HashSet crawlUrls,
