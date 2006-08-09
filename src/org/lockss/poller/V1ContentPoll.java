@@ -1,5 +1,5 @@
 /*
- * $Id: V1ContentPoll.java,v 1.15 2005-12-01 01:54:44 smorabito Exp $
+ * $Id: V1ContentPoll.java,v 1.16 2006-08-09 02:04:55 tlipkis Exp $
  */
 
 /*
@@ -92,8 +92,15 @@ public class V1ContentPoll extends V1Poll {
   boolean scheduleHash(MessageDigest digest, Deadline timer, Object key,
 		       HashService.Callback callback) {
     HashService hs = m_pollmanager.getHashService();
-    return hs.scheduleHash(m_cus.getContentHasher(digest),
-			   timer, callback, key);
+    try {
+      return hs.scheduleHash(m_cus.getContentHasher(digest),
+			     timer, callback, key);
+    } catch (IllegalArgumentException e) {
+      if (timer.expired()) {
+	return false;
+      }
+      throw e;
+    }
   }
 
 
