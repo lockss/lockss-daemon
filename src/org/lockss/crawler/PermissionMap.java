@@ -1,5 +1,5 @@
 /*
- * $Id: PermissionMap.java,v 1.12 2006-07-19 00:46:28 tlipkis Exp $
+ * $Id: PermissionMap.java,v 1.13 2006-08-09 02:03:45 tlipkis Exp $
  */
 
 /*
@@ -32,12 +32,14 @@
 package org.lockss.crawler;
 import java.util.*;
 
+import org.lockss.app.*;
 import org.lockss.alert.Alert;
 import org.lockss.alert.AlertManager;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.daemon.Crawler.Status;
 import org.lockss.plugin.*;
+import org.lockss.state.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.CacheException;
 import org.lockss.util.urlconn.CacheException.RepositoryException;
@@ -134,10 +136,18 @@ public class PermissionMap {
   }
 
   private void raiseAlert(Alert alert) {
-    if (alertMgr == null) {
-      alertMgr = (AlertManager)org.lockss.app.LockssDaemon.getManager(org.lockss.app.LockssDaemon.ALERT_MANAGER);
+    try {
+      if (alertMgr == null) {
+	alertMgr = AuUtil.getDaemon(au).getAlertManager();
+      }
+      alertMgr.raiseAlert(alert);
+    } catch (RuntimeException e) {
+      logger.error("Couldn't raise alert", e);
     }
-    alertMgr.raiseAlert(alert);
+  }
+
+  private LockssDaemon getDaemon() {
+    return AuUtil.getDaemon(au);
   }
 
   /**
@@ -156,7 +166,6 @@ public class PermissionMap {
     Iterator permissionUrls = permissionList.iterator();
     while (permissionUrls.hasNext()) {
       String permissionPage = (String)permissionUrls.next();
-      // it is the real thing that do the checking of permission, crawlPermission dwell in BaseCrawler.java
       int permissionStatus = crawlPermission(permissionPage);
       // if permission status is something other than OK and the abortWhilePermissionOtherThanOk flag is on
       if (permissionStatus != PermissionRecord.PERMISSION_OK &&
@@ -377,12 +386,31 @@ public class PermissionMap {
         } else {
           logger.error("No crawl permission on " + permissionPage);
           crawl_ok = PermissionRecord.PERMISSION_NOT_OK;
+
+	  if (getDaemon().isClockss()) {
+	    // if fetch worked, ClockssUrlCacher will have set subscription
+	    // status to yes or no, but if we have no permission it should be
+	    // inaccessible
+	    AuState aus = AuUtil.getAuState(au);
+	    switch (aus.getClockssSubscriptionStatus()) {
+	    case AuState.CLOCKSS_SUB_YES:
+	    case AuState.CLOCKSS_SUB_NO:
+	      aus.setClockssSubscriptionStatus(AuState.
+					       CLOCKSS_SUB_INACCESSIBLE);
+	      break;
+	    case AuState.CLOCKSS_SUB_INACCESSIBLE:
+	      break;
+	    case AuState.CLOCKSS_SUB_UNKNOWN:
+	      logger.error("Impossible CLOCKSS subscription state: UNKNOWN");
+	    }
+	  }
           raiseAlert(Alert.auAlert(Alert.NO_CRAWL_PERMISSION, au).
 		     setAttribute(Alert.ATTR_TEXT,
 				  "The page at " + permissionPage +
 				  "\ndoes not contain the " +
 				  "LOCKSS permission statement.\n" +
 				  "No collection was done."));
+	  
         }
       }
     } catch (RepositoryException ex) {
