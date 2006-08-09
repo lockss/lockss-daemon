@@ -1,5 +1,5 @@
 /*
- * $Id: MockPlugin.java,v 1.23 2006-07-18 19:14:09 tlipkis Exp $
+ * $Id: MockPlugin.java,v 1.24 2006-08-09 02:03:07 tlipkis Exp $
  */
 
 /*
@@ -61,6 +61,11 @@ public class MockPlugin extends BasePlugin implements PluginTestable {
 
   public MockPlugin(){
     super();
+  }
+
+  public MockPlugin(LockssDaemon daemon){
+    super();
+    initPlugin(daemon);
   }
 
   /**

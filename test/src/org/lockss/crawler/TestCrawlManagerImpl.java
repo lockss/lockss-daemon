@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.64 2006-08-07 18:58:34 tlipkis Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.65 2006-08-09 02:03:07 tlipkis Exp $
  */
 
 /*
@@ -68,7 +68,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     // to run.
     cprops.put(CrawlManagerImpl.PARAM_START_CRAWLS_INTERVAL, "0");
 
-    plugin = new MockPlugin();
+    plugin = new MockPlugin(getMockLockssDaemon());
     crawlSpec = new SpiderCrawlSpec("blah", new MockCrawlRule());
 
     crawlManager = new TestableCrawlManagerImpl();

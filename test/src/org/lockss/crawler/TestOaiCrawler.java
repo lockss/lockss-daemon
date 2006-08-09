@@ -1,5 +1,5 @@
 /*
- * $Id: TestOaiCrawler.java,v 1.12 2006-04-13 23:34:48 troberts Exp $
+ * $Id: TestOaiCrawler.java,v 1.13 2006-08-09 02:03:07 tlipkis Exp $
  */
 
 /*
@@ -63,7 +63,7 @@ public class TestOaiCrawler extends LockssTestCase {
     getMockLockssDaemon().getAlertManager();
 
     mau = new MockArchivalUnit();
-    mau.setPlugin(new MockPlugin());
+    mau.setPlugin(new MockPlugin(getMockLockssDaemon()));
     mau.setAuId("MyMockTestAu");
 //  mcus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
 
