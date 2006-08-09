@@ -1,5 +1,5 @@
 /*
- * $Id: TestClockssUrlCacher.java,v 1.1 2006-08-07 07:39:08 tlipkis Exp $
+ * $Id: TestClockssUrlCacher.java,v 1.2 2006-08-09 02:01:17 tlipkis Exp $
  */
 
 /*
@@ -54,25 +54,36 @@ public class TestClockssUrlCacher extends LockssTestCase {
   static final String EVENT_SETINST = "setLocalAddress: " + INST_ADDR;
   static final String EVENT_SETCLOCKSS = "setLocalAddress: " + CLOCKSS_ADDR;
   static final String EVENT_INPUTSTREAM = "getUncachedInputStream";
-  static final String EVENT_PROPS = "getUncachedProperties";
   static final String EVENT_CACHE = "cache";
+  static final String EVENT_RESET = "reset";
+
+  static final InputStream RES_INPUT_STREAM = new StringInputStream("foo");
+  static final int RES_CACHE = 7;
 
   MockPlugin mp;
   MockArchivalUnit mau;
   MyUrlCacher muc;
   ClockssUrlCacher cuc;
   AuState aus;
+  InputStream expin, expin2;
 
   public void setUp() throws Exception {
     super.setUp();
+    expin = new StringInputStream("");
+    expin2 = new StringInputStream("a");
+
     MockLockssDaemon daemon = getMockLockssDaemon();
-    setUpDiskPaths();
     mp = new MockPlugin();
     mp.initPlugin(daemon);
     mau = new MockArchivalUnit(mp);
     muc = new MyUrlCacher(URL, mau);
     cuc = new ClockssUrlCacher(muc);
-    daemon.getNodeManager(mau).startService();
+    // accessing the AuState requires NodeManager, HistoryRepository
+    MockHistoryRepository histRepo = new MockHistoryRepository();
+    histRepo.storeAuState(new AuState(mau, histRepo));
+    daemon.setHistoryRepository(histRepo, mau);
+    MockNodeManager nodeMgr = new MockNodeManager();
+    daemon.setNodeManager(nodeMgr, mau);
     aus = AuUtil.getAuState(mau);
     Properties p = new Properties();
     p.put(ClockssParams.PARAM_INSTITUTION_SUBSCRIPTION_ADDR, INST_ADDR);
@@ -81,40 +92,68 @@ public class TestClockssUrlCacher extends LockssTestCase {
     daemon.getClockssParams().startService();
   }
 
-//   public void testSubUnknownYes(List expectedEvents, List results, F fn)
-//       throws Exception {
-//     assertEquals(AuState.CLOCKSS_SUB_UNKNOWN,
-// 		 aus.getClockssSubscriptionStatus());
-//     muc.setResults(exp);
-//     assertSame(exp, fn.f(cuc));
-//     assertEquals(expectedEvents, muc.events);
-//     assertEquals(AuState.CLOCKSS_SUB_YES,
-// 		 aus.getClockssSubscriptionStatus());
-//   }
+  List append(List l, Object o) {
+    l.add(o);
+    return l;
+  }
+
+  List append(List l, Object o1, Object o2) {
+    l.add(o1);
+    l.add(o2);
+    return l;
+  }
+
+  List append(List l, Object o1, Object o2, Object o3) {
+    l.add(o1);
+    l.add(o2);
+    l.add(o3);
+    return l;
+  }
 
   public void testSubUnknownInst1() throws Exception {
     assertEquals(AuState.CLOCKSS_SUB_UNKNOWN,
 		 aus.getClockssSubscriptionStatus());
-    InputStream exp = new StringInputStream("");
-    muc.setResults(ListUtil.list(exp));
-    assertSame(exp, cuc.getUncachedInputStream());
-    assertEquals(ListUtil.list(EVENT_SETINST, EVENT_INPUTSTREAM), muc.events);
+    muc.setResults(ListUtil.list(expin, expin2));
+    assertSame(expin, cuc.getUncachedInputStream());
+    List events = ListUtil.list(EVENT_SETINST, EVENT_INPUTSTREAM);
+    assertEquals(events, muc.events);
     assertEquals(AuState.CLOCKSS_SUB_YES,
 		 aus.getClockssSubscriptionStatus());
+    // calling getUncachedInputStream() now shouldn't do another probe
+    assertSame(expin2, cuc.getUncachedInputStream());
+    assertEquals(append(events, EVENT_INPUTSTREAM), muc.events);
+    assertEquals(AuState.CLOCKSS_SUB_YES,
+		 aus.getClockssSubscriptionStatus());
+    cuc.reset();
+    // now it should
+    assertSame(RES_INPUT_STREAM, cuc.getUncachedInputStream());
+    assertEquals(append(events, EVENT_RESET, EVENT_SETINST, EVENT_INPUTSTREAM),
+		 muc.events);
   }
 
   public void testSubUnknownClockss1() throws Exception {
     assertEquals(AuState.CLOCKSS_SUB_UNKNOWN,
 		 aus.getClockssSubscriptionStatus());
-    InputStream exp = new StringInputStream("");
     muc.setResults(ListUtil.list(new CacheException.PermissionException(),
-				 exp));
-    assertSame(exp, cuc.getUncachedInputStream());
-    assertEquals(ListUtil.list(EVENT_SETINST, EVENT_INPUTSTREAM,
-			       EVENT_SETCLOCKSS, EVENT_INPUTSTREAM),
-		 muc.events);
+				 expin, expin2));
+    assertSame(expin, cuc.getUncachedInputStream());
+    List events = ListUtil.list(EVENT_SETINST, EVENT_INPUTSTREAM,
+				EVENT_SETCLOCKSS, EVENT_RESET,
+				EVENT_INPUTSTREAM);
+    assertEquals(events, muc.events);
     assertEquals(AuState.CLOCKSS_SUB_NO,
 		 aus.getClockssSubscriptionStatus());
+    // calling getUncachedInputStream() now shouldn't do another probe
+    assertSame(expin2, cuc.getUncachedInputStream());
+    assertEquals(append(events, EVENT_INPUTSTREAM), muc.events);
+    assertEquals(AuState.CLOCKSS_SUB_NO,
+		 aus.getClockssSubscriptionStatus());
+    cuc.reset();
+    // now it should
+    assertSame(RES_INPUT_STREAM, cuc.getUncachedInputStream());
+    assertEquals(append(events, EVENT_RESET, EVENT_SETCLOCKSS,
+			EVENT_INPUTSTREAM),
+		 muc.events);
   }
 
   public void testSubUnknownNeither1() throws Exception {
@@ -128,7 +167,8 @@ public class TestClockssUrlCacher extends LockssTestCase {
     } catch (CacheException.PermissionException e) {
     }
     assertEquals(ListUtil.list(EVENT_SETINST, EVENT_INPUTSTREAM,
-			       EVENT_SETCLOCKSS, EVENT_INPUTSTREAM),
+			       EVENT_SETCLOCKSS, EVENT_RESET,
+			       EVENT_INPUTSTREAM),
 		 muc.events);
     assertEquals(AuState.CLOCKSS_SUB_INACCESSIBLE,
 		 aus.getClockssSubscriptionStatus());
@@ -151,7 +191,8 @@ public class TestClockssUrlCacher extends LockssTestCase {
 				 exp));
     assertSame(exp, cuc.getUncachedInputStream());
     assertEquals(ListUtil.list(EVENT_SETINST, EVENT_INPUTSTREAM,
-			       EVENT_SETCLOCKSS, EVENT_INPUTSTREAM),
+			       EVENT_SETCLOCKSS, EVENT_RESET,
+			       EVENT_INPUTSTREAM),
 		 muc.events);
     assertEquals(AuState.CLOCKSS_SUB_NO,
 		 aus.getClockssSubscriptionStatus());
@@ -167,7 +208,8 @@ public class TestClockssUrlCacher extends LockssTestCase {
     } catch (CacheException.PermissionException e) {
     }
     assertEquals(ListUtil.list(EVENT_SETINST, EVENT_INPUTSTREAM,
-			       EVENT_SETCLOCKSS, EVENT_INPUTSTREAM),
+			       EVENT_SETCLOCKSS, EVENT_RESET,
+			       EVENT_INPUTSTREAM),
 		 muc.events);
     assertEquals(AuState.CLOCKSS_SUB_INACCESSIBLE,
 		 aus.getClockssSubscriptionStatus());
@@ -202,10 +244,9 @@ public class TestClockssUrlCacher extends LockssTestCase {
   public void testSubUnknownInst2() throws Exception {
     assertEquals(AuState.CLOCKSS_SUB_UNKNOWN,
 		 aus.getClockssSubscriptionStatus());
-    CIProperties exp = new CIProperties();
-    muc.setResults(ListUtil.list(exp));
-    assertSame(exp, cuc.getUncachedProperties());
-    assertEquals(ListUtil.list(EVENT_SETINST, EVENT_PROPS), muc.events);
+    muc.setResults(ListUtil.list(new Integer(47)));
+    assertEquals(47, cuc.cache());
+    assertEquals(ListUtil.list(EVENT_SETINST, EVENT_CACHE), muc.events);
     assertEquals(AuState.CLOCKSS_SUB_YES,
 		 aus.getClockssSubscriptionStatus());
   }
@@ -213,12 +254,11 @@ public class TestClockssUrlCacher extends LockssTestCase {
   public void testSubUnknownClockss2() throws Exception {
     assertEquals(AuState.CLOCKSS_SUB_UNKNOWN,
 		 aus.getClockssSubscriptionStatus());
-    CIProperties exp = new CIProperties();
     muc.setResults(ListUtil.list(new CacheException.PermissionException(),
-				 exp));
-    assertSame(exp, cuc.getUncachedProperties());
-    assertEquals(ListUtil.list(EVENT_SETINST, EVENT_PROPS,
-			       EVENT_SETCLOCKSS, EVENT_PROPS),
+				 new Integer(47)));
+    assertEquals(47, cuc.cache());
+    assertEquals(ListUtil.list(EVENT_SETINST, EVENT_CACHE,
+			       EVENT_SETCLOCKSS, EVENT_RESET, EVENT_CACHE),
 		 muc.events);
     assertEquals(AuState.CLOCKSS_SUB_NO,
 		 aus.getClockssSubscriptionStatus());
@@ -230,12 +270,12 @@ public class TestClockssUrlCacher extends LockssTestCase {
     muc.setResults(ListUtil.list(new CacheException.PermissionException(),
 				 new CacheException.PermissionException()));
     try {
-      cuc.getUncachedProperties();
-      fail("getUncachedProperties() didn't throw on inaccessible");
+      cuc.cache();
+      fail("cache()() didn't throw on inaccessible");
     } catch (CacheException.PermissionException e) {
     }
-    assertEquals(ListUtil.list(EVENT_SETINST, EVENT_PROPS,
-			       EVENT_SETCLOCKSS, EVENT_PROPS),
+    assertEquals(ListUtil.list(EVENT_SETINST, EVENT_CACHE,
+			       EVENT_SETCLOCKSS, EVENT_RESET, EVENT_CACHE),
 		 muc.events);
     assertEquals(AuState.CLOCKSS_SUB_INACCESSIBLE,
 		 aus.getClockssSubscriptionStatus());
@@ -243,22 +283,20 @@ public class TestClockssUrlCacher extends LockssTestCase {
 
   public void testSubYesInst2() throws Exception {
     aus.setClockssSubscriptionStatus(AuState.CLOCKSS_SUB_YES);
-    CIProperties exp = new CIProperties();
-    muc.setResults(ListUtil.list(exp));
-    assertSame(exp, cuc.getUncachedProperties());
-    assertEquals(ListUtil.list(EVENT_SETINST, EVENT_PROPS), muc.events);
+    muc.setResults(ListUtil.list(new Integer(47)));
+    assertEquals(47, cuc.cache());
+    assertEquals(ListUtil.list(EVENT_SETINST, EVENT_CACHE), muc.events);
     assertEquals(AuState.CLOCKSS_SUB_YES,
 		 aus.getClockssSubscriptionStatus());
   }
 
   public void testSubYesClockss2() throws Exception {
     aus.setClockssSubscriptionStatus(AuState.CLOCKSS_SUB_YES);
-    CIProperties exp = new CIProperties();
     muc.setResults(ListUtil.list(new CacheException.PermissionException(),
-				 exp));
-    assertSame(exp, cuc.getUncachedProperties());
-    assertEquals(ListUtil.list(EVENT_SETINST, EVENT_PROPS,
-			       EVENT_SETCLOCKSS, EVENT_PROPS),
+				 new Integer(47)));
+    assertEquals(47, cuc.cache());
+    assertEquals(ListUtil.list(EVENT_SETINST, EVENT_CACHE,
+			       EVENT_SETCLOCKSS, EVENT_RESET, EVENT_CACHE),
 		 muc.events);
     assertEquals(AuState.CLOCKSS_SUB_NO,
 		 aus.getClockssSubscriptionStatus());
@@ -269,121 +307,18 @@ public class TestClockssUrlCacher extends LockssTestCase {
     muc.setResults(ListUtil.list(new CacheException.PermissionException(),
 				 new CacheException.PermissionException()));
     try {
-      cuc.getUncachedProperties();
-      fail("getUncachedProperties() didn't throw on inaccessible");
+      cuc.cache();
+      fail("cache()() didn't throw on inaccessible");
     } catch (CacheException.PermissionException e) {
     }
-    assertEquals(ListUtil.list(EVENT_SETINST, EVENT_PROPS,
-			       EVENT_SETCLOCKSS, EVENT_PROPS),
+    assertEquals(ListUtil.list(EVENT_SETINST, EVENT_CACHE,
+			       EVENT_SETCLOCKSS, EVENT_RESET, EVENT_CACHE),
 		 muc.events);
     assertEquals(AuState.CLOCKSS_SUB_INACCESSIBLE,
 		 aus.getClockssSubscriptionStatus());
   }
 
   public void testSubNoClockss2() throws Exception {
-    aus.setClockssSubscriptionStatus(AuState.CLOCKSS_SUB_NO);
-    CIProperties exp = new CIProperties();
-    muc.setResults(ListUtil.list(exp));
-    assertSame(exp, cuc.getUncachedProperties());
-    assertEquals(ListUtil.list(EVENT_SETCLOCKSS, EVENT_PROPS),
-		 muc.events);
-    assertEquals(AuState.CLOCKSS_SUB_NO,
-		 aus.getClockssSubscriptionStatus());
-  }
-
-  public void testSubNoNeither2() throws Exception {
-    aus.setClockssSubscriptionStatus(AuState.CLOCKSS_SUB_NO);
-    muc.setResults(ListUtil.list(new CacheException.PermissionException(),
-				 new CacheException.PermissionException()));
-    try {
-      cuc.getUncachedProperties();
-      fail("getUncachedProperties() didn't throw on inaccessible");
-    } catch (CacheException.PermissionException e) {
-    }
-    assertEquals(ListUtil.list(EVENT_SETCLOCKSS, EVENT_PROPS),
-		 muc.events);
-    assertEquals(AuState.CLOCKSS_SUB_INACCESSIBLE,
-		 aus.getClockssSubscriptionStatus());
-  }
-
-  public void testSubUnknownInst3() throws Exception {
-    assertEquals(AuState.CLOCKSS_SUB_UNKNOWN,
-		 aus.getClockssSubscriptionStatus());
-    muc.setResults(ListUtil.list(new Integer(47)));
-    assertEquals(47, cuc.cache());
-    assertEquals(ListUtil.list(EVENT_SETINST, EVENT_CACHE), muc.events);
-    assertEquals(AuState.CLOCKSS_SUB_YES,
-		 aus.getClockssSubscriptionStatus());
-  }
-
-  public void testSubUnknownClockss3() throws Exception {
-    assertEquals(AuState.CLOCKSS_SUB_UNKNOWN,
-		 aus.getClockssSubscriptionStatus());
-    muc.setResults(ListUtil.list(new CacheException.PermissionException(),
-				 new Integer(47)));
-    assertEquals(47, cuc.cache());
-    assertEquals(ListUtil.list(EVENT_SETINST, EVENT_CACHE,
-			       EVENT_SETCLOCKSS, EVENT_CACHE),
-		 muc.events);
-    assertEquals(AuState.CLOCKSS_SUB_NO,
-		 aus.getClockssSubscriptionStatus());
-  }
-
-  public void testSubUnknownNeither3() throws Exception {
-    assertEquals(AuState.CLOCKSS_SUB_UNKNOWN,
-		 aus.getClockssSubscriptionStatus());
-    muc.setResults(ListUtil.list(new CacheException.PermissionException(),
-				 new CacheException.PermissionException()));
-    try {
-      cuc.cache();
-      fail("cache()() didn't throw on inaccessible");
-    } catch (CacheException.PermissionException e) {
-    }
-    assertEquals(ListUtil.list(EVENT_SETINST, EVENT_CACHE,
-			       EVENT_SETCLOCKSS, EVENT_CACHE),
-		 muc.events);
-    assertEquals(AuState.CLOCKSS_SUB_INACCESSIBLE,
-		 aus.getClockssSubscriptionStatus());
-  }
-
-  public void testSubYesInst3() throws Exception {
-    aus.setClockssSubscriptionStatus(AuState.CLOCKSS_SUB_YES);
-    muc.setResults(ListUtil.list(new Integer(47)));
-    assertEquals(47, cuc.cache());
-    assertEquals(ListUtil.list(EVENT_SETINST, EVENT_CACHE), muc.events);
-    assertEquals(AuState.CLOCKSS_SUB_YES,
-		 aus.getClockssSubscriptionStatus());
-  }
-
-  public void testSubYesClockss3() throws Exception {
-    aus.setClockssSubscriptionStatus(AuState.CLOCKSS_SUB_YES);
-    muc.setResults(ListUtil.list(new CacheException.PermissionException(),
-				 new Integer(47)));
-    assertEquals(47, cuc.cache());
-    assertEquals(ListUtil.list(EVENT_SETINST, EVENT_CACHE,
-			       EVENT_SETCLOCKSS, EVENT_CACHE),
-		 muc.events);
-    assertEquals(AuState.CLOCKSS_SUB_NO,
-		 aus.getClockssSubscriptionStatus());
-  }
-
-  public void testSubYesNeither3() throws Exception {
-    aus.setClockssSubscriptionStatus(AuState.CLOCKSS_SUB_YES);
-    muc.setResults(ListUtil.list(new CacheException.PermissionException(),
-				 new CacheException.PermissionException()));
-    try {
-      cuc.cache();
-      fail("cache()() didn't throw on inaccessible");
-    } catch (CacheException.PermissionException e) {
-    }
-    assertEquals(ListUtil.list(EVENT_SETINST, EVENT_CACHE,
-			       EVENT_SETCLOCKSS, EVENT_CACHE),
-		 muc.events);
-    assertEquals(AuState.CLOCKSS_SUB_INACCESSIBLE,
-		 aus.getClockssSubscriptionStatus());
-  }
-
-  public void testSubNoClockss3() throws Exception {
     aus.setClockssSubscriptionStatus(AuState.CLOCKSS_SUB_NO);
     muc.setResults(ListUtil.list(new Integer(47)));
     assertEquals(47, cuc.cache());
@@ -393,7 +328,7 @@ public class TestClockssUrlCacher extends LockssTestCase {
 		 aus.getClockssSubscriptionStatus());
   }
 
-  public void testSubNoNeither3() throws Exception {
+  public void testSubNoNeither2() throws Exception {
     aus.setClockssSubscriptionStatus(AuState.CLOCKSS_SUB_NO);
     muc.setResults(ListUtil.list(new CacheException.PermissionException(),
 				 new CacheException.PermissionException()));
@@ -423,6 +358,9 @@ public class TestClockssUrlCacher extends LockssTestCase {
 
     public int cache() throws IOException {
       events.add(EVENT_CACHE);
+      if (results.isEmpty()) {
+	return RES_CACHE;
+      }
       Object res = results.remove(0);
       if (res instanceof IOException) {
 	throw (IOException)res;
@@ -432,6 +370,9 @@ public class TestClockssUrlCacher extends LockssTestCase {
 
     public InputStream getUncachedInputStream() throws IOException {
       events.add(EVENT_INPUTSTREAM);
+      if (results.isEmpty()) {
+	return RES_INPUT_STREAM;
+      }
       Object res = results.remove(0);
       if (res instanceof IOException) {
 	throw (IOException)res;
@@ -439,16 +380,8 @@ public class TestClockssUrlCacher extends LockssTestCase {
       return (InputStream)res;
     }
 
-    public CIProperties getUncachedProperties() throws IOException {
-      events.add(EVENT_PROPS);
-      Object res = results.remove(0);
-      if (res instanceof IOException) {
-	throw (IOException)res;
-      }
-      return (CIProperties)res;
-    }
-
     public void reset() {
+      events.add(EVENT_RESET);
     }
 
     public void setLocalAddress(IPAddr addr) {

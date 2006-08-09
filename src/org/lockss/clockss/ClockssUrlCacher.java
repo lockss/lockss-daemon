@@ -1,5 +1,5 @@
 /*
- * $Id: ClockssUrlCacher.java,v 1.1 2006-08-07 07:39:09 tlipkis Exp $
+ * $Id: ClockssUrlCacher.java,v 1.2 2006-08-09 02:01:17 tlipkis Exp $
  */
 
 /*
@@ -45,7 +45,6 @@ import org.lockss.crawler.PermissionMap;
  * Wrapper for UrlConnection, which performs CLOCKSS subscription
  * detection.
  */
-
 public class ClockssUrlCacher implements UrlCacher {
   private static Logger log = Logger.getLogger("ClockssUrlCacher");
 
@@ -55,12 +54,23 @@ public class ClockssUrlCacher implements UrlCacher {
 
   private UrlCacher uc;
   private int probeState = PROBE_NONE;
+  private boolean executed = false;
 
   public ClockssUrlCacher(UrlCacher uc) {
     this.uc = uc;
   }
 
+  // State machine to control the local address we fetch from, and whether
+  // to retry from the other address.  There are two UrlCacher methods that
+  // might open a connection to be opened to the server: cache() and
+  // getUncachedInputStream().  The wrappers for those methods call
+  // setupAddr before forwarding the call.
+
   boolean setupAddr() {
+    if (executed) {
+      // already succeeded or failed, don't change state, don't retry
+      return false;
+    }
     ArchivalUnit au = uc.getArchivalUnit();
     AuState aus = AuUtil.getAuState(au);
     ClockssParams mgr = AuUtil.getDaemon(au).getClockssParams();
@@ -108,6 +118,7 @@ public class ClockssUrlCacher implements UrlCacher {
   // found, probe page checked, etc.  This probably has to be done at a
   // higher level, e.g, in the crawler.
   void updateSubscriptionStatus(boolean worked) {
+    executed = true;
     ArchivalUnit au = uc.getArchivalUnit();
     AuState aus = AuUtil.getAuState(au);
     if (worked) {
@@ -208,7 +219,7 @@ public class ClockssUrlCacher implements UrlCacher {
       return res;
     } catch (CacheException.PermissionException e) {
       if (setupAddr()) {
-	reset();
+	uc.reset();
 	res = uc.cache();
 	worked = true;
 	return res;
@@ -228,7 +239,7 @@ public class ClockssUrlCacher implements UrlCacher {
       return res;
     } catch (CacheException.PermissionException e) {
       if (setupAddr()) {
-	reset();
+	uc.reset();
 	res = uc.getUncachedInputStream();
 	return res;
       } else {
@@ -239,27 +250,14 @@ public class ClockssUrlCacher implements UrlCacher {
     }
   }
 
-  public CIProperties getUncachedProperties() throws IOException {
-    CIProperties res = null;
-    setupAddr();
-    try {
-      res = uc.getUncachedProperties();
-      return res;
-    } catch (CacheException.PermissionException e) {
-      if (setupAddr()) {
-	reset();
-	res = uc.getUncachedProperties();
-	return res;
-      } else {
-	throw e;
-      }
-    } finally {
-      updateSubscriptionStatus(res != null);
-    }
+  public CIProperties getUncachedProperties() {
+    return uc.getUncachedProperties();
   }
 
   public void reset() {
     uc.reset();
+    executed = false;
+    probeState = PROBE_NONE;
   }
 
   public void setPermissionMapSource(PermissionMapSource pmSource) {
