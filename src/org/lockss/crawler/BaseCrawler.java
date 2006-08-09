@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawler.java,v 1.11 2006-08-07 07:40:21 tlipkis Exp $
+ * $Id: BaseCrawler.java,v 1.12 2006-08-09 02:01:38 tlipkis Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.io.*;
 import java.net.MalformedURLException;
 import java.util.*;
 
+import org.lockss.app.*;
 import org.lockss.alert.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
@@ -153,7 +154,11 @@ public abstract class BaseCrawler
     //all of these to crawl a site.
     pluginPermissionChecker = spec.getPermissionChecker();
 
-    alertMgr = (AlertManager)org.lockss.app.LockssDaemon.getManager(org.lockss.app.LockssDaemon.ALERT_MANAGER);
+    alertMgr = getDaemon().getAlertManager();
+  }
+
+  protected LockssDaemon getDaemon() {
+    return AuUtil.getDaemon(au);
   }
 
   protected void setCrawlConfig(Configuration config) {
@@ -177,8 +182,7 @@ public abstract class BaseCrawler
 
   List getDaemonPermissionCheckers() {
     if (daemonPermissionCheckers == null) {
-      String proj = ConfigManager.getPlatformProject();
-      if ("clockss".equalsIgnoreCase(proj)) {
+      if (getDaemon().isClockss()) {
 	daemonPermissionCheckers = new ClockssPermission().getCheckers();
       } else {
 	daemonPermissionCheckers = new LockssPermission().getCheckers();
@@ -292,6 +296,9 @@ public abstract class BaseCrawler
    * connection pool set. */
   public UrlCacher makeUrlCacher(String url) {
     UrlCacher uc = au.makeUrlCacher(url);
+    if (getDaemon().isClockss()) {
+      uc = new ClockssUrlCacher(uc);
+    }
     uc.setConnectionPool(connectionPool);
     uc.setPermissionMapSource(this);
     return uc;

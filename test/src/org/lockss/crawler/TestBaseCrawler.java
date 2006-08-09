@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCrawler.java,v 1.6 2006-08-07 07:40:21 tlipkis Exp $
+ * $Id: TestBaseCrawler.java,v 1.7 2006-08-09 02:01:38 tlipkis Exp $
  */
 
 /*
@@ -88,7 +88,7 @@ public class TestBaseCrawler extends LockssTestCase {
     TimeBase.setSimulated(10);
 
     mau = new MockArchivalUnit();
-    mau.setPlugin(new MockPlugin());
+    mau.setPlugin(new MockPlugin(getMockLockssDaemon()));
 
     startUrls = ListUtil.list(startUrl);
     cus = new MyMockCachedUrlSet(mau, null);
@@ -185,11 +185,21 @@ public class TestBaseCrawler extends LockssTestCase {
   }
 
   public void testMakeUrlCacher() {
-    MockUrlCacher uc = (MockUrlCacher) crawler.makeUrlCacher(startUrl);
+    UrlCacher uc = crawler.makeUrlCacher(startUrl);
     assertNotNull(uc);
-    assertSame(crawler, uc.getPermissionMapSource());
+    assertFalse("UrlCacher shouldn't be a ClockssUrlCacher",
+		uc instanceof ClockssUrlCacher);
+    assertSame(crawler, ((MockUrlCacher)uc).getPermissionMapSource());
   }
 
+  public void testMakeUrlCacherClockss() {
+    ConfigurationUtil.setFromArgs(ConfigManager.PARAM_PLATFORM_PROJECT,
+				  "clockss");
+    UrlCacher uc = crawler.makeUrlCacher(startUrl);
+    assertNotNull(uc);
+    assertTrue("UrlCacher should be a ClockssUrlCacher",
+	       uc instanceof ClockssUrlCacher);
+  }
 
   public void testGetPermissionMap() throws MalformedURLException {
     Set cachedUrls = cus.getCachedUrls();
