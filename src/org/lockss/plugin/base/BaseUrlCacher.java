@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.64 2006-08-07 07:42:20 tlipkis Exp $
+ * $Id: BaseUrlCacher.java,v 1.65 2006-08-09 02:04:31 tlipkis Exp $
  */
 
 /*
@@ -447,7 +447,8 @@ public class BaseUrlCacher implements UrlCacher {
     return input;
   }
 
-  public CIProperties getUncachedProperties() throws IOException {
+  public CIProperties getUncachedProperties()
+      throws UnsupportedOperationException {
     if (conn == null) {
       throw new UnsupportedOperationException("Called getUncachedProperties before calling getUncachedInputStream.");
     }

@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedUrlCacher.java,v 1.20 2006-04-05 22:57:37 tlipkis Exp $
+ * $Id: SimulatedUrlCacher.java,v 1.21 2006-08-09 02:04:31 tlipkis Exp $
  */
 
 /*
@@ -112,7 +112,7 @@ public class SimulatedUrlCacher extends BaseUrlCacher {
   }
 
   // overrides base behavior
-  public CIProperties getUncachedProperties() throws IOException {
+  public CIProperties getUncachedProperties() {
     if (props!=null) {
       return props;
     }

@@ -1,5 +1,5 @@
 /*
- * $Id: MockUrlCacher.java,v 1.33 2006-08-07 07:42:20 tlipkis Exp $
+ * $Id: MockUrlCacher.java,v 1.34 2006-08-09 02:04:31 tlipkis Exp $
  */
 
 /*
@@ -123,7 +123,7 @@ public class MockUrlCacher implements UrlCacher {
   public void setRedirectScheme(RedirectScheme scheme) {
   }
 
-  public void setupCachedUrl(String contents) throws IOException {
+  public void setupCachedUrl(String contents) {
     MockCachedUrl cu = new MockCachedUrl(url);
     cu.setProperties(getUncachedProperties());
     if (contents != null) {
@@ -229,8 +229,7 @@ public class MockUrlCacher implements UrlCacher {
     return uncachedIS;
   }
 
-  public CIProperties getUncachedProperties() throws IOException {
-    throwExceptionIfSet();
+  public CIProperties getUncachedProperties() {
     return uncachedProp;
   }
 
