@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssDaemon.java,v 1.58 2006-08-07 07:36:55 tlipkis Exp $
+ * $Id: MockLockssDaemon.java,v 1.59 2006-08-09 01:57:38 tlipkis Exp $
  */
 
 /*
@@ -96,7 +96,21 @@ public class MockLockssDaemon extends LockssDaemon {
 
   private MockLockssDaemon(List urls) {
     super(urls);
+    ConfigManager mgr = ConfigManager.getConfigManager();
+    mgr.registerConfigurationCallback(new Configuration.Callback() {
+	public void configurationChanged(Configuration newConfig,
+					 Configuration prevConfig,
+					 Configuration.Differences changedKeys) {
+	  setConfig(newConfig, prevConfig, changedKeys);
+	}
+      });
   }
+
+  protected void setConfig(Configuration config, Configuration prevConfig,
+			   Configuration.Differences changedKeys) {
+    super.setConfig(config, prevConfig, changedKeys);
+  }
+
 
   /** Does nothing */
   public void startDaemon() throws Exception {
