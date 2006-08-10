@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockingStreamComm.java,v 1.14 2005-10-11 05:50:53 tlipkis Exp $
+ * $Id: TestBlockingStreamComm.java,v 1.15 2006-08-10 17:23:21 dshr Exp $
  */
 
 /*
@@ -497,7 +497,8 @@ public class TestBlockingStreamComm extends LockssTestCase {
   public void testIncoming() throws IOException {
     setupComm1();
     Interrupter intr1 = interruptMeIn(TIMEOUT_SHOULDNT);
-    Socket sock = new Socket(pad1.getIPAddr().getInetAddr(), pad1.getPort());
+    BlockingStreamComm.SocketFactory sf = comm1.getSocketFactory();
+    Socket sock = sf.newSocket(pad1.getIPAddr(), pad1.getPort());
     SockAbort intr2 = abortIn(TIMEOUT_SHOULDNT, sock);
     InputStream ins = sock.getInputStream();
     StreamUtil.readBytes(ins, rcvHeader, HEADER_LEN);
@@ -512,7 +513,8 @@ public class TestBlockingStreamComm extends LockssTestCase {
     log.debug("Incoming rcv pid " + peerid);
     setupComm1();
     Interrupter intr1 = interruptMeIn(TIMEOUT_SHOULDNT);
-    Socket sock = new Socket(pad1.getIPAddr().getInetAddr(), pad1.getPort());
+    BlockingStreamComm.SocketFactory sf = comm1.getSocketFactory();
+    Socket sock = sf.newSocket(pad1.getIPAddr(), pad1.getPort());
     SockAbort intr2 = abortIn(TIMEOUT_SHOULDNT, sock);
     InputStream ins = sock.getInputStream();
     OutputStream outs = sock.getOutputStream();
@@ -561,7 +563,8 @@ public class TestBlockingStreamComm extends LockssTestCase {
   public void testOriginate() throws IOException {
     setupComm1();
     setupPid(2);
-    ServerSocket server = new ServerSocket(pad2.getPort());
+    BlockingStreamComm.SocketFactory sf = comm1.getSocketFactory();
+    ServerSocket server = sf.newServerSocket(pad2.getPort(), 3);
     SockAbort intr = abortIn(TIMEOUT_SHOULDNT, server);
     comm1.findOrMakeChannel(pid2);
     Socket sock = server.accept();
@@ -592,7 +595,8 @@ public class TestBlockingStreamComm extends LockssTestCase {
     comm1.setAssocQueue(assocQ);
     setupPid(2);
     log.debug2("Listening on " + pad2.getPort());
-    ServerSocket server = new ServerSocket(pad2.getPort());
+    BlockingStreamComm.SocketFactory sf = comm1.getSocketFactory();
+    ServerSocket server = sf.newServerSocket(pad2.getPort(), 3);
     SockAbort intr = abortIn(TIMEOUT_SHOULDNT, server);
     comm1.findOrMakeChannel(pid2);
     Socket sock = server.accept();
@@ -648,7 +652,8 @@ public class TestBlockingStreamComm extends LockssTestCase {
     setupComm1();
     setupPid(2);
     Interrupter intr1 = interruptMeIn(TIMEOUT_SHOULDNT);
-    Socket sock = new Socket(pad1.getIPAddr().getInetAddr(), pad1.getPort());
+    BlockingStreamComm.SocketFactory sf = comm1.getSocketFactory();
+    Socket sock = sf.newSocket(pad1.getIPAddr(), pad1.getPort());
     SockAbort intr2 = abortIn(TIMEOUT_SHOULDNT, sock);
     InputStream ins = sock.getInputStream();
     OutputStream outs = sock.getOutputStream();
@@ -695,7 +700,8 @@ public class TestBlockingStreamComm extends LockssTestCase {
     setupComm1();
     setupPid(2);
     Interrupter intr1 = interruptMeIn(TIMEOUT_SHOULDNT);
-    Socket sock = new Socket(pad1.getIPAddr().getInetAddr(), pad1.getPort());
+    BlockingStreamComm.SocketFactory sf = comm1.getSocketFactory();
+    Socket sock = sf.newSocket(pad1.getIPAddr(), pad1.getPort());
     SockAbort intr2 = abortIn(TIMEOUT_SHOULDNT * 2, sock);
     InputStream ins = sock.getInputStream();
     OutputStream outs = sock.getOutputStream();
@@ -1008,10 +1014,13 @@ public class TestBlockingStreamComm extends LockssTestCase {
 
     MyBlockingStreamComm(PeerIdentity localId) {
       this.localId = localId;
-      sockFact = new MySocketFactory();
+      sockFact = null;
     }
 
     SocketFactory getSocketFactory() {
+      if (sockFact == null) {
+	  sockFact = new MySocketFactory(super.getSocketFactory());
+      }
       return sockFact;
     }
 
@@ -1052,16 +1061,26 @@ public class TestBlockingStreamComm extends LockssTestCase {
      * MyBlockingPeerChannels.
      */
     class MySocketFactory implements BlockingStreamComm.SocketFactory {
+      private SocketFactory sf;
+      MySocketFactory(SocketFactory s) {
+	  sf = s;
+      }
 
       public ServerSocket newServerSocket(int port, int backlog)
 	  throws IOException {
-	return (useInternalSockets ? new InternalServerSocket(port, backlog)
-		: new ServerSocket(port, backlog));
+	if (useInternalSockets) {
+	  return new InternalServerSocket(port, backlog);
+	} else {
+          return sf.newServerSocket(port, backlog);
+	}
       }
 
       public Socket newSocket(IPAddr addr, int port) throws IOException {
-	return (useInternalSockets ? new InternalSocket(addr.getInetAddr(), port)
-		: new Socket(addr.getInetAddr(), port));
+	if (useInternalSockets) {
+	  return new InternalSocket(addr.getInetAddr(), port);
+	} else {
+          return sf.newSocket(addr, port);
+	}
       }
 
       public BlockingPeerChannel newPeerChannel(BlockingStreamComm comm,
@@ -1208,6 +1227,16 @@ public class TestBlockingStreamComm extends LockssTestCase {
     }
   }
 
+  /** SSL sockets */
+  public static class SslStreams extends TestBlockingStreamComm {
+    public SslStreams(String name) {
+      super(name);
+    }
+    public void addSuiteProps(Properties p) {
+      p.setProperty(BlockingStreamComm.PARAM_USE_V3_OVER_SSL, "true");
+    }
+  }
+
 
   public static Test suite() {
     return variantSuites(new Class[] {
@@ -1216,6 +1245,7 @@ public class TestBlockingStreamComm extends LockssTestCase {
 //       BuffNoDelay.class,
       UnBuffNoDelay.class,
       HighPri.class,
+//      SslStreams.class,
     });
   }
 }

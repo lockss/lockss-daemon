@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingStreamComm.java,v 1.12 2005-11-16 07:44:09 smorabito Exp $
+ * $Id: BlockingStreamComm.java,v 1.13 2006-08-10 17:23:21 dshr Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.protocol;
 
 import java.io.*;
 import java.net.*;
+import javax.net.ssl.*;
 import java.util.*;
 
 import EDU.oswego.cs.dl.util.concurrent.*;
@@ -54,6 +55,10 @@ public class BlockingStreamComm
   implements ConfigurableManager, LcapStreamComm, PeerMessage.Factory {
 
   static Logger log = Logger.getLogger("SComm");
+
+  /** Use V3 over SSL **/
+  public static final String PARAM_USE_V3_OVER_SSL = PREFIX + "v3OverSsl";
+  static final boolean DEFAULT_USE_V3_OVER_SSL = false;
 
   /** Max peer channels */
   public static final String PARAM_MAX_CHANNELS =
@@ -146,6 +151,7 @@ public class BlockingStreamComm
   static final int PRIORITY_DEFAULT_CHANNEL = -1;
 
 
+    private boolean paramUseV3OverSsl = false;
   private int paramMinFileMessageSize = DEFAULT_MIN_FILE_MESSAGE_SIZE;
   private int paramMaxMessageSize = DEFAULT_MAX_MESSAGE_SIZE;
   private File dataDir = null;
@@ -189,7 +195,7 @@ public class BlockingStreamComm
   private Vector messageHandlers = new Vector(); // Vector is synchronized
 
   public BlockingStreamComm() {
-    sockFact = new NormalSocketFactory();
+    sockFact = null;
   }
 
   /**
@@ -233,6 +239,11 @@ public class BlockingStreamComm
 	configure(config, prevConfig, changedKeys);
       }
       // these params can be changed on the fly
+      if (changedKeys.contains(PARAM_USE_V3_OVER_SSL)) {
+        paramUseV3OverSsl = config.getBoolean(PARAM_USE_V3_OVER_SSL,
+					      DEFAULT_USE_V3_OVER_SSL);
+	sockFact = null;
+      }
       paramMinFileMessageSize = config.getInt(PARAM_MIN_FILE_MESSAGE_SIZE,
 					      DEFAULT_MIN_FILE_MESSAGE_SIZE);
       paramMaxMessageSize = config.getInt(PARAM_MAX_MESSAGE_SIZE,
@@ -324,6 +335,12 @@ public class BlockingStreamComm
   }
 
   SocketFactory getSocketFactory() {
+    if (sockFact == null)
+      if (paramUseV3OverSsl) {
+	sockFact = new SslSocketFactory();
+      } else {
+        sockFact = new NormalSocketFactory();
+      }
     return sockFact;
   }
 
@@ -839,7 +856,7 @@ public class BlockingStreamComm
 	throws IOException;
   }
 
-  /** Normal socket factory creates real Sockets */
+  /** Normal socket factory creates real TCP Sockets */
   static class NormalSocketFactory implements SocketFactory {
     public ServerSocket newServerSocket(int port, int backlog)
 	throws IOException {
@@ -848,6 +865,37 @@ public class BlockingStreamComm
 
     public Socket newSocket(IPAddr addr, int port) throws IOException {
       return new Socket(addr.getInetAddr(), port);
+    }
+
+    public BlockingPeerChannel newPeerChannel(BlockingStreamComm comm,
+					      Socket sock)
+	throws IOException {
+      return new BlockingPeerChannel(comm, sock);
+    }
+
+    public BlockingPeerChannel newPeerChannel(BlockingStreamComm comm,
+					      PeerIdentity peer)
+	throws IOException {
+      return new BlockingPeerChannel(comm, peer);
+    }
+  }
+
+  /** SSL socket factory */
+  static class SslSocketFactory implements SocketFactory {
+    public ServerSocket newServerSocket(int port, int backlog)
+      throws IOException {
+      SSLServerSocket s = (SSLServerSocket)
+	SSLServerSocketFactory.getDefault().createServerSocket(port, backlog);
+      // s.setNeedClientAuth();
+      log.debug2("New SSL server socket: " + port + " backlog " + backlog);
+      return s;
+    }
+
+    public Socket newSocket(IPAddr addr, int port) throws IOException {
+      SSLSocket s = (SSLSocket)
+	  SSLSocketFactory.getDefault().createSocket(addr.getInetAddr(), port);
+      log.debug2("New SSL client socket: " + port + "@" + addr.toString());
+      return s;
     }
 
     public BlockingPeerChannel newPeerChannel(BlockingStreamComm comm,
