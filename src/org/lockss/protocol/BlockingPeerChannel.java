@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingPeerChannel.java,v 1.13 2006-06-04 06:25:53 tlipkis Exp $
+ * $Id: BlockingPeerChannel.java,v 1.14 2006-08-14 19:25:25 dshr Exp $
  */
 
 /*
@@ -725,6 +725,9 @@ class BlockingPeerChannel implements PeerChannel {
 	      log.debug("shutdownOutput", e);
 	      abortChannel();
 	      break;
+	    } catch (UnsupportedOperationException e) {
+	      log.debug("shutdownOutput() not implemented for SSL");
+	      abortChannel();
 	    }
 	  }
 	}

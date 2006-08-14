@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingStreamComm.java,v 1.13 2006-08-10 17:23:21 dshr Exp $
+ * $Id: BlockingStreamComm.java,v 1.14 2006-08-14 19:25:25 dshr Exp $
  */
 
 /*
@@ -825,7 +825,11 @@ public class BlockingStreamComm
 	    log.warning("Listener", e);
 	  }
 	} catch (Exception e) {
-	  log.warning("Listener", e);
+	  if (listenSock instanceof SSLServerSocket) {
+	    log.debug("SSL Listener ", e);
+	  } else {
+	    log.warning("Listener", e);
+          }
 	}
       }
       listenThread = null;
@@ -884,17 +888,36 @@ public class BlockingStreamComm
   static class SslSocketFactory implements SocketFactory {
     public ServerSocket newServerSocket(int port, int backlog)
       throws IOException {
+      log.debug("Using system property javax.net.ssl.keyStore=" +
+	        System.getProperty("javax.net.ssl.keyStore","null"));
       SSLServerSocket s = (SSLServerSocket)
 	SSLServerSocketFactory.getDefault().createServerSocket(port, backlog);
       // s.setNeedClientAuth();
-      log.debug2("New SSL server socket: " + port + " backlog " + backlog);
+      log.debug("New SSL server socket: " + port + " backlog " + backlog);
+      String cs[] = s.getEnabledCipherSuites();
+      for (int i = 0; i < cs.length; i++) {
+	log.debug2(cs[i] + " enabled cipher suite");
+      }
+      cs = s.getSupportedCipherSuites();
+      for (int i = 0; i < cs.length; i++) {
+	log.debug2(cs[i] + " supported cipher suite");
+      }
+      cs = s.getEnabledProtocols();
+      for (int i = 0; i < cs.length; i++) {
+	log.debug2(cs[i] + " enable protocol");
+      }
+      cs = s.getSupportedProtocols();
+      for (int i = 0; i < cs.length; i++) {
+	log.debug2(cs[i] + " supported protocol");
+      }
+	log.debug2("enable session creation " + s.getEnableSessionCreation());
       return s;
     }
 
     public Socket newSocket(IPAddr addr, int port) throws IOException {
       SSLSocket s = (SSLSocket)
 	  SSLSocketFactory.getDefault().createSocket(addr.getInetAddr(), port);
-      log.debug2("New SSL client socket: " + port + "@" + addr.toString());
+      log.debug("New SSL client socket: " + port + "@" + addr.toString());
       return s;
     }
 
