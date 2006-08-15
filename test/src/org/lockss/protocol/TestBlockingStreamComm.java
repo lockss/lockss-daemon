@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockingStreamComm.java,v 1.17 2006-08-15 03:11:37 dshr Exp $
+ * $Id: TestBlockingStreamComm.java,v 1.18 2006-08-15 19:02:46 dshr Exp $
  */
 
 /*
@@ -35,6 +35,8 @@ package org.lockss.protocol;
 import java.util.*;
 import java.io.*;
 import java.net.*;
+import javax.net.*;
+import javax.net.ssl.*;
 import junit.framework.*;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
@@ -230,7 +232,7 @@ public class TestBlockingStreamComm extends LockssTestCase {
    */
   void setupComm(int ix) throws IOException {
     if (pids[ix] == null) setupPid(ix);
-    comms[ix] = new MyBlockingStreamComm(pids[ix]);
+    setupCommArrayEntry(ix);
     comms[ix].initService(daemon);
     comms[ix].startService();
     rcvdMsgss[ix] = new SimpleQueue.Fifo();
@@ -239,6 +241,10 @@ public class TestBlockingStreamComm extends LockssTestCase {
 				       new MessageHandler(rcvdMsgss[ix]));
     }
     commhack(ix);
+  }
+
+  void setupCommArrayEntry(int ix) {
+    comms[ix] = new MyBlockingStreamComm(pids[ix]);
   }
 
   void commhack(int ix) {
@@ -1011,6 +1017,7 @@ public class TestBlockingStreamComm extends LockssTestCase {
     PeerIdentity localId;
     SimpleQueue assocEvents;
     SimpleBinarySemaphore acceptSem;
+    BlockingStreamComm.SocketFactory superSockFact;
 
     MyBlockingStreamComm(PeerIdentity localId) {
       this.localId = localId;
@@ -1019,7 +1026,8 @@ public class TestBlockingStreamComm extends LockssTestCase {
 
     SocketFactory getSocketFactory() {
       if (sockFact == null) {
-	  sockFact = new MySocketFactory(super.getSocketFactory());
+	superSockFact = super.getSocketFactory();
+	sockFact = new MySocketFactory(superSockFact);
       }
       return sockFact;
     }
@@ -1057,44 +1065,49 @@ public class TestBlockingStreamComm extends LockssTestCase {
       acceptSem = sem;
     }
 
-    /** Socket factory creates either real or internal sockets, and
-     * MyBlockingPeerChannels.
-     */
-    class MySocketFactory implements BlockingStreamComm.SocketFactory {
-      private SocketFactory sf;
-      MySocketFactory(SocketFactory s) {
-	  sf = s;
-      }
 
-      public ServerSocket newServerSocket(int port, int backlog)
+  }
+
+  /** Socket factory creates either real or internal sockets, and
+   * MyBlockingPeerChannels.
+   */
+  class MySocketFactory implements BlockingStreamComm.SocketFactory {
+    protected BlockingStreamComm.SocketFactory sf;
+    MySocketFactory(BlockingStreamComm.SocketFactory s) {
+	  sf = s;
+    }
+
+    public ServerSocket newServerSocket(int port, int backlog)
 	  throws IOException {
 	if (useInternalSockets) {
 	  return new InternalServerSocket(port, backlog);
 	} else {
-          return sf.newServerSocket(port, backlog);
+	ServerSocket ss = sf.newServerSocket(port, backlog);
+	assertFalse(ss instanceof SSLServerSocket);
+        return ss;
 	}
-      }
+    }
 
-      public Socket newSocket(IPAddr addr, int port) throws IOException {
+    public Socket newSocket(IPAddr addr, int port) throws IOException {
 	if (useInternalSockets) {
 	  return new InternalSocket(addr.getInetAddr(), port);
 	} else {
-          return sf.newSocket(addr, port);
+	Socket s = sf.newSocket(addr, port);
+	assertFalse(s instanceof SSLSocket);
+        return s;
 	}
-      }
+    }
 
-      public BlockingPeerChannel newPeerChannel(BlockingStreamComm comm,
+    public BlockingPeerChannel newPeerChannel(BlockingStreamComm comm,
 						Socket sock)
 	  throws IOException {
 	return new MyBlockingPeerChannel(comm, sock);
-      }
+    }
 
-      public BlockingPeerChannel newPeerChannel(BlockingStreamComm comm,
+    public BlockingPeerChannel newPeerChannel(BlockingStreamComm comm,
 						PeerIdentity peer)
 	  throws IOException {
 	return new MyBlockingPeerChannel(comm, peer);
-      }
-
     }
 
   }
