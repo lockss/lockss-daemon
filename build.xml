@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.189 2006-07-31 21:50:54 thib_gc Exp $
+ $Id: build.xml,v 1.190 2006-08-15 03:11:36 dshr Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
@@ -243,6 +243,7 @@ Args:
                           value="net/sf/antcontrib/antcontrib.properties"/>
 
   <property name="requires-1.4" value="test/requires-1.4"/>
+  <property name="requires-1.5" value="test/requires-1.5"/>
 
   <!--  Compiler options -->
   <property name="javac.debug"             value="on" />
@@ -524,6 +525,12 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
     </fail>
   </target>
 
+  <target name="-check-if-1.5" depends="prepare" >
+    <fail unless="is-java-1.5">
+The target you have selected requires compiling under JDK 1.5.  Use the rant -1.5 option
+    </fail>
+  </target>
+
   <target name="prepare.run.test"
        depends="prepare.test,-load.junit.logger.task">
   </target>
@@ -643,6 +650,7 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
      <javacelem>
        <include name="**/*.java"/>
        <excludesfile name="${requires-1.4}" unless="is-java-1.4" />
+       <excludesfile name="${requires-1.5}" unless="is-java-1.5" />
      </javacelem>
     </dojavac>
     <copy todir="${test.classes}" >
@@ -1454,6 +1462,7 @@ java -classpath &quot;${tmp.ptool.clspth.unix}&quot; org.lockss.devtools.plugind
           <exclude name="${exclude}" />
           <excludesfile name="${excludesfile}" if="excludesfile" />
           <excludesfile name="${requires-1.4}" unless="is-java-1.4" />
+          <excludesfile name="${requires-1.5}" unless="is-java-1.5" />
         </fileset>
       </batchtest>
      </junitelem>
@@ -1558,6 +1567,7 @@ Test results in ${test.results}
       <fileset id="test.one.filesetid" dir="${test.src}">
 	 <include name="**/${class}.java" />
          <excludesfile name="${requires-1.4}" unless="is-java-1.4" />
+         <excludesfile name="${requires-1.5}" unless="is-java-1.5" />
       </fileset>
       <!-- test whether fileset is empty by converting it to a string -->
       <pathconvert refid="test.one.filesetid" property="test.one.files"
