@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingPeerChannel.java,v 1.14 2006-08-14 19:25:25 dshr Exp $
+ * $Id: BlockingPeerChannel.java,v 1.15 2006-08-16 00:13:04 dshr Exp $
  */
 
 /*
@@ -364,8 +364,12 @@ class BlockingPeerChannel implements PeerChannel {
     if (wtConnecter != null) {
       wtConnecter.waitExited(timeout);
     }
-    wtReader.waitExited(timeout);
-    wtWriter.waitExited(timeout);
+    if (wtReader != null) {
+      wtReader.waitExited(timeout);
+    }
+    if (wtWriter != null) {
+      wtWriter.waitExited(timeout);
+    }
   }
 
   /** Called periodically by parent stream comm to check for hung sender

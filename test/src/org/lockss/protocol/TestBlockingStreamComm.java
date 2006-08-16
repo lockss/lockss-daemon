@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockingStreamComm.java,v 1.18 2006-08-15 19:02:46 dshr Exp $
+ * $Id: TestBlockingStreamComm.java,v 1.19 2006-08-16 00:13:04 dshr Exp $
  */
 
 /*
@@ -1000,7 +1000,7 @@ public class TestBlockingStreamComm extends LockssTestCase {
     for (int comm = 0; comm < MAX_COMMS; comm++) {
       Set peers = allPeers();
       while (!peers.isEmpty()) {
-	PeerMessage msgIn = (PeerMessage)rcvdMsgss[comm].get(TIMEOUT_SHOULDNT);
+	PeerMessage msgIn = (PeerMessage)rcvdMsgss[comm].get(TIMEOUT_SHOULDNT*4);
 	assertNotNull("Comm" + comm + " didn't receive messages from " + peers,
 		      msgIn);
 	peers.remove(msgIn.getSender());
