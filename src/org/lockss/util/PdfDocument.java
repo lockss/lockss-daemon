@@ -1,5 +1,5 @@
 /*
- * $Id: PdfDocument.java,v 1.2 2006-07-31 23:54:48 thib_gc Exp $
+ * $Id: PdfDocument.java,v 1.3 2006-08-21 15:48:55 thib_gc Exp $
  */
 
 /*
@@ -33,12 +33,13 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 
 import java.io.*;
-import java.util.Iterator;
+import java.util.*;
 
 import org.pdfbox.cos.COSDocument;
 import org.pdfbox.exceptions.COSVisitorException;
 import org.pdfbox.pdfparser.PDFParser;
 import org.pdfbox.pdmodel.*;
+import org.pdfbox.pdmodel.common.PDMetadata;
 import org.pdfbox.pdmodel.fdf.FDFDocument;
 
 /**
@@ -54,7 +55,10 @@ import org.pdfbox.pdmodel.fdf.FDFDocument;
  */
 public class PdfDocument {
 
-  protected PDFParser pdfParser;
+  /**
+   * <p>The underlying PDF parser.</p>
+   */
+  private PDFParser pdfParser;
 
   /**
    * <p>Builds a new PDF document (actually a new PDF parser).</p>
@@ -77,26 +81,53 @@ public class PdfDocument {
    * @see PDDocument#close
    */
   public void close() throws IOException {
-    pdfParser.getPDDocument().close();
+    getPDDocument().close();
+  }
+
+  /**
+   * <p>Provides access to the underlying {@link COSDocument}
+   * instance.</p>
+   * @return The underlying {@link COSDocument} instance, pulled from
+   *         the underlying {@link PDFParser} instance.
+   * @throws IOException if any processing error occurs.
+   */
+  public COSDocument getCOSDocument() throws IOException {
+    return getPdfParser().getDocument();
+  }
+
+  public String getMetadataAsString() throws IOException {
+    return getMetadata().getInputStreamAsString();
+  }
+
+  public Calendar getModificationDate() throws IOException {
+    return getDocumentInformation().getModificationDate();
   }
 
   public PDPage getPage(int index) throws IOException {
-    return (PDPage)pdfParser.getPDDocument().getDocumentCatalog().getAllPages().get(index);
+    return (PDPage)getDocumentCatalog().getAllPages().get(index);
   }
 
   public Iterator /* of PDPage */ getPageIterator() throws IOException {
-    return pdfParser.getPDDocument().getDocumentCatalog().getAllPages().iterator();
+    return getDocumentCatalog().getAllPages().iterator();
   }
 
   /**
    * <p>Provides access to the underlying {@link PDDocument}
    * instance.</p>
    * @return The underlying {@link PDDocument} instance, pulled from
-   *         hte underlying {@link PDFParser} instance.
+   *         the underlying {@link PDFParser} instance.
    * @throws IOException if any processing error occurs.
    */
   public PDDocument getPDDocument() throws IOException {
-    return pdfParser.getPDDocument();
+    return getPdfParser().getPDDocument();
+  }
+
+  public PDFParser getPdfParser() {
+    return pdfParser;
+  }
+
+  public void removeModificationDate() throws IOException {
+    setModificationDate(null);
   }
 
   /**
@@ -108,7 +139,7 @@ public class PdfDocument {
    */
   public void save(OutputStream outputStream) throws IOException {
     try {
-      pdfParser.getPDDocument().save(outputStream);
+      getPDDocument().save(outputStream);
     }
     catch (COSVisitorException cve) {
       IOException ioe = new IOException();
@@ -117,8 +148,30 @@ public class PdfDocument {
     }
   }
 
-  public COSDocument getCOSDocument() throws IOException {
-    return pdfParser.getDocument();
+  public void setMetadata(String metadataAsString) throws IOException {
+    ByteArrayInputStream inputStream = new ByteArrayInputStream(metadataAsString.getBytes());
+    PDMetadata pdMetadata = new PDMetadata(getPDDocument(), inputStream, false);
+    setMetadata(pdMetadata);
+  }
+
+  public void setModificationDate(Calendar date) throws IOException {
+    getDocumentInformation().setModificationDate(date);
+  }
+
+  protected PDDocumentCatalog getDocumentCatalog() throws IOException {
+    return getPDDocument().getDocumentCatalog();
+  }
+
+  protected PDDocumentInformation getDocumentInformation() throws IOException {
+    return getPDDocument().getDocumentInformation();
+  }
+
+  protected PDMetadata getMetadata() throws IOException {
+    return getDocumentCatalog().getMetadata();
+  }
+
+  protected void setMetadata(PDMetadata metadata) throws IOException {
+    getDocumentCatalog().setMetadata(metadata);
   }
 
 }

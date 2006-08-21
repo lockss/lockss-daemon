@@ -1,5 +1,5 @@
 /*
- * $Id: PdfTransformUtil.java,v 1.2 2006-07-31 23:54:48 thib_gc Exp $
+ * $Id: PdfTransformUtil.java,v 1.3 2006-08-21 15:48:55 thib_gc Exp $
  */
 
 /*
@@ -111,7 +111,8 @@ public class PdfTransformUtil {
       Iterator iter = pdfDocument.getPageIterator();
       iter.next(); // skip first page
       while (iter.hasNext()) {
-        pdfPageTransform.transform(pdfDocument, (PDPage)iter.next());
+        pdfPageTransform.transform(pdfDocument,
+                                   (PDPage)iter.next());
       }
     }
 
@@ -141,7 +142,8 @@ public class PdfTransformUtil {
     /* Inherit documentation */
     public void transform(PdfDocument pdfDocument) throws IOException {
       for (Iterator iter = pdfDocument.getPageIterator() ; iter.hasNext() ; ) {
-        pdfPageTransform.transform(pdfDocument, (PDPage)iter.next());
+        pdfPageTransform.transform(pdfDocument,
+                                   (PDPage)iter.next());
       }
     }
 

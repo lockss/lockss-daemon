@@ -1,5 +1,5 @@
 /*
- * $Id: PdfPageTransformUtil.java,v 1.1 2006-07-31 23:54:48 thib_gc Exp $
+ * $Id: PdfPageTransformUtil.java,v 1.2 2006-08-21 15:48:55 thib_gc Exp $
  */
 
 /*
@@ -59,13 +59,7 @@ public class PdfPageTransformUtil {
    * @author Thib Guicherd-Callin
    */
   public static abstract class PdfAbstractStringReplacePageTransform
-      implements PdfTokenSequenceMutator, PdfPageTransform {
-
-    /**
-     * <p>Whether the mutator should stop after a first match on a
-     * page.</p>
-     */
-    protected boolean stopAfterFirstMatchOnPage;
+      extends PdfAbstractTokenSequenceMutator {
 
     /**
      * <p>Builds a new transform.</p>
@@ -74,7 +68,7 @@ public class PdfPageTransformUtil {
      *                                  page.
      */
     public PdfAbstractStringReplacePageTransform(boolean stopAfterFirstMatchOnPage) {
-      this.stopAfterFirstMatchOnPage = stopAfterFirstMatchOnPage;
+      super(2, SHOW_TEXT, stopAfterFirstMatchOnPage);
     }
 
     /**
@@ -96,14 +90,9 @@ public class PdfPageTransformUtil {
     public abstract boolean isCandidateForReplacement(String str);
 
     /* Inherit documentation */
-    public boolean isLastTokenInSequence(Object candidateToken) {
-      return PdfPageTransformUtil.isShowTextOperator(candidateToken);
-    }
-
-    /* Inherit documentation */
     public void processTokenSequence(Object[] pdfTokens) throws IOException {
       String str = PdfPageTransformUtil.getPdfString(pdfTokens[0]);
-      PdfPageTransformUtil.replacePdfString(str, getReplacementString(str));
+      PdfPageTransformUtil.replacePdfString(pdfTokens[0], getReplacementString(str));
     }
 
     /* Inherit documentation */
@@ -114,14 +103,74 @@ public class PdfPageTransformUtil {
       return ret;
     }
 
-    /* Inherit documentation */
+  }
+
+  public static abstract class PdfAbstractTokenSequenceMatcher
+      implements PdfPageTransform, PdfTokenSequenceMatcher {
+
+    protected String lastTokenInSequence;
+
+    protected int sequenceLength;
+
+    public PdfAbstractTokenSequenceMatcher(int sequenceLength,
+                                           String lastTokenInSequence) {
+      this.sequenceLength = sequenceLength;
+      this.lastTokenInSequence = lastTokenInSequence;
+    }
+
+    public boolean isLastTokenInSequence(Object candidateToken) {
+      return isPdfOperator(candidateToken, lastTokenInSequence);
+    }
+
     public int tokenSequenceSize() {
-      return 2;
+      return sequenceLength;
+    }
+
+    public void transform(PdfDocument pdfDocument,
+                          PDPage pdfPage)
+        throws IOException {
+      runPdfTokenSequenceMatcher(this, pdfPage);
+    }
+
+  }
+
+  public static abstract class PdfAbstractTokenSequenceMutator
+      implements PdfPageTransform, PdfTokenSequenceMutator {
+
+    protected String lastTokenInSequence;
+
+    protected int sequenceLength;
+
+    protected boolean stopAfterFirstMatch;
+
+    public PdfAbstractTokenSequenceMutator(int sequenceLength,
+                                           String lastTokenInSequence) {
+      this(sequenceLength, lastTokenInSequence, false);
+    }
+
+    public PdfAbstractTokenSequenceMutator(int sequenceLength,
+                                           String lastTokenInSequence,
+                                           boolean stopAfterFirstMatch) {
+      this.sequenceLength = sequenceLength;
+      this.lastTokenInSequence = lastTokenInSequence;
+      this.stopAfterFirstMatch = stopAfterFirstMatch;
     }
 
     /* Inherit documentation */
-    public void transform(PdfDocument pdfDocument, PDPage pdfPage) throws IOException {
-      runPdfTokenSequenceMutator(this, pdfDocument, pdfPage, stopAfterFirstMatchOnPage);
+    public boolean isLastTokenInSequence(Object candidateToken) {
+      return isPdfOperator(candidateToken, lastTokenInSequence);
+    }
+
+    /* Inherit documentation */
+    public int tokenSequenceSize() {
+      return sequenceLength;
+    }
+
+    /* Inherit documentation */
+    public void transform(PdfDocument pdfDocument,
+                          PDPage pdfPage)
+        throws IOException {
+      runPdfTokenSequenceMutator(this, pdfDocument, pdfPage, stopAfterFirstMatch);
     }
 
   }
@@ -134,7 +183,7 @@ public class PdfPageTransformUtil {
    * a constant string and the string to be matched is based on a
    * constant string.</p>
    * @author Thib Guicherd-Callin
-   * @see #makeTransform(String, String, boolean)
+   * @see #makeTransformEquals(String, String, boolean)
    * @see #makeTransformIgnoreCase(String, String, boolean)
    * @see #makeTransformMatches(String, String, boolean)
    * @see #makeTransformStartsWith(String, String, boolean)
@@ -188,9 +237,9 @@ public class PdfPageTransformUtil {
      *                                  page.
      * @return A PDF page transform.
      */
-    public static PdfStringReplacePageTransform makeTransform(String oldString,
-                                                              String newString,
-                                                              boolean stopAfterFirstMatchOnPage) {
+    public static PdfStringReplacePageTransform makeTransformEquals(String oldString,
+                                                                    String newString,
+                                                                    boolean stopAfterFirstMatchOnPage) {
       return new PdfStringReplacePageTransform(oldString, newString, stopAfterFirstMatchOnPage) {
         public boolean isCandidateForReplacement(String str) {
           return str.equals(oldString);
@@ -442,9 +491,20 @@ public class PdfPageTransformUtil {
    * <p>Determines if a candidate PDF token is a PDF string token.</p>
    * @param candidateToken A candidate PDF toekn.
    * @return True if the argument is a PDF string, false otherwise.
+   * @see COSString
    */
   public static boolean isPdfString(Object candidateToken) {
     return candidateToken instanceof COSString;
+  }
+
+  /**
+   * <p>Determines if a candidate PDF token is a PDF float token.</p>
+   * @param candidateToken A candidate PDF toekn.
+   * @return True if the argument is a PDF float, false otherwise.
+   * @see COSFloat
+   */
+  public static boolean isPdfFloat(Object candidateToken) {
+    return candidateToken instanceof COSFloat;
   }
 
   /**

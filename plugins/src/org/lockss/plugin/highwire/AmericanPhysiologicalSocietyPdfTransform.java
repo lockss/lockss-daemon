@@ -1,5 +1,5 @@
 /*
- * $Id: AmericanPhysiologicalSocietyPdfTransform.java,v 1.1 2006-07-31 23:54:48 thib_gc Exp $
+ * $Id: AmericanPhysiologicalSocietyPdfTransform.java,v 1.2 2006-08-21 15:48:55 thib_gc Exp $
  */
 
 /*
@@ -35,12 +35,13 @@ package org.lockss.plugin.highwire;
 import java.io.IOException;
 import java.util.Iterator;
 
+import org.apache.commons.lang.StringUtils;
 import org.lockss.filter.*;
 import org.lockss.util.*;
 import org.lockss.util.PdfPageTransformUtil.*;
 import org.lockss.util.PdfTransformUtil.*;
 import org.pdfbox.encryption.PDFEncryption;
-import org.pdfbox.pdmodel.PDPage;
+import org.pdfbox.pdmodel.*;
 
 /**
  * <p>This PDF transform identifies and processes PDF documents that
@@ -53,7 +54,7 @@ import org.pdfbox.pdmodel.PDPage;
  */
 public class AmericanPhysiologicalSocietyPdfTransform extends PdfConditionalTransform {
 
-  protected static Logger logger = Logger.getLogger("PhysiologicalGenomicsPdfTransform");
+  protected static Logger logger = Logger.getLogger("AmericanPhysiologicalSocietyPdfTransform");
 
   /**
    * <p>A PDF token sequence mutator that removes the variable portion
@@ -63,21 +64,10 @@ public class AmericanPhysiologicalSocietyPdfTransform extends PdfConditionalTran
    * @author Thib Guicherd-Callin
    * @see AmericanPhysiologicalSocietyPdfTransform
    */
-  public static class OtherPagesVertical
-      implements PdfPageTransform, PdfTokenSequenceMutator {
+  public static class OtherPagesTransform extends PdfAbstractTokenSequenceMutator {
 
-    public void transform(PdfDocument pdfDocument, PDPage pdfPage) throws IOException {
-      PdfPageTransformUtil.runPdfTokenSequenceMutator(this, pdfDocument, pdfPage, true);
-    }
-
-    /**
-     * <p>This class cannot be publicly instantiated.</p>
-     */
-    protected OtherPagesVertical() {}
-
-    /* Inherit documentation */
-    public boolean isLastTokenInSequence(Object candidateToken) {
-      return PdfPageTransformUtil.isEndTextObjectOperator(candidateToken);
+    public OtherPagesTransform() {
+      super(52, PdfPageTransformUtil.END_TEXT_OBJECT, true);
     }
 
     /* Inherit documentation */
@@ -88,40 +78,22 @@ public class AmericanPhysiologicalSocietyPdfTransform extends PdfConditionalTran
     /* Inherit documentation */
     public boolean tokenSequenceMatches(Object[] pdfTokens) {
       boolean ret = PdfPageTransformUtil.isBeginTextObjectOperator(pdfTokens[0])
-      && PdfPageTransformUtil.isEndTextObjectOperator(pdfTokens[17])
-      && PdfPageTransformUtil.isBeginTextObjectOperator(pdfTokens[20])
-      && PdfPageTransformUtil.isEndTextObjectOperator(pdfTokens[35])
-      && PdfPageTransformUtil.isBeginTextObjectOperator(pdfTokens[38])
+      && PdfPageTransformUtil.isPdfFloat(pdfTokens[9])
       && PdfPageTransformUtil.isShowTextOperator(pdfTokens[12])
       && PdfPageTransformUtil.isPdfString(pdfTokens[11])
+      && PdfPageTransformUtil.isEndTextObjectOperator(pdfTokens[17])
+      && PdfPageTransformUtil.isBeginTextObjectOperator(pdfTokens[20])
+      && PdfPageTransformUtil.isPdfFloat(pdfTokens[29])
       && PdfPageTransformUtil.isShowTextOperator(pdfTokens[32])
       && PdfPageTransformUtil.isPdfString(pdfTokens[31])
+      && PdfPageTransformUtil.isEndTextObjectOperator(pdfTokens[35])
+      && PdfPageTransformUtil.isBeginTextObjectOperator(pdfTokens[38])
+      && PdfPageTransformUtil.isPdfFloat(pdfTokens[47])
       && PdfPageTransformUtil.isShowTextOperator(pdfTokens[50])
       && PdfPageTransformUtil.isPdfString(pdfTokens[49])
       && "Downloaded from ".equals(PdfPageTransformUtil.getPdfString(pdfTokens[49]));
       logger.debug3("Evaluating candidate match: " + Boolean.toString(ret));
       return ret;
-    }
-
-    /* Inherit documentation */
-    public int tokenSequenceSize() {
-      return 52;
-    }
-
-    /**
-     * <p>A singleton instance of this class.</p>
-     */
-    private static OtherPagesVertical singleton;
-
-    /**
-     * <p>Gets a singleton instance of this class.</p>
-     * @return An instance of this class.
-     */
-    public static synchronized OtherPagesVertical makeTransform() {
-      if (singleton == null) {
-        singleton = new OtherPagesVertical();
-      }
-      return singleton;
     }
 
   }
@@ -134,21 +106,10 @@ public class AmericanPhysiologicalSocietyPdfTransform extends PdfConditionalTran
    * @author Thib Guicherd-Callin
    * @see AmericanPhysiologicalSocietyPdfTransform
    */
-  protected static class FirstPageVertical
-      implements PdfPageTransform, PdfTokenSequenceMutator {
+  protected static class FirstPageTransform extends PdfAbstractTokenSequenceMutator {
 
-    public void transform(PdfDocument pdfDocument, PDPage pdfPage) throws IOException {
-      PdfPageTransformUtil.runPdfTokenSequenceMutator(this, pdfDocument, pdfPage, true);
-    }
-
-    /**
-     * <p>This class cannot be publicly instantiated.</p>
-     */
-    protected FirstPageVertical() {}
-
-    /* Inherit documentation */
-    public boolean isLastTokenInSequence(Object candidateToken) {
-      return PdfPageTransformUtil.isEndTextObjectOperator(candidateToken);
+    public FirstPageTransform() {
+      super(30, PdfPageTransformUtil.END_TEXT_OBJECT, true);
     }
 
     /* Inherit documentation */
@@ -170,55 +131,6 @@ public class AmericanPhysiologicalSocietyPdfTransform extends PdfConditionalTran
       return ret;
     }
 
-    /* Inherit documentation */
-    public int tokenSequenceSize() {
-      return 30;
-    }
-
-    /**
-     * <p>A singleton instance of this class.</p>
-     */
-    private static FirstPageVertical singleton;
-
-    /**
-     * <p>Gets a singleton instance of this class.</p>
-     * @return An instance of this class.
-     */
-    public static synchronized FirstPageVertical makeTransform() {
-      if (singleton == null) {
-        singleton = new FirstPageVertical();
-      }
-      return singleton;
-    }
-
-  }
-
-  protected static class FirstPageString {
-
-    /**
-     * <p>This class cannot be publicly instantiated.</p>
-     */
-    protected FirstPageString() {}
-
-    /**
-     * <p>A singleton instance of the transform encapuslated by this
-     * class.</p>
-     */
-    private static PdfStringReplacePageTransform underlyingTransform;
-
-    /**
-     * <p>Gets a singleton instance of this class.</p>
-     * @return An instance of this class.
-     */
-    public static synchronized PdfStringReplacePageTransform makeTransform() {
-      if (underlyingTransform == null) {
-        underlyingTransform = PdfStringReplacePageTransform.makeTransformStartsWith("This information is current as of ",
-                                                                                    " ",
-                                                                                    true);
-      }
-      return underlyingTransform;
-    }
-
   }
 
   /**
@@ -227,7 +139,7 @@ public class AmericanPhysiologicalSocietyPdfTransform extends PdfConditionalTran
   private static AmericanPhysiologicalSocietyPdfTransform singleton;
 
   /**
-   * <p>A singleton instance of this class' undelrying transform.</p>
+   * <p>A singleton instance of this class' underlying transform.</p>
    */
   private static PdfCompoundTransform underlyingTransform;
 
@@ -245,22 +157,43 @@ public class AmericanPhysiologicalSocietyPdfTransform extends PdfConditionalTran
   protected static synchronized PdfCompoundTransform makeUnderlyingTransform() {
     if (underlyingTransform == null) {
       underlyingTransform = new PdfCompoundTransform();
-      underlyingTransform.addPdfTransform(new PdfFirstPageTransform(FirstPageVertical.makeTransform()));
-      underlyingTransform.addPdfTransform(new PdfFirstPageTransform(FirstPageString.makeTransform()));
-      underlyingTransform.addPdfTransform(new PdfEachPageExceptFirstTransform(OtherPagesVertical.makeTransform()));
-      // TODO: metadata info
+      underlyingTransform.addPdfTransform(new PdfFirstPageTransform(new FirstPageTransform()));
+      underlyingTransform.addPdfTransform(new PdfEachPageExceptFirstTransform(new OtherPagesTransform()));
+      underlyingTransform.addPdfTransform(new PdfFirstPageTransform(PdfStringReplacePageTransform.makeTransformStartsWith("This information is current as of ",
+                                                                                                                          " ",
+                                                                                                                          true)));
+      underlyingTransform.addPdfTransform(new MetadataTransform());
       // TODO: metadata XML
     }
     return underlyingTransform;
   }
 
-  protected AmericanPhysiologicalSocietyPdfTransform(PdfTransform underlyingTransform) {
+  /**
+   * <p>This class cannot be publicly instantiated.</p>
+   */
+  private AmericanPhysiologicalSocietyPdfTransform(PdfTransform underlyingTransform) {
     super(underlyingTransform);
   }
 
+  /* Inherit documentatiion */
   public boolean identify(PdfDocument pdfDocument) throws IOException {
-    return PdfPageTransformUtil.runPdfTokenSequenceMatcher(FirstPageVertical.makeTransform(),
+    return PdfPageTransformUtil.runPdfTokenSequenceMatcher(new FirstPageTransform(),
                                                            (PDPage)pdfDocument.getPageIterator().next());
+  }
+
+  protected static class MetadataTransform implements PdfTransform {
+
+    public void transform(PdfDocument pdfDocument) throws IOException {
+      pdfDocument.removeModificationDate();
+
+      final String BEGIN = "<xap:ModifyDate>";
+      final String END = "</xap:ModifyDate>";
+      String metadata = pdfDocument.getMetadataAsString();
+      int begin = metadata.indexOf(BEGIN) + BEGIN.length();
+      int end = metadata.indexOf(END, begin);
+      pdfDocument.setMetadata(StringUtils.overlay(metadata, "", begin, end));
+    }
+
   }
 
 }

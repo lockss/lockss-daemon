@@ -39,6 +39,10 @@ import org.lockss.plugin.FilterRule;
 
 public class HighWirePdfFilterRule implements FilterRule {
 
+  /*
+   * Do not use this class for now.
+   */
+
   public Reader createFilteredReader(Reader reader) {
     return new PdfFilterReader(reader, getTransform());
   }
