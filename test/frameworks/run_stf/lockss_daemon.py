@@ -1757,6 +1757,9 @@ org.lockss.baseau.toplevel.poll.interval.min=4m
 org.lockss.baseau.toplevel.poll.interval.max=6m
 org.lockss.baseau.toplevel.poll.prob.initial=100
 
+# Set the v3 poll state dir to /tmp
+org.lockss.poll.v3.messageDir=/tmp
+
 org.lockss.metrics.slowest.hashrate=250
 org.lockss.state.recall.delay=5m
 

@@ -1,5 +1,5 @@
 /*
- * $Id: ParticipantUserData.java,v 1.6 2006-06-02 20:27:15 smorabito Exp $
+ * $Id: ParticipantUserData.java,v 1.6.8.1 2006-08-22 20:33:16 smorabito Exp $
  */
 
 /*
@@ -58,7 +58,8 @@ public class ParticipantUserData implements LockssSerializable {
   private boolean isVoteComplete = false;
   private boolean isOuterCircle = false;
   private PsmInterpStateBean psmState;
-  private String statusString = V3Poller.PEER_STATUS_INITIALIZED;
+  private String statusString;
+  private int status = V3Poller.PEER_STATUS_INITIALIZED;
   private VoteBlocksIterator voteBlockIterator;
 
   /** Transient non-serialized fields */
@@ -125,13 +126,24 @@ public class ParticipantUserData implements LockssSerializable {
     return nominees;
   }
   
-  // Pretty display for the status tables.
+  /**
+   * @deprecated Use setStatus instead.
+   * @param s The status of this peer.
+   */
   public void setStatusString(String s) {
     this.statusString = s;
   }
   
   public String getStatusString() {
-    return statusString;
+    return V3Poller.PEER_STATUS_STRINGS[getStatus()];
+  }
+  
+  public void setStatus(int s) {
+    this.status = s;
+  }
+  
+  public int getStatus() {
+    return status;
   }
   
   public void setHashAlgorithm(String s) {
