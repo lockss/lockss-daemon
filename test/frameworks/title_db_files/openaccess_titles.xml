@@ -5050,5 +5050,66 @@
 	</property>
         <property name="attributes.rights" value="openaccess" />
       </property>
+
+    <property name="emc1">
+      <property name="title" value="Early Modern Culture Volume 1" />
+      <property name="journalTitle" value="Early Modern Culture" />
+      <property name="plugin" value="org.lockss.plugin.emc.EarlyModernCulturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://emc.eserver.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="1" />
+      </property>
+      <property name="attributes.rights" value="openaccess" />
     </property>
+  
+    <property name="emc2">
+      <property name="title" value="Early Modern Culture Volume 2" />
+      <property name="journalTitle" value="Early Modern Culture" />
+      <property name="plugin" value="org.lockss.plugin.emc.EarlyModernCulturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://emc.eserver.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="2" />
+      </property>
+      <property name="attributes.rights" value="openaccess" />
+    </property>
+  
+    <property name="emc3">
+      <property name="title" value="Early Modern Culture Volume 3" />
+      <property name="journalTitle" value="Early Modern Culture" />
+      <property name="plugin" value="org.lockss.plugin.emc.EarlyModernCulturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://emc.eserver.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="3" />
+      </property>
+      <property name="attributes.rights" value="openaccess" />
+    </property>
+    
+    <property name="emc4">
+      <property name="title" value="Early Modern Culture Volume 4" />
+      <property name="journalTitle" value="Early Modern Culture" />
+      <property name="plugin" value="org.lockss.plugin.emc.EarlyModernCulturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://emc.eserver.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="4" />
+      </property>
+      <property name="attributes.rights" value="openaccess" />
+    </property>
+
+  </property>
 </lockss-config>
