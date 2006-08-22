@@ -1,5 +1,5 @@
 /*
- * $Id: PollerStateBean.java,v 1.12 2006-06-02 20:27:15 smorabito Exp $
+ * $Id: PollerStateBean.java,v 1.13 2006-08-22 20:33:07 smorabito Exp $
  */
 
 /*
@@ -67,6 +67,7 @@ public class PollerStateBean implements LockssSerializable {
   private int hashBlockIndex;
   private int outerCircleTarget;
   private String statusString;
+  private int status;
   private RepairQueue repairQueue;
   private ArrayList hashedBlocks; // This will need to be disk-based in 1.16!
   private boolean hashStarted;
@@ -309,12 +310,38 @@ public class PollerStateBean implements LockssSerializable {
     return sb.toString();
   }
 
+  /**
+   * @deprecated Use getStatus instead.
+   * @return The status of this poll, as a string.
+   */
   public String getStatusString() {
     return statusString;
   }
 
+  /**
+   * @deprecated Use setStatus instead.
+   * @param Set the status of this poll
+   */
   public void setStatusString(String s) {
     this.statusString = s;
+  }
+  
+  /**
+   * Return the status of this poll.
+   * 
+   * @return
+   */
+  public int getStatus() {
+    return status;
+  }
+  
+  /**
+   * Set the status of this poll.
+   * 
+   * @param s Current status
+   */
+  public void setStatus(int s) {
+    this.status = s;
   }
 
   public RepairQueue getRepairQueue() {

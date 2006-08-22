@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.28 2006-08-03 01:19:16 smorabito Exp $
+ * $Id: V3Poller.java,v 1.29 2006-08-22 20:33:07 smorabito Exp $
  */
 
 /*
@@ -61,25 +61,37 @@ import org.lockss.util.*;
 public class V3Poller extends BasePoll {
 
   // Status strings used by the peers.
-  public static final String PEER_STATUS_INITIALIZED = "Initialized";
-  public static final String PEER_STATUS_WAITING_POLL_ACK = "Invited";
-  public static final String PEER_STATUS_ACCEPTED_POLL = "Accepted Poll";
-  public static final String PEER_STATUS_NOMINATED = "Sent Nominees";
-  public static final String PEER_STATUS_WAITING_VOTE = "Waiting for Vote";
-  public static final String PEER_STATUS_VOTED = "Voted";
-  public static final String PEER_STATUS_COMPLETE = "Complete";
-  public static final String PEER_STATUS_ERROR = "Error";
-  public static final String PEER_STATUS_DROPPED_OUT = "Dropped Out";
+  public static final int PEER_STATUS_INITIALIZED = 0;
+  public static final int PEER_STATUS_WAITING_POLL_ACK = 1;
+  public static final int PEER_STATUS_ACCEPTED_POLL = 2;
+  public static final int PEER_STATUS_NOMINATED = 3;
+  public static final int PEER_STATUS_WAITING_VOTE = 4;
+  public static final int PEER_STATUS_VOTED = 5;
+  public static final int PEER_STATUS_COMPLETE = 6;
+  public static final int PEER_STATUS_ERROR = 7;
+  public static final int PEER_STATUS_DROPPED_OUT = 8;
   
-  public static final String POLLER_STATUS_STARTING = "Starting";
-  public static final String POLLER_STATUS_NO_TIME = "No Time Available";
-  public static final String POLLER_STATUS_RESUMING = "Resuming";
-  public static final String POLLER_STATUS_INVITING_PEERS = "Inviting Peers";
-  public static final String POLLER_STATUS_HASHING = "Hashing";
-  public static final String POLLER_STATUS_TALLYING = "Tallying";
-  public static final String POLLER_STATUS_COMPLETE = "Complete";
-  public static final String POLLER_STATUS_NO_QUORUM = "No Quorum";
-  public static final String POLLER_STATUS_ERROR = "Error";
+  public static final String[] PEER_STATUS_STRINGS =
+  {
+   "Initialized", "Invited", "Accepted Poll", "Sent Nominees",
+   "Waiting for Vote", "Voted", "Complete", "Error", "Dropped Out"
+  };
+  
+  public static final int POLLER_STATUS_STARTING = 0; 
+  public static final int POLLER_STATUS_NO_TIME = 1;
+  public static final int POLLER_STATUS_RESUMING = 2; 
+  public static final int POLLER_STATUS_INVITING_PEERS = 3; 
+  public static final int POLLER_STATUS_HASHING = 4;
+  public static final int POLLER_STATUS_TALLYING = 5;
+  public static final int POLLER_STATUS_COMPLETE = 6;
+  public static final int POLLER_STATUS_NO_QUORUM = 7;
+  public static final int POLLER_STATUS_ERROR = 8;
+  
+  public static final String[] POLLER_STATUS_STRINGS =
+  {
+   "Starting", "No Time Available", "Resuming", "Inviting Peers", "Hashing",
+   "Tallying", "Complete", "No Quorum", "Error"
+  };
 
   private static String PREFIX = Configuration.PREFIX + "poll.v3.";
 
@@ -112,16 +124,18 @@ public class V3Poller extends BasePoll {
   public static String PARAM_DELETE_EXTRA_FILES =
     PREFIX + "deleteExtraFiles";
   public static boolean DEFAULT_DELETE_EXTRA_FILES =
-    false;
+    true;
   
   /**
    * Directory in which to store message data.
    */
   public static String PARAM_V3_MESSAGE_DIR =
     PREFIX + "messageDir";
+  // Default is for production.  Override this for
+  // testing.
   public static String DEFAULT_V3_MESSAGE_DIR =
-    System.getProperty("java.io.tmpdir");
-  
+    "/cache/gamma/v3state";
+
   /**
    * Padding to add to the scheduled vote deadline, in ms.
    */
@@ -488,7 +502,7 @@ public class V3Poller extends BasePoll {
   /**
    * Stop the poll, and set the supplied status.
    */
-  public void stopPoll(final String status) {
+  public void stopPoll(final int status) {
     // Want this action to be serialized.
     pollManager.runTask(new PollRunner.Task("Stopping Poll", getKey()) {
       public void lockssRun() {
@@ -684,6 +698,7 @@ public class V3Poller extends BasePoll {
 
     int missingBlockVoters = 0;
     int digestIndex = 0;
+    int bytesHashed = 0;
 
     // By this time, only voted peers will exist in 'theParticipants'.
     // Everyone else will have been removed.
@@ -795,8 +810,6 @@ public class V3Poller extends BasePoll {
       tallyStatus.addAgreedUrl(url);
       // Great, we won!  Do nothing.
       log.debug3("Won tally for block: " + url + " in poll " + pollKey);
-      // If this is the result of a previous repair, mark it complete.
-//      if (markComplete) pollerState.getRepairQueue().markComplete(url);
       break;
     case BlockTally.RESULT_LOST:
       tallyStatus.addDisagreedUrl(url);
@@ -820,8 +833,6 @@ public class V3Poller extends BasePoll {
     case BlockTally.RESULT_NOQUORUM:
       tallyStatus.addNoQuorumUrl(url);
       log.warning("No Quorum for block " + url + " in poll " + getKey());
-      // If this is the result of a previous repair, mark it complete.
-//      if (markComplete) pollerState.getRepairQueue().markComplete(url);
       break;
     case BlockTally.RESULT_TOO_CLOSE:
     case BlockTally.RESULT_TOO_CLOSE_MISSING_BLOCK:
@@ -829,14 +840,10 @@ public class V3Poller extends BasePoll {
       tallyStatus.addTooCloseUrl(url);
       log.warning("Tally was inconclusive for block " + url + " in poll " +
                   getKey());
-      // If this is the result of a previous repair, mark it complete.
-//      if (markComplete) pollerState.getRepairQueue().markComplete(url);
       break;
     default:
       log.warning("Unexpected results from tallying block " + url + ": "
                   + tally.getStatusString());
-      // If this is the result of a previous repair, mark it complete.
-//  if (markComplete) pollerState.getRepairQueue().markComplete(url);
     }
 
     // Mark this repair complete if this is a re-check after a repair
@@ -1197,7 +1204,6 @@ public class V3Poller extends BasePoll {
     try {
       serializer.savePollerState(pollerState);
     } catch (PollSerializerException ex) {
-      // XXX: REMOVE
       log.warning("Unable to save poller state", ex);
     }
   }
@@ -1464,12 +1470,14 @@ public class V3Poller extends BasePoll {
   }
 
   public String getStatusString() {
-    return pollerState.getStatusString();
+    return V3Poller.POLLER_STATUS_STRINGS[pollerState.getStatus()];
   }
 
-  private void setStatus(String status) {
-    pollerState.setStatusString(status);
-    checkpointPoll();
+  private void setStatus(int status) {
+    if (pollerState.getStatus() != status) {
+      pollerState.setStatus(status);
+      checkpointPoll();
+    }
   }
   
   public long getVoteDeadline() {
