@@ -1,5 +1,5 @@
 /*
- * $Id: ShowTextProcessor.java,v 1.1 2006-08-23 19:14:06 thib_gc Exp $
+ * $Id: ShowTextProcessor.java,v 1.2 2006-08-23 22:23:44 thib_gc Exp $
  */
 
 /*
@@ -35,7 +35,7 @@ package org.lockss.filter.pdf;
 import java.io.IOException;
 import java.util.List;
 
-import org.lockss.util.PdfPageTransformUtil;
+import org.lockss.util.PdfUtil;
 import org.pdfbox.cos.COSString;
 import org.pdfbox.util.PDFOperator;
 
@@ -45,7 +45,7 @@ public abstract class ShowTextProcessor extends SimpleOperatorProcessor {
                       List arguments,
                       PdfPageStreamTransform pdfPageStreamTransform)
       throws IOException {
-    String candidate = PdfPageTransformUtil.getPdfString(arguments.get(0));
+    String candidate = PdfUtil.getPdfString(arguments.get(0));
     if (stringMatches(candidate)) {
       // Replace
       pdfPageStreamTransform.signalChange();

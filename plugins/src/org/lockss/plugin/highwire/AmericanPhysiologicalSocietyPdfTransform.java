@@ -1,5 +1,5 @@
 /*
- * $Id: AmericanPhysiologicalSocietyPdfTransform.java,v 1.4 2006-08-23 19:14:07 thib_gc Exp $
+ * $Id: AmericanPhysiologicalSocietyPdfTransform.java,v 1.5 2006-08-23 22:23:45 thib_gc Exp $
  */
 
 /*
@@ -36,14 +36,9 @@ import java.io.IOException;
 import java.util.*;
 
 import org.apache.commons.lang.StringUtils;
-import org.lockss.filter.*;
 import org.lockss.filter.pdf.*;
 import org.lockss.util.*;
-import org.lockss.util.PdfPageTransformUtil.*;
-import org.lockss.util.PdfTransformUtil.*;
 import org.pdfbox.cos.*;
-import org.pdfbox.encryption.PDFEncryption;
-import org.pdfbox.pdmodel.*;
 import org.pdfbox.util.PDFOperator;
 
 /**
@@ -107,16 +102,16 @@ public class AmericanPhysiologicalSocietyPdfTransform extends ConditionalPdfTran
 
     public static Properties getMatcherProperties() throws IOException {
       Properties properties = new Properties();
-      properties.setProperty(PdfPageTransformUtil.BEGIN_TEXT_OBJECT, SplitOperatorProcessor.class.getName());
-      properties.setProperty(PdfPageTransformUtil.END_TEXT_OBJECT, FirstPageEndTextObjectMatcher.class.getName());
+      properties.setProperty(PdfUtil.BEGIN_TEXT_OBJECT, SplitOperatorProcessor.class.getName());
+      properties.setProperty(PdfUtil.END_TEXT_OBJECT, FirstPageEndTextObjectMatcher.class.getName());
       return properties;
     }
 
     public static Properties getMutatorProperties() throws IOException {
       Properties properties = new Properties();
-      properties.setProperty(PdfPageTransformUtil.BEGIN_TEXT_OBJECT, SplitOperatorProcessor.class.getName());
-      properties.setProperty(PdfPageTransformUtil.END_TEXT_OBJECT, FirstPageEndTextObjectMutator.class.getName());
-      properties.setProperty(PdfPageTransformUtil.SHOW_TEXT, FirstPageShowTextProcessor.class.getName());
+      properties.setProperty(PdfUtil.BEGIN_TEXT_OBJECT, SplitOperatorProcessor.class.getName());
+      properties.setProperty(PdfUtil.END_TEXT_OBJECT, FirstPageEndTextObjectMutator.class.getName());
+      properties.setProperty(PdfUtil.SHOW_TEXT, FirstPageShowTextProcessor.class.getName());
       return properties;
     }
 
@@ -133,16 +128,16 @@ public class AmericanPhysiologicalSocietyPdfTransform extends ConditionalPdfTran
 
     public static boolean recognizeEndTextObject(Object[] pdfTokens) {
       boolean ret = pdfTokens.length == LENGTH
-      && PdfPageTransformUtil.isEndTextObjectOperator(pdfTokens[29])
-      && PdfPageTransformUtil.isBeginTextObjectOperator(pdfTokens[0])
-      && PdfPageTransformUtil.isPdfFloat(pdfTokens[9])
-      && PdfPageTransformUtil.isShowTextOperator(pdfTokens[12])
-      && PdfPageTransformUtil.isPdfString(pdfTokens[11])
-      && PdfPageTransformUtil.isShowTextOperator(pdfTokens[21])
-      && PdfPageTransformUtil.isPdfString(pdfTokens[20])
-      && PdfPageTransformUtil.isShowTextOperator(pdfTokens[28])
-      && PdfPageTransformUtil.isPdfString(pdfTokens[27])
-      && PdfPageTransformUtil.getPdfString(pdfTokens[27]).equals("Downloaded from ");
+      && PdfUtil.isEndTextObjectOperator(pdfTokens[29])
+      && PdfUtil.isBeginTextObjectOperator(pdfTokens[0])
+      && PdfUtil.isPdfFloat(pdfTokens[9])
+      && PdfUtil.isShowTextOperator(pdfTokens[12])
+      && PdfUtil.isPdfString(pdfTokens[11])
+      && PdfUtil.isShowTextOperator(pdfTokens[21])
+      && PdfUtil.isPdfString(pdfTokens[20])
+      && PdfUtil.isShowTextOperator(pdfTokens[28])
+      && PdfUtil.isPdfString(pdfTokens[27])
+      && PdfUtil.getPdfString(pdfTokens[27]).equals("Downloaded from ");
       logger.debug3("FirstPageShowTextProcessor candidate match: " + Boolean.toString(ret));
       return ret;
     }
@@ -185,7 +180,7 @@ public class AmericanPhysiologicalSocietyPdfTransform extends ConditionalPdfTran
 
     public static Properties getProperties() throws IOException {
       Properties properties = new Properties();
-      properties.setProperty(PdfPageTransformUtil.END_TEXT_OBJECT, OtherPagesEndTextObjectProcessor.class.getName());
+      properties.setProperty(PdfUtil.END_TEXT_OBJECT, OtherPagesEndTextObjectProcessor.class.getName());
       return properties;
     }
 
@@ -225,22 +220,22 @@ public class AmericanPhysiologicalSocietyPdfTransform extends ConditionalPdfTran
 
       public static boolean recognizeEndTextObject(Object[] pdfTokens) {
         boolean ret = pdfTokens.length == LENGTH
-        && PdfPageTransformUtil.isEndTextObjectOperator(pdfTokens[51])
-        && PdfPageTransformUtil.isBeginTextObjectOperator(pdfTokens[0])
-        && PdfPageTransformUtil.isPdfFloat(pdfTokens[9])
-        && PdfPageTransformUtil.isShowTextOperator(pdfTokens[12])
-        && PdfPageTransformUtil.isPdfString(pdfTokens[11])
-        && PdfPageTransformUtil.isEndTextObjectOperator(pdfTokens[17])
-        && PdfPageTransformUtil.isBeginTextObjectOperator(pdfTokens[20])
-        && PdfPageTransformUtil.isPdfFloat(pdfTokens[29])
-        && PdfPageTransformUtil.isShowTextOperator(pdfTokens[32])
-        && PdfPageTransformUtil.isPdfString(pdfTokens[31])
-        && PdfPageTransformUtil.isEndTextObjectOperator(pdfTokens[35])
-        && PdfPageTransformUtil.isBeginTextObjectOperator(pdfTokens[38])
-        && PdfPageTransformUtil.isPdfFloat(pdfTokens[47])
-        && PdfPageTransformUtil.isShowTextOperator(pdfTokens[50])
-        && PdfPageTransformUtil.isPdfString(pdfTokens[49])
-        && PdfPageTransformUtil.getPdfString(pdfTokens[49]).equals("Downloaded from ");
+        && PdfUtil.isEndTextObjectOperator(pdfTokens[51])
+        && PdfUtil.isBeginTextObjectOperator(pdfTokens[0])
+        && PdfUtil.isPdfFloat(pdfTokens[9])
+        && PdfUtil.isShowTextOperator(pdfTokens[12])
+        && PdfUtil.isPdfString(pdfTokens[11])
+        && PdfUtil.isEndTextObjectOperator(pdfTokens[17])
+        && PdfUtil.isBeginTextObjectOperator(pdfTokens[20])
+        && PdfUtil.isPdfFloat(pdfTokens[29])
+        && PdfUtil.isShowTextOperator(pdfTokens[32])
+        && PdfUtil.isPdfString(pdfTokens[31])
+        && PdfUtil.isEndTextObjectOperator(pdfTokens[35])
+        && PdfUtil.isBeginTextObjectOperator(pdfTokens[38])
+        && PdfUtil.isPdfFloat(pdfTokens[47])
+        && PdfUtil.isShowTextOperator(pdfTokens[50])
+        && PdfUtil.isPdfString(pdfTokens[49])
+        && PdfUtil.getPdfString(pdfTokens[49]).equals("Downloaded from ");
         logger.debug3("OtherPagesEndTextObjectProcessor candidate match: " + Boolean.toString(ret));
         return ret;
       }

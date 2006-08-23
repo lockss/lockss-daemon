@@ -1,5 +1,5 @@
 /*
- * $Id: PdfFilterReader.java,v 1.2 2006-08-23 19:14:07 thib_gc Exp $
+ * $Id: PdfFilterReader.java,v 1.3 2006-08-23 22:23:45 thib_gc Exp $
  */
 
 /*
@@ -86,7 +86,7 @@ public class PdfFilterReader extends FilterReader {
     /* Assumes synchronized */
     InputStream pdfInputStream = new ReaderInputStream(in);
     ByteArrayOutputStream pdfOutputStream = new ByteArrayOutputStream();
-    PdfTransformUtil.parse(pdfInputStream, pdfOutputStream, pdfTransform, logger);
+    PdfUtil.applyPdfTransform(pdfTransform, pdfInputStream, pdfOutputStream);
     in = new InputStreamReader(new ByteArrayInputStream(pdfOutputStream.toByteArray()));
   }
 
