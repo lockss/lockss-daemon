@@ -1,5 +1,5 @@
 /*
- * $Id$
+ * $Id: PdfTransform.java,v 1.1 2006-08-23 19:14:06 thib_gc Exp $
  */
 
 /*
@@ -30,33 +30,25 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.highwire;
+package org.lockss.filter.pdf;
 
-import java.io.*;
+import java.io.IOException;
 
-import org.lockss.filter.*;
-import org.lockss.filter.pdf.*;
-import org.lockss.plugin.FilterRule;
+import org.lockss.util.PdfDocument;
 
-public class HighWirePdfFilterRule implements FilterRule {
+/**
+ * <p>Specifies classes that are able to transform a PDF object graph
+ * via a {@link PdfDocument}.</p>
+ * @author Thib Guicherd-Callin
+ * @see PdfDocument
+ */
+public interface PdfTransform {
 
-  /*
-   * Do not use this class for now.
+  /**
+   * <p>Applies a transform to a PDF document.</p>
+   * @param pdfDocument A PDF document.
+   * @throws IOException if any processing error occurs.
    */
-
-  public Reader createFilteredReader(Reader reader) {
-    return null; //return new PdfFilterReader(reader, getInstance());
-  }
-
-  private static CompoundPdfTransform compoundTransform;
-
-  public static synchronized PdfTransform getInstance() throws IOException {
-    // This is a stub
-    if (compoundTransform == null) {
-      compoundTransform = new CompoundPdfTransform();
-      compoundTransform.addPdfTransform(AmericanPhysiologicalSocietyPdfTransform.makeTransform());
-    }
-    return compoundTransform;
-  }
+  void transform(PdfDocument pdfDocument) throws IOException;
 
 }

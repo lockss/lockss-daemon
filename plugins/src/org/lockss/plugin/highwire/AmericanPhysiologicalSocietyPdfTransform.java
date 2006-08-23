@@ -1,5 +1,5 @@
 /*
- * $Id: AmericanPhysiologicalSocietyPdfTransform.java,v 1.3 2006-08-23 16:53:48 thib_gc Exp $
+ * $Id: AmericanPhysiologicalSocietyPdfTransform.java,v 1.4 2006-08-23 19:14:07 thib_gc Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.util.*;
 
 import org.apache.commons.lang.StringUtils;
 import org.lockss.filter.*;
+import org.lockss.filter.pdf.*;
 import org.lockss.util.*;
 import org.lockss.util.PdfPageTransformUtil.*;
 import org.lockss.util.PdfTransformUtil.*;
@@ -54,7 +55,7 @@ import org.pdfbox.util.PDFOperator;
  * Society Journals Online</a>
  * @see HighWirePdfFilterRule
  */
-public class AmericanPhysiologicalSocietyPdfTransform extends PdfConditionalTransform {
+public class AmericanPhysiologicalSocietyPdfTransform extends ConditionalPdfTransform {
 
   protected static class FirstPage {
 
@@ -271,7 +272,7 @@ public class AmericanPhysiologicalSocietyPdfTransform extends PdfConditionalTran
   /**
    * <p>A singleton instance of this class' underlying transform.</p>
    */
-  private static PdfCompoundTransform underlyingTransform;
+  private static CompoundPdfTransform underlyingTransform;
 
 //  /* Inherit documentatiion */
 //  public boolean identify(PdfDocument pdfDocument) throws IOException {
@@ -290,11 +291,11 @@ public class AmericanPhysiologicalSocietyPdfTransform extends PdfConditionalTran
     return singleton;
   }
 
-  protected static synchronized PdfCompoundTransform makeUnderlyingTransform() throws IOException {
+  protected static synchronized CompoundPdfTransform makeUnderlyingTransform() throws IOException {
     if (underlyingTransform == null) {
-      underlyingTransform = new PdfCompoundTransform();
-      underlyingTransform.addPdfTransform(new PdfFirstPageTransform(PdfPageStreamTransform.makeTransform(FirstPage.getMutatorProperties())));
-      underlyingTransform.addPdfTransform(new PdfEachPageExceptFirstTransform(PdfPageStreamTransform.makeTransform(OtherPages.getProperties())));
+      underlyingTransform = new CompoundPdfTransform();
+      underlyingTransform.addPdfTransform(new TransformFirstPage(PdfPageStreamTransform.makeTransform(FirstPage.getMutatorProperties())));
+      underlyingTransform.addPdfTransform(new TransformEachPageExceptFirst(PdfPageStreamTransform.makeTransform(OtherPages.getProperties())));
 //      underlyingTransform.addPdfTransform(new PdfFirstPageTransform(new FirstPageTransform()));
 //      underlyingTransform.addPdfTransform(new PdfEachPageExceptFirstTransform(new OtherPagesTransform()));
 //      underlyingTransform.addPdfTransform(new PdfFirstPageTransform(PdfStringReplacePageTransform.makeTransformStartsWith("This information is current as of ",

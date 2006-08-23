@@ -1,5 +1,5 @@
 /*
- * $Id: PdfPageTransformUtil.java,v 1.3 2006-08-23 16:53:48 thib_gc Exp $
+ * $Id: PdfPageTransformUtil.java,v 1.4 2006-08-23 19:14:07 thib_gc Exp $
  */
 
 /*
@@ -37,14 +37,13 @@ import java.util.*;
 
 import org.apache.commons.collections.IteratorUtils;
 import org.apache.commons.collections.buffer.CircularFifoBuffer;
-import org.lockss.filter.PdfPageTransform;
+import org.lockss.filter.pdf.*;
 import org.pdfbox.cos.*;
 import org.pdfbox.pdfparser.PDFStreamParser;
 import org.pdfbox.pdfwriter.ContentStreamWriter;
 import org.pdfbox.pdmodel.PDPage;
 import org.pdfbox.pdmodel.common.PDStream;
 import org.pdfbox.util.*;
-import org.pdfbox.util.operator.OperatorProcessor;
 
 /**
  * <p>Utility classes and methods to deal with PDF page transforms.</p>
@@ -172,164 +171,6 @@ public class PdfPageTransformUtil {
                           PDPage pdfPage)
         throws IOException {
       runPdfTokenSequenceMutator(this, pdfDocument, pdfPage, stopAfterFirstMatch);
-    }
-
-  }
-
-  public static abstract class PdfOperatorProcessor extends OperatorProcessor {
-
-    public void process(PDFOperator operator,
-                        List arguments)
-        throws IOException {
-      process(operator, arguments, (PdfPageStreamTransform)getContext());
-    }
-
-    public abstract void process(PDFOperator operator,
-                                 List arguments,
-                                 PdfPageStreamTransform pdfPageStreamTransform)
-        throws IOException;
-
-  }
-
-  public static class PdfPageStreamTransform
-      extends PDFStreamEngine
-      implements PdfPageTransform {
-
-    protected Stack /* of ArrayList */ listStack;
-
-    public void splitOutputList() {
-      listStack.push(new ArrayList());
-    }
-
-    public void mergeOutputList() throws EmptyStackException {
-      List oldTop = (List)listStack.peek();
-      mergeOutputList(oldTop);
-    }
-
-    public void mergeOutputList(List replacement) throws EmptyStackException {
-      listStack.pop();
-      List newTop = (List)listStack.peek();
-      newTop.addAll(replacement);
-    }
-
-    protected PdfPageStreamTransform(Properties operatorProcessors) throws IOException {
-      super(operatorProcessors);
-      this.listStack = new Stack(); /* of List */
-    }
-
-    public List getOutputList() {
-      return (List)listStack.peek();
-    }
-
-    public void signalChange() {
-      atLeastOneChange = true;
-    }
-
-    protected boolean atLeastOneChange;
-
-    public void reset() {
-      atLeastOneChange = false;
-      listStack.clear();
-      splitOutputList();
-    }
-
-    public synchronized void transform(PdfDocument pdfDocument,
-                                       PDPage pdfPage)
-        throws IOException {
-      // Iterate over stream
-      reset();
-      processStream(pdfPage,
-                    pdfPage.findResources(),
-                    pdfPage.getContents().getStream());
-
-      // Sanity check
-      if (listStack.size() != 1) {
-        throw new PdfPageTransformException("Split/Merge mismatch: after processing stream, list stack has size " + listStack.size());
-      }
-
-      // Write result
-      writeResult(pdfDocument, pdfPage);
-    }
-
-    protected void writeResult(PdfDocument pdfDocument,
-                               PDPage pdfPage)
-        throws IOException {
-      if (atLeastOneChange) {
-        PDStream resultStream = new PDStream(pdfDocument.getPDDocument());
-        OutputStream outputStream = resultStream.createOutputStream();
-        ContentStreamWriter tokenWriter = new ContentStreamWriter(outputStream);
-        tokenWriter.writeTokens(getOutputList());
-        pdfPage.setContents(resultStream);
-      }
-    }
-
-    private static Properties defaultPropertiesSingleton;
-
-    protected static synchronized Properties getDefaultProperties() throws IOException {
-      if (defaultPropertiesSingleton == null) {
-        defaultPropertiesSingleton = getProperties("PdfPageStreamTransform.properties");
-      }
-      return defaultPropertiesSingleton;
-    }
-
-    public static PdfPageStreamTransform makeTransform(Properties customOperatorProcessors) throws IOException {
-      Properties properties = rewritePropertiesWithDefaults(customOperatorProcessors);
-      return new PdfPageStreamTransform(properties);
-    }
-
-    protected static Properties rewritePropertiesWithDefaults(Properties customOperatorProcessors) throws IOException {
-      Properties properties = new Properties();
-      properties.putAll(customOperatorProcessors);
-      Properties defaults = getDefaultProperties();
-      for (Enumeration enumer = defaults.propertyNames() ; enumer.hasMoreElements() ; ) {
-        String key = (String)enumer.nextElement();
-        if (properties.getProperty(key) == null) {
-          properties.setProperty(key, defaults.getProperty(key));
-        }
-      }
-      return properties;
-    }
-
-    public static PdfPageStreamTransform makeIdentityTransform() throws IOException {
-      return new PdfPageStreamTransform(getDefaultProperties());
-    }
-
-    public static boolean identifyPageStream(PdfDocument pdfDocument,
-                                             PDPage pdfPage,
-                                             Properties customOperatorProcessors)
-        throws IOException {
-
-      // Hack: interrupt stream processing with a runtime exception
-      class ReturnTrue extends RuntimeException { }
-
-      PdfPageStreamTransform matcher = new PdfPageStreamTransform(rewritePropertiesWithDefaults(customOperatorProcessors)) {
-        public void signalChange() {
-          logger.debug3("Match in signalChange()");
-          throw new ReturnTrue();
-        }
-        protected void writeResult(PdfDocument pdfDocument, PDPage pdfPage) throws IOException {
-          // Do not do anything
-        }
-      };
-
-      try {
-        matcher.transform(pdfDocument, pdfPage);
-      }
-      catch (ReturnTrue rt) {
-        logger.debug("Matched");
-        return true;
-      }
-      logger.debug("Did not match");
-      return false;
-    }
-
-    protected static Properties getProperties(String resource)
-        throws IOException {
-      Properties properties = new Properties();
-      Class cla = PdfPageStreamTransform.class;
-      InputStream inputStream = cla.getResourceAsStream(resource);
-      properties.load(inputStream);
-      return properties;
     }
 
   }
@@ -569,56 +410,6 @@ public class PdfPageTransformUtil {
      * @see PdfTokenSequenceMatcher#tokenSequenceSize
      */
     void processTokenSequence(Object[] pdfTokens) throws IOException;
-
-  }
-
-  public static abstract class ShowTextProcessor extends SimpleOperatorProcessor {
-
-    public void process(PDFOperator operator,
-                        List arguments,
-                        PdfPageStreamTransform pdfPageStreamTransform)
-        throws IOException {
-      String candidate = getPdfString(arguments.get(0));
-      if (stringMatches(candidate)) {
-        // Replace
-        pdfPageStreamTransform.signalChange();
-        List outputList = pdfPageStreamTransform.getOutputList();
-        outputList.add(new COSString(getReplacement(candidate)));
-        outputList.add(operator);
-      }
-      else {
-        // Pass through
-        super.process(operator, arguments, pdfPageStreamTransform);
-      }
-    }
-
-    public abstract boolean stringMatches(String candidate);
-
-    public abstract String getReplacement(String match);
-
-  }
-
-  public static class SimpleOperatorProcessor extends PdfOperatorProcessor {
-
-    public void process(PDFOperator operator,
-                        List arguments,
-                        PdfPageStreamTransform pdfPageStreamTransform)
-        throws IOException {
-      pdfPageStreamTransform.getOutputList().addAll(arguments);
-      pdfPageStreamTransform.getOutputList().add(operator);
-    }
-
-  }
-
-  public static class SplitOperatorProcessor extends SimpleOperatorProcessor {
-
-    public void process(PDFOperator operator,
-                        List arguments,
-                        PdfPageStreamTransform pdfPageStreamTransform)
-        throws IOException {
-      pdfPageStreamTransform.splitOutputList();
-      super.process(operator, arguments, pdfPageStreamTransform);
-    }
 
   }
 
@@ -877,28 +668,6 @@ public class PdfPageTransformUtil {
       tokenWriter.writeTokens(tokens);
       pdfPage.setContents(updatedStream);
     }
-  }
-
-  public static class PdfPageTransformException extends IOException {
-
-    public PdfPageTransformException() {
-      super();
-    }
-
-    public PdfPageTransformException(String message) {
-      super(message);
-    }
-
-    public PdfPageTransformException(Throwable cause) {
-      super();
-      initCause(cause);
-    }
-
-    public PdfPageTransformException(String message, Throwable cause) {
-      super(message);
-      initCause(cause);
-    }
-
   }
 
 }

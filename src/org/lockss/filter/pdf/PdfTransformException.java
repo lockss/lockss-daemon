@@ -1,5 +1,5 @@
 /*
- * $Id$
+ * $Id: PdfTransformException.java,v 1.1 2006-08-23 19:14:06 thib_gc Exp $
  */
 
 /*
@@ -30,33 +30,50 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.highwire;
+package org.lockss.filter.pdf;
 
-import java.io.*;
+import java.io.IOException;
 
-import org.lockss.filter.*;
-import org.lockss.filter.pdf.*;
-import org.lockss.plugin.FilterRule;
+/**
+ * <p>A properly-nestable {@link IOException} for exceptions raised
+ * by PDF page transforms.</p>
+ * @author Thib Guicherd-Callin
+ * @see PdfPageTransform#transform
+ */
+public class PdfTransformException extends IOException {
 
-public class HighWirePdfFilterRule implements FilterRule {
-
-  /*
-   * Do not use this class for now.
+  /**
+   * <p>Builds a new exception.</p>
    */
-
-  public Reader createFilteredReader(Reader reader) {
-    return null; //return new PdfFilterReader(reader, getInstance());
+  public PdfTransformException() {
+    super();
   }
 
-  private static CompoundPdfTransform compoundTransform;
+  /**
+   * <p>Builds a new exception using the given message.</p>
+   * @param message A detail message.
+   */
+  public PdfTransformException(String message) {
+    super(message);
+  }
 
-  public static synchronized PdfTransform getInstance() throws IOException {
-    // This is a stub
-    if (compoundTransform == null) {
-      compoundTransform = new CompoundPdfTransform();
-      compoundTransform.addPdfTransform(AmericanPhysiologicalSocietyPdfTransform.makeTransform());
-    }
-    return compoundTransform;
+  /**
+   * <p>Builds a new exception using the given message and cause.</p>
+   * @param message A detail message.
+   * @param cause   A {@link Throwable} cause.
+   */
+  public PdfTransformException(String message, Throwable cause) {
+    super(message);
+    initCause(cause);
+  }
+
+  /**
+   * <p>Builds a new exception using the given cause.</p>
+   * @param cause A {@link Throwable} cause.
+   */
+  public PdfTransformException(Throwable cause) {
+    super();
+    initCause(cause);
   }
 
 }

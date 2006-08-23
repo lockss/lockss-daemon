@@ -1,5 +1,5 @@
 /*
- * $Id: PdfTransformUtil.java,v 1.3 2006-08-21 15:48:55 thib_gc Exp $
+ * $Id: PdfTransformUtil.java,v 1.4 2006-08-23 19:14:07 thib_gc Exp $
  */
 
 /*
@@ -33,10 +33,9 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 
 import java.io.*;
-import java.util.Iterator;
 
 import org.lockss.filter.*;
-import org.pdfbox.pdmodel.PDPage;
+import org.lockss.filter.pdf.*;
 
 /**
  * <p>Utility classes and methods to deal with PDF transforms.</p>
@@ -44,139 +43,6 @@ import org.pdfbox.pdmodel.PDPage;
  * @see PdfTransform
  */
 public class PdfTransformUtil {
-
-  /**
-   * <p>A PDF transform decorator that applies a given PDF transform
-   * only if the PDF document to be transformed is identified by the
-   * {@link #identify} method.</p>
-   * @author Thib Guicherd-Callin
-   */
-  public static abstract class PdfConditionalTransform implements PdfTransform {
-
-    /**
-     * <p>The PDF transform to be applied conditionally.</p>
-     */
-    protected PdfTransform pdfTransform;
-
-    /**
-     * <p>Decorates the given PDF transform.</p>
-     * @param pdfTransform A PDF transform to be applied conditionally.
-     */
-    public PdfConditionalTransform(PdfTransform pdfTransform) {
-      this.pdfTransform = pdfTransform;
-    }
-
-    /**
-     * <p>Determines if the argument should be transformed by this
-     * transform.</p>
-     * @param pdfDocument A PDF document (from {@link #transform}).
-     * @return True if the underlying PDF transform should be applied,
-     *         false otherwise.
-     * @throws IOException if any processing error occurs.
-     */
-    public abstract boolean identify(PdfDocument pdfDocument) throws IOException;
-
-    /* Inherit documentation */
-    public void transform(PdfDocument pdfDocument) throws IOException {
-      if (identify(pdfDocument)) {
-        pdfTransform.transform(pdfDocument);
-      }
-    }
-
-  }
-
-  /**
-   * <p>A PDF transform that applies a PDF page transform to each page
-   * of the PDF document except the first page.</p>
-   * @author Thib Guicherd-Callin
-   */
-  public static class PdfEachPageExceptFirstTransform implements PdfTransform {
-
-    /**
-     * <p>A PDF page transform.</p>
-     */
-    protected PdfPageTransform pdfPageTransform;
-
-    /**
-     * <p>Builds a new PDF transform with the given PDF page
-     * transform.</p>
-     * @param pdfPageTransform A PDF page transform.
-     */
-    public PdfEachPageExceptFirstTransform(PdfPageTransform pdfPageTransform) {
-      this.pdfPageTransform = pdfPageTransform;
-    }
-
-    /* Inherit documentation */
-    public void transform(PdfDocument pdfDocument) throws IOException {
-      Iterator iter = pdfDocument.getPageIterator();
-      iter.next(); // skip first page
-      while (iter.hasNext()) {
-        pdfPageTransform.transform(pdfDocument,
-                                   (PDPage)iter.next());
-      }
-    }
-
-  }
-
-  /**
-   * <p>A PDF transform that applies a PDF page transform to each page
-   * of the PDF document.</p>
-   * @author Thib Guicherd-Callin
-   */
-  public static class PdfEachPageTransform implements PdfTransform {
-
-    /**
-     * <p>A PDF page transform.</p>
-     */
-    protected PdfPageTransform pdfPageTransform;
-
-    /**
-     * <p>Builds a new PDF transform with the given PDF page
-     * transform.</p>
-     * @param pdfPageTransform A PDF page transform.
-     */
-    public PdfEachPageTransform(PdfPageTransform pdfPageTransform) {
-      this.pdfPageTransform = pdfPageTransform;
-    }
-
-    /* Inherit documentation */
-    public void transform(PdfDocument pdfDocument) throws IOException {
-      for (Iterator iter = pdfDocument.getPageIterator() ; iter.hasNext() ; ) {
-        pdfPageTransform.transform(pdfDocument,
-                                   (PDPage)iter.next());
-      }
-    }
-
-  }
-
-  /**
-   * <p>A PDF transform that applies a PDF page transform to the
-   * first page of the PDF document.</p>
-   * @author Thib Guicherd-Callin
-   */
-  public static class PdfFirstPageTransform implements PdfTransform {
-
-    /**
-     * <p>A PDF page transform.</p>
-     */
-    protected PdfPageTransform pdfPageTransform;
-
-    /**
-     * <p>Builds a new PDF transform with the given PDF page
-     * transform.</p>
-     * @param pdfPageTransform A PDF page transform.
-     */
-    public PdfFirstPageTransform(PdfPageTransform pdfPageTransform) {
-      this.pdfPageTransform = pdfPageTransform;
-    }
-
-    /* Inherit documentation */
-    public void transform(PdfDocument pdfDocument) throws IOException {
-      pdfPageTransform.transform(pdfDocument,
-                                 (PDPage)pdfDocument.getPageIterator().next());
-    }
-
-  }
 
   /**
    * <p>A PDF transform that does nothing, for testing.</p>

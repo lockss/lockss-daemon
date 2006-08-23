@@ -1,5 +1,5 @@
 /*
- * $Id: PdfPageTransform.java,v 1.1 2006-07-31 23:54:48 thib_gc Exp $
+ * $Id: TransformEachPageExceptFirst.java,v 1.1 2006-08-23 19:14:07 thib_gc Exp $
  */
 
 /*
@@ -30,27 +30,36 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.filter;
+package org.lockss.filter.pdf;
 
 import java.io.IOException;
+import java.util.Iterator;
 
+import org.lockss.filter.pdf.*;
 import org.lockss.util.PdfDocument;
 import org.pdfbox.pdmodel.PDPage;
 
 /**
- * <p>Specifies classes that are able to transform a PDF page
- * via a {@link PDPage}.</p>
+ * <p>A PDF transform that applies a PDF page transform to each page
+ * of the PDF document except the first page.</p>
  * @author Thib Guicherd-Callin
- * @see PdfDocument
  */
-public interface PdfPageTransform {
+public class TransformEachPageExceptFirst extends TransformSelectedPages {
 
   /**
-   * <p>Applies a transform to a PDF page.</p>
-   * @param pdfDocument A parent PDF document.
-   * @param pdfPage     A PDF page (belonging to the PDF document).
-   * @throws IOException if any processing error occurs.
+   * <p>Builds a new PDF transform with the given PDF page
+   * transform.</p>
+   * @param pdfPageTransform A PDF page transform.
    */
-  void transform(PdfDocument pdfDocument, PDPage pdfPage) throws IOException;
+  public TransformEachPageExceptFirst(PdfPageTransform pdfPageTransform) {
+    super(pdfPageTransform);
+  }
+
+  /* Inherit documentation */
+  protected Iterator getSelectedPages(PdfDocument pdfDocument) throws IOException {
+    Iterator iter = pdfDocument.getPageIterator();
+    iter.next(); // skip first page
+    return iter;
+  }
 
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: PdfFilterReader.java,v 1.1 2006-07-25 00:15:38 thib_gc Exp $
+ * $Id: PdfFilterReader.java,v 1.2 2006-08-23 19:14:07 thib_gc Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.filter;
 
 import java.io.*;
 
+import org.lockss.filter.pdf.PdfTransform;
 import org.lockss.util.*;
 
 /**

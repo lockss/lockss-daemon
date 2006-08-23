@@ -1,5 +1,5 @@
 /*
- * $Id$
+ * $Id: ConditionalPdfTransform.java,v 1.1 2006-08-23 19:14:06 thib_gc Exp $
  */
 
 /*
@@ -30,33 +30,48 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.highwire;
+package org.lockss.filter.pdf;
 
-import java.io.*;
+import java.io.IOException;
 
-import org.lockss.filter.*;
-import org.lockss.filter.pdf.*;
-import org.lockss.plugin.FilterRule;
+import org.lockss.util.PdfDocument;
 
-public class HighWirePdfFilterRule implements FilterRule {
+/**
+ * <p>A PDF transform decorator that applies a given PDF transform
+ * only if the PDF document to be transformed is recognized by the
+ * {@link #identify} method.</p>
+ * @author Thib Guicherd-Callin
+ */
+public abstract class ConditionalPdfTransform implements PdfTransform {
 
-  /*
-   * Do not use this class for now.
+  /**
+   * <p>The PDF transform to be applied conditionally.</p>
    */
+  protected PdfTransform pdfTransform;
 
-  public Reader createFilteredReader(Reader reader) {
-    return null; //return new PdfFilterReader(reader, getInstance());
+  /**
+   * <p>Decorates the given PDF transform.</p>
+   * @param pdfTransform A PDF transform to be applied conditionally.
+   */
+  public ConditionalPdfTransform(PdfTransform pdfTransform) {
+    this.pdfTransform = pdfTransform;
   }
 
-  private static CompoundPdfTransform compoundTransform;
+  /**
+   * <p>Determines if the argument should be transformed by this
+   * transform.</p>
+   * @param pdfDocument A PDF document (from {@link #transform}).
+   * @return True if the underlying PDF transform should be applied,
+   *         false otherwise.
+   * @throws IOException if any processing error occurs.
+   */
+  public abstract boolean identify(PdfDocument pdfDocument) throws IOException;
 
-  public static synchronized PdfTransform getInstance() throws IOException {
-    // This is a stub
-    if (compoundTransform == null) {
-      compoundTransform = new CompoundPdfTransform();
-      compoundTransform.addPdfTransform(AmericanPhysiologicalSocietyPdfTransform.makeTransform());
+  /* Inherit documentation */
+  public void transform(PdfDocument pdfDocument) throws IOException {
+    if (identify(pdfDocument)) {
+      pdfTransform.transform(pdfDocument);
     }
-    return compoundTransform;
   }
 
 }

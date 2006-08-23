@@ -1,5 +1,5 @@
 /*
- * $Id$
+ * $Id: TransformEachPage.java,v 1.1 2006-08-23 19:14:06 thib_gc Exp $
  */
 
 /*
@@ -30,33 +30,34 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.highwire;
+package org.lockss.filter.pdf;
 
-import java.io.*;
+import java.io.IOException;
+import java.util.Iterator;
 
-import org.lockss.filter.*;
 import org.lockss.filter.pdf.*;
-import org.lockss.plugin.FilterRule;
+import org.lockss.util.PdfDocument;
+import org.pdfbox.pdmodel.PDPage;
 
-public class HighWirePdfFilterRule implements FilterRule {
+/**
+ * <p>A PDF transform that applies a PDF page transform to each page
+ * of the PDF document.</p>
+ * @author Thib Guicherd-Callin
+ */
+public class TransformEachPage extends TransformSelectedPages {
 
-  /*
-   * Do not use this class for now.
+  /**
+   * <p>Builds a new PDF transform with the given PDF page
+   * transform.</p>
+   * @param pdfPageTransform A PDF page transform.
    */
-
-  public Reader createFilteredReader(Reader reader) {
-    return null; //return new PdfFilterReader(reader, getInstance());
+  public TransformEachPage(PdfPageTransform pdfPageTransform) {
+    super(pdfPageTransform);
   }
 
-  private static CompoundPdfTransform compoundTransform;
-
-  public static synchronized PdfTransform getInstance() throws IOException {
-    // This is a stub
-    if (compoundTransform == null) {
-      compoundTransform = new CompoundPdfTransform();
-      compoundTransform.addPdfTransform(AmericanPhysiologicalSocietyPdfTransform.makeTransform());
-    }
-    return compoundTransform;
+  /* Inherit documentation */
+  protected Iterator getSelectedPages(PdfDocument pdfDocument) throws IOException {
+    return pdfDocument.getPageIterator();
   }
 
 }

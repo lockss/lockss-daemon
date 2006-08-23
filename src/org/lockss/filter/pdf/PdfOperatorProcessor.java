@@ -1,5 +1,5 @@
 /*
- * $Id$
+ * $Id: PdfOperatorProcessor.java,v 1.1 2006-08-23 19:14:06 thib_gc Exp $
  */
 
 /*
@@ -30,33 +30,25 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.highwire;
+package org.lockss.filter.pdf;
 
-import java.io.*;
+import java.io.IOException;
+import java.util.List;
 
-import org.lockss.filter.*;
-import org.lockss.filter.pdf.*;
-import org.lockss.plugin.FilterRule;
+import org.pdfbox.util.PDFOperator;
+import org.pdfbox.util.operator.OperatorProcessor;
 
-public class HighWirePdfFilterRule implements FilterRule {
+public abstract class PdfOperatorProcessor extends OperatorProcessor {
 
-  /*
-   * Do not use this class for now.
-   */
-
-  public Reader createFilteredReader(Reader reader) {
-    return null; //return new PdfFilterReader(reader, getInstance());
+  public void process(PDFOperator operator,
+                      List arguments)
+      throws IOException {
+    process(operator, arguments, (PdfPageStreamTransform)getContext());
   }
 
-  private static CompoundPdfTransform compoundTransform;
-
-  public static synchronized PdfTransform getInstance() throws IOException {
-    // This is a stub
-    if (compoundTransform == null) {
-      compoundTransform = new CompoundPdfTransform();
-      compoundTransform.addPdfTransform(AmericanPhysiologicalSocietyPdfTransform.makeTransform());
-    }
-    return compoundTransform;
-  }
+  public abstract void process(PDFOperator operator,
+                               List arguments,
+                               PdfPageStreamTransform pdfPageStreamTransform)
+      throws IOException;
 
 }

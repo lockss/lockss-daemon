@@ -1,5 +1,5 @@
 /*
- * $Id$
+ * $Id: ShowTextProcessor.java,v 1.1 2006-08-23 19:14:06 thib_gc Exp $
  */
 
 /*
@@ -30,33 +30,37 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.highwire;
+package org.lockss.filter.pdf;
 
-import java.io.*;
+import java.io.IOException;
+import java.util.List;
 
-import org.lockss.filter.*;
-import org.lockss.filter.pdf.*;
-import org.lockss.plugin.FilterRule;
+import org.lockss.util.PdfPageTransformUtil;
+import org.pdfbox.cos.COSString;
+import org.pdfbox.util.PDFOperator;
 
-public class HighWirePdfFilterRule implements FilterRule {
+public abstract class ShowTextProcessor extends SimpleOperatorProcessor {
 
-  /*
-   * Do not use this class for now.
-   */
-
-  public Reader createFilteredReader(Reader reader) {
-    return null; //return new PdfFilterReader(reader, getInstance());
-  }
-
-  private static CompoundPdfTransform compoundTransform;
-
-  public static synchronized PdfTransform getInstance() throws IOException {
-    // This is a stub
-    if (compoundTransform == null) {
-      compoundTransform = new CompoundPdfTransform();
-      compoundTransform.addPdfTransform(AmericanPhysiologicalSocietyPdfTransform.makeTransform());
+  public void process(PDFOperator operator,
+                      List arguments,
+                      PdfPageStreamTransform pdfPageStreamTransform)
+      throws IOException {
+    String candidate = PdfPageTransformUtil.getPdfString(arguments.get(0));
+    if (stringMatches(candidate)) {
+      // Replace
+      pdfPageStreamTransform.signalChange();
+      List outputList = pdfPageStreamTransform.getOutputList();
+      outputList.add(new COSString(getReplacement(candidate)));
+      outputList.add(operator);
     }
-    return compoundTransform;
+    else {
+      // Pass through
+      super.process(operator, arguments, pdfPageStreamTransform);
+    }
   }
+
+  public abstract boolean stringMatches(String candidate);
+
+  public abstract String getReplacement(String match);
 
 }

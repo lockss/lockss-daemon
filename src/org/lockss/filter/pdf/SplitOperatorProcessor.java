@@ -1,5 +1,5 @@
 /*
- * $Id: PdfTransform.java,v 1.3 2006-07-31 23:54:48 thib_gc Exp $
+ * $Id: SplitOperatorProcessor.java,v 1.1 2006-08-23 19:14:07 thib_gc Exp $
  */
 
 /*
@@ -30,25 +30,21 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.filter;
+package org.lockss.filter.pdf;
 
 import java.io.IOException;
+import java.util.List;
 
-import org.lockss.util.PdfDocument;
+import org.pdfbox.util.PDFOperator;
 
-/**
- * <p>Specifies classes that are able to transform a PDF object graph
- * via a {@link PdfDocument}.</p>
- * @author Thib Guicherd-Callin
- * @see PdfDocument
- */
-public interface PdfTransform {
+public class SplitOperatorProcessor extends SimpleOperatorProcessor {
 
-  /**
-   * <p>Applies a transform to a PDF document.</p>
-   * @param pdfDocument A PDF document.
-   * @throws IOException if any processing error occurs.
-   */
-  void transform(PdfDocument pdfDocument) throws IOException;
+  public void process(PDFOperator operator,
+                      List arguments,
+                      PdfPageStreamTransform pdfPageStreamTransform)
+      throws IOException {
+    pdfPageStreamTransform.splitOutputList();
+    super.process(operator, arguments, pdfPageStreamTransform);
+  }
 
 }
