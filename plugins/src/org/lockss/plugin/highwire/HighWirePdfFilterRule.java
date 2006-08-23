@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.highwire;
 
-import java.io.Reader;
+import java.io.*;
 
 import org.lockss.filter.*;
 import org.lockss.plugin.FilterRule;
@@ -44,18 +44,18 @@ public class HighWirePdfFilterRule implements FilterRule {
    */
 
   public Reader createFilteredReader(Reader reader) {
-    return new PdfFilterReader(reader, getTransform());
+    return null; //return new PdfFilterReader(reader, getInstance());
   }
 
-  private static PdfCompoundTransform multiTransform;
+  private static PdfCompoundTransform compoundTransform;
 
-  public static synchronized PdfTransform getTransform() {
+  public static synchronized PdfTransform getInstance() throws IOException {
     // This is a stub
-    if (multiTransform == null) {
-      multiTransform = new PdfCompoundTransform();
-      multiTransform.addPdfTransform(AmericanPhysiologicalSocietyPdfTransform.makeTransform());
+    if (compoundTransform == null) {
+      compoundTransform = new PdfCompoundTransform();
+      compoundTransform.addPdfTransform(AmericanPhysiologicalSocietyPdfTransform.makeTransform());
     }
-    return multiTransform;
+    return compoundTransform;
   }
 
 }
