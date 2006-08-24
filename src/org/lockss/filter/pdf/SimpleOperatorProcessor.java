@@ -1,5 +1,5 @@
 /*
- * $Id: SimpleOperatorProcessor.java,v 1.1 2006-08-23 19:14:06 thib_gc Exp $
+ * $Id: SimpleOperatorProcessor.java,v 1.2 2006-08-24 01:19:34 thib_gc Exp $
  */
 
 /*
@@ -36,9 +36,21 @@ import java.io.IOException;
 import java.util.List;
 
 import org.pdfbox.util.PDFOperator;
+import org.pdfbox.util.operator.OperatorProcessor;
 
+/**
+ * <p>A PDF operator processor that simply passes its operands and
+ * operator through to the PDF page stream transform's output list
+ * unconditionally.</p>
+ * <p>{@link SimpleOperatorProcessor} instances, like
+ * {@link OperatorProcessor} instances, are only instantiated once
+ * per instantiation of a {@link PdfPageStreamTransform}, and should
+ * have a no-argument constructor.</p>
+ * @author Thib Guicherd-Callin
+ */
 public class SimpleOperatorProcessor extends PdfOperatorProcessor {
 
+  /* Inherit documentation */
   public void process(PDFOperator operator,
                       List arguments,
                       PdfPageStreamTransform pdfPageStreamTransform)

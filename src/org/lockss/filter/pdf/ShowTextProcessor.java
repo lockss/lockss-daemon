@@ -1,5 +1,5 @@
 /*
- * $Id: ShowTextProcessor.java,v 1.2 2006-08-23 22:23:44 thib_gc Exp $
+ * $Id: ShowTextProcessor.java,v 1.3 2006-08-24 01:19:34 thib_gc Exp $
  */
 
 /*
@@ -38,29 +38,60 @@ import java.util.List;
 import org.lockss.util.PdfUtil;
 import org.pdfbox.cos.COSString;
 import org.pdfbox.util.PDFOperator;
+import org.pdfbox.util.operator.OperatorProcessor;
 
+/**
+ * <p>A PDF operator processor that deals with the "show text" PDF
+ * operator (<code>Tj</code>), replacing the operand string by
+ * another conditionally.</p>
+ * <p>{@link ShowTextProcessor} instances, like
+ * {@link OperatorProcessor} instances, are only instantiated once
+ * per instantiation of a {@link PdfPageStreamTransform}, and should
+ * have a no-argument constructor.</p>
+ * @author Thib Guicherd-Callin
+ * @see PdfUtil#SHOW_TEXT
+ */
 public abstract class ShowTextProcessor extends SimpleOperatorProcessor {
 
+  /**
+   * <p>Determines if an operand string is to be replaced.</p>
+   * @param candidate A candidate string (operand of the "show text"
+   *                  operator).
+   * @return True if the candidate string matches the pattern this
+   *         operator processor is looking for and should be replaced
+   *         by {@link #getReplacement}, false otherwise.
+   * @see #getReplacement
+   */
+  public abstract boolean candidateMatches(String candidate);
+
+  /**
+   * <p>Computes a replacement for a matched operand string.</p>
+   * <p>Preconditions:</p>
+   * <ul>
+   *  <li><code>candidateMatches(match)</code></li>
+   * </ul>
+   * @param match The operand string that was matched.
+   * @return A replacement for the matched string.
+   */
+  public abstract String getReplacement(String match);
+
+  /* Inherit documentation */
   public void process(PDFOperator operator,
                       List arguments,
                       PdfPageStreamTransform pdfPageStreamTransform)
       throws IOException {
     String candidate = PdfUtil.getPdfString(arguments.get(0));
-    if (stringMatches(candidate)) {
-      // Replace
+    if (candidateMatches(candidate)) {
+      // String matches: replace it
       pdfPageStreamTransform.signalChange();
       List outputList = pdfPageStreamTransform.getOutputList();
       outputList.add(new COSString(getReplacement(candidate)));
       outputList.add(operator);
     }
     else {
-      // Pass through
+      // String does not match: pass it through
       super.process(operator, arguments, pdfPageStreamTransform);
     }
   }
-
-  public abstract boolean stringMatches(String candidate);
-
-  public abstract String getReplacement(String match);
 
 }

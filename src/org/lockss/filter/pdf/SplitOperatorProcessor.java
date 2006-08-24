@@ -1,5 +1,5 @@
 /*
- * $Id: SplitOperatorProcessor.java,v 1.1 2006-08-23 19:14:07 thib_gc Exp $
+ * $Id: SplitOperatorProcessor.java,v 1.2 2006-08-24 01:19:34 thib_gc Exp $
  */
 
 /*
@@ -37,8 +37,30 @@ import java.util.List;
 
 import org.pdfbox.util.PDFOperator;
 
+/**
+ * <p>A PDF operator processor that unconditionally splits the output
+ * list of the PDF page stream transform being applied, then simply
+ * passes its operands and operator into the output sublist
+ * unconditionally.</p>
+ * <p>This operator processor is to be associated with operators,
+ * typically no-operand operators such as "begin text object"
+ * (<code>BT</code>), that start sublists and accumulate content up
+ * until some end condition, typically an end marker such as "end
+ * text object" (<code>ET</code>). The matching end condition will
+ * then need to merge the output sublist, or split/merge mismatches will
+ * occur.</p>
+ * <p>For example, this operator processor could be associated with
+ * "begin text object", and the operator processor for "end text
+ * object" could merge with or without replacement based on a
+ * condition derived from the contents of the output sublist.</p>
+ * @author Thib Guicherd-Callin
+ * @see PdfPageStreamTransform#splitOutputList
+ * @see PdfPageStreamTransform#mergeOutputList()
+ * @see PdfPageStreamTransform#mergeOutputList(List)
+ */
 public class SplitOperatorProcessor extends SimpleOperatorProcessor {
 
+  /* Inherit documentation */
   public void process(PDFOperator operator,
                       List arguments,
                       PdfPageStreamTransform pdfPageStreamTransform)

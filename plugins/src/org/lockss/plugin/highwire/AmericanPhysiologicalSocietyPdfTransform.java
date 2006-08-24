@@ -1,5 +1,5 @@
 /*
- * $Id: AmericanPhysiologicalSocietyPdfTransform.java,v 1.5 2006-08-23 22:23:45 thib_gc Exp $
+ * $Id: AmericanPhysiologicalSocietyPdfTransform.java,v 1.6 2006-08-24 01:19:34 thib_gc Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import org.lockss.util.*;
 import org.pdfbox.cos.*;
 import org.pdfbox.util.PDFOperator;
 
+// The following Javadoc comment needs rewriting
 /**
  * <p>This PDF transform identifies and processes PDF documents that
  * match a template found in certain titles published by the
@@ -53,17 +54,6 @@ import org.pdfbox.util.PDFOperator;
 public class AmericanPhysiologicalSocietyPdfTransform extends ConditionalPdfTransform {
 
   protected static class FirstPage {
-
-    protected static final int LENGTH = 30;
-
-    public static class FirstPageShowTextProcessor extends ShowTextProcessor {
-      public String getReplacement(String match) {
-        return " ";
-      }
-      public boolean stringMatches(String candidate) {
-        return candidate.startsWith("This information is current as of ");
-      }
-    }
 
     public static class FirstPageEndTextObjectMatcher extends SimpleOperatorProcessor {
       public void process(PDFOperator operator,
@@ -99,6 +89,18 @@ public class AmericanPhysiologicalSocietyPdfTransform extends ConditionalPdfTran
         }
       }
     }
+
+    public static class FirstPageShowTextProcessor extends ShowTextProcessor {
+      public boolean candidateMatches(String candidate) {
+        return candidate.startsWith(BEGINNING);
+      }
+      public String getReplacement(String match) {
+        return BEGINNING;
+      }
+      protected static final String BEGINNING = "This information is current as of ";
+    }
+
+    protected static final int LENGTH = 30;
 
     public static Properties getMatcherProperties() throws IOException {
       Properties properties = new Properties();
@@ -149,12 +151,6 @@ public class AmericanPhysiologicalSocietyPdfTransform extends ConditionalPdfTran
     public void transform(PdfDocument pdfDocument) throws IOException {
       pdfDocument.removeModificationDate();
 
-      final String BEGIN_MODIFY_DATE = "<xap:ModifyDate>";
-      final String END_MODIFY_DATE = "</xap:ModifyDate>";
-      final String BEGIN_DOCUMENT_ID = "<xapMM:DocumentID>";
-      final String END_DOCUMENT_ID = "</xapMM:DocumentID>";
-      final String BEGIN_INSTANCE_ID = "<xapMM:InstanceID>";
-      final String END_INSTANCE_ID = "</xapMM:InstanceID>";
       int begin = 0;
       int end = 0;
       String metadata = pdfDocument.getMetadataAsString();
@@ -174,51 +170,25 @@ public class AmericanPhysiologicalSocietyPdfTransform extends ConditionalPdfTran
       pdfDocument.setMetadata(metadata);
     }
 
+    protected static final String BEGIN_DOCUMENT_ID = "<xapMM:DocumentID>";
+
+    protected static final String BEGIN_INSTANCE_ID = "<xapMM:InstanceID>";
+
+    protected static final String BEGIN_MODIFY_DATE = "<xap:ModifyDate>";
+
+    protected static final String END_DOCUMENT_ID = "</xapMM:DocumentID>";
+
+    protected static final String END_INSTANCE_ID = "</xapMM:InstanceID>";
+
+    protected static final String END_MODIFY_DATE = "</xap:ModifyDate>";
+
   }
 
   protected static class OtherPages {
 
-    public static Properties getProperties() throws IOException {
-      Properties properties = new Properties();
-      properties.setProperty(PdfUtil.END_TEXT_OBJECT, OtherPagesEndTextObjectProcessor.class.getName());
-      return properties;
-    }
+    public static class OtherPagesEndTextObjectProcessor extends SubsequenceOperatorProcessor {
 
-    public static class OtherPagesEndTextObjectProcessor extends SimpleOperatorProcessor {
-
-      protected static final int LENGTH = 52;
-
-      public void process(PDFOperator operator,
-                          List arguments,
-                          PdfPageStreamTransform pdfPageStreamTransform)
-          throws IOException {
-        super.process(operator, arguments, pdfPageStreamTransform);
-        List outputList = pdfPageStreamTransform.getOutputList();
-        int size = outputList.size();
-        Object[] pdfTokens = (size >= LENGTH ? outputList.subList(size - LENGTH, size) : outputList).toArray();
-        if (recognizeEndTextObject(pdfTokens)) {
-          pdfPageStreamTransform.signalChange();
-          List replacement = new ArrayList();
-          modifyEndTextObject(pdfTokens, replacement);
-          outputList.subList(size - LENGTH, size).clear();
-          outputList.addAll(replacement);
-        }
-      }
-
-      public static void modifyEndTextObject(Object[] pdfTokens,
-                                             List outputList) {
-        for (int tok = 0 ; tok < LENGTH ; ++tok) {
-          switch (tok) {
-            case 9:  outputList.add(new COSFloat(300.0f)); break;
-            case 11: outputList.add(new COSString(" ")); break;
-            case 29: outputList.add(new COSFloat(525.0f)); break;
-            case 47: outputList.add(new COSFloat(600.0f)); break;
-            default: outputList.add(pdfTokens[tok]); break;
-          }
-        }
-      }
-
-      public static boolean recognizeEndTextObject(Object[] pdfTokens) {
+      public boolean identify(Object[] pdfTokens) {
         boolean ret = pdfTokens.length == LENGTH
         && PdfUtil.isEndTextObjectOperator(pdfTokens[51])
         && PdfUtil.isBeginTextObjectOperator(pdfTokens[0])
@@ -240,6 +210,30 @@ public class AmericanPhysiologicalSocietyPdfTransform extends ConditionalPdfTran
         return ret;
       }
 
+      public void modify(Object[] pdfTokens, List outputList) {
+        for (int tok = 0 ; tok < LENGTH ; ++tok) {
+          switch (tok) {
+            case 9:  outputList.add(new COSFloat(300.0f)); break;
+            case 11: outputList.add(new COSString(" ")); break;
+            case 29: outputList.add(new COSFloat(525.0f)); break;
+            case 47: outputList.add(new COSFloat(600.0f)); break;
+            default: outputList.add(pdfTokens[tok]); break;
+          }
+        }
+      }
+
+      public int subsequenceLength() {
+        return LENGTH;
+      }
+
+      protected static final int LENGTH = 52;
+
+    }
+
+    public static Properties getProperties() throws IOException {
+      Properties properties = new Properties();
+      properties.setProperty(PdfUtil.END_TEXT_OBJECT, OtherPagesEndTextObjectProcessor.class.getName());
+      return properties;
     }
 
   }

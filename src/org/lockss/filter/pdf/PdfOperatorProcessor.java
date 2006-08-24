@@ -1,5 +1,5 @@
 /*
- * $Id: PdfOperatorProcessor.java,v 1.1 2006-08-23 19:14:06 thib_gc Exp $
+ * $Id: PdfOperatorProcessor.java,v 1.2 2006-08-24 01:19:34 thib_gc Exp $
  */
 
 /*
@@ -38,14 +38,35 @@ import java.util.List;
 import org.pdfbox.util.PDFOperator;
 import org.pdfbox.util.operator.OperatorProcessor;
 
+/**
+ * <p>A PDF operator processor that is specialized to work in the
+ * context of a PDF page stream transform.</p>
+ * <p>{@link PdfOperatorProcessor} instances, like
+ * {@link OperatorProcessor} instances, are only instantiated once
+ * per instantiation of a {@link PdfPageStreamTransform}, and should
+ * have a no-argument constructor.</p>
+ * @author Thib Guicherd-Callin
+ * @see PdfPageStreamTransform
+ */
 public abstract class PdfOperatorProcessor extends OperatorProcessor {
 
+  /* Inherit documentation */
   public void process(PDFOperator operator,
                       List arguments)
       throws IOException {
     process(operator, arguments, (PdfPageStreamTransform)getContext());
   }
 
+  /**
+   * <p>Processes the operation (operator and operands) in the context
+   * of the given PDF page stream transform.</p>
+   * @param operator               A PDF operator being processed.
+   * @param arguments              The operands that the operator
+   *                               applies to.
+   * @param pdfPageStreamTransform The PDF page stream transform being
+   *                               applied.
+   * @throws IOException if any processing error occurs.
+   */
   public abstract void process(PDFOperator operator,
                                List arguments,
                                PdfPageStreamTransform pdfPageStreamTransform)
