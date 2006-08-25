@@ -1,5 +1,5 @@
 /*
- * $Id: PdfTools.java,v 1.2 2006-08-25 23:57:10 thib_gc Exp $
+ * $Id: PdfTools.java,v 1.3 2006-08-25 23:57:51 thib_gc Exp $
  */
 
 /*
@@ -115,8 +115,8 @@ public class PdfTools {
   protected static final String USAGE =
     "Usage:\n" +
     "\n" +
-    "-h -help --help  Displays this message\n" +
-    "-usage --usage   Displays this message\n" +
+    "-h -help --help     Displays this message\n" +
+    "-usage --usage      Displays this message\n" +
     "\n" +
 //    "-dumpannotations Dumps the annotations on each page\n" +
     "-dumppagedictionary Dumps the dictionary of each page\n" +
