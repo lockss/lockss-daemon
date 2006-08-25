@@ -54,7 +54,7 @@ public class HighWirePdfFilterRule implements FilterRule {
     // This is a stub
     if (compoundTransform == null) {
       compoundTransform = new CompoundPdfTransform();
-      compoundTransform.addPdfTransform(AmericanPhysiologicalSocietyPdfTransform.makeTransform());
+      compoundTransform.add(AmericanPhysiologicalSocietyPdfTransform.makeTransform());
     }
     return compoundTransform;
   }

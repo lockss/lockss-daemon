@@ -1,5 +1,5 @@
 /*
- * $Id: CompoundPdfTransform.java,v 1.1 2006-08-23 19:14:06 thib_gc Exp $
+ * $Id: CompoundPdfTransform.java,v 1.2 2006-08-25 23:19:40 thib_gc Exp $
  */
 
 /*
@@ -86,7 +86,7 @@ public class CompoundPdfTransform implements PdfTransform {
     this.pdfTransforms = new ArrayList();
     if (pdfTransforms != null) {
       for (int transform = 0 ; transform < pdfTransforms.length ; ++transform) {
-        addPdfTransform(pdfTransforms[transform]);
+        add(pdfTransforms[transform]);
       }
     }
   }
@@ -99,7 +99,7 @@ public class CompoundPdfTransform implements PdfTransform {
    * were registered with this method.</p>
    * @param pdfTransform A {@link PdfTransform} instance.
    */
-  public synchronized void addPdfTransform(PdfTransform pdfTransform) {
+  public synchronized void add(PdfTransform pdfTransform) {
     pdfTransforms.add(pdfTransform);
   }
 

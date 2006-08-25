@@ -1,5 +1,5 @@
 /*
- * $Id: AmericanPhysiologicalSocietyPdfTransform.java,v 1.6 2006-08-24 01:19:34 thib_gc Exp $
+ * $Id: AmericanPhysiologicalSocietyPdfTransform.java,v 1.7 2006-08-25 23:19:40 thib_gc Exp $
  */
 
 /*
@@ -35,10 +35,13 @@ package org.lockss.plugin.highwire;
 import java.io.IOException;
 import java.util.*;
 
+import javax.swing.JOptionPane;
+
 import org.apache.commons.lang.StringUtils;
 import org.lockss.filter.pdf.*;
 import org.lockss.util.*;
 import org.pdfbox.cos.*;
+import org.pdfbox.pdmodel.PDPage;
 import org.pdfbox.util.PDFOperator;
 
 // The following Javadoc comment needs rewriting
@@ -55,23 +58,16 @@ public class AmericanPhysiologicalSocietyPdfTransform extends ConditionalPdfTran
 
   protected static class FirstPage {
 
-    public static class FirstPageEndTextObjectMatcher extends SimpleOperatorProcessor {
-      public void process(PDFOperator operator,
-                          List arguments,
-                          PdfPageStreamTransform pdfPageStreamTransform)
-          throws IOException {
-        super.process(operator, arguments, pdfPageStreamTransform);
-        Object[] pdfTokens = pdfPageStreamTransform.getOutputList().toArray();
-        if (recognizeEndTextObject(pdfTokens)) {
-          pdfPageStreamTransform.signalChange();
-        }
-        else {
-          pdfPageStreamTransform.mergeOutputList();
-        }
+    public static class FixHyperlink implements PdfPageTransform {
+      public void transform(PdfDocument pdfDocument, PDPage pdfPage) throws IOException {
+        int s = ((COSArray)pdfPage.getCOSDictionary().getDictionaryObject(COSName.ANNOTS)).size();
+        COSArray array = (COSArray)pdfPage.getCOSDictionary().getObjectFromPath("Annots/[" + (s-1) + "]/Rect");
+        array.set(1, new COSFloat(300.0f));
+        array.set(3, new COSFloat(525.0f));
       }
     }
 
-    public static class FirstPageEndTextObjectMutator extends SimpleOperatorProcessor {
+    public static class ModifyEndTextObject extends SimpleOperatorProcessor {
       public void process(PDFOperator operator,
                           List arguments,
                           PdfPageStreamTransform pdfPageStreamTransform)
@@ -90,7 +86,23 @@ public class AmericanPhysiologicalSocietyPdfTransform extends ConditionalPdfTran
       }
     }
 
-    public static class FirstPageShowTextProcessor extends ShowTextProcessor {
+    public static class RecognizeEndTextObject extends SimpleOperatorProcessor {
+      public void process(PDFOperator operator,
+                          List arguments,
+                          PdfPageStreamTransform pdfPageStreamTransform)
+          throws IOException {
+        super.process(operator, arguments, pdfPageStreamTransform);
+        Object[] pdfTokens = pdfPageStreamTransform.getOutputList().toArray();
+        if (recognizeEndTextObject(pdfTokens)) {
+          pdfPageStreamTransform.signalChange();
+        }
+        else {
+          pdfPageStreamTransform.mergeOutputList();
+        }
+      }
+    }
+
+    public static class ReplaceString extends ShowTextProcessor {
       public boolean candidateMatches(String candidate) {
         return candidate.startsWith(BEGINNING);
       }
@@ -105,15 +117,15 @@ public class AmericanPhysiologicalSocietyPdfTransform extends ConditionalPdfTran
     public static Properties getMatcherProperties() throws IOException {
       Properties properties = new Properties();
       properties.setProperty(PdfUtil.BEGIN_TEXT_OBJECT, SplitOperatorProcessor.class.getName());
-      properties.setProperty(PdfUtil.END_TEXT_OBJECT, FirstPageEndTextObjectMatcher.class.getName());
+      properties.setProperty(PdfUtil.END_TEXT_OBJECT, RecognizeEndTextObject.class.getName());
       return properties;
     }
 
     public static Properties getMutatorProperties() throws IOException {
       Properties properties = new Properties();
       properties.setProperty(PdfUtil.BEGIN_TEXT_OBJECT, SplitOperatorProcessor.class.getName());
-      properties.setProperty(PdfUtil.END_TEXT_OBJECT, FirstPageEndTextObjectMutator.class.getName());
-      properties.setProperty(PdfUtil.SHOW_TEXT, FirstPageShowTextProcessor.class.getName());
+      properties.setProperty(PdfUtil.END_TEXT_OBJECT, ModifyEndTextObject.class.getName());
+      properties.setProperty(PdfUtil.SHOW_TEXT, ReplaceString.class.getName());
       return properties;
     }
 
@@ -146,47 +158,9 @@ public class AmericanPhysiologicalSocietyPdfTransform extends ConditionalPdfTran
 
   }
 
-  protected static class MetadataTransform implements PdfTransform {
-
-    public void transform(PdfDocument pdfDocument) throws IOException {
-      pdfDocument.removeModificationDate();
-
-      int begin = 0;
-      int end = 0;
-      String metadata = pdfDocument.getMetadataAsString();
-
-      begin = metadata.indexOf(BEGIN_MODIFY_DATE, end) + BEGIN_MODIFY_DATE.length();
-      end = metadata.indexOf(END_MODIFY_DATE, begin);
-      metadata = StringUtils.overlay(metadata, "", begin, end);
-
-      begin = metadata.indexOf(BEGIN_DOCUMENT_ID, end) + BEGIN_DOCUMENT_ID.length();
-      end = metadata.indexOf(END_DOCUMENT_ID, begin);
-      metadata = StringUtils.overlay(metadata, "", begin, end);
-
-      begin = metadata.indexOf(BEGIN_INSTANCE_ID, end) + BEGIN_INSTANCE_ID.length();
-      end = metadata.indexOf(END_INSTANCE_ID, begin);
-      metadata = StringUtils.overlay(metadata, "", begin, end);
-
-      pdfDocument.setMetadata(metadata);
-    }
-
-    protected static final String BEGIN_DOCUMENT_ID = "<xapMM:DocumentID>";
-
-    protected static final String BEGIN_INSTANCE_ID = "<xapMM:InstanceID>";
-
-    protected static final String BEGIN_MODIFY_DATE = "<xap:ModifyDate>";
-
-    protected static final String END_DOCUMENT_ID = "</xapMM:DocumentID>";
-
-    protected static final String END_INSTANCE_ID = "</xapMM:InstanceID>";
-
-    protected static final String END_MODIFY_DATE = "</xap:ModifyDate>";
-
-  }
-
   protected static class OtherPages {
 
-    public static class OtherPagesEndTextObjectProcessor extends SubsequenceOperatorProcessor {
+    public static class EndTextObjectProcessor extends SubsequenceOperatorProcessor {
 
       public boolean identify(Object[] pdfTokens) {
         boolean ret = pdfTokens.length == LENGTH
@@ -230,11 +204,60 @@ public class AmericanPhysiologicalSocietyPdfTransform extends ConditionalPdfTran
 
     }
 
+    public static class FixHyperlink implements PdfPageTransform {
+      public void transform(PdfDocument pdfDocument, PDPage pdfPage) throws IOException {
+        COSArray array = (COSArray)pdfPage.getCOSDictionary().getObjectFromPath("Annots/[0]/Rect");
+        array.set(1, new COSFloat(300.0f));
+        array.set(3, new COSFloat(525.0f));
+      }
+    }
+
     public static Properties getProperties() throws IOException {
       Properties properties = new Properties();
-      properties.setProperty(PdfUtil.END_TEXT_OBJECT, OtherPagesEndTextObjectProcessor.class.getName());
+      properties.setProperty(PdfUtil.END_TEXT_OBJECT, EndTextObjectProcessor.class.getName());
       return properties;
     }
+
+  }
+
+  protected static class TransformMetadata implements PdfTransform {
+
+    public void transform(PdfDocument pdfDocument) throws IOException {
+      pdfDocument.removeModificationDate();
+
+      COSArray idArray = (COSArray)pdfDocument.getTrailer().getItem(COSName.getPDFName("ID"));
+      idArray.set(1, idArray.get(0));
+
+      int begin = 0;
+      int end = 0;
+      String metadata = pdfDocument.getMetadataAsString();
+
+      begin = metadata.indexOf(BEGIN_MODIFY_DATE, end) + BEGIN_MODIFY_DATE.length();
+      end = metadata.indexOf(END_MODIFY_DATE, begin);
+      metadata = StringUtils.overlay(metadata, "", begin, end);
+
+      begin = metadata.indexOf(BEGIN_DOCUMENT_ID, end) + BEGIN_DOCUMENT_ID.length();
+      end = metadata.indexOf(END_DOCUMENT_ID, begin);
+      metadata = StringUtils.overlay(metadata, "", begin, end);
+
+      begin = metadata.indexOf(BEGIN_INSTANCE_ID, end) + BEGIN_INSTANCE_ID.length();
+      end = metadata.indexOf(END_INSTANCE_ID, begin);
+      metadata = StringUtils.overlay(metadata, "", begin, end);
+
+      pdfDocument.setMetadata(metadata);
+    }
+
+    protected static final String BEGIN_DOCUMENT_ID = "<xapMM:DocumentID>";
+
+    protected static final String BEGIN_INSTANCE_ID = "<xapMM:InstanceID>";
+
+    protected static final String BEGIN_MODIFY_DATE = "<xap:ModifyDate>";
+
+    protected static final String END_DOCUMENT_ID = "</xapMM:DocumentID>";
+
+    protected static final String END_INSTANCE_ID = "</xapMM:InstanceID>";
+
+    protected static final String END_MODIFY_DATE = "</xap:ModifyDate>";
 
   }
 
@@ -282,16 +305,24 @@ public class AmericanPhysiologicalSocietyPdfTransform extends ConditionalPdfTran
 
   protected static synchronized CompoundPdfTransform makeUnderlyingTransform() throws IOException {
     if (underlyingTransform == null) {
+      CompoundPdfPageTransform firstPageTransform = new CompoundPdfPageTransform();
+      firstPageTransform.add(PdfPageStreamTransform.makeTransform(FirstPage.getMutatorProperties()));
+      firstPageTransform.add(new FirstPage.FixHyperlink());
+      CompoundPdfPageTransform otherPagesTransform = new CompoundPdfPageTransform();
+      otherPagesTransform.add(PdfPageStreamTransform.makeTransform(OtherPages.getProperties()));
+      otherPagesTransform.add(new OtherPages.FixHyperlink());
       underlyingTransform = new CompoundPdfTransform();
-      underlyingTransform.addPdfTransform(new TransformFirstPage(PdfPageStreamTransform.makeTransform(FirstPage.getMutatorProperties())));
-      underlyingTransform.addPdfTransform(new TransformEachPageExceptFirst(PdfPageStreamTransform.makeTransform(OtherPages.getProperties())));
+      underlyingTransform.add(new TransformFirstPage(firstPageTransform));
+      underlyingTransform.add(new TransformEachPageExceptFirst(otherPagesTransform));
+      underlyingTransform.add(new TransformMetadata());
+//      underlyingTransform.add(new TransformFirstPage(PdfPageStreamTransform.makeTransform(FirstPage.getMutatorProperties())));
+//      underlyingTransform.add(new TransformEachPageExceptFirst(PdfPageStreamTransform.makeTransform(OtherPages.getProperties())));
+//      underlyingTransform.add(new TransformEachPage(new TransformLinkRectangles()));
 //      underlyingTransform.addPdfTransform(new PdfFirstPageTransform(new FirstPageTransform()));
 //      underlyingTransform.addPdfTransform(new PdfEachPageExceptFirstTransform(new OtherPagesTransform()));
 //      underlyingTransform.addPdfTransform(new PdfFirstPageTransform(PdfStringReplacePageTransform.makeTransformStartsWith("This information is current as of ",
 //                                                                                                                          " ",
 //                                                                                                                          true)));
-      underlyingTransform.addPdfTransform(new MetadataTransform());
-      // TODO: metadata XML
     }
     return underlyingTransform;
   }
