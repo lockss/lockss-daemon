@@ -1,5 +1,5 @@
 /*
- * $Id: AmericanPhysiologicalSocietyPdfTransform.java,v 1.7 2006-08-25 23:19:40 thib_gc Exp $
+ * $Id: AmericanPhysiologicalSocietyPdfTransform.java,v 1.8 2006-08-25 23:21:33 thib_gc Exp $
  */
 
 /*
@@ -34,8 +34,6 @@ package org.lockss.plugin.highwire;
 
 import java.io.IOException;
 import java.util.*;
-
-import javax.swing.JOptionPane;
 
 import org.apache.commons.lang.StringUtils;
 import org.lockss.filter.pdf.*;
