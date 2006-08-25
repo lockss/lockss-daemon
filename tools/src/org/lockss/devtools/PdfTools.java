@@ -1,5 +1,5 @@
 /*
- * $Id: PdfTools.java,v 1.1 2006-08-25 23:45:39 thib_gc Exp $
+ * $Id: PdfTools.java,v 1.2 2006-08-25 23:57:10 thib_gc Exp $
  */
 
 /*
@@ -119,7 +119,7 @@ public class PdfTools {
     "-usage --usage   Displays this message\n" +
     "\n" +
 //    "-dumpannotations Dumps the annotations on each page\n" +
-    "-dumppagedictionary Dumps the dictionary of each page" +
+    "-dumppagedictionary Dumps the dictionary of each page\n" +
     "-dumppageboxes      Dumps the bounding boxes of each page\n" +
     "-dumppagestream     Dumps a numbered list of tokens of each page\n" +
     "-dumptrailer        Dumps the trailer dictionary\n" +
