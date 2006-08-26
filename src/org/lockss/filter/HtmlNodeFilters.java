@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlNodeFilters.java,v 1.2 2006-08-07 07:33:20 tlipkis Exp $
+ * $Id: HtmlNodeFilters.java,v 1.3 2006-08-26 19:42:20 tlipkis Exp $
  */
 
 /*
@@ -73,7 +73,7 @@ public class HtmlNodeFilters {
    * an attribute value matching a regex.
    * @param tag The tagname.
    * @param attr The attribute name.
-   * @param regex The pattern to match against the attribute value.
+   * @param valRegexp The pattern to match against the attribute value.
    */
   public static NodeFilter tagWithAttributeRegex(String tag,
 						 String attr,
@@ -86,7 +86,7 @@ public class HtmlNodeFilters {
    * an attribute value matching a regex.
    * @param tag The tagname.
    * @param attr The attribute name.
-   * @param regex The pattern to match against the attribute value.
+   * @param valRegexp The pattern to match against the attribute value.
    * @param ignoreCase If true, match is case insensitive
    */
   public static NodeFilter tagWithAttributeRegex(String tag,
@@ -102,6 +102,8 @@ public class HtmlNodeFilters {
    * nested text containing a substring.  <i>Eg,</i> in <code>
    * &lt;select&gt;&lt;option value="1"&gt;Option text
    * 1&lt;/option&gt;...&lt;/select&gt;</code>, <code>tagWithText("option", "Option text") </code>would match the <code>&lt;option&gt; </code>node.
+   * @param tag The tagname.
+   * @param text The nested text to match.
    */
   public static NodeFilter tagWithText(String tag, String text) {
     return new AndFilter(new TagNameFilter(tag),
@@ -110,6 +112,9 @@ public class HtmlNodeFilters {
 
   /** Create a NodeFilter that matches tags with a specified tagname and
    * nested text containing a substring.
+   * @param tag The tagname.
+   * @param text The nested text to match.
+   * @param ignoreCase If true, match is case insensitive
    */
   public static NodeFilter tagWithText(String tag, String text,
 				       boolean ignoreCase) {
@@ -118,7 +123,10 @@ public class HtmlNodeFilters {
   }
 
   /** Create a NodeFilter that matches composite tags with a specified
-   * tagname and nested text matching a regex.  <i>Eg</i>,  <code> */
+   * tagname and nested text matching a regex.  <i>Eg</i>,  <code>
+   * @param tag The tagname.
+   * @param regex The pattern to match against the nested text.
+   */
   public static NodeFilter tagWithTextRegex(String tag, String regex) {
     return new AndFilter(new TagNameFilter(tag),
 			 new CompositeRegexFilter(regex));
@@ -127,7 +135,11 @@ public class HtmlNodeFilters {
   /** Create a NodeFilter that matches tags with a specified tagname and
    * nested text matching a regex.  Equivalant to
    * <pre>new AndFilter(new TagNameFilter(tag),
-              new RegexFilter(regex))</pre> */
+              new RegexFilter(regex))</pre>
+   * @param tag The tagname.
+   * @param regex The pattern to match against the nested text.
+   * @param ignoreCase If true, match is case insensitive
+   */
   public static NodeFilter tagWithTextRegex(String tag,
 					    String regex,
 					    boolean ignoreCase) {

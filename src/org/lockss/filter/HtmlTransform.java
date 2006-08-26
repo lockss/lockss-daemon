@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlTransform.java,v 1.1 2006-07-31 06:47:26 tlipkis Exp $
+ * $Id: HtmlTransform.java,v 1.2 2006-08-26 19:42:20 tlipkis Exp $
  */
 
 /*
@@ -43,9 +43,9 @@ public interface HtmlTransform {
 
   /**
    * Apply a transformation to a {@link NodeList}
-   * @param the nodeList
-   * @return the transformed Nodelist (possibly the modified input
-   * NodeList)
+   * @param nodeList the nodeList
+   * @return the transformed Nodelist (either the input NodeList, modified,
+   * or a new NodeList)
    * @throws IOException if any processing error occurs.
    * @see org.htmlparser.filters
    */

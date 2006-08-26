@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlNodeFilterTransform.java,v 1.1 2006-07-31 06:47:26 tlipkis Exp $
+ * $Id: HtmlNodeFilterTransform.java,v 1.2 2006-08-26 19:42:20 tlipkis Exp $
  */
 
 /*
@@ -64,8 +64,8 @@ public class HtmlNodeFilterTransform implements HtmlTransform {
   }
 
   /**
-   * Create a HtmlNodeFilterTransform that includes all nodes that match
-   * the NodeFilter
+   * Create a HtmlNodeFilterTransform that includes only those nodes that
+   * match the NodeFilter
    * @param filter nodes matching the filter will be returned in a new
    * NodeList
    */

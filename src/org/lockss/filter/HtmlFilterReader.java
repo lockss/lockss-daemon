@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlFilterReader.java,v 1.2 2006-08-07 07:33:20 tlipkis Exp $
+ * $Id: HtmlFilterReader.java,v 1.3 2006-08-26 19:42:20 tlipkis Exp $
  */
 
 /*
@@ -99,6 +99,8 @@ public class HtmlFilterReader extends Reader {
     this.xform = xform;
   }
 
+  /** Parse the input, apply the transform, generate output string and
+   * Reader */
   void parse() throws IOException {
     try {
       Parser parser = makeParser();

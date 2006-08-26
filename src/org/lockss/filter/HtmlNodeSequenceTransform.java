@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlNodeSequenceTransform.java,v 1.1 2006-07-31 06:47:26 tlipkis Exp $
+ * $Id: HtmlNodeSequenceTransform.java,v 1.2 2006-08-26 19:42:20 tlipkis Exp $
  */
 
 /*
@@ -76,27 +76,31 @@ public class HtmlNodeSequenceTransform implements HtmlTransform {
 
   public NodeList transform(NodeList nl) throws IOException {
 
-    outer:
+    searchForStart:
     for (int sx = 0; sx < nl.size(); ) {
       Node snode = nl.elementAt(sx);
       if (startFilter.accept(snode)) {
+	// search for end
 	for (int ex = sx + 1; ex < nl.size(); ex++) {
 	  Node enode = nl.elementAt(ex);
 	  if (endFilter.accept(enode)) {
+	    // remove nodes from start to end
 	    for (int rx = ex; rx >= sx; rx--) {
 	      nl.remove(rx);
 	    }
-	    continue outer;
+	    continue searchForStart;
 	  }
 	}
 	if (errorIfNoEndNode) {
 	  throw new MissingEndNodeException("End node not found");
 	}
       }
+      // recurse into node children
       NodeList children = snode.getChildren();
       if (children != null) {
 	transform(children);
       }
+      // increment current index iff didn't remove any nodes
       sx++;
     }
     return nl;

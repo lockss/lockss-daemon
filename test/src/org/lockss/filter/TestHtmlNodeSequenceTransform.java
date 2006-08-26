@@ -1,5 +1,5 @@
 /*
- * $Id: TestHtmlNodeSequenceTransform.java,v 1.1 2006-07-31 06:47:25 tlipkis Exp $
+ * $Id: TestHtmlNodeSequenceTransform.java,v 1.2 2006-08-26 19:42:20 tlipkis Exp $
  */
 
 /*
@@ -100,7 +100,7 @@ public class TestHtmlNodeSequenceTransform extends LockssTestCase {
     String str =
       "<html>bo<!-- start ad 15 --><img>ad text<!-- end ad 15 -->dy" +
       "<table>" +
-      "<tr><td>da<!-- start ad -->foo<!-- end ad -->ta</td></tr>" +
+      "<tr><td>da<!-- start ad -->foo<script>bar</script><!-- end ad -->ta</td></tr>" +
       "</table></html>";
     NodeFilter sf = HtmlNodeFilters.commentWithString("start ad");
     NodeFilter ef = HtmlNodeFilters.commentWithString("end ad");
