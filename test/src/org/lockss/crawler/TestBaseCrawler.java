@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCrawler.java,v 1.7 2006-08-09 02:01:38 tlipkis Exp $
+ * $Id: TestBaseCrawler.java,v 1.8 2006-08-26 19:41:53 tlipkis Exp $
  */
 
 /*
@@ -163,7 +163,7 @@ public class TestBaseCrawler extends LockssTestCase {
 
   public void testDoCrawlSignalsEndOfCrawlExceptionThrown() {
     TestableBaseCrawler crawler = new TestableBaseCrawler(mau, spec, aus);
-    crawler.setDoCrawlThrowException(new RuntimeException("Blah"));
+    crawler.setDoCrawlThrowException(new ExpectedRuntimeException("Blah"));
     try {
       crawler.doCrawl();
     } catch (RuntimeException e) {
@@ -171,6 +171,54 @@ public class TestBaseCrawler extends LockssTestCase {
     }
     MockCrawlStatus status = (MockCrawlStatus)crawler.getStatus();
     assertTrue(status.crawlEndSignaled());
+  }
+
+  void setupAuState() {
+    MockNodeManager nodeManager = new MockNodeManager();
+    getMockLockssDaemon().setNodeManager(nodeManager, mau);
+    nodeManager.setAuState(aus);
+  }
+
+  public void testWholeCrawlUpdatesLastCrawlTime() {
+    setupAuState();
+    long lastCrawlTime = aus.getLastCrawlTime();
+    TestableBaseCrawler crawler = new TestableBaseCrawler(mau, spec, aus);
+    crawler.setWholeAu(true);
+    crawler.doCrawl();
+    assertNotEquals(lastCrawlTime, aus.getLastCrawlTime());
+  }
+
+  public void testPartialCrawlDoesntUpdateLastCrawlTime() {
+    setupAuState();
+    long lastCrawlTime = aus.getLastCrawlTime();
+    TestableBaseCrawler crawler = new TestableBaseCrawler(mau, spec, aus);
+    crawler.setWholeAu(false);
+    crawler.doCrawl();
+    assertEquals(lastCrawlTime, aus.getLastCrawlTime());
+  }
+
+  public void testFailedCrawlDoesntUpdateLastCrawlTime() {
+    setupAuState();
+    long lastCrawlTime = aus.getLastCrawlTime();
+    TestableBaseCrawler crawler = new TestableBaseCrawler(mau, spec, aus);
+    crawler.setWholeAu(true);
+    crawler.setResult(false);
+    crawler.doCrawl();
+    assertEquals(lastCrawlTime, aus.getLastCrawlTime());
+  }
+
+  public void testThrowingCrawlDoesntUpdateLastCrawlTime() {
+    setupAuState();
+    long lastCrawlTime = aus.getLastCrawlTime();
+    TestableBaseCrawler crawler = new TestableBaseCrawler(mau, spec, aus);
+    crawler.setWholeAu(true);
+    crawler.setDoCrawlThrowException(new ExpectedRuntimeException("Blah"));
+    try {
+      crawler.doCrawl();
+    } catch (RuntimeException e) {
+      // expected
+    }
+    assertEquals(lastCrawlTime, aus.getLastCrawlTime());
   }
 
   /**
@@ -623,6 +671,9 @@ public class TestBaseCrawler extends LockssTestCase {
 
   private static class TestableBaseCrawler extends BaseCrawler {
     RuntimeException crawlExceptionToThrow = null;
+    boolean isWholeAU = false;
+    boolean result = true;
+
     protected TestableBaseCrawler(ArchivalUnit au,
 				  CrawlSpec spec, AuState aus) {
       super(au, spec, aus);
@@ -634,18 +685,26 @@ public class TestBaseCrawler extends LockssTestCase {
     }
 
     public String getTypeString() {
-      throw new UnsupportedOperationException("not implemented");
+      return "Testable";
     }
 
     public boolean isWholeAU() {
-      throw new UnsupportedOperationException("not implemented");
+      return isWholeAU;
+    }
+
+    void setWholeAu(boolean val) {
+      isWholeAU = val;
     }
 
     protected boolean doCrawl0() {
       if (crawlExceptionToThrow != null) {
 	throw crawlExceptionToThrow;
       }
-      return true;
+      return result;
+    }
+
+    public void setResult(boolean val) {
+      result = val;
     }
 
     public void setDoCrawlThrowException(RuntimeException e) {

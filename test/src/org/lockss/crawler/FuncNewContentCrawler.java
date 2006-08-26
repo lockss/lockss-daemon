@@ -1,5 +1,5 @@
 /*
- * $Id: FuncNewContentCrawler.java,v 1.17 2006-07-18 19:14:09 tlipkis Exp $
+ * $Id: FuncNewContentCrawler.java,v 1.18 2006-08-26 19:41:53 tlipkis Exp $
  */
 
 /*
@@ -109,6 +109,7 @@ public class FuncNewContentCrawler extends LockssTestCase {
     sau =
         (SimulatedArchivalUnit)theDaemon.getPluginManager().getAllAus().get(0);
     theDaemon.getLockssRepository(sau);
+    theDaemon.setNodeManager(new MockNodeManager(), sau);
   }
 
   public void tearDown() throws Exception {

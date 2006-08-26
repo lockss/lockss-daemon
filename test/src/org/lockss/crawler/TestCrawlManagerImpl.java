@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.65 2006-08-09 02:03:07 tlipkis Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.66 2006-08-26 19:41:53 tlipkis Exp $
  */
 
 /*
@@ -584,41 +584,6 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 
       waitForCrawlToFinish(sem);
       assertEquals(cookie, cb.getCookie());
-    }
-
-    public void testCompletedCrawlUpdatesLastCrawlTime() {
-      long lastCrawlTime = maus.getLastCrawlTime();
-
-      SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
-      TestCrawlCB cb = new TestCrawlCB(sem);
-      crawlManager.startNewContentCrawl(mau, cb, null, null);
-
-      waitForCrawlToFinish(sem);
-      assertNotEquals(lastCrawlTime, maus.getLastCrawlTime());
-    }
-
-    public void testUnsuccessfulCrawlDoesntUpdateLastCrawlTime() {
-      long lastCrawlTime = maus.getLastCrawlTime();
-
-      crawler.setCrawlSuccessful(false);
-
-      SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
-      TestCrawlCB cb = new TestCrawlCB(sem);
-      crawlManager.startNewContentCrawl(mau, cb, null, null);
-
-      waitForCrawlToFinish(sem);
-      assertEquals(lastCrawlTime, maus.getLastCrawlTime());
-    }
-
-    public void testCompletedCrawlUpdatesLastCrawlTimeIfFNFExceptionThrown() {
-      long lastCrawlTime = maus.getLastCrawlTime();
-
-      SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
-      TestCrawlCB cb = new TestCrawlCB(sem);
-      crawlManager.startNewContentCrawl(mau, cb, null, null);
-
-      waitForCrawlToFinish(sem);
-      assertNotEquals(lastCrawlTime, maus.getLastCrawlTime());
     }
 
     //StatusSource tests

@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.98 2006-08-07 18:58:34 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.99 2006-08-26 19:41:53 tlipkis Exp $
  */
 
 /*
@@ -705,14 +705,6 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 	    }
 	  }
 	  crawlSuccessful = crawler.doCrawl();
-
-	  if (crawler.isWholeAU()) {
-	    if (crawlSuccessful) {
-	      NodeManager nodeManager =
-		theDaemon.getNodeManager(crawler.getAu());
-	      nodeManager.newContentCrawlFinished();
-	    }
-	  }
 	}
       } catch (InterruptedException ignore) {
 	// no action
