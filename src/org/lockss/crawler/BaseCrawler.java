@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawler.java,v 1.13 2006-08-26 19:41:53 tlipkis Exp $
+ * $Id: BaseCrawler.java,v 1.14 2006-08-26 19:43:57 tlipkis Exp $
  */
 
 /*
@@ -225,7 +225,6 @@ public abstract class BaseCrawler
 			    crawlStatus.getCrawlError());
       }
       if (res && isWholeAU()) {
-	logger.info("updating last crawl");
 	NodeManager nodeManager = getDaemon().getNodeManager(au);
 	nodeManager.newContentCrawlFinished();
       }
