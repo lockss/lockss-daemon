@@ -1,5 +1,5 @@
 /*
- * $Id: PdfTools.java,v 1.3 2006-08-25 23:57:51 thib_gc Exp $
+ * $Id: PdfTools.java,v 1.4 2006-08-26 19:18:38 thib_gc Exp $
  */
 
 /*
@@ -139,7 +139,7 @@ public class PdfTools {
 
     CompoundPdfTransform pdfTransform = new CompoundPdfTransform();
     CompoundPdfPageTransform pdfPageTransform = new CompoundPdfPageTransform();
-    boolean resultInOutputStream = true;
+    boolean ignoreResult = true;
 
     for (int arg = 0 ; arg < args.length ; ++arg) {
       if (false) {
@@ -161,7 +161,7 @@ public class PdfTools {
         pdfTransform.add(new DumpTrailer());
       }
       else if (args[arg].equals("-null")) {
-        resultInOutputStream = true;
+        ignoreResult = false;
       }
     }
 
@@ -174,8 +174,10 @@ public class PdfTools {
       }
       InputStream inputStream = new FileInputStream(chooser.getSelectedFile());
       OutputStream outputStream = null;
-      if (resultInOutputStream) {
-        outputStream = new NullOutputStream();
+      if (ignoreResult) {
+        outputStream = new OutputStream() {
+          public void write(int b) { }
+        };
       }
       else {
         outputStream = new FileOutputStream(chooser.getSelectedFile().toString().replaceAll(".pdf", "-out.pdf"));
