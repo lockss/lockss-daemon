@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.87 2006-08-09 01:57:38 tlipkis Exp $
+ * $Id: LockssDaemon.java,v 1.88 2006-08-27 04:55:16 tlipkis Exp $
  */
 
 /*
@@ -778,7 +778,6 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
       Deadline.setReasonableDeadlineRange(maxInPast, maxInFuture);
     }
     String proj = ConfigManager.getPlatformProject();
-    System.err.println("proj: " + proj);
     isClockss = "clockss".equalsIgnoreCase(proj);
 
     super.setConfig(config, prevConfig, changedKeys);
