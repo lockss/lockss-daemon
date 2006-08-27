@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeStateImpl.java,v 1.23 2004-02-03 02:48:39 eaalto Exp $
+ * $Id: TestNodeStateImpl.java,v 1.24 2006-08-27 05:06:24 tlipkis Exp $
  */
 
 /*
@@ -31,11 +31,12 @@ import java.io.*;
 import java.util.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
+import org.lockss.plugin.*;
 import org.lockss.protocol.IdentityManager;
 
 public class TestNodeStateImpl extends LockssTestCase {
   private NodeStateImpl state;
-  private HistoryRepository historyRepo;
+  private MyHistoryRepositoryImpl historyRepo;
   private List polls;
 
   private static final int MAX_COUNT = 10;
@@ -56,7 +57,7 @@ public class TestNodeStateImpl extends LockssTestCase {
     MockCachedUrlSetSpec mspec =
         new MockCachedUrlSetSpec("http://www.example.com", null);
     MockCachedUrlSet mcus = new MockCachedUrlSet(mau, mspec);
-    historyRepo = new HistoryRepositoryImpl(mau, tempDirPath);
+    historyRepo = new MyHistoryRepositoryImpl(mau, tempDirPath);
     historyRepo.startService();
 
     polls = new ArrayList(3);
@@ -155,6 +156,18 @@ public class TestNodeStateImpl extends LockssTestCase {
         "starttime=123",
     };
     assertIsomorphic(expectedA, histL);
+
+    // should be placed at head of list
+    history = new PollHistory(1, "test1lwr", "test1upr", 0, 457, 0, null, false);
+    state.closeActivePoll(history);
+    assertSame(history, (PollHistory)state.getPollHistories().next());
+
+    // should be placed at tail of list
+    history = new PollHistory(1, "test1lwr", "test1upr", 0, 122, 0, null, false);
+    state.closeActivePoll(history);
+    List lst = ListUtil.fromIterator(state.getPollHistories());
+    assertSame(history, (PollHistory)lst.get(lst.size() - 1));
+
     TimeBase.setReal();
   }
 
@@ -253,7 +266,7 @@ public class TestNodeStateImpl extends LockssTestCase {
       state.pollHistories.add(new PollHistory(1, "test1", "test1", 0, 123 + ii,
           0, null, false));
     }
-    ((NodeStateImpl)state).trimHistoriesIfNeeded(false);
+    trimHistoriesIfNeeded(state);
     assertEquals(MAX_COUNT, state.pollHistories.size());
     PollHistory history = (PollHistory)state.pollHistories.get(MAX_COUNT - 1);
     assertEquals(123, history.getStartTime());
@@ -261,12 +274,26 @@ public class TestNodeStateImpl extends LockssTestCase {
     // exceed max
     state.pollHistories.add(0, new PollHistory(1, "test1", "test1", 0, 200,
         0, null, false));
-    ((NodeStateImpl)state).trimHistoriesIfNeeded(false);
+    trimHistoriesIfNeeded(state);
     // still max
     assertEquals(MAX_COUNT, state.pollHistories.size());
     history = (PollHistory)state.pollHistories.get(MAX_COUNT - 1);
     // oldest was pushed out
     assertEquals(124, history.getStartTime());
+
+    ConfigurationUtil.addFromArgs(NodeStateImpl.PARAM_POLL_HISTORY_TRIM_TO,
+				  Integer.toString(MAX_COUNT - 3));
+    
+    // trim now should do nothing
+    trimHistoriesIfNeeded(state);
+    assertEquals(MAX_COUNT, state.pollHistories.size());
+    assertSame(history, state.pollHistories.get(MAX_COUNT - 1));
+
+    // exceed max again, should reduce to trimTo size
+    state.pollHistories.add(0, new PollHistory(1, "test1", "test1", 0, 199,
+        0, null, false));
+    trimHistoriesIfNeeded(state);
+    assertEquals(MAX_COUNT - 3, state.pollHistories.size());
 
     TimeBase.setReal();
   }
@@ -285,14 +312,52 @@ public class TestNodeStateImpl extends LockssTestCase {
         0, null, false));
     state.pollHistories.add(new PollHistory(1, "test1", "test1", 0, cutOff - 1,
         0, null, false));
-    ((NodeStateImpl)state).trimHistoriesIfNeeded(false);
+    trimHistoriesIfNeeded(state);
     assertEquals(2, state.pollHistories.size());
     PollHistory history = (PollHistory)state.pollHistories.get(1);
     assertEquals(cutOff, history.getStartTime());
+    assertFalse(historyRepo.storeCalled);
 
     TimeBase.setReal();
   }
 
+  public void testPollTrimmingRewrite() throws Exception {
+    TimeBase.setSimulated(1234);
+    ConfigurationUtil.addFromArgs(NodeStateImpl.PARAM_POLL_HISTORY_TRIM_REWRITE,
+				  "true");
+    Iterator pollIt = state.getPollHistories();
+    assertFalse(pollIt.hasNext());
+    state.pollHistories = new ArrayList(MAX_COUNT);
+
+    List lst = new ArrayList();
+    for (int ii=0; ii<MAX_COUNT + 3; ii++) {
+      // fill the list
+      lst.add(new PollHistory(1, "test1", "test1", 0, 123 + ii,
+			      0, null, false));
+    }
+    state.setPollHistoryList(lst);
+    assertEquals(MAX_COUNT, state.pollHistories.size());
+    PollHistory history = (PollHistory)state.pollHistories.get(MAX_COUNT - 1);
+    assertEquals(126, history.getStartTime());
+    assertTrue(historyRepo.storeCalled);
+  }
+
+  void trimHistoriesIfNeeded(NodeState state) {
+    ((NodeStateImpl)state).sortPollHistories();
+    ((NodeStateImpl)state).trimHistoriesIfNeeded();
+  }
+
+  static class MyHistoryRepositoryImpl extends HistoryRepositoryImpl {
+    boolean storeCalled = false;
+
+    MyHistoryRepositoryImpl(ArchivalUnit au, String path) {
+      super(au, path);
+    }
+    public void storePollHistories(NodeState nodeState) {
+      storeCalled = true;
+      super.storePollHistories(nodeState);
+    }
+  }    
 
   public static void main(String[] argv) {
     String[] testCaseList = {TestNodeStateImpl.class.getName()};

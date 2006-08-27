@@ -1,5 +1,5 @@
 /*
- * $Id: NodeStateImpl.java,v 1.32 2006-06-04 06:24:18 tlipkis Exp $
+ * $Id: NodeStateImpl.java,v 1.33 2006-08-27 05:06:24 tlipkis Exp $
  */
 
 /*
@@ -46,21 +46,39 @@ import org.lockss.util.*;
  */
 public class NodeStateImpl
     implements NodeState, LockssSerializable {
+  static Logger log = Logger.getLogger("NodeState");
+
   /**
-   * This parameter indicates the maximum number of poll histories to store.
+   * The maximum number of poll histories to store.
    */
   public static final String PARAM_POLL_HISTORY_MAX_COUNT =
-      Configuration.PREFIX + "state.poll.history.max.count";
+      Configuration.PREFIX + "state.pollHistory.maxSize";
 
   static final int DEFAULT_POLL_HISTORY_MAX_COUNT = 200;
+
+  /**
+   * The size to which to trim the poll history list when it exceeds
+   * maxSize.  Default is same as maxSize.
+   */
+  public static final String PARAM_POLL_HISTORY_TRIM_TO =
+      Configuration.PREFIX + "state.pollHistory.trimTo";
 
   /**
    * This parameter indicates the maximum age of poll histories to store.
    */
   public static final String PARAM_POLL_HISTORY_MAX_AGE =
-      Configuration.PREFIX + "state.poll.history.max.age";
+      Configuration.PREFIX + "state.pollHistory.maxAge";
 
   static final long DEFAULT_POLL_HISTORY_MAX_AGE = 52 * Constants.WEEK;
+
+  /**
+   * If true, poll history files are rewritten if trimmed after loading
+   */
+  public static final String PARAM_POLL_HISTORY_TRIM_REWRITE =
+      Configuration.PREFIX + "state.pollHistory.trimRewrite";
+  static final boolean DEFAULT_POLL_HISTORY_TRIM_REWRITE = false;
+
+
 
   protected transient CachedUrlSet cus;
   protected CrawlState crawlState;
@@ -184,26 +202,26 @@ public class NodeStateImpl
     return (new ArrayList(polls)).iterator();
   }
 
-  public Iterator getPollHistories() {
+  private synchronized List findPollHistories() {
     if (pollHistories==null) {
       repository.loadPollHistories(this);
-      trimHistoriesIfNeeded(false);
+      // repository.loadPollHistories() calls setPollHistoryList(), which
+      // calls trimHistoriesIfNeeded()
+//       trimHistoriesIfNeeded(false);
     }
-    return (new ArrayList(pollHistories)).iterator();
+    return pollHistories;
+  }
+
+  public Iterator getPollHistories() {
+    return (new ArrayList(findPollHistories())).iterator();
   }
 
   public PollHistory getLastPollHistory() {
-    if (pollHistories==null) {
-      repository.loadPollHistories(this);
-      trimHistoriesIfNeeded(false);
-    }
-    // history list is sorted
-    Iterator historyIt = pollHistories.iterator();
-    if (historyIt.hasNext()) {
-      return (PollHistory)historyIt.next();
-    } else {
+    findPollHistories();
+    if (pollHistories.isEmpty()) {
       return null;
     }
+    return (PollHistory)pollHistories.get(0);
   }
 
   public boolean isInternalNode() {
@@ -224,22 +242,15 @@ public class NodeStateImpl
   }
 
   protected synchronized void closeActivePoll(PollHistory finished_poll) {
-    if (pollHistories==null) {
-      repository.loadPollHistories(this);
-      Collections.sort(pollHistories, new HistoryComparator());
-    }
-    // since the list is sorted, find the right place to add
-    Comparator comp = new HistoryComparator();
-    boolean added = false;
-    for (int ii=0; ii<pollHistories.size(); ii++) {
-      if (comp.compare(finished_poll, pollHistories.get(ii))<0) {
-        pollHistories.add(ii, finished_poll);
-        added = true;
-        break;
-      }
-    }
-    if (!added) {
-      pollHistories.add(finished_poll);
+    findPollHistories();
+    // the list is sorted, find the right place to add
+    int pos = Collections.binarySearch(pollHistories,
+					  finished_poll,
+					  new HistoryComparator());
+    if (pos >= 0) {
+      pollHistories.add(pos, finished_poll);
+    } else {
+      pollHistories.add(-(pos + 1), finished_poll);
     }
     // remove this poll, and any lingering PollStates for it
     while (polls.contains(finished_poll)) {
@@ -248,7 +259,7 @@ public class NodeStateImpl
     }
 
     // trim
-    trimHistoriesIfNeeded(true);
+    trimHistoriesIfNeeded();
 
     // checkpoint state, store histories
     repository.storeNodeState(this);
@@ -257,7 +268,18 @@ public class NodeStateImpl
 
   protected void setPollHistoryList(List new_histories) {
     pollHistories = (new_histories == null) ? new ArrayList(0) : new_histories;
-    trimHistoriesIfNeeded(false);
+    sortPollHistories();
+    if (trimHistoriesIfNeeded()) {
+      if (CurrentConfig.getBooleanParam(PARAM_POLL_HISTORY_TRIM_REWRITE,
+					DEFAULT_POLL_HISTORY_TRIM_REWRITE)) {
+	log.debug("Rewriting trimmed poll history for " + cus.getUrl());
+	repository.storePollHistories(this);
+      }
+    }
+  }
+
+  void sortPollHistories() {
+    Collections.sort(pollHistories, new HistoryComparator());
   }
 
   protected List getPollHistoryList() {
@@ -266,43 +288,41 @@ public class NodeStateImpl
 
   /**
    * Trims histories which exceed maximum count or age.
-   * Sorts the list if not sorted.
+   * Assumes list is sorted
    * @param isSorted true iff sorted, for efficiency
    */
-  void trimHistoriesIfNeeded(boolean isSorted) {
+  synchronized boolean trimHistoriesIfNeeded() {
+    boolean changed = false;
     if (pollHistories.size() > 0) {
-      // sort if needed
-      if (!isSorted) {
-        Collections.sort(pollHistories, new HistoryComparator());
-      }
-      // trim oldest off if exceeds max size
-      int maxHistoryCount =
-        CurrentConfig.getIntParam(PARAM_POLL_HISTORY_MAX_COUNT,
-                                  DEFAULT_POLL_HISTORY_MAX_COUNT);
-      if (maxHistoryCount <= 0) {
-        maxHistoryCount = DEFAULT_POLL_HISTORY_MAX_COUNT;
-      }
-      while (pollHistories.size() > maxHistoryCount) {
-        pollHistories.remove(maxHistoryCount);
-      }
-      // trim any remaining which exceed max age
-      long maxHistoryAge = CurrentConfig.getLongParam(PARAM_POLL_HISTORY_MAX_AGE,
-                                                      DEFAULT_POLL_HISTORY_MAX_AGE);
-      while (true) {
-        int size = pollHistories.size();
+      // trim any that are too old
+      long maxHistoryAge =
+	CurrentConfig.getLongParam(PARAM_POLL_HISTORY_MAX_AGE,
+				   DEFAULT_POLL_HISTORY_MAX_AGE);
+      int size;
+      while ((size = pollHistories.size()) > 0) {
         PollHistory history = (PollHistory)pollHistories.get(size-1);
         long pollEnd = history.getStartTime() + history.duration;
         if (TimeBase.msSince(pollEnd) > maxHistoryAge) {
           pollHistories.remove(size-1);
-          if (size==1) {
-            // no histories left
-            break;
-          }
+	  changed = true;
         } else {
           break;
         }
       }
+
+      // then trim oldest if still exceeds max size
+      int max = CurrentConfig.getIntParam(PARAM_POLL_HISTORY_MAX_COUNT,
+					  DEFAULT_POLL_HISTORY_MAX_COUNT);
+      if (pollHistories.size() > max) {
+	int trimTo =
+	  CurrentConfig.getIntParam(PARAM_POLL_HISTORY_TRIM_TO, max);
+	while (pollHistories.size() > trimTo) {
+	  pollHistories.remove(pollHistories.size() - 1);
+	  changed = true;
+	}
+      }
     }
+    return changed;
   }
 
   /**
