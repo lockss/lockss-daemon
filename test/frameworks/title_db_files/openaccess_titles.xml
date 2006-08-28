@@ -40,6 +40,46 @@
     <!-- Titles -->
     <property name="org.lockss.title">
 
+      <property name="madhattersreview2">
+	<property name="title" value="Mad Hatters Review 2006" />
+	<property name="estSize" value="65MB" />
+	<property name="journalTitle" value="Mad Hatters Review" />
+	<property name="plugin" value="org.lockss.plugin.madhattersreview.MadHattersReviewPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.madhattersreview.com/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="num_issue_range" />
+	  <property name="value" value="4-5" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="year" />
+	  <property name="value" value="2006" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="madhattersreview1">
+	<property name="title" value="Mad Hatters Review 2005" />
+	<property name="estSize" value="41MB" />
+	<property name="journalTitle" value="Mad Hatters Review" />
+	<property name="plugin" value="org.lockss.plugin.madhattersreview.MadHattersReviewPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.madhattersreview.com/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="num_issue_range" />
+	  <property name="value" value="1-3" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="year" />
+	  <property name="value" value="2005" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
       <property name="journalofglobalbuddhism6">
 	<property name="title" value="The Journal of Global Buddhism Volume 6" />
 	<property name="journalTitle" value="The Journal of Global Buddhism" />
