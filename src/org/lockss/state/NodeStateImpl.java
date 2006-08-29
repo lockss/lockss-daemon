@@ -1,5 +1,5 @@
 /*
- * $Id: NodeStateImpl.java,v 1.33 2006-08-27 05:06:24 tlipkis Exp $
+ * $Id: NodeStateImpl.java,v 1.34 2006-08-29 00:03:32 tlipkis Exp $
  */
 
 /*
@@ -289,7 +289,7 @@ public class NodeStateImpl
   /**
    * Trims histories which exceed maximum count or age.
    * Assumes list is sorted
-   * @param isSorted true iff sorted, for efficiency
+   * @return true iff list was trimmed
    */
   synchronized boolean trimHistoriesIfNeeded() {
     boolean changed = false;
@@ -299,23 +299,30 @@ public class NodeStateImpl
 	CurrentConfig.getLongParam(PARAM_POLL_HISTORY_MAX_AGE,
 				   DEFAULT_POLL_HISTORY_MAX_AGE);
       int size;
+      int cnt = 0;
       while ((size = pollHistories.size()) > 0) {
         PollHistory history = (PollHistory)pollHistories.get(size-1);
         long pollEnd = history.getStartTime() + history.duration;
         if (TimeBase.msSince(pollEnd) > maxHistoryAge) {
           pollHistories.remove(size-1);
 	  changed = true;
+	  cnt++;
         } else {
           break;
         }
       }
+      if (cnt > 0) {
+	log.debug2("Poll history trimmed " + cnt + " polls due to age");
+      }
 
-      // then trim oldest if still exceeds max size
+      // trim oldest off if exceeds max size
       int max = CurrentConfig.getIntParam(PARAM_POLL_HISTORY_MAX_COUNT,
 					  DEFAULT_POLL_HISTORY_MAX_COUNT);
       if (pollHistories.size() > max) {
 	int trimTo =
 	  CurrentConfig.getIntParam(PARAM_POLL_HISTORY_TRIM_TO, max);
+	log.debug2("Poll history size (" + pollHistories.size() +
+		   ") exceeds " + max + ", trimming to " + trimTo);
 	while (pollHistories.size() > trimTo) {
 	  pollHistories.remove(pollHistories.size() - 1);
 	  changed = true;
