@@ -1,5 +1,5 @@
 /*
- * $Id: ObjectSerializerTester.java,v 1.7 2006-07-17 22:06:40 thib_gc Exp $
+ * $Id: ObjectSerializerTester.java,v 1.8 2006-08-29 17:55:29 thib_gc Exp $
  */
 
 /*
@@ -719,7 +719,9 @@ public abstract class ObjectSerializerTester extends XMLTestCase {
         this.action = action;
       }
       public File createTempFile(String prefix, String suffix, File directory) throws IOException {
-        action.file = new File(File.createTempFile(prefix, suffix, directory).toString()) {
+        File tmp = File.createTempFile(prefix, suffix, directory);
+        tmp.deleteOnExit();
+        action.file = new File(tmp.toString()) {
           public boolean renameTo(File dest) {
             return false; // fail
           }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestCXSerializer.java,v 1.8 2006-05-31 17:54:50 thib_gc Exp $
+ * $Id: TestCXSerializer.java,v 1.9 2006-08-29 17:55:30 thib_gc Exp $
  */
 
 /*
@@ -183,7 +183,7 @@ public class TestCXSerializer extends ObjectSerializerTester {
     // For each compatibility mode...
     int current = 0;
     for (int compatMode = 0 ; compatMode < compatModes.length ; ++compatMode) {
-      /// ...get a full stack of serializers (produced by this class)
+      // ...get a full stack of serializers (produced by this class)
       ObjectSerializer[] parent = getMinimalObjectSerializers_ExtMapBean();
       // and set their compatibility mode
       for (int serializer = 0 ; serializer < parentLength ; ++serializer) {
