@@ -1,5 +1,5 @@
 /*
- * $Id: TestXStreamSerializer.java,v 1.14 2006-08-29 17:55:29 thib_gc Exp $
+ * $Id: TestXStreamSerializer.java,v 1.15 2006-08-30 00:02:27 thib_gc Exp $
  */
 
 /*
@@ -38,8 +38,6 @@ import java.nio.CharBuffer;
 import org.lockss.app.LockssApp;
 import org.lockss.test.StringInputStream;
 import org.lockss.util.ObjectSerializerTester.DoRoundTrip;
-
-import com.thoughtworks.xstream.XStream;
 
 /**
  * <p>Tests the {@link org.lockss.util.XStreamSerializer} class.</p>
@@ -179,24 +177,6 @@ public class TestXStreamSerializer extends ObjectSerializerTester {
       new PostUnmarshalResolveExtMapBean();
 
   }
-
-  public void testCanReadMultipleReferenceModes() throws Exception {
-    ExtMapBean emb = makeSample_ExtMapBean();
-    File file = File.createTempFile("testfile", ".xml");
-    file.deleteOnExit();
-
-    XStreamSerializer serializer = new XStreamSerializer();
-    serializer.setReferenceMode(XStream.XPATH_RELATIVE_REFERENCES);
-    serializer.serialize(file, emb);
-
-    serializer.setReferenceMode(XStream.XPATH_ABSOLUTE_REFERENCES);
-    ExtMapBean clone1 = (ExtMapBean)serializer.deserialize(file);
-    assertEquals(emb.getMap(), clone1.getMap());
-
-    serializer.setReferenceMode(XStream.ID_REFERENCES);
-    ExtMapBean clone2 = (ExtMapBean)serializer.deserialize(file);
-    assertEquals(emb.getMap(), clone2.getMap());
-}
 
   /**
    * <p>Gives the post-deserialization mechanism a thorough test.</p>
@@ -379,28 +359,7 @@ public class TestXStreamSerializer extends ObjectSerializerTester {
 
   /* Inherit documentation */
   protected ObjectSerializer[] getObjectSerializers_ExtMapBean() {
-    int[] refModes = new int[] {
-        XStream.ID_REFERENCES,
-        XStream.XPATH_ABSOLUTE_REFERENCES,
-        XStream.XPATH_RELATIVE_REFERENCES,
-    };
-
-    int parentLength = getMinimalObjectSerializers_ExtMapBean().length;
-    XStreamSerializer[] result = new XStreamSerializer[parentLength * refModes.length];
-
-    // For each reference mode...
-    int current = 0;
-    for (int refMode = 0 ; refMode < refModes.length ; ++refMode) {
-      // ...get a full stack of serializers (produced by this class)
-      ObjectSerializer[] parent = getMinimalObjectSerializers_ExtMapBean();
-      // and set their reference mode
-      for (int serializer = 0 ; serializer < parentLength ; ++serializer) {
-        result[current] = (XStreamSerializer)parent[serializer];
-        result[current++].setReferenceMode(refModes[refMode]);
-      }
-    }
-
-    return result;
+    return getMinimalObjectSerializers_ExtMapBean();
   }
 
   /* Inherit documentation */

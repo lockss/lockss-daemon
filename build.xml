@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.191 2006-08-29 17:55:30 thib_gc Exp $
+ $Id: build.xml,v 1.192 2006-08-30 00:02:26 thib_gc Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
@@ -195,7 +195,7 @@ Args:
   <property name="htmlparser.jar" value="${lib}/htmlparser-1.6.jar"/>
   <!-- W3C RDF Parser -->
   <property name="rdf.jar"        value="${lib}/rdf-api-2001-01-19.jar" />
-  <property name="xstream.jar"    value="${lib}/xstream-1.2.jar" />
+  <property name="xstream.jar"    value="${lib}/xstream-1.1.3.jar" />
   <property name="xmlunit.jar"    value="${lib}/xmlunit1.0.jar" />
   <property name="oai-harvester.jar" value="${lib}/harvester2-0.1.6L1.jar"/>
   <!-- Needed by OAI harvester -->
@@ -1157,8 +1157,7 @@ java -classpath &quot;${tmp.ptool.clspth.unix}&quot; org.lockss.devtools.plugind
        <link href="${ext.javadoc}/commons-lang-2.1/docs/api" />
        <link href="${ext.javadoc}/commons-logging-1.1/docs/apidocs" />
        <link href="${ext.javadoc}/htmlparser-1.6/docs/javadoc" />
-       <link href="${ext.javadoc}/pdfbox-0.7.2/javadoc" />
-       <link href="${ext.javadoc}/xstream-1.2/javadoc" />
+       <link href="${ext.javadoc}/xstream-1.1.3/javadoc" />
     </javadoc>
   </target>
 
