@@ -1,5 +1,5 @@
 /*
- * $Id: PdfTools.java,v 1.4 2006-08-26 19:18:38 thib_gc Exp $
+ * $Id: PdfTools.java,v 1.5 2006-08-30 22:44:39 thib_gc Exp $
  */
 
 /*
@@ -40,8 +40,9 @@ import javax.swing.JFileChooser;
 import org.lockss.filter.pdf.*;
 import org.lockss.util.*;
 import org.pdfbox.cos.*;
+import org.pdfbox.pdfwriter.ContentStreamWriter;
 import org.pdfbox.pdmodel.PDPage;
-import org.pdfbox.pdmodel.common.PDRectangle;
+import org.pdfbox.pdmodel.common.*;
 
 /**
  * <p>Tools to inspect the contents of PDF documents.</p>
@@ -52,25 +53,39 @@ public class PdfTools {
   public static class DumpBoxes implements PdfPageTransform {
     public void transform(PdfDocument pdfDocument, PDPage pdfPage) throws IOException {
       System.out.println("[begin boxes]");
-      display(pdfPage.getArtBox(), "Art box");
-      display(pdfPage.getBleedBox(), "Bleed box");
-      display(pdfPage.getCropBox(), "Crop box");
-      display(pdfPage.getMediaBox(), "Media box");
-      display(pdfPage.getTrimBox(), "Trim box");
+      PdfTools.dump("Art box", pdfPage.getArtBox());
+      PdfTools.dump("Bleed box", pdfPage.getBleedBox());
+      PdfTools.dump("Crop box", pdfPage.getCropBox());
+      PdfTools.dump("Media box", pdfPage.getMediaBox());
+      PdfTools.dump("Trim box", pdfPage.getTrimBox());
       System.out.println("[end boxes]");
     }
-    protected static void display(PDRectangle rectangle, String name) {
-      if (rectangle != null) {
-        System.out.println(name + ": " + rectangle.toString());
-      }
+  }
+  
+  public static class DumpMetadata implements PdfTransform {
+    public void transform(PdfDocument pdfDocument) throws IOException {
+      System.out.println("[begin metadata]");
+      dump("Creation date", pdfDocument.getCreationDate());
+      dump("Modification date", pdfDocument.getModificationDate());
+      dump("Author", pdfDocument.getAuthor());
+      dump("Creator", pdfDocument.getCreator());
+      dump("Keywords", pdfDocument.getKeywords());
+      dump("Producer", pdfDocument.getProducer());
+      dump("Subject", pdfDocument.getSubject());
+      dump("Title", pdfDocument.getTitle());
+      dump("Metadata (as string)", pdfDocument.getMetadataAsString());
+      System.out.println("[end metadata]");
     }
   }
 
-  public static class DumpPageDictionary implements PdfPageTransform {
+  public static class DumpNumberedPageStream implements PdfPageTransform {
     public void transform(PdfDocument pdfDocument, PDPage pdfPage) throws IOException {
-      System.out.println("[begin page dictionary]");
-      dump(pdfPage.getCOSDictionary());
-      System.out.println("[end page dictionary]");
+      System.out.println("[begin numbered page stream]");
+      Iterator tokens = pdfPage.getContents().getStream().getStreamTokens().iterator();
+      for (int tok = 0 ; tokens.hasNext() ; ++tok) {
+        System.out.println(Integer.toString(tok) + "\t" + tokens.next().toString());
+      }
+      System.out.println("[end numbered page stream]");
     }
   }
 
@@ -93,17 +108,24 @@ public class PdfTools {
 //
 //  }
 
+  public static class DumpPageDictionary implements PdfPageTransform {
+    public void transform(PdfDocument pdfDocument, PDPage pdfPage) throws IOException {
+      System.out.println("[begin page dictionary]");
+      dump(pdfPage.getCOSDictionary());
+      System.out.println("[end page dictionary]");
+    }
+  }
+  
   public static class DumpPageStream implements PdfPageTransform {
     public void transform(PdfDocument pdfDocument, PDPage pdfPage) throws IOException {
       System.out.println("[begin page stream]");
-      Iterator tokens = pdfPage.getContents().getStream().getStreamTokens().iterator();
-      for (int tok = 0 ; tokens.hasNext() ; ++tok) {
-        System.out.println(Integer.toString(tok) + "\t" + tokens.next().toString());
+      for (Iterator tokens = pdfPage.getContents().getStream().getStreamTokens().iterator() ; tokens.hasNext() ; ) {
+        System.out.println("\t" + tokens.next().toString());
       }
-      System.out.println("[end page stream]");
+      System.out.println("[end page stream]");      
     }
   }
-
+  
   public static class DumpTrailer implements PdfTransform {
     public void transform(PdfDocument pdfDocument) throws IOException {
       System.out.println("[begin trailer]");
@@ -112,18 +134,33 @@ public class PdfTools {
     }
   }
 
+  public static class ReiteratePageStream implements PdfPageTransform {
+    public void transform(PdfDocument pdfDocument, PDPage pdfPage) throws IOException {
+      PDStream resultStream = new PDStream(pdfDocument.getPDDocument());
+      OutputStream outputStream = resultStream.createOutputStream();
+      ContentStreamWriter tokenWriter = new ContentStreamWriter(outputStream);
+      tokenWriter.writeTokens(pdfPage.getContents().getStream().getStreamTokens());
+      pdfPage.setContents(resultStream);
+    }
+  }
+
   protected static final String USAGE =
-    "Usage:\n" +
-    "\n" +
-    "-h -help --help     Displays this message\n" +
-    "-usage --usage      Displays this message\n" +
-    "\n" +
-//    "-dumpannotations Dumps the annotations on each page\n" +
-    "-dumppagedictionary Dumps the dictionary of each page\n" +
-    "-dumppageboxes      Dumps the bounding boxes of each page\n" +
-    "-dumppagestream     Dumps a numbered list of tokens of each page\n" +
-    "-dumptrailer        Dumps the trailer dictionary\n" +
-    "-null               Also write PDFBox-saved version in file-out.pdf\n";
+    "\tUsage:\n" +
+    "Help\n" +
+    " -h -help --help     Displays this message\n" +
+    " -usage --usage      Displays this message\n" +
+    "Diff-friendly\n" +
+    " -metadata           Dumps the metadata\n" +
+    " -pageboxes          Dumps the bounding boxes of each page\n" +
+    " -pagestream         Dumps a list of tokens on each page\n" +
+    "Not diff-friendly\n" +
+    " -numberedpagestream Dumps a numbered list of tokens on each page\n" +
+    " -pagedictionary     Dumps the dictionary of each page\n" +
+    " -trailer            Dumps the trailer dictionary\n" +
+    "Other\n" +
+    " -rewrite            Also write PDFBox-saved version in file-out.pdf\n" +
+    "Unimplemented\n" +
+    " -annotations        Dumps the annotations of each page\n";
 
   public static void main(String[] args) {
     if (   args.length == 0
@@ -134,7 +171,7 @@ public class PdfTools {
                 || args[0].equals("-usage")
                 || args[0].equals("--usage")))) {
       System.out.println(USAGE);
-      return;
+      return; // exit
     }
 
     CompoundPdfTransform pdfTransform = new CompoundPdfTransform();
@@ -145,23 +182,33 @@ public class PdfTools {
       if (false) {
         // Copy/paste hack
       }
-//      else if (args[arg].equals("-dumpannotations")) {
+//      else if (args[arg].equals("-annotations")) {
 //        pdfPageTransform.add(new DumpAnnotations());
 //      }
-      else if (args[arg].equals("-dumppageboxes")) {
+      else if (args[arg].equals("-metadata")) {
+        pdfTransform.add(new DumpMetadata());
+      }
+      else if (args[arg].equals("-numberedpagestream")) {
+        pdfPageTransform.add(new DumpNumberedPageStream());
+      }
+      else if (args[arg].equals("-pageboxes")) {
         pdfPageTransform.add(new DumpBoxes());
       }
-      else if (args[arg].equals("-dumppagedictionary")) {
+      else if (args[arg].equals("-pagedictionary")) {
         pdfPageTransform.add(new DumpPageDictionary());
       }
-      else if (args[arg].equals("-dumppagestream")) {
+      else if (args[arg].equals("-pagestream")) {
         pdfPageTransform.add(new DumpPageStream());
       }
-      else if (args[arg].equals("-dumptrailer")) {
+      else if (args[arg].equals("-rewrite")) {
+        ignoreResult = false;
+        pdfPageTransform.add(new ReiteratePageStream()); // FIXME
+      }
+      else if (args[arg].equals("-trailer")) {
         pdfTransform.add(new DumpTrailer());
       }
-      else if (args[arg].equals("-null")) {
-        ignoreResult = false;
+      else {
+        System.err.println("Unknown option: " + args[arg]);
       }
     }
 
@@ -176,7 +223,7 @@ public class PdfTools {
       OutputStream outputStream = null;
       if (ignoreResult) {
         outputStream = new OutputStream() {
-          public void write(int b) { }
+          public void write(int b) { /* Null output stream */ }
         };
       }
       else {
@@ -195,6 +242,12 @@ public class PdfTools {
     for (Iterator keys = dictionary.keyList().iterator() ; keys.hasNext() ; ) {
       COSName key = (COSName)keys.next();
       System.out.println(key.getName() + "\t" + dictionary.getItem(key).toString());
+    }
+  }
+
+  protected static void dump(String name, Object obj) {
+    if (obj != null) {
+      System.out.println(name + ": " + obj.toString());
     }
   }
 
