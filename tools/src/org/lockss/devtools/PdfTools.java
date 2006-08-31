@@ -1,5 +1,5 @@
 /*
- * $Id: PdfTools.java,v 1.5 2006-08-30 22:44:39 thib_gc Exp $
+ * $Id: PdfTools.java,v 1.6 2006-08-31 17:21:58 thib_gc Exp $
  */
 
 /*
@@ -65,15 +65,16 @@ public class PdfTools {
   public static class DumpMetadata implements PdfTransform {
     public void transform(PdfDocument pdfDocument) throws IOException {
       System.out.println("[begin metadata]");
-      dump("Creation date", pdfDocument.getCreationDate());
-      dump("Modification date", pdfDocument.getModificationDate());
+      dump("Creation date", pdfDocument.getCreationDate().getTime());
+      dump("Modification date", pdfDocument.getModificationDate().getTime());
       dump("Author", pdfDocument.getAuthor());
       dump("Creator", pdfDocument.getCreator());
       dump("Keywords", pdfDocument.getKeywords());
       dump("Producer", pdfDocument.getProducer());
       dump("Subject", pdfDocument.getSubject());
       dump("Title", pdfDocument.getTitle());
-      dump("Metadata (as string)", pdfDocument.getMetadataAsString());
+      System.out.println("Metadata (as string):");
+      System.out.println(pdfDocument.getMetadataAsString());
       System.out.println("[end metadata]");
     }
   }
@@ -202,7 +203,7 @@ public class PdfTools {
       }
       else if (args[arg].equals("-rewrite")) {
         ignoreResult = false;
-        pdfPageTransform.add(new ReiteratePageStream()); // FIXME
+        pdfPageTransform.add(new ReiteratePageStream());
       }
       else if (args[arg].equals("-trailer")) {
         pdfTransform.add(new DumpTrailer());
@@ -248,6 +249,12 @@ public class PdfTools {
   protected static void dump(String name, Object obj) {
     if (obj != null) {
       System.out.println(name + ": " + obj.toString());
+    }
+  }
+
+  protected static void dump(String name, String str) {
+    if (str != null && !str.equals("")) {
+      System.out.println(name + ": " + str);
     }
   }
 
