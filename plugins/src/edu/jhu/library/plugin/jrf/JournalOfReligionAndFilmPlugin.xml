@@ -1,11 +1,11 @@
 <map>
   <entry>
     <string>plugin_identifier</string>
-    <string>edu.jhu.library.plugin.JournalOfReligionAndFilmPlugin</string>
+    <string>edu.jhu.library.plugin.jrf.JournalOfReligionAndFilmPlugin</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Journal Of Religion and Film % %d&quot;, base_url, volume</string>
+    <string>&quot;Journal of Religion and Film Volume %d&quot;, volume</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -19,12 +19,12 @@
     <string>au_crawlrules</string>
     <list>
       <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;%smanifests/TheJournalOfReligionAndFilm.Vol.%d.LOCKSS.ManifestPage.htm&quot;, base_url, volume</string>
-      <string>1,&quot;^%sVol%dNo[0-9]+/.*&quot;, base_url, volume</string>
-      <string>1,&quot;^%svol%dno[0-9]+/.*&quot;, base_url, volume</string>
-      <string>1,&quot;^%s[^/]+.(htm|html|gif|jpeg|jpg|png)&quot;, base_url</string>
-      <string>1,&quot;^%simages/.*&quot;, base_url</string>
-      <string>1,&quot;^%sCREDITS/.*&quot;, base_url</string>
+      <string>1,&quot;^%smanifests/TheJournalOfReligionAndFilm.Vol.%d.LOCKSS.ManifestPage.htm&quot;, base_url, volume</string>
+      <string>1,&quot;^%s[Vv]ol%d[Nn]o[0-9]+/&quot;, base_url, volume</string>
+      <string>2,&quot;^%simages/[Aa]dvertising/&quot;, base_url</string>
+      <string>1,&quot;^%simages/&quot;, base_url</string>
+      <string>1,&quot;^%sCREDITS/&quot;, base_url</string>
+      <string>1,&quot;^%sAuthorBiosPhotos/&quot;, base_url</string>
     </list>
   </entry>
   <entry>
