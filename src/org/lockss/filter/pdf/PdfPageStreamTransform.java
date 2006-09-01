@@ -1,5 +1,5 @@
 /*
- * $Id: PdfPageStreamTransform.java,v 1.2 2006-08-25 23:19:40 thib_gc Exp $
+ * $Id: PdfPageStreamTransform.java,v 1.3 2006-09-01 06:47:00 thib_gc Exp $
  */
 
 /*
@@ -35,16 +35,14 @@ package org.lockss.filter.pdf;
 import java.io.*;
 import java.util.*;
 
-import org.lockss.filter.pdf.*;
 import org.lockss.util.*;
 import org.pdfbox.pdfwriter.ContentStreamWriter;
-import org.pdfbox.pdmodel.PDPage;
 import org.pdfbox.pdmodel.common.PDStream;
 import org.pdfbox.util.PDFStreamEngine;
 
 public class PdfPageStreamTransform extends PDFStreamEngine implements PdfPageTransform {
 
-  protected static Logger logger = Logger.getLoggerWithInitialLevel("PdfPageStreamTransform", Logger.LEVEL_DEBUG3);
+  protected static Logger logger = Logger.getLogger("PdfPageStreamTransform");
 
   protected Stack /* of ArrayList */ listStack;
 
@@ -52,12 +50,19 @@ public class PdfPageStreamTransform extends PDFStreamEngine implements PdfPageTr
     listStack.push(new ArrayList());
   }
 
-  public void mergeOutputList() throws EmptyStackException {
+  /**
+   * @throws EmptyStackException
+   */
+  public void mergeOutputList() {
     List oldTop = (List)listStack.peek();
     mergeOutputList(oldTop);
   }
 
-  public void mergeOutputList(List replacement) throws EmptyStackException {
+  /**
+   * @param replacement
+   * @throws EmptyStackException
+   */
+  public void mergeOutputList(List replacement) {
     listStack.pop();
     List newTop = (List)listStack.peek();
     newTop.addAll(replacement);
@@ -65,7 +70,7 @@ public class PdfPageStreamTransform extends PDFStreamEngine implements PdfPageTr
 
   protected PdfPageStreamTransform(Properties operatorProcessors) throws IOException {
     super(operatorProcessors);
-    this.listStack = new Stack(); /* of List */
+    this.listStack = new Stack();
   }
 
   public List getOutputList() {
@@ -84,14 +89,15 @@ public class PdfPageStreamTransform extends PDFStreamEngine implements PdfPageTr
     splitOutputList();
   }
 
+  /* Inherit documentation */
   public synchronized void transform(PdfDocument pdfDocument,
-                                     PDPage pdfPage)
+                                     PdfPage pdfPage)
       throws IOException {
     // Iterate over stream
     reset();
-    processStream(pdfPage,
+    processStream(pdfPage.getPdPage(),
                   pdfPage.findResources(),
-                  pdfPage.getContents().getStream());
+                  pdfPage.getContentStream());
 
     // Sanity check
     if (listStack.size() != 1) {
@@ -103,10 +109,10 @@ public class PdfPageStreamTransform extends PDFStreamEngine implements PdfPageTr
   }
 
   protected void writeResult(PdfDocument pdfDocument,
-                             PDPage pdfPage)
+                             PdfPage pdfPage)
       throws IOException {
     if (atLeastOneChange) {
-      PDStream resultStream = new PDStream(pdfDocument.getPDDocument());
+      PDStream resultStream = pdfDocument.makePdStream();
       OutputStream outputStream = resultStream.createOutputStream();
       ContentStreamWriter tokenWriter = new ContentStreamWriter(outputStream);
       tokenWriter.writeTokens(getOutputList());
@@ -146,7 +152,7 @@ public class PdfPageStreamTransform extends PDFStreamEngine implements PdfPageTr
   }
 
   public static boolean identifyPageStream(PdfDocument pdfDocument,
-                                           PDPage pdfPage,
+                                           PdfPage pdfPage,
                                            Properties customOperatorProcessors)
       throws IOException {
 
@@ -158,7 +164,7 @@ public class PdfPageStreamTransform extends PDFStreamEngine implements PdfPageTr
         logger.debug3("Match in signalChange()");
         throw new ReturnTrue();
       }
-      protected void writeResult(PdfDocument pdfDocument, PDPage pdfPage) throws IOException {
+      protected void writeResult(PdfDocument pdfDocument, PdfPage pdfPage) throws IOException {
         // Do not do anything
       }
     };

@@ -1,5 +1,5 @@
 /*
- * $Id: PdfDocument.java,v 1.5 2006-08-30 22:43:15 thib_gc Exp $
+ * $Id: PdfDocument.java,v 1.6 2006-09-01 06:47:00 thib_gc Exp $
  */
 
 /*
@@ -35,11 +35,13 @@ package org.lockss.util;
 import java.io.*;
 import java.util.*;
 
+import org.apache.commons.collections.*;
+import org.apache.commons.collections.list.TransformedList;
 import org.pdfbox.cos.*;
 import org.pdfbox.exceptions.COSVisitorException;
 import org.pdfbox.pdfparser.PDFParser;
 import org.pdfbox.pdmodel.*;
-import org.pdfbox.pdmodel.common.PDMetadata;
+import org.pdfbox.pdmodel.common.*;
 import org.pdfbox.pdmodel.fdf.FDFDocument;
 
 /**
@@ -75,6 +77,8 @@ public class PdfDocument {
     this.pdfParser.parse();
   }
 
+  protected PdfDocument() { }
+
   /**
    * <p>Closes the underlying {@link COSDocument} instance
    * and releases expensive memory resources held by this object.</p>
@@ -82,7 +86,7 @@ public class PdfDocument {
    * @see PDDocument#close
    */
   public void close() throws IOException {
-    getPDDocument().close();
+    getPdDocument().close();
     pdfParser = null;
   }
 
@@ -98,12 +102,13 @@ public class PdfDocument {
 
   /**
    * <p>Provides access to the underlying {@link COSDocument}
-   * instance.</p>
+   * instance; <em>use with care.</em></p>
    * @return The underlying {@link COSDocument} instance, pulled from
    *         the underlying {@link PDFParser} instance.
    * @throws IOException if any processing error occurs.
+   * @see PDFParser#getDocument
    */
-  public COSDocument getCOSDocument() throws IOException {
+  public COSDocument getCosDocument() throws IOException {
     return getPdfParser().getDocument();
   }
 
@@ -151,25 +156,54 @@ public class PdfDocument {
     return getDocumentInformation().getModificationDate();
   }
 
-  public PDPage getPage(int index) throws IOException {
-    return (PDPage)getDocumentCatalog().getAllPages().get(index);
+  /**
+   * <p>Determines the number of pages of this PDF document.</p>
+   * @return The total number of pages.
+   * @throws IOException if any processing error occurs.
+   * @see PDDocument#getNumberOfPages
+   */
+  public int getNumberOfPages() throws IOException {
+    return getPdDocument().getNumberOfPages();
   }
 
-  public Iterator /* of PDPage */ getPageIterator() throws IOException {
-    return getDocumentCatalog().getAllPages().iterator();
+  public PDPage getPdPage(int index) throws IOException {
+    return (PDPage)getAllPages().get(index);
+  }
+
+  public PdfPage getPage(int index) throws IOException {
+    return new PdfPage(getPdPage(index));
+  }
+
+  public ListIterator /* of PDPage */ getPdPageIterator() throws IOException {
+    return getAllPages().listIterator();
+  }
+
+  public ListIterator /* of PdfPage */ getPageIterator() throws IOException {
+    return ListUtils.transformedList(getAllPages(),
+                                     new Transformer() {
+                                       public Object transform(Object obj) {
+                                         return new PdfPage((PDPage)obj);
+                                       }
+                                     }).listIterator();
   }
 
   /**
    * <p>Provides access to the underlying {@link PDDocument}
-   * instance.</p>
+   * instance; <em>use with care.</em></p>
    * @return The underlying {@link PDDocument} instance, pulled from
    *         the underlying {@link PDFParser} instance.
    * @throws IOException if any processing error occurs.
+   * @see PDFParser#getPDDocument
    */
-  public PDDocument getPDDocument() throws IOException {
+  public PDDocument getPdDocument() throws IOException {
     return getPdfParser().getPDDocument();
   }
 
+  /**
+   * <p>Provides access to the underlying {@link PDFParser}
+   * instance; <em>use with care.</em></p>
+   * @return The underlying {@link PDFParser} instance.
+   */
   public PDFParser getPdfParser() {
     return pdfParser;
   }
@@ -205,7 +239,18 @@ public class PdfDocument {
   }
 
   public COSDictionary getTrailer() throws IOException {
-    return getCOSDocument().getTrailer();
+    return getCosDocument().getTrailer();
+  }
+
+  /**
+   * <p>Instantiates a new {@link PDStream} instance based on this PDF
+   * document.</p>
+   * @return A newly instantiated {@PDStream} instance.
+   * @throws IOException if any processing error occurs.
+   * @see PDStream#PDStream(PDDocument)
+   */
+  public PDStream makePdStream() throws IOException {
+    return new PDStream(getPdDocument());
   }
 
   /**
@@ -289,7 +334,7 @@ public class PdfDocument {
    */
   public void save(OutputStream outputStream) throws IOException {
     try {
-      getPDDocument().save(outputStream);
+      getPdDocument().save(outputStream);
     }
     catch (COSVisitorException cve) {
       IOException ioe = new IOException();
@@ -340,7 +385,7 @@ public class PdfDocument {
 
   public void setMetadata(String metadataAsString) throws IOException {
     ByteArrayInputStream inputStream = new ByteArrayInputStream(metadataAsString.getBytes());
-    PDMetadata pdMetadata = new PDMetadata(getPDDocument(), inputStream, false);
+    PDMetadata pdMetadata = new PDMetadata(getPdDocument(), inputStream, false);
     setMetadata(pdMetadata);
   }
 
@@ -384,12 +429,16 @@ public class PdfDocument {
     getDocumentInformation().setTitle(title);
   }
 
+  protected List getAllPages() throws IOException {
+    return getDocumentCatalog().getAllPages();
+  }
+
   protected PDDocumentCatalog getDocumentCatalog() throws IOException {
-    return getPDDocument().getDocumentCatalog();
+    return getPdDocument().getDocumentCatalog();
   }
 
   protected PDDocumentInformation getDocumentInformation() throws IOException {
-    return getPDDocument().getDocumentInformation();
+    return getPdDocument().getDocumentInformation();
   }
 
   protected PDMetadata getMetadata() throws IOException {

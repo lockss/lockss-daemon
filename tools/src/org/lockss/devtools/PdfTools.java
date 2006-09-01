@@ -1,5 +1,5 @@
 /*
- * $Id: PdfTools.java,v 1.6 2006-08-31 17:21:58 thib_gc Exp $
+ * $Id: PdfTools.java,v 1.7 2006-09-01 06:47:00 thib_gc Exp $
  */
 
 /*
@@ -39,9 +39,9 @@ import javax.swing.JFileChooser;
 
 import org.lockss.filter.pdf.*;
 import org.lockss.util.*;
+import org.lockss.util.PdfUtil.*;
 import org.pdfbox.cos.*;
 import org.pdfbox.pdfwriter.ContentStreamWriter;
-import org.pdfbox.pdmodel.PDPage;
 import org.pdfbox.pdmodel.common.*;
 
 /**
@@ -50,8 +50,8 @@ import org.pdfbox.pdmodel.common.*;
  */
 public class PdfTools {
 
-  public static class DumpBoxes implements PdfPageTransform {
-    public void transform(PdfDocument pdfDocument, PDPage pdfPage) throws IOException {
+  public static class DumpBoxes extends IdentityPdfPageTransform {
+    public void transform(PdfDocument pdfDocument, PdfPage pdfPage) throws IOException {
       System.out.println("[begin boxes]");
       PdfTools.dump("Art box", pdfPage.getArtBox());
       PdfTools.dump("Bleed box", pdfPage.getBleedBox());
@@ -61,10 +61,11 @@ public class PdfTools {
       System.out.println("[end boxes]");
     }
   }
-  
-  public static class DumpMetadata implements PdfTransform {
+
+  public static class DumpMetadata extends IdentityPdfTransform {
     public void transform(PdfDocument pdfDocument) throws IOException {
       System.out.println("[begin metadata]");
+      System.out.println("Number of pages: " + pdfDocument.getNumberOfPages());
       dump("Creation date", pdfDocument.getCreationDate().getTime());
       dump("Modification date", pdfDocument.getModificationDate().getTime());
       dump("Author", pdfDocument.getAuthor());
@@ -73,16 +74,16 @@ public class PdfTools {
       dump("Producer", pdfDocument.getProducer());
       dump("Subject", pdfDocument.getSubject());
       dump("Title", pdfDocument.getTitle());
-      System.out.println("Metadata (as string):");
+      System.out.println("Metadata (as string):"); // newline; typically large
       System.out.println(pdfDocument.getMetadataAsString());
       System.out.println("[end metadata]");
     }
   }
 
-  public static class DumpNumberedPageStream implements PdfPageTransform {
-    public void transform(PdfDocument pdfDocument, PDPage pdfPage) throws IOException {
+  public static class DumpNumberedPageStream extends IdentityPdfPageTransform {
+    public void transform(PdfDocument pdfDocument, PdfPage pdfPage) throws IOException {
       System.out.println("[begin numbered page stream]");
-      Iterator tokens = pdfPage.getContents().getStream().getStreamTokens().iterator();
+      Iterator tokens = pdfPage.getStreamTokenIterator();
       for (int tok = 0 ; tokens.hasNext() ; ++tok) {
         System.out.println(Integer.toString(tok) + "\t" + tokens.next().toString());
       }
@@ -90,7 +91,7 @@ public class PdfTools {
     }
   }
 
-//  public static class DumpAnnotations implements PdfPageTransform {
+//  public static class DumpAnnotations extends IdentityPdfPageTransform {
 //
 //    public void transform(PdfDocument pdfDocument,
 //                          PDPage pdfPage)
@@ -109,25 +110,25 @@ public class PdfTools {
 //
 //  }
 
-  public static class DumpPageDictionary implements PdfPageTransform {
-    public void transform(PdfDocument pdfDocument, PDPage pdfPage) throws IOException {
+  public static class DumpPageDictionary extends IdentityPdfPageTransform {
+    public void transform(PdfDocument pdfDocument, PdfPage pdfPage) throws IOException {
       System.out.println("[begin page dictionary]");
-      dump(pdfPage.getCOSDictionary());
+      dump(pdfPage.getDictionary());
       System.out.println("[end page dictionary]");
     }
   }
-  
-  public static class DumpPageStream implements PdfPageTransform {
-    public void transform(PdfDocument pdfDocument, PDPage pdfPage) throws IOException {
+
+  public static class DumpPageStream extends IdentityPdfPageTransform {
+    public void transform(PdfDocument pdfDocument, PdfPage pdfPage) throws IOException {
       System.out.println("[begin page stream]");
-      for (Iterator tokens = pdfPage.getContents().getStream().getStreamTokens().iterator() ; tokens.hasNext() ; ) {
+      for (Iterator tokens = pdfPage.getStreamTokenIterator() ; tokens.hasNext() ; ) {
         System.out.println("\t" + tokens.next().toString());
       }
-      System.out.println("[end page stream]");      
+      System.out.println("[end page stream]");
     }
   }
-  
-  public static class DumpTrailer implements PdfTransform {
+
+  public static class DumpTrailer extends IdentityPdfTransform {
     public void transform(PdfDocument pdfDocument) throws IOException {
       System.out.println("[begin trailer]");
       dump(pdfDocument.getTrailer());
@@ -136,11 +137,11 @@ public class PdfTools {
   }
 
   public static class ReiteratePageStream implements PdfPageTransform {
-    public void transform(PdfDocument pdfDocument, PDPage pdfPage) throws IOException {
-      PDStream resultStream = new PDStream(pdfDocument.getPDDocument());
+    public void transform(PdfDocument pdfDocument, PdfPage pdfPage) throws IOException {
+      PDStream resultStream = pdfDocument.makePdStream();
       OutputStream outputStream = resultStream.createOutputStream();
       ContentStreamWriter tokenWriter = new ContentStreamWriter(outputStream);
-      tokenWriter.writeTokens(pdfPage.getContents().getStream().getStreamTokens());
+      tokenWriter.writeTokens(pdfPage.getStreamTokens());
       pdfPage.setContents(resultStream);
     }
   }

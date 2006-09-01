@@ -1,5 +1,5 @@
 /*
- * $Id: AmericanPhysiologicalSocietyPdfTransform.java,v 1.8 2006-08-25 23:21:33 thib_gc Exp $
+ * $Id: AmericanPhysiologicalSocietyPdfTransform.java,v 1.9 2006-09-01 06:47:00 thib_gc Exp $
  */
 
 /*
@@ -39,7 +39,6 @@ import org.apache.commons.lang.StringUtils;
 import org.lockss.filter.pdf.*;
 import org.lockss.util.*;
 import org.pdfbox.cos.*;
-import org.pdfbox.pdmodel.PDPage;
 import org.pdfbox.util.PDFOperator;
 
 // The following Javadoc comment needs rewriting
@@ -57,9 +56,9 @@ public class AmericanPhysiologicalSocietyPdfTransform extends ConditionalPdfTran
   protected static class FirstPage {
 
     public static class FixHyperlink implements PdfPageTransform {
-      public void transform(PdfDocument pdfDocument, PDPage pdfPage) throws IOException {
-        int s = ((COSArray)pdfPage.getCOSDictionary().getDictionaryObject(COSName.ANNOTS)).size();
-        COSArray array = (COSArray)pdfPage.getCOSDictionary().getObjectFromPath("Annots/[" + (s-1) + "]/Rect");
+      public void transform(PdfDocument pdfDocument, PdfPage pdfPage) throws IOException {
+        int s = ((COSArray)pdfPage.getDictionary().getDictionaryObject(COSName.ANNOTS)).size();
+        COSArray array = (COSArray)pdfPage.getDictionary().getObjectFromPath("Annots/[" + (s-1) + "]/Rect");
         array.set(1, new COSFloat(300.0f));
         array.set(3, new COSFloat(525.0f));
       }
@@ -203,8 +202,8 @@ public class AmericanPhysiologicalSocietyPdfTransform extends ConditionalPdfTran
     }
 
     public static class FixHyperlink implements PdfPageTransform {
-      public void transform(PdfDocument pdfDocument, PDPage pdfPage) throws IOException {
-        COSArray array = (COSArray)pdfPage.getCOSDictionary().getObjectFromPath("Annots/[0]/Rect");
+      public void transform(PdfDocument pdfDocument, PdfPage pdfPage) throws IOException {
+        COSArray array = (COSArray)pdfPage.getDictionary().getObjectFromPath("Annots/[0]/Rect");
         array.set(1, new COSFloat(300.0f));
         array.set(3, new COSFloat(525.0f));
       }
@@ -287,7 +286,7 @@ public class AmericanPhysiologicalSocietyPdfTransform extends ConditionalPdfTran
 //  /* Inherit documentatiion */
 //  public boolean identify(PdfDocument pdfDocument) throws IOException {
 //    return PdfPageTransformUtil.runPdfTokenSequenceMatcher(new FirstPageTransform(),
-//                                                           (PDPage)pdfDocument.getPageIterator().next());
+//                                                           (PdfPage)pdfDocument.getPageIterator().next());
 //  }
 
   /**

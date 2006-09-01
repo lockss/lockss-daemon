@@ -1,5 +1,5 @@
 /*
- * $Id: TransformFirstPage.java,v 1.2 2006-09-01 06:47:00 thib_gc Exp $
+ * $Id: ConditionalPdfPageTransform.java,v 1.1 2006-09-01 06:47:00 thib_gc Exp $
  */
 
 /*
@@ -33,31 +33,51 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.filter.pdf;
 
 import java.io.IOException;
-import java.util.ListIterator;
 
-import org.apache.commons.collections.iterators.SingletonListIterator;
-import org.lockss.util.PdfDocument;
+import org.lockss.util.*;
 
 /**
- * <p>A PDF transform that applies a PDF page transform to the
- * first page of the PDF document.</p>
+ * <p>A PDF page transform decorator that applies a given PDF page
+ * transform only if the PDF page to be transformed is recognized by
+ * the {@link #identify} method.</p>
  * @author Thib Guicherd-Callin
  */
-public class TransformFirstPage extends TransformSelectedPages {
+public abstract class ConditionalPdfPageTransform implements PdfPageTransform {
 
   /**
-   * <p>Builds a new PDF transform with the given PDF page
-   * transform.</p>
-   * @param pdfPageTransform A PDF page transform.
+   * <p>The PDF page transform to be applied conditionally.</p>
    */
-  public TransformFirstPage(PdfPageTransform pdfPageTransform) {
-    super(pdfPageTransform);
+  protected PdfPageTransform pdfPageTransform;
+
+  /**
+   * <p>Decorates the given PDF page transform.</p>
+   * @param pdfPageTransform A PDF page transform to be applied
+   *                         conditionally.
+   */
+  public ConditionalPdfPageTransform(PdfPageTransform pdfPageTransform) {
+    this.pdfPageTransform = pdfPageTransform;
   }
 
+  /**
+   * <p>Determines if the argument page should be transformed by this
+   * page transform.</p>
+   * @param pdfDocument A PDF document (from {@link #transform}).
+   * @param pdfPage     A PDF page (from {@link #transform}).
+   * @return True if the underlying PDF page transform should be
+   *         applied, false otherwise.
+   * @throws IOException if any processing error occurs.
+   */
+  public abstract boolean identify(PdfDocument pdfDocument,
+                                   PdfPage pdfPage)
+      throws IOException;
+
   /* Inherit documentation */
-  protected ListIterator /* of PdfPage */ getSelectedPages(PdfDocument pdfDocument)
+  public void transform(PdfDocument pdfDocument,
+                        PdfPage pdfPage)
       throws IOException {
-    return new SingletonListIterator(pdfDocument.getPage(0));
+    if (identify(pdfDocument, pdfPage)) {
+      pdfPageTransform.transform(pdfDocument, pdfPage);
+    }
   }
 
 }

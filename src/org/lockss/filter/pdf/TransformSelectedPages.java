@@ -1,5 +1,5 @@
 /*
- * $Id: TransformSelectedPages.java,v 1.1 2006-08-23 19:14:07 thib_gc Exp $
+ * $Id: TransformSelectedPages.java,v 1.2 2006-09-01 06:47:00 thib_gc Exp $
  */
 
 /*
@@ -33,10 +33,9 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.filter.pdf;
 
 import java.io.IOException;
-import java.util.Iterator;
+import java.util.*;
 
-import org.lockss.util.PdfDocument;
-import org.pdfbox.pdmodel.PDPage;
+import org.lockss.util.*;
 
 /**
  * <p>A PDF transform that applies a PDF page transform to selected
@@ -63,7 +62,7 @@ public abstract class TransformSelectedPages implements PdfTransform {
   /* Inherit documentation */
   public void transform(PdfDocument pdfDocument) throws IOException {
     for (Iterator iter = getSelectedPages(pdfDocument) ; iter.hasNext() ; ) {
-      pdfPageTransform.transform(pdfDocument, (PDPage)iter.next());
+      pdfPageTransform.transform(pdfDocument, (PdfPage)iter.next());
     }
   }
 
@@ -71,9 +70,10 @@ public abstract class TransformSelectedPages implements PdfTransform {
    * <p>Gets an iterator of the pages selected for transformation by
    * this transform.</p>
    * @param pdfDocument A PDF document.
-   * @return An iterator of PDF pages ({@link PDPage}).
+   * @return An iterator of PDF pages ({@link PdfPage}).
    * @throws IOException if any processing error occurs.
    */
-  protected abstract Iterator getSelectedPages(PdfDocument pdfDocument) throws IOException;
+  protected abstract ListIterator /* of PdfPage */ getSelectedPages(PdfDocument pdfDocument)
+      throws IOException;
 
 }

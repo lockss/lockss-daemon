@@ -1,5 +1,5 @@
 /*
- * $Id: PdfOperatorProcessor.java,v 1.2 2006-08-24 01:19:34 thib_gc Exp $
+ * $Id: PdfOperatorProcessor.java,v 1.3 2006-09-01 06:47:00 thib_gc Exp $
  */
 
 /*
@@ -50,11 +50,21 @@ import org.pdfbox.util.operator.OperatorProcessor;
  */
 public abstract class PdfOperatorProcessor extends OperatorProcessor {
 
-  /* Inherit documentation */
+  /**
+   * <p>Inherited from {@link OperatorProcessor}; simply calls
+   * {@link #process(PDFOperator, List, PdfPageStreamTransform)}
+   * with the context being the current PDF page stream transform.</p>
+   * @param operator A PDF operator being processed.
+   * @param operands The operands that the operator applies to.
+   * @see #process(PDFOperator, List, PdfPageStreamTransform)
+   * @see OperatorProcessor#getContext
+   */
   public void process(PDFOperator operator,
                       List arguments)
       throws IOException {
-    process(operator, arguments, (PdfPageStreamTransform)getContext());
+    process(operator,
+            arguments,
+            (PdfPageStreamTransform)getContext());
   }
 
   /**
@@ -66,6 +76,7 @@ public abstract class PdfOperatorProcessor extends OperatorProcessor {
    * @param pdfPageStreamTransform The PDF page stream transform being
    *                               applied.
    * @throws IOException if any processing error occurs.
+   * @see #process(PDFOperator, List)
    */
   public abstract void process(PDFOperator operator,
                                List arguments,
