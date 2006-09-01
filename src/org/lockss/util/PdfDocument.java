@@ -1,5 +1,5 @@
 /*
- * $Id: PdfDocument.java,v 1.6 2006-09-01 06:47:00 thib_gc Exp $
+ * $Id: PdfDocument.java,v 1.7 2006-09-01 22:15:23 thib_gc Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.io.*;
 import java.util.*;
 
 import org.apache.commons.collections.*;
+import org.apache.commons.collections.iterators.ListIteratorWrapper;
 import org.apache.commons.collections.list.TransformedList;
 import org.pdfbox.cos.*;
 import org.pdfbox.exceptions.COSVisitorException;
@@ -166,25 +167,19 @@ public class PdfDocument {
     return getPdDocument().getNumberOfPages();
   }
 
-  public PDPage getPdPage(int index) throws IOException {
-    return (PDPage)getAllPages().get(index);
-  }
-
   public PdfPage getPage(int index) throws IOException {
     return new PdfPage(getPdPage(index));
   }
 
-  public ListIterator /* of PDPage */ getPdPageIterator() throws IOException {
-    return getAllPages().listIterator();
-  }
-
   public ListIterator /* of PdfPage */ getPageIterator() throws IOException {
-    return ListUtils.transformedList(getAllPages(),
-                                     new Transformer() {
-                                       public Object transform(Object obj) {
-                                         return new PdfPage((PDPage)obj);
-                                       }
-                                     }).listIterator();
+    List pdfPages = ListUtils.transformedList(new ArrayList(),
+                                              new Transformer() {
+                                                public Object transform(Object obj) {
+                                                  return new PdfPage((PDPage)obj);
+                                                }
+                                              });
+    pdfPages.addAll(getPdPages());
+    return pdfPages.listIterator();
   }
 
   /**
@@ -206,6 +201,14 @@ public class PdfDocument {
    */
   public PDFParser getPdfParser() {
     return pdfParser;
+  }
+
+  public PDPage getPdPage(int index) throws IOException {
+    return (PDPage)getPdPages().get(index);
+  }
+
+  public ListIterator /* of PDPage */ getPdPageIterator() throws IOException {
+    return getPdPages().listIterator();
   }
 
   /**
@@ -429,10 +432,6 @@ public class PdfDocument {
     getDocumentInformation().setTitle(title);
   }
 
-  protected List getAllPages() throws IOException {
-    return getDocumentCatalog().getAllPages();
-  }
-
   protected PDDocumentCatalog getDocumentCatalog() throws IOException {
     return getPdDocument().getDocumentCatalog();
   }
@@ -443,6 +442,10 @@ public class PdfDocument {
 
   protected PDMetadata getMetadata() throws IOException {
     return getDocumentCatalog().getMetadata();
+  }
+
+  protected List getPdPages() throws IOException {
+    return getDocumentCatalog().getAllPages();
   }
 
   protected void setMetadata(PDMetadata metadata) throws IOException {
