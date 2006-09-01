@@ -1,5 +1,5 @@
 /*
- * $Id: PdfTools.java,v 1.7 2006-09-01 06:47:00 thib_gc Exp $
+ * $Id: PdfTools.java,v 1.8 2006-09-01 22:07:15 thib_gc Exp $
  */
 
 /*
@@ -204,7 +204,6 @@ public class PdfTools {
       }
       else if (args[arg].equals("-rewrite")) {
         ignoreResult = false;
-        pdfPageTransform.add(new ReiteratePageStream());
       }
       else if (args[arg].equals("-trailer")) {
         pdfTransform.add(new DumpTrailer());
@@ -215,6 +214,9 @@ public class PdfTools {
     }
 
     pdfTransform.add(new TransformEachPage(pdfPageTransform));
+    if (!ignoreResult) {
+      pdfTransform.add(new TransformEachPage(new ReiteratePageStream()));
+    }
 
     try {
       JFileChooser chooser = new JFileChooser();
