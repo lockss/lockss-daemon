@@ -1,5 +1,5 @@
 /*
- * $Id: MockPdfDocument.java,v 1.1 2006-09-01 07:32:52 thib_gc Exp $
+ * $Id: MockPdfDocument.java,v 1.2 2006-09-01 23:55:37 thib_gc Exp $
  */
 
 /*
@@ -187,10 +187,6 @@ public class MockPdfDocument extends PdfDocument {
     throw new UnsupportedOperationException();
   }
 
-  protected List getAllPages() throws IOException {
-    throw new UnsupportedOperationException();
-  }
-
   protected PDDocumentCatalog getDocumentCatalog() throws IOException {
     throw new UnsupportedOperationException();
   }
@@ -200,6 +196,10 @@ public class MockPdfDocument extends PdfDocument {
   }
 
   protected PDMetadata getMetadata() throws IOException {
+    throw new UnsupportedOperationException();
+  }
+
+  protected List getPdPages() throws IOException {
     throw new UnsupportedOperationException();
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TransformSelectedPagesTester.java,v 1.1 2006-09-01 07:32:52 thib_gc Exp $
+ * $Id: TransformSelectedPagesTester.java,v 1.2 2006-09-01 23:55:37 thib_gc Exp $
  */
 
 /*
@@ -35,7 +35,7 @@ package org.lockss.filter.pdf;
 import java.io.IOException;
 import java.util.*;
 
-import org.apache.commons.collections.iterators.ArrayListIterator;
+import org.apache.commons.collections.iterators.ObjectArrayListIterator;
 import org.apache.commons.lang.ArrayUtils;
 import org.lockss.test.*;
 import org.lockss.util.*;
@@ -56,10 +56,11 @@ public abstract class TransformSelectedPagesTester extends LockssTestCase {
     TransformSelectedPages transform = makeInstance(new IdentityPdfPageTransform());
     MockPdfDocument mockPdfDocument = new MockPdfDocument() {
       public PdfPage getPage(int index) { return pages[index]; }
-      public ListIterator getPageIterator() { return new ArrayListIterator(pages); }
+      public ListIterator getPageIterator() { return new ObjectArrayListIterator(pages); }
     };
     ListIterator selected = transform.getSelectedPages(mockPdfDocument);
 
+    // Check that selected pages are within range and used only once
     List remember = new ArrayList();
     while (selected.hasNext()) {
       PdfPage page = (PdfPage)selected.next();

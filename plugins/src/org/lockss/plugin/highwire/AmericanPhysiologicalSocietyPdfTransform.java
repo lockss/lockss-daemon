@@ -1,5 +1,5 @@
 /*
- * $Id: AmericanPhysiologicalSocietyPdfTransform.java,v 1.9 2006-09-01 06:47:00 thib_gc Exp $
+ * $Id: AmericanPhysiologicalSocietyPdfTransform.java,v 1.10 2006-09-01 23:55:37 thib_gc Exp $
  */
 
 /*
@@ -139,14 +139,14 @@ public class AmericanPhysiologicalSocietyPdfTransform extends ConditionalPdfTran
 
     public static boolean recognizeEndTextObject(Object[] pdfTokens) {
       boolean ret = pdfTokens.length == LENGTH
-      && PdfUtil.isEndTextObjectOperator(pdfTokens[29])
-      && PdfUtil.isBeginTextObjectOperator(pdfTokens[0])
+      && PdfUtil.isEndTextObject(pdfTokens[29])
+      && PdfUtil.isBeginTextObject(pdfTokens[0])
       && PdfUtil.isPdfFloat(pdfTokens[9])
-      && PdfUtil.isShowTextOperator(pdfTokens[12])
+      && PdfUtil.isShowText(pdfTokens[12])
       && PdfUtil.isPdfString(pdfTokens[11])
-      && PdfUtil.isShowTextOperator(pdfTokens[21])
+      && PdfUtil.isShowText(pdfTokens[21])
       && PdfUtil.isPdfString(pdfTokens[20])
-      && PdfUtil.isShowTextOperator(pdfTokens[28])
+      && PdfUtil.isShowText(pdfTokens[28])
       && PdfUtil.isPdfString(pdfTokens[27])
       && PdfUtil.getPdfString(pdfTokens[27]).equals("Downloaded from ");
       logger.debug3("FirstPageShowTextProcessor candidate match: " + Boolean.toString(ret));
@@ -161,20 +161,20 @@ public class AmericanPhysiologicalSocietyPdfTransform extends ConditionalPdfTran
 
       public boolean identify(Object[] pdfTokens) {
         boolean ret = pdfTokens.length == LENGTH
-        && PdfUtil.isEndTextObjectOperator(pdfTokens[51])
-        && PdfUtil.isBeginTextObjectOperator(pdfTokens[0])
+        && PdfUtil.isEndTextObject(pdfTokens[51])
+        && PdfUtil.isBeginTextObject(pdfTokens[0])
         && PdfUtil.isPdfFloat(pdfTokens[9])
-        && PdfUtil.isShowTextOperator(pdfTokens[12])
+        && PdfUtil.isShowText(pdfTokens[12])
         && PdfUtil.isPdfString(pdfTokens[11])
-        && PdfUtil.isEndTextObjectOperator(pdfTokens[17])
-        && PdfUtil.isBeginTextObjectOperator(pdfTokens[20])
+        && PdfUtil.isEndTextObject(pdfTokens[17])
+        && PdfUtil.isBeginTextObject(pdfTokens[20])
         && PdfUtil.isPdfFloat(pdfTokens[29])
-        && PdfUtil.isShowTextOperator(pdfTokens[32])
+        && PdfUtil.isShowText(pdfTokens[32])
         && PdfUtil.isPdfString(pdfTokens[31])
-        && PdfUtil.isEndTextObjectOperator(pdfTokens[35])
-        && PdfUtil.isBeginTextObjectOperator(pdfTokens[38])
+        && PdfUtil.isEndTextObject(pdfTokens[35])
+        && PdfUtil.isBeginTextObject(pdfTokens[38])
         && PdfUtil.isPdfFloat(pdfTokens[47])
-        && PdfUtil.isShowTextOperator(pdfTokens[50])
+        && PdfUtil.isShowText(pdfTokens[50])
         && PdfUtil.isPdfString(pdfTokens[49])
         && PdfUtil.getPdfString(pdfTokens[49]).equals("Downloaded from ");
         logger.debug3("OtherPagesEndTextObjectProcessor candidate match: " + Boolean.toString(ret));
@@ -283,12 +283,6 @@ public class AmericanPhysiologicalSocietyPdfTransform extends ConditionalPdfTran
    */
   private static CompoundPdfTransform underlyingTransform;
 
-//  /* Inherit documentatiion */
-//  public boolean identify(PdfDocument pdfDocument) throws IOException {
-//    return PdfPageTransformUtil.runPdfTokenSequenceMatcher(new FirstPageTransform(),
-//                                                           (PdfPage)pdfDocument.getPageIterator().next());
-//  }
-
   /**
    * <p>Gets a singleton instance of this class.</p>
    * @return An instance of this class.
@@ -302,24 +296,19 @@ public class AmericanPhysiologicalSocietyPdfTransform extends ConditionalPdfTran
 
   protected static synchronized CompoundPdfTransform makeUnderlyingTransform() throws IOException {
     if (underlyingTransform == null) {
+      // First page
       CompoundPdfPageTransform firstPageTransform = new CompoundPdfPageTransform();
-      firstPageTransform.add(PdfPageStreamTransform.makeTransform(FirstPage.getMutatorProperties()));
+      firstPageTransform.add(new PdfPageStreamTransform(FirstPage.getMutatorProperties()));
       firstPageTransform.add(new FirstPage.FixHyperlink());
+      // Other pages
       CompoundPdfPageTransform otherPagesTransform = new CompoundPdfPageTransform();
-      otherPagesTransform.add(PdfPageStreamTransform.makeTransform(OtherPages.getProperties()));
+      otherPagesTransform.add(new PdfPageStreamTransform(OtherPages.getProperties()));
       otherPagesTransform.add(new OtherPages.FixHyperlink());
+      // Overall
       underlyingTransform = new CompoundPdfTransform();
       underlyingTransform.add(new TransformFirstPage(firstPageTransform));
       underlyingTransform.add(new TransformEachPageExceptFirst(otherPagesTransform));
       underlyingTransform.add(new TransformMetadata());
-//      underlyingTransform.add(new TransformFirstPage(PdfPageStreamTransform.makeTransform(FirstPage.getMutatorProperties())));
-//      underlyingTransform.add(new TransformEachPageExceptFirst(PdfPageStreamTransform.makeTransform(OtherPages.getProperties())));
-//      underlyingTransform.add(new TransformEachPage(new TransformLinkRectangles()));
-//      underlyingTransform.addPdfTransform(new PdfFirstPageTransform(new FirstPageTransform()));
-//      underlyingTransform.addPdfTransform(new PdfEachPageExceptFirstTransform(new OtherPagesTransform()));
-//      underlyingTransform.addPdfTransform(new PdfFirstPageTransform(PdfStringReplacePageTransform.makeTransformStartsWith("This information is current as of ",
-//                                                                                                                          " ",
-//                                                                                                                          true)));
     }
     return underlyingTransform;
   }
