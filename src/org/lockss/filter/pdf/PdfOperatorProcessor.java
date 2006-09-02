@@ -1,5 +1,5 @@
 /*
- * $Id: PdfOperatorProcessor.java,v 1.3 2006-09-01 06:47:00 thib_gc Exp $
+ * $Id: PdfOperatorProcessor.java,v 1.4 2006-09-02 00:18:12 thib_gc Exp $
  */
 
 /*
@@ -54,8 +54,8 @@ public abstract class PdfOperatorProcessor extends OperatorProcessor {
    * <p>Inherited from {@link OperatorProcessor}; simply calls
    * {@link #process(PDFOperator, List, PdfPageStreamTransform)}
    * with the context being the current PDF page stream transform.</p>
-   * @param operator A PDF operator being processed.
-   * @param operands The operands that the operator applies to.
+   * @param operator  A PDF operator being processed.
+   * @param arguments The operands that the operator applies to.
    * @see #process(PDFOperator, List, PdfPageStreamTransform)
    * @see OperatorProcessor#getContext
    */
@@ -71,7 +71,7 @@ public abstract class PdfOperatorProcessor extends OperatorProcessor {
    * <p>Processes the operation (operator and operands) in the context
    * of the given PDF page stream transform.</p>
    * @param operator               A PDF operator being processed.
-   * @param arguments              The operands that the operator
+   * @param operands               The operands that the operator
    *                               applies to.
    * @param pdfPageStreamTransform The PDF page stream transform being
    *                               applied.
@@ -79,7 +79,7 @@ public abstract class PdfOperatorProcessor extends OperatorProcessor {
    * @see #process(PDFOperator, List)
    */
   public abstract void process(PDFOperator operator,
-                               List arguments,
+                               List operands,
                                PdfPageStreamTransform pdfPageStreamTransform)
       throws IOException;
 

@@ -1,5 +1,5 @@
 /*
- * $Id: AmericanPhysiologicalSocietyPdfTransform.java,v 1.10 2006-09-01 23:55:37 thib_gc Exp $
+ * $Id: AmericanPhysiologicalSocietyPdfTransform.java,v 1.11 2006-09-02 00:18:12 thib_gc Exp $
  */
 
 /*
@@ -66,10 +66,10 @@ public class AmericanPhysiologicalSocietyPdfTransform extends ConditionalPdfTran
 
     public static class ModifyEndTextObject extends SimpleOperatorProcessor {
       public void process(PDFOperator operator,
-                          List arguments,
+                          List operands,
                           PdfPageStreamTransform pdfPageStreamTransform)
           throws IOException {
-        super.process(operator, arguments, pdfPageStreamTransform);
+        super.process(operator, operands, pdfPageStreamTransform);
         Object[] pdfTokens = pdfPageStreamTransform.getOutputList().toArray();
         if (recognizeEndTextObject(pdfTokens)) {
           pdfPageStreamTransform.signalChange();
@@ -85,10 +85,10 @@ public class AmericanPhysiologicalSocietyPdfTransform extends ConditionalPdfTran
 
     public static class RecognizeEndTextObject extends SimpleOperatorProcessor {
       public void process(PDFOperator operator,
-                          List arguments,
+                          List operands,
                           PdfPageStreamTransform pdfPageStreamTransform)
           throws IOException {
-        super.process(operator, arguments, pdfPageStreamTransform);
+        super.process(operator, operands, pdfPageStreamTransform);
         Object[] pdfTokens = pdfPageStreamTransform.getOutputList().toArray();
         if (recognizeEndTextObject(pdfTokens)) {
           pdfPageStreamTransform.signalChange();

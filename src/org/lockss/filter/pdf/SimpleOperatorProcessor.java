@@ -1,5 +1,5 @@
 /*
- * $Id: SimpleOperatorProcessor.java,v 1.2 2006-08-24 01:19:34 thib_gc Exp $
+ * $Id: SimpleOperatorProcessor.java,v 1.3 2006-09-02 00:18:12 thib_gc Exp $
  */
 
 /*
@@ -52,10 +52,10 @@ public class SimpleOperatorProcessor extends PdfOperatorProcessor {
 
   /* Inherit documentation */
   public void process(PDFOperator operator,
-                      List arguments,
+                      List operands,
                       PdfPageStreamTransform pdfPageStreamTransform)
       throws IOException {
-    pdfPageStreamTransform.getOutputList().addAll(arguments);
+    pdfPageStreamTransform.getOutputList().addAll(operands);
     pdfPageStreamTransform.getOutputList().add(operator);
   }
 

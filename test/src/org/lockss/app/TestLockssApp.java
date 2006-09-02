@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssApp.java,v 1.4 2006-08-07 07:36:55 tlipkis Exp $
+ * $Id: TestLockssApp.java,v 1.5 2006-09-02 00:18:12 thib_gc Exp $
  */
 
 /*
@@ -114,18 +114,18 @@ public class TestLockssApp extends LockssTestCase {
 
     app.initManagers();
 
-    MockLockssManager mgr1 = (MockLockssManager)app.getManager("mgr_1");
+    MockLockssManager mgr1 = (MockLockssManager)LockssApp.getManager("mgr_1");
     assertTrue(mgr1 instanceof MockMgr1);
     assertEquals(1, mgr1.inited);
     assertEquals(1, mgr1.started);
     assertEquals(0, mgr1.stopped);
-    MockLockssManager mgr3 = (MockLockssManager)app.getManager("mgr_3");
+    MockLockssManager mgr3 = (MockLockssManager)LockssApp.getManager("mgr_3");
     assertTrue(mgr3 instanceof MockMgr3);
     assertEquals(1, mgr3.inited);
     assertEquals(1, mgr3.started);
     assertEquals(0, mgr3.stopped);
     try {
-      app.getManager("mgr_2");
+      LockssApp.getManager("mgr_2");
       fail("mgr_2 shouldn't have been created");
     } catch (IllegalArgumentException e) {
     }
@@ -135,7 +135,7 @@ public class TestLockssApp extends LockssTestCase {
     assertEquals(1, mgr3.stopped);
   }
 
-  static final String mockMgrName = "org.lockss.app.TestLockssApp$MyMockMgr";
+  static final String mockMgrName = MyMockMgr.class.getName();
   static class MyMockMgr implements LockssManager {
     boolean isInited = false;
 

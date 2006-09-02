@@ -1,5 +1,5 @@
 /*
- * $Id: SubsequenceOperatorProcessor.java,v 1.1 2006-08-24 01:19:34 thib_gc Exp $
+ * $Id: SubsequenceOperatorProcessor.java,v 1.2 2006-09-02 00:18:12 thib_gc Exp $
  */
 
 /*
@@ -97,10 +97,10 @@ public abstract class SubsequenceOperatorProcessor extends SimpleOperatorProcess
 
   /* Inherit documentation */
   public void process(PDFOperator operator,
-                      List arguments,
+                      List operands,
                       PdfPageStreamTransform pdfPageStreamTransform)
       throws IOException {
-    super.process(operator, arguments, pdfPageStreamTransform);
+    super.process(operator, operands, pdfPageStreamTransform);
     int subsequenceLength = subsequenceLength();
     List outputList = pdfPageStreamTransform.getOutputList();
     int outputListSize = outputList.size();

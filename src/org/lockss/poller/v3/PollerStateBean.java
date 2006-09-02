@@ -1,5 +1,5 @@
 /*
- * $Id: PollerStateBean.java,v 1.13 2006-08-22 20:33:07 smorabito Exp $
+ * $Id: PollerStateBean.java,v 1.14 2006-09-02 00:18:11 thib_gc Exp $
  */
 
 /*
@@ -229,11 +229,11 @@ public class PollerStateBean implements LockssSerializable {
   public long getPollDeadline() {
     return pollDeadline;
   }
-  
+
   public void setVoteDeadline(long l) {
     this.voteDeadline = l;
   }
-  
+
   public long getVoteDeadline() {
     return this.voteDeadline;
   }
@@ -253,20 +253,20 @@ public class PollerStateBean implements LockssSerializable {
   public void setQuorum(int quorum) {
     this.quorum = quorum;
   }
-  
+
   public boolean hashStarted() {
     return hashStarted;
   }
-  
+
   public void hashStarted(boolean b) {
     this.hashStarted = b;
   }
-  
+
   // Simple counter
   public void addVotedPeer(PeerIdentity id) {
     votedPeers.add(id);
   }
-  
+
   public Collection getVotedPeers() {
     return votedPeers;
   }
@@ -285,20 +285,20 @@ public class PollerStateBean implements LockssSerializable {
 
   /**
    * Return true if the V3Poller should proceed to request votes.
-   * 
+   *
    * @return true if the poller should proceed to requesting votes.
    */
   public boolean sufficientPeers() {
     return nomineeCounter >= getQuorum();
   }
-  
+
   /**
    * Return the ordered list of hashed blocks.
    */
   public ArrayList getHashedBlocks() {
     return hashedBlocks;
   }
-  
+
   public void addHashBlock(HashBlock hb) {
     hashedBlocks.add(hb);
   }
@@ -319,25 +319,23 @@ public class PollerStateBean implements LockssSerializable {
   }
 
   /**
+   * Set the status of this poll
    * @deprecated Use setStatus instead.
-   * @param Set the status of this poll
    */
   public void setStatusString(String s) {
     this.statusString = s;
   }
-  
+
   /**
    * Return the status of this poll.
-   * 
-   * @return
    */
   public int getStatus() {
     return status;
   }
-  
+
   /**
    * Set the status of this poll.
-   * 
+   *
    * @param s Current status
    */
   public void setStatus(int s) {
@@ -347,7 +345,7 @@ public class PollerStateBean implements LockssSerializable {
   public RepairQueue getRepairQueue() {
     return repairQueue;
   }
-  
+
   public TallyStatus getTallyStatus() {
     return tallyStatus;
   }
@@ -360,34 +358,34 @@ public class PollerStateBean implements LockssSerializable {
     public Set disagreedUrls;
     public Set tooCloseUrls;
     public Set noQuorumUrls;
-    
+
     public TallyStatus() {
       agreedUrls = new HashSet();
       disagreedUrls = new HashSet();
       tooCloseUrls = new HashSet();
       noQuorumUrls = new HashSet();
     }
-    
+
     public void addAgreedUrl(String url) {
       removeUrl(url);
       agreedUrls.add(url);
     }
-    
+
     public void addDisagreedUrl(String url) {
       removeUrl(url);
       disagreedUrls.add(url);
     }
-    
+
     public void addTooCloseUrl(String url) {
       removeUrl(url);
       tooCloseUrls.add(url);
     }
-    
+
     public void addNoQuorumUrl(String url) {
       removeUrl(url);
       noQuorumUrls.add(url);
     }
-    
+
     private void removeUrl(String url) {
       agreedUrls.remove(url);
       disagreedUrls.remove(url);
@@ -395,7 +393,7 @@ public class PollerStateBean implements LockssSerializable {
       noQuorumUrls.remove(url);
     }
   }
-  
+
   /**
    * Simple object to hold status for a repair.
    */
@@ -428,12 +426,12 @@ public class PollerStateBean implements LockssSerializable {
       this.repairFromPublisher = false;
       this.repairFrom = repairFrom;
     }
-    
+
     public void setRepairFromPublisher() {
       this.repairFrom = null;
       this.repairFromPublisher = true;
     }
-    
+
     public void setDeletedFile() {
       this.repairFromPublisher = false;
       this.repairFrom = null;
@@ -447,16 +445,16 @@ public class PollerStateBean implements LockssSerializable {
     public void setUrl(String url) {
       this.url = url;
     }
-    
+
     public boolean isDeletedFile() {
       return this.deletedFile;
     }
-    
+
     public boolean isRepairedFromPublisher() {
       return this.repairFromPublisher;
     }
   }
-  
+
   /**
    * Collection of repairs, active and completed.
    */
@@ -480,11 +478,11 @@ public class PollerStateBean implements LockssSerializable {
     public synchronized void addActiveRepair(String url, Repair r) {
       activeRepairs.put(url, r);
     }
-    
+
     public synchronized Repair getRepairForUrl(String url) {
       return (Repair)activeRepairs.get(url);
     }
-    
+
     public synchronized void addActiveRepair(String url,
                                              PeerIdentity repairFrom,
                                              LinkedHashMap votesForBlock) {
@@ -510,7 +508,7 @@ public class PollerStateBean implements LockssSerializable {
       activeRepairs.remove(url);
       completedRepairs.add(repair);
     }
-    
+
     // Currently only used when deleting a file from the repository
     // after losing a tally on a block.
     public synchronized void addCompletedRepair(String url) {
