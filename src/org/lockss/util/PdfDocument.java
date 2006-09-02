@@ -1,5 +1,5 @@
 /*
- * $Id: PdfDocument.java,v 1.7 2006-09-01 22:15:23 thib_gc Exp $
+ * $Id: PdfDocument.java,v 1.8 2006-09-02 06:47:21 thib_gc Exp $
  */
 
 /*
@@ -248,7 +248,7 @@ public class PdfDocument {
   /**
    * <p>Instantiates a new {@link PDStream} instance based on this PDF
    * document.</p>
-   * @return A newly instantiated {@PDStream} instance.
+   * @return A newly instantiated {@link PDStream} instance.
    * @throws IOException if any processing error occurs.
    * @see PDStream#PDStream(PDDocument)
    */
