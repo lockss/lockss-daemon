@@ -1,5 +1,5 @@
 /*
- * $Id: SplitOperatorProcessor.java,v 1.3 2006-09-02 00:18:12 thib_gc Exp $
+ * $Id: SplitOperatorProcessor.java,v 1.4 2006-09-02 06:34:17 thib_gc Exp $
  */
 
 /*
@@ -53,6 +53,11 @@ import org.pdfbox.util.PDFOperator;
  * "begin text object", and the operator processor for "end text
  * object" could merge with or without replacement based on a
  * condition derived from the contents of the output sublist.</p>
+ * <p>{@link SplitOperatorProcessor} instances, like
+ * {@link SimpleOperatorProcessor} instances, <em>must</em> have a
+ * no-argument constructor, and are instantiated once per key
+ * associated with their class name during a given
+ * {@link PdfPageStreamTransform} instantiation.</p>
  * @author Thib Guicherd-Callin
  * @see PdfPageStreamTransform#splitOutputList
  * @see PdfPageStreamTransform#mergeOutputList()

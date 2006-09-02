@@ -1,5 +1,5 @@
 /*
- * $Id: PdfPageStreamTransform.java,v 1.4 2006-09-01 23:55:37 thib_gc Exp $
+ * $Id: PdfPageStreamTransform.java,v 1.5 2006-09-02 06:34:17 thib_gc Exp $
  */
 
 /*
@@ -90,6 +90,11 @@ import org.pdfbox.util.operator.OperatorProcessor;
  * used instead of the current top of the stack, which is discarded.
  * This is useful to provide a transformed result for an entire
  * subpart of the stream previously isolated with a split.</p>
+ * <p>{@link PdfOperatorProcessor} instances, like
+ * {@link OperatorProcessor} instances, <em>must</em> have a
+ * no-argument constructor, and are instantiated once per key
+ * associated with their class name during a given
+ * {@link PdfPageStreamTransform} instantiation.</p>
  * @author Thib Guicherd-Callin
  * @see PDFStreamEngine
  * @see PdfOperatorProcessor

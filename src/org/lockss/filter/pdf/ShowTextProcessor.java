@@ -1,5 +1,5 @@
 /*
- * $Id: ShowTextProcessor.java,v 1.4 2006-09-02 00:18:12 thib_gc Exp $
+ * $Id: ShowTextProcessor.java,v 1.5 2006-09-02 06:34:17 thib_gc Exp $
  */
 
 /*
@@ -45,9 +45,10 @@ import org.pdfbox.util.operator.OperatorProcessor;
  * operator (<code>Tj</code>), replacing the operand string by
  * another conditionally.</p>
  * <p>{@link ShowTextProcessor} instances, like
- * {@link OperatorProcessor} instances, are only instantiated once
- * per instantiation of a {@link PdfPageStreamTransform}, and should
- * have a no-argument constructor.</p>
+ * {@link SimpleOperatorProcessor} instances, <em>must</em> have a
+ * no-argument constructor, and are instantiated once per key
+ * associated with their class name during a given
+ * {@link PdfPageStreamTransform} instantiation.</p>
  * @author Thib Guicherd-Callin
  * @see PdfUtil#SHOW_TEXT
  */

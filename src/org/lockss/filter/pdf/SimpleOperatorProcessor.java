@@ -1,5 +1,5 @@
 /*
- * $Id: SimpleOperatorProcessor.java,v 1.3 2006-09-02 00:18:12 thib_gc Exp $
+ * $Id: SimpleOperatorProcessor.java,v 1.4 2006-09-02 06:34:17 thib_gc Exp $
  */
 
 /*
@@ -43,9 +43,10 @@ import org.pdfbox.util.operator.OperatorProcessor;
  * operator through to the PDF page stream transform's output list
  * unconditionally.</p>
  * <p>{@link SimpleOperatorProcessor} instances, like
- * {@link OperatorProcessor} instances, are only instantiated once
- * per instantiation of a {@link PdfPageStreamTransform}, and should
- * have a no-argument constructor.</p>
+ * {@link PdfOperatorProcessor} instances, <em>must</em> have a
+ * no-argument constructor, and are instantiated once per key
+ * associated with their class name during a given
+ * {@link PdfPageStreamTransform} instantiation.</p>
  * @author Thib Guicherd-Callin
  */
 public class SimpleOperatorProcessor extends PdfOperatorProcessor {
