@@ -1,5 +1,5 @@
 /*
- * $Id: FuncLockssHttpClient.java,v 1.8 2006-09-03 22:33:11 tlipkis Exp $
+ * $Id: FuncLockssHttpClient.java,v 1.9 2006-09-03 22:37:12 tlipkis Exp $
  */
 
 /*
@@ -654,10 +654,5 @@ public class FuncLockssHttpClient extends LockssTestCase {
       log.debug("Aborting conn");
       conn.abort();
     }
-  }
-
-  public static void main(String[] argv) {
-    String[] testCaseList = {FuncLockssHttpClient.class.getName()};
-    junit.swingui.TestRunner.main(testCaseList);
   }
 }
