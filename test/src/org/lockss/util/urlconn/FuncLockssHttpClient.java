@@ -1,5 +1,5 @@
 /*
- * $Id: FuncLockssHttpClient.java,v 1.7 2006-08-10 04:31:45 dshr Exp $
+ * $Id: FuncLockssHttpClient.java,v 1.8 2006-09-03 22:33:11 tlipkis Exp $
  */
 
 /*
@@ -255,15 +255,19 @@ public class FuncLockssHttpClient extends LockssTestCase {
     conn.execute();
     aborter.cancel();
     InetSocketAddress client = th.getClient(0);
+    log.debug("Connection from client: " + client.getAddress());
     assertEquals(InetAddress.getByName("127.0.0.1"), client.getAddress());
     conn.release();
     th.stopServer();
     assertEquals(1, th.getNumConnects());
   }
 
-  /* XXX disabled because OpenBSD won't let you bind this */
-  public void XXXtestBindLocalAddress() throws Exception {
-    String local ="127.3.42.6";
+  public void testBindLocalAddress() throws Exception {
+    // OpenBSD does not allow binding arbitrary loopback addresses
+    // (12.7.x.x.x) that haven't explicitly been configured.  Use machine's
+    // real address to test local address binding
+    InetAddress lh = InetAddress.getLocalHost();
+    String local = lh.getHostAddress();
     int port = TcpTestUtil.findUnboundTcpPort();
     ServerSocket server = new ServerSocket(port);
     ServerThread th = new ServerThread(server);
@@ -277,6 +281,7 @@ public class FuncLockssHttpClient extends LockssTestCase {
     conn.execute();
     aborter.cancel();
     InetSocketAddress client = th.getClient(0);
+    log.debug("Connection from client: " + client.getAddress());
     assertEquals(InetAddress.getByName(local), client.getAddress());
     conn.release();
     th.stopServer();
@@ -649,5 +654,10 @@ public class FuncLockssHttpClient extends LockssTestCase {
       log.debug("Aborting conn");
       conn.abort();
     }
+  }
+
+  public static void main(String[] argv) {
+    String[] testCaseList = {FuncLockssHttpClient.class.getName()};
+    junit.swingui.TestRunner.main(testCaseList);
   }
 }
