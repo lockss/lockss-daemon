@@ -1,5 +1,5 @@
 /*
- * $Id: CompoundPdfPageTransform.java,v 1.2 2006-09-01 06:47:00 thib_gc Exp $
+ * $Id: CompoundPdfPageTransform.java,v 1.3 2006-09-04 07:13:10 thib_gc Exp $
  */
 
 /*
@@ -37,6 +37,11 @@ import java.util.*;
 
 import org.lockss.util.*;
 
+/**
+ * <p>A PDF page transform made of many other PDF page transforms,
+ * applied sequentially.
+ * @author Thib Guicherd-Callin
+ */
 public class CompoundPdfPageTransform implements PdfPageTransform {
 
   /**
