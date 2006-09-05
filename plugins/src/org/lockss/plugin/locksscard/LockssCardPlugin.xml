@@ -13,11 +13,11 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;LOCKSS Card %d&quot;, year</string>
+    <string>&quot;LOCKSS Card %d (%s)&quot;, year, base_url</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>LOCKSS Card</string>
+    <string>LOCKSS Card Plugin</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
