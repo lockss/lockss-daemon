@@ -1,5 +1,5 @@
 /*
- * $Id: EditableDefinablePlugin.java,v 1.22 2006-09-06 16:38:41 thib_gc Exp $
+ * $Id: EditableDefinablePlugin.java,v 1.23 2006-09-06 23:28:41 thib_gc Exp $
  */
 
 /*
@@ -31,6 +31,7 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.devtools.plugindef;
 
+import java.io.IOException;
 import java.util.*;
 
 import org.apache.commons.lang.StringUtils;
@@ -117,12 +118,12 @@ public class EditableDefinablePlugin
   }
 
   // for writing map files
-  public void writeMap(String location, String name) throws Exception {
+  public void writeMap(String location, String name) throws IOException {
     String fileName = location + "/" + name;
     logger.info("Storing definition map in: " + fileName);
     // make sure we don't have any AU Config info in map
-    HashMap cmap = getPrintfDescrs();
-    for (Iterator it = cmap.keySet().iterator() ; it.hasNext() ; ) {
+    HashMap printfMap = getPrintfDescrs();
+    for (Iterator it = printfMap.keySet().iterator() ; it.hasNext() ; ) {
       definitionMap.removeMapElement((String)it.next());
     }
     // store the configuration map
@@ -130,9 +131,9 @@ public class EditableDefinablePlugin
     logger.debug("Definition map stored in: " + fileName);
     String err = definitionMap.getErrorString();
     if (err != null) {
-      Exception exc = new Exception(err);
-      logger.error("Error while storing definition map", exc);
-      throw exc;
+      IOException ioe = new IOException(err);
+      logger.error("Error while storing definition map", ioe);
+      throw ioe;
     }
   }
 
@@ -545,16 +546,28 @@ public class EditableDefinablePlugin
     definitionMap.putCollection(PLUGIN_PROPS, descrlist);
   }
 
+  /**
+   * <p>Same as calling {@link #getPrintfDescrs(boolean)} with a
+   * true argument.</p>
+   * @return The result of <code>getPrinfDescrs(true)</code>
+   * @see #getPrintfDescrs(boolean)
+   */
   public HashMap getPrintfDescrs() {
-    logger.info("Retrieving configuration parameters for printf");
+    return getPrintfDescrs(true);
+  }
+
+  public HashMap getPrintfDescrs(boolean includeUrlVariants) {
+    logger.info("Retrieving configuration parameters for printf, "
+                + (includeUrlVariants ? "including" : "without")
+                + " URL variants");
     Collection cpdSet = getConfigParamDescrs();
-    HashMap pd_map = new HashMap(cpdSet.size());
+    HashMap printfMap = new HashMap(cpdSet.size());
 
     for (Iterator it = cpdSet.iterator() ; it.hasNext() ; ) {
       ConfigParamDescr cpd = (ConfigParamDescr)it.next();
       String key = cpd.getKey();
       int type = cpd.getType();
-      pd_map.put(key, cpd);
+      printfMap.put(key, cpd);
       if (type == ConfigParamDescr.TYPE_YEAR) {
         logger.debug("Adding a 2-digit version of parameter " + key);
 	key = DefinableArchivalUnit.AU_SHORT_YEAR_PREFIX + key;
@@ -562,26 +575,26 @@ public class EditableDefinablePlugin
 	descr.setDescription(cpd.getDescription() + " (2 digits)");
 	descr.setDisplayName(cpd.getDisplayName() + " (2 digits)");
 	descr.setKey(key);
-	pd_map.put(key, descr);
+	printfMap.put(key, descr);
       }
-      else if (type == ConfigParamDescr.TYPE_URL) {
+      else if (type == ConfigParamDescr.TYPE_URL && includeUrlVariants) {
         logger.debug("Adding a host-only version of parameter " + key);
 	String mod_key = key + DefinableArchivalUnit.AU_HOST_SUFFIX;
 	ConfigParamDescr descr = copyDescr(cpd);
 	descr.setDescription(cpd.getDescription() + " (host only)");
 	descr.setDisplayName(cpd.getDisplayName() + " (host only)");
 	descr.setKey(mod_key);
-	pd_map.put(mod_key, descr);
+	printfMap.put(mod_key, descr);
         logger.debug("Adding a path-only version of parameter " + key);
 	mod_key = key + DefinableArchivalUnit.AU_PATH_SUFFIX;
 	descr = copyDescr(cpd);
 	descr.setDescription(cpd.getDescription() + " (path only)");
 	descr.setDisplayName(cpd.getDisplayName() + " (path only)");
 	descr.setKey(mod_key);
-	pd_map.put(mod_key, descr);
+	printfMap.put(mod_key, descr);
       }
     }
-    return pd_map;
+    return printfMap;
   }
 
   private ConfigParamDescr copyDescr(ConfigParamDescr cpd) {
