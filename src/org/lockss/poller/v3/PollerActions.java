@@ -1,5 +1,5 @@
 /*
- * $Id: PollerActions.java,v 1.12 2006-06-26 23:55:08 smorabito Exp $
+ * $Id: PollerActions.java,v 1.12.6.1 2006-08-22 20:33:16 smorabito Exp $
  */
 
 /*
@@ -75,7 +75,7 @@ public class PollerActions {
       msg.setEffortProof(ud.getIntroEffortProof());
       msg.setVoteDeadline(ud.getPoller().getVoteDeadline());
       ud.sendMessageTo(msg, ud.getVoterId());
-      ud.setStatusString(V3Poller.PEER_STATUS_WAITING_POLL_ACK);
+      ud.setStatus(V3Poller.PEER_STATUS_WAITING_POLL_ACK);
     } catch (IOException ex) {
       log.error("Unable to send message: ", ex);
       return V3Events.evtError;
@@ -102,7 +102,7 @@ public class PollerActions {
       return V3Events.evtError;
     } else {
       ud.setVoterNonce(voterNonce);
-      ud.setStatusString(V3Poller.PEER_STATUS_ACCEPTED_POLL);
+      ud.setStatus(V3Poller.PEER_STATUS_ACCEPTED_POLL);
       log.info("Peer " + ud.getVoterId() + " accepted invitation for poll " + 
                ud.getKey() + " and sent voter nonce " +
                ByteArray.toBase64(voterNonce));
@@ -156,7 +156,7 @@ public class PollerActions {
     List nominees = msg.getNominees();
     log.debug2("Received outer circle nominations from voter " + ud.getVoterId()
                + " in poll " + ud.getKey());
-    ud.setStatusString(V3Poller.PEER_STATUS_NOMINATED);
+    ud.setStatus(V3Poller.PEER_STATUS_NOMINATED);
     ud.nominatePeers(nominees);
     return V3Events.evtOk;
   }
@@ -178,7 +178,7 @@ public class PollerActions {
     // XXX: Implement multiple-vote-message functionality
     try {
       ud.sendMessageTo(msg, ud.getVoterId());
-      ud.setStatusString(V3Poller.PEER_STATUS_WAITING_VOTE);
+      ud.setStatus(V3Poller.PEER_STATUS_WAITING_VOTE);
     } catch (IOException ex) {
       log.error("Unable to send message: ", ex);
       return V3Events.evtError;
@@ -191,7 +191,7 @@ public class PollerActions {
     V3LcapMessage msg = (V3LcapMessage) evt.getMessage();
     log.debug2("Received vote from voter " + ud.getVoterId() + " in poll "
                + ud.getKey());
-    ud.setStatusString(V3Poller.PEER_STATUS_VOTED);
+    ud.setStatus(V3Poller.PEER_STATUS_VOTED);
     ud.setVoteComplete(msg.isVoteComplete());
     ud.setVoteBlocks(msg.getVoteBlocks());
     return V3Events.evtOk;
@@ -219,10 +219,9 @@ public class PollerActions {
     try {
       CIProperties props = msg.getRepairProperties();
       if (props == null) {
-        log.warning("Warning:  No CIProperties included with repair " +
-                        "for block " + repairTarget);
-        // This probably isn't right
-        props = uc.getUncachedProperties();
+        log.error("Warning:  No CIProperties included with repair " +
+                  "for block " + repairTarget);
+        return V3Events.evtError;
       }
       uc.storeContent(msg.getRepairDataInputStream(),
                       props);
@@ -248,7 +247,7 @@ public class PollerActions {
     msg.setEffortProof(ud.getReceiptEffortProof());
     try {
       ud.sendMessageTo(msg, ud.getVoterId());
-      ud.setStatusString(V3Poller.PEER_STATUS_COMPLETE);
+      ud.setStatus(V3Poller.PEER_STATUS_COMPLETE);
     } catch (IOException ex) {
       log.error("Unable to send message: ", ex);
       return V3Events.evtError;
@@ -258,7 +257,7 @@ public class PollerActions {
 
   public static PsmEvent handleError(PsmEvent evt, PsmInterp interp) {
     ParticipantUserData ud = getUserData(interp);
-    ud.setStatusString(V3Poller.PEER_STATUS_ERROR);
+    ud.setStatus(V3Poller.PEER_STATUS_ERROR);
     return V3Events.evtOk;
   }
 

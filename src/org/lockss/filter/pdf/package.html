@@ -1,0 +1,102 @@
+<html>
+<!--
+
+$Id: package.html,v 1.1 2006-09-04 07:13:10 thib_gc Exp $
+
+-->
+
+<!--
+
+Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+all rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Except as contained in this notice, the name of Stanford University shall not
+be used in advertising or otherwise to promote the sale, use or other dealings
+in this Software without prior written authorization from Stanford University.
+
+-->
+
+ <head>
+  <title>org.lockss.filter.pdf</title>
+ </head>
+
+ <body>
+
+  <p>Provides filtering and normalization frameworks for PDF data.</p>
+
+  <p>The underlying implementation relies on PDFBox, a PDF library for
+  Java released under the BSD license. Though not all possible
+  features are implemented by PDFBox, the PDF version supported is
+  PDF 1.6 (PDF Reference, Fifth Edition).</p>
+
+  <p>Three classes in the {@link org.lockss.util} package are used to
+  provide useful abstractions and utilities to clients of this
+  package: {@link org.lockss.util.PdfDocument},
+  {@link org.lockss.util.PdfPage} and
+  {@link org.lockss.util.PdfUtil}.</p>
+
+  <h2>The PDF transform framework</h2>
+
+  <p>The PDF transform framework provides an API for the
+  transformation of PDF documents, via a
+  {@link org.lockss.util.PdfDocument} instance. The driving
+  interface in this framework is
+  {@link org.lockss.filter.pdf.PdfTransform}, with basic
+  implementations such as
+  {@link org.lockss.filter.pdf.CompoundPdfTransform},
+  {@link org.lockss.filter.pdf.ConditionalPdfTransform} or
+  {@link org.lockss.filter.pdf.TransformSelectedPages}.</p>
+
+  <h2>The PDF page transform framework</h2>
+
+  <p>The PDF page transform framework provides an API for the
+  transformation of PDF pages, via a {@link org.lockss.util.PdfPage}
+  instance. The driving interface in this framework is
+  {@link org.lockss.filter.pdf.PdfPageTransform}, with basic
+  implementations such as
+  {@link org.lockss.filter.pdf.CompoundPdfPageTransform},
+  {@link org.lockss.filter.pdf.ConditionalPdfPageTransform} or
+  {@link org.lockss.filter.pdf.PdfPageStreamTransform}.</p>
+
+  <h2>The PDF page stream transform framework</h2>
+
+  <p>The PDF page stream transform framework is an extension to
+  PDFBox's PDF stream engine facility, which processes the token
+  streams of PDF pages using PDF operator processors. PDFBox's
+  {@link org.pdfbox.util.PDFStreamEngine} and
+  {@link org.pdfbox.util.PDFOperator} are extended respectively to
+  {@link org.lockss.filter.pdf.PdfPageStreamTransform} and
+  {@link org.lockss.filter.pdf.PdfOperatorProcessor}. The default
+  PDF operator processor used by
+  {@link org.lockss.filter.pdf.PdfPageStreamTransform} is
+  {@link org.lockss.filter.pdf.SimpleOperatorProcessor}.</p>
+
+  @author Thib Guicherd-Callin
+  @since LOCKSS daemon 1.20
+  @see <a href="http://www.pdfbox.org/">PDFBox web site</a>
+  @see <a href="http://partners.adobe.com/public/developer/en/pdf/PDFReference16.pdf">PDF 1.6 specification (PDF Reference, Fifth Edition)</a>
+  @see <a href="http://partners.adobe.com/public/developer/en/pdf/PDF16Errata.pdf">Errata to the PDF 1.6 specification (PDF Reference, Errata to the Fifth Edition)</a>
+  @see <a href="http://partners.adobe.com/public/developer/en/pdf/blend_modes.pdf">Blend modes addendum to the PDF 1.6 specification (PDF Reference, Blend Modes Addendum to the Fifth Edition)</a>
+  @see org.lockss.util.PdfDocument
+  @see org.lockss.util.PdfPage
+  @see org.lockss.util.PdfUtil
+ </body>
+
+</html>
