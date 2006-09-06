@@ -1,5 +1,5 @@
 /*
- * $Id: EDPInspectorCellEditor.java,v 1.9 2006-06-26 23:30:58 thib_gc Exp $
+ * $Id: EDPInspectorCellEditor.java,v 1.10 2006-09-06 16:38:41 thib_gc Exp $
  */
 
 /*
@@ -54,7 +54,7 @@ public class EDPInspectorCellEditor extends AbstractCellEditor
   protected static final String AUNAME = "auname";
   protected static final String STARTURL = "starturl";
   protected static final String CRAWLRULE = "rules";
-  protected static final String CRAWLWINDOWSPEC = "windowspec";
+  protected static final String CRAWLWINDOWSER = "windowser";
   protected static final String FILTERS = "filters";
   protected static final String EXCEPTIONS = "exceptions";
   protected static final String PAUSETIME = "pausetime";
@@ -69,10 +69,10 @@ public class EDPInspectorCellEditor extends AbstractCellEditor
   protected static final int PLUGIN_START_URL = 5;
   protected static final int PLUGIN_AUNAME = 6;
   protected static final int PLUGIN_CRAWLRULES = 7;
-  protected static final int PLUGIN_CRAWLWINDOW = 8;
-  protected static final int PLUGIN_CRAWLWINDOWSPEC = 9;
-  protected static final int PLUGIN_PAUSETIME = 10;
-  protected static final int PLUGIN_CRAWLINTV = 11;
+  protected static final int PLUGIN_PAUSETIME = 8;
+  protected static final int PLUGIN_CRAWLINTV = 9;
+  protected static final int PLUGIN_CRAWLWINDOW = 10;
+  protected static final int PLUGIN_CRAWLWINDOWSER = 11;
   protected static final int PLUGIN_CRAWLDEPTH = 12;
   protected static final int PLUGIN_FILTER = 13;
   protected static final int PLUGIN_EXCEPTION = 14;
@@ -116,9 +116,9 @@ public class EDPInspectorCellEditor extends AbstractCellEditor
       new CellEditorEntry(CRAWLRULE, new CrawlRuleEditor(parentFrame),
 			  makeButton(CRAWLRULE));
     // crawl window
-    editorEntries[PLUGIN_CRAWLWINDOWSPEC]=
-	new CellEditorEntry(CRAWLWINDOWSPEC, new CrawlWindowEditor(parentFrame),
-			    makeButton(CRAWLWINDOWSPEC));
+    editorEntries[PLUGIN_CRAWLWINDOWSER]=
+	new CellEditorEntry(CRAWLWINDOWSER, new CrawlWindowEditor(parentFrame),
+			    makeButton(CRAWLWINDOWSER));
     // pause between fetch
     editorEntries[PLUGIN_PAUSETIME] =
       new CellEditorEntry(PAUSETIME, new TimeEditor(parentFrame),
@@ -147,12 +147,14 @@ public class EDPInspectorCellEditor extends AbstractCellEditor
    * @param column int
    * @return Component
    */
-  public Component getTableCellEditorComponent(JTable table, Object value,
-                                               boolean isSelected, int row,
+  public Component getTableCellEditorComponent(JTable table,
+                                               Object value,
+                                               boolean isSelected,
+                                               int row,
                                                int column) {
 
     CellEditorEntry entry = editorEntries[row];
-    if(entry != null) {
+    if (entry != null) {
       JDialog dialog = entry.m_dialog;
       ((EDPEditor)dialog).setCellData((EDPCellData) value);
       prepareDialog(dialog,table,row,column);

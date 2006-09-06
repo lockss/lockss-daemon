@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescrPicker.java,v 1.11 2006-06-26 17:46:56 thib_gc Exp $
+ * $Id: ConfigParamDescrPicker.java,v 1.12 2006-09-06 16:38:41 thib_gc Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import javax.swing.*;
 import javax.swing.border.*;
 
 import org.lockss.daemon.*;
+import org.lockss.util.Logger;
 
 /**
  * <p>Title: </p>
@@ -80,14 +81,21 @@ public class ConfigParamDescrPicker
   BorderLayout borderLayout1 = new BorderLayout();
   BorderLayout borderLayout2 = new BorderLayout();
 
+  protected static Logger logger = Logger.getLogger("ConfigParamDescrPicker");
+
   public ConfigParamDescrPicker(Frame frame, String title, boolean modal) {
     super(frame, title, modal);
     try {
       jbInit();
       pack();
     }
-    catch (Exception ex) {
-      ex.printStackTrace();
+    catch (Exception exc) {
+      String logMessage = "Could not set up the configuration parameter picker";
+      logger.critical(logMessage, exc);
+      JOptionPane.showMessageDialog(frame,
+                                    logMessage,
+                                    "Configuration Parameter Picker",
+                                    JOptionPane.ERROR_MESSAGE);
     }
   }
 

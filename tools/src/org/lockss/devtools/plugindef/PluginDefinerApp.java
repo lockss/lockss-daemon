@@ -1,5 +1,5 @@
 /*
- * $Id: PluginDefinerApp.java,v 1.8 2006-07-10 21:50:32 thib_gc Exp $
+ * $Id: PluginDefinerApp.java,v 1.9 2006-09-06 16:38:41 thib_gc Exp $
  */
 
 /*
@@ -39,15 +39,17 @@ import org.lockss.util.*;
 
 import java.util.List;
 import java.awt.*;
-import java.io.IOException;
 import java.net.URL;
 
 public class PluginDefinerApp {
-  static final String LOG_ROOT = "org.lockss.devtools.plugindef";
+
+  protected static Logger logger = Logger.getLogger("PluginDefinerApp");
+
   boolean packFrame = true;
 
   //Construct the application
   public PluginDefinerApp() {
+    logger.info("Starting plugin tool");
     PluginDefiner frame = new PluginDefiner();
     //Validate frames that have preset sizes
     //Pack frames that have useful preferred size info, e.g. from their layout
@@ -69,18 +71,18 @@ public class PluginDefinerApp {
     frame.setLocation((screenSize.width - frameSize.width) / 2,
                       (screenSize.height - frameSize.height) / 2);
     frame.setVisible(true);
+    logger.info("Plugin tool started");
   }
 
   //Main method
   public static void main(String[] args) {
     try {
-      //System.out.println(org.lockss.util.Logger.class.getName());
       initConfig();
       JFrame.setDefaultLookAndFeelDecorated(true);
       JDialog.setDefaultLookAndFeelDecorated(true);
     }
-    catch (Exception e) {
-      e.printStackTrace();
+    catch (Exception exc) {
+      logger.debug("Error while setting up look and feel decorations");
     }
     new PluginDefinerApp();
   }

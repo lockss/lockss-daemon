@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlRuleTestDialog.java,v 1.12 2006-06-26 17:46:56 thib_gc Exp $
+ * $Id: CrawlRuleTestDialog.java,v 1.13 2006-09-06 16:38:41 thib_gc Exp $
  */
 
 /*
@@ -66,14 +66,21 @@ public class CrawlRuleTestDialog extends JDialog {
   TitledBorder infoBorder;
   GridBagLayout gridBagLayout2 = new GridBagLayout();
 
+  protected static Logger logger = Logger.getLogger("CrawlRuleTestDialog");
+
   public CrawlRuleTestDialog(Frame frame, String title, boolean modal) {
     super(frame, title, modal);
     try {
       jbInit();
       pack();
     }
-    catch(Exception ex) {
-      ex.printStackTrace();
+    catch(Exception exc) {
+      String logMessage = "Could not set up the crawl rule test dialog";
+      logger.critical(logMessage, exc);
+      JOptionPane.showMessageDialog(frame,
+                                    logMessage,
+                                    "Crawl Rule Test Dialog",
+                                    JOptionPane.ERROR_MESSAGE);
     }
   }
 

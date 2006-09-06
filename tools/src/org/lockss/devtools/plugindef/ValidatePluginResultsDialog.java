@@ -1,5 +1,5 @@
 /*
- * $Id: ValidatePluginResultsDialog.java,v 1.8 2006-06-26 17:46:56 thib_gc Exp $
+ * $Id: ValidatePluginResultsDialog.java,v 1.9 2006-09-06 16:38:41 thib_gc Exp $
  */
 
 /*
@@ -34,13 +34,11 @@ package org.lockss.devtools.plugindef;
 
 import java.awt.*;
 import javax.swing.*;
-import org.lockss.plugin.*;
-import org.lockss.devtools.*;
 import javax.swing.text.*;
-import org.lockss.util.*;
 import java.awt.event.*;
-import java.beans.*;
 
+import org.lockss.plugin.*;
+import org.lockss.util.Logger;
 
 /**********************************************************************
  *  class ValidatePluginResultsDialog creates a Dialog that conducts
@@ -97,14 +95,21 @@ public class ValidatePluginResultsDialog extends JDialog {
   JButton checkButton  = new JButton();
   JButton cancelButton = new JButton();
 
+  protected static Logger logger = Logger.getLogger("ValidatePluginResultsDialog");
+
   public ValidatePluginResultsDialog(Frame frame, String title, boolean modal) {
     super(frame, title, modal);
     try {
       jbInit();
       pack();
     }
-    catch(Exception ex) {
-      ex.printStackTrace();
+    catch(Exception exc) {
+      String logMessage = "Could not set up the plugin validation results dialog";
+      logger.critical(logMessage, exc);
+      JOptionPane.showMessageDialog(frame,
+                                    logMessage,
+                                    "Plugin Validation Results Dialog",
+                                    JOptionPane.ERROR_MESSAGE);
     }
   }
 
@@ -232,7 +237,7 @@ public class ValidatePluginResultsDialog extends JDialog {
 	  outputTextPane.scrollToReference(message);
       }
       catch (BadLocationException ex) {
-	  ex.printStackTrace();
+        logger.debug("Error in outputMessage()", ex);
       }
 
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: FilterRuleDefiner.java,v 1.4 2006-06-26 17:46:56 thib_gc Exp $
+ * $Id: FilterRuleDefiner.java,v 1.5 2006-09-06 16:38:41 thib_gc Exp $
  */
 
 /*
@@ -34,6 +34,8 @@ package org.lockss.devtools.plugindef;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+
+import org.lockss.util.Logger;
 
 /**
  * <p>Title: </p>
@@ -87,14 +89,21 @@ public class FilterRuleDefiner extends JDialog
   GridLayout gridLayout1 = new GridLayout();
   private EDPCellData m_data;
 
+  protected static Logger logger = Logger.getLogger("FilterRuleDefiner");
+
   public FilterRuleDefiner(Frame frame, String title, boolean modal) {
     super(frame, title, modal);
     try {
       jbInit();
       pack();
     }
-    catch(Exception ex) {
-      ex.printStackTrace();
+    catch (Exception exc) {
+      String logMessage = "Could not set up the filter rule definer";
+      logger.critical(logMessage, exc);
+      JOptionPane.showMessageDialog(frame,
+                                    logMessage,
+                                    "Filter Rule Definer",
+                                    JOptionPane.ERROR_MESSAGE);
     }
   }
 

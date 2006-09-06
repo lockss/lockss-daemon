@@ -1,5 +1,5 @@
 /*
- * $Id: ExceptionsMapEditor.java,v 1.5 2006-06-26 17:46:56 thib_gc Exp $
+ * $Id: ExceptionsMapEditor.java,v 1.6 2006-09-06 16:38:41 thib_gc Exp $
  */
 
 /*
@@ -33,9 +33,12 @@ package org.lockss.devtools.plugindef;
 
 import java.awt.*;
 import javax.swing.*;
+
 import java.awt.event.*;
 import java.util.*;
 import javax.swing.table.*;
+
+import org.lockss.util.Logger;
 
 /**
  * <p>Title: </p>
@@ -60,14 +63,21 @@ public class ExceptionsMapEditor extends JDialog implements EDPEditor {
   ExceptionsTableModel m_model = new ExceptionsTableModel();
   JScrollPane jScrollPane1 = new JScrollPane();
 
+  protected static Logger logger = Logger.getLogger("ExceptionsMapEditor");
+
   public ExceptionsMapEditor(Frame frame, String title, boolean modal) {
     super(frame, title, modal);
     try {
       jbInit();
       pack();
     }
-    catch(Exception ex) {
-      ex.printStackTrace();
+    catch (Exception exc) {
+      String logMessage = "Could not set up the exceptions map editor";
+      logger.critical(logMessage, exc);
+      JOptionPane.showMessageDialog(frame,
+                                    logMessage,
+                                    "Exceptions Map Editor",
+                                    JOptionPane.ERROR_MESSAGE);
     }
   }
 

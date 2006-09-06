@@ -1,5 +1,5 @@
 /*
- * $Id: Configurator_AboutBox.java,v 1.7 2006-07-12 17:18:43 thib_gc Exp $
+ * $Id: AboutBox.java,v 1.1 2006-09-06 16:38:41 thib_gc Exp $
  */
 
 /*
@@ -35,7 +35,9 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class Configurator_AboutBox extends JDialog implements ActionListener {
+import org.lockss.util.Logger;
+
+public class AboutBox extends JDialog implements ActionListener {
 
   JPanel panel1 = new JPanel();
   JPanel panel2 = new JPanel();
@@ -54,24 +56,31 @@ public class Configurator_AboutBox extends JDialog implements ActionListener {
   FlowLayout flowLayout1 = new FlowLayout();
   GridLayout gridLayout1 = new GridLayout();
   String product = "LOCKSS Plugin Tool";
-  String version = "Version 0.8.6";
+  String version = "Version 0.9.0";
   String copyright = "Copyright (c) 2000-2006" +
       " Board of Trustees of Leland Stanford Jr. University," +
       " all rights reserved.";
   String comments = "LOCKSS - Lots of Copies Keep Stuff Safe";
 
-  public Configurator_AboutBox(Frame parent) {
+  protected static Logger logger = Logger.getLogger("AboutBox");
+
+  public AboutBox(Frame parent) {
     super(parent);
     enableEvents(AWTEvent.WINDOW_EVENT_MASK);
     try {
       jbInit();
     }
-    catch(Exception e) {
-      e.printStackTrace();
+    catch (Exception exc) {
+      String logMessage = "Could not set up the about box";
+      logger.critical(logMessage, exc);
+      JOptionPane.showMessageDialog(parent,
+                                    logMessage,
+                                    "About",
+                                    JOptionPane.ERROR_MESSAGE);
     }
   }
 
-  Configurator_AboutBox() {
+  AboutBox() {
     this(null);
   }
 

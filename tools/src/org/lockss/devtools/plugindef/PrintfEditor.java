@@ -1,5 +1,5 @@
 /*
- * $Id: PrintfEditor.java,v 1.23 2006-07-10 16:54:46 thib_gc Exp $
+ * $Id: PrintfEditor.java,v 1.24 2006-09-06 16:38:41 thib_gc Exp $
  */
 
 /*
@@ -93,6 +93,8 @@ public class PrintfEditor extends JDialog implements EDPEditor, ConfigParamListe
   private boolean m_isCrawlRuleEditor = false;
   private static final String STRING_LITERAL = "String Literal";
 
+  protected static Logger logger = Logger.getLogger("PrintfEditor");
+
   public PrintfEditor(Frame frame, String title) {
     super(frame, title, false);
 
@@ -103,8 +105,13 @@ public class PrintfEditor extends JDialog implements EDPEditor, ConfigParamListe
       pack();
       initMatches();
     }
-    catch (Exception e) {
-      e.printStackTrace();
+    catch (Exception exc) {
+      String logMessage = "Could not set up the printf editor";
+      logger.critical(logMessage, exc);
+      JOptionPane.showMessageDialog(frame,
+                                    logMessage,
+                                    "Printf Editor",
+                                    JOptionPane.ERROR_MESSAGE);
     }
   }
 
@@ -479,7 +486,7 @@ public class PrintfEditor extends JDialog implements EDPEditor, ConfigParamListe
         // Get the name of the style applied to this content element; may be null
         String sn = (String) attr.getAttribute(StyleConstants.NameAttribute);
         // Check if style name match
-        if (sn.startsWith("Parameter")) {
+        if (sn != null && sn.startsWith("Parameter")) {
           // we extract the label.
           JLabel l = (JLabel) StyleConstants.getComponent(attr);
           if (l != null) {

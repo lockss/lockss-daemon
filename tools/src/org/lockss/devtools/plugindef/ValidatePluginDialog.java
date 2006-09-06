@@ -1,5 +1,5 @@
 /*
- * $Id: ValidatePluginDialog.java,v 1.9 2006-06-26 17:46:56 thib_gc Exp $
+ * $Id: ValidatePluginDialog.java,v 1.10 2006-09-06 16:38:41 thib_gc Exp $
  */
 
 /*
@@ -43,7 +43,6 @@ import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.ArchivalUnit.*;
 import org.lockss.util.*;
 
 
@@ -76,14 +75,21 @@ public class ValidatePluginDialog extends JDialog {
   TitledBorder infoBorder;
   GridBagLayout gridBagLayout2 = new GridBagLayout();
 
+  protected static Logger logger = Logger.getLogger("ValidatePluginDialog");
+
   public ValidatePluginDialog(Frame frame, String title, boolean modal) {
     super(frame, title, modal);
     try {
       jbInit();
       pack();
     }
-    catch(Exception ex) {
-      ex.printStackTrace();
+    catch (Exception exc) {
+      String logMessage = "Could not set up the plugin validation dialog";
+      logger.critical(logMessage, exc);
+      JOptionPane.showMessageDialog(frame,
+                                    logMessage,
+                                    "Plugin Validation Dialog",
+                                    JOptionPane.ERROR_MESSAGE);
     }
   }
 

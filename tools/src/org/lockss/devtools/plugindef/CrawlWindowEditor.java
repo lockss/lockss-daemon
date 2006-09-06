@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlWindowEditor.java,v 1.7 2006-07-12 17:18:43 thib_gc Exp $
+ * $Id: CrawlWindowEditor.java,v 1.8 2006-09-06 16:38:41 thib_gc Exp $
  */
 
 /*
@@ -34,6 +34,8 @@ package org.lockss.devtools.plugindef;
 import java.util.*;
 
 import org.lockss.daemon.*;
+import org.lockss.util.Logger;
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -82,6 +84,8 @@ public class CrawlWindowEditor extends JDialog implements EDPEditor{
   JComboBox m_timezoneBox   = new JComboBox(CrawlWindowTemplate.WINDOW_TIMEZONE_STRINGS);
 
 
+  protected static Logger logger = Logger.getLogger("CrawlWindowEditor");
+
     //  JButton upButton = new JButton();
     //JButton dnButton = new JButton();
   private Frame m_frame;
@@ -93,8 +97,13 @@ public class CrawlWindowEditor extends JDialog implements EDPEditor{
       jbInit();
       pack();
     }
-    catch(Exception ex) {
-      ex.printStackTrace();
+    catch (Exception exc) {
+      String logMessage = "Could not set up the crawl window editor";
+      logger.critical(logMessage, exc);
+      JOptionPane.showMessageDialog(frame,
+                                    logMessage,
+                                    "Crawl Window Editor",
+                                    JOptionPane.ERROR_MESSAGE);
     }
   }
 

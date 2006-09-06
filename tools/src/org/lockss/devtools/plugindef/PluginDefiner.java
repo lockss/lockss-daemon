@@ -1,5 +1,5 @@
 /*
- * $Id: PluginDefiner.java,v 1.17 2006-07-12 17:18:43 thib_gc Exp $
+ * $Id: PluginDefiner.java,v 1.18 2006-09-06 16:38:41 thib_gc Exp $
  */
 
 /*
@@ -33,6 +33,8 @@ package org.lockss.devtools.plugindef;
 
 import java.awt.*;
 import java.awt.event.*;
+import java.io.File;
+
 import javax.swing.*;
 import javax.swing.border.*;
 
@@ -87,17 +89,18 @@ public class PluginDefiner extends JFrame {
   JScrollPane jScrollPane1 = new JScrollPane();
   BorderLayout borderLayout1 = new BorderLayout();
 
-  Logger log = Logger.getLogger(PluginDefinerApp.LOG_ROOT + ".PluginDefiner");
+  Logger log = Logger.getLogger("PluginDefiner");
   //Construct the frame
   public PluginDefiner() {
     enableEvents(AWTEvent.WINDOW_EVENT_MASK);
 
     try {
+      log.info("Initializing plugin tool window");
       jbInit();
+      log.info("Plugin tool window initialized");
     }
-    catch(Exception e) {
-      log.critical("Initialization failed!", e);
-      e.printStackTrace();
+    catch(Exception exc) {
+      log.error("Initialization failed", exc);
     }
   }
 
@@ -219,8 +222,9 @@ public class PluginDefiner extends JFrame {
 
   //File | Exit action performed
   public void jMenuFileExit_actionPerformed(ActionEvent e) {
+    log.info("Exit requested");
     boolean doExit = checkValidatePlugin();
-    if(doExit){
+    if (doExit) {
 	checkSaveFile();
 	log.info("Exiting...");
 	System.exit(0);
@@ -229,7 +233,7 @@ public class PluginDefiner extends JFrame {
 
   //Help | About action performed
   public void jMenuHelpAbout_actionPerformed(ActionEvent e) {
-    Configurator_AboutBox dlg = new Configurator_AboutBox(this);
+    AboutBox dlg = new AboutBox(this);
     Dimension dlgSize = dlg.getPreferredSize();
     Dimension frmSize = getSize();
     Point loc = getLocation();
@@ -248,19 +252,23 @@ public class PluginDefiner extends JFrame {
   }
 
   void jMenuFileOpen_actionPerformed(ActionEvent e) {
-    int option = jFileChooser1.showOpenDialog(this);
-    if(option == JFileChooser.APPROVE_OPTION
-       || jFileChooser1.getSelectedFile() != null) {
-      name = jFileChooser1.getSelectedFile().getName();
-      location = jFileChooser1.getSelectedFile().getParent();
+    if (jFileChooser1.showOpenDialog(this) == JFileChooser.APPROVE_OPTION
+        || jFileChooser1.getSelectedFile() != null) {
+      File chosen = jFileChooser1.getSelectedFile();
+      name = chosen.getName();
+      location = chosen.getParent();
       edp = new EditableDefinablePlugin();
       try {
+        log.debug("Loading editable definable plugin map from " + chosen);
         edp.loadMap(location, name);
-        // update the table
+        log.debug("Setting data from loaded map");
         inspectorModel.setPluginData(edp);
       }
       catch (Exception ex) {
-        JOptionPane.showMessageDialog(this,ex.toString(),"Load File Error",
+        log.error("Could not load file " + jFileChooser1.getSelectedFile(), ex);
+        JOptionPane.showMessageDialog(this,
+                                      "Could not load file " + jFileChooser1.getSelectedFile(),
+                                      "Open failed",
                                       JOptionPane.ERROR_MESSAGE);
       }
     }

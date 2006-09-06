@@ -1,5 +1,5 @@
 /*
- * $Id: FilterTestDialog.java,v 1.6 2006-06-26 17:46:56 thib_gc Exp $
+ * $Id: FilterTestDialog.java,v 1.7 2006-09-06 16:38:41 thib_gc Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import javax.swing.*;
 
 import org.lockss.devtools.*;
 import org.lockss.plugin.*;
+import org.lockss.util.Logger;
 
 /**
  * <p>Title: </p>
@@ -75,6 +76,7 @@ public class FilterTestDialog extends JDialog {
   JButton destButton = new JButton();
   GridBagLayout gridBagLayout1 = new GridBagLayout();
 
+  protected static Logger logger = Logger.getLogger("FilterTestDialog");
 
   public FilterTestDialog(Frame frame, String title, boolean modal) {
     super(frame, title, modal);
@@ -82,8 +84,13 @@ public class FilterTestDialog extends JDialog {
       jbInit();
       pack();
     }
-    catch(Exception ex) {
-      ex.printStackTrace();
+    catch (Exception exc) {
+      String logMessage = "Could not set up the filter test dialog";
+      logger.critical(logMessage, exc);
+      JOptionPane.showMessageDialog(frame,
+                                    logMessage,
+                                    "Filter Test Dialog",
+                                    JOptionPane.ERROR_MESSAGE);
     }
   }
 

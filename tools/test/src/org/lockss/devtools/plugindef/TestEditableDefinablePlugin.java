@@ -1,5 +1,5 @@
 /*
- * $Id: TestEditableDefinablePlugin.java,v 1.19 2006-08-05 19:01:52 tlipkis Exp $
+ * $Id: TestEditableDefinablePlugin.java,v 1.20 2006-09-06 16:38:41 thib_gc Exp $
  */
 
 /*
@@ -91,8 +91,8 @@ public class TestEditableDefinablePlugin
     String rule1 = CrawlRules.RE.MATCH_INCLUDE + "\n*.gif";
     String rule2 = CrawlRules.RE.MATCH_EXCLUDE + "\n*.pdf";
 
-    edPlugin.addCrawlRule(rule1);
-    edPlugin.addCrawlRule(rule2);
+    edPlugin.addAuCrawlRule(rule1);
+    edPlugin.addAuCrawlRule(rule2);
     List expected = ListUtil.list(rule1, rule2);
     List actual = (List) edPlugin.getMap().getCollection(EditableDefinablePlugin.AU_RULES, null);
     assertIsomorphic("CrawlRules", expected, actual);
@@ -339,11 +339,11 @@ public class TestEditableDefinablePlugin
     actDelay = edPlugin.getMap().getLong(EditableDefinablePlugin.AU_NEWCONTENT_CRAWL, defDelay);
     assertEquals("default delay", defDelay, actDelay);
 
-    edPlugin.setNewContentCrawlIntv(expDelay);
+    edPlugin.setNewContentCrawlInterval(expDelay);
     actDelay = edPlugin.getMap().getLong(EditableDefinablePlugin.AU_NEWCONTENT_CRAWL, defDelay);
     assertEquals("fetch delay", expDelay, actDelay);
 
-    edPlugin.removeNewContentCrawlIntv();
+    edPlugin.removeNewContentCrawlInterval();
     actDelay = edPlugin.getMap().getLong(EditableDefinablePlugin.AU_NEWCONTENT_CRAWL, defDelay);
     assertEquals("default delay", defDelay, actDelay);
 
@@ -439,11 +439,11 @@ public class TestEditableDefinablePlugin
     actUrl = edPlugin.getMap().getString(EditableDefinablePlugin.AU_START_URL, defUrl);
     assertEquals("default startUrl", defUrl, actUrl);
 
-    edPlugin.setAuStartURL(expUrl);
+    edPlugin.setAuStartUrl(expUrl);
     actUrl = edPlugin.getMap().getString(EditableDefinablePlugin.AU_START_URL, defUrl);
     assertEquals("startUrl", expUrl, actUrl);
 
-    edPlugin.removeAuStartURL();
+    edPlugin.removeAuStartUrl();
     actUrl = edPlugin.getMap().getString(EditableDefinablePlugin.AU_START_URL, defUrl);
     assertEquals("default startUrl", defUrl, actUrl);
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TimeEditor.java,v 1.4 2006-06-26 17:46:56 thib_gc Exp $
+ * $Id: TimeEditor.java,v 1.5 2006-09-06 16:38:41 thib_gc Exp $
  */
 
 /*
@@ -72,14 +72,21 @@ public class TimeEditor extends JDialog implements EDPEditor {
   TitledBorder titledBorder1;
   GridBagLayout gridBagLayout1 = new GridBagLayout();
 
+  protected static Logger logger = Logger.getLogger("TimeEditor");
+
   public TimeEditor(Frame frame, String title, boolean modal) {
     super(frame, title, modal);
     try {
       jbInit();
       pack();
     }
-    catch(Exception ex) {
-      ex.printStackTrace();
+    catch (Exception exc) {
+      String logMessage = "Could not set up the time editor";
+      logger.critical(logMessage, exc);
+      JOptionPane.showMessageDialog(frame,
+                                    logMessage,
+                                    "Time Editor",
+                                    JOptionPane.ERROR_MESSAGE);
     }
   }
 

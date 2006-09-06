@@ -1,5 +1,5 @@
 /*
- * $Id: EDPCellData.java,v 1.13 2006-07-12 17:18:43 thib_gc Exp $
+ * $Id: EDPCellData.java,v 1.14 2006-09-06 16:38:41 thib_gc Exp $
  */
 
 /*
@@ -97,8 +97,8 @@ public class EDPCellData {
       m_displayString = TimeEditor.millisToString(edp.getAuPauseTime());
     }
     else if(key.equals(EditableDefinablePlugin.AU_NEWCONTENT_CRAWL)) {
-      m_data = new Long(edp.getNewContentCrawlIntv());
-      m_displayString = TimeEditor.millisToString(edp.getNewContentCrawlIntv());
+      m_data = new Long(edp.getNewContentCrawlInterval());
+      m_displayString = TimeEditor.millisToString(edp.getNewContentCrawlInterval());
     }
     else if(key.equals(EditableDefinablePlugin.PLUGIN_EXCEPTION_HANDLER)) {
       m_data = edp.getPluginExceptionHandler();
@@ -180,7 +180,7 @@ public class EDPCellData {
       m_plugin.setAuName(template.getViewableTemplate());
     }
     else if (m_key.equals(EditableDefinablePlugin.AU_START_URL)) {
-      m_plugin.setAuStartURL(template.getViewableTemplate());
+      m_plugin.setAuStartUrl(template.getViewableTemplate());
     }
 
     notifyListenersOfChange();
@@ -220,7 +220,7 @@ public class EDPCellData {
     }
     else if(m_key.equals(EditableDefinablePlugin.AU_NEWCONTENT_CRAWL)) {
       m_data = new Long(data);
-      m_plugin.setNewContentCrawlIntv(((Long) m_data).longValue());
+      m_plugin.setNewContentCrawlInterval(((Long) m_data).longValue());
       m_displayString = TimeEditor.millisToString(((Long)m_data).longValue());
     }
     else if(m_key.equals(EditableDefinablePlugin.PLUGIN_EXCEPTION_HANDLER)) {

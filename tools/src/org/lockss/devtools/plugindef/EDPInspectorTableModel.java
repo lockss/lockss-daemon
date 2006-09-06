@@ -1,5 +1,5 @@
 /*
- * $Id: EDPInspectorTableModel.java,v 1.13 2006-07-12 17:24:21 thib_gc Exp $
+ * $Id: EDPInspectorTableModel.java,v 1.14 2006-09-06 16:38:41 thib_gc Exp $
  */
 
 /*
@@ -37,6 +37,8 @@ import javax.swing.*;
 import java.awt.*;
 import javax.swing.event.*;
 
+import org.lockss.plugin.definable.DefinablePlugin.InvalidDefinitionException;
+
 public class EDPInspectorTableModel extends AbstractTableModel
   implements ChangeListener {
 
@@ -62,70 +64,99 @@ public class EDPInspectorTableModel extends AbstractTableModel
       m_title = title;
       m_editor = editor;
     }
+
+    InspectorEntry(String key, String title) {
+      this(key, title, null);
+    }
+
   }
 
   static final InspectorEntry[] inspectorEntries = {
-    new InspectorEntry(EditableDefinablePlugin.PLUGIN_NAME, "Plugin Name", null),
-    new InspectorEntry(EditableDefinablePlugin.PLUGIN_IDENTIFIER, "Plugin ID", null),
+    new InspectorEntry(EditableDefinablePlugin.PLUGIN_NAME,
+                       "Plugin Name"),
+    new InspectorEntry(EditableDefinablePlugin.PLUGIN_IDENTIFIER,
+                       "Plugin ID"),
     new InspectorEntry(EditableDefinablePlugin.PLUGIN_VERSION,
-		       "Plugin Version", null),
+		       "Plugin Version"),
     new InspectorEntry(EditableDefinablePlugin.PLUGIN_PROPS,
-		       "Configuration Parameters", inspectorCellEditor),
-    new InspectorEntry(EditableDefinablePlugin.PLUGIN_NOTES, "Plugin Notes",
+		       "Configuration Parameters",
+                       inspectorCellEditor),
+    new InspectorEntry(EditableDefinablePlugin.PLUGIN_NOTES,
+                       "Plugin Notes",
 		       inspectorCellEditor),
     new InspectorEntry(EditableDefinablePlugin.AU_START_URL,
-		       "Start URL Template", inspectorCellEditor),
-    new InspectorEntry(EditableDefinablePlugin.AU_NAME, "AU Name Template",
+		       "Start URL Template",
+                       inspectorCellEditor),
+    new InspectorEntry(EditableDefinablePlugin.AU_NAME,
+                       "AU Name Template",
 		       inspectorCellEditor),
-    new InspectorEntry(EditableDefinablePlugin.AU_RULES, "Crawl Rules",
+    new InspectorEntry(EditableDefinablePlugin.AU_RULES,
+                       "Crawl Rules",
 		       inspectorCellEditor),
-    new InspectorEntry(EditableDefinablePlugin.AU_CRAWL_WINDOW,
-		       "Configurable Crawl Window Class", null),
-    new InspectorEntry(EditableDefinablePlugin.AU_CRAWL_WINDOW_SER,
-                       "Crawl Window", inspectorCellEditor),
     new InspectorEntry(EditableDefinablePlugin.AU_PAUSE_TIME,
-		       "Pause Time Between Fetches", inspectorCellEditor),
-    new InspectorEntry( EditableDefinablePlugin.AU_NEWCONTENT_CRAWL,
-			"New Content Crawl Interval", inspectorCellEditor),
+		       "Pause Time Between Fetches",
+                       inspectorCellEditor),
+    new InspectorEntry(EditableDefinablePlugin.AU_NEWCONTENT_CRAWL,
+			"New Content Crawl Interval",
+                        inspectorCellEditor),
+    new InspectorEntry(EditableDefinablePlugin.AU_CRAWL_WINDOW,
+                       "Configurable Crawl Window Class"),
+    new InspectorEntry(EditableDefinablePlugin.AU_CRAWL_WINDOW_SER,
+                        "Crawl Window",
+                        inspectorCellEditor),
     new InspectorEntry(EditableDefinablePlugin.AU_CRAWL_DEPTH,
-		       "Default Crawl Depth", null),
+		       "Default Crawl Depth"),
     new InspectorEntry(EditableDefinablePlugin.AU_FILTER_SUFFIX,
-		       "Filter Class", inspectorCellEditor),
+		       "Filter Class",
+                       inspectorCellEditor),
     new InspectorEntry(EditableDefinablePlugin.PLUGIN_EXCEPTION_HANDLER,
-		       "Crawl Exception Class", null),
+		       "Crawl Exception Class"),
     new InspectorEntry(EditableDefinablePlugin.CM_EXCEPTION_LIST_KEY,
-		       "Cache Exception Map", inspectorCellEditor),
+		       "Cache Exception Map",
+                       inspectorCellEditor),
     new InspectorEntry(EditableDefinablePlugin.CM_CRAWL_TYPE,
-		       "Crawl Type", crawlTypeEditor)
+		       "Crawl Type",
+                       crawlTypeEditor)
   };
 
   static final InspectorEntry[] requiredEntries = {
-    new InspectorEntry(EditableDefinablePlugin.PLUGIN_NAME, "Plugin Name", null),
-    new InspectorEntry(EditableDefinablePlugin.PLUGIN_IDENTIFIER, "Plugin ID", null),
+    new InspectorEntry(EditableDefinablePlugin.PLUGIN_NAME,
+                       "Plugin Name"),
+    new InspectorEntry(EditableDefinablePlugin.PLUGIN_IDENTIFIER,
+                       "Plugin ID"),
     new InspectorEntry(EditableDefinablePlugin.PLUGIN_VERSION,
-		       "Plugin Version", null),
+		       "Plugin Version"),
     new InspectorEntry(EditableDefinablePlugin.PLUGIN_PROPS,
-		       "Configuration Parameters", inspectorCellEditor),
-    new InspectorEntry(EditableDefinablePlugin.PLUGIN_NOTES, "Plugin Notes",
+		       "Configuration Parameters",
+                       inspectorCellEditor),
+    new InspectorEntry(EditableDefinablePlugin.PLUGIN_NOTES,
+                       "Plugin Notes",
 		       inspectorCellEditor),
     new InspectorEntry(EditableDefinablePlugin.AU_START_URL,
-		       "Start URL Template", inspectorCellEditor),
-    new InspectorEntry(EditableDefinablePlugin.AU_NAME, "AU Name Template",
+		       "Start URL Template",
+                       inspectorCellEditor),
+    new InspectorEntry(EditableDefinablePlugin.AU_NAME,
+                       "AU Name Template",
 		       inspectorCellEditor),
-    new InspectorEntry(EditableDefinablePlugin.AU_RULES, "Crawl Rules",
+    new InspectorEntry(EditableDefinablePlugin.AU_RULES,
+                       "Crawl Rules",
 		       inspectorCellEditor),
     new InspectorEntry(EditableDefinablePlugin.AU_PAUSE_TIME,
-		       "Pause Time Between Fetches", inspectorCellEditor),
-    new InspectorEntry( EditableDefinablePlugin.AU_NEWCONTENT_CRAWL,
-			"New Content Crawl Interval", inspectorCellEditor)
+		       "Pause Time Between Fetches",
+                       inspectorCellEditor),
+    new InspectorEntry(EditableDefinablePlugin.AU_NEWCONTENT_CRAWL,
+                       "New Content Crawl Interval",
+                       inspectorCellEditor)
   };
 
   boolean isExpertMode = false;
 
   Object[][] data;
   EditableDefinablePlugin m_plugin;
+  protected JFrame parentFrame;
 
   public EDPInspectorTableModel(JFrame parentFrame) {
+    this.parentFrame = parentFrame;
     inspectorCellEditor.initEditors(parentFrame);
     int numEntries = inspectorEntries.length;
     data = new Object[numEntries][cols.length];
@@ -183,19 +214,27 @@ public class EDPInspectorTableModel extends AbstractTableModel
   }
 
   public void setValueAt(Object obj, int rowIndex, int columnIndex) {
-    EDPCellData cell_data = (EDPCellData) data[rowIndex][columnIndex];
-    if (inspectorEntries[rowIndex].m_editor != inspectorCellEditor) {
-      // we handle the internal update here
-      cell_data.updateStringData( (String) obj);
+    try {
+      EDPCellData cell_data = (EDPCellData) data[rowIndex][columnIndex];
+      if (inspectorEntries[rowIndex].m_editor != inspectorCellEditor) {
+        // we handle the internal update here
+        cell_data.updateStringData( (String) obj);
+      }
+      else{
+        //notifies listeners that something has changed
+        cell_data.updateOtherData( (String) obj);
+      }
     }
-    else{
-	//notifies listeners that something has changed
-	cell_data.updateOtherData( (String) obj);
+    catch (InvalidDefinitionException ide) {
+      JOptionPane.showMessageDialog(parentFrame,
+                                    ide.getMessage(),
+                                    "Error",
+                                    JOptionPane.ERROR_MESSAGE);
     }
   }
 
   public boolean isCellEditable(int row, int column) {
-    return column == 1 ? true : false;
+    return column == 1;
   }
 
   public void setExpertMode(boolean isExpert) {
@@ -234,15 +273,20 @@ public class EDPInspectorTableModel extends AbstractTableModel
 
     column = table.getColumnModel().getColumn(col);
 
-    comp = headerRenderer.getTableCellRendererComponent(
-							null, column.getHeaderValue(),
-							false, false, 0, 0);
+    comp = headerRenderer.getTableCellRendererComponent(null,
+                                                        column.getHeaderValue(),
+							false,
+                                                        false,
+                                                        0,
+                                                        0);
     headerWidth = comp.getPreferredSize().width;
 
-    comp = table.getDefaultRenderer(getColumnClass(col)).
-      getTableCellRendererComponent(
-				    table, longestStr,
-				    false, false, 0, col);
+    comp = table.getDefaultRenderer(getColumnClass(col)).getTableCellRendererComponent(table,
+                                                                                       longestStr,
+                                                                                       false,
+                                                                                       false,
+                                                                                       0,
+                                                                                       col);
     cellWidth = comp.getPreferredSize().width;
 
     column.setPreferredWidth(Math.max(headerWidth, cellWidth));

@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescr.java,v 1.32 2006-08-05 19:01:52 tlipkis Exp $
+ * $Id: ConfigParamDescr.java,v 1.33 2006-09-06 16:38:41 thib_gc Exp $
  */
 
 /*
@@ -619,6 +619,24 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
     public Throwable getNestedException() {
       return nestedException;
     }
+  }
+
+  public String toDetailedString() {
+    StringBuffer buffer = new StringBuffer(100);
+    buffer.append("[");
+    buffer.append(getClass().getName());
+    buffer.append(";key=");
+    buffer.append(getKey());
+    buffer.append(";type=");
+    buffer.append(getType());
+    buffer.append(";size=");
+    buffer.append(getSize());
+    buffer.append(";isDefinitional=");
+    buffer.append(isDefinitional());
+    buffer.append(";displayName=");
+    buffer.append(getDisplayName());
+    buffer.append("]");
+    return buffer.toString();
   }
 
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlRuleTestResultsDialog.java,v 1.14 2006-07-11 21:04:19 thib_gc Exp $
+ * $Id: CrawlRuleTestResultsDialog.java,v 1.15 2006-09-06 16:38:41 thib_gc Exp $
  */
 
 /*
@@ -34,7 +34,6 @@ package org.lockss.devtools.plugindef;
 
 import java.awt.*;
 import java.awt.event.*;
-import java.beans.*;
 import java.io.*;
 import javax.swing.*;
 import javax.swing.text.*;
@@ -101,14 +100,21 @@ public class CrawlRuleTestResultsDialog extends JDialog {
   JButton closeButton = new JButton();
   JButton stopButton = new JButton();
 
+  protected static Logger logger = Logger.getLogger("CrawlRuleTestResultsDialog");
+
   public CrawlRuleTestResultsDialog(Frame frame, String title, boolean modal) {
     super(frame, title, modal);
     try {
       jbInit();
       pack();
     }
-    catch(Exception ex) {
-      ex.printStackTrace();
+    catch (Exception exc) {
+      String logMessage = "Could not set up the crawl rule test results dialog";
+      logger.critical(logMessage, exc);
+      JOptionPane.showMessageDialog(frame,
+                                    logMessage,
+                                    "Crawl Rule Test Results Dialog",
+                                    JOptionPane.ERROR_MESSAGE);
     }
   }
 
@@ -242,15 +248,14 @@ public class CrawlRuleTestResultsDialog extends JDialog {
       }
     }
     catch (Exception ex) {
-      String msg = ex.getCause() !=
-        null ? ex.getCause().getMessage() : ex.getMessage();
-        JOptionPane.showMessageDialog(this,
-                                      "Error occured while checking crawl rules:\n"
-                                      + msg,
-                                      "CrawlRule Test Error",
-                                      JOptionPane.ERROR_MESSAGE);
-        ex.printStackTrace();
-        stop();
+      String logMessage = "Error while checking crawl rules: "
+        + ex.getCause() != null ? ex.getCause().getMessage() : ex.getMessage();
+      logger.error(logMessage, ex);
+      stop();
+      JOptionPane.showMessageDialog(this,
+                                    logMessage,
+                                    "Crawl Rule Test: Error",
+                                    JOptionPane.ERROR_MESSAGE);
     }
   }
 
@@ -321,7 +326,7 @@ public class CrawlRuleTestResultsDialog extends JDialog {
         }
       }
       catch (BadLocationException ex) {
-        ex.printStackTrace();
+        logger.debug("Error in outputMessage()", ex);
       }
     }
 
