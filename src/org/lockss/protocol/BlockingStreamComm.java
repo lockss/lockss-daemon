@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingStreamComm.java,v 1.14 2006-08-14 19:25:25 dshr Exp $
+ * $Id: BlockingStreamComm.java,v 1.15 2006-09-07 22:01:19 dshr Exp $
  */
 
 /*
@@ -59,6 +59,10 @@ public class BlockingStreamComm
   /** Use V3 over SSL **/
   public static final String PARAM_USE_V3_OVER_SSL = PREFIX + "v3OverSsl";
   static final boolean DEFAULT_USE_V3_OVER_SSL = false;
+
+  /** Use client authentication for SSL **/
+  public static final String PARAM_USE_SSL_CLIENT_AUTH = PREFIX + "SslClientAuth";
+  static final boolean DEFAULT_USE_SSL_CLIENT_AUTH = true;
 
   /** Max peer channels */
   public static final String PARAM_MAX_CHANNELS =
@@ -151,7 +155,8 @@ public class BlockingStreamComm
   static final int PRIORITY_DEFAULT_CHANNEL = -1;
 
 
-    private boolean paramUseV3OverSsl = false;
+  private boolean paramUseV3OverSsl = DEFAULT_USE_V3_OVER_SSL;
+  private static boolean paramSslClientAuth = DEFAULT_USE_SSL_CLIENT_AUTH;
   private int paramMinFileMessageSize = DEFAULT_MIN_FILE_MESSAGE_SIZE;
   private int paramMaxMessageSize = DEFAULT_MAX_MESSAGE_SIZE;
   private File dataDir = null;
@@ -242,6 +247,13 @@ public class BlockingStreamComm
       if (changedKeys.contains(PARAM_USE_V3_OVER_SSL)) {
         paramUseV3OverSsl = config.getBoolean(PARAM_USE_V3_OVER_SSL,
 					      DEFAULT_USE_V3_OVER_SSL);
+	sockFact = null;
+	// XXX shut down old listen socket, do exponential backoff
+	// XXX on bind() to bring up new listen socket
+      }
+      if (changedKeys.contains(PARAM_USE_SSL_CLIENT_AUTH)) {
+        paramSslClientAuth = config.getBoolean(PARAM_USE_SSL_CLIENT_AUTH,
+					       DEFAULT_USE_SSL_CLIENT_AUTH);
 	sockFact = null;
       }
       paramMinFileMessageSize = config.getInt(PARAM_MIN_FILE_MESSAGE_SIZE,
@@ -892,8 +904,9 @@ public class BlockingStreamComm
 	        System.getProperty("javax.net.ssl.keyStore","null"));
       SSLServerSocket s = (SSLServerSocket)
 	SSLServerSocketFactory.getDefault().createServerSocket(port, backlog);
-      // s.setNeedClientAuth();
-      log.debug("New SSL server socket: " + port + " backlog " + backlog);
+      s.setNeedClientAuth(paramSslClientAuth);
+      log.debug("New SSL server socket: " + port + " backlog " + backlog +
+		" clientAuth " + paramSslClientAuth);
       String cs[] = s.getEnabledCipherSuites();
       for (int i = 0; i < cs.length; i++) {
 	log.debug2(cs[i] + " enabled cipher suite");
