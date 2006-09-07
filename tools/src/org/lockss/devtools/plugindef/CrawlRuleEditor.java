@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlRuleEditor.java,v 1.8 2006-09-06 16:38:41 thib_gc Exp $
+ * $Id: CrawlRuleEditor.java,v 1.9 2006-09-07 18:31:28 thib_gc Exp $
  */
 
 /*
@@ -103,7 +103,7 @@ public class CrawlRuleEditor extends JDialog implements EDPEditor{
     rulesTable.setRowHeight(20);
     rulesTable.setModel(m_model);
     rulesPanel.setMinimumSize(new Dimension(150, 50));
-    rulesPanel.setPreferredSize(new Dimension(440, 100));
+    rulesPanel.setPreferredSize(new Dimension(440, 300));
     buttonPanel.setMinimumSize(new Dimension(150, 34));
     buttonPanel.setPreferredSize(new Dimension(440, 40));
     addButton.setText("Add");
@@ -122,7 +122,6 @@ public class CrawlRuleEditor extends JDialog implements EDPEditor{
     buttonPanel.add(deleteButton, null);
     buttonPanel.add(okButton, null);
     buttonPanel.add(cancelButton, null);
-
   }
 
   void deleteButton_actionPerformed(ActionEvent e) {
@@ -395,6 +394,13 @@ public class CrawlRuleEditor extends JDialog implements EDPEditor{
       m_data = null;
       m_model.fireTableDataChanged();
     }
+  }
+
+  public void setVisible(boolean visible) {
+    if (visible) {
+      rulesTable.invalidate(); // force repainting
+    }
+    super.setVisible(visible);
   }
 
 }
