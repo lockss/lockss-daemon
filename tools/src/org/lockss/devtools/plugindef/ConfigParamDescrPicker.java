@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescrPicker.java,v 1.12 2006-09-06 16:38:41 thib_gc Exp $
+ * $Id: ConfigParamDescrPicker.java,v 1.13 2006-09-07 09:06:47 thib_gc Exp $
  */
 
 /*
@@ -164,11 +164,11 @@ public class ConfigParamDescrPicker
             ,GridBagConstraints.CENTER, GridBagConstraints.BOTH, new Insets(5, 0, 0, 5), 0, 0));
     btnPanel2.add(addButton, null);
     btnPanel2.add(viewButton, null);
-    AvailablePanel.add(AvailableParamList, BorderLayout.CENTER);
+    AvailablePanel.add(new JScrollPane(AvailableParamList), BorderLayout.CENTER);
     AvailablePanel.add(btnPanel2, BorderLayout.SOUTH);
     btnPanel1.add(RemoveButton, null);
     btnPanel1.add(editButton, null);
-    AssignedPanel.add(PluginParamList, BorderLayout.CENTER);
+    AssignedPanel.add(new JScrollPane(PluginParamList), BorderLayout.CENTER);
     mainPanel.add(ButtonPanel,             new GridBagConstraints(0, 1, 2, 1, 1.0, 0.0
             ,GridBagConstraints.SOUTH, GridBagConstraints.HORIZONTAL, new Insets(5, 5, 5, 5), 0, 0));
     AssignedPanel.add(btnPanel1, BorderLayout.SOUTH);
