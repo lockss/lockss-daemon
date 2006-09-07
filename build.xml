@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.194 2006-09-04 07:13:10 thib_gc Exp $
+ $Id: build.xml,v 1.195 2006-09-07 21:09:18 thib_gc Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
@@ -1094,17 +1094,15 @@ JAVA_COMMAND_ARGS="-server -Xmx500m -Dsun.net.inetaddr.ttl=3600 -Dorg.lockss.syn
      <map from="${lib}" to="." />
     </pathconvert>
     <echo file="${temp.pkg.dir}/runtool">#!/bin/sh
-TOOL_CLASSPATH="${tmp.ptool.clspth.unix}"
-JVM_ARGS=""
-if [ -z "$CLASSPATH" ] ; then
- CLASSPATH="$TOOL_CLASSPATH"
-else
- CLASSPATH="$TOOL_CLASSPATH":"$CLASSPATH"
-fi
+
+CLASSPATH="$TOOL_CLASSPATH"
 while true ; do
  case "$1" in
   -classpath )
    CLASSPATH="$2":"$CLASSPATH"
+   shift; shift; continue;;
+  -loglevel )
+   JVM_ARGS="$JVM_ARGS -Dorg.lockss.defaultLogLevel=$2"
    shift; shift; continue;;
   -D*=* )
    JVM_ARGS="$JVM_ARGS $1"
