@@ -1,5 +1,5 @@
 /*
- * $Id: PrintfEditor.java,v 1.25 2006-09-06 23:28:41 thib_gc Exp $
+ * $Id: PrintfEditor.java,v 1.26 2006-09-07 18:30:55 thib_gc Exp $
  */
 
 /*
@@ -559,7 +559,7 @@ public class PrintfEditor extends JDialog implements EDPEditor, ConfigParamListe
       java.util.List elements = editableTemplate.getPrintfElements();
       for(Iterator it = elements.iterator(); it.hasNext(); ) {
         PrintfUtil.PrintfElement el = (PrintfUtil.PrintfElement) it.next();
-        if(el.getFormat().equals(PrintfUtil.PrintfElement.NONE)) {
+        if(el.getFormat().equals(PrintfUtil.PrintfElement.FORMAT_NONE)) {
           appendText(el.getElement(), PLAIN_ATTR);
         }
         else {

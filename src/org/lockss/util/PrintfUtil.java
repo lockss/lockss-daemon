@@ -1,5 +1,5 @@
 /*
- * $Id: PrintfUtil.java,v 1.5 2006-07-10 16:54:46 thib_gc Exp $
+ * $Id: PrintfUtil.java,v 1.6 2006-09-07 18:30:55 thib_gc Exp $
  */
 
 /*
@@ -69,32 +69,35 @@ public class PrintfUtil {
   }
 
   public static PrintfElement[] printfToElements(PrintfData data) {
-    ArrayList printf_elements = new ArrayList();
-    PrintfFormat pf = new PrintfFormat(data.getFormat());
-    Iterator it_frm = pf.getFormatElements().iterator();
+    PrintfFormat printfFormat = new PrintfFormat(data.getFormat());
+    Iterator csIter = printfFormat.getFormatElements().iterator();
+    Iterator argIter = data.getArguments().iterator() ;
+    ArrayList printfElements = new ArrayList();
     PrintfFormat.ConversionSpecification cs = null;
     char c = 0;
-    Iterator it_args = data.getArguments().iterator();
-    while (it_frm.hasNext()) {
-      cs = (PrintfFormat.ConversionSpecification) it_frm.next();
-      c = cs.getConversionCharacter();
-      if (c == '\0') {
-        // Last ConversionSpecification is not useful
-        if (!cs.getLiteral().equals("") && it_frm.hasNext()) {
-          printf_elements.add(new PrintfElement(PrintfElement.NONE, cs.getLiteral()));
-        }
-      }
-      else if (c == '%') {
-        printf_elements.add(new PrintfElement(PrintfElement.NONE, "%%"));
-      }
-      else {
-        printf_elements.add(new PrintfElement(cs.getFormat(),
-                                              (String) it_args.next()));
+
+    while (csIter.hasNext()) {
+      cs = (PrintfFormat.ConversionSpecification)csIter.next();
+      switch (cs.getConversionCharacter()) {
+        case CONVERSION_NONE:
+          // is plain text
+          printfElements.add(new PrintfElement(PrintfElement.FORMAT_NONE,
+                                                  cs.getLiteral()));
+          break;
+        case CONVERSION_PERCENT:
+          // is a percent sign; turn into plain text
+          printfElements.add(new PrintfElement(PrintfElement.FORMAT_NONE,
+                                                "%%"));
+          break;
+        default:
+          // has a conversion code; use it
+          printfElements.add(new PrintfElement(cs.getFormat(),
+                                                (String)argIter.next()));
+          break;
       }
     }
 
-    PrintfElement[] ret = new PrintfElement[printf_elements.size()];
-    return (PrintfElement[])printf_elements.toArray(ret);
+    return (PrintfElement[])printfElements.toArray(new PrintfElement[printfElements.size()]);
   }
 
   public static class PrintfData {
@@ -137,9 +140,9 @@ public class PrintfUtil {
 
   public static class PrintfElement {
 
-    public static final String NONE = "\0";
+    public static final String FORMAT_NONE = "\0";
 
-    String m_format = NONE;
+    String m_format = FORMAT_NONE;
     String m_element = "";
 
     public PrintfElement(String format, String element) {
@@ -155,5 +158,11 @@ public class PrintfUtil {
       return m_element;
     }
   }
+
+  public static final char CONVERSION_PERCENT = '%';
+
+  public static final char CONVERSION_NONE = '\0';
+
+
 
 }

@@ -65,19 +65,20 @@ public class TestPrintfUtil extends LockssTestCase {
 
   public void testPrintfToElements() throws Exception {
     PrintfData printfData = new PrintfData();
-    printfData.setFormat("foo%dbar%sbaz%%");
+    printfData.setFormat("foo%dbar%sbaz%%qux");
     printfData.addArgument("my_int");
     printfData.addArgument("my_str");
     PrintfElement[] printfElements = PrintfUtil.printfToElements(printfData);
 
-    assertEquals(6, printfElements.length);
+    assertEquals(7, printfElements.length);
     PrintfElement[] expected = new PrintfElement[] {
-      new PrintfElement(PrintfElement.NONE, "foo"),
+      new PrintfElement(PrintfElement.FORMAT_NONE, "foo"),
       new PrintfElement("%d", "my_int"),
-      new PrintfElement(PrintfElement.NONE, "bar"),
+      new PrintfElement(PrintfElement.FORMAT_NONE, "bar"),
       new PrintfElement("%s", "my_str"),
-      new PrintfElement(PrintfElement.NONE, "baz"),
-      new PrintfElement(PrintfElement.NONE, "%%"),
+      new PrintfElement(PrintfElement.FORMAT_NONE, "baz"),
+      new PrintfElement(PrintfElement.FORMAT_NONE, "%%"),
+      new PrintfElement(PrintfElement.FORMAT_NONE, "qux"),
     };
 
     for (int ix = 0 ; ix < expected.length ; ++ix) {
