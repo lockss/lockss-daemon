@@ -3258,6 +3258,25 @@
         <property name="attributes.rights" value="openaccess" />
       </property>
 
+      <property name="shampoo2005">
+	<property name="title" value="Shampoo 2005" />
+	<property name="journalTitle" value="Shampoo" />
+	<property name="plugin" value="org.nypl.plugin.shampoo.ShampooPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.shampoopoetry.com/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2005" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="issue_set" />
+	  <property name="value" value="Twentyfive, Twentyonefour, Twentythree" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
       <property name="shampoo2004">
 	<property name="title" value="Shampoo 2004" />
 	<property name="journalTitle" value="Shampoo" />
