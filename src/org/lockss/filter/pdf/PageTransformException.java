@@ -1,5 +1,5 @@
 /*
- * $Id: PdfTransformException.java,v 1.2 2006-09-04 07:13:10 thib_gc Exp $
+ * $Id: PageTransformException.java,v 1.1 2006-09-10 07:50:50 thib_gc Exp $
  */
 
 /*
@@ -36,16 +36,16 @@ import java.io.IOException;
 
 /**
  * <p>A properly-nestable {@link IOException} for exceptions raised
- * by PDF transforms.</p>
+ * by PDF page transforms.</p>
  * @author Thib Guicherd-Callin
- * @see PdfTransform#transform
+ * @see PageTransform#transform
  */
-public class PdfTransformException extends IOException {
+public class PageTransformException extends IOException {
 
   /**
    * <p>Builds a new exception.</p>
    */
-  public PdfTransformException() {
+  public PageTransformException() {
     super();
   }
 
@@ -53,7 +53,7 @@ public class PdfTransformException extends IOException {
    * <p>Builds a new exception using the given message.</p>
    * @param message A detail message.
    */
-  public PdfTransformException(String message) {
+  public PageTransformException(String message) {
     super(message);
   }
 
@@ -62,7 +62,7 @@ public class PdfTransformException extends IOException {
    * @param message A detail message.
    * @param cause   A {@link Throwable} cause.
    */
-  public PdfTransformException(String message, Throwable cause) {
+  public PageTransformException(String message, Throwable cause) {
     super(message);
     initCause(cause);
   }
@@ -71,7 +71,7 @@ public class PdfTransformException extends IOException {
    * <p>Builds a new exception using the given cause.</p>
    * @param cause A {@link Throwable} cause.
    */
-  public PdfTransformException(Throwable cause) {
+  public PageTransformException(Throwable cause) {
     super();
     initCause(cause);
   }

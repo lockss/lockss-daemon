@@ -1,5 +1,5 @@
 /*
- * $Id: ConditionalPdfTransform.java,v 1.2 2006-09-01 06:47:00 thib_gc Exp $
+ * $Id: ConditionalDocumentTransform.java,v 1.1 2006-09-10 07:50:50 thib_gc Exp $
  */
 
 /*
@@ -34,7 +34,7 @@ package org.lockss.filter.pdf;
 
 import java.io.IOException;
 
-import org.lockss.util.PdfDocument;
+import org.lockss.util.*;
 
 /**
  * <p>A PDF transform decorator that applies a given PDF transform
@@ -42,36 +42,22 @@ import org.lockss.util.PdfDocument;
  * {@link #identify} method.</p>
  * @author Thib Guicherd-Callin
  */
-public abstract class ConditionalPdfTransform implements PdfTransform {
+public class ConditionalDocumentTransform implements DocumentTransform {
 
   /**
-   * <p>The PDF transform to be applied conditionally.</p>
+   *
    */
-  protected PdfTransform pdfTransform;
+  protected AggregateDocumentTransform documentTransform;
 
-  /**
-   * <p>Decorates the given PDF transform.</p>
-   * @param pdfTransform A PDF transform to be applied conditionally.
-   */
-  public ConditionalPdfTransform(PdfTransform pdfTransform) {
-    this.pdfTransform = pdfTransform;
+  public ConditionalDocumentTransform(DocumentTransform conditionTransform,
+                                      DocumentTransform documentTransform) {
+    this.documentTransform = new AggregateDocumentTransform(PdfUtil.AND);
+    this.documentTransform.add(conditionTransform);
+    this.documentTransform.add(documentTransform);
   }
 
-  /**
-   * <p>Determines if the argument should be transformed by this
-   * transform.</p>
-   * @param pdfDocument A PDF document (from {@link #transform}).
-   * @return True if the underlying PDF transform should be applied,
-   *         false otherwise.
-   * @throws IOException if any processing error occurs.
-   */
-  public abstract boolean identify(PdfDocument pdfDocument) throws IOException;
-
-  /* Inherit documentation */
-  public void transform(PdfDocument pdfDocument) throws IOException {
-    if (identify(pdfDocument)) {
-      pdfTransform.transform(pdfDocument);
-    }
+  public boolean transform(PdfDocument pdfDocument) throws IOException {
+    return documentTransform.transform(pdfDocument);
   }
 
 }

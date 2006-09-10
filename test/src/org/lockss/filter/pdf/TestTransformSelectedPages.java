@@ -1,5 +1,5 @@
 /*
- * $Id: TransformSelectedPagesTester.java,v 1.2 2006-09-01 23:55:37 thib_gc Exp $
+ * $Id: TestTransformSelectedPages.java,v 1.1 2006-09-10 07:50:49 thib_gc Exp $
  */
 
 /*
@@ -35,47 +35,37 @@ package org.lockss.filter.pdf;
 import java.io.IOException;
 import java.util.*;
 
-import org.apache.commons.collections.iterators.ObjectArrayListIterator;
-import org.apache.commons.lang.ArrayUtils;
+import org.apache.commons.collections.iterators.*;
+import org.lockss.filter.pdf.MockTransforms.RememberPagePageTransform;
 import org.lockss.test.*;
 import org.lockss.util.*;
-import org.lockss.util.PdfUtil.*;
 
-public abstract class TransformSelectedPagesTester extends LockssTestCase {
+public class TestTransformSelectedPages extends LockssTestCase {
 
-  public void testGetSelectedPages() throws Exception {
-    // Make a few PDF pages
-    final PdfPage[] pages = new PdfPage[] {
-        new MockPdfPage(),
-        new MockPdfPage(),
-        new MockPdfPage(),
-        new MockPdfPage(),
-        new MockPdfPage(),
+  public void testTransform() throws Exception {
+    final MockPdfPage[] pages = new MockPdfPage[] {
+        new MockPdfPage(), new MockPdfPage(), new MockPdfPage(),
+        new MockPdfPage(), new MockPdfPage(), new MockPdfPage(),
     };
-
-    TransformSelectedPages transform = makeInstance(new IdentityPdfPageTransform());
+    final MockPdfPage[] selectedPages = new MockPdfPage[] {
+        pages[1], pages[3], pages[4],
+    };
     MockPdfDocument mockPdfDocument = new MockPdfDocument() {
       public PdfPage getPage(int index) { return pages[index]; }
       public ListIterator getPageIterator() { return new ObjectArrayListIterator(pages); }
     };
-    ListIterator selected = transform.getSelectedPages(mockPdfDocument);
 
-    // Check that selected pages are within range and used only once
-    List remember = new ArrayList();
-    while (selected.hasNext()) {
-      PdfPage page = (PdfPage)selected.next();
-      assertTrue(ArrayUtils.contains(pages, page));
-      assertFalse(remember.contains(page));
-      remember.add(page);
-    }
+    ArrayList rememberPages = new ArrayList();
+    RememberPagePageTransform pageTransform = new RememberPagePageTransform(rememberPages);
+    TransformSelectedPages documentTransform = new TransformSelectedPages(pageTransform) {
+      protected ListIterator getSelectedPages(PdfDocument pdfDocument) throws IOException {
+        return new ArrayListIterator(selectedPages);
+      }
+    };
 
-    assertSuccess(mockPdfDocument, remember.listIterator());
+    assertTrue("Transform returned false", documentTransform.transform(mockPdfDocument));
+    assertEquals(3, pageTransform.getCallCount());
+    assertIsomorphic(selectedPages, rememberPages);
   }
-
-  protected abstract void assertSuccess(MockPdfDocument mockPdfDocument,
-                                        ListIterator selectedPages)
-      throws IOException;
-
-  protected abstract TransformSelectedPages makeInstance(PdfPageTransform pdfPageTransform);
 
 }

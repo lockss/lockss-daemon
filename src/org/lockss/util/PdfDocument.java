@@ -1,5 +1,5 @@
 /*
- * $Id: PdfDocument.java,v 1.8 2006-09-02 06:47:21 thib_gc Exp $
+ * $Id: PdfDocument.java,v 1.9 2006-09-10 07:50:51 thib_gc Exp $
  */
 
 /*
@@ -168,14 +168,14 @@ public class PdfDocument {
   }
 
   public PdfPage getPage(int index) throws IOException {
-    return new PdfPage(getPdPage(index));
+    return new PdfPage(this, getPdPage(index));
   }
 
   public ListIterator /* of PdfPage */ getPageIterator() throws IOException {
     List pdfPages = ListUtils.transformedList(new ArrayList(),
                                               new Transformer() {
                                                 public Object transform(Object obj) {
-                                                  return new PdfPage((PDPage)obj);
+                                                  return new PdfPage(PdfDocument.this, (PDPage)obj);
                                                 }
                                               });
     pdfPages.addAll(getPdPages());

@@ -1,5 +1,5 @@
 /*
- * $Id: TestConditionalPdfPageTransform.java,v 1.1 2006-09-01 07:32:52 thib_gc Exp $
+ * $Id: ConditionalMergeOperatorProcessor.java,v 1.1 2006-09-10 07:50:51 thib_gc Exp $
  */
 
 /*
@@ -32,38 +32,24 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.filter.pdf;
 
-import java.io.IOException;
+import java.util.*;
 
-import org.lockss.test.*;
-import org.lockss.util.*;
-import org.lockss.util.PdfUtil.CountCallsPageTransform;
+public abstract class ConditionalMergeOperatorProcessor extends ConditionalOperatorProcessor {
 
-public class TestConditionalPdfPageTransform extends LockssTestCase {
-
-  public void testDoesNotRunWhenIdentifyFalse() throws Exception {
-    PdfPageTransform transform = new PdfPageTransform() {
-      public void transform(PdfDocument pdfDocument, PdfPage pdfPage) throws IOException {
-        fail("Transform was called but identify() had returned false");
-      }
-    };
-    ConditionalPdfPageTransform conditional = new ConditionalPdfPageTransform(transform) {
-      public boolean identify(PdfDocument pdfDocument, PdfPage pdfPage) throws IOException {
-        return false;
-      }
-    };
-    conditional.transform(new MockPdfDocument(), new MockPdfPage());
-    // Did not throw: all is well
+  protected void processIdentified(PageStreamTransform pdfPageStreamTransform,
+                                   List tokens) {
+    pdfPageStreamTransform.mergeOutputList(getReplacement(tokens));
   }
 
-  public void testRunsWhenIdentifyTrue() throws Exception {
-    CountCallsPageTransform transform = new CountCallsPageTransform();
-    ConditionalPdfPageTransform conditional = new ConditionalPdfPageTransform(transform) {
-      public boolean identify(PdfDocument pdfDocument, PdfPage pdfPage) throws IOException {
-        return true;
-      }
-    };
-    conditional.transform(new MockPdfDocument(), new MockPdfPage());
-    assertEquals(1, transform.getCallCount());
+  public abstract List getReplacement(List tokens);
+
+  protected void processNotIdentified(PageStreamTransform pdfPageStreamTransform,
+                                      List tokens) {
+    pdfPageStreamTransform.mergeOutputList();
+  }
+
+  protected List getSequence(PageStreamTransform pdfPageStreamTransform) {
+    return Collections.unmodifiableList(pdfPageStreamTransform.getOutputList());
   }
 
 }

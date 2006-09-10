@@ -1,5 +1,5 @@
 /*
- * $Id: TransformFirstPage.java,v 1.2 2006-09-01 06:47:00 thib_gc Exp $
+ * $Id: TransformFirstPage.java,v 1.3 2006-09-10 07:50:51 thib_gc Exp $
  */
 
 /*
@@ -36,7 +36,7 @@ import java.io.IOException;
 import java.util.ListIterator;
 
 import org.apache.commons.collections.iterators.SingletonListIterator;
-import org.lockss.util.PdfDocument;
+import org.lockss.util.*;
 
 /**
  * <p>A PDF transform that applies a PDF page transform to the
@@ -48,10 +48,10 @@ public class TransformFirstPage extends TransformSelectedPages {
   /**
    * <p>Builds a new PDF transform with the given PDF page
    * transform.</p>
-   * @param pdfPageTransform A PDF page transform.
+   * @param pageTransform A PDF page transform.
    */
-  public TransformFirstPage(PdfPageTransform pdfPageTransform) {
-    super(pdfPageTransform);
+  public TransformFirstPage(PageTransform pageTransform) {
+    super(pageTransform);
   }
 
   /* Inherit documentation */

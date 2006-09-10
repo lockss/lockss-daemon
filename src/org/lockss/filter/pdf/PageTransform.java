@@ -1,5 +1,5 @@
 /*
- * $Id: TestTransformFirstPage.java,v 1.2 2006-09-10 07:50:49 thib_gc Exp $
+ * $Id: PageTransform.java,v 1.1 2006-09-10 07:50:50 thib_gc Exp $
  */
 
 /*
@@ -32,27 +32,26 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.filter.pdf;
 
-import java.util.ListIterator;
+import java.io.IOException;
 
-import org.apache.commons.collections.iterators.*;
-import org.lockss.test.*;
-import org.lockss.util.PdfPage;
-import org.lockss.util.PdfUtil.IdentityPageTransform;
+import org.lockss.util.*;
 
-public class TestTransformFirstPage extends LockssTestCase {
+/**
+ * <p>Specifies classes that are able to transform a PDF page
+ * via a {@link PdfPage}.</p>
+ * @author Thib Guicherd-Callin
+ * @see PdfDocument
+ */
+public interface PageTransform {
 
-  public void testGetSelectedPages() throws Exception {
-    final PdfPage[] pages = new PdfPage[] {
-        new MockPdfPage(), new MockPdfPage(), new MockPdfPage(),
-    };
-    MockPdfDocument mockPdfDocument = new MockPdfDocument() {
-      public PdfPage getPage(int index) { return pages[index]; }
-      public ListIterator getPageIterator() { return new ObjectArrayListIterator(pages); }
-    };
-
-    TransformSelectedPages documentTransform = new TransformFirstPage(new IdentityPageTransform());
-    assertIsomorphic(new SingletonIterator(pages[0]),
-                     documentTransform.getSelectedPages(mockPdfDocument));
-  }
+  /**
+   * <p>Applies a transform to a PDF page.</p>
+   * @param pdfPage     A PDF page (belonging to the PDF document).
+   * @return True if any changes were applied to the page, false
+   *         otherwise.
+   * @throws IOException if any processing error occurs.
+   */
+  boolean transform(PdfPage pdfPage)
+      throws IOException;
 
 }

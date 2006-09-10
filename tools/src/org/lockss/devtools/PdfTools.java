@@ -1,5 +1,5 @@
 /*
- * $Id: PdfTools.java,v 1.8 2006-09-01 22:07:15 thib_gc Exp $
+ * $Id: PdfTools.java,v 1.9 2006-09-10 07:50:51 thib_gc Exp $
  */
 
 /*
@@ -50,8 +50,8 @@ import org.pdfbox.pdmodel.common.*;
  */
 public class PdfTools {
 
-  public static class DumpBoxes extends IdentityPdfPageTransform {
-    public void transform(PdfDocument pdfDocument, PdfPage pdfPage) throws IOException {
+  public static class DumpBoxes extends IdentityPageTransform {
+    public boolean transform(PdfPage pdfPage) throws IOException {
       System.out.println("[begin boxes]");
       PdfTools.dump("Art box", pdfPage.getArtBox());
       PdfTools.dump("Bleed box", pdfPage.getBleedBox());
@@ -59,11 +59,12 @@ public class PdfTools {
       PdfTools.dump("Media box", pdfPage.getMediaBox());
       PdfTools.dump("Trim box", pdfPage.getTrimBox());
       System.out.println("[end boxes]");
+      return super.transform(pdfPage);
     }
   }
 
-  public static class DumpMetadata extends IdentityPdfTransform {
-    public void transform(PdfDocument pdfDocument) throws IOException {
+  public static class DumpMetadata extends IdentityDocumentTransform {
+    public boolean transform(PdfDocument pdfDocument) throws IOException {
       System.out.println("[begin metadata]");
       System.out.println("Number of pages: " + pdfDocument.getNumberOfPages());
       dump("Creation date", pdfDocument.getCreationDate().getTime());
@@ -77,17 +78,19 @@ public class PdfTools {
       System.out.println("Metadata (as string):"); // newline; typically large
       System.out.println(pdfDocument.getMetadataAsString());
       System.out.println("[end metadata]");
+      return super.transform(pdfDocument);
     }
   }
 
-  public static class DumpNumberedPageStream extends IdentityPdfPageTransform {
-    public void transform(PdfDocument pdfDocument, PdfPage pdfPage) throws IOException {
+  public static class DumpNumberedPageStream extends IdentityPageTransform {
+    public boolean transform(PdfPage pdfPage) throws IOException {
       System.out.println("[begin numbered page stream]");
       Iterator tokens = pdfPage.getStreamTokenIterator();
       for (int tok = 0 ; tokens.hasNext() ; ++tok) {
         System.out.println(Integer.toString(tok) + "\t" + tokens.next().toString());
       }
       System.out.println("[end numbered page stream]");
+      return super.transform(pdfPage);
     }
   }
 
@@ -110,39 +113,43 @@ public class PdfTools {
 //
 //  }
 
-  public static class DumpPageDictionary extends IdentityPdfPageTransform {
-    public void transform(PdfDocument pdfDocument, PdfPage pdfPage) throws IOException {
+  public static class DumpPageDictionary extends IdentityPageTransform {
+    public boolean transform(PdfPage pdfPage) throws IOException {
       System.out.println("[begin page dictionary]");
       dump(pdfPage.getDictionary());
       System.out.println("[end page dictionary]");
+      return super.transform(pdfPage);
     }
   }
 
-  public static class DumpPageStream extends IdentityPdfPageTransform {
-    public void transform(PdfDocument pdfDocument, PdfPage pdfPage) throws IOException {
+  public static class DumpPageStream extends IdentityPageTransform {
+    public boolean transform(PdfPage pdfPage) throws IOException {
       System.out.println("[begin page stream]");
       for (Iterator tokens = pdfPage.getStreamTokenIterator() ; tokens.hasNext() ; ) {
         System.out.println("\t" + tokens.next().toString());
       }
       System.out.println("[end page stream]");
+      return super.transform(pdfPage);
     }
   }
 
-  public static class DumpTrailer extends IdentityPdfTransform {
-    public void transform(PdfDocument pdfDocument) throws IOException {
+  public static class DumpTrailer extends IdentityDocumentTransform {
+    public boolean transform(PdfDocument pdfDocument) throws IOException {
       System.out.println("[begin trailer]");
       dump(pdfDocument.getTrailer());
       System.out.println("[end trailer]");
+      return super.transform(pdfDocument);
     }
   }
 
-  public static class ReiteratePageStream implements PdfPageTransform {
-    public void transform(PdfDocument pdfDocument, PdfPage pdfPage) throws IOException {
-      PDStream resultStream = pdfDocument.makePdStream();
+  public static class ReiteratePageStream implements PageTransform {
+    public boolean transform(PdfPage pdfPage) throws IOException {
+      PDStream resultStream = pdfPage.getPdfDocument().makePdStream();
       OutputStream outputStream = resultStream.createOutputStream();
       ContentStreamWriter tokenWriter = new ContentStreamWriter(outputStream);
       tokenWriter.writeTokens(pdfPage.getStreamTokens());
       pdfPage.setContents(resultStream);
+      return true;
     }
   }
 
@@ -176,8 +183,8 @@ public class PdfTools {
       return; // exit
     }
 
-    CompoundPdfTransform pdfTransform = new CompoundPdfTransform();
-    CompoundPdfPageTransform pdfPageTransform = new CompoundPdfPageTransform();
+    AggregateDocumentTransform documentTransform = new AggregateDocumentTransform(PdfUtil.EXHAUSTIVE_AND);
+    AggregatePageTransform pageTransform = new AggregatePageTransform(PdfUtil.EXHAUSTIVE_AND);
     boolean ignoreResult = true;
 
     for (int arg = 0 ; arg < args.length ; ++arg) {
@@ -188,34 +195,34 @@ public class PdfTools {
 //        pdfPageTransform.add(new DumpAnnotations());
 //      }
       else if (args[arg].equals("-metadata")) {
-        pdfTransform.add(new DumpMetadata());
+        documentTransform.add(new DumpMetadata());
       }
       else if (args[arg].equals("-numberedpagestream")) {
-        pdfPageTransform.add(new DumpNumberedPageStream());
+        pageTransform.add(new DumpNumberedPageStream());
       }
       else if (args[arg].equals("-pageboxes")) {
-        pdfPageTransform.add(new DumpBoxes());
+        pageTransform.add(new DumpBoxes());
       }
       else if (args[arg].equals("-pagedictionary")) {
-        pdfPageTransform.add(new DumpPageDictionary());
+        pageTransform.add(new DumpPageDictionary());
       }
       else if (args[arg].equals("-pagestream")) {
-        pdfPageTransform.add(new DumpPageStream());
+        pageTransform.add(new DumpPageStream());
       }
       else if (args[arg].equals("-rewrite")) {
         ignoreResult = false;
       }
       else if (args[arg].equals("-trailer")) {
-        pdfTransform.add(new DumpTrailer());
+        documentTransform.add(new DumpTrailer());
       }
       else {
         System.err.println("Unknown option: " + args[arg]);
       }
     }
 
-    pdfTransform.add(new TransformEachPage(pdfPageTransform));
+    documentTransform.add(new TransformEachPage(pageTransform));
     if (!ignoreResult) {
-      pdfTransform.add(new TransformEachPage(new ReiteratePageStream()));
+      documentTransform.add(new TransformEachPage(new ReiteratePageStream()));
     }
 
     try {
@@ -233,7 +240,7 @@ public class PdfTools {
       else {
         outputStream = new FileOutputStream(chooser.getSelectedFile().toString().replaceAll(".pdf", "-out.pdf"));
       }
-      PdfUtil.applyPdfTransform(pdfTransform, inputStream, outputStream);
+      PdfUtil.applyPdfTransform(documentTransform, inputStream, outputStream);
       inputStream.close();
       outputStream.close();
     }

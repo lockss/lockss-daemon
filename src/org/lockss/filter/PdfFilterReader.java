@@ -1,5 +1,5 @@
 /*
- * $Id: PdfFilterReader.java,v 1.3 2006-08-23 22:23:45 thib_gc Exp $
+ * $Id: PdfFilterReader.java,v 1.4 2006-09-10 07:50:51 thib_gc Exp $
  */
 
 /*
@@ -34,27 +34,27 @@ package org.lockss.filter;
 
 import java.io.*;
 
-import org.lockss.filter.pdf.PdfTransform;
+import org.lockss.filter.pdf.DocumentTransform;
 import org.lockss.util.*;
 
 /**
  * <p>A specialized {@link Reader} that gives access to a programmatic
  * representation of a PDF document, for filtering.</p>
  * @author Thib Guicherd-Callin
- * @see PdfTransform
+ * @see DocumentTransform
  */
 public class PdfFilterReader extends FilterReader {
 
   protected static Logger logger = Logger.getLogger("PdfFilterReader");
 
-  public PdfFilterReader(Reader reader, PdfTransform pdfTransform) {
+  public PdfFilterReader(Reader reader, DocumentTransform pdfTransform) {
     super(reader);
     this.pdfTransform = pdfTransform;
     this.parsed = false;
     this.closed = false;
   }
 
-  protected PdfTransform pdfTransform;
+  protected DocumentTransform pdfTransform;
 
   protected boolean parsed;
 

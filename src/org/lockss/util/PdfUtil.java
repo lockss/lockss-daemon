@@ -1,5 +1,5 @@
 /*
- * $Id: PdfUtil.java,v 1.3 2006-09-01 23:55:37 thib_gc Exp $
+ * $Id: PdfUtil.java,v 1.4 2006-09-10 07:50:51 thib_gc Exp $
  */
 
 /*
@@ -35,7 +35,7 @@ package org.lockss.util;
 import java.io.*;
 import java.util.Iterator;
 
-import org.apache.commons.collections.iterators.ObjectArrayIterator;
+import org.apache.commons.collections.iterators.*;
 import org.lockss.filter.pdf.*;
 import org.pdfbox.cos.*;
 import org.pdfbox.util.PDFOperator;
@@ -46,54 +46,81 @@ import org.pdfbox.util.PDFOperator;
  */
 public class PdfUtil {
 
-  /**
-   * <p>A PDF page transform that remembers how many times it has been
-   * called.</p>
-   * @author Thib Guicherd-Callin
-   */
-  public static class CountCallsPageTransform extends IdentityPdfPageTransform {
-
-    protected int callCount = 0;
-
-    public int getCallCount() {
-      return callCount;
-    }
-
-    /* Inherit documentation */
-    public void transform(PdfDocument pdfDocument, PdfPage pdfPage) throws IOException {
-      ++callCount;
-    }
-
+  public interface ResultPolicy {
+    boolean resetResult();
+    boolean updateResult(boolean currentResult, boolean update);
+    boolean shouldKeepGoing(boolean currentResult);
   }
 
-  /**
-   * <p>A PDF transform that remembers how many times it has been
-   * called.</p>
-   * @author Thib Guicherd-Callin
-   */
-  public static class CountCallsTransform extends IdentityPdfTransform {
-
-    protected int callCount = 0;
-
-    public int getCallCount() {
-      return callCount;
+  public static final ResultPolicy EXHAUSTIVE_AND = new ResultPolicy() {
+    public boolean resetResult() {
+      return true;
     }
-
-    /* Inherit documentation */
-    public void transform(PdfDocument pdfDocument) {
-      ++callCount;
+    public boolean shouldKeepGoing(boolean currentResult) {
+      return true;
     }
+    public boolean updateResult(boolean currentResult, boolean update) {
+      return currentResult && update;
+    }
+  };
 
-  }
+  public static final ResultPolicy AND = new ResultPolicy() {
+    public boolean resetResult() {
+      return true;
+    }
+    public boolean shouldKeepGoing(boolean currentResult) {
+      return currentResult;
+    }
+    public boolean updateResult(boolean currentResult, boolean update) {
+      return currentResult && update;
+    }
+  };
+
+  public static final ResultPolicy EXHAUSTIVE_OR = new ResultPolicy() {
+    public boolean resetResult() {
+      return false;
+    }
+    public boolean shouldKeepGoing(boolean currentResult) {
+      return true;
+    }
+    public boolean updateResult(boolean currentResult, boolean update) {
+      return currentResult || update;
+    }
+  };
+
+  public static final ResultPolicy OR = new ResultPolicy() {
+    public boolean resetResult() {
+      return false;
+    }
+    public boolean shouldKeepGoing(boolean currentResult) {
+      return !currentResult;
+    }
+    public boolean updateResult(boolean currentResult, boolean update) {
+      return currentResult || update;
+    }
+  };
 
   /**
    * <p>A PDF page transform that does nothing, for testing.</p>
    * @author Thib Guicherd-Callin
    */
-  public static class IdentityPdfPageTransform implements PdfPageTransform {
+  public static class IdentityPageTransform implements PageTransform {
+
+    protected boolean returnValue;
+
+    public IdentityPageTransform() {
+      this(true);
+    }
+
+    public IdentityPageTransform(boolean returnValue) {
+      this.returnValue = returnValue;
+    }
 
     /* Inherit documentation */
-    public void transform(PdfDocument pdfDocument, PdfPage pdfPage) throws IOException {}
+    public boolean transform(PdfPage pdfPage) throws IOException {
+      logger.debug3("Indentity page transform: " + returnValue);
+      return returnValue;
+    }
 
   }
 
@@ -101,10 +128,23 @@ public class PdfUtil {
    * <p>A PDF transform that does nothing, for testing.</p>
    * @author Thib Guicherd-Callin
    */
-  public static class IdentityPdfTransform implements PdfTransform {
+  public static class IdentityDocumentTransform implements DocumentTransform {
+
+    protected boolean returnValue;
+
+    public IdentityDocumentTransform() {
+      this(true);
+    }
+
+    public IdentityDocumentTransform(boolean returnValue) {
+      this.returnValue = returnValue;
+    }
 
     /* Inherit documentation */
-    public void transform(PdfDocument pdfDocument) throws IOException {}
+    public boolean transform(PdfDocument pdfDocument) throws IOException {
+      logger.debug3("Indentity document transform: " + returnValue);
+      return returnValue;
+    }
 
   }
 
@@ -473,14 +513,6 @@ public class PdfUtil {
    */
   public static final String STROKE = "S";
 
-  public static Iterator getPdf16Operators() {
-    return new ObjectArrayIterator(PDF_1_6_OPERATORS);
-  }
-
-  public static Iterator getPdfOperators() {
-    return getPdf16Operators();
-  }
-
   /**
    * <p>A logger for use by this class.</p>
    */
@@ -577,7 +609,7 @@ public class PdfUtil {
    *                        transformed PDF document.
    * @throws IOException if any processing error occurs.
    */
-  public static void applyPdfTransform(PdfTransform pdfTransform,
+  public static void applyPdfTransform(DocumentTransform pdfTransform,
                                        InputStream pdfInputStream,
                                        OutputStream pdfOutputStream)
       throws IOException {
@@ -601,6 +633,10 @@ public class PdfUtil {
     }
   }
 
+  public static Iterator getPdf16Operators() {
+    return UnmodifiableIterator.decorate(new ObjectArrayIterator(PDF_1_6_OPERATORS));
+  }
+
   /**
    * <p>Extracts the float data associated with a PDF token that is
    * a PDF float.</p>
@@ -614,6 +650,14 @@ public class PdfUtil {
    */
   public static float getPdfFloat(Object pdfFloat) {
     return ((COSFloat)pdfFloat).floatValue();
+  }
+
+  public static int getPdfInteger(Object candidateToken) {
+    return ((COSInteger)candidateToken).intValue();
+  }
+
+  public static Iterator getPdfOperators() {
+    return getPdf16Operators();
   }
 
   /**
@@ -665,6 +709,10 @@ public class PdfUtil {
    */
   public static boolean isPdfFloat(Object candidateToken) {
     return candidateToken instanceof COSFloat;
+  }
+
+  public static boolean isPdfInteger(Object candidateToken) {
+    return candidateToken instanceof COSInteger;
   }
 
   /**

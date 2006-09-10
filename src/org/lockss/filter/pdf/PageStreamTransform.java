@@ -1,5 +1,5 @@
 /*
- * $Id: PdfPageStreamTransform.java,v 1.5 2006-09-02 06:34:17 thib_gc Exp $
+ * $Id: PageStreamTransform.java,v 1.1 2006-09-10 07:50:50 thib_gc Exp $
  */
 
 /*
@@ -63,7 +63,7 @@ import org.pdfbox.util.operator.OperatorProcessor;
  * ends it <em>must</em> be the case that the result of all the
  * operations of the PDF operator processors are such that there is
  * only one output list on the stack, or a
- * {@link PdfPageTransformException} will be thrown. This remaining
+ * {@link PageTransformException} will be thrown. This remaining
  * list is used as the result to rewrite the token stream of the PDF
  * page, if any PDF operator processor has indicated to the transform
  * that it has enacted any change in the output list compared to the
@@ -94,13 +94,13 @@ import org.pdfbox.util.operator.OperatorProcessor;
  * {@link OperatorProcessor} instances, <em>must</em> have a
  * no-argument constructor, and are instantiated once per key
  * associated with their class name during a given
- * {@link PdfPageStreamTransform} instantiation.</p>
+ * {@link PageStreamTransform} instantiation.</p>
  * @author Thib Guicherd-Callin
  * @see PDFStreamEngine
  * @see PdfOperatorProcessor
  * @see SplitOperatorProcessor
  */
-public class PdfPageStreamTransform extends PDFStreamEngine implements PdfPageTransform {
+public class PageStreamTransform extends PDFStreamEngine implements PageTransform {
 
   /**
    * <p>Whether a change has been indicated by a PDF operator
@@ -120,7 +120,7 @@ public class PdfPageStreamTransform extends PDFStreamEngine implements PdfPageTr
    * @throws IOException if any processing error occurs.
    * @see #PdfPageStreamTransform(Properties)
    */
-  public PdfPageStreamTransform() throws IOException {
+  public PageStreamTransform() throws IOException {
     this(new Properties());
   }
 
@@ -146,9 +146,42 @@ public class PdfPageStreamTransform extends PDFStreamEngine implements PdfPageTr
    * @see <a href="http://sourceforge.net/tracker/index.php?func=detail&aid=1544943&group_id=78314&atid=552832">PDFBox
    *      Bug #1544943</a>
    */
-  public PdfPageStreamTransform(Properties customOperatorProcessors) throws IOException {
+  public PageStreamTransform(Properties customOperatorProcessors) throws IOException {
     super(rewriteProperties(customOperatorProcessors));
     this.listStack = new Stack();
+  }
+
+  public PageStreamTransform(String pdfOperatorString1,
+                             Class pdfOperatorProcessor1)
+      throws IOException {
+    this(PropUtil.fromArgs(pdfOperatorString1,
+                           pdfOperatorProcessor1.getName()));
+  }
+
+  public PageStreamTransform(String pdfOperatorString1,
+                             Class pdfOperatorProcessor1,
+                             String pdfOperatorString2,
+                             Class pdfOperatorProcessor2)
+      throws IOException {
+    this(PropUtil.fromArgs(pdfOperatorString1,
+                           pdfOperatorProcessor1.getName(),
+                           pdfOperatorString2,
+                           pdfOperatorProcessor2.getName()));
+  }
+
+  public PageStreamTransform(String pdfOperatorString1,
+                             Class pdfOperatorProcessor1,
+                             String pdfOperatorString2,
+                             Class pdfOperatorProcessor2,
+                             String pdfOperatorString3,
+                             Class pdfOperatorProcessor3)
+      throws IOException {
+    this(PropUtil.fromArgs(pdfOperatorString1,
+                           pdfOperatorProcessor1.getName(),
+                           pdfOperatorString2,
+                           pdfOperatorProcessor2.getName(),
+                           pdfOperatorString3,
+                           pdfOperatorProcessor3.getName()));
   }
 
   /**
@@ -244,9 +277,8 @@ public class PdfPageStreamTransform extends PDFStreamEngine implements PdfPageTr
    * the original stream, the PDF page's contents are replaced with
    * those of the output list (otherwise the PDF page is
    * unchanged).</p>
-   * @param pdfDocument A parent PDF document.
    * @param pdfPage     A PDF page (belonging to the PDF document).
-   * @throws PdfPageTransformException if the output list stack does
+   * @throws PageTransformException if the output list stack does
    *                                   not have exactly one output
    *                                   list at the end of the
    *                                   transform.
@@ -255,8 +287,7 @@ public class PdfPageStreamTransform extends PDFStreamEngine implements PdfPageTr
    * @see PDFStreamEngine#processStream
    * @see #reset
    */
-  public synchronized void transform(PdfDocument pdfDocument,
-                                     PdfPage pdfPage)
+  public synchronized boolean transform(PdfPage pdfPage)
       throws IOException {
     // Iterate over stream
     reset();
@@ -266,26 +297,24 @@ public class PdfPageStreamTransform extends PDFStreamEngine implements PdfPageTr
 
     // Sanity check
     if (listStack.size() != 1) {
-      throw new PdfPageTransformException("Split/Merge mismatch: after processing stream, list stack has size " + listStack.size());
+      throw new PageTransformException("Split/merge mismatch: after processing stream, list stack has size " + listStack.size());
     }
 
-    // Write result
-    writeResult(pdfDocument, pdfPage);
+    writeResult(pdfPage);
+    return atLeastOneChange;
   }
 
   /**
    * <p>Rewrites the contents of the PDF page being transformed with
    * those of the output list, if at least one change has been
    * indicated.</p>
-   * @param pdfDocument A parent PDF document.
    * @param pdfPage     A PDF page (belonging to the PDF document).
    * @throws IOException if any processing error occurs.
    */
-  protected synchronized void writeResult(PdfDocument pdfDocument,
-                                          PdfPage pdfPage)
+  protected synchronized void writeResult(PdfPage pdfPage)
       throws IOException {
     if (atLeastOneChange) {
-      PDStream resultStream = pdfDocument.makePdStream();
+      PDStream resultStream = pdfPage.getPdfDocument().makePdStream();
       OutputStream outputStream = resultStream.createOutputStream();
       ContentStreamWriter tokenWriter = new ContentStreamWriter(outputStream);
       tokenWriter.writeTokens(getOutputList());
@@ -296,55 +325,7 @@ public class PdfPageStreamTransform extends PDFStreamEngine implements PdfPageTr
   /**
    * <p>A logger for use by this class.</p>
    */
-  protected static Logger logger = Logger.getLogger("PdfPageStreamTransform");
-
-  /**
-   * <p>Convenience method to examine a PDF page stream and recognize
-   * it using a set of PDF operator processors.</p>
-   * <p>This method does not modify the PDF page.</p>
-   * @param pdfDocument              A parent PDF document.
-   * @param pdfPage                  A PDF page (belonging to the PDF
-   *                                 document).
-   * @param customOperatorProcessors A {@link Properties} instance
-   *                                 that maps PDF operator strings
-   *                                 to the string names of
-   *                                 {@link PdfOperatorProcessor}
-   *                                 classes to use for those PDF
-   *                                 operators.
-   * @return True as soon as any of the given PDF operator processors
-   *         calls {@link #signalChange} on its PDF page stream
-   *         transform argument, false otherwise.
-   * @throws NullPointerException if the {@link Properties} argument
-   *                              is null.
-   * @throws IOException          if any processing error occurs.
-   */
-  public static boolean identifyPageStream(PdfDocument pdfDocument,
-                                           PdfPage pdfPage,
-                                           Properties customOperatorProcessors)
-      throws IOException {
-
-    // Hack: interrupt stream processing with a runtime exception
-    class ReturnTrue extends RuntimeException { }
-
-    PdfPageStreamTransform matcher = new PdfPageStreamTransform(customOperatorProcessors) {
-      public void signalChange() {
-        throw new ReturnTrue();
-      }
-      protected void writeResult(PdfDocument pdfDocument, PdfPage pdfPage) throws IOException {
-        // Do not do anything
-      }
-    };
-
-    try {
-      matcher.transform(pdfDocument, pdfPage);
-    }
-    catch (ReturnTrue rt) {
-      logger.debug("Identify page stream: matched");
-      return true;
-    }
-    logger.debug("Identity page stream: did not match");
-    return false;
-  }
+  protected static Logger logger = Logger.getLogger("PageStreamTransform");
 
   /**
    * <p>Assembles a new {@link Properties} object that maps keys from
@@ -375,6 +356,18 @@ public class PdfPageStreamTransform extends PDFStreamEngine implements PdfPageTr
                                                                   SimpleOperatorProcessor.class.getName()));
     }
     return properties;
+  }
+
+  public static class RecognizePageStream extends PageStreamTransform {
+
+    public RecognizePageStream(Properties customProcessors) throws IOException {
+      super(customProcessors);
+    }
+
+    protected void writeResult(PdfPage pdfPage) {
+      // Do nothing
+    }
+
   }
 
 }

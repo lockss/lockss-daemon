@@ -1,5 +1,5 @@
 /*
- * $Id: TransformEachPageExceptFirst.java,v 1.2 2006-09-01 06:47:00 thib_gc Exp $
+ * $Id: TransformEachPageExceptFirst.java,v 1.3 2006-09-10 07:50:51 thib_gc Exp $
  */
 
 /*
@@ -35,7 +35,8 @@ package org.lockss.filter.pdf;
 import java.io.IOException;
 import java.util.*;
 
-import org.lockss.util.PdfDocument;
+import org.lockss.util.*;
+import org.lockss.util.PdfUtil.ResultPolicy;
 
 /**
  * <p>A PDF transform that applies a PDF page transform to each page
@@ -44,20 +45,27 @@ import org.lockss.util.PdfDocument;
  */
 public class TransformEachPageExceptFirst extends TransformSelectedPages {
 
+  public TransformEachPageExceptFirst(PageTransform pageTransform) {
+    super(pageTransform);
+  }
+
   /**
    * <p>Builds a new PDF transform with the given PDF page
    * transform.</p>
-   * @param pdfPageTransform A PDF page transform.
+   * @param pageTransform A PDF page transform.
    */
-  public TransformEachPageExceptFirst(PdfPageTransform pdfPageTransform) {
-    super(pdfPageTransform);
+  public TransformEachPageExceptFirst(ResultPolicy resultPolicy,
+                                      PageTransform pageTransform) {
+    super(resultPolicy,
+          pageTransform);
   }
 
   /* Inherit documentation */
   protected ListIterator /* of PdfPage */ getSelectedPages(PdfDocument pdfDocument)
       throws IOException {
     ListIterator iter = pdfDocument.getPageIterator();
-    iter.next(); // skip first page
+    iter.next();
+    // FIXME: technically, the client could rewind to the first page
     return iter;
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: PdfPageTransformException.java,v 1.1 2006-08-23 19:14:06 thib_gc Exp $
+ * $Id: ConditionalOperatorProcessor.java,v 1.1 2006-09-10 07:50:50 thib_gc Exp $
  */
 
 /*
@@ -33,47 +33,41 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.filter.pdf;
 
 import java.io.IOException;
+import java.util.List;
 
-/**
- * <p>A properly-nestable {@link IOException} for exceptions raised
- * by PDF page transforms.</p>
- * @author Thib Guicherd-Callin
- * @see PdfPageTransform#transform
- */
-public class PdfPageTransformException extends IOException {
+import org.pdfbox.util.PDFOperator;
 
-  /**
-   * <p>Builds a new exception.</p>
-   */
-  public PdfPageTransformException() {
-    super();
+public abstract class ConditionalOperatorProcessor extends SimpleOperatorProcessor {
+
+  public abstract boolean identify(List tokens);
+
+  public void process(PageStreamTransform pageStreamTransform,
+                      PDFOperator operator,
+                      List operands)
+      throws IOException {
+    super.process(pageStreamTransform, operator, operands);
+    List tokens = getSequence(pageStreamTransform);
+    if (identify(tokens)) {
+      pageStreamTransform.signalChange();
+      processIdentified(pageStreamTransform, tokens);
+    }
+    else {
+      processNotIdentified(pageStreamTransform, tokens);
+    }
   }
 
-  /**
-   * <p>Builds a new exception using the given message.</p>
-   * @param message A detail message.
-   */
-  public PdfPageTransformException(String message) {
-    super(message);
+  protected List getSequence(PageStreamTransform pdfPageStreamTransform) {
+    return pdfPageStreamTransform.getOutputList();
   }
 
-  /**
-   * <p>Builds a new exception using the given message and cause.</p>
-   * @param message A detail message.
-   * @param cause   A {@link Throwable} cause.
-   */
-  public PdfPageTransformException(String message, Throwable cause) {
-    super(message);
-    initCause(cause);
+  protected void processIdentified(PageStreamTransform pdfPageStreamTransform,
+                                   List tokens) {
+    // do nothing
   }
 
-  /**
-   * <p>Builds a new exception using the given cause.</p>
-   * @param cause A {@link Throwable} cause.
-   */
-  public PdfPageTransformException(Throwable cause) {
-    super();
-    initCause(cause);
+  protected void processNotIdentified(PageStreamTransform pdfPageStreamTransform,
+                                      List tokens) {
+    // do nothing
   }
 
 }

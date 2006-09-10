@@ -1,5 +1,5 @@
 /*
- * $Id: TestConditionalPdfTransform.java,v 1.1 2006-09-01 07:32:52 thib_gc Exp $
+ * $Id: TestConditionalDocumentTransform.java,v 1.1 2006-09-10 07:50:49 thib_gc Exp $
  */
 
 /*
@@ -33,37 +33,39 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.filter.pdf;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
+import org.lockss.filter.pdf.MockTransforms.RememberDocumentTransform;
 import org.lockss.test.*;
 import org.lockss.util.PdfDocument;
-import org.lockss.util.PdfUtil.CountCallsTransform;
+import org.lockss.util.PdfUtil.IdentityDocumentTransform;
 
-public class TestConditionalPdfTransform extends LockssTestCase {
+public class TestConditionalDocumentTransform extends LockssTestCase {
 
-  public void testDoesNotRunWhenIdentifyFalse() throws Exception {
-    PdfTransform transform = new PdfTransform() {
-      public void transform(PdfDocument pdfDocument) throws IOException {
-        fail("Transform was called but identify() had returned false");
-      }
-    };
-    ConditionalPdfTransform conditional = new ConditionalPdfTransform(transform) {
-      public boolean identify(PdfDocument pdfDocument) throws IOException {
+  public void testConditionFalse() throws Exception {
+    DocumentTransform transform = new DocumentTransform() {
+      public boolean transform(PdfDocument pdfDocument) throws IOException {
+        fail("Should not have been called");
         return false;
       }
     };
-    conditional.transform(new MockPdfDocument());
+    ConditionalDocumentTransform conditional = new ConditionalDocumentTransform(new IdentityDocumentTransform(false),
+                                                                                transform);
+    assertFalse(conditional.transform(new MockPdfDocument()));
     // Did not throw: all is well
   }
 
-  public void testRunsWhenIdentifyTrue() throws Exception {
-    CountCallsTransform transform = new CountCallsTransform();
-    ConditionalPdfTransform conditional = new ConditionalPdfTransform(transform) {
-      public boolean identify(PdfDocument pdfDocument) throws IOException {
-        return true;
-      }
-    };
-    conditional.transform(new MockPdfDocument());
+  public void testConditionTrue() throws Exception {
+    RememberDocumentTransform transform = new RememberDocumentTransform(new ArrayList());
+    ConditionalDocumentTransform conditional = new ConditionalDocumentTransform(new IdentityDocumentTransform(true),
+                                                                                transform);
+    assertTrue(conditional.transform(new MockPdfDocument()));
     assertEquals(1, transform.getCallCount());
   }
 
+  public void testConditionTrueThenFails() throws Exception {
+    assertFalse(new ConditionalDocumentTransform(new IdentityDocumentTransform(true),
+                                                 new IdentityDocumentTransform(false)).transform(new MockPdfDocument()));
+  }
+  
 }

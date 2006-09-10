@@ -1,5 +1,5 @@
 /*
- * $Id: ShowTextProcessor.java,v 1.5 2006-09-02 06:34:17 thib_gc Exp $
+ * $Id: ProcessShowText.java,v 1.1 2006-09-10 07:50:50 thib_gc Exp $
  */
 
 /*
@@ -38,21 +38,20 @@ import java.util.List;
 import org.lockss.util.PdfUtil;
 import org.pdfbox.cos.COSString;
 import org.pdfbox.util.PDFOperator;
-import org.pdfbox.util.operator.OperatorProcessor;
 
 /**
  * <p>A PDF operator processor that deals with the "show text" PDF
  * operator (<code>Tj</code>), replacing the operand string by
  * another conditionally.</p>
- * <p>{@link ShowTextProcessor} instances, like
+ * <p>{@link ProcessShowText} instances, like
  * {@link SimpleOperatorProcessor} instances, <em>must</em> have a
  * no-argument constructor, and are instantiated once per key
  * associated with their class name during a given
- * {@link PdfPageStreamTransform} instantiation.</p>
+ * {@link PageStreamTransform} instantiation.</p>
  * @author Thib Guicherd-Callin
  * @see PdfUtil#SHOW_TEXT
  */
-public abstract class ShowTextProcessor extends SimpleOperatorProcessor {
+public abstract class ProcessShowText extends SimpleOperatorProcessor {
 
   /**
    * <p>Determines if an operand string is to be replaced.</p>
@@ -63,7 +62,7 @@ public abstract class ShowTextProcessor extends SimpleOperatorProcessor {
    *         by {@link #getReplacement}, false otherwise.
    * @see #getReplacement
    */
-  public abstract boolean candidateMatches(String candidate);
+  public abstract boolean identify(String candidate);
 
   /**
    * <p>Computes a replacement for a matched operand string.</p>
@@ -77,21 +76,21 @@ public abstract class ShowTextProcessor extends SimpleOperatorProcessor {
   public abstract String getReplacement(String match);
 
   /* Inherit documentation */
-  public void process(PDFOperator operator,
-                      List operands,
-                      PdfPageStreamTransform pdfPageStreamTransform)
+  public void process(PageStreamTransform pageStreamTransform,
+                      PDFOperator operator,
+                      List operands)
       throws IOException {
     String candidate = PdfUtil.getPdfString(operands.get(0));
-    if (candidateMatches(candidate)) {
+    if (identify(candidate)) {
       // String matches: replace it
-      pdfPageStreamTransform.signalChange();
-      List outputList = pdfPageStreamTransform.getOutputList();
+      pageStreamTransform.signalChange();
+      List outputList = pageStreamTransform.getOutputList();
       outputList.add(new COSString(getReplacement(candidate)));
       outputList.add(operator);
     }
     else {
       // String does not match: pass it through
-      super.process(operator, operands, pdfPageStreamTransform);
+      super.process(pageStreamTransform, operator, operands);
     }
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestTransformEachPageExceptFirst.java,v 1.1 2006-09-01 07:32:52 thib_gc Exp $
+ * $Id: TestTransformEachPageExceptFirst.java,v 1.2 2006-09-10 07:50:49 thib_gc Exp $
  */
 
 /*
@@ -35,20 +35,25 @@ package org.lockss.filter.pdf;
 import java.io.IOException;
 import java.util.*;
 
+import org.apache.commons.collections.iterators.*;
 import org.lockss.test.*;
+import org.lockss.util.PdfPage;
+import org.lockss.util.PdfUtil.IdentityPageTransform;
 
-public class TestTransformEachPageExceptFirst extends TransformSelectedPagesTester {
+public class TestTransformEachPageExceptFirst extends LockssTestCase {
 
-  protected void assertSuccess(MockPdfDocument mockPdfDocument,
-                               ListIterator selectedPages)
-      throws IOException {
-    Iterator iter = mockPdfDocument.getPageIterator();
-    iter.next(); // skip first page
-    assertIsomorphic(iter, selectedPages);
-  }
+  public void testGetSelectedPages() throws Exception {
+    final PdfPage[] pages = new PdfPage[] {
+        new MockPdfPage(), new MockPdfPage(), new MockPdfPage(),
+    };
+    MockPdfDocument mockPdfDocument = new MockPdfDocument() {
+      public PdfPage getPage(int index) { return pages[index]; }
+      public ListIterator getPageIterator() { return new ObjectArrayListIterator(pages); }
+    };
 
-  protected TransformSelectedPages makeInstance(PdfPageTransform pdfPageTransform) {
-    return new TransformEachPageExceptFirst(pdfPageTransform);
+    TransformSelectedPages documentTransform = new TransformEachPageExceptFirst(new IdentityPageTransform());
+    assertIsomorphic(new ObjectArrayListIterator(pages, 1),
+                     documentTransform.getSelectedPages(mockPdfDocument));
   }
 
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: PdfOperatorProcessor.java,v 1.5 2006-09-02 06:34:17 thib_gc Exp $
+ * $Id: PdfOperatorProcessor.java,v 1.6 2006-09-10 07:50:51 thib_gc Exp $
  */
 
 /*
@@ -33,7 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.filter.pdf;
 
 import java.io.IOException;
-import java.util.List;
+import java.util.*;
 
 import org.pdfbox.util.PDFOperator;
 import org.pdfbox.util.operator.OperatorProcessor;
@@ -45,43 +45,43 @@ import org.pdfbox.util.operator.OperatorProcessor;
  * {@link OperatorProcessor} instances, <em>must</em> have a
  * no-argument constructor, and are instantiated once per key
  * associated with their class name during a given
- * {@link PdfPageStreamTransform} instantiation.</p>
+ * {@link PageStreamTransform} instantiation.</p>
  * @author Thib Guicherd-Callin
- * @see PdfPageStreamTransform
+ * @see PageStreamTransform
  */
 public abstract class PdfOperatorProcessor extends OperatorProcessor {
 
   /**
    * <p>Inherited from {@link OperatorProcessor}; simply calls
-   * {@link #process(PDFOperator, List, PdfPageStreamTransform)}
+   * {@link #process(PageStreamTransform, PDFOperator, List)}
    * with the context being the current PDF page stream transform.</p>
    * @param operator  A PDF operator being processed.
    * @param arguments The operands that the operator applies to.
-   * @see #process(PDFOperator, List, PdfPageStreamTransform)
+   * @see #process(PageStreamTransform, PDFOperator, List)
    * @see OperatorProcessor#getContext
    */
   public void process(PDFOperator operator,
                       List arguments)
       throws IOException {
-    process(operator,
-            arguments,
-            (PdfPageStreamTransform)getContext());
+    process((PageStreamTransform)getContext(),
+            operator,
+            Collections.unmodifiableList(arguments));
   }
 
   /**
    * <p>Processes the operation (operator and operands) in the context
    * of the given PDF page stream transform.</p>
+   * @param pageStreamTransform The PDF page stream transform being
+   *                               applied.
    * @param operator               A PDF operator being processed.
    * @param operands               The operands that the operator
    *                               applies to.
-   * @param pdfPageStreamTransform The PDF page stream transform being
-   *                               applied.
    * @throws IOException if any processing error occurs.
    * @see #process(PDFOperator, List)
    */
-  public abstract void process(PDFOperator operator,
-                               List operands,
-                               PdfPageStreamTransform pdfPageStreamTransform)
+  public abstract void process(PageStreamTransform pageStreamTransform,
+                               PDFOperator operator,
+                               List operands)
       throws IOException;
 
 }

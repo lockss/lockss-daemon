@@ -1,5 +1,5 @@
 /*
- * $Id: PdfTransform.java,v 1.1 2006-08-23 19:14:06 thib_gc Exp $
+ * $Id: DocumentTransform.java,v 1.1 2006-09-10 07:50:50 thib_gc Exp $
  */
 
 /*
@@ -42,13 +42,14 @@ import org.lockss.util.PdfDocument;
  * @author Thib Guicherd-Callin
  * @see PdfDocument
  */
-public interface PdfTransform {
+public interface DocumentTransform {
 
   /**
    * <p>Applies a transform to a PDF document.</p>
    * @param pdfDocument A PDF document.
+   * @return True if any changes were 
    * @throws IOException if any processing error occurs.
    */
-  void transform(PdfDocument pdfDocument) throws IOException;
+  boolean transform(PdfDocument pdfDocument) throws IOException;
 
 }

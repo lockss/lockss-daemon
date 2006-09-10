@@ -1,5 +1,5 @@
 /*
- * $Id: TransformSelectedPages.java,v 1.2 2006-09-01 06:47:00 thib_gc Exp $
+ * $Id: TransformSelectedPages.java,v 1.3 2006-09-10 07:50:50 thib_gc Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.io.IOException;
 import java.util.*;
 
 import org.lockss.util.*;
+import org.lockss.util.PdfUtil.ResultPolicy;
 
 /**
  * <p>A PDF transform that applies a PDF page transform to selected
@@ -43,27 +44,44 @@ import org.lockss.util.*;
  * @author Thib Guicherd-Callin
  * @see #getSelectedPages
  */
-public abstract class TransformSelectedPages implements PdfTransform {
+public abstract class TransformSelectedPages implements DocumentTransform {
 
   /**
    * <p>A PDF page transform.</p>
    */
-  protected PdfPageTransform pdfPageTransform;
+  protected PageTransform pageTransform;
+
+  protected ResultPolicy resultPolicy;
+
+  public static final ResultPolicy POLICY_BY_DEFAULT = PdfUtil.AND;
+
+  protected TransformSelectedPages(PageTransform pageTransform) {
+    this(POLICY_BY_DEFAULT,
+         pageTransform);
+  }
 
   /**
    * <p>Builds a new PDF transform with the given PDF page
    * transform.</p>
-   * @param pdfPageTransform A PDF page transform.
+   * @param pageTransform A PDF page transform.
    */
-  protected TransformSelectedPages(PdfPageTransform pdfPageTransform) {
-    this.pdfPageTransform = pdfPageTransform;
+  protected TransformSelectedPages(ResultPolicy resultPolicy,
+                                   PageTransform pageTransform) {
+    this.resultPolicy = resultPolicy;
+    this.pageTransform = pageTransform;
   }
 
   /* Inherit documentation */
-  public void transform(PdfDocument pdfDocument) throws IOException {
+  public boolean transform(PdfDocument pdfDocument) throws IOException {
+    boolean success = resultPolicy.resetResult();
     for (Iterator iter = getSelectedPages(pdfDocument) ; iter.hasNext() ; ) {
-      pdfPageTransform.transform(pdfDocument, (PdfPage)iter.next());
+      PdfPage pdfPage = (PdfPage)iter.next();
+      success = resultPolicy.updateResult(success, pageTransform.transform(pdfPage));
+      if (!resultPolicy.shouldKeepGoing(success)) {
+        break;
+      }
     }
+    return success;
   }
 
   /**

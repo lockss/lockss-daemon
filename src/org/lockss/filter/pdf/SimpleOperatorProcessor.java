@@ -1,5 +1,5 @@
 /*
- * $Id: SimpleOperatorProcessor.java,v 1.4 2006-09-02 06:34:17 thib_gc Exp $
+ * $Id: SimpleOperatorProcessor.java,v 1.5 2006-09-10 07:50:50 thib_gc Exp $
  */
 
 /*
@@ -36,7 +36,6 @@ import java.io.IOException;
 import java.util.List;
 
 import org.pdfbox.util.PDFOperator;
-import org.pdfbox.util.operator.OperatorProcessor;
 
 /**
  * <p>A PDF operator processor that simply passes its operands and
@@ -46,18 +45,18 @@ import org.pdfbox.util.operator.OperatorProcessor;
  * {@link PdfOperatorProcessor} instances, <em>must</em> have a
  * no-argument constructor, and are instantiated once per key
  * associated with their class name during a given
- * {@link PdfPageStreamTransform} instantiation.</p>
+ * {@link PageStreamTransform} instantiation.</p>
  * @author Thib Guicherd-Callin
  */
 public class SimpleOperatorProcessor extends PdfOperatorProcessor {
 
   /* Inherit documentation */
-  public void process(PDFOperator operator,
-                      List operands,
-                      PdfPageStreamTransform pdfPageStreamTransform)
+  public void process(PageStreamTransform pageStreamTransform,
+                      PDFOperator operator,
+                      List operands)
       throws IOException {
-    pdfPageStreamTransform.getOutputList().addAll(operands);
-    pdfPageStreamTransform.getOutputList().add(operator);
+    pageStreamTransform.getOutputList().addAll(operands);
+    pageStreamTransform.getOutputList().add(operator);
   }
 
 }

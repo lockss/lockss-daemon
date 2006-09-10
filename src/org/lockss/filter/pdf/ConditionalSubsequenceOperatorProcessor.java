@@ -1,5 +1,5 @@
 /*
- * $Id: TestTransformFirstPage.java,v 1.2 2006-09-10 07:50:49 thib_gc Exp $
+ * $Id: ConditionalSubsequenceOperatorProcessor.java,v 1.1 2006-09-10 07:50:50 thib_gc Exp $
  */
 
 /*
@@ -32,27 +32,30 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.filter.pdf;
 
-import java.util.ListIterator;
+import java.util.*;
 
-import org.apache.commons.collections.iterators.*;
-import org.lockss.test.*;
-import org.lockss.util.PdfPage;
-import org.lockss.util.PdfUtil.IdentityPageTransform;
+public abstract class ConditionalSubsequenceOperatorProcessor extends ConditionalOperatorProcessor {
 
-public class TestTransformFirstPage extends LockssTestCase {
+  public abstract List getReplacement(List tokens);
 
-  public void testGetSelectedPages() throws Exception {
-    final PdfPage[] pages = new PdfPage[] {
-        new MockPdfPage(), new MockPdfPage(), new MockPdfPage(),
-    };
-    MockPdfDocument mockPdfDocument = new MockPdfDocument() {
-      public PdfPage getPage(int index) { return pages[index]; }
-      public ListIterator getPageIterator() { return new ObjectArrayListIterator(pages); }
-    };
+  public abstract int getSubsequenceLength();
 
-    TransformSelectedPages documentTransform = new TransformFirstPage(new IdentityPageTransform());
-    assertIsomorphic(new SingletonIterator(pages[0]),
-                     documentTransform.getSelectedPages(mockPdfDocument));
+  protected List getSequence(PageStreamTransform pdfPageStreamTransform) {
+    int subsequenceLength = getSubsequenceLength();
+    List outputList = pdfPageStreamTransform.getOutputList();
+    int outputListSize = outputList.size();
+    return Collections.unmodifiableList(new ArrayList(outputListSize >= subsequenceLength
+                                                      ? outputList.subList(outputListSize - subsequenceLength, outputListSize)
+                                                      : outputList));
+  }
+
+  protected void processIdentified(PageStreamTransform pdfPageStreamTransform,
+                                   List tokens) {
+    int subsequenceLength = getSubsequenceLength();
+    List outputList = pdfPageStreamTransform.getOutputList();
+    int outputListSize = outputList.size();
+    outputList.subList(outputListSize - subsequenceLength, outputListSize).clear();
+    outputList.addAll(getReplacement(tokens));
   }
 
 }

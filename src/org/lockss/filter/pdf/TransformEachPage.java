@@ -1,5 +1,5 @@
 /*
- * $Id: TransformEachPage.java,v 1.2 2006-09-01 06:47:00 thib_gc Exp $
+ * $Id: TransformEachPage.java,v 1.3 2006-09-10 07:50:50 thib_gc Exp $
  */
 
 /*
@@ -35,7 +35,8 @@ package org.lockss.filter.pdf;
 import java.io.IOException;
 import java.util.ListIterator;
 
-import org.lockss.util.PdfDocument;
+import org.lockss.util.*;
+import org.lockss.util.PdfUtil.ResultPolicy;
 
 /**
  * <p>A PDF transform that applies a PDF page transform to each page
@@ -44,13 +45,19 @@ import org.lockss.util.PdfDocument;
  */
 public class TransformEachPage extends TransformSelectedPages {
 
+  public TransformEachPage(PageTransform pageTransform) {
+    super(pageTransform);
+  }
+
   /**
    * <p>Builds a new PDF transform with the given PDF page
    * transform.</p>
-   * @param pdfPageTransform A PDF page transform.
+   * @param pageTransform A PDF page transform.
    */
-  public TransformEachPage(PdfPageTransform pdfPageTransform) {
-    super(pdfPageTransform);
+  public TransformEachPage(ResultPolicy resultPolicy,
+                           PageTransform pageTransform) {
+    super(resultPolicy,
+          pageTransform);
   }
 
   /* Inherit documentation */

@@ -1,5 +1,5 @@
 /*
- * $Id: PdfPageTransform.java,v 1.2 2006-09-01 06:47:00 thib_gc Exp $
+ * $Id: DocumentTransformException.java,v 1.1 2006-09-10 07:50:50 thib_gc Exp $
  */
 
 /*
@@ -34,24 +34,46 @@ package org.lockss.filter.pdf;
 
 import java.io.IOException;
 
-import org.lockss.util.*;
-
 /**
- * <p>Specifies classes that are able to transform a PDF page
- * via a {@link PdfPage}.</p>
+ * <p>A properly-nestable {@link IOException} for exceptions raised
+ * by PDF transforms.</p>
  * @author Thib Guicherd-Callin
- * @see PdfDocument
+ * @see DocumentTransform#transform
  */
-public interface PdfPageTransform {
+public class DocumentTransformException extends IOException {
 
   /**
-   * <p>Applies a transform to a PDF page.</p>
-   * @param pdfDocument A parent PDF document.
-   * @param pdfPage     A PDF page (belonging to the PDF document).
-   * @throws IOException if any processing error occurs.
+   * <p>Builds a new exception.</p>
    */
-  void transform(PdfDocument pdfDocument,
-                 PdfPage pdfPage)
-      throws IOException;
+  public DocumentTransformException() {
+    super();
+  }
+
+  /**
+   * <p>Builds a new exception using the given message.</p>
+   * @param message A detail message.
+   */
+  public DocumentTransformException(String message) {
+    super(message);
+  }
+
+  /**
+   * <p>Builds a new exception using the given message and cause.</p>
+   * @param message A detail message.
+   * @param cause   A {@link Throwable} cause.
+   */
+  public DocumentTransformException(String message, Throwable cause) {
+    super(message);
+    initCause(cause);
+  }
+
+  /**
+   * <p>Builds a new exception using the given cause.</p>
+   * @param cause A {@link Throwable} cause.
+   */
+  public DocumentTransformException(Throwable cause) {
+    super();
+    initCause(cause);
+  }
 
 }

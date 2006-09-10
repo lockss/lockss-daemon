@@ -48,13 +48,13 @@ public class HighWirePdfFilterRule implements FilterRule {
     return null; //return new PdfFilterReader(reader, getInstance());
   }
 
-  private static CompoundPdfTransform compoundTransform;
+  private static AggregateDocumentTransform compoundTransform;
 
-  public static synchronized PdfTransform getInstance() throws IOException {
+  public static synchronized DocumentTransform getInstance() throws IOException {
     // This is a stub
     if (compoundTransform == null) {
-      compoundTransform = new CompoundPdfTransform();
-      compoundTransform.add(AmericanPhysiologicalSocietyPdfTransform.makeTransform());
+      //compoundTransform = new AggregateDocumentTransform();
+      //compoundTransform.add(AmericanPhysiologicalSocietyPdfTransform.makeTransform());
     }
     return compoundTransform;
   }

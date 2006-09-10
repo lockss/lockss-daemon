@@ -1,5 +1,5 @@
 /*
- * $Id: PdfPage.java,v 1.1 2006-09-01 06:47:00 thib_gc Exp $
+ * $Id: PdfPage.java,v 1.2 2006-09-10 07:50:51 thib_gc Exp $
  */
 
 /*
@@ -48,6 +48,11 @@ import org.pdfbox.pdmodel.common.*;
 public class PdfPage {
 
   /**
+   * <p>The associated {@link PdfDocument} instance.</p>
+   */
+  private PdfDocument pdfDocument;
+
+  /**
    * <p>The underlying {@link PDPage} instance.</p>
    */
   private PDPage pdPage;
@@ -56,7 +61,8 @@ public class PdfPage {
    * <p>Builds a new PDF page.</p>
    * @param pdPage An underlying {@link PDPage} instance.
    */
-  public PdfPage(PDPage pdPage) {
+  public PdfPage(PdfDocument pdfDocument, PDPage pdPage) {
+    this.pdfDocument = pdfDocument;
     this.pdPage = pdPage;
   }
 
@@ -153,6 +159,26 @@ public class PdfPage {
   }
 
   /**
+   * <p>Provides access to the {@link PdfDocument} instance associated
+   * with this PDF page.\</p>
+   * @return This page's associated {@link PdfDocument} instance.
+   * @see PdfDocument
+   */
+  public PdfDocument getPdfDocument() {
+    return pdfDocument;
+  }
+
+  /**
+   * <p>Provides access to the underlying {@link PDPage} instance;
+   * <em>use with care.</em></p>
+   * @return This page's underlying {@link PDPage} instance.
+   * @see PDPage
+   */
+  public PDPage getPdPage() {
+    return pdPage;
+  }
+
+  /**
    * <p>Convenience method to obtain a list iterator over the
    * tokens of this page's content stream.</p>
    * @return A list iterator of the tokens in this page's content
@@ -240,16 +266,6 @@ public class PdfPage {
    */
   protected PDStream getContents() throws IOException {
     return getPdPage().getContents();
-  }
-
-  /**
-   * <p>Provides access to the underlying {@link PDPage} instance;
-   * <em>use with care.</em></p>
-   * @return This page's underlying {@link PDPage} instance.
-   * @see PDPage
-   */
-  public PDPage getPdPage() {
-    return pdPage;
   }
 
 }

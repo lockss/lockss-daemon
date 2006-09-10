@@ -1,5 +1,5 @@
 /*
- * $Id: SplitOperatorProcessor.java,v 1.4 2006-09-02 06:34:17 thib_gc Exp $
+ * $Id: SplitOperatorProcessor.java,v 1.5 2006-09-10 07:50:51 thib_gc Exp $
  */
 
 /*
@@ -57,21 +57,21 @@ import org.pdfbox.util.PDFOperator;
  * {@link SimpleOperatorProcessor} instances, <em>must</em> have a
  * no-argument constructor, and are instantiated once per key
  * associated with their class name during a given
- * {@link PdfPageStreamTransform} instantiation.</p>
+ * {@link PageStreamTransform} instantiation.</p>
  * @author Thib Guicherd-Callin
- * @see PdfPageStreamTransform#splitOutputList
- * @see PdfPageStreamTransform#mergeOutputList()
- * @see PdfPageStreamTransform#mergeOutputList(List)
+ * @see PageStreamTransform#splitOutputList
+ * @see PageStreamTransform#mergeOutputList()
+ * @see PageStreamTransform#mergeOutputList(List)
  */
 public class SplitOperatorProcessor extends SimpleOperatorProcessor {
 
   /* Inherit documentation */
-  public void process(PDFOperator operator,
-                      List operands,
-                      PdfPageStreamTransform pdfPageStreamTransform)
+  public void process(PageStreamTransform pageStreamTransform,
+                      PDFOperator operator,
+                      List operands)
       throws IOException {
-    pdfPageStreamTransform.splitOutputList();
-    super.process(operator, operands, pdfPageStreamTransform);
+    pageStreamTransform.splitOutputList();
+    super.process(pageStreamTransform, operator, operands);
   }
 
 }
