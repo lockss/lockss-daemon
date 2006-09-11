@@ -51,6 +51,7 @@
       <string>1,&quot;.*/cgi/content/.*/%d/.*&quot;, volume</string>
       <string>1,&quot;.*/cgi/reprint/%d/.*&quot;, volume</string>
       <string>1,&quot;.*/cgi/reprintframed/%d/.*&quot;, volume</string>
+      <string>1,&quot;.*/cgi/framedreprint/%d/.*&quot;, volume</string>
       <string>1,&quot;.*/cgi/reprintsidebar/%d/.*&quot;, volume</string>
       <string>1,&quot;.*/icons.*&quot;</string>
       <string>1,&quot;.*/math.*&quot;</string>
