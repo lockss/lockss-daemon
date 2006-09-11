@@ -1,5 +1,5 @@
 /*
- * $Id: EDPCellData.java,v 1.14 2006-09-06 16:38:41 thib_gc Exp $
+ * $Id: EDPCellData.java,v 1.14.2.1 2006-09-11 23:22:40 thib_gc Exp $
  */
 
 /*
@@ -186,9 +186,27 @@ public class EDPCellData {
     notifyListenersOfChange();
   }
 
+  public void updateStringDataAnyway(String data) {
+    if (m_plugin == null || m_key == null || data == null) {
+      return;
+    }
+    else if (m_key.equals(EditableDefinablePlugin.AU_CRAWL_WINDOW)) {
+      m_data = data;
+      m_plugin.setAuCrawlWindow((String)m_data, false);
+    }
+    else if (m_key.equals(EditableDefinablePlugin.PLUGIN_EXCEPTION_HANDLER)) {
+      m_data = data;
+      m_plugin.setPluginExceptionHandler((String)m_data, false);
+    }
+
+    notifyListenersOfChange();
+  }
+
   public void updateStringData(String data) {
-    if(m_plugin == null || m_key == null || data == null) return;
-    if(m_key.equals(EditableDefinablePlugin.PLUGIN_NAME)) {
+    if (m_plugin == null || m_key == null || data == null) {
+      return;
+    }
+    else if(m_key.equals(EditableDefinablePlugin.PLUGIN_NAME)) {
       m_data = data;
       m_plugin.setPluginName((String)m_data);
     }
@@ -211,7 +229,7 @@ public class EDPCellData {
     }
     else if(m_key.equals(EditableDefinablePlugin.AU_CRAWL_WINDOW)) {
       m_data = data;
-      m_plugin.setAuCrawlWindow((String)m_data);
+      m_plugin.setAuCrawlWindow((String)m_data, true);
     }
     else if(m_key.equals(EditableDefinablePlugin.AU_PAUSE_TIME)) {
       m_data = new Long(data);
@@ -225,7 +243,7 @@ public class EDPCellData {
     }
     else if(m_key.equals(EditableDefinablePlugin.PLUGIN_EXCEPTION_HANDLER)) {
       m_data = data;
-      m_plugin.setPluginExceptionHandler((String)m_data);
+      m_plugin.setPluginExceptionHandler((String)m_data, true);
     }
     else if(m_key.equals(EditableDefinablePlugin.CM_CRAWL_TYPE)) {
       m_data = data;

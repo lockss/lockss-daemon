@@ -1,5 +1,5 @@
 /*
- * $Id: FilterRulesEditor.java,v 1.8 2006-09-06 16:38:41 thib_gc Exp $
+ * $Id: FilterRulesEditor.java,v 1.8.2.1 2006-09-11 23:22:40 thib_gc Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.table.*;
 
+import org.lockss.devtools.plugindef.EditableDefinablePlugin.DynamicallyLoadedComponentException;
 import org.lockss.plugin.definable.DefinablePlugin.*;
 import org.lockss.util.Logger;
 
@@ -140,12 +141,17 @@ public class FilterRulesEditor extends JDialog implements EDPEditor {
   void okButton_actionPerformed(ActionEvent e) {
     int num_rows = filtersTable.getRowCount();
     EditableDefinablePlugin edp = m_data.getPlugin();
-    for(int row =0; row < num_rows; row++) {
+    for (int row =0; row < num_rows; row++) {
       String mime_type = (String)filtersTable.getValueAt(row, 0);
       String filter = (String)filtersTable.getValueAt(row, 1);
 
       try {
-        edp.setAuFilter(mime_type, filter);
+        edp.setAuFilter(mime_type, filter, true);
+      }
+      catch (DynamicallyLoadedComponentException dlce) {
+        if (EDPInspectorTableModel.handleDynamicallyLoadedComponentException(this, dlce)) {
+          edp.setAuFilter(mime_type, filter, false);
+        }
       }
       catch (InvalidDefinitionException ex) {
         JOptionPane.showMessageDialog(this, ex.getMessage(),
@@ -199,7 +205,7 @@ public class FilterRulesEditor extends JDialog implements EDPEditor {
 
     public Object getValueAt(int row, int col) {
       Object obj = ( (Object[]) rowData.elementAt(row))[col];
-      System.out.println("Got object: " + obj);
+      logger.debug3("Got object: " + obj);
       return ( (Object[]) rowData.elementAt(row))[col];
     }
 
@@ -248,13 +254,13 @@ public class FilterRulesEditor extends JDialog implements EDPEditor {
       Object[] row_data = new Object[2];
       if (rowData.size() < 1) { // add a new html filter
         row_data[0] = "text/html";
-        row_data[1] = "Replace with Filter class name.";
+        row_data[1] = "Replace with Filter class name";
       }
       else {
         row_data[0] = "Enter Mime type";
-        row_data[1] = "Replace with Filter class Name.";
+        row_data[1] = "Replace with Filter class Name";
       }
-      System.out.println("Adding new row.");
+      logger.debug3("Adding new row");
       rowData.add(row_data);
       fireTableDataChanged();
     }

@@ -1,5 +1,5 @@
 /*
- * $Id: EDPInspectorTableModel.java,v 1.14 2006-09-06 16:38:41 thib_gc Exp $
+ * $Id: EDPInspectorTableModel.java,v 1.14.2.1 2006-09-11 23:22:40 thib_gc Exp $
  */
 
 /*
@@ -35,8 +35,12 @@ package org.lockss.devtools.plugindef;
 import javax.swing.table.*;
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
+
 import javax.swing.event.*;
 
+import org.apache.commons.lang.StringUtils;
+import org.lockss.devtools.plugindef.EditableDefinablePlugin.DynamicallyLoadedComponentException;
 import org.lockss.plugin.definable.DefinablePlugin.InvalidDefinitionException;
 
 public class EDPInspectorTableModel extends AbstractTableModel
@@ -214,15 +218,21 @@ public class EDPInspectorTableModel extends AbstractTableModel
   }
 
   public void setValueAt(Object obj, int rowIndex, int columnIndex) {
+    EDPCellData cellData = null;
     try {
-      EDPCellData cell_data = (EDPCellData) data[rowIndex][columnIndex];
+      cellData = (EDPCellData) data[rowIndex][columnIndex];
       if (inspectorEntries[rowIndex].m_editor != inspectorCellEditor) {
         // we handle the internal update here
-        cell_data.updateStringData( (String) obj);
+        cellData.updateStringData( (String) obj);
       }
       else{
         //notifies listeners that something has changed
-        cell_data.updateOtherData( (String) obj);
+        cellData.updateOtherData( (String) obj);
+      }
+    }
+    catch (DynamicallyLoadedComponentException dlce) {
+      if (handleDynamicallyLoadedComponentException(parentFrame, dlce)) {
+        cellData.updateStringDataAnyway((String)obj);
       }
     }
     catch (InvalidDefinitionException ide) {
@@ -230,6 +240,46 @@ public class EDPInspectorTableModel extends AbstractTableModel
                                     ide.getMessage(),
                                     "Error",
                                     JOptionPane.ERROR_MESSAGE);
+    }
+  }
+
+  /* package */ static boolean handleDynamicallyLoadedComponentException(Component parentComponent,
+                                                                         DynamicallyLoadedComponentException dlce) {
+    Throwable cause = dlce.getCause();
+    if (cause != null) {
+      String errorMessage;
+      if (cause instanceof ClassCastException) {
+        errorMessage = "The class you have specified does not seem to be of the right type.";
+      }
+      else if (cause instanceof ClassNotFoundException) {
+        errorMessage = "The class you have specified does not seem to be loadable under the current class path.";
+      }
+      else if (cause instanceof InstantiationError) {
+        errorMessage = "The class you have specified seems to have caused an instantiation error.";
+      }
+      else if (cause instanceof IllegalAccessException) {
+        errorMessage = "The class you have specified does not seem to have a public constructor.";
+      }
+      else {
+        throw dlce; // rethrow
+      }
+      String[] messages = new String[] {
+          errorMessage,
+          "The internal error was of type " + cause.getClass().getName() + " with the following message:",
+          " ",
+          "\"" + StringUtils.abbreviate(dlce.getMessage(), 80) + "\"",
+          " ",
+          "Do you want to commit this value to the plugin anyway?",
+      };
+      int sel = JOptionPane.showConfirmDialog(parentComponent,
+                                              messages,
+                                              "Dynamically Loaded Component Exception",
+                                              JOptionPane.YES_NO_OPTION,
+                                              JOptionPane.WARNING_MESSAGE);
+      return sel == JOptionPane.YES_OPTION;
+    }
+    else {
+      throw dlce; // rethrow
     }
   }
 

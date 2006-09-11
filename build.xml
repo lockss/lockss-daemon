@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.195.2.1 2006-09-07 21:33:00 thib_gc Exp $
+ $Id: build.xml,v 1.195.2.2 2006-09-11 23:22:40 thib_gc Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
@@ -1093,13 +1093,13 @@ JAVA_COMMAND_ARGS="-server -Xmx500m -Dsun.net.inetaddr.ttl=3600 -Dorg.lockss.syn
      <map from="${java.lib}" to="%JAVA_HOME%\lib" />
      <map from="${lib}" to="." />
     </pathconvert>
-    <echo file="${temp.pkg.dir}/runtool">#!/bin/sh
+    <echo file="${temp.pkg.dir}/plugintool">#!/bin/sh
 
 CLASSPATH="${tmp.ptool.clspth.unix}"
 while true ; do
  case "$1" in
   -classpath )
-   CLASSPATH="$2":"$CLASSPATH"
+   CLASSPATH="$CLASSPATH":"$2"
    shift; shift; continue;;
   -loglevel )
    JVM_ARGS="$JVM_ARGS -Dorg.lockss.defaultLogLevel=$2"
@@ -1117,7 +1117,7 @@ if [ -n "$JVM_ARGS" ] ; then
 fi
 java -classpath $CLASSPATH $JVM_ARGS org.lockss.devtools.plugindef.PluginDefinerApp
 </echo>
-    <echo file="${temp.pkg.dir}/runtool.bat">java -classpath &quot;${tmp.ptool.clspth.dos}&quot; org.lockss.devtools.plugindef.PluginDefinerApp
+    <echo file="${temp.pkg.dir}/plugintool.bat">java -classpath &quot;${tmp.ptool.clspth.dos}&quot; org.lockss.devtools.plugindef.PluginDefinerApp
 </echo>
     <tar destfile="plugintool.tgz" compression="gzip">
      <tarfileset dir="${temp.pkg.dir}" mode="755" includes="runtool" />

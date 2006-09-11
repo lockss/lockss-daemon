@@ -1,5 +1,5 @@
 /*
- * $Id: TestEditableDefinablePlugin.java,v 1.20 2006-09-06 16:38:41 thib_gc Exp $
+ * $Id: TestEditableDefinablePlugin.java,v 1.20.2.1 2006-09-11 23:22:40 thib_gc Exp $
  */
 
 /*
@@ -360,7 +360,7 @@ public class TestEditableDefinablePlugin
                                             defFilter);
     assertEquals("default filter", defFilter, actFilter);
 
-    edPlugin.setAuFilter(mimetype, expFilter);
+    edPlugin.setAuFilter(mimetype, expFilter, true);
     actFilter = edPlugin.getMap().getString(mimetype +
                                             EditableDefinablePlugin.AU_FILTER_SUFFIX,
                                             defFilter);
@@ -480,7 +480,7 @@ public class TestEditableDefinablePlugin
                                              null);
     assertNull(actHandler);
     String expHandler = new MockHttpResultHandler().getClass().getName();
-    edPlugin.setPluginExceptionHandler(expHandler);
+    edPlugin.setPluginExceptionHandler(expHandler, true);
     actHandler = edPlugin.getMap().getString(EditableDefinablePlugin.PLUGIN_EXCEPTION_HANDLER,
                                              null);
     assertEquals("resultHandler", expHandler, actHandler);

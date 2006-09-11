@@ -1,5 +1,5 @@
 /*
- * $Id: PluginDefiner.java,v 1.18 2006-09-06 16:38:41 thib_gc Exp $
+ * $Id: PluginDefiner.java,v 1.18.2.1 2006-09-11 23:22:40 thib_gc Exp $
  */
 
 /*
@@ -100,7 +100,7 @@ public class PluginDefiner extends JFrame {
       log.info("Plugin tool window initialized");
     }
     catch(Exception exc) {
-      log.error("Initialization failed", exc);
+      log.critical("Initialization failed", exc);
     }
   }
 
@@ -110,7 +110,7 @@ public class PluginDefiner extends JFrame {
     titledBorder1 = new TitledBorder("");
     contentPane.setLayout(borderLayout1);
     this.setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
-    this.setSize(new Dimension(380, 320));
+    this.setSize(new Dimension(400, 320));
     this.setTitle("LOCKSS Plugin Tool");
     jMenuFile.setMnemonic('F');
     jMenuFile.setText("File");
@@ -165,7 +165,7 @@ public class PluginDefiner extends JFrame {
     jTable1.setBorder(BorderFactory.createEtchedBorder());
     jTable1.setMinimumSize(new Dimension(50, 200));
     jTable1.setOpaque(true);
-    jTable1.setPreferredSize(new Dimension(360, 300));
+    jTable1.setPreferredSize(new Dimension(360, 340));
     jTable1.setAutoResizeMode(JTable.AUTO_RESIZE_ALL_COLUMNS);
     jTable1.setCellSelectionEnabled(true);
     jTable1.setColumnSelectionAllowed(false);
@@ -174,7 +174,7 @@ public class PluginDefiner extends JFrame {
     jTable1.setRowHeight(20);
 
     contentPane.setMinimumSize(new Dimension(80, 200));
-    contentPane.setPreferredSize(new Dimension(380, 320));
+    contentPane.setPreferredSize(new Dimension(380, 340));
     jMenuPlugin.setMnemonic('P');
     jMenuPlugin.setText("Plugin");
     rulesTestMenuItem.setMnemonic('C');

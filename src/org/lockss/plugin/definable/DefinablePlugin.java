@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.16 2006-07-18 19:14:09 tlipkis Exp $
+ * $Id: DefinablePlugin.java,v 1.16.6.1 2006-09-11 23:22:40 thib_gc Exp $
  */
 
 /*
@@ -206,19 +206,17 @@ public class DefinablePlugin extends BasePlugin {
 
 
   public static class InvalidDefinitionException extends RuntimeException {
-    private Throwable nestedException;
-
-    public InvalidDefinitionException(String msg) {
-      super(msg);
+    public InvalidDefinitionException() {
+      super();
     }
-
-    public InvalidDefinitionException(String msg, Throwable e) {
-      super(msg + (e.getMessage() == null ? "" : (": " + e.getMessage())));
-      this.nestedException = e;
+    public InvalidDefinitionException(String message) {
+      super(message);
     }
-
-    public Throwable getNestedException() {
-      return nestedException;
+    public InvalidDefinitionException(String message, Throwable cause) {
+      super(message, cause);
+    }
+    public InvalidDefinitionException(Throwable cause) {
+      super(cause);
     }
   }
 
