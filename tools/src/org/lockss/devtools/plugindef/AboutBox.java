@@ -1,5 +1,5 @@
 /*
- * $Id: AboutBox.java,v 1.1 2006-09-06 16:38:41 thib_gc Exp $
+ * $Id: AboutBox.java,v 1.2 2006-09-11 23:32:45 thib_gc Exp $
  */
 
 /*
@@ -56,11 +56,11 @@ public class AboutBox extends JDialog implements ActionListener {
   FlowLayout flowLayout1 = new FlowLayout();
   GridLayout gridLayout1 = new GridLayout();
   String product = "LOCKSS Plugin Tool";
-  String version = "Version 0.9.0";
+  String version = "Version 0.9.2";
   String copyright = "Copyright (c) 2000-2006" +
       " Board of Trustees of Leland Stanford Jr. University," +
       " all rights reserved.";
-  String comments = "LOCKSS - Lots of Copies Keep Stuff Safe";
+  String comments = "LOCKSS - Lots Of Copies Keep Stuff Safe";
 
   protected static Logger logger = Logger.getLogger("AboutBox");
 

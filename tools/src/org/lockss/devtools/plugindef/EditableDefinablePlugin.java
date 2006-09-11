@@ -1,5 +1,5 @@
 /*
- * $Id: EditableDefinablePlugin.java,v 1.23 2006-09-06 23:28:41 thib_gc Exp $
+ * $Id: EditableDefinablePlugin.java,v 1.24 2006-09-11 23:32:45 thib_gc Exp $
  */
 
 /*
@@ -275,11 +275,19 @@ public class EditableDefinablePlugin
     logger.info("Removed " + counter + " matches of the AU crawl rule: " + rule);
   }
 
-  public void setAuCrawlWindow(String configurableCrawlWindowClass) {
+  public void setAuCrawlWindow(String configurableCrawlWindowClass,
+                               boolean tryDynamic) {
     logger.info("Setting the AU configurable crawl window class to: " + configurableCrawlWindowClass);
     try {
-      tryDynamic(configurableCrawlWindowClass, ConfigurableCrawlWindow.class);
+      if (tryDynamic) {
+        tryDynamic(configurableCrawlWindowClass, ConfigurableCrawlWindow.class);
+      }
       definitionMap.putString(AU_CRAWL_WINDOW, configurableCrawlWindowClass);
+    }
+    catch (DynamicallyLoadedComponentException dlce) {
+      String logMessage = "Failed to set the AU configurable crawl window class to " + configurableCrawlWindowClass;
+      logger.error(logMessage, dlce);
+      throw dlce; // rethrow
     }
     catch (InvalidDefinitionException ide) {
       String logMessage = "Failed to set the AU configurable crawl window class to " + configurableCrawlWindowClass;
@@ -333,11 +341,18 @@ public class EditableDefinablePlugin
     }
   }
 
-  public void setAuFilter(String mimeType, String filterRuleClass) {
+  public void setAuFilter(String mimeType,
+                          String filterRuleClass,
+                          boolean tryDynamic) {
     logger.info("Setting AU filter rule for MIME type " + mimeType + " to: " + filterRuleClass);
     try {
-      tryDynamic(filterRuleClass, FilterRule.class);
+      if (tryDynamic) {
+        tryDynamic(filterRuleClass, FilterRule.class);
+      }
       definitionMap.putString(mimeType + AU_FILTER_SUFFIX, filterRuleClass);
+    }
+    catch (DynamicallyLoadedComponentException dlce) {
+      throw dlce; // rethrow
     }
     catch (InvalidDefinitionException ide) {
       String logMessage = "Failed to set the AU filter rule for MIME type " + mimeType + " to " + filterRuleClass;
@@ -613,11 +628,17 @@ public class EditableDefinablePlugin
     definitionMap.removeMapElement(PLUGIN_PROPS);
   }
 
-  public void setPluginExceptionHandler(String cacheResultHandlerClass) {
+  public void setPluginExceptionHandler(String cacheResultHandlerClass,
+                                        boolean tryDynamic) {
     logger.info("Setting the plugin exception handler to: " + cacheResultHandlerClass);
     try {
-      tryDynamic(cacheResultHandlerClass, CacheResultHandler.class);
+      if (tryDynamic) {
+        tryDynamic(cacheResultHandlerClass, CacheResultHandler.class);
+      }
       definitionMap.putString(PLUGIN_EXCEPTION_HANDLER, cacheResultHandlerClass);
+    }
+    catch (DynamicallyLoadedComponentException dlce) {
+      throw dlce; // rethrow
     }
     catch (InvalidDefinitionException ide) {
       String logMessage = "Failed to set the plugin exception handler to " + cacheResultHandlerClass;
@@ -920,19 +941,48 @@ public class EditableDefinablePlugin
    */
   protected static Object tryDynamic(String className, Class cla) {
     try {
-      Object ret = Class.forName(className).newInstance();
-      if (!cla.isAssignableFrom(ret.getClass())) {
-        String logMessage = className + " is not of type " + cla.getName();
-        logger.debug(logMessage);
-        throw new InvalidDefinitionException(logMessage);
+      Class retClass = Class.forName(className);
+      if (!cla.isAssignableFrom(retClass)) {
+        throw new ClassCastException(className);
       }
-      logger.debug("Instantiated an object of type " + ret.getClass().getName());
+      Object ret = retClass.newInstance();
+      logger.debug("Instantiated an object of type " + className);
       return ret;
     }
-    catch (Throwable thr) {
-      String logMessage = "Could not instantiate an object of type " + className;
-      logger.debug(logMessage, thr);
-      throw new InvalidDefinitionException(logMessage, thr);
+    catch (ClassCastException cce) {
+      String logMessage = className + " is not of type " + cla.getName();
+      logger.debug(logMessage, cce);
+      throw new DynamicallyLoadedComponentException(logMessage, cce);
+    }
+    catch (ClassNotFoundException cnfe) {
+      String logMessage = "Failed to load class " + className + " dynamically";
+      logger.debug(logMessage, cnfe);
+      throw new DynamicallyLoadedComponentException(logMessage, cnfe);
+    }
+    catch (InstantiationException ie) {
+      String logMessage = "Failed to instantiate an object of type " + className + " dynamically";
+      logger.debug(logMessage, ie);
+      throw new DynamicallyLoadedComponentException(logMessage, ie);
+    }
+    catch (IllegalAccessException iae) {
+      String logMessage = "Failed to instantiate an object of type " + className + " dynamically";
+      logger.debug(logMessage, iae);
+      throw new DynamicallyLoadedComponentException(logMessage, iae);
+    }
+  }
+
+  public static class DynamicallyLoadedComponentException extends InvalidDefinitionException {
+    public DynamicallyLoadedComponentException() {
+      super();
+    }
+    public DynamicallyLoadedComponentException(String message) {
+      super(message);
+    }
+    public DynamicallyLoadedComponentException(String message, Throwable cause) {
+      super(message, cause);
+    }
+    public DynamicallyLoadedComponentException(Throwable cause) {
+      super(cause);
     }
   }
 
