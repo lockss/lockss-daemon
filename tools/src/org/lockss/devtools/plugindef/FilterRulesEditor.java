@@ -1,5 +1,5 @@
 /*
- * $Id: FilterRulesEditor.java,v 1.8.2.1 2006-09-11 23:22:40 thib_gc Exp $
+ * $Id: FilterRulesEditor.java,v 1.8.2.2 2006-09-12 08:11:06 thib_gc Exp $
  */
 
 /*
@@ -149,7 +149,11 @@ public class FilterRulesEditor extends JDialog implements EDPEditor {
         edp.setAuFilter(mime_type, filter, true);
       }
       catch (DynamicallyLoadedComponentException dlce) {
+        String logMessage = "Failed to set the filter for MIME type " +
+                        mime_type + " to " + filter;
+        logger.error(logMessage, dlce);
         if (EDPInspectorTableModel.handleDynamicallyLoadedComponentException(this, dlce)) {
+          logger.debug(logMessage + ": overruled by user");
           edp.setAuFilter(mime_type, filter, false);
         }
       }

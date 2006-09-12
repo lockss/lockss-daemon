@@ -1,5 +1,5 @@
 /*
- * $Id: EditableDefinablePlugin.java,v 1.23.2.1 2006-09-11 23:22:40 thib_gc Exp $
+ * $Id: EditableDefinablePlugin.java,v 1.23.2.2 2006-09-12 08:11:06 thib_gc Exp $
  */
 
 /*
@@ -101,6 +101,7 @@ public class EditableDefinablePlugin
 
   public EditableDefinablePlugin() {
       pluginState = new PersistentPluginState();
+      super.classLoader = getClass().getClassLoader();
   }
 
   // for reading map files
@@ -638,6 +639,8 @@ public class EditableDefinablePlugin
       definitionMap.putString(PLUGIN_EXCEPTION_HANDLER, cacheResultHandlerClass);
     }
     catch (DynamicallyLoadedComponentException dlce) {
+      String logMessage = "Failed to set the plugin exception handler to " + cacheResultHandlerClass;
+      logger.error(logMessage, dlce);
       throw dlce; // rethrow
     }
     catch (InvalidDefinitionException ide) {
