@@ -1,5 +1,5 @@
 /*
- * $Id: PdfTools.java,v 1.9 2006-09-10 07:50:51 thib_gc Exp $
+ * $Id: PdfTools.java,v 1.10 2006-09-12 22:13:30 thib_gc Exp $
  */
 
 /*
@@ -37,18 +37,38 @@ import java.util.Iterator;
 
 import javax.swing.JFileChooser;
 
+import org.apache.commons.io.output.NullOutputStream;
 import org.lockss.filter.pdf.*;
 import org.lockss.util.*;
 import org.lockss.util.PdfUtil.*;
 import org.pdfbox.cos.*;
 import org.pdfbox.pdfwriter.ContentStreamWriter;
 import org.pdfbox.pdmodel.common.*;
+import org.pdfbox.pdmodel.interactive.annotation.PDAnnotation;
 
 /**
  * <p>Tools to inspect the contents of PDF documents.</p>
  * @author Thib Guicherd-Callin
  */
 public class PdfTools {
+
+  public static class DumpAnnotations extends IdentityPageTransform {
+
+    public boolean transform(PdfPage pdfPage) throws IOException {
+      System.out.println("[begin annotations]");
+      Iterator iter = pdfPage.getAnnotationIterator();
+      for (int ann = 0 ; iter.hasNext() ; ++ann) {
+        PDAnnotation annotation = (PDAnnotation)iter.next();
+        System.out.println("[begin annotation [" + ann + "]]");
+        dump("Contents", annotation.getContents());
+        dump("Rectangle", annotation.getRectangle());
+        System.out.println("[end annotation [" + ann + "]]");
+      }
+      System.out.println("[end annotations]");
+      return true;
+    }
+
+  }
 
   public static class DumpBoxes extends IdentityPageTransform {
     public boolean transform(PdfPage pdfPage) throws IOException {
@@ -93,25 +113,6 @@ public class PdfTools {
       return super.transform(pdfPage);
     }
   }
-
-//  public static class DumpAnnotations extends IdentityPdfPageTransform {
-//
-//    public void transform(PdfDocument pdfDocument,
-//                          PDPage pdfPage)
-//        throws IOException {
-//      System.out.println("[begin annotations]");
-//      Iterator iter = pdfPage.getAnnotations().iterator();
-//      for (int ann = 0 ; iter.hasNext() ; ++ann) {
-//        PDAnnotation annotation = (PDAnnotation)iter.next();
-//        System.out.println("[begin annotation [" + ann + "]]");
-//        System.out.println("Contents: " + annotation.getContents());
-//        System.out.println("Rectangle: " + annotation.getRectangle().toString());
-//        System.out.println("[end annotation]");
-//      }
-//      System.out.println("[end annotations]");
-//    }
-//
-//  }
 
   public static class DumpPageDictionary extends IdentityPageTransform {
     public boolean transform(PdfPage pdfPage) throws IOException {
@@ -159,6 +160,7 @@ public class PdfTools {
     " -h -help --help     Displays this message\n" +
     " -usage --usage      Displays this message\n" +
     "Diff-friendly\n" +
+    " -annotations        Dumps the annotations of each page\n" +
     " -metadata           Dumps the metadata\n" +
     " -pageboxes          Dumps the bounding boxes of each page\n" +
     " -pagestream         Dumps a list of tokens on each page\n" +
@@ -167,9 +169,7 @@ public class PdfTools {
     " -pagedictionary     Dumps the dictionary of each page\n" +
     " -trailer            Dumps the trailer dictionary\n" +
     "Other\n" +
-    " -rewrite            Also write PDFBox-saved version in file-out.pdf\n" +
-    "Unimplemented\n" +
-    " -annotations        Dumps the annotations of each page\n";
+    " -rewrite            Also write PDFBox-saved version in file-out.pdf\n";
 
   public static void main(String[] args) {
     if (   args.length == 0
@@ -191,9 +191,9 @@ public class PdfTools {
       if (false) {
         // Copy/paste hack
       }
-//      else if (args[arg].equals("-annotations")) {
-//        pdfPageTransform.add(new DumpAnnotations());
-//      }
+      else if (args[arg].equals("-annotations")) {
+        pageTransform.add(new DumpAnnotations());
+      }
       else if (args[arg].equals("-metadata")) {
         documentTransform.add(new DumpMetadata());
       }
@@ -233,19 +233,21 @@ public class PdfTools {
       InputStream inputStream = new FileInputStream(chooser.getSelectedFile());
       OutputStream outputStream = null;
       if (ignoreResult) {
-        outputStream = new OutputStream() {
-          public void write(int b) { /* Null output stream */ }
-        };
+        outputStream = new NullOutputStream();
       }
       else {
         outputStream = new FileOutputStream(chooser.getSelectedFile().toString().replaceAll(".pdf", "-out.pdf"));
       }
+
       PdfUtil.applyPdfTransform(documentTransform, inputStream, outputStream);
       inputStream.close();
       outputStream.close();
     }
     catch (Exception exc) {
       exc.printStackTrace();
+    }
+    finally {
+      System.exit(0); // force AWT thread to exit
     }
   }
 

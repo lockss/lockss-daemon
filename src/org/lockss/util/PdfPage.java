@@ -1,5 +1,5 @@
 /*
- * $Id: PdfPage.java,v 1.2 2006-09-10 07:50:51 thib_gc Exp $
+ * $Id: PdfPage.java,v 1.3 2006-09-12 22:13:29 thib_gc Exp $
  */
 
 /*
@@ -96,6 +96,13 @@ public class PdfPage {
   }
 
   /**
+   * @see #getAnnotations
+   */
+  public ListIterator getAnnotationIterator() throws IOException {
+    return getAnnotations().listIterator();
+  }
+
+  /**
    * <p>Gets this page's art box (by default the crop box).</p>
    * @return The page's art box.
    * @see PDPage#getArtBox
@@ -156,6 +163,13 @@ public class PdfPage {
    */
   public PDRectangle getMediaBox() {
     return getPdPage().getMediaBox();
+  }
+
+  /**
+   * @see #getAnnotations
+   */
+  public int getNumberOfAnnotations() throws IOException {
+    return getAnnotations().size();
   }
 
   /**
@@ -256,6 +270,13 @@ public class PdfPage {
    */
   public void setTrimBox(PDRectangle rectangle) {
     getPdPage().setTrimBox(rectangle);
+  }
+
+  /**
+   * @see PDPage#getAnnotations
+   */
+  protected List getAnnotations() throws IOException {
+    return getPdPage().getAnnotations();
   }
 
   /**
