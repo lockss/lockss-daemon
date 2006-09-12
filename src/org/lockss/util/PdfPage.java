@@ -1,5 +1,5 @@
 /*
- * $Id: PdfPage.java,v 1.3 2006-09-12 22:13:29 thib_gc Exp $
+ * $Id: PdfPage.java,v 1.4 2006-09-12 22:34:36 thib_gc Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import java.util.*;
 import org.pdfbox.cos.*;
 import org.pdfbox.pdmodel.*;
 import org.pdfbox.pdmodel.common.*;
+import org.pdfbox.pdmodel.interactive.annotation.PDAnnotation;
 
 /**
  * <p>Convenience class to provide easy access to the internals of a
@@ -93,6 +94,13 @@ public class PdfPage {
    */
   public PDResources findResources() {
     return getPdPage().findResources();
+  }
+
+  /**
+   * @see #getAnnotations
+   */
+  public PDAnnotation getAnnotation(int index) throws IOException {
+    return (PDAnnotation)getAnnotations().get(index);
   }
 
   /**
