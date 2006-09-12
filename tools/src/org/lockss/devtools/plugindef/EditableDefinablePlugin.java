@@ -1,5 +1,5 @@
 /*
- * $Id: EditableDefinablePlugin.java,v 1.24 2006-09-11 23:32:45 thib_gc Exp $
+ * $Id: EditableDefinablePlugin.java,v 1.25 2006-09-12 08:21:53 thib_gc Exp $
  */
 
 /*
@@ -101,6 +101,7 @@ public class EditableDefinablePlugin
 
   public EditableDefinablePlugin() {
       pluginState = new PersistentPluginState();
+      super.classLoader = getClass().getClassLoader();
   }
 
   // for reading map files
