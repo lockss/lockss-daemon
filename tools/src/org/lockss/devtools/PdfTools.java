@@ -1,5 +1,5 @@
 /*
- * $Id: PdfTools.java,v 1.11 2006-09-13 18:54:38 thib_gc Exp $
+ * $Id: PdfTools.java,v 1.12 2006-09-13 22:04:09 thib_gc Exp $
  */
 
 /*
@@ -53,7 +53,6 @@ import org.pdfbox.pdmodel.interactive.annotation.PDAnnotation;
 public class PdfTools {
 
   public static class DumpAnnotations extends IdentityPageTransform {
-
     public boolean transform(PdfPage pdfPage) throws IOException {
       System.out.println("[begin annotations]");
       Iterator iter = pdfPage.getAnnotationIterator();
@@ -67,7 +66,6 @@ public class PdfTools {
       System.out.println("[end annotations]");
       return true;
     }
-
   }
 
   public static class DumpBoxes extends IdentityPageTransform {
