@@ -1,5 +1,5 @@
 /*
- * $Id: PdfTools.java,v 1.10 2006-09-12 22:13:30 thib_gc Exp $
+ * $Id: PdfTools.java,v 1.11 2006-09-13 18:54:38 thib_gc Exp $
  */
 
 /*
@@ -183,8 +183,8 @@ public class PdfTools {
       return; // exit
     }
 
-    AggregateDocumentTransform documentTransform = new AggregateDocumentTransform(PdfUtil.EXHAUSTIVE_AND);
-    AggregatePageTransform pageTransform = new AggregatePageTransform(PdfUtil.EXHAUSTIVE_AND);
+    AggregateDocumentTransform documentTransform = new AggregateDocumentTransform(PdfUtil.AND_ALL);
+    AggregatePageTransform pageTransform = new AggregatePageTransform(PdfUtil.AND_ALL);
     boolean ignoreResult = true;
 
     for (int arg = 0 ; arg < args.length ; ++arg) {

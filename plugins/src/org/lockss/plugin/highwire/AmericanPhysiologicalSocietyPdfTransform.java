@@ -1,5 +1,5 @@
 /*
- * $Id: AmericanPhysiologicalSocietyPdfTransform.java,v 1.12 2006-09-10 07:50:51 thib_gc Exp $
+ * $Id: AmericanPhysiologicalSocietyPdfTransform.java,v 1.13 2006-09-13 18:54:37 thib_gc Exp $
  */
 
 /*
@@ -72,10 +72,9 @@ public class AmericanPhysiologicalSocietyPdfTransform extends AggregateDocumentT
 
   public static class FixHyperlink implements PageTransform {
     public boolean transform(PdfPage pdfPage) throws IOException {
-      int s = ((COSArray)pdfPage.getDictionary().getDictionaryObject(COSName.ANNOTS)).size();
-      COSArray array = (COSArray)pdfPage.getDictionary().getObjectFromPath("Annots/[" + (s-1) + "]/Rect");
-      array.set(1, new COSFloat(300.0f));
-      array.set(3, new COSFloat(525.0f));
+      COSArray array = pdfPage.getAnnotation(pdfPage.getNumberOfAnnotations()-1).getRectangle().getCOSArray();
+      array.set(1, new COSFloat(1.0f));
+      array.set(3, new COSFloat(2.0f));
       return true;
     }
   }
@@ -95,16 +94,12 @@ public class AmericanPhysiologicalSocietyPdfTransform extends AggregateDocumentT
     }
     public boolean identify(List tokens) {
       boolean ret = tokens.size() == 30
-      && PdfUtil.isEndTextObject(tokens.get(29))
-      && PdfUtil.isBeginTextObject(tokens.get(0))
-      && PdfUtil.isPdfFloat(tokens.get(9))
-      && PdfUtil.isShowText(tokens.get(12))
-      && PdfUtil.isPdfString(tokens.get(11))
-      && PdfUtil.isShowText(tokens.get(21))
-      && PdfUtil.isPdfString(tokens.get(20))
-      && PdfUtil.isShowText(tokens.get(28))
-      && PdfUtil.isPdfString(tokens.get(27))
-      && PdfUtil.getPdfString(tokens.get(27)).equals("Downloaded from ");
+      && PdfUtil.matchTextObject(tokens, 0, 29)
+      && PdfUtil.isPdfFloat(tokens, 9)
+      && PdfUtil.matchShowText(tokens, 12)
+      && PdfUtil.matchSetRgbColorNonStroking(tokens, 16, 0, 0, 1)
+      && PdfUtil.matchShowText(tokens, 21)
+      && PdfUtil.matchShowText(tokens, 28, "Downloaded from ");;
       logger.debug3("ProcessEndTextObject candidate match: " + ret);
       return ret;
     }
@@ -119,22 +114,16 @@ public class AmericanPhysiologicalSocietyPdfTransform extends AggregateDocumentT
     }
     public boolean identify(List tokens) {
       boolean ret = tokens.size() == 52
-      && PdfUtil.isEndTextObject(tokens.get(51))
-      && PdfUtil.isBeginTextObject(tokens.get(0))
-      && PdfUtil.isPdfFloat(tokens.get(9))
-      && PdfUtil.isShowText(tokens.get(12))
-      && PdfUtil.isPdfString(tokens.get(11))
-      && PdfUtil.isEndTextObject(tokens.get(17))
-      && PdfUtil.isBeginTextObject(tokens.get(20))
-      && PdfUtil.isPdfFloat(tokens.get(29))
-      && PdfUtil.isShowText(tokens.get(32))
-      && PdfUtil.isPdfString(tokens.get(31))
-      && PdfUtil.isEndTextObject(tokens.get(35))
-      && PdfUtil.isBeginTextObject(tokens.get(38))
-      && PdfUtil.isPdfFloat(tokens.get(47))
-      && PdfUtil.isShowText(tokens.get(50))
-      && PdfUtil.isPdfString(tokens.get(49))
-      && PdfUtil.getPdfString(tokens.get(49)).equals("Downloaded from ");
+      && PdfUtil.matchTextObject(tokens, 0, 17)
+      && PdfUtil.isPdfFloat(tokens, 9)
+      && PdfUtil.matchShowText(tokens, 12)
+      && PdfUtil.matchSetRgbColorNonStroking(tokens, 16, 0, 0, 1)
+      && PdfUtil.matchTextObject(tokens, 20, 35)
+      && PdfUtil.isPdfFloat(tokens, 29)
+      && PdfUtil.matchShowText(tokens, 32)
+      && PdfUtil.matchTextObject(tokens, 38, 51)
+      && PdfUtil.isPdfFloat(tokens, 47)
+      && PdfUtil.matchShowText(tokens, 50, "Downloaded from ");
       logger.debug3("ProcessEndTextObject2 candidate match: " + ret);
       return ret;
     }
@@ -142,11 +131,20 @@ public class AmericanPhysiologicalSocietyPdfTransform extends AggregateDocumentT
 
   public static class SanitizeMetadata implements DocumentTransform {
     public boolean transform(PdfDocument pdfDocument) throws IOException {
+      // Get rid of the modification date
       pdfDocument.removeModificationDate();
-      COSArray idArray = (COSArray)pdfDocument.getTrailer().getItem(COSName.getPDFName("ID"));
-      idArray.set(1, idArray.get(0));
+      // Get rid of the metadata
       pdfDocument.setMetadata(" ");
-      return true;
+      // Replace instance ID by document ID in trailer
+      COSBase idObj = pdfDocument.getTrailer().getItem(COSName.getPDFName("ID"));
+      if (idObj != null && idObj instanceof COSArray) {
+        COSArray idArray = (COSArray)idObj;
+        idArray.set(1, idArray.get(0));
+        return true;
+      }
+      else {
+        return false;
+      }
     }
   }
 

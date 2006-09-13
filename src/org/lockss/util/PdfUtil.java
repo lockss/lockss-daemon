@@ -1,39 +1,39 @@
 /*
- * $Id: PdfUtil.java,v 1.4 2006-09-10 07:50:51 thib_gc Exp $
+ * $Id: PdfUtil.java,v 1.5 2006-09-13 18:54:38 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
-all rights reserved.
+ Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+ all rights reserved.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
-STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
-IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+ STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+ IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-Except as contained in this notice, the name of Stanford University shall not
-be used in advertising or otherwise to promote the sale, use or other dealings
-in this Software without prior written authorization from Stanford University.
+ Except as contained in this notice, the name of Stanford University shall not
+ be used in advertising or otherwise to promote the sale, use or other dealings
+ in this Software without prior written authorization from Stanford University.
 
-*/
+ */
 
 package org.lockss.util;
 
 import java.io.*;
-import java.util.Iterator;
+import java.util.*;
 
 import org.apache.commons.collections.iterators.*;
 import org.lockss.filter.pdf.*;
@@ -46,59 +46,29 @@ import org.pdfbox.util.PDFOperator;
  */
 public class PdfUtil {
 
-  public interface ResultPolicy {
-    boolean resetResult();
-    boolean updateResult(boolean currentResult, boolean update);
-    boolean shouldKeepGoing(boolean currentResult);
+  /**
+   * <p>A PDF transform that does nothing, for testing.</p>
+   * @author Thib Guicherd-Callin
+   */
+  public static class IdentityDocumentTransform implements DocumentTransform {
+
+    protected boolean returnValue;
+
+    public IdentityDocumentTransform() {
+      this(true);
+    }
+
+    public IdentityDocumentTransform(boolean returnValue) {
+      this.returnValue = returnValue;
+    }
+
+    /* Inherit documentation */
+    public boolean transform(PdfDocument pdfDocument) throws IOException {
+      logger.debug3("Indentity document transform: " + returnValue);
+      return returnValue;
+    }
+
   }
-
-  public static final ResultPolicy EXHAUSTIVE_AND = new ResultPolicy() {
-    public boolean resetResult() {
-      return true;
-    }
-    public boolean shouldKeepGoing(boolean currentResult) {
-      return true;
-    }
-    public boolean updateResult(boolean currentResult, boolean update) {
-      return currentResult && update;
-    }
-  };
-
-  public static final ResultPolicy AND = new ResultPolicy() {
-    public boolean resetResult() {
-      return true;
-    }
-    public boolean shouldKeepGoing(boolean currentResult) {
-      return currentResult;
-    }
-    public boolean updateResult(boolean currentResult, boolean update) {
-      return currentResult && update;
-    }
-  };
-
-  public static final ResultPolicy EXHAUSTIVE_OR = new ResultPolicy() {
-    public boolean resetResult() {
-      return false;
-    }
-    public boolean shouldKeepGoing(boolean currentResult) {
-      return true;
-    }
-    public boolean updateResult(boolean currentResult, boolean update) {
-      return currentResult || update;
-    }
-  };
-
-  public static final ResultPolicy OR = new ResultPolicy() {
-    public boolean resetResult() {
-      return false;
-    }
-    public boolean shouldKeepGoing(boolean currentResult) {
-      return !currentResult;
-    }
-    public boolean updateResult(boolean currentResult, boolean update) {
-      return currentResult || update;
-    }
-  };
 
   /**
    * <p>A PDF page transform that does nothing, for testing.</p>
@@ -125,28 +95,166 @@ public class PdfUtil {
   }
 
   /**
-   * <p>A PDF transform that does nothing, for testing.</p>
+   * <p>An interface for looping policies.</p>
+   * <p>This interface is intended for the following types of loops:</p>
+<pre>
+boolean success = resultPolicy.resetResult();
+while (...) {
+  boolean oneStep = doSomething(...);
+  success = resultPolicy.updateResult(success, oneStep);
+  if (!resultPolicy.shouldKeepGoing(success)) {
+    break;
+  }
+}
+return success;
+</pre>
+   * <p>For instance, the above loop could have short-circuiting "or"
+   * semantics: it returns true as soon as any of the steps returns
+   * true, and if none return true it returns false. This would be
+   * achieved with {@link ResultPolicy#resetResult} returning false,
+   * {@link ResultPolicy#updateResult}<code>(success, oneStep)</code>
+   * returning <code>success || oneStep</code>, and
+   * {@link ResultPolicy#shouldKeepGoing}<code>(success)</code>
+   * returning <code>!success</code>.</p>
+   * <p>To give it non short-circuiting semantics, just make
+   * {@link ResultPolicy#shouldKeepGoing} return true constantly.</p>
+   * <p>Likewise, the loop can have "and" semantics with or without
+   * short-circuiting, for appropriate values of the three
+   * methods.</p>
+   * <p>Examples of how to use these result policies can be found
+   * for instance in {@link AggregateDocumentTransform#transform},
+   * {@link AggregatePageTransform#transform} or
+   * {@link TransformSelectedPages#transform}.</p>
    * @author Thib Guicherd-Callin
+   * @see PdfUtil#AND
+   * @see PdfUtil#AND_ALL
+   * @see PdfUtil#OR
+   * @see PdfUtil#OR_ALL
    */
-  public static class IdentityDocumentTransform implements DocumentTransform {
+  public interface ResultPolicy {
 
-    protected boolean returnValue;
+    /**
+     * <p>Provides the initial value for the success flag.</p>
+     * @return The value of the success flag before the loop.
+     */
+    boolean resetResult();
 
-    public IdentityDocumentTransform() {
-      this(true);
-    }
+    /**
+     * <p>Determines whether the loop should continue based on the
+     * current value of the success flag (passed as argument).</p>
+     * @param currentResult The current value of the success flag.
+     * @return Whether the loop should continue based on the current
+     *         value of the success flag.
+     */
+    boolean shouldKeepGoing(boolean currentResult);
 
-    public IdentityDocumentTransform(boolean returnValue) {
-      this.returnValue = returnValue;
+    /**
+     * <p>Computes the new value of the success flag, given the
+     * current value of the success flag and a new result from an
+     * iteration of the loop.</p>
+     * @param currentResult The current value of the success flag.
+     * @param update        A new result from an iteration of the loop.
+     * @return The new value of the success flag.
+     */
+    boolean updateResult(boolean currentResult, boolean update);
+
+  }
+
+  /**
+   * <p>A version of {@link ResultPolicy} that implements
+   * short-circuiting "and" semantics.</p>
+   * @see PdfUtil#AND_ALL
+   */
+  public static final ResultPolicy AND = new ResultPolicy() {
+
+    /* Inherit documentation */
+    public boolean resetResult() {
+      return true;
     }
 
     /* Inherit documentation */
-    public boolean transform(PdfDocument pdfDocument) throws IOException {
-      logger.debug3("Indentity document transform: " + returnValue);
-      return returnValue;
+    public boolean shouldKeepGoing(boolean currentResult) {
+      return currentResult;
     }
 
-  }
+    /* Inherit documentation */
+    public boolean updateResult(boolean currentResult, boolean update) {
+      return currentResult && update;
+    }
+
+  };
+
+  /**
+   * <p>A version of {@link ResultPolicy} that implements
+   * non short-circuiting "and" semantics.</p>
+   * @see PdfUtil#AND
+   */
+  public static final ResultPolicy AND_ALL = new ResultPolicy() {
+
+    /* Inherit documentation */
+    public boolean resetResult() {
+      return true;
+    }
+
+    /* Inherit documentation */
+    public boolean shouldKeepGoing(boolean currentResult) {
+      return true;
+    }
+
+    /* Inherit documentation */
+    public boolean updateResult(boolean currentResult, boolean update) {
+      return currentResult && update;
+    }
+
+  };
+
+  /**
+   * <p>A version of {@link ResultPolicy} that implements
+   * short-circuiting "or" semantics.</p>
+   * @see PdfUtil#OR_ALL
+   */
+  public static final ResultPolicy OR = new ResultPolicy() {
+
+    /* Inherit documentation */
+    public boolean resetResult() {
+      return false;
+    }
+
+    /* Inherit documentation */
+    public boolean shouldKeepGoing(boolean currentResult) {
+      return !currentResult;
+    }
+
+    /* Inherit documentation */
+    public boolean updateResult(boolean currentResult, boolean update) {
+      return currentResult || update;
+    }
+
+  };
+
+  /**
+   * <p>A version of {@link ResultPolicy} that implements
+   * non short-circuiting "or" semantics.</p>
+   * @see PdfUtil#OR
+   */
+  public static final ResultPolicy OR_ALL = new ResultPolicy() {
+
+    /* Inherit documentation */
+    public boolean resetResult() {
+      return false;
+    }
+
+    /* Inherit documentation */
+    public boolean shouldKeepGoing(boolean currentResult) {
+      return true;
+    }
+
+    /* Inherit documentation */
+    public boolean updateResult(boolean currentResult, boolean update) {
+      return currentResult || update;
+    }
+
+  };
 
   /**
    * <p>The PDF <code>c</code> operator string.</p>
@@ -638,6 +746,24 @@ public class PdfUtil {
   }
 
   /**
+   * <p>Extracts the float data associated with the PDF token at the
+   * given index that is known to be a PDF float.</p>
+   * <p>Preconditions:</p>
+   * <ul>
+   *  <li><code>isPdfFloat(tokens, index)</code></li>
+   * </ul>
+   * @param tokens A list of tokens.
+   * @param index  The index of the selected token.
+   * @return The float associated with the selected PDF float.
+   * @see #isPdfFloat(List, int)
+   * @see #getPdfFloat(Object)
+   */
+  public static float getPdfFloat(List tokens,
+                                  int index) {
+    return getPdfFloat(tokens.get(index));
+  }
+
+  /**
    * <p>Extracts the float data associated with a PDF token that is
    * a PDF float.</p>
    * <p>Preconditions:</p>
@@ -646,18 +772,67 @@ public class PdfUtil {
    * </ul>
    * @param pdfFloat A PDF float.
    * @return The float associated with this PDF float.
-   * @see #isPdfFloat
+   * @see COSFloat#floatValue
+   * @see #isPdfFloat(Object)
    */
   public static float getPdfFloat(Object pdfFloat) {
     return ((COSFloat)pdfFloat).floatValue();
   }
 
-  public static int getPdfInteger(Object candidateToken) {
-    return ((COSInteger)candidateToken).intValue();
+  /**
+   * <p>Extracts the integer data associated with the PDF token at the
+   * given index that is known to be a PDF integer.</p>
+   * <p>Preconditions:</p>
+   * <ul>
+   *  <li><code>isPdfInteger(tokens, index)</code></li>
+   * </ul>
+   * @param tokens A list of tokens.
+   * @param index  The index of the selected token.
+   * @return The integer associated with the selected PDF integer.
+   * @see #isPdfInteger(List, int)
+   * @see #getPdfInteger(Object)
+   */
+  public static int getPdfInteger(List tokens,
+                                  int index) {
+    return getPdfInteger(tokens.get(index));
+  }
+
+  /**
+   * <p>Extracts the integer data associated with a PDF token that is
+   * a PDF integer.</p>
+   * <p>Preconditions:</p>
+   * <ul>
+   *  <li><code>isPdfInteger(pdfInteger)</code></li>
+   * </ul>
+   * @param pdfFloat A PDF integer.
+   * @return The integer associated with this PDF integer.
+   * @see COSInteger#intValue
+   * @see #isPdfInteger(Object)
+   */
+  public static int getPdfInteger(Object pdfInteger) {
+    return ((COSInteger)pdfInteger).intValue();
   }
 
   public static Iterator getPdfOperators() {
     return getPdf16Operators();
+  }
+
+  /**
+   * <p>Extracts the string data associated with the PDF token at the
+   * given index that is known to be a PDF string.</p>
+   * <p>Preconditions:</p>
+   * <ul>
+   *  <li><code>isPdfString(tokens, index)</code></li>
+   * </ul>
+   * @param tokens A list of tokens.
+   * @param index  The index of the selected token.
+   * @return The {@link String} associated with the selected PDF string.
+   * @see #isPdfString(List, int)
+   * @see #getPdfString(Object)
+   */
+  public static String getPdfString(List tokens,
+                                    int index) {
+    return getPdfString(tokens.get(index));
   }
 
   /**
@@ -669,23 +844,53 @@ public class PdfUtil {
    * </ul>
    * @param pdfString A PDF string.
    * @return The {@link String} associated with this PDF string.
-   * @see #isPdfString
+   * @see COSString#getString
+   * @see #isPdfString(Object)
    */
   public static String getPdfString(Object pdfString) {
     return ((COSString)pdfString).getString();
   }
 
   /**
+   * <p>Determines if the token at the given index is the "begin text object"
+   * PDF operator.</p>
+   * @param tokens A list of tokens.
+   * @param index  The index of the candidate token.
+   * @return True if the selected token is the expected operator, false
+   *         otherwise.
+   * @see #isBeginTextObject(Object)
+   */
+  public static boolean isBeginTextObject(List tokens,
+                                          int index) {
+    return isBeginTextObject(tokens.get(index));
+  }
+
+  /**
    * <p>Determines if a candidate PDF token is the "begin text object"
    * PDF operator.</p>
    * @param candidateToken A candidate PDF token.
-   * @return True is the argument is the expected operator, false
+   * @return True if the argument is the expected operator, false
    *         otherwise.
    * @see #BEGIN_TEXT_OBJECT
    * @see #isPdfOperator
    */
   public static boolean isBeginTextObject(Object candidateToken) {
-    return isPdfOperator(candidateToken, BEGIN_TEXT_OBJECT);
+    return matchPdfOperator(candidateToken,
+                            BEGIN_TEXT_OBJECT);
+  }
+
+  /**
+   * <p>Determines if the token at the given index is the "end text object"
+   * PDF operator.</p>
+   * @param tokens A list of tokens.
+   * @param index  The index of the candidate token.
+   * @return True if the selected token is the expected operator, false
+   *         otherwise.
+   * @see #isEndTextObject(Object)
+   */
+  public static boolean isEndTextObject(List tokens,
+                                        int index) {
+    return isEndTextObject(tokens.get(index));
   }
 
   /**
@@ -698,12 +903,25 @@ public class PdfUtil {
    * @see #isPdfOperator
    */
   public static boolean isEndTextObject(Object candidateToken) {
-    return isPdfOperator(candidateToken, END_TEXT_OBJECT);
+    return matchPdfOperator(candidateToken,
+                            END_TEXT_OBJECT);
+  }
+
+  /**
+   * <p>Determines if a candidate PDF token at the given index is a PDF float token.</p>
+   * @param tokens A list of tokens.
+   * @param index The index of the selected token.
+   * @return True if the selected token is a PDF float, false otherwise.
+   * @see #isPdfFloat(Object)
+   */
+  public static boolean isPdfFloat(List tokens,
+                                   int index) {
+    return isPdfFloat(tokens.get(index));
   }
 
   /**
    * <p>Determines if a candidate PDF token is a PDF float token.</p>
-   * @param candidateToken A candidate PDF toekn.
+   * @param candidateToken A candidate PDF token.
    * @return True if the argument is a PDF float, false otherwise.
    * @see COSFloat
    */
@@ -711,24 +929,38 @@ public class PdfUtil {
     return candidateToken instanceof COSFloat;
   }
 
+  /**
+   * <p>Determines if a candidate PDF token at the given index is a PDF integer token.</p>
+   * @param tokens A list of tokens.
+   * @param index The index of the selected token.
+   * @return True if the selected token is a PDF integer, false otherwise.
+   * @see #isPdfInteger(Object)
+   */
+  public static boolean isPdfInteger(List tokens,
+                                     int index) {
+    return isPdfInteger(tokens.get(index));
+  }
+
+  /**
+   * <p>Determines if a candidate PDF token is a PDF string integer.</p>
+   * @param candidateToken A candidate PDF toekn.
+   * @return True if the argument is a PDF integer, false otherwise.
+   * @see COSInteger
+   */
   public static boolean isPdfInteger(Object candidateToken) {
     return candidateToken instanceof COSInteger;
   }
 
   /**
-   * <p>Determines if a PDF token is a PDF operator, if is so,
-   * if it is the expected operator.</p>
-   * @param candidateToken   A candidate PDF token.
-   * @param expectedOperator A PDF operator name (as a string).
-   * @return True if the argument is a PDF operator of the expected
-   *         type, false otherwise.
+   * <p>Determines if a candidate PDF token at the given index is a PDF string token.</p>
+   * @param tokens A list of tokens.
+   * @param index The index of the selected token.
+   * @return True if the selected token is a PDF string, false otherwise.
+   * @see #isPdfString(Object)
    */
-  public static boolean isPdfOperator(Object candidateToken,
-                                      String expectedOperator) {
-    if (candidateToken != null && candidateToken instanceof PDFOperator) {
-      return ((PDFOperator)candidateToken).getOperation().equals(expectedOperator);
-    }
-    return false;
+  public static boolean isPdfString(List tokens,
+                                    int index) {
+    return isPdfString(tokens.get(index));
   }
 
   /**
@@ -742,6 +974,48 @@ public class PdfUtil {
   }
 
   /**
+   * <p>Determines if the token at the given index is the "set RGB color for non-stroking operations"
+   * PDF operator.</p>
+   * @param tokens A list of tokens.
+   * @param index  The index of the candidate token.
+   * @return True if the selected token is the expected operator, false
+   *         otherwise.
+   * @see #isSetRgbColorNonStroking(Object)
+   */
+  public static boolean isSetRgbColorNonStroking(List tokens,
+                                                 int index) {
+    return isSetRgbColorNonStroking(tokens.get(index));
+  }
+
+  /**
+   * <p>Determines if a candidate PDF token is the "set RGB color for non-stroking operations"
+   * PDF operator.</p>
+   * @param candidateToken A candidate PDF token.
+   * @return True is the argument is the expected operator, false
+   *         otherwise.
+   * @see #SET_RGB_COLOR_NONSTROKING
+   * @see #isPdfOperator
+   */
+  public static boolean isSetRgbColorNonStroking(Object candidateToken) {
+    return matchPdfOperator(candidateToken,
+                            SET_RGB_COLOR_NONSTROKING);
+  }
+
+  /**
+   * <p>Determines if the token at the given index is the "show text"
+   * PDF operator.</p>
+   * @param tokens A list of tokens.
+   * @param index  The index of the candidate token.
+   * @return True if the selected token is the expected operator, false
+   *         otherwise.
+   * @see #isShowText(Object)
+   */
+  public static boolean isShowText(List tokens,
+                                   int index) {
+    return isShowText(tokens.get(index));
+  }
+
+  /**
    * <p>Determines if a candidate PDF token is the "show text"
    * PDF operator.</p>
    * @param candidateToken A candidate PDF token.
@@ -751,7 +1025,202 @@ public class PdfUtil {
    * @see #isPdfOperator
    */
   public static boolean isShowText(Object candidateToken) {
-    return isPdfOperator(candidateToken, SHOW_TEXT);
+    return matchPdfOperator(candidateToken,
+                            SHOW_TEXT);
+  }
+
+  /**
+   * <p>Determines if the token at the given index is a PDF float
+   * with the given value.</p>
+   * @param tokens A list of tokens.
+   * @param index  The index of the selected token.
+   * @param num    A value to match the token against.
+   * @return True if the selected token is a PDF float and its value
+   *         is equal to the given value, false otherwise.
+   * @see #matchPdfFloat(Object, float)
+   */
+  public static boolean matchPdfFloat(List tokens,
+                                      int index,
+                                      float num) {
+    return matchPdfFloat(tokens.get(index),
+                         num);
+  }
+
+  /**
+   * <p>Determines if the given token is a PDF float
+   * with the given value.</p>
+   * @param tokens A list of tokens.
+   * @param index  The index of the selected token.
+   * @param num    A value to match the token against.
+   * @return True if the argument is a PDF float and its value
+   *         is equal to the given value, false otherwise.
+   * @see #isPdfFloat(Object)
+   * @see #getPdfFloat(Object)
+   */
+  public static boolean matchPdfFloat(Object candidateToken,
+                                      float num) {
+    return isPdfFloat(candidateToken) && getPdfFloat(candidateToken) == num;
+  }
+
+  /**
+   * <p>Determines if the token at the given index is a PDF integer
+   * with the given value.</p>
+   * @param tokens A list of tokens.
+   * @param index  The index of the selected token.
+   * @param num    A value to match the token against.
+   * @return True if the selected token is a PDF integer and its value
+   *         is equal to the given value, false otherwise.
+   * @see #matchPdfInteger(Object, int)
+   */
+  public static boolean matchPdfInteger(List tokens,
+                                        int index,
+                                        int num) {
+    return matchPdfInteger(tokens.get(index),
+                           num);
+  }
+
+  /**
+   * <p>Determines if the given token is a PDF integer
+   * with the given value.</p>
+   * @param tokens A list of tokens.
+   * @param index  The index of the selected token.
+   * @param num    A value to match the token against.
+   * @return True if the argument is a PDF integer and its value
+   *         is equal to the given value, false otherwise.
+   * @see #isPdfInteger(Object)
+   * @see #getPdfInteger(Object)
+   */
+  public static boolean matchPdfInteger(Object candidateToken,
+                                        int num) {
+    return isPdfInteger(candidateToken) && getPdfInteger(candidateToken) == num;
+  }
+
+  /**
+   * <p>Determines if the token at the given index is a PDF operator,
+   * and if so, if it is the expected operator..</p>
+   * @param tokens A list of tokens.
+   * @param index  The index of the selected token.
+   * @param num    A PDF operator string to match the token against.
+   * @return True if the selected token is a PDF operator of the expected
+   *         type, false otherwise.
+   * @see #matchPdfFloat(Object, float)
+   */
+  public static boolean matchPdfOperator(List tokens,
+                                         int index,
+                                         String expectedOperator) {
+    return matchPdfOperator(tokens.get(index),
+                            expectedOperator);
+  }
+
+  /**
+   * <p>Determines if a PDF token is a PDF operator, if is so,
+   * if it is the expected operator.</p>
+   * @param candidateToken   A candidate PDF token.
+   * @param expectedOperator A PDF operator string to match the token against.
+   * @return True if the argument is a PDF operator of the expected
+   *         type, false otherwise.
+   */
+  public static boolean matchPdfOperator(Object candidateToken,
+                                         String expectedOperator) {
+    return candidateToken instanceof PDFOperator
+    && ((PDFOperator)candidateToken).getOperation().equals(expectedOperator);
+  }
+
+  /**
+   * <p>Determines if the token at the given index is a PDF string
+   * and if it equals the given value.</p>
+   * @param tokens A list of tokens.
+   * @param index  The index of the selected token.
+   * @param num    A value to match the token against with {@link String#equals}.
+   * @return True if the selected token is a PDF string and its value
+   *         is equal to the given value, false otherwise.
+   * @see #matchPdfString(Object, float)
+   */
+  public static boolean matchPdfString(List tokens,
+                                       int index,
+                                       String str) {
+    return matchPdfString(tokens.get(index),
+                          str);
+  }
+
+  /**
+   * <p>Determines if the given token is a PDF string
+   * and if it equals the given value.</p>
+   * @param tokens A list of tokens.
+   * @param index  The index of the selected token.
+   * @param num    A value to match the token against with {@link String#equals}.
+   * @return True if the argument is a PDF string and its value
+   *         is equal to the given value, false otherwise.
+   * @see #isPdfString(Object)
+   * @see #getPdfString(Object)
+   */
+  public static boolean matchPdfString(Object candidateToken,
+                                       String str) {
+    return isPdfString(candidateToken) && getPdfString(candidateToken).equals(str);
+  }
+
+  /**
+   * <p>Determines if the token at the given index is a PDF string
+   * and if it starts with the given value.</p>
+   * @param tokens A list of tokens.
+   * @param index  The index of the selected token.
+   * @param num    A value to match the token against with {@link String#startsWith}.
+   * @return True if the selected token is a PDF string and its value
+   *         starts with the given value, false otherwise.
+   * @see #matchPdfStringStartsWith(Object, float)
+   */
+  public static boolean matchPdfStringStartsWith(List tokens,
+                                                 int index,
+                                                 String str) {
+    return matchPdfStringStartsWith(tokens.get(index),
+                                    str);
+  }
+
+  /**
+   * <p>Determines if the given token is a PDF string
+   * and if it starts with the given value.</p>
+   * @param tokens A list of tokens.
+   * @param index  The index of the selected token.
+   * @param num    A value to match the token against with {@link String#startsWith}.
+   * @return True if the argument is a PDF string and its value
+   *         starts with the given value, false otherwise.
+   * @see #isPdfString(Object)
+   * @see #getPdfString(Object)
+   */
+  public static boolean matchPdfStringStartsWith(Object candidateToken,
+                                                 String str) {
+    return isPdfString(candidateToken) && getPdfString(candidateToken).startsWith(str);
+  }
+
+  public static boolean matchSetRgbColorNonStroking(List tokens,
+                                                    int index,
+                                                    int red,
+                                                    int green,
+                                                    int blue) {
+    return isSetRgbColorNonStroking(tokens, index)
+    && matchPdfInteger(tokens, index - 3, red)
+    && matchPdfInteger(tokens, index - 2, green)
+    && matchPdfInteger(tokens, index - 1, blue);
+  }
+
+  public static boolean matchShowText(List tokens,
+                                      int index) {
+    return isShowText(tokens, index)
+    && isPdfString(tokens, index - 1);
+  }
+
+  public static boolean matchShowText(List tokens,
+                                      int index,
+                                      String str) {
+    return isShowText(tokens, index)
+    && matchPdfString(tokens, index - 1, str);
+  }
+
+  public static boolean matchTextObject(List tokens,
+                                        int begin,
+                                        int end) {
+    return isBeginTextObject(tokens, begin)
+    && isEndTextObject(tokens, end);
   }
 
 }
