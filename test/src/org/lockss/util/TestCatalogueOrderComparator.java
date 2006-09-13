@@ -1,5 +1,5 @@
 /*
- * $Id: TestCatalogueOrderComparator.java,v 1.5 2005-10-11 05:52:45 tlipkis Exp $
+ * $Id: TestCatalogueOrderComparator.java,v 1.6 2006-09-13 17:48:45 adriz Exp $
  */
 
 /*
@@ -34,6 +34,8 @@ package org.lockss.util;
 
 import java.io.*;
 import java.util.*;
+
+import org.apache.commons.lang.StringUtils;
 import org.lockss.util.*;
 import org.lockss.test.*;
 
@@ -84,20 +86,70 @@ public class TestCatalogueOrderComparator extends LockssTestCase {
     assertEquals("IBM Tech Journal", coc.xlate("I.B.M. Tech Journal"));
     assertEquals("Journal of IBM", coc.xlate("Journal of I. B. M."));
   }
+  
+  public void testfindNumsPadZero() {
+     assertEquals( "Volume of the World History", coc.findNumsPadZero("Volume of the World History", "0123456789",6) );  
+     assertEquals( 3, coc.getNumStrLen("the 455 World 88 History", 4) );
+     assertEquals( 2, coc.getNumStrLen("the 455 World 88 History", 14) );
+     assertEquals( "Volume 1 of the World History",  coc.findNumsPadZero("Volume 1 of the World History", "0123456789", 0) );
+     assertEquals( "Volume 001 of the World History", coc.findNumsPadZero("Volume 1 of the World History", "0123456789", 3) );
+     assertEquals( "Volume 00002 of the World 00008 History",coc.findNumsPadZero("Volume 2 of the World 8 History", "0123456789", 5) );
+     assertEquals( "Volume 11223 of the World 11228 History",coc.findNumsPadZero("Volume 11223 of the World 11228 History", "0123456789", 3) );
+     assertEquals( "Volume 1 of the World 28 History of 8 men and 7 women",
+                   coc.findNumsPadZero("Volume 1 of the World 28 History of 8 men and 7 women", "0123456789", 1) );         
+     assertEquals( "Volume 1 of the World 28 History of 8 men and 7 women",
+                   coc.findNumsPadZero("Volume 1 of the World 28 History of 8 men and 7 women", "0123456789", 0) );     
+     assertEquals( "Volume 00001234 of the World 00001111 History",
+                   coc.findNumsPadZero("Volume 1234 of the World 1111 History", "0123456789", 8) );
+     assertEquals( "Volume 00012345678 of the World 00000224466 History",
+                   coc.findNumsPadZero("Volume 12345678 of the World 224466 History", "0123456789", 11) );
+  }
 
   public void testOrder() {
     // titles in sorted order
     String[] titles = {
       "The Aardvark of the Baskervilles",
       "An Apple and its Eve",
+      "Applied Semiotics / Sémiotique appliquée Volume 1",
+      "Applied Semiotics / Sémiotique appliquée Volume 2",
+      "Applied Semiotics / Sémiotique appliquée Volume 3",
+      "Applied Semiotics / Sémiotique appliquée Volume 4",
+      "Applied Semiotics / Sémiotique appliquée Volume 5",
+      "Applied Semiotics / Sémiotique appliquée Volume 6.00-7",
+      "Applied Semiotics / Sémiotique appliquée Volume 6.2-7",
+      "Applied Semiotics / Sémiotique appliquée Volume 6-7",
+      "Applied Semiotics / Sémiotique appliquée Volume 6.15-7",
+      "Applied Semiotics / Sémiotique appliquée Volume 6.20-7",
+      "Applied Semiotics / Sémiotique appliquée Volume 6.25-7",
+      "Applied Semiotics / Sémiotique appliquée Volume 8",
+      "Applied Semiotics / Sémiotique appliquée Volume 9",
+      "Applied Semiotics / Sémiotique appliquée Volume 10",
+      "Applied Semiotics / Sémiotique appliquée Volume 11.0-12",
+      "Applied Semiotics / Sémiotique appliquée Volume 11.0-12.5",
+      "Applied Semiotics / Sémiotique appliquée Volume 11.5-12",
+      "Applied Semiotics / Sémiotique appliquée Volume 11.6-12",
+      "Applied Semiotics / Sémiotique appliquée Volume 11-12",
+      "Applied Semiotics / Sémiotique appliquée Volume 11-12.5",
+      "Applied Semiotics / Sémiotique appliquée Volume 11.50-12",
+      "Applied Semiotics / Sémiotique appliquée Volume 13",
+      "Applied Semiotics / Sémiotique appliquée Volume 14",
       "a boy and his bog",
       "A Boy and his Dog",
       "Gar\u00e7on Magazine",
       "IBM Tech Journak",
       "I.B.M. Tech. Journal",
       "IBM Tech Journam",
-      "Journal of I B M 2004"
-    };
+      "Journal of I B M 2004",
+      "The Volume 1 of the World 11 History 532",
+      "A Volume 2 of the World 1 History 532",
+      "A Volume 2 of the World 2 History 532",
+      "The Volume 2 of the World 11 History 532",
+      "The Volume 2 of the World 11 History 4210",
+      "A Volume 2 of the World 21 History 532",
+      "A Volume 2 of the World 113 History 532",
+      "a Volume 10 of the World 1 History 532",
+      "the Volume 11 of the World 1 History 532"
+     };
     List tl = ListUtil.fromArray(titles);
     Collections.reverse(tl);
     assertFalse(CollectionUtil.isIsomorphic(titles, tl));
@@ -113,7 +165,6 @@ public class TestCatalogueOrderComparator extends LockssTestCase {
     } catch (IllegalArgumentException e) {
     }
   }
-
 
   public void testCache() {
     CountingCOC ccoc = new CountingCOC();

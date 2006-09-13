@@ -1,5 +1,5 @@
 /*
- * $Id: CatalogueOrderComparator.java,v 1.5 2005-10-11 05:48:30 tlipkis Exp $
+ * $Id: CatalogueOrderComparator.java,v 1.6 2006-09-13 17:48:45 adriz Exp $
  */
 
 /*
@@ -32,6 +32,8 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util;
 import java.util.*;
+import org.apache.commons.lang.StringUtils;
+
 
 /**
  * Comparator that implements a suitable ordering for titles in a library
@@ -44,7 +46,7 @@ import java.util.*;
 
 public class CatalogueOrderComparator implements Comparator {
   static final String PUNCTUATION = ".,-:;\"\'/?()[]{}<>!#";
-
+  static final int PADLEN = 9;
   /** An instance of the comparator. */
   public static final CatalogueOrderComparator SINGLETON =
     new CatalogueOrderComparator();
@@ -76,6 +78,7 @@ public class CatalogueOrderComparator implements Comparator {
   }
 
   String xlate(String s) {
+    s = findNumsPadZero(s, "0123456789",PADLEN);  
     s = s.trim();
     s = deleteAll(s, PUNCTUATION);
     s = deleteSpaceBetweenInitials(s);
@@ -86,6 +89,42 @@ public class CatalogueOrderComparator implements Comparator {
     return s;
   }
 
+  String findNumsPadZero(String s, String allAnyCharStr, int padLen) {
+    StringBuffer sb = new StringBuffer();
+    String sub2Str = s;
+    int digIx = StringUtils.indexOfAny(sub2Str, allAnyCharStr);	  
+    while (digIx >= 0 ){ 
+      String sub1Str = sub2Str.substring(0, digIx);  
+      int  numStrLen= getNumStrLen( sub2Str, digIx );// add getNumStrLen to our stringUtil   
+      String numStr = sub2Str.substring(digIx, digIx + numStrLen ); // does auto -1 to desired length
+      numStr = StringUtils.leftPad(numStr, padLen, "0");   
+           //sb = sb + sub1Str + numStr;
+            sb.append(sub1Str) ;
+            sb.append(numStr) ;
+      sub2Str = sub2Str.substring( digIx + numStrLen );
+      digIx = StringUtils.indexOfAny(sub2Str, allAnyCharStr);
+    }  
+    if ( sb.length()== 0 ){  
+      sb.append(s);
+    }
+    else{   
+      sb.append(sub2Str) ;    
+    }
+    return sb.toString();
+  }
+
+  int getNumStrLen( String str, int ixStr ){
+    int numLen=0;
+    while(  Character.isDigit( str.charAt(ixStr) )   ){
+  	  ixStr++;
+  	  numLen++;
+  	  if ( ixStr >= str.length() ){ 
+  		  break;
+  	  }		  
+    } 
+    return numLen;	  
+  }
+  
   String deleteInitial(String s, String sub) {
     int sublen = sub.length();
     if (StringUtil.startsWithIgnoreCase(s, sub) &&
