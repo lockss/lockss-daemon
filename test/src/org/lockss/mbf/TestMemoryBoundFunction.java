@@ -1,5 +1,5 @@
 /*
- * $Id: TestMemoryBoundFunction.java,v 1.13 2005-10-11 05:49:58 tlipkis Exp $
+ * $Id: TestMemoryBoundFunction.java,v 1.14 2006-09-14 01:43:54 dshr Exp $
  */
 
 /*
@@ -53,7 +53,7 @@ public class TestMemoryBoundFunction extends LockssTestCase {
   private static String[] names = {
     "MOCK",
     // "MBF1",
-    "MBF2",
+    // "MBF2",
   };
   private static MemoryBoundFunctionFactory[] factory = null;
 
