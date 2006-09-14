@@ -1,5 +1,5 @@
 /*
- * $Id: PdfUtil.java,v 1.5 2006-09-13 18:54:38 thib_gc Exp $
+ * $Id: PdfUtil.java,v 1.6 2006-09-14 23:10:39 thib_gc Exp $
  */
 
 /*
@@ -45,54 +45,6 @@ import org.pdfbox.util.PDFOperator;
  * @author Thib Guicherd-Callin
  */
 public class PdfUtil {
-
-  /**
-   * <p>A PDF transform that does nothing, for testing.</p>
-   * @author Thib Guicherd-Callin
-   */
-  public static class IdentityDocumentTransform implements DocumentTransform {
-
-    protected boolean returnValue;
-
-    public IdentityDocumentTransform() {
-      this(true);
-    }
-
-    public IdentityDocumentTransform(boolean returnValue) {
-      this.returnValue = returnValue;
-    }
-
-    /* Inherit documentation */
-    public boolean transform(PdfDocument pdfDocument) throws IOException {
-      logger.debug3("Indentity document transform: " + returnValue);
-      return returnValue;
-    }
-
-  }
-
-  /**
-   * <p>A PDF page transform that does nothing, for testing.</p>
-   * @author Thib Guicherd-Callin
-   */
-  public static class IdentityPageTransform implements PageTransform {
-
-    protected boolean returnValue;
-
-    public IdentityPageTransform() {
-      this(true);
-    }
-
-    public IdentityPageTransform(boolean returnValue) {
-      this.returnValue = returnValue;
-    }
-
-    /* Inherit documentation */
-    public boolean transform(PdfPage pdfPage) throws IOException {
-      logger.debug3("Indentity page transform: " + returnValue);
-      return returnValue;
-    }
-
-  }
 
   /**
    * <p>An interface for looping policies.</p>

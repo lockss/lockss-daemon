@@ -1,5 +1,5 @@
 /*
- * $Id: MockTransforms.java,v 1.1 2006-09-10 07:50:49 thib_gc Exp $
+ * $Id: MockTransforms.java,v 1.2 2006-09-14 23:10:39 thib_gc Exp $
  */
 
 /*
@@ -35,8 +35,9 @@ package org.lockss.filter.pdf;
 import java.io.IOException;
 import java.util.List;
 
+import org.lockss.filter.pdf.DocumentTransformUtil.IdentityDocumentTransform;
+import org.lockss.filter.pdf.PageTransformUtil.IdentityPageTransform;
 import org.lockss.util.*;
-import org.lockss.util.PdfUtil.*;
 
 public class MockTransforms {
 

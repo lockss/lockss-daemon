@@ -1,5 +1,5 @@
 /*
- * $Id: AmericanPhysiologicalSocietyPdfTransform.java,v 1.13 2006-09-13 18:54:37 thib_gc Exp $
+ * $Id: AmericanPhysiologicalSocietyPdfTransform.java,v 1.14 2006-09-14 23:10:39 thib_gc Exp $
  */
 
 /*
@@ -49,7 +49,7 @@ import org.pdfbox.cos.*;
  * Society Journals Online</a>
  * @see HighWirePdfFilterRule
  */
-public class AmericanPhysiologicalSocietyPdfTransform extends AggregateDocumentTransform {
+public class AmericanPhysiologicalSocietyPdfTransform extends ConditionalDocumentTransform {
 
   public static class EraseDateString extends PageStreamTransform {
     public EraseDateString() throws IOException {
@@ -149,12 +149,13 @@ public class AmericanPhysiologicalSocietyPdfTransform extends AggregateDocumentT
   }
 
   public AmericanPhysiologicalSocietyPdfTransform() throws IOException {
-    super(new TransformFirstPage(new AggregatePageTransform(new EraseVerticalText(),
-                                                            new EraseDateString())),
+    super(new TransformFirstPage(new EraseVerticalText(),
+                                 new EraseDateString(),
+                                 new FixHyperlink()),
           new TransformEachPageExceptFirst(new AggregatePageTransform(PdfUtil.OR,
                                                                       new EraseVerticalText(),
-                                                                      new EraseVerticalText2())),
-          new TransformEachPage(new FixHyperlink()),
+                                                                      new EraseVerticalText2()),
+                                           new FixHyperlink()),
           new SanitizeMetadata());
   }
 

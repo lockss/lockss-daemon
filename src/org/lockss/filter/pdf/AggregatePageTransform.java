@@ -1,5 +1,5 @@
 /*
- * $Id: AggregatePageTransform.java,v 1.1 2006-09-10 07:50:51 thib_gc Exp $
+ * $Id: AggregatePageTransform.java,v 1.2 2006-09-14 23:10:39 thib_gc Exp $
  */
 
 /*
@@ -39,7 +39,7 @@ import org.lockss.util.*;
 import org.lockss.util.PdfUtil.ResultPolicy;
 
 /**
- * <p>A PDF page transform made of many other PDF page transforms,
+ * <p>A page transform made of many other page transforms,
  * applied sequentially.
  * @author Thib Guicherd-Callin
  */
@@ -50,21 +50,102 @@ public class AggregatePageTransform implements PageTransform {
    */
   protected List /* of PageTransform */ pageTransforms;
 
+  /**
+   * <p>A result policy determining the boolean result of the
+   * transform.</p>
+   */
   protected ResultPolicy resultPolicy;
 
-  protected static final ResultPolicy POLICY_BY_DEFAULT = PdfUtil.AND;
+  /**
+   * <p>Builds a new aggregate page transform using the default
+   * result policy.</p>
+   * @param resultPolicy   A result policy.
+   * @see #AggregatePageTransform(ResultPolicy)
+   * @see #POLICY_BY_DEFAULT
+   */
+  public AggregatePageTransform() {
+    this(POLICY_BY_DEFAULT);
+  }
 
+  /**
+   * <p>Builds a new aggregate page transform using the default
+   * result policy and registers the given page transforms.</p>
+   * @param resultPolicy   A result policy.
+   * @param pageTransform1 A page transform.
+   * @see #AggregatePageTransform(ResultPolicy, PageTransform)
+   * @see #POLICY_BY_DEFAULT
+   */
+  public AggregatePageTransform(PageTransform pageTransform1) {
+    this(POLICY_BY_DEFAULT,
+         pageTransform1);
+  }
+
+  /**
+   * <p>Builds a new aggregate page transform using the default
+   * result policy and registers the given page transforms.</p>
+   * @param resultPolicy   A result policy.
+   * @param pageTransform1 A page transform.
+   * @param pageTransform2 A page transform.
+   * @see #AggregatePageTransform(ResultPolicy, PageTransform, PageTransform)
+   * @see #POLICY_BY_DEFAULT
+   */
+  public AggregatePageTransform(PageTransform pageTransform1,
+                                PageTransform pageTransform2) {
+    this(POLICY_BY_DEFAULT,
+         pageTransform1,
+         pageTransform2);
+  }
+
+  /**
+   * <p>Builds a new aggregate page transform using the default
+   * result policy and registers the given page transforms.</p>
+   * @param resultPolicy   A result policy.
+   * @param pageTransform1 A page transform.
+   * @param pageTransform2 A page transform.
+   * @param pageTransform3 A page transform.
+   * @see #AggregatePageTransform(ResultPolicy, PageTransform, PageTransform, PageTransform)
+   * @see #POLICY_BY_DEFAULT
+   */
+  public AggregatePageTransform(PageTransform pageTransform1,
+                                PageTransform pageTransform2,
+                                PageTransform pageTransform3) {
+    this(POLICY_BY_DEFAULT,
+         pageTransform1,
+         pageTransform2,
+         pageTransform3);
+  }
+
+  /**
+   * <p>Builds a new aggregate page transform using the given
+   * result policy.</p>
+   * @param resultPolicy   A result policy.
+   */
   public AggregatePageTransform(ResultPolicy resultPolicy) {
     this.resultPolicy = resultPolicy;
     this.pageTransforms = new ArrayList();
   }
 
+  /**
+   * <p>Builds a new aggregate page transform using the given
+   * result policy and registers the given page transforms.</p>
+   * @param resultPolicy   A result policy.
+   * @param pageTransform1 A page transform.
+   * @see #AggregatePageTransform(ResultPolicy)
+   */
   public AggregatePageTransform(ResultPolicy resultPolicy,
                                 PageTransform pageTransform1) {
     this(resultPolicy);
     add(pageTransform1);
   }
 
+  /**
+   * <p>Builds a new aggregate page transform using the given
+   * result policy and registers the given page transforms.</p>
+   * @param resultPolicy   A result policy.
+   * @param pageTransform1 A page transform.
+   * @param pageTransform2 A page transform.
+   * @see #AggregatePageTransform(ResultPolicy, PageTransform)
+   */
   public AggregatePageTransform(ResultPolicy resultPolicy,
                                 PageTransform pageTransform1,
                                 PageTransform pageTransform2) {
@@ -73,25 +154,28 @@ public class AggregatePageTransform implements PageTransform {
     add(pageTransform2);
   }
 
-  public AggregatePageTransform() {
-    this(POLICY_BY_DEFAULT);
-  }
-
-  public AggregatePageTransform(PageTransform pageTransform1) {
-    this(POLICY_BY_DEFAULT);
-    add(pageTransform1);
-  }
-
-  public AggregatePageTransform(PageTransform pageTransform1,
-                                PageTransform pageTransform2) {
-    this(POLICY_BY_DEFAULT,
-         pageTransform1);
-    add(pageTransform2);
+  /**
+   * <p>Builds a new aggregate page transform using the given
+   * result policy and registers the given page transforms.</p>
+   * @param resultPolicy   A result policy.
+   * @param pageTransform1 A page transform.
+   * @param pageTransform2 A page transform.
+   * @param pageTransform3 A page transform.
+   * @see #AggregatePageTransform(ResultPolicy, PageTransform, PageTransform)
+   */
+  public AggregatePageTransform(ResultPolicy resultPolicy,
+                                PageTransform pageTransform1,
+                                PageTransform pageTransform2,
+                                PageTransform pageTransform3) {
+    this(resultPolicy,
+         pageTransform1,
+         pageTransform2);
+    add(pageTransform3);
   }
 
   /**
    * <p>Registers a new {@link PageTransform} instance with
-   * this compound page transform.</p>
+   * this aggregate page transform.</p>
    * <p>When transforming a PDF page, the actions performed by the
    * registered page tranforms are applied in the order the page
    * transforms were registered with this method.</p>
@@ -101,6 +185,7 @@ public class AggregatePageTransform implements PageTransform {
     pageTransforms.add(pageTransform);
   }
 
+  /* Inherit documentation */
   public boolean transform(PdfPage pdfPage) throws IOException {
     boolean success = resultPolicy.resetResult();
     for (Iterator iter = pageTransforms.iterator() ; iter.hasNext() ; ) {
@@ -112,6 +197,15 @@ public class AggregatePageTransform implements PageTransform {
     }
     return success;
   }
+
+  /**
+   * <p>The default result policy used by this class.</p>
+   * @see #AggregatePageTransform()
+   * @see #AggregatePageTransform(PageTransform)
+   * @see #AggregatePageTransform(PageTransform, PageTransform)
+   * @see #AggregatePageTransform(PageTransform, PageTransform, PageTransform)
+   */
+  public static final ResultPolicy POLICY_BY_DEFAULT = PdfUtil.AND;
 
   /**
    * <p>A logger for use by this class.</p>

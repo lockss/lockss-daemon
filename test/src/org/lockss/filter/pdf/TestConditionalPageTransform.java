@@ -1,5 +1,5 @@
 /*
- * $Id: TestConditionalPageTransform.java,v 1.1 2006-09-10 07:50:49 thib_gc Exp $
+ * $Id: TestConditionalPageTransform.java,v 1.2 2006-09-14 23:10:39 thib_gc Exp $
  */
 
 /*
@@ -35,10 +35,10 @@ package org.lockss.filter.pdf;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import org.lockss.filter.pdf.MockTransforms.*;
+import org.lockss.filter.pdf.MockTransforms.RememberTransformPageTransform;
+import org.lockss.filter.pdf.PageTransformUtil.IdentityPageTransform;
 import org.lockss.test.*;
-import org.lockss.util.*;
-import org.lockss.util.PdfUtil.*;
+import org.lockss.util.PdfPage;
 
 public class TestConditionalPageTransform extends LockssTestCase {
 
@@ -65,6 +65,7 @@ public class TestConditionalPageTransform extends LockssTestCase {
 
   public void testConditionTrueThenFails() throws Exception {
     assertFalse(new ConditionalPageTransform(new IdentityPageTransform(true),
+                                             false,
                                              new IdentityPageTransform(false)).transform(new MockPdfPage()));
   }
 

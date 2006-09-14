@@ -1,5 +1,5 @@
 /*
- * $Id: TransformFirstPage.java,v 1.3 2006-09-10 07:50:51 thib_gc Exp $
+ * $Id: TransformFirstPage.java,v 1.4 2006-09-14 23:10:39 thib_gc Exp $
  */
 
 /*
@@ -37,21 +37,97 @@ import java.util.ListIterator;
 
 import org.apache.commons.collections.iterators.SingletonListIterator;
 import org.lockss.util.*;
+import org.lockss.util.PdfUtil.ResultPolicy;
 
 /**
- * <p>A PDF transform that applies a PDF page transform to the
- * first page of the PDF document.</p>
+ * <p>A document transform that applies a page transform to the first
+ * page of the PDF document only.</p>
  * @author Thib Guicherd-Callin
  */
 public class TransformFirstPage extends TransformSelectedPages {
 
   /**
-   * <p>Builds a new PDF transform with the given PDF page
-   * transform.</p>
-   * @param pageTransform A PDF page transform.
+   * <p>Builds a new document transform using the default result
+   * policy, based on the given page transform.</p>
+   * @param pageTransform A page transform.
+   * @see TransformSelectedPages#TransformSelectedPages(PageTransform)
    */
   public TransformFirstPage(PageTransform pageTransform) {
     super(pageTransform);
+  }
+
+  /**
+   * <p>Builds a new document transform based on the aggregation of
+   * the given page transforms (using the default aggregation result
+   * policy).</p>
+   * @param pageTransform1 A page transform.
+   * @param pageTransform2 A page transform.
+   * @see TransformSelectedPages#TransformSelectedPages(PageTransform, PageTransform)
+   */
+  public TransformFirstPage(PageTransform pageTransform1,
+                            PageTransform pageTransform2) {
+    super(pageTransform1,
+          pageTransform2);
+  }
+
+  /**
+   * <p>Builds a new document transform based on the aggregation of
+   * the given page transforms (using the default aggregation result
+   * policy).</p>
+   * @param pageTransform1 A page transform.
+   * @param pageTransform2 A page transform.
+   * @param pageTransform3 A page transform.
+   * @see TransformSelectedPages#TransformSelectedPages(PageTransform, PageTransform, PageTransform)
+   */
+  public TransformFirstPage(PageTransform pageTransform1,
+                            PageTransform pageTransform2,
+                            PageTransform pageTransform3) {
+    super(pageTransform1,
+          pageTransform2,
+          pageTransform3);
+  }
+
+  /**
+   * <p>Builds a new document transform based on the aggregation of
+   * the given page transforms (using the given aggregation result
+   * policy).</p>
+   * @param pageTransformResultPolicy A result policy (for the result
+   *                                  of the aggregate page transform).
+   * @param pageTransform1            A page transform.
+   * @param pageTransform2            A page transform.
+   * @see TransformSelectedPages#TransformSelectedPages(ResultPolicy, ResultPolicy, PageTransform, PageTransform)
+   * @see TransformSelectedPages#POLICY_DEFAULT
+   */
+  public TransformFirstPage(ResultPolicy pageTransformResultPolicy,
+                            PageTransform pageTransform1,
+                            PageTransform pageTransform2) {
+    super(POLICY_DEFAULT,
+          pageTransformResultPolicy,
+          pageTransform1,
+          pageTransform2);
+  }
+
+  /**
+   * <p>Builds a new document transform based on the aggregation of
+   * the given page transforms (using the given aggregation result
+   * policy).</p>
+   * @param pageTransformResultPolicy A result policy (for the result
+   *                                  of the aggregate page transform).
+   * @param pageTransform1            A page transform.
+   * @param pageTransform2            A page transform.
+   * @param pageTransform3            A page transform.
+   * @see TransformSelectedPages#TransformSelectedPages(ResultPolicy, ResultPolicy, PageTransform, PageTransform, PageTransform)
+   * @see TransformSelectedPages#POLICY_DEFAULT
+   */
+  public TransformFirstPage(ResultPolicy pageTransformResultPolicy,
+                            PageTransform pageTransform1,
+                            PageTransform pageTransform2,
+                            PageTransform pageTransform3) {
+    super(POLICY_DEFAULT,
+          pageTransformResultPolicy,
+          pageTransform1,
+          pageTransform2,
+          pageTransform3);
   }
 
   /* Inherit documentation */

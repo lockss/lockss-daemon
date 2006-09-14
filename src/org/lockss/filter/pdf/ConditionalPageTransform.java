@@ -1,5 +1,5 @@
 /*
- * $Id: ConditionalPageTransform.java,v 1.1 2006-09-10 07:50:50 thib_gc Exp $
+ * $Id: ConditionalPageTransform.java,v 1.2 2006-09-14 23:10:39 thib_gc Exp $
  */
 
 /*
@@ -32,32 +32,152 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.filter.pdf;
 
-import java.io.IOException;
-
-import org.lockss.util.*;
+import org.lockss.filter.pdf.PageTransformUtil.*;
+import org.lockss.util.PdfUtil.ResultPolicy;
 
 /**
- * <p>A PDF page transform decorator that applies a given PDF page
- * transform only if the PDF page to be transformed is recognized by
- * the {@link #identify} method.</p>
+ * <p>A page transform decorator that applies a "then" page
+ * transform only if the PDF page to be transformed is recognized
+ * by an "if" page transform.</p>
  * @author Thib Guicherd-Callin
  */
-public class ConditionalPageTransform implements PageTransform {
+public class ConditionalPageTransform extends PageTransformDecorator {
 
   /**
-   * <p>The PDF page transform to be applied conditionally.</p>
+   * <p>Builds a new conditional page transform using the given
+   * strictness, out of the given "if" page transform and
+   * "then" page transform.</p>
+   * @param ifTransform    An "if" page transform.
+   * @param thenStrictness True to wrap the "then" page transform
+   *                       as a {@link StrictPageTransform} if it
+   *                       is not one already, false otherwise.
+   * @param thenTransform  A "then" page transform.
+   * @see PageTransformDecorator#PageTransformDecorator(PageTransform)
+   * @see AggregatePageTransform#AggregatePageTransform(PageTransform, PageTransform)
    */
-  protected AggregatePageTransform pageTransform;
-
-  public ConditionalPageTransform(PageTransform conditionTransform,
-                                  PageTransform pageTransform) {
-    this.pageTransform = new AggregatePageTransform(PdfUtil.AND);
-    this.pageTransform.add(conditionTransform);
-    this.pageTransform.add(pageTransform);
+  public ConditionalPageTransform(PageTransform ifTransform,
+                                  boolean thenStrictness,
+                                  PageTransform thenTransform) {
+    super(new AggregatePageTransform(ifTransform,
+                                     !thenStrictness || thenTransform instanceof StrictPageTransform
+                                     ? thenTransform
+                                     : new StrictPageTransform(thenTransform)));
   }
 
-  public boolean transform(PdfPage pdfPage) throws IOException {
-    return pageTransform.transform(pdfPage);
+  /**
+   * <p>Builds a new conditional page transform using the given
+   * strictness, out of the given "if" page transform and the
+   * aggregation of the given "then" page transforms (using the
+   * default aggregation result policy).</p>
+   * @param ifTransform    An "if" page transform.
+   * @param thenStrictness True to wrap the aggregated "then" page
+   *                       transform as a
+   *                       {@link StrictPageTransform}, false
+   *                       otherwise.
+   * @param thenTransform1  A "then" page transform.
+   * @param thenTransform2  A "then" page transform.
+   * @see #ConditionalPageTransform(PageTransform, boolean, PageTransform)
+   * @see AggregatePageTransform#AggregatePageTransform(PageTransform, PageTransform)
+   * @see AggregatePageTransform#POLICY_DEFAULT
+   */
+  public ConditionalPageTransform(PageTransform ifTransform,
+                                  boolean thenStrictness,
+                                  PageTransform thenTransform1,
+                                  PageTransform thenTransform2) {
+    this(ifTransform,
+         thenStrictness,
+         new AggregatePageTransform(thenTransform1,
+                                    thenTransform2));
   }
+
+  /**
+   * <p>Builds a new conditional page transform using the given
+   * strictness, out of the given "if" page transform and the
+   * aggregation of the given "then" page transforms (using the
+   * given aggregation result policy).</p>
+   * @param ifTransform      An "if" page transform.
+   * @param thenStrictness   True to wrap the aggregated "then"
+   *                        page transform as a
+   *                         {@link StrictPageTransform}, false
+   *                         otherwise.
+   * @param thenResultPolicy A result policy for the aggregate "then"
+   *                         page transform.
+   * @param thenTransform1   A "then" page transform.
+   * @param thenTransform2   A "then" page transform.
+   * @see #ConditionalPageTransform(PageTransform, boolean, PageTransform)
+   */
+  public ConditionalPageTransform(PageTransform ifTransform,
+                                  boolean thenStrictness,
+                                  ResultPolicy thenResultPolicy,
+                                  PageTransform thenTransform1,
+                                  PageTransform thenTransform2) {
+    this(ifTransform,
+         thenStrictness,
+         new AggregatePageTransform(thenResultPolicy,
+                                    thenTransform1,
+                                    thenTransform2));
+  }
+
+  /**
+   * <p>Builds a new conditional page transform using the default
+   * strictness, out of the given "if" page transform and
+   * "then" page transform.</p>
+   * @param ifTransform    An "if" page transform.
+   * @param thenTransform  A "then" page transform.
+   * @see #ConditionalPageTransform(PageTransform, boolean, PageTransform)
+   * @see #STRICTNESS_DEFAULT
+   */
+  public ConditionalPageTransform(PageTransform ifTransform,
+                                  PageTransform thenTransform) {
+    this(ifTransform,
+         STRICT_DEFAULT,
+         thenTransform);
+  }
+
+  /**
+   * <p>Builds a new conditional page transform using the default
+   * strictness, out of the given "if" page transform and the
+   * aggregation of the given "then" page transforms (using the
+   * default aggregation result policy).</p>
+   * @param ifTransform      An "if" page transform.
+   * @param thenTransform1   A "then" page transform.
+   * @param thenTransform2   A "then" page transform.
+   * @see #ConditionalPageTransform(PageTransform, boolean, PageTransform, PageTransform)
+   * @see #STRICTNESS_DEFAULT
+   */
+  public ConditionalPageTransform(PageTransform ifTransform,
+                                  PageTransform thenTransform1,
+                                  PageTransform thenTransform2) {
+    this(ifTransform,
+         STRICT_DEFAULT,
+         thenTransform1,
+         thenTransform2);
+  }
+
+  /**
+   * <p>Builds a new conditional page transform using the default
+   * strictness, out of the given "if" page transform and the
+   * aggregation of the given "then" page transforms (using the
+   * given aggregation result policy).</p>
+   * @param ifTransform    An "if" page transform.
+   * @param thenResultPolicy A result policy for the aggregate "then"
+   *                         page transform.
+   * @param thenTransform1  A "then" page transform.
+   * @param thenTransform2  A "then" page transform.
+   * @see #ConditionalPageTransform(PageTransform, boolean, ResultPolicy, PageTransform, PageTransform)
+   * @see #STRICTNESS_DEFAULT
+   */
+  public ConditionalPageTransform(PageTransform ifTransform,
+                                  ResultPolicy thenResultPolicy,
+                                  PageTransform thenTransform1,
+                                  PageTransform thenTransform2) {
+    this(ifTransform,
+         STRICT_DEFAULT,
+         thenResultPolicy,
+         thenTransform1,
+         thenTransform2);
+  }
+
+  public static final boolean STRICT_DEFAULT = true;
 
 }

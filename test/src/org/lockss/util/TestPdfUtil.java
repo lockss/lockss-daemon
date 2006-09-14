@@ -1,5 +1,5 @@
 /*
- * $Id: TestPdfUtil.java,v 1.1 2006-09-10 07:50:50 thib_gc Exp $
+ * $Id: TestPdfUtil.java,v 1.2 2006-09-14 23:10:40 thib_gc Exp $
  */
 
 /*
@@ -32,8 +32,9 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util;
 
+import org.lockss.filter.pdf.DocumentTransformUtil.IdentityDocumentTransform;
+import org.lockss.filter.pdf.PageTransformUtil.IdentityPageTransform;
 import org.lockss.test.*;
-import org.lockss.util.PdfUtil.*;
 import org.pdfbox.cos.*;
 
 public class TestPdfUtil extends LockssTestCase {

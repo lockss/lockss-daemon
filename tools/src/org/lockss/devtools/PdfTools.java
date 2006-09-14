@@ -1,5 +1,5 @@
 /*
- * $Id: PdfTools.java,v 1.12 2006-09-13 22:04:09 thib_gc Exp $
+ * $Id: PdfTools.java,v 1.13 2006-09-14 23:10:40 thib_gc Exp $
  */
 
 /*
@@ -39,8 +39,9 @@ import javax.swing.JFileChooser;
 
 import org.apache.commons.io.output.NullOutputStream;
 import org.lockss.filter.pdf.*;
+import org.lockss.filter.pdf.DocumentTransformUtil.IdentityDocumentTransform;
+import org.lockss.filter.pdf.PageTransformUtil.IdentityPageTransform;
 import org.lockss.util.*;
-import org.lockss.util.PdfUtil.*;
 import org.pdfbox.cos.*;
 import org.pdfbox.pdfwriter.ContentStreamWriter;
 import org.pdfbox.pdmodel.common.*;
