@@ -1,5 +1,5 @@
 /*
- * $Id: DocumentTransformUtil.java,v 1.1 2006-09-14 23:10:39 thib_gc Exp $
+ * $Id: DocumentTransformUtil.java,v 1.2 2006-09-15 22:53:51 thib_gc Exp $
  */
 
 /*
@@ -66,11 +66,6 @@ public class DocumentTransformUtil {
       this.documentTransform = documentTransform;
     }
 
-    /* Inherit documentation */
-    public boolean transform(PdfDocument pdfDocument) throws IOException {
-      return documentTransform.transform(pdfDocument);
-    }
-
   }
 
   /**
@@ -129,7 +124,7 @@ public class DocumentTransformUtil {
 
     /* Inherit documentation */
     public boolean transform(PdfDocument pdfDocument) throws IOException {
-      return !super.transform(pdfDocument);
+      return !documentTransform.transform(pdfDocument);
     }
 
   }
@@ -176,7 +171,7 @@ public class DocumentTransformUtil {
 
     /* Inherit documentation */
     public boolean transform(PdfDocument pdfDocument) throws IOException {
-      if (super.transform(pdfDocument)) {
+      if (documentTransform.transform(pdfDocument)) {
         return true;
       }
       else {

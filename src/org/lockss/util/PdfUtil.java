@@ -1,5 +1,5 @@
 /*
- * $Id: PdfUtil.java,v 1.6 2006-09-14 23:10:39 thib_gc Exp $
+ * $Id: PdfUtil.java,v 1.7 2006-09-15 22:53:52 thib_gc Exp $
  */
 
 /*
@@ -89,7 +89,7 @@ return success;
      * <p>Provides the initial value for the success flag.</p>
      * @return The value of the success flag before the loop.
      */
-    boolean resetResult();
+    boolean initialValue();
 
     /**
      * <p>Determines whether the loop should continue based on the
@@ -120,7 +120,7 @@ return success;
   public static final ResultPolicy AND = new ResultPolicy() {
 
     /* Inherit documentation */
-    public boolean resetResult() {
+    public boolean initialValue() {
       return true;
     }
 
@@ -144,7 +144,7 @@ return success;
   public static final ResultPolicy AND_ALL = new ResultPolicy() {
 
     /* Inherit documentation */
-    public boolean resetResult() {
+    public boolean initialValue() {
       return true;
     }
 
@@ -168,7 +168,7 @@ return success;
   public static final ResultPolicy OR = new ResultPolicy() {
 
     /* Inherit documentation */
-    public boolean resetResult() {
+    public boolean initialValue() {
       return false;
     }
 
@@ -192,7 +192,7 @@ return success;
   public static final ResultPolicy OR_ALL = new ResultPolicy() {
 
     /* Inherit documentation */
-    public boolean resetResult() {
+    public boolean initialValue() {
       return false;
     }
 

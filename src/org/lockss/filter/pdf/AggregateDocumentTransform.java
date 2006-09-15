@@ -1,5 +1,5 @@
 /*
- * $Id: AggregateDocumentTransform.java,v 1.2 2006-09-14 23:10:39 thib_gc Exp $
+ * $Id: AggregateDocumentTransform.java,v 1.3 2006-09-15 22:53:51 thib_gc Exp $
  */
 
 /*
@@ -226,7 +226,7 @@ public class AggregateDocumentTransform implements DocumentTransform {
 
   /* Inherit documentation */
   public synchronized boolean transform(PdfDocument pdfDocument) throws IOException {
-    boolean success = resultPolicy.resetResult();
+    boolean success = resultPolicy.initialValue();
     for (Iterator iter = documentTransforms.iterator() ; iter.hasNext() ; ) {
       DocumentTransform documentTransform = (DocumentTransform)iter.next();
       success = resultPolicy.updateResult(success, documentTransform.transform(pdfDocument));

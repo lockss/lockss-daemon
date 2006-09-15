@@ -1,5 +1,5 @@
 /*
- * $Id: AggregatePageTransform.java,v 1.2 2006-09-14 23:10:39 thib_gc Exp $
+ * $Id: AggregatePageTransform.java,v 1.3 2006-09-15 22:53:51 thib_gc Exp $
  */
 
 /*
@@ -187,7 +187,7 @@ public class AggregatePageTransform implements PageTransform {
 
   /* Inherit documentation */
   public boolean transform(PdfPage pdfPage) throws IOException {
-    boolean success = resultPolicy.resetResult();
+    boolean success = resultPolicy.initialValue();
     for (Iterator iter = pageTransforms.iterator() ; iter.hasNext() ; ) {
       PageTransform pageTransform = (PageTransform)iter.next();
       success = resultPolicy.updateResult(success, pageTransform.transform(pdfPage));

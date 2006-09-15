@@ -1,5 +1,5 @@
 /*
- * $Id: ConditionalDocumentTransform.java,v 1.2 2006-09-14 23:10:39 thib_gc Exp $
+ * $Id: ConditionalDocumentTransform.java,v 1.3 2006-09-15 22:53:51 thib_gc Exp $
  */
 
 /*
@@ -32,7 +32,10 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.filter.pdf;
 
+import java.io.IOException;
+
 import org.lockss.filter.pdf.DocumentTransformUtil.*;
+import org.lockss.util.PdfDocument;
 import org.lockss.util.PdfUtil.ResultPolicy;
 
 /**
@@ -176,6 +179,11 @@ public class ConditionalDocumentTransform extends DocumentTransformDecorator {
          thenResultPolicy,
          thenTransform1,
          thenTransform2);
+  }
+
+  /* Inherit documentation */
+  public boolean transform(PdfDocument pdfDocument) throws IOException {
+    return documentTransform.transform(pdfDocument);
   }
 
   /**

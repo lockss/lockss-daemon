@@ -1,5 +1,5 @@
 /*
- * $Id: AmericanPhysiologicalSocietyPdfTransform.java,v 1.14 2006-09-14 23:10:39 thib_gc Exp $
+ * $Id: AmericanPhysiologicalSocietyPdfTransform.java,v 1.15 2006-09-15 22:53:51 thib_gc Exp $
  */
 
 /*
@@ -52,22 +52,77 @@ import org.pdfbox.cos.*;
 public class AmericanPhysiologicalSocietyPdfTransform extends ConditionalDocumentTransform {
 
   public static class EraseDateString extends PageStreamTransform {
+
+    public static class ProcessDateString extends ProcessShowText {
+      public String getReplacement(String match) {
+        return " ";
+      }
+      public boolean identify(String candidate) {
+        return candidate.startsWith("This information is current as of ");
+      }
+    }
     public EraseDateString() throws IOException {
       super(PdfUtil.SHOW_TEXT, ProcessDateString.class);
     }
+
   }
 
   public static class EraseVerticalText extends PageStreamTransform {
+
+    public static class ProcessEndTextObject extends ConditionalMergeOperatorProcessor {
+      public List getReplacement(List tokens) {
+        return ListUtil.list(tokens.get(0), tokens.get(29));
+      }
+      public boolean identify(List tokens) {
+        boolean ret = tokens.size() == 30
+        && PdfUtil.matchTextObject(tokens, 0, 29)
+        && PdfUtil.isPdfFloat(tokens, 9)
+        && PdfUtil.matchShowText(tokens, 12)
+        && PdfUtil.matchSetRgbColorNonStroking(tokens, 16, 0, 0, 1)
+        && PdfUtil.matchShowText(tokens, 21)
+        && PdfUtil.matchShowText(tokens, 28, "Downloaded from ");;
+        logger.debug3("ProcessEndTextObject candidate match: " + ret);
+        return ret;
+      }
+    }
+
     public EraseVerticalText() throws IOException {
       super(PdfUtil.BEGIN_TEXT_OBJECT, SplitOperatorProcessor.class,
             PdfUtil.END_TEXT_OBJECT, ProcessEndTextObject.class);
     }
+
   }
 
   public static class EraseVerticalText2 extends PageStreamTransform {
+
+    public static class ProcessEndTextObject2 extends ConditionalSubsequenceOperatorProcessor {
+      public List getReplacement(List tokens) {
+        return ListUtil.list(tokens.get(0), tokens.get(51));
+      }
+      public int getSubsequenceLength() {
+        return 52;
+      }
+      public boolean identify(List tokens) {
+        boolean ret = tokens.size() == 52
+        && PdfUtil.matchTextObject(tokens, 0, 17)
+        && PdfUtil.isPdfFloat(tokens, 9)
+        && PdfUtil.matchShowText(tokens, 12)
+        && PdfUtil.matchSetRgbColorNonStroking(tokens, 16, 0, 0, 1)
+        && PdfUtil.matchTextObject(tokens, 20, 35)
+        && PdfUtil.isPdfFloat(tokens, 29)
+        && PdfUtil.matchShowText(tokens, 32)
+        && PdfUtil.matchTextObject(tokens, 38, 51)
+        && PdfUtil.isPdfFloat(tokens, 47)
+        && PdfUtil.matchShowText(tokens, 50, "Downloaded from ");
+        logger.debug3("ProcessEndTextObject2 candidate match: " + ret);
+        return ret;
+      }
+    }
+
     public EraseVerticalText2() throws IOException {
       super(PdfUtil.END_TEXT_OBJECT, ProcessEndTextObject2.class);
     }
+
   }
 
   public static class FixHyperlink implements PageTransform {
@@ -76,56 +131,6 @@ public class AmericanPhysiologicalSocietyPdfTransform extends ConditionalDocumen
       array.set(1, new COSFloat(1.0f));
       array.set(3, new COSFloat(2.0f));
       return true;
-    }
-  }
-
-  public static class ProcessDateString extends ProcessShowText {
-    public String getReplacement(String match) {
-      return " ";
-    }
-    public boolean identify(String candidate) {
-      return candidate.startsWith("This information is current as of ");
-    }
-  }
-
-  public static class ProcessEndTextObject extends ConditionalMergeOperatorProcessor {
-    public List getReplacement(List tokens) {
-      return ListUtil.list(tokens.get(0), tokens.get(29));
-    }
-    public boolean identify(List tokens) {
-      boolean ret = tokens.size() == 30
-      && PdfUtil.matchTextObject(tokens, 0, 29)
-      && PdfUtil.isPdfFloat(tokens, 9)
-      && PdfUtil.matchShowText(tokens, 12)
-      && PdfUtil.matchSetRgbColorNonStroking(tokens, 16, 0, 0, 1)
-      && PdfUtil.matchShowText(tokens, 21)
-      && PdfUtil.matchShowText(tokens, 28, "Downloaded from ");;
-      logger.debug3("ProcessEndTextObject candidate match: " + ret);
-      return ret;
-    }
-  }
-
-  public static class ProcessEndTextObject2 extends ConditionalSubsequenceOperatorProcessor {
-    public List getReplacement(List tokens) {
-      return ListUtil.list(tokens.get(0), tokens.get(51));
-    }
-    public int getSubsequenceLength() {
-      return 52;
-    }
-    public boolean identify(List tokens) {
-      boolean ret = tokens.size() == 52
-      && PdfUtil.matchTextObject(tokens, 0, 17)
-      && PdfUtil.isPdfFloat(tokens, 9)
-      && PdfUtil.matchShowText(tokens, 12)
-      && PdfUtil.matchSetRgbColorNonStroking(tokens, 16, 0, 0, 1)
-      && PdfUtil.matchTextObject(tokens, 20, 35)
-      && PdfUtil.isPdfFloat(tokens, 29)
-      && PdfUtil.matchShowText(tokens, 32)
-      && PdfUtil.matchTextObject(tokens, 38, 51)
-      && PdfUtil.isPdfFloat(tokens, 47)
-      && PdfUtil.matchShowText(tokens, 50, "Downloaded from ");
-      logger.debug3("ProcessEndTextObject2 candidate match: " + ret);
-      return ret;
     }
   }
 

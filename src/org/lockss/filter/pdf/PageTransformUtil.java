@@ -1,5 +1,5 @@
 /*
- * $Id: PageTransformUtil.java,v 1.1 2006-09-14 23:10:39 thib_gc Exp $
+ * $Id: PageTransformUtil.java,v 1.2 2006-09-15 22:53:51 thib_gc Exp $
  */
 
 /*
@@ -98,7 +98,7 @@ public class PageTransformUtil {
 
     /* Inherit documentation */
     public boolean transform(PdfPage pdfPage) throws IOException {
-      return !super.transform(pdfPage);
+      return !pageTransform.transform(pdfPage);
     }
 
   }
@@ -127,11 +127,6 @@ public class PageTransformUtil {
       this.pageTransform = pageTransform;
     }
 
-    /* Inherit documentation */
-    public boolean transform(PdfPage pdfPage) throws IOException {
-      return pageTransform.transform(pdfPage);
-    }
-
   }
 
   /**
@@ -153,7 +148,7 @@ public class PageTransformUtil {
 
     /* Inherit documentation */
     public boolean transform(PdfPage pdfPage) throws IOException {
-      if (super.transform(pdfPage)) {
+      if (pageTransform.transform(pdfPage)) {
         return true;
       }
       else {

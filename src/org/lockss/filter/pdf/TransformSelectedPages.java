@@ -1,5 +1,5 @@
 /*
- * $Id: TransformSelectedPages.java,v 1.4 2006-09-14 23:10:39 thib_gc Exp $
+ * $Id: TransformSelectedPages.java,v 1.5 2006-09-15 22:53:51 thib_gc Exp $
  */
 
 /*
@@ -203,7 +203,7 @@ public abstract class TransformSelectedPages extends PageTransformWrapper {
 
   /* Inherit documentation */
   public boolean transform(PdfDocument pdfDocument) throws IOException {
-    boolean success = resultPolicy.resetResult();
+    boolean success = resultPolicy.initialValue();
     for (Iterator iter = getSelectedPages(pdfDocument) ; iter.hasNext() ; ) {
       PdfPage pdfPage = (PdfPage)iter.next();
       success = resultPolicy.updateResult(success, pageTransform.transform(pdfPage));

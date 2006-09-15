@@ -1,5 +1,5 @@
 /*
- * $Id: ConditionalPageTransform.java,v 1.2 2006-09-14 23:10:39 thib_gc Exp $
+ * $Id: ConditionalPageTransform.java,v 1.3 2006-09-15 22:53:51 thib_gc Exp $
  */
 
 /*
@@ -32,7 +32,10 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.filter.pdf;
 
+import java.io.IOException;
+
 import org.lockss.filter.pdf.PageTransformUtil.*;
+import org.lockss.util.PdfPage;
 import org.lockss.util.PdfUtil.ResultPolicy;
 
 /**
@@ -180,4 +183,8 @@ public class ConditionalPageTransform extends PageTransformDecorator {
 
   public static final boolean STRICT_DEFAULT = true;
 
+  /* Inherit documentation */
+  public boolean transform(PdfPage pdfPage) throws IOException {
+    return pageTransform.transform(pdfPage);
+  }
 }
