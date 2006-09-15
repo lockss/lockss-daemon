@@ -45,7 +45,7 @@
       <string>1,&quot;^%scontent/vol%s/&quot;, base_url, volume_name</string>
       <string>1,&quot;^%scgi/(content|content-nw|issue_pdf)/.*/%s/&quot;, base_url, volume_name</string>
       <string>1,&quot;^%scgi/(data|eletters|framedreprint|reprint|reprintframed|reprintsidebar|screenpdf|this_week)/%s/&quot;, base_url, volume_name</string>
-      <string>1,&quot;^%s(icons|javascript|math|portal_imgs|resource/css|resource/image|resource/js|shared/icons)/&quot;, base_url</string>
+      <string>1,&quot;^%s.*\.(css|CSS|gif|GIF|jpeg|JPEG|jpg|JPG|js|JS|png|PNG)$&quot;, base_url</string>
     </list>
   </entry>
   <entry>
