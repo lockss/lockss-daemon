@@ -1,5 +1,5 @@
 /*
- * $Id: CatalogueOrderComparator.java,v 1.7 2006-09-16 07:19:49 tlipkis Exp $
+ * $Id: CatalogueOrderComparator.java,v 1.8 2006-09-16 23:00:18 tlipkis Exp $
  */
 
 /*
@@ -51,7 +51,7 @@ public class CatalogueOrderComparator implements Comparator {
   public static final CatalogueOrderComparator SINGLETON =
     new CatalogueOrderComparator();
 
-  Map keyMap = Collections.synchronizedMap(new HashMap());
+  Map keyMap = new HashMap();
 
   public int compare(Object o1, Object o2) {
     // Don't allow null to cause NPE
@@ -74,7 +74,7 @@ public class CatalogueOrderComparator implements Comparator {
     return getSortKey(s1).compareToIgnoreCase(getSortKey(s2));
   }
 
-  String getSortKey(String s) {
+  synchronized String getSortKey(String s) {
     String key = (String)keyMap.get(s);
     if (key == null) {
       key = xlate(s);
