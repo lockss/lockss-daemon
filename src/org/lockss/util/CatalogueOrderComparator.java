@@ -1,5 +1,5 @@
 /*
- * $Id: CatalogueOrderComparator.java,v 1.6 2006-09-13 17:48:45 adriz Exp $
+ * $Id: CatalogueOrderComparator.java,v 1.7 2006-09-16 07:19:49 tlipkis Exp $
  */
 
 /*
@@ -54,6 +54,12 @@ public class CatalogueOrderComparator implements Comparator {
   Map keyMap = Collections.synchronizedMap(new HashMap());
 
   public int compare(Object o1, Object o2) {
+    // Don't allow null to cause NPE
+    if (o1 == null) {
+      return (o2 == null ? 0 : -1);
+    } else if (o2 == null) {
+      return 1;
+    }
     if (!((o1 instanceof String)
 	  && (o2 instanceof String))) {
 
