@@ -1,5 +1,5 @@
 /*
- * $Id: TestHtmlNodeFilterTransform.java,v 1.2 2006-07-31 07:24:45 tlipkis Exp $
+ * $Id: TestHtmlNodeFilterTransform.java,v 1.3 2006-09-16 23:03:22 tlipkis Exp $
  */
 
 /*
@@ -47,8 +47,9 @@ public class TestHtmlNodeFilterTransform extends LockssTestCase {
 				NodeFilter filter)
       throws IOException {
     HtmlTransform xform = HtmlNodeFilterTransform.exclude(filter);
-    Reader reader = new HtmlFilterReader(new StringReader(input), xform);
-    assertReaderMatchesString(expected, reader);
+    InputStream in =
+      new HtmlFilterInputStream(new StringInputStream(input), xform);
+    assertInputStreamMatchesString(expected, in);
   }
 
   /** Check that only nodes that match the filter are included. */
@@ -56,8 +57,9 @@ public class TestHtmlNodeFilterTransform extends LockssTestCase {
 				  NodeFilter filter)
       throws IOException {
     HtmlTransform xform = HtmlNodeFilterTransform.include(filter);
-    Reader reader = new HtmlFilterReader(new StringReader(input), xform);
-    assertReaderMatchesString(expected, reader);
+    InputStream in =
+      new HtmlFilterInputStream(new StringInputStream(input), xform);
+    assertInputStreamMatchesString(expected, in);
   }
 
   public void testIll() {

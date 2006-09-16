@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlFilterReader.java,v 1.3 2006-08-26 19:42:20 tlipkis Exp $
+ * $Id: HtmlFilterInputStream.java,v 1.1 2006-09-16 23:03:22 tlipkis Exp $
  */
 
 /*
@@ -44,15 +44,15 @@ import org.lockss.config.*;
 import org.lockss.util.*;
 
 /**
- * Reader that parses HTML input, applies a user-supplied transformation to
- * the parse tree, then makes the regenerated HTML text available to be
- * read.  <i>Eg</i> to exclude all <code>div</code> nodes with a certain
- * attribute, (<i>ie</i> sections of the html input matching <code>&lt;div
- * someattr="someval" ...&gt; ... &lt;/div&gt;</code>):
+ * InputStream that parses HTML input, applies a user-supplied
+ * transformation to the parse tree, then makes the regenerated HTML text
+ * available to be read.  <i>Eg</i> to exclude all <code>div</code> nodes
+ * with a certain attribute, (<i>ie</i> sections of the html input matching
+ * <code>&lt;div someattr="someval" ...&gt; ... &lt;/div&gt;</code>):
  *
  * <pre>   NodeFilter filter = HtmlNodeFilters.divWithAttribute("someattr", "someval");
  *   HtmlTransform xform = HtmlNodeFilterTransform.exclude(filter);
- *   Reader filtered = new HtmlFilterReader(reader, xform);</pre>
+ *   InputStream filtered = new HtmlFilterInputStream(reader, xform);</pre>
 
  * <p>Uses org.htmlparser.* to parse HTML.  Registers additional tags with
  * PrototypicalNodeFactory to cause them to be treated as a CompositeTag.
@@ -77,37 +77,38 @@ import org.lockss.util.*;
  * @see HtmlNodeFilters
  * @see HtmlTags
  */
-public class HtmlFilterReader extends Reader {
-  private static Logger log = Logger.getLogger("HtmlFilterReader");
+public class HtmlFilterInputStream extends InputStream {
+  private static Logger log = Logger.getLogger("HtmlFilterInputStream");
 
   private FeedbackLogger fl = new FeedbackLogger();
 
-  private Reader in;
-  private Reader out = null;
+  private InputStream in;
+  private Reader outr = null;
+  private InputStream out = null;
   private HtmlTransform xform;
 
   /**
-   * Create an HtmlFilterReader that applies the given transform
-   * @param reader reader to filter from
+   * Create an HtmlFilterInputStream that applies the given transform
+   * @param in InputStream to filter from
    * @param xform HtmlTransform to apply to parsed NodeList
    */
-  public HtmlFilterReader(Reader reader, HtmlTransform xform) {
-    if (reader == null || xform == null) {
+  public HtmlFilterInputStream(InputStream in, HtmlTransform xform) {
+    if (in == null || xform == null) {
       throw new IllegalArgumentException("Called with a null argument");
     }
-    in = reader;
+    this.in = in;
     this.xform = xform;
   }
 
   /** Parse the input, apply the transform, generate output string and
-   * Reader */
+   * InputStream */
   void parse() throws IOException {
     try {
       Parser parser = makeParser();
       NodeList nl = parser.parse(null);
       if (nl.size() <= 0) {
 	log.warning("nl.size(): " + nl.size());
-	out = new StringReader("");
+	out = new ReaderInputStream(new StringReader(""));
       }
       if (log.isDebug3()) log.debug3("parsed (" + nl.size() + "):\n" +
 				     nodeString(nl));
@@ -115,7 +116,7 @@ public class HtmlFilterReader extends Reader {
       if (log.isDebug3()) log.debug3("xformed (" + nl.size() + "):\n" +
 				     nodeString(nl));
       String h = nl.toHtml();
-      out = new StringReader(h);
+      out = new ReaderInputStream(new StringReader(h));
     } catch (ParserException e) {
       log.warning("read()", e);
       IOException ioe = new IOException();
@@ -125,8 +126,8 @@ public class HtmlFilterReader extends Reader {
   }
 
   /** Make a parser, register our extra nodes */
-  Parser makeParser() throws UnsupportedEncodingException { 
-    Page pg = new Page(new InputStreamSource(new ReaderInputStream(in)));
+  Parser makeParser() throws UnsupportedEncodingException {
+    Page pg = new Page(new InputStreamSource(in));
     Lexer lx = new Lexer(pg);
     Parser parser = new Parser(lx, fl);
 
@@ -140,14 +141,47 @@ public class HtmlFilterReader extends Reader {
     return StringUtil.separatedString(nl.toNodeArray(), "\n----------\n");
   }
 
-  public int read(char[] outputBuf, int off, int bufSize) throws IOException {
+  InputStream getOut() throws IOException {
     if (in == null) {
-      throw new IOException("Attempting to read from a closed Reader");
+      throw new IOException("Attempting to read from a closed InputStream");
     }
     if (out == null) {
       parse();
     }
-    return out.read(outputBuf, off, bufSize);
+    return out;
+  }
+
+  public int read() throws IOException {
+    return getOut().read();
+  }
+  public int read(byte b[]) throws IOException {
+    return read(b, 0, b.length);
+  }
+  public int read(byte b[], int off, int len) throws IOException {
+    return getOut().read(b, off, len);
+  }
+  public long skip(long n) throws IOException {
+    return getOut().skip(n);
+  }
+  public int available() throws IOException {
+    return getOut().available();
+  }
+  public void mark(int readlimit) {
+    try {
+      getOut().mark(readlimit);
+    } catch (IOException e) {
+      throw new RuntimeException("", e);
+    }
+  }
+  public void reset() throws IOException {
+    getOut().reset();
+  }
+  public boolean markSupported() {
+    try {
+      return getOut().markSupported();
+    } catch (IOException e) {
+      throw new RuntimeException("", e);
+    }
   }
 
   public void close() throws IOException {

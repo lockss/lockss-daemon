@@ -1,5 +1,5 @@
 /*
- * $Id: TestHtmlNodeSequenceTransform.java,v 1.2 2006-08-26 19:42:20 tlipkis Exp $
+ * $Id: TestHtmlNodeSequenceTransform.java,v 1.3 2006-09-16 23:03:22 tlipkis Exp $
  */
 
 /*
@@ -48,8 +48,9 @@ public class TestHtmlNodeSequenceTransform extends LockssTestCase {
       throws IOException {
     HtmlTransform xform =
       HtmlNodeSequenceTransform.excludeSequence(beginFilter, endFilter);
-    Reader reader = new HtmlFilterReader(new StringReader(input), xform);
-    assertReaderMatchesString(expected, reader);
+    InputStream in =
+      new HtmlFilterInputStream(new StringInputStream(input), xform);
+    assertInputStreamMatchesString(expected, in);
   }
 
   public void testIll() {
@@ -81,9 +82,10 @@ public class TestHtmlNodeSequenceTransform extends LockssTestCase {
       HtmlNodeSequenceTransform.excludeSequence(new TagNameFilter("b"),
 						new TagNameFilter("notag"));
     xform.setErrorIfNoEndNode(true);
-    Reader reader = new HtmlFilterReader(new StringReader(str), xform);
+    InputStream in =
+      new HtmlFilterInputStream(new StringInputStream(str), xform);
     try {
-      StringUtil.fromReader(reader);
+      StringUtil.fromInputStream(in);
       fail("Should throw if end string not found");
     } catch (HtmlNodeSequenceTransform.MissingEndNodeException e) {}
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestHtmlNodeFilters.java,v 1.3 2006-08-26 19:42:20 tlipkis Exp $
+ * $Id: TestHtmlNodeFilters.java,v 1.4 2006-09-16 23:03:22 tlipkis Exp $
  */
 
 /*
@@ -210,7 +210,7 @@ public class TestHtmlNodeFilters extends LockssTestCase {
     Parser p = ParserUtils.createParserParsingAnInputString(in);
     NodeList nl = p.parse(null);
     if (log.isDebug3()) log.debug3("parsed (" + nl.size() + "):\n" +
-				   HtmlFilterReader.nodeString(nl));
+				   HtmlFilterInputStream.nodeString(nl));
     return nl;
   }
 

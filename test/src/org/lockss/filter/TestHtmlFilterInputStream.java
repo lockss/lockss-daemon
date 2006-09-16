@@ -1,5 +1,5 @@
 /*
- * $Id: TestHtmlFilterReader.java,v 1.2 2006-08-26 19:42:20 tlipkis Exp $
+ * $Id: TestHtmlFilterInputStream.java,v 1.1 2006-09-16 23:03:22 tlipkis Exp $
  */
 
 /*
@@ -40,30 +40,31 @@ import org.htmlparser.*;
 import org.htmlparser.util.*;
 import org.htmlparser.filters.*;
 
-public class TestHtmlFilterReader extends LockssTestCase {
+public class TestHtmlFilterInputStream extends LockssTestCase {
 
   /** Check that the filtered string matches expected. */
   private void assertFilterString(String expected, String input,
 				  HtmlTransform xform)
       throws IOException {
-    Reader reader = new HtmlFilterReader(new StringReader(input), xform);
-    assertReaderMatchesString(expected, reader);
-    assertEquals(-1, reader.read());
-    reader.close();
+    InputStream in =
+      new HtmlFilterInputStream(new StringInputStream(input), xform);
+    assertInputStreamMatchesString(expected, in);
+    assertEquals(-1, in.read());
+    in.close();
     try {
-      reader.read();
-      fail("closed reader should throw");
+      in.read();
+      fail("closed InputStream should throw");
     } catch (IOException e) {}
   }
 
   public void testIll() {
     try {
-      new HtmlFilterReader(null, new IdentityXform ());
-      fail("null reader should throw");
+      new HtmlFilterInputStream(null, new IdentityXform ());
+      fail("null InputStream should throw");
     } catch(IllegalArgumentException iae) {
     }
     try {
-      new HtmlFilterReader(new StringReader("blah"), null);
+      new HtmlFilterInputStream(new StringInputStream("blah"), null);
       fail("null xform should throw");
     } catch(IllegalArgumentException iae) {
     }
