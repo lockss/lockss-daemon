@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.107 2006-07-20 16:14:14 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.107.2.1 2006-09-16 07:14:15 tlipkis Exp $
  */
 
 /*
@@ -480,13 +480,10 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 
   public void pauseBeforeFetch() {
     RateLimiter limit = findFetchRateLimiter();;
-    synchronized (limit) {
-      try {
-	limit.waitUntilEventOk();
-      } catch (InterruptedException ignore) {
-	// no action
-      }
-      limit.event();
+    try {
+      limit.fifoWaitAndSignalEvent();
+    } catch (InterruptedException ignore) {
+      // no action
     }
   }
 
