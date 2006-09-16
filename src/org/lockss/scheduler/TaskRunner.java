@@ -1,5 +1,5 @@
 /*
- * $Id: TaskRunner.java,v 1.36 2006-04-05 22:26:41 tlipkis Exp $
+ * $Id: TaskRunner.java,v 1.37 2006-09-16 22:59:42 tlipkis Exp $
  */
 
 /*
@@ -292,7 +292,7 @@ class TaskRunner {
 	if (alreadyDropped.contains(task)) {
 	  continue;
 	}
-	if (task.getEarlistStart().expired()) {
+	if (task.getEarliestStart().expired()) {
 	  return task;
 	}
       }
@@ -599,7 +599,7 @@ class TaskRunner {
       if (!event.isBackgroundEvent()) {
 	Schedule.Chunk chunk = (Schedule.Chunk)event;
 	StepTask task = chunk.getTask();
-	if (task.getEarlistStart().expired()) {
+	if (task.getEarliestStart().expired()) {
 	  return chunk;
 	}
       }

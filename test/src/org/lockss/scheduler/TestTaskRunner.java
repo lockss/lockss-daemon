@@ -1,5 +1,5 @@
 /*
- * $Id: TestTaskRunner.java,v 1.14 2006-04-05 22:26:38 tlipkis Exp $
+ * $Id: TestTaskRunner.java,v 1.15 2006-09-16 22:59:41 tlipkis Exp $
  */
 
 /*
@@ -95,7 +95,7 @@ public class TestTaskRunner extends LockssTestCase {
 
   // make a Chunk for the task
   Schedule.Chunk chunk(StepTask task) {
-    return new Schedule.Chunk(task, task.getEarlistStart(),
+    return new Schedule.Chunk(task, task.getEarliestStart(),
 			      task.getLatestFinish(),
 			      task.curEst());
   }

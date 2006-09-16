@@ -1,5 +1,5 @@
 /*
- * $Id: SortScheduler.java,v 1.12 2005-12-01 23:28:06 troberts Exp $
+ * $Id: SortScheduler.java,v 1.13 2006-09-16 22:59:42 tlipkis Exp $
  */
 
 /*
@@ -108,7 +108,7 @@ public class SortScheduler implements Scheduler {
 
       // make a TaskData whose start time is no earlier than now
       TaskData td;
-      if (rawTask.getEarlistStart().before(now)) {
+      if (rawTask.getEarliestStart().before(now)) {
 	td = new TaskData(rawTask, now);
       } else {
 	td = new TaskData(rawTask);

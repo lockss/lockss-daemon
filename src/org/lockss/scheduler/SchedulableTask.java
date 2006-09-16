@@ -1,5 +1,5 @@
 /*
- * $Id: SchedulableTask.java,v 1.11 2005-10-11 05:46:42 tlipkis Exp $
+ * $Id: SchedulableTask.java,v 1.12 2006-09-16 22:59:42 tlipkis Exp $
  */
 
 /*
@@ -82,7 +82,7 @@ public class SchedulableTask {
     return window;
   }
 
-  public Deadline getEarlistStart() {
+  public Deadline getEarliestStart() {
     return earliestStart;
   }
 
