@@ -1,5 +1,5 @@
 /*
- * $Id: TestHuffPoBlogFilterRule.java,v 1.2 2006-02-12 01:00:39 dshr Exp $
+ * $Id: TestHuffPoBlogFilterFactory.java,v 1.1 2006-09-16 23:29:49 tlipkis Exp $
  */
 
 /*
@@ -34,14 +34,16 @@ package org.lockss.plugin.huffpoblog;
 
 import java.io.*;
 import org.lockss.util.*;
-import org.lockss.test.LockssTestCase;
+import org.lockss.test.*;
 
-public class TestHuffPoBlogFilterRule extends LockssTestCase {
-  private HuffPoBlogFilterRule rule;
+public class TestHuffPoBlogFilterFactory extends LockssTestCase {
+  private HuffPoBlogFilterFactory fact;
+  private MockArchivalUnit mau;
 
   public void setUp() throws Exception {
     super.setUp();
-    rule = new HuffPoBlogFilterRule();
+    fact = new HuffPoBlogFilterFactory();
+    mau = new MockArchivalUnit();
   }
 
   private static final String inst1 =
@@ -139,27 +141,51 @@ public class TestHuffPoBlogFilterRule extends LockssTestCase {
 
 
   public void testAdvertFiltering() throws IOException {
-    Reader reader1 = rule.createFilteredReader(new StringReader(inst1));
-    Reader reader2 = rule.createFilteredReader(new StringReader(inst2));
-    assertEquals(StringUtil.fromReader(reader1),
-		 StringUtil.fromReader(reader2));
+    InputStream in1 =
+      fact.createFilteredInputStream(mau, new StringInputStream(inst1),
+				     Constants.DEFAULT_ENCODING);
+    InputStream in2 =
+      fact.createFilteredInputStream(mau, new StringInputStream(inst2),
+				     Constants.DEFAULT_ENCODING);
+    assertEquals(StringUtil.fromInputStream(in1),
+		 StringUtil.fromInputStream(in2));
   }
+
   public void testWhiteSpaceFiltering() throws IOException {
-    Reader reader2 = rule.createFilteredReader(new StringReader(inst2));
-    Reader reader3 = rule.createFilteredReader(new StringReader(inst3));
-    assertEquals(StringUtil.fromReader(reader2),
-		 StringUtil.fromReader(reader3));
+    InputStream in2 =
+      fact.createFilteredInputStream(mau,
+				     new StringInputStream(inst2),
+				     Constants.DEFAULT_ENCODING);
+    InputStream in3 =
+      fact.createFilteredInputStream(mau,
+				     new StringInputStream(inst3),
+				     Constants.DEFAULT_ENCODING);
+    assertEquals(StringUtil.fromInputStream(in2),
+		 StringUtil.fromInputStream(in3));
   }
+
   public void testRelatedPostFiltering() throws IOException {
-    Reader reader4 = rule.createFilteredReader(new StringReader(inst4));
-    Reader reader5 = rule.createFilteredReader(new StringReader(inst5));
-    assertEquals(StringUtil.fromReader(reader4),
-		 StringUtil.fromReader(reader5));
+    InputStream in4 =
+      fact.createFilteredInputStream(mau,
+				     new StringInputStream(inst4),
+				     Constants.DEFAULT_ENCODING);
+    InputStream in5 =
+      fact.createFilteredInputStream(mau,
+				     new StringInputStream(inst5),
+				     Constants.DEFAULT_ENCODING);
+    assertEquals(StringUtil.fromInputStream(in4),
+		 StringUtil.fromInputStream(in5));
   }
   public void testRelatedCatFiltering() throws IOException {
-    Reader reader6 = rule.createFilteredReader(new StringReader(inst6));
-    Reader reader7 = rule.createFilteredReader(new StringReader(inst7));
-    assertEquals(StringUtil.fromReader(reader6),
-		 StringUtil.fromReader(reader7));
+    InputStream in6 =
+      fact.createFilteredInputStream(mau,
+				     new StringInputStream(inst6),
+				     Constants.DEFAULT_ENCODING);
+    InputStream in7 =
+      fact.createFilteredInputStream(mau,
+				     new StringInputStream(inst7),
+				     Constants.DEFAULT_ENCODING);
+    assertEquals(StringUtil.fromInputStream(in6),
+		 StringUtil.fromInputStream(in7));
   }
 }

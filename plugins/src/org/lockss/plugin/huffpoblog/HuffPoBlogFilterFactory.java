@@ -1,5 +1,5 @@
 /*
- * $Id: HuffPoBlogFilterRule.java,v 1.3 2006-07-31 07:20:46 tlipkis Exp $
+ * $Id: HuffPoBlogFilterFactory.java,v 1.1 2006-09-16 23:29:49 tlipkis Exp $
  */
 
 /*
@@ -39,11 +39,13 @@ import org.htmlparser.filters.*;
 
 import org.lockss.util.*;
 import org.lockss.filter.*;
-import org.lockss.plugin.FilterRule;
+import org.lockss.plugin.*;
 
-public class HuffPoBlogFilterRule implements FilterRule {
+public class HuffPoBlogFilterFactory implements FilterFactory {
 
-  public Reader createFilteredReader(Reader reader) {
+  public InputStream createFilteredInputStream(ArchivalUnit au,
+					       InputStream in,
+					       String encoding) {
     /*
      * Initial attempt - remove everything between the begin and end
      * ad tag comments
@@ -56,24 +58,20 @@ public class HuffPoBlogFilterRule implements FilterRule {
 	new HtmlTagFilter.TagPair("<ul class=\"relatedposts\">", "</ul>", true),
 	new HtmlTagFilter.TagPair("<div class=\"relatedcats\">", "</div>", true)
         );
-    Reader tagFilter = HtmlTagFilter.makeNestedFilter(reader, tagList);
-    return new WhiteSpaceFilter(tagFilter);
+    Reader tagFilter =
+      HtmlTagFilter.makeNestedFilter(FilterUtil.getReader(in,
+							  encoding),
+				     tagList);
+    return new ReaderInputStream(new WhiteSpaceFilter(tagFilter));
   }
 
-  public Reader xcreateFilteredReader(Reader reader) {
+  public InputStream xcreateFilteredInputStream(ArchivalUnit au,
+					       InputStream in,
+					       String encoding) {
     /*
      * Initial attempt - remove everything between the begin and end
      * ad tag comments
      */
-
-    List tagList = ListUtil.list(
-	new HtmlTagFilter.TagPair("<!-- begin ad tag -->", "<!-- End ad tag -->"),
-	new HtmlTagFilter.TagPair("<script", "</script>", true),
-	new HtmlTagFilter.TagPair("<table", "</table>", true),
-	new HtmlTagFilter.TagPair("<ul class=\"relatedposts\">", "</ul>", true),
-	new HtmlTagFilter.TagPair("<div class=\"relatedcats\">", "</div>", true)
-        );
-    Reader tagFilter = HtmlTagFilter.makeNestedFilter(reader, tagList);
 
     NodeFilter adStart =
       HtmlNodeFilters.commentWithString("begin ad tag", true);
@@ -93,8 +91,20 @@ public class HuffPoBlogFilterRule implements FilterRule {
 
     HtmlTransform xform = new HtmlCompoundTransform(xform1, xform2);
 
-    Reader htmlFilter = new HtmlFilterReader(reader, xform);
-    return new WhiteSpaceFilter(htmlFilter);
+    InputStream htmlFilter = new HtmlFilterInputStream(in, xform);
+
+    List tagList = ListUtil.list(
+	new HtmlTagFilter.TagPair("<!-- begin ad tag -->", "<!-- End ad tag -->"),
+	new HtmlTagFilter.TagPair("<script", "</script>", true),
+	new HtmlTagFilter.TagPair("<table", "</table>", true),
+	new HtmlTagFilter.TagPair("<ul class=\"relatedposts\">", "</ul>", true),
+	new HtmlTagFilter.TagPair("<div class=\"relatedcats\">", "</div>", true)
+        );
+    Reader tagFilter =
+      HtmlTagFilter.makeNestedFilter(FilterUtil.getReader(htmlFilter,
+							  encoding),
+				     tagList);
+    return new ReaderInputStream(new WhiteSpaceFilter(tagFilter));
   }
 
 

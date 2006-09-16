@@ -35,8 +35,8 @@
     <string>Huffington Post: The Blog</string>
   </entry>
   <entry>
-    <string>html_filter</string>
-    <string>org.lockss.plugin.huffpoblog.HuffPoBlogFilterRule</string>
+    <string>html_filter_factory</string>
+    <string>org.lockss.plugin.huffpoblog.HuffPoBlogHtmlFilterFactory</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
