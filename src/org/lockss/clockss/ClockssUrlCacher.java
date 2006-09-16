@@ -1,5 +1,5 @@
 /*
- * $Id: ClockssUrlCacher.java,v 1.2 2006-08-09 02:01:17 tlipkis Exp $
+ * $Id: ClockssUrlCacher.java,v 1.3 2006-09-16 07:17:06 tlipkis Exp $
  */
 
 /*
@@ -124,6 +124,7 @@ public class ClockssUrlCacher implements UrlCacher {
     if (worked) {
       switch (aus.getClockssSubscriptionStatus()) {
       case AuState.CLOCKSS_SUB_UNKNOWN:
+      case AuState.CLOCKSS_SUB_INACCESSIBLE:
 	switch (probeState) {
 	case PROBE_INST:
 	  aus.setClockssSubscriptionStatus(AuState.CLOCKSS_SUB_YES);
@@ -147,7 +148,7 @@ public class ClockssUrlCacher implements UrlCacher {
 	}
 	break;
       case AuState.CLOCKSS_SUB_NO:
-	// If we determined we don't have a subscription, should be change
+	// If we determined we don't have a subscription, should we change
 	// our mind here?
 	break;
       default:
@@ -211,13 +212,16 @@ public class ClockssUrlCacher implements UrlCacher {
 
   public int cache() throws IOException {
     int res;
+    boolean update = false;
     boolean worked = false;
     setupAddr();
     try {
       res = uc.cache();
+      update = true;
       worked = true;
       return res;
     } catch (CacheException.PermissionException e) {
+      update = true;
       if (setupAddr()) {
 	uc.reset();
 	res = uc.cache();
@@ -227,17 +231,20 @@ public class ClockssUrlCacher implements UrlCacher {
 	throw e;
       }
     } finally {
-      updateSubscriptionStatus(worked);
+      if (update) updateSubscriptionStatus(worked);
     }
   }
 
   public InputStream getUncachedInputStream() throws IOException {
     InputStream res = null;
+    boolean update = false;
     setupAddr();
     try {
       res = uc.getUncachedInputStream();
+      update = true;
       return res;
     } catch (CacheException.PermissionException e) {
+      update = true;
       if (setupAddr()) {
 	uc.reset();
 	res = uc.getUncachedInputStream();
@@ -246,7 +253,7 @@ public class ClockssUrlCacher implements UrlCacher {
 	throw e;
       }
     } finally {
-      updateSubscriptionStatus(res != null);
+      if (update) updateSubscriptionStatus(res != null);
     }
   }
 

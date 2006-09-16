@@ -1,5 +1,5 @@
 /*
- * $Id: TestClockssUrlCacher.java,v 1.2 2006-08-09 02:01:17 tlipkis Exp $
+ * $Id: TestClockssUrlCacher.java,v 1.3 2006-09-16 07:17:06 tlipkis Exp $
  */
 
 /*
@@ -174,6 +174,22 @@ public class TestClockssUrlCacher extends LockssTestCase {
 		 aus.getClockssSubscriptionStatus());
   }
 
+  public void testSubUnknownFail1() throws Exception {
+    assertEquals(AuState.CLOCKSS_SUB_UNKNOWN,
+		 aus.getClockssSubscriptionStatus());
+    muc.setResults(ListUtil.list(new CacheException.NoRetryDeadLinkException()));
+    try {
+      cuc.getUncachedInputStream();
+      fail("getUncachedInputStream() didn't throw on fetch error");
+    } catch (CacheException.NoRetryDeadLinkException e) {
+    }
+    assertEquals(ListUtil.list(EVENT_SETINST, EVENT_INPUTSTREAM),
+		 muc.events);
+    // Should still be unknown
+    assertEquals(AuState.CLOCKSS_SUB_UNKNOWN,
+		 aus.getClockssSubscriptionStatus());
+  }
+
   public void testSubYesInst1() throws Exception {
     aus.setClockssSubscriptionStatus(AuState.CLOCKSS_SUB_YES);
     InputStream exp = new StringInputStream("");
@@ -215,6 +231,21 @@ public class TestClockssUrlCacher extends LockssTestCase {
 		 aus.getClockssSubscriptionStatus());
   }
 
+  public void testSubYesFail1() throws Exception {
+    aus.setClockssSubscriptionStatus(AuState.CLOCKSS_SUB_YES);
+    muc.setResults(ListUtil.list(new CacheException.NoRetryDeadLinkException()));
+    try {
+      cuc.getUncachedInputStream();
+      fail("getUncachedInputStream() didn't throw on fetch error");
+    } catch (CacheException.NoRetryDeadLinkException e) {
+    }
+    assertEquals(ListUtil.list(EVENT_SETINST, EVENT_INPUTSTREAM),
+		 muc.events);
+    // Should still be Yes
+    assertEquals(AuState.CLOCKSS_SUB_YES,
+		 aus.getClockssSubscriptionStatus());
+  }
+
   public void testSubNoClockss1() throws Exception {
     aus.setClockssSubscriptionStatus(AuState.CLOCKSS_SUB_NO);
     InputStream exp = new StringInputStream("");
@@ -237,6 +268,77 @@ public class TestClockssUrlCacher extends LockssTestCase {
     }
     assertEquals(ListUtil.list(EVENT_SETCLOCKSS, EVENT_INPUTSTREAM),
 		 muc.events);
+    assertEquals(AuState.CLOCKSS_SUB_INACCESSIBLE,
+		 aus.getClockssSubscriptionStatus());
+  }
+
+  public void testSubNoFail1() throws Exception {
+    aus.setClockssSubscriptionStatus(AuState.CLOCKSS_SUB_NO);
+    muc.setResults(ListUtil.list(new CacheException.NoRetryDeadLinkException()));
+    try {
+      cuc.getUncachedInputStream();
+      fail("getUncachedInputStream() didn't throw on fetch error");
+    } catch (CacheException.NoRetryDeadLinkException e) {
+    }
+    assertEquals(ListUtil.list(EVENT_SETCLOCKSS, EVENT_INPUTSTREAM),
+		 muc.events);
+    // Should still be No
+    assertEquals(AuState.CLOCKSS_SUB_NO,
+		 aus.getClockssSubscriptionStatus());
+  }
+
+  public void testSubInaccessibleInst1() throws Exception {
+    aus.setClockssSubscriptionStatus(AuState.CLOCKSS_SUB_INACCESSIBLE);
+    InputStream exp = new StringInputStream("");
+    muc.setResults(ListUtil.list(exp));
+    assertSame(exp, cuc.getUncachedInputStream());
+    assertEquals(ListUtil.list(EVENT_SETINST, EVENT_INPUTSTREAM), muc.events);
+    assertEquals(AuState.CLOCKSS_SUB_YES,
+		 aus.getClockssSubscriptionStatus());
+  }
+
+  public void testSubInaccessibleClockss1() throws Exception {
+    aus.setClockssSubscriptionStatus(AuState.CLOCKSS_SUB_INACCESSIBLE);
+    InputStream exp = new StringInputStream("");
+    muc.setResults(ListUtil.list(new CacheException.PermissionException(),
+				 exp));
+    assertSame(exp, cuc.getUncachedInputStream());
+    assertEquals(ListUtil.list(EVENT_SETINST, EVENT_INPUTSTREAM,
+			       EVENT_SETCLOCKSS, EVENT_RESET,
+			       EVENT_INPUTSTREAM),
+		 muc.events);
+    assertEquals(AuState.CLOCKSS_SUB_NO,
+		 aus.getClockssSubscriptionStatus());
+  }
+
+  public void testSubInaccessibleNeither1() throws Exception {
+    aus.setClockssSubscriptionStatus(AuState.CLOCKSS_SUB_INACCESSIBLE);
+    muc.setResults(ListUtil.list(new CacheException.PermissionException(),
+				 new CacheException.PermissionException()));
+    try {
+      cuc.getUncachedInputStream();
+      fail("getUncachedInputStream() didn't throw on inaccessible");
+    } catch (CacheException.PermissionException e) {
+    }
+    assertEquals(ListUtil.list(EVENT_SETINST, EVENT_INPUTSTREAM,
+			       EVENT_SETCLOCKSS, EVENT_RESET,
+			       EVENT_INPUTSTREAM),
+		 muc.events);
+    assertEquals(AuState.CLOCKSS_SUB_INACCESSIBLE,
+		 aus.getClockssSubscriptionStatus());
+  }
+
+  public void testSubInaccessibleFail1() throws Exception {
+    aus.setClockssSubscriptionStatus(AuState.CLOCKSS_SUB_INACCESSIBLE);
+    muc.setResults(ListUtil.list(new CacheException.NoRetryDeadLinkException()));
+    try {
+      cuc.getUncachedInputStream();
+      fail("getUncachedInputStream() didn't throw on fetch error");
+    } catch (CacheException.NoRetryDeadLinkException e) {
+    }
+    assertEquals(ListUtil.list(EVENT_SETINST, EVENT_INPUTSTREAM),
+		 muc.events);
+    // Should still be Inaccessible
     assertEquals(AuState.CLOCKSS_SUB_INACCESSIBLE,
 		 aus.getClockssSubscriptionStatus());
   }
@@ -281,6 +383,22 @@ public class TestClockssUrlCacher extends LockssTestCase {
 		 aus.getClockssSubscriptionStatus());
   }
 
+  public void testSubUnknownFail2() throws Exception {
+    assertEquals(AuState.CLOCKSS_SUB_UNKNOWN,
+		 aus.getClockssSubscriptionStatus());
+    muc.setResults(ListUtil.list(new CacheException.NoRetryDeadLinkException()));
+    try {
+      cuc.cache();
+      fail("cache()() didn't throw on fetch error");
+    } catch (CacheException.NoRetryDeadLinkException e) {
+    }
+    assertEquals(ListUtil.list(EVENT_SETINST, EVENT_CACHE),
+		 muc.events);
+    // Should still be Unknown
+    assertEquals(AuState.CLOCKSS_SUB_UNKNOWN,
+		 aus.getClockssSubscriptionStatus());
+  }
+
   public void testSubYesInst2() throws Exception {
     aus.setClockssSubscriptionStatus(AuState.CLOCKSS_SUB_YES);
     muc.setResults(ListUtil.list(new Integer(47)));
@@ -318,6 +436,21 @@ public class TestClockssUrlCacher extends LockssTestCase {
 		 aus.getClockssSubscriptionStatus());
   }
 
+  public void testSubYesFail2() throws Exception {
+    aus.setClockssSubscriptionStatus(AuState.CLOCKSS_SUB_YES);
+    muc.setResults(ListUtil.list(new CacheException.NoRetryDeadLinkException()));
+    try {
+      cuc.cache();
+      fail("cache()() didn't throw on fetch error");
+    } catch (CacheException.NoRetryDeadLinkException e) {
+    }
+    assertEquals(ListUtil.list(EVENT_SETINST, EVENT_CACHE),
+		 muc.events);
+    // Should still be Yes
+    assertEquals(AuState.CLOCKSS_SUB_YES,
+		 aus.getClockssSubscriptionStatus());
+  }
+
   public void testSubNoClockss2() throws Exception {
     aus.setClockssSubscriptionStatus(AuState.CLOCKSS_SUB_NO);
     muc.setResults(ListUtil.list(new Integer(47)));
@@ -339,6 +472,75 @@ public class TestClockssUrlCacher extends LockssTestCase {
     }
     assertEquals(ListUtil.list(EVENT_SETCLOCKSS, EVENT_CACHE),
 		 muc.events);
+    assertEquals(AuState.CLOCKSS_SUB_INACCESSIBLE,
+		 aus.getClockssSubscriptionStatus());
+  }
+
+  public void testSubNoFail2() throws Exception {
+    aus.setClockssSubscriptionStatus(AuState.CLOCKSS_SUB_NO);
+    muc.setResults(ListUtil.list(new CacheException.NoRetryDeadLinkException()));
+    try {
+      cuc.cache();
+      fail("cache()() didn't throw on fetch error");
+    } catch (CacheException.NoRetryDeadLinkException e) {
+    }
+    assertEquals(ListUtil.list(EVENT_SETCLOCKSS, EVENT_CACHE),
+		 muc.events);
+    // Should still be No
+    assertEquals(AuState.CLOCKSS_SUB_NO,
+		 aus.getClockssSubscriptionStatus());
+  }
+
+  public void testSubInaccessibleInst2() throws Exception {
+    aus.setClockssSubscriptionStatus(AuState.CLOCKSS_SUB_INACCESSIBLE);
+    InputStream exp = new StringInputStream("");
+    muc.setResults(ListUtil.list(new Integer(47)));
+    assertEquals(47, cuc.cache());
+    assertEquals(ListUtil.list(EVENT_SETINST, EVENT_CACHE), muc.events);
+    assertEquals(AuState.CLOCKSS_SUB_YES,
+		 aus.getClockssSubscriptionStatus());
+  }
+
+  public void testSubInaccessibleClockss2() throws Exception {
+    aus.setClockssSubscriptionStatus(AuState.CLOCKSS_SUB_INACCESSIBLE);
+    muc.setResults(ListUtil.list(new CacheException.PermissionException(),
+				 new Integer(47)));
+    assertEquals(47, cuc.cache());
+    assertEquals(ListUtil.list(EVENT_SETINST, EVENT_CACHE,
+			       EVENT_SETCLOCKSS, EVENT_RESET, EVENT_CACHE),
+		 muc.events);
+    assertEquals(AuState.CLOCKSS_SUB_NO,
+		 aus.getClockssSubscriptionStatus());
+  }
+
+  public void testSubInaccessibleNeither2() throws Exception {
+    aus.setClockssSubscriptionStatus(AuState.CLOCKSS_SUB_INACCESSIBLE);
+    muc.setResults(ListUtil.list(new CacheException.PermissionException(),
+				 new CacheException.PermissionException()));
+    try {
+      cuc.cache();
+      fail("cache()() didn't throw on inaccessible");
+    } catch (CacheException.PermissionException e) {
+    }
+    assertEquals(ListUtil.list(EVENT_SETINST, EVENT_CACHE,
+			       EVENT_SETCLOCKSS, EVENT_RESET,
+			       EVENT_CACHE),
+		 muc.events);
+    assertEquals(AuState.CLOCKSS_SUB_INACCESSIBLE,
+		 aus.getClockssSubscriptionStatus());
+  }
+
+  public void testSubInaccessibleFail2() throws Exception {
+    aus.setClockssSubscriptionStatus(AuState.CLOCKSS_SUB_INACCESSIBLE);
+    muc.setResults(ListUtil.list(new CacheException.NoRetryDeadLinkException()));
+    try {
+      cuc.cache();
+      fail("cache()() didn't throw on fetch error");
+    } catch (CacheException.NoRetryDeadLinkException e) {
+    }
+    assertEquals(ListUtil.list(EVENT_SETINST, EVENT_CACHE),
+		 muc.events);
+    // Should still be Inaccessible
     assertEquals(AuState.CLOCKSS_SUB_INACCESSIBLE,
 		 aus.getClockssSubscriptionStatus());
   }

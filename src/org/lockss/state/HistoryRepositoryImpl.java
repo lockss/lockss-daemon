@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.68 2006-05-31 17:54:50 thib_gc Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.69 2006-09-16 07:17:06 tlipkis Exp $
  */
 
 /*
@@ -162,6 +162,7 @@ public class HistoryRepositoryImpl
                          auState.getLastTopLevelPollTime(),
                          -1,
                          auState.getCrawlUrls(),
+                         auState.getClockssSubscriptionStatus(),
                          this);
     }
     catch (SerializationException.FileNotFound fnf) {
@@ -178,7 +179,7 @@ public class HistoryRepositoryImpl
     }
 
     // Default: return default
-    return new AuState(storedAu, -1, -1, -1, null, this);
+    return new AuState(storedAu, this);
   }
 
   /**

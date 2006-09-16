@@ -1,5 +1,5 @@
 /*
- * $Id: AuState.java,v 1.22 2006-08-09 02:50:01 tlipkis Exp $
+ * $Id: AuState.java,v 1.23 2006-09-16 07:17:06 tlipkis Exp $
  */
 
 /*
@@ -48,24 +48,27 @@ public class AuState implements LockssSerializable {
   protected long lastTreeWalk;
   private transient HistoryRepository historyRepo;
   protected HashSet crawlUrls;
+  protected int clockssSubscriptionStatus;
 
-  int urlUpdateCntr = 0;
+  transient int urlUpdateCntr = 0;
 
   /** The number of updates between writing to file */
   static final int URL_UPDATE_LIMIT = 1;
 
   public AuState(ArchivalUnit au, HistoryRepository historyRepo) {
-    this(au, -1, -1, -1, null, historyRepo);
+    this(au, -1, -1, -1, null, CLOCKSS_SUB_UNKNOWN, historyRepo);
   }
 
   protected AuState(ArchivalUnit au, long lastCrawlTime, long lastTopLevelPoll,
                     long lastTreeWalk, HashSet crawlUrls,
+		    int clockssSubscriptionStatus,
                     HistoryRepository historyRepo) {
     this.au = au;
     this.lastCrawlTime = lastCrawlTime;
     this.lastTopLevelPoll = lastTopLevelPoll;
     this.lastTreeWalk = lastTreeWalk;
     this.crawlUrls = crawlUrls;
+    this.clockssSubscriptionStatus = clockssSubscriptionStatus;
     this.historyRepo = historyRepo;
   }
 
@@ -153,8 +156,6 @@ public class AuState implements LockssSerializable {
 
   // CLOCKSS status
 
-  protected int clockssSubscriptionStatus = CLOCKSS_SUB_UNKNOWN;
-
   public static final int CLOCKSS_SUB_UNKNOWN = 0;
   public static final int CLOCKSS_SUB_YES = 1;
   public static final int CLOCKSS_SUB_NO = 2;
@@ -194,6 +195,9 @@ public class AuState implements LockssSerializable {
     sb.append(", ");
     sb.append("lastTopLevelPoll=");
     sb.append(new Date(lastTopLevelPoll));
+    sb.append(", ");
+    sb.append("clockssSub=");
+    sb.append(clockssSubscriptionStatus);
     sb.append("]");
     return sb.toString();
   }
