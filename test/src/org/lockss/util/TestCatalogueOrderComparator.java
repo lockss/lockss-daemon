@@ -1,5 +1,5 @@
 /*
- * $Id: TestCatalogueOrderComparator.java,v 1.5 2005-10-11 05:52:45 tlipkis Exp $
+ * $Id: TestCatalogueOrderComparator.java,v 1.5.20.1 2006-09-16 07:14:38 tlipkis Exp $
  */
 
 /*
@@ -93,6 +93,27 @@ public class TestCatalogueOrderComparator extends LockssTestCase {
       "a boy and his bog",
       "A Boy and his Dog",
       "Gar\u00e7on Magazine",
+      "IBM Tech Journak",
+      "I.B.M. Tech. Journal",
+      "IBM Tech Journam",
+      "Journal of I B M 2004"
+    };
+    List tl = ListUtil.fromArray(titles);
+    Collections.reverse(tl);
+    assertFalse(CollectionUtil.isIsomorphic(titles, tl));
+    assertIsomorphic(titles, sort(tl));
+    Collections.shuffle(tl);
+    assertIsomorphic(titles, sort(tl));
+  }
+
+  public void testOrderWithNull() {
+    // titles in sorted order
+    String[] titles = {
+      null,
+      "The Aardvark of the Baskervilles",
+      "An Apple and its Eve",
+      "a boy and his bog",
+      "A Boy and his Dog",
       "IBM Tech Journak",
       "I.B.M. Tech. Journal",
       "IBM Tech Journam",
