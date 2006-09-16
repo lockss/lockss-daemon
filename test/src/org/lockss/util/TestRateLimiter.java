@@ -1,5 +1,5 @@
 /*
- * $Id: TestRateLimiter.java,v 1.10 2006-07-20 18:26:48 thib_gc Exp $
+ * $Id: TestRateLimiter.java,v 1.11 2006-09-16 07:19:31 tlipkis Exp $
  */
 
 /*
@@ -165,6 +165,10 @@ public class TestRateLimiter extends LockssTestCase {
       doer.start();
       assertTrue(lim.waitUntilEventOk());
       doer.cancel();
+  }
+
+  public void xxxtestFifoWaitAndSignalEvent() throws InterruptedException {
+    // XXX difficult because order is not totally predicatable
   }
 
   public void testResizeEventArray() {

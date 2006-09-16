@@ -1,5 +1,5 @@
 /*
- * $Id: RateLimiter.java,v 1.11 2006-07-19 05:55:28 tlipkis Exp $
+ * $Id: RateLimiter.java,v 1.12 2006-09-16 07:19:31 tlipkis Exp $
  */
 
 /*
@@ -341,6 +341,19 @@ public class RateLimiter {
     return true;
   }
 
+  private EDU.oswego.cs.dl.util.concurrent.FIFOSemaphore waitQueue =
+    new EDU.oswego.cs.dl.util.concurrent.FIFOSemaphore(1);
+
+  public boolean fifoWaitAndSignalEvent() throws InterruptedException {
+    waitQueue.acquire();
+    synchronized (this) {
+      boolean res = waitUntilEventOk();
+      event();
+      waitQueue.release();
+      return res;
+    }
+  }
+
   public String rateString() {
     if (isUnlimited()) {
       return "unlimited";
@@ -407,7 +420,7 @@ public class RateLimiter {
 							 String rate) {
       return findNamedRateLimiter(key, rate, null);
     }
-      
+
     /** Find or create a new RateLimiter associated with the key.
      * @param key An object that identifies the shared resource which which
      * the RateLimiter should be associated (<i>eg</i>, plugin, host name,
