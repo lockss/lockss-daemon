@@ -86,6 +86,10 @@
                        type="java.util.Collection"
                        collection="collection" lazy="true">
                 </field>
+                <field name="clockssSubscriptionStatus"
+                       type="integer">
+                        <bind-xml name="ClockssSubscriptionStatus" node="element"/>
+                </field>
         </class>
         <class name="org.lockss.state.DamagedNodeSet">
                 <map-to xml="DamagedNodeSet"/>

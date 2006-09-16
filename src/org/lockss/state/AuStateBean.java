@@ -1,5 +1,5 @@
 /*
- * $Id: AuStateBean.java,v 1.16 2004-04-01 02:44:31 eaalto Exp $
+ * $Id: AuStateBean.java,v 1.16.48.1 2006-09-16 07:13:51 tlipkis Exp $
  */
 
 /*
@@ -45,7 +45,7 @@ public class AuStateBean extends AuState {
    * Simple constructor to allow bean creation during unmarshalling.
    */
   public AuStateBean() {
-    super(null, -1, -1, -1, null, null);
+    super(null, null);
   }
 
   /**
@@ -54,7 +54,8 @@ public class AuStateBean extends AuState {
    */
   AuStateBean(AuState auState) {
     super(auState.au, auState.lastCrawlTime, auState.lastTopLevelPoll,
-          auState.lastTreeWalk, auState.crawlUrls, null);
+          auState.lastTreeWalk, auState.crawlUrls,
+	  auState.clockssSubscriptionStatus, null);
   }
 
   /**
@@ -79,5 +80,13 @@ public class AuStateBean extends AuState {
    */
   public void setLastTopLevelPollTime(long newPollTime) {
     lastTopLevelPoll = newPollTime;
+  }
+
+  /**
+   * Sets the CLOCKSS subscription status to a new value.
+   * @param newSubscriptionStatus
+   */
+  public void setClockssSubscriptionStatus(int newSubscriptionStatus) {
+    clockssSubscriptionStatus = newSubscriptionStatus;
   }
 }
