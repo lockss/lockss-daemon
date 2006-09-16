@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.39 2006-08-07 07:39:36 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.40 2006-09-16 22:58:34 tlipkis Exp $
  */
 
 /*
@@ -297,7 +297,7 @@ public class ConfigManager implements LockssManager {
   /**
    * Convenience methods for getting useful platform settings.
    */
-  public static Version getDaemonVersion() {
+  public static DaemonVersion getDaemonVersion() {
     DaemonVersion daemon = null;
 
     String ver = BuildInfo.getBuildProperty(BuildInfo.BUILD_RELEASENAME);

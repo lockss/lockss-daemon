@@ -1,5 +1,5 @@
 /*
- * $Id: TestDaemonVersion.java,v 1.2 2005-07-22 23:46:32 tlipkis Exp $
+ * $Id: TestDaemonVersion.java,v 1.3 2006-09-16 22:58:33 tlipkis Exp $
  */
 
 /*
@@ -73,7 +73,7 @@ public class TestDaemonVersion extends LockssTestCase {
     assertIllegalFormat("2.b.5");
   }
 
-  public void testTooLong() {
+  public void testToLong() {
     try {
       Version a = new DaemonVersion("123.123.123");
     } catch (IllegalArgumentException ex) {
@@ -121,6 +121,18 @@ public class TestDaemonVersion extends LockssTestCase {
     assertTrue(c.toLong() < d.toLong());
     assertFalse(a.toLong() < e.toLong());
     assertEquals(a.toLong(), e.toLong());
+  }
+
+  public void testCompareTo() {
+    DaemonVersion a = new DaemonVersion("2.3.5");
+    DaemonVersion b = new DaemonVersion("2.3.6");
+    DaemonVersion c = new DaemonVersion("2.4.0");
+    DaemonVersion e = new DaemonVersion("2.3.5-test"); // should equal a
+
+    assertTrue(a.compareTo(a) == 0);
+    assertTrue(a.compareTo(e) == 0);
+    assertTrue(a.compareTo(b) == -1);
+    assertTrue(b.compareTo(a) == 1);
   }
 
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: Plugin.java,v 1.24 2005-07-19 01:10:37 tlipkis Exp $
+ * $Id: Plugin.java,v 1.25 2006-09-16 22:58:34 tlipkis Exp $
  */
 
 /*
@@ -75,6 +75,12 @@ public interface Plugin {
    * @return a String representing the current version
    */
   public String getVersion();
+
+  /**
+   * Return the minimum daemon version required by this plugin
+   * @return the minimum daemon version
+   */
+  public String getRequiredDaemonVersion();
 
   /**
    * Return the human-readable name of the plugin

@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonVersion.java,v 1.5 2006-04-23 05:51:24 tlipkis Exp $
+ * $Id: DaemonVersion.java,v 1.6 2006-09-16 22:58:33 tlipkis Exp $
  */
 
 /*
@@ -38,7 +38,7 @@ import java.util.StringTokenizer;
  * Representation of a daemon version.  Currently this is a string
  * with three integer parts separated by a period ("."), i.e. "1.1.3".
  */
-public class DaemonVersion implements Version {
+public class DaemonVersion implements Version, Comparable {
 
   private int m_versionMajor;
   private int m_versionMinor;
@@ -94,6 +94,17 @@ public class DaemonVersion implements Version {
     num = (num * base) + m_versionMinor;
     num = (num * base) + m_versionBuild;
     return num;
+  }
+
+  public int compareTo(Object o) {
+    return compareTo((DaemonVersion)o);
+  }
+
+  public int compareTo(DaemonVersion other) {
+    long x = toLong() - other.toLong();
+    if (x > 0) return 1;
+    if (x < 0) return -1;
+    return 0;
   }
 
   private static int parseToken(String token) {

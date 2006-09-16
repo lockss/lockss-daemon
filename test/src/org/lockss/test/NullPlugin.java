@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.79 2006-08-07 18:24:07 tlipkis Exp $
+ * $Id: NullPlugin.java,v 1.80 2006-09-16 22:58:33 tlipkis Exp $
  */
 
 /*
@@ -75,6 +75,10 @@ public class NullPlugin {
 
     public String getVersion() {
       return "NullVersion";
+    }
+
+    public String getRequiredDaemonVersion() {
+      return "0.0.0";
     }
 
     public String getPluginName() {
@@ -438,6 +442,11 @@ public class NullPlugin {
     public FilterRule getFilterRule(String mimeType) {
       throw new UnsupportedOperationException("Not implemented");
     }
+
+    public FilterFactory getFilterFactory(String mimeType) {
+      throw new UnsupportedOperationException("Not implemented");
+    }
+
     public TypedEntryMap getProperties() {
       return null;
     }

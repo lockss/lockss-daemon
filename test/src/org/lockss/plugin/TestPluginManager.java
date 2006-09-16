@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.72 2006-07-18 19:12:20 tlipkis Exp $
+ * $Id: TestPluginManager.java,v 1.73 2006-09-16 22:58:33 tlipkis Exp $
  */
 
 /*
@@ -204,6 +204,19 @@ public class TestPluginManager extends LockssTestCase {
     assertEquals(1, mpi.getInitCtr());
   }
 
+  public void testEnsurePluginLoadedCheckDaemonVersion()
+      throws Exception {
+    String key = PluginManager.pluginKeyFromName(VerPlugin.class.getName());
+    // with insufficient daemon version,
+    ConfigurationUtil.addFromArgs(ConfigManager.PARAM_DAEMON_VERSION, "1.1.1");
+    // plugin requiring 1.10.0 should not load
+    assertFalse(mgr.ensurePluginLoaded(key));
+    // with sufficient daemon version,
+    ConfigurationUtil.addFromArgs(ConfigManager.PARAM_DAEMON_VERSION, "11.1.1");
+    // it should load.
+    assertTrue(mgr.ensurePluginLoaded(key));
+  }
+
   public void testInitPluginRegistry() {
     String n1 = "org.lockss.test.MockPlugin";
     String n2 = ThrowingMockPlugin.class.getName();
@@ -255,6 +268,20 @@ public class TestPluginManager extends LockssTestCase {
     List args = (List)initArgs.get(0);
     assertEquals(3, args.size());
     assertEquals(pname, args.get(1));
+  }
+
+  public void testEnsurePluginLoadedXmlCheckDaemonVersion()
+      throws Exception {
+    // with insufficient daemon version,
+    ConfigurationUtil.addFromArgs(ConfigManager.PARAM_DAEMON_VERSION, "1.1.1");
+    // plugin requiring 1.10.0 should not load
+    String pname = "org.lockss.test.TestXmlPlugin";
+    String key = PluginManager.pluginKeyFromId(pname);
+    assertFalse(mgr.ensurePluginLoaded(key));
+    // with sufficient daemon version,
+    ConfigurationUtil.addFromArgs(ConfigManager.PARAM_DAEMON_VERSION, "11.1.1");
+    // it should load.
+    assertTrue(mgr.ensurePluginLoaded(key));
   }
 
   public void testStop() throws Exception {
@@ -1142,6 +1169,16 @@ public class TestPluginManager extends LockssTestCase {
 
     protected MockArchivalUnit newMockArchivalUnit() {
       return new MyMockArchivalUnit();
+    }
+  }
+
+  private static class VerPlugin extends MockPlugin {
+    public VerPlugin(){
+      super();
+    }
+
+    public String getRequiredDaemonVersion() {
+      return "1.10.0";
     }
   }
 

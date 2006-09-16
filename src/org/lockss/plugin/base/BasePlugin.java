@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.39 2006-07-19 18:01:00 tlipkis Exp $
+ * $Id: BasePlugin.java,v 1.40 2006-09-16 22:58:34 tlipkis Exp $
  */
 
 /*
@@ -65,6 +65,17 @@ public abstract class BasePlugin
   // XXX need to generalize this
   protected CacheResultMap resultMap;
 
+  Configuration.Callback configCb = new Configuration.Callback() {
+      public void configurationChanged(Configuration newConfig,
+				       Configuration prevConfig,
+				       Configuration.Differences changedKeys) {
+	setConfig(newConfig, prevConfig, changedKeys);
+      }
+      public String toString() {
+	return getPluginId();
+      }
+    };
+
   /**
    * Must invoke this constructor in plugin subclass.
    */
@@ -75,25 +86,24 @@ public abstract class BasePlugin
     theDaemon = daemon;
     pluginMgr = theDaemon.getPluginManager();
 
-    theDaemon.getConfigManager().registerConfigurationCallback(new Configuration.Callback() {
-	public void configurationChanged(Configuration newConfig,
-					 Configuration prevConfig,
-					 Configuration.Differences changedKeys) {
-	  setConfig(newConfig, prevConfig, changedKeys);
-	}
-	public String toString() {
-	  return getPluginId();
-	}
-      });
+    theDaemon.getConfigManager().registerConfigurationCallback(configCb);
     initResultMap();
   }
 
   public void stopPlugin() {
+    theDaemon.getConfigManager().unregisterConfigurationCallback(configCb);
   }
 
   public void stopAu(ArchivalUnit au) {
     // Is there any reason to notify the AU itself?
     aus.remove(au);
+  }
+
+  /** Subclasses should override this if they want to require a minimum
+   * daemon version in order to run
+   */
+  public String getRequiredDaemonVersion() {
+    return "0.0.0";
   }
 
   /**

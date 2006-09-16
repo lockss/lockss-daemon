@@ -11,6 +11,10 @@
     <ElementValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.lang.String">TestXmlPlugin</ElementValue>
   </MapElement>
   <MapElement>
+    <ElementKey>required_daemon_version</ElementKey>
+    <ElementValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.lang.String">1.10.0</ElementValue>
+  </MapElement>
+  <MapElement>
     <ElementKey>au_crawlrules</ElementKey>
     <ElementValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.util.ArrayList">
       <string xsi:type="java:java.lang.String">4,"^%s", base_url</string>

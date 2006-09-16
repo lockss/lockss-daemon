@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.17 2006-09-11 23:32:45 thib_gc Exp $
+ * $Id: DefinablePlugin.java,v 1.18 2006-09-16 22:58:34 tlipkis Exp $
  */
 
 /*
@@ -54,6 +54,8 @@ public class DefinablePlugin extends BasePlugin {
   // configuration map keys
   static final public String CM_NAME_KEY = "plugin_name";
   static final public String CM_VERSION_KEY = "plugin_version";
+  static final public String CM_REQUIRED_DAEMON_VERSION_KEY =
+    "required_daemon_version";
   static final public String CM_CONFIG_PROPS_KEY = "plugin_config_props";
   static final public String CM_EXCEPTION_HANDLER_KEY =
       "plugin_cache_result_handler";
@@ -64,6 +66,7 @@ public class DefinablePlugin extends BasePlugin {
       "plugin_crawl_type";
   static final public String CM_FOLLOW_LINKS = "plugin_follow_link";
   static final public String DEFAULT_PLUGIN_VERSION = "1";
+  static final public String DEFAULT_REQUIRED_DAEMON_VERSION = "0.0.0";
   static final public String MAP_SUFFIX = ".xml";
 
   static final public String[] CRAWL_TYPES = {"HTML Links", "OAI"};
@@ -110,6 +113,11 @@ public class DefinablePlugin extends BasePlugin {
 
   public String getVersion() {
     return definitionMap.getString(CM_VERSION_KEY, DEFAULT_PLUGIN_VERSION);
+  }
+
+  public String getRequiredDaemonVersion() {
+    return definitionMap.getString(CM_REQUIRED_DAEMON_VERSION_KEY,
+				   DEFAULT_REQUIRED_DAEMON_VERSION);
   }
 
   public String getPluginNotes() {

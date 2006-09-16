@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.163 2006-08-07 18:47:48 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.164 2006-09-16 22:58:34 tlipkis Exp $
  */
 
 /*
@@ -1037,7 +1037,14 @@ public class PluginManager
       Class c = Class.forName(pluginName, true, loader);
       classPlugin = (Plugin)c.newInstance();
       classPlugin.initPlugin(theDaemon);
-      foundClassPlugin = true;
+      if (isCompatible(classPlugin)) {
+	foundClassPlugin = true;
+      } else {
+	classPlugin.stopPlugin();
+	log.warning("Plugin " + pluginName +
+		    " not started because it requires daemon version " +
+		    classPlugin.getRequiredDaemonVersion());
+      }
     } catch (ClassNotFoundException ex) {
       log.debug3(pluginName + ": Class not found on classpath.");
     }
@@ -1048,7 +1055,14 @@ public class PluginManager
       Class c = Class.forName(getConfigurablePluginName(), true, loader);
       xmlPlugin = (DefinablePlugin)c.newInstance();
       xmlPlugin.initPlugin(theDaemon, pluginName, loader);
-      foundXmlPlugin = true;
+      if (isCompatible(xmlPlugin)) {
+	foundXmlPlugin = true;
+      } else {
+	xmlPlugin.stopPlugin();
+	log.warning("Plugin " + pluginName +
+		    " not started because it requires daemon version " +
+		    xmlPlugin.getRequiredDaemonVersion());
+      }
     } catch (FileNotFoundException ex) {
       log.warning(pluginName + ": Couldn't find plugin: " + ex);
     } catch (Exception ex) {
@@ -1092,6 +1106,15 @@ public class PluginManager
       log.error(pluginName + " could not be loaded.");
       return null;
     }
+  }
+
+  boolean isCompatible(Plugin plug) {
+    DaemonVersion dver = ConfigManager.getDaemonVersion();
+    if (dver == null) {
+      return true;		       // don't break things during testing
+    }
+    DaemonVersion preq = new DaemonVersion(plug.getRequiredDaemonVersion());
+    return dver.compareTo(preq) >= 0;
   }
 
   /**
