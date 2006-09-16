@@ -1,5 +1,5 @@
 /*
- * $Id: TestReaderInputStream.java,v 1.5 2005-02-21 03:11:37 tlipkis Exp $
+ * $Id: TestReaderInputStream.java,v 1.6 2006-09-16 23:00:33 tlipkis Exp $
  */
 
 /*
@@ -48,6 +48,12 @@ public class TestReaderInputStream extends LockssTestCase {
     Reader reader = new StringReader("");
     InputStream is = new ReaderInputStream(reader);
     assertEquals(-1, is.read());
+  }
+
+  public void testGetReader() throws IOException {
+    Reader reader = new StringReader("");
+    ReaderInputStream is = new ReaderInputStream(reader);
+    assertSame(reader, is.getReader());
   }
 
   public void testBytifiedString() throws IOException {

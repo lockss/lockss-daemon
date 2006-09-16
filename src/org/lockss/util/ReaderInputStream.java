@@ -1,5 +1,5 @@
 /*
- * $Id: ReaderInputStream.java,v 1.10 2005-10-11 05:48:30 tlipkis Exp $
+ * $Id: ReaderInputStream.java,v 1.11 2006-09-16 23:00:33 tlipkis Exp $
  */
 
 /*
@@ -56,6 +56,11 @@ public class ReaderInputStream extends InputStream {
     this.reader = reader;
     this.bufsize = bufsize;
     charBuffer = new char[bufsize];
+  }
+
+  /** Return the underlying Reader */
+  public Reader getReader() {
+    return reader;
   }
 
   public int read() throws IOException {
