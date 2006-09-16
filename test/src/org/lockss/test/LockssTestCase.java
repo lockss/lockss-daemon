@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.86 2006-08-09 02:00:41 tlipkis Exp $
+ * $Id: LockssTestCase.java,v 1.87 2006-09-16 22:58:49 tlipkis Exp $
  */
 
 /*
@@ -1264,6 +1264,38 @@ public class LockssTestCase extends TestCase {
       actual.append((char)kar);
     }
     assertEquals("With single char read(),", expected, actual.toString());
+  }
+
+  /**
+   * Asserts that a string matches the content of an InputStream
+   */
+  public static void assertInputStreamMatchesString(String expected,
+						    InputStream in)
+      throws IOException {
+    assertInputStreamMatchesString(expected, in, Constants.DEFAULT_ENCODING);
+  }
+
+  /**
+   * Asserts that a string matches the content of an InputStream
+   */
+  public static void assertInputStreamMatchesString(String expected,
+						    InputStream in,
+						    String encoding)
+      throws IOException {
+    Reader rdr = new InputStreamReader(in, encoding);
+    assertReaderMatchesString(expected, rdr);
+  }
+
+  /**
+   * Asserts that a string matches the content of a reader read using the
+   * specified buffer size.
+   */
+  public static void assertInputStreamMatchesString(String expected,
+						    InputStream in,
+						    int bufsize)
+      throws IOException {
+    Reader rdr = new InputStreamReader(in, Constants.DEFAULT_ENCODING);
+    assertReaderMatchesString(expected, rdr, bufsize);
   }
 
   /** Convenience method to compile an RE */
