@@ -1,5 +1,5 @@
 /*
- * $Id: BlackwellHtmlFilterRule.java,v 1.2 2006-08-07 07:34:50 tlipkis Exp $
+ * $Id: BlackwellHtmlFilterFactory.java,v 1.1 2006-09-16 22:50:43 tlipkis Exp $
  */
 
 /*
@@ -39,9 +39,9 @@ import org.htmlparser.filters.*;
 
 import org.lockss.util.*;
 import org.lockss.filter.*;
-import org.lockss.plugin.FilterRule;
+import org.lockss.plugin.*;
 
-public class BlackwellHtmlFilterRule implements FilterRule {
+public class BlackwellHtmlFilterFactory implements FilterFactory {
 
   // Remove everything on the line after these comments
   static HtmlTagFilter.TagPair[] tagpairs = {
@@ -50,29 +50,26 @@ public class BlackwellHtmlFilterRule implements FilterRule {
   };
   static List tagList = ListUtil.fromArray(tagpairs);
 
-  public Reader createFilteredReader(Reader reader) {
-    Reader tagFilter = HtmlTagFilter.makeNestedFilter(reader, tagList);
-    return tagFilter;
-//     return new WhiteSpaceFilter(tagFilter);
+  public InputStream createFilteredInputStream(ArchivalUnit au,
+					       InputStream in,
+					       String encoding) {
+
+    // Remove inverse citations
+
+    // <option value="#citart1">This article is cited by the following
+    // articles in Blackwell Synergy and CrossRef</option>
+
+    NodeFilter invCiteSelOption =
+      HtmlNodeFilters.tagWithText("option", "article is cited by", true);
+    HtmlTransform xform1 = HtmlNodeFilterTransform.exclude(invCiteSelOption);
+
+    // Still need to remove actual inverse citation section
+
+    InputStream htmlFilter = new HtmlFilterInputStream(in, xform1);
+
+    Reader rdr = FilterUtil.getReader(htmlFilter, encoding);
+    Reader tagFilter = HtmlTagFilter.makeNestedFilter(rdr, tagList);
+    return new ReaderInputStream(tagFilter);
+//     return new ReaderInputStream(new WhiteSpaceFilter(tagFilter));
   }
-
-
-//   public Reader xcreateFilteredReader(Reader reader) {
-//     /*
-//      * Remove inverse citations
-//      */
-
-//     // <option value="#citart1">This article is cited by the following
-//     // articles in Blackwell Synergy and CrossRef</option>
-
-//     NodeFilter invCiteSelOption =
-//       HtmlNodeFilters.tagWithText("article is cited by", true);
-//     HtmlTransform xform1 =
-//       HtmlNodeFilterTransform.exclude(invCiteSelOption);
-
-//     // Still need to remove actual inverse citation section
-
-//     Reader htmlFilter = new HtmlFilterReader(reader, xform1);
-//     return new WhiteSpaceFilter(htmlFilter);
-//   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlackwellArchivalUnit.java,v 1.3 2006-08-07 07:34:30 tlipkis Exp $
+ * $Id: TestBlackwellArchivalUnit.java,v 1.4 2006-09-16 22:50:43 tlipkis Exp $
  */
 
 /*
@@ -254,11 +254,11 @@ public class TestBlackwellArchivalUnit extends LockssPluginTestCase {
     assertEquals("jopy, vol. 3", au1.getName());
   }
 
-  public void testGetFilterRules() throws Exception {
+  public void testGetFilterFactory() throws Exception {
     ArchivalUnit au = makeAu(BASE_URL, JOURNAL_ID, ISSN, YEAR, "2");
-    assertNull(au.getFilterRule(null));
-    assertNull(au.getFilterRule("jpg"));
-    assertNotNull(au.getFilterRule("text/html"));
+    assertNull(au.getFilterFactory(null));
+    assertNull(au.getFilterFactory("jpg"));
+    assertNotNull(au.getFilterFactory("text/html"));
   }
 
   public void testCrawlWindow() throws Exception {

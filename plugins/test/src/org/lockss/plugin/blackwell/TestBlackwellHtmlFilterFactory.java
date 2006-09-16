@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlackwellHtmlFilterRule.java,v 1.1 2006-08-01 05:21:51 tlipkis Exp $
+ * $Id: TestBlackwellHtmlFilterFactory.java,v 1.1 2006-09-16 22:50:43 tlipkis Exp $
  */
 
 /*
@@ -35,15 +35,18 @@ package org.lockss.plugin.blackwell;
 import java.io.*;
 
 import org.lockss.util.*;
-import org.lockss.test.LockssTestCase;
+import org.lockss.plugin.*;
+import org.lockss.test.*;
 
-public class TestBlackwellHtmlFilterRule extends LockssTestCase {
+public class TestBlackwellHtmlFilterFactory extends LockssTestCase {
 
-  private BlackwellHtmlFilterRule rule;
+  private BlackwellHtmlFilterFactory fact;
+  private MockArchivalUnit mau;
 
   public void setUp() throws Exception {
     super.setUp();
-    rule = new BlackwellHtmlFilterRule();
+    fact = new BlackwellHtmlFilterFactory();
+    mau = new MockArchivalUnit();
   }
 
   private static final String in1 = 
@@ -68,18 +71,22 @@ public class TestBlackwellHtmlFilterRule extends LockssTestCase {
     "<!-- END REGION 2 -->\n";
 
   public void testFilter() throws IOException {
-    Reader readerA;
-    Reader readerB;
+    InputStream inA;
+    InputStream inB;
 
-    readerA = rule.createFilteredReader(new StringReader(in1));
-    assertReaderMatchesString(out, readerA);
-    readerB = rule.createFilteredReader(new StringReader(in2));
-    assertReaderMatchesString(out, readerB);
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(in1),
+					 Constants.DEFAULT_ENCODING);
+    assertInputStreamMatchesString(out, inA);
+    inB = fact.createFilteredInputStream(mau, new StringInputStream(in2),
+					 Constants.DEFAULT_ENCODING);
+    assertInputStreamMatchesString(out, inB);
 
-    readerA = rule.createFilteredReader(new StringReader(in1));
-    readerB = rule.createFilteredReader(new StringReader(in2));
-    assertEquals(StringUtil.fromReader(readerA),
-                 StringUtil.fromReader(readerB));
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(in1),
+					 Constants.DEFAULT_ENCODING);
+    inB = fact.createFilteredInputStream(mau, new StringInputStream(in2),
+					 Constants.DEFAULT_ENCODING);
+    assertEquals(StringUtil.fromInputStream(inA),
+                 StringUtil.fromInputStream(inB));
   }
 
 }
