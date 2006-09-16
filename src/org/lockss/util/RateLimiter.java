@@ -1,5 +1,5 @@
 /*
- * $Id: RateLimiter.java,v 1.11.4.1 2006-09-16 07:14:15 tlipkis Exp $
+ * $Id: RateLimiter.java,v 1.11.4.2 2006-09-16 07:17:41 tlipkis Exp $
  */
 
 /*
@@ -344,7 +344,7 @@ public class RateLimiter {
   private EDU.oswego.cs.dl.util.concurrent.FIFOSemaphore waitQueue =
     new EDU.oswego.cs.dl.util.concurrent.FIFOSemaphore(1);
 
-=  public boolean fifoWaitAndSignalEvent() throws InterruptedException {
+  public boolean fifoWaitAndSignalEvent() throws InterruptedException {
     waitQueue.acquire();
     synchronized (this) {
       boolean res = waitUntilEventOk();
