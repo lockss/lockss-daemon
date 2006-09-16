@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireFilterRule.java,v 1.5 2006-09-16 23:04:48 tlipkis Exp $
+ * $Id: HighWireHtmlFilterFactory.java,v 1.1 2006-09-16 23:04:48 tlipkis Exp $
  */
 
 /*
@@ -36,39 +36,18 @@ import java.io.*;
 import java.util.List;
 import org.lockss.util.*;
 import org.lockss.filter.*;
-import org.lockss.plugin.FilterRule;
+import org.lockss.plugin.*;
+import org.lockss.plugin.base.*;
 
-public class HighWireFilterRule implements FilterRule {
-  public static final String CITATION_STRING =
-      "This article has been cited by other articles:";
-  public static final String MEDLINE_STRING = "[Medline]";
-
-  /** Also used by HighWireHtmlFilterFactory, so that the logic is only in
-   * one place.  When this class is retired in favor of
-   * HighWireHtmlFilterFactory, this logic should be moved there. */
-  static Reader makeFilteredReader(Reader reader) {
-    /*
-     * Needs to be better (TSR 9-2-03):
-     * 1)Filtering out everything in a table is pretty good, but over filters
-     * 2) May want to filter comments in the future
-     */
-
-
-    List tagList = ListUtil.list(
-//        new HtmlTagFilter.TagPair("<!--", "-->", true),
-        new HtmlTagFilter.TagPair("<STRONG>Institution:",
-				  "</A></NOBR>", true),
-        new HtmlTagFilter.TagPair("<script", "</script>", true),
-        new HtmlTagFilter.TagPair("<table", "</table>", true),
-        new HtmlTagFilter.TagPair("<", ">")
-        );
-    Reader tagFilter = HtmlTagFilter.makeNestedFilter(reader, tagList);
-    Reader medFilter = new StringFilter(tagFilter, MEDLINE_STRING);
-    Reader citeFilter = new StringFilter(medFilter, CITATION_STRING);
-    return new WhiteSpaceFilter(citeFilter);
-  }
-
-  public Reader createFilteredReader(Reader reader) {
-    return makeFilteredReader(reader);
+public class HighWireHtmlFilterFactory implements FilterFactory {
+  // Use the logic in HighWireFilterRule.  That class should be retired in
+  // favor of this one once all running daemons support FilterFactory, at
+  // which point the filter logic should be moved here.
+  public InputStream createFilteredInputStream(ArchivalUnit au,
+					       InputStream in,
+					       String encoding) {
+    Reader reader = FilterUtil.getReader(in, encoding);
+    Reader filtReader = HighWireFilterRule.makeFilteredReader(reader);
+    return new ReaderInputStream(filtReader);
   }
 }
