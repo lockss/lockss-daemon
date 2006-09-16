@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCachedUrl.java,v 1.16 2006-05-27 06:54:41 tlipkis Exp $
+ * $Id: TestBaseCachedUrl.java,v 1.17 2006-09-16 22:55:22 tlipkis Exp $
  */
 
 /*
@@ -97,7 +97,7 @@ public class TestBaseCachedUrl extends LockssTestCase {
     public void testFilterParamDefault() {
       MyCachedUrl cu = new MyCachedUrl(new MyAu(), null);
       cu.openForHashing();
-      assertFalse(cu.gotUnfilteredStream());
+      assertTrue(cu.gotFilteredStream);
     }
 
     public void testFilterParamFilterOn() throws IOException {
@@ -105,7 +105,7 @@ public class TestBaseCachedUrl extends LockssTestCase {
       ConfigurationUtil.setCurrentConfigFromString(config);
       MyCachedUrl cu = new MyCachedUrl(new MyAu(), null);
       cu.openForHashing();
-      assertFalse(cu.gotUnfilteredStream());
+      assertTrue(cu.gotFilteredStream);
     }
 
     public void testFilterParamFilterOff() throws IOException {
@@ -113,13 +113,14 @@ public class TestBaseCachedUrl extends LockssTestCase {
       ConfigurationUtil.setCurrentConfigFromString(config);
       MyCachedUrl cu = new MyCachedUrl(new MyAu(), null);
       cu.openForHashing();
-      assertTrue(cu.gotUnfilteredStream());
+      assertFalse(cu.gotFilteredStream);
     }
   }
 
   // helper for above tests
   private class MyCachedUrl extends BaseCachedUrl {
     private boolean gotUnfilteredStream = false;
+    private boolean gotFilteredStream = false;
     private CIProperties props = new CIProperties();
 
     public MyCachedUrl(ArchivalUnit au, String url) {
@@ -135,6 +136,11 @@ public class TestBaseCachedUrl extends LockssTestCase {
 
     public boolean gotUnfilteredStream() {
       return gotUnfilteredStream;
+    }
+
+    protected InputStream getFilteredStream() {
+      gotFilteredStream = true;
+      return super.getFilteredStream();
     }
 
     public boolean hasContent() {
@@ -211,6 +217,10 @@ public class TestBaseCachedUrl extends LockssTestCase {
       CachedUrl cu = getTestCu(url1);
       InputStream urlIs = cu.getUnfilteredInputStream();
       assertNotEquals(str, StringUtil.fromInputStream(urlIs));
+
+      mau.setFilterFactory(new MyMockFilterFactory(new StringInputStream(str)));
+      urlIs = cu.getUnfilteredInputStream();
+      assertNotEquals(str, StringUtil.fromInputStream(urlIs));
     }
 
     public void testOpenForHashingWontFilterIfConfiguredNotTo()
@@ -224,9 +234,13 @@ public class TestBaseCachedUrl extends LockssTestCase {
       CachedUrl cu = getTestCu(url1);
       InputStream urlIs = cu.openForHashing();
       assertNotEquals(str, StringUtil.fromInputStream(urlIs));
+
+      mau.setFilterFactory(new MyMockFilterFactory(new StringInputStream(str)));
+      urlIs = cu.openForHashing();
+      assertNotEquals(str, StringUtil.fromInputStream(urlIs));
     }
 
-    public void testOpenForHashingWillFilterIfConfiguredTo()
+    public void testOpenForHashingUsesFilterRule()
 	throws Exception {
       String config = PARAM_SHOULD_FILTER_HASH_STREAM + "=true";
       ConfigurationUtil.setCurrentConfigFromString(config);
@@ -237,6 +251,34 @@ public class TestBaseCachedUrl extends LockssTestCase {
       CachedUrl cu = getTestCu(url1);
       InputStream urlIs = cu.openForHashing();
       assertEquals(str, StringUtil.fromInputStream(urlIs));
+    }
+
+    public void testOpenForHashingUsesFilterFactory()
+	throws Exception {
+      String config = PARAM_SHOULD_FILTER_HASH_STREAM + "=true";
+      ConfigurationUtil.setCurrentConfigFromString(config);
+      createLeaf(url1, "blah <test stream>", null);
+      String str = "This is a filtered stream";
+      mau.setFilterFactory(new MyMockFilterFactory(new StringInputStream(str)));
+
+      CachedUrl cu = getTestCu(url1);
+      InputStream urlIs = cu.openForHashing();
+      assertEquals(str, StringUtil.fromInputStream(urlIs));
+    }
+
+    public void testOpenForHashingUsesFilterFactoryBeforeRule()
+	throws Exception {
+      String config = PARAM_SHOULD_FILTER_HASH_STREAM + "=true";
+      ConfigurationUtil.setCurrentConfigFromString(config);
+      createLeaf(url1, "blah <test stream>", null);
+      String strRule = "This is a filtered stream";
+      mau.setFilterRule(new MyMockFilterRule(new StringReader(strRule)));
+      String strFact = "This is a filtered stream";
+      mau.setFilterFactory(new MyMockFilterFactory(new StringInputStream(strFact)));
+
+      CachedUrl cu = getTestCu(url1);
+      InputStream urlIs = cu.openForHashing();
+      assertEquals(strFact, StringUtil.fromInputStream(urlIs));
     }
 
     public void testGetContentSize() throws Exception {
@@ -302,11 +344,34 @@ public class TestBaseCachedUrl extends LockssTestCase {
     }
   }
 
+  class MyMockFilterFactory implements FilterFactory {
+    InputStream in;
+
+    public MyMockFilterFactory(InputStream in) {
+      this.in = in;
+    }
+
+    public InputStream createFilteredInputStream(ArchivalUnit au,
+						 InputStream unfilteredIn,
+						 String encoding) {
+      return this.in;
+    }
+  }
+
   class MyAu extends NullPlugin.ArchivalUnit {
     public FilterRule getFilterRule(String mimeType) {
       return new FilterRule() {
 	  public Reader createFilteredReader(Reader reader) {
 	    return reader;
+	  }
+	};
+    }
+    public FilterFactory getFilterFactory(String mimeType) {
+      return new FilterFactory() {
+	  public InputStream createFilteredInputStream(ArchivalUnit au,
+						       InputStream in,
+						       String encoding) {
+	    return in;
 	  }
 	};
     }
@@ -330,10 +395,10 @@ public class TestBaseCachedUrl extends LockssTestCase {
       createLeaf(url1, content1, null);
       CachedUrl cu = getTestCu(url1);
       assertEquals(1, cu.getVersion());
-    }      
+    }
   }
 
-  /** Varient that performx the tests with the current version when there's
+  /** Variant that performs the tests with the current version when there's
    * a previous version */
   public static class CurrentVersion extends VersionedTests {
     public CurrentVersion() {
@@ -359,7 +424,7 @@ public class TestBaseCachedUrl extends LockssTestCase {
       CachedUrl curcu = mau.makeCachedUrl(url1);
       assertEquals(2, cu.getVersion());
       assertEquals(2, curcu.getVersion());
-    }      
+    }
   }
 
   /** Varient that performs the tests with version 2 of 3 versions */
@@ -381,7 +446,7 @@ public class TestBaseCachedUrl extends LockssTestCase {
       CachedUrl cu = mau.makeCachedUrl(url);
       CachedUrl[] all = cu.getCuVersions();
       assertEquals(3, all.length);
-      
+
       return all[1];
     }
 
@@ -391,7 +456,7 @@ public class TestBaseCachedUrl extends LockssTestCase {
       CachedUrl curcu = mau.makeCachedUrl(url1);
       assertEquals(2, cu.getVersion());
       assertEquals(3, curcu.getVersion());
-    }      
+    }
 
     public void testGetCuVersion() throws Exception {
       createLeaf(url1, content1, null);
@@ -409,7 +474,7 @@ public class TestBaseCachedUrl extends LockssTestCase {
 	noncu.getUnfilteredInputStream();
 	fail("No version 4, getUnfilteredInputStream() should throw");
       } catch (UnsupportedOperationException e) { }
-    }      
+    }
 
     public void testGetCuVersions() throws Exception {
       createLeaf(url1, content1, null);
@@ -419,7 +484,7 @@ public class TestBaseCachedUrl extends LockssTestCase {
       assertEquals(3, all[0].getVersion());
       assertEquals(2, all[1].getVersion());
       assertEquals(1, all[2].getVersion());
-    }      
+    }
 
     public void testGetCuVersionsMax() throws Exception {
       createLeaf(url1, content1, null);
@@ -428,7 +493,7 @@ public class TestBaseCachedUrl extends LockssTestCase {
       assertEquals(2, all.length);
       assertEquals(3, all[0].getVersion());
       assertEquals(2, all[1].getVersion());
-    }      
+    }
 
 
 

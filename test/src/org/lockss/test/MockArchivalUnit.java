@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.68 2006-07-17 05:12:40 tlipkis Exp $
+ * $Id: MockArchivalUnit.java,v 1.69 2006-09-16 22:55:22 tlipkis Exp $
  */
 
 /*
@@ -67,6 +67,7 @@ public class MockArchivalUnit implements ArchivalUnit {
   private Hashtable cuHash = new Hashtable();
 
   private FilterRule filterRule = null;
+  private FilterFactory filterFactory = null;
   private ContentParser parser = null;
   private TypedEntryMap propertyMap = new TypedEntryMap();
   private static final Logger logger = Logger.getLogger("MockArchivalUnit");
@@ -394,6 +395,14 @@ public class MockArchivalUnit implements ArchivalUnit {
 
   public void setFilterRule(FilterRule filterRule) {
     this.filterRule = filterRule;
+  }
+
+  public FilterFactory getFilterFactory(String contentType) {
+    return filterFactory;
+  }
+
+  public void setFilterFactory(FilterFactory filterFactory) {
+    this.filterFactory = filterFactory;
   }
 
   public ContentParser getContentParser(String mimeType) {

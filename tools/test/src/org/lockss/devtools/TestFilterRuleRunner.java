@@ -1,5 +1,5 @@
 /*
- * $Id: TestFilterRunner.java,v 1.3 2006-09-16 22:55:22 tlipkis Exp $
+ * $Id: TestFilterRuleRunner.java,v 1.1 2006-09-16 22:55:22 tlipkis Exp $
  */
 
 /*
@@ -38,18 +38,20 @@ import org.lockss.util.*;
 import org.lockss.test.*;
 
 /**
+ * @deprecated this class should be deleted when all plugins have been
+ * converted to use {@link FilterFactory}s instead of {@link FilterRule}s
  */
-public class TestFilterRunner extends LockssTestCase {
+public class TestFilterRuleRunner extends LockssTestCase {
 
-  //tests for filterDirectory(FilterFactory, File, File)
+  //tests for filterDirectory(FilterRule, File, File)
 
-  public void testDirThrowsOnNullFilterFactory()
+  public void testDirThrowsOnNullFilterRule()
       throws FileNotFoundException, IOException {
     try {
-      FilterRunner.filterDirectory((FilterFactory)null,
+      FilterRunner.filterDirectory((FilterRule)null,
 				   new MockFile("blah"),
 				   new MockFile("blah2"));
-      fail("Calling filterSingleFile with a null FilterFactory "
+      fail("Calling filterSingleFile with a null FilterRule "
 	   +"should have thrown");
     } catch (IllegalArgumentException e) {
     }
@@ -58,7 +60,7 @@ public class TestFilterRunner extends LockssTestCase {
   public void testDirThrowsOnNullSrc()
       throws FileNotFoundException, IOException {
     try {
-      FilterRunner.filterDirectory(new MockFilterFactory(),
+      FilterRunner.filterDirectory(new MockFilterRule(),
 				   null,
 				   new MockFile("blah2"));
       fail("Calling filterSingleFile with a null source file "
@@ -72,7 +74,7 @@ public class TestFilterRunner extends LockssTestCase {
     try {
       MockFile src = new MockFile("blah");
       src.setExists(true);
-      FilterRunner.filterDirectory(new MockFilterFactory(),
+      FilterRunner.filterDirectory(new MockFilterRule(),
 				   src,
 				   new MockFile("blah2"));
       fail("Calling filterSingleFile with a src file that returns false "
@@ -86,7 +88,7 @@ public class TestFilterRunner extends LockssTestCase {
     try {
       MockFile src = new MockFile("blah");
       src.setIsDirectory(true);
-      FilterRunner.filterDirectory(new MockFilterFactory(),
+      FilterRunner.filterDirectory(new MockFilterRule(),
 				   src,
 				   null);
       fail("Calling filterSingleFile with a null destination file "
@@ -103,7 +105,7 @@ public class TestFilterRunner extends LockssTestCase {
     MockFile dest = new MockFile("blah2");
     dest.setExists(false);
 
-    FilterRunner.filterDirectory(new MockFilterFactory(), src, dest);
+    FilterRunner.filterDirectory(new MockFilterRule(), src, dest);
     dest.assertMkdirCalled();
   }
 
@@ -116,40 +118,40 @@ public class TestFilterRunner extends LockssTestCase {
       MockFile dest = new MockFile("blah2");
       dest.setExists(true);
       dest.setIsDirectory(false);
-      FilterRunner.filterDirectory(new MockFilterFactory(), src, dest);
+      FilterRunner.filterDirectory(new MockFilterRule(), src, dest);
       fail("Calling filterSingleFile with a dest file that returns false "
 	   +"on isDirectory() should have thrown");
     } catch (IllegalArgumentException e) {
     }
   }
 
-  private static String hwFilterFactoryStr =
-    "org.lockss.plugin.highwire.HighWireHtmlFilterFactory";
+  private static String hwFilterRuleStr =
+    "org.lockss.plugin.highwire.HighWireFilterRule";
 
-  private static String mockFilterFactoryStr =
-    "org.lockss.test.MockFilterFactory";
+  private static String mockFilterRuleStr =
+    "org.lockss.test.MockFilterRule";
 
-  public void testFilterFactoryFromStringHighWire()
+  public void testFilterRuleFromStringHighWire()
       throws ClassNotFoundException, InstantiationException,
 	     IllegalAccessException {
-    FilterFactory filterFactory = FilterRunner.filterFactoryFromString(hwFilterFactoryStr);
-    assertTrue(filterFactory instanceof
-	       org.lockss.plugin.highwire.HighWireHtmlFilterFactory);
+    FilterRule filterRule = FilterRunner.filterRuleFromString(hwFilterRuleStr);
+    assertTrue(filterRule instanceof
+	       org.lockss.plugin.highwire.HighWireFilterRule);
   }
 
-  public void testFilterFactoryFromStringMock()
+  public void testFilterRuleFromStringMock()
       throws ClassNotFoundException, InstantiationException,
 	     IllegalAccessException  {
-    FilterFactory filterFactory =
-      FilterRunner.filterFactoryFromString(mockFilterFactoryStr);
-    assertTrue(filterFactory instanceof org.lockss.test.MockFilterFactory);
+    FilterRule filterRule =
+      FilterRunner.filterRuleFromString(mockFilterRuleStr);
+    assertTrue(filterRule instanceof org.lockss.test.MockFilterRule);
   }
 
   public void testOneLevel() throws IOException {
     File src = getTempDir();
     File dest = getTempDir();
     File files[] = populateDir(src, "file", 3);
-    MyMockFilterFactory filter = new MyMockFilterFactory();
+    MyMockFilterRule filter = new MyMockFilterRule();
     filter.setString("Test String");
     FilterRunner.filterDirectory(filter, src, dest);
 
@@ -203,7 +205,7 @@ public class TestFilterRunner extends LockssTestCase {
     File src = getTempDir();
     File dest = getTempDir();
     File files[] = populateDir(src, "file", 3, "dir", 4);
-    MyMockFilterFactory filter = new MyMockFilterFactory();
+    MyMockFilterRule filter = new MyMockFilterRule();
     filter.setString("Test String");
     FilterRunner.filterDirectory(filter, src, dest);
 
@@ -214,14 +216,14 @@ public class TestFilterRunner extends LockssTestCase {
     }
   }
 
-  //tests for filterSingleFile(FilterFactory, File, File)
-  public void testThrowsOnNullFilterFactory()
+  //tests for filterSingleFile(FilterRule, File, File)
+  public void testThrowsOnNullFilterRule()
       throws FileNotFoundException, IOException {
     try {
-      FilterRunner.filterSingleFile((FilterFactory)null,
+      FilterRunner.filterSingleFile((FilterRule)null,
 				    new MockFile("blah"),
 				    new MockFile("blah2"));
-      fail("Calling filterSingleFile with a null FilterFactory "
+      fail("Calling filterSingleFile with a null FilterRule "
 	   +"should have thrown");
     } catch (IllegalArgumentException e) {
     }
@@ -230,7 +232,7 @@ public class TestFilterRunner extends LockssTestCase {
   public void testThrowsOnNullSrc()
       throws FileNotFoundException, IOException {
     try {
-      FilterRunner.filterSingleFile(new MockFilterFactory(),
+      FilterRunner.filterSingleFile(new MockFilterRule(),
 				    null,
 				    new MockFile("blah2"));
       fail("Calling filterSingleFile with a null source file "
@@ -242,7 +244,7 @@ public class TestFilterRunner extends LockssTestCase {
   public void testThrowsOnSrcOtherThanFile()
       throws FileNotFoundException, IOException {
     try {
-      FilterRunner.filterSingleFile(new MockFilterFactory(),
+      FilterRunner.filterSingleFile(new MockFilterRule(),
 				    new MockFile("blah"),
 				    new MockFile("blah2"));
       fail("Calling filterSingleFile with a src file that returns false "
@@ -254,7 +256,7 @@ public class TestFilterRunner extends LockssTestCase {
   public void testThrowsOnNullDest()
       throws FileNotFoundException, IOException {
     try {
-      FilterRunner.filterSingleFile(new MockFilterFactory(),
+      FilterRunner.filterSingleFile(new MockFilterRule(),
 				    new MockFile("blah"),
 				    null);
       fail("Calling filterSingleFile with a null destination file "
@@ -269,9 +271,9 @@ public class TestFilterRunner extends LockssTestCase {
     File dummy = new File(getTempDir(), "dummy");
     assertTrue("Couldn't create "+dummy, dummy.createNewFile());
     File destFile = new File(tmpDir, "testFile");
-    MockFilterFactory filter = new MockFilterFactory();
-    InputStream in = new StringInputStream("Test String");
-    filter.setFilteredInputStream(in);
+    MockFilterRule filter = new MockFilterRule();
+    Reader reader = new StringReader("Test String");
+    filter.setFilteredReader(reader);
 
     FilterRunner.filterSingleFile(filter, dummy, destFile);
     assertFileExists(destFile);
@@ -283,9 +285,9 @@ public class TestFilterRunner extends LockssTestCase {
     File tmpDir = getTempDir();
     File dummy = new File(getTempDir(), "dummy");
     assertTrue("Couldn't create "+dummy, dummy.createNewFile());
-    MockFilterFactory filter = new MockFilterFactory();
-    InputStream in = new StringInputStream("Test String");
-    filter.setFilteredInputStream(in);
+    MockFilterRule filter = new MockFilterRule();
+    Reader reader = new StringReader("Test String");
+    filter.setFilteredReader(reader);
 
     FilterRunner.filterSingleFile(filter, dummy, tmpDir);
 
@@ -298,13 +300,13 @@ public class TestFilterRunner extends LockssTestCase {
     assertTrue("File: "+file+" doesn't exist", file.exists());
   }
 
-  //tests for filterSingleFile(FilterFactory, Reader, OutputStream)
-//   public void testStreamThrowsOnNullFilterFactory() throws IOException {
+  //tests for filterSingleFile(FilterRule, Reader, OutputStream)
+//   public void testStreamThrowsOnNullFilterRule() throws IOException {
 //     try {
 //       FilterRunner.filterSingleFile(null,
 // 				    new StringReader("blah"),
 // 				    new ByteArrayOutputStream());
-//       fail("Calling filterSingleFile with a null FilterFactory "
+//       fail("Calling filterSingleFile with a null FilterRule "
 // 	   +"should have thrown");
 //     } catch (IllegalArgumentException e) {
 //     }
@@ -312,7 +314,7 @@ public class TestFilterRunner extends LockssTestCase {
 
 //   public void testStreamThrowsOnNullInputStream() throws IOException {
 //     try {
-//       FilterRunner.filterSingleFile(new MockFilterFactory(),
+//       FilterRunner.filterSingleFile(new MockFilterRule(),
 // 				    null,
 // 				    new ByteArrayOutputStream());
 //       fail("Calling filterSingleFile with a null Reader "
@@ -323,7 +325,7 @@ public class TestFilterRunner extends LockssTestCase {
 
 //   public void testStreamThrowsOnNullOutputStream() throws IOException {
 //     try {
-//       FilterRunner.filterSingleFile(new MockFilterFactory(),
+//       FilterRunner.filterSingleFile(new MockFilterRule(),
 // 				    new StringReader("blah"),
 // 				    null);
 //       fail("Calling filterSingleFile with a null OutputStream "
@@ -335,7 +337,7 @@ public class TestFilterRunner extends LockssTestCase {
 //   public void testSingleFilter() throws IOException {
 //     InputStream filteredStream =
 //       new ReaderInputStream(new StringReader("Test String"));
-//     MockFilterFactory filter = new MockFilterFactory();
+//     MockFilterRule filter = new MockFilterRule();
 //     filter.setFilteredInputStream(filteredStream);
 //     StringWriter writer = new StringWriter();
 //     FilterRunner.filterSingleFile(filter,
@@ -346,32 +348,30 @@ public class TestFilterRunner extends LockssTestCase {
 //   }
 
 
-//   /**
-//    * Reader which fails if read or close are called
-//    */
-//   public class FailingReader extends Reader {
-//     public FailingReader() {
-//     }
+  /**
+   * Reader which fails if read or close are called
+   */
+  public class FailingReader extends Reader {
+    public FailingReader() {
+    }
 
-//     public int read(char[] buf, int len, int off) {
-//       fail("Shouldn't have been called");
-//       return -1;
-//     }
+    public int read(char[] buf, int len, int off) {
+      fail("Shouldn't have been called");
+      return -1;
+    }
 
-//     public void close() {
-//       fail("Shouldn't have been called");
-//     }
-//   }
+    public void close() {
+      fail("Shouldn't have been called");
+    }
+  }
 
-  public class MyMockFilterFactory extends MockFilterFactory {
+  public class MyMockFilterRule extends MockFilterRule {
     String str = null;
     public void setString(String str) {
       this.str = str;
     }
-    public InputStream createFilteredInputStream(ArchivalUnit au,
-						 InputStream inputStream,
-						 String encoding) {
-      return new StringInputStream(str);
+    public Reader createFilteredReader(Reader reader) {
+      return new StringReader(str);
     }
   }
 

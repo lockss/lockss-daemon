@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.23 2006-07-06 17:38:55 thib_gc Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.24 2006-09-16 22:55:22 tlipkis Exp $
  */
 
 /*
@@ -456,6 +456,34 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 	       org.lockss.plugin.definable.TestDefinableArchivalUnit.MyMockFilterRule);
   }
 
+  public void testConstructFilterFactoryMimeType() {
+    defMap.putString("text/html"+DefinableArchivalUnit.AU_FILTER_FACTORY_SUFFIX,
+		     "org.lockss.plugin.definable.TestDefinableArchivalUnit$MyMockFilterFactory");
+    assertTrue(cau.constructFilterFactory("text/html") instanceof
+	       org.lockss.plugin.definable.TestDefinableArchivalUnit.MyMockFilterFactory);
+  }
+
+  public void testConstructFilterFactoryMimeTypeSpace() {
+    defMap.putString("text/html"+DefinableArchivalUnit.AU_FILTER_FACTORY_SUFFIX,
+		     "org.lockss.plugin.definable.TestDefinableArchivalUnit$MyMockFilterFactory");
+    assertTrue(cau.constructFilterFactory(" text/html ") instanceof
+	       org.lockss.plugin.definable.TestDefinableArchivalUnit.MyMockFilterFactory);
+  }
+
+  public void testConstructFilterFactoryContentType() {
+    defMap.putString("text/html"+DefinableArchivalUnit.AU_FILTER_FACTORY_SUFFIX,
+		     "org.lockss.plugin.definable.TestDefinableArchivalUnit$MyMockFilterFactory");
+    assertTrue(cau.constructFilterFactory("text/html ; random-char-set") instanceof
+	       org.lockss.plugin.definable.TestDefinableArchivalUnit.MyMockFilterFactory);
+  }
+
+  public void testConstructFilterFactoryContentTypeSpace() {
+    defMap.putString("text/html"+DefinableArchivalUnit.AU_FILTER_FACTORY_SUFFIX,
+		     "org.lockss.plugin.definable.TestDefinableArchivalUnit$MyMockFilterFactory");
+    assertTrue(cau.constructFilterFactory(" text/html ; random-char-set") instanceof
+	       org.lockss.plugin.definable.TestDefinableArchivalUnit.MyMockFilterFactory);
+  }
+
 
   public static class PositiveCrawlRuleFactory
     implements CrawlRuleFromAuFactory {
@@ -478,5 +506,11 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 
   }
 
-
+  public static class MyMockFilterFactory implements FilterFactory {
+    public InputStream createFilteredInputStream(ArchivalUnit au,
+						 InputStream in,
+						 String encoding) {
+      throw new UnsupportedOperationException("not implemented");
+    }
+  }
 }

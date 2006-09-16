@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrl.java,v 1.25 2006-05-27 06:36:04 tlipkis Exp $
+ * $Id: BaseCachedUrl.java,v 1.26 2006-09-16 22:55:22 tlipkis Exp $
  */
 
 /*
@@ -152,12 +152,16 @@ public class BaseCachedUrl implements CachedUrl {
     return rnc.getInputStream();
   }
 
+  private String getEncoding() {
+    return Constants.DEFAULT_ENCODING;
+  }
+
   public Reader openForReading() {
     ensureRnc();
     try {
       return
 	new BufferedReader(new InputStreamReader(rnc.getInputStream(),
-						 Constants.DEFAULT_ENCODING));
+						getEncoding()));
     } catch (IOException e) {
       // XXX Wrong Exception.  Should this method be declared to throw
       // UnsupportedEncodingException?
@@ -206,17 +210,33 @@ public class BaseCachedUrl implements CachedUrl {
     }
   }
 
-  private InputStream getFilteredStream() {
+  protected InputStream getFilteredStream() {
     CIProperties props = getProperties();
     String contentType = props.getProperty(PROPERTY_CONTENT_TYPE);
-    logger.debug3("Getting filtered stream for "+contentType);
+    // first look for a FilterFactory
+    FilterFactory fact = au.getFilterFactory(contentType);
+    if (fact != null) {
+      if (logger.isDebug3()) {
+	logger.debug3("Filtering " + contentType +
+		      " with " + fact.getClass().getName());
+      }
+      InputStream in =
+	fact.createFilteredInputStream(au,
+				       getUnfilteredInputStream(),
+				       getEncoding());
+      return in;
+    }
+    // then look for deprecated FilterRule
     FilterRule fr = au.getFilterRule(contentType);
     if (fr != null) {
+      if (logger.isDebug3()) {
+	logger.debug3("Filtering " + contentType +
+		      " with " + fr.getClass().getName());
+      }
       Reader rd = fr.createFilteredReader(openForReading());
       return new ReaderInputStream(rd);
-    } else {
-      logger.debug2("No FilterRule, not filtering");
     }
+    if (logger.isDebug3()) logger.debug3("Not filtering " + contentType);
     return getUnfilteredInputStream();
   }
 

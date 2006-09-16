@@ -1,5 +1,5 @@
 /*
- * $Id: FilterRunner.java,v 1.3 2006-07-11 17:42:24 thib_gc Exp $
+ * $Id: FilterRunner.java,v 1.4 2006-09-16 22:55:22 tlipkis Exp $
  */
 
 /*
@@ -104,6 +104,72 @@ public class FilterRunner {
     return (FilterRule)filterRuleClass.newInstance();
   }
 
+  public static void filterDirectory(FilterFactory filter, File srcDir,
+				     File destDir)
+      throws FileNotFoundException, IOException {
+    if (filter == null) {
+      throw new IllegalArgumentException("Called with null filter");
+    } else if (srcDir == null) {
+      throw new IllegalArgumentException("Called with null source dir");
+    } else if (!srcDir.isDirectory()) {
+      throw new IllegalArgumentException("Called with src that isn't a directory: "+srcDir);
+    } else if (destDir == null) {
+      throw new IllegalArgumentException("Called with null dest directory");
+    } else if (destDir.exists() && !destDir.isDirectory()) {
+      throw new IllegalArgumentException("Called with dest that isn't a directory: "+destDir);
+    }
+
+    if (!destDir.exists()) {
+      destDir.mkdir();
+    }
+
+    File children[] = srcDir.listFiles();
+    for (int ix=0; ix<children.length; ix++) {
+      if (children[ix].isFile()) {
+	filterSingleFile(filter, children[ix], destDir);
+      } else if (children[ix].isDirectory()) {
+	String childDir = children[ix].getPath();
+	childDir = childDir.substring(childDir.lastIndexOf(File.separator));
+	File newDestDir = new File(destDir.getPath()+File.separator+childDir);
+	newDestDir.mkdir();
+	filterDirectory(filter, children[ix], newDestDir);
+      }
+    }
+  }
+
+  public static void filterSingleFile(FilterFactory filter,
+				      File src, File dest)
+      throws FileNotFoundException, IOException {
+    if (filter == null) {
+      throw new IllegalArgumentException("Called with null filter");
+    } else if (src == null) {
+      throw new IllegalArgumentException("Called with null source file");
+    } else if (dest == null) {
+      throw new IllegalArgumentException("Called with null dest file");
+    } else if (!src.isFile()) {
+      throw new IllegalArgumentException("Called with src that isn't a file");
+    }
+    if (dest.isDirectory()) {
+      String file = src.getPath();
+      file = file.substring(file.lastIndexOf(File.separator));
+      dest = new File(dest, file);
+    }
+//     System.out.println("Filtering "+src+" to "+dest);
+    InputStream in = new BufferedInputStream(new FileInputStream(src));
+    dest.createNewFile();
+    OutputStream out = new FileOutputStream(dest);
+    StreamUtil.copy(filter.createFilteredInputStream(null, in,
+						     Constants.DEFAULT_ENCODING),
+		    out);
+  }
+
+  public static FilterFactory filterFactoryFromString(String filterStr)
+      throws ClassNotFoundException, InstantiationException,
+	     IllegalAccessException {
+    Class filterFactoryClass = Class.forName(filterStr);
+    return (FilterFactory)filterFactoryClass.newInstance();
+  }
+
   public static void main(String args[]) {
     String src = args[0];
     String dest = args[1];
@@ -113,7 +179,12 @@ public class FilterRunner {
       FilterRule filter = filterRuleFromString(filterStr);
       filterDirectory(filter, new File(src), new File(dest));
     } catch (Exception e) {
-      e.printStackTrace();
+      try {
+	FilterFactory filter = filterFactoryFromString(filterStr);
+	filterDirectory(filter, new File(src), new File(dest));
+      } catch (Exception e1) {
+	e1.printStackTrace();
+      }
     }
   }
 }

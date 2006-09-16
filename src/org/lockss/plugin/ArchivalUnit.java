@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.35 2006-07-17 05:12:41 tlipkis Exp $
+ * $Id: ArchivalUnit.java,v 1.36 2006-09-16 22:55:22 tlipkis Exp $
  */
 
 /*
@@ -64,9 +64,6 @@ public interface ArchivalUnit {
   public String AU_MAX_SIZE_KEY = "au_maxsize";
   public String AU_MAX_FILE_SIZE_KEY = "au_max_file_size";
   public String AU_TITLE = "au_title";
-
-  public String AU_PARSER_SUFFIX = "_parser";
-  public String AU_FILTER_SUFFIX = "_filter";
 
 
   /**
@@ -209,6 +206,15 @@ public interface ArchivalUnit {
    * is none
    */
   public FilterRule getFilterRule(String contentType);
+
+  /**
+   * Return the {@link FilterFactory} for the given contentType or null if
+   * there is none
+   * @param contentType content type of the content we are going to filter
+   * @return {@link FilterFactory} for the given contentType or null if
+   * there is none
+   */
+  public FilterFactory getFilterFactory(String contentType);
 
   /**
    * Create a {@link CachedUrlSet}representing the content

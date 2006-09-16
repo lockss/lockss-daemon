@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArchivalUnit.java,v 1.33 2006-07-21 07:51:16 tlipkis Exp $
+ * $Id: TestBaseArchivalUnit.java,v 1.34 2006-09-16 22:55:22 tlipkis Exp $
  */
 
 /*
@@ -463,9 +463,21 @@ public class TestBaseArchivalUnit extends LockssTestCase {
   }
 
   public void testConstructFilterRule() {
-    String mimeType = "text/html";
-    FilterRule actualReturn = mbau.constructFilterRule(mimeType);
-    assertNull("return value", actualReturn);
+    assertNull(mbau.getFilterRule("text/html"));
+    assertEquals(1, mbau.ruleCacheMiss);
+  }
+
+  public void testGetFilterRule() {
+    assertNull(mbau.getFilterRule("text/html"));
+  }
+
+  public void testConstructFilterFactory() {
+    assertNull(mbau.getFilterFactory("text/html"));
+    assertEquals(1, mbau.factoryCacheMiss);
+  }
+
+  public void testGetFilterFactory() {
+    assertNull(mbau.getFilterFactory("text/html"));
   }
 
   public void testGetCrawlSpec() throws ConfigurationException {
@@ -476,12 +488,6 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     Configuration config = ConfigurationUtil.fromProps(props);
     mbau.setBaseAuParams(config);
     assertNotNull(mbau.getCrawlSpec());
-  }
-
-  public void testGetFilterRule() {
-    String mimeType = "text/html";
-    FilterRule actualReturn = mbau.getFilterRule(mimeType);
-    assertNull("return value",actualReturn);
   }
 
   public void testGetNewContentCrawlUrls() throws ConfigurationException {
@@ -711,24 +717,51 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     rule2.setFilteredReader(new StringReader("rule2"));
 
     assertNull(mbau.rule);
-    assertEquals(0, mbau.cacheMiss);
+    assertEquals(0, mbau.ruleCacheMiss);
     assertNull(mbau.getFilterRule("test1"));
-    assertEquals(1, mbau.cacheMiss);
+    assertEquals(1, mbau.ruleCacheMiss);
     mbau.rule = rule1;
     assertNotNull(mbau.getFilterRule("test1"));
-    assertEquals(2, mbau.cacheMiss);
+    assertEquals(2, mbau.ruleCacheMiss);
     mbau.rule = rule2;
     assertNotNull(mbau.getFilterRule("test2"));
-    assertEquals(3, mbau.cacheMiss);
+    assertEquals(3, mbau.ruleCacheMiss);
 
     rule1 = (MockFilterRule)mbau.getFilterRule("test2");
-    assertEquals(3, mbau.cacheMiss);
+    assertEquals(3, mbau.ruleCacheMiss);
     assertEquals("rule2", StringUtil.fromReader(
         rule1.createFilteredReader(null)));
     rule2 = (MockFilterRule)mbau.getFilterRule("test1");
-    assertEquals(3, mbau.cacheMiss);
+    assertEquals(3, mbau.ruleCacheMiss);
     assertEquals("rule1", StringUtil.fromReader(
         rule2.createFilteredReader(null)));
+  }
+
+  public void testFilterFactoryCaching() throws IOException {
+    MockFilterFactory factory1 = new MockFilterFactory();
+    factory1.setFilteredInputStream(new StringInputStream("factory1"));
+    MockFilterFactory factory2 = new MockFilterFactory();
+    factory2.setFilteredInputStream(new StringInputStream("factory2"));
+
+    assertNull(mbau.factory);
+    assertEquals(0, mbau.factoryCacheMiss);
+    assertNull(mbau.getFilterFactory("test1"));
+    assertEquals(1, mbau.factoryCacheMiss);
+    mbau.factory = factory1;
+    assertNotNull(mbau.getFilterFactory("test1"));
+    assertEquals(2, mbau.factoryCacheMiss);
+    mbau.factory = factory2;
+    assertNotNull(mbau.getFilterFactory("test2"));
+    assertEquals(3, mbau.factoryCacheMiss);
+
+    factory1 = (MockFilterFactory)mbau.getFilterFactory("test2");
+    assertEquals(3, mbau.factoryCacheMiss);
+    assertEquals("factory2", StringUtil.fromInputStream(
+        factory1.createFilteredInputStream(null, null, null)));
+    factory2 = (MockFilterFactory)mbau.getFilterFactory("test1");
+    assertEquals(3, mbau.factoryCacheMiss);
+    assertEquals("factory1", StringUtil.fromInputStream(
+        factory2.createFilteredInputStream(null, null, null)));
   }
 
   TitleConfig makeTitleConfig() {
@@ -868,8 +901,10 @@ public class TestBaseArchivalUnit extends LockssTestCase {
   static class MyMockBaseArchivalUnit extends BaseArchivalUnit {
     private String auId = null;
     private String m_name = "MockBaseArchivalUnit";
-    int cacheMiss = 0;
+    int ruleCacheMiss = 0;
+    int factoryCacheMiss = 0;
     FilterRule rule = null;
+    FilterFactory factory = null;
     private CrawlRule m_rules = null;
     private String m_startUrl ="http://www.example.com/index.html";
     private boolean setAuParams = false;
@@ -935,8 +970,13 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     }
 
     protected FilterRule constructFilterRule(String mimeType) {
-      cacheMiss++;
+      ruleCacheMiss++;
       return rule;
+    }
+
+    protected FilterFactory constructFilterFactory(String mimeType) {
+      factoryCacheMiss++;
+      return factory;
     }
 
     public TitleConfig getTitleConfig() {

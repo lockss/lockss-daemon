@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.108 2006-09-16 07:19:31 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.109 2006-09-16 22:55:22 tlipkis Exp $
  */
 
 /*
@@ -703,9 +703,6 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     return null;
   }
 
-
-
-
   /**
    * Returns a filter rule from the cache if found, otherwise calls
    * 'constructFilterRule()' and caches the result if non-null.  Content-type
@@ -715,8 +712,9 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    */
   public FilterRule getFilterRule(String contentType) {
     if (contentType != null) {
-      FilterRule rule = (FilterRule)filterMap.get(contentType);
-      if (rule==null) {
+      Object obj = filterMap.get(contentType);
+      FilterRule rule = null;
+      if (obj==null) {
         rule = constructFilterRule(contentType);
         if (rule != null) {
 	  if (logger.isDebug3()) logger.debug3(contentType + " filter: " +
@@ -725,6 +723,8 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
         } else {
 	  if (logger.isDebug3()) logger.debug3("No filter for "+contentType);
 	}
+      } else if (obj instanceof FilterRule) {
+	rule = (FilterRule)obj;
       }
       return rule;
     }
@@ -739,6 +739,48 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    */
   protected FilterRule constructFilterRule(String contentType) {
     logger.debug3("constructFilterRule default: null");
+    return null;
+  }
+
+  /**
+   * Returns a filter factory from the cache if found, otherwise calls
+   * 'constructFilterFactory()' and caches the result if non-null.
+   * Content-type is converted to lowercase.  If contenttype is null,
+   * returns null.
+   * @param contentType the content type
+   * @param encoding the character encoding to use if necessary to read
+   * characters from the source InputStream, or null if unknown.
+   * @return the FilterFactory
+   */
+  public FilterFactory getFilterFactory(String contentType) {
+    if (contentType != null) {
+      Object obj = filterMap.get(contentType);
+      FilterFactory factory = null;
+      if (obj==null) {
+        factory = constructFilterFactory(contentType);
+        if (factory != null) {
+	  if (logger.isDebug3()) logger.debug3(contentType + " filter: " +
+					       factory);
+          filterMap.put(contentType, factory);
+        } else {
+	  if (logger.isDebug3()) logger.debug3("No filter for "+contentType);
+	}
+      } else if (obj instanceof FilterFactory) {
+	factory = (FilterFactory)obj;
+      }
+      return factory;
+    }
+    logger.debug3("getFilterFactory: null content type");
+    return null;
+  }
+
+  /**
+   * Override to provide proper filter factories.
+   * @param contentType content type
+   * @return null, since we don't filter by default
+   */
+  protected FilterFactory constructFilterFactory(String contentType) {
+    logger.debug3("constructFilterFactory default: null");
     return null;
   }
 
