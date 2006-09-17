@@ -1,5 +1,5 @@
 /*
- * $Id: TestFilterUtil.java,v 1.1 2006-09-16 22:55:44 tlipkis Exp $
+ * $Id: TestFilterUtil.java,v 1.2 2006-09-17 07:24:46 tlipkis Exp $
  */
 
 /*
@@ -59,5 +59,13 @@ public class TestFilterUtil extends LockssTestCase {
     assertTrue(utf.aliases().contains(rdr.getEncoding()));
     rdr = (InputStreamReader)FilterUtil.getReader(in, "NoSuchCharset");
     assertTrue(def.aliases().contains(rdr.getEncoding()));
+  }
+
+  public void testGetReaderShortcut() throws Exception {
+    StringReader rdr = new StringReader("foo");
+    ReaderInputStream in = new ReaderInputStream(rdr);
+    Reader r2 = FilterUtil.getReader(in, null);
+    assertSame(rdr, r2);
+    assertReaderMatchesString("foo", r2);
   }
 }
