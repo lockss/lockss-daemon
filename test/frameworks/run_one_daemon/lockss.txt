@@ -20,7 +20,7 @@ org.lockss.platform.diskSpacePaths=./cache
 #lockss state settings
 #org.lockss.history.location=./history
 
-org.lockss.parameterReloadInterval = 600000
+org.lockss.config.reloadInterval = 30m
 
 #hasher settings
 #org.lockss.hasher.numSteps
