@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.66 2006-08-26 19:41:53 tlipkis Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.67 2006-09-17 07:26:26 tlipkis Exp $
  */
 
 /*
@@ -247,13 +247,17 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       ConfigurationUtil.setCurrentConfigFromProps(cprops);
     }
 
-    private void assertDoesCrawlNew() {
+    private void assertDoesCrawlNew(MockCrawler crawler) {
       crawler.setDoCrawlCalled(false);
       SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
       crawlManager.startNewContentCrawl(mau, new TestCrawlCB(sem), null, null);
       waitForCrawlToFinish(sem);
       assertTrue("doCrawl() not called at time " + TimeBase.nowMs(),
 		 crawler.doCrawlCalled());
+    }
+
+    private void assertDoesCrawlNew() {
+      assertDoesCrawlNew(crawler);
     }
 
     private void assertDoesNotCrawlNew() {
@@ -295,13 +299,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     }
 
     public void testDoesntNCCrawlWhenOutsideWindow() {
-      crawlSpec.setCrawlWindow(new CrawlWindow() {
-	  public boolean canCrawl() {
-	    return false;
-	  }
-	  public boolean canCrawl(Date x) {
-	    return false;
-	  }});
+      crawlSpec.setCrawlWindow(new ClosedCrawlWindow());
       assertDoesNotCrawlNew();
     }
 
@@ -325,6 +323,27 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       assertDoesCrawlNew();
       assertDoesNotCrawlNew();
       TimeBase.step(5);
+      assertDoesCrawlNew();
+      assertDoesCrawlNew();
+    }
+
+    public void testNewContentRateLimiterWindowClose() {
+      TimeBase.setSimulated(100);
+      CrawlSpec cspec2 = new SpiderCrawlSpec("two", new MockCrawlRule());
+      mau.setCrawlSpec(cspec2);
+      setNewContentRateLimit("1/10", "unlimited");
+      assertDoesCrawlNew();
+      assertDoesNotCrawlNew();
+      TimeBase.step(10);
+      assertDoesCrawlNew();
+      assertDoesNotCrawlNew();
+      TimeBase.step(10);
+
+      MockCrawler c2 = new CloseWindowCrawler();
+      crawlManager.setTestCrawler(mau, c2);
+      assertDoesCrawlNew(c2);
+      cspec2.setCrawlWindow(null);
+      crawlManager.setTestCrawler(mau, null);
       assertDoesCrawlNew();
     }
 
@@ -1095,6 +1114,27 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     public boolean doCrawl() {
       sem.give();
       return true;
+    }
+  }
+
+  private static class CloseWindowCrawler extends MockCrawler {
+    public CloseWindowCrawler() {
+    }
+
+    public boolean doCrawl() {
+      super.doCrawl();
+      CrawlSpec spec = getAu().getCrawlSpec();
+      spec.setCrawlWindow(new ClosedCrawlWindow());
+      return false;
+    }
+  }
+
+  private static class ClosedCrawlWindow implements CrawlWindow {
+    public boolean canCrawl() {
+      return false;
+    }
+    public boolean canCrawl(Date x) {
+      return false;
     }
   }
 

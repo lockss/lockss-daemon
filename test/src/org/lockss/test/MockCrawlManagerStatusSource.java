@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawlManagerStatusSource.java,v 1.6 2006-04-11 08:33:33 tlipkis Exp $
+ * $Id: MockCrawlManagerStatusSource.java,v 1.7 2006-09-17 07:26:26 tlipkis Exp $
  */
 
 /*
@@ -72,6 +72,10 @@ public class MockCrawlManagerStatusSource
 
   public LockssDaemon getDaemon() {
     return daemon;
+  }
+
+  public boolean isCrawlerEnabled() {
+    return true;
   }
 
   static class MyCrawlManagerStatus extends CrawlManagerStatus {

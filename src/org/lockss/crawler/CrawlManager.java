@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManager.java,v 1.28 2006-05-24 23:04:05 tlipkis Exp $
+ * $Id: CrawlManager.java,v 1.29 2006-09-17 07:26:27 tlipkis Exp $
  */
 
 /*
@@ -97,5 +97,8 @@ public interface CrawlManager {
 
     /** Return the dameon instance */
     public LockssDaemon getDaemon();
+
+    /** Return true if the crawler is enabled */
+    public boolean isCrawlerEnabled();
   }
 }
