@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.34 2006-06-08 06:03:40 tlipkis Exp $
+ * $Id: ServletUtil.java,v 1.35 2006-09-17 07:25:28 tlipkis Exp $
  */
 
 /*
@@ -822,7 +822,7 @@ public class ServletUtil {
 
         tbl.newRow();
         tbl.newCell(ALIGN_LEFT); // "Repository"
-        tbl.add(radioButton(servlet, repo, repoTag, first));
+        tbl.add(radioButton(servlet, repoTag, repo, first));
         if (df != null) {
           tbl.newCell(ALIGN_RIGHT); // "Size"
           tbl.add(SPACE);
