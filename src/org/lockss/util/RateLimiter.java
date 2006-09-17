@@ -1,5 +1,5 @@
 /*
- * $Id: RateLimiter.java,v 1.13 2006-09-16 07:33:50 tlipkis Exp $
+ * $Id: RateLimiter.java,v 1.14 2006-09-17 07:24:11 tlipkis Exp $
  */
 
 /*
@@ -311,6 +311,15 @@ public class RateLimiter {
     if (!isUnlimited()) {
       time[count] = TimeBase.nowMs();
       count = (count + 1) % events;
+    }
+  }
+
+  /** Cancel the occurrence of an event.  This is sometimes necessary if an
+   * event is aborted and should be allowed again soon. */
+  public synchronized void unevent() {
+    if (!isUnlimited()) {
+      count = (count == 0) ? events - 1 : count - 1;
+      time[count] = 0;
     }
   }
 

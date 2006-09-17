@@ -1,5 +1,5 @@
 /*
- * $Id: TestRateLimiter.java,v 1.11 2006-09-16 07:19:31 tlipkis Exp $
+ * $Id: TestRateLimiter.java,v 1.12 2006-09-17 07:24:11 tlipkis Exp $
  */
 
 /*
@@ -119,6 +119,31 @@ public class TestRateLimiter extends LockssTestCase {
     assertTrue(lim.isEventOk());
     lim.event();
     assertTrue(lim.isEventOk());
+    lim.unevent();
+    assertTrue(lim.isEventOk());
+  }
+
+  public void testSimple() {
+    TimeBase.setSimulated(1000);
+    RateLimiter lim = new RateLimiter(1, 10);
+    assertTrue(lim.isEventOk());
+    assertEquals(0, lim.timeUntilEventOk());
+    lim.event();
+    assertFalse(lim.isEventOk());
+    assertEquals(10, lim.timeUntilEventOk());
+    TimeBase.step(10);
+    assertTrue(lim.isEventOk());
+    assertEquals(0, lim.timeUntilEventOk());
+    lim.event();
+    assertFalse(lim.isEventOk());
+    assertEquals(10, lim.timeUntilEventOk());
+
+    lim.unevent();
+    assertTrue(lim.isEventOk());
+    assertEquals(0, lim.timeUntilEventOk());
+    lim.event();
+    assertFalse(lim.isEventOk());
+    assertEquals(10, lim.timeUntilEventOk());
   }
 
   public void testLimit() {
@@ -138,6 +163,13 @@ public class TestRateLimiter extends LockssTestCase {
     assertEquals(1, lim.timeUntilEventOk());
     TimeBase.step(1);
     assertTrue(lim.isEventOk());
+    lim.event();
+    assertFalse(lim.isEventOk());
+    assertEquals(5, lim.timeUntilEventOk());
+
+    lim.unevent();
+    assertTrue(lim.isEventOk());
+    assertEquals(0, lim.timeUntilEventOk());
     lim.event();
     assertFalse(lim.isEventOk());
     assertEquals(5, lim.timeUntilEventOk());
