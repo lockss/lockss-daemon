@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.65 2006-07-17 05:07:14 tlipkis Exp $
+ * $Id: DaemonStatus.java,v 1.66 2006-09-17 07:25:38 tlipkis Exp $
  */
 
 /*
@@ -606,8 +606,11 @@ public class DaemonStatus extends LockssServlet {
 	  itemtab.newCell("valign=top");
 	  itemtab.add(sb.toString());
 	}
-	itemtab.newCell();
-	itemtab.add(getDisplayString(sInfo.getValue(), sInfo.getType()));
+	Object sval = sInfo.getValue();
+	if (sval != null) {
+	  itemtab.newCell();
+	  itemtab.add(getDisplayString(sval, sInfo.getType()));
+	}
 	table.add(itemtab);
       }
       table.newRow();
