@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.30 2006-09-02 00:18:11 thib_gc Exp $
+ * $Id: V3Poller.java,v 1.31 2006-09-18 16:27:56 tlipkis Exp $
  */
 
 /*
@@ -333,7 +333,8 @@ public class V3Poller extends BasePoll {
                              estimatedHashDuration,
                              tc, this) {
       public int step(int n) {
-        // do nothing... yet!
+	// finish immediately, in case we start running
+	setFinished();
         return n;
       }
     };

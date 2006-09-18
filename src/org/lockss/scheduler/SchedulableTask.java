@@ -1,5 +1,5 @@
 /*
- * $Id: SchedulableTask.java,v 1.12 2006-09-16 22:59:42 tlipkis Exp $
+ * $Id: SchedulableTask.java,v 1.13 2006-09-18 16:27:56 tlipkis Exp $
  */
 
 /*
@@ -138,7 +138,7 @@ public class SchedulableTask {
     return finishDate != null;
   }
 
-  void setFinished() {
+  protected void setFinished() {
     finishDate = TimeBase.nowDate();
   }
 
