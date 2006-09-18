@@ -1,5 +1,5 @@
 /*
- * $Id: Logger.java,v 1.49 2006-09-18 22:30:46 tlipkis Exp $
+ * $Id: Logger.java,v 1.50 2006-09-18 22:41:50 tlipkis Exp $
  */
 
 /*
@@ -781,10 +781,6 @@ public class Logger {
   /** Log a level 3 debug message with an exception backtrace */
   public void debug3(String msg, Throwable e) {
     log(LEVEL_DEBUG3, msg, e);
-  }
-
-  public String toString() {
-    return "[Logger: " + name + "]";
   }
 
   // log level descriptor class
