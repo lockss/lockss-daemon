@@ -1,5 +1,5 @@
 /*
- * $Id: UrlCacher.java,v 1.25 2006-08-09 02:04:04 tlipkis Exp $
+ * $Id: UrlCacher.java,v 1.26 2006-09-18 22:30:46 tlipkis Exp $
  */
 
 /*
@@ -202,6 +202,9 @@ public interface UrlCacher {
     }
     public int getOptions() {
       return options;
+    }
+    public String toString() {
+      return Integer.toString(options);
     }
   }
 }
