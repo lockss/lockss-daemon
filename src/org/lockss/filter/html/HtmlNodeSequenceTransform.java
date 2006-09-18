@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlNodeSequenceTransform.java,v 1.2 2006-08-26 19:42:20 tlipkis Exp $
+ * $Id: HtmlNodeSequenceTransform.java,v 1.1 2006-09-18 22:29:01 thib_gc Exp $
  */
 
 /*
@@ -30,7 +30,7 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.filter;
+package org.lockss.filter.html;
 
 import java.io.*;
 import java.util.List;

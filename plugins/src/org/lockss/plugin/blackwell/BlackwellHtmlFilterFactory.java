@@ -1,5 +1,5 @@
 /*
- * $Id: BlackwellHtmlFilterFactory.java,v 1.1 2006-09-16 22:50:43 tlipkis Exp $
+ * $Id: BlackwellHtmlFilterFactory.java,v 1.2 2006-09-18 22:29:01 thib_gc Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import org.htmlparser.filters.*;
 
 import org.lockss.util.*;
 import org.lockss.filter.*;
+import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 
 public class BlackwellHtmlFilterFactory implements FilterFactory {

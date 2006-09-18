@@ -1,5 +1,5 @@
 /*
- * $Id: TestHtmlCompoundTransform.java,v 1.1 2006-07-31 06:47:25 tlipkis Exp $
+ * $Id: HtmlTags.java,v 1.1 2006-09-18 22:29:01 thib_gc Exp $
  */
 
 /*
@@ -30,38 +30,50 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.filter;
+package org.lockss.filter.html;
 
-import java.io.*;
 import java.util.*;
-import org.lockss.util.*;
-import org.lockss.test.*;
-import org.htmlparser.*;
-import org.htmlparser.util.*;
-import org.htmlparser.filters.*;
+import org.htmlparser.tags.*;
 
-public class TestHtmlCompoundTransform extends LockssTestCase {
-  static Logger log = Logger.getLogger("TestHtmlCompoundTransform");
+/** Collection of additional simple HtmlParser tags */
+public class HtmlTags {
 
-  public void testIll() {
-    try {
-      HtmlNodeFilterTransform.include(null);
-      fail("null filter should throw");
-    } catch(IllegalArgumentException iae) {
+  /**
+   * An IFRAME tag.  Registered with PrototypicalNodeFactory to cause iframe
+   * to be a CompositeTag.  See code samples in org.htmlparser.tags.
+   */
+  public static class Iframe extends CompositeTag {
+    /**
+     * The set of names handled by this tag.
+     */
+    private static final String[] mIds = new String[] {"IFRAME"};
+
+    /**
+     * Create a new iframe tag.
+     */
+    public Iframe() {
     }
-  }
 
-  public void testCompound() throws IOException {
-    NodeList in1 = new NodeList();
-    NodeList out1 = new NodeList();
-    NodeList out2 = new NodeList();
-    MockHtmlTransform m1 = new MockHtmlTransform(ListUtil.list(out1));
-    MockHtmlTransform m2 = new MockHtmlTransform(ListUtil.list(out2));
+    /**
+     * Return the set of names handled by this tag.
+     * @return The names to be matched that create tags of this type.
+     */
+    public String[] getIds() {
+      return mIds;
+    }
+    /** Avoid deprecation warning
+     * @deprecated Use getAttributesEx() instead.
+     */
+    public Hashtable getAttributes () {
+      return super.getAttributes();
+    }
 
-    HtmlCompoundTransform xform = new HtmlCompoundTransform(m1, m2);
-    NodeList out = xform.transform(in1);
-    assertSame(in1, m1.getArg(0));
-    assertSame(out1, m2.getArg(0));
-    assertSame(out2, out);
+    /** Avoid deprecation warning
+     * @deprecated Use getAttributesEx() instead.
+     */
+    public void setAttributes (Hashtable attributes) {
+      super.setAttributes(attributes);
+    }
+
   }
 }

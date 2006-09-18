@@ -1,5 +1,5 @@
 /*
- * $Id: MockHtmlTransform.java,v 1.1 2006-07-31 06:47:25 tlipkis Exp $
+ * $Id$
  */
 
 /*
@@ -30,34 +30,39 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.filter;
+package org.lockss.filter.html;
 
 import java.io.*;
 import java.util.*;
 import org.lockss.util.*;
+import org.lockss.filter.html.*;
 import org.lockss.test.*;
 import org.htmlparser.*;
 import org.htmlparser.util.*;
 import org.htmlparser.filters.*;
 
-public class MockHtmlTransform implements HtmlTransform {
-  List args = new ArrayList();
-  List responses;
+public class TestHtmlCompoundTransform extends LockssTestCase {
+  static Logger log = Logger.getLogger("TestHtmlCompoundTransform");
 
-  public MockHtmlTransform(List responses) {
-    this.responses = responses;
+  public void testIll() {
+    try {
+      HtmlNodeFilterTransform.include(null);
+      fail("null filter should throw");
+    } catch(IllegalArgumentException iae) {
+    }
   }
 
-  public NodeList transform(NodeList nl) {
-    args.add(nl);
-    return (NodeList)responses.remove(0);
-  }
+  public void testCompound() throws IOException {
+    NodeList in1 = new NodeList();
+    NodeList out1 = new NodeList();
+    NodeList out2 = new NodeList();
+    MockHtmlTransform m1 = new MockHtmlTransform(ListUtil.list(out1));
+    MockHtmlTransform m2 = new MockHtmlTransform(ListUtil.list(out2));
 
-  public List getArgs() {
-    return args;
-  }
-
-  public NodeList getArg(int n) {
-    return (NodeList)args.get(n);
+    HtmlCompoundTransform xform = new HtmlCompoundTransform(m1, m2);
+    NodeList out = xform.transform(in1);
+    assertSame(in1, m1.getArg(0));
+    assertSame(out1, m2.getArg(0));
+    assertSame(out2, out);
   }
 }

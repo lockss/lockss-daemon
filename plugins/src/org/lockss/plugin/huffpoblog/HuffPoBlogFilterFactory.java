@@ -1,5 +1,5 @@
 /*
- * $Id: HuffPoBlogFilterFactory.java,v 1.1 2006-09-16 23:29:49 tlipkis Exp $
+ * $Id: HuffPoBlogFilterFactory.java,v 1.2 2006-09-18 22:29:00 thib_gc Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import org.htmlparser.filters.*;
 
 import org.lockss.util.*;
 import org.lockss.filter.*;
+import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 
 public class HuffPoBlogFilterFactory implements FilterFactory {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestHtmlTags.java,v 1.2 2006-09-16 23:34:28 tlipkis Exp $
+ * $Id: HtmlCompoundTransform.java,v 1.1 2006-09-18 22:29:01 thib_gc Exp $
  */
 
 /*
@@ -30,32 +30,40 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.filter;
+package org.lockss.filter.html;
 
 import java.io.*;
-import java.util.*;
-import org.lockss.util.*;
-import org.lockss.test.*;
+import java.util.List;
+
 import org.htmlparser.*;
-import org.htmlparser.util.*;
-import org.htmlparser.tags.*;
+import org.htmlparser.lexer.*;
 import org.htmlparser.filters.*;
+import org.htmlparser.util.*;
 
-public class TestHtmlTags extends LockssTestCase {
-  static Logger log = Logger.getLogger("TestHtmlTags");
+import org.lockss.config.*;
+import org.lockss.util.*;
 
-  // Ensure <iframe>...</iframe> gets parse as an HtmlTags.Iframe composite
-  // tag, not as the default sequence of TagNodes
-  public void testIframeTag() throws IOException {
-    String in = "<iframe src=\"http://foo.bar\"><i>iii</i></iframe>";
-    MockHtmlTransform xform =
-      new MockHtmlTransform(ListUtil.list(new NodeList()));
-    InputStream ins =
-      new HtmlFilterInputStream(new StringInputStream(in), xform);
-    assertInputStreamMatchesString("", ins);
-    NodeList nl = xform.getArg(0);
-    Node node = nl.elementAt(0);
-    assertTrue(node instanceof HtmlTags.Iframe);
-    assertEquals(1, nl.size());
+/**
+ * An HtmlTransform that applies a series of HtmlTransforms */
+
+public class HtmlCompoundTransform implements HtmlTransform {
+  private static Logger log = Logger.getLogger("HtmlCompoundTransform");
+
+  private HtmlTransform[] transforms;
+
+  public HtmlCompoundTransform(HtmlTransform t1, HtmlTransform t2) {
+    transforms = new HtmlTransform[] {t1, t2};
+  }
+
+  public HtmlCompoundTransform(HtmlTransform t1, HtmlTransform t2,
+			       HtmlTransform t3) {
+    transforms = new HtmlTransform[] {t1, t2, t3};
+  }
+
+  public NodeList transform(NodeList nodeList) throws IOException {
+    for (int ix = 0; ix < transforms.length; ix++) {
+      nodeList = transforms[ix].transform(nodeList);
+    }
+    return nodeList;
   }
 }

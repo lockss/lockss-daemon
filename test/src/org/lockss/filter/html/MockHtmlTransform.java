@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlTags.java,v 1.2 2006-08-07 18:47:10 tlipkis Exp $
+ * $Id$
  */
 
 /*
@@ -30,50 +30,35 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.filter;
+package org.lockss.filter.html;
 
+import java.io.*;
 import java.util.*;
-import org.htmlparser.tags.*;
+import org.lockss.util.*;
+import org.lockss.filter.html.HtmlTransform;
+import org.lockss.test.*;
+import org.htmlparser.*;
+import org.htmlparser.util.*;
+import org.htmlparser.filters.*;
 
-/** Collection of additional simple HtmlParser tags */
-public class HtmlTags {
+public class MockHtmlTransform implements HtmlTransform {
+  List args = new ArrayList();
+  List responses;
 
-  /**
-   * An IFRAME tag.  Registered with PrototypicalNodeFactory to cause iframe
-   * to be a CompositeTag.  See code samples in org.htmlparser.tags.
-   */
-  public static class Iframe extends CompositeTag {
-    /**
-     * The set of names handled by this tag.
-     */
-    private static final String[] mIds = new String[] {"IFRAME"};
+  public MockHtmlTransform(List responses) {
+    this.responses = responses;
+  }
 
-    /**
-     * Create a new iframe tag.
-     */
-    public Iframe() {
-    }
+  public NodeList transform(NodeList nl) {
+    args.add(nl);
+    return (NodeList)responses.remove(0);
+  }
 
-    /**
-     * Return the set of names handled by this tag.
-     * @return The names to be matched that create tags of this type.
-     */
-    public String[] getIds() {
-      return mIds;
-    }
-    /** Avoid deprecation warning
-     * @deprecated Use getAttributesEx() instead.
-     */
-    public Hashtable getAttributes () {
-      return super.getAttributes();
-    }
+  public List getArgs() {
+    return args;
+  }
 
-    /** Avoid deprecation warning
-     * @deprecated Use getAttributesEx() instead.
-     */
-    public void setAttributes (Hashtable attributes) {
-      super.setAttributes(attributes);
-    }
-
+  public NodeList getArg(int n) {
+    return (NodeList)args.get(n);
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlCompoundTransform.java,v 1.1 2006-07-31 06:47:26 tlipkis Exp $
+ * $Id: HtmlTransform.java,v 1.1 2006-09-18 22:29:01 thib_gc Exp $
  */
 
 /*
@@ -30,40 +30,24 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.filter;
+package org.lockss.filter.html;
 
-import java.io.*;
-import java.util.List;
-
-import org.htmlparser.*;
-import org.htmlparser.lexer.*;
-import org.htmlparser.filters.*;
+import java.io.IOException;
 import org.htmlparser.util.*;
 
-import org.lockss.config.*;
-import org.lockss.util.*;
-
 /**
- * An HtmlTransform that applies a series of HtmlTransforms */
+ * Interface for HTML parse tree transformers.  Operates on a {@link
+ * NodeList} produced by HTMLParser.
+ */
+public interface HtmlTransform {
 
-public class HtmlCompoundTransform implements HtmlTransform {
-  private static Logger log = Logger.getLogger("HtmlCompoundTransform");
-
-  private HtmlTransform[] transforms;
-
-  public HtmlCompoundTransform(HtmlTransform t1, HtmlTransform t2) {
-    transforms = new HtmlTransform[] {t1, t2};
-  }
-
-  public HtmlCompoundTransform(HtmlTransform t1, HtmlTransform t2,
-			       HtmlTransform t3) {
-    transforms = new HtmlTransform[] {t1, t2, t3};
-  }
-
-  public NodeList transform(NodeList nodeList) throws IOException {
-    for (int ix = 0; ix < transforms.length; ix++) {
-      nodeList = transforms[ix].transform(nodeList);
-    }
-    return nodeList;
-  }
+  /**
+   * Apply a transformation to a {@link NodeList}
+   * @param nodeList the nodeList
+   * @return the transformed Nodelist (either the input NodeList, modified,
+   * or a new NodeList)
+   * @throws IOException if any processing error occurs.
+   * @see org.htmlparser.filters
+   */
+  public NodeList transform(NodeList nodeList) throws IOException;
 }

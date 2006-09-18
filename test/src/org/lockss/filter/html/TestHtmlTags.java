@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlTransform.java,v 1.2 2006-08-26 19:42:20 tlipkis Exp $
+ * $Id: TestHtmlTags.java,v 1.1 2006-09-18 22:29:00 thib_gc Exp $
  */
 
 /*
@@ -30,24 +30,33 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.filter;
+package org.lockss.filter.html;
 
-import java.io.IOException;
+import java.io.*;
+import java.util.*;
+import org.lockss.util.*;
+import org.lockss.filter.html.*;
+import org.lockss.test.*;
+import org.htmlparser.*;
 import org.htmlparser.util.*;
+import org.htmlparser.tags.*;
+import org.htmlparser.filters.*;
 
-/**
- * Interface for HTML parse tree transformers.  Operates on a {@link
- * NodeList} produced by HTMLParser.
- */
-public interface HtmlTransform {
+public class TestHtmlTags extends LockssTestCase {
+  static Logger log = Logger.getLogger("TestHtmlTags");
 
-  /**
-   * Apply a transformation to a {@link NodeList}
-   * @param nodeList the nodeList
-   * @return the transformed Nodelist (either the input NodeList, modified,
-   * or a new NodeList)
-   * @throws IOException if any processing error occurs.
-   * @see org.htmlparser.filters
-   */
-  public NodeList transform(NodeList nodeList) throws IOException;
+  // Ensure <iframe>...</iframe> gets parse as an HtmlTags.Iframe composite
+  // tag, not as the default sequence of TagNodes
+  public void testIframeTag() throws IOException {
+    String in = "<iframe src=\"http://foo.bar\"><i>iii</i></iframe>";
+    MockHtmlTransform xform =
+      new MockHtmlTransform(ListUtil.list(new NodeList()));
+    InputStream ins =
+      new HtmlFilterInputStream(new StringInputStream(in), xform);
+    assertInputStreamMatchesString("", ins);
+    NodeList nl = xform.getArg(0);
+    Node node = nl.elementAt(0);
+    assertTrue(node instanceof HtmlTags.Iframe);
+    assertEquals(1, nl.size());
+  }
 }
