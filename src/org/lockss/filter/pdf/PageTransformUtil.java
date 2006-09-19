@@ -1,5 +1,5 @@
 /*
- * $Id: PageTransformUtil.java,v 1.2 2006-09-15 22:53:51 thib_gc Exp $
+ * $Id: PageTransformUtil.java,v 1.3 2006-09-19 16:54:53 thib_gc Exp $
  */
 
 /*
@@ -33,14 +33,49 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.filter.pdf;
 
 import java.io.IOException;
+import java.util.List;
 
 import org.lockss.util.*;
+import org.pdfbox.util.PDFOperator;
 
 /**
  * <p>Utility page transforms.</p>
  * @author Thib Guicherd-Callin
  */
 public class PageTransformUtil {
+
+  public static class ExtractText extends PageStreamTransform {
+
+    protected static class AppendToStringBuffer extends ProcessString {
+      public void processString(PageStreamTransform pageStreamTransform,
+                                PDFOperator operator,
+                                List operands,
+                                String str) {
+        pageStreamTransform.signalChange(); // At least one string processed
+        append(pageStreamTransform, str);
+      }
+    }
+
+    protected StringBuffer buffer;
+
+    public ExtractText(StringBuffer buffer) throws IOException {
+      super(PdfUtil.SHOW_TEXT, AppendToStringBuffer.class,
+            PdfUtil.SHOW_TEXT_GLYPH_POSITIONING, AppendToStringBuffer.class,
+            PdfUtil.MOVE_TO_NEXT_LINE_SHOW_TEXT, AppendToStringBuffer.class,
+            PdfUtil.SET_SPACING_MOVE_TO_NEXT_LINE_SHOW_TEXT, AppendToStringBuffer.class);
+      this.buffer = buffer;
+    }
+
+    protected synchronized void writeResult(PdfPage pdfPage) {
+      // Do nothing
+    }
+
+    protected static void append(PageStreamTransform pageStreamTransform, String str) {
+      ExtractText extractText = (ExtractText)pageStreamTransform;
+      extractText.buffer.append(str);
+    }
+
+  }
 
   /**
    * <p>A page transform that does nothing.</p>
@@ -54,17 +89,20 @@ public class PageTransformUtil {
     protected boolean returnValue;
 
     /**
-     * <p>Builds a new identity page transform that always
-     * succeeds.</p>
+     * <p>Builds a new identity page transform whose
+     * {@link #transform} method always returns the default
+     * result value.</p>
      * @see #IdentityPageTransform(boolean)
+     * @see #RESULT_DEFAULT
      */
     public IdentityPageTransform() {
-      this(true);
+      this(RESULT_DEFAULT);
     }
 
     /**
      * <p>Builds a new identity page transform whose
-     * {@link #transform} method always returns the given value.</p>
+     * {@link #transform} method always returns the given
+     * result value.</p>
      * @param returnValue The return value for {@link #transform}.
      */
     public IdentityPageTransform(boolean returnValue) {
@@ -73,9 +111,15 @@ public class PageTransformUtil {
 
     /* Inherit documentation */
     public boolean transform(PdfPage pdfPage) throws IOException {
-      logger.debug3("Indentity page transform: " + returnValue);
+      logger.debug2("Identity page transform result: " + returnValue);
       return returnValue;
     }
+
+    /**
+     * <p>The constant return value used by default by this class.</p>
+     * @see #IdentityPageTransform()
+     */
+    public static final boolean RESULT_DEFAULT = true;
 
   }
 
@@ -105,10 +149,6 @@ public class PageTransformUtil {
 
   /**
    * <p>A base wrapper for another page transform.</p>
-   * <p>The {@link PageTransformDecorator#transform} method in
-   * this class simply returns the result of calling
-   * {@link PageTransform#transform} on the underlying page
-   * transform.</p>
    * @author Thib Guicherd-Callin
    */
   public static abstract class PageTransformDecorator implements PageTransform {
@@ -148,12 +188,15 @@ public class PageTransformUtil {
 
     /* Inherit documentation */
     public boolean transform(PdfPage pdfPage) throws IOException {
+      logger.debug2("Begin strict page transform based on "
+                    + pageTransform.getClass().getName());
       if (pageTransform.transform(pdfPage)) {
+        logger.debug2("Strict page transform result: true");
         return true;
       }
       else {
-        throw new PageTransformException("Strict transform did not succeed: "
-                                         + pageTransform.getClass().getName());
+        logger.debug2("Strict page transform result: throw");
+        throw new PageTransformException("Strict page transform did not succeed");
       }
     }
 
@@ -164,10 +207,9 @@ public class PageTransformUtil {
    */
   private PageTransformUtil() { }
 
-
   /**
    * <p>A logger for use by this class.</p>
    */
-  protected static Logger logger = Logger.getLogger("PageTransformUtil");
+  private static Logger logger = Logger.getLogger("PageTransformUtil");
 
 }

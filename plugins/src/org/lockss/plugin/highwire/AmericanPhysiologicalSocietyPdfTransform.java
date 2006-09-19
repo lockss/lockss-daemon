@@ -1,5 +1,5 @@
 /*
- * $Id: AmericanPhysiologicalSocietyPdfTransform.java,v 1.15 2006-09-15 22:53:51 thib_gc Exp $
+ * $Id: AmericanPhysiologicalSocietyPdfTransform.java,v 1.16 2006-09-19 16:54:54 thib_gc Exp $
  */
 
 /*
@@ -53,7 +53,7 @@ public class AmericanPhysiologicalSocietyPdfTransform extends ConditionalDocumen
 
   public static class EraseDateString extends PageStreamTransform {
 
-    public static class ProcessDateString extends ProcessShowText {
+    public static class ProcessDateString extends ReplaceString {
       public String getReplacement(String match) {
         return " ";
       }

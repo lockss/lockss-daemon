@@ -1,5 +1,5 @@
 /*
- * $Id: AggregatePageTransform.java,v 1.3 2006-09-15 22:53:51 thib_gc Exp $
+ * $Id: AggregatePageTransform.java,v 1.4 2006-09-19 16:54:53 thib_gc Exp $
  */
 
 /*
@@ -59,39 +59,36 @@ public class AggregatePageTransform implements PageTransform {
   /**
    * <p>Builds a new aggregate page transform using the default
    * result policy.</p>
-   * @param resultPolicy   A result policy.
    * @see #AggregatePageTransform(ResultPolicy)
-   * @see #POLICY_BY_DEFAULT
+   * @see #POLICY_DEFAULT
    */
   public AggregatePageTransform() {
-    this(POLICY_BY_DEFAULT);
+    this(POLICY_DEFAULT);
   }
 
   /**
    * <p>Builds a new aggregate page transform using the default
    * result policy and registers the given page transforms.</p>
-   * @param resultPolicy   A result policy.
-   * @param pageTransform1 A page transform.
+   * @param pageTransform A page transform.
    * @see #AggregatePageTransform(ResultPolicy, PageTransform)
-   * @see #POLICY_BY_DEFAULT
+   * @see #POLICY_DEFAULT
    */
-  public AggregatePageTransform(PageTransform pageTransform1) {
-    this(POLICY_BY_DEFAULT,
-         pageTransform1);
+  public AggregatePageTransform(PageTransform pageTransform) {
+    this(POLICY_DEFAULT,
+         pageTransform);
   }
 
   /**
    * <p>Builds a new aggregate page transform using the default
    * result policy and registers the given page transforms.</p>
-   * @param resultPolicy   A result policy.
    * @param pageTransform1 A page transform.
    * @param pageTransform2 A page transform.
    * @see #AggregatePageTransform(ResultPolicy, PageTransform, PageTransform)
-   * @see #POLICY_BY_DEFAULT
+   * @see #POLICY_DEFAULT
    */
   public AggregatePageTransform(PageTransform pageTransform1,
                                 PageTransform pageTransform2) {
-    this(POLICY_BY_DEFAULT,
+    this(POLICY_DEFAULT,
          pageTransform1,
          pageTransform2);
   }
@@ -99,20 +96,31 @@ public class AggregatePageTransform implements PageTransform {
   /**
    * <p>Builds a new aggregate page transform using the default
    * result policy and registers the given page transforms.</p>
-   * @param resultPolicy   A result policy.
    * @param pageTransform1 A page transform.
    * @param pageTransform2 A page transform.
    * @param pageTransform3 A page transform.
    * @see #AggregatePageTransform(ResultPolicy, PageTransform, PageTransform, PageTransform)
-   * @see #POLICY_BY_DEFAULT
+   * @see #POLICY_DEFAULT
    */
   public AggregatePageTransform(PageTransform pageTransform1,
                                 PageTransform pageTransform2,
                                 PageTransform pageTransform3) {
-    this(POLICY_BY_DEFAULT,
+    this(POLICY_DEFAULT,
          pageTransform1,
          pageTransform2,
          pageTransform3);
+  }
+
+  /**
+   * <p>Builds a new aggregate transform using the default result
+   * policy and registers the given page transforms.</p>
+   * @param pageTransforms     An array of page transforms.
+   * @see #AggregatePageTransform(ResultPolicy, PageTransform[])
+   * @see #POLICY_DEFAULT
+   */
+  public AggregatePageTransform(PageTransform[] pageTransforms) {
+    this(POLICY_DEFAULT,
+         pageTransforms);
   }
 
   /**
@@ -121,6 +129,12 @@ public class AggregatePageTransform implements PageTransform {
    * @param resultPolicy   A result policy.
    */
   public AggregatePageTransform(ResultPolicy resultPolicy) {
+    if (resultPolicy == null) {
+      String logMessage = "Cannot specify a null result policy";
+      logger.error(logMessage);
+      throw new NullPointerException(logMessage);
+    }
+    logger.debug2("Setting up result policy " + resultPolicy.toString());
     this.resultPolicy = resultPolicy;
     this.pageTransforms = new ArrayList();
   }
@@ -129,13 +143,14 @@ public class AggregatePageTransform implements PageTransform {
    * <p>Builds a new aggregate page transform using the given
    * result policy and registers the given page transforms.</p>
    * @param resultPolicy   A result policy.
-   * @param pageTransform1 A page transform.
+   * @param pageTransform A page transform.
    * @see #AggregatePageTransform(ResultPolicy)
    */
   public AggregatePageTransform(ResultPolicy resultPolicy,
-                                PageTransform pageTransform1) {
+                                PageTransform pageTransform) {
     this(resultPolicy);
-    add(pageTransform1);
+    logger.debug2("Setting up first page transform");
+    add(pageTransform);
   }
 
   /**
@@ -151,6 +166,7 @@ public class AggregatePageTransform implements PageTransform {
                                 PageTransform pageTransform2) {
     this(resultPolicy,
          pageTransform1);
+    logger.debug2("Setting up second page transform");
     add(pageTransform2);
   }
 
@@ -170,7 +186,24 @@ public class AggregatePageTransform implements PageTransform {
     this(resultPolicy,
          pageTransform1,
          pageTransform2);
+    logger.debug2("Setting up third page transform");
     add(pageTransform3);
+  }
+
+  /**
+   * <p>Builds a new aggregate transform using the given result
+   * policy and registers the given page transforms.</p>
+   * @param resultPolicy       A result policy.
+   * @param pageTransforms     An array of page transforms.
+   * @see #AggregatePageTransform(ResultPolicy)
+   */
+  public AggregatePageTransform(ResultPolicy resultPolicy,
+                                PageTransform[] pageTransforms) {
+    this(resultPolicy);
+    for (int tra = 0 ; tra < pageTransforms.length ; ++tra) {
+      logger.debug2("Setting up page transform at index " + tra);
+      add(pageTransforms[tra]);
+    }
   }
 
   /**
@@ -182,19 +215,29 @@ public class AggregatePageTransform implements PageTransform {
    * @param pageTransform A {@link PageTransform} instance.
    */
   public synchronized void add(PageTransform pageTransform) {
+    if (pageTransform == null) {
+      String logMessage = "Cannot add a null page transform";
+      logger.error(logMessage);
+      throw new NullPointerException(logMessage);
+    }
     pageTransforms.add(pageTransform);
   }
 
   /* Inherit documentation */
   public boolean transform(PdfPage pdfPage) throws IOException {
+    logger.debug2("Begin aggregate page transform with result policy " + resultPolicy.toString());
     boolean success = resultPolicy.initialValue();
+    logger.debug3("Aggregate success flag initially " + success);
     for (Iterator iter = pageTransforms.iterator() ; iter.hasNext() ; ) {
       PageTransform pageTransform = (PageTransform)iter.next();
       success = resultPolicy.updateResult(success, pageTransform.transform(pdfPage));
+      logger.debug3("Aggregate success flag now " + success);
       if (!resultPolicy.shouldKeepGoing(success)) {
+        logger.debug3("Aggregation should not keep going");
         break;
       }
     }
+    logger.debug2("Aggregate page transform result: " + success);
     return success;
   }
 
@@ -204,12 +247,13 @@ public class AggregatePageTransform implements PageTransform {
    * @see #AggregatePageTransform(PageTransform)
    * @see #AggregatePageTransform(PageTransform, PageTransform)
    * @see #AggregatePageTransform(PageTransform, PageTransform, PageTransform)
+   * @see #AggregatePageTransform(PageTransform[])
    */
-  public static final ResultPolicy POLICY_BY_DEFAULT = PdfUtil.AND;
+  public static final ResultPolicy POLICY_DEFAULT = PdfUtil.AND;
 
   /**
    * <p>A logger for use by this class.</p>
    */
-  protected static Logger logger = Logger.getLogger("AggregatePageTransform");
+  private static Logger logger = Logger.getLogger("AggregatePageTransform");
 
 }

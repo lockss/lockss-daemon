@@ -1,5 +1,5 @@
 /*
- * $Id: ConditionalPageTransform.java,v 1.3 2006-09-15 22:53:51 thib_gc Exp $
+ * $Id: ConditionalPageTransform.java,v 1.4 2006-09-19 16:54:53 thib_gc Exp $
  */
 
 /*
@@ -35,7 +35,7 @@ package org.lockss.filter.pdf;
 import java.io.IOException;
 
 import org.lockss.filter.pdf.PageTransformUtil.*;
-import org.lockss.util.PdfPage;
+import org.lockss.util.*;
 import org.lockss.util.PdfUtil.ResultPolicy;
 
 /**
@@ -65,6 +65,21 @@ public class ConditionalPageTransform extends PageTransformDecorator {
                                      !thenStrictness || thenTransform instanceof StrictPageTransform
                                      ? thenTransform
                                      : new StrictPageTransform(thenTransform)));
+    if (logger.isDebug2()) {
+      StringBuffer buffer = new StringBuffer();
+      buffer.append("Done setting up conditional page transform ");
+      if (thenTransform instanceof StrictPageTransform) {
+        buffer.append("with existing");
+      }
+      else if (thenStrictness) {
+        buffer.append("with added");
+      }
+      else {
+        buffer.append("without");
+      }
+      buffer.append(" \"then\" strictness");
+      logger.debug2(buffer.toString());
+    }
   }
 
   /**
@@ -91,6 +106,30 @@ public class ConditionalPageTransform extends PageTransformDecorator {
          thenStrictness,
          new AggregatePageTransform(thenTransform1,
                                     thenTransform2));
+    logger.debug2("Implicitly aggregated two \"then\" transforms");
+  }
+
+  /**
+   * <p>Builds a new conditional page transform using the given
+   * strictness, out of the given "if" page transform and the
+   * aggregation of the given "then" page transforms (using the
+   * default aggregation result policy).</p>
+   * @param ifTransform      An "if" page transform.
+   * @param thenStrictness   True to wrap the aggregated "then"
+   *                        page transform as a
+   *                         {@link StrictPageTransform}, false
+   *                         otherwise.
+   * @param thenTransforms   An array of "then" page transforms.
+   * @see #ConditionalPageTransform(PageTransform, boolean, PageTransform)
+   * @see AggregatePageTransform#AggregatePageTransform(PageTransform[])
+   */
+  public ConditionalPageTransform(PageTransform ifTransform,
+                                  boolean thenStrictness,
+                                  PageTransform[] thenTransforms) {
+    this(ifTransform,
+         thenStrictness,
+         new AggregatePageTransform(thenTransforms));
+    logger.debug2("Implicitly aggregated " + thenTransforms.length + " \"then\" transforms");
   }
 
   /**
@@ -119,6 +158,34 @@ public class ConditionalPageTransform extends PageTransformDecorator {
          new AggregatePageTransform(thenResultPolicy,
                                     thenTransform1,
                                     thenTransform2));
+    logger.debug2("Implicitly aggregated three \"then\" transforms");
+  }
+
+  /**
+   * <p>Builds a new conditional page transform using the given
+   * strictness, out of the given "if" page transform and the
+   * aggregation of the given "then" page transforms (using the
+   * given aggregation result policy).</p>
+   * @param ifTransform      An "if" page transform.
+   * @param thenStrictness   True to wrap the aggregated "then"
+   *                        page transform as a
+   *                         {@link StrictPageTransform}, false
+   *                         otherwise.
+   * @param thenResultPolicy A result policy for the aggregate "then"
+   *                         page transform.
+   * @param thenTransforms   An array of "then" page transforms.
+   * @see #ConditionalPageTransform(PageTransform, boolean, PageTransform)
+   * @see AggregatePageTransform#AggregatePageTransform(ResultPolicy, PageTransform[])
+   */
+  public ConditionalPageTransform(PageTransform ifTransform,
+                                  boolean thenStrictness,
+                                  ResultPolicy thenResultPolicy,
+                                  PageTransform[] thenTransforms) {
+    this(ifTransform,
+         thenStrictness,
+         new AggregatePageTransform(thenResultPolicy,
+                                    thenTransforms));
+    logger.debug2("Implicitly aggregated " + thenTransforms.length + " \"then\" transforms");
   }
 
   /**
@@ -133,7 +200,7 @@ public class ConditionalPageTransform extends PageTransformDecorator {
   public ConditionalPageTransform(PageTransform ifTransform,
                                   PageTransform thenTransform) {
     this(ifTransform,
-         STRICT_DEFAULT,
+         STRICTNESS_DEFAULT,
          thenTransform);
   }
 
@@ -152,9 +219,26 @@ public class ConditionalPageTransform extends PageTransformDecorator {
                                   PageTransform thenTransform1,
                                   PageTransform thenTransform2) {
     this(ifTransform,
-         STRICT_DEFAULT,
+         STRICTNESS_DEFAULT,
          thenTransform1,
          thenTransform2);
+  }
+
+  /**
+   * <p>Builds a new conditional page transform using the default
+   * strictness, out of the given "if" page transform and the
+   * aggregation of the given "then" page transforms (using the
+   * default aggregation result policy).</p>
+   * @param ifTransform      An "if" page transform.
+   * @param thenTransforms   An array of "then" page transforms.
+   * @see #ConditionalPageTransform(PageTransform, boolean, ResultPolicy, PageTransform, PageTransform)
+   * @see #STRICTNESS_DEFAULT
+   */
+  public ConditionalPageTransform(PageTransform ifTransform,
+                                  PageTransform[] thenTransforms) {
+    this(ifTransform,
+         STRICTNESS_DEFAULT,
+         thenTransforms);
   }
 
   /**
@@ -175,16 +259,55 @@ public class ConditionalPageTransform extends PageTransformDecorator {
                                   PageTransform thenTransform1,
                                   PageTransform thenTransform2) {
     this(ifTransform,
-         STRICT_DEFAULT,
+         STRICTNESS_DEFAULT,
          thenResultPolicy,
          thenTransform1,
          thenTransform2);
   }
 
-  public static final boolean STRICT_DEFAULT = true;
+  /**
+   * <p>Builds a new conditional page transform using the default
+   * strictness, out of the given "if" page transform and the
+   * aggregation of the given "then" page transforms (using the
+   * given aggregation result policy).</p>
+   * @param ifTransform      An "if" page transform.
+   * @param thenResultPolicy A result policy for the aggregate "then"
+   *                         page transform.
+   * @param thenTransforms   An array of "then" page transforms.
+   * @see #ConditionalPageTransform(PageTransform, boolean, ResultPolicy, PageTransform, PageTransform)
+   * @see #STRICTNESS_DEFAULT
+   */
+  public ConditionalPageTransform(PageTransform ifTransform,
+                                  ResultPolicy thenResultPolicy,
+                                  PageTransform[] thenTransforms) {
+    this(ifTransform,
+         STRICTNESS_DEFAULT,
+         thenResultPolicy,
+         thenTransforms);
+  }
 
   /* Inherit documentation */
   public boolean transform(PdfPage pdfPage) throws IOException {
-    return pageTransform.transform(pdfPage);
+    logger.debug2("Begin conditional page transform");
+    boolean ret = pageTransform.transform(pdfPage);
+    logger.debug2("Conditional page transform result: " + ret);
+    return ret;
   }
+
+  /**
+   * <p>Te default strict policy for "then" transforms used by this
+   * class.</p>
+   * @see #ConditionalPageTransform(PageTransform, PageTransform)
+   * @see #ConditionalPageTransform(PageTransform, PageTransform, PageTransform)
+   * @see #ConditionalPageTransform(PageTransform, PageTransform[])
+   * @see #ConditionalPageTransform(PageTransform, ResultPolicy, PageTransform, PageTransform)
+   * @see #ConditionalPageTransform(PageTransform, ResultPolicy, PageTransform[])
+   */
+  public static final boolean STRICTNESS_DEFAULT = true;
+
+  /**
+   * <p>A logger for use by this class.</p>
+   */
+  private static Logger logger = Logger.getLogger("ConditionalPageTransform");
+
 }

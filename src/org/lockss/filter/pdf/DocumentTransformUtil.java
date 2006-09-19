@@ -1,5 +1,5 @@
 /*
- * $Id: DocumentTransformUtil.java,v 1.2 2006-09-15 22:53:51 thib_gc Exp $
+ * $Id: DocumentTransformUtil.java,v 1.3 2006-09-19 16:54:53 thib_gc Exp $
  */
 
 /*
@@ -44,10 +44,6 @@ public class DocumentTransformUtil {
 
   /**
    * <p>A base wrapper for another document transform.</p>
-   * <p>The {@link DocumentTransformDecorator#transform} method in
-   * this class simply returns the result of calling
-   * {@link DocumentTransform#transform} on the underlying document
-   * transform.</p>
    * @author Thib Guicherd-Callin
    */
   public static abstract class DocumentTransformDecorator implements DocumentTransform {
@@ -80,17 +76,20 @@ public class DocumentTransformUtil {
     protected boolean returnValue;
 
     /**
-     * <p>Builds a new identity document transform that always
-     * succeeds.</p>
+     * <p>Builds a new identity document transform whose
+     * {@link #transform} method always returns the default
+     * return value.</p>
      * @see #IdentityDocumentTransform(boolean)
+     * @see #RESULT_DEFAULT
      */
     public IdentityDocumentTransform() {
-      this(true);
+      this(RESULT_DEFAULT);
     }
 
     /**
      * <p>Builds a new identity document transform whose
-     * {@link #transform} method always returns the given value.</p>
+     * {@link #transform} method always returns the given
+     * return value.</p>
      * @param returnValue The return value for {@link #transform}.
      */
     public IdentityDocumentTransform(boolean returnValue) {
@@ -99,9 +98,15 @@ public class DocumentTransformUtil {
 
     /* Inherit documentation */
     public boolean transform(PdfDocument pdfDocument) throws IOException {
-      logger.debug3("Indentity document transform: " + returnValue);
+      logger.debug2("Identity document transform result: " + returnValue);
       return returnValue;
     }
+
+    /**
+     * <p>The constant return value used by default by this class.</p>
+     * @see #IdentityDocumentTransform()
+     */
+    public static final boolean RESULT_DEFAULT = true;
 
   }
 
@@ -171,12 +176,15 @@ public class DocumentTransformUtil {
 
     /* Inherit documentation */
     public boolean transform(PdfDocument pdfDocument) throws IOException {
+      logger.debug2("Begin strict document transform based on "
+                    + documentTransform.getClass().getName());
       if (documentTransform.transform(pdfDocument)) {
+        logger.debug2("Strict document transform result: true");
         return true;
       }
       else {
-        throw new DocumentTransformException("Strict transform did not succeed: "
-                                             + documentTransform.getClass().getName());
+        logger.debug2("Strict document transform result: throw");
+        throw new DocumentTransformException("Strict document transform did not succeed");
       }
     }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: ConditionalDocumentTransform.java,v 1.3 2006-09-15 22:53:51 thib_gc Exp $
+ * $Id: ConditionalDocumentTransform.java,v 1.4 2006-09-19 16:54:53 thib_gc Exp $
  */
 
 /*
@@ -35,7 +35,7 @@ package org.lockss.filter.pdf;
 import java.io.IOException;
 
 import org.lockss.filter.pdf.DocumentTransformUtil.*;
-import org.lockss.util.PdfDocument;
+import org.lockss.util.*;
 import org.lockss.util.PdfUtil.ResultPolicy;
 
 /**
@@ -65,6 +65,21 @@ public class ConditionalDocumentTransform extends DocumentTransformDecorator {
                                          !thenStrictness || thenTransform instanceof StrictDocumentTransform
                                          ? thenTransform
                                          : new StrictDocumentTransform(thenTransform)));
+    if (logger.isDebug2()) {
+      StringBuffer buffer = new StringBuffer();
+      buffer.append("Done setting up conditional document transform ");
+      if (thenTransform instanceof StrictDocumentTransform) {
+        buffer.append("with existing");
+      }
+      else if (thenStrictness) {
+        buffer.append("with added");
+      }
+      else {
+        buffer.append("without");
+      }
+      buffer.append(" \"then\" strictness");
+      logger.debug2(buffer.toString());
+    }
   }
 
   /**
@@ -81,7 +96,6 @@ public class ConditionalDocumentTransform extends DocumentTransformDecorator {
    * @param thenTransform2  A "then" document transform.
    * @see #ConditionalDocumentTransform(DocumentTransform, boolean, DocumentTransform)
    * @see AggregateDocumentTransform#AggregateDocumentTransform(DocumentTransform, DocumentTransform)
-   * @see AggregateDocumentTransform#POLICY_DEFAULT
    */
   public ConditionalDocumentTransform(DocumentTransform ifTransform,
                                       boolean thenStrictness,
@@ -91,6 +105,30 @@ public class ConditionalDocumentTransform extends DocumentTransformDecorator {
          thenStrictness,
          new AggregateDocumentTransform(thenTransform1,
                                         thenTransform2));
+    logger.debug2("Implicitly aggregated two \"then\" transforms");
+  }
+
+  /**
+   * <p>Builds a new conditional document transform using the given
+   * strictness, out of the given "if" document transform and the
+   * aggregation of the given "then" document transforms (using the
+   * default aggregation result policy).</p>
+   * @param ifTransform    An "if" document transform.
+   * @param thenStrictness True to wrap the aggregated "then" document
+   *                       transform as a
+   *                       {@link StrictDocumentTransform}, false
+   *                       otherwise.
+   * @param thenTransforms  An array of "then" document transform.
+   * @see #ConditionalDocumentTransform(DocumentTransform, boolean, DocumentTransform)
+   * @see AggregateDocumentTransform#AggregateDocumentTransform(DocumentTransform[])
+   */
+  public ConditionalDocumentTransform(DocumentTransform ifTransform,
+                                      boolean thenStrictness,
+                                      DocumentTransform[] thenTransforms) {
+    this(ifTransform,
+         thenStrictness,
+         new AggregateDocumentTransform(thenTransforms));
+    logger.debug2("Implicitly aggregated " + thenTransforms.length + " \"then\" transforms");
   }
 
   /**
@@ -119,6 +157,34 @@ public class ConditionalDocumentTransform extends DocumentTransformDecorator {
          new AggregateDocumentTransform(thenResultPolicy,
                                         thenTransform1,
                                         thenTransform2));
+    logger.debug2("Implicitly aggregated three \"then\" transforms");
+  }
+
+  /**
+   * <p>Builds a new conditional document transform using the given
+   * strictness, out of the given "if" document transform and the
+   * aggregation of the given "then" document transforms (using the
+   * given aggregation result policy).</p>
+   * @param ifTransform      An "if" document transform.
+   * @param thenStrictness   True to wrap the aggregated "then" document
+   *                         transform as a
+   *                         {@link StrictDocumentTransform}, false
+   *                         otherwise.
+   * @param thenResultPolicy A result policy for the aggregate "then"
+   *                         document transform.
+   * @param thenTransforms   An array of "then" document transform.
+   * @see #ConditionalDocumentTransform(DocumentTransform, boolean, DocumentTransform)
+   * @see AggregateDocumentTransform#AggregateDocumentTransform(ResultPolicy, DocumentTransform[])
+   */
+  public ConditionalDocumentTransform(DocumentTransform ifTransform,
+                                      boolean thenStrictness,
+                                      ResultPolicy thenResultPolicy,
+                                      DocumentTransform[] thenTransforms) {
+    this(ifTransform,
+         thenStrictness,
+         new AggregateDocumentTransform(thenResultPolicy,
+                                        thenTransforms));
+    logger.debug2("Implicitly aggregated " + thenTransforms.length + " \"then\" transforms");
   }
 
   /**
@@ -161,6 +227,23 @@ public class ConditionalDocumentTransform extends DocumentTransformDecorator {
    * <p>Builds a new conditional document transform using the default
    * strictness, out of the given "if" document transform and the
    * aggregation of the given "then" document transforms (using the
+   * default aggregation result policy).</p>
+   * @param ifTransform    An "if" document transform.
+   * @param thenTransforms  An array of "then" document transform.
+   * @see ConditionalDocumentTransform#ConditionalDocumentTransform(DocumentTransform, boolean, DocumentTransform[])
+   * @see #STRICTNESS_DEFAULT
+   */
+  public ConditionalDocumentTransform(DocumentTransform ifTransform,
+                                      DocumentTransform[] thenTransforms) {
+    this(ifTransform,
+         STRICTNESS_DEFAULT,
+         thenTransforms);
+  }
+
+  /**
+   * <p>Builds a new conditional document transform using the default
+   * strictness, out of the given "if" document transform and the
+   * aggregation of the given "then" document transforms (using the
    * given aggregation result policy).</p>
    * @param ifTransform    An "if" document transform.
    * @param thenResultPolicy A result policy for the aggregate "then"
@@ -181,15 +264,49 @@ public class ConditionalDocumentTransform extends DocumentTransformDecorator {
          thenTransform2);
   }
 
+  /**
+   * <p>Builds a new conditional document transform using the default
+   * strictness, out of the given "if" document transform and the
+   * aggregation of the given "then" document transforms (using the
+   * given aggregation result policy).</p>
+   * @param ifTransform      An "if" document transform.
+   * @param thenResultPolicy A result policy for the aggregate "then"
+   *                         document transform.
+   * @param thenTransforms   An array of "then" document transform.
+   * @see #ConditionalDocumentTransform(DocumentTransform, boolean, ResultPolicy, DocumentTransform[])
+   * @see #STRICTNESS_DEFAULT
+   */
+  public ConditionalDocumentTransform(DocumentTransform ifTransform,
+                                      ResultPolicy thenResultPolicy,
+                                      DocumentTransform[] thenTransforms) {
+    this(ifTransform,
+         STRICTNESS_DEFAULT,
+         thenResultPolicy,
+         thenTransforms);
+  }
+
   /* Inherit documentation */
   public boolean transform(PdfDocument pdfDocument) throws IOException {
-    return documentTransform.transform(pdfDocument);
+    logger.debug2("Begin conditional document transform");
+    boolean ret = documentTransform.transform(pdfDocument);
+    logger.debug2("Conditional document transform result: " + ret);
+    return ret;
   }
 
   /**
    * <p>Te default strict policy for "then" transforms used by this
    * class.</p>
+   * @see #ConditionalDocumentTransform(DocumentTransform, DocumentTransform)
+   * @see #ConditionalDocumentTransform(DocumentTransform, DocumentTransform, DocumentTransform)
+   * @see #ConditionalDocumentTransform(DocumentTransform, DocumentTransform[])
+   * @see #ConditionalDocumentTransform(DocumentTransform, ResultPolicy, DocumentTransform, DocumentTransform)
+   * @see #ConditionalDocumentTransform(DocumentTransform, ResultPolicy, DocumentTransform[])
    */
   public static final boolean STRICTNESS_DEFAULT = true;
+
+  /**
+   * <p>A logger for use by this class.</p>
+   */
+  private static Logger logger = Logger.getLogger("ConditionalDocumentTransform");
 
 }

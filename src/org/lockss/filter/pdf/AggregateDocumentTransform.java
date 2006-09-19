@@ -1,5 +1,5 @@
 /*
- * $Id: AggregateDocumentTransform.java,v 1.3 2006-09-15 22:53:51 thib_gc Exp $
+ * $Id: AggregateDocumentTransform.java,v 1.4 2006-09-19 16:54:53 thib_gc Exp $
  */
 
 /*
@@ -69,13 +69,13 @@ public class AggregateDocumentTransform implements DocumentTransform {
   /**
    * <p>Builds a new aggregate document transform using the default
    * result policy and registers the given document transforms.</p>
-   * @param documentTransform1 A document transform.
+   * @param documentTransform A document transform.
    * @see #AggregateDocumentTransform(ResultPolicy, DocumentTransform)
    * @see #POLICY_DEFAULT
    */
-  public AggregateDocumentTransform(DocumentTransform documentTransform1) {
+  public AggregateDocumentTransform(DocumentTransform documentTransform) {
     this(POLICY_DEFAULT,
-         documentTransform1);
+         documentTransform);
   }
 
   /**
@@ -133,11 +133,29 @@ public class AggregateDocumentTransform implements DocumentTransform {
   }
 
   /**
+   * <p>Builds a new aggregate transform using the default result
+   * policy and registers the given document transforms.</p>
+   * @param documentTransforms An array of document transforms.
+   * @see #AggregateDocumentTransform(DocumentTransform[])
+   * @see #POLICY_DEFAULT
+   */
+  public AggregateDocumentTransform(DocumentTransform[] documentTransforms) {
+    this(POLICY_DEFAULT,
+         documentTransforms);
+  }
+
+  /**
    * <p>Builds a new aggregate document transform using the given
    * result policy.</p>
    * @param resultPolicy A result policy.
    */
   public AggregateDocumentTransform(ResultPolicy resultPolicy) {
+    if (resultPolicy == null) {
+      String logMessage = "Cannot specify a null result policy";
+      logger.error(logMessage);
+      throw new NullPointerException(logMessage);
+    }
+    logger.debug2("Setting up result policy " + resultPolicy.toString());
     this.resultPolicy = resultPolicy;
     this.documentTransforms = new ArrayList();
   }
@@ -146,13 +164,14 @@ public class AggregateDocumentTransform implements DocumentTransform {
    * <p>Builds a new aggregate document transform using the given
    * result policy and registers the given document transforms.</p>
    * @param resultPolicy       A result policy.
-   * @param documentTransform1 A document transform.
+   * @param documentTransform A document transform.
    * @see #AggregateDocumentTransform(ResultPolicy)
    */
   public AggregateDocumentTransform(ResultPolicy resultPolicy,
-                                    DocumentTransform documentTransform1) {
+                                    DocumentTransform documentTransform) {
     this(resultPolicy);
-    add(documentTransform1);
+    logger.debug2("Setting up first document transform");
+    add(documentTransform);
   }
 
   /**
@@ -168,6 +187,7 @@ public class AggregateDocumentTransform implements DocumentTransform {
                                     DocumentTransform documentTransform2) {
     this(resultPolicy,
          documentTransform1);
+    logger.debug2("Setting up second document transform");
     add(documentTransform2);
   }
 
@@ -187,6 +207,7 @@ public class AggregateDocumentTransform implements DocumentTransform {
     this(resultPolicy,
          documentTransform1,
          documentTransform2);
+    logger.debug2("Setting up third document transform");
     add(documentTransform3);
   }
 
@@ -206,10 +227,33 @@ public class AggregateDocumentTransform implements DocumentTransform {
                                     DocumentTransform documentTransform3,
                                     DocumentTransform documentTransform4) {
     this(resultPolicy,
+
          documentTransform1,
          documentTransform2,
          documentTransform3);
+    logger.debug2("Setting up fourth document transform");
     add(documentTransform4);
+  }
+
+  /**
+   * <p>Builds a new aggregate transform using the given result
+   * policy and registers the given document transforms.</p>
+   * @param resultPolicy       A result policy.
+   * @param documentTransforms An array of document transforms.
+   * @see #AggregateDocumentTransform(ResultPolicy)
+   */
+  public AggregateDocumentTransform(ResultPolicy resultPolicy,
+                                    DocumentTransform[] documentTransforms) {
+    this(resultPolicy);
+    if (documentTransforms == null) {
+      String logMessage = "Cannot add a null array of document transforms";
+      logger.error(logMessage);
+      throw new NullPointerException(logMessage);
+    }
+    for (int tra = 0 ; tra < documentTransforms.length ; ++tra) {
+      logger.debug2("Setting up document transform at index " + tra);
+      add(documentTransforms[tra]);
+    }
   }
 
   /**
@@ -221,19 +265,29 @@ public class AggregateDocumentTransform implements DocumentTransform {
    * @param documentTransform A {@link DocumentTransform} instance.
    */
   public synchronized void add(DocumentTransform documentTransform) {
+    if (documentTransform == null) {
+      String logMessage = "Cannot add a null document transform";
+      logger.error(logMessage);
+      throw new NullPointerException(logMessage);
+    }
     documentTransforms.add(documentTransform);
   }
 
   /* Inherit documentation */
   public synchronized boolean transform(PdfDocument pdfDocument) throws IOException {
+    logger.debug2("Begin aggregate document transform with result policy " + resultPolicy.toString());
     boolean success = resultPolicy.initialValue();
+    logger.debug3("Aggregate success flag initially " + success);
     for (Iterator iter = documentTransforms.iterator() ; iter.hasNext() ; ) {
       DocumentTransform documentTransform = (DocumentTransform)iter.next();
       success = resultPolicy.updateResult(success, documentTransform.transform(pdfDocument));
+      logger.debug3("Aggregate success flag now " + success);
       if (!resultPolicy.shouldKeepGoing(success)) {
+        logger.debug3("Aggregation should not keep going");
         break;
       }
     }
+    logger.debug2("Aggregate document transform result: " + success);
     return success;
   }
 
@@ -244,12 +298,13 @@ public class AggregateDocumentTransform implements DocumentTransform {
    * @see #AggregateDocumentTransform(DocumentTransform, DocumentTransform)
    * @see #AggregateDocumentTransform(DocumentTransform, DocumentTransform, DocumentTransform)
    * @see #AggregateDocumentTransform(DocumentTransform, DocumentTransform, DocumentTransform, DocumentTransform)
+   * @see #AggregateDocumentTransform(DocumentTransform[])
    */
   public static final ResultPolicy POLICY_DEFAULT = PdfUtil.AND;
 
   /**
    * <p>A logger for use by this class.</p>
    */
-  protected static Logger logger = Logger.getLogger("AggregateDocumentTransform");
+  private static Logger logger = Logger.getLogger("AggregateDocumentTransform");
 
 }

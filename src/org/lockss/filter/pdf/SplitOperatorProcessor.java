@@ -1,5 +1,5 @@
 /*
- * $Id: SplitOperatorProcessor.java,v 1.5 2006-09-10 07:50:51 thib_gc Exp $
+ * $Id: SplitOperatorProcessor.java,v 1.6 2006-09-19 16:54:53 thib_gc Exp $
  */
 
 /*
@@ -54,7 +54,7 @@ import org.pdfbox.util.PDFOperator;
  * object" could merge with or without replacement based on a
  * condition derived from the contents of the output sublist.</p>
  * <p>{@link SplitOperatorProcessor} instances, like
- * {@link SimpleOperatorProcessor} instances, <em>must</em> have a
+ * {@link PdfOperatorProcessor} instances, <em>must</em> have a
  * no-argument constructor, and are instantiated once per key
  * associated with their class name during a given
  * {@link PageStreamTransform} instantiation.</p>
@@ -63,7 +63,7 @@ import org.pdfbox.util.PDFOperator;
  * @see PageStreamTransform#mergeOutputList()
  * @see PageStreamTransform#mergeOutputList(List)
  */
-public class SplitOperatorProcessor extends SimpleOperatorProcessor {
+public class SplitOperatorProcessor extends PdfOperatorProcessor {
 
   /* Inherit documentation */
   public void process(PageStreamTransform pageStreamTransform,
@@ -71,7 +71,8 @@ public class SplitOperatorProcessor extends SimpleOperatorProcessor {
                       List operands)
       throws IOException {
     pageStreamTransform.splitOutputList();
-    super.process(pageStreamTransform, operator, operands);
+    pageStreamTransform.getOutputList().addAll(operands);
+    pageStreamTransform.getOutputList().add(operator);
   }
 
 }

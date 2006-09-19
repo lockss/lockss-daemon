@@ -1,5 +1,5 @@
 /*
- * $Id: PdfUtil.java,v 1.7 2006-09-15 22:53:52 thib_gc Exp $
+ * $Id: PdfUtil.java,v 1.8 2006-09-19 16:54:53 thib_gc Exp $
  */
 
 /*
@@ -63,7 +63,7 @@ return success;
    * <p>For instance, the above loop could have short-circuiting "or"
    * semantics: it returns true as soon as any of the steps returns
    * true, and if none return true it returns false. This would be
-   * achieved with {@link ResultPolicy#resetResult} returning false,
+   * achieved with {@link ResultPolicy#initialValue} returning false,
    * {@link ResultPolicy#updateResult}<code>(success, oneStep)</code>
    * returning <code>success || oneStep</code>, and
    * {@link ResultPolicy#shouldKeepGoing}<code>(success)</code>
@@ -129,6 +129,10 @@ return success;
       return currentResult;
     }
 
+    public String toString() {
+      return "AND";
+    }
+
     /* Inherit documentation */
     public boolean updateResult(boolean currentResult, boolean update) {
       return currentResult && update;
@@ -151,6 +155,10 @@ return success;
     /* Inherit documentation */
     public boolean shouldKeepGoing(boolean currentResult) {
       return true;
+    }
+
+    public String toString() {
+      return "AND_ALL";
     }
 
     /* Inherit documentation */
@@ -177,6 +185,10 @@ return success;
       return !currentResult;
     }
 
+    public String toString() {
+      return "OR";
+    }
+
     /* Inherit documentation */
     public boolean updateResult(boolean currentResult, boolean update) {
       return currentResult || update;
@@ -199,6 +211,10 @@ return success;
     /* Inherit documentation */
     public boolean shouldKeepGoing(boolean currentResult) {
       return true;
+    }
+
+    public String toString() {
+      return "OR_ALL";
     }
 
     /* Inherit documentation */
@@ -576,7 +592,7 @@ return success;
   /**
    * <p>A logger for use by this class.</p>
    */
-  protected static Logger logger = Logger.getLogger("PdfUtil");
+  private static Logger logger = Logger.getLogger("PdfUtil");
 
   /**
    * <p>All 73 operators defined by PDF 1.6, in the order they are
@@ -756,7 +772,7 @@ return success;
    * <ul>
    *  <li><code>isPdfInteger(pdfInteger)</code></li>
    * </ul>
-   * @param pdfFloat A PDF integer.
+   * @param pdfInteger A PDF integer.
    * @return The integer associated with this PDF integer.
    * @see COSInteger#intValue
    * @see #isPdfInteger(Object)
@@ -824,7 +840,7 @@ return success;
    * @return True if the argument is the expected operator, false
    *         otherwise.
    * @see #BEGIN_TEXT_OBJECT
-   * @see #isPdfOperator
+   * @see #matchPdfOperator(Object, String)
    */
   public static boolean isBeginTextObject(Object candidateToken) {
     return matchPdfOperator(candidateToken,
@@ -852,11 +868,39 @@ return success;
    * @return True is the argument is the expected operator, false
    *         otherwise.
    * @see #END_TEXT_OBJECT
-   * @see #isPdfOperator
+   * @see #matchPdfOperator(Object, String)
    */
   public static boolean isEndTextObject(Object candidateToken) {
     return matchPdfOperator(candidateToken,
                             END_TEXT_OBJECT);
+  }
+
+  /**
+   * <p>Determines if the token at the given index is the "move to the
+   * next line and show text" PDF operator.</p>
+   * @param tokens A list of tokens.
+   * @param index  The index of the candidate token.
+   * @return True if the selected token is the expected operator, false
+   *         otherwise.
+   * @see #isMoveToNextLineShowText(Object)
+   */
+  public static boolean isMoveToNextLineShowText(List tokens,
+                                                 int index) {
+    return isMoveToNextLineShowText(tokens.get(index));
+  }
+
+  /**
+   * <p>Determines if a candidate PDF token is the "move to next line
+   * and show text" PDF operator.</p>
+   * @param candidateToken A candidate PDF token.
+   * @return True is the argument is the expected operator, false
+   *         otherwise.
+   * @see #MOVE_TO_NEXT_LINE_SHOW_TEXT
+   * @see #matchPdfOperator(Object, String)
+   */
+  public static boolean isMoveToNextLineShowText(Object candidateToken) {
+    return matchPdfOperator(candidateToken,
+                            MOVE_TO_NEXT_LINE_SHOW_TEXT);
   }
 
   /**
@@ -946,11 +990,39 @@ return success;
    * @return True is the argument is the expected operator, false
    *         otherwise.
    * @see #SET_RGB_COLOR_NONSTROKING
-   * @see #isPdfOperator
+   * @see #matchPdfOperator(Object, String)
    */
   public static boolean isSetRgbColorNonStroking(Object candidateToken) {
     return matchPdfOperator(candidateToken,
                             SET_RGB_COLOR_NONSTROKING);
+  }
+
+  /**
+   * <p>Determines if the token at the given index is the "move to the
+   * next line and show text" PDF operator.</p>
+   * @param tokens A list of tokens.
+   * @param index  The index of the candidate token.
+   * @return True if the selected token is the expected operator, false
+   *         otherwise.
+   * @see #isSetSpacingMoveToNextLineShowText(Object)
+   */
+  public static boolean isSetSpacingMoveToNextLineShowText(List tokens,
+                                                           int index) {
+    return isSetSpacingMoveToNextLineShowText(tokens.get(index));
+  }
+
+  /**
+   * <p>Determines if a candidate PDF token is the "move to next line
+   * and show text" PDF operator.</p>
+   * @param candidateToken A candidate PDF token.
+   * @return True is the argument is the expected operator, false
+   *         otherwise.
+   * @see #SET_SPACING_MOVE_TO_NEXT_LINE_SHOW_TEXT
+   * @see #matchPdfOperator(Object, String)
+   */
+  public static boolean isSetSpacingMoveToNextLineShowText(Object candidateToken) {
+    return matchPdfOperator(candidateToken,
+                            SET_SPACING_MOVE_TO_NEXT_LINE_SHOW_TEXT);
   }
 
   /**
@@ -974,11 +1046,39 @@ return success;
    * @return True is the argument is the expected operator, false
    *         otherwise.
    * @see #SHOW_TEXT
-   * @see #isPdfOperator
+   * @see #matchPdfOperator(Object, String)
    */
   public static boolean isShowText(Object candidateToken) {
     return matchPdfOperator(candidateToken,
                             SHOW_TEXT);
+  }
+
+  /**
+   * <p>Determines if the token at the given index is the "show text
+   * allowing individual glyph positioning" PDF operator.</p>
+   * @param tokens A list of tokens.
+   * @param index  The index of the candidate token.
+   * @return True if the selected token is the expected operator, false
+   *         otherwise.
+   * @see #isShowTextGlyphPositioning(Object)
+   */
+  public static boolean isShowTextGlyphPositioning(List tokens,
+                                                   int index) {
+    return isShowTextGlyphPositioning(tokens.get(index));
+  }
+
+  /**
+   * <p>Determines if a candidate PDF token is the "show text
+   * allowing individual glyph positioning" PDF operator.</p>
+   * @param candidateToken A candidate PDF token.
+   * @return True is the argument is the expected operator, false
+   *         otherwise.
+   * @see #SHOW_TEXT_GLYPH_POSITIONING
+   * @see #matchPdfOperator(Object, String)
+   */
+  public static boolean isShowTextGlyphPositioning(Object candidateToken) {
+    return matchPdfOperator(candidateToken,
+                            SHOW_TEXT_GLYPH_POSITIONING);
   }
 
   /**
@@ -1001,9 +1101,8 @@ return success;
   /**
    * <p>Determines if the given token is a PDF float
    * with the given value.</p>
-   * @param tokens A list of tokens.
-   * @param index  The index of the selected token.
-   * @param num    A value to match the token against.
+   * @param candidateToken A candidate PDF token.
+   * @param num            A value to match the token against.
    * @return True if the argument is a PDF float and its value
    *         is equal to the given value, false otherwise.
    * @see #isPdfFloat(Object)
@@ -1011,7 +1110,8 @@ return success;
    */
   public static boolean matchPdfFloat(Object candidateToken,
                                       float num) {
-    return isPdfFloat(candidateToken) && getPdfFloat(candidateToken) == num;
+    return isPdfFloat(candidateToken)
+    && getPdfFloat(candidateToken) == num;
   }
 
   /**
@@ -1034,9 +1134,8 @@ return success;
   /**
    * <p>Determines if the given token is a PDF integer
    * with the given value.</p>
-   * @param tokens A list of tokens.
-   * @param index  The index of the selected token.
-   * @param num    A value to match the token against.
+   * @param candidateToken A candidate PDF token.
+   * @param num            A value to match the token against.
    * @return True if the argument is a PDF integer and its value
    *         is equal to the given value, false otherwise.
    * @see #isPdfInteger(Object)
@@ -1044,15 +1143,17 @@ return success;
    */
   public static boolean matchPdfInteger(Object candidateToken,
                                         int num) {
-    return isPdfInteger(candidateToken) && getPdfInteger(candidateToken) == num;
+    return isPdfInteger(candidateToken)
+    && getPdfInteger(candidateToken) == num;
   }
 
   /**
    * <p>Determines if the token at the given index is a PDF operator,
    * and if so, if it is the expected operator..</p>
-   * @param tokens A list of tokens.
-   * @param index  The index of the selected token.
-   * @param num    A PDF operator string to match the token against.
+   * @param tokens           A list of tokens.
+   * @param index            The index of the selected token.
+   * @param expectedOperator A PDF operator string to match the token
+   *                         against.
    * @return True if the selected token is a PDF operator of the expected
    *         type, false otherwise.
    * @see #matchPdfFloat(Object, float)
@@ -1083,10 +1184,10 @@ return success;
    * and if it equals the given value.</p>
    * @param tokens A list of tokens.
    * @param index  The index of the selected token.
-   * @param num    A value to match the token against with {@link String#equals}.
+   * @param str    A value to match the token against with {@link String#equals}.
    * @return True if the selected token is a PDF string and its value
    *         is equal to the given value, false otherwise.
-   * @see #matchPdfString(Object, float)
+   * @see #matchPdfString(Object, String)
    */
   public static boolean matchPdfString(List tokens,
                                        int index,
@@ -1098,9 +1199,8 @@ return success;
   /**
    * <p>Determines if the given token is a PDF string
    * and if it equals the given value.</p>
-   * @param tokens A list of tokens.
-   * @param index  The index of the selected token.
-   * @param num    A value to match the token against with {@link String#equals}.
+   * @param candidateToken A candidate PDF token.
+   * @param str            A value to match the token against with {@link String#equals}.
    * @return True if the argument is a PDF string and its value
    *         is equal to the given value, false otherwise.
    * @see #isPdfString(Object)
@@ -1108,7 +1208,8 @@ return success;
    */
   public static boolean matchPdfString(Object candidateToken,
                                        String str) {
-    return isPdfString(candidateToken) && getPdfString(candidateToken).equals(str);
+    return isPdfString(candidateToken)
+    && getPdfString(candidateToken).equals(str);
   }
 
   /**
@@ -1116,10 +1217,10 @@ return success;
    * and if it starts with the given value.</p>
    * @param tokens A list of tokens.
    * @param index  The index of the selected token.
-   * @param num    A value to match the token against with {@link String#startsWith}.
+   * @param str    A value to match the token against with {@link String#startsWith(String)}.
    * @return True if the selected token is a PDF string and its value
    *         starts with the given value, false otherwise.
-   * @see #matchPdfStringStartsWith(Object, float)
+   * @see #matchPdfStringStartsWith(Object, String)
    */
   public static boolean matchPdfStringStartsWith(List tokens,
                                                  int index,
@@ -1131,9 +1232,8 @@ return success;
   /**
    * <p>Determines if the given token is a PDF string
    * and if it starts with the given value.</p>
-   * @param tokens A list of tokens.
-   * @param index  The index of the selected token.
-   * @param num    A value to match the token against with {@link String#startsWith}.
+   * @param candidateToken A candidate PDF token.
+   * @param str            A value to match the token against with {@link String#startsWith(String)}.
    * @return True if the argument is a PDF string and its value
    *         starts with the given value, false otherwise.
    * @see #isPdfString(Object)
@@ -1141,7 +1241,8 @@ return success;
    */
   public static boolean matchPdfStringStartsWith(Object candidateToken,
                                                  String str) {
-    return isPdfString(candidateToken) && getPdfString(candidateToken).startsWith(str);
+    return isPdfString(candidateToken)
+    && getPdfString(candidateToken).startsWith(str);
   }
 
   public static boolean matchSetRgbColorNonStroking(List tokens,

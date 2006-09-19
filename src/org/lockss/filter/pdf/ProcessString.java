@@ -1,5 +1,5 @@
 /*
- * $Id: ConditionalOperatorProcessor.java,v 1.2 2006-09-19 16:54:53 thib_gc Exp $
+ * $Id: ProcessString.java,v 1.1 2006-09-19 16:54:53 thib_gc Exp $
  */
 
 /*
@@ -35,40 +35,35 @@ package org.lockss.filter.pdf;
 import java.io.IOException;
 import java.util.List;
 
+import org.lockss.util.PdfUtil;
+import org.pdfbox.cos.*;
 import org.pdfbox.util.PDFOperator;
 
-public abstract class ConditionalOperatorProcessor extends PdfOperatorProcessor {
-
-  public abstract boolean identify(List tokens);
+public abstract class ProcessString extends PdfOperatorProcessor {
 
   public void process(PageStreamTransform pageStreamTransform,
                       PDFOperator operator,
                       List operands)
       throws IOException {
-    pageStreamTransform.getOutputList().addAll(operands);
-    pageStreamTransform.getOutputList().add(operator);
-    List tokens = getSequence(pageStreamTransform);
-    if (identify(tokens)) {
-      pageStreamTransform.signalChange();
-      processIdentified(pageStreamTransform, tokens);
+    if (PdfUtil.isShowText(operator) || PdfUtil.isMoveToNextLineShowText(operator)) {
+      processString(pageStreamTransform, operator, operands, PdfUtil.getPdfString(operands, 0));
     }
-    else {
-      processNotIdentified(pageStreamTransform, tokens);
+    else if (PdfUtil.isSetSpacingMoveToNextLineShowText(operator)) {
+      processString(pageStreamTransform, operator, operands, PdfUtil.getPdfString(operands, 2));
+    }
+    else if (PdfUtil.isShowTextGlyphPositioning(operator)) {
+      COSArray array = (COSArray)operands.get(0);
+      for (int elem = 0 ; elem < array.size() ; ++elem) {
+        if (array.get(elem) instanceof COSString) {
+          processString(pageStreamTransform, operator, operands, PdfUtil.getPdfString(array.get(elem)));
+        }
+      }
     }
   }
 
-  protected List getSequence(PageStreamTransform pdfPageStreamTransform) {
-    return pdfPageStreamTransform.getOutputList();
-  }
-
-  protected void processIdentified(PageStreamTransform pdfPageStreamTransform,
-                                   List tokens) {
-    // do nothing
-  }
-
-  protected void processNotIdentified(PageStreamTransform pdfPageStreamTransform,
-                                      List tokens) {
-    // do nothing
-  }
+  public abstract void processString(PageStreamTransform pageStreamTransform,
+                                     PDFOperator operator,
+                                     List operands,
+                                     String str);
 
 }

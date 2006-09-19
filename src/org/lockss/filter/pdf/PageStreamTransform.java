@@ -1,5 +1,5 @@
 /*
- * $Id: PageStreamTransform.java,v 1.1 2006-09-10 07:50:50 thib_gc Exp $
+ * $Id: PageStreamTransform.java,v 1.2 2006-09-19 16:54:53 thib_gc Exp $
  */
 
 /*
@@ -118,7 +118,7 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
   /**
    * <p>Builds a new identity PDF page stream transform.</p>
    * @throws IOException if any processing error occurs.
-   * @see #PdfPageStreamTransform(Properties)
+   * @see #PageStreamTransform(Properties)
    */
   public PageStreamTransform() throws IOException {
     this(new Properties());
@@ -182,6 +182,25 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
                            pdfOperatorProcessor2.getName(),
                            pdfOperatorString3,
                            pdfOperatorProcessor3.getName()));
+  }
+
+  public PageStreamTransform(String pdfOperatorString1,
+                             Class pdfOperatorProcessor1,
+                             String pdfOperatorString2,
+                             Class pdfOperatorProcessor2,
+                             String pdfOperatorString3,
+                             Class pdfOperatorProcessor3,
+                             String pdfOperatorString4,
+                             Class pdfOperatorProcessor4)
+      throws IOException {
+    this(PropUtil.fromArgs(pdfOperatorString1,
+                           pdfOperatorProcessor1.getName(),
+                           pdfOperatorString2,
+                           pdfOperatorProcessor2.getName(),
+                           pdfOperatorString3,
+                           pdfOperatorProcessor3.getName(),
+                           pdfOperatorString4,
+                           pdfOperatorProcessor4.getName()));
   }
 
   /**

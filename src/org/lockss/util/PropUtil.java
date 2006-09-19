@@ -1,5 +1,5 @@
 /*
- * $Id: PropUtil.java,v 1.15 2006-09-10 07:50:51 thib_gc Exp $
+ * $Id: PropUtil.java,v 1.16 2006-09-19 16:54:53 thib_gc Exp $
  */
 /*
 
@@ -72,6 +72,15 @@ public class PropUtil {
                                     String prop3, String val3) {
     Properties props = fromArgs(prop1, val1, prop2, val2);
     props.put(prop3, val3);
+    return props;
+  }
+
+  public static Properties fromArgs(String prop1, String val1,
+                                    String prop2, String val2,
+                                    String prop3, String val3,
+                                    String prop4, String val4) {
+    Properties props = fromArgs(prop1, val1, prop2, val2, prop3, val3);
+    props.put(prop4, val4);
     return props;
   }
 

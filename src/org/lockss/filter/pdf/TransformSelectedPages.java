@@ -1,5 +1,5 @@
 /*
- * $Id: TransformSelectedPages.java,v 1.5 2006-09-15 22:53:51 thib_gc Exp $
+ * $Id: TransformSelectedPages.java,v 1.6 2006-09-19 16:54:53 thib_gc Exp $
  */
 
 /*
@@ -101,6 +101,19 @@ public abstract class TransformSelectedPages extends PageTransformWrapper {
   }
 
   /**
+   * <p>Builds a new document transform using the default result
+   * policy, based on the aggregation of the given page transforms
+   * (using the default aggregation result policy).</p>
+   * @param pageTransforms An array of page transforms.
+   * @see #TransformSelectedPages(ResultPolicy, PageTransform[])
+   * @see #POLICY_DEFAULT
+   */
+  protected TransformSelectedPages(PageTransform[] pageTransforms) {
+    this(POLICY_DEFAULT,
+         pageTransforms);
+  }
+
+  /**
    * <p>Builds a new document transform using the given result
    * policy, based on the given page transform.</p>
    * @param resultPolicy  A result policy.
@@ -155,6 +168,21 @@ public abstract class TransformSelectedPages extends PageTransformWrapper {
   /**
    * <p>Builds a new document transform using the given result
    * policy, based on the aggregation of the given page transforms
+   * (using the default aggregation result policy).</p>
+   * @param resultPolicy   A result policy.
+   * @param pageTransforms An array of page transforms.
+   * @see #TransformSelectedPages(ResultPolicy, PageTransform)
+   * @see AggregatePageTransform#AggregatePageTransform(PageTransform[])
+   */
+  protected TransformSelectedPages(ResultPolicy resultPolicy,
+                                   PageTransform[] pageTransforms) {
+    this(resultPolicy,
+         new AggregatePageTransform(pageTransforms));
+  }
+
+  /**
+   * <p>Builds a new document transform using the given result
+   * policy, based on the aggregation of the given page transforms
    * (using the given aggregation result policy).</p>
    * @param pageIterationResultPolicy A result policy (for the result
    *                                  of transforming selected pages).
@@ -201,12 +229,37 @@ public abstract class TransformSelectedPages extends PageTransformWrapper {
                                     pageTransform3));
   }
 
+  /**
+   * <p>Builds a new document transform using the given result
+   * policy, based on the aggregation of the given page transforms
+   * (using the given aggregation result policy).</p>
+   * @param pageIterationResultPolicy A result policy (for the result
+   *                                  of transforming selected pages).
+   * @param pageTransformResultPolicy A result policy (for the result
+   *                                  of the aggregate page transform).
+   * @param pageTransforms            An array of page transforms.
+   * @see #TransformSelectedPages(ResultPolicy, PageTransform)
+   * @see AggregatePageTransform#AggregatePageTransform(ResultPolicy, PageTransform[])
+   */
+  protected TransformSelectedPages(ResultPolicy pageIterationResultPolicy,
+                                   ResultPolicy pageTransformResultPolicy,
+                                   PageTransform[] pageTransforms) {
+    this(pageIterationResultPolicy,
+         new AggregatePageTransform(pageTransformResultPolicy,
+                                    pageTransforms));
+  }
+
   /* Inherit documentation */
   public boolean transform(PdfDocument pdfDocument) throws IOException {
     boolean success = resultPolicy.initialValue();
     for (Iterator iter = getSelectedPages(pdfDocument) ; iter.hasNext() ; ) {
       PdfPage pdfPage = (PdfPage)iter.next();
-      success = resultPolicy.updateResult(success, pageTransform.transform(pdfPage));
+      try {
+        success = resultPolicy.updateResult(success, pageTransform.transform(pdfPage));
+      }
+      catch (PageTransformException pte) {
+        throw new DocumentTransformException(pte);
+      }
       if (!resultPolicy.shouldKeepGoing(success)) {
         break;
       }
@@ -229,6 +282,7 @@ public abstract class TransformSelectedPages extends PageTransformWrapper {
    * @see #TransformSelectedPages(PageTransform)
    * @see #TransformSelectedPages(PageTransform, PageTransform)
    * @see #TransformSelectedPages(PageTransform, PageTransform, PageTransform)
+   * @see #TransformSelectedPages(PageTransform[])
    */
   public static final ResultPolicy POLICY_DEFAULT = PdfUtil.AND;
 
