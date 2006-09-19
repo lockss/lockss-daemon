@@ -1,0 +1,32 @@
+
+Checking http://disputatio.com/lockss2004.html
+crawl depth: 1     crawl delay: 6000 ms.
+
+Depth 1
+
+Fetching http://disputatio.com/lockss2004.html
+Type: text/html, extracting Urls
+
+Excluded Urls: (10 new, 0 old)
+http://disputatio.com/articles/016-1.pdf
+http://disputatio.com/articles/016-2.pdf
+http://disputatio.com/articles/016-3.pdf
+http://disputatio.com/articles/016-4.pdf
+http://disputatio.com/articles/016-5.pdf
+http://disputatio.com/footer.js
+http://disputatio.com/header.js
+http://disputatio.com/images/lockss-logo-small.gif
+http://disputatio.com/style.css
+http://lockss.stanford.edu/
+
+
+Summary for starting Url: http://disputatio.com/lockss2004.html and depth: 1
+
+Urls fetched: 1    Urls extracted: 10
+
+Depth  Fetched  Parsed  New URLs
+    1        1       1         0
+
+Remaining unfetched: 0
+
+Elapsed Time: 0 secs.    Fetch Rate: 0 p/m
