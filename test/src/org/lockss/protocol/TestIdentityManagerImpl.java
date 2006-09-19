@@ -1,5 +1,5 @@
 /*
- * $Id: TestIdentityManagerImpl.java,v 1.13 2006-04-20 07:17:13 smorabito Exp $
+ * $Id: TestIdentityManagerImpl.java,v 1.14 2006-09-19 01:10:12 smorabito Exp $
  */
 
 /*
@@ -128,6 +128,7 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
     p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
     p.setProperty(IdentityManager.PARAM_LOCAL_IP, LOCAL_IP);
     p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath);
+    p.setProperty(IdentityManager.PARAM_MIN_PERCENT_AGREEMENT, "0.9");
     return p;
   }
 
@@ -478,6 +479,48 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
     expected.put(peer1, new Long(10));
     expected.put(peer2, new Long(11));
     assertEquals(expected, idmgr.getAgreed(mau));
+  }
+  
+  public void testSignalPartialAgreement() throws Exception {
+    setupPeer123();
+
+    idmgr.signalPartialAgreement(peer1, mau, 0.85f);
+    idmgr.signalPartialAgreement(peer2, mau, 0.95f);
+    idmgr.signalPartialAgreement(peer3, mau, 1.00f);
+    
+    assertEquals(0.85f, idmgr.getPercentAgreement(peer1, mau), 0.001f);
+    assertEquals(0.95f, idmgr.getPercentAgreement(peer2, mau), 0.001f);
+    assertEquals(1.00f, idmgr.getPercentAgreement(peer3, mau), 0.001f);
+  }
+  
+  public void testSignalPartialAgreementDisagreementThreshold()
+      throws Exception {
+    TimeBase.setSimulated(10);
+    setupPeer123();
+
+    assertFalse(idmgr.hasAgreed(peer1, mau));
+    assertFalse(idmgr.hasAgreed(peer2, mau));
+    assertFalse(idmgr.hasAgreed(peer3, mau));
+
+    idmgr.signalPartialAgreement(peer1, mau, 0.89f);
+    TimeBase.step();
+    idmgr.signalPartialAgreement(peer2, mau, 0.90f);
+    TimeBase.step();
+    idmgr.signalPartialAgreement(peer3, mau, 0.91f);
+
+    Map expectedDisagree = new HashMap();
+    expectedDisagree.put(peer1, new Long(10));
+    
+    Map expectedAgree = new HashMap();
+    expectedAgree.put(peer2, new Long(11));
+    expectedAgree.put(peer3, new Long(12));
+
+    assertFalse(idmgr.hasAgreed(peer1, mau));
+    assertTrue(idmgr.hasAgreed(peer2, mau));
+    assertTrue(idmgr.hasAgreed(peer3, mau));
+    
+    assertEquals(expectedDisagree, idmgr.getDisagreed(mau));
+    assertEquals(expectedAgree, idmgr.getAgreed(mau));
   }
 
   public void testGetIdentityAgreements() throws Exception {

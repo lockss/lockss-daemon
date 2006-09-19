@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManagerImpl.java,v 1.16 2006-05-31 17:54:50 thib_gc Exp $
+ * $Id: IdentityManagerImpl.java,v 1.17 2006-09-19 01:10:12 smorabito Exp $
  */
 
 /*
@@ -228,6 +228,8 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
    * IdentityAgreement.</p>
    */
   private Map agreeMaps = new HashMap();
+  
+  private float minPercentPartialAgreement = DEFAULT_MIN_PERCENT_AGREEMENT;
 
   private IdentityManagerStatus status;
 
@@ -870,10 +872,55 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
    * @param au  The {@link ArchivalUnit}.
    */
   public void signalAgreed(PeerIdentity pid, ArchivalUnit au) {
-    signalAgreed(pid, au, TimeBase.nowMs());
+    signalAgreed(pid, au, TimeBase.nowMs(), 1.0f);
+  }
+  
+  /**
+   * Signal that we've reached partial agreement with a peer during a
+   * V3 poll on au.
+   * 
+   * @param pid
+   * @param au
+   * @param time
+   */
+  public void signalPartialAgreement(PeerIdentity pid, ArchivalUnit au,
+                                     float percent) {
+    // If the agreement is below a certain percent, this is a disagreement.
+    // The percent agreement is configured with the 
+    // MIN_PERCENT_PARTIAL_AGREEMENT parameter, and the MIN_URL_AGREEMENT
+    // parameter.
+    if (percent >= minPercentPartialAgreement)
+      signalAgreed(pid, au, TimeBase.nowMs(), percent);
+    else
+      signalDisagreed(pid, au, TimeBase.nowMs(), percent);
+    
+  }
+  
+  /**
+   * Get the percent agreement for a V3 poll on a given AU.
+   * 
+   * @param pid The {@link PeerIdentity}.
+   * @param au The {@link ArchivalUnit}.
+   * 
+   * @return The percent agreement for this AU and peer.
+   */
+  public float getPercentAgreement(PeerIdentity pid, ArchivalUnit au) {
+    Map map = findAuAgreeMap(au);
+    synchronized (map) {
+      IdentityAgreement ida = (IdentityAgreement)map.get(pid);
+      if (ida == null) {
+        return 0.0f;
+      } else {
+        return ida.getPercentAgreement();
+      }
+    }
   }
 
-  private void signalAgreed(PeerIdentity pid, ArchivalUnit au, long time) {
+  /**
+   * For V1 polls, the partialAgreement flag is meaningless (and ignored) 
+   */
+  private void signalAgreed(PeerIdentity pid, ArchivalUnit au,
+                            long time, float percentAgreement) {
     if (au == null) {
       throw new IllegalArgumentException("Called with null au");
     } else if (pid == null) {
@@ -884,6 +931,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
       IdentityAgreement ida = findPeerIdentityAgreement(map, pid);
       if (time > ida.getLastAgree()) {
 	ida.setLastAgree(time);
+        ida.setPercentAgreement(percentAgreement);
 	storeIdentityAgreement(au);
       }
     }
@@ -897,10 +945,14 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
    * @param au  The {@link ArchivalUnit}.
    */
   public void signalDisagreed(PeerIdentity pid, ArchivalUnit au) {
-    signalDisagreed(pid, au, TimeBase.nowMs());
+    signalDisagreed(pid, au, TimeBase.nowMs(), 0.0f);
   }
 
-  private void signalDisagreed(PeerIdentity pid, ArchivalUnit au, long time) {
+  /**
+   * For V1 polls, the percentAgreement flag is meaningless (and ignored) 
+   */
+  private void signalDisagreed(PeerIdentity pid, ArchivalUnit au,
+                               long time, float percentAgreement) {
     if (au == null) {
       throw new IllegalArgumentException("Called with null au");
     } else if (pid == null) {
@@ -911,6 +963,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
       IdentityAgreement ida = findPeerIdentityAgreement(map, pid);
       if (time > ida.getLastDisagree()) {
         ida.setLastDisagree(time);
+        ida.setPercentAgreement(percentAgreement);
         storeIdentityAgreement(au);
       }
     }
@@ -1188,6 +1241,11 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
       isMergeRestoredAgreemMap =
         config.getBoolean(PARAM_MERGE_RESTORED_AGREE_MAP,
                           DEFAULT_MERGE_RESTORED_AGREE_MAP);
+      
+      minPercentPartialAgreement =
+        config.getPercentage(PARAM_MIN_PERCENT_AGREEMENT,
+                             DEFAULT_MIN_PERCENT_AGREEMENT);
+
       configV3Identities();
     }
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.18 2006-08-03 01:19:16 smorabito Exp $
+ * $Id: V3Voter.java,v 1.19 2006-09-19 01:10:12 smorabito Exp $
  */
 
 /*
@@ -342,9 +342,19 @@ public class V3Voter extends BasePoll {
                                                 initHasherByteArrays(),
                                                 new BlockEventHandler());
     HashService hashService = theDaemon.getHashService();
-    return hashService.scheduleHash(hasher,
-                                    Deadline.at(voterUserData.getDeadline()),
-                                    new HashingCompleteCallback(), null);
+    
+    boolean scheduled =
+      hashService.scheduleHash(hasher,
+                               Deadline.at(voterUserData.getDeadline()),
+                               new HashingCompleteCallback(), null);
+    if (scheduled) {
+      log.debug("Successfully scheduled time for vote in poll " +
+                getKey());
+    } else {
+      log.debug("Unable to schedule time for vote.  Dropping " +
+                "out of poll " + getKey());
+    }
+    return scheduled;
   }
 
   /**

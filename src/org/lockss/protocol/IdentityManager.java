@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManager.java,v 1.73 2006-01-12 03:13:30 smorabito Exp $
+ * $Id: IdentityManager.java,v 1.74 2006-09-19 01:10:12 smorabito Exp $
  */
 
 /*
@@ -101,6 +101,18 @@ public interface IdentityManager extends LockssManager {
   public static final String MAPPING_FILE_NAME =
     "/org/lockss/protocol/idmapping.xml";
   // CASTOR: Remove the field above when Castor is phased out.
+
+  /** The minimum percent agreement required before we are
+   * willing to serve a repair to a peer.
+   */
+  public static final String PARAM_MIN_PERCENT_AGREEMENT =
+    PREFIX + "minPercentAgreement";
+
+  /** The default percent agreement required to signal agreement
+   * with a peer.
+   */
+  public static final float DEFAULT_MIN_PERCENT_AGREEMENT =
+    0.9f;
 
   /**
    * <p>The MAX_DELTA reputation constant.</p>
@@ -338,6 +350,49 @@ public interface IdentityManager extends LockssManager {
   public void signalDisagreed(PeerIdentity pid, ArchivalUnit au);
 
   /**
+   * Signal partial agreement with a peer on a given archival unit following
+   * a V3 poll.
+   * 
+   * @param pid  The PeerIdentity of the agreeing peer.
+   * @param au  The {@link ArchivalUnit}.
+   * @param agreement  A number between 0.0 and 1.0 representing the percentage
+   *                   of agreement on the total AU.
+   */
+  public void signalPartialAgreement(PeerIdentity pid, ArchivalUnit au,
+                                     float agreement);
+  
+  /**
+   * Signal agreement with a peer on a specific node.
+   * 
+   * @param pid The {@link PeerIdentity} of the agreeing peer.
+   * @param au The {@link ArchivalUnit}.
+   * @param url The node on which agreement was found.
+   */
+  /**** Implement for 1.21 ****/ 
+  // public void signalAgreed(PeerIdentity pid, ArchivalUnit au, String url);
+  
+  /**
+   * Return the percent agreement for a given peer on a given
+   * {@link ArchivalUnit}.  Used only by V3 Polls.
+   * 
+   * @param pid The {@link PeerIdentity}.
+   * @param au The {@link ArchivalUnit}.
+   * @return The percent agreement for the peer on the au.
+   */
+  public float getPercentAgreement(PeerIdentity pid, ArchivalUnit au);
+  
+  /**
+   * 
+   * @param pid The {@link PeerIdentity}.
+   * @param au The {@link ArchivalUnit}.
+   * @param url The specific node in the URL for which to check for
+   *            agreement.
+   * @return True if the peer has agreed on the specified URL.
+   */
+  /**** Implement for 1.21 ****/
+  // public boolean hasAgreed(PeerIdentity pid, ArchivalUnit au, String url);
+  
+  /**
    * <p>Peers with whom we have had any disagreement since the last
    * toplevel agreement are placed at the end of the list.</p>
    * @param au ArchivalUnit to look up PeerIdentities for.
@@ -394,6 +449,7 @@ public interface IdentityManager extends LockssManager {
   public static class IdentityAgreement implements LockssSerializable {
     private long lastAgree = 0;
     private long lastDisagree = 0;
+    private float percentAgreement = 0.0f;
     private String id = null;
 
     public IdentityAgreement(PeerIdentity pid) {
@@ -417,6 +473,14 @@ public interface IdentityManager extends LockssManager {
 
     public void setLastDisagree(long lastDisagree) {
       this.lastDisagree = lastDisagree;
+    }
+    
+    public float getPercentAgreement() {
+      return percentAgreement;
+    }
+    
+    public void setPercentAgreement(float percentAgreement) {
+      this.percentAgreement = percentAgreement;
     }
 
     public String getId() {
