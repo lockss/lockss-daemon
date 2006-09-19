@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingHtmlParser.java,v 1.27 2006-04-11 08:28:19 tlipkis Exp $
+ * $Id: TestGoslingHtmlParser.java,v 1.28 2006-09-19 18:47:46 adriz Exp $
  */
 
 /*
@@ -87,7 +87,6 @@ public class TestGoslingHtmlParser extends LockssTestCase {
   }
 
   public void testParsesHref() throws IOException {
-    System.err.println("STOP1");
     singleTagShouldParse("http://www.example.com/web_link.html",
   			 "<a href=", "</a>");
   }
@@ -109,7 +108,10 @@ public class TestGoslingHtmlParser extends LockssTestCase {
 
   public void testParsesImage() throws IOException {
     singleTagShouldParse("http://www.example.com/web_link.jpg",
-			 "<img src=", "</img>");
+                         "<img src=", "</img>");
+    // test parssing the tag with attriutes before the link
+    singleTagShouldParse("http://www.example.com/web_link.jpg",
+                         "<img\nwidth='280' hight='90' src=", "</img>");
   }
 
   public void testParsesEmbed() throws IOException {
@@ -119,12 +121,25 @@ public class TestGoslingHtmlParser extends LockssTestCase {
 
   public void testParsesApplet() throws IOException {
     singleTagShouldParse("http://www.example.com/web_link.jpg",
-			 "<applet code=", "</applet>");
+                         "<applet code=", "</applet>");
+  }
+
+  public void testParsesArea() throws IOException {
+     singleTagShouldParse("http://www.example.com/web_link.shtml",
+			 "<area href=", "</area>");
+     singleTagShouldParse("http://www.example.com/web_link.shtml",
+                          "<area shape='rect' coords='279,481,487' href=", "</area>");
   }
 
   public void testParsesObject() throws IOException {
     singleTagShouldParse("http://www.example.com/web_link.jpg",
  			 "<object codebase=", "</object>");
+  }
+  public void testParsesOption() throws IOException {
+    singleTagShouldParse("http://www.example.com/web_link.jpg",
+                         "<option  value=", "</option>");   
+    singleTagShouldParse("http://www.example.com/web_link.jpg",
+                         "<option a=b value=", "</option>");   
   }
 
   public void testDoCrawlImageWithSrcInAltTag() throws IOException {

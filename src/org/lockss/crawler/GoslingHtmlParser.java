@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingHtmlParser.java,v 1.40 2006-04-11 08:28:19 tlipkis Exp $
+ * $Id: GoslingHtmlParser.java,v 1.41 2006-09-19 18:47:46 adriz Exp $
  */
 
 /*
@@ -89,27 +89,31 @@ public class GoslingHtmlParser implements ContentParser {
   public static final String PARAM_PARSE_JS =
     Configuration.PREFIX + "crawler.parse_js";
 
-
-  protected static final String METATAG = "meta";
-  protected static final String IMGTAG = "img";
-  protected static final String EMBEDTAG = "embed";
-  protected static final String OBJECTTAG = "object";
   protected static final String ATAG = "a";
   protected static final String APPLETTAG = "applet";
+  protected static final String AREATAG = "area";
   protected static final String BASETAG = "base";
-  protected static final String FRAMETAG = "frame";
-  protected static final String LINKTAG = "link";
-  protected static final String SCRIPTTAG = "script";
-  protected static final String SCRIPTTAGEND = "/script";
   protected static final String BODYTAG = "body";
-  protected static final String TABLETAG = "table";
-  protected static final String TDTAG = "tc";
-  protected static final String JSCRIPTTAG = "javascript";
-  protected static final String HREF = "href";
-  protected static final String SRC = "src";
+  protected static final String BACKGROUNDSRC = "background";
   protected static final String CODE = "code";
   protected static final String CODEBASE = "codebase";
-  protected static final String BACKGROUNDSRC = "background";
+  protected static final String EMBEDTAG = "embed";
+  protected static final String FRAMETAG = "frame";
+  protected static final String IMGTAG = "img";
+  protected static final String JSCRIPTTAG = "javascript";
+  protected static final String HREF = "href";
+  protected static final String LINKTAG = "link";
+  protected static final String METATAG = "meta";
+  protected static final String OBJECTTAG = "object";
+  protected static final String OPTIONTAG = "option";
+  protected static final String SCRIPTTAG = "script";
+  protected static final String SCRIPTTAGEND = "/script";
+  protected static final String SRC = "src"; 
+  protected static final String TABLETAG = "table";
+  protected static final String TDTAG = "tc";
+  protected static final String VALUETAG = "value";
+  
+
   protected static final String REFRESH = "refresh";
   protected static final String HTTP_EQUIV = "http-equiv";
   protected static final String HTTP_EQUIV_CONTENT = "content";
@@ -318,54 +322,60 @@ public class GoslingHtmlParser implements ContentParser {
    * Method overridden in some sub classes, so change with care
    */
   protected String extractLinkFromTag(StringBuffer link) {
-    String returnStr = null;
+    //String returnStr = null;
     switch (link.charAt(0)) {
       case 'a': //<a href=http://www.yahoo.com>
       case 'A':
 	//optimization, since we just have to check a single char
 	if (Character.isWhitespace(link.charAt(1))) {
-          returnStr = getAttributeValue(HREF, link);
-        } else {
-	  if (beginsWithTag(link, APPLETTAG)) {
-	    returnStr = getAttributeValue(CODE, link);
-	  }
-	}
+          return ( getAttributeValue(HREF, link) );
+        }
+        if (beginsWithTag(link, APPLETTAG)) {
+          return ( getAttributeValue(CODE, link) );
+        }
+        if (beginsWithTag(link, AREATAG)) {
+          return (  getAttributeValue(HREF, link) );
+        } 
         break;
       case 'f': //<frame src=frame1.html>
       case 'F':
         if (beginsWithTag(link, FRAMETAG)) {
-          returnStr = getAttributeValue(SRC, link);
+          return ( getAttributeValue(SRC, link) );
         }
         break;
-      case 'o': //<object codebase=blah.java>
+      case 'o': //<object codebase=blah.java> or <option value="blah.html">
       case 'O':
         if (beginsWithTag(link, OBJECTTAG)) {
-          returnStr = getAttributeValue(CODEBASE, link);
+          return ( getAttributeValue(CODEBASE, link) );
+        }
+        if (beginsWithTag(link, OPTIONTAG)) {
+          return ( getAttributeValue(VALUETAG, link) );
         }
         break;
       case 'i': //<img src=image.gif>
       case 'I':
         if (beginsWithTag(link, IMGTAG)) {
-          returnStr = getAttributeValue(SRC, link);
+          return (  getAttributeValue(SRC, link) );
         }
         break;
       case 'e': //<embed src=image.gif>
       case 'E':
         if (beginsWithTag(link, EMBEDTAG)) {
-          returnStr = getAttributeValue(SRC, link);
+          return (  getAttributeValue(SRC, link) );
         }
         break;
       case 'l': //<link href=blah.css>
       case 'L':
         if (beginsWithTag(link, LINKTAG)) {
-          returnStr = getAttributeValue(HREF, link);
+          return (  getAttributeValue(HREF, link) );
         }
         break;
       case 'b': //<body backgroung=background.gif>
       case 'B': //or <base href=http://www.example.com>
         if (beginsWithTag(link, BODYTAG)) {
-          returnStr = getAttributeValue(BACKGROUNDSRC, link);
-        } else if (beginsWithTag(link, BASETAG)) {
+          return (  getAttributeValue(BACKGROUNDSRC, link) );
+        } 
+        if (beginsWithTag(link, BASETAG)) {
 	  String newBase = getAttributeValue(HREF, link);
 	  if (newBase != null && !"".equals(newBase)) {
 	    if (UrlUtil.isMalformedUrl(newBase)) {
@@ -385,7 +395,7 @@ public class GoslingHtmlParser implements ContentParser {
       case 's': //<script src=blah.js>
       case 'S':
         if (beginsWithTag(link, SCRIPTTAG)) {
-          returnStr = getAttributeValue(SRC, link);
+          return (  getAttributeValue(SRC, link) );
         }
         break;
       case 'm': //<meta http-equiv="refresh"
@@ -394,7 +404,7 @@ public class GoslingHtmlParser implements ContentParser {
 	  String httpEquiv = getAttributeValue(HTTP_EQUIV, link);
 	  if (REFRESH.equalsIgnoreCase(httpEquiv)) {
 	    String content = getAttributeValue(HTTP_EQUIV_CONTENT, link);
- 	    returnStr = getAttributeValue(HTTP_EQUIV_URL, content);
+ 	    return (  getAttributeValue(HTTP_EQUIV_URL, content) );
 	  }
         }
         break;
@@ -402,13 +412,11 @@ public class GoslingHtmlParser implements ContentParser {
       case 'T':
         if (beginsWithTag(link, TABLETAG) ||
           beginsWithTag(link, TDTAG)) {
-          returnStr = getAttributeValue(BACKGROUNDSRC, link);
+          return (  getAttributeValue(BACKGROUNDSRC, link) );
         }
-        break;
-      default:
-        return null;
+        break;   
     }
-    return returnStr;
+    return null;   
   }
 
   /**
