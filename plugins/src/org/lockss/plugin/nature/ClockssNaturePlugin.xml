@@ -1,7 +1,15 @@
 <map>
   <entry>
+    <string>text/html_filter</string>
+    <string>org.lockss.plugin.nature.NatureFilterRule</string>
+  </entry>
+  <entry>
     <string>plugin_identifier</string>
     <string>org.lockss.plugin.nature.ClockssNaturePlugin</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;Nature %s Volume %d (%d)&quot;, journal_id, volume, year</string>
   </entry>
   <entry>
     <string>plugin_name</string>
