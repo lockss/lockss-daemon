@@ -1,5 +1,5 @@
 /*
- * $Id: PdfTools.java,v 1.13 2006-09-14 23:10:40 thib_gc Exp $
+ * $Id: PdfTools.java,v 1.14 2006-09-20 17:57:45 thib_gc Exp $
  */
 
 /*
@@ -35,16 +35,15 @@ package org.lockss.devtools;
 import java.io.*;
 import java.util.Iterator;
 
-import javax.swing.JFileChooser;
-
+import org.apache.commons.io.output.*;
 import org.apache.commons.io.output.NullOutputStream;
 import org.lockss.filter.pdf.*;
-import org.lockss.filter.pdf.DocumentTransformUtil.IdentityDocumentTransform;
+import org.lockss.filter.pdf.DocumentTransformUtil.*;
 import org.lockss.filter.pdf.PageTransformUtil.IdentityPageTransform;
 import org.lockss.util.*;
 import org.pdfbox.cos.*;
 import org.pdfbox.pdfwriter.ContentStreamWriter;
-import org.pdfbox.pdmodel.common.*;
+import org.pdfbox.pdmodel.common.PDStream;
 import org.pdfbox.pdmodel.interactive.annotation.PDAnnotation;
 
 /**
@@ -55,37 +54,31 @@ public class PdfTools {
 
   public static class DumpAnnotations extends IdentityPageTransform {
     public boolean transform(PdfPage pdfPage) throws IOException {
-      System.out.println("[begin annotations]");
       Iterator iter = pdfPage.getAnnotationIterator();
       for (int ann = 0 ; iter.hasNext() ; ++ann) {
         PDAnnotation annotation = (PDAnnotation)iter.next();
-        System.out.println("[begin annotation [" + ann + "]]");
         dump("Contents", annotation.getContents());
         dump("Rectangle", annotation.getRectangle());
-        System.out.println("[end annotation [" + ann + "]]");
+        console.println();
       }
-      System.out.println("[end annotations]");
       return true;
     }
   }
 
   public static class DumpBoxes extends IdentityPageTransform {
     public boolean transform(PdfPage pdfPage) throws IOException {
-      System.out.println("[begin boxes]");
       PdfTools.dump("Art box", pdfPage.getArtBox());
       PdfTools.dump("Bleed box", pdfPage.getBleedBox());
       PdfTools.dump("Crop box", pdfPage.getCropBox());
       PdfTools.dump("Media box", pdfPage.getMediaBox());
       PdfTools.dump("Trim box", pdfPage.getTrimBox());
-      System.out.println("[end boxes]");
       return super.transform(pdfPage);
     }
   }
 
   public static class DumpMetadata extends IdentityDocumentTransform {
     public boolean transform(PdfDocument pdfDocument) throws IOException {
-      System.out.println("[begin metadata]");
-      System.out.println("Number of pages: " + pdfDocument.getNumberOfPages());
+      console.println("Number of pages: " + pdfDocument.getNumberOfPages());
       dump("Creation date", pdfDocument.getCreationDate().getTime());
       dump("Modification date", pdfDocument.getModificationDate().getTime());
       dump("Author", pdfDocument.getAuthor());
@@ -94,50 +87,41 @@ public class PdfTools {
       dump("Producer", pdfDocument.getProducer());
       dump("Subject", pdfDocument.getSubject());
       dump("Title", pdfDocument.getTitle());
-      System.out.println("Metadata (as string):"); // newline; typically large
-      System.out.println(pdfDocument.getMetadataAsString());
-      System.out.println("[end metadata]");
+      console.println("Metadata (as string):"); // newline; typically large
+      console.println(pdfDocument.getMetadataAsString());
       return super.transform(pdfDocument);
     }
   }
 
   public static class DumpNumberedPageStream extends IdentityPageTransform {
     public boolean transform(PdfPage pdfPage) throws IOException {
-      System.out.println("[begin numbered page stream]");
       Iterator tokens = pdfPage.getStreamTokenIterator();
       for (int tok = 0 ; tokens.hasNext() ; ++tok) {
-        System.out.println(Integer.toString(tok) + "\t" + tokens.next().toString());
+        console.println(Integer.toString(tok) + "\t" + tokens.next().toString());
       }
-      System.out.println("[end numbered page stream]");
       return super.transform(pdfPage);
     }
   }
 
   public static class DumpPageDictionary extends IdentityPageTransform {
     public boolean transform(PdfPage pdfPage) throws IOException {
-      System.out.println("[begin page dictionary]");
       dump(pdfPage.getDictionary());
-      System.out.println("[end page dictionary]");
       return super.transform(pdfPage);
     }
   }
 
   public static class DumpPageStream extends IdentityPageTransform {
     public boolean transform(PdfPage pdfPage) throws IOException {
-      System.out.println("[begin page stream]");
       for (Iterator tokens = pdfPage.getStreamTokenIterator() ; tokens.hasNext() ; ) {
-        System.out.println("\t" + tokens.next().toString());
+        console.println("\t" + tokens.next().toString());
       }
-      System.out.println("[end page stream]");
       return super.transform(pdfPage);
     }
   }
 
   public static class DumpTrailer extends IdentityDocumentTransform {
     public boolean transform(PdfDocument pdfDocument) throws IOException {
-      System.out.println("[begin trailer]");
       dump(pdfDocument.getTrailer());
-      System.out.println("[end trailer]");
       return super.transform(pdfDocument);
     }
   }
@@ -153,120 +137,452 @@ public class PdfTools {
     }
   }
 
-  protected static final String USAGE =
-    "\tUsage:\n" +
+  public static class SplitDocumentTransform extends DocumentTransformDecorator {
+
+    protected String suffix;
+
+    public SplitDocumentTransform(String suffix,
+                                  DocumentTransform documentTransform) {
+      super(documentTransform);
+      this.suffix = suffix;
+    }
+
+    public boolean transform(PdfDocument pdfDocument) throws IOException {
+      if (!splitOutput(suffix)) {
+        return false;
+      }
+      boolean ret = documentTransform.transform(pdfDocument);
+      console.println();
+      if (!joinOutput(suffix)) {
+        return false;
+      }
+      return ret;
+    }
+
+  }
+
+  public static class SplitPageTransform extends PageTransformWrapper {
+
+    protected String suffix;
+
+    public SplitPageTransform(String suffix,
+                              PageTransform pageTransform) {
+      super(pageTransform);
+      this.suffix = suffix;
+    }
+
+    public boolean transform(PdfDocument pdfDocument) throws IOException {
+      if (!splitOutput(suffix)) {
+        return false;
+      }
+      boolean ret = true;
+      for (Iterator iter = pdfDocument.getPageIterator() ; iter.hasNext() ; ) {
+        ret = pageTransform.transform((PdfPage)iter.next());
+        console.println();
+        if (!ret) {
+          break;
+        }
+      }
+      if (!joinOutput(suffix)) {
+        return false;
+      }
+      return ret;
+    }
+
+  }
+
+  protected static final String ANNOTATIONS = "-annotations";
+
+  protected static final String APPLY = "-apply";
+
+  protected static DocumentTransform applyTransform;
+
+  protected static boolean argAnnotations;
+
+  protected static boolean argApply;
+
+  protected static String argApplyValue;
+
+  protected static boolean argBoxes;
+
+  protected static boolean argIn;
+
+  protected static String argInBase;
+
+  protected static String argInValue;
+
+  protected static boolean argLog;
+
+  protected static String argLogValue;
+
+  protected static boolean argMetadata;
+
+  protected static boolean argNumberedPageStream;
+
+  protected static boolean argOut;
+
+  protected static String argOutValue;
+
+  protected static boolean argPageStream;
+
+  protected static boolean argQuiet;
+
+  protected static boolean argRewrite;
+
+  protected static boolean argTrailer;
+
+  protected static final String BOXES = "-boxes";
+
+  protected static PrintStream console;
+
+  protected static boolean doTransform;
+
+  protected static String doTransformString;
+
+  protected static final String HELP = "-help";
+
+  protected static final String HELP_SHORT = "-h";
+
+  protected static final String IN = "-in";
+
+  protected static final String LOG = "-log";
+
+  protected static final String METADATA = "-metadata";
+
+  protected static final String NUMBEREDPAGESTREAM = "-numberedpagestream";
+
+  protected static final String OUT = "-out";
+
+  protected static final String PAGESTREAM = "-pagestream";
+
+  protected static InputStream pdfInputStream;
+
+  protected static OutputStream pdfOutputStream;
+
+  protected static final String QUIET = "-quiet";
+
+  protected static PrintStream rememberConsole;
+
+  protected static FileOutputStream rememberFileOutputStream;
+
+  protected static final String REWRITE = "-rewrite";
+
+  protected static final String TRAILER = "-trailer";
+
+  protected static final String USAGE = "-usage";
+
+  protected static final String USAGE_MESSAGE =
+    "\tant run-tool -Dclass=" + PdfTools.class.getName() + "\n" +
+    "\t\t-Dargs=\"-in in.pdf [options/commands...]\"" +
     "Help\n" +
-    " -h -help --help     Displays this message\n" +
-    " -usage --usage      Displays this message\n" +
-    "Diff-friendly\n" +
-    " -annotations        Dumps the annotations of each page\n" +
-    " -metadata           Dumps the metadata\n" +
-    " -pageboxes          Dumps the bounding boxes of each page\n" +
-    " -pagestream         Dumps a list of tokens on each page\n" +
-    "Not diff-friendly\n" +
-    " -numberedpagestream Dumps a numbered list of tokens on each page\n" +
-    " -pagedictionary     Dumps the dictionary of each page\n" +
-    " -trailer            Dumps the trailer dictionary\n" +
-    "Other\n" +
-    " -rewrite            Also write PDFBox-saved version in file-out.pdf\n";
+    " -h -help -usage     Displays this message\n" +
+    "Commands\n" +
+    " -annotations        Dumps the annotations for each page to a file\n" +
+    " -boxes              Dumps the bounding boxes for each page to a file\n" +
+    " -metadata           Dumps the document metadata to a file\n" +
+    " -numberedpagestream Dumps a numbered list of tokens for each page to a file\n" +
+    " -pagestream         Dumps a list of tokens for each page to a file\n" +
+    " -trailer            Dumps the document trailer dictionary to a file\n" +
+    "Transforms\n" +
+    " -apply my.package.MyTransform Applies the given document or page transform\n" +
+    "                               to the input (output file: -out out.pdf)\n" +
+    " -rewrite                      Rewrites the input, usually in a cleaner and\n" +
+    "                               more verbose way (output file: -out out.pdf)\n" +
+    "Output\n" +
+    " -quiet              Suppresses command output to the console\n" +
+    " -log log.txt        Copies command output to the given file\n" +
+    "Unimplemented\n" +
+    " -pagedictionary\n";
 
-  public static void main(String[] args) {
-    if (   args.length == 0
-        || (  args.length == 1
-            && (   args[0].equals("-h")
-                || args[0].equals("-help")
-                || args[0].equals("--help")
-                || args[0].equals("-usage")
-                || args[0].equals("--usage")))) {
-      System.out.println(USAGE);
-      return; // exit
+  public static void main(String[] args) throws IOException {
+    if (!(parseHelp(args) && parseArgs(args) && validateArgs() && setUpInputOutput() && applyTransforms())) {
+      System.exit(1);
+    }
+  }
+
+  protected static boolean applyTransforms() throws IOException {
+    AggregateDocumentTransform documentTransform = new AggregateDocumentTransform();
+
+    if (argAnnotations) {
+      documentTransform.add(new SplitPageTransform(ANNOTATIONS, new DumpAnnotations()));
+    }
+    if (argBoxes) {
+      documentTransform.add(new SplitPageTransform(BOXES, new DumpBoxes()));
+    }
+    if (argMetadata) {
+      documentTransform.add(new SplitDocumentTransform(METADATA, new DumpMetadata()));
+    }
+    if (argNumberedPageStream) {
+      documentTransform.add(new SplitPageTransform(NUMBEREDPAGESTREAM, new DumpNumberedPageStream()));
+    }
+    if (argPageStream) {
+      documentTransform.add(new SplitPageTransform(PAGESTREAM, new DumpPageStream()));
+    }
+    if (argTrailer) {
+      documentTransform.add(new SplitDocumentTransform(TRAILER, new DumpTrailer()));
     }
 
-    AggregateDocumentTransform documentTransform = new AggregateDocumentTransform(PdfUtil.AND_ALL);
-    AggregatePageTransform pageTransform = new AggregatePageTransform(PdfUtil.AND_ALL);
-    boolean ignoreResult = true;
-
-    for (int arg = 0 ; arg < args.length ; ++arg) {
-      if (false) {
-        // Copy/paste hack
-      }
-      else if (args[arg].equals("-annotations")) {
-        pageTransform.add(new DumpAnnotations());
-      }
-      else if (args[arg].equals("-metadata")) {
-        documentTransform.add(new DumpMetadata());
-      }
-      else if (args[arg].equals("-numberedpagestream")) {
-        pageTransform.add(new DumpNumberedPageStream());
-      }
-      else if (args[arg].equals("-pageboxes")) {
-        pageTransform.add(new DumpBoxes());
-      }
-      else if (args[arg].equals("-pagedictionary")) {
-        pageTransform.add(new DumpPageDictionary());
-      }
-      else if (args[arg].equals("-pagestream")) {
-        pageTransform.add(new DumpPageStream());
-      }
-      else if (args[arg].equals("-rewrite")) {
-        ignoreResult = false;
-      }
-      else if (args[arg].equals("-trailer")) {
-        documentTransform.add(new DumpTrailer());
-      }
-      else {
-        System.err.println("Unknown option: " + args[arg]);
-      }
+    if (doTransform) {
+      documentTransform.add(applyTransform);
     }
 
-    documentTransform.add(new TransformEachPage(pageTransform));
-    if (!ignoreResult) {
-      documentTransform.add(new TransformEachPage(new ReiteratePageStream()));
-    }
-
-    try {
-      JFileChooser chooser = new JFileChooser();
-      if (chooser.showOpenDialog(null) != JFileChooser.APPROVE_OPTION) {
-        return;
-      }
-      InputStream inputStream = new FileInputStream(chooser.getSelectedFile());
-      OutputStream outputStream = null;
-      if (ignoreResult) {
-        outputStream = new NullOutputStream();
-      }
-      else {
-        outputStream = new FileOutputStream(chooser.getSelectedFile().toString().replaceAll(".pdf", "-out.pdf"));
-      }
-
-      PdfUtil.applyPdfTransform(documentTransform, inputStream, outputStream);
-      inputStream.close();
-      outputStream.close();
-    }
-    catch (Exception exc) {
-      exc.printStackTrace();
-    }
-    finally {
-      System.exit(0); // force AWT thread to exit
-    }
+    return PdfUtil.applyPdfTransform(documentTransform,
+                                     pdfInputStream,
+                                     pdfOutputStream);
   }
 
   protected static void dump(COSDictionary dictionary) {
     for (Iterator keys = dictionary.keyList().iterator() ; keys.hasNext() ; ) {
       COSName key = (COSName)keys.next();
-      System.out.println(key.getName() + "\t" + dictionary.getItem(key).toString());
+      console.println(key.getName() + "\t" + dictionary.getItem(key).toString());
     }
   }
 
   protected static void dump(String name, Object obj) {
     if (obj != null) {
-      System.out.println(name + ": " + obj.toString());
+      console.println(name + ": " + obj.toString());
     }
   }
 
   protected static void dump(String name, String str) {
     if (str != null && !str.equals("")) {
-      System.out.println(name + ": " + str);
+      console.println(name + ": " + str);
     }
+  }
+
+  protected static boolean joinOutput(String suffix) {
+    String fileName = argInBase + suffix + ".txt";
+    try {
+      console = rememberConsole;
+      rememberConsole = null;
+      rememberFileOutputStream.close();
+      rememberFileOutputStream = null;
+      return true;
+    }
+    catch (IOException ioe) {
+      System.err.println("Error: could not close an output stream to " + fileName);
+      ioe.printStackTrace(System.err);
+      return false;
+    }
+  }
+
+  protected static boolean parseArgs(String[] args) {
+    for (int arg = 0 ; arg < args.length ; ++arg) {
+      if (false) {
+        // Copy/paste hack
+      }
+      else if (args[arg].equals(ANNOTATIONS)) {
+        argAnnotations = true;
+      }
+      else if (args[arg].equals(APPLY)) {
+        argApply = true;
+        argApplyValue = args[++arg];
+      }
+      else if (args[arg].equals(BOXES)) {
+        argBoxes = true;
+      }
+      else if (args[arg].equals(IN)) {
+        argIn = true;
+        argInValue = args[++arg];
+      }
+      else if (args[arg].equals(LOG)) {
+        argLog = true;
+        argLogValue = args[++arg];
+      }
+      else if (args[arg].equals(METADATA)) {
+        argMetadata = true;
+      }
+      else if (args[arg].equals(NUMBEREDPAGESTREAM)) {
+        argNumberedPageStream = true;
+      }
+      else if (args[arg].equals(OUT)) {
+        argOut = true;
+        argOutValue = args[++arg];
+      }
+      else if (args[arg].equals(PAGESTREAM)) {
+        argPageStream = true;
+      }
+      else if (args[arg].equals(QUIET)) {
+        argQuiet = true;
+      }
+      else if (args[arg].equals(REWRITE)) {
+        argRewrite = true;
+      }
+      else if (args[arg].equals(TRAILER)) {
+        argTrailer = true;
+      }
+      else {
+        System.err.println("Unknown option: " + args[arg]);
+        return false;
+      }
+    }
+    return true;
+  }
+
+  protected static boolean parseHelp(String[] args) {
+    if (   args.length == 0
+        || (  args.length == 1
+            && (   args[0].equals(HELP_SHORT)
+                || args[0].equals(HELP)
+                || args[0].equals(USAGE)))) {
+      System.err.println(USAGE_MESSAGE);
+      return false;
+    }
+    return true;
+  }
+
+  protected static boolean setUpInputOutput() {
+    if (argInValue.endsWith(".pdf")) {
+      argInBase = argInValue.substring(0, argInValue.length() - ".pdf".length());
+    }
+    else {
+      argInBase = argInValue;
+    }
+
+    // Set up PDF input
+    try {
+      pdfInputStream = new FileInputStream(argInValue);
+    }
+    catch (FileNotFoundException fnfe) {
+      System.err.println("Error: input file not found");
+      fnfe.printStackTrace(System.err);
+      return false;
+    }
+
+    // Set up PDF output
+    if (argOut) {
+      try {
+        pdfOutputStream = new FileOutputStream(argOutValue);
+      }
+      catch (FileNotFoundException fnfe) {
+        System.err.println("Error: could not set up output stream");
+        fnfe.printStackTrace(System.err);
+        return false;
+      }
+    }
+    else {
+      pdfOutputStream = new NullOutputStream();
+    }
+
+    // Set up console output
+    // ...first, the actual console output
+    if (argQuiet) {
+      console = new PrintStream(new NullOutputStream());
+    }
+    else {
+      console = System.out;
+    }
+    // ...then, the indirect output
+    if (argLog) {
+      try {
+        FileOutputStream logOutputStream = new FileOutputStream(argLogValue);
+        TeeOutputStream teeOutputStream = new TeeOutputStream(console, logOutputStream);
+        console = new PrintStream(teeOutputStream);
+      }
+      catch (FileNotFoundException fnfe) {
+        System.err.println("Error: could not set up log output stream");
+        fnfe.printStackTrace(System.err);
+        return false;
+      }
+    }
+
+    // Done
+    return true;
+  }
+
+  protected static boolean splitOutput(String suffix) {
+    String fileName = argInBase + suffix + ".txt";
+    try {
+      rememberFileOutputStream = new FileOutputStream(fileName);
+      TeeOutputStream teeOutputStream = new TeeOutputStream(console, rememberFileOutputStream);
+      rememberConsole = console;
+      console = new PrintStream(teeOutputStream);
+      return true;
+    }
+    catch (FileNotFoundException fnfe) {
+      System.err.println("Error: could not create an output stream for " + fileName);
+      fnfe.printStackTrace(System.err);
+      return false;
+    }
+  }
+
+  protected static boolean validateArgs() {
+    // Cannot have APPLY and REWRITE at the same time
+    if (argApply && argRewrite) {
+      System.err.println("Error: cannot specify " + APPLY + " and " + REWRITE + " at the same time.");
+      return false;
+    }
+
+    // Remember that a transform is requested
+    if (argApply || argRewrite) {
+      doTransform = true;
+      doTransformString = argApply ? APPLY : REWRITE;
+    }
+
+    // IN must be specified
+    if (!argIn) {
+      if (doTransform) {
+        System.err.println("Error: cannot specify " + doTransformString + " without " + IN);
+      }
+      else {
+        System.err.println("Error: must specify " + IN);
+      }
+      return false;
+    }
+
+    // OUT must be specified if and only if a transform is requested
+    if (!argOut && doTransform) {
+      System.err.println("Error: cannot specify " + doTransformString + " without " + OUT);
+      return false;
+    }
+    if (argOut && !doTransform) {
+      System.err.println("Error: cannot specify " + OUT + " without " + APPLY + " or " + REWRITE);
+      return false;
+    }
+
+    if (doTransform) {
+      if (argApply) {
+        try {
+          Class transformClass = Class.forName(argApplyValue);
+          Object transform = transformClass.newInstance();
+          if (transform instanceof DocumentTransform) {
+            applyTransform = (DocumentTransform)transform;
+          }
+          else if (transform instanceof PageTransform) {
+            applyTransform = new TransformEachPage((PageTransform)transform);
+          }
+          else {
+            throw new ClassCastException(transform.getClass().getName());
+          }
+        }
+        catch (ClassNotFoundException cnfe) {
+          System.err.println("Error: could not load class " + argApplyValue);
+          cnfe.printStackTrace(System.err);
+          return false;
+        }
+        catch (InstantiationException ie) {
+          System.err.println("Error: could not instantiate " + argApplyValue);
+          ie.printStackTrace(System.err);
+          return false;
+        }
+        catch (IllegalAccessException iae) {
+          System.err.println("Error: could not access " + argApplyValue);
+          iae.printStackTrace(System.err);
+          return false;
+        }
+        catch (ClassCastException cce) {
+          System.err.println("Error: " + argApplyValue + " is not a transform type");
+          cce.printStackTrace(System.err);
+          return false;
+        }
+      }
+      else /* argRewrite */ {
+        applyTransform = new TransformEachPage(new ReiteratePageStream());
+      }
+    }
+
+    // Done
+    return true;
   }
 
 }
