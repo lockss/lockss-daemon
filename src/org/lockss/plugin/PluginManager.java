@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.164 2006-09-16 22:58:34 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.165 2006-09-21 05:16:44 tlipkis Exp $
  */
 
 /*
@@ -1109,12 +1109,23 @@ public class PluginManager
   }
 
   boolean isCompatible(Plugin plug) {
-    DaemonVersion dver = ConfigManager.getDaemonVersion();
+    boolean res;
+    DaemonVersion dver = getDaemonVersion();
     if (dver == null) {
-      return true;		       // don't break things during testing
+      res = true; // don't break things during testing
+    } else {
+      DaemonVersion preq = new DaemonVersion(plug.getRequiredDaemonVersion());
+      res = dver.compareTo(preq) >= 0;
     }
-    DaemonVersion preq = new DaemonVersion(plug.getRequiredDaemonVersion());
-    return dver.compareTo(preq) >= 0;
+    if (log.isDebug3())
+      log.debug3("Plugin is " + (res ? "" : "not ") +
+		 "compatible with daemon " + dver);
+    return res;
+  }
+
+  // overridable for testing
+  protected DaemonVersion getDaemonVersion() {
+    return ConfigManager.getDaemonVersion();
   }
 
   /**
