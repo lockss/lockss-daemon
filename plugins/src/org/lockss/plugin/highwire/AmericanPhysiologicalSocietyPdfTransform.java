@@ -1,5 +1,5 @@
 /*
- * $Id: AmericanPhysiologicalSocietyPdfTransform.java,v 1.16 2006-09-19 16:54:54 thib_gc Exp $
+ * $Id: AmericanPhysiologicalSocietyPdfTransform.java,v 1.17 2006-09-21 05:50:52 thib_gc Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.io.IOException;
 import java.util.*;
 
 import org.lockss.filter.pdf.*;
+import org.lockss.plugin.highwire.HighWirePdfFilterFactory.SanitizeMetadata;
 import org.lockss.util.*;
 import org.pdfbox.cos.*;
 
@@ -131,25 +132,6 @@ public class AmericanPhysiologicalSocietyPdfTransform extends ConditionalDocumen
       array.set(1, new COSFloat(1.0f));
       array.set(3, new COSFloat(2.0f));
       return true;
-    }
-  }
-
-  public static class SanitizeMetadata implements DocumentTransform {
-    public boolean transform(PdfDocument pdfDocument) throws IOException {
-      // Get rid of the modification date
-      pdfDocument.removeModificationDate();
-      // Get rid of the metadata
-      pdfDocument.setMetadata(" ");
-      // Replace instance ID by document ID in trailer
-      COSBase idObj = pdfDocument.getTrailer().getItem(COSName.getPDFName("ID"));
-      if (idObj != null && idObj instanceof COSArray) {
-        COSArray idArray = (COSArray)idObj;
-        idArray.set(1, idArray.get(0));
-        return true;
-      }
-      else {
-        return false;
-      }
     }
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id$
+ * $Id: NewEnglandJournalOfMedicinePdfTransform.java,v 1.1 2006-09-21 05:50:52 thib_gc Exp $
  */
 
 /*
@@ -32,31 +32,42 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.highwire;
 
-import java.io.*;
+import java.io.IOException;
+import java.util.List;
 
-import org.lockss.filter.*;
 import org.lockss.filter.pdf.*;
-import org.lockss.plugin.FilterRule;
+import org.lockss.plugin.highwire.HighWirePdfFilterFactory.SanitizeMetadata;
+import org.lockss.util.*;
 
-public class HighWirePdfFilterRule implements FilterRule {
+public class NewEnglandJournalOfMedicinePdfTransform extends ConditionalDocumentTransform {
 
-  /*
-   * Do not use this class for now.
-   */
+  public static class EraseVariableMessage extends PageStreamTransform {
 
-  public Reader createFilteredReader(Reader reader) {
-    return null; //return new PdfFilterReader(reader, getInstance());
+    public static class ProcessEndTextObject extends ConditionalMergeOperatorProcessor {
+      public List getReplacement(List tokens) {
+        return ListUtil.list(tokens.get(0), tokens.get(13));
+      }
+      public boolean identify(List tokens) {
+        boolean ret = tokens.size() == 14
+        && PdfUtil.matchTextObject(tokens, 0, 13)
+        && PdfUtil.isPdfFloat(tokens, 8)
+        && PdfUtil.matchShowTextStartsWith(tokens, 12, "Downloaded from ");;
+        logger.debug3("ProcessEndTextObject candidate match: " + ret);
+        return ret;
+      }
+    }
+
+    public EraseVariableMessage() throws IOException {
+      super(PdfUtil.BEGIN_TEXT_OBJECT, SplitOperatorProcessor.class,
+            PdfUtil.END_TEXT_OBJECT, ProcessEndTextObject.class);
+    }
+
   }
 
-  private static AggregateDocumentTransform compoundTransform;
-
-  public static synchronized DocumentTransform getInstance() throws IOException {
-    // This is a stub
-    if (compoundTransform == null) {
-      //compoundTransform = new AggregateDocumentTransform();
-      //compoundTransform.add(AmericanPhysiologicalSocietyPdfTransform.makeTransform());
-    }
-    return compoundTransform;
+  public NewEnglandJournalOfMedicinePdfTransform() throws IOException {
+    super(new TransformFirstPage(new EraseVariableMessage()),
+          new TransformEachPageExceptFirst(new EraseVariableMessage()),
+          new SanitizeMetadata());
   }
 
 }

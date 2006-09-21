@@ -1,5 +1,5 @@
 /*
- * $Id: PdfUtil.java,v 1.9 2006-09-20 17:57:46 thib_gc Exp $
+ * $Id: PdfUtil.java,v 1.10 2006-09-21 05:50:52 thib_gc Exp $
  */
 
 /*
@@ -1268,6 +1268,13 @@ return success;
                                       String str) {
     return isShowText(tokens, index)
     && matchPdfString(tokens, index - 1, str);
+  }
+
+  public static boolean matchShowTextStartsWith(List tokens,
+                                                int index,
+                                                String str) {
+    return isShowText(tokens, index)
+    && matchPdfStringStartsWith(tokens, index - 1, str);
   }
 
   public static boolean matchTextObject(List tokens,
