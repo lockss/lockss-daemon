@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerStatusAccessor.java,v 1.5 2006-09-17 07:26:26 tlipkis Exp $
+ * $Id: CrawlManagerStatusAccessor.java,v 1.6 2006-09-22 06:23:28 tlipkis Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import org.apache.commons.collections.map.ReferenceMap;
 import org.lockss.daemon.status.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.lockss.state.ArchivalUnitStatus;
 import org.lockss.util.*;
 
 public class CrawlManagerStatusAccessor implements StatusAccessor {
@@ -181,7 +182,10 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
 
     Map row = new HashMap();
     ArchivalUnit au = status.getAu();
-    row.put(AU_COL_NAME, au.getName());
+    row.put(AU_COL_NAME,
+	    new StatusTable.Reference(au.getName(),
+				      ArchivalUnitStatus.AU_STATUS_TABLE_NAME,
+				      au.getAuId()));
     row.put(CRAWL_TYPE, status.getType());
     if (status.getStartTime() > 0) {
       row.put(START_TIME_COL_NAME, new Long(status.getStartTime()));
