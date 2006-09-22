@@ -1,5 +1,5 @@
 /*
- * $Id: TestPermissionRecord.java,v 1.3 2005-10-11 05:49:13 tlipkis Exp $
+ * $Id: TestPermissionRecord.java,v 1.4 2006-09-22 06:23:02 tlipkis Exp $
  */
 
 /*
@@ -37,41 +37,38 @@ import org.lockss.test.*;
 
 public class TestPermissionRecord extends LockssTestCase {
 
-  private String permissionUrl = "http://www.example.com/index.html";
-  private PermissionRecord record;
+  private String URL = "http://www.example.com/index.html";
+  private String HOST = "www.example.com";
 
   public void setUp() throws Exception {
     super.setUp();
-    record
-      = new PermissionRecord(permissionUrl, PermissionRecord.PERMISSION_OK);
   }
 
-  public void testPrThrowsForNullUrl() {
-    try{
-      record = new PermissionRecord(null, PermissionRecord.PERMISSION_OK);
-       fail("Constructing a PermissionRecord with a null permissionUrl"
-	   +" should throw an IllegalArgumentException");
-    }catch (IllegalArgumentException iae) {
+  public void testNulls() {
+    try {
+      new PermissionRecord(null, "host");
+      fail("Null url should throw");
+    } catch (IllegalArgumentException e) {
+    }
+    try {
+      new PermissionRecord("url", null);
+      fail("Null host should throw");
+    } catch (IllegalArgumentException e) {
     }
   }
 
-  public void testReturnsProperUrl() {
-    assertEquals(record.getPermissionUrl(), permissionUrl);
+  public void testAccessors() {
+    PermissionRecord record = new PermissionRecord(URL, HOST);
+    assertEquals(URL, record.getUrl());
+    assertEquals(HOST, record.getHost());
   }
 
-  public void testReturnsProperStatus() {
-    assertEquals(record.getPermissionStatus(), PermissionRecord.PERMISSION_OK);
-  }
-
-  public void testSetUrl() {
-    String newUrl = "http://www.example.com/start.html";
-    record.setPermissionUrl(newUrl);
-    assertEquals(record.getPermissionUrl(), newUrl);
-  }
-
-  public void testSetStatus() {
-    record.setPermissionStatus(PermissionRecord.PERMISSION_NOT_OK);
-    assertEquals(record.getPermissionStatus(), PermissionRecord.PERMISSION_NOT_OK);
+  public void testStatus() {
+    PermissionRecord record = new PermissionRecord(URL, HOST);
+    assertEquals(record.getStatus(),
+		 PermissionRecord.PERMISSION_UNCHECKED);
+    record.setStatus(PermissionRecord.PERMISSION_OK);
+    assertEquals(PermissionRecord.PERMISSION_OK, record.getStatus());
   }
 
 }

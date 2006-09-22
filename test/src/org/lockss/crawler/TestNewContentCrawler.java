@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.53 2006-08-26 19:41:53 tlipkis Exp $
+ * $Id: TestNewContentCrawler.java,v 1.54 2006-09-22 06:23:02 tlipkis Exp $
  */
 
 /*
@@ -650,7 +650,8 @@ public class TestNewContentCrawler extends LockssTestCase {
     Crawler.Status crawlStatus = crawler.getStatus();
 
     assertEquals("Repository error", crawlStatus.getCrawlStatus());
-    Map expectedErrors = MapUtil.map(permissionPage, "Repository error");
+    Map expectedErrors = MapUtil.map(permissionPage,
+				     "Can't store page: Test exception");
     assertEquals(expectedErrors, crawlStatus.getUrlsWithErrors());
     assertEquals(1, crawlStatus.getNumUrlsWithErrors());
   }
@@ -668,7 +669,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     Crawler.Status crawlStatus = crawler.getStatus();
 
     assertEquals("Error", crawlStatus.getCrawlStatus());
-    Map expectedErrors = MapUtil.map(url1, "Repository error");
+    Map expectedErrors = MapUtil.map(url1, "Can't store page: Test exception");
     assertEquals(expectedErrors, crawlStatus.getUrlsWithErrors());
     assertEquals(1, crawlStatus.getNumUrlsWithErrors());
   }

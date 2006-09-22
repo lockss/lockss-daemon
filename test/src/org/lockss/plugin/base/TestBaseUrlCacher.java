@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.48 2006-08-07 07:42:20 tlipkis Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.49 2006-09-22 06:23:01 tlipkis Exp $
  */
 
 /*
@@ -1288,7 +1288,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
 
     protected void putStatus(String permissionUrl, int status)
             throws MalformedURLException {
-      super.putStatus(permissionUrl, status);
+      super.createRecord(permissionUrl).setStatus(status);
     }
 
   }

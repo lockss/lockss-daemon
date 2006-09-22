@@ -1,5 +1,5 @@
 /*
- * $Id: TestFollowLinkCrawler.java,v 1.18 2006-08-09 02:03:07 tlipkis Exp $
+ * $Id: TestFollowLinkCrawler.java,v 1.19 2006-09-22 06:23:02 tlipkis Exp $
  */
 
 /*
@@ -773,7 +773,8 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     mau.setCrawlSpec(spec);
     MockCachedUrlSet cus = permissionPageTestSetup(permissionList, 1, urls, mau);
 
-    setProperty(TestableFollowLinkCrawler.PARAM_ABORT_WHILE_PERMISSION_OTHER_THAN_OK,""+true);
+    setProperty(TestableFollowLinkCrawler.PARAM_ABORT_ON_FIRST_NO_PERMISSION,
+		"true");
 
     ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(SetUtil.set(url1,
                                                                      url3));
@@ -797,7 +798,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     MockCachedUrlSet cus = permissionPageTestSetup(permissionList,100,
 						   urls, mau);
 
-    setProperty(BaseCrawler.PARAM_REFETCH_PERMISSIONS_PAGE, ""+true);
+    setProperty(BaseCrawler.PARAM_REFETCH_PERMISSIONS_PAGE, "true");
 
     ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(SetUtil.fromList(urls));
 
@@ -818,7 +819,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     MockCachedUrlSet cus = permissionPageTestSetup(permissionList,100,
 						   urls, mau);
 
-    setProperty(BaseCrawler.PARAM_REFETCH_PERMISSIONS_PAGE, ""+true);
+    setProperty(BaseCrawler.PARAM_REFETCH_PERMISSIONS_PAGE, "true");
 
     ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(
         SetUtil.set(url1, url2));

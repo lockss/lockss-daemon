@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawler.java,v 1.14 2006-08-26 19:43:57 tlipkis Exp $
+ * $Id: BaseCrawler.java,v 1.15 2006-09-22 06:23:02 tlipkis Exp $
  */
 
 /*
@@ -85,9 +85,9 @@ public abstract class BaseCrawler
     Configuration.PREFIX + "crawler.storePermissionsRefetch";
   public static final boolean DEFAULT_REFETCH_PERMISSIONS_PAGE = false;
 
-  public static final String PARAM_ABORT_WHILE_PERMISSION_OTHER_THAN_OK =
-    Configuration.PREFIX + "BaseCrawler.abortWhilePermissionOtherThanOk";
-  public static final boolean DEFAULT_ABORT_WHILE_PERMISSION_OTHER_THAN_OK =
+  public static final String PARAM_ABORT_ON_FIRST_NO_PERMISSION =
+    Configuration.PREFIX + "BaseCrawler.abortOnFirstNoPermission";
+  public static final boolean DEFAULT_ABORT_ON_FIRST_NO_PERMISSION =
     false;
 
   // Max amount we'll buffer up to avoid refetching the permissions page
@@ -258,11 +258,11 @@ public abstract class BaseCrawler
    * new input stream for the given url
    */
   public BufferedInputStream resetInputStream(BufferedInputStream is,
-                                                 String url) throws IOException {
+					      String url) throws IOException {
     try {
       is.reset();
     } catch (IOException e) {
-      logger.debug("Couldn't reset input stream, so getting new one");
+      logger.debug("Couldn't reset input stream, so getting new one", e);
       is.close();
       UrlCacher uc = makeUrlCacher(url);
       uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW_ON_HOST);

@@ -1,5 +1,5 @@
 /*
- * $Id: PermissionRecord.java,v 1.5 2005-10-11 05:43:54 tlipkis Exp $
+ * $Id: PermissionRecord.java,v 1.6 2006-09-22 06:23:02 tlipkis Exp $
  */
 
 /*
@@ -42,36 +42,39 @@ public class PermissionRecord {
   public static final int PERMISSION_UNCHECKED = 0;
   public static final int PERMISSION_OK = 1;
   public static final int PERMISSION_NOT_OK = 2;
-  public static final int FETCH_PERMISSION_FAILED = 3;
+  public static final int PERMISSION_FETCH_FAILED = 3;
   public static final int PERMISSION_MISSING = 4;
-  public static final int REPOSITORY_ERROR = 5;
+  public static final int PERMISSION_REPOSITORY_ERROR = 5;
+  public static final int PERMISSION_NOT_IN_CRAWL_SPEC = 6;
 
-  private String permissionUrl="";
-  private int permissionStatus=PERMISSION_UNCHECKED;
+  private String url;
+  private String host;
+  private int status = PERMISSION_UNCHECKED;
 
-  public PermissionRecord(String permissionUrl,int permissionStatus){
-    if (permissionUrl == null) {
-      throw new IllegalArgumentException("Called with null permissionUrl");
+  public PermissionRecord(String url, String host){
+    if (url == null) {
+      throw new IllegalArgumentException("Called with null url");
     }
-
-    setPermissionUrl(permissionUrl);
-    setPermissionStatus(permissionStatus);
+    if (host == null) {
+      throw new IllegalArgumentException("Called with null host");
+    }
+    this.url = url;
+    this.host = host;
   }
 
-  public String getPermissionUrl(){
-    return permissionUrl;
+  public String getUrl() {
+    return url;
   }
 
-  public void setPermissionUrl(String permissionUrl){
-    this.permissionUrl=permissionUrl;
+  public String getHost() {
+    return host;
   }
 
-  public int getPermissionStatus(){
-    return permissionStatus;
+  public int getStatus() {
+    return status;
   }
 
-  public void setPermissionStatus(int permissionStatus){
-    this.permissionStatus=permissionStatus;
+  public void setStatus(int status) {
+    this.status=status;
   }
-
 }
