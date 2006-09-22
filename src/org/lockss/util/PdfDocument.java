@@ -1,5 +1,5 @@
 /*
- * $Id: PdfDocument.java,v 1.9 2006-09-10 07:50:51 thib_gc Exp $
+ * $Id: PdfDocument.java,v 1.10 2006-09-22 17:16:40 thib_gc Exp $
  */
 
 /*
@@ -36,8 +36,6 @@ import java.io.*;
 import java.util.*;
 
 import org.apache.commons.collections.*;
-import org.apache.commons.collections.iterators.ListIteratorWrapper;
-import org.apache.commons.collections.list.TransformedList;
 import org.pdfbox.cos.*;
 import org.pdfbox.exceptions.COSVisitorException;
 import org.pdfbox.pdfparser.PDFParser;
@@ -83,12 +81,18 @@ public class PdfDocument {
   /**
    * <p>Closes the underlying {@link COSDocument} instance
    * and releases expensive memory resources held by this object.</p>
-   * @throws IOException if any processing error occurs.
    * @see PDDocument#close
    */
-  public void close() throws IOException {
-    getPdDocument().close();
-    pdfParser = null;
+  public void close() {
+    try {
+      getPdDocument().close();
+    }
+    catch (IOException ioe) {
+      logger.error("Error while closing a PDF document", ioe);
+    }
+    finally {
+      pdfParser = null;
+    }
   }
 
   /**
@@ -451,5 +455,7 @@ public class PdfDocument {
   protected void setMetadata(PDMetadata metadata) throws IOException {
     getDocumentCatalog().setMetadata(metadata);
   }
+
+  private static Logger logger = Logger.getLogger("PdfDocument");
 
 }

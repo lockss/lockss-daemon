@@ -1,5 +1,5 @@
 /*
- * $Id: PageStreamTransform.java,v 1.2 2006-09-19 16:54:53 thib_gc Exp $
+ * $Id: PageStreamTransform.java,v 1.3 2006-09-22 17:16:40 thib_gc Exp $
  */
 
 /*
@@ -101,6 +101,18 @@ import org.pdfbox.util.operator.OperatorProcessor;
  * @see SplitOperatorProcessor
  */
 public class PageStreamTransform extends PDFStreamEngine implements PageTransform {
+
+  public static class RecognizePageStream extends PageStreamTransform {
+
+    public RecognizePageStream(Properties customProcessors) throws IOException {
+      super(customProcessors);
+    }
+
+    protected void writeResult(PdfPage pdfPage) {
+      // Do nothing
+    }
+
+  }
 
   /**
    * <p>Whether a change has been indicated by a PDF operator
@@ -344,7 +356,7 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
   /**
    * <p>A logger for use by this class.</p>
    */
-  protected static Logger logger = Logger.getLogger("PageStreamTransform");
+  private static Logger logger = Logger.getLogger("PageStreamTransform");
 
   /**
    * <p>Assembles a new {@link Properties} object that maps keys from
@@ -375,18 +387,6 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
                                                                   SimpleOperatorProcessor.class.getName()));
     }
     return properties;
-  }
-
-  public static class RecognizePageStream extends PageStreamTransform {
-
-    public RecognizePageStream(Properties customProcessors) throws IOException {
-      super(customProcessors);
-    }
-
-    protected void writeResult(PdfPage pdfPage) {
-      // Do nothing
-    }
-
   }
 
 }

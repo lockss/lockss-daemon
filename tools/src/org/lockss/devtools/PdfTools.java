@@ -1,5 +1,5 @@
 /*
- * $Id: PdfTools.java,v 1.14 2006-09-20 17:57:45 thib_gc Exp $
+ * $Id: PdfTools.java,v 1.15 2006-09-22 17:16:39 thib_gc Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.devtools;
 import java.io.*;
 import java.util.Iterator;
 
+import org.apache.commons.io.IOUtils;
 import org.apache.commons.io.output.*;
 import org.apache.commons.io.output.NullOutputStream;
 import org.lockss.filter.pdf.*;
@@ -195,7 +196,7 @@ public class PdfTools {
 
   protected static final String APPLY = "-apply";
 
-  protected static DocumentTransform applyTransform;
+  protected static OutputDocumentTransform applyTransform;
 
   protected static boolean argAnnotations;
 
@@ -295,8 +296,13 @@ public class PdfTools {
     " -pagedictionary\n";
 
   public static void main(String[] args) throws IOException {
-    if (!(parseHelp(args) && parseArgs(args) && validateArgs() && setUpInputOutput() && applyTransforms())) {
-      System.exit(1);
+    try {
+      if (!(parseHelp(args) && parseArgs(args) && validateArgs() && setUpInputOutput() && applyTransforms())) {
+        System.exit(1);
+      }
+    }
+    finally {
+      tearDownInputOutput();
     }
   }
 
@@ -322,13 +328,31 @@ public class PdfTools {
       documentTransform.add(new SplitDocumentTransform(TRAILER, new DumpTrailer()));
     }
 
-    if (doTransform) {
-      documentTransform.add(applyTransform);
+    PdfDocument pdfDocument = null;
+    try {
+      pdfDocument = new PdfDocument(pdfInputStream);
+      if (!documentTransform.transform(pdfDocument)) {
+        System.err.println("Transform unsuccessful (first phase)");
+        return false;
+      }
+      if (doTransform) {
+        if (!applyTransform.transform(pdfDocument, pdfOutputStream)) {
+          System.err.println("Transform unsuccessful (second phase)");
+          return false;
+        }
+      }
+      return true;
     }
-
-    return PdfUtil.applyPdfTransform(documentTransform,
-                                     pdfInputStream,
-                                     pdfOutputStream);
+    catch (IOException ioe) {
+      System.err.println("Transform failed");
+      ioe.printStackTrace(System.err);
+      return false;
+    }
+    finally {
+      if (pdfDocument != null) {
+        pdfDocument.close();
+      }
+    }
   }
 
   protected static void dump(COSDictionary dictionary) {
@@ -452,6 +476,9 @@ public class PdfTools {
     // Set up PDF output
     if (argOut) {
       try {
+        if (argOutValue.startsWith("-")) {                // this functionality
+          argOutValue = argInBase + argOutValue + ".pdf"; // is currently
+        }                                                 // undocumented
         pdfOutputStream = new FileOutputStream(argOutValue);
       }
       catch (FileNotFoundException fnfe) {
@@ -506,6 +533,12 @@ public class PdfTools {
     }
   }
 
+  protected static void tearDownInputOutput() {
+    IOUtils.closeQuietly(pdfInputStream);
+    IOUtils.closeQuietly(pdfOutputStream);
+    IOUtils.closeQuietly(console);
+  }
+
   protected static boolean validateArgs() {
     // Cannot have APPLY and REWRITE at the same time
     if (argApply && argRewrite) {
@@ -545,18 +578,21 @@ public class PdfTools {
         try {
           Class transformClass = Class.forName(argApplyValue);
           Object transform = transformClass.newInstance();
-          if (transform instanceof DocumentTransform) {
-            applyTransform = (DocumentTransform)transform;
+          if (transform instanceof OutputDocumentTransform) {
+            applyTransform = (OutputDocumentTransform)transform;
+          }
+          else if (transform instanceof DocumentTransform) {
+            applyTransform = new SimpleOutputDocumentTransform((DocumentTransform)transform);
           }
           else if (transform instanceof PageTransform) {
-            applyTransform = new TransformEachPage((PageTransform)transform);
+            applyTransform = new SimpleOutputDocumentTransform(new TransformEachPage((PageTransform)transform));
           }
           else {
             throw new ClassCastException(transform.getClass().getName());
           }
         }
         catch (ClassNotFoundException cnfe) {
-          System.err.println("Error: could not load class " + argApplyValue);
+          System.err.println("Error: could not load " + argApplyValue);
           cnfe.printStackTrace(System.err);
           return false;
         }
@@ -577,7 +613,7 @@ public class PdfTools {
         }
       }
       else /* argRewrite */ {
-        applyTransform = new TransformEachPage(new ReiteratePageStream());
+        applyTransform = new SimpleOutputDocumentTransform(new TransformEachPage(new ReiteratePageStream()));
       }
     }
 

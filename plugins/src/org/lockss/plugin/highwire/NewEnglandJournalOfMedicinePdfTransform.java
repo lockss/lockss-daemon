@@ -1,5 +1,5 @@
 /*
- * $Id: NewEnglandJournalOfMedicinePdfTransform.java,v 1.1 2006-09-21 05:50:52 thib_gc Exp $
+ * $Id: NewEnglandJournalOfMedicinePdfTransform.java,v 1.2 2006-09-22 17:16:39 thib_gc Exp $
  */
 
 /*
@@ -32,26 +32,30 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.highwire;
 
-import java.io.IOException;
+import java.io.*;
 import java.util.List;
 
+import org.apache.commons.io.output.NullOutputStream;
 import org.lockss.filter.pdf.*;
+import org.lockss.filter.pdf.DocumentTransformUtil.OutputDocumentTransform;
+import org.lockss.filter.pdf.PageTransformUtil.ExtractText;
 import org.lockss.plugin.highwire.HighWirePdfFilterFactory.SanitizeMetadata;
 import org.lockss.util.*;
 
-public class NewEnglandJournalOfMedicinePdfTransform extends ConditionalDocumentTransform {
+public class NewEnglandJournalOfMedicinePdfTransform
+    extends ConditionalDocumentTransform
+    implements OutputDocumentTransform {
 
   public static class EraseVariableMessage extends PageStreamTransform {
 
     public static class ProcessEndTextObject extends ConditionalMergeOperatorProcessor {
       public List getReplacement(List tokens) {
-        return ListUtil.list(tokens.get(0), tokens.get(13));
+        return ListUtil.list(tokens.get(0), tokens.get(tokens.size() - 1));
       }
       public boolean identify(List tokens) {
-        boolean ret = tokens.size() == 14
-        && PdfUtil.matchTextObject(tokens, 0, 13)
-        && PdfUtil.isPdfFloat(tokens, 8)
-        && PdfUtil.matchShowTextStartsWith(tokens, 12, "Downloaded from ");;
+        int last = tokens.size() - 1;
+        boolean ret = PdfUtil.matchTextObject(tokens, 0, last)
+        && PdfUtil.matchShowTextStartsWith(tokens, last - 1, "Downloaded from ");;
         logger.debug3("ProcessEndTextObject candidate match: " + ret);
         return ret;
       }
@@ -64,10 +68,52 @@ public class NewEnglandJournalOfMedicinePdfTransform extends ConditionalDocument
 
   }
 
+  public static class Simplified implements OutputDocumentTransform {
+
+    protected OutputStream outputStream;
+
+    public synchronized boolean transform(PdfDocument pdfDocument) throws IOException {
+      logger.debug2("Begin simplified document transform");
+      if (outputStream == null) {
+        outputStream = new NullOutputStream();
+      }
+      AggregateDocumentTransform documentTransform = new AggregateDocumentTransform(new NewEnglandJournalOfMedicinePdfTransform(),
+                                                                                    new TransformEachPage(new ExtractText(outputStream)));
+      boolean ret = documentTransform.transform(pdfDocument);
+      logger.debug2("Simplified document transform result: " + ret);
+      return ret;
+    }
+
+    public synchronized boolean transform(PdfDocument pdfDocument,
+                                          OutputStream outputStream) {
+      try {
+        this.outputStream = outputStream;
+        return transform(pdfDocument);
+      }
+      catch (IOException ioe) {
+        logger.error("Simplified document transform failed", ioe);
+        return false;
+      }
+      finally {
+        this.outputStream = null;
+      }
+    }
+
+  }
+
   public NewEnglandJournalOfMedicinePdfTransform() throws IOException {
     super(new TransformFirstPage(new EraseVariableMessage()),
           new TransformEachPageExceptFirst(new EraseVariableMessage()),
           new SanitizeMetadata());
   }
+
+  public boolean transform(PdfDocument pdfDocument,
+                           OutputStream outputStream) {
+    return PdfUtil.applyAndSave(this,
+                                pdfDocument,
+                                outputStream);
+  }
+
+  private static Logger logger = Logger.getLogger("NewEnglandJournalOfMedicinePdfTransform");
 
 }

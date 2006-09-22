@@ -1,5 +1,5 @@
 /*
- * $Id: DocumentTransformUtil.java,v 1.3 2006-09-19 16:54:53 thib_gc Exp $
+ * $Id: DocumentTransformUtil.java,v 1.4 2006-09-22 17:16:40 thib_gc Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.filter.pdf;
 
-import java.io.IOException;
+import java.io.*;
 
 import org.lockss.util.*;
 
@@ -134,6 +134,13 @@ public class DocumentTransformUtil {
 
   }
 
+  public interface OutputDocumentTransform extends DocumentTransform {
+
+    boolean transform(PdfDocument pdfDocument,
+                      OutputStream outputStream);
+
+  }
+
   /**
    * <p>A base document transform that serves as a wrapper around a
    * page transform.</p>
@@ -153,6 +160,27 @@ public class DocumentTransformUtil {
      */
     protected PageTransformWrapper(PageTransform pageTransform) {
       this.pageTransform = pageTransform;
+    }
+
+  }
+
+  public static class SimpleOutputDocumentTransform
+      extends DocumentTransformDecorator
+      implements OutputDocumentTransform {
+
+    public SimpleOutputDocumentTransform(DocumentTransform documentTransform) {
+      super(documentTransform);
+    }
+
+    public boolean transform(PdfDocument pdfDocument) throws IOException {
+      return documentTransform.transform(pdfDocument);
+    }
+
+    public boolean transform(PdfDocument pdfDocument,
+                             OutputStream outputStream) {
+      return PdfUtil.applyAndSave(this,
+                                  pdfDocument,
+                                  outputStream);
     }
 
   }

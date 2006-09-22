@@ -1,5 +1,5 @@
 /*
- * $Id: PdfUtil.java,v 1.10 2006-09-21 05:50:52 thib_gc Exp $
+ * $Id: PdfUtil.java,v 1.11 2006-09-22 17:16:40 thib_gc Exp $
  */
 
 /*
@@ -676,37 +676,24 @@ return success;
   };
 
   /**
-   * <p>Parses a PDF document from an input stream, applies a
-   * transform to it, and writes the result to an output stream.</p>
-   * <p>This method closes the PDF document at the end of processing</p>
-   * @param pdfTransform    A PDF transform.
-   * @param pdfInputStream  An input stream containing a PDF document.
-   * @param pdfOutputStream An output stream into which to write the
-   *                        transformed PDF document.
-   * @throws IOException if any processing error occurs.
+   * <p>Applies the given transform to the given PDF document, and
+   * saves the result to the given output stream.</p>
+   * @param documentTransform A PDF transform.
+   * @param pdfDocument       A PDF document.
+   * @param outputStream      An output stream into which to write the
+   *                          transformed PDF document.
    */
-  public static boolean applyPdfTransform(DocumentTransform pdfTransform,
-                                          InputStream pdfInputStream,
-                                          OutputStream pdfOutputStream)
-      throws IOException {
-    boolean mustReleaseResources = false;
-    PdfDocument pdfDocument = null;
+  public static boolean applyAndSave(DocumentTransform documentTransform,
+                                     PdfDocument pdfDocument,
+                                     OutputStream outputStream) {
     try {
-      // Parse
-      pdfDocument = new PdfDocument(pdfInputStream);
-      mustReleaseResources = true;
-
-      // Transform
-      boolean ret = pdfTransform.transform(pdfDocument);
-
-      // Save
-      pdfDocument.save(pdfOutputStream);
+      boolean ret = documentTransform.transform(pdfDocument);
+      pdfDocument.save(outputStream);
       return ret;
     }
-    finally {
-      if (mustReleaseResources) {
-        pdfDocument.close();
-      }
+    catch (IOException ioe) {
+      logger.error("Document transform failed", ioe);
+      return false;
     }
   }
 

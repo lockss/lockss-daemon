@@ -1,5 +1,5 @@
 /*
- * $Id: ProcessString.java,v 1.1 2006-09-19 16:54:53 thib_gc Exp $
+ * $Id: ProcessString.java,v 1.2 2006-09-22 17:16:40 thib_gc Exp $
  */
 
 /*
@@ -46,16 +46,16 @@ public abstract class ProcessString extends PdfOperatorProcessor {
                       List operands)
       throws IOException {
     if (PdfUtil.isShowText(operator) || PdfUtil.isMoveToNextLineShowText(operator)) {
-      processString(pageStreamTransform, operator, operands, PdfUtil.getPdfString(operands, 0));
+      processString(pageStreamTransform, operator, operands, (COSString)operands.get(0));
     }
     else if (PdfUtil.isSetSpacingMoveToNextLineShowText(operator)) {
-      processString(pageStreamTransform, operator, operands, PdfUtil.getPdfString(operands, 2));
+      processString(pageStreamTransform, operator, operands, (COSString)operands.get(2));
     }
     else if (PdfUtil.isShowTextGlyphPositioning(operator)) {
       COSArray array = (COSArray)operands.get(0);
       for (int elem = 0 ; elem < array.size() ; ++elem) {
         if (array.get(elem) instanceof COSString) {
-          processString(pageStreamTransform, operator, operands, PdfUtil.getPdfString(array.get(elem)));
+          processString(pageStreamTransform, operator, operands, (COSString)array.get(elem));
         }
       }
     }
@@ -64,6 +64,7 @@ public abstract class ProcessString extends PdfOperatorProcessor {
   public abstract void processString(PageStreamTransform pageStreamTransform,
                                      PDFOperator operator,
                                      List operands,
-                                     String str);
+                                     COSString cosString)
+      throws IOException;
 
 }
