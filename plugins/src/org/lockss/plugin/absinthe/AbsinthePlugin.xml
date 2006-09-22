@@ -1,53 +1,59 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Elements>
-  <MapElement>
-    <ElementKey>au_start_url</ElementKey>
-    <ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"%sarchives%02d.htm", base_url, au_short_year</ElementValue>
-  </MapElement>
-  <MapElement>
-    <ElementKey>plugin_name</ElementKey>
-    <ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Absinthe Literary Review</ElementValue>
-  </MapElement>
-  <MapElement>
-    <ElementKey>au_crawlrules</ElementKey>
-    <ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <string xsi:type="java:java.lang.String">4,"^%s", base_url</string>
-      <string xsi:type="java:java.lang.String">1,"%sarchives%02d.htm", base_url, au_short_year</string>
-      <string xsi:type="java:java.lang.String">1,"%sstories/.*", base_url</string>
-      <string xsi:type="java:java.lang.String">1,"%spoetics/.*", base_url</string>
-      <string xsi:type="java:java.lang.String">1,"%sarchives/.*", base_url</string>
-      <string xsi:type="java:java.lang.String">2,"%sbook_reviews/book_reviews.htm", base_url</string>
-      <string xsi:type="java:java.lang.String">1,"%sbook_reviews/.*", base_url</string>
-      <string xsi:type="java:java.lang.String">1,"%simages/.*", base_url</string>
-    </ElementValue>
-  </MapElement>
-  <MapElement>
-    <ElementKey>au_name</ElementKey>
-    <ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"%s, %d", base_url_host, year</ElementValue>
-  </MapElement>
-  <MapElement>
-    <ElementKey>plugin_config_props</ElementKey>
-    <ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <ConfigParamDescr>
-        <Key>base_url</Key>
-        <DisplayName>Base URL</DisplayName>
-        <Description>Usually of the form http://&lt;journal-name&gt;.com/</Description>
-        <Type>3</Type>
-        <Size>40</Size>
-        <Definitional>true</Definitional>
-      </ConfigParamDescr>
-      <ConfigParamDescr>
-        <Key>year</Key>
-        <DisplayName>Year</DisplayName>
-        <Description>Four digit year (e.g., 2004)</Description>
-        <Type>4</Type>
-        <Size>4</Size>
-        <Definitional>true</Definitional>
-      </ConfigParamDescr>
-    </ElementValue>
-  </MapElement>
-  <MapElement>
-    <ElementKey>plugin_version</ElementKey>
-    <ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">1</ElementValue>
-  </MapElement>
-</Elements>
+<map>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.absinthe.AbsinthePlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>2</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;%s, %d&quot;, base_url_host, year</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Absinthe Literary Review</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;%sarchives%02d.htm&quot;, base_url, au_short_year</string>
+      <string>1,&quot;%sstories/.*&quot;, base_url</string>
+      <string>1,&quot;%spoetics/.*&quot;, base_url</string>
+      <string>1,&quot;%sarchives/.*&quot;, base_url</string>
+      <string>2,&quot;%sbook_reviews/book_reviews.htm&quot;, base_url</string>
+      <string>1,&quot;%sbook_reviews/.*&quot;, base_url</string>
+      <string>1,&quot;%simages/.*&quot;, base_url</string>
+      <string>1,&quot;\.(jpg|gif|jpeg|css|js)$&quot;</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%sarchives%02d.htm&quot;, base_url, au_short_year</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+</map>
