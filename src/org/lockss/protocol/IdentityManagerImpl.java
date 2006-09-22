@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManagerImpl.java,v 1.17 2006-09-19 01:10:12 smorabito Exp $
+ * $Id: IdentityManagerImpl.java,v 1.18 2006-09-22 06:25:23 tlipkis Exp $
  */
 
 /*
@@ -683,6 +683,9 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
         synchronized (theIdentities) {
           theIdentities.putAll(map);
         }
+      }
+      catch (SerializationException.FileNotFound e) {
+        log.warning("No identity database");
       }
       catch (Exception e) {
         log.warning("Could not load identity database", e);
