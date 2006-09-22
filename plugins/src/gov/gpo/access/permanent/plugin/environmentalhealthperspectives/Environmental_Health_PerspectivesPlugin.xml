@@ -4,6 +4,10 @@
     <string>gov.gpo.access.permanent.plugin.Environmental_Health_PerspectivesPlugin</string>
   </entry>
   <entry>
+    <string>plugin_version</string>
+    <string>2</string>
+  </entry>
+  <entry>
     <string>au_name</string>
     <string>&quot;%s %d&quot;, base_url, year</string>
   </entry>
