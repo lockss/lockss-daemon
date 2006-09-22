@@ -1,5 +1,5 @@
 /*
- * $Id: NewEnglandJournalOfMedicinePdfTransform.java,v 1.2 2006-09-22 17:16:39 thib_gc Exp $
+ * $Id: NewEnglandJournalOfMedicinePdfTransform.java,v 1.3 2006-09-22 21:08:16 thib_gc Exp $
  */
 
 /*
@@ -70,6 +70,23 @@ public class NewEnglandJournalOfMedicinePdfTransform
 
   public static class Simplified implements OutputDocumentTransform {
 
+    public static class EraseVariableMessage2 extends PageStreamTransform {
+
+      public static class ProcessShowText extends ReplaceString {
+        public boolean identify(String candidate) {
+          return candidate.startsWith("Downloaded from ");
+        }
+        public String getReplacement(String match) {
+          return " ";
+        }
+      }
+
+      public EraseVariableMessage2() throws IOException {
+        super(PdfUtil.SHOW_TEXT, ProcessShowText.class);
+      }
+
+    }
+
     protected OutputStream outputStream;
 
     public synchronized boolean transform(PdfDocument pdfDocument) throws IOException {
@@ -77,8 +94,9 @@ public class NewEnglandJournalOfMedicinePdfTransform
       if (outputStream == null) {
         outputStream = new NullOutputStream();
       }
-      AggregateDocumentTransform documentTransform = new AggregateDocumentTransform(new NewEnglandJournalOfMedicinePdfTransform(),
-                                                                                    new TransformEachPage(new ExtractText(outputStream)));
+      ConditionalDocumentTransform documentTransform = new ConditionalDocumentTransform(new TransformFirstPage(new EraseVariableMessage2()),
+                                                                                        new TransformEachPageExceptFirst(new EraseVariableMessage2()),
+                                                                                        new TransformEachPage(new ExtractText(outputStream)));
       boolean ret = documentTransform.transform(pdfDocument);
       logger.debug2("Simplified document transform result: " + ret);
       return ret;
