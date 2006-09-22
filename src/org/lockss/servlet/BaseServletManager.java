@@ -1,5 +1,5 @@
 /*
- * $Id: BaseServletManager.java,v 1.15 2006-05-20 23:26:00 tlipkis Exp $
+ * $Id: BaseServletManager.java,v 1.16 2006-09-22 06:26:09 tlipkis Exp $
  */
 
 /*
@@ -74,6 +74,11 @@ public abstract class BaseServletManager
   public static final String PARAM_LOGDIR =
     Configuration.PREFIX +  "platform.logdirectory";
 
+  /** Set false to disable the debug user.  Daemon restart required. */
+  public static final String PARAM_ENABLE_DEBUG_USER = PREFIX +
+    "debugUser.enable";
+  public static final boolean DEFAULT_ENABLE_DEBUG_USER = true;
+
   public static final String PARAM_USERS = PREFIX + "users";
   public static final String USER_PARAM_USER = "user";
   public static final String USER_PARAM_PWD = "password";
@@ -89,6 +94,7 @@ public abstract class BaseServletManager
   };
 
   protected int port;
+  protected MDHashUserRealm realm;
   private boolean start;
   private String includeIps;
   private String excludeIps;
@@ -158,10 +164,42 @@ public abstract class BaseServletManager
     ah.setAllowLocal(true);
   }
 
+  void setupAuthRealm() {
+    if (doAuth) {
+      realm = new MDHashUserRealm(UI_REALM);
+      installUsers(realm);
+      if (realm.isEmpty()) {
+	log.warning("No users created, UI is effectively disabled.");
+      }
+    }
+  }
+
+  protected void installUsers(MDHashUserRealm realm) {
+    installDebugUser(realm);
+    installPlatformUser(realm);
+    installGlobalUsers(realm);
+    installLocalUsers(realm);
+  }
+
+  protected void installDebugUser(MDHashUserRealm realm) {
+    if (CurrentConfig.getBooleanParam(PARAM_ENABLE_DEBUG_USER,
+				      DEFAULT_ENABLE_DEBUG_USER)) {
+      try {
+	URL propsUrl = this.getClass().getResource(PASSWORD_PROPERTY_FILE);
+	if (propsUrl != null) {
+	  log.debug("passwd props file: " + propsUrl);
+	  realm.load(propsUrl.toString());
+	}
+      } catch (IOException e) {
+	log.warning("Error loading " + PASSWORD_PROPERTY_FILE, e);
+      }
+    }
+  }
+
   // Manually install password set by platform config.
   // XXX Doesn't handle roles, will need to be integrated with daemon
   // password setting mechanism
-  protected void setConfiguredPasswords(MDHashUserRealm realm) {
+  protected void installPlatformUser(MDHashUserRealm realm) {
     // Use platform config in case real config hasn't been loaded yet (when
     // used from TinyUI)
     Configuration platConfig = ConfigManager.getPlatformConfig();
@@ -172,11 +210,22 @@ public abstract class BaseServletManager
 	!StringUtil.isNullString(platPass)) {
       realm.put(platUser, platPass);
     }
+  }
 
+  protected void installGlobalUsers(MDHashUserRealm realm) {
     // Install globally configured users
     // XXX disallow this on the platform
-    Configuration users =
-      ConfigManager.getCurrentConfig().getConfigTree(PARAM_USERS);
+    installUsers(realm,
+		 ConfigManager.getCurrentConfig().getConfigTree(PARAM_USERS));
+  }
+
+  protected void installLocalUsers(MDHashUserRealm realm) {
+    // Install locally configured users
+//     installUsers(realm,
+// 		 ConfigManager.getCurrentConfig().getConfigTree(PARAM_USERS));
+  }
+
+  protected void installUsers(MDHashUserRealm realm, Configuration users) {
     for (Iterator iter = users.nodeIterator(); iter.hasNext(); ) {
       Configuration oneUser = users.getConfigTree((String)iter.next());
       String user = oneUser.get(USER_PARAM_USER);
