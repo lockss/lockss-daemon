@@ -1,5 +1,5 @@
 /*
- * $Id: StatusTable.java,v 1.47 2005-11-16 04:25:22 tlipkis Exp $
+ * $Id: StatusTable.java,v 1.48 2006-09-22 06:24:27 tlipkis Exp $
  */
 
 /*
@@ -586,13 +586,27 @@ public class StatusTable {
 	String colName = sortRule.getColumnName();
 	// Either object might be either an EmbeddedValue.  We want to
 	// compare the actual value.
-	Object valA = getActualValue(rowA.get(colName));
-	Object valB = getActualValue(rowB.get(colName));
+	Object valA = getSortValue(rowA.get(colName));
+	Object valB = getSortValue(rowB.get(colName));
 	returnVal = sortRule.compare(valA, valB);
       }
       return returnVal;
     }
 
+    // This is an awful hack.  Values (actual values) can be lists, which
+    // are displayed (by DaemonStatus) by concatenating their elements.
+    // Performing the concatenation in the comparator (n log n times) is
+    // too expensive, but allowing the list to get to the underlying
+    // comparator can cause a ClassCastException.  As an expedient, use the
+    // first element of the list as the sort value.
+    Object getSortValue(Object value) {
+      Object actual = getActualValue(value);
+      if (actual instanceof List) {
+	List lst = (List)actual;
+	return lst.isEmpty() ? null : lst.get(0);
+      }
+      return actual;
+    }
   }
 
   /**

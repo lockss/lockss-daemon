@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.42 2006-09-17 07:25:12 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.43 2006-09-22 06:24:27 tlipkis Exp $
  */
 
 /*
@@ -125,7 +125,7 @@ public class ArchivalUnitStatus
 			   ColumnDescriptor.TYPE_FLOAT),
       new ColumnDescriptor("Peers", "Peers", ColumnDescriptor.TYPE_INT),
       new ColumnDescriptor("AuPolls", "Polls",
-                           ColumnDescriptor.TYPE_STRING),
+                           ColumnDescriptor.TYPE_INT),
       new ColumnDescriptor("Damaged", "Status",
                            ColumnDescriptor.TYPE_STRING,
 			   FOOT_STATUS),

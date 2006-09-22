@@ -1,5 +1,5 @@
 /*
-* $Id: PollerStatus.java,v 1.23 2006-05-24 23:04:50 tlipkis Exp $
+* $Id: PollerStatus.java,v 1.24 2006-09-22 06:24:27 tlipkis Exp $
  */
 
 /*
@@ -547,8 +547,8 @@ public class PollerStatus {
       String auid = au.getAuId();
       String keys =
 	PropUtil.propsToCanonicalEncodedString(PropUtil.fromArgs("AU", auid));
-      return new StatusTable.Reference(new PollsRef(howManyPollsRunning(au)),
-                                       tableName, keys);
+      return new StatusTable.Reference(new Integer(howManyPollsRunning(au)),
+				       tableName, keys);
     }
   }
 
