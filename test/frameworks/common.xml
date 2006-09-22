@@ -117,6 +117,7 @@
 	<value>gov.gpo.access.permanent.plugin.surveyofcurrentbusiness.SurveyOfCurrentBusinessPlugin</value>
 	<value>gov.gpo.access.permanent.plugin.monthlyenergyreview.MonthlyEnergyReviewPlugin</value>
 	<value>gov.gpo.access.permanent.plugin.monthlylaborreview.MonthlyLaborReviewPlugin</value>
+	<value>gov.gpo.access.permanent.plugin.environmentalhealthperspectives.Environmental_Health_PerspectivesPlugin</value>
 	<value>org.lockss.plugin.etd.vanderbiltetdplugin.VanderbiltETDPlugin</value>
 	<value>org.lockss.plugin.etd.vtetdplugin.VTETDLegacyPlugin</value>
 	<value>org.lockss.plugin.etd.vtetdplugin.VTETD97And98Plugin</value>
@@ -140,6 +141,7 @@
 	<value>gov.gpo.access.permanent.plugin.amberwaves.Amber_WavesPlugin</value>
 	<value>gov.gpo.access.permanent.plugin.fbilawenforcementbulletin.FBI_Law_Enforcement_BulletinPlugin</value>
 	<value>org.lockss.plugin.ams.AMSPlugin</value>
+	<value>edu.nyu.plugin.journalofglobalbuddhism.JournalOfGlobalBuddhismPlugin</value>
 	<value>org.lockss.plugin.madhattersreview.MadHattersReviewPlugin</value>
 	<value>edu.jhu.library.plugin.jrf.JournalOfReligionAndFilmPlugin</value>
 	<value>org.lockss.plugin.nature.ClockssNaturePlugin</value>
@@ -513,6 +515,7 @@
 	  or pluginName='gov.gpo.access.permanent.plugin.monthlylaborreview.MonthlyLaborReviewPlugin'
 	  or pluginName='gov.gpo.access.permanent.plugin.amberwaves.Amber_WavesPlugin'
 	  or pluginName='gov.gpo.access.permanent.plugin.fbilawenforcementbulletin.FBI_Law_Enforcement_BulletinPlugin'
+	  or pluginName='gov.gpo.access.permanent.plugin.environmentalhealthperspectives.Environmental_Health_PerspectivesPlugin'
 	  ]"
 	  />
       </property>
@@ -560,6 +563,35 @@
 	  <property name="key" value="year" />
 	  <property name="value" value="2006" />
 	</property>
+      </property>
+
+      <property name="AlaskaStateDocuments2007">
+	<property name="title" value="Alaska State Documents 2007" />
+	<property name="journalTitle" value="Alaska State Documents" />
+	<property name="plugin" value="us.ak.state.library.plugin.AlaskaStateDocsPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://library.state.ak.us/asp/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2007" />
+	</property>
+      </property>
+
+      <property name="Environmental_Health_Perspectives2005">
+	<property name="title" value="Environmental Health Perspectives 2005" />
+	<property name="journalTitle" value="Environmental Health Perspectives" />
+	<property name="plugin" value="gov.gpo.access.permanent.plugin.environmentalhealthperspectives.Environmental_Health_PerspectivesPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://permanent.access.gpo.gov/lockss/Environmental_Health_Perspectives/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2005" />
+	</property>
+        <property name="attributes.temp" value="cool" />
       </property>
 
       <property name="Treasury_Bulletin2005">
