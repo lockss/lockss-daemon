@@ -1,5 +1,5 @@
 /*
- * $Id: ClockssUrlCacher.java,v 1.3 2006-09-16 07:17:06 tlipkis Exp $
+ * $Id: ClockssUrlCacher.java,v 1.4 2006-09-22 06:21:51 tlipkis Exp $
  */
 
 /*
@@ -48,116 +48,12 @@ import org.lockss.crawler.PermissionMap;
 public class ClockssUrlCacher implements UrlCacher {
   private static Logger log = Logger.getLogger("ClockssUrlCacher");
 
-  public static final int PROBE_NONE = 0;
-  public static final int PROBE_INST = 1;
-  public static final int PROBE_CLOCKSS = 2;
-
   private UrlCacher uc;
-  private int probeState = PROBE_NONE;
-  private boolean executed = false;
+  private ClockssSubscriptionProbe probe;
 
   public ClockssUrlCacher(UrlCacher uc) {
     this.uc = uc;
-  }
-
-  // State machine to control the local address we fetch from, and whether
-  // to retry from the other address.  There are two UrlCacher methods that
-  // might open a connection to be opened to the server: cache() and
-  // getUncachedInputStream().  The wrappers for those methods call
-  // setupAddr before forwarding the call.
-
-  boolean setupAddr() {
-    if (executed) {
-      // already succeeded or failed, don't change state, don't retry
-      return false;
-    }
-    ArchivalUnit au = uc.getArchivalUnit();
-    AuState aus = AuUtil.getAuState(au);
-    ClockssParams mgr = AuUtil.getDaemon(au).getClockssParams();
-    switch (aus.getClockssSubscriptionStatus()) {
-    case AuState.CLOCKSS_SUB_UNKNOWN:
-    case AuState.CLOCKSS_SUB_YES:
-    case AuState.CLOCKSS_SUB_INACCESSIBLE:
-      switch (probeState) {
-      case PROBE_NONE:
-	uc.setLocalAddress(mgr.getInstitutionSubscriptionAddr());
-	probeState = PROBE_INST;
-	return true;
-      case PROBE_INST:
-	uc.setLocalAddress(mgr.getClockssSubscriptionAddr());
-	probeState = PROBE_CLOCKSS;
-	return true;
-      case PROBE_CLOCKSS:
-	return false;
-      default:
-	log.error("Unexpected probeState: " + probeState);
-      }
-      return false;
-//     case AuState.CLOCKSS_SUB_YES:
-//       uc.setLocalAddress(mgr.getInstitutionSubscriptionAddr());
-//       return true;
-    case AuState.CLOCKSS_SUB_NO:
-      switch (probeState) {
-      case PROBE_NONE:
-	uc.setLocalAddress(mgr.getClockssSubscriptionAddr());
-	probeState = PROBE_CLOCKSS;
-	return true;
-      case PROBE_CLOCKSS:
-      default:
-	return false;
-      }
-    default:
-      log.error("Unknown subscription state: " +
-		aus.getClockssSubscriptionStatus());
-    }
-    return false;
-  }
-
-  // XXX this isn't quite right.  If we're fetching the permission page,
-  // subscription status shouldn't be updated until the permissions are
-  // found, probe page checked, etc.  This probably has to be done at a
-  // higher level, e.g, in the crawler.
-  void updateSubscriptionStatus(boolean worked) {
-    executed = true;
-    ArchivalUnit au = uc.getArchivalUnit();
-    AuState aus = AuUtil.getAuState(au);
-    if (worked) {
-      switch (aus.getClockssSubscriptionStatus()) {
-      case AuState.CLOCKSS_SUB_UNKNOWN:
-      case AuState.CLOCKSS_SUB_INACCESSIBLE:
-	switch (probeState) {
-	case PROBE_INST:
-	  aus.setClockssSubscriptionStatus(AuState.CLOCKSS_SUB_YES);
-	  break;
-	case PROBE_CLOCKSS:
-	  aus.setClockssSubscriptionStatus(AuState.CLOCKSS_SUB_NO);
-	  break;
-	default:
-	  log.error("Unexpected probeState: " + probeState);
-	}
-	break;
-      case AuState.CLOCKSS_SUB_YES:
-	switch (probeState) {
-	case PROBE_INST:
-	  break;
-	case PROBE_CLOCKSS:
-	  aus.setClockssSubscriptionStatus(AuState.CLOCKSS_SUB_NO);
-	  break;
-	default:
-	  log.error("Unexpected probeState: " + probeState);
-	}
-	break;
-      case AuState.CLOCKSS_SUB_NO:
-	// If we determined we don't have a subscription, should we change
-	// our mind here?
-	break;
-      default:
-	log.error("Unknown subscription state: " +
-		  aus.getClockssSubscriptionStatus());
-      }
-    } else {
-      aus.setClockssSubscriptionStatus(AuState.CLOCKSS_SUB_INACCESSIBLE);
-    }
+    probe = new ClockssSubscriptionProbe(uc.getArchivalUnit());
   }
 
   public ArchivalUnit getArchivalUnit() {
@@ -214,7 +110,7 @@ public class ClockssUrlCacher implements UrlCacher {
     int res;
     boolean update = false;
     boolean worked = false;
-    setupAddr();
+    probe.setupAddr(uc);		// setup first probe address
     try {
       res = uc.cache();
       update = true;
@@ -222,7 +118,7 @@ public class ClockssUrlCacher implements UrlCacher {
       return res;
     } catch (CacheException.PermissionException e) {
       update = true;
-      if (setupAddr()) {
+      if (probe.setupAddr(uc)) {	// setup second probe address
 	uc.reset();
 	res = uc.cache();
 	worked = true;
@@ -231,21 +127,23 @@ public class ClockssUrlCacher implements UrlCacher {
 	throw e;
       }
     } finally {
-      if (update) updateSubscriptionStatus(worked);
+      // update subscription status iff fetch worked or threw a
+      // PermissionException
+      if (update) probe.updateSubscriptionStatus(worked);
     }
   }
 
   public InputStream getUncachedInputStream() throws IOException {
     InputStream res = null;
     boolean update = false;
-    setupAddr();
+    probe.setupAddr(uc);
     try {
       res = uc.getUncachedInputStream();
       update = true;
       return res;
     } catch (CacheException.PermissionException e) {
       update = true;
-      if (setupAddr()) {
+      if (probe.setupAddr(uc)) {
 	uc.reset();
 	res = uc.getUncachedInputStream();
 	return res;
@@ -253,7 +151,7 @@ public class ClockssUrlCacher implements UrlCacher {
 	throw e;
       }
     } finally {
-      if (update) updateSubscriptionStatus(res != null);
+      if (update) probe.updateSubscriptionStatus(res != null);
     }
   }
 
@@ -263,8 +161,7 @@ public class ClockssUrlCacher implements UrlCacher {
 
   public void reset() {
     uc.reset();
-    executed = false;
-    probeState = PROBE_NONE;
+    probe.reset();
   }
 
   public void setPermissionMapSource(PermissionMapSource pmSource) {
