@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawler.java,v 1.15 2006-09-22 06:23:02 tlipkis Exp $
+ * $Id: BaseCrawler.java,v 1.16 2006-09-23 19:24:32 tlipkis Exp $
  */
 
 /*
@@ -262,7 +262,7 @@ public abstract class BaseCrawler
     try {
       is.reset();
     } catch (IOException e) {
-      logger.debug("Couldn't reset input stream, so getting new one", e);
+      logger.debug("Couldn't reset input stream, so getting new one: " + e);
       is.close();
       UrlCacher uc = makeUrlCacher(url);
       uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW_ON_HOST);
