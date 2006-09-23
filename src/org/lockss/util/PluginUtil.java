@@ -1,5 +1,5 @@
 /*
- * $Id: PluginUtil.java,v 1.2 2005-10-11 05:48:30 tlipkis Exp $
+ * $Id: PluginUtil.java,v 1.3 2006-09-23 19:23:56 tlipkis Exp $
  */
 
 /*
@@ -32,23 +32,75 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util;
 
+import org.lockss.config.*;
 import org.lockss.plugin.CachedUrl;
+import org.mortbay.util.*;
 
 /**
  * @author  Thomas S. Robertson
  * @version 0.0
  */
 public class PluginUtil {
+  static Logger log = Logger.getLogger("PluginUtil");
+
+  static final String PREFIX = Configuration.PREFIX + "PluginUtil.";
+
+  /** If true, the logic in getBaseUrl() that is responsible for turning
+   * the url <code>foo</code> into the base url <code>foo/</code> (if that
+   * is the name the page was actually collected under) will do that only
+   * if the url doesn't end with slash, and the nodeUrl in the props does.
+   * This matches the logic in
+   * LockssResourceHandler.handleLockssRedirect().  But it's expensive, and
+   * I don't think the nodeUrl prop should ever be different from the url
+   * in any other situation, so I don't think it's necessary.
+   */
+  public static final String PARAM_DIR_NODE_CHECK_SLASH =
+    PREFIX + "dirNodeCheckSlash";
+  public static final boolean DEFAULT_DIR_NODE_CHECK_SLASH = false;
+
+  private static boolean dirNodeCheckSlash = DEFAULT_DIR_NODE_CHECK_SLASH;
+
+  /** Called by org.lockss.config.MiscConfig
+   */
+  public static void setConfig(Configuration config,
+			       Configuration oldConfig,
+			       Configuration.Differences diffs) {
+    if (diffs.contains(PREFIX)) {
+      dirNodeCheckSlash = config.getBoolean(PARAM_DIR_NODE_CHECK_SLASH,
+					    DEFAULT_DIR_NODE_CHECK_SLASH);
+    }
+  }
+
+
   /**
-   * Returns the base url of the provided CachedUrl, checking to see if it's
-   * the result of a redirect.
+   * Returns the base url of the provided CachedUrl, checking to see if
+   * it's the result of a redirect.  
    */
   public static String getBaseUrl(CachedUrl cu) {
+    // See the comments in LockssResourceHandler.handleLockssRedirect();
+    // this is the same logic.
     CIProperties props = cu.getProperties();
     if (props != null) {
       String redir = props.getProperty(CachedUrl.PROPERTY_CONTENT_URL);
       if (redir != null) {
 	return redir;
+      } else {
+	String url = cu.getUrl();
+	String nodeUrl = props.getProperty(CachedUrl.PROPERTY_NODE_URL);
+	if (nodeUrl != null && !nodeUrl.equals(url)) {
+	  log.debug("getBaseUrl(" + url + "), nodeUrl: " + nodeUrl);
+	  if (dirNodeCheckSlash) {
+	    URI uri = new URI(url);
+	    if (!uri.getPath().endsWith("/")) {
+	      URI nodeUri = new URI(nodeUrl);
+	      if (nodeUri.getPath().endsWith("/")) {
+		return nodeUrl;
+	      }
+	    }
+	  } else {
+	    return nodeUrl;
+	  }
+	}
       }
     }
     return cu.getUrl();

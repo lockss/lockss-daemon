@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.49 2006-09-22 06:23:01 tlipkis Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.50 2006-09-23 19:23:56 tlipkis Exp $
  */
 
 /*
@@ -848,9 +848,8 @@ public class TestBaseUrlCacher extends LockssTestCase {
     mau.returnRealCachedUrl = true;
     String url = "http://a.b/bar";
     String redTo = url + "/";
-    MockConnectionMockBaseUrlCacher muc = new MockConnectionMockBaseUrlCacher(
-                                                                              mau,
-                                                                              url);
+    MockConnectionMockBaseUrlCacher muc =
+      new MockConnectionMockBaseUrlCacher(mau, url);
     muc.addConnection(makeConn(301, "Moved to Spain", redTo));
     muc.addConnection(makeConn(200, "Ok", null, content));
     muc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_STORE_ALL_IN_SPEC);
@@ -868,6 +867,39 @@ public class TestBaseUrlCacher extends LockssTestCase {
     assertCuProperty(redTo, redTo, CachedUrl.PROPERTY_REDIRECTED_TO);
     assertCuProperty(url, redTo, CachedUrl.PROPERTY_CONTENT_URL);
     assertCuProperty(redTo, redTo, CachedUrl.PROPERTY_CONTENT_URL);
+    assertCuProperty(url, url, CachedUrl.PROPERTY_NODE_URL);
+    assertCuProperty(redTo, url, CachedUrl.PROPERTY_NODE_URL);
+  }
+
+  // **** PluginUtil.getBaseUrl() relies on PROPERTY_NODE_URL being the
+  // **** name the node was actually collected under if there's no
+  // **** PROPERTY_REDIRECTED_TO.
+  public void testSimpleDirNoRedirect() throws Exception {
+    String content = "oft redirected content";
+    mau.returnRealCachedUrl = true;
+    String noslash = "http://a.b/bar";
+    String url = noslash + "/";
+    MockConnectionMockBaseUrlCacher muc =
+      new MockConnectionMockBaseUrlCacher(mau, url);
+    muc.addConnection(makeConn(200, "Ok", null, content));
+    muc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_STORE_ALL_IN_SPEC);
+    mau.addUrlToBeCached(url);
+    muc.cache();
+    CIProperties p = muc.getUncachedProperties();
+    assertNull(p.getProperty("location"));
+    assertNull(p.getProperty(CachedUrl.PROPERTY_REDIRECTED_TO));
+
+    // verify the correct contents and redirected-to header
+    // (these are the same node)
+    assertCuContents(url, content);
+    assertCuProperty(url, null, CachedUrl.PROPERTY_REDIRECTED_TO);
+    assertCuProperty(url, null, CachedUrl.PROPERTY_CONTENT_URL);
+    assertCuProperty(url, url, CachedUrl.PROPERTY_NODE_URL);
+
+    assertCuContents(noslash, content);
+    assertCuProperty(noslash, null, CachedUrl.PROPERTY_REDIRECTED_TO);
+    assertCuProperty(noslash, null, CachedUrl.PROPERTY_CONTENT_URL);
+    assertCuProperty(noslash, url, CachedUrl.PROPERTY_NODE_URL);
   }
 
   public void testDirRedirect() throws Exception {

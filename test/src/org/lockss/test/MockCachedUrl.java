@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrl.java,v 1.34 2006-06-02 23:01:11 smorabito Exp $
+ * $Id: MockCachedUrl.java,v 1.35 2006-09-23 19:23:56 tlipkis Exp $
  */
 
 /*
@@ -237,6 +237,11 @@ public class MockCachedUrl implements CachedUrl {
 
   public void setProperties(CIProperties prop){
     cachedProp = prop;
+  }
+
+  public void setProperty(String key, String val) {
+    if (cachedProp == null) cachedProp = new CIProperties();
+    cachedProp.put(key, val);
   }
 
   public void release() {

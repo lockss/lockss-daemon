@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginUtil.java,v 1.1 2005-05-12 00:23:07 troberts Exp $
+ * $Id: TestPluginUtil.java,v 1.2 2006-09-23 19:23:56 tlipkis Exp $
  */
 
 /*
@@ -47,6 +47,54 @@ public class TestPluginUtil extends LockssTestCase {
     }
   }
 
+  public void testGetBaseUrlDirNodeFast() {
+    ConfigurationUtil.setFromArgs(PluginUtil.PARAM_DIR_NODE_CHECK_SLASH,
+				  "false");
+    String noslash = "http://www.example.com/bar";
+    String slash = noslash + "/";
+    String bad = "http://www.example.com/bar?qu=ery";
+    String badslash = "http://www.example.com/bar/?qu=ery";
+
+    MockCachedUrl mcu = new MockCachedUrl(slash);
+    assertEquals(slash, PluginUtil.getBaseUrl(mcu));
+    mcu.setProperty(CachedUrl.PROPERTY_NODE_URL, slash); 
+    assertEquals(slash, PluginUtil.getBaseUrl(mcu));
+
+    mcu = new MockCachedUrl(noslash);
+    assertEquals(noslash, PluginUtil.getBaseUrl(mcu));
+    mcu.setProperty(CachedUrl.PROPERTY_NODE_URL, slash); 
+    assertEquals(slash, PluginUtil.getBaseUrl(mcu));
+
+    mcu = new MockCachedUrl(bad);
+    assertEquals(bad, PluginUtil.getBaseUrl(mcu));
+    mcu.setProperty(CachedUrl.PROPERTY_NODE_URL, badslash); 
+    assertEquals(badslash, PluginUtil.getBaseUrl(mcu));
+  }
+
+  public void testGetBaseUrlDirNodeCareful() {
+    ConfigurationUtil.setFromArgs(PluginUtil.PARAM_DIR_NODE_CHECK_SLASH,
+				  "true");
+    String noslash = "http://www.example.com/bar";
+    String slash = noslash + "/";
+    String bad = "http://www.example.com/bar?qu=ery";
+    String badslash = "http://www.example.com/bar?how=wouldthishappen";
+
+    MockCachedUrl mcu = new MockCachedUrl(slash);
+    assertEquals(slash, PluginUtil.getBaseUrl(mcu));
+    mcu.setProperty(CachedUrl.PROPERTY_NODE_URL, slash); 
+    assertEquals(slash, PluginUtil.getBaseUrl(mcu));
+
+    mcu = new MockCachedUrl(noslash);
+    assertEquals(noslash, PluginUtil.getBaseUrl(mcu));
+    mcu.setProperty(CachedUrl.PROPERTY_NODE_URL, slash); 
+    assertEquals(slash, PluginUtil.getBaseUrl(mcu));
+
+    mcu = new MockCachedUrl(bad);
+    assertEquals(bad, PluginUtil.getBaseUrl(mcu));
+    mcu.setProperty(CachedUrl.PROPERTY_NODE_URL, badslash); 
+    assertEquals(bad, PluginUtil.getBaseUrl(mcu));
+  }
+
   public void testGetBaseUrlNoRedirect() {
     String url = "http://www.example.com";
     MockCachedUrl mcu = new MockCachedUrl(url);
@@ -62,6 +110,10 @@ public class TestPluginUtil extends LockssTestCase {
     props.put(CachedUrl.PROPERTY_CONTENT_URL, url2);
     mcu.setProperties(props);
 
+    assertEquals(url2, PluginUtil.getBaseUrl(mcu));
+
+    // Should ignore node_url if there's a redirect
+    mcu.setProperty(CachedUrl.PROPERTY_NODE_URL, url + "/"); 
     assertEquals(url2, PluginUtil.getBaseUrl(mcu));
   }
 }

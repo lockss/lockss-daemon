@@ -1,5 +1,5 @@
 /*
- * $Id: MiscConfig.java,v 1.3 2006-02-28 09:08:29 tlipkis Exp $
+ * $Id: MiscConfig.java,v 1.4 2006-09-23 19:23:56 tlipkis Exp $
  */
 
 /*
@@ -47,6 +47,7 @@ public class MiscConfig {
 					 Configuration.Differences diffs) {
 	  HttpClientUrlConnection.setConfig(config, oldConfig, diffs);
 	  UrlUtil.setConfig(config, oldConfig, diffs);
+	  PluginUtil.setConfig(config, oldConfig, diffs);
 	}
       };
   }
