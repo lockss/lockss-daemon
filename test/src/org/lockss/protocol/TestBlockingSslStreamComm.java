@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockingSslStreamComm.java,v 1.2 2006-08-15 19:02:46 dshr Exp $
+ * $Id: TestBlockingSslStreamComm.java,v 1.3 2006-09-24 19:30:56 dshr Exp $
  */
 
 /*
@@ -130,15 +130,17 @@ public class TestBlockingSslStreamComm extends TestBlockingStreamComm {
 
 
   /** SSL */
-  public static class SslStreams extends TestBlockingSslStreamComm {
+  public static class SslStreamsTempKeys extends TestBlockingSslStreamComm {
     private static String PREFIX = "javax.net.ssl.keyStore";
     private static String PREFIX2 = "javax.net.ssl.trustStore";
-    public SslStreams(String name) {
+    public SslStreamsTempKeys(String name) {
       super(name);
     }
     public void addSuiteProps(Properties p) {
       setupKeyStore(p);
       p.setProperty(BlockingStreamComm.PARAM_USE_V3_OVER_SSL, "true");
+      p.setProperty(BlockingStreamComm.PARAM_SSL_TEMP_KEYSTORE, "true");
+      p.setProperty(BlockingStreamComm.PARAM_USE_SSL_CLIENT_AUTH, "true");
     }
     //  Add any necessary properties to the system properties
     //  to describe the KeyStore to be used for SSL,  creating
@@ -197,12 +199,7 @@ public class TestBlockingSslStreamComm extends TestBlockingStreamComm {
       System.setProperty(PREFIX2, keyStoreFile);
       System.setProperty(PREFIX2 + "Password", keyStorePassword);
       System.setProperty(PREFIX2 + "Type", ks.getType());
-      if (false) {
-        //  XXX fill the key store
-        fillKeyStore(ks, p);
-      } else {
-	initializeKeyStore(ks, p);
-      }
+      initializeKeyStore(ks, p);
     }
 
     private void initializeKeyStore(KeyStore keyStore, Properties p) {
@@ -363,70 +360,11 @@ public class TestBlockingSslStreamComm extends TestBlockingStreamComm {
 	log.debug("Not storing KeyStore in a file");
       }
     }
-
-    private String serverCert =
-      "-----BEGIN CERTIFICATE-----\n" +
-      "MIIBszCCARwCCQDDxcmh7V5/AjANBgkqhkiG9w0BAQQFADAeMQswCQYDVQQGEwJV\n" +
-      "UzEPMA0GA1UEChMGTE9DS1NTMB4XDTA2MDgxMTAxMjQzM1oXDTA4MTAxOTAxMjQz\n" +
-      "M1owHjELMAkGA1UEBhMCVVMxDzANBgNVBAoTBkxPQ0tTUzCBnzANBgkqhkiG9w0B\n" +
-      "AQEFAAOBjQAwgYkCgYEAxdLfEykq/d17K/PbVBUhoVcVacK8R+yMwNWM6hpfpEfN\n" +
-      "Fsj8cbH4CU3uFWfhw3+tzr1Ft1noKrkYesfp0pATtXZjlq/AiAoUsAmzpGuoV6uX\n" +
-      "CS0I+DA25yiCV1J5kNkCeGHsFlAVZnDE4VpnphbuOIKxpfT4RJjSsF8fq8amiTEC\n" +
-      "AwEAATANBgkqhkiG9w0BAQQFAAOBgQDFmhuAUHRHr42nsIxiPiDm9rPXI8Wi6QZz\n" +
-      "/PdjB/a2Fy+amo8Foz6/SZSiTDBUAiUm9xE36SNAm+5CBeKPnfRA9+ZcVT7tVdZm\n" +
-      "s7JH53dzCXGkGX7zMuTpD6D042bHSwAcPJPQftd+ML2L1KviWhEG11GjN3sQySnu\n" +
-      "iv68Nw6k8Q==\n" +
-      "-----END CERTIFICATE-----\n";
-    private String serverKey = 
-      "-----BEGIN RSA PRIVATE KEY-----\n" +
-      "MIICXQIBAAKBgQDF0t8TKSr93Xsr89tUFSGhVxVpwrxH7IzA1YzqGl+kR80WyPxx\n" +
-      "sfgJTe4VZ+HDf63OvUW3WegquRh6x+nSkBO1dmOWr8CIChSwCbOka6hXq5cJLQj4\n" +
-      "MDbnKIJXUnmQ2QJ4YewWUBVmcMThWmemFu44grGl9PhEmNKwXx+rxqaJMQIDAQAB\n" +
-      "AoGBAIMvJ4dJUZ0v9rJa8CN+L+MSIL0Vyk3X7C8kbmIAQ1Rp2PM3LVEoN9fTugKv\n" +
-      "9OL0FIp4sXa5RGCwhi9FyyU7LhWIafg3Zv5KO5JQsTOpIDhMbzmcVIahdVlgMkEC\n" +
-      "DCGSzyj0th154P0VDXBruDk4A+XfSOnQZJvNus5K3urd2fgBAkEA9WdHbfh36tcZ\n" +
-      "qJGTJ4kjgcNROFnzxs8IbrxArj5OBjVbeCF0vZWh37MooCrof1k+CqQMpTxanHgS\n" +
-      "ick3MW/70QJBAM5do9wRxzbcuKMJ3gdhSVd4Hxa92AJqtE4fJTN1IZt/RAzhcyG9\n" +
-      "q8qFlx8UETY9vbswKF8hFm7ri65J3PUg72ECQQCyEOjRsRNCgiYKHOeMLoRnKhSL\n" +
-      "MSokPiG+SDcet/LhqmHev1f4INU+fr+hyMC/dz//dJ4AX9TX6IB7HlhANSOhAkAD\n" +
-      "UAV9Vtu3ybs9Ar+JpsoimU8Gcm2xPD1As8dJGCw97sEM4+GRPRYw3gwa95t/H2aY\n" +
-      "RqGfRUyy4x0O4yik1q6BAkAuTx4T34wRyXmr8qEcLDfX2khFTnNa56Jtc8+EFYI7\n" +
-      "JqO13onsTw9by4bQ2WlRs8nAL8WZAk0CzCFuYHP1RiSs\n" +
-      "-----END RSA PRIVATE KEY-----\n";
-
-    private void fillKeyStore(KeyStore ks, Properties p) {
-      try {
-	File f = new File(p.getProperty(PREFIX));
-	if (f.createNewFile())
-	  f.deleteOnExit();
-	ks.load(new FileInputStream(f), p.getProperty(PREFIX+"Password").toCharArray());
-	log.debug("loaded key store from empty file");
-      } catch (Exception e) {
-	log.error("loading key threw: " + e);
-	return;
-      }
-	fail("HELLO");
-      try {
-	//  Add my certificate to the store
-        CertificateFactory cf = CertificateFactory.getInstance("X.509");
-	log.debug("Got certificate factory");
-	InputStream is = new ByteArrayInputStream(serverCert.getBytes());
-        java.security.cert.Certificate ct = cf.generateCertificate(is);
-	log.debug("Got certificate");
-	ks.setCertificateEntry("MyCert", ct);
-      } catch (Exception e) {
-	log.error("Can't store certificate: " + e);
-	return;
-      }
-	log.debug("Stored certificate");
-      //  XXX Add my private key to the store
-
-    }
   }
 
   public static Test suite() {
     return variantSuites(new Class[] {
-      SslStreams.class,
+      SslStreamsTempKeys.class,
     });
   }
 }

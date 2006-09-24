@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockingStreamComm.java,v 1.19 2006-08-16 00:13:04 dshr Exp $
+ * $Id: TestBlockingStreamComm.java,v 1.20 2006-09-24 19:30:56 dshr Exp $
  */
 
 /*
@@ -502,51 +502,61 @@ public class TestBlockingStreamComm extends LockssTestCase {
 
   public void testIncoming() throws IOException {
     setupComm1();
-    Interrupter intr1 = interruptMeIn(TIMEOUT_SHOULDNT);
-    BlockingStreamComm.SocketFactory sf = comm1.getSocketFactory();
-    Socket sock = sf.newSocket(pad1.getIPAddr(), pad1.getPort());
-    SockAbort intr2 = abortIn(TIMEOUT_SHOULDNT, sock);
-    InputStream ins = sock.getInputStream();
-    StreamUtil.readBytes(ins, rcvHeader, HEADER_LEN);
-    assertHeaderOp(rcvHeader, OP_PEERID);
-    assertEquals(pid1.getIdString(), rcvMsgData(ins));
-    intr1.cancel();
-    intr2.cancel();
+    Interrupter intr1 = null;
+    SockAbort intr2 = null;
+    try {
+      intr1 = interruptMeIn(TIMEOUT_SHOULDNT);
+      BlockingStreamComm.SocketFactory sf = comm1.getSocketFactory();
+      Socket sock = sf.newSocket(pad1.getIPAddr(), pad1.getPort());
+      intr2 = abortIn(TIMEOUT_SHOULDNT, sock);
+      InputStream ins = sock.getInputStream();
+      StreamUtil.readBytes(ins, rcvHeader, HEADER_LEN);
+      assertHeaderOp(rcvHeader, OP_PEERID);
+      assertEquals(pid1.getIdString(), rcvMsgData(ins));
+    } finally {
+      if (intr1 != null) intr1.cancel();
+      if (intr2 != null) intr2.cancel();
+    }
   }
 
   public void testIncomingRcvPeerId(String peerid, boolean isGoodId)
       throws IOException {
     log.debug("Incoming rcv pid " + peerid);
     setupComm1();
-    Interrupter intr1 = interruptMeIn(TIMEOUT_SHOULDNT);
-    BlockingStreamComm.SocketFactory sf = comm1.getSocketFactory();
-    Socket sock = sf.newSocket(pad1.getIPAddr(), pad1.getPort());
-    SockAbort intr2 = abortIn(TIMEOUT_SHOULDNT, sock);
-    InputStream ins = sock.getInputStream();
-    OutputStream outs = sock.getOutputStream();
-    StreamUtil.readBytes(ins, rcvHeader, HEADER_LEN);
-    assertHeaderOp(rcvHeader, OP_PEERID);
-    assertEquals(pid1.getIdString(), rcvMsgData(ins));
-    comm1.setAssocQueue(assocQ);
-    writePeerId(outs, peerid);
-    List event;
-    if (isGoodId) {
-      assertNotNull("Connecting channel didn't associate",
-		    (event = (List)assocQ.get(TIMEOUT_SHOULDNT)));
-      assertEquals("Connecting channel didn't associate",
-		   "assoc", event.get(0));
-      assertEquals(1, comm1.channels.size());
-      assertEquals(0, comm1.rcvChannels.size());
-    } else {
-      assertNotNull("Connecting channel didn't dissociate",
-		    (event = (List)assocQ.get(TIMEOUT_SHOULDNT)));
-      assertEquals("Connecting channel didn't dissociate",
-		   "dissoc", event.get(0));
-      assertEquals(0, comm1.channels.size());
-      assertEquals(0, comm1.rcvChannels.size());
+    Interrupter intr1 = null;
+    SockAbort intr2 = null;
+    try {
+      intr1 = interruptMeIn(TIMEOUT_SHOULDNT);
+      BlockingStreamComm.SocketFactory sf = comm1.getSocketFactory();
+      Socket sock = sf.newSocket(pad1.getIPAddr(), pad1.getPort());
+      intr2 = abortIn(TIMEOUT_SHOULDNT, sock);
+      InputStream ins = sock.getInputStream();
+      OutputStream outs = sock.getOutputStream();
+      StreamUtil.readBytes(ins, rcvHeader, HEADER_LEN);
+      assertHeaderOp(rcvHeader, OP_PEERID);
+      assertEquals(pid1.getIdString(), rcvMsgData(ins));
+      comm1.setAssocQueue(assocQ);
+      writePeerId(outs, peerid);
+      List event;
+      if (isGoodId) {
+        assertNotNull("Connecting channel didn't associate",
+  		    (event = (List)assocQ.get(TIMEOUT_SHOULDNT)));
+        assertEquals("Connecting channel didn't associate",
+  		   "assoc", event.get(0));
+        assertEquals(1, comm1.channels.size());
+        assertEquals(0, comm1.rcvChannels.size());
+      } else {
+        assertNotNull("Connecting channel didn't dissociate",
+  		    (event = (List)assocQ.get(TIMEOUT_SHOULDNT)));
+        assertEquals("Connecting channel didn't dissociate",
+  		   "dissoc", event.get(0));
+        assertEquals(0, comm1.channels.size());
+        assertEquals(0, comm1.rcvChannels.size());
+      }
+    } finally {
+      if (intr1 != null) intr1.cancel();
+      if (intr2 != null) intr2.cancel();
     }
-    intr1.cancel();
-    intr2.cancel();
   }
 
   public void testIncomingRcvGoodPeerId1() throws IOException {
@@ -567,21 +577,26 @@ public class TestBlockingStreamComm extends LockssTestCase {
   }
 
   public void testOriginate() throws IOException {
-    setupComm1();
-    setupPid(2);
-    BlockingStreamComm.SocketFactory sf = comm1.getSocketFactory();
-    ServerSocket server = sf.newServerSocket(pad2.getPort(), 3);
-    SockAbort intr = abortIn(TIMEOUT_SHOULDNT, server);
-    comm1.findOrMakeChannel(pid2);
-    Socket sock = server.accept();
-    InputStream ins = sock.getInputStream();
-    SockAbort intr2 = abortIn(TIMEOUT_SHOULDNT, sock);
-    assertRcvHeader(ins, OP_PEERID);
-    assertEquals(pid1.getIdString(), rcvMsgData(ins));
-    IOUtil.safeClose(server);
-    IOUtil.safeClose(sock);
-    intr.cancel();
-    intr2.cancel();
+    SockAbort intr1 = null;
+    SockAbort intr2 = null;
+    try {
+      setupComm1();
+      setupPid(2);
+      BlockingStreamComm.SocketFactory sf = comm1.getSocketFactory();
+      ServerSocket server = sf.newServerSocket(pad2.getPort(), 3);
+      intr1 = abortIn(TIMEOUT_SHOULDNT, server);
+      comm1.findOrMakeChannel(pid2);
+      Socket sock = server.accept();
+      InputStream ins = sock.getInputStream();
+      intr2 = abortIn(TIMEOUT_SHOULDNT, sock);
+      assertRcvHeader(ins, OP_PEERID);
+      assertEquals(pid1.getIdString(), rcvMsgData(ins));
+      IOUtil.safeClose(server);
+      IOUtil.safeClose(sock);
+    } finally {
+      if (intr1 != null) intr1.cancel();
+      if (intr2 != null) intr2.cancel();
+    }
   }
 
   public void testOriginateToBadPeerId() throws IOException {
@@ -597,37 +612,41 @@ public class TestBlockingStreamComm extends LockssTestCase {
   public void testOriginateRcvPeerId(String peerid, boolean isGoodId)
       throws IOException {
     log.debug("Orig, send pid " + peerid);
-    setupComm1();
-    comm1.setAssocQueue(assocQ);
-    setupPid(2);
-    log.debug2("Listening on " + pad2.getPort());
-    BlockingStreamComm.SocketFactory sf = comm1.getSocketFactory();
-    ServerSocket server = sf.newServerSocket(pad2.getPort(), 3);
-    SockAbort intr = abortIn(TIMEOUT_SHOULDNT, server);
-    comm1.findOrMakeChannel(pid2);
-    Socket sock = server.accept();
-    InputStream ins = sock.getInputStream();
-    OutputStream outs = sock.getOutputStream();
-    assertRcvHeader(ins, OP_PEERID);
-    assertEquals(pid1.getIdString(), rcvMsgData(ins));
-    writePeerId(outs, peerid);
-    List event;
-    if (isGoodId) {
-      assertNull("Connecting channel shouldn't call associate",
-		 assocQ.get(TIMEOUT_SHOULD));
-      assertEquals(1, comm1.channels.size());
-      assertEquals(0, comm1.rcvChannels.size());
-    } else {
-      assertNotNull("Connecting channel didn't dissociate",
-		    (event = (List)assocQ.get(TIMEOUT_SHOULDNT)));
-      assertEquals("Connecting channel didn't dissociate",
-		   "dissoc", event.get(0));
-      assertEquals(0, comm1.channels.size());
-      assertEquals(0, comm1.rcvChannels.size());
+    SockAbort intr1 = null;
+    try {
+      setupComm1();
+      comm1.setAssocQueue(assocQ);
+      setupPid(2);
+      log.debug2("Listening on " + pad2.getPort());
+      BlockingStreamComm.SocketFactory sf = comm1.getSocketFactory();
+      ServerSocket server = sf.newServerSocket(pad2.getPort(), 3);
+      intr1 = abortIn(TIMEOUT_SHOULDNT, server);
+      comm1.findOrMakeChannel(pid2);
+      Socket sock = server.accept();
+      InputStream ins = sock.getInputStream();
+      OutputStream outs = sock.getOutputStream();
+      assertRcvHeader(ins, OP_PEERID);
+      assertEquals(pid1.getIdString(), rcvMsgData(ins));
+      writePeerId(outs, peerid);
+      List event;
+      if (isGoodId) {
+        assertNull("Connecting channel shouldn't call associate",
+  		 assocQ.get(TIMEOUT_SHOULD));
+        assertEquals(1, comm1.channels.size());
+        assertEquals(0, comm1.rcvChannels.size());
+      } else {
+        assertNotNull("Connecting channel didn't dissociate",
+  		    (event = (List)assocQ.get(TIMEOUT_SHOULDNT)));
+        assertEquals("Connecting channel didn't dissociate",
+  		   "dissoc", event.get(0));
+        assertEquals(0, comm1.channels.size());
+        assertEquals(0, comm1.rcvChannels.size());
+      }
+      IOUtil.safeClose(server);
+      IOUtil.safeClose(sock);
+    } finally {
+      if (intr1 != null) intr1.cancel();
     }
-    IOUtil.safeClose(server);
-    IOUtil.safeClose(sock);
-    intr.cancel();
   }
 
   public void testOriginateRcvGoodPeerId1() throws IOException {
@@ -657,99 +676,109 @@ public class TestBlockingStreamComm extends LockssTestCase {
     ConfigurationUtil.setCurrentConfigFromProps(cprops);
     setupComm1();
     setupPid(2);
-    Interrupter intr1 = interruptMeIn(TIMEOUT_SHOULDNT);
-    BlockingStreamComm.SocketFactory sf = comm1.getSocketFactory();
-    Socket sock = sf.newSocket(pad1.getIPAddr(), pad1.getPort());
-    SockAbort intr2 = abortIn(TIMEOUT_SHOULDNT, sock);
-    InputStream ins = sock.getInputStream();
-    OutputStream outs = sock.getOutputStream();
-    StreamUtil.readBytes(ins, rcvHeader, HEADER_LEN);
-    assertHeaderOp(rcvHeader, OP_PEERID);
-    assertEquals(pid1.getIdString(), rcvMsgData(ins));
-    comm1.setAssocQueue(assocQ);
-    writePeerId(outs, pid2);
-    // wait for it to get peerid before sending to it
-    List event;
-    assertNotNull("Channel didn't assoc",
-		  (event = (List)assocQ.get(TIMEOUT_SHOULDNT)));
-    assertEquals("Channel didn't assoc",
-		 "assoc", event.get(0));
-    assertEquals(1, comm1.channels.size());
-    msg1 = makePeerMessage(1, "1234567890123456789012345678901234567890", 100);
-    int msgsize = msg1.getDataSize();
-    int tobuffer = 20 * (sock.getReceiveBufferSize() +
-			sock.getSendBufferSize());
-    for (int bytes = 0; bytes < tobuffer; bytes += msgsize) {
+    Interrupter intr1 = null;
+    SockAbort intr2 = null;
+    try {
+      intr1 = interruptMeIn(TIMEOUT_SHOULDNT);
+      BlockingStreamComm.SocketFactory sf = comm1.getSocketFactory();
+      Socket sock = sf.newSocket(pad1.getIPAddr(), pad1.getPort());
+      intr2 = abortIn(TIMEOUT_SHOULDNT, sock);
+      InputStream ins = sock.getInputStream();
+      OutputStream outs = sock.getOutputStream();
+      StreamUtil.readBytes(ins, rcvHeader, HEADER_LEN);
+      assertHeaderOp(rcvHeader, OP_PEERID);
+      assertEquals(pid1.getIdString(), rcvMsgData(ins));
+      comm1.setAssocQueue(assocQ);
+      writePeerId(outs, pid2);
+      // wait for it to get peerid before sending to it
+      List event;
+      assertNotNull("Channel didn't assoc",
+  		  (event = (List)assocQ.get(TIMEOUT_SHOULDNT)));
+      assertEquals("Channel didn't assoc",
+  		 "assoc", event.get(0));
+      assertEquals(1, comm1.channels.size());
+      msg1 = makePeerMessage(1, "1234567890123456789012345678901234567890", 100);
+      int msgsize = msg1.getDataSize();
+      int tobuffer = 20 * (sock.getReceiveBufferSize() +
+  			sock.getSendBufferSize());
+      for (int bytes = 0; bytes < tobuffer; bytes += msgsize) {
 //       comm1.sendTo(msg1, pid2, null);
-    }
-    assertEquals(1, comm1.channels.size());
-    BlockingPeerChannel chan = (BlockingPeerChannel)comm1.channels.get(pid2);
-    assertNotNull("Didn't find expected channel", chan);
+      }
+      assertEquals(1, comm1.channels.size());
+      BlockingPeerChannel chan = (BlockingPeerChannel)comm1.channels.get(pid2);
+      assertNotNull("Didn't find expected channel", chan);
 //     assertFalse("Send queue shouldn't be empty", chan.isSendIdle());
-    assertEquals(0, comm1.rcvChannels.size());
-    TimeBase.step(6000);
-    assertEquals(0, ins.available());
-    assertNotNull("Channel didn't close automatically after timeout",
-		  (event = (List)assocQ.get(TIMEOUT_SHOULDNT)));
-    assertEquals("Channel didn't close automatically after timeout",
-		 "dissoc", event.get(0));
-    assertFalse(intr1.did());
-    assertFalse(intr2.did());
-    intr1.cancel();
-    intr2.cancel();
+      assertEquals(0, comm1.rcvChannels.size());
+      TimeBase.step(6000);
+      assertEquals(0, ins.available());
+      assertNotNull("Channel didn't close automatically after timeout",
+  		  (event = (List)assocQ.get(TIMEOUT_SHOULDNT)));
+      assertEquals("Channel didn't close automatically after timeout",
+  		 "dissoc", event.get(0));
+      assertFalse(intr1.did());
+      assertFalse(intr2.did());
+    } finally {
+      if (intr1 != null) intr1.cancel();
+      if (intr2 != null) intr2.cancel();
+    }
   }
 
   public void testHangingSend() throws IOException {
-    TimeBase.setSimulated(1000);
-    cprops.setProperty(BlockingStreamComm.PARAM_CHANNEL_IDLE_TIME, "5000");
-    ConfigurationUtil.setCurrentConfigFromProps(cprops);
-    setupComm1();
-    setupPid(2);
-    Interrupter intr1 = interruptMeIn(TIMEOUT_SHOULDNT);
-    BlockingStreamComm.SocketFactory sf = comm1.getSocketFactory();
-    Socket sock = sf.newSocket(pad1.getIPAddr(), pad1.getPort());
-    SockAbort intr2 = abortIn(TIMEOUT_SHOULDNT * 2, sock);
-    InputStream ins = sock.getInputStream();
-    OutputStream outs = sock.getOutputStream();
-    StreamUtil.readBytes(ins, rcvHeader, HEADER_LEN);
-    assertHeaderOp(rcvHeader, OP_PEERID);
-    assertEquals(pid1.getIdString(), rcvMsgData(ins));
-    comm1.setAssocQueue(assocQ);
-    writePeerId(outs, pid2);
-    // wait for it to get peerid before sending to it
-    List event;
-    assertNotNull("Channel didn't assoc",
-		  (event = (List)assocQ.get(TIMEOUT_SHOULDNT)));
-    assertEquals("Channel didn't assoc",
-		 "assoc", event.get(0));
-    assertEquals(1, comm1.channels.size());
-    // a 30KB message
-    msg1 = makePeerMessage(1, "123456789012345678901234567890", 1000);
-    int msgsize = msg1.getDataSize();
-    int tobuffer = 200 * (sock.getReceiveBufferSize() +
-			sock.getSendBufferSize());
-    // Send lots of data to ensure send thread blocks waiting for socket to
-    // have buffer space
-    for (int bytes = 0; bytes < tobuffer; bytes += msgsize) {
-      comm1.sendTo(msg1, pid2, null);
+    Interrupter intr1 = null;
+    SockAbort intr2 = null;
+    try {
+      TimeBase.setSimulated(1000);
+      cprops.setProperty(BlockingStreamComm.PARAM_CHANNEL_IDLE_TIME, "5000");
+      ConfigurationUtil.setCurrentConfigFromProps(cprops);
+      setupComm1();
+      setupPid(2);
+      intr1 = interruptMeIn(TIMEOUT_SHOULDNT);
+      BlockingStreamComm.SocketFactory sf = comm1.getSocketFactory();
+      Socket sock = sf.newSocket(pad1.getIPAddr(), pad1.getPort());
+      intr2 = abortIn(TIMEOUT_SHOULDNT * 2, sock);
+      InputStream ins = sock.getInputStream();
+      OutputStream outs = sock.getOutputStream();
+      StreamUtil.readBytes(ins, rcvHeader, HEADER_LEN);
+      assertHeaderOp(rcvHeader, OP_PEERID);
+      assertEquals(pid1.getIdString(), rcvMsgData(ins));
+      comm1.setAssocQueue(assocQ);
+      writePeerId(outs, pid2);
+      // wait for it to get peerid before sending to it
+      List event;
+      assertNotNull("Channel didn't assoc",
+  		  (event = (List)assocQ.get(TIMEOUT_SHOULDNT)));
+      assertEquals("Channel didn't assoc",
+  		 "assoc", event.get(0));
+      assertEquals(1, comm1.channels.size());
+      // a 30KB message
+      msg1 = makePeerMessage(1, "123456789012345678901234567890", 1000);
+      int msgsize = msg1.getDataSize();
+      int tobuffer = 200 * (sock.getReceiveBufferSize() +
+  			sock.getSendBufferSize());
+      // Send lots of data to ensure send thread blocks waiting for socket to
+      // have buffer space
+      for (int bytes = 0; bytes < tobuffer; bytes += msgsize) {
+        comm1.sendTo(msg1, pid2, null);
+      }
+      assertEquals(1, comm1.channels.size());
+      BlockingPeerChannel chan = (BlockingPeerChannel)comm1.channels.get(pid2);
+      assertNotNull("Didn't find expected channel", chan);
+      assertFalse("Send queue shouldn't be empty", chan.isSendIdle());
+      assertEquals(0, comm1.rcvChannels.size());
+  
+      // give hung checker a chance to run.  If fails, interrupter will stop us
+      while (null == (event = (List)assocQ.get(10))) {
+        TimeBase.step(6000);
+      }
+      assertNotNull("Channel didn't close automatically after timeout", event);
+      assertEquals("Channel didn't close automatically after timeout",
+  		 "dissoc", event.get(0));
+      assertFalse(intr1.did());
+      assertFalse(intr2.did());
+    } finally {
+      if (intr1 != null) intr1.cancel();
+      if (intr2 != null) intr2.cancel();
     }
-    assertEquals(1, comm1.channels.size());
-    BlockingPeerChannel chan = (BlockingPeerChannel)comm1.channels.get(pid2);
-    assertNotNull("Didn't find expected channel", chan);
-    assertFalse("Send queue shouldn't be empty", chan.isSendIdle());
-    assertEquals(0, comm1.rcvChannels.size());
-
-    // give hung checker a chance to run.  If fails, interrupter will stop us
-    while (null == (event = (List)assocQ.get(10))) {
-      TimeBase.step(6000);
-    }
-    assertNotNull("Channel didn't close automatically after timeout", event);
-    assertEquals("Channel didn't close automatically after timeout",
-		 "dissoc", event.get(0));
-    assertFalse(intr1.did());
-    assertFalse(intr2.did());
-    intr1.cancel();
-    intr2.cancel();
   }
 
   public void testSingleConnect() throws IOException {
