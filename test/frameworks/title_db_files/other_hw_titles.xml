@@ -944,7 +944,7 @@
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
-	<property name="value" value="http://www.nutrition.org/" />
+	<property name="value" value="http://jn.nutrition.org/" />
       </property>
       <property name="param.2">
 	<property name="key" value="volume" />
