@@ -1,5 +1,5 @@
 /*
- * $Id: DocumentTransformUtil.java,v 1.4 2006-09-22 17:16:40 thib_gc Exp $
+ * $Id: DocumentTransformUtil.java,v 1.5 2006-09-25 08:12:15 thib_gc Exp $
  */
 
 /*
@@ -141,6 +141,47 @@ public class DocumentTransformUtil {
 
   }
 
+  public static abstract class OutputStreamDocumentTransform implements OutputDocumentTransform {
+
+    protected OutputStream outputStream;
+
+    /**
+     * <p>Preconditions</p>
+     * <ul>
+     *  <li>outputStream != null</li>
+     * </ul>
+     */
+    public abstract DocumentTransform makeTransform() throws IOException;
+
+    public synchronized boolean transform(PdfDocument pdfDocument) throws IOException {
+      logger.debug2("Begin output stream document transform");
+      if (outputStream == null) {
+        throw new NullPointerException("Output stream uninitialized");
+      }
+      DocumentTransform documentTransform = makeTransform();
+      boolean ret = documentTransform.transform(pdfDocument);
+      logger.debug2("Output stream document transform result: " + ret);
+      return ret;
+    }
+
+    public synchronized boolean transform(PdfDocument pdfDocument,
+                                          OutputStream outputStream) {
+      try {
+        logger.debug2("Begin output stream document transform");
+        this.outputStream = outputStream;
+        return transform(pdfDocument);
+      }
+      catch (IOException ioe) {
+        logger.error("Output stream document transform failed", ioe);
+        return false;
+      }
+      finally {
+        this.outputStream = null;
+      }
+    }
+
+  }
+
   /**
    * <p>A base document transform that serves as a wrapper around a
    * page transform.</p>
@@ -226,6 +267,6 @@ public class DocumentTransformUtil {
   /**
    * <p>A logger for use by this class.</p>
    */
-  protected static Logger logger = Logger.getLogger("DocumentTransformUtil");
+  private static Logger logger = Logger.getLogger("DocumentTransformUtil");
 
 }

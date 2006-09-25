@@ -1,5 +1,5 @@
 /*
- * $Id: NewEnglandJournalOfMedicinePdfTransform.java,v 1.3 2006-09-22 21:08:16 thib_gc Exp $
+ * $Id: NewEnglandJournalOfMedicinePdfTransform.java,v 1.4 2006-09-25 08:12:14 thib_gc Exp $
  */
 
 /*
@@ -35,23 +35,22 @@ package org.lockss.plugin.highwire;
 import java.io.*;
 import java.util.List;
 
-import org.apache.commons.io.output.NullOutputStream;
 import org.lockss.filter.pdf.*;
-import org.lockss.filter.pdf.DocumentTransformUtil.OutputDocumentTransform;
-import org.lockss.filter.pdf.PageTransformUtil.ExtractText;
+import org.lockss.filter.pdf.DocumentTransformUtil.*;
+import org.lockss.filter.pdf.PageTransformUtil.ExtractStringsToOutputStream;
 import org.lockss.plugin.highwire.HighWirePdfFilterFactory.SanitizeMetadata;
 import org.lockss.util.*;
 
-public class NewEnglandJournalOfMedicinePdfTransform
-    extends ConditionalDocumentTransform
-    implements OutputDocumentTransform {
+public class NewEnglandJournalOfMedicinePdfTransform extends SimpleOutputDocumentTransform {
 
   public static class EraseVariableMessage extends PageStreamTransform {
 
     public static class ProcessEndTextObject extends ConditionalMergeOperatorProcessor {
+
       public List getReplacement(List tokens) {
         return ListUtil.list(tokens.get(0), tokens.get(tokens.size() - 1));
       }
+
       public boolean identify(List tokens) {
         int last = tokens.size() - 1;
         boolean ret = PdfUtil.matchTextObject(tokens, 0, last)
@@ -59,6 +58,7 @@ public class NewEnglandJournalOfMedicinePdfTransform
         logger.debug3("ProcessEndTextObject candidate match: " + ret);
         return ret;
       }
+
     }
 
     public EraseVariableMessage() throws IOException {
@@ -68,17 +68,20 @@ public class NewEnglandJournalOfMedicinePdfTransform
 
   }
 
-  public static class Simplified implements OutputDocumentTransform {
+  public static class Simplified extends OutputStreamDocumentTransform {
 
     public static class EraseVariableMessage2 extends PageStreamTransform {
 
       public static class ProcessShowText extends ReplaceString {
-        public boolean identify(String candidate) {
-          return candidate.startsWith("Downloaded from ");
-        }
+
         public String getReplacement(String match) {
           return " ";
         }
+
+        public boolean identify(String candidate) {
+          return candidate.startsWith("Downloaded from ");
+        }
+
       }
 
       public EraseVariableMessage2() throws IOException {
@@ -87,49 +90,18 @@ public class NewEnglandJournalOfMedicinePdfTransform
 
     }
 
-    protected OutputStream outputStream;
-
-    public synchronized boolean transform(PdfDocument pdfDocument) throws IOException {
-      logger.debug2("Begin simplified document transform");
-      if (outputStream == null) {
-        outputStream = new NullOutputStream();
-      }
-      ConditionalDocumentTransform documentTransform = new ConditionalDocumentTransform(new TransformFirstPage(new EraseVariableMessage2()),
-                                                                                        new TransformEachPageExceptFirst(new EraseVariableMessage2()),
-                                                                                        new TransformEachPage(new ExtractText(outputStream)));
-      boolean ret = documentTransform.transform(pdfDocument);
-      logger.debug2("Simplified document transform result: " + ret);
-      return ret;
-    }
-
-    public synchronized boolean transform(PdfDocument pdfDocument,
-                                          OutputStream outputStream) {
-      try {
-        this.outputStream = outputStream;
-        return transform(pdfDocument);
-      }
-      catch (IOException ioe) {
-        logger.error("Simplified document transform failed", ioe);
-        return false;
-      }
-      finally {
-        this.outputStream = null;
-      }
+    public DocumentTransform makeTransform() throws IOException {
+      return new ConditionalDocumentTransform(new TransformFirstPage(new EraseVariableMessage2()),
+                                              new TransformEachPageExceptFirst(new EraseVariableMessage2()),
+                                              new TransformEachPage(new ExtractStringsToOutputStream(outputStream)));
     }
 
   }
 
   public NewEnglandJournalOfMedicinePdfTransform() throws IOException {
-    super(new TransformFirstPage(new EraseVariableMessage()),
-          new TransformEachPageExceptFirst(new EraseVariableMessage()),
-          new SanitizeMetadata());
-  }
-
-  public boolean transform(PdfDocument pdfDocument,
-                           OutputStream outputStream) {
-    return PdfUtil.applyAndSave(this,
-                                pdfDocument,
-                                outputStream);
+    super(new ConditionalDocumentTransform(new TransformFirstPage(new EraseVariableMessage()),
+                                           new TransformEachPageExceptFirst(new EraseVariableMessage()),
+                                           new SanitizeMetadata()));
   }
 
   private static Logger logger = Logger.getLogger("NewEnglandJournalOfMedicinePdfTransform");

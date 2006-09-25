@@ -1,5 +1,5 @@
 /*
- * $Id: ReplaceString.java,v 1.1 2006-09-19 16:54:53 thib_gc Exp $
+ * $Id: ReplaceString.java,v 1.2 2006-09-25 08:12:15 thib_gc Exp $
  */
 
 /*
@@ -44,7 +44,7 @@ import org.pdfbox.util.PDFOperator;
  * operator (<code>Tj</code>), replacing the operand string by
  * another conditionally.</p>
  * <p>{@link ReplaceString} instances, like
- * {@link SimpleOperatorProcessor} instances, <em>must</em> have a
+ * {@link PdfOperatorProcessor} instances, <em>must</em> have a
  * no-argument constructor, and are instantiated once per key
  * associated with their class name during a given
  * {@link PageStreamTransform} instantiation.</p>

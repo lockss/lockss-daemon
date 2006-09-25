@@ -1,5 +1,5 @@
 /*
- * $Id: PageStreamTransform.java,v 1.3 2006-09-22 17:16:40 thib_gc Exp $
+ * $Id: PageStreamTransform.java,v 1.4 2006-09-25 08:12:15 thib_gc Exp $
  */
 
 /*
@@ -102,14 +102,90 @@ import org.pdfbox.util.operator.OperatorProcessor;
  */
 public class PageStreamTransform extends PDFStreamEngine implements PageTransform {
 
-  public static class RecognizePageStream extends PageStreamTransform {
+  public static class NullPageStreamTransform extends PageStreamTransform {
 
-    public RecognizePageStream(Properties customProcessors) throws IOException {
-      super(customProcessors);
+    public NullPageStreamTransform() throws IOException {
+      super();
     }
 
-    protected void writeResult(PdfPage pdfPage) {
-      // Do nothing
+    public NullPageStreamTransform(Properties customOperatorProcessors) throws IOException {
+      super(customOperatorProcessors);
+    }
+
+    public NullPageStreamTransform(String pdfOperatorString, Class pdfOperatorProcessor)
+        throws IOException {
+      super(pdfOperatorString, pdfOperatorProcessor);
+    }
+
+    public NullPageStreamTransform(String pdfOperatorString1, Class pdfOperatorProcessor1,
+                                   String pdfOperatorString2, Class pdfOperatorProcessor2)
+        throws IOException {
+      super(pdfOperatorString1, pdfOperatorProcessor1,
+            pdfOperatorString2, pdfOperatorProcessor2);
+    }
+
+    public NullPageStreamTransform(String pdfOperatorString1, Class pdfOperatorProcessor1,
+                                   String pdfOperatorString2, Class pdfOperatorProcessor2,
+                                   String pdfOperatorString3, Class pdfOperatorProcessor3)
+        throws IOException {
+      super(pdfOperatorString1, pdfOperatorProcessor1,
+            pdfOperatorString2, pdfOperatorProcessor2,
+            pdfOperatorString3, pdfOperatorProcessor3);
+    }
+
+    public NullPageStreamTransform(String pdfOperatorString1, Class pdfOperatorProcessor1,
+                                   String pdfOperatorString2, Class pdfOperatorProcessor2,
+                                   String pdfOperatorString3, Class pdfOperatorProcessor3,
+                                   String pdfOperatorString4, Class pdfOperatorProcessor4)
+        throws IOException {
+      super(pdfOperatorString1, pdfOperatorProcessor1,
+            pdfOperatorString2, pdfOperatorProcessor2,
+            pdfOperatorString3, pdfOperatorProcessor3,
+            pdfOperatorString4, pdfOperatorProcessor4);
+    }
+
+  }
+
+  public static class RecognizePageStream extends NullPageStreamTransform {
+
+    public RecognizePageStream() throws IOException {
+      super();
+    }
+
+    public RecognizePageStream(Properties customOperatorProcessors) throws IOException {
+      super(customOperatorProcessors);
+    }
+
+    public RecognizePageStream(String pdfOperatorString, Class pdfOperatorProcessor)
+        throws IOException {
+      super(pdfOperatorString, pdfOperatorProcessor);
+    }
+
+    public RecognizePageStream(String pdfOperatorString1, Class pdfOperatorProcessor1,
+                               String pdfOperatorString2, Class pdfOperatorProcessor2)
+        throws IOException {
+      super(pdfOperatorString1, pdfOperatorProcessor1,
+            pdfOperatorString2, pdfOperatorProcessor2);
+    }
+
+    public RecognizePageStream(String pdfOperatorString1, Class pdfOperatorProcessor1,
+                               String pdfOperatorString2, Class pdfOperatorProcessor2,
+                               String pdfOperatorString3, Class pdfOperatorProcessor3)
+        throws IOException {
+      super(pdfOperatorString1, pdfOperatorProcessor1,
+            pdfOperatorString2, pdfOperatorProcessor2,
+            pdfOperatorString3, pdfOperatorProcessor3);
+    }
+
+    public RecognizePageStream(String pdfOperatorString1, Class pdfOperatorProcessor1,
+                               String pdfOperatorString2, Class pdfOperatorProcessor2,
+                               String pdfOperatorString3, Class pdfOperatorProcessor3,
+                               String pdfOperatorString4, Class pdfOperatorProcessor4)
+        throws IOException {
+      super(pdfOperatorString1, pdfOperatorProcessor1,
+            pdfOperatorString2, pdfOperatorProcessor2,
+            pdfOperatorString3, pdfOperatorProcessor3,
+            pdfOperatorString4, pdfOperatorProcessor4);
     }
 
   }
@@ -163,56 +239,36 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
     this.listStack = new Stack();
   }
 
-  public PageStreamTransform(String pdfOperatorString1,
-                             Class pdfOperatorProcessor1)
+  public PageStreamTransform(String pdfOperatorString, Class pdfOperatorProcessor)
       throws IOException {
-    this(PropUtil.fromArgs(pdfOperatorString1,
-                           pdfOperatorProcessor1.getName()));
+    this(PropUtil.fromArgs(pdfOperatorString, pdfOperatorProcessor.getName()));
   }
 
-  public PageStreamTransform(String pdfOperatorString1,
-                             Class pdfOperatorProcessor1,
-                             String pdfOperatorString2,
-                             Class pdfOperatorProcessor2)
+  public PageStreamTransform(String pdfOperatorString1, Class pdfOperatorProcessor1,
+                             String pdfOperatorString2, Class pdfOperatorProcessor2)
       throws IOException {
-    this(PropUtil.fromArgs(pdfOperatorString1,
-                           pdfOperatorProcessor1.getName(),
-                           pdfOperatorString2,
-                           pdfOperatorProcessor2.getName()));
+    this(PropUtil.fromArgs(pdfOperatorString1, pdfOperatorProcessor1.getName(),
+                           pdfOperatorString2, pdfOperatorProcessor2.getName()));
   }
 
-  public PageStreamTransform(String pdfOperatorString1,
-                             Class pdfOperatorProcessor1,
-                             String pdfOperatorString2,
-                             Class pdfOperatorProcessor2,
-                             String pdfOperatorString3,
-                             Class pdfOperatorProcessor3)
+  public PageStreamTransform(String pdfOperatorString1, Class pdfOperatorProcessor1,
+                             String pdfOperatorString2, Class pdfOperatorProcessor2,
+                             String pdfOperatorString3, Class pdfOperatorProcessor3)
       throws IOException {
-    this(PropUtil.fromArgs(pdfOperatorString1,
-                           pdfOperatorProcessor1.getName(),
-                           pdfOperatorString2,
-                           pdfOperatorProcessor2.getName(),
-                           pdfOperatorString3,
-                           pdfOperatorProcessor3.getName()));
+    this(PropUtil.fromArgs(pdfOperatorString1, pdfOperatorProcessor1.getName(),
+                           pdfOperatorString2, pdfOperatorProcessor2.getName(),
+                           pdfOperatorString3, pdfOperatorProcessor3.getName()));
   }
 
-  public PageStreamTransform(String pdfOperatorString1,
-                             Class pdfOperatorProcessor1,
-                             String pdfOperatorString2,
-                             Class pdfOperatorProcessor2,
-                             String pdfOperatorString3,
-                             Class pdfOperatorProcessor3,
-                             String pdfOperatorString4,
-                             Class pdfOperatorProcessor4)
+  public PageStreamTransform(String pdfOperatorString1, Class pdfOperatorProcessor1,
+                             String pdfOperatorString2, Class pdfOperatorProcessor2,
+                             String pdfOperatorString3, Class pdfOperatorProcessor3,
+                             String pdfOperatorString4, Class pdfOperatorProcessor4)
       throws IOException {
-    this(PropUtil.fromArgs(pdfOperatorString1,
-                           pdfOperatorProcessor1.getName(),
-                           pdfOperatorString2,
-                           pdfOperatorProcessor2.getName(),
-                           pdfOperatorString3,
-                           pdfOperatorProcessor3.getName(),
-                           pdfOperatorString4,
-                           pdfOperatorProcessor4.getName()));
+    this(PropUtil.fromArgs(pdfOperatorString1, pdfOperatorProcessor1.getName(),
+                           pdfOperatorString2, pdfOperatorProcessor2.getName(),
+                           pdfOperatorString3, pdfOperatorProcessor3.getName(),
+                           pdfOperatorString4, pdfOperatorProcessor4.getName()));
   }
 
   /**

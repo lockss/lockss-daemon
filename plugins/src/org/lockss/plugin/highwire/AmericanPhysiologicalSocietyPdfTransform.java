@@ -1,5 +1,5 @@
 /*
- * $Id: AmericanPhysiologicalSocietyPdfTransform.java,v 1.18 2006-09-22 17:16:39 thib_gc Exp $
+ * $Id: AmericanPhysiologicalSocietyPdfTransform.java,v 1.19 2006-09-25 08:12:14 thib_gc Exp $
  */
 
 /*
@@ -35,10 +35,9 @@ package org.lockss.plugin.highwire;
 import java.io.*;
 import java.util.List;
 
-import org.apache.commons.io.output.NullOutputStream;
 import org.lockss.filter.pdf.*;
-import org.lockss.filter.pdf.DocumentTransformUtil.OutputDocumentTransform;
-import org.lockss.filter.pdf.PageTransformUtil.ExtractText;
+import org.lockss.filter.pdf.DocumentTransformUtil.*;
+import org.lockss.filter.pdf.PageTransformUtil.ExtractStringsToOutputStream;
 import org.lockss.plugin.highwire.HighWirePdfFilterFactory.SanitizeMetadata;
 import org.lockss.util.*;
 import org.pdfbox.cos.*;
@@ -52,9 +51,7 @@ import org.pdfbox.cos.*;
  * @see <a href="http://www.physiology.org/">American Physiological
  * Society Journals Online</a>
  */
-public class AmericanPhysiologicalSocietyPdfTransform
-    extends ConditionalDocumentTransform
-    implements OutputDocumentTransform {
+public class AmericanPhysiologicalSocietyPdfTransform extends SimpleOutputDocumentTransform {
 
   public static class EraseDateString extends PageStreamTransform {
 
@@ -140,55 +137,24 @@ public class AmericanPhysiologicalSocietyPdfTransform
     }
   }
 
-  public static class Simplified implements OutputDocumentTransform {
+  public static class Simplified extends OutputStreamDocumentTransform {
 
-    protected OutputStream outputStream;
-
-    public synchronized boolean transform(PdfDocument pdfDocument) throws IOException {
-      logger.debug2("Begin simplified document transform");
-      if (outputStream == null) {
-        outputStream = new NullOutputStream();
-      }
-      AggregateDocumentTransform documentTransform = new AggregateDocumentTransform(new AmericanPhysiologicalSocietyPdfTransform(),
-                                                                                    new TransformEachPage(new ExtractText(outputStream)));
-      boolean ret = documentTransform.transform(pdfDocument);
-      logger.debug2("Simplified document transform result: " + ret);
-      return ret;
-    }
-
-    public synchronized boolean transform(PdfDocument pdfDocument,
-                                          OutputStream outputStream) {
-      try {
-        this.outputStream = outputStream;
-        return transform(pdfDocument);
-      }
-      catch (IOException ioe) {
-        logger.error("Simplified document transform failed", ioe);
-        return false;
-      }
-      finally {
-        this.outputStream = null;
-      }
+    public DocumentTransform makeTransform() throws IOException {
+      return new AggregateDocumentTransform(new AmericanPhysiologicalSocietyPdfTransform(),
+                                            new TransformEachPage(new ExtractStringsToOutputStream(outputStream)));
     }
 
   }
 
   public AmericanPhysiologicalSocietyPdfTransform() throws IOException {
-    super(new TransformFirstPage(new EraseVerticalText(),
-                                 new EraseDateString(),
-                                 new FixHyperlink()),
-          new TransformEachPageExceptFirst(new AggregatePageTransform(PdfUtil.OR,
-                                                                      new EraseVerticalText(),
-                                                                      new EraseVerticalText2()),
-                                           new FixHyperlink()),
-          new SanitizeMetadata());
-  }
-
-  public boolean transform(PdfDocument pdfDocument,
-                           OutputStream outputStream) {
-    return PdfUtil.applyAndSave(this,
-                                pdfDocument,
-                                outputStream);
+    super(new ConditionalDocumentTransform(new TransformFirstPage(new EraseVerticalText(),
+                                                                  new EraseDateString(),
+                                                                  new FixHyperlink()),
+                                           new TransformEachPageExceptFirst(new AggregatePageTransform(PdfUtil.OR,
+                                                                                                       new EraseVerticalText(),
+                                                                                                       new EraseVerticalText2()),
+                                                                            new FixHyperlink()),
+                                           new SanitizeMetadata()));
   }
 
   private static Logger logger = Logger.getLogger("AmericanPhysiologicalSocietyPdfTransform");

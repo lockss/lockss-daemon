@@ -1,5 +1,5 @@
 /*
- * $Id: PageTransformUtil.java,v 1.4 2006-09-22 17:16:40 thib_gc Exp $
+ * $Id: PageTransformUtil.java,v 1.5 2006-09-25 08:12:15 thib_gc Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.filter.pdf;
 import java.io.*;
 import java.util.List;
 
+import org.lockss.filter.pdf.PageStreamTransform.NullPageStreamTransform;
 import org.lockss.util.*;
 import org.pdfbox.cos.COSString;
 import org.pdfbox.util.PDFOperator;
@@ -45,58 +46,25 @@ import org.pdfbox.util.PDFOperator;
  */
 public class PageTransformUtil {
 
-  public static class ExtractStrings extends PageStreamTransform {
-
-    protected static class AppendToStringBuffer extends ProcessString {
-      public void processString(PageStreamTransform pageStreamTransform,
-                                PDFOperator operator,
-                                List operands,
-                                COSString cosString)
-          throws IOException {
-        pageStreamTransform.signalChange(); // At least one string processed
-        append(pageStreamTransform, PdfUtil.getPdfString(cosString));
-      }
-    }
-
-    protected StringBuffer buffer;
-
-    public ExtractStrings(StringBuffer buffer) throws IOException {
-      super(PdfUtil.SHOW_TEXT, AppendToStringBuffer.class,
-            PdfUtil.SHOW_TEXT_GLYPH_POSITIONING, AppendToStringBuffer.class,
-            PdfUtil.MOVE_TO_NEXT_LINE_SHOW_TEXT, AppendToStringBuffer.class,
-            PdfUtil.SET_SPACING_MOVE_TO_NEXT_LINE_SHOW_TEXT, AppendToStringBuffer.class);
-      this.buffer = buffer;
-    }
-
-    protected synchronized void writeResult(PdfPage pdfPage) {
-      // Do nothing
-    }
-
-    protected static void append(PageStreamTransform pageStreamTransform,
-                                 String str)
-        throws IOException {
-      ExtractStrings extractStrings = (ExtractStrings)pageStreamTransform;
-      extractStrings.buffer.append(str);
-    }
-
-  }
-
-  public static class ExtractText extends PageStreamTransform {
+  public static class ExtractStringsToOutputStream extends NullPageStreamTransform {
 
     public static class WriteToOutputStream extends ProcessString {
+
       public void processString(PageStreamTransform pageStreamTransform,
                                 PDFOperator operator,
                                 List operands,
                                 COSString cosString)
           throws IOException {
         pageStreamTransform.signalChange(); // At least one string processed
-        append(pageStreamTransform, cosString.getBytes());
+        ExtractStringsToOutputStream extractText = (ExtractStringsToOutputStream)pageStreamTransform;
+        extractText.outputStream.write(cosString.getBytes());
       }
+
     }
 
     protected OutputStream outputStream;
 
-    public ExtractText(OutputStream outputStream) throws IOException {
+    public ExtractStringsToOutputStream(OutputStream outputStream) throws IOException {
       super(PdfUtil.SHOW_TEXT, WriteToOutputStream.class,
             PdfUtil.SHOW_TEXT_GLYPH_POSITIONING, WriteToOutputStream.class,
             PdfUtil.MOVE_TO_NEXT_LINE_SHOW_TEXT, WriteToOutputStream.class,
@@ -104,15 +72,32 @@ public class PageTransformUtil {
       this.outputStream = outputStream;
     }
 
-    protected synchronized void writeResult(PdfPage pdfPage) {
-      // Do nothing
+  }
+
+  public static class ExtractStringsToStringBuffer extends NullPageStreamTransform {
+
+    protected static class AppendToStringBuffer extends ProcessString {
+
+      public void processString(PageStreamTransform pageStreamTransform,
+                                PDFOperator operator,
+                                List operands,
+                                COSString cosString)
+          throws IOException {
+        pageStreamTransform.signalChange(); // At least one string processed
+        ExtractStringsToStringBuffer extractStrings = (ExtractStringsToStringBuffer)pageStreamTransform;
+        extractStrings.buffer.append(PdfUtil.getPdfString(cosString));
+      }
+
     }
 
-    protected static void append(PageStreamTransform pageStreamTransform,
-                                 byte[] bytes)
-        throws IOException {
-      ExtractText extractText = (ExtractText)pageStreamTransform;
-      extractText.outputStream.write(bytes);
+    protected StringBuffer buffer;
+
+    public ExtractStringsToStringBuffer(StringBuffer buffer) throws IOException {
+      super(PdfUtil.SHOW_TEXT, AppendToStringBuffer.class,
+            PdfUtil.SHOW_TEXT_GLYPH_POSITIONING, AppendToStringBuffer.class,
+            PdfUtil.MOVE_TO_NEXT_LINE_SHOW_TEXT, AppendToStringBuffer.class,
+            PdfUtil.SET_SPACING_MOVE_TO_NEXT_LINE_SHOW_TEXT, AppendToStringBuffer.class);
+      this.buffer = buffer;
     }
 
   }
