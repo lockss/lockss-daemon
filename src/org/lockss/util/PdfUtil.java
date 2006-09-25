@@ -1,5 +1,5 @@
 /*
- * $Id: PdfUtil.java,v 1.11 2006-09-22 17:16:40 thib_gc Exp $
+ * $Id: PdfUtil.java,v 1.12 2006-09-25 04:16:47 thib_gc Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.util.*;
 
 import org.apache.commons.collections.iterators.*;
 import org.lockss.filter.pdf.*;
+import org.lockss.plugin.definable.DefinableArchivalUnit;
 import org.pdfbox.cos.*;
 import org.pdfbox.util.PDFOperator;
 
@@ -400,6 +401,19 @@ return success;
   public static final String PAINT_SHADING_PATTERN = "sh";
 
   /**
+   * <p>A suggested prefix for non-definitional parameters conveying
+   * hints about PDF filter factories.</p>
+   * @see DefinableArchivalUnit#AU_FILTER_FACTORY_SUFFIX
+   */
+  public static final String PDF_FILTER_FACTORY_HINT_PREFIX = "hint_";
+
+  /**
+   * <p>The PDF MIME type.</p>
+   * @see <a href="http://www.rfc-editor.org/rfc/rfc3778.txt">RFC3778</a>
+   */
+  public static final String PDF_MIME_TYPE = "application/pdf";
+
+  /**
    * <p>The PDF <code>Q</code> operator string.</p>
    */
   public static final String RESTORE_GRAPHICS_STATE = "Q";
@@ -590,11 +604,6 @@ return success;
   public static final String STROKE = "S";
 
   /**
-   * <p>A logger for use by this class.</p>
-   */
-  private static Logger logger = Logger.getLogger("PdfUtil");
-
-  /**
    * <p>All 73 operators defined by PDF 1.6, in the order they are
    * listed in the specification (Appendix A).</p>
    * @see <a href="http://partners.adobe.com/public/developer/en/pdf/PDFReference16.pdf">PDF Reference, Fifth Edition, Version 1.6</a>
@@ -674,6 +683,11 @@ return success;
     MOVE_TO_NEXT_LINE_SHOW_TEXT,
     SET_SPACING_MOVE_TO_NEXT_LINE_SHOW_TEXT,
   };
+
+  /**
+   * <p>A logger for use by this class.</p>
+   */
+  private static Logger logger = Logger.getLogger("PdfUtil");
 
   /**
    * <p>Applies the given transform to the given PDF document, and
