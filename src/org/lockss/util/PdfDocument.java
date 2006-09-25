@@ -1,5 +1,5 @@
 /*
- * $Id: PdfDocument.java,v 1.10 2006-09-22 17:16:40 thib_gc Exp $
+ * $Id: PdfDocument.java,v 1.11 2006-09-25 04:16:27 thib_gc Exp $
  */
 
 /*
@@ -81,14 +81,23 @@ public class PdfDocument {
   /**
    * <p>Closes the underlying {@link COSDocument} instance
    * and releases expensive memory resources held by this object.</p>
+   * <p>This method does not throw {@link IOException} in case of
+   * failure; use the return value to determine success. However,
+   * calling this method does cause this instance to become
+   * unusable; any subsequent method calls will likely yield a
+   * {@link NullPointerException}.</p>
+   * @return True if closing the PDF document succeeded, false
+   *         otherwise.
    * @see PDDocument#close
    */
-  public void close() {
+  public boolean close() {
     try {
       getPdDocument().close();
+      return true;
     }
     catch (IOException ioe) {
       logger.error("Error while closing a PDF document", ioe);
+      return false;
     }
     finally {
       pdfParser = null;
@@ -457,5 +466,28 @@ public class PdfDocument {
   }
 
   private static Logger logger = Logger.getLogger("PdfDocument");
+
+  /**
+   * <p>Closes the underlying {@link COSDocument} instance
+   * and releases expensive memory resources held by the given
+   * object (which can be null).</p>
+   * <p>This method does not throw {@link IOException} in case of
+   * failure; use the return value to determine success. However,
+   * calling this method does cause the given instance to become
+   * unusable; any subsequent method calls will likely yield a
+   * {@link NullPointerException}.</p>
+   * @param pdfDocument a PDF document instance; can be null.
+   * @return True if the PDF document is null or if closing it
+   *         succeeded, false otherwise.
+   * @see #close()
+   */
+  public static boolean close(PdfDocument pdfDocument) {
+    if (pdfDocument == null) {
+      return true;
+    }
+    else {
+      return pdfDocument.close();
+    }
+  }
 
 }

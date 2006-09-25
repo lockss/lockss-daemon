@@ -1,5 +1,5 @@
 /*
- * $Id: MockPdfDocument.java,v 1.3 2006-09-22 17:16:40 thib_gc Exp $
+ * $Id: MockPdfDocument.java,v 1.4 2006-09-25 04:16:27 thib_gc Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ public class MockPdfDocument extends PdfDocument {
     super();
   }
 
-  public void close() {
+  public boolean close() {
     throw new UnsupportedOperationException();
   }
 
