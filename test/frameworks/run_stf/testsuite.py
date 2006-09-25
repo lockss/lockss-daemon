@@ -137,7 +137,7 @@ class FailingTestTestCase(LockssAutoStartTestCase):
 class ImmediateSucceedingTestTestCase(unittest.TestCase):
     " Test case that succeeds immediately, without starting the daemons. "
     def runTest(self):
-	return
+        return
 
 class ImmediateFailingTestTestCase(unittest.TestCase):
     " Test case that fails immediately, without starting the daemons. "
@@ -578,7 +578,7 @@ class RandomizedDamageTestCase(LockssAutoStartTestCase):
     "Test recovery from random file damage in a randomly sized AU."
 
     def runTest(self):
-	random.seed(time.time())
+        random.seed(time.time())
         depth = random.randint(0, 2)
         branch = random.randint(0, 2)
         numFiles = random.randint(3, 20)
@@ -669,7 +669,7 @@ class RandomizedDeleteTestCase(LockssAutoStartTestCase):
     "Test recovery from random file deletion in a randomly sized AU."
 
     def runTest(self):
-	random.seed(time.time())
+        random.seed(time.time())
         depth = random.randint(0, 2)
         branch = random.randint(0, 2)
         numFiles = random.randint(3, 20)
@@ -745,7 +745,7 @@ class RandomizedExtraFileTestCase(LockssAutoStartTestCase):
     """ Test recovery from random node creation in a randomly sized AU. """
 
     def runTest(self):
-	random.seed(time.time())
+        random.seed(time.time())
         depth = random.randint(0, 2)
         branch = random.randint(0, 2)
         numFiles = random.randint(3, 20)
@@ -873,7 +873,7 @@ class TotalLossRecoveryTestCase(LockssTestCase):
 
         log.info("Waiting to win top level content poll.")
         assert client.waitForWonTopLevelContentPoll(simAu, timeout=self.timeout),\
-	       "Never won top level content poll"
+           "Never won top level content poll"
         log.info("Won top level content poll.")
 
         log.info("Backing up cache configuration...")
@@ -1174,6 +1174,7 @@ class V3TestCase(LockssTestCase):
 
         for i in range(0, len(self.clients)):
             extraConf = {"org.lockss.auconfig.allowEditDefaultOnlyParams": "true",
+                         "org.lockss.localV3Identity": "TCP:[127.0.0.1]:%d" % (self.getBaseV3Port() + i),
                          "org.lockss.comm.enabled": "false",
                          "org.lockss.scomm.enabled": "true",
                          "org.lockss.scomm.maxMessageSize": "33554432",  # 32MB
@@ -1186,7 +1187,6 @@ class V3TestCase(LockssTestCase):
                          "org.lockss.poll.v3.minPollDuration": "5m",
                          "org.lockss.poll.v3.maxPollDuration": "6m",
                          "org.lockss.poll.v3.voteDeadlinePadding": "30s",
-                         "org.lockss.localV3Identity": "TCP:[127.0.0.1]:%d" % (self.getBaseV3Port() + i),
                          "org.lockss.id.initialV3PeerList": self.getInitialPeerList() }
             extraConf.update(self.getTestLocalConf())
 
@@ -1247,9 +1247,9 @@ class SimpleDamageV3TestCase(V3TestCase):
 
         client = self.clients[2]
 
-	    ##
-	    ## Damage the AU.
-	    ##
+        ##
+        ## Damage the AU.
+        ##
         node = client.randomDamageSingleNode(simAu)
         log.info("Damaged node %s on client %s" % (node.url, client))
 
@@ -1323,6 +1323,133 @@ class RandomDamageV3TestCase(V3TestCase):
 
 def randomDamageV3TestCase():
     return RandomDamageV3TestCase()
+
+
+class RepairFromPublisherV3TestCase(V3TestCase):
+    """ Ensure that repair from pubilsher works correctly in V3. """
+    def getTestLocalConf(self):
+        # NEVER repair from a cache
+        return {"org.lockss.poll.v3.repairFromCachePercent": "0"}
+        
+    def runTest(self):
+        # Reasonably complex AU for testing.
+        simAu = SimulatedAu('simContent', depth=1, branch=1,
+                            numFiles=10,
+                            fileTypes=(FILE_TYPE_TEXT + FILE_TYPE_BIN),
+                            binFileSize=1024, protocolVersion=3)
+
+        ##
+        ## Create simulated AUs
+        ##
+        log.info("Creating V3 simulated AUs.")
+        for client in self.clients:
+            client.createAu(simAu)
+
+        ##
+        ## Assert that the AUs have been crawled.
+        ##
+        log.info("Waiting for simulated AUs to crawl.")
+        for client in self.clients:
+            if not (client.waitForSuccessfulCrawl(simAu)):
+                self.fail("AUs never completed initial crawl.")
+        log.info("AUs completed initial crawl.")
+
+        client = self.clients[2]
+
+        ##
+        ## Damage the AU.
+        ##
+        nodeList = client.randomDamageRandomNodes(simAu, 15, 20)
+        log.info("Damaged the following nodes on client %s:\n        %s" %
+            (client, '\n        '.join([str(n) for n in nodeList])))
+
+        # Request a tree walk (deactivate and reactivate AU)
+        log.info("Requesting tree walk.")
+        client.requestTreeWalk(simAu)
+
+        log.info("Waiting for a V3 poll to be called...")
+        client.waitForV3Poller(simAu)
+
+        log.info("Successfully called a V3 poll.")
+
+        ## Just pause until we have better tests.
+        log.info("Waiting for V3 repair...")
+        # waitForV3Repair takes a list of nodes
+        client.waitForV3Repair(simAu, nodeList, timeout=self.timeout)
+
+        ## Verify that all repairs came from peers.
+        for node in nodeList:
+            if not (client.isNodeRepairedFromPublisherByV3(simAu, node)):
+                self.fail("Node %s was not repaired from the publisher!" % node)
+
+        log.info("AU successfully repaired.")
+
+def repairFromPublisherV3TestCase():
+    return RepairFromPublisherV3TestCase()
+
+
+class RepairFromPeerV3TestCase(V3TestCase):
+    """ Ensure that repairing from a V3 peer works correctly. """
+    def getTestLocalConf(self):
+        # ALWAYS repair from a cache
+        return {"org.lockss.poll.v3.repairFromCachePercent": "100"}
+
+    def runTest(self):
+        # Reasonably complex AU for testing.
+        simAu = SimulatedAu('simContent', depth=1, branch=1,
+                            numFiles=10,
+                            fileTypes=(FILE_TYPE_TEXT + FILE_TYPE_BIN),
+                            binFileSize=1024, protocolVersion=3)
+
+        ##
+        ## Create simulated AUs
+        ##
+        log.info("Creating V3 simulated AUs.")
+        for client in self.clients:
+            client.createAu(simAu)
+
+        ##
+        ## Assert that the AUs have been crawled.
+        ##
+        log.info("Waiting for simulated AUs to crawl.")
+        for client in self.clients:
+            if not (client.waitForSuccessfulCrawl(simAu)):
+                self.fail("AUs never completed initial crawl.")
+        log.info("AUs completed initial crawl.")
+
+        client = self.clients[2]
+
+        ##
+        ## Damage the AU.
+        ##
+        nodeList = client.randomDamageRandomNodes(simAu, 15, 20)
+        log.info("Damaged the following nodes on client %s:\n        %s" %
+            (client, '\n        '.join([str(n) for n in nodeList])))
+
+        # Request a tree walk (deactivate and reactivate AU)
+        log.info("Requesting tree walk.")
+        client.requestTreeWalk(simAu)
+
+        log.info("Waiting for a V3 poll to be called...")
+        client.waitForV3Poller(simAu)
+
+        log.info("Successfully called a V3 poll.")
+
+        ## Just pause until we have better tests.
+        log.info("Waiting for V3 repair...")
+        # waitForV3Repair takes a list of nodes
+        client.waitForV3Repair(simAu, nodeList, timeout=self.timeout)
+        
+        ## Verify that all repairs came from peers.
+        for node in nodeList:
+            if not (client.isNodeRepairedFromPeerByV3(simAu, node)):
+                self.fail("Node %s was not repaired from a peer!" % node)
+
+        log.info("AU successfully repaired.")
+
+def repairFromPeerV3TestCase():
+    return RepairFromPeerV3TestCase()
+
 
 class SimpleDeleteV3TestCase(V3TestCase):
     """ Test repair of a missing file. """
@@ -1921,6 +2048,8 @@ def tinyUiTests():
 def simpleV3Tests():
     suite = unittest.TestSuite()
     suite.addTest(SimpleDamageV3TestCase())
+    suite.addTest(RepairFromPublisherV3TestCase())
+    suite.addTest(RepairFromPeerV3TestCase())
     suite.addTest(SimpleDeleteV3TestCase())
     suite.addTest(SimpleExtraFileV3TestCase())
     suite.addTest(LastFileDeleteV3TestCase())
@@ -2013,4 +2142,3 @@ if __name__ == "__main__":
         # Unhandled exception occured.
         log.error("%s" % e)
         sys.exit(1)
-

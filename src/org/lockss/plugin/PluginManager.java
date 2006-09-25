@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.165 2006-09-21 05:16:44 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.166 2006-09-25 02:16:48 smorabito Exp $
  */
 
 /*
@@ -1997,7 +1997,7 @@ public class PluginManager
       }
     }
 
-    public void signalCrawlAttemptCompleted(boolean success, Set urlsFetched,
+    public void signalCrawlAttemptCompleted(boolean success,
 					    Object cookie,
 					    Crawler.Status status) {
       String url = (String)cookie;
@@ -2042,7 +2042,7 @@ public class PluginManager
       this.registryAu = au;
     }
 
-    public void signalCrawlAttemptCompleted(boolean success, Set urlsFetched,
+    public void signalCrawlAttemptCompleted(boolean success,
 					    Object cookie,
 					    Crawler.Status status) {
       if (success) {

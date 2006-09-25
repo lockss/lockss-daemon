@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.207 2006-06-17 02:20:00 smorabito Exp $
+ * $Id: NodeManagerImpl.java,v 1.208 2006-09-25 02:16:48 smorabito Exp $
  */
 
 /*
@@ -1885,7 +1885,7 @@ public class NodeManagerImpl
      * @param cookie object used by callback to designate which repair
      * attempt this is
      */
-    public void signalCrawlAttemptCompleted(boolean success, Set urlsFetched,
+    public void signalCrawlAttemptCompleted(boolean success,
 					    Object cookie,
 					    Crawler.Status status) {
       PollCookie pollCookie = (PollCookie)cookie;

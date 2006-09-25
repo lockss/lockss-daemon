@@ -1,5 +1,5 @@
 /*
-* $Id: V3PollStatus.java,v 1.6 2006-07-12 20:28:06 smorabito Exp $
+* $Id: V3PollStatus.java,v 1.7 2006-09-25 02:16:47 smorabito Exp $
  */
 
 /*
@@ -55,6 +55,10 @@ public class V3PollStatus {
   public static final String VOTER_DETAIL_TABLE_NAME = "V3VoterDetailTable";
   public static final String ACTIVE_REPAIRS_TABLE_NAME = "V3ActiveRepairsTable";
   public static final String COMPLETED_REPAIRS_TABLE_NAME = "V3CompletedRepairsTable";
+  public static final String NO_QUORUM_TABLE_NAME = "V3NoQuorumURLsTable";
+  public static final String TOO_CLOSE_TABLE_NAME = "V3TooCloseURLsTable";
+  public static final String AGREE_TABLE_NAME = "V3AgreeURLsTable";
+  public static final String DISAGREE_TABLE_NAME = "V3DisagreeURLsTable";
 
   protected PollManager pollManager;
   private static Logger theLog = Logger.getLogger("V3PollerStatus");
@@ -72,7 +76,7 @@ public class V3PollStatus {
    * the caller of the poll.</p>
    */
   public static class V3PollerStatus
-      extends V3PollStatus implements StatusAccessor.DebugOnly {
+      extends V3PollStatus implements StatusAccessor {
 
     static final String TABLE_TITLE = "V3 Polls (Mine)";
 
@@ -163,7 +167,7 @@ public class V3PollStatus {
    * a participant.</p>
    */
   public static class V3VoterStatus
-        extends V3PollStatus implements StatusAccessor.DebugOnly {
+        extends V3PollStatus implements StatusAccessor {
 
     static final String TABLE_TITLE = "V3 Polls (Others)";
 
@@ -233,7 +237,7 @@ public class V3PollStatus {
    *
    */
   public static class V3PollerStatusDetail
-      extends V3PollStatus implements StatusAccessor.DebugOnly {
+      extends V3PollStatus implements StatusAccessor {
 
     static final String TABLE_TITLE = "V3 Poll Status";
 
@@ -303,16 +307,24 @@ public class V3PollStatus {
                                   new Integer(poll.getTalliedUrls().size())));
       summary.add(new SummaryInfo("Agreeing URLs",
                                   ColumnDescriptor.TYPE_INT,
-                                  new Integer(poll.getAgreedUrls().size())));
+                                  new StatusTable.Reference(new Integer(poll.getAgreedUrls().size()),
+                                                            "V3AgreeURLsTable",
+                                                            poll.getKey())));
       summary.add(new SummaryInfo("Disagreeing URLs",
                                   ColumnDescriptor.TYPE_INT,
-                                  new Integer(poll.getDisagreedUrls().size())));
+                                  new StatusTable.Reference(new Integer(poll.getDisagreedUrls().size()),
+                                                            "V3DisagreeURLsTable",
+                                                            poll.getKey())));
       summary.add(new SummaryInfo("No Quorum URLs",
                                   ColumnDescriptor.TYPE_INT,
-                                  new Integer(poll.getNoQuorumUrls().size())));
+                                  new StatusTable.Reference(new Integer(poll.getNoQuorumUrls().size()),
+                                                            "V3NoQuorumURLsTable",
+                                                            poll.getKey())));
       summary.add(new SummaryInfo("Too Close URLs",
                                   ColumnDescriptor.TYPE_INT,
-                                  new Integer(poll.getTooCloseUrls().size())));
+                                  new StatusTable.Reference(new Integer(poll.getTooCloseUrls().size()),
+                                                            "V3TooCloseURLsTable",
+                                                            poll.getKey())));
       summary.add(new SummaryInfo("Active Repairs",
                                   ColumnDescriptor.TYPE_INT,
                                   new StatusTable.Reference(new Integer(poll.getActiveRepairs().size()),
@@ -345,7 +357,7 @@ public class V3PollStatus {
   }
 
   public static class V3ActiveRepairs
-      extends V3PollStatus implements StatusAccessor.DebugOnly {
+      extends V3PollStatus implements StatusAccessor {
     static final String TABLE_TITLE = "V3 Repairs (Active)";
     private final List sortRules =
       ListUtil.list(new StatusTable.SortRule("url",
@@ -379,9 +391,7 @@ public class V3PollStatus {
         PollerStateBean.Repair rp = (PollerStateBean.Repair)it.next();
         Map row = new HashMap();
         row.put("url", rp.getUrl());
-        if (rp.isDeletedFile()) {
-          row.put("repairFrom", "N/A (Removed File)");
-        } else if (rp.isRepairedFromPublisher()) {
+        if (rp.isPublisherRepair()) {
           row.put("repairFrom", "Publisher");
         } else {
           row.put("repairFrom", rp.getRepairFrom().getIdString());
@@ -399,7 +409,7 @@ public class V3PollStatus {
   }
 
   public static class V3CompletedRepairs
-      extends V3PollStatus implements StatusAccessor.DebugOnly {
+      extends V3PollStatus implements StatusAccessor {
     static final String TABLE_TITLE = "V3 Repairs (Completed)";
     private final List sortRules =
       ListUtil.list(new StatusTable.SortRule("url",
@@ -433,9 +443,7 @@ public class V3PollStatus {
         PollerStateBean.Repair rp = (PollerStateBean.Repair)it.next();
         Map row = new HashMap();
         row.put("url", rp.getUrl());
-        if (rp.isDeletedFile()) {
-          row.put("repairFrom", "N/A (Removed File)");
-        } else if (rp.isRepairedFromPublisher()) {
+        if (rp.isPublisherRepair()) {
           row.put("repairFrom", "Publisher");
         } else {
           row.put("repairFrom", rp.getRepairFrom().getIdString());
@@ -451,14 +459,190 @@ public class V3PollStatus {
       return true;
     }
   }
+  
+  public static class V3NoQuorumURLs extends V3PollStatus 
+      implements StatusAccessor {
+    static final String TABLE_TITLE = "V3 Poll Details - No Quorum URLs";
+    private final List sortRules =
+      ListUtil.list(new StatusTable.SortRule("url",
+                                             CatalogueOrderComparator.SINGLETON));
+    private final List colDescs =
+      ListUtil.list(new ColumnDescriptor("url", "URL",
+                                         ColumnDescriptor.TYPE_STRING));
+    public V3NoQuorumURLs(PollManager manager) {
+      super(manager);
+    }
+    public void populateTable(StatusTable table) throws NoSuchTableException {
+      String key = table.getKey();
+      V3Poller poller = null;
+      try {
+        poller = (V3Poller)pollManager.getPoll(key);
+      } catch (ClassCastException ex) {
+        theLog.error("Expected V3Poller, but got " + poller.getClass().getName());
+        return;
+      }
+      if (poller == null) return;
+      table.setTitle("V3 Poll Details - No Quorum URLs in poll " + poller.getKey());
+      table.setColumnDescriptors(colDescs);
+      table.setDefaultSortRules(sortRules);
+      table.setRows(getRows(poller));
+    }
+    private List getRows(V3Poller poller) {
+      List rows = new ArrayList();
+      for (Iterator it = poller.getNoQuorumUrls().iterator(); it.hasNext(); ) {
+        Map row = new HashMap();
+        row.put("url", (String)it.next());
+        rows.add(row);
+      }
+      return rows;
+    }
+    public String getDisplayName() {
+      return TABLE_TITLE;
+    }
+    public boolean requiresKey() {
+      return true;
+    }
+  }
 
+  public static class V3TooCloseURLs extends V3PollStatus 
+      implements StatusAccessor {
+    static final String TABLE_TITLE = "V3 Poll Details - Too Close URLs";
+    private final List sortRules =
+      ListUtil.list(new StatusTable.SortRule("url",
+                                             CatalogueOrderComparator.SINGLETON));
+    private final List colDescs =
+      ListUtil.list(new ColumnDescriptor("url", "URL",
+                                         ColumnDescriptor.TYPE_STRING));
+    public V3TooCloseURLs(PollManager manager) {
+      super(manager);
+    }
+    public void populateTable(StatusTable table) throws NoSuchTableException {
+      String key = table.getKey();
+      V3Poller poller = null;
+      try {
+        poller = (V3Poller)pollManager.getPoll(key);
+      } catch (ClassCastException ex) {
+        theLog.error("Expected V3Poller, but got " + poller.getClass().getName());
+        return;
+      }
+      if (poller == null) return;
+      table.setTitle("V3 Poll Details - Too Close URLs in poll " + poller.getKey());
+      table.setColumnDescriptors(colDescs);
+      table.setDefaultSortRules(sortRules);
+      table.setRows(getRows(poller));
+    }
+    private List getRows(V3Poller poller) {
+      List rows = new ArrayList();
+      for (Iterator it = poller.getTooCloseUrls().iterator(); it.hasNext(); ) {
+        Map row = new HashMap();
+        row.put("url", (String)it.next());
+        rows.add(row);
+      }
+      return rows;
+    }
+    public String getDisplayName() {
+      return TABLE_TITLE;
+    }
+    public boolean requiresKey() {
+      return true;
+    }
+  }
+  
+  
+  public static class V3AgreeURLs extends V3PollStatus 
+      implements StatusAccessor {
+    static final String TABLE_TITLE = "V3 Poll Details - Agreeing URLs";
+    private final List sortRules =
+      ListUtil.list(new StatusTable.SortRule("url",
+                                             CatalogueOrderComparator.SINGLETON));
+    private final List colDescs =
+      ListUtil.list(new ColumnDescriptor("url", "URL",
+                                         ColumnDescriptor.TYPE_STRING));
+    public V3AgreeURLs(PollManager manager) {
+      super(manager);
+    }
+    public void populateTable(StatusTable table) throws NoSuchTableException {
+      String key = table.getKey();
+      V3Poller poller = null;
+      try {
+        poller = (V3Poller)pollManager.getPoll(key);
+      } catch (ClassCastException ex) {
+        theLog.error("Expected V3Poller, but got " + poller.getClass().getName());
+        return;
+      }
+      if (poller == null) return;
+      table.setTitle("V3 Poll Details - Agreeing URLs in poll " + poller.getKey());
+      table.setColumnDescriptors(colDescs);
+      table.setDefaultSortRules(sortRules);
+      table.setRows(getRows(poller));
+    }
+    private List getRows(V3Poller poller) {
+      List rows = new ArrayList();
+      for (Iterator it = poller.getAgreedUrls().iterator(); it.hasNext(); ) {
+        Map row = new HashMap();
+        row.put("url", (String)it.next());
+        rows.add(row);
+      }
+      return rows;
+    }
+    public String getDisplayName() {
+      return TABLE_TITLE;
+    }
+    public boolean requiresKey() {
+      return true;
+    }
+  }
+
+  public static class V3DisagreeURLs extends V3PollStatus 
+      implements StatusAccessor {
+    static final String TABLE_TITLE = "V3 Poll Details - Disagreeing URLs";
+    private final List sortRules =
+      ListUtil.list(new StatusTable.SortRule("url",
+                                             CatalogueOrderComparator.SINGLETON));
+    private final List colDescs =
+      ListUtil.list(new ColumnDescriptor("url", "URL",
+                                         ColumnDescriptor.TYPE_STRING));
+    public V3DisagreeURLs(PollManager manager) {
+      super(manager);
+    }
+    public void populateTable(StatusTable table) throws NoSuchTableException {
+      String key = table.getKey();
+      V3Poller poller = null;
+      try {
+        poller = (V3Poller)pollManager.getPoll(key);
+      } catch (ClassCastException ex) {
+        theLog.error("Expected V3Poller, but got " + poller.getClass().getName());
+        return;
+      }
+      if (poller == null) return;
+      table.setTitle("V3 Poll Details - Disagreeing URLs in poll " + poller.getKey());
+      table.setColumnDescriptors(colDescs);
+      table.setDefaultSortRules(sortRules);
+      table.setRows(getRows(poller));
+    }
+    private List getRows(V3Poller poller) {
+      List rows = new ArrayList();
+      for (Iterator it = poller.getDisagreedUrls().iterator(); it.hasNext(); ) {
+        Map row = new HashMap();
+        row.put("url", (String)it.next());
+        rows.add(row);
+      }
+      return rows;
+    }
+    public String getDisplayName() {
+      return TABLE_TITLE;
+    }
+    public boolean requiresKey() {
+      return true;
+    }
+  }
   /**
    * <p>The full status of an individual V3 Poll in which we are acting as a
    * participant.  Requires the PollID as a key.</p>
    *
    */
   public static class V3VoterStatusDetail
-      extends V3PollStatus implements StatusAccessor.DebugOnly {
+      extends V3PollStatus implements StatusAccessor {
     static final String TABLE_TITLE = "V3 Vote Status";
 
     private final List sortRules =

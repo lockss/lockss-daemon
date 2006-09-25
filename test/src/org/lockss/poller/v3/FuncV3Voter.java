@@ -1,5 +1,5 @@
 /*
- * $Id: FuncV3Voter.java,v 1.10 2006-08-23 00:39:42 smorabito Exp $
+ * $Id: FuncV3Voter.java,v 1.11 2006-09-25 02:16:47 smorabito Exp $
  */
 
 /*
@@ -64,6 +64,8 @@ public class FuncV3Voter extends LockssTestCase {
   private V3LcapMessage msgRepairRequest;
   private V3LcapMessage msgReceipt;
   private File tempDir;
+  
+  private long msgDeadline = 0L;
 
   private static final String BASE_URL = "http://www.test.org/";
 
@@ -79,6 +81,8 @@ public class FuncV3Voter extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
+    TimeBase.setSimulated();
+    msgDeadline = TimeBase.nowMs() + 100000;
     tempDir = getTempDir();
     tempDirPath = tempDir.getAbsolutePath() + File.separator;
     startDaemon();
@@ -86,11 +90,11 @@ public class FuncV3Voter extends LockssTestCase {
 
   public void tearDown() throws Exception {
     stopDaemon();
+    TimeBase.setReal();
     super.tearDown();
   }
 
   private void startDaemon() throws Exception {
-    TimeBase.setSimulated();
     this.testau = setupAu();
     theDaemon = getMockLockssDaemon();
     Properties p = new Properties();
@@ -157,6 +161,7 @@ public class FuncV3Voter extends LockssTestCase {
     MockPlugin plug = new MockPlugin();
     mau.setPlugin(plug);
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    cus.setEstimatedHashDuration(1000);
     List files = new ArrayList();
     for (int ix = 2; ix < urls.length; ix++) {
       MockCachedUrl cu = (MockCachedUrl)mau.addUrl(urls[ix], false, true);
@@ -174,7 +179,7 @@ public class FuncV3Voter extends LockssTestCase {
       new V3LcapMessage("auid", "key", "3", ByteArray.makeRandomBytes(20),
                         ByteArray.makeRandomBytes(20),
                         V3LcapMessage.MSG_POLL,
-                        123456789, pollerId, tempDir);
+                        msgDeadline, pollerId, tempDir);
     msg.setEffortProof(ByteArray.makeRandomBytes(20));
     return msg;
   }
@@ -184,7 +189,7 @@ public class FuncV3Voter extends LockssTestCase {
       new V3LcapMessage("auid", "key", "3", ByteArray.makeRandomBytes(20),
                         ByteArray.makeRandomBytes(20),
                         V3LcapMessage.MSG_POLL_PROOF,
-                        123456789, pollerId, tempDir);
+                        msgDeadline, pollerId, tempDir);
     msg.setEffortProof(ByteArray.makeRandomBytes(20));
     return msg;
   }
@@ -194,7 +199,7 @@ public class FuncV3Voter extends LockssTestCase {
       new V3LcapMessage("auid", "key", "3", ByteArray.makeRandomBytes(20),
                         ByteArray.makeRandomBytes(20),
                         V3LcapMessage.MSG_VOTE_REQ,
-                        123456789, pollerId, tempDir);
+                        msgDeadline, pollerId, tempDir);
     return msg;
   }
 
@@ -203,7 +208,7 @@ public class FuncV3Voter extends LockssTestCase {
       new V3LcapMessage("auid", "key", "3", ByteArray.makeRandomBytes(20),
                         ByteArray.makeRandomBytes(20),
                         V3LcapMessage.MSG_REPAIR_REQ,
-                        123456789, pollerId, tempDir);
+                        msgDeadline, pollerId, tempDir);
     return msg;
   }
 
@@ -212,7 +217,7 @@ public class FuncV3Voter extends LockssTestCase {
       new V3LcapMessage("auid", "key", "3", ByteArray.makeRandomBytes(20),
                         ByteArray.makeRandomBytes(20),
                         V3LcapMessage.MSG_EVALUATION_RECEIPT,
-                        123456789, pollerId, tempDir);
+                        msgDeadline, pollerId, tempDir);
     return msg;
   }
 
@@ -225,7 +230,7 @@ public class FuncV3Voter extends LockssTestCase {
                         "this_is_my_pollkey",
                         introEffortProof,
                         ByteArray.makeRandomBytes(20),
-                        100000, "SHA-1");
+                        msgDeadline, "SHA-1");
 
     voter.startPoll();
 

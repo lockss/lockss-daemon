@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.31 2006-09-18 16:27:56 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.32 2006-09-25 02:16:47 smorabito Exp $
  */
 
 /*
@@ -85,55 +85,58 @@ public class V3Poller extends BasePoll {
   public static final int POLLER_STATUS_TALLYING = 5;
   public static final int POLLER_STATUS_COMPLETE = 6;
   public static final int POLLER_STATUS_NO_QUORUM = 7;
+  // Some error occured
   public static final int POLLER_STATUS_ERROR = 8;
+  // The poll expired while it was hibernated
+  public static final int POLLER_STATUS_EXPIRED = 9;
 
   public static final String[] POLLER_STATUS_STRINGS =
   {
    "Starting", "No Time Available", "Resuming", "Inviting Peers", "Hashing",
-   "Tallying", "Complete", "No Quorum", "Error"
+   "Tallying", "Complete", "No Quorum", "Error", "Expired"
   };
 
   private static String PREFIX = Configuration.PREFIX + "poll.v3.";
 
   /** Quorum for V3 polls. */
-  static final String PARAM_QUORUM = PREFIX + "quorum";
-  static final int DEFAULT_QUORUM = 5;
+  public static final String PARAM_QUORUM = PREFIX + "quorum";
+  public static final int DEFAULT_QUORUM = 5;
 
   /** Minimum number of participants for a V3 poll. */
-  public static String PARAM_MIN_POLL_SIZE = PREFIX + "minPollSize";
-  public static int DEFAULT_MIN_POLL_SIZE = 5;
+  public static final String PARAM_MIN_POLL_SIZE = PREFIX + "minPollSize";
+  public static final int DEFAULT_MIN_POLL_SIZE = 5;
 
   /** Maximum number of participants for a V3 poll. */
-  public static String PARAM_MAX_POLL_SIZE = PREFIX + "maxPollSize";
-  public static int DEFAULT_MAX_POLL_SIZE = 10;
+  public static final String PARAM_MAX_POLL_SIZE = PREFIX + "maxPollSize";
+  public static final int DEFAULT_MAX_POLL_SIZE = 10;
 
   /** Target size of the outer circle poll. */
-  public static String PARAM_TARGET_OUTER_CIRCLE_SIZE =
+  public static final String PARAM_TARGET_OUTER_CIRCLE_SIZE =
     PREFIX + "targetOuterCircle";
-  public static int DEFAULT_TARGET_OUTER_CIRCLE_SIZE = 10;
+  public static final int DEFAULT_TARGET_OUTER_CIRCLE_SIZE = 10;
 
   /** If true, drop participants from this poll that do not send
    * outer circle nominees. */
-  public static String PARAM_DROP_EMPTY_NOMINATIONS =
+  public static final String PARAM_DROP_EMPTY_NOMINATIONS =
     PREFIX + "dropEmptyNominations";
-  public static boolean DEFAULT_DROP_EMPTY_NOMINATIONS = false;
+  public static final boolean DEFAULT_DROP_EMPTY_NOMINATIONS = false;
 
   /** If true, just log a message rather than deleting files that are
    * considered to be missing from a majority of peers.
    */
-  public static String PARAM_DELETE_EXTRA_FILES =
+  public static final String PARAM_DELETE_EXTRA_FILES =
     PREFIX + "deleteExtraFiles";
-  public static boolean DEFAULT_DELETE_EXTRA_FILES =
+  public static final boolean DEFAULT_DELETE_EXTRA_FILES =
     true;
 
   /**
    * Directory in which to store message data.
    */
-  public static String PARAM_V3_MESSAGE_DIR =
+  public static final String PARAM_V3_MESSAGE_DIR =
     PREFIX + "messageDir";
   // Default is for production.  Override this for
   // testing.
-  public static String DEFAULT_V3_MESSAGE_DIR =
+  public static final String DEFAULT_V3_MESSAGE_DIR =
     "/cache/gamma/v3state";
 
   /**
@@ -153,6 +156,20 @@ public class V3Poller extends BasePoll {
     PREFIX + "voteMargin";
   public static final int DEFAULT_V3_VOTE_MARGIN =
     75;
+
+  /**
+   * The probability of requesting a repair from other caches.
+   */
+  public static final String PARAM_V3_REPAIR_FROM_CACHE_PERCENT =
+    PREFIX + "repairFromCachePercent";
+
+  /**
+   * In the absence of other advice, set the probability to match the repair
+   * crawler's default probability.
+   */
+  public static final double DEFAULT_V3_REPAIR_FROM_CACHE_PERCENT =
+    CrawlManagerImpl.DEFAULT_REPAIR_FROM_CACHE_PERCENT;
+  
 
   // Global state for the poll.
   private PollerStateBean pollerState;
@@ -184,6 +201,11 @@ public class V3Poller extends BasePoll {
   private SchedulableTask task;
   private TimerQueue.Request pollCompleteRequest;
   private TimerQueue.Request voteCompleteRequest;
+  
+  // Probability of repairing from another cache.  A number between
+  // 0.0 and 1.0.
+  private double repairFromCache =
+    V3Poller.DEFAULT_V3_REPAIR_FROM_CACHE_PERCENT;
 
   /**
    * Create a new V3 Poll.
@@ -215,28 +237,11 @@ public class V3Poller extends BasePoll {
                                       pollSize, outerCircleTarget,
                                       quorum, hashAlg);
 
-    if (reserveScheduleTime(maxParticipants + outerCircleTarget)) {
-      log.debug("Scheduled time for a new poll with a requested poll size of "
-                + pollSize);
-      // Set the voter deadline.
-      long estimatedHashTime = getCachedUrlSet().estimatedHashDuration();
-      long voteDeadline = TimeBase.nowMs() +
-                          estimatedHashTime +
-                          voteDeadlinePadding;
-      // Sanity check.
-      if (voteDeadline >= getDeadline().getExpirationTime()) {
-        log.warning("Estimated hash time of CU with vote deadline padding (" +
-                    voteDeadlinePadding +
-                    ") is longer than the poll duration.  Can't start poll.");
-        stopPoll(POLLER_STATUS_NO_TIME);
-        return;
-      }
-      pollerState.setVoteDeadline(voteDeadline);
-    } else {
-      log.warning("Unable to schedule time for this poll!");
-      stopPoll(POLLER_STATUS_NO_TIME);
-      return;
-    }
+    long estimatedHashTime = getCachedUrlSet().estimatedHashDuration();
+    long voteDeadline = TimeBase.nowMs() +
+                        estimatedHashTime +
+                        voteDeadlinePadding;
+    pollerState.setVoteDeadline(voteDeadline);
 
     // Checkpoint the poll.
     checkpointPoll();
@@ -300,6 +305,9 @@ public class V3Poller extends BasePoll {
                                     DEFAULT_DELETE_EXTRA_FILES);
     voteDeadlinePadding = c.getTimeInterval(PARAM_VOTE_DEADLINE_PADDING,
                                             DEFAULT_VOTE_DEADLINE_PADDING);
+    repairFromCache = 
+      c.getPercentage(PARAM_V3_REPAIR_FROM_CACHE_PERCENT,
+                      DEFAULT_V3_REPAIR_FROM_CACHE_PERCENT);
     messageDir =
       new File(c.get(PARAM_V3_MESSAGE_DIR, DEFAULT_V3_MESSAGE_DIR));
     if (!messageDir.exists() || !messageDir.canWrite()) {
@@ -330,8 +338,7 @@ public class V3Poller extends BasePoll {
       }
     };
     this.task = new StepTask(earliestStart, latestFinish,
-                             estimatedHashDuration,
-                             tc, this) {
+                             estimatedHashDuration, tc, this) {
       public int step(int n) {
 	// finish immediately, in case we start running
 	setFinished();
@@ -481,6 +488,22 @@ public class V3Poller extends BasePoll {
                             new PollCompleteCallback(), this);
     }
 
+    if (reserveScheduleTime(theParticipants.size())) {
+      log.debug("Scheduled time for a new poll with a requested poll size of "
+                + theParticipants.size());
+
+      // Sanity check.
+      if (pollerState.getVoteDeadline() >= getDeadline().getExpirationTime()) {
+        log.warning("Vote deadline has already passed.  Can't start poll " +
+                    getKey());
+        stopPoll(POLLER_STATUS_EXPIRED);
+        return;
+      }
+    } else {
+      log.warning("Unable to schedule time for poll " + getKey());
+      stopPoll(POLLER_STATUS_NO_TIME);
+      return;
+    }
 
     for (Iterator it = theParticipants.values().iterator(); it.hasNext();) {
       ParticipantUserData ud = (ParticipantUserData)it.next();
@@ -692,7 +715,7 @@ public class V3Poller extends BasePoll {
   /**
    * Tally an individual hash block.
    *
-   * @param hb
+   * @param hb  The {@link HashBlock} to tally.
    */
   private void tallyBlock(HashBlock hb) {
     setStatus(V3Poller.POLLER_STATUS_TALLYING);
@@ -738,6 +761,8 @@ public class V3Poller extends BasePoll {
           log.error("IOException while iterating over vote blocks.", ex);
           stopPoll(V3Poller.POLLER_STATUS_ERROR);
           return;
+        } finally {
+          voter.incrementTalliedBlocks();
         }
       }
 
@@ -786,6 +811,9 @@ public class V3Poller extends BasePoll {
       }
 
     } while (missingBlockVoters > 0);
+    
+    // Do any pending repairs.
+    doRepairs();
   }
 
   /**
@@ -933,7 +961,10 @@ public class V3Poller extends BasePoll {
   }
 
   /**
-   * Request a repair for the specified URL.
+   * Request a repair for the specified URL.  This method appends the URL
+   * and its list of disagreeing voters to a queue, which is examined at the
+   * end of tallying.
+   * 
    * @param url
    * @param disagreeingVoters Set of disagreeing voters.
    * @param votesForBlock Ordered map of votes previously collected for this block
@@ -941,50 +972,37 @@ public class V3Poller extends BasePoll {
   private void requestRepair(final String url,
                              final Collection disagreeingVoters,
                              final LinkedHashMap votesForBlock) {
-    log.debug("Attempting to repair url " + url + " from the publisher.");
-    CrawlManager cm = theDaemon.getCrawlManager();
 
-    CrawlManager.Callback cb = new CrawlManager.Callback() {
-      public void signalCrawlAttemptCompleted(boolean success, Set urlsFetched,
-                                              Object cookie, Status status) {
-        if (success) {
-          // Check the repair
-          receivedRepair(url);
-        } else {
-          // If that didn't work, request a repair from a voter.
-          requestRepairFromPeer(url, disagreeingVoters, votesForBlock);
-        }
-      }
-    };
-
-    // Set this repair active.
-    PollerStateBean.Repair r = new PollerStateBean.Repair(url, votesForBlock);
-    r.setRepairFromPublisher();
-    pollerState.getRepairQueue().addActiveRepair(url, r);
-
-    cm.startRepair(getAu(), ListUtil.list(url),
-                   cb, null, null);
-
+    PollerStateBean.RepairQueue repairQueue = pollerState.getRepairQueue();
+    
+    log.debug("Deciding whether to repair from cache or publisher.  Repair " +
+              "from cache probability=" + repairFromCache);
+    if (ProbabilisticChoice.choose(repairFromCache)) {
+      // XXX:  Use plain hash as a hint for who to requet the repair from.
+      PeerIdentity peer =
+        (PeerIdentity)CollectionUtil.randomSelection(disagreeingVoters);
+      log.debug2("Requesting repair for target: " + url + " from " + peer);
+      repairQueue.repairFromPeer(url, votesForBlock, peer);
+    } else {
+      repairQueue.repairFromPublisher(url, votesForBlock);
+    }
   }
 
-  private void requestRepairFromPeer(String url,
-                                     Collection disagreeingVoters,
+  /**
+   * Request a repair from the specified peer for the specified URL.  Called
+   * from doRepairs().
+   */
+  private void requestRepairFromPeer(String url, PeerIdentity peer,
                                      LinkedHashMap votesForBlock) {
-    // XXX:  Use plain hash as a hint for who to requet a repair from.
-    PeerIdentity repairVoter =
-      (PeerIdentity)CollectionUtil.randomSelection(disagreeingVoters);
     log.debug2("Requesting repair for target: " + url + " from "
-              + repairVoter);
-    pollerState.getRepairQueue().addActiveRepair(url,
-                                                 repairVoter,
-                                                 votesForBlock);
+              + peer);
     ParticipantUserData ud =
-      (ParticipantUserData)theParticipants.get(repairVoter);
+      (ParticipantUserData)theParticipants.get(peer);
     V3LcapMessage msg = ud.makeMessage(V3LcapMessage.MSG_REPAIR_REQ);
     msg.setTargetUrl(url);
     msg.setEffortProof(null);
     try {
-      sendMessageTo(msg, repairVoter);
+      sendMessageTo(msg, peer);
     } catch (IOException ex) {
       log.error("IOException trying to send repair request", ex);
       // XXX: Alerts, retry
@@ -996,23 +1014,95 @@ public class V3Poller extends BasePoll {
    * @param url The block to be deleted.
    */
   private void deleteBlock(String url) {
-    if (deleteExtraFiles) {
-      CachedUrlSetSpec cuss =
-        new SingleNodeCachedUrlSetSpec(url);
-      CachedUrlSet cus = getAu().makeCachedUrlSet(cuss);
-      NodeManager nm = theDaemon.getNodeManager(getAu());
-      try {
+    try {
+      if (deleteExtraFiles) {
+        CachedUrlSetSpec cuss =
+          new SingleNodeCachedUrlSetSpec(url);
+        CachedUrlSet cus = getAu().makeCachedUrlSet(cuss);
+        NodeManager nm = theDaemon.getNodeManager(getAu());
         log.debug("Marking block deleted: " + url);
         nm.deleteNode(cus);
-      } catch (IOException ex) {
-        log.warning("Unable to mark CUS deleted: ", ex);
+      } else {
+        log.info("Asked to mark file " + url + " deleted in poll " +
+                 pollerState.getPollKey() + ".  Not actually deleting.");
       }
-    } else {
-      log.info("Asked to mark file " + url + " deleted in poll " +
-               pollerState.getPollKey());
+      pollerState.getRepairQueue().markComplete(url);
+    } catch (IOException ex) {
+      log.warning("Unable to delete node " + url + " in poll " + getKey(), ex);
+    }
+  }
+  
+  /**
+   * Called at the end of tallying if there are any pending repairs.
+   */
+  private void doRepairs() {
+    PollerStateBean.RepairQueue queue = pollerState.getRepairQueue();
+
+    List pendingPeerRepairs = queue.getPendingPeerRepairs();
+    List pendingPublisherRepairs = queue.getPendingPublisherRepairUrls();
+    
+    boolean needPublisherRepairs = pendingPublisherRepairs.size() > 0;
+    boolean needPeerRepairs = pendingPeerRepairs.size() > 0;
+    boolean haveActiveRepairs = queue.getActiveRepairs().size() > 0;
+
+    // If we have decided to repair from any peers, pass the set of URLs
+    // we want to repair to the RepairCrawler.  A callback handles checking
+    // each successfully fetched repair.
+    if (needPublisherRepairs) {
+      log.debug("Starting publisher repair crawl for " + 
+                pendingPublisherRepairs.size() + " urls.");
+      CrawlManager cm = theDaemon.getCrawlManager();
+      CrawlManager.Callback cb = new CrawlManager.Callback() {
+        public void signalCrawlAttemptCompleted(boolean success,
+                                                Object cookie,
+                                                Status status) {
+          if (success) {
+            // Check the repairs.
+            // XXX: It would be nice to be able to re-hash the repaired
+            // URLs as a single set, but we don't have a notion of
+            // a disjoint CachedUrlSetSpec that represents a collection of
+            // unrelated nodes.
+            Collection urlsFetched = status.getUrlsFetched();
+            for (Iterator iter = urlsFetched.iterator(); iter.hasNext(); ) {
+              receivedRepair((String)iter.next());
+            }
+          }
+        }
+      };
+
+      cm.startRepair(getAu(), pendingPublisherRepairs,
+                     cb, null, null);
+      queue.markActive(pendingPublisherRepairs);
+    }
+    
+    // If we have decided to repair from any caches, iterate over the list
+    // of PollerStateBean.Repair objects and request each one.
+    if (needPeerRepairs) {
+      log.debug("Requesting repairs from peers for " +
+                pendingPeerRepairs.size() + " urls.");
+
+      for (Iterator iter = pendingPeerRepairs.iterator(); iter.hasNext(); ) {
+        PollerStateBean.Repair r = (PollerStateBean.Repair)iter.next();
+        this.requestRepairFromPeer(r.getUrl(), r.getRepairFrom(), 
+                                   r.getPreviousVotes());
+        queue.markActive(r.getUrl());
+      }
+
     }
 
-    pollerState.getRepairQueue().addCompletedRepair(url);
+    // Remember that we're waiting for repairs, if we aren't already.
+    if (needPublisherRepairs || needPeerRepairs) {
+      if (!pollerState.expectingRepairs()) {
+        pollerState.expectingRepairs(true);
+        checkpointPoll();
+        if (log.isDebug()) {
+          log.debug("Pending Peer Repairs: " + pendingPeerRepairs.size());
+          log.debug("Pending Publisher Repairs: " + pendingPublisherRepairs.size());
+          log.debug("Active Repairs: " + queue.getActiveRepairs().size());
+        }
+      }
+    }
+
   }
 
   /**
@@ -1060,17 +1150,15 @@ public class V3Poller extends BasePoll {
       log.warning("Failed to schedule a repair check hash for block " + url);
     }
   }
-
+  
   /**
    * Compare a hash block and a vote block.
    */
-  void compareBlocks(PeerIdentity voter,
+  void compareBlocks(PeerIdentity id,
                      int hashIndex,
                      VoteBlock voteBlock,
                      HashBlock hashBlock,
                      BlockTally tally) {
-
-    boolean foundAgreement = false;
 
     /*
      * Implementation Note:
@@ -1089,7 +1177,7 @@ public class V3Poller extends BasePoll {
       for (int vbIdx = 0; vbIdx < vbVersions.length; vbIdx++) {
         byte[] voterResults = vbVersions[vbIdx].getHash();
         if (log.isDebug3()) {
-          log.debug3("Comparing blocks for voter " + voter);
+          log.debug3("Comparing blocks for voter " + id);
           log.debug3("Hasher results: "
                      + ByteArray.toBase64(hasherResults));
           log.debug3("Voter results: "
@@ -1099,19 +1187,17 @@ public class V3Poller extends BasePoll {
         if (Arrays.equals(voterResults, hasherResults)) {
           log.debug3("Found agreement between voter version " + vbIdx +
                      " and hash block version " + hbIdx);
-          foundAgreement = true;
-          break;
+          tally.addAgreeVoter(id);
+          ParticipantUserData ud = (ParticipantUserData)theParticipants.get(id);
+          if (ud != null) ud.incrementAgreedBlocks();
+          return;
         }
       }
     }
 
-    if (foundAgreement) {
-      tally.addAgreeVoter(voter);
-    } else {
-      log.debug3("No agreement found.  Lost tally.");
-      tally.addDisagreeVoter(voter);
-    }
-
+    // If we've made it here, there's no agreement on this block.
+    log.debug3("No agreement found.  Lost tally.");
+    tally.addDisagreeVoter(id);
   }
 
 
@@ -1130,11 +1216,16 @@ public class V3Poller extends BasePoll {
         log.debug2("Gave peer " + ud.getVoterId()
                    + " the Vote Complete event.");
       }
+
+      // Update the participant's agreement history.
+      this.idManager.signalPartialAgreement(ud.getVoterId(), getAu(), 
+                                            ud.getPercentAgreement());
+
     }
     // Tell the PollManager to hang on to our statistics for this poll.
     PollManager.V3PollStatusAccessor stats = pollManager.getV3Status();
     String auId = getAu().getAuId();
-
+    
     stats.setAgreement(auId, getPercentAgreement());
     stats.setLastPollTime(auId, TimeBase.nowMs());
     stats.incrementNumPolls(auId);
@@ -1268,6 +1359,12 @@ public class V3Poller extends BasePoll {
     return PollerActions.class;
   }
 
+  /**
+   * This callback is called when the vote tally deadline has expired.
+   * If enough peers have cast votes, the tally can go forward, and the
+   * callback schedules a hash.
+   *
+   */
   private class VoteTallyCallback implements TimerQueue.Callback {
     public void timerExpired(Object cookie) {
 
@@ -1286,7 +1383,8 @@ public class V3Poller extends BasePoll {
       // If not, kill this poll.
       if (theParticipants.size() < getQuorum()) {
         log.warning("Not enough participants voted to achieve quorum " +
-                    "in poll " + getKey() + ". Stopping poll.");
+                    "in poll " + getKey() + ": " + getQuorum() + " needed, only " +
+                    theParticipants.size() + " voted. Stopping poll.");
         stopPoll(V3Poller.POLLER_STATUS_NO_QUORUM);
         return;
       } else {
@@ -1303,6 +1401,7 @@ public class V3Poller extends BasePoll {
           stopPoll(POLLER_STATUS_NO_TIME);
         }
         pollerState.hashStarted(true);
+        checkpointPoll();
       }
     }
     public String toString() {
@@ -1310,6 +1409,10 @@ public class V3Poller extends BasePoll {
     }
   }
 
+  /**
+   * Callback called by the poll timer to signal that the poll should end.
+   *
+   */
   private class PollCompleteCallback implements TimerQueue.Callback {
     /**
      * Called when the poll timer expires.
@@ -1326,6 +1429,9 @@ public class V3Poller extends BasePoll {
     }
   }
 
+  /**
+   * Callback called after all blocks have been hashed during our tally.
+   */
   private class HashingCompleteCallback implements HashService.Callback {
     /**
      * Called when the timer expires or hashing is complete.
@@ -1343,6 +1449,9 @@ public class V3Poller extends BasePoll {
     }
   }
 
+  /**
+   * Callback called after each block has been hashed during our tally.
+   */
   private class BlockEventHandler implements BlockHasher.EventHandler {
     public void blockDone(HashBlock block) {
       tallyBlock(block);
@@ -1485,6 +1594,14 @@ public class V3Poller extends BasePoll {
   }
 
   // Status accessor convenience methods
+  public boolean expectingRepairs() {
+    return pollerState.expectingRepairs();
+  }
+
+  public void expectingRepairs(boolean b) {
+    pollerState.expectingRepairs(b);
+  }
+  
   public List getActiveRepairs() {
     return pollerState.getRepairQueue().getActiveRepairs();
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.67 2006-09-17 07:26:26 tlipkis Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.68 2006-09-25 02:16:48 smorabito Exp $
  */
 
 /*
@@ -955,7 +955,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       this.sem = sem;
     }
 
-    public void signalCrawlAttemptCompleted(boolean success, Set urlsFetched,
+    public void signalCrawlAttemptCompleted(boolean success,
 					    Object cookie,
 					    Crawler.Status status) {
       this.success = success;

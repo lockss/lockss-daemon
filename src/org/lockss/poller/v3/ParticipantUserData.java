@@ -1,5 +1,5 @@
 /*
- * $Id: ParticipantUserData.java,v 1.7 2006-08-22 20:33:07 smorabito Exp $
+ * $Id: ParticipantUserData.java,v 1.8 2006-09-25 02:16:47 smorabito Exp $
  */
 
 /*
@@ -61,6 +61,10 @@ public class ParticipantUserData implements LockssSerializable {
   private String statusString;
   private int status = V3Poller.PEER_STATUS_INITIALIZED;
   private VoteBlocksIterator voteBlockIterator;
+  /** The number of blocks that have been tallied for this peer */ 
+  private long talliedUrls;
+  /** The number of blocks that the poller agrees with for this peer */
+  private long agreeUrls;
 
   /** Transient non-serialized fields */
   private transient V3Poller poller;
@@ -298,6 +302,52 @@ public class ParticipantUserData implements LockssSerializable {
 
   public void setPollState(PollerStateBean state) {
     this.pollState = state;
+  }
+ 
+  public void incrementAgreedBlocks() {
+    this.agreeUrls++;
+  }
+  
+  public void incrementTalliedBlocks() {
+    this.talliedUrls++;
+  }
+  
+  /**
+   * Return the total number of URLs tallied for this peer.
+   * @return The number of URLs tallied.
+   */
+  public long getNumTalliedUrls() {
+    return talliedUrls;
+  }
+  
+  /**
+   * Return the total number of agreeing URLs for this peer.
+   * @return  The number of agreeing URLs
+   */
+  public long getNumAgreeUrls() {
+    return agreeUrls;
+  }
+  
+  /**
+   * Return the total number of disagreeing URLs for this peer.
+   * 
+   * @return The number of disagreeing URLs
+   */
+  public long getNumDisagreeUrls() {
+    return talliedUrls - agreeUrls;
+  }
+  
+  /** 
+   * Return the percent agreement for this peer.
+   * 
+   * @return The percent agreement for this peer (a number between 0.0 and 1.0)
+   */
+  public float getPercentAgreement() {
+    if (agreeUrls > 0 && talliedUrls > 0) {
+      return (float)agreeUrls / (float)talliedUrls;
+    } else {
+      return 0.0f;
+    }
   }
 
   /** Poller delegate methods */

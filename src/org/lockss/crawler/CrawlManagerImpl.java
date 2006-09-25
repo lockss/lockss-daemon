@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.101 2006-09-22 06:23:15 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.102 2006-09-25 02:16:47 smorabito Exp $
  */
 
 /*
@@ -605,7 +605,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 				   boolean successful, Crawler.Status status) {
     if (cb != null) {
       try {
-	cb.signalCrawlAttemptCompleted(successful, null, cookie, status);
+	cb.signalCrawlAttemptCompleted(successful, cookie, status);
       } catch (Exception e) {
 	logger.error("Crawl callback threw", e);
       }
@@ -908,7 +908,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     public FailingCallbackWrapper(CrawlManager.Callback cb) {
       this.cb = cb;
     }
-    public void signalCrawlAttemptCompleted(boolean success, Set urlsFetched,
+    public void signalCrawlAttemptCompleted(boolean success,
 					    Object cookie,
 					    Crawler.Status status) {
       callCallback(cb, cookie, false, null);

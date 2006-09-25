@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.19 2006-09-19 01:10:12 smorabito Exp $
+ * $Id: V3Voter.java,v 1.20 2006-09-25 02:16:47 smorabito Exp $
  */
 
 /*
@@ -45,6 +45,8 @@ import org.lockss.poller.*;
 import org.lockss.poller.v3.V3Serializer.PollSerializerException;
 import org.lockss.protocol.*;
 import org.lockss.protocol.psm.*;
+import org.lockss.scheduler.*;
+import org.lockss.scheduler.Schedule.*;
 import org.lockss.util.*;
 
 /**
@@ -54,6 +56,21 @@ import org.lockss.util.*;
  * of a poll, this object is transient.
  */
 public class V3Voter extends BasePoll {
+  
+  public static final int STATUS_INITIALIZED = 0;
+  public static final int STATUS_ACCEPTED_POLL = 1;
+  public static final int STATUS_HASHING = 2;
+  public static final int STATUS_VOTED = 3;
+  public static final int STATUS_NO_TIME = 4;
+  public static final int STATUS_COMPLETE = 5;
+  public static final int STATUS_EXPIRED = 6;
+  public static final int STATUS_ERROR = 7;
+  
+  public static final String[] STATUS_STRINGS = 
+  {
+   "Initialized", "Accepted Poll", "Hashing", "Voted",
+   "No Time Available", "Complete", "Expired w/o Voting", "Error"
+  };
 
   static String PREFIX = Configuration.PREFIX + "poll.v3.";
 
@@ -87,6 +104,10 @@ public class V3Voter extends BasePoll {
   private int nomineeCount;
   private File messageDir;
 
+  // Task used to reserve time for hashing at the start of the poll.
+  // This task is cancelled before the real hash is scheduled.
+  private SchedulableTask task;
+
   private static final Logger log = Logger.getLogger("V3Voter");
 
   /**
@@ -98,7 +119,6 @@ public class V3Voter extends BasePoll {
       throws V3Serializer.PollSerializerException {
     log.debug3("Creating V3 Voter for poll: " + key);
 
-    
     this.theDaemon = daemon;
     pollSerializer = new V3VoterSerializer(theDaemon);
     this.messageDir =
@@ -127,7 +147,7 @@ public class V3Voter extends BasePoll {
     
     if (min > max) {
       throw new IllegalArgumentException("Impossible nomination size range: "
-      + (max - min));
+                                         + (max - min));
     } else if (min == max) {
       log.debug2("Minimum nominee size is same as maximum nominee size: " +
                  min);
@@ -180,6 +200,36 @@ public class V3Voter extends BasePoll {
 
     return interp;
   }
+  
+  /**
+   * Reserve enough schedule time to 
+   */
+  public boolean reserveScheduleTime() {
+    CachedUrlSet cus = this.getCachedUrlSet();
+    long estimatedHashDuration = cus.estimatedHashDuration();
+    log.debug2("*** Reserve Schedule Time: cus estimated hash duration=" + estimatedHashDuration);
+    long now = TimeBase.nowMs();
+    Deadline earliestStart = Deadline.at(now + estimatedHashDuration);
+    Deadline latestFinish =
+      Deadline.at(earliestStart.getExpirationTime() + estimatedHashDuration);
+    log.debug2("*** Reserve Schedule Time: earliest start=" + earliestStart.getExpirationTime());
+    log.debug2("*** Reserve Schedule Time: latest finish=" + latestFinish.getExpirationTime());
+    TaskCallback tc = new TaskCallback() {
+      public void taskEvent(SchedulableTask task, EventType type) {
+        // do nothing... yet!
+      }
+    };
+    this.task = new StepTask(earliestStart, latestFinish,
+                             estimatedHashDuration,
+                             tc, this) {
+      public int step(int n) {
+        // finish immediately, in case we start running
+        setFinished();
+        return n;
+      }
+    };
+    return theDaemon.getSchedService().scheduleTask(task);
+  }
 
   public void startPoll() {
     log.debug("Starting poll " + voterUserData.getPollKey());
@@ -195,11 +245,29 @@ public class V3Voter extends BasePoll {
     if (pollDeadline.expired()) {
       log.info("Not restoring expired voter for poll " +
                voterUserData.getPollKey());
-      stopPoll();
+      stopPoll(STATUS_EXPIRED);
+      return;
+    }
+
+    // First, see if we have time to participate.  If not, there's no
+    // point in going on.
+    if (reserveScheduleTime()) {
+      long estimatedHashTime = getCachedUrlSet().estimatedHashDuration();
+      long voteDeadline = voterUserData.getVoteDeadline();
+      if (voteDeadline >= pollDeadline.getExpirationTime()) {
+        log.warning("Voting deadline (" + voteDeadline + ") is later than " +
+                    "the poll deadline (" + pollDeadline.getExpirationTime() + 
+                    ").  Can't participate in poll " + getKey());
+        stopPoll(STATUS_EXPIRED);
+        return;
+      }
+    } else {
+      stopPoll(STATUS_NO_TIME);
       return;
     }
 
     TimerQueue.schedule(pollDeadline, new PollTimerCallback(), this);
+
     if (continuedPoll) {
       try {
 	stateMachine.resume(voterUserData.getPsmState());
@@ -217,18 +285,25 @@ public class V3Voter extends BasePoll {
     }
   }
 
-  public void stopPoll() {
-    // XXX: Set proper status string (Complete / Sent Repair / ?)
-    voterUserData.setStatusString("Complete");
+  public void stopPoll(final int status) {
+    if (task != null && !task.isExpired()) {
+      log.debug2("Cancelling poll time reservation task");
+      task.cancel();
+    }
+    voterUserData.setStatus(status);
     activePoll = false;
     pollSerializer.closePoll();
     pollManager.closeThePoll(voterUserData.getPollKey());
-    log.debug2("Closed poll " + voterUserData.getPollKey());
+    log.debug2("Closed poll " + voterUserData.getPollKey() + " with status " +
+               getStatusString() );    
+  }
+  
+  public void stopPoll() {
+    stopPoll(STATUS_COMPLETE);
   }
 
   private void abortPoll() {
-    stopPoll();
-    voterUserData.setStatusString("Error");
+    stopPoll(STATUS_ERROR);
   }
 
   /**
@@ -342,7 +417,11 @@ public class V3Voter extends BasePoll {
                                                 initHasherByteArrays(),
                                                 new BlockEventHandler());
     HashService hashService = theDaemon.getHashService();
-    
+    // If our fake "Reserve Time" task isn't null, cancel it, then schedule the
+    // real hash.
+    // XXX:  Eventually, we want to be able to associate a hash with an already
+    // scheduled task.  This will do until then.
+    if (task != null) task.cancel();
     boolean scheduled =
       hashService.scheduleHash(hasher,
                                Deadline.at(voterUserData.getDeadline()),
@@ -503,10 +582,6 @@ public class V3Voter extends BasePoll {
     return Poll.V3_POLL;
   }
 
-  public String getStatusString() {
-    return voterUserData.getStatusString();
-  }
-
   public ArchivalUnit getAu() {
     return voterUserData.getCachedUrlSet().getArchivalUnit();
   }
@@ -525,6 +600,10 @@ public class V3Voter extends BasePoll {
 
   public VoterUserData getVoterUserData() {
     return voterUserData;
+  }
+  
+  public String getStatusString() {
+    return V3Voter.STATUS_STRINGS[voterUserData.getStatus()];
   }
 
   /**

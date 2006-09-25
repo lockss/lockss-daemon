@@ -1,5 +1,5 @@
 import base64, glob, os, httplib, random, re, sha, shutil, signal, socket
-import mimetools, mimetypes, sys, time, traceback, types, urllib, urllib2, urlparse
+import mimetools, mimetypes, sys, time, types, urllib, urllib2, urlparse
 from os import path
 from xml.dom import minidom
 from lockss_util import *
@@ -532,6 +532,7 @@ class Client:
                 agreeUrls = int(summary['Agreeing URLs'])
                 repairs = int(summary['Completed Repairs']['value'])
                 return ((repairs == allUrls) and (agreeUrls == allUrls))
+        return False
                 
     def hasWonV3Poll(self, au):
         """ Return true if a poll has been called, and no repairs have been made. """
@@ -546,7 +547,7 @@ class Client:
                 pollKey = row['pollId']['key']
                 (summary, table) = self.getV3PollerDetail(pollKey)
                 allUrls = int(summary['Total URLs In Vote'])
-                agreeUrls = int(summary['Agreeing URLs'])
+                agreeUrls = int(summary['Agreeing URLs']['value'])
                 repairs = int(summary['Completed Repairs']['value'])
                 return (len(nodeList) == repairs and (agreeUrls == allUrls))
                 # TODO: This will really need to be improved when the status
@@ -554,6 +555,39 @@ class Client:
                 # repaired.
         return False
     
+    def isNodeRepairedFromPeerByV3(self, au, node):
+        """ Return true if the given content node has been repaired 
+        from a V3 peer """
+        tab = self.getAuV3Pollers(au)
+        for row in tab:
+            if row['auId'] == au.title and row['status'] == "Complete":
+                # Found the right entry.
+                pollKey = row['pollId']['key']
+                (summary,repairTable) = self.getV3CompletedRepairsTable(pollKey)
+                for repairRow in repairTable:
+                    if repairRow['url'] == node.url: 
+                        return re.match('^TCP:\[.*\]:.*', repairRow['repairFrom'])
+        # Didn't find it.
+        return False
+
+    def isNodeRepairedFromPublisherByV3(self, au, node):
+        """ Return true if the given content node has been repaired
+        from the publisher """
+        tab = self.getAuV3Pollers(au)
+        for row in tab:
+            if row['auId'] == au.title and row['status'] == "Complete":
+                # Found the right entry.
+                pollKey = row['pollId']['key']
+                log.debug("Found the right row in the V3 Pollers table.  Key: %s" % pollKey)
+                (summary,repairTable) = self.getV3CompletedRepairsTable(pollKey)
+                log.debug("Got a repairTable with %d rows." % len(repairTable))
+                for repairRow in repairTable:
+                    log.debug("repairRow['url'] == %s ; repairRow['repairFrom'] == %s" % (repairRow['url'], repairRow['repairFrom']))
+                    if repairRow['url'] == node.url: 
+                        return repairRow['repairFrom'] == 'Publisher'
+        # Didn't find it.
+        return False
+
     def isV3NoQuorum(self, au):
         tab = self.getAuV3Pollers(au)
         for row in tab:
@@ -648,6 +682,10 @@ class Client:
     def getV3PollerDetail(self, key):
         """ Returns both the summary and table """
         return self.__getStatusTable('V3PollerDetailTable', key)
+    
+    def getV3CompletedRepairsTable(self, key):
+        """ Returns the V3 completed repairs status table """
+        return self.__getStatusTable('V3CompletedRepairsTable', key)
 
     def getAuNodesWithContent(self, au):
         """ Return a list of all nodes that have content. """

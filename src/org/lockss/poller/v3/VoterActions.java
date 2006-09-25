@@ -1,5 +1,5 @@
 /*
- * $Id: VoterActions.java,v 1.10 2006-06-02 20:27:15 smorabito Exp $
+ * $Id: VoterActions.java,v 1.11 2006-09-25 02:16:47 smorabito Exp $
  */
 
 /*
@@ -48,6 +48,7 @@ public class VoterActions {
                                            PsmInterp interp) {
     V3LcapMessage msg = (V3LcapMessage)evt.getMessage();
     VoterUserData ud = getUserData(interp);
+    ud.setDeadline(TimeBase.nowMs() + msg.getDuration());
     ud.setVoteDeadline(msg.getVoteDeadline());
     return V3Events.evtOk;
   }
@@ -70,6 +71,7 @@ public class VoterActions {
 
   public static PsmEvent handleSendPollAck(PsmEvent evt, PsmInterp interp) {
     VoterUserData ud = getUserData(interp);
+    ud.setStatus(V3Voter.STATUS_ACCEPTED_POLL);
     V3LcapMessage msg = ud.makeMessage(V3LcapMessage.MSG_POLL_ACK);
     msg.setEffortProof(ud.getPollAckEffortProof());
     msg.setVoterNonce(ud.getVoterNonce());
@@ -118,6 +120,7 @@ public class VoterActions {
     VoterUserData ud = getUserData(interp);
     try {
       if (ud.generateVote()) {
+        ud.setStatus(V3Voter.STATUS_HASHING);
         return V3Events.evtOk;
       } else {
         return V3Events.evtError;
@@ -150,6 +153,7 @@ public class VoterActions {
     // Actually cast our vote.
     try {
       ud.sendMessageTo(msg, ud.getPollerId());
+      ud.setStatus(V3Voter.STATUS_VOTED);
     } catch (IOException ex) {
       log.error("Unable to send message: ", ex);
       return V3Events.evtError;

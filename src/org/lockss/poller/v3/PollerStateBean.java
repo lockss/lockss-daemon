@@ -1,5 +1,5 @@
 /*
- * $Id: PollerStateBean.java,v 1.14 2006-09-02 00:18:11 thib_gc Exp $
+ * $Id: PollerStateBean.java,v 1.15 2006-09-25 02:16:47 smorabito Exp $
  */
 
 /*
@@ -73,6 +73,7 @@ public class PollerStateBean implements LockssSerializable {
   private boolean hashStarted;
   private Collection votedPeers;
   private TallyStatus tallyStatus;
+  private boolean expectingRepairs;
 
   /* Non-serializable transient fields */
   private transient PollSpec spec;
@@ -303,13 +304,21 @@ public class PollerStateBean implements LockssSerializable {
     hashedBlocks.add(hb);
   }
 
+  public boolean expectingRepairs() {
+    return expectingRepairs;
+  }
+  
+  public void expectingRepairs(boolean b) {
+    this.expectingRepairs = b;
+  }
+  
   public String toString() {
     StringBuffer sb = new StringBuffer("[V3PollerState: ");
     sb.append("pollKey=" + pollKey + ", ");
     sb.append("deadline=" + pollDeadline + "]");
     return sb.toString();
   }
-
+  
   /**
    * @deprecated Use getStatus instead.
    * @return The status of this poll, as a string.
@@ -398,16 +407,44 @@ public class PollerStateBean implements LockssSerializable {
    * Simple object to hold status for a repair.
    */
   public static class Repair implements LockssSerializable {
-    // If null, repairing from the publisher.
-    protected PeerIdentity repairFrom;
+    /** The URL of the block being repaired. */
     protected String url;
+    /** Peer from which to request a repair. If null, this is a 
+     * publisher repair. */
+    protected PeerIdentity repairFrom;
+    /** Ordered map of peers to votes cast for this block. */
     protected LinkedHashMap previousVotes;
-    protected boolean deletedFile = false;
+    
+    /**
+     * The following deprecated members were emoved in daemon 1.20.
+     */
+    
+    /** @deprecated */ 
     protected boolean repairFromPublisher = false;
+    /** @deprecated */
+    protected boolean deletedFile = false;
 
+    /**
+     * Create a publisher repair object.
+     * 
+     * @param url
+     * @param previousVotes
+     */
     public Repair(String url, LinkedHashMap previousVotes) {
+      this(url, previousVotes, null);
+    }
+    
+    /**
+     * Create a peer repair object.
+     * 
+     * @param url
+     * @param previousVotes
+     * @param repairFrom
+     */
+    public Repair(String url, LinkedHashMap previousVotes, PeerIdentity repairFrom) {
       this.url = url;
       this.previousVotes = previousVotes;
+      this.repairFrom = repairFrom;
     }
 
     public LinkedHashMap getPreviousVotes() {
@@ -423,19 +460,11 @@ public class PollerStateBean implements LockssSerializable {
     }
 
     public void setRepairFrom(PeerIdentity repairFrom) {
-      this.repairFromPublisher = false;
       this.repairFrom = repairFrom;
     }
 
     public void setRepairFromPublisher() {
-      this.repairFrom = null;
-      this.repairFromPublisher = true;
-    }
-
-    public void setDeletedFile() {
-      this.repairFromPublisher = false;
-      this.repairFrom = null;
-      this.deletedFile = true;
+      setRepairFrom(null);
     }
 
     public String getUrl() {
@@ -446,75 +475,88 @@ public class PollerStateBean implements LockssSerializable {
       this.url = url;
     }
 
-    public boolean isDeletedFile() {
-      return this.deletedFile;
+    public boolean isPublisherRepair() {
+      return (repairFrom == null);
     }
 
-    public boolean isRepairedFromPublisher() {
-      return this.repairFromPublisher;
-    }
+    /** @deprecated */
+    public void setDeletedFile() {}
   }
 
   /**
    * Collection of repairs, active and completed.
    */
+  
   public static class RepairQueue implements LockssSerializable {
+    private Map pendingRepairs;
     private Map activeRepairs;
     private List completedRepairs;
-
+    
     public RepairQueue() {
+      this.pendingRepairs = new HashMap();
       this.activeRepairs = new HashMap();
       this.completedRepairs = new ArrayList();
     }
 
-    public synchronized List getActiveRepairs() {
-      return new ArrayList(activeRepairs.values());
+    public synchronized void repairFromPublisher(String url, LinkedHashMap previousVotes) {
+      pendingRepairs.put(url, new Repair(url, previousVotes));
     }
-
-    public synchronized List getCompletedRepairs() {
-      return completedRepairs;
+    
+    public synchronized void repairFromPeer(String url, LinkedHashMap previousVotes, 
+                                            PeerIdentity peer) {
+      pendingRepairs.put(url, new Repair(url, previousVotes, peer));
     }
-
-    public synchronized void addActiveRepair(String url, Repair r) {
-      activeRepairs.put(url, r);
-    }
-
-    public synchronized Repair getRepairForUrl(String url) {
-      return (Repair)activeRepairs.get(url);
-    }
-
-    public synchronized void addActiveRepair(String url,
-                                             PeerIdentity repairFrom,
-                                             LinkedHashMap votesForBlock) {
-      // If we're already working on this repair, just mark it as being
-      // retargeted to the publisher, or a new peer
-      Repair activeRepair = (Repair)activeRepairs.get(url);
-      if (activeRepair != null) {
-        activeRepair.setRepairFrom(repairFrom);
-      } else {
-        Repair r = new Repair(url, votesForBlock);
-        r.setRepairFrom(repairFrom);
+    
+    /**
+     * Return a list of all pending repairs that should be fetched from
+     * the publisher.
+     * 
+     * @return
+     */
+    public synchronized List getPendingPublisherRepairs() {
+      List publisherRepairs = new ArrayList();
+      for (Iterator iter = pendingRepairs.keySet().iterator(); iter.hasNext(); ) {
+        String url = (String)iter.next();
+        Repair r = (Repair)pendingRepairs.get(url);
+        if (r.isPublisherRepair()) {
+          publisherRepairs.add(r);
+        }
       }
+      return publisherRepairs;
     }
-
-    public synchronized void markComplete(String url) {
-      if (!activeRepairs.keySet().contains(url)) {
-        throw new IllegalArgumentException(url + " is not active!");
+    
+    /**
+     * Convenience method to return just the URLs of the pending publisher
+     * suitable to passing to the repair crawler.
+     */
+    public synchronized List getPendingPublisherRepairUrls() {
+      List publisherRepairs = new ArrayList();
+      for (Iterator iter = pendingRepairs.keySet().iterator(); iter.hasNext(); ) {
+        String url = (String)iter.next();
+        Repair r = (Repair)pendingRepairs.get(url);
+        if (r.isPublisherRepair()) {
+          publisherRepairs.add(url);
+        }
       }
-      // We don't care about the previous votes once this repairs is complete.
-      // Null them out and let them get GC'd.
-      Repair repair = (Repair)activeRepairs.get(url);
-      repair.setPreviousVotes(null);
-      activeRepairs.remove(url);
-      completedRepairs.add(repair);
+      return publisherRepairs;
     }
-
-    // Currently only used when deleting a file from the repository
-    // after losing a tally on a block.
-    public synchronized void addCompletedRepair(String url) {
-      Repair repair = new Repair(url, null);
-      repair.setDeletedFile();
-      completedRepairs.add(repair);
+    
+    /**
+     * Return a list of all pending repairs that should be fetched from
+     * other V3 peers.
+     * 
+     * @return
+     */
+    public synchronized List getPendingPeerRepairs() {
+      List peerRepairs = new ArrayList();
+      for (Iterator iter = pendingRepairs.keySet().iterator(); iter.hasNext(); ) {
+        String url = (String)iter.next();
+        Repair r = (Repair)pendingRepairs.get(url);
+        if (!r.isPublisherRepair()) {
+          peerRepairs.add(r);
+        }
+      }
+      return peerRepairs;
     }
 
     public synchronized Map getVotesForBlock(String url) {
@@ -525,9 +567,46 @@ public class PollerStateBean implements LockssSerializable {
         return null;
       }
     }
+    
+    public synchronized List getPendingRepairs() {
+      return new ArrayList(pendingRepairs.values());
+    }
 
-    public synchronized boolean hasActiveRepairs() {
-      return activeRepairs.size() > 0;
+    public synchronized List getActiveRepairs() {
+      return new ArrayList(activeRepairs.values());
+    }
+    
+    public synchronized List getCompletedRepairs() {
+      return completedRepairs;
+    }
+    
+    /**
+     * Mark an entire list of URls active.
+     * 
+     * @param l The list of URLs to move to the active state.
+     */
+    public synchronized void markActive(List l) {
+      for (Iterator iter = l.iterator(); iter.hasNext(); ) {
+        markActive((String)iter.next());
+      }
+    }
+
+    public synchronized void markActive(String url) {
+      Repair r = (Repair)pendingRepairs.remove(url);
+      if (r != null) {
+        activeRepairs.put(url, r);
+      }
+    }
+    
+    /** Deletions go directly from 'pending' to 'completed' */
+    public synchronized void markComplete(String url) {
+      Repair r = (Repair)activeRepairs.remove(url);
+      if (r == null) {
+        r = (Repair)pendingRepairs.remove(url);
+      }
+      if (r != null) {
+        completedRepairs.add(r);
+      }
     }
   }
 
