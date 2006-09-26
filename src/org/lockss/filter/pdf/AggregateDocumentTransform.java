@@ -1,5 +1,5 @@
 /*
- * $Id: AggregateDocumentTransform.java,v 1.4 2006-09-19 16:54:53 thib_gc Exp $
+ * $Id: AggregateDocumentTransform.java,v 1.5 2006-09-26 07:32:24 thib_gc Exp $
  */
 
 /*
@@ -241,20 +241,15 @@ public class AggregateDocumentTransform implements DocumentTransform {
    * @param resultPolicy       A result policy.
    * @param documentTransforms An array of document transforms.
    * @see #AggregateDocumentTransform(ResultPolicy)
+   * @see #add(DocumentTransform[])
    */
   public AggregateDocumentTransform(ResultPolicy resultPolicy,
                                     DocumentTransform[] documentTransforms) {
     this(resultPolicy);
-    if (documentTransforms == null) {
-      String logMessage = "Cannot add a null array of document transforms";
-      logger.error(logMessage);
-      throw new NullPointerException(logMessage);
-    }
-    for (int tra = 0 ; tra < documentTransforms.length ; ++tra) {
-      logger.debug2("Setting up document transform at index " + tra);
-      add(documentTransforms[tra]);
-    }
+    logger.debug2("Setting up " + documentTransforms.length + " document transforms");
+    add(documentTransforms);
   }
+
 
   /**
    * <p>Registers a new {@link DocumentTransform} instance with
@@ -270,7 +265,31 @@ public class AggregateDocumentTransform implements DocumentTransform {
       logger.error(logMessage);
       throw new NullPointerException(logMessage);
     }
+    logger.debug3("Adding a document transform");
     documentTransforms.add(documentTransform);
+  }
+
+  /**
+   * <p>Registers new {@link DocumentTransform} instances with
+   * this aggregate document transform.</p>
+   * <p>When transforming a PDF document, the actions performed by the
+   * registered tranforms are applied in the order the transforms
+   * were registered with this method. This method registers the
+   * document transforms in the array in array order.</p>
+   * @param documentTransforms An array of {@link DocumentTransform}
+   *                           instances.
+   * @see #add(DocumentTransform)
+   */
+  public void add(DocumentTransform[] documentTransforms) {
+    if (documentTransforms == null) {
+      String logMessage = "Cannot add a null array of document transforms";
+      logger.error(logMessage);
+      throw new NullPointerException(logMessage);
+    }
+    for (int tra = 0 ; tra < documentTransforms.length ; ++tra) {
+      logger.debug3("Adding document transform at index " + tra);
+      add(documentTransforms[tra]);
+    }
   }
 
   /* Inherit documentation */
@@ -287,7 +306,7 @@ public class AggregateDocumentTransform implements DocumentTransform {
         break;
       }
     }
-    logger.debug2("Aggregate document transform result: " + success);
+    logger.debug("Aggregate document transform result: " + success);
     return success;
   }
 

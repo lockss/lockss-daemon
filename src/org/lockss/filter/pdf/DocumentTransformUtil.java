@@ -1,5 +1,5 @@
 /*
- * $Id: DocumentTransformUtil.java,v 1.6 2006-09-26 05:17:54 thib_gc Exp $
+ * $Id: DocumentTransformUtil.java,v 1.7 2006-09-26 07:32:24 thib_gc Exp $
  */
 
 /*
@@ -34,7 +34,6 @@ package org.lockss.filter.pdf;
 
 import java.io.*;
 
-import org.lockss.filter.pdf.PageTransformUtil.ExtractStringsToOutputStream;
 import org.lockss.util.*;
 
 /**
@@ -99,7 +98,7 @@ public class DocumentTransformUtil {
 
     /* Inherit documentation */
     public boolean transform(PdfDocument pdfDocument) throws IOException {
-      logger.debug2("Identity document transform result: " + returnValue);
+      logger.debug("Identity document transform result: " + returnValue);
       return returnValue;
     }
 
@@ -130,55 +129,10 @@ public class DocumentTransformUtil {
 
     /* Inherit documentation */
     public boolean transform(PdfDocument pdfDocument) throws IOException {
-      return !documentTransform.transform(pdfDocument);
-    }
-
-  }
-
-  public interface OutputDocumentTransform extends DocumentTransform {
-
-    boolean transform(PdfDocument pdfDocument,
-                      OutputStream outputStream);
-
-  }
-
-  public static abstract class OutputStreamDocumentTransform implements OutputDocumentTransform {
-
-    protected OutputStream outputStream;
-
-    /**
-     * <p>Preconditions</p>
-     * <ul>
-     *  <li>outputStream != null</li>
-     * </ul>
-     */
-    public abstract DocumentTransform makeTransform() throws IOException;
-
-    public synchronized boolean transform(PdfDocument pdfDocument) throws IOException {
-      logger.debug2("Begin output stream document transform");
-      if (outputStream == null) {
-        throw new NullPointerException("Output stream uninitialized");
-      }
-      DocumentTransform documentTransform = makeTransform();
-      boolean ret = documentTransform.transform(pdfDocument);
-      logger.debug2("Output stream document transform result: " + ret);
+      logger.debug2("Begin opposite document transform based on " + documentTransform.getClass().getName());
+      boolean ret = !documentTransform.transform(pdfDocument);
+      logger.debug("Opposite document transform result: " + ret);
       return ret;
-    }
-
-    public synchronized boolean transform(PdfDocument pdfDocument,
-                                          OutputStream outputStream) {
-      try {
-        logger.debug2("Begin output stream document transform");
-        this.outputStream = outputStream;
-        return transform(pdfDocument);
-      }
-      catch (IOException ioe) {
-        logger.error("Output stream document transform failed", ioe);
-        return false;
-      }
-      finally {
-        this.outputStream = null;
-      }
     }
 
   }
@@ -206,27 +160,6 @@ public class DocumentTransformUtil {
 
   }
 
-  public static class SimpleOutputDocumentTransform
-      extends DocumentTransformDecorator
-      implements OutputDocumentTransform {
-
-    public SimpleOutputDocumentTransform(DocumentTransform documentTransform) {
-      super(documentTransform);
-    }
-
-    public boolean transform(PdfDocument pdfDocument) throws IOException {
-      return documentTransform.transform(pdfDocument);
-    }
-
-    public boolean transform(PdfDocument pdfDocument,
-                             OutputStream outputStream) {
-      return PdfUtil.applyAndSave(this,
-                                  pdfDocument,
-                                  outputStream);
-    }
-
-  }
-
   /**
    * <p>A document transform decorator that throws a
    * {@link DocumentTransformException} when its underlying document
@@ -246,27 +179,15 @@ public class DocumentTransformUtil {
 
     /* Inherit documentation */
     public boolean transform(PdfDocument pdfDocument) throws IOException {
-      logger.debug2("Begin strict document transform based on "
-                    + documentTransform.getClass().getName());
+      logger.debug2("Begin strict document transform based on " + documentTransform.getClass().getName());
       if (documentTransform.transform(pdfDocument)) {
-        logger.debug2("Strict document transform result: true");
+        logger.debug("Strict document transform result: true");
         return true;
       }
       else {
-        logger.debug2("Strict document transform result: throw");
+        logger.debug("Strict document transform result: throw");
         throw new DocumentTransformException("Strict document transform did not succeed");
       }
-    }
-
-  }
-
-  public static abstract class TextScrapingDocumentTransform extends OutputStreamDocumentTransform {
-
-    public abstract DocumentTransform makePreliminaryTransform() throws IOException;
-
-    public DocumentTransform makeTransform() throws IOException {
-      return new ConditionalDocumentTransform(makePreliminaryTransform(),
-                                              new TransformEachPage(new ExtractStringsToOutputStream(outputStream)));
     }
 
   }

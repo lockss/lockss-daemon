@@ -1,5 +1,5 @@
 /*
- * $Id: ReplaceString.java,v 1.2 2006-09-25 08:12:15 thib_gc Exp $
+ * $Id: ReplaceString.java,v 1.3 2006-09-26 07:32:24 thib_gc Exp $
  */
 
 /*
@@ -35,7 +35,7 @@ package org.lockss.filter.pdf;
 import java.io.IOException;
 import java.util.List;
 
-import org.lockss.util.PdfUtil;
+import org.lockss.util.*;
 import org.pdfbox.cos.*;
 import org.pdfbox.util.PDFOperator;
 
@@ -80,19 +80,22 @@ public abstract class ReplaceString extends PdfOperatorProcessor {
                       PDFOperator operator,
                       List operands)
       throws IOException {
-    String candidate = PdfUtil.getPdfString(operands.get(0));
+    String candidate = PdfUtil.getPdfString(operands, 0);
     List outputList = pageStreamTransform.getOutputList();
     if (identify(candidate)) {
-      // String matches: replace it
+      String replacement = getReplacement(candidate);
+      logger.debug3("Replacing \"" + candidate + "\" by \"" + replacement + "\"");
       pageStreamTransform.signalChange();
-      outputList.add(new COSString(getReplacement(candidate)));
+      outputList.add(new COSString(replacement));
       outputList.add(operator);
     }
     else {
-      // String does not match: pass it through
+      logger.debug3("Keeping \"" + candidate + "\"");
       outputList.addAll(operands);
       outputList.add(operator);
     }
   }
+
+  private static Logger logger = Logger.getLogger("ReplaceString");
 
 }

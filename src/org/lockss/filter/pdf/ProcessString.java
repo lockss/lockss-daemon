@@ -1,5 +1,5 @@
 /*
- * $Id: ProcessString.java,v 1.2 2006-09-22 17:16:40 thib_gc Exp $
+ * $Id: ProcessString.java,v 1.3 2006-09-26 07:32:24 thib_gc Exp $
  */
 
 /*
@@ -35,7 +35,7 @@ package org.lockss.filter.pdf;
 import java.io.IOException;
 import java.util.List;
 
-import org.lockss.util.PdfUtil;
+import org.lockss.util.*;
 import org.pdfbox.cos.*;
 import org.pdfbox.util.PDFOperator;
 
@@ -45,17 +45,27 @@ public abstract class ProcessString extends PdfOperatorProcessor {
                       PDFOperator operator,
                       List operands)
       throws IOException {
+    logger.debug3("Processing " + operator.getOperation());
     if (PdfUtil.isShowText(operator) || PdfUtil.isMoveToNextLineShowText(operator)) {
-      processString(pageStreamTransform, operator, operands, (COSString)operands.get(0));
+      processString(pageStreamTransform,
+                    operator,
+                    operands,
+                    (COSString)operands.get(0));
     }
     else if (PdfUtil.isSetSpacingMoveToNextLineShowText(operator)) {
-      processString(pageStreamTransform, operator, operands, (COSString)operands.get(2));
+      processString(pageStreamTransform,
+                    operator,
+                    operands,
+                    (COSString)operands.get(2));
     }
     else if (PdfUtil.isShowTextGlyphPositioning(operator)) {
       COSArray array = (COSArray)operands.get(0);
       for (int elem = 0 ; elem < array.size() ; ++elem) {
-        if (array.get(elem) instanceof COSString) {
-          processString(pageStreamTransform, operator, operands, (COSString)array.get(elem));
+        if (PdfUtil.isPdfString(array.get(elem))) {
+          processString(pageStreamTransform,
+                        operator,
+                        operands,
+                        (COSString)array.get(elem));
         }
       }
     }
@@ -66,5 +76,7 @@ public abstract class ProcessString extends PdfOperatorProcessor {
                                      List operands,
                                      COSString cosString)
       throws IOException;
+
+  private static Logger logger = Logger.getLogger("ProcessString");
 
 }

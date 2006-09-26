@@ -1,5 +1,5 @@
 /*
- * $Id: PageStreamTransform.java,v 1.5 2006-09-26 06:16:12 thib_gc Exp $
+ * $Id: PageStreamTransform.java,v 1.6 2006-09-26 07:32:24 thib_gc Exp $
  */
 
 /*
@@ -151,50 +151,6 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
 
   }
 
-  public static class RecognizePageStream extends NullPageStreamTransform {
-
-    public RecognizePageStream() throws IOException {
-      super();
-    }
-
-    public RecognizePageStream(Properties customOperatorProcessors) throws IOException {
-      super(customOperatorProcessors);
-    }
-
-    public RecognizePageStream(String pdfOperatorString, Class pdfOperatorProcessor)
-        throws IOException {
-      super(pdfOperatorString, pdfOperatorProcessor);
-    }
-
-    public RecognizePageStream(String pdfOperatorString1, Class pdfOperatorProcessor1,
-                               String pdfOperatorString2, Class pdfOperatorProcessor2)
-        throws IOException {
-      super(pdfOperatorString1, pdfOperatorProcessor1,
-            pdfOperatorString2, pdfOperatorProcessor2);
-    }
-
-    public RecognizePageStream(String pdfOperatorString1, Class pdfOperatorProcessor1,
-                               String pdfOperatorString2, Class pdfOperatorProcessor2,
-                               String pdfOperatorString3, Class pdfOperatorProcessor3)
-        throws IOException {
-      super(pdfOperatorString1, pdfOperatorProcessor1,
-            pdfOperatorString2, pdfOperatorProcessor2,
-            pdfOperatorString3, pdfOperatorProcessor3);
-    }
-
-    public RecognizePageStream(String pdfOperatorString1, Class pdfOperatorProcessor1,
-                               String pdfOperatorString2, Class pdfOperatorProcessor2,
-                               String pdfOperatorString3, Class pdfOperatorProcessor3,
-                               String pdfOperatorString4, Class pdfOperatorProcessor4)
-        throws IOException {
-      super(pdfOperatorString1, pdfOperatorProcessor1,
-            pdfOperatorString2, pdfOperatorProcessor2,
-            pdfOperatorString3, pdfOperatorProcessor3,
-            pdfOperatorString4, pdfOperatorProcessor4);
-    }
-
-  }
-
   /**
    * <p>Whether a change has been indicated by a PDF operator
    * processor since the begininng of the current/latest call to
@@ -297,6 +253,7 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
    * @see #mergeOutputList(List)
    */
   public synchronized void mergeOutputList() {
+    logger.debug3("Merging");
     List oldTop = (List)listStack.peek();
     mergeOutputList(oldTop);
   }
@@ -312,6 +269,7 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
    *                             list on the stack.
    */
   public synchronized void mergeOutputList(List replacement) {
+    logger.debug3("Merging with replacement");
     listStack.pop();
     List newTop = (List)listStack.peek();
     newTop.addAll(replacement);
@@ -334,6 +292,7 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
    * {@link #transform} to clear the output list stack.</p>
    */
   public synchronized void reset() {
+    logger.debug3("Resetting the page stream transform");
     atLeastOneChange = false;
     listStack.clear();
     splitOutputList();
@@ -347,6 +306,7 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
    * list.</p>
    */
   public synchronized void signalChange() {
+    logger.debug3("Change signaled");
     atLeastOneChange = true;
   }
 
@@ -354,6 +314,7 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
    * <p>Pushes an empty list onto the output list stack.</p>
    */
   public synchronized void splitOutputList() {
+    logger.debug3("Splitting");
     listStack.push(new ArrayList());
   }
 
@@ -381,6 +342,8 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
    */
   public synchronized boolean transform(PdfPage pdfPage)
       throws IOException {
+    logger.debug2("Begin page stream transform");
+
     // Iterate over stream
     reset();
     processStream(pdfPage.getPdPage(),
@@ -389,10 +352,13 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
 
     // Sanity check
     if (listStack.size() != 1) {
-      throw new PageTransformException("Split/merge mismatch: after processing stream, list stack has size " + listStack.size());
+      String logMessage = "Split/merge mismatch: after processing stream, list stack has size " + listStack.size();
+      logger.error(logMessage);
+      throw new PageTransformException(logMessage);
     }
 
     writeResult(pdfPage);
+    logger.debug("Page stream transform result: " + atLeastOneChange);
     return atLeastOneChange;
   }
 
@@ -406,11 +372,15 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
   protected synchronized void writeResult(PdfPage pdfPage)
       throws IOException {
     if (atLeastOneChange) {
+      logger.debug3("Writing result to PDF page");
       PDStream resultStream = pdfPage.getPdfDocument().makePdStream();
       OutputStream outputStream = resultStream.createOutputStream();
       ContentStreamWriter tokenWriter = new ContentStreamWriter(outputStream);
       tokenWriter.writeTokens(getOutputList());
       pdfPage.setContents(resultStream);
+    }
+    else {
+      logger.debug3("No result to write to PDF page");
     }
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: SimpleOperatorProcessor.java,v 1.6 2006-09-26 07:32:24 thib_gc Exp $
+ * $Id: TextScrapingDocumentTransform.java,v 1.1 2006-09-26 07:32:24 thib_gc Exp $
  */
 
 /*
@@ -33,34 +33,16 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.filter.pdf;
 
 import java.io.IOException;
-import java.util.List;
 
-import org.lockss.util.Logger;
-import org.pdfbox.util.PDFOperator;
+import org.lockss.filter.pdf.PageTransformUtil.ExtractStringsToOutputStream;
 
-/**
- * <p>A PDF operator processor that simply passes its operands and
- * operator through to the PDF page stream transform's output list
- * unconditionally.</p>
- * <p>{@link SimpleOperatorProcessor} instances, like
- * {@link PdfOperatorProcessor} instances, <em>must</em> have a
- * no-argument constructor, and are instantiated once per key
- * associated with their class name during a given
- * {@link PageStreamTransform} instantiation.</p>
- * @author Thib Guicherd-Callin
- */
-public class SimpleOperatorProcessor extends PdfOperatorProcessor {
+public abstract class TextScrapingDocumentTransform extends OutputStreamDocumentTransform {
 
-  /* Inherit documentation */
-  public void process(PageStreamTransform pageStreamTransform,
-                      PDFOperator operator,
-                      List operands)
-      throws IOException {
-    logger.debug3("Processing " + operator.getOperation());
-    pageStreamTransform.getOutputList().addAll(operands);
-    pageStreamTransform.getOutputList().add(operator);
+  public abstract DocumentTransform makePreliminaryTransform() throws IOException;
+
+  public DocumentTransform makeTransform() throws IOException {
+    return new ConditionalDocumentTransform(makePreliminaryTransform(),
+                                            new TransformEachPage(new ExtractStringsToOutputStream(outputStream)));
   }
-
-  private static Logger logger = Logger.getLogger("SimpleOperatorProcessor");
 
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: ConditionalPageTransform.java,v 1.4 2006-09-19 16:54:53 thib_gc Exp $
+ * $Id: ConditionalPageTransform.java,v 1.5 2006-09-26 07:32:24 thib_gc Exp $
  */
 
 /*
@@ -158,7 +158,7 @@ public class ConditionalPageTransform extends PageTransformDecorator {
          new AggregatePageTransform(thenResultPolicy,
                                     thenTransform1,
                                     thenTransform2));
-    logger.debug2("Implicitly aggregated three \"then\" transforms");
+    logger.debug2("Implicitly aggregated two \"then\" transforms");
   }
 
   /**
@@ -290,7 +290,7 @@ public class ConditionalPageTransform extends PageTransformDecorator {
   public boolean transform(PdfPage pdfPage) throws IOException {
     logger.debug2("Begin conditional page transform");
     boolean ret = pageTransform.transform(pdfPage);
-    logger.debug2("Conditional page transform result: " + ret);
+    logger.debug("Conditional page transform result: " + ret);
     return ret;
   }
 

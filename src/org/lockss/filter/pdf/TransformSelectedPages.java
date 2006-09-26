@@ -1,5 +1,5 @@
 /*
- * $Id: TransformSelectedPages.java,v 1.6 2006-09-19 16:54:53 thib_gc Exp $
+ * $Id: TransformSelectedPages.java,v 1.7 2006-09-26 07:32:24 thib_gc Exp $
  */
 
 /*
@@ -123,6 +123,12 @@ public abstract class TransformSelectedPages extends PageTransformWrapper {
   protected TransformSelectedPages(ResultPolicy resultPolicy,
                                    PageTransform pageTransform) {
     super(pageTransform);
+    if (resultPolicy == null) {
+      String logMessage = "Cannot specify a null result policy";
+      logger.error(logMessage);
+      throw new NullPointerException(logMessage);
+    }
+    logger.debug2("Setting up result policy " + resultPolicy.toString());
     this.resultPolicy = resultPolicy;
   }
 
@@ -142,6 +148,7 @@ public abstract class TransformSelectedPages extends PageTransformWrapper {
     this(resultPolicy,
          new AggregatePageTransform(pageTransform1,
                                     pageTransform2));
+    logger.debug2("Implicitly aggregated two page transforms");
   }
 
   /**
@@ -163,6 +170,7 @@ public abstract class TransformSelectedPages extends PageTransformWrapper {
          new AggregatePageTransform(pageTransform1,
                                     pageTransform2,
                                     pageTransform3));
+    logger.debug2("Implicitly aggregated three page transforms");
   }
 
   /**
@@ -178,6 +186,7 @@ public abstract class TransformSelectedPages extends PageTransformWrapper {
                                    PageTransform[] pageTransforms) {
     this(resultPolicy,
          new AggregatePageTransform(pageTransforms));
+    logger.debug2("Implicitly aggregated " + pageTransforms.length + " page transforms");
   }
 
   /**
@@ -201,6 +210,7 @@ public abstract class TransformSelectedPages extends PageTransformWrapper {
          new AggregatePageTransform(pageTransformResultPolicy,
                                     pageTransform1,
                                     pageTransform2));
+    logger.debug2("Implicitly aggregated two page transforms");
   }
 
   /**
@@ -227,6 +237,7 @@ public abstract class TransformSelectedPages extends PageTransformWrapper {
                                     pageTransform1,
                                     pageTransform2,
                                     pageTransform3));
+    logger.debug2("Implicitly aggregated three page transforms");
   }
 
   /**
@@ -247,23 +258,31 @@ public abstract class TransformSelectedPages extends PageTransformWrapper {
     this(pageIterationResultPolicy,
          new AggregatePageTransform(pageTransformResultPolicy,
                                     pageTransforms));
+    logger.debug2("Implicitly aggregated " + pageTransforms.length + " page transforms");
   }
 
   /* Inherit documentation */
   public boolean transform(PdfDocument pdfDocument) throws IOException {
+    logger.debug2("Begin selected pages transform with result policy " + resultPolicy.toString());
     boolean success = resultPolicy.initialValue();
+    logger.debug3("Aggregate success flag initially " + success);
     for (Iterator iter = getSelectedPages(pdfDocument) ; iter.hasNext() ; ) {
-      PdfPage pdfPage = (PdfPage)iter.next();
       try {
+        PdfPage pdfPage = (PdfPage)iter.next();
         success = resultPolicy.updateResult(success, pageTransform.transform(pdfPage));
+        logger.debug3("Aggregate success flag now " + success);
       }
       catch (PageTransformException pte) {
-        throw new DocumentTransformException(pte);
+        String logMessage = "Underlying page transform failed";
+        logger.error(logMessage, pte);
+        throw new DocumentTransformException(logMessage, pte);
       }
       if (!resultPolicy.shouldKeepGoing(success)) {
+        logger.debug3("Aggregation should not keep going");
         break;
       }
     }
+    logger.debug("Selected pages transform result: " + success);
     return success;
   }
 
@@ -285,5 +304,7 @@ public abstract class TransformSelectedPages extends PageTransformWrapper {
    * @see #TransformSelectedPages(PageTransform[])
    */
   public static final ResultPolicy POLICY_DEFAULT = PdfUtil.AND;
+
+  private static Logger logger = Logger.getLogger("TransformSelectedPages");
 
 }

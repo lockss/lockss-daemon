@@ -1,5 +1,5 @@
 /*
- * $Id: AggregatePageTransform.java,v 1.4 2006-09-19 16:54:53 thib_gc Exp $
+ * $Id: AggregatePageTransform.java,v 1.5 2006-09-26 07:32:24 thib_gc Exp $
  */
 
 /*
@@ -200,10 +200,8 @@ public class AggregatePageTransform implements PageTransform {
   public AggregatePageTransform(ResultPolicy resultPolicy,
                                 PageTransform[] pageTransforms) {
     this(resultPolicy);
-    for (int tra = 0 ; tra < pageTransforms.length ; ++tra) {
-      logger.debug2("Setting up page transform at index " + tra);
-      add(pageTransforms[tra]);
-    }
+    logger.debug2("Setting up " + pageTransforms.length + " page transforms");
+    add(pageTransforms);
   }
 
   /**
@@ -220,7 +218,30 @@ public class AggregatePageTransform implements PageTransform {
       logger.error(logMessage);
       throw new NullPointerException(logMessage);
     }
+    logger.debug3("Adding a page transform");
     pageTransforms.add(pageTransform);
+  }
+
+  /**
+   * <p>Registers new {@link DocumentTransform} instances with
+   * this aggregate document transform.</p>
+   * <p>When transforming a PDF document, the actions performed by the
+   * registered tranforms are applied in the order the transforms
+   * were registered with this method. This method registers the
+   * document transforms in the array in array order.</p>
+   * @param pageTransforms An array of {@link PageTransform} instances.
+   * @see #add(PageTransform)
+   */
+  public void add(PageTransform[] pageTransforms) {
+    if (pageTransforms == null) {
+      String logMessage = "Cannot add a null array of page transforms";
+      logger.error(logMessage);
+      throw new NullPointerException(logMessage);
+    }
+    for (int tra = 0 ; tra < pageTransforms.length ; ++tra) {
+      logger.debug3("Adding page transform at index " + tra);
+      add(pageTransforms[tra]);
+    }
   }
 
   /* Inherit documentation */
@@ -237,7 +258,7 @@ public class AggregatePageTransform implements PageTransform {
         break;
       }
     }
-    logger.debug2("Aggregate page transform result: " + success);
+    logger.debug("Aggregate page transform result: " + success);
     return success;
   }
 
