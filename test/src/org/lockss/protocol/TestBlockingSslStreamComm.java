@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockingSslStreamComm.java,v 1.3 2006-09-24 19:30:56 dshr Exp $
+ * $Id: TestBlockingSslStreamComm.java,v 1.4 2006-09-26 03:31:54 dshr Exp $
  */
 
 /*
@@ -129,7 +129,7 @@ public class TestBlockingSslStreamComm extends TestBlockingStreamComm {
   }
 
 
-  /** SSL */
+  /** SSL with temporary keystore */
   public static class SslStreamsTempKeys extends TestBlockingSslStreamComm {
     private static String PREFIX = "javax.net.ssl.keyStore";
     private static String PREFIX2 = "javax.net.ssl.trustStore";
@@ -311,7 +311,7 @@ public class TestBlockingSslStreamComm extends TestBlockingStreamComm {
 	log.debug("keypair.getSelfCertificate() threw " + e);
 	return;
       }
-	log.debug("Certificate: " + chain[0].toString());
+	log.debug3("Certificate: " + chain[0].toString());
 	log.debug("About to keyStore.load(null)");
       try {
 	keyStore.load(null, keyStorePassword.toCharArray());
@@ -347,8 +347,7 @@ public class TestBlockingSslStreamComm extends TestBlockingStreamComm {
 	log.error("getKeyEntry() threw: " + e);
       }
 	log.debug("Done storing");
-      //  XXX write to a file
-      if (true) try {
+      try {
 	log.debug("Storing KeyStore in " + keyStoreFile);
 	FileOutputStream fos = new FileOutputStream(keyStoreFile);
 	keyStore.store(fos, keyStorePassword.toCharArray());
@@ -356,15 +355,222 @@ public class TestBlockingSslStreamComm extends TestBlockingStreamComm {
 	log.debug("Done storing KeyStore in " + keyStoreFileName);
       } catch (Exception e) {
 	log.debug("ks.store(" + keyStoreFileName + ") threw " + e);
-      } else {
-	log.debug("Not storing KeyStore in a file");
       }
     }
+  }
+
+  /** SSL with permanent keystore */
+  public static class SslStreamsPermKeys extends TestBlockingSslStreamComm {
+
+    File keyStoreFile = null;
+    String keyStoreFileName = null;
+    String keyStorePassWord = "localhost";
+    File privateKeyPassWordFile = null;
+    String privateKeyPassWordFileName = null;
+    String privateKeyPassWord = "MoreBadPassWord";
+      // XXX need good and bad key stores and passwords
+
+    public SslStreamsPermKeys(String name) {
+      super(name);
+    }
+
+    public void addSuiteProps(Properties p) {
+      if (setupKeyStore(p)) {
+        p.setProperty(BlockingStreamComm.PARAM_USE_V3_OVER_SSL, "true");
+	p.setProperty(BlockingStreamComm.PARAM_SSL_TEMP_KEYSTORE, "false");
+	p.setProperty(BlockingStreamComm.PARAM_USE_SSL_CLIENT_AUTH, "true");
+	/* File name for SSL key store */
+	p.setProperty(BlockingStreamComm.PARAM_SSL_KEYSTORE, keyStoreFileName);
+	/* File name for SSL key store password **/
+	p.setProperty(BlockingStreamComm.PARAM_SSL_PRIVATE_KEY_PASSWORD_FILE,
+		      privateKeyPassWordFileName);
+	/* SSL protocol to use **/
+	p.setProperty(BlockingStreamComm.PARAM_SSL_PROTOCOL, "TLSv1");
+	p.setProperty("org.lockss.platform.fqdn", keyStorePassWord);
+      } else {
+	fail("can't set up key store");
+      }
+    }
+
+    //  Create the KeyStore
+    private boolean setupKeyStore(Properties p) {
+      // Create a file for the private key password and put it there
+      try {
+        privateKeyPassWordFile = FileTestUtil.tempFile("private", ".key");
+      } catch (IOException e) {
+        log.error("tempFile() threw " + e);
+      }
+      privateKeyPassWordFileName = privateKeyPassWordFile.getAbsolutePath();
+      //  Write the key store to the file
+      try {
+	log.debug("Storing private key password in " +
+		  privateKeyPassWordFileName);
+	FileOutputStream fos = new FileOutputStream(privateKeyPassWordFile);
+	fos.write(privateKeyPassWord.getBytes());
+	fos.close();
+	log.debug("Done storing private key password in " +
+		  privateKeyPassWordFileName);
+      } catch (Exception e) {
+	log.error("fos.write(" + privateKeyPassWordFileName + ") threw " + e);
+	return false;
+      }
+      privateKeyPassWordFileName = privateKeyPassWordFile.getAbsolutePath();
+      // Create a CertAndKeyGen instance
+      String keyAlgName = "RSA";
+      String sigAlgName = "MD5WithRSA";
+      log.debug("About to create a CertAndKeyGen: " + keyAlgName +
+		" " + sigAlgName);
+      CertAndKeyGen keypair;
+      try {
+        keypair = new CertAndKeyGen(keyAlgName, sigAlgName);
+      } catch (NoSuchAlgorithmException e) {
+	log.error("new CertAndKeyGen(" + keyAlgName + "," +
+		  sigAlgName + ") threw " + e);
+	return false;
+      }
+      // Generate a key pair
+      log.debug("About to generate a key pair");
+      try {
+        keypair.generate(1024);
+      } catch (InvalidKeyException e) {
+	log.error("keypair.generate(1024) threw " + e);
+	return false;
+      }
+      // Extract the private key
+      log.debug("About to get a PrivateKey");
+      PrivateKey privKey = keypair.getPrivateKey();
+      log.debug("PrivateKey: " + privKey.getAlgorithm() + " " +
+		privKey.getFormat());
+      log.debug("About to get a self-signed certificate");
+      X509Certificate[] chain = new X509Certificate[1];
+      try {
+	String certName =
+	    "CN=Test Key, OU=LOCKSS Team, O=Stanford, L=Stanford, " +
+	    "S=California, C=US";
+        X500Name x500Name = new X500Name(certName);
+        chain[0] = keypair.getSelfCertificate(x500Name, 365*24*60*60);
+      } catch (IOException e) {
+	log.error("new X500Name() threw " + e);
+	return false;
+      } catch (CertificateException e) {
+	log.error("keypair.getSelfCertificate() threw " + e);
+	return false;
+      } catch (InvalidKeyException e) {
+	log.error("keypair.getSelfCertificate() threw " + e);
+	return false;
+      } catch (SignatureException e) {
+	log.error("keypair.getSelfCertificate() threw " + e);
+	return false;
+      } catch (NoSuchAlgorithmException e) {
+	log.error("keypair.getSelfCertificate() threw " + e);
+	return false;
+      } catch (NoSuchProviderException e) {
+	log.error("keypair.getSelfCertificate() threw " + e);
+	return false;
+      }
+      log.debug3("chain[0]: " + chain[0].toString());
+      // Create the key store
+      KeyStore keyStore = null;
+      try {
+        keyStore = KeyStore.getInstance("JCEKS", "SunJCE");
+      } catch (KeyStoreException e) {
+	log.error("KeyStore.getInstance() threw " + e);
+	return false;
+      } catch (NoSuchProviderException e) {
+	log.error("KeyStore.getInstance() threw " + e);
+      }
+      //  Initialize it
+      log.debug("About to keyStore.load(null)");
+      try {
+	keyStore.load(null, keyStorePassWord.toCharArray());
+      } catch (IOException e) {
+	log.debug("keyStore.load() threw " + e);
+	return false;
+      } catch (CertificateException e) {
+	log.debug("keyStore.load() threw " + e);
+	return false;
+      } catch (NoSuchAlgorithmException e) {
+	log.debug("keyStore.load() threw " + e);
+	return false;
+      }
+      //  Store the certificate
+      String certAlias = "localhost.crt";
+      log.debug("About to store " + certAlias + " in key store");
+      try {
+        keyStore.setCertificateEntry(certAlias, chain[0]);
+      } catch (KeyStoreException e) {
+	log.error("keyStore.setCertificateEntry() threw " + e);
+	return false;
+      }
+      //  Store the private key
+      String keyAlias = "localhost.key";
+      log.debug("About to store " + keyAlias + " in key store");
+      try {
+        keyStore.setKeyEntry(keyAlias, privKey,
+			     privateKeyPassWord.toCharArray(), chain);
+      } catch (KeyStoreException e) {
+	log.error("keyStore.setKeyEntry() threw " + e);
+	return false;
+      }
+      logKeyStore(keyStore,  privateKeyPassWord.toCharArray());
+      //  Create a temporary file to hold the key store
+      try {
+        keyStoreFile = FileTestUtil.tempFile("keystore", ".jceks");
+      } catch (IOException e) {
+        log.error("tempFile() threw " + e);
+      }
+      keyStoreFileName = keyStoreFile.getAbsolutePath();
+      //  Write the key store to the file
+      try {
+	log.debug("Storing KeyStore in " + keyStoreFile);
+	FileOutputStream fos = new FileOutputStream(keyStoreFile);
+	keyStore.store(fos, keyStorePassWord.toCharArray());
+	fos.close();
+	log.debug("Done storing KeyStore in " + keyStoreFileName);
+      } catch (Exception e) {
+	log.error("ks.store(" + keyStoreFileName + ") threw " + e);
+	return false;
+      }
+      return true;
+    }
+
+      // XXX need extra tests with good and bad keystores and passwords
+
+    // private debug output of keystore
+    private void logKeyStore(KeyStore ks, char[] privateKeyPassWord) {
+      log.debug3("start of key store");
+      try {
+        for (Enumeration en = ks.aliases(); en.hasMoreElements(); ) {
+          String alias = (String) en.nextElement();
+          log.debug3("Next alias " + alias);
+          if (ks.isCertificateEntry(alias)) {
+            log.debug3("About to getCertificate");
+            java.security.cert.Certificate cert = ks.getCertificate(alias);
+            if (cert == null) {
+              log.debug3(alias + " null cert chain");
+	    } else {
+              log.debug3("Cert for " + alias + " is " + cert.toString());
+	    }
+          } else if (ks.isKeyEntry(alias)) {
+            log.debug3("About to getKey");
+            Key privateKey = ks.getKey(alias, privateKeyPassWord);
+            log.debug3(alias + " key " + privateKey.getAlgorithm() + "/" + privateKey.getFormat());
+          } else {
+            log.debug3(alias + " neither key nor cert");
+          }
+        }
+        log.debug3("end of key store");
+      } catch (Exception ex) {
+        log.error("logKeyStore() threw " + ex);
+      }
+    }
+
   }
 
   public static Test suite() {
     return variantSuites(new Class[] {
       SslStreamsTempKeys.class,
+      SslStreamsPermKeys.class,
     });
   }
 }

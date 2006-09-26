@@ -1,5 +1,5 @@
 /*
- * $Id: TimerUtil.java,v 1.7 2005-06-04 18:59:48 tlipkis Exp $
+ * $Id: TimerUtil.java,v 1.8 2006-09-26 03:31:54 dshr Exp $
  */
 
 /*
@@ -33,11 +33,13 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.test;
 import java.util.*;
 import java.text.DateFormat;
+import org.lockss.util.Logger;
 
 
 /** Timer utilities
  */
 public class TimerUtil {
+  static Logger log = Logger.getLogger("TimerUtil");
   // no instances
   private TimerUtil() {
   }
@@ -49,7 +51,10 @@ public class TimerUtil {
    * @throws InterruptedException
    */
   public static void sleep(long ms) throws InterruptedException {
+    long startTime = System.currentTimeMillis();
     Thread.sleep(ms);
+    long delta = System.currentTimeMillis() - startTime;
+    if (delta < ms) log.error("short sleep(" + ms + ") = " + delta + "ms");
   }
 
   // Is there a use for one that just returns if interrupted?

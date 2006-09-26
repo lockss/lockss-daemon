@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingStreamComm.java,v 1.16 2006-09-24 19:30:56 dshr Exp $
+ * $Id: BlockingStreamComm.java,v 1.17 2006-09-26 03:31:53 dshr Exp $
  */
 
 /*
@@ -438,6 +438,10 @@ public class BlockingStreamComm
       log.error("loading SSL key store threw " + ex);
       return;
     }
+    {
+      String temp = new String(sslPrivateKeyPassword);
+      logKeyStore(keyStore, temp.toCharArray());
+    }
     // Now create a KeyManager from the keystore using the password.
     KeyManager[] kma = null;
     try {
@@ -454,6 +458,20 @@ public class BlockingStreamComm
     } catch (UnrecoverableKeyException ex) {
       log.error("creating SSL key manager threw " + ex);
       return;
+    }
+    // Now create a TrustManager from the keystore using the password
+    TrustManager[] tma = null;
+    try {
+      TrustManagerFactory tmf = 
+	TrustManagerFactory.getInstance(TrustManagerFactory.getDefaultAlgorithm());
+      tmf.init(keyStore);
+      tma = tmf.getTrustManagers();
+    } catch (NoSuchAlgorithmException ex) {
+      log.error("creating SSL trust manager threw " + ex);
+      return;
+    } catch (KeyStoreException ex) {
+      log.error("creating SSL trust manager threw " + ex);
+      return;
     } finally {
       // Now forget the password
       for (int i = 0; i < sslPrivateKeyPassword.length; i++) {
@@ -465,7 +483,7 @@ public class BlockingStreamComm
     SSLContext sslContext = null;
     try {
       sslContext = SSLContext.getInstance(paramSslProtocol);
-      sslContext.init(kma, null, null);
+      sslContext.init(kma, tma, null);
       // Now create the SSL socket factories from the context
       sslServerSocketFactory = sslContext.getServerSocketFactory();
       sslSocketFactory = sslContext.getSocketFactory();
@@ -475,6 +493,35 @@ public class BlockingStreamComm
     } catch (KeyManagementException ex) {
       log.error("Creating SSL context threw " + ex);
       sslContext = null;
+    }
+  }
+
+  // private debug output of keystore
+  private void logKeyStore(KeyStore ks, char[] privateKeyPassWord) {
+    log.debug3("start of key store");
+    try {
+      for (Enumeration en = ks.aliases(); en.hasMoreElements(); ) {
+        String alias = (String) en.nextElement();
+	log.debug3("Next alias " + alias);
+        if (ks.isCertificateEntry(alias)) {
+	  log.debug3("About to Certificate");
+          java.security.cert.Certificate cert = ks.getCertificate(alias);
+          if (cert == null) {
+            log.debug3(alias + " null cert chain");
+          } else {
+            log.debug3("Cert for " + alias + " is " + cert.toString());
+          }
+        } else if (ks.isKeyEntry(alias)) {
+	  log.debug3("About to getKey");
+  	  Key privateKey = ks.getKey(alias, privateKeyPassWord);
+  	  log.debug3(alias + " key " + privateKey.getAlgorithm() + "/" + privateKey.getFormat());
+        } else {
+  	  log.debug3(alias + " neither key nor cert");
+        }
+      }
+      log.debug3("end of key store");
+    } catch (Exception ex) {
+      log.error("logKeyStore() threw " + ex);
     }
   }
 
@@ -1071,8 +1118,6 @@ public class BlockingStreamComm
   static class SslSocketFactory implements SocketFactory {
     public ServerSocket newServerSocket(int port, int backlog)
       throws IOException {
-      log.debug("Using system property javax.net.ssl.keyStore=" +
-	        System.getProperty("javax.net.ssl.keyStore","null"));
       SSLServerSocket s = (SSLServerSocket)
 	sslServerSocketFactory.createServerSocket(port, backlog);
       s.setNeedClientAuth(paramSslClientAuth);
