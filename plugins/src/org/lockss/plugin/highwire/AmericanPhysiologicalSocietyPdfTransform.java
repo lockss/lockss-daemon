@@ -1,5 +1,5 @@
 /*
- * $Id: AmericanPhysiologicalSocietyPdfTransform.java,v 1.19 2006-09-25 08:12:14 thib_gc Exp $
+ * $Id: AmericanPhysiologicalSocietyPdfTransform.java,v 1.20 2006-09-26 05:17:53 thib_gc Exp $
  */
 
 /*
@@ -37,7 +37,6 @@ import java.util.List;
 
 import org.lockss.filter.pdf.*;
 import org.lockss.filter.pdf.DocumentTransformUtil.*;
-import org.lockss.filter.pdf.PageTransformUtil.ExtractStringsToOutputStream;
 import org.lockss.plugin.highwire.HighWirePdfFilterFactory.SanitizeMetadata;
 import org.lockss.util.*;
 import org.pdfbox.cos.*;
@@ -56,12 +55,15 @@ public class AmericanPhysiologicalSocietyPdfTransform extends SimpleOutputDocume
   public static class EraseDateString extends PageStreamTransform {
 
     public static class ProcessDateString extends ReplaceString {
+
       public String getReplacement(String match) {
         return " ";
       }
+
       public boolean identify(String candidate) {
         return candidate.startsWith("This information is current as of ");
       }
+
     }
 
     public EraseDateString() throws IOException {
@@ -73,13 +75,15 @@ public class AmericanPhysiologicalSocietyPdfTransform extends SimpleOutputDocume
   public static class EraseVerticalText extends PageStreamTransform {
 
     public static class ProcessEndTextObject extends ConditionalMergeOperatorProcessor {
+
       public List getReplacement(List tokens) {
         return ListUtil.list(tokens.get(0), tokens.get(29));
       }
+
       public boolean identify(List tokens) {
         boolean ret = tokens.size() == 30
         && PdfUtil.matchTextObject(tokens, 0, 29)
-        && PdfUtil.isPdfFloat(tokens, 9)
+        && PdfUtil.isPdfNumber(tokens, 9)
         && PdfUtil.matchShowText(tokens, 12)
         && PdfUtil.matchSetRgbColorNonStroking(tokens, 16, 0, 0, 1)
         && PdfUtil.matchShowText(tokens, 21)
@@ -87,6 +91,7 @@ public class AmericanPhysiologicalSocietyPdfTransform extends SimpleOutputDocume
         logger.debug3("ProcessEndTextObject candidate match: " + ret);
         return ret;
       }
+
     }
 
     public EraseVerticalText() throws IOException {
@@ -99,27 +104,31 @@ public class AmericanPhysiologicalSocietyPdfTransform extends SimpleOutputDocume
   public static class EraseVerticalText2 extends PageStreamTransform {
 
     public static class ProcessEndTextObject2 extends ConditionalSubsequenceOperatorProcessor {
+
       public List getReplacement(List tokens) {
         return ListUtil.list(tokens.get(0), tokens.get(51));
       }
+
       public int getSubsequenceLength() {
         return 52;
       }
+
       public boolean identify(List tokens) {
         boolean ret = tokens.size() == 52
         && PdfUtil.matchTextObject(tokens, 0, 17)
-        && PdfUtil.isPdfFloat(tokens, 9)
+        && PdfUtil.isPdfNumber(tokens, 9)
         && PdfUtil.matchShowText(tokens, 12)
         && PdfUtil.matchSetRgbColorNonStroking(tokens, 16, 0, 0, 1)
         && PdfUtil.matchTextObject(tokens, 20, 35)
-        && PdfUtil.isPdfFloat(tokens, 29)
+        && PdfUtil.isPdfNumber(tokens, 29)
         && PdfUtil.matchShowText(tokens, 32)
         && PdfUtil.matchTextObject(tokens, 38, 51)
-        && PdfUtil.isPdfFloat(tokens, 47)
+        && PdfUtil.isPdfNumber(tokens, 47)
         && PdfUtil.matchShowText(tokens, 50, "Downloaded from ");
         logger.debug3("ProcessEndTextObject2 candidate match: " + ret);
         return ret;
       }
+
     }
 
     public EraseVerticalText2() throws IOException {
@@ -137,11 +146,10 @@ public class AmericanPhysiologicalSocietyPdfTransform extends SimpleOutputDocume
     }
   }
 
-  public static class Simplified extends OutputStreamDocumentTransform {
+  public static class Simplified extends TextScrapingDocumentTransform {
 
-    public DocumentTransform makeTransform() throws IOException {
-      return new AggregateDocumentTransform(new AmericanPhysiologicalSocietyPdfTransform(),
-                                            new TransformEachPage(new ExtractStringsToOutputStream(outputStream)));
+    public DocumentTransform makePreliminaryTransform() throws IOException {
+      return new AmericanPhysiologicalSocietyPdfTransform(); // FIXME: fix transform deifnition
     }
 
   }

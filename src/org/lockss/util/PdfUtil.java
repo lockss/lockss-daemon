@@ -1,5 +1,5 @@
 /*
- * $Id: PdfUtil.java,v 1.12 2006-09-25 04:16:47 thib_gc Exp $
+ * $Id: PdfUtil.java,v 1.13 2006-09-26 05:17:53 thib_gc Exp $
  */
 
 /*
@@ -783,6 +783,44 @@ return success;
     return ((COSInteger)pdfInteger).intValue();
   }
 
+  /**
+   * <p>Extracts the number data (expressed as a float) associated
+   * with the PDF token at the given index that is known to be a PDF number.</p>
+   * <p>Preconditions:</p>
+   * <ul>
+   *  <li><code>isPdfNumber(tokens, index)</code></li>
+   * </ul>
+   * @param tokens A list of tokens.
+   * @param index  The index of the selected token.
+   * @return The number (as a float) associated with the selected PDF number.
+   * @see #getPdfNumber(Object)
+   */
+  public static float getPdfNumber(List tokens,
+                                   int index) {
+    return getPdfNumber(tokens.get(index));
+  }
+
+  /**
+   * <p>Extracts the integer data associated with a PDF token that is
+   * a PDF integer.</p>
+   * <p>Preconditions:</p>
+   * <ul>
+   *  <li><code>isPdfNumber(pdfNumber)</code></li>
+   * </ul>
+   * @param pdfNumber A PDF number.
+   * @return The number (as a float) associated with this PDF number.
+   * @see COSInteger#intValue
+   * @see #isPdfInteger(Object)
+   */
+  public static float getPdfNumber(Object pdfNumber) {
+    if (isPdfFloat(pdfNumber)) {
+      return getPdfFloat(pdfNumber);
+    }
+    else /* isPdfInteger(pdfNumber) */ {
+      return (float)getPdfInteger(pdfNumber);
+    }
+  }
+
   public static Iterator getPdfOperators() {
     return getPdf16Operators();
   }
@@ -940,13 +978,38 @@ return success;
   }
 
   /**
-   * <p>Determines if a candidate PDF token is a PDF string integer.</p>
+   * <p>Determines if a candidate PDF token is a PDF integer.</p>
    * @param candidateToken A candidate PDF toekn.
    * @return True if the argument is a PDF integer, false otherwise.
    * @see COSInteger
    */
   public static boolean isPdfInteger(Object candidateToken) {
     return candidateToken instanceof COSInteger;
+  }
+
+  /**
+   * <p>Determines if a candidate PDF token at the given index is a PDF number token.</p>
+   * @param tokens A list of tokens.
+   * @param index The index of the selected token.
+   * @return True if the selected token is a PDF number, false otherwise.
+   * @see #isPdfNumber(Object)
+   */
+  public static boolean isPdfNumber(List tokens,
+                                    int index) {
+    return isPdfNumber(tokens.get(index));
+  }
+
+  /**
+   * <p>Determines if a candidate PDF token is a PDF number.</p>
+   * @param candidateToken A candidate PDF toekn.
+   * @return True if the argument is a PDF integer or a PDF float,
+   *         false otherwise.
+   * @see #isPdfFloat(Object)
+   * @see #isPdfInteger(Object)
+   */
+  public static boolean isPdfNumber(Object candidateToken) {
+    return isPdfFloat(candidateToken)
+    || isPdfInteger(candidateToken);
   }
 
   /**
@@ -1150,6 +1213,39 @@ return success;
   }
 
   /**
+   * <p>Determines if the token at the given index is a PDF number
+   * with the given value (expressed as a float).</p>
+   * @param tokens A list of tokens.
+   * @param index  The index of the selected token.
+   * @param num    A value to match the token against.
+   * @return True if the selected token is a PDF number and its value
+   *         is equal to the given value, false otherwise.
+   * @see #matchPdfNumber(Object, float)
+   */
+  public static boolean matchPdfNumber(List tokens,
+                                       int index,
+                                       float num) {
+    return matchPdfNumber(tokens.get(index),
+                          num);
+  }
+
+  /**
+   * <p>Determines if the given token is a PDF number
+   * with the given value (expressed as a float).</p>
+   * @param candidateToken A candidate PDF token.
+   * @param num            A value to match the token against.
+   * @return True if the argument is a PDF number and its value
+   *         is equal to the given value, false otherwise.
+   * @see #isPdfNumber(Object)
+   * @see #getPdfNumber(Object)
+   */
+  public static boolean matchPdfNumber(Object candidateToken,
+                                       float num) {
+    return isPdfNumber(candidateToken)
+    && getPdfNumber(candidateToken) == num;
+  }
+
+  /**
    * <p>Determines if the token at the given index is a PDF operator,
    * and if so, if it is the expected operator..</p>
    * @param tokens           A list of tokens.
@@ -1249,13 +1345,25 @@ return success;
 
   public static boolean matchSetRgbColorNonStroking(List tokens,
                                                     int index,
+                                                    float red,
+                                                    float green,
+                                                    float blue) {
+    return isSetRgbColorNonStroking(tokens, index)
+    && matchPdfNumber(tokens, index - 3, red)
+    && matchPdfNumber(tokens, index - 2, green)
+    && matchPdfNumber(tokens, index - 1, blue);
+  }
+
+  public static boolean matchSetRgbColorNonStroking(List tokens,
+                                                    int index,
                                                     int red,
                                                     int green,
                                                     int blue) {
-    return isSetRgbColorNonStroking(tokens, index)
-    && matchPdfInteger(tokens, index - 3, red)
-    && matchPdfInteger(tokens, index - 2, green)
-    && matchPdfInteger(tokens, index - 1, blue);
+    return matchSetRgbColorNonStroking(tokens,
+                                       index,
+                                       (float)red,
+                                       (float)green,
+                                       (float)blue);
   }
 
   public static boolean matchShowText(List tokens,

@@ -1,5 +1,5 @@
 /*
- * $Id: NewEnglandJournalOfMedicinePdfTransform.java,v 1.4 2006-09-25 08:12:14 thib_gc Exp $
+ * $Id: NewEnglandJournalOfMedicinePdfTransform.java,v 1.5 2006-09-26 05:17:53 thib_gc Exp $
  */
 
 /*
@@ -37,7 +37,6 @@ import java.util.List;
 
 import org.lockss.filter.pdf.*;
 import org.lockss.filter.pdf.DocumentTransformUtil.*;
-import org.lockss.filter.pdf.PageTransformUtil.ExtractStringsToOutputStream;
 import org.lockss.plugin.highwire.HighWirePdfFilterFactory.SanitizeMetadata;
 import org.lockss.util.*;
 
@@ -68,7 +67,7 @@ public class NewEnglandJournalOfMedicinePdfTransform extends SimpleOutputDocumen
 
   }
 
-  public static class Simplified extends OutputStreamDocumentTransform {
+  public static class Simplified extends TextScrapingDocumentTransform {
 
     public static class EraseVariableMessage2 extends PageStreamTransform {
 
@@ -90,10 +89,9 @@ public class NewEnglandJournalOfMedicinePdfTransform extends SimpleOutputDocumen
 
     }
 
-    public DocumentTransform makeTransform() throws IOException {
+    public DocumentTransform makePreliminaryTransform() throws IOException {
       return new ConditionalDocumentTransform(new TransformFirstPage(new EraseVariableMessage2()),
-                                              new TransformEachPageExceptFirst(new EraseVariableMessage2()),
-                                              new TransformEachPage(new ExtractStringsToOutputStream(outputStream)));
+                                              new TransformEachPageExceptFirst(new EraseVariableMessage2()));
     }
 
   }
