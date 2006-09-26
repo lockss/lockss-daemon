@@ -1,5 +1,5 @@
 /*
- * $Id: PageStreamTransform.java,v 1.4 2006-09-25 08:12:15 thib_gc Exp $
+ * $Id: PageStreamTransform.java,v 1.5 2006-09-26 06:16:12 thib_gc Exp $
  */
 
 /*
@@ -143,6 +143,11 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
             pdfOperatorString3, pdfOperatorProcessor3,
             pdfOperatorString4, pdfOperatorProcessor4);
     }
+
+    protected synchronized void writeResult(PdfPage pdfPage) throws IOException {
+      logger.debug2("Null page stream transform; skipping writing the result");
+    }
+
 
   }
 
