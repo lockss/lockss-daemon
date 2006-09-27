@@ -1,0 +1,21 @@
+#! /bin/sh
+
+# "." here is the test<n> dir
+PROP_URL_LIST="../../common.xml ../../title_db_files/*.xml ../lockss.txt ../lockss.opt local.txt local.opt"
+
+if [ "X${PROJECT_DIR}" = "X" ]
+then
+	echo "PROJECT_DIR must be set"
+	exit
+fi
+
+CLASSPATH=../lib/lockss.jar:../lib/lockss-test.jar:../lib/lockss-plugins.jar:`cat ${PROJECT_DIR}/test/test-classpath`
+export CLASSPATH
+
+echo running in `pwd` at `date`
+#echo CLASSPATH=$CLASSPATH
+# for large caches, need to pass "-ms4m -mx64m" to java
+java -mx128m -Dorg.lockss.defaultLogLevel=DEBUG org.lockss.app.LockssDaemon ${PROP_URL_LIST} >>test.out 2>&1 &
+echo $! >dpid
+wait `cat dpid`
+echo stopped with status $? in `pwd` at `date`

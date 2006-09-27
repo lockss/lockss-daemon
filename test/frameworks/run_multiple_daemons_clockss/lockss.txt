@@ -1,0 +1,86 @@
+# configure simulated AU for v1
+#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~V1.root=V1
+#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~V1.branch=3
+#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~V1.depth=2
+#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~V1.numFiles=4
+
+# AU suitable for V3 testing
+#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~V3.root=V3
+#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~V3.branch=1
+#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~V3.depth=0
+#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~V3.fileTypes=17
+#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~V3.numFiles=20
+#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~V3.binFileSize=2048
+
+# LOCKSS & LCAP tuning parameters
+org.lockss.log.default.level=debug
+
+#lockss config stuff
+org.lockss.platform.diskSpacePaths=./
+
+org.lockss.config.reloadInterval = 1m
+
+#hasher settings
+#org.lockss.hasher.numSteps
+#org.lockss.hasher.priority
+#org.lockss.hasher.stepBytes
+
+#comm settings
+org.lockss.ui.start=yes
+org.lockss.proxy.start=no
+org.lockss.comm.multicast.group=239.4.5.6
+#org.lockss.comm.multicast.port=3456
+org.lockss.comm.multicast.port=localIp
+org.lockss.comm.unicast.port=1025
+org.lockss.comm.multicast.verify=no
+
+# lcap protocol settings
+org.lockss.protocol.ttl=2
+org.lockss.protocol.hashAlgorithm=SHA-1
+
+# poll settings
+org.lockss.poll.maxpolls=20
+org.lockss.poll.quorum=3
+org.lockss.poll.agreeVerify=10
+org.lockss.poll.disagreeVerify=50
+org.lockss.poll.voteMargin=51
+org.lockss.poll.trustedWeight=350
+org.lockss.poll.namepoll.deadline=5m
+
+org.lockss.poll.contentpoll.min=4m
+org.lockss.poll.contentpoll.max=12h
+
+org.lockss.treewalk.initial.estimate=1m
+org.lockss.treewalk.interval.min=1m
+org.lockss.treewalk.interval.max=7m
+org.lockss.treewalk.start.delay=10s
+org.lockss.comm.router.beacon.interval=1m
+org.lockss.baseau.toplevel.poll.interval.min=5m
+org.lockss.baseau.toplevel.poll.interval.max=15m
+
+# V3
+org.lockss.poll.defaultPollProtocol=3
+org.lockss.scomm.enabled=true
+org.lockss.scomm.maxMessageSize=3355443
+org.lockss.poll.v3.quorum=2
+org.lockss.poll.v3.messageDir=./v3state
+org.lockss.poll.v3.minPollSize=3
+org.lockss.poll.v3.maxPollSize=3
+org.lockss.poll.v3.minNominationSize=1
+org.lockss.poll.v3.maxNominationSize=1
+org.lockss.poll.v3.minPollDuration=30m
+org.lockss.poll.v3.maxPollDuration=5d
+org.lockss.id.initialV3PeerList=\
+    TCP:[127.0.0.1]:9720;\
+    TCP:[127.0.0.1]:9721;\
+    TCP:[127.0.0.1]:9722;\
+    TCP:[127.0.0.1]:9723
+
+org.lockss.metrics.slowest.hashrate = 250
+org.lockss.state.recall.delay=5m
+
+org.lockss.crawler.startCrawlsInterval=5m
+org.lockss.crawler.threadPool.max=3
+org.lockss.baseau.defaultFetchRateLimiterSource=plugin
+
+org.lockss.platform.project=CLOCKSS
