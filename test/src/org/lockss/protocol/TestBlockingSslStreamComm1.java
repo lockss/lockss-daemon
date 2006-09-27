@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockingSslStreamComm1.java,v 1.1 2006-09-27 02:27:35 dshr Exp $
+ * $Id: TestBlockingSslStreamComm1.java,v 1.2 2006-09-27 18:46:39 dshr Exp $
  */
 
 /*
@@ -31,6 +31,15 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.protocol;
+
+/*
+ * NB - this and its companion TestBlockingSslStreamComm2 should really be
+ * two variants in one test.  They were separated because executing this
+ * one first and the permanent keystore version second failed,  where in
+ * the other order they both succeeded.  This seems to be some issue with
+ * Junit class initialization,  but rather than tackling it I opted to
+ * split them.  At some point these two files should be re-combined.
+ */
 
 import java.util.*;
 import java.io.*;

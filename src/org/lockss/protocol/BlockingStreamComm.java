@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingStreamComm.java,v 1.18 2006-09-27 02:27:35 dshr Exp $
+ * $Id: BlockingStreamComm.java,v 1.19 2006-09-27 18:46:39 dshr Exp $
  */
 
 /*
@@ -198,7 +198,7 @@ public class BlockingStreamComm
   private PooledExecutor pool;
   private static SSLSocketFactory sslSocketFactory = null;
   private static SSLServerSocketFactory sslServerSocketFactory = null;
-  private String paramSslKeyStorePassword = null;
+  private static String paramSslKeyStorePassword = null;
 
   private boolean enabled = DEFAULT_ENABLED;
   private boolean running = false;
@@ -361,6 +361,10 @@ public class BlockingStreamComm
 					     DEFAULT_SSL_TEMP_KEYSTORE);
       sockFact = null;
     }
+    if (sslServerSocketFactory != null && sslSocketFactory != null) {
+      // already initialized
+      return;
+    }
     if (paramSslTempKeystore) {
       // We're using the temporary keystore
       paramSslKeyStore = System.getProperty("javax.net.ssl.keyStore", null);
@@ -383,6 +387,7 @@ public class BlockingStreamComm
 	log.debug("Using permanent keystore from " + paramSslKeyStore);
 	sockFact = null;
     }
+    byte[] sslPrivateKeyPassword = null;
     if (changedKeys.contains(PARAM_SSL_PRIVATE_KEY_PASSWORD_FILE)) {
       paramSslPrivateKeyPasswordFile = config.get(PARAM_SSL_PRIVATE_KEY_PASSWORD_FILE,
 						  DEFAULT_SSL_PRIVATE_KEY_PASSWORD_FILE);
@@ -393,7 +398,6 @@ public class BlockingStreamComm
 				    DEFAULT_SSL_PROTOCOL);
       sockFact = null;
     }
-    byte[] sslPrivateKeyPassword = null;
     try {
       File keyStorePasswordFile = new File(paramSslPrivateKeyPasswordFile);
       if (keyStorePasswordFile.exists()) {

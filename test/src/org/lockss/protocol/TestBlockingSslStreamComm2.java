@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockingSslStreamComm2.java,v 1.1 2006-09-27 02:27:35 dshr Exp $
+ * $Id: TestBlockingSslStreamComm2.java,v 1.2 2006-09-27 18:46:40 dshr Exp $
  */
 
 /*
@@ -31,6 +31,15 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.protocol;
+
+/*
+ * NB - this and its companion TestBlockingSslStreamComm1 should really be
+ * two variants in one test.  They were separated because executing this
+ * one second and the temporary keystore version first failed,  where in
+ * the other order they both succeeded.  This seems to be some issue with
+ * Junit class initialization,  but rather than tackling it I opted to
+ * split them.  At some point these two files should be re-combined.
+ */
 
 import java.util.*;
 import java.io.*;
@@ -69,6 +78,8 @@ import sun.security.provider.SystemSigner;
  * when using the permanent CLOCKSS keystore
  */
 public class TestBlockingSslStreamComm2 extends TestBlockingStreamComm {
+  private static String tempDirPath = "/tmp/";
+
   public static Class testedClasses[] = {
     BlockingStreamComm.class,
     BlockingPeerChannel.class,
@@ -76,6 +87,11 @@ public class TestBlockingSslStreamComm2 extends TestBlockingStreamComm {
 
   TestBlockingSslStreamComm2(String name) {
     super(name);
+    try {
+      tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    } catch (IOException e) {
+      // do nothing
+    }
   }
 
   void setupCommArrayEntry(int ix) {
@@ -171,24 +187,30 @@ public class TestBlockingSslStreamComm2 extends TestBlockingStreamComm {
     //  Create the good KeyStore
     private boolean setupGoodKeyStore() {
       // Create a file for the private key password and put it there
+      privateKeyPassWordFileName = tempDirPath + "private.key";
       try {
-        privateKeyPassWordFile = FileTestUtil.tempFile("private", ".key");
-      } catch (IOException e) {
-        log.error("tempFile() threw " + e);
-      }
-      privateKeyPassWordFileName = privateKeyPassWordFile.getAbsolutePath();
-      //  Write the key store to the file
-      try {
-	log.debug("Storing private key password in " +
-		  privateKeyPassWordFileName);
-	FileOutputStream fos = new FileOutputStream(privateKeyPassWordFile);
-	fos.write(privateKeyPassWord.getBytes());
-	fos.close();
-	log.debug("Done storing private key password in " +
-		  privateKeyPassWordFileName);
+        privateKeyPassWordFile = new File(privateKeyPassWordFileName);
+        privateKeyPassWordFile.deleteOnExit();
+        //  Write the private key password to the file
+        if (!privateKeyPassWordFile.exists()) {
+  	  log.debug("Storing private key password in " +
+  		    privateKeyPassWordFileName);
+  	  FileOutputStream fos = new FileOutputStream(privateKeyPassWordFile);
+  	  fos.write(privateKeyPassWord.getBytes());
+  	  fos.close();
+  	  log.debug("Done storing private key password in " +
+  		    privateKeyPassWordFileName);
+        }
       } catch (Exception e) {
-	log.error("fos.write(" + privateKeyPassWordFileName + ") threw " + e);
+	log.error(privateKeyPassWordFileName + " threw " + e);
 	return false;
+      }
+      //  Create a temporary file to hold the key store
+      keyStoreFileName = tempDirPath + "keystore.jceks";
+      keyStoreFile = new File(keyStoreFileName);
+      keyStoreFile.deleteOnExit();
+      if (keyStoreFile.exists()) {
+        return true;
       }
       // Create a CertAndKeyGen instance
       String keyAlgName = "RSA";
@@ -288,13 +310,6 @@ public class TestBlockingSslStreamComm2 extends TestBlockingStreamComm {
 	return false;
       }
       logKeyStore(keyStore,  privateKeyPassWord.toCharArray());
-      //  Create a temporary file to hold the key store
-      try {
-        keyStoreFile = FileTestUtil.tempFile("keystore", ".jceks");
-      } catch (IOException e) {
-        log.error("tempFile() threw " + e);
-      }
-      keyStoreFileName = keyStoreFile.getAbsolutePath();
       //  Write the key store to the file
       try {
 	log.debug("Storing KeyStore in " + keyStoreFileName);
@@ -312,26 +327,31 @@ public class TestBlockingSslStreamComm2 extends TestBlockingStreamComm {
     //  Create the bad KeyStore
     private boolean setupBadKeyStore() {
       // Create a file for the private key password and put it there
+      badPrivateKeyPassWordFileName = tempDirPath + "badPrivate.key";
       try {
-        badPrivateKeyPassWordFile = FileTestUtil.tempFile("badPrivate", ".key");
+        badPrivateKeyPassWordFile = new File(badPrivateKeyPassWordFileName);
+        badPrivateKeyPassWordFile.deleteOnExit();
+	if (!badPrivateKeyPassWordFile.exists()) {
+          //  Write the key store to the file
+  	  log.debug("Storing private key password in " +
+  	      badPrivateKeyPassWordFileName);
+  	  FileOutputStream fos = new FileOutputStream(badPrivateKeyPassWordFile);
+  	  fos.write(badPrivateKeyPassWord.getBytes());
+  	  fos.close();
+  	  log.debug("Done storing private key password in " +
+  		    badPrivateKeyPassWordFileName);
+	}
       } catch (IOException e) {
-        log.error("tempFile() threw " + e);
-      }
-      badPrivateKeyPassWordFileName = badPrivateKeyPassWordFile.getAbsolutePath();
-      //  Write the key store to the file
-      try {
-	log.debug("Storing private key password in " +
-		  badPrivateKeyPassWordFileName);
-	FileOutputStream fos = new FileOutputStream(badPrivateKeyPassWordFile);
-	fos.write(badPrivateKeyPassWord.getBytes());
-	fos.close();
-	log.debug("Done storing private key password in " +
-		  badPrivateKeyPassWordFileName);
-      } catch (Exception e) {
-	log.error("fos.write(" + badPrivateKeyPassWordFileName + ") threw " + e);
+        log.error(badPrivateKeyPassWordFileName + " threw " + e);
 	return false;
       }
-      badPrivateKeyPassWordFileName = badPrivateKeyPassWordFile.getAbsolutePath();
+      //  Create a temporary file to hold the key store
+      badKeyStoreFileName = tempDirPath + "badkeystore.jceks";
+      badKeyStoreFile = new File(badKeyStoreFileName);
+      badKeyStoreFile.deleteOnExit();
+      if (badKeyStoreFile.exists()) {
+	return true;
+      }
       // Create a CertAndKeyGen instance
       String keyAlgName = "RSA";
       String sigAlgName = "MD5WithRSA";
@@ -448,13 +468,6 @@ public class TestBlockingSslStreamComm2 extends TestBlockingStreamComm {
 	return false;
       }
       logKeyStore(keyStore,  badPrivateKeyPassWord.toCharArray());
-      //  Create a temporary file to hold the key store
-      try {
-        badKeyStoreFile = FileTestUtil.tempFile("badKeystore", ".jceks");
-      } catch (IOException e) {
-        log.error("tempFile() threw " + e);
-      }
-      badKeyStoreFileName = badKeyStoreFile.getAbsolutePath();
       //  Write the key store to the file
       try {
 	log.debug("Storing KeyStore in " + badKeyStoreFileName);
