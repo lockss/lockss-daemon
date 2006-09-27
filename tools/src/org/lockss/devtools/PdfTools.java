@@ -1,5 +1,5 @@
 /*
- * $Id: PdfTools.java,v 1.15 2006-09-22 17:16:39 thib_gc Exp $
+ * $Id: PdfTools.java,v 1.16 2006-09-27 17:32:57 thib_gc Exp $
  */
 
 /*
@@ -349,9 +349,7 @@ public class PdfTools {
       return false;
     }
     finally {
-      if (pdfDocument != null) {
-        pdfDocument.close();
-      }
+      PdfDocument.close(pdfDocument);
     }
   }
 
