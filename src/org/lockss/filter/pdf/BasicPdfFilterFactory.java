@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePdfFilterFactory.java,v 1.3 2006-09-27 17:32:34 thib_gc Exp $
+ * $Id: BasicPdfFilterFactory.java,v 1.1 2006-09-27 17:32:35 thib_gc Exp $
  */
 
 /*
@@ -30,38 +30,40 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.highwire;
+package org.lockss.filter.pdf;
 
-import java.io.*;
+import java.io.InputStream;
 
-import org.lockss.filter.pdf.*;
+import org.lockss.plugin.*;
+import org.lockss.plugin.definable.DefinableArchivalUnit;
 import org.lockss.util.*;
-import org.pdfbox.cos.*;
 
-// DOC
-public class HighWirePdfFilterFactory extends BasicPdfFilterFactory {
+/**
+ * <p>A default implementation of {@link FilterFactory} that assumes
+ * that the name of an {@link OutputDocumentTransform} implementor
+ * can be found in the {@link ArchivalUnit}'s attributes under the
+ * following key:
+ * <code>PdfUtil.PDF_FILTER_FACTORY_HINT_PREFIX + PdfUtil.PDF_MIME_TYPE + DefinableArchivalUnit.AU_FILTER_FACTORY_SUFFIX</code></p>
+ * @author Thib Guicherd-Callin
+ * @see PdfUtil#PDF_FILTER_FACTORY_HINT_PREFIX
+ * @see PdfUtil#PDF_MIME_TYPE
+ * @see DefinableArchivalUnit#AU_FILTER_FACTORY_SUFFIX
+ */
+public class BasicPdfFilterFactory implements FilterFactory {
 
-  // DOC
-  public static class SanitizeMetadata implements DocumentTransform {
-
-    /* Inherit documentation */
-    public boolean transform(PdfDocument pdfDocument) throws IOException {
-      // Get rid of the modification date
-      pdfDocument.removeModificationDate();
-      // Get rid of the metadata
-      pdfDocument.setMetadata(" ");
-      // Replace instance ID by document ID in trailer
-      COSBase idObj = pdfDocument.getTrailer().getItem(COSName.getPDFName("ID"));
-      if (idObj != null && idObj instanceof COSArray) {
-        COSArray idArray = (COSArray)idObj;
-        idArray.set(1, idArray.get(0));
-        return true;
-      }
-      else {
-        return false;
-      }
+  /* Inherit documentation */
+  public InputStream createFilteredInputStream(ArchivalUnit au,
+                                               InputStream in,
+                                               String encoding) {
+    OutputDocumentTransform documentTransform = PdfUtil.getOutputDocumentTransform(au);
+    if (documentTransform == null) {
+      logger.debug("Unfiltered");
+      return in;
     }
-
+    else {
+      logger.debug("Filtered with " + documentTransform.getClass().getName());
+      return PdfUtil.applyFromInputStream(documentTransform, in);
+    }
   }
 
   /**

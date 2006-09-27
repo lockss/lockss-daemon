@@ -1,5 +1,5 @@
 /*
- * $Id: PdfUtil.java,v 1.13 2006-09-26 05:17:53 thib_gc Exp $
+ * $Id: PdfUtil.java,v 1.14 2006-09-27 17:32:35 thib_gc Exp $
  */
 
 /*
@@ -36,7 +36,9 @@ import java.io.*;
 import java.util.*;
 
 import org.apache.commons.collections.iterators.*;
+import org.apache.commons.io.output.ByteArrayOutputStream;
 import org.lockss.filter.pdf.*;
+import org.lockss.plugin.*;
 import org.lockss.plugin.definable.DefinableArchivalUnit;
 import org.pdfbox.cos.*;
 import org.pdfbox.util.PDFOperator;
@@ -708,6 +710,62 @@ return success;
     catch (IOException ioe) {
       logger.error("Document transform failed", ioe);
       return false;
+    }
+  }
+
+  public static InputStream applyFromInputStream(OutputDocumentTransform documentTransform,
+                                                 InputStream inputStream) {
+    PdfDocument pdfDocument = null;
+    try {
+      pdfDocument = new PdfDocument(inputStream);
+      ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+      documentTransform.transform(pdfDocument, outputStream);
+      return new ByteArrayInputStream(outputStream.toByteArray()); // FIXME
+    }
+    catch (IOException ioe) {
+      logger.error("Error while creating a PDF document", ioe);
+      return null; // FIXME
+    }
+    finally {
+      PdfDocument.close(pdfDocument);
+    }
+  }
+
+  public static OutputDocumentTransform getOutputDocumentTransform(ArchivalUnit au) {
+    String key = PDF_FILTER_FACTORY_HINT_PREFIX + PDF_MIME_TYPE + DefinableArchivalUnit.AU_FILTER_FACTORY_SUFFIX;
+    String className = AuUtil.getTitleAttribute(au, key);
+    if (className == null) {
+      logger.debug2("No PDF filter factory hint");
+      return null;
+    }
+    try {
+      OutputDocumentTransform ret = (OutputDocumentTransform)Class.forName(className).newInstance();
+      logger.debug2("Successfully loaded and instantiated " + ret.getClass().getName());
+      return ret;
+    }
+    catch (ExceptionInInitializerError eiie) {
+      logger.error("An initializer threw while dynamically loading a PDF transform", eiie);
+      return null;
+    }
+    catch (LinkageError le) {
+      logger.error("A linkage error occurred while dynamically loading a PDF transform", le);
+      return null;
+    }
+    catch (ClassNotFoundException cnfe) {
+      logger.error("Could not find class " + className + " while dynamically loading a PDF transform", cnfe);
+      return null;
+    }
+    catch (IllegalAccessException iae) {
+      logger.error("Class " + className + " (or its no-argument constructor) is not accessible", iae);
+      return null;
+    }
+    catch (InstantiationException ie) {
+      logger.error("Exception while instantiating class " + className, ie);
+      return null;
+    }
+    catch (ClassCastException cce) {
+      logger.error("Class " + className + " is not of type " + OutputDocumentTransform.class.getName(), cce);
+      return null;
     }
   }
 
