@@ -1,5 +1,5 @@
 /*
- * $Id: ReplaceString.java,v 1.3 2006-09-26 07:32:24 thib_gc Exp $
+ * $Id: ReplaceString.java,v 1.4 2006-09-27 08:00:32 thib_gc Exp $
  */
 
 /*
@@ -96,6 +96,9 @@ public abstract class ReplaceString extends PdfOperatorProcessor {
     }
   }
 
+  /**
+   * <p>A logger for use by this class.</p>
+   */
   private static Logger logger = Logger.getLogger("ReplaceString");
 
 }

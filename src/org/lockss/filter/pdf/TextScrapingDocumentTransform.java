@@ -1,5 +1,5 @@
 /*
- * $Id: TextScrapingDocumentTransform.java,v 1.1 2006-09-26 07:32:24 thib_gc Exp $
+ * $Id: TextScrapingDocumentTransform.java,v 1.2 2006-09-27 08:00:32 thib_gc Exp $
  */
 
 /*
@@ -36,10 +36,26 @@ import java.io.IOException;
 
 import org.lockss.filter.pdf.PageTransformUtil.ExtractStringsToOutputStream;
 
+/**
+ * <p>A version of {@link OutputStreamDocumentTransform} that first
+ * applies a document transform to the PDF document being processed,
+ * then collects all string constants in the resulting PDF document
+ * into the output stream.</p>
+ * @author Thib Guicherd-Callin.
+ * @see ExtractStringsToOutputStream
+ */
 public abstract class TextScrapingDocumentTransform extends OutputStreamDocumentTransform {
 
+  /**
+   * <p>Makes a new document transform which will be applied before
+   * scraping all string constants from the document with
+   * {@link ExtractStringsToOutputStream}.</p>
+   * @return A preliminary document transform.
+   * @throws IOException if any processing error occurs.
+   */
   public abstract DocumentTransform makePreliminaryTransform() throws IOException;
 
+  /* Inherit documentation */
   public DocumentTransform makeTransform() throws IOException {
     return new ConditionalDocumentTransform(makePreliminaryTransform(),
                                             new TransformEachPage(new ExtractStringsToOutputStream(outputStream)));

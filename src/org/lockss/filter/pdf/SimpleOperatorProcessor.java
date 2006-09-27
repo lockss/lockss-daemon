@@ -1,5 +1,5 @@
 /*
- * $Id: SimpleOperatorProcessor.java,v 1.6 2006-09-26 07:32:24 thib_gc Exp $
+ * $Id: SimpleOperatorProcessor.java,v 1.7 2006-09-27 08:00:32 thib_gc Exp $
  */
 
 /*
@@ -61,6 +61,9 @@ public class SimpleOperatorProcessor extends PdfOperatorProcessor {
     pageStreamTransform.getOutputList().add(operator);
   }
 
+  /**
+   * <p>A logger for use by this class.</p>
+   */
   private static Logger logger = Logger.getLogger("SimpleOperatorProcessor");
 
 }

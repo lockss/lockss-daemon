@@ -1,5 +1,5 @@
 /*
- * $Id: DocumentTransformUtil.java,v 1.7 2006-09-26 07:32:24 thib_gc Exp $
+ * $Id: DocumentTransformUtil.java,v 1.8 2006-09-27 08:00:33 thib_gc Exp $
  */
 
 /*
@@ -111,8 +111,8 @@ public class DocumentTransformUtil {
   }
 
   /**
-   * <p>A document transform decorator that returns the opposite
-   * boolean value of its underlying document transform's
+   * <p>A document transform decorator whose {@link #transform} method
+   * returns the opposite of its underlying document transform's
    * {@link DocumentTransform#transform} method.</p>
    * @author Thib Guicherd-Callin
    */

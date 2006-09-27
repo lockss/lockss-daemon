@@ -1,5 +1,5 @@
 /*
- * $Id: PageTransformUtil.java,v 1.6 2006-09-26 07:32:24 thib_gc Exp $
+ * $Id: PageTransformUtil.java,v 1.7 2006-09-27 08:00:32 thib_gc Exp $
  */
 
 /*
@@ -38,7 +38,7 @@ import java.util.List;
 import org.lockss.filter.pdf.PageStreamTransform.NullPageStreamTransform;
 import org.lockss.util.*;
 import org.pdfbox.cos.COSString;
-import org.pdfbox.util.PDFOperator;
+import org.pdfbox.util.*;
 
 /**
  * <p>Utility page transforms.</p>
@@ -46,10 +46,31 @@ import org.pdfbox.util.PDFOperator;
  */
 public class PageTransformUtil {
 
+  /**
+   * <p>A null page stream transform that has the side-effect of
+   * extracting all string constants found on the page into an
+   * output stream.</p>
+   * <p>This transform keeps state; beware of re-using instances as
+   * they keep a reference to the instantiation output stream.</p>
+   * @author Thib Guicherd-Callin
+   * @see ExtractStringsToOutputStream.WriteToOutputStream
+   */
   public static class ExtractStringsToOutputStream extends NullPageStreamTransform {
 
+    /**
+     * <p>A version of {@link ProcessString} that assumes it is being
+     * used in the context of a {@link ExtractStringsToOutputStream}
+     * page stream transform and writes the bytes of each string
+     * encountered to its output stream.</p>
+     * <p>This class should be a member nested class, not a static
+     * nested class, but the dynamic instantiation semantics of
+     * {@link PDFStreamEngine} prevent this.</p>
+     * @author Thib Guicherd-Callin
+     * @see ExtractStringsToOutputStream
+     */
     public static class WriteToOutputStream extends ProcessString {
 
+      /* Inherit documentation */
       public void processString(PageStreamTransform pageStreamTransform,
                                 PDFOperator operator,
                                 List operands,
@@ -62,8 +83,17 @@ public class PageTransformUtil {
 
     }
 
+    /**
+     * <p>The output stream associated with this instance.</p>
+     */
     protected OutputStream outputStream;
 
+    /**
+     * <p>Builds a new transform that will produce output in the given
+     * output stream.</p>
+     * @param outputStream An output stream for output.
+     * @throws IOException if any processing error occurs.
+     */
     public ExtractStringsToOutputStream(OutputStream outputStream) throws IOException {
       super(PdfUtil.SHOW_TEXT, WriteToOutputStream.class,
             PdfUtil.SHOW_TEXT_GLYPH_POSITIONING, WriteToOutputStream.class,
@@ -74,10 +104,31 @@ public class PageTransformUtil {
 
   }
 
+  /**
+   * <p>A null page stream transform that has the side-effect of
+   * extracting all string constants found on the page into a
+   * string buffer.</p>
+   * <p>This transform keeps state; beware of re-using instances as
+   * they keep a reference to the instantiation string buffer.</p>
+   * @author Thib Guicherd-Callin
+   * @see ExtractStringsToStringBuffer.AppendToStringBuffer
+   */
   public static class ExtractStringsToStringBuffer extends NullPageStreamTransform {
 
-    protected static class AppendToStringBuffer extends ProcessString {
+    /**
+     * <p>A version of {@link ProcessString} that assumes it is being
+     * used in the context of a {@link ExtractStringsToStringBuffer}
+     * page stream transform and writes each string
+     * encountered to its string buffer.</p>
+     * <p>This class should be a member nested class, not a static
+     * nested class, but the dynamic instantiation semantics of
+     * {@link PDFStreamEngine} prevent this.</p>
+     * @author Thib Guicherd-Callin
+     * @see ExtractStringsToStringBuffer
+     */
+    public static class AppendToStringBuffer extends ProcessString {
 
+      /* Inherit documentation */
       public void processString(PageStreamTransform pageStreamTransform,
                                 PDFOperator operator,
                                 List operands,
@@ -90,8 +141,17 @@ public class PageTransformUtil {
 
     }
 
+    /**
+     * <p>The string buffer associated with this instance.</p>
+     */
     protected StringBuffer buffer;
 
+    /**
+     * <p>Builds a new transform that will produce output in the given
+     * string buffer.</p>
+     * @param buffer A string buffer for output.
+     * @throws IOException if any processing error occurs.
+     */
     public ExtractStringsToStringBuffer(StringBuffer buffer) throws IOException {
       super(PdfUtil.SHOW_TEXT, AppendToStringBuffer.class,
             PdfUtil.SHOW_TEXT_GLYPH_POSITIONING, AppendToStringBuffer.class,
@@ -149,8 +209,8 @@ public class PageTransformUtil {
   }
 
   /**
-   * <p>A page transform decorator that returns the opposite
-   * boolean value of its underlying page transform's
+   * <p>A page transform decorator whose {@link #transform} method
+   * returns the opposite of its underlying page transform's
    * {@link PageTransform#transform} method.</p>
    * @author Thib Guicherd-Callin
    */

@@ -1,5 +1,5 @@
 /*
- * $Id: SimpleOutputDocumentTransform.java,v 1.1 2006-09-26 07:32:24 thib_gc Exp $
+ * $Id: SimpleOutputDocumentTransform.java,v 1.2 2006-09-27 08:00:32 thib_gc Exp $
  */
 
 /*
@@ -37,18 +37,33 @@ import java.io.*;
 import org.lockss.filter.pdf.DocumentTransformUtil.DocumentTransformDecorator;
 import org.lockss.util.*;
 
+/**
+ * <p>An output document transform that processes PDF documents with
+ * a given document transform, then saves the resulting PDF document
+ * into the output stream.</p>
+ * @author Thib Guicherd-Callin
+ * @see PdfDocument#save
+ */
 public class SimpleOutputDocumentTransform
     extends DocumentTransformDecorator
     implements OutputDocumentTransform {
 
+  /**
+   * <p>Builds a new simple output document transform based on the
+   * given document transform.</p>
+   * @param documentTransform A document transform.
+   * @see DocumentTransformDecorator#DocumentTransformDecorator(DocumentTransform)
+   */
   public SimpleOutputDocumentTransform(DocumentTransform documentTransform) {
     super(documentTransform);
   }
 
+  /* Inherit documentation */
   public boolean transform(PdfDocument pdfDocument) throws IOException {
     return documentTransform.transform(pdfDocument);
   }
 
+  /* Inherit documentation */
   public boolean transform(PdfDocument pdfDocument,
                            OutputStream outputStream) {
     return PdfUtil.applyAndSave(this,

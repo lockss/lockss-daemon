@@ -1,5 +1,5 @@
 /*
- * $Id: ConditionalSubsequenceOperatorProcessor.java,v 1.1 2006-09-10 07:50:50 thib_gc Exp $
+ * $Id: ConditionalSubsequenceOperatorProcessor.java,v 1.2 2006-09-27 08:00:33 thib_gc Exp $
  */
 
 /*
@@ -34,22 +34,88 @@ package org.lockss.filter.pdf;
 
 import java.util.*;
 
+import org.pdfbox.util.PDFOperator;
+
+/**
+ * <p>A conditional operator processor that examines a fixed-length
+ * subsequence from the end of the current output list and
+ * conditionally acts on it.</p>
+ * <p>This operator processor is useful when only a fixed-length
+ * portion of the end of the output list is sufficient to determine
+ * a condition, or at least if there is a safe upper bound on the
+ * number of tokens drawn from the end of the output list are
+ * needed to determine the condition.</p>
+ * <p>In summary, the behavior of this class is as follows:</p>
+ * <ul>
+ *  <li>{@link #getSequence} returns the last
+ *  <code>getSubsequenceLength()</code> tokens from the output list
+ *  (or the whole output list if fewer than the required number of
+ *  tokens are in it).</li>
+ *  <li>{@link #processIdentified} replaces the last
+ *  {@link #getSubsequenceLength} tokens from the output list by the
+ *  result of {@link #getReplacement}.</li>
+ * </ul>
+ * <p>The {@link #processIdentified} method assumes that the number of
+ * tokens to remove from the end of the output list (to be replaced by
+ * tokens computed by {@link #getReplacement}) is indeed exactly
+ * <code>getSubsequenceLength()</code>. If this operator processor's
+ * {@link ConditionalOperatorProcessor#identify} method omits to check
+ * so and signals it recognizes the tokens, indices can become out of
+ * bounds.</p>
+ * <p>Subclasses can have state between a successful call to
+ * {@link ConditionalOperatorProcessor#identify} and the subsequent
+ * call to {@link #getReplacement} by using instance variables, as
+ * long as they override
+ * {@link PdfOperatorProcessor#process(PageStreamTransform, PDFOperator, List)}
+ * as follows:</p>
+<pre>
+  public synchronized void process(PageStreamTransform pageStreamTransform,
+                                   PDFOperator operator,
+                                   List operands)
+      throws IOException {
+    super.process(pageStreamTransform, operator, operands);
+  }
+</pre>
+ * <p>{@link ConditionalSubsequenceOperatorProcessor} instances, like
+ * {@link ConditionalOperatorProcessor} instances, <em>must</em> have a
+ * no-argument constructor, and are instantiated once per key
+ * associated with their class name during a given
+ * {@link PageStreamTransform} instantiation.</p>
+ * @author Thib Guicherd-Callin
+ */
 public abstract class ConditionalSubsequenceOperatorProcessor extends ConditionalOperatorProcessor {
 
+  /**
+   * <p>Computes a replacement for tokens identified by this
+   * operator processor.</p>
+   * @param tokens The tokens recognized by
+   *               {@link ConditionalOperatorProcessor#identify}.
+   * @return A list of replacement tokens to be merged.
+   * @see ConditionalOperatorProcessor#identify
+   */
   public abstract List getReplacement(List tokens);
 
+  /**
+   * <p>Indicates the fixed length of the tail subsequence of the
+   * output list which is to be considered by
+   * {@link ConditionalOperatorProcessor#identify}.</p>
+   * @return The number of tokens to examine from the end of the
+   *         output list.
+   */
   public abstract int getSubsequenceLength();
 
-  protected List getSequence(PageStreamTransform pdfPageStreamTransform) {
+  /* Inherit documentation */
+  public List getSequence(PageStreamTransform pdfPageStreamTransform) {
     int subsequenceLength = getSubsequenceLength();
     List outputList = pdfPageStreamTransform.getOutputList();
     int outputListSize = outputList.size();
-    return Collections.unmodifiableList(new ArrayList(outputListSize >= subsequenceLength
+    return Collections.unmodifiableList(new ArrayList(outputListSize > subsequenceLength
                                                       ? outputList.subList(outputListSize - subsequenceLength, outputListSize)
                                                       : outputList));
   }
 
-  protected void processIdentified(PageStreamTransform pdfPageStreamTransform,
+  /* Inherit documentation */
+  public void processIdentified(PageStreamTransform pdfPageStreamTransform,
                                    List tokens) {
     int subsequenceLength = getSubsequenceLength();
     List outputList = pdfPageStreamTransform.getOutputList();

@@ -1,5 +1,5 @@
 /*
- * $Id: OutputStreamDocumentTransform.java,v 1.1 2006-09-26 07:32:24 thib_gc Exp $
+ * $Id: OutputStreamDocumentTransform.java,v 1.2 2006-09-27 08:00:32 thib_gc Exp $
  */
 
 /*
@@ -36,17 +36,42 @@ import java.io.*;
 
 import org.lockss.util.*;
 
+/**
+ * <p>A base version of {@link OutputDocumentTransform} that keeps the
+ * output stream being processed by the current call to
+ * {@link #transform(PdfDocument, OutputStream)} as an instance
+ * variable.</p>
+ * <p>This class implements synchronization at the level of
+ * {@link #transform(PdfDocument, OutputStream)} so that under normal
+ * circumstances it is safe for subclasses to assume a correlation
+ * between the {@link #outputStream} field at the time
+ * {@link #makeTransform} is called and the subsequent call to
+ * {@link DocumentTransform#transform(PdfDocument)} being called on
+ * that method's return value.</p>
+ * @author Thib Guicherd-Callin
+ */
 public abstract class OutputStreamDocumentTransform implements OutputDocumentTransform {
 
+  /**
+   * <p>The output stream for the current call to
+   * {@link #transform(PdfDocument, OutputStream)}.</p>
+   */
   protected OutputStream outputStream;
 
   /**
+   * <p>Makes a new document transform, which can (under normal
+   * operating conditions) take advantage of the output stream
+   * associated with the current call to
+   * {@link #transform(PdfDocument, OutputStream)}.</p>
    * <p>Preconditions</p>
    * <ul>
    *  <li>outputStream != null</li>
    * </ul>
+   * @see #outputStream
    */
   public abstract DocumentTransform makeTransform() throws IOException;
+
+  /* Inherit documentation */
   public synchronized boolean transform(PdfDocument pdfDocument) throws IOException {
     logger.debug2("Begin output stream document transform");
     if (outputStream == null) {
@@ -58,6 +83,7 @@ public abstract class OutputStreamDocumentTransform implements OutputDocumentTra
     return ret;
   }
 
+  /* Inherit documentation */
   public synchronized boolean transform(PdfDocument pdfDocument,
                                         OutputStream outputStream) {
     try {
@@ -74,6 +100,9 @@ public abstract class OutputStreamDocumentTransform implements OutputDocumentTra
     }
   }
 
-    private static Logger logger = Logger.getLogger("OutputStreamDocumentTransform");
+  /**
+   * <p>A logger for use by this class.</p>
+   */
+  private static Logger logger = Logger.getLogger("OutputStreamDocumentTransform");
 
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: ProcessString.java,v 1.3 2006-09-26 07:32:24 thib_gc Exp $
+ * $Id: ProcessString.java,v 1.4 2006-09-27 08:00:33 thib_gc Exp $
  */
 
 /*
@@ -39,8 +39,22 @@ import org.lockss.util.*;
 import org.pdfbox.cos.*;
 import org.pdfbox.util.PDFOperator;
 
+/**
+ * <p>A PDF operator processor that is overloaded to extract strings
+ * from all four string-bearing PDF operators
+ * ({@link PdfUtil#SHOW_TEXT},
+ * {@link PdfUtil#SHOW_TEXT_GLYPH_POSITIONING},
+ * {@link PdfUtil#MOVE_TO_NEXT_LINE_SHOW_TEXT} and
+ * {@link PdfUtil#SET_SPACING_MOVE_TO_NEXT_LINE_SHOW_TEXT}).
+ * @author Thib Guicherd-Callin
+ * @see PdfUtil#MOVE_TO_NEXT_LINE_SHOW_TEXT
+ * @see PdfUtil#SET_SPACING_MOVE_TO_NEXT_LINE_SHOW_TEXT
+ * @see PdfUtil#SHOW_TEXT
+ * @see PdfUtil#SHOW_TEXT_GLYPH_POSITIONING
+ */
 public abstract class ProcessString extends PdfOperatorProcessor {
 
+  /* Inherit documentation */
   public void process(PageStreamTransform pageStreamTransform,
                       PDFOperator operator,
                       List operands)
@@ -71,12 +85,28 @@ public abstract class ProcessString extends PdfOperatorProcessor {
     }
   }
 
+  /**
+   * <p>Processes one PDF string (expressed as a {@link COSString}
+   * instance).</p>
+   * @param pageStreamTransform The PDF page stream transform being
+   *                            applied.
+   * @param operator            A PDF operator being processed.
+   * @param operands            The operands that the operator
+   *                            applies to.
+   * @param cosString           A PDF string taken from the operands
+   *                            (of possibly several).
+   * @throws IOException if any processing error occurs.
+   * @see PdfUtil#getPdfString(Object)
+   */
   public abstract void processString(PageStreamTransform pageStreamTransform,
                                      PDFOperator operator,
                                      List operands,
                                      COSString cosString)
       throws IOException;
 
+  /**
+   * <p>A logger for use by this class.</p>
+   */
   private static Logger logger = Logger.getLogger("ProcessString");
 
 }

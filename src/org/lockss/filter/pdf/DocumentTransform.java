@@ -1,5 +1,5 @@
 /*
- * $Id: DocumentTransform.java,v 1.2 2006-09-14 23:10:39 thib_gc Exp $
+ * $Id: DocumentTransform.java,v 1.3 2006-09-27 08:00:32 thib_gc Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ public interface DocumentTransform {
   /**
    * <p>Applies a transform to a PDF document.</p>
    * @param pdfDocument A PDF document.
-   * @return True if the transform has succeeded, false otherwise.
+   * @return True if the transform succeeded, false otherwise.
    * @throws IOException if any processing error occurs.
    */
   boolean transform(PdfDocument pdfDocument) throws IOException;
