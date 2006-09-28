@@ -1,5 +1,5 @@
 /*
- * $Id: LockssThread.java,v 1.25 2006-06-04 06:26:17 tlipkis Exp $
+ * $Id: LockssThread.java,v 1.26 2006-09-28 23:29:21 tlipkis Exp $
  */
 
 /*
@@ -68,11 +68,7 @@ public abstract class LockssThread extends Thread implements LockssWatchdog {
   private TimerQueue.Callback timerCallback =
     new TimerQueue.Callback() {
       public void timerExpired(Object cookie) {
-	// Don't trigger the watchdog if it has been turned off.  This could
-	// happen if the timer event happens as it's being cancelled.
-	if (interval != 0) {
-	  threadHung();
-	}
+	threadHung();
       }
       public String toString() {
 	return "Thread Watchdog: " + getName();
@@ -232,6 +228,10 @@ public abstract class LockssThread extends Thread implements LockssWatchdog {
     this.triggerOnExit = triggerOnExit;
   }
 
+  private boolean isWDogExpired() {
+    return (interval != 0 && timerDead != null && timerDead.expired());
+  }
+
   /** Called if thread is hung (hasn't poked the watchdog in too long).
    * Default action is to exit the daemon; should be overridden if thread
    * is able to take some less drastic corrective action (e.g., close
@@ -240,16 +240,28 @@ public abstract class LockssThread extends Thread implements LockssWatchdog {
    * dump, waits 30 seconds and attempts another thread dump.
    */
   protected void threadHung() {
+    // Don't trigger the watchdog if it has been turned off.  This could
+    // happen if the timer event happens as it's being cancelled.
+    if (!isWDogExpired()) {
+      return;
+    }
     if (CurrentConfig.getBooleanParam(PARAM_THREAD_WDOG_HUNG_DUMP,
                                       DEFAULT_THREAD_WDOG_HUNG_DUMP)) {
+      log.error("Thread hung for " +
+		StringUtil.timeIntervalToString(interval) + ": " + getName());
       PlatformInfo.getInstance().threadDump(false);
       try {
 	Thread.sleep(30 * Constants.SECOND);
       } catch (InterruptedException ignore) {}
       PlatformInfo.getInstance().threadDump(true);
     }
-    exitDaemon(Constants.EXIT_CODE_THREAD_HUNG,
-	       "Thread hung for " + StringUtil.timeIntervalToString(interval));
+    if (isWDogExpired()) {
+      exitDaemon(Constants.EXIT_CODE_THREAD_HUNG,
+		 "Thread hung for " +
+		 StringUtil.timeIntervalToString(interval));
+    } else {
+      log.info("Thread woke up, continuing: " + getName());
+    }
   }
 
   /** Called if thread exited unexpectedly.  Default action is to exit the
