@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireFilterRule.java,v 1.5 2006-09-16 23:04:48 tlipkis Exp $
+ * $Id: HighWireFilterRule.java,v 1.6 2006-09-28 23:33:23 troberts Exp $
  */
 
 /*
@@ -57,7 +57,7 @@ public class HighWireFilterRule implements FilterRule {
     List tagList = ListUtil.list(
 //        new HtmlTagFilter.TagPair("<!--", "-->", true),
         new HtmlTagFilter.TagPair("<STRONG>Institution:",
-				  "</A></NOBR>", true),
+				  "</A>", true),
         new HtmlTagFilter.TagPair("<script", "</script>", true),
         new HtmlTagFilter.TagPair("<table", "</table>", true),
         new HtmlTagFilter.TagPair("<", ">")
