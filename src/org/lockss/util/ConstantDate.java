@@ -1,5 +1,5 @@
 /*
- * $Id: ConstantDate.java,v 1.4 2003-11-11 20:47:41 tlipkis Exp $
+ * $Id: ConstantDate.java,v 1.5 2006-09-28 02:01:00 tlipkis Exp $
  */
 
 /*
@@ -47,5 +47,9 @@ public class ConstantDate extends Date {
   /** @throws UnsupportedOperationException */
   public void setTime(long time) {
     throw new UnsupportedOperationException("Can't change constant date");
+  }
+
+  public int compareTo(Object o) {
+    return super.compareTo((Date)o);
   }
 }

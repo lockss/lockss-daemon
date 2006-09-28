@@ -1,5 +1,5 @@
 /*
- * $Id: MockFile.java,v 1.4 2005-03-22 06:32:33 tlipkis Exp $
+ * $Id: MockFile.java,v 1.5 2006-09-28 02:01:00 tlipkis Exp $
  */
 
 /*
@@ -223,5 +223,9 @@ public class MockFile extends File {
 
   public String toString() {
     return "[MockFile: path="+path+"]";
+  }
+
+  public int compareTo(Object o) {
+    return super.compareTo((File)o);
   }
 }
