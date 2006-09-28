@@ -1,5 +1,5 @@
 /*
- * $Id: NewEnglandJournalOfMedicinePdfTransform.java,v 1.5 2006-09-26 05:17:53 thib_gc Exp $
+ * $Id: NewEnglandJournalOfMedicinePdfTransform.java,v 1.6 2006-09-28 05:31:56 thib_gc Exp $
  */
 
 /*
@@ -36,7 +36,6 @@ import java.io.*;
 import java.util.List;
 
 import org.lockss.filter.pdf.*;
-import org.lockss.filter.pdf.DocumentTransformUtil.*;
 import org.lockss.plugin.highwire.HighWirePdfFilterFactory.SanitizeMetadata;
 import org.lockss.util.*;
 

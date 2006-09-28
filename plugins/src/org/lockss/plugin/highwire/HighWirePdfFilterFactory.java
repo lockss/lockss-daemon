@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePdfFilterFactory.java,v 1.3 2006-09-27 17:32:34 thib_gc Exp $
+ * $Id: HighWirePdfFilterFactory.java,v 1.4 2006-09-28 05:31:56 thib_gc Exp $
  */
 
 /*
@@ -46,20 +46,24 @@ public class HighWirePdfFilterFactory extends BasicPdfFilterFactory {
 
     /* Inherit documentation */
     public boolean transform(PdfDocument pdfDocument) throws IOException {
+      logger.debug2("Begin SanitizeMetadata");
       // Get rid of the modification date
       pdfDocument.removeModificationDate();
       // Get rid of the metadata
       pdfDocument.setMetadata(" ");
       // Replace instance ID by document ID in trailer
       COSBase idObj = pdfDocument.getTrailer().getItem(COSName.getPDFName("ID"));
+      boolean ret;
       if (idObj != null && idObj instanceof COSArray) {
         COSArray idArray = (COSArray)idObj;
         idArray.set(1, idArray.get(0));
-        return true;
+        ret = true;
       }
       else {
-        return false;
+        ret = false;
       }
+      logger.debug("SanitizeMetadata result: " + ret);
+      return ret;
     }
 
   }
