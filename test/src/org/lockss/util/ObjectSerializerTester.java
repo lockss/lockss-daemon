@@ -1,5 +1,5 @@
 /*
- * $Id: ObjectSerializerTester.java,v 1.9 2006-09-28 02:01:00 tlipkis Exp $
+ * $Id: ObjectSerializerTester.java,v 1.10 2006-09-28 02:09:17 tlipkis Exp $
  */
 
 /*
@@ -725,9 +725,6 @@ public abstract class ObjectSerializerTester extends XMLTestCase {
           public boolean renameTo(File dest) {
             return false; // fail
           }
-	  public int compareTo(Object o) {
-	    return super.compareTo((File)o);
-	  }
         };
         return action.file;
       }
