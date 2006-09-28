@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingStreamComm.java,v 1.19 2006-09-27 18:46:39 dshr Exp $
+ * $Id: BlockingStreamComm.java,v 1.20 2006-09-28 02:00:04 tlipkis Exp $
  */
 
 /*
@@ -174,11 +174,12 @@ public class BlockingStreamComm
 
 
   private boolean paramUseV3OverSsl = DEFAULT_USE_V3_OVER_SSL;
-  private static boolean paramSslClientAuth = DEFAULT_USE_SSL_CLIENT_AUTH;
-  private static boolean paramSslTempKeystore = DEFAULT_SSL_TEMP_KEYSTORE;
-  private static String paramSslKeyStore = DEFAULT_SSL_KEYSTORE;
-  private static String paramSslPrivateKeyPasswordFile = DEFAULT_SSL_PRIVATE_KEY_PASSWORD_FILE;
-  private static String paramSslProtocol = DEFAULT_SSL_PROTOCOL;
+  private boolean paramSslClientAuth = DEFAULT_USE_SSL_CLIENT_AUTH;
+  private boolean paramSslTempKeystore = DEFAULT_SSL_TEMP_KEYSTORE;
+  private String paramSslKeyStore = DEFAULT_SSL_KEYSTORE;
+  private String paramSslPrivateKeyPasswordFile =
+    DEFAULT_SSL_PRIVATE_KEY_PASSWORD_FILE;
+  private String paramSslProtocol = DEFAULT_SSL_PROTOCOL;
   private int paramMinFileMessageSize = DEFAULT_MIN_FILE_MESSAGE_SIZE;
   private int paramMaxMessageSize = DEFAULT_MAX_MESSAGE_SIZE;
   private File dataDir = null;
@@ -196,9 +197,9 @@ public class BlockingStreamComm
   private long paramWaitExit = DEFAULT_WAIT_EXIT;
   private long lastHungCheckTime = 0;
   private PooledExecutor pool;
-  private static SSLSocketFactory sslSocketFactory = null;
-  private static SSLServerSocketFactory sslServerSocketFactory = null;
-  private static String paramSslKeyStorePassword = null;
+  protected SSLSocketFactory sslSocketFactory = null;
+  protected SSLServerSocketFactory sslServerSocketFactory = null;
+  private String paramSslKeyStorePassword = null;
 
   private boolean enabled = DEFAULT_ENABLED;
   private boolean running = false;
@@ -958,7 +959,7 @@ public class BlockingStreamComm
     }
   }
 
-  protected static void handShake(SSLSocket s) {
+  protected void handShake(SSLSocket s) {
     SSLSession session = s.getSession();
     try {
       java.security.cert.Certificate[] certs = session.getPeerCertificates();
@@ -1095,7 +1096,7 @@ public class BlockingStreamComm
   }
 
   /** Normal socket factory creates real TCP Sockets */
-  static class NormalSocketFactory implements SocketFactory {
+  class NormalSocketFactory implements SocketFactory {
     public ServerSocket newServerSocket(int port, int backlog)
 	throws IOException {
       return new ServerSocket(port, backlog);
@@ -1119,7 +1120,7 @@ public class BlockingStreamComm
   }
 
   /** SSL socket factory */
-  static class SslSocketFactory implements SocketFactory {
+  class SslSocketFactory implements SocketFactory {
     public ServerSocket newServerSocket(int port, int backlog)
       throws IOException {
       if (sslServerSocketFactory == null) {

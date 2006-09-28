@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockingSslStreamComm1.java,v 1.2 2006-09-27 18:46:39 dshr Exp $
+ * $Id: TestBlockingSslStreamComm1.java,v 1.3 2006-09-28 02:00:04 tlipkis Exp $
  */
 
 /*
@@ -55,21 +55,7 @@ import org.lockss.util.*;
 import org.lockss.util.Queue;
 import org.lockss.test.*;
 
-import sun.misc.BASE64Decoder;
-import sun.misc.BASE64Encoder;
-import sun.security.x509.AlgorithmId;
-import sun.security.x509.X509CertImpl;
-import sun.security.x509.X509CertInfo;
-import sun.security.x509.X500Name;
-import sun.security.x509.CertAndKeyGen;
-import sun.security.x509.CertificateSubjectName;
-import sun.security.x509.CertificateIssuerName;
-import sun.security.x509.CertificateValidity;
-import sun.security.x509.CertificateSerialNumber;
-import sun.security.x509.CertificateAlgorithmId;
-import sun.security.x509.X509Key;
-import sun.security.x509.X500Signer;
-import sun.security.pkcs.PKCS10;
+import sun.security.x509.*;
 import sun.security.provider.IdentityDatabase;
 import sun.security.provider.SystemSigner;
 
@@ -100,7 +86,7 @@ public class TestBlockingSslStreamComm1 extends TestBlockingStreamComm {
     SocketFactory getSocketFactory() {
       super.getSocketFactory();
       if (mySockFact == null) {
-          mySockFact = new MySslSocketFactory(super.superSockFact);
+	mySockFact = new MySslSocketFactory(super.superSockFact);
       }
       return mySockFact;
     }
@@ -117,24 +103,24 @@ public class TestBlockingSslStreamComm1 extends TestBlockingStreamComm {
     }
 
     public ServerSocket newServerSocket(int port, int backlog)
-          throws IOException {
-        if (useInternalSockets) {
-          return new InternalServerSocket(port, backlog);
-        } else {
+	throws IOException {
+      if (useInternalSockets) {
+	return new InternalServerSocket(port, backlog);
+      } else {
         ServerSocket ss = mySockFact.newServerSocket(port, backlog);
         assertTrue(ss instanceof SSLServerSocket);
         return ss;
-        }
+      }
     }
 
     public Socket newSocket(IPAddr addr, int port) throws IOException {
-        if (useInternalSockets) {
-          return new InternalSocket(addr.getInetAddr(), port);
-        } else {
+      if (useInternalSockets) {
+	return new InternalSocket(addr.getInetAddr(), port);
+      } else {
         Socket s = mySockFact.newSocket(addr, port);
         assertTrue(s instanceof SSLSocket);
         return s;
-        }
+      }
     }
   }
 
