@@ -1,5 +1,5 @@
 /*
- * $Id: VoterActions.java,v 1.11 2006-09-25 02:16:47 smorabito Exp $
+ * $Id: VoterActions.java,v 1.12 2006-09-28 23:52:52 smorabito Exp $
  */
 
 /*
@@ -165,10 +165,14 @@ public class VoterActions {
   public static PsmEvent handleReceiveRepairRequest(PsmMsgEvent evt,
                                                     PsmInterp interp) {
     VoterUserData ud = getUserData(interp);
+    V3Voter voter = ud.getVoter();
+    IdentityManager idmgr = voter.getIdentityManager();
     V3LcapMessage msg = (V3LcapMessage)evt.getMessage();
+    PeerIdentity voterId = msg.getOriginatorId();
     String targetUrl = msg.getTargetUrl();
     CachedUrlSet cus = ud.getCachedUrlSet();
-    if (cus.containsUrl(targetUrl)) {
+    if (cus.containsUrl(targetUrl) &&
+        voter.serveRepairs(msg.getOriginatorId(), ud.getVoter().getAu(), targetUrl)) {
       // I have this repair and I'm willing to serve it.
       log.debug2("Accepting repair request from " + ud.getPollerId() +
                  " for URL: " + targetUrl);
@@ -176,7 +180,7 @@ public class VoterActions {
       return V3Events.evtRepairRequestOk;
     } else {
       // I don't have this repair
-      log.error("No repair available to serve for URL!" + targetUrl);
+      log.error("No repair available to serve for URL: " + targetUrl);
       return V3Events.evtNoSuchRepair;
     }
   }

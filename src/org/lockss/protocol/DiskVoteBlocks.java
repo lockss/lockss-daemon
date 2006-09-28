@@ -2,6 +2,7 @@ package org.lockss.protocol;
 
 import java.util.*;
 import java.io.*;
+import java.nio.*;
 
 import org.lockss.app.LockssApp;
 import org.lockss.util.*;
@@ -92,28 +93,25 @@ public class DiskVoteBlocks extends BaseVoteBlocks {
 
   protected synchronized VoteBlock getVoteBlock(int i) throws IOException {
     // Read from the file until we reach VoteBlock i, or run out of blocks.
-    FileInputStream fis = null;
-    DataInputStream dis = null;
-    fis = new FileInputStream(file);
-    dis = new DataInputStream(fis);
+    RandomAccessFile raf = new RandomAccessFile(file, "r");
 
     try {
       // Shortcut for quickly finding the next iterable block
       if (i == nextVoteBlockIndex) {
-        dis.skip(nextVoteBlockAddress);
+        raf.skipBytes((int)nextVoteBlockAddress);
       } else {
         for (int idx = 0; idx < i; idx++) {
-          short len = dis.readShort();
-          dis.skip(len);
+          short len = raf.readShort();
+          raf.skipBytes(len);
           nextVoteBlockIndex++;
           nextVoteBlockAddress += len + 2;
         }
       }
 
       // Should be there!
-      short len = dis.readShort();
+      short len = raf.readShort();
       byte[] encodedBlock = new byte[len];
-      dis.read(encodedBlock);
+      raf.read(encodedBlock);
       nextVoteBlockIndex++;
       nextVoteBlockAddress += len + 2;
       return new VoteBlock(encodedBlock);
@@ -124,7 +122,7 @@ public class DiskVoteBlocks extends BaseVoteBlocks {
                   + "DiskVoteBlocks file " + filePath);
       return null;
     } finally {
-      fis.close();
+      raf.close();
     }
   }
 

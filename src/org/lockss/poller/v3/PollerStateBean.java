@@ -1,5 +1,5 @@
 /*
- * $Id: PollerStateBean.java,v 1.15 2006-09-25 02:16:47 smorabito Exp $
+ * $Id: PollerStateBean.java,v 1.16 2006-09-28 23:52:52 smorabito Exp $
  */
 
 /*
@@ -73,7 +73,6 @@ public class PollerStateBean implements LockssSerializable {
   private boolean hashStarted;
   private Collection votedPeers;
   private TallyStatus tallyStatus;
-  private boolean expectingRepairs;
 
   /* Non-serializable transient fields */
   private transient PollSpec spec;
@@ -303,14 +302,6 @@ public class PollerStateBean implements LockssSerializable {
   public void addHashBlock(HashBlock hb) {
     hashedBlocks.add(hb);
   }
-
-  public boolean expectingRepairs() {
-    return expectingRepairs;
-  }
-  
-  public void expectingRepairs(boolean b) {
-    this.expectingRepairs = b;
-  }
   
   public String toString() {
     StringBuffer sb = new StringBuffer("[V3PollerState: ");
@@ -340,6 +331,11 @@ public class PollerStateBean implements LockssSerializable {
    */
   public int getStatus() {
     return status;
+  }
+  
+  public boolean expectingRepairs() {
+    return (repairQueue.getPendingRepairs().size() + 
+        repairQueue.getActiveRepairs().size()) > 0;
   }
 
   /**

@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.20 2006-09-25 02:16:47 smorabito Exp $
+ * $Id: V3Voter.java,v 1.21 2006-09-28 23:52:52 smorabito Exp $
  */
 
 /*
@@ -86,6 +86,12 @@ public class V3Voter extends BasePoll {
   public static int DEFAULT_MAX_NOMINATION_SIZE = 5;
   
   /**
+   * If false, do not serve any repairs via V3.
+   */
+  public static String PARAM_ALLOW_V3_REPAIRS = PREFIX + "allowV3Repairs";
+  public static boolean DEFAULT_ALLOW_V3_REPAIRS = true;
+  
+  /**
    * Directory in which to store message data.
    */
   public static String PARAM_V3_MESSAGE_DIR = V3Poller.PARAM_V3_MESSAGE_DIR;
@@ -103,6 +109,7 @@ public class V3Voter extends BasePoll {
   private boolean activePoll = true;
   private int nomineeCount;
   private File messageDir;
+  private boolean allowRepairs = DEFAULT_ALLOW_V3_REPAIRS;
 
   // Task used to reserve time for hashing at the start of the poll.
   // This task is cancelled before the real hash is scheduled.
@@ -144,7 +151,9 @@ public class V3Voter extends BasePoll {
                                         DEFAULT_MIN_NOMINATION_SIZE);
     int max = CurrentConfig.getIntParam(PARAM_MAX_NOMINATION_SIZE,
                                         DEFAULT_MAX_NOMINATION_SIZE);
-    
+    allowRepairs = CurrentConfig.getBooleanParam(PARAM_ALLOW_V3_REPAIRS,
+                                                 DEFAULT_ALLOW_V3_REPAIRS);
+
     if (min > max) {
       throw new IllegalArgumentException("Impossible nomination size range: "
                                          + (max - min));
@@ -604,6 +613,20 @@ public class V3Voter extends BasePoll {
   
   public String getStatusString() {
     return V3Voter.STATUS_STRINGS[voterUserData.getStatus()];
+  }
+  
+  IdentityManager getIdentityManager() {
+    return this.idManager;
+  }
+  
+  /**
+   * Returns true if we will serve a repair to the given peer for the
+   * given AU and URL.
+   * 
+   * @return
+   */
+  boolean serveRepairs(PeerIdentity pid, ArchivalUnit au, String url) {
+    return(idManager.hasAgreed(pid, au) && allowRepairs);
   }
 
   /**

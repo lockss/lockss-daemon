@@ -1,5 +1,5 @@
 /*
- * $Id: HashBlock.java,v 1.5 2006-06-02 20:27:15 smorabito Exp $
+ * $Id: HashBlock.java,v 1.6 2006-09-28 23:52:52 smorabito Exp $
  */
 
 /*
@@ -44,6 +44,7 @@ import org.lockss.util.LockssSerializable;
 public class HashBlock implements LockssSerializable {
   String url;
   TreeSet versions;
+  long totalFilteredBytes = 0;
 
   public HashBlock(CachedUrl cu) {
     this.versions = new TreeSet();
@@ -67,10 +68,15 @@ public class HashBlock implements LockssSerializable {
     versions.add(new HashBlock.Version(unfilteredOffset, unfilteredLength,
                                        filteredOffset, filteredLength,
                                        digests, repositoryVersion));
+    totalFilteredBytes += filteredLength; 
   }
   
   public int size() {
     return versions.size();
+  }
+  
+  public long getTotalFilteredBytes() {
+    return totalFilteredBytes;
   }
   
   public Iterator versionIterator() {

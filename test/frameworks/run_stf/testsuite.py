@@ -2048,8 +2048,8 @@ def tinyUiTests():
 def simpleV3Tests():
     suite = unittest.TestSuite()
     suite.addTest(SimpleDamageV3TestCase())
-    suite.addTest(RepairFromPublisherV3TestCase())
-    suite.addTest(RepairFromPeerV3TestCase())
+###    suite.addTest(RepairFromPublisherV3TestCase())
+###    suite.addTest(RepairFromPeerV3TestCase())
     suite.addTest(SimpleDeleteV3TestCase())
     suite.addTest(SimpleExtraFileV3TestCase())
     suite.addTest(LastFileDeleteV3TestCase())

@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.43 2006-09-22 06:24:27 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.44 2006-09-28 23:52:52 smorabito Exp $
  */
 
 /*
@@ -218,31 +218,27 @@ public class ArchivalUnitStatus
       rowMap.put("AuLastCrawl", new Long(auState.getLastCrawlTime()));
       rowMap.put("Peers", PeerRepair.makeAuRef("peers", au.getAuId()));
       rowMap.put("AuLastTreeWalk", new Long(auState.getLastTreeWalkTime()));
+      rowMap.put("AuLastPoll", new Long(auState.getLastTopLevelPollTime()));
       
       Object stat;
       if (isV3) {
-        String auId = au.getAuId();
-        Integer numPolls = new Integer(v3status.getNumPolls(auId));
         rowMap.put("AuPolls",
-                   new StatusTable.Reference(numPolls,
+                   new StatusTable.Reference(new Integer(v3status.getNumPolls(au.getAuId())),
                                              V3PollStatus.POLLER_STATUS_TABLE_NAME,
-                                             auId));
-        rowMap.put("AuLastPoll",
-                   new Long(v3status.getLastPollTime(auId)));
-        // Percent damaged
-        float fv = v3status.getAgreement(auId);
-        // It's scary to see "0% Agreement" if no polls have completed.
-        if (numPolls.intValue() == 0) {
-	  stat = "Waiting";
+                                             au.getAuId()));
+        // Percent damaged.  It's scary to see '0% Agreement' if there's no
+        // history, so we just show a friendlier message.
+        if (auState.getV3Agreement() == 0.0) {
+          stat = "Waiting for Poll";
         } else {
-          stat = Integer.toString(Math.round(fv * 100)) + "% Agreement";
+          stat = Integer.toString((int)Math.round(auState.getV3Agreement() * 100)) + 
+                  "% Agreement";
         }
       } else {
         rowMap.put("AuPolls",
                    theDaemon.getStatusService().
                    getReference(PollerStatus.MANAGER_STATUS_TABLE_NAME,
                                 au));
-        rowMap.put("AuLastPoll", new Long(auState.getLastTopLevelPollTime()));
 	stat = topNodeState.hasDamage()
 	  ? DAMAGE_STATE_DAMAGED : DAMAGE_STATE_OK;
       }

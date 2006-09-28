@@ -1,5 +1,5 @@
 /*
- * $Id: AuState.java,v 1.23 2006-09-16 07:17:06 tlipkis Exp $
+ * $Id: AuState.java,v 1.24 2006-09-28 23:52:52 smorabito Exp $
  */
 
 /*
@@ -49,6 +49,7 @@ public class AuState implements LockssSerializable {
   private transient HistoryRepository historyRepo;
   protected HashSet crawlUrls;
   protected int clockssSubscriptionStatus;
+  protected double v3Agreement;
 
   transient int urlUpdateCntr = 0;
 
@@ -115,9 +116,18 @@ public class AuState implements LockssSerializable {
   /**
    * Sets the last poll time to the current time.  Saves itself to disk.
    */
-  void newPollFinished() {
+  public void newPollFinished() {
     lastTopLevelPoll = TimeBase.nowMs();
     historyRepo.storeAuState(this);
+  }
+
+  public void setV3Agreement(double d) {
+    v3Agreement = d;
+    historyRepo.storeAuState(this);
+  }
+
+  public double getV3Agreement() {
+    return v3Agreement;
   }
 
   /**
