@@ -1,5 +1,5 @@
 /*
- * $Id: PdfUtil.java,v 1.14 2006-09-27 17:32:35 thib_gc Exp $
+ * $Id: PdfUtil.java,v 1.15 2006-09-28 03:31:15 thib_gc Exp $
  */
 
 /*
@@ -704,6 +704,7 @@ return success;
                                      OutputStream outputStream) {
     try {
       boolean ret = documentTransform.transform(pdfDocument);
+      logger.debug("Document transform result: " + ret);
       pdfDocument.save(outputStream);
       return ret;
     }
@@ -719,8 +720,14 @@ return success;
     try {
       pdfDocument = new PdfDocument(inputStream);
       ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-      documentTransform.transform(pdfDocument, outputStream);
-      return new ByteArrayInputStream(outputStream.toByteArray()); // FIXME
+      if (documentTransform.transform(pdfDocument, outputStream)) {
+        logger.debug("Transform from input stream succeeded");
+        return new ByteArrayInputStream(outputStream.toByteArray()); // FIXME
+      }
+      else {
+        logger.error("Transform from input stream failed");
+        return null; // FIXME
+      }
     }
     catch (IOException ioe) {
       logger.error("Error while creating a PDF document", ioe);
