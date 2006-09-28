@@ -2502,6 +2502,8 @@
 	<property name="value" value="354" />
       </property>
       <property name="attributes.publisher" value="Massachusetts Medical Society" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.NewEnglandJournalOfMedicinePdfTransform$Simplified" />
     </property>
     
     <property name="PNAS103">
