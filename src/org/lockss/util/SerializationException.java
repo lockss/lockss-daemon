@@ -1,5 +1,5 @@
 /*
- * $Id: SerializationException.java,v 1.2 2006-07-19 18:01:00 tlipkis Exp $
+ * $Id: SerializationException.java,v 1.3 2006-09-28 05:12:00 thib_gc Exp $
  */
 
 /*
@@ -141,6 +141,31 @@ public class SerializationException extends Exception {
     }
 
     public NotSerializableOrLockssSerializable(Throwable cause) {
+      super(cause);
+    }
+
+  }
+
+  /**
+   * <p>A {@link SerializationException} for the specific case when
+   * presumably malformed XML has been written out to a file.</p>
+   * @author Thib Guicherd-Callin
+   */
+  public static class ReadBackFailed extends SerializationException {
+
+    public ReadBackFailed() {
+      super();
+    }
+
+    public ReadBackFailed(String message) {
+      super(message);
+    }
+
+    public ReadBackFailed(String message, Throwable cause) {
+      super(message, cause);
+    }
+
+    public ReadBackFailed(Throwable cause) {
       super(cause);
     }
 

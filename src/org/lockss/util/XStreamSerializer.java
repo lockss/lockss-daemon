@@ -1,5 +1,5 @@
 /*
- * $Id: XStreamSerializer.java,v 1.22 2006-08-30 00:02:27 thib_gc Exp $
+ * $Id: XStreamSerializer.java,v 1.23 2006-09-28 05:12:00 thib_gc Exp $
  */
 
 /*
@@ -102,14 +102,6 @@ public class XStreamSerializer extends ObjectSerializer {
    */
   private static class LockssDateConverter implements Converter {
 
-    protected static final ThreadSafeSimpleDateFormat formatter = new ThreadSafeSimpleDateFormat("yyyy-MM-dd HH:mm:ss.S Z",
-                                                                                                 4,
-                                                                                                 20);
-
-    protected static final ThreadSafeSimpleDateFormat oldFormatter = new ThreadSafeSimpleDateFormat("yyyy-MM-dd HH:mm:ss.S z",
-                                                                                                    4,
-                                                                                                    20);
-
     public boolean canConvert(Class type) {
       return type.equals(Date.class);
     }
@@ -137,6 +129,14 @@ public class XStreamSerializer extends ObjectSerializer {
         }
       }
     }
+
+    protected static final ThreadSafeSimpleDateFormat formatter = new ThreadSafeSimpleDateFormat("yyyy-MM-dd HH:mm:ss.S Z",
+                                                                                                 4,
+                                                                                                 20);
+
+    protected static final ThreadSafeSimpleDateFormat oldFormatter = new ThreadSafeSimpleDateFormat("yyyy-MM-dd HH:mm:ss.S z",
+                                                                                                    4,
+                                                                                                    20);
 
   }
   /*
@@ -492,14 +492,6 @@ public class XStreamSerializer extends ObjectSerializer {
     }
 
     /**
-     * <p>A map to cache post-deserialization {@link Method}s by
-     * class.</p>
-     */
-    private static final HashMap postUnmarshalCache = new HashMap();
-
-    private static final HashMap postUnmarshalResolveCache = new HashMap();
-
-    /**
      * <p>A special unique value used in maps to denote that the
      * key exists but that it has no value.</p>
      */
@@ -539,6 +531,14 @@ public class XStreamSerializer extends ObjectSerializer {
     private static final Class[] POST_UNMARSHAL_RESOLVE_PARAMETERS =
       new Class[] { LockssApp.class };
 
+    /**
+     * <p>A map to cache post-deserialization {@link Method}s by
+     * class.</p>
+     */
+    private static final HashMap postUnmarshalCache = new HashMap();
+
+    private static final HashMap postUnmarshalResolveCache = new HashMap();
+
   }
   /*
    * end PRIVATE STATIC INNER CLASS
@@ -572,21 +572,6 @@ public class XStreamSerializer extends ObjectSerializer {
   }
 
   /**
-   * <p>Builds a new XStreamSerializer instance with the given
-   * context, with default failed serialization and deserialization
-   * modes.</p>
-   * <p>It is safe to use the same XStreamSerializer instance for
-   * multiple unrelated marshalling and unmarshalling operations.</p>
-   * @param lockssContext A serialization context object.
-   * @see ObjectSerializer#ObjectSerializer(LockssApp)
-   */
-  public XStreamSerializer(LockssApp lockssContext) {
-    super(lockssContext);
-    this.initialized = false; // lazy instantiation, see init()
-    this.lockssContext = lockssContext;
-  }
-
-  /**
    * <p>Builds a new XStreamSerializer instance with a null
    * context, and with the given failed serialization and
    * deserialization modes.</p>
@@ -601,6 +586,21 @@ public class XStreamSerializer extends ObjectSerializer {
     this(null,
          saveTempFiles,
          failedDeserializationMode);
+  }
+
+  /**
+   * <p>Builds a new XStreamSerializer instance with the given
+   * context, with default failed serialization and deserialization
+   * modes.</p>
+   * <p>It is safe to use the same XStreamSerializer instance for
+   * multiple unrelated marshalling and unmarshalling operations.</p>
+   * @param lockssContext A serialization context object.
+   * @see ObjectSerializer#ObjectSerializer(LockssApp)
+   */
+  public XStreamSerializer(LockssApp lockssContext) {
+    super(lockssContext);
+    this.initialized = false; // lazy instantiation, see init()
+    this.lockssContext = lockssContext;
   }
 
   /**
@@ -660,25 +660,26 @@ public class XStreamSerializer extends ObjectSerializer {
       xs.toXML(obj, writer);
     }
     catch (LockssNotSerializableException lnse) {
-      throw failSerialize("Not Serializable or LockssSerializable",
+      errorString = "Not Serializable or LockssSerializable";
+      throw failSerialize(errorString,
                           lnse,
-                          new SerializationException.NotSerializableOrLockssSerializable(lnse));
+                          new SerializationException.NotSerializableOrLockssSerializable(errorString, lnse));
 
     }
     catch (StreamException se) {
       throw failSerialize(errorString,
                           se,
-                          new SerializationException(se));
+                          new SerializationException(errorString, se));
     }
     catch (CannotResolveClassException crce) {
       throw failSerialize(errorString,
                           crce,
-                          new SerializationException(crce));
+                          new SerializationException(errorString, crce));
     }
     catch (BaseException be) {
       throw failSerialize(errorString,
                           be,
-                          new SerializationException(be));
+                          new SerializationException(errorString, be));
     }
     catch (RuntimeException re) {
       throwIfInterrupted(re);
@@ -697,5 +698,10 @@ public class XStreamSerializer extends ObjectSerializer {
       xs.registerConverter(new LockssDateConverter());
     }
   }
+
+  /**
+   * <p>A logger for use by this serializer.</p>
+   */
+  private static Logger logger = Logger.getLogger("XStreamSerializer");
 
 }

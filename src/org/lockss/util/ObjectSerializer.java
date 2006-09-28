@@ -1,5 +1,5 @@
 /*
- * $Id: ObjectSerializer.java,v 1.25 2006-06-28 18:01:03 thib_gc Exp $
+ * $Id: ObjectSerializer.java,v 1.26 2006-09-28 05:12:00 thib_gc Exp $
  */
 
 /*
@@ -34,9 +34,12 @@ package org.lockss.util;
 
 import java.io.*;
 
+import javax.xml.parsers.*;
+
 import org.lockss.app.LockssApp;
 import org.lockss.config.*;
 import org.lockss.util.SerializationException;
+import org.xml.sax.SAXException;
 
 /**
  * <p>Specifies an interface for serializers that marshal Java objects
@@ -74,9 +77,33 @@ public abstract class ObjectSerializer {
   }
 
   /**
+   * <p>This serializer's current failed deserialization mode.</p>
+   * @see #PARAM_FAILED_DESERIALIZATION_MODE
+   * @see #getFailedDeserializationMode
+   * @see #setFailedDeserializationMode
+   */
+  protected int failedDeserializationMode;
+
+  /**
+   * <p>This serializer's failed serialization mode.</p>
+   * @see #PARAM_FAILED_SERIALIZATION_MODE
+   * @see #getFailedSerializationMode
+   * @see #setFailedSerializationMode
+   */
+  protected boolean failedSerializationMode;
+
+  /**
    * <p>Saved reference to a serialization context object.</p>
    */
   protected LockssApp lockssContext;
+
+  /**
+   * <p>This serializer's serialization read back mode.</p>
+   * @see #PARAM_SERIALIZATION_READ_BACK
+   * @see #getSerializationReadBackMode
+   * @see #setSerializationReadBackMode
+   */
+  protected boolean serializationReadBackMode;
 
   /**
    * <p>A temporary file factory.</p>
@@ -113,6 +140,8 @@ public abstract class ObjectSerializer {
     this.lockssContext = lockssContext;
     setFailedSerializationMode(saveTempFiles);
     setFailedDeserializationMode(failedDeserializationMode);
+    setSerializationReadBackMode(CurrentConfig.getBooleanParam(PARAM_SERIALIZATION_READ_BACK,
+                                                               DEFAULT_SERIALIZATION_READ_BACK));
     this.tempFileFactory = new TempFileFactory() {
       public File createTempFile(String prefix, String suffix, File directory) throws IOException {
         return File.createTempFile(prefix, suffix, directory);
@@ -246,104 +275,14 @@ public abstract class ObjectSerializer {
   }
 
   /**
-   * <p>Convenience method to marshal a Java object to an XML file
-   * that accepts a {@link File} instead of a {@link Writer}.</p>
-   * <p>The result of serializing an object with a file must be the
-   * same as serializing it with a {@link Writer} on the same
-   * file.</p>
-   * @param outputFile A {@link File} instance representing the file
-   *                   into which the object is to be serialized.
-   * @param obj An object to be serialized.
-   * @throws NullPointerException   if obj is null.
-   * @throws SerializationException if input or output fails.
-   * @throws InterruptedIOException if input or output is
-   *                                interrupted.
-   * @see #serialize(File, Object)
+   * <p>Returns this instance's failed deserialization mode.</p>
+   * @return The current failed deserialization mode for this
+   *         instance.
+   * @see #PARAM_FAILED_DESERIALIZATION_MODE
    */
-  public void serialize(File outputFile,
-                        LockssSerializable obj)
-      throws SerializationException,
-             InterruptedIOException {
-    throwIfNull(obj);
-    serialize(outputFile, (Object)obj);
+  public int getFailedDeserializationMode() {
+    return failedDeserializationMode;
   }
-
-  /**
-   * <p>Convenience method to marshal a Java object to an XML file
-   * that accepts a {@link File} instead of a {@link Writer}.</p>
-   * <p>The result of serializing an object with a file must be the
-   * same as serializing it with a {@link Writer} on the same
-   * file.</p>
-   * @param outputFile A {@link File} instance representing the file
-   *                   into which the object is to be serialized.
-   * @param obj An object to be serialized.
-   * @throws NullPointerException   if obj is null.
-   * @throws SerializationException if input or output fails.
-   * @throws InterruptedIOException if input or output is
-   *                                interrupted.
-   * @see #serialize(File, Object)
-   */
-  public void serialize(File outputFile,
-                        Serializable obj)
-      throws SerializationException,
-             InterruptedIOException {
-    throwIfNull(obj);
-    serialize(outputFile, (Object)obj);
-  }
-
-  /**
-   * <p>Convenience method to marshal a Java object to an XML file
-   * that accepts a file name instead of a {@link Writer}.</p>
-   * <p>The result of serializing an object with a filename must be
-   * the same as serializing it with a {@link Writer} on the same
-   * filename.</p>
-   * @param outputFilename A file name representing the file into
-   *                       which the object is to be serialized.
-   * @param obj An object to be serialized.
-   * @throws NullPointerException   if obj is null.
-   * @throws SerializationException if input or output fails.
-   * @throws InterruptedIOException if input or output is
-   *                                interrupted.
-   * @see #serialize(String, Object)
-   */
-  public void serialize(String outputFilename,
-                        LockssSerializable obj)
-      throws SerializationException,
-             InterruptedIOException {
-    throwIfNull(obj);
-    serialize(outputFilename, (Object)obj);
-  }
-
-  /**
-   * <p>Convenience method to marshal a Java object to an XML file
-   * that accepts a file name instead of a {@link Writer}.</p>
-   * <p>The result of serializing an object with a filename must be
-   * the same as serializing it with a {@link Writer} on the same
-   * filename.</p>
-   * @param outputFilename A file name representing the file into
-   *                       which the object is to be serialized.
-   * @param obj An object to be serialized.
-   * @throws NullPointerException   if obj is null.
-   * @throws SerializationException if input or output fails.
-   * @throws InterruptedIOException if input or output is
-   *                                interrupted.
-   * @see #serialize(String, Object)
-   */
-  public void serialize(String outputFilename,
-                        Serializable obj)
-      throws SerializationException,
-             InterruptedIOException {
-    serialize(outputFilename, (Object)obj);
-    throwIfNull(obj);
-  }
-
-  /**
-   * <p>This serializer's failed serialization mode.</p>
-   * @see #PARAM_FAILED_SERIALIZATION_MODE
-   * @see #getFailedSerializationMode
-   * @see #setFailedSerializationMode
-   */
-  protected boolean failedSerializationMode;
 
   /**
    * <p>Returns this instance's failed serialization mode.</p>
@@ -356,30 +295,105 @@ public abstract class ObjectSerializer {
   }
 
   /**
-   * <p>Sets the failed serialization mode for this instance.</p>
-   * @param saveTempFiles A failed serialization mode.
-   * @see #PARAM_FAILED_SERIALIZATION_MODE
+   * <p>Returns this instance's serialization read back mode.</p>
+   * @return The current serialization read back mode for this
+   *         instance.
+   * @see #PARAM_SERIALIZATION_READ_BACK
    */
-  public void setFailedSerializationMode(boolean saveTempFiles) {
-    failedSerializationMode = saveTempFiles;
+  public boolean getSerializationReadBackMode() {
+    return serializationReadBackMode;
   }
 
   /**
-   * <p>This serializer's current failed deserialization mode.</p>
-   * @see #PARAM_FAILED_DESERIALIZATION_MODE
-   * @see #getFailedDeserializationMode
-   * @see #setFailedDeserializationMode
+   * <p>Convenience method to marshal a Java object to an XML file
+   * that accepts a {@link File} instead of a {@link Writer}.</p>
+   * <p>The result of serializing an object with a file must be the
+   * same as serializing it with a {@link Writer} on the same
+   * file.</p>
+   * @param outputFile A {@link File} instance representing the file
+   *                   into which the object is to be serialized.
+   * @param obj An object to be serialized.
+   * @throws NullPointerException   if obj is null.
+   * @throws SerializationException if input or output fails.
+   * @throws InterruptedIOException if input or output is
+   *                                interrupted.
+   * @see #serialize(File, Object)
    */
-  protected int failedDeserializationMode;
+  public void serialize(File outputFile,
+                        LockssSerializable obj)
+      throws SerializationException,
+             InterruptedIOException {
+    throwIfNull(obj);
+    serialize(outputFile, (Object)obj);
+  }
 
   /**
-   * <p>Returns this instance's failed deserialization mode.</p>
-   * @return The current failed deserialization mode for this
-   *         instance.
-   * @see #PARAM_FAILED_DESERIALIZATION_MODE
+   * <p>Convenience method to marshal a Java object to an XML file
+   * that accepts a {@link File} instead of a {@link Writer}.</p>
+   * <p>The result of serializing an object with a file must be the
+   * same as serializing it with a {@link Writer} on the same
+   * file.</p>
+   * @param outputFile A {@link File} instance representing the file
+   *                   into which the object is to be serialized.
+   * @param obj An object to be serialized.
+   * @throws NullPointerException   if obj is null.
+   * @throws SerializationException if input or output fails.
+   * @throws InterruptedIOException if input or output is
+   *                                interrupted.
+   * @see #serialize(File, Object)
    */
-  public int getFailedDeserializationMode() {
-    return failedDeserializationMode;
+  public void serialize(File outputFile,
+                        Serializable obj)
+      throws SerializationException,
+             InterruptedIOException {
+    throwIfNull(obj);
+    serialize(outputFile, (Object)obj);
+  }
+
+  /**
+   * <p>Convenience method to marshal a Java object to an XML file
+   * that accepts a file name instead of a {@link Writer}.</p>
+   * <p>The result of serializing an object with a filename must be
+   * the same as serializing it with a {@link Writer} on the same
+   * filename.</p>
+   * @param outputFilename A file name representing the file into
+   *                       which the object is to be serialized.
+   * @param obj An object to be serialized.
+   * @throws NullPointerException   if obj is null.
+   * @throws SerializationException if input or output fails.
+   * @throws InterruptedIOException if input or output is
+   *                                interrupted.
+   * @see #serialize(String, Object)
+   */
+  public void serialize(String outputFilename,
+                        LockssSerializable obj)
+      throws SerializationException,
+             InterruptedIOException {
+    throwIfNull(obj);
+    serialize(outputFilename, (Object)obj);
+  }
+
+  /**
+   * <p>Convenience method to marshal a Java object to an XML file
+   * that accepts a file name instead of a {@link Writer}.</p>
+   * <p>The result of serializing an object with a filename must be
+   * the same as serializing it with a {@link Writer} on the same
+   * filename.</p>
+   * @param outputFilename A file name representing the file into
+   *                       which the object is to be serialized.
+   * @param obj An object to be serialized.
+   * @throws NullPointerException   if obj is null.
+   * @throws SerializationException if input or output fails.
+   * @throws InterruptedIOException if input or output is
+   *                                interrupted.
+   * @see #serialize(String, Object)
+   */
+  public void serialize(String outputFilename,
+                        Serializable obj)
+      throws SerializationException,
+             InterruptedIOException {
+    serialize(outputFilename, (Object)obj);
+    throwIfNull(obj);
   }
 
   /**
@@ -403,11 +417,145 @@ public abstract class ObjectSerializer {
     }
   }
 
-  protected void maybeDelTempFile(File file) {
-    if (!getFailedSerializationMode()) {
-      logger.warning("Deleting unsuccessful serialization file " + file);
-      file.delete();
+  /**
+   * <p>Sets the failed serialization mode for this instance.</p>
+   * @param saveTempFiles A failed serialization mode.
+   * @see #PARAM_FAILED_SERIALIZATION_MODE
+   */
+  public void setFailedSerializationMode(boolean saveTempFiles) {
+    failedSerializationMode = saveTempFiles;
+  }
+
+  /**
+   * <p>Sets the serialization read back mode for this instance.</p>
+   * @param serializationReadBack A serialization read back mode.
+   * @see #PARAM_SERIALIZATION_READ_BACK
+   */
+  public void setSerializationReadBackMode(boolean serializationReadBack) {
+    serializationReadBackMode = serializationReadBack;
+  }
+
+  /**
+   * <p>An exception message formatter used when deserialization
+   * fails.</p>
+   * @param cause The exception thrown.
+   */
+  protected SerializationException failDeserialize(Exception cause)
+      throws InterruptedIOException {
+    // Throw InterruptedIOException if cause is InterruptedIOException
+    throwIfInterrupted(cause);
+
+    StringBuffer buffer = new StringBuffer();
+    buffer.append("Failed to deserialize an object (");
+    buffer.append(cause.getClass().getName());
+    buffer.append(")");
+    String str = buffer.toString();
+    logger.debug(str, cause);
+
+    return new SerializationException(str, cause);
+  }
+
+  /**
+   * <p>An exception message formatter used when deserialization
+   * fails and the original file is known.</p>
+   * @param exc  The exception thrown.
+   * @param file The file that was being read.
+   */
+  protected SerializationException failDeserialize(Exception exc,
+                                                   File file)
+      throws InterruptedIOException {
+    // Throw InterruptedIOException if cause is InterruptedIOException
+    throwIfInterrupted(exc);
+
+    StringBuffer buffer = new StringBuffer();
+    buffer.append("Failed to deserialize an object from ");
+    buffer.append(file);
+    buffer.append(" (");
+    buffer.append(exc.getClass().getName());
+    buffer.append("); the file ");
+
+    // Take action
+    switch (getFailedDeserializationMode()) {
+
+      // Ignore
+      case FAILED_DESERIALIZATION_IGNORE:
+        buffer.append("was left alone");
+        break;
+
+      // Rename
+      case FAILED_DESERIALIZATION_RENAME:
+        String renamed = file + CurrentConfig.getParam(PARAM_FAILED_DESERIALIZATION_EXTENSION,
+                                                       DEFAULT_FAILED_DESERIALIZATION_EXTENSION);
+        boolean success = file.renameTo(new File(renamed));
+        if (success) {
+          // Rename succeeded
+          buffer.append("was renamed ");
+          buffer.append(renamed);
+        }
+        else {
+          // Rename failed
+          logger.error("Failed to rename from " + file + " to " + renamed);
+          buffer.append("could not be renamed ");
+          buffer.append(renamed);
+          return new SerializationException.RenameFailed(buffer.toString(), exc);
+        }
+        break;
+
+      // Copy
+      case FAILED_DESERIALIZATION_COPY:
+        String copied = file
+                        + CurrentConfig.getParam(PARAM_FAILED_DESERIALIZATION_EXTENSION,
+                                                 DEFAULT_FAILED_DESERIALIZATION_EXTENSION)
+                        + "."
+                        + Long.toString(System.currentTimeMillis());
+        try {
+          InputStream inputStream = new FileInputStream(file);
+          OutputStream outputStream = new FileOutputStream(copied);
+          StreamUtil.copy(inputStream, outputStream);
+          IOUtil.safeClose(inputStream);
+          outputStream.close();
+          // Copy succeeded
+          buffer.append("was copied to ");
+          buffer.append(copied);
+        }
+        catch (IOException ioe) {
+          // Copy failed
+          logger.error("Failed to copy from " + file + " to " + copied);
+          buffer.append("could not be copied to ");
+          buffer.append(copied);
+          return new SerializationException.CopyFailed(buffer.toString(), exc);
+        }
+        break;
+
+      // Safety net
+      default:
+        logger.error("Invalid failed deserialization mode: " + getFailedDeserializationMode());
+        buffer.append("--- Invalid failed deserialization mode: " + getFailedDeserializationMode());
+        break;
     }
+
+    // Log and return a new SerializationException
+    String str = buffer.toString();
+    logger.debug(str, exc);
+    return new SerializationException(str, exc);
+  }
+
+  protected SerializationException failSerialize(String errorString,
+                                                 Exception cause,
+                                                 SerializationException consequence)
+      throws InterruptedIOException {
+    throwIfInterrupted(cause);
+    logger.error(errorString, cause);
+    return consequence;
+  }
+
+  protected SerializationException failSerialize(String errorString,
+                                                 Exception cause,
+                                                 SerializationException consequence,
+                                                 File temporaryFile)
+      throws InterruptedIOException {
+    maybeDelTempFile(temporaryFile);
+    return failSerialize(errorString, cause, consequence);
   }
 
   /**
@@ -416,6 +564,13 @@ public abstract class ObjectSerializer {
    */
   protected LockssApp getLockssContext() {
     return lockssContext;
+  }
+
+  protected void maybeDelTempFile(File file) {
+    if (!getFailedSerializationMode()) {
+      logger.warning("Deleting unsuccessful serialization file " + file);
+      file.delete();
+    }
   }
 
   /**
@@ -449,9 +604,10 @@ public abstract class ObjectSerializer {
                                                      outputFile.getParentFile());
     }
     catch (IOException ioe) {
-      throw failSerialize("IOException while setting up temporary serialization file",
+      String errorString = "IOException while setting up temporary serialization file";
+      throw failSerialize(errorString,
                           ioe,
-                          new SerializationException(ioe));
+                          new SerializationException(errorString, ioe));
     }
 
     // Create stream
@@ -460,9 +616,10 @@ public abstract class ObjectSerializer {
       outputStream = new FileOutputStream(temporaryFile);
     }
     catch (IOException ioe) {
-      throw failSerialize("IOException while setting up serialization stream",
+      String errorString = "IOException while setting up serialization stream";
+      throw failSerialize(errorString,
                           ioe,
-                          new SerializationException(ioe),
+                          new SerializationException(errorString, ioe),
                           temporaryFile);
     }
     catch (RuntimeException re) {
@@ -480,10 +637,11 @@ public abstract class ObjectSerializer {
       throwIfInterrupted(iioe);
     }
     catch (SerializationException se) {
+      String errorString = "Failed to serialize an object of type " + obj.getClass().getName();
       IOUtil.safeClose(outputStream);
-      throw failSerialize("Failed to serialize an object of type " + obj.getClass().getName(),
+      throw failSerialize(errorString,
                           se,
-                          new SerializationException(se),
+                          new SerializationException(errorString, se),
                           temporaryFile);
     }
     catch (RuntimeException re) {
@@ -505,6 +663,35 @@ public abstract class ObjectSerializer {
     catch (RuntimeException re) {
       maybeDelTempFile(temporaryFile);
       throw re;
+    }
+
+    // Read back
+    if (serializationReadBackMode) {
+      String errorString = "Read back failed; malformed XML presumably written to " + temporaryFile;
+      try {
+        DocumentBuilderFactory builderFactory = new LockssDocumentBuilderFactoryImpl();
+        DocumentBuilder builder = builderFactory.newDocumentBuilder();
+        builder.parse(temporaryFile);
+      }
+      catch (ParserConfigurationException pce) {
+        throw failSerialize(errorString,
+                            pce,
+                            new SerializationException.ReadBackFailed(errorString, pce));
+      }
+      catch (SAXException se) {
+        throw failSerialize(errorString,
+                            se,
+                            new SerializationException.ReadBackFailed(errorString, se));
+      }
+      catch (IOException ioe) {
+        throw failSerialize(errorString,
+                            ioe,
+                            new SerializationException.ReadBackFailed(errorString, ioe));
+      }
+      catch (RuntimeException re) {
+        maybeDelTempFile(temporaryFile);
+        throw re;
+      }
     }
 
     // Rename temporary file
@@ -706,229 +893,6 @@ public abstract class ObjectSerializer {
   }
 
   /**
-   * <p>A configuration prefix for serialization classes.</p>
-   */
-  public static final String PREFIX = Configuration.PREFIX + "serialization.";
-
-  /**
-   * <p>This mode controls what happens when a file being deserialized
-   * causes the deserialization to fail. It does not apply to
-   * deserialization at the {@link InputStream} or {@link Reader}
-   * level.</p>
-   * <p>The possible values are:</p>
-   * <dl>
-   *  <dt>{@link #FAILED_DESERIALIZATION_IGNORE}</dt>
-   *  <dd>Ignore, that is do not do anything specific to remember
-   *  the current state other than logging and throwing an
-   *  exception. (Not recommended.)</dd>
-   *  <dt>{@link #FAILED_DESERIALIZATION_RENAME}</dt>
-   *  <dd>Rename the faulty input file (in the same directory).</dd>
-   *  <dt>{@link #FAILED_DESERIALIZATION_COPY}</dt>
-   *  <dd>Copy the faulty input file (int the same directory).</dd>
-   * </dl>
-   * @see #FAILED_DESERIALIZATION_COPY
-   * @see #FAILED_DESERIALIZATION_IGNORE
-   * @see #FAILED_DESERIALIZATION_RENAME
-   * @see #getFailedDeserializationMode
-   * @see #setFailedDeserializationMode
-   */
-  public static final String PARAM_FAILED_DESERIALIZATION_MODE = PREFIX + "failedDeserializationMode";
-
-  /**
-   * <p>A value for {@link #PARAM_FAILED_DESERIALIZATION_MODE}.</p>
-   * @see #PARAM_FAILED_DESERIALIZATION_MODE
-   */
-  public static final int FAILED_DESERIALIZATION_COPY = 1;
-
-  /**
-   * <p>A value for {@link #PARAM_FAILED_DESERIALIZATION_MODE}.</p>
-   * @see #PARAM_FAILED_DESERIALIZATION_MODE
-   */
-  public static final int FAILED_DESERIALIZATION_IGNORE = 2;
-
-  /**
-   * <p>A value for {@link #PARAM_FAILED_DESERIALIZATION_MODE}.</p>
-   * @see #PARAM_FAILED_DESERIALIZATION_MODE
-   */
-  public static final int FAILED_DESERIALIZATION_RENAME = 3;
-
-  /**
-   * <p>The default value for
-   * {@link #PARAM_FAILED_DESERIALIZATION_MODE}.</p>
-   * @see #PARAM_FAILED_DESERIALIZATION_MODE
-   */
-  public static final int DEFAULT_FAILED_DESERIALIZATION_MODE = FAILED_DESERIALIZATION_RENAME;
-
-  /**
-   * <p>The extension appended to files being renamed when the failed
-   * deserialization mode is
-   * {@link #FAILED_DESERIALIZATION_RENAME}.</p>
-   * @see #PARAM_FAILED_DESERIALIZATION_MODE
-   */
-  public static final String PARAM_FAILED_DESERIALIZATION_EXTENSION = PREFIX + "failedDeserializationExtension";
-
-  /**
-   * <p>The default value for
-   * {@link #PARAM_FAILED_DESERIALIZATION_EXTENSION}.</p>
-   * @see #PARAM_FAILED_DESERIALIZATION_EXTENSION
-   */
-  public static final String DEFAULT_FAILED_DESERIALIZATION_EXTENSION = ".deser.old";
-
-  /**
-   * <p>The extension appended to files being renamed when
-   * {@link #PARAM_FAILED_SERIALIZATION_MODE} is true.</p>
-   * @see #PARAM_FAILED_SERIALIZATION_MODE
-   */
-  public static final String PARAM_TEMPFILE_SERIALIZATION_EXTENSION = PREFIX + "failedSerializationExtension";
-
-  /**
-   * <p>The default value for
-   * {@link #PARAM_TEMPFILE_SERIALIZATION_EXTENSION}.</p>
-   * @see #PARAM_TEMPFILE_SERIALIZATION_EXTENSION
-   */
-  public static final String DEFAULT_TEMPFILE_SERIALIZATION_EXTENSION = ".ser.tmp";
-
-  /**
-   * <p>Set true to keep temporary serialization files that either
-   * are not successfully written or cannot be renamed. Normally they
-   * are deleted.</p>
-   */
-  public static final String PARAM_FAILED_SERIALIZATION_MODE = PREFIX + "saveFailedTempSerializationFiles";
-
-  /**
-   * <p>The default value for {@link #PARAM_FAILED_SERIALIZATION_MODE}.</p>
-   */
-  public static final boolean DEFAULT_FAILED_SERIALIZATION_MODE = false;
-
-  /**
-   * <p>A logger for use by this serializer.</p>
-   */
-  protected static Logger logger = Logger.getLogger("ObjectSerializer");
-
-  /**
-   * <p>An exception message formatter used when deserialization
-   * fails.</p>
-   * @param cause The exception thrown.
-   */
-  protected SerializationException failDeserialize(Exception cause)
-      throws InterruptedIOException {
-    // Throw InterruptedIOException if cause is InterruptedIOException
-    throwIfInterrupted(cause);
-
-    StringBuffer buffer = new StringBuffer();
-    buffer.append("Failed to deserialize an object (");
-    buffer.append(cause.getClass().getName());
-    buffer.append(")");
-    String str = buffer.toString();
-    logger.debug(str, cause);
-
-    return new SerializationException(str, cause);
-  }
-
-  /**
-   * <p>An exception message formatter used when deserialization
-   * fails and the original file is known.</p>
-   * @param exc  The exception thrown.
-   * @param file The file that was being read.
-   */
-  protected SerializationException failDeserialize(Exception exc,
-                                                   File file)
-      throws InterruptedIOException {
-    // Throw InterruptedIOException if cause is InterruptedIOException
-    throwIfInterrupted(exc);
-
-    StringBuffer buffer = new StringBuffer();
-    buffer.append("Failed to deserialize an object from ");
-    buffer.append(file);
-    buffer.append(" (");
-    buffer.append(exc.getClass().getName());
-    buffer.append("); the file ");
-
-    // Take action
-    switch (getFailedDeserializationMode()) {
-
-      // Ignore
-      case FAILED_DESERIALIZATION_IGNORE:
-        buffer.append("was left alone");
-        break;
-
-      // Rename
-      case FAILED_DESERIALIZATION_RENAME:
-        String renamed = file + CurrentConfig.getParam(PARAM_FAILED_DESERIALIZATION_EXTENSION,
-                                                       DEFAULT_FAILED_DESERIALIZATION_EXTENSION);
-        boolean success = file.renameTo(new File(renamed));
-        if (success) {
-          // Rename succeeded
-          buffer.append("was renamed ");
-          buffer.append(renamed);
-        }
-        else {
-          // Rename failed
-          logger.error("Failed to rename from " + file + " to " + renamed);
-          buffer.append("could not be renamed ");
-          buffer.append(renamed);
-          return new SerializationException.RenameFailed(buffer.toString(), exc);
-        }
-        break;
-
-      // Copy
-      case FAILED_DESERIALIZATION_COPY:
-        String copied = file
-                        + CurrentConfig.getParam(PARAM_FAILED_DESERIALIZATION_EXTENSION,
-                                                 DEFAULT_FAILED_DESERIALIZATION_EXTENSION)
-                        + "."
-                        + Long.toString(System.currentTimeMillis());
-        try {
-          InputStream inputStream = new FileInputStream(file);
-          OutputStream outputStream = new FileOutputStream(copied);
-          StreamUtil.copy(inputStream, outputStream);
-          IOUtil.safeClose(inputStream);
-          outputStream.close();
-          // Copy succeeded
-          buffer.append("was copied to ");
-          buffer.append(copied);
-        }
-        catch (IOException ioe) {
-          // Copy failed
-          logger.error("Failed to copy from " + file + " to " + copied);
-          buffer.append("could not be copied to ");
-          buffer.append(copied);
-          return new SerializationException.CopyFailed(buffer.toString(), exc);
-        }
-        break;
-
-      // Safety net
-      default:
-        logger.error("Invalid failed deserialization mode: " + getFailedDeserializationMode());
-        buffer.append("--- Invalid failed deserialization mode: " + getFailedDeserializationMode());
-        break;
-    }
-
-    // Log and return a new SerializationException
-    String str = buffer.toString();
-    logger.debug(str, exc);
-    return new SerializationException(str, exc);
-  }
-
-  protected SerializationException failSerialize(String errorString,
-                                                 Exception cause,
-                                                 SerializationException consequence,
-                                                 File temporaryFile)
-      throws InterruptedIOException {
-    maybeDelTempFile(temporaryFile);
-    return failSerialize(errorString, cause, consequence);
-  }
-
-  protected SerializationException failSerialize(String errorString,
-                                                 Exception cause,
-                                                 SerializationException consequence)
-      throws InterruptedIOException {
-    throwIfInterrupted(cause);
-    logger.error(errorString, cause);
-    return consequence;
-  }
-
-  /**
    * <p>Throws an {@link InterruptedIOException} if the argument is or
    * has a nested {@link InterruptedIOException}.</p>
    * @param exc The exception thrown.
@@ -959,5 +923,121 @@ public abstract class ObjectSerializer {
       throw new NullPointerException();
     }
   }
+
+  /**
+   * <p>A configuration prefix for serialization classes.</p>
+   */
+  public static final String PREFIX = Configuration.PREFIX + "serialization.";
+
+  /**
+   * <p>A value for {@link #PARAM_FAILED_DESERIALIZATION_MODE}.</p>
+   * @see #PARAM_FAILED_DESERIALIZATION_MODE
+   */
+  public static final int FAILED_DESERIALIZATION_COPY = 1;
+
+  /**
+   * <p>A value for {@link #PARAM_FAILED_DESERIALIZATION_MODE}.</p>
+   * @see #PARAM_FAILED_DESERIALIZATION_MODE
+   */
+  public static final int FAILED_DESERIALIZATION_IGNORE = 2;
+
+  /**
+   * <p>A value for {@link #PARAM_FAILED_DESERIALIZATION_MODE}.</p>
+   * @see #PARAM_FAILED_DESERIALIZATION_MODE
+   */
+  public static final int FAILED_DESERIALIZATION_RENAME = 3;
+
+  /**
+   * <p>The default value for
+   * {@link #PARAM_FAILED_DESERIALIZATION_EXTENSION}.</p>
+   * @see #PARAM_FAILED_DESERIALIZATION_EXTENSION
+   */
+  public static final String DEFAULT_FAILED_DESERIALIZATION_EXTENSION = ".deser.old";
+
+  /**
+   * <p>The default value for
+   * {@link #PARAM_FAILED_DESERIALIZATION_MODE}.</p>
+   * @see #PARAM_FAILED_DESERIALIZATION_MODE
+   */
+  public static final int DEFAULT_FAILED_DESERIALIZATION_MODE = FAILED_DESERIALIZATION_RENAME;
+
+  /**
+   * <p>The default value for
+   * {@link #PARAM_FAILED_SERIALIZATION_MODE}.</p>
+   * @see #PARAM_FAILED_SERIALIZATION_MODE
+   */
+  public static final boolean DEFAULT_FAILED_SERIALIZATION_MODE = false;
+
+  /**
+   * <p>The default value for
+   * {@link #PARAM_SERIALIZATION_READ_BACK}.</p>
+   * @see #PARAM_SERIALIZATION_READ_BACK
+   */
+  public static final boolean DEFAULT_SERIALIZATION_READ_BACK = false;
+
+  /**
+   * <p>The default value for
+   * {@link #PARAM_TEMPFILE_SERIALIZATION_EXTENSION}.</p>
+   * @see #PARAM_TEMPFILE_SERIALIZATION_EXTENSION
+   */
+  public static final String DEFAULT_TEMPFILE_SERIALIZATION_EXTENSION = ".ser.tmp";
+
+  /**
+   * <p>The extension appended to files being renamed when the failed
+   * deserialization mode is
+   * {@link #FAILED_DESERIALIZATION_RENAME}.</p>
+   * @see #PARAM_FAILED_DESERIALIZATION_MODE
+   */
+  public static final String PARAM_FAILED_DESERIALIZATION_EXTENSION = PREFIX + "failedDeserializationExtension";
+
+  /**
+   * <p>This mode controls what happens when a file being deserialized
+   * causes the deserialization to fail. It does not apply to
+   * deserialization at the {@link InputStream} or {@link Reader}
+   * level.</p>
+   * <p>The possible values are:</p>
+   * <dl>
+   *  <dt>{@link #FAILED_DESERIALIZATION_IGNORE}</dt>
+   *  <dd>Ignore, that is do not do anything specific to remember
+   *  the current state other than logging and throwing an
+   *  exception. (Not recommended.)</dd>
+   *  <dt>{@link #FAILED_DESERIALIZATION_RENAME}</dt>
+   *  <dd>Rename the faulty input file (in the same directory).</dd>
+   *  <dt>{@link #FAILED_DESERIALIZATION_COPY}</dt>
+   *  <dd>Copy the faulty input file (int the same directory).</dd>
+   * </dl>
+   * @see #FAILED_DESERIALIZATION_COPY
+   * @see #FAILED_DESERIALIZATION_IGNORE
+   * @see #FAILED_DESERIALIZATION_RENAME
+   * @see #getFailedDeserializationMode
+   * @see #setFailedDeserializationMode
+   */
+  public static final String PARAM_FAILED_DESERIALIZATION_MODE = PREFIX + "failedDeserializationMode";
+
+  /**
+   * <p>Set true to keep temporary serialization files that either
+   * are not successfully written or cannot be renamed. Normally they
+   * are deleted.</p>
+   */
+  public static final String PARAM_FAILED_SERIALIZATION_MODE = PREFIX + "saveFailedTempSerializationFiles";
+
+  /**
+   * <p>Set true to read back the XML written to files and throw
+   * a {@link SerializationException.ReadBackFailed} exception if it
+   * seems malformed.</p>
+   */
+  public static final String PARAM_SERIALIZATION_READ_BACK = PREFIX + "serializationReadBack";
+
+  /**
+   * <p>The extension appended to files being renamed when
+   * {@link #PARAM_FAILED_SERIALIZATION_MODE} is true.</p>
+   * @see #PARAM_FAILED_SERIALIZATION_MODE
+   */
+  public static final String PARAM_TEMPFILE_SERIALIZATION_EXTENSION = PREFIX + "failedSerializationExtension";
+
+  /**
+   * <p>A logger for use by this serializer.</p>
+   */
+  private static Logger logger = Logger.getLogger("ObjectSerializer");
 
 }

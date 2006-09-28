@@ -1,5 +1,5 @@
 /*
- * $Id: ObjectSerializerTester.java,v 1.10 2006-09-28 02:09:17 tlipkis Exp $
+ * $Id: ObjectSerializerTester.java,v 1.11 2006-09-28 05:12:00 thib_gc Exp $
  */
 
 /*
@@ -806,11 +806,21 @@ public abstract class ObjectSerializerTester extends XMLTestCase {
         ObjectSerializer.FAILED_DESERIALIZATION_RENAME,
     };
 
-    ObjectSerializer[] serializers = new ObjectSerializer[serModes.length * deserModes.length];
+    // Serialization read back modes
+    boolean[] readBackModes = new boolean[] {
+        false,
+        true,
+    };
+
+    ObjectSerializer[] serializers = new ObjectSerializer[serModes.length * deserModes.length * readBackModes.length];
     int ix = 0;
     for (int serMode = 0 ; serMode < serModes.length ; ++serMode) {
       for (int deserMode = 0 ; deserMode < deserModes.length ; ++deserMode) {
-        serializers[ix++] = makeObjectSerializer_ExtMapBean(serModes[serMode], deserModes[deserMode]);
+        for (int readBackMode = 0 ; readBackMode < readBackModes.length ; ++readBackMode) {
+          serializers[ix] = makeObjectSerializer_ExtMapBean(serModes[serMode], deserModes[deserMode]);
+          serializers[ix].setSerializationReadBackMode(readBackModes[readBackMode]);
+          ++ix;
+        }
       }
     }
 
@@ -819,7 +829,7 @@ public abstract class ObjectSerializerTester extends XMLTestCase {
 
   /**
    * <p>Prepares a set of serializers configured each differently as
-   * appropriate for the class being tested, usually inteded to mean
+   * appropriate for the class being tested, usually intended to mean
    * a combinatorial arrangement of all possible configurations.</p>
    * @return An array fo {@link ObjectSerializer} instances.
    * @see #getMinimalObjectSerializers_ExtMapBean

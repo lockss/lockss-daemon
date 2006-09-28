@@ -1,5 +1,5 @@
 /*
- * $Id: CastorSerializer.java,v 1.9 2006-05-31 17:54:49 thib_gc Exp $
+ * $Id: CastorSerializer.java,v 1.10 2006-09-28 05:12:00 thib_gc Exp $
  */
 
 /*
@@ -305,17 +305,17 @@ public class CastorSerializer extends ObjectSerializer {
     catch (IOException ioe) {
       throw failSerialize(errorString,
                          ioe,
-                         new SerializationException(errorString));
+                         new SerializationException(errorString, ioe));
     }
     catch (MappingException mappingEx) {
       throw failSerialize(errorString,
                           mappingEx,
-                          new SerializationException(errorString));
+                          new SerializationException(errorString, mappingEx));
     }
     catch (CastorException ce) {
       throw failSerialize(errorString,
                           ce,
-                          new SerializationException(errorString));
+                          new SerializationException(errorString, ce));
     }
     catch (RuntimeException re) {
       /*
