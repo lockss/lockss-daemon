@@ -17,11 +17,8 @@
       <string>4,&quot;^%s&quot;, base_url</string>
       <string>1,&quot;%ssgp/news/secrecy/%d/index.html&quot;, base_url, year</string>
       <string>1,&quot;%ssgp/news/secrecy/%d/.*&quot;, base_url, year</string>
-      <string>2,&quot;%ssgp/news/secrecy/[0-9]+.*&quot;, base_url</string>
-      <string>1,&quot;%sirp/.*&quot;, base_url</string>
-      <string>1,&quot;%sman/.*&quot;, base_url</string>
-      <string>1,&quot;%snuke/.*&quot;, base_url</string>
-      <string>1,&quot;.*\.pdf&quot;</string>
+      <string>1,&quot;\.([Pp][Dd][Ff]|[Gg][Ii][Ff]|[Jj][Pp][Ee][Gg]|[Jj][Pp][Gg]|[Cc][Ss][Ss]|[Pp][Nn][Gg])$&quot;</string>
+      <string>1,&quot;%d&quot;, year</string>
     </list>
   </entry>
   <entry>
