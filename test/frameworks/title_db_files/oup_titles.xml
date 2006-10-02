@@ -1556,17 +1556,17 @@
       <property name="attributes.publisher" value="oup" />
     </property>
     
-    <property name="EnglishHistoricalReview491">
-      <property name="title" value="English Historical Review Volume 491" />
+    <property name="EnglishHistoricalReviewCXXI">
+      <property name="title" value="English Historical Review Volume CXXI" />
       <property name="journalTitle" value="English Historical Review" />
-      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://ehr.oxfordjournals.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="volume" />
-	<property name="value" value="491" />
+	<property name="key" value="volume_name" />
+	<property name="value" value="CXXI" />
       </property>
       <property name="attributes.publisher" value="oup" />
     </property>
