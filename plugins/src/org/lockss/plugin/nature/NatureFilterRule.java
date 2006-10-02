@@ -1,5 +1,5 @@
 /*
- * $Id: NatureFilterRule.java,v 1.1 2006-09-19 22:28:22 troberts Exp $
+ * $Id: NatureFilterRule.java,v 1.2 2006-10-02 23:49:40 troberts Exp $
  */
 
 /*
@@ -42,6 +42,8 @@ public class NatureFilterRule implements FilterRule {
   public Reader createFilteredReader(Reader reader) {
 
     List tagList = ListUtil.list(
+                    new HtmlTagFilter.TagPair("<!-- end content -->", 
+					      "</html>", true),
                     new HtmlTagFilter.TagPair("<!--", "-->", true),
 		    new HtmlTagFilter.TagPair("<script", "</script>", true),
 		    new HtmlTagFilter.TagPair("<", ">")
