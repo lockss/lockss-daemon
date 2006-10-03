@@ -123,6 +123,8 @@ public class DiskVoteBlocks extends BaseVoteBlocks {
       log.warning("Unable to find block " + i + " while seeking "
                   + "DiskVoteBlocks file " + filePath);
       return null;
+    } finally {
+      IOUtil.safeClose(fis);
     }
   }
 
