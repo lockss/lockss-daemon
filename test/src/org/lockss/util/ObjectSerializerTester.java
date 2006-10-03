@@ -1,5 +1,5 @@
 /*
- * $Id: ObjectSerializerTester.java,v 1.11 2006-09-28 05:12:00 thib_gc Exp $
+ * $Id: ObjectSerializerTester.java,v 1.12 2006-10-03 05:47:29 thib_gc Exp $
  */
 
 /*
@@ -41,7 +41,6 @@ import org.custommonkey.xmlunit.XMLUnit;
 import org.lockss.config.CurrentConfig;
 import org.lockss.test.*;
 import org.lockss.util.SerializationException;
-import org.lockss.util.SerializationException.FileNotFound;
 
 /**
  * <p>Tests the {@link org.lockss.util.ObjectSerializer} abstract
@@ -199,6 +198,253 @@ public abstract class ObjectSerializerTester extends XMLTestCase {
                      ((ExtMapBean)actions[action].result2).getMap());
       }
     }
+  }
+
+  /**
+   * <p>Tests that the deserializer behaves appropriately for its
+   * mode when deserialization fails.</p>
+   * @throws Exception if an unexpected or unhandled problem arises.
+   */
+  public void testFailedDeserializationMode() throws Exception {
+
+    // Define variant actions
+    RememberFile[] actions = new RememberFile[] {
+        // With a File
+        new RememberFile() {
+          public void doSomething(ObjectSerializer serializer) throws Exception {
+            serializer.deserialize(file);
+          }
+        },
+        // With a String
+        new RememberFile() {
+          public void doSomething(ObjectSerializer serializer) throws Exception {
+            serializer.deserialize(file.toString());
+          }
+        },
+    };
+
+    // For each variant action...
+    for (int action = 0 ; action < actions.length ; ++action) {
+      logger.debug("Begin with action " + action);
+
+      // For each type of deserializer...
+      ObjectSerializer[] deserializers = getObjectSerializers_ExtMapBean();
+      for (int deserializer = 0 ; deserializer < deserializers.length ; ++deserializer) {
+        logger.debug("Begin with deserializer " + deserializer);
+
+        try {
+          // Create a bad input file
+          actions[action].file = File.createTempFile("testfile", ".xml");
+          actions[action].file.deleteOnExit();
+          FileWriter writer = new FileWriter(actions[action].file);
+          writer.write("BAD INPUT");
+          writer.close();
+
+          // Perform variant action
+          actions[action].doSomething(deserializers[deserializer]);
+          fail("Should have thrown SerializationException ("
+               + action + "," + deserializer + ")");
+        }
+        catch (SerializationException ignore) {
+          // success; keep going
+        }
+
+        // Verify results
+        switch (deserializers[deserializer].getFailedDeserializationMode()) {
+          case ObjectSerializer.FAILED_DESERIALIZATION_COPY:
+            File[] files = actions[action].file.getParentFile().listFiles();
+            File copy = null;
+            for (int file = 0 ; file < files.length ; ++file) {
+              String candidate = files[file].toString();
+              if (!candidate.startsWith(actions[action].file.toString())) {
+                continue; // not the right file
+              }
+              if (!StringUtils.contains(candidate,
+                                        CurrentConfig.getParam(ObjectSerializer.PARAM_FAILED_DESERIALIZATION_EXTENSION,
+                                                               ObjectSerializer.DEFAULT_FAILED_DESERIALIZATION_EXTENSION))) {
+                continue; // not the right file
+              }
+              String timestamp = StringUtils.substringAfterLast(candidate, ".");
+              if (StringUtil.isNullString(timestamp)) {
+                continue; // not the right file
+              }
+              try {
+                long time = Long.parseLong(timestamp);
+              }
+              catch (NumberFormatException nfe) {
+                continue; // not the right file
+              }
+              copy = files[file]; // right file found
+              break;
+            }
+            assertNotNull("FAILED_DESERIALIZATION_COPY: copy not found ("
+                          + action + "," + deserializer + ")",
+                          copy);
+            copy.deleteOnExit(); // clean up
+            assertTrue("FAILED_DESERIALIZATION_COPY: copy does not match ("
+                       + action + "," + deserializer + ")",
+                       FileUtil.isContentEqual(actions[action].file, copy));
+            break;
+          case ObjectSerializer.FAILED_DESERIALIZATION_IGNORE:
+            // nothing; keep going
+            break;
+          case ObjectSerializer.FAILED_DESERIALIZATION_RENAME:
+            File rename = new File(actions[action].file.toString()
+                                   + CurrentConfig.getParam(ObjectSerializer.PARAM_FAILED_DESERIALIZATION_EXTENSION,
+                                                            ObjectSerializer.DEFAULT_FAILED_DESERIALIZATION_EXTENSION));
+            assertTrue("FAILED_DESERIALIZATION_RENAME: renamed file did not exist ("
+                       + action + "," + deserializer + ")",
+                       rename.exists());
+            rename.deleteOnExit(); // clean up
+            break;
+          default: // shouldn't happen
+            fail("Unexpected failed deserialization mode ("
+                 + action + "," + deserializer + ")");
+            break;
+        }
+      }
+    }
+
+  }
+
+  /**
+   * <p>Tests that the deserializer behaves appropriately for its
+   * mode when serialization fails.</p>
+   * @throws Exception if an unexpected or unhandled problem arises.
+   */
+  public void testFailedSerializationMode() throws Exception {
+
+    // Define a rogue file factory
+    class RenameFails implements ObjectSerializer.TempFileFactory {
+      protected RememberFile action;
+      public RenameFails(RememberFile action) {
+        this.action = action;
+      }
+      public File createTempFile(String prefix, String suffix, File directory) throws IOException {
+        File tmp = File.createTempFile(prefix, suffix, directory);
+        tmp.deleteOnExit();
+        action.file = new File(tmp.toString()) {
+          public boolean renameTo(File dest) {
+            return false; // fail
+          }
+        };
+        return action.file;
+      }
+    }
+
+    // Make a sample object
+    final ExtMapBean obj = makeSample_ExtMapBean();
+
+    // Define variant actions
+    RememberFile[] actions = new RememberFile[] {
+        // With a File
+        new RememberFile() {
+          public void doSomething(ObjectSerializer serializer) throws Exception {
+            serializer.tempFileFactory = new RenameFails(this);
+            File tempFile = File.createTempFile("testfile", ".xml");
+            tempFile.deleteOnExit();
+            serializer.serialize(tempFile, obj);
+          }
+        },
+        // With a String
+        new RememberFile() {
+          public void doSomething(ObjectSerializer serializer) throws Exception {
+            serializer.tempFileFactory = new RenameFails(this);
+            File tempFile = File.createTempFile("testfile", ".xml");
+            tempFile.deleteOnExit();
+            serializer.serialize(tempFile.toString(), obj);
+          }
+        },
+    };
+
+    // For each variant action...
+    for (int action = 0 ; action < actions.length ; ++action) {
+      logger.debug("Begin with action " + action);
+
+      // For each type of serializer...
+      ObjectSerializer[] serializers = getObjectSerializers_ExtMapBean();
+      for (int serializer = 0 ; serializer < serializers.length ; ++serializer) {
+        logger.debug("Begin with serializer " + serializer);
+
+        try {
+          // Perform variant action
+          actions[action].doSomething(serializers[serializer]);
+          fail("Should have thrown SerializationException.RenameFailed ("
+               + action + "," + serializer + ")");
+        }
+        catch (SerializationException.RenameFailed ignore) {
+          // success; keep going
+        }
+
+        // Verify results
+        assertEquals(serializers[serializer].getFailedSerializationMode(),
+                     actions[action].file.exists());
+      }
+    }
+
+  }
+
+  /**
+   * <p>Tests the serializer throws a {@link SerializationException}
+   * when serializing into a file but creating temporary files
+   * fails.</p>
+   * @throws Exception if an unexpected or unhandled problem arises.
+   */
+  public void testHandlesCannotCreateTempFile() throws Exception {
+
+    // Define a rogue file factory
+    final ObjectSerializer.TempFileFactory createTempFileFails = new ObjectSerializer.TempFileFactory() {
+      public File createTempFile(String prefix, String suffix, File directory) throws IOException {
+        throw new IOException("This is a fake IOException"); // fail
+      }
+    };
+
+    // Make a sample object
+    final ExtMapBean obj = makeSample_ExtMapBean();
+
+    // Define variant actions
+    DoSomething[] actions = new DoSomething[] {
+        // With a File
+        new DoSomething() {
+          public void doSomething(ObjectSerializer serializer) throws Exception {
+            serializer.tempFileFactory = createTempFileFails;
+            File tempFile = File.createTempFile("testfile", ".xml");
+            tempFile.deleteOnExit();
+            serializer.serialize(tempFile, obj);
+          }
+        },
+        // With a String
+        new DoSomething() {
+          public void doSomething(ObjectSerializer serializer) throws Exception {
+            serializer.tempFileFactory = createTempFileFails;
+            File tempFile = File.createTempFile("testfile", ".xml");
+            tempFile.deleteOnExit();
+            serializer.serialize(tempFile.toString(), obj);
+          }
+        },
+    };
+
+    // For each variant action...
+    for (int action = 0 ; action < actions.length ; ++action) {
+      logger.debug("Begin with action " + action);
+
+      // For each type of serializer...
+      ObjectSerializer[] serializers = getObjectSerializers_ExtMapBean();
+      for (int serializer = 0 ; serializer < serializers.length ; ++serializer) {
+        logger.debug("Begin with serializer " + serializer);
+
+        try {
+          // Perform variant action
+          actions[action].doSomething(serializers[serializer]);
+          fail("Should have thrown SerializationException ("
+               + action + "," + serializer + ")");
+        }
+        catch (SerializationException ignore) {
+          // success
+        }
+      }
+    }
+
   }
 
   /**
@@ -536,253 +782,6 @@ public abstract class ObjectSerializerTester extends XMLTestCase {
   }
 
   /**
-   * <p>Tests the serializer throws a {@link SerializationException}
-   * when serializing into a file but creating temporary files
-   * fails.</p>
-   * @throws Exception if an unexpected or unhandled problem arises.
-   */
-  public void testHandlesCannotCreateTempFile() throws Exception {
-
-    // Define a rogue file factory
-    final ObjectSerializer.TempFileFactory createTempFileFails = new ObjectSerializer.TempFileFactory() {
-      public File createTempFile(String prefix, String suffix, File directory) throws IOException {
-        throw new IOException("This is a fake IOException"); // fail
-      }
-    };
-
-    // Make a sample object
-    final ExtMapBean obj = makeSample_ExtMapBean();
-
-    // Define variant actions
-    DoSomething[] actions = new DoSomething[] {
-        // With a File
-        new DoSomething() {
-          public void doSomething(ObjectSerializer serializer) throws Exception {
-            serializer.tempFileFactory = createTempFileFails;
-            File tempFile = File.createTempFile("testfile", ".xml");
-            tempFile.deleteOnExit();
-            serializer.serialize(tempFile, obj);
-          }
-        },
-        // With a String
-        new DoSomething() {
-          public void doSomething(ObjectSerializer serializer) throws Exception {
-            serializer.tempFileFactory = createTempFileFails;
-            File tempFile = File.createTempFile("testfile", ".xml");
-            tempFile.deleteOnExit();
-            serializer.serialize(tempFile.toString(), obj);
-          }
-        },
-    };
-
-    // For each variant action...
-    for (int action = 0 ; action < actions.length ; ++action) {
-      logger.debug("Begin with action " + action);
-
-      // For each type of serializer...
-      ObjectSerializer[] serializers = getObjectSerializers_ExtMapBean();
-      for (int serializer = 0 ; serializer < serializers.length ; ++serializer) {
-        logger.debug("Begin with serializer " + serializer);
-
-        try {
-          // Perform variant action
-          actions[action].doSomething(serializers[serializer]);
-          fail("Should have thrown SerializationException ("
-               + action + "," + serializer + ")");
-        }
-        catch (SerializationException ignore) {
-          // success
-        }
-      }
-    }
-
-  }
-
-  /**
-   * <p>Tests that the deserializer behaves appropriately for its
-   * mode when deserialization fails.</p>
-   * @throws Exception if an unexpected or unhandled problem arises.
-   */
-  public void testFailedDeserializationMode() throws Exception {
-
-    // Define variant actions
-    RememberFile[] actions = new RememberFile[] {
-        // With a File
-        new RememberFile() {
-          public void doSomething(ObjectSerializer serializer) throws Exception {
-            serializer.deserialize(file);
-          }
-        },
-        // With a String
-        new RememberFile() {
-          public void doSomething(ObjectSerializer serializer) throws Exception {
-            serializer.deserialize(file.toString());
-          }
-        },
-    };
-
-    // For each variant action...
-    for (int action = 0 ; action < actions.length ; ++action) {
-      logger.debug("Begin with action " + action);
-
-      // For each type of deserializer...
-      ObjectSerializer[] deserializers = getObjectSerializers_ExtMapBean();
-      for (int deserializer = 0 ; deserializer < deserializers.length ; ++deserializer) {
-        logger.debug("Begin with deserializer " + deserializer);
-
-        try {
-          // Create a bad input file
-          actions[action].file = File.createTempFile("testfile", ".xml");
-          actions[action].file.deleteOnExit();
-          FileWriter writer = new FileWriter(actions[action].file);
-          writer.write("BAD INPUT");
-          writer.close();
-
-          // Perform variant action
-          actions[action].doSomething(deserializers[deserializer]);
-          fail("Should have thrown SerializationException ("
-               + action + "," + deserializer + ")");
-        }
-        catch (SerializationException ignore) {
-          // success; keep going
-        }
-
-        // Verify results
-        switch (deserializers[deserializer].getFailedDeserializationMode()) {
-          case ObjectSerializer.FAILED_DESERIALIZATION_COPY:
-            File[] files = actions[action].file.getParentFile().listFiles();
-            File copy = null;
-            for (int file = 0 ; file < files.length ; ++file) {
-              String candidate = files[file].toString();
-              if (!candidate.startsWith(actions[action].file.toString())) {
-                continue; // not the right file
-              }
-              if (!StringUtils.contains(candidate,
-                                        CurrentConfig.getParam(ObjectSerializer.PARAM_FAILED_DESERIALIZATION_EXTENSION,
-                                                               ObjectSerializer.DEFAULT_FAILED_DESERIALIZATION_EXTENSION))) {
-                continue; // not the right file
-              }
-              String timestamp = StringUtils.substringAfterLast(candidate, ".");
-              if (StringUtil.isNullString(timestamp)) {
-                continue; // not the right file
-              }
-              try {
-                long time = Long.parseLong(timestamp);
-              }
-              catch (NumberFormatException nfe) {
-                continue; // not the right file
-              }
-              copy = files[file]; // right file found
-              break;
-            }
-            assertNotNull("FAILED_DESERIALIZATION_COPY: copy not found ("
-                          + action + "," + deserializer + ")",
-                          copy);
-            copy.deleteOnExit(); // clean up
-            assertTrue("FAILED_DESERIALIZATION_COPY: copy does not match ("
-                       + action + "," + deserializer + ")",
-                       FileUtil.isContentEqual(actions[action].file, copy));
-            break;
-          case ObjectSerializer.FAILED_DESERIALIZATION_IGNORE:
-            // nothing; keep going
-            break;
-          case ObjectSerializer.FAILED_DESERIALIZATION_RENAME:
-            File rename = new File(actions[action].file.toString()
-                                   + CurrentConfig.getParam(ObjectSerializer.PARAM_FAILED_DESERIALIZATION_EXTENSION,
-                                                            ObjectSerializer.DEFAULT_FAILED_DESERIALIZATION_EXTENSION));
-            assertTrue("FAILED_DESERIALIZATION_RENAME: renamed file did not exist ("
-                       + action + "," + deserializer + ")",
-                       rename.exists());
-            rename.deleteOnExit(); // clean up
-            break;
-          default: // shouldn't happen
-            fail("Unexpected failed deserialization mode ("
-                 + action + "," + deserializer + ")");
-            break;
-        }
-      }
-    }
-
-  }
-
-  /**
-   * <p>Tests that the deserializer behaves appropriately for its
-   * mode when serialization fails.</p>
-   * @throws Exception if an unexpected or unhandled problem arises.
-   */
-  public void testFailedSerializationMode() throws Exception {
-
-    // Define a rogue file factory
-    class RenameFails implements ObjectSerializer.TempFileFactory {
-      protected RememberFile action;
-      public RenameFails(RememberFile action) {
-        this.action = action;
-      }
-      public File createTempFile(String prefix, String suffix, File directory) throws IOException {
-        File tmp = File.createTempFile(prefix, suffix, directory);
-        tmp.deleteOnExit();
-        action.file = new File(tmp.toString()) {
-          public boolean renameTo(File dest) {
-            return false; // fail
-          }
-        };
-        return action.file;
-      }
-    }
-
-    // Make a sample object
-    final ExtMapBean obj = makeSample_ExtMapBean();
-
-    // Define variant actions
-    RememberFile[] actions = new RememberFile[] {
-        // With a File
-        new RememberFile() {
-          public void doSomething(ObjectSerializer serializer) throws Exception {
-            serializer.tempFileFactory = new RenameFails(this);
-            File tempFile = File.createTempFile("testfile", ".xml");
-            tempFile.deleteOnExit();
-            serializer.serialize(tempFile, obj);
-          }
-        },
-        // With a String
-        new RememberFile() {
-          public void doSomething(ObjectSerializer serializer) throws Exception {
-            serializer.tempFileFactory = new RenameFails(this);
-            File tempFile = File.createTempFile("testfile", ".xml");
-            tempFile.deleteOnExit();
-            serializer.serialize(tempFile.toString(), obj);
-          }
-        },
-    };
-
-    // For each variant action...
-    for (int action = 0 ; action < actions.length ; ++action) {
-      logger.debug("Begin with action " + action);
-
-      // For each type of serializer...
-      ObjectSerializer[] serializers = getObjectSerializers_ExtMapBean();
-      for (int serializer = 0 ; serializer < serializers.length ; ++serializer) {
-        logger.debug("Begin with serializer " + serializer);
-
-        try {
-          // Perform variant action
-          actions[action].doSomething(serializers[serializer]);
-          fail("Should have thrown SerializationException.RenameFailed ("
-               + action + "," + serializer + ")");
-        }
-        catch (SerializationException.RenameFailed ignore) {
-          // success; keep going
-        }
-
-        // Verify results
-        assertEquals(serializers[serializer].getFailedSerializationMode(),
-                     actions[action].file.exists());
-      }
-    }
-
-  }
-
-  /**
    * <p>Prepares a set of serializers with as much combinatorial
    * diversity as the {@link ObjectSerializer} class can provide.</p>
    * <p>Subclasses that have more combinatorial diversity should
@@ -840,7 +839,8 @@ public abstract class ObjectSerializerTester extends XMLTestCase {
   /**
    * <p>A re-usable set of {@link ObjectSerializerTester.DoRoundTrip}
    * actions that exercise all four argument types for the serializer
-   * and deserializer pair.</p>
+   * and deserializer pair, plus the file-oriented ones with a file
+   * name starting with a pound sign.</p>
    * @param original An original object.
    * @return An array of actions.
    */
@@ -853,7 +853,7 @@ public abstract class ObjectSerializerTester extends XMLTestCase {
               throws Exception {
             StringWriter writer = new StringWriter();
             serializer.serialize(writer, original);
-            result = serializer.deserialize(new StringReader(writer.toString()));
+            result = deserializer.deserialize(new StringReader(writer.toString()));
           }
         },
         // With an OutputStream
@@ -863,7 +863,7 @@ public abstract class ObjectSerializerTester extends XMLTestCase {
               throws Exception {
             ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
             serializer.serialize(outputStream, original);
-            result = serializer.deserialize(new ByteArrayInputStream(outputStream.toByteArray()));
+            result = deserializer.deserialize(new ByteArrayInputStream(outputStream.toByteArray()));
           }
         },
         // With a File
@@ -874,7 +874,7 @@ public abstract class ObjectSerializerTester extends XMLTestCase {
             File tempFile = File.createTempFile("testfile", ".xml");
             tempFile.deleteOnExit();
             serializer.serialize(tempFile, original);
-            result = serializer.deserialize(tempFile);
+            result = deserializer.deserialize(tempFile);
           }
         },
         // With a String
@@ -885,7 +885,29 @@ public abstract class ObjectSerializerTester extends XMLTestCase {
             File tempFile = File.createTempFile("testfile", ".xml");
             tempFile.deleteOnExit();
             serializer.serialize(tempFile.toString(), original);
-            result = serializer.deserialize(tempFile.toString());
+            result = deserializer.deserialize(tempFile.toString());
+          }
+        },
+        // With a File starting with a pound sign
+        new DoRoundTrip() {
+          public void doRoundTrip(ObjectSerializer serializer,
+                                  ObjectSerializer deserializer)
+              throws Exception {
+            File tempFile = File.createTempFile("#testfile", ".xml");
+            tempFile.deleteOnExit();
+            serializer.serialize(tempFile, original);
+            result = deserializer.deserialize(tempFile);
+          }
+        },
+        // With a String starting with a pound sign
+        new DoRoundTrip() {
+          public void doRoundTrip(ObjectSerializer serializer,
+                                  ObjectSerializer deserializer)
+              throws Exception {
+            File tempFile = File.createTempFile("#testfile", ".xml");
+            tempFile.deleteOnExit();
+            serializer.serialize(tempFile.toString(), original);
+            result = deserializer.deserialize(tempFile.toString());
           }
         },
     };
