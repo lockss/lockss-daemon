@@ -1,5 +1,5 @@
 /*
- * $Id: TestXStreamSerializer.java,v 1.15 2006-08-30 00:02:27 thib_gc Exp $
+ * $Id: TestXStreamSerializer.java,v 1.16 2006-10-03 05:47:36 thib_gc Exp $
  */
 
 /*
@@ -33,11 +33,9 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 
 import java.io.*;
-import java.nio.CharBuffer;
 
 import org.lockss.app.LockssApp;
 import org.lockss.test.StringInputStream;
-import org.lockss.util.ObjectSerializerTester.DoRoundTrip;
 
 /**
  * <p>Tests the {@link org.lockss.util.XStreamSerializer} class.</p>
