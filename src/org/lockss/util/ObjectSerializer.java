@@ -1,5 +1,5 @@
 /*
- * $Id: ObjectSerializer.java,v 1.26 2006-09-28 05:12:00 thib_gc Exp $
+ * $Id: ObjectSerializer.java,v 1.26.2.1 2006-10-03 05:40:33 thib_gc Exp $
  */
 
 /*
@@ -57,6 +57,209 @@ import org.xml.sax.SAXException;
  * @see SerializationException
  */
 public abstract class ObjectSerializer {
+
+  /**
+   * <p>A worker class which performs the set of steps to serialize
+   * an object to a file and recover from several kinds of failure
+   * gracefully.</p>
+   * <p>An instance of this class is for one serialization; if
+   * {@link #serialize} is called twice, a
+   * {@link SerializationException} will be thrown.</p>
+   * @author Thib Guicherd-Callin
+   */
+  protected class SerializationWorker {
+
+    /**
+     * <p>The object being serialized.</p>
+     */
+    protected Object obj;
+
+    /**
+     * <p>The final destination of the object being serialized.</p>
+     */
+    protected File outputFile;
+
+    /**
+     * <p>An output stream into the temporary file.</p>
+     * @see #temporaryFile
+     */
+    protected OutputStream outputStream;
+
+    /**
+     * <p>A temporary file.</p>
+     */
+    protected File temporaryFile;
+
+    /**
+     * <p>Whether this instance has already been used.</p>
+     */
+    protected volatile boolean used;
+
+    /**
+     * <p>Builds a new serialization worker that serializes the given
+     * object into the given target file.</p>
+     * @param outputFile A destination for the object being serialized.
+     * @param obj        The object being serialized.
+     */
+    public SerializationWorker(File outputFile,
+                               Object obj) {
+      this.outputFile = outputFile;
+      this.obj = obj;
+      this.used = false;
+    }
+
+    /**
+     * <p>Serializes the object into the target file.</p>
+     * @throws SerializationException if input or output fails.
+     * @throws InterruptedIOException if input or output is interrupted.
+     */
+    public void serialize() throws SerializationException, InterruptedIOException {
+      // Can use this instance only once
+      synchronized (this) {
+        if (used) {
+          throw new SerializationException("Serialization worker instance cannot be re-used");
+        }
+        else {
+          used = true;
+        }
+      }
+
+      // Perform serialization steps
+      doCreateTemporaryFile();
+      doCreateOutputStream();
+      doSerialize();
+      doCloseOutputStream();
+      if (getSerializationReadBackMode()) {
+        doReadBack();
+      }
+      doRename();
+    }
+
+    protected void doCloseOutputStream() throws SerializationException, InterruptedIOException {
+      try {
+        outputStream.close();
+      }
+      catch (IOException ioe) {
+        throw failSerialize("Could not close " + temporaryFile,
+                            ioe,
+                            new SerializationException.CloseFailed(ioe),
+                            temporaryFile);
+      }
+      catch (RuntimeException re) {
+        maybeDelTempFile(temporaryFile);
+        throw re;
+      }
+    }
+
+    protected void doCreateOutputStream() throws SerializationException, InterruptedIOException {
+      try {
+        outputStream = new FileOutputStream(temporaryFile);
+      }
+      catch (IOException ioe) {
+        String errorString = "IOException while setting up serialization stream";
+        throw failSerialize(errorString,
+                            ioe,
+                            new SerializationException(errorString, ioe),
+                            temporaryFile);
+      }
+      catch (RuntimeException re) {
+        maybeDelTempFile(temporaryFile);
+        throw re;
+      }
+    }
+
+    protected void doCreateTemporaryFile() throws SerializationException, InterruptedIOException {
+      try {
+        temporaryFile = tempFileFactory.createTempFile(outputFile.getName(),
+                                                       CurrentConfig.getParam(PARAM_TEMPFILE_SERIALIZATION_EXTENSION,
+                                                                              DEFAULT_TEMPFILE_SERIALIZATION_EXTENSION),
+                                                       outputFile.getParentFile());
+      }
+      catch (IOException ioe) {
+        String errorString = "IOException while setting up temporary serialization file";
+        throw ObjectSerializer.this.failSerialize(errorString,
+                                                  ioe,
+                                                  new SerializationException(errorString, ioe));
+      }
+    }
+
+    protected void doReadBack() throws SerializationException, InterruptedIOException {
+      String errorString = "Read back failed; malformed XML presumably written to " + temporaryFile;
+      try {
+        DocumentBuilderFactory builderFactory = new LockssDocumentBuilderFactoryImpl();
+        DocumentBuilder builder = builderFactory.newDocumentBuilder();
+        builder.parse(new FileInputStream(temporaryFile));
+      }
+      catch (ParserConfigurationException pce) {
+        throw failSerialize(errorString,
+                            pce,
+                            new SerializationException.ReadBackFailed(errorString, pce),
+                            temporaryFile);
+      }
+      catch (SAXException se) {
+        throw failSerialize(errorString,
+                            se,
+                            new SerializationException.ReadBackFailed(errorString, se),
+                            temporaryFile);
+      }
+      catch (IOException ioe) {
+        throw failSerialize(errorString,
+                            ioe,
+                            new SerializationException.ReadBackFailed(errorString, ioe),
+                            temporaryFile);
+      }
+      catch (RuntimeException re) {
+        maybeDelTempFile(temporaryFile);
+        throw re;
+      }
+    }
+
+    protected void doRename() throws SerializationException, InterruptedIOException {
+      if (!temporaryFile.renameTo(outputFile)) {
+        String errorString = "Could not rename from " + temporaryFile + " to " + outputFile;
+        throw failSerialize(errorString,
+                            null,
+                            new SerializationException.RenameFailed(errorString),
+                            temporaryFile);
+      }
+    }
+
+    protected void doSerialize() throws InterruptedIOException, SerializationException {
+      try {
+        ObjectSerializer.this.serialize(outputStream, obj);
+      }
+      catch (InterruptedIOException iioe) {
+        IOUtil.safeClose(outputStream);
+        maybeDelTempFile(temporaryFile);
+        throwIfInterrupted(iioe);
+      }
+      catch (SerializationException se) {
+        String errorString = "Failed to serialize an object of type " + obj.getClass().getName();
+        IOUtil.safeClose(outputStream);
+        throw failSerialize(errorString,
+                            se,
+                            new SerializationException(errorString, se),
+                            temporaryFile);
+      }
+      catch (RuntimeException re) {
+        IOUtil.safeClose(outputStream);
+        maybeDelTempFile(temporaryFile);
+        throw re;
+      }
+    }
+
+    protected SerializationException failSerialize(String errorString,
+                                                   Exception cause,
+                                                   SerializationException consequence,
+                                                   File temporaryFile)
+        throws InterruptedIOException {
+      maybeDelTempFile(temporaryFile);
+      return ObjectSerializer.this.failSerialize(errorString,
+                                                 cause,
+                                                 consequence);
+    }
+
+  }
 
   protected interface TempFileFactory {
 
@@ -549,15 +752,6 @@ public abstract class ObjectSerializer {
     return consequence;
   }
 
-  protected SerializationException failSerialize(String errorString,
-                                                 Exception cause,
-                                                 SerializationException consequence,
-                                                 File temporaryFile)
-      throws InterruptedIOException {
-    maybeDelTempFile(temporaryFile);
-    return failSerialize(errorString, cause, consequence);
-  }
-
   /**
    * <p>Retrieves the serialization context.</p>
    * @return The {@link org.lockss.app.LockssApp} context.
@@ -592,116 +786,9 @@ public abstract class ObjectSerializer {
                            Object obj)
       throws SerializationException,
              InterruptedIOException {
-    // Bail if null
     throwIfNull(obj);
-
-    // Create temporary file
-    File temporaryFile = null;
-    try {
-      temporaryFile = tempFileFactory.createTempFile(outputFile.getName(),
-                                                     CurrentConfig.getParam(PARAM_TEMPFILE_SERIALIZATION_EXTENSION,
-                                                                            DEFAULT_TEMPFILE_SERIALIZATION_EXTENSION),
-                                                     outputFile.getParentFile());
-    }
-    catch (IOException ioe) {
-      String errorString = "IOException while setting up temporary serialization file";
-      throw failSerialize(errorString,
-                          ioe,
-                          new SerializationException(errorString, ioe));
-    }
-
-    // Create stream
-    FileOutputStream outputStream = null;
-    try {
-      outputStream = new FileOutputStream(temporaryFile);
-    }
-    catch (IOException ioe) {
-      String errorString = "IOException while setting up serialization stream";
-      throw failSerialize(errorString,
-                          ioe,
-                          new SerializationException(errorString, ioe),
-                          temporaryFile);
-    }
-    catch (RuntimeException re) {
-      maybeDelTempFile(temporaryFile);
-      throw re;
-    }
-
-    // Serialize object
-    try {
-      serialize(outputStream, obj);
-    }
-    catch (InterruptedIOException iioe) {
-      IOUtil.safeClose(outputStream);
-      maybeDelTempFile(temporaryFile);
-      throwIfInterrupted(iioe);
-    }
-    catch (SerializationException se) {
-      String errorString = "Failed to serialize an object of type " + obj.getClass().getName();
-      IOUtil.safeClose(outputStream);
-      throw failSerialize(errorString,
-                          se,
-                          new SerializationException(errorString, se),
-                          temporaryFile);
-    }
-    catch (RuntimeException re) {
-      IOUtil.safeClose(outputStream);
-      maybeDelTempFile(temporaryFile);
-      throw re;
-    }
-
-    // Close stream
-    try {
-      outputStream.close();
-    }
-    catch (IOException ioe) {
-      throw failSerialize("Could not close " + temporaryFile,
-                          ioe,
-                          new SerializationException.CloseFailed(ioe),
-                          temporaryFile);
-    }
-    catch (RuntimeException re) {
-      maybeDelTempFile(temporaryFile);
-      throw re;
-    }
-
-    // Read back
-    if (serializationReadBackMode) {
-      String errorString = "Read back failed; malformed XML presumably written to " + temporaryFile;
-      try {
-        DocumentBuilderFactory builderFactory = new LockssDocumentBuilderFactoryImpl();
-        DocumentBuilder builder = builderFactory.newDocumentBuilder();
-        builder.parse(temporaryFile);
-      }
-      catch (ParserConfigurationException pce) {
-        throw failSerialize(errorString,
-                            pce,
-                            new SerializationException.ReadBackFailed(errorString, pce));
-      }
-      catch (SAXException se) {
-        throw failSerialize(errorString,
-                            se,
-                            new SerializationException.ReadBackFailed(errorString, se));
-      }
-      catch (IOException ioe) {
-        throw failSerialize(errorString,
-                            ioe,
-                            new SerializationException.ReadBackFailed(errorString, ioe));
-      }
-      catch (RuntimeException re) {
-        maybeDelTempFile(temporaryFile);
-        throw re;
-      }
-    }
-
-    // Rename temporary file
-    if (!temporaryFile.renameTo(outputFile)) {
-      String errorString = "Could not rename from " + temporaryFile + " to " + outputFile;
-      throw failSerialize(errorString,
-                          null,
-                          new SerializationException.RenameFailed(errorString),
-                          temporaryFile);
-    }
+    SerializationWorker worker = new SerializationWorker(outputFile, obj);
+    worker.serialize();
   }
 
   /**
