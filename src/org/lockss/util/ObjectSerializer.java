@@ -1,5 +1,5 @@
 /*
- * $Id: ObjectSerializer.java,v 1.27 2006-10-03 05:47:29 thib_gc Exp $
+ * $Id: ObjectSerializer.java,v 1.28 2006-10-03 06:02:27 thib_gc Exp $
  */
 
 /*
@@ -257,6 +257,13 @@ public abstract class ObjectSerializer {
       return ObjectSerializer.this.failSerialize(errorString,
                                                  cause,
                                                  consequence);
+    }
+
+    protected void maybeDelTempFile(File file) {
+      if (!getFailedSerializationMode()) {
+        logger.warning("Deleting unsuccessful serialization file " + file);
+        file.delete();
+      }
     }
 
   }
@@ -758,13 +765,6 @@ public abstract class ObjectSerializer {
    */
   protected LockssApp getLockssContext() {
     return lockssContext;
-  }
-
-  protected void maybeDelTempFile(File file) {
-    if (!getFailedSerializationMode()) {
-      logger.warning("Deleting unsuccessful serialization file " + file);
-      file.delete();
-    }
   }
 
   /**
