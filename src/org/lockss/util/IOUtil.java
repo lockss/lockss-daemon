@@ -1,5 +1,5 @@
 /*
- * $Id: IOUtil.java,v 1.4 2005-10-11 05:48:30 tlipkis Exp $
+ * $Id: IOUtil.java,v 1.5 2006-10-03 21:36:09 smorabito Exp $
  */
 
 /*
@@ -105,7 +105,13 @@ public class IOUtil {
       s.close();
     } catch (Exception e) {}
   }
-
+  
+  /** Call close() on the RandomAccessFile, ignoring any errors */
+  public static void safeClose(RandomAccessFile f) {
+    try {
+      f.close();
+    } catch (Exception e) {}
+  }
   /** Call release() on the LockssUrlConnection, ignoring any errors */
   public static void safeRelease(LockssUrlConnection conn) {
     try {

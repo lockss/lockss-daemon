@@ -122,7 +122,7 @@ public class DiskVoteBlocks extends BaseVoteBlocks {
                   + "DiskVoteBlocks file " + filePath);
       return null;
     } finally {
-      raf.close();
+      IOUtil.safeClose(raf);
     }
   }
 
