@@ -1,5 +1,5 @@
 /*
- * $Id: TestCXSerializer.java,v 1.9 2006-08-29 17:55:30 thib_gc Exp $
+ * $Id: TestCXSerializer.java,v 1.9.4.1 2006-10-03 05:40:45 thib_gc Exp $
  */
 
 /*
@@ -33,10 +33,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 
 import java.io.*;
-
-import junit.framework.Test;
-
-import org.lockss.test.LockssTestCase;
 
 /**
  * <p>Tests the Castor/XStream hybrid serializer.</p>
