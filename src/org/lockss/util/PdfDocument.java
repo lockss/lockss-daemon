@@ -1,5 +1,5 @@
 /*
- * $Id: PdfDocument.java,v 1.11 2006-09-25 04:16:27 thib_gc Exp $
+ * $Id: PdfDocument.java,v 1.12 2006-10-03 22:24:12 thib_gc Exp $
  */
 
 /*
@@ -63,7 +63,7 @@ public class PdfDocument {
 
   /**
    * <p>Builds a new PDF document (actually a new PDF parser).</p>
-   * <p><em>You must call {@link #close} to release the expensive
+   * <p><em>You must call {@link #close()} to release the expensive
    * resources associated with this object, when it is no longer
    * needed but before it is finalized by the runtime system.</em></p>
    * @param inputStream The input stream that contains the PDF document.

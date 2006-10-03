@@ -1,5 +1,5 @@
 /*
- * $Id: VoterUserData.java,v 1.13 2006-09-25 02:16:47 smorabito Exp $
+ * $Id: VoterUserData.java,v 1.14 2006-10-03 22:24:13 thib_gc Exp $
  */
 
 /*
@@ -168,7 +168,7 @@ public class VoterUserData
   public long getVoteDeadline() {
     return voteDeadline;
   }
-  
+
   public void setVoteDeadline(long voteDeadline) {
     this.voteDeadline = voteDeadline;
   }
@@ -353,13 +353,12 @@ public class VoterUserData
   }
 
   /**
-   * @deprecated  Use {@link setStatus()} instead.
-   * @return
+   * @deprecated  Use {@link #setStatus(int)} instead.
    */
   public void setStatusString(String s) {
     // do nothing
   }
-  
+
   /*
    * Implementation of V3LcapMessage.Factory
    */
@@ -368,7 +367,7 @@ public class VoterUserData
                              getPollerNonce(), getVoterNonce(), opcode,
                              getDeadline(), getPollerId(), messageDir);
   }
-  
+
   public V3LcapMessage makeMessage(int opcode, long sizeEst) {
     return makeMessage(opcode);
   }

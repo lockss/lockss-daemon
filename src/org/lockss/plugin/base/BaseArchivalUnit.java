@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.109 2006-09-16 22:55:22 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.110 2006-10-03 22:24:13 thib_gc Exp $
  */
 
 /*
@@ -102,16 +102,16 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   /** Default fetch rate limiter source for plugins that don't specify
    * au_fetch_rate_limiter_source.  Can be "au" or "plugin"; default is
    * "au". */
-  public static final String PARAM_DEFAULT_FETCH_RATE_LIMITER_SOURCE = 
+  public static final String PARAM_DEFAULT_FETCH_RATE_LIMITER_SOURCE =
     Configuration.PREFIX+"baseau.defaultFetchRateLimiterSource";
   public static final String DEFAULT_DEFAULT_FETCH_RATE_LIMITER_SOURCE = "au";
 
   //Short term conf parameter to get around the fact that DefinablePlugins
   //don't load crawl windows
-  public static final String PARAM_USE_CRAWL_WINDOW_BY_DEFAULT = 
+  public static final String PARAM_USE_CRAWL_WINDOW_BY_DEFAULT =
     Configuration.PREFIX+"baseau.useCrawlWindowByDefault";
   public static final boolean DEFAULT_USE_CRAWL_WINDOW_BY_DEFAULT = true;
-  
+
   public static final String USE_CRAWL_WINDOW = "use_crawl_window";
   private static final boolean DEFAULT_USE_CRAWL_WINDOW = false;
 
@@ -294,8 +294,8 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     startUrlString = makeStartUrl();
     paramMap.putString(AU_START_URL, startUrlString);
 
-    
-    
+
+
     // get crawl window setting
     boolean useCrawlWindow =
       (config.containsKey(USE_CRAWL_WINDOW)
@@ -304,14 +304,14 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
        paramMap.getBoolean(AU_USE_CRAWL_WINDOW, DEFAULT_USE_CRAWL_WINDOW));
     paramMap.putBoolean(AU_USE_CRAWL_WINDOW, useCrawlWindow);
 
-    
-    if (CurrentConfig.getBooleanParam(PARAM_USE_CRAWL_WINDOW_BY_DEFAULT, 
+
+    if (CurrentConfig.getBooleanParam(PARAM_USE_CRAWL_WINDOW_BY_DEFAULT,
                                       DEFAULT_USE_CRAWL_WINDOW_BY_DEFAULT)) {
       logger.debug3(PARAM_USE_CRAWL_WINDOW_BY_DEFAULT+
                     " set to true, so using as default.");
       useCrawlWindow = true; //XXX hack for now
     }
-    
+
     // make our crawl spec
     try {
       crawlSpec = makeCrawlSpec();
@@ -502,7 +502,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     String defaultSource =
       CurrentConfig.getParam(PARAM_DEFAULT_FETCH_RATE_LIMITER_SOURCE,
 			     DEFAULT_DEFAULT_FETCH_RATE_LIMITER_SOURCE);
-    String limiterSource = 
+    String limiterSource =
       paramMap.getString(AU_FETCH_RATE_LIMITER_SOURCE, defaultSource);
     if (logger.isDebug3()) logger.debug3("Limiter source: " + limiterSource);
     if ("au".equalsIgnoreCase(limiterSource)) {
@@ -748,8 +748,6 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    * Content-type is converted to lowercase.  If contenttype is null,
    * returns null.
    * @param contentType the content type
-   * @param encoding the character encoding to use if necessary to read
-   * characters from the source InputStream, or null if unknown.
    * @return the FilterFactory
    */
   public FilterFactory getFilterFactory(String contentType) {

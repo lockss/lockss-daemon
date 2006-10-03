@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManagerImpl.java,v 1.18 2006-09-22 06:25:23 tlipkis Exp $
+ * $Id: IdentityManagerImpl.java,v 1.19 2006-10-03 22:24:13 thib_gc Exp $
  */
 
 /*
@@ -228,7 +228,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
    * IdentityAgreement.</p>
    */
   private Map agreeMaps = new HashMap();
-  
+
   private float minPercentPartialAgreement = DEFAULT_MIN_PERCENT_AGREEMENT;
 
   private IdentityManagerStatus status;
@@ -877,34 +877,34 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
   public void signalAgreed(PeerIdentity pid, ArchivalUnit au) {
     signalAgreed(pid, au, TimeBase.nowMs(), 1.0f);
   }
-  
+
   /**
    * Signal that we've reached partial agreement with a peer during a
    * V3 poll on au.
-   * 
+   *
    * @param pid
    * @param au
-   * @param time
+   * @param percent
    */
   public void signalPartialAgreement(PeerIdentity pid, ArchivalUnit au,
                                      float percent) {
     // If the agreement is below a certain percent, this is a disagreement.
-    // The percent agreement is configured with the 
+    // The percent agreement is configured with the
     // MIN_PERCENT_PARTIAL_AGREEMENT parameter, and the MIN_URL_AGREEMENT
     // parameter.
     if (percent >= minPercentPartialAgreement)
       signalAgreed(pid, au, TimeBase.nowMs(), percent);
     else
       signalDisagreed(pid, au, TimeBase.nowMs(), percent);
-    
+
   }
-  
+
   /**
    * Get the percent agreement for a V3 poll on a given AU.
-   * 
+   *
    * @param pid The {@link PeerIdentity}.
    * @param au The {@link ArchivalUnit}.
-   * 
+   *
    * @return The percent agreement for this AU and peer.
    */
   public float getPercentAgreement(PeerIdentity pid, ArchivalUnit au) {
@@ -920,7 +920,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
   }
 
   /**
-   * For V1 polls, the partialAgreement flag is meaningless (and ignored) 
+   * For V1 polls, the partialAgreement flag is meaningless (and ignored)
    */
   private void signalAgreed(PeerIdentity pid, ArchivalUnit au,
                             long time, float percentAgreement) {
@@ -952,7 +952,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
   }
 
   /**
-   * For V1 polls, the percentAgreement flag is meaningless (and ignored) 
+   * For V1 polls, the percentAgreement flag is meaningless (and ignored)
    */
   private void signalDisagreed(PeerIdentity pid, ArchivalUnit au,
                                long time, float percentAgreement) {
@@ -1244,7 +1244,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
       isMergeRestoredAgreemMap =
         config.getBoolean(PARAM_MERGE_RESTORED_AGREE_MAP,
                           DEFAULT_MERGE_RESTORED_AGREE_MAP);
-      
+
       minPercentPartialAgreement =
         config.getPercentage(PARAM_MIN_PERCENT_AGREEMENT,
                              DEFAULT_MIN_PERCENT_AGREEMENT);
