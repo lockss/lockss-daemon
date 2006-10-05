@@ -1335,21 +1335,6 @@
       <property name="attributes.publisher" value="oup" />
     </property>
     
-    <property name="httpbmboxfordjournalsorg75-76">
-      <property name="title" value="http://bmb.oxfordjournals.org/ Volume 75-76" />
-      <property name="journalTitle" value="http://bmb.oxfordjournals.org/" />
-      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
-      <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://bmb.oxfordjournals.org/" />
-      </property>
-      <property name="param.2">
-	<property name="key" value="volume_str" />
-	<property name="value" value="75-76" />
-      </property>
-      <property name="attributes.publisher" value="oup" />
-    </property>
-    
     <property name="CambridgeJournalofEconomics30">
       <property name="title" value="Cambridge Journal of Economics Volume 30" />
       <property name="journalTitle" value="Cambridge Journal of Economics" />
@@ -1938,7 +1923,7 @@
 	<property name="value" value="http://ietcom.oxfordjournals.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="volume_str" />
+	<property name="key" value="volume_name" />
 	<property name="value" value="E89-B" />
       </property>
       <property name="attributes.publisher" value="oup" />
@@ -1954,7 +1939,7 @@
 	<property name="value" value="http://ietele.oxfordjournals.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="volume_str" />
+	<property name="key" value="volume_name" />
 	<property name="value" value="E89-C" />
       </property>
       <property name="attributes.publisher" value="oup" />
@@ -1970,7 +1955,7 @@
 	<property name="value" value="http://ietfec.oxfordjournals.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="volume_str" />
+	<property name="key" value="volume_name" />
 	<property name="value" value="E89-A" />
       </property>
       <property name="attributes.publisher" value="oup" />
@@ -1985,7 +1970,7 @@
 	<property name="value" value="http://ietisy.oxfordjournals.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="volume_str" />
+	<property name="key" value="volume_name" />
 	<property name="value" value="E89-D" />
       </property>
       <property name="attributes.publisher" value="oup" />
@@ -3429,14 +3414,14 @@
 	<property name="value" value="http://fsb.oxfordjournals.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="volume_str" />
+	<property name="key" value="volume_name" />
 	<property name="value" value="LX" />
       </property>
       <property name="attributes.publisher" value="oup" />
     </property>
     
-    <property name="BritishMedicalBulletin75-76">
-      <property name="title" value="British Medical Bulletin Volume 75-76" />
+    <property name="BritishMedicalBulletin73-74">
+      <property name="title" value="British Medical Bulletin Volume 73-74" />
       <property name="journalTitle" value="British Medical Bulletin" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
@@ -3444,8 +3429,8 @@
 	<property name="value" value="http://bmb.oxfordjournals.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="volume_str" />
-	<property name="value" value="75-76" />
+	<property name="key" value="volume_name" />
+	<property name="value" value="73-74" />
       </property>
       <property name="attributes.publisher" value="oup" />
     </property>
