@@ -699,6 +699,7 @@
       <property name="title" value="Journal of Clinical Investigation Volume 116" />
       <property name="journalTitle" value="Journal of Clinical Investigation" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="estSize" value="1300MB" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://www.jci.org/" />
@@ -2536,8 +2537,8 @@
       <property name="attributes.publisher" value="Radiological Society of North America" />
     </property>
     
-    <property name="Radiology238">
-      <property name="title" value="Radiology Volume 238" />
+    <property name="Radiology241">
+      <property name="title" value="Radiology Volume 241" />
       <property name="journalTitle" value="Radiology" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
@@ -2546,7 +2547,7 @@
       </property>
       <property name="param.2">
 	<property name="key" value="volume_name" />
-	<property name="value" value="238" />
+	<property name="value" value="241" />
       </property>
       <property name="attributes.publisher" value="Radiological Society of North America" />
     </property>
@@ -2566,8 +2567,8 @@
       <property name="attributes.publisher" value="Rockefeller University Press" />
     </property>
     
-    <property name="JournalofExperimentalMedicine203">
-      <property name="title" value="Journal of Experimental Medicine Volume 203" />
+    <property name="JournalofExperimentalMedicine202">
+      <property name="title" value="Journal of Experimental Medicine Volume 202" />
       <property name="journalTitle" value="Journal of Experimental Medicine" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
@@ -2576,7 +2577,7 @@
       </property>
       <property name="param.2">
 	<property name="key" value="volume_name" />
-	<property name="value" value="203" />
+	<property name="value" value="202" />
       </property>
       <property name="attributes.publisher" value="Rockefeller University Press" />
     </property>
