@@ -1,5 +1,5 @@
 /*
- * $Id: TestV1TreeWalkImpl.java,v 1.7 2005-12-01 01:54:42 smorabito Exp $
+ * $Id: TestV1TreeWalkImpl.java,v 1.7.22.1 2006-10-06 20:27:02 tlipkis Exp $
  */
 
 /*
@@ -118,8 +118,93 @@ public class TestV1TreeWalkImpl extends LockssTestCase {
 
     twi.doTreeWalk();
     twi.doDeferredAction();
+    assertTrue(twi.didFullTreewalk());
     assertNull(crawlMan.getAuStatus(mau));
     assertNull(pollMan.getPollStatus(mau.getAuCachedUrlSet().getUrl()));
+  }
+
+  public void testTreeWalkV1Full() throws Exception {
+    ConfigurationUtil.addFromArgs(AuUtil.PARAM_POLL_PROTOCOL_VERSION, "1",
+				  TreeWalkManager.PARAM_TREEWALK_V1_MODE,
+				  "full");
+    //should allow walk to start if last crawl time >= 0
+    //should not schedule a top level poll
+    mau.setShouldCrawlForNewContent(false);
+    mau.setShouldCallTopLevelPoll(false);
+
+    twi.doTreeWalk();
+    twi.doDeferredAction();
+    assertTrue(twi.didFullTreewalk());
+  }
+
+  public void testTreeWalkV1PollOnly() throws Exception {
+    ConfigurationUtil.addFromArgs(AuUtil.PARAM_POLL_PROTOCOL_VERSION, "1",
+				  TreeWalkManager.PARAM_TREEWALK_V1_MODE,
+				  "pollonly");
+    //should allow walk to start if last crawl time >= 0
+    //should not schedule a top level poll
+    mau.setShouldCrawlForNewContent(false);
+    mau.setShouldCallTopLevelPoll(false);
+
+    twi.doTreeWalk();
+    twi.doDeferredAction();
+    assertFalse(twi.didFullTreewalk());
+  }
+
+  public void testTreeWalkV1PollOnlyV3() throws Exception {
+    ConfigurationUtil.addFromArgs(AuUtil.PARAM_POLL_PROTOCOL_VERSION, "3",
+				  TreeWalkManager.PARAM_TREEWALK_V1_MODE,
+				  "pollonly");
+    //should allow walk to start if last crawl time >= 0
+    //should not schedule a top level poll
+    mau.setShouldCrawlForNewContent(false);
+    mau.setShouldCallTopLevelPoll(false);
+
+    twi.doTreeWalk();
+    twi.doDeferredAction();
+    assertTrue(twi.didFullTreewalk());
+  }
+
+  public void testTreeWalkV3Full() throws Exception {
+    ConfigurationUtil.addFromArgs(AuUtil.PARAM_POLL_PROTOCOL_VERSION, "3",
+				  TreeWalkManager.PARAM_TREEWALK_V3_MODE,
+				  "full");
+    //should allow walk to start if last crawl time >= 0
+    //should not schedule a top level poll
+    mau.setShouldCrawlForNewContent(false);
+    mau.setShouldCallTopLevelPoll(false);
+
+    twi.doTreeWalk();
+    twi.doDeferredAction();
+    assertTrue(twi.didFullTreewalk());
+  }
+
+  public void testTreeWalkV3PollOnly() throws Exception {
+    ConfigurationUtil.addFromArgs(AuUtil.PARAM_POLL_PROTOCOL_VERSION, "3",
+				  TreeWalkManager.PARAM_TREEWALK_V3_MODE,
+				  "pollonly");
+    //should allow walk to start if last crawl time >= 0
+    //should not schedule a top level poll
+    mau.setShouldCrawlForNewContent(false);
+    mau.setShouldCallTopLevelPoll(false);
+
+    twi.doTreeWalk();
+    twi.doDeferredAction();
+    assertFalse(twi.didFullTreewalk());
+  }
+
+  public void testTreeWalkV3PollOnlyV1() throws Exception {
+    ConfigurationUtil.addFromArgs(AuUtil.PARAM_POLL_PROTOCOL_VERSION, "1",
+				  TreeWalkManager.PARAM_TREEWALK_V3_MODE,
+				  "pollonly");
+    //should allow walk to start if last crawl time >= 0
+    //should not schedule a top level poll
+    mau.setShouldCrawlForNewContent(false);
+    mau.setShouldCallTopLevelPoll(false);
+
+    twi.doTreeWalk();
+    twi.doDeferredAction();
+    assertTrue(twi.didFullTreewalk());
   }
 
   public void testTreeWalkStartNoCrawlYesPoll() {

@@ -1,5 +1,5 @@
 /*
- * $Id: TreeWalkManager.java,v 1.4 2005-05-18 05:48:30 tlipkis Exp $
+ * $Id: TreeWalkManager.java,v 1.4.32.1 2006-10-06 20:27:02 tlipkis Exp $
  */
 
 /*
@@ -145,6 +145,14 @@ public class TreeWalkManager
     PREFIX + "executeFailRetry";
   static final long DEFAULT_TREEWALK_EXECUTE_FAIL_RETRY = 1 * Constants.HOUR;
 
+  /** V1 treewalk mode: <code>full</code> (default), pollstart */
+  public static final String PARAM_TREEWALK_V1_MODE = PREFIX + "v1.mode";
+  static final String DEFAULT_TREEWALK_V1_MDOE = "full";
+
+  /** V3 treewalk mode: <code>full</code> (default), pollstart */
+  public static final String PARAM_TREEWALK_V3_MODE = PREFIX + "v3.mode";
+  static final String DEFAULT_TREEWALK_V3_MDOE = "full";
+
   static final String WDOG_PARAM_TREEWALK = "TreeWalk";
   static final long WDOG_DEFAULT_TREEWALK = 30 * Constants.MINUTE;
 
@@ -171,6 +179,8 @@ public class TreeWalkManager
   long paramExecuteFailRetryTime = DEFAULT_TREEWALK_EXECUTE_FAIL_RETRY;
   long paramSleepInterval = DEFAULT_TREEWALK_SLEEP_INTERVAL;
   double paramLoadFactor = DEFAULT_TREEWALK_LOAD_FACTOR;
+  String paramV1Mode = DEFAULT_TREEWALK_V1_MDOE;
+  String paramV3Mode = DEFAULT_TREEWALK_V3_MDOE;
 
   PooledExecutor pool;
 
@@ -251,6 +261,10 @@ public class TreeWalkManager
 					DEFAULT_TREEWALK_SLEEP_INTERVAL));
       paramLoadFactor = config.getPercentage(PARAM_TREEWALK_LOAD_FACTOR,
 					     DEFAULT_TREEWALK_LOAD_FACTOR);
+      paramV1Mode = config.get(PARAM_TREEWALK_V1_MODE,
+			       DEFAULT_TREEWALK_V1_MDOE);
+      paramV3Mode = config.get(PARAM_TREEWALK_V3_MODE,
+			       DEFAULT_TREEWALK_V3_MDOE);
     }
   }
 
