@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.59 2006-10-06 20:11:28 tlipkis Exp $
+ * $Id: AuConfig.java,v 1.60 2006-10-06 20:28:26 tlipkis Exp $
  */
 
 /*
@@ -64,7 +64,8 @@ public class AuConfig extends LockssServlet {
   static final String FOOT_CHOOSEPLUGWARN =
     "A LOCKSS " + new Link("http://www.lockss.org/lockss/Plugins", "plugin") +
     "is required to collect and preserve content. " +
-    "Manual configuration of a plugin should be used with care. " +
+    "Manual configuration of a plugin should be used with care, " +
+    "and should not be necessary for normal usage of a LOCKSS box. " +
     "It will only work with sites of the same type " +
     "for which the plugin was written.";
 
