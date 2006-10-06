@@ -1,5 +1,5 @@
 /*
- * $Id: AuUtil.java,v 1.15 2006-08-07 07:41:08 tlipkis Exp $
+ * $Id: AuUtil.java,v 1.16 2006-10-06 20:11:53 tlipkis Exp $
  */
 
 /*
@@ -55,7 +55,7 @@ public class AuUtil {
   /** The default poll protocol to use, unless otherwise overridden by the
    * Archival Unit's poll_protocol config param.=
    */
-  private static final String PARAM_POLL_PROTOCOL_VERSION =
+  public static final String PARAM_POLL_PROTOCOL_VERSION =
     Configuration.PREFIX + "poll.defaultPollProtocol";
   private static final int DEFAULT_POLL_PROTOCOL_VERSION =
     Poll.V1_PROTOCOL;
