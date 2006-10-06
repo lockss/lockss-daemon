@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.58 2006-09-22 06:25:39 tlipkis Exp $
+ * $Id: AuConfig.java,v 1.59 2006-10-06 20:11:28 tlipkis Exp $
  */
 
 /*
@@ -62,11 +62,11 @@ public class AuConfig extends LockssServlet {
     "Local disk on which AU will be stored";
 
   static final String FOOT_CHOOSEPLUGWARN =
-    "In order to preserve content on a web site, " +
-    "LOCKSS requires a publisher " +
-    new Link("http://www.lockss.org/lockss/Plugins", "plugin") +
-    " which contains some knowledge of the site.";
-
+    "A LOCKSS " + new Link("http://www.lockss.org/lockss/Plugins", "plugin") +
+    "is required to collect and preserve content. " +
+    "Manual configuration of a plugin should be used with care. " +
+    "It will only work with sites of the same type " +
+    "for which the plugin was written.";
 
   static Logger log = Logger.getLogger("AuConfig");
 
