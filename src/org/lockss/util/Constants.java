@@ -1,5 +1,5 @@
 /*
- * $Id: Constants.java,v 1.14 2006-03-02 19:45:00 tlipkis Exp $
+ * $Id: Constants.java,v 1.15 2006-10-07 23:11:30 tlipkis Exp $
  */
 
 /*
@@ -49,6 +49,8 @@ public interface Constants {
   public static final long DAY = 24 * HOUR;
   /** The number of milliseconds in a week */
   public static final long WEEK = 7 * DAY;
+  /** The number of milliseconds in a (non-leap) year */
+  public static final long YEAR = 365 * DAY;
 
   /** List delimiter in strings */
   public static String LIST_DELIM = ";";

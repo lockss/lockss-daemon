@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.63 2006-07-29 02:59:44 tlipkis Exp $
+ * $Id: TestStringUtil.java,v 1.64 2006-10-07 23:11:30 tlipkis Exp $
  */
 
 /*
@@ -486,6 +486,8 @@ public class TestStringUtil extends LockssTestCase {
 		 StringUtil.parseTimeInterval("3d"));
     assertEquals(StringUtil.parseTimeInterval("14d"),
 		 StringUtil.parseTimeInterval("2w"));
+    assertEquals(StringUtil.parseTimeInterval((365 * 3) + "d"),
+		 StringUtil.parseTimeInterval("3y"));
     try {
       StringUtil.parseTimeInterval("2x");
       fail("should have thrown NumberFormatException");

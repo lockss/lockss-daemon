@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.75 2006-07-29 02:59:45 tlipkis Exp $
+ * $Id: StringUtil.java,v 1.76 2006-10-07 23:11:30 tlipkis Exp $
  */
 
 /*
@@ -735,6 +735,7 @@ public class StringUtil {
         case 'H': mult = Constants.HOUR; break;
         case 'D': mult = Constants.DAY; break;
         case 'W': mult = Constants.WEEK; break;
+        case 'Y': mult = Constants.YEAR; break;
         default:
           throw new NumberFormatException("Illegal time interval suffix");
         }
