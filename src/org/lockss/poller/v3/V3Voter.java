@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.21 2006-09-28 23:52:52 smorabito Exp $
+ * $Id: V3Voter.java,v 1.22 2006-10-07 02:01:27 smorabito Exp $
  */
 
 /*
@@ -94,9 +94,9 @@ public class V3Voter extends BasePoll {
   /**
    * Directory in which to store message data.
    */
-  public static String PARAM_V3_MESSAGE_DIR = V3Poller.PARAM_V3_MESSAGE_DIR;
-  public static String DEFAULT_V3_MESSAGE_DIR = 
-    V3Poller.DEFAULT_V3_MESSAGE_DIR;
+  public static String PARAM_V3_MESSAGE_REL_DIR = V3Poller.PARAM_V3_MESSAGE_REL_DIR;
+  public static String DEFAULT_V3_MESSAGE_REL_DIR = 
+    V3Poller.DEFAULT_V3_MESSAGE_REL_DIR;
 
   private PsmInterp stateMachine;
   private VoterUserData voterUserData;
@@ -128,15 +128,30 @@ public class V3Voter extends BasePoll {
 
     this.theDaemon = daemon;
     pollSerializer = new V3VoterSerializer(theDaemon);
-    this.messageDir =
-      new File(CurrentConfig.getParam(PARAM_V3_MESSAGE_DIR,
-                                      DEFAULT_V3_MESSAGE_DIR));
-    if (!messageDir.exists() || !messageDir.canWrite()) {
+    
+    // Determine the proper location for the V3 message dir.
+    List dSpaceList =
+      CurrentConfig.getList(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST);
+    String relPluginPath =
+      CurrentConfig.getParam(PARAM_V3_MESSAGE_REL_DIR,
+                             DEFAULT_V3_MESSAGE_REL_DIR);
+
+    if (dSpaceList == null || dSpaceList.size() == 0) {
+      log.error(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST +
+                " not specified, not configuring V3 message dir.");
+    } else {
+      messageDir = new File((String)dSpaceList.get(0), relPluginPath);
+    }
+
+    if (messageDir == null ||
+        (!messageDir.exists() && !messageDir.mkdir()) ||
+        !messageDir.canWrite()) {
       throw new IllegalArgumentException("Configured V3 data directory " +
                                          messageDir +
                                          " does not exist or cannot be " +
                                          "written to.");
     }
+
     this.voterUserData = new VoterUserData(spec, this, orig, key,
                                            duration, hashAlg,
                                            pollerNonce,
@@ -216,13 +231,12 @@ public class V3Voter extends BasePoll {
   public boolean reserveScheduleTime() {
     CachedUrlSet cus = this.getCachedUrlSet();
     long estimatedHashDuration = cus.estimatedHashDuration();
-    log.debug2("*** Reserve Schedule Time: cus estimated hash duration=" + estimatedHashDuration);
     long now = TimeBase.nowMs();
     Deadline earliestStart = Deadline.at(now + estimatedHashDuration);
     Deadline latestFinish =
-      Deadline.at(earliestStart.getExpirationTime() + estimatedHashDuration);
-    log.debug2("*** Reserve Schedule Time: earliest start=" + earliestStart.getExpirationTime());
-    log.debug2("*** Reserve Schedule Time: latest finish=" + latestFinish.getExpirationTime());
+      Deadline.at(getDeadline().getExpirationTime() - estimatedHashDuration);
+    log.debug("Voter " + getKey() + ": Earliest Start = " +
+              earliestStart + "; Latest Finish = " + latestFinish);
     TaskCallback tc = new TaskCallback() {
       public void taskEvent(SchedulableTask task, EventType type) {
         // do nothing... yet!
@@ -237,7 +251,18 @@ public class V3Voter extends BasePoll {
         return n;
       }
     };
-    return theDaemon.getSchedService().scheduleTask(task);
+    
+    boolean suc = theDaemon.getSchedService().scheduleTask(task);
+    if (!suc) {
+      String msg = "No time for V3 Voter in poll " + getKey() + ". " +
+                   " Requested time for step task with earliest start at " +
+                   earliestStart +", latest finish at " + latestFinish + ", " +
+                   "with an estimated hash duration of " + estimatedHashDuration +
+                   "ms as of " + TimeBase.nowDate();
+      voterUserData.setErrorDetail(msg);
+      log.warning(msg);
+    }
+    return suc;
   }
 
   public void startPoll() {
@@ -270,7 +295,9 @@ public class V3Voter extends BasePoll {
         stopPoll(STATUS_EXPIRED);
         return;
       }
+      log.debug("Found enough time to participate in poll " + getKey());
     } else {
+      log.warning("Not enough time found to participate in poll " + getKey());
       stopPoll(STATUS_NO_TIME);
       return;
     }
@@ -648,6 +675,10 @@ public class V3Voter extends BasePoll {
      */
     public void timerExpired(Object cookie) {
       stopPoll();
+    }
+    
+    public String toString() {
+      return "V3 Voter " + getKey();
     }
   }
 

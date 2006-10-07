@@ -1,5 +1,5 @@
 /*
- * $Id: VoterUserData.java,v 1.14 2006-10-03 22:24:13 thib_gc Exp $
+ * $Id: VoterUserData.java,v 1.15 2006-10-07 02:01:27 smorabito Exp $
  */
 
 /*
@@ -74,6 +74,7 @@ public class VoterUserData
   private long createTime;
   private PsmInterpStateBean psmState;
   private int status;
+  private String errorDetail;
   /** @deprecated */
   private String statusString;
 
@@ -357,6 +358,14 @@ public class VoterUserData
    */
   public void setStatusString(String s) {
     // do nothing
+  }
+
+  public void setErrorDetail(String err) {
+    this.errorDetail = err;
+  }
+  
+  public String getErrorDetail() {
+    return errorDetail;
   }
 
   /*

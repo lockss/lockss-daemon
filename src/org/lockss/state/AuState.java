@@ -1,5 +1,5 @@
 /*
- * $Id: AuState.java,v 1.24 2006-09-28 23:52:52 smorabito Exp $
+ * $Id: AuState.java,v 1.25 2006-10-07 02:01:27 smorabito Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ package org.lockss.state;
 import java.util.*;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.LockssSerializable;
+import org.lockss.util.Logger;
 import org.lockss.util.TimeBase;
 
 /**
@@ -50,6 +51,8 @@ public class AuState implements LockssSerializable {
   protected HashSet crawlUrls;
   protected int clockssSubscriptionStatus;
   protected double v3Agreement;
+  
+  private static final Logger log = Logger.getLogger("AuState");
 
   transient int urlUpdateCntr = 0;
 
@@ -57,12 +60,13 @@ public class AuState implements LockssSerializable {
   static final int URL_UPDATE_LIMIT = 1;
 
   public AuState(ArchivalUnit au, HistoryRepository historyRepo) {
-    this(au, -1, -1, -1, null, CLOCKSS_SUB_UNKNOWN, historyRepo);
+    this(au, -1, -1, -1, null, CLOCKSS_SUB_UNKNOWN, 0.0, historyRepo);
   }
 
   protected AuState(ArchivalUnit au, long lastCrawlTime, long lastTopLevelPoll,
                     long lastTreeWalk, HashSet crawlUrls,
 		    int clockssSubscriptionStatus,
+                    double v3Agreement,
                     HistoryRepository historyRepo) {
     this.au = au;
     this.lastCrawlTime = lastCrawlTime;
@@ -70,6 +74,7 @@ public class AuState implements LockssSerializable {
     this.lastTreeWalk = lastTreeWalk;
     this.crawlUrls = crawlUrls;
     this.clockssSubscriptionStatus = clockssSubscriptionStatus;
+    this.v3Agreement = v3Agreement;
     this.historyRepo = historyRepo;
   }
 

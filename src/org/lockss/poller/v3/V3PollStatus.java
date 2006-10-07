@@ -1,5 +1,5 @@
 /*
-* $Id: V3PollStatus.java,v 1.7 2006-09-25 02:16:47 smorabito Exp $
+* $Id: V3PollStatus.java,v 1.8 2006-10-07 02:01:27 smorabito Exp $
  */
 
 /*
@@ -296,6 +296,11 @@ public class V3PollStatus {
       summary.add(new SummaryInfo("Status",
                                   ColumnDescriptor.TYPE_STRING,
                                   poll.getStatusString()));
+      if (poll.getPollerStateBean().getErrorDetail() != null) {
+        summary.add(new SummaryInfo("Error",
+                                    ColumnDescriptor.TYPE_STRING,
+                                    poll.getPollerStateBean().getErrorDetail()));
+      }
       summary.add(new SummaryInfo("Start Time",
                                   ColumnDescriptor.TYPE_DATE,
                                   new Long(poll.getCreateTime())));
@@ -675,6 +680,11 @@ public class V3PollStatus {
       summary.add(new SummaryInfo("Status",
                                   ColumnDescriptor.TYPE_STRING,
                                   voter.getStatusString()));
+      if (voter.getVoterUserData().getErrorDetail() != null) {
+        summary.add(new SummaryInfo("Error",
+                                    ColumnDescriptor.TYPE_STRING,
+                                    voter.getVoterUserData().getErrorDetail()));
+      }
       summary.add(new SummaryInfo("Caller",
                                   ColumnDescriptor.TYPE_STRING,
                                   voter.getPollerId().getIdString()));

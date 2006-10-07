@@ -1,5 +1,5 @@
 /*
- * $Id: FuncV3Voter.java,v 1.11 2006-09-25 02:16:47 smorabito Exp $
+ * $Id: FuncV3Voter.java,v 1.12 2006-10-07 02:01:27 smorabito Exp $
  */
 
 /*
@@ -109,7 +109,6 @@ public class FuncV3Voter extends LockssTestCase {
     p.setProperty(V3Poller.PARAM_QUORUM, "3");
     p.setProperty(LcapStreamComm.PARAM_ENABLED, "true");
     p.setProperty(LcapDatagramComm.PARAM_ENABLED, "false");
-    p.setProperty(V3Poller.PARAM_V3_MESSAGE_DIR, tempDirPath);
     p.setProperty(IdentityManager.PARAM_LOCAL_V3_IDENTITY,
 		  "TCP:[127.0.0.1]:3456");
     p.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
