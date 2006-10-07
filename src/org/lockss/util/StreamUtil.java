@@ -1,5 +1,5 @@
 /*
- * $Id: StreamUtil.java,v 1.13 2006-04-10 05:31:01 smorabito Exp $
+ * $Id: StreamUtil.java,v 1.14 2006-10-07 23:11:03 tlipkis Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 
 import java.io.*;
+import org.lockss.daemon.LockssWatchdog;
 
 /**
  * This is a class to contain generic stream utilities
@@ -43,53 +44,101 @@ import java.io.*;
 
 public class StreamUtil {
 
+  static Logger log = Logger.getLogger("StreamUtil");
+
   private static final int BUFFER_SIZE = 256;
+  static final int COPY_WDOG_CHECK_EVERY_BYTES = 1024 * 1024;
 
   /**
-   * This function copies the contents of in InputStream to an Outputstream.
-   * It buffers the copying, and closes neither.
-   * @param is input
-   * @param os output
+   * Copy bytes from an InputStream to an Outputstream until EOF.  The
+   * OutputStream is flushed, neither stream is closed.
+   * @param is input stream
+   * @param os output stream
    * @return number of bytes copied
    * @throws IOException
    */
   public static long copy(InputStream is, OutputStream os) throws IOException {
-    if (is == null || os == null) {
-      return 0;
-    }
-    long totalByteCount = 0;
-    byte[] bytes = new byte[BUFFER_SIZE];
-    int byteCount;
-    while ((byteCount = is.read(bytes)) > 0) {
-      totalByteCount += byteCount;
-      os.write(bytes, 0, byteCount);
-    }
-    os.flush();
-    return totalByteCount;
+    return copy(is, os, -1);
   }
 
   /**
-   * This function copies up to len bytes from the contents of in InputStream
-   * to an Outputstream. It is <b>not</b> buffered, and closes neither stream.
-   * @param is input
-   * @param os output
-   * @param len The number of bytes to copy
+   * Copy bytes from an InputStream to an Outputstream until EOF,
+   * occasionally poking the watchdog.  The OutputStream is flushed,
+   * neither stream is closed.
+   * @param is input stream
+   * @param os output stream
+   * @param wdog if non-null, a LockssWatchdog that will be poked at
+   * approximately twice its required rate.
+   * @return number of bytes copied
+   * @throws IOException
+   */
+  public static long copy(InputStream is, OutputStream os,
+			  LockssWatchdog wdog) throws IOException {
+    return copy(is, os, -1, wdog);
+  }
+
+  /**
+   * Copy up to len bytes from an InputStream to an Outputstream.  The
+   * OutputStream is flushed, neither stream is closed.
+   * @param is input stream
+   * @param os output stream
+   * @param len number of bytes to copy; -1 means copy to EOF
    * @return number of bytes copied
    * @throws IOException
    */
   public static long copy(InputStream is, OutputStream os, long len)
       throws IOException {
+    return copy(is, os, len, null);
+  }
+
+  /**
+   * Copy up to len bytes from InputStream to Outputstream, occasionally
+   * poking a watchdog.  The OutputStream is flushed, neither stream is
+   * closed.
+   * @param is input stream
+   * @param os output stream
+   * @param len number of bytes to copy; -1 means copy to EOF
+   * @param wdog if non-null, a LockssWatchdog that will be poked at
+   * approximately twice its required rate.
+   * @return number of bytes copied
+   * @throws IOException
+   */
+  public static long copy(InputStream is, OutputStream os, long len,
+			  LockssWatchdog wdog)
+      throws IOException {
     if (is == null || os == null || len == 0) {
       return 0;
     }
-    long totalByteCount = 0;
-    int in = 0;
-    while (totalByteCount < len && (in = is.read()) > -1 ) {
-      os.write(in);
-      totalByteCount++;
+    long wnext = 0, wcnt = 0, wint = 0;
+    if (wdog != null) {
+      wint = wdog.getWDogInterval() / 4;
+      wnext = TimeBase.nowMs() + wint;
+    }
+    byte[] buf = new byte[BUFFER_SIZE];
+    long rem = (len > 0) ? len : Long.MAX_VALUE;
+    long ncopied = 0;
+    int nread;
+    while (rem > 0 &&
+	   ((nread =
+	     is.read(buf, 0,
+		     rem > BUFFER_SIZE ? BUFFER_SIZE : (int)rem)) > 0)) {
+      os.write(buf, 0, nread);
+      ncopied += nread;
+      rem -= nread;
+      if (wdog != null) {
+	if ((wcnt += nread) > COPY_WDOG_CHECK_EVERY_BYTES) {
+	  log.debug("checking: "+ wnext);
+	  if (TimeBase.nowMs() > wnext) {
+	    log.debug("poke: " + wcnt);
+	    wdog.pokeWDog();
+	    wnext = TimeBase.nowMs() + wint;
+	  }
+	  wcnt = 0;
+	}
+      }
     }
     os.flush();
-    return totalByteCount;
+    return ncopied;
   }
 
   /**

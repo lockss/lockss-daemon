@@ -1,10 +1,10 @@
 /*
- * $Id: TestStreamUtil.java,v 1.11 2006-04-10 05:31:00 smorabito Exp $
+ * $Id: TestStreamUtil.java,v 1.12 2006-10-07 23:11:03 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,7 +35,10 @@ package org.lockss.util;
 import java.util.*;
 import java.io.*;
 import junit.framework.TestCase;
+import org.apache.commons.io.input.*;
+
 import org.lockss.test.*;
+import org.lockss.daemon.LockssWatchdog;
 
 /**
  * This is the test class for org.lockss.util.StreamUtil
@@ -81,21 +84,17 @@ public class TestStreamUtil extends LockssTestCase {
     InputStream is = new StringInputStream("012345678901234567890");
     OutputStream baos = new ByteArrayOutputStream(20);
     assertEquals(5, StreamUtil.copy(is, baos, 5));
-    String resultStr1 = baos.toString();
+    assertEquals("01234", baos.toString());
     assertEquals(5, StreamUtil.copy(is, baos, 5));
-    String resultStr2 = baos.toString();
+    assertEquals("0123456789", baos.toString());
     assertEquals(5, StreamUtil.copy(is, baos, 5));
-    String resultStr3 = baos.toString();
+    assertEquals("012345678901234", baos.toString());
     StreamUtil.copy(is, baos, 5);
-    String resultStr4 = baos.toString();
-    assertEquals("01234", resultStr1);
-    assertEquals("0123456789", resultStr2);
-    assertEquals("012345678901234", resultStr3);
-    assertEquals("01234567890123456789", resultStr4);
+    assertEquals("01234567890123456789", baos.toString());
     is.close();
     baos.close();
 
-    is = new StringInputStream("012345678901234567890");
+    is = new StringInputStream("01234567890123456789012345");
     baos = new ByteArrayOutputStream(2);
     assertEquals(2, StreamUtil.copy(is, baos, 2));
     assertEquals("01", baos.toString());
@@ -105,8 +104,52 @@ public class TestStreamUtil extends LockssTestCase {
     baos = new ByteArrayOutputStream(7);
     assertEquals(7, StreamUtil.copy(is, baos, 7));
     assertEquals("7890123", baos.toString());
+    baos = new ByteArrayOutputStream(7);
+    assertEquals(12, StreamUtil.copy(is, baos, -1));
+    assertEquals("456789012345", baos.toString());
     is.close();
     baos.close();
+  }
+
+  public void testCopyInputStreamPokeWatchdog() throws IOException {
+    TimeBase.setSimulated(1000);
+    final MyLockssWatchdog wdog = new MyLockssWatchdog(100);
+    SimpleBinarySemaphore wait = new SimpleBinarySemaphore();
+    SimpleBinarySemaphore poke = new SimpleBinarySemaphore();
+    int size = 50 * StreamUtil.COPY_WDOG_CHECK_EVERY_BYTES;
+    // make an InputStream that waits every time it has supplied twice the
+    // byte interval at which StreamUtil.copy() checks to see if it's time
+    // to poke the watchdog
+    final InputStream is =
+      new SemwaitInputStream(new ZeroInputStream(size),
+			     StreamUtil.COPY_WDOG_CHECK_EVERY_BYTES * 2,
+			     wait,
+			     poke);
+    final OutputStream os = new NullOutputStream();
+    Thread th = new Thread() {
+	public void run() {
+	  try {
+	    StreamUtil.copy(is, os, wdog);
+	  } catch (IOException e) {
+	    throw new RuntimeException("", e);
+	  }
+	}};
+    th.start();
+    poke.give();
+    assertTrue(wait.take(TIMEOUT_SHOULDNT));
+    assertEquals(0, wdog.times.size());
+    TimeBase.step(1000);
+    poke.give();
+    assertTrue(wait.take(TIMEOUT_SHOULDNT));
+    assertEquals(1, wdog.times.size());
+    TimeBase.step(1000);
+    poke.give();
+    assertTrue(wait.take(TIMEOUT_SHOULDNT));
+    poke.give();
+    assertTrue(wait.take(TIMEOUT_SHOULDNT));
+    assertEquals(2, wdog.times.size());
+    is.close();
+    os.close();
   }
 
   public void testCopyNullReader() throws IOException {
@@ -284,5 +327,71 @@ public class TestStreamUtil extends LockssTestCase {
 				   new StringInputStream("bar")));
   }
 
+  public static class MyLockssWatchdog implements LockssWatchdog {
+    List times = new ArrayList();
+    long intr;
+    MyLockssWatchdog(long interval) {
+      this.intr = interval;
+    }
+    public void startWDog(long interval) {}
+    public void stopWDog() {}
+    public void pokeWDog() {
+      times.add(new Long(TimeBase.nowMs()));
+    }
+    public long getWDogInterval() {
+      return intr;
+    }
+  }
 
+  public static class SemwaitInputStream extends ProxyInputStream {
+    private CountingInputStream in;
+    private int everyNBytes;
+    private SimpleBinarySemaphore firstPoke;
+    private SimpleBinarySemaphore thenWait;
+    private long next;
+
+
+    public SemwaitInputStream(InputStream in, int everyNBytes,
+			      SimpleBinarySemaphore firstPoke,
+			      SimpleBinarySemaphore thenWait) {
+      this(new CountingInputStream(in), everyNBytes, firstPoke, thenWait);
+    }
+
+    private SemwaitInputStream(CountingInputStream in, int everyNBytes,
+			       SimpleBinarySemaphore firstPoke,
+			       SimpleBinarySemaphore thenWait) {
+      super(in);
+      this.in = in;
+      this.everyNBytes = everyNBytes;
+      this.firstPoke = firstPoke;
+      this.thenWait = thenWait;
+      next = everyNBytes;
+    }
+
+    void doit() {
+      log.debug("doit()");
+      firstPoke.give();
+      thenWait.take();
+      log.debug("done()");
+      next = in.getCount() + everyNBytes;
+    }
+
+    public int read(byte[] b) throws IOException {
+      int found = super.read(b);
+      if (in.getCount() >= next) doit();
+      return found;
+    }
+
+    public int read(byte[] b, int off, int len) throws IOException {
+      int found = super.read(b, off, len);
+      if (in.getCount() >= next) doit();
+      return found;
+    }
+
+    public int read() throws IOException {
+      int found = super.read();
+      if (in.getCount() >= next) doit();
+      return found;
+    }
+  }
 }
