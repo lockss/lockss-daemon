@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuState.java,v 1.5 2006-09-16 07:17:05 tlipkis Exp $
+ * $Id: TestAuState.java,v 1.5.2.1 2006-10-07 01:57:29 smorabito Exp $
  */
 
 /*
@@ -55,7 +55,7 @@ public class TestAuState extends LockssTestCase {
   }
 
   public void testCrawlFinished() {
-    AuState auState = new AuState(mau, 123, -1, -1, null, 1, historyRepo);
+    AuState auState = new AuState(mau, 123, -1, -1, null, 1, 0, historyRepo);
     assertEquals(123, auState.getLastCrawlTime());
     assertNull(historyRepo.theAuState);
 
@@ -66,7 +66,7 @@ public class TestAuState extends LockssTestCase {
   }
 
   public void testPollFinished() {
-    AuState auState = new AuState(mau, -1, 123, -1, null, 1, historyRepo);
+    AuState auState = new AuState(mau, -1, 123, -1, null, 1, 0, historyRepo);
     assertEquals(123, auState.getLastTopLevelPollTime());
     assertNull(historyRepo.theAuState);
 
@@ -77,7 +77,7 @@ public class TestAuState extends LockssTestCase {
   }
 
   public void testTreeWalkFinished() {
-    AuState auState = new AuState(mau, -1, -1, 123, null, 1, historyRepo);
+    AuState auState = new AuState(mau, -1, -1, 123, null, 1, 0, historyRepo);
     assertEquals(123, auState.getLastTreeWalkTime());
 
     TimeBase.setSimulated(456);
@@ -90,7 +90,7 @@ public class TestAuState extends LockssTestCase {
     stringCollection.add("test");
 
     AuState auState =
-      new AuState(mau, -1, -1, 123, stringCollection, 1, historyRepo);
+      new AuState(mau, -1, -1, 123, stringCollection, 1, 0, historyRepo);
     Collection col = auState.getCrawlUrls();
     Iterator colIter = col.iterator();
     assertTrue(colIter.hasNext());
@@ -100,7 +100,7 @@ public class TestAuState extends LockssTestCase {
 
   public void testUpdateUrls() {
     AuState auState =
-      new AuState(mau, -1, -1, 123, new HashSet(), 1, historyRepo);
+      new AuState(mau, -1, -1, 123, new HashSet(), 1, 0, historyRepo);
     assertNull(historyRepo.theAuState);
 
     Collection col = auState.getCrawlUrls();
@@ -126,7 +126,7 @@ public class TestAuState extends LockssTestCase {
 
   public void testForceUpdateUrls() {
     AuState auState =
-      new AuState(mau, -1, -1, 123, new HashSet(), 1, historyRepo);
+      new AuState(mau, -1, -1, 123, new HashSet(), 1, 0, historyRepo);
     assertNull(historyRepo.theAuState);
 
     Collection col = auState.getCrawlUrls();

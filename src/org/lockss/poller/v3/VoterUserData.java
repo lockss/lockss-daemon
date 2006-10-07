@@ -1,5 +1,5 @@
 /*
- * $Id: VoterUserData.java,v 1.13 2006-09-25 02:16:47 smorabito Exp $
+ * $Id: VoterUserData.java,v 1.13.2.1 2006-10-07 01:57:28 smorabito Exp $
  */
 
 /*
@@ -74,6 +74,7 @@ public class VoterUserData
   private long createTime;
   private PsmInterpStateBean psmState;
   private int status;
+  private String errorDetail;
   /** @deprecated */
   private String statusString;
 
@@ -359,7 +360,15 @@ public class VoterUserData
   public void setStatusString(String s) {
     // do nothing
   }
+
+  public void setErrorDetail(String err) {
+    this.errorDetail = err;
+  }
   
+  public String getErrorDetail() {
+    return errorDetail;
+  }
+
   /*
    * Implementation of V3LcapMessage.Factory
    */

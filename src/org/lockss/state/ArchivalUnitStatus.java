@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.44 2006-09-28 23:52:52 smorabito Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.44.2.1 2006-10-07 01:57:28 smorabito Exp $
  */
 
 /*
@@ -228,11 +228,11 @@ public class ArchivalUnitStatus
                                              au.getAuId()));
         // Percent damaged.  It's scary to see '0% Agreement' if there's no
         // history, so we just show a friendlier message.
-        if (auState.getV3Agreement() == 0.0) {
+        if (auState.getLastTopLevelPollTime() == -1) {
           stat = "Waiting for Poll";
         } else {
-          stat = Integer.toString((int)Math.round(auState.getV3Agreement() * 100)) + 
-                  "% Agreement";
+          stat = Integer.toString((int)Math.round(auState.getV3Agreement() * 100)) +
+                 "% Agreement";
         }
       } else {
         rowMap.put("AuPolls",

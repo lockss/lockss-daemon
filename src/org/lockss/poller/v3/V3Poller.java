@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.33 2006-09-28 23:52:52 smorabito Exp $
+ * $Id: V3Poller.java,v 1.33.2.1 2006-10-07 01:57:28 smorabito Exp $
  */
 
 /*
@@ -134,12 +134,12 @@ public class V3Poller extends BasePoll {
   /**
    * Directory in which to store message data.
    */
-  public static final String PARAM_V3_MESSAGE_DIR =
-    PREFIX + "messageDir";
+  public static final String PARAM_V3_MESSAGE_REL_DIR =
+    PREFIX + "messageRelDir";
   // Default is for production.  Override this for
   // testing.
-  public static final String DEFAULT_V3_MESSAGE_DIR =
-    "/cache/gamma/v3state";
+  public static final String DEFAULT_V3_MESSAGE_REL_DIR =
+    "v3state";
 
   /**
    * Padding to add to the scheduled vote deadline, in ms.
@@ -336,9 +336,23 @@ public class V3Poller extends BasePoll {
     repairFromCache = 
       c.getPercentage(PARAM_V3_REPAIR_FROM_CACHE_PERCENT,
                       DEFAULT_V3_REPAIR_FROM_CACHE_PERCENT);
-    messageDir =
-      new File(c.get(PARAM_V3_MESSAGE_DIR, DEFAULT_V3_MESSAGE_DIR));
-    if (!messageDir.exists() || !messageDir.canWrite()) {
+    // Determine the proper location for the V3 message dir.
+    List dSpaceList =
+      CurrentConfig.getList(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST);
+    String relPluginPath =
+      CurrentConfig.getParam(PARAM_V3_MESSAGE_REL_DIR,
+                             DEFAULT_V3_MESSAGE_REL_DIR);
+
+    if (dSpaceList == null || dSpaceList.size() == 0) {
+      log.error(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST +
+                " not specified, not configuring V3 message dir.");
+    } else {
+      messageDir = new File((String)dSpaceList.get(0), relPluginPath);
+    }
+
+    if (messageDir == null ||
+        (!messageDir.exists() && !messageDir.mkdir()) ||
+        !messageDir.canWrite()) {
       throw new IllegalArgumentException("Configured V3 data directory " +
                                          messageDir +
                                          " does not exist or cannot be " +
@@ -354,12 +368,10 @@ public class V3Poller extends BasePoll {
     CachedUrlSet cus = this.getCachedUrlSet();
     long estimatedHashDuration = cus.estimatedHashDuration();
     long now = TimeBase.nowMs();
-    // This assumes that all participants have roughly the same estimated
-    // hash duration for this CUS.
-    Deadline earliestStart = Deadline.at(now + estimatedHashDuration);
+    Deadline earliestStart =
+      Deadline.at(now + (estimatedHashDuration * maxParticipants));
     Deadline latestFinish =
-      Deadline.at(earliestStart.getExpirationTime() +
-                  (estimatedHashDuration * maxParticipants));
+      Deadline.at(getDeadline().getExpirationTime() - estimatedHashDuration);
     TaskCallback tc = new TaskCallback() {
       public void taskEvent(SchedulableTask task, EventType type) {
         // do nothing... yet!
@@ -373,7 +385,17 @@ public class V3Poller extends BasePoll {
         return n;
       }
     };
-    return theDaemon.getSchedService().scheduleTask(task);
+    boolean suc = theDaemon.getSchedService().scheduleTask(task);
+    if (!suc) {
+      String msg = "No time for V3 Poller in poll " + getKey() + ". " +
+                   " Requested time for step task with earliest start at " +
+                   earliestStart +", latest finish at " + latestFinish + ", " +
+                   "with an estimated hash duration of " + estimatedHashDuration +
+                   "ms as of " + TimeBase.nowDate();
+      pollerState.setErrorDetail(msg);
+      log.warning(msg);
+    }
+    return suc;
   }
 
   /**
