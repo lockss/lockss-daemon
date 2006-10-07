@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawlManagerStatusSource.java,v 1.7 2006-09-17 07:26:26 tlipkis Exp $
+ * $Id: MockCrawlManagerStatusSource.java,v 1.8 2006-10-07 07:16:22 tlipkis Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ public class MockCrawlManagerStatusSource
     implements CrawlManager.StatusSource {
   private List crawlStatusList;
   private LockssDaemon daemon;
+  private CrawlManagerStatus cmStatus = null;
 
   public MockCrawlManagerStatusSource(LockssDaemon daemon) {
     this.daemon = daemon;
@@ -63,7 +64,12 @@ public class MockCrawlManagerStatusSource
 //   }
 
   public CrawlManagerStatus getStatus() {
+    if (cmStatus != null) return cmStatus;
     return new MyCrawlManagerStatus(crawlStatusList);
+  }
+
+  public void setStatus(CrawlManagerStatus status) {
+    this.cmStatus = status;
   }
 
   public void setCrawlStatusList(List crawlStatusList) {
@@ -85,7 +91,8 @@ public class MockCrawlManagerStatusSource
       this.clist = clist;
     }
     public List getCrawlStatusList() {
-      return clist;
+      if (clist != null) return clist;
+      return super.getCrawlStatusList();
     }
   }
 }

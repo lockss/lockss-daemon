@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerStatus.java,v 1.32 2006-07-19 00:47:00 tlipkis Exp $
+ * $Id: CrawlManagerStatus.java,v 1.33 2006-10-07 07:16:22 tlipkis Exp $
  */
 
 /*
@@ -33,28 +33,35 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.crawler;
 
 import java.util.*;
+import org.apache.commons.collections.map.LRUMap;
+import org.apache.commons.collections.OrderedMapIterator;
 
 import org.lockss.app.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 
-/** Reflects overall status of CrawlManager, contains list of individual
- * Crawler.Status objects */
+/** Reflects overall status of CrawlManager, contains history of
+ * Crawler.Status objects for individual crawls */
 public class CrawlManagerStatus {
-  private HistoryList crawlList;
+
+  private LRUMap statusMap;
   private int successful = 0;
   private int failed = 0;
   private Deadline nextCrawlStarter;
 
+  /** Create CrawlManagerStatus with specified fixed size history */
   public CrawlManagerStatus(int histSize) {
-    this.crawlList = new HistoryList(histSize);
+    this.statusMap = new LRUMap(histSize);
   }
 
-  public void setHistSize(int histMax) {
-    synchronized (crawlList) {
-      crawlList.setMax(histMax);
+  public synchronized void setHistSize(int histMax) {
+    LRUMap newmap = new LRUMap(histMax);
+    for (OrderedMapIterator iter = statusMap.orderedMapIterator();
+	 iter.hasNext(); ) {
+      newmap.put(iter.next(), iter.getValue());
     }
+    statusMap = newmap;
   }
 
   public void setNextCrawlStarter(Deadline nextCrawlStarter) {
@@ -65,16 +72,25 @@ public class CrawlManagerStatus {
     return nextCrawlStarter;
   }
 
-  public List getCrawlStatusList() {
-    synchronized (crawlList) {
-      return new ArrayList(crawlList);
+  /** Return a list of Crawler.Status for each crawl in the history. */
+  public synchronized List getCrawlStatusList() {
+    List res = new ArrayList(statusMap.size());
+    for (OrderedMapIterator iter = statusMap.orderedMapIterator();
+	 iter.hasNext(); ) {
+      iter.next();
+      res.add(iter.getValue());
     }
+    return res;
   }
 
-  public void addCrawl(Crawler.Status status) {
-    synchronized (crawlList) {
-      crawlList.add(status);
-    }
+  /** Add a crawl status object to the history */
+  public synchronized void addCrawlStatus(Crawler.Status status) {
+    statusMap.put(status.getKey(), status);
+  }
+
+  /** Retrieve the Crawler.Status object with the given key */
+  public synchronized Crawler.Status getCrawlStatus(String key) {
+    return (Crawler.Status)statusMap.get(key);
   }
 
   public void incrFinished(boolean success) {
@@ -93,4 +109,3 @@ public class CrawlManagerStatus {
     return failed;
   }
 }
-

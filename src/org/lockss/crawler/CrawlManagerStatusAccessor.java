@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerStatusAccessor.java,v 1.6 2006-09-22 06:23:28 tlipkis Exp $
+ * $Id: CrawlManagerStatusAccessor.java,v 1.7 2006-10-07 07:16:22 tlipkis Exp $
  */
 
 /*
@@ -34,7 +34,6 @@ package org.lockss.crawler;
 
 import java.util.*;
 
-import org.apache.commons.collections.map.ReferenceMap;
 import org.lockss.daemon.status.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
@@ -111,11 +110,6 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
   private CrawlManager.StatusSource statusSource;
   private PluginManager pluginMgr;
 
-  // Maps key to Crawler.Status.  Weak values allow Status obj to be
-  // collected
-  private Map statusMap = new ReferenceMap(ReferenceMap.HARD,
-					   ReferenceMap.WEAK);
-
   public CrawlManagerStatusAccessor(CrawlManager.StatusSource statusSource) {
     this.statusSource = statusSource;
     this.pluginMgr = statusSource.getDaemon().getPluginManager();
@@ -178,7 +172,6 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
 
   private Map makeRow(Crawler.Status status, Counts ct, int rowNum) {
     String key = status.getKey();
-    statusMap.put(key, status);
 
     Map row = new HashMap();
     ArchivalUnit au = status.getAu();
@@ -280,10 +273,6 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
       sortRules.add(new StatusTable.SortRule(DURATION_COL_NAME, false));
     }
     return sortRules;
-  }
-
-  public Crawler.Status getStatusObject(String key) {
-    return (Crawler.Status)statusMap.get(key);
   }
 
   static class Counts {

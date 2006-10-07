@@ -1,5 +1,5 @@
 /*
- * $Id: TestSingleCrawlStatus.java,v 1.7 2006-07-10 18:01:53 troberts Exp $
+ * $Id: TestSingleCrawlStatus.java,v 1.8 2006-10-07 07:16:22 tlipkis Exp $
  */
 
 /*
@@ -35,12 +35,13 @@ import java.util.*;
 import org.apache.commons.collections.map.LinkedMap;
 import org.lockss.test.*;
 import org.lockss.util.*;
+import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
 
 public class TestSingleCrawlStatus extends LockssTestCase {
-  MockCrawlManagerStatusAccessor cmStatusAcc;
+  MockCrawlManagerStatusSource statusSource;
   SingleCrawlStatus cStatus;
-
+  MockCrawlStatus mcStatus = new MockCrawlStatus();
 
   private static final String URL = "url";
   private static final String CRAWL_ERROR = "crawl_error";
@@ -70,14 +71,13 @@ public class TestSingleCrawlStatus extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-    cmStatusAcc = new MockCrawlManagerStatusAccessor();
-    cStatus = new SingleCrawlStatus(cmStatusAcc);
-    MockCrawlManagerStatusAccessor cmStatusAcc =
-      new MockCrawlManagerStatusAccessor();
+    statusSource = new MockCrawlManagerStatusSource(null);
+    statusSource.setStatus(new CrawlManagerStatus(10));
+    cStatus = new SingleCrawlStatus(statusSource);
   }
 
   public void testCrawlStatusDisplayName() {
-    SingleCrawlStatus cStatus = new SingleCrawlStatus(cmStatusAcc);
+    SingleCrawlStatus cStatus = new SingleCrawlStatus(statusSource);
     try {
       cStatus.getDisplayName();
       fail("getDisplayName should throw");
@@ -86,12 +86,12 @@ public class TestSingleCrawlStatus extends LockssTestCase {
   }
 
   public void testRequiresKey() {
-    SingleCrawlStatus cStatus = new SingleCrawlStatus(cmStatusAcc);
+    SingleCrawlStatus cStatus = new SingleCrawlStatus(statusSource);
     assertTrue(cStatus.requiresKey());
   }
 
   public void testPopulateTableNullTable() throws Exception {
-    SingleCrawlStatus cStatus = new SingleCrawlStatus(cmStatusAcc);
+    SingleCrawlStatus cStatus = new SingleCrawlStatus(statusSource);
     try {
       cStatus.populateTable(null);
       fail("Should have thrown an IllegalArgumentException for a null table");
@@ -101,7 +101,7 @@ public class TestSingleCrawlStatus extends LockssTestCase {
 
   public void testFetchedUrlsThrowsWOKey() throws Exception {
     StatusTable table = new StatusTable("test");
-    SingleCrawlStatus cStatus = new SingleCrawlStatus(cmStatusAcc);
+    SingleCrawlStatus cStatus = new SingleCrawlStatus(statusSource);
     try {
       cStatus.populateTable(table);
       fail("Should have thrown an IllegalArgumentException when called without"
@@ -110,18 +110,21 @@ public class TestSingleCrawlStatus extends LockssTestCase {
     }
   }
 
+  private void addCrawlStatus(Crawler.Status status) {
+    statusSource.getStatus().addCrawlStatus(status);
+  }
+
   public void testCrawlStatusFetchedUrlsNoUrls() throws Exception {
-    MockCrawlStatus status = new MockCrawlStatus();
-    status.setStartTime(1);
-    status.setEndTime(2);
-    status.setUrlsFetched(ListUtil.list());
-    status.setNumParsed(4);
-    status.setAu(new MockArchivalUnit());
+    mcStatus.setStartTime(1);
+    mcStatus.setEndTime(2);
+    mcStatus.setUrlsFetched(ListUtil.list());
+    mcStatus.setNumParsed(4);
+    mcStatus.setAu(new MockArchivalUnit());
 
-    cmStatusAcc.addStatusObject(status);
+    addCrawlStatus(mcStatus);
 
-    SingleCrawlStatus cStatus = new SingleCrawlStatus(cmStatusAcc);
-    StatusTable table = new StatusTable("test", "fetched."+status.getKey());
+    SingleCrawlStatus cStatus = new SingleCrawlStatus(statusSource);
+    StatusTable table = new StatusTable("test", "fetched."+mcStatus.getKey());
 
     cStatus.populateTable(table);
     assertEquals(expectedColDescsFetched, table.getColumnDescriptors());
@@ -130,17 +133,16 @@ public class TestSingleCrawlStatus extends LockssTestCase {
   }
 
   public void testCrawlStatusParsedUrlsNoUrls() throws Exception {
-    MockCrawlStatus status = new MockCrawlStatus();
-    status.setStartTime(1);
-    status.setEndTime(2);
-    status.setNumFetched(3);
-    status.setUrlsParsed(ListUtil.list());
-    status.setAu(new MockArchivalUnit());
+    mcStatus.setStartTime(1);
+    mcStatus.setEndTime(2);
+    mcStatus.setNumFetched(3);
+    mcStatus.setUrlsParsed(ListUtil.list());
+    mcStatus.setAu(new MockArchivalUnit());
 
-    cmStatusAcc.addStatusObject(status);
+    addCrawlStatus(mcStatus);
 
-    SingleCrawlStatus cStatus = new SingleCrawlStatus(cmStatusAcc);
-    StatusTable table = new StatusTable("test", "parsed."+status.getKey());
+    SingleCrawlStatus cStatus = new SingleCrawlStatus(statusSource);
+    StatusTable table = new StatusTable("test", "parsed."+mcStatus.getKey());
 
     cStatus.populateTable(table);
     assertEquals(expectedColDescsParsed, table.getColumnDescriptors());
@@ -149,17 +151,16 @@ public class TestSingleCrawlStatus extends LockssTestCase {
   }
 
   public void testCrawlStatusErrorUrlsNoUrls() throws Exception {
-    MockCrawlStatus status = new MockCrawlStatus();
-    status.setStartTime(1);
-    status.setEndTime(2);
-    status.setUrlsWithErrors(new HashMap());
-    status.setNumParsed(4);
-    status.setAu(new MockArchivalUnit());
+    mcStatus.setStartTime(1);
+    mcStatus.setEndTime(2);
+    mcStatus.setUrlsWithErrors(new HashMap());
+    mcStatus.setNumParsed(4);
+    mcStatus.setAu(new MockArchivalUnit());
 
-    cmStatusAcc.addStatusObject(status);
+    addCrawlStatus(mcStatus);
 
-    SingleCrawlStatus cStatus = new SingleCrawlStatus(cmStatusAcc);
-    StatusTable table = new StatusTable("test", "error."+status.getKey());
+    SingleCrawlStatus cStatus = new SingleCrawlStatus(statusSource);
+    StatusTable table = new StatusTable("test", "error."+mcStatus.getKey());
 
     cStatus.populateTable(table);
     assertEquals(expectedColDescsError, table.getColumnDescriptors());
@@ -168,18 +169,16 @@ public class TestSingleCrawlStatus extends LockssTestCase {
   }
 
   public void testNotModifiedNoUrls() throws Exception {
-    MockCrawlManagerStatusAccessor cmStatusAcc = new MockCrawlManagerStatusAccessor();
-    MockCrawlStatus status = new MockCrawlStatus();
-    status.setStartTime(1);
-    status.setEndTime(2);
-    status.setUrlsNotModified(new HashSet());
-    status.setNumParsed(4);
-    status.setAu(new MockArchivalUnit());
+    mcStatus.setStartTime(1);
+    mcStatus.setEndTime(2);
+    mcStatus.setUrlsNotModified(new HashSet());
+    mcStatus.setNumParsed(4);
+    mcStatus.setAu(new MockArchivalUnit());
 
-    cmStatusAcc.addStatusObject(status);
+    addCrawlStatus(mcStatus);
 
-    SingleCrawlStatus cStatus = new SingleCrawlStatus(cmStatusAcc);
-    StatusTable table = new StatusTable("test", "not-modified."+status.getKey());
+    SingleCrawlStatus cStatus = new SingleCrawlStatus(statusSource);
+    StatusTable table = new StatusTable("test", "not-modified."+mcStatus.getKey());
 
     cStatus.populateTable(table);
     assertEquals(expectedColDescsNotModified, table.getColumnDescriptors());
@@ -188,19 +187,17 @@ public class TestSingleCrawlStatus extends LockssTestCase {
   }
 
   public void testExcludedNoUrls() throws Exception {
-    MockCrawlManagerStatusAccessor cmStatusAcc = new MockCrawlManagerStatusAccessor();
-    MockCrawlStatus status = new MockCrawlStatus();
-    status.setStartTime(1);
-    status.setEndTime(2);
-    status.setNumNotModified(3);
-    status.setNumParsed(4);
-    status.setUrlsExcluded(new HashSet());
-    status.setAu(new MockArchivalUnit());
+    mcStatus.setStartTime(1);
+    mcStatus.setEndTime(2);
+    mcStatus.setNumNotModified(3);
+    mcStatus.setNumParsed(4);
+    mcStatus.setUrlsExcluded(new HashSet());
+    mcStatus.setAu(new MockArchivalUnit());
 
-    cmStatusAcc.addStatusObject(status);
+    addCrawlStatus(mcStatus);
 
-    SingleCrawlStatus cStatus = new SingleCrawlStatus(cmStatusAcc);
-    StatusTable table = new StatusTable("test", "excluded."+status.getKey());
+    SingleCrawlStatus cStatus = new SingleCrawlStatus(statusSource);
+    StatusTable table = new StatusTable("test", "excluded."+mcStatus.getKey());
 
     cStatus.populateTable(table);
     assertEquals(expectedColDescsExcluded, table.getColumnDescriptors());
@@ -209,23 +206,20 @@ public class TestSingleCrawlStatus extends LockssTestCase {
   }
 
   public void testCrawlStatusFetchedUrls() throws Exception {
-    MockCrawlManagerStatusAccessor cmStatusAcc = new MockCrawlManagerStatusAccessor();
-
-    MockCrawlStatus status = new MockCrawlStatus();
     MockArchivalUnit au = new MockArchivalUnit();
     au.setName("Mock name");
 
-    status.setStartTime(1);
-    status.setEndTime(2);
-    status.setUrlsFetched(ListUtil.list("http://www.example.com",
+    mcStatus.setStartTime(1);
+    mcStatus.setEndTime(2);
+    mcStatus.setUrlsFetched(ListUtil.list("http://www.example.com",
 					"http://www.example.com/blah.html"));
-    status.setNumParsed(4);
-    status.setAu(au);
+    mcStatus.setNumParsed(4);
+    mcStatus.setAu(au);
 
-    cmStatusAcc.addStatusObject(status);
+    addCrawlStatus(mcStatus);
 
-    SingleCrawlStatus cStatus = new SingleCrawlStatus(cmStatusAcc);
-    StatusTable table = new StatusTable("test", "fetched."+status.getKey());
+    SingleCrawlStatus cStatus = new SingleCrawlStatus(statusSource);
+    StatusTable table = new StatusTable("test", "fetched."+mcStatus.getKey());
 
     cStatus.populateTable(table);
     assertEquals(expectedColDescsFetched, table.getColumnDescriptors());
@@ -250,24 +244,20 @@ public class TestSingleCrawlStatus extends LockssTestCase {
   }
 
   public void testCrawlStatusExcluded() throws Exception {
-    MockCrawlManagerStatusAccessor cmStatusAcc = 
-      new MockCrawlManagerStatusAccessor();
-
-    MockCrawlStatus status = new MockCrawlStatus();
     MockArchivalUnit au = new MockArchivalUnit();
     au.setName("Mock name");
 
-    status.setStartTime(1);
-    status.setEndTime(2);
-    status.setUrlsExcluded(ListUtil.list("http://www.example.com",
+    mcStatus.setStartTime(1);
+    mcStatus.setEndTime(2);
+    mcStatus.setUrlsExcluded(ListUtil.list("http://www.example.com",
 					"http://www.example.com/blah.html"));
-    status.setNumParsed(4);
-    status.setAu(au);
+    mcStatus.setNumParsed(4);
+    mcStatus.setAu(au);
 
-    cmStatusAcc.addStatusObject(status);
+    addCrawlStatus(mcStatus);
 
-    SingleCrawlStatus cStatus = new SingleCrawlStatus(cmStatusAcc);
-    StatusTable table = new StatusTable("test", "excluded."+status.getKey());
+    SingleCrawlStatus cStatus = new SingleCrawlStatus(statusSource);
+    StatusTable table = new StatusTable("test", "excluded."+mcStatus.getKey());
 
     cStatus.populateTable(table);
     assertEquals(expectedColDescsExcluded, table.getColumnDescriptors());
@@ -283,23 +273,20 @@ public class TestSingleCrawlStatus extends LockssTestCase {
   }
 
   public void testCrawlStatusParsedUrls() throws Exception {
-    MockCrawlManagerStatusAccessor cmStatusAcc = new MockCrawlManagerStatusAccessor();
-
-    MockCrawlStatus status = new MockCrawlStatus();
     MockArchivalUnit au = new MockArchivalUnit();
     au.setName("Mock name");
 
-    status.setStartTime(1);
-    status.setEndTime(2);
-    status.setUrlsParsed(ListUtil.list("http://www.example.com",
+    mcStatus.setStartTime(1);
+    mcStatus.setEndTime(2);
+    mcStatus.setUrlsParsed(ListUtil.list("http://www.example.com",
 				       "http://www.example.com/blah.html"));
-//     status.setNumParsed(4);
-    status.setAu(au);
+//     mcStatus.setNumParsed(4);
+    mcStatus.setAu(au);
 
-    cmStatusAcc.addStatusObject(status);
+    addCrawlStatus(mcStatus);
 
-    SingleCrawlStatus cStatus = new SingleCrawlStatus(cmStatusAcc);
-    StatusTable table = new StatusTable("test", "parsed."+status.getKey());
+    SingleCrawlStatus cStatus = new SingleCrawlStatus(statusSource);
+    StatusTable table = new StatusTable("test", "parsed."+mcStatus.getKey());
 
     cStatus.populateTable(table);
     assertEquals(expectedColDescsParsed, table.getColumnDescriptors());
@@ -315,23 +302,20 @@ public class TestSingleCrawlStatus extends LockssTestCase {
   }
 
   public void testCrawlStatusNotModifiedUrls() throws Exception {
-    MockCrawlManagerStatusAccessor cmStatusAcc = new MockCrawlManagerStatusAccessor();
-
-    MockCrawlStatus status = new MockCrawlStatus();
     MockArchivalUnit au = new MockArchivalUnit();
     au.setName("Mock name");
 
-    status.setStartTime(1);
-    status.setEndTime(2);
-    status.setUrlsNotModified(ListUtil.list("http://www.example.com",
+    mcStatus.setStartTime(1);
+    mcStatus.setEndTime(2);
+    mcStatus.setUrlsNotModified(ListUtil.list("http://www.example.com",
 					    "http://www.example.com/blah.html"));
-    status.setNumParsed(4);
-    status.setAu(au);
+    mcStatus.setNumParsed(4);
+    mcStatus.setAu(au);
 
-    cmStatusAcc.addStatusObject(status);
+    addCrawlStatus(mcStatus);
 
-    SingleCrawlStatus cStatus = new SingleCrawlStatus(cmStatusAcc);
-    StatusTable table = new StatusTable("test", "not-modified."+status.getKey());
+    SingleCrawlStatus cStatus = new SingleCrawlStatus(statusSource);
+    StatusTable table = new StatusTable("test", "not-modified."+mcStatus.getKey());
 
     cStatus.populateTable(table);
     assertEquals(expectedColDescsNotModified, table.getColumnDescriptors());
@@ -347,9 +331,6 @@ public class TestSingleCrawlStatus extends LockssTestCase {
   }
 
   public void testCrawlStatusErrorUrls() throws Exception {
-    MockCrawlManagerStatusAccessor cmStatusAcc = new MockCrawlManagerStatusAccessor();
-
-    MockCrawlStatus status = new MockCrawlStatus();
     MockArchivalUnit au = new MockArchivalUnit();
     au.setName("Mock name");
 
@@ -357,16 +338,16 @@ public class TestSingleCrawlStatus extends LockssTestCase {
     errors.put("http://www.example.com", "Generic error");
     errors.put("http://www.example.com/blah.html", "Generic error2");
 
-    status.setStartTime(1);
-    status.setEndTime(2);
-    status.setUrlsWithErrors(errors);
-    status.setNumParsed(4);
-    status.setAu(au);
+    mcStatus.setStartTime(1);
+    mcStatus.setEndTime(2);
+    mcStatus.setUrlsWithErrors(errors);
+    mcStatus.setNumParsed(4);
+    mcStatus.setAu(au);
 
-    cmStatusAcc.addStatusObject(status);
+    addCrawlStatus(mcStatus);
 
-    SingleCrawlStatus cStatus = new SingleCrawlStatus(cmStatusAcc);
-    StatusTable table = new StatusTable("test", "error."+status.getKey());
+    SingleCrawlStatus cStatus = new SingleCrawlStatus(statusSource);
+    StatusTable table = new StatusTable("test", "error."+mcStatus.getKey());
 
     cStatus.populateTable(table);
     assertEquals(expectedColDescsError, table.getColumnDescriptors());

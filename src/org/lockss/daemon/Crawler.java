@@ -1,5 +1,5 @@
 /*
- * $Id: Crawler.java,v 1.40 2006-09-22 06:23:45 tlipkis Exp $
+ * $Id: Crawler.java,v 1.41 2006-10-07 07:16:22 tlipkis Exp $
  */
 
 /*
@@ -113,7 +113,7 @@ public interface Crawler {
   public static class Status {
     private static int ctr = 0;
 
-    private int keyidx;
+    private String key;
     protected long startTime = -1;
     protected long endTime = -1;
     protected String crawlError = null;
@@ -134,7 +134,7 @@ public interface Crawler {
       this.au = au;
       this.startUrls = startUrls;
       this.type = type;
-      keyidx = nextIdx();
+      key = Integer.toString(nextIdx());
     }
 
     private static synchronized int nextIdx() {
@@ -142,7 +142,7 @@ public interface Crawler {
     }
 
     public String getKey() {
-      return Integer.toString(keyidx);
+      return key;
     }
 
     /**
@@ -334,6 +334,11 @@ public interface Crawler {
     public ArchivalUnit getAu() {
       return au;
     }
+
+    public String toString() {
+      return "[Crawler.Status " + key + "]";
+    }
+
   }
 
   /**

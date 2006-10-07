@@ -1,5 +1,5 @@
 /*
- * $Id: SingleCrawlStatus.java,v 1.7 2006-07-10 18:01:53 troberts Exp $
+ * $Id: SingleCrawlStatus.java,v 1.8 2006-10-07 07:16:22 tlipkis Exp $
  */
 
 /*
@@ -40,7 +40,6 @@ import org.lockss.plugin.*;
 import org.lockss.util.*;
 
 public class SingleCrawlStatus implements StatusAccessor {
-  private CrawlManagerStatusAccessor cmStatusAcc = null;
 
   private static final String URL = "url";
   private static final String IX = "ix";
@@ -77,8 +76,12 @@ public class SingleCrawlStatus implements StatusAccessor {
   private static final List statusSortRules =
     ListUtil.list(new StatusTable.SortRule(IX, true));
 
-  public SingleCrawlStatus(CrawlManagerStatusAccessor cmStatusAcc) {
-    this.cmStatusAcc = cmStatusAcc;
+
+  private CrawlManager.StatusSource statusSource;
+
+
+  public SingleCrawlStatus(CrawlManager.StatusSource statusSource) {
+    this.statusSource = statusSource;
   }
 
   public void populateTable(StatusTable table)
@@ -92,7 +95,7 @@ public class SingleCrawlStatus implements StatusAccessor {
     Crawler.Status status;
     String tableStr;
     try {
-      status = cmStatusAcc.getStatusObject(getStatusKeyFromTableKey(key));
+      status = statusSource.getStatus().getCrawlStatus(getStatusKeyFromTableKey(key));
       tableStr = getTableStrFromKey(key);
     } catch (Exception e) {
       throw new StatusService.NoSuchTableException("Malformed table key: " +
@@ -205,4 +208,3 @@ public class SingleCrawlStatus implements StatusAccessor {
     return true;
   }
 }
-

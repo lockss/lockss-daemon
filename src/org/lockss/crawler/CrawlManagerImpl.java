@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.102 2006-09-25 02:16:47 smorabito Exp $
+ * $Id: CrawlManagerImpl.java,v 1.103 2006-10-07 07:16:22 tlipkis Exp $
  */
 
 /*
@@ -147,8 +147,8 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   public static final String DEFAULT_NEW_CONTENT_START_RATE = "1/730";
 
   /** Number of most recent crawls for which status will be available.
-   * This must be at larger than the thread pool + queue size or status
-   * table will be incomplete.  */
+   * This must be larger than the thread pool + queue size or status table
+   * will be incomplete.  */
   static final String PARAM_HISTORY_MAX =
     PREFIX + "historySize";
   static final int DEFAULT_HISTORY_MAX = 500;
@@ -166,8 +166,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   private PluginManager pluginMgr;
 
   //Tracking crawls for the status info
-  private CrawlManagerStatus cmStatus =
-    new CrawlManagerStatus(DEFAULT_HISTORY_MAX);
+  private CrawlManagerStatus cmStatus;
   private MultiMap runningCrawls = new MultiValueMap();
 
   private long contentCrawlExpiration;
@@ -183,6 +182,8 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   private long paramStartCrawlsInterval = DEFAULT_START_CRAWLS_INTERVAL;
   private long paramStartCrawlsInitialDelay =
     DEFAULT_START_CRAWLS_INITIAL_DELAY;
+  private int histSize = DEFAULT_HISTORY_MAX;
+
   private Map repairRateLimiters = new HashMap();
   private Map newContentRateLimiters = new HashMap();
   private RateLimiter newContentStartRateLimiter;
@@ -199,13 +200,14 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   public void startService() {
     super.startService();
 
+    cmStatus = new CrawlManagerStatus(histSize);
+
     pluginMgr = theDaemon.getPluginManager();
     StatusService statusServ = theDaemon.getStatusService();
-    CrawlManagerStatusAccessor cmStatusAcc =
-      new CrawlManagerStatusAccessor(this);
-    statusServ.registerStatusAccessor(CRAWL_STATUS_TABLE_NAME, cmStatusAcc);
+    statusServ.registerStatusAccessor(CRAWL_STATUS_TABLE_NAME,
+				      new CrawlManagerStatusAccessor(this));
     statusServ.registerStatusAccessor(SINGLE_CRAWL_STATUS_TABLE_NAME,
-				      new SingleCrawlStatus(cmStatusAcc));
+				      new SingleCrawlStatus(this));
     // register our AU event handler
     auEventHandler = new AuEventHandler.Base() {
 	public void auDeleted(ArchivalUnit au) {
@@ -331,8 +333,10 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 					       DEFAULT_NEW_CONTENT_START_RATE);
       }
       if (changedKeys.contains(PARAM_HISTORY_MAX) ) {
-	int cMax = config.getInt(PARAM_HISTORY_MAX, DEFAULT_HISTORY_MAX);
-	cmStatus.setHistSize(cMax);
+	histSize = config.getInt(PARAM_HISTORY_MAX, DEFAULT_HISTORY_MAX);
+	if (cmStatus != null) {
+	  cmStatus.setHistSize(histSize);
+	}
       }
     }
   }
@@ -456,7 +460,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 				  locks.keySet(), percentRepairFromCache);
       CrawlRunner runner =
 	new CrawlRunner(crawler, null, cb, cookie, locks.values(), limiter);
-      addToStatusList(crawler.getStatus());
+      cmStatus.addCrawlStatus(crawler.getStatus());
       addToRunningCrawls(au, crawler);
       new Thread(runner).start();
     } catch (RuntimeException re) {
@@ -576,7 +580,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       execute(runner);
       // Add to status only if successfully queued or started.  (No race
       // here; appearance in status might be delayed.)
-      addToStatusList(crawler.getStatus());
+      cmStatus.addCrawlStatus(crawler.getStatus());
     } catch (RuntimeException e) {
       // thrown by pool if can't execute (pool & queue full, or poll full
       // and no queue)
@@ -916,10 +920,6 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   }
 
   //CrawlManager.StatusSource methods
-
-  private void addToStatusList(Crawler.Status status) {
-    cmStatus.addCrawl(status);
-  }
 
   public CrawlManagerStatus getStatus() {
     return cmStatus;
