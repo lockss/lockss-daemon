@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawler.java,v 1.16 2006-09-23 19:24:32 tlipkis Exp $
+ * $Id: BaseCrawler.java,v 1.17 2006-10-07 23:13:38 tlipkis Exp $
  */
 
 /*
@@ -304,6 +304,7 @@ public abstract class BaseCrawler
     }
     uc.setConnectionPool(connectionPool);
     uc.setPermissionMapSource(this);
+    uc.setWatchdog(wdog);
     return uc;
   }
 

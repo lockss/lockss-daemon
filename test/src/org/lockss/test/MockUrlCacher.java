@@ -1,5 +1,5 @@
 /*
- * $Id: MockUrlCacher.java,v 1.34 2006-08-09 02:04:31 tlipkis Exp $
+ * $Id: MockUrlCacher.java,v 1.35 2006-10-07 23:13:38 tlipkis Exp $
  */
 
 /*
@@ -121,6 +121,9 @@ public class MockUrlCacher implements UrlCacher {
   }
 
   public void setRedirectScheme(RedirectScheme scheme) {
+  }
+
+  public void setWatchdog(LockssWatchdog wdog) {
   }
 
   public void setupCachedUrl(String contents) {

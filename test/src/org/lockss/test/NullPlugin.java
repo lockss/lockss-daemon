@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.80 2006-09-16 22:58:33 tlipkis Exp $
+ * $Id: NullPlugin.java,v 1.81 2006-10-07 23:13:38 tlipkis Exp $
  */
 
 /*
@@ -234,6 +234,9 @@ public class NullPlugin {
     }
 
     public void setRedirectScheme(RedirectScheme scheme) {
+    }
+
+    public void setWatchdog(LockssWatchdog wdog) {
     }
 
     public int cache() throws IOException {

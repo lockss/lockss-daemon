@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.66 2006-09-18 22:30:46 tlipkis Exp $
+ * $Id: BaseUrlCacher.java,v 1.67 2006-10-07 23:13:38 tlipkis Exp $
  */
 
 /*
@@ -83,6 +83,7 @@ public class BaseUrlCacher implements UrlCacher {
   private int proxyPort;
   private IPAddr localAddr = null;
   private Properties reqProps;
+  private LockssWatchdog wdog;
 
   private BitSet fetchFlags = new BitSet();
 
@@ -187,6 +188,10 @@ public class BaseUrlCacher implements UrlCacher {
   public void setRedirectScheme(RedirectScheme scheme) {
     if (logger.isDebug3()) logger.debug3("setRedirectScheme: " + scheme);
     this.redirectOptions = scheme.getOptions();
+  }
+
+  public void setWatchdog(LockssWatchdog wdog) {
+    this.wdog = wdog;
   }
 
   private boolean isDamaged() {
@@ -395,7 +400,7 @@ public class BaseUrlCacher implements UrlCacher {
       leaf.makeNewVersion();
 
       OutputStream os = leaf.getNewOutputStream();
-      StreamUtil.copy(input, os);
+      StreamUtil.copy(input, os, wdog);
       input.close();
       os.close();
       headers.setProperty(CachedUrl.PROPERTY_NODE_URL, url);

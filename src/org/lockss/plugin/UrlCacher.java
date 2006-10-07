@@ -1,5 +1,5 @@
 /*
- * $Id: UrlCacher.java,v 1.26 2006-09-18 22:30:46 tlipkis Exp $
+ * $Id: UrlCacher.java,v 1.27 2006-10-07 23:13:38 tlipkis Exp $
  */
 
 /*
@@ -148,6 +148,12 @@ public interface UrlCacher {
 
   /** Determines the behavior if a redirect response is received. */
   public void setRedirectScheme(RedirectScheme scheme);
+
+  /** Set a LockssWatchdog that should be poked periodically while copying
+   * the content from the network input stream to the repository.
+   * @see StreamUtil#copy(InputStream, OutputStream, long, LockssWatchdog)
+   */
+  public void setWatchdog(LockssWatchdog wdog);
 
   /**
    * Copies the content and properties from the source into the cache.
