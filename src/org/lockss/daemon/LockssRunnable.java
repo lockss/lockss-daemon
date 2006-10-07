@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRunnable.java,v 1.18 2006-09-28 23:29:22 tlipkis Exp $
+ * $Id: LockssRunnable.java,v 1.19 2006-10-07 23:12:07 tlipkis Exp $
  */
 
 /*
@@ -226,6 +226,10 @@ public abstract class LockssRunnable  implements LockssWatchdog, Runnable {
       }
       logEvent("Stopping", false);
     }
+  }
+
+  public long getWDogInterval() {
+    return interval;
   }
 
   /** Refresh the watchdog for another interval milliseconds. */

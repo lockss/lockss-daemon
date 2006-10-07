@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssWatchdog.java,v 1.1 2004-02-10 00:21:39 troberts Exp $
+ * $Id: MockLockssWatchdog.java,v 1.2 2006-10-07 23:12:07 tlipkis Exp $
  */
 
 /*
@@ -44,6 +44,10 @@ public class MockLockssWatchdog implements LockssWatchdog {
   }
 
   public void stopWDog() {
+    throw new UnsupportedOperationException("not implemented");
+  }
+
+  public long getWDogInterval() {
     throw new UnsupportedOperationException("not implemented");
   }
 

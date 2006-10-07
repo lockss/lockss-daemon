@@ -1,5 +1,5 @@
 /*
- * $Id: LockssThread.java,v 1.26 2006-09-28 23:29:21 tlipkis Exp $
+ * $Id: LockssThread.java,v 1.27 2006-10-07 23:12:07 tlipkis Exp $
  */
 
 /*
@@ -206,6 +206,10 @@ public abstract class LockssThread extends Thread implements LockssWatchdog {
       }
       logEvent("Stopping", false);
     }
+  }
+
+  public long getWDogInterval() {
+    return interval;
   }
 
   /** Refresh the watchdog for another interval milliseconds. */
