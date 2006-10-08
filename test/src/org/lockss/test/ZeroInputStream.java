@@ -1,5 +1,5 @@
 /*
- * $Id: ZeroInputStream.java,v 1.1 2006-10-07 23:10:35 tlipkis Exp $
+ * $Id: ZeroInputStream.java,v 1.2 2006-10-08 01:17:00 tlipkis Exp $
  */
 
 /*
@@ -55,7 +55,7 @@ public class ZeroInputStream extends InputStream {
 
   /**
    * Creates a new ZeroInputStream.
-   * @param len number of bytes to produce; -1 means infinite
+   * @param len number of bytes to produce
    */
   public ZeroInputStream(long len) {
     this((byte)0, len);
@@ -64,7 +64,7 @@ public class ZeroInputStream extends InputStream {
   /**
    * Creates a new ZeroInputStream.
    * @param val value of bytes in stream
-   * @param len number of bytes to produce; -1 means infinite
+   * @param len number of bytes to produce
    */
   public ZeroInputStream(byte val, long len) {
     if (len < 0) throw new IllegalArgumentException("len < 0");
@@ -99,6 +99,6 @@ public class ZeroInputStream extends InputStream {
   }
 
   public int available() {
-    return 32768;
+    return (int)Math.min(strmlen, Integer.MAX_VALUE);
   }
 }
