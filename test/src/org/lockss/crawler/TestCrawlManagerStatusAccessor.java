@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerStatusAccessor.java,v 1.4 2006-07-19 00:47:53 tlipkis Exp $
+ * $Id: TestCrawlManagerStatusAccessor.java,v 1.5 2006-10-09 20:32:36 adriz Exp $
  */
 
 /*
@@ -55,6 +55,7 @@ public class TestCrawlManagerStatusAccessor extends LockssTestCase {
   private static final String NUM_URLS_EXCLUDED = "num_urls_excluded";
   private static final String NUM_URLS_WITH_ERRORS = "num_urls_with_errors";
   private static final String NUM_URLS_NOT_MODIFIED = "num_urls_not_modified";
+  private static final String NUM_OF_MIME_TYPES = "num_of_mime_types"; //support url mime-types 
   private static final String START_URLS = "start_urls";
   private static final String CRAWL_STATUS = "crawl_status";
   private static final String NC_TYPE = "New Content";
@@ -94,6 +95,9 @@ public class TestCrawlManagerStatusAccessor extends LockssTestCase {
 			   ColumnDescriptor.TYPE_INT),
       new ColumnDescriptor(NUM_URLS_WITH_ERRORS, "Errors",
 			   ColumnDescriptor.TYPE_INT),
+      new ColumnDescriptor(NUM_OF_MIME_TYPES, "Content Types",
+                           ColumnDescriptor.TYPE_INT,
+                           "Number of different Content Types"),                                                             
       new ColumnDescriptor(START_URLS, "Starting Url(s)",
 			   ColumnDescriptor.TYPE_STRING),
       new ColumnDescriptor(SOURCES, "Source(s)",

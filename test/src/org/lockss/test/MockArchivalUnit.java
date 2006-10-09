@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.69 2006-09-16 22:55:22 tlipkis Exp $
+ * $Id: MockArchivalUnit.java,v 1.70 2006-10-09 20:32:37 adriz Exp $
  */
 
 /*
@@ -249,7 +249,17 @@ public class MockArchivalUnit implements ArchivalUnit {
     return addUrl(url, exists, shouldCache, props);
   }
 
-
+  /* allow setting the  content-type /Mime type to any strin-value while adding URL */
+  public MockCachedUrl addUrlContype(String url, boolean exists, 
+                                     boolean shouldCache, String contentType) {
+    MockCachedUrl cu = addUrl(url, true, true);
+    CIProperties props = new CIProperties();
+    props.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, contentType);
+    cu.setProperties(props);
+    return cu;
+  }
+  
+  
   private MockCachedUrl addUrl(String url,
 			       boolean exists, boolean shouldCache,
 			       CIProperties props,
@@ -277,7 +287,7 @@ public class MockArchivalUnit implements ArchivalUnit {
     ucHash.put(url, uc);
     return cu;
   }
-
+ 
   public void addUrlToBeCached(String url) {
     urlsToCache.add(url);
   }

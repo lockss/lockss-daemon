@@ -1,5 +1,5 @@
 /*
- * $Id: Crawler.java,v 1.41 2006-10-07 07:16:22 tlipkis Exp $
+ * $Id: Crawler.java,v 1.42 2006-10-09 20:32:37 adriz Exp $
  */
 
 /*
@@ -129,6 +129,19 @@ public interface Crawler {
     protected Set urlsParsed = new ListOrderedSet();
 
     protected Set sources = new ListOrderedSet();
+    
+    /* add -  class: public static class RecordMimeType include basic array: urlsArray and Int
+     *  updateUrlsArrayOfMimeType will update based on Boolean recordUrl to update int-RecordMimeType.numOfUrls  or add also the url to 
+     *  RecordMimeType.urlsArray
+     *  ucontentTypeUrls  will map a mimeTypeKey to an object of RecordMimeType
+    */
+    
+    protected Map mimeTypeUrls = new HashMap();/*MimeType - keep record of urls with the given type of mime-type */
+    protected Crawler.Status.RecordMimeTypeUrls recordUrls = null;
+    
+    public Crawler.Status.RecordMimeTypeUrls getRecordMimeTypeUrls() {
+         return recordUrls;
+    }
 
     public Status(ArchivalUnit au, Collection startUrls, String type) {
       this.au = au;
@@ -270,8 +283,66 @@ public interface Crawler {
 	return urlsParsed;
       }
     }
+    
+    /* return the list of the different types of content-mime types found from the map: mimeTypeUrls.keys */
+    public synchronized Collection getMimeTypesVals() {
+      if (isCrawlActive()) {  // consider switching between the 2 cases, if isactive ret the orig-set so if is updated during the crawl ->it's reflected ->seen by ui
+        return new ArrayList( mimeTypeUrls.keySet() );
+      } else {
+        return  mimeTypeUrls.keySet();
+      }
+    }
+    /* return the size of the list of the different types of mime types found from the map: (ArrayList)mimeTypeUrls.numberOfKeys */
+    public synchronized long getNumOfMimeTypes() {
+      return mimeTypeUrls.keySet().size();
+    }
+   /**
+    *  check and update: mimeTypeUrls, 
+    * if there is already an entry (list of string urls) for the given key: mimeType
+    * if y return the list-ptr else create an empty list and return its pointer  
+    */
 
+    public synchronized void updateUrlsArrayOfMimeType(String keyMimeType,
+                                                                String url , boolean keepUrl) {
+      if (keyMimeType == null) return;      
+      recordUrls = (RecordMimeTypeUrls)mimeTypeUrls.get(keyMimeType);                                    // if get returns null --> key is not there (there are no mappings to null)
+      if ( recordUrls == null ) {          
+        RecordMimeTypeUrls recordUrls = new RecordMimeTypeUrls();
+        recordUrls.addCtUrls(url, keepUrl);
+        mimeTypeUrls.put(keyMimeType, recordUrls);
+      } else  {
+        recordUrls.addCtUrls(url, keepUrl);
+      }
+    }
+ 
     /**
+     * get urls from  mimeTypeUrls for the given key: mimeType
+     */
+     public synchronized Collection getUrlsArrayOfMimeType(String keyMimeType) {
+       if ( mimeTypeUrls.containsKey(keyMimeType) ) {    
+         RecordMimeTypeUrls recordUrls = (RecordMimeTypeUrls)mimeTypeUrls.get(keyMimeType);
+         return recordUrls.urlsArray; 
+       } else {
+         return null;// return null, none urls of this content/mime type
+       }
+     }
+
+     /**
+      * Return the number of urls that have been found by this crawler
+      *  with the given mime-type 
+      * @return number of urls with the mime-type that have been by this crawler
+      */
+     public synchronized long getNumUrlsOfMimeType(String keyMimeType) {
+       if ( mimeTypeUrls.containsKey(keyMimeType) ) {    
+         RecordMimeTypeUrls recordUrls = (RecordMimeTypeUrls)mimeTypeUrls.get(keyMimeType);
+         return recordUrls.numUrls; 
+       } else {
+         return 0;//  no urls of this content type
+       }
+
+     }
+
+     /**
      * Return the number of urls that have been parsed by this crawler
      * @return number of urls that have been parsed by this crawler
      */
@@ -335,6 +406,23 @@ public interface Crawler {
       return au;
     }
 
+    public static class RecordMimeTypeUrls {
+      protected int numUrls; // = 0;
+      protected ArrayList urlsArray; // =  new ArrayList();     
+    
+      public RecordMimeTypeUrls() {
+        this.numUrls = 0;
+        this.urlsArray =  new ArrayList();
+      }
+
+      protected void addCtUrls(String url, boolean keepUrl) {
+        numUrls++;
+        if (keepUrl){
+          urlsArray.add( url );
+        }  
+      }
+    }
+  
     public String toString() {
       return "[Crawler.Status " + key + "]";
     }

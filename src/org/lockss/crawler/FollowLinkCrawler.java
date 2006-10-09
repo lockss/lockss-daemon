@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.42 2006-09-22 06:23:02 tlipkis Exp $
+ * $Id: FollowLinkCrawler.java,v 1.43 2006-10-09 20:32:36 adriz Exp $
  */
 
 /*
@@ -96,6 +96,8 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
   public static final String PARAM_REFETCH_IF_DAMAGED =
     Configuration.PREFIX + "BaseCrawler.refetchIfDamaged";
   public static final boolean DEFAULT_REFETCH_IF_DAMAGED = true;
+  // Configure: keep the number of urs  AND in array each url-string for mime-type or if false -> keep just the number of urls 
+  public static final boolean KEEP_URLS_MIME_TYPE = true;
 
   private boolean alwaysReparse = DEFAULT_REPARSE_ALL;
   private boolean usePersistantList = DEFAULT_PERSIST_CRAWL_LIST;
@@ -384,7 +386,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
       if (!parsedPages.contains(uc.getUrl())) {
 	logger.debug3("Parsing "+uc);
 	CachedUrl cu = uc.getCachedUrl();
-
+        updateStatusMimeType(cu);             // call for methaod - to check and update crawler status on found conetnt-type:urls
 	//XXX quick fix; if-statement should be removed when we rework
 	//handling of error condition
 	if (cu.hasContent()) {
@@ -491,12 +493,28 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
       }
     }
   }
+  /* upon identification of the content type 
+   * update the crawl.status to keep record: 
+   * of the found content-types and the according url
+   */
+  private void updateStatusMimeType(CachedUrl cu) {
+    CIProperties props = cu.getProperties();  
+    if (props != null) {
+      String mimeType = props.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE);
+      if (mimeType != null) {      //  do update of the content-type
+        crawlStatus.updateUrlsArrayOfMimeType(mimeType, cu.getUrl(), KEEP_URLS_MIME_TYPE);
+      }
+    }
+    return;
+  }
 
-    private ContentParser getContentParser(CachedUrl cu) {
+  private ContentParser getContentParser(CachedUrl cu) {
     CIProperties props = cu.getProperties();
     ArchivalUnit au = cu.getArchivalUnit();
     if (props != null) {
       String contentType = props.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE);
+      //  do update of the content-type
+  //   crawlStatus.updateUrlsArrayOfMimeType(contentType, cu.getUrl());
       return au.getContentParser(contentType);
     }
     return null;

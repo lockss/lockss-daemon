@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.54 2006-09-22 06:23:02 tlipkis Exp $
+ * $Id: TestNewContentCrawler.java,v 1.55 2006-10-09 20:32:36 adriz Exp $
  */
 
 /*
@@ -446,6 +446,63 @@ public class TestNewContentCrawler extends LockssTestCase {
     mau.addUrl(startUrl, new ExpectedRuntimeException("Test exception"), 1);
 
     assertFalse(crawler.doCrawl());
+  }
+
+  /* crawler urls record content-type/mime type testing */
+  public void testGetContentTypeUrl() {
+    // add mau with contetType-value 
+    String url1 = "http://www.example.com/link1.html";
+    String url2 = "http://www.example.com/link2.html";  //
+    String url3 = "http://www.example.com/link3.html";
+    String url4 = "http://www.example.com/link4.html";
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    MockCachedUrl cu0 = mau.addUrlContype(startUrl, true, true, "bla-ba-type");
+    MockCachedUrl cu1 = mau.addUrlContype(url1, true, true, "bla-content-type");        
+    MockCachedUrl cu2 = mau.addUrlContype(url2, true, true, "bla-content-type");        
+    MockCachedUrl cu3 = mau.addUrlContype(url3, true, true, "bla-content-type");        
+    MockCachedUrl cu4 = mau.addUrl(url4, true, true);        
+    parser.addUrlSetToReturn(startUrl, SetUtil.set(url1, url2, url3, url4));   
+    cu1.setContentSize(442);
+    cu2.setContentSize(38);         //orig: mau.addUrl(url2).setContentSize(300);    
+    crawlRule.addUrlToCrawl(url1);
+    crawlRule.addUrlToCrawl(url2);
+    crawlRule.addUrlToCrawl(url3);
+    crawlRule.addUrlToCrawl(url4);
+
+    //check get-compaire content type value   
+    long expectedStart = TimeBase.nowMs();
+    crawler.doCrawl();
+    long expectedEnd = TimeBase.nowMs();
+    Crawler.Status crawlStatus = crawler.getStatus();
+  
+    assertEquals(expectedStart, crawlStatus.getStartTime());
+    assertEquals(expectedEnd, crawlStatus.getEndTime());
+    //assertEquals(1, crawlStatus.getNumFetched());
+    assertEquals(5, crawlStatus.getNumParsed());    
+    CIProperties cu0Props = cu0.getProperties(); 
+    assertEquals( "bla-ba-type", cu0Props.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE));
+
+    /* this is simulation of the call in the doCrawl()  
+    boolean keepUrl = true ;
+    crawlStatus.updateUrlsArrayOfMimeType("bla-ba-type",startUrl,  keepUrl );
+    crawlStatus.updateUrlsArrayOfMimeType("bla-content-type",url1, keepUrl );
+    crawlStatus.updateUrlsArrayOfMimeType("bla-content-type",url2, keepUrl );
+    crawlStatus.updateUrlsArrayOfMimeType("text/html",url4, keepUrl );
+    //keepUrl = false ;
+    //crawlStatus.updateUrlsArrayOfMimeType("bla-content-type",url3, keepUrl );
+     */                                  
+    assertEquals(null, crawlStatus.getUrlsArrayOfMimeType("none-of-this-ct"));
+    // check the whole ARRAY list includes urls:     
+    // since the order is not kept use contains and Not: ArrayList expectedUrlsArray = new ArrayList(); with assertIsomorphic  //
+    assertTrue(crawlStatus.getUrlsArrayOfMimeType("bla-content-type").contains(url1));
+    assertTrue(crawlStatus.getUrlsArrayOfMimeType("bla-content-type").contains(url2));
+    assertEquals(3, crawlStatus.getNumUrlsOfMimeType("bla-content-type"));
+    //assertFalse(crawlStatus.getUrlsArrayOfMimeType("bla-content-type").contains(url3));
+    assertTrue(crawlStatus.getUrlsArrayOfMimeType("text/html").contains(url4));     
+    ArrayList expectedUrlsArray = new ArrayList(); //= null ; 
+    expectedUrlsArray.add(startUrl);               // just one item in array use assertIsomorphic */
+    assertIsomorphic(expectedUrlsArray, crawlStatus.getUrlsArrayOfMimeType("bla-ba-type"));
+    
   }
 
   public void testGetStatusStartUrls() {
