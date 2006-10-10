@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -54,6 +54,10 @@
   <entry>
     <string>text/html_filter</string>
     <string>org.lockss.plugin.highwire.HighWireFilterRule</string>
+  </entry>
+  <entry>
+    <string>application/pdf_filter_factory</string>
+    <string>org.lockss.plugin.highwire.HighWirePdfFilterFactory</string>
   </entry>
   <entry>
     <string>au_login_page_checker</string>
