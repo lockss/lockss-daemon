@@ -57,7 +57,7 @@
       </property>
       <property name="attributes.publisher" value="American Association for Clinical Chemistry" />
     </property>
-    
+
     <property name="AAPGrandRounds15">
       <property name="title" value="AAP Grand Rounds Volume 15" />
       <property name="journalTitle" value="AAP Grand Rounds" />
@@ -72,7 +72,7 @@
       </property>
       <property name="attributes.publisher" value="American Academy of Pediatrics" />
     </property>
-    
+
     <property name="AAPNews27">
       <property name="title" value="AAP News Volume 27" />
       <property name="journalTitle" value="AAP News" />
@@ -87,7 +87,7 @@
       </property>
       <property name="attributes.publisher" value="American Academy of Pediatrics" />
     </property>
-    
+
     <property name="NeoReviews7">
       <property name="title" value="NeoReviews Volume 7" />
       <property name="journalTitle" value="NeoReviews" />
@@ -102,7 +102,7 @@
       </property>
       <property name="attributes.publisher" value="American Academy of Pediatrics" />
     </property>
-    
+
     <property name="Pediatrics117">
       <property name="title" value="Pediatrics Volume 117" />
       <property name="journalTitle" value="Pediatrics" />
@@ -117,7 +117,7 @@
       </property>
       <property name="attributes.publisher" value="American Academy of Pediatrics" />
     </property>
-    
+
     <property name="JournalofUltrasoundinMedicine25">
       <property name="title" value="Journal of Ultrasound in Medicine Volume 25" />
       <property name="journalTitle" value="Journal of Ultrasound in Medicine" />
@@ -132,7 +132,7 @@
       </property>
       <property name="attributes.publisher" value="American Institute of Ultrasound in Medicine" />
     </property>
-    
+
     <property name="TheJournalofImmunology176">
       <property name="title" value="The Journal of Immunology Volume 176" />
       <property name="journalTitle" value="The Journal of Immunology" />
@@ -147,7 +147,7 @@
       </property>
       <property name="attributes.publisher" value="American Association of Immunologists" />
     </property>
-    
+
     <property name="Science311">
       <property name="title" value="Science Volume 311" />
       <property name="journalTitle" value="Science" />
@@ -162,7 +162,7 @@
       </property>
       <property name="attributes.publisher" value="American Association for the Advancement of Science" />
     </property>
-    
+
     <!-- End no manifest -->
 
     <!-- Begin no subscription -->
@@ -180,7 +180,7 @@
       </property>
       <property name="attributes.publisher" value="American Heart Association" />
     </property>
-    
+
     <property name="Physiology21">
       <property name="title" value="Physiology Volume 21" />
       <property name="journalTitle" value="Physiology" />
@@ -194,8 +194,10 @@
 	<property name="value" value="21" />
       </property>
       <property name="attributes.publisher" value="American Physiological Society" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform$Simplified" />
     </property>
-    
+
     <property name="PhysiologicalReviews86">
       <property name="title" value="Physiological Reviews Volume 86" />
       <property name="journalTitle" value="Physiological Reviews" />
@@ -209,8 +211,10 @@
 	<property name="value" value="86" />
       </property>
       <property name="attributes.publisher" value="American Physiological Society" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform$Simplified" />
     </property>
-    
+
     <!-- End no subscription -->
 
     <property name="TheOncologist11">
@@ -228,7 +232,7 @@
       </property>
       <property name="attributes.publisher" value="AlphaMed Press" />
     </property>
-    
+
     <property name="StemCells24">
       <property name="title" value="Stem Cells Volume 24" />
       <property name="journalTitle" value="Stem Cells" />
@@ -244,7 +248,7 @@
       </property>
       <property name="attributes.publisher" value="AlphaMed Press" />
     </property>
-    
+
     <property name="PediatricsinReview27">
       <property name="title" value="Pediatrics in Review Volume 27" />
       <property name="journalTitle" value="Pediatrics in Review" />
@@ -259,7 +263,7 @@
       </property>
       <property name="attributes.publisher" value="American Academy of Pediatrics" />
     </property>
-    
+
     <property name="TheJournaloftheAmericanDentalAssociation137">
       <property name="title" value="The Journal of the American Dental Association Volume 137" />
       <property name="journalTitle" value="The Journal of the American Dental Association" />
@@ -274,7 +278,7 @@
       </property>
       <property name="attributes.publisher" value="American Dental Association" />
     </property>
-    
+
     <property name="Circulation113">
       <property name="title" value="Circulation Volume 113" />
       <property name="journalTitle" value="Circulation" />
@@ -289,7 +293,7 @@
       </property>
       <property name="attributes.publisher" value="American Heart Association" />
     </property>
-    
+
     <property name="CirculationResearch98">
       <property name="title" value="Circulation Research Volume 98" />
       <property name="journalTitle" value="Circulation Research" />
@@ -304,7 +308,7 @@
       </property>
       <property name="attributes.publisher" value="American Heart Association" />
     </property>
-    
+
     <property name="Hypertension47">
       <property name="title" value="Hypertension Volume 47" />
       <property name="journalTitle" value="Hypertension" />
@@ -319,7 +323,7 @@
       </property>
       <property name="attributes.publisher" value="American Heart Association" />
     </property>
-    
+
     <property name="Stroke37">
       <property name="title" value="Stroke Volume 37" />
       <property name="journalTitle" value="Stroke" />
@@ -334,7 +338,7 @@
       </property>
       <property name="attributes.publisher" value="American Heart Association" />
     </property>
-    
+
     <property name="AdvancesinPhysiologyEducation30">
       <property name="title" value="Advances in Physiology Education Volume 30" />
       <property name="journalTitle" value="Advances in Physiology Education" />
@@ -348,8 +352,10 @@
 	<property name="value" value="30" />
       </property>
       <property name="attributes.publisher" value="American Physiological Society" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform$Simplified" />
     </property>
-    
+
     <property name="AmericanJournalofPhysiologyCellPhysiology290">
       <property name="title" value="American Journal of Physiology - Cell Physiology Volume 290" />
       <property name="journalTitle" value="American Journal of Physiology - Cell Physiology" />
@@ -363,8 +369,10 @@
 	<property name="value" value="290" />
       </property>
       <property name="attributes.publisher" value="American Physiological Society" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform$Simplified" />
     </property>
-    
+
     <property name="AmericanJournalofPhysiologyEndocrinologyAndMetabolism290">
       <property name="title" value="American Journal of Physiology - Endocrinology And Metabolism Volume 290" />
       <property name="journalTitle" value="American Journal of Physiology - Endocrinology And Metabolism" />
@@ -378,8 +386,10 @@
 	<property name="value" value="290" />
       </property>
       <property name="attributes.publisher" value="American Physiological Society" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform$Simplified" />
     </property>
-    
+
     <property name="AmericanJournalofPhysiologyGastrointestinalandLiverPhysiology290">
       <property name="title" value="American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 290" />
       <property name="journalTitle" value="American Journal of Physiology - Gastrointestinal and Liver Physiology" />
@@ -393,8 +403,10 @@
 	<property name="value" value="290" />
       </property>
       <property name="attributes.publisher" value="American Physiological Society" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform$Simplified" />
     </property>
-    
+
     <property name="AmericanJournalofPhysiologyHeartandCirculatoryPhysiology290">
       <property name="title" value="American Journal of Physiology - Heart and Circulatory Physiology Volume 290" />
       <property name="journalTitle" value="American Journal of Physiology - Heart and Circulatory Physiology" />
@@ -408,8 +420,10 @@
 	<property name="value" value="290" />
       </property>
       <property name="attributes.publisher" value="American Physiological Society" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform$Simplified" />
     </property>
-    
+
     <property name="AmericanJournalofPhysiologyLungCellularandMolecularPhysiology290">
       <property name="title" value="American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 290" />
       <property name="journalTitle" value="American Journal of Physiology - Lung Cellular and Molecular Physiology" />
@@ -423,8 +437,10 @@
 	<property name="value" value="290" />
       </property>
       <property name="attributes.publisher" value="American Physiological Society" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform$Simplified" />
     </property>
-    
+
     <property name="AmericanJournalofPhysiologyRegulatoryIntegrativeandComparativePhysiology290">
       <property name="title" value="American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 290" />
       <property name="journalTitle" value="American Journal of Physiology - Regulatory, Integrative and Comparative Physiology" />
@@ -438,8 +454,10 @@
 	<property name="value" value="290" />
       </property>
       <property name="attributes.publisher" value="American Physiological Society" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform$Simplified" />
     </property>
-    
+
     <property name="AmericanJournalofPhysiologyRenalPhysiology290">
       <property name="title" value="American Journal of Physiology - Renal Physiology Volume 290" />
       <property name="journalTitle" value="American Journal of Physiology - Renal Physiology" />
@@ -453,8 +471,10 @@
 	<property name="value" value="290" />
       </property>
       <property name="attributes.publisher" value="American Physiological Society" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform$Simplified" />
     </property>
-    
+
     <property name="JournalofAppliedPhysiology100">
       <property name="title" value="Journal of Applied Physiology Volume 100" />
       <property name="journalTitle" value="Journal of Applied Physiology" />
@@ -468,8 +488,10 @@
 	<property name="value" value="100" />
       </property>
       <property name="attributes.publisher" value="American Physiological Society" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform$Simplified" />
     </property>
-    
+
     <property name="JournalofNeurophysiology95">
       <property name="title" value="Journal of Neurophysiology Volume 95" />
       <property name="journalTitle" value="Journal of Neurophysiology" />
@@ -483,8 +505,10 @@
 	<property name="value" value="95" />
       </property>
       <property name="attributes.publisher" value="American Physiological Society" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform$Simplified" />
     </property>
-    
+
     <property name="PhysiologicalGenomics25">
       <property name="title" value="Physiological Genomics Volume 25" />
       <property name="journalTitle" value="Physiological Genomics" />
@@ -498,8 +522,10 @@
 	<property name="value" value="25" />
       </property>
       <property name="attributes.publisher" value="American Physiological Society" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform$Simplified" />
     </property>
-    
+
     <property name="AcademicPsychiatry30">
       <property name="title" value="Academic Psychiatry Volume 30" />
       <property name="journalTitle" value="Academic Psychiatry" />
@@ -514,7 +540,7 @@
       </property>
       <property name="attributes.publisher" value="American Psychiatric Publishing Inc." />
     </property>
-    
+
     <property name="AmericanJournalofPsychiatry163">
       <property name="title" value="American Journal of Psychiatry Volume 163" />
       <property name="journalTitle" value="American Journal of Psychiatry" />
@@ -529,7 +555,7 @@
       </property>
       <property name="attributes.publisher" value="American Psychiatric Publishing Inc." />
     </property>
-    
+
     <property name="JournalofNeuropsychiatryandClinicalNeurosciences18">
       <property name="title" value="Journal of Neuropsychiatry and Clinical Neurosciences Volume 18" />
       <property name="journalTitle" value="Journal of Neuropsychiatry and Clinical Neurosciences" />
@@ -544,7 +570,7 @@
       </property>
       <property name="attributes.publisher" value="American Psychiatric Publishing Inc." />
     </property>
-    
+
     <property name="JournalofPsychotherapyPracticeandResearch10">
       <property name="title" value="Journal of Psychotherapy Practice and Research Volume 10" />
       <property name="journalTitle" value="Journal of Psychotherapy Practice and Research" />
@@ -559,7 +585,7 @@
       </property>
       <property name="attributes.publisher" value="American Psychiatric Publishing Inc." />
     </property>
-    
+
     <property name="PsychiatricNews41">
       <property name="title" value="Psychiatric News Volume 41" />
       <property name="journalTitle" value="Psychiatric News" />
@@ -574,7 +600,7 @@
       </property>
       <property name="attributes.publisher" value="American Psychiatric Publishing Inc." />
     </property>
-    
+
     <property name="PsychiatricServices57">
       <property name="title" value="Psychiatric Services Volume 57" />
       <property name="journalTitle" value="Psychiatric Services" />
@@ -589,7 +615,7 @@
       </property>
       <property name="attributes.publisher" value="American Psychiatric Publishing Inc." />
     </property>
-    
+
     <property name="Psychosomatics47">
       <property name="title" value="Psychosomatics Volume 47" />
       <property name="journalTitle" value="Psychosomatics" />
@@ -604,7 +630,7 @@
       </property>
       <property name="attributes.publisher" value="American Psychiatric Publishing Inc." />
     </property>
-    
+
     <property name="AmericanJournalofPublicHealth96">
       <property name="title" value="American Journal of Public Health Volume 96" />
       <property name="journalTitle" value="American Journal of Public Health" />
@@ -619,7 +645,7 @@
       </property>
       <property name="attributes.publisher" value="American Public Health Association" />
     </property>
-    
+
     <property name="BiochemistryandMolecularBiologyEducation34">
       <property name="title" value="Biochemistry and Molecular Biology Education Volume 34" />
       <property name="journalTitle" value="Biochemistry and Molecular Biology Education" />
@@ -634,7 +660,7 @@
       </property>
       <property name="attributes.publisher" value="American Society for Biochemistry and Molecular Biology" />
     </property>
-    
+
     <property name="JournalofBiologicalChemistry281">
       <property name="title" value="Journal of Biological Chemistry Volume 281" />
       <property name="journalTitle" value="Journal of Biological Chemistry" />
@@ -649,7 +675,7 @@
       </property>
       <property name="attributes.publisher" value="American Society for Biochemistry and Molecular Biology" />
     </property>
-    
+
     <property name="TheJournalofLipidResearch47">
       <property name="title" value="The Journal of Lipid Research Volume 47" />
       <property name="journalTitle" value="The Journal of Lipid Research" />
@@ -664,7 +690,7 @@
       </property>
       <property name="attributes.publisher" value="American Society for Biochemistry and Molecular Biology" />
     </property>
-    
+
     <property name="MolecularCellularProteomics5">
       <property name="title" value="Molecular &amp; Cellular Proteomics Volume 5" />
       <property name="journalTitle" value="Molecular &amp; Cellular Proteomics" />
@@ -679,7 +705,7 @@
       </property>
       <property name="attributes.publisher" value="American Society for Biochemistry and Molecular Biology" />
     </property>
-    
+
     <property name="MolecularBiologyoftheCell17">
       <property name="title" value="Molecular Biology of the Cell Volume 17" />
       <property name="journalTitle" value="Molecular Biology of the Cell" />
@@ -694,7 +720,7 @@
       </property>
       <property name="attributes.publisher" value="American Society for Cell Biology" />
     </property>
-    
+
     <property name="JournalofClinicalInvestigation116">
       <property name="title" value="Journal of Clinical Investigation Volume 116" />
       <property name="journalTitle" value="Journal of Clinical Investigation" />
@@ -710,7 +736,7 @@
       </property>
       <property name="attributes.publisher" value="American Society for Clinical Investigation" />
     </property>
-    
+
     <property name="AmericanJournalofClinicalNutrition83">
       <property name="title" value="American Journal of Clinical Nutrition Volume 83" />
       <property name="journalTitle" value="American Journal of Clinical Nutrition" />
@@ -725,7 +751,7 @@
       </property>
       <property name="attributes.publisher" value="American Society for Clinical Nutrition" />
     </property>
-    
+
     <property name="AmericanJournalOfPathology168">
       <property name="title" value="American Journal Of Pathology Volume 168" />
       <property name="journalTitle" value="American Journal Of Pathology" />
@@ -740,7 +766,7 @@
       </property>
       <property name="attributes.publisher" value="American Society for Investigative Pathology" />
     </property>
-    
+
     <property name="JournalofMolecularDiagnostics8">
       <property name="title" value="Journal of Molecular Diagnostics Volume 8" />
       <property name="journalTitle" value="Journal of Molecular Diagnostics" />
@@ -755,7 +781,7 @@
       </property>
       <property name="attributes.publisher" value="American Society for Investigative Pathology" />
     </property>
-    
+
     <property name="AntimicrobialAgentsandChemotherapy50">
       <property name="title" value="Antimicrobial Agents and Chemotherapy Volume 50" />
       <property name="journalTitle" value="Antimicrobial Agents and Chemotherapy" />
@@ -770,7 +796,7 @@
       </property>
       <property name="attributes.publisher" value="American Society for Microbiology" />
     </property>
-    
+
     <property name="AppliedandEnvironmentalMicrobiology72">
       <property name="title" value="Applied and Environmental Microbiology Volume 72" />
       <property name="journalTitle" value="Applied and Environmental Microbiology" />
@@ -785,7 +811,7 @@
       </property>
       <property name="attributes.publisher" value="American Society for Microbiology" />
     </property>
-    
+
     <property name="ClinicalandVaccineImmunology13">
       <property name="title" value="Clinical and Vaccine Immunology Volume 13" />
       <property name="journalTitle" value="Clinical and Vaccine Immunology" />
@@ -800,7 +826,7 @@
       </property>
       <property name="attributes.publisher" value="American Society for Microbiology" />
     </property>
-    
+
     <property name="ClinicalMicrobiologyReviews19">
       <property name="title" value="Clinical Microbiology Reviews Volume 19" />
       <property name="journalTitle" value="Clinical Microbiology Reviews" />
@@ -816,7 +842,7 @@
       </property>
       <property name="attributes.publisher" value="American Society for Microbiology" />
     </property>
-    
+
     <property name="EukaryoticCell5">
       <property name="title" value="Eukaryotic Cell Volume 5" />
       <property name="journalTitle" value="Eukaryotic Cell" />
@@ -832,7 +858,7 @@
       </property>
       <property name="attributes.publisher" value="American Society for Microbiology" />
     </property>
-    
+
     <property name="InfectionandImmunity74">
       <property name="title" value="Infection and Immunity Volume 74" />
       <property name="journalTitle" value="Infection and Immunity" />
@@ -847,7 +873,7 @@
       </property>
       <property name="attributes.publisher" value="American Society for Microbiology" />
     </property>
-    
+
     <property name="JournalofBacteriology188">
       <property name="title" value="Journal of Bacteriology Volume 188" />
       <property name="journalTitle" value="Journal of Bacteriology" />
@@ -862,7 +888,7 @@
       </property>
       <property name="attributes.publisher" value="American Society for Microbiology" />
     </property>
-    
+
     <property name="JournalofClinicalMicrobiology44">
       <property name="title" value="Journal of Clinical Microbiology Volume 44" />
       <property name="journalTitle" value="Journal of Clinical Microbiology" />
@@ -877,7 +903,7 @@
       </property>
       <property name="attributes.publisher" value="American Society for Microbiology" />
     </property>
-    
+
     <property name="JournalofVirology80">
       <property name="title" value="Journal of Virology Volume 80" />
       <property name="journalTitle" value="Journal of Virology" />
@@ -892,7 +918,7 @@
       </property>
       <property name="attributes.publisher" value="American Society for Microbiology" />
     </property>
-    
+
     <property name="MicrobiologyandMolecularBiologyReviews70">
       <property name="title" value="Microbiology and Molecular Biology Reviews Volume 70" />
       <property name="journalTitle" value="Microbiology and Molecular Biology Reviews" />
@@ -908,7 +934,7 @@
       </property>
       <property name="attributes.publisher" value="American Society for Microbiology" />
     </property>
-    
+
     <property name="MolecularandCellularBiology26">
       <property name="title" value="Molecular and Cellular Biology Volume 26" />
       <property name="journalTitle" value="Molecular and Cellular Biology" />
@@ -923,7 +949,7 @@
       </property>
       <property name="attributes.publisher" value="American Society for Microbiology" />
     </property>
-    
+
     <property name="JournalofNutrition136">
       <property name="title" value="Journal of Nutrition Volume 136" />
       <property name="journalTitle" value="Journal of Nutrition" />
@@ -938,7 +964,7 @@
       </property>
       <property name="attributes.publisher" value="American Society for Nutritional Sciences" />
     </property>
-    
+
     <property name="DrugMetabolismandDisposition34">
       <property name="title" value="Drug Metabolism and Disposition Volume 34" />
       <property name="journalTitle" value="Drug Metabolism and Disposition" />
@@ -953,7 +979,7 @@
       </property>
       <property name="attributes.publisher" value="American Society for Pharmacology and Experimental Therapeutics" />
     </property>
-    
+
     <property name="JournalofPharmacologyandExperimentalTherapeutics317">
       <property name="title" value="Journal of Pharmacology and Experimental Therapeutics Volume 317" />
       <property name="journalTitle" value="Journal of Pharmacology and Experimental Therapeutics" />
@@ -968,7 +994,7 @@
       </property>
       <property name="attributes.publisher" value="American Society for Pharmacology and Experimental Therapeutics" />
     </property>
-    
+
     <property name="MolecularInterventions6">
       <property name="title" value="Molecular Interventions Volume 6" />
       <property name="journalTitle" value="Molecular Interventions" />
@@ -983,7 +1009,7 @@
       </property>
       <property name="attributes.publisher" value="American Society for Pharmacology and Experimental Therapeutics" />
     </property>
-    
+
     <property name="MolecularPharmacology69">
       <property name="title" value="Molecular Pharmacology Volume 69" />
       <property name="journalTitle" value="Molecular Pharmacology" />
@@ -998,7 +1024,7 @@
       </property>
       <property name="attributes.publisher" value="American Society for Pharmacology and Experimental Therapeutics" />
     </property>
-    
+
     <property name="PharmacologicalReviews58">
       <property name="title" value="Pharmacological Reviews Volume 58" />
       <property name="journalTitle" value="Pharmacological Reviews" />
@@ -1013,7 +1039,7 @@
       </property>
       <property name="attributes.publisher" value="American Society for Pharmacology and Experimental Therapeutics" />
     </property>
-    
+
     <property name="PlantPhysiology140">
       <property name="title" value="Plant Physiology Volume 140" />
       <property name="journalTitle" value="Plant Physiology" />
@@ -1043,7 +1069,7 @@
       </property>
       <property name="attributes.publisher" value="American Society of Plant Biologists" />
     </property>
-    
+
     <property name="ASHEducationProgramBook2005">
       <property name="title" value="ASH Education Program Book Volume 2005" />
       <property name="journalTitle" value="ASH Education Program Book" />
@@ -1058,7 +1084,7 @@
       </property>
       <property name="attributes.publisher" value="American Society of Hematology" />
     </property>
-    
+
     <property name="AmericanJournalofNeuroradiology27">
       <property name="title" value="American Journal of Neuroradiology Volume 27" />
       <property name="journalTitle" value="American Journal of Neuroradiology" />
@@ -1073,7 +1099,7 @@
       </property>
       <property name="attributes.publisher" value="American Society of Neuroradiology" />
     </property>
-    
+
     <property name="TheAmericanJournalofTropicalMedicineandHygiene74">
       <property name="title" value="The American Journal of Tropical Medicine and Hygiene Volume 74" />
       <property name="journalTitle" value="The American Journal of Tropical Medicine and Hygiene" />
@@ -1088,7 +1114,7 @@
       </property>
       <property name="attributes.publisher" value="American Society of Tropical Medicine and Hygiene" />
     </property>
-    
+
     <property name="AmericanJournalofRespiratoryandCriticalCareMedicine">
       <property name="title" value="American Journal of Respiratory and Critical Care Medicine Volume " />
       <property name="journalTitle" value="American Journal of Respiratory and Critical Care Medicine" />
@@ -1103,7 +1129,7 @@
       </property>
       <property name="attributes.publisher" value="American Thoracic Society" />
     </property>
-    
+
     <property name="AmericanJournalofRespiratoryCellandMolecularBiology173">
       <property name="title" value="American Journal of Respiratory Cell and Molecular Biology Volume 173" />
       <property name="journalTitle" value="American Journal of Respiratory Cell and Molecular Biology" />
@@ -1118,7 +1144,7 @@
       </property>
       <property name="attributes.publisher" value="American Thoracic Society" />
     </property>
-    
+
     <property name="httpajrcmbatsjournalsorg">
       <property name="title" value="http://ajrcmb.atsjournals.org/ Volume " />
       <property name="journalTitle" value="http://ajrcmb.atsjournals.org/" />
@@ -1133,7 +1159,7 @@
       </property>
       <property name="attributes.publisher" value="Association for Research in Vision and Ophthalmology" />
     </property>
-    
+
     <property name="BiophysicalJournal90">
       <property name="title" value="Biophysical Journal Volume 90" />
       <property name="journalTitle" value="Biophysical Journal" />
@@ -1148,7 +1174,7 @@
       </property>
       <property name="attributes.publisher" value="Biophysical Society" />
     </property>
-    
+
     <property name="AmericanJournalofBotany93">
       <property name="title" value="American Journal of Botany Volume 93" />
       <property name="journalTitle" value="American Journal of Botany" />
@@ -1163,7 +1189,7 @@
       </property>
       <property name="attributes.publisher" value="Botanical Society of America" />
     </property>
-    
+
     <property name="JournalofBoneJointSurgeryBritishVolume88-B">
       <property name="title" value="Journal of Bone &amp; Joint Surgery, British Volume Volume 88-B" />
       <property name="journalTitle" value="Journal of Bone &amp; Joint Surgery, British Volume" />
@@ -1192,7 +1218,7 @@
       </property>
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
-    
+
     <property name="ArchivesofDiseaseinChildhood91">
       <property name="title" value="Archives of Disease in Childhood Volume 91" />
       <property name="journalTitle" value="Archives of Disease in Childhood" />
@@ -1207,7 +1233,7 @@
       </property>
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
-    
+
     <property name="ArchivesofDiseaseinChildhoodEducationandPractice91">
       <property name="title" value="Archives of Disease in Childhood - Education and Practice Volume 91" />
       <property name="journalTitle" value="Archives of Disease in Childhood - Education and Practice" />
@@ -1222,7 +1248,7 @@
       </property>
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
-    
+
     <property name="ArchivesofDiseaseinChildhoodFetalandNeonatalEdition91">
       <property name="title" value="Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 91" />
       <property name="journalTitle" value="Archives of Disease in Childhood - Fetal and Neonatal Edition" />
@@ -1237,7 +1263,7 @@
       </property>
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
-    
+
     <property name="BMJ332">
       <property name="title" value="BMJ Volume 332" />
       <property name="journalTitle" value="BMJ" />
@@ -1252,7 +1278,7 @@
       </property>
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
-    
+
     <property name="BMJCareerFocus332">
       <property name="title" value="BMJ Career Focus Volume 332" />
       <property name="journalTitle" value="BMJ Career Focus" />
@@ -1267,7 +1293,7 @@
       </property>
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
-    
+
     <property name="BritishJournalofOphthalmology90">
       <property name="title" value="British Journal of Ophthalmology Volume 90" />
       <property name="journalTitle" value="British Journal of Ophthalmology" />
@@ -1282,7 +1308,7 @@
       </property>
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
-    
+
     <property name="BritishJournalofSportsMedicine40">
       <property name="title" value="British Journal of Sports Medicine Volume 40" />
       <property name="journalTitle" value="British Journal of Sports Medicine" />
@@ -1297,7 +1323,7 @@
       </property>
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
-    
+
     <property name="EmergencyMedicineJournal23">
       <property name="title" value="Emergency Medicine Journal Volume 23" />
       <property name="journalTitle" value="Emergency Medicine Journal" />
@@ -1312,7 +1338,7 @@
       </property>
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
-    
+
     <property name="EvidenceBasedMedicine11">
       <property name="title" value="Evidence-Based Medicine Volume 11" />
       <property name="journalTitle" value="Evidence-Based Medicine" />
@@ -1327,7 +1353,7 @@
       </property>
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
-    
+
     <property name="EvidenceBasedMentalHealth9">
       <property name="title" value="Evidence-Based Mental Health Volume 9" />
       <property name="journalTitle" value="Evidence-Based Mental Health" />
@@ -1342,7 +1368,7 @@
       </property>
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
-    
+
     <property name="EvidenceBasedNursing9">
       <property name="title" value="Evidence-Based Nursing Volume 9" />
       <property name="journalTitle" value="Evidence-Based Nursing" />
@@ -1357,7 +1383,7 @@
       </property>
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
-    
+
     <property name="Gut55">
       <property name="title" value="Gut Volume 55" />
       <property name="journalTitle" value="Gut" />
@@ -1372,7 +1398,7 @@
       </property>
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
-    
+
     <property name="Heart92">
       <property name="title" value="Heart Volume 92" />
       <property name="journalTitle" value="Heart" />
@@ -1387,7 +1413,7 @@
       </property>
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
-    
+
     <property name="InjuryPrevention12">
       <property name="title" value="Injury Prevention Volume 12" />
       <property name="journalTitle" value="Injury Prevention" />
@@ -1402,7 +1428,7 @@
       </property>
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
-    
+
     <property name="JournalofClinicalPathology59">
       <property name="title" value="Journal of Clinical Pathology Volume 59" />
       <property name="journalTitle" value="Journal of Clinical Pathology" />
@@ -1417,7 +1443,7 @@
       </property>
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
-    
+
     <property name="JournalofEpidemiologyCommunityHealth60">
       <property name="title" value="Journal of Epidemiology &amp; Community Health Volume 60" />
       <property name="journalTitle" value="Journal of Epidemiology &amp; Community Health" />
@@ -1432,7 +1458,7 @@
       </property>
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
-    
+
     <property name="JournalofMedicalEthics32">
       <property name="title" value="Journal of Medical Ethics Volume 32" />
       <property name="journalTitle" value="Journal of Medical Ethics" />
@@ -1447,7 +1473,7 @@
       </property>
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
-    
+
     <property name="JournalofMedicalGenetics43">
       <property name="title" value="Journal of Medical Genetics Volume 43" />
       <property name="journalTitle" value="Journal of Medical Genetics" />
@@ -1462,7 +1488,7 @@
       </property>
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
-    
+
     <property name="JournalofNeurologyNeurosurgeryPsychiatry77">
       <property name="title" value="Journal of Neurology, Neurosurgery &amp; Psychiatry Volume 77" />
       <property name="journalTitle" value="Journal of Neurology, Neurosurgery &amp; Psychiatry" />
@@ -1477,7 +1503,7 @@
       </property>
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
-    
+
     <property name="MedicalHumanities31">
       <property name="title" value="Medical Humanities Volume 31" />
       <property name="journalTitle" value="Medical Humanities" />
@@ -1492,7 +1518,7 @@
       </property>
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
-    
+
     <property name="OccupationalandEnvironmentalMedicine63">
       <property name="title" value="Occupational and Environmental Medicine Volume 63" />
       <property name="journalTitle" value="Occupational and Environmental Medicine" />
@@ -1507,7 +1533,7 @@
       </property>
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
-    
+
     <property name="PostgraduateMedicalJournal82">
       <property name="title" value="Postgraduate Medical Journal Volume 82" />
       <property name="journalTitle" value="Postgraduate Medical Journal" />
@@ -1522,7 +1548,7 @@
       </property>
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
-    
+
     <property name="QualityandSafetyinHealthCare15">
       <property name="title" value="Quality and Safety in Health Care Volume 15" />
       <property name="journalTitle" value="Quality and Safety in Health Care" />
@@ -1537,7 +1563,7 @@
       </property>
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
-    
+
     <property name="SexuallyTransmittedInfections82">
       <property name="title" value="Sexually Transmitted Infections Volume 82" />
       <property name="journalTitle" value="Sexually Transmitted Infections" />
@@ -1552,7 +1578,7 @@
       </property>
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
-    
+
     <property name="Thorax61">
       <property name="title" value="Thorax Volume 61" />
       <property name="journalTitle" value="Thorax" />
@@ -1567,7 +1593,7 @@
       </property>
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
-    
+
     <property name="TobaccoControl15">
       <property name="title" value="Tobacco Control Volume 15" />
       <property name="journalTitle" value="Tobacco Control" />
@@ -1582,7 +1608,7 @@
       </property>
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
-    
+
     <property name="CanadianMedicalAssociationJournal174">
       <property name="title" value="Canadian Medical Association Journal Volume 174" />
       <property name="journalTitle" value="Canadian Medical Association Journal" />
@@ -1597,7 +1623,7 @@
       </property>
       <property name="attributes.publisher" value="Canadian Medical Association" />
     </property>
-    
+
     <property name="GenesDevelopment20">
       <property name="title" value="Genes &amp; Development Volume 20" />
       <property name="journalTitle" value="Genes &amp; Development" />
@@ -1612,7 +1638,7 @@
       </property>
       <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
     </property>
-    
+
     <property name="GenomeResearch16">
       <property name="title" value="Genome Research Volume 16" />
       <property name="journalTitle" value="Genome Research" />
@@ -1627,7 +1653,7 @@
       </property>
       <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
     </property>
-    
+
     <property name="LearningMemory13">
       <property name="title" value="Learning &amp; Memory Volume 13" />
       <property name="journalTitle" value="Learning &amp; Memory" />
@@ -1642,7 +1668,7 @@
       </property>
       <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
     </property>
-    
+
     <property name="ProteinScience15">
       <property name="title" value="Protein Science Volume 15" />
       <property name="journalTitle" value="Protein Science" />
@@ -1657,7 +1683,7 @@
       </property>
       <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
     </property>
-    
+
     <property name="RNA12">
       <property name="title" value="RNA Volume 12" />
       <property name="journalTitle" value="RNA" />
@@ -1672,7 +1698,7 @@
       </property>
       <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
     </property>
-    
+
     <property name="Development133">
       <property name="title" value="Development Volume 133" />
       <property name="journalTitle" value="Development" />
@@ -1687,7 +1713,7 @@
       </property>
       <property name="attributes.publisher" value="Company of Biologists" />
     </property>
-    
+
     <property name="JournalofCellScience119">
       <property name="title" value="Journal of Cell Science Volume 119" />
       <property name="journalTitle" value="Journal of Cell Science" />
@@ -1702,7 +1728,7 @@
       </property>
       <property name="attributes.publisher" value="Company of Biologists" />
     </property>
-    
+
     <property name="JournalofExperimentalBiology209">
       <property name="title" value="Journal of Experimental Biology Volume 209" />
       <property name="journalTitle" value="Journal of Experimental Biology" />
@@ -1717,7 +1743,7 @@
       </property>
       <property name="attributes.publisher" value="Company of Biologists" />
     </property>
-    
+
     <property name="AmericanLiteraryScholarship2003">
       <property name="title" value="American Literary Scholarship Volume 2003" />
       <property name="journalTitle" value="American Literary Scholarship" />
@@ -1733,7 +1759,7 @@
       </property>
       <property name="attributes.publisher" value="Duke University Press" />
     </property>
-    
+
     <property name="AmericanLiterature78">
       <property name="title" value="American Literature Volume 78" />
       <property name="journalTitle" value="American Literature" />
@@ -1749,7 +1775,7 @@
       </property>
       <property name="attributes.publisher" value="Duke University Press" />
     </property>
-    
+
     <property name="AmericanSpeech81">
       <property name="title" value="American Speech Volume 81" />
       <property name="journalTitle" value="American Speech" />
@@ -1765,7 +1791,7 @@
       </property>
       <property name="attributes.publisher" value="Duke University Press" />
     </property>
-    
+
     <property name="boundary233">
       <property name="title" value="boundary 2 Volume 33" />
       <property name="journalTitle" value="boundary 2" />
@@ -1781,7 +1807,7 @@
       </property>
       <property name="attributes.publisher" value="Duke University Press" />
     </property>
-    
+
     <property name="CameraObscuraFeminismCultureandMediaStudies20">
       <property name="title" value="Camera Obscura: Feminism, Culture, and Media Studies Volume 20" />
       <property name="journalTitle" value="Camera Obscura: Feminism, Culture, and Media Studies" />
@@ -1797,7 +1823,7 @@
       </property>
       <property name="attributes.publisher" value="Duke University Press" />
     </property>
-    
+
     <property name="CommonKnowledge12">
       <property name="title" value="Common Knowledge Volume 12" />
       <property name="journalTitle" value="Common Knowledge" />
@@ -1812,7 +1838,7 @@
       </property>
       <property name="attributes.publisher" value="Duke University Press" />
     </property>
-    
+
     <property name="ComparativeStudiesofSouthAsiaAfricaandtheMiddleEast25">
       <property name="title" value="Comparative Studies of South Asia, Africa and the Middle East Volume 25" />
       <property name="journalTitle" value="Comparative Studies of South Asia, Africa and the Middle East" />
@@ -1828,7 +1854,7 @@
       </property>
       <property name="attributes.publisher" value="Duke University Press" />
     </property>
-    
+
     <property name="differences16">
       <property name="title" value="differences Volume 16" />
       <property name="journalTitle" value="differences" />
@@ -1844,7 +1870,7 @@
       </property>
       <property name="attributes.publisher" value="Duke University Press" />
     </property>
-    
+
     <property name="EighteenthCenturyLife30">
       <property name="title" value="Eighteenth-Century Life Volume 30" />
       <property name="journalTitle" value="Eighteenth-Century Life" />
@@ -1860,7 +1886,7 @@
       </property>
       <property name="attributes.publisher" value="Duke University Press" />
     </property>
-    
+
     <property name="Ethnohistory53">
       <property name="title" value="Ethnohistory Volume 53" />
       <property name="journalTitle" value="Ethnohistory" />
@@ -1876,7 +1902,7 @@
       </property>
       <property name="attributes.publisher" value="Duke University Press" />
     </property>
-    
+
     <property name="FrenchHistoricalStudies29">
       <property name="title" value="French Historical Studies Volume 29" />
       <property name="journalTitle" value="French Historical Studies" />
@@ -1891,7 +1917,7 @@
       </property>
       <property name="attributes.publisher" value="Duke University Press" />
     </property>
-    
+
     <property name="GLQAJournalofLesbianandGayStudies12">
       <property name="title" value="GLQ: A Journal of Lesbian and Gay Studies Volume 12" />
       <property name="estSize" value="100MB" />
@@ -1907,7 +1933,7 @@
       </property>
       <property name="attributes.publisher" value="Duke University Press" />
     </property>
-    
+
     <property name="HispanicAmericanHistoricalReview86">
       <property name="title" value="Hispanic American Historical Review Volume 86" />
       <property name="journalTitle" value="Hispanic American Historical Review" />
@@ -1922,7 +1948,7 @@
       </property>
       <property name="attributes.publisher" value="Duke University Press" />
     </property>
-    
+
     <property name="HistoryofPoliticalEconomy38">
       <property name="title" value="History of Political Economy Volume 38" />
       <property name="journalTitle" value="History of Political Economy" />
@@ -1938,7 +1964,7 @@
       </property>
       <property name="attributes.publisher" value="Duke University Press" />
     </property>
-    
+
     <property name="JournalofHealthPoliticsPolicyandLaw31">
       <property name="title" value="Journal of Health Politics, Policy and Law Volume 31" />
       <property name="journalTitle" value="Journal of Health Politics, Policy and Law" />
@@ -1953,7 +1979,7 @@
       </property>
       <property name="attributes.publisher" value="Duke University Press" />
     </property>
-    
+
     <property name="JournalofMedievalandEarlyModernStudies36">
       <property name="title" value="Journal of Medieval and Early Modern Studies Volume 36" />
       <property name="journalTitle" value="Journal of Medieval and Early Modern Studies" />
@@ -1969,7 +1995,7 @@
       </property>
       <property name="attributes.publisher" value="Duke University Press" />
     </property>
-    
+
     <property name="LaborStudiesinWorkingClassHistoryoftheAmericas2">
       <property name="title" value="Labor: Studies in Working-Class History of the Americas Volume 2" />
       <property name="journalTitle" value="Labor: Studies in Working-Class History of the Americas" />
@@ -1985,7 +2011,7 @@
       </property>
       <property name="attributes.publisher" value="Duke University Press" />
     </property>
-    
+
     <property name="MediterraneanQuarterly17">
       <property name="title" value="Mediterranean Quarterly Volume 17" />
       <property name="journalTitle" value="Mediterranean Quarterly" />
@@ -2001,7 +2027,7 @@
       </property>
       <property name="attributes.publisher" value="Duke University Press" />
     </property>
-    
+
     <property name="ModernLanguageQuarterly67">
       <property name="title" value="Modern Language Quarterly Volume 67" />
       <property name="journalTitle" value="Modern Language Quarterly" />
@@ -2017,7 +2043,7 @@
       </property>
       <property name="attributes.publisher" value="Duke University Press" />
     </property>
-    
+
     <property name="NeuroOncology8">
       <property name="title" value="Neuro-Oncology Volume 8" />
       <property name="journalTitle" value="Neuro-Oncology" />
@@ -2032,7 +2058,7 @@
       </property>
       <property name="attributes.publisher" value="Duke University Press" />
     </property>
-    
+
     <property name="PedagogyCriticalApproachestoTeachingLiteratureLanguageCompositionandCulture6">
       <property name="title" value="Pedagogy: Critical Approaches to Teaching Literature, Language, Composition, and Culture Volume 6" />
       <property name="journalTitle" value="Pedagogy: Critical Approaches to Teaching Literature, Language, Composition, and Culture" />
@@ -2047,7 +2073,7 @@
       </property>
       <property name="attributes.publisher" value="Duke University Press" />
     </property>
-    
+
     <property name="PoeticsToday26">
       <property name="title" value="Poetics Today Volume 26" />
       <property name="journalTitle" value="Poetics Today" />
@@ -2063,7 +2089,7 @@
       </property>
       <property name="attributes.publisher" value="Duke University Press" />
     </property>
-    
+
     <property name="positionseastasiaculturescritique13">
       <property name="title" value="positions: east asia cultures critique Volume 13" />
       <property name="journalTitle" value="positions: east asia cultures critique" />
@@ -2079,7 +2105,7 @@
       </property>
       <property name="attributes.publisher" value="Duke University Press" />
     </property>
-    
+
     <property name="PublicCulture18">
       <property name="title" value="Public Culture Volume 18" />
       <property name="journalTitle" value="Public Culture" />
@@ -2095,7 +2121,7 @@
       </property>
       <property name="attributes.publisher" value="Duke University Press" />
     </property>
-    
+
     <property name="RadicalHistoryReview2006">
       <property name="title" value="Radical History Review Volume 2006" />
       <property name="journalTitle" value="Radical History Review" />
@@ -2111,7 +2137,7 @@
       </property>
       <property name="attributes.publisher" value="Duke University Press" />
     </property>
-    
+
     <property name="SocialScienceHistory29">
       <property name="title" value="Social Science History Volume 29" />
       <property name="journalTitle" value="Social Science History" />
@@ -2126,7 +2152,7 @@
       </property>
       <property name="attributes.publisher" value="Duke University Press" />
     </property>
-    
+
     <property name="SocialText23">
       <property name="title" value="Social Text Volume 23" />
       <property name="journalTitle" value="Social Text" />
@@ -2142,7 +2168,7 @@
       </property>
       <property name="attributes.publisher" value="Duke University Press" />
     </property>
-    
+
     <property name="SouthAtlanticQuarterly105">
       <property name="title" value="South Atlantic Quarterly Volume 105" />
       <property name="journalTitle" value="South Atlantic Quarterly" />
@@ -2158,7 +2184,7 @@
       </property>
       <property name="attributes.publisher" value="Duke University Press" />
     </property>
-    
+
     <property name="Theater36">
       <property name="title" value="Theater Volume 36" />
       <property name="journalTitle" value="Theater" />
@@ -2174,7 +2200,7 @@
       </property>
       <property name="attributes.publisher" value="Duke University Press" />
     </property>
-    
+
     <property name="EndocrineReviews27">
       <property name="title" value="Endocrine Reviews Volume 27" />
       <property name="journalTitle" value="Endocrine Reviews" />
@@ -2189,7 +2215,7 @@
       </property>
       <property name="attributes.publisher" value="Endocrine Society" />
     </property>
-    
+
     <property name="Endocrinology147">
       <property name="title" value="Endocrinology Volume 147" />
       <property name="journalTitle" value="Endocrinology" />
@@ -2204,7 +2230,7 @@
       </property>
       <property name="attributes.publisher" value="Endocrine Society" />
     </property>
-    
+
     <property name="JournalofClinicalEndocrinologyMetabolism91">
       <property name="title" value="Journal of Clinical Endocrinology &amp; Metabolism Volume 91" />
       <property name="journalTitle" value="Journal of Clinical Endocrinology &amp; Metabolism" />
@@ -2219,7 +2245,7 @@
       </property>
       <property name="attributes.publisher" value="Endocrine Society" />
     </property>
-    
+
     <property name="MolecularEndocrinology20">
       <property name="title" value="Molecular Endocrinology Volume 20" />
       <property name="journalTitle" value="Molecular Endocrinology" />
@@ -2234,7 +2260,7 @@
       </property>
       <property name="attributes.publisher" value="Endocrine Society" />
     </property>
-    
+
     <property name="RecentProgressinHormoneResearch59">
       <property name="title" value="Recent Progress in Hormone Research Volume 59" />
       <property name="journalTitle" value="Recent Progress in Hormone Research" />
@@ -2249,7 +2275,7 @@
       </property>
       <property name="attributes.publisher" value="Endocrine Society" />
     </property>
-    
+
     <property name="TheFASEBJournal20">
       <property name="title" value="The FASEB Journal Volume 20" />
       <property name="journalTitle" value="The FASEB Journal" />
@@ -2264,7 +2290,7 @@
       </property>
       <property name="attributes.publisher" value="Federation of American Societies for Experimental Biology" />
     </property>
-    
+
     <property name="Genetics172">
       <property name="title" value="Genetics Volume 172" />
       <property name="journalTitle" value="Genetics" />
@@ -2279,7 +2305,7 @@
       </property>
       <property name="attributes.publisher" value="Genetics Society of America" />
     </property>
-    
+
     <property name="HealthAffairs25">
       <property name="title" value="Health Affairs Volume 25" />
       <property name="journalTitle" value="Health Affairs" />
@@ -2294,7 +2320,7 @@
       </property>
       <property name="attributes.publisher" value="Project HOPE - The People-to-People Health Foundation, Inc." />
     </property>
-    
+
     <property name="JournalofHistochemistryandCytochemistry54">
       <property name="title" value="Journal of Histochemistry and Cytochemistry Volume 54" />
       <property name="journalTitle" value="Journal of Histochemistry and Cytochemistry" />
@@ -2309,7 +2335,7 @@
       </property>
       <property name="attributes.publisher" value="Histochemical Society" />
     </property>
-    
+
     <property name="TheBiologicalBulletin210">
       <property name="title" value="The Biological Bulletin Volume 210" />
       <property name="journalTitle" value="The Biological Bulletin" />
@@ -2324,7 +2350,7 @@
       </property>
       <property name="attributes.publisher" value="Marine Biological Laboratory" />
     </property>
-    
+
     <property name="JournalWatchCardiology2006">
       <property name="title" value="Journal Watch Cardiology Volume 2006" />
       <property name="journalTitle" value="Journal Watch Cardiology" />
@@ -2339,7 +2365,7 @@
       </property>
       <property name="attributes.publisher" value="Massachusetts Medical Society" />
     </property>
-    
+
     <property name="JournalWatchDermatology2006">
       <property name="title" value="Journal Watch Dermatology Volume 2006" />
       <property name="journalTitle" value="Journal Watch Dermatology" />
@@ -2354,7 +2380,7 @@
       </property>
       <property name="attributes.publisher" value="Massachusetts Medical Society" />
     </property>
-    
+
     <property name="JournalWatchEmergencyMedicine2006">
       <property name="title" value="Journal Watch Emergency Medicine Volume 2006" />
       <property name="journalTitle" value="Journal Watch Emergency Medicine" />
@@ -2369,7 +2395,7 @@
       </property>
       <property name="attributes.publisher" value="Massachusetts Medical Society" />
     </property>
-    
+
     <property name="JournalWatchGastroenterology2006">
       <property name="title" value="Journal Watch Gastroenterology Volume 2006" />
       <property name="journalTitle" value="Journal Watch Gastroenterology" />
@@ -2384,7 +2410,7 @@
       </property>
       <property name="attributes.publisher" value="Massachusetts Medical Society" />
     </property>
-    
+
     <property name="JournalWatchGeneral2006">
       <property name="title" value="Journal Watch (General) Volume 2006" />
       <property name="journalTitle" value="Journal Watch (General)" />
@@ -2399,7 +2425,7 @@
       </property>
       <property name="attributes.publisher" value="Massachusetts Medical Society" />
     </property>
-    
+
     <property name="JournalWatchInfectiousDiseases2006">
       <property name="title" value="Journal Watch Infectious Diseases Volume 2006" />
       <property name="journalTitle" value="Journal Watch Infectious Diseases" />
@@ -2414,7 +2440,7 @@
       </property>
       <property name="attributes.publisher" value="Massachusetts Medical Society" />
     </property>
-    
+
     <property name="JournalWatchNeurology2006">
       <property name="title" value="Journal Watch Neurology Volume 2006" />
       <property name="journalTitle" value="Journal Watch Neurology" />
@@ -2429,7 +2455,7 @@
       </property>
       <property name="attributes.publisher" value="Massachusetts Medical Society" />
     </property>
-    
+
     <property name="JournalWatchPediatricsandAdolescentMedicine2006">
       <property name="title" value="Journal Watch Pediatrics and Adolescent Medicine Volume 2006" />
       <property name="journalTitle" value="Journal Watch Pediatrics and Adolescent Medicine" />
@@ -2444,7 +2470,7 @@
       </property>
       <property name="attributes.publisher" value="Massachusetts Medical Society" />
     </property>
-    
+
     <property name="JournalWatchPsychiatry2006">
       <property name="title" value="Journal Watch Psychiatry Volume 2006" />
       <property name="journalTitle" value="Journal Watch Psychiatry" />
@@ -2459,7 +2485,7 @@
       </property>
       <property name="attributes.publisher" value="Massachusetts Medical Society" />
     </property>
-    
+
     <property name="JournalWatchWomensHealth2006">
       <property name="title" value="Journal Watch Women's Health Volume 2006" />
       <property name="journalTitle" value="Journal Watch Women's Health" />
@@ -2474,7 +2500,7 @@
       </property>
       <property name="attributes.publisher" value="Massachusetts Medical Society" />
     </property>
-    
+
     <property name="NewEnglandJournalofMedicine354">
       <property name="title" value="New England Journal of Medicine Volume 354" />
       <property name="journalTitle" value="New England Journal of Medicine" />
@@ -2491,7 +2517,7 @@
       <property name="attributes.hint_application/pdf_filter_factory"
                 value="org.lockss.plugin.highwire.NewEnglandJournalOfMedicinePdfTransform$Simplified" />
     </property>
-    
+
     <property name="PNAS103">
       <property name="title" value="PNAS Volume 103" />
       <property name="journalTitle" value="PNAS" />
@@ -2506,7 +2532,7 @@
       </property>
       <property name="attributes.publisher" value="National Academy of Sciences" />
     </property>
-    
+
     <property name="AnnalsoftheNewYorkAcademyofSciences1066">
       <property name="title" value="Annals of the New York Academy of Sciences Volume 1066" />
       <property name="journalTitle" value="Annals of the New York Academy of Sciences" />
@@ -2521,7 +2547,7 @@
       </property>
       <property name="attributes.publisher" value="New York Academy of Sciences" />
     </property>
-    
+
     <property name="RadioGraphics26">
       <property name="title" value="RadioGraphics Volume 26" />
       <property name="journalTitle" value="RadioGraphics" />
@@ -2536,7 +2562,7 @@
       </property>
       <property name="attributes.publisher" value="Radiological Society of North America" />
     </property>
-    
+
     <property name="Radiology241">
       <property name="title" value="Radiology Volume 241" />
       <property name="journalTitle" value="Radiology" />
@@ -2551,7 +2577,7 @@
       </property>
       <property name="attributes.publisher" value="Radiological Society of North America" />
     </property>
-    
+
     <property name="TheJournalofCellBiology172">
       <property name="title" value="The Journal of Cell Biology Volume 172" />
       <property name="journalTitle" value="The Journal of Cell Biology" />
@@ -2566,7 +2592,7 @@
       </property>
       <property name="attributes.publisher" value="Rockefeller University Press" />
     </property>
-    
+
     <property name="JournalofExperimentalMedicine202">
       <property name="title" value="Journal of Experimental Medicine Volume 202" />
       <property name="journalTitle" value="Journal of Experimental Medicine" />
@@ -2581,7 +2607,7 @@
       </property>
       <property name="attributes.publisher" value="Rockefeller University Press" />
     </property>
-    
+
     <property name="TheJournalofGeneralPhysiology127">
       <property name="title" value="The Journal of General Physiology Volume 127" />
       <property name="journalTitle" value="The Journal of General Physiology" />
@@ -2596,7 +2622,7 @@
       </property>
       <property name="attributes.publisher" value="Rockefeller University Press" />
     </property>
-    
+
     <property name="AdvancesinPsychiatricTreatment12">
       <property name="title" value="Advances in Psychiatric Treatment Volume 12" />
       <property name="journalTitle" value="Advances in Psychiatric Treatment" />
@@ -2611,7 +2637,7 @@
       </property>
       <property name="attributes.publisher" value="Royal College of Psychiatrists" />
     </property>
-    
+
     <property name="TheBritishJournalofPsychiatry188">
       <property name="title" value="The British Journal of Psychiatry Volume 188" />
       <property name="journalTitle" value="The British Journal of Psychiatry" />
@@ -2626,7 +2652,7 @@
       </property>
       <property name="attributes.publisher" value="Royal College of Psychiatrists" />
     </property>
-    
+
     <property name="PsychiatricBulletin30">
       <property name="title" value="Psychiatric Bulletin Volume 30" />
       <property name="journalTitle" value="Psychiatric Bulletin" />
@@ -2641,7 +2667,7 @@
       </property>
       <property name="attributes.publisher" value="Royal College of Psychiatrists" />
     </property>
-    
+
     <property name="InternationalJournalofSystematicandEvolutionaryMicrobiology56">
       <property name="title" value="International Journal of Systematic and Evolutionary Microbiology Volume 56" />
       <property name="journalTitle" value="International Journal of Systematic and Evolutionary Microbiology" />
@@ -2656,7 +2682,7 @@
       </property>
       <property name="attributes.publisher" value="Society for General Microbiology" />
     </property>
-    
+
     <property name="JournalofGeneralVirology87">
       <property name="title" value="Journal of General Virology Volume 87" />
       <property name="journalTitle" value="Journal of General Virology" />
@@ -2671,7 +2697,7 @@
       </property>
       <property name="attributes.publisher" value="Society for General Microbiology" />
     </property>
-    
+
     <property name="JournalofMedicalMicrobiology55">
       <property name="title" value="Journal of Medical Microbiology Volume 55" />
       <property name="journalTitle" value="Journal of Medical Microbiology" />
@@ -2686,7 +2712,7 @@
       </property>
       <property name="attributes.publisher" value="Society for General Microbiology" />
     </property>
-    
+
     <property name="Microbiology152">
       <property name="title" value="Microbiology Volume 152" />
       <property name="journalTitle" value="Microbiology" />
@@ -2701,7 +2727,7 @@
       </property>
       <property name="attributes.publisher" value="Society for General Microbiology" />
     </property>
-    
+
     <property name="JournalofLeukocyteBiology79">
       <property name="title" value="Journal of Leukocyte Biology Volume 79" />
       <property name="journalTitle" value="Journal of Leukocyte Biology" />
@@ -2716,7 +2742,7 @@
       </property>
       <property name="attributes.publisher" value="Society for Leukocyte Biology" />
     </property>
-    
+
     <property name="JournalofNeuroscience26">
       <property name="title" value="Journal of Neuroscience Volume 26" />
       <property name="journalTitle" value="Journal of Neuroscience" />
@@ -2731,7 +2757,7 @@
       </property>
       <property name="attributes.publisher" value="Society for Neuroscience" />
     </property>
-    
+
     <property name="BiologyofReproduction74">
       <property name="title" value="Biology of Reproduction Volume 74" />
       <property name="journalTitle" value="Biology of Reproduction" />
