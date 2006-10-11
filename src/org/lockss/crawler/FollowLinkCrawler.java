@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.44 2006-10-11 02:39:35 adriz Exp $
+ * $Id: FollowLinkCrawler.java,v 1.45 2006-10-11 18:28:05 troberts Exp $
  */
 
 /*
@@ -386,10 +386,11 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
       if (!parsedPages.contains(uc.getUrl())) {
 	logger.debug3("Parsing "+uc);
 	CachedUrl cu = uc.getCachedUrl();
-        updateStatusMimeType(cu);             // call for methaod - to check and update crawler status on found conetnt-type:urls
 	//XXX quick fix; if-statement should be removed when we rework
 	//handling of error condition
 	if (cu.hasContent()) {
+	  updateStatusMimeType(cu);            
+	  // call for methaod - to check and update crawler status on found conetnt-type:urls
 	  ContentParser parser = getContentParser(cu);
 	  if (parser != null) {
 	    //IOException if the CU can't be read
