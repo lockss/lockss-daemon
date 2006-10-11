@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.43 2006-10-09 20:32:36 adriz Exp $
+ * $Id: FollowLinkCrawler.java,v 1.44 2006-10-11 02:39:35 adriz Exp $
  */
 
 /*
@@ -97,7 +97,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
     Configuration.PREFIX + "BaseCrawler.refetchIfDamaged";
   public static final boolean DEFAULT_REFETCH_IF_DAMAGED = true;
   // Configure: keep the number of urs  AND in array each url-string for mime-type or if false -> keep just the number of urls 
-  public static final boolean KEEP_URLS_MIME_TYPE = true;
+  //public static final boolean KEEP_URLS_MIME_TYPE = true;
 
   private boolean alwaysReparse = DEFAULT_REPARSE_ALL;
   private boolean usePersistantList = DEFAULT_PERSIST_CRAWL_LIST;
@@ -502,7 +502,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
     if (props != null) {
       String mimeType = props.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE);
       if (mimeType != null) {      //  do update of the content-type
-        crawlStatus.updateUrlsArrayOfMimeType(mimeType, cu.getUrl(), KEEP_URLS_MIME_TYPE);
+        crawlStatus.updateUrlsArrayOfMimeType(mimeType, cu.getUrl()); //, crawlStatus.KEEP_URLS_MIME_TYPE
       }
     }
     return;

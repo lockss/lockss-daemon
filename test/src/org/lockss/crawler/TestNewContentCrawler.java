@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.55 2006-10-09 20:32:36 adriz Exp $
+ * $Id: TestNewContentCrawler.java,v 1.56 2006-10-11 02:39:35 adriz Exp $
  */
 
 /*
@@ -484,12 +484,12 @@ public class TestNewContentCrawler extends LockssTestCase {
 
     /* this is simulation of the call in the doCrawl()  
     boolean keepUrl = true ;
-    crawlStatus.updateUrlsArrayOfMimeType("bla-ba-type",startUrl,  keepUrl );
-    crawlStatus.updateUrlsArrayOfMimeType("bla-content-type",url1, keepUrl );
-    crawlStatus.updateUrlsArrayOfMimeType("bla-content-type",url2, keepUrl );
-    crawlStatus.updateUrlsArrayOfMimeType("text/html",url4, keepUrl );
+    crawlStatus.updateUrlsArrayOfMimeType("bla-ba-type",startUrl );  //,  keepUrl
+    crawlStatus.updateUrlsArrayOfMimeType("bla-content-type",url1 );//, keepUrl
+    crawlStatus.updateUrlsArrayOfMimeType("bla-content-type",url2);  //, keepUrl 
+    crawlStatus.updateUrlsArrayOfMimeType("text/html",url4 );//, keepUrl 
     //keepUrl = false ;
-    //crawlStatus.updateUrlsArrayOfMimeType("bla-content-type",url3, keepUrl );
+    //crawlStatus.updateUrlsArrayOfMimeType("bla-content-type",url3 );, keepUrl 
      */                                  
     assertEquals(null, crawlStatus.getUrlsArrayOfMimeType("none-of-this-ct"));
     // check the whole ARRAY list includes urls:     

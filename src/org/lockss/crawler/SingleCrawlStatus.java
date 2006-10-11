@@ -1,5 +1,5 @@
 /*
- * $Id: SingleCrawlStatus.java,v 1.9 2006-10-09 20:32:36 adriz Exp $
+ * $Id: SingleCrawlStatus.java,v 1.10 2006-10-11 02:39:35 adriz Exp $
  */
 
 /*
@@ -50,6 +50,8 @@ public class SingleCrawlStatus implements StatusAccessor {
   private static final String NOT_MODIFIED_TABLE_NAME = "not-modified";
   private static final String PARSED_TABLE_NAME = "parsed";
   private static final String EXCLUDED_TABLE_NAME = "excluded";
+  private static final String MIMETYPES_TABLE_NAME = "mime-type";
+  
   // **** add support
   //private static final String CONTENT_TYPE_URLS_TABLE_NAME = "content_type_urls ";
   
@@ -75,6 +77,11 @@ public class SingleCrawlStatus implements StatusAccessor {
     ListUtil.list(new ColumnDescriptor(URL, "URL Excluded",
 				       ColumnDescriptor.TYPE_STRING));
 
+  private static List colDescsMimeTypeUrls =
+    ListUtil.list(new ColumnDescriptor(URL, "URL Found for the Mime-Type",
+                                       ColumnDescriptor.TYPE_STRING));
+
+  
   private static final List statusSortRules =
     ListUtil.list(new StatusTable.SortRule(IX, true));
 
@@ -124,8 +131,11 @@ public class SingleCrawlStatus implements StatusAccessor {
       return "URLs parsed during crawl of "+au.getName();
     } else if (EXCLUDED_TABLE_NAME.equals(tableStr)) {
       return "URLs excluded during crawl of "+au.getName();
+    } else if (MIMETYPES_TABLE_NAME.equals(getMtTableStrFromTableStr(tableStr))) {
+      return "URLs found during crawl of "+au.getName()
+            + " with Mime-Type value: "+ getMimeTypeStrFromTableStr(tableStr) ;
     }
-    return "";
+     return "";
   }
 
 
@@ -133,6 +143,12 @@ public class SingleCrawlStatus implements StatusAccessor {
     return key.substring(0, key.indexOf("."));
   }
 
+  private String getMimeTypeStrFromTableStr(String tableStr) {
+    return tableStr.substring(0, tableStr.indexOf(":"));
+  }
+  private String getMtTableStrFromTableStr(String tableStr) {
+    return tableStr.substring(tableStr.indexOf(":")+1);
+  }
   private String getStatusKeyFromTableKey(String key) {
     return key.substring(key.indexOf(".")+1);
   }
@@ -148,6 +164,8 @@ public class SingleCrawlStatus implements StatusAccessor {
       return colDescsParsed;
     } else if (EXCLUDED_TABLE_NAME.equals(tableStr)) {
       return colDescsExcluded;
+    }else if (MIMETYPES_TABLE_NAME.equals(getMtTableStrFromTableStr(tableStr))) {
+      return colDescsMimeTypeUrls;
     }
     return null;
   }
@@ -163,6 +181,8 @@ public class SingleCrawlStatus implements StatusAccessor {
       rows = urlSetToRows(status.getUrlsParsed());
     } else if (EXCLUDED_TABLE_NAME.equals(tableStr)) {
       rows = urlSetToRows(status.getUrlsExcluded());
+    } else if (MIMETYPES_TABLE_NAME.equals(getMtTableStrFromTableStr(tableStr))) {
+      rows = urlSetToRows( status.getUrlsArrayOfMimeType(getMimeTypeStrFromTableStr(tableStr)) );
     } else if (ERROR_TABLE_NAME.equals(tableStr)) {
       Map errorMap = status.getUrlsWithErrors();
       Set errorUrls = errorMap.keySet();

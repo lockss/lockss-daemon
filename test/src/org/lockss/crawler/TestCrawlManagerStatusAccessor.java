@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerStatusAccessor.java,v 1.5 2006-10-09 20:32:36 adriz Exp $
+ * $Id: TestCrawlManagerStatusAccessor.java,v 1.6 2006-10-11 02:39:35 adriz Exp $
  */
 
 /*
@@ -95,7 +95,7 @@ public class TestCrawlManagerStatusAccessor extends LockssTestCase {
 			   ColumnDescriptor.TYPE_INT),
       new ColumnDescriptor(NUM_URLS_WITH_ERRORS, "Errors",
 			   ColumnDescriptor.TYPE_INT),
-      new ColumnDescriptor(NUM_OF_MIME_TYPES, "Content Types",
+      new ColumnDescriptor(NUM_OF_MIME_TYPES, "Mime Types",
                            ColumnDescriptor.TYPE_INT,
                            "Number of different Content Types"),                                                             
       new ColumnDescriptor(START_URLS, "Starting Url(s)",

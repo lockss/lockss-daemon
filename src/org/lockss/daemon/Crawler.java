@@ -1,5 +1,5 @@
 /*
- * $Id: Crawler.java,v 1.42 2006-10-09 20:32:37 adriz Exp $
+ * $Id: Crawler.java,v 1.43 2006-10-11 02:39:35 adriz Exp $
  */
 
 /*
@@ -67,6 +67,8 @@ public interface Crawler {
   public static final String STATUS_PLUGIN_ERROR = "Plugin error";
   public static final String STATUS_REPO_ERR = "Repository error";
   //public static final String STATUS_UNKNOWN = "Unknown";
+  // Configure: keep the number of urs  AND in array each url-string for mime-type or if false -> keep just the number of urls 
+  public static final boolean KEEP_URLS_MIME_TYPE = true;
 
   /**
    * Initiate a crawl starting with all the urls in urls
@@ -130,17 +132,15 @@ public interface Crawler {
 
     protected Set sources = new ListOrderedSet();
     
-    /* add -  class: public static class RecordMimeType include basic array: urlsArray and Int
-     *  updateUrlsArrayOfMimeType will update based on Boolean recordUrl to update int-RecordMimeType.numOfUrls  or add also the url to 
-     *  RecordMimeType.urlsArray
-     *  ucontentTypeUrls  will map a mimeTypeKey to an object of RecordMimeType
-    */
-    
-    protected Map mimeTypeUrls = new HashMap();/*MimeType - keep record of urls with the given type of mime-type */
+    /*  mimeTypeUrls  will map a mimeTypeKey to an object of RecordMimeType 
+     * keep record of urls with the given type of mime-type 
+     * */    
+    protected Map mimeTypeUrls = new HashMap(); 
     protected Crawler.Status.RecordMimeTypeUrls recordUrls = null;
     
-    public Crawler.Status.RecordMimeTypeUrls getRecordMimeTypeUrls() {
-         return recordUrls;
+    public Crawler.Status.RecordMimeTypeUrls getRecordMimeTypeUrls(String keyMimeType) {
+      recordUrls = (RecordMimeTypeUrls)mimeTypeUrls.get(keyMimeType);  
+      return recordUrls;
     }
 
     public Status(ArchivalUnit au, Collection startUrls, String type) {
@@ -284,34 +284,36 @@ public interface Crawler {
       }
     }
     
-    /* return the list of the different types of content-mime types found from the map: mimeTypeUrls.keys */
+    /* return the list of the different types of content-mime types found 
+     * from the map: mimeTypeUrls.keys */
     public synchronized Collection getMimeTypesVals() {
-      if (isCrawlActive()) {  // consider switching between the 2 cases, if isactive ret the orig-set so if is updated during the crawl ->it's reflected ->seen by ui
+      if (isCrawlActive()) {   
         return new ArrayList( mimeTypeUrls.keySet() );
       } else {
         return  mimeTypeUrls.keySet();
       }
     }
-    /* return the size of the list of the different types of mime types found from the map: (ArrayList)mimeTypeUrls.numberOfKeys */
+    /* return the size of the list of the different types of mime types found from the
+     *  map: (ArrayList)mimeTypeUrls.numberOfKeys */
     public synchronized long getNumOfMimeTypes() {
       return mimeTypeUrls.keySet().size();
     }
+    
    /**
     *  check and update: mimeTypeUrls, 
     * if there is already an entry (list of string urls) for the given key: mimeType
     * if y return the list-ptr else create an empty list and return its pointer  
     */
-
     public synchronized void updateUrlsArrayOfMimeType(String keyMimeType,
-                                                                String url , boolean keepUrl) {
+                                                                String url ) {  //, boolean keepUrl
       if (keyMimeType == null) return;      
-      recordUrls = (RecordMimeTypeUrls)mimeTypeUrls.get(keyMimeType);                                    // if get returns null --> key is not there (there are no mappings to null)
+      recordUrls = (RecordMimeTypeUrls)mimeTypeUrls.get(keyMimeType);  // if get returns null-> key is not there (there are no mappings to null)
       if ( recordUrls == null ) {          
         RecordMimeTypeUrls recordUrls = new RecordMimeTypeUrls();
-        recordUrls.addCtUrls(url, keepUrl);
+        recordUrls.addMtUrls(url, keepMimeTypeUrls());
         mimeTypeUrls.put(keyMimeType, recordUrls);
       } else  {
-        recordUrls.addCtUrls(url, keepUrl);
+        recordUrls.addMtUrls(url, keepMimeTypeUrls());
       }
     }
  
@@ -323,21 +325,21 @@ public interface Crawler {
          RecordMimeTypeUrls recordUrls = (RecordMimeTypeUrls)mimeTypeUrls.get(keyMimeType);
          return recordUrls.urlsArray; 
        } else {
-         return null;// return null, none urls of this content/mime type
+         return null;// return null, none urls of this mime type
        }
      }
 
      /**
       * Return the number of urls that have been found by this crawler
       *  with the given mime-type 
-      * @return number of urls with the mime-type that have been by this crawler
+      * @return number of urls with this mime-type that have been found by this crawler
       */
      public synchronized long getNumUrlsOfMimeType(String keyMimeType) {
        if ( mimeTypeUrls.containsKey(keyMimeType) ) {    
          RecordMimeTypeUrls recordUrls = (RecordMimeTypeUrls)mimeTypeUrls.get(keyMimeType);
          return recordUrls.numUrls; 
        } else {
-         return 0;//  no urls of this content type
+         return 0;  //  no urls of this mime type
        }
 
      }
@@ -405,7 +407,16 @@ public interface Crawler {
     public ArchivalUnit getAu() {
       return au;
     }
+    
+    public boolean keepMimeTypeUrls() {
+      return Crawler.KEEP_URLS_MIME_TYPE;
+    }
 
+    /*  Class: public static class RecordMimeType includes  urlsArray and Int
+     *  updateUrlsArrayOfMimeType will update based on Boolean keepUrl 
+     *      update int-RecordMimeType.numOfUrls  or add also the url to 
+     *  RecordMimeType.urlsArray
+     */  
     public static class RecordMimeTypeUrls {
       protected int numUrls; // = 0;
       protected ArrayList urlsArray; // =  new ArrayList();     
@@ -415,7 +426,7 @@ public interface Crawler {
         this.urlsArray =  new ArrayList();
       }
 
-      protected void addCtUrls(String url, boolean keepUrl) {
+      protected void addMtUrls(String url, boolean keepUrl) {
         numUrls++;
         if (keepUrl){
           urlsArray.add( url );

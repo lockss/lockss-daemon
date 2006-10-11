@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerStatusAccessor.java,v 1.8 2006-10-09 20:32:36 adriz Exp $
+ * $Id: CrawlManagerStatusAccessor.java,v 1.9 2006-10-11 02:39:35 adriz Exp $
  */
 
 /*
@@ -53,17 +53,9 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
   private static final String NUM_URLS_EXCLUDED = "num_urls_excluded";
   private static final String NUM_URLS_WITH_ERRORS = "num_urls_with_errors";
   private static final String NUM_URLS_NOT_MODIFIED = "num_urls_not_modified";
-  /* mmmt-1st-0  modify name-usage to defined at class-file CrawlManagerImpl
-   *     private static final String SINGLE_CRAWL_STATUS = CrawlManagerImpl.blabla;
-   *     and then replace all over "single_crawl_status"
-   */
-  /* mmmt-1st-0.1 in CrawlManagerImpl add maping just as is for : single_crawl_status to the object
-   *    have for mime_type_crawl_status to obj: MimeTypeCrawlStatus 
-   * line 207:        statusServ.registerStatusAccessor(SINGLE_CRAWL_STATUS_TABLE_NAME,
-                                      new SingleCrawlStatus(cmStatusAcc));
-
-   */
-  // mmmt-1st-1  number of types (keys) of mime types found during the crawl 
+  private static final String SINGLE_CRAWL_STATUS ="single_crawl_status"; // couldn't use CrawlManagerImpl.SINGLE_CRAWL_STATUS_TABLE_NAME;  for it's being private!
+                                                                          //replaced:"single_crawl_status";
+  // number of types (keys) of mime types found during the crawl 
   private static final String NUM_OF_MIME_TYPES = "num_of_mime_types";
 
   private static final String START_URLS = "start_urls";
@@ -113,11 +105,9 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
       new ColumnDescriptor(NUM_URLS_WITH_ERRORS, "Errors",
 			   ColumnDescriptor.TYPE_INT,
 			   "Number of pages that could not be fetched"),
-      /* mmmt-1st-2  */
-      new ColumnDescriptor(NUM_OF_MIME_TYPES, "Content Types",
+      new ColumnDescriptor(NUM_OF_MIME_TYPES, "Mime Types",
                            ColumnDescriptor.TYPE_INT,
-                           "Number of different Content Types"),                                                             
-                           
+                           "Number of the different Mime Types"),                                                                                      
       new ColumnDescriptor(START_URLS, "Starting Url(s)",
 			   ColumnDescriptor.TYPE_STRING),
       new ColumnDescriptor(SOURCES, "Source(s)",
@@ -204,32 +194,31 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
 	      new Long(status.getContentBytesFetched()));
       row.put(NUM_URLS_FETCHED,
 	      makeRef(status.getNumFetched(),
-		      "single_crawl_status", "fetched."+key));
+		      SINGLE_CRAWL_STATUS, "fetched."+key));
       row.put(NUM_URLS_WITH_ERRORS,
 	      makeRef(status.getNumUrlsWithErrors(),
-		      "single_crawl_status", "error."+key));
+		      SINGLE_CRAWL_STATUS, "error."+key));
       row.put(NUM_URLS_NOT_MODIFIED,
 	      makeRef(status.getNumNotModified(),
-		      "single_crawl_status", "not-modified."+key));
+		      SINGLE_CRAWL_STATUS, "not-modified."+key));
       row.put(NUM_URLS_PARSED,
 	      makeRef(status.getNumParsed(),
-		      "single_crawl_status", "parsed."+key));
+		      SINGLE_CRAWL_STATUS, "parsed."+key));
       row.put(NUM_URLS_EXCLUDED,
 	      makeRef(status.getNumExcluded(),
-		      "single_crawl_status", "excluded."+key));
-      /* mmmt-1st-3  
+		      SINGLE_CRAWL_STATUS, "excluded."+key));
+      /* 
        * the key-status is all info needed for next level
-       * since we are already directing the ref to class MimeType...via def mmmt0.2 
-       * */
-      /*
+       * since we are already directing the ref to class MimeType via:
+       *  CrawlManagerImpl added maping for mime_type_crawl_status to obj: 
+       *  MimeTypeStatusCrawler into: statusServ.registerStatusAccesso
+       */
       row.put(NUM_OF_MIME_TYPES,
                 makeRef(status.getNumOfMimeTypes(),
-                        "mime_type_crawl_status", key)); 
-       */                      
-      /*  in order to check just 1st level we should do: */ 
+                        "mime_type_crawl_status", key));                              
+      /*  in order to check just 1st level we should do:  
        row.put(NUM_OF_MIME_TYPES, new Long(status.getNumOfMimeTypes()));     
-       
-       
+      */       
       if (status.getEndTime() > 0) {
 	row.put(DURATION_COL_NAME, new Long(status.getEndTime() -
 					    status.getStartTime()));
