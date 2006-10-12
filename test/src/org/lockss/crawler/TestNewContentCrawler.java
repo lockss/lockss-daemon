@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.56 2006-10-11 02:39:35 adriz Exp $
+ * $Id: TestNewContentCrawler.java,v 1.57 2006-10-12 22:38:23 adriz Exp $
  */
 
 /*
@@ -493,7 +493,7 @@ public class TestNewContentCrawler extends LockssTestCase {
      */                                  
     assertEquals(null, crawlStatus.getUrlsArrayOfMimeType("none-of-this-ct"));
     // check the whole ARRAY list includes urls:     
-    // since the order is not kept use contains and Not: ArrayList expectedUrlsArray = new ArrayList(); with assertIsomorphic  //
+    // since the order is not kept use contains and Not: assertIsomorphic  //
     assertTrue(crawlStatus.getUrlsArrayOfMimeType("bla-content-type").contains(url1));
     assertTrue(crawlStatus.getUrlsArrayOfMimeType("bla-content-type").contains(url2));
     assertEquals(3, crawlStatus.getNumUrlsOfMimeType("bla-content-type"));
@@ -503,6 +503,66 @@ public class TestNewContentCrawler extends LockssTestCase {
     expectedUrlsArray.add(startUrl);               // just one item in array use assertIsomorphic */
     assertIsomorphic(expectedUrlsArray, crawlStatus.getUrlsArrayOfMimeType("bla-ba-type"));
     
+  }
+  /* 
+   * test crawl.status is updated with the pending urls, which are the extracted urls
+   * my steps:
+   * 0. temp-activate status.updateUrlsExcluded (which is later added to the doCrawl() at FolllowLinkCrawler
+   * 1. do Crawl with planted exception so the crawler stops while there are pending urls
+   * 2. get-assert list of status.pendingUrls to expectedPendingUrls  
+   */
+  public void testGetPendingUrls() {
+
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    MyMockUnretryableCacheException exception =
+    new MyMockUnretryableCacheException("Test exception");
+        /*  alt:
+            mau = newMyMockArchivalUnit();
+            mau.setPlugin(new MockPlugin(getMockLockssDaemon()));
+            mau.setAuId("MyMockTestAu");
+            mcus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+            spec = new SpiderCrawlSpec(ListUtil.list(permissionPage),
+                                       ListUtil.list(permissionPage), crawlRule, 1);
+            mau.setCrawlSpec(spec);
+            crawler = new MyNewContentCrawler(mau, spec, aus);
+         */     
+    String url1 = "http://www.example.com/link1.html";
+    String url2 = "http://www.example.com/link2.html";  
+    String url3 = "http://www.example.com/blah.html";   // stop-crawl via exception on this one   
+    String url4 = "http://www.example.com/link4.html";
+    mau.addUrl(startUrl, false, true);           // was: not-exsits! should-cash:  mau.addUrl(startUrl, false, true);  - even though the stop is on url1 only
+    mau.addUrl(url1, true, true);               // MockCachedUrl cu1 = 
+    mau.addUrl(url2, true, true);
+    mau.addUrl(url3, new IOException("Test exception"), DEFAULT_RETRY_TIMES);
+          /*alt:    mau.addUrl(permissionPage,
+                     new CacheException.ExpectedNoRetryException("Test exception"),
+                     DEFAULT_RETRY_TIMES);
+          */
+    mau.addUrl(url4, true, true);   
+    parser.addUrlSetToReturn(startUrl, SetUtil.set(url1, url2, url3, url4));   
+         //alt: parser.addUrlSetToReturn(startUrl, SetUtil.set(url1, url2, permissionPage, url4));   
+    crawlRule.addUrlToCrawl(url1);
+    crawlRule.addUrlToCrawl(url2);   
+    crawlRule.addUrlToCrawl(url3);  //alt: crawlRule.addUrlToCrawl(permissionPage);
+    crawlRule.addUrlToCrawl(url4);
+
+    crawler.doCrawl();
+    Crawler.Status crawlStatus = crawler.getStatus();
+
+    /* apply the following, to simulate the calls in doCrawl()
+     * while they are commented out in FollowLinkCrawler-doCrawl()   
+    crawlStatus.signalAddUrlPending(url1);
+    crawlStatus.signalAddUrlPending(url2);
+    crawlStatus.signalAddUrlPending(url3);
+    crawlStatus.signalAddUrlPending(url4);
+    crawlStatus.signalRemoveAnUrlPending(url1);     // out url1
+    crawlStatus.signalRemoveAnUrlPending(url2);     // out url2
+    crawlStatus.signalRemoveAnUrlPending(url3);     // out url3
+     */
+    assertEquals(Crawler.STATUS_ERROR, crawlStatus.getCrawlStatus());
+    assertEquals(1, crawlStatus.getNumUrlsWithErrors());
+    assertEquals(4, crawlStatus.getNumParsed());    
+    assertEquals(0, crawlStatus.getNumPending());    
   }
 
   public void testGetStatusStartUrls() {

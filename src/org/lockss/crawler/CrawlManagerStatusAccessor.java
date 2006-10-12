@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerStatusAccessor.java,v 1.9 2006-10-11 02:39:35 adriz Exp $
+ * $Id: CrawlManagerStatusAccessor.java,v 1.10 2006-10-12 22:38:23 adriz Exp $
  */
 
 /*
@@ -51,6 +51,7 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
   private static final String NUM_URLS_PARSED = "num_urls_parsed";
   private static final String NUM_URLS_FETCHED = "num_urls_fetched";
   private static final String NUM_URLS_EXCLUDED = "num_urls_excluded";
+  private static final String NUM_URLS_PENDING = "num_urls_pending";
   private static final String NUM_URLS_WITH_ERRORS = "num_urls_with_errors";
   private static final String NUM_URLS_NOT_MODIFIED = "num_urls_not_modified";
   private static final String SINGLE_CRAWL_STATUS ="single_crawl_status"; // couldn't use CrawlManagerImpl.SINGLE_CRAWL_STATUS_TABLE_NAME;  for it's being private!
@@ -96,6 +97,10 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
       new ColumnDescriptor(NUM_URLS_PARSED, "Pages Parsed",
 			   ColumnDescriptor.TYPE_INT,
 			   "Number of (html, etc.) pages scanned for URLs"),
+      // column for pending urls                
+      new ColumnDescriptor(NUM_URLS_PENDING, "Pages Pending",
+                           ColumnDescriptor.TYPE_INT,
+                           "Number of pages that are pending to be parsed"),
       new ColumnDescriptor(NUM_URLS_EXCLUDED, "Pages Excluded",
 			   ColumnDescriptor.TYPE_INT,
 			   "Number of pages that didn't match the crawl rules"),
@@ -204,6 +209,10 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
       row.put(NUM_URLS_PARSED,
 	      makeRef(status.getNumParsed(),
 		      SINGLE_CRAWL_STATUS, "parsed."+key));
+      //  display number of pending urls with link to the list 
+      row.put(NUM_URLS_PENDING,
+              makeRef(status.getNumPending(),
+                      SINGLE_CRAWL_STATUS, "pending."+key));
       row.put(NUM_URLS_EXCLUDED,
 	      makeRef(status.getNumExcluded(),
 		      SINGLE_CRAWL_STATUS, "excluded."+key));

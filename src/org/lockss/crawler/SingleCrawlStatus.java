@@ -1,5 +1,5 @@
 /*
- * $Id: SingleCrawlStatus.java,v 1.10 2006-10-11 02:39:35 adriz Exp $
+ * $Id: SingleCrawlStatus.java,v 1.11 2006-10-12 22:38:23 adriz Exp $
  */
 
 /*
@@ -49,6 +49,7 @@ public class SingleCrawlStatus implements StatusAccessor {
   private static final String ERROR_TABLE_NAME = "error";
   private static final String NOT_MODIFIED_TABLE_NAME = "not-modified";
   private static final String PARSED_TABLE_NAME = "parsed";
+  private static final String PENDING_TABLE_NAME = "pending";
   private static final String EXCLUDED_TABLE_NAME = "excluded";
   private static final String MIMETYPES_TABLE_NAME = "mime-type";
   
@@ -66,6 +67,11 @@ public class SingleCrawlStatus implements StatusAccessor {
   private static List colDescsParsed =
     ListUtil.list(new ColumnDescriptor(URL, "URL Parsed",
 				       ColumnDescriptor.TYPE_STRING));
+
+ 
+  private static List colDescsPending =
+    ListUtil.list(new ColumnDescriptor(URL, "URL Pending",
+                                       ColumnDescriptor.TYPE_STRING));
 
   private static List colDescsError =
     ListUtil.list(new ColumnDescriptor(URL, "URL",
@@ -129,6 +135,8 @@ public class SingleCrawlStatus implements StatusAccessor {
       return "URLs not modified during crawl of "+au.getName();
     } else if (PARSED_TABLE_NAME.equals(tableStr)) {
       return "URLs parsed during crawl of "+au.getName();
+    } else if (PENDING_TABLE_NAME.equals(tableStr)) {
+      return "URLs pending during crawl of "+au.getName();
     } else if (EXCLUDED_TABLE_NAME.equals(tableStr)) {
       return "URLs excluded during crawl of "+au.getName();
     } else if (MIMETYPES_TABLE_NAME.equals(getMtTableStrFromTableStr(tableStr))) {
@@ -162,6 +170,8 @@ public class SingleCrawlStatus implements StatusAccessor {
       return colDescsNotModified;
     } else if (PARSED_TABLE_NAME.equals(tableStr)) {
       return colDescsParsed;
+    } else if (PENDING_TABLE_NAME.equals(tableStr)) {
+      return colDescsPending;
     } else if (EXCLUDED_TABLE_NAME.equals(tableStr)) {
       return colDescsExcluded;
     }else if (MIMETYPES_TABLE_NAME.equals(getMtTableStrFromTableStr(tableStr))) {
@@ -179,6 +189,8 @@ public class SingleCrawlStatus implements StatusAccessor {
       rows = urlSetToRows(status.getUrlsNotModified());
     } else if (PARSED_TABLE_NAME.equals(tableStr)) {
       rows = urlSetToRows(status.getUrlsParsed());
+    } else if (PENDING_TABLE_NAME.equals(tableStr)) {
+      rows = urlSetToRows(status.getUrlsPending());
     } else if (EXCLUDED_TABLE_NAME.equals(tableStr)) {
       rows = urlSetToRows(status.getUrlsExcluded());
     } else if (MIMETYPES_TABLE_NAME.equals(getMtTableStrFromTableStr(tableStr))) {

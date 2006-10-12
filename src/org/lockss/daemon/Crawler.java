@@ -1,5 +1,5 @@
 /*
- * $Id: Crawler.java,v 1.43 2006-10-11 02:39:35 adriz Exp $
+ * $Id: Crawler.java,v 1.44 2006-10-12 22:38:23 adriz Exp $
  */
 
 /*
@@ -129,7 +129,8 @@ public interface Crawler {
     protected Set urlsExcluded = new ListOrderedSet();
     protected Set urlsNotModified = new ListOrderedSet();
     protected Set urlsParsed = new ListOrderedSet();
-
+    protected Set urlsPending = new ListOrderedSet();
+    
     protected Set sources = new ListOrderedSet();
     
     /*  mimeTypeUrls  will map a mimeTypeKey to an object of RecordMimeType 
@@ -190,6 +191,31 @@ public interface Crawler {
       return urlsFetched.size();
     }
 
+    /**
+     * Return the number of urls that are pending 
+     * @return number of urls urls that are pending because 
+     * they are not handeled yet by the crawler 
+     */
+    public synchronized long getNumPending() {
+      return urlsPending.size();
+    }
+
+    /**
+     * update - add url to the list of pending urls
+     */
+    public synchronized void signalAddUrlPending(String url) {
+      urlsPending.add(url);
+    }
+    
+    /**
+     * update - Remove one url element from the list of the pending urls
+     */
+    public synchronized void signalRemoveAnUrlPending(String url) {
+      urlsPending.remove(url);
+      //CollectionUtil.getAnElement(urlsPending);
+      //  String nextUrl = (String)CollectionUtil.getAnElement(urlsToCrawl);
+    }
+    
     /**
      * Return the number of urls that have been excluded because they didn't 
      * match the crawl rules
@@ -284,6 +310,16 @@ public interface Crawler {
       }
     }
     
+    /**
+     * @return hash of the urls that are pending
+     */
+    public synchronized Collection getUrlsPending() {
+      if (isCrawlActive()) {
+        return new ArrayList(urlsPending);
+      } else {
+        return urlsPending;
+      }
+    }
     /* return the list of the different types of content-mime types found 
      * from the map: mimeTypeUrls.keys */
     public synchronized Collection getMimeTypesVals() {
@@ -356,7 +392,8 @@ public interface Crawler {
        urlsParsed.add(url);
      }
 
-    public synchronized void addSource(String source) {
+
+     public synchronized void addSource(String source) {
       sources.add(source);
     }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerStatusAccessor.java,v 1.6 2006-10-11 02:39:35 adriz Exp $
+ * $Id: TestCrawlManagerStatusAccessor.java,v 1.7 2006-10-12 22:38:23 adriz Exp $
  */
 
 /*
@@ -51,6 +51,7 @@ public class TestCrawlManagerStatusAccessor extends LockssTestCase {
   private static final String DURATION_COL_NAME = "dur";
   private static final String CONTENT_BYTES_FETCHED = "content_bytes_fetched";
   private static final String NUM_URLS_PARSED = "num_urls_parsed";
+  private static final String NUM_URLS_PENDING = "num_urls_pending";
   private static final String NUM_URLS_FETCHED = "num_urls_fetched";
   private static final String NUM_URLS_EXCLUDED = "num_urls_excluded";
   private static final String NUM_URLS_WITH_ERRORS = "num_urls_with_errors";
@@ -89,6 +90,9 @@ public class TestCrawlManagerStatusAccessor extends LockssTestCase {
 			   ColumnDescriptor.TYPE_INT),
       new ColumnDescriptor(NUM_URLS_PARSED, "Pages Parsed",
 			   ColumnDescriptor.TYPE_INT),
+      // column for pending urls                
+      new ColumnDescriptor(NUM_URLS_PENDING, "Pages Pending",
+                           ColumnDescriptor.TYPE_INT),                           
       new ColumnDescriptor(NUM_URLS_EXCLUDED, "Pages Excluded",
 			   ColumnDescriptor.TYPE_INT),
       new ColumnDescriptor(NUM_URLS_NOT_MODIFIED, "Not Modified",
@@ -156,6 +160,7 @@ public class TestCrawlManagerStatusAccessor extends LockssTestCase {
     status.setEndTime(2);
     status.setNumFetched(0);
     status.setNumParsed(0);
+    status.setNumPending(0);
     status.setNumNotModified(0);
     status.setNumUrlsWithErrors(0);
     status.setAu(makeMockAuWithId("test_key"));
@@ -182,7 +187,8 @@ public class TestCrawlManagerStatusAccessor extends LockssTestCase {
     status.setStartTime(1);
     status.setEndTime(2);
     status.setNumFetched(3);
-    status.setNumParsed(4);
+    status.setNumParsed(4);    
+    status.setNumPending(4);
     status.setNumExcluded(5);
     status.setAu(makeMockAuWithId("test_key"));
 
@@ -192,6 +198,7 @@ public class TestCrawlManagerStatusAccessor extends LockssTestCase {
     status2.setEndTime(8);
     status2.setNumFetched(9);
     status2.setNumParsed(10);
+    status2.setNumPending(10);
     status2.setAu(makeMockAuWithId("not_test_key"));
     statusSource.setCrawlStatusList(ListUtil.list(status, status2));
 
@@ -225,6 +232,7 @@ public class TestCrawlManagerStatusAccessor extends LockssTestCase {
     status.setEndTime(2);
     status.setNumFetched(3);
     status.setNumParsed(4);
+    status.setNumPending(4);
     status.setNumUrlsWithErrors(5);
     status.setNumNotModified(6);
     status.setNumExcluded(7);
@@ -235,6 +243,7 @@ public class TestCrawlManagerStatusAccessor extends LockssTestCase {
     status2.setEndTime(8);
     status2.setNumFetched(9);
     status2.setNumParsed(10);
+    status2.setNumPending(10);
     status2.setNumUrlsWithErrors(11);
     status2.setNumNotModified(12);
     status2.setAu(makeMockAuWithId("id2"));
@@ -262,6 +271,11 @@ public class TestCrawlManagerStatusAccessor extends LockssTestCase {
     assertEquals(new Long(4), ref.getValue());
     assertEquals("single_crawl_status", ref.getTableName());
     assertEquals("parsed."+status.getKey(), ref.getKey());
+
+    ref = (StatusTable.Reference)map.get(NUM_URLS_PENDING);
+    assertEquals(new Long(4), ref.getValue());
+    assertEquals("single_crawl_status", ref.getTableName());
+    assertEquals("pending."+status.getKey(), ref.getKey());
 
     ref = (StatusTable.Reference)map.get(NUM_URLS_WITH_ERRORS);
     assertEquals(new Long(5), ref.getValue());

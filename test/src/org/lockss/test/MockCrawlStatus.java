@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawlStatus.java,v 1.11 2006-07-10 18:01:25 troberts Exp $
+ * $Id: MockCrawlStatus.java,v 1.12 2006-10-12 22:38:23 adriz Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ public class MockCrawlStatus extends Crawler.Status {
   String crawlStatus = null;
   boolean crawlEndSignaled = false;
   long numParsed = 0;
+  long numPending = 0;
   long numFetched = 0;
   long numErrors = 0;
   long numNotModified = 0;
@@ -48,6 +49,7 @@ public class MockCrawlStatus extends Crawler.Status {
 
   Collection urlsFetched = null;
   Collection urlsParsed = null;
+  Collection urlsPending = null;
   Collection urlsNotModified = null;
   Collection urlsExcluded = null;
   Map errorUrls = null;
@@ -127,6 +129,15 @@ public class MockCrawlStatus extends Crawler.Status {
     this.urlsParsed = urlsParsed;
   }
 
+  // allow test-mock set/get for pending urls
+  public Collection getUrlsPending() {
+    return urlsPending;
+  }
+
+  public void setUrlsPending(Collection urlsPending) {
+    this.urlsPending = urlsPending;
+  }
+
   public Collection getUrlsNotModified() {
     return urlsNotModified;
   }
@@ -156,6 +167,13 @@ public class MockCrawlStatus extends Crawler.Status {
     return numParsed;
   }
 
+  public long getNumPending() {
+    if (urlsPending != null) {
+      return urlsPending.size();
+    }
+    return numPending;
+  }
+
   public Map getUrlsWithErrors() {
     return errorUrls;
   }
@@ -170,6 +188,10 @@ public class MockCrawlStatus extends Crawler.Status {
 
   public void setNumParsed(int numParsed) {
     this.numParsed = numParsed;
+  }
+
+  public void setNumPending(int numPending) { // set for pending
+    this.numPending = numPending;
   }
 
   public void setAu(ArchivalUnit au) {

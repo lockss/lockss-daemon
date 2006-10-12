@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.45 2006-10-11 18:28:05 troberts Exp $
+ * $Id: FollowLinkCrawler.java,v 1.46 2006-10-12 22:38:23 adriz Exp $
  */
 
 /*
@@ -215,7 +215,8 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 
       while (!urlsToCrawl.isEmpty() && !crawlAborted) {
  	String nextUrl = (String)CollectionUtil.getAnElement(urlsToCrawl);
-
+ 	// add call to 
+        crawlStatus.signalRemoveAnUrlPending(nextUrl);
 	logger.debug3("Trying to process " + nextUrl);
 
 	// check crawl window during crawl
@@ -560,6 +561,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	      logger.debug2("Included url: "+normUrl);
 	    }
 	    extractedUrls.add(normUrl);
+            crawlStatus.signalAddUrlPending(normUrl);// add url to pendingUrls in status object
 	  } else {
 	    if (logger.isDebug2()) {
 	      logger.debug2("Excluded url: "+normUrl);
