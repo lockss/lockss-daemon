@@ -1977,21 +1977,6 @@
       <property name="value" value="99" />
      </property>
      <property name="attributes.publisher" value="American Physiological Society" />
-=======
-      <property name="title" value="Journal of Applied Physiology Volume 100" />
-      <property name="journalTitle" value="Journal of Applied Physiology" />
-      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
-      <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://jap.physiology.org/" />
-      </property>
-      <property name="param.2">
-	<property name="key" value="volume_name" />
-	<property name="value" value="100" />
-      </property>
-      <property name="attributes.publisher" value="American Physiological Society" />
-      <property name="attributes.hint_application/pdf_filter_factory"
-                value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform$Simplified" />
     </property>
 
     <property name="JournalofNeurophysiology95">
