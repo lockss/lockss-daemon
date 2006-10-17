@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.58 2006-10-17 04:36:49 adriz Exp $
+ * $Id: TestNewContentCrawler.java,v 1.59 2006-10-17 23:40:11 adriz Exp $
  */
 
 /*
@@ -448,39 +448,30 @@ public class TestNewContentCrawler extends LockssTestCase {
     assertFalse(crawler.doCrawl());
   }
 
-  /** test recording mime-types during a crawl */
-  public void testGetContentTypeUrl() {
+  /** test recording mime-types and urls during a crawl */
+  public void testKeepMimeTypeUrl() {
     String url1 = "http://www.example.com/link1.html";
     String url2 = "http://www.example.com/link2.html";  
     String url3 = "http://www.example.com/link3.html";
     String url4 = "http://www.example.com/link4.html";
-    MockCachedUrl cu0 = mau.addUrlContype(startUrl, false, true, "bla-ba-type");
-    MockCachedUrl cu1 = mau.addUrlContype(url1, false, true, "bla-content-type");
-    MockCachedUrl cu2 = mau.addUrlContype(url2, false, true, "bla-content-type");
-    MockCachedUrl cu3 = mau.addUrlContype(url3, false, true, "bla-content-type");
-    MockCachedUrl cu4 = mau.addUrl(url4, false, true);        
+    MockCachedUrl cu0 = mau.addUrlContype(startUrl, false, true,
+                                              "bla-ba-type");
+    mau.addUrlContype(url1, false, true, "bla-content-type");
+    mau.addUrlContype(url2, false, true, "bla-content-type");
+    mau.addUrlContype(url3, false, true, "bla-content-type");
+    mau.addUrl(url4, false, true);        
     parser.addUrlSetToReturn(startUrl, SetUtil.set(url1, url2, url3, url4));   
-    cu1.setContentSize(442);
-    cu2.setContentSize(38);             
-    //cu3.setContentSize(1000);
-    cu4.setContentSize(30);             
     crawlRule.addUrlToCrawl(url1);
     crawlRule.addUrlToCrawl(url2);
     crawlRule.addUrlToCrawl(url3);
     crawlRule.addUrlToCrawl(url4);
-
-    long expectedStart = TimeBase.nowMs();
+    crawler.setKeepMimeTypesOfUrl(true);
     crawler.doCrawl();
-    long expectedEnd = TimeBase.nowMs();
     Crawler.Status crawlStatus = crawler.getStatus();
-  
-    assertEquals(expectedStart, crawlStatus.getStartTime());
-    assertEquals(expectedEnd, crawlStatus.getEndTime());
     assertEquals(6, crawlStatus.getNumFetched());
     CIProperties cu0Props = cu0.getProperties(); 
     assertEquals( "bla-ba-type", 
-                  cu0Props.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE));
-                             
+                  cu0Props.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE));                             
     assertEquals(null, crawlStatus.getUrlsOfMimeType("no-such-mimetype"));
     assertTrue(crawlStatus.getUrlsOfMimeType("bla-content-type").contains(url1));
     assertTrue(crawlStatus.getUrlsOfMimeType("bla-content-type").contains(url2));
@@ -489,27 +480,48 @@ public class TestNewContentCrawler extends LockssTestCase {
     assertTrue(crawlStatus.getUrlsOfMimeType("text/html").contains(url4));     
     assertTrue(crawlStatus.getUrlsOfMimeType("bla-ba-type").contains(startUrl));       
   }
+
+  /** test recording just the number of urls for mime-types during a crawl */
+  public void testNotKeepUrlMimeType() {
+    String url1 = "http://www.example.com/link1.html";
+    String url2 = "http://www.example.com/link2.html";  
+    String url3 = "http://www.example.com/link3.html";
+    String url4 = "http://www.example.com/link4.html";
+    mau.addUrlContype(startUrl, false, true, "bla-ba-type");
+    mau.addUrlContype(url1, false, true, "bla-content-type");
+    mau.addUrlContype(url2, false, true, "bla-content-type");
+    mau.addUrlContype(url3, false, true, "bla-content-type");
+    mau.addUrl(url4, false, true);        
+    parser.addUrlSetToReturn(startUrl, SetUtil.set(url1, url2, url3, url4));   
+    crawlRule.addUrlToCrawl(url1);
+    crawlRule.addUrlToCrawl(url2);
+    crawlRule.addUrlToCrawl(url3);
+    crawlRule.addUrlToCrawl(url4);
+    crawler.setKeepMimeTypesOfUrl(false);
+    crawler.doCrawl();
+    Crawler.Status crawlStatus = crawler.getStatus();
+    assertEquals(6, crawlStatus.getNumFetched());                             
+    assertTrue(crawlStatus.getUrlsOfMimeType("bla-content-type").isEmpty());
+    assertTrue(crawlStatus.getUrlsOfMimeType("text/html").isEmpty());
+    assertTrue(crawlStatus.getUrlsOfMimeType("bla-ba-type").isEmpty());
+    assertEquals(3, crawlStatus.getNumUrlsOfMimeType("bla-content-type"));  
+    assertEquals(1, crawlStatus.getNumUrlsOfMimeType("bla-ba-type"));  
+    assertEquals(1, crawlStatus.getNumUrlsOfMimeType("text/html"));  
+  }
   
   /** test status update of pending urls   */
   public void testGetPendingUrls() {
-
-    MyMockUnretryableCacheException exception =
-          new MyMockUnretryableCacheException("Test exception");
+    MyMockCacheException exception =
+      new MyMockCacheException("Test exception");
+    exception.setFatal();
     String url1 = "http://www.example.com/link1.html";
     String url2 = "http://www.example.com/link2.html";  
-    String url3 = "http://www.example.com/blah.html";    
+    String url3 = "http://www.example.com/link3.html";    
     String url4 = "http://www.example.com/link4.html";
     mau.addUrl(startUrl, false, true);          
     mau.addUrl(url1, true, true);               
     mau.addUrl(url2, true, true);
     mau.addUrl(url3, exception, DEFAULT_RETRY_TIMES-1);
-          /* other exceptions:
-           *  mau.addUrl(url3, new IOException("Test exception"), 
-           *                    DEFAULT_RETRY_TIMES);
-           *  mau.addUrl(permissionPage,
-                 new CacheException.ExpectedNoRetryException("Test exception"),
-                 DEFAULT_RETRY_TIMES);
-          */
     mau.addUrl(url4, true, true);   
     parser.addUrlSetToReturn(startUrl, SetUtil.set(url1, url2, url3, url4));   
     crawlRule.addUrlToCrawl(url1);
@@ -519,8 +531,8 @@ public class TestNewContentCrawler extends LockssTestCase {
     Crawler.Status crawlStatus = crawler.getStatus();
     assertEquals(Crawler.STATUS_ERROR, crawlStatus.getCrawlStatus());
     assertEquals(1, crawlStatus.getNumUrlsWithErrors());
-    assertEquals(4, crawlStatus.getNumParsed());    
-    assertEquals(0, crawlStatus.getNumPending());    
+    assertEquals(3, crawlStatus.getNumParsed());    
+    assertEquals(1, crawlStatus.getNumPending());    
   }
 
   public void testGetStatusStartUrls() {
@@ -1077,6 +1089,9 @@ public class TestNewContentCrawler extends LockssTestCase {
     }
     public void setFailing() {
       attributeBits.set(CacheException.ATTRIBUTE_FAIL);
+    }
+    public void setFatal() {
+      attributeBits.set(CacheException.ATTRIBUTE_FATAL);
     }
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawler.java,v 1.18 2006-10-17 04:36:49 adriz Exp $
+ * $Id: BaseCrawler.java,v 1.19 2006-10-17 23:40:12 adriz Exp $
  */
 
 /*
@@ -91,9 +91,11 @@ public abstract class BaseCrawler
     false;
 
   public static final String PARAM_KEEP_URLS_OF_MIME_TYPE =
-    Configuration.PREFIX + "BaseCrawler.keepUrlsOfMimeType";
-  public static final boolean DEFAULT_KEEP_URLS_OF_MIME_TYPE = true;  // mt* after testing-> false
+    Configuration.PREFIX + "BaseCrawler.keep_urls_of_mime_type";
+  public static boolean DEFAULT_KEEP_URLS_OF_MIME_TYPE = true;  
 
+  public boolean keepUrlsOfMimeType = DEFAULT_KEEP_URLS_OF_MIME_TYPE;
+  
   // Max amount we'll buffer up to avoid refetching the permissions page
   static final int PERM_BUFFER_MAX = 16 * 1024;
 
@@ -160,6 +162,10 @@ public abstract class BaseCrawler
     alertMgr = getDaemon().getAlertManager();
   }
 
+  public void setKeepMimeTypesOfUrl(boolean keepUrl ){
+    DEFAULT_KEEP_URLS_OF_MIME_TYPE = keepUrl;
+  }
+  
   protected LockssDaemon getDaemon() {
     return AuUtil.getDaemon(au);
   }
@@ -169,6 +175,8 @@ public abstract class BaseCrawler
                                                  DEFAULT_CONNECT_TIMEOUT);
     long dataTimeout = config.getTimeInterval(PARAM_DATA_TIMEOUT,
                                               DEFAULT_DATA_TIMEOUT);
+    keepUrlsOfMimeType = config.getBoolean(PARAM_KEEP_URLS_OF_MIME_TYPE, 
+                                           DEFAULT_KEEP_URLS_OF_MIME_TYPE);
     connectionPool.setConnectTimeout(connectTimeout);
     connectionPool.setDataTimeout(dataTimeout);
 
@@ -321,7 +329,7 @@ public abstract class BaseCrawler
     if (props != null) {
       String mimeType = props.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE);
       if (mimeType != null) {      
-        crawlStatus.signalMimeTypeOfUrl(mimeType, cu.getUrl(), true); 
+        crawlStatus.signalMimeTypeOfUrl(mimeType, cu.getUrl(), keepUrlsOfMimeType); 
       }
     }
     return;

@@ -1,5 +1,5 @@
 /*
- * $Id: Crawler.java,v 1.45 2006-10-17 04:36:49 adriz Exp $
+ * $Id: Crawler.java,v 1.46 2006-10-17 23:40:12 adriz Exp $
  */
 
 /*
@@ -134,7 +134,7 @@ public interface Crawler {
     /**  mimeTypeUrls  will map a mimeType to an object of RecordMimeType 
      *  to keep record of urls for the given type of mime-type 
      */    
-    protected Map mimeTypeUrls = new HashMap(); 
+    public Map mimeTypeUrls = new HashMap(); 
     
     public Status(ArchivalUnit au, Collection startUrls, String type) {
       this.au = au;
