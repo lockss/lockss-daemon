@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.70 2006-10-09 20:32:37 adriz Exp $
+ * $Id: MockArchivalUnit.java,v 1.71 2006-10-17 04:36:49 adriz Exp $
  */
 
 /*
@@ -252,7 +252,7 @@ public class MockArchivalUnit implements ArchivalUnit {
   /* allow setting the  content-type /Mime type to any strin-value while adding URL */
   public MockCachedUrl addUrlContype(String url, boolean exists, 
                                      boolean shouldCache, String contentType) {
-    MockCachedUrl cu = addUrl(url, true, true);
+    MockCachedUrl cu = addUrl(url,  exists, shouldCache);
     CIProperties props = new CIProperties();
     props.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, contentType);
     cu.setProperties(props);

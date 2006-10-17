@@ -1,5 +1,5 @@
 /*
- * $Id: Crawler.java,v 1.44 2006-10-12 22:38:23 adriz Exp $
+ * $Id: Crawler.java,v 1.45 2006-10-17 04:36:49 adriz Exp $
  */
 
 /*
@@ -129,21 +129,13 @@ public interface Crawler {
     protected Set urlsExcluded = new ListOrderedSet();
     protected Set urlsNotModified = new ListOrderedSet();
     protected Set urlsParsed = new ListOrderedSet();
-    protected Set urlsPending = new ListOrderedSet();
-    
+    protected Set urlsPending = new ListOrderedSet();   
     protected Set sources = new ListOrderedSet();
-    
-    /*  mimeTypeUrls  will map a mimeTypeKey to an object of RecordMimeType 
-     * keep record of urls with the given type of mime-type 
-     * */    
+    /**  mimeTypeUrls  will map a mimeType to an object of RecordMimeType 
+     *  to keep record of urls for the given type of mime-type 
+     */    
     protected Map mimeTypeUrls = new HashMap(); 
-    protected Crawler.Status.RecordMimeTypeUrls recordUrls = null;
     
-    public Crawler.Status.RecordMimeTypeUrls getRecordMimeTypeUrls(String keyMimeType) {
-      recordUrls = (RecordMimeTypeUrls)mimeTypeUrls.get(keyMimeType);  
-      return recordUrls;
-    }
-
     public Status(ArchivalUnit au, Collection startUrls, String type) {
       this.au = au;
       this.startUrls = startUrls;
@@ -192,28 +184,25 @@ public interface Crawler {
     }
 
     /**
-     * Return the number of urls that are pending 
-     * @return number of urls urls that are pending because 
-     * they are not handeled yet by the crawler 
+     * @return number of urls that are pending  
+     * to be handeled by the crawler 
      */
     public synchronized long getNumPending() {
       return urlsPending.size();
     }
 
     /**
-     * update - add url to the list of pending urls
+     *  add url to the list of pending urls
      */
-    public synchronized void signalAddUrlPending(String url) {
+    public synchronized void saddUrlPending(String url) {
       urlsPending.add(url);
     }
     
     /**
-     * update - Remove one url element from the list of the pending urls
+     * remove one url element from the list of the pending urls
      */
-    public synchronized void signalRemoveAnUrlPending(String url) {
+    public synchronized void removeAnUrlPending(String url) {
       urlsPending.remove(url);
-      //CollectionUtil.getAnElement(urlsPending);
-      //  String nextUrl = (String)CollectionUtil.getAnElement(urlsToCrawl);
     }
     
     /**
@@ -320,62 +309,59 @@ public interface Crawler {
         return urlsPending;
       }
     }
-    /* return the list of the different types of content-mime types found 
-     * from the map: mimeTypeUrls.keys */
-    public synchronized Collection getMimeTypesVals() {
+
+    /**
+     * @return list of the mime types
+     */
+    public synchronized Collection getMimeTypes() {
       if (isCrawlActive()) {   
         return new ArrayList( mimeTypeUrls.keySet() );
       } else {
         return  mimeTypeUrls.keySet();
       }
     }
-    /* return the size of the list of the different types of mime types found from the
-     *  map: (ArrayList)mimeTypeUrls.numberOfKeys */
+    /**
+     * @return the number of the different types of mime types
+     */
     public synchronized long getNumOfMimeTypes() {
-      return mimeTypeUrls.keySet().size();
+      return mimeTypeUrls.size();               
     }
     
-   /**
-    *  check and update: mimeTypeUrls, 
-    * if there is already an entry (list of string urls) for the given key: mimeType
-    * if y return the list-ptr else create an empty list and return its pointer  
-    */
-    public synchronized void updateUrlsArrayOfMimeType(String keyMimeType,
-                                                                String url ) {  //, boolean keepUrl
-      if (keyMimeType == null) return;      
-      recordUrls = (RecordMimeTypeUrls)mimeTypeUrls.get(keyMimeType);  // if get returns null-> key is not there (there are no mappings to null)
+    public synchronized void signalMimeTypeOfUrl(String mimeType,
+                                                 String url, boolean keepUrl ) {  
+      if (mimeType == null) return;      
+      RecordMimeTypeUrls recordUrls = 
+              (RecordMimeTypeUrls)mimeTypeUrls.get(mimeType);  
       if ( recordUrls == null ) {          
-        RecordMimeTypeUrls recordUrls = new RecordMimeTypeUrls();
-        recordUrls.addMtUrls(url, keepMimeTypeUrls());
-        mimeTypeUrls.put(keyMimeType, recordUrls);
-      } else  {
-        recordUrls.addMtUrls(url, keepMimeTypeUrls());
+        recordUrls = new RecordMimeTypeUrls();
+        mimeTypeUrls.put(mimeType, recordUrls);
       }
+      recordUrls.addMtUrls(url, keepUrl);     
     }
  
     /**
-     * get urls from  mimeTypeUrls for the given key: mimeType
+      * @return list of urls with this mime-type found during a crawl
      */
-     public synchronized Collection getUrlsArrayOfMimeType(String keyMimeType) {
-       if ( mimeTypeUrls.containsKey(keyMimeType) ) {    
-         RecordMimeTypeUrls recordUrls = (RecordMimeTypeUrls)mimeTypeUrls.get(keyMimeType);
+     public synchronized Collection getUrlsOfMimeType(String mimeType) {
+       RecordMimeTypeUrls recordUrls = 
+               (RecordMimeTypeUrls)mimeTypeUrls.get(mimeType);  
+       if ( recordUrls != null ) {          
          return recordUrls.urlsArray; 
        } else {
-         return null;// return null, none urls of this mime type
+         return null;
        }
      }
 
      /**
-      * Return the number of urls that have been found by this crawler
-      *  with the given mime-type 
-      * @return number of urls with this mime-type that have been found by this crawler
+      * @return number of urls with this mime-type found during a crawl
       */
-     public synchronized long getNumUrlsOfMimeType(String keyMimeType) {
-       if ( mimeTypeUrls.containsKey(keyMimeType) ) {    
-         RecordMimeTypeUrls recordUrls = (RecordMimeTypeUrls)mimeTypeUrls.get(keyMimeType);
+     public synchronized long getNumUrlsOfMimeType(String mimeType) {
+       RecordMimeTypeUrls recordUrls = 
+         (RecordMimeTypeUrls)mimeTypeUrls.get(mimeType);  
+       if ( recordUrls != null ) {          
          return recordUrls.numUrls; 
        } else {
-         return 0;  //  no urls of this mime type
+         return 0;  
        }
 
      }
@@ -444,24 +430,12 @@ public interface Crawler {
     public ArchivalUnit getAu() {
       return au;
     }
-    
-    public boolean keepMimeTypeUrls() {
-      return Crawler.KEEP_URLS_MIME_TYPE;
-    }
-
-    /*  Class: public static class RecordMimeType includes  urlsArray and Int
-     *  updateUrlsArrayOfMimeType will update based on Boolean keepUrl 
-     *      update int-RecordMimeType.numOfUrls  or add also the url to 
-     *  RecordMimeType.urlsArray
+    /**  Class keeps record of different mime-types found 
+     *   and the urls and the number of urls of the mime-type
      */  
     public static class RecordMimeTypeUrls {
-      protected int numUrls; // = 0;
-      protected ArrayList urlsArray; // =  new ArrayList();     
-    
-      public RecordMimeTypeUrls() {
-        this.numUrls = 0;
-        this.urlsArray =  new ArrayList();
-      }
+      protected int numUrls = 0;
+      protected ArrayList urlsArray =  new ArrayList();     
 
       protected void addMtUrls(String url, boolean keepUrl) {
         numUrls++;

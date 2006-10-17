@@ -1,5 +1,5 @@
 /*
- * $Id: SingleCrawlStatus.java,v 1.11 2006-10-12 22:38:23 adriz Exp $
+ * $Id: CrawlUrlsStatusAccessor.java,v 1.1 2006-10-17 04:36:49 adriz Exp $
  */
 
 /*
@@ -39,7 +39,7 @@ import org.lockss.plugin.*;
 // import org.lockss.plugin.base.*;
 import org.lockss.util.*;
 
-public class SingleCrawlStatus implements StatusAccessor {
+public class CrawlUrlsStatusAccessor implements StatusAccessor {
 
   private static final String URL = "url";
   private static final String IX = "ix";
@@ -52,10 +52,7 @@ public class SingleCrawlStatus implements StatusAccessor {
   private static final String PENDING_TABLE_NAME = "pending";
   private static final String EXCLUDED_TABLE_NAME = "excluded";
   private static final String MIMETYPES_TABLE_NAME = "mime-type";
-  
-  // **** add support
-  //private static final String CONTENT_TYPE_URLS_TABLE_NAME = "content_type_urls ";
-  
+   
   private static List colDescsFetched =
     ListUtil.list(new ColumnDescriptor(URL, "URL Fetched",
 				       ColumnDescriptor.TYPE_STRING));
@@ -83,19 +80,17 @@ public class SingleCrawlStatus implements StatusAccessor {
     ListUtil.list(new ColumnDescriptor(URL, "URL Excluded",
 				       ColumnDescriptor.TYPE_STRING));
 
-  private static List colDescsMimeTypeUrls =
-    ListUtil.list(new ColumnDescriptor(URL, "URL Found for the Mime-Type",
-                                       ColumnDescriptor.TYPE_STRING));
+  private List colDescsMimeTypeUrls; 
+ // =    ListUtil.list(new ColumnDescriptor(URL, "URL Found for the Mime-Type",
+ //                                      ColumnDescriptor.TYPE_STRING));
 
   
   private static final List statusSortRules =
     ListUtil.list(new StatusTable.SortRule(IX, true));
 
-
   private CrawlManager.StatusSource statusSource;
 
-
-  public SingleCrawlStatus(CrawlManager.StatusSource statusSource) {
+  public CrawlUrlsStatusAccessor(CrawlManager.StatusSource statusSource) {
     this.statusSource = statusSource;
   }
 
@@ -104,23 +99,23 @@ public class SingleCrawlStatus implements StatusAccessor {
     if (table == null) {
       throw new IllegalArgumentException("Called with null table");
     } else if (table.getKey() == null) {
-      throw new IllegalArgumentException("SingleCrawlStatus requires a key");
+      throw new IllegalArgumentException("CrawlUrlsStatusAccessor requires a key");
     }
     String key = table.getKey();
     Crawler.Status status;
     String tableStr;
-    try {
+
       status = statusSource.getStatus().getCrawlStatus(getStatusKeyFromTableKey(key));
       tableStr = getTableStrFromKey(key);
-    } catch (Exception e) {
+     /* try {    } catch (Exception e) {
       throw new StatusService.NoSuchTableException("Malformed table key: " +
 						   key);
-    }
+    }*/
     if (status == null) {
       throw new StatusService.NoSuchTableException("Status info from that crawl is no longer available");
     }
     table.setDefaultSortRules(statusSortRules);
-    table.setColumnDescriptors(getColDescs(tableStr));
+    table.setColumnDescriptors(getColDescs(tableStr, status));
     table.setTitle(getTableTitle(status, tableStr));
     table.setRows(makeRows(status, tableStr));
   }
@@ -139,9 +134,9 @@ public class SingleCrawlStatus implements StatusAccessor {
       return "URLs pending during crawl of "+au.getName();
     } else if (EXCLUDED_TABLE_NAME.equals(tableStr)) {
       return "URLs excluded during crawl of "+au.getName();
-    } else if (MIMETYPES_TABLE_NAME.equals(getMtTableStrFromTableStr(tableStr))) {
-      return "URLs found during crawl of "+au.getName()
-            + " with Mime-Type value: "+ getMimeTypeStrFromTableStr(tableStr) ;
+    } else if (MIMETYPES_TABLE_NAME.equals(getMtTableStr(tableStr))) {
+      return "URLs found during crawl of "+au.getName();
+         //   + " with Mime type value: "+ getMimeTypeStr(tableStr) ;
     }
      return "";
   }
@@ -151,17 +146,17 @@ public class SingleCrawlStatus implements StatusAccessor {
     return key.substring(0, key.indexOf("."));
   }
 
-  private String getMimeTypeStrFromTableStr(String tableStr) {
+  private String getMimeTypeStr(String tableStr) {
     return tableStr.substring(0, tableStr.indexOf(":"));
   }
-  private String getMtTableStrFromTableStr(String tableStr) {
+  private String getMtTableStr(String tableStr) {
     return tableStr.substring(tableStr.indexOf(":")+1);
   }
   private String getStatusKeyFromTableKey(String key) {
     return key.substring(key.indexOf(".")+1);
   }
 
-  private List getColDescs(String tableStr) {
+  private List getColDescs(String tableStr, Crawler.Status status) {
     if (FETCHED_TABLE_NAME.equals(tableStr)) {
       return colDescsFetched;
     } else if (ERROR_TABLE_NAME.equals(tableStr)) {
@@ -174,7 +169,10 @@ public class SingleCrawlStatus implements StatusAccessor {
       return colDescsPending;
     } else if (EXCLUDED_TABLE_NAME.equals(tableStr)) {
       return colDescsExcluded;
-    }else if (MIMETYPES_TABLE_NAME.equals(getMtTableStrFromTableStr(tableStr))) {
+    }else if (MIMETYPES_TABLE_NAME.equals(getMtTableStr(tableStr))) {    
+        colDescsMimeTypeUrls = ListUtil.list(new ColumnDescriptor(URL, 
+                                             getMimeTypeStr(tableStr),
+                                             ColumnDescriptor.TYPE_STRING));
       return colDescsMimeTypeUrls;
     }
     return null;
@@ -193,8 +191,8 @@ public class SingleCrawlStatus implements StatusAccessor {
       rows = urlSetToRows(status.getUrlsPending());
     } else if (EXCLUDED_TABLE_NAME.equals(tableStr)) {
       rows = urlSetToRows(status.getUrlsExcluded());
-    } else if (MIMETYPES_TABLE_NAME.equals(getMtTableStrFromTableStr(tableStr))) {
-      rows = urlSetToRows( status.getUrlsArrayOfMimeType(getMimeTypeStrFromTableStr(tableStr)) );
+    } else if (MIMETYPES_TABLE_NAME.equals(getMtTableStr(tableStr))) {
+      rows = urlSetToRows( status.getUrlsOfMimeType(getMimeTypeStr(tableStr)) );
     } else if (ERROR_TABLE_NAME.equals(tableStr)) {
       Map errorMap = status.getUrlsWithErrors();
       Set errorUrls = errorMap.keySet();

@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.46 2006-10-12 22:38:23 adriz Exp $
+ * $Id: FollowLinkCrawler.java,v 1.47 2006-10-17 04:36:49 adriz Exp $
  */
 
 /*
@@ -96,8 +96,6 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
   public static final String PARAM_REFETCH_IF_DAMAGED =
     Configuration.PREFIX + "BaseCrawler.refetchIfDamaged";
   public static final boolean DEFAULT_REFETCH_IF_DAMAGED = true;
-  // Configure: keep the number of urs  AND in array each url-string for mime-type or if false -> keep just the number of urls 
-  //public static final boolean KEEP_URLS_MIME_TYPE = true;
 
   private boolean alwaysReparse = DEFAULT_REPARSE_ALL;
   private boolean usePersistantList = DEFAULT_PERSIST_CRAWL_LIST;
@@ -215,8 +213,6 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 
       while (!urlsToCrawl.isEmpty() && !crawlAborted) {
  	String nextUrl = (String)CollectionUtil.getAnElement(urlsToCrawl);
- 	// add call to 
-        crawlStatus.signalRemoveAnUrlPending(nextUrl);
 	logger.debug3("Trying to process " + nextUrl);
 
 	// check crawl window during crawl
@@ -236,6 +232,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	  logger.warning("Unexpected exception in crawl", e);
 	}
 	urlsToCrawl.remove(nextUrl);
+        crawlStatus.removeAnUrlPending(nextUrl);
 	if  (!crawlRes) {
 	  if (crawlStatus.getCrawlError() == null) {
 	    crawlStatus.setCrawlError(Crawler.STATUS_ERROR);
@@ -390,8 +387,8 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	//XXX quick fix; if-statement should be removed when we rework
 	//handling of error condition
 	if (cu.hasContent()) {
-	  updateStatusMimeType(cu);            
-	  // call for methaod - to check and update crawler status on found conetnt-type:urls
+	  //updateStatusMimeType(cu);          
+	  //  update crawler status urls of mime-type
 	  ContentParser parser = getContentParser(cu);
 	  if (parser != null) {
 	    //IOException if the CU can't be read
@@ -495,20 +492,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
       }
     }
   }
-  /* upon identification of the content type 
-   * update the crawl.status to keep record: 
-   * of the found content-types and the according url
-   */
-  private void updateStatusMimeType(CachedUrl cu) {
-    CIProperties props = cu.getProperties();  
-    if (props != null) {
-      String mimeType = props.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE);
-      if (mimeType != null) {      //  do update of the content-type
-        crawlStatus.updateUrlsArrayOfMimeType(mimeType, cu.getUrl()); //, crawlStatus.KEEP_URLS_MIME_TYPE
-      }
-    }
-    return;
-  }
+
 
   private ContentParser getContentParser(CachedUrl cu) {
     CIProperties props = cu.getProperties();
@@ -561,7 +545,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	      logger.debug2("Included url: "+normUrl);
 	    }
 	    extractedUrls.add(normUrl);
-            crawlStatus.signalAddUrlPending(normUrl);// add url to pendingUrls in status object
+            crawlStatus.saddUrlPending(normUrl);// add url to pendingUrls in status object
 	  } else {
 	    if (logger.isDebug2()) {
 	      logger.debug2("Excluded url: "+normUrl);

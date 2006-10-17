@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawler.java,v 1.17 2006-10-07 23:13:38 tlipkis Exp $
+ * $Id: BaseCrawler.java,v 1.18 2006-10-17 04:36:49 adriz Exp $
  */
 
 /*
@@ -89,6 +89,10 @@ public abstract class BaseCrawler
     Configuration.PREFIX + "BaseCrawler.abortOnFirstNoPermission";
   public static final boolean DEFAULT_ABORT_ON_FIRST_NO_PERMISSION =
     false;
+
+  public static final String PARAM_KEEP_URLS_OF_MIME_TYPE =
+    Configuration.PREFIX + "BaseCrawler.keepUrlsOfMimeType";
+  public static final boolean DEFAULT_KEEP_URLS_OF_MIME_TYPE = true;  // mt* after testing-> false
 
   // Max amount we'll buffer up to avoid refetching the permissions page
   static final int PERM_BUFFER_MAX = 16 * 1024;
@@ -285,6 +289,7 @@ public abstract class BaseCrawler
     case UrlCacher.CACHE_RESULT_FETCHED:
       crawlStatus.signalUrlFetched(uc.getUrl());
       CachedUrl cu = uc.getCachedUrl();
+      updateStatusMimeType(cu);        //  update crawler status with urls of mime-type    
       if (cu != null && cu.hasContent()) {
 	crawlStatus.addContentBytesFetched(cu.getContentSize());
       }
@@ -307,7 +312,21 @@ public abstract class BaseCrawler
     uc.setWatchdog(wdog);
     return uc;
   }
-
+  /**  
+   * update the crawl.status to keep record of urls 
+   * found with different types of mime-types 
+   */
+  private void updateStatusMimeType(CachedUrl cu) {
+    CIProperties props = cu.getProperties();  
+    if (props != null) {
+      String mimeType = props.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE);
+      if (mimeType != null) {      
+        crawlStatus.signalMimeTypeOfUrl(mimeType, cu.getUrl(), true); 
+      }
+    }
+    return;
+  }
+  
   // For now only follow http: links
   public static boolean isSupportedUrlProtocol(String url) {
     return StringUtil.startsWithIgnoreCase(url, "http://");

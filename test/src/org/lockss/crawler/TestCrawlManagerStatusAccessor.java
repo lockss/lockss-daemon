@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerStatusAccessor.java,v 1.7 2006-10-12 22:38:23 adriz Exp $
+ * $Id: TestCrawlManagerStatusAccessor.java,v 1.8 2006-10-17 04:36:49 adriz Exp $
  */
 
 /*
@@ -90,7 +90,6 @@ public class TestCrawlManagerStatusAccessor extends LockssTestCase {
 			   ColumnDescriptor.TYPE_INT),
       new ColumnDescriptor(NUM_URLS_PARSED, "Pages Parsed",
 			   ColumnDescriptor.TYPE_INT),
-      // column for pending urls                
       new ColumnDescriptor(NUM_URLS_PENDING, "Pages Pending",
                            ColumnDescriptor.TYPE_INT),                           
       new ColumnDescriptor(NUM_URLS_EXCLUDED, "Pages Excluded",
@@ -101,7 +100,7 @@ public class TestCrawlManagerStatusAccessor extends LockssTestCase {
 			   ColumnDescriptor.TYPE_INT),
       new ColumnDescriptor(NUM_OF_MIME_TYPES, "Mime Types",
                            ColumnDescriptor.TYPE_INT,
-                           "Number of different Content Types"),                                                             
+                           "Number of different content types"),                                                             
       new ColumnDescriptor(START_URLS, "Starting Url(s)",
 			   ColumnDescriptor.TYPE_STRING),
       new ColumnDescriptor(SOURCES, "Source(s)",

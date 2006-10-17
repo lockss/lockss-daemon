@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.104 2006-10-11 02:39:35 adriz Exp $
+ * $Id: CrawlManagerImpl.java,v 1.105 2006-10-17 04:36:49 adriz Exp $
  */
 
 /*
@@ -160,10 +160,10 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   static final int PRIORITY_DEFAULT_CRAWLER = Thread.NORM_PRIORITY - 1;
 
   private static final String CRAWL_STATUS_TABLE_NAME = "crawl_status_table";
-  private static final String SINGLE_CRAWL_STATUS_TABLE_NAME =
-    "single_crawl_status";
-  private static final String MIME_TYPE_CRAWL_STATUS_TABLE_NAME =
-    "mime_type_crawl_status";                   //mmmt 0.1 rep name
+  public static final String CRAWL_URLS_STATUS_TABLE =
+                                    "single_crawl_status";
+  public static final String SINGLE_CRAWL_STATUS_TABLE =
+                                    "mime_type_crawl_status";                  
 
   private PluginManager pluginMgr;
 
@@ -208,10 +208,10 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     StatusService statusServ = theDaemon.getStatusService();
     statusServ.registerStatusAccessor(CRAWL_STATUS_TABLE_NAME,
 				      new CrawlManagerStatusAccessor(this));
-    statusServ.registerStatusAccessor(SINGLE_CRAWL_STATUS_TABLE_NAME,
-				      new SingleCrawlStatus(this));
-    statusServ.registerStatusAccessor(MIME_TYPE_CRAWL_STATUS_TABLE_NAME,
-                                      new MimeTypeStatusCrawler(this));     
+    statusServ.registerStatusAccessor(CRAWL_URLS_STATUS_TABLE,
+				      new CrawlUrlsStatusAccessor(this));
+    statusServ.registerStatusAccessor(SINGLE_CRAWL_STATUS_TABLE,
+                                      new SingleCrawlStatusAccessor(this));     
     // register our AU event handler
     auEventHandler = new AuEventHandler.Base() {
 	public void auDeleted(ArchivalUnit au) {
