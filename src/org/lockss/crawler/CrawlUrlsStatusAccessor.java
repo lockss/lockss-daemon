@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlUrlsStatusAccessor.java,v 1.1 2006-10-17 04:36:49 adriz Exp $
+ * $Id: CrawlUrlsStatusAccessor.java,v 1.2 2006-10-18 17:06:30 adriz Exp $
  */
 
 /*
@@ -64,7 +64,6 @@ public class CrawlUrlsStatusAccessor implements StatusAccessor {
   private static List colDescsParsed =
     ListUtil.list(new ColumnDescriptor(URL, "URL Parsed",
 				       ColumnDescriptor.TYPE_STRING));
-
  
   private static List colDescsPending =
     ListUtil.list(new ColumnDescriptor(URL, "URL Pending",
@@ -81,8 +80,6 @@ public class CrawlUrlsStatusAccessor implements StatusAccessor {
 				       ColumnDescriptor.TYPE_STRING));
 
   private List colDescsMimeTypeUrls; 
- // =    ListUtil.list(new ColumnDescriptor(URL, "URL Found for the Mime-Type",
- //                                      ColumnDescriptor.TYPE_STRING));
 
   
   private static final List statusSortRules =
@@ -105,12 +102,8 @@ public class CrawlUrlsStatusAccessor implements StatusAccessor {
     Crawler.Status status;
     String tableStr;
 
-      status = statusSource.getStatus().getCrawlStatus(getStatusKeyFromTableKey(key));
-      tableStr = getTableStrFromKey(key);
-     /* try {    } catch (Exception e) {
-      throw new StatusService.NoSuchTableException("Malformed table key: " +
-						   key);
-    }*/
+    status = statusSource.getStatus().getCrawlStatus(getStatusKeyFromTableKey(key));
+    tableStr = getTableStrFromKey(key);
     if (status == null) {
       throw new StatusService.NoSuchTableException("Status info from that crawl is no longer available");
     }
@@ -141,19 +134,17 @@ public class CrawlUrlsStatusAccessor implements StatusAccessor {
      return "";
   }
 
-
   private String getTableStrFromKey(String key) {
-    return key.substring(0, key.indexOf("."));
+    return key.substring(key.indexOf(".")+1);
   }
-
   private String getMimeTypeStr(String tableStr) {
-    return tableStr.substring(0, tableStr.indexOf(":"));
-  }
-  private String getMtTableStr(String tableStr) {
     return tableStr.substring(tableStr.indexOf(":")+1);
   }
+  private String getMtTableStr(String tableStr) {
+    return tableStr.substring(0, tableStr.indexOf(":"));
+  }
   private String getStatusKeyFromTableKey(String key) {
-    return key.substring(key.indexOf(".")+1);
+    return key.substring(0, key.indexOf("."));
   }
 
   private List getColDescs(String tableStr, Crawler.Status status) {
@@ -191,8 +182,6 @@ public class CrawlUrlsStatusAccessor implements StatusAccessor {
       rows = urlSetToRows(status.getUrlsPending());
     } else if (EXCLUDED_TABLE_NAME.equals(tableStr)) {
       rows = urlSetToRows(status.getUrlsExcluded());
-    } else if (MIMETYPES_TABLE_NAME.equals(getMtTableStr(tableStr))) {
-      rows = urlSetToRows( status.getUrlsOfMimeType(getMimeTypeStr(tableStr)) );
     } else if (ERROR_TABLE_NAME.equals(tableStr)) {
       Map errorMap = status.getUrlsWithErrors();
       Set errorUrls = errorMap.keySet();
@@ -202,7 +191,9 @@ public class CrawlUrlsStatusAccessor implements StatusAccessor {
 	String url = (String)it.next();
  	rows.add(makeRow(url, ix++, (String)errorMap.get(url)));
       }
-    }
+    } else if (MIMETYPES_TABLE_NAME.equals(getMtTableStr(tableStr))) {
+      rows = urlSetToRows( status.getUrlsOfMimeType(getMimeTypeStr(tableStr)) );
+    } 
     return rows;
   }
 

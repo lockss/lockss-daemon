@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.105 2006-10-17 04:36:49 adriz Exp $
+ * $Id: CrawlManagerImpl.java,v 1.106 2006-10-18 17:06:30 adriz Exp $
  */
 
 /*
@@ -161,9 +161,9 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 
   private static final String CRAWL_STATUS_TABLE_NAME = "crawl_status_table";
   public static final String CRAWL_URLS_STATUS_TABLE =
-                                    "single_crawl_status";
+                                    "crawl_urls";
   public static final String SINGLE_CRAWL_STATUS_TABLE =
-                                    "mime_type_crawl_status";                  
+                                    "single_crawl_status_table";                  
 
   private PluginManager pluginMgr;
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerStatusAccessor.java,v 1.8 2006-10-17 04:36:49 adriz Exp $
+ * $Id: TestCrawlManagerStatusAccessor.java,v 1.9 2006-10-18 17:06:30 adriz Exp $
  */
 
 /*
@@ -56,7 +56,7 @@ public class TestCrawlManagerStatusAccessor extends LockssTestCase {
   private static final String NUM_URLS_EXCLUDED = "num_urls_excluded";
   private static final String NUM_URLS_WITH_ERRORS = "num_urls_with_errors";
   private static final String NUM_URLS_NOT_MODIFIED = "num_urls_not_modified";
-  private static final String NUM_OF_MIME_TYPES = "num_of_mime_types"; //support url mime-types 
+  private static final String NUM_OF_MIME_TYPES = "num_of_mime_types"; 
   private static final String START_URLS = "start_urls";
   private static final String CRAWL_STATUS = "crawl_status";
   private static final String NC_TYPE = "New Content";
@@ -66,6 +66,8 @@ public class TestCrawlManagerStatusAccessor extends LockssTestCase {
   private static final String STATUS_INCOMPLETE = "Active";
   private static final String STATUS_ERROR = "Error";
   private static final String STATUS_SUCCESSFUL = "Successful";
+
+  private static final String CRAWL_URLS_TABLE = "crawl_urls";
 
   private static List expectedColDescs =
     ListUtil.fromArray(new ColumnDescriptor[] {
@@ -220,7 +222,7 @@ public class TestCrawlManagerStatusAccessor extends LockssTestCase {
     ref = (StatusTable.Reference)map.get(NUM_URLS_EXCLUDED);
     assertEquals(new Long(5), ref.getValue());
 
-    assertEquals("single_crawl_status", ref.getTableName());
+    assertEquals(CRAWL_URLS_TABLE, ref.getTableName());
   }
 
   public void testPopulateTableAllAus() {
@@ -263,33 +265,33 @@ public class TestCrawlManagerStatusAccessor extends LockssTestCase {
     StatusTable.Reference ref  =
       (StatusTable.Reference)map.get(NUM_URLS_FETCHED);
     assertEquals(new Long(3), ref.getValue());
-    assertEquals("single_crawl_status", ref.getTableName());
-    assertEquals("fetched."+status.getKey(), ref.getKey());
+    assertEquals(CRAWL_URLS_TABLE, ref.getTableName());
+    assertEquals(status.getKey()+".fetched", ref.getKey());
 
     ref = (StatusTable.Reference)map.get(NUM_URLS_PARSED);
     assertEquals(new Long(4), ref.getValue());
-    assertEquals("single_crawl_status", ref.getTableName());
-    assertEquals("parsed."+status.getKey(), ref.getKey());
+    assertEquals(CRAWL_URLS_TABLE, ref.getTableName());
+    assertEquals(status.getKey()+".parsed", ref.getKey());
 
     ref = (StatusTable.Reference)map.get(NUM_URLS_PENDING);
     assertEquals(new Long(4), ref.getValue());
-    assertEquals("single_crawl_status", ref.getTableName());
-    assertEquals("pending."+status.getKey(), ref.getKey());
+    assertEquals(CRAWL_URLS_TABLE, ref.getTableName());
+    assertEquals(status.getKey()+".pending", ref.getKey());
 
     ref = (StatusTable.Reference)map.get(NUM_URLS_WITH_ERRORS);
     assertEquals(new Long(5), ref.getValue());
-    assertEquals("single_crawl_status", ref.getTableName());
-    assertEquals("error."+status.getKey(), ref.getKey());
+    assertEquals(CRAWL_URLS_TABLE, ref.getTableName());
+    assertEquals(status.getKey()+".error", ref.getKey());
 
     ref = (StatusTable.Reference)map.get(NUM_URLS_NOT_MODIFIED);
     assertEquals(new Long(6), ref.getValue());
-    assertEquals("single_crawl_status", ref.getTableName());
-    assertEquals("not-modified."+status.getKey(), ref.getKey());
+    assertEquals(CRAWL_URLS_TABLE, ref.getTableName());
+    assertEquals(status.getKey()+".not-modified", ref.getKey());
 
     ref = (StatusTable.Reference)map.get(NUM_URLS_EXCLUDED);
     assertEquals(new Long(7), ref.getValue());
-    assertEquals("single_crawl_status", ref.getTableName());
-    assertEquals("excluded."+status.getKey(), ref.getKey());
+    assertEquals(CRAWL_URLS_TABLE, ref.getTableName());
+    assertEquals(status.getKey()+".excluded", ref.getKey());
 
 
 
@@ -300,7 +302,7 @@ public class TestCrawlManagerStatusAccessor extends LockssTestCase {
 
     ref = (StatusTable.Reference)map.get(NUM_URLS_FETCHED);
     assertEquals(new Long(9), ref.getValue());
-    assertEquals("single_crawl_status", ref.getTableName());
+    assertEquals(CRAWL_URLS_TABLE, ref.getTableName());
   }
 
 

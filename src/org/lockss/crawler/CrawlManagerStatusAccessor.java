@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerStatusAccessor.java,v 1.11 2006-10-17 04:36:49 adriz Exp $
+ * $Id: CrawlManagerStatusAccessor.java,v 1.12 2006-10-18 17:06:30 adriz Exp $
  */
 
 /*
@@ -199,22 +199,22 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
 	      new Long(status.getContentBytesFetched()));
       row.put(NUM_URLS_FETCHED,
 	      makeRef(status.getNumFetched(),
-		      CRAWL_URLS_STATUS_ACCESSOR, "fetched."+key));
+		      CRAWL_URLS_STATUS_ACCESSOR, key+".fetched"));
       row.put(NUM_URLS_WITH_ERRORS,
 	      makeRef(status.getNumUrlsWithErrors(),
-		      CRAWL_URLS_STATUS_ACCESSOR, "error."+key));
+		      CRAWL_URLS_STATUS_ACCESSOR, key+".error"));
       row.put(NUM_URLS_NOT_MODIFIED,
 	      makeRef(status.getNumNotModified(),
-		      CRAWL_URLS_STATUS_ACCESSOR, "not-modified."+key));
+		      CRAWL_URLS_STATUS_ACCESSOR, key+".not-modified"));
       row.put(NUM_URLS_PARSED,
 	      makeRef(status.getNumParsed(),
-		      CRAWL_URLS_STATUS_ACCESSOR, "parsed."+key));
+		      CRAWL_URLS_STATUS_ACCESSOR, key+".parsed"));
       row.put(NUM_URLS_PENDING,
               makeRef(status.getNumPending(),
-                      CRAWL_URLS_STATUS_ACCESSOR, "pending."+key));
+                      CRAWL_URLS_STATUS_ACCESSOR, key+".pending"));
       row.put(NUM_URLS_EXCLUDED,
 	      makeRef(status.getNumExcluded(),
-		      CRAWL_URLS_STATUS_ACCESSOR, "excluded."+key));
+		      CRAWL_URLS_STATUS_ACCESSOR, key+".excluded"));
       row.put(NUM_OF_MIME_TYPES,
                 makeRef(status.getNumOfMimeTypes(),
                         SINGLE_CRAWL_STATUS_ACCESSOR, key));                       

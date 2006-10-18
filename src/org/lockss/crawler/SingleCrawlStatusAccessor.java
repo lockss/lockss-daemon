@@ -1,5 +1,5 @@
 /*
- * $Id: SingleCrawlStatusAccessor.java,v 1.2 2006-10-17 23:40:12 adriz Exp $
+ * $Id: SingleCrawlStatusAccessor.java,v 1.3 2006-10-18 17:06:30 adriz Exp $
  */
 
 /*
@@ -46,6 +46,8 @@ public class SingleCrawlStatusAccessor implements StatusAccessor {
   private static final String MIME_TYPE_NAME = "mime_type_name";
   private static final String MIME_TYPE_NUM_URLS = "mime_type_num_urls";
   private static final String MIMETYPES_URLS_KEY = "mime-type";
+  private static final String CRAWL_URLS_STATUS_ACCESSOR =  
+                                CrawlManagerImpl.CRAWL_URLS_STATUS_TABLE; 
 
   private List colDescsMimeTypes =
     ListUtil.fromArray(new ColumnDescriptor[] {
@@ -118,10 +120,9 @@ public class SingleCrawlStatusAccessor implements StatusAccessor {
       row.put(MIME_TYPE_NUM_URLS,
               new Long(numOfUrls) );
     }else{     // put a row with a refrence to list of urls
-       //was: String urlsRef =  mimeType +":"+ MIMETYPES_URLS_KEY +"."+key ;
        String urlsRef =  key + "." + MIMETYPES_URLS_KEY +":"+mimeType ; 
        row.put(MIME_TYPE_NUM_URLS,
-                 makeRef(numOfUrls,"single_crawl_status", urlsRef));
+                 makeRef(numOfUrls,CRAWL_URLS_STATUS_ACCESSOR, urlsRef));
    }
 
     return row;

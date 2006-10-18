@@ -1,5 +1,5 @@
 /*
- * $Id: Crawler.java,v 1.46 2006-10-17 23:40:12 adriz Exp $
+ * $Id: Crawler.java,v 1.47 2006-10-18 17:06:30 adriz Exp $
  */
 
 /*
@@ -67,15 +67,12 @@ public interface Crawler {
   public static final String STATUS_PLUGIN_ERROR = "Plugin error";
   public static final String STATUS_REPO_ERR = "Repository error";
   //public static final String STATUS_UNKNOWN = "Unknown";
-  // Configure: keep the number of urs  AND in array each url-string for mime-type or if false -> keep just the number of urls 
-  public static final boolean KEEP_URLS_MIME_TYPE = true;
 
   /**
    * Initiate a crawl starting with all the urls in urls
    * @return true if the crawl was successful
    */
   public boolean doCrawl();
-
 
   /**
    * Return the AU that this crawler is crawling within
@@ -179,7 +176,7 @@ public interface Crawler {
      * Return the number of urls that have been fetched by this crawler
      * @return number of urls that have been fetched by this crawler
      */
-    public synchronized long getNumFetched() {
+    public synchronized int getNumFetched() {
       return urlsFetched.size();
     }
 
@@ -187,14 +184,14 @@ public interface Crawler {
      * @return number of urls that are pending  
      * to be handeled by the crawler 
      */
-    public synchronized long getNumPending() {
+    public synchronized int getNumPending() {
       return urlsPending.size();
     }
 
     /**
      *  add url to the list of pending urls
      */
-    public synchronized void saddUrlPending(String url) {
+    public synchronized void addUrlPending(String url) {
       urlsPending.add(url);
     }
     
@@ -211,7 +208,7 @@ public interface Crawler {
      * @return number of urls that have been excluded because they didn't 
      * match the crawl rules
      */
-    public synchronized long getNumExcluded() {
+    public synchronized int getNumExcluded() {
       return urlsExcluded.size();
     }
 
@@ -219,7 +216,7 @@ public interface Crawler {
      * Return the number of urls whose GETs returned 304 not modified
      * @return number of urls whose contents were not modified
      */
-    public synchronized long getNumNotModified() {
+    public synchronized int getNumNotModified() {
       return urlsNotModified.size();
     }
 
@@ -263,7 +260,7 @@ public interface Crawler {
       }
     }
 
-    public synchronized long getNumUrlsWithErrors() {
+    public synchronized int getNumUrlsWithErrors() {
       return urlsWithErrors.size();
     }
 
@@ -321,9 +318,9 @@ public interface Crawler {
       }
     }
     /**
-     * @return the number of the different types of mime types
+     * @return the number of different types of mime types
      */
-    public synchronized long getNumOfMimeTypes() {
+    public synchronized int getNumOfMimeTypes() {
       return mimeTypeUrls.size();               
     }
     
@@ -355,7 +352,7 @@ public interface Crawler {
      /**
       * @return number of urls with this mime-type found during a crawl
       */
-     public synchronized long getNumUrlsOfMimeType(String mimeType) {
+     public synchronized int getNumUrlsOfMimeType(String mimeType) {
        RecordMimeTypeUrls recordUrls = 
          (RecordMimeTypeUrls)mimeTypeUrls.get(mimeType);  
        if ( recordUrls != null ) {          
@@ -370,7 +367,7 @@ public interface Crawler {
      * Return the number of urls that have been parsed by this crawler
      * @return number of urls that have been parsed by this crawler
      */
-    public synchronized long getNumParsed() {
+    public synchronized int getNumParsed() {
       return urlsParsed.size();
     }
 

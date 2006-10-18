@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawlStatus.java,v 1.12 2006-10-12 22:38:23 adriz Exp $
+ * $Id: MockCrawlStatus.java,v 1.13 2006-10-18 17:06:30 adriz Exp $
  */
 
 /*
@@ -40,12 +40,12 @@ public class MockCrawlStatus extends Crawler.Status {
 
   String crawlStatus = null;
   boolean crawlEndSignaled = false;
-  long numParsed = 0;
-  long numPending = 0;
-  long numFetched = 0;
-  long numErrors = 0;
-  long numNotModified = 0;
-  long numExcluded = 0;
+  int numParsed = 0;
+  int numPending = 0;
+  int numFetched = 0;
+  int numErrors = 0;
+  int numNotModified = 0;
+  int numExcluded = 0;
 
   Collection urlsFetched = null;
   Collection urlsParsed = null;
@@ -83,7 +83,7 @@ public class MockCrawlStatus extends Crawler.Status {
     this.numFetched = numFetched;
   }
 
-  public long getNumFetched() {
+  public int getNumFetched() {
     if (urlsFetched != null) {
       return urlsFetched.size();
     }
@@ -94,7 +94,7 @@ public class MockCrawlStatus extends Crawler.Status {
     this.numExcluded = numExcluded;
   }
 
-  public long getNumExcluded() {
+  public int getNumExcluded() {
     if (urlsExcluded != null) {
       return urlsExcluded.size();
     }
@@ -146,28 +146,28 @@ public class MockCrawlStatus extends Crawler.Status {
     this.numNotModified = numNotModified;
   }
 
-  public long getNumNotModified() {
+  public int getNumNotModified() {
     if (urlsNotModified != null) {
       return urlsNotModified.size();
     }
     return numNotModified;
   }
 
-  public long getNumUrlsWithErrors() {
+  public int getNumUrlsWithErrors() {
     if (errorUrls != null) {
       return urlsWithErrors.size();
     }
     return numErrors;
   }
 
-  public long getNumParsed() {
+  public int getNumParsed() {
     if (urlsParsed != null) {
       return urlsParsed.size();
     }
     return numParsed;
   }
 
-  public long getNumPending() {
+  public int getNumPending() {
     if (urlsPending != null) {
       return urlsPending.size();
     }

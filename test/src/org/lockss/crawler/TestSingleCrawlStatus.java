@@ -1,5 +1,5 @@
 /*
- * $Id: TestSingleCrawlStatus.java,v 1.9 2006-10-17 04:36:49 adriz Exp $
+ * $Id: TestSingleCrawlStatus.java,v 1.10 2006-10-18 17:06:30 adriz Exp $
  */
 
 /*
@@ -124,8 +124,8 @@ public class TestSingleCrawlStatus extends LockssTestCase {
     addCrawlStatus(mcStatus);
 
     CrawlUrlsStatusAccessor cStatus = new CrawlUrlsStatusAccessor(statusSource);
-    StatusTable table = new StatusTable("test", "fetched."+mcStatus.getKey());
-
+    StatusTable table = new StatusTable("test", mcStatus.getKey()+".fetched");
+    //out: StatusTable table = new StatusTable("test", "fetched."+mcStatus.getKey());
     cStatus.populateTable(table);
     assertEquals(expectedColDescsFetched, table.getColumnDescriptors());
 
@@ -142,7 +142,7 @@ public class TestSingleCrawlStatus extends LockssTestCase {
     addCrawlStatus(mcStatus);
 
     CrawlUrlsStatusAccessor cStatus = new CrawlUrlsStatusAccessor(statusSource);
-    StatusTable table = new StatusTable("test", "parsed."+mcStatus.getKey());
+    StatusTable table = new StatusTable("test", mcStatus.getKey()+".parsed");
 
     cStatus.populateTable(table);
     assertEquals(expectedColDescsParsed, table.getColumnDescriptors());
@@ -160,7 +160,7 @@ public class TestSingleCrawlStatus extends LockssTestCase {
     addCrawlStatus(mcStatus);
 
     CrawlUrlsStatusAccessor cStatus = new CrawlUrlsStatusAccessor(statusSource);
-    StatusTable table = new StatusTable("test", "error."+mcStatus.getKey());
+    StatusTable table = new StatusTable("test", mcStatus.getKey()+".error");
 
     cStatus.populateTable(table);
     assertEquals(expectedColDescsError, table.getColumnDescriptors());
@@ -178,7 +178,7 @@ public class TestSingleCrawlStatus extends LockssTestCase {
     addCrawlStatus(mcStatus);
 
     CrawlUrlsStatusAccessor cStatus = new CrawlUrlsStatusAccessor(statusSource);
-    StatusTable table = new StatusTable("test", "not-modified."+mcStatus.getKey());
+    StatusTable table = new StatusTable("test", mcStatus.getKey()+".not-modified");
 
     cStatus.populateTable(table);
     assertEquals(expectedColDescsNotModified, table.getColumnDescriptors());
@@ -197,7 +197,7 @@ public class TestSingleCrawlStatus extends LockssTestCase {
     addCrawlStatus(mcStatus);
 
     CrawlUrlsStatusAccessor cStatus = new CrawlUrlsStatusAccessor(statusSource);
-    StatusTable table = new StatusTable("test", "excluded."+mcStatus.getKey());
+    StatusTable table = new StatusTable("test", mcStatus.getKey()+".excluded");
 
     cStatus.populateTable(table);
     assertEquals(expectedColDescsExcluded, table.getColumnDescriptors());
@@ -219,7 +219,7 @@ public class TestSingleCrawlStatus extends LockssTestCase {
     addCrawlStatus(mcStatus);
 
     CrawlUrlsStatusAccessor cStatus = new CrawlUrlsStatusAccessor(statusSource);
-    StatusTable table = new StatusTable("test", "fetched."+mcStatus.getKey());
+    StatusTable table = new StatusTable("test", mcStatus.getKey()+".fetched");
 
     cStatus.populateTable(table);
     assertEquals(expectedColDescsFetched, table.getColumnDescriptors());
@@ -257,7 +257,7 @@ public class TestSingleCrawlStatus extends LockssTestCase {
     addCrawlStatus(mcStatus);
 
     CrawlUrlsStatusAccessor cStatus = new CrawlUrlsStatusAccessor(statusSource);
-    StatusTable table = new StatusTable("test", "excluded."+mcStatus.getKey());
+    StatusTable table = new StatusTable("test", mcStatus.getKey()+".excluded");
 
     cStatus.populateTable(table);
     assertEquals(expectedColDescsExcluded, table.getColumnDescriptors());
@@ -286,7 +286,7 @@ public class TestSingleCrawlStatus extends LockssTestCase {
     addCrawlStatus(mcStatus);
 
     CrawlUrlsStatusAccessor cStatus = new CrawlUrlsStatusAccessor(statusSource);
-    StatusTable table = new StatusTable("test", "parsed."+mcStatus.getKey());
+    StatusTable table = new StatusTable("test", mcStatus.getKey()+".parsed");
 
     cStatus.populateTable(table);
     assertEquals(expectedColDescsParsed, table.getColumnDescriptors());
@@ -315,7 +315,7 @@ public class TestSingleCrawlStatus extends LockssTestCase {
     addCrawlStatus(mcStatus);
 
     CrawlUrlsStatusAccessor cStatus = new CrawlUrlsStatusAccessor(statusSource);
-    StatusTable table = new StatusTable("test", "not-modified."+mcStatus.getKey());
+    StatusTable table = new StatusTable("test", mcStatus.getKey()+".not-modified");
 
     cStatus.populateTable(table);
     assertEquals(expectedColDescsNotModified, table.getColumnDescriptors());
@@ -347,7 +347,7 @@ public class TestSingleCrawlStatus extends LockssTestCase {
     addCrawlStatus(mcStatus);
 
     CrawlUrlsStatusAccessor cStatus = new CrawlUrlsStatusAccessor(statusSource);
-    StatusTable table = new StatusTable("test", "error."+mcStatus.getKey());
+    StatusTable table = new StatusTable("test", mcStatus.getKey()+".error");
 
     cStatus.populateTable(table);
     assertEquals(expectedColDescsError, table.getColumnDescriptors());

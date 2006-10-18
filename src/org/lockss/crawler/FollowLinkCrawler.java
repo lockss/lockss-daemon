@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.47 2006-10-17 04:36:49 adriz Exp $
+ * $Id: FollowLinkCrawler.java,v 1.48 2006-10-18 17:06:30 adriz Exp $
  */
 
 /*
@@ -545,7 +545,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	      logger.debug2("Included url: "+normUrl);
 	    }
 	    extractedUrls.add(normUrl);
-            crawlStatus.saddUrlPending(normUrl);// add url to pendingUrls in status object
+            crawlStatus.addUrlPending(normUrl);// add url to pendingUrls in status object
 	  } else {
 	    if (logger.isDebug2()) {
 	      logger.debug2("Excluded url: "+normUrl);
