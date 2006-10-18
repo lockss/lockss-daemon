@@ -1,5 +1,5 @@
 /*
- * $Id: PrintfEditor.java,v 1.26 2006-09-07 18:30:55 thib_gc Exp $
+ * $Id: PrintfEditor.java,v 1.27 2006-10-18 18:18:54 thib_gc Exp $
  */
 
 /*
@@ -117,11 +117,13 @@ public class PrintfEditor extends JDialog implements EDPEditor, ConfigParamListe
 
   private void initMatches() {
     matchesKeys.put(STRING_LITERAL, "");
-    matchesKeys.put("Any Number", "[0-9]+");
+    matchesKeys.put("Any number", "[0-9]+");
     matchesKeys.put("Anything", ".*");
     matchesKeys.put("Start", "^");
     matchesKeys.put("End", "$");
-   for(Iterator it = matchesKeys.keySet().iterator(); it.hasNext();) {
+    matchesKeys.put("Single path component", "[^/]+");
+
+    for(Iterator it = matchesKeys.keySet().iterator(); it.hasNext();) {
       matchComboBox.addItem(it.next());
     }
   }
@@ -357,16 +359,16 @@ public class PrintfEditor extends JDialog implements EDPEditor, ConfigParamListe
   void insertMatchButton_actionPerformed(ActionEvent e) {
     String key = (String) matchComboBox.getSelectedItem();
     String format = (String)matchesKeys.get(key);
-    if(key.equals(STRING_LITERAL)) {
-     format = escapeReservedChars((String) JOptionPane.showInputDialog(this,
-         "Enter the string you wish to match",
-         "String Literal Input",
-         JOptionPane.OK_CANCEL_OPTION));
-     if(StringUtil.isNullString(format)) {
-       return;
-     }
+    if (key.equals(STRING_LITERAL)) {
+      format = escapeReservedChars((String) JOptionPane.showInputDialog(this,
+                                                                        "Enter the string you wish to match",
+                                                                        "String Literal Input",
+                                                                        JOptionPane.OK_CANCEL_OPTION));
+      if (StringUtil.isNullString(format)) {
+        return;
+      }
     }
-    if(selectedPane == 0) {
+    if (selectedPane == 0) {
       insertText(format, PLAIN_ATTR, editorPane.getSelectionStart());
     }
     else {
@@ -375,6 +377,7 @@ public class PrintfEditor extends JDialog implements EDPEditor, ConfigParamListe
       formatTextArea.insert(format, pos);
     }
   }
+
   void editorPane_keyPressed(KeyEvent e) {
     StyledDocument doc = editorPane.getStyledDocument();
     int pos = editorPane.getCaretPosition();
