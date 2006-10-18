@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.24 2006-09-16 22:55:22 tlipkis Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.25 2006-10-18 23:45:26 tlipkis Exp $
  */
 
 /*
@@ -120,7 +120,8 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
   public void testConvertVariableString() {
     configMap.putInt("INTEGER", 10);
     configMap.putBoolean("BOOLEAN", true);
-    configMap.putString("STRING", "Yo Mama!");
+    //  ensure dot in substitution string doesn't get regexp quoted
+    configMap.putString("STRING", "Yo.Mama!");
     configMap.putInt(ConfigParamDescr.YEAR.getKey(), 2003);
     configMap.putInt(DefinableArchivalUnit.AU_SHORT_YEAR_PREFIX +
                ConfigParamDescr.YEAR.getKey(),3);
@@ -136,7 +137,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertEquals("return value", expectedReturn, actualReturn);
 
     substr = "\"My Test String = %s\", STRING";
-    expectedReturn = "My Test String = Yo Mama!";
+    expectedReturn = "My Test String = Yo.Mama!";
     actualReturn = cau.convertVariableString(substr);
     assertEquals("return value", expectedReturn, actualReturn);
 
@@ -146,18 +147,52 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertEquals("return value", expectedReturn, actualReturn);
   }
 
+  public void testConvertRegexpString() {
+    configMap.putInt("INTEGER", 10);
+    configMap.putBoolean("BOOLEAN", true);
+    //  ensure meta chars in substitution string't get regexp quoted
+    configMap.putString("STRING", "Yo.M[am]a?foo=bar!");
+    configMap.putInt(ConfigParamDescr.YEAR.getKey(), 2003);
+    configMap.putInt(DefinableArchivalUnit.AU_SHORT_YEAR_PREFIX +
+               ConfigParamDescr.YEAR.getKey(),3);
+
+    String substr = "\"My Test Integer = %d\", INTEGER";
+    String expectedReturn = "My Test Integer = 10";
+    String actualReturn = cau.convertVariableRegexpString(substr);
+    assertEquals("return value", expectedReturn, actualReturn);
+
+    substr = "\"My Test Boolean = %s\", BOOLEAN";
+    expectedReturn = "My Test Boolean = true";
+    actualReturn = cau.convertVariableRegexpString(substr);
+    assertEquals("return value", expectedReturn, actualReturn);
+
+    substr = "\"My Test String = %s\", STRING";
+    expectedReturn = "My Test String = Yo\\.M\\[am\\]a\\?foo\\=bar\\!";
+    actualReturn = cau.convertVariableRegexpString(substr);
+    assertEquals("return value", expectedReturn, actualReturn);
+
+    substr = "\"My Test Short Year = %02d\", au_short_year";
+    expectedReturn = "My Test Short Year = 03";
+    actualReturn = cau.convertVariableRegexpString(substr);
+    assertEquals("return value", expectedReturn, actualReturn);
+  }
+
   public void testConvertRule() throws LockssRegexpException {
     configMap.putString("URL", "http://www.example.com/");
     String rule1 = "1,\".*\\.gif\"";
     String rule2 = "1,\"%s\",URL";
 
-    CrawlRule actualReturn = cau.convertRule(rule1);
+    CrawlRule rule = cau.convertRule(rule1);
     assertEquals(CrawlRule.INCLUDE,
-                 actualReturn.match("http://www.example.com/mygif.gif"));
+                 rule.match("http://www.example.com/mygif.gif"));
 
-    actualReturn = cau.convertRule(rule2);
+    rule = cau.convertRule(rule2);
     assertEquals(CrawlRule.INCLUDE,
-                 actualReturn.match("http://www.example.com/"));
+                 rule.match("http://www.example.com/"));
+
+    // shouldn't match if dot properly quoted
+    assertEquals(CrawlRule.IGNORE,
+                 rule.match("http://www1example.com/"));
   }
 
   public void testConvertRangeRule() throws LockssRegexpException {
@@ -171,11 +206,11 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     defMap.putCollection(DefinablePlugin.CM_CONFIG_PROPS_KEY, configProps);
 
     String rule = "1,\"http://www.example.com/%sissue.html\", " + key;
-    CrawlRule actualReturn = cau.convertRule(rule);
+    CrawlRule crule = cau.convertRule(rule);
     assertEquals(CrawlRule.INCLUDE,
-                 actualReturn.match("http://www.example.com/abxissue.html"));
+                 crule.match("http://www.example.com/abxissue.html"));
     assertEquals(CrawlRule.IGNORE,
-                 actualReturn.match("http://www.example.com/zylophoneissue.html"));
+                 crule.match("http://www.example.com/zylophoneissue.html"));
   }
   public void testConvertNumRangeRule() throws LockssRegexpException {
     Vector vec = new Vector(2);
@@ -188,11 +223,11 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     defMap.putCollection(DefinablePlugin.CM_CONFIG_PROPS_KEY, configProps);
 
     String rule = "1,\"http://www.example.com/issue%s.html\", " + key;
-    CrawlRule actualReturn = cau.convertRule(rule);
+    CrawlRule crule = cau.convertRule(rule);
     assertEquals(CrawlRule.INCLUDE,
-                 actualReturn.match("http://www.example.com/issue13.html"));
+                 crule.match("http://www.example.com/issue13.html"));
     assertEquals(CrawlRule.IGNORE,
-                 actualReturn.match("http://www.example.com/issue44.html"));
+                 crule.match("http://www.example.com/issue44.html"));
   }
 
   public void testConvertSetRule() throws LockssRegexpException {
@@ -208,11 +243,11 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     defMap.putCollection(DefinablePlugin.CM_CONFIG_PROPS_KEY, configProps);
 
     String rule = "1,\"http://www.example.com/%sissue.html\", " + key;
-    CrawlRule actualReturn = cau.convertRule(rule);
+    CrawlRule crule = cau.convertRule(rule);
     assertEquals(CrawlRule.INCLUDE,
-                 actualReturn.match("http://www.example.com/appleissue.html"));
+                 crule.match("http://www.example.com/appleissue.html"));
     assertEquals(CrawlRule.IGNORE,
-                 actualReturn.match("http://www.example.com/orangeissue.html"));
+                 crule.match("http://www.example.com/orangeissue.html"));
   }
 
   public void testMakeName() {

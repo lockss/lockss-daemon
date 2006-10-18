@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.46 2006-09-16 22:55:22 tlipkis Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.47 2006-10-18 23:45:27 tlipkis Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ import java.net.*;
 import java.util.*;
 
 import org.apache.commons.collections.*;
+import org.apache.oro.text.regex.Perl5Compiler;
 import org.lockss.config.Configuration;
 import org.lockss.crawler.*;
 import org.lockss.daemon.*;
@@ -369,7 +370,15 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 // ---------------------------------------------------------------------
 //   VARIABLE ARGUMENT REPLACEMENT SUPPORT ROUTINES
 // ---------------------------------------------------------------------
+  String convertVariableRegexpString(String printfString) {
+    return convertVariableString(printfString, true);
+  }
+
   String convertVariableString(String printfString) {
+    return convertVariableString(printfString, false);
+  }    
+
+  String convertVariableString(String printfString, boolean quoteRegexp) {
     String converted_string = printfString;
     PrintfUtil.PrintfData p_data = PrintfUtil.stringToPrintf(printfString);
     String format = p_data.getFormat();
@@ -391,6 +400,9 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
           }
         }
         else {
+	  if (quoteRegexp && val instanceof String) {
+	    val = Perl5Compiler.quotemeta((String)val);
+	  }
           substitute_args.add(val);
         }
       }
@@ -411,9 +423,9 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
   }
 
   CrawlRule convertRule(String printfString) throws LockssRegexpException {
-    String rule = convertVariableString(printfString);
-    String val_str = printfString.substring(0, printfString.indexOf(","));
-    int value = Integer.valueOf(val_str).intValue();
+    String rule = convertVariableRegexpString(printfString);
+    String action_str = printfString.substring(0, printfString.indexOf(","));
+    int action = Integer.valueOf(action_str).intValue();
     Vector vec;
     if (rule.indexOf(RANGE_SUBSTITUTION_STRING) != -1
         || rule.indexOf(NUM_SUBSTITUTION_STRING) != -1) {
@@ -426,7 +438,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
             vec = (Vector)paramMap.getMapElement(descr.getKey());
             if (vec != null) {
               return new CrawlRules.REMatchRange(rule,
-                                                 value,
+                                                 action,
                                                  (String)vec.elementAt(0),
                                                  (String)vec.elementAt(1));
             }
@@ -435,7 +447,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
             vec = (Vector)paramMap.getMapElement(descr.getKey());
             if (vec != null) {
               return new CrawlRules.REMatchRange(rule,
-                                                 value,
+                                                 action,
                                                  ((Long)vec.elementAt(0)).longValue(),
                                                  ((Long)vec.elementAt(1)).longValue());
             }
@@ -444,7 +456,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
             vec = (Vector)paramMap.getMapElement(descr.getKey());
             if (vec != null) {
               return new CrawlRules.REMatchSet(rule,
-                                               value,
+                                               action,
                                                new HashSet(vec));
             }
             break;
@@ -453,7 +465,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 
     }
 
-    return new CrawlRules.RE(rule, value);
+    return new CrawlRules.RE(rule, action);
   }
 
   public interface ConfigurableCrawlWindow {
