@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingStreamComm.java,v 1.20 2006-09-28 02:00:04 tlipkis Exp $
+ * $Id: BlockingStreamComm.java,v 1.21 2006-10-18 23:45:45 tlipkis Exp $
  */
 
 /*
@@ -140,9 +140,9 @@ public class BlockingStreamComm
   static final int DEFAULT_MAX_MESSAGE_SIZE = 100 * 1024;
 
   /** Dir for PeerMessage data storage */
-  public static final String PARAM_DATA_DIR =
-    PREFIX + "messageDataDir";
-  static final String DEFAULT_DATA_DIR = System.getProperty("java.io.tmpdir");
+  public static final String PARAM_DATA_DIR = PREFIX + "messageDataDir";
+  /** Default is PlatformInfo.getSystemTempDir() */
+  static final String DEFAULT_DATA_DIR = "Platform tmp dir";
 
   /** Wrap Socket OutputStream in BufferedOutputStream? */
   public static final String PARAM_IS_BUFFERED_SEND = PREFIX + "bufferedSend";
@@ -282,7 +282,8 @@ public class BlockingStreamComm
 					     DEFAULT_WAIT_EXIT);
 
       if (changedKeys.contains(PARAM_DATA_DIR)) {
-	String paramDataDir = config.get(PARAM_DATA_DIR, DEFAULT_DATA_DIR);
+	String paramDataDir = config.get(PARAM_DATA_DIR,
+					 PlatformInfo.getSystemTempDir());
 	File dir = new File(paramDataDir);
 	if (dir.exists() || dir.mkdirs()) {
 	  dataDir = dir;
