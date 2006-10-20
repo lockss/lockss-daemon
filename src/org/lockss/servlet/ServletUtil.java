@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.35 2006-09-17 07:25:28 tlipkis Exp $
+ * $Id: ServletUtil.java,v 1.36 2006-10-20 18:41:37 thib_gc Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import java.util.List;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.collections.CollectionUtils;
+import org.apache.commons.lang.mutable.*;
 import org.lockss.config.*;
 import org.lockss.app.*;
 import org.lockss.daemon.*;
@@ -542,7 +543,7 @@ public class ServletUtil {
    * @param editAction          The "edit" action name.
    */
   public static void layoutAuSummary(LockssServlet servlet,
-                                     MutableInteger buttonNumber,
+                                     MutableInt buttonNumber,
                                      RemoteApi remoteApi,
                                      Page page,
                                      String formUrl,
@@ -847,7 +848,7 @@ public class ServletUtil {
                                    String hiddenVerbName,
                                    Verb verb,
                                    String backupFileFieldName,
-                                   MutableInteger buttonNumber,
+                                   MutableInt buttonNumber,
                                    String backupFileButtonAction) {
     Form frm = newForm(servlet.srvURL(servlet.myServletDescr()));
     frm.attribute("enctype", "multipart/form-data");
@@ -884,7 +885,7 @@ public class ServletUtil {
                                         String keyRepo,
                                         String repoChoiceFootnote,
                                         String buttonText,
-                                        MutableInteger buttonNumber,
+                                        MutableInt buttonNumber,
                                         boolean isLong) {
     boolean isAdd = verb.isAdd;
     boolean repoFlg = isAdd && repos.size() > 1;
@@ -1001,7 +1002,7 @@ public class ServletUtil {
                                          MutableBoolean isAnySelectable,
                                          String submitText,
                                          String submitAction,
-                                         MutableInteger buttonNumber,
+                                         MutableInt buttonNumber,
                                          int atLeast) {
     int actualRows = 0;
     isAnySelectable.setValue(false);
@@ -1153,7 +1154,7 @@ public class ServletUtil {
   /** Return a button that invokes the javascript submit routine with the
    * specified action */
   public static Element submitButton(LockssServlet servlet,
-                                     MutableInteger buttonNumber,
+                                     MutableInt buttonNumber,
                                      String label,
                                      String action) {
     return submitButton(servlet, buttonNumber, label, action, null, null);
@@ -1292,10 +1293,10 @@ public class ServletUtil {
    * @param reactivateAction The "reactivate" action name.
    * @param editAction       The "edit" action name.
 
-   * @see #layoutAuSummary(LockssServlet, MutableInteger, RemoteApi, Page, String, String, String, String, Iterator, Iterator, String, String, String, String, String)
+   * @see #layoutAuSummary(LockssServlet, MutableInt, RemoteApi, Page, String, String, String, String, Iterator, Iterator, String, String, String, String, String)
    */
   private static void layoutAuSummaryRows(LockssServlet servlet,
-                                          MutableInteger buttonNumber,
+                                          MutableInt buttonNumber,
                                           RemoteApi remoteApi,
                                           Table tbl,
                                           Iterator auProxyIter,
@@ -1446,7 +1447,7 @@ public class ServletUtil {
    * specified action, first storing the value in the specified form
    * prop. */
   private static Element submitButton(LockssServlet servlet,
-                                      MutableInteger buttonNumber,
+                                      MutableInt buttonNumber,
                                       String label,
                                       String action,
                                       String prop,

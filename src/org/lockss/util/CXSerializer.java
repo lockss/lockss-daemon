@@ -1,5 +1,5 @@
 /*
- * $Id: CXSerializer.java,v 1.19 2006-09-28 05:12:00 thib_gc Exp $
+ * $Id: CXSerializer.java,v 1.20 2006-10-20 18:41:37 thib_gc Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.util;
 
 import java.io.*;
 
+import org.apache.commons.lang.mutable.MutableBoolean;
 import org.exolab.castor.mapping.Mapping;
 
 import org.lockss.app.LockssApp;

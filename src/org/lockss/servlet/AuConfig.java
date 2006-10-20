@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.60 2006-10-06 20:28:26 tlipkis Exp $
+ * $Id: AuConfig.java,v 1.61 2006-10-20 18:41:37 thib_gc Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import java.util.List;
 
 import javax.servlet.*;
 
+import org.apache.commons.lang.mutable.MutableInt;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
@@ -201,7 +202,7 @@ public class AuConfig extends LockssServlet {
           "Add a new Archival Unit"
         + (allAus.isEmpty() ? "." : ", or edit an existing one."));
 
-    MutableInteger buttonNumber = new MutableInteger(submitButtonNumber);
+    MutableInt buttonNumber = new MutableInt(submitButtonNumber);
     ServletUtil.layoutAuSummary(this,
                                 buttonNumber,
                                 remoteApi,
@@ -273,7 +274,7 @@ public class AuConfig extends LockssServlet {
     ServletUtil.layoutExplanationBlock(page,
         "Reactivating: " + encodedAuName(au));
 
-    MutableInteger buttonNumber = new MutableInteger(submitButtonNumber);
+    MutableInt buttonNumber = new MutableInt(submitButtonNumber);
     List actions = ListUtil.list(
         ServletUtil.submitButton(this, buttonNumber, "Reactivate", ACTION_DO_REACTIVATE),
         ServletUtil.submitButton(this, buttonNumber, "Delete", ACTION_DELETE));

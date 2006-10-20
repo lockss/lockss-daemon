@@ -1,5 +1,5 @@
 /*
- * $Id: BatchAuConfig.java,v 1.29 2006-04-05 22:26:39 tlipkis Exp $
+ * $Id: BatchAuConfig.java,v 1.30 2006-10-20 18:41:37 thib_gc Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import javax.servlet.http.HttpSession;
 
 import org.apache.commons.collections.OrderedMap;
 import org.apache.commons.collections.map.LinkedMap;
+import org.apache.commons.lang.mutable.*;
 import org.lockss.config.*;
 import org.lockss.daemon.TitleSet;
 import org.lockss.plugin.PluginManager;
@@ -308,7 +309,7 @@ public class BatchAuConfig extends LockssServlet {
     boolean doGray = "All".equalsIgnoreCase(grayAction) ||
       (verb == VERB_ADD && "Add".equalsIgnoreCase(grayAction));
     MutableBoolean isAnySelectable = new MutableBoolean(false);
-    MutableInteger buttonNumber = new MutableInteger(submitButtonNumber);
+    MutableInt buttonNumber = new MutableInt(submitButtonNumber);
     Composite chooseSets = ServletUtil.makeChooseSets(this, remoteApi,
         pluginMgr.getTitleSets().iterator(), verb, KEY_TITLE_SET,
         doGray, isAnySelectable, "Select Titles", ACTION_SELECT_AUS,
@@ -420,7 +421,7 @@ public class BatchAuConfig extends LockssServlet {
       session.setAttribute(SESSION_KEY_REPO_MAP, repoChoices);
     }
 
-    MutableInteger buttonNumber = new MutableInteger(submitButtonNumber);
+    MutableInt buttonNumber = new MutableInt(submitButtonNumber);
     frm.add(ServletUtil.makeChooseAus(this, bas.getStatusList().iterator(),
         verb, repos, auConfs, KEY_AUID, KEY_REPO, FOOT_REPO_CHOICE,
         buttonText, buttonNumber, bas.hasAtLeast(LONG_TABLE_AT_LEAST)));
@@ -592,7 +593,7 @@ public class BatchAuConfig extends LockssServlet {
     Page page = newPage();
     addJavaScript(page);
     layoutErrorBlock(page);
-    MutableInteger buttonNumber = new MutableInteger(submitButtonNumber);
+    MutableInt buttonNumber = new MutableInt(submitButtonNumber);
     ServletUtil.layoutRestore(this, page, ACTION_TAG, KEY_VERB,
         VERB_RESTORE, "AuConfigBackupContents", buttonNumber,
         ACTION_SELECT_RESTORE_TITLES);

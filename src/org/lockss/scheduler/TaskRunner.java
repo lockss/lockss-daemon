@@ -1,5 +1,5 @@
 /*
- * $Id: TaskRunner.java,v 1.37 2006-09-16 22:59:42 tlipkis Exp $
+ * $Id: TaskRunner.java,v 1.38 2006-10-20 18:41:37 thib_gc Exp $
  */
 
 /*
@@ -40,6 +40,8 @@ package org.lockss.scheduler;
 
 import java.io.*;
 import java.util.*;
+
+import org.apache.commons.lang.mutable.MutableBoolean;
 import org.lockss.config.Configuration;
 import org.lockss.app.*;
 import org.lockss.daemon.*;
