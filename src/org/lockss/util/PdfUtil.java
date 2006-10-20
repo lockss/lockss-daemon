@@ -1,5 +1,5 @@
 /*
- * $Id: PdfUtil.java,v 1.16 2006-09-28 05:31:45 thib_gc Exp $
+ * $Id: PdfUtil.java,v 1.17 2006-10-20 04:12:51 thib_gc Exp $
  */
 
 /*
@@ -724,14 +724,14 @@ return success;
         logger.debug("Transform from input stream succeeded");
       }
       else {
-        logger.error("Transform from input stream failed; using PDF document as is");
+        logger.debug("Transform from input stream did not succeed; using PDF document as is");
         outputStream = new ByteArrayOutputStream();
         pdfDocument.save(outputStream);
       }
       return new ByteArrayInputStream(outputStream.toByteArray());
     }
     catch (IOException ioe) {
-      logger.error("Error during transformation from input stream", ioe);
+      logger.error("Transform from input stream failed", ioe);
       return null;
     }
     finally {
