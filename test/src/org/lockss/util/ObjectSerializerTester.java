@@ -1,5 +1,5 @@
 /*
- * $Id: ObjectSerializerTester.java,v 1.12 2006-10-03 05:47:29 thib_gc Exp $
+ * $Id: ObjectSerializerTester.java,v 1.13 2006-10-20 03:28:36 thib_gc Exp $
  */
 
 /*
@@ -395,7 +395,7 @@ public abstract class ObjectSerializerTester extends XMLTestCase {
     // Define a rogue file factory
     final ObjectSerializer.TempFileFactory createTempFileFails = new ObjectSerializer.TempFileFactory() {
       public File createTempFile(String prefix, String suffix, File directory) throws IOException {
-        throw new IOException("This is a fake IOException"); // fail
+        throw new IOException("This fake IOException can safely be ignored"); // fail
       }
     };
 
