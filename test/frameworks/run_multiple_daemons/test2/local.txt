@@ -20,3 +20,5 @@ org.lockss.proxy.icp.enabled=true
 org.lockss.proxy.icp.port=3132
 
 org.lockss.localV3Identity=TCP:[127.0.0.1]:9721
+
+org.lockss.poll.v3.disableV3Poller=true

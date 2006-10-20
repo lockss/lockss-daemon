@@ -50,25 +50,26 @@ org.lockss.poll.namepoll.deadline=5m
 org.lockss.poll.contentpoll.min=4m
 org.lockss.poll.contentpoll.max=12h
 
-org.lockss.treewalk.initial.estimate=1m
-org.lockss.treewalk.interval.min=1m
-org.lockss.treewalk.interval.max=7m
+org.lockss.treewalk.initial.estimate=15m
+org.lockss.treewalk.interval.min=1h
+org.lockss.treewalk.interval.max=3h
 org.lockss.treewalk.start.delay=10s
 org.lockss.comm.router.beacon.interval=1m
 org.lockss.baseau.toplevel.poll.interval.min=5m
 org.lockss.baseau.toplevel.poll.interval.max=15m
 
 # V3
+org.lockss.poll.defaultPollProtocol=3
 org.lockss.scomm.enabled=true
-org.lockss.scomm.maxMessageSize=3355443
+org.lockss.scomm.maxMessageSize=33554430
 org.lockss.poll.v3.quorum=3
 org.lockss.poll.v3.messageDir=/tmp
 org.lockss.poll.v3.minPollSize=3
 org.lockss.poll.v3.maxPollSize=3
 org.lockss.poll.v3.minNominationSize=1
 org.lockss.poll.v3.maxNominationSize=1
-org.lockss.poll.v3.minPollDuration=20m
-org.lockss.poll.v3.maxPollDuration=1h
+org.lockss.poll.v3.minPollDuration=1d
+org.lockss.poll.v3.maxPollDuration=3d
 org.lockss.id.initialV3PeerList=\
     TCP:[127.0.0.1]:9720;\
     TCP:[127.0.0.1]:9721;\
