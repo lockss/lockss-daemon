@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.208 2006-09-25 02:16:48 smorabito Exp $
+ * $Id: NodeManagerImpl.java,v 1.209 2006-10-20 00:33:55 smorabito Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import org.lockss.plugin.*;
 import org.lockss.protocol.*;
 import org.lockss.repository.*;
 import org.lockss.config.Configuration;
+import org.lockss.config.CurrentConfig;
 import org.lockss.crawler.CrawlManager;
 import org.lockss.alert.*;
 import java.util.ArrayList;
@@ -50,6 +51,10 @@ import sun.security.krb5.internal.*;
 public class NodeManagerImpl
   extends BaseLockssDaemonManager implements NodeManager {
 
+  public static final String PARAM_DISABLE_V3_POLLER =
+    Configuration.PREFIX + "poll.v3.disableV3Poller";
+  public static final boolean DEFAULT_DISABLE_V3_POLLER = false;
+  
   // the various necessary managers
   NodeManagerManager nodeMgrMgr;
   HistoryRepository historyRepo;
@@ -886,10 +891,20 @@ public class NodeManagerImpl
       checkCurrentState(lastOrCurrentPoll, results, nodeState, stateToUse, false);
       return;
     case Poll.V3_PROTOCOL:
-      int pollType = Poll.V3_POLL;
+      // If calling V3 polls has been disabled through the appropriate
+      // parameter, just return.  Having this call here is less than ideal,
+      // but will be moved out when we ditch the NodeManager.
+      boolean disableV3Poller =
+        CurrentConfig.getBooleanParam(PARAM_DISABLE_V3_POLLER,
+                                      DEFAULT_DISABLE_V3_POLLER);
+      if (disableV3Poller) {
+        logger.debug("Skipping V3 poll on AU " + managedAu.getName() + 
+                     " due to configuration.");
+        return;
+      }
       CachedUrlSet cus = nodeState.getCachedUrlSet();
       if (cus.getSpec().isAu()) {
-        PollSpec spec = new PollSpec(cus, pollType);
+        PollSpec spec = new PollSpec(cus, Poll.V3_POLL);
         // Don't call a poll on this if we're already running a V3 poll on it.
         if (!pollManager.isV3PollerRunning(spec) &&
             getAuState().getLastCrawlTime() > 0) {
