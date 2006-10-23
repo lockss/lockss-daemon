@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>6</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -31,7 +31,8 @@
       <string>1,&quot;^%scontent/vol%s/&quot;, base_url, volume_name</string>
       <string>1,&quot;^%scgi/(content|content-nw|issue_pdf)/[^/]+/%s/&quot;, base_url, volume_name</string>
       <string>1,&quot;^%scgi/(data|eletters|framedreprint|issue_pdf|reprint|reprintframed|reprintsidebar|screenpdf|this_week)/%s/&quot;, base_url, volume_name</string>
-      <string>2,&quot;^%scgi/login&quot;, base_url</string>
+      <string>2,&quot;^%s(adsystem)&quot;, base_url</string>
+      <string>2,&quot;^%scgi/(adclick|alerts|citemap|citmgr|external_ref|ijlink|login|mailafriend|search)&quot;, base_url</string>
       <string>1,&quot;^%s[^?]*\.([cC][sS][sS]|[gG][iI][fF]|[jJ][pP][eE][gG]|[jJ][pP][gG]|[jJ][sS]|[pP][nN][gG])$&quot;, base_url</string>
       <string>1,&quot;^%scgi/(content/full|data)/[^/]+/DC[0-9]*&quot;, base_url</string>
       <string>1,&quot;^%scontent/vol[^/]+/issue[^/]+/images/data/[^/]+/DC[0-9]*&quot;, base_url</string>
