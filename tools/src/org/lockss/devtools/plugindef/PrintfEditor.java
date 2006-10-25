@@ -1,5 +1,5 @@
 /*
- * $Id: PrintfEditor.java,v 1.27 2006-10-18 18:18:54 thib_gc Exp $
+ * $Id: PrintfEditor.java,v 1.28 2006-10-25 22:15:03 thib_gc Exp $
  */
 
 /*
@@ -234,7 +234,7 @@ public class PrintfEditor extends JDialog implements EDPEditor, ConfigParamListe
     paramKeys = data.getPlugin().getPrintfDescrs(!m_isCrawlRuleEditor);
     data.getPlugin().addParamListener(this);
     setTemplate( (PrintfTemplate) data.getData());
-    m_isCrawlRuleEditor = data.getKey().equals(EditableDefinablePlugin.AU_RULES);
+    m_isCrawlRuleEditor = data.getKey().equals(DefinableArchivalUnit.AU_RULES_KEY);
     // initialize the combobox
     updateParams(data);
     if (m_isCrawlRuleEditor) {

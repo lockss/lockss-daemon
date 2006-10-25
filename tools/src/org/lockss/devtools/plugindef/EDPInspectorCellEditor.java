@@ -1,5 +1,5 @@
 /*
- * $Id: EDPInspectorCellEditor.java,v 1.10 2006-09-06 16:38:41 thib_gc Exp $
+ * $Id: EDPInspectorCellEditor.java,v 1.11 2006-10-25 22:15:03 thib_gc Exp $
  */
 
 /*
@@ -71,13 +71,14 @@ public class EDPInspectorCellEditor extends AbstractCellEditor
   protected static final int PLUGIN_CRAWLRULES = 7;
   protected static final int PLUGIN_PAUSETIME = 8;
   protected static final int PLUGIN_CRAWLINTV = 9;
-  protected static final int PLUGIN_CRAWLWINDOW = 10;
-  protected static final int PLUGIN_CRAWLWINDOWSER = 11;
-  protected static final int PLUGIN_CRAWLDEPTH = 12;
-  protected static final int PLUGIN_FILTER = 13;
+  protected static final int PLUGIN_FILTER = 10;
+  protected static final int PLUGIN_CRAWLDEPTH = 11;
+  protected static final int PLUGIN_CRAWLWINDOW = 12;
+  protected static final int PLUGIN_CRAWLWINDOWSER = 13;
   protected static final int PLUGIN_EXCEPTION = 14;
   protected static final int PLUGIN_EXMAP = 15;
-  protected static final int NUMEDITORS = 16;
+  protected static final int PLUGIN_REQUIREDDAEMONVERSION = 16;
+  protected static final int NUMEDITORS = 17;
 
   protected CellEditorEntry[] editorEntries;
 

@@ -1,5 +1,5 @@
 /*
- * $Id: EDPCellData.java,v 1.15 2006-09-11 23:32:45 thib_gc Exp $
+ * $Id: EDPCellData.java,v 1.16 2006-10-25 22:15:03 thib_gc Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ import java.util.*;
 import javax.swing.event.*;
 import javax.swing.*;
 import org.lockss.daemon.*;
+import org.lockss.plugin.definable.*;
 
 public class EDPCellData {
   EditableDefinablePlugin m_plugin;
@@ -56,57 +57,60 @@ public class EDPCellData {
   EDPCellData(EditableDefinablePlugin edp, String key){
     this(edp, key, null, null);
 
-    if(key.equals(EditableDefinablePlugin.PLUGIN_NAME)) {
+    if(key.equals(DefinablePlugin.CM_NAME_KEY)) {
       m_data = edp.getPluginName();
     }
     else if(key.equals(EditableDefinablePlugin.PLUGIN_IDENTIFIER)) {
       m_data = edp.getPluginIdentifier();
     }
-    else if(key.equals(EditableDefinablePlugin.PLUGIN_VERSION)) {
+    else if(key.equals(DefinablePlugin.CM_VERSION_KEY)) {
       m_data = edp.getPluginVersion();
     }
-    else if(key.equals(EditableDefinablePlugin.PLUGIN_NOTES)) {
-      m_data = edp.getPluginNotes();
-    }
-    else if(key.equals(EditableDefinablePlugin.PLUGIN_PROPS)) {
+    else if(key.equals(DefinablePlugin.CM_CONFIG_PROPS_KEY)) {
       m_data = edp.getConfigParamDescrs();
     }
-    else if(key.equals(EditableDefinablePlugin.AU_RULES)) {
-      m_data = edp.getAuCrawlRules();
+    else if(key.equals(DefinablePlugin.CM_NOTES_KEY)) {
+      m_data = edp.getPluginNotes();
     }
-    else if(key.equals(EditableDefinablePlugin.AU_START_URL)) {
+    else if(key.equals(DefinableArchivalUnit.AU_START_URL_KEY)) {
       m_data = new PrintfTemplate(edp.getAuStartUrl());
     }
-    else if(key.equals(EditableDefinablePlugin.AU_NAME)) {
+    else if(key.equals(DefinableArchivalUnit.AU_NAME_KEY)) {
       m_data = new PrintfTemplate(edp.getAuName());
     }
-    else if(key.equals(EditableDefinablePlugin.AU_CRAWL_DEPTH)) {
-      m_data = new Integer(edp.getAuCrawlDepth());
+    else if(key.equals(DefinableArchivalUnit.AU_RULES_KEY)) {
+      m_data = edp.getAuCrawlRules();
     }
-    else if(key.equals(EditableDefinablePlugin.AU_CRAWL_WINDOW)) {
-      m_data = edp.getAuCrawlWindow();
-    }
-    else if(key.equals(EditableDefinablePlugin.AU_CRAWL_WINDOW_SER)) {
-      m_data = edp.getAuCrawlWindowSer();
-    }
-    else if(key.equals(EditableDefinablePlugin.AU_FILTER_SUFFIX)) {
-      m_data = edp.getAuFilters();
-    }
-    else if(key.equals(EditableDefinablePlugin.AU_PAUSE_TIME)) {
+    else if(key.equals(DefinableArchivalUnit.AU_DEFAULT_PAUSE_TIME)) {
       m_data = new Long(edp.getAuPauseTime());
       m_displayString = TimeEditor.millisToString(edp.getAuPauseTime());
     }
-    else if(key.equals(EditableDefinablePlugin.AU_NEWCONTENT_CRAWL)) {
+    else if(key.equals(DefinableArchivalUnit.AU_DEFAULT_NC_CRAWL_KEY)) {
       m_data = new Long(edp.getNewContentCrawlInterval());
       m_displayString = TimeEditor.millisToString(edp.getNewContentCrawlInterval());
     }
-    else if(key.equals(EditableDefinablePlugin.PLUGIN_EXCEPTION_HANDLER)) {
+    else if(key.equals(DefinableArchivalUnit.AU_FILTER_SUFFIX)) {
+      m_data = edp.getAuFilters();
+    }
+    else if(key.equals(DefinableArchivalUnit.AU_CRAWL_DEPTH)) {
+      m_data = new Integer(edp.getAuCrawlDepth());
+    }
+    else if(key.equals(DefinableArchivalUnit.AU_CRAWL_WINDOW_KEY)) {
+      m_data = edp.getAuCrawlWindow();
+    }
+    else if(key.equals(DefinableArchivalUnit.AU_CRAWL_WINDOW_SER_KEY)) {
+      m_data = edp.getAuCrawlWindowSer();
+    }
+    else if(key.equals(DefinablePlugin.CM_EXCEPTION_HANDLER_KEY)) {
       m_data = edp.getPluginExceptionHandler();
     }
-    else if(key.equals(EditableDefinablePlugin.CM_EXCEPTION_LIST_KEY)) {
+    else if(key.equals(DefinablePlugin.CM_EXCEPTION_LIST_KEY)) {
       m_data = edp.getSingleExceptionHandlers();
     }
-    else if(key.equals(EditableDefinablePlugin.CM_CRAWL_TYPE)) {
+    else if (key.equals(DefinablePlugin.CM_REQUIRED_DAEMON_VERSION_KEY)) {
+      m_data = edp.getRequiredDaemonVersion();
+    }
+    else if(key.equals(DefinablePlugin.CM_CRAWL_TYPE)) {
       m_data = edp.getCrawlType();
     }
   }
@@ -160,7 +164,7 @@ public class EDPCellData {
 	m_displayString = ELLIPSIS;
       }
       else if (m_data == null) {
-	  if(m_key.equals(EditableDefinablePlugin.AU_CRAWL_WINDOW))
+	  if(m_key.equals(DefinableArchivalUnit.AU_CRAWL_WINDOW_KEY))
 	      m_displayString = ELLIPSIS;
 	  else
 	      m_displayString = "NONE";
@@ -176,10 +180,10 @@ public class EDPCellData {
     if (m_plugin == null || m_key == null)return;
     m_data = template;
     m_displayString = template.getViewableTemplate();
-    if (m_key.equals(EditableDefinablePlugin.AU_NAME)) {
+    if (m_key.equals(DefinableArchivalUnit.AU_NAME_KEY)) {
       m_plugin.setAuName(template.getViewableTemplate());
     }
-    else if (m_key.equals(EditableDefinablePlugin.AU_START_URL)) {
+    else if (m_key.equals(DefinableArchivalUnit.AU_START_URL_KEY)) {
       m_plugin.setAuStartUrl(template.getViewableTemplate());
     }
 
@@ -190,11 +194,11 @@ public class EDPCellData {
     if (m_plugin == null || m_key == null || data == null) {
       return;
     }
-    else if (m_key.equals(EditableDefinablePlugin.AU_CRAWL_WINDOW)) {
+    else if (m_key.equals(DefinableArchivalUnit.AU_CRAWL_WINDOW_KEY)) {
       m_data = data;
       m_plugin.setAuCrawlWindow((String)m_data, false);
     }
-    else if (m_key.equals(EditableDefinablePlugin.PLUGIN_EXCEPTION_HANDLER)) {
+    else if (m_key.equals(DefinablePlugin.CM_EXCEPTION_HANDLER_KEY)) {
       m_data = data;
       m_plugin.setPluginExceptionHandler((String)m_data, false);
     }
@@ -206,7 +210,7 @@ public class EDPCellData {
     if (m_plugin == null || m_key == null || data == null) {
       return;
     }
-    else if(m_key.equals(EditableDefinablePlugin.PLUGIN_NAME)) {
+    else if(m_key.equals(DefinablePlugin.CM_NAME_KEY)) {
       m_data = data;
       m_plugin.setPluginName((String)m_data);
     }
@@ -214,38 +218,42 @@ public class EDPCellData {
       m_data = data;
       m_plugin.setPluginIdentifier((String)m_data);
     }
-    else if(m_key.equals(EditableDefinablePlugin.PLUGIN_VERSION)) {
+    else if(m_key.equals(DefinablePlugin.CM_VERSION_KEY)) {
       m_data = data;
       m_plugin.setPluginVersion((String)m_data);
     }
-    else if(m_key.equals(EditableDefinablePlugin.PLUGIN_NOTES)) {
+    else if(m_key.equals(DefinablePlugin.CM_NOTES_KEY)) {
       m_data = data;
       m_plugin.setPluginNotes((String)m_data);
       m_displayString = data;
     }
-    else if(m_key.equals(EditableDefinablePlugin.AU_CRAWL_DEPTH)) {
+    else if(m_key.equals(DefinableArchivalUnit.AU_CRAWL_DEPTH)) {
       m_data = new Integer(data);
       m_plugin.setAuCrawlDepth(((Integer)m_data).intValue());
     }
-    else if(m_key.equals(EditableDefinablePlugin.AU_CRAWL_WINDOW)) {
+    else if(m_key.equals(DefinableArchivalUnit.AU_CRAWL_WINDOW_KEY)) {
       m_data = data;
       m_plugin.setAuCrawlWindow((String)m_data, true);
     }
-    else if(m_key.equals(EditableDefinablePlugin.AU_PAUSE_TIME)) {
+    else if(m_key.equals(DefinableArchivalUnit.AU_DEFAULT_PAUSE_TIME)) {
       m_data = new Long(data);
       m_plugin.setAuPauseTime(((Long)m_data).longValue());
       m_displayString = TimeEditor.millisToString(((Long)m_data).longValue());
     }
-    else if(m_key.equals(EditableDefinablePlugin.AU_NEWCONTENT_CRAWL)) {
+    else if(m_key.equals(DefinableArchivalUnit.AU_DEFAULT_NC_CRAWL_KEY)) {
       m_data = new Long(data);
       m_plugin.setNewContentCrawlInterval(((Long) m_data).longValue());
       m_displayString = TimeEditor.millisToString(((Long)m_data).longValue());
     }
-    else if(m_key.equals(EditableDefinablePlugin.PLUGIN_EXCEPTION_HANDLER)) {
+    else if(m_key.equals(DefinablePlugin.CM_EXCEPTION_HANDLER_KEY)) {
       m_data = data;
       m_plugin.setPluginExceptionHandler((String)m_data, true);
     }
-    else if(m_key.equals(EditableDefinablePlugin.CM_CRAWL_TYPE)) {
+    else if(m_key.equals(DefinablePlugin.CM_REQUIRED_DAEMON_VERSION_KEY)) {
+      m_data = data;
+      m_plugin.setRequiredDaemonVersion((String)m_data);
+    }
+    else if(m_key.equals(DefinablePlugin.CM_CRAWL_TYPE)) {
       m_data = data;
       m_plugin.setCrawlType((String)m_data);
     }
