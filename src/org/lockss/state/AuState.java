@@ -1,5 +1,5 @@
 /*
- * $Id: AuState.java,v 1.25 2006-10-07 02:01:27 smorabito Exp $
+ * $Id: AuState.java,v 1.26 2006-10-25 23:11:40 smorabito Exp $
  */
 
 /*
@@ -50,8 +50,12 @@ public class AuState implements LockssSerializable {
   private transient HistoryRepository historyRepo;
   protected HashSet crawlUrls;
   protected int clockssSubscriptionStatus;
-  protected double v3Agreement;
-  
+  protected double v3Agreement = -1.0;
+  //Has there ever been a completed V3 poll?
+  // XXX: Added for daemon 1.21.  This should be deprecated after a release
+  //      or two, and removed completely a few more releases after that.
+  protected boolean hasV3Poll = false;
+
   private static final Logger log = Logger.getLogger("AuState");
 
   transient int urlUpdateCntr = 0;
@@ -60,13 +64,13 @@ public class AuState implements LockssSerializable {
   static final int URL_UPDATE_LIMIT = 1;
 
   public AuState(ArchivalUnit au, HistoryRepository historyRepo) {
-    this(au, -1, -1, -1, null, CLOCKSS_SUB_UNKNOWN, 0.0, historyRepo);
+    this(au, -1, -1, -1, null, CLOCKSS_SUB_UNKNOWN, -1.0, false, historyRepo);
   }
 
   protected AuState(ArchivalUnit au, long lastCrawlTime, long lastTopLevelPoll,
                     long lastTreeWalk, HashSet crawlUrls,
 		    int clockssSubscriptionStatus,
-                    double v3Agreement,
+                    double v3Agreement, boolean hasV3Poll,
                     HistoryRepository historyRepo) {
     this.au = au;
     this.lastCrawlTime = lastCrawlTime;
@@ -75,6 +79,7 @@ public class AuState implements LockssSerializable {
     this.crawlUrls = crawlUrls;
     this.clockssSubscriptionStatus = clockssSubscriptionStatus;
     this.v3Agreement = v3Agreement;
+    this.hasV3Poll = hasV3Poll;
     this.historyRepo = historyRepo;
   }
 
@@ -128,11 +133,22 @@ public class AuState implements LockssSerializable {
 
   public void setV3Agreement(double d) {
     v3Agreement = d;
+    if (!hasV3Poll()) {
+      hasV3Poll(true);
+    }
     historyRepo.storeAuState(this);
   }
 
   public double getV3Agreement() {
     return v3Agreement;
+  }
+  
+  public void hasV3Poll(boolean b) {
+    hasV3Poll = b;
+  }
+  
+  public boolean hasV3Poll() {
+    return hasV3Poll;
   }
 
   /**

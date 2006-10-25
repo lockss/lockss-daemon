@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.45 2006-10-07 02:01:27 smorabito Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.46 2006-10-25 23:11:40 smorabito Exp $
  */
 
 /*
@@ -228,7 +228,11 @@ public class ArchivalUnitStatus
                                              au.getAuId()));
         // Percent damaged.  It's scary to see '0% Agreement' if there's no
         // history, so we just show a friendlier message.
-        if (auState.getLastTopLevelPollTime() == -1) {
+        //
+        // XXX: hasV3Poll() is a stopgap added for daemon 1.21.  See
+        //      the method declaration for more information.  It should
+        //      eventually be removed, but is harmless for now.
+        if (auState.getV3Agreement() < 0 || !auState.hasV3Poll()) {
           stat = "Waiting for Poll";
         } else {
           stat = Integer.toString((int)Math.round(auState.getV3Agreement() * 100)) +
@@ -580,6 +584,23 @@ public class ArchivalUnitStatus
     private List getSummaryInfo(ArchivalUnit au, AuState state,
                                 NodeState topNode) {
       int clockssPos = 1;
+      
+      // Make the status string.
+      Object stat = null;
+      if (AuUtil.getProtocolVersion(au) == Poll.V3_PROTOCOL) {
+        // XXX: hasV3Poll() is a stopgap added for daemon 1.21.  See
+        //      the method declaration for more information.  It should
+        //      eventually be removed, but is harmless for now.
+        if (state.getV3Agreement() < 0 || !state.hasV3Poll()) {
+          stat = "Waiting for Poll";
+        } else {
+          stat = Integer.toString((int)Math.round(state.getV3Agreement() * 100)) +
+                 "% Agreement";
+        }
+      } else {
+        stat = topNode.hasDamage() ? DAMAGE_STATE_DAMAGED : DAMAGE_STATE_OK;
+      }
+      
       List summaryList =  ListUtil.list(
             new StatusTable.SummaryInfo("Volume", ColumnDescriptor.TYPE_STRING,
                                         au.getName()),
@@ -592,11 +613,9 @@ public class ArchivalUnitStatus
 					ColumnDescriptor.TYPE_FLOAT,
                                         new Float(AuUtil.getAuContentSize(au) /
 						  (float)(1024 * 1024))),
-            new StatusTable.SummaryInfo("Status",
+	    new StatusTable.SummaryInfo("Status",
                                         ColumnDescriptor.TYPE_STRING,
-                                        (topNode.hasDamage()
-					 ? DAMAGE_STATE_DAMAGED
-					 : DAMAGE_STATE_OK)),
+                                        stat),
             new StatusTable.SummaryInfo("Available From Publisher",
                                         ColumnDescriptor.TYPE_STRING,
                                         (AuUtil.isPubDown(au) ? "No" : "Yes")),

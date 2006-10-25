@@ -20,4 +20,7 @@ org.lockss.test.pollspec.url=lockssau:
 org.lockss.proxy.icp.enabled=true
 org.lockss.proxy.icp.port=3135
 
+# Disable V3 poll calling
+org.lockss.poll.v3.disableV3Poller=true
+
 org.lockss.localV3Identity=TCP:[127.0.0.1]:9725
