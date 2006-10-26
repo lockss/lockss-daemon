@@ -1,5 +1,5 @@
 /*
- * $Id: ProbePermissionChecker.java,v 1.10 2006-02-14 05:22:46 tlipkis Exp $
+ * $Id: ProbePermissionChecker.java,v 1.11 2006-10-26 16:23:08 troberts Exp $
  */
 
 /*
@@ -68,6 +68,7 @@ public class ProbePermissionChecker implements PermissionChecker {
 
   public boolean checkPermission(Crawler.PermissionHelper pHelper,
 				 Reader inputReader, String permissionUrl) {
+    probeUrl = null;
     CustomHtmlParser parser = new CustomHtmlParser();
     logger.debug3("Checking permission on "+permissionUrl);
     try {
@@ -136,7 +137,8 @@ public class ProbePermissionChecker implements PermissionChecker {
 
     public void foundUrl(String url) {
       if (probeUrl != null) {
-	logger.warning("Old probe url ("+probeUrl+") overwritten by"+url);
+	logger.warning("Multiple probe URLs found on manifest page.  " +
+			"Old: "+probeUrl+" New: "+url);
       }
       probeUrl = url;
     }
