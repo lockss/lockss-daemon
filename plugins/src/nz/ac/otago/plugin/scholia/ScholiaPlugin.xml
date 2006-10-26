@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_identifier</string>
-    <string>nz.ac.otago.plugin.ScholiaPlugin</string>
+    <string>nz.ac.otago.plugin.scholia.ScholiaPlugin</string>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
@@ -23,16 +23,17 @@
     <string>au_crawlrules</string>
     <list>
       <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;%sscholiaidx/volumes\.html&quot;, base_url</string>
-      <string>1,&quot;%sscholiagfx/v%.02dp.*\.pdf&quot;, base_url, volume</string>
-      <string>1,&quot;%sgfx/.*\.gif&quot;, base_url</string>
-      <string>1,&quot;%sgfx/.*\.jpg&quot;, base_url</string>
-      <string>1,&quot;%sstyles\.css&quot;, base_url</string>
+      <string>1,&quot;%sclassics/scholiaidx/volumes\.html&quot;, base_url</string>
+      <string>1,&quot;%sclassics/scholiaidx/vol%didx.html&quot;, base_url, volume</string>
+      <string>1,&quot;%sclassics/scholiagfx/v%.02dp.*\.pdf&quot;, base_url, volume</string>
+      <string>1,&quot;%sclassics/scholia/(about|contributorsnotes|editors|staff|exchanges|subscriptions).html&quot;, base_url</string>
+      <string>1,&quot;.*\.([cC][sS][sS]|[gG][iI][fF]|[jJ][pP][eE][gG]|[jJ][pP][gG]|[jJ][sS]|[pP][nN][gG])$&quot;</string>
+      <string>1,&quot;favicon.ico$&quot;</string>
     </list>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%sscholiaidx/volumes.html&quot;, base_url</string>
+    <string>&quot;%sclassics/scholiaidx/volumes.html&quot;, base_url</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
