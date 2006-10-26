@@ -40,6 +40,214 @@
     <!-- Titles -->
     <property name="org.lockss.title">
 
+      <property name="scholia13">
+	<property name="title" value="Scholia Volume 13" />
+	<property name="estSize" value="40MB" />
+	<property name="journalTitle" value="Scholia" />
+	<property name="plugin" value="nz.ac.otago.plugin.scholia.ScholiaPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.otago.ac.nz/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="13" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="scholia12">
+	<property name="title" value="Scholia Volume 12" />
+	<property name="estSize" value="40MB" />
+	<property name="journalTitle" value="Scholia" />
+	<property name="plugin" value="nz.ac.otago.plugin.scholia.ScholiaPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.otago.ac.nz/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="12" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="scholia11">
+	<property name="title" value="Scholia Volume 11" />
+	<property name="estSize" value="40MB" />
+	<property name="journalTitle" value="Scholia" />
+	<property name="plugin" value="nz.ac.otago.plugin.scholia.ScholiaPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.otago.ac.nz/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="11" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="scholia10">
+	<property name="title" value="Scholia Volume 10" />
+	<property name="estSize" value="40MB" />
+	<property name="journalTitle" value="Scholia" />
+	<property name="plugin" value="nz.ac.otago.plugin.scholia.ScholiaPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.otago.ac.nz/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="10" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="scholia9">
+	<property name="title" value="Scholia Volume 9" />
+	<property name="estSize" value="40MB" />
+	<property name="journalTitle" value="Scholia" />
+	<property name="plugin" value="nz.ac.otago.plugin.scholia.ScholiaPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.otago.ac.nz/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="9" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="scholia8">
+	<property name="title" value="Scholia Volume 8" />
+	<property name="estSize" value="40MB" />
+	<property name="journalTitle" value="Scholia" />
+	<property name="plugin" value="nz.ac.otago.plugin.scholia.ScholiaPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.otago.ac.nz/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="8" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="scholia7">
+	<property name="title" value="Scholia Volume 7" />
+	<property name="estSize" value="40MB" />
+	<property name="journalTitle" value="Scholia" />
+	<property name="plugin" value="nz.ac.otago.plugin.scholia.ScholiaPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.otago.ac.nz/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="7" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="scholia6">
+	<property name="title" value="Scholia Volume 6" />
+	<property name="estSize" value="40MB" />
+	<property name="journalTitle" value="Scholia" />
+	<property name="plugin" value="nz.ac.otago.plugin.scholia.ScholiaPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.otago.ac.nz/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="6" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="scholia5">
+	<property name="title" value="Scholia Volume 5" />
+	<property name="estSize" value="40MB" />
+	<property name="journalTitle" value="Scholia" />
+	<property name="plugin" value="nz.ac.otago.plugin.scholia.ScholiaPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.otago.ac.nz/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="5" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="scholia4">
+	<property name="title" value="Scholia Volume 4" />
+	<property name="estSize" value="40MB" />
+	<property name="journalTitle" value="Scholia" />
+	<property name="plugin" value="nz.ac.otago.plugin.scholia.ScholiaPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.otago.ac.nz/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="4" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="scholia3">
+	<property name="title" value="Scholia Volume 3" />
+	<property name="estSize" value="40MB" />
+	<property name="journalTitle" value="Scholia" />
+	<property name="plugin" value="nz.ac.otago.plugin.scholia.ScholiaPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.otago.ac.nz/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="3" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="scholia2">
+	<property name="title" value="Scholia Volume 2" />
+	<property name="estSize" value="40MB" />
+	<property name="journalTitle" value="Scholia" />
+	<property name="plugin" value="nz.ac.otago.plugin.scholia.ScholiaPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.otago.ac.nz/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="2" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="scholia1">
+	<property name="title" value="Scholia Volume 1" />
+	<property name="estSize" value="40MB" />
+	<property name="journalTitle" value="Scholia" />
+	<property name="plugin" value="nz.ac.otago.plugin.scholia.ScholiaPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.otago.ac.nz/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="1" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
       <property name="madhattersreview2">
 	<property name="title" value="Mad Hatters Review 2006" />
 	<property name="estSize" value="65MB" />
