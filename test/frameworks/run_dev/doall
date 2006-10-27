@@ -4,7 +4,7 @@
 PROJECT_DIR=`( cd ../../..; pwd )`
 export PROJECT_DIR
 
-if [ "$1" == "start" ] ; then
+if [ "$1" = "start" ] ; then
     if [ -f dpid ] ; then
         echo daemon already running
     else
@@ -12,7 +12,7 @@ if [ "$1" == "start" ] ; then
         ( ./rundaemon "$@" ; rm -f dpid ) &
         echo daemon started
     fi
-elif [ "$1" == "clean" ] ; then
+elif [ "$1" = "clean" ] ; then
     if [ -f dpid ] ; then
         echo cannot clean while daemon is running
     else
