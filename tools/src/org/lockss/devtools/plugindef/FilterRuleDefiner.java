@@ -1,5 +1,5 @@
 /*
- * $Id: FilterRuleDefiner.java,v 1.5 2006-09-06 16:38:41 thib_gc Exp $
+ * $Id: FilterRuleDefiner.java,v 1.6 2006-10-27 22:56:56 thib_gc Exp $
  */
 
 /*
@@ -43,9 +43,8 @@ import org.lockss.util.Logger;
  * <p>@version 1.0</p>
  * <p> </p>
  *  not attributable
- *
+ * @deprecated See {@link FilterRulesEditor}.
  */
-
 public class FilterRuleDefiner extends JDialog
     implements ItemListener, EDPEditor {
   ImageIcon upIcon = new ImageIcon(PluginDefiner.class.getResource("images/Up24.gif"));
