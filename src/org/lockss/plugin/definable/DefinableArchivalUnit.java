@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.48 2006-10-31 07:01:05 thib_gc Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.49 2006-10-31 17:53:45 thib_gc Exp $
  */
 
 /*
@@ -209,10 +209,10 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 
     CrawlRule rule = makeRules();
     String crawl_type = definitionMap.getString(DefinablePlugin.KEY_CRAWL_TYPE,
-                                                DefinablePlugin.CRAWL_TYPES[0]);
+                                                DefinablePlugin.DEFAULT_CRAWL_TYPE);
     //XXX put makePermissionCheckersHere
 
-    if(crawl_type.equals(DefinablePlugin.CRAWL_TYPES[1])) { // oai-crawl
+    if(crawl_type.equals(DefinablePlugin.CRAWL_TYPE_OAI)) {
       boolean follow_links =
           definitionMap.getBoolean(DefinablePlugin.KEY_FOLLOW_LINKS, true);
       return new OaiCrawlSpec(makeOaiData(), getPermissionPages(),

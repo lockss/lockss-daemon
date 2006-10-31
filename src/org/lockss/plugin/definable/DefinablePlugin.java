@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.20 2006-10-31 07:01:05 thib_gc Exp $
+ * $Id: DefinablePlugin.java,v 1.21 2006-10-31 17:53:44 thib_gc Exp $
  */
 
 /*
@@ -52,25 +52,31 @@ import java.net.*;
 
 public class DefinablePlugin extends BasePlugin {
   // configuration map keys
-  static final public String KEY_PLUGIN_NAME = "plugin_name";
-  static final public String KEY_PLUGIN_VERSION = "plugin_version";
-  static final public String KEY_REQUIRED_DAEMON_VERSION =
+  public static final String KEY_PLUGIN_NAME = "plugin_name";
+  public static final String KEY_PLUGIN_VERSION = "plugin_version";
+  public static final String KEY_REQUIRED_DAEMON_VERSION =
     "required_daemon_version";
-  static final public String KEY_PLUGIN_CONFIG_PROPS = "plugin_config_props";
-  static final public String KEY_EXCEPTION_HANDLER =
+  public static final String KEY_PLUGIN_CONFIG_PROPS = "plugin_config_props";
+  public static final String KEY_EXCEPTION_HANDLER =
       "plugin_cache_result_handler";
-  static final public String KEY_EXCEPTION_LIST =
+  public static final String KEY_EXCEPTION_LIST =
       "plugin_cache_result_list";
-  static final public String KEY_PLUGIN_NOTES = "plugin_notes";
-  static final public String KEY_CRAWL_TYPE =
+  public static final String KEY_PLUGIN_NOTES = "plugin_notes";
+  public static final String KEY_CRAWL_TYPE =
       "plugin_crawl_type";
-  static final public String KEY_FOLLOW_LINKS = "plugin_follow_link";
-  static final public String DEFAULT_PLUGIN_VERSION = "1";
-  static final public String DEFAULT_REQUIRED_DAEMON_VERSION = "0.0.0";
-  static final public String MAP_SUFFIX = ".xml";
+  public static final String KEY_FOLLOW_LINKS = "plugin_follow_link";
+  public static final String DEFAULT_PLUGIN_VERSION = "1";
+  public static final String DEFAULT_REQUIRED_DAEMON_VERSION = "0.0.0";
+  public static final String MAP_SUFFIX = ".xml";
 
-  static final public String[] CRAWL_TYPES = {"HTML Links", "OAI"};
-
+  public static final String CRAWL_TYPE_HTML_LINKS = "HTML Links";
+  public static final String CRAWL_TYPE_OAI = "OAI";
+  public static final String[] CRAWL_TYPES = {
+      CRAWL_TYPE_HTML_LINKS,
+      CRAWL_TYPE_OAI,
+  };
+  public static final String DEFAULT_CRAWL_TYPE = CRAWL_TYPE_HTML_LINKS;
+  
   protected String mapName = null;
 
   static Logger log = Logger.getLogger("DefinablePlugin");
@@ -107,10 +113,14 @@ public class DefinablePlugin extends BasePlugin {
   }
 
   public String getPluginName() {
-    String default_name = StringUtil.shortName(getPluginId());
-    return definitionMap.getString(KEY_PLUGIN_NAME, default_name);
+    String defaultName = getDefaultPluginName();
+    return definitionMap.getString(KEY_PLUGIN_NAME, defaultName);
   }
 
+  protected String getDefaultPluginName() {
+    return StringUtil.shortName(getPluginId());
+  }
+  
   public String getVersion() {
     return definitionMap.getString(KEY_PLUGIN_VERSION, DEFAULT_PLUGIN_VERSION);
   }

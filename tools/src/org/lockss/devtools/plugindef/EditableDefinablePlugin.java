@@ -1,5 +1,5 @@
 /*
- * $Id: EditableDefinablePlugin.java,v 1.27 2006-10-31 07:01:06 thib_gc Exp $
+ * $Id: EditableDefinablePlugin.java,v 1.28 2006-10-31 17:53:45 thib_gc Exp $
  */
 
 /*
@@ -44,16 +44,19 @@ import org.lockss.util.urlconn.*;
 
 public class EditableDefinablePlugin extends DefinablePlugin {
 
+  protected static final String KEY_PLUGIN_IDENTIFIER = "plugin_identifier";
+
   protected static final String DEFAULT_RULE_INCLUDE_STARTURL_FRAGMENT = "1,";
 
   protected static final String DEFAULT_RULE_EXCLUDENOMATCH_BASEURL = "4,\"^%s\", base_url";
 
-  static final protected String KEY_PLUGIN_IDENTIFIER = "plugin_identifier";
+  protected static final String DEFAULT_PLUGIN_NAME = "UNKNOWN";
+  protected static final String DEFAULT_PLUGIN_IDENTIFIER = "UNKNOWN";
+  
+  public static String[] CONFIG_PARAM_TYPES = ConfigParamDescr.TYPE_STRINGS;
 
-  static public String[] CONFIG_PARAM_TYPES = ConfigParamDescr.TYPE_STRINGS;
-
-  static public Map DEFAULT_CONFIG_PARAM_DESCRS = getDefaultConfigParamDescrs();
-  static Logger logger = Logger.getLogger("EditableDefinablePlugin");
+  public static Map DEFAULT_CONFIG_PARAM_DESCRS = getDefaultConfigParamDescrs();
+  protected static Logger logger = Logger.getLogger("EditableDefinablePlugin");
   protected PersistentPluginState pluginState;
 
   public EditableDefinablePlugin() {
@@ -121,13 +124,15 @@ public class EditableDefinablePlugin extends DefinablePlugin {
   }
 
   public void setCrawlType(String crawlType) {
+    // Default (HTML Links) reasonably stable; not saving explicitly unless changed
     logger.info("Setting crawl type to: " + crawlType);
     definitionMap.putString(DefinablePlugin.KEY_CRAWL_TYPE, crawlType);
   }
 
   public String getCrawlType() {
-    // FIXME: default?
-    String ret = definitionMap.getString(DefinablePlugin.KEY_CRAWL_TYPE, DefinablePlugin.CRAWL_TYPES[0]);
+    // Default (HTML Links) reasonably stable; not saving explicitly unless changed
+    String ret = definitionMap.getString(DefinablePlugin.KEY_CRAWL_TYPE,
+                                         DefinablePlugin.DEFAULT_CRAWL_TYPE);
     logger.info("The crawl type is: " + ret);
     return ret;
   }
@@ -337,7 +342,7 @@ public class EditableDefinablePlugin extends DefinablePlugin {
   }
 
   public void removeAuFilter(String mimeType) {
-    logger.info("Removing the AU filter rule for MIME type " + mimeType);
+    logger.info("Removing the AU filter rule for MIME type: " + mimeType);
     definitionMap.removeMapElement(mimeType + DefinableArchivalUnit.SUFFIX_FILTER_RULE);
   }
 
@@ -378,7 +383,7 @@ public class EditableDefinablePlugin extends DefinablePlugin {
   }
 
   public void removeAuFilterFactory(String mimeType) {
-    logger.info("Removing the AU filter factory for MIME type " + mimeType);
+    logger.info("Removing the AU filter factory for MIME type: " + mimeType);
     definitionMap.removeMapElement(mimeType + DefinableArchivalUnit.SUFFIX_FILTER_FACTORY);
   }
 
@@ -404,7 +409,10 @@ public class EditableDefinablePlugin extends DefinablePlugin {
   }
 
   public long getNewContentCrawlInterval() {
-    // FIXME: Uses daemon default
+    // Ensure default is saved
+    if (!definitionMap.containsKey(DefinableArchivalUnit.KEY_AU_NEW_CONTENT_CRAWL_INTERVAL)) {
+      setNewContentCrawlInterval(DefinableArchivalUnit.DEFAULT_NEW_CONTENT_CRAWL_INTERVAL);
+    }
     long ret = definitionMap.getLong(DefinableArchivalUnit.KEY_AU_DEFAULT_NEW_CONTENT_CRAWL_INTERVAL,
                                      DefinableArchivalUnit.DEFAULT_NEW_CONTENT_CRAWL_INTERVAL);
     logger.debug("The new content crawl interval is: " + ret);
@@ -417,12 +425,13 @@ public class EditableDefinablePlugin extends DefinablePlugin {
   }
 
   public void setAuCrawlDepth(int depth) {
+    // Default (1) reasonably stable; not saving explicitly unless changed
     logger.info("Setting the AU crawl depth to: " + depth);
     definitionMap.putInt(DefinableArchivalUnit.KEY_AU_CRAWL_DEPTH, depth);
   }
 
   public int getAuCrawlDepth() {
-    // FIXME: Uses daemon default
+    // Default (1) reasonably stable; not saving explicitly unless changed
     int ret = definitionMap.getInt(DefinableArchivalUnit.KEY_AU_CRAWL_DEPTH,
                                    DefinableArchivalUnit.DEFAULT_AU_CRAWL_DEPTH);
     logger.debug("The AU crawl depth is: " + ret);
@@ -440,7 +449,10 @@ public class EditableDefinablePlugin extends DefinablePlugin {
   }
 
   public long getAuPauseTime() {
-    // FIXME: Uses daemon default
+    // Ensure default is saved
+    if (!definitionMap.containsKey(DefinableArchivalUnit.KEY_AU_DEFAULT_PAUSE_TIME)) {
+      setAuPauseTime(DefinableArchivalUnit.DEFAULT_FETCH_DELAY);
+    }
     long ret = definitionMap.getLong(DefinableArchivalUnit.KEY_AU_DEFAULT_PAUSE_TIME,
                                      DefinableArchivalUnit.DEFAULT_FETCH_DELAY);
     logger.debug("The AU pause time is: " + ret);
@@ -470,15 +482,21 @@ public class EditableDefinablePlugin extends DefinablePlugin {
   }
 
   public void setPluginName(String name) {
-    logger.info("Setting the plugin name to: " + name);
-    definitionMap.putString(DefinablePlugin.KEY_PLUGIN_NAME, name);
+    // Check substitute
+    if (name.equals(DEFAULT_PLUGIN_NAME)) {
+      logger.debug("Skipped setting the plugin name to: " + name);
+    }
+    else {
+      logger.info("Setting the plugin name to: " + name);
+      definitionMap.putString(DefinablePlugin.KEY_PLUGIN_NAME, name);
+    }
   }
 
   public String getPluginName() {
-    // FIXME: default value
     String ret = super.getPluginName();
-    if (StringUtils.isEmpty(ret)) {
-      ret = "UNKNOWN";
+    // Use a substitute
+    if (StringUtils.isEmpty(ret) || ret.equals(super.getDefaultPluginName())) {
+      ret = DEFAULT_PLUGIN_NAME;
     }
     logger.debug("The plugin name is: " + ret);
     return ret;
@@ -490,13 +508,20 @@ public class EditableDefinablePlugin extends DefinablePlugin {
   }
 
   public void setPluginIdentifier(String name) {
-    logger.info("Setting the plugin identifier to: " + name);
-    definitionMap.putString(KEY_PLUGIN_IDENTIFIER, name);
+    // Check substitute
+    if (name.equals(DEFAULT_PLUGIN_IDENTIFIER)) {
+      logger.debug("Skipped setting the plugin identifier to: " + name);
+    }
+    else {
+      logger.info("Setting the plugin identifier to: " + name);
+      definitionMap.putString(KEY_PLUGIN_IDENTIFIER, name);
+    }
   }
 
   public String getPluginIdentifier() {
-    // FIXME: default value
-    String ret = definitionMap.getString(KEY_PLUGIN_IDENTIFIER, "UNKNOWN");
+    // Use substitute
+    String ret = definitionMap.getString(KEY_PLUGIN_IDENTIFIER,
+                                         DEFAULT_PLUGIN_IDENTIFIER);
     logger.debug("The plugin identifier is: " + ret);
     return ret;
   }
@@ -507,11 +532,13 @@ public class EditableDefinablePlugin extends DefinablePlugin {
   }
 
   public void setPluginVersion(String version) {
+    // Default (1) reasonably stable; not explicitly saving unless changed
     logger.info("Setting the plugin version to: " + version);
     definitionMap.putString(DefinablePlugin.KEY_PLUGIN_VERSION, version);
   }
 
   public String getPluginVersion() {
+    // Default (1) reasonably stable; not explicitly saving unless changed
     String ret = super.getVersion();
     logger.info("The plugin version is: " + ret);
     return ret;
@@ -523,12 +550,14 @@ public class EditableDefinablePlugin extends DefinablePlugin {
   }
 
   public void setRequiredDaemonVersion(String requiredDaemonVersion) {
+    // Default (0.0.0) reasonably stable; not explicitly saving unless changed
     logger.info("Setting the required daemon version to: " + requiredDaemonVersion);
     definitionMap.putString(DefinablePlugin.KEY_REQUIRED_DAEMON_VERSION,
                             requiredDaemonVersion);
   }
 
   public String getRequiredDaemonVersion() {
+    // Default (0.0.0) reasonably stable; not explicitly saving unless changed
     String ret = super.getRequiredDaemonVersion();
     logger.info("The required daemon version is: " + ret);
     return ret;
@@ -697,7 +726,6 @@ public class EditableDefinablePlugin extends DefinablePlugin {
 
   public HashMap getSingleExceptionHandlers() {
     logger.info("Retrieving the single exception handlers");
-    // FIXME: default?
     HashMap handlers = new HashMap();
     List xlist = (List) definitionMap.getCollection(DefinablePlugin.KEY_EXCEPTION_LIST, null);
     if (xlist != null) {
@@ -792,7 +820,6 @@ public class EditableDefinablePlugin extends DefinablePlugin {
 
   public Collection getConfigParamDescrs() {
     logger.info("Retrieving configuration parameters");
-    // FIXME: default?
     List defaultConfigParam = ListUtil.list(getConfigParamDescr(ConfigParamDescr.BASE_URL.getKey()));
     List descrList = (List)definitionMap.getCollection(DefinablePlugin.KEY_PLUGIN_CONFIG_PROPS,
                                                        defaultConfigParam);
