@@ -1,5 +1,5 @@
 /*
- * $Id: TestOtherVoicesArchivalUnit.java,v 1.2 2005-10-07 16:19:55 thib_gc Exp $
+ * $Id: TestOtherVoicesArchivalUnit.java,v 1.3 2006-10-31 07:01:07 thib_gc Exp $
  */
 
 /*
@@ -177,7 +177,7 @@ public class TestOtherVoicesArchivalUnit extends LockssTestCase {
 
     String expectedStr = ROOT_URL+"lockss-volume2.html";
     DefinableArchivalUnit ovAu = makeAu(url, 2);
-    assertEquals(expectedStr, ovAu.getProperties().getString(ArchivalUnit.AU_START_URL, null));
+    assertEquals(expectedStr, ovAu.getProperties().getString(ArchivalUnit.KEY_AU_START_URL, null));
   }
 
   public void testGetUrlStems() throws Exception {

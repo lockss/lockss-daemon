@@ -1,5 +1,5 @@
 /*
- * $Id: TestProjectMuseArchivalUnit.java,v 1.2 2005-10-07 16:19:56 thib_gc Exp $
+ * $Id: TestProjectMuseArchivalUnit.java,v 1.3 2006-10-31 07:01:07 thib_gc Exp $
  */
 
 /*
@@ -187,17 +187,17 @@ public class TestProjectMuseArchivalUnit extends LockssTestCase {
     // 2 digit
     String expectedStr = ROOT_URL+"journals/"+DIR+"/v060/";
     DefinableArchivalUnit pmAu = makeAu(url, 60, DIR);
-    assertEquals(expectedStr, pmAu.getProperties().getString(ArchivalUnit.AU_START_URL, null));
+    assertEquals(expectedStr, pmAu.getProperties().getString(ArchivalUnit.KEY_AU_START_URL, null));
 
     // 3 digit
     expectedStr = ROOT_URL+"journals/"+DIR+"/v601/";
     pmAu = makeAu(url, 601, DIR);
-    assertEquals(expectedStr, pmAu.getProperties().getString(ArchivalUnit.AU_START_URL, null));
+    assertEquals(expectedStr, pmAu.getProperties().getString(ArchivalUnit.KEY_AU_START_URL, null));
 
     // 1 digit
     expectedStr = ROOT_URL+"journals/"+DIR+"/v006/";
     pmAu = makeAu(url, 6, DIR);
-    assertEquals(expectedStr, pmAu.getProperties().getString(ArchivalUnit.AU_START_URL, null));
+    assertEquals(expectedStr, pmAu.getProperties().getString(ArchivalUnit.KEY_AU_START_URL, null));
   }
 
   public void testGetUrlStems() throws Exception {

@@ -1,5 +1,5 @@
 /*
- * $Id: EDPInspectorTableModel.java,v 1.16 2006-10-25 22:15:03 thib_gc Exp $
+ * $Id: EDPInspectorTableModel.java,v 1.17 2006-10-31 07:01:06 thib_gc Exp $
  */
 
 /*
@@ -77,81 +77,84 @@ public class EDPInspectorTableModel extends AbstractTableModel
   }
 
   static final InspectorEntry[] inspectorEntries = {
-    new InspectorEntry(DefinablePlugin.CM_NAME_KEY,
+    new InspectorEntry(DefinablePlugin.KEY_PLUGIN_NAME,
                        "Plugin Name"),
-    new InspectorEntry(EditableDefinablePlugin.PLUGIN_IDENTIFIER,
+    new InspectorEntry(EditableDefinablePlugin.KEY_PLUGIN_IDENTIFIER,
                        "Plugin ID"),
-    new InspectorEntry(DefinablePlugin.CM_VERSION_KEY,
+    new InspectorEntry(DefinablePlugin.KEY_PLUGIN_VERSION,
 		       "Plugin Version"),
-    new InspectorEntry(DefinablePlugin.CM_CONFIG_PROPS_KEY,
+    new InspectorEntry(DefinablePlugin.KEY_PLUGIN_CONFIG_PROPS,
 		       "Configuration Parameters",
                        inspectorCellEditor),
-    new InspectorEntry(DefinablePlugin.CM_NOTES_KEY,
+    new InspectorEntry(DefinablePlugin.KEY_PLUGIN_NOTES,
                        "Plugin Notes",
 		       inspectorCellEditor),
-    new InspectorEntry(DefinableArchivalUnit.AU_START_URL_KEY,
+    new InspectorEntry(DefinableArchivalUnit.KEY_AU_START_URL,
 		       "Start URL Template",
                        inspectorCellEditor),
-    new InspectorEntry(DefinableArchivalUnit.AU_NAME_KEY,
+    new InspectorEntry(DefinableArchivalUnit.KEY_AU_NAME,
                        "AU Name Template",
 		       inspectorCellEditor),
-    new InspectorEntry(DefinableArchivalUnit.AU_RULES_KEY,
+    new InspectorEntry(DefinableArchivalUnit.KEY_AU_CRAWL_RULES,
                        "Crawl Rules",
 		       inspectorCellEditor),
-    new InspectorEntry(DefinableArchivalUnit.AU_DEFAULT_PAUSE_TIME,
+    new InspectorEntry(DefinableArchivalUnit.KEY_AU_DEFAULT_PAUSE_TIME,
 		       "Pause Time Between Fetches",
                        inspectorCellEditor),
-    new InspectorEntry(DefinableArchivalUnit.AU_DEFAULT_NC_CRAWL_KEY,
+    new InspectorEntry(DefinableArchivalUnit.KEY_AU_DEFAULT_NEW_CONTENT_CRAWL_INTERVAL,
                        "New Content Crawl Interval",
                        inspectorCellEditor),
-    new InspectorEntry(DefinableArchivalUnit.AU_FILTER_SUFFIX,
-		       "Filter Class",
+    new InspectorEntry(DefinableArchivalUnit.SUFFIX_FILTER_RULE,
+		       "Filter Rules",
+                       inspectorCellEditor), 
+    new InspectorEntry(DefinableArchivalUnit.SUFFIX_FILTER_RULE,
+                       "Filter Factories",
                        inspectorCellEditor),
-    new InspectorEntry(DefinableArchivalUnit.AU_CRAWL_DEPTH,
+    new InspectorEntry(DefinableArchivalUnit.KEY_AU_CRAWL_DEPTH,
                        "Default Crawl Depth"),
-    new InspectorEntry(DefinableArchivalUnit.AU_CRAWL_WINDOW_KEY,
+    new InspectorEntry(DefinableArchivalUnit.KEY_AU_CRAWL_WINDOW,
                        "Configurable Crawl Window Class"),
-    new InspectorEntry(DefinableArchivalUnit.AU_CRAWL_WINDOW_SER_KEY,
+    new InspectorEntry(DefinableArchivalUnit.KEY_AU_CRAWL_WINDOW_SER,
                        "Crawl Window",
                        inspectorCellEditor),
-    new InspectorEntry(DefinablePlugin.CM_EXCEPTION_HANDLER_KEY,
+    new InspectorEntry(DefinablePlugin.KEY_EXCEPTION_HANDLER,
 		       "Crawl Exception Class"),
-    new InspectorEntry(DefinablePlugin.CM_EXCEPTION_LIST_KEY,
+    new InspectorEntry(DefinablePlugin.KEY_EXCEPTION_LIST,
 		       "Cache Exception Map",
                        inspectorCellEditor),
-    new InspectorEntry(DefinablePlugin.CM_REQUIRED_DAEMON_VERSION_KEY,
+    new InspectorEntry(DefinablePlugin.KEY_REQUIRED_DAEMON_VERSION,
                        "Required Daemon Version"),
-    new InspectorEntry(DefinablePlugin.CM_CRAWL_TYPE,
+    new InspectorEntry(DefinablePlugin.KEY_CRAWL_TYPE,
                        "Crawl Type",
                        crawlTypeEditor),
   };
 
   static final InspectorEntry[] requiredEntries = {
-    new InspectorEntry(DefinablePlugin.CM_NAME_KEY,
+    new InspectorEntry(DefinablePlugin.KEY_PLUGIN_NAME,
                        "Plugin Name"),
-    new InspectorEntry(EditableDefinablePlugin.PLUGIN_IDENTIFIER,
+    new InspectorEntry(EditableDefinablePlugin.KEY_PLUGIN_IDENTIFIER,
                        "Plugin ID"),
-    new InspectorEntry(DefinablePlugin.CM_VERSION_KEY,
+    new InspectorEntry(DefinablePlugin.KEY_PLUGIN_VERSION,
 		       "Plugin Version"),
-    new InspectorEntry(DefinablePlugin.CM_CONFIG_PROPS_KEY,
+    new InspectorEntry(DefinablePlugin.KEY_PLUGIN_CONFIG_PROPS,
 		       "Configuration Parameters",
                        inspectorCellEditor),
-    new InspectorEntry(DefinablePlugin.CM_NOTES_KEY,
+    new InspectorEntry(DefinablePlugin.KEY_PLUGIN_NOTES,
                        "Plugin Notes",
 		       inspectorCellEditor),
-    new InspectorEntry(DefinableArchivalUnit.AU_START_URL_KEY,
+    new InspectorEntry(DefinableArchivalUnit.KEY_AU_START_URL,
 		       "Start URL Template",
                        inspectorCellEditor),
-    new InspectorEntry(DefinableArchivalUnit.AU_NAME_KEY,
+    new InspectorEntry(DefinableArchivalUnit.KEY_AU_NAME,
                        "AU Name Template",
 		       inspectorCellEditor),
-    new InspectorEntry(DefinableArchivalUnit.AU_RULES_KEY,
+    new InspectorEntry(DefinableArchivalUnit.KEY_AU_CRAWL_RULES,
                        "Crawl Rules",
 		       inspectorCellEditor),
-    new InspectorEntry(DefinableArchivalUnit.AU_DEFAULT_PAUSE_TIME,
+    new InspectorEntry(DefinableArchivalUnit.KEY_AU_DEFAULT_PAUSE_TIME,
 		       "Pause Time Between Fetches",
                        inspectorCellEditor),
-    new InspectorEntry(DefinableArchivalUnit.AU_DEFAULT_NC_CRAWL_KEY,
+    new InspectorEntry(DefinableArchivalUnit.KEY_AU_DEFAULT_NEW_CONTENT_CRAWL_INTERVAL,
                        "New Content Crawl Interval",
                        inspectorCellEditor)
   };
@@ -221,21 +224,22 @@ public class EDPInspectorTableModel extends AbstractTableModel
   }
 
   public void setValueAt(Object obj, int rowIndex, int columnIndex) {
-    EDPCellData cellData = null;
+    EDPCellData cellData = (EDPCellData) data[rowIndex][columnIndex];
     try {
-      cellData = (EDPCellData) data[rowIndex][columnIndex];
       if (inspectorEntries[rowIndex].m_editor != inspectorCellEditor) {
-        // we handle the internal update here
-        cellData.updateStringData( (String) obj);
+        try {
+          // we handle the internal update here
+          cellData.updateStringData((String)obj);
+        }
+        catch (DynamicallyLoadedComponentException dlce) {
+          if (handleDynamicallyLoadedComponentException(parentFrame, dlce)) {
+            cellData.updateStringDataAnyway((String)obj);
+          }
+        }
       }
-      else{
+      else {
         //notifies listeners that something has changed
         cellData.updateOtherData( (String) obj);
-      }
-    }
-    catch (DynamicallyLoadedComponentException dlce) {
-      if (handleDynamicallyLoadedComponentException(parentFrame, dlce)) {
-        cellData.updateStringDataAnyway((String)obj);
       }
     }
     catch (InvalidDefinitionException ide) {

@@ -1,5 +1,5 @@
 /*
- * $Id: SamplePlugin.java,v 1.2 2006-07-18 19:14:10 tlipkis Exp $
+ * $Id: SamplePlugin.java,v 1.3 2006-10-31 07:01:07 thib_gc Exp $
  */
 
 /*
@@ -59,9 +59,9 @@ public class SamplePlugin extends DefinablePlugin {
   public void initPlugin(LockssDaemon daemon){
     //we override initPlugin largely to manually load the values that
     // should be put into the configuration map when we load it from disk
-    definitionMap.putString(CM_NAME_KEY, PLUGIN_NAME);
-    definitionMap.putString(CM_VERSION_KEY, CURRENT_VERSION);
-    definitionMap.putCollection(CM_CONFIG_PROPS_KEY,
+    definitionMap.putString(KEY_PLUGIN_NAME, PLUGIN_NAME);
+    definitionMap.putString(KEY_PLUGIN_VERSION, CURRENT_VERSION);
+    definitionMap.putCollection(KEY_PLUGIN_CONFIG_PROPS,
                                    ListUtil.list(PD_BASE, PD_VOL));
     // then call the overridden initializaton.
     super.initPlugin(daemon);

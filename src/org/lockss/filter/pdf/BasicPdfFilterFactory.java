@@ -1,5 +1,5 @@
 /*
- * $Id: BasicPdfFilterFactory.java,v 1.1 2006-09-27 17:32:35 thib_gc Exp $
+ * $Id: BasicPdfFilterFactory.java,v 1.2 2006-10-31 07:01:06 thib_gc Exp $
  */
 
 /*
@@ -45,9 +45,9 @@ import org.lockss.util.*;
  * following key:
  * <code>PdfUtil.PDF_FILTER_FACTORY_HINT_PREFIX + PdfUtil.PDF_MIME_TYPE + DefinableArchivalUnit.AU_FILTER_FACTORY_SUFFIX</code></p>
  * @author Thib Guicherd-Callin
- * @see PdfUtil#PDF_FILTER_FACTORY_HINT_PREFIX
+ * @see PdfUtil#PREFIX_PDF_FILTER_FACTORY_HINT
  * @see PdfUtil#PDF_MIME_TYPE
- * @see DefinableArchivalUnit#AU_FILTER_FACTORY_SUFFIX
+ * @see DefinableArchivalUnit#SUFFIX_FILTER_FACTORY
  */
 public class BasicPdfFilterFactory implements FilterFactory {
 

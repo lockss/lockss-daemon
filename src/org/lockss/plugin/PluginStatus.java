@@ -1,5 +1,5 @@
 /*
- * $Id: PluginStatus.java,v 1.8 2006-07-17 05:06:53 tlipkis Exp $
+ * $Id: PluginStatus.java,v 1.9 2006-10-31 07:01:06 thib_gc Exp $
  */
 
 /*
@@ -257,7 +257,7 @@ class PluginDetail extends PluginStatus implements StatusAccessor {
 					plug.getVersion()));
 
     if (plugDef != null) {
-      String notes = plugDef.getString(DefinablePlugin.CM_NOTES_KEY, null);
+      String notes = plugDef.getString(DefinablePlugin.KEY_PLUGIN_NOTES, null);
       if (notes != null) {
 	res.add(new StatusTable.SummaryInfo("Notes",
 					    ColumnDescriptor.TYPE_STRING,

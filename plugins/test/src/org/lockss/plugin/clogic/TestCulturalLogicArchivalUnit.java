@@ -1,5 +1,5 @@
 /*
- * $Id: TestCulturalLogicArchivalUnit.java,v 1.2 2005-10-07 16:19:56 thib_gc Exp $
+ * $Id: TestCulturalLogicArchivalUnit.java,v 1.3 2006-10-31 07:01:07 thib_gc Exp $
  */
 
 /*
@@ -150,7 +150,7 @@ public class TestCulturalLogicArchivalUnit extends LockssTestCase {
 
     String expectedStr = ROOT_URL+"lockss-2003.html";
     DefinableArchivalUnit clAu = makeAu(url, "2003");
-    assertEquals(expectedStr, clAu.getProperties().getString(ArchivalUnit.AU_START_URL, null));
+    assertEquals(expectedStr, clAu.getProperties().getString(ArchivalUnit.KEY_AU_START_URL, null));
   }
 
   public void testGetUrlStems() throws Exception {

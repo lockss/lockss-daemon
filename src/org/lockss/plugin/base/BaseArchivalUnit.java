@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.110 2006-10-03 22:24:13 thib_gc Exp $
+ * $Id: BaseArchivalUnit.java,v 1.111 2006-10-31 07:01:07 thib_gc Exp $
  */
 
 /*
@@ -115,14 +115,14 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   public static final String USE_CRAWL_WINDOW = "use_crawl_window";
   private static final boolean DEFAULT_USE_CRAWL_WINDOW = false;
 
-  public static final String NEW_CONTENT_CRAWL_KEY = "nc_interval";
-  public static final String PAUSE_TIME_KEY = "pause_time";
-  static final public String AU_DEFAULT_NC_CRAWL_KEY = "au_def_new_content_crawl";
-  static final public String AU_DEFAULT_PAUSE_TIME = "au_def_pause_time";
+  public static final String KEY_NEW_CONTENT_CRAWL_INTERVAL = "nc_interval";
+  public static final String KEY_PAUSE_TIME = "pause_time";
+  static final public String KEY_AU_DEFAULT_NEW_CONTENT_CRAWL_INTERVAL = "au_def_new_content_crawl";
+  static final public String KEY_AU_DEFAULT_PAUSE_TIME = "au_def_pause_time";
 
-  static final public String AU_SHORT_YEAR_PREFIX = "au_short_";
-  static final public String AU_HOST_SUFFIX = "_host";
-  static final public String AU_PATH_SUFFIX = "_path";
+  static final public String PREFIX_AU_SHORT_YEAR = "au_short_";
+  static final public String SUFFIX_AU_HOST = "_host";
+  static final public String SUFFIX_AU_PATH = "_path";
 
   public static final long
       DEFAULT_NEW_CONTENT_CRAWL_INTERVAL = 2 * Constants.WEEK;
@@ -268,31 +268,31 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 
     // get the base url
     URL baseUrl = loadConfigUrl(ConfigParamDescr.BASE_URL, config);
-    paramMap.putUrl(AU_BASE_URL, baseUrl);
+    paramMap.putUrl(KEY_AU_BASE_URL, baseUrl);
 
     // get the fetch delay
     long fetchDelay =
-      (config.containsKey(PAUSE_TIME_KEY)
-       ? Math.max(config.getTimeInterval(PAUSE_TIME_KEY, defaultFetchDelay),
+      (config.containsKey(KEY_PAUSE_TIME)
+       ? Math.max(config.getTimeInterval(KEY_PAUSE_TIME, defaultFetchDelay),
 		  minFetchDelay)
-       : paramMap.getLong(AU_FETCH_DELAY,
+       : paramMap.getLong(KEY_AU_FETCH_DELAY,
 			  Math.max(defaultFetchDelay, minFetchDelay)));
     logger.debug2("Set fetch delay to " + fetchDelay);
-    paramMap.putLong(AU_FETCH_DELAY, fetchDelay);
+    paramMap.putLong(KEY_AU_FETCH_DELAY, fetchDelay);
 
     // get the new content crawl interval
     newContentCrawlIntv =
-      (config.containsKey(NEW_CONTENT_CRAWL_KEY)
-       ? config.getTimeInterval(NEW_CONTENT_CRAWL_KEY,
+      (config.containsKey(KEY_NEW_CONTENT_CRAWL_INTERVAL)
+       ? config.getTimeInterval(KEY_NEW_CONTENT_CRAWL_INTERVAL,
 				defaultContentCrawlIntv)
-       : paramMap.getLong(AU_NEW_CRAWL_INTERVAL, defaultContentCrawlIntv));
+       : paramMap.getLong(KEY_AU_NEW_CONTENT_CRAWL_INTERVAL, defaultContentCrawlIntv));
     logger.debug2("Setting new content crawl interval to " +
 		  StringUtil.timeIntervalToString(newContentCrawlIntv));
-    paramMap.putLong(AU_NEW_CRAWL_INTERVAL, newContentCrawlIntv);
+    paramMap.putLong(KEY_AU_NEW_CONTENT_CRAWL_INTERVAL, newContentCrawlIntv);
 
     // make the start url
     startUrlString = makeStartUrl();
-    paramMap.putString(AU_START_URL, startUrlString);
+    paramMap.putString(KEY_AU_START_URL, startUrlString);
 
 
 
@@ -301,8 +301,8 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
       (config.containsKey(USE_CRAWL_WINDOW)
        ? config.getBoolean(USE_CRAWL_WINDOW, DEFAULT_USE_CRAWL_WINDOW)
        :
-       paramMap.getBoolean(AU_USE_CRAWL_WINDOW, DEFAULT_USE_CRAWL_WINDOW));
-    paramMap.putBoolean(AU_USE_CRAWL_WINDOW, useCrawlWindow);
+       paramMap.getBoolean(KEY_AU_USE_CRAWL_WINDOW, DEFAULT_USE_CRAWL_WINDOW));
+    paramMap.putBoolean(KEY_AU_USE_CRAWL_WINDOW, useCrawlWindow);
 
 
     if (CurrentConfig.getBooleanParam(PARAM_USE_CRAWL_WINDOW_BY_DEFAULT,
@@ -324,11 +324,11 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     } catch (LockssRegexpException e) {
       throw new ConfigurationException("Illegal RE", e);
     }
-    paramMap.setMapElement(AU_CRAWL_SPEC, crawlSpec);
+    paramMap.setMapElement(KEY_AU_CRAWL_SPEC, crawlSpec);
 
     //make our url normalizer
     urlNormalizer = makeUrlNormalizer();
-    paramMap.setMapElement(AU_URL_NORMALIZER, urlNormalizer);
+    paramMap.setMapElement(KEY_AU_URL_NORMALIZER, urlNormalizer);
 
     titleDbChanged();
   }
@@ -344,9 +344,9 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 	  // we store years in two formats - short and long
 	  if (descr.getType() == ConfigParamDescr.TYPE_YEAR) {
 	    int year = ((Integer)val).intValue() % 100;
-	    paramMap.putInt(AU_SHORT_YEAR_PREFIX + key, year);
+	    paramMap.putInt(PREFIX_AU_SHORT_YEAR + key, year);
 	    if (logger.isDebug3()) {
-	      logger.debug3("Inferred " + AU_SHORT_YEAR_PREFIX + key +
+	      logger.debug3("Inferred " + PREFIX_AU_SHORT_YEAR + key +
 			    " = " + year);
 	    }
 	  }
@@ -354,12 +354,12 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 	  if (descr.getType() == ConfigParamDescr.TYPE_URL) {
 	    URL url = (URL)val;
 	    if(url != null) {
-	      paramMap.putString(key + AU_HOST_SUFFIX, url.getHost());
-	      paramMap.putString(key + AU_PATH_SUFFIX, url.getPath());
+	      paramMap.putString(key + SUFFIX_AU_HOST, url.getHost());
+	      paramMap.putString(key + SUFFIX_AU_PATH, url.getPath());
 	      if (logger.isDebug3()) {
-		logger.debug3("Inferred " + key + AU_HOST_SUFFIX +
+		logger.debug3("Inferred " + key + SUFFIX_AU_HOST +
 			      " = " + url.getHost());
-		  logger.debug3("Inferred " + key + AU_PATH_SUFFIX +
+		  logger.debug3("Inferred " + key + SUFFIX_AU_PATH +
 				" = " + url.getPath());
 	      }
 	    }
@@ -384,7 +384,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
       auTitle = titleConfig.getDisplayName();
     }
     auName = makeName();
-    paramMap.putString(AU_TITLE, auTitle != null ? auTitle : auName);
+    paramMap.putString(KEY_AU_TITLE, auTitle != null ? auTitle : auName);
   }
 
   public TitleConfig getTitleConfig() {
@@ -437,7 +437,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    */
   public Collection getUrlStems() {
     try {
-      URL baseUrl = paramMap.getUrl(AU_BASE_URL,null);
+      URL baseUrl = paramMap.getUrl(KEY_AU_BASE_URL,null);
       URL stem = new URL(baseUrl.getProtocol(), baseUrl.getHost(),
                          baseUrl.getPort(), "");
       return ListUtil.list(stem.toString());
@@ -460,7 +460,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 
   public String siteNormalizeUrl(String url) {
     UrlNormalizer normmalizer =
-      (UrlNormalizer)paramMap.getMapElement(AU_URL_NORMALIZER);
+      (UrlNormalizer)paramMap.getMapElement(KEY_AU_URL_NORMALIZER);
 
     if (normmalizer != null) {
       return normmalizer.normalizeUrl(url, this);
@@ -498,12 +498,12 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 
   protected RateLimiter recomputeFetchRateLimiter(RateLimiter oldLimiter) {
     RateLimiter limit;
-    long interval = paramMap.getLong(AU_FETCH_DELAY, defaultFetchDelay);
+    long interval = paramMap.getLong(KEY_AU_FETCH_DELAY, defaultFetchDelay);
     String defaultSource =
       CurrentConfig.getParam(PARAM_DEFAULT_FETCH_RATE_LIMITER_SOURCE,
 			     DEFAULT_DEFAULT_FETCH_RATE_LIMITER_SOURCE);
     String limiterSource =
-      paramMap.getString(AU_FETCH_RATE_LIMITER_SOURCE, defaultSource);
+      paramMap.getString(KEY_AU_FETCH_RATE_LIMITER_SOURCE, defaultSource);
     if (logger.isDebug3()) logger.debug3("Limiter source: " + limiterSource);
     if ("au".equalsIgnoreCase(limiterSource)) {
       limit = getLimiterWithRate(oldLimiter, 1, interval);
@@ -522,7 +522,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
       } else if (StringUtil.startsWithIgnoreCase(limiterSource,
 						 "host:")) {
 	String param = limiterSource.substring("host:".length());
-	key = paramMap.getString(param + AU_HOST_SUFFIX);
+	key = paramMap.getString(param + SUFFIX_AU_HOST);
 	if (key != null) {
 	  key = "host:" + key;
 	}
@@ -565,7 +565,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   }
 
   public String getName() {
-    return paramMap.getString(AU_TITLE, auName);
+    return paramMap.getString(KEY_AU_TITLE, auName);
   }
 
   protected UrlNormalizer makeUrlNormalizer() {

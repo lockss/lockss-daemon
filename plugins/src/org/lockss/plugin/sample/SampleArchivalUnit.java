@@ -1,5 +1,5 @@
 /*
- * $Id: SampleArchivalUnit.java,v 1.2 2005-09-30 22:25:01 thib_gc Exp $
+ * $Id: SampleArchivalUnit.java,v 1.3 2006-10-31 07:01:07 thib_gc Exp $
  */
 
 /*
@@ -51,13 +51,13 @@ public class SampleArchivalUnit extends DefinableArchivalUnit {
   /**
    * Configuration parameter for new content crawl interval
    */
-  static final String AUPARAM_NEW_CONTENT_CRAWL = NEW_CONTENT_CRAWL_KEY;
+  static final String AUPARAM_NEW_CONTENT_CRAWL = KEY_NEW_CONTENT_CRAWL_INTERVAL;
   private static final long DEFAULT_NEW_CONTENT_CRAWL = 2 * Constants.WEEK;
 
   /**
    * Configuration parameter for pause time between fetchs.
    */
-  public static final String AUPARAM_PAUSE_TIME = PAUSE_TIME_KEY;
+  public static final String AUPARAM_PAUSE_TIME = KEY_PAUSE_TIME;
   private static final long DEFAULT_PAUSE_TIME = 10 * Constants.SECOND;
 
   protected Logger logger = Logger.getLogger("SamplePlugin");
@@ -86,7 +86,7 @@ public class SampleArchivalUnit extends DefinableArchivalUnit {
     * @return a concatenated string: <baseUrl>, vol. <vol>
     */
    protected String makeName() {
-    URL baseUrl = paramMap.getUrl(AU_BASE_URL, null);
+    URL baseUrl = paramMap.getUrl(KEY_AU_BASE_URL, null);
     StringBuffer name = new StringBuffer(baseUrl.getHost());
     name.append(", vol. ");
     name.append(volume);
@@ -101,7 +101,7 @@ public class SampleArchivalUnit extends DefinableArchivalUnit {
   protected String makeStartUrl() {
     String ret;
     StringBuffer sb = new StringBuffer();
-    sb.append(paramMap.getUrl(AU_BASE_URL, null).toString());
+    sb.append(paramMap.getUrl(KEY_AU_BASE_URL, null).toString());
     sb.append("lockss-volume");
     sb.append(volume);
     sb.append(".html");
@@ -120,7 +120,7 @@ public class SampleArchivalUnit extends DefinableArchivalUnit {
     List rules = new LinkedList();
     final int incl = CrawlRules.RE.MATCH_INCLUDE;
     final int excl = CrawlRules.RE.MATCH_EXCLUDE;
-    String base = paramMap.getUrl(AU_BASE_URL, null).toString();
+    String base = paramMap.getUrl(KEY_AU_BASE_URL, null).toString();
 
     // exclude anything which doesn't start with our base url
     rules.add(new CrawlRules.RE("^" + base, CrawlRules.RE.NO_MATCH_EXCLUDE));

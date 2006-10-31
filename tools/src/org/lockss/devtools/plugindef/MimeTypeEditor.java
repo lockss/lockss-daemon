@@ -1,5 +1,5 @@
 /*
- * $Id: FilterRulesEditor.java,v 1.10 2006-09-12 08:21:53 thib_gc Exp $
+ * $Id: MimeTypeEditor.java,v 1.1 2006-10-31 07:01:06 thib_gc Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.table.*;
 
+import org.apache.commons.lang.WordUtils;
 import org.lockss.devtools.plugindef.EditableDefinablePlugin.DynamicallyLoadedComponentException;
 import org.lockss.plugin.definable.DefinablePlugin.*;
 import org.lockss.util.Logger;
@@ -51,12 +52,79 @@ import org.lockss.util.Logger;
  *
  */
 
-public class FilterRulesEditor extends JDialog implements EDPEditor {
+public class MimeTypeEditor extends JDialog implements EDPEditor {
+  
+  public interface MimeTypeEditorBuilder {
+    
+    String getValueName();
+    
+    String getValueClassName();
+    
+    Map getMap(EditableDefinablePlugin plugin);
+    
+    void put(EditableDefinablePlugin plugin,
+             String mimeType,
+             String mimeTypeValue,
+             boolean tryDynamic)
+        throws DynamicallyLoadedComponentException, InvalidDefinitionException;
+    
+  }
+  
+  public static class FilterRuleEditorBuilder implements MimeTypeEditorBuilder {
+    
+    public String getValueName() {
+      return "filter rule";
+    }
+    
+    public String getValueClassName() {
+      return "FilterRule";
+    }
+    
+    public Map getMap(EditableDefinablePlugin plugin) {
+      return Collections.unmodifiableMap(plugin.getAuFilters());
+    }
+    
+    public void put(EditableDefinablePlugin plugin,
+                    String mimeType,
+                    String mimeTypeValue,
+                    boolean tryDynamic)
+        throws DynamicallyLoadedComponentException, InvalidDefinitionException {
+      plugin.setAuFilter(mimeType, mimeTypeValue, tryDynamic);
+    }
+    
+  }
+  
+  public static class FilterFactoryEditorBuilder implements MimeTypeEditorBuilder {
+    
+    public String getValueName() {
+      return "filter factory";
+    }
+    
+    public String getValueClassName() {
+      return "FilterFactory";
+    }
+    
+    public Map getMap(EditableDefinablePlugin plugin) {
+      return Collections.unmodifiableMap(plugin.getAuFilterFactories());
+    }
+    
+    public void put(EditableDefinablePlugin plugin,
+                    String mimeType,
+                    String mimeTypeValue,
+                    boolean tryDynamic)
+        throws DynamicallyLoadedComponentException, InvalidDefinitionException {
+      plugin.setAuFilterFactory(mimeType, mimeTypeValue, tryDynamic);
+    }
+
+  }
+  
+  protected MimeTypeEditorBuilder mimeTypeEditorBuilder;
+  
   JPanel panel1 = new JPanel();
   BorderLayout borderLayout1 = new BorderLayout();
   EDPCellData m_data;
-  FilterRulesTableModel m_model = new FilterRulesTableModel();
-  HashMap m_filters;
+  MimeTypeTableModel m_model;
+  Map m_filters;
   JPanel buttonPanel = new JPanel();
   JButton okButton = new JButton();
   JTable filtersTable = new JTable();
@@ -69,48 +137,57 @@ public class FilterRulesEditor extends JDialog implements EDPEditor {
 
   protected static Logger logger = Logger.getLogger("FilterRulesEditor");
 
-  public FilterRulesEditor(Frame frame, String title, boolean modal) {
+  public MimeTypeEditor(MimeTypeEditorBuilder mimeTypeEditorBuilder,
+                        Frame frame,
+                        String title,
+                        boolean modal) {
     super(frame, title, modal);
+    this.mimeTypeEditorBuilder = mimeTypeEditorBuilder;
+    this.m_model = new MimeTypeTableModel();
     try {
       jbInit();
       pack();
     }
     catch (Exception exc) {
-      String logMessage = "Could not set up the filter rules editor";
+      String logMessage = "Could not set up the " + mimeTypeEditorBuilder.getValueName() + " editor";
       logger.critical(logMessage, exc);
       JOptionPane.showMessageDialog(frame,
                                     logMessage,
-                                    "Filter Rules Editor",
+                                    WordUtils.capitalize(mimeTypeEditorBuilder.getValueName()) + " Editor",
                                     JOptionPane.ERROR_MESSAGE);
     }
   }
 
-  public FilterRulesEditor(Frame frame) {
-    this(frame, "Assigned Filter Rules", false);
+  public MimeTypeEditor(MimeTypeEditorBuilder mimeTypeEditorBuilder,
+                        Frame frame) {
+    this(mimeTypeEditorBuilder,
+         frame,
+         "Assigned " + WordUtils.capitalize(mimeTypeEditorBuilder.getValueName()),
+         false);
   }
 
   private void jbInit() throws Exception {
     panel1.setLayout(borderLayout1);
     okButton.setText("OK");
-    okButton.addActionListener(new FilterRulesEditor_okButton_actionAdapter(this));
+    okButton.addActionListener(new MimeTypeEditor_okButton_actionAdapter(this));
     filtersTable.setRowSelectionAllowed(true);
     filtersTable.setPreferredSize(new Dimension(418, 200));
     filtersTable.setAutoResizeMode(JTable.AUTO_RESIZE_SUBSEQUENT_COLUMNS);
     filtersTable.setCellSelectionEnabled(true);
     filtersTable.setColumnSelectionAllowed(false);
     filtersTable.setModel(m_model);
-    addButton.setToolTipText("Add a new filter for mime type.");
+    addButton.setToolTipText("Add a new " + mimeTypeEditorBuilder.getValueName() + " for a MIME type");
     addButton.setText("Add");
-    addButton.addActionListener(new FilterRulesEditor_addButton_actionAdapter(this));
+    addButton.addActionListener(new MimeTypeEditor_addButton_actionAdapter(this));
     cancelButton.setText("Cancel");
-    cancelButton.addActionListener(new FilterRulesEditor_cancelButton_actionAdapter(this));
+    cancelButton.addActionListener(new MimeTypeEditor_cancelButton_actionAdapter(this));
     deleteButton.setToolTipText("Delete the currently selected item.");
     deleteButton.setText("Delete");
-    deleteButton.addActionListener(new FilterRulesEditor_deleteButton_actionAdapter(this));
+    deleteButton.addActionListener(new MimeTypeEditor_deleteButton_actionAdapter(this));
     upButton.setText("Up");
-    upButton.addActionListener(new FilterRulesEditor_upButton_actionAdapter(this));
+    upButton.addActionListener(new MimeTypeEditor_upButton_actionAdapter(this));
     dnButton.setText("Down");
-    dnButton.addActionListener(new FilterRulesEditor_dnButton_actionAdapter(this));
+    dnButton.addActionListener(new MimeTypeEditor_dnButton_actionAdapter(this));
     panel1.setPreferredSize(new Dimension(418, 200));
     jScrollPane1.setMinimumSize(new Dimension(200, 80));
     jScrollPane1.setOpaque(true);
@@ -134,32 +211,33 @@ public class FilterRulesEditor extends JDialog implements EDPEditor {
    */
   public void setCellData(EDPCellData data) {
     m_data = data;
-    m_filters = m_data.getPlugin().getAuFilters();
+    m_filters = mimeTypeEditorBuilder.getMap(m_data.getPlugin());
     m_model.updateTableData();
   }
 
   void okButton_actionPerformed(ActionEvent e) {
     int num_rows = filtersTable.getRowCount();
     EditableDefinablePlugin edp = m_data.getPlugin();
-    for (int row =0; row < num_rows; row++) {
-      String mime_type = (String)filtersTable.getValueAt(row, 0);
-      String filter = (String)filtersTable.getValueAt(row, 1);
+    for (int row = 0 ; row < num_rows ; row++) {
+      String mimeType = (String)filtersTable.getValueAt(row, 0);
+      String mimeTypeValue = (String)filtersTable.getValueAt(row, 1);
 
       try {
-        edp.setAuFilter(mime_type, filter, true);
+        mimeTypeEditorBuilder.put(edp, mimeType, mimeTypeValue, true);
       }
       catch (DynamicallyLoadedComponentException dlce) {
-        String logMessage = "Failed to set the filter for MIME type " +
-                        mime_type + " to " + filter;
+        String logMessage = "Failed to set the " + mimeTypeEditorBuilder.getValueName()
+                            + " for MIME type " + mimeType + " to " + mimeTypeValue;
         logger.error(logMessage, dlce);
         if (EDPInspectorTableModel.handleDynamicallyLoadedComponentException(this, dlce)) {
           logger.debug(logMessage + ": overruled by user");
-          edp.setAuFilter(mime_type, filter, false);
+          mimeTypeEditorBuilder.put(edp, mimeType, mimeTypeValue, false);
         }
       }
       catch (InvalidDefinitionException ex) {
-        JOptionPane.showMessageDialog(this, ex.getMessage(),
-                                      "Save Filter Warning",
+        JOptionPane.showMessageDialog(this,
+                                      ex.getMessage(),
+                                      WordUtils.capitalize(mimeTypeEditorBuilder.getValueName()) + " Warning",
                                       JOptionPane.WARNING_MESSAGE);
       }
     }
@@ -189,9 +267,17 @@ public class FilterRulesEditor extends JDialog implements EDPEditor {
     m_model.moveData(row, row-1);
   }
 
-  class FilterRulesTableModel extends AbstractTableModel {
-    String[] columnNames = {"Mime Type", "Filter Class"};
-    Class[] columnClass = {String.class, String.class};
+  class MimeTypeTableModel extends AbstractTableModel {
+
+    public MimeTypeTableModel() {
+      columnNames = new String[] {
+          "MIME Type",
+          mimeTypeEditorBuilder.getValueClassName() + " Class Name",
+      };
+    }
+    
+    String[] columnNames;
+    Class[] columnClass = { String.class, String.class, };
     Vector rowData = new Vector();
 
 
@@ -233,7 +319,7 @@ public class FilterRulesEditor extends JDialog implements EDPEditor {
       // we need to get the stored filters
       Object[] row_data;
       rowData.removeAllElements();
-      for(Iterator it = m_filters.keySet().iterator(); it.hasNext();) {
+      for (Iterator it = m_filters.keySet().iterator() ; it.hasNext() ; ) {
         row_data = new Object[2];
         row_data[0] = it.next();
         row_data[1] = m_filters.get(row_data[0]);
@@ -258,12 +344,11 @@ public class FilterRulesEditor extends JDialog implements EDPEditor {
       Object[] row_data = new Object[2];
       if (rowData.size() < 1) { // add a new html filter
         row_data[0] = "text/html";
-        row_data[1] = "Replace with Filter class name";
       }
       else {
-        row_data[0] = "Enter Mime type";
-        row_data[1] = "Replace with Filter class Name";
+        row_data[0] = "Enter MIME type";
       }
+      row_data[1] = "Replace with " + mimeTypeEditorBuilder.getValueClassName() + " class name";
       logger.debug3("Adding new row");
       rowData.add(row_data);
       fireTableDataChanged();
@@ -290,10 +375,10 @@ public class FilterRulesEditor extends JDialog implements EDPEditor {
 
 
 
-class FilterRulesEditor_okButton_actionAdapter implements java.awt.event.ActionListener {
-  FilterRulesEditor adaptee;
+class MimeTypeEditor_okButton_actionAdapter implements java.awt.event.ActionListener {
+  MimeTypeEditor adaptee;
 
-  FilterRulesEditor_okButton_actionAdapter(FilterRulesEditor adaptee) {
+  MimeTypeEditor_okButton_actionAdapter(MimeTypeEditor adaptee) {
     this.adaptee = adaptee;
   }
   public void actionPerformed(ActionEvent e) {
@@ -301,10 +386,10 @@ class FilterRulesEditor_okButton_actionAdapter implements java.awt.event.ActionL
   }
 }
 
-class FilterRulesEditor_addButton_actionAdapter implements java.awt.event.ActionListener {
-  FilterRulesEditor adaptee;
+class MimeTypeEditor_addButton_actionAdapter implements java.awt.event.ActionListener {
+  MimeTypeEditor adaptee;
 
-  FilterRulesEditor_addButton_actionAdapter(FilterRulesEditor adaptee) {
+  MimeTypeEditor_addButton_actionAdapter(MimeTypeEditor adaptee) {
     this.adaptee = adaptee;
   }
   public void actionPerformed(ActionEvent e) {
@@ -312,10 +397,10 @@ class FilterRulesEditor_addButton_actionAdapter implements java.awt.event.Action
   }
 }
 
-class FilterRulesEditor_deleteButton_actionAdapter implements java.awt.event.ActionListener {
-  FilterRulesEditor adaptee;
+class MimeTypeEditor_deleteButton_actionAdapter implements java.awt.event.ActionListener {
+  MimeTypeEditor adaptee;
 
-  FilterRulesEditor_deleteButton_actionAdapter(FilterRulesEditor adaptee) {
+  MimeTypeEditor_deleteButton_actionAdapter(MimeTypeEditor adaptee) {
     this.adaptee = adaptee;
   }
   public void actionPerformed(ActionEvent e) {
@@ -323,10 +408,10 @@ class FilterRulesEditor_deleteButton_actionAdapter implements java.awt.event.Act
   }
 }
 
-class FilterRulesEditor_cancelButton_actionAdapter implements java.awt.event.ActionListener {
-  FilterRulesEditor adaptee;
+class MimeTypeEditor_cancelButton_actionAdapter implements java.awt.event.ActionListener {
+  MimeTypeEditor adaptee;
 
-  FilterRulesEditor_cancelButton_actionAdapter(FilterRulesEditor adaptee) {
+  MimeTypeEditor_cancelButton_actionAdapter(MimeTypeEditor adaptee) {
     this.adaptee = adaptee;
   }
   public void actionPerformed(ActionEvent e) {
@@ -334,10 +419,10 @@ class FilterRulesEditor_cancelButton_actionAdapter implements java.awt.event.Act
   }
 }
 
-class FilterRulesEditor_dnButton_actionAdapter implements java.awt.event.ActionListener {
-  FilterRulesEditor adaptee;
+class MimeTypeEditor_dnButton_actionAdapter implements java.awt.event.ActionListener {
+  MimeTypeEditor adaptee;
 
-  FilterRulesEditor_dnButton_actionAdapter(FilterRulesEditor adaptee) {
+  MimeTypeEditor_dnButton_actionAdapter(MimeTypeEditor adaptee) {
     this.adaptee = adaptee;
   }
   public void actionPerformed(ActionEvent e) {
@@ -345,10 +430,10 @@ class FilterRulesEditor_dnButton_actionAdapter implements java.awt.event.ActionL
   }
 }
 
-class FilterRulesEditor_upButton_actionAdapter implements java.awt.event.ActionListener {
-  FilterRulesEditor adaptee;
+class MimeTypeEditor_upButton_actionAdapter implements java.awt.event.ActionListener {
+  MimeTypeEditor adaptee;
 
-  FilterRulesEditor_upButton_actionAdapter(FilterRulesEditor adaptee) {
+  MimeTypeEditor_upButton_actionAdapter(MimeTypeEditor adaptee) {
     this.adaptee = adaptee;
   }
   public void actionPerformed(ActionEvent e) {

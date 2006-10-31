@@ -1,5 +1,5 @@
 /*
- * $Id: PdfUtil.java,v 1.17 2006-10-20 04:12:51 thib_gc Exp $
+ * $Id: PdfUtil.java,v 1.18 2006-10-31 07:01:06 thib_gc Exp $
  */
 
 /*
@@ -405,9 +405,9 @@ return success;
   /**
    * <p>A suggested prefix for non-definitional parameters conveying
    * hints about PDF filter factories.</p>
-   * @see DefinableArchivalUnit#AU_FILTER_FACTORY_SUFFIX
+   * @see DefinableArchivalUnit#SUFFIX_FILTER_FACTORY
    */
-  public static final String PDF_FILTER_FACTORY_HINT_PREFIX = "hint_";
+  public static final String PREFIX_PDF_FILTER_FACTORY_HINT = "hint_";
 
   /**
    * <p>The PDF MIME type.</p>
@@ -740,7 +740,7 @@ return success;
   }
 
   public static OutputDocumentTransform getOutputDocumentTransform(ArchivalUnit au) {
-    String key = PDF_FILTER_FACTORY_HINT_PREFIX + PDF_MIME_TYPE + DefinableArchivalUnit.AU_FILTER_FACTORY_SUFFIX;
+    String key = PREFIX_PDF_FILTER_FACTORY_HINT + PDF_MIME_TYPE + DefinableArchivalUnit.SUFFIX_FILTER_FACTORY;
     String className = AuUtil.getTitleAttribute(au, key);
     if (className == null) {
       logger.debug2("No PDF filter factory hint");

@@ -1,5 +1,5 @@
 /*
- * $Id: PluginDefiner.java,v 1.19 2006-09-11 23:32:45 thib_gc Exp $
+ * $Id: PluginDefiner.java,v 1.20 2006-10-31 07:01:06 thib_gc Exp $
  */
 
 /*
@@ -165,7 +165,7 @@ public class PluginDefiner extends JFrame {
     jTable1.setBorder(BorderFactory.createEtchedBorder());
     jTable1.setMinimumSize(new Dimension(50, 200));
     jTable1.setOpaque(true);
-    jTable1.setPreferredSize(new Dimension(360, 340));
+    jTable1.setPreferredSize(new Dimension(360, 460));
     jTable1.setAutoResizeMode(JTable.AUTO_RESIZE_ALL_COLUMNS);
     jTable1.setCellSelectionEnabled(true);
     jTable1.setColumnSelectionAllowed(false);
@@ -174,7 +174,7 @@ public class PluginDefiner extends JFrame {
     jTable1.setRowHeight(20);
 
     contentPane.setMinimumSize(new Dimension(80, 200));
-    contentPane.setPreferredSize(new Dimension(380, 340));
+    contentPane.setPreferredSize(new Dimension(400, 500));
     jMenuPlugin.setMnemonic('P');
     jMenuPlugin.setText("Plugin");
     rulesTestMenuItem.setMnemonic('C');

@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.74 2006-09-21 05:16:44 tlipkis Exp $
+ * $Id: TestPluginManager.java,v 1.75 2006-10-31 07:01:06 thib_gc Exp $
  */
 
 /*
@@ -64,7 +64,7 @@ public class TestPluginManager extends LockssTestCase {
     props1.setProperty(MockPlugin.CONFIG_PROP_2, "val2");
     props2.setProperty(MockPlugin.CONFIG_PROP_1, "val1");
     props2.setProperty(MockPlugin.CONFIG_PROP_2, "va.l3");//auid contains a dot
-    props3.setProperty(BaseArchivalUnit.NEW_CONTENT_CRAWL_KEY, "3d");
+    props3.setProperty(BaseArchivalUnit.KEY_NEW_CONTENT_CRAWL_INTERVAL, "3d");
   }
 
   static String mauauidKey1 = PropUtil.propsToCanonicalEncodedString(props1);
@@ -330,7 +330,7 @@ public class TestPluginManager extends LockssTestCase {
 
   public void testAuConfigWithGlobalEntryForNonExistentAU() throws Exception {
     Properties p = new Properties();
-    p.setProperty(p1a3param+BaseArchivalUnit.NEW_CONTENT_CRAWL_KEY, "2d");
+    p.setProperty(p1a3param+BaseArchivalUnit.KEY_NEW_CONTENT_CRAWL_INTERVAL, "2d");
     doConfig(p);
     MockPlugin mpi = (MockPlugin)mgr.getPlugin(mockPlugKey);
     // plugin should be registered

@@ -1,5 +1,5 @@
 /*
- * $Id: TestAbsintheArchivalUnit.java,v 1.4 2006-07-17 07:42:42 tlipkis Exp $
+ * $Id: TestAbsintheArchivalUnit.java,v 1.5 2006-10-31 07:01:07 thib_gc Exp $
  */
 
 /*
@@ -186,7 +186,7 @@ public class TestAbsintheArchivalUnit extends LockssTestCase {
     // 4 digit
     String expected = ROOT_URL+"archives04.htm";
     DefinableArchivalUnit pmAu = makeAu(url, "2004");
-    assertEquals(expected, pmAu.getProperties().getString(ArchivalUnit.AU_START_URL, null));
+    assertEquals(expected, pmAu.getProperties().getString(ArchivalUnit.KEY_AU_START_URL, null));
   }
 
   public void testGetUrlStems() throws Exception {

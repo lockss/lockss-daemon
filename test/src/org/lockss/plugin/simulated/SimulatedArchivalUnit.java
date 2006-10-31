@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedArchivalUnit.java,v 1.57 2006-07-17 05:12:40 tlipkis Exp $
+ * $Id: SimulatedArchivalUnit.java,v 1.58 2006-10-31 07:01:06 thib_gc Exp $
  */
 
 /*
@@ -328,15 +328,15 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
       throws ConfigurationException {
     try {
       URL baseUrl = new URL(SIMULATED_URL_START);
-      paramMap.putUrl(AU_BASE_URL, baseUrl);
+      paramMap.putUrl(KEY_AU_BASE_URL, baseUrl);
     }
     catch (MalformedURLException murle) {
       throw new ConfigurationException("Bad URL for " + SIMULATED_URL_START,
 				       murle);
     }
-    newContentCrawlIntv = config.getTimeInterval(NEW_CONTENT_CRAWL_KEY,
+    newContentCrawlIntv = config.getTimeInterval(KEY_NEW_CONTENT_CRAWL_INTERVAL,
                                                  defaultContentCrawlIntv);
-    paramMap.putLong(AU_NEW_CRAWL_INTERVAL, newContentCrawlIntv);
+    paramMap.putLong(KEY_AU_NEW_CONTENT_CRAWL_INTERVAL, newContentCrawlIntv);
     try {
       CrawlRule rule1 =
 	new CrawlRules.RE("xxxexclude", CrawlRules.RE.MATCH_EXCLUDE);
@@ -349,11 +349,11 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
     } catch (LockssRegexpException e) {
       throw new ConfigurationException(e.toString());
     }
-    paramMap.setMapElement(AU_CRAWL_SPEC, crawlSpec);
+    paramMap.setMapElement(KEY_AU_CRAWL_SPEC, crawlSpec);
     startUrlString = makeStartUrl();
-    paramMap.putString(AU_START_URL, startUrlString);
+    paramMap.putString(KEY_AU_START_URL, startUrlString);
     auName = makeName();
-    paramMap.putString(AU_TITLE, auName);
+    paramMap.putString(KEY_AU_TITLE, auName);
 
     titleDbChanged();
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: EDPCellData.java,v 1.16 2006-10-25 22:15:03 thib_gc Exp $
+ * $Id: EDPCellData.java,v 1.17 2006-10-31 07:01:06 thib_gc Exp $
  */
 
 /*
@@ -57,60 +57,63 @@ public class EDPCellData {
   EDPCellData(EditableDefinablePlugin edp, String key){
     this(edp, key, null, null);
 
-    if(key.equals(DefinablePlugin.CM_NAME_KEY)) {
+    if(key.equals(DefinablePlugin.KEY_PLUGIN_NAME)) {
       m_data = edp.getPluginName();
     }
-    else if(key.equals(EditableDefinablePlugin.PLUGIN_IDENTIFIER)) {
+    else if(key.equals(EditableDefinablePlugin.KEY_PLUGIN_IDENTIFIER)) {
       m_data = edp.getPluginIdentifier();
     }
-    else if(key.equals(DefinablePlugin.CM_VERSION_KEY)) {
+    else if(key.equals(DefinablePlugin.KEY_PLUGIN_VERSION)) {
       m_data = edp.getPluginVersion();
     }
-    else if(key.equals(DefinablePlugin.CM_CONFIG_PROPS_KEY)) {
+    else if(key.equals(DefinablePlugin.KEY_PLUGIN_CONFIG_PROPS)) {
       m_data = edp.getConfigParamDescrs();
     }
-    else if(key.equals(DefinablePlugin.CM_NOTES_KEY)) {
+    else if(key.equals(DefinablePlugin.KEY_PLUGIN_NOTES)) {
       m_data = edp.getPluginNotes();
     }
-    else if(key.equals(DefinableArchivalUnit.AU_START_URL_KEY)) {
+    else if(key.equals(DefinableArchivalUnit.KEY_AU_START_URL)) {
       m_data = new PrintfTemplate(edp.getAuStartUrl());
     }
-    else if(key.equals(DefinableArchivalUnit.AU_NAME_KEY)) {
+    else if(key.equals(DefinableArchivalUnit.KEY_AU_NAME)) {
       m_data = new PrintfTemplate(edp.getAuName());
     }
-    else if(key.equals(DefinableArchivalUnit.AU_RULES_KEY)) {
+    else if(key.equals(DefinableArchivalUnit.KEY_AU_CRAWL_RULES)) {
       m_data = edp.getAuCrawlRules();
     }
-    else if(key.equals(DefinableArchivalUnit.AU_DEFAULT_PAUSE_TIME)) {
+    else if(key.equals(DefinableArchivalUnit.KEY_AU_DEFAULT_PAUSE_TIME)) {
       m_data = new Long(edp.getAuPauseTime());
       m_displayString = TimeEditor.millisToString(edp.getAuPauseTime());
     }
-    else if(key.equals(DefinableArchivalUnit.AU_DEFAULT_NC_CRAWL_KEY)) {
+    else if(key.equals(DefinableArchivalUnit.KEY_AU_DEFAULT_NEW_CONTENT_CRAWL_INTERVAL)) {
       m_data = new Long(edp.getNewContentCrawlInterval());
       m_displayString = TimeEditor.millisToString(edp.getNewContentCrawlInterval());
     }
-    else if(key.equals(DefinableArchivalUnit.AU_FILTER_SUFFIX)) {
+    else if(key.equals(DefinableArchivalUnit.SUFFIX_FILTER_RULE)) {
       m_data = edp.getAuFilters();
     }
-    else if(key.equals(DefinableArchivalUnit.AU_CRAWL_DEPTH)) {
+    else if(key.equals(DefinableArchivalUnit.SUFFIX_FILTER_FACTORY)) {
+      m_data = edp.getAuFilterFactories();
+    }
+    else if(key.equals(DefinableArchivalUnit.KEY_AU_CRAWL_DEPTH)) {
       m_data = new Integer(edp.getAuCrawlDepth());
     }
-    else if(key.equals(DefinableArchivalUnit.AU_CRAWL_WINDOW_KEY)) {
+    else if(key.equals(DefinableArchivalUnit.KEY_AU_CRAWL_WINDOW)) {
       m_data = edp.getAuCrawlWindow();
     }
-    else if(key.equals(DefinableArchivalUnit.AU_CRAWL_WINDOW_SER_KEY)) {
+    else if(key.equals(DefinableArchivalUnit.KEY_AU_CRAWL_WINDOW_SER)) {
       m_data = edp.getAuCrawlWindowSer();
     }
-    else if(key.equals(DefinablePlugin.CM_EXCEPTION_HANDLER_KEY)) {
+    else if(key.equals(DefinablePlugin.KEY_EXCEPTION_HANDLER)) {
       m_data = edp.getPluginExceptionHandler();
     }
-    else if(key.equals(DefinablePlugin.CM_EXCEPTION_LIST_KEY)) {
+    else if(key.equals(DefinablePlugin.KEY_EXCEPTION_LIST)) {
       m_data = edp.getSingleExceptionHandlers();
     }
-    else if (key.equals(DefinablePlugin.CM_REQUIRED_DAEMON_VERSION_KEY)) {
+    else if (key.equals(DefinablePlugin.KEY_REQUIRED_DAEMON_VERSION)) {
       m_data = edp.getRequiredDaemonVersion();
     }
-    else if(key.equals(DefinablePlugin.CM_CRAWL_TYPE)) {
+    else if(key.equals(DefinablePlugin.KEY_CRAWL_TYPE)) {
       m_data = edp.getCrawlType();
     }
   }
@@ -164,7 +167,7 @@ public class EDPCellData {
 	m_displayString = ELLIPSIS;
       }
       else if (m_data == null) {
-	  if(m_key.equals(DefinableArchivalUnit.AU_CRAWL_WINDOW_KEY))
+	  if(m_key.equals(DefinableArchivalUnit.KEY_AU_CRAWL_WINDOW))
 	      m_displayString = ELLIPSIS;
 	  else
 	      m_displayString = "NONE";
@@ -180,10 +183,10 @@ public class EDPCellData {
     if (m_plugin == null || m_key == null)return;
     m_data = template;
     m_displayString = template.getViewableTemplate();
-    if (m_key.equals(DefinableArchivalUnit.AU_NAME_KEY)) {
+    if (m_key.equals(DefinableArchivalUnit.KEY_AU_NAME)) {
       m_plugin.setAuName(template.getViewableTemplate());
     }
-    else if (m_key.equals(DefinableArchivalUnit.AU_START_URL_KEY)) {
+    else if (m_key.equals(DefinableArchivalUnit.KEY_AU_START_URL)) {
       m_plugin.setAuStartUrl(template.getViewableTemplate());
     }
 
@@ -194,15 +197,15 @@ public class EDPCellData {
     if (m_plugin == null || m_key == null || data == null) {
       return;
     }
-    else if (m_key.equals(DefinableArchivalUnit.AU_CRAWL_WINDOW_KEY)) {
+    else if (m_key.equals(DefinableArchivalUnit.KEY_AU_CRAWL_WINDOW)) {
       m_data = data;
       m_plugin.setAuCrawlWindow((String)m_data, false);
     }
-    else if (m_key.equals(DefinablePlugin.CM_EXCEPTION_HANDLER_KEY)) {
+    else if (m_key.equals(DefinablePlugin.KEY_EXCEPTION_HANDLER)) {
       m_data = data;
       m_plugin.setPluginExceptionHandler((String)m_data, false);
     }
-
+    
     notifyListenersOfChange();
   }
 
@@ -210,50 +213,50 @@ public class EDPCellData {
     if (m_plugin == null || m_key == null || data == null) {
       return;
     }
-    else if(m_key.equals(DefinablePlugin.CM_NAME_KEY)) {
+    else if(m_key.equals(DefinablePlugin.KEY_PLUGIN_NAME)) {
       m_data = data;
       m_plugin.setPluginName((String)m_data);
     }
-    else if(m_key.equals(EditableDefinablePlugin.PLUGIN_IDENTIFIER)) {
+    else if(m_key.equals(EditableDefinablePlugin.KEY_PLUGIN_IDENTIFIER)) {
       m_data = data;
       m_plugin.setPluginIdentifier((String)m_data);
     }
-    else if(m_key.equals(DefinablePlugin.CM_VERSION_KEY)) {
+    else if(m_key.equals(DefinablePlugin.KEY_PLUGIN_VERSION)) {
       m_data = data;
       m_plugin.setPluginVersion((String)m_data);
     }
-    else if(m_key.equals(DefinablePlugin.CM_NOTES_KEY)) {
+    else if(m_key.equals(DefinablePlugin.KEY_PLUGIN_NOTES)) {
       m_data = data;
       m_plugin.setPluginNotes((String)m_data);
       m_displayString = data;
     }
-    else if(m_key.equals(DefinableArchivalUnit.AU_CRAWL_DEPTH)) {
+    else if(m_key.equals(DefinableArchivalUnit.KEY_AU_CRAWL_DEPTH)) {
       m_data = new Integer(data);
       m_plugin.setAuCrawlDepth(((Integer)m_data).intValue());
     }
-    else if(m_key.equals(DefinableArchivalUnit.AU_CRAWL_WINDOW_KEY)) {
+    else if(m_key.equals(DefinableArchivalUnit.KEY_AU_CRAWL_WINDOW)) {
       m_data = data;
       m_plugin.setAuCrawlWindow((String)m_data, true);
     }
-    else if(m_key.equals(DefinableArchivalUnit.AU_DEFAULT_PAUSE_TIME)) {
+    else if(m_key.equals(DefinableArchivalUnit.KEY_AU_DEFAULT_PAUSE_TIME)) {
       m_data = new Long(data);
       m_plugin.setAuPauseTime(((Long)m_data).longValue());
       m_displayString = TimeEditor.millisToString(((Long)m_data).longValue());
     }
-    else if(m_key.equals(DefinableArchivalUnit.AU_DEFAULT_NC_CRAWL_KEY)) {
+    else if(m_key.equals(DefinableArchivalUnit.KEY_AU_DEFAULT_NEW_CONTENT_CRAWL_INTERVAL)) {
       m_data = new Long(data);
       m_plugin.setNewContentCrawlInterval(((Long) m_data).longValue());
       m_displayString = TimeEditor.millisToString(((Long)m_data).longValue());
     }
-    else if(m_key.equals(DefinablePlugin.CM_EXCEPTION_HANDLER_KEY)) {
+    else if(m_key.equals(DefinablePlugin.KEY_EXCEPTION_HANDLER)) {
       m_data = data;
       m_plugin.setPluginExceptionHandler((String)m_data, true);
     }
-    else if(m_key.equals(DefinablePlugin.CM_REQUIRED_DAEMON_VERSION_KEY)) {
+    else if(m_key.equals(DefinablePlugin.KEY_REQUIRED_DAEMON_VERSION)) {
       m_data = data;
       m_plugin.setRequiredDaemonVersion((String)m_data);
     }
-    else if(m_key.equals(DefinablePlugin.CM_CRAWL_TYPE)) {
+    else if(m_key.equals(DefinablePlugin.KEY_CRAWL_TYPE)) {
       m_data = data;
       m_plugin.setCrawlType((String)m_data);
     }

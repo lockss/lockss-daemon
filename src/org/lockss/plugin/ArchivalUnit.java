@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.36 2006-09-16 22:55:22 tlipkis Exp $
+ * $Id: ArchivalUnit.java,v 1.37 2006-10-31 07:01:06 thib_gc Exp $
  */
 
 /*
@@ -53,18 +53,18 @@ import org.lockss.plugin.base.*;
  * {@link BaseArchivalUnit}).
  */
 public interface ArchivalUnit {
-  public String AU_BASE_URL  = "au_base_url";
-  public String AU_FETCH_DELAY = "au_fetch_delay";
-  public String AU_FETCH_RATE_LIMITER_SOURCE = "au_fetch_rate_limiter_source";
-  public String AU_USE_CRAWL_WINDOW = "au_use_crawl_window";
-  public String AU_NEW_CRAWL_INTERVAL = "au_new_crawl_interval";
-  public String AU_START_URL = "au_start_url";
-  public String AU_CRAWL_SPEC = "au_crawl_spec";
-  public String AU_URL_NORMALIZER = "au_url_normalizer";
-  public String AU_MAX_SIZE_KEY = "au_maxsize";
-  public String AU_MAX_FILE_SIZE_KEY = "au_max_file_size";
-  public String AU_TITLE = "au_title";
-
+  
+  static final String KEY_AU_BASE_URL  = "au_base_url";
+  static final String KEY_AU_FETCH_DELAY = "au_fetch_delay";
+  static final String KEY_AU_FETCH_RATE_LIMITER_SOURCE = "au_fetch_rate_limiter_source";
+  static final String KEY_AU_USE_CRAWL_WINDOW = "au_use_crawl_window";
+  static final String KEY_AU_NEW_CONTENT_CRAWL_INTERVAL = "au_new_crawl_interval";
+  static final String KEY_AU_START_URL = "au_start_url";
+  static final String KEY_AU_CRAWL_SPEC = "au_crawl_spec";
+  static final String KEY_AU_URL_NORMALIZER = "au_url_normalizer";
+  static final String KEY_AU_MAX_SIZE = "au_maxsize";
+  static final String KEY_AU_MAX_FILE_SIZE = "au_max_file_size";
+  static final String KEY_AU_TITLE = "au_title";
 
   /**
    * Return the Aus properties

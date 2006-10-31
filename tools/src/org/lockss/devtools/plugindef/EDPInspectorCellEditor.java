@@ -1,5 +1,5 @@
 /*
- * $Id: EDPInspectorCellEditor.java,v 1.11 2006-10-25 22:15:03 thib_gc Exp $
+ * $Id: EDPInspectorCellEditor.java,v 1.12 2006-10-31 07:01:06 thib_gc Exp $
  */
 
 /*
@@ -49,36 +49,38 @@ import java.awt.*;
 public class EDPInspectorCellEditor extends AbstractCellEditor
   implements TableCellEditor, ActionListener {
 
-  protected static final String PICKER = "picker";
-  protected static final String NOTES = "notes";
-  protected static final String AUNAME = "auname";
-  protected static final String STARTURL = "starturl";
-  protected static final String CRAWLRULE = "rules";
-  protected static final String CRAWLWINDOWSER = "windowser";
-  protected static final String FILTERS = "filters";
-  protected static final String EXCEPTIONS = "exceptions";
-  protected static final String PAUSETIME = "pausetime";
-  protected static final String CRAWLINTV = "crawlinterval";
+  protected static final String BUTTON_PARAMS = "params";
+  protected static final String BUTTON_NOTES = "notes";
+  protected static final String BUTTON_STARTURL = "starturl";
+  protected static final String BUTTON_AUNAME = "auname";
+  protected static final String BUTTON_CRAWLRULES = "rules";
+  protected static final String BUTTON_PAUSETIME = "pausetime";
+  protected static final String BUTTON_CRAWLINTV = "crawlinterval";
+  protected static final String BUTTON_FILTERRULES = "filterrules";
+  protected static final String BUTTON_FILTERFACTORIES = "filterfactories";
+  protected static final String BUTTON_CRAWLWINDOWSER = "windowser";
+  protected static final String BUTTON_EXCEPTIONS = "exceptions";
 
 
-  protected static final int PLUGIN_NAME = 0;
-  protected static final int PLUGIN_ID = 1;
-  protected static final int PLUGIN_VERSION = 2;
-  protected static final int PLUGIN_PARAMS = 3;
-  protected static final int PLUGIN_NOTES = 4;
-  protected static final int PLUGIN_START_URL = 5;
-  protected static final int PLUGIN_AUNAME = 6;
-  protected static final int PLUGIN_CRAWLRULES = 7;
-  protected static final int PLUGIN_PAUSETIME = 8;
-  protected static final int PLUGIN_CRAWLINTV = 9;
-  protected static final int PLUGIN_FILTER = 10;
-  protected static final int PLUGIN_CRAWLDEPTH = 11;
-  protected static final int PLUGIN_CRAWLWINDOW = 12;
-  protected static final int PLUGIN_CRAWLWINDOWSER = 13;
-  protected static final int PLUGIN_EXCEPTION = 14;
-  protected static final int PLUGIN_EXMAP = 15;
-  protected static final int PLUGIN_REQUIREDDAEMONVERSION = 16;
-  protected static final int NUMEDITORS = 17;
+  protected static final int INDEX_NAME = 0;
+  protected static final int INDEX_ID = 1;
+  protected static final int INDEX_VERSION = 2;
+  protected static final int INDEX_PARAMS = 3;
+  protected static final int INDEX_NOTES = 4;
+  protected static final int INDEX_STARTURL = 5;
+  protected static final int INDEX_AUNAME = 6;
+  protected static final int INDEX_CRAWLRULES = 7;
+  protected static final int INDEX_PAUSETIME = 8;
+  protected static final int INDEX_CRAWLINTV = 9;
+  protected static final int INDEX_FILTERRULES = 10;
+  protected static final int INDEX_FILTERFACTORIES = 11;
+  protected static final int INDEX_CRAWLDEPTH = 12;
+  protected static final int INDEX_CRAWLWINDOW = 13;
+  protected static final int INDEX_CRAWLWINDOWSER = 14;
+  protected static final int INDEX_EXCEPTIONS = 15;
+  protected static final int INDEX_EXMAP = 16;
+  protected static final int INDEX_REQUIREDDAEMONVERSION = 17;
+  protected static final int NUMEDITORS = 18;
 
   protected CellEditorEntry[] editorEntries;
 
@@ -93,49 +95,55 @@ public class EDPInspectorCellEditor extends AbstractCellEditor
     editorEntries = new CellEditorEntry[NUMEDITORS];
 
     // configuration parameters
-    editorEntries[PLUGIN_PARAMS] =
-      new CellEditorEntry(PICKER, new ConfigParamDescrPicker(parentFrame),
-			  makeButton(PICKER));
+    editorEntries[INDEX_PARAMS] =
+      new CellEditorEntry(BUTTON_PARAMS, new ConfigParamDescrPicker(parentFrame),
+			  makeButton(BUTTON_PARAMS));
 
     // plugin notes
-    editorEntries[PLUGIN_NOTES] =
-      new CellEditorEntry(NOTES, new NotesEditor(parentFrame, "Plugin Notes"),
-			  makeButton(NOTES));
+    editorEntries[INDEX_NOTES] =
+      new CellEditorEntry(BUTTON_NOTES, new NotesEditor(parentFrame, "Plugin Notes"),
+			  makeButton(BUTTON_NOTES));
 
     // start url template
-    editorEntries[PLUGIN_START_URL] =
-      new CellEditorEntry(STARTURL,
+    editorEntries[INDEX_STARTURL] =
+      new CellEditorEntry(BUTTON_STARTURL,
 			  new PrintfEditor(parentFrame,"Starting Url"),
-			  makeButton(STARTURL));
+			  makeButton(BUTTON_STARTURL));
     // au name template
-    editorEntries[PLUGIN_AUNAME] =
-      new CellEditorEntry(AUNAME,
+    editorEntries[INDEX_AUNAME] =
+      new CellEditorEntry(BUTTON_AUNAME,
 			  new PrintfEditor(parentFrame, "AU Name"),
-			  makeButton(AUNAME));
+			  makeButton(BUTTON_AUNAME));
     // crawl rules
-    editorEntries[PLUGIN_CRAWLRULES] =
-      new CellEditorEntry(CRAWLRULE, new CrawlRuleEditor(parentFrame),
-			  makeButton(CRAWLRULE));
+    editorEntries[INDEX_CRAWLRULES] =
+      new CellEditorEntry(BUTTON_CRAWLRULES, new CrawlRuleEditor(parentFrame),
+			  makeButton(BUTTON_CRAWLRULES));
     // crawl window
-    editorEntries[PLUGIN_CRAWLWINDOWSER]=
-	new CellEditorEntry(CRAWLWINDOWSER, new CrawlWindowEditor(parentFrame),
-			    makeButton(CRAWLWINDOWSER));
+    editorEntries[INDEX_CRAWLWINDOWSER]=
+	new CellEditorEntry(BUTTON_CRAWLWINDOWSER, new CrawlWindowEditor(parentFrame),
+			    makeButton(BUTTON_CRAWLWINDOWSER));
     // pause between fetch
-    editorEntries[PLUGIN_PAUSETIME] =
-      new CellEditorEntry(PAUSETIME, new TimeEditor(parentFrame),
-			  makeButton(PAUSETIME));
+    editorEntries[INDEX_PAUSETIME] =
+      new CellEditorEntry(BUTTON_PAUSETIME, new TimeEditor(parentFrame),
+			  makeButton(BUTTON_PAUSETIME));
     // content crawl interval
-    editorEntries[PLUGIN_CRAWLINTV] =
-      new CellEditorEntry(CRAWLINTV, new TimeEditor(parentFrame),
-			  makeButton(CRAWLINTV));
-    // filter classes
-    editorEntries[PLUGIN_FILTER] =
-      new CellEditorEntry(FILTERS, new FilterRulesEditor(parentFrame),
-			  makeButton(FILTERS));
+    editorEntries[INDEX_CRAWLINTV] =
+      new CellEditorEntry(BUTTON_CRAWLINTV, new TimeEditor(parentFrame),
+			  makeButton(BUTTON_CRAWLINTV));
+    // filter rule classes
+    editorEntries[INDEX_FILTERRULES] =
+      new CellEditorEntry(BUTTON_FILTERRULES,
+                          new MimeTypeEditor(new MimeTypeEditor.FilterRuleEditorBuilder(), parentFrame),
+                          makeButton(BUTTON_FILTERRULES));
+    // filter factory classes
+    editorEntries[INDEX_FILTERFACTORIES] =
+      new CellEditorEntry(BUTTON_FILTERFACTORIES,
+                          new MimeTypeEditor(new MimeTypeEditor.FilterFactoryEditorBuilder(), parentFrame),
+                          makeButton(BUTTON_FILTERFACTORIES));
     // exception remappings
-    editorEntries[PLUGIN_EXMAP] =
-      new CellEditorEntry(EXCEPTIONS, new ExceptionsMapEditor(parentFrame),
-			  makeButton(EXCEPTIONS));
+    editorEntries[INDEX_EXMAP] =
+      new CellEditorEntry(BUTTON_EXCEPTIONS, new ExceptionsMapEditor(parentFrame),
+			  makeButton(BUTTON_EXCEPTIONS));
 
   }
   /**

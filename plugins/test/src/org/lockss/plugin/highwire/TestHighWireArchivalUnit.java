@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireArchivalUnit.java,v 1.5 2006-07-19 16:44:44 thib_gc Exp $
+ * $Id: TestHighWireArchivalUnit.java,v 1.6 2006-10-31 07:01:05 thib_gc Exp $
  */
 
 /*
@@ -139,7 +139,7 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
     URL url = new URL("http://www.example.com/");
     String expectedStr = "http://www.example.com/lockss-manifest/vol_10_manifest.dtl";
     DefinableArchivalUnit hwau = makeAu(url, 10);
-    assertEquals(expectedStr, hwau.getProperties().getString(ArchivalUnit.AU_START_URL, null));
+    assertEquals(expectedStr, hwau.getProperties().getString(ArchivalUnit.KEY_AU_START_URL, null));
   }
 
   public void testPermissionPageConstruction() throws Exception {
@@ -147,7 +147,7 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
     String expectedStr = "http://www.example.com/lockss-manifest/vol_10_manifest.dtl";
 
     DefinableArchivalUnit hwau = makeAu(url, 10);
-    assertEquals(expectedStr, hwau.getProperties().getString(ArchivalUnit.AU_START_URL, null));
+    assertEquals(expectedStr, hwau.getProperties().getString(ArchivalUnit.KEY_AU_START_URL, null));
   }
 
   public void testGetUrlStems() throws Exception {

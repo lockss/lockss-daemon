@@ -1,5 +1,5 @@
 /*
- * $Id: PersistentPluginState.java,v 1.5 2006-06-26 17:46:56 thib_gc Exp $
+ * $Id: PersistentPluginState.java,v 1.6 2006-10-31 07:01:06 thib_gc Exp $
  */
 
 /*
@@ -32,12 +32,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.devtools.plugindef;
 
 import java.util.*;
-
-import org.lockss.daemon.*;
-import org.lockss.plugin.*;
-import org.lockss.plugin.definable.*;
-import org.lockss.util.*;
-import org.lockss.util.urlconn.*;
 
 /**********************************************************************
  *  class PersistentPluginState holds user input that should persist

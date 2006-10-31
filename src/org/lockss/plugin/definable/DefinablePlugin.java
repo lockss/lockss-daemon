@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.19 2006-10-25 22:15:15 thib_gc Exp $
+ * $Id: DefinablePlugin.java,v 1.20 2006-10-31 07:01:05 thib_gc Exp $
  */
 
 /*
@@ -52,19 +52,19 @@ import java.net.*;
 
 public class DefinablePlugin extends BasePlugin {
   // configuration map keys
-  static final public String CM_NAME_KEY = "plugin_name";
-  static final public String CM_VERSION_KEY = "plugin_version";
-  static final public String CM_REQUIRED_DAEMON_VERSION_KEY =
+  static final public String KEY_PLUGIN_NAME = "plugin_name";
+  static final public String KEY_PLUGIN_VERSION = "plugin_version";
+  static final public String KEY_REQUIRED_DAEMON_VERSION =
     "required_daemon_version";
-  static final public String CM_CONFIG_PROPS_KEY = "plugin_config_props";
-  static final public String CM_EXCEPTION_HANDLER_KEY =
+  static final public String KEY_PLUGIN_CONFIG_PROPS = "plugin_config_props";
+  static final public String KEY_EXCEPTION_HANDLER =
       "plugin_cache_result_handler";
-  static final public String CM_EXCEPTION_LIST_KEY =
+  static final public String KEY_EXCEPTION_LIST =
       "plugin_cache_result_list";
-  static final public String CM_NOTES_KEY = "plugin_notes";
-  static final public String CM_CRAWL_TYPE =
+  static final public String KEY_PLUGIN_NOTES = "plugin_notes";
+  static final public String KEY_CRAWL_TYPE =
       "plugin_crawl_type";
-  static final public String CM_FOLLOW_LINKS = "plugin_follow_link";
+  static final public String KEY_FOLLOW_LINKS = "plugin_follow_link";
   static final public String DEFAULT_PLUGIN_VERSION = "1";
   static final public String DEFAULT_REQUIRED_DAEMON_VERSION = "0.0.0";
   static final public String MAP_SUFFIX = ".xml";
@@ -108,25 +108,25 @@ public class DefinablePlugin extends BasePlugin {
 
   public String getPluginName() {
     String default_name = StringUtil.shortName(getPluginId());
-    return definitionMap.getString(CM_NAME_KEY, default_name);
+    return definitionMap.getString(KEY_PLUGIN_NAME, default_name);
   }
 
   public String getVersion() {
-    return definitionMap.getString(CM_VERSION_KEY, DEFAULT_PLUGIN_VERSION);
+    return definitionMap.getString(KEY_PLUGIN_VERSION, DEFAULT_PLUGIN_VERSION);
   }
 
   public String getRequiredDaemonVersion() {
-    return definitionMap.getString(CM_REQUIRED_DAEMON_VERSION_KEY,
+    return definitionMap.getString(KEY_REQUIRED_DAEMON_VERSION,
 				   DEFAULT_REQUIRED_DAEMON_VERSION);
   }
 
   public String getPluginNotes() {
-    return definitionMap.getString(CM_NOTES_KEY, null);
+    return definitionMap.getString(KEY_PLUGIN_NOTES, null);
   }
 
   public List getLocalAuConfigDescrs() throws InvalidDefinitionException {
     List auConfigDescrs =
-      (List) definitionMap.getCollection(CM_CONFIG_PROPS_KEY, null);
+      (List) definitionMap.getCollection(KEY_PLUGIN_CONFIG_PROPS, null);
     if (auConfigDescrs == null) {
       throw new InvalidDefinitionException(mapName +
                                            " missing ConfigParamDescrs");
@@ -155,7 +155,7 @@ public class DefinablePlugin extends BasePlugin {
     // we support two form of result handlers... either a class which handles
     // installing the numbers as well as handling any exceptions
     String handler_class = null;
-    handler_class = definitionMap.getString(CM_EXCEPTION_HANDLER_KEY, null);
+    handler_class = definitionMap.getString(KEY_EXCEPTION_HANDLER, null);
     if (handler_class != null) {
       try {
         resultHandler =
@@ -174,7 +174,7 @@ public class DefinablePlugin extends BasePlugin {
     }
     else {// or a list of individual exception remappings
       Collection results;
-      results = definitionMap.getCollection(CM_EXCEPTION_LIST_KEY, null);
+      results = definitionMap.getCollection(KEY_EXCEPTION_LIST, null);
       if (results != null) {
         // add each entry
         for (Iterator it = results.iterator(); it.hasNext(); ) {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestRegistryArchivalUnit.java,v 1.4 2006-07-17 05:09:43 tlipkis Exp $
+ * $Id: TestRegistryArchivalUnit.java,v 1.5 2006-10-31 07:01:06 thib_gc Exp $
  */
 
 /*
@@ -91,7 +91,7 @@ public class TestRegistryArchivalUnit extends LockssTestCase {
     assertEquals(93 * Constants.MINUTE,
 		 paramMap.getLong(TreeWalkManager.PARAM_TREEWALK_START_DELAY));
     assertEquals(107 * Constants.MINUTE,
-		 paramMap.getLong(ArchivalUnit.AU_NEW_CRAWL_INTERVAL));
+		 paramMap.getLong(ArchivalUnit.KEY_AU_NEW_CONTENT_CRAWL_INTERVAL));
     RateLimiter limiter = au.findFetchRateLimiter();
     assertEquals("4/2s", limiter.getRate());
     assertEquals("org|lockss|plugin|TestRegistryArchivalUnit$MyRegistryPlugin&base_url~http%3A%2F%2Ffoo%2Ecom%2Fbar", au.getAuId());
@@ -115,7 +115,7 @@ public class TestRegistryArchivalUnit extends LockssTestCase {
     au.setConfiguration(auConfig);
     PluginTestUtil.registerArchivalUnit(regPlugin, au);
     TypedEntryMap map = au.getProperties();
-    au.addContent(map.getString(ArchivalUnit.AU_START_URL),
+    au.addContent(map.getString(ArchivalUnit.KEY_AU_START_URL),
 		  "<html><head><h2>foobar</h2>\n" +
 		  "<title>This Title No Verb</title></head></html>");
     assertEquals("This Title No Verb", au.recomputeRegName());
@@ -129,7 +129,7 @@ public class TestRegistryArchivalUnit extends LockssTestCase {
     au.setConfiguration(auConfig);
     PluginTestUtil.registerArchivalUnit(regPlugin, au);
     TypedEntryMap map = au.getProperties();
-    au.addContent(map.getString(ArchivalUnit.AU_START_URL),
+    au.addContent(map.getString(ArchivalUnit.KEY_AU_START_URL),
 		  "<html><head><h2>foobar</h2>\n" +
 		  "<title>First Title No Verb</title>" +
 		  "<title>Second Title No Verb</title></head></html>");
@@ -144,7 +144,7 @@ public class TestRegistryArchivalUnit extends LockssTestCase {
     au.setConfiguration(auConfig);
     PluginTestUtil.registerArchivalUnit(regPlugin, au);
     TypedEntryMap map = au.getProperties();
-    au.addContent(map.getString(ArchivalUnit.AU_START_URL),
+    au.addContent(map.getString(ArchivalUnit.KEY_AU_START_URL),
 		  "<html><h3>This Page No Title</h3></html>");
     assertEquals(null, au.recomputeRegName());
   }

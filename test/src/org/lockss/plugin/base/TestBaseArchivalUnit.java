@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArchivalUnit.java,v 1.34 2006-09-16 22:55:22 tlipkis Exp $
+ * $Id: TestBaseArchivalUnit.java,v 1.35 2006-10-31 07:01:07 thib_gc Exp $
  */
 
 /*
@@ -106,13 +106,13 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     assertEquals(exp, mbau.getConfiguration());
     BaseArchivalUnit.ParamHandlerMap paramMap = mbau.getParamMap();
     assertEquals(baseUrl,
-		 paramMap.getUrl(BaseArchivalUnit.AU_BASE_URL).toString());
+		 paramMap.getUrl(BaseArchivalUnit.KEY_AU_BASE_URL).toString());
     assertEquals("www.example.com",
 		 paramMap.getString(ConfigParamDescr.BASE_URL.getKey() +
-				    BaseArchivalUnit.AU_HOST_SUFFIX));
+				    BaseArchivalUnit.SUFFIX_AU_HOST));
     assertEquals("/foo/",
 		 paramMap.getString(ConfigParamDescr.BASE_URL.getKey() +
-				    BaseArchivalUnit.AU_PATH_SUFFIX));
+				    BaseArchivalUnit.SUFFIX_AU_PATH));
   }
 
   public void testSetConfigurationShortYear(int year, int exp)
@@ -127,14 +127,14 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     mbau.setConfiguration(config);
     BaseArchivalUnit.ParamHandlerMap paramMap = mbau.getParamMap();
     assertEquals(baseUrl,
-		 paramMap.getUrl(BaseArchivalUnit.AU_BASE_URL).toString());
+		 paramMap.getUrl(BaseArchivalUnit.KEY_AU_BASE_URL).toString());
     assertEquals("www.example.com",
 		 paramMap.getString(ConfigParamDescr.BASE_URL.getKey() +
-				    BaseArchivalUnit.AU_HOST_SUFFIX));
+				    BaseArchivalUnit.SUFFIX_AU_HOST));
     assertEquals(year,
 		 paramMap.getInt(ConfigParamDescr.YEAR.getKey()));
     assertEquals(exp,
-		 paramMap.getInt(BaseArchivalUnit.AU_SHORT_YEAR_PREFIX +
+		 paramMap.getInt(BaseArchivalUnit.PREFIX_AU_SHORT_YEAR +
 				    ConfigParamDescr.YEAR.getKey()));
   }
 
@@ -282,13 +282,13 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     props.setProperty(ConfigParamDescr.VOLUME_NUMBER.getKey(), "10");
     Configuration config = ConfigurationUtil.fromProps(props);
 
-    mbau.getParamMap().putString(BaseArchivalUnit.AU_FETCH_RATE_LIMITER_SOURCE,
+    mbau.getParamMap().putString(BaseArchivalUnit.KEY_AU_FETCH_RATE_LIMITER_SOURCE,
 				 "au");
     mbau.setConfiguration(config);
     RateLimiter limit = mbau.findFetchRateLimiter();
     assertEquals("1/6000ms", limit.getRate());
     assertSame(limit, mbau.findFetchRateLimiter());
-    config.put(BaseArchivalUnit.PAUSE_TIME_KEY, "7s");
+    config.put(BaseArchivalUnit.KEY_PAUSE_TIME, "7s");
     mbau.setConfiguration(config);
     assertEquals("1/7000ms", limit.getRate());
     assertSame(limit, mbau.findFetchRateLimiter());
@@ -299,11 +299,11 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     MyMockBaseArchivalUnit mbau3 =
       new MyMockBaseArchivalUnit(new MyMockPlugin());
 
-    mbau.getParamMap().putString(BaseArchivalUnit.AU_FETCH_RATE_LIMITER_SOURCE,
+    mbau.getParamMap().putString(BaseArchivalUnit.KEY_AU_FETCH_RATE_LIMITER_SOURCE,
 				 "plugin");
-    mbau2.getParamMap().putString(BaseArchivalUnit.AU_FETCH_RATE_LIMITER_SOURCE,
+    mbau2.getParamMap().putString(BaseArchivalUnit.KEY_AU_FETCH_RATE_LIMITER_SOURCE,
 				  "plugin");
-    mbau3.getParamMap().putString(BaseArchivalUnit.AU_FETCH_RATE_LIMITER_SOURCE,
+    mbau3.getParamMap().putString(BaseArchivalUnit.KEY_AU_FETCH_RATE_LIMITER_SOURCE,
 				  "plugin");
     RateLimiter limit = mbau.findFetchRateLimiter();
     RateLimiter limit2 = mbau2.findFetchRateLimiter();
@@ -343,11 +343,11 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     MyMockBaseArchivalUnit mbau2 = new MyMockBaseArchivalUnit(mplug);
     MyMockBaseArchivalUnit mbau3 =
       new MyMockBaseArchivalUnit(new MyMockPlugin());
-    mbau.getParamMap().putString(BaseArchivalUnit.AU_FETCH_RATE_LIMITER_SOURCE,
+    mbau.getParamMap().putString(BaseArchivalUnit.KEY_AU_FETCH_RATE_LIMITER_SOURCE,
 				 "host:base_url");
-    mbau2.getParamMap().putString(BaseArchivalUnit.AU_FETCH_RATE_LIMITER_SOURCE,
+    mbau2.getParamMap().putString(BaseArchivalUnit.KEY_AU_FETCH_RATE_LIMITER_SOURCE,
 				  "host:base_url");
-    mbau3.getParamMap().putString(BaseArchivalUnit.AU_FETCH_RATE_LIMITER_SOURCE,
+    mbau3.getParamMap().putString(BaseArchivalUnit.KEY_AU_FETCH_RATE_LIMITER_SOURCE,
 				  "host:base_url");
     Properties props = new Properties();
     props.setProperty(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
@@ -373,7 +373,7 @@ public class TestBaseArchivalUnit extends LockssTestCase {
   }
 
   public void testFindFetchRateLimiterTitleAttr() throws Exception {
-    String src = BaseArchivalUnit.AU_FETCH_RATE_LIMITER_SOURCE;
+    String src = BaseArchivalUnit.KEY_AU_FETCH_RATE_LIMITER_SOURCE;
     MyMockBaseArchivalUnit mbau2 = new MyMockBaseArchivalUnit(mplug);
     MyMockBaseArchivalUnit mbau3 = new MyMockBaseArchivalUnit(mplug);
     MyMockBaseArchivalUnit mbau4 = new MyMockBaseArchivalUnit(mplug);
@@ -532,9 +532,9 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     Properties props = new Properties();
     props.setProperty(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
     props.setProperty(ConfigParamDescr.VOLUME_NUMBER.getKey(), "10");
-    props.setProperty(BaseArchivalUnit.PAUSE_TIME_KEY, "10000");
+    props.setProperty(BaseArchivalUnit.KEY_PAUSE_TIME, "10000");
     props.setProperty(BaseArchivalUnit.USE_CRAWL_WINDOW, "true");
-    props.setProperty(BaseArchivalUnit.NEW_CONTENT_CRAWL_KEY, "10000");
+    props.setProperty(BaseArchivalUnit.KEY_NEW_CONTENT_CRAWL_INTERVAL, "10000");
     Configuration config = ConfigurationUtil.fromProps(props);
     mbau.setBaseAuParams(config);
     assertEquals(10000, mbau.findFetchRateLimiter().getInterval());
@@ -568,17 +568,17 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     Properties props = new Properties();
     props.setProperty(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
     props.setProperty(ConfigParamDescr.VOLUME_NUMBER.getKey(), "10");
-    props.setProperty(BaseArchivalUnit.PAUSE_TIME_KEY, "10000");
+    props.setProperty(BaseArchivalUnit.KEY_PAUSE_TIME, "10000");
     // per-plugin or per-au crawl window settings are overridden by the
     // o.l.baseau.useCrawlWindowByDefault
     props.setProperty(BaseArchivalUnit.USE_CRAWL_WINDOW, "false");
-    props.setProperty(BaseArchivalUnit.NEW_CONTENT_CRAWL_KEY, "10000");
+    props.setProperty(BaseArchivalUnit.KEY_NEW_CONTENT_CRAWL_INTERVAL, "10000");
     Configuration config = ConfigurationUtil.fromProps(props);
     mbau.doSetAuParams(true);
     mbau.loadAuConfigDescrs(config);
-    props.setProperty(BaseArchivalUnit.PAUSE_TIME_KEY, "55555");
+    props.setProperty(BaseArchivalUnit.KEY_PAUSE_TIME, "55555");
     props.setProperty(BaseArchivalUnit.USE_CRAWL_WINDOW, "false");
-    props.setProperty(BaseArchivalUnit.NEW_CONTENT_CRAWL_KEY, "67890");
+    props.setProperty(BaseArchivalUnit.KEY_NEW_CONTENT_CRAWL_INTERVAL, "67890");
     Configuration config2 = ConfigurationUtil.fromProps(props);
     mbau.setBaseAuParams(config2);
     assertEquals(55555, mbau.findFetchRateLimiter().getInterval());
@@ -803,14 +803,14 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     Properties props = new Properties();
     props.setProperty(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
     props.setProperty(ConfigParamDescr.VOLUME_NUMBER.getKey(), "10");
-    props.setProperty(BaseArchivalUnit.PAUSE_TIME_KEY, "10000");
+    props.setProperty(BaseArchivalUnit.KEY_PAUSE_TIME, "10000");
     props.setProperty(BaseArchivalUnit.USE_CRAWL_WINDOW, "true");
-    props.setProperty(BaseArchivalUnit.NEW_CONTENT_CRAWL_KEY, "10000");
+    props.setProperty(BaseArchivalUnit.KEY_NEW_CONTENT_CRAWL_INTERVAL, "10000");
 
     Configuration config = ConfigurationUtil.fromProps(props);
     mbau.setBaseAuParams(config);
     // test that the ParamHandlerMap and the properties are the same
-    String key = BaseArchivalUnit.AU_NEW_CRAWL_INTERVAL;
+    String key = BaseArchivalUnit.KEY_AU_NEW_CONTENT_CRAWL_INTERVAL;
     ParamHandlerMap pmap = mbau.getParamMap();
     TypedEntryMap temap = mbau.getProperties();
     assertEquals( (TypedEntryMap) pmap, temap);
@@ -963,9 +963,9 @@ public class TestBaseArchivalUnit extends LockssTestCase {
 	throws ArchivalUnit.ConfigurationException {
       super.loadAuConfigDescrs(config);
       if (setAuParams) {
-	paramMap.putLong(AU_NEW_CRAWL_INTERVAL, 12345);
-	paramMap.putLong(AU_FETCH_DELAY, 54321);
-	paramMap.putBoolean(AU_USE_CRAWL_WINDOW, false);
+	paramMap.putLong(KEY_AU_NEW_CONTENT_CRAWL_INTERVAL, 12345);
+	paramMap.putLong(KEY_AU_FETCH_DELAY, 54321);
+	paramMap.putBoolean(KEY_AU_USE_CRAWL_WINDOW, false);
       }
     }
 

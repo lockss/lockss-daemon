@@ -1,5 +1,5 @@
 /*
- * $Id: TestEmlsArchivalUnit.java,v 1.4 2006-07-17 07:42:42 tlipkis Exp $
+ * $Id: TestEmlsArchivalUnit.java,v 1.5 2006-10-31 07:01:06 thib_gc Exp $
  */
 
 /*
@@ -145,7 +145,7 @@ public class TestEmlsArchivalUnit extends LockssTestCase {
     URL url = new URL(ROOT_URL);
     String expectedStr = ROOT_URL+"lockss-volume3.html";
     DefinableArchivalUnit eAu = makeAu(url, 3);
-    assertEquals(expectedStr, eAu.getProperties().getString(ArchivalUnit.AU_START_URL, null));
+    assertEquals(expectedStr, eAu.getProperties().getString(ArchivalUnit.KEY_AU_START_URL, null));
   }
 
   public void testGetUrlStems() throws Exception {

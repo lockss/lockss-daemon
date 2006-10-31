@@ -1,5 +1,5 @@
 /*
- * $Id: EditableDefinablePlugin.java,v 1.26 2006-10-25 22:15:03 thib_gc Exp $
+ * $Id: EditableDefinablePlugin.java,v 1.27 2006-10-31 07:01:06 thib_gc Exp $
  */
 
 /*
@@ -48,7 +48,7 @@ public class EditableDefinablePlugin extends DefinablePlugin {
 
   protected static final String DEFAULT_RULE_EXCLUDENOMATCH_BASEURL = "4,\"^%s\", base_url";
 
-  static final protected String PLUGIN_IDENTIFIER = "plugin_identifier";
+  static final protected String KEY_PLUGIN_IDENTIFIER = "plugin_identifier";
 
   static public String[] CONFIG_PARAM_TYPES = ConfigParamDescr.TYPE_STRINGS;
 
@@ -122,56 +122,56 @@ public class EditableDefinablePlugin extends DefinablePlugin {
 
   public void setCrawlType(String crawlType) {
     logger.info("Setting crawl type to: " + crawlType);
-    definitionMap.putString(DefinablePlugin.CM_CRAWL_TYPE, crawlType);
+    definitionMap.putString(DefinablePlugin.KEY_CRAWL_TYPE, crawlType);
   }
 
   public String getCrawlType() {
     // FIXME: default?
-    String ret = definitionMap.getString(DefinablePlugin.CM_CRAWL_TYPE, DefinablePlugin.CRAWL_TYPES[0]);
+    String ret = definitionMap.getString(DefinablePlugin.KEY_CRAWL_TYPE, DefinablePlugin.CRAWL_TYPES[0]);
     logger.info("The crawl type is: " + ret);
     return ret;
   }
 
   public void removeCrawlType() {
     logger.info("Removing the crawl type");
-    definitionMap.removeMapElement(DefinablePlugin.CM_CRAWL_TYPE);
+    definitionMap.removeMapElement(DefinablePlugin.KEY_CRAWL_TYPE);
   }
 
   public void setAuStartUrl(String startUrl) {
     logger.info("Setting the AU start URL to: " + startUrl);
-    definitionMap.putString(DefinableArchivalUnit.AU_START_URL_KEY, startUrl);
+    definitionMap.putString(DefinableArchivalUnit.KEY_AU_START_URL, startUrl);
   }
 
   public String getAuStartUrl() {
-    String ret = definitionMap.getString(DefinableArchivalUnit.AU_START_URL_KEY, null);
+    String ret = definitionMap.getString(DefinableArchivalUnit.KEY_AU_START_URL, null);
     logger.debug("The AU start URL is: " + ret);
     return ret;
   }
 
   public void removeAuStartUrl() {
     logger.info("Removing the AU start URL");
-    definitionMap.removeMapElement(DefinableArchivalUnit.AU_START_URL_KEY);
+    definitionMap.removeMapElement(DefinableArchivalUnit.KEY_AU_START_URL);
   }
 
   public void setAuName(String name) {
     logger.info("Setting the AU name to: " + name);
-    definitionMap.putString(DefinableArchivalUnit.AU_NAME_KEY, name);
+    definitionMap.putString(DefinableArchivalUnit.KEY_AU_NAME, name);
   }
 
   public String getAuName() {
-    String ret = definitionMap.getString(DefinableArchivalUnit.AU_NAME_KEY, null);
+    String ret = definitionMap.getString(DefinableArchivalUnit.KEY_AU_NAME, null);
     logger.info("The AU name is: " + ret);
     return ret;
   }
 
   public void removeAuName() {
     logger.info("Removing the AU name");
-    definitionMap.removeMapElement(DefinableArchivalUnit.AU_NAME_KEY);
+    definitionMap.removeMapElement(DefinableArchivalUnit.KEY_AU_NAME);
   }
 
   public void setAuCrawlRules(Collection rules) {
     logger.info("Setting the AU crawl rules");
-    definitionMap.putCollection(DefinableArchivalUnit.AU_RULES_KEY, rules);
+    definitionMap.putCollection(DefinableArchivalUnit.KEY_AU_CRAWL_RULES, rules);
   }
 
   public Collection getAuCrawlRules() {
@@ -184,7 +184,7 @@ public class EditableDefinablePlugin extends DefinablePlugin {
     }
     if (logger.isDebug()) {
       logger.debug("Retrieving the AU crawl rules in detail");
-      List rules = (List)definitionMap.getCollection(DefinableArchivalUnit.AU_RULES_KEY, null);
+      List rules = (List)definitionMap.getCollection(DefinableArchivalUnit.KEY_AU_CRAWL_RULES, null);
       if (rules != null) {
         Iterator iter = rules.iterator();
         for (int ix = 1 ; iter.hasNext() ; ++ix) {
@@ -195,28 +195,28 @@ public class EditableDefinablePlugin extends DefinablePlugin {
         logger.debug("Retrieving the AU crawl rules in detail: none");
       }
     }
-    return definitionMap.getCollection(DefinableArchivalUnit.AU_RULES_KEY, defaultCrawlRules);
+    return definitionMap.getCollection(DefinableArchivalUnit.KEY_AU_CRAWL_RULES, defaultCrawlRules);
   }
 
   public void removeAuCrawlRules() {
     logger.info("Removing the AU crawl rules");
-    definitionMap.removeMapElement(DefinableArchivalUnit.AU_RULES_KEY);
+    definitionMap.removeMapElement(DefinableArchivalUnit.KEY_AU_CRAWL_RULES);
   }
 
   public void addAuCrawlRule(String rule) {
     logger.info("Adding an AU crawl rule: " + rule);
-    List rules = (List)definitionMap.getCollection(DefinableArchivalUnit.AU_RULES_KEY, new ArrayList());
+    List rules = (List)definitionMap.getCollection(DefinableArchivalUnit.KEY_AU_CRAWL_RULES, new ArrayList());
     if (rules.contains(rule)) {
       logger.warning("Not adding the AU crawl rule (already in the list): " + rule);
       return;
     }
     rules.add(rule);
-    definitionMap.putCollection(DefinableArchivalUnit.AU_RULES_KEY, rules);
+    definitionMap.putCollection(DefinableArchivalUnit.KEY_AU_CRAWL_RULES, rules);
   }
 
   public void removeCrawlRule(String rule) {
     logger.info("Removing an AU crawl rule: " + rule);
-    List rules = (List)definitionMap.getCollection(DefinableArchivalUnit.AU_RULES_KEY, null);
+    List rules = (List)definitionMap.getCollection(DefinableArchivalUnit.KEY_AU_CRAWL_RULES, null);
     if (rules == null) {
       logger.warning("Not removing the AU crawl rule (no crawl rules in the list): " + rule);
       return;
@@ -240,7 +240,7 @@ public class EditableDefinablePlugin extends DefinablePlugin {
       if (tryDynamic) {
         tryDynamic(configurableCrawlWindowClass, ConfigurableCrawlWindow.class);
       }
-      definitionMap.putString(DefinableArchivalUnit.AU_CRAWL_WINDOW_KEY, configurableCrawlWindowClass);
+      definitionMap.putString(DefinableArchivalUnit.KEY_AU_CRAWL_WINDOW, configurableCrawlWindowClass);
     }
     catch (DynamicallyLoadedComponentException dlce) {
       String logMessage = "Failed to set the AU configurable crawl window class to " + configurableCrawlWindowClass;
@@ -255,80 +255,82 @@ public class EditableDefinablePlugin extends DefinablePlugin {
   }
 
   public String getAuCrawlWindow() {
-    String ret = definitionMap.getString(DefinableArchivalUnit.AU_CRAWL_WINDOW_KEY, null);
+    String ret = definitionMap.getString(DefinableArchivalUnit.KEY_AU_CRAWL_WINDOW, null);
     logger.info("The AU configurable crawl window class is: " + ret);
     return ret;
   }
 
   public void removeAuCrawlWindow() {
     logger.info("Removing the AU configurable crawl window");
-    definitionMap.removeMapElement(DefinableArchivalUnit.AU_CRAWL_WINDOW_KEY);
+    definitionMap.removeMapElement(DefinableArchivalUnit.KEY_AU_CRAWL_WINDOW);
   }
 
   public void setAuCrawlWindowSer(CrawlWindow crawlWindow) {
     logger.info("Setting the serialized AU crawl window to: " + crawlWindow.toString());
-    definitionMap.setMapElement(DefinableArchivalUnit.AU_CRAWL_WINDOW_SER_KEY, crawlWindow);
+    definitionMap.setMapElement(DefinableArchivalUnit.KEY_AU_CRAWL_WINDOW_SER, crawlWindow);
   }
 
   public CrawlWindow getAuCrawlWindowSer() {
-    CrawlWindow ret = (CrawlWindow)(definitionMap.getMapElement(DefinableArchivalUnit.AU_CRAWL_WINDOW_SER_KEY));
+    CrawlWindow ret = (CrawlWindow)(definitionMap.getMapElement(DefinableArchivalUnit.KEY_AU_CRAWL_WINDOW_SER));
     logger.debug("The serialized AU crawl window is: " + ret);
     return ret;
   }
 
   public void removeAuCrawlWindowSer() {
     logger.info("Removing the serialized AU crawl window");
-    definitionMap.removeMapElement(DefinableArchivalUnit.AU_CRAWL_WINDOW_SER_KEY);
+    definitionMap.removeMapElement(DefinableArchivalUnit.KEY_AU_CRAWL_WINDOW_SER);
   }
 
+  // DefinableFilterRule is in fact not well-supported in the rest of the code
   public void setAuFilter(String mimeType, List rules) {
     logger.info("Set the AU filter rule for MIME type " + mimeType);
     if (rules.size() > 0) {
       try {
 	FilterRule rule = new DefinableFilterRule(rules);
-        logger.debug("Definable filter rule instantiated for MIME type " + mimeType + "from List");
-	definitionMap.putCollection(mimeType + DefinableArchivalUnit.AU_FILTER_SUFFIX, rules);
+        logger.debug("Definable filter rule instantiated for MIME type: " + mimeType + "from List");
+	definitionMap.putCollection(mimeType + DefinableArchivalUnit.SUFFIX_FILTER_RULE, rules);
       }
       catch (Exception ex) {
-	throw new InvalidDefinitionException("Failed to create the AU filter rule for MIME type " + mimeType);
+	throw new InvalidDefinitionException("Failed to create the AU filter rule for MIME type: " + mimeType);
       }
     }
     else {
-      logger.warning("Empty list for MIME type " + mimeType + "; removing it from the AU filter rules");
-      definitionMap.removeMapElement(mimeType + DefinableArchivalUnit.AU_FILTER_SUFFIX);
+      logger.warning("Empty list for MIME type: " + mimeType + "; removing it from the AU filter rules");
+      definitionMap.removeMapElement(mimeType + DefinableArchivalUnit.SUFFIX_FILTER_RULE);
     }
   }
 
   public void setAuFilter(String mimeType,
                           String filterRuleClass,
-                          boolean tryDynamic) {
-    logger.info("Setting AU filter rule for MIME type " + mimeType + " to: " + filterRuleClass);
+                          boolean tryDynamic)
+      throws DynamicallyLoadedComponentException, InvalidDefinitionException {
+    logger.info("Setting AU filter rule for MIME type: " + mimeType + " to: " + filterRuleClass);
     try {
       if (tryDynamic) {
         tryDynamic(filterRuleClass, FilterRule.class);
       }
-      definitionMap.putString(mimeType + DefinableArchivalUnit.AU_FILTER_SUFFIX, filterRuleClass);
+      definitionMap.putString(mimeType + DefinableArchivalUnit.SUFFIX_FILTER_RULE, filterRuleClass);
     }
     catch (DynamicallyLoadedComponentException dlce) {
       throw dlce; // rethrow
     }
     catch (InvalidDefinitionException ide) {
-      String logMessage = "Failed to set the AU filter rule for MIME type " + mimeType + " to " + filterRuleClass;
+      String logMessage = "Failed to set the AU filter rule for MIME type: " + mimeType + " to: " + filterRuleClass;
       logger.error(logMessage, ide);
       throw new InvalidDefinitionException(logMessage, ide);
     }
   }
 
-  public HashMap getAuFilters() {
+  public Map getAuFilters() {
     logger.info("Retrieving the AU filter rules");
     HashMap rules = new HashMap();
     Iterator it = definitionMap.keySet().iterator();
-    for(int ix = 1 ; it.hasNext() ; ++ix) {
+    for (int ix = 1 ; it.hasNext() ; ++ix) {
       String key = (String)it.next();
-      if (key.endsWith(DefinableArchivalUnit.AU_FILTER_SUFFIX)) {
-        String mimeType = StringUtils.chomp(key, DefinableArchivalUnit.AU_FILTER_SUFFIX);
-        logger.debug("MIME type " + ix + ": " + key + " maps to " + definitionMap.getMapElement(key));
-	rules.put(mimeType, definitionMap.getMapElement(key));
+      if (key.endsWith(DefinableArchivalUnit.SUFFIX_FILTER_RULE)) {
+        String mimeType = StringUtils.chomp(key, DefinableArchivalUnit.SUFFIX_FILTER_RULE);
+        logger.debug("MIME type " + ix + ": " + key + " maps to: " + definitionMap.getMapElement(key));
+        rules.put(mimeType, definitionMap.getMapElement(key));
       }
     }
     return rules;
@@ -336,33 +338,74 @@ public class EditableDefinablePlugin extends DefinablePlugin {
 
   public void removeAuFilter(String mimeType) {
     logger.info("Removing the AU filter rule for MIME type " + mimeType);
-    definitionMap.removeMapElement(mimeType + DefinableArchivalUnit.AU_FILTER_SUFFIX);
+    definitionMap.removeMapElement(mimeType + DefinableArchivalUnit.SUFFIX_FILTER_RULE);
+  }
+
+  public void setAuFilterFactory(String mimeType,
+                          String filterFactoryClass,
+                          boolean tryDynamic)
+      throws DynamicallyLoadedComponentException, InvalidDefinitionException {
+    logger.info("Setting AU filter factory for MIME type: " + mimeType + " to: " + filterFactoryClass);
+    try {
+      if (tryDynamic) {
+        tryDynamic(filterFactoryClass, FilterFactory.class);
+      }
+      definitionMap.putString(mimeType + DefinableArchivalUnit.SUFFIX_FILTER_FACTORY, filterFactoryClass);
+    }
+    catch (DynamicallyLoadedComponentException dlce) {
+      throw dlce; // rethrow
+    }
+    catch (InvalidDefinitionException ide) {
+      String logMessage = "Failed to set the AU filter factory for MIME type: " + mimeType + " to: " + filterFactoryClass;
+      logger.error(logMessage, ide);
+      throw new InvalidDefinitionException(logMessage, ide);
+    }
+  }
+
+  public Map getAuFilterFactories() {
+    logger.info("Retrieving the AU filter factories");
+    Map rules = new HashMap();
+    Iterator it = definitionMap.keySet().iterator();
+    for (int ix = 1 ; it.hasNext() ; ++ix) {
+      String key = (String)it.next();
+      if (key.endsWith(DefinableArchivalUnit.SUFFIX_FILTER_FACTORY)) {
+        String mimeType = StringUtils.chomp(key, DefinableArchivalUnit.SUFFIX_FILTER_FACTORY);
+        logger.debug("MIME type " + ix + ": " + key + " maps to: " + definitionMap.getMapElement(key));
+        rules.put(mimeType, definitionMap.getMapElement(key));
+      }
+    }
+    return rules;
+  }
+
+  public void removeAuFilterFactory(String mimeType) {
+    logger.info("Removing the AU filter factory for MIME type " + mimeType);
+    definitionMap.removeMapElement(mimeType + DefinableArchivalUnit.SUFFIX_FILTER_FACTORY);
   }
 
   public void setAuExpectedBasePath(String path) {
     logger.info("Setting AU expected base path to: " + path);
-    definitionMap.putString(DefinableArchivalUnit.AU_EXPECTED_PATH, path);
+    definitionMap.putString(DefinableArchivalUnit.KEY_AU_EXPECTED_BASE_PATH, path);
   }
 
   public String getAuExpectedBasePath() {
-    String ret = definitionMap.getString(DefinableArchivalUnit.AU_EXPECTED_PATH, null);
+    String ret = definitionMap.getString(DefinableArchivalUnit.KEY_AU_EXPECTED_BASE_PATH, null);
     logger.info("The AU expected base path is: " + ret);
     return ret;
   }
 
   public void removeAuExpectedBasePath() {
     logger.info("Removing the AU expected base path");
-    definitionMap.removeMapElement(DefinableArchivalUnit.AU_EXPECTED_PATH);
+    definitionMap.removeMapElement(DefinableArchivalUnit.KEY_AU_EXPECTED_BASE_PATH);
   }
 
   public void setNewContentCrawlInterval(long newContentCrawlInterval) {
     logger.info("Setting the new content crawl itnerval to: " + newContentCrawlInterval);
-    definitionMap.putLong(DefinableArchivalUnit.AU_DEFAULT_NC_CRAWL_KEY, newContentCrawlInterval);
+    definitionMap.putLong(DefinableArchivalUnit.KEY_AU_DEFAULT_NEW_CONTENT_CRAWL_INTERVAL, newContentCrawlInterval);
   }
 
   public long getNewContentCrawlInterval() {
     // FIXME: Uses daemon default
-    long ret = definitionMap.getLong(DefinableArchivalUnit.AU_DEFAULT_NC_CRAWL_KEY,
+    long ret = definitionMap.getLong(DefinableArchivalUnit.KEY_AU_DEFAULT_NEW_CONTENT_CRAWL_INTERVAL,
                                      DefinableArchivalUnit.DEFAULT_NEW_CONTENT_CRAWL_INTERVAL);
     logger.debug("The new content crawl interval is: " + ret);
     return ret;
@@ -370,17 +413,17 @@ public class EditableDefinablePlugin extends DefinablePlugin {
 
   public void removeNewContentCrawlInterval() {
     logger.info("Removing the new content crawl interval");
-    definitionMap.removeMapElement(DefinableArchivalUnit.AU_DEFAULT_NC_CRAWL_KEY);
+    definitionMap.removeMapElement(DefinableArchivalUnit.KEY_AU_DEFAULT_NEW_CONTENT_CRAWL_INTERVAL);
   }
 
   public void setAuCrawlDepth(int depth) {
     logger.info("Setting the AU crawl depth to: " + depth);
-    definitionMap.putInt(DefinableArchivalUnit.AU_CRAWL_DEPTH, depth);
+    definitionMap.putInt(DefinableArchivalUnit.KEY_AU_CRAWL_DEPTH, depth);
   }
 
   public int getAuCrawlDepth() {
     // FIXME: Uses daemon default
-    int ret = definitionMap.getInt(DefinableArchivalUnit.AU_CRAWL_DEPTH,
+    int ret = definitionMap.getInt(DefinableArchivalUnit.KEY_AU_CRAWL_DEPTH,
                                    DefinableArchivalUnit.DEFAULT_AU_CRAWL_DEPTH);
     logger.debug("The AU crawl depth is: " + ret);
     return ret;
@@ -388,17 +431,17 @@ public class EditableDefinablePlugin extends DefinablePlugin {
 
   public void removeAuCrawlDepth() {
     logger.info("Removing the AU crawl depth");
-    definitionMap.removeMapElement(DefinableArchivalUnit.AU_CRAWL_DEPTH);
+    definitionMap.removeMapElement(DefinableArchivalUnit.KEY_AU_CRAWL_DEPTH);
   }
 
   public void setAuPauseTime(long pausetime) {
     logger.info("Setting the AU pause time to: " + pausetime);
-    definitionMap.putLong(DefinableArchivalUnit.AU_DEFAULT_PAUSE_TIME, pausetime);
+    definitionMap.putLong(DefinableArchivalUnit.KEY_AU_DEFAULT_PAUSE_TIME, pausetime);
   }
 
   public long getAuPauseTime() {
     // FIXME: Uses daemon default
-    long ret = definitionMap.getLong(DefinableArchivalUnit.AU_DEFAULT_PAUSE_TIME,
+    long ret = definitionMap.getLong(DefinableArchivalUnit.KEY_AU_DEFAULT_PAUSE_TIME,
                                      DefinableArchivalUnit.DEFAULT_FETCH_DELAY);
     logger.debug("The AU pause time is: " + ret);
     return ret;
@@ -406,29 +449,29 @@ public class EditableDefinablePlugin extends DefinablePlugin {
 
   public void removeAuPauseTime() {
     logger.info("Removing the AU pause time");
-    definitionMap.removeMapElement(DefinableArchivalUnit.AU_DEFAULT_PAUSE_TIME);
+    definitionMap.removeMapElement(DefinableArchivalUnit.KEY_AU_DEFAULT_PAUSE_TIME);
   }
 
   public void setAuManifestPage(String manifest) {
     logger.info("Setting the AU manifest page to: " + manifest);
-    definitionMap.putString(DefinableArchivalUnit.AU_MANIFEST_KEY, manifest);
+    definitionMap.putString(DefinableArchivalUnit.KEY_AU_MANIFEST, manifest);
   }
 
   public String getAuManifestPage() {
     // FIXME: default?
-    String ret = definitionMap.getString(DefinableArchivalUnit.AU_MANIFEST_KEY, getAuStartUrl());
+    String ret = definitionMap.getString(DefinableArchivalUnit.KEY_AU_MANIFEST, getAuStartUrl());
     logger.info("The AU manifest page is: " + ret);
     return ret;
   }
 
   public void removeAuManifestPage() {
     logger.info("Removing the AU manifest page");
-    definitionMap.removeMapElement(DefinableArchivalUnit.AU_MANIFEST_KEY);
+    definitionMap.removeMapElement(DefinableArchivalUnit.KEY_AU_MANIFEST);
   }
 
   public void setPluginName(String name) {
     logger.info("Setting the plugin name to: " + name);
-    definitionMap.putString(DefinablePlugin.CM_NAME_KEY, name);
+    definitionMap.putString(DefinablePlugin.KEY_PLUGIN_NAME, name);
   }
 
   public String getPluginName() {
@@ -443,29 +486,29 @@ public class EditableDefinablePlugin extends DefinablePlugin {
 
   public void removePluginName() {
     logger.info("Removing the plugin name");
-    definitionMap.removeMapElement(DefinablePlugin.CM_NAME_KEY);
+    definitionMap.removeMapElement(DefinablePlugin.KEY_PLUGIN_NAME);
   }
 
   public void setPluginIdentifier(String name) {
     logger.info("Setting the plugin identifier to: " + name);
-    definitionMap.putString(PLUGIN_IDENTIFIER, name);
+    definitionMap.putString(KEY_PLUGIN_IDENTIFIER, name);
   }
 
   public String getPluginIdentifier() {
     // FIXME: default value
-    String ret = definitionMap.getString(PLUGIN_IDENTIFIER, "UNKNOWN");
+    String ret = definitionMap.getString(KEY_PLUGIN_IDENTIFIER, "UNKNOWN");
     logger.debug("The plugin identifier is: " + ret);
     return ret;
   }
 
   public void removePluginIdentifier() {
     logger.info("Removing the plugin identifier");
-    definitionMap.removeMapElement(PLUGIN_IDENTIFIER);
+    definitionMap.removeMapElement(KEY_PLUGIN_IDENTIFIER);
   }
 
   public void setPluginVersion(String version) {
     logger.info("Setting the plugin version to: " + version);
-    definitionMap.putString(DefinablePlugin.CM_VERSION_KEY, version);
+    definitionMap.putString(DefinablePlugin.KEY_PLUGIN_VERSION, version);
   }
 
   public String getPluginVersion() {
@@ -476,12 +519,12 @@ public class EditableDefinablePlugin extends DefinablePlugin {
 
   public void removePluginVersion() {
     logger.info("Removing the plugin version");
-    definitionMap.removeMapElement(DefinablePlugin.CM_VERSION_KEY);
+    definitionMap.removeMapElement(DefinablePlugin.KEY_PLUGIN_VERSION);
   }
 
   public void setRequiredDaemonVersion(String requiredDaemonVersion) {
     logger.info("Setting the required daemon version to: " + requiredDaemonVersion);
-    definitionMap.putString(DefinablePlugin.CM_REQUIRED_DAEMON_VERSION_KEY,
+    definitionMap.putString(DefinablePlugin.KEY_REQUIRED_DAEMON_VERSION,
                             requiredDaemonVersion);
   }
 
@@ -493,7 +536,7 @@ public class EditableDefinablePlugin extends DefinablePlugin {
 
   public void removeRequiredDaemonVersion() {
     logger.info("Removing the required daemon version");
-    definitionMap.removeMapElement(DefinablePlugin.CM_REQUIRED_DAEMON_VERSION_KEY);
+    definitionMap.removeMapElement(DefinablePlugin.KEY_REQUIRED_DAEMON_VERSION);
   }
 
   public void setPluginNotes(String notes) {
@@ -504,7 +547,7 @@ public class EditableDefinablePlugin extends DefinablePlugin {
     else {
       logger.warning("Setting plugin notes to null");
     }
-    definitionMap.putString(DefinablePlugin.CM_NOTES_KEY, notes);
+    definitionMap.putString(DefinablePlugin.KEY_PLUGIN_NOTES, notes);
   }
 
   public String getPluginNotes() {
@@ -521,7 +564,7 @@ public class EditableDefinablePlugin extends DefinablePlugin {
 
   public void removePluginNotes() {
     logger.info("Removing the plugin notes");
-    definitionMap.removeMapElement(DefinablePlugin.CM_NOTES_KEY);
+    definitionMap.removeMapElement(DefinablePlugin.KEY_PLUGIN_NOTES);
   }
 
   public void setPluginConfigDescrs(HashSet descrs) {
@@ -535,7 +578,7 @@ public class EditableDefinablePlugin extends DefinablePlugin {
       }
     }
     List descrlist = ListUtil.fromArray(descrs.toArray());
-    definitionMap.putCollection(DefinablePlugin.CM_CONFIG_PROPS_KEY, descrlist);
+    definitionMap.putCollection(DefinablePlugin.KEY_PLUGIN_CONFIG_PROPS, descrlist);
   }
 
   /**
@@ -562,7 +605,7 @@ public class EditableDefinablePlugin extends DefinablePlugin {
       printfMap.put(key, cpd);
       if (type == ConfigParamDescr.TYPE_YEAR) {
         logger.debug("Adding a 2-digit version of parameter " + key);
-	key = DefinableArchivalUnit.AU_SHORT_YEAR_PREFIX + key;
+	key = DefinableArchivalUnit.PREFIX_AU_SHORT_YEAR + key;
 	ConfigParamDescr descr = copyDescr(cpd);
 	descr.setDescription(cpd.getDescription() + " (2 digits)");
 	descr.setDisplayName(cpd.getDisplayName() + " (2 digits)");
@@ -571,14 +614,14 @@ public class EditableDefinablePlugin extends DefinablePlugin {
       }
       else if (type == ConfigParamDescr.TYPE_URL && includeUrlVariants) {
         logger.debug("Adding a host-only version of parameter " + key);
-	String mod_key = key + DefinableArchivalUnit.AU_HOST_SUFFIX;
+	String mod_key = key + DefinableArchivalUnit.SUFFIX_AU_HOST;
 	ConfigParamDescr descr = copyDescr(cpd);
 	descr.setDescription(cpd.getDescription() + " (host only)");
 	descr.setDisplayName(cpd.getDisplayName() + " (host only)");
 	descr.setKey(mod_key);
 	printfMap.put(mod_key, descr);
         logger.debug("Adding a path-only version of parameter " + key);
-	mod_key = key + DefinableArchivalUnit.AU_PATH_SUFFIX;
+	mod_key = key + DefinableArchivalUnit.SUFFIX_AU_PATH;
 	descr = copyDescr(cpd);
 	descr.setDescription(cpd.getDescription() + " (path only)");
 	descr.setDisplayName(cpd.getDisplayName() + " (path only)");
@@ -602,7 +645,7 @@ public class EditableDefinablePlugin extends DefinablePlugin {
 
   public void removePluginConfigDescrs() {
     logger.info("Removing the plugin configuration parameters");
-    definitionMap.removeMapElement(DefinablePlugin.CM_CONFIG_PROPS_KEY);
+    definitionMap.removeMapElement(DefinablePlugin.KEY_PLUGIN_CONFIG_PROPS);
   }
 
   public void setPluginExceptionHandler(String cacheResultHandlerClass,
@@ -612,7 +655,7 @@ public class EditableDefinablePlugin extends DefinablePlugin {
       if (tryDynamic) {
         tryDynamic(cacheResultHandlerClass, CacheResultHandler.class);
       }
-      definitionMap.putString(DefinablePlugin.CM_EXCEPTION_HANDLER_KEY, cacheResultHandlerClass);
+      definitionMap.putString(DefinablePlugin.KEY_EXCEPTION_HANDLER, cacheResultHandlerClass);
     }
     catch (DynamicallyLoadedComponentException dlce) {
       throw dlce; // rethrow
@@ -625,23 +668,23 @@ public class EditableDefinablePlugin extends DefinablePlugin {
   }
 
   public String getPluginExceptionHandler() {
-    String ret = definitionMap.getString(DefinablePlugin.CM_EXCEPTION_HANDLER_KEY, null);
+    String ret = definitionMap.getString(DefinablePlugin.KEY_EXCEPTION_HANDLER, null);
     logger.debug("The plugin exception handler is: " + ret);
     return ret;
   }
 
   public void removePluginExceptionHandler() {
     logger.info("Removing the plugin exception handler");
-    definitionMap.removeMapElement(DefinablePlugin.CM_EXCEPTION_HANDLER_KEY);
+    definitionMap.removeMapElement(DefinablePlugin.KEY_EXCEPTION_HANDLER);
   }
 
   public void addSingleExceptionHandler(int resultCode, String exceptionClass) {
     logger.info("Setting the single exception handler for code " + resultCode + " to: " + exceptionClass);
-    List xlist = (List)definitionMap.getCollection(DefinablePlugin.CM_EXCEPTION_LIST_KEY, null);
+    List xlist = (List)definitionMap.getCollection(DefinablePlugin.KEY_EXCEPTION_LIST, null);
     if (xlist == null) {
       logger.debug("Exception list was empty; creating a list");
       xlist = new ArrayList();
-      definitionMap.putCollection(DefinablePlugin.CM_EXCEPTION_LIST_KEY, xlist);
+      definitionMap.putCollection(DefinablePlugin.KEY_EXCEPTION_LIST, xlist);
     }
     else {
       // we need to remove any previously assigned value.
@@ -656,7 +699,7 @@ public class EditableDefinablePlugin extends DefinablePlugin {
     logger.info("Retrieving the single exception handlers");
     // FIXME: default?
     HashMap handlers = new HashMap();
-    List xlist = (List) definitionMap.getCollection(DefinablePlugin.CM_EXCEPTION_LIST_KEY, null);
+    List xlist = (List) definitionMap.getCollection(DefinablePlugin.KEY_EXCEPTION_LIST, null);
     if (xlist != null) {
       logger.debug("Retrieving the single exception handlers in detail");
       Iterator it = xlist.iterator();
@@ -678,7 +721,7 @@ public class EditableDefinablePlugin extends DefinablePlugin {
 
   public void removeSingleExceptionHandler(int resultCode) {
     logger.info("Removing the single exception handler for code " + resultCode);
-    List xlist = (List)definitionMap.getCollection(DefinablePlugin.CM_EXCEPTION_LIST_KEY, null);
+    List xlist = (List)definitionMap.getCollection(DefinablePlugin.KEY_EXCEPTION_LIST, null);
     if (xlist == null) {
       logger.debug("Not removing the single exception handler for code" + resultCode
                    + " (empty exception handler list)");
@@ -698,17 +741,17 @@ public class EditableDefinablePlugin extends DefinablePlugin {
     // if this was the last entry we remove the item from the definition map
     if (xlist.size() < 1) {
       logger.debug("Removing the handler results in an empty list; removing from map");
-      definitionMap.removeMapElement(DefinablePlugin.CM_EXCEPTION_LIST_KEY);
+      definitionMap.removeMapElement(DefinablePlugin.KEY_EXCEPTION_LIST);
     }
   }
 
   public void addConfigParamDescr(ConfigParamDescr descr) {
     logger.info("Adding a configuration parameter with key " + descr.toDetailedString());
-    List descrList = (List)definitionMap.getCollection(DefinablePlugin.CM_CONFIG_PROPS_KEY, null);
+    List descrList = (List)definitionMap.getCollection(DefinablePlugin.KEY_PLUGIN_CONFIG_PROPS, null);
     if (descrList == null) {
       logger.debug("There were no configuration parameters; creating list");
       descrList = new ArrayList();
-      definitionMap.putCollection(DefinablePlugin.CM_CONFIG_PROPS_KEY, descrList);
+      definitionMap.putCollection(DefinablePlugin.KEY_PLUGIN_CONFIG_PROPS, descrList);
     }
     else {
       logger.debug("Possibly removing parameter with same key prior to adding");
@@ -751,14 +794,14 @@ public class EditableDefinablePlugin extends DefinablePlugin {
     logger.info("Retrieving configuration parameters");
     // FIXME: default?
     List defaultConfigParam = ListUtil.list(getConfigParamDescr(ConfigParamDescr.BASE_URL.getKey()));
-    List descrList = (List)definitionMap.getCollection(DefinablePlugin.CM_CONFIG_PROPS_KEY,
+    List descrList = (List)definitionMap.getCollection(DefinablePlugin.KEY_PLUGIN_CONFIG_PROPS,
                                                        defaultConfigParam);
     return SetUtil.fromList(descrList);
   }
 
   public void removeConfigParamDescr(String key) {
     logger.info("Removing the configuration parameter with key " + key);
-    List descrlist = (List)definitionMap.getCollection(DefinablePlugin.CM_CONFIG_PROPS_KEY, null);
+    List descrlist = (List)definitionMap.getCollection(DefinablePlugin.KEY_PLUGIN_CONFIG_PROPS, null);
     if (descrlist == null) {
       logger.error("Not removing the configuration parameter with key " + key
                    + " (no configuration parameters)");
@@ -864,7 +907,7 @@ public class EditableDefinablePlugin extends DefinablePlugin {
 
   void addUserDefinedConfigParamDescrs(Collection descrs) {
     logger.debug("Adding user-defined configuration parameters");
-    List descrlist = (List)definitionMap.getCollection(DefinablePlugin.CM_CONFIG_PROPS_KEY, null);
+    List descrlist = (List)definitionMap.getCollection(DefinablePlugin.KEY_PLUGIN_CONFIG_PROPS, null);
     if (descrlist != null) {
       for (Iterator it = descrlist.iterator() ; it.hasNext() ; ) {
 	ConfigParamDescr cpd = (ConfigParamDescr)it.next();

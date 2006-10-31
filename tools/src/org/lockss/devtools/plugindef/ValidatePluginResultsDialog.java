@@ -1,5 +1,5 @@
 /*
- * $Id: ValidatePluginResultsDialog.java,v 1.9 2006-09-06 16:38:41 thib_gc Exp $
+ * $Id: ValidatePluginResultsDialog.java,v 1.10 2006-10-31 07:01:06 thib_gc Exp $
  */
 
 /*
@@ -202,7 +202,7 @@ public class ValidatePluginResultsDialog extends JDialog {
       }
 
       //Checks if the base url is included in the starting url
-      if(startingUrl.indexOf(m_au.getProperties().getUrl(ArchivalUnit.AU_BASE_URL,null).toString()) == -1){
+      if(startingUrl.indexOf(m_au.getProperties().getUrl(ArchivalUnit.KEY_AU_BASE_URL,null).toString()) == -1){
 	  output+= "  Validation Warning:  Base Url is not included in Starting Url\n";
       }
 
