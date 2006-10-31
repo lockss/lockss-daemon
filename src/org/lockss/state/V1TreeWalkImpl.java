@@ -1,5 +1,5 @@
 /*
- * $Id: V1TreeWalkImpl.java,v 1.10 2006-10-06 20:11:53 tlipkis Exp $
+ * $Id: V1TreeWalkImpl.java,v 1.11 2006-10-31 02:33:36 smorabito Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.state;
 
+import java.io.IOException;
 import java.util.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
@@ -105,7 +106,38 @@ public class V1TreeWalkImpl implements TreeWalker {
    * because a crawl or poll was started), false if it couldn't start
    * because it couldn't get the activity lock
    */
-  public boolean doTreeWalk(Deadline finishBy) {
+  public boolean doTreeWalk(Deadline finishBy) {    
+    boolean doFull = true;
+    switch (AuUtil.getProtocolVersion(theAu)) {
+    case Poll.V1_PROTOCOL:
+      doFull =  "full".equalsIgnoreCase(twm.paramV1Mode);
+      break;
+    case Poll.V3_PROTOCOL:
+      doFull =  "full".equalsIgnoreCase(twm.paramV3Mode);
+      break;
+    }
+    
+    // XXX: A temporary measure until the treewalk is eliminated.
+    // Skip treewalk entirely for V3 AUs
+    if (AuUtil.getProtocolVersion(theAu) == Poll.V3_PROTOCOL) {
+      // Get the node state for the AU.
+      NodeState node =
+        nodeMgr.getNodeState(theAu.getAuCachedUrlSet());
+      PollHistory lastHistory = node.getLastPollHistory();
+      try {
+        nodeMgr.callNecessaryPolls(lastHistory, node);
+        if (doFull) {
+          didFullTreewalk = true;
+        }
+        treeWalkAborted = false;
+        nodeMgr.getAuState().setLastTreeWalkTime();
+        return true;
+      } catch (IOException ex) {
+        log.warning("Error while attempting to call top level V3 poll.", ex);
+        return false;
+      }
+    }
+
     didFullTreewalk = false;
     long estDuration = finishBy.getRemainingTime();
     sleepDuration = calculateSleepDuration(twm.paramSleepInterval,
@@ -139,15 +171,6 @@ public class V1TreeWalkImpl implements TreeWalker {
 	  crawlMgr.startNewContentCrawl(theAu, rc, null, activityLock);
 	}
       } else {
-	boolean doFull = true;
-	switch (AuUtil.getProtocolVersion(theAu)) {
-	case Poll.V1_PROTOCOL:
-	  doFull =  "full".equalsIgnoreCase(twm.paramV1Mode);
-	  break;
-	case Poll.V3_PROTOCOL:
-	  doFull =  "full".equalsIgnoreCase(twm.paramV3Mode);
-	  break;
-	}
 	if (doFull) {
 	  if (nodeMgr.repairsNeeded()) {
 	    // schedule repairs if needed

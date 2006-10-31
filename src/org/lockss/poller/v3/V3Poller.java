@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.34 2006-10-07 02:01:27 smorabito Exp $
+ * $Id: V3Poller.java,v 1.35 2006-10-31 02:33:36 smorabito Exp $
  */
 
 /*
@@ -595,6 +595,11 @@ public class V3Poller extends BasePoll {
           log.debug2("Cancelling poll completion timer event.");
           TimerQueue.cancel(pollCompleteRequest);
         }
+        // Reset the duration and deadline to reflect reality
+        long oldDeadline = pollerState.getPollDeadline();
+        long now = TimeBase.nowMs();
+        pollerState.setPollDeadline(now);
+        pollerState.setDuration(now - pollerState.getCreateTime());
         // Clean up any lingering participants.
         serializer.closePoll();
         for (Iterator voters = theParticipants.values().iterator(); voters.hasNext(); ) {
@@ -604,6 +609,7 @@ public class V3Poller extends BasePoll {
             vb.release();
           }
         }
+        checkpointPoll();
         pollManager.closeThePoll(pollerState.getPollKey());        
         log.debug("Closed poll " + pollerState.getPollKey());
       }
@@ -1112,7 +1118,9 @@ public class V3Poller extends BasePoll {
         log.debug("Active Repairs: " + queue.getActiveRepairs().size());
       }
     } else {
-      setStatus(V3Poller.POLLER_STATUS_COMPLETE);
+      // It's OK to shortcut and end the poll here, there's nothing left to do!
+      voteComplete();
+      return;
     }
 
     // If we have decided to repair from any peers, pass the set of URLs
@@ -1193,7 +1201,13 @@ public class V3Poller extends BasePoll {
       new HashService.Callback() {
         public void hashingFinished(CachedUrlSet urlset, Object cookie,
                                     CachedUrlSetHasher hasher, Exception e) {
-          // Do nothing.
+          // If there are no more repairs outstanding, go ahead and
+          // stop the poll at this point.
+          PollerStateBean.RepairQueue queue = pollerState.getRepairQueue();
+          if (queue.getPendingRepairs().size() == 0 &&
+              queue.getActiveRepairs().size() == 0) {
+            voteComplete();
+          }
         }
     };
 

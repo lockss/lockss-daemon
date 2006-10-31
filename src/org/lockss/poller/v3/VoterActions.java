@@ -1,5 +1,5 @@
 /*
- * $Id: VoterActions.java,v 1.12 2006-09-28 23:52:52 smorabito Exp $
+ * $Id: VoterActions.java,v 1.13 2006-10-31 02:33:36 smorabito Exp $
  */
 
 /*
@@ -211,7 +211,9 @@ public class VoterActions {
   }
 
   public static PsmEvent handleProcessReceipt(PsmEvent evt, PsmInterp interp) {
-    // XXX: Implement.
+    VoterUserData ud = getUserData(interp);
+    // XXX: Once the receipt is a bit more interesting, use it here.
+    ud.getVoter().stopPoll(V3Voter.STATUS_COMPLETE);
     return V3Events.evtOk;
   }
 
