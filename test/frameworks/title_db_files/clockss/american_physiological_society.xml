@@ -1383,6 +1383,8 @@
       <property name="value" value="90" />
      </property>
      <property name="attributes.publisher" value="American Physiological Society" />
+     <property name="attributes.hint_application/pdf_filter_factory"
+               value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform$Simplified" />
     </property>
 
     <property name="JournalOfAppliedPhysiology91">
@@ -1398,6 +1400,8 @@
       <property name="value" value="91" />
      </property>
      <property name="attributes.publisher" value="American Physiological Society" />
+     <property name="attributes.hint_application/pdf_filter_factory"
+               value="org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform$Simplified" />
     </property>
 
     <property name="JournalOfAppliedPhysiology92">
