@@ -1,5 +1,5 @@
 /*
- * $Id: AboutBox.java,v 1.3 2006-10-18 18:19:12 thib_gc Exp $
+ * $Id: AboutBox.java,v 1.4 2006-11-01 05:13:53 thib_gc Exp $
  */
 
 /*
@@ -56,7 +56,7 @@ public class AboutBox extends JDialog implements ActionListener {
   FlowLayout flowLayout1 = new FlowLayout();
   GridLayout gridLayout1 = new GridLayout();
   String product = "LOCKSS Plugin Tool";
-  String version = "Version 0.10.1";
+  String version = "Version 0.11.1";
   String copyright = "Copyright (c) 2000-2006" +
       " Board of Trustees of Leland Stanford Jr. University," +
       " all rights reserved.";
