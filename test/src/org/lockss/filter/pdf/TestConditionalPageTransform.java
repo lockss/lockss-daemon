@@ -1,5 +1,5 @@
 /*
- * $Id: TestConditionalPageTransform.java,v 1.2 2006-09-14 23:10:39 thib_gc Exp $
+ * $Id: TestConditionalPageTransform.java,v 1.3 2006-11-01 22:25:16 thib_gc Exp $
  */
 
 /*
@@ -42,31 +42,57 @@ import org.lockss.util.PdfPage;
 
 public class TestConditionalPageTransform extends LockssTestCase {
 
-  public void testConditionFalse() throws Exception {
+  public void testIfFalse() throws Exception {
     PageTransform transform = new PageTransform() {
-      public boolean transform(PdfPage pdfpage) throws IOException {
+      public boolean transform(PdfPage pdfPage) throws IOException {
         fail("Should not have been called");
         return false;
       }
     };
     ConditionalPageTransform conditional = new ConditionalPageTransform(new IdentityPageTransform(false),
+                                                                        true,
                                                                         transform);
     assertFalse(conditional.transform(new MockPdfPage()));
-    // Did not throw: all is well
   }
 
-  public void testConditionTrue() throws Exception {
-    RememberTransformPageTransform transform = new RememberTransformPageTransform(new ArrayList());
+  public void testIfTrueStrictThenFalse() throws Exception {
     ConditionalPageTransform conditional = new ConditionalPageTransform(new IdentityPageTransform(true),
+                                                                        true,
+                                                                        new IdentityPageTransform(false));
+    try {
+      conditional.transform(new MockPdfPage());
+      fail("Should have thrown");
+    }
+    catch (PageTransformException pte) {
+      // Threw; all is well
+    }
+  }
+
+  public void testIfTrueStrictThenTrue() throws Exception {
+    RememberTransformPageTransform transform = new RememberTransformPageTransform(true, new ArrayList());
+    ConditionalPageTransform conditional = new ConditionalPageTransform(new IdentityPageTransform(true),
+                                                                        true,
                                                                         transform);
     assertTrue(conditional.transform(new MockPdfPage()));
     assertEquals(1, transform.getCallCount());
   }
 
-  public void testConditionTrueThenFails() throws Exception {
-    assertFalse(new ConditionalPageTransform(new IdentityPageTransform(true),
-                                             false,
-                                             new IdentityPageTransform(false)).transform(new MockPdfPage()));
+  public void testIfTrueThenFalse() throws Exception {
+    RememberTransformPageTransform transform = new RememberTransformPageTransform(false, new ArrayList());
+    ConditionalPageTransform conditional = new ConditionalPageTransform(new IdentityPageTransform(true),
+                                                                        false,
+                                                                        transform);
+    assertFalse(conditional.transform(new MockPdfPage()));
+    assertEquals(1, transform.getCallCount());
+  }
+
+  public void testIfTrueThenTrue() throws Exception {
+    RememberTransformPageTransform transform = new RememberTransformPageTransform(true, new ArrayList());
+    ConditionalPageTransform conditional = new ConditionalPageTransform(new IdentityPageTransform(true),
+                                                                        false,
+                                                                        transform);
+    assertTrue(conditional.transform(new MockPdfPage()));
+    assertEquals(1, transform.getCallCount());
   }
 
 }

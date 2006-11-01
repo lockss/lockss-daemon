@@ -1,5 +1,5 @@
 /*
- * $Id: TestAggregatePageTransform.java,v 1.1 2006-09-10 07:50:49 thib_gc Exp $
+ * $Id: TestAggregatePageTransform.java,v 1.2 2006-11-01 22:25:16 thib_gc Exp $
  */
 
 /*
@@ -36,33 +36,55 @@ import java.util.*;
 
 import org.lockss.filter.pdf.MockTransforms.*;
 import org.lockss.test.*;
+import org.lockss.util.PdfUtil;
 
 public class TestAggregatePageTransform extends LockssTestCase {
 
-  public void testRightOrder_OneArgConstructor() throws Exception {
+  public void testRightOrder_1ArgConstructor() throws Exception {
     List remember = new ArrayList();
     RememberTransformPageTransform[] transforms = new RememberTransformPageTransform[] {
         new RememberTransformPageTransform(remember),
     };
-    AggregatePageTransform transform = new AggregatePageTransform(transforms[0]);
+    AggregatePageTransform transform = new AggregatePageTransform(PdfUtil.AND_ALL,
+                                                                  transforms[0]);
     assertTrue(transform.transform(new MockPdfPage()));
+    assertEquals(transforms.length, remember.size());
     for (int ix = 0 ; ix < transforms.length ; ++ix) {
-      String failed = "Failed index: " + ix;
+      String failed = "Failing index: " + ix;
       assertSame(failed, transforms[ix], remember.get(ix));
       assertEquals(failed, 1, transforms[ix].getCallCount());
     }
   }
 
-  public void testRightOrder_TwoArgConstructor() throws Exception {
+  public void testRightOrder_2ArgConstructor() throws Exception {
     List remember = new ArrayList();
     RememberTransformPageTransform[] transforms = new RememberTransformPageTransform[] {
         new RememberTransformPageTransform(remember),
         new RememberTransformPageTransform(remember),
     };
-    AggregatePageTransform transform = new AggregatePageTransform(transforms[0],
+    AggregatePageTransform transform = new AggregatePageTransform(PdfUtil.AND_ALL,
+                                                                  transforms[0],
                                                                   transforms[1]);
     assertTrue(transform.transform(new MockPdfPage()));
-    assertIsomorphic(transforms, remember);
+    assertEquals(transforms.length, remember.size());
+    for (int ix = 0 ; ix < transforms.length ; ++ix) {
+      String failed = "Failing index: " + ix;
+      assertSame(failed, transforms[ix], remember.get(ix));
+      assertEquals(failed, 1, transforms[ix].getCallCount());
+    }
+  }
+
+  public void testRightOrder_AddMethod_Array() throws Exception {
+    List remember = new ArrayList();
+    RememberTransformPageTransform[] transforms = new RememberTransformPageTransform[] {
+        new RememberTransformPageTransform(remember),
+        new RememberTransformPageTransform(remember),
+        new RememberTransformPageTransform(remember),
+    };
+    AggregatePageTransform transform = new AggregatePageTransform(PdfUtil.AND_ALL);
+    transform.add(transforms);
+    assertTrue(transform.transform(new MockPdfPage()));
+    assertEquals(transforms.length, remember.size());
     for (int ix = 0 ; ix < transforms.length ; ++ix) {
       String failed = "Failed index: " + ix;
       assertSame(failed, transforms[ix], remember.get(ix));
@@ -70,18 +92,37 @@ public class TestAggregatePageTransform extends LockssTestCase {
     }
   }
 
-  public void testRightOrder_UsingAddMethod() throws Exception {
+  public void testRightOrder_AddMethod_Single() throws Exception {
     List remember = new ArrayList();
     RememberTransformPageTransform[] transforms = new RememberTransformPageTransform[] {
         new RememberTransformPageTransform(remember),
         new RememberTransformPageTransform(remember),
         new RememberTransformPageTransform(remember),
     };
-    AggregatePageTransform transform = new AggregatePageTransform();
+    AggregatePageTransform transform = new AggregatePageTransform(PdfUtil.AND_ALL);
     for (int tra = 0 ; tra < transforms.length ; ++tra) {
       transform.add(transforms[tra]);
     }
     assertTrue(transform.transform(new MockPdfPage()));
+    assertEquals(transforms.length, remember.size());
+    for (int ix = 0 ; ix < transforms.length ; ++ix) {
+      String failed = "Failed index: " + ix;
+      assertSame(failed, transforms[ix], remember.get(ix));
+      assertEquals(failed, 1, transforms[ix].getCallCount());
+    }
+  }
+
+  public void testRightOrder_ArrayConstructor() throws Exception {
+    List remember = new ArrayList();
+    RememberTransformPageTransform[] transforms = new RememberTransformPageTransform[] {
+        new RememberTransformPageTransform(remember),
+        new RememberTransformPageTransform(remember),
+        new RememberTransformPageTransform(remember),
+    };
+    AggregatePageTransform transform = new AggregatePageTransform(PdfUtil.AND_ALL,
+                                                                  transforms);
+    assertTrue(transform.transform(new MockPdfPage()));
+    assertEquals(transforms.length, remember.size());
     for (int ix = 0 ; ix < transforms.length ; ++ix) {
       String failed = "Failed index: " + ix;
       assertSame(failed, transforms[ix], remember.get(ix));

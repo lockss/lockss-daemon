@@ -1,5 +1,5 @@
 /*
- * $Id: TestAggregateDocumentTransform.java,v 1.1 2006-09-10 07:50:49 thib_gc Exp $
+ * $Id: TestAggregateDocumentTransform.java,v 1.2 2006-11-01 22:25:16 thib_gc Exp $
  */
 
 /*
@@ -36,61 +36,65 @@ import java.util.*;
 
 import org.lockss.filter.pdf.MockTransforms.RememberDocumentTransform;
 import org.lockss.test.*;
+import org.lockss.util.PdfUtil;
 
 public class TestAggregateDocumentTransform extends LockssTestCase {
 
-  public void testRightOrder_TwoArgConstructor() throws Exception {
+  public void testRightOrder_1ArgConstructor() throws Exception {
+    List remember = new ArrayList();
+    RememberDocumentTransform[] transforms = new RememberDocumentTransform[] {
+        new RememberDocumentTransform(remember),
+    };
+    AggregateDocumentTransform transform = new AggregateDocumentTransform(PdfUtil.AND_ALL,
+                                                                          transforms[0]);
+    assertTrue(transform.transform(new MockPdfDocument()));
+    assertEquals(transforms.length, remember.size());
+    for (int ix = 0 ; ix < transforms.length ; ++ix) {
+      String failed = "Failing index: " + ix;
+      assertSame(failed, transforms[ix], remember.get(ix));
+      assertEquals(failed, 1, transforms[ix].getCallCount());
+    }
+  }
+
+  public void testRightOrder_2ArgConstructor() throws Exception {
     List remember = new ArrayList();
     RememberDocumentTransform[] transforms = new RememberDocumentTransform[] {
         new RememberDocumentTransform(remember),
         new RememberDocumentTransform(remember),
     };
-    AggregateDocumentTransform transform = new AggregateDocumentTransform(transforms[0],
+    AggregateDocumentTransform transform = new AggregateDocumentTransform(PdfUtil.AND_ALL,
+                                                                          transforms[0],
                                                                           transforms[1]);
     assertTrue(transform.transform(new MockPdfDocument()));
+    assertEquals(transforms.length, remember.size());
     for (int ix = 0 ; ix < transforms.length ; ++ix) {
-      String failed = "Failed index: " + ix;
+      String failed = "Failing index: " + ix;
       assertSame(failed, transforms[ix], remember.get(ix));
       assertEquals(failed, 1, transforms[ix].getCallCount());
     }
   }
 
-  public void testRightOrder_OneArgConstructor() throws Exception {
-    // Make two transforms
-    List remember = new ArrayList();
-    RememberDocumentTransform[] transforms = new RememberDocumentTransform[] {
-        new RememberDocumentTransform(remember),
-    };
-    AggregateDocumentTransform transform = new AggregateDocumentTransform(transforms[0]);
-    assertTrue(transform.transform(new MockPdfDocument()));
-    for (int ix = 0 ; ix < transforms.length ; ++ix) {
-      String failed = "Failed index: " + ix;
-      assertSame(failed, transforms[ix], remember.get(ix));
-      assertEquals(failed, 1, transforms[ix].getCallCount());
-    }
-  }
-
-  public void testRightOrder_ThreeArgConstructor() throws Exception {
-    // Make two transforms
+  public void testRightOrder_3ArgConstructor() throws Exception {
     List remember = new ArrayList();
     RememberDocumentTransform[] transforms = new RememberDocumentTransform[] {
         new RememberDocumentTransform(remember),
         new RememberDocumentTransform(remember),
         new RememberDocumentTransform(remember),
     };
-    AggregateDocumentTransform transform = new AggregateDocumentTransform(transforms[0],
+    AggregateDocumentTransform transform = new AggregateDocumentTransform(PdfUtil.AND_ALL,
+                                                                          transforms[0],
                                                                           transforms[1],
                                                                           transforms[2]);
     assertTrue(transform.transform(new MockPdfDocument()));
+    assertEquals(transforms.length, remember.size());
     for (int ix = 0 ; ix < transforms.length ; ++ix) {
-      String failed = "Failed index: " + ix;
+      String failed = "Failing index: " + ix;
       assertSame(failed, transforms[ix], remember.get(ix));
       assertEquals(failed, 1, transforms[ix].getCallCount());
     }
   }
 
-  public void testRightOrder_FourArgConstructor() throws Exception {
-    // Make two transforms
+  public void testRightOrder_4ArgConstructor() throws Exception {
     List remember = new ArrayList();
     RememberDocumentTransform[] transforms = new RememberDocumentTransform[] {
         new RememberDocumentTransform(remember),
@@ -98,20 +102,21 @@ public class TestAggregateDocumentTransform extends LockssTestCase {
         new RememberDocumentTransform(remember),
         new RememberDocumentTransform(remember),
     };
-    AggregateDocumentTransform transform = new AggregateDocumentTransform(transforms[0],
+    AggregateDocumentTransform transform = new AggregateDocumentTransform(PdfUtil.AND_ALL,
+                                                                          transforms[0],
                                                                           transforms[1],
                                                                           transforms[2],
                                                                           transforms[3]);
     assertTrue(transform.transform(new MockPdfDocument()));
+    assertEquals(transforms.length, remember.size());
     for (int ix = 0 ; ix < transforms.length ; ++ix) {
-      String failed = "Failed index: " + ix;
+      String failed = "Failing index: " + ix;
       assertSame(failed, transforms[ix], remember.get(ix));
       assertEquals(failed, 1, transforms[ix].getCallCount());
     }
   }
 
-  public void testRightOrder_UsingAddMethod() throws Exception {
-    // Make a few transforms
+  public void testRightOrder_AddMethod_Array() throws Exception {
     List remember = new ArrayList();
     RememberDocumentTransform[] transforms = new RememberDocumentTransform[] {
         new RememberDocumentTransform(remember),
@@ -120,13 +125,54 @@ public class TestAggregateDocumentTransform extends LockssTestCase {
         new RememberDocumentTransform(remember),
         new RememberDocumentTransform(remember),
     };
-    AggregateDocumentTransform transform = new AggregateDocumentTransform();
+    AggregateDocumentTransform transform = new AggregateDocumentTransform(PdfUtil.AND_ALL);
+    transform.add(transforms);
+    assertTrue(transform.transform(new MockPdfDocument()));
+    assertEquals(transforms.length, remember.size());
+    for (int ix = 0 ; ix < transforms.length ; ++ix) {
+      String failed = "Failing index: " + ix;
+      assertSame(failed, transforms[ix], remember.get(ix));
+      assertEquals(failed, 1, transforms[ix].getCallCount());
+    }
+  }
+
+  public void testRightOrder_AddMethod_Single() throws Exception {
+    List remember = new ArrayList();
+    RememberDocumentTransform[] transforms = new RememberDocumentTransform[] {
+        new RememberDocumentTransform(remember),
+        new RememberDocumentTransform(remember),
+        new RememberDocumentTransform(remember),
+        new RememberDocumentTransform(remember),
+        new RememberDocumentTransform(remember),
+    };
+    AggregateDocumentTransform transform = new AggregateDocumentTransform(PdfUtil.AND_ALL);
     for (int tra = 0 ; tra < transforms.length ; ++tra) {
       transform.add(transforms[tra]);
     }
     assertTrue(transform.transform(new MockPdfDocument()));
+    assertEquals(transforms.length, remember.size());
     for (int ix = 0 ; ix < transforms.length ; ++ix) {
-      String failed = "Failed index: " + ix;
+      String failed = "Failing index: " + ix;
+      assertSame(failed, transforms[ix], remember.get(ix));
+      assertEquals(failed, 1, transforms[ix].getCallCount());
+    }
+  }
+
+  public void testRightOrder_ArrayConstructor() throws Exception {
+    List remember = new ArrayList();
+    RememberDocumentTransform[] transforms = new RememberDocumentTransform[] {
+        new RememberDocumentTransform(remember),
+        new RememberDocumentTransform(remember),
+        new RememberDocumentTransform(remember),
+        new RememberDocumentTransform(remember),
+        new RememberDocumentTransform(remember),
+    };
+    AggregateDocumentTransform transform = new AggregateDocumentTransform(PdfUtil.AND_ALL,
+                                                                          transforms);
+    assertTrue(transform.transform(new MockPdfDocument()));
+    assertEquals(transforms.length, remember.size());
+    for (int ix = 0 ; ix < transforms.length ; ++ix) {
+      String failed = "Failing index: " + ix;
       assertSame(failed, transforms[ix], remember.get(ix));
       assertEquals(failed, 1, transforms[ix].getCallCount());
     }

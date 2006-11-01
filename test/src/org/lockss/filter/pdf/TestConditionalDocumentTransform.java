@@ -1,5 +1,5 @@
 /*
- * $Id: TestConditionalDocumentTransform.java,v 1.2 2006-09-14 23:10:39 thib_gc Exp $
+ * $Id: TestConditionalDocumentTransform.java,v 1.3 2006-11-01 22:25:16 thib_gc Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import org.lockss.util.PdfDocument;
 
 public class TestConditionalDocumentTransform extends LockssTestCase {
 
-  public void testConditionFalse() throws Exception {
+  public void testIfFalse() throws Exception {
     DocumentTransform transform = new DocumentTransform() {
       public boolean transform(PdfDocument pdfDocument) throws IOException {
         fail("Should not have been called");
@@ -50,23 +50,49 @@ public class TestConditionalDocumentTransform extends LockssTestCase {
       }
     };
     ConditionalDocumentTransform conditional = new ConditionalDocumentTransform(new IdentityDocumentTransform(false),
+                                                                                true,
                                                                                 transform);
     assertFalse(conditional.transform(new MockPdfDocument()));
-    // Did not throw: all is well
   }
 
-  public void testConditionTrue() throws Exception {
-    RememberDocumentTransform transform = new RememberDocumentTransform(new ArrayList());
+  public void testIfTrueStrictThenFalse() throws Exception {
     ConditionalDocumentTransform conditional = new ConditionalDocumentTransform(new IdentityDocumentTransform(true),
+                                                                                true,
+                                                                                new IdentityDocumentTransform(false));
+    try {
+      conditional.transform(new MockPdfDocument());
+      fail("Should have thrown");
+    }
+    catch (DocumentTransformException dte) {
+      // Threw; all is well
+    }
+  }
+
+  public void testIfTrueStrictThenTrue() throws Exception {
+    RememberDocumentTransform transform = new RememberDocumentTransform(true, new ArrayList());
+    ConditionalDocumentTransform conditional = new ConditionalDocumentTransform(new IdentityDocumentTransform(true),
+                                                                                true,
                                                                                 transform);
     assertTrue(conditional.transform(new MockPdfDocument()));
     assertEquals(1, transform.getCallCount());
   }
 
-  public void testConditionTrueThenFails() throws Exception {
-    assertFalse(new ConditionalDocumentTransform(new IdentityDocumentTransform(true),
-                                                 false,
-                                                 new IdentityDocumentTransform(false)).transform(new MockPdfDocument()));
+  public void testIfTrueThenFalse() throws Exception {
+    RememberDocumentTransform transform = new RememberDocumentTransform(false, new ArrayList());
+    ConditionalDocumentTransform conditional = new ConditionalDocumentTransform(new IdentityDocumentTransform(true),
+                                                                                false,
+                                                                                transform);
+    assertFalse(conditional.transform(new MockPdfDocument()));
+    assertEquals(1, transform.getCallCount());
+  }
+
+  public void testIfTrueThenTrue() throws Exception {
+    RememberDocumentTransform transform = new RememberDocumentTransform(true, new ArrayList());
+    ConditionalDocumentTransform conditional = new ConditionalDocumentTransform(new IdentityDocumentTransform(true),
+                                                                                false,
+                                                                                transform);
+    assertTrue(conditional.transform(new MockPdfDocument()));
+    assertEquals(1, transform.getCallCount());
   }
 
 }
