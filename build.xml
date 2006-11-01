@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.203 2006-10-20 18:41:38 thib_gc Exp $
+ $Id: build.xml,v 1.204 2006-11-01 04:45:58 thib_gc Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
@@ -1098,33 +1098,54 @@ JAVA_COMMAND_ARGS="-server -Xmx375m -Dsun.net.inetaddr.ttl=3600 -Dorg.lockss.syn
     </pathconvert>
     <echo file="${temp.pkg.dir}/plugintool">#!/bin/sh
 
+# Select Java executable
+if [ -n "$JAVA_HOME" ] ; then
+ JAVA_EXEC="$JAVA_HOME/bin/java"
+else
+ JAVA_EXEC="java"
+fi
+
+# Set the base class path and base JVM arguments
 CLASSPATH="${tmp.ptool.clspth.unix}"
+JVM_ARGS=""
+
+# Parse command line arguments
 while true ; do
  case "$1" in
+
+  # Add element to class path
   -classpath )
    CLASSPATH="$CLASSPATH":"$2"
    shift; shift; continue;;
+
+  # Set log level
   -loglevel )
    JVM_ARGS="$JVM_ARGS -Dorg.lockss.defaultLogLevel=$2"
    shift; shift; continue;;
+
+  # Add element to JVM arguments
   -D*=* )
    JVM_ARGS="$JVM_ARGS $1"
    shift; continue;;
+
  esac
  break
 done
 export CLASSPATH
+
+# Display class path and JVM arguments (if non-empty)
 echo "CLASSPATH=$CLASSPATH"
 if [ -n "$JVM_ARGS" ] ; then
  echo "JVM_ARGS=$JVM_ARGS"
 fi
-java -classpath $CLASSPATH $JVM_ARGS org.lockss.devtools.plugindef.PluginDefinerApp
+
+$JAVA_EXEC -classpath $CLASSPATH $JVM_ARGS org.lockss.devtools.plugindef.PluginDefinerApp
 </echo>
     <echo file="${temp.pkg.dir}/plugintool.bat">java -classpath &quot;${tmp.ptool.clspth.dos}&quot; org.lockss.devtools.plugindef.PluginDefinerApp
 </echo>
     <tar destfile="plugintool.tgz" compression="gzip">
-     <tarfileset dir="${temp.pkg.dir}" mode="755" includes="runtool" />
-     <tarfileset dir="${temp.pkg.dir}" excludes="runtool" />
+     <tarfileset dir="${temp.pkg.dir}" mode="755" includes="plugintool" />
+     <tarfileset dir="${temp.pkg.dir}" excludes="plugintool" />
     </tar>
     <zip destfile="plugintool.zip" basedir="${temp.pkg.dir}" />
     <delete dir="${temp.pkg.dir}" quiet="true"/>
