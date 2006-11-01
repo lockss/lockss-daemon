@@ -1,5 +1,5 @@
 /*
- * $Id: TransformSelectedPages.java,v 1.7 2006-09-26 07:32:24 thib_gc Exp $
+ * $Id: TransformSelectedPages.java,v 1.8 2006-11-01 22:25:45 thib_gc Exp $
  */
 
 /*
@@ -57,7 +57,7 @@ public abstract class TransformSelectedPages extends PageTransformWrapper {
    * <p>Builds a new document transform using the default result
    * policy, based on the given page transform.</p>
    * @param pageTransform A page transform.
-   * @see #TransformSelectedPages(ResultPolicy, PageTransform)
+   * @see #TransformSelectedPages(PdfUtil.ResultPolicy, PageTransform)
    * @see #POLICY_DEFAULT
    */
   protected TransformSelectedPages(PageTransform pageTransform) {
@@ -71,7 +71,7 @@ public abstract class TransformSelectedPages extends PageTransformWrapper {
    * (using the default aggregation result policy).</p>
    * @param pageTransform1 A page transform.
    * @param pageTransform2 A page transform.
-   * @see #TransformSelectedPages(ResultPolicy, PageTransform, PageTransform)
+   * @see #TransformSelectedPages(PdfUtil.ResultPolicy, PageTransform, PageTransform)
    * @see #POLICY_DEFAULT
    */
   protected TransformSelectedPages(PageTransform pageTransform1,
@@ -88,7 +88,7 @@ public abstract class TransformSelectedPages extends PageTransformWrapper {
    * @param pageTransform1 A page transform.
    * @param pageTransform2 A page transform.
    * @param pageTransform3 A page transform.
-   * @see #TransformSelectedPages(ResultPolicy, PageTransform, PageTransform, PageTransform)
+   * @see #TransformSelectedPages(PdfUtil.ResultPolicy, PageTransform, PageTransform, PageTransform)
    * @see #POLICY_DEFAULT
    */
   protected TransformSelectedPages(PageTransform pageTransform1,
@@ -105,7 +105,7 @@ public abstract class TransformSelectedPages extends PageTransformWrapper {
    * policy, based on the aggregation of the given page transforms
    * (using the default aggregation result policy).</p>
    * @param pageTransforms An array of page transforms.
-   * @see #TransformSelectedPages(ResultPolicy, PageTransform[])
+   * @see #TransformSelectedPages(PdfUtil.ResultPolicy, PageTransform[])
    * @see #POLICY_DEFAULT
    */
   protected TransformSelectedPages(PageTransform[] pageTransforms) {
@@ -139,7 +139,7 @@ public abstract class TransformSelectedPages extends PageTransformWrapper {
    * @param resultPolicy   A result policy.
    * @param pageTransform1 A page transform.
    * @param pageTransform2 A page transform.
-   * @see #TransformSelectedPages(ResultPolicy, PageTransform)
+   * @see #TransformSelectedPages(PdfUtil.ResultPolicy, PageTransform)
    * @see AggregatePageTransform#AggregatePageTransform(PageTransform, PageTransform)
    */
   protected TransformSelectedPages(ResultPolicy resultPolicy,
@@ -159,7 +159,7 @@ public abstract class TransformSelectedPages extends PageTransformWrapper {
    * @param pageTransform1 A page transform.
    * @param pageTransform2 A page transform.
    * @param pageTransform3 A page transform.
-   * @see #TransformSelectedPages(ResultPolicy, PageTransform)
+   * @see #TransformSelectedPages(PdfUtil.ResultPolicy, PageTransform)
    * @see AggregatePageTransform#AggregatePageTransform(PageTransform, PageTransform, PageTransform)
    */
   protected TransformSelectedPages(ResultPolicy resultPolicy,
@@ -179,7 +179,7 @@ public abstract class TransformSelectedPages extends PageTransformWrapper {
    * (using the default aggregation result policy).</p>
    * @param resultPolicy   A result policy.
    * @param pageTransforms An array of page transforms.
-   * @see #TransformSelectedPages(ResultPolicy, PageTransform)
+   * @see #TransformSelectedPages(PdfUtil.ResultPolicy, PageTransform)
    * @see AggregatePageTransform#AggregatePageTransform(PageTransform[])
    */
   protected TransformSelectedPages(ResultPolicy resultPolicy,
@@ -199,8 +199,8 @@ public abstract class TransformSelectedPages extends PageTransformWrapper {
    *                                  of the aggregate page transform).
    * @param pageTransform1            A page transform.
    * @param pageTransform2            A page transform.
-   * @see #TransformSelectedPages(ResultPolicy, PageTransform)
-   * @see AggregatePageTransform#AggregatePageTransform(ResultPolicy, PageTransform, PageTransform)
+   * @see #TransformSelectedPages(PdfUtil.ResultPolicy, PageTransform)
+   * @see AggregatePageTransform#AggregatePageTransform(PdfUtil.ResultPolicy, PageTransform, PageTransform)
    */
   protected TransformSelectedPages(ResultPolicy pageIterationResultPolicy,
                                    ResultPolicy pageTransformResultPolicy,
@@ -224,8 +224,8 @@ public abstract class TransformSelectedPages extends PageTransformWrapper {
    * @param pageTransform1            A page transform.
    * @param pageTransform2            A page transform.
    * @param pageTransform3            A page transform.
-   * @see #TransformSelectedPages(ResultPolicy, PageTransform)
-   * @see AggregatePageTransform#AggregatePageTransform(ResultPolicy, PageTransform, PageTransform, PageTransform)
+   * @see #TransformSelectedPages(PdfUtil.ResultPolicy, PageTransform)
+   * @see AggregatePageTransform#AggregatePageTransform(PdfUtil.ResultPolicy, PageTransform, PageTransform, PageTransform)
    */
   protected TransformSelectedPages(ResultPolicy pageIterationResultPolicy,
                                    ResultPolicy pageTransformResultPolicy,
@@ -249,8 +249,8 @@ public abstract class TransformSelectedPages extends PageTransformWrapper {
    * @param pageTransformResultPolicy A result policy (for the result
    *                                  of the aggregate page transform).
    * @param pageTransforms            An array of page transforms.
-   * @see #TransformSelectedPages(ResultPolicy, PageTransform)
-   * @see AggregatePageTransform#AggregatePageTransform(ResultPolicy, PageTransform[])
+   * @see #TransformSelectedPages(PdfUtil.ResultPolicy, PageTransform)
+   * @see AggregatePageTransform#AggregatePageTransform(PdfUtil.ResultPolicy, PageTransform[])
    */
   protected TransformSelectedPages(ResultPolicy pageIterationResultPolicy,
                                    ResultPolicy pageTransformResultPolicy,

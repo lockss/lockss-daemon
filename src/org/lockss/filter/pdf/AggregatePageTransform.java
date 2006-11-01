@@ -1,5 +1,5 @@
 /*
- * $Id: AggregatePageTransform.java,v 1.5 2006-09-26 07:32:24 thib_gc Exp $
+ * $Id: AggregatePageTransform.java,v 1.6 2006-11-01 22:25:45 thib_gc Exp $
  */
 
 /*
@@ -59,7 +59,7 @@ public class AggregatePageTransform implements PageTransform {
   /**
    * <p>Builds a new aggregate page transform using the default
    * result policy.</p>
-   * @see #AggregatePageTransform(ResultPolicy)
+   * @see #AggregatePageTransform(PdfUtil.ResultPolicy)
    * @see #POLICY_DEFAULT
    */
   public AggregatePageTransform() {
@@ -70,7 +70,7 @@ public class AggregatePageTransform implements PageTransform {
    * <p>Builds a new aggregate page transform using the default
    * result policy and registers the given page transforms.</p>
    * @param pageTransform A page transform.
-   * @see #AggregatePageTransform(ResultPolicy, PageTransform)
+   * @see #AggregatePageTransform(PdfUtil.ResultPolicy, PageTransform)
    * @see #POLICY_DEFAULT
    */
   public AggregatePageTransform(PageTransform pageTransform) {
@@ -83,7 +83,7 @@ public class AggregatePageTransform implements PageTransform {
    * result policy and registers the given page transforms.</p>
    * @param pageTransform1 A page transform.
    * @param pageTransform2 A page transform.
-   * @see #AggregatePageTransform(ResultPolicy, PageTransform, PageTransform)
+   * @see #AggregatePageTransform(PdfUtil.ResultPolicy, PageTransform, PageTransform)
    * @see #POLICY_DEFAULT
    */
   public AggregatePageTransform(PageTransform pageTransform1,
@@ -99,7 +99,7 @@ public class AggregatePageTransform implements PageTransform {
    * @param pageTransform1 A page transform.
    * @param pageTransform2 A page transform.
    * @param pageTransform3 A page transform.
-   * @see #AggregatePageTransform(ResultPolicy, PageTransform, PageTransform, PageTransform)
+   * @see #AggregatePageTransform(PdfUtil.ResultPolicy, PageTransform, PageTransform, PageTransform)
    * @see #POLICY_DEFAULT
    */
   public AggregatePageTransform(PageTransform pageTransform1,
@@ -115,7 +115,7 @@ public class AggregatePageTransform implements PageTransform {
    * <p>Builds a new aggregate transform using the default result
    * policy and registers the given page transforms.</p>
    * @param pageTransforms     An array of page transforms.
-   * @see #AggregatePageTransform(ResultPolicy, PageTransform[])
+   * @see #AggregatePageTransform(PdfUtil.ResultPolicy, PageTransform[])
    * @see #POLICY_DEFAULT
    */
   public AggregatePageTransform(PageTransform[] pageTransforms) {
@@ -144,7 +144,7 @@ public class AggregatePageTransform implements PageTransform {
    * result policy and registers the given page transforms.</p>
    * @param resultPolicy   A result policy.
    * @param pageTransform A page transform.
-   * @see #AggregatePageTransform(ResultPolicy)
+   * @see #AggregatePageTransform(PdfUtil.ResultPolicy)
    */
   public AggregatePageTransform(ResultPolicy resultPolicy,
                                 PageTransform pageTransform) {
@@ -159,7 +159,7 @@ public class AggregatePageTransform implements PageTransform {
    * @param resultPolicy   A result policy.
    * @param pageTransform1 A page transform.
    * @param pageTransform2 A page transform.
-   * @see #AggregatePageTransform(ResultPolicy, PageTransform)
+   * @see #AggregatePageTransform(PdfUtil.ResultPolicy, PageTransform)
    */
   public AggregatePageTransform(ResultPolicy resultPolicy,
                                 PageTransform pageTransform1,
@@ -177,7 +177,7 @@ public class AggregatePageTransform implements PageTransform {
    * @param pageTransform1 A page transform.
    * @param pageTransform2 A page transform.
    * @param pageTransform3 A page transform.
-   * @see #AggregatePageTransform(ResultPolicy, PageTransform, PageTransform)
+   * @see #AggregatePageTransform(PdfUtil.ResultPolicy, PageTransform, PageTransform)
    */
   public AggregatePageTransform(ResultPolicy resultPolicy,
                                 PageTransform pageTransform1,
@@ -195,7 +195,7 @@ public class AggregatePageTransform implements PageTransform {
    * policy and registers the given page transforms.</p>
    * @param resultPolicy       A result policy.
    * @param pageTransforms     An array of page transforms.
-   * @see #AggregatePageTransform(ResultPolicy)
+   * @see #AggregatePageTransform(PdfUtil.ResultPolicy)
    */
   public AggregatePageTransform(ResultPolicy resultPolicy,
                                 PageTransform[] pageTransforms) {

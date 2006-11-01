@@ -1,5 +1,5 @@
 /*
- * $Id: ConditionalPageTransform.java,v 1.5 2006-09-26 07:32:24 thib_gc Exp $
+ * $Id: ConditionalPageTransform.java,v 1.6 2006-11-01 22:25:45 thib_gc Exp $
  */
 
 /*
@@ -139,7 +139,7 @@ public class ConditionalPageTransform extends PageTransformDecorator {
    * given aggregation result policy).</p>
    * @param ifTransform      An "if" page transform.
    * @param thenStrictness   True to wrap the aggregated "then"
-   *                        page transform as a
+   *                         page transform as a
    *                         {@link StrictPageTransform}, false
    *                         otherwise.
    * @param thenResultPolicy A result policy for the aggregate "then"
@@ -168,14 +168,14 @@ public class ConditionalPageTransform extends PageTransformDecorator {
    * given aggregation result policy).</p>
    * @param ifTransform      An "if" page transform.
    * @param thenStrictness   True to wrap the aggregated "then"
-   *                        page transform as a
+   *                         page transform as a
    *                         {@link StrictPageTransform}, false
    *                         otherwise.
    * @param thenResultPolicy A result policy for the aggregate "then"
    *                         page transform.
    * @param thenTransforms   An array of "then" page transforms.
    * @see #ConditionalPageTransform(PageTransform, boolean, PageTransform)
-   * @see AggregatePageTransform#AggregatePageTransform(ResultPolicy, PageTransform[])
+   * @see AggregatePageTransform#AggregatePageTransform(PdfUtil.ResultPolicy, PageTransform[])
    */
   public ConditionalPageTransform(PageTransform ifTransform,
                                   boolean thenStrictness,
@@ -231,7 +231,7 @@ public class ConditionalPageTransform extends PageTransformDecorator {
    * default aggregation result policy).</p>
    * @param ifTransform      An "if" page transform.
    * @param thenTransforms   An array of "then" page transforms.
-   * @see #ConditionalPageTransform(PageTransform, boolean, ResultPolicy, PageTransform, PageTransform)
+   * @see #ConditionalPageTransform(PageTransform, boolean, PdfUtil.ResultPolicy, PageTransform, PageTransform)
    * @see #STRICTNESS_DEFAULT
    */
   public ConditionalPageTransform(PageTransform ifTransform,
@@ -251,7 +251,7 @@ public class ConditionalPageTransform extends PageTransformDecorator {
    *                         page transform.
    * @param thenTransform1  A "then" page transform.
    * @param thenTransform2  A "then" page transform.
-   * @see #ConditionalPageTransform(PageTransform, boolean, ResultPolicy, PageTransform, PageTransform)
+   * @see #ConditionalPageTransform(PageTransform, boolean, PdfUtil.ResultPolicy, PageTransform, PageTransform)
    * @see #STRICTNESS_DEFAULT
    */
   public ConditionalPageTransform(PageTransform ifTransform,
@@ -274,7 +274,7 @@ public class ConditionalPageTransform extends PageTransformDecorator {
    * @param thenResultPolicy A result policy for the aggregate "then"
    *                         page transform.
    * @param thenTransforms   An array of "then" page transforms.
-   * @see #ConditionalPageTransform(PageTransform, boolean, ResultPolicy, PageTransform, PageTransform)
+   * @see #ConditionalPageTransform(PageTransform, boolean, PdfUtil.ResultPolicy, PageTransform, PageTransform)
    * @see #STRICTNESS_DEFAULT
    */
   public ConditionalPageTransform(PageTransform ifTransform,
@@ -300,8 +300,8 @@ public class ConditionalPageTransform extends PageTransformDecorator {
    * @see #ConditionalPageTransform(PageTransform, PageTransform)
    * @see #ConditionalPageTransform(PageTransform, PageTransform, PageTransform)
    * @see #ConditionalPageTransform(PageTransform, PageTransform[])
-   * @see #ConditionalPageTransform(PageTransform, ResultPolicy, PageTransform, PageTransform)
-   * @see #ConditionalPageTransform(PageTransform, ResultPolicy, PageTransform[])
+   * @see #ConditionalPageTransform(PageTransform, PdfUtil.ResultPolicy, PageTransform, PageTransform)
+   * @see #ConditionalPageTransform(PageTransform, PdfUtil.ResultPolicy, PageTransform[])
    */
   public static final boolean STRICTNESS_DEFAULT = true;
 

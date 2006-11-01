@@ -1,5 +1,5 @@
 /*
- * $Id: DocumentTransformException.java,v 1.1 2006-09-10 07:50:50 thib_gc Exp $
+ * $Id: DocumentTransformException.java,v 1.2 2006-11-01 22:25:45 thib_gc Exp $
  */
 
 /*
@@ -36,7 +36,7 @@ import java.io.IOException;
 
 /**
  * <p>A properly-nestable {@link IOException} for exceptions raised
- * by PDF transforms.</p>
+ * by document transforms.</p>
  * @author Thib Guicherd-Callin
  * @see DocumentTransform#transform
  */

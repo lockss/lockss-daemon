@@ -1,5 +1,5 @@
 /*
- * $Id: AggregateDocumentTransform.java,v 1.5 2006-09-26 07:32:24 thib_gc Exp $
+ * $Id: AggregateDocumentTransform.java,v 1.6 2006-11-01 22:25:45 thib_gc Exp $
  */
 
 /*
@@ -59,7 +59,7 @@ public class AggregateDocumentTransform implements DocumentTransform {
   /**
    * <p>Builds a new aggregate document transform using the default
    * result policy.</p>
-   * @see #AggregateDocumentTransform(ResultPolicy)
+   * @see #AggregateDocumentTransform(PdfUtil.ResultPolicy)
    * @see #POLICY_DEFAULT
    */
   public AggregateDocumentTransform() {
@@ -70,7 +70,7 @@ public class AggregateDocumentTransform implements DocumentTransform {
    * <p>Builds a new aggregate document transform using the default
    * result policy and registers the given document transforms.</p>
    * @param documentTransform A document transform.
-   * @see #AggregateDocumentTransform(ResultPolicy, DocumentTransform)
+   * @see #AggregateDocumentTransform(PdfUtil.ResultPolicy, DocumentTransform)
    * @see #POLICY_DEFAULT
    */
   public AggregateDocumentTransform(DocumentTransform documentTransform) {
@@ -83,7 +83,7 @@ public class AggregateDocumentTransform implements DocumentTransform {
    * result policy and registers the given document transforms.</p>
    * @param documentTransform1 A document transform.
    * @param documentTransform2 A document transform.
-   * @see #AggregateDocumentTransform(ResultPolicy, DocumentTransform, DocumentTransform)
+   * @see #AggregateDocumentTransform(PdfUtil.ResultPolicy, DocumentTransform, DocumentTransform)
    * @see #POLICY_DEFAULT
    */
   public AggregateDocumentTransform(DocumentTransform documentTransform1,
@@ -99,7 +99,7 @@ public class AggregateDocumentTransform implements DocumentTransform {
    * @param documentTransform1 A document transform.
    * @param documentTransform2 A document transform.
    * @param documentTransform3 A document transform.
-   * @see #AggregateDocumentTransform(ResultPolicy, DocumentTransform, DocumentTransform, DocumentTransform)
+   * @see #AggregateDocumentTransform(PdfUtil.ResultPolicy, DocumentTransform, DocumentTransform, DocumentTransform)
    * @see #POLICY_DEFAULT
    */
   public AggregateDocumentTransform(DocumentTransform documentTransform1,
@@ -118,7 +118,7 @@ public class AggregateDocumentTransform implements DocumentTransform {
    * @param documentTransform2 A document transform.
    * @param documentTransform3 A document transform.
    * @param documentTransform4 A document transform.
-   * @see #AggregateDocumentTransform(ResultPolicy, DocumentTransform, DocumentTransform, DocumentTransform, DocumentTransform)
+   * @see #AggregateDocumentTransform(PdfUtil.ResultPolicy, DocumentTransform, DocumentTransform, DocumentTransform, DocumentTransform)
    * @see #POLICY_DEFAULT
    */
   public AggregateDocumentTransform(DocumentTransform documentTransform1,
@@ -165,7 +165,7 @@ public class AggregateDocumentTransform implements DocumentTransform {
    * result policy and registers the given document transforms.</p>
    * @param resultPolicy       A result policy.
    * @param documentTransform A document transform.
-   * @see #AggregateDocumentTransform(ResultPolicy)
+   * @see #AggregateDocumentTransform(PdfUtil.ResultPolicy)
    */
   public AggregateDocumentTransform(ResultPolicy resultPolicy,
                                     DocumentTransform documentTransform) {
@@ -180,7 +180,7 @@ public class AggregateDocumentTransform implements DocumentTransform {
    * @param resultPolicy       A result policy.
    * @param documentTransform1 A document transform.
    * @param documentTransform2 A document transform.
-   * @see #AggregateDocumentTransform(ResultPolicy, DocumentTransform)
+   * @see #AggregateDocumentTransform(PdfUtil.ResultPolicy, DocumentTransform)
    */
   public AggregateDocumentTransform(ResultPolicy resultPolicy,
                                     DocumentTransform documentTransform1,
@@ -198,7 +198,7 @@ public class AggregateDocumentTransform implements DocumentTransform {
    * @param documentTransform1 A document transform.
    * @param documentTransform2 A document transform.
    * @param documentTransform3 A document transform.
-   * @see #AggregateDocumentTransform(ResultPolicy, DocumentTransform, DocumentTransform)
+   * @see #AggregateDocumentTransform(PdfUtil.ResultPolicy, DocumentTransform, DocumentTransform)
    */
   public AggregateDocumentTransform(ResultPolicy resultPolicy,
                                     DocumentTransform documentTransform1,
@@ -219,7 +219,7 @@ public class AggregateDocumentTransform implements DocumentTransform {
    * @param documentTransform2 A document transform.
    * @param documentTransform3 A document transform.
    * @param documentTransform4 A document transform.
-   * @see #AggregateDocumentTransform(ResultPolicy, DocumentTransform, DocumentTransform, DocumentTransform)
+   * @see #AggregateDocumentTransform(PdfUtil.ResultPolicy, DocumentTransform, DocumentTransform, DocumentTransform)
    */
   public AggregateDocumentTransform(ResultPolicy resultPolicy,
                                     DocumentTransform documentTransform1,
@@ -240,7 +240,7 @@ public class AggregateDocumentTransform implements DocumentTransform {
    * policy and registers the given document transforms.</p>
    * @param resultPolicy       A result policy.
    * @param documentTransforms An array of document transforms.
-   * @see #AggregateDocumentTransform(ResultPolicy)
+   * @see #AggregateDocumentTransform(PdfUtil.ResultPolicy)
    * @see #add(DocumentTransform[])
    */
   public AggregateDocumentTransform(ResultPolicy resultPolicy,

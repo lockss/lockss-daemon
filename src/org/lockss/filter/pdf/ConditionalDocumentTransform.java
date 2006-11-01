@@ -1,5 +1,5 @@
 /*
- * $Id: ConditionalDocumentTransform.java,v 1.5 2006-09-26 07:32:24 thib_gc Exp $
+ * $Id: ConditionalDocumentTransform.java,v 1.6 2006-11-01 22:25:45 thib_gc Exp $
  */
 
 /*
@@ -174,7 +174,7 @@ public class ConditionalDocumentTransform extends DocumentTransformDecorator {
    *                         document transform.
    * @param thenTransforms   An array of "then" document transform.
    * @see #ConditionalDocumentTransform(DocumentTransform, boolean, DocumentTransform)
-   * @see AggregateDocumentTransform#AggregateDocumentTransform(ResultPolicy, DocumentTransform[])
+   * @see AggregateDocumentTransform#AggregateDocumentTransform(PdfUtil.ResultPolicy, DocumentTransform[])
    */
   public ConditionalDocumentTransform(DocumentTransform ifTransform,
                                       boolean thenStrictness,
@@ -250,7 +250,7 @@ public class ConditionalDocumentTransform extends DocumentTransformDecorator {
    *                         document transform.
    * @param thenTransform1  A "then" document transform.
    * @param thenTransform2  A "then" document transform.
-   * @see #ConditionalDocumentTransform(DocumentTransform, boolean, ResultPolicy, DocumentTransform, DocumentTransform)
+   * @see #ConditionalDocumentTransform(DocumentTransform, boolean, PdfUtil.ResultPolicy, DocumentTransform, DocumentTransform)
    * @see #STRICTNESS_DEFAULT
    */
   public ConditionalDocumentTransform(DocumentTransform ifTransform,
@@ -273,7 +273,7 @@ public class ConditionalDocumentTransform extends DocumentTransformDecorator {
    * @param thenResultPolicy A result policy for the aggregate "then"
    *                         document transform.
    * @param thenTransforms   An array of "then" document transform.
-   * @see #ConditionalDocumentTransform(DocumentTransform, boolean, ResultPolicy, DocumentTransform[])
+   * @see #ConditionalDocumentTransform(DocumentTransform, boolean, PdfUtil.ResultPolicy, DocumentTransform[])
    * @see #STRICTNESS_DEFAULT
    */
   public ConditionalDocumentTransform(DocumentTransform ifTransform,
@@ -299,8 +299,8 @@ public class ConditionalDocumentTransform extends DocumentTransformDecorator {
    * @see #ConditionalDocumentTransform(DocumentTransform, DocumentTransform)
    * @see #ConditionalDocumentTransform(DocumentTransform, DocumentTransform, DocumentTransform)
    * @see #ConditionalDocumentTransform(DocumentTransform, DocumentTransform[])
-   * @see #ConditionalDocumentTransform(DocumentTransform, ResultPolicy, DocumentTransform, DocumentTransform)
-   * @see #ConditionalDocumentTransform(DocumentTransform, ResultPolicy, DocumentTransform[])
+   * @see #ConditionalDocumentTransform(DocumentTransform, PdfUtil.ResultPolicy, DocumentTransform, DocumentTransform)
+   * @see #ConditionalDocumentTransform(DocumentTransform, PdfUtil.ResultPolicy, DocumentTransform[])
    */
   public static final boolean STRICTNESS_DEFAULT = true;
 

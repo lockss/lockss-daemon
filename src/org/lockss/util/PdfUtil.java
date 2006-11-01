@@ -1,5 +1,5 @@
 /*
- * $Id: PdfUtil.java,v 1.18 2006-10-31 07:01:06 thib_gc Exp $
+ * $Id: PdfUtil.java,v 1.19 2006-11-01 22:25:45 thib_gc Exp $
  */
 
 /*
@@ -228,177 +228,177 @@ return success;
   };
 
   /**
-   * <p>The PDF <code>c</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String APPEND_CURVED_SEGMENT = "c";
 
   /**
-   * <p>The PDF <code>y</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String APPEND_CURVED_SEGMENT_FINAL = "y";
 
   /**
-   * <p>The PDF <code>v</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String APPEND_CURVED_SEGMENT_INITIAL = "v";
 
   /**
-   * <p>The PDF <code>re</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String APPEND_RECTANGLE = "re";
 
   /**
-   * <p>The PDF <code>l</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String APPEND_STRAIGHT_LINE_SEGMENT = "l";
 
   /**
-   * <p>The PDF <code>BX</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String BEGIN_COMPATIBILITY_SECTION = "BX";
 
   /**
-   * <p>The PDF <code>ID</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String BEGIN_INLINE_IMAGE_DATA = "ID";
 
   /**
-   * <p>The PDF <code>BI</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String BEGIN_INLINE_IMAGE_OBJECT = "BI";
 
   /**
-   * <p>The PDF <code>BMC</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String BEGIN_MARKED_CONTENT = "BMC";
 
   /**
-   * <p>The PDF <code>BDC</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String BEGIN_MARKED_CONTENT_PROP = "BDC";
 
   /**
-   * <p>The PDF <code>m</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String BEGIN_NEW_SUBPATH = "m";
 
   /**
-   * <p>The PDF <code>BT</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String BEGIN_TEXT_OBJECT = "BT";
 
   /**
-   * <p>The PDF <code>b*</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String CLOSE_FILL_STROKE_EVENODD = "b*";
 
   /**
-   * <p>The PDF <code>b</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String CLOSE_FILL_STROKE_NONZERO = "b";
 
   /**
-   * <p>The PDF <code>s</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String CLOSE_STROKE = "s";
 
   /**
-   * <p>The PDF <code>h</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String CLOSE_SUBPATH = "h";
 
   /**
-   * <p>The PDF <code>cm</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String CONCATENATE_MATRIX = "cm";
 
   /**
-   * <p>The PDF <code>MP</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String DEFINE_MARKED_CONTENT_POINT = "MP";
 
   /**
-   * <p>The PDF <code>DP</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String DEFINE_MARKED_CONTENT_POINT_PROP = "DP";
 
   /**
-   * <p>The PDF <code>EX</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String END_COMPATIBILITY_SECTION = "EX";
 
   /**
-   * <p>The PDF <code>EI</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String END_INLINE_IMAGE_OBJECT = "EI";
 
   /**
-   * <p>The PDF <code>EMC</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String END_MARKED_CONTENT = "EMC";
 
   /**
-   * <p>The PDF <code>n</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String END_PATH = "n";
 
   /**
-   * <p>The PDF <code>ET</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String END_TEXT_OBJECT = "ET";
 
   /**
-   * <p>The PDF <code>f*</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String FILL_EVENODD = "f*";
 
   /**
-   * <p>The PDF <code>f</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String FILL_NONZERO = "f";
 
   /**
-   * <p>The PDF <code>F</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String FILL_NONZERO_OBSOLETE = "F";
 
   /**
-   * <p>The PDF <code>B*</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String FILL_STROKE_EVENODD = "B*";
 
   /**
-   * <p>The PDF <code>B</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String FILL_STROKE_NONZERO = "B";
 
   /**
-   * <p>The PDF <code>Do</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String INVOKE_NAMED_XOBJECT = "Do";
 
   /**
-   * <p>The PDF <code>Td</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String MOVE_TEXT_POSITION = "Td";
 
   /**
-   * <p>The PDF <code>TD</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String MOVE_TEXT_POSITION_SET_LEADING = "TD";
 
   /**
-   * <p>The PDF <code>T*</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String MOVE_TO_NEXT_LINE = "T*";
 
   /**
-   * <p>The PDF <code>'</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String MOVE_TO_NEXT_LINE_SHOW_TEXT = "\'";
 
   /**
-   * <p>The PDF <code>sh</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String PAINT_SHADING_PATTERN = "sh";
 
@@ -410,198 +410,198 @@ return success;
   public static final String PREFIX_PDF_FILTER_FACTORY_HINT = "hint_";
 
   /**
-   * <p>The PDF MIME type.</p>
+   * <p>The PDF MIME type, <code>{@value}</code>.</p>
    * @see <a href="http://www.rfc-editor.org/rfc/rfc3778.txt">RFC3778</a>
    */
   public static final String PDF_MIME_TYPE = "application/pdf";
 
   /**
-   * <p>The PDF <code>Q</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String RESTORE_GRAPHICS_STATE = "Q";
 
   /**
-   * <p>The PDF <code>q</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String SAVE_GRAPHICS_STATE = "q";
 
   /**
-   * <p>The PDF <code>Tc</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String SET_CHARACTER_SPACING = "Tc";
 
   /**
-   * <p>The PDF <code>W*</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String SET_CLIPPING_PATH_EVENODD = "W*";
 
   /**
-   * <p>The PDF <code>W</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String SET_CLIPPING_PATH_NONZERO = "W";
 
   /**
-   * <p>The PDF <code>k</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String SET_CMYK_COLOR_NONSTROKING = "k";
 
   /**
-   * <p>The PDF <code>K</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String SET_CMYK_COLOR_STROKING = "K";
 
   /**
-   * <p>The PDF <code>sc</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String SET_COLOR_NONSTROKING = "sc";
 
   /**
-   * <p>The PDF <code>scn</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String SET_COLOR_NONSTROKING_SPECIAL = "scn";
 
   /**
-   * <p>The PDF <code>ri</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String SET_COLOR_RENDERING_INTENT = "ri";
 
   /**
-   * <p>The PDF <code>cs</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String SET_COLOR_SPACE_NONSTROKING = "cs";
 
   /**
-   * <p>The PDF <code>CS</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String SET_COLOR_SPACE_STROKING = "CS";
 
   /**
-   * <p>The PDF <code>SC</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String SET_COLOR_STROKING = "SC";
 
   /**
-   * <p>The PDF <code>SCN</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String SET_COLOR_STROKING_SPECIAL = "SCN";
 
   /**
-   * <p>The PDF <code>i</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String SET_FLATNESS_TOLERANCE = "i";
 
   /**
-   * <p>The PDF <code>gs</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String SET_FROM_GRAPHICS_STATE = "gs";
 
   /**
-   * <p>The PDF <code>d0</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String SET_GLYPH_WIDTH = "d0";
 
   /**
-   * <p>The PDF <code>d1</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String SET_GLYPH_WIDTH_BOUNDING_BOX = "d1";
 
   /**
-   * <p>The PDF <code>g</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String SET_GRAY_LEVEL_NONSTROKING = "g";
 
   /**
-   * <p>The PDF <code>G</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String SET_GRAY_LEVEL_STROKING = "G";
 
   /**
-   * <p>The PDF <code>Tz</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String SET_HORIZONTAL_TEXT_SCALING = "Tz";
 
   /**
-   * <p>The PDF <code>J</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String SET_LINE_CAP_STYLE = "J";
 
   /**
-   * <p>The PDF <code>d</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String SET_LINE_DASH_PATTERN = "d";
 
   /**
-   * <p>The PDF <code>j</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String SET_LINE_JOIN_STYLE = "j";
 
   /**
-   * <p>The PDF <code>w</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String SET_LINE_WIDTH = "w";
 
   /**
-   * <p>The PDF <code>M</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String SET_MITER_LIMIT = "M";
 
   /**
-   * <p>The PDF <code>rg</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String SET_RGB_COLOR_NONSTROKING = "rg";
 
   /**
-   * <p>The PDF <code>RG</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String SET_RGB_COLOR_STROKING = "RG";
 
   /**
-   * <p>The PDF <code>"</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String SET_SPACING_MOVE_TO_NEXT_LINE_SHOW_TEXT = "\"";
 
   /**
-   * <p>The PDF <code>Tf</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String SET_TEXT_FONT_AND_SIZE = "Tf";
 
   /**
-   * <p>The PDF <code>TL</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String SET_TEXT_LEADING = "TL";
 
   /**
-   * <p>The PDF <code>Tm</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String SET_TEXT_MATRIX = "Tm";
 
   /**
-   * <p>The PDF <code>Tr</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String SET_TEXT_RENDERING_MODE = "Tr";
 
   /**
-   * <p>The PDF <code>Ts</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String SET_TEXT_RISE = "Ts";
 
   /**
-   * <p>The PDF <code>Tw</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String SET_WORD_SPACING = "Tw";
 
   /**
-   * <p>The PDF <code>Tj</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String SHOW_TEXT = "Tj";
 
   /**
-   * <p>The PDF <code>TJ</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String SHOW_TEXT_GLYPH_POSITIONING = "TJ";
 
   /**
-   * <p>The PDF <code>S</code> operator string.</p>
+   * <p>The PDF <code>{@value}</code> operator string.</p>
    */
   public static final String STROKE = "S";
 
@@ -926,8 +926,8 @@ return success;
   }
 
   /**
-   * <p>Determines if the token at the given index is the "begin text object"
-   * PDF operator.</p>
+   * <p>Determines if the token at the given index is
+   * {@link #BEGIN_TEXT_OBJECT}.</p>
    * @param tokens A list of tokens.
    * @param index  The index of the candidate token.
    * @return True if the selected token is the expected operator, false
@@ -940,8 +940,8 @@ return success;
   }
 
   /**
-   * <p>Determines if a candidate PDF token is the "begin text object"
-   * PDF operator.</p>
+   * <p>Determines if the given token is
+   * {@link #BEGIN_TEXT_OBJECT}.</p>
    * @param candidateToken A candidate PDF token.
    * @return True if the argument is the expected operator, false
    *         otherwise.
@@ -954,8 +954,8 @@ return success;
   }
 
   /**
-   * <p>Determines if the token at the given index is the "end text object"
-   * PDF operator.</p>
+   * <p>Determines if the token at the given index is
+   * {@link #END_TEXT_OBJECT}.</p>
    * @param tokens A list of tokens.
    * @param index  The index of the candidate token.
    * @return True if the selected token is the expected operator, false
@@ -968,8 +968,8 @@ return success;
   }
 
   /**
-   * <p>Determines if a candidate PDF token is the "end text object"
-   * PDF operator.</p>
+   * <p>Determines if the given token is
+   * {@link #END_TEXT_OBJECT}.</p>
    * @param candidateToken A candidate PDF token.
    * @return True is the argument is the expected operator, false
    *         otherwise.
@@ -982,8 +982,8 @@ return success;
   }
 
   /**
-   * <p>Determines if the token at the given index is the "move to the
-   * next line and show text" PDF operator.</p>
+   * <p>Determines if the token at the given index is
+   * {@link #MOVE_TO_NEXT_LINE_SHOW_TEXT}.</p>
    * @param tokens A list of tokens.
    * @param index  The index of the candidate token.
    * @return True if the selected token is the expected operator, false
@@ -996,8 +996,8 @@ return success;
   }
 
   /**
-   * <p>Determines if a candidate PDF token is the "move to next line
-   * and show text" PDF operator.</p>
+   * <p>Determines if the given token is
+   * {@link #MOVE_TO_NEXT_LINE_SHOW_TEXT}.</p>
    * @param candidateToken A candidate PDF token.
    * @return True is the argument is the expected operator, false
    *         otherwise.
@@ -1101,8 +1101,8 @@ return success;
   }
 
   /**
-   * <p>Determines if the token at the given index is the "set RGB color for non-stroking operations"
-   * PDF operator.</p>
+   * <p>Determines if the token at the given index is
+   * {@link #SET_RGB_COLOR_NONSTROKING}.</p>
    * @param tokens A list of tokens.
    * @param index  The index of the candidate token.
    * @return True if the selected token is the expected operator, false
@@ -1115,8 +1115,8 @@ return success;
   }
 
   /**
-   * <p>Determines if a candidate PDF token is the "set RGB color for non-stroking operations"
-   * PDF operator.</p>
+   * <p>Determines if the given token is
+   * {@link #SET_RGB_COLOR_NONSTROKING}.</p>
    * @param candidateToken A candidate PDF token.
    * @return True is the argument is the expected operator, false
    *         otherwise.
@@ -1129,8 +1129,8 @@ return success;
   }
 
   /**
-   * <p>Determines if the token at the given index is the "move to the
-   * next line and show text" PDF operator.</p>
+   * <p>Determines if the token at the given index is
+   * {@link #SET_SPACING_MOVE_TO_NEXT_LINE_SHOW_TEXT}.</p>
    * @param tokens A list of tokens.
    * @param index  The index of the candidate token.
    * @return True if the selected token is the expected operator, false
@@ -1143,8 +1143,8 @@ return success;
   }
 
   /**
-   * <p>Determines if a candidate PDF token is the "move to next line
-   * and show text" PDF operator.</p>
+   * <p>Determines if the given token is
+   * {@link #SET_SPACING_MOVE_TO_NEXT_LINE_SHOW_TEXT}.</p>
    * @param candidateToken A candidate PDF token.
    * @return True is the argument is the expected operator, false
    *         otherwise.
@@ -1157,8 +1157,8 @@ return success;
   }
 
   /**
-   * <p>Determines if the token at the given index is the "show text"
-   * PDF operator.</p>
+   * <p>Determines if the token at the given index is
+   * {@link #SHOW_TEXT}.</p>
    * @param tokens A list of tokens.
    * @param index  The index of the candidate token.
    * @return True if the selected token is the expected operator, false
@@ -1171,8 +1171,8 @@ return success;
   }
 
   /**
-   * <p>Determines if a candidate PDF token is the "show text"
-   * PDF operator.</p>
+   * <p>Determines if the given token is
+   * {@link #SHOW_TEXT}.</p>
    * @param candidateToken A candidate PDF token.
    * @return True is the argument is the expected operator, false
    *         otherwise.
@@ -1185,8 +1185,8 @@ return success;
   }
 
   /**
-   * <p>Determines if the token at the given index is the "show text
-   * allowing individual glyph positioning" PDF operator.</p>
+   * <p>Determines if the token at the given index is
+   * {@link #SHOW_TEXT_GLYPH_POSITIONING}.</p>
    * @param tokens A list of tokens.
    * @param index  The index of the candidate token.
    * @return True if the selected token is the expected operator, false
@@ -1199,8 +1199,8 @@ return success;
   }
 
   /**
-   * <p>Determines if a candidate PDF token is the "show text
-   * allowing individual glyph positioning" PDF operator.</p>
+   * <p>Determines if the given token is
+   * {@link #SHOW_TEXT_GLYPH_POSITIONING}.</p>
    * @param candidateToken A candidate PDF token.
    * @return True is the argument is the expected operator, false
    *         otherwise.
@@ -1409,6 +1409,17 @@ return success;
     && getPdfString(candidateToken).startsWith(str);
   }
 
+  /**
+   *
+   * @param tokens
+   * @param index
+   * @param red
+   * @param green
+   * @param blue
+   * @return TODO
+   * @see #isSetRgbColorNonStroking(List, int)
+   * @see #matchPdfNumber(List, int, float)
+   */
   public static boolean matchSetRgbColorNonStroking(List tokens,
                                                     int index,
                                                     float red,
@@ -1420,6 +1431,16 @@ return success;
     && matchPdfNumber(tokens, index - 1, blue);
   }
 
+  /**
+   *
+   * @param tokens
+   * @param index
+   * @param red
+   * @param green
+   * @param blue
+   * @return TODO
+   * @see #matchSetRgbColorNonStroking(List, int, float, float, float)
+   */
   public static boolean matchSetRgbColorNonStroking(List tokens,
                                                     int index,
                                                     int red,
@@ -1432,12 +1453,29 @@ return success;
                                        (float)blue);
   }
 
+  /**
+   *
+   * @param tokens
+   * @param index
+   * @return TODO
+   * @see #isShowText(List, int)
+   * @see #isPdfString(List, int)
+   */
   public static boolean matchShowText(List tokens,
                                       int index) {
     return isShowText(tokens, index)
     && isPdfString(tokens, index - 1);
   }
 
+  /**
+   *
+   * @param tokens
+   * @param index
+   * @param str
+   * @return TODO
+   * @see #isShowText(List, int)
+   * @see #matchPdfString(List, int, String)
+   */
   public static boolean matchShowText(List tokens,
                                       int index,
                                       String str) {
@@ -1445,6 +1483,15 @@ return success;
     && matchPdfString(tokens, index - 1, str);
   }
 
+  /**
+   *
+   * @param tokens
+   * @param index
+   * @param str
+   * @return TODO
+   * @see #isShowText(List, int)
+   * @see #matchPdfStringStartsWith(List, int, String)
+   */
   public static boolean matchShowTextStartsWith(List tokens,
                                                 int index,
                                                 String str) {
@@ -1452,6 +1499,20 @@ return success;
     && matchPdfStringStartsWith(tokens, index - 1, str);
   }
 
+  /**
+   * <p>Determines if the tokens at the given indices form a text
+   * object, i.e. if they are {@link #BEGIN_TEXT_OBJECT} and
+   * {@link #END_TEXT_OBJECT} respectively.</p>
+   * @param tokens A list of PDF tokens.
+   * @param begin  The index of the selected {@link #BEGIN_TEXT_OBJECT}
+   *               candidate.
+   * @param end    The index of the selected {@link #END_TEXT_OBJECT}
+   *               candidate.
+   * @return True if the selected tokens are the expected operators,
+   *         flase otherwise.
+   * @see #isBeginTextObject(List, int)
+   * @see #isEndTextObject(List, int)
+   */
   public static boolean matchTextObject(List tokens,
                                         int begin,
                                         int end) {

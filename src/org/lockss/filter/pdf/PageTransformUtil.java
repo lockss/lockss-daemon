@@ -1,5 +1,5 @@
 /*
- * $Id: PageTransformUtil.java,v 1.7 2006-09-27 08:00:32 thib_gc Exp $
+ * $Id: PageTransformUtil.java,v 1.8 2006-11-01 22:25:45 thib_gc Exp $
  */
 
 /*
@@ -53,20 +53,21 @@ public class PageTransformUtil {
    * <p>This transform keeps state; beware of re-using instances as
    * they keep a reference to the instantiation output stream.</p>
    * @author Thib Guicherd-Callin
-   * @see ExtractStringsToOutputStream.WriteToOutputStream
+   * @see PageTransformUtil.ExtractStringsToOutputStream.WriteToOutputStream
    */
   public static class ExtractStringsToOutputStream extends NullPageStreamTransform {
 
     /**
      * <p>A version of {@link ProcessString} that assumes it is being
-     * used in the context of a {@link ExtractStringsToOutputStream}
-     * page stream transform and writes the bytes of each string
+     * used in the context of a
+     * {@link PageTransformUtil.ExtractStringsToOutputStream} page
+     * stream transform and writes the bytes of each string
      * encountered to its output stream.</p>
      * <p>This class should be a member nested class, not a static
      * nested class, but the dynamic instantiation semantics of
      * {@link PDFStreamEngine} prevent this.</p>
      * @author Thib Guicherd-Callin
-     * @see ExtractStringsToOutputStream
+     * @see PageTransformUtil.ExtractStringsToOutputStream
      */
     public static class WriteToOutputStream extends ProcessString {
 
@@ -111,20 +112,21 @@ public class PageTransformUtil {
    * <p>This transform keeps state; beware of re-using instances as
    * they keep a reference to the instantiation string buffer.</p>
    * @author Thib Guicherd-Callin
-   * @see ExtractStringsToStringBuffer.AppendToStringBuffer
+   * @see PageTransformUtil.ExtractStringsToStringBuffer.AppendToStringBuffer
    */
   public static class ExtractStringsToStringBuffer extends NullPageStreamTransform {
 
     /**
      * <p>A version of {@link ProcessString} that assumes it is being
-     * used in the context of a {@link ExtractStringsToStringBuffer}
-     * page stream transform and writes each string
-     * encountered to its string buffer.</p>
+     * used in the context of a
+     * {@link PageTransformUtil.ExtractStringsToStringBuffer} page
+     * stream transform and writes each string encountered to its
+     * string buffer.</p>
      * <p>This class should be a member nested class, not a static
      * nested class, but the dynamic instantiation semantics of
      * {@link PDFStreamEngine} prevent this.</p>
      * @author Thib Guicherd-Callin
-     * @see ExtractStringsToStringBuffer
+     * @see PageTransformUtil.ExtractStringsToStringBuffer
      */
     public static class AppendToStringBuffer extends ProcessString {
 

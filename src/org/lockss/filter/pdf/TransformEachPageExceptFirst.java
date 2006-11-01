@@ -1,5 +1,5 @@
 /*
- * $Id: TransformEachPageExceptFirst.java,v 1.5 2006-09-19 16:54:53 thib_gc Exp $
+ * $Id: TransformEachPageExceptFirst.java,v 1.6 2006-11-01 22:25:45 thib_gc Exp $
  */
 
 /*
@@ -102,7 +102,7 @@ public class TransformEachPageExceptFirst extends TransformSelectedPages {
    * policy, based on the given page transform.</p>
    * @param resultPolicy  A result policy.
    * @param pageTransform A page transform.
-   * @see TransformSelectedPages#TransformSelectedPages(ResultPolicy, PageTransform)
+   * @see TransformSelectedPages#TransformSelectedPages(PdfUtil.ResultPolicy, PageTransform)
    */
   public TransformEachPageExceptFirst(ResultPolicy resultPolicy,
                                       PageTransform pageTransform) {
@@ -117,7 +117,7 @@ public class TransformEachPageExceptFirst extends TransformSelectedPages {
    * @param resultPolicy   A result policy.
    * @param pageTransform1 A page transform.
    * @param pageTransform2 A page transform.
-   * @see TransformSelectedPages#TransformSelectedPages(ResultPolicy, PageTransform, PageTransform)
+   * @see TransformSelectedPages#TransformSelectedPages(PdfUtil.ResultPolicy, PageTransform, PageTransform)
    */
   public TransformEachPageExceptFirst(ResultPolicy resultPolicy,
                                       PageTransform pageTransform1,
@@ -135,7 +135,7 @@ public class TransformEachPageExceptFirst extends TransformSelectedPages {
    * @param pageTransform1 A page transform.
    * @param pageTransform2 A page transform.
    * @param pageTransform3 A page transform.
-   * @see TransformSelectedPages#TransformSelectedPages(ResultPolicy, PageTransform, PageTransform, PageTransform)
+   * @see TransformSelectedPages#TransformSelectedPages(PdfUtil.ResultPolicy, PageTransform, PageTransform, PageTransform)
    */
   public TransformEachPageExceptFirst(ResultPolicy resultPolicy,
                                       PageTransform pageTransform1,
@@ -153,7 +153,7 @@ public class TransformEachPageExceptFirst extends TransformSelectedPages {
    * (using the default aggregation result policy).</p>
    * @param resultPolicy   A result policy.
    * @param pageTransforms An array of page transforms.
-   * @see TransformSelectedPages#TransformSelectedPages(ResultPolicy, PageTransform[])
+   * @see TransformSelectedPages#TransformSelectedPages(PdfUtil.ResultPolicy, PageTransform[])
    */
   public TransformEachPageExceptFirst(ResultPolicy resultPolicy,
                                       PageTransform[] pageTransforms) {
@@ -171,7 +171,7 @@ public class TransformEachPageExceptFirst extends TransformSelectedPages {
    *                                  of the aggregate page transform).
    * @param pageTransform1            A page transform.
    * @param pageTransform2            A page transform.
-   * @see TransformSelectedPages#TransformSelectedPages(ResultPolicy, ResultPolicy, PageTransform, PageTransform)
+   * @see TransformSelectedPages#TransformSelectedPages(PdfUtil.ResultPolicy, PdfUtil.ResultPolicy, PageTransform, PageTransform)
    */
   public TransformEachPageExceptFirst(ResultPolicy pageIterationResultPolicy,
                                       ResultPolicy pageTransformResultPolicy,
@@ -194,7 +194,7 @@ public class TransformEachPageExceptFirst extends TransformSelectedPages {
    * @param pageTransform1            A page transform.
    * @param pageTransform2            A page transform.
    * @param pageTransform3            A page transform.
-   * @see TransformSelectedPages#TransformSelectedPages(ResultPolicy, ResultPolicy, PageTransform, PageTransform, PageTransform)
+   * @see TransformSelectedPages#TransformSelectedPages(PdfUtil.ResultPolicy, PdfUtil.ResultPolicy, PageTransform, PageTransform, PageTransform)
    */
   public TransformEachPageExceptFirst(ResultPolicy pageIterationResultPolicy,
                                       ResultPolicy pageTransformResultPolicy,
@@ -217,7 +217,7 @@ public class TransformEachPageExceptFirst extends TransformSelectedPages {
    * @param pageTransformResultPolicy A result policy (for the result
    *                                  of the aggregate page transform).
    * @param pageTransforms            An array of page transforms.
-   * @see TransformSelectedPages#TransformSelectedPages(ResultPolicy, ResultPolicy, PageTransform[])
+   * @see TransformSelectedPages#TransformSelectedPages(PdfUtil.ResultPolicy, PdfUtil.ResultPolicy, PageTransform[])
    */
   public TransformEachPageExceptFirst(ResultPolicy pageIterationResultPolicy,
                                       ResultPolicy pageTransformResultPolicy,

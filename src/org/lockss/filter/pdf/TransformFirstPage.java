@@ -1,5 +1,5 @@
 /*
- * $Id: TransformFirstPage.java,v 1.5 2006-09-19 16:54:53 thib_gc Exp $
+ * $Id: TransformFirstPage.java,v 1.6 2006-11-01 22:25:45 thib_gc Exp $
  */
 
 /*
@@ -106,7 +106,7 @@ public class TransformFirstPage extends TransformSelectedPages {
    *                                  of the aggregate page transform).
    * @param pageTransform1            A page transform.
    * @param pageTransform2            A page transform.
-   * @see TransformSelectedPages#TransformSelectedPages(ResultPolicy, ResultPolicy, PageTransform, PageTransform)
+   * @see TransformSelectedPages#TransformSelectedPages(PdfUtil.ResultPolicy, PdfUtil.ResultPolicy, PageTransform, PageTransform)
    * @see TransformSelectedPages#POLICY_DEFAULT
    */
   public TransformFirstPage(ResultPolicy pageTransformResultPolicy,
@@ -127,7 +127,7 @@ public class TransformFirstPage extends TransformSelectedPages {
    * @param pageTransform1            A page transform.
    * @param pageTransform2            A page transform.
    * @param pageTransform3            A page transform.
-   * @see TransformSelectedPages#TransformSelectedPages(ResultPolicy, ResultPolicy, PageTransform, PageTransform, PageTransform)
+   * @see TransformSelectedPages#TransformSelectedPages(PdfUtil.ResultPolicy, PdfUtil.ResultPolicy, PageTransform, PageTransform, PageTransform)
    * @see TransformSelectedPages#POLICY_DEFAULT
    */
   public TransformFirstPage(ResultPolicy pageTransformResultPolicy,
@@ -148,7 +148,7 @@ public class TransformFirstPage extends TransformSelectedPages {
    * @param pageTransformResultPolicy A result policy (for the result
    *                                  of the aggregate page transform).
    * @param pageTransforms            An array of page transforms.
-   * @see TransformSelectedPages#TransformSelectedPages(ResultPolicy, ResultPolicy, PageTransform[])
+   * @see TransformSelectedPages#TransformSelectedPages(PdfUtil.ResultPolicy, PdfUtil.ResultPolicy, PageTransform[])
    * @see TransformSelectedPages#POLICY_DEFAULT
    */
   public TransformFirstPage(ResultPolicy pageTransformResultPolicy,
