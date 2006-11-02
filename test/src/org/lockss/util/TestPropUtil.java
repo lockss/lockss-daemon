@@ -1,5 +1,5 @@
 /*
- * $Id: TestPropUtil.java,v 1.16 2006-09-10 07:50:50 thib_gc Exp $
+ * $Id: TestPropUtil.java,v 1.17 2006-11-02 04:20:02 tlipkis Exp $
  */
 
 /*
@@ -269,6 +269,31 @@ public class TestPropUtil extends LockssTestCase {
     assertEquals(expected, actual);
   }
 
+  public void testCanonicalEncodedStringToProps() {
+    assertEmpty(PropUtil.canonicalEncodedStringToProps(null));
+    assertEmpty(PropUtil.canonicalEncodedStringToProps(""));
+    try {
+      PropUtil.canonicalEncodedStringToProps("foo");
+      fail("Illegal prop string should throw");
+    } catch (IllegalArgumentException e) {
+    }
+    try {
+      PropUtil.canonicalEncodedStringToProps("foo&");
+      fail("Illegal prop string should throw");
+    } catch (IllegalArgumentException e) {
+    }
+    try {
+      PropUtil.canonicalEncodedStringToProps("foo~");
+      fail("Illegal prop string should throw");
+    } catch (IllegalArgumentException e) {
+    }
+    try {
+      PropUtil.canonicalEncodedStringToProps("foo~bar~");
+      fail("Illegal prop string should throw");
+    } catch (IllegalArgumentException e) {
+    }
+  }
+
   void assertEncodedPropsInverse(Properties props) {
     String s = PropUtil.propsToCanonicalEncodedString(props);
     Properties newProps = PropUtil.canonicalEncodedStringToProps(s);
@@ -285,4 +310,5 @@ public class TestPropUtil extends LockssTestCase {
     props.setProperty("key4", "val.4");
     assertEncodedPropsInverse(props);
   }
+
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: PropUtil.java,v 1.16 2006-09-19 16:54:53 thib_gc Exp $
+ * $Id: PropUtil.java,v 1.17 2006-11-02 04:20:02 tlipkis Exp $
  */
 /*
 
@@ -251,11 +251,21 @@ public class PropUtil {
     StringTokenizer tk = new StringTokenizer(s, "~&", true);
     while (tk.hasMoreElements()) {
       String key = tk.nextToken();
-      String tok = tk.nextToken();
+      String tok;
+      try {
+	tok = tk.nextToken();
+      } catch (NoSuchElementException e) {
+	throw new IllegalArgumentException("No delimiter after prop: " + key);
+      }
       if (!tok.equals("~")) {
 	throw new IllegalArgumentException("Delimiter not \"~\": " + tok);
       }
-      String val = tk.nextToken();
+      String val;
+      try {
+	val = tk.nextToken();
+      } catch (NoSuchElementException e) {
+	throw new IllegalArgumentException("No value for prop: " + key);
+      }
       res.setProperty(PropKeyEncoder.decode(key),
 		      PropKeyEncoder.decode(val));
 
