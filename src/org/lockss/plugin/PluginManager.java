@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.166 2006-09-25 02:16:48 smorabito Exp $
+ * $Id: PluginManager.java,v 1.167 2006-11-02 04:19:09 tlipkis Exp $
  */
 
 /*
@@ -518,8 +518,8 @@ public class PluginManager
 	    inactiveAuIds.add(auId);
 	  }
 	} else if (auConf.equals(oldAuConf)) {
-	  if (log.isDebug2())
-	    log.debug2("AU already configured, not reconfiguring: " + auKey);
+	  if (log.isDebug3())
+	    log.debug3("AU already configured, not reconfiguring: " + auKey);
 	} else {
 	  log.debug("Configuring AU id: " + auKey);
 	  boolean pluginOk = ensurePluginLoaded(pluginKey);
@@ -558,6 +558,11 @@ public class PluginManager
       ArchivalUnit oldAu = (ArchivalUnit)auMap.get(auId);
       if (oldAu != null) {
 	oldConfig = oldAu.getConfiguration();
+	if (auConf.equals(oldConfig)) {
+	  // Don't bother if the config is the same.  (This happens the
+	  // first time config is loaded after AU created via UI.)
+	  return;
+	}
       }
       ArchivalUnit au = plugin.configureAu(auConf, oldAu);
       if (oldAu != null && oldAu != au) {
