@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.59 2006-10-17 23:40:11 adriz Exp $
+ * $Id: TestNewContentCrawler.java,v 1.60 2006-11-02 04:18:38 tlipkis Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ import java.util.*;
 import java.net.*;
 import java.io.*;
 
+import org.apache.commons.collections.set.ListOrderedSet;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
@@ -54,7 +55,7 @@ public class TestNewContentCrawler extends LockssTestCase {
   private MockCrawlRule crawlRule = null;
   private String startUrl = "http://www.example.com/index.html";
   private String permissionPage = "http://www.example.com/permission.html";
-  private List startUrls = ListUtil.list(startUrl);
+  private List startUrls;
   private BaseCrawler crawler = null;
   private MockContentParser parser = new MockContentParser();
 
@@ -231,7 +232,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     String url1="http://www.example.com/blah.html";
     mau.addUrl(startUrl, false, true);
-    parser.addUrlSetToReturn(startUrl, SetUtil.set(url1));
+    parser.addUrlsToReturn(startUrl, SetUtil.set(url1));
     mau.addUrl(url1, false, true);
     crawlRule.addUrlToCrawl(url1);
 
@@ -247,11 +248,11 @@ public class TestNewContentCrawler extends LockssTestCase {
     String url3="http://www.example.com/blah3.html";
     String url4="http://www.example.com/blah4.html";
     mau.addUrl(startUrl, false, true);
-    parser.addUrlSetToReturn(startUrl, SetUtil.set(url1, url2, url3, url4));
-    parser.addUrlSetToReturn(url1, SetUtil.set(url1, url2, url3, url4));
-    parser.addUrlSetToReturn(url2, SetUtil.set(url1, url2, url3, url4));
-    parser.addUrlSetToReturn(url3, SetUtil.set(url1, url2, url3, url4));
-    parser.addUrlSetToReturn(url4, SetUtil.set(url1, url2, url3, url4));
+    parser.addUrlsToReturn(startUrl, SetUtil.set(url1, url2, url3, url4));
+    parser.addUrlsToReturn(url1, SetUtil.set(url1, url2, url3, url4));
+    parser.addUrlsToReturn(url2, SetUtil.set(url1, url2, url3, url4));
+    parser.addUrlsToReturn(url3, SetUtil.set(url1, url2, url3, url4));
+    parser.addUrlsToReturn(url4, SetUtil.set(url1, url2, url3, url4));
     mau.addUrl(url1, false, true);
     mau.addUrl(url2, false, true);
     mau.addUrl(url3, false, true);
@@ -301,11 +302,11 @@ public class TestNewContentCrawler extends LockssTestCase {
     String url3="http://www.example.com/blah3.html";
     String url4="http://www.example.com/blah4.html";
     mau.addUrl(startUrl, false, true);
-    parser.addUrlSetToReturn(startUrl, SetUtil.set(url1, url2, url3, url4));
-    parser.addUrlSetToReturn(url1, SetUtil.set(url1, url2, url3, url4));
-    parser.addUrlSetToReturn(url2, SetUtil.set(url1, url2, url3, url4));
-    parser.addUrlSetToReturn(url3, SetUtil.set(url1, url2, url3, url4));
-    parser.addUrlSetToReturn(url4, SetUtil.set(url1, url2, url3, url4));
+    parser.addUrlsToReturn(startUrl, SetUtil.set(url1, url2, url3, url4));
+    parser.addUrlsToReturn(url1, SetUtil.set(url1, url2, url3, url4));
+    parser.addUrlsToReturn(url2, SetUtil.set(url1, url2, url3, url4));
+    parser.addUrlsToReturn(url3, SetUtil.set(url1, url2, url3, url4));
+    parser.addUrlsToReturn(url4, SetUtil.set(url1, url2, url3, url4));
     mau.addUrl(url1, false, true);
     mau.addUrl(url2, false, true);
     mau.addUrl(url3, false, true);
@@ -366,7 +367,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     mau.addUrl(startUrl, exception, DEFAULT_RETRY_TIMES-1);
     String url1="http://www.example.com/blah.html";
     mau.addUrl(url1, false, true);
-    parser.addUrlSetToReturn(startUrl, SetUtil.set(url1));
+    parser.addUrlsToReturn(startUrl, SetUtil.set(url1));
     crawlRule.addUrlToCrawl(url1);
 
     assertTrue(crawler.doCrawl0());
@@ -427,7 +428,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     String url1="http://www.example.com/blah.html";
     mau.addUrl(url1, false, true);
     crawlRule.addUrlToCrawl(url1);
-    parser.addUrlSetToReturn(startUrl, SetUtil.set(url1));
+    parser.addUrlsToReturn(startUrl, SetUtil.set(url1));
 
     assertTrue(crawler.doCrawl());
     Set expected = SetUtil.set(permissionPage, startUrl, url1);
@@ -460,19 +461,20 @@ public class TestNewContentCrawler extends LockssTestCase {
     mau.addUrlContype(url2, false, true, "bla-content-type");
     mau.addUrlContype(url3, false, true, "bla-content-type");
     mau.addUrl(url4, false, true);        
-    parser.addUrlSetToReturn(startUrl, SetUtil.set(url1, url2, url3, url4));   
+    parser.addUrlsToReturn(startUrl, SetUtil.set(url1, url2, url3, url4));   
     crawlRule.addUrlToCrawl(url1);
     crawlRule.addUrlToCrawl(url2);
     crawlRule.addUrlToCrawl(url3);
     crawlRule.addUrlToCrawl(url4);
-    crawler.setKeepMimeTypesOfUrl(true);
+    ConfigurationUtil.addFromArgs(BaseCrawler.PARAM_KEEP_URLS_OF_MIME_TYPE,
+				  "true");
     crawler.doCrawl();
     Crawler.Status crawlStatus = crawler.getStatus();
     assertEquals(6, crawlStatus.getNumFetched());
     CIProperties cu0Props = cu0.getProperties(); 
     assertEquals( "bla-ba-type", 
-                  cu0Props.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE));                             
-    assertEquals(null, crawlStatus.getUrlsOfMimeType("no-such-mimetype"));
+                  cu0Props.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE));
+    assertEmpty(crawlStatus.getUrlsOfMimeType("no-such-mimetype"));
     assertTrue(crawlStatus.getUrlsOfMimeType("bla-content-type").contains(url1));
     assertTrue(crawlStatus.getUrlsOfMimeType("bla-content-type").contains(url2));
     assertTrue(crawlStatus.getUrlsOfMimeType("bla-content-type").contains(url3));
@@ -492,12 +494,13 @@ public class TestNewContentCrawler extends LockssTestCase {
     mau.addUrlContype(url2, false, true, "bla-content-type");
     mau.addUrlContype(url3, false, true, "bla-content-type");
     mau.addUrl(url4, false, true);        
-    parser.addUrlSetToReturn(startUrl, SetUtil.set(url1, url2, url3, url4));   
+    parser.addUrlsToReturn(startUrl, SetUtil.set(url1, url2, url3, url4));   
     crawlRule.addUrlToCrawl(url1);
     crawlRule.addUrlToCrawl(url2);
     crawlRule.addUrlToCrawl(url3);
     crawlRule.addUrlToCrawl(url4);
-    crawler.setKeepMimeTypesOfUrl(false);
+    ConfigurationUtil.addFromArgs(BaseCrawler.PARAM_KEEP_URLS_OF_MIME_TYPE,
+				  "false");
     crawler.doCrawl();
     Crawler.Status crawlStatus = crawler.getStatus();
     assertEquals(6, crawlStatus.getNumFetched());                             
@@ -511,9 +514,6 @@ public class TestNewContentCrawler extends LockssTestCase {
   
   /** test status update of pending urls   */
   public void testGetPendingUrls() {
-    MyMockCacheException exception =
-      new MyMockCacheException("Test exception");
-    exception.setFatal();
     String url1 = "http://www.example.com/link1.html";
     String url2 = "http://www.example.com/link2.html";  
     String url3 = "http://www.example.com/link3.html";    
@@ -521,18 +521,24 @@ public class TestNewContentCrawler extends LockssTestCase {
     mau.addUrl(startUrl, false, true);          
     mau.addUrl(url1, true, true);               
     mau.addUrl(url2, true, true);
-    mau.addUrl(url3, exception, DEFAULT_RETRY_TIMES-1);
+    mau.addUrl(url3, true, true);
     mau.addUrl(url4, true, true);   
-    parser.addUrlSetToReturn(startUrl, SetUtil.set(url1, url2, url3, url4));   
+    parser.addUrlsToReturn(startUrl, ListUtil.list(url1, url2, url3, url4));   
     crawlRule.addUrlToCrawl(url1);
     crawlRule.addUrlToCrawl(url2);   
     crawlRule.addUrlToCrawl(url4);
     crawler.doCrawl();
-    Crawler.Status crawlStatus = crawler.getStatus();
-    assertEquals(Crawler.STATUS_ERROR, crawlStatus.getCrawlStatus());
-    assertEquals(1, crawlStatus.getNumUrlsWithErrors());
-    assertEquals(3, crawlStatus.getNumParsed());    
-    assertEquals(1, crawlStatus.getNumPending());    
+    MyCrawlerStatus crawlStatus = (MyCrawlerStatus)crawler.getStatus();
+    assertEquals(Crawler.STATUS_SUCCESSFUL, crawlStatus.getCrawlStatus());
+    assertEquals(0, crawlStatus.getNumUrlsWithErrors());
+    assertEquals(5, crawlStatus.getNumParsed());    
+    assertEquals(0, crawlStatus.getNumPending());    
+    assertEquals(ListUtil.fromArray(new String[] {
+      "add", startUrl,
+      "remove", startUrl,
+      "add", url1, "add", url2, "add", url3, "add", url4,
+      "remove", url1, "remove", url2, "remove", url3, "remove", url4}),
+		 crawlStatus.pendingEvents);
   }
 
   public void testGetStatusStartUrls() {
@@ -547,7 +553,7 @@ public class TestNewContentCrawler extends LockssTestCase {
 
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     mau.addUrl(startUrl);
-    parser.addUrlSetToReturn(startUrl, SetUtil.set(url1, url2, url3));
+    parser.addUrlsToReturn(startUrl, SetUtil.set(url1, url2, url3));
     mau.addUrl(url1).setContentSize(42);
     mau.addUrl(url2).setContentSize(3);;
     mau.addUrl(url3).setContentSize(1000);;
@@ -563,12 +569,13 @@ public class TestNewContentCrawler extends LockssTestCase {
     assertEquals(expectedEnd, crawlStatus.getEndTime());
     assertEquals(5, crawlStatus.getNumFetched());
     assertEquals(SetUtil.set(startUrl, url1, url2, url3, permissionPage),
-		 crawlStatus.getUrlsFetched());
+		 SetUtil.theSet(crawlStatus.getUrlsFetched()));
     assertEquals(0, crawlStatus.getNumExcluded());
-    assertEquals(new HashSet(), crawlStatus.getUrlsExcluded());
+    assertEmpty(crawlStatus.getUrlsExcluded());
     assertEquals(4, crawlStatus.getNumParsed());
     assertEquals(1045, crawlStatus.getContentBytesFetched());
-    assertEquals(SetUtil.set("Publisher"), crawlStatus.getSources());
+    assertEquals(SetUtil.set("Publisher"),
+		 SetUtil.theSet(crawlStatus.getSources()));
   }
 
   public void testGetStatusCrawlDoneExcluded() {
@@ -579,7 +586,7 @@ public class TestNewContentCrawler extends LockssTestCase {
 
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     mau.addUrl(startUrl);
-    parser.addUrlSetToReturn(startUrl, SetUtil.set(url1, url2, url3, url4));
+    parser.addUrlsToReturn(startUrl, SetUtil.set(url1, url2, url3, url4));
     mau.addUrl(url1).setContentSize(42);
     mau.addUrl(url2).setContentSize(3);;
     mau.addUrl(url3).setContentSize(1000);;
@@ -595,12 +602,14 @@ public class TestNewContentCrawler extends LockssTestCase {
     assertEquals(expectedEnd, crawlStatus.getEndTime());
     assertEquals(5, crawlStatus.getNumFetched());
     assertEquals(SetUtil.set(startUrl, url1, url2, url3, permissionPage),
-		 crawlStatus.getUrlsFetched());
+		 SetUtil.theSet(crawlStatus.getUrlsFetched()));
     assertEquals(1, crawlStatus.getNumExcluded());
-    assertEquals(SetUtil.set(url4), crawlStatus.getUrlsExcluded());
+    assertEquals(SetUtil.set(url4),
+		 SetUtil.theSet(crawlStatus.getUrlsExcluded()));
     assertEquals(4, crawlStatus.getNumParsed());
     assertEquals(1045, crawlStatus.getContentBytesFetched());
-    assertEquals(SetUtil.set("Publisher"), crawlStatus.getSources());
+    assertEquals(SetUtil.set("Publisher"),
+		 SetUtil.theSet(crawlStatus.getSources()));
   }
 
   public void testGetStatusCrawlDoneNotModified() {
@@ -611,7 +620,7 @@ public class TestNewContentCrawler extends LockssTestCase {
 
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     mau.addUrl(startUrl, true, true);
-    parser.addUrlSetToReturn(startUrl, SetUtil.set(url1, url2, url3));
+    parser.addUrlsToReturn(startUrl, SetUtil.set(url1, url2, url3));
     mau.addUrl(url1);
 //     mau.addUrl(url1, true, true);
     mau.addUrl(url2);
@@ -629,8 +638,9 @@ public class TestNewContentCrawler extends LockssTestCase {
     assertEquals(4, crawlStatus.getNumFetched());
     assertEquals(1, crawlStatus.getNumNotModified());
     assertEquals(SetUtil.set(url1, url2, url3, permissionPage),
-		 crawlStatus.getUrlsFetched());
-    assertEquals(SetUtil.set(startUrl), crawlStatus.getUrlsNotModified());
+		 SetUtil.theSet(crawlStatus.getUrlsFetched()));
+    assertEquals(ListUtil.list(startUrl),
+		 crawlStatus.getUrlsNotModified());
     assertEquals(4, crawlStatus.getNumParsed());
   }
 
@@ -641,7 +651,7 @@ public class TestNewContentCrawler extends LockssTestCase {
 
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     mau.addUrl(startUrl);
-    parser.addUrlSetToReturn(startUrl, SetUtil.set(url1, url2, url3));
+    parser.addUrlsToReturn(startUrl, SetUtil.set(url1, url2, url3));
     mau.addUrl(url1);
     mau.addUrl(url2);
     mau.addUrl(url3);
@@ -657,7 +667,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     assertEquals(expectedEnd, crawlStatus.getEndTime());
     assertEquals(5, crawlStatus.getNumFetched());
     assertEquals(SetUtil.set(url1, url2, url3, startUrl),
-		 crawlStatus.getUrlsParsed());
+		 SetUtil.theSet(crawlStatus.getUrlsParsed()));
     assertEquals(4, crawlStatus.getNumParsed());
   }
 
@@ -683,7 +693,7 @@ public class TestNewContentCrawler extends LockssTestCase {
   public void testGetStatusError() {
     String url1="http://www.example.com/blah.html";
     mau.addUrl(startUrl, false, true);
-    parser.addUrlSetToReturn(startUrl, SetUtil.set(url1));
+    parser.addUrlsToReturn(startUrl, SetUtil.set(url1));
     mau.addUrl(url1, new IOException("Test exception"), DEFAULT_RETRY_TIMES);
     crawlRule.addUrlToCrawl(url1);
 
@@ -747,7 +757,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     String url1="http://www.example.com/blah.html";
     mau.addUrl(startUrl, false, true);
-    parser.addUrlSetToReturn(startUrl, SetUtil.set(url1));
+    parser.addUrlsToReturn(startUrl, SetUtil.set(url1));
     mau.addUrl(url1,
  	       new CacheException.RepositoryException("Test exception"),
   	       DEFAULT_RETRY_TIMES);
@@ -806,8 +816,8 @@ public class TestNewContentCrawler extends LockssTestCase {
     String url4= "http://www.example.com/dir/link9.html";
 
     //    mau.setParser(parser);
-    parser.addUrlSetToReturn(startUrl, SetUtil.set(url1, url2, url3));
-    parser.addUrlSetToReturn(url1, SetUtil.set(url4));
+    parser.addUrlsToReturn(startUrl, SetUtil.set(url1, url2, url3));
+    parser.addUrlsToReturn(url1, SetUtil.set(url4));
 
     mau.addUrl(startUrl, true, true);
     mau.addUrl(url1, true, true);
@@ -849,9 +859,9 @@ public class TestNewContentCrawler extends LockssTestCase {
     String url6= "http://www.foo.com/dir/link6.html";
 
     //    mau.setParser(parser);
-    parser.addUrlSetToReturn(startUrl, SetUtil.set(url1, url2, url3));
-    parser.addUrlSetToReturn(startUrl2, SetUtil.set(url4, url5));
-    parser.addUrlSetToReturn(url4, SetUtil.set(url6));
+    parser.addUrlsToReturn(startUrl, SetUtil.set(url1, url2, url3));
+    parser.addUrlsToReturn(startUrl2, SetUtil.set(url4, url5));
+    parser.addUrlsToReturn(url4, SetUtil.set(url6));
 
     mau.addUrl(startUrl, true, true);
     mau.addUrl(startUrl2, true, true);
@@ -886,7 +896,7 @@ public class TestNewContentCrawler extends LockssTestCase {
 
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     mau.addUrl(startUrl);
-    parser.addUrlSetToReturn(startUrl, SetUtil.set(url1, url2, url3));
+    parser.addUrlsToReturn(startUrl, SetUtil.set(url1, url2, url3));
     mau.addUrl(url1);
     mau.addUrl(url2);
     mau.addUrl(url3);
@@ -908,7 +918,7 @@ public class TestNewContentCrawler extends LockssTestCase {
   public void testOutsideOfWindow1() {
     String url1= "http://www.example.com/link1.html";
     spec.setCrawlWindow(new MyMockCrawlWindow(0));
-    parser.addUrlSetToReturn(startUrl, SetUtil.set(url1));
+    parser.addUrlsToReturn(startUrl, SetUtil.set(url1));
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     mau.addUrl(startUrl, true, true);
     assertFalse(crawler.doCrawl());
@@ -917,7 +927,7 @@ public class TestNewContentCrawler extends LockssTestCase {
   public void testOutsideOfWindow2() {
     String url1= "http://www.example.com/link1.html";
     spec.setCrawlWindow(new MyMockCrawlWindow(1));
-    parser.addUrlSetToReturn(startUrl, SetUtil.set(url1));
+    parser.addUrlsToReturn(startUrl, SetUtil.set(url1));
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     mau.addUrl(startUrl, true, true);
     mau.addUrl(url1);
@@ -952,7 +962,7 @@ public class TestNewContentCrawler extends LockssTestCase {
 
     mau.addUrl(startUrl, false, true);
     crawlRule.addUrlToCrawl(startUrl);
-    parser.addUrlSetToReturn(startUrl, SetUtil.set(url1));
+    parser.addUrlsToReturn(startUrl, SetUtil.set(url1));
     mau.addUrl(url1, false, true);
     crawlRule.addUrlToCrawl(url1);
 
@@ -981,12 +991,39 @@ public class TestNewContentCrawler extends LockssTestCase {
 
   private static class MyNewContentCrawler extends NewContentCrawler {
     protected MyNewContentCrawler(ArchivalUnit au, CrawlSpec spec,
-				  AuState aus){
+				  AuState aus) {
       super(au, spec, aus);
+      crawlStatus =
+	new MyCrawlerStatus(au, ((SpiderCrawlSpec)spec).getStartingUrls(),
+			    getTypeString());
+    }
+
+    // Ordered set makes results easier to check
+    protected Set newSet() {
+      return new ListOrderedSet();
     }
 
     /** suppress these actions */
     protected void doCrawlEndActions() {
+    }
+  }
+
+  static class MyCrawlerStatus extends Crawler.Status {
+    List pendingEvents = new ArrayList();
+
+    public MyCrawlerStatus(ArchivalUnit au, Collection startUrls,
+			    String type) {
+      super(au, startUrls, type);
+    }
+
+    public synchronized void addPendingUrl(String url) {
+      super.addPendingUrl(url);
+      pendingEvents.addAll(ListUtil.list("add", url));
+    }
+
+    public synchronized void removePendingUrl(String url) {
+      super.removePendingUrl(url);
+      pendingEvents.addAll(ListUtil.list("remove", url));
     }
   }
 

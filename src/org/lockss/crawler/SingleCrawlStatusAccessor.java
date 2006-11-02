@@ -1,5 +1,5 @@
 /*
- * $Id: SingleCrawlStatusAccessor.java,v 1.3 2006-10-18 17:06:30 adriz Exp $
+ * $Id: SingleCrawlStatusAccessor.java,v 1.4 2006-11-02 04:18:38 tlipkis Exp $
  */
 
 /*
@@ -69,20 +69,14 @@ public class SingleCrawlStatusAccessor implements StatusAccessor {
 
   
   public void populateTable(StatusTable table)
-  throws StatusService.NoSuchTableException{
+      throws StatusService.NoSuchTableException {
     if (table == null) {
       throw new IllegalArgumentException("Called with null table");
     } else if (table.getKey() == null) {
       throw new IllegalArgumentException("SingleCrawlStatusAccessor requires a key");
     }
     String key = table.getKey();
-    Crawler.Status status;
-    try {
-      status = statusSource.getStatus().getCrawlStatus(key);
-    } catch (Exception e) {
-      throw new StatusService.NoSuchTableException("Malformed table key: " +
-                                                       key);
-    }
+    Crawler.Status status = statusSource.getStatus().getCrawlStatus(key);
     if (status == null) {
       throw new StatusService.NoSuchTableException("Status info from that crawl is no longer available");
     }
@@ -90,11 +84,12 @@ public class SingleCrawlStatusAccessor implements StatusAccessor {
     table.setColumnDescriptors(colDescsMimeTypes);  
     table.setTitle(getTableTitle(status));          
     table.setRows(getRows(status, key));              
-}
+    table.setSummaryInfo(getSummaryInfo(status));
+  }
 
   private String getTableTitle(Crawler.Status status) {
     ArchivalUnit au = status.getAu();
-    return "Content types found during crawl of "+au.getName();
+    return "Status of crawl of " + au.getName();
   }
 
   /**  iterate over the mime-types makeRow for each
@@ -117,18 +112,18 @@ public class SingleCrawlStatusAccessor implements StatusAccessor {
     long numOfUrls =  status.getNumUrlsOfMimeType(mimeType);
     row.put(MIME_TYPE_NAME, mimeType);
     if (status.getUrlsOfMimeType(mimeType) == null) { 
-      row.put(MIME_TYPE_NUM_URLS,
-              new Long(numOfUrls) );
-    }else{     // put a row with a refrence to list of urls
+      row.put(MIME_TYPE_NUM_URLS, new Long(numOfUrls));
+    } else {     // If have list, number is link to table the displays it
        String urlsRef =  key + "." + MIMETYPES_URLS_KEY +":"+mimeType ; 
        row.put(MIME_TYPE_NUM_URLS,
-                 makeRef(numOfUrls,CRAWL_URLS_STATUS_ACCESSOR, urlsRef));
-   }
+	       makeRef(numOfUrls, CRAWL_URLS_STATUS_ACCESSOR, urlsRef));
+    }
 
     return row;
   }
+
   /**
-   * Makes the proper reference object if value is != 0, otherwise returns a long
+   * Return a reference object to the table, displaying the value
    */
   private Object makeRef(long value, String tableName, String key) {
     return new StatusTable.Reference(new Long(value), tableName, key);
@@ -141,5 +136,35 @@ public class SingleCrawlStatusAccessor implements StatusAccessor {
   public boolean requiresKey() {
     return true;
   }
+
+  private List getSummaryInfo(Crawler.Status status) {
+    List res = new ArrayList();
+    Collection startUrls = status.getStartUrls();
+    res.add(new StatusTable.SummaryInfo("Status",
+					ColumnDescriptor.TYPE_STRING,
+					status.getCrawlStatus()));
+    res.add(new StatusTable.SummaryInfo("Source",
+					ColumnDescriptor.TYPE_STRING,
+					status.getSources()));
+    res.add(new StatusTable.SummaryInfo("Starting Url(s)",
+					ColumnDescriptor.TYPE_STRING,
+					startUrls));
+//     res.add(new StatusTable.SummaryInfo("",
+// 					ColumnDescriptor.TYPE_STRING,
+// 					));
+
+
+//     addIfNonZero(res, "Active Crawls", ct.active);
+    return res;
+  }
+
+  private void addIfNonZero(List res, String head, int val) {
+    if (val != 0) {
+      res.add(new StatusTable.SummaryInfo(head,
+					  ColumnDescriptor.TYPE_INT,
+					  new Long(val)));
+    }
+  }
+
 
 }

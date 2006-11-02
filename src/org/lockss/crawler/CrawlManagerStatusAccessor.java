@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerStatusAccessor.java,v 1.12 2006-10-18 17:06:30 adriz Exp $
+ * $Id: CrawlManagerStatusAccessor.java,v 1.13 2006-11-02 04:18:38 tlipkis Exp $
  */
 
 /*
@@ -60,9 +60,9 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
                                 CrawlManagerImpl.SINGLE_CRAWL_STATUS_TABLE; 
   private static final String NUM_OF_MIME_TYPES = "num_of_mime_types";
 
-  private static final String START_URLS = "start_urls";
+//   private static final String START_URLS = "start_urls";
   private static final String CRAWL_STATUS = "crawl_status";
-  private static final String SOURCES = "sources";
+//   private static final String SOURCES = "sources";
   // Sort key, not a visible column
   private static final String SORT_KEY = "sort";
 
@@ -113,10 +113,10 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
       new ColumnDescriptor(NUM_OF_MIME_TYPES, "Mime Types",
                            ColumnDescriptor.TYPE_INT,
                            "Number of different content types"),
-      new ColumnDescriptor(START_URLS, "Starting Url(s)",
-			   ColumnDescriptor.TYPE_STRING),
-      new ColumnDescriptor(SOURCES, "Source(s)",
-			   ColumnDescriptor.TYPE_STRING),
+//       new ColumnDescriptor(START_URLS, "Starting Url(s)",
+// 			   ColumnDescriptor.TYPE_STRING),
+//       new ColumnDescriptor(SOURCES, "Source(s)",
+// 			   ColumnDescriptor.TYPE_STRING),
     });
 
 
@@ -217,7 +217,7 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
 		      CRAWL_URLS_STATUS_ACCESSOR, key+".excluded"));
       row.put(NUM_OF_MIME_TYPES,
                 makeRef(status.getNumOfMimeTypes(),
-                        SINGLE_CRAWL_STATUS_ACCESSOR, key));                       
+                        SINGLE_CRAWL_STATUS_ACCESSOR, key));
       if (status.getEndTime() > 0) {
 	row.put(DURATION_COL_NAME, new Long(status.getEndTime() -
 					    status.getStartTime()));
@@ -233,20 +233,27 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
       row.put(SORT_KEY, new Integer(rowNum + SORT_BASE_WAITING));
     }
 
-    row.put(START_URLS,
-	    (StringUtil.separatedString(status.getStartUrls(), "\n")));
-    row.put(SOURCES,
-	    (StringUtil.separatedString(status.getSources(), "\n")));
-    row.put(CRAWL_STATUS, status.getCrawlStatus());
+//     row.put(START_URLS,
+// 	    (StringUtil.separatedString(status.getStartUrls(), "\n")));
+//     row.put(SOURCES,
+// 	    (StringUtil.separatedString(status.getSources(), "\n")));
+    row.put(CRAWL_STATUS, makeRef(status.getCrawlStatus(),
+				  SINGLE_CRAWL_STATUS_ACCESSOR, key));
     return row;
   }
 
   /**
-   * Makes the proper reference object if value is != 0, otherwise just returns
-   * a Long
+   * Return a reference object to the table, displaying the value
    */
   private Object makeRef(long value, String tableName, String key) {
     return new StatusTable.Reference(new Long(value), tableName, key);
+  }
+
+  /**
+   * Return a reference object to the table, displaying the value
+   */
+  private Object makeRef(Object value, String tableName, String key) {
+    return new StatusTable.Reference(value, tableName, key);
   }
 
   private List getSummaryInfo(CrawlManagerStatus cms, Counts ct) {

@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawlStatus.java,v 1.13 2006-10-18 17:06:30 adriz Exp $
+ * $Id: MockCrawlStatus.java,v 1.14 2006-11-02 04:18:38 tlipkis Exp $
  */
 
 /*
@@ -47,11 +47,11 @@ public class MockCrawlStatus extends Crawler.Status {
   int numNotModified = 0;
   int numExcluded = 0;
 
-  Collection urlsFetched = null;
-  Collection urlsParsed = null;
-  Collection urlsPending = null;
-  Collection urlsNotModified = null;
-  Collection urlsExcluded = null;
+  List urlsFetched = null;
+  List urlsParsed = null;
+  List urlsPending = null;
+  List urlsNotModified = null;
+  List urlsExcluded = null;
   Map errorUrls = null;
 
 
@@ -101,7 +101,7 @@ public class MockCrawlStatus extends Crawler.Status {
     return numExcluded;
   }
 
-  public Collection getUrlsExcluded() {
+  public List getUrlsExcluded() {
     return urlsExcluded;
   }
 
@@ -113,32 +113,32 @@ public class MockCrawlStatus extends Crawler.Status {
     this.numErrors = num;
   }
 
-  public void setUrlsNotModified(Collection urlsNotModified) {
+  public void setUrlsNotModified(List urlsNotModified) {
     this.urlsNotModified = urlsNotModified;
   }
 
-  public void setUrlsExcluded(Collection urlsExcluded) {
+  public void setUrlsExcluded(List urlsExcluded) {
     this.urlsExcluded = urlsExcluded;
   }
 
-  public Collection getUrlsParsed() {
+  public List getUrlsParsed() {
     return urlsParsed;
   }
 
-  public void setUrlsParsed(Collection urlsParsed) {
+  public void setUrlsParsed(List urlsParsed) {
     this.urlsParsed = urlsParsed;
   }
 
   // allow test-mock set/get for pending urls
-  public Collection getUrlsPending() {
+  public List getUrlsPending() {
     return urlsPending;
   }
 
-  public void setUrlsPending(Collection urlsPending) {
+  public void setUrlsPending(List urlsPending) {
     this.urlsPending = urlsPending;
   }
 
-  public Collection getUrlsNotModified() {
+  public List getUrlsNotModified() {
     return urlsNotModified;
   }
 
@@ -178,11 +178,11 @@ public class MockCrawlStatus extends Crawler.Status {
     return errorUrls;
   }
 
-  public void setUrlsFetched(Collection urlsFetched) {
+  public void setUrlsFetched(List urlsFetched) {
     this.urlsFetched = urlsFetched;
   }
 
-  public Collection getUrlsFetched() {
+  public List getUrlsFetched() {
     return urlsFetched;
   }
 

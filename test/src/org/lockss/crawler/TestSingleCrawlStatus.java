@@ -1,5 +1,5 @@
 /*
- * $Id: TestSingleCrawlStatus.java,v 1.10 2006-10-18 17:06:30 adriz Exp $
+ * $Id: TestSingleCrawlStatus.java,v 1.11 2006-11-02 04:18:38 tlipkis Exp $
  */
 
 /*
@@ -77,7 +77,6 @@ public class TestSingleCrawlStatus extends LockssTestCase {
   }
 
   public void testCrawlStatusDisplayName() {
-    CrawlUrlsStatusAccessor cStatus = new CrawlUrlsStatusAccessor(statusSource);
     try {
       cStatus.getDisplayName();
       fail("getDisplayName should throw");
@@ -86,12 +85,10 @@ public class TestSingleCrawlStatus extends LockssTestCase {
   }
 
   public void testRequiresKey() {
-    CrawlUrlsStatusAccessor cStatus = new CrawlUrlsStatusAccessor(statusSource);
     assertTrue(cStatus.requiresKey());
   }
 
   public void testPopulateTableNullTable() throws Exception {
-    CrawlUrlsStatusAccessor cStatus = new CrawlUrlsStatusAccessor(statusSource);
     try {
       cStatus.populateTable(null);
       fail("Should have thrown an IllegalArgumentException for a null table");
@@ -101,7 +98,6 @@ public class TestSingleCrawlStatus extends LockssTestCase {
 
   public void testFetchedUrlsThrowsWOKey() throws Exception {
     StatusTable table = new StatusTable("test");
-    CrawlUrlsStatusAccessor cStatus = new CrawlUrlsStatusAccessor(statusSource);
     try {
       cStatus.populateTable(table);
       fail("Should have thrown an IllegalArgumentException when called without"
@@ -123,7 +119,6 @@ public class TestSingleCrawlStatus extends LockssTestCase {
 
     addCrawlStatus(mcStatus);
 
-    CrawlUrlsStatusAccessor cStatus = new CrawlUrlsStatusAccessor(statusSource);
     StatusTable table = new StatusTable("test", mcStatus.getKey()+".fetched");
     //out: StatusTable table = new StatusTable("test", "fetched."+mcStatus.getKey());
     cStatus.populateTable(table);
@@ -141,7 +136,6 @@ public class TestSingleCrawlStatus extends LockssTestCase {
 
     addCrawlStatus(mcStatus);
 
-    CrawlUrlsStatusAccessor cStatus = new CrawlUrlsStatusAccessor(statusSource);
     StatusTable table = new StatusTable("test", mcStatus.getKey()+".parsed");
 
     cStatus.populateTable(table);
@@ -159,7 +153,6 @@ public class TestSingleCrawlStatus extends LockssTestCase {
 
     addCrawlStatus(mcStatus);
 
-    CrawlUrlsStatusAccessor cStatus = new CrawlUrlsStatusAccessor(statusSource);
     StatusTable table = new StatusTable("test", mcStatus.getKey()+".error");
 
     cStatus.populateTable(table);
@@ -171,13 +164,12 @@ public class TestSingleCrawlStatus extends LockssTestCase {
   public void testNotModifiedNoUrls() throws Exception {
     mcStatus.setStartTime(1);
     mcStatus.setEndTime(2);
-    mcStatus.setUrlsNotModified(new HashSet());
+    mcStatus.setUrlsNotModified(Collections.EMPTY_LIST);
     mcStatus.setNumParsed(4);
     mcStatus.setAu(new MockArchivalUnit());
 
     addCrawlStatus(mcStatus);
 
-    CrawlUrlsStatusAccessor cStatus = new CrawlUrlsStatusAccessor(statusSource);
     StatusTable table = new StatusTable("test", mcStatus.getKey()+".not-modified");
 
     cStatus.populateTable(table);
@@ -191,12 +183,11 @@ public class TestSingleCrawlStatus extends LockssTestCase {
     mcStatus.setEndTime(2);
     mcStatus.setNumNotModified(3);
     mcStatus.setNumParsed(4);
-    mcStatus.setUrlsExcluded(new HashSet());
+    mcStatus.setUrlsExcluded(Collections.EMPTY_LIST);
     mcStatus.setAu(new MockArchivalUnit());
 
     addCrawlStatus(mcStatus);
 
-    CrawlUrlsStatusAccessor cStatus = new CrawlUrlsStatusAccessor(statusSource);
     StatusTable table = new StatusTable("test", mcStatus.getKey()+".excluded");
 
     cStatus.populateTable(table);
@@ -218,7 +209,6 @@ public class TestSingleCrawlStatus extends LockssTestCase {
 
     addCrawlStatus(mcStatus);
 
-    CrawlUrlsStatusAccessor cStatus = new CrawlUrlsStatusAccessor(statusSource);
     StatusTable table = new StatusTable("test", mcStatus.getKey()+".fetched");
 
     cStatus.populateTable(table);
@@ -256,7 +246,6 @@ public class TestSingleCrawlStatus extends LockssTestCase {
 
     addCrawlStatus(mcStatus);
 
-    CrawlUrlsStatusAccessor cStatus = new CrawlUrlsStatusAccessor(statusSource);
     StatusTable table = new StatusTable("test", mcStatus.getKey()+".excluded");
 
     cStatus.populateTable(table);
@@ -285,7 +274,6 @@ public class TestSingleCrawlStatus extends LockssTestCase {
 
     addCrawlStatus(mcStatus);
 
-    CrawlUrlsStatusAccessor cStatus = new CrawlUrlsStatusAccessor(statusSource);
     StatusTable table = new StatusTable("test", mcStatus.getKey()+".parsed");
 
     cStatus.populateTable(table);
@@ -314,7 +302,6 @@ public class TestSingleCrawlStatus extends LockssTestCase {
 
     addCrawlStatus(mcStatus);
 
-    CrawlUrlsStatusAccessor cStatus = new CrawlUrlsStatusAccessor(statusSource);
     StatusTable table = new StatusTable("test", mcStatus.getKey()+".not-modified");
 
     cStatus.populateTable(table);
@@ -346,7 +333,6 @@ public class TestSingleCrawlStatus extends LockssTestCase {
 
     addCrawlStatus(mcStatus);
 
-    CrawlUrlsStatusAccessor cStatus = new CrawlUrlsStatusAccessor(statusSource);
     StatusTable table = new StatusTable("test", mcStatus.getKey()+".error");
 
     cStatus.populateTable(table);

@@ -1,5 +1,5 @@
 /*
- * $Id: MockContentParser.java,v 1.4 2005-10-11 05:52:05 tlipkis Exp $
+ * $Id: MockContentParser.java,v 1.5 2006-11-02 04:18:38 tlipkis Exp $
  */
 
 /*
@@ -39,7 +39,7 @@ import org.lockss.crawler.ContentParser;
 public class MockContentParser implements ContentParser {
 
   private String urlToReturn = null;
-  private HashMap urlSets = new HashMap();
+  private HashMap urlCollections = new HashMap();
 
   private Set srcUrls = new HashSet();
 
@@ -51,10 +51,10 @@ public class MockContentParser implements ContentParser {
     srcUrls.add(srcUrl);
     if (urlToReturn != null) {
       cb.foundUrl(urlToReturn);
-    } else if (urlSets != null) {
-      Set setToAdd = (Set)urlSets.get(srcUrl);
-      if (setToAdd != null) {
-	Iterator it = setToAdd.iterator();
+    } else if (urlCollections != null) {
+      Collection collToAdd = (Collection)urlCollections.get(srcUrl);
+      if (collToAdd != null) {
+	Iterator it = collToAdd.iterator();
 	while(it.hasNext()) {
 	  cb.foundUrl((String)it.next());
 	}
@@ -67,28 +67,12 @@ public class MockContentParser implements ContentParser {
     return srcUrls;
   }
 
-  /*
-  public void parseForUrls(CachedUrl cu, ContentParser.FoundUrlCallback cb)
-      throws IOException {
-    if (urlToReturn != null) {
-      cb.foundUrl(urlToReturn);
-    } else if (urlSets != null) {
-      Set setToAdd = (Set)urlSets.get(cu.getUrl());
-      if (setToAdd != null) {
-	Iterator it = setToAdd.iterator();
-	while(it.hasNext()) {
-	  cb.foundUrl((String)it.next());
-	}
-      }
-    }
-    }*/
-
   public void setUrlToReturn(String url) {
     this.urlToReturn = url;
   }
 
-  public void addUrlSetToReturn(String url, Set urls) {
-    urlSets.put(url, urls);
+  public void addUrlsToReturn(String url, Collection urls) {
+    urlCollections.put(url, urls);
   }
 
 }

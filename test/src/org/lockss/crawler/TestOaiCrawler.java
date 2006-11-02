@@ -1,5 +1,5 @@
 /*
- * $Id: TestOaiCrawler.java,v 1.14 2006-08-26 19:41:53 tlipkis Exp $
+ * $Id: TestOaiCrawler.java,v 1.15 2006-11-02 04:18:38 tlipkis Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ import java.io.Reader;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
+import org.apache.commons.collections.set.ListOrderedSet;
 import org.lockss.daemon.*;
 import org.lockss.oai.OaiHandler;
 import org.lockss.plugin.ArchivalUnit;
@@ -72,7 +73,7 @@ public class TestOaiCrawler extends LockssTestCase {
     crawlRule.addUrlToCrawl(permissionUrl);
     mau.addUrl(permissionUrl);
 
-    spec = new OaiCrawlSpec(handlerUrl, crawlRule, permissionList, false);
+    spec = new OaiCrawlSpec(handlerUrl, crawlRule, permissionList, true);
 
     mau.setCrawlSpec(spec);
 
@@ -199,7 +200,6 @@ public class TestOaiCrawler extends LockssTestCase {
 
   /**
    * We have content, verify that we don't force recrawl it
-   *
    */
   public void testSimpleCrawlHasContent() {
     //set the urls to be crawl
@@ -217,11 +217,14 @@ public class TestOaiCrawler extends LockssTestCase {
     crawler.daemonPermissionCheckers =
       ListUtil.list(new MyMockPermissionChecker(1));
 
+    MockContentParser parser = new MockContentParser();
+    mau.setParser(parser);
+    parser.addUrlsToReturn(permissionUrl, ListUtil.list(url1));   
+
     //do the crawl
     assertTrue(crawler.doCrawl());
-    //verify the crawl result
-    Set expected = SetUtil.set(url1, permissionUrl);
-    assertEquals(expected, cus.getCachedUrls());
+    //verify we don't recollect url1
+    assertEquals(SetUtil.set(permissionUrl), cus.getCachedUrls());
     assertEquals(SetUtil.set(), cus.getForceCachedUrls());
   }
 
@@ -266,6 +269,52 @@ public class TestOaiCrawler extends LockssTestCase {
     assertTrue(crawler.isWholeAU());
   }
 
+  /** test status update of pending urls   */
+  public void testGetPendingUrls() {
+    String urloai = "http://www.example.com/blah.html";
+    String url1 = "http://www.example.com/link1.html";
+    String url2 = "http://www.example.com/link2.html";
+    String url3 = "http://www.example.com/link3.html";
+    String url4 = "http://www.example.com/link4.html";
+
+    MockOaiHandler oaiHandler = new MockOaiHandler();
+    oaiHandler.setUpdatedUrls(SetUtil.set(urloai));
+
+    spec = new OaiCrawlSpec(handlerUrl, crawlRule, permissionList, true);
+    mau.setCrawlSpec(spec);
+
+    MyOaiCrawler crawler = new MyOaiCrawler(mau, spec, aus);
+    crawler.setOaiHandler(oaiHandler);
+    crawler.daemonPermissionCheckers =
+      ListUtil.list(new MyMockPermissionChecker(1));
+
+    crawlRule.addUrlToCrawl(urloai);
+
+    mau.addUrl(urloai, false, true);          
+    mau.addUrl(url1, true, true);               
+    mau.addUrl(url2, true, true);
+    mau.addUrl(url3, true, true);
+    mau.addUrl(url4, true, true);   
+    MockContentParser parser = new MockContentParser();
+    mau.setParser(parser);
+    parser.addUrlsToReturn(urloai, ListUtil.list(url1, url2, url3, url4));   
+    crawlRule.addUrlToCrawl(url1);
+    crawlRule.addUrlToCrawl(url2);   
+    crawlRule.addUrlToCrawl(url4);
+    crawler.doCrawl();
+    MyCrawlerStatus crawlStatus = (MyCrawlerStatus)crawler.getStatus();
+    assertEquals(Crawler.STATUS_SUCCESSFUL, crawlStatus.getCrawlStatus());
+    assertEquals(0, crawlStatus.getNumUrlsWithErrors());
+    assertEquals(5, crawlStatus.getNumParsed());    
+    assertEquals(0, crawlStatus.getNumPending());    
+    assertEquals(ListUtil.fromArray(new String[] {
+      "add", urloai,
+      "remove", urloai,
+      "add", url1, "add", url2, "add", url3, "add", url4,
+      "remove", url1, "remove", url2, "remove", url3, "remove", url4}),
+		 crawlStatus.pendingEvents);
+  }
+
 
   private class MyMockPermissionChecker implements PermissionChecker {
     int numPermissionGranted=0;
@@ -298,6 +347,10 @@ public class TestOaiCrawler extends LockssTestCase {
 
     public MyOaiCrawler(ArchivalUnit au, CrawlSpec crawlSpec, AuState aus){
       super(au, crawlSpec, aus);
+      String oaiHandlerUrl =
+	((OaiCrawlSpec)crawlSpec).getOaiRequestData().getOaiRequestHandlerUrl();
+      crawlStatus =
+	new MyCrawlerStatus(au, ListUtil.list(oaiHandlerUrl), getTypeString());
     }
 
     protected OaiHandler getOaiHandler() {
@@ -308,10 +361,35 @@ public class TestOaiCrawler extends LockssTestCase {
       this.oaiHandler = oaiHandler;
     }
 
+    // Ordered set makes results easier to check
+    protected Set newSet() {
+      return new ListOrderedSet();
+    }
+
     /** suppress these actions */
     protected void doCrawlEndActions() {
     }
   }
+
+  static class MyCrawlerStatus extends Crawler.Status {
+    List pendingEvents = new ArrayList();
+
+    public MyCrawlerStatus(ArchivalUnit au, Collection startUrls,
+			    String type) {
+      super(au, startUrls, type);
+    }
+
+    public synchronized void addPendingUrl(String url) {
+      super.addPendingUrl(url);
+      pendingEvents.addAll(ListUtil.list("add", url));
+    }
+
+    public synchronized void removePendingUrl(String url) {
+      super.removePendingUrl(url);
+      pendingEvents.addAll(ListUtil.list("remove", url));
+    }
+  }
+
 
   private class MyMockOaiHandler extends MockOaiHandler {
     RuntimeException ex;

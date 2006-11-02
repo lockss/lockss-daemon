@@ -1,5 +1,5 @@
 /*
- * $Id: Crawler.java,v 1.47 2006-10-18 17:06:30 adriz Exp $
+ * $Id: Crawler.java,v 1.48 2006-11-02 04:18:38 tlipkis Exp $
  */
 
 /*
@@ -122,12 +122,12 @@ public interface Crawler {
     private long contentBytesFetched = 0;
 
     protected Map urlsWithErrors = new LinkedMap();
-    protected Set urlsFetched = new ListOrderedSet();
-    protected Set urlsExcluded = new ListOrderedSet();
-    protected Set urlsNotModified = new ListOrderedSet();
-    protected Set urlsParsed = new ListOrderedSet();
-    protected Set urlsPending = new ListOrderedSet();   
-    protected Set sources = new ListOrderedSet();
+    protected ListOrderedSet urlsFetched = new ListOrderedSet();
+    protected ListOrderedSet urlsExcluded = new ListOrderedSet();
+    protected ListOrderedSet urlsNotModified = new ListOrderedSet();
+    protected ListOrderedSet urlsParsed = new ListOrderedSet();
+    protected ListOrderedSet urlsPending = new ListOrderedSet();   
+    protected ListOrderedSet sources = new ListOrderedSet();
     /**  mimeTypeUrls  will map a mimeType to an object of RecordMimeType 
      *  to keep record of urls for the given type of mime-type 
      */    
@@ -191,14 +191,14 @@ public interface Crawler {
     /**
      *  add url to the list of pending urls
      */
-    public synchronized void addUrlPending(String url) {
+    public synchronized void addPendingUrl(String url) {
       urlsPending.add(url);
     }
     
     /**
      * remove one url element from the list of the pending urls
      */
-    public synchronized void removeAnUrlPending(String url) {
+    public synchronized void removePendingUrl(String url) {
       urlsPending.remove(url);
     }
     
@@ -252,11 +252,11 @@ public interface Crawler {
       }
     }
 
-    public synchronized Collection getSources() {
+    public synchronized List getSources() {
       if (isCrawlActive()) {
 	return new ArrayList(sources);
       } else {
-	return sources;
+	return sources.asList();
       }
     }
 
@@ -264,46 +264,46 @@ public interface Crawler {
       return urlsWithErrors.size();
     }
 
-    public synchronized Collection getUrlsFetched() {
+    public synchronized List getUrlsFetched() {
       if (isCrawlActive()) {
 	return new ArrayList(urlsFetched);
       } else {
-	return urlsFetched;
+	return urlsFetched.asList();
       }
     }
 
-    public synchronized Collection getUrlsNotModified() {
+    public synchronized List getUrlsNotModified() {
       if (isCrawlActive()) {
 	return new ArrayList(urlsNotModified);
       } else {
-	return urlsNotModified;
+	return urlsNotModified.asList();
       }
     }
 
-    public synchronized Collection getUrlsExcluded() {
+    public synchronized List getUrlsExcluded() {
       if (isCrawlActive()) {
  	return new ArrayList(urlsExcluded);
       } else {
- 	return urlsExcluded;
+ 	return urlsExcluded.asList();
       }
     }
 
-    public synchronized Collection getUrlsParsed() {
+    public synchronized List getUrlsParsed() {
       if (isCrawlActive()) {
 	return new ArrayList(urlsParsed);
       } else {
-	return urlsParsed;
+	return urlsParsed.asList();
       }
     }
     
     /**
      * @return hash of the urls that are pending
      */
-    public synchronized Collection getUrlsPending() {
+    public synchronized List getUrlsPending() {
       if (isCrawlActive()) {
         return new ArrayList(urlsPending);
       } else {
-        return urlsPending;
+        return urlsPending.asList();
       }
     }
 
@@ -314,9 +314,10 @@ public interface Crawler {
       if (isCrawlActive()) {   
         return new ArrayList( mimeTypeUrls.keySet() );
       } else {
-        return  mimeTypeUrls.keySet();
+        return mimeTypeUrls.keySet();
       }
     }
+
     /**
      * @return the number of different types of mime types
      */
@@ -325,10 +326,11 @@ public interface Crawler {
     }
     
     public synchronized void signalMimeTypeOfUrl(String mimeType,
-                                                 String url, boolean keepUrl ) {  
+						 String url,
+						 boolean keepUrl) {
       if (mimeType == null) return;      
       RecordMimeTypeUrls recordUrls = 
-              (RecordMimeTypeUrls)mimeTypeUrls.get(mimeType);  
+	(RecordMimeTypeUrls)mimeTypeUrls.get(mimeType);  
       if ( recordUrls == null ) {          
         recordUrls = new RecordMimeTypeUrls();
         mimeTypeUrls.put(mimeType, recordUrls);
@@ -337,33 +339,36 @@ public interface Crawler {
     }
  
     /**
-      * @return list of urls with this mime-type found during a crawl
+     * @return list of urls with this mime-type found during a crawl
      */
-     public synchronized Collection getUrlsOfMimeType(String mimeType) {
-       RecordMimeTypeUrls recordUrls = 
-               (RecordMimeTypeUrls)mimeTypeUrls.get(mimeType);  
-       if ( recordUrls != null ) {          
-         return recordUrls.urlsArray; 
-       } else {
-         return null;
-       }
-     }
+    public synchronized List getUrlsOfMimeType(String mimeType) {
+      List res = null;
+      RecordMimeTypeUrls recordUrls = 
+	(RecordMimeTypeUrls)mimeTypeUrls.get(mimeType);  
+      if ( recordUrls != null ) {          
+	res = recordUrls.urls; 
+      }
+      if (res != null) {
+	return res;
+      }
+      return Collections.EMPTY_LIST;
+    }
 
-     /**
-      * @return number of urls with this mime-type found during a crawl
-      */
-     public synchronized int getNumUrlsOfMimeType(String mimeType) {
-       RecordMimeTypeUrls recordUrls = 
-         (RecordMimeTypeUrls)mimeTypeUrls.get(mimeType);  
-       if ( recordUrls != null ) {          
-         return recordUrls.numUrls; 
-       } else {
-         return 0;  
-       }
+    /**
+     * @return number of urls with this mime-type found during a crawl
+     */
+    public synchronized int getNumUrlsOfMimeType(String mimeType) {
+      RecordMimeTypeUrls recordUrls = 
+	(RecordMimeTypeUrls)mimeTypeUrls.get(mimeType);  
+      if ( recordUrls != null ) {          
+	return recordUrls.numUrls; 
+      } else {
+	return 0;  
+      }
 
-     }
+    }
 
-     /**
+    /**
      * Return the number of urls that have been parsed by this crawler
      * @return number of urls that have been parsed by this crawler
      */
@@ -371,12 +376,12 @@ public interface Crawler {
       return urlsParsed.size();
     }
 
-     public synchronized void signalUrlParsed(String url) {
-       urlsParsed.add(url);
-     }
+    public synchronized void signalUrlParsed(String url) {
+      urlsParsed.add(url);
+    }
 
 
-     public synchronized void addSource(String source) {
+    public synchronized void addSource(String source) {
       sources.add(source);
     }
 
@@ -432,12 +437,15 @@ public interface Crawler {
      */  
     public static class RecordMimeTypeUrls {
       protected int numUrls = 0;
-      protected ArrayList urlsArray =  new ArrayList();     
+      protected ArrayList urls;
 
       protected void addMtUrls(String url, boolean keepUrl) {
         numUrls++;
         if (keepUrl){
-          urlsArray.add( url );
+	  if (urls == null) {
+	    urls = new ArrayList();
+	  }
+          urls.add( url );
         }  
       }
     }
@@ -464,12 +472,11 @@ public interface Crawler {
     public UrlCacher makeUrlCacher(String url);
 
     public BufferedInputStream resetInputStream(BufferedInputStream is, String url)
-           throws IOException;
+	throws IOException;
 
     public void refetchPermissionPage(String url) throws IOException;
 
     public Crawler.Status getCrawlStatus();
 
   }
-
 }

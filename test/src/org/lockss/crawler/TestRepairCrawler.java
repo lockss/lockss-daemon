@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepairCrawler.java,v 1.39 2006-08-09 02:03:07 tlipkis Exp $
+ * $Id: TestRepairCrawler.java,v 1.40 2006-11-02 04:18:38 tlipkis Exp $
  */
 
 /*
@@ -239,7 +239,7 @@ public class TestRepairCrawler extends LockssTestCase {
     String url2 = "http://example.com/link2.html";
 
     mau.addUrl(repairUrl1);
-    parser.addUrlSetToReturn(repairUrl1, SetUtil.set(url1, url2, repairUrl2));
+    parser.addUrlsToReturn(repairUrl1, SetUtil.set(url1, url2, repairUrl2));
     mau.addUrl(repairUrl2);
     mau.addUrl(url1);
     mau.addUrl(url2);
@@ -316,7 +316,7 @@ public class TestRepairCrawler extends LockssTestCase {
     assertTrue("Fail! fetch from publisher occurs",
 	       crawler.getFetchPubCnt() == 0);
     Crawler.Status status = crawler.getStatus();
-    assertEquals(SetUtil.set("127.0.0.1"), status.getSources());
+    assertEquals(ListUtil.list("127.0.0.1"), status.getSources());
     assertEquals("Successful", status.getCrawlStatus());
     assertEquals(1234, status.getContentBytesFetched());
   }
@@ -349,7 +349,7 @@ public class TestRepairCrawler extends LockssTestCase {
     assertTrue("Fail! fetch from publisher occurs",
 	       crawler.getFetchPubCnt() == 0);
     Crawler.Status status = crawler.getStatus();
-    assertEquals(SetUtil.set("127.0.0.1"), status.getSources());
+    assertEquals(ListUtil.list("127.0.0.1"), status.getSources());
     assertEquals("Successful", status.getCrawlStatus());
   }
 
@@ -521,7 +521,7 @@ public class TestRepairCrawler extends LockssTestCase {
     assertTrue("Fetch from publisher" +
 	       crawler.getFetchPubCnt(), crawler.getFetchPubCnt() == 1);
     Crawler.Status status = crawler.getStatus();
-    assertEquals(SetUtil.set("Publisher"), status.getSources());
+    assertEquals(ListUtil.list("Publisher"), status.getSources());
     assertEquals(4321, status.getContentBytesFetched());
   }
 
@@ -681,7 +681,7 @@ public class TestRepairCrawler extends LockssTestCase {
 //    assertEquals(3, crawlStatus.getNumFetched()); //2 repairs & permission page
     assertEquals(0, crawlStatus.getNumParsed());
     assertEquals(SetUtil.set(repairUrl1, repairUrl2, permissionPage),
-		 crawlStatus.getUrlsFetched());
+		 SetUtil.theSet(crawlStatus.getUrlsFetched()));
   }
 
   public void testPluginThrowsRuntimeExceptionDoesntUpdateStatus() {
@@ -702,7 +702,7 @@ public class TestRepairCrawler extends LockssTestCase {
     assertEquals(0, crawlStatus.getNumParsed());
     Map errorUrls = crawlStatus.getUrlsWithErrors();
     assertEquals("Unexpected Exception", (String)errorUrls.get(repairUrl));
-    assertEquals(SetUtil.set(permissionPage), crawlStatus.getUrlsFetched());
+    assertEquals(ListUtil.list(permissionPage), crawlStatus.getUrlsFetched());
   }
 
   private MyRepairCrawler makeCrawlerWPermission(ArchivalUnit au,
@@ -742,7 +742,7 @@ public class TestRepairCrawler extends LockssTestCase {
 
     Map errorUrls = crawlStatus.getUrlsWithErrors();
     assertEquals(Crawler.STATUS_FETCH_ERROR, (String)errorUrls.get(repairUrl));
-    assertEquals(SetUtil.set(permissionPage), crawlStatus.getUrlsFetched());
+    assertEquals(ListUtil.list(permissionPage), crawlStatus.getUrlsFetched());
   }
   /**
    * convinience method to set the config up so that the repair crawl does or

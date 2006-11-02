@@ -1,5 +1,5 @@
 /*
- * $Id: OaiCrawler.java,v 1.16 2006-04-13 23:34:48 troberts Exp $
+ * $Id: OaiCrawler.java,v 1.17 2006-11-02 04:18:38 tlipkis Exp $
  */
 
 /*
@@ -115,7 +115,6 @@ public class OaiCrawler extends FollowLinkCrawler {
    * @return a set of Url that parsed from the url in the Oai response
    */
   protected Set getUrlsToFollow() {
-    Set extractedUrls = new HashSet();
     OaiRequestData oaiRequestData = spec.getOaiRequestData();
 
     OaiHandler oaiHandler = getOaiHandler();
@@ -125,9 +124,11 @@ public class OaiCrawler extends FollowLinkCrawler {
     } catch (RuntimeException ex) {
       logger.error("Error while trying to process the OAI request", ex);
       crawlStatus.setCrawlError("Error in processing Oai Request");
-      return extractedUrls;
+      return Collections.EMPTY_SET;
     }
     
+    Set oaiStartUrls = newSet();
+
     List errList = oaiHandler.getErrors();
     if ( !errList.isEmpty() ){
       crawlStatus.setCrawlError("Error in processing Oai Records");
@@ -142,55 +143,24 @@ public class OaiCrawler extends FollowLinkCrawler {
 
     Set updatedUrls = oaiHandler.getUpdatedUrls();
     if ( updatedUrls.isEmpty() ) {
-      logger.warning("No url found in the OAI reponse ! ");
+      logger.warning("No urls found in the OAI reponse!");
     } else {
-
-      Iterator it = updatedUrls.iterator();
-      while (it.hasNext()){
+      // filter out URLs not in crawl spec, as this is routine for OAI queries
+      for (Iterator it = updatedUrls.iterator(); it.hasNext(); ) {
         String url = (String) it.next();
 
         logger.debug2("Trying to process " +url);
 
-        // check crawl window during crawl
-        if (!withinCrawlWindow()) {
-          crawlStatus.setCrawlError(Crawler.STATUS_WINDOW_CLOSED);
-          abortCrawl();
-          //return null;
-        }
-
-        if (parsedPages.contains(url)) {
-          continue;
-        }
-
-        //catch and warn if there's a url in the start urls
-        //that we shouldn't cache
         if (spec.isIncluded(url)) {
-          if (!fetchAndParse(url, extractedUrls, parsedPages, true, true)) {
-            if (crawlStatus.getCrawlError() == null) {
-              crawlStatus.setCrawlError(Crawler.STATUS_ERROR);
-            }
-          }
+	  crawlStatus.addPendingUrl(url);
+	  oaiStartUrls.add(url);
         } else {
-          logger.warning("Called with a starting url we aren't suppose to "+
-                         "cache: "+url);
+          logger.debug("OAI response url not in crawl spec: " + url);
         }
-
       }
     }
-
-    lvlCnt = 1;
-
-    if (shouldFollowLink()){
-      logger.debug3("Urls from Oai repository: \n" + extractedUrls);
-      return extractedUrls;
-    } else {
-      // it should not return any URL if not follow link
-      return Collections.EMPTY_SET;
-    }
-
+    return oaiStartUrls;
   }
-
-
 
   /**
    * getting the last crawl time from AuState of the current AU

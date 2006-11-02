@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerStatusAccessor.java,v 1.9 2006-10-18 17:06:30 adriz Exp $
+ * $Id: TestCrawlManagerStatusAccessor.java,v 1.10 2006-11-02 04:18:38 tlipkis Exp $
  */
 
 /*
@@ -56,7 +56,7 @@ public class TestCrawlManagerStatusAccessor extends LockssTestCase {
   private static final String NUM_URLS_EXCLUDED = "num_urls_excluded";
   private static final String NUM_URLS_WITH_ERRORS = "num_urls_with_errors";
   private static final String NUM_URLS_NOT_MODIFIED = "num_urls_not_modified";
-  private static final String NUM_OF_MIME_TYPES = "num_of_mime_types"; 
+  private static final String NUM_OF_MIME_TYPES = "num_of_mime_types";
   private static final String START_URLS = "start_urls";
   private static final String CRAWL_STATUS = "crawl_status";
   private static final String NC_TYPE = "New Content";
@@ -93,7 +93,7 @@ public class TestCrawlManagerStatusAccessor extends LockssTestCase {
       new ColumnDescriptor(NUM_URLS_PARSED, "Pages Parsed",
 			   ColumnDescriptor.TYPE_INT),
       new ColumnDescriptor(NUM_URLS_PENDING, "Pages Pending",
-                           ColumnDescriptor.TYPE_INT),                           
+                           ColumnDescriptor.TYPE_INT),
       new ColumnDescriptor(NUM_URLS_EXCLUDED, "Pages Excluded",
 			   ColumnDescriptor.TYPE_INT),
       new ColumnDescriptor(NUM_URLS_NOT_MODIFIED, "Not Modified",
@@ -102,11 +102,11 @@ public class TestCrawlManagerStatusAccessor extends LockssTestCase {
 			   ColumnDescriptor.TYPE_INT),
       new ColumnDescriptor(NUM_OF_MIME_TYPES, "Mime Types",
                            ColumnDescriptor.TYPE_INT,
-                           "Number of different content types"),                                                             
-      new ColumnDescriptor(START_URLS, "Starting Url(s)",
-			   ColumnDescriptor.TYPE_STRING),
-      new ColumnDescriptor(SOURCES, "Source(s)",
-			   ColumnDescriptor.TYPE_STRING),
+                           "Number of different content types"),
+//       new ColumnDescriptor(START_URLS, "Starting Url(s)",
+// 			   ColumnDescriptor.TYPE_STRING),
+//       new ColumnDescriptor(SOURCES, "Source(s)",
+// 			   ColumnDescriptor.TYPE_STRING),
     });
 
 
@@ -188,7 +188,7 @@ public class TestCrawlManagerStatusAccessor extends LockssTestCase {
     status.setStartTime(1);
     status.setEndTime(2);
     status.setNumFetched(3);
-    status.setNumParsed(4);    
+    status.setNumParsed(4);
     status.setNumPending(4);
     status.setNumExcluded(5);
     status.setAu(makeMockAuWithId("test_key"));
@@ -348,13 +348,16 @@ public class TestCrawlManagerStatusAccessor extends LockssTestCase {
     assertEquals(expectedElements, rows.size());
 
     Map map = (Map)rows.get(0);
-    assertEquals(STATUS_INCOMPLETE, map.get(CRAWL_STATUS));
+    assertEquals(STATUS_INCOMPLETE,
+		 StatusTable.getActualValue(map.get(CRAWL_STATUS)));
 
     map = (Map)rows.get(1);
-    assertEquals(STATUS_SUCCESSFUL, map.get(CRAWL_STATUS));
+    assertEquals(STATUS_SUCCESSFUL,
+		 StatusTable.getActualValue(map.get(CRAWL_STATUS)));
 
     map = (Map)rows.get(2);
-    assertEquals(STATUS_ERROR, map.get(CRAWL_STATUS));
+    assertEquals(STATUS_ERROR,
+		 StatusTable.getActualValue(map.get(CRAWL_STATUS)));
   }
 
 

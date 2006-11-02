@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.48 2006-10-18 17:06:30 adriz Exp $
+ * $Id: FollowLinkCrawler.java,v 1.49 2006-11-02 04:18:38 tlipkis Exp $
  */
 
 /*
@@ -151,21 +151,6 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
     }
   }
 
-  /**
-   * One can update the Max. Crawl Depth before calling doCrawl10().
-   * Currently used only for "Not Follow Link" mode in OaiCrawler
-   *
-   * XXX  This method should go away after serious testing of the new
-   * implemenated getUrlsTOFollow() in OaiCrawler
-   *
-   * @param newMax the new max. crawl depth
-   */
-  protected void setMaxDepth(int newMax){
-    logger.debug3("changing max crawl depth from " + maxDepth + " to " + newMax);
-    maxDepth = newMax;
-  }
-
-
   protected boolean doCrawl0() {
     if (crawlAborted) {
       return aborted();
@@ -176,12 +161,12 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
     cus = au.getAuCachedUrlSet();
     parsedPages = new HashSet();
 
-    //XXX short term hack to work around populatePermissionMap not 
+    //XXX short term hack to work around populatePermissionMap not
     //indicating when a crawl window is the problem
     if (!withinCrawlWindow()) {
       crawlStatus.setCrawlError(Crawler.STATUS_WINDOW_CLOSED);
       abortCrawl();
-    } 
+    }
 
     if (!populatePermissionMap()) {
       return aborted();
@@ -191,11 +176,9 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 
     // get the Urls to follow from either NewContentCrawler or OaiCrawler
     extractedUrls = getUrlsToFollow();
-    logger.debug3("Urls extracted from getUrlsToFollow() : "
-		  + extractedUrls.toString() );
-
+    if (logger.isDebug3()) logger.debug3("Start URLs: " + extractedUrls );
     if (crawlAborted) {
-        return aborted();
+      return aborted();
     }
 
     if (usePersistantList) {
@@ -209,7 +192,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
     while (lvlCnt <= maxDepth && !urlsToCrawl.isEmpty() && !crawlAborted) {
 
       logger.debug2("Crawling at level " + lvlCnt);
-      extractedUrls = new HashSet(); // level (N+1)'s Urls
+      extractedUrls = newSet(); // level (N+1)'s Urls
 
       while (!urlsToCrawl.isEmpty() && !crawlAborted) {
  	String nextUrl = (String)CollectionUtil.getAnElement(urlsToCrawl);
@@ -220,6 +203,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	  crawlStatus.setCrawlError(Crawler.STATUS_WINDOW_CLOSED);
 	  return false;
 	}
+        crawlStatus.removePendingUrl(nextUrl);
 	boolean crawlRes = false;
 	try {
 	  crawlRes = fetchAndParse(nextUrl, extractedUrls,
@@ -232,7 +216,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	  logger.warning("Unexpected exception in crawl", e);
 	}
 	urlsToCrawl.remove(nextUrl);
-        crawlStatus.removeAnUrlPending(nextUrl);
+	logger.debug("crawlStatus.removePendingUrl(" + nextUrl + ")");
 	if  (!crawlRes) {
 	  if (crawlStatus.getCrawlError() == null) {
 	    crawlStatus.setCrawlError(Crawler.STATUS_ERROR);
@@ -270,6 +254,11 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 
     doCrawlEndActions();
     return (crawlStatus.getCrawlError() == null);
+  }
+
+  // Default Set impl overridden for some tests
+  protected Set newSet() {
+    return new HashSet();
   }
 
   /** Separate method for easy overridability in unit tests, where
@@ -316,9 +305,6 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
     // don't cache if already cached, unless overwriting
     if (fetchIfChanged || !uc.getCachedUrl().hasContent()) {
 
-//       if (!fetch(uc, error)){
-// 	return false;
-//       }
       try {
 	if (failedUrls.contains(uc.getUrl())) {
 	  //skip if it's already failed
@@ -379,6 +365,11 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
       }
     }
 
+    // don't parse if not following links
+    if (!shouldFollowLink()) {
+      return (error == null);
+    }
+
     // parse the page
     try {
       if (!parsedPages.contains(uc.getUrl())) {
@@ -387,8 +378,6 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	//XXX quick fix; if-statement should be removed when we rework
 	//handling of error condition
 	if (cu.hasContent()) {
-	  //updateStatusMimeType(cu);          
-	  //  update crawler status urls of mime-type
 	  ContentParser parser = getContentParser(cu);
 	  if (parser != null) {
 	    //IOException if the CU can't be read
@@ -397,7 +386,9 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 				new MyFoundUrlCallback(parsedPages,
 						       extractedUrls, au));
 	    if (extractedUrls.remove(url)){
-	      logger.debug3("Removing self reference in "+url+" from the extracted list");
+	      crawlStatus.removePendingUrl(url);
+	      logger.debug3("Removing self reference in " + url +
+			    " from the extracted list");
 	    }
 	    crawlStatus.signalUrlParsed(uc.getUrl());
 	  }
@@ -413,40 +404,6 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
     logger.debug3("Removing from parsing list: "+uc.getUrl());
     return (error == null);
   }
-
-//   protected boolean fetch(UrlCacher uc, String error){
-//     try {
-//       if (failedUrls.contains(uc.getUrl())) {
-// 	//skip if it's already failed
-// 	logger.debug3("Already failed to cache "+uc+". Not retrying.");
-//       } else {
-
-// 	// checking the crawl permission of the url's host
-// 	if (!hasPermission(uc.getUrl())){
-// 	  if (crawlStatus.getCrawlError() == null) {
-// 	    crawlStatus.setCrawlError("No permission to collect " + uc.getUrl());
-// 	  }
-// 	  return false;
-// 	}
-// 	cacheWithRetries(uc, maxRetries);
-//       }
-//     } catch (CacheException e) {
-//       // Failed.  Don't try this one again during this crawl.
-//       failedUrls.add(uc.getUrl());
-//       if (e.isAttributeSet(CacheException.ATTRIBUTE_FAIL)) {
-// 	logger.error("Problem caching "+uc+". Continuing", e);
-// 	  error = Crawler.STATUS_FETCH_ERROR;
-//       } else {
-// 	logger.warning(uc+" not found on publisher's site", e);
-//       }
-//     } catch (Exception e) {
-// 	failedUrls.add(uc.getUrl());
-// 	//XXX not expected
-// 	logger.error("Unexpected Exception during crawl, continuing", e);
-// 	error = Crawler.STATUS_FETCH_ERROR;
-//     }
-//     return true;
-//   }
 
   private void cacheWithRetries(UrlCacher uc, int maxTries)
       throws IOException {
@@ -493,14 +450,11 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
     }
   }
 
-
   private ContentParser getContentParser(CachedUrl cu) {
     CIProperties props = cu.getProperties();
     ArchivalUnit au = cu.getArchivalUnit();
     if (props != null) {
       String contentType = props.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE);
-      //  do update of the content-type
-  //   crawlStatus.updateUrlsArrayOfMimeType(contentType, cu.getUrl());
       return au.getContentParser(contentType);
     }
     return null;
@@ -545,7 +499,8 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	      logger.debug2("Included url: "+normUrl);
 	    }
 	    extractedUrls.add(normUrl);
-            crawlStatus.addUrlPending(normUrl);// add url to pendingUrls in status object
+            crawlStatus.addPendingUrl(normUrl);
+	    logger.debug("crawlStatus.addPendingUrl(" + normUrl + ")");
 	  } else {
 	    if (logger.isDebug2()) {
 	      logger.debug2("Excluded url: "+normUrl);

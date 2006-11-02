@@ -1,5 +1,5 @@
 /*
- * $Id: NewContentCrawler.java,v 1.51 2006-09-22 06:23:45 tlipkis Exp $
+ * $Id: NewContentCrawler.java,v 1.52 2006-11-02 04:18:38 tlipkis Exp $
  */
 
 /*
@@ -71,7 +71,7 @@ public class NewContentCrawler extends FollowLinkCrawler {
    * @return a set of urls that contains updated content.
    */
   protected Set getUrlsToFollow(){
-    Set extractedUrls = new HashSet();
+    Set extractedUrls = newSet();
     int refetchDepth0 = spec.getRefetchDepth();
     String key = StringUtil.replaceString(PARAM_REFETCH_DEPTH,
 					  "<auid>", au.getAuId());
@@ -90,13 +90,18 @@ public class NewContentCrawler extends FollowLinkCrawler {
       //return null;
     }
 
-    Iterator it = spec.getStartingUrls().iterator();
+    Collection startUrls = spec.getStartingUrls();
+    for (Iterator iter = startUrls.iterator(); iter.hasNext(); ) {
+      crawlStatus.addPendingUrl((String)iter.next());
+    }
     cachingStartUrls = true; //added to report error when fail to fetch startUrl
     logger.debug3("refetchDepth: "+refetchDepth);
+
+    Iterator it = startUrls.iterator();
     for (int ix=0; ix<refetchDepth && it.hasNext(); ix++) {
       logger.debug3("Refetching level "+ix);
       //don't use clear() or it will empty the iterator
-      extractedUrls = new HashSet();
+      extractedUrls = newSet();
 
       while (it.hasNext() && !crawlAborted) {
 	String url = (String)it.next();
@@ -113,6 +118,7 @@ public class NewContentCrawler extends FollowLinkCrawler {
 	  //return null;
 	}
 
+        crawlStatus.removePendingUrl(url);
 	if (parsedPages.contains(url)) {
 	  continue;
 	}

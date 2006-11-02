@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawler.java,v 1.19 2006-10-17 23:40:12 adriz Exp $
+ * $Id: BaseCrawler.java,v 1.20 2006-11-02 04:18:38 tlipkis Exp $
  */
 
 /*
@@ -92,7 +92,7 @@ public abstract class BaseCrawler
 
   public static final String PARAM_KEEP_URLS_OF_MIME_TYPE =
     Configuration.PREFIX + "BaseCrawler.keep_urls_of_mime_type";
-  public static boolean DEFAULT_KEEP_URLS_OF_MIME_TYPE = true;  
+  public static final boolean DEFAULT_KEEP_URLS_OF_MIME_TYPE = true;  
 
   public boolean keepUrlsOfMimeType = DEFAULT_KEEP_URLS_OF_MIME_TYPE;
   
@@ -162,10 +162,6 @@ public abstract class BaseCrawler
     alertMgr = getDaemon().getAlertManager();
   }
 
-  public void setKeepMimeTypesOfUrl(boolean keepUrl ){
-    DEFAULT_KEEP_URLS_OF_MIME_TYPE = keepUrl;
-  }
-  
   protected LockssDaemon getDaemon() {
     return AuUtil.getDaemon(au);
   }
@@ -296,11 +292,14 @@ public abstract class BaseCrawler
     switch (cacheResult) {
     case UrlCacher.CACHE_RESULT_FETCHED:
       crawlStatus.signalUrlFetched(uc.getUrl());
+      // XXX add getCachedProperties() to UrlCacher so don't have to create
+      // CachedUrl (read props, open InputStream)
       CachedUrl cu = uc.getCachedUrl();
-      updateStatusMimeType(cu);        //  update crawler status with urls of mime-type    
-      if (cu != null && cu.hasContent()) {
+      updateStatusMimeType(cu);
+      if (cu.hasContent()) {
 	crawlStatus.addContentBytesFetched(cu.getContentSize());
       }
+      cu.release();
       break;
     case UrlCacher.CACHE_RESULT_NOT_MODIFIED:
       crawlStatus.signalUrlNotModified(uc.getUrl());
@@ -329,7 +328,8 @@ public abstract class BaseCrawler
     if (props != null) {
       String mimeType = props.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE);
       if (mimeType != null) {      
-        crawlStatus.signalMimeTypeOfUrl(mimeType, cu.getUrl(), keepUrlsOfMimeType); 
+        crawlStatus.signalMimeTypeOfUrl(mimeType, cu.getUrl(),
+					keepUrlsOfMimeType); 
       }
     }
     return;
