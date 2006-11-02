@@ -1,0 +1,44 @@
+#!/bin/sh
+
+# Select Java executable
+if [ -n "$JAVA_HOME" ] ; then
+ JAVA_EXEC="$JAVA_HOME/bin/java"
+else
+ JAVA_EXEC="java"
+fi
+
+# Set the base class path and base JVM arguments
+CLASSPATH="@CLASSPATH@"
+JVM_ARGS=""
+
+# Parse command line arguments
+while true ; do
+ case "$1" in
+
+  # Add element to class path
+  -classpath )
+   CLASSPATH="$CLASSPATH":"$2"
+   shift; shift; continue;;
+
+  # Set log level
+  -loglevel )
+   JVM_ARGS="$JVM_ARGS -Dorg.lockss.defaultLogLevel=$2"
+   shift; shift; continue;;
+
+  # Add element to JVM arguments
+  -D*=* )
+   JVM_ARGS="$JVM_ARGS $1"
+   shift; continue;;
+
+ esac
+ break
+done
+export CLASSPATH
+
+# Display class path and JVM arguments (if non-empty)
+echo "CLASSPATH=$CLASSPATH"
+if [ -n "$JVM_ARGS" ] ; then
+ echo "JVM_ARGS=$JVM_ARGS"
+fi
+
+$JAVA_EXEC -classpath $CLASSPATH $JVM_ARGS org.lockss.devtools.plugindef.PluginDefinerApp
