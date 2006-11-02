@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingStreamComm.java,v 1.21 2006-10-18 23:45:45 tlipkis Exp $
+ * $Id: BlockingStreamComm.java,v 1.22 2006-11-02 04:19:20 tlipkis Exp $
  */
 
 /*
@@ -82,7 +82,8 @@ public class BlockingStreamComm
   public static final String PARAM_SSL_PROTOCOL = PREFIX + "SslProtocol";
   static final String DEFAULT_SSL_PROTOCOL = "TLSv1";
 
-  /** Max peer channels */
+  /** Max peer channels.  Only affects outgoing messages; incoming
+   * connections are always accepted. */
   public static final String PARAM_MAX_CHANNELS =
     PREFIX + "maxChannels";
   static final int DEFAULT_MAX_CHANNELS = 50;
