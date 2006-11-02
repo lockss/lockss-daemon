@@ -1,6 +1,6 @@
 <FindBugsFilter>
   <!-- Match all Serialize violations. -->
   <Match classregex=".*" >
-    <BugCode name="Se,EI,EI2" />
+    <BugCode name="Se,SnVI,EI,EI2" />
   </Match>
 </FindBugsFilter>
