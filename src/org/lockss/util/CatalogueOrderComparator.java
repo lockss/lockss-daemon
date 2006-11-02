@@ -1,5 +1,5 @@
 /*
- * $Id: CatalogueOrderComparator.java,v 1.8 2006-09-16 23:00:18 tlipkis Exp $
+ * $Id: CatalogueOrderComparator.java,v 1.9 2006-11-02 04:19:38 tlipkis Exp $
  */
 
 /*
@@ -84,8 +84,8 @@ public class CatalogueOrderComparator implements Comparator {
   }
 
   String xlate(String s) {
-    s = findNumsPadZero(s, "0123456789",PADLEN);  
     s = s.trim();
+    s = padNumbers(s, PADLEN);  
     s = deleteAll(s, PUNCTUATION);
     s = deleteSpaceBetweenInitials(s);
     s = deleteInitial(s, "a");
@@ -95,42 +95,34 @@ public class CatalogueOrderComparator implements Comparator {
     return s;
   }
 
-  String findNumsPadZero(String s, String allAnyCharStr, int padLen) {
-    StringBuffer sb = new StringBuffer();
-    String sub2Str = s;
-    int digIx = StringUtils.indexOfAny(sub2Str, allAnyCharStr);	  
-    while (digIx >= 0 ){ 
-      String sub1Str = sub2Str.substring(0, digIx);  
-      int  numStrLen= getNumStrLen( sub2Str, digIx );// add getNumStrLen to our stringUtil   
-      String numStr = sub2Str.substring(digIx, digIx + numStrLen ); // does auto -1 to desired length
-      numStr = StringUtils.leftPad(numStr, padLen, "0");   
-           //sb = sb + sub1Str + numStr;
-            sb.append(sub1Str) ;
-            sb.append(numStr) ;
-      sub2Str = sub2Str.substring( digIx + numStrLen );
-      digIx = StringUtils.indexOfAny(sub2Str, allAnyCharStr);
-    }  
-    if ( sb.length()== 0 ){  
-      sb.append(s);
-    }
-    else{   
-      sb.append(sub2Str) ;    
+  String padNumbers(String s, int padLen) {
+    int len = s.length();
+    StringBuffer sb = new StringBuffer(len + padLen - 1);
+    int ix = 0;
+    while (ix < len) {
+      char ch = s.charAt(ix);
+      if (Character.isDigit(ch)) {
+	int jx = ix;
+	while (++jx < len) {
+	  if (!Character.isDigit(s.charAt(jx))) {
+	    break;
+	  }
+	}
+	// jx now points one beyond end of number (or end of string)
+	for (int padix = padLen - (jx - ix); padix > 0; padix--) {
+	  sb.append('0');
+	}
+	do {
+	  sb.append(s.charAt(ix++));
+	} while (ix < jx);
+      } else {
+	sb.append(ch);
+	ix++;
+      }
     }
     return sb.toString();
   }
 
-  int getNumStrLen( String str, int ixStr ){
-    int numLen=0;
-    while(  Character.isDigit( str.charAt(ixStr) )   ){
-  	  ixStr++;
-  	  numLen++;
-  	  if ( ixStr >= str.length() ){ 
-  		  break;
-  	  }		  
-    } 
-    return numLen;	  
-  }
-  
   String deleteInitial(String s, String sub) {
     int sublen = sub.length();
     if (StringUtil.startsWithIgnoreCase(s, sub) &&

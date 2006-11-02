@@ -1,5 +1,5 @@
 /*
- * $Id: TestCatalogueOrderComparator.java,v 1.7 2006-09-16 07:19:48 tlipkis Exp $
+ * $Id: TestCatalogueOrderComparator.java,v 1.8 2006-11-02 04:19:38 tlipkis Exp $
  */
 
 /*
@@ -87,22 +87,54 @@ public class TestCatalogueOrderComparator extends LockssTestCase {
     assertEquals("Journal of IBM", coc.xlate("Journal of I. B. M."));
   }
   
-  public void testfindNumsPadZero() {
-     assertEquals( "Volume of the World History", coc.findNumsPadZero("Volume of the World History", "0123456789",6) );  
-     assertEquals( 3, coc.getNumStrLen("the 455 World 88 History", 4) );
-     assertEquals( 2, coc.getNumStrLen("the 455 World 88 History", 14) );
-     assertEquals( "Volume 1 of the World History",  coc.findNumsPadZero("Volume 1 of the World History", "0123456789", 0) );
-     assertEquals( "Volume 001 of the World History", coc.findNumsPadZero("Volume 1 of the World History", "0123456789", 3) );
-     assertEquals( "Volume 00002 of the World 00008 History",coc.findNumsPadZero("Volume 2 of the World 8 History", "0123456789", 5) );
-     assertEquals( "Volume 11223 of the World 11228 History",coc.findNumsPadZero("Volume 11223 of the World 11228 History", "0123456789", 3) );
-     assertEquals( "Volume 1 of the World 28 History of 8 men and 7 women",
-                   coc.findNumsPadZero("Volume 1 of the World 28 History of 8 men and 7 women", "0123456789", 1) );         
-     assertEquals( "Volume 1 of the World 28 History of 8 men and 7 women",
-                   coc.findNumsPadZero("Volume 1 of the World 28 History of 8 men and 7 women", "0123456789", 0) );     
-     assertEquals( "Volume 00001234 of the World 00001111 History",
-                   coc.findNumsPadZero("Volume 1234 of the World 1111 History", "0123456789", 8) );
-     assertEquals( "Volume 00012345678 of the World 00000224466 History",
-                   coc.findNumsPadZero("Volume 12345678 of the World 224466 History", "0123456789", 11) );
+  public void testPadNumbers() {
+     assertEquals("Volume of the World History",
+		   coc.padNumbers("Volume of the World History", 6));  
+     assertEquals("1 initial number",
+		   coc.padNumbers("1 initial number", 0));
+     assertEquals("1 initial number",
+		   coc.padNumbers("1 initial number", 1));
+     assertEquals("000001 initial number",
+		   coc.padNumbers("1 initial number", 6));
+     assertEquals("234 initial number",
+		   coc.padNumbers("234 initial number", 0));
+     assertEquals("234 initial number",
+		   coc.padNumbers("234 initial number", 1));
+     assertEquals("000234 initial number",
+		   coc.padNumbers("234 initial number", 6));
+     assertEquals("final number 4",
+		   coc.padNumbers("final number 4", 0));
+     assertEquals("final number 4",
+		   coc.padNumbers("final number 4", 1));
+     assertEquals("final number 000004",
+		   coc.padNumbers("final number 4", 6));
+     assertEquals("final number 234",
+		   coc.padNumbers("final number 234", 0));
+     assertEquals("final number 234",
+		   coc.padNumbers("final number 234", 1));
+     assertEquals("final number 000234",
+		   coc.padNumbers("final number 234", 6));
+     assertEquals("embedded 4 number",
+		   coc.padNumbers("embedded 4 number", 0));
+     assertEquals("embedded 4 number",
+		   coc.padNumbers("embedded 4 number", 1));
+     assertEquals("embedded 000004 number",
+		   coc.padNumbers("embedded 4 number", 6));
+     assertEquals("embedded 234 number",
+		   coc.padNumbers("embedded 234 number", 0));
+     assertEquals("embedded 234 number",
+		   coc.padNumbers("embedded 234 number", 1));
+     assertEquals("embedded 000234 number",
+		   coc.padNumbers("embedded 234 number", 6));
+     assertEquals("000123 leading and embedded 000234 number",
+		   coc.padNumbers("123 leading and embedded 234 number", 6));
+     assertEquals("000123 leading and trailing 000234",
+		   coc.padNumbers("123 leading and trailing 234", 6));
+     assertEquals("embedded 00234 and trailing 00321",
+		   coc.padNumbers("embedded 234 and trailing 321", 5));
+     assertEquals("12345 longer 4321 or equal to pad 666777",
+		   coc.padNumbers("12345 longer 4321 or equal to pad 666777",
+				  4));
   }
 
   public void testOrder() {
