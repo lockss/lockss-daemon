@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.204 2006-11-01 04:45:58 thib_gc Exp $
+ $Id: build.xml,v 1.205 2006-11-02 04:17:19 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
@@ -139,6 +139,8 @@ Args:
   <!--  Loadable plugin jars created here -->
   <property name="plugins.dir" value="${basedir}/plugins/jars" />
 
+  <property name="scripts"           value="${basedir}/scripts"/>
+
   <property name="ant"           value="${basedir}/ant"/>
   <property name="ant.src"       value="${ant}/src"/>
   <property name="ant.classes"   value="${ant}/classes" />
@@ -234,6 +236,7 @@ Args:
   <property name="production.classpath.file" value="${lib}/run-classpath"/>
   <property name="production.packinglist.file" value="${lib}/packing-list"/>
   <property name="run.props" value="${lib}/run-props"/>
+  <property name="maxheap.script" value="${lib}/maxheap"/>
   <!--  This path is also known to org.lockss.util.BuildInfo class -->
   <property name="build.info.file"
                      value="${classes}/org/lockss/htdocs/build.properties"/>
@@ -329,6 +332,7 @@ Args:
     <path refid="run.classpath" />
     <pathelement path="${production.classpath.file}" />
     <pathelement path="${run.props}" />
+    <pathelement path="${maxheap.script}" />
   </path>
 
   <path id="plugins.compile.classpath">
@@ -575,6 +579,7 @@ The target you have selected requires compiling under JDK 1.5.  Use the rant -1.
     <delete file="${production.classpath.file}" quiet="true"/>
     <delete file="${production.packinglist.file}" quiet="true"/>
     <delete file="${run.props}" quiet="true"/>
+    <delete file="${maxheap.script}" quiet="true"/>
     <delete quiet="true" verbose="true">
       <!-- ant-generated files that can get left around if build is aborted -->
       <fileset dir="${basedir}" includes="files?* junit?*.properties"/>
@@ -952,8 +957,15 @@ The target you have selected requires compiling under JDK 1.5.  Use the rant -1.
 ULIMIT_MEMORY=unlimited
 ULIMIT_STACK=14000
 ULIMIT_FILES=512
-JAVA_COMMAND_ARGS="-server -Xmx375m -Dsun.net.inetaddr.ttl=3600 -Dorg.lockss.synchronizeDns=true -showversion"
+<!-- JAVA_COMMAND_ARGS="-server -Xmx375m -Dsun.net.inetaddr.ttl=3600 -Dorg.lockss.synchronizeDns=true -showversion" -->
+JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 -Dorg.lockss.synchronizeDns=true -showversion"
 </echo>
+    <!-- Copy maxheap script to lib dir (XXX should be in platform) -->
+    <copy file="${scripts}/maxheap"
+          tofile="${maxheap.script}">
+    </copy>
+    <chmod file="${maxheap.script}" perm="ugo+rx"/>
+
     <!-- Write packing list file-->
     <pathconvert refid="prod.packing.list" property="tmp.packing.list"
       targetos="${detected.os}">
@@ -1096,53 +1108,19 @@ JAVA_COMMAND_ARGS="-server -Xmx375m -Dsun.net.inetaddr.ttl=3600 -Dorg.lockss.syn
      <map from="${java.lib}" to="%JAVA_HOME%\lib" />
      <map from="${lib}" to="." />
     </pathconvert>
-    <echo file="${temp.pkg.dir}/plugintool">#!/bin/sh
+    <copy file="${scripts}/plugintool"
+          tofile="${temp.pkg.dir}/plugintool">
+      <filterset>
+        <filter token="CLASSPATH" value="${tmp.ptool.clspth.unix}"/>
+      </filterset>
+    </copy>
+    <copy file="${scripts}/plugintool.bat"
+          tofile="${temp.pkg.dir}/plugintool.bat">
+      <filterset>
+        <filter token="CLASSPATH" value="${tmp.ptool.clspth.dos}"/>
+      </filterset>
+    </copy>
 
-# Select Java executable
-if [ -n "$JAVA_HOME" ] ; then
- JAVA_EXEC="$JAVA_HOME/bin/java"
-else
- JAVA_EXEC="java"
-fi
-
-# Set the base class path and base JVM arguments
-CLASSPATH="${tmp.ptool.clspth.unix}"
-JVM_ARGS=""
-
-# Parse command line arguments
-while true ; do
- case "$1" in
-
-  # Add element to class path
-  -classpath )
-   CLASSPATH="$CLASSPATH":"$2"
-   shift; shift; continue;;
-
-  # Set log level
-  -loglevel )
-   JVM_ARGS="$JVM_ARGS -Dorg.lockss.defaultLogLevel=$2"
-   shift; shift; continue;;
-
-  # Add element to JVM arguments
-  -D*=* )
-   JVM_ARGS="$JVM_ARGS $1"
-   shift; continue;;
-
- esac
- break
-done
-export CLASSPATH
-
-# Display class path and JVM arguments (if non-empty)
-echo "CLASSPATH=$CLASSPATH"
-if [ -n "$JVM_ARGS" ] ; then
- echo "JVM_ARGS=$JVM_ARGS"
-fi
-
-$JAVA_EXEC -classpath $CLASSPATH $JVM_ARGS org.lockss.devtools.plugindef.PluginDefinerApp
-</echo>
-    <echo file="${temp.pkg.dir}/plugintool.bat">java -classpath &quot;${tmp.ptool.clspth.dos}&quot; org.lockss.devtools.plugindef.PluginDefinerApp
-</echo>
     <tar destfile="plugintool.tgz" compression="gzip">
      <tarfileset dir="${temp.pkg.dir}" mode="755" includes="plugintool" />
      <tarfileset dir="${temp.pkg.dir}" excludes="plugintool" />
@@ -1951,6 +1929,7 @@ Test results in ${test.results}
    description="Run FindBugs on the main source tree." >
     <findbugs home="${findbugs.home}"
               output="emacs"
+              jvmargs="-Xmx512m"
               excludeFilter="test/scripts/findbugsexclude.xml" >
       <auxClasspath refid="test.compile.classpath" />
       <sourcePath path="${src}" />
