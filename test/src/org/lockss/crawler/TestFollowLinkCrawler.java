@@ -1,5 +1,5 @@
 /*
- * $Id: TestFollowLinkCrawler.java,v 1.20 2006-11-02 04:18:38 tlipkis Exp $
+ * $Id: TestFollowLinkCrawler.java,v 1.21 2006-11-03 23:59:52 troberts Exp $
  */
 
 /*
@@ -417,38 +417,58 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     assertEquals(expected, cus.getCachedUrls());
   }
 
-  public void testCrawlWindow() {
-    String url1 = "http://www.example.com/link1.html";
-    String url2 = "http://www.example.com/link2.html";
-    String url3 = "http://www.example.com/link3.html";
+  private static final String CW_URL1 = "http://www.example.com/link1.html";
+  private static final String CW_URL2 = "http://www.example.com/link2.html";
+  private static final String CW_URL3 = "http://www.example.com/link3.html";
 
-    //CrawlSpec spec = new SpiderCrawlSpec(startUrl, crawlRule);
-    spec.setCrawlWindow(new MyMockCrawlWindow(3));
+  private void setUpCrawlWindowTest(CrawlWindow myCrawlWindow) {
+    spec.setCrawlWindow(myCrawlWindow);
     mau.setCrawlSpec(spec);
     crawler = new TestableFollowLinkCrawler(mau, spec, aus);
 
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     mau.addUrl(startUrl);
-    //    parser.addUrlsToReturn(startUrl, SetUtil.set(url1, url2, url3));
-    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(SetUtil.set(url1, url2, url3));
-    mau.addUrl(url1);
-    mau.addUrl(url2);
-    mau.addUrl(url3);
-    crawlRule.addUrlToCrawl(url1);
-    crawlRule.addUrlToCrawl(url2);
-    crawlRule.addUrlToCrawl(url3);
 
+    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(SetUtil.set(CW_URL1, CW_URL2, CW_URL3));
+    mau.addUrl(CW_URL1);
+    mau.addUrl(CW_URL2);
+    mau.addUrl(CW_URL3);
+    crawlRule.addUrlToCrawl(CW_URL1);
+    crawlRule.addUrlToCrawl(CW_URL2);
+    crawlRule.addUrlToCrawl(CW_URL3);
 
-    //    crawler = new NewContentCrawler(mau, spec, aus);
-    //     crawler = new NewContentCrawler(mau, spec, new MockAuState());
-    ((BaseCrawler)crawler).daemonPermissionCheckers = ListUtil.list(new MyMockPermissionChecker(100));
-
-    //    mau.setParser(parser);
-
+    ((BaseCrawler)crawler).daemonPermissionCheckers =
+      ListUtil.list(new MyMockPermissionChecker(100));
     crawler.doCrawl();
+  }
+
+  public void testCrawlWindow() {
+    setUpCrawlWindowTest(new MyMockCrawlWindow(3));
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+
     // only gets 2 urls because start url 's canCrawl check is
-    Set expected = SetUtil.set(startUrl, url1);
+    Set expected = SetUtil.set(startUrl, CW_URL1);
     assertEquals(expected, cus.getCachedUrls());
+
+    Crawler.Status crawlStatus = crawler.getStatus();
+    assertEquals(Crawler.STATUS_WINDOW_CLOSED, crawlStatus.getCrawlStatus());
+  }
+
+  public void testCrawlWindowFetchNothing() {
+    setUpCrawlWindowTest(new MyMockCrawlWindow(0));
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    Set expected = new HashSet();
+    assertEquals(expected, cus.getCachedUrls());
+    Crawler.Status crawlStatus = crawler.getStatus();
+    assertEquals(Crawler.STATUS_WINDOW_CLOSED, crawlStatus.getCrawlStatus());
+  }
+
+  public void testCrawlWindowFetchOnePermissionPage() {
+    setUpCrawlWindowTest(new MyMockCrawlWindow(1));
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    Set expected = new HashSet();
+    assertEquals(expected, cus.getCachedUrls());
+    Crawler.Status crawlStatus = crawler.getStatus();
+    assertEquals(Crawler.STATUS_WINDOW_CLOSED, crawlStatus.getCrawlStatus());
   }
 
   public void testOutsideOfWindowAfterGetUrlsToFollow() {

@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.49 2006-11-02 04:18:38 tlipkis Exp $
+ * $Id: FollowLinkCrawler.java,v 1.50 2006-11-03 23:59:52 troberts Exp $
  */
 
 /*
@@ -165,7 +165,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
     //indicating when a crawl window is the problem
     if (!withinCrawlWindow()) {
       crawlStatus.setCrawlError(Crawler.STATUS_WINDOW_CLOSED);
-      abortCrawl();
+      return aborted();
     }
 
     if (!populatePermissionMap()) {
