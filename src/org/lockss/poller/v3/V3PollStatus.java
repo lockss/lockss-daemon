@@ -1,5 +1,5 @@
 /*
-* $Id: V3PollStatus.java,v 1.8 2006-10-07 02:01:27 smorabito Exp $
+* $Id: V3PollStatus.java,v 1.9 2006-11-06 21:13:26 smorabito Exp $
  */
 
 /*
@@ -304,6 +304,9 @@ public class V3PollStatus {
       summary.add(new SummaryInfo("Start Time",
                                   ColumnDescriptor.TYPE_DATE,
                                   new Long(poll.getCreateTime())));
+      summary.add(new SummaryInfo("Vote Deadline",
+                                  ColumnDescriptor.TYPE_DATE,
+                                  new Long(poll.getVoteDeadline())));
       summary.add(new SummaryInfo("Duration",
                                   ColumnDescriptor.TYPE_TIME_INTERVAL,
                                   new Long(poll.getDuration())));

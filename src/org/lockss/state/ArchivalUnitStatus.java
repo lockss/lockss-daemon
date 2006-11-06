@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.46 2006-10-25 23:11:40 smorabito Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.47 2006-11-06 21:13:26 smorabito Exp $
  */
 
 /*
@@ -233,7 +233,11 @@ public class ArchivalUnitStatus
         //      the method declaration for more information.  It should
         //      eventually be removed, but is harmless for now.
         if (auState.getV3Agreement() < 0 || !auState.hasV3Poll()) {
-          stat = "Waiting for Poll";
+          if (auState.lastCrawlTime < 0) {
+            stat = "Waiting for Crawl";
+          } else {
+            stat = "Waiting for Poll";
+          }
         } else {
           stat = Integer.toString((int)Math.round(auState.getV3Agreement() * 100)) +
                  "% Agreement";
