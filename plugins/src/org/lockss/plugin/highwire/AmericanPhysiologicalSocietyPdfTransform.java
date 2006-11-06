@@ -1,5 +1,5 @@
 /*
- * $Id: AmericanPhysiologicalSocietyPdfTransform.java,v 1.23 2006-11-02 02:31:45 tlipkis Exp $
+ * $Id: AmericanPhysiologicalSocietyPdfTransform.java,v 1.24 2006-11-06 22:59:14 thib_gc Exp $
  */
 
 /*
@@ -389,42 +389,43 @@ public class AmericanPhysiologicalSocietyPdfTransform extends SimpleOutputDocume
     }
 
     public DocumentTransform makePreliminaryTransform() throws IOException {
-      return new ConditionalDocumentTransform(// If
-                                              new TransformFirstPage(// ...erasing the vertical banner (type 1)
-                                                                     new SimplifiedEraseVerticalBanner(),
-                                                                     // ...and erasing the variable date
-                                                                     new EraseDateString()),
-                                              // ...succeeds on the first page,
-                                              // Then
+      return new ConditionalDocumentTransform(// If...
+                                              new AggregateDocumentTransform(// ...on the first page...
+                                                                             new TransformFirstPage(// ...erasing the vertical banner (type 1) succeeds...
+                                                                                                    new SimplifiedEraseVerticalBanner()),
+                                                                             // ...and on at least one page...
+                                                                             new TransformEachPage(PdfUtil.OR,
+                                                                                                   // ...erasing the variable date succeeds,
+                                                                                                   new EraseDateString())),
+                                              // ...then on every page except the first...
                                               new TransformEachPageExceptFirst(new AggregatePageTransform(PdfUtil.OR,
-                                                                                                          // ...either erase the vertical banner (type 1)
+                                                                                                          // ...either erase the vertical banner (type 1)...
                                                                                                           new SimplifiedEraseVerticalBanner(),
                                                                                                           // ...or erase the vertical banner (type 2)
-                                                                                                          new SimplifiedEraseVerticalBanner2()))
-                                              // ...on other pages
-                                              );
+                                                                                                          new SimplifiedEraseVerticalBanner2())));
     }
 
   }
 
   public AmericanPhysiologicalSocietyPdfTransform() throws IOException {
-    super(new ConditionalDocumentTransform(// If
-                                           new TransformFirstPage(// ...erasing the vertical banner (type 1)
-                                                                  new EraseVerticalBanner(),
-                                                                  // ...and erasing the variable date
-                                                                  new EraseDateString(),
-                                                                  // ...and normalizing the hyperlink
-                                                                  new FixHyperlink()),
-                                           // ...succeeds on the first page,
-                                           // Then
+    super(new ConditionalDocumentTransform(// If...
+                                           new AggregateDocumentTransform(// ...on the first page...
+                                                                          new TransformFirstPage(// ...erasing the vertical banner (type 1) succeeds...
+                                                                                                 new EraseVerticalBanner(),
+                                                                                                 // ...and normalizing the hyperlink succeeds,
+                                                                                                 new FixHyperlink()),
+                                                                          // ...and on at least one page...
+                                                                          new TransformEachPage(PdfUtil.OR,
+                                                                                                // ...erasing the variable date succeeds,
+                                                                                                new EraseDateString())),
+                                           // ...then on every page except the first...
                                            new TransformEachPageExceptFirst(new AggregatePageTransform(PdfUtil.OR,
-                                                                                                       // ...either erase the vertical banner (type 1)
+                                                                                                       // ...either erase the vertical banner (type 1)...
                                                                                                        new EraseVerticalBanner(),
-                                                                                                       // ... or erase the vertical banner (type 2)
+                                                                                                       // ... or erase the vertical banner (type 2)...
                                                                                                        new EraseVerticalBanner2()),
-                                                                            // ...and normalize the hyperlink
+                                                                            // ...and normalize the hyperlink,
                                                                             new FixHyperlink()),
-                                           // ...on other pages,
                                            // ...and sanitize the metadata
                                            new SanitizeMetadata()));
   }
