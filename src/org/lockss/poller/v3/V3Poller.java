@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.35 2006-10-31 02:33:36 smorabito Exp $
+ * $Id: V3Poller.java,v 1.36 2006-11-06 22:56:05 smorabito Exp $
  */
 
 /*
@@ -1243,12 +1243,16 @@ public class V3Poller extends BasePoll {
     VoteBlock.Version[] vbVersions = voteBlock.getVersions();
     HashBlock.Version[] hbVersions = hashBlock.getVersions();
 
+    log.debug3("Comparing block " + voteBlock.getUrl() + " against peer " +
+               id + " in poll " + getKey());
+    
     for (int hbIdx = 0; hbIdx < hbVersions.length;  hbIdx++ ) {
       byte[] hasherResults = hbVersions[hbIdx].getHashes()[hashIndex];
       for (int vbIdx = 0; vbIdx < vbVersions.length; vbIdx++) {
         byte[] voterResults = vbVersions[vbIdx].getHash();
         if (log.isDebug3()) {
-          log.debug3("Comparing blocks for voter " + id);
+          log.debug3("Comparing voter's version " + vbIdx +
+                     " against poller's version " + hbIdx); 
           log.debug3("Hasher results: "
                      + ByteArray.toBase64(hasherResults));
           log.debug3("Voter results: "
@@ -1267,7 +1271,9 @@ public class V3Poller extends BasePoll {
     }
 
     // If we've made it here, there's no agreement on this block.
-    log.debug3("No agreement found.  Lost tally.");
+    log.debug3("No agreement found for any version of block " +
+               voteBlock.getUrl() + ".  Lost tally, adding voter " + id +
+               " to the disagreeing voter list.");
     tally.addDisagreeVoter(id);
   }
 
