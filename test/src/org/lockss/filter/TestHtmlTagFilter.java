@@ -1,5 +1,5 @@
 /*
- * $Id: TestHtmlTagFilter.java,v 1.5 2006-07-19 20:33:44 tlipkis Exp $
+ * $Id: TestHtmlTagFilter.java,v 1.6 2006-11-07 20:44:47 troberts Exp $
  */
 
 /*
@@ -57,7 +57,7 @@ public class TestHtmlTagFilter extends LockssTestCase {
     Configuration.PREFIX + "HtmlTagFilter.throwIfNoEndTag";
 
 
-  
+
   /** Check that the filtered string matches expected.  Test with varying
    * buffer lengths and offsets */
   private void assertFilterString(String expected, String input,
@@ -238,7 +238,7 @@ public class TestHtmlTagFilter extends LockssTestCase {
       //expected
     }
   }
-  
+
   public void testNoEndTagParamFalse() throws IOException {
     Properties p = new Properties();
     p.setProperty(PARAM_THROW_IF_NO_END_TAG, "false");
@@ -296,6 +296,16 @@ public class TestHtmlTagFilter extends LockssTestCase {
     assertFilterString(expectedContent, content, tagPair1);
   }
 
+  public void testFiltersSingleTagsIgnoreNesting() throws IOException {
+    HtmlTagFilter.TagPair tagPair =
+      new HtmlTagFilter.TagPair(startTag1, endTag1, true, false);
+
+    String content =
+      "This "+startTag1+startTag1
+      +"test "+endTag1+"is content";
+    String expectedContent = "This is content";
+    assertFilterString(expectedContent, content, tagPair);
+  }
 
   public void testFiltersMultipleTagsNoNesting() throws IOException {
     String content =

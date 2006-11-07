@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlTagFilter.java,v 1.10 2006-07-19 20:33:44 tlipkis Exp $
+ * $Id: HtmlTagFilter.java,v 1.11 2006-11-07 20:44:47 troberts Exp $
  */
 
 /*
@@ -59,7 +59,7 @@ public class HtmlTagFilter extends Reader {
     Configuration.PREFIX + "HtmlTagFilter.throwIfNoEndTag";
   public static final boolean DEFAULT_THROW_IF_NO_END_TAG = true;
 
-  
+
   Reader reader;
   CharRing charBuffer = null;
   int ringSize;
@@ -68,6 +68,7 @@ public class HtmlTagFilter extends Reader {
   String startTag;
   String endTag;
   boolean ignoreCase;
+  boolean canNest;
   int startLen;
   int endLen;
   int maxTagLen;
@@ -105,6 +106,7 @@ public class HtmlTagFilter extends Reader {
     }
     this.pair = pair;
     ignoreCase = pair.ignoreCase;
+    canNest = pair.canNest;
     startLen = startTag.length();
     endLen = endTag.length();
     if (startLen > endLen) {
@@ -121,8 +123,8 @@ public class HtmlTagFilter extends Reader {
     }
     charBuffer = new CharRing(bufferCapacity);
     ringSize = charBuffer.size();
- 
-    throwIfNoEndTag = 
+
+    throwIfNoEndTag =
       CurrentConfig.getBooleanParam(PARAM_THROW_IF_NO_END_TAG,
                                     DEFAULT_THROW_IF_NO_END_TAG);
   }
@@ -208,14 +210,14 @@ public class HtmlTagFilter extends Reader {
 	ringSize = charBuffer.size();
       }
       int endPos = charBuffer.indexOf(endTag, -1, ignoreCase);
-      int startPos = charBuffer.indexOf(startTag, endPos, ignoreCase);
+      int startPos = (!canNest ? -1 : charBuffer.indexOf(startTag, endPos, ignoreCase));
       if (isTrace) logger.debug3("start: " + startPos + ", end: " +  endPos);
       int nskip;
       if (endPos >= 0 && (startPos < 0 || endPos < startPos)) {
 	// first or only tag is end
 	tagNesting--;
 	nskip = endPos + endLen;
-      }	else if (startPos >= 0) {
+      }	else if (canNest && startPos >= 0) {
 	// first or only tag is start
 	tagNesting++;
 	nskip = startPos + startLen;
@@ -231,7 +233,7 @@ public class HtmlTagFilter extends Reader {
       //We've burned throught the rest of the file and we're still in the string
       //pair
       throw new MissingEndTagException("End tag not found: "+endTag);
-    }    
+    }
   }
 
   public void close() throws IOException {
@@ -244,11 +246,12 @@ public class HtmlTagFilter extends Reader {
       super(msg);
     }
   }
-  
+
   public static class TagPair {
     String start = null;
     String end = null;
     boolean ignoreCase = false;
+    boolean canNest = true;
 
     public TagPair(String start, String end) {
       if (start == null || end == null) {
@@ -262,6 +265,12 @@ public class HtmlTagFilter extends Reader {
     public TagPair(String start, String end, boolean ignoreCase) {
       this(start, end);
       this.ignoreCase = ignoreCase;
+    }
+
+    public TagPair(String start, String end,
+		   boolean ignoreCase, boolean canNest) {
+      this(start, end, ignoreCase);
+      this.canNest = canNest;
     }
 
     int getMaxTagLength() {
