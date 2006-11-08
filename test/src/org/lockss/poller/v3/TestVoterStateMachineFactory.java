@@ -1,5 +1,5 @@
 /*
- * $Id: TestVoterStateMachineFactory.java,v 1.9 2006-04-10 05:31:01 smorabito Exp $
+ * $Id: TestVoterStateMachineFactory.java,v 1.10 2006-11-08 16:42:58 smorabito Exp $
  */
 
 /*
@@ -79,37 +79,38 @@ public class TestVoterStateMachineFactory extends LockssTestCase {
                                              ByteArray.makeRandomBytes(20),
                                              V3LcapMessage.MSG_POLL,
                                              987654321,
-                                             this.id, tempDir));
+                                             this.id, tempDir, theDaemon));
     this.msgPollProof =
       V3Events.fromMessage(new V3LcapMessage("auid", "key", "1",
                                              ByteArray.makeRandomBytes(20),
                                              ByteArray.makeRandomBytes(20),
                                              V3LcapMessage.MSG_POLL_PROOF,
                                              987654321,
-                                             this.id, tempDir));
+                                             this.id, tempDir, theDaemon));
     this.msgVoteRequest =
       V3Events.fromMessage(new V3LcapMessage("auid", "key", "1",
                                              ByteArray.makeRandomBytes(20),
                                              ByteArray.makeRandomBytes(20),
                                              V3LcapMessage.MSG_VOTE_REQ,
                                              987654321,
-                                             this.id, tempDir));
+                                             this.id, tempDir, theDaemon));
     this.msgRepairRequest =
       V3Events.fromMessage(new V3LcapMessage("auid", "key", "1",
                                              ByteArray.makeRandomBytes(20),
                                              ByteArray.makeRandomBytes(20),
                                              V3LcapMessage.MSG_REPAIR_REQ,
                                              987654321,
-                                             this.id, tempDir));
+                                             this.id, tempDir, theDaemon));
     this.msgReceipt =
       V3Events.fromMessage(new V3LcapMessage("auid", "key", "1",
                                              ByteArray.makeRandomBytes(20),
                                              ByteArray.makeRandomBytes(20),
                                              V3LcapMessage.MSG_EVALUATION_RECEIPT,
                                              987654321,
-                                             this.id, tempDir));
+                                             this.id, tempDir, theDaemon));
 
-    this.msgNoOp = V3Events.fromMessage(V3LcapMessage.makeNoOpMsg(this.id));
+    this.msgNoOp = V3Events.fromMessage(V3LcapMessage.makeNoOpMsg(this.id,
+                                                                  theDaemon));
 
   }
 

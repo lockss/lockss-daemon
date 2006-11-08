@@ -996,7 +996,7 @@ class Client:
         successful new content crawl."""
         def waitFunc():
             tbl = self.getCrawlStatus(au)
-            return tbl and tbl[0]['crawl_status'] == 'Successful'
+            return tbl and tbl[0]['crawl_status']['value'] == 'Successful'
         return self.wait(waitFunc, timeout, sleep)
 
     def waitForV3Poller(self, au, timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):

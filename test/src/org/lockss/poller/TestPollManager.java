@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.87 2006-10-07 02:01:27 smorabito Exp $
+ * $Id: TestPollManager.java,v 1.88 2006-11-08 16:42:59 smorabito Exp $
  */
 
 /*
@@ -708,7 +708,7 @@ public class TestPollManager extends LockssTestCase {
                                      ByteArray.makeRandomBytes(20),
                                      ByteArray.makeRandomBytes(20),
                                      V3LcapMessage.MSG_POLL,
-                                     12345678, testID, tempDir);
+                                     12345678, testID, tempDir, theDaemon);
     v3Testmsg[0].setArchivalId(testau.getAuId());
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapRouter.java,v 1.22 2006-04-28 07:21:13 smorabito Exp $
+ * $Id: TestLcapRouter.java,v 1.23 2006-11-08 16:42:59 smorabito Exp $
  */
 
 /*
@@ -82,7 +82,8 @@ public class TestLcapRouter extends LockssTestCase {
 
   public void testMakePeerMessage() throws Exception {
     V3LcapMessage lmsg =
-      LcapMessageTestUtil.makeTestVoteMessage(pid1, tempDir);
+      LcapMessageTestUtil.makeTestVoteMessage(pid1, tempDir,
+                                              getMockLockssDaemon());
     PeerMessage pmsg = rtr.makePeerMessage(lmsg);
     assertNull(pmsg.getSender());
     pmsg.setSender(pid1);

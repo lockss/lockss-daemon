@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3LcapMessage.java,v 1.16 2006-06-02 20:27:16 smorabito Exp $
+ * $Id: TestV3LcapMessage.java,v 1.17 2006-11-08 16:42:59 smorabito Exp $
  */
 
 /*
@@ -99,7 +99,8 @@ public class TestV3LcapMessage extends LockssTestCase {
 
   public void testNoOpMessageCreation() throws Exception {
     V3LcapMessage noopMsg = V3LcapMessage.makeNoOpMsg(m_testID, m_testBytes,
-                                                      m_testBytes);
+                                                      m_testBytes,
+                                                      theDaemon);
 
     // now check the fields we expect to be valid
     assertEquals(V3LcapMessage.MSG_NO_OP, noopMsg.getOpcode());
@@ -110,8 +111,8 @@ public class TestV3LcapMessage extends LockssTestCase {
   }
 
   public void testRandomNoOpMessageCreation() throws Exception {
-    V3LcapMessage noopMsg1 = V3LcapMessage.makeNoOpMsg(m_testID);
-    V3LcapMessage noopMsg2 = V3LcapMessage.makeNoOpMsg(m_testID);
+    V3LcapMessage noopMsg1 = V3LcapMessage.makeNoOpMsg(m_testID, theDaemon);
+    V3LcapMessage noopMsg2 = V3LcapMessage.makeNoOpMsg(m_testID, theDaemon);
 
     // now check the fields we expect to be valid
     assertEquals(V3LcapMessage.MSG_NO_OP, noopMsg1.getOpcode());
@@ -127,7 +128,8 @@ public class TestV3LcapMessage extends LockssTestCase {
   public void testNoOpMessageToString() throws IOException {
     V3LcapMessage noopMsg = V3LcapMessage.makeNoOpMsg(m_testID,
                                                       m_testBytes,
-                                                      m_testBytes);
+                                                      m_testBytes,
+                                                      theDaemon);
     String expectedResult = "[V3LcapMessage: from " + m_testID.toString() +
       ", NoOp]";
     assertEquals(expectedResult, noopMsg.toString());
@@ -145,9 +147,10 @@ public class TestV3LcapMessage extends LockssTestCase {
   public void testNoOpEncoding() throws Exception {
     V3LcapMessage noopMsg = V3LcapMessage.makeNoOpMsg(m_testID,
                                                       m_testBytes,
-                                                      m_testBytes);
+                                                      m_testBytes,
+                                                      theDaemon);
     InputStream fromMsg = noopMsg.getInputStream();
-    V3LcapMessage msg = new V3LcapMessage(fromMsg, tempDir);
+    V3LcapMessage msg = new V3LcapMessage(fromMsg, tempDir, theDaemon);
     // now test to see if we got back what we started with
     assertTrue(m_testID == msg.getOriginatorId());
     assertEquals(V3LcapMessage.MSG_NO_OP, msg.getOpcode());
@@ -158,7 +161,7 @@ public class TestV3LcapMessage extends LockssTestCase {
   public void testMemoryRepairMessage() throws Exception {
     V3LcapMessage src = makeRepairMessage(10 * 1024);
     InputStream srcStream = src.getInputStream();
-    V3LcapMessage copy = new V3LcapMessage(srcStream, tempDir);
+    V3LcapMessage copy = new V3LcapMessage(srcStream, tempDir, theDaemon);
     assertEqualMessages(src, copy);
     InputStream in = copy.getRepairDataInputStream();
     ByteArrayOutputStream out = new ByteArrayOutputStream();
@@ -170,7 +173,7 @@ public class TestV3LcapMessage extends LockssTestCase {
   public void testDiskRepairMessage() throws Exception {
     V3LcapMessage src = makeRepairMessage(100 * 1024);
     InputStream srcStream = src.getInputStream();
-    V3LcapMessage copy = new V3LcapMessage(srcStream, tempDir);
+    V3LcapMessage copy = new V3LcapMessage(srcStream, tempDir, theDaemon);
     assertEqualMessages(src, copy);
     InputStream in = copy.getRepairDataInputStream();
     ByteArrayOutputStream out = new ByteArrayOutputStream();
@@ -185,7 +188,7 @@ public class TestV3LcapMessage extends LockssTestCase {
                         m_testBytes,
                         m_testBytes,
                         V3LcapMessage.MSG_REPAIR_REQ,
-                        987654321, m_testID, tempDir);
+                        987654321, m_testID, tempDir, theDaemon);
     reqMsg.setTargetUrl("http://foo.com/");
 
     for (Iterator ix = m_testVoteBlocks.iterator(); ix.hasNext(); ) {
@@ -217,7 +220,7 @@ public class TestV3LcapMessage extends LockssTestCase {
     assertTrue(testMsg.m_voteBlocks instanceof MemoryVoteBlocks);
     // Encode the test message.
     InputStream is = testMsg.getInputStream();
-    V3LcapMessage decodedMsg  = new V3LcapMessage(is, tempDir);
+    V3LcapMessage decodedMsg  = new V3LcapMessage(is, tempDir, theDaemon);
     // Ensure that the decoded message matches the test message.
     assertEqualMessages(testMsg, decodedMsg);    
   }
@@ -230,7 +233,7 @@ public class TestV3LcapMessage extends LockssTestCase {
     assertTrue(testMsg.m_voteBlocks instanceof DiskVoteBlocks);
     // Encode the test message.
     InputStream is = testMsg.getInputStream();
-    V3LcapMessage decodedMsg  = new V3LcapMessage(is, tempDir);
+    V3LcapMessage decodedMsg  = new V3LcapMessage(is, tempDir, theDaemon);
     // Ensure that the decoded message matches the test message.
     assertEqualMessages(testMsg, decodedMsg);
     
@@ -267,7 +270,8 @@ public class TestV3LcapMessage extends LockssTestCase {
                                           m_testBytes,
                                           m_testBytes,
                                           V3LcapMessage.MSG_REPAIR_REP,
-                                          987654321, m_testID, tempDir);
+                                          987654321, m_testID, tempDir,
+                                          theDaemon);
     msg.setHashAlgorithm(LcapMessage.getDefaultHashAlgorithm());
     msg.setTargetUrl(m_url);
     msg.setArchivalId(m_archivalID);
@@ -284,7 +288,8 @@ public class TestV3LcapMessage extends LockssTestCase {
                                           m_testBytes,
                                           m_testBytes,
                                           V3LcapMessage.MSG_VOTE,
-                                          987654321, m_testID, tempDir);
+                                          987654321, m_testID, tempDir,
+                                          theDaemon);
 
     // Set msg vote blocks.
     for (Iterator ix = voteBlocks.iterator(); ix.hasNext(); ) {

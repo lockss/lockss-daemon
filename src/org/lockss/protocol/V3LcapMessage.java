@@ -1,5 +1,5 @@
 /*
- * $Id: V3LcapMessage.java,v 1.22 2006-06-02 20:27:16 smorabito Exp $
+ * $Id: V3LcapMessage.java,v 1.23 2006-11-08 16:42:58 smorabito Exp $
  */
 
 /*
@@ -31,6 +31,7 @@ import java.util.*;
 
 import org.mortbay.util.*;
 
+import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.plugin.*;
 import org.lockss.poller.*;
@@ -50,13 +51,13 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
   /** Maximum allowable number of vote blocks before storing on disk */
   public static final String PARAM_VOTE_BLOCK_THRESHOLD =
     Configuration.PREFIX + "poll.v3.voteBlockThreshold";
-  public static final int DEFAULT_VOTE_BLOCK_THRESHOLD = 100;
+  public static final int DEFAULT_VOTE_BLOCK_THRESHOLD = 0;
   
   /** Maximum allowable size of repair data before storing on disk */
   public static final String PARAM_REPAIR_DATA_THRESHOLD =
     Configuration.PREFIX + "poll.v3.repairDataThreshold";
   public static final int DEFAULT_REPAIR_DATA_THRESHOLD = 1024*32; // 32K
-    
+
   public static final int MSG_POLL = 10;
   public static final int MSG_POLL_ACK = 11;
   public static final int MSG_POLL_PROOF = 12;
@@ -131,6 +132,10 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
 
   private int m_repairDataThreshold = DEFAULT_REPAIR_DATA_THRESHOLD;
   private int m_voteBlockThreshold = DEFAULT_VOTE_BLOCK_THRESHOLD;
+ 
+  // Reference to the running daemon.  Must be restored post-serialization by
+  // the postUnmarshalResolve method.
+  private transient LockssApp m_daemon; 
 
   /**
    * In Vote Request messages: the URL of the last vote block received. Null if
@@ -156,7 +161,8 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
   /**
    * Construct a new V3LcapMessage.
    */
-  public V3LcapMessage(File messageDir) {
+  public V3LcapMessage(File messageDir, LockssApp daemon) {
+    m_daemon = daemon;
     m_props = new EncodedProperty();
     m_voteBlocks = new MemoryVoteBlocks();
     m_pollProtocol = Poll.V3_PROTOCOL;
@@ -171,8 +177,9 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
 
   public V3LcapMessage(String auId, String pollKey, String pluginVersion,
                        byte[] pollerNonce, byte[] voterNonce, int opcode,
-                       long deadline, PeerIdentity origin, File messageDir) {
-    this(messageDir);
+                       long deadline, PeerIdentity origin, File messageDir,
+                       LockssApp daemon) {
+    this(messageDir, daemon);
     m_archivalID = auId;
     m_startTime = TimeBase.nowMs();
     m_stopTime = deadline;
@@ -187,16 +194,18 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
   /**
    * Construct a V3LcapMessage from an encoded array of bytes.
    */
-  public V3LcapMessage(byte[] encodedBytes, File messageDir) throws IOException {
-    this(new ByteArrayInputStream(encodedBytes), messageDir);
+  public V3LcapMessage(byte[] encodedBytes, File messageDir, LockssApp daemon)
+      throws IOException {
+    this(new ByteArrayInputStream(encodedBytes), messageDir, daemon);
   }
 
   /**
    * Construct a V3LcapMessage from an encoded InputStream.
    */
-  public V3LcapMessage(InputStream inputStream, File messageDir)
+  public V3LcapMessage(InputStream inputStream, File messageDir,
+                       LockssApp daemon)
       throws IOException {
-    this(messageDir);
+    this(messageDir, daemon);
     try {
       decodeMsg(inputStream);
     } catch (IOException ex) {
@@ -256,14 +265,43 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     // Decode into the LCAP Properties data structure
     m_props.decode(lcapProps);
 
+    // the immutable stuff
+    m_key = m_props.getProperty("key");
+    String addr_str = m_props.getProperty("origId");
+    m_originatorID = m_idManager.stringToPeerIdentity(addr_str);
+    m_hashAlgorithm = m_props.getProperty("hashAlgorithm");
+    duration = m_props.getInt("duration", 0) * 1000;
+    elapsed = m_props.getInt("elapsed", 0) * 1000;
+    m_opcode = m_props.getInt("opcode", -1);
+    m_archivalID = m_props.getProperty("au", "UNKNOWN");
+    m_targetUrl = m_props.getProperty("url");
+    m_pollerNonce = m_props.getByteArray("pollerNonce", EMPTY_BYTE_ARRAY);
+    m_voterNonce = m_props.getByteArray("voterNonce", EMPTY_BYTE_ARRAY);
+    m_effortProof = m_props.getByteArray("effortproof", EMPTY_BYTE_ARRAY);
+    m_pluginVersion = m_props.getProperty("plugVer");
+
+    // V3 specific message parameters
+    String nomineesString = m_props.getProperty("nominees");
+    if (nomineesString != null) {
+      m_nominees = StringUtil.breakAt(nomineesString, ',');
+    }
+    m_lastVoteBlockURL = m_props.getProperty("lastvoteblockurl");
+    m_voteComplete = m_props.getBoolean("votecomplete", false);
+    m_repairProps = m_props.getEncodedProperty("repairProps");
+    
     // If we have vote blocks, pass them to a VoteBlock object.
     int voteBlockCount = dis.readInt();
     m_repairDataLen = dis.readLong();
 
     if (voteBlockCount > 0) {
-      if (voteBlockCount > m_voteBlockThreshold) {
+      if (voteBlockCount >= m_voteBlockThreshold) {
+        // Find the directory associated with this poll's state.
+        File stateDir =
+          ((LockssDaemon)m_daemon).getPollManager().getStateDir(m_key);
+        log.debug("*** Setting state directory for DiskVoteBlocks to: " +
+                  stateDir);
         this.m_voteBlocks = new DiskVoteBlocks(voteBlockCount, dis,
-                                               m_messageDir);
+                                               stateDir);
       } else {
         this.m_voteBlocks = new MemoryVoteBlocks(voteBlockCount, dis);
       }
@@ -293,30 +331,6 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
 
     // Safe to close the stream now.
     IOUtil.safeClose(dis);
-
-    // the immutable stuff
-    m_key = m_props.getProperty("key");
-    String addr_str = m_props.getProperty("origId");
-    m_originatorID = m_idManager.stringToPeerIdentity(addr_str);
-    m_hashAlgorithm = m_props.getProperty("hashAlgorithm");
-    duration = m_props.getInt("duration", 0) * 1000;
-    elapsed = m_props.getInt("elapsed", 0) * 1000;
-    m_opcode = m_props.getInt("opcode", -1);
-    m_archivalID = m_props.getProperty("au", "UNKNOWN");
-    m_targetUrl = m_props.getProperty("url");
-    m_pollerNonce = m_props.getByteArray("pollerNonce", EMPTY_BYTE_ARRAY);
-    m_voterNonce = m_props.getByteArray("voterNonce", EMPTY_BYTE_ARRAY);
-    m_effortProof = m_props.getByteArray("effortproof", EMPTY_BYTE_ARRAY);
-    m_pluginVersion = m_props.getProperty("plugVer");
-
-    // V3 specific message parameters
-    String nomineesString = m_props.getProperty("nominees");
-    if (nomineesString != null) {
-      m_nominees = StringUtil.breakAt(nomineesString, ',');
-    }
-    m_lastVoteBlockURL = m_props.getProperty("lastvoteblockurl");
-    m_voteComplete = m_props.getBoolean("votecomplete", false);
-    m_repairProps = m_props.getEncodedProperty("repairProps");
 
     // calculate start and stop times
     long now = TimeBase.nowMs();
@@ -645,8 +659,9 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
    */
   static public V3LcapMessage makeNoOpMsg(PeerIdentity originator,
                                           byte[] pollerNonce,
-                                          byte[] voterNonce) {
-    V3LcapMessage msg = new V3LcapMessage(null);
+                                          byte[] voterNonce,
+                                          LockssApp daemon) {
+    V3LcapMessage msg = new V3LcapMessage(null, daemon);
     msg.m_originatorID = originator;
     msg.m_opcode = MSG_NO_OP;
     msg.m_pollerNonce = pollerNonce;
@@ -658,10 +673,12 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
   /**
    * Make a NoOp message with randomly generated bytes.
    */
-  static public V3LcapMessage makeNoOpMsg(PeerIdentity originator) {
+  static public V3LcapMessage makeNoOpMsg(PeerIdentity originator,
+                                          LockssApp daemon) {
     return V3LcapMessage.makeNoOpMsg(originator,
                                      ByteArray.makeRandomBytes(20),
-                                     ByteArray.makeRandomBytes(20));
+                                     ByteArray.makeRandomBytes(20),
+                                     daemon);
   }
 
   public String toString() {
@@ -687,6 +704,11 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     }
     sb.append("]");
     return sb.toString();
+  }
+  
+  protected Object postUnmarshalResolve(LockssApp lockssContext) {
+    m_daemon = lockssContext;
+    return this;
   }
 
   /**

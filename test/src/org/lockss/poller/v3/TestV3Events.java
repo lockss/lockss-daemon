@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Events.java,v 1.4 2006-04-10 05:31:01 smorabito Exp $
+ * $Id: TestV3Events.java,v 1.5 2006-11-08 16:42:58 smorabito Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ public class TestV3Events extends LockssTestCase {
 
   V3LcapMessage makeMsg(int opcode) {
     return new V3LcapMessage("auid", "key", "1", null, null, opcode,
-                             987654321, null, null);
+                             987654321, null, null, null);
   }
 
   void assertMsgClass(int opcode, PsmMsgEvent prototypeEvent) {

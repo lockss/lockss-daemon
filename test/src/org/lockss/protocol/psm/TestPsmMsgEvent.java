@@ -1,5 +1,5 @@
 /*
- * $Id: TestPsmMsgEvent.java,v 1.5 2006-04-10 05:31:00 smorabito Exp $
+ * $Id: TestPsmMsgEvent.java,v 1.6 2006-11-08 16:42:59 smorabito Exp $
  */
 
 /*
@@ -59,7 +59,7 @@ public class TestPsmMsgEvent extends LockssTestCase {
 
 
   public void testMessage() {
-    LcapMessage msg1 = new V3LcapMessage(null);
+    LcapMessage msg1 = new V3LcapMessage(null, getMockLockssDaemon());
     PsmMsgEvent e = new PsmMsgEvent();
     assertEquals(null, e.getMessage());
     PsmMsgEvent e2 = e.withMessage(msg1);
@@ -72,7 +72,8 @@ public class TestPsmMsgEvent extends LockssTestCase {
     return new V3LcapMessage("ArchivalID_2", "key", "Plug42",
                              ByteArray.makeRandomBytes(20),
                              ByteArray.makeRandomBytes(20),
-                             opcode, 987654321, null, tempDir);
+                             opcode, 987654321, null, tempDir,
+                             getMockLockssDaemon());
   }
 
   public void testFromMessage() {

@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.36 2006-11-06 22:56:05 smorabito Exp $
+ * $Id: V3Poller.java,v 1.37 2006-11-08 16:42:59 smorabito Exp $
  */
 
 /*
@@ -204,7 +204,7 @@ public class V3Poller extends BasePoll {
   private boolean activePoll = true;
   private boolean dropEmptyNominators = DEFAULT_DROP_EMPTY_NOMINATIONS;
   private boolean deleteExtraFiles = DEFAULT_DELETE_EXTRA_FILES;
-  private File messageDir;
+  private File stateDir;
   // The length, in ms., to hold the poll open past normal closing if
   // a little extra poll time is required to wait for pending repairs. 
   private long extraPollTime = DEFAULT_V3_EXTRA_POLL_TIME;
@@ -347,14 +347,14 @@ public class V3Poller extends BasePoll {
       log.error(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST +
                 " not specified, not configuring V3 message dir.");
     } else {
-      messageDir = new File((String)dSpaceList.get(0), relPluginPath);
+      stateDir = new File((String)dSpaceList.get(0), relPluginPath);
     }
 
-    if (messageDir == null ||
-        (!messageDir.exists() && !messageDir.mkdir()) ||
-        !messageDir.canWrite()) {
+    if (stateDir == null ||
+        (!stateDir.exists() && !stateDir.mkdir()) ||
+        !stateDir.canWrite()) {
       throw new IllegalArgumentException("Configured V3 data directory " +
-                                         messageDir +
+                                         stateDir +
                                          " does not exist or cannot be " +
                                          "written to.");
     }
@@ -708,7 +708,7 @@ public class V3Poller extends BasePoll {
    */
   private ParticipantUserData makeParticipant(final PeerIdentity id) {
     final ParticipantUserData participant =
-      new ParticipantUserData(id, this, messageDir);
+      new ParticipantUserData(id, this, stateDir);
     participant.setPollerNonce(makePollerNonce());
     PsmMachine machine =
       PollerStateMachineFactory.getMachine(getPollerActionsClass());
@@ -1568,6 +1568,10 @@ public class V3Poller extends BasePoll {
       tallyBlock(block);
     }
   }
+  
+  public LockssApp getLockssDaemon() {
+    return theDaemon;
+  }
 
   /*
    * BasePoll implementations.
@@ -1586,6 +1590,13 @@ public class V3Poller extends BasePoll {
    */
   public long getCreateTime() {
     return pollerState.getCreateTime();
+  }
+  
+  /**
+   * Return the serialization state directory used by this poll.
+   */
+  public File getStateDir() {
+    return serializer.pollDir;
   }
 
   /**

@@ -1,5 +1,5 @@
 /*
- * $Id: LcapRouter.java,v 1.46 2006-03-07 02:35:07 smorabito Exp $
+ * $Id: LcapRouter.java,v 1.47 2006-11-08 16:42:58 smorabito Exp $
  */
 
 /*
@@ -178,7 +178,7 @@ public class LcapRouter
     InputStream in = null;
     try {
       in = pmsg.getInputStream();
-      V3LcapMessage lmsg = new V3LcapMessage(in, dataDir);
+      V3LcapMessage lmsg = new V3LcapMessage(in, dataDir, theDaemon);
       lmsg.setOriginatorId(pmsg.getSender());
       return lmsg;
     } finally {

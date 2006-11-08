@@ -1,5 +1,5 @@
 /*
- * $Id: TestPsmMethodMsgAction.java,v 1.6 2006-04-10 05:31:00 smorabito Exp $
+ * $Id: TestPsmMethodMsgAction.java,v 1.7 2006-11-08 16:42:59 smorabito Exp $
  */
 
 /*
@@ -43,11 +43,11 @@ public class TestPsmMethodMsgAction extends LockssTestCase {
 
   private MyActionHandlers handlers = new MyActionHandlers();
 
-  private static final LcapMessage msg = new V3LcapMessage(null);
+  private final LcapMessage msg = new V3LcapMessage(null,
+                                                    getMockLockssDaemon());
 
   // To be used as an argument to PsmMethodActions
-  private static PsmMsgEvent argEvent =
-    new PsmMsgEvent(msg);
+  private PsmMsgEvent argEvent = new PsmMsgEvent(msg);
 
   // Expected returns from invocations.
   private static PsmEvent fooEvent = new PsmEvent();

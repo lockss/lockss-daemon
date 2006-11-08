@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.23 2006-10-31 02:33:36 smorabito Exp $
+ * $Id: V3Voter.java,v 1.24 2006-11-08 16:42:59 smorabito Exp $
  */
 
 /*
@@ -36,7 +36,7 @@ import java.io.*;
 import java.security.*;
 import java.util.*;
 
-import org.lockss.app.LockssDaemon;
+import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.daemon.CachedUrlSetHasher;
 import org.lockss.hasher.*;
@@ -108,7 +108,7 @@ public class V3Voter extends BasePoll {
   private boolean continuedPoll = false;
   private boolean activePoll = true;
   private int nomineeCount;
-  private File messageDir;
+  private File stateDir;
   private boolean allowRepairs = DEFAULT_ALLOW_V3_REPAIRS;
 
   // Task used to reserve time for hashing at the start of the poll.
@@ -140,24 +140,29 @@ public class V3Voter extends BasePoll {
       log.error(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST +
                 " not specified, not configuring V3 message dir.");
     } else {
-      messageDir = new File((String)dSpaceList.get(0), relPluginPath);
+      stateDir = new File((String)dSpaceList.get(0), relPluginPath);
     }
 
-    if (messageDir == null ||
-        (!messageDir.exists() && !messageDir.mkdir()) ||
-        !messageDir.canWrite()) {
+    if (stateDir == null ||
+        (!stateDir.exists() && !stateDir.mkdir()) ||
+        !stateDir.canWrite()) {
       throw new IllegalArgumentException("Configured V3 data directory " +
-                                         messageDir +
+                                         stateDir +
                                          " does not exist or cannot be " +
                                          "written to.");
     }
 
-    this.voterUserData = new VoterUserData(spec, this, orig, key,
-                                           duration, hashAlg,
-                                           pollerNonce,
-                                           makeVoterNonce(),
-                                           introEffortProof,
-                                           messageDir);
+    try {
+      this.voterUserData = new VoterUserData(spec, this, orig, key,
+                                             duration, hashAlg,
+                                             pollerNonce,
+                                             makeVoterNonce(),
+                                             introEffortProof,
+                                             stateDir);
+    } catch (IOException ex) {
+      log.critical("IOException while trying to create VoterUserData: ", ex);
+      stopPoll();
+    }
     this.idManager = theDaemon.getIdentityManager();
 
     this.pollManager = daemon.getPollManager();
@@ -544,6 +549,10 @@ public class V3Voter extends BasePoll {
   public PeerIdentity getCallerID() {
     return voterUserData.getPollerId();
   }
+  
+  public File getStateDir() {
+    return pollSerializer.pollDir;
+  }
 
   // Not used by V3.
   protected boolean isErrorState() {
@@ -622,6 +631,10 @@ public class V3Voter extends BasePoll {
 
   public int getType() {
     return Poll.V3_POLL;
+  }
+  
+  public LockssApp getLockssDaemon() {
+    return theDaemon;
   }
 
   public ArchivalUnit getAu() {

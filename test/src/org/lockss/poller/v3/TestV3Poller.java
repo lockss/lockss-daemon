@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.15 2006-10-07 02:01:27 smorabito Exp $
+ * $Id: TestV3Poller.java,v 1.16 2006-11-08 16:42:58 smorabito Exp $
  */
 
 /*
@@ -161,7 +161,7 @@ public class TestV3Poller extends LockssTestCase {
                           V3LcapMessage.MSG_POLL_ACK,
                           987654321,
                           voters[i],
-                          tempDir);
+                          tempDir, theDaemon);
     }
     return msgs;
   }
@@ -175,7 +175,7 @@ public class TestV3Poller extends LockssTestCase {
                                             V3LcapMessage.MSG_NOMINATE,
                                             987654321,
                                             voters[i],
-                                            tempDir);
+                                            tempDir, theDaemon);
       msg.setNominees(ListUtil.list("10.0." + i + ".1",
                                     "10.0." + i + ".2",
                                     "10.0." + i + ".3",
@@ -194,7 +194,7 @@ public class TestV3Poller extends LockssTestCase {
                                             V3LcapMessage.MSG_VOTE,
                                             987654321,
                                             voters[i],
-                                            tempDir);
+                                            tempDir, theDaemon);
       for (Iterator it = voteBlocks.iterator(); it.hasNext(); ) {
         msg.addVoteBlock((VoteBlock)it.next());
       }
@@ -212,7 +212,7 @@ public class TestV3Poller extends LockssTestCase {
                                             V3LcapMessage.MSG_REPAIR_REP,
                                             987654321,
                                             voters[i],
-                                            tempDir);
+                                            tempDir, theDaemon);
       msgs[i] = msg;
     }
     return msgs;

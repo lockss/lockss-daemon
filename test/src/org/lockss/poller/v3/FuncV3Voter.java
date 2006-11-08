@@ -1,5 +1,5 @@
 /*
- * $Id: FuncV3Voter.java,v 1.12 2006-10-07 02:01:27 smorabito Exp $
+ * $Id: FuncV3Voter.java,v 1.13 2006-11-08 16:42:58 smorabito Exp $
  */
 
 /*
@@ -178,7 +178,7 @@ public class FuncV3Voter extends LockssTestCase {
       new V3LcapMessage("auid", "key", "3", ByteArray.makeRandomBytes(20),
                         ByteArray.makeRandomBytes(20),
                         V3LcapMessage.MSG_POLL,
-                        msgDeadline, pollerId, tempDir);
+                        msgDeadline, pollerId, tempDir, theDaemon);
     msg.setEffortProof(ByteArray.makeRandomBytes(20));
     return msg;
   }
@@ -188,7 +188,7 @@ public class FuncV3Voter extends LockssTestCase {
       new V3LcapMessage("auid", "key", "3", ByteArray.makeRandomBytes(20),
                         ByteArray.makeRandomBytes(20),
                         V3LcapMessage.MSG_POLL_PROOF,
-                        msgDeadline, pollerId, tempDir);
+                        msgDeadline, pollerId, tempDir, theDaemon);
     msg.setEffortProof(ByteArray.makeRandomBytes(20));
     return msg;
   }
@@ -198,7 +198,7 @@ public class FuncV3Voter extends LockssTestCase {
       new V3LcapMessage("auid", "key", "3", ByteArray.makeRandomBytes(20),
                         ByteArray.makeRandomBytes(20),
                         V3LcapMessage.MSG_VOTE_REQ,
-                        msgDeadline, pollerId, tempDir);
+                        msgDeadline, pollerId, tempDir, theDaemon);
     return msg;
   }
 
@@ -207,7 +207,7 @@ public class FuncV3Voter extends LockssTestCase {
       new V3LcapMessage("auid", "key", "3", ByteArray.makeRandomBytes(20),
                         ByteArray.makeRandomBytes(20),
                         V3LcapMessage.MSG_REPAIR_REQ,
-                        msgDeadline, pollerId, tempDir);
+                        msgDeadline, pollerId, tempDir, theDaemon);
     return msg;
   }
 
@@ -216,7 +216,7 @@ public class FuncV3Voter extends LockssTestCase {
       new V3LcapMessage("auid", "key", "3", ByteArray.makeRandomBytes(20),
                         ByteArray.makeRandomBytes(20),
                         V3LcapMessage.MSG_EVALUATION_RECEIPT,
-                        msgDeadline, pollerId, tempDir);
+                        msgDeadline, pollerId, tempDir, theDaemon);
     return msg;
   }
 
