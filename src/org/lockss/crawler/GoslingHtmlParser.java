@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingHtmlParser.java,v 1.41 2006-09-19 18:47:46 adriz Exp $
+ * $Id: GoslingHtmlParser.java,v 1.42 2006-11-09 23:16:52 troberts Exp $
  */
 
 /*
@@ -75,6 +75,8 @@ import java.net.*;
 import java.io.*;
 
 import org.htmlparser.util.*;
+
+import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.*;
 import org.lockss.config.*;
 
@@ -108,11 +110,11 @@ public class GoslingHtmlParser implements ContentParser {
   protected static final String OPTIONTAG = "option";
   protected static final String SCRIPTTAG = "script";
   protected static final String SCRIPTTAGEND = "/script";
-  protected static final String SRC = "src"; 
+  protected static final String SRC = "src";
   protected static final String TABLETAG = "table";
   protected static final String TDTAG = "tc";
   protected static final String VALUETAG = "value";
-  
+
 
   protected static final String REFRESH = "refresh";
   protected static final String HTTP_EQUIV = "http-equiv";
@@ -145,16 +147,20 @@ public class GoslingHtmlParser implements ContentParser {
 
   private boolean malformedBaseUrl = false;
 
-  public GoslingHtmlParser() {
+  private ArchivalUnit au;
+
+  public GoslingHtmlParser(ArchivalUnit au) {
     ringCapacity = CurrentConfig.getIntParam(PARAM_BUFFER_CAPACITY,
 					     DEFAULT_BUFFER_CAPACITY);
     shouldParseJavaScript =
       CurrentConfig.getBooleanParam(PARAM_PARSE_JS, DEFAULT_PARSE_JS);
+
+    this.au = au;
   }
 
-  public GoslingHtmlParser(int ringCapacity) {
-    this.ringCapacity = ringCapacity;
-  }
+//  public GoslingHtmlParser(int ringCapacity) {
+//    this.ringCapacity = ringCapacity;
+//  }
 
   /**
    * Method which will parse the html file represented by reader and call
@@ -230,9 +236,9 @@ public class GoslingHtmlParser implements ContentParser {
 	  while (true) {
 	    if (!refill()) return null;
 	    idx = ring.indexOf(">", -1, false);
-	    if (idx >= 2 && 
+	    if (idx >= 2 &&
 		((ring.get(idx-1) == '-' && ring.get(idx-2) == '-') ||
-		(ring.get(idx-1) == '!' && ring.get(idx-2) == '-' 
+		(ring.get(idx-1) == '!' && ring.get(idx-2) == '-'
 		 && ring.get(idx-3) == '-'))) {
 	      if (isTrace) logger.debug3("Found end of comment");
 	      break;
@@ -241,7 +247,7 @@ public class GoslingHtmlParser implements ContentParser {
 	      // found a > that doesn't close the comment.  Skip past it.
 	      ring.skip(idx + 1);
 	    } else {
-	      // No > in ring.  
+	      // No > in ring.
 	      // Leave last three chars in case they're "--" or "!--"
 	      ring.skip(ring.size() - 3);
 	    }
@@ -335,7 +341,7 @@ public class GoslingHtmlParser implements ContentParser {
         }
         if (beginsWithTag(link, AREATAG)) {
           return (  getAttributeValue(HREF, link) );
-        } 
+        }
         break;
       case 'f': //<frame src=frame1.html>
       case 'F':
@@ -349,7 +355,16 @@ public class GoslingHtmlParser implements ContentParser {
           return ( getAttributeValue(CODEBASE, link) );
         }
         if (beginsWithTag(link, OPTIONTAG)) {
-          return ( getAttributeValue(VALUETAG, link) );
+          TypedEntryMap pMap = au.getProperties();
+          if (pMap.containsKey("html-parser-select-attrs")) {
+            Collection optionAttributes =
+              pMap.getCollection("html-parser-select-attrs");
+            if (optionAttributes != null) {
+              Iterator it = optionAttributes.iterator();
+              String optionAttribute = (String)it.next();
+              return ( getAttributeValue(optionAttribute, link) );
+            }
+          }
         }
         break;
       case 'i': //<img src=image.gif>
@@ -374,7 +389,7 @@ public class GoslingHtmlParser implements ContentParser {
       case 'B': //or <base href=http://www.example.com>
         if (beginsWithTag(link, BODYTAG)) {
           return (  getAttributeValue(BACKGROUNDSRC, link) );
-        } 
+        }
         if (beginsWithTag(link, BASETAG)) {
 	  String newBase = getAttributeValue(HREF, link);
 	  if (newBase != null && !"".equals(newBase)) {
@@ -414,9 +429,9 @@ public class GoslingHtmlParser implements ContentParser {
           beginsWithTag(link, TDTAG)) {
           return (  getAttributeValue(BACKGROUNDSRC, link) );
         }
-        break;   
+        break;
     }
-    return null;   
+    return null;
   }
 
   /**

@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingHtmlParser.java,v 1.28 2006-09-19 18:47:46 adriz Exp $
+ * $Id: TestGoslingHtmlParser.java,v 1.29 2006-11-09 23:16:52 troberts Exp $
  */
 
 /*
@@ -52,10 +52,12 @@ public class TestGoslingHtmlParser extends LockssTestCase {
   GoslingHtmlParser parser = null;
   MyFoundUrlCallback cb = null;
 
+  MockArchivalUnit mau;
+
   public void setUp() throws Exception {
     super.setUp();
-    MockArchivalUnit mau = new MockArchivalUnit();
-    parser = new GoslingHtmlParser();
+    mau = new MockArchivalUnit();
+    parser = new GoslingHtmlParser(mau);
     cb = new MyFoundUrlCallback();
   }
 
@@ -128,18 +130,30 @@ public class TestGoslingHtmlParser extends LockssTestCase {
      singleTagShouldParse("http://www.example.com/web_link.shtml",
 			 "<area href=", "</area>");
      singleTagShouldParse("http://www.example.com/web_link.shtml",
-                          "<area shape='rect' coords='279,481,487' href=", "</area>");
+                          "<area shape='rect' coords='279,481,487' href=",
+                          "</area>");
   }
 
   public void testParsesObject() throws IOException {
     singleTagShouldParse("http://www.example.com/web_link.jpg",
  			 "<object codebase=", "</object>");
   }
-  public void testParsesOption() throws IOException {
+
+  public void testParsesOptionPositive() throws IOException {
+    TypedEntryMap pMap = new TypedEntryMap();
+    pMap.setMapElement("html-parser-select-attrs", ListUtil.list("value"));
+    mau.setPropertyMap(pMap);
     singleTagShouldParse("http://www.example.com/web_link.jpg",
-                         "<option  value=", "</option>");   
+                         "<option  value=", "</option>");
     singleTagShouldParse("http://www.example.com/web_link.jpg",
-                         "<option a=b value=", "</option>");   
+                         "<option a=b value=", "</option>");
+  }
+
+  public void testParsesOptionNegative() throws IOException {
+    singleTagShouldNotParse("http://www.example.com/web_link.jpg",
+                            "<option  value=", "</option>");
+    singleTagShouldNotParse("http://www.example.com/web_link.jpg",
+                            "<option a=b value=", "</option>");
   }
 
   public void testDoCrawlImageWithSrcInAltTag() throws IOException {
@@ -385,7 +399,9 @@ public class TestGoslingHtmlParser extends LockssTestCase {
     // dangling quoted strings
     assertEquals("", parser.getAttributeValue("href", "a href=\""));
     assertEquals("xy", parser.getAttributeValue("href", "a href=\"xy"));
-    assertEquals("/cgi/reprint/21/1/2.pdf", parser.getAttributeValue("href", "a target=\"_self\" href=\"/cgi/reprint/21/1/2.pdf\" onclick=\"cancelLoadPDF()\""));
+    assertEquals("/cgi/reprint/21/1/2.pdf",
+                 parser.getAttributeValue("href",
+                                          "a target=\"_self\" href=\"/cgi/reprint/21/1/2.pdf\" onclick=\"cancelLoadPDF()\""));
 
   }
 
@@ -429,7 +445,7 @@ public class TestGoslingHtmlParser extends LockssTestCase {
     Properties p = new Properties();
     p.setProperty(GoslingHtmlParser.PARAM_PARSE_JS, "true");
     ConfigurationUtil.setCurrentConfigFromProps(p);
-    parser = new GoslingHtmlParser();
+    parser = new GoslingHtmlParser(new MockArchivalUnit());
 
     String url= "http://www.example.com/link3.html";
     String url2 = "http://www.example.com/link2.html";
@@ -462,7 +478,12 @@ public class TestGoslingHtmlParser extends LockssTestCase {
     String url= "http://www.example.com/cgi/reprint/21/1/2.pdf";
 
     String source =
-      "<table cellspacing=\"0\" cellpadding=\"10\" width=\"250\" border=\"0\"><tr><td align=center bgcolor=\"#DBDBDB\">\n\n	<font face=\"verdana,arial,helvetica,sans-serif\"><strong><font size=+1>Automatic download</font><br>\n	<font size=\"-1\">[<a target=\"_self\" href=\"/cgi/reprint/21/1/2.pdf\" onclick=\"cancelLoadPDF()\">Begin manual download</a>]</strong></font>\n";
+      "<table cellspacing=\"0\" cellpadding=\"10\" width=\"250\" border=\"0\">" +
+      "<tr><td align=center bgcolor=\"#DBDBDB\">\n\n	" +
+      "<font face=\"verdana,arial,helvetica,sans-serif\">" +
+      "<strong><font size=+1>Automatic download</font><br>\n	" +
+      "<font size=\"-1\">[<a target=\"_self\" href=\"/cgi/reprint/21/1/2.pdf\" " +
+      "onclick=\"cancelLoadPDF()\">Begin manual download</a>]</strong></font>\n";
     assertEquals(SetUtil.set(url), parseSingleSource(source));
   }
 
@@ -752,7 +773,8 @@ public class TestGoslingHtmlParser extends LockssTestCase {
       "<a href= branch1/index.html>link1</a>"+
       "Filler, with <b>bold</b> tags and<i>others</i>"+
       "<a href=\" branch2/index.html\">link2</a>"+
-      "<a href =\" /journals/american_imago/toc/aim60.1.html\">Number 1, Spring 2003</a>";
+      "<a href =\" /journals/american_imago/toc/aim60.1.html\">" +
+      "Number 1, Spring 2003</a>";
 
     MockCachedUrl mcu = new MockCachedUrl("http://www.example.com/blah/");
     mcu.setContent(source);
