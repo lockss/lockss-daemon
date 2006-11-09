@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.36 2006-10-20 18:41:37 thib_gc Exp $
+ * $Id: ServletUtil.java,v 1.37 2006-11-09 01:44:54 thib_gc Exp $
  */
 
 /*
@@ -819,7 +819,7 @@ public class ServletUtil {
       boolean first = true;
       for (Iterator iter = repos.iterator(); iter.hasNext(); ) {
         String repo = (String)iter.next();
-        PlatformInfo.DF df = remoteApi.getRepositoryDF(repo);
+        PlatformUtil.DF df = remoteApi.getRepositoryDF(repo);
 
         tbl.newRow();
         tbl.newCell(ALIGN_LEFT); // "Repository"
@@ -1100,7 +1100,7 @@ public class ServletUtil {
       // Get entry
       Map.Entry entry = (Map.Entry)repoIter.next();
       String repo = (String)entry.getKey();
-      PlatformInfo.DF df = (PlatformInfo.DF)entry.getValue();
+      PlatformUtil.DF df = (PlatformUtil.DF)entry.getValue();
 
       // Populate row for entry
       tbl.newRow(REPOTABLE_ROW_ATTRIBUTES);

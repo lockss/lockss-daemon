@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryStatus.java,v 1.24 2006-07-19 00:45:48 tlipkis Exp $
+ * $Id: LockssRepositoryStatus.java,v 1.25 2006-11-09 01:44:53 thib_gc Exp $
  */
 
 /*
@@ -359,7 +359,7 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
       for (Iterator iter = repos.iterator(); iter.hasNext(); ) {
 	Map row = new HashMap();
 	String repo = (String)iter.next();
-	PlatformInfo.DF df = remoteApi.getRepositoryDF(repo);
+	PlatformUtil.DF df = remoteApi.getRepositoryDF(repo);
 	row.put("repo", repo);
 	if (df != null) {
 	  row.put("size", orderedKBObj(df.getSize()));

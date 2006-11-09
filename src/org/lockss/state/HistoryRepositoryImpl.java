@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.71 2006-10-25 23:11:40 smorabito Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.72 2006-11-09 01:44:54 thib_gc Exp $
  */
 
 /*
@@ -660,11 +660,12 @@ public class HistoryRepositoryImpl
     // finish by fixing top level values
     File oldDamageFile = new File(topDir, "damaged_nodes.xml");
     if (oldDamageFile.exists()) {
-      oldDamageFile.renameTo(new File(topDir, DAMAGED_NODES_FILE_NAME));
+      PlatformUtil.updateAtomically(oldDamageFile,
+                                    new File(topDir, DAMAGED_NODES_FILE_NAME));
     }
     File oldAuState = new File(topDir, "au_state.xml");
     if (oldAuState.exists()) {
-      oldAuState.renameTo(topDirState);
+      PlatformUtil.updateAtomically(oldAuState, topDirState);
     }
     logger.debug("Finished updating.");
   }
@@ -686,11 +687,13 @@ public class HistoryRepositoryImpl
     // finish by fixing own values
     File oldNodeState = new File(nodeDir, "nodestate.xml");
     if (oldNodeState.exists()) {
-      oldNodeState.renameTo(new File(nodeDir, NODE_FILE_NAME));
+      PlatformUtil.updateAtomically(oldNodeState,
+                                    new File(nodeDir, NODE_FILE_NAME));
     }
     File oldHistoryFile = new File(nodeDir, "history.xml");
     if (oldHistoryFile.exists()) {
-      oldHistoryFile.renameTo(new File(nodeDir, HISTORY_FILE_NAME));
+      PlatformUtil.updateAtomically(oldHistoryFile,
+                                    new File(nodeDir, HISTORY_FILE_NAME));
     }
   }
 

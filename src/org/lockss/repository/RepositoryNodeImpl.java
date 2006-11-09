@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.66 2006-05-27 06:36:04 tlipkis Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.67 2006-11-09 01:44:53 thib_gc Exp $
  */
 
 /*
@@ -507,9 +507,12 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
         // if the files exist but there's a problem renaming them, throw
         if ((inactiveCacheFile.exists() &&
-             !inactiveCacheFile.renameTo(currentCacheFile)) ||
+             !PlatformUtil.updateAtomically(inactiveCacheFile,
+                                            currentCacheFile))
+            ||
             (inactivePropsFile.exists() &&
-             !inactivePropsFile.renameTo(currentPropsFile))) {
+             !PlatformUtil.updateAtomically(inactivePropsFile,
+                                            currentPropsFile))) {
           logger.error("Couldn't rename inactive versions: " + url);
           throw new LockssRepository.RepositoryStateException(
               "Couldn't rename inactive versions.");
@@ -546,8 +549,8 @@ public class RepositoryNodeImpl implements RepositoryNode {
 			    currentCacheFile);
 	    }
             identicalVersion = true;
-          } else if (!currentCacheFile.renameTo(getVersionedCacheFile(
-              currentVersion))) {
+          } else if (!PlatformUtil.updateAtomically(currentCacheFile,
+                                                    getVersionedCacheFile(currentVersion))) {
             String err = "Couldn't rename current content file: " + url;
             logger.error(err);
             throw new LockssRepository.RepositoryStateException(err);
@@ -577,7 +580,8 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
       // rename current properties to chosen file name
       if (currentPropsFile.exists() &&
-          !currentPropsFile.renameTo(verPropsFile)) {
+          !PlatformUtil.updateAtomically(currentPropsFile,
+                                         verPropsFile)) {
         String err = "Couldn't rename current property file: " + url;
         logger.error(err);
         throw new LockssRepository.RepositoryStateException(err);
@@ -586,7 +590,8 @@ public class RepositoryNodeImpl implements RepositoryNode {
       // if not identical, rename content from 'temp' to 'current'
       if (!identicalVersion) {
         // rename new content file (if non-identical)
-        if (!tempCacheFile.renameTo(currentCacheFile)) {
+        if (!PlatformUtil.updateAtomically(tempCacheFile,
+                                           currentCacheFile)) {
           String err = "Couldn't rename temp content version: " + url;
           logger.error(err);
           throw new LockssRepository.RepositoryStateException(err);
@@ -624,7 +629,8 @@ public class RepositoryNodeImpl implements RepositoryNode {
       }
 
       // rename new properties
-      if (!tempPropsFile.renameTo(currentPropsFile)) {
+      if (!PlatformUtil.updateAtomically(tempPropsFile,
+                                         currentPropsFile)) {
         String err = "Couldn't rename temp property version: " + url;
         logger.error(err);
         throw new LockssRepository.RepositoryStateException(err);
@@ -688,9 +694,12 @@ public class RepositoryNodeImpl implements RepositoryNode {
     // copy 'current' files to 'inactive'
     if (hasContent()) {
       if ((currentCacheFile.exists() &&
-          !currentCacheFile.renameTo(getInactiveCacheFile())) ||
+          !PlatformUtil.updateAtomically(currentCacheFile,
+                                         getInactiveCacheFile()))
+          ||
           (currentPropsFile.exists() &&
-          !currentPropsFile.renameTo(getInactivePropsFile()))) {
+          !PlatformUtil.updateAtomically(currentPropsFile,
+                                         getInactivePropsFile()))) {
         logger.error("Couldn't deactivate: " + url);
         throw new LockssRepository.RepositoryStateException(
             "Couldn't deactivate.");
@@ -751,8 +760,10 @@ public class RepositoryNodeImpl implements RepositoryNode {
         File inactiveCacheFile = getInactiveCacheFile();
         File inactivePropsFile = getInactivePropsFile();
 
-        if (!inactiveCacheFile.renameTo(currentCacheFile) ||
-            !inactivePropsFile.renameTo(currentPropsFile)) {
+        if (!PlatformUtil.updateAtomically(inactiveCacheFile,
+                                           currentCacheFile) ||
+            !PlatformUtil.updateAtomically(inactivePropsFile,
+                                           currentPropsFile)) {
           logger.error("Couldn't rename inactive versions: "+url);
           throw new LockssRepository.RepositoryStateException("Couldn't rename inactive versions.");
         }
@@ -780,8 +791,10 @@ public class RepositoryNodeImpl implements RepositoryNode {
     currentPropsFile.delete();
 
     // rename old version to current
-    if (!lastContentFile.renameTo(currentCacheFile) ||
-        !lastPropsFile.renameTo(currentPropsFile)) {
+    if (!PlatformUtil.updateAtomically(lastContentFile,
+                                       currentCacheFile) ||
+        !PlatformUtil.updateAtomically(lastPropsFile,
+                                       currentPropsFile)) {
       logger.error("Couldn't rename old versions: "+url);
       throw new LockssRepository.RepositoryStateException("Couldn't rename old versions.");
     }
@@ -1106,8 +1119,9 @@ public class RepositoryNodeImpl implements RepositoryNode {
       } catch (LockssRepositoryImpl.RepositoryStateException rse) {
         logger.warning("Renaming faulty 'nodeProps' to 'nodeProps.ERROR'");
         // as long as the rename goes correctly, we can proceed
-        if (!nodePropsFile.renameTo(new File(nodePropsFile.getAbsolutePath() +
-            FAULTY_FILE_EXTENSION))) {
+        if (!PlatformUtil.updateAtomically(nodePropsFile,
+                                           new File(nodePropsFile.getAbsolutePath()
+                                                    + FAULTY_FILE_EXTENSION))) {
           logger.error("Error renaming nodeProps file");
           return false;
         }
@@ -1174,8 +1188,9 @@ public class RepositoryNodeImpl implements RepositoryNode {
     if (dirFile.isFile()) {
       logger.error("Exists but as a file: " + dirFile.getAbsolutePath());
       logger.error("Renaming file to 'xxx.ERROR'...");
-      if (!dirFile.renameTo(new File(dirFile.getAbsolutePath() +
-          FAULTY_FILE_EXTENSION))) {
+      if (!PlatformUtil.updateAtomically(dirFile,
+                                         new File(dirFile.getAbsolutePath()
+                                                  + FAULTY_FILE_EXTENSION))) {
         logger.error("Error renaming file");
         return false;
       }
@@ -1205,8 +1220,9 @@ public class RepositoryNodeImpl implements RepositoryNode {
       return false;
     } else if (testFile.isDirectory()) {
       logger.error(desc+" a directory.");
-      testFile.renameTo(new File(testFile.getAbsolutePath() +
-          FAULTY_FILE_EXTENSION));
+      PlatformUtil.updateAtomically(testFile,
+                                    new File(testFile.getAbsolutePath()
+                                             + FAULTY_FILE_EXTENSION));
       return false;
     }
     return true;

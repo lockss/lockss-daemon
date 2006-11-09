@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.48 2006-05-27 06:36:04 tlipkis Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.49 2006-11-09 01:44:54 thib_gc Exp $
  */
 
 /*
@@ -1181,28 +1181,28 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     // should return false if content file absent
     File renameFile =
         new File(leaf.currentCacheFile.getAbsolutePath()+"RENAME");
-    assertTrue(leaf.currentCacheFile.renameTo(renameFile));
+    assertTrue(PlatformUtil.updateAtomically(leaf.currentCacheFile, renameFile));
     assertFalse(leaf.checkContentConsistency());
-    renameFile.renameTo(leaf.currentCacheFile);
+    PlatformUtil.updateAtomically(renameFile, leaf.currentCacheFile);
     assertTrue(leaf.checkContentConsistency());
 
     // should return false if content props absent
-    leaf.currentPropsFile.renameTo(renameFile);
+    PlatformUtil.updateAtomically(leaf.currentPropsFile, renameFile);
     assertFalse(leaf.checkContentConsistency());
-    renameFile.renameTo(leaf.currentPropsFile);
+    PlatformUtil.updateAtomically(renameFile, leaf.currentPropsFile);
     assertTrue(leaf.checkContentConsistency());
 
     // should return false if inactive and files missing
     leaf.currentVersion = RepositoryNodeImpl.INACTIVE_VERSION;
     assertFalse(leaf.checkContentConsistency());
-    leaf.currentPropsFile.renameTo(leaf.getInactivePropsFile());
+    PlatformUtil.updateAtomically(leaf.currentPropsFile, leaf.getInactivePropsFile());
     assertFalse(leaf.checkContentConsistency());
-    leaf.currentCacheFile.renameTo(leaf.getInactiveCacheFile());
+    PlatformUtil.updateAtomically(leaf.currentCacheFile, leaf.getInactiveCacheFile());
     assertTrue(leaf.checkContentConsistency());
-    leaf.getInactivePropsFile().renameTo(leaf.currentPropsFile);
+    PlatformUtil.updateAtomically(leaf.getInactivePropsFile(), leaf.currentPropsFile);
     assertFalse(leaf.checkContentConsistency());
     // finish restoring
-    leaf.getInactiveCacheFile().renameTo(leaf.currentCacheFile);
+    PlatformUtil.updateAtomically(leaf.getInactiveCacheFile(), leaf.currentCacheFile);
     leaf.currentVersion = 1;
     assertTrue(leaf.checkContentConsistency());
 

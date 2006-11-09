@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.40 2006-09-16 22:58:34 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.41 2006-11-09 01:44:54 thib_gc Exp $
  */
 
 /*
@@ -1097,7 +1097,7 @@ public class ConfigManager implements LockssManager {
     tmpConfig.seal();
     tmpConfig.store(os, header);
     os.close();
-    if (!tempfile.renameTo(cfile)) {
+    if (!PlatformUtil.updateAtomically(tempfile, cfile)) {
       throw new RuntimeException("Couldn't rename temp file: " +
 				 tempfile + " to: " + cfile);
     }

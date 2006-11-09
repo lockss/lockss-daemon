@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRunnable.java,v 1.19 2006-10-07 23:12:07 tlipkis Exp $
+ * $Id: LockssRunnable.java,v 1.20 2006-11-09 01:44:54 thib_gc Exp $
  */
 
 /*
@@ -273,11 +273,11 @@ public abstract class LockssRunnable  implements LockssWatchdog, Runnable {
 				      DEFAULT_THREAD_WDOG_HUNG_DUMP)) {
       log.error("Thread hung for " +
 		StringUtil.timeIntervalToString(interval) + ": " + getName());
-      PlatformInfo.getInstance().threadDump(false);
+      PlatformUtil.getInstance().threadDump(false);
       try {
 	Thread.sleep(30 * Constants.SECOND);
       } catch (InterruptedException ignore) {}
-      PlatformInfo.getInstance().threadDump(true);
+      PlatformUtil.getInstance().threadDump(true);
     }
     if (isWDogExpired()) {
       exitDaemon(Constants.EXIT_CODE_THREAD_HUNG,
