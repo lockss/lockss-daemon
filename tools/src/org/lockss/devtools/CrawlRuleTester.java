@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlRuleTester.java,v 1.18 2006-07-26 17:41:09 tlipkis Exp $
+ * $Id: CrawlRuleTester.java,v 1.19 2006-11-09 23:17:15 troberts Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import org.lockss.crawler.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
+import org.lockss.test.MockArchivalUnit;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.config.*;
@@ -305,7 +306,7 @@ public class CrawlRuleTester extends Thread {
 	InputStream istr = conn.getResponseInputStream();
 	InputStreamReader reader = new InputStreamReader(istr);
 	//       MyMockCachedUrl mcu = new MyMockCachedUrl(srcUrl.toString(), reader);
-	GoslingHtmlParser parser = new GoslingHtmlParser();
+	GoslingHtmlParser parser = new GoslingHtmlParser(new MockArchivalUnit());
 	parser.parseForUrls(reader, srcUrl.toString() ,
 			    new MyFoundUrlCallback());
 	istr.close();
