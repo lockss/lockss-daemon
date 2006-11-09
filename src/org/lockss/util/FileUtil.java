@@ -1,5 +1,5 @@
 /*
- * $Id: FileUtil.java,v 1.6 2005-10-05 23:12:40 troberts Exp $
+ * $Id: FileUtil.java,v 1.6.28.1 2006-11-09 00:48:12 thib_gc Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -221,7 +221,7 @@ public class FileUtil {
   public static File createTempFile(String prefix, String suffix, File dir)
       throws IOException {
     if (dir == null) {
-      dir = new File(PlatformInfo.getSystemTempDir());
+      dir = new File(PlatformUtil.getSystemTempDir());
     }
     return File.createTempFile(prefix, suffix, dir);
   }
@@ -246,7 +246,7 @@ public class FileUtil {
       throw new IllegalArgumentException("Prefix string too short");
     String s = (suffix == null) ? ".tmp" : suffix;
     if (directory == null) {
-      directory = new File(PlatformInfo.getSystemTempDir());
+      directory = new File(PlatformUtil.getSystemTempDir());
     }
     synchronized (tmpFileLock) {
       File f = null;

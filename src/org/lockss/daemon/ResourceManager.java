@@ -1,5 +1,5 @@
 /*
- * $Id: ResourceManager.java,v 1.8 2006-07-14 17:40:35 thib_gc Exp $
+ * $Id: ResourceManager.java,v 1.8.12.1 2006-11-09 00:48:11 thib_gc Exp $
  *
 
 Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
@@ -239,7 +239,7 @@ public class ResourceManager extends BaseLockssManager  {
   /** Return list of unfiltered tcp ports not already assigned to another
    * server */
   public List getUsableTcpPorts(Object serverToken) {
-    List unfilteredPorts = PlatformInfo.getInstance().getUnfilteredTcpPorts();
+    List unfilteredPorts = PlatformUtil.getInstance().getUnfilteredTcpPorts();
     PortAvailable udpAvailable = new PortAvailable() {
       public boolean isAvailable(int port, Object token) {
         return isTcpPortAvailable(port, token);
@@ -249,7 +249,7 @@ public class ResourceManager extends BaseLockssManager  {
   }
 
   public List getUsableUdpPorts(Object serverToken) {
-    List unfilteredPorts = PlatformInfo.getInstance().getUnfilteredUdpPorts();
+    List unfilteredPorts = PlatformUtil.getInstance().getUnfilteredUdpPorts();
     PortAvailable udpAvailable = new PortAvailable() {
       public boolean isAvailable(int port, Object token) {
         return isUdpPortAvailable(port, token);

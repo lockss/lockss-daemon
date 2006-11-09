@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryManager.java,v 1.4 2005-01-05 09:46:13 tlipkis Exp $
+ * $Id: TestRepositoryManager.java,v 1.4.40.1 2006-11-09 00:48:13 thib_gc Exp $
  */
 
 /*
@@ -96,7 +96,7 @@ public class TestRepositoryManager extends LockssTestCase {
   }
 
   public void testGetRepositoryDF () throws Exception {
-    PlatformInfo.DF df = mgr.getRepositoryDF("local:.");
+    PlatformUtil.DF df = mgr.getRepositoryDF("local:.");
     assertNotNull(df);
   }
 

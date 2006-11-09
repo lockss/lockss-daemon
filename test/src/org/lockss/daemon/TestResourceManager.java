@@ -1,5 +1,5 @@
 /*
- * $Id: TestResourceManager.java,v 1.6 2006-07-14 17:40:35 thib_gc Exp $
+ * $Id: TestResourceManager.java,v 1.6.12.1 2006-11-09 00:48:12 thib_gc Exp $
  */
 
 /*
@@ -124,7 +124,7 @@ public class TestResourceManager extends LockssTestCase {
   public void testGetUsableTcpPorts() {
     String srvr = "server";
     assertNull(rmgr.getUsableTcpPorts(srvr));
-    ConfigurationUtil.setFromArgs(PlatformInfo.PARAM_UNFILTERED_TCP_PORTS,
+    ConfigurationUtil.setFromArgs(PlatformUtil.PARAM_UNFILTERED_TCP_PORTS,
 				  "9900;1234;1235");
     assertEquals(ListUtil.list("9900", "1234", "1235"),
 		 rmgr.getUsableTcpPorts(srvr));
@@ -133,7 +133,7 @@ public class TestResourceManager extends LockssTestCase {
 		 rmgr.getUsableTcpPorts(srvr));
     assertTrue(rmgr.reserveTcpPort(1235, "another service"));
     assertEquals(ListUtil.list("9900", "1234"), rmgr.getUsableTcpPorts(srvr));
-    ConfigurationUtil.setFromArgs(PlatformInfo.PARAM_UNFILTERED_TCP_PORTS,
+    ConfigurationUtil.setFromArgs(PlatformUtil.PARAM_UNFILTERED_TCP_PORTS,
 				  "9900;1234;1235;333-335");
     assertEquals(ListUtil.list("9900", "1234", "333-335"),
 		 rmgr.getUsableTcpPorts(srvr));
@@ -145,7 +145,7 @@ public class TestResourceManager extends LockssTestCase {
   public void testGetUsableUdpPorts() {
     String srvr = "server";
     assertNull(rmgr.getUsableUdpPorts(srvr));
-    ConfigurationUtil.setFromArgs(PlatformInfo.PARAM_UNFILTERED_UDP_PORTS,
+    ConfigurationUtil.setFromArgs(PlatformUtil.PARAM_UNFILTERED_UDP_PORTS,
                                   "9900;1234;1235");
     assertEquals(ListUtil.list("9900", "1234", "1235"),
                  rmgr.getUsableUdpPorts(srvr));
@@ -154,7 +154,7 @@ public class TestResourceManager extends LockssTestCase {
                  rmgr.getUsableUdpPorts(srvr));
     assertTrue(rmgr.reserveUdpPort(1235, "another service"));
     assertEquals(ListUtil.list("9900", "1234"), rmgr.getUsableUdpPorts(srvr));
-    ConfigurationUtil.setFromArgs(PlatformInfo.PARAM_UNFILTERED_UDP_PORTS,
+    ConfigurationUtil.setFromArgs(PlatformUtil.PARAM_UNFILTERED_UDP_PORTS,
                                   "9900;1234;1235;333-335");
     assertEquals(ListUtil.list("9900", "1234", "333-335"),
                  rmgr.getUsableUdpPorts(srvr));

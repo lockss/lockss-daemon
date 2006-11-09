@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingStreamComm.java,v 1.21 2006-10-18 23:45:45 tlipkis Exp $
+ * $Id: BlockingStreamComm.java,v 1.21.2.1 2006-11-09 00:48:12 thib_gc Exp $
  */
 
 /*
@@ -283,7 +283,7 @@ public class BlockingStreamComm
 
       if (changedKeys.contains(PARAM_DATA_DIR)) {
 	String paramDataDir = config.get(PARAM_DATA_DIR,
-					 PlatformInfo.getSystemTempDir());
+					 PlatformUtil.getSystemTempDir());
 	File dir = new File(paramDataDir);
 	if (dir.exists() || dir.mkdirs()) {
 	  dataDir = dir;

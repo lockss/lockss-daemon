@@ -1,5 +1,5 @@
 /*
- * $Id: ThreadDump.java,v 1.4 2006-02-01 05:05:44 tlipkis Exp $
+ * $Id: ThreadDump.java,v 1.4.20.1 2006-11-09 00:48:12 thib_gc Exp $
  */
 
 /*
@@ -40,11 +40,11 @@ import org.lockss.util.*;
  */
 public class ThreadDump extends LockssServlet {
 
-  private PlatformInfo platInfo;
+  private PlatformUtil platInfo;
 
   public void init(ServletConfig config) throws ServletException {
     super.init(config);
-    platInfo = PlatformInfo.getInstance();
+    platInfo = PlatformUtil.getInstance();
   }
 
   /** Handle a request */

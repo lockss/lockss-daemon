@@ -1,10 +1,10 @@
 /*
- * $Id: TestPlatformInfo.java,v 1.10 2006-02-01 05:05:43 tlipkis Exp $
+ * $Id: TestPlatformInfo.java,v 1.10.20.1 2006-11-09 00:48:12 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,7 +32,6 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util;
 
-import junit.framework.TestCase;
 import java.io.*;
 import java.util.*;
 import java.lang.reflect.*;
@@ -43,26 +42,26 @@ import org.lockss.test.*;
  * test class for org.lockss.util.PlatformInfo
  */
 public class TestPlatformInfo extends LockssTestCase {
-  PlatformInfo info;
+  PlatformUtil info;
 
   public void setUp() throws Exception {
     super.setUp();
-    info = PlatformInfo.getInstance();
+    info = PlatformUtil.getInstance();
   }
 
   public void testGetSystemTempDir() {
     String javatmp = System.getProperty("java.io.tmpdir");
-    assertEquals(javatmp, PlatformInfo.getSystemTempDir());
+    assertEquals(javatmp, PlatformUtil.getSystemTempDir());
     String parmtmp = "/another/tmp/dir";
-    ConfigurationUtil.setFromArgs(PlatformInfo.PARAM_TMPDIR, parmtmp);
-    assertEquals(parmtmp, PlatformInfo.getSystemTempDir());
+    ConfigurationUtil.setFromArgs(PlatformUtil.PARAM_TMPDIR, parmtmp);
+    assertEquals(parmtmp, PlatformUtil.getSystemTempDir());
   }
 
   public void testGetUnfilteredTcpPorts() throws Exception {
     assertEmpty(info.getUnfilteredTcpPorts());
-    ConfigurationUtil.setFromArgs(PlatformInfo.PARAM_UNFILTERED_TCP_PORTS, "9909");
+    ConfigurationUtil.setFromArgs(PlatformUtil.PARAM_UNFILTERED_TCP_PORTS, "9909");
     assertEquals(ListUtil.list("9909"), info.getUnfilteredTcpPorts());
-    ConfigurationUtil.setFromArgs(PlatformInfo.PARAM_UNFILTERED_TCP_PORTS,
+    ConfigurationUtil.setFromArgs(PlatformUtil.PARAM_UNFILTERED_TCP_PORTS,
 				  "9900;1234");
     assertEquals(ListUtil.list("9900", "1234"), info.getUnfilteredTcpPorts());
   }
@@ -87,7 +86,7 @@ public class TestPlatformInfo extends LockssTestCase {
   }
 
   public void testNonexistentPathNullDF() throws Exception {
-    PlatformInfo.DF df =
+    PlatformUtil.DF df =
       info.getDF(System.getProperty("java.io.tmpdir"));
     assertNotNull(df);
     df = info.getDF("/very_unlik_elyd_irect_oryname/4x3");
@@ -96,7 +95,7 @@ public class TestPlatformInfo extends LockssTestCase {
 
   public void testMakeDF() throws Exception {
     String str = "/dev/hda2  26667896   9849640  15463576    39% /";
-    PlatformInfo.DF df = info.makeDFFromLine(str);
+    PlatformUtil.DF df = info.makeDFFromLine(str);
     assertNotNull(df);
     assertEquals(26667896, df.getSize());
     assertEquals(9849640, df.getUsed());
@@ -107,7 +106,7 @@ public class TestPlatformInfo extends LockssTestCase {
 
   public void testMakeDFIll1() throws Exception {
     String str = "/dev/hda2  26667896   9849640  -1546    39% /";
-    PlatformInfo.DF df = info.makeDFFromLine(str);
+    PlatformUtil.DF df = info.makeDFFromLine(str);
     assertNotNull(df);
     assertEquals(26667896, df.getSize());
     assertEquals(9849640, df.getUsed());
@@ -119,7 +118,7 @@ public class TestPlatformInfo extends LockssTestCase {
   public void testMakeDFIll2() throws Exception {
     // linux df running under linux emul on OpenBSD can produce this
     String str = "-  26667896   9849640  4294426204    101% /";
-    PlatformInfo.DF df = info.makeDFFromLine(str);
+    PlatformUtil.DF df = info.makeDFFromLine(str);
     assertNotNull(df);
     assertEquals(26667896, df.getSize());
     assertEquals(9849640, df.getUsed());

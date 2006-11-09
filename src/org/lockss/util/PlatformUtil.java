@@ -1,10 +1,10 @@
 /*
- * $Id: PlatformInfo.java,v 1.15 2006-02-01 05:05:43 tlipkis Exp $
+ * $Id: PlatformUtil.java,v 1.1.2.1 2006-11-09 00:48:12 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,11 +36,12 @@ import java.io.*;
 import java.text.*;
 import java.util.*;
 
+import org.apache.commons.lang.SystemUtils;
 import org.lockss.config.*;
 
 /** Utilities to communicate with platform to get info or take action not
  * possible from Java */
-public class PlatformInfo {
+public class PlatformUtil {
   protected static Logger log = Logger.getLogger("PlatformInfo");
   private static final DecimalFormat percentFmt = new DecimalFormat("0%");
 
@@ -57,11 +58,11 @@ public class PlatformInfo {
    */
   public static final String PARAM_TMPDIR = Configuration.PLATFORM + "tmpDir";
 
-  static PlatformInfo instance;
+  static PlatformUtil instance;
 
   /** Return the singleton PlatformInfo instance */
   // no harm if happens in two threads, so not synchronized
-  public static PlatformInfo getInstance() {
+  public static PlatformUtil getInstance() {
     if (instance == null) {
       String os = System.getProperty("os.name");
       if ("linux".equalsIgnoreCase(os)) {
@@ -70,9 +71,12 @@ public class PlatformInfo {
       if ("openbsd".equalsIgnoreCase(os)) {
 	instance = new OpenBSD();
       }
+      if (SystemUtils.IS_OS_WINDOWS) {
+        instance = new Windows();
+      }
       if (instance == null) {
 	log.warning("No OS-specific PlatformInfo for '" + os + "'");
-	instance = new PlatformInfo();
+	instance = new PlatformUtil();
       }
     }
     return instance;
@@ -265,8 +269,50 @@ public class PlatformInfo {
     }
   }
 
+  /**
+   * <p>Convenience call to the current {@link PlatformUtil}
+   * instance's {@link #updateFileAtomically} method.</p>
+   * @param updated An updated version of the target file.
+   * @param target  A target file, which is to be updated by the
+   *                updated file.
+   * @return True if and only if the update succeeded; false
+   *         otherwise.
+   * @see #updateFileAtomically
+   */
+  public static boolean updateAtomically(File updated, File target) {
+    return getInstance().updateFileAtomically(updated, target);
+  }
+  
+  /**
+   * <p>Attempts to update <code>target</code> atomically by renaming
+   * <code>updated</code> to <code>target</code> if possible or by
+   * using any similar filesystem-specific mechanism.</p>
+   * <p>Atomicity is not guaranteed. An atomic update is more likely
+   * if the files are in the same directory. Even if they are, some
+   * platforms may not support atomic renames.</p>
+   * <p>When this method returns, <code>updated</code>will exist if
+   * and only if the update failed.</p>
+   * @param updated An updated version of the target file.
+   * @param target  A target file, which is to be updated by the
+   *                updated file.
+   * @return True if and only if the update succeeded; false
+   *         otherwise.
+   * @see #updateAtomically
+   * @see PlatformUtil.Windows#updateFileAtomically
+   */
+  public boolean updateFileAtomically(File updated, File target) {
+    try {
+      return updated.renameTo(target); // default
+    }
+    catch (SecurityException se) {
+      // Just log and rethrow
+      log.warning("Security exception reported in atomic update", se);
+      throw se;
+    }
+  }
+  
   /** Linux implementation of platform-specific code */
-  public static class Linux extends PlatformInfo {
+  public static class Linux extends PlatformUtil {
     // offsets into /proc/<n>/stat
     static final int STAT_OFFSET_PID = 0;
     static final int STAT_OFFSET_PPID = 3;
@@ -365,7 +411,7 @@ public class PlatformInfo {
   }
 
   /** OpenBSD implementation of platform-specific code */
-  public static class OpenBSD extends PlatformInfo {
+  public static class OpenBSD extends PlatformUtil {
     // offsets into /proc/<n>/status
     static final int STAT_OFFSET_CMD = 1;
     static final int STAT_OFFSET_PID = 1;
@@ -416,6 +462,67 @@ public class PlatformInfo {
     }
   }
 
+  public static class Windows extends PlatformUtil {
+    
+    public synchronized boolean updateFileAtomically(File updated, File target) {
+      try {
+        File saveTarget = null;
+
+        // Move target out of the way if necessary
+        if (target.exists()) {
+          // Create temporary file
+          saveTarget = new File(target.getParent(),
+                                target.getName() + ".windows." + System.currentTimeMillis());
+
+          // Rename target
+          if (!target.renameTo(saveTarget)) {
+            log.error("Windows platform: "
+                      + target.toString()
+                      + " exists but could not be renamed to "
+                      + saveTarget.toString());
+            return false; // fail unconditionally
+          }
+        }
+
+        // Update target
+        if (updated.renameTo(target)) {
+          // Delete original if needed if the update is successful
+          if (saveTarget != null) {
+            if (!saveTarget.delete()) {
+              log.warning("Windows platform: "
+                          + saveTarget.toString()
+                          + " could not be deleted at the end of an update");
+            }
+          }
+          
+          return true; // succeed
+        }
+        else {
+          // Log an error message if the update is unsuccessful
+          log.error("Windows platform: "
+                    + updated.toString()
+                    + " could not be renamed to "
+                    + target.toString());
+          
+          // Try to restore the original (unlikely to succeed)
+          if (!saveTarget.renameTo(target)) {
+            log.error("Windows platform: "
+                      + target.toString()
+                      + " could not be restored from "
+                      + saveTarget.toString());
+          }
+          
+          return false; // fail
+        }
+      }
+      catch (SecurityException se) {
+        // Log and rethrow
+        log.warning("Windows Platform: security exception reported in atomic update", se);
+        throw se;
+      }
+    }
+  }
+  
   /** Struct holding disk space info (from df) */
   public static class DF {
     String fs;

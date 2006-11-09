@@ -1,5 +1,5 @@
 /*
- * $Id: ObjectSerializer.java,v 1.28 2006-10-03 06:02:27 thib_gc Exp $
+ * $Id: ObjectSerializer.java,v 1.28.2.1 2006-11-09 00:48:12 thib_gc Exp $
  */
 
 /*
@@ -215,7 +215,8 @@ public abstract class ObjectSerializer {
     }
 
     protected void doRename() throws SerializationException, InterruptedIOException {
-      if (!temporaryFile.renameTo(outputFile)) {
+      if (!PlatformUtil.updateAtomically(temporaryFile,
+                                         outputFile)) {
         String errorString = "Could not rename from " + temporaryFile + " to " + outputFile;
         throw failSerialize(errorString,
                             null,
@@ -696,7 +697,7 @@ public abstract class ObjectSerializer {
       case FAILED_DESERIALIZATION_RENAME:
         String renamed = file + CurrentConfig.getParam(PARAM_FAILED_DESERIALIZATION_EXTENSION,
                                                        DEFAULT_FAILED_DESERIALIZATION_EXTENSION);
-        boolean success = file.renameTo(new File(renamed));
+        boolean success = PlatformUtil.updateAtomically(file, new File(renamed));
         if (success) {
           // Rename succeeded
           buffer.append("was renamed ");

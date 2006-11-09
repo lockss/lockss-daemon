@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryManager.java,v 1.6 2005-02-02 09:42:25 tlipkis Exp $
+ * $Id: RepositoryManager.java,v 1.6.38.1 2006-11-09 00:48:11 thib_gc Exp $
  */
 
 /*
@@ -65,7 +65,7 @@ public class RepositoryManager
     GLOBAL_CACHE_PREFIX + "enabled";
   public static final boolean DEFAULT_GLOBAL_CACHE_ENABLED = false;
 
-  private PlatformInfo platInfo = PlatformInfo.getInstance();
+  private PlatformUtil platInfo = PlatformUtil.getInstance();
   private List repoList = Collections.EMPTY_LIST;
   int paramNodeCacheSize = DEFAULT_MAX_PER_AU_CACHE_SIZE;
   boolean paramIsGlobalNodeCache = DEFAULT_GLOBAL_CACHE_ENABLED;
@@ -125,12 +125,12 @@ public class RepositoryManager
     return repoList;
   }
 
-  public PlatformInfo.DF getRepositoryDF(String repoName) {
+  public PlatformUtil.DF getRepositoryDF(String repoName) {
     String path = LockssRepositoryImpl.getLocalRepositoryPath(repoName);
     log.debug("path: " + path);
     try {
       return platInfo.getDF(path);
-    } catch (PlatformInfo.UnsupportedException e) {
+    } catch (PlatformUtil.UnsupportedException e) {
       return null;
     }
   }

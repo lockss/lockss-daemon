@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.56 2006-04-05 22:55:04 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.56.18.1 2006-11-09 00:48:13 thib_gc Exp $
  */
 
 /*
@@ -401,7 +401,7 @@ public class RemoteApi
     return repoMgr.findExistingRepositoriesFor(auid);
   }
 
-  public PlatformInfo.DF getRepositoryDF(String repoName) {
+  public PlatformUtil.DF getRepositoryDF(String repoName) {
     return repoMgr.getRepositoryDF(repoName);
   }
 

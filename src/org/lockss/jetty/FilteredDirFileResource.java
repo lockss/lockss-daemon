@@ -1,5 +1,5 @@
 /*
- * $Id: FilteredDirFileResource.java,v 1.2 2006-07-19 18:01:00 tlipkis Exp $
+ * $Id: FilteredDirFileResource.java,v 1.2.12.1 2006-11-09 00:48:13 thib_gc Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.jetty;
 
+import org.lockss.util.PlatformUtil;
 import org.mortbay.util.*;
 import java.io.*;
 import java.net.*;
@@ -60,7 +61,7 @@ import org.mortbay.log.LogFactory;
  * If alias checking is turned on, then aliased resources are
  * treated as if they do not exist, nor can they be created.
  *
- * @version $Revision: 1.2 $
+ * @version $Revision: 1.2.12.1 $
  * @author Greg Wilkins (gregw)
  */
 public class FilteredDirFileResource extends URLResource
@@ -296,7 +297,8 @@ public class FilteredDirFileResource extends URLResource
         throws SecurityException
     {
         if( dest instanceof FilteredDirFileResource)
-            return _file.renameTo( ((FilteredDirFileResource)dest)._file);
+            return PlatformUtil.updateAtomically(_file,
+                                                 ((FilteredDirFileResource)dest)._file);
         else
             return false;
     }
