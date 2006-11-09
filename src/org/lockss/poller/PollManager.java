@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.171 2006-11-08 16:42:58 smorabito Exp $
+ * $Id: PollManager.java,v 1.172 2006-11-09 23:01:00 smorabito Exp $
  */
 
 /*
@@ -717,7 +717,8 @@ public class PollManager
 
   /**
    * Load and start V3 polls that are found in a serialized state
-   * on the disk.
+   * on the disk.  If the poll has expired, or if the state has been
+   * corrupted, delete the poll directory.
    */
   private void preloadStoredPolls() {
     this.serializedPollers = new HashMap();
@@ -741,6 +742,15 @@ public class PollManager
           V3PollerSerializer pollSerializer =
             new V3PollerSerializer(theDaemon, dirs[ix]);
           PollerStateBean psb = pollSerializer.loadPollerState();
+          // Check to see if this poll has expired.
+          long now = TimeBase.nowMs();
+          if (psb.getPollDeadline() <= now) {
+            theLog.info("Poll found in directory " + dirs[ix] + 
+                        " has expired, cleaning up directory and skipping.");
+            FileUtil.delTree(dirs[ix]);
+            continue;
+          }
+          
           theLog.debug2("Found saved poll for AU " + psb.getAuId()
                         + " in directory " + dirs[ix]);
           Set pollsForAu = null;
@@ -750,11 +760,13 @@ public class PollManager
           }
           pollsForAu.add(dirs[ix]);
         } catch (PollSerializerException e) {
-          theLog.error("Unable to restore poller from: " + dirs[ix], e);
+          theLog.error("Exception while trying to restore poller from " +
+                       "directory: " + dirs[ix] + ".  Cleaning up dir.", e);
+          FileUtil.delTree(dirs[ix]);
           continue;
         }
       } else {
-        theLog.warning("No serialized poller found in dir " + dirs[ix]);
+        theLog.debug("No serialized poller found in dir " + dirs[ix]);
       }
       File voter = new File(dirs[ix],
                             V3VoterSerializer.VOTER_USER_DATA_FILE);
@@ -765,6 +777,15 @@ public class PollManager
           V3VoterSerializer voterSerializer =
             new V3VoterSerializer(theDaemon, dirs[ix]);
           VoterUserData vd = voterSerializer.loadVoterUserData();
+          // Check to see if this poll has expired.
+          long now = TimeBase.nowMs();
+          if (vd.getDeadline() <= now) {
+            theLog.info("Voter found in directory " + dirs[ix] + 
+                        " has expired, cleaning up directory and skipping.");
+            FileUtil.delTree(dirs[ix]);
+            continue;
+          }
+          
           theLog.debug2("Found saved poll for AU " + vd.getAuId()
                         + " in directory " + dirs[ix]);
           Set pollsForAu = null;
@@ -774,11 +795,13 @@ public class PollManager
           }
           pollsForAu.add(dirs[ix]);
         } catch (PollSerializerException e) {
-          theLog.error("Unable to restore voter from: " + dirs[ix], e);
+          theLog.error("Exception while trying to restore voter from " +
+                       "directory: " + dirs[ix] + ".  Cleaning up dir.", e);
+          FileUtil.delTree(dirs[ix]);
           continue;
         }
       } else {
-        theLog.warning("No serialized voter found in dir " + dirs[ix]);
+        theLog.debug("No serialized voter found in dir " + dirs[ix]);
       }
     }
   }
