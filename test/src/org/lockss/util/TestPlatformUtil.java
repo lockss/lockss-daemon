@@ -1,5 +1,5 @@
 /*
- * $Id: TestPlatformInfo.java,v 1.11 2006-11-09 01:44:54 thib_gc Exp $
+ * $Id: TestPlatformUtil.java,v 1.1 2006-11-09 23:17:22 thib_gc Exp $
  */
 
 /*
@@ -41,7 +41,7 @@ import org.lockss.test.*;
 /**
  * test class for org.lockss.util.PlatformInfo
  */
-public class TestPlatformInfo extends LockssTestCase {
+public class TestPlatformUtil extends LockssTestCase {
   PlatformUtil info;
 
   public void setUp() throws Exception {
