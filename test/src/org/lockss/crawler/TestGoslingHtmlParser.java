@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingHtmlParser.java,v 1.29 2006-11-09 23:16:52 troberts Exp $
+ * $Id: TestGoslingHtmlParser.java,v 1.30 2006-11-10 00:20:59 troberts Exp $
  */
 
 /*
@@ -57,14 +57,14 @@ public class TestGoslingHtmlParser extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     mau = new MockArchivalUnit();
-    parser = new GoslingHtmlParser(mau);
+    parser = new GoslingHtmlParser();
     cb = new MyFoundUrlCallback();
   }
 
   public void testThrowsOnNullReader() throws IOException {
     try {
       parser.parseForUrls(null, "http://www.example.com/",
-			  new MyFoundUrlCallback());
+			  null, new MyFoundUrlCallback());
       fail("Calling parseForUrls with a null reader should have thrown");
     } catch (IllegalArgumentException iae) {
     }
@@ -73,7 +73,7 @@ public class TestGoslingHtmlParser extends LockssTestCase {
   public void testThrowsOnNullSourceUrl() throws IOException {
     try {
       parser.parseForUrls(new StringReader("Blah"), null,
-			  new MyFoundUrlCallback());
+			  null, new MyFoundUrlCallback());
       fail("Calling parseForUrls with a null CachedUrl should have thrown");
     } catch (IllegalArgumentException iae) {
     }
@@ -82,7 +82,7 @@ public class TestGoslingHtmlParser extends LockssTestCase {
   public void testThrowsOnNullCallback() throws IOException {
     try {
       parser.parseForUrls(new StringReader("blah"),
-			  "http://www.example.com/", null);
+			  "http://www.example.com/", null, null);
       fail("Calling parseForUrls with a null FoundUrlCallback should have thrown");
     } catch (IllegalArgumentException iae) {
     }
@@ -144,9 +144,9 @@ public class TestGoslingHtmlParser extends LockssTestCase {
     pMap.setMapElement("html-parser-select-attrs", ListUtil.list("value"));
     mau.setPropertyMap(pMap);
     singleTagShouldParse("http://www.example.com/web_link.jpg",
-                         "<option  value=", "</option>");
+                         "<option  value=", "</option>", mau);
     singleTagShouldParse("http://www.example.com/web_link.jpg",
-                         "<option a=b value=", "</option>");
+                         "<option a=b value=", "</option>", mau);
   }
 
   public void testParsesOptionNegative() throws IOException {
@@ -175,7 +175,7 @@ public class TestGoslingHtmlParser extends LockssTestCase {
     mcu.setContent(source);
 
 //     parser.parseForUrls(mcu, cb);
-    parser.parseForUrls(new StringReader(source), startUrl, cb);
+    parser.parseForUrls(new StringReader(source), startUrl, null, cb);
 
     Set expected = SetUtil.set(url);
     assertEquals(expected, cb.getFoundUrls());
@@ -227,17 +227,32 @@ public class TestGoslingHtmlParser extends LockssTestCase {
   private void singleTagShouldParse(String url,
  				    String startTag, String endTag)
       throws IOException {
-    singleTagParse(url, startTag, endTag, true);
+    singleTagShouldParse(url, startTag, endTag, null);
+  }
+
+  private void singleTagShouldParse(String url,
+ 				    String startTag, String endTag,
+ 				    ArchivalUnit au)
+      throws IOException {
+    singleTagParse(url, startTag, endTag, au, true);
   }
 
   private void singleTagShouldNotParse(String url,
- 				    String startTag, String endTag)
+                                       String startTag, String endTag)
       throws IOException {
-    singleTagParse(url, startTag, endTag, false);
+    singleTagShouldNotParse(url, startTag, endTag, null);
+  }
+
+  private void singleTagShouldNotParse(String url,
+                                       String startTag, String endTag,
+                                       ArchivalUnit au)
+      throws IOException {
+    singleTagParse(url, startTag, endTag, au, false);
   }
 
   private void singleTagParse(String url, String startTag,
-			      String endTag, boolean shouldParse)
+			      String endTag, ArchivalUnit au,
+			      boolean shouldParse)
   throws IOException {
     MockCachedUrl mcu = new MockCachedUrl("http://www.example.com");
     String content = makeContent(url, startTag, endTag);
@@ -246,7 +261,7 @@ public class TestGoslingHtmlParser extends LockssTestCase {
     MyFoundUrlCallback cb = new MyFoundUrlCallback();
 //     parser.parseForUrls(mcu, cb);
     parser.parseForUrls(new StringReader(content),
-			"http://www.example.com", cb);
+			"http://www.example.com", au, cb);
 
     if (shouldParse) {
       Set expected = SetUtil.set(url);
@@ -445,7 +460,7 @@ public class TestGoslingHtmlParser extends LockssTestCase {
     Properties p = new Properties();
     p.setProperty(GoslingHtmlParser.PARAM_PARSE_JS, "true");
     ConfigurationUtil.setCurrentConfigFromProps(p);
-    parser = new GoslingHtmlParser(new MockArchivalUnit());
+    parser = new GoslingHtmlParser();
 
     String url= "http://www.example.com/link3.html";
     String url2 = "http://www.example.com/link2.html";
@@ -736,7 +751,7 @@ public class TestGoslingHtmlParser extends LockssTestCase {
 //     parser.parseForUrls(mcu, cb);
     cb.reset();
     parser.parseForUrls(new StringReader(source),
-			"http://www.example.com", cb);
+			"http://www.example.com", null, cb);
 
     return cb.getFoundUrls();
   }
@@ -757,7 +772,7 @@ public class TestGoslingHtmlParser extends LockssTestCase {
 
 //     parser.parseForUrls(mcu, cb);
     parser.parseForUrls(new StringReader(source),
-			"http://www.example.com", cb);
+			"http://www.example.com", null, cb);
 
     Set expected = SetUtil.set(url1, url2);
     assertEquals(expected, cb.getFoundUrls());
@@ -781,7 +796,7 @@ public class TestGoslingHtmlParser extends LockssTestCase {
 
 //     parser.parseForUrls(mcu, cb);
     parser.parseForUrls(new StringReader(source),
-			"http://www.example.com/blah/", cb);
+			"http://www.example.com/blah/", null, cb);
 
     Set expected = SetUtil.set(url1, url2, url3);
     assertEquals(expected, cb.getFoundUrls());

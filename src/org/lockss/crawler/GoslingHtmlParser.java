@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingHtmlParser.java,v 1.42 2006-11-09 23:16:52 troberts Exp $
+ * $Id: GoslingHtmlParser.java,v 1.43 2006-11-10 00:20:59 troberts Exp $
  */
 
 /*
@@ -147,15 +147,11 @@ public class GoslingHtmlParser implements ContentParser {
 
   private boolean malformedBaseUrl = false;
 
-  private ArchivalUnit au;
-
-  public GoslingHtmlParser(ArchivalUnit au) {
+  public GoslingHtmlParser() {
     ringCapacity = CurrentConfig.getIntParam(PARAM_BUFFER_CAPACITY,
 					     DEFAULT_BUFFER_CAPACITY);
     shouldParseJavaScript =
       CurrentConfig.getBooleanParam(PARAM_PARSE_JS, DEFAULT_PARSE_JS);
-
-    this.au = au;
   }
 
 //  public GoslingHtmlParser(int ringCapacity) {
@@ -169,7 +165,7 @@ public class GoslingHtmlParser implements ContentParser {
    * @throws IOException
    */
   public void parseForUrls(Reader reader, String srcUrl,
-			   ContentParser.FoundUrlCallback cb)
+			   ArchivalUnit au, ContentParser.FoundUrlCallback cb)
       throws IOException {
     if (reader == null) {
       throw new IllegalArgumentException("Called with null reader");
@@ -189,7 +185,7 @@ public class GoslingHtmlParser implements ContentParser {
 
       if (isTrace) logger.debug2("Extracting urls from " + srcUrl);
       String nextUrl = null;
-      while ((nextUrl = extractNextLink(ring)) != null) {
+      while ((nextUrl = extractNextLink(ring, au)) != null) {
 	if (isTrace) {
 	  logger.debug2("Extracted "+nextUrl);
 	}
@@ -217,7 +213,7 @@ public class GoslingHtmlParser implements ContentParser {
    * @throws IOException
    * @throws MalformedURLException
    */
-  protected String extractNextLink(CharRing ring)
+  protected String extractNextLink(CharRing ring, ArchivalUnit au)
       throws IOException, MalformedURLException {
     while (refill()) {
       //skip to the next tag
@@ -282,7 +278,7 @@ public class GoslingHtmlParser implements ContentParser {
 	  }
 
 	  if (tagBuf != null && tagBuf.length() >= MIN_TAG_LENGTH) {
-	    String nextLink = parseLink(tagBuf);
+	    String nextLink = parseLink(tagBuf, au);
 	    if (nextLink != null) {
 	      return nextLink;
 	    }
@@ -327,7 +323,7 @@ public class GoslingHtmlParser implements ContentParser {
   /**
    * Method overridden in some sub classes, so change with care
    */
-  protected String extractLinkFromTag(StringBuffer link) {
+  protected String extractLinkFromTag(StringBuffer link, ArchivalUnit au) {
     //String returnStr = null;
     switch (link.charAt(0)) {
       case 'a': //<a href=http://www.yahoo.com>
@@ -355,17 +351,12 @@ public class GoslingHtmlParser implements ContentParser {
           return ( getAttributeValue(CODEBASE, link) );
         }
         if (beginsWithTag(link, OPTIONTAG)) {
-          TypedEntryMap pMap = au.getProperties();
-          if (pMap.containsKey("html-parser-select-attrs")) {
-            Collection optionAttributes =
-              pMap.getCollection("html-parser-select-attrs");
-            if (optionAttributes != null) {
-              Iterator it = optionAttributes.iterator();
-              String optionAttribute = (String)it.next();
-              return ( getAttributeValue(optionAttribute, link) );
-            }
+          String optionAttribute = getOptionAttribute(au);
+          if (optionAttribute != null) {
+            return (getAttributeValue(optionAttribute, link));
           }
         }
+
         break;
       case 'i': //<img src=image.gif>
       case 'I':
@@ -434,6 +425,21 @@ public class GoslingHtmlParser implements ContentParser {
     return null;
   }
 
+  private String getOptionAttribute(ArchivalUnit au) {
+    if (au != null) {
+      TypedEntryMap pMap = au.getProperties();
+      if (pMap.containsKey("html-parser-select-attrs")) {
+	Collection optionAttributes =
+	  pMap.getCollection("html-parser-select-attrs");
+	if (optionAttributes != null) {
+	  Iterator it = optionAttributes.iterator();
+	  return (String)it.next();
+	}
+      }
+    }
+    return null;
+  }
+
   /**
    * Method to take a link tag, and parse out the URL it points to, returning
    * a string representation of the url (lifted and rewritten from the Gosling
@@ -444,9 +450,9 @@ public class GoslingHtmlParser implements ContentParser {
    * @return string representation of the url from the link tag
    * @throws MalformedURLException
    */
-  protected String parseLink(StringBuffer link)
+  protected String parseLink(StringBuffer link, ArchivalUnit au)
       throws MalformedURLException {
-    String returnStr = extractLinkFromTag(link);
+    String returnStr = extractLinkFromTag(link, au);
 
     if (returnStr != null) {
       if (isTrace) {
