@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.86 2006-07-17 07:13:38 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.87 2006-11-10 07:26:09 tlipkis Exp $
  */
 
 /*
@@ -76,6 +76,10 @@ public abstract class LockssServlet extends HttpServlet
     Configuration.PREFIX + "ui.maxUploadFileSize";
   static final int DEFAULT_MAX_UPLOAD_FILE_SIZE = 500000;
 
+  /** The warning string to display when the UI is disabled. */
+  static final String PARAM_UI_WARNING =
+    Configuration.PREFIX + "ui.warning";
+
   // Name given to form element whose value is the action that should be
   // performed when the form is submitted.  (Not always the submit button.)
   public static final String ACTION_TAG = "lockssAction";
@@ -125,12 +129,14 @@ public abstract class LockssServlet extends HttpServlet
   protected static final ServletDescr SERVLET_BATCH_AU_CONFIG =
     new ServletDescr(BatchAuConfig.class,
                      "Journal Configuration",
-                     ServletDescr.IN_NAV | ServletDescr.IN_UIHOME,
+                     ServletDescr.IN_NAV | ServletDescr.IN_UIHOME |
+		     ServletDescr.DISALLOW_IF_UI_WARNING,
                      "Add or remove titles from this cache");
   protected static final ServletDescr SERVLET_AU_CONFIG =
     new ServletDescr(AuConfig.class,
                      "Manual Journal Configuration",
-		     ServletDescr.NOT_IN_NAV | ServletDescr.IN_UIHOME,
+		     ServletDescr.NOT_IN_NAV | ServletDescr.IN_UIHOME |
+		     ServletDescr.DISALLOW_IF_UI_WARNING,
                      "Manually edit single AU configuration");
   protected static final ServletDescr SERVLET_ADMIN_ACCESS_CONTROL =
     new ServletDescr(AdminIpAccess.class,
@@ -316,8 +322,15 @@ public abstract class LockssServlet extends HttpServlet
       if (clientAddr == null) {
 	clientAddr = getLocalIPAddr();
       }
-
       submitButtonNumber = 0;
+
+      if (myServletDescr().isFlagSet(ServletDescr.DISALLOW_IF_UI_WARNING) &&
+	  CurrentConfig.getParam(PARAM_UI_WARNING) != null) {
+	Page page = newPage();
+	layoutFooter(page);
+	page.write(resp.getWriter());
+	return;
+      }
       lockssHandleRequest();
     } catch (ServletException e) {
       log.error("Servlet threw", e);
@@ -689,6 +702,14 @@ public abstract class LockssServlet extends HttpServlet
                              getMachineName(clientAddr),
                              getLockssApp().getStartDate(),
                              inNavIterator);
+    String warnMsg = CurrentConfig.getParam(PARAM_UI_WARNING);
+    if (warnMsg != null) {
+      Composite warning = new Composite();
+      warning.add("<center><font color=red size=+1>");
+      warning.add(warnMsg);
+      warning.add("</font></center><br>");
+      page.add(warning);
+    }
     return page;
   }
 
@@ -896,21 +917,33 @@ public abstract class LockssServlet extends HttpServlet
     return jstext;
   }
 
-  /** Display a "The cache isn't ready yet, come back later" message if
-   *  not all of the AUs have started yet.
+  /** Display a message in lieu of the normal page
    */
-  protected void displayNotStarted() throws IOException {
+  protected void displayMsgInLieuOfPage(String msg) throws IOException {
     // TODO: Look at HTML
     Page page = newPage();
     Composite warning = new Composite();
-    warning.add("<center><font color=red size=+1>");
-    warning.add("This LOCKSS Cache is still starting.  Please ");
-    warning.add(srvLink(myServletDescr(), "try again", getParamsAsProps()));
-    warning.add(" in a moment.");
-    warning.add("</font></center><br>");
+    warning.add(msg);
+    warning.add("<br>");
     page.add(warning);
     layoutFooter(page);
     page.write(resp.getWriter());
+  }
+
+  /** Display a warning in red, in lieu of the normal page
+   */
+  protected void displayWarningInLieuOfPage(String msg) throws IOException {
+    displayMsgInLieuOfPage("<center><font color=red size=+1>" + msg +
+			   "</font></center>");
+  }
+
+  /** Display "The cache isn't ready yet, come back later"
+   */
+  protected void displayNotStarted() throws IOException {
+    displayWarningInLieuOfPage("This LOCKSS Cache is still starting.  Please "
+			       + srvLink(myServletDescr(), "try again",
+					 getParamsAsProps())
+			       + " in a moment.");
   }
 
   public MultiPartRequest getMultiPartRequest()

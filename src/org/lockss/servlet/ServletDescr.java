@@ -1,5 +1,5 @@
 /*
- * $Id: ServletDescr.java,v 1.8 2006-05-23 02:59:18 tlipkis Exp $
+ * $Id: ServletDescr.java,v 1.9 2006-11-10 07:26:09 tlipkis Exp $
  */
 
 /*
@@ -56,6 +56,8 @@ public class ServletDescr {
   public static final int LARGE_LOGO = 0x08; // use large LOCKSS logo
   public static final int DEBUG_ONLY = 0x10; // debug user only
   public static final int NAME_IS_URL = 0x20; // debug user only
+  public static final int DISALLOW_IF_UI_WARNING = 0x40;
+
   public static final int STATUS = ON_CLIENT | PER_CLIENT; // shorthand
 
   public static final int IN_NAV = 0x1000;
@@ -194,7 +196,7 @@ public class ServletDescr {
     return isFlagSet(IN_PROXYANDCONTENT);
   }
 
-  private boolean isFlagSet(int flag) {
+  boolean isFlagSet(int flag) {
     return (flags & flag) != 0;
   }
 
