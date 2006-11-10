@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.50 2006-11-03 23:59:52 troberts Exp $
+ * $Id: FollowLinkCrawler.java,v 1.51 2006-11-10 00:20:35 troberts Exp $
  */
 
 /*
@@ -383,7 +383,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	    //IOException if the CU can't be read
 	    parser.parseForUrls(cu.openForReading(),
 				PluginUtil.getBaseUrl(cu),
-				new MyFoundUrlCallback(parsedPages,
+				au, new MyFoundUrlCallback(parsedPages,
 						       extractedUrls, au));
 	    if (extractedUrls.remove(url)){
 	      crawlStatus.removePendingUrl(url);

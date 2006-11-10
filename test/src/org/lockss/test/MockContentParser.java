@@ -1,5 +1,5 @@
 /*
- * $Id: MockContentParser.java,v 1.5 2006-11-02 04:18:38 tlipkis Exp $
+ * $Id: MockContentParser.java,v 1.6 2006-11-10 00:20:35 troberts Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ public class MockContentParser implements ContentParser {
   }
 
   public void parseForUrls(Reader reader, String srcUrl,
-			   ContentParser.FoundUrlCallback cb) {
+			   ArchivalUnit au, ContentParser.FoundUrlCallback cb) {
     srcUrls.add(srcUrl);
     if (urlToReturn != null) {
       cb.foundUrl(urlToReturn);

@@ -1,5 +1,5 @@
 /*
- * $Id: BlackbirdRamParser.java,v 1.3 2005-09-30 22:25:01 thib_gc Exp $
+ * $Id: BlackbirdRamParser.java,v 1.4 2006-11-10 00:20:35 troberts Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.plugin.blackbird;
 import java.io.*;
 
 import org.lockss.crawler.*;
+import org.lockss.plugin.ArchivalUnit;
 
 public class BlackbirdRamParser implements ContentParser {
   RamParser parser = null;
@@ -50,8 +51,8 @@ public class BlackbirdRamParser implements ContentParser {
 //   }
 
   public void parseForUrls(Reader reader, String srcUrl,
-			   ContentParser.FoundUrlCallback cb)
+			   ArchivalUnit au, ContentParser.FoundUrlCallback cb)
       throws IOException {
-    parser.parseForUrls(reader, srcUrl, cb);
+    parser.parseForUrls(reader, srcUrl, au, cb);
   }
 }
