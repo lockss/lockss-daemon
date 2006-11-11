@@ -18,10 +18,15 @@ fi
 for i in 1 2 3 4 ; do
     cd test$i
     if [ "$1" = "start" ] ; then
+        if [ -f jvm_args ] ; then
+	    ARGS=`cat jvm_args`
+	  else
+	    ARGS=""
+	fi
         if [ -f dpid ] ; then
 	    echo daemon already running in `pwd`
 	else
-            ( ../rundaemon ; rm -f dpid ) &
+            ( ../rundaemon $ARGS; rm -f dpid ) &
 	    echo started in `pwd`
 	fi
     elif [ "$1" = "clean" ] ; then

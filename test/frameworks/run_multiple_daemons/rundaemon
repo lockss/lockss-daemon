@@ -14,8 +14,12 @@ export CLASSPATH
 
 echo running in `pwd` at `date`
 #echo CLASSPATH=$CLASSPATH
-# for large caches, need to pass "-ms4m -mx64m" to java
-java -mx128m -Dorg.lockss.defaultLogLevel=DEBUG org.lockss.app.LockssDaemon ${PROP_URL_LIST} >>test.out 2>&1 &
+if [ -z "$*" ]; then
+  JAVA_ARGS="-Xmx128m -Dorg.lockss.defaultLogLevel=DEBUG"
+ else
+  JAVA_ARGS="$@"
+fi
+java $JAVA_ARGS org.lockss.app.LockssDaemon ${PROP_URL_LIST} >>test.out 2>&1 &
 echo $! >dpid
 wait `cat dpid`
 echo stopped with status $? in `pwd` at `date`
