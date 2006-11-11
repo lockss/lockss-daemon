@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.47 2006-11-06 21:13:26 smorabito Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.48 2006-11-11 06:57:03 tlipkis Exp $
  */
 
 /*
@@ -78,6 +78,7 @@ public class ArchivalUnitStatus
   public void startService() {
     super.startService();
 
+    LockssDaemon theDaemon = getDaemon();
     StatusService statusServ = theDaemon.getStatusService();
     statusServ.registerStatusAccessor(SERVICE_STATUS_TABLE_NAME,
                                       new AuSummary(theDaemon));
@@ -94,6 +95,7 @@ public class ArchivalUnitStatus
 
   public void stopService() {
     // unregister our status accessors
+    LockssDaemon theDaemon = getDaemon();
     StatusService statusServ = theDaemon.getStatusService();
     statusServ.unregisterStatusAccessor(SERVICE_STATUS_TABLE_NAME);
     statusServ.unregisterStatusAccessor(AU_STATUS_TABLE_NAME);
@@ -351,7 +353,7 @@ public class ArchivalUnitStatus
     private Map makeRow(ArchivalUnit au) {
       HashMap rowMap = new HashMap();
       rowMap.put("AuId", au.getAuId());
-      rowMap.put("AuName", au.getName());
+      rowMap.put("AuName", AuStatus.makeAuRef(au.getName(), au.getAuId()));
       return rowMap;
     }
 
@@ -615,7 +617,7 @@ public class ArchivalUnitStatus
                                         new Long(AuUtil.getAuContentSize(au))),
             new StatusTable.SummaryInfo("Disk Usage (MB)",
 					ColumnDescriptor.TYPE_FLOAT,
-                                        new Float(AuUtil.getAuContentSize(au) /
+                                        new Float(AuUtil.getAuDiskUsage(au) /
 						  (float)(1024 * 1024))),
 	    new StatusTable.SummaryInfo("Status",
                                         ColumnDescriptor.TYPE_STRING,
