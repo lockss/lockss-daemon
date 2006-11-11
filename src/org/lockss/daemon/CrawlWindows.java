@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlWindows.java,v 1.11 2006-07-06 17:38:55 thib_gc Exp $
+ * $Id: CrawlWindows.java,v 1.12 2006-11-11 06:52:53 tlipkis Exp $
  */
 
 /*
@@ -87,10 +87,10 @@ public class CrawlWindows {
 
     /**
      * Sets the window's {@link TimeZone}.  Null defaults to the system time
-     * zone.
+     * zone.  Used only by tests.
      * @param windowTZ the new TimeZone
      */
-    public void setWindowTimeZone(TimeZone windowTZ) {
+    void setWindowTimeZone(TimeZone windowTZ) {
       if (windowTZ==null) {
         timeZone = TimeZone.getDefault();
       } else {
@@ -106,8 +106,10 @@ public class CrawlWindows {
 
     public boolean canCrawl(Date date) {
       // set to the date to test
-      windowCal.setTime(date);
-      return isMatch(windowCal);
+      synchronized (windowCal) {
+	windowCal.setTime(date);
+	return isMatch(windowCal);
+      }
     }
 
     /**
@@ -435,8 +437,8 @@ public class CrawlWindows {
    * @param end the end Date
    * @return a list of TimeIntervals
    */
-  public static List getCrawlIntervals(CrawlWindow window, Date start,
-                                       Date end) {
+  public static synchronized List getCrawlIntervals(CrawlWindow window,
+						    Date start, Date end) {
     List intervals = new ArrayList();
     boolean isOpen = false;
     Calendar startCal = Calendar.getInstance();

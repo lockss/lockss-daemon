@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlWindow.java,v 1.5 2005-10-19 16:52:54 thib_gc Exp $
+ * $Id: CrawlWindow.java,v 1.6 2006-11-11 06:52:53 tlipkis Exp $
  */
 
 /*
@@ -39,7 +39,8 @@ import org.lockss.util.LockssSerializable;
 /**
  * Interface for crawl windows, used to determine whether a crawl should be
  * permitted.  Plugins may implement this or use one of the supplied
- * implementations in {@link CrawlWindows}.
+ * implementations in {@link CrawlWindows}.  CrawlWindow implementations
+ * must be thread-safe (and stateless).
  */
 public interface CrawlWindow extends LockssSerializable {
 
