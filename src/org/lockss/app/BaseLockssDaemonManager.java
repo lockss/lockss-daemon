@@ -1,5 +1,5 @@
 /*
- * $Id: BaseLockssDaemonManager.java,v 1.2 2005-09-22 18:36:13 thib_gc Exp $
+ * $Id: BaseLockssDaemonManager.java,v 1.3 2006-11-11 06:56:30 tlipkis Exp $
  */
 
 /*
@@ -38,8 +38,6 @@ package org.lockss.app;
 
 public abstract class BaseLockssDaemonManager extends BaseLockssManager {
 
-  protected LockssDaemon theDaemon = null;
-
   /**
    * Calls {@link #initService(LockssDaemon)}, so that daemon-specific
    * managers don't have to cast their <code>app</code> arg.  Such managers
@@ -56,13 +54,12 @@ public abstract class BaseLockssDaemonManager extends BaseLockssManager {
   }
 
   public void initService(LockssDaemon daemon) throws LockssAppException {
-    theDaemon = daemon;
     super.initService(daemon);
   }
 
   /** Return the daemon instance in which this manager is running */
   public LockssDaemon getDaemon() {
-    return theDaemon;
+    return (LockssDaemon)theApp;
   }
 
   /**

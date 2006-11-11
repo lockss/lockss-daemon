@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.72 2006-11-09 01:44:54 thib_gc Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.73 2006-11-11 06:56:29 tlipkis Exp $
  */
 
 /*
@@ -638,7 +638,7 @@ public class HistoryRepositoryImpl
     // XXX This is now here as a model for possible future conversions
     // XXX This version has the problem that if the au_state file doesn't
     // exist under either name, the recursion happens at every startup.
-    if ((theDaemon==null) || (theDaemon.getPluginManager()==null)) {
+    if ((getDaemon()==null) || (getDaemon().getPluginManager()==null)) {
       // abort if null, for test code
       return;
     }
@@ -831,9 +831,10 @@ public class HistoryRepositoryImpl
    */
   protected ObjectSerializer makeObjectSerializer(Class cla) {
     // CASTOR: Remove parameter; return an XStreamSerializer
-    CXSerializer serializer = new CXSerializer(theDaemon,
-                                               CastorSerializer.getMapping(MAPPING_FILES),
-                                               cla);
+    CXSerializer serializer =
+      new CXSerializer(getDaemon(),
+		       CastorSerializer.getMapping(MAPPING_FILES),
+		       cla);
     serializer.setFailedDeserializationMode(CXSerializer.FAILED_DESERIALIZATION_RENAME);
     serializer.setCompatibilityMode(getCompatibilityMode());
     return serializer;

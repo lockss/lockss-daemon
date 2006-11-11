@@ -1,5 +1,5 @@
 /*
- * $Id: TestBasePlugin.java,v 1.12 2006-07-18 19:14:09 tlipkis Exp $
+ * $Id: TestBasePlugin.java,v 1.13 2006-11-11 06:56:29 tlipkis Exp $
  */
 
 /*
@@ -115,10 +115,68 @@ public class TestBasePlugin extends LockssTestCase {
     assertEquals("av222", tc.getAttributes().get("attr2"));
   }
 
+  public void testFilterRuleCaching() throws IOException {
+    MockFilterRule rule1 = new MockFilterRule();
+    rule1.setFilteredReader(new StringReader("rule1"));
+    MockFilterRule rule2 = new MockFilterRule();
+    rule2.setFilteredReader(new StringReader("rule2"));
+
+    assertNull(mbp.rule);
+    assertEquals(0, mbp.ruleCacheMiss);
+    assertNull(mbp.getFilterRule("test1"));
+    assertEquals(1, mbp.ruleCacheMiss);
+    mbp.rule = rule1;
+    assertNotNull(mbp.getFilterRule("test1"));
+    assertEquals(2, mbp.ruleCacheMiss);
+    mbp.rule = rule2;
+    assertNotNull(mbp.getFilterRule("test2"));
+    assertEquals(3, mbp.ruleCacheMiss);
+
+    rule1 = (MockFilterRule)mbp.getFilterRule("test2");
+    assertEquals(3, mbp.ruleCacheMiss);
+    assertEquals("rule2", StringUtil.fromReader(
+        rule1.createFilteredReader(null)));
+    rule2 = (MockFilterRule)mbp.getFilterRule("test1");
+    assertEquals(3, mbp.ruleCacheMiss);
+    assertEquals("rule1", StringUtil.fromReader(
+        rule2.createFilteredReader(null)));
+  }
+
+  public void testFilterFactoryCaching() throws IOException {
+    MockFilterFactory factory1 = new MockFilterFactory();
+    factory1.setFilteredInputStream(new StringInputStream("factory1"));
+    MockFilterFactory factory2 = new MockFilterFactory();
+    factory2.setFilteredInputStream(new StringInputStream("factory2"));
+
+    assertNull(mbp.factory);
+    assertEquals(0, mbp.factoryCacheMiss);
+    assertNull(mbp.getFilterFactory("test1"));
+    assertEquals(1, mbp.factoryCacheMiss);
+    mbp.factory = factory1;
+    assertNotNull(mbp.getFilterFactory("test1"));
+    assertEquals(2, mbp.factoryCacheMiss);
+    mbp.factory = factory2;
+    assertNotNull(mbp.getFilterFactory("test2"));
+    assertEquals(3, mbp.factoryCacheMiss);
+
+    factory1 = (MockFilterFactory)mbp.getFilterFactory("test2");
+    assertEquals(3, mbp.factoryCacheMiss);
+    assertEquals("factory2", StringUtil.fromInputStream(
+        factory1.createFilteredInputStream(null, null, null)));
+    factory2 = (MockFilterFactory)mbp.getFilterFactory("test1");
+    assertEquals(3, mbp.factoryCacheMiss);
+    assertEquals("factory1", StringUtil.fromInputStream(
+        factory2.createFilteredInputStream(null, null, null)));
+  }
+
   private static class MyMockBasePlugin extends BasePlugin {
     String name;
     String version;
     List configDescrs;
+    int ruleCacheMiss = 0;
+    int factoryCacheMiss = 0;
+    FilterRule rule = null;
+    FilterFactory factory = null;
 
     public MyMockBasePlugin() {
       super();
@@ -156,5 +214,16 @@ public class TestBasePlugin extends LockssTestCase {
     public List getLocalAuConfigDescrs() {
       return configDescrs;
     }
+
+    protected FilterRule constructFilterRule(String mimeType) {
+      ruleCacheMiss++;
+      return rule;
+    }
+
+    protected FilterFactory constructFilterFactory(String mimeType) {
+      factoryCacheMiss++;
+      return factory;
+    }
+
   }
 }

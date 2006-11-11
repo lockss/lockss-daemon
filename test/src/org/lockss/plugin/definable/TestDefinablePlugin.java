@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinablePlugin.java,v 1.12 2006-10-31 07:01:06 thib_gc Exp $
+ * $Id: TestDefinablePlugin.java,v 1.13 2006-11-11 06:56:29 tlipkis Exp $
  */
 
 /*
@@ -35,9 +35,9 @@ import java.util.*;
 
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.*;
-import org.lockss.daemon.ConfigParamDescr;
-import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.base.BaseArchivalUnit;
+import org.lockss.daemon.*;
+import org.lockss.plugin.*;
+import org.lockss.plugin.base.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.HttpResultMap;
@@ -52,10 +52,13 @@ public class TestDefinablePlugin extends LockssTestCase {
   static final String DEFAULT_PLUGIN_VERSION = "1";
 
   private DefinablePlugin definablePlugin = null;
+  ExternalizableMap defMap;
 
   protected void setUp() throws Exception {
     super.setUp();
     definablePlugin = new DefinablePlugin();
+    defMap = new ExternalizableMap();
+    definablePlugin.initPlugin(getMockLockssDaemon(), defMap);
   }
 
   protected void tearDown() throws Exception {
@@ -100,17 +103,13 @@ public class TestDefinablePlugin extends LockssTestCase {
 
   public void testGetPluginName() {
     // no name set
-    String expectedReturn = "DefinablePlugin";
-    String actualReturn = definablePlugin.getPluginName();
-    assertEquals("return value", expectedReturn, actualReturn);
+    assertEquals("Internal", definablePlugin.getPluginName());
 
     // set the name
-    expectedReturn = "TestPlugin";
-    ExternalizableMap map = definablePlugin.getDefinitionMap();
-    map.putString(DefinablePlugin.KEY_PLUGIN_NAME, expectedReturn);
-    actualReturn = definablePlugin.getPluginName();
-    assertEquals("return value", expectedReturn, actualReturn);
-
+    String expectedReturn = "TestPlugin";
+    defMap.putString(DefinablePlugin.KEY_PLUGIN_NAME, expectedReturn);
+    assertEquals("return value", expectedReturn,
+		 definablePlugin.getPluginName());
   }
 
   public void testGetVersion() {
@@ -130,43 +129,36 @@ public class TestDefinablePlugin extends LockssTestCase {
 
   public void testGetPluginId() throws Exception {
     LockssDaemon daemon = getMockLockssDaemon();
-    String extMapName = null;
-    try {
-      definablePlugin.initPlugin(daemon, extMapName);
-      assertNull(definablePlugin.mapName);
-    }
-    catch (Exception npe) {
-    }
-
-    extMapName = "org.lockss.test.MockConfigurablePlugin";
+    String extMapName = "org.lockss.test.MockConfigurablePlugin";
     definablePlugin.initPlugin(daemon, extMapName);
     assertEquals("org.lockss.test.MockConfigurablePlugin",
                  definablePlugin.getPluginId());
   }
 
   public void testInitPlugin() throws Exception {
+    definablePlugin = null; //   ensure don't accidentally use wrong veriable
     LockssDaemon daemon = getMockLockssDaemon();
-    String extMapName = null;
+    DefinablePlugin plug = new DefinablePlugin();
     try {
-      definablePlugin.initPlugin(daemon, extMapName);
-      assertNull(definablePlugin.mapName);
+      plug.initPlugin(daemon, (String)null);
+      fail("initPlugin(, null) Should throw");
     }
     catch (NullPointerException npe) {
     }
-    assertEquals("DefinablePlugin", definablePlugin.getPluginName());
+    assertEquals("DefinablePlugin", plug.getPluginName());
 
-    extMapName = "org.lockss.test.MockConfigurablePlugin";
-    definablePlugin.initPlugin(daemon, extMapName);
+    String extMapName = "org.lockss.test.MockConfigurablePlugin";
+    plug.initPlugin(daemon, extMapName);
     assertEquals("Absinthe Literary Review",
-                 definablePlugin.getPluginName());
-    assertEquals("1", definablePlugin.getVersion());
+                 plug.getPluginName());
+    assertEquals("1", plug.getVersion());
 
     // check some other field
     StringBuffer sb = new StringBuffer("\"%sarchives%02d.htm\", ");
     sb.append(ConfigParamDescr.BASE_URL.getKey());
     sb.append(", ");
     sb.append(ConfigParamDescr.YEAR.getKey());
-    ExternalizableMap map = definablePlugin.getDefinitionMap();
+    ExternalizableMap map = plug.getDefinitionMap();
     assertEquals(sb.toString(),
                  map.getString(DefinableArchivalUnit.KEY_AU_START_URL, null));
 
@@ -201,6 +193,37 @@ public class TestDefinablePlugin extends LockssTestCase {
     expected = Class.forName(name);
     found =( (HttpResultMap) plugin.getCacheResultMap()).getExceptionClass(404);
     assertEquals(expected, found);
+  }
+
+  public void testSiteNormalizeUrlNull() {
+    UrlNormalizer urlNormalizer = definablePlugin.getUrlNormalizer();
+    assertSame(BasePlugin.NullUrlNormalizer.INSTANCE, urlNormalizer);
+  }
+
+  public void testSiteNormalizeUrl() {
+    defMap.putString(ArchivalUnit.KEY_AU_URL_NORMALIZER,
+		     "org.lockss.plugin.definable.TestDefinablePlugin$MyNormalizer");
+    UrlNormalizer urlNormalizer = definablePlugin.getUrlNormalizer();
+    assertTrue(urlNormalizer instanceof org.lockss.plugin.definable.TestDefinablePlugin.MyNormalizer);
+  }
+
+  public void testMakeUrlNormalizerThrowsOnBadClass()
+      throws LockssRegexpException {
+    defMap.putString(ArchivalUnit.KEY_AU_URL_NORMALIZER,
+		     "org.lockss.bogus.FakeClass");
+
+    try {
+      UrlNormalizer urlNormalizer = definablePlugin.getUrlNormalizer();
+      fail("Should have thrown on a non-existant class");
+    } catch (DefinablePlugin.InvalidDefinitionException e){
+    }
+  }
+
+
+  public static class MyNormalizer implements UrlNormalizer {
+    public String normalizeUrl (String url, ArchivalUnit au) {
+      return "blah";
+    }
   }
 
 //   static public class MyMockHttpResultHandler implements CacheResultHandler {

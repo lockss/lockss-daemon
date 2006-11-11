@@ -1,5 +1,5 @@
 /*
- * $Id: IcpManager.java,v 1.30 2006-05-15 21:47:01 thib_gc Exp $
+ * $Id: IcpManager.java,v 1.31 2006-11-11 06:56:30 tlipkis Exp $
  */
 
 /*
@@ -336,7 +336,7 @@ public class IcpManager
     if (   changedKeys.contains(PREFIX_ICP)
         || changedKeys.contains(PREFIX_PLATFORM)) {
       stopSocket();
-      if (theDaemon.isDaemonInited() && shouldIcpServerStart(newConfig)) {
+      if (getDaemon().isDaemonInited() && shouldIcpServerStart(newConfig)) {
         startSocket(newConfig);
       }
     }

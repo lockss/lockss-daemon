@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.26 2006-10-31 07:01:06 thib_gc Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.27 2006-11-11 06:56:29 tlipkis Exp $
  */
 
 /*
@@ -67,7 +67,8 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
                                 ConfigParamDescr.VOLUME_NUMBER);
 
     cp = new DefinablePlugin();
-    defMap = cp.getDefinitionMap();
+    defMap = new ExternalizableMap();
+    cp.initPlugin(getMockLockssDaemon(), defMap);
     cau = new DefinableArchivalUnit(cp, defMap);
     configMap = cau.getProperties();
     configMap.putString(DefinablePlugin.KEY_PLUGIN_NAME, PLUGIN_NAME);
@@ -435,87 +436,63 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 	       spec instanceof SpiderCrawlSpec);
   }
   */
-  public void testSiteNormalizeUrlNull() {
-    UrlNormalizer urlNormalizer = cau.makeUrlNormalizer();
-    assertNull(urlNormalizer);
+  public void testGetFilterRule() {
+    assertNull(cau.getFilterRule(null));
   }
 
-  public void testSiteNormalizeUrl() {
-    defMap.putString(ArchivalUnit.KEY_AU_URL_NORMALIZER,
-		  "org.lockss.plugin.definable.TestDefinableArchivalUnit$MyNormalizer");
-    UrlNormalizer urlNormalizer = cau.makeUrlNormalizer();
-    assertTrue(urlNormalizer instanceof org.lockss.plugin.definable.TestDefinableArchivalUnit.MyNormalizer);
-  }
-
-  public void testMakeUrlNormalizerThrowsOnBadClass()
-      throws LockssRegexpException {
-    defMap.putString(ArchivalUnit.KEY_AU_URL_NORMALIZER,
-		  "org.lockss.bogus.FakeClass");
-
-    try {
-      UrlNormalizer urlNormalizer = cau.makeUrlNormalizer();
-      fail("Should have thrown on a non-existant class");
-    } catch (DefinablePlugin.InvalidDefinitionException e){
-    }
-  }
-
-  public void testConstructFilterRule() {
-    assertNull(cau.constructFilterRule(null));
-  }
-
-  public void testConstructFilterRuleMimeType() {
+  public void testGetFilterRuleMimeType() {
     defMap.putString("text/html"+DefinableArchivalUnit.SUFFIX_FILTER_RULE,
 		     "org.lockss.plugin.definable.TestDefinableArchivalUnit$MyMockFilterRule");
-    assertTrue(cau.constructFilterRule("text/html") instanceof
+    assertTrue(cau.getFilterRule("text/html") instanceof
 	       org.lockss.plugin.definable.TestDefinableArchivalUnit.MyMockFilterRule);
   }
 
-  public void testConstructFilterRuleMimeTypeSpace() {
+  public void testGetFilterRuleMimeTypeSpace() {
     defMap.putString("text/html"+DefinableArchivalUnit.SUFFIX_FILTER_RULE,
 		     "org.lockss.plugin.definable.TestDefinableArchivalUnit$MyMockFilterRule");
-    assertTrue(cau.constructFilterRule(" text/html ") instanceof
+    assertTrue(cau.getFilterRule(" text/html ") instanceof
 	       org.lockss.plugin.definable.TestDefinableArchivalUnit.MyMockFilterRule);
   }
 
-  public void testConstructFilterRuleContentType() {
+  public void testGetFilterRuleContentType() {
     defMap.putString("text/html"+DefinableArchivalUnit.SUFFIX_FILTER_RULE,
 		     "org.lockss.plugin.definable.TestDefinableArchivalUnit$MyMockFilterRule");
-    assertTrue(cau.constructFilterRule("text/html ; random-char-set") instanceof
+    assertTrue(cau.getFilterRule("text/html ; random-char-set") instanceof
 	       org.lockss.plugin.definable.TestDefinableArchivalUnit.MyMockFilterRule);
   }
 
-  public void testConstructFilterRuleContentTypeSpace() {
+  public void testGetFilterRuleContentTypeSpace() {
     defMap.putString("text/html"+DefinableArchivalUnit.SUFFIX_FILTER_RULE,
 		     "org.lockss.plugin.definable.TestDefinableArchivalUnit$MyMockFilterRule");
-    assertTrue(cau.constructFilterRule(" text/html ; random-char-set") instanceof
+    assertTrue(cau.getFilterRule(" text/html ; random-char-set") instanceof
 	       org.lockss.plugin.definable.TestDefinableArchivalUnit.MyMockFilterRule);
   }
 
-  public void testConstructFilterFactoryMimeType() {
+  public void testGetFilterFactoryMimeType() {
     defMap.putString("text/html"+DefinableArchivalUnit.SUFFIX_FILTER_FACTORY,
 		     "org.lockss.plugin.definable.TestDefinableArchivalUnit$MyMockFilterFactory");
-    assertTrue(cau.constructFilterFactory("text/html") instanceof
+    assertTrue(cau.getFilterFactory("text/html") instanceof
 	       org.lockss.plugin.definable.TestDefinableArchivalUnit.MyMockFilterFactory);
   }
 
-  public void testConstructFilterFactoryMimeTypeSpace() {
+  public void testGetFilterFactoryMimeTypeSpace() {
     defMap.putString("text/html"+DefinableArchivalUnit.SUFFIX_FILTER_FACTORY,
 		     "org.lockss.plugin.definable.TestDefinableArchivalUnit$MyMockFilterFactory");
-    assertTrue(cau.constructFilterFactory(" text/html ") instanceof
+    assertTrue(cau.getFilterFactory(" text/html ") instanceof
 	       org.lockss.plugin.definable.TestDefinableArchivalUnit.MyMockFilterFactory);
   }
 
-  public void testConstructFilterFactoryContentType() {
+  public void testGetFilterFactoryContentType() {
     defMap.putString("text/html"+DefinableArchivalUnit.SUFFIX_FILTER_FACTORY,
 		     "org.lockss.plugin.definable.TestDefinableArchivalUnit$MyMockFilterFactory");
-    assertTrue(cau.constructFilterFactory("text/html ; random-char-set") instanceof
+    assertTrue(cau.getFilterFactory("text/html ; random-char-set") instanceof
 	       org.lockss.plugin.definable.TestDefinableArchivalUnit.MyMockFilterFactory);
   }
 
-  public void testConstructFilterFactoryContentTypeSpace() {
+  public void testGetFilterFactoryContentTypeSpace() {
     defMap.putString("text/html"+DefinableArchivalUnit.SUFFIX_FILTER_FACTORY,
 		     "org.lockss.plugin.definable.TestDefinableArchivalUnit$MyMockFilterFactory");
-    assertTrue(cau.constructFilterFactory(" text/html ; random-char-set") instanceof
+    assertTrue(cau.getFilterFactory(" text/html ; random-char-set") instanceof
 	       org.lockss.plugin.definable.TestDefinableArchivalUnit.MyMockFilterFactory);
   }
 
@@ -525,12 +502,6 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 
     public CrawlRule createCrawlRule(ArchivalUnit au) {
       return new PositiveCrawlRule();
-    }
-  }
-
-  public static class MyNormalizer implements UrlNormalizer {
-    public String normalizeUrl (String url, ArchivalUnit au) {
-      return "blah";
     }
   }
 

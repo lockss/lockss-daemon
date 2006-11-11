@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.209 2006-10-20 00:33:55 smorabito Exp $
+ * $Id: NodeManagerImpl.java,v 1.210 2006-11-11 06:56:29 tlipkis Exp $
  */
 
 /*
@@ -86,6 +86,7 @@ public class NodeManagerImpl
     super.startService();
     // gets all the managers
     if (logger.isDebug()) logger.debug("Starting: " + managedAu);
+    LockssDaemon theDaemon = getDaemon();
     nodeMgrMgr = theDaemon.getNodeManagerManager();
     historyRepo = theDaemon.getHistoryRepository(managedAu);
     lockssRepo = theDaemon.getLockssRepository(managedAu);
@@ -1580,7 +1581,7 @@ public class NodeManagerImpl
     damagedNodes.addToRepair(cus, urls);
 
     PollCookie cookie = new PollCookie(cus, pollKey, isNamePoll, urls, lock);
-    theDaemon.getCrawlManager().startRepair(managedAu, urls,
+    getDaemon().getCrawlManager().startRepair(managedAu, urls,
         new ContentRepairCallback(), cookie, lock);
   }
 
@@ -1590,7 +1591,7 @@ public class NodeManagerImpl
    * @throws IOException
    */
   public void deleteNode(CachedUrlSet cus) throws IOException {
-    LockssRepository repository = theDaemon.getLockssRepository(managedAu);
+    LockssRepository repository = getDaemon().getLockssRepository(managedAu);
     repository.deleteNode(cus.getUrl());
     NodeState extraState = getNodeState(cus);
     extraState.getCrawlState().type = CrawlState.NODE_DELETED;
@@ -1602,7 +1603,7 @@ public class NodeManagerImpl
    * @throws IOException
    */
   private void deactivateNode(CachedUrlSet cus) throws IOException {
-    LockssRepository repository = theDaemon.getLockssRepository(managedAu);
+    LockssRepository repository = getDaemon().getLockssRepository(managedAu);
     repository.deactivateNode(cus.getUrl());
   }
 
@@ -1773,7 +1774,7 @@ public class NodeManagerImpl
    * @param results Tallier
    */
   private void updateReputations(Tallier results) {
-    IdentityManager idManager = theDaemon.getIdentityManager();
+    IdentityManager idManager = getDaemon().getIdentityManager();
     Iterator voteIt = results.getPollVotes().iterator();
     int agreeChange = 0;
     int disagreeChange = 0;

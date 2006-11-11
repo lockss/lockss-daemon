@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.172 2006-11-09 23:01:00 smorabito Exp $
+ * $Id: PollManager.java,v 1.173 2006-11-11 06:56:30 tlipkis Exp $
  */
 
 /*
@@ -118,6 +118,7 @@ public class PollManager
     theTaskRunner = new PollRunner();
     
     // the services we use on an ongoing basis
+    LockssDaemon theDaemon = getDaemon();
     theIDManager = theDaemon.getIdentityManager();
     theHashService = theDaemon.getHashService();
     theAlertManager = theDaemon.getAlertManager();
@@ -168,7 +169,7 @@ public class PollManager
 	public void auDeleted(ArchivalUnit au) {
 	  cancelAuPolls(au);
 	}};
-    theDaemon.getPluginManager().registerAuEventHandler(auEventHandler);
+    getDaemon().getPluginManager().registerAuEventHandler(auEventHandler);
 
     // Maintain the state of V3 polls, since these do not use the V1 per-node
     // history mechanism.
@@ -184,11 +185,11 @@ public class PollManager
    */
   public void stopService() {
     if (auEventHandler != null) {
-      theDaemon.getPluginManager().unregisterAuEventHandler(auEventHandler);
+      getDaemon().getPluginManager().unregisterAuEventHandler(auEventHandler);
       auEventHandler = null;
     }
     // unregister our status
-    StatusService statusServ = theDaemon.getStatusService();
+    StatusService statusServ = getDaemon().getStatusService();
     statusServ.unregisterStatusAccessor(PollerStatus.MANAGER_STATUS_TABLE_NAME);
     statusServ.unregisterStatusAccessor(PollerStatus.POLL_STATUS_TABLE_NAME);
     statusServ.unregisterStatusAccessor(V3PollStatus.POLLER_STATUS_TABLE_NAME);
@@ -271,7 +272,7 @@ public class PollManager
 			   LcapMessage.getDefaultHashAlgorithm(),
                            null);
 	if (thePoll != null) {
-	  if (pollFact.callPoll(thePoll, theDaemon)) {
+	  if (pollFact.callPoll(thePoll, getDaemon())) {
 	    return thePoll;
 	  } else {
 	    theLog.debug("pollFact.callPoll() returned false");
@@ -388,7 +389,7 @@ public class PollManager
     tally.setActivityLock(lock);
     long expiration = 0;
     Deadline d;
-    NodeManager nm = theDaemon.getNodeManager(tally.getArchivalUnit());
+    NodeManager nm = getDaemon().getNodeManager(tally.getArchivalUnit());
     nm.startPoll(tally.getCachedUrlSet(), tally, true);
     if (replayNeeded) {
       theLog.debug2("starting replay of poll " + key);
@@ -528,7 +529,7 @@ public class PollManager
     theLog.debug("Making poll from: " + spec);
     // create the appropriate poll for the message type
     PollFactory pollFact = getPollFactory(spec);
-    ret_poll = pollFact.createPoll(spec, theDaemon,
+    ret_poll = pollFact.createPoll(spec, getDaemon(),
                                    orig, duration, hashAlg, msg);
 
     if (ret_poll == null) {
@@ -573,7 +574,7 @@ public class PollManager
         V1PollTally lastTally = (V1PollTally)tally;
         tally = lastTally.concatenateNameSubPollLists();
       }
-      NodeManager nm = theDaemon.getNodeManager(tally.getArchivalUnit());
+      NodeManager nm = getDaemon().getNodeManager(tally.getArchivalUnit());
       theLog.debug("handing poll results to node manager: " + tally);
       nm.updatePollResults(p.getCachedUrlSet(), tally);
       try {
@@ -740,7 +741,7 @@ public class PollManager
         // Add this poll dir to the serialized polls map.
         try {
           V3PollerSerializer pollSerializer =
-            new V3PollerSerializer(theDaemon, dirs[ix]);
+            new V3PollerSerializer(getDaemon(), dirs[ix]);
           PollerStateBean psb = pollSerializer.loadPollerState();
           // Check to see if this poll has expired.
           long now = TimeBase.nowMs();
@@ -775,7 +776,7 @@ public class PollManager
         theLog.info("Found serialized voter in file: " + voter);
         try {
           V3VoterSerializer voterSerializer =
-            new V3VoterSerializer(theDaemon, dirs[ix]);
+            new V3VoterSerializer(getDaemon(), dirs[ix]);
           VoterUserData vd = voterSerializer.loadVoterUserData();
           // Check to see if this poll has expired.
           long now = TimeBase.nowMs();
@@ -821,7 +822,7 @@ public class PollManager
       while (pollDirIter.hasNext()) {
         File dir = (File)pollDirIter.next();
         try {
-          V3Poller p = new V3Poller(theDaemon, dir);
+          V3Poller p = new V3Poller(getDaemon(), dir);
           addPoll(p);
           p.startPoll();
         } catch (PollSerializerException e) {
@@ -837,7 +838,7 @@ public class PollManager
       while (voterDirIter.hasNext()) {
         File dir = (File)voterDirIter.next();
         try {
-          V3Voter v = new V3Voter(theDaemon, dir);
+          V3Voter v = new V3Voter(getDaemon(), dir);
           addPoll(v);
           v.startPoll();
         } catch (PollSerializerException e) {

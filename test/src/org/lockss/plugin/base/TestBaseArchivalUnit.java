@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArchivalUnit.java,v 1.35 2006-10-31 07:01:07 thib_gc Exp $
+ * $Id: TestBaseArchivalUnit.java,v 1.36 2006-11-11 06:56:29 tlipkis Exp $
  */
 
 /*
@@ -462,18 +462,8 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     assertEquals("return value", expectedReturn, actualReturn);
   }
 
-  public void testConstructFilterRule() {
-    assertNull(mbau.getFilterRule("text/html"));
-    assertEquals(1, mbau.ruleCacheMiss);
-  }
-
   public void testGetFilterRule() {
     assertNull(mbau.getFilterRule("text/html"));
-  }
-
-  public void testConstructFilterFactory() {
-    assertNull(mbau.getFilterFactory("text/html"));
-    assertEquals(1, mbau.factoryCacheMiss);
   }
 
   public void testGetFilterFactory() {
@@ -705,65 +695,6 @@ public class TestBaseArchivalUnit extends LockssTestCase {
 	       instanceof org.lockss.crawler.GoslingHtmlParser);
   }
 
-  public void testGetContentParserReturnsSameGoslingHtmlParser() {
-    assertSame(mbau.getContentParser("text/html"),
-	       mbau.getContentParser("text/html"));
-  }
-
-  public void testFilterRuleCaching() throws IOException {
-    MockFilterRule rule1 = new MockFilterRule();
-    rule1.setFilteredReader(new StringReader("rule1"));
-    MockFilterRule rule2 = new MockFilterRule();
-    rule2.setFilteredReader(new StringReader("rule2"));
-
-    assertNull(mbau.rule);
-    assertEquals(0, mbau.ruleCacheMiss);
-    assertNull(mbau.getFilterRule("test1"));
-    assertEquals(1, mbau.ruleCacheMiss);
-    mbau.rule = rule1;
-    assertNotNull(mbau.getFilterRule("test1"));
-    assertEquals(2, mbau.ruleCacheMiss);
-    mbau.rule = rule2;
-    assertNotNull(mbau.getFilterRule("test2"));
-    assertEquals(3, mbau.ruleCacheMiss);
-
-    rule1 = (MockFilterRule)mbau.getFilterRule("test2");
-    assertEquals(3, mbau.ruleCacheMiss);
-    assertEquals("rule2", StringUtil.fromReader(
-        rule1.createFilteredReader(null)));
-    rule2 = (MockFilterRule)mbau.getFilterRule("test1");
-    assertEquals(3, mbau.ruleCacheMiss);
-    assertEquals("rule1", StringUtil.fromReader(
-        rule2.createFilteredReader(null)));
-  }
-
-  public void testFilterFactoryCaching() throws IOException {
-    MockFilterFactory factory1 = new MockFilterFactory();
-    factory1.setFilteredInputStream(new StringInputStream("factory1"));
-    MockFilterFactory factory2 = new MockFilterFactory();
-    factory2.setFilteredInputStream(new StringInputStream("factory2"));
-
-    assertNull(mbau.factory);
-    assertEquals(0, mbau.factoryCacheMiss);
-    assertNull(mbau.getFilterFactory("test1"));
-    assertEquals(1, mbau.factoryCacheMiss);
-    mbau.factory = factory1;
-    assertNotNull(mbau.getFilterFactory("test1"));
-    assertEquals(2, mbau.factoryCacheMiss);
-    mbau.factory = factory2;
-    assertNotNull(mbau.getFilterFactory("test2"));
-    assertEquals(3, mbau.factoryCacheMiss);
-
-    factory1 = (MockFilterFactory)mbau.getFilterFactory("test2");
-    assertEquals(3, mbau.factoryCacheMiss);
-    assertEquals("factory2", StringUtil.fromInputStream(
-        factory1.createFilteredInputStream(null, null, null)));
-    factory2 = (MockFilterFactory)mbau.getFilterFactory("test1");
-    assertEquals(3, mbau.factoryCacheMiss);
-    assertEquals("factory1", StringUtil.fromInputStream(
-        factory2.createFilteredInputStream(null, null, null)));
-  }
-
   TitleConfig makeTitleConfig() {
     ConfigParamDescr d1 = new ConfigParamDescr("key1");
     ConfigParamDescr d2 = new ConfigParamDescr("key2");
@@ -901,10 +832,6 @@ public class TestBaseArchivalUnit extends LockssTestCase {
   static class MyMockBaseArchivalUnit extends BaseArchivalUnit {
     private String auId = null;
     private String m_name = "MockBaseArchivalUnit";
-    int ruleCacheMiss = 0;
-    int factoryCacheMiss = 0;
-    FilterRule rule = null;
-    FilterFactory factory = null;
     private CrawlRule m_rules = null;
     private String m_startUrl ="http://www.example.com/index.html";
     private boolean setAuParams = false;
@@ -967,16 +894,6 @@ public class TestBaseArchivalUnit extends LockssTestCase {
 	paramMap.putLong(KEY_AU_FETCH_DELAY, 54321);
 	paramMap.putBoolean(KEY_AU_USE_CRAWL_WINDOW, false);
       }
-    }
-
-    protected FilterRule constructFilterRule(String mimeType) {
-      ruleCacheMiss++;
-      return rule;
-    }
-
-    protected FilterFactory constructFilterFactory(String mimeType) {
-      factoryCacheMiss++;
-      return factory;
     }
 
     public TitleConfig getTitleConfig() {

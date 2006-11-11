@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.106 2006-10-18 17:06:30 adriz Exp $
+ * $Id: CrawlManagerImpl.java,v 1.107 2006-11-11 06:56:30 tlipkis Exp $
  */
 
 /*
@@ -204,8 +204,8 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 
     cmStatus = new CrawlManagerStatus(histSize);
 
-    pluginMgr = theDaemon.getPluginManager();
-    StatusService statusServ = theDaemon.getStatusService();
+    pluginMgr = getDaemon().getPluginManager();
+    StatusService statusServ = getDaemon().getStatusService();
     statusServ.registerStatusAccessor(CRAWL_STATUS_TABLE_NAME,
 				      new CrawlManagerStatusAccessor(this));
     statusServ.registerStatusAccessor(CRAWL_URLS_STATUS_TABLE,
@@ -255,7 +255,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       auEventHandler = null;
     }
     // checkpoint here
-    StatusService statusServ = theDaemon.getStatusService();
+    StatusService statusServ = getDaemon().getStatusService();
     if (statusServ != null) {
       statusServ.unregisterStatusAccessor(CRAWL_STATUS_TABLE_NAME);
     }
@@ -486,7 +486,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   private Map getRepairLocks(ArchivalUnit au, Collection urlStrs,
                              ActivityRegulator.Lock mainLock) {
     Map locks = new HashMap();
-    ActivityRegulator ar = theDaemon.getActivityRegulator(au);
+    ActivityRegulator ar = getDaemon().getActivityRegulator(au);
     String mainCusUrl = "";
     if ((mainLock!=null) && (mainLock.getCachedUrlSet()!=null)) {
       mainCusUrl = mainLock.getCachedUrlSet().getUrl();
@@ -603,7 +603,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   }
 
   private ActivityRegulator.Lock getNewContentLock(ArchivalUnit au) {
-    ActivityRegulator ar = theDaemon.getActivityRegulator(au);
+    ActivityRegulator ar = getDaemon().getActivityRegulator(au);
     return ar.getAuActivityLock(ActivityRegulator.NEW_CONTENT_CRAWL,
 			      contentCrawlExpiration);
   }
@@ -854,7 +854,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 
   // Separate so can override for testing
   void waitUntilAusStarted() throws InterruptedException {
-    theDaemon.waitUntilAusStarted();
+    getDaemon().waitUntilAusStarted();
   }
 
   // Each invocation of startSomeCrawls() tries to fill queue with AUs that

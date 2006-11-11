@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.21 2006-10-31 17:53:44 thib_gc Exp $
+ * $Id: DefinablePlugin.java,v 1.22 2006-11-11 06:56:30 tlipkis Exp $
  */
 
 /*
@@ -36,8 +36,10 @@ import org.lockss.plugin.base.*;
 import org.lockss.plugin.*;
 import org.lockss.config.Configuration;
 import org.lockss.app.*;
+import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
+import org.lockss.plugin.definable.DefinableArchivalUnit.ConfigurableCrawlWindow;
 
 import java.util.*;
 import java.io.FileNotFoundException;
@@ -85,25 +87,49 @@ public class DefinablePlugin extends BasePlugin {
   protected CacheResultHandler resultHandler = null;
   protected ClassLoader classLoader;
   protected String loadedFrom;
+  protected CrawlWindow crawlWindow;
 
   public void initPlugin(LockssDaemon daemon, String extMapName)
       throws FileNotFoundException {
     initPlugin(daemon, extMapName, this.getClass().getClassLoader());
   }
 
+  // Used by tests
+  void initPlugin(LockssDaemon daemon, ExternalizableMap defMap)
+      throws FileNotFoundException {
+    initPlugin(daemon, defMap, this.getClass().getClassLoader());
+  }
+
   public void initPlugin(LockssDaemon daemon, String extMapName,
+			 ClassLoader loader)
+      throws FileNotFoundException {
+    // convert the plugin class name to an xml file name
+    String mapFile = extMapName.replace('.', '/') + MAP_SUFFIX;
+    // load the configuration map from jar file
+    ExternalizableMap defMap = new ExternalizableMap();
+    defMap.loadMapFromResource(mapFile, loader);
+    URL url = loader.getResource(mapFile);
+    if (url != null) {
+      loadedFrom = url.toString();
+    }
+    this.initPlugin(daemon, extMapName, defMap, loader);
+  }
+
+  // Used by tests
+  void initPlugin(LockssDaemon daemon,
+			 ExternalizableMap defMap,
+			 ClassLoader loader)
+      throws FileNotFoundException {
+    initPlugin(daemon, "Internal", defMap, loader);
+  }
+
+  public void initPlugin(LockssDaemon daemon, String extMapName,
+			 ExternalizableMap defMap,
 			 ClassLoader loader)
       throws FileNotFoundException {
     mapName = extMapName;
     this.classLoader = loader;
-    // convert the plugin class name to an xml file name
-    String mapFile = mapName.replace('.', '/') + MAP_SUFFIX;
-    // load the configuration map from jar file
-    definitionMap.loadMapFromResource(mapFile, classLoader);
-    URL url = classLoader.getResource(mapFile);
-    if (url != null) {
-      loadedFrom = url.toString();
-    }
+    this.definitionMap = defMap;
     // then call the overridden initializaton.
     super.initPlugin(daemon);
   }
@@ -112,9 +138,16 @@ public class DefinablePlugin extends BasePlugin {
     return loadedFrom;
   }
 
+  ClassLoader getClassLoader() {
+    return classLoader;
+  }
+
   public String getPluginName() {
-    String defaultName = getDefaultPluginName();
-    return definitionMap.getString(KEY_PLUGIN_NAME, defaultName);
+    if (definitionMap.containsKey(KEY_PLUGIN_NAME)) {
+      return definitionMap.getString(KEY_PLUGIN_NAME);
+    } else {
+      return getDefaultPluginName();
+    }
   }
 
   protected String getDefaultPluginName() {
@@ -147,7 +180,7 @@ public class DefinablePlugin extends BasePlugin {
   protected ArchivalUnit createAu0(Configuration auConfig)
       throws ArchivalUnit.ConfigurationException {
     DefinableArchivalUnit au =
-      new DefinableArchivalUnit(this, definitionMap, classLoader);
+      new DefinableArchivalUnit(this, definitionMap);
     au.setConfiguration(auConfig);
     return au;
   }
@@ -209,6 +242,76 @@ public class DefinablePlugin extends BasePlugin {
     }
   }
 
+  /** Create a CrawlWindow if necessary and return it.  The CrawlWindow
+   * must be thread-safe. */
+  protected CrawlWindow makeCrawlWindow() {
+    if (crawlWindow != null) {
+      return crawlWindow;
+    }
+    CrawlWindow window =
+      (CrawlWindow)definitionMap.getMapElement(DefinableArchivalUnit.KEY_AU_CRAWL_WINDOW_SER);
+    if (window == null) {
+      String window_class =
+	definitionMap.getString(DefinableArchivalUnit.KEY_AU_CRAWL_WINDOW,
+				null);
+      if (window_class != null) {
+	ConfigurableCrawlWindow ccw =
+	  (ConfigurableCrawlWindow) loadClass(window_class,
+					      ConfigurableCrawlWindow.class);
+	window = ccw.makeCrawlWindow();
+      }
+    }
+    crawlWindow = window;
+    return window;
+  }
+
+  protected UrlNormalizer getUrlNormalizer() {
+    if (urlNorm == null) {
+      String normalizerClass =
+	definitionMap.getString(DefinableArchivalUnit.KEY_AU_URL_NORMALIZER,
+				null);
+      if (normalizerClass != null) {
+	urlNorm =
+	  (UrlNormalizer)loadClass(normalizerClass, UrlNormalizer.class);
+      } else {
+	urlNorm = NullUrlNormalizer.INSTANCE;
+      }
+    }
+    return urlNorm;
+  }
+
+  protected FilterRule constructFilterRule(String contentType) {
+    String mimeType = HeaderUtil.getMimeTypeFromContentType(contentType);
+
+    Object filter_el =
+      definitionMap.getMapElement(mimeType +
+				  DefinableArchivalUnit.SUFFIX_FILTER_RULE);
+
+    if (filter_el instanceof String) {
+      log.debug("Loading filter "+filter_el);
+      return (FilterRule) loadClass( (String) filter_el, FilterRule.class);
+    }
+    else if (filter_el instanceof List) {
+      if ( ( (List) filter_el).size() > 0) {
+        return new DefinableFilterRule( (List) filter_el);
+      }
+    }
+    return super.constructFilterRule(mimeType);
+  }
+
+  protected FilterFactory constructFilterFactory(String contentType) {
+    String mimeType = HeaderUtil.getMimeTypeFromContentType(contentType);
+
+    Object filter_el =
+      definitionMap.getMapElement(mimeType +
+				  DefinableArchivalUnit.SUFFIX_FILTER_FACTORY);
+
+    if (filter_el instanceof String) {
+      log.debug("Loading filter "+filter_el);
+      return (FilterFactory)loadClass((String)filter_el, FilterFactory.class);
+    }
+    return super.constructFilterFactory(mimeType);
+  }
 
   public String getPluginId() {
     String className;
@@ -222,6 +325,36 @@ public class DefinablePlugin extends BasePlugin {
     return className;
   }
 
+
+  // ---------------------------------------------------------------------
+  //   CLASS LOADING SUPPORT ROUTINES
+  // ---------------------------------------------------------------------
+
+  Object loadClass(String className, Class loadedClass) {
+    Object obj = null;
+    try {
+      obj = Class.forName(className, true, classLoader).newInstance();
+    } catch (Exception ex) {
+      log.error("Could not load " + className, ex);
+      throw new
+	InvalidDefinitionException(getPluginName() + ": unable to create " +
+				   loadedClass + " from " + className, ex);
+    } catch (LinkageError le) {
+      log.error("Could not load " + className, le);
+      throw new
+	InvalidDefinitionException(getPluginName() + " unable to create " +
+				   loadedClass + " from " + className, le);
+    }
+    if (!loadedClass.isInstance(obj)) {
+      log.error(className + " is not a " + loadedClass.getName());
+      throw new
+	InvalidDefinitionException(getPluginName() + ": wrong class, " +
+				   className + " is " +
+				   obj.getClass().getName() +
+				   ", should be " + loadedClass);
+    }
+    return obj;
+  }
 
   public static class InvalidDefinitionException extends RuntimeException {
     public InvalidDefinitionException() {

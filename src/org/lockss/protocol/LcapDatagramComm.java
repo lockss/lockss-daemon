@@ -1,5 +1,5 @@
 /*
- * $Id: LcapDatagramComm.java,v 1.16 2006-03-02 19:45:00 tlipkis Exp $
+ * $Id: LcapDatagramComm.java,v 1.17 2006-11-11 06:56:30 tlipkis Exp $
  */
 
 /*
@@ -266,7 +266,7 @@ public class LcapDatagramComm
 
   void noCommAlert(String text) {
     try {
-      AlertManager alertMgr = theDaemon.getAlertManager();
+      AlertManager alertMgr = getDaemon().getAlertManager();
       alertMgr.raiseAlert(Alert.cacheAlert(Alert.CONFIGURATION_ERROR),
 			  "V1 LCAP comm not started.  " + text);
     } catch (Exception e) {

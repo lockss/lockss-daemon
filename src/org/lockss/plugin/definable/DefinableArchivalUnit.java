@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.49 2006-10-31 17:53:45 thib_gc Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.50 2006-11-11 06:56:30 tlipkis Exp $
  */
 
 /*
@@ -53,6 +53,8 @@ import org.lockss.oai.*;
  * @version 1.0
  */
 public class DefinableArchivalUnit extends BaseArchivalUnit {
+  static Logger log = Logger.getLogger("DefinableArchivalUnit");
+
   public static final String PREFIX_NUMERIC = "numeric_";
   public static final int DEFAULT_AU_CRAWL_DEPTH = 1;
   public static final String KEY_AU_NAME = "au_name";
@@ -73,11 +75,10 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 
   public static final String KEY_AU_LOGIN_PAGE_CHECKER = "au_login_page_checker";
 
-  protected ClassLoader classLoader;
-  protected ExternalizableMap definitionMap;
-  static Logger log = Logger.getLogger("DefinableArchivalUnit");
   public static final String RANGE_SUBSTITUTION_STRING = "(.*)";
   public static final String NUM_SUBSTITUTION_STRING = "(\\d+)";
+
+  protected ExternalizableMap definitionMap;
 
   protected DefinableArchivalUnit(Plugin myPlugin) {
     super(myPlugin);
@@ -85,18 +86,14 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
         "DefinableArchvialUnit requires DefinablePlugin for construction");
   }
 
-
   protected DefinableArchivalUnit(DefinablePlugin myPlugin,
                                   ExternalizableMap definitionMap) {
-    this(myPlugin, definitionMap, myPlugin.getClass().getClassLoader());
-  }
-
-  protected DefinableArchivalUnit(DefinablePlugin myPlugin,
-				  ExternalizableMap definitionMap,
-				  ClassLoader classLoader) {
     super(myPlugin);
     this.definitionMap = definitionMap;
-    this.classLoader = classLoader;
+  }
+
+  DefinablePlugin getDefinablePlugin() {
+    return (DefinablePlugin)plugin;
   }
 
   protected List getPermissionPages() {
@@ -267,60 +264,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
   }
 
   protected CrawlWindow makeCrawlWindow() {
-    CrawlWindow window = (CrawlWindow)definitionMap.getMapElement(KEY_AU_CRAWL_WINDOW_SER);
-    if (window != null) {
-      return window;
-    }
-
-    String window_class = definitionMap.getString(KEY_AU_CRAWL_WINDOW, null);
-    if (window_class != null) {
-      ConfigurableCrawlWindow ccw =
-          (ConfigurableCrawlWindow) loadClass(window_class,
-                                              ConfigurableCrawlWindow.class);
-      return ccw.makeCrawlWindow();
-    }
-
-    return null;
-  }
-
-  protected UrlNormalizer makeUrlNormalizer() {
-    UrlNormalizer normmalizer = null;
-    String normalizerClass = definitionMap.getString(KEY_AU_URL_NORMALIZER, null);
-    if (normalizerClass != null) {
-      normmalizer = (UrlNormalizer)loadClass(normalizerClass, UrlNormalizer.class);
-    }
-    return normmalizer;
-  }
-
-  protected FilterRule constructFilterRule(String contentType) {
-    String mimeType = HeaderUtil.getMimeTypeFromContentType(contentType);
-
-    Object filter_el =
-      definitionMap.getMapElement(mimeType + SUFFIX_FILTER_RULE);
-
-    if (filter_el instanceof String) {
-      log.debug("Loading filter "+filter_el);
-      return (FilterRule) loadClass( (String) filter_el, FilterRule.class);
-    }
-    else if (filter_el instanceof List) {
-      if ( ( (List) filter_el).size() > 0) {
-        return new DefinableFilterRule( (List) filter_el);
-      }
-    }
-    return super.constructFilterRule(mimeType);
-  }
-
-  protected FilterFactory constructFilterFactory(String contentType) {
-    String mimeType = HeaderUtil.getMimeTypeFromContentType(contentType);
-
-    Object filter_el =
-      definitionMap.getMapElement(mimeType + SUFFIX_FILTER_FACTORY);
-
-    if (filter_el instanceof String) {
-      log.debug("Loading filter "+filter_el);
-      return (FilterFactory)loadClass((String)filter_el, FilterFactory.class);
-    }
-    return super.constructFilterFactory(mimeType);
+    return getDefinablePlugin().makeCrawlWindow();
   }
 
   /**
@@ -344,27 +288,9 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 //   CLASS LOADING SUPPORT ROUTINES
 // ---------------------------------------------------------------------
 
-    Object loadClass(String className, Class loadedClass) {
-      Object obj = null;
-      try {
-        obj = Class.forName(className, true, classLoader).newInstance();
-      } catch (Exception ex) {
-        log.error("Could not load " + className, ex);
-        throw new InvalidDefinitionException(
-            auName + " unable to create " + loadedClass + ": " + className, ex);
-      } catch (LinkageError le) {
-        log.error("Could not load " + className, le);
-        throw new InvalidDefinitionException(
-            auName + " unable to create " + loadedClass + ": " + className, le);
-
-      }
-      if(!loadedClass.isInstance(obj)) {
-        log.error(className + " is not a " + loadedClass.getName());
-        throw new InvalidDefinitionException(auName + "wrong class type for "
-            + loadedClass + ": " + className);
-      }
-      return obj;
-    }
+  Object loadClass(String className, Class loadedClass) {
+    return getDefinablePlugin().loadClass(className, loadedClass);
+  }
 
 // ---------------------------------------------------------------------
 //   VARIABLE ARGUMENT REPLACEMENT SUPPORT ROUTINES

@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.40 2006-09-16 22:58:34 tlipkis Exp $
+ * $Id: BasePlugin.java,v 1.41 2006-11-11 06:56:30 tlipkis Exp $
  */
 
 /*
@@ -64,6 +64,7 @@ public abstract class BasePlugin
   protected Map titleConfigMap;
   // XXX need to generalize this
   protected CacheResultMap resultMap;
+  protected HashMap filterMap = new HashMap(4);
 
   Configuration.Callback configCb = new Configuration.Callback() {
       public void configurationChanged(Configuration newConfig,
@@ -328,4 +329,100 @@ public abstract class BasePlugin
   protected void initResultMap() {
     resultMap = new HttpResultMap();
   }
+
+  String siteNormalizeUrl(String url, ArchivalUnit au) {
+    return getUrlNormalizer().normalizeUrl(url, au);
+  }
+
+  UrlNormalizer getUrlNormalizer() {
+    return NullUrlNormalizer.INSTANCE;
+  }
+
+  protected UrlNormalizer urlNorm;
+
+  public static class NullUrlNormalizer implements UrlNormalizer {
+    public static UrlNormalizer INSTANCE = new NullUrlNormalizer();
+
+    public String normalizeUrl (String url, ArchivalUnit au) {
+      return url;
+    }
+  }
+
+  /**
+   * Returns a filter rule from the cache if found, otherwise calls
+   * 'constructFilterRule()' and caches the result if non-null.  Content-type
+   * is converted to lowercase.  If contenttype is null, returns null.
+   * @param contentType the content type
+   * @return the FilterRule
+   */
+  public FilterRule getFilterRule(String contentType) {
+    if (contentType != null) {
+      Object obj = filterMap.get(contentType);
+      FilterRule rule = null;
+      if (obj==null) {
+        rule = constructFilterRule(contentType);
+        if (rule != null) {
+	  if (log.isDebug3()) log.debug3(contentType + " filter: " + rule);
+          filterMap.put(contentType, rule);
+        } else {
+	  if (log.isDebug3()) log.debug3("No filter for "+contentType);
+	}
+      } else if (obj instanceof FilterRule) {
+	rule = (FilterRule)obj;
+      }
+      return rule;
+    }
+    log.debug3("getFilterRule: null content type");
+    return null;
+  }
+
+  /**
+   * Override to provide proper filter rules.
+   * @param contentType content type
+   * @return null, since we don't filter by default
+   */
+  protected FilterRule constructFilterRule(String contentType) {
+    log.debug3("constructFilterRule default: null");
+    return null;
+  }
+
+  /**
+   * Returns a filter factory from the cache if found, otherwise calls
+   * 'constructFilterFactory()' and caches the result if non-null.
+   * Content-type is converted to lowercase.  If contenttype is null,
+   * returns null.
+   * @param contentType the content type
+   * @return the FilterFactory
+   */
+  public FilterFactory getFilterFactory(String contentType) {
+    if (contentType != null) {
+      Object obj = filterMap.get(contentType);
+      FilterFactory factory = null;
+      if (obj==null) {
+        factory = constructFilterFactory(contentType);
+        if (factory != null) {
+	  if (log.isDebug3()) log.debug3(contentType + " filter: " + factory);
+          filterMap.put(contentType, factory);
+        } else {
+	  if (log.isDebug3()) log.debug3("No filter for "+contentType);
+	}
+      } else if (obj instanceof FilterFactory) {
+	factory = (FilterFactory)obj;
+      }
+      return factory;
+    }
+    log.debug3("getFilterFactory: null content type");
+    return null;
+  }
+
+  /**
+   * Override to provide proper filter factories.
+   * @param contentType content type
+   * @return null, since we don't filter by default
+   */
+  protected FilterFactory constructFilterFactory(String contentType) {
+    log.debug3("constructFilterFactory default: null");
+    return null;
+  }
+
 }

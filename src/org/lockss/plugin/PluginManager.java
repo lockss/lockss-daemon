@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.167 2006-11-02 04:19:09 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.168 2006-11-11 06:56:30 tlipkis Exp $
  */
 
 /*
@@ -668,7 +668,7 @@ public class PluginManager
     try {
       Plugin plugin = au.getPlugin();
       plugin.stopAu(au);
-      theDaemon.stopAuManagers(au);
+      getDaemon().stopAuManagers(au);
     } catch (Exception e) {
       log.warning("Unexpected stopping AU", e);
       // Shouldn't happen, as stopAuManagers() catches errors in
@@ -1041,7 +1041,7 @@ public class PluginManager
       log.debug3(pluginName + ": Loading class.");
       Class c = Class.forName(pluginName, true, loader);
       classPlugin = (Plugin)c.newInstance();
-      classPlugin.initPlugin(theDaemon);
+      classPlugin.initPlugin(getDaemon());
       if (isCompatible(classPlugin)) {
 	foundClassPlugin = true;
       } else {
@@ -1059,7 +1059,7 @@ public class PluginManager
       log.debug3(pluginName + ": Loading XML definition.");
       Class c = Class.forName(getConfigurablePluginName(), true, loader);
       xmlPlugin = (DefinablePlugin)c.newInstance();
-      xmlPlugin.initPlugin(theDaemon, pluginName, loader);
+      xmlPlugin.initPlugin(getDaemon(), pluginName, loader);
       if (isCompatible(xmlPlugin)) {
 	foundXmlPlugin = true;
       } else {
@@ -1530,7 +1530,7 @@ public class PluginManager
     if (regPlugin == null) {
       regPlugin = new RegistryPlugin();
       String pluginKey = pluginKeyFromName("org.lockss.plugin.RegistryPlugin");
-      regPlugin.initPlugin(theDaemon);
+      regPlugin.initPlugin(getDaemon());
       setPlugin(pluginKey, regPlugin);
     }
     return regPlugin;
@@ -1542,8 +1542,8 @@ public class PluginManager
 					      InitialRegistryCallback cb) {
     if (registryAu.shouldCrawlForNewContent(AuUtil.getAuState(registryAu))) {
       if (log.isDebug2()) log.debug2("Starting new crawl:: " + registryAu);
-      theDaemon.getCrawlManager().startNewContentCrawl(registryAu, cb,
-						       url, null);
+      getDaemon().getCrawlManager().startNewContentCrawl(registryAu, cb,
+							 url, null);
     } else {
       if (log.isDebug2()) log.debug2("No crawl needed: " + registryAu);
 

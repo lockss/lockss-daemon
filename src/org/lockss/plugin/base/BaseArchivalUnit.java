@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.113 2006-11-10 00:19:31 troberts Exp $
+ * $Id: BaseArchivalUnit.java,v 1.114 2006-11-11 06:56:30 tlipkis Exp $
  */
 
 /*
@@ -50,6 +50,8 @@ import org.lockss.util.*;
  * Plugins may extend this to get some common ArchivalUnit functionality.
  */
 public abstract class BaseArchivalUnit implements ArchivalUnit {
+  static Logger logger = Logger.getLogger("BaseArchivalUnit");
+
   static final String TOPLEVEL_POLL_PREFIX = Configuration.PREFIX +
       "baseau.toplevel.poll.";
 
@@ -126,16 +128,15 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 
   public static final long
       DEFAULT_NEW_CONTENT_CRAWL_INTERVAL = 2 * Constants.WEEK;
-  protected BasePlugin plugin;
-  protected CrawlSpec crawlSpec;
-  protected UrlNormalizer urlNormalizer;
-  static Logger logger = Logger.getLogger("BaseArchivalUnit");
+
   static SimpleDateFormat sdf = new SimpleDateFormat();
 
   protected static final long DEFAULT_AU_MAX_SIZE = 0;
   protected static final long DEFAULT_AU_MAX_FILE_SIZE = 0;
 
-  protected long minFetchDelay = MIN_FETCH_DELAY;
+  protected BasePlugin plugin;
+  protected CrawlSpec crawlSpec;
+
   protected long defaultFetchDelay = DEFAULT_FETCH_DELAY;
   protected String startUrlString;
   protected long newContentCrawlIntv;
@@ -148,9 +149,6 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   protected double curTopLevelPollProb = -1;
   protected Configuration auConfig;
   private String auId = null;
-
-  protected GoslingHtmlParser goslingHtmlParser = null;
-  protected HashMap filterMap = new HashMap(4);
 
   protected TypedEntryMap paramMap;
 
@@ -274,9 +272,9 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     long fetchDelay =
       (config.containsKey(KEY_PAUSE_TIME)
        ? Math.max(config.getTimeInterval(KEY_PAUSE_TIME, defaultFetchDelay),
-		  minFetchDelay)
+		  MIN_FETCH_DELAY)
        : paramMap.getLong(KEY_AU_FETCH_DELAY,
-			  Math.max(defaultFetchDelay, minFetchDelay)));
+			  Math.max(defaultFetchDelay, MIN_FETCH_DELAY)));
     logger.debug2("Set fetch delay to " + fetchDelay);
     paramMap.putLong(KEY_AU_FETCH_DELAY, fetchDelay);
 
@@ -325,10 +323,6 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
       throw new ConfigurationException("Illegal RE", e);
     }
     paramMap.setMapElement(KEY_AU_CRAWL_SPEC, crawlSpec);
-
-    //make our url normalizer
-    urlNormalizer = makeUrlNormalizer();
-    paramMap.setMapElement(KEY_AU_URL_NORMALIZER, urlNormalizer);
 
     titleDbChanged();
   }
@@ -459,13 +453,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   }
 
   public String siteNormalizeUrl(String url) {
-    UrlNormalizer normmalizer =
-      (UrlNormalizer)paramMap.getMapElement(KEY_AU_URL_NORMALIZER);
-
-    if (normmalizer != null) {
-      return normmalizer.normalizeUrl(url, this);
-    }
-    return url;
+    return plugin.siteNormalizeUrl(url, this);
   }
 
   /**
@@ -695,10 +683,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   public ContentParser getContentParser(String contentType) {
     String mimeType = HeaderUtil.getMimeTypeFromContentType(contentType);
     if ("text/html".equalsIgnoreCase(mimeType)) {
-      if (goslingHtmlParser == null) {
-	goslingHtmlParser = new GoslingHtmlParser();
-      }
-      return goslingHtmlParser;
+      return new GoslingHtmlParser();
     }
     return null;
   }
@@ -711,35 +696,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    * @return the FilterRule
    */
   public FilterRule getFilterRule(String contentType) {
-    if (contentType != null) {
-      Object obj = filterMap.get(contentType);
-      FilterRule rule = null;
-      if (obj==null) {
-        rule = constructFilterRule(contentType);
-        if (rule != null) {
-	  if (logger.isDebug3()) logger.debug3(contentType + " filter: " +
-					       rule);
-          filterMap.put(contentType, rule);
-        } else {
-	  if (logger.isDebug3()) logger.debug3("No filter for "+contentType);
-	}
-      } else if (obj instanceof FilterRule) {
-	rule = (FilterRule)obj;
-      }
-      return rule;
-    }
-    logger.debug3("getFilterRule: null content type");
-    return null;
-  }
-
-  /**
-   * Override to provide proper filter rules.
-   * @param contentType content type
-   * @return null, since we don't filter by default
-   */
-  protected FilterRule constructFilterRule(String contentType) {
-    logger.debug3("constructFilterRule default: null");
-    return null;
+    return plugin.getFilterRule(contentType);
   }
 
   /**
@@ -751,35 +708,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    * @return the FilterFactory
    */
   public FilterFactory getFilterFactory(String contentType) {
-    if (contentType != null) {
-      Object obj = filterMap.get(contentType);
-      FilterFactory factory = null;
-      if (obj==null) {
-        factory = constructFilterFactory(contentType);
-        if (factory != null) {
-	  if (logger.isDebug3()) logger.debug3(contentType + " filter: " +
-					       factory);
-          filterMap.put(contentType, factory);
-        } else {
-	  if (logger.isDebug3()) logger.debug3("No filter for "+contentType);
-	}
-      } else if (obj instanceof FilterFactory) {
-	factory = (FilterFactory)obj;
-      }
-      return factory;
-    }
-    logger.debug3("getFilterFactory: null content type");
-    return null;
-  }
-
-  /**
-   * Override to provide proper filter factories.
-   * @param contentType content type
-   * @return null, since we don't filter by default
-   */
-  protected FilterFactory constructFilterFactory(String contentType) {
-    logger.debug3("constructFilterFactory default: null");
-    return null;
+    return plugin.getFilterFactory(contentType);
   }
 
   public List getNewContentCrawlUrls() {

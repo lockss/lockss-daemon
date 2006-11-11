@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedArchivalUnit.java,v 1.58 2006-10-31 07:01:06 thib_gc Exp $
+ * $Id: SimulatedArchivalUnit.java,v 1.59 2006-11-11 06:56:29 tlipkis Exp $
  */
 
 /*
@@ -103,19 +103,6 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
 
   protected String makeStartUrl() {
     return SIMULATED_URL_START;
-  }
-
-  /**
-   * Override to provide proper filter rules.
-   * @param mimeType the mime type
-   * @return null, since we don't filter by default
-   */
-  protected FilterRule constructFilterRule(String mimeType) {
-    log.debug3("constructFilterRule("+mimeType+")");
-    if (doFilter) {
-      return new SimulatedFilterRule();
-    }
-    return super.constructFilterRule(mimeType);
   }
 
   // public methods
@@ -295,12 +282,7 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
           SimulatedPlugin.AU_PARAM_BAD_CACHED_FILE_NUM)));
       }
       String spec = config.get(SimulatedPlugin.AU_PARAM_HASH_FILTER_SPEC);
-      boolean v = !StringUtil.isNullString(spec);
-      if (v != doFilter) {
-	filterMap.clear();
-	doFilter = v;
-	log.debug("filterMap.clear()");
-      }
+      doFilter = !StringUtil.isNullString(spec);
       // if no previous generator, any content-determining parameters have
       // changed from last time, generate new content
       log.debug("gen: " + gen);
@@ -362,6 +344,12 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
     return RateLimiter.UNLIMITED;
   }
 
+  public FilterRule getFilterRule(String contentType) {
+    if (doFilter) {
+      return new SimulatedFilterRule();
+    }
+    return null;
+  }
 
   boolean isUrlToBeDamaged(String url) {
     String file = StringUtil.replaceString(url,SIMULATED_URL_ROOT,"");

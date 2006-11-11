@@ -1,5 +1,5 @@
 /*
- * $Id: SystemMetrics.java,v 1.30 2005-12-01 23:28:01 troberts Exp $
+ * $Id: SystemMetrics.java,v 1.31 2006-11-11 06:56:30 tlipkis Exp $
  */
 
 /*
@@ -99,8 +99,8 @@ public class SystemMetrics
 
   public void startService() {
     super.startService();
-    hashService = theDaemon.getHashService();
-    pluginMgr = theDaemon.getPluginManager();
+    hashService = getDaemon().getHashService();
+    pluginMgr = getDaemon().getPluginManager();
     resetConfig();
   }
 

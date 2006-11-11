@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerManager.java,v 1.10 2005-11-16 04:25:20 tlipkis Exp $
+ * $Id: NodeManagerManager.java,v 1.11 2006-11-11 06:56:29 tlipkis Exp $
  */
 
 /*
@@ -88,7 +88,7 @@ public class NodeManagerManager
   public void startService() {
     super.startService();
 
-    StatusService statusServ = theDaemon.getStatusService();
+    StatusService statusServ = getDaemon().getStatusService();
     statusServ.registerStatusAccessor(SERVICE_STATUS_TABLE_NAME,
 				      new ServiceStatus(this));
     statusServ.registerStatusAccessor(MANAGER_STATUS_TABLE_NAME,
@@ -100,7 +100,7 @@ public class NodeManagerManager
 
   public void stopService() {
     // unregister our status accessors
-    StatusService statusServ = theDaemon.getStatusService();
+    StatusService statusServ = getDaemon().getStatusService();
     statusServ.unregisterStatusAccessor(SERVICE_STATUS_TABLE_NAME);
     statusServ.unregisterStatusAccessor(MANAGER_STATUS_TABLE_NAME);
     statusServ.unregisterStatusAccessor(POLLHISTORY_STATUS_TABLE_NAME);
@@ -153,7 +153,7 @@ public class NodeManagerManager
 
   private NodeManagerImpl getNodeManagerFromKey(String key)
       throws StatusService.NoSuchTableException {
-    for (Iterator iter = theDaemon.getAllNodeManagers().iterator();
+    for (Iterator iter = getDaemon().getAllNodeManagers().iterator();
 	 iter.hasNext(); ) {
       NodeManager manager = (NodeManager)iter.next();
       if (manager.getAuState().au.getAuId().equals(key)) {

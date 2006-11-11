@@ -1,5 +1,5 @@
 /*
- * $Id: BaseLockssManager.java,v 1.19 2006-04-05 22:26:42 tlipkis Exp $
+ * $Id: BaseLockssManager.java,v 1.20 2006-11-11 06:56:30 tlipkis Exp $
  */
 
 /*
@@ -41,11 +41,13 @@ import org.lockss.util.*;
 
 public abstract class BaseLockssManager implements LockssManager {
 
-  private LockssManager theManager = null;
   protected LockssApp theApp = null;
   private Configuration.Callback configCallback;
-  private String className = ClassUtil.getClassNameWithoutPackage(getClass());
   private static Logger log = Logger.getLogger("BaseLockssManager");
+
+  protected String getClassName() {
+    return ClassUtil.getClassNameWithoutPackage(getClass());
+  }
 
   /**
    * Called to initialize each service in turn.  Service should extend
@@ -56,10 +58,9 @@ public abstract class BaseLockssManager implements LockssManager {
    * @throws LockssAppException
    */
   public void initService(LockssApp app) throws LockssAppException {
-    if (log.isDebug2()) log.debug2(className + ".initService()");
-    if(theManager == null) {
+    if (log.isDebug2()) log.debug2(getClassName() + ".initService()");
+    if(theApp == null) {
       theApp = app;
-      theManager = this;
       registerDefaultConfigCallback();
     }
     else {
@@ -71,7 +72,7 @@ public abstract class BaseLockssManager implements LockssManager {
    * initialized.  Service should extend this to perform any startup
    * necessary. */
   public void startService() {
-    if (log.isDebug2()) log.debug2(className + ".startService()");
+    if (log.isDebug2()) log.debug2(getClassName() + ".startService()");
   }
 
   /** Called to stop a service.  Service should extend this to stop all
@@ -79,7 +80,9 @@ public abstract class BaseLockssManager implements LockssManager {
   public void stopService() {
     // checkpoint here
     unregisterConfig();
-    theManager = null;
+    // Logically, we should set theApp = null here, but that breaks several
+    // tests, which sometimes stop managers twice.
+//     theApp = null;
   }
 
   /** Return the app instance in which this manager is running */
@@ -107,8 +110,9 @@ public abstract class BaseLockssManager implements LockssManager {
 
   private void registerDefaultConfigCallback() {
     if (this instanceof ConfigurableManager) {
-      configCallback = new DefaultConfigCallback((ConfigurableManager)this);
-      theApp.getConfigManager().registerConfigurationCallback(configCallback);
+      Configuration.Callback cb =
+	new DefaultConfigCallback((ConfigurableManager)this);
+      registerConfigCallback(cb);
     }
   }
 

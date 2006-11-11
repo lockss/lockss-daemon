@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryStatus.java,v 1.25 2006-11-09 01:44:53 thib_gc Exp $
+ * $Id: LockssRepositoryStatus.java,v 1.26 2006-11-11 06:56:29 tlipkis Exp $
  */
 
 /*
@@ -61,6 +61,7 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
 
   public void startService() {
     super.startService();
+    LockssDaemon theDaemon = getDaemon();
     StatusService statusServ = theDaemon.getStatusService();
     statusServ.registerStatusAccessor(SERVICE_STATUS_TABLE_NAME,
 				      new RepoStatusAccessor(theDaemon));
@@ -69,7 +70,7 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
   }
 
   public void stopService() {
-    StatusService statusServ = theDaemon.getStatusService();
+    StatusService statusServ = getDaemon().getStatusService();
     statusServ.unregisterStatusAccessor(SERVICE_STATUS_TABLE_NAME);
     statusServ.unregisterStatusAccessor(SPACE_TABLE_NAME);
     super.stopService();

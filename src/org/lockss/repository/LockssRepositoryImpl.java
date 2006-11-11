@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.70 2005-12-01 23:28:02 troberts Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.71 2006-11-11 06:56:29 tlipkis Exp $
  */
 
 /*
@@ -96,10 +96,15 @@ public class LockssRepositoryImpl
     RepositoryManager.DEFAULT_GLOBAL_CACHE_ENABLED;
 
   LockssRepositoryImpl(String rootPath) {
-    rootLocation = rootPath;
-    if (!rootLocation.endsWith(File.separator)) {
-      // this shouldn't happen
-      rootLocation += File.separator;
+    if (rootPath.endsWith(File.separator)) {
+      rootLocation = rootPath;
+    } else {
+      // shouldn't happen
+      StringBuffer sb = new StringBuffer(rootPath.length() +
+					 File.separator.length());
+      sb.append(rootPath);
+      sb.append(File.separator);
+      rootLocation = sb.toString();
     }
     // Test code still needs this.
     nodeCache =
@@ -527,8 +532,10 @@ public class LockssRepositoryImpl
 	saveAuIdProperties(auPath, idProps);
 	return auPathSlash;
       } else {
-	logger.debug3("Existing directory found at '"+auDir+
-		      "'.  Checking next...");
+	if (logger.isDebug3()) {
+	  logger.debug3("Existing directory found at '"+auDir+
+			"'.  Checking next...");
+	}
       }
     }
     throw new RuntimeException("Can't find unused repository dir after " +
@@ -727,9 +734,12 @@ public class LockssRepositoryImpl
 	    Properties idProps = getAuIdProperties(path);
 	    if (idProps != null) {
 	      String auid = idProps.getProperty(AU_ID_PROP);
-	      logger.debug3("Mapping to: " + path + "/: " + auid);
-	      auMap.put(auid,
-			  (path + File.separator));
+	      StringBuffer sb = new StringBuffer(path.length() +
+						 File.separator.length());
+	      sb.append(path);
+	      sb.append(File.separator);
+	      auMap.put(auid, sb.toString());
+	      logger.debug3("Mapping to: " + auMap.get(auid) + ": " + auid);
 	    } else {
 	      logger.debug3("Not mapping " + path + ", no auid file.");
 	    }
