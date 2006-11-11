@@ -81,3 +81,20 @@ org.lockss.state.recall.delay=5m
 
 org.lockss.crawler.startCrawlsInterval=5m
 org.lockss.crawler.threadPool.max=3
+
+# prod group modes
+org.lockss.baseau.defaultFetchRateLimiterSource = plugin
+org.lockss.crawler.maxRepairRate = 1000/1d
+org.lockss.poll.v3.deleteExtraFiles = true
+org.lockss.poll.v3.voteBlockThreshold = 0
+org.lockss.repository.globalNodeCache.enabled = true
+org.lockss.repository.globalNodeCache.size = 500
+org.lockss.state.globalNodeCache.enabled = true
+org.lockss.state.globalNodeCache.size = 500
+org.lockss.scheduler.maxBackgroundLoad = 50
+org.lockss.state.pollHistory.trimRewrite = true
+org.lockss.treewalk.v1.mode = off
+
+# Standard debugging settings
+org.lockss.monitor.inputStreams=true
+org.lockss.thread.hungThreadDump = true
