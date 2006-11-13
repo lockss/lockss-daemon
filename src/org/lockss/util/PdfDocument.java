@@ -1,5 +1,5 @@
 /*
- * $Id: PdfDocument.java,v 1.14 2006-11-13 21:27:12 thib_gc Exp $
+ * $Id: PdfDocument.java,v 1.15 2006-11-13 21:30:15 thib_gc Exp $
  */
 
 /*
@@ -185,7 +185,7 @@ public class PdfDocument {
 
   public ListIterator /* of PdfPage */ getPageIterator() throws IOException {
     List pdfPages = new ArrayList();
-    for (Iterator iter = getPdPages().iterator() ; iter.hasNext() ; ) {
+    for (Iterator iter = getPdPageIterator() ; iter.hasNext() ; ) {
       pdfPages.add(new PdfPage(this, (PDPage)iter.next()));
     }
     return pdfPages.listIterator();
