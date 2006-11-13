@@ -1,5 +1,5 @@
 /*
- * $Id: DocumentTransformUtil.java,v 1.8 2006-09-27 08:00:33 thib_gc Exp $
+ * $Id: DocumentTransformUtil.java,v 1.9 2006-11-13 21:27:12 thib_gc Exp $
  */
 
 /*
@@ -98,7 +98,7 @@ public class DocumentTransformUtil {
 
     /* Inherit documentation */
     public boolean transform(PdfDocument pdfDocument) throws IOException {
-      logger.debug("Identity document transform result: " + returnValue);
+      logger.debug2("Identity document transform result: " + returnValue);
       return returnValue;
     }
 
@@ -129,9 +129,9 @@ public class DocumentTransformUtil {
 
     /* Inherit documentation */
     public boolean transform(PdfDocument pdfDocument) throws IOException {
-      logger.debug2("Begin opposite document transform based on " + documentTransform.getClass().getName());
+      logger.debug3("Begin opposite document transform based on " + documentTransform.getClass().getName());
       boolean ret = !documentTransform.transform(pdfDocument);
-      logger.debug("Opposite document transform result: " + ret);
+      logger.debug2("Opposite document transform result: " + ret);
       return ret;
     }
 
@@ -179,13 +179,13 @@ public class DocumentTransformUtil {
 
     /* Inherit documentation */
     public boolean transform(PdfDocument pdfDocument) throws IOException {
-      logger.debug2("Begin strict document transform based on " + documentTransform.getClass().getName());
+      logger.debug3("Begin strict document transform based on " + documentTransform.getClass().getName());
       if (documentTransform.transform(pdfDocument)) {
-        logger.debug("Strict document transform result: true");
+        logger.debug2("Strict document transform result: true");
         return true;
       }
       else {
-        logger.debug("Strict document transform result: throw");
+        logger.debug2("Strict document transform result: throw");
         throw new DocumentTransformException("Strict document transform did not succeed");
       }
     }

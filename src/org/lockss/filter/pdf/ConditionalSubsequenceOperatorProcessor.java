@@ -1,5 +1,5 @@
 /*
- * $Id: ConditionalSubsequenceOperatorProcessor.java,v 1.2 2006-09-27 08:00:33 thib_gc Exp $
+ * $Id: ConditionalSubsequenceOperatorProcessor.java,v 1.3 2006-11-13 21:27:11 thib_gc Exp $
  */
 
 /*
@@ -116,7 +116,7 @@ public abstract class ConditionalSubsequenceOperatorProcessor extends Conditiona
 
   /* Inherit documentation */
   public void processIdentified(PageStreamTransform pdfPageStreamTransform,
-                                   List tokens) {
+                                List tokens) {
     int subsequenceLength = getSubsequenceLength();
     List outputList = pdfPageStreamTransform.getOutputList();
     int outputListSize = outputList.size();

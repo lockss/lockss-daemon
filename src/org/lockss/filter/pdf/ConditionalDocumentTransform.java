@@ -1,5 +1,5 @@
 /*
- * $Id: ConditionalDocumentTransform.java,v 1.6 2006-11-01 22:25:45 thib_gc Exp $
+ * $Id: ConditionalDocumentTransform.java,v 1.7 2006-11-13 21:27:12 thib_gc Exp $
  */
 
 /*
@@ -65,7 +65,7 @@ public class ConditionalDocumentTransform extends DocumentTransformDecorator {
                                          !thenStrictness || thenTransform instanceof StrictDocumentTransform
                                          ? thenTransform
                                          : new StrictDocumentTransform(thenTransform)));
-    if (logger.isDebug2()) {
+    if (logger.isDebug3()) {
       StringBuffer buffer = new StringBuffer();
       buffer.append("Done setting up conditional document transform ");
       if (thenTransform instanceof StrictDocumentTransform) {
@@ -78,7 +78,7 @@ public class ConditionalDocumentTransform extends DocumentTransformDecorator {
         buffer.append("without");
       }
       buffer.append(" \"then\" strictness");
-      logger.debug2(buffer.toString());
+      logger.debug3(buffer.toString());
     }
   }
 
@@ -105,7 +105,7 @@ public class ConditionalDocumentTransform extends DocumentTransformDecorator {
          thenStrictness,
          new AggregateDocumentTransform(thenTransform1,
                                         thenTransform2));
-    logger.debug2("Implicitly aggregated two \"then\" transforms");
+    logger.debug3("Implicitly aggregated two \"then\" transforms");
   }
 
   /**
@@ -128,7 +128,7 @@ public class ConditionalDocumentTransform extends DocumentTransformDecorator {
     this(ifTransform,
          thenStrictness,
          new AggregateDocumentTransform(thenTransforms));
-    logger.debug2("Implicitly aggregated " + thenTransforms.length + " \"then\" transforms");
+    logger.debug3("Implicitly aggregated " + thenTransforms.length + " \"then\" transforms");
   }
 
   /**
@@ -157,7 +157,7 @@ public class ConditionalDocumentTransform extends DocumentTransformDecorator {
          new AggregateDocumentTransform(thenResultPolicy,
                                         thenTransform1,
                                         thenTransform2));
-    logger.debug2("Implicitly aggregated two \"then\" transforms");
+    logger.debug3("Implicitly aggregated two \"then\" transforms");
   }
 
   /**
@@ -184,7 +184,7 @@ public class ConditionalDocumentTransform extends DocumentTransformDecorator {
          thenStrictness,
          new AggregateDocumentTransform(thenResultPolicy,
                                         thenTransforms));
-    logger.debug2("Implicitly aggregated " + thenTransforms.length + " \"then\" transforms");
+    logger.debug3("Implicitly aggregated " + thenTransforms.length + " \"then\" transforms");
   }
 
   /**
@@ -287,9 +287,9 @@ public class ConditionalDocumentTransform extends DocumentTransformDecorator {
 
   /* Inherit documentation */
   public boolean transform(PdfDocument pdfDocument) throws IOException {
-    logger.debug2("Begin conditional document transform");
+    logger.debug3("Begin conditional document transform");
     boolean ret = documentTransform.transform(pdfDocument);
-    logger.debug("Conditional document transform result: " + ret);
+    logger.debug2("Conditional document transform result: " + ret);
     return ret;
   }
 

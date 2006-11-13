@@ -1,5 +1,5 @@
 /*
- * $Id: AggregatePageTransform.java,v 1.6 2006-11-01 22:25:45 thib_gc Exp $
+ * $Id: AggregatePageTransform.java,v 1.7 2006-11-13 21:27:12 thib_gc Exp $
  */
 
 /*
@@ -134,7 +134,7 @@ public class AggregatePageTransform implements PageTransform {
       logger.error(logMessage);
       throw new NullPointerException(logMessage);
     }
-    logger.debug2("Setting up result policy " + resultPolicy.toString());
+    logger.debug3("Setting up result policy " + resultPolicy.toString());
     this.resultPolicy = resultPolicy;
     this.pageTransforms = new ArrayList();
   }
@@ -149,7 +149,7 @@ public class AggregatePageTransform implements PageTransform {
   public AggregatePageTransform(ResultPolicy resultPolicy,
                                 PageTransform pageTransform) {
     this(resultPolicy);
-    logger.debug2("Setting up first page transform");
+    logger.debug3("Setting up first page transform");
     add(pageTransform);
   }
 
@@ -166,7 +166,7 @@ public class AggregatePageTransform implements PageTransform {
                                 PageTransform pageTransform2) {
     this(resultPolicy,
          pageTransform1);
-    logger.debug2("Setting up second page transform");
+    logger.debug3("Setting up second page transform");
     add(pageTransform2);
   }
 
@@ -186,7 +186,7 @@ public class AggregatePageTransform implements PageTransform {
     this(resultPolicy,
          pageTransform1,
          pageTransform2);
-    logger.debug2("Setting up third page transform");
+    logger.debug3("Setting up third page transform");
     add(pageTransform3);
   }
 
@@ -200,7 +200,7 @@ public class AggregatePageTransform implements PageTransform {
   public AggregatePageTransform(ResultPolicy resultPolicy,
                                 PageTransform[] pageTransforms) {
     this(resultPolicy);
-    logger.debug2("Setting up " + pageTransforms.length + " page transforms");
+    logger.debug3("Setting up " + pageTransforms.length + " page transforms");
     add(pageTransforms);
   }
 
@@ -258,7 +258,7 @@ public class AggregatePageTransform implements PageTransform {
         break;
       }
     }
-    logger.debug("Aggregate page transform result: " + success);
+    logger.debug2("Aggregate page transform result: " + success);
     return success;
   }
 

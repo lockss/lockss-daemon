@@ -1,5 +1,5 @@
 /*
- * $Id: ConditionalPageTransform.java,v 1.6 2006-11-01 22:25:45 thib_gc Exp $
+ * $Id: ConditionalPageTransform.java,v 1.7 2006-11-13 21:27:12 thib_gc Exp $
  */
 
 /*
@@ -65,7 +65,7 @@ public class ConditionalPageTransform extends PageTransformDecorator {
                                      !thenStrictness || thenTransform instanceof StrictPageTransform
                                      ? thenTransform
                                      : new StrictPageTransform(thenTransform)));
-    if (logger.isDebug2()) {
+    if (logger.isDebug3()) {
       StringBuffer buffer = new StringBuffer();
       buffer.append("Done setting up conditional page transform ");
       if (thenTransform instanceof StrictPageTransform) {
@@ -78,7 +78,7 @@ public class ConditionalPageTransform extends PageTransformDecorator {
         buffer.append("without");
       }
       buffer.append(" \"then\" strictness");
-      logger.debug2(buffer.toString());
+      logger.debug3(buffer.toString());
     }
   }
 
@@ -106,7 +106,7 @@ public class ConditionalPageTransform extends PageTransformDecorator {
          thenStrictness,
          new AggregatePageTransform(thenTransform1,
                                     thenTransform2));
-    logger.debug2("Implicitly aggregated two \"then\" transforms");
+    logger.debug3("Implicitly aggregated two \"then\" transforms");
   }
 
   /**
@@ -129,7 +129,7 @@ public class ConditionalPageTransform extends PageTransformDecorator {
     this(ifTransform,
          thenStrictness,
          new AggregatePageTransform(thenTransforms));
-    logger.debug2("Implicitly aggregated " + thenTransforms.length + " \"then\" transforms");
+    logger.debug3("Implicitly aggregated " + thenTransforms.length + " \"then\" transforms");
   }
 
   /**
@@ -158,7 +158,7 @@ public class ConditionalPageTransform extends PageTransformDecorator {
          new AggregatePageTransform(thenResultPolicy,
                                     thenTransform1,
                                     thenTransform2));
-    logger.debug2("Implicitly aggregated two \"then\" transforms");
+    logger.debug3("Implicitly aggregated two \"then\" transforms");
   }
 
   /**
@@ -185,7 +185,7 @@ public class ConditionalPageTransform extends PageTransformDecorator {
          thenStrictness,
          new AggregatePageTransform(thenResultPolicy,
                                     thenTransforms));
-    logger.debug2("Implicitly aggregated " + thenTransforms.length + " \"then\" transforms");
+    logger.debug3("Implicitly aggregated " + thenTransforms.length + " \"then\" transforms");
   }
 
   /**
@@ -288,9 +288,9 @@ public class ConditionalPageTransform extends PageTransformDecorator {
 
   /* Inherit documentation */
   public boolean transform(PdfPage pdfPage) throws IOException {
-    logger.debug2("Begin conditional page transform");
+    logger.debug3("Begin conditional page transform");
     boolean ret = pageTransform.transform(pdfPage);
-    logger.debug("Conditional page transform result: " + ret);
+    logger.debug2("Conditional page transform result: " + ret);
     return ret;
   }
 

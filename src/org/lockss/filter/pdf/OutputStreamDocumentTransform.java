@@ -1,5 +1,5 @@
 /*
- * $Id: OutputStreamDocumentTransform.java,v 1.2 2006-09-27 08:00:32 thib_gc Exp $
+ * $Id: OutputStreamDocumentTransform.java,v 1.3 2006-11-13 21:27:12 thib_gc Exp $
  */
 
 /*
@@ -73,7 +73,7 @@ public abstract class OutputStreamDocumentTransform implements OutputDocumentTra
 
   /* Inherit documentation */
   public synchronized boolean transform(PdfDocument pdfDocument) throws IOException {
-    logger.debug2("Begin output stream document transform");
+    logger.debug3("Begin output stream document transform");
     if (outputStream == null) {
       throw new NullPointerException("Output stream uninitialized");
     }
@@ -87,7 +87,7 @@ public abstract class OutputStreamDocumentTransform implements OutputDocumentTra
   public synchronized boolean transform(PdfDocument pdfDocument,
                                         OutputStream outputStream) {
     try {
-      logger.debug2("Begin output stream document transform");
+      logger.debug3("Begin output stream document transform");
       this.outputStream = outputStream;
       return transform(pdfDocument);
     }

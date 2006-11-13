@@ -1,5 +1,5 @@
 /*
- * $Id: PageStreamTransform.java,v 1.7 2006-09-27 08:00:32 thib_gc Exp $
+ * $Id: PageStreamTransform.java,v 1.8 2006-11-13 21:27:12 thib_gc Exp $
  */
 
 /*
@@ -509,7 +509,7 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
    */
   public synchronized boolean transform(PdfPage pdfPage)
       throws IOException {
-    logger.debug2("Begin page stream transform");
+    logger.debug3("Begin page stream transform");
 
     // Iterate over stream
     reset();
@@ -525,7 +525,7 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
     }
 
     writeResult(pdfPage);
-    logger.debug("Page stream transform result: " + atLeastOneChange);
+    logger.debug2("Page stream transform result: " + atLeastOneChange);
     return atLeastOneChange;
   }
 

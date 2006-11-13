@@ -1,5 +1,5 @@
 /*
- * $Id: PdfDocument.java,v 1.13 2006-11-13 04:37:17 thib_gc Exp $
+ * $Id: PdfDocument.java,v 1.14 2006-11-13 21:27:12 thib_gc Exp $
  */
 
 /*
@@ -35,7 +35,6 @@ package org.lockss.util;
 import java.io.*;
 import java.util.*;
 
-import org.apache.commons.collections.*;
 import org.pdfbox.cos.*;
 import org.pdfbox.exceptions.*;
 import org.pdfbox.pdfparser.PDFParser;
@@ -185,13 +184,10 @@ public class PdfDocument {
   }
 
   public ListIterator /* of PdfPage */ getPageIterator() throws IOException {
-    List pdfPages = ListUtils.transformedList(new ArrayList(),
-                                              new Transformer() {
-                                                public Object transform(Object obj) {
-                                                  return new PdfPage(PdfDocument.this, (PDPage)obj);
-                                                }
-                                              });
-    pdfPages.addAll(getPdPages());
+    List pdfPages = new ArrayList();
+    for (Iterator iter = getPdPages().iterator() ; iter.hasNext() ; ) {
+      pdfPages.add(new PdfPage(this, (PDPage)iter.next()));
+    }
     return pdfPages.listIterator();
   }
 
@@ -314,6 +310,14 @@ public class PdfDocument {
     setModificationDate(null);
   }
 
+  public void removePage(int index) throws IOException {
+    getPdDocument().removePage(index);
+  }
+  
+  public void removePage(PdfPage pdfPage) throws IOException {
+    removePage(pdfPage.getPdPage());
+  }
+  
   /**
    * <p>Unsets the producer from the document information.</p>
    * @throws IOException if any processing error occurs.
@@ -322,7 +326,7 @@ public class PdfDocument {
   public void removeProducer() throws IOException {
     setProducer(null);
   }
-
+  
   /**
    * <p>Unsets the subject from the document information.</p>
    * @throws IOException if any processing error occurs.
@@ -481,6 +485,10 @@ public class PdfDocument {
         throw ioe;
       }
     }
+  }
+
+  protected void removePage(PDPage pdPage) throws IOException {
+    getPdDocument().removePage(pdPage);
   }
 
   protected void setMetadata(PDMetadata metadata) throws IOException {

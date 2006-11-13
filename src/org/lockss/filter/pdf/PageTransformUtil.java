@@ -1,5 +1,5 @@
 /*
- * $Id: PageTransformUtil.java,v 1.8 2006-11-01 22:25:45 thib_gc Exp $
+ * $Id: PageTransformUtil.java,v 1.9 2006-11-13 21:27:11 thib_gc Exp $
  */
 
 /*
@@ -198,7 +198,7 @@ public class PageTransformUtil {
 
     /* Inherit documentation */
     public boolean transform(PdfPage pdfPage) throws IOException {
-      logger.debug("Identity page transform result: " + returnValue);
+      logger.debug2("Identity page transform result: " + returnValue);
       return returnValue;
     }
 
@@ -229,9 +229,9 @@ public class PageTransformUtil {
 
     /* Inherit documentation */
     public boolean transform(PdfPage pdfPage) throws IOException {
-      logger.debug2("Begin opposite page transform based on " + pageTransform.getClass().getName());
+      logger.debug3("Begin opposite page transform based on " + pageTransform.getClass().getName());
       boolean ret = !pageTransform.transform(pdfPage);
-      logger.debug("Opposite page transform result: " + ret);
+      logger.debug2("Opposite page transform result: " + ret);
       return ret;
     }
 
@@ -278,7 +278,7 @@ public class PageTransformUtil {
 
     /* Inherit documentation */
     public boolean transform(PdfPage pdfPage) throws IOException {
-      logger.debug2("Begin strict page transform based on " + pageTransform.getClass().getName());
+      logger.debug3("Begin strict page transform based on " + pageTransform.getClass().getName());
       if (pageTransform.transform(pdfPage)) {
         logger.debug2("Strict page transform result: true");
         return true;

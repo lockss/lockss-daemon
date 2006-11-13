@@ -1,5 +1,5 @@
 /*
- * $Id: AggregateDocumentTransform.java,v 1.6 2006-11-01 22:25:45 thib_gc Exp $
+ * $Id: AggregateDocumentTransform.java,v 1.7 2006-11-13 21:27:11 thib_gc Exp $
  */
 
 /*
@@ -155,7 +155,7 @@ public class AggregateDocumentTransform implements DocumentTransform {
       logger.error(logMessage);
       throw new NullPointerException(logMessage);
     }
-    logger.debug2("Setting up result policy " + resultPolicy.toString());
+    logger.debug3("Setting up result policy " + resultPolicy.toString());
     this.resultPolicy = resultPolicy;
     this.documentTransforms = new ArrayList();
   }
@@ -170,7 +170,7 @@ public class AggregateDocumentTransform implements DocumentTransform {
   public AggregateDocumentTransform(ResultPolicy resultPolicy,
                                     DocumentTransform documentTransform) {
     this(resultPolicy);
-    logger.debug2("Setting up first document transform");
+    logger.debug3("Setting up first document transform");
     add(documentTransform);
   }
 
@@ -187,7 +187,7 @@ public class AggregateDocumentTransform implements DocumentTransform {
                                     DocumentTransform documentTransform2) {
     this(resultPolicy,
          documentTransform1);
-    logger.debug2("Setting up second document transform");
+    logger.debug3("Setting up second document transform");
     add(documentTransform2);
   }
 
@@ -207,7 +207,7 @@ public class AggregateDocumentTransform implements DocumentTransform {
     this(resultPolicy,
          documentTransform1,
          documentTransform2);
-    logger.debug2("Setting up third document transform");
+    logger.debug3("Setting up third document transform");
     add(documentTransform3);
   }
 
@@ -231,7 +231,7 @@ public class AggregateDocumentTransform implements DocumentTransform {
          documentTransform1,
          documentTransform2,
          documentTransform3);
-    logger.debug2("Setting up fourth document transform");
+    logger.debug3("Setting up fourth document transform");
     add(documentTransform4);
   }
 
@@ -246,7 +246,7 @@ public class AggregateDocumentTransform implements DocumentTransform {
   public AggregateDocumentTransform(ResultPolicy resultPolicy,
                                     DocumentTransform[] documentTransforms) {
     this(resultPolicy);
-    logger.debug2("Setting up " + documentTransforms.length + " document transforms");
+    logger.debug3("Setting up " + documentTransforms.length + " document transforms");
     add(documentTransforms);
   }
 
@@ -306,7 +306,7 @@ public class AggregateDocumentTransform implements DocumentTransform {
         break;
       }
     }
-    logger.debug("Aggregate document transform result: " + success);
+    logger.debug2("Aggregate document transform result: " + success);
     return success;
   }
 
