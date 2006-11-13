@@ -1,0 +1,24 @@
+diff -ur /tmp/PDFBox-0.7.2/src/org/pdfbox/filter/FlateFilter.java ./src/org/pdfbox/filter/FlateFilter.java
+--- /tmp/PDFBox-0.7.2/src/org/pdfbox/filter/FlateFilter.java	2005-09-05 14:38:00.000000000 -0700
++++ ./src/org/pdfbox/filter/FlateFilter.java	2006-11-12 19:47:43.000000000 -0800
+@@ -91,7 +91,7 @@
+             int amountRead;
+ 
+             // Decode data using given predictor
+-            if (predictor==-1 || predictor == 1 && predictor == 10)
++            if (predictor==-1 || predictor == 1 || predictor == 10)
+             {
+                 // decoding not needed
+                 while ((amountRead = decompressor.read(buffer, 0, BUFFER_SIZE)) != -1)
+diff -ur /tmp/PDFBox-0.7.2/src/org/pdfbox/pdmodel/interactive/annotation/PDAnnotation.java ./src/org/pdfbox/pdmodel/interactive/annotation/PDAnnotation.java
+--- /tmp/PDFBox-0.7.2/src/org/pdfbox/pdmodel/interactive/annotation/PDAnnotation.java	2005-09-11 16:38:46.000000000 -0700
++++ ./src/org/pdfbox/pdmodel/interactive/annotation/PDAnnotation.java	2006-11-12 19:45:55.000000000 -0800
+@@ -104,7 +104,7 @@
+         if( base instanceof COSDictionary )
+         {
+             COSDictionary annotDic = (COSDictionary)base;
+-            String subtype = annotDic.getString( COSName.SUBTYPE );
++            String subtype = annotDic.getNameAsString( COSName.SUBTYPE );
+             if( subtype.equals( PDAnnotationRubberStamp.SUB_TYPE ) )
+             {
+                 annot = new PDAnnotationRubberStamp(annotDic);

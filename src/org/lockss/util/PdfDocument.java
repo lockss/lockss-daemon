@@ -1,5 +1,5 @@
 /*
- * $Id: PdfDocument.java,v 1.12 2006-10-03 22:24:12 thib_gc Exp $
+ * $Id: PdfDocument.java,v 1.13 2006-11-13 04:37:17 thib_gc Exp $
  */
 
 /*
@@ -37,7 +37,7 @@ import java.util.*;
 
 import org.apache.commons.collections.*;
 import org.pdfbox.cos.*;
-import org.pdfbox.exceptions.COSVisitorException;
+import org.pdfbox.exceptions.*;
 import org.pdfbox.pdfparser.PDFParser;
 import org.pdfbox.pdmodel.*;
 import org.pdfbox.pdmodel.common.*;
@@ -73,7 +73,7 @@ public class PdfDocument {
    */
   public PdfDocument(InputStream inputStream) throws IOException {
     this.pdfParser = new PDFParser(inputStream);
-    this.pdfParser.parse();
+    parse();
   }
 
   protected PdfDocument() { }
@@ -459,6 +459,28 @@ public class PdfDocument {
 
   protected List getPdPages() throws IOException {
     return getDocumentCatalog().getAllPages();
+  }
+
+  protected void parse() throws IOException {
+    // Parse the document before using it
+    getPdfParser().parse();
+    
+    // Trivial decryption if encrypted without a password
+    if (getPdDocument().isEncrypted()) {
+      try {
+        getPdDocument().decrypt("");
+      }
+      catch (CryptographyException ce) {
+        IOException ioe = new IOException();
+        ioe.initCause(ce);
+        throw ioe;
+      }
+      catch (InvalidPasswordException ipe) {
+        IOException ioe = new IOException();
+        ioe.initCause(ipe);
+        throw ioe;
+      }
+    }
   }
 
   protected void setMetadata(PDMetadata metadata) throws IOException {
