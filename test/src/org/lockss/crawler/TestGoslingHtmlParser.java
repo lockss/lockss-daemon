@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingHtmlParser.java,v 1.30 2006-11-10 00:20:59 troberts Exp $
+ * $Id: TestGoslingHtmlParser.java,v 1.31 2006-11-13 18:23:10 troberts Exp $
  */
 
 /*
@@ -204,6 +204,11 @@ public class TestGoslingHtmlParser extends LockssTestCase {
   public void testDoCrawlTc() throws IOException {
     singleTagShouldParse("http://www.example.com/web_link.jpg",
 		   "<tc background=", "</tc>");
+  }
+
+  public void testDoCrawlScript() throws IOException {
+    singleTagShouldParse("http://www.example.com/web_link.jpg",
+		   "<script src=", "</script>");
   }
 
   public void testDoCrawlWithEqualsInUrl() throws IOException {
@@ -631,6 +636,34 @@ public class TestGoslingHtmlParser extends LockssTestCase {
       "<!--<a href=http://www.example.com/link1.html>link1</a>"+
       "Filler, with <b>bold</b> tags and<i>others</i>"+
       "<a href=http://www.example.com/link2.html>link2</a>--!>"+
+      "<a href=http://www.example.com/link3.html>link3</a>";
+    assertEquals(SetUtil.set(url), parseSingleSource(source));
+  }
+
+  public void testSkipsScriptTags() throws IOException {
+    String url= "http://www.example.com/link3.html";
+
+    String source =
+      "<html><head><title>Test</title></head><body>"+
+      "<script>" +
+      "<a href=http://www.example.com/link1.html>link1</a>"+
+      "Filler, with <b>bold</b> tags and<i>others</i>"+
+      "<a href=http://www.example.com/link2.html>link2</a>" +
+      "</script>"+
+      "<a href=http://www.example.com/link3.html>link3</a>";
+    assertEquals(SetUtil.set(url), parseSingleSource(source));
+  }
+
+  public void testSkipsScriptTagsIgnoreCase() throws IOException {
+    String url= "http://www.example.com/link3.html";
+
+    String source =
+      "<html><head><title>Test</title></head><body>"+
+      "<ScRipt>" +
+      "<a href=http://www.example.com/link1.html>link1</a>"+
+      "Filler, with <b>bold</b> tags and<i>others</i>"+
+      "<a href=http://www.example.com/link2.html>link2</a>" +
+      "</sCripT>"+
       "<a href=http://www.example.com/link3.html>link3</a>";
     assertEquals(SetUtil.set(url), parseSingleSource(source));
   }

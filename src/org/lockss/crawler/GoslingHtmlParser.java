@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingHtmlParser.java,v 1.43 2006-11-10 00:20:59 troberts Exp $
+ * $Id: GoslingHtmlParser.java,v 1.44 2006-11-13 18:23:10 troberts Exp $
  */
 
 /*
@@ -109,11 +109,12 @@ public class GoslingHtmlParser implements ContentParser {
   protected static final String OBJECTTAG = "object";
   protected static final String OPTIONTAG = "option";
   protected static final String SCRIPTTAG = "script";
-  protected static final String SCRIPTTAGEND = "/script";
   protected static final String SRC = "src";
   protected static final String TABLETAG = "table";
   protected static final String TDTAG = "tc";
   protected static final String VALUETAG = "value";
+
+  protected static final String SCRIPTTAGEND = "</script>";
 
 
   protected static final String REFRESH = "refresh";
@@ -146,6 +147,8 @@ public class GoslingHtmlParser implements ContentParser {
   private boolean isTrace = logger.isDebug2();
 
   private boolean malformedBaseUrl = false;
+
+  private boolean lastTagWasScript = false;
 
   public GoslingHtmlParser() {
     ringCapacity = CurrentConfig.getIntParam(PARAM_BUFFER_CAPACITY,
@@ -248,6 +251,8 @@ public class GoslingHtmlParser implements ContentParser {
 	      ring.skip(ring.size() - 3);
 	    }
 	  }
+	} else if (ringStartsWithIgnoreCase(ring, "script>")) {
+	  readThroughTag(SCRIPTTAGEND);
 	} else {
 	  // html tag, read into StringBuffer (created lazily if needed)
 	  StringBuffer tagBuf = null;
@@ -279,6 +284,10 @@ public class GoslingHtmlParser implements ContentParser {
 
 	  if (tagBuf != null && tagBuf.length() >= MIN_TAG_LENGTH) {
 	    String nextLink = parseLink(tagBuf, au);
+	    if (lastTagWasScript) {
+	      readThroughTag(SCRIPTTAGEND);
+	      lastTagWasScript = false;
+	    }
 	    if (nextLink != null) {
 	      return nextLink;
 	    }
@@ -287,6 +296,50 @@ public class GoslingHtmlParser implements ContentParser {
       }
     }
     return null;
+  }
+
+  private boolean ringStartsWithIgnoreCase(CharRing ring, String str) {
+    for (int ix=0; ix < str.length(); ix++) {
+      if (!equalsIgnoreCase(ring.get(ix), str.charAt(ix))) {
+	return false;
+      }
+    }
+    return true;
+  }
+
+  private static final boolean equalsIgnoreCase(char kar1, char kar2) {
+    return (Character.toLowerCase(kar1) == Character.toLowerCase(kar2));
+  }
+
+  private void readThroughTag(String tag) throws IOException {
+    if (isTrace) logger.debug3("Searching for end of comment");
+    tag = tag.toLowerCase();
+    int tagLength = tag.length();
+    while (true) {
+      if (!refill()) return;
+      int idx = ring.indexOf(">", -1, false);
+      if (idx >= tagLength-1) {
+	boolean foundTag = true;
+	for (int ix = 0; ix < tagLength; ix++) {
+	  if (Character.toLowerCase(ring.get(idx-ix)) != tag.charAt(tagLength-ix-1)) {
+	    foundTag = false;
+	    break;
+	  }
+	}
+	if (foundTag) {
+	  if (isTrace) logger.debug3("Found end of tag");
+	  break;
+	}
+      }
+      if (idx >= 0) {
+	// found a > that doesn't close the comment.  Skip past it.
+	ring.skip(idx + 1);
+      } else {
+	// No > in ring.
+	// Leave last chars in case they're the end of the tag
+	ring.skip(ring.size() - tagLength);
+      }
+    }
   }
 
   /** Ensure sufficient chars in ring for shortest tag we're interested in.
@@ -401,6 +454,7 @@ public class GoslingHtmlParser implements ContentParser {
       case 's': //<script src=blah.js>
       case 'S':
         if (beginsWithTag(link, SCRIPTTAG)) {
+          lastTagWasScript = true;
           return (  getAttributeValue(SRC, link) );
         }
         break;
