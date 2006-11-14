@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingHtmlParser.java,v 1.44 2006-11-13 18:23:10 troberts Exp $
+ * $Id: GoslingHtmlParser.java,v 1.45 2006-11-14 18:00:57 troberts Exp $
  */
 
 /*
@@ -218,7 +218,7 @@ public class GoslingHtmlParser implements ContentParser {
    */
   protected String extractNextLink(CharRing ring, ArchivalUnit au)
       throws IOException, MalformedURLException {
-    while (refill()) {
+    while (refill(MIN_TAG_LENGTH)) {
       //skip to the next tag
       int idx = ring.indexOf("<", -1, false);
       if (idx < 0) {
@@ -227,13 +227,13 @@ public class GoslingHtmlParser implements ContentParser {
       } else {
 // 	if (isTrace) logger.debug3("Found < at " + idx);
 	ring.skip(idx + 1);
-	if (!refill()) return null;
+	if (!refill(MIN_TAG_LENGTH)) return null;
 	if (ring.get(0) == '!' && ring.get(1) == '-' && ring.get(2) == '-') {
 	  // html comment, skip
 	  ring.skip(3);
 	  if (isTrace) logger.debug3("Searching for end of comment");
 	  while (true) {
-	    if (!refill()) return null;
+	    if (!refill(MIN_TAG_LENGTH)) return null;
 	    idx = ring.indexOf(">", -1, false);
 	    if (idx >= 2 &&
 		((ring.get(idx-1) == '-' && ring.get(idx-2) == '-') ||
@@ -257,7 +257,7 @@ public class GoslingHtmlParser implements ContentParser {
 	  // html tag, read into StringBuffer (created lazily if needed)
 	  StringBuffer tagBuf = null;
 	  while (true) {
-	    if (!refill()) break;
+	    if (!refill(MIN_TAG_LENGTH)) break;
 	    idx = ring.indexOf(">", -1, false);
 	    if (idx >= 0) {
 // 	      if (isTrace) logger.debug3("Found > at " + idx);
@@ -312,11 +312,11 @@ public class GoslingHtmlParser implements ContentParser {
   }
 
   private void readThroughTag(String tag) throws IOException {
-    if (isTrace) logger.debug3("Searching for end of comment");
+    if (isTrace) logger.debug3("Searching for "+tag);
     tag = tag.toLowerCase();
     int tagLength = tag.length();
     while (true) {
-      if (!refill()) return;
+      if (!refill(tagLength + 1)) return;
       int idx = ring.indexOf(">", -1, false);
       if (idx >= tagLength-1) {
 	boolean foundTag = true;
@@ -327,7 +327,7 @@ public class GoslingHtmlParser implements ContentParser {
 	  }
 	}
 	if (foundTag) {
-	  if (isTrace) logger.debug3("Found end of tag");
+	  if (isTrace) logger.debug3("Found "+tag);
 	  break;
 	}
       }
@@ -343,15 +343,16 @@ public class GoslingHtmlParser implements ContentParser {
   }
 
   /** Ensure sufficient chars in ring for shortest tag we're interested in.
-   * @return true if at least MIN_TAG_LENGTH chars in ring, false if EOF
-   * reached and fewer then MIN_TAG_LENGTH chars
+   * @param minSize minimum number of chars that must be int he ring
+   * @return true if at least minSize chars in ring, false if EOF
+   * reached and fewer then minSize chars
    */
-  private boolean refill() throws IOException {
-    if (ring.size() >= MIN_TAG_LENGTH) return true;
+  private boolean refill(int minSize) throws IOException {
+    if (ring.size() >= minSize) return true;
     while (!readerEof) {
       readerEof = ring.refillBuffer(reader);
       if (isTrace) logger.debug3("refilled: " + ring.toString());
-      if (ring.size() >= MIN_TAG_LENGTH) {
+      if (ring.size() >= minSize) {
 	return true;
       }
     }
