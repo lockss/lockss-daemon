@@ -1,5 +1,5 @@
 /*
- * $Id: V3VoterSerializer.java,v 1.7 2006-06-02 20:27:15 smorabito Exp $
+ * $Id: V3VoterSerializer.java,v 1.8 2006-11-14 22:15:57 tlipkis Exp $
  */
 
 /*
@@ -56,7 +56,7 @@ public class V3VoterSerializer extends V3Serializer {
   public void saveVoterUserData(VoterUserData data)
       throws PollSerializerException {
     try {
-      xstr.serialize(voterUserDataFile, data);
+      getSerializer().serialize(voterUserDataFile, data);
     } catch (Exception ex) {
       throw new PollSerializerException("Unable to save VoterUserData", ex);
     }
@@ -65,7 +65,7 @@ public class V3VoterSerializer extends V3Serializer {
   public VoterUserData loadVoterUserData()
       throws PollSerializerException {
     try {
-      return (VoterUserData) xstr.deserialize(voterUserDataFile);
+      return (VoterUserData)getSerializer().deserialize(voterUserDataFile);
     } catch (Exception ex) {
       throw new PollSerializerException("Unable to restore VoterUserData", ex);
     }

@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollerSerializer.java,v 1.10 2006-06-26 23:55:08 smorabito Exp $
+ * $Id: V3PollerSerializer.java,v 1.11 2006-11-14 22:15:57 tlipkis Exp $
  */
 
 /*
@@ -61,11 +61,13 @@ public class V3PollerSerializer extends V3Serializer {
     this.pollerStateBeanFile = new File(pollDir, POLLER_STATE_BEAN);
     this.peerMapping = new HashMap();
     File[] stateFiles = pollDir.listFiles(new PollerUserDataFileFilter());
+    ObjectSerializer ser = getSerializer();
     try {
       for (int ix = 0; ix < stateFiles.length; ix++) {
         // Pre-load the object to determine its voter PeerIdentity.
         // Somewhat expensive, but should only be done once per restored poll.
-        ParticipantUserData ud = (ParticipantUserData)xstr.deserialize(stateFiles[ix]);
+        ParticipantUserData ud =
+	  (ParticipantUserData)ser.deserialize(stateFiles[ix]);
         peerMapping.put(ud.getVoterId(), stateFiles[ix]);
       }
     } catch (Exception ex) {
@@ -89,9 +91,9 @@ public class V3PollerSerializer extends V3Serializer {
    */
   public void savePollerState(PollerStateBean state)
       throws PollSerializerException {
-    log.debug2("Saving state for poll");
+    log.debug2("Saving poll state in " + pollerStateBeanFile);
     try {
-      xstr.serialize(pollerStateBeanFile, state);
+      getSerializer().serialize(pollerStateBeanFile, state);
     } catch (Exception ex) {
       throw new PollSerializerException("Unable to save state for poll.  " +
                                         "Caused by: " + ex, ex);
@@ -107,9 +109,9 @@ public class V3PollerSerializer extends V3Serializer {
     if (!pollerStateBeanFile.exists()) {
       throw new PollSerializerException("No serialized state for poll");
     }
-    log.debug2("Restoring state for poll");
+    log.debug2("Restoring poll state from " + pollerStateBeanFile);
     try {
-      return (PollerStateBean)xstr.deserialize(pollerStateBeanFile);
+      return (PollerStateBean)getSerializer().deserialize(pollerStateBeanFile);
     } catch (Exception ex) {
       throw new PollSerializerException("Unable to restore poll state", ex);
     }
@@ -126,7 +128,7 @@ public class V3PollerSerializer extends V3Serializer {
     log.debug2("Saving voter state for participant " + state.getVoterId());
     try {
       File outFile = getPollerUserDataFile(peerId);
-      xstr.serialize(outFile, state);
+      getSerializer().serialize(outFile, state);
     } catch (Exception ex) {
       throw new PollSerializerException("Unable to save voter state", ex);
     }
@@ -145,7 +147,7 @@ public class V3PollerSerializer extends V3Serializer {
         throw new PollSerializerException("No serialized state for voter " +
                                           peerId);
       }
-      return (ParticipantUserData) xstr.deserialize(in);
+      return (ParticipantUserData)getSerializer().deserialize(in);
     } catch (Exception ex) {
       throw new PollSerializerException("Unable to restore PollerUserData", ex);
     }
@@ -193,10 +195,11 @@ public class V3PollerSerializer extends V3Serializer {
   public Collection loadVoterStates() throws PollSerializerException {
     File[] files = pollDir.listFiles(voterFilter);
     List innerCircleStates = new ArrayList(files.length);
+    ObjectSerializer ser = getSerializer();
     try {
       for (int i = 0; i < files.length; i++) {
         ParticipantUserData voterState =
-          (ParticipantUserData)xstr.deserialize(new FileReader(files[i]));
+          (ParticipantUserData)ser.deserialize(new FileReader(files[i]));
         innerCircleStates.add(voterState);
       }
     } catch (Exception ex) {

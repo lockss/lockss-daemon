@@ -1,5 +1,5 @@
 /*
- * $Id: V3Serializer.java,v 1.12 2006-06-02 20:27:15 smorabito Exp $
+ * $Id: V3Serializer.java,v 1.13 2006-11-14 22:15:57 tlipkis Exp $
  */
 
 /*
@@ -47,13 +47,12 @@ public abstract class V3Serializer {
   public static String DEFAULT_V3_STATE_LOCATION = "v3state";
 
   protected File pollDir;
-  protected ObjectSerializer xstr;
+  protected LockssDaemon daemon;
 
   static final Logger log = Logger.getLogger("V3Serializer");
   
   public V3Serializer(LockssDaemon daemon) throws PollSerializerException {
-    this.xstr = new XStreamSerializer(daemon);
-    
+    this.daemon = daemon;
     Configuration config = CurrentConfig.getCurrentConfig();
     String path = config.get(PARAM_V3_STATE_LOCATION,
                              DEFAULT_V3_STATE_LOCATION);
@@ -86,7 +85,7 @@ public abstract class V3Serializer {
       throw new NullPointerException("Poll serialization directory must not "
                                      + "be null");
     }
-    this.xstr = new XStreamSerializer(daemon);
+    this.daemon = daemon;
     this.pollDir = dir;
     if (!pollDir.exists()) {
       throw new IllegalArgumentException("Poll directories passed as"
@@ -94,6 +93,11 @@ public abstract class V3Serializer {
     }
   }
   
+  /** Make an XStreamSerializer */
+  protected ObjectSerializer getSerializer() {
+    return new XStreamSerializer(daemon);
+  }
+
   /**
    * Clean up all resources used by this poll. Removes the poll directory.
    */
