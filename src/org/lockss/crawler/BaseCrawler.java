@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawler.java,v 1.20 2006-11-02 04:18:38 tlipkis Exp $
+ * $Id: BaseCrawler.java,v 1.21 2006-11-14 19:21:29 tlipkis Exp $
  */
 
 /*
@@ -88,14 +88,8 @@ public abstract class BaseCrawler
   public static final String PARAM_ABORT_ON_FIRST_NO_PERMISSION =
     Configuration.PREFIX + "BaseCrawler.abortOnFirstNoPermission";
   public static final boolean DEFAULT_ABORT_ON_FIRST_NO_PERMISSION =
-    false;
+    true;
 
-  public static final String PARAM_KEEP_URLS_OF_MIME_TYPE =
-    Configuration.PREFIX + "BaseCrawler.keep_urls_of_mime_type";
-  public static final boolean DEFAULT_KEEP_URLS_OF_MIME_TYPE = true;  
-
-  public boolean keepUrlsOfMimeType = DEFAULT_KEEP_URLS_OF_MIME_TYPE;
-  
   // Max amount we'll buffer up to avoid refetching the permissions page
   static final int PERM_BUFFER_MAX = 16 * 1024;
 
@@ -104,7 +98,7 @@ public abstract class BaseCrawler
   protected LockssUrlConnectionPool connectionPool =
     new LockssUrlConnectionPool();
 
-  protected Crawler.Status crawlStatus = null;
+  protected CrawlerStatus crawlStatus = null;
 
   protected CrawlSpec spec = null;
 
@@ -171,8 +165,6 @@ public abstract class BaseCrawler
                                                  DEFAULT_CONNECT_TIMEOUT);
     long dataTimeout = config.getTimeInterval(PARAM_DATA_TIMEOUT,
                                               DEFAULT_DATA_TIMEOUT);
-    keepUrlsOfMimeType = config.getBoolean(PARAM_KEEP_URLS_OF_MIME_TYPE, 
-                                           DEFAULT_KEEP_URLS_OF_MIME_TYPE);
     connectionPool.setConnectTimeout(connectTimeout);
     connectionPool.setDataTimeout(dataTimeout);
 
@@ -202,7 +194,7 @@ public abstract class BaseCrawler
     return au;
   }
 
-  public Crawler.Status getStatus() {
+  public CrawlerStatus getStatus() {
     return crawlStatus;
   }
 
@@ -275,7 +267,7 @@ public abstract class BaseCrawler
       UrlCacher uc = makeUrlCacher(url);
       uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW_ON_HOST);
       is = new BufferedInputStream(uc.getUncachedInputStream());
-      crawlStatus.signalUrlFetched(uc.getUrl());
+//       crawlStatus.signalUrlFetched(uc.getUrl());
     }
     return is;
   }
@@ -326,10 +318,10 @@ public abstract class BaseCrawler
   private void updateStatusMimeType(CachedUrl cu) {
     CIProperties props = cu.getProperties();  
     if (props != null) {
-      String mimeType = props.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE);
-      if (mimeType != null) {      
-        crawlStatus.signalMimeTypeOfUrl(mimeType, cu.getUrl(),
-					keepUrlsOfMimeType); 
+      String conType = props.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE);
+      if (conType != null) {      
+	String mimeType = HeaderUtil.getMimeTypeFromContentType(conType);
+        crawlStatus.signalMimeTypeOfUrl(mimeType, cu.getUrl()); 
       }
     }
     return;
@@ -386,7 +378,7 @@ public abstract class BaseCrawler
     return false;
   }
 
-  public Crawler.Status getCrawlStatus() {
+  public CrawlerStatus getCrawlStatus() {
     return crawlStatus;
   }
 }

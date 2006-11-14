@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerStatusAccessor.java,v 1.13 2006-11-02 04:18:38 tlipkis Exp $
+ * $Id: CrawlManagerStatusAccessor.java,v 1.14 2006-11-14 19:21:29 tlipkis Exp $
  */
 
 /*
@@ -170,7 +170,7 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
 
       int rowNum = 0;
       for (Iterator it = allCrawls.iterator(); it.hasNext();) {
-	Crawler.Status crawlStat = (Crawler.Status)it.next();
+	CrawlerStatus crawlStat = (CrawlerStatus)it.next();
 	if (!includeInternalAus &&
 	    pluginMgr.isInternalAu(crawlStat.getAu())) {
 	  continue;
@@ -183,7 +183,7 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
     return rows;
   }
 
-  private Map makeRow(Crawler.Status status, Counts ct, int rowNum) {
+  private Map makeRow(CrawlerStatus status, Counts ct, int rowNum) {
     String key = status.getKey();
 
     Map row = new HashMap();
@@ -198,26 +198,20 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
       row.put(CONTENT_BYTES_FETCHED,
 	      new Long(status.getContentBytesFetched()));
       row.put(NUM_URLS_FETCHED,
-	      makeRef(status.getNumFetched(),
-		      CRAWL_URLS_STATUS_ACCESSOR, key+".fetched"));
+	      makeRefIfColl(status.getFetchedCtr(), key, "fetched"));
       row.put(NUM_URLS_WITH_ERRORS,
-	      makeRef(status.getNumUrlsWithErrors(),
-		      CRAWL_URLS_STATUS_ACCESSOR, key+".error"));
+	      makeRefIfColl(status.getErrorCtr(), key, "error"));
       row.put(NUM_URLS_NOT_MODIFIED,
-	      makeRef(status.getNumNotModified(),
-		      CRAWL_URLS_STATUS_ACCESSOR, key+".not-modified"));
+	      makeRefIfColl(status.getNotModifiedCtr(), key, "not-modified"));
       row.put(NUM_URLS_PARSED,
-	      makeRef(status.getNumParsed(),
-		      CRAWL_URLS_STATUS_ACCESSOR, key+".parsed"));
+	      makeRefIfColl(status.getParsedCtr(), key, "parsed"));
       row.put(NUM_URLS_PENDING,
-              makeRef(status.getNumPending(),
-                      CRAWL_URLS_STATUS_ACCESSOR, key+".pending"));
+              makeRefIfColl(status.getPendingCtr(), key, "pending"));
       row.put(NUM_URLS_EXCLUDED,
-	      makeRef(status.getNumExcluded(),
-		      CRAWL_URLS_STATUS_ACCESSOR, key+".excluded"));
+	      makeRefIfColl(status.getExcludedCtr(), key, "excluded"));
       row.put(NUM_OF_MIME_TYPES,
-                makeRef(status.getNumOfMimeTypes(),
-                        SINGLE_CRAWL_STATUS_ACCESSOR, key));
+	      makeRef(status.getNumOfMimeTypes(),
+		      SINGLE_CRAWL_STATUS_ACCESSOR, key));
       if (status.getEndTime() > 0) {
 	row.put(DURATION_COL_NAME, new Long(status.getEndTime() -
 					    status.getStartTime()));
@@ -247,6 +241,19 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
    */
   private Object makeRef(long value, String tableName, String key) {
     return new StatusTable.Reference(new Long(value), tableName, key);
+  }
+
+  /**
+   * If the UrlCounter has a collection, return a reference to it, else
+   * just the count
+   */
+  Object makeRefIfColl(CrawlerStatus.UrlCount ctr, String crawlKey,
+		       String subkey) {
+    if (ctr.hasCollection()) {
+      return makeRef(ctr.getCount(),
+		     CRAWL_URLS_STATUS_ACCESSOR, crawlKey + "." + subkey);
+    }
+    return new Long(ctr.getCount());
   }
 
   /**

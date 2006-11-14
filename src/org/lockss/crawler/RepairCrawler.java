@@ -1,5 +1,5 @@
 /*
- * $Id: RepairCrawler.java,v 1.63 2006-09-22 06:23:02 tlipkis Exp $
+ * $Id: RepairCrawler.java,v 1.64 2006-11-14 19:21:29 tlipkis Exp $
  */
 
 /*
@@ -109,6 +109,8 @@ public class RepairCrawler extends BaseCrawler {
     Configuration.PREFIX + "crawler.repair_needs_permission";
   public static final boolean DEFAULT_REPAIR_NEEDS_PERMISSION = false;
 
+  /** Poller requires fetched URLs to be kept in status */
+  public static final String FORCE_RECORD_STATUS_URLS = "fetched";
 
   boolean fetchCache = DEFAULT_FETCH_FROM_OTHER_CACHES_ONLY;
   boolean fetchPublisher = DEFAULT_FETCH_FROM_PUBLISHER_ONLY;
@@ -129,7 +131,8 @@ public class RepairCrawler extends BaseCrawler {
     this.repairUrls = repairUrls;
     this.percentFetchFromCache = percentFetchFromCache;
 
-    crawlStatus = new Crawler.Status(au, repairUrls, getTypeString());
+    crawlStatus = new CrawlerStatus(au, repairUrls, getTypeString(),
+				    FORCE_RECORD_STATUS_URLS);
   }
 
   protected void setCrawlConfig(Configuration config) {

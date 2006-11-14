@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.37 2006-11-08 16:42:59 smorabito Exp $
+ * $Id: V3Poller.java,v 1.38 2006-11-14 19:21:28 tlipkis Exp $
  */
 
 /*
@@ -39,9 +39,7 @@ import java.util.*;
 import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.crawler.*;
-import org.lockss.crawler.CrawlManager.*;
 import org.lockss.daemon.*;
-import org.lockss.daemon.Crawler.*;
 import org.lockss.hasher.*;
 import org.lockss.plugin.*;
 import org.lockss.poller.*;
@@ -1133,7 +1131,7 @@ public class V3Poller extends BasePoll {
       CrawlManager.Callback cb = new CrawlManager.Callback() {
         public void signalCrawlAttemptCompleted(boolean success,
                                                 Object cookie,
-                                                Status status) {
+                                                CrawlerStatus status) {
           if (success) {
             // Check the repairs.
             // XXX: It would be nice to be able to re-hash the repaired

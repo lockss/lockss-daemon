@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.51 2006-11-10 00:20:35 troberts Exp $
+ * $Id: FollowLinkCrawler.java,v 1.52 2006-11-14 19:21:29 tlipkis Exp $
  */
 
 /*
@@ -59,7 +59,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
   // can be changed to a simple Set.
   private Map excludedUrlCache = new HashMap();
   private Set failedUrls = new HashSet();
-  private Set urlsToCrawl = Collections.EMPTY_SET;
+  protected Set urlsToCrawl = Collections.EMPTY_SET;
 
   private static final String PARAM_RETRY_TIMES =
     Configuration.PREFIX + "BaseCrawler.numCacheRetries";
@@ -155,7 +155,9 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
     if (crawlAborted) {
       return aborted();
     }
-    logger.info("Beginning depth " + maxDepth + " crawl of " + au);
+    logger.info("Beginning depth " + maxDepth + " crawl " +
+		(shouldFollowLink() ? "" : "(no follow) ") +
+		"of " + au);
     crawlStatus.signalCrawlStarted();
     crawlStatus.addSource("Publisher");
     cus = au.getAuCachedUrlSet();
@@ -216,7 +218,6 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	  logger.warning("Unexpected exception in crawl", e);
 	}
 	urlsToCrawl.remove(nextUrl);
-	logger.debug("crawlStatus.removePendingUrl(" + nextUrl + ")");
 	if  (!crawlRes) {
 	  if (crawlStatus.getCrawlError() == null) {
 	    crawlStatus.setCrawlError(Crawler.STATUS_ERROR);
@@ -500,7 +501,6 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	    }
 	    extractedUrls.add(normUrl);
             crawlStatus.addPendingUrl(normUrl);
-	    logger.debug("crawlStatus.addPendingUrl(" + normUrl + ")");
 	  } else {
 	    if (logger.isDebug2()) {
 	      logger.debug2("Excluded url: "+normUrl);

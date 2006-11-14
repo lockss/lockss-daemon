@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.68 2006-09-25 02:16:48 smorabito Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.69 2006-11-14 19:21:28 tlipkis Exp $
  */
 
 /*
@@ -957,7 +957,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 
     public void signalCrawlAttemptCompleted(boolean success,
 					    Object cookie,
-					    Crawler.Status status) {
+					    CrawlerStatus status) {
       this.success = success;
       called = true;
       this.cookie = cookie;

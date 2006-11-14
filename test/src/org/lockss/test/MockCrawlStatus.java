@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawlStatus.java,v 1.14 2006-11-02 04:18:38 tlipkis Exp $
+ * $Id: MockCrawlStatus.java,v 1.15 2006-11-14 19:21:28 tlipkis Exp $
  */
 
 /*
@@ -32,27 +32,14 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.test;
 import org.lockss.daemon.Crawler;
+import org.lockss.crawler.*;
 import org.lockss.plugin.ArchivalUnit;
 import java.util.*;
 
-public class MockCrawlStatus extends Crawler.Status {
-  private static final int UNDEFINED_TYPE = -1;
+public class MockCrawlStatus extends CrawlerStatus {
 
   String crawlStatus = null;
   boolean crawlEndSignaled = false;
-  int numParsed = 0;
-  int numPending = 0;
-  int numFetched = 0;
-  int numErrors = 0;
-  int numNotModified = 0;
-  int numExcluded = 0;
-
-  List urlsFetched = null;
-  List urlsParsed = null;
-  List urlsPending = null;
-  List urlsNotModified = null;
-  List urlsExcluded = null;
-  Map errorUrls = null;
 
 
   public MockCrawlStatus(String type) {
@@ -80,118 +67,51 @@ public class MockCrawlStatus extends Crawler.Status {
   }
 
   public void setNumFetched(int numFetched) {
-    this.numFetched = numFetched;
-  }
-
-  public int getNumFetched() {
-    if (urlsFetched != null) {
-      return urlsFetched.size();
-    }
-    return numFetched;
-  }
-
-  public void setNumExcluded(int numExcluded) {
-    this.numExcluded = numExcluded;
-  }
-
-  public int getNumExcluded() {
-    if (urlsExcluded != null) {
-      return urlsExcluded.size();
-    }
-    return numExcluded;
-  }
-
-  public List getUrlsExcluded() {
-    return urlsExcluded;
-  }
-
-  public void setUrlsWithErrors(Map errorUrls) {
-    this.errorUrls = errorUrls;
-  }
-
-  public void setNumUrlsWithErrors(int num) {
-    this.numErrors = num;
-  }
-
-  public void setUrlsNotModified(List urlsNotModified) {
-    this.urlsNotModified = urlsNotModified;
-  }
-
-  public void setUrlsExcluded(List urlsExcluded) {
-    this.urlsExcluded = urlsExcluded;
-  }
-
-  public List getUrlsParsed() {
-    return urlsParsed;
-  }
-
-  public void setUrlsParsed(List urlsParsed) {
-    this.urlsParsed = urlsParsed;
-  }
-
-  // allow test-mock set/get for pending urls
-  public List getUrlsPending() {
-    return urlsPending;
-  }
-
-  public void setUrlsPending(List urlsPending) {
-    this.urlsPending = urlsPending;
-  }
-
-  public List getUrlsNotModified() {
-    return urlsNotModified;
-  }
-
-  public void setNumNotModified(int numNotModified) {
-    this.numNotModified = numNotModified;
-  }
-
-  public int getNumNotModified() {
-    if (urlsNotModified != null) {
-      return urlsNotModified.size();
-    }
-    return numNotModified;
-  }
-
-  public int getNumUrlsWithErrors() {
-    if (errorUrls != null) {
-      return urlsWithErrors.size();
-    }
-    return numErrors;
-  }
-
-  public int getNumParsed() {
-    if (urlsParsed != null) {
-      return urlsParsed.size();
-    }
-    return numParsed;
-  }
-
-  public int getNumPending() {
-    if (urlsPending != null) {
-      return urlsPending.size();
-    }
-    return numPending;
-  }
-
-  public Map getUrlsWithErrors() {
-    return errorUrls;
+    fetched = new MyUrlCount(numFetched);
   }
 
   public void setUrlsFetched(List urlsFetched) {
-    this.urlsFetched = urlsFetched;
+    fetched = new MyUrlCount(urlsFetched);
   }
 
-  public List getUrlsFetched() {
-    return urlsFetched;
+  public void setNumExcluded(int numExcluded) {
+    excluded = new MyUrlCount(numExcluded);
+  }
+
+  public void setUrlsExcluded(List urlsExcluded) {
+    excluded = new MyUrlCount(urlsExcluded);
+  }
+
+  public void setNumUrlsWithErrors(int num) {
+    errors = new MyUrlCount(num);
+  }
+
+  public void setUrlsWithErrors(Map errorUrls) {
+    errors = new MyUrlCount(errorUrls);
+  }
+
+  public void setNumNotModified(int numNotModified) {
+    notModified = new MyUrlCount(numNotModified);
+  }
+
+  public void setUrlsNotModified(List urlsNotModified) {
+    notModified = new MyUrlCount(urlsNotModified);
   }
 
   public void setNumParsed(int numParsed) {
-    this.numParsed = numParsed;
+    parsed = new MyUrlCount(numParsed);
+  }
+
+  public void setUrlsParsed(List urlsParsed) {
+    parsed = new MyUrlCount(urlsParsed);
   }
 
   public void setNumPending(int numPending) { // set for pending
-    this.numPending = numPending;
+    pending = new MyUrlCount(numPending);
+  }
+
+  public void setUrlsPending(List urlsPending) {
+    pending = new MyUrlCount(urlsPending);
   }
 
   public void setAu(ArchivalUnit au) {
@@ -212,5 +132,41 @@ public class MockCrawlStatus extends Crawler.Status {
       throw new IllegalStateException("Called with null type");
     }
     this.type = type;
+  }
+
+  public static class MyUrlCount extends CrawlerStatus.UrlCount {
+    int cnt = 0;
+    List lst;
+    Map map;
+    MyUrlCount(int num) {
+      this.cnt = num;
+    }
+    MyUrlCount(List lst) {
+      this.lst = lst;
+    }
+    MyUrlCount(Map map) {
+      this.map = map;
+    }
+
+    public int getCount() {
+      if (lst != null) return lst.size();
+      if (map != null) return map.size();
+      return cnt;
+    }
+    public boolean hasList() {
+      return true;
+    }
+    public boolean hasMap() {
+      return true;
+    }
+    public List getList() {
+      return lst != null ? lst : Collections.EMPTY_LIST;
+    }
+    public Map getMap() {
+      return map != null ? map : Collections.EMPTY_MAP;
+    }
+    public UrlCount seal() {
+      return this;
+    }
   }
 }

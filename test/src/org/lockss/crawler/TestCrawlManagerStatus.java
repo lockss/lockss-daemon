@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerStatus.java,v 1.25 2006-10-07 07:16:22 tlipkis Exp $
+ * $Id: TestCrawlManagerStatus.java,v 1.26 2006-11-14 19:21:28 tlipkis Exp $
  */
 
 /*
@@ -47,10 +47,10 @@ public class TestCrawlManagerStatus extends LockssTestCase {
   }
 
   public void testHist() {
-    Crawler.Status c1 = newCStat("one");
-    Crawler.Status c2 = newCStat("two");
-    Crawler.Status c3 = newCStat("three");
-    Crawler.Status c4 = newCStat("four");
+    CrawlerStatus c1 = newCStat("one");
+    CrawlerStatus c2 = newCStat("two");
+    CrawlerStatus c3 = newCStat("three");
+    CrawlerStatus c4 = newCStat("four");
     cmStatus = new CrawlManagerStatus(3);
     assertEmpty(cmStatus.getCrawlStatusList());
     cmStatus.addCrawlStatus(c1);
@@ -78,8 +78,8 @@ public class TestCrawlManagerStatus extends LockssTestCase {
     cmStatus.addCrawlStatus(c2);
     assertEquals(ListUtil.list(c3, c4, c1, c2), cmStatus.getCrawlStatusList());
 
-    Crawler.Status c5 = newCStat("five");
-    Crawler.Status c6 = newCStat("six");
+    CrawlerStatus c5 = newCStat("five");
+    CrawlerStatus c6 = newCStat("six");
     cmStatus.addCrawlStatus(c5);
     cmStatus.addCrawlStatus(c6);
     assertEquals(ListUtil.list(c4, c1, c2, c5, c6),
@@ -101,8 +101,8 @@ public class TestCrawlManagerStatus extends LockssTestCase {
     assertEquals(2, cmStatus.getFailedCount());
   }
 
-  Crawler.Status newCStat(String url) {
-    return new Crawler.Status(new MockArchivalUnit(),
+  CrawlerStatus newCStat(String url) {
+    return new CrawlerStatus(new MockArchivalUnit(),
 			      ListUtil.list(url), "new");
   }
 }

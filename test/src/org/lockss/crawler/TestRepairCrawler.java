@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepairCrawler.java,v 1.40 2006-11-02 04:18:38 tlipkis Exp $
+ * $Id: TestRepairCrawler.java,v 1.41 2006-11-14 19:21:28 tlipkis Exp $
  */
 
 /*
@@ -315,7 +315,7 @@ public class TestRepairCrawler extends LockssTestCase {
 	         crawler.getFetchCacheCnt(), crawler.getFetchCacheCnt() == 1);
     assertTrue("Fail! fetch from publisher occurs",
 	       crawler.getFetchPubCnt() == 0);
-    Crawler.Status status = crawler.getStatus();
+    CrawlerStatus status = crawler.getStatus();
     assertEquals(ListUtil.list("127.0.0.1"), status.getSources());
     assertEquals("Successful", status.getCrawlStatus());
     assertEquals(1234, status.getContentBytesFetched());
@@ -348,7 +348,7 @@ public class TestRepairCrawler extends LockssTestCase {
 	         crawler.getFetchCacheCnt(), crawler.getFetchCacheCnt() == 1);
     assertTrue("Fail! fetch from publisher occurs",
 	       crawler.getFetchPubCnt() == 0);
-    Crawler.Status status = crawler.getStatus();
+    CrawlerStatus status = crawler.getStatus();
     assertEquals(ListUtil.list("127.0.0.1"), status.getSources());
     assertEquals("Successful", status.getCrawlStatus());
   }
@@ -481,7 +481,7 @@ public class TestRepairCrawler extends LockssTestCase {
     ConfigurationUtil.setCurrentConfigFromProps(p);
 
     assertFalse(crawler.doCrawl());
-    Crawler.Status status = crawler.getStatus();
+    CrawlerStatus status = crawler.getStatus();
     assertEquals(Crawler.STATUS_FETCH_ERROR, status.getCrawlStatus());
   }
 
@@ -497,7 +497,7 @@ public class TestRepairCrawler extends LockssTestCase {
     ConfigurationUtil.setCurrentConfigFromProps(p);
 
     assertFalse(crawler.doCrawl());
-    Crawler.Status status = crawler.getStatus();
+    CrawlerStatus status = crawler.getStatus();
     assertEquals(Crawler.STATUS_FETCH_ERROR, status.getCrawlStatus());
   }
 
@@ -520,7 +520,7 @@ public class TestRepairCrawler extends LockssTestCase {
 	        crawler.getFetchCacheCnt() , crawler.getFetchCacheCnt() == 0);
     assertTrue("Fetch from publisher" +
 	       crawler.getFetchPubCnt(), crawler.getFetchPubCnt() == 1);
-    Crawler.Status status = crawler.getStatus();
+    CrawlerStatus status = crawler.getStatus();
     assertEquals(ListUtil.list("Publisher"), status.getSources());
     assertEquals(4321, status.getContentBytesFetched());
   }
@@ -677,7 +677,7 @@ public class TestRepairCrawler extends LockssTestCase {
     crawlRule.addUrlToCrawl(repairUrl2);
 
     assertTrue("doCrawl() returned false", crawler.doCrawl());
-    Crawler.Status crawlStatus = crawler.getStatus();
+    CrawlerStatus crawlStatus = crawler.getStatus();
 //    assertEquals(3, crawlStatus.getNumFetched()); //2 repairs & permission page
     assertEquals(0, crawlStatus.getNumParsed());
     assertEquals(SetUtil.set(repairUrl1, repairUrl2, permissionPage),
@@ -697,7 +697,7 @@ public class TestRepairCrawler extends LockssTestCase {
 
     crawler.doCrawl();
 
-    Crawler.Status crawlStatus = crawler.getStatus();
+    CrawlerStatus crawlStatus = crawler.getStatus();
     assertEquals(1, crawlStatus.getNumFetched()); //permission page
     assertEquals(0, crawlStatus.getNumParsed());
     Map errorUrls = crawlStatus.getUrlsWithErrors();
@@ -736,7 +736,7 @@ public class TestRepairCrawler extends LockssTestCase {
 
     crawler.doCrawl();
 
-    Crawler.Status crawlStatus = crawler.getStatus();
+    CrawlerStatus crawlStatus = crawler.getStatus();
     assertEquals(1, crawlStatus.getNumFetched()); //permission page
     assertEquals(0, crawlStatus.getNumParsed());
 

@@ -1,5 +1,5 @@
 /*
- * $Id: PermissionMap.java,v 1.14 2006-09-22 06:23:02 tlipkis Exp $
+ * $Id: PermissionMap.java,v 1.15 2006-11-14 19:21:29 tlipkis Exp $
  */
 
 /*
@@ -37,7 +37,6 @@ import org.lockss.alert.Alert;
 import org.lockss.alert.AlertManager;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
-import org.lockss.daemon.Crawler.Status;
 import org.lockss.plugin.*;
 import org.lockss.state.*;
 import org.lockss.util.*;
@@ -58,7 +57,7 @@ public class PermissionMap {
   private List daemonPermissionCheckers;
   private PermissionChecker pluginPermissionChecker;
 
-  private Crawler.Status crawlStatus;
+  private CrawlerStatus crawlStatus;
   private Crawler.PermissionHelper pHelper;
   private AlertManager alertMgr;
 
@@ -355,6 +354,7 @@ public class PermissionMap {
       logger.error("CacheException reading permission page", ex);
       status = PermissionRecord.PERMISSION_FETCH_FAILED;
       crawlStatus.signalErrorForUrl(pUrl, ex.getMessage());
+      crawlErr = "Cannot fetch permission page.";
     } catch (Exception ex) {
       logger.error("Exception reading permission page", ex);
       status = PermissionRecord.PERMISSION_FETCH_FAILED;
@@ -381,7 +381,7 @@ public class PermissionMap {
    * @param crawlStatus
    * @return true iff all required permission checkers were satisfied.
    */
-  private boolean fetchAndCheck(UrlCacher uc, Status crawlStatus)
+  private boolean fetchAndCheck(UrlCacher uc, CrawlerStatus crawlStatus)
       throws IOException {
 
     String pUrl = uc.getUrl();

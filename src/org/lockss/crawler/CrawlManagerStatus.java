@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerStatus.java,v 1.33 2006-10-07 07:16:22 tlipkis Exp $
+ * $Id: CrawlManagerStatus.java,v 1.34 2006-11-14 19:21:29 tlipkis Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 
 /** Reflects overall status of CrawlManager, contains history of
- * Crawler.Status objects for individual crawls */
+ * CrawlerStatus objects for individual crawls */
 public class CrawlManagerStatus {
 
   private LRUMap statusMap;
@@ -72,7 +72,7 @@ public class CrawlManagerStatus {
     return nextCrawlStarter;
   }
 
-  /** Return a list of Crawler.Status for each crawl in the history. */
+  /** Return a list of CrawlerStatus for each crawl in the history. */
   public synchronized List getCrawlStatusList() {
     List res = new ArrayList(statusMap.size());
     for (OrderedMapIterator iter = statusMap.orderedMapIterator();
@@ -84,13 +84,13 @@ public class CrawlManagerStatus {
   }
 
   /** Add a crawl status object to the history */
-  public synchronized void addCrawlStatus(Crawler.Status status) {
+  public synchronized void addCrawlStatus(CrawlerStatus status) {
     statusMap.put(status.getKey(), status);
   }
 
-  /** Retrieve the Crawler.Status object with the given key */
-  public synchronized Crawler.Status getCrawlStatus(String key) {
-    return (Crawler.Status)statusMap.get(key);
+  /** Retrieve the CrawlerStatus object with the given key */
+  public synchronized CrawlerStatus getCrawlStatus(String key) {
+    return (CrawlerStatus)statusMap.get(key);
   }
 
   public void incrFinished(boolean success) {

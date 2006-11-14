@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCrawler.java,v 1.9 2006-11-02 04:18:38 tlipkis Exp $
+ * $Id: TestBaseCrawler.java,v 1.10 2006-11-14 19:21:28 tlipkis Exp $
  */
 
 /*
@@ -474,7 +474,7 @@ public class TestBaseCrawler extends LockssTestCase {
 
 
   public void testGetStatusCrawlNotStarted() {
-    Crawler.Status crawlStatus = crawler.getStatus();
+    CrawlerStatus crawlStatus = crawler.getStatus();
     assertEquals(-1, crawlStatus.getStartTime());
     assertEquals(-1, crawlStatus.getEndTime());
     assertEquals(0, crawlStatus.getNumFetched());
@@ -499,7 +499,7 @@ public class TestBaseCrawler extends LockssTestCase {
     long expectedStart = TimeBase.nowMs();
     crawler.doCrawl();
     long expectedEnd = TimeBase.nowMs();
-    Crawler.Status crawlStatus = crawler.getStatus();
+    CrawlerStatus crawlStatus = crawler.getStatus();
     assertEquals(expectedStart, crawlStatus.getStartTime());
     assertEquals(expectedEnd, crawlStatus.getEndTime());
 //     assertEquals(5, crawlStatus.getNumFetched());

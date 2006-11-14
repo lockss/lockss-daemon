@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlUrlsStatusAccessor.java,v 1.2 2006-10-18 17:06:30 adriz Exp $
+ * $Id: CrawlUrlsStatusAccessor.java,v 1.3 2006-11-14 19:21:29 tlipkis Exp $
  */
 
 /*
@@ -99,7 +99,7 @@ public class CrawlUrlsStatusAccessor implements StatusAccessor {
       throw new IllegalArgumentException("CrawlUrlsStatusAccessor requires a key");
     }
     String key = table.getKey();
-    Crawler.Status status;
+    CrawlerStatus status;
     String tableStr;
 
     status = statusSource.getStatus().getCrawlStatus(getStatusKeyFromTableKey(key));
@@ -113,7 +113,7 @@ public class CrawlUrlsStatusAccessor implements StatusAccessor {
     table.setRows(makeRows(status, tableStr));
   }
 
-  private String getTableTitle(Crawler.Status status, String tableStr) {
+  private String getTableTitle(CrawlerStatus status, String tableStr) {
     ArchivalUnit au = status.getAu();
     if (FETCHED_TABLE_NAME.equals(tableStr)) {
       return "URLs fetched during crawl of "+au.getName();
@@ -147,7 +147,7 @@ public class CrawlUrlsStatusAccessor implements StatusAccessor {
     return key.substring(0, key.indexOf("."));
   }
 
-  private List getColDescs(String tableStr, Crawler.Status status) {
+  private List getColDescs(String tableStr, CrawlerStatus status) {
     if (FETCHED_TABLE_NAME.equals(tableStr)) {
       return colDescsFetched;
     } else if (ERROR_TABLE_NAME.equals(tableStr)) {
@@ -160,16 +160,17 @@ public class CrawlUrlsStatusAccessor implements StatusAccessor {
       return colDescsPending;
     } else if (EXCLUDED_TABLE_NAME.equals(tableStr)) {
       return colDescsExcluded;
-    }else if (MIMETYPES_TABLE_NAME.equals(getMtTableStr(tableStr))) {    
-        colDescsMimeTypeUrls = ListUtil.list(new ColumnDescriptor(URL, 
-                                             getMimeTypeStr(tableStr),
-                                             ColumnDescriptor.TYPE_STRING));
+    } else if (MIMETYPES_TABLE_NAME.equals(getMtTableStr(tableStr))) {    
+      colDescsMimeTypeUrls =
+	ListUtil.list(new ColumnDescriptor(URL, 
+					   getMimeTypeStr(tableStr),
+					   ColumnDescriptor.TYPE_STRING));
       return colDescsMimeTypeUrls;
     }
     return null;
   }
 
-  private List makeRows(Crawler.Status status, String tableStr) {
+  private List makeRows(CrawlerStatus status, String tableStr) {
     List rows = null;
 
     if (FETCHED_TABLE_NAME.equals(tableStr)) {

@@ -1,5 +1,5 @@
 /*
- * $Id: OaiCrawler.java,v 1.17 2006-11-02 04:18:38 tlipkis Exp $
+ * $Id: OaiCrawler.java,v 1.18 2006-11-14 19:21:29 tlipkis Exp $
  */
 
 /*
@@ -62,8 +62,8 @@ public class OaiCrawler extends FollowLinkCrawler {
     super(au, crawlSpec, aus);
     spec = (OaiCrawlSpec) crawlSpec;
     String oaiHandlerUrl = spec.getOaiRequestData().getOaiRequestHandlerUrl();
-    crawlStatus = new Crawler.Status(au, ListUtil.list(oaiHandlerUrl),
-                                     getTypeString());
+    crawlStatus = new CrawlerStatus(au, ListUtil.list(oaiHandlerUrl),
+				    getTypeString());
   }
 
   protected void setCrawlConfig(Configuration config) {
@@ -85,21 +85,6 @@ public class OaiCrawler extends FollowLinkCrawler {
     return true;
   }
 
-  /**
-   * Once we get back a list of URLs from the OAI-PMH request, we have two
-   * options: just fetch those (as they match the crawl rules) or use those
-   * as a starting point for the rest of our crawl.  We call the latter "follow
-   * link mode".
-   * @return false if the crawl encountered fatal errors, false otherwise
-   */
-  protected boolean doCrawl0(){ //this shouldn't be there at all, as it does nothing
-    if (shouldFollowLink() ) {
-      logger.info("crawling in follow link mode");
-    } else {
-      logger.info("crawling in don't follow link mode");
-    }
-    return super.doCrawl0();
-  }
   /**
    * Here for the test code to override
    * @return a new instance of OaiHandler

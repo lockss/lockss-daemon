@@ -1,5 +1,5 @@
 /*
- * $Id: TestFollowLinkCrawler.java,v 1.21 2006-11-03 23:59:52 troberts Exp $
+ * $Id: TestFollowLinkCrawler.java,v 1.22 2006-11-14 19:21:28 tlipkis Exp $
  */
 
 /*
@@ -449,7 +449,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     Set expected = SetUtil.set(startUrl, CW_URL1);
     assertEquals(expected, cus.getCachedUrls());
 
-    Crawler.Status crawlStatus = crawler.getStatus();
+    CrawlerStatus crawlStatus = crawler.getStatus();
     assertEquals(Crawler.STATUS_WINDOW_CLOSED, crawlStatus.getCrawlStatus());
   }
 
@@ -458,7 +458,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     Set expected = new HashSet();
     assertEquals(expected, cus.getCachedUrls());
-    Crawler.Status crawlStatus = crawler.getStatus();
+    CrawlerStatus crawlStatus = crawler.getStatus();
     assertEquals(Crawler.STATUS_WINDOW_CLOSED, crawlStatus.getCrawlStatus());
   }
 
@@ -467,7 +467,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     Set expected = new HashSet();
     assertEquals(expected, cus.getCachedUrls());
-    Crawler.Status crawlStatus = crawler.getStatus();
+    CrawlerStatus crawlStatus = crawler.getStatus();
     assertEquals(Crawler.STATUS_WINDOW_CLOSED, crawlStatus.getCrawlStatus());
   }
 
@@ -757,6 +757,8 @@ public class TestFollowLinkCrawler extends LockssTestCase {
   }
 
   public void testMultiPermissionPageShouldFailAsPermissionNotOk(){
+    setProperty(BaseCrawler.PARAM_ABORT_ON_FIRST_NO_PERMISSION, "false");
+
     String permissionUrl1 = "http://www.example.com/index.html";
     String permissionUrl2 = "http://www.foo.com/index.html";
     List permissionList = ListUtil.list(permissionUrl1,permissionUrl2);
@@ -781,6 +783,8 @@ public class TestFollowLinkCrawler extends LockssTestCase {
   }
 
   public void testMultiPermissionPageShouldFailWithAbortWhilePermissionOtherThanOkParam(){
+    setProperty(BaseCrawler.PARAM_ABORT_ON_FIRST_NO_PERMISSION, "false");
+
     String permissionUrl1 = "http://www.example.com/index.html";
     String permissionUrl2 = "http://www.foo.com/index.html";
     List permissionList = ListUtil.list(permissionUrl1,permissionUrl2);
@@ -804,6 +808,11 @@ public class TestFollowLinkCrawler extends LockssTestCase {
   }
 
   public void testPermissionPageShouldFailAsFetchPermissionFailTwice(){
+    ConfigurationUtil.setFromArgs(BaseCrawler.PARAM_ABORT_ON_FIRST_NO_PERMISSION,
+				  "false",
+				  BaseCrawler.PARAM_REFETCH_PERMISSIONS_PAGE,
+				  "true");
+
     String permissionUrl1 = "http://www.example.com/index.html";
     String permissionUrl2 = "http://www.foo.com/index.html";
     List permissionList = ListUtil.list(permissionUrl1, permissionUrl2);
@@ -818,8 +827,6 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     MockCachedUrlSet cus = permissionPageTestSetup(permissionList,100,
 						   urls, mau);
 
-    setProperty(BaseCrawler.PARAM_REFETCH_PERMISSIONS_PAGE, "true");
-
     ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(SetUtil.fromList(urls));
 
     assertFalse(crawler.doCrawl());
@@ -827,6 +834,11 @@ public class TestFollowLinkCrawler extends LockssTestCase {
   }
 
   public void testPermissionPageFailOnceAndOkAfterRefetch(){
+    ConfigurationUtil.setFromArgs(BaseCrawler.PARAM_ABORT_ON_FIRST_NO_PERMISSION,
+				  "false",
+				  BaseCrawler.PARAM_REFETCH_PERMISSIONS_PAGE,
+				  "true");
+
     String permissionUrl1 = "http://www.example.com/index.html";
     List permissionList = ListUtil.list(permissionUrl1);
 
@@ -838,8 +850,6 @@ public class TestFollowLinkCrawler extends LockssTestCase {
 
     MockCachedUrlSet cus = permissionPageTestSetup(permissionList,100,
 						   urls, mau);
-
-    setProperty(BaseCrawler.PARAM_REFETCH_PERMISSIONS_PAGE, "true");
 
     ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(
         SetUtil.set(url1, url2));
@@ -998,12 +1008,11 @@ public class TestFollowLinkCrawler extends LockssTestCase {
   private static class TestableFollowLinkCrawler extends FollowLinkCrawler {
 
     Set urlsToFollow = new HashSet();
-    //    MockCrawlStatus crawlStatus;
 
     protected TestableFollowLinkCrawler(ArchivalUnit au,
 					CrawlSpec spec, AuState aus){
       super(au, spec, aus);
-      crawlStatus = new Crawler.Status(au,
+      crawlStatus = new CrawlerStatus(au,
 		    ((SpiderCrawlSpec)spec).getStartingUrls(),
 		    null);
     }

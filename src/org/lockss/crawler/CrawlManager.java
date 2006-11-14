@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManager.java,v 1.30 2006-09-25 02:16:47 smorabito Exp $
+ * $Id: CrawlManager.java,v 1.31 2006-11-14 19:21:29 tlipkis Exp $
  */
 
 /*
@@ -84,7 +84,7 @@ public interface CrawlManager {
      */
     public void signalCrawlAttemptCompleted(boolean success,
 					    Object cookie,
-					    Crawler.Status status);
+					    CrawlerStatus status);
   }
 
   public interface StatusSource {

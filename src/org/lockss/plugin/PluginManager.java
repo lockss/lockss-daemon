@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.168 2006-11-11 06:56:30 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.169 2006-11-14 19:21:28 tlipkis Exp $
  */
 
 /*
@@ -43,7 +43,7 @@ import org.apache.commons.collections.map.*;
 
 import org.lockss.app.*;
 import org.lockss.config.*;
-import org.lockss.crawler.CrawlManager;
+import org.lockss.crawler.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.definable.DefinablePlugin;
 import org.lockss.poller.PollSpec;
@@ -2004,7 +2004,7 @@ public class PluginManager
 
     public void signalCrawlAttemptCompleted(boolean success,
 					    Object cookie,
-					    Crawler.Status status) {
+					    CrawlerStatus status) {
       String url = (String)cookie;
 
       crawlCompleted(url);
@@ -2049,7 +2049,7 @@ public class PluginManager
 
     public void signalCrawlAttemptCompleted(boolean success,
 					    Object cookie,
-					    Crawler.Status status) {
+					    CrawlerStatus status) {
       if (success) {
 	log.debug2("Registry crawl completed successfully, checking for new plugins");
 	pluginMgr.processRegistryAus(ListUtil.list(registryAu));

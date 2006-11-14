@@ -1,5 +1,5 @@
 /*
- * $Id: TestOaiCrawler.java,v 1.15 2006-11-02 04:18:38 tlipkis Exp $
+ * $Id: TestOaiCrawler.java,v 1.16 2006-11-14 19:21:28 tlipkis Exp $
  */
 
 /*
@@ -371,7 +371,7 @@ public class TestOaiCrawler extends LockssTestCase {
     }
   }
 
-  static class MyCrawlerStatus extends Crawler.Status {
+  static class MyCrawlerStatus extends CrawlerStatus {
     List pendingEvents = new ArrayList();
 
     public MyCrawlerStatus(ArchivalUnit au, Collection startUrls,

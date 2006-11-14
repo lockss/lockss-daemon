@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawlManagerStatus.java,v 1.5 2006-10-07 07:16:22 tlipkis Exp $
+ * $Id: MockCrawlManagerStatus.java,v 1.6 2006-11-14 19:21:28 tlipkis Exp $
  */
 
 /*
@@ -48,7 +48,7 @@ public class MockCrawlManagerStatus extends CrawlManagerStatus {
     super(2);
   }
 
-  public void addStatusObject(Crawler.Status status) {
+  public void addStatusObject(CrawlerStatus status) {
     statusMap.put(status.getKey(), status);
   }
 

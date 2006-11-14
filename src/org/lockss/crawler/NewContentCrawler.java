@@ -1,5 +1,5 @@
 /*
- * $Id: NewContentCrawler.java,v 1.52 2006-11-02 04:18:38 tlipkis Exp $
+ * $Id: NewContentCrawler.java,v 1.53 2006-11-14 19:21:29 tlipkis Exp $
  */
 
 /*
@@ -48,8 +48,8 @@ public class NewContentCrawler extends FollowLinkCrawler {
   public NewContentCrawler(ArchivalUnit au, CrawlSpec crawlSpec, AuState aus) {
     super(au, crawlSpec, aus);
     spec = (SpiderCrawlSpec) crawlSpec;
-    crawlStatus = new Crawler.Status(au, spec.getStartingUrls(),
-				     getTypeString());
+    crawlStatus = new CrawlerStatus(au, spec.getStartingUrls(),
+				    getTypeString());
   }
 
   public int getType() {
@@ -91,13 +91,15 @@ public class NewContentCrawler extends FollowLinkCrawler {
     }
 
     Collection startUrls = spec.getStartingUrls();
-    for (Iterator iter = startUrls.iterator(); iter.hasNext(); ) {
+    for (Iterator iter = SetUtil.theSet(startUrls).iterator();
+	 iter.hasNext(); ) {
       crawlStatus.addPendingUrl((String)iter.next());
     }
     cachingStartUrls = true; //added to report error when fail to fetch startUrl
     logger.debug3("refetchDepth: "+refetchDepth);
 
-    Iterator it = startUrls.iterator();
+    urlsToCrawl = SetUtil.theSet(startUrls);
+    Iterator it = urlsToCrawl.iterator();
     for (int ix=0; ix<refetchDepth && it.hasNext(); ix++) {
       logger.debug3("Refetching level "+ix);
       //don't use clear() or it will empty the iterator
@@ -137,6 +139,7 @@ public class NewContentCrawler extends FollowLinkCrawler {
 	}
       } // end while loop
       lvlCnt++;
+      urlsToCrawl = extractedUrls;
       it = extractedUrls.iterator();
     } // end for loop
     cachingStartUrls = false;

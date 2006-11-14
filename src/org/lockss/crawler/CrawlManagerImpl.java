@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.107 2006-11-11 06:56:30 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.108 2006-11-14 19:21:29 tlipkis Exp $
  */
 
 /*
@@ -610,7 +610,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 
   //method that calls the callback and catches any exception
   private static void callCallback(CrawlManager.Callback cb, Object cookie,
-				   boolean successful, Crawler.Status status) {
+				   boolean successful, CrawlerStatus status) {
     if (cb != null) {
       try {
 	cb.signalCrawlAttemptCompleted(successful, cookie, status);
@@ -749,7 +749,9 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
         }
 	removeFromRunningCrawls(crawler);
 	cmStatus.incrFinished(crawlSuccessful);
-	callCallback(cb, cookie, crawlSuccessful, crawler.getStatus());
+	CrawlerStatus cs = crawler.getStatus();
+	callCallback(cb, cookie, crawlSuccessful, cs);
+	if (cs != null) cs.sealCounters();
       }
     }
   }
@@ -918,7 +920,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     }
     public void signalCrawlAttemptCompleted(boolean success,
 					    Object cookie,
-					    Crawler.Status status) {
+					    CrawlerStatus status) {
       callCallback(cb, cookie, false, null);
     }
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.60 2006-11-02 04:18:38 tlipkis Exp $
+ * $Id: TestNewContentCrawler.java,v 1.61 2006-11-14 19:21:28 tlipkis Exp $
  */
 
 /*
@@ -451,36 +451,33 @@ public class TestNewContentCrawler extends LockssTestCase {
 
   /** test recording mime-types and urls during a crawl */
   public void testKeepMimeTypeUrl() {
+    ConfigurationUtil.addFromArgs(CrawlerStatus.PARAM_RECORD_URLS, "mime",
+				  CrawlerStatus.PARAM_KEEP_URLS, "mime");
     String url1 = "http://www.example.com/link1.html";
     String url2 = "http://www.example.com/link2.html";  
     String url3 = "http://www.example.com/link3.html";
     String url4 = "http://www.example.com/link4.html";
-    MockCachedUrl cu0 = mau.addUrlContype(startUrl, false, true,
-                                              "bla-ba-type");
-    mau.addUrlContype(url1, false, true, "bla-content-type");
-    mau.addUrlContype(url2, false, true, "bla-content-type");
-    mau.addUrlContype(url3, false, true, "bla-content-type");
-    mau.addUrl(url4, false, true);        
+    mau.addUrlContype(startUrl, false, true, "text/html");
+    mau.addUrlContype(url1, false, true, "text/html; charset=UTF-8");
+    mau.addUrlContype(url2, false, true, "image/png");
+    mau.addUrlContype(url3, false, true, "image/png");
+    mau.addUrlContype(url4, false, true, "text/plain");
     parser.addUrlsToReturn(startUrl, SetUtil.set(url1, url2, url3, url4));   
     crawlRule.addUrlToCrawl(url1);
     crawlRule.addUrlToCrawl(url2);
     crawlRule.addUrlToCrawl(url3);
     crawlRule.addUrlToCrawl(url4);
-    ConfigurationUtil.addFromArgs(BaseCrawler.PARAM_KEEP_URLS_OF_MIME_TYPE,
-				  "true");
     crawler.doCrawl();
-    Crawler.Status crawlStatus = crawler.getStatus();
+    CrawlerStatus crawlStatus = crawler.getStatus();
     assertEquals(6, crawlStatus.getNumFetched());
-    CIProperties cu0Props = cu0.getProperties(); 
-    assertEquals( "bla-ba-type", 
-                  cu0Props.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE));
     assertEmpty(crawlStatus.getUrlsOfMimeType("no-such-mimetype"));
-    assertTrue(crawlStatus.getUrlsOfMimeType("bla-content-type").contains(url1));
-    assertTrue(crawlStatus.getUrlsOfMimeType("bla-content-type").contains(url2));
-    assertTrue(crawlStatus.getUrlsOfMimeType("bla-content-type").contains(url3));
-    assertEquals(3, crawlStatus.getNumUrlsOfMimeType("bla-content-type"));   
-    assertTrue(crawlStatus.getUrlsOfMimeType("text/html").contains(url4));     
-    assertTrue(crawlStatus.getUrlsOfMimeType("bla-ba-type").contains(startUrl));       
+    assertEquals(SetUtil.set(startUrl, url1),
+		 SetUtil.theSet(crawlStatus.getUrlsOfMimeType("text/html")));
+    assertEquals(2, crawlStatus.getNumUrlsOfMimeType("text/html"));   
+    assertEquals(SetUtil.set(url2, url3),
+		 SetUtil.theSet(crawlStatus.getUrlsOfMimeType("image/png")));
+    assertEquals(2, crawlStatus.getNumUrlsOfMimeType("image/png"));   
+    assertEquals(1, crawlStatus.getNumUrlsOfMimeType("text/plain"));   
   }
 
   /** test recording just the number of urls for mime-types during a crawl */
@@ -499,10 +496,10 @@ public class TestNewContentCrawler extends LockssTestCase {
     crawlRule.addUrlToCrawl(url2);
     crawlRule.addUrlToCrawl(url3);
     crawlRule.addUrlToCrawl(url4);
-    ConfigurationUtil.addFromArgs(BaseCrawler.PARAM_KEEP_URLS_OF_MIME_TYPE,
-				  "false");
+    ConfigurationUtil.addFromArgs(CrawlerStatus.PARAM_RECORD_URLS,
+ 				  "none");
     crawler.doCrawl();
-    Crawler.Status crawlStatus = crawler.getStatus();
+    CrawlerStatus crawlStatus = crawler.getStatus();
     assertEquals(6, crawlStatus.getNumFetched());                             
     assertTrue(crawlStatus.getUrlsOfMimeType("bla-content-type").isEmpty());
     assertTrue(crawlStatus.getUrlsOfMimeType("text/html").isEmpty());
@@ -542,7 +539,7 @@ public class TestNewContentCrawler extends LockssTestCase {
   }
 
   public void testGetStatusStartUrls() {
-    Crawler.Status crawlStatus = crawler.getStatus();
+    CrawlerStatus crawlStatus = crawler.getStatus();
     assertEquals(startUrls, crawlStatus.getStartUrls());
   }
 
@@ -561,10 +558,11 @@ public class TestNewContentCrawler extends LockssTestCase {
     crawlRule.addUrlToCrawl(url2);
     crawlRule.addUrlToCrawl(url3);
 
+    ConfigurationUtil.addFromArgs(CrawlerStatus.PARAM_RECORD_URLS, "all");
     long expectedStart = TimeBase.nowMs();
     crawler.doCrawl();
     long expectedEnd = TimeBase.nowMs();
-    Crawler.Status crawlStatus = crawler.getStatus();
+    CrawlerStatus crawlStatus = crawler.getStatus();
     assertEquals(expectedStart, crawlStatus.getStartTime());
     assertEquals(expectedEnd, crawlStatus.getEndTime());
     assertEquals(5, crawlStatus.getNumFetched());
@@ -594,10 +592,11 @@ public class TestNewContentCrawler extends LockssTestCase {
     crawlRule.addUrlToCrawl(url2);
     crawlRule.addUrlToCrawl(url3);
 
+    ConfigurationUtil.addFromArgs(CrawlerStatus.PARAM_RECORD_URLS, "all");
     long expectedStart = TimeBase.nowMs();
     crawler.doCrawl();
     long expectedEnd = TimeBase.nowMs();
-    Crawler.Status crawlStatus = crawler.getStatus();
+    CrawlerStatus crawlStatus = crawler.getStatus();
     assertEquals(expectedStart, crawlStatus.getStartTime());
     assertEquals(expectedEnd, crawlStatus.getEndTime());
     assertEquals(5, crawlStatus.getNumFetched());
@@ -632,7 +631,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     long expectedStart = TimeBase.nowMs();
     crawler.doCrawl();
     long expectedEnd = TimeBase.nowMs();
-    Crawler.Status crawlStatus = crawler.getStatus();
+    CrawlerStatus crawlStatus = crawler.getStatus();
     assertEquals(expectedStart, crawlStatus.getStartTime());
     assertEquals(expectedEnd, crawlStatus.getEndTime());
     assertEquals(4, crawlStatus.getNumFetched());
@@ -662,7 +661,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     long expectedStart = TimeBase.nowMs();
     crawler.doCrawl();
     long expectedEnd = TimeBase.nowMs();
-    Crawler.Status crawlStatus = crawler.getStatus();
+    CrawlerStatus crawlStatus = crawler.getStatus();
     assertEquals(expectedStart, crawlStatus.getStartTime());
     assertEquals(expectedEnd, crawlStatus.getEndTime());
     assertEquals(5, crawlStatus.getNumFetched());
@@ -698,7 +697,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     crawlRule.addUrlToCrawl(url1);
 
     crawler.doCrawl();
-    Crawler.Status crawlStatus = crawler.getStatus();
+    CrawlerStatus crawlStatus = crawler.getStatus();
 
     assertEquals(Crawler.STATUS_ERROR,
 		 crawlStatus.getCrawlStatus());
@@ -720,13 +719,13 @@ public class TestNewContentCrawler extends LockssTestCase {
  	       DEFAULT_RETRY_TIMES);
 
     crawler.doCrawl();
-    Crawler.Status crawlStatus = crawler.getStatus();
+    CrawlerStatus crawlStatus = crawler.getStatus();
 
-    assertEquals("Cannot fetch permission page.", 
-		 crawlStatus.getCrawlStatus());
     Map expectedErrors = MapUtil.map(permissionPage, "Test exception");
     assertEquals(expectedErrors, crawlStatus.getUrlsWithErrors());
     assertEquals(1, crawlStatus.getNumUrlsWithErrors());
+    assertEquals("Cannot fetch permission page.", 
+		 crawlStatus.getCrawlStatus());
   }
 
   public void testGetStatusRepoErrorStartUrl() {
@@ -744,7 +743,7 @@ public class TestNewContentCrawler extends LockssTestCase {
  	       DEFAULT_RETRY_TIMES);
 
     crawler.doCrawl();
-    Crawler.Status crawlStatus = crawler.getStatus();
+    CrawlerStatus crawlStatus = crawler.getStatus();
 
     assertEquals("Repository error", crawlStatus.getCrawlStatus());
     Map expectedErrors = MapUtil.map(permissionPage,
@@ -763,7 +762,7 @@ public class TestNewContentCrawler extends LockssTestCase {
   	       DEFAULT_RETRY_TIMES);
     crawlRule.addUrlToCrawl(url1);
     assertFalse(crawler.doCrawl());
-    Crawler.Status crawlStatus = crawler.getStatus();
+    CrawlerStatus crawlStatus = crawler.getStatus();
 
     assertEquals("Error", crawlStatus.getCrawlStatus());
     Map expectedErrors = MapUtil.map(url1, "Can't store page: Test exception");
@@ -1008,7 +1007,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     }
   }
 
-  static class MyCrawlerStatus extends Crawler.Status {
+  static class MyCrawlerStatus extends CrawlerStatus {
     List pendingEvents = new ArrayList();
 
     public MyCrawlerStatus(ArchivalUnit au, Collection startUrls,

@@ -1,5 +1,5 @@
 /*
- * $Id: TestPermissionMap.java,v 1.6 2006-09-22 06:23:02 tlipkis Exp $
+ * $Id: TestPermissionMap.java,v 1.7 2006-11-14 19:21:28 tlipkis Exp $
  */
 
 /*
@@ -108,8 +108,8 @@ public class TestPermissionMap extends LockssTestCase {
       throw new UnsupportedOperationException("not implemented");
     }
 
-    public Crawler.Status getCrawlStatus() {
-      return new Crawler.Status(null, null, null);
+    public CrawlerStatus getCrawlStatus() {
+      return new CrawlerStatus(null, null, null);
     }
 
   }

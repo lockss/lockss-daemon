@@ -1,5 +1,5 @@
 /*
- * $Id: TestSingleCrawlStatus.java,v 1.11 2006-11-02 04:18:38 tlipkis Exp $
+ * $Id: TestSingleCrawlStatus.java,v 1.12 2006-11-14 19:21:28 tlipkis Exp $
  */
 
 /*
@@ -106,7 +106,7 @@ public class TestSingleCrawlStatus extends LockssTestCase {
     }
   }
 
-  private void addCrawlStatus(Crawler.Status status) {
+  private void addCrawlStatus(CrawlerStatus status) {
     statusSource.getStatus().addCrawlStatus(status);
   }
 

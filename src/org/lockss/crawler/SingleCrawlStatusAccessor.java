@@ -1,5 +1,5 @@
 /*
- * $Id: SingleCrawlStatusAccessor.java,v 1.4 2006-11-02 04:18:38 tlipkis Exp $
+ * $Id: SingleCrawlStatusAccessor.java,v 1.5 2006-11-14 19:21:28 tlipkis Exp $
  */
 
 /*
@@ -34,7 +34,6 @@ package org.lockss.crawler;
 
 import java.util.*;
 
-import org.lockss.daemon.Crawler.Status.RecordMimeTypeUrls;
 import org.lockss.daemon.status.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
@@ -76,7 +75,7 @@ public class SingleCrawlStatusAccessor implements StatusAccessor {
       throw new IllegalArgumentException("SingleCrawlStatusAccessor requires a key");
     }
     String key = table.getKey();
-    Crawler.Status status = statusSource.getStatus().getCrawlStatus(key);
+    CrawlerStatus status = statusSource.getStatus().getCrawlStatus(key);
     if (status == null) {
       throw new StatusService.NoSuchTableException("Status info from that crawl is no longer available");
     }
@@ -87,14 +86,14 @@ public class SingleCrawlStatusAccessor implements StatusAccessor {
     table.setSummaryInfo(getSummaryInfo(status));
   }
 
-  private String getTableTitle(Crawler.Status status) {
+  private String getTableTitle(CrawlerStatus status) {
     ArchivalUnit au = status.getAu();
     return "Status of crawl of " + au.getName();
   }
 
   /**  iterate over the mime-types makeRow for each
    */
-  private List getRows(Crawler.Status status, String key) {
+  private List getRows(CrawlerStatus status, String key) {
     Collection mimeTypes = status.getMimeTypes();
     List rows = new ArrayList();
     if (mimeTypes != null) {
@@ -107,18 +106,12 @@ public class SingleCrawlStatusAccessor implements StatusAccessor {
     return rows;
   }
 
-  private Map makeRow(Crawler.Status status, String mimeType, String key) {  
+  private Map makeRow(CrawlerStatus status, String mimeType, String key) {  
     Map row = new HashMap();
-    long numOfUrls =  status.getNumUrlsOfMimeType(mimeType);
     row.put(MIME_TYPE_NAME, mimeType);
-    if (status.getUrlsOfMimeType(mimeType) == null) { 
-      row.put(MIME_TYPE_NUM_URLS, new Long(numOfUrls));
-    } else {     // If have list, number is link to table the displays it
-       String urlsRef =  key + "." + MIMETYPES_URLS_KEY +":"+mimeType ; 
-       row.put(MIME_TYPE_NUM_URLS,
-	       makeRef(numOfUrls, CRAWL_URLS_STATUS_ACCESSOR, urlsRef));
-    }
-
+    row.put(MIME_TYPE_NUM_URLS,
+	    makeRefIfColl(status.getMimeTypeCtr(mimeType), key,
+			  MIMETYPES_URLS_KEY +":"+mimeType));
     return row;
   }
 
@@ -129,6 +122,19 @@ public class SingleCrawlStatusAccessor implements StatusAccessor {
     return new StatusTable.Reference(new Long(value), tableName, key);
   }
 
+  /**
+   * If the UrlCounter has a collection, return a reference to it, else
+   * just the count
+   */
+  Object makeRefIfColl(CrawlerStatus.UrlCount ctr, String crawlKey,
+		       String subkey) {
+    if (ctr.hasCollection()) {
+      return makeRef(ctr.getCount(),
+		     CRAWL_URLS_STATUS_ACCESSOR, crawlKey + "." + subkey);
+    }
+    return new Long(ctr.getCount());
+  }
+
   public String getDisplayName() {
     throw new UnsupportedOperationException("No generic name for MimeTypeStatusCrawler");
   }
@@ -137,7 +143,7 @@ public class SingleCrawlStatusAccessor implements StatusAccessor {
     return true;
   }
 
-  private List getSummaryInfo(Crawler.Status status) {
+  private List getSummaryInfo(CrawlerStatus status) {
     List res = new ArrayList();
     Collection startUrls = status.getStartUrls();
     res.add(new StatusTable.SummaryInfo("Status",
