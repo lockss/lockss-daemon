@@ -1,5 +1,5 @@
 /*
- * $Id: NewContentCrawler.java,v 1.53 2006-11-14 19:21:29 tlipkis Exp $
+ * $Id: NewContentCrawler.java,v 1.54 2006-11-14 22:15:48 tlipkis Exp $
  */
 
 /*
@@ -98,14 +98,16 @@ public class NewContentCrawler extends FollowLinkCrawler {
     cachingStartUrls = true; //added to report error when fail to fetch startUrl
     logger.debug3("refetchDepth: "+refetchDepth);
 
+    // Important to put list we're iterating over in urlsToCrawl, so
+    // FollowLinkCrawler.foundUrl() can see them
     urlsToCrawl = SetUtil.theSet(startUrls);
-    Iterator it = urlsToCrawl.iterator();
-    for (int ix=0; ix<refetchDepth && it.hasNext(); ix++) {
-      logger.debug3("Refetching level "+ix);
-      //don't use clear() or it will empty the iterator
+    for (int ix = 0; ix < refetchDepth && !urlsToCrawl.isEmpty(); ix++) {
+      logger.debug3("Refetching " + urlsToCrawl.size() + " URLs at level "+ix);
+
       extractedUrls = newSet();
 
-      while (it.hasNext() && !crawlAborted) {
+      for (Iterator it = urlsToCrawl.iterator();
+	   it.hasNext() && !crawlAborted; ) {
 	String url = (String)it.next();
 	//XXX should we add code here to check if the URL is in the protocol
 	//we are supporting right now ? or the check is done in plugin already ?
@@ -140,7 +142,6 @@ public class NewContentCrawler extends FollowLinkCrawler {
       } // end while loop
       lvlCnt++;
       urlsToCrawl = extractedUrls;
-      it = extractedUrls.iterator();
     } // end for loop
     cachingStartUrls = false;
 
