@@ -47,7 +47,6 @@ public class DiskVoteBlocks extends BaseVoteBlocks {
     // Just copy to the output stream.
     StreamUtil.copy(from, fos);
     // Close
-    fos.flush();
     fos.close();
     this.size = blocksToRead;
   }
@@ -87,8 +86,7 @@ public class DiskVoteBlocks extends BaseVoteBlocks {
     dos.writeShort(encodedBlock.length);
     dos.write(encodedBlock);
     this.size++;
-    fos.flush();
-    fos.close();
+    dos.close();
   }
 
   protected synchronized VoteBlock getVoteBlock(int i) throws IOException {
