@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingHtmlParser.java,v 1.46 2006-11-15 21:18:38 troberts Exp $
+ * $Id: GoslingHtmlParser.java,v 1.47 2006-11-15 23:00:08 troberts Exp $
  */
 
 /*
@@ -157,9 +157,13 @@ public class GoslingHtmlParser implements ContentParser {
       CurrentConfig.getBooleanParam(PARAM_PARSE_JS, DEFAULT_PARSE_JS);
   }
 
-//  public GoslingHtmlParser(int ringCapacity) {
-//    this.ringCapacity = ringCapacity;
-//  }
+  private void init() {
+    lastTagWasScript = false;
+    malformedBaseUrl = false;
+    baseUrl = null;
+    readerEof = false;
+    ring = new CharRing(ringCapacity);
+  }
 
   /**
    * Method which will parse the html file represented by reader and call
@@ -181,11 +185,7 @@ public class GoslingHtmlParser implements ContentParser {
     this.reader = reader;
 
     try {
-      baseUrl = null;
-
-      readerEof = false;
-      ring = new CharRing(ringCapacity);
-
+      init();
       if (isTrace) logger.debug2("Extracting urls from " + srcUrl);
       String nextUrl = null;
       while ((nextUrl = extractNextLink(ring, au)) != null) {
