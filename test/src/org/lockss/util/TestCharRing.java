@@ -1,5 +1,5 @@
 /*
- * $Id: TestCharRing.java,v 1.10 2005-10-11 05:52:45 tlipkis Exp $
+ * $Id: TestCharRing.java,v 1.11 2006-11-15 21:17:53 troberts Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 import java.io.*;
 import org.lockss.test.*;
+import org.lockss.util.CharRing.RingFullException;
 
 public class TestCharRing extends LockssTestCase {
   CharRing cr;
@@ -46,6 +47,50 @@ public class TestCharRing extends LockssTestCase {
     cr.add('e');
   }
 
+
+  private void doWhiteSpaceTest(char[] chars) throws RingFullException {
+
+    CharRing cr2 = new CharRing(chars.length);
+    cr2.add(chars);
+    assertTrue(cr2.skipLeadingWhiteSpace());
+    assertEquals(2, cr2.size());
+    assertEquals('x', cr2.get(0));
+    assertEquals('y', cr2.get(1));
+  }
+
+  private static final char chars1[] = {' ', 'x', 'y'};
+
+  private static final char chars2[] = {' ', ' ', '\n', ' ', ' ', 'x', 'y'};
+
+
+  public void testSkipLeadingWhiteSpace() throws RingFullException {
+    assertFalse(cr.skipLeadingWhiteSpace());
+
+    doWhiteSpaceTest(chars1);
+    doWhiteSpaceTest(chars2);
+  }
+
+  public void testStartsWithIgnoreCase() throws RingFullException {
+    assertFalse(cr.startsWithIgnoreCase("ZZ"));
+    assertFalse(cr.startsWithIgnoreCase("ZZZZZZZZ"));
+    assertTrue(cr.startsWithIgnoreCase("ab"));
+    assertTrue(cr.startsWithIgnoreCase("AB"));
+    cr.remove(new StringBuffer(), 4);
+    cr.add('p');
+    assertTrue(cr.startsWithIgnoreCase("ep"));
+  }
+
+  public void testStartsWithIgnoreCaseWithIdx() throws RingFullException {
+    assertFalse(cr.startsWithIgnoreCase("ZZ", 2));
+    assertTrue(cr.startsWithIgnoreCase("ab", 0));
+    assertTrue(cr.startsWithIgnoreCase("BC", 1));
+    assertFalse(cr.startsWithIgnoreCase("BC", 6));
+
+
+    //    cr.remove(new StringBuffer(), 4);
+//    cr.add('p');
+//    assertTrue(cr.startsWithIgnoreCase("ep"));
+  }
 
   public void testZeroCapacityThrows() {
     try {

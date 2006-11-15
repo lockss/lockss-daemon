@@ -1,5 +1,5 @@
 /*
- * $Id: CharRing.java,v 1.9 2005-10-11 05:48:30 tlipkis Exp $
+ * $Id: CharRing.java,v 1.10 2006-11-15 21:17:53 troberts Exp $
  */
 
 /*
@@ -387,6 +387,55 @@ public class CharRing {
     }
     return false;
   }
+
+  /**
+   * Skips any leading whitespace and return true if any was found.
+   * Note that this does not refill the buffer, so callers should do something
+   * like this:
+   * while(ring.skipLeadingWhiteSpace()) {
+   * 	refill ring;
+   * }
+   * @return true if any leading whitespace was found, false otherwise
+   */
+  public boolean skipLeadingWhiteSpace() {
+    if (Character.isWhitespace(get(0))) {
+      int idx = 0;
+      do {
+	idx++;
+      } while (idx < size() && Character.isWhitespace(get(idx)));
+      skip(idx);
+      return true;
+    }
+    return false;
+  }
+
+  /**
+   * Return true if the ring starts with the specified string (ignoring case)
+   * @param str String to check for
+   * @return true if the ring starts with the specified string (ignoring case)
+   */
+  public boolean startsWithIgnoreCase(String str) {
+    return startsWithIgnoreCase(str, 0);
+  }
+
+  /**
+   * Return true if the ring starts with the specified string (ignoring case)
+   * @param str String to check for
+   * @param startIdx index to begin searching at
+   * @return true if the ring starts with the specified string (ignoring case)
+   */
+  public boolean startsWithIgnoreCase(String str, int startIdx) {
+    if (str.length()+startIdx > size()) {
+      return false;
+    }
+    for (int ix=0; ix < str.length(); ix++) {
+      if (!StringUtil.equalsIgnoreCase(get(ix+startIdx), str.charAt(ix))) {
+	return false;
+      }
+    }
+    return true;
+  }
+
 
   public void add0(char newChars[], int pos, int length)
       throws RingFullException {
