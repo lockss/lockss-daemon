@@ -68,9 +68,9 @@ PROP_URL_LIST="-p http://props.lockss.org:8001/daemon/lockss.xml -p local.txt"
 
 # local copy of lockss jars allows recompile while we're running
 mkdir -p lib
-cp ${PROJECT_DIR}/lib/lockss.jar lib
-cp ${PROJECT_DIR}/lib/lockss-test.jar lib
-cp ${PROJECT_DIR}/lib/lockss-plugins.jar lib
+cp "${PROJECT_DIR}/lib/lockss.jar" lib
+cp "${PROJECT_DIR}/lib/lockss-test.jar" lib
+cp "${PROJECT_DIR}/lib/lockss-plugins.jar" lib
 CLASSPATH=lib/lockss.jar:lib/lockss-test.jar:lib/lockss-plugins.jar:`cat ${PROJECT_DIR}/test/test-classpath`
 export CLASSPATH
 #echo CLASSPATH=$CLASSPATH

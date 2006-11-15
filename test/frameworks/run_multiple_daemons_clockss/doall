@@ -10,9 +10,9 @@ fi
 
 if [ "$1" = "start" ] ; then
     mkdir -p lib
-    cp ${PROJECT_DIR}/lib/lockss.jar lib
-    cp ${PROJECT_DIR}/lib/lockss-test.jar lib
-    cp ${PROJECT_DIR}/lib/lockss-plugins.jar lib
+    cp "${PROJECT_DIR}/lib/lockss.jar" lib
+    cp "${PROJECT_DIR}/lib/lockss-test.jar" lib
+    cp "${PROJECT_DIR}/lib/lockss-plugins.jar" lib
 fi
 
 for i in 1 2 3 4 ; do
