@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.41 2006-11-09 01:44:54 thib_gc Exp $
+ * $Id: ConfigManager.java,v 1.42 2006-11-15 08:15:49 tlipkis Exp $
  */
 
 /*
@@ -464,7 +464,7 @@ public class ConfigManager implements LockssManager {
       String url = cf.getFileUrl();
       if (e instanceof FileNotFoundException &&
 	  StringUtil.endsWithIgnoreCase(url, ".opt")) {
-	log.info("Not loading props from nonexistent optional file: " + url);
+	log.debug2("Not loading props from nonexistent optional file: " + url);
 	return null;
       } else if (required) {
 	// This load failed.  Fail the whole thing.
