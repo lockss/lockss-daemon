@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.76 2006-10-07 23:11:30 tlipkis Exp $
+ * $Id: StringUtil.java,v 1.77 2006-11-15 21:17:31 troberts Exp $
  */
 
 /*
@@ -1077,7 +1077,7 @@ public class StringUtil {
   }
 
   /**
-   * 
+   *
    * @return true if the first str.length() chars in buffer match str
    */
   private static boolean startsWith(char[]buffer, String str,
@@ -1105,4 +1105,10 @@ public class StringUtil {
       return number + " " + pluralUnit;
     }
   }
+
+  public static boolean equalsIgnoreCase(char kar1, char kar2) {
+    return (Character.toLowerCase(kar1) == Character.toLowerCase(kar2));
+  }
+
+
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.64 2006-10-07 23:11:30 tlipkis Exp $
+ * $Id: TestStringUtil.java,v 1.65 2006-11-15 21:17:31 troberts Exp $
  */
 
 /*
@@ -426,9 +426,9 @@ public class TestStringUtil extends LockssTestCase {
 		 StringUtil.trimNewlinesAndLeadingWhitespace("f\roo"));
     assertEquals("foo",
 		 StringUtil.trimNewlinesAndLeadingWhitespace("f\r\noo"));
-    assertEquals("foo", 
+    assertEquals("foo",
 		 StringUtil.trimNewlinesAndLeadingWhitespace("f\n oo"));
-    assertEquals("foo", 
+    assertEquals("foo",
 		 StringUtil.trimNewlinesAndLeadingWhitespace("f\n\r oo"));
     assertEquals("foo",
 		 StringUtil.trimNewlinesAndLeadingWhitespace("f\n   oo"));
@@ -831,6 +831,16 @@ public class TestStringUtil extends LockssTestCase {
     assertEquals("1 box", StringUtil.numberOfUnits(1, "box", "boxes"));
     assertEquals("2 boxes", StringUtil.numberOfUnits(2, "box", "boxes"));
     assertEquals("-3 boxes", StringUtil.numberOfUnits(-3, "box", "boxes"));
+  }
+
+  public void testEqualsIgnoreCase() {
+    assertTrue(StringUtil.equalsIgnoreCase('a', 'a'));
+    assertTrue(StringUtil.equalsIgnoreCase('a', 'A'));
+    assertTrue(StringUtil.equalsIgnoreCase('A', 'a'));
+    assertTrue(StringUtil.equalsIgnoreCase('A', 'A'));
+    assertTrue(StringUtil.equalsIgnoreCase('!', '!'));
+    assertFalse(StringUtil.equalsIgnoreCase('!', 'a'));
+    assertFalse(StringUtil.equalsIgnoreCase('b', 'a'));
   }
 
   private static class SlowStringReader extends StringReader {
