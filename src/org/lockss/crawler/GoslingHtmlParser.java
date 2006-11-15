@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingHtmlParser.java,v 1.45 2006-11-14 18:00:57 troberts Exp $
+ * $Id: GoslingHtmlParser.java,v 1.46 2006-11-15 21:18:38 troberts Exp $
  */
 
 /*
@@ -114,7 +114,7 @@ public class GoslingHtmlParser implements ContentParser {
   protected static final String TDTAG = "tc";
   protected static final String VALUETAG = "value";
 
-  protected static final String SCRIPTTAGEND = "</script>";
+  protected static final String SCRIPTTAGEND = "/script>";
 
 
   protected static final String REFRESH = "refresh";
@@ -208,6 +208,21 @@ public class GoslingHtmlParser implements ContentParser {
 
 
   /**
+   * Keep calling skipLeadingWhiteSpace and refilling the char ring until there
+   * is no more leading white space
+   * @param ring CharRing to strip whitespace from
+   * @param minKars minimum number of characters needed in the CharRing
+   * @throws IOException
+   */
+  private void skipWhiteSpace(CharRing ring, int minKars) throws IOException {
+    do {
+      if (!refill(minKars)) {
+	return;
+      }
+    } while (ring.skipLeadingWhiteSpace());
+  }
+
+  /**
    * Read through the reader stream, extract and return the next url found
    * (after decoding any html entities in it)
    *
@@ -225,8 +240,9 @@ public class GoslingHtmlParser implements ContentParser {
 	ring.clear();
 	continue;
       } else {
-// 	if (isTrace) logger.debug3("Found < at " + idx);
+	// 	if (isTrace) logger.debug3("Found < at " + idx);
 	ring.skip(idx + 1);
+	skipWhiteSpace(ring, MIN_TAG_LENGTH);
 	if (!refill(MIN_TAG_LENGTH)) return null;
 	if (ring.get(0) == '!' && ring.get(1) == '-' && ring.get(2) == '-') {
 	  // html comment, skip
@@ -240,6 +256,8 @@ public class GoslingHtmlParser implements ContentParser {
 		(ring.get(idx-1) == '!' && ring.get(idx-2) == '-'
 		 && ring.get(idx-3) == '-'))) {
 	      if (isTrace) logger.debug3("Found end of comment");
+	      //skip over all of the comment
+	      ring.skip(idx);
 	      break;
 	    }
 	    if (idx >= 0) {
@@ -298,17 +316,9 @@ public class GoslingHtmlParser implements ContentParser {
     return null;
   }
 
-  private boolean ringStartsWithIgnoreCase(CharRing ring, String str) {
-    for (int ix=0; ix < str.length(); ix++) {
-      if (!equalsIgnoreCase(ring.get(ix), str.charAt(ix))) {
-	return false;
-      }
-    }
-    return true;
-  }
-
-  private static final boolean equalsIgnoreCase(char kar1, char kar2) {
-    return (Character.toLowerCase(kar1) == Character.toLowerCase(kar2));
+  private boolean ringStartsWithIgnoreCase(CharRing ring, String str) throws IOException {
+    skipWhiteSpace(ring, str.length());
+    return ring.startsWithIgnoreCase(str);
   }
 
   private void readThroughTag(String tag) throws IOException {
@@ -319,16 +329,10 @@ public class GoslingHtmlParser implements ContentParser {
       if (!refill(tagLength + 1)) return;
       int idx = ring.indexOf(">", -1, false);
       if (idx >= tagLength-1) {
-	boolean foundTag = true;
-	for (int ix = 0; ix < tagLength; ix++) {
-	  if (Character.toLowerCase(ring.get(idx-ix)) != tag.charAt(tagLength-ix-1)) {
-	    foundTag = false;
-	    break;
-	  }
-	}
-	if (foundTag) {
+	if (ring.startsWithIgnoreCase(tag, idx-(tagLength-1))) {
 	  if (isTrace) logger.debug3("Found "+tag);
-	  break;
+	  ring.skip(idx+1);
+	  return;
 	}
       }
       if (idx >= 0) {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingHtmlParser.java,v 1.32 2006-11-14 18:00:57 troberts Exp $
+ * $Id: TestGoslingHtmlParser.java,v 1.33 2006-11-15 21:18:38 troberts Exp $
  */
 
 /*
@@ -654,19 +654,73 @@ public class TestGoslingHtmlParser extends LockssTestCase {
     assertEquals(SetUtil.set(url), parseSingleSource(source));
   }
 
-
-  public void testSkipsScriptTagsIgnoreCase() throws IOException {
+  public void testSkipsScriptTagsAllTheWay() throws IOException {
     String url= "http://www.example.com/link3.html";
 
     String source =
       "<html><head><title>Test</title></head><body>"+
-      "<ScRipt>" +
+      "<script>" +
+      "<a href=http://www.example.com/link1.html>link1</a>"+
+      "Filler, with <b>bold</b> tags and<i>others</i>"+
+      "<a href=http://www.example.com/link2.html" +
+      "</script>"+
+      "<a href=http://www.example.com/link3.html>link3</a>";
+    assertEquals(SetUtil.set(url), parseSingleSource(source));
+  }
+
+
+  private void doScriptSkipTest(String openScript, String closeScript)
+  	throws IOException {
+    doScriptSkipTest(openScript, closeScript, null);
+  }
+
+  private void doScriptSkipTest(String openScript, String closeScript,
+                                String failMsg)
+  	throws IOException {
+    String url= "http://www.example.com/link3.html";
+    String src =
+      "<html><head><title>Test</title></head><body>"+
+      openScript +
       "<a href=http://www.example.com/link1.html>link1</a>"+
       "Filler, with <b>bold</b> tags and<i>others</i>"+
       "<a href=http://www.example.com/link2.html>link2</a>" +
-      "</sCripT>"+
+      closeScript +
       "<a href=http://www.example.com/link3.html>link3</a>";
-    assertEquals(SetUtil.set(url), parseSingleSource(source));
+    assertEquals(failMsg, SetUtil.set(url), parseSingleSource(src));
+  }
+
+  private String mkStr(char kar, int num) {
+    StringBuffer sb = new StringBuffer(num);
+    for (int ix=0; ix<num; ix++) {
+      sb.append(kar);
+    }
+    return sb.toString();
+  }
+
+  public void testSkipsScriptTagsWhiteSpace() throws IOException {
+    Properties p = new Properties();
+    p.setProperty(GoslingHtmlParser.PARAM_BUFFER_CAPACITY, "90");
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+    parser = new GoslingHtmlParser();
+
+    for (int ix=1; ix < 200; ix += 5) {
+      String whiteSpace = mkStr(' ', ix);
+      doScriptSkipTest("<script"+whiteSpace+">", "</script>",
+                       "Failed during iteration "+ix);
+      doScriptSkipTest("<"+whiteSpace+"script>", "</script>",
+                       "Failed during iteration "+ix);
+      doScriptSkipTest("<script>", "<"+whiteSpace+"/script>",
+                       "Failed during iteration "+ix);
+      doScriptSkipTest("<script"+whiteSpace+"blah=blah>", "</script>",
+                       "Failed during iteration "+ix);
+//      doScriptSkipTest("<script>", "</script"+whiteSpace+">",
+//                       "Failed during iteration "+ix);
+    }
+  }
+
+
+  public void testSkipsScriptTagsIgnoreCase() throws IOException {
+    doScriptSkipTest("<ScRipt>", "</sCripT>");
   }
 
   public void testSkipsScriptTagsSpansRing() throws IOException {
@@ -675,15 +729,7 @@ public class TestGoslingHtmlParser extends LockssTestCase {
     ConfigurationUtil.setCurrentConfigFromProps(p);
     parser = new GoslingHtmlParser();
 
-    String url= "http://www.example.com/link3.html";
-
-    String source =
-      "<html><head><title>Test</title></head><body><script>" +
-      "<a href=http://www.example.com/link1.html>link1</a>" +
-      "Filler, with <b>bold</b> tags and<i>others</i>" +
-      "<a href=http://www.example.com/link2.html>link2</a></script>" +
-      "<a href=http://www.example.com/link3.html>link3</a>";
-    assertEquals(SetUtil.set(url), parseSingleSource(source));
+    doScriptSkipTest("<script>", "</script>");
   }
 
   public void testKeepsSpaceInUrl() throws IOException {
