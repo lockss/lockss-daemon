@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.38 2006-11-14 19:21:28 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.39 2006-11-15 08:24:53 smorabito Exp $
  */
 
 /*
@@ -156,6 +156,13 @@ public class V3Poller extends BasePoll {
     PREFIX + "voteMargin";
   public static final int DEFAULT_V3_VOTE_MARGIN =
     75;
+  
+  /** The maximum number of block errors that can be encountered
+   * during the tally before the poll is aborted.
+   */
+  public static final String PARAM_MAX_BLOCK_ERROR_COUNT =
+    PREFIX + "maxBlockErrorCount";
+  public static final int DEFAULT_MAX_BLOCK_ERROR_COUNT = 10;
 
   /**
    * The amount of time, in ms, to hold the poll open past normal closing time
@@ -217,6 +224,8 @@ public class V3Poller extends BasePoll {
 
   private static Logger log = Logger.getLogger("V3Poller");
   private static LockssRandom theRandom = new LockssRandom();
+  private int blockErrorCount = 0;
+  private int maxBlockErrorCount = DEFAULT_MAX_BLOCK_ERROR_COUNT;
 
   private SchedulableTask task;
   private TimerQueue.Request pollCompleteRequest;
@@ -607,7 +616,6 @@ public class V3Poller extends BasePoll {
             vb.release();
           }
         }
-        checkpointPoll();
         pollManager.closeThePoll(pollerState.getPollKey());        
         log.debug("Closed poll " + pollerState.getPollKey());
       }
@@ -774,6 +782,7 @@ public class V3Poller extends BasePoll {
   private void tallyBlock(HashBlock hb) {
     setStatus(V3Poller.POLLER_STATUS_TALLYING);
 
+    log.debug3("Opening block " + hb.getUrl() + " to tally.");
     int missingBlockVoters = 0;
     int digestIndex = 0;
     int bytesHashed = 0;
@@ -800,21 +809,30 @@ public class V3Poller extends BasePoll {
             tally.addVoteForBlock(voter.getVoterId(), vb);
             int sortOrder = hb.getUrl().compareTo(vb.getUrl());
             if (sortOrder > 0) {
+              log.debug3("Participant " + voter.getVoterId() + 
+                         " seems to have an extra block that I don't: " +
+                         vb.getUrl());
               tally.addMissingBlockVoter(voter.getVoterId(), vb.getUrl());
               iter.next();
               missingBlockVoters++;
             } else if (sortOrder < 0) {
+              log.debug3("Participant " + voter.getVoterId() +
+                         " doesn't seem to have block " + hb.getUrl());
               tally.addExtraBlockVoter(voter.getVoterId());
             } else { // equal
+              log.debug3("Our blocks are the same, now we'll compare them.");
               iter.next();
               compareBlocks(voter.getVoterId(), ++digestIndex, vb, hb, tally);
             }
           }
         } catch (IOException ex) {
-          // This would be bad enough to stop the poll and raise an alert.
+          // On IOExceptions, attempt to move the poll forward. Just skip
+          // this block, but be sure to log the error.
           log.error("IOException while iterating over vote blocks.", ex);
-          stopPoll(V3Poller.POLLER_STATUS_ERROR);
-          return;
+          if (++blockErrorCount > maxBlockErrorCount) {
+            pollerState.setErrorDetail("Too many errors during tally");
+            stopPoll(V3Poller.POLLER_STATUS_ERROR);
+          }
         } finally {
           voter.incrementTalliedBlocks();
         }

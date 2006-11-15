@@ -1,5 +1,5 @@
 /*
- * $Id: BasePollFactory.java,v 1.2 2005-10-11 05:45:39 tlipkis Exp $
+ * $Id: BasePollFactory.java,v 1.3 2006-11-15 08:24:53 smorabito Exp $
  */
 
 /*
@@ -90,6 +90,12 @@ public abstract class BasePollFactory implements PollFactory {
                                          PollManager pm) {
     // loop goes maybe one more because we don't want to stop before
     // reaching max
+    if (min > max) {
+      log.info("Can't schedule a poll with min poll time [" +
+               min + "] greater than max poll time [" +
+               max + "]");
+      return -1;
+    }
     for (long dur = min; dur <= (max + incr - 1); dur += incr) {
       if (dur > max) {
         dur = max;

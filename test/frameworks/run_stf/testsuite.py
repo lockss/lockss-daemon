@@ -1184,8 +1184,6 @@ class V3TestCase(LockssTestCase):
                          "org.lockss.poll.v3.maxPollSize": "4",
                          "org.lockss.poll.v3.minNominationSize": "1",
                          "org.lockss.poll.v3.maxNominationSize": "1",
-                         "org.lockss.poll.v3.minPollDuration": "5m",
-                         "org.lockss.poll.v3.maxPollDuration": "6m",
                          "org.lockss.poll.v3.voteDeadlinePadding": "30s",
                          "org.lockss.id.initialV3PeerList": self.getInitialPeerList() }
             extraConf.update(self.getTestLocalConf())
@@ -1649,7 +1647,7 @@ class SimpleExtraFileV3TestCase(V3TestCase):
         ## Just pause until we have better tests.
         log.info("Waiting for V3 repair...")
         # waitForV3Repair takes a list of nodes
-        client.waitForV3Repair(simAu, [node], timeout=self.timeout)
+        client.waitForV3RepairExtraFiles(simAu, timeout=self.timeout)
         log.info("AU successfully repaired.")
 
 def simpleExtraFileV3TestCase():
@@ -1701,7 +1699,7 @@ class LastFileExtraV3TestCase(V3TestCase):
         ## Just pause until we have better tests.
         log.info("Waiting for V3 repair...")
         # waitForV3Repair takes a list of nodes
-        client.waitForV3Repair(simAu, [node], timeout=self.timeout)
+        client.waitForV3RepairExtraFiles(simAu, timeout=self.timeout)
         log.info("AU successfully repaired.")
 
 def lastFileExtraV3TestCase():
@@ -1754,7 +1752,7 @@ class RandomExtraFileV3TestCase(V3TestCase):
         ## Just pause until we have better tests.
         log.info("Waiting for V3 repair...")
         # waitForV3Repair takes a list of nodes
-        client.waitForV3Repair(simAu, nodeList, timeout=self.timeout)
+        client.waitForV3RepairExtraFiles(simAu, timeout=self.timeout)
         log.info("AU successfully repaired.")
 
 def randomExtraFileV3TestCase():
@@ -1818,7 +1816,7 @@ class VotersDontParticipateV3TestCase(V3TestCase):
         ## Just pause until we have better tests.
         log.info("Waiting for V3 repair...")
         # waitForV3Repair takes a list of nodes
-        client.waitForV3Repair(simAu, nodeList, timeout=self.timeout)
+        client.waitForV3RepairExtraFiles(simAu, timeout=self.timeout)
         log.info("AU successfully repaired.")
     
 def votersDontParticipateV3TestCase():
@@ -1880,7 +1878,6 @@ class NoQuorumV3TestCase(V3TestCase):
 
         ## Just pause until we have better tests.
         log.info("Waiting for V3 poll to report no quorum...")
-        # waitForV3Repair takes a list of nodes
         client.waitForV3NoQuorum(simAu)
         log.info("AU successfully reported No Quorum.")
     

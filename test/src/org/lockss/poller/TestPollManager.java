@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.88 2006-11-08 16:42:59 smorabito Exp $
+ * $Id: TestPollManager.java,v 1.89 2006-11-15 08:24:53 smorabito Exp $
  */
 
 /*
@@ -531,10 +531,18 @@ public class TestPollManager extends LockssTestCase {
   private BasePoll makeTestV3Voter() throws Exception {
     PollSpec spec = new MockPollSpec(testau, rooturls[0], lwrbnd, uprbnd,
                                      Poll.V3_POLL);
-    return new V3Voter(spec, theDaemon, testID, "akeyforthispoll",
-                       ByteArray.makeRandomBytes(20),
-                       ByteArray.makeRandomBytes(20),
-                       1234567890, "SHA-1");
+
+    V3LcapMessage pollMsg = 
+      new V3LcapMessage(testau.getAuId(), "akeyforthispoll", "3",
+                        ByteArray.makeRandomBytes(20),
+                        ByteArray.makeRandomBytes(20),
+                        V3LcapMessage.MSG_POLL,
+                        TimeBase.nowMs() + 50000, 
+                        testID, tempDir, theDaemon);
+    
+    pollMsg.setVoteDeadline(TimeBase.nowMs() + 20000);
+      
+    return new V3Voter(theDaemon, pollMsg);
   }
   
   // XXX:  Move these tests to TestV1PollFactory

@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollFactory.java,v 1.6 2006-08-07 18:47:48 tlipkis Exp $
+ * $Id: V3PollFactory.java,v 1.7 2006-11-15 08:24:53 smorabito Exp $
  */
 
 /*
@@ -49,15 +49,19 @@ public class V3PollFactory extends BasePollFactory {
 
   private static final String PREFIX = Configuration.PREFIX + "poll.v3.";
 
-  /** The minimum duration multiplier for a V3 poll */
+  /** The minimum duration multiplier for a V3 poll.  */
   public static final String PARAM_DURATION_MULTIPLIER_MIN =
     PREFIX + "minMultiplier";
-  public static final int DEFAULT_DURATION_MULTIPLIER_MIN = 3;
+  public static final int DEFAULT_DURATION_MULTIPLIER_MIN = 1;
   /** The maximum duration multiplier for a V3 poll */
   public static final String PARAM_DURATION_MULTIPLIER_MAX =
     PREFIX + "maxMultiplier";
-  public static final int DEFAULT_DURATION_MULTIPLIER_MAX = 7;
-  /** The minimum duration for a V3 poll */
+  public static final int DEFAULT_DURATION_MULTIPLIER_MAX = 1;
+  /** The minimum duration for a V3 poll.  The minimum duration is calculated
+   * from the hash duration and maximum number of participants, and this
+   * parameter is no longer used.
+   * 
+   *  @deprecated */
   public static final String PARAM_POLL_DURATION_MIN =
     PREFIX + "minPollDuration";
   public static long DEFAULT_POLL_DURATION_MIN = 24 * Constants.HOUR;
@@ -131,9 +135,11 @@ public class V3PollFactory extends BasePollFactory {
         // Only participate if we have and have successfully crawled this AU.
         if (AuUtil.getAuState(au).getLastCrawlTime() > 0) { 
           log.debug("Creating V3Voter to participate in poll " + m.getKey());
-          retPoll = new V3Voter(s, daemon, m.getOriginatorId(), m.getKey(),
-                                m.getEffortProof(), m.getPollerNonce(),
-                                m.getDuration(), m.getHashAlgorithm());
+//          retPoll = new V3Voter(s, daemon, m.getOriginatorId(), m.getKey(),
+//                                m.getEffortProof(), m.getPollerNonce(),
+//                                m.getDuration(), m.getHashAlgorithm());
+        retPoll = new V3Voter(daemon, m);
+
           retPoll.startPoll(); // Voters need to be started immediately.
         } else {
           log.debug("Have not completed new content crawl.  Not " +
@@ -188,12 +194,35 @@ public class V3PollFactory extends BasePollFactory {
     hashEst = getAdjustedEstimate(hashEst, pm);
     log.debug3("My adjusted hash duration: " + hashEst);
 
-    long minPoll = Math.max(hashEst * minDurationMultiplier,
-                            minPollDuration);
-    long maxPoll = Math.max(Math.min(hashEst * maxDurationMultiplier,
-                                     maxPollDuration),
-                                     minPollDuration);
-    return findSchedulableDuration(hashEst, minPoll, maxPoll, hashEst, pm);
+    // In order to calculate the min and max duration, we'll need to find
+    // the maximum possible number of participants (the size of the invitation
+    // list) from V3Poller, as well as the V3 vote timer padding.
+    int maxPollParticipants =
+      CurrentConfig.getIntParam(V3Poller.PARAM_MAX_POLL_SIZE,
+                                V3Poller.DEFAULT_MAX_POLL_SIZE);
+    
+    long v3VoteDeadlinePadding =
+      CurrentConfig.getLongParam(V3Poller.PARAM_V3_EXTRA_POLL_TIME,
+                                 V3Poller.DEFAULT_V3_EXTRA_POLL_TIME);
+
+    long minHashTime = hashEst * (maxPollParticipants + 1);
+    
+    // Worst case minimum time to complete the poll.
+    // - Must has n versions for each participant, plus myself.
+    // - Must account for V3 Vote Deadline Padding.
+    // - Can apply a multiplier for very slow machines, or for testing
+    //   with run_multiple_daemons, etc.
+    long minPoll =
+      minDurationMultiplier * minHashTime + v3VoteDeadlinePadding;
+
+    // Maximum amount of time we want to allow the poll to run.  Never
+    // let it exceed "MaxPollDuration".
+    long maxPoll =
+      Math.min(maxDurationMultiplier * minHashTime + v3VoteDeadlinePadding,
+               maxPollDuration);
+    
+    return findSchedulableDuration(minHashTime, minPoll, maxPoll, 
+                                   minHashTime, pm);
   }
 
   // XXX: It is very unlikely that a V3 poll would cause duplicate messages,

@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.24 2006-11-08 16:42:59 smorabito Exp $
+ * $Id: V3Voter.java,v 1.25 2006-11-15 08:24:53 smorabito Exp $
  */
 
 /*
@@ -110,6 +110,8 @@ public class V3Voter extends BasePoll {
   private int nomineeCount;
   private File stateDir;
   private boolean allowRepairs = DEFAULT_ALLOW_V3_REPAIRS;
+  private int blockErrorCount = 0;
+  private int maxBlockErrorCount = V3Poller.DEFAULT_MAX_BLOCK_ERROR_COUNT;
 
   // Task used to reserve time for hashing at the start of the poll.
   // This task is cancelled before the real hash is scheduled.
@@ -120,11 +122,10 @@ public class V3Voter extends BasePoll {
   /**
    * Create a new V3Voter to participate in a poll.
    */
-  public V3Voter(PollSpec spec, LockssDaemon daemon, PeerIdentity orig,
-                 String key, byte[] introEffortProof, byte[] pollerNonce,
-                 long duration, String hashAlg)
+  public V3Voter(LockssDaemon daemon, V3LcapMessage msg)
       throws V3Serializer.PollSerializerException {
-    log.debug3("Creating V3 Voter for poll: " + key);
+    log.debug3("Creating V3 Voter for poll: " + msg.getKey() +
+               "; duration=" + msg.getDuration());
 
     this.theDaemon = daemon;
     pollSerializer = new V3VoterSerializer(theDaemon);
@@ -135,6 +136,10 @@ public class V3Voter extends BasePoll {
     String relPluginPath =
       CurrentConfig.getParam(PARAM_V3_MESSAGE_REL_DIR,
                              DEFAULT_V3_MESSAGE_REL_DIR);
+    
+    maxBlockErrorCount =
+      CurrentConfig.getIntParam(V3Poller.PARAM_MAX_BLOCK_ERROR_COUNT,
+                                V3Poller.DEFAULT_MAX_BLOCK_ERROR_COUNT);
 
     if (dSpaceList == null || dSpaceList.size() == 0) {
       log.error(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST +
@@ -153,12 +158,16 @@ public class V3Voter extends BasePoll {
     }
 
     try {
-      this.voterUserData = new VoterUserData(spec, this, orig, key,
-                                             duration, hashAlg,
-                                             pollerNonce,
+      this.voterUserData = new VoterUserData(new PollSpec(msg), this,
+                                             msg.getOriginatorId(), 
+                                             msg.getKey(),
+                                             msg.getDuration(),
+                                             msg.getHashAlgorithm(),
+                                             msg.getPollerNonce(),
                                              makeVoterNonce(),
-                                             introEffortProof,
+                                             msg.getEffortProof(),
                                              stateDir);
+      voterUserData.setVoteDeadline(msg.getVoteDeadline());
     } catch (IOException ex) {
       log.critical("IOException while trying to create VoterUserData: ", ex);
       stopPoll();
@@ -309,6 +318,20 @@ public class V3Voter extends BasePoll {
 
     TimerQueue.schedule(pollDeadline, new PollTimerCallback(), this);
 
+    // Schedule a little check for the vote deadline.  If we haven't voted
+    // by this time, we must stop the poll and stop participating.  There's
+    // no point wasting time in a hash after that.
+    TimerQueue.schedule(Deadline.at(voterUserData.getVoteDeadline()),
+                        new TimerQueue.Callback() {
+      public void timerExpired(Object cookie) {
+        if (!getVoterUserData().hashingDone()) {
+          log.warning("Vote deadline has passed before my hashing was done " +
+                      "in poll " + getKey() + ". Stopping the poll.");
+          stopPoll(V3Voter.STATUS_NO_TIME);
+        }
+      }
+    }, this);
+    
     if (continuedPoll) {
       try {
 	stateMachine.resume(voterUserData.getPsmState());
@@ -532,9 +555,13 @@ public class V3Voter extends BasePoll {
     try {
       blocks.addVoteBlock(vb);
     } catch (IOException ex) {
-      log.critical("Unexpected IO Exception trying to add vote block.  " +
-                   "Aborting our participation.", ex);
-      abortPoll();
+      log.error("Unexpected IO Exception trying to add vote block " +
+                vb.getUrl() + " in poll " + getKey(), ex);
+      if (++blockErrorCount > maxBlockErrorCount) {
+        log.critical("Too many errors while trying to create my vote blocks, " +
+                     "aborting participation in poll " + getKey());
+        abortPoll();
+      }
     }
   }
 

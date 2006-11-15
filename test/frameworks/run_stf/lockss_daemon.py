@@ -554,6 +554,19 @@ class Client:
                 # tables are better!  Need a way to determine whether this particular NODE was
                 # repaired.
         return False
+
+    def isV3RepairedExtraFiles(self, au):
+        tab = self.getAuV3Pollers(au)
+        for row in tab:
+            if row['auId'] == au.title and row['status'] == "Complete":
+                # Found the right entry
+                pollKey = row['pollId']['key']
+                (summary, table) = self.getV3PollerDetail(pollKey)
+                allUrls = int(summary['Total URLs In Vote'])
+                agreeUrls = int(summary['Agreeing URLs']['value'])
+                return (agreeUrls == allUrls)
+        return False
+
     
     def isNodeRepairedFromPeerByV3(self, au, node):
         """ Return true if the given content node has been repaired 
@@ -1152,6 +1165,12 @@ class Client:
         """ Wait for a successful repair of the specified node by a V3 Poll """
         def waitFunc():
             return self.isV3Repaired(au, nodeList)
+        return self.wait(waitFunc, timeout, sleep)
+
+    def waitForV3RepairExtraFiles(self, au, timeout=DEF_TIMEOUT,
+                                  sleep=DEF_SLEEP):
+        def waitFunc():
+            return self.isV3RepairedExtraFiles(au)
         return self.wait(waitFunc, timeout, sleep)
         
     def waitForV3NoQuorum(self, au, timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):

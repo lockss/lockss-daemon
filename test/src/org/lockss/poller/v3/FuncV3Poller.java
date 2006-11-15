@@ -1,5 +1,5 @@
 /*
- * $Id: FuncV3Poller.java,v 1.13 2006-11-08 16:42:58 smorabito Exp $
+ * $Id: FuncV3Poller.java,v 1.14 2006-11-15 08:24:53 smorabito Exp $
  */
 
 /*
@@ -124,7 +124,6 @@ public class FuncV3Poller extends LockssTestCase {
     p.setProperty(ConfigManager.PARAM_NEW_SCHEDULER, "true");
     p.setProperty(V3Poller.PARAM_MIN_POLL_SIZE, "4");
     p.setProperty(V3Poller.PARAM_MAX_POLL_SIZE, "4");
-    p.setProperty(V3PollFactory.PARAM_POLL_DURATION_MIN, "5m");
     p.setProperty(V3PollFactory.PARAM_POLL_DURATION_MAX, "6m");
     p.setProperty(V3Poller.PARAM_QUORUM, "3");
     p.setProperty(LcapStreamComm.PARAM_ENABLED, "true");

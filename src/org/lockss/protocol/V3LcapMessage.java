@@ -1,5 +1,5 @@
 /*
- * $Id: V3LcapMessage.java,v 1.24 2006-11-09 00:27:14 smorabito Exp $
+ * $Id: V3LcapMessage.java,v 1.25 2006-11-15 08:24:53 smorabito Exp $
  */
 
 /*
@@ -285,6 +285,7 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     if (nomineesString != null) {
       m_nominees = StringUtil.breakAt(nomineesString, ',');
     }
+    m_voteDeadline = m_props.getLong("votedeadline", 0);
     m_lastVoteBlockURL = m_props.getProperty("lastvoteblockurl");
     m_voteComplete = m_props.getBoolean("votecomplete", false);
     m_repairProps = m_props.getEncodedProperty("repairProps");
@@ -438,6 +439,7 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
 
     // V3 specific message parameters.
 
+    m_props.putLong("votedeadline", m_voteDeadline);
     if (m_effortProof != null) {
       m_props.putByteArray("effortproof", m_effortProof);
     }

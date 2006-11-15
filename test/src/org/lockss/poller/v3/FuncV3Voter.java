@@ -1,5 +1,5 @@
 /*
- * $Id: FuncV3Voter.java,v 1.13 2006-11-08 16:42:58 smorabito Exp $
+ * $Id: FuncV3Voter.java,v 1.14 2006-11-15 08:24:53 smorabito Exp $
  */
 
 /*
@@ -104,7 +104,8 @@ public class FuncV3Voter extends LockssTestCase {
     p.setProperty(ConfigManager.PARAM_NEW_SCHEDULER, "true");
     p.setProperty(V3Poller.PARAM_MIN_POLL_SIZE, "4");
     p.setProperty(V3Poller.PARAM_MAX_POLL_SIZE, "4");
-    p.setProperty(V3PollFactory.PARAM_POLL_DURATION_MIN, "5m");
+    p.setProperty(V3Voter.PARAM_MIN_NOMINATION_SIZE, "1");
+    p.setProperty(V3Voter.PARAM_MAX_NOMINATION_SIZE, "1");
     p.setProperty(V3PollFactory.PARAM_POLL_DURATION_MAX, "6m");
     p.setProperty(V3Poller.PARAM_QUORUM, "3");
     p.setProperty(LcapStreamComm.PARAM_ENABLED, "true");
@@ -179,6 +180,7 @@ public class FuncV3Voter extends LockssTestCase {
                         ByteArray.makeRandomBytes(20),
                         V3LcapMessage.MSG_POLL,
                         msgDeadline, pollerId, tempDir, theDaemon);
+    msg.setVoteDeadline(msgDeadline - 10000);
     msg.setEffortProof(ByteArray.makeRandomBytes(20));
     return msg;
   }
@@ -224,12 +226,8 @@ public class FuncV3Voter extends LockssTestCase {
     PollSpec ps = new PollSpec(testau.getAuCachedUrlSet(), null, null,
                                Poll.V1_CONTENT_POLL);
     byte[] introEffortProof = ByteArray.makeRandomBytes(20);
-    MyMockV3Voter voter =
-      new MyMockV3Voter(ps, theDaemon, pollerId,
-                        "this_is_my_pollkey",
-                        introEffortProof,
-                        ByteArray.makeRandomBytes(20),
-                        msgDeadline, "SHA-1");
+      
+    MyMockV3Voter voter = new MyMockV3Voter(theDaemon, msgPoll);
 
     voter.startPoll();
 
@@ -263,12 +261,9 @@ public class FuncV3Voter extends LockssTestCase {
   private class MyMockV3Voter extends V3Voter {
     private FifoQueue sentMessages = new FifoQueue();
 
-    public MyMockV3Voter(PollSpec spec, LockssDaemon daemon, PeerIdentity orig,
-                         String key, byte[] introEffortProof,
-                         byte[] pollerNonce, long duration, String hashAlg)
+    public MyMockV3Voter(LockssDaemon daemon, V3LcapMessage msg)
         throws PollSerializerException {
-      super(spec, daemon, orig, key, introEffortProof, pollerNonce,
-            duration, hashAlg);
+      super(daemon, msg);
     }
 
     public void sendMessageTo(V3LcapMessage msg, PeerIdentity id) {
