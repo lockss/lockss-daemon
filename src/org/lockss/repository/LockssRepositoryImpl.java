@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.71 2006-11-11 06:56:29 tlipkis Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.72 2006-11-15 08:16:02 tlipkis Exp $
  */
 
 /*
@@ -504,37 +504,39 @@ public class LockssRepositoryImpl
       return auPathSlash;
     }
     LocalRepository localRepo = getLocalRepository(repoRoot);
-    Map aumap = localRepo.getAuMap();
-    auPathSlash = (String)aumap.get(auid);
-    if (auPathSlash != null) {
-      nameMap.put(auid, auPathSlash);
-      return auPathSlash;
-    }
-    if (!create) {
-      return null;
-    }
-    logger.debug3("Creating new au directory for '" + auid + "'.");
-    String auDir = lastPluginDir;
-    for (int cnt = 10000; cnt > 0; cnt--) {
-      // loop through looking for an available dir
-      auDir = getNextDirName(auDir);
-      File testDir = new File(repoCachePath, auDir);
-      if (!testDir.exists()) {
-	String auPath = testDir.toString();
-	logger.debug3("New au directory: "+auPath);
-	auPathSlash = auPath + File.separator;
+    synchronized (localRepo) {
+      Map aumap = localRepo.getAuMap();
+      auPathSlash = (String)aumap.get(auid);
+      if (auPathSlash != null) {
 	nameMap.put(auid, auPathSlash);
-	// write the new au property file to the new dir
-	// XXX this data should be backed up elsewhere to avoid single-point
-	// corruption
-	Properties idProps = new Properties();
-	idProps.setProperty(AU_ID_PROP, auid);
-	saveAuIdProperties(auPath, idProps);
 	return auPathSlash;
-      } else {
-	if (logger.isDebug3()) {
-	  logger.debug3("Existing directory found at '"+auDir+
-			"'.  Checking next...");
+      }
+      if (!create) {
+	return null;
+      }
+      logger.debug3("Creating new au directory for '" + auid + "'.");
+      String auDir = lastPluginDir;
+      for (int cnt = 10000; cnt > 0; cnt--) {
+	// loop through looking for an available dir
+	auDir = getNextDirName(auDir);
+	File testDir = new File(repoCachePath, auDir);
+	if (!testDir.exists()) {
+	  String auPath = testDir.toString();
+	  logger.debug3("New au directory: "+auPath);
+	  auPathSlash = auPath + File.separator;
+	  nameMap.put(auid, auPathSlash);
+	  // write the new au property file to the new dir
+	  // XXX this data should be backed up elsewhere to avoid single-point
+	  // corruption
+	  Properties idProps = new Properties();
+	  idProps.setProperty(AU_ID_PROP, auid);
+	  saveAuIdProperties(auPath, idProps);
+	  return auPathSlash;
+	} else {
+	  if (logger.isDebug3()) {
+	    logger.debug3("Existing directory found at '"+auDir+
+			  "'.  Checking next...");
+	  }
 	}
       }
     }
@@ -547,14 +549,16 @@ public class LockssRepositoryImpl
   }
 
   static LocalRepository getLocalRepository(String repoRoot) {
-    LocalRepository localRepo =
-      (LocalRepository)localRepositories.get(repoRoot);
-    if (localRepo == null) {
-      logger.debug2("Creating LocalRepository(" + repoRoot + ")");
-      localRepo = new LocalRepository(repoRoot);
-      localRepositories.put(repoRoot, localRepo);
+    synchronized (localRepositories) {
+      LocalRepository localRepo =
+	(LocalRepository)localRepositories.get(repoRoot);
+      if (localRepo == null) {
+	logger.debug2("Creating LocalRepository(" + repoRoot + ")");
+	localRepo = new LocalRepository(repoRoot);
+	localRepositories.put(repoRoot, localRepo);
+      }
+      return localRepo;
     }
-    return localRepo;
   }
 
 
