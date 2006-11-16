@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.39 2006-11-15 08:24:53 smorabito Exp $
+ * $Id: V3Poller.java,v 1.40 2006-11-16 05:04:33 smorabito Exp $
  */
 
 /*
@@ -587,7 +587,8 @@ public class V3Poller extends BasePoll {
     // Want this action to be serialized.
     pollManager.runTask(new PollRunner.Task("Stopping Poll", getKey()) {
       public void lockssRun() {
-        log.info("Stopping poll " + getKey() + " with status " + status);
+        log.info("Stopping poll " + getKey() + " with status " + 
+                 V3Poller.POLLER_STATUS_STRINGS[status]);
         setStatus(status);
         activePoll = false;
         if (task != null && !task.isExpired()) {
@@ -608,7 +609,6 @@ public class V3Poller extends BasePoll {
         pollerState.setPollDeadline(now);
         pollerState.setDuration(now - pollerState.getCreateTime());
         // Clean up any lingering participants.
-        serializer.closePoll();
         for (Iterator voters = theParticipants.values().iterator(); voters.hasNext(); ) {
           ParticipantUserData ud = (ParticipantUserData)voters.next();
           VoteBlocks vb = ud.getVoteBlocks();
@@ -616,8 +616,13 @@ public class V3Poller extends BasePoll {
             vb.release();
           }
         }
-        pollManager.closeThePoll(pollerState.getPollKey());        
+        serializer.closePoll();
+        pollManager.closeThePoll(pollerState.getPollKey());      
+        
         log.debug("Closed poll " + pollerState.getPollKey());
+
+        // Finally, release unneeded resources
+        release();
       }
     });
   }
@@ -985,8 +990,11 @@ public class V3Poller extends BasePoll {
                                          eh);
     // Now schedule the hash
     HashService hashService = theDaemon.getHashService();
-    if (hashService.scheduleHash(hasher, deadline,
-                                 cb, null)) {
+    
+    boolean canHash = hashService.scheduleHash(hasher, deadline,
+                                               cb, null);
+
+    if (canHash) {
       setStatus(POLLER_STATUS_HASHING);
       return true;
     } else {
@@ -1190,52 +1198,68 @@ public class V3Poller extends BasePoll {
    * when a repair has been received.
    */
   public void receivedRepair(final String url) {
-    BlockHasher.EventHandler blockDone =
+    final BlockHasher.EventHandler blockDone =
       new BlockHasher.EventHandler() {
-        public void blockDone(HashBlock hblock) {
-          PollerStateBean.RepairQueue rq = pollerState.getRepairQueue();
-          Map votesForBlock = rq.getVotesForBlock(url);
-          log.debug3("Finished hashing repair sent for block " + hblock);
-          // Replay the block comparison using the new hash results.
-          int digestIndex = 0;
-          BlockTally tally = new BlockTally(pollerState.getQuorum());
-          for (Iterator iter = votesForBlock.keySet().iterator(); iter.hasNext(); ) {
-            digestIndex++;
-            PeerIdentity id = (PeerIdentity)iter.next();
-            VoteBlock vb = (VoteBlock)votesForBlock.get(id);
-            compareBlocks(id, digestIndex, vb, hblock, tally);
-          }
-          tally.tallyVotes();
-          log.debug3("After-vote hash tally for repaired block " + url
-                     + ": " + tally.getStatusString());
-          setStatus(V3Poller.POLLER_STATUS_TALLYING);
-          checkTally(tally, hblock.getUrl(), true);
+        public void blockDone(final HashBlock hblock) {
+          
+          pollManager.runTask(new PollRunner.Task("Received Repair Block Complete", getKey()) {
+            public void lockssRun() {
+              PollerStateBean.RepairQueue rq = pollerState.getRepairQueue();
+              Map votesForBlock = rq.getVotesForBlock(url);
+              log.debug3("Finished hashing repair sent for block " + hblock);
+              // Replay the block comparison using the new hash results.
+              int digestIndex = 0;
+              BlockTally tally = new BlockTally(pollerState.getQuorum());
+              for (Iterator iter = votesForBlock.keySet().iterator(); iter.hasNext(); ) {
+                digestIndex++;
+                PeerIdentity id = (PeerIdentity)iter.next();
+                VoteBlock vb = (VoteBlock)votesForBlock.get(id);
+                compareBlocks(id, digestIndex, vb, hblock, tally);
+              }
+              tally.tallyVotes();
+              log.debug3("After-vote hash tally for repaired block " + url
+                         + ": " + tally.getStatusString());
+              setStatus(V3Poller.POLLER_STATUS_TALLYING);
+              checkTally(tally, hblock.getUrl(), true);
+            }
+          });
         }
     };
 
-    HashService.Callback hashDone =
+    final HashService.Callback hashDone =
       new HashService.Callback() {
         public void hashingFinished(CachedUrlSet urlset, Object cookie,
                                     CachedUrlSetHasher hasher, Exception e) {
-          // If there are no more repairs outstanding, go ahead and
-          // stop the poll at this point.
-          PollerStateBean.RepairQueue queue = pollerState.getRepairQueue();
-          if (queue.getPendingRepairs().size() == 0 &&
-              queue.getActiveRepairs().size() == 0) {
-            voteComplete();
-          }
+          pollManager.runTask(new PollRunner.Task("Received Repair Hash Complete", getKey()) {
+            public void lockssRun() {
+              // If there are no more repairs outstanding, go ahead and
+              // stop the poll at this point.
+              PollerStateBean.RepairQueue queue = pollerState.getRepairQueue();
+              if (queue.getPendingRepairs().size() == 0 &&
+                  queue.getActiveRepairs().size() == 0) {
+                voteComplete();
+              }
+            }
+          });
         }
     };
 
-    CachedUrlSet blockCus =
-      getAu().makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(url));
-    boolean hashing = scheduleHash(blockCus,
-                                   Deadline.at(pollerState.getPollDeadline()),
-                                   hashDone,
-                                   blockDone);
-    if (!hashing) {
-      log.warning("Failed to schedule a repair check hash for block " + url);
-    }
+    
+    // Serialize these
+    pollManager.runTask(new PollRunner.Task("Scheduling Repair Hash", getKey()) {
+      public void lockssRun() {
+        CachedUrlSet blockCus =
+          getAu().makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(url));
+        boolean hashing = scheduleHash(blockCus,
+                                       Deadline.at(pollerState.getPollDeadline()),
+                                       hashDone,
+                                       blockDone);
+        if (!hashing) {
+          log.warning("Failed to schedule a repair check hash for block " + url);
+        }
+      }
+    });
+    
   }
   
   /**
@@ -1766,6 +1790,26 @@ public class V3Poller extends BasePoll {
 
   public Set getNoQuorumUrls() {
     return pollerState.getTallyStatus().noQuorumUrls;
+  }
+  
+  /**
+   * Release members not used after the poll has been closed.
+   */
+  public void release() {
+    pollerState.release();
+    
+    for (Iterator it = theParticipants.values().iterator(); it.hasNext(); ) {
+      ((ParticipantUserData)it.next()).release();
+    }
+
+    stateDir = null;
+    pollCompleteRequest = null;
+    voteCompleteRequest = null;
+    task = null;
+    serializer = null;
+    repositoryManager = null;
+    pollManager = null;
+    idManager = null;
   }
 
   /**

@@ -1,5 +1,5 @@
 /*
- * $Id: PollerStateBean.java,v 1.17 2006-10-07 02:01:27 smorabito Exp $
+ * $Id: PollerStateBean.java,v 1.18 2006-11-16 05:04:33 smorabito Exp $
  */
 
 /*
@@ -616,4 +616,14 @@ public class PollerStateBean implements LockssSerializable {
     }
   }
 
+  /**
+   * Release resources used by this object that are no longer required after
+   * the end of a poll.
+   */
+  public void release() {
+    hashAlgorithm = null;
+    hashedBlocks = null;
+    spec = null;
+    votedPeers = null;
+  }
 }

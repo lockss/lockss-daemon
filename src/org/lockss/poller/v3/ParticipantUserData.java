@@ -1,5 +1,5 @@
 /*
- * $Id: ParticipantUserData.java,v 1.9 2006-11-08 16:42:59 smorabito Exp $
+ * $Id: ParticipantUserData.java,v 1.10 2006-11-16 05:04:33 smorabito Exp $
  */
 
 /*
@@ -382,6 +382,26 @@ public class ParticipantUserData implements LockssSerializable {
 
   public V3LcapMessage makeMessage(int opcode, long sizeEst) {
     return makeMessage(opcode);
+  }
+  
+  /**
+   * Release unneeded resources used by this object at the end of a poll.
+   */
+  public void release() {
+    introEffortProof = null;
+    pollAckEffortProof = null;
+    receiptEffortProof = null;
+    remainingEffortProof = null;
+    receiptEffortProof = null;
+    
+    hashAlgorithm = null;
+    messageDir = null;
+    nominees = null;
+    voteBlocks = null;
+    voteBlockIterator = null;
+
+    psmInterp = null;
+    psmState = null;
   }
 
 }

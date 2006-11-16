@@ -1,5 +1,5 @@
 /*
- * $Id: VoterActions.java,v 1.13 2006-10-31 02:33:36 smorabito Exp $
+ * $Id: VoterActions.java,v 1.14 2006-11-16 05:04:33 smorabito Exp $
  */
 
 /*
@@ -158,7 +158,6 @@ public class VoterActions {
       log.error("Unable to send message: ", ex);
       return V3Events.evtError;
     }
-    ud.hashingDone(false);
     return V3Events.evtOk;
   }
 

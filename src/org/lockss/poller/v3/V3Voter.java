@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.25 2006-11-15 08:24:53 smorabito Exp $
+ * $Id: V3Voter.java,v 1.26 2006-11-16 05:04:33 smorabito Exp $
  */
 
 /*
@@ -324,7 +324,7 @@ public class V3Voter extends BasePoll {
     TimerQueue.schedule(Deadline.at(voterUserData.getVoteDeadline()),
                         new TimerQueue.Callback() {
       public void timerExpired(Object cookie) {
-        if (!getVoterUserData().hashingDone()) {
+        if (!voterUserData.hashingDone()) {
           log.warning("Vote deadline has passed before my hashing was done " +
                       "in poll " + getKey() + ". Stopping the poll.");
           stopPoll(V3Voter.STATUS_NO_TIME);
@@ -365,7 +365,8 @@ public class V3Voter extends BasePoll {
     pollSerializer.closePoll();
     pollManager.closeThePoll(voterUserData.getPollKey());
     log.debug2("Closed poll " + voterUserData.getPollKey() + " with status " +
-               getStatusString() );    
+               getStatusString() );
+    release();
   }
   
   public void stopPoll() {
@@ -726,6 +727,20 @@ public class V3Voter extends BasePoll {
     public String toString() {
       return "V3 Voter " + getKey();
     }
+  }
+  
+  /**
+   * Release unneeded resources.
+   */
+  public void release() {
+    voterUserData.release();
+    stateDir = null;
+    task = null;
+    pollManager = null;
+    idManager = null;
+    pollSerializer = null;
+    stateMachine = null;
+    theDaemon = null;
   }
 
 }

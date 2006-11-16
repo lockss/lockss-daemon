@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollFactory.java,v 1.7 2006-11-15 08:24:53 smorabito Exp $
+ * $Id: V3PollFactory.java,v 1.8 2006-11-16 05:04:33 smorabito Exp $
  */
 
 /*
@@ -52,11 +52,11 @@ public class V3PollFactory extends BasePollFactory {
   /** The minimum duration multiplier for a V3 poll.  */
   public static final String PARAM_DURATION_MULTIPLIER_MIN =
     PREFIX + "minMultiplier";
-  public static final int DEFAULT_DURATION_MULTIPLIER_MIN = 1;
+  public static final int DEFAULT_DURATION_MULTIPLIER_MIN = 2;
   /** The maximum duration multiplier for a V3 poll */
   public static final String PARAM_DURATION_MULTIPLIER_MAX =
     PREFIX + "maxMultiplier";
-  public static final int DEFAULT_DURATION_MULTIPLIER_MAX = 1;
+  public static final int DEFAULT_DURATION_MULTIPLIER_MAX = 4;
   /** The minimum duration for a V3 poll.  The minimum duration is calculated
    * from the hash duration and maximum number of participants, and this
    * parameter is no longer used.

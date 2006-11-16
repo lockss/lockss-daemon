@@ -129,9 +129,13 @@ public class DiskVoteBlocks extends BaseVoteBlocks {
   }
 
   public synchronized void release() {
-    if (file != null && !file.delete()) {
-      log.warning("Unable to delete file: " + file);
+    // The poller should have already cleaned up our directory by now,
+    // but just in case, we'll run some cleanup code.
+    if (file != null && !file.delete() && log.isDebug2()) {
+      log.debug2("Unable to delete file: " + file);
     }
+    
+    file = null;
   }
 
   public synchronized InputStream getInputStream() throws IOException {

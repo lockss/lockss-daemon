@@ -1,5 +1,5 @@
 /*
- * $Id: VoterUserData.java,v 1.16 2006-11-08 16:42:59 smorabito Exp $
+ * $Id: VoterUserData.java,v 1.17 2006-11-16 05:04:33 smorabito Exp $
  */
 
 /*
@@ -379,5 +379,24 @@ public class VoterUserData
 
   public V3LcapMessage makeMessage(int opcode, long sizeEst) {
     return makeMessage(opcode);
+  }
+  
+  /**
+   * Release unneeded resources used by this object at the end of a poll.
+   */
+  public void release() {
+    introEffortProof = null;
+    pollAckEffortProof = null;
+    receiptEffortProof = null;
+    remainingEffortProof = null;
+    repairEffortProof = null;
+
+    hashAlgorithm = null;
+    messageDir = null;
+    nominees = null;
+    pollMessage = null;
+    psmState = null;
+    spec = null;
+    voteBlocks = null;
   }
 }
