@@ -197,7 +197,7 @@
       <property name="oup">
         <property name="name" value="All Oxford University Press Titles" />
         <property name="class" value="xpath" />
-	<property name="xpath" value="[attributes/publisher='oup']" />
+	<property name="xpath" value="[attributes/publisher='Oxford University Press']" />
       </property>
       <property name="AlphaMed Press">
         <property name="name" value="All AlphaMed Press Titles" />
