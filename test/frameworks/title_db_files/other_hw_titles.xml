@@ -923,7 +923,7 @@
     <property name="MicrobiologyandMolecularBiologyReviews70">
       <property name="title" value="Microbiology and Molecular Biology Reviews Volume 70" />
       <property name="journalTitle" value="Microbiology and Molecular Biology Reviews" />
-      <property name="estSize" value="100MB" />
+      <property name="estSize" value="150MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -1052,21 +1052,6 @@
       <property name="param.2">
 	<property name="key" value="volume_name" />
 	<property name="value" value="140" />
-      </property>
-      <property name="attributes.publisher" value="American Society of Plant Biologists" />
-    </property>
-
-    <property name="BiophysicalJournal90">
-      <property name="title" value="Biophysical Journal Volume 90" />
-      <property name="journalTitle" value="Biophysical Journal" />
-      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
-      <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://www.biophysj.org/" />
-      </property>
-      <property name="param.2">
-	<property name="key" value="volume_name" />
-	<property name="value" value="90" />
       </property>
       <property name="attributes.publisher" value="American Society of Plant Biologists" />
     </property>
