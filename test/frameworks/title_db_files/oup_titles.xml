@@ -933,13 +933,13 @@
       <property name="title" value="Rheumatology Volume 45" />
       <property name="journalTitle" value="Rheumatology" />
       <property name="estSize" value="360MB" />
-      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://rheumatology.oxfordjournals.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="volume" />
+	<property name="key" value="volume_name" />
 	<property name="value" value="45" />
       </property>
       <property name="attributes.publisher" value="oup" />
@@ -1167,13 +1167,13 @@
       <property name="title" value="Annals of Oncology Volume 17" />
       <property name="journalTitle" value="Annals of Oncology" />
       <property name="estSize" value="400MB" />
-      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://annonc.oxfordjournals.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="volume" />
+	<property name="key" value="volume_name" />
 	<property name="value" value="17" />
       </property>
       <property name="attributes.publisher" value="oup" />
@@ -1683,13 +1683,13 @@
     <property name="EuropeanReviewofAgriculturalEconomics33">
       <property name="title" value="European Review of Agricultural Economics Volume 33" />
       <property name="journalTitle" value="European Review of Agricultural Economics" />
-      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://erae.oxfordjournals.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="volume" />
+	<property name="key" value="volume_name" />
 	<property name="value" value="33" />
       </property>
       <property name="attributes.publisher" value="oup" />
@@ -2511,13 +2511,13 @@
     <property name="JournalofIntellectualPropertyLawPractice1">
       <property name="title" value="Journal of Intellectual Property Law &amp; Practice Volume 1" />
       <property name="journalTitle" value="Journal of Intellectual Property Law &amp; Practice" />
-      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://jiplp.oxfordjournals.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="volume" />
+	<property name="key" value="volume_name" />
 	<property name="value" value="1" />
       </property>
       <property name="attributes.publisher" value="oup" />
@@ -2683,13 +2683,13 @@
       <property name="title" value="Journal of the American Academy of Religion Volume 74" />
       <property name="journalTitle" value="Journal of the American Academy of Religion" />
       <property name="estSize" value="30MB" />
-      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://jaar.oxfordjournals.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="volume" />
+	<property name="key" value="volume_name" />
 	<property name="value" value="74" />
       </property>
       <property name="attributes.publisher" value="oup" />
@@ -2714,13 +2714,13 @@
     <property name="JNCIMonographs35">
       <property name="title" value="JNCI Monographs Volume 35" />
       <property name="journalTitle" value="JNCI Monographs" />
-      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://jncicancerspectrum.oxfordjournals.org/jncimono/" />
       </property>
       <property name="param.2">
-	<property name="key" value="volume" />
+	<property name="key" value="volume_name" />
 	<property name="value" value="35" />
       </property>
       <property name="attributes.publisher" value="oup" />
@@ -3392,13 +3392,13 @@
       <property name="title" value="Holocaust and Genocide Studies Volume 20" />
       <property name="journalTitle" value="Holocaust and Genocide Studies" />
       <property name="estSize" value="20MB" />
-      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://hgs.oxfordjournals.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="volume" />
+	<property name="key" value="volume_name" />
 	<property name="value" value="20" />
       </property>
       <property name="attributes.publisher" value="oup" />
@@ -3439,13 +3439,13 @@
       <property name="title" value="Alcohol and Alcoholism Volume 41" />
       <property name="journalTitle" value="Alcohol and Alcoholism" />
       <property name="estSize" value="60MB" />
-      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://alcalc.oxfordjournals.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="volume" />
+	<property name="key" value="volume_name" />
 	<property name="value" value="41" />
       </property>
       <property name="attributes.publisher" value="oup" />
