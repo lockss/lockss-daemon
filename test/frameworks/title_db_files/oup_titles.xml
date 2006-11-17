@@ -240,13 +240,13 @@
       <property name="title" value="European Heart Journal Volume 27" />
       <property name="journalTitle" value="European Heart Journal" />
       <property name="estSize" value="500MB" />
-      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://eurheartj.oxfordjournals.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="volume" />
+	<property name="key" value="volume_name" />
 	<property name="value" value="27" />
       </property>
       <property name="attributes.publisher" value="oup" />
@@ -616,13 +616,13 @@
     <property name="JournaloftheNationalCancerInstitute98">
       <property name="title" value="Journal of the National Cancer Institute Volume 98" />
       <property name="journalTitle" value="Journal of the National Cancer Institute" />
-      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://jncicancerspectrum.oxfordjournals.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="volume" />
+	<property name="key" value="volume_name" />
 	<property name="value" value="98" />
       </property>
       <property name="attributes.publisher" value="oup" />
@@ -667,13 +667,13 @@
     <property name="MolecularHumanReproduction12">
       <property name="title" value="Molecular Human Reproduction Volume 12" />
       <property name="journalTitle" value="Molecular Human Reproduction" />
-      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://molehr.oxfordjournals.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="volume" />
+	<property name="key" value="volume_name" />
 	<property name="value" value="12" />
       </property>
       <property name="attributes.publisher" value="oup" />
@@ -833,13 +833,13 @@
     <property name="QuarterlyJournalofMechanicsandAppliedMathematics58">
       <property name="title" value="Quarterly Journal of Mechanics and Applied Mathematics Volume 58" />
       <property name="journalTitle" value="Quarterly Journal of Mechanics and Applied Mathematics" />
-      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://qjmam.oxfordjournals.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="volume" />
+	<property name="key" value="volume_name" />
 	<property name="value" value="58" />
       </property>
       <property name="param.99">
@@ -854,13 +854,13 @@
       <property name="title" value="Quarterly Journal of Mechanics and Applied Mathematics Volume 59" />
       <property name="journalTitle" value="Quarterly Journal of Mechanics and Applied Mathematics" />
       <property name="estSize" value="120MB" />
-      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://qjmam.oxfordjournals.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="volume" />
+	<property name="key" value="volume_name" />
 	<property name="value" value="59" />
       </property>
       <property name="attributes.publisher" value="oup" />
@@ -3452,6 +3452,126 @@
     </property>
 
 
+    <property name="CapitalMarketsLawJournal1">
+      <property name="title" value="Capital Markets Law Journal Volume 1" />
+      <property name="journalTitle" value="Capital Markets Law Journal" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://cmlj.oxfordjournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="1" />
+      </property>
+      <property name="attributes.publisher" value="Oxford University Press" />
+    </property>
+    
+    <property name="ChineseJournalofInternationalPolitics1">
+      <property name="title" value="Chinese Journal of International Politics Volume 1" />
+      <property name="journalTitle" value="Chinese Journal of International Politics" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://cjip.oxfordjournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="1" />
+      </property>
+      <property name="attributes.publisher" value="Oxford University Press" />
+    </property>
+    
+    <property name="EuropeanHeartJournal27">
+      <property name="title" value="European Heart Journal Volume 27" />
+      <property name="journalTitle" value="European Heart Journal" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://eurheartj.oxfordjournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="27" />
+      </property>
+      <property name="attributes.publisher" value="Oxford University Press" />
+    </property>
+    
+    <property name="JNCICancerSpectrum98">
+      <property name="title" value="JNCI Cancer Spectrum Volume 98" />
+      <property name="journalTitle" value="JNCI Cancer Spectrum" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://jncicancerspectrum.oxfordjournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="98" />
+      </property>
+      <property name="attributes.publisher" value="Oxford University Press" />
+    </property>
+    
+    <property name="MolecularHumanReproduction12">
+      <property name="title" value="Molecular Human Reproduction Volume 12" />
+      <property name="journalTitle" value="Molecular Human Reproduction" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://molehr.oxfordjournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="12" />
+      </property>
+      <property name="attributes.publisher" value="Oxford University Press" />
+    </property>
+    
+    <property name="QuarterlyJournalofMechanicsAppliedMathematics59">
+      <property name="title" value="Quarterly Journal of Mechanics &amp; Applied Mathematics Volume 59" />
+      <property name="journalTitle" value="Quarterly Journal of Mechanics &amp; Applied Mathematics" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://qjmam.oxfordjournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="59" />
+      </property>
+      <property name="attributes.publisher" value="Oxford University Press" />
+    </property>
+    
+    <property name="SocialCognitiveAffectiveNeuroscience1">
+      <property name="title" value="Social Cognitive &amp; Affective Neuroscience Volume 1" />
+      <property name="journalTitle" value="Social Cognitive &amp; Affective Neuroscience" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://scan.oxfordjournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="1" />
+      </property>
+      <property name="attributes.publisher" value="Oxford University Press" />
+    </property>
+    
+    <property name="TrustsTrustees12">
+      <property name="title" value="Trusts &amp; Trustees Volume 12" />
+      <property name="journalTitle" value="Trusts &amp; Trustees" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://tandt.oxfordjournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="12" />
+      </property>
+      <property name="attributes.publisher" value="Oxford University Press" />
+    </property>
+    
 
 
     <!-- Start down titles -->
