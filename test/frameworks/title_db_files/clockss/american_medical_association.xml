@@ -819,6 +819,8 @@
       <property name="value" value="165" />
      </property>
      <property name="attributes.publisher" value="American Medical Association" />
+     <property name="attributes.hint_application/pdf_filter_factory"
+               value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
     </property>
 
 
@@ -1638,6 +1640,8 @@
       <property name="value" value="141" />
      </property>
      <property name="attributes.publisher" value="American Medical Association" />
+     <property name="attributes.hint_application/pdf_filter_factory"
+               value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
     </property>
 
 
@@ -2441,6 +2445,8 @@
       <property name="value" value="131" />
      </property>
      <property name="attributes.publisher" value="American Medical Association" />
+     <property name="attributes.hint_application/pdf_filter_factory"
+               value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
     </property>
 
 
@@ -3244,6 +3250,8 @@
       <property name="value" value="140" />
      </property>
      <property name="attributes.publisher" value="American Medical Association" />
+     <property name="attributes.hint_application/pdf_filter_factory"
+               value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
     </property>
 
 
@@ -4047,6 +4055,8 @@
       <property name="value" value="62" />
      </property>
      <property name="attributes.publisher" value="American Medical Association" />
+     <property name="attributes.hint_application/pdf_filter_factory"
+               value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
     </property>
 
 
@@ -4850,6 +4860,8 @@
       <property name="value" value="123" />
      </property>
      <property name="attributes.publisher" value="American Medical Association" />
+     <property name="attributes.hint_application/pdf_filter_factory"
+               value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
     </property>
 
 
@@ -5653,6 +5665,8 @@
       <property name="value" value="62" />
      </property>
      <property name="attributes.publisher" value="American Medical Association" />
+     <property name="attributes.hint_application/pdf_filter_factory"
+               value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
     </property>
 
 
@@ -6328,6 +6342,8 @@
       <property name="value" value="151" />
      </property>
      <property name="attributes.publisher" value="American Medical Association" />
+     <property name="attributes.hint_application/pdf_filter_factory"
+               value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
     </property>
 
 
@@ -6587,6 +6603,8 @@
       <property name="value" value="7" />
      </property>
      <property name="attributes.publisher" value="American Medical Association" />
+     <property name="attributes.hint_application/pdf_filter_factory"
+               value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
     </property>
 
 
@@ -6609,7 +6627,7 @@
 
    <!-- begin Journal of the American Medical Association -->
 
-    <property name="JournalOfTheAmericanMedicalAssoiation195">
+    <property name="JournalOfTheAmericanMedicalAssociation195">
      <property name="title" value="Journal of the American Medical Association Volume 195" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -6625,7 +6643,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation196">
+    <property name="JournalOfTheAmericanMedicalAssociation196">
      <property name="title" value="Journal of the American Medical Association Volume 196" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -6641,7 +6659,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation197">
+    <property name="JournalOfTheAmericanMedicalAssociation197">
      <property name="title" value="Journal of the American Medical Association Volume 197" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -6657,7 +6675,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation198">
+    <property name="JournalOfTheAmericanMedicalAssociation198">
      <property name="title" value="Journal of the American Medical Association Volume 198" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -6673,7 +6691,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation199">
+    <property name="JournalOfTheAmericanMedicalAssociation199">
      <property name="title" value="Journal of the American Medical Association Volume 199" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -6689,7 +6707,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation200">
+    <property name="JournalOfTheAmericanMedicalAssociation200">
      <property name="title" value="Journal of the American Medical Association Volume 200" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -6705,7 +6723,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation201">
+    <property name="JournalOfTheAmericanMedicalAssociation201">
      <property name="title" value="Journal of the American Medical Association Volume 201" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -6721,7 +6739,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation202">
+    <property name="JournalOfTheAmericanMedicalAssociation202">
      <property name="title" value="Journal of the American Medical Association Volume 202" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -6737,7 +6755,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation203">
+    <property name="JournalOfTheAmericanMedicalAssociation203">
      <property name="title" value="Journal of the American Medical Association Volume 203" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -6753,7 +6771,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation204">
+    <property name="JournalOfTheAmericanMedicalAssociation204">
      <property name="title" value="Journal of the American Medical Association Volume 204" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -6769,7 +6787,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation205">
+    <property name="JournalOfTheAmericanMedicalAssociation205">
      <property name="title" value="Journal of the American Medical Association Volume 205" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -6785,7 +6803,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation206">
+    <property name="JournalOfTheAmericanMedicalAssociation206">
      <property name="title" value="Journal of the American Medical Association Volume 206" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -6801,7 +6819,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation207">
+    <property name="JournalOfTheAmericanMedicalAssociation207">
      <property name="title" value="Journal of the American Medical Association Volume 207" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -6817,7 +6835,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation208">
+    <property name="JournalOfTheAmericanMedicalAssociation208">
      <property name="title" value="Journal of the American Medical Association Volume 208" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -6833,7 +6851,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation209">
+    <property name="JournalOfTheAmericanMedicalAssociation209">
      <property name="title" value="Journal of the American Medical Association Volume 209" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -6849,7 +6867,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation210">
+    <property name="JournalOfTheAmericanMedicalAssociation210">
      <property name="title" value="Journal of the American Medical Association Volume 210" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -6865,7 +6883,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation211">
+    <property name="JournalOfTheAmericanMedicalAssociation211">
      <property name="title" value="Journal of the American Medical Association Volume 211" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -6881,7 +6899,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation212">
+    <property name="JournalOfTheAmericanMedicalAssociation212">
      <property name="title" value="Journal of the American Medical Association Volume 212" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -6897,7 +6915,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation213">
+    <property name="JournalOfTheAmericanMedicalAssociation213">
      <property name="title" value="Journal of the American Medical Association Volume 213" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -6913,7 +6931,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation214">
+    <property name="JournalOfTheAmericanMedicalAssociation214">
      <property name="title" value="Journal of the American Medical Association Volume 214" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -6929,7 +6947,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation215">
+    <property name="JournalOfTheAmericanMedicalAssociation215">
      <property name="title" value="Journal of the American Medical Association Volume 215" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -6945,7 +6963,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation216">
+    <property name="JournalOfTheAmericanMedicalAssociation216">
      <property name="title" value="Journal of the American Medical Association Volume 216" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -6961,7 +6979,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation217">
+    <property name="JournalOfTheAmericanMedicalAssociation217">
      <property name="title" value="Journal of the American Medical Association Volume 217" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -6977,7 +6995,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation218">
+    <property name="JournalOfTheAmericanMedicalAssociation218">
      <property name="title" value="Journal of the American Medical Association Volume 218" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -6993,7 +7011,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation219">
+    <property name="JournalOfTheAmericanMedicalAssociation219">
      <property name="title" value="Journal of the American Medical Association Volume 219" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7009,7 +7027,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation220">
+    <property name="JournalOfTheAmericanMedicalAssociation220">
      <property name="title" value="Journal of the American Medical Association Volume 220" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7025,7 +7043,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation221">
+    <property name="JournalOfTheAmericanMedicalAssociation221">
      <property name="title" value="Journal of the American Medical Association Volume 221" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7041,7 +7059,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation222">
+    <property name="JournalOfTheAmericanMedicalAssociation222">
      <property name="title" value="Journal of the American Medical Association Volume 222" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7057,7 +7075,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation223">
+    <property name="JournalOfTheAmericanMedicalAssociation223">
      <property name="title" value="Journal of the American Medical Association Volume 223" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7073,7 +7091,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation224">
+    <property name="JournalOfTheAmericanMedicalAssociation224">
      <property name="title" value="Journal of the American Medical Association Volume 224" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7089,7 +7107,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation225">
+    <property name="JournalOfTheAmericanMedicalAssociation225">
      <property name="title" value="Journal of the American Medical Association Volume 225" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7105,7 +7123,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation226">
+    <property name="JournalOfTheAmericanMedicalAssociation226">
      <property name="title" value="Journal of the American Medical Association Volume 226" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7121,7 +7139,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation227">
+    <property name="JournalOfTheAmericanMedicalAssociation227">
      <property name="title" value="Journal of the American Medical Association Volume 227" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7137,7 +7155,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation228">
+    <property name="JournalOfTheAmericanMedicalAssociation228">
      <property name="title" value="Journal of the American Medical Association Volume 228" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7153,7 +7171,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation229">
+    <property name="JournalOfTheAmericanMedicalAssociation229">
      <property name="title" value="Journal of the American Medical Association Volume 229" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7169,7 +7187,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation230">
+    <property name="JournalOfTheAmericanMedicalAssociation230">
      <property name="title" value="Journal of the American Medical Association Volume 230" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7185,7 +7203,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation231">
+    <property name="JournalOfTheAmericanMedicalAssociation231">
      <property name="title" value="Journal of the American Medical Association Volume 231" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7201,7 +7219,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation232">
+    <property name="JournalOfTheAmericanMedicalAssociation232">
      <property name="title" value="Journal of the American Medical Association Volume 232" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7217,7 +7235,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation233">
+    <property name="JournalOfTheAmericanMedicalAssociation233">
      <property name="title" value="Journal of the American Medical Association Volume 233" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7233,7 +7251,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation234">
+    <property name="JournalOfTheAmericanMedicalAssociation234">
      <property name="title" value="Journal of the American Medical Association Volume 234" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7249,7 +7267,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation235">
+    <property name="JournalOfTheAmericanMedicalAssociation235">
      <property name="title" value="Journal of the American Medical Association Volume 235" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7265,7 +7283,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation236">
+    <property name="JournalOfTheAmericanMedicalAssociation236">
      <property name="title" value="Journal of the American Medical Association Volume 236" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7281,7 +7299,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation237">
+    <property name="JournalOfTheAmericanMedicalAssociation237">
      <property name="title" value="Journal of the American Medical Association Volume 237" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7297,7 +7315,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation238">
+    <property name="JournalOfTheAmericanMedicalAssociation238">
      <property name="title" value="Journal of the American Medical Association Volume 238" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7313,7 +7331,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation239">
+    <property name="JournalOfTheAmericanMedicalAssociation239">
      <property name="title" value="Journal of the American Medical Association Volume 239" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7329,7 +7347,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation240">
+    <property name="JournalOfTheAmericanMedicalAssociation240">
      <property name="title" value="Journal of the American Medical Association Volume 240" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7345,7 +7363,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation241">
+    <property name="JournalOfTheAmericanMedicalAssociation241">
      <property name="title" value="Journal of the American Medical Association Volume 241" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7361,7 +7379,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation242">
+    <property name="JournalOfTheAmericanMedicalAssociation242">
      <property name="title" value="Journal of the American Medical Association Volume 242" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7377,7 +7395,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation243">
+    <property name="JournalOfTheAmericanMedicalAssociation243">
      <property name="title" value="Journal of the American Medical Association Volume 243" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7393,7 +7411,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation244">
+    <property name="JournalOfTheAmericanMedicalAssociation244">
      <property name="title" value="Journal of the American Medical Association Volume 244" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7409,7 +7427,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation245">
+    <property name="JournalOfTheAmericanMedicalAssociation245">
      <property name="title" value="Journal of the American Medical Association Volume 245" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7425,7 +7443,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation246">
+    <property name="JournalOfTheAmericanMedicalAssociation246">
      <property name="title" value="Journal of the American Medical Association Volume 246" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7441,7 +7459,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation247">
+    <property name="JournalOfTheAmericanMedicalAssociation247">
      <property name="title" value="Journal of the American Medical Association Volume 247" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7457,7 +7475,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation248">
+    <property name="JournalOfTheAmericanMedicalAssociation248">
      <property name="title" value="Journal of the American Medical Association Volume 248" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7473,7 +7491,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation249">
+    <property name="JournalOfTheAmericanMedicalAssociation249">
      <property name="title" value="Journal of the American Medical Association Volume 249" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7489,7 +7507,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation250">
+    <property name="JournalOfTheAmericanMedicalAssociation250">
      <property name="title" value="Journal of the American Medical Association Volume 250" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7505,7 +7523,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation251">
+    <property name="JournalOfTheAmericanMedicalAssociation251">
      <property name="title" value="Journal of the American Medical Association Volume 251" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7521,7 +7539,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation252">
+    <property name="JournalOfTheAmericanMedicalAssociation252">
      <property name="title" value="Journal of the American Medical Association Volume 252" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7537,7 +7555,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation253">
+    <property name="JournalOfTheAmericanMedicalAssociation253">
      <property name="title" value="Journal of the American Medical Association Volume 253" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7553,7 +7571,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation254">
+    <property name="JournalOfTheAmericanMedicalAssociation254">
      <property name="title" value="Journal of the American Medical Association Volume 254" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7569,7 +7587,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation255">
+    <property name="JournalOfTheAmericanMedicalAssociation255">
      <property name="title" value="Journal of the American Medical Association Volume 255" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7585,7 +7603,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation256">
+    <property name="JournalOfTheAmericanMedicalAssociation256">
      <property name="title" value="Journal of the American Medical Association Volume 256" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7601,7 +7619,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation257">
+    <property name="JournalOfTheAmericanMedicalAssociation257">
      <property name="title" value="Journal of the American Medical Association Volume 257" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7617,7 +7635,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation258">
+    <property name="JournalOfTheAmericanMedicalAssociation258">
      <property name="title" value="Journal of the American Medical Association Volume 258" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7633,7 +7651,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation259">
+    <property name="JournalOfTheAmericanMedicalAssociation259">
      <property name="title" value="Journal of the American Medical Association Volume 259" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7649,7 +7667,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation260">
+    <property name="JournalOfTheAmericanMedicalAssociation260">
      <property name="title" value="Journal of the American Medical Association Volume 260" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7665,7 +7683,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation261">
+    <property name="JournalOfTheAmericanMedicalAssociation261">
      <property name="title" value="Journal of the American Medical Association Volume 261" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7681,7 +7699,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation262">
+    <property name="JournalOfTheAmericanMedicalAssociation262">
      <property name="title" value="Journal of the American Medical Association Volume 262" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7697,7 +7715,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation263">
+    <property name="JournalOfTheAmericanMedicalAssociation263">
      <property name="title" value="Journal of the American Medical Association Volume 263" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7713,7 +7731,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation264">
+    <property name="JournalOfTheAmericanMedicalAssociation264">
      <property name="title" value="Journal of the American Medical Association Volume 264" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7729,7 +7747,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation265">
+    <property name="JournalOfTheAmericanMedicalAssociation265">
      <property name="title" value="Journal of the American Medical Association Volume 265" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7745,7 +7763,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation266">
+    <property name="JournalOfTheAmericanMedicalAssociation266">
      <property name="title" value="Journal of the American Medical Association Volume 266" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7761,7 +7779,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation267">
+    <property name="JournalOfTheAmericanMedicalAssociation267">
      <property name="title" value="Journal of the American Medical Association Volume 267" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7777,7 +7795,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation268">
+    <property name="JournalOfTheAmericanMedicalAssociation268">
      <property name="title" value="Journal of the American Medical Association Volume 268" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7793,7 +7811,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation269">
+    <property name="JournalOfTheAmericanMedicalAssociation269">
      <property name="title" value="Journal of the American Medical Association Volume 269" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7809,7 +7827,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation270">
+    <property name="JournalOfTheAmericanMedicalAssociation270">
      <property name="title" value="Journal of the American Medical Association Volume 270" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7825,7 +7843,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation271">
+    <property name="JournalOfTheAmericanMedicalAssociation271">
      <property name="title" value="Journal of the American Medical Association Volume 271" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7841,7 +7859,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation272">
+    <property name="JournalOfTheAmericanMedicalAssociation272">
      <property name="title" value="Journal of the American Medical Association Volume 272" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7857,7 +7875,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation273">
+    <property name="JournalOfTheAmericanMedicalAssociation273">
      <property name="title" value="Journal of the American Medical Association Volume 273" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7873,7 +7891,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation274">
+    <property name="JournalOfTheAmericanMedicalAssociation274">
      <property name="title" value="Journal of the American Medical Association Volume 274" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7889,7 +7907,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation275">
+    <property name="JournalOfTheAmericanMedicalAssociation275">
      <property name="title" value="Journal of the American Medical Association Volume 275" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7905,7 +7923,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation276">
+    <property name="JournalOfTheAmericanMedicalAssociation276">
      <property name="title" value="Journal of the American Medical Association Volume 276" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7921,7 +7939,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation277">
+    <property name="JournalOfTheAmericanMedicalAssociation277">
      <property name="title" value="Journal of the American Medical Association Volume 277" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7937,7 +7955,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation278">
+    <property name="JournalOfTheAmericanMedicalAssociation278">
      <property name="title" value="Journal of the American Medical Association Volume 278" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7953,7 +7971,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation279">
+    <property name="JournalOfTheAmericanMedicalAssociation279">
      <property name="title" value="Journal of the American Medical Association Volume 279" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7969,7 +7987,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation280">
+    <property name="JournalOfTheAmericanMedicalAssociation280">
      <property name="title" value="Journal of the American Medical Association Volume 280" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -7985,7 +8003,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation281">
+    <property name="JournalOfTheAmericanMedicalAssociation281">
      <property name="title" value="Journal of the American Medical Association Volume 281" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -8001,7 +8019,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation282">
+    <property name="JournalOfTheAmericanMedicalAssociation282">
      <property name="title" value="Journal of the American Medical Association Volume 282" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -8017,7 +8035,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation283">
+    <property name="JournalOfTheAmericanMedicalAssociation283">
      <property name="title" value="Journal of the American Medical Association Volume 283" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -8033,7 +8051,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation284">
+    <property name="JournalOfTheAmericanMedicalAssociation284">
      <property name="title" value="Journal of the American Medical Association Volume 284" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -8049,7 +8067,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation285">
+    <property name="JournalOfTheAmericanMedicalAssociation285">
      <property name="title" value="Journal of the American Medical Association Volume 285" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -8065,7 +8083,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation286">
+    <property name="JournalOfTheAmericanMedicalAssociation286">
      <property name="title" value="Journal of the American Medical Association Volume 286" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -8081,7 +8099,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation287">
+    <property name="JournalOfTheAmericanMedicalAssociation287">
      <property name="title" value="Journal of the American Medical Association Volume 287" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -8097,7 +8115,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation288">
+    <property name="JournalOfTheAmericanMedicalAssociation288">
      <property name="title" value="Journal of the American Medical Association Volume 288" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -8113,7 +8131,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation289">
+    <property name="JournalOfTheAmericanMedicalAssociation289">
      <property name="title" value="Journal of the American Medical Association Volume 289" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -8129,7 +8147,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation290">
+    <property name="JournalOfTheAmericanMedicalAssociation290">
      <property name="title" value="Journal of the American Medical Association Volume 290" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -8145,7 +8163,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation291">
+    <property name="JournalOfTheAmericanMedicalAssociation291">
      <property name="title" value="Journal of the American Medical Association Volume 291" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -8161,7 +8179,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation292">
+    <property name="JournalOfTheAmericanMedicalAssociation292">
      <property name="title" value="Journal of the American Medical Association Volume 292" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -8177,7 +8195,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation293">
+    <property name="JournalOfTheAmericanMedicalAssociation293">
      <property name="title" value="Journal of the American Medical Association Volume 293" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -8193,7 +8211,7 @@
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation294">
+    <property name="JournalOfTheAmericanMedicalAssociation294">
      <property name="title" value="Journal of the American Medical Association Volume 294" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -8206,10 +8224,12 @@
       <property name="value" value="294" />
      </property>
      <property name="attributes.publisher" value="American Medical Association" />
+     <property name="attributes.hint_application/pdf_filter_factory"
+               value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation295">
+    <property name="JournalOfTheAmericanMedicalAssociation295">
      <property name="title" value="Journal of the American Medical Association Volume 295" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
@@ -8222,10 +8242,12 @@
       <property name="value" value="295" />
      </property>
      <property name="attributes.publisher" value="American Medical Association" />
+     <property name="attributes.hint_application/pdf_filter_factory"
+               value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
     </property>
 
 
-    <property name="JournalOfTheAmericanMedicalAssoiation296">
+    <property name="JournalOfTheAmericanMedicalAssociation296">
      <property name="title" value="Journal of the American Medical Association Volume 296" />
      <property name="journalTitle" value="Journal of the American Medical Association" />
      <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
