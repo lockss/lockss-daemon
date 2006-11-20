@@ -1,5 +1,5 @@
 /*
- * $Id: NewEnglandJournalOfMedicinePdfTransform.java,v 1.7 2006-10-06 17:42:59 thib_gc Exp $
+ * $Id: NewEnglandJournalOfMedicinePdfTransform.java,v 1.8 2006-11-20 22:37:28 thib_gc Exp $
  */
 
 /*
@@ -36,7 +36,7 @@ import java.io.*;
 import java.util.List;
 
 import org.lockss.filter.pdf.*;
-import org.lockss.plugin.highwire.HighWirePdfFilterFactory.SanitizeMetadata;
+import org.lockss.plugin.highwire.HighWirePdfFilterFactory.NormalizeMetadata;
 import org.lockss.plugin.highwire.NewEnglandJournalOfMedicinePdfTransform.EraseVariableFooter.ProcessEndTextObject;
 import org.lockss.util.*;
 
@@ -55,7 +55,7 @@ import org.lockss.util.*;
  * </ul>
  * <h3>Dealing with variable modification dates, instance IDs and
  * metadata</h3>
- * <p>{@link SanitizeMetadata} is used to remove the modification date,
+ * <p>{@link NormalizeMetadata} is used to remove the modification date,
  * erase all metadata, and replace the occurrence of the instance ID in
  * the trailer by something else.</p>
  * <h3>Dealing with the variable footer</h3>
@@ -69,7 +69,7 @@ import org.lockss.util.*;
  * @author Thib Guicherd-Callin
  * @see <a href="http://content.nejm.org/">New England Journal of
  *      Medicine</a>
- * @see SanitizeMetadata
+ * @see NormalizeMetadata
  * @see EraseVariableFooter
  * @see Simplified
  */
@@ -340,7 +340,7 @@ public class NewEnglandJournalOfMedicinePdfTransform extends SimpleOutputDocumen
    * (implicit) aggregation of removing the variable text on every
    * page except the first with {@link TransformEachPageExceptFirst}
    * and {@link EraseVariableFooter}, and of sanitizing the metadata
-   * with {@link SanitizeMetadata}.</p>
+   * with {@link NormalizeMetadata}.</p>
    * <p>Because the conditional is strict (default), if the "if" part
    * succeeds but the "else" part does not, a
    * {@link DocumentTransformException} is thrown.</p>
@@ -352,7 +352,7 @@ public class NewEnglandJournalOfMedicinePdfTransform extends SimpleOutputDocumen
                                            // Then erase the variable footer on other pages
                                            new TransformEachPageExceptFirst(new EraseVariableFooter()),
                                            // ...and sanitize the metadata
-                                           new SanitizeMetadata()));
+                                           new NormalizeMetadata()));
   }
 
   /**
