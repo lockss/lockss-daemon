@@ -1,5 +1,5 @@
 /*
- * $Id: FuncV3Voter.java,v 1.14 2006-11-15 08:24:53 smorabito Exp $
+ * $Id: FuncV3Voter.java,v 1.14.2.1 2006-11-20 23:50:55 smorabito Exp $
  */
 
 /*
@@ -257,6 +257,31 @@ public class FuncV3Voter extends LockssTestCase {
 
     voter.receiveMessage(msgReceipt);
   }
+  
+  public void testSerializeAndReloadVoter() throws Exception {
+    
+    // Just check to be sure that checkpointing and restoring a poll
+    // does not fail.
+    
+    MyMockV3Voter voter1 = new MyMockV3Voter(theDaemon, msgPoll);
+    voter1.startPoll();
+    
+    voter1.checkpointPoll();
+    File stateDir = voter1.getStateDir();
+    
+    assertTrue(stateDir.exists());
+    assertTrue(stateDir.canWrite());
+    
+    MyMockV3Voter voter2 = new MyMockV3Voter(theDaemon, stateDir);
+    assertEquals(voter1.getKey(), voter2.getKey());
+    assertEquals(voter1.getStateDir(), voter2.getStateDir());
+    
+    voter2.startPoll();
+    assertTrue(voter1.isPollActive());
+    assertFalse(voter1.isPollCompleted());
+    assertTrue(voter2.isPollActive());
+    assertFalse(voter2.isPollCompleted());
+  }
 
   private class MyMockV3Voter extends V3Voter {
     private FifoQueue sentMessages = new FifoQueue();
@@ -264,6 +289,11 @@ public class FuncV3Voter extends LockssTestCase {
     public MyMockV3Voter(LockssDaemon daemon, V3LcapMessage msg)
         throws PollSerializerException {
       super(daemon, msg);
+    }
+    
+    public MyMockV3Voter(LockssDaemon daemon, File stateDir)
+        throws PollSerializerException {
+      super(daemon, stateDir);
     }
 
     public void sendMessageTo(V3LcapMessage msg, PeerIdentity id) {
@@ -378,7 +408,7 @@ public class FuncV3Voter extends LockssTestCase {
     }
 
   }
-
+  
   class MyMockPluginManager extends PluginManager {
     ArchivalUnit au;
     LockssDaemon daemon;

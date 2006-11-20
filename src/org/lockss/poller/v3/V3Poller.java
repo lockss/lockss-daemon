@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.40 2006-11-16 05:04:33 smorabito Exp $
+ * $Id: V3Poller.java,v 1.40.2.1 2006-11-20 23:50:55 smorabito Exp $
  */
 
 /*
@@ -286,6 +286,7 @@ public class V3Poller extends BasePoll {
     serializer = new V3PollerSerializer(theDaemon, pollDir);
     pollerState = serializer.loadPollerState();
     repositoryManager = daemon.getRepositoryManager();
+    int oldState = pollerState.getStatus();
     setStatus(POLLER_STATUS_RESUMING);
     // If the hash algorithm used when the poll was first created is
     // no longer available, fail the poll immediately.
@@ -316,6 +317,7 @@ public class V3Poller extends BasePoll {
     }
 
     resumedPoll = true;
+    setStatus(oldState);
     log.debug2("Restored serialized poll " + pollerState.getPollKey());
   }
 

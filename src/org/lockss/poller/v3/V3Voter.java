@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.26 2006-11-16 05:04:33 smorabito Exp $
+ * $Id: V3Voter.java,v 1.26.2.1 2006-11-20 23:50:55 smorabito Exp $
  */
 
 /*
@@ -350,12 +350,16 @@ public class V3Voter extends BasePoll {
   }
 
   public void stopPoll(final int status) {
+    if (activePoll) {
+      activePoll = false;
+    } else {
+      return;
+    }
     if (task != null && !task.isExpired()) {
       log.debug2("Cancelling poll time reservation task");
       task.cancel();
     }
     voterUserData.setStatus(status);
-    activePoll = false;
     // Reset the duration and deadline to reflect reality
     long oldDeadline = voterUserData.getDeadline();
     long now = TimeBase.nowMs();
@@ -706,7 +710,7 @@ public class V3Voter extends BasePoll {
   /**
    * Checkpoint the current state of the voter.
    */
-  private void checkpointPoll() {
+  void checkpointPoll() {
     try {
       pollSerializer.saveVoterUserData(voterUserData);
     } catch (PollSerializerException ex) {
