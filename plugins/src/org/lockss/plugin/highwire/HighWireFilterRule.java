@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireFilterRule.java,v 1.8 2006-11-07 20:45:20 troberts Exp $
+ * $Id: HighWireFilterRule.java,v 1.9 2006-11-20 21:31:36 thib_gc Exp $
  */
 
 /*
@@ -60,7 +60,7 @@ public class HighWireFilterRule implements FilterRule {
 				  "</A>", true),
         new HtmlTagFilter.TagPair("<!-- begin ad tag -->",
 				  "<!-- End ad tag -->", true),
-        new HtmlTagFilter.TagPair("<script", "</script>", true),
+        new HtmlTagFilter.TagPair("<script", "</script>", true, false),
         new HtmlTagFilter.TagPair("<table", "</table>", true),
         new HtmlTagFilter.TagPair("<", ">", false, false)
         );
