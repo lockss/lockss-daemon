@@ -63,7 +63,6 @@ org.lockss.poll.defaultPollProtocol=3
 org.lockss.scomm.enabled=true
 org.lockss.scomm.maxMessageSize=33554430
 org.lockss.poll.v3.quorum=2
-org.lockss.poll.v3.messageDir=./v3state
 org.lockss.poll.v3.minPollSize=3
 org.lockss.poll.v3.maxPollSize=3
 org.lockss.poll.v3.minNominationSize=1
