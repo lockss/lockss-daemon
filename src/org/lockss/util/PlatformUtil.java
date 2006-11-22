@@ -1,5 +1,5 @@
 /*
- * $Id: PlatformUtil.java,v 1.2 2006-11-09 01:44:54 thib_gc Exp $
+ * $Id: PlatformUtil.java,v 1.2.2.1 2006-11-22 00:44:00 tlipkis Exp $
  */
 
 /*
@@ -53,11 +53,6 @@ public class PlatformUtil {
   public static final String PARAM_UNFILTERED_UDP_PORTS =
     Configuration.PLATFORM + "unfilteredUdpPorts";
 
-  /** Set to tmp dir appropriate for platform.  If not set, java.io.tmpdir
-   * system property is used
-   */
-  public static final String PARAM_TMPDIR = Configuration.PLATFORM + "tmpDir";
-
   static PlatformUtil instance;
 
   /** Return the singleton PlatformInfo instance */
@@ -82,12 +77,11 @@ public class PlatformUtil {
     return instance;
   }
 
-  /** Return the system temp directory, from config parameter if specified
-   * else java.io.tmpdir System property
+  /** Return the system temp directory; see {@link
+   * ConfigManager#PARAM_TMPDIR}
    */
   public static String getSystemTempDir() {
-    Configuration config = CurrentConfig.getCurrentConfig();
-    return config.get(PARAM_TMPDIR, System.getProperty("java.io.tmpdir"));
+    return System.getProperty("java.io.tmpdir");
   }
 
   public List getUnfilteredTcpPorts() {

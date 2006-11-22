@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.87 2006-09-16 22:58:49 tlipkis Exp $
+ * $Id: LockssTestCase.java,v 1.87.6.1 2006-11-22 00:43:59 tlipkis Exp $
  */
 
 /*
@@ -66,6 +66,7 @@ public class LockssTestCase extends TestCase {
 
   List tmpDirs;
   List doLaters = null;
+  String javaIoTmpdir;
 
   public LockssTestCase(String msg) {
     this();
@@ -116,6 +117,7 @@ public class LockssTestCase extends TestCase {
 
   /** Create a fresh config manager, MockLockssDaemon */
   protected void setUp() throws Exception {
+    javaIoTmpdir = System.getProperty("java.io.tmpdir");
     ConfigManager.makeConfigManager();
     Logger.resetLogs();
     mockDaemon = new MockLockssDaemon();
@@ -162,6 +164,9 @@ public class LockssTestCase extends TestCase {
 	  log.debug2("deltree(" + dir + ") = false");
 	}
       }
+    }
+    if (!StringUtil.isNullString(javaIoTmpdir)) {
+      System.setProperty("java.io.tmpdir", javaIoTmpdir);
     }
     super.tearDown();
     if (Boolean.getBoolean("org.lockss.test.threadDump")) {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssTestCase.java,v 1.12 2006-04-05 22:08:53 tlipkis Exp $
+ * $Id: TestLockssTestCase.java,v 1.12.20.1 2006-11-22 00:43:59 tlipkis Exp $
  */
 
 /*
@@ -103,6 +103,16 @@ public class TestLockssTestCase extends LockssTestCase {
     assertTrue(tmp.isDirectory());
     // how to test that it gets deleted by tearDown()?
     System.out.println("Make sure " + tmp.getPath() + " is gone.");
+  }
+
+  static String UNLIKELY = "very|unlikely";
+
+  public void testRestoreJavaIoTmpdir1() throws Exception {
+    System.setProperty("java.io.tmpdir", UNLIKELY);
+  }
+
+  public void testRestoreJavaIoTmpdir2() throws Exception {
+    assertNotEquals(UNLIKELY, System.getProperty("java.io.tmpdir"));
   }
 
   public void testAssertNotEqualsLong() {
