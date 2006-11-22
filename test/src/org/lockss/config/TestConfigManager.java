@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigManager.java,v 1.20 2006-08-07 07:39:36 tlipkis Exp $
+ * $Id: TestConfigManager.java,v 1.21 2006-11-22 00:49:26 tlipkis Exp $
  */
 
 /*
@@ -379,6 +379,11 @@ public class TestConfigManager extends LockssTestCase {
     File cdir = new File(tmpdir, relConfigPath);
     assertTrue(cdir.exists());
     Configuration config = CurrentConfig.getCurrentConfig();
+  }
+
+  public void testMiscTmpdir() throws Exception {
+    ConfigurationUtil.setFromArgs(ConfigManager.PARAM_TMPDIR, "/tmp/unlikely");
+    assertEquals("/tmp/unlikely", System.getProperty("java.io.tmpdir"));
   }
 
   public void testConfigVersionProp() {

@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.42 2006-11-15 08:15:49 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.43 2006-11-22 00:49:26 tlipkis Exp $
  */
 
 /*
@@ -81,6 +81,10 @@ public class ConfigManager implements LockssManager {
   /** Common prefix of platform config params */
   public static final String PLATFORM = Configuration.PLATFORM;
   public static final String DAEMON = Configuration.DAEMON;
+
+  /** Tmp dir appropriate for platform.  If set, replaces java.io.tmpdir
+   * System property */
+  public static final String PARAM_TMPDIR = PLATFORM + "tmpDir";
 
   /** Daemon version string (i.e., 1.4.3, 1.5.0-test). */
   public static final String PARAM_DAEMON_VERSION = DAEMON + "version";
@@ -621,6 +625,7 @@ public class ConfigManager implements LockssManager {
       return false;
     }
     copyPlatformParams(newConfig);
+    inferMiscParams(newConfig);
     newConfig.seal();
     Configuration oldConfig = currentConfig;
     if (!oldConfig.isEmpty() && newConfig.equals(oldConfig)) {
@@ -692,8 +697,7 @@ public class ConfigManager implements LockssManager {
   static final String PARAM_HASH_SVC = "org.lockss.manager.HashService";
   static final String DEFAULT_HASH_SVC = "org.lockss.hasher.HashSvcSchedImpl";
 
-  private void copyPlatformParams(Configuration config) {
-    copyPlatformVersionParams(config);
+  private void inferMiscParams(Configuration config) {
     // hack to make hash use new scheduler without directly setting
     // org.lockss.manager.HashService, which would break old daemons.
     // don't set if already has a value
@@ -701,6 +705,15 @@ public class ConfigManager implements LockssManager {
 	config.getBoolean(PARAM_NEW_SCHEDULER, DEFAULT_NEW_SCHEDULER)) {
       config.put(PARAM_HASH_SVC, DEFAULT_HASH_SVC);
     }
+
+    String tmpdir = config.get(PARAM_TMPDIR);
+    if (!StringUtil.isNullString(tmpdir)) {
+      System.setProperty("java.io.tmpdir", tmpdir);
+    }
+  }
+
+  private void copyPlatformParams(Configuration config) {
+    copyPlatformVersionParams(config);
 
     String logdir = config.get(PARAM_PLATFORM_LOG_DIR);
     String logfile = config.get(PARAM_PLATFORM_LOG_FILE);
