@@ -1,5 +1,5 @@
 /*
- * $Id: TestPlatformUtil.java,v 1.1 2006-11-09 23:17:22 thib_gc Exp $
+ * $Id: TestPlatformUtil.java,v 1.1.2.1 2006-11-22 00:53:22 tlipkis Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.io.*;
 import java.util.*;
 import java.lang.reflect.*;
 import org.lockss.util.*;
+import org.lockss.config.*;
 import org.lockss.test.*;
 
 /**
@@ -53,7 +54,7 @@ public class TestPlatformUtil extends LockssTestCase {
     String javatmp = System.getProperty("java.io.tmpdir");
     assertEquals(javatmp, PlatformUtil.getSystemTempDir());
     String parmtmp = "/another/tmp/dir";
-    ConfigurationUtil.setFromArgs(PlatformUtil.PARAM_TMPDIR, parmtmp);
+    ConfigurationUtil.setFromArgs(ConfigManager.PARAM_TMPDIR, parmtmp);
     assertEquals(parmtmp, PlatformUtil.getSystemTempDir());
   }
 
