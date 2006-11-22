@@ -1,5 +1,5 @@
 /*
- * $Id: TransformSelectedPages.java,v 1.8 2006-11-01 22:25:45 thib_gc Exp $
+ * $Id: TransformSelectedPages.java,v 1.9 2006-11-22 03:37:46 thib_gc Exp $
  */
 
 /*
@@ -128,7 +128,7 @@ public abstract class TransformSelectedPages extends PageTransformWrapper {
       logger.error(logMessage);
       throw new NullPointerException(logMessage);
     }
-    logger.debug2("Setting up result policy " + resultPolicy.toString());
+    logger.debug3("Setting up result policy " + resultPolicy.toString());
     this.resultPolicy = resultPolicy;
   }
 
@@ -148,7 +148,7 @@ public abstract class TransformSelectedPages extends PageTransformWrapper {
     this(resultPolicy,
          new AggregatePageTransform(pageTransform1,
                                     pageTransform2));
-    logger.debug2("Implicitly aggregated two page transforms");
+    logger.debug3("Implicitly aggregated two page transforms");
   }
 
   /**
@@ -170,7 +170,7 @@ public abstract class TransformSelectedPages extends PageTransformWrapper {
          new AggregatePageTransform(pageTransform1,
                                     pageTransform2,
                                     pageTransform3));
-    logger.debug2("Implicitly aggregated three page transforms");
+    logger.debug3("Implicitly aggregated three page transforms");
   }
 
   /**
@@ -186,7 +186,7 @@ public abstract class TransformSelectedPages extends PageTransformWrapper {
                                    PageTransform[] pageTransforms) {
     this(resultPolicy,
          new AggregatePageTransform(pageTransforms));
-    logger.debug2("Implicitly aggregated " + pageTransforms.length + " page transforms");
+    logger.debug3("Implicitly aggregated " + pageTransforms.length + " page transforms");
   }
 
   /**
@@ -210,7 +210,7 @@ public abstract class TransformSelectedPages extends PageTransformWrapper {
          new AggregatePageTransform(pageTransformResultPolicy,
                                     pageTransform1,
                                     pageTransform2));
-    logger.debug2("Implicitly aggregated two page transforms");
+    logger.debug3("Implicitly aggregated two page transforms");
   }
 
   /**
@@ -237,7 +237,7 @@ public abstract class TransformSelectedPages extends PageTransformWrapper {
                                     pageTransform1,
                                     pageTransform2,
                                     pageTransform3));
-    logger.debug2("Implicitly aggregated three page transforms");
+    logger.debug3("Implicitly aggregated three page transforms");
   }
 
   /**
@@ -258,12 +258,12 @@ public abstract class TransformSelectedPages extends PageTransformWrapper {
     this(pageIterationResultPolicy,
          new AggregatePageTransform(pageTransformResultPolicy,
                                     pageTransforms));
-    logger.debug2("Implicitly aggregated " + pageTransforms.length + " page transforms");
+    logger.debug3("Implicitly aggregated " + pageTransforms.length + " page transforms");
   }
 
   /* Inherit documentation */
   public boolean transform(PdfDocument pdfDocument) throws IOException {
-    logger.debug2("Begin selected pages transform with result policy " + resultPolicy.toString());
+    logger.debug3("Begin selected pages transform with result policy " + resultPolicy.toString());
     boolean success = resultPolicy.initialValue();
     logger.debug3("Aggregate success flag initially " + success);
     for (Iterator iter = getSelectedPages(pdfDocument) ; iter.hasNext() ; ) {
@@ -282,7 +282,7 @@ public abstract class TransformSelectedPages extends PageTransformWrapper {
         break;
       }
     }
-    logger.debug("Selected pages transform result: " + success);
+    logger.debug2("Selected pages transform result: " + success);
     return success;
   }
 
