@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePdfFilterFactory.java,v 1.5 2006-11-20 22:37:28 thib_gc Exp $
+ * $Id: HighWirePdfFilterFactory.java,v 1.6 2006-11-26 23:37:12 thib_gc Exp $
  */
 
 /*
@@ -67,30 +67,38 @@ public class HighWirePdfFilterFactory extends BasicPdfFilterFactory {
   public static abstract class AbstractThreePartDownloadedFromOperatorProcessor
       extends ConditionalSubsequenceOperatorProcessor {
     
+    /**
+     * <p>The (fixed) length of the output sequence being examined.</p>
+     */
+    public static final int LENGTH = 54;
+
     /* Inherit documentation */
     public int getSubsequenceLength() {
-      // Examine the last 52 tokens in the output sequence
-      return 52;
+      // Examine the last LENGTH tokens in the output sequence
+      return LENGTH;
     }
 
     /* Inherit documentation */
     public boolean identify(List tokens) {
-      // The output list is 52 tokens long
-      boolean ret = tokens.size() == 52
-      // Token [0] is "BT" and token [17] is "ET" (text object containing date/institution)
-      && PdfUtil.matchTextObject(tokens, 0, 17)
-      // Token [12] is "Tj" and its operand is a string (date/institution)
-      && PdfUtil.matchShowText(tokens, 12)
-      // Token [16] is "rg" and its operands are the RGB triple for blue (color of URL)
-      && PdfUtil.matchSetRgbColorNonStroking(tokens, 16, 0, 0, 1)
-      // Token [20] is "BT" and token [35] is "ET" (text object containing URL)
-      && PdfUtil.matchTextObject(tokens, 20, 35)
-      // Token [32] is "Tj" and its operand is a string (URL)
-      && PdfUtil.matchShowText(tokens, 32)
-      // Token [38] is "BT" and token [51] is "ET" (text object containing "Downloaded from ")
-      && PdfUtil.matchTextObject(tokens, 38, 51)
-      // Token [50] is "Tj" and its operand is "Downloaded from "
-      && PdfUtil.matchShowText(tokens, 50, "Downloaded from ");
+      // Look back from the end
+      int last = tokens.size() - 1;
+      // The output list is 54 tokens long
+      boolean ret = tokens.size() == LENGTH
+      // Token [2] or [0] is "BT" and token [last-34] is "ET" (text object containing date/institution)
+      && (PdfUtil.matchTextObject(tokens, 2, last - 34)
+          || PdfUtil.matchTextObject(tokens, 0, last - 34))
+      // Token [last-39] is "Tj" and its operand is a string (date/institution)
+      && PdfUtil.matchShowText(tokens, last - 39)
+      // Token [last-35] is "rg" and its operands are the RGB triple for blue (color of URL)
+      && PdfUtil.matchSetRgbColorNonStroking(tokens, last - 35, 0, 0, 1)
+      // Token [last-31] is "BT" and token [last-16] is "ET" (text object containing URL)
+      && PdfUtil.matchTextObject(tokens, last - 31, last - 16)
+      // Token [last-19] is "Tj" and its operand is a string (URL)
+      && PdfUtil.matchShowText(tokens, last - 19)
+      // Token [last-13] is "BT" and token [last] is "ET" (text object containing "Downloaded from ")
+      && PdfUtil.matchTextObject(tokens, last - 13, last)
+      // Token [last-1] is "Tj" and its operand is "Downloaded from "
+      && PdfUtil.matchShowText(tokens, last - 1, "Downloaded from ");
       logger.debug3("AbstractThreePartDownloadedFromOperatorProcessor candidate match: " + ret);
       return ret;
     }
@@ -138,11 +146,13 @@ public class HighWirePdfFilterFactory extends BasicPdfFilterFactory {
         extends AbstractThreePartDownloadedFromOperatorProcessor {
 
       public List getReplacement(List tokens) {
+        // Find first "BT"
+        int bt = PdfUtil.isBeginTextObject(tokens, 2) ? 2 : 0;
         // Replace by an empty text object
         return ListUtil.list(// Known to be "BT"
-                             tokens.get(0),
+                             tokens.get(bt),
                              // Known to be "ET"
-                             tokens.get(51));
+                             tokens.get(tokens.size() - 1));
       }
 
     }
@@ -230,9 +240,11 @@ public class HighWirePdfFilterFactory extends BasicPdfFilterFactory {
         extends AbstractThreePartDownloadedFromOperatorProcessor {
 
       public List getReplacement(List tokens) {
-        // Only replace variable string in token [11]
+        // Look back from the end
+        int last = tokens.size() - 1;
+        // Only replace variable string in token [last-40]
         List list = new ArrayList(tokens);
-        list.set(11, new COSString(" "));
+        list.set(last - 40, new COSString(" "));
         return list;
       }
 
