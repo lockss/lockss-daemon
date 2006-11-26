@@ -1,5 +1,5 @@
 /*
- * $Id: NewEnglandJournalOfMedicinePdfTransform.java,v 1.8 2006-11-20 22:37:28 thib_gc Exp $
+ * $Id: NewEnglandJournalOfMedicinePdfTransform.java,v 1.9 2006-11-26 23:37:23 thib_gc Exp $
  */
 
 /*
@@ -240,7 +240,7 @@ public class NewEnglandJournalOfMedicinePdfTransform extends SimpleOutputDocumen
         boolean ret = PdfUtil.matchTextObject(tokens, 0, last)
         // Token [last-1] is "Tj" and its operand starts with "Downloaded from "
         && PdfUtil.matchShowTextStartsWith(tokens, last - 1, "Downloaded from ");
-        logger.debug3("ProcessEndTextObject candidate match: " + ret);
+        logger.debug3("NewEnglandJournalOfMedicinePdfTransform.EraseVariableFooter.ProcessEndTextObject candidate match: " + ret);
         return ret;
       }
 
