@@ -1,5 +1,5 @@
 /*
- * $Id: TestRecordingMessageDigest.java,v 1.2 2005-10-11 05:52:45 tlipkis Exp $
+ * $Id: TestRecordingMessageDigest.java,v 1.3 2006-11-27 06:33:35 tlipkis Exp $
  */
 
 /*
@@ -77,11 +77,23 @@ public class TestRecordingMessageDigest extends LockssTestCase {
     assertEquals(dig.digest(), rmd.digest());
   }
 
-  public void testRecord() throws Exception {
+  public void testRecordFile() throws Exception {
     String testStr = "asdf;klsdf;lkajsdf;jl";
     rmd.update(testStr.getBytes());
     rmd.digest();
     assertEquals(testStr, StringUtil.fromFile(file));
+  }
+
+  public void testRecordStream() throws Exception {
+    OutputStream outs = new BufferedOutputStream(new FileOutputStream(file));
+    rmd = new RecordingMessageDigest(newDigest(), outs);
+    String testStr = "asdf;klsdf;lkajsdf;jl";
+    rmd.update(testStr.getBytes());
+    rmd.digest();
+    // make sure it didn't close the stream
+    outs.write("append this".getBytes());
+    outs.close();
+    assertEquals(testStr + "append this", StringUtil.fromFile(file));
   }
 
   public void testMaxRecord0() throws Exception {

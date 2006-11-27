@@ -1,5 +1,5 @@
 /*
- * $Id: BlockHasher.java,v 1.5 2006-06-12 21:42:30 smorabito Exp $
+ * $Id: BlockHasher.java,v 1.6 2006-11-27 06:33:35 tlipkis Exp $
  */
 
 /*
@@ -102,6 +102,14 @@ public class BlockHasher extends GenericHasher {
     setConfig();
   }
   
+  /** Constuctor that allows specifying number of CU versions to hash */
+  public BlockHasher(CachedUrlSet cus, int maxVersions,
+		     MessageDigest[] digests,
+		     byte[][]initByteArrays, EventHandler cb) {
+    this(cus, digests, initByteArrays, cb);
+    this.maxVersions = maxVersions;
+  }
+
   private void setConfig() {
     maxVersions = CurrentConfig.getIntParam(PARAM_HASH_MAX_VERSIONS,
                                             DEFAULT_HASH_MAX_VERSIONS);

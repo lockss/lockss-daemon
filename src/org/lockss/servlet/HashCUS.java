@@ -1,5 +1,5 @@
 /*
- * $Id: HashCUS.java,v 1.31 2006-03-16 01:41:19 thib_gc Exp $
+ * $Id: HashCUS.java,v 1.32 2006-11-27 06:33:35 tlipkis Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.servlet;
 
 import javax.servlet.*;
+import javax.servlet.http.HttpSession;
 import java.io.*;
 import java.util.*;
 import java.text.*;
@@ -41,6 +42,7 @@ import org.mortbay.html.*;
 import org.mortbay.util.B64Code;
 import org.lockss.app.*;
 import org.lockss.util.*;
+import org.lockss.hasher.*;
 import org.lockss.plugin.*;
 import org.lockss.poller.*;
 import org.lockss.protocol.*;
@@ -60,12 +62,24 @@ public class HashCUS extends LockssServlet {
   static final String KEY_HASH_TYPE = "hashtype";
   static final String KEY_RECORD = "record";
   static final String KEY_ACTION = "action";
-  static final String KEY_FILE = "file";
   static final String KEY_MIME = "mime";
+  static final String KEY_FILE_WHICH = "file";
+  static final String WHICH_STREAM = "stream";
+  static final String WHICH_BLOCKS = "blocks";
 
-  static final String HASH_TYPE_CONTENT = "Content";
-  static final String HASH_TYPE_NAME = "Name";
-  static final String HASH_TYPE_SNCUSS = "Sncuss";
+  static final String SESSION_KEY_STREAM_FILE = "hashcus_stream_file";
+  static final String SESSION_KEY_BLOCK_FILE = "hashcus_block_file";
+
+  static final String HASH_STRING_CONTENT = "Content";
+  static final String HASH_STRING_NAME = "Name";
+  static final String HASH_STRING_SNCUSS = "Sncuss";
+  static final String HASH_STRING_V3 = "V3";
+
+  static final int HASH_TYPE_CONTENT = 1;
+  static final int HASH_TYPE_NAME = 2;
+  static final int HASH_TYPE_SNCUSS = 3;
+  static final int HASH_TYPE_V3 = 4;
+  static final int HASH_TYPE_MAX = 4;
 
   static final String ACTION_HASH = "Hash";
   static final String ACTION_STREAM = "Stream";
@@ -96,13 +110,14 @@ public class HashCUS extends LockssServlet {
   byte[] challenge;
   byte[] verifier;
 
+  HttpSession session;
   boolean isHash;
   boolean isRecord;
   File recordFile;
-  String hashType;
-  boolean isContent;
-  boolean isName;
-  boolean isSncuss;
+  OutputStream recordStream;
+  File blockFile;
+  String hashName;
+  int hashType;
   ArchivalUnit au;
   CachedUrlSet cus;
   CachedUrlSetHasher cush;
@@ -125,13 +140,12 @@ public class HashCUS extends LockssServlet {
     lower = null;
     challenge = null;
     verifier = null;
+    session = null;
 
     isHash = true;
     isRecord = false;
-    isContent = false;
-    isName = false;
-    isSncuss = false;
     recordFile = null;
+    recordStream = null;
 
     challenge = null;
     verifier = null;
@@ -171,7 +185,16 @@ public class HashCUS extends LockssServlet {
   }
 
   boolean sendStream() {
-    String file = getParameter(KEY_FILE);
+    String whichFile = getParameter(KEY_FILE_WHICH);
+    String file;
+    if (WHICH_STREAM.equals(whichFile)) {
+      file = (String)getSession().getAttribute(SESSION_KEY_STREAM_FILE);
+    } else if (WHICH_BLOCKS.equals(whichFile)) {
+      file = (String)getSession().getAttribute(SESSION_KEY_BLOCK_FILE);
+    } else {
+      errMsg = "Unknown file: " + whichFile;
+      return false;
+    }
     String mime = getParameter(KEY_MIME);
     try {
       if (mime != null) {
@@ -195,7 +218,18 @@ public class HashCUS extends LockssServlet {
     lower = getParameter(KEY_LOWER);
     upper = getParameter(KEY_UPPER);
     isRecord = (getParameter(KEY_RECORD) != null);
-    hashType = getParameter(KEY_HASH_TYPE);
+    String hashIntStr = getParameter(KEY_HASH_TYPE);
+    try {
+      hashType = Integer.parseInt(hashIntStr);
+    } catch (UnsupportedOperationException e) {
+      errMsg = "Unknown hash type: " + hashIntStr;
+      return false;
+    }
+    if (hashType <= 0 || hashType > HASH_TYPE_MAX) {
+      errMsg = "Unknown hash type: " + hashType;
+      return false;
+    }
+
     if (auid == null) {
       errMsg = "Select an AU";
       return false;
@@ -206,8 +240,9 @@ public class HashCUS extends LockssServlet {
       return false;
     }
     if (url == null) {
-      errMsg = "URL required";
-      return false;
+      url = AuCachedUrlSetSpec.URL;
+//       errMsg = "URL required";
+//       return false;
     }
     try {
       challenge = getB64Param(KEY_CHALLENGE);
@@ -221,19 +256,10 @@ public class HashCUS extends LockssServlet {
       errMsg = "Verifier: Illegal Base64 string: " + e.getMessage();
       return false;
     }
-    if (HASH_TYPE_CONTENT.equals(hashType)) {
-      isContent = true;
-    } else if (HASH_TYPE_NAME.equals(hashType)) {
-      isName = true;
-    } else if (HASH_TYPE_SNCUSS.equals(hashType)) {
-      isSncuss = true;
-    } else {
-      errMsg = "Unknown hash type: " + hashType;
-      return false;
-    }
     PollSpec ps;
     try {
-      if (isSncuss) {
+      switch (hashType) {
+      case HASH_TYPE_SNCUSS:
 	if (upper != null ||
 	    (lower != null && !lower.equals(PollSpec.SINGLE_NODE_LWRBOUND))) {
 	  errMsg = "Upper/Lower ignored";
@@ -243,8 +269,11 @@ public class HashCUS extends LockssServlet {
 			  PollSpec.SINGLE_NODE_LWRBOUND,
 			  null,
 			  Poll.V1_CONTENT_POLL);
-      } else {
-	// XXX select version
+	break;
+      case HASH_TYPE_V3:
+	ps = new PollSpec(auid, url, lower, upper, Poll.V3_POLL);
+	break;
+      default:
 	ps = new PollSpec(auid, url, lower, upper, Poll.V1_CONTENT_POLL);
       }
     } catch (Exception e) {
@@ -278,7 +307,17 @@ public class HashCUS extends LockssServlet {
     page.add(makeForm());
     page.add("<br>");
     if (showResult) {
-      page.add(makeResult());
+      switch (hashType) {
+      case HASH_TYPE_CONTENT:
+      case HASH_TYPE_SNCUSS:
+      case HASH_TYPE_NAME:
+	page.add(makeV1Result());
+	break;
+      case HASH_TYPE_V3:
+	page.add(makeV3Result());
+	break;
+      }
+
     }
     layoutFooter(page);
     ServletUtil.writePage(resp, page);
@@ -286,7 +325,7 @@ public class HashCUS extends LockssServlet {
 
   private static final NumberFormat fmt_2dec = new DecimalFormat("0.00");
 
-  private Element makeResult() {
+  private Element makeV1Result() {
     Table tbl = new Table(0, "align=center");
     tbl.newRow();
     tbl.addHeading("Hash Result", COL2);
@@ -301,15 +340,13 @@ public class HashCUS extends LockssServlet {
     addResultRow(tbl, "Size", Integer.toString(bytesHashed));
     addResultRow(tbl, "Hash", byteString(hashResult));
 
-    String s = StringUtil.protectedDivide(bytesHashed, elapsedTime, "inf");
+    addResultRow(tbl, "Time", getElapsedString());
 
-    if (!"inf".equalsIgnoreCase(s) && Long.parseLong(s) < 100) {
-      double fbpms = ((double)bytesHashed) / ((double)elapsedTime);
-      s = fmt_2dec.format(fbpms);
-    }
+    addRecordFile(tbl);
+    return tbl;
+  }
 
-    addResultRow(tbl, "Time", elapsedTime + " ms, " + s + " bytes/ms");
-
+  private void addRecordFile(Table tbl) {
     if (recordFile != null && recordFile.exists()) {
       tbl.newRow("valign=bottom");
       tbl.newCell();
@@ -319,17 +356,62 @@ public class HashCUS extends LockssServlet {
       }
       tbl.add(":");
       tbl.newCell();
+      getSession().setAttribute(SESSION_KEY_STREAM_FILE,
+				recordFile.toString());
       Properties p = new Properties();
       p.setProperty(KEY_ACTION, ACTION_STREAM);
-      p.setProperty(KEY_FILE, recordFile.toString());
+      p.setProperty(KEY_FILE_WHICH, WHICH_STREAM);
       p.setProperty(KEY_MIME, "application/octet-stream");
       tbl.add(srvLink(myServletDescr(), "binary", concatParams(p)));
       tbl.add("&nbsp;&nbsp;");
       p.setProperty(KEY_MIME, "text/plain");
       tbl.add(srvLink(myServletDescr(), "text", concatParams(p)));
       tbl.add(addFootnote(FOOT_BIN));
+      
+
     }
+  }
+
+  private Element makeV3Result() {
+    Table tbl = new Table(0, "align=center");
+    tbl.newRow();
+    tbl.addHeading("Hash Result", COL2);
+
+    addResultRow(tbl, "CUSS", cus.getSpec().toString());
+    addResultRow(tbl, "Size", Integer.toString(bytesHashed));
+    addResultRow(tbl, "Time", getElapsedString());
+    if (blockFile != null && blockFile.exists()) {
+      tbl.newRow();
+      tbl.newCell();
+      tbl.add("Hash file");
+      tbl.add(":");
+      tbl.newCell();
+      getSession().setAttribute(SESSION_KEY_BLOCK_FILE, blockFile.toString());
+      Properties p = new Properties();
+      p.setProperty(KEY_ACTION, ACTION_STREAM);
+      p.setProperty(KEY_FILE_WHICH, WHICH_BLOCKS);
+      p.setProperty(KEY_MIME, "text/plain");
+      tbl.add(srvLink(myServletDescr(), "HashFile", concatParams(p)));
+    }
+    addRecordFile(tbl);
     return tbl;
+  }
+
+  String getElapsedString() {
+    String s = StringUtil.protectedDivide(bytesHashed, elapsedTime, "inf");
+    if (!"inf".equalsIgnoreCase(s) && Long.parseLong(s) < 100) {
+      double fbpms = ((double)bytesHashed) / ((double)elapsedTime);
+      s = fmt_2dec.format(fbpms);
+    }
+    return elapsedTime + " ms, " + s + " bytes/ms";
+  }
+
+  HttpSession getSession() {
+    if (session == null) {
+      session = req.getSession(true);
+      setSessionTimeout(session);
+    }
+    return session;
   }
 
   void addResultRow(Table tbl, String head, Object value) {
@@ -378,15 +460,25 @@ public class HashCUS extends LockssServlet {
     addInputRow(tbl, "Verifier", KEY_VERIFIER, 50, getParameter(KEY_VERIFIER));
     tbl.newRow();
     tbl.newCell(COL2CENTER);
-    tbl.add(radioButton(HASH_TYPE_CONTENT, KEY_HASH_TYPE,
-			(hashType == null ||
-			 HASH_TYPE_CONTENT.equals(hashType))));
+    tbl.add(radioButton(HASH_STRING_V3,
+			Integer.toString(HASH_TYPE_V3),
+			KEY_HASH_TYPE,
+			(hashType == 0 || hashType == HASH_TYPE_V3)));
     tbl.add("&nbsp;&nbsp;");
-    tbl.add(radioButton(HASH_TYPE_NAME, KEY_HASH_TYPE,
-			HASH_TYPE_NAME.equals(hashType)));
+    tbl.add(radioButton(HASH_STRING_CONTENT,
+			Integer.toString(HASH_TYPE_CONTENT),
+			KEY_HASH_TYPE,
+			hashType == HASH_TYPE_CONTENT));
     tbl.add("&nbsp;&nbsp;");
-    tbl.add(radioButton(HASH_TYPE_SNCUSS, KEY_HASH_TYPE,
-			HASH_TYPE_SNCUSS.equals(hashType)));
+    tbl.add(radioButton(HASH_STRING_NAME,
+			Integer.toString(HASH_TYPE_NAME),
+			KEY_HASH_TYPE,
+			hashType == HASH_TYPE_NAME));
+    tbl.add("&nbsp;&nbsp;");
+    tbl.add(radioButton(HASH_STRING_SNCUSS,
+			Integer.toString(HASH_TYPE_SNCUSS),
+			KEY_HASH_TYPE,
+			hashType == HASH_TYPE_SNCUSS));
     tbl.newRow();
     tbl.newCell(COL2CENTER);
     tbl.add(checkBox("Record filtered stream", "true", KEY_RECORD, isRecord));
@@ -422,33 +514,102 @@ public class HashCUS extends LockssServlet {
 	}
 	if (isRecord) {
 	  recordFile = File.createTempFile("HashCUS", ".tmp");
-	  digest = new RecordingMessageDigest(digest, recordFile, MAX_RECORD);
-	  //	  recordFile.deleteOnExit();
+	  recordStream =
+	    new BufferedOutputStream(new FileOutputStream(recordFile));
+	  digest = new RecordingMessageDigest(digest, recordStream,
+					      MAX_RECORD);
+// 	  recordFile.deleteOnExit();
 	}
-	cush = null;
-	if (isContent || isSncuss) {
-	  cush = cus.getContentHasher(digest);
-	} else if (isName) {
-	  cush = cus.getNameHasher(digest);
+	CachedUrlSetHasher cush = null;
+	switch (hashType) {
+	case HASH_TYPE_CONTENT:
+	case HASH_TYPE_SNCUSS:
+	  initDigest(digest);
+	  doV1(cus.getContentHasher(digest));
+	  break;
+	case HASH_TYPE_NAME:
+	  initDigest(digest);
+	  doV1(cus.getNameHasher(digest));
+	  break;
+	case HASH_TYPE_V3:
+	  doV3();
+	  break;
 	}
-
-	if (challenge != null) {
-	  digest.update(challenge, 0, challenge.length);
-	}
-	if (verifier != null) {
-	  digest.update(verifier, 0, verifier.length);
-	}
-
-	doHash();
       } else {
       }
     } catch (Exception e) {
       log.warning("doit()", e);
       errMsg = "Error hashing: " + e.toString();
     }
+    IOUtil.safeClose(recordStream);
   }
 
-  private void doHash() {
+  private void initDigest(MessageDigest digest) {
+    if (challenge != null) {
+      digest.update(challenge, 0, challenge.length);
+    }
+    if (verifier != null) {
+      digest.update(verifier, 0, verifier.length);
+    }
+  }
+
+  private class BlockEventHandler implements BlockHasher.EventHandler {
+    PrintStream outs;
+    BlockEventHandler(PrintStream outs) {
+      this.outs = outs;
+    }
+      
+    public void blockDone(HashBlock block) {
+      HashBlock.Version ver = block.currentVersion();
+      String url = block.getUrl();
+      outs.println(byteString(ver.getHashes()[0]) + "   " + block.getUrl());
+    }
+  }
+
+  private byte[][] initHasherByteArrays() {
+    byte[][] initBytes = new byte[1][];
+    initBytes[0] = ((challenge != null)
+		    ? ( (verifier != null)
+			? ByteArray.concat(challenge, verifier)
+			: challenge)
+		    : (verifier != null) ? verifier : new byte[0]);
+    return initBytes;
+  }
+
+  private MessageDigest[] initHasherDigests() {
+    MessageDigest[] digests = new MessageDigest[1];
+    digests[0] = digest;
+    return digests;
+  }
+
+  private void doV1(CachedUrlSetHasher cush) {
+    doHash(cush);
+    hashResult = digest.digest();
+  }
+
+  private void doV3() throws IOException {
+    blockFile = FileUtil.createTempFile("HashCUS", ".tmp");
+    PrintStream blockOuts =
+      new PrintStream(new BufferedOutputStream(new FileOutputStream(blockFile)));
+    blockOuts.println("# Block hashes from " + getMachineName() + ", " +
+		      ServletUtil.headerDf.format(new Date()));
+    blockOuts.println("# AU: " + au.getName());
+    BlockHasher hasher = new BlockHasher(cus, 1,
+					 initHasherDigests(),
+					 initHasherByteArrays(),
+					 new BlockEventHandler(blockOuts));
+
+    if (challenge != null) {
+      blockOuts.println("# " + "Poller nonce: " + byteString(challenge));
+    }
+    if (verifier != null) {
+      blockOuts.println("# " + "Voter nonce: " + byteString(verifier));
+    }
+    doHash(hasher);
+    blockOuts.close();
+  }
+
+  private void doHash(CachedUrlSetHasher cush) {
     bytesHashed = 0;
     long startTime = TimeBase.nowMs();
     try {
@@ -463,7 +624,6 @@ public class HashCUS extends LockssServlet {
 
     log.debug("Bytes hashed: " + bytesHashed);
     showResult = true;
-    hashResult = digest.digest();
   }
 
   String byteString(byte[] a) {

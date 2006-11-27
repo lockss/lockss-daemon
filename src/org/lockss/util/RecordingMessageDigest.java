@@ -1,5 +1,5 @@
 /*
- * $Id: RecordingMessageDigest.java,v 1.1 2004-03-29 09:16:10 tlipkis Exp $
+ * $Id: RecordingMessageDigest.java,v 1.2 2006-11-27 06:33:35 tlipkis Exp $
  */
 
 /*
@@ -36,27 +36,50 @@ import java.util.*;
 import java.security.*;
 
 /** Wrapper for a MessageDigest that writes the digested bytes to a file */
-public class RecordingMessageDigest extends MessageDigest {
+public class RecordingMessageDigest
+  extends MessageDigest implements Cloneable {
 
   MessageDigest dig;
-  String fileName;
+  String fileName = null;
   OutputStream out;
   long maxLen = -1;
   long bytes = 0;
 
-  /** Create a message digest that records in the specified file */
-  public RecordingMessageDigest(MessageDigest wrapped, File file)
+  /** Create a message digest that records in the specified stream */
+  public RecordingMessageDigest(MessageDigest wrapped, OutputStream out,
+				long maxLen)
       throws FileNotFoundException {
     super("Recording digest");
     dig = wrapped;
+    this.out = out;
+    this.maxLen = maxLen;
+  }
+
+  /** Create a message digest that records in the specified stream */
+  public RecordingMessageDigest(MessageDigest wrapped, OutputStream out)
+      throws FileNotFoundException {
+    this(wrapped, out, -1);
+  }
+
+  /** Create a message digest that records in the specified file */
+  public RecordingMessageDigest(MessageDigest wrapped, File file)
+      throws FileNotFoundException {
+    this(wrapped, file, -1);
+  }
+
+  /** Create a message digest that records in the specified file, up to
+   * maxLen bytes */
+  public RecordingMessageDigest(MessageDigest wrapped, File file, long maxLen)
+      throws FileNotFoundException {
+    this(wrapped, new BufferedOutputStream(new FileOutputStream(file)),
+	 maxLen);
     this.fileName = file.getName();
-    out = new BufferedOutputStream(new FileOutputStream(file));
   }
 
   /** Create a message digest that records in the specified file */
   public RecordingMessageDigest(MessageDigest wrapped, String fileName)
       throws FileNotFoundException {
-    this(wrapped, new File(fileName));
+    this(wrapped, fileName, -1);
   }
 
   /** Create a message digest that records in the specified file, up to
@@ -64,16 +87,7 @@ public class RecordingMessageDigest extends MessageDigest {
   public RecordingMessageDigest(MessageDigest wrapped, String fileName,
 				long maxLen)
       throws FileNotFoundException {
-    this(wrapped, fileName);
-    this.maxLen = maxLen;
-  }
-
-  /** Create a message digest that records in the specified file, up to
-   * maxLen bytes */
-  public RecordingMessageDigest(MessageDigest wrapped, File file, long maxLen)
-      throws FileNotFoundException {
-    this(wrapped, file);
-    this.maxLen = maxLen;
+    this(wrapped, new File(fileName), maxLen);
   }
 
   protected void engineUpdate(byte input) {
@@ -110,21 +124,24 @@ public class RecordingMessageDigest extends MessageDigest {
   }
 
   protected byte[] engineDigest() {
-    try {
-      out.close();
-    } catch (IOException e) {
-      throw new RuntimeException("Error closing digest record: " + e.toString());
-    }
+    closeRecord();
     return dig.digest();
   }
 
   protected int engineDigest(byte[] buf, int offset, int len)
       throws DigestException {
-    try {
-      out.close();
-    } catch (IOException e) {
-      throw new RuntimeException("Error closing digest record: " + e.toString());
-    }
+    closeRecord();
     return dig.digest(buf, offset, len);
+  }
+
+  private void closeRecord() {
+    // close stream only if we opened it
+    if (fileName != null) {
+      try {
+	out.close();
+      } catch (IOException e) {
+	throw new RuntimeException("Error closing digest record: " + e);
+      }
+    }
   }
 }
