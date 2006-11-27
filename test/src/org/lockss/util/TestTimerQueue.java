@@ -1,5 +1,5 @@
 /*
- * $Id: TestTimerQueue.java,v 1.9 2005-10-07 23:43:53 tlipkis Exp $
+ * $Id: TestTimerQueue.java,v 1.10 2006-11-27 06:34:00 tlipkis Exp $
  */
 
 /*
@@ -79,6 +79,26 @@ public class TestTimerQueue extends LockssTestCase {
     assertTrue(q.isEmpty());
     TimeBase.step(501);
     assertEquals("bar", q.get(500));
+    assertEquals("foo", q.get(500));
+  }
+
+  // ensure that exceptions thrown by a timer callback doesn't cause
+  // notification thread to exit
+  public void testThrows() {
+    setErrorIfTimerThrows(false);
+    final SimpleQueue.Fifo q = new SimpleQueue.Fifo();
+    TimerQueue.Callback cb = new TimerQueue.Callback() {
+	public void timerExpired(Object cookie) {
+	  q.put(cookie);
+	  throw new ExpectedRuntimeException("thrown from timer event");
+	}};
+    TimerQueue.schedule(Deadline.in(500), cb, "foo");
+    assertTrue(q.isEmpty());
+    TimerQueue.schedule(Deadline.in(300), cb, "bar");
+    assertTrue(q.isEmpty());
+    TimeBase.step(501);
+    assertEquals("bar", q.get(500));
+    // if notification thread exited, this one won't have happened
     assertEquals("foo", q.get(500));
   }
 

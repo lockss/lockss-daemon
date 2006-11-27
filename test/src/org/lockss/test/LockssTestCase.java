@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.88 2006-11-22 00:49:26 tlipkis Exp $
+ * $Id: LockssTestCase.java,v 1.89 2006-11-27 06:34:00 tlipkis Exp $
  */
 
 /*
@@ -67,6 +67,7 @@ public class LockssTestCase extends TestCase {
   List tmpDirs;
   List doLaters = null;
   String javaIoTmpdir;
+  TestResult result;
 
   public LockssTestCase(String msg) {
     this();
@@ -117,6 +118,7 @@ public class LockssTestCase extends TestCase {
 
   /** Create a fresh config manager, MockLockssDaemon */
   protected void setUp() throws Exception {
+    TimerQueue.setSingleton(new ErrorRecordingTimerQueue());
     javaIoTmpdir = System.getProperty("java.io.tmpdir");
     ConfigManager.makeConfigManager();
     Logger.resetLogs();
@@ -192,6 +194,13 @@ public class LockssTestCase extends TestCase {
 
   protected void enableThreadWatchdog() {
     System.setProperty(LockssRunnable.PARAM_THREAD_WDOG_EXIT_IMM, "true");
+  }
+
+  /** Overridden so we can can get ahold of the result object, in order to
+   * manually add errors */
+  public void run(TestResult result) {
+    this.result = result;
+    super.run(result);
   }
 
   // variant harness
@@ -1674,4 +1683,26 @@ public class LockssTestCase extends TestCase {
     }
   }
 
+  // If enabled, record an error in the result for every exception thrown
+  // from a TimerQueue callback.
+
+  private boolean errorIfTimerThrows = true;
+
+  public void setErrorIfTimerThrows(boolean flg) {
+    errorIfTimerThrows = flg;
+  }
+
+  class ErrorRecordingTimerQueue extends TimerQueue {
+    protected void doNotify0(Request req) {
+      try {
+	log.info("doNotify0()");
+	super.doNotify0(req);
+      } catch (Exception e) {
+	if (errorIfTimerThrows) {
+	  log.info("addError(" + LockssTestCase.this + ", " + e + ")");
+	  result.addError(LockssTestCase.this, e);
+	}
+      }
+    }
+  }
 }
