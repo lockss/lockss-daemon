@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.89 2006-11-27 06:34:00 tlipkis Exp $
+ * $Id: LockssTestCase.java,v 1.90 2006-11-27 06:36:53 tlipkis Exp $
  */
 
 /*
@@ -1688,6 +1688,9 @@ public class LockssTestCase extends TestCase {
 
   private boolean errorIfTimerThrows = true;
 
+  /** If flg is true, exceptions thrown from TimerQueue callbacks will
+   * cause test failures, <i>iff they occur while the test is still
+   * running</i>. */
   public void setErrorIfTimerThrows(boolean flg) {
     errorIfTimerThrows = flg;
   }
