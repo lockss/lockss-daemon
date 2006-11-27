@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePdfFilterFactory.java,v 1.6 2006-11-26 23:37:12 thib_gc Exp $
+ * $Id: HighWirePdfFilterFactory.java,v 1.7 2006-11-27 03:15:03 thib_gc Exp $
  */
 
 /*
@@ -46,18 +46,18 @@ public class HighWirePdfFilterFactory extends BasicPdfFilterFactory {
     
     /* Inherit documentation */
     public boolean identify(List tokens) {
-      // The output list is 30 tokens long
-      boolean ret = tokens.size() == 30
+      // Look back from the end
+      int last = tokens.size() - 1;
       // Token [0] is "BT" and token [29] is "ET" (text object containing three strings)
-      && PdfUtil.matchTextObject(tokens, 0, 29)
-      // Token [12] is "Tj" and its operand is a string (date/institution)
-      && PdfUtil.matchShowText(tokens, 12)
-      // Token [16] is "rg" and its operands are the RGB triple for blue (color of URL)
-      && PdfUtil.matchSetRgbColorNonStroking(tokens, 16, 0, 0, 1)
-      // Token [21] is "Tj" and its operand is a string (URL)
-      && PdfUtil.matchShowText(tokens, 21)
-      // Token [28] is "Tj" and its operand is "Downloaded from "
-      && PdfUtil.matchShowText(tokens, 28, "Downloaded from ");
+      boolean ret = PdfUtil.matchTextObject(tokens, 0, last)
+      // Token [last-17] is "Tj" and its operand is a string (date/institution)
+      && PdfUtil.matchShowText(tokens, last - 17)
+      // Token [last-13] is "rg" and its operands are the RGB triple for blue (color of URL)
+      && PdfUtil.matchSetRgbColorNonStroking(tokens, last - 13, 0, 0, 1)
+      // Token [last-8] is "Tj" and its operand is a string (URL)
+      && PdfUtil.matchShowText(tokens, last - 8)
+      // Token [last-1] is "Tj" and its operand is "Downloaded from "
+      && PdfUtil.matchShowText(tokens, last - 1, "Downloaded from ");
       logger.debug3("AbstractOnePartDownloadedFromOperatorProcessor candidate match: " + ret);
       return ret;
     }
@@ -126,7 +126,7 @@ public class HighWirePdfFilterFactory extends BasicPdfFilterFactory {
         return ListUtil.list(// Known to be "BT"
                              tokens.get(0),
                              // Known to be "ET"
-                             tokens.get(29));
+                             tokens.get(tokens.size() - 1));
       }
       
     }
@@ -217,9 +217,11 @@ public class HighWirePdfFilterFactory extends BasicPdfFilterFactory {
         extends AbstractOnePartDownloadedFromOperatorProcessor {
       
       public List getReplacement(List tokens) {
-        // Only replace variable string in token [11]
+        // Look back from the end
+        int last = tokens.size() - 1;
+        // Only replace variable string in token [last-18]
         List list = new ArrayList(tokens);
-        list.set(11, new COSString(" "));
+        list.set(last - 18, new COSString(" "));
         return list;
       }
       
