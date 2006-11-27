@@ -67,8 +67,6 @@ org.lockss.poll.v3.minPollSize=3
 org.lockss.poll.v3.maxPollSize=3
 org.lockss.poll.v3.minNominationSize=1
 org.lockss.poll.v3.maxNominationSize=1
-org.lockss.poll.v3.minPollDuration=1d
-org.lockss.poll.v3.maxPollDuration=3d
 org.lockss.id.initialV3PeerList=\
     TCP:[127.0.0.1]:9720;\
     TCP:[127.0.0.1]:9721;\
