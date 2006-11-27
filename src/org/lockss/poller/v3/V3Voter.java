@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.27 2006-11-20 23:50:52 smorabito Exp $
+ * $Id: V3Voter.java,v 1.28 2006-11-27 20:46:29 smorabito Exp $
  */
 
 /*
@@ -77,26 +77,33 @@ public class V3Voter extends BasePoll {
   /** The minimum number of peers to select for a nomination message.
    * If there are fewer than this number of peers available to nominate,
    * an empty nomination message will be sent. */
-  public static String PARAM_MIN_NOMINATION_SIZE = PREFIX + "minNominationSize";
-  public static int DEFAULT_MIN_NOMINATION_SIZE = 1;
+  public static final String PARAM_MIN_NOMINATION_SIZE = PREFIX + "minNominationSize";
+  public static final int DEFAULT_MIN_NOMINATION_SIZE = 1;
 
   /** The minimum number of peers to select for a nomination message. */
-  public static String PARAM_MAX_NOMINATION_SIZE = 
+  public static final String PARAM_MAX_NOMINATION_SIZE = 
     PREFIX + "maxNominationSize";
-  public static int DEFAULT_MAX_NOMINATION_SIZE = 5;
+  public static final int DEFAULT_MAX_NOMINATION_SIZE = 5;
   
   /**
    * If false, do not serve any repairs via V3.
    */
-  public static String PARAM_ALLOW_V3_REPAIRS = PREFIX + "allowV3Repairs";
-  public static boolean DEFAULT_ALLOW_V3_REPAIRS = true;
+  public static final String PARAM_ALLOW_V3_REPAIRS = PREFIX + "allowV3Repairs";
+  public static final boolean DEFAULT_ALLOW_V3_REPAIRS = true;
   
   /**
    * Directory in which to store message data.
    */
-  public static String PARAM_V3_MESSAGE_REL_DIR = V3Poller.PARAM_V3_MESSAGE_REL_DIR;
-  public static String DEFAULT_V3_MESSAGE_REL_DIR = 
+  public static final String PARAM_V3_MESSAGE_REL_DIR = V3Poller.PARAM_V3_MESSAGE_REL_DIR;
+  public static final String DEFAULT_V3_MESSAGE_REL_DIR = 
     V3Poller.DEFAULT_V3_MESSAGE_REL_DIR;
+  
+  /** 
+   * Extra time added to the poll deadline (as sent by the poller) to 
+   * wait for a receipt message.
+   */
+  public static final String PARAM_RECEIPT_PADDING = PREFIX + "receiptPadding";
+  public static final long DEFAULT_RECEIPT_PADDING = 1000 * 60 * 10; // 10m
 
   private PsmInterp stateMachine;
   private VoterUserData voterUserData;
@@ -124,10 +131,15 @@ public class V3Voter extends BasePoll {
    */
   public V3Voter(LockssDaemon daemon, V3LcapMessage msg)
       throws V3Serializer.PollSerializerException {
-    log.debug3("Creating V3 Voter for poll: " + msg.getKey() +
-               "; duration=" + msg.getDuration());
-
     this.theDaemon = daemon;
+    long padding =
+      CurrentConfig.getTimeIntervalParam(V3Voter.PARAM_RECEIPT_PADDING,
+                                         V3Voter.DEFAULT_RECEIPT_PADDING);
+    long duration = msg.getDuration() + padding;
+
+    log.debug3("Creating V3 Voter for poll: " + msg.getKey() +
+               "; duration=" + duration);
+
     pollSerializer = new V3VoterSerializer(theDaemon);
     
     // Determine the proper location for the V3 message dir.
@@ -161,7 +173,7 @@ public class V3Voter extends BasePoll {
       this.voterUserData = new VoterUserData(new PollSpec(msg), this,
                                              msg.getOriginatorId(), 
                                              msg.getKey(),
-                                             msg.getDuration(),
+                                             duration,
                                              msg.getHashAlgorithm(),
                                              msg.getPollerNonce(),
                                              makeVoterNonce(),
