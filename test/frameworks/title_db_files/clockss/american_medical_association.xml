@@ -8160,6 +8160,8 @@
       <property name="value" value="290" />
      </property>
      <property name="attributes.publisher" value="American Medical Association" />
+     <property name="attributes.hint_application/pdf_filter_factory"
+               value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
     </property>
 
 
@@ -8176,6 +8178,8 @@
       <property name="value" value="291" />
      </property>
      <property name="attributes.publisher" value="American Medical Association" />
+     <property name="attributes.hint_application/pdf_filter_factory"
+               value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
     </property>
 
 
@@ -8192,6 +8196,8 @@
       <property name="value" value="292" />
      </property>
      <property name="attributes.publisher" value="American Medical Association" />
+     <property name="attributes.hint_application/pdf_filter_factory"
+               value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
     </property>
 
 
@@ -8208,6 +8214,8 @@
       <property name="value" value="293" />
      </property>
      <property name="attributes.publisher" value="American Medical Association" />
+     <property name="attributes.hint_application/pdf_filter_factory"
+               value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
     </property>
 
 
@@ -8260,6 +8268,8 @@
       <property name="value" value="296" />
      </property>
      <property name="attributes.publisher" value="American Medical Association" />
+     <property name="attributes.hint_application/pdf_filter_factory"
+               value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
     </property>
 
    <!-- end Journal of the American Medical Association -->
