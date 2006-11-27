@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.90 2006-11-27 06:36:53 tlipkis Exp $
+ * $Id: LockssTestCase.java,v 1.91 2006-11-27 07:17:28 tlipkis Exp $
  */
 
 /*
@@ -1698,11 +1698,9 @@ public class LockssTestCase extends TestCase {
   class ErrorRecordingTimerQueue extends TimerQueue {
     protected void doNotify0(Request req) {
       try {
-	log.info("doNotify0()");
 	super.doNotify0(req);
       } catch (Exception e) {
 	if (errorIfTimerThrows) {
-	  log.info("addError(" + LockssTestCase.this + ", " + e + ")");
 	  result.addError(LockssTestCase.this, e);
 	}
       }
