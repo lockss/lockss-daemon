@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePdfFilterFactory.java,v 1.7 2006-11-27 03:15:03 thib_gc Exp $
+ * $Id: HighWirePdfFilterFactory.java,v 1.8 2006-11-27 03:27:09 thib_gc Exp $
  */
 
 /*
@@ -48,8 +48,10 @@ public class HighWirePdfFilterFactory extends BasicPdfFilterFactory {
     public boolean identify(List tokens) {
       // Look back from the end
       int last = tokens.size() - 1;
-      // Token [0] is "BT" and token [29] is "ET" (text object containing three strings)
-      boolean ret = PdfUtil.matchTextObject(tokens, 0, last)
+      // There are at least 20 tokens to look at
+      boolean ret = tokens.size() >= 20
+      // Token [0] is "BT" and token [last] is "ET" (text object containing three strings)  
+      && PdfUtil.matchTextObject(tokens, 0, last)
       // Token [last-17] is "Tj" and its operand is a string (date/institution)
       && PdfUtil.matchShowText(tokens, last - 17)
       // Token [last-13] is "rg" and its operands are the RGB triple for blue (color of URL)
