@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollerSerializer.java,v 1.11 2006-11-14 22:15:57 tlipkis Exp $
+ * $Id: V3PollerSerializer.java,v 1.12 2006-11-28 23:12:24 smorabito Exp $
  */
 
 /*
@@ -78,8 +78,8 @@ public class V3PollerSerializer extends V3Serializer {
   private static final class PollerUserDataFileFilter implements FileFilter {
 
     public boolean accept(File pathname) {
-      return StringUtil.startsWithIgnoreCase(pathname.getName(),
-                                             POLLER_USER_DATA_PREFIX);
+      return (pathname.getName().startsWith(POLLER_USER_DATA_PREFIX)
+              && pathname.getName().endsWith(POLLER_USER_DATA_SUFFIX));
     }
 
   }
