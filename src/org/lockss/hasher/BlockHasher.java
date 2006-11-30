@@ -1,5 +1,5 @@
 /*
- * $Id: BlockHasher.java,v 1.5 2006-06-12 21:42:30 smorabito Exp $
+ * $Id: BlockHasher.java,v 1.5.16.1 2006-11-30 05:04:04 tlipkis Exp $
  */
 
 /*
@@ -202,11 +202,13 @@ public class BlockHasher extends GenericHasher {
   }
 
   public void abortHash() {
-    for (int ix = 0; ix < is.length; ix++) {
-      IOUtil.safeClose(is[ix]);
-      is[ix] = null;
+    if (is != null) {
+      for (int ix = 0; ix < is.length; ix++) {
+	IOUtil.safeClose(is[ix]);
+	is[ix] = null;
+      }
+      is = null;
     }
-    is = null;
     super.abortHash();
   }
 
