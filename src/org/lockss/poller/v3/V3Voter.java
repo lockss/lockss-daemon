@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.28 2006-11-27 20:46:29 smorabito Exp $
+ * $Id: V3Voter.java,v 1.29 2006-11-30 20:56:02 smorabito Exp $
  */
 
 /*
@@ -260,7 +260,7 @@ public class V3Voter extends BasePoll {
     long now = TimeBase.nowMs();
     Deadline earliestStart = Deadline.at(now + estimatedHashDuration);
     Deadline latestFinish =
-      Deadline.at(getDeadline().getExpirationTime() - estimatedHashDuration);
+      Deadline.at(voterUserData.getVoteDeadline() - estimatedHashDuration);
     log.debug("Voter " + getKey() + ": Earliest Start = " +
               earliestStart + "; Latest Finish = " + latestFinish);
     TaskCallback tc = new TaskCallback() {
@@ -504,14 +504,14 @@ public class V3Voter extends BasePoll {
                                                 initHasherByteArrays(),
                                                 new BlockEventHandler());
     HashService hashService = theDaemon.getHashService();
-    // If our fake "Reserve Time" task isn't null, cancel it, then schedule the
-    // real hash.
-    // XXX:  Eventually, we want to be able to associate a hash with an already
-    // scheduled task.  This will do until then.
-    if (task != null) task.cancel();
+    Deadline hashDeadline = task.getLatestFinish();
+
+    // Cancel the old task.
+    task.cancel();
+
+    // Schedule the hash using the old task's latest finish as the deadline.
     boolean scheduled =
-      hashService.scheduleHash(hasher,
-                               Deadline.at(voterUserData.getDeadline()),
+      hashService.scheduleHash(hasher, hashDeadline,
                                new HashingCompleteCallback(), null);
     if (scheduled) {
       log.debug("Successfully scheduled time for vote in poll " +
