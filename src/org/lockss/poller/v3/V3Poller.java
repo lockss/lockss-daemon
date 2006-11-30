@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.40.2.1 2006-11-20 23:50:55 smorabito Exp $
+ * $Id: V3Poller.java,v 1.40.2.2 2006-11-30 04:34:02 smorabito Exp $
  */
 
 /*
@@ -786,7 +786,7 @@ public class V3Poller extends BasePoll {
    *
    * @param hb  The {@link HashBlock} to tally.
    */
-  private void tallyBlock(HashBlock hb) {
+  void tallyBlock(HashBlock hb, BlockTally tally) {
     setStatus(V3Poller.POLLER_STATUS_TALLYING);
 
     log.debug3("Opening block " + hb.getUrl() + " to tally.");
@@ -799,7 +799,34 @@ public class V3Poller extends BasePoll {
     do {
       missingBlockVoters = 0;
       digestIndex = 0;
-      BlockTally tally = new BlockTally(pollerState.getQuorum());
+      
+      // Reset the tally
+      tally.reset();
+
+      // Iterate over the peers looking for the lowest-sorted URL.
+      // lowestUrl will be null if there is no URL lower than the poller's
+      
+      String lowestUrl = null;
+      for (Iterator it = theParticipants.values().iterator(); it.hasNext();) {
+        ParticipantUserData voter = (ParticipantUserData)it.next();
+        VoteBlocksIterator iter = voter.getVoteBlockIterator();
+
+        VoteBlock vb = null;
+        try {
+          vb = iter.peek();
+          if (vb == null) {
+            continue;
+          } else {
+            if (hb.getUrl().compareTo(vb.getUrl()) > 0 &&
+                (lowestUrl == null || hb.getUrl().compareTo(lowestUrl) > 0)) { 
+              lowestUrl = vb.getUrl();
+            }
+          }
+        } catch (IOException ex) {
+          continue;
+        }
+      }
+
       for (Iterator it = theParticipants.values().iterator(); it.hasNext();) {
         ParticipantUserData voter = (ParticipantUserData)it.next();
         VoteBlocksIterator iter = voter.getVoteBlockIterator();
@@ -813,23 +840,28 @@ public class V3Poller extends BasePoll {
             tally.addExtraBlockVoter(voter.getVoterId());
           } else {
             // Cache results in case we need to check this repair.
-            tally.addVoteForBlock(voter.getVoterId(), vb);
             int sortOrder = hb.getUrl().compareTo(vb.getUrl());
             if (sortOrder > 0) {
               log.debug3("Participant " + voter.getVoterId() + 
                          " seems to have an extra block that I don't: " +
                          vb.getUrl());
+              tally.addVoteForBlock(voter.getVoterId(), vb);
               tally.addMissingBlockVoter(voter.getVoterId(), vb.getUrl());
-              iter.next();
               missingBlockVoters++;
+              iter.next();
             } else if (sortOrder < 0) {
               log.debug3("Participant " + voter.getVoterId() +
                          " doesn't seem to have block " + hb.getUrl());
               tally.addExtraBlockVoter(voter.getVoterId());
             } else { // equal
-              log.debug3("Our blocks are the same, now we'll compare them.");
-              iter.next();
-              compareBlocks(voter.getVoterId(), ++digestIndex, vb, hb, tally);
+              if (lowestUrl == null) {
+                log.debug3("Our blocks are the same, now we'll compare them.");
+                iter.next();
+                tally.addVoteForBlock(voter.getVoterId(), vb);
+                compareBlocks(voter.getVoterId(), ++digestIndex, vb, hb, tally);
+              } else {
+                log.debug3("Not incrementing peer's vote block iterator");
+              }
             }
           }
         } catch (IOException ex) {
@@ -846,7 +878,6 @@ public class V3Poller extends BasePoll {
       }
 
       tally.tallyVotes();
-
       checkTally(tally, hb.getUrl(), false);
     } while (missingBlockVoters > 0);
     
@@ -1607,7 +1638,7 @@ public class V3Poller extends BasePoll {
    */
   private class BlockEventHandler implements BlockHasher.EventHandler {
     public void blockDone(HashBlock block) {
-      tallyBlock(block);
+      tallyBlock(block, new BlockTally(pollerState.getQuorum()));
     }
   }
   

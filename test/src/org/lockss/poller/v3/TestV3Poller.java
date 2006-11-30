@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.16 2006-11-08 16:42:58 smorabito Exp $
+ * $Id: TestV3Poller.java,v 1.16.2.1 2006-11-30 04:34:02 smorabito Exp $
  */
 
 /*
@@ -278,6 +278,14 @@ public class TestV3Poller extends LockssTestCase {
     MockCachedUrl cu = new MockCachedUrl(url);
     return new HashBlock(cu);
   }
+  
+  private HashBlock makeHashBlock(String url, String content)
+      throws Exception {
+    MockCachedUrl cu = new MockCachedUrl(url);
+    HashBlock hb = new HashBlock(cu);
+    addVersion(hb, content);
+    return hb;
+  }
 
   private static int hbVersionNum = 1;
   private void addVersion(HashBlock block, String content) throws Exception {
@@ -308,6 +316,13 @@ public class TestV3Poller extends LockssTestCase {
     return vb;
   }
   
+  private VoteBlock makeVoteBlock(String url, String content)
+      throws Exception {
+    VoteBlock vb = new VoteBlock(url);
+    addVersion(vb, content);
+    return vb;
+  }
+  
   private void addVersion(VoteBlock block, String content) throws Exception {
     MessageDigest md = MessageDigest.getInstance("SHA1");
     md.update(content.getBytes());
@@ -315,6 +330,88 @@ public class TestV3Poller extends LockssTestCase {
     block.addVersion(0, content.length(), 
                      0, content.length(),
                      hash, hash);
+  }
+  
+  private ParticipantUserData makeParticipant(PeerIdentity id,
+                                              V3Poller poller,
+                                              VoteBlock [] votes) 
+      throws Exception {
+    byte[] pollerNonce = ByteArray.makeRandomBytes(20);
+    ParticipantUserData ud = new ParticipantUserData(id, poller, tempDir);
+    ud.setPollerNonce(pollerNonce);
+    VoteBlocks vb = new MemoryVoteBlocks();
+    for (int i = 0; i < votes.length; i++) {
+      vb.addVoteBlock(votes[i]);
+    }
+    ud.setVoteBlocks(vb);
+    return ud;
+  }
+  
+  public void testTallyBlocksSucceedsOnExtraFileEdgeCase() throws Exception {
+    IdentityManager idMgr = theDaemon.getIdentityManager();
+
+    V3Poller v3Poller = makeV3Poller("key");
+    
+    PeerIdentity id1 = idMgr.findPeerIdentity("TCP:[127.0.0.1]:8990");
+    PeerIdentity id2 = idMgr.findPeerIdentity("TCP:[127.0.0.1]:8991");
+    PeerIdentity id3 = idMgr.findPeerIdentity("TCP:[127.0.0.1]:8992");
+        
+    String [] urls_poller =
+    { 
+     "http://test.com/foo1",
+     "http://test.com/foo2",
+     "http://test.com/foo3"
+    };
+    
+    HashBlock [] hashblocks =
+    {
+     makeHashBlock("http://test.com/foo1", "content for foo1"),
+     makeHashBlock("http://test.com/foo2", "content for foo2"),
+     makeHashBlock("http://test.com/foo3", "content for foo3")
+    };
+    
+    VoteBlock [] voter1_voteblocks =
+    {
+     makeVoteBlock("http://test.com/foo1", "content for foo1"),
+     makeVoteBlock("http://test.com/foo2a", "content for foo2a"),
+     makeVoteBlock("http://test.com/foo3", "content for foo3")
+    };
+    
+    VoteBlock [] voter2_voteblocks =
+    {
+     makeVoteBlock("http://test.com/foo1", "content for foo1"),
+     makeVoteBlock("http://test.com/foo2a", "content for foo2a"),
+     makeVoteBlock("http://test.com/foo3", "content for foo3")
+    };
+    
+    VoteBlock [] voter3_voteblocks =
+    {
+     makeVoteBlock("http://test.com/foo1", "content for foo1"),
+     makeVoteBlock("http://test.com/foo3", "content for foo3")
+    };
+    
+    v3Poller.theParticipants.put(id1, makeParticipant(id1, v3Poller,
+                                                      voter1_voteblocks));
+    v3Poller.theParticipants.put(id2, makeParticipant(id2, v3Poller,
+                                                      voter2_voteblocks));
+    v3Poller.theParticipants.put(id3, makeParticipant(id3, v3Poller,
+                                                      voter3_voteblocks));
+    
+    // Finally, let's test.
+    
+    BlockTally tally;
+    
+    tally = new BlockTally(2); // Quorum = 3
+    v3Poller.tallyBlock(hashblocks[0], tally);
+    assertEquals(BlockTally.RESULT_WON, tally.result);
+    
+    tally = new BlockTally(2); // Quorum = 3
+    v3Poller.tallyBlock(hashblocks[1], tally);
+    assertEquals(BlockTally.RESULT_LOST_EXTRA_BLOCK, tally.result);
+    
+    tally = new BlockTally(2); // Quorum = 3
+    v3Poller.tallyBlock(hashblocks[2], tally);
+    assertEquals(BlockTally.RESULT_WON, tally.result);
   }
   
   public void testCheckBlockWin() throws Exception {
