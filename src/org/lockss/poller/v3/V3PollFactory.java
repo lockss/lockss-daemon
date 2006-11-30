@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollFactory.java,v 1.8 2006-11-16 05:04:33 smorabito Exp $
+ * $Id: V3PollFactory.java,v 1.8.2.1 2006-11-30 20:56:14 smorabito Exp $
  */
 
 /*
@@ -201,33 +201,38 @@ public class V3PollFactory extends BasePollFactory {
       CurrentConfig.getIntParam(V3Poller.PARAM_MAX_POLL_SIZE,
                                 V3Poller.DEFAULT_MAX_POLL_SIZE);
     
-    long v3VoteDeadlinePadding =
+    long voteDeadlinePadding =
       CurrentConfig.getLongParam(V3Poller.PARAM_V3_EXTRA_POLL_TIME,
                                  V3Poller.DEFAULT_V3_EXTRA_POLL_TIME);
 
+    long voteDeadlineMultiplier =
+      CurrentConfig.getLongParam(V3Poller.PARAM_VOTE_DEADLINE_MULTIPLIER,
+                                 V3Poller.DEFAULT_VOTE_DEADLINE_MULTIPLIER);
+      
     long minHashTime = hashEst * (maxPollParticipants + 1);
     
     // Worst case minimum time to complete the poll.
-    // - Must has n versions for each participant, plus myself.
-    // - Must account for V3 Vote Deadline Padding.
-    // - Can apply a multiplier for very slow machines, or for testing
-    //   with run_multiple_daemons, etc.
-    long minPoll =
-      minDurationMultiplier * minHashTime + v3VoteDeadlinePadding;
+    // - Must hash n versions for each participant, plus myself.
+    // - Must account for Vote Deadline Padding and Vote Deadline Multiplier.
+    // - Can apply an additional multiplier for very slow machines, or for 
+    //   testing with run_multiple_daemons, etc.
+    // - Can't be shorter than the vote deadline duration.
 
-    // Maximum amount of time we want to allow the poll to run.  Never
-    // let it exceed "MaxPollDuration".
-    long maxPoll =
-      Math.min(maxDurationMultiplier * minHashTime + v3VoteDeadlinePadding,
-               maxPollDuration);
+    long voteDeadline = (hashEst * voteDeadlineMultiplier) + 
+      voteDeadlinePadding;
+    
+    long minPoll = Math.max(minDurationMultiplier * minHashTime +
+			    voteDeadlinePadding,
+			    voteDeadline);
+
+    // Maximum amount of time we want to allow the poll to run.
+    long maxPoll = Math.min(minPoll * maxDurationMultiplier,
+			    maxPollDuration);
     
     return findSchedulableDuration(minHashTime, minPoll, maxPoll, 
                                    minHashTime, pm);
   }
 
-  // XXX: It is very unlikely that a V3 poll would cause duplicate messages,
-  // but there should still be a way to determine if this ever happens, and
-  // log some sort of error.
   public boolean isDuplicateMessage(LcapMessage msg, PollManager pm) {
     return false;
   }

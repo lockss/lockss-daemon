@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.40.2.2 2006-11-30 04:34:02 smorabito Exp $
+ * $Id: V3Poller.java,v 1.40.2.3 2006-11-30 20:56:14 smorabito Exp $
  */
 
 /*
@@ -140,6 +140,15 @@ public class V3Poller extends BasePoll {
     "v3state";
 
   /**
+   * An optional multiplier to apply to the estimated hash duration
+   * when computing the vote deadline.  This can be fine-tuned with
+   * the voteDeadlinePadding paramter as well.
+   */
+  public static final String PARAM_VOTE_DEADLINE_MULTIPLIER =
+    PREFIX + "voteDeadlineMultiplier";
+  public static final int DEFAULT_VOTE_DEADLINE_MULTIPLIER = 3;
+
+  /**
    * Padding to add to the scheduled vote deadline, in ms.
    */
   public static final String PARAM_VOTE_DEADLINE_PADDING =
@@ -192,7 +201,7 @@ public class V3Poller extends BasePoll {
     PREFIX + "hashBytesBeforeCheckpoint";
   public static final long DEFAULT_V3_HASH_BYTES_BEFORE_CHECKPOINT =
     1024 * 1024; // 1 MB
-  
+
 
   // Global state for the poll.
   private PollerStateBean pollerState;
@@ -231,6 +240,7 @@ public class V3Poller extends BasePoll {
   private TimerQueue.Request pollCompleteRequest;
   private TimerQueue.Request voteCompleteRequest;
   private long bytesHashedSinceLastCheckpoint = 0;
+  private int voteDeadlineMultiplier = DEFAULT_VOTE_DEADLINE_MULTIPLIER;
   
   // Probability of repairing from another cache.  A number between
   // 0.0 and 1.0.
@@ -269,7 +279,7 @@ public class V3Poller extends BasePoll {
 
     long estimatedHashTime = getCachedUrlSet().estimatedHashDuration();
     long voteDeadline = TimeBase.nowMs() +
-                        estimatedHashTime +
+                        (estimatedHashTime * voteDeadlineMultiplier) +
                         voteDeadlinePadding;
     pollerState.setVoteDeadline(voteDeadline);
 
@@ -335,6 +345,8 @@ public class V3Poller extends BasePoll {
                                        DEFAULT_DROP_EMPTY_NOMINATIONS);
     deleteExtraFiles = c.getBoolean(PARAM_DELETE_EXTRA_FILES,
                                     DEFAULT_DELETE_EXTRA_FILES);
+    voteDeadlineMultiplier = c.getInt(PARAM_VOTE_DEADLINE_MULTIPLIER,
+				      DEFAULT_VOTE_DEADLINE_MULTIPLIER);
     voteDeadlinePadding = c.getTimeInterval(PARAM_VOTE_DEADLINE_PADDING,
                                             DEFAULT_VOTE_DEADLINE_PADDING);
     extraPollTime = c.getLong(PARAM_V3_EXTRA_POLL_TIME,
