@@ -1,5 +1,5 @@
 /*
- * $Id: MockNodeManager.java,v 1.22 2006-03-01 02:50:12 smorabito Exp $
+ * $Id: MockNodeManager.java,v 1.23 2006-11-30 04:34:07 smorabito Exp $
  */
 
 /*
@@ -90,7 +90,9 @@ public class MockNodeManager implements NodeManager {
   }
 
   public void deleteNode(CachedUrlSet cus) throws IOException {
-    throw new UnsupportedOperationException("Not implemented");
+    // We actually need this mocked out for V3 poll testing.  
+    // Pretend it succeeds.
+    logger.info("Marking node " + cus.getUrl() + " deleted.");
   }
 
   public void updatePollResults(CachedUrlSet cus, Tallier results) {

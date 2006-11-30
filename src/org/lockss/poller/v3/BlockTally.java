@@ -1,5 +1,5 @@
 /*
- * $Id: BlockTally.java,v 1.10 2006-07-13 22:04:20 smorabito Exp $
+ * $Id: BlockTally.java,v 1.11 2006-11-30 04:34:08 smorabito Exp $
  */
 
 /*
@@ -88,6 +88,17 @@ public class BlockTally {
                                          V3Poller.DEFAULT_V3_VOTE_MARGIN)) / 100;
   }
 
+  // Set back to initial state
+  public void reset() {
+    agreeVoters = new ArrayList();
+    disagreeVoters = new ArrayList();
+    extraBlockVoters = new ArrayList();
+    missingBlockVoters = new HashMap();
+    votes = new LinkedHashMap();
+    missingBlockUrl = null;
+    result = RESULT_HASHING;
+  }
+  
   public String getStatusString() {
     switch (result) {
     case RESULT_HASHING:
