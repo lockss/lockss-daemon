@@ -1,5 +1,5 @@
 /*
- * $Id: HashCUS.java,v 1.32 2006-11-27 06:33:35 tlipkis Exp $
+ * $Id: HashCUS.java,v 1.33 2006-12-02 00:21:01 thib_gc Exp $
  */
 
 /*
@@ -120,7 +120,6 @@ public class HashCUS extends LockssServlet {
   int hashType;
   ArchivalUnit au;
   CachedUrlSet cus;
-  CachedUrlSetHasher cush;
   int nbytes = 1000;
   long elapsedTime;
 
@@ -520,7 +519,7 @@ public class HashCUS extends LockssServlet {
 					      MAX_RECORD);
 // 	  recordFile.deleteOnExit();
 	}
-	CachedUrlSetHasher cush = null;
+
 	switch (hashType) {
 	case HASH_TYPE_CONTENT:
 	case HASH_TYPE_SNCUSS:
