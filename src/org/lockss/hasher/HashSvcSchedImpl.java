@@ -1,5 +1,5 @@
 /*
- * $Id: HashSvcSchedImpl.java,v 1.22 2005-10-19 00:23:55 tlipkis Exp $
+ * $Id: HashSvcSchedImpl.java,v 1.23 2006-12-05 21:37:21 tlipkis Exp $
  */
 
 /*
@@ -287,9 +287,12 @@ public class HashSvcSchedImpl
 	bytesHashed += res;
 	unaccountedBytesHashed += res;
 	return res;
+      } catch (RuntimeException e) {
+	log.error("hashStep threw", e);
+	throw e;
       } catch (Exception e) {
 	log.error("hashStep threw", e);
-	throw new RuntimeException(e.toString());
+	throw new RuntimeException(e.toString(), e);
       }
     }
 
