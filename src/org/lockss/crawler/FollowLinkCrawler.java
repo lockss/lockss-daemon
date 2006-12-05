@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.52 2006-11-14 19:21:29 tlipkis Exp $
+ * $Id: FollowLinkCrawler.java,v 1.53 2006-12-05 21:37:05 tlipkis Exp $
  */
 
 /*
@@ -376,26 +376,30 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
       if (!parsedPages.contains(uc.getUrl())) {
 	logger.debug3("Parsing "+uc);
 	CachedUrl cu = uc.getCachedUrl();
-	//XXX quick fix; if-statement should be removed when we rework
-	//handling of error condition
-	if (cu.hasContent()) {
-	  ContentParser parser = getContentParser(cu);
-	  if (parser != null) {
-	    //IOException if the CU can't be read
-	    parser.parseForUrls(cu.openForReading(),
-				PluginUtil.getBaseUrl(cu),
-				au, new MyFoundUrlCallback(parsedPages,
-						       extractedUrls, au));
-	    if (extractedUrls.remove(url)){
-	      crawlStatus.removePendingUrl(url);
-	      logger.debug3("Removing self reference in " + url +
-			    " from the extracted list");
+	try {
+	  //XXX quick fix; if-statement should be removed when we rework
+	  //handling of error condition
+	  if (cu.hasContent()) {
+	    ContentParser parser = getContentParser(cu);
+	    if (parser != null) {
+	      //IOException if the CU can't be read
+	      parser.parseForUrls(cu.openForReading(),
+				  PluginUtil.getBaseUrl(cu),
+				  au, new MyFoundUrlCallback(parsedPages,
+							     extractedUrls,
+							     au));
+	      if (extractedUrls.remove(url)){
+		crawlStatus.removePendingUrl(url);
+		logger.debug3("Removing self reference in " + url +
+			      " from the extracted list");
+	      }
+	      crawlStatus.signalUrlParsed(uc.getUrl());
 	    }
-	    crawlStatus.signalUrlParsed(uc.getUrl());
+	    parsedPages.add(uc.getUrl());
 	  }
-	  parsedPages.add(uc.getUrl());
+	} finally {
+	  cu.release();
 	}
-	cu.release();
       }
     } catch (IOException ioe) {
       //XXX handle this better.  Requeue?
