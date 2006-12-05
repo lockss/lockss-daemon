@@ -1,5 +1,5 @@
 /*
- * $Id: BatchAuConfig.java,v 1.31 2006-11-09 01:44:54 thib_gc Exp $
+ * $Id: BatchAuConfig.java,v 1.32 2006-12-05 21:37:41 tlipkis Exp $
  */
 
 /*
@@ -373,8 +373,7 @@ public class BatchAuConfig extends LockssServlet {
   private void chooseAus(BatchAuStatus bas, Verb verb)
       throws IOException {
     // Set up
-    HttpSession session = req.getSession(true);
-    setSessionTimeout(session);
+    HttpSession session = getSession();
     session.setAttribute(SESSION_KEY_BACKUP_INFO, bas.getBackupInfo());
     Map auConfs = new HashMap();
     session.setAttribute(SESSION_KEY_AUID_MAP, auConfs);
@@ -457,14 +456,13 @@ public class BatchAuConfig extends LockssServlet {
   }
 
   private void doAddAus(int addOp) throws IOException {
-    // Check cookies
-    HttpSession session = req.getSession(false);
-    if (session == null) {
+    if (!hasSession()) {
       errMsg = "Please enable cookies";
       displayMenu();
       return;
     }
 
+    HttpSession session = getSession();
     RemoteApi.BackupInfo bi =
       (RemoteApi.BackupInfo)session.getAttribute(SESSION_KEY_BACKUP_INFO);
     LinkedMap repoMap = (LinkedMap)session.getAttribute(SESSION_KEY_REPO_MAP);
@@ -522,9 +520,7 @@ public class BatchAuConfig extends LockssServlet {
   }
 
   private void doRemoveAus(boolean isDeactivate) throws IOException {
-    // Check cookies
-    HttpSession session = req.getSession(false);
-    if (session == null) {
+    if (!hasSession()) {
       errMsg = "Please enable cookies";
       displayMenu();
       return;

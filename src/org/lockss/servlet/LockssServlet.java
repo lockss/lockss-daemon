@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.88 2006-11-27 06:33:35 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.89 2006-12-05 21:37:41 tlipkis Exp $
  */
 
 /*
@@ -40,7 +40,8 @@ import java.util.List;
 import javax.servlet.*;
 import javax.servlet.http.*;
 
-import org.apache.commons.collections.Predicate;
+import org.apache.commons.collections.*;
+import org.apache.commons.collections.bidimap.*;
 import org.apache.commons.collections.iterators.*;
 import org.mortbay.html.*;
 import org.mortbay.servlet.MultiPartRequest;
@@ -104,6 +105,7 @@ public abstract class LockssServlet extends HttpServlet
   protected HttpServletRequest req;
   protected HttpServletResponse resp;
   protected URL reqURL;
+  protected HttpSession session;
   private String adminDir = null;
   protected String client;	// client param
   protected String clientAddr;	// client addr, even if no param
@@ -354,6 +356,7 @@ public abstract class LockssServlet extends HttpServlet
     // Don't hold on to stuff forever
     req = null;
     resp = null;
+    session = null;
     reqURL = null;
     adminDir = null;
     localAddr = null;
@@ -363,13 +366,90 @@ public abstract class LockssServlet extends HttpServlet
     multiReq = null;
   }
 
+  /** Set the session timeout to the configured value */
   protected void setSessionTimeout(HttpSession session) {
-     if (session.isNew()) {
-       Configuration config = CurrentConfig.getCurrentConfig();
-       long time = config.getTimeInterval(PARAM_UI_SESSION_TIMEOUT,
-					  DEFAULT_UI_SESSION_TIMEOUT);
-       session.setMaxInactiveInterval((int)(time  / Constants.SECOND));
-     }
+    Configuration config = CurrentConfig.getCurrentConfig();
+    setSessionTimeout(session,
+		      config.getTimeInterval(PARAM_UI_SESSION_TIMEOUT,
+					     DEFAULT_UI_SESSION_TIMEOUT));
+  }
+
+  /** Set the session timeout */
+  protected void setSessionTimeout(HttpSession session, long time) {
+    session.setMaxInactiveInterval((int)(time  / Constants.SECOND));
+  }
+
+  /** Get the current session, creating it if necessary (and set the
+   * timeout if so) */
+  protected HttpSession getSession() {
+    if (session == null) {
+      session = req.getSession(true);
+      if (session.isNew()) {
+	setSessionTimeout(session);
+      }
+    }
+    return session;
+  }
+
+  /** Return true iff a session has already been established */
+  protected boolean hasSession() {
+    return req.getSession(false) != null;
+  }
+
+  static final String SESSION_KEY_OBJECT_ID = "obj_id";
+  static final String SESSION_KEY_OBJ_MAP = "obj_map";
+
+  /** Get an unused ID string for storing an object in the session */
+  protected String getNewSessionObjectId() {
+    HttpSession session = getSession();
+    synchronized (session) {
+      Integer id = (Integer)getSession().getAttribute(SESSION_KEY_OBJECT_ID);
+      if (id == null) {
+	id = new Integer(1);
+      }
+      session.setAttribute(SESSION_KEY_OBJECT_ID,
+			   new Integer(id.intValue() + 1));
+      return id.toString();
+    }
+  }    
+
+  /** Get the object associated with the ID in the session */
+  protected Object getSessionIdObject(String id) {
+    HttpSession session = getSession();
+    synchronized (session) {
+      BidiMap map = (BidiMap)session.getAttribute(SESSION_KEY_OBJ_MAP);
+      if (map == null) {
+	return null;
+      }
+      return map.getKey(id);
+    }
+  }
+
+  /** Get the String associated with the ID in the session */
+  protected String getSessionIdString(String id) {
+    return (String)getSessionIdObject(id);
+  }
+
+  /** Get the ID with which the object is associated with the session, if
+   * any */
+  protected String getSessionObjectId(Object obj) {
+    HttpSession session = getSession();
+    BidiMap map;
+    synchronized (session) {
+      map = (BidiMap)session.getAttribute(SESSION_KEY_OBJ_MAP);
+      if (map == null) {
+	map = new DualHashBidiMap();
+	session.setAttribute(SESSION_KEY_OBJ_MAP, map);
+      }
+    }
+    synchronized (map) {
+      String id = (String)map.get(obj);
+      if (id == null) {
+	id = getNewSessionObjectId();
+	map.put(obj, id);
+      }
+      return id;
+    }
   }
 
   // Return descriptor of running servlet

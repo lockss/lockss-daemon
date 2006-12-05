@@ -1,5 +1,5 @@
 /*
- * $Id: HashCUS.java,v 1.33 2006-12-02 00:21:01 thib_gc Exp $
+ * $Id: HashCUS.java,v 1.34 2006-12-05 21:37:41 tlipkis Exp $
  */
 
 /*
@@ -33,7 +33,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.servlet;
 
 import javax.servlet.*;
-import javax.servlet.http.HttpSession;
 import java.io.*;
 import java.util.*;
 import java.text.*;
@@ -63,9 +62,7 @@ public class HashCUS extends LockssServlet {
   static final String KEY_RECORD = "record";
   static final String KEY_ACTION = "action";
   static final String KEY_MIME = "mime";
-  static final String KEY_FILE_WHICH = "file";
-  static final String WHICH_STREAM = "stream";
-  static final String WHICH_BLOCKS = "blocks";
+  static final String KEY_FILE_ID = "file";
 
   static final String SESSION_KEY_STREAM_FILE = "hashcus_stream_file";
   static final String SESSION_KEY_BLOCK_FILE = "hashcus_block_file";
@@ -110,7 +107,6 @@ public class HashCUS extends LockssServlet {
   byte[] challenge;
   byte[] verifier;
 
-  HttpSession session;
   boolean isHash;
   boolean isRecord;
   File recordFile;
@@ -139,7 +135,6 @@ public class HashCUS extends LockssServlet {
     lower = null;
     challenge = null;
     verifier = null;
-    session = null;
 
     isHash = true;
     isRecord = false;
@@ -184,14 +179,14 @@ public class HashCUS extends LockssServlet {
   }
 
   boolean sendStream() {
-    String whichFile = getParameter(KEY_FILE_WHICH);
-    String file;
-    if (WHICH_STREAM.equals(whichFile)) {
-      file = (String)getSession().getAttribute(SESSION_KEY_STREAM_FILE);
-    } else if (WHICH_BLOCKS.equals(whichFile)) {
-      file = (String)getSession().getAttribute(SESSION_KEY_BLOCK_FILE);
-    } else {
-      errMsg = "Unknown file: " + whichFile;
+    if (!hasSession()) {
+      errMsg = "Please enable cookies";
+      return false;
+    }
+    String fileId = getParameter(KEY_FILE_ID);
+    String file = getSessionIdString(fileId);
+    if (StringUtil.isNullString(file)) {
+      errMsg = "Unknown file: " + fileId;
       return false;
     }
     String mime = getParameter(KEY_MIME);
@@ -355,19 +350,16 @@ public class HashCUS extends LockssServlet {
       }
       tbl.add(":");
       tbl.newCell();
-      getSession().setAttribute(SESSION_KEY_STREAM_FILE,
-				recordFile.toString());
+      String fileId = getSessionObjectId(recordFile.toString());
       Properties p = new Properties();
       p.setProperty(KEY_ACTION, ACTION_STREAM);
-      p.setProperty(KEY_FILE_WHICH, WHICH_STREAM);
+      p.setProperty(KEY_FILE_ID, fileId);
       p.setProperty(KEY_MIME, "application/octet-stream");
       tbl.add(srvLink(myServletDescr(), "binary", concatParams(p)));
       tbl.add("&nbsp;&nbsp;");
       p.setProperty(KEY_MIME, "text/plain");
       tbl.add(srvLink(myServletDescr(), "text", concatParams(p)));
       tbl.add(addFootnote(FOOT_BIN));
-      
-
     }
   }
 
@@ -385,10 +377,10 @@ public class HashCUS extends LockssServlet {
       tbl.add("Hash file");
       tbl.add(":");
       tbl.newCell();
-      getSession().setAttribute(SESSION_KEY_BLOCK_FILE, blockFile.toString());
+      String fileId = getSessionObjectId(blockFile.toString());
       Properties p = new Properties();
       p.setProperty(KEY_ACTION, ACTION_STREAM);
-      p.setProperty(KEY_FILE_WHICH, WHICH_BLOCKS);
+      p.setProperty(KEY_FILE_ID, fileId);
       p.setProperty(KEY_MIME, "text/plain");
       tbl.add(srvLink(myServletDescr(), "HashFile", concatParams(p)));
     }
@@ -403,14 +395,6 @@ public class HashCUS extends LockssServlet {
       s = fmt_2dec.format(fbpms);
     }
     return elapsedTime + " ms, " + s + " bytes/ms";
-  }
-
-  HttpSession getSession() {
-    if (session == null) {
-      session = req.getSession(true);
-      setSessionTimeout(session);
-    }
-    return session;
   }
 
   void addResultRow(Table tbl, String head, Object value) {
