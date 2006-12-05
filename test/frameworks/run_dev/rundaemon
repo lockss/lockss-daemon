@@ -49,7 +49,7 @@ while true ; do
       export PATH
       echo JAVA_HOME="$JAVA_HOME"
       shift; continue;;
-    "-Xmx" )
+    -Xmx* )
       arg_mem="$1"
       shift; continue;;
     -* )
