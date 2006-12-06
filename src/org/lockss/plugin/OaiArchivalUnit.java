@@ -1,5 +1,5 @@
 /*
- * $Id: OaiArchivalUnit.java,v 1.3 2006-07-17 05:12:41 tlipkis Exp $
+ * $Id: OaiArchivalUnit.java,v 1.4 2006-12-06 05:19:02 tlipkis Exp $
  */
 
 /*
@@ -48,8 +48,6 @@ import org.lockss.plugin.base.*;
 public class OaiArchivalUnit extends BaseArchivalUnit {
   private String m_oaiHandlerUrl = null;
   //private int m_maxRefetchDepth = NewContentCrawler.DEFAULT_MAX_CRAWL_DEPTH;
-
-  private List m_permissionCheckers;
 
   protected Logger logger = Logger.getLogger("OaiArchivalUnit");
 

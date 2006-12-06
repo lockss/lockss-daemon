@@ -1,6 +1,13 @@
 <FindBugsFilter>
-  <!-- Match all Serialize violations. -->
-  <Match classregex=".*" >
-    <BugCode name="Se,SnVI,EI,EI2" />
+  <Match>
+    <Bug code="Se,SnVI,EI,EI2,DP" />
   </Match>
+  <Match>
+    <Class name="~org.lockss.alert.(AlertActions|AlertPatterns)" />
+    <Bug code="Nm" />
+ </Match>
+  <Match>
+    <Field name="~.*\.(log|logger)" />
+    <Bug code="MS" />
+ </Match>
 </FindBugsFilter>

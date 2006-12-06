@@ -1,5 +1,5 @@
 /*
- * $Id: HashCUS.java,v 1.34 2006-12-05 21:37:41 tlipkis Exp $
+ * $Id: HashCUS.java,v 1.35 2006-12-06 05:19:02 tlipkis Exp $
  */
 
 /*
@@ -544,7 +544,6 @@ public class HashCUS extends LockssServlet {
       
     public void blockDone(HashBlock block) {
       HashBlock.Version ver = block.currentVersion();
-      String url = block.getUrl();
       outs.println(byteString(ver.getHashes()[0]) + "   " + block.getUrl());
     }
   }

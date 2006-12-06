@@ -109,7 +109,7 @@ public class DiskVoteBlocks extends BaseVoteBlocks {
       // Should be there!
       short len = raf.readShort();
       byte[] encodedBlock = new byte[len];
-      raf.read(encodedBlock);
+      raf.readFully(encodedBlock);
       nextVoteBlockIndex++;
       nextVoteBlockAddress += len + 2;
       return new VoteBlock(encodedBlock);

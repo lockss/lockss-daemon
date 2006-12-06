@@ -1,5 +1,5 @@
 /*
- * $Id: TestFixedTimedMap.java,v 1.4 2004-10-11 05:42:27 tlipkis Exp $
+ * $Id: TestFixedTimedMap.java,v 1.5 2006-12-06 05:19:01 tlipkis Exp $
  */
 
 /*
@@ -135,6 +135,9 @@ public class TestFixedTimedMap extends LockssTestCase {
     FixedTimedMap map2 = new FixedTimedMap(timeout);
     map2.putAll(map);
     assertEquals(map, map2);
+    map.put(new Object(), "foo");
+    assertNotEquals(map, map2);
+    assertFalse(map.equals(null));
   }
 
   public void testSizeRemove() {

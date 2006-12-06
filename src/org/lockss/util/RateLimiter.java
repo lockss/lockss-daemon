@@ -1,5 +1,5 @@
 /*
- * $Id: RateLimiter.java,v 1.14 2006-09-17 07:24:11 tlipkis Exp $
+ * $Id: RateLimiter.java,v 1.15 2006-12-06 05:19:01 tlipkis Exp $
  */
 
 /*
@@ -197,7 +197,7 @@ public class RateLimiter {
   }
 
   /** Return the limit as a rate string n/interval */
-  public String getRate() {
+  public synchronized String getRate() {
     if (rate == null) {
       rate = rateString();
     }

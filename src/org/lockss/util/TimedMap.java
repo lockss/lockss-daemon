@@ -1,5 +1,5 @@
 /*
- * $Id: TimedMap.java,v 1.5 2004-10-11 05:42:27 tlipkis Exp $
+ * $Id: TimedMap.java,v 1.6 2006-12-06 05:19:01 tlipkis Exp $
  */
 
 /*
@@ -89,6 +89,7 @@ public abstract class TimedMap implements Map {
   /** Return true if the argument if a TimeMap of the same type with the
    * same contents, ignoring expiration times */
   public boolean equals(Object o) {
+    if (o == null) return false;
     return (getClass() == o.getClass()) &&
       entries.equals(((TimedMap)o).getEntries());
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlFilterInputStream.java,v 1.1 2006-09-18 22:29:01 thib_gc Exp $
+ * $Id: HtmlFilterInputStream.java,v 1.2 2006-12-06 05:19:02 tlipkis Exp $
  */
 
 /*
@@ -83,7 +83,6 @@ public class HtmlFilterInputStream extends InputStream {
   private FeedbackLogger fl = new FeedbackLogger();
 
   private InputStream in;
-  private Reader outr = null;
   private InputStream out = null;
   private HtmlTransform xform;
 
@@ -189,7 +188,7 @@ public class HtmlFilterInputStream extends InputStream {
     in = null;
   }
 
-  class FeedbackLogger implements ParserFeedback{
+  static class FeedbackLogger implements ParserFeedback{
     public FeedbackLogger() {
     }
     public void warning(String message) {

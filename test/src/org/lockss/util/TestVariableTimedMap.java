@@ -1,5 +1,5 @@
 /*
- * $Id: TestVariableTimedMap.java,v 1.4 2004-10-11 05:42:27 tlipkis Exp $
+ * $Id: TestVariableTimedMap.java,v 1.5 2006-12-06 05:19:01 tlipkis Exp $
  */
 
 /*
@@ -101,6 +101,30 @@ public class TestVariableTimedMap extends LockssTestCase {
     assertEquals(keys.length,values.length);
     for (int i=0; i<keys.length; i++)
       assertEquals(values[i], map.get(keys[i]));
+  }
+
+  public void testEqauls() {
+    VariableTimedMap map = makeGeneric();
+    VariableTimedMap map2 = new VariableTimedMap();
+    map2.putAll(map, 1000);
+    assertEquals(map, map2);
+    map.put(new Object(), "foo", 1);
+    assertNotEquals(map, map2);
+    assertFalse(map.equals(null));
+  }
+
+  public void testPutAll() {
+    VariableTimedMap map = makeGeneric();
+    Map t = new HashMap();
+    t.put("hack","burn");
+    t.put(new Integer(18),"eighteen");
+    Integer eight = new Integer(8);
+    t.put(new Float(8.8),eight);
+    map.putAll(t, 1000);
+    t = null;
+    assertEquals("burn", map.get("hack"));
+    assertEquals(keys.length+3, map.size());
+    assertSame(eight, map.get(new Float(8.8)));
   }
 
   public void testOverwrite() {

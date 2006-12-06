@@ -1,5 +1,5 @@
 /*
- * $Id: HashBlock.java,v 1.6 2006-09-28 23:52:52 smorabito Exp $
+ * $Id: HashBlock.java,v 1.7 2006-12-06 05:19:02 tlipkis Exp $
  */
 
 /*
@@ -111,7 +111,7 @@ public class HashBlock implements LockssSerializable {
    * order is by repository version.
    *
    */
-  public class Version implements Comparable {
+  public static class Version implements Comparable {
     long filteredOffset;
     long filteredLength;
     long unfilteredOffset;

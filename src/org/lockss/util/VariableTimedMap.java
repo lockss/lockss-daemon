@@ -124,4 +124,16 @@ public class VariableTimedMap extends TimedMap implements Map {
     throw new UnsupportedOperationException("putAll not supported.");
   }
 
+  public void putAll(Map t, long interval) {
+    putAll(t, Deadline.in(interval));
+  }
+
+  public void putAll(Map t, Deadline deadline) {
+    removeExpiredEntries();
+    Iterator i = t.entrySet().iterator();
+    while (i.hasNext()) {
+      Entry e = (Entry) i.next();
+      put(e.getKey(), e.getValue(), deadline);
+    }
+  }
 }

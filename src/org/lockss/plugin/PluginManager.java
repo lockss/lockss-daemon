@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.169 2006-11-14 19:21:28 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.170 2006-12-06 05:19:02 tlipkis Exp $
  */
 
 /*
@@ -1675,7 +1675,6 @@ public class PluginManager
    * Initialize and return the keystore.
    */
   KeyStore initKeystore(String keystoreLoc, String keystorePass) {
-    Configuration config = CurrentConfig.getCurrentConfig();
     KeyStore ks = null;
     try {
       if (keystoreLoc == null || keystorePass == null) {
@@ -1684,8 +1683,12 @@ public class PluginManager
       } else {
         ks = KeyStore.getInstance("JKS", "SUN");
 	if (keystoreLoc.startsWith(File.separator)) {
-	  ks.load(new FileInputStream(new File(keystoreLoc)),
-	          keystorePass.toCharArray());
+	  InputStream kin = new FileInputStream(new File(keystoreLoc));
+	  try {
+	    ks.load(kin, keystorePass.toCharArray());
+	  } finally {
+	    IOUtil.safeClose(kin);
+	  }
 	} else if (UrlUtil.isHttpUrl(keystoreLoc) ||
                    UrlUtil.isFileUrl(keystoreLoc)) {
 	  URL keystoreUrl = new URL(keystoreLoc);

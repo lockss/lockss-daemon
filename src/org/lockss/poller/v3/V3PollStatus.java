@@ -1,5 +1,5 @@
 /*
-* $Id: V3PollStatus.java,v 1.9 2006-11-06 21:13:26 smorabito Exp $
+* $Id: V3PollStatus.java,v 1.10 2006-12-06 05:19:02 tlipkis Exp $
  */
 
 /*
@@ -260,7 +260,8 @@ public class V3PollStatus {
       try {
         poll = (V3Poller)pollManager.getPoll(key);
       } catch (ClassCastException ex) {
-        theLog.error("Expected V3Poller, but got " + poll.getClass().getName());
+        theLog.error("Expected V3Poller, but got " +
+		     pollManager.getPoll(key).getClass().getName());
         return;
       }
       if (poll == null) return;
@@ -384,7 +385,8 @@ public class V3PollStatus {
       try {
         poller = (V3Poller)pollManager.getPoll(key);
       } catch (ClassCastException ex) {
-        theLog.error("Expected V3Voter, but got " + poller.getClass().getName());
+        theLog.error("Expected V3Voter, but got " +
+		     pollManager.getPoll(key).getClass().getName());
         return;
       }
       if (poller == null) return;
@@ -436,7 +438,8 @@ public class V3PollStatus {
       try {
         poller = (V3Poller)pollManager.getPoll(key);
       } catch (ClassCastException ex) {
-        theLog.error("Expected V3Poller, but got " + poller.getClass().getName());
+        theLog.error("Expected V3Poller, but got " +
+		     pollManager.getPoll(key).getClass().getName());
         return;
       }
       if (poller == null) return;
@@ -486,7 +489,8 @@ public class V3PollStatus {
       try {
         poller = (V3Poller)pollManager.getPoll(key);
       } catch (ClassCastException ex) {
-        theLog.error("Expected V3Poller, but got " + poller.getClass().getName());
+        theLog.error("Expected V3Poller, but got " +
+		     pollManager.getPoll(key).getClass().getName());
         return;
       }
       if (poller == null) return;
@@ -530,7 +534,8 @@ public class V3PollStatus {
       try {
         poller = (V3Poller)pollManager.getPoll(key);
       } catch (ClassCastException ex) {
-        theLog.error("Expected V3Poller, but got " + poller.getClass().getName());
+        theLog.error("Expected V3Poller, but got " +
+		     pollManager.getPoll(key).getClass().getName());
         return;
       }
       if (poller == null) return;
@@ -575,7 +580,8 @@ public class V3PollStatus {
       try {
         poller = (V3Poller)pollManager.getPoll(key);
       } catch (ClassCastException ex) {
-        theLog.error("Expected V3Poller, but got " + poller.getClass().getName());
+        theLog.error("Expected V3Poller, but got " +
+		     pollManager.getPoll(key).getClass().getName());
         return;
       }
       if (poller == null) return;
@@ -619,7 +625,8 @@ public class V3PollStatus {
       try {
         poller = (V3Poller)pollManager.getPoll(key);
       } catch (ClassCastException ex) {
-        theLog.error("Expected V3Poller, but got " + poller.getClass().getName());
+        theLog.error("Expected V3Poller, but got " +
+		     pollManager.getPoll(key).getClass().getName());
         return;
       }
       if (poller == null) return;
@@ -667,7 +674,8 @@ public class V3PollStatus {
       try {
         voter = (V3Voter)pollManager.getPoll(key);
       } catch (ClassCastException ex) {
-        theLog.error("Expected V3Voter, but got " + voter.getClass().getName());
+        theLog.error("Expected V3Voter, but got " +
+		     pollManager.getPoll(key).getClass().getName());
         return;
       }
       if (voter == null) return;
