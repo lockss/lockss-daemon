@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.50 2006-11-11 06:56:30 tlipkis Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.51 2006-12-06 05:15:58 tlipkis Exp $
  */
 
 /*
@@ -107,7 +107,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     } else {
       return super.getPermissionPages();
     }
-    List permission_list = new ArrayList();
+    List permission_list = new ArrayList(templateList.size());
     for(Iterator it = templateList.iterator(); it.hasNext();) {
       String permissionPage = convertVariableString((String)it.next());
       log.debug3("Adding permission page: "+permissionPage);

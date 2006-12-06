@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.41 2006-11-11 06:56:30 tlipkis Exp $
+ * $Id: BasePlugin.java,v 1.42 2006-12-06 05:15:59 tlipkis Exp $
  */
 
 /*
@@ -199,7 +199,7 @@ public abstract class BasePlugin
       }
       tc.setAttributes(attrMap);
     }
-    List params = new ArrayList();
+    ArrayList params = new ArrayList();
     Configuration allParams = titleConfig.getConfigTree(TITLE_PARAM_PARAM);
     for (Iterator iter = allParams.nodeIterator(); iter.hasNext(); ) {
       Configuration oneParam = allParams.getConfigTree((String)iter.next());
@@ -218,6 +218,8 @@ public abstract class BasePlugin
 	log.debug("   title config: " + titleConfig);
       }
     }
+    // This list is kept permanently, so trim array to size
+    params.trimToSize();
     tc.setParams(params);
     return tc;
 
@@ -341,7 +343,7 @@ public abstract class BasePlugin
   protected UrlNormalizer urlNorm;
 
   public static class NullUrlNormalizer implements UrlNormalizer {
-    public static UrlNormalizer INSTANCE = new NullUrlNormalizer();
+    public static final UrlNormalizer INSTANCE = new NullUrlNormalizer();
 
     public String normalizeUrl (String url, ArchivalUnit au) {
       return url;
