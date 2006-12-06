@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>9</string>
+    <string>10</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -21,7 +21,7 @@
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
-    <long>259200000</long>
+    <long>604800000</long>
   </entry>
   <entry>
     <string>au_crawlrules</string>
@@ -44,6 +44,14 @@
     <string>&quot;%slockss-manifest/vol_%s_manifest.dtl&quot;, base_url, volume_name</string>
   </entry>
   <entry>
+    <string>required_daemon_version</string>
+    <string>1.21.0</string>
+  </entry>
+  <entry>
+    <string>application/pdf_filter_factory</string>
+    <string>org.lockss.plugin.highwire.HighWirePdfFilterFactory</string>
+  </entry>
+  <entry>
     <string>plugin_identifier</string>
     <string>org.lockss.plugin.highwire.HighWireStrVolPlugin</string>
   </entry>
@@ -54,12 +62,12 @@
     </list>
   </entry>
   <entry>
-    <string>text/html_filter</string>
-    <string>org.lockss.plugin.highwire.HighWireFilterRule</string>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
   </entry>
   <entry>
-    <string>application/pdf_filter_factory</string>
-    <string>org.lockss.plugin.highwire.HighWirePdfFilterFactory</string>
+    <string>text/html_filter</string>
+    <string>org.lockss.plugin.highwire.HighWireFilterRule</string>
   </entry>
   <entry>
     <string>au_login_page_checker</string>
