@@ -1,5 +1,5 @@
 /*
-* $Id: V3PollStatus.java,v 1.10 2006-12-06 05:19:02 tlipkis Exp $
+* $Id: V3PollStatus.java,v 1.11 2006-12-06 21:20:54 smorabito Exp $
  */
 
 /*
@@ -659,10 +659,6 @@ public class V3PollStatus {
   public static class V3VoterStatusDetail
       extends V3PollStatus implements StatusAccessor {
     static final String TABLE_TITLE = "V3 Vote Status";
-
-    private final List sortRules =
-      ListUtil.list(new StatusTable.SortRule("identity",
-                                             CatalogueOrderComparator.SINGLETON));
 
     public V3VoterStatusDetail(PollManager manager) {
       super(manager);

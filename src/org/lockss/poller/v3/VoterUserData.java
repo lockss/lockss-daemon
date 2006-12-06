@@ -1,5 +1,5 @@
 /*
- * $Id: VoterUserData.java,v 1.17 2006-11-16 05:04:33 smorabito Exp $
+ * $Id: VoterUserData.java,v 1.18 2006-12-06 21:20:54 smorabito Exp $
  */
 
 /*
@@ -74,7 +74,8 @@ public class VoterUserData
   private PsmInterpStateBean psmState;
   private int status;
   private String errorDetail;
-  /** @deprecated */
+  /** @deprecated 
+   * Left here only for deserialization compatibility */
   private String statusString;
 
   /** Transient non-serialized fields */
@@ -108,7 +109,6 @@ public class VoterUserData
     this.pollerNonce = pollerNonce;
     this.introEffortProof = introEffortProof;
     this.createTime = TimeBase.nowMs();
-    this.statusString = "Active";
     this.messageDir = messageDir;
     this.voteBlocks = new DiskVoteBlocks(voter.getStateDir());
   }

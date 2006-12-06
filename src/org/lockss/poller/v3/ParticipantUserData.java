@@ -1,5 +1,5 @@
 /*
- * $Id: ParticipantUserData.java,v 1.10 2006-11-16 05:04:33 smorabito Exp $
+ * $Id: ParticipantUserData.java,v 1.11 2006-12-06 21:20:54 smorabito Exp $
  */
 
 /*
@@ -58,7 +58,6 @@ public class ParticipantUserData implements LockssSerializable {
   private boolean isVoteComplete = false;
   private boolean isOuterCircle = false;
   private PsmInterpStateBean psmState;
-  private String statusString;
   private int status = V3Poller.PEER_STATUS_INITIALIZED;
   private VoteBlocksIterator voteBlockIterator;
   /** The number of blocks that have been tallied for this peer */ 
@@ -71,8 +70,6 @@ public class ParticipantUserData implements LockssSerializable {
   private transient PollerStateBean pollState;
   private transient PsmInterp psmInterp;
   private transient File messageDir;
-
-  private static Logger log = Logger.getLogger("PollerUserData");
 
   protected ParticipantUserData() {}
 
@@ -135,7 +132,7 @@ public class ParticipantUserData implements LockssSerializable {
    * @param s The status of this peer.
    */
   public void setStatusString(String s) {
-    this.statusString = s;
+    // Not implemented
   }
   
   public String getStatusString() {

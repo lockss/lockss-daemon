@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.29 2006-11-30 20:56:02 smorabito Exp $
+ * $Id: V3Voter.java,v 1.30 2006-12-06 21:20:54 smorabito Exp $
  */
 
 /*
@@ -259,6 +259,11 @@ public class V3Voter extends BasePoll {
     long estimatedHashDuration = cus.estimatedHashDuration();
     long now = TimeBase.nowMs();
     Deadline earliestStart = Deadline.at(now + estimatedHashDuration);
+    // XXX:  We need to reserve some padding for the estimated time it will
+    // take to send the message.  'estimatedHashDuration' is probably way
+    // too much for this, but a better estimate would require taking into 
+    // account the number of URLs and versions that we expect to hash, since
+    // the message size is proportional to the number of VoteBlock.Versions
     Deadline latestFinish =
       Deadline.at(voterUserData.getVoteDeadline() - estimatedHashDuration);
     log.debug("Voter " + getKey() + ": Earliest Start = " +

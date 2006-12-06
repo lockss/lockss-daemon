@@ -1,5 +1,5 @@
 /*
- * $Id: PollerStateBean.java,v 1.18 2006-11-16 05:04:33 smorabito Exp $
+ * $Id: PollerStateBean.java,v 1.19 2006-12-06 21:20:54 smorabito Exp $
  */
 
 /*
@@ -64,6 +64,9 @@ public class PollerStateBean implements LockssSerializable {
   private long createTime;
   private int pollSize;
   private int quorum;
+  /** @deprecated
+   * Left here only for deserialization compatibility.
+   */
   private int hashBlockIndex;
   private int outerCircleTarget;
   private String statusString;
@@ -79,8 +82,6 @@ public class PollerStateBean implements LockssSerializable {
   /* Non-serializable transient fields */
   private transient PollSpec spec;
   private transient CachedUrlSet cus;
-
-  private static Logger log = Logger.getLogger("PollerStateBean");
 
   /**
    * Counter of participants whose state machines do not want to allow the next
@@ -124,7 +125,6 @@ public class PollerStateBean implements LockssSerializable {
     this.hashAlgorithm = hashAlg;
     this.createTime = TimeBase.nowMs();
     this.quorum = quorum;
-    this.hashBlockIndex = 0;
     this.statusString = "Initializing";
     this.repairQueue = new RepairQueue();
     this.hashedBlocks = new ArrayList();

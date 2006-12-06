@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockTally.java,v 1.4 2006-07-13 22:04:20 smorabito Exp $
+ * $Id: TestBlockTally.java,v 1.5 2006-12-06 21:20:54 smorabito Exp $
  */
 
 /*
@@ -85,7 +85,6 @@ public class TestBlockTally extends LockssTestCase {
   public void testConstructPollTally() throws Exception {
     BlockTally tally = new BlockTally(5);
     assertEquals(0.73, tally.voteMargin, 0.001);
-    assertEquals(300.0, tally.trustedWeight, 0.001);
     assertEquals(5, tally.quorum);
     assertEquals(BlockTally.RESULT_HASHING, tally.getTallyResult());
   }
