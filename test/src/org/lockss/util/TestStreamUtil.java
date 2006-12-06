@@ -1,5 +1,5 @@
 /*
- * $Id: TestStreamUtil.java,v 1.12 2006-10-07 23:11:03 tlipkis Exp $
+ * $Id: TestStreamUtil.java,v 1.13 2006-12-06 18:36:46 thib_gc Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.util.*;
 import java.io.*;
 import junit.framework.TestCase;
 import org.apache.commons.io.input.*;
+import org.apache.commons.io.output.NullOutputStream;
 
 import org.lockss.test.*;
 import org.lockss.daemon.LockssWatchdog;
