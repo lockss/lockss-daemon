@@ -1,5 +1,5 @@
 /*
- * $Id: XStreamSerializer.java,v 1.23 2006-09-28 05:12:00 thib_gc Exp $
+ * $Id: XStreamSerializer.java,v 1.24 2006-12-06 18:21:11 thib_gc Exp $
  */
 
 /*
@@ -551,11 +551,6 @@ public class XStreamSerializer extends ObjectSerializer {
   private boolean initialized;
 
   /**
-   * <p>A saved reference to the serialization context object.</p>
-   */
-  private LockssApp lockssContext;
-
-  /**
    * <p>An instance of the {@link com.thoughtworks.xstream.XStream}
    * facade class.</p>
    */
@@ -600,7 +595,6 @@ public class XStreamSerializer extends ObjectSerializer {
   public XStreamSerializer(LockssApp lockssContext) {
     super(lockssContext);
     this.initialized = false; // lazy instantiation, see init()
-    this.lockssContext = lockssContext;
   }
 
   /**
@@ -621,7 +615,6 @@ public class XStreamSerializer extends ObjectSerializer {
           saveTempFiles,
           failedDeserializationMode);
     this.initialized = false; // lazy instantiation, see init()
-    this.lockssContext = lockssContext;
   }
 
   /* Inherit documentation */
