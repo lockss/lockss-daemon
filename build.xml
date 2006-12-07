@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.206 2006-12-07 00:57:35 thib_gc Exp $
+ $Id: build.xml,v 1.207 2006-12-07 06:19:03 thib_gc Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
@@ -217,6 +217,9 @@ Args:
   <property name="getopt.jar"  value="${test.lib}/gnu-getopt-1.0.13.jar"/>
   <property name="ant-contrib.jar"      value="${lib}/ant-contrib-0.6.jar"/>
   <property name="pdfbox.jar" value="${lib}/PDFBox-0.7.3.jar" />
+  <property name="fontbox.jar" value="${lib}/FontBox-0.1.0-dev.jar" />
+  <property name="bouncycastle.provider.jar" value="${lib}/bcprov-jdk14-132.jar" />
+  <property name="bouncycastle.mail.jar" value="${lib}/bcmail-jdk14-132.jar" />
 
   <property name="ext.javadoc"
                       value="http://documents.lockss.org/gamma-libs/" />
@@ -292,6 +295,10 @@ Args:
     <pathelement path="${rdf.jar}" />
     <pathelement path="${xstream.jar}" />
     <pathelement path="${pdfbox.jar}" />
+  	<!-- PDFBox dependencies (3 JAR files) -->
+  	<pathelement path="${fontbox.jar}" />
+  	<pathelement path="${bouncycastle.provider.jar}" />
+  	<pathelement path="${bouncycastle.mail.jar}" />
     <!-- jars needed to run the OAI harvester -->
     <pathelement path="${oai-harvester.jar}" />
     <pathelement path="${xalan.jar}" />
