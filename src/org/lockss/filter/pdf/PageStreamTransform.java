@@ -1,5 +1,5 @@
 /*
- * $Id: PageStreamTransform.java,v 1.8 2006-11-13 21:27:12 thib_gc Exp $
+ * $Id: PageStreamTransform.java,v 1.9 2006-12-07 06:16:23 thib_gc Exp $
  */
 
 /*
@@ -421,8 +421,9 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
    */
   public synchronized void mergeOutputList() {
     logger.debug3("Merging");
-    List oldTop = (List)listStack.peek();
-    mergeOutputList(oldTop);
+    List oldTop = (List)listStack.pop();
+    List newTop = (List)listStack.peek();
+    newTop.addAll(oldTop);
   }
 
   /**
@@ -437,7 +438,7 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
    */
   public synchronized void mergeOutputList(List replacement) {
     logger.debug3("Merging with replacement");
-    listStack.pop();
+    listStack.pop(); // discard result
     List newTop = (List)listStack.peek();
     newTop.addAll(replacement);
   }
@@ -462,7 +463,7 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
     logger.debug3("Resetting the page stream transform");
     atLeastOneChange = false;
     listStack.clear();
-    splitOutputList();
+    listStack.push(new ArrayList()); // FIXME: initial capacity?
   }
 
   /**
