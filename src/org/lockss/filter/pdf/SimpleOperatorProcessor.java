@@ -1,5 +1,5 @@
 /*
- * $Id: SimpleOperatorProcessor.java,v 1.7 2006-09-27 08:00:32 thib_gc Exp $
+ * $Id: SimpleOperatorProcessor.java,v 1.8 2006-12-07 06:15:27 thib_gc Exp $
  */
 
 /*
@@ -35,7 +35,6 @@ package org.lockss.filter.pdf;
 import java.io.IOException;
 import java.util.List;
 
-import org.lockss.util.Logger;
 import org.pdfbox.util.PDFOperator;
 
 /**
@@ -56,14 +55,8 @@ public class SimpleOperatorProcessor extends PdfOperatorProcessor {
                       PDFOperator operator,
                       List operands)
       throws IOException {
-    logger.debug3("Processing " + operator.getOperation());
     pageStreamTransform.getOutputList().addAll(operands);
     pageStreamTransform.getOutputList().add(operator);
   }
-
-  /**
-   * <p>A logger for use by this class.</p>
-   */
-  private static Logger logger = Logger.getLogger("SimpleOperatorProcessor");
 
 }
