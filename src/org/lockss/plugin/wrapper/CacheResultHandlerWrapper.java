@@ -1,5 +1,5 @@
 /*
- * $Id: CacheResultHandlerWrapper.java,v 1.1 2006-12-09 07:09:00 tlipkis Exp $
+ * $Id: CacheResultHandlerWrapper.java,v 1.2 2006-12-09 07:14:59 tlipkis Exp $
  */
 
 /*
@@ -50,8 +50,7 @@ public class CacheResultHandlerWrapper
     return inst;
   }
 
-  public void init(CacheResultMap map)
-      throws PluginException.LinkageError {
+  public void init(CacheResultMap map) throws PluginException {
     try {
       inst.init(map);
     } catch (LinkageError e) {
