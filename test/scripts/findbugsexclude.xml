@@ -5,9 +5,9 @@
   <Match>
     <Class name="~org.lockss.alert.(AlertActions|AlertPatterns)" />
     <Bug code="Nm" />
- </Match>
+  </Match>
   <Match>
-    <Field name="~.*\.(log|logger)" />
+    <Field type="org.lockss.util.Logger" />
     <Bug code="MS" />
  </Match>
 </FindBugsFilter>
