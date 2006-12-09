@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireArchivalUnit.java,v 1.6 2006-10-31 07:01:05 thib_gc Exp $
+ * $Id: TestHighWireArchivalUnit.java,v 1.7 2006-12-09 07:09:01 tlipkis Exp $
  */
 
 /*
@@ -43,10 +43,10 @@ import org.lockss.util.*;
 import org.lockss.state.*;
 import org.lockss.test.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.base.BaseCachedUrlSet;
-import org.lockss.repository.LockssRepositoryImpl;
-import org.lockss.plugin.definable.*;
 import org.lockss.plugin.base.*;
+import org.lockss.plugin.wrapper.*;
+import org.lockss.plugin.definable.*;
+import org.lockss.repository.LockssRepositoryImpl;
 
 public class TestHighWireArchivalUnit extends LockssTestCase {
   private MockLockssDaemon theDaemon;
@@ -217,7 +217,8 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
   public void testGetFilterRuleHtmlContentType() throws Exception {
     DefinableArchivalUnit au =
       makeAu(new URL("http://shadow1.stanford.edu/"), 42);
-    assertTrue(au.getFilterRule("text/html") instanceof HighWireFilterRule);
+    assertTrue(WrapperUtil.unwrap(au.getFilterRule("text/html"))
+	       instanceof HighWireFilterRule);
   }
 
   /**

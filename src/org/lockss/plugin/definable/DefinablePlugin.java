@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.22 2006-11-11 06:56:30 tlipkis Exp $
+ * $Id: DefinablePlugin.java,v 1.23 2006-12-09 07:09:00 tlipkis Exp $
  */
 
 /*
@@ -32,8 +32,9 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.definable;
 
-import org.lockss.plugin.base.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.base.*;
+import org.lockss.plugin.wrapper.*;
 import org.lockss.config.Configuration;
 import org.lockss.app.*;
 import org.lockss.daemon.*;
@@ -167,12 +168,14 @@ public class DefinablePlugin extends BasePlugin {
     return definitionMap.getString(KEY_PLUGIN_NOTES, null);
   }
 
-  public List getLocalAuConfigDescrs() throws InvalidDefinitionException {
+  public List getLocalAuConfigDescrs()
+      throws PluginException.InvalidDefinition {
     List auConfigDescrs =
       (List) definitionMap.getCollection(KEY_PLUGIN_CONFIG_PROPS, null);
     if (auConfigDescrs == null) {
-      throw new InvalidDefinitionException(mapName +
-                                           " missing ConfigParamDescrs");
+      throw
+	new PluginException.InvalidDefinition(mapName +
+					      " missing ConfigParamDescrs");
     }
     return auConfigDescrs;
   }
@@ -193,7 +196,7 @@ public class DefinablePlugin extends BasePlugin {
     return resultHandler;
   }
 
-  protected void initResultMap() throws InvalidDefinitionException {
+  protected void initResultMap() throws PluginException.InvalidDefinition {
     resultMap = new HttpResultMap();
     // we support two form of result handlers... either a class which handles
     // installing the numbers as well as handling any exceptions
@@ -206,12 +209,13 @@ public class DefinablePlugin extends BasePlugin {
         resultHandler.init(resultMap);
       }
       catch (Exception ex) {
-        throw new InvalidDefinitionException(mapName
-        + " has invalid Exception handler: " + handler_class);
+        throw new PluginException.InvalidDefinition(mapName
+        + " has invalid Exception handler: " + handler_class, ex);
       }
       catch (LinkageError le) {
-        throw new InvalidDefinitionException(
-            mapName + "has  invalid Exception handler: " + handler_class , le);
+        throw new PluginException.InvalidDefinition(
+            mapName + " has invalid Exception handler: " + handler_class,
+	    le);
 
       }
     }
@@ -222,21 +226,26 @@ public class DefinablePlugin extends BasePlugin {
         // add each entry
         for (Iterator it = results.iterator(); it.hasNext(); ) {
           String entry = (String) it.next();
+	  String class_name = null;
           try {
             Vector s_vec = StringUtil.breakAt(entry, '=', 2, true, true);
-            String class_name = (String) s_vec.get(1);
+            class_name = (String) s_vec.get(1);
             int code = Integer.parseInt(((String) s_vec.get(0)));
             // now lets add the entry into the map.
             Class result_class = null;
             result_class = Class.forName(class_name);
             ( (HttpResultMap) resultMap).storeMapEntry(code, result_class);
           }
-          catch (Exception ex1) {
-            throw new InvalidDefinitionException(mapName
+          catch (Exception ex) {
+            throw new PluginException.InvalidDefinition(mapName
                                                  + " has invalid entry: "
                                                  + entry);
-          }
-
+	  }
+	  catch (LinkageError le) {
+	    throw new PluginException.InvalidDefinition("Can't load " +
+							class_name,
+							le);
+	  }
         }
       }
     }
@@ -258,7 +267,11 @@ public class DefinablePlugin extends BasePlugin {
 	ConfigurableCrawlWindow ccw =
 	  (ConfigurableCrawlWindow) loadClass(window_class,
 					      ConfigurableCrawlWindow.class);
-	window = ccw.makeCrawlWindow();
+	try {
+	  window = ccw.makeCrawlWindow();
+	} catch (PluginException e) {
+	  throw new RuntimeException(e);
+	}
       }
     }
     crawlWindow = window;
@@ -337,38 +350,23 @@ public class DefinablePlugin extends BasePlugin {
     } catch (Exception ex) {
       log.error("Could not load " + className, ex);
       throw new
-	InvalidDefinitionException(getPluginName() + ": unable to create " +
+	PluginException.InvalidDefinition(getPluginName() + ": unable to create " +
 				   loadedClass + " from " + className, ex);
     } catch (LinkageError le) {
       log.error("Could not load " + className, le);
       throw new
-	InvalidDefinitionException(getPluginName() + " unable to create " +
+	PluginException.InvalidDefinition(getPluginName() + " unable to create " +
 				   loadedClass + " from " + className, le);
     }
     if (!loadedClass.isInstance(obj)) {
       log.error(className + " is not a " + loadedClass.getName());
       throw new
-	InvalidDefinitionException(getPluginName() + ": wrong class, " +
+	PluginException.InvalidDefinition(getPluginName() + ": wrong class, " +
 				   className + " is " +
 				   obj.getClass().getName() +
 				   ", should be " + loadedClass);
     }
-    return obj;
-  }
-
-  public static class InvalidDefinitionException extends RuntimeException {
-    public InvalidDefinitionException() {
-      super();
-    }
-    public InvalidDefinitionException(String message) {
-      super(message);
-    }
-    public InvalidDefinitionException(String message, Throwable cause) {
-      super(message, cause);
-    }
-    public InvalidDefinitionException(Throwable cause) {
-      super(cause);
-    }
+    return obj = WrapperUtil.wrap(obj, loadedClass);      
   }
 
 }

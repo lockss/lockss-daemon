@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.42 2006-12-06 05:15:59 tlipkis Exp $
+ * $Id: BasePlugin.java,v 1.43 2006-12-09 07:09:00 tlipkis Exp $
  */
 
 /*
@@ -333,7 +333,11 @@ public abstract class BasePlugin
   }
 
   String siteNormalizeUrl(String url, ArchivalUnit au) {
-    return getUrlNormalizer().normalizeUrl(url, au);
+    try {
+      return getUrlNormalizer().normalizeUrl(url, au);
+    } catch (PluginException e) {
+      throw new RuntimeException(e);
+    }
   }
 
   UrlNormalizer getUrlNormalizer() {

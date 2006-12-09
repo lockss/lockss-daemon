@@ -1,5 +1,5 @@
 /*
- * $Id: UrlNormalizer.java,v 1.2 2004-09-02 23:51:37 troberts Exp $
+ * $Id: UrlNormalizer.java,v 1.3 2006-12-09 07:09:00 tlipkis Exp $
  */
 
 /*
@@ -30,9 +30,10 @@ in this Software without prior written authorization from Stanford University.
 
 */
 package org.lockss.plugin;
+import org.lockss.daemon.*;
 
 public interface UrlNormalizer {
 
-  public String normalizeUrl(String url, ArchivalUnit au);
-
+  public String normalizeUrl(String url, ArchivalUnit au)
+      throws PluginException;
 }

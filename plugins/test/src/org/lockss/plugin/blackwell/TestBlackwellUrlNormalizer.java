@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlackwellUrlNormalizer.java,v 1.1 2006-08-01 05:21:51 tlipkis Exp $
+ * $Id: TestBlackwellUrlNormalizer.java,v 1.2 2006-12-09 07:09:01 tlipkis Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.plugin.blackwell;
 import java.io.*;
 import java.util.*;
 
+import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
@@ -52,11 +53,11 @@ public class TestBlackwellUrlNormalizer extends LockssTestCase {
     mau = new MockArchivalUnit();
   }
 
-  void assertNorm(String exp, String url) {
+  void assertNorm(String exp, String url) throws PluginException {
     assertEquals(exp, norm.normalizeUrl(url, mau));
   }
 
-  public void testUrl() {
+  public void testUrl() throws PluginException {
     assertNorm("http://foo.bar/a.h", "http://foo.bar/a.h");
     assertNorm("http://foo.bar/a.h", "http://foo.bar/a.h?cookieSet=1");
     assertNorm("http://foo.bar/a.h?b=d", "http://foo.bar/a.h?b=d&cookieSet=1");

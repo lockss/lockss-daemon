@@ -1,5 +1,5 @@
 /*
- * $Id: CacheResultHandler.java,v 1.1 2004-02-23 09:21:22 tlipkis Exp $
+ * $Id: CacheResultHandler.java,v 1.2 2006-12-09 07:09:00 tlipkis Exp $
  */
 
 /*
@@ -30,9 +30,11 @@ in this Software without prior written authorization from Stanford University.
 
 */
 package org.lockss.util.urlconn;
+import org.lockss.daemon.*;
 
 public interface CacheResultHandler {
-  public void init(CacheResultMap map);
+  public void init(CacheResultMap map) throws PluginException;
   public CacheException handleResult(int code,
-				     LockssUrlConnection connection);
+				     LockssUrlConnection connection)
+      throws PluginException;
 }

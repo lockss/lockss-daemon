@@ -1,5 +1,5 @@
 /*
- * $Id: FilterRule.java,v 1.3 2006-12-09 07:09:01 tlipkis Exp $
+ * $Id: CacheResultHandlerWrapper.java,v 1.1 2006-12-09 07:09:00 tlipkis Exp $
  */
 
 /*
@@ -30,11 +30,47 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin;
+package org.lockss.plugin.wrapper;
 import java.io.*;
 import org.lockss.daemon.*;
+import org.lockss.plugin.*;
+import org.lockss.util.urlconn.*;
 
-public interface FilterRule {
-  public Reader createFilteredReader(Reader reader)
-      throws PluginException;
+/** Error catching wrapper for CacheResultHandler */
+public class CacheResultHandlerWrapper
+  implements CacheResultHandler, PluginCodeWrapper {
+
+  CacheResultHandler inst;
+
+  public CacheResultHandlerWrapper(CacheResultHandler inst) {
+    this.inst = inst;
+  }
+
+  public Object getWrappedObj() {
+    return inst;
+  }
+
+  public void init(CacheResultMap map)
+      throws PluginException.LinkageError {
+    try {
+      inst.init(map);
+    } catch (LinkageError e) {
+      throw new PluginException.LinkageError(e);
+    }
+  }
+
+  public CacheException handleResult(int code, LockssUrlConnection connection)
+      throws PluginException {
+    try {
+      return inst.handleResult(code, connection);
+    } catch (LinkageError e) {
+      throw new PluginException.LinkageError(e);
+    }
+  }
+
+  static class Factory implements WrapperFactory {
+    public Object wrap(Object obj) {
+      return new CacheResultHandlerWrapper((CacheResultHandler)obj);
+    }
+  }
 }

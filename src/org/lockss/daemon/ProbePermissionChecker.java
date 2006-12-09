@@ -1,5 +1,5 @@
 /*
- * $Id: ProbePermissionChecker.java,v 1.14 2006-11-10 00:41:00 troberts Exp $
+ * $Id: ProbePermissionChecker.java,v 1.15 2006-12-09 07:09:01 tlipkis Exp $
  */
 
 /*
@@ -98,7 +98,10 @@ public class ProbePermissionChecker implements PermissionChecker {
       } catch (IOException ex) {
 	logger.error("Exception trying to check for login page "+probeUrl, ex);
 	return false;
-      }
+      } catch (PluginException e) {
+	logger.error("PluginException checking for login page "+probeUrl, e);
+	return false;
+      }	
     } else {
       logger.warning("Didn't find a probe URL on "+permissionUrl);
     }

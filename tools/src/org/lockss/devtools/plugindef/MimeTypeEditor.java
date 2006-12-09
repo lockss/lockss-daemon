@@ -1,5 +1,5 @@
 /*
- * $Id: MimeTypeEditor.java,v 1.1 2006-10-31 07:01:06 thib_gc Exp $
+ * $Id: MimeTypeEditor.java,v 1.2 2006-12-09 07:09:00 tlipkis Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import javax.swing.table.*;
 
 import org.apache.commons.lang.WordUtils;
 import org.lockss.devtools.plugindef.EditableDefinablePlugin.DynamicallyLoadedComponentException;
+import org.lockss.daemon.*;
 import org.lockss.plugin.definable.DefinablePlugin.*;
 import org.lockss.util.Logger;
 
@@ -66,7 +67,7 @@ public class MimeTypeEditor extends JDialog implements EDPEditor {
              String mimeType,
              String mimeTypeValue,
              boolean tryDynamic)
-        throws DynamicallyLoadedComponentException, InvalidDefinitionException;
+        throws DynamicallyLoadedComponentException, PluginException.InvalidDefinition;
     
   }
   
@@ -88,7 +89,7 @@ public class MimeTypeEditor extends JDialog implements EDPEditor {
                     String mimeType,
                     String mimeTypeValue,
                     boolean tryDynamic)
-        throws DynamicallyLoadedComponentException, InvalidDefinitionException {
+        throws DynamicallyLoadedComponentException, PluginException.InvalidDefinition {
       plugin.setAuFilter(mimeType, mimeTypeValue, tryDynamic);
     }
     
@@ -112,7 +113,7 @@ public class MimeTypeEditor extends JDialog implements EDPEditor {
                     String mimeType,
                     String mimeTypeValue,
                     boolean tryDynamic)
-        throws DynamicallyLoadedComponentException, InvalidDefinitionException {
+        throws DynamicallyLoadedComponentException, PluginException.InvalidDefinition {
       plugin.setAuFilterFactory(mimeType, mimeTypeValue, tryDynamic);
     }
 
@@ -234,7 +235,7 @@ public class MimeTypeEditor extends JDialog implements EDPEditor {
           mimeTypeEditorBuilder.put(edp, mimeType, mimeTypeValue, false);
         }
       }
-      catch (InvalidDefinitionException ex) {
+      catch (PluginException.InvalidDefinition ex) {
         JOptionPane.showMessageDialog(this,
                                       ex.getMessage(),
                                       WordUtils.capitalize(mimeTypeEditorBuilder.getValueName()) + " Warning",

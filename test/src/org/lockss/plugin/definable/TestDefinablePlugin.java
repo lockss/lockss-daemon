@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinablePlugin.java,v 1.13 2006-11-11 06:56:29 tlipkis Exp $
+ * $Id: TestDefinablePlugin.java,v 1.14 2006-12-09 07:09:00 tlipkis Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import org.lockss.app.LockssDaemon;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.wrapper.*;
 import org.lockss.plugin.base.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
@@ -204,7 +205,8 @@ public class TestDefinablePlugin extends LockssTestCase {
     defMap.putString(ArchivalUnit.KEY_AU_URL_NORMALIZER,
 		     "org.lockss.plugin.definable.TestDefinablePlugin$MyNormalizer");
     UrlNormalizer urlNormalizer = definablePlugin.getUrlNormalizer();
-    assertTrue(urlNormalizer instanceof org.lockss.plugin.definable.TestDefinablePlugin.MyNormalizer);
+    assertTrue(urlNormalizer instanceof UrlNormalizerWrapper);
+    assertTrue(WrapperUtil.unwrap(urlNormalizer) instanceof MyNormalizer);
   }
 
   public void testMakeUrlNormalizerThrowsOnBadClass()
@@ -215,7 +217,7 @@ public class TestDefinablePlugin extends LockssTestCase {
     try {
       UrlNormalizer urlNormalizer = definablePlugin.getUrlNormalizer();
       fail("Should have thrown on a non-existant class");
-    } catch (DefinablePlugin.InvalidDefinitionException e){
+    } catch (PluginException.InvalidDefinition e){
     }
   }
 

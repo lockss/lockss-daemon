@@ -1,5 +1,5 @@
 /*
- * $Id: EDPInspectorTableModel.java,v 1.17 2006-10-31 07:01:06 thib_gc Exp $
+ * $Id: EDPInspectorTableModel.java,v 1.18 2006-12-09 07:09:00 tlipkis Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import javax.swing.event.*;
 import org.apache.commons.lang.StringUtils;
 import org.lockss.devtools.plugindef.EditableDefinablePlugin.DynamicallyLoadedComponentException;
 import org.lockss.plugin.definable.*;
-import org.lockss.plugin.definable.DefinablePlugin.InvalidDefinitionException;
+import org.lockss.daemon.PluginException;
 
 public class EDPInspectorTableModel extends AbstractTableModel
   implements ChangeListener {
@@ -242,7 +242,7 @@ public class EDPInspectorTableModel extends AbstractTableModel
         cellData.updateOtherData( (String) obj);
       }
     }
-    catch (InvalidDefinitionException ide) {
+    catch (PluginException.InvalidDefinition ide) {
       JOptionPane.showMessageDialog(parentFrame,
                                     ide.getMessage(),
                                     "Error",

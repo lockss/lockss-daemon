@@ -1,5 +1,5 @@
 /*
- * $Id: TestProjectMuseArchivalUnit.java,v 1.3 2006-10-31 07:01:07 thib_gc Exp $
+ * $Id: TestProjectMuseArchivalUnit.java,v 1.4 2006-12-09 07:09:01 tlipkis Exp $
  */
 
 /*
@@ -42,9 +42,10 @@ import org.lockss.util.*;
 import org.lockss.test.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.BaseCachedUrlSet;
+import org.lockss.plugin.wrapper.*;
+import org.lockss.plugin.definable.*;
 import org.lockss.state.AuState;
 import org.lockss.repository.LockssRepositoryImpl;
-import org.lockss.plugin.definable.*;
 
 public class TestProjectMuseArchivalUnit extends LockssTestCase {
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
@@ -239,7 +240,8 @@ public class TestProjectMuseArchivalUnit extends LockssTestCase {
     DefinableArchivalUnit au = makeAu(new URL(ROOT_URL), 60, DIR);
     assertNull(au.getFilterRule(null));
     assertNull(au.getFilterRule("jpg"));
-    assertTrue(au.getFilterRule("text/html") instanceof ProjectMuseFilterRule);
+    assertTrue(WrapperUtil.unwrap(au.getFilterRule("text/html"))
+	       instanceof ProjectMuseFilterRule);
   }
 
   public void testRefetchDepth() throws Exception {

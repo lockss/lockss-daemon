@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.53 2006-12-05 21:37:05 tlipkis Exp $
+ * $Id: FollowLinkCrawler.java,v 1.54 2006-12-09 07:09:01 tlipkis Exp $
  */
 
 /*
@@ -383,17 +383,25 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	    ContentParser parser = getContentParser(cu);
 	    if (parser != null) {
 	      //IOException if the CU can't be read
-	      parser.parseForUrls(cu.openForReading(),
-				  PluginUtil.getBaseUrl(cu),
-				  au, new MyFoundUrlCallback(parsedPages,
-							     extractedUrls,
-							     au));
-	      if (extractedUrls.remove(url)){
-		crawlStatus.removePendingUrl(url);
-		logger.debug3("Removing self reference in " + url +
-			      " from the extracted list");
-	      }
-	      crawlStatus.signalUrlParsed(uc.getUrl());
+	      try {
+		parser.parseForUrls(cu.openForReading(),
+				    PluginUtil.getBaseUrl(cu),
+				    au, new MyFoundUrlCallback(parsedPages,
+							       extractedUrls,
+							       au));
+		if (extractedUrls.remove(url)){
+		  crawlStatus.removePendingUrl(url);
+		  logger.debug3("Removing self reference in " + url +
+				" from the extracted list");
+		}
+		crawlStatus.signalUrlParsed(uc.getUrl());
+	      } catch (PluginException e) {
+		logger.error("Plugin content parser error", e);
+		crawlStatus.signalErrorForUrl(uc.getUrl(),
+					      "Plugin content parser error: " +
+					      e.getMessage());
+		error = Crawler.STATUS_PLUGIN_ERROR;
+	      }		
 	    }
 	    parsedPages.add(uc.getUrl());
 	  }

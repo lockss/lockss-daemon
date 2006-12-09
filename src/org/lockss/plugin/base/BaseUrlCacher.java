@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.67 2006-10-07 23:13:38 tlipkis Exp $
+ * $Id: BaseUrlCacher.java,v 1.68 2006-12-09 07:09:00 tlipkis Exp $
  */
 
 /*
@@ -307,11 +307,15 @@ public class BaseUrlCacher implements UrlCacher {
       }
       input.mark(LOGIN_BUFFER_MAX);
       Reader reader = new InputStreamReader(input, Constants.DEFAULT_ENCODING);
-      if (checker.isLoginPage(headers, reader)) {
-	throw new CacheException.PermissionException("Found a login page");
-      } else {
-	input = resetInputStream(input, fetchUrl);
-      }
+      try {
+	if (checker.isLoginPage(headers, reader)) {
+	  throw new CacheException.PermissionException("Found a login page");
+	} else {
+	  input = resetInputStream(input, fetchUrl);
+	}
+      } catch (PluginException e) {
+        throw new RuntimeException(e);
+      }	
     } else {
       logger.debug3("Didn't find a login page checker");
     }

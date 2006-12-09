@@ -1,5 +1,5 @@
 /*
- * $Id: FilterRule.java,v 1.3 2006-12-09 07:09:01 tlipkis Exp $
+ * $Id: ConfigurableCrawlWindowWrapper.java,v 1.1 2006-12-09 07:09:00 tlipkis Exp $
  */
 
 /*
@@ -30,11 +30,39 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin;
+package org.lockss.plugin.wrapper;
 import java.io.*;
 import org.lockss.daemon.*;
+import org.lockss.plugin.*;
+import org.lockss.plugin.definable.DefinableArchivalUnit.ConfigurableCrawlWindow;
+import org.lockss.crawler.*;
 
-public interface FilterRule {
-  public Reader createFilteredReader(Reader reader)
-      throws PluginException;
+/** Error catching wrapper for DefinableArchivalUnit.ConfigurableCrawlWindow */
+public class ConfigurableCrawlWindowWrapper
+  implements ConfigurableCrawlWindow, PluginCodeWrapper {
+
+  ConfigurableCrawlWindow inst;
+
+  public ConfigurableCrawlWindowWrapper(ConfigurableCrawlWindow inst) {
+    this.inst = inst;
+  }
+
+  public Object getWrappedObj() {
+    return inst;
+  }
+
+  public CrawlWindow makeCrawlWindow()
+      throws PluginException {
+    try {
+      return inst.makeCrawlWindow();
+    } catch (LinkageError e) {
+      throw new PluginException.LinkageError(e);
+    }
+  }
+
+  static class Factory implements WrapperFactory {
+    public Object wrap(Object obj) {
+      return new ConfigurableCrawlWindowWrapper((ConfigurableCrawlWindow)obj);
+    }
+  }
 }

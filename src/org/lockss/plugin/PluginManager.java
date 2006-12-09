@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.170 2006-12-06 05:19:02 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.171 2006-12-09 07:09:00 tlipkis Exp $
  */
 
 /*
@@ -1052,6 +1052,8 @@ public class PluginManager
       }
     } catch (ClassNotFoundException ex) {
       log.debug3(pluginName + ": Class not found on classpath.");
+    } catch (LinkageError e) {
+      log.warning("Can't load plugin", e);
     }
 
     // 2. Look for a loadable plugin definition.

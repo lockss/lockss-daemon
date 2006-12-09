@@ -1,5 +1,5 @@
 /*
- * $Id: EditableDefinablePlugin.java,v 1.28 2006-10-31 17:53:45 thib_gc Exp $
+ * $Id: EditableDefinablePlugin.java,v 1.29 2006-12-09 07:09:00 tlipkis Exp $
  */
 
 /*
@@ -252,10 +252,10 @@ public class EditableDefinablePlugin extends DefinablePlugin {
       logger.error(logMessage, dlce);
       throw dlce; // rethrow
     }
-    catch (InvalidDefinitionException ide) {
+    catch (PluginException.InvalidDefinition ide) {
       String logMessage = "Failed to set the AU configurable crawl window class to " + configurableCrawlWindowClass;
       logger.error(logMessage, ide);
-      throw new InvalidDefinitionException(logMessage, ide);
+      throw new PluginException.InvalidDefinition(logMessage, ide);
     }
   }
 
@@ -296,7 +296,7 @@ public class EditableDefinablePlugin extends DefinablePlugin {
 	definitionMap.putCollection(mimeType + DefinableArchivalUnit.SUFFIX_FILTER_RULE, rules);
       }
       catch (Exception ex) {
-	throw new InvalidDefinitionException("Failed to create the AU filter rule for MIME type: " + mimeType);
+	throw new PluginException.InvalidDefinition("Failed to create the AU filter rule for MIME type: " + mimeType);
       }
     }
     else {
@@ -308,7 +308,7 @@ public class EditableDefinablePlugin extends DefinablePlugin {
   public void setAuFilter(String mimeType,
                           String filterRuleClass,
                           boolean tryDynamic)
-      throws DynamicallyLoadedComponentException, InvalidDefinitionException {
+      throws DynamicallyLoadedComponentException, PluginException.InvalidDefinition {
     logger.info("Setting AU filter rule for MIME type: " + mimeType + " to: " + filterRuleClass);
     try {
       if (tryDynamic) {
@@ -319,10 +319,10 @@ public class EditableDefinablePlugin extends DefinablePlugin {
     catch (DynamicallyLoadedComponentException dlce) {
       throw dlce; // rethrow
     }
-    catch (InvalidDefinitionException ide) {
+    catch (PluginException.InvalidDefinition ide) {
       String logMessage = "Failed to set the AU filter rule for MIME type: " + mimeType + " to: " + filterRuleClass;
       logger.error(logMessage, ide);
-      throw new InvalidDefinitionException(logMessage, ide);
+      throw new PluginException.InvalidDefinition(logMessage, ide);
     }
   }
 
@@ -349,7 +349,7 @@ public class EditableDefinablePlugin extends DefinablePlugin {
   public void setAuFilterFactory(String mimeType,
                           String filterFactoryClass,
                           boolean tryDynamic)
-      throws DynamicallyLoadedComponentException, InvalidDefinitionException {
+      throws DynamicallyLoadedComponentException, PluginException.InvalidDefinition {
     logger.info("Setting AU filter factory for MIME type: " + mimeType + " to: " + filterFactoryClass);
     try {
       if (tryDynamic) {
@@ -360,10 +360,10 @@ public class EditableDefinablePlugin extends DefinablePlugin {
     catch (DynamicallyLoadedComponentException dlce) {
       throw dlce; // rethrow
     }
-    catch (InvalidDefinitionException ide) {
+    catch (PluginException.InvalidDefinition ide) {
       String logMessage = "Failed to set the AU filter factory for MIME type: " + mimeType + " to: " + filterFactoryClass;
       logger.error(logMessage, ide);
-      throw new InvalidDefinitionException(logMessage, ide);
+      throw new PluginException.InvalidDefinition(logMessage, ide);
     }
   }
 
@@ -689,10 +689,10 @@ public class EditableDefinablePlugin extends DefinablePlugin {
     catch (DynamicallyLoadedComponentException dlce) {
       throw dlce; // rethrow
     }
-    catch (InvalidDefinitionException ide) {
+    catch (PluginException.InvalidDefinition ide) {
       String logMessage = "Failed to set the plugin exception handler to " + cacheResultHandlerClass;
       logger.error(logMessage, ide);
-      throw new InvalidDefinitionException(logMessage, ide);
+      throw new PluginException.InvalidDefinition(logMessage, ide);
     }
   }
 
@@ -977,7 +977,7 @@ public class EditableDefinablePlugin extends DefinablePlugin {
    *                  superclass of, or a superinterface of, the
    *                  resulting instance.
    * @return The resulting instance.
-   * @throws InvalidDefinitionException if {@link Class#forName(String)}
+   * @throws PluginException.InvalidDefinition if {@link Class#forName(String)}
    *                                    or {@link Class#newInstance()}
    *                                    throw, or if the resulting
    *                                    instance is not assignable to
@@ -1018,7 +1018,7 @@ public class EditableDefinablePlugin extends DefinablePlugin {
     }
   }
 
-  public static class DynamicallyLoadedComponentException extends InvalidDefinitionException {
+  public static class DynamicallyLoadedComponentException extends PluginException.InvalidDefinition {
     public DynamicallyLoadedComponentException() {
       super();
     }

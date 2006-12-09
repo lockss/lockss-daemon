@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrl.java,v 1.26 2006-09-16 22:55:22 tlipkis Exp $
+ * $Id: BaseCachedUrl.java,v 1.27 2006-12-09 07:09:00 tlipkis Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.io.*;
 import java.net.MalformedURLException;
 
 import org.lockss.config.*;
+import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.repository.*;
 import org.lockss.util.*;
@@ -220,11 +221,13 @@ public class BaseCachedUrl implements CachedUrl {
 	logger.debug3("Filtering " + contentType +
 		      " with " + fact.getClass().getName());
       }
-      InputStream in =
-	fact.createFilteredInputStream(au,
-				       getUnfilteredInputStream(),
-				       getEncoding());
-      return in;
+      try {
+	return fact.createFilteredInputStream(au,
+					      getUnfilteredInputStream(),
+					      getEncoding());
+      } catch (PluginException e) {
+	throw new RuntimeException(e);
+      }
     }
     // then look for deprecated FilterRule
     FilterRule fr = au.getFilterRule(contentType);
@@ -233,8 +236,12 @@ public class BaseCachedUrl implements CachedUrl {
 	logger.debug3("Filtering " + contentType +
 		      " with " + fr.getClass().getName());
       }
-      Reader rd = fr.createFilteredReader(openForReading());
-      return new ReaderInputStream(rd);
+      try {
+	Reader rd = fr.createFilteredReader(openForReading());
+	return new ReaderInputStream(rd);
+      } catch (PluginException e) {
+        throw new RuntimeException(e);
+      }
     }
     if (logger.isDebug3()) logger.debug3("Not filtering " + contentType);
     return getUnfilteredInputStream();

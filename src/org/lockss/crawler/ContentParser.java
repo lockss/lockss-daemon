@@ -1,5 +1,5 @@
 /*
- * $Id: ContentParser.java,v 1.6 2006-11-10 00:19:11 troberts Exp $
+ * $Id: ContentParser.java,v 1.7 2006-12-09 07:09:01 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.crawler;
 
 import java.io.*;
 
+import org.lockss.daemon.*;
 import org.lockss.plugin.ArchivalUnit;
 
 public interface ContentParser {
@@ -43,7 +44,7 @@ public interface ContentParser {
    */
   public void parseForUrls(Reader reader, String srcUrl,
 			   ArchivalUnit au, ContentParser.FoundUrlCallback cb)
-      throws IOException;
+      throws IOException, PluginException;
 
   /**
    * Callback for a ContentParser to call each time it finds a url

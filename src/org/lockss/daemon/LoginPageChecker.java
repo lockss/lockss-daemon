@@ -1,5 +1,5 @@
 /*
- * $Id: LoginPageChecker.java,v 1.1 2005-05-18 23:34:31 troberts Exp $
+ * $Id: LoginPageChecker.java,v 1.2 2006-12-09 07:09:01 tlipkis Exp $
  */
 
 /*
@@ -34,7 +34,9 @@ package org.lockss.daemon;
 
 import java.util.Properties;
 import java.io.*;
+import org.lockss.daemon.*;
 
 public interface LoginPageChecker {
-  boolean isLoginPage(Properties props, Reader reader) throws IOException;
+  boolean isLoginPage(Properties props, Reader reader)
+      throws IOException, PluginException;
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: FilterRule.java,v 1.3 2006-12-09 07:09:01 tlipkis Exp $
+ * $Id: PluginCodeWrapper.java,v 1.1 2006-12-09 07:09:00 tlipkis Exp $
  */
 
 /*
@@ -30,11 +30,9 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin;
-import java.io.*;
-import org.lockss.daemon.*;
+package org.lockss.plugin.wrapper;
 
-public interface FilterRule {
-  public Reader createFilteredReader(Reader reader)
-      throws PluginException;
+/** Interface that allows test code to extract wrapped object */
+public interface PluginCodeWrapper {
+  Object getWrappedObj();
 }

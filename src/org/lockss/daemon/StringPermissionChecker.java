@@ -1,5 +1,5 @@
 /*
- * $Id: StringPermissionChecker.java,v 1.8 2006-04-23 05:50:59 tlipkis Exp $
+ * $Id: StringPermissionChecker.java,v 1.9 2006-12-09 07:09:01 tlipkis Exp $
  */
 
 /*
@@ -74,7 +74,13 @@ public class StringPermissionChecker implements PermissionChecker {
   public boolean checkPermission(Crawler.PermissionHelper pHelper,
 				 Reader reader, String permissionUrl) {
     if (m_filter != null) {
-      reader = m_filter.createFilteredReader(reader);
+      try {
+	reader = m_filter.createFilteredReader(reader);
+      } catch (PluginException e) {
+	m_logger.warning("Plugin error checking permission at " +
+			 permissionUrl, e);
+	return false;
+      }	
       m_logger.debug3("Creating filtered reader to check permissions");
     }
 
