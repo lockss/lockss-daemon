@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.114 2006-11-11 06:56:30 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.115 2006-12-12 22:09:06 thib_gc Exp $
  */
 
 /*
@@ -684,6 +684,9 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     String mimeType = HeaderUtil.getMimeTypeFromContentType(contentType);
     if ("text/html".equalsIgnoreCase(mimeType)) {
       return new GoslingHtmlParser();
+    }
+    else if ("text/css".equalsIgnoreCase(mimeType)) {
+      return new CssParser();
     }
     return null;
   }
