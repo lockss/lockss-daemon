@@ -1,5 +1,5 @@
 /*
- * $Id: PollerStateBean.java,v 1.18 2006-11-16 05:04:33 smorabito Exp $
+ * $Id: PollerStateBean.java,v 1.18.2.1 2006-12-13 21:08:08 smorabito Exp $
  */
 
 /*
@@ -64,6 +64,10 @@ public class PollerStateBean implements LockssSerializable {
   private long createTime;
   private int pollSize;
   private int quorum;
+  private boolean activePoll;
+  /** @deprecated
+   * Left here only for deserialization compatibility.
+   */
   private int hashBlockIndex;
   private int outerCircleTarget;
   private String statusString;
@@ -79,8 +83,6 @@ public class PollerStateBean implements LockssSerializable {
   /* Non-serializable transient fields */
   private transient PollSpec spec;
   private transient CachedUrlSet cus;
-
-  private static Logger log = Logger.getLogger("PollerStateBean");
 
   /**
    * Counter of participants whose state machines do not want to allow the next
@@ -124,7 +126,6 @@ public class PollerStateBean implements LockssSerializable {
     this.hashAlgorithm = hashAlg;
     this.createTime = TimeBase.nowMs();
     this.quorum = quorum;
-    this.hashBlockIndex = 0;
     this.statusString = "Initializing";
     this.repairQueue = new RepairQueue();
     this.hashedBlocks = new ArrayList();
@@ -283,6 +284,18 @@ public class PollerStateBean implements LockssSerializable {
 
   public void signalVoterNominated(PeerIdentity id) {
     nomineeCounter--;
+  }
+  
+  public boolean isPollActive() {
+    return activePoll;
+  }
+  
+  public boolean isPollCompleted() {
+    return !activePoll;
+  }
+  
+  public void setActivePoll(boolean b) {
+    this.activePoll = b;
   }
 
   /**
@@ -516,8 +529,6 @@ public class PollerStateBean implements LockssSerializable {
     /**
      * Return a list of all pending repairs that should be fetched from
      * the publisher.
-     * 
-     * @return
      */
     public synchronized List getPendingPublisherRepairs() {
       List publisherRepairs = new ArrayList();
@@ -550,8 +561,6 @@ public class PollerStateBean implements LockssSerializable {
     /**
      * Return a list of all pending repairs that should be fetched from
      * other V3 peers.
-     * 
-     * @return
      */
     public synchronized List getPendingPeerRepairs() {
       List peerRepairs = new ArrayList();

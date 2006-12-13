@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.26.2.3 2006-11-30 20:56:14 smorabito Exp $
+ * $Id: V3Voter.java,v 1.26.2.4 2006-12-13 21:08:08 smorabito Exp $
  */
 
 /*
@@ -113,7 +113,6 @@ public class V3Voter extends BasePoll {
   private PollManager pollManager;
   private IdentityManager idManager;
   private boolean continuedPoll = false;
-  private boolean activePoll = true;
   private int nomineeCount;
   private File stateDir;
   private boolean allowRepairs = DEFAULT_ALLOW_V3_REPAIRS;
@@ -258,6 +257,21 @@ public class V3Voter extends BasePoll {
     CachedUrlSet cus = this.getCachedUrlSet();
     long estimatedHashDuration = cus.estimatedHashDuration();
     long now = TimeBase.nowMs();
+    // XXX:  We need to reserve some padding for the estimated time it will
+    // take to send the message.  'estimatedHashDuration' is probably way
+    // too much for this, but a better estimate would require taking into 
+    // account the number of URLs and versions that we expect to hash, since
+    // the message size is proportional to the number of VoteBlock.Versions
+    long voteDeadline = voterUserData.getVoteDeadline();
+
+    if (estimatedHashDuration > (voteDeadline - now)) {
+      log.warning("In poll " + getKey() + " called by peer " + 
+                  voterUserData.getPollerId() +
+                  ", my estimated hash duration (" + estimatedHashDuration + 
+                  "ms) is too long to complete within the voting period (" +
+                  (voteDeadline - now) + "ms)");
+      return false;
+    }
     Deadline earliestStart = Deadline.at(now + estimatedHashDuration);
     Deadline latestFinish =
       Deadline.at(voterUserData.getVoteDeadline() - estimatedHashDuration);
@@ -362,8 +376,8 @@ public class V3Voter extends BasePoll {
   }
 
   public void stopPoll(final int status) {
-    if (activePoll) {
-      activePoll = false;
+    if (voterUserData.isPollActive()) {
+      voterUserData.setActivePoll(false);
     } else {
       return;
     }
@@ -420,6 +434,10 @@ public class V3Voter extends BasePoll {
    * Handle an incoming V3LcapMessage.
    */
   public void receiveMessage(LcapMessage message) {
+    // It's quite possible to receive a message after we've decided
+    // to close the poll, but before the PollManager knows we're closed.
+    if (voterUserData.isPollCompleted()) return;
+
     V3LcapMessage msg = (V3LcapMessage)message;
     PeerIdentity sender = msg.getOriginatorId();
     PsmMsgEvent evt = V3Events.fromMessage(msg);
@@ -690,11 +708,11 @@ public class V3Voter extends BasePoll {
   }
 
   public boolean isPollActive() {
-    return activePoll;
+    return voterUserData.isPollActive();
   }
 
   public boolean isPollCompleted() {
-    return !activePoll;
+    return voterUserData.isPollCompleted();
   }
 
   public VoterUserData getVoterUserData() {
@@ -712,8 +730,6 @@ public class V3Voter extends BasePoll {
   /**
    * Returns true if we will serve a repair to the given peer for the
    * given AU and URL.
-   * 
-   * @return
    */
   boolean serveRepairs(PeerIdentity pid, ArchivalUnit au, String url) {
     return(idManager.hasAgreed(pid, au) && allowRepairs);

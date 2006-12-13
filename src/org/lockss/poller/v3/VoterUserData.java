@@ -1,5 +1,5 @@
 /*
- * $Id: VoterUserData.java,v 1.17 2006-11-16 05:04:33 smorabito Exp $
+ * $Id: VoterUserData.java,v 1.17.2.1 2006-12-13 21:08:08 smorabito Exp $
  */
 
 /*
@@ -74,7 +74,9 @@ public class VoterUserData
   private PsmInterpStateBean psmState;
   private int status;
   private String errorDetail;
-  /** @deprecated */
+  private boolean activePoll = true;
+  /** @deprecated 
+   * Left here only for deserialization compatibility */
   private String statusString;
 
   /** Transient non-serialized fields */
@@ -108,7 +110,6 @@ public class VoterUserData
     this.pollerNonce = pollerNonce;
     this.introEffortProof = introEffortProof;
     this.createTime = TimeBase.nowMs();
-    this.statusString = "Active";
     this.messageDir = messageDir;
     this.voteBlocks = new DiskVoteBlocks(voter.getStateDir());
   }
@@ -366,6 +367,18 @@ public class VoterUserData
   public String getErrorDetail() {
     return errorDetail;
   }
+  
+  public boolean isPollActive() {
+    return activePoll;
+  }
+  
+  public boolean isPollCompleted() {
+    return !activePoll;
+  }
+  
+  public void setActivePoll(boolean b) {
+    this.activePoll = b;
+  }
 
   /*
    * Implementation of V3LcapMessage.Factory
@@ -396,7 +409,6 @@ public class VoterUserData
     nominees = null;
     pollMessage = null;
     psmState = null;
-    spec = null;
     voteBlocks = null;
   }
 }
