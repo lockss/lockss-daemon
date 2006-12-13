@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.48 2006-11-11 06:57:03 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.49 2006-12-13 23:37:42 smorabito Exp $
  */
 
 /*
@@ -27,6 +27,7 @@
 package org.lockss.state;
 
 import java.util.*;
+import java.text.*;
 import java.net.MalformedURLException;
 
 import org.lockss.config.Configuration;
@@ -74,6 +75,9 @@ public class ArchivalUnitStatus
   private static Logger logger = Logger.getLogger("AuStatus");
   private static int defaultNumRows = DEFAULT_MAX_NODES_TO_DISPLAY;
   private static boolean isContentIsLink = DEFAULT_CONTENT_IS_LINK;
+  
+  private static final DecimalFormat agreementFormat =
+    new DecimalFormat("0.00");
 
   public void startService() {
     super.startService();
@@ -241,7 +245,7 @@ public class ArchivalUnitStatus
             stat = "Waiting for Poll";
           }
         } else {
-          stat = Integer.toString((int)Math.round(auState.getV3Agreement() * 100)) +
+          stat = agreementFormat.format(auState.getV3Agreement() * 100.0) +
                  "% Agreement";
         }
       } else {
@@ -598,9 +602,13 @@ public class ArchivalUnitStatus
         //      the method declaration for more information.  It should
         //      eventually be removed, but is harmless for now.
         if (state.getV3Agreement() < 0 || !state.hasV3Poll()) {
-          stat = "Waiting for Poll";
+          if (state.lastCrawlTime < 0) {
+            stat = "Waiting for Crawl";
+          } else {
+            stat = "Waiting for Poll";
+          }
         } else {
-          stat = Integer.toString((int)Math.round(state.getV3Agreement() * 100)) +
+          stat = agreementFormat.format(state.getV3Agreement() * 100.0) +
                  "% Agreement";
         }
       } else {

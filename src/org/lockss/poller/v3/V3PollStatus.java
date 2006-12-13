@@ -1,5 +1,5 @@
 /*
-* $Id: V3PollStatus.java,v 1.11 2006-12-06 21:20:54 smorabito Exp $
+* $Id: V3PollStatus.java,v 1.12 2006-12-13 23:37:42 smorabito Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.poller.v3;
 
 import java.util.*;
+import java.text.*;
 import org.lockss.daemon.status.*;
 import org.lockss.daemon.status.StatusService.*;
 import org.lockss.daemon.status.StatusTable.SummaryInfo;
@@ -80,6 +81,9 @@ public class V3PollStatus {
 
     static final String TABLE_TITLE = "V3 Polls (Mine)";
 
+    private static final DecimalFormat agreementFormat =
+      new DecimalFormat("0.00");
+
     // Sort by deadline, descending
     private final List sortRules =
       ListUtil.list(new StatusTable.SortRule("deadline", false));
@@ -101,7 +105,7 @@ public class V3PollStatus {
                                          ColumnDescriptor.TYPE_INT,
                                          "Completed repairs."),
                     new ColumnDescriptor("agreement", "Agreement",
-                                         ColumnDescriptor.TYPE_PERCENT),
+                                         ColumnDescriptor.TYPE_STRING),
                     new ColumnDescriptor("start", "Start",
                                          ColumnDescriptor.TYPE_DATE),
                     new ColumnDescriptor("deadline", "Deadline",
@@ -151,7 +155,8 @@ public class V3PollStatus {
       row.put("talliedUrls", new Integer(poller.getTalliedUrls().size()));
       row.put("activeRepairs", new Integer(poller.getActiveRepairs().size()));
       row.put("completedRepairs", new Integer(poller.getCompletedRepairs().size()));
-      row.put("agreement", new Float(poller.getPercentAgreement()));
+      row.put("agreement", 
+              agreementFormat.format(poller.getPercentAgreement() * 100.0) + "%");
       row.put("start", new Long(poller.getCreateTime()));
       row.put("deadline", poller.getDeadline());
       row.put("pollId",
@@ -698,6 +703,9 @@ public class V3PollStatus {
       summary.add(new SummaryInfo("Start Time",
                                   ColumnDescriptor.TYPE_DATE,
                                   new Long(voter.getCreateTime())));
+      summary.add(new SummaryInfo("Vote Deadline",
+                                  ColumnDescriptor.TYPE_DATE,
+                                  voter.getVoteDeadline()));
       summary.add(new SummaryInfo("Duration",
                                   ColumnDescriptor.TYPE_TIME_INTERVAL,
                                   new Long(voter.getDuration())));

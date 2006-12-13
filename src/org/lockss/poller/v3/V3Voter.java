@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.32 2006-12-13 20:38:08 smorabito Exp $
+ * $Id: V3Voter.java,v 1.33 2006-12-13 23:37:42 smorabito Exp $
  */
 
 /*
@@ -649,6 +649,10 @@ public class V3Voter extends BasePoll {
 
   public Deadline getDeadline() {
     return Deadline.restoreDeadlineAt(voterUserData.getDeadline());
+  }
+  
+  public Deadline getVoteDeadline() {
+    return Deadline.restoreDeadlineAt(voterUserData.getVoteDeadline());
   }
 
   public long getDuration() {
