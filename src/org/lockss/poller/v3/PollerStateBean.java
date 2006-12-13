@@ -1,5 +1,5 @@
 /*
- * $Id: PollerStateBean.java,v 1.20 2006-12-13 19:46:22 thib_gc Exp $
+ * $Id: PollerStateBean.java,v 1.21 2006-12-13 20:38:08 smorabito Exp $
  */
 
 /*
@@ -64,6 +64,7 @@ public class PollerStateBean implements LockssSerializable {
   private long createTime;
   private int pollSize;
   private int quorum;
+  private boolean activePoll;
   /** @deprecated
    * Left here only for deserialization compatibility.
    */
@@ -283,6 +284,18 @@ public class PollerStateBean implements LockssSerializable {
 
   public void signalVoterNominated(PeerIdentity id) {
     nomineeCounter--;
+  }
+  
+  public boolean isPollActive() {
+    return activePoll;
+  }
+  
+  public boolean isPollCompleted() {
+    return !activePoll;
+  }
+  
+  public void setActivePoll(boolean b) {
+    this.activePoll = b;
   }
 
   /**

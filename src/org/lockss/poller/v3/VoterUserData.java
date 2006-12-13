@@ -1,5 +1,5 @@
 /*
- * $Id: VoterUserData.java,v 1.18 2006-12-06 21:20:54 smorabito Exp $
+ * $Id: VoterUserData.java,v 1.19 2006-12-13 20:38:08 smorabito Exp $
  */
 
 /*
@@ -74,6 +74,7 @@ public class VoterUserData
   private PsmInterpStateBean psmState;
   private int status;
   private String errorDetail;
+  private boolean activePoll = true;
   /** @deprecated 
    * Left here only for deserialization compatibility */
   private String statusString;
@@ -366,6 +367,18 @@ public class VoterUserData
   public String getErrorDetail() {
     return errorDetail;
   }
+  
+  public boolean isPollActive() {
+    return activePoll;
+  }
+  
+  public boolean isPollCompleted() {
+    return !activePoll;
+  }
+  
+  public void setActivePoll(boolean b) {
+    this.activePoll = b;
+  }
 
   /*
    * Implementation of V3LcapMessage.Factory
@@ -396,7 +409,6 @@ public class VoterUserData
     nominees = null;
     pollMessage = null;
     psmState = null;
-    spec = null;
     voteBlocks = null;
   }
 }
