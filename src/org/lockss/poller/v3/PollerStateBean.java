@@ -1,5 +1,5 @@
 /*
- * $Id: PollerStateBean.java,v 1.19 2006-12-06 21:20:54 smorabito Exp $
+ * $Id: PollerStateBean.java,v 1.20 2006-12-13 19:46:22 thib_gc Exp $
  */
 
 /*
@@ -516,8 +516,6 @@ public class PollerStateBean implements LockssSerializable {
     /**
      * Return a list of all pending repairs that should be fetched from
      * the publisher.
-     * 
-     * @return
      */
     public synchronized List getPendingPublisherRepairs() {
       List publisherRepairs = new ArrayList();
@@ -550,8 +548,6 @@ public class PollerStateBean implements LockssSerializable {
     /**
      * Return a list of all pending repairs that should be fetched from
      * other V3 peers.
-     * 
-     * @return
      */
     public synchronized List getPendingPeerRepairs() {
       List peerRepairs = new ArrayList();

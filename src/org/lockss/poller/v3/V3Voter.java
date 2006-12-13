@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.30 2006-12-06 21:20:54 smorabito Exp $
+ * $Id: V3Voter.java,v 1.31 2006-12-13 19:46:22 thib_gc Exp $
  */
 
 /*
@@ -717,8 +717,6 @@ public class V3Voter extends BasePoll {
   /**
    * Returns true if we will serve a repair to the given peer for the
    * given AU and URL.
-   * 
-   * @return
    */
   boolean serveRepairs(PeerIdentity pid, ArchivalUnit au, String url) {
     return(idManager.hasAgreed(pid, au) && allowRepairs);
