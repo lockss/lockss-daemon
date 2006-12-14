@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWirePlugin.java,v 1.3 2006-07-19 16:44:44 thib_gc Exp $
+ * $Id: TestHighWirePlugin.java,v 1.4 2006-12-14 01:11:59 thib_gc Exp $
  */
 
 /*
@@ -31,8 +31,10 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.plugin.highwire;
+
 import java.net.*;
 import java.util.*;
+
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
@@ -41,6 +43,7 @@ import org.lockss.daemon.*;
 import org.lockss.plugin.ArchivalUnit.*;
 import org.lockss.plugin.definable.*;
 import org.lockss.util.urlconn.*;
+import org.lockss.util.urlconn.CacheException.RetryDeadLinkException;
 
 public class TestHighWirePlugin extends LockssTestCase {
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
@@ -130,7 +133,7 @@ public class TestHighWirePlugin extends LockssTestCase {
   }
 
   public void testHandles404Result() throws Exception {
-    String name = "org.lockss.util.urlconn.CacheException$RetryDeadLinkException";
+    String name = RetryDeadLinkException.class.getName();
     Class expected = Class.forName(name);
     Class found =( (HttpResultMap) plugin.getCacheResultMap()).getExceptionClass(404);
     assertEquals(expected, found);
