@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePdfFilterFactory.java,v 1.8 2006-11-27 03:27:09 thib_gc Exp $
+ * $Id: HighWirePdfFilterFactory.java,v 1.9 2006-12-14 01:11:45 thib_gc Exp $
  */
 
 /*
@@ -46,65 +46,68 @@ public class HighWirePdfFilterFactory extends BasicPdfFilterFactory {
     
     /* Inherit documentation */
     public boolean identify(List tokens) {
-      // Look back from the end
-      int last = tokens.size() - 1;
-      // There are at least 20 tokens to look at
-      boolean ret = tokens.size() >= 20
-      // Token [0] is "BT" and token [last] is "ET" (text object containing three strings)  
-      && PdfUtil.matchTextObject(tokens, 0, last)
-      // Token [last-17] is "Tj" and its operand is a string (date/institution)
-      && PdfUtil.matchShowText(tokens, last - 17)
-      // Token [last-13] is "rg" and its operands are the RGB triple for blue (color of URL)
-      && PdfUtil.matchSetRgbColorNonStroking(tokens, last - 13, 0, 0, 1)
-      // Token [last-8] is "Tj" and its operand is a string (URL)
-      && PdfUtil.matchShowText(tokens, last - 8)
-      // Token [last-1] is "Tj" and its operand is "Downloaded from "
-      && PdfUtil.matchShowText(tokens, last - 1, "Downloaded from ");
+      boolean ret = false;
+      int progress = 0;
+      // Iterate from the end
+      iteration: for (int tok = tokens.size() - 1 ; tok >= 0 ; --tok) {
+        switch (progress) {
+          // ET
+          case 0: if (PdfUtil.isEndTextObject(tokens,tok)) { ++progress; } break;
+          // Tj and its argument is the string "Downloaded from "
+          case 1: if (PdfUtil.matchShowText(tokens, tok, "Downloaded from ")) { ++progress; } break;
+          // Tj and its argument is a domain name string
+          case 2: if (PdfUtil.matchShowTextMatches(tokens, tok, "[-0-9A-Za-z]+(?:\\.[-0-9A-Za-z]+)+")) { ++progress; } break;
+          // Tj and its string argument
+          case 3: if (PdfUtil.matchShowText(tokens, tok)) { ++progress; } break;
+          // BT
+          case 4: if (PdfUtil.isBeginTextObject(tokens,tok)) { ret = (tok == 0); break iteration; } break;
+        }
+      }
       logger.debug3("AbstractOnePartDownloadedFromOperatorProcessor candidate match: " + ret);
       return ret;
     }
-    
+      
   }
   
   public static abstract class AbstractThreePartDownloadedFromOperatorProcessor
       extends ConditionalSubsequenceOperatorProcessor {
     
-    /**
-     * <p>The (fixed) length of the output sequence being examined.</p>
-     */
-    public static final int LENGTH = 54;
-
     /* Inherit documentation */
     public int getSubsequenceLength() {
-      // Examine the last LENGTH tokens in the output sequence
-      return LENGTH;
+      // Examine the last 54 tokens in the output sequence
+      return 54;
     }
 
     /* Inherit documentation */
     public boolean identify(List tokens) {
-      // Look back from the end
-      int last = tokens.size() - 1;
-      // The output list is 54 tokens long
-      boolean ret = tokens.size() == LENGTH
-      // Token [2] or [0] is "BT" and token [last-34] is "ET" (text object containing date/institution)
-      && (PdfUtil.matchTextObject(tokens, 2, last - 34)
-          || PdfUtil.matchTextObject(tokens, 0, last - 34))
-      // Token [last-39] is "Tj" and its operand is a string (date/institution)
-      && PdfUtil.matchShowText(tokens, last - 39)
-      // Token [last-35] is "rg" and its operands are the RGB triple for blue (color of URL)
-      && PdfUtil.matchSetRgbColorNonStroking(tokens, last - 35, 0, 0, 1)
-      // Token [last-31] is "BT" and token [last-16] is "ET" (text object containing URL)
-      && PdfUtil.matchTextObject(tokens, last - 31, last - 16)
-      // Token [last-19] is "Tj" and its operand is a string (URL)
-      && PdfUtil.matchShowText(tokens, last - 19)
-      // Token [last-13] is "BT" and token [last] is "ET" (text object containing "Downloaded from ")
-      && PdfUtil.matchTextObject(tokens, last - 13, last)
-      // Token [last-1] is "Tj" and its operand is "Downloaded from "
-      && PdfUtil.matchShowText(tokens, last - 1, "Downloaded from ");
+      boolean ret = false;
+      int progress = 0;
+      // Iterate from the end
+      iteration: for (int tok = tokens.size() - 1 ; tok >= 0 ; --tok) {
+        switch (progress) {
+          // ET
+          case 0: if (PdfUtil.isEndTextObject(tokens,tok)) { ++progress; } break;
+          // Tj and its argument is the string "Downloaded from "
+          case 1: if (PdfUtil.matchShowText(tokens, tok, "Downloaded from ")) { ++progress; } break;
+          // BT
+          case 2: if (PdfUtil.isBeginTextObject(tokens,tok)) { ++progress; } break;
+          // ET
+          case 3: if (PdfUtil.isEndTextObject(tokens,tok)) { ++progress; } break;
+          // Tj and its argument is a domain name string
+          case 4: if (PdfUtil.matchShowTextMatches(tokens, tok, "[-0-9A-Za-z]+(?:\\.[-0-9A-Za-z]+)+")) { ++progress; } break;
+          // BT
+          case 5: if (PdfUtil.isBeginTextObject(tokens,tok)) { ++progress; } break;
+          // ET
+          case 6: if (PdfUtil.isEndTextObject(tokens,tok)) { ++progress; } break;
+          // Tj and its string argument
+          case 7: if (PdfUtil.matchShowText(tokens, tok)) { ++progress; } break;
+          // BT
+          case 8: if (PdfUtil.isBeginTextObject(tokens,tok)) { ret = true; break iteration; } break;
+        }
+      }
       logger.debug3("AbstractThreePartDownloadedFromOperatorProcessor candidate match: " + ret);
       return ret;
     }
-    
   }
   
   public static class CollapseDownloadedFrom extends AggregatePageTransform {
