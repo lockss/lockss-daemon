@@ -1,5 +1,5 @@
 /*
- * $Id: PdfUtil.java,v 1.20 2006-11-13 21:27:12 thib_gc Exp $
+ * $Id: PdfUtil.java,v 1.21 2006-12-14 01:02:23 thib_gc Exp $
  */
 
 /*
@@ -53,7 +53,7 @@ public class PdfUtil {
    * <p>An interface for looping policies.</p>
    * <p>This interface is intended for the following types of loops:</p>
 <pre>
-boolean success = resultPolicy.resetResult();
+boolean success = resultPolicy.initialValue();
 while (...) {
   boolean oneStep = doSomething(...);
   success = resultPolicy.updateResult(success, oneStep);
@@ -1378,6 +1378,72 @@ return success;
 
   /**
    * <p>Determines if the token at the given index is a PDF string
+   * and if it ends with the given value.</p>
+   * @param tokens A list of tokens.
+   * @param index  The index of the selected token.
+   * @param str    A value to match the token against with {@link String#endsWith(String)}.
+   * @return True if the selected token is a PDF string and its value
+   *         ends with the given value, false otherwise.
+   * @see #matchPdfStringEndsWith(Object, String)
+   */
+  public static boolean matchPdfStringEndsWith(List tokens,
+                                               int index,
+                                               String str) {
+    return matchPdfStringEndsWith(tokens.get(index),
+                                  str);
+  }
+
+  /**
+   * <p>Determines if the given token is a PDF string
+   * and if it ends with the given value.</p>
+   * @param candidateToken A candidate PDF token.
+   * @param str            A value to match the token against with {@link String#endsWith(String)}.
+   * @return True if the argument is a PDF string and its value
+   *         ends with the given value, false otherwise.
+   * @see #isPdfString(Object)
+   * @see #getPdfString(Object)
+   */
+  public static boolean matchPdfStringEndsWith(Object candidateToken,
+                                               String str) {
+    return isPdfString(candidateToken)
+    && getPdfString(candidateToken).endsWith(str);
+  }
+
+  /**
+   * <p>Determines if the token at the given index is a PDF string
+   * and if it matches the given regular expression.</p>
+   * @param tokens A list of tokens.
+   * @param index  The index of the selected token.
+   * @param str    A regular expression to match the token against with {@link String#matches(String)}.
+   * @return True if the selected token is a PDF string and its value
+   *         matches the given regular expression, false otherwise.
+   * @see #matchPdfStringStartsWith(Object, String)
+   */
+  public static boolean matchPdfStringMatches(List tokens,
+                                              int index,
+                                              String regex) {
+    return matchPdfStringMatches(tokens.get(index),
+                                 regex);
+  }
+
+  /**
+   * <p>Determines if the given token is a PDF string
+   * and if it matches the given regular expression.</p>
+   * @param candidateToken A candidate PDF token.
+   * @param str            A regular expression to match the token against with {@link String#matches(String)}.
+   * @return True if the argument is a PDF string and its value
+   *         matches the given regular expression, false otherwise.
+   * @see #isPdfString(Object)
+   * @see #getPdfString(Object)
+   */
+  public static boolean matchPdfStringMatches(Object candidateToken,
+                                              String regex) {
+    return isPdfString(candidateToken)
+    && getPdfString(candidateToken).matches(regex);
+  }
+
+  /**
+   * <p>Determines if the token at the given index is a PDF string
    * and if it starts with the given value.</p>
    * @param tokens A list of tokens.
    * @param index  The index of the selected token.
@@ -1484,20 +1550,52 @@ return success;
   }
 
   /**
-   *
+   * 
    * @param tokens
    * @param index
    * @param str
    * @return TODO
    * @see #isShowText(List, int)
-   * @see #matchPdfStringStartsWith(List, int, String)
+   * @see #matchPdfStringEndsWith(List, int, String)
    */
-  public static boolean matchShowTextStartsWith(List tokens,
-                                                int index,
-                                                String str) {
+  public static boolean matchShowTextEndsWith(List tokens,
+                                              int index,
+                                              String str) {
     return isShowText(tokens, index)
-    && matchPdfStringStartsWith(tokens, index - 1, str);
+    && matchPdfStringEndsWith(tokens, index - 1, str);
   }
+  
+  /**
+   *
+   * @param tokens
+   * @param index
+   * @param regex
+   * @return TODO
+   * @see #isShowText(List, int)
+   * @see #matchPdfStringMatches(List, int, String)
+   */
+  public static boolean matchShowTextMatches(List tokens,
+                                             int index,
+                                             String regex) {
+    return isShowText(tokens, index)
+    && matchPdfStringMatches(tokens, index - 1, regex);
+  }
+
+  /**
+  *
+  * @param tokens
+  * @param index
+  * @param str
+  * @return TODO
+  * @see #isShowText(List, int)
+  * @see #matchPdfStringStartsWith(List, int, String)
+  */
+ public static boolean matchShowTextStartsWith(List tokens,
+                                               int index,
+                                               String str) {
+   return isShowText(tokens, index)
+   && matchPdfStringStartsWith(tokens, index - 1, str);
+ }
 
   /**
    * <p>Determines if the tokens at the given indices form a text
