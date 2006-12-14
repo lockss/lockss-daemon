@@ -9,7 +9,11 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>10</string>
+    <string>11</string>
+  </entry>
+  <entry>
+    <string>required_daemon_version</string>
+    <string>1.22.0</string>
   </entry>
   <entry>
     <string>au_name</string>
