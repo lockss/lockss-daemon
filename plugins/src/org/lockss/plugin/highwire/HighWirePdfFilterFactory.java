@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePdfFilterFactory.java,v 1.9 2006-12-14 01:11:45 thib_gc Exp $
+ * $Id: HighWirePdfFilterFactory.java,v 1.10 2006-12-16 00:37:44 thib_gc Exp $
  */
 
 /*
@@ -51,16 +51,34 @@ public class HighWirePdfFilterFactory extends BasicPdfFilterFactory {
       // Iterate from the end
       iteration: for (int tok = tokens.size() - 1 ; tok >= 0 ; --tok) {
         switch (progress) {
-          // ET
-          case 0: if (PdfUtil.isEndTextObject(tokens,tok)) { ++progress; } break;
-          // Tj and its argument is the string "Downloaded from "
-          case 1: if (PdfUtil.matchShowText(tokens, tok, "Downloaded from ")) { ++progress; } break;
-          // Tj and its argument is a domain name string
-          case 2: if (PdfUtil.matchShowTextMatches(tokens, tok, "[-0-9A-Za-z]+(?:\\.[-0-9A-Za-z]+)+")) { ++progress; } break;
-          // Tj and its string argument
-          case 3: if (PdfUtil.matchShowText(tokens, tok)) { ++progress; } break;
-          // BT
-          case 4: if (PdfUtil.isBeginTextObject(tokens,tok)) { ret = (tok == 0); break iteration; } break;
+          case 0:
+            // End of subsequence
+            if (tok != tokens.size() - 1) { break iteration; }
+            // ET
+            if (PdfUtil.isEndTextObject(tokens, tok)) { ++progress; }
+            break;
+          case 1:
+            // Not BT
+            if (PdfUtil.isBeginTextObject(tokens,tok)) { break iteration; }
+            // Tj and its argument is the string "Downloaded from "
+            if (PdfUtil.matchShowText(tokens, tok, "Downloaded from ")) { ++progress; }
+            break;
+          case 2:
+            // Not BT
+            if (PdfUtil.isBeginTextObject(tokens,tok)) { break iteration; }
+            // Tj and its argument is a domain name string
+            if (PdfUtil.matchShowTextMatches(tokens, tok, "[-0-9A-Za-z]+(?:\\.[-0-9A-Za-z]+)+")) { ++progress; }
+            break;
+          case 3:
+            // Not BT
+            if (PdfUtil.isBeginTextObject(tokens,tok)) { break iteration; }
+            // Tj and its string argument
+            if (PdfUtil.matchShowText(tokens, tok)) { ++progress; }
+            break;
+          case 4:
+            // BT; beginning of subsequence
+            if (PdfUtil.isBeginTextObject(tokens,tok)) { ret = (tok == 0); break iteration; }
+            break;
         }
       }
       logger.debug3("AbstractOnePartDownloadedFromOperatorProcessor candidate match: " + ret);
@@ -85,24 +103,50 @@ public class HighWirePdfFilterFactory extends BasicPdfFilterFactory {
       // Iterate from the end
       iteration: for (int tok = tokens.size() - 1 ; tok >= 0 ; --tok) {
         switch (progress) {
-          // ET
-          case 0: if (PdfUtil.isEndTextObject(tokens,tok)) { ++progress; } break;
-          // Tj and its argument is the string "Downloaded from "
-          case 1: if (PdfUtil.matchShowText(tokens, tok, "Downloaded from ")) { ++progress; } break;
-          // BT
-          case 2: if (PdfUtil.isBeginTextObject(tokens,tok)) { ++progress; } break;
-          // ET
-          case 3: if (PdfUtil.isEndTextObject(tokens,tok)) { ++progress; } break;
-          // Tj and its argument is a domain name string
-          case 4: if (PdfUtil.matchShowTextMatches(tokens, tok, "[-0-9A-Za-z]+(?:\\.[-0-9A-Za-z]+)+")) { ++progress; } break;
-          // BT
-          case 5: if (PdfUtil.isBeginTextObject(tokens,tok)) { ++progress; } break;
-          // ET
-          case 6: if (PdfUtil.isEndTextObject(tokens,tok)) { ++progress; } break;
-          // Tj and its string argument
-          case 7: if (PdfUtil.matchShowText(tokens, tok)) { ++progress; } break;
-          // BT
-          case 8: if (PdfUtil.isBeginTextObject(tokens,tok)) { ret = true; break iteration; } break;
+          case 0:
+            // End of subsequence
+            if (tok != tokens.size() - 1) { break iteration; }
+            // ET
+            if (PdfUtil.isEndTextObject(tokens, tok)) { ++progress; }
+            break;
+          case 1:
+            // Not BT
+            if (PdfUtil.isBeginTextObject(tokens,tok)) { break iteration; }
+            // Tj and its argument is the string "Downloaded from "
+            if (PdfUtil.matchShowText(tokens, tok, "Downloaded from ")) { ++progress; }
+            break;
+          case 2:
+            // BT
+            if (PdfUtil.isBeginTextObject(tokens,tok)) { ++progress; }
+            break;
+          case 3:
+            // ET
+            if (PdfUtil.isEndTextObject(tokens,tok)) { ++progress; }
+            break;
+          case 4:
+            // Not BT
+            if (PdfUtil.isBeginTextObject(tokens,tok)) { break iteration; }
+            // Tj and its argument is a domain name string
+            if (PdfUtil.matchShowTextMatches(tokens, tok, "[-0-9A-Za-z]+(?:\\.[-0-9A-Za-z]+)+")) { ++progress; }
+            break;
+          case 5:
+            // BT
+            if (PdfUtil.isBeginTextObject(tokens,tok)) { ++progress; }
+            break;
+          case 6:
+            // ET
+            if (PdfUtil.isEndTextObject(tokens,tok)) { ++progress; }
+            break;
+          case 7:
+            // Not BT
+            if (PdfUtil.isBeginTextObject(tokens,tok)) { break iteration; }
+            // Tj and its string argument
+            if (PdfUtil.matchShowText(tokens, tok)) { ++progress; }
+            break;
+          case 8:
+            // BT
+            if (PdfUtil.isBeginTextObject(tokens,tok)) { ret = true; break iteration; }
+            break;
         }
       }
       logger.debug3("AbstractThreePartDownloadedFromOperatorProcessor candidate match: " + ret);
