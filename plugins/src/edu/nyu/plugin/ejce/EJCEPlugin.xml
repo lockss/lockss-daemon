@@ -1,0 +1,63 @@
+<map>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>edu.nyu.plugin.ejce.EJCEPlugin</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>au_crawl_depth</string>
+    <int>5</int>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;EJCE %d (%s)&quot;, year, base_url</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>EJCE plugin</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;^%s/lockss/%d-manifesto\.html&quot;, base_url, year</string>
+      <string>1,&quot;^%s/fasc%d[0-9]+\.asp&quot;, base_url, year</string>
+      <string>1,&quot;^%s/articles.asp.*&quot;, base_url</string>
+      <string>1,&quot;^%s/[0-9]+.*\.pdf&quot;, base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%s/lockss/%d-manifesto.html&quot;, base_url, year</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+</map>
