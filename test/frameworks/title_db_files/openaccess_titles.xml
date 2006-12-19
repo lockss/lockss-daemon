@@ -40,6 +40,36 @@
     <!-- Titles -->
     <property name="org.lockss.title">
 
+      <property name="EJCE2005">
+	<property name="title" value="European Journal of Comparative Economics 2005" />
+	<property name="journalTitle" value="European Journal of Comparative Economics" />
+	<property name="plugin" value="edu.nyu.plugin.ejce.EJCEPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://eaces.liuc.it/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2005" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="EJCE2004">
+	<property name="title" value="European Journal of Comparative Economics 2004" />
+	<property name="journalTitle" value="European Journal of Comparative Economics" />
+	<property name="plugin" value="edu.nyu.plugin.ejce.EJCEPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://eaces.liuc.it/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2004" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
       <property name="HEPLWebzine11">
 	<property name="title" value="High Energy Physics Libraries Webzine Issue 11" />
 	<property name="journalTitle" value="High Energy Physics Libraries Webzine" />
