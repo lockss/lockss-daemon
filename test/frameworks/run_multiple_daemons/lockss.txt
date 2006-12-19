@@ -95,3 +95,5 @@ org.lockss.treewalk.v1.mode = off
 # Standard debugging settings
 org.lockss.monitor.inputStreams=true
 org.lockss.thread.hungThreadDump = true
+
+org.lockss.crawlStatus.keepUrls=all
