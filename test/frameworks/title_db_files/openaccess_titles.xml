@@ -40,6 +40,93 @@
     <!-- Titles -->
     <property name="org.lockss.title">
 
+      <property name="epr2003">
+	<property name="title" value="Electronic Poetry Review 2003" />
+	<property name="journalTitle" value="Electronic Poetry Review" />
+	<property name="plugin" value="edu.cornell.library.epr.EPRPlugin2002On" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.epoetry.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2003" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="num_issue_range" />
+	  <property name="value" value="5-6" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="epr2002">
+	<property name="title" value="Electronic Poetry Review 2002" />
+	<property name="journalTitle" value="Electronic Poetry Review" />
+	<property name="plugin" value="edu.cornell.library.epr.EPRPlugin2002On" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.epoetry.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2002" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="num_issue_range" />
+	  <property name="value" value="3-4" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="epr2001">
+	<property name="title" value="Electronic Poetry Review 2001" />
+	<property name="journalTitle" value="Electronic Poetry Review" />
+	<property name="plugin" value="edu.cornell.library.epr.EPRPlugin2001" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.epoetry.org/" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="jackmagazine2">
+	<property name="title" value="Jack Magazine Volume 2" />
+	<property name="journalTitle" value="Jack Magazine" />
+	<property name="plugin" value="org.lockss.plugin.jackmagazine.JackMagazinePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.jackmagazine.com/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume_name" />
+	  <property name="value" value="2" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="num_issue_range" />
+	  <property name="value" value="5-8" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="jackmagazine1">
+	<property name="title" value="Jack Magazine Volume 1" />
+	<property name="journalTitle" value="Jack Magazine" />
+	<property name="plugin" value="org.lockss.plugin.jackmagazine.JackMagazinePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.jackmagazine.com/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume_name" />
+	  <property name="value" value="1" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="num_issue_range" />
+	  <property name="value" value="1-4" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
       <property name="EJCE2005">
 	<property name="title" value="European Journal of Comparative Economics 2005" />
 	<property name="journalTitle" value="European Journal of Comparative Economics" />
@@ -1335,17 +1422,6 @@
 	<property name="param.3">
 	  <property name="key" value="volume" />
 	  <property name="value" value="11" />
-	</property>
-        <property name="attributes.rights" value="openaccess" />
-      </property>
-
-      <property name="epr2001">
-	<property name="title" value="Electronic Poetry Review 2001" />
-	<property name="journalTitle" value="Electronic Poetry Review" />
-	<property name="plugin" value="edu.cornell.library.epr.EPRPlugin2001" />
-	<property name="param.1">
-	  <property name="key" value="base_url" />
-	  <property name="value" value="http://www.poetry.org/" />
 	</property>
         <property name="attributes.rights" value="openaccess" />
       </property>
