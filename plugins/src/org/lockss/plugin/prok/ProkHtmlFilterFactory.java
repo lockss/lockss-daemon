@@ -1,5 +1,5 @@
 /*
- * $Id: ProkFilterRule.java,v 1.1 2007-01-03 19:49:50 troberts Exp $
+ * $Id: ProkHtmlFilterFactory.java,v 1.1 2007-01-03 22:24:52 troberts Exp $
  */
 
 /*
@@ -36,21 +36,20 @@ import java.io.*;
 import java.util.List;
 import org.lockss.util.*;
 import org.lockss.filter.*;
-import org.lockss.plugin.FilterRule;
+import org.lockss.plugin.*;
+import org.lockss.plugin.base.*;
 
-public class ProkFilterRule implements FilterRule {
+public class ProkHtmlFilterFactory implements FilterFactory {
 
-  /** Also used by HighWireHtmlFilterFactory, so that the logic is only in
-   * one place.  When this class is retired in favor of
-   * HighWireHtmlFilterFactory, this logic should be moved there. */
+  public InputStream createFilteredInputStream(ArchivalUnit au,
+					       InputStream in,
+					       String encoding) {
+    Reader reader = FilterUtil.getReader(in, encoding);
+    Reader filtReader = makeFilteredReader(reader);
+    return new ReaderInputStream(filtReader);
+  }
+
   static Reader makeFilteredReader(Reader reader) {
-    /*
-     * Needs to be better (TSR 9-2-03):
-     * 1)Filtering out everything in a table is pretty good, but over filters
-     * 2) May want to filter comments in the future
-     */
-
-
     List tagList = ListUtil.list(
         new HtmlTagFilter.TagPair("<!-- ", "-->", false)
         );
@@ -58,7 +57,4 @@ public class ProkFilterRule implements FilterRule {
     return new WhiteSpaceFilter(tagFilter);
   }
 
-  public Reader createFilteredReader(Reader reader) {
-    return makeFilteredReader(reader);
-  }
 }
