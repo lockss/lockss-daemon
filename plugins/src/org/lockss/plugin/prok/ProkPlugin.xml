@@ -12,6 +12,10 @@
     <string>&quot;Princeton Review of Knowledge Volume %s&quot;, volume_name</string>
   </entry>
   <entry>
+    <string>text/html_filter</string>
+    <string>org.lockss.plugin.prok.ProkFilterRule</string>
+  </entry>
+  <entry>
     <string>plugin_name</string>
     <string>Princeton Review of Knowledge Plugin</string>
   </entry>
