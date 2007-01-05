@@ -181,7 +181,7 @@
 	<property name="xpath" value="[pluginName='org.lockss.plugin.projmuse.ProjectMusePlugin']" />
       </property>
       <property name="bmc">
-	<property name="name" value="All Biomed Central Titles" />
+	<property name="name" value="All BioMed Central Titles" />
 	<property name="class" value="xpath" />
 	<property name="xpath" value="[pluginName='org.lockss.plugin.bmc.BMCPlugin']" />
       </property>
