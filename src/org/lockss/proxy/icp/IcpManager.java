@@ -1,10 +1,10 @@
 /*
- * $Id: IcpManager.java,v 1.31 2006-11-11 06:56:30 tlipkis Exp $
+ * $Id: IcpManager.java,v 1.32 2007-01-05 21:56:49 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -104,7 +104,7 @@ public class IcpManager
      * <p>Makes a new {@link IcpRunnable}.</p>
      */
     protected IcpRunnable() {
-      super("IcpRunnable");
+      super(ICP_THREAD_NAME);
       icpRunning = false;
       somethingHappened = false;
     }
@@ -682,12 +682,6 @@ public class IcpManager
    */
   private static final String PARAM_ICP_INCOMING_RATE =
     PREFIX_ICP + "rate";
-
-  /**
-   * <p>The ICP thread priority parameter.</p>
-   */
-  private static final String PARAM_ICP_THREAD_PRIORITY =
-    PREFIX_ICP + "priority";
 
   /**
    * <p>The ICP watchdog interval parameter.</p>
