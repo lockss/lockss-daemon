@@ -153,6 +153,7 @@
 	<value>org.lockss.plugin.jackmagazine.JackMagazinePlugin</value>
 	<value>org.lockss.plugin.prok.ProkPlugin</value>
 	<value>org.lockss.plugin.minerva.MinervaPlugin</value>
+	<value>org.lockss.plugin.lapetitezine.LaPetiteZinePlugin</value>
       </list>
     </property>
 
@@ -178,6 +179,11 @@
 	<property name="name" value="All Project Muse Titles" />
 	<property name="class" value="xpath" />
 	<property name="xpath" value="[pluginName='org.lockss.plugin.projmuse.ProjectMusePlugin']" />
+      </property>
+      <property name="bmc">
+	<property name="name" value="All Biomed Central Titles" />
+	<property name="class" value="xpath" />
+	<property name="xpath" value="[pluginName='org.lockss.plugin.bmc.BMCPlugin']" />
       </property>
       <property name="bioone">
 	<property name="name" value="All BioOne Titles" />
