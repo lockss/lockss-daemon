@@ -1,10 +1,10 @@
 /*
- * $Id: DebugPanel.java,v 1.9 2006-03-16 01:41:19 thib_gc Exp $
+ * $Id: DebugPanel.java,v 1.10 2007-01-14 07:57:16 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -54,12 +54,14 @@ import org.lockss.daemon.status.*;
  */
 public class DebugPanel extends LockssServlet {
   static final String KEY_ACTION = "action";
+  static final String KEY_MSG = "msg";
   static final String KEY_NAME_SEL = "name_sel";
   static final String KEY_NAME_TYPE = "name_type";
   static final String KEY_AUID = "auid";
   static final String KEY_TEXT = "text";
 
   static final String ACTION_MAIL_BACKUP = "Mail Backup File";
+  static final String ACTION_THROW_IOEXCEPTION = "Throw IOException";
 
   static final String COL2 = "colspan=2";
   static final String COL2CENTER = COL2 + " align=center";
@@ -100,6 +102,9 @@ public class DebugPanel extends LockssServlet {
     if (ACTION_MAIL_BACKUP.equals(action)) {
       doMailBackup();
     }
+    if (ACTION_THROW_IOEXCEPTION.equals(action)) {
+      doThrow();
+    }
     displayPage();
   }
 
@@ -109,6 +114,11 @@ public class DebugPanel extends LockssServlet {
     } catch (Exception e) {
       errMsg = "Error: " + e.getMessage();
     }
+  }
+
+  private void doThrow() throws IOException {
+    String msg = getParameter(KEY_MSG);
+    throw new IOException(msg != null ? msg : "Test message");
   }
 
   private void displayPage() throws IOException {
@@ -126,9 +136,14 @@ public class DebugPanel extends LockssServlet {
     Form frm = new Form(srvURL(myServletDescr()));
     frm.method("POST");
 
-    Input submit = new Input(Input.Submit, KEY_ACTION, ACTION_MAIL_BACKUP);
-    setTabOrder(submit);
-    frm.add("<br><center>"+submit+"</center>");
+    Input backup = new Input(Input.Submit, KEY_ACTION, ACTION_MAIL_BACKUP);
+    setTabOrder(backup);
+    frm.add("<br><center>"+backup+"</center>");
+    Input thrw = new Input(Input.Submit, KEY_ACTION, ACTION_THROW_IOEXCEPTION);
+    Input thmsg = new Input(Input.Text, KEY_MSG);
+    setTabOrder(thrw);
+    setTabOrder(thmsg);
+    frm.add("<br><center>"+thrw+" " + thmsg + "</center>");
     comp.add(frm);
     return comp;
   }
