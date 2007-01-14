@@ -1,10 +1,10 @@
 /*
- * $Id: ServletUtil.java,v 1.37 2006-11-09 01:44:54 thib_gc Exp $
+ * $Id: ServletUtil.java,v 1.38 2007-01-14 07:55:30 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -1470,32 +1470,82 @@ public class ServletUtil {
     return btn;
   }
 
+  public static Element centeredBlock(Element ele) {
+    Block blk = new Block(Block.Div);
+    blk.attribute("align", "center");
+    blk.add(ele);
+    return blk;
+  }
+
+  public static Element notStartedWarning() {
+    Composite warning = new Composite();
+    warning.add("<center><font color=red size=+1>");
+    warning.add("This LOCKSS Cache is still starting.  Table contents may be incomplete.");
+    warning.add("</font></center><br>");
+    return warning;
+  }
+
   /** Return an index of all the manifest pages.  Used by the ProxyHandler;
    * here because it's convenient and easier to test */
   public static Element manifestIndex(LockssDaemon daemon, String hostname) {
     PluginManager pluginMgr = daemon.getPluginManager();
-    Table tbl = new Table(AUSUMMARY_TABLE_BORDER, AUSUMMARY_TABLE_ATTRIBUTES);
-    tbl.newRow();
-    tbl.newCell("align=\"center\" colspan=\"2\"");
-    tbl.add(HEADER_HEADING_BEFORE);
-    tbl.add("Volume Manifests on ");
-    tbl.add(hostname);
-    tbl.add(HEADER_HEADING_AFTER);
+    StringBuffer sb = new StringBuffer();
+    sb.append(HEADER_HEADING_BEFORE);
+    sb.append("Volume Manifests on ");
+    sb.append(hostname);
+    sb.append(HEADER_HEADING_AFTER);
+    return manifestIndex(pluginMgr, pluginMgr.getAllAus(), sb.toString());
+  }
+
+  /** Return an index of manifest pages for the given AUs. */
+  public static Element manifestIndex(LockssDaemon daemon, Collection aus) {
+    return manifestIndex(daemon.getPluginManager(), aus, null);
+  }
+
+  /** Return an index of manifest pages for the given AUs. */
+  public static Element manifestIndex(LockssDaemon daemon,
+				      Collection aus, String header) {
+    return manifestIndex(daemon.getPluginManager(), aus, header);
+  }
+
+  /** Return an index of manifest pages for the given AUs. */
+  public static Element manifestIndex(PluginManager pluginMgr,
+				      Collection aus, String header) {
+    Table tbl = new Table(AUSUMMARY_TABLE_BORDER,
+			  "cellspacing=\"4\" cellpadding=\"0\"");
+    if (header != null) {
+      tbl.newRow();
+      tbl.newCell("align=\"center\" colspan=\"3\"");
+      tbl.add(header);
+    }
+    if (!pluginMgr.areAusStarted()) {
+      tbl.newRow();
+      tbl.newCell("align=\"center\" colspan=\"3\"");
+      tbl.add(ServletUtil.notStartedWarning());
+    }
     tbl.newRow();
     tbl.addHeading("Archival Unit");
+    tbl.newCell("width=8");
+    tbl.add("&nbsp;");
     tbl.addHeading("Manifest");
-    for (Iterator iter = pluginMgr.getAllAus().iterator(); iter.hasNext(); ) {
+    for (Iterator iter = aus.iterator(); iter.hasNext(); ) {
       ArchivalUnit au = (ArchivalUnit)iter.next();
       CrawlSpec spec = au.getCrawlSpec();
       tbl.newRow();
       tbl.newCell(ALIGN_LEFT);
       tbl.add(au.getName());
+      tbl.newCell("width=8");
+      tbl.add("&nbsp;");
       tbl.newCell(ALIGN_LEFT);
       if (spec instanceof SpiderCrawlSpec) {
 	List urls = ((SpiderCrawlSpec)spec).getStartingUrls();
 	for (Iterator uiter = urls.iterator(); uiter.hasNext(); ) {
 	  String url = (String)uiter.next();
 	  tbl.add(new Link(url, url));
+	  CachedUrl cu = au.makeCachedUrl(url);
+	  if (cu == null || !cu.hasContent()) {
+	    tbl.add(" (not yet collected)");
+	  }
 	  if (uiter.hasNext()) {
 	    tbl.add("<br>");
 	  }
