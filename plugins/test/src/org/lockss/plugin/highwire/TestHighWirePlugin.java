@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWirePlugin.java,v 1.4 2006-12-14 01:11:59 thib_gc Exp $
+ * $Id: TestHighWirePlugin.java,v 1.5 2007-01-14 08:06:13 tlipkis Exp $
  */
 
 /*
@@ -104,8 +104,8 @@ public class TestHighWirePlugin extends LockssTestCase {
       fail ("Didn't throw InstantiationException when given a bad url");
     } catch (ArchivalUnit.ConfigurationException auie) {
       ConfigParamDescr.InvalidFormatException murle =
-        (ConfigParamDescr.InvalidFormatException)auie.getNestedException();
-      assertNotNull(auie.getNestedException());
+        (ConfigParamDescr.InvalidFormatException)auie.getCause();
+      assertNotNull(auie.getCause());
     }
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.37 2006-10-31 07:01:06 thib_gc Exp $
+ * $Id: ArchivalUnit.java,v 1.38 2007-01-14 08:06:04 tlipkis Exp $
  */
 
 /*
@@ -247,19 +247,13 @@ public interface ArchivalUnit {
   public TitleConfig getTitleConfig();
 
   public class ConfigurationException extends Exception {
-    private Throwable nestedException;
 
     public ConfigurationException(String msg) {
       super(msg);
     }
 
-    public ConfigurationException(String msg, Throwable e) {
-      super(msg + (e.getMessage() == null ? "" : (": " + e.getMessage())));
-      this.nestedException = e;
-    }
-
-    public Throwable getNestedException() {
-      return nestedException;
+    public ConfigurationException(String msg, Throwable cause) {
+      super(msg, cause);
     }
   }
 }

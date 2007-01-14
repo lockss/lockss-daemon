@@ -1,5 +1,5 @@
 /*
- * $Id: TestAcsPlugin.java,v 1.2 2005-07-18 08:14:33 tlipkis Exp $
+ * $Id: TestAcsPlugin.java,v 1.3 2007-01-14 08:06:16 tlipkis Exp $
  */
 
 /*
@@ -92,8 +92,8 @@ public class TestAcsPlugin extends LockssTestCase {
       fail ("Didn't throw InstantiationException when given a bad url");
     } catch (ArchivalUnit.ConfigurationException auie) {
       ConfigParamDescr.InvalidFormatException murle =
-        (ConfigParamDescr.InvalidFormatException)auie.getNestedException();
-      assertNotNull(auie.getNestedException());
+        (ConfigParamDescr.InvalidFormatException)auie.getCause();
+      assertNotNull(auie.getCause());
     }
  }
 
