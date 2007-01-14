@@ -1,10 +1,10 @@
 /*
- * $Id: TinyUi.java,v 1.14 2006-09-22 06:26:09 tlipkis Exp $
+ * $Id: TinyUi.java,v 1.15 2007-01-14 08:07:51 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -157,6 +157,8 @@ public class TinyUi extends BaseServletManager {
   HttpContext makeContext(HttpServer server, String path) {
     HttpContext context = server.getContext(path);
     context.setAttribute("TinyData", tinyData);
+    context.setAttribute(HttpContext.__ErrorHandler,
+			 new LockssErrorHandler("daemon")); 
     // In this environment there is no point in consuming memory with
     // cached resources
     context.setMaxCachedFileSize(0);
@@ -192,7 +194,7 @@ public class TinyUi extends BaseServletManager {
 
       Composite b = new Font(1, true);
       b.add("<br>This LOCKSS cache");
-      String name = Configuration.getPlatformHostname();
+      String name = PlatformUtil.getLocalHostname();
       if (name != null) {
 	b.add(" (");
 	b.add(name);

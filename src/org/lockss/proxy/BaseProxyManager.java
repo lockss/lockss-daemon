@@ -1,10 +1,10 @@
 /*
- * $Id: BaseProxyManager.java,v 1.12 2005-09-01 01:45:59 thib_gc Exp $
+ * $Id: BaseProxyManager.java,v 1.13 2007-01-14 08:07:54 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -122,6 +122,9 @@ public abstract class BaseProxyManager extends JettyManager {
 
       // Create a context
       HttpContext context = server.getContext(null, "/");
+
+      context.setAttribute(HttpContext.__ErrorHandler,
+			   new LockssErrorHandler("proxy")); 
 
       // In this environment there is no point in consuming memory with
       // cached resources

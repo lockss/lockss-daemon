@@ -1,10 +1,10 @@
 /*
- * $Id: LocalServletManager.java,v 1.20 2006-09-22 06:26:09 tlipkis Exp $
+ * $Id: LocalServletManager.java,v 1.21 2007-01-14 08:07:53 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -279,6 +279,8 @@ public class LocalServletManager extends BaseServletManager {
   // doesn't add AuthHandler as not all contexts want it
   HttpContext makeContext(HttpServer server, String path) {
     HttpContext context = server.getContext(path);
+    context.setAttribute(HttpContext.__ErrorHandler,
+			 new LockssErrorHandler("daemon")); 
     context.setAttribute("LockssApp", theApp);
     // In this environment there is no point in consuming memory with
     // cached resources
