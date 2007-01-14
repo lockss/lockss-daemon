@@ -1,10 +1,10 @@
 /*
- * $Id: PluginManager.java,v 1.171 2006-12-09 07:09:00 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.172 2007-01-14 08:03:25 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -1265,6 +1265,15 @@ public class PluginManager
     return findTheCachedUrl(url, true);
   }
 
+  /** Return a collection of all AUs that have content on the host of this
+   * url */
+  // XXX Should do something about the redundant normalization involved in
+  // calling more than one of these methods
+  public Collection getCandidateAus(String url) throws MalformedURLException {
+    String normStem = UrlUtil.getUrlPrefix(UrlUtil.normalizeUrl(url));
+    return (Collection)hostAus.get(normStem);
+  }  
+
   /** Find a CachedUrl for the URL.  If mostRecent, search for the most
    * recently collected file, else return the first one we find.
    */
@@ -1282,37 +1291,38 @@ public class PluginManager
       log.warning("findMostRecentCachedUrl(" + url + ")", e);
       return null;
     }
-    CachedUrl best = null;
     synchronized (hostAus) {
       Collection candidateAus = (Collection)hostAus.get(normStem);
-      if (candidateAus != null) {
-	for (Iterator iter = candidateAus.iterator(); iter.hasNext();) {
-	  ArchivalUnit au = (ArchivalUnit)iter.next();
-	  if (au.shouldBeCached(normUrl)) {
-	    try {
-	      String siteUrl = UrlUtil.normalizeUrl(normUrl, au);
-	      CachedUrl cu = au.makeCachedUrl(siteUrl);
-	      if (cu != null && cu.hasContent()) {
-		if (!mostRecent) {
-		  return cu;
-		}
-		if (cuNewerThan(cu, best)) {
-		  AuUtil.safeRelease(best);
-		  best = cu;
-		} else {
-		  cu.release();
-		}
+      if (candidateAus == null) {
+	return null;
+      }
+      CachedUrl best = null;
+      for (Iterator iter = candidateAus.iterator(); iter.hasNext();) {
+	ArchivalUnit au = (ArchivalUnit)iter.next();
+	if (au.shouldBeCached(normUrl)) {
+	  try {
+	    String siteUrl = UrlUtil.normalizeUrl(normUrl, au);
+	    CachedUrl cu = au.makeCachedUrl(siteUrl);
+	    if (cu != null && cu.hasContent()) {
+	      if (!mostRecent) {
+		return cu;
 	      }
-	    } catch (MalformedURLException ignore) {
-	      // ignored
-	    } catch (PluginBehaviorException ignore) {
-	      // ignored
+	      if (cuNewerThan(cu, best)) {
+		AuUtil.safeRelease(best);
+		best = cu;
+	      } else {
+		cu.release();
+	      }
 	    }
+	  } catch (MalformedURLException ignore) {
+	    // ignored
+	  } catch (PluginBehaviorException ignore) {
+	    // ignored
 	  }
 	}
       }
+      return best;
     }
-    return best;
   }
 
   // return true if cu1 is newer than cu2, or cu2 is null
