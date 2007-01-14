@@ -1,10 +1,10 @@
 /*
- * $Id: TestUrlUtil.java,v 1.28 2006-04-20 23:22:05 troberts Exp $
+ * $Id: TestUrlUtil.java,v 1.29 2007-01-14 07:54:37 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -364,12 +364,21 @@ public class TestUrlUtil extends LockssTestCase {
     assertFalse(UrlUtil.isHttpUrl("file://foo"));
   }
 
-  public void testGetUrlPrefixNullUrl(){
+  public void testGetUrlPrefixNullString(){
     try{
-      UrlUtil.getUrlPrefix(null);
+      UrlUtil.getUrlPrefix((String)null);
       fail("Should have thrown MalformedURLException");
     }
     catch(MalformedURLException mue){
+    }
+  }
+
+  public void testGetUrlPrefixNullUrl() throws Exception {
+    try{
+      UrlUtil.getUrlPrefix((URL)null);
+      fail("Should have thrown NullPointerException");
+    }
+    catch(NullPointerException e){
     }
   }
 
