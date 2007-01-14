@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.66 2006-09-17 07:25:38 tlipkis Exp $
+ * $Id: DaemonStatus.java,v 1.67 2007-01-14 07:58:03 tlipkis Exp $
  */
 
 /*
@@ -158,22 +158,11 @@ public class DaemonStatus extends LockssServlet {
     }
   }
 
-  /** Display a "The cache isn't ready yet, come back later" message if
-   *  not all of the AUs have started yet.
-   */
-  protected void displayNotStarted(Page page) throws IOException {
-    Composite warning = new Composite();
-    warning.add("<center><font color=red size=+1>");
-    warning.add("This LOCKSS Cache is still starting.  Table contents may be incomplete.");
-    warning.add("</font></center><br>");
-    page.add(warning);
-  }
-
   private Page newTablePage() throws IOException {
     Page page = newPage();
 
     if (!pluginMgr.areAusStarted()) {
-      displayNotStarted(page);
+      page.add(ServletUtil.notStartedWarning());
     }
 
     // After resp.getWriter() has been called, throwing an exception will
