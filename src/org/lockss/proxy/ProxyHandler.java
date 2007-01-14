@@ -1,10 +1,10 @@
 /*
- * $Id: ProxyHandler.java,v 1.47 2006-09-17 07:25:52 tlipkis Exp $
+ * $Id: ProxyHandler.java,v 1.48 2007-01-14 08:01:35 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.47 2006-09-17 07:25:52 tlipkis Exp $
+// $Id: ProxyHandler.java,v 1.48 2007-01-14 08:01:35 tlipkis Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -40,7 +40,7 @@ package org.lockss.proxy;
 import java.io.*;
 import java.net.*;
 import java.net.HttpURLConnection;
-import java.util.Enumeration;
+import java.util.*;
 
 import org.apache.commons.httpclient.util.*;
 import org.apache.commons.logging.Log;
@@ -102,8 +102,8 @@ public class ProxyHandler extends AbstractHttpHandler {
     pluginMgr = theDaemon.getPluginManager();
     proxyMgr = theDaemon.getProxyManager();
     neverProxy = CurrentConfig.getBooleanParam(PARAM_NEVER_PROXY,
-                                               DEFAULT_NEVER_PROXY);
-    hostname = Configuration.getPlatformHostname();
+					       DEFAULT_NEVER_PROXY);
+    hostname = PlatformUtil.getLocalHostname();
   }
 
   ProxyHandler(LockssDaemon daemon, LockssUrlConnectionPool pool) {
@@ -208,6 +208,43 @@ public class ProxyHandler extends AbstractHttpHandler {
 		     HttpRequest request,
 		     HttpResponse response)
       throws HttpException, IOException {
+    try {
+      handle0(pathInContext, pathParams, request, response);
+    } catch (HttpException e) {
+      throw e;
+    } catch (org.mortbay.http.EOFException e) {
+      throw e;
+    } catch (Exception e) {
+      log.warning("URL: " + request.getURI(), e);
+            
+//       httpResponse.getHttpConnection().forceClose();
+      if (!response.isCommitted()) {
+	response.sendError(HttpResponse.__500_Internal_Server_Error,
+			   e.toString());
+      } else {
+	log.warning("Response already committed");
+      }
+    } catch (Error e) {   
+      log.warning("URL: " + request.getURI(), e);
+            
+//       httpResponse.getHttpConnection().forceClose();
+      if (!response.isCommitted()) {
+	response.sendError(HttpResponse.__500_Internal_Server_Error,
+			   e.toString());
+      } else {
+	log.warning("Response already committed");
+      }
+    } finally {
+//       response.complete();
+    }
+  }
+
+
+  public void handle0(String pathInContext,
+		      String pathParams,
+		      HttpRequest request,
+		      HttpResponse response)
+      throws HttpException, IOException {
     URI uri = request.getURI();
 
     // Is this a CONNECT request?
@@ -240,7 +277,7 @@ public class ProxyHandler extends AbstractHttpHandler {
     CachedUrl cu = pluginMgr.findOneCachedUrl(urlString);
 
     // Don't allow CLOCKSS to serve local content for unsubscribed AUs
-    if (theDaemon.isClockss()) {
+    if (cu != null && theDaemon.isClockss()) {
       ArchivalUnit au = cu.getArchivalUnit();
       switch (AuUtil.getAuState(au).getClockssSubscriptionStatus()) {
       case AuState.CLOCKSS_SUB_UNKNOWN:
@@ -276,13 +313,13 @@ public class ProxyHandler extends AbstractHttpHandler {
 	  return;
 	}
       }
-      // not in cache
-      if ((proxyMgr.getHostDownAction() ==
-	   ProxyManager.HOST_DOWN_NO_CACHE_ACTION_504)
+      if (!isInCache
+	  && (proxyMgr.getHostDownAction() ==
+	      ProxyManager.HOST_DOWN_NO_CACHE_ACTION_504)
 	  && proxyMgr.isHostDown(uri.getHost())) {
 	sendErrorPage(request, response, 504,
-		      "Unable to connect to", uri.getHost(),
-		      "Host not responding (cached status)");
+		      hostMsg("Can't connect to", uri.getHost(),
+			      "Host not responding (cached status)"));
 	return;
       }
       if (UrlUtil.isHttpUrl(urlString)) {
@@ -469,7 +506,7 @@ public class ProxyHandler extends AbstractHttpHandler {
       if (isInCache && proxyMgr.isRecentlyAccessedUrl(urlString)) {
 	serveFromCache(pathInContext, pathParams, request, response, cu);
 	return;
-      }      
+      }
       boolean useQuick =
 	(isInCache ||
 	 (proxyMgr.isHostDown(request.getURI().getHost()) &&
@@ -486,6 +523,7 @@ public class ProxyHandler extends AbstractHttpHandler {
 	// HttpClient is persnickety about URLs; if it complains try
 	// another way
 	log.info("Malformed URL, trying doSun(): " + urlString);
+	// XXX make this path display manifest index if erro resp?
 	doSun(pathInContext, pathParams, request, response);
 	return;
       }
@@ -615,34 +653,20 @@ public class ProxyHandler extends AbstractHttpHandler {
 	return;
       }
 
-      // return response from server
-      response.setStatus(conn.getResponseCode());
-      response.setReason(conn.getResponseMessage());
-
-      InputStream proxy_in = conn.getResponseInputStream();
-
-      // clear response defaults.
-      response.removeField(HttpFields.__Date);
-      response.removeField(HttpFields.__Server);
-
-      // copy response headers
-      for (int ix = 0; ; ix ++) {
-	String hdr = conn.getResponseHeaderFieldKey(ix);
-	String val = conn.getResponseHeaderFieldVal(ix);
-
-	if (hdr==null && val==null) {
-	  break;
-	}
-	if (hdr!=null && val!=null && !_DontProxyHeaders.containsKey(hdr)) {
-	  response.addField(hdr,val);
-	}
+      Collection candidateAus = null;
+      int code=conn.getResponseCode();
+      switch (code) {
+      case HttpResponse.__200_OK:
+	// XXX check for login page
+      case HttpResponse.__304_Not_Modified:
+	break;
+      default:
+	candidateAus = pluginMgr.getCandidateAus(urlString);
       }
-      response.addField("Via", makeVia(request));
-
-      // Handled
-      request.setHandled(true);
-      if (proxy_in!=null) {
-	IO.copy(proxy_in,response.getOutputStream());
+      if (candidateAus != null && !candidateAus.isEmpty()) {
+ 	forwardResponseWithIndex(request, response, candidateAus, conn);
+      } else {
+	forwardResponse(request, response, conn);
       }
     } catch (Exception e) {
       log.error("doLockss error", e);
@@ -651,6 +675,40 @@ public class ProxyHandler extends AbstractHttpHandler {
 			   e.getMessage());
     } finally {
       safeReleaseConn(conn);
+    }
+  }
+
+  void forwardResponse(HttpRequest request, HttpResponse response,
+		       LockssUrlConnection conn)
+      throws IOException {
+    // return response from server
+    response.setStatus(conn.getResponseCode());
+    response.setReason(conn.getResponseMessage());
+
+    InputStream proxy_in = conn.getResponseInputStream();
+
+    // clear response defaults.
+    response.removeField(HttpFields.__Date);
+    response.removeField(HttpFields.__Server);
+
+    // copy response headers
+    for (int ix = 0; ; ix ++) {
+      String hdr = conn.getResponseHeaderFieldKey(ix);
+      String val = conn.getResponseHeaderFieldVal(ix);
+
+      if (hdr==null && val==null) {
+	break;
+      }
+      if (hdr!=null && val!=null && !_DontProxyHeaders.containsKey(hdr)) {
+	response.addField(hdr,val);
+      }
+    }
+    response.addField("Via", makeVia(request));
+
+    // Handled
+    request.setHandled(true);
+    if (proxy_in!=null) {
+      IO.copy(proxy_in,response.getOutputStream());
     }
   }
 
@@ -683,7 +741,7 @@ public class ProxyHandler extends AbstractHttpHandler {
     // Current policy is to serve from cache unless server supplied content.
     switch (code) {
     case HttpResponse.__200_OK:
-      // XXX Should run the plugin's login page checker here, as we want to
+      // XXX Should run the plugin's LoginPageChecker here, as we want to
       // serve out of cache in that case
       return false;
     }
@@ -855,6 +913,12 @@ public class ProxyHandler extends AbstractHttpHandler {
     // LockssResourceHandler.  (There must be a better way to do this.)
   }
 
+  String hostMsg(String msg, String host, String reason) {
+    host = HtmlUtil.htmlEncode(host);
+    reason = HtmlUtil.htmlEncode(reason);
+    return msg + " " + host + " " + reason;
+  }
+
   void sendProxyErrorPage(IOException e,
 			  HttpRequest request,
 			  HttpResponse response)
@@ -863,43 +927,47 @@ public class ProxyHandler extends AbstractHttpHandler {
     if (e instanceof java.net.UnknownHostException) {
       // DNS failure
       sendErrorPage(request, response, 502,
-		    "Unable to connect to", uri.getHost(), "Unknown host");
+		    hostMsg("Can't connect to", uri.getHost(),
+			    "Unknown host"));
       return;
     }
     if (e instanceof java.net.NoRouteToHostException) {
       sendErrorPage(request, response, 502,
-		    "Unable to connect to", uri.getHost(), "No route to host");
+		    hostMsg("Can't connect to", uri.getHost(),
+			    "No route to host"));
       return;
     }
     if (e instanceof LockssUrlConnection.ConnectionTimeoutException) {
       sendErrorPage(request, response, 504,
-		    "Unable to connect to", uri.getHost(),
-		    "Host not responding");
+		    hostMsg("Can't connect to", uri.getHost(),
+			    "Host not responding"));
       return;
     }
     if (e instanceof java.net.ConnectException) {
-      sendErrorPage(request, response, 502, "Unable to connect to",
-		    uri.getHost() +
-		    (uri.getPort() != 80 ? (":" + uri.getPort()) : ""),
-		    "Connection refused");
+      sendErrorPage(request, response, 502,
+		    hostMsg("Can't connect to",
+			    uri.getHost() +
+			    (uri.getPort() != 80 ? (":" + uri.getPort()) : ""),
+			    "Connection refused"));
       return;
     }
     if (e instanceof java.io.InterruptedIOException) {
       sendErrorPage(request, response, 504,
-		    "Timeout waiting for data from", uri.getHost(),
-		    "Server not responding");
+		    hostMsg("Timeout waiting for data from", uri.getHost(),
+			    "Server not responding"));
       return;
     }
 //     if (e instanceof java.io.IOException) {
     sendErrorPage(request, response, 502,
-		  "Error communicating with", uri.getHost(), e.getMessage());
+		  hostMsg("Error communicating with", uri.getHost(),
+			  e.getMessage()));
     return;
 //     }
   }
 
-  void sendErrorPage(HttpRequest request,
+  void sendErrorPage0(HttpRequest request,
 		     HttpResponse response,
-		     int code, String msg, String host, String reason)
+		     int code, String msg)
       throws HttpException, IOException {
     response.setStatus(code);
     Integer codeInt = new Integer(code);
@@ -912,27 +980,27 @@ public class ProxyHandler extends AbstractHttpHandler {
     response.setContentType(HttpFields.__TextHtml);
     ByteArrayISO8859Writer writer = new ByteArrayISO8859Writer(2048);
 
-    host = HtmlUtil.htmlEncode(host);
-    reason = HtmlUtil.htmlEncode(reason);
     URI uri = request.getURI();
 
     writer.write("<html>\n<head>\n<title>Error ");
     writer.write(Integer.toString(code));
     writer.write(' ');
     writer.write(respMsg);
-    writer.write("</title>\n<body>\n<h2>Proxy Error (");
+    writer.write("</title>\n");
+
+    writer.write("<body>\n");
+
+    writer.write("<h2>Proxy Error (");
     writer.write(code + " " + respMsg);
     writer.write(")</h2>");
+
     writer.write("<font size=+1>");
     writer.write(msg);
-    writer.write(" <b>");
-    writer.write(host);
-    writer.write("</b>: ");
-    writer.write(reason);
     writer.write("<br>Attempting to proxy request for <b>");
     writer.write(uri.toString());
     writer.write("</b>");
     writer.write("</font>");
+
     writer.write("<br>");
     writer.write("</p>\n<p><i><small>");
     writer.write("<a href=\"" + Constants.LOCKSS_HOME_URL +
@@ -948,6 +1016,81 @@ public class ProxyHandler extends AbstractHttpHandler {
     request.setHandled(true);
   }
 
+  void sendErrorPage(HttpRequest request,
+		     HttpResponse response,
+		     int code, String msg)
+      throws HttpException, IOException {
+    response.setStatus(code);
+    Integer codeInt = new Integer(code);
+    String respMsg = (String)HttpResponse.__statusMsg.get(codeInt);
+    if (respMsg != null) {
+      response.setReason(respMsg);
+    } else {
+      respMsg = "Unknown";
+    }
+    String errMsg = code + " " + respMsg;
+
+
+    response.setContentType(HttpFields.__TextHtml);
+    ByteArrayISO8859Writer writer = new ByteArrayISO8859Writer(2048);
+
+    URI uri = request.getURI();
+    String urlString = uri.toString();
+
+
+    writer.write("<html>\n<head>\n<title>Error ");
+    writer.write(errMsg);
+    writer.write("</title>\n");
+
+    writer.write("<body>\n");
+
+    writer.write("<h2>Error (");
+    writer.write(errMsg);
+    writer.write(")</h2>");
+
+    writer.write("<font size=+1>");
+    writer.write("Unable to proxy request for URL: <b>");
+    writer.write(HtmlUtil.htmlEncode(uri.toString()));
+    writer.write("</b><br>");
+
+    writer.write(msg);
+    writer.write("</font>");
+    writer.write("<br>");
+
+    writeErrorAuIndex(writer, urlString);
+    writeFooter(writer);
+    writer.flush();
+    response.setContentLength(writer.size());
+    writer.writeTo(response.getOutputStream());
+    writer.destroy();
+
+    request.setHandled(true);
+  }
+
+  void writeErrorAuIndex(Writer writer, String urlString) throws IOException {
+    if (true) {
+      Collection candidateAus = pluginMgr.getCandidateAus(urlString);
+      if (candidateAus != null && !candidateAus.isEmpty()) {
+	writer.write("<br>This LOCKSS cache (" +
+		     PlatformUtil.getLocalHostname() +
+		     ") does not contain content for that URL, " +
+		     "but it does contain possibly related content " +
+		     "in the following AU(s):\n");
+	Element ele = ServletUtil.manifestIndex(theDaemon, candidateAus);
+	ele.write(writer);
+      }
+    }
+  }
+
+  void writeFooter(Writer writer) throws IOException {
+    writer.write("<p><i><small>");
+    writer.write("<a href=\"" + Constants.LOCKSS_HOME_URL +
+		 "\">LOCKSS proxy</a>, ");
+    writer.write("<a href=\"http://jetty.mortbay.org/\">powered by Jetty</a>");
+    writer.write("</small></i></p>");
+    writer.write("\n</body>\n</html>\n");
+  }
+
   void sendIndexPage(HttpRequest request,
 		     HttpResponse response)
       throws HttpException, IOException {
@@ -959,17 +1102,34 @@ public class ProxyHandler extends AbstractHttpHandler {
 
       Element ele = ServletUtil.manifestIndex(theDaemon, hostname);
       Page page = new Page();
-      page.add(ele);
-      Writer wrtr = new OutputStreamWriter(response.getOutputStream());
-      page.write(wrtr);
-      wrtr.flush();
-      //     response.setContentLength(wrtr.size());
-
-      request.setHandled(true);
+      page.add(ServletUtil.centeredBlock(ele));
+      writePage(request, response, page);
     } catch (RuntimeException e) {
       log.error("sendIndexPage", e);
       throw e;
     }
   }
 
+  void writePage(HttpRequest request, HttpResponse response, Page page)
+      throws HttpException, IOException {
+    Writer wrtr = new OutputStreamWriter(response.getOutputStream());
+    page.write(wrtr);
+    wrtr.flush();
+    //     response.setContentLength(wrtr.size());
+    request.setHandled(true);
+  }
+
+  // Eventually this should display both the server's error response and
+  // the local AU index
+  void forwardResponseWithIndex(HttpRequest request, HttpResponse response,
+				Collection candidateAus,
+				LockssUrlConnection conn)
+      throws HttpException, IOException {
+    int code = conn.getResponseCode();
+    String host = HtmlUtil.htmlEncode(request.getURI().getHost());
+    String reason = conn.getResponseMessage();
+    reason = HtmlUtil.htmlEncode(reason);
+    sendErrorPage(request, response, code, "The server <b>" + host +
+		  "</b> responded with <b>" + code + " " + reason + "</b>");
+  }
 }
