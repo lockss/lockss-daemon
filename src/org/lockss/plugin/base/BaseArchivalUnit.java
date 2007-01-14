@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.115 2006-12-12 22:09:06 thib_gc Exp $
+ * $Id: BaseArchivalUnit.java,v 1.116 2007-01-14 08:03:04 tlipkis Exp $
  */
 
 /*
@@ -426,22 +426,27 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   }
 
   /**
-   * Return the Url stems from which to begin our crawl.
+   * Return the Url stems (proto, host & port) of potential content within
+   * this AU
    * @return a List of Urls
    */
   public Collection getUrlStems() {
     try {
-      URL baseUrl = paramMap.getUrl(KEY_AU_BASE_URL,null);
-      URL stem = new URL(baseUrl.getProtocol(), baseUrl.getHost(),
-                         baseUrl.getPort(), "");
-      return ListUtil.list(stem.toString());
+      List perms = getPermissionPages();
+      List res = new ArrayList(perms.size());
+      for (Iterator it = perms.iterator(); it.hasNext();) {
+	String url = (String)it.next();
+	String stem = UrlUtil.getUrlPrefix(url);
+	res.add(stem);
+      }
+      return res;
     } catch (Exception e) {
       // TODO: This should throw an exception. ProxyInfo assumes that a
       // collection will be returned and makes no attempt to catch exceptions
       return Collections.EMPTY_LIST;
     }
   }
-
+    
   /**
    * Determine whether the url falls within the CrawlSpec.
    * @param url the url

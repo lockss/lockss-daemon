@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArchivalUnit.java,v 1.37 2006-12-12 22:09:07 thib_gc Exp $
+ * $Id: TestBaseArchivalUnit.java,v 1.38 2007-01-14 08:03:02 tlipkis Exp $
  */
 
 /*
@@ -506,10 +506,15 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     props.setProperty(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
     Configuration config = ConfigurationUtil.fromProps(props);
     mbau.setBaseAuParams(config);
-    Collection expectedReturn = ListUtil.list("http://www.example.com");
-    Collection actualReturn = mbau.getUrlStems();
-    assertIsomorphic("return value", expectedReturn, actualReturn);
+    assertEquals(ListUtil.list("http://www.example.com/"), mbau.getUrlStems());
+    
+    mbau.setPermissionPages(ListUtil.list(baseUrl,
+					  "http://foo.other.com:8080/vol20/manifest.html"));
+    assertEquals(ListUtil.list("http://www.example.com/",
+			       "http://foo.other.com:8080/"),
+		 mbau.getUrlStems());
   }
+
 
   public void testSiteNormalizeUrl() {
     String url = "http://www.foo.com";
@@ -847,6 +852,7 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     private CrawlRule m_rules = null;
     private String m_startUrl ="http://www.example.com/index.html";
     private boolean setAuParams = false;
+    private List permissionPages = null;
     TitleConfig tc = null;
 
     private String mimeTypeCalledWith = null;
@@ -888,6 +894,17 @@ public class TestBaseArchivalUnit extends LockssTestCase {
 
     protected String makeStartUrl() {
       return m_startUrl;
+    }
+
+    protected List getPermissionPages() {
+      if (permissionPages != null) {
+	return permissionPages;
+      }
+      return super.getPermissionPages();
+    }
+
+    protected void setPermissionPages(List val) {
+      permissionPages = val;
     }
 
     protected CrawlWindow makeCrawlWindow() {
