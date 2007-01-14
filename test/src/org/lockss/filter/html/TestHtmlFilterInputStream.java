@@ -124,11 +124,20 @@ public class TestHtmlFilterInputStream extends LockssTestCase {
     String file = "rewind-test.txt";
     java.net.URL url = getClass().getResource(file);
     assertNotNull(file + " missing.", url);
+    // Copy rewind-test.txt to a real file.  Otherwise we're reading from a
+    // jar, and resetting the stream also involves resetting a zip input
+    // stream, which seems to have problems on some platforms.
     InputStream in = UrlUtil.openInputStream(url.toString());
     assertNotNull(in);
     in = new BufferedInputStream(in);
+    Reader rdr = new InputStreamReader(in, "iso-8859-1");
+    File tmpfile = FileTestUtil.writeTempFile("charset-test",
+					      StringUtil.fromReader(rdr));
+    rdr.close();
+    in = new FileInputStream(tmpfile);
+    in = new BufferedInputStream(in);
     InputStream expin = UrlUtil.openInputStream(url.toString());
-    Reader rdr = new InputStreamReader(expin, "iso-8859-1");
+    rdr = new InputStreamReader(expin, "iso-8859-1");
     String exp = StringUtil.fromReader(rdr);
     InputStream filt = new HtmlFilterInputStream(in, new IdentityXform());
     assertInputStreamMatchesString(exp, filt);
