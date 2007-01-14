@@ -1,5 +1,5 @@
 /*
- * $Id: TestAcsArchivalUnit.java,v 1.7 2006-10-31 07:01:07 thib_gc Exp $
+ * $Id: TestAcsArchivalUnit.java,v 1.8 2007-01-14 08:13:34 tlipkis Exp $
  */
 
 /*
@@ -236,11 +236,11 @@ public class TestAcsArchivalUnit
   public void testGetUrlStems() throws Exception {
     URL a_url = new URL(ARTICLE_ROOT);
     URL base = new URL(ROOT_URL);
-    String stem1 = "http://pubs3.acs.org";
+    String stem1 = "http://pubs3.acs.org/";
     DefinableArchivalUnit acsAu1 = makeAu(base, a_url, JOURNAL_KEY, VOL_ID, VOL_YEAR);
     assertEquals(ListUtil.list(stem1), acsAu1.getUrlStems());
 
-    String stem2 = "http://pubs.acs.org";
+    String stem2 = "http://pubs.acs.org/";
     DefinableArchivalUnit acsAu2 = makeAu(a_url, a_url, JOURNAL_KEY, VOL_ID, VOL_YEAR);
     assertEquals(ListUtil.list(stem2), acsAu2.getUrlStems());
   }

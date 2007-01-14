@@ -1,5 +1,5 @@
 /*
- * $Id: TestEmlsArchivalUnit.java,v 1.5 2006-10-31 07:01:06 thib_gc Exp $
+ * $Id: TestEmlsArchivalUnit.java,v 1.6 2007-01-14 08:13:29 tlipkis Exp $
  */
 
 /*
@@ -149,11 +149,11 @@ public class TestEmlsArchivalUnit extends LockssTestCase {
   }
 
   public void testGetUrlStems() throws Exception {
-    String stem1 = "http://muse.jhu.edu";
-    DefinableArchivalUnit eAu1 = makeAu(new URL(stem1 + "/emls/"), 3);
+    String stem1 = "http://muse.jhu.edu/";
+    DefinableArchivalUnit eAu1 = makeAu(new URL(stem1 + "emls/"), 3);
     assertEquals(ListUtil.list(stem1), eAu1.getUrlStems());
-    String stem2 = "http://muse.jhu.edu:8080";
-    DefinableArchivalUnit eAu2 = makeAu(new URL(stem2 + "/emls/"), 3);
+    String stem2 = "http://muse.jhu.edu:8080/";
+    DefinableArchivalUnit eAu2 = makeAu(new URL(stem2 + "emls/"), 3);
     assertEquals(ListUtil.list(stem2), eAu2.getUrlStems());
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestIeeeArchivalUnit.java,v 1.3 2006-10-31 07:01:07 thib_gc Exp $
+ * $Id: TestIeeeArchivalUnit.java,v 1.4 2007-01-14 08:13:22 tlipkis Exp $
  */
 
 /*
@@ -183,7 +183,7 @@ public class TestIeeeArchivalUnit
 
   public void testGetUrlStems() throws Exception {
     URL base = new URL(ROOT_URL);
-    String stem = "http://ieeexplore.ieee.org";
+    String stem = "http://ieeexplore.ieee.org/";
     DefinableArchivalUnit ieeeAu = makeAu(base, PUB_NUMBER, VOL_YEAR);
     assertEquals(ListUtil.list(stem), ieeeAu.getUrlStems());
 

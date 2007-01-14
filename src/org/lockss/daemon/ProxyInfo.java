@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyInfo.java,v 1.20 2006-04-07 20:26:45 thib_gc Exp $
+ * $Id: ProxyInfo.java,v 1.21 2007-01-14 08:13:16 tlipkis Exp $
  */
 
 /*
@@ -698,7 +698,7 @@ public class ProxyInfo {
 	for (Iterator urlIter = au.getUrlStems().iterator();
 	     urlIter.hasNext(); ) {
 	  String urlStem = (String)urlIter.next();
-	  map.put(urlStem, au);
+	  map.put(StringUtil.removeTrailing(urlStem, "/"), au);
 	}
       }
     }

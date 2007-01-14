@@ -1,5 +1,5 @@
 /*
- * $Id: TestSampleArchivalUnit.java,v 1.2 2005-09-30 22:25:01 thib_gc Exp $
+ * $Id: TestSampleArchivalUnit.java,v 1.3 2007-01-14 08:13:17 tlipkis Exp $
  */
 
 /*
@@ -140,8 +140,8 @@ public class TestSampleArchivalUnit extends LockssTestCase {
   }
 
   public void testGetUrlStems() throws Exception {
-    String stem1 = "http://www.example.org";
-    SampleArchivalUnit sAu1 = makeAu(new URL(stem1 + "/"), 108);
+    String stem1 = "http://www.example.org/";
+    SampleArchivalUnit sAu1 = makeAu(new URL(stem1), 108);
     assertEquals(ListUtil.list(stem1), sAu1.getUrlStems());
   }
 

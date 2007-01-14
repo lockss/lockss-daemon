@@ -1,5 +1,5 @@
 /*
- * $Id: TestOtherVoicesArchivalUnit.java,v 1.3 2006-10-31 07:01:07 thib_gc Exp $
+ * $Id: TestOtherVoicesArchivalUnit.java,v 1.4 2007-01-14 08:13:20 tlipkis Exp $
  */
 
 /*
@@ -181,11 +181,11 @@ public class TestOtherVoicesArchivalUnit extends LockssTestCase {
   }
 
   public void testGetUrlStems() throws Exception {
-    String stem1 = "http://www.othervoices.org";
-    DefinableArchivalUnit ovAu1 = makeAu(new URL(stem1 + "/"), 2);
+    String stem1 = "http://www.othervoices.org/";
+    DefinableArchivalUnit ovAu1 = makeAu(new URL(stem1 + "foo/"), 2);
     assertEquals(ListUtil.list(stem1), ovAu1.getUrlStems());
-    String stem2 = "http://www.othervoices.org:8080";
-    DefinableArchivalUnit ovAu2 = makeAu(new URL(stem2 + "/"), 2);
+    String stem2 = "http://www.othervoices.org:8080/";
+    DefinableArchivalUnit ovAu2 = makeAu(new URL(stem2), 2);
     assertEquals(ListUtil.list(stem2), ovAu2.getUrlStems());
   }
 

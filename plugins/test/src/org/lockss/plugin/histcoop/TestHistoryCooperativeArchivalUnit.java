@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryCooperativeArchivalUnit.java,v 1.3 2006-10-31 07:01:06 thib_gc Exp $
+ * $Id: TestHistoryCooperativeArchivalUnit.java,v 1.4 2007-01-14 08:13:23 tlipkis Exp $
  */
 
 /*
@@ -174,11 +174,11 @@ public class TestHistoryCooperativeArchivalUnit extends LockssTestCase {
   }
 
   public void testGetUrlStems() throws Exception {
-    String stem1 = "http://www.historycooperative.org";
-    DefinableArchivalUnit hcAu1 = makeAu(new URL(stem1 + "/"), 108, DIR);
+    String stem1 = "http://www.historycooperative.org/";
+    DefinableArchivalUnit hcAu1 = makeAu(new URL(stem1 + "foo/"), 108, DIR);
     assertEquals(ListUtil.list(stem1), hcAu1.getUrlStems());
-    String stem2 = "http://www.historycooperative.org:8080";
-    DefinableArchivalUnit hcAu2 = makeAu(new URL(stem2 + "/"), 108, DIR);
+    String stem2 = "http://www.historycooperative.org:8080/";
+    DefinableArchivalUnit hcAu2 = makeAu(new URL(stem2), 108, DIR);
     assertEquals(ListUtil.list(stem2), hcAu2.getUrlStems());
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestCulturalLogicArchivalUnit.java,v 1.3 2006-10-31 07:01:07 thib_gc Exp $
+ * $Id: TestCulturalLogicArchivalUnit.java,v 1.4 2007-01-14 08:13:30 tlipkis Exp $
  */
 
 /*
@@ -154,12 +154,12 @@ public class TestCulturalLogicArchivalUnit extends LockssTestCase {
   }
 
   public void testGetUrlStems() throws Exception {
-    String stem1 = "http://eserver.org/clogic";
-    DefinableArchivalUnit clAu1 = makeAu(new URL(stem1 + "/"), "2003");
-    assertEquals(ListUtil.list("http://eserver.org"), clAu1.getUrlStems());
-    String stem2 = "http://eserver.org:8080/clogic";
-    DefinableArchivalUnit clAu2 = makeAu(new URL(stem2 + "/"), "2003");
-    assertEquals(ListUtil.list("http://eserver.org:8080"), clAu2.getUrlStems());
+    String stem1 = "http://eserver.org/";
+    DefinableArchivalUnit clAu1 = makeAu(new URL(stem1 + "clogic/"), "2003");
+    assertEquals(ListUtil.list(stem1), clAu1.getUrlStems());
+    String stem2 = "http://eserver.org:8080/";
+    DefinableArchivalUnit clAu2 = makeAu(new URL(stem2 + "clogic/"), "2003");
+    assertEquals(ListUtil.list(stem2), clAu2.getUrlStems());
   }
 
   public void testShouldDoNewContentCrawlTooEarly() throws Exception {
