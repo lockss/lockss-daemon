@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.77 2006-11-15 21:17:31 troberts Exp $
+ * $Id: StringUtil.java,v 1.78 2007-01-14 07:53:43 tlipkis Exp $
  */
 
 /*
@@ -489,6 +489,14 @@ public class StringUtil {
       return str;
     }
     return str.substring(0, pos);
+  }
+
+  /** Iff the string ends with <code>end</code>, remove it. */
+  public static String removeTrailing(String str, String end) {
+    if (str.endsWith(end)) {
+      return str.substring(0, str.length() - end.length());
+    }
+    return str;
   }
 
   /* Return the substring following the final dot */

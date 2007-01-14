@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.65 2006-11-15 21:17:31 troberts Exp $
+ * $Id: TestStringUtil.java,v 1.66 2007-01-14 07:53:40 tlipkis Exp $
  */
 
 /*
@@ -638,6 +638,16 @@ public class TestStringUtil extends LockssTestCase {
     assertEquals("foo.a", StringUtil.upToFinal("foo.a.bar", "."));
     assertEquals("foo", StringUtil.upToFinal("foo", "."));
     assertEquals("", StringUtil.upToFinal(".foo", "."));
+  }
+
+  public void testRemoveTrailing() {
+    assertEquals("", StringUtil.removeTrailing("", "/"));
+    assertEquals("foo", StringUtil.removeTrailing("foo", "."));
+    assertEquals("foo", StringUtil.removeTrailing("foo/", "/"));
+    assertEquals("foo", StringUtil.removeTrailing("foobar", "bar"));
+    assertEquals("fo/o", StringUtil.removeTrailing("fo/o/", "/"));
+    assertEquals("/o", StringUtil.removeTrailing("/o/", "/"));
+    assertEquals("", StringUtil.removeTrailing("/", "/"));
   }
 
   public void testNthIndexOf() {
