@@ -1,5 +1,5 @@
 /*
- * $Id: JettyManager.java,v 1.23 2006-04-05 23:12:23 tlipkis Exp $
+ * $Id: JettyManager.java,v 1.24 2007-01-14 08:08:57 tlipkis Exp $
  */
 
 /*
@@ -103,6 +103,8 @@ public abstract class JettyManager
       System.setProperty("org.mortbay.http.HttpRequest.maxFormContentSize",
 			 CurrentConfig.getParam(PARAM_MAX_FORM_SIZE,
 						DEFAULT_MAX_FORM_SIZE));
+      HttpResponse.__statusMsg.put(new Integer(HttpResponse.__502_Bad_Gateway),
+				   "Upstream Error");
       isJettyInited = true;
     }
   }
