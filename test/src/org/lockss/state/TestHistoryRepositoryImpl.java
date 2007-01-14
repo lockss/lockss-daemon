@@ -1,10 +1,10 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.62 2006-10-25 23:11:41 smorabito Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.63 2007-01-14 07:59:09 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -126,8 +126,8 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
         new MockCachedUrlSetSpec("http://www.example.com", null);
     MockCachedUrlSet mcus = new MockCachedUrlSet(mau, mspec);
     String location = repository.getNodeLocation(mcus);
-    String expected = tempDirPath + HistoryRepositoryImpl.HISTORY_ROOT_NAME;
-    expected = LockssRepositoryImpl.mapAuToFileLocation(expected, mau);
+    String expected = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath,
+							       mau);
     expected = LockssRepositoryImpl.mapUrlToFileLocation(expected,
         "http://www.example.com");
 
@@ -142,9 +142,8 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
         "http://www.example.com/branch/test/../test2", null);
     MockCachedUrlSet mcus = new MockCachedUrlSet(mau, mspec);
     String location = repository.getNodeLocation(mcus);
-    String expectedStart = tempDirPath + HistoryRepositoryImpl.HISTORY_ROOT_NAME;
-    expectedStart = LockssRepositoryImpl.mapAuToFileLocation(expectedStart,
-        mau);
+    String expectedStart =
+      LockssRepositoryImpl.mapAuToFileLocation(tempDirPath, mau);
     String expected = LockssRepositoryImpl.mapUrlToFileLocation(
         expectedStart, "http://www.example.com/branch/test2");
 
@@ -197,8 +196,8 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
     nodeState.setPollHistoryList(NodeHistoryBean.fromBeanListToList(histories));
 
     repository.storePollHistories(nodeState);
-    String filePath = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath +
-        HistoryRepositoryImpl.HISTORY_ROOT_NAME, mau);
+    String filePath = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath,
+							       mau);
     filePath = LockssRepositoryImpl.mapUrlToFileLocation(filePath,
         "http://www.example.com/"+HistoryRepositoryImpl.HISTORY_FILE_NAME);
     File xmlFile = new File(filePath);
@@ -252,8 +251,8 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
     nodeState.setPollHistoryList(new ArrayList());
     //storing empty vector
     repository.storePollHistories(nodeState);
-    String filePath = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath +
-        HistoryRepositoryImpl.HISTORY_ROOT_NAME, mau);
+    String filePath = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath,
+							       mau);
     filePath = LockssRepositoryImpl.mapUrlToFileLocation(filePath,
         "http://www.example.com/"+HistoryRepositoryImpl.HISTORY_FILE_NAME);
     File xmlFile = new File(filePath);
@@ -266,8 +265,7 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
     mspec = new MockCachedUrlSetSpec("http://www.example2.com", null);
     mcus = new MockCachedUrlSet(mau, mspec);
     nodeState = new NodeStateImpl(mcus, -1, null, null, repository);
-    filePath = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath +
-        HistoryRepositoryImpl.HISTORY_ROOT_NAME, mau);
+    filePath = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath, mau);
     filePath = LockssRepositoryImpl.mapUrlToFileLocation(filePath,
         "http://www.example2.com/");
     xmlFile = new File(filePath);
@@ -296,8 +294,8 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
     AuState auState = new AuState(mau, 123000, 321000, 456000,
 				  strCol, 2, 1.0, true, repository);
     repository.storeAuState(auState);
-    String filePath = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath +
-        HistoryRepositoryImpl.HISTORY_ROOT_NAME, mau);
+    String filePath = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath,
+							       mau);
     filePath += HistoryRepositoryImpl.AU_FILE_NAME;
     File xmlFile = new File(filePath);
     assertTrue(xmlFile.exists());
@@ -330,8 +328,8 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
     assertFalse(damNodes.containsWithDamage("test3"));
 
     repository.storeDamagedNodeSet(damNodes);
-    String filePath = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath +
-        HistoryRepositoryImpl.HISTORY_ROOT_NAME, mau);
+    String filePath = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath,
+							       mau);
     filePath += HistoryRepositoryImpl.DAMAGED_NODES_FILE_NAME;
     File xmlFile = new File(filePath);
     assertTrue(xmlFile.exists());
@@ -374,8 +372,8 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
   public void testStoreOverwrite() throws Exception {
     AuState auState = new AuState(mau, 123, 321, -1, null, 1, 1.0, true, repository);
     repository.storeAuState(auState);
-    String filePath = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath +
-        HistoryRepositoryImpl.HISTORY_ROOT_NAME, mau);
+    String filePath = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath,
+							       mau);
     filePath += HistoryRepositoryImpl.AU_FILE_NAME;
     File xmlFile = new File(filePath);
     FileInputStream fis = new FileInputStream(xmlFile);
@@ -414,8 +412,8 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
                                             repository);
     ((NodeStateImpl)nodeState).setState(NodeState.DAMAGE_AT_OR_BELOW);
     repository.storeNodeState(nodeState);
-    String filePath = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath +
-        HistoryRepositoryImpl.HISTORY_ROOT_NAME, mau);
+    String filePath = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath,
+							       mau);
     filePath = LockssRepositoryImpl.mapUrlToFileLocation(filePath,
         "http://www.example.com/"+HistoryRepositoryImpl.NODE_FILE_NAME);
     File xmlFile = new File(filePath);
@@ -465,8 +463,8 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
     id2.setLastDisagree(654);
 
     repository.storeIdentityAgreements(ListUtil.list(id1, id2));
-    String filePath = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath +
-        HistoryRepositoryImpl.HISTORY_ROOT_NAME, mau);
+    String filePath = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath,
+							       mau);
     filePath += HistoryRepositoryImpl.IDENTITY_AGREEMENT_FILE_NAME;
     File xmlFile = new File(filePath);
     assertTrue(xmlFile.exists());

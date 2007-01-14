@@ -1,10 +1,10 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.72 2006-11-15 08:16:02 tlipkis Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.73 2007-01-14 07:59:13 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -72,9 +72,6 @@ public class LockssRepositoryImpl
   // Maps local repository name (disk path) to LocalRepository instance
   static Map localRepositories = new HashMap();
 
-  // maps auid to complete path to active repository
-  static HashMap nameMap = null;
-
   // starts with a '#' so no possibility of clashing with a URL
   static final String AU_ID_FILE = "#au_id_file";
   static final String AU_ID_PROP = "au.id";
@@ -127,7 +124,6 @@ public class LockssRepositoryImpl
   public void stopService() {
     // mainly important in testing to blank this
     lastPluginDir = INITIAL_PLUGIN_DIR;
-    nameMap = null;
     localRepositories = new HashMap();
     super.stopService();
   }
@@ -496,19 +492,11 @@ public class LockssRepositoryImpl
    */
   static String getAuDir(String auid, String repoRoot, boolean create) {
     String repoCachePath = extendCacheLocation(repoRoot);
-    if (nameMap == null) {
-      nameMap = new HashMap();
-    }
-    String auPathSlash = (String)nameMap.get(auid);
-    if (auPathSlash != null) {
-      return auPathSlash;
-    }
     LocalRepository localRepo = getLocalRepository(repoRoot);
     synchronized (localRepo) {
       Map aumap = localRepo.getAuMap();
-      auPathSlash = (String)aumap.get(auid);
+      String auPathSlash = (String)aumap.get(auid);
       if (auPathSlash != null) {
-	nameMap.put(auid, auPathSlash);
 	return auPathSlash;
       }
       if (!create) {
@@ -524,13 +512,13 @@ public class LockssRepositoryImpl
 	  String auPath = testDir.toString();
 	  logger.debug3("New au directory: "+auPath);
 	  auPathSlash = auPath + File.separator;
-	  nameMap.put(auid, auPathSlash);
 	  // write the new au property file to the new dir
 	  // XXX this data should be backed up elsewhere to avoid single-point
 	  // corruption
 	  Properties idProps = new Properties();
 	  idProps.setProperty(AU_ID_PROP, auid);
 	  saveAuIdProperties(auPath, idProps);
+	  aumap.put(auid, auPathSlash);
 	  return auPathSlash;
 	} else {
 	  if (logger.isDebug3()) {

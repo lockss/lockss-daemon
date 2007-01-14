@@ -1,10 +1,10 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.49 2006-11-09 01:44:54 thib_gc Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.50 2007-01-14 07:59:11 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -100,7 +100,6 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     RepositoryNode leaf =
         createLeaf("http://www.example.com/testDir/branch1/leaf1",
                    "test stream", null);
-    tempDirPath += LockssRepositoryImpl.CACHE_ROOT_NAME;
     tempDirPath = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath, mau);
     tempDirPath = LockssRepositoryImpl.mapUrlToFileLocation(tempDirPath,
         "http://www.example.com/testDir/branch1/leaf1");
@@ -118,7 +117,6 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     RepositoryNode leaf =
         createLeaf("http://www.example.com/testDir/branch1/leaf1",
         "test stream", null);
-    tempDirPath += LockssRepositoryImpl.CACHE_ROOT_NAME;
     tempDirPath = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath, mau);
     tempDirPath = LockssRepositoryImpl.mapUrlToFileLocation(tempDirPath,
         "http://www.example.com/testDir/branch1/leaf1");
@@ -145,7 +143,6 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     RepositoryNode leaf =
         createLeaf("http://www.example.com/testDir/branch1/leaf1",
                    "test stream", null);
-    tempDirPath += LockssRepositoryImpl.CACHE_ROOT_NAME;
     tempDirPath = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath, mau);
     tempDirPath = LockssRepositoryImpl.mapUrlToFileLocation(tempDirPath,
         "http://www.example.com/testDir/branch1/leaf1");
@@ -196,7 +193,6 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     RepositoryNode leaf =
         createLeaf("http://www.example.com/testDir/branch1/leaf1",
                    "test stream", null);
-    tempDirPath += LockssRepositoryImpl.CACHE_ROOT_NAME;
     tempDirPath = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath, mau);
     tempDirPath = LockssRepositoryImpl.mapUrlToFileLocation(tempDirPath,
         "http://www.example.com/testDir/branch1/leaf1");
@@ -423,8 +419,8 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
   public void testMakeNodeLocation() throws Exception {
     RepositoryNodeImpl leaf = (RepositoryNodeImpl)
         repo.createNewNode("http://www.example.com/testDir");
-    String nodeLoc = tempDirPath + LockssRepositoryImpl.CACHE_ROOT_NAME;
-    nodeLoc = LockssRepositoryImpl.mapAuToFileLocation(nodeLoc, mau);
+    String nodeLoc = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath,
+							      mau);
     nodeLoc = LockssRepositoryImpl.mapUrlToFileLocation(nodeLoc,
         "http://www.example.com/testDir");
     File testFile = new File(nodeLoc);
@@ -498,7 +494,6 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertEquals("value 2", props.getProperty("test 1"));
 
     // make sure proper files exist
-    tempDirPath += LockssRepositoryImpl.CACHE_ROOT_NAME;
     tempDirPath = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath, mau);
     tempDirPath = LockssRepositoryImpl.mapUrlToFileLocation(tempDirPath,
         "http://www.example.com/testDir/test.cache");

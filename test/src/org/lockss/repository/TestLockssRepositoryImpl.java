@@ -1,10 +1,10 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.59 2005-10-10 23:48:55 troberts Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.60 2007-01-14 07:59:13 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -138,9 +138,8 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
   }
 
   public void testFileLocation() throws Exception {
-    String cachePath = LockssRepositoryImpl.mapAuToFileLocation(
-        LockssRepositoryImpl.extendCacheLocation(tempDirPath),
-        mau);
+    String cachePath =
+      LockssRepositoryImpl.mapAuToFileLocation(tempDirPath, mau);
     File testFile = new File(cachePath);
 
     createLeaf("http://www.example.com/testDir/branch1/leaf1",
@@ -378,11 +377,23 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
   }
 
   public void testGetAuDirFromMap() {
-    HashMap newNameMap = new HashMap();
-    newNameMap.put(mau.getAuId(), "/foo/bar/testDir");
-    LockssRepositoryImpl.nameMap = newNameMap;
-    assertEquals("/foo/bar/testDir", LockssRepositoryImpl.getAuDir(mau, "",
-								   false));
+    LockssRepositoryImpl.LocalRepository localRepo =
+      LockssRepositoryImpl.getLocalRepository("/foo");
+    Map aumap = localRepo.getAuMap();
+    aumap.put(mau.getAuId(), "/foo/bar/testDir");
+    assertEquals("/foo/bar/testDir",
+		 LockssRepositoryImpl.getAuDir(mau, "/foo", false));
+  }
+
+  public void testGetAuDirFromMapNoCacheWrongRepo() {
+    LockssRepositoryImpl.LocalRepository localRepo =
+      LockssRepositoryImpl.getLocalRepository("/foo");
+    Map aumap = localRepo.getAuMap();
+    aumap.put(mau.getAuId(), "/foo/bar/testDir");
+    assertNull(LockssRepositoryImpl.getAuDir(mau, "/other/repo", false));
+    assertEquals("/foo/bar/testDir",
+		 LockssRepositoryImpl.getAuDir(mau, "/foo", false));
+    assertNull(LockssRepositoryImpl.getAuDir(mau, "/other/repo", false));
   }
 
   public void testGetAuDirNoCreate() {
@@ -391,23 +402,16 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
   }
 
   public void testSaveAndLoadNames() {
-    Properties newProps = new Properties();
-    newProps.setProperty(LockssRepositoryImpl.AU_ID_PROP, mau.getAuId());
+    String location =
+      LockssRepositoryImpl.mapAuToFileLocation(tempDirPath, mau);
 
-    HashMap newNameMap = new HashMap();
-    newNameMap.put(mau.getAuId(), tempDirPath);
-    LockssRepositoryImpl.nameMap = newNameMap;
-    String location = LockssRepositoryImpl.mapAuToFileLocation(
-        getCacheLocation(), mau);
-
-    LockssRepositoryImpl.saveAuIdProperties(location, newProps);
     File idFile = new File(location + LockssRepositoryImpl.AU_ID_FILE);
     assertTrue(idFile.exists());
 
-    newProps = LockssRepositoryImpl.getAuIdProperties(location);
-    assertNotNull(newProps);
+    Properties props = LockssRepositoryImpl.getAuIdProperties(location);
+    assertNotNull(props);
     assertEquals(mau.getAuId(),
-                 newProps.getProperty(LockssRepositoryImpl.AU_ID_PROP));
+                 props.getProperty(LockssRepositoryImpl.AU_ID_PROP));
   }
 
   public void testMapAuToFileLocation() {
