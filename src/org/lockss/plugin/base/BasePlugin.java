@@ -1,9 +1,9 @@
 /*
- * $Id: BasePlugin.java,v 1.43 2006-12-09 07:09:00 tlipkis Exp $
+ * $Id: BasePlugin.java,v 1.44 2007-01-14 08:02:34 tlipkis Exp $
  */
 
 /*
- Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
@@ -340,7 +340,7 @@ public abstract class BasePlugin
     }
   }
 
-  UrlNormalizer getUrlNormalizer() {
+  protected UrlNormalizer getUrlNormalizer() {
     return NullUrlNormalizer.INSTANCE;
   }
 
