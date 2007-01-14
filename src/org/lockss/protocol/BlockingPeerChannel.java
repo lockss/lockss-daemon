@@ -1,10 +1,10 @@
 /*
- * $Id: BlockingPeerChannel.java,v 1.15 2006-08-16 00:13:04 dshr Exp $
+ * $Id: BlockingPeerChannel.java,v 1.16 2007-01-14 08:02:07 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -71,6 +71,7 @@ class BlockingPeerChannel implements PeerChannel {
   private Queue sendQueue;
   private InputStream ins;
   private OutputStream outs;
+  private OutputStream socket_outs;
 
   volatile private long lastSendTime = 0;
   volatile private long lastRcvTime = 0;
@@ -309,6 +310,9 @@ class BlockingPeerChannel implements PeerChannel {
       ins = sock.getInputStream();
       outs = sock.getOutputStream();
       if (scomm.isBufferedSend()) {
+	socket_outs = outs; // if abort, close socket stream, not buffered
+			    // stream (which will hang in flush() if
+			    // ChanWriter is hung)
 	outs = new BufferedOutputStream(outs, COPY_BUFFER_SIZE);
 	if (log.isDebug3()) log.debug3(p()+"Buffering output");
       }
@@ -342,7 +346,12 @@ class BlockingPeerChannel implements PeerChannel {
       scomm.dissociateChannelFromPeer(this, peer);
       IOUtil.safeClose(sock);
       IOUtil.safeClose(ins);
-      IOUtil.safeClose(outs);
+      if (abort && socket_outs != null) {
+	// if aborting, don't close buffered stream as flush() might hang 
+	IOUtil.safeClose(socket_outs);
+      } else {
+	IOUtil.safeClose(outs);
+      }
       connecter = stopThread(connecter);
       reader = stopThread(reader);
       writer = stopThread(writer);
