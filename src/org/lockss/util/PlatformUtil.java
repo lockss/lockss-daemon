@@ -1,10 +1,10 @@
 /*
- * $Id: PlatformUtil.java,v 1.3 2006-11-22 00:49:26 tlipkis Exp $
+ * $Id: PlatformUtil.java,v 1.4 2007-01-14 08:14:53 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,6 +35,7 @@ package org.lockss.util;
 import java.io.*;
 import java.text.*;
 import java.util.*;
+import java.net.*;
 
 import org.apache.commons.lang.SystemUtils;
 import org.lockss.config.*;
@@ -305,6 +306,19 @@ public class PlatformUtil {
     }
   }
   
+  public static String getLocalHostname() {
+    String host = Configuration.getPlatformHostname();
+    if (host == null) {
+      try {
+	host = IPAddr.getLocalHost().getHostName();
+      } catch (UnknownHostException ex) {
+	log.error("Couldn't determine localhost.", ex);
+	return null;
+      }
+    }
+    return host;
+  }
+
   /** Linux implementation of platform-specific code */
   public static class Linux extends PlatformUtil {
     // offsets into /proc/<n>/stat

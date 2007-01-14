@@ -1,8 +1,8 @@
 /*
- * $Id: SmtpMailService.java,v 1.12 2006-06-04 06:25:53 tlipkis Exp $
+ * $Id: SmtpMailService.java,v 1.13 2007-01-14 08:15:00 tlipkis Exp $
  *
 
- Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -96,7 +96,7 @@ public class SmtpMailService
 				     Configuration prevConfig,
 				     Configuration.Differences changedKeys) {
     // Unconditional: not under PREFIX
-    localHostName = getLocalHostname();
+    localHostName = PlatformUtil.getLocalHostname();
 
     // Don't rely on change to enable by default
     boolean doEnable = config.getBoolean(PARAM_ENABLED, DEFAULT_ENABLED);
@@ -129,19 +129,6 @@ public class SmtpMailService
 	enabled = doEnable;
       }
     }
-  }
-
-  private String getLocalHostname() {
-    String host = Configuration.getPlatformHostname();
-    if (host == null) {
-      try {
-        host = IPAddr.getLocalHost().getHostName();
-      } catch (UnknownHostException ex) {
-        log.error("Couldn't determine localhost.", ex);
-	return null;
-      }
-    }
-    return host;
   }
 
   public boolean sendMail(String sender, String recipient, MailMessage msg) {

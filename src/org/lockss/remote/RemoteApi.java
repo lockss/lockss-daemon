@@ -1,10 +1,10 @@
 /*
- * $Id: RemoteApi.java,v 1.57 2006-11-09 01:44:54 thib_gc Exp $
+ * $Id: RemoteApi.java,v 1.58 2007-01-14 08:14:58 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -541,9 +541,9 @@ public class RemoteApi
     int dirn = 1;
     for (Iterator iter = aus.iterator(); iter.hasNext(); ) {
       ArchivalUnit au = (ArchivalUnit)iter.next();
-      log.info("au: "+ au);
+      log.debug("au: "+ au);
       if (pluginMgr.isInternalAu(au)) {
-	log.info("internal: "+ au);
+	log.debug("internal: "+ au);
 	continue;
       }
       String dir = Integer.toString(dirn) + "/";
@@ -592,7 +592,7 @@ public class RemoteApi
 
   void addCfgFileToZip(ZipOutputStream z, File file, String entName)
       throws IOException {
-    log.info("addCfgFileToZip: "+ file);
+    log.debug("addCfgFileToZip: "+ file);
     try {
       InputStream in = new BufferedInputStream(new FileInputStream(file));
       if (entName == null) {
@@ -607,7 +607,7 @@ public class RemoteApi
     try {
       z.putNextEntry(new ZipEntry(entName));
       StreamUtil.copy(in, z);
-      log.info("added: "+ entName);
+      log.debug("added: "+ entName);
     } finally {
       IOUtil.safeClose(in);
       z.closeEntry();
@@ -1518,7 +1518,7 @@ public class RemoteApi
 			   DEFAULT_BACKUP_EMAIL_ENABLED)) {
       return false;
     }
-    String machineName = ConfigManager.getPlatformHostname();
+    String machineName = PlatformUtil.getLocalHostname();
     if (StringUtil.isNullString(machineName)) {
       machineName = "Unknown";
     }
