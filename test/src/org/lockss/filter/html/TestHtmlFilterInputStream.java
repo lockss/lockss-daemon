@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -103,6 +103,38 @@ public class TestHtmlFilterInputStream extends LockssTestCase {
     assertEquals("bold", nl.elementAt(1).toHtml());
     assertEquals("</b>", nl.elementAt(2).toHtml());
   }
+
+  public void testCharsetFailsIfNoMark() throws Exception {
+    ConfigurationUtil.setFromArgs(HtmlFilterInputStream.PARAM_MARK_SIZE, "0"); 
+    log.info("read(): exception following is expected");
+    try {
+      doParseCharset();
+      fail("parser should fail to reset() input stream if not mark()ed");
+    } catch (IOException e) {
+    }
+  }
+
+  public void testCharset() throws Exception {
+    ConfigurationUtil.setFromArgs(HtmlFilterInputStream.PARAM_MARK_SIZE,
+				  "20000"); 
+    doParseCharset();
+  }
+
+  void doParseCharset() throws Exception {
+    String file = "rewind-test.txt";
+    java.net.URL url = getClass().getResource(file);
+    assertNotNull(file + " missing.", url);
+    InputStream in = UrlUtil.openInputStream(url.toString());
+    assertNotNull(in);
+    in = new BufferedInputStream(in);
+    InputStream expin = UrlUtil.openInputStream(url.toString());
+    Reader rdr = new InputStreamReader(expin, "iso-8859-1");
+    String exp = StringUtil.fromReader(rdr);
+    InputStream filt = new HtmlFilterInputStream(in, new IdentityXform());
+    assertInputStreamMatchesString(exp, filt);
+  }
+
+
 
   class IdentityXform implements HtmlTransform {
     public NodeList transform(NodeList nl) {

@@ -1,10 +1,10 @@
 /*
- * $Id: HtmlFilterInputStream.java,v 1.2 2006-12-06 05:19:02 tlipkis Exp $
+ * $Id: HtmlFilterInputStream.java,v 1.3 2007-01-14 08:10:43 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -80,6 +80,12 @@ import org.lockss.util.*;
 public class HtmlFilterInputStream extends InputStream {
   private static Logger log = Logger.getLogger("HtmlFilterInputStream");
 
+  /** The readlimit used to mark() the input stream in case of charset
+   * changes requiring reset() */
+  public static final String PARAM_MARK_SIZE =
+    Configuration.PREFIX + "filter.html.mark";
+  public static final int DEFAULT_MARK_SIZE = 16 * 1024;
+
   private FeedbackLogger fl = new FeedbackLogger();
 
   private InputStream in;
@@ -126,6 +132,12 @@ public class HtmlFilterInputStream extends InputStream {
 
   /** Make a parser, register our extra nodes */
   Parser makeParser() throws UnsupportedEncodingException {
+    // InputStreamSource may reset() the stream if it encounters a charset
+    // change.  It expects the stream already to have been mark()ed.
+    int mark = CurrentConfig.getIntParam(PARAM_MARK_SIZE, DEFAULT_MARK_SIZE);
+    if (mark > 0) {
+      in.mark(mark);
+    }
     Page pg = new Page(new InputStreamSource(in));
     Lexer lx = new Lexer(pg);
     Parser parser = new Parser(lx, fl);
