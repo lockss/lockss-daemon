@@ -1,5 +1,5 @@
 /*
- * $Id: RepairCrawler.java,v 1.64 2006-11-14 19:21:29 tlipkis Exp $
+ * $Id: RepairCrawler.java,v 1.65 2007-01-16 21:14:09 troberts Exp $
  */
 
 /*
@@ -109,6 +109,12 @@ public class RepairCrawler extends BaseCrawler {
     Configuration.PREFIX + "crawler.repair_needs_permission";
   public static final boolean DEFAULT_REPAIR_NEEDS_PERMISSION = false;
 
+  public static final String PARAM_NUM_CAN_REPAIR_OUTSIDE_WINDOW =
+    Configuration.PREFIX + "crawler.maxRepairsOutsideWindow";
+  public static final int DEFAULT_NUM_CAN_REPAIR_OUTSIDE_WINDOW = 0;
+
+
+
   /** Poller requires fetched URLs to be kept in status */
   public static final String FORCE_RECORD_STATUS_URLS = "fetched";
 
@@ -118,6 +124,8 @@ public class RepairCrawler extends BaseCrawler {
   int numCacheRetries = DEFAULT_NUM_RETRIES_FROM_CACHES;
 //   int numPubRetries = DEFAULT_NUM_RETRIES_FROM_PUBLISHER;
   String repairFromCacheAddr = null;
+
+  int numCanCrawlOutsideWindow;
 
   private float percentFetchFromCache = 0;
 
@@ -149,6 +157,9 @@ public class RepairCrawler extends BaseCrawler {
     repairFromCacheAddr = config.get(PARAM_REPAIR_FROM_CACHE_ADDR);
     repairNeedsPermission = config.getBoolean(PARAM_REPAIR_NEEDS_PERMISSION,
                                               DEFAULT_REPAIR_NEEDS_PERMISSION);
+    numCanCrawlOutsideWindow = config.getInt(PARAM_NUM_CAN_REPAIR_OUTSIDE_WINDOW,
+                                            DEFAULT_NUM_CAN_REPAIR_OUTSIDE_WINDOW);
+
   }
 
   public String getTypeString() {
@@ -198,10 +209,16 @@ public class RepairCrawler extends BaseCrawler {
       //that we shouldn't cache
       // check crawl window during crawl
       if (!spec.inCrawlWindow()) {
-	logger.debug("Crawl canceled: outside of crawl window");
-	windowClosed = true;
-	// break from while loop
-	break;
+	if (numCanCrawlOutsideWindow < 1) {
+	  logger.debug("Crawl canceled: outside of crawl window");
+	  windowClosed = true;
+	  // break from while loop
+	  break;
+	} else {
+	  logger.debug("Outside of crawl window, but repairing "
+	               + numCanCrawlOutsideWindow + " more URLs.");
+	  numCanCrawlOutsideWindow--;
+	}
       }
       if (!spec.isIncluded(url)) {
 	if (url.charAt(url.length()-1) != '/') {

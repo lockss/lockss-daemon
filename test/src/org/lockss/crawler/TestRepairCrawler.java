@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepairCrawler.java,v 1.41 2006-11-14 19:21:28 tlipkis Exp $
+ * $Id: TestRepairCrawler.java,v 1.42 2007-01-16 21:14:09 troberts Exp $
  */
 
 /*
@@ -166,6 +166,68 @@ public class TestRepairCrawler extends LockssTestCase {
     assertEquals(0, cachedUrls.size());
     assertEquals(Crawler.STATUS_WINDOW_CLOSED,
 		 crawler.getStatus().getCrawlError());
+  }
+
+  public void testRepairCrawlIgnoreCrawlWindow() {
+    Properties p = new Properties();
+    p.setProperty(RepairCrawler.PARAM_NUM_CAN_REPAIR_OUTSIDE_WINDOW, "5");
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+
+    String repairUrl1 = "http://example.com/url1.html";
+    String repairUrl2 = "http://example.com/url2.html";
+
+    mau.addUrl(repairUrl1);
+    mau.addUrl(repairUrl2);
+
+    crawlRule.addUrlToCrawl(repairUrl1);
+    crawlRule.addUrlToCrawl(repairUrl2);
+
+    List repairUrls = ListUtil.list(repairUrl1, repairUrl2);
+    spec = new SpiderCrawlSpec(startUrls, permissionPages, crawlRule, 1);
+    spec.setCrawlWindow(new MyMockCrawlWindow());
+    crawler = new RepairCrawler(mau, spec, aus, repairUrls, 0);
+    ((BaseCrawler)crawler).daemonPermissionCheckers =
+      ListUtil.list(new MockPermissionChecker(100));
+
+    assertTrue(crawler.doCrawl());
+
+    Set cachedUrls = cus.getForceCachedUrls();
+    assertSameElements(ListUtil.list(repairUrl1, repairUrl2), cachedUrls);
+  }
+
+  public void testRepairCrawlIgnoreCrawlWindowLimitSize() {
+    Properties p = new Properties();
+    p.setProperty(RepairCrawler.PARAM_NUM_CAN_REPAIR_OUTSIDE_WINDOW, "3");
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+
+    String repairUrl1 = "http://example.com/url1.html";
+    String repairUrl2 = "http://example.com/url2.html";
+    String repairUrl3 = "http://example.com/url3.html";
+    String repairUrl4 = "http://example.com/url4.html";
+
+    mau.addUrl(repairUrl1);
+    mau.addUrl(repairUrl2);
+    mau.addUrl(repairUrl3);
+    mau.addUrl(repairUrl4);
+
+    crawlRule.addUrlToCrawl(repairUrl1);
+    crawlRule.addUrlToCrawl(repairUrl2);
+    crawlRule.addUrlToCrawl(repairUrl3);
+    crawlRule.addUrlToCrawl(repairUrl4);
+
+    List repairUrls = ListUtil.list(repairUrl1, repairUrl2,
+                                    repairUrl3, repairUrl4);
+    spec = new SpiderCrawlSpec(startUrls, permissionPages, crawlRule, 1);
+    spec.setCrawlWindow(new MyMockCrawlWindow());
+    crawler = new RepairCrawler(mau, spec, aus, repairUrls, 0);
+    ((BaseCrawler)crawler).daemonPermissionCheckers =
+      ListUtil.list(new MockPermissionChecker(100));
+
+    assertFalse(crawler.doCrawl());
+
+    Set cachedUrls = cus.getForceCachedUrls();
+    assertSameElements(ListUtil.list(repairUrl1, repairUrl2, repairUrl3),
+                       cachedUrls);
   }
 
   public void testRepairCrawlPokesWatchdog() {
