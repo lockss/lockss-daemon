@@ -125,6 +125,10 @@
 	  <property name="value" value="http://www.ul.ie/" />
 	</property>
 	<property name="param.2">
+	  <property name="key" value="base_url2" />
+	  <property name="value" value="http://www.mic.ul.ie/" />
+	</property>
+	<property name="param.3">
 	  <property name="key" value="volume_name" />
 	  <property name="value" value="10" />
 	</property>
@@ -140,6 +144,10 @@
 	  <property name="value" value="http://www.ul.ie/" />
 	</property>
 	<property name="param.2">
+	  <property name="key" value="base_url2" />
+	  <property name="value" value="http://www.mic.ul.ie/" />
+	</property>
+	<property name="param.3">
 	  <property name="key" value="volume_name" />
 	  <property name="value" value="9" />
 	</property>
@@ -155,6 +163,10 @@
 	  <property name="value" value="http://www.ul.ie/" />
 	</property>
 	<property name="param.2">
+	  <property name="key" value="base_url2" />
+	  <property name="value" value="http://www.mic.ul.ie/" />
+	</property>
+	<property name="param.3">
 	  <property name="key" value="volume_name" />
 	  <property name="value" value="8" />
 	</property>
@@ -170,6 +182,10 @@
 	  <property name="value" value="http://www.ul.ie/" />
 	</property>
 	<property name="param.2">
+	  <property name="key" value="base_url2" />
+	  <property name="value" value="http://www.mic.ul.ie/" />
+	</property>
+	<property name="param.3">
 	  <property name="key" value="volume_name" />
 	  <property name="value" value="7" />
 	</property>
@@ -185,6 +201,10 @@
 	  <property name="value" value="http://www.ul.ie/" />
 	</property>
 	<property name="param.2">
+	  <property name="key" value="base_url2" />
+	  <property name="value" value="http://www.mic.ul.ie/" />
+	</property>
+	<property name="param.3">
 	  <property name="key" value="volume_name" />
 	  <property name="value" value="6" />
 	</property>
@@ -200,6 +220,10 @@
 	  <property name="value" value="http://www.ul.ie/" />
 	</property>
 	<property name="param.2">
+	  <property name="key" value="base_url2" />
+	  <property name="value" value="http://www.mic.ul.ie/" />
+	</property>
+	<property name="param.3">
 	  <property name="key" value="volume_name" />
 	  <property name="value" value="5" />
 	</property>
@@ -215,6 +239,10 @@
 	  <property name="value" value="http://www.ul.ie/" />
 	</property>
 	<property name="param.2">
+	  <property name="key" value="base_url2" />
+	  <property name="value" value="http://www.mic.ul.ie/" />
+	</property>
+	<property name="param.3">
 	  <property name="key" value="volume_name" />
 	  <property name="value" value="4" />
 	</property>
@@ -230,6 +258,10 @@
 	  <property name="value" value="http://www.ul.ie/" />
 	</property>
 	<property name="param.2">
+	  <property name="key" value="base_url2" />
+	  <property name="value" value="http://www.mic.ul.ie/" />
+	</property>
+	<property name="param.3">
 	  <property name="key" value="volume_name" />
 	  <property name="value" value="3" />
 	</property>
@@ -245,6 +277,10 @@
 	  <property name="value" value="http://www.ul.ie/" />
 	</property>
 	<property name="param.2">
+	  <property name="key" value="base_url2" />
+	  <property name="value" value="http://www.mic.ul.ie/" />
+	</property>
+	<property name="param.3">
 	  <property name="key" value="volume_name" />
 	  <property name="value" value="2" />
 	</property>
@@ -260,6 +296,10 @@
 	  <property name="value" value="http://www.ul.ie/" />
 	</property>
 	<property name="param.2">
+	  <property name="key" value="base_url2" />
+	  <property name="value" value="http://www.mic.ul.ie/" />
+	</property>
+	<property name="param.3">
 	  <property name="key" value="volume_name" />
 	  <property name="value" value="1" />
 	</property>
@@ -2848,6 +2888,21 @@
 	  <property name="value" value="1998" />
 	</property>
         <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="ColumbiaUndergraduateScienceJournal2006">
+	<property name="title" value="Columbia Undergraduate Science Journal 2006" />
+	<property name="estSize" value="10MB" />
+	<property name="journalTitle" value="Columbia Undergraduate Science Journal" />
+	<property name="plugin" value="org.lockss.plugin.ojs.OJSPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.cusj.columbia.edu/cusj/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2006" />
+	</property>
       </property>
 
       <property name="ameriquests2006">
