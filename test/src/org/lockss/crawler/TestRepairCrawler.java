@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepairCrawler.java,v 1.42 2007-01-16 21:14:09 troberts Exp $
+ * $Id: TestRepairCrawler.java,v 1.43 2007-01-16 23:33:23 troberts Exp $
  */
 
 /*
@@ -170,7 +170,7 @@ public class TestRepairCrawler extends LockssTestCase {
 
   public void testRepairCrawlIgnoreCrawlWindow() {
     Properties p = new Properties();
-    p.setProperty(RepairCrawler.PARAM_NUM_CAN_REPAIR_OUTSIDE_WINDOW, "5");
+    p.setProperty(RepairCrawler.PARAM_MAX_REPAIRS_OUTSIDE_WINDOW, "5");
     ConfigurationUtil.setCurrentConfigFromProps(p);
 
     String repairUrl1 = "http://example.com/url1.html";
@@ -197,7 +197,7 @@ public class TestRepairCrawler extends LockssTestCase {
 
   public void testRepairCrawlIgnoreCrawlWindowLimitSize() {
     Properties p = new Properties();
-    p.setProperty(RepairCrawler.PARAM_NUM_CAN_REPAIR_OUTSIDE_WINDOW, "3");
+    p.setProperty(RepairCrawler.PARAM_MAX_REPAIRS_OUTSIDE_WINDOW, "3");
     ConfigurationUtil.setCurrentConfigFromProps(p);
 
     String repairUrl1 = "http://example.com/url1.html";

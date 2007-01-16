@@ -1,5 +1,5 @@
 /*
- * $Id: RepairCrawler.java,v 1.65 2007-01-16 21:14:09 troberts Exp $
+ * $Id: RepairCrawler.java,v 1.66 2007-01-16 23:33:23 troberts Exp $
  */
 
 /*
@@ -109,9 +109,9 @@ public class RepairCrawler extends BaseCrawler {
     Configuration.PREFIX + "crawler.repair_needs_permission";
   public static final boolean DEFAULT_REPAIR_NEEDS_PERMISSION = false;
 
-  public static final String PARAM_NUM_CAN_REPAIR_OUTSIDE_WINDOW =
+  public static final String PARAM_MAX_REPAIRS_OUTSIDE_WINDOW =
     Configuration.PREFIX + "crawler.maxRepairsOutsideWindow";
-  public static final int DEFAULT_NUM_CAN_REPAIR_OUTSIDE_WINDOW = 0;
+  public static final int DEFAULT_MAX_REPAIRS_OUTSIDE_WINDOW = 0;
 
 
 
@@ -125,7 +125,7 @@ public class RepairCrawler extends BaseCrawler {
 //   int numPubRetries = DEFAULT_NUM_RETRIES_FROM_PUBLISHER;
   String repairFromCacheAddr = null;
 
-  int numCanCrawlOutsideWindow;
+  int maxRepairsOutsideWindow;
 
   private float percentFetchFromCache = 0;
 
@@ -157,8 +157,8 @@ public class RepairCrawler extends BaseCrawler {
     repairFromCacheAddr = config.get(PARAM_REPAIR_FROM_CACHE_ADDR);
     repairNeedsPermission = config.getBoolean(PARAM_REPAIR_NEEDS_PERMISSION,
                                               DEFAULT_REPAIR_NEEDS_PERMISSION);
-    numCanCrawlOutsideWindow = config.getInt(PARAM_NUM_CAN_REPAIR_OUTSIDE_WINDOW,
-                                            DEFAULT_NUM_CAN_REPAIR_OUTSIDE_WINDOW);
+    maxRepairsOutsideWindow = config.getInt(PARAM_MAX_REPAIRS_OUTSIDE_WINDOW,
+                                            DEFAULT_MAX_REPAIRS_OUTSIDE_WINDOW);
 
   }
 
@@ -203,21 +203,23 @@ public class RepairCrawler extends BaseCrawler {
 
     Iterator it = getStartingUrls();
 
+    int numRepairedOutsideCrawlWindow = 0;
+
     while (it.hasNext() && !crawlAborted) {
       String url = (String)it.next();
       //catch and warn if there's a url in the start urls
       //that we shouldn't cache
       // check crawl window during crawl
       if (!spec.inCrawlWindow()) {
-	if (numCanCrawlOutsideWindow < 1) {
+	if (numRepairedOutsideCrawlWindow >= maxRepairsOutsideWindow) {
 	  logger.debug("Crawl canceled: outside of crawl window");
 	  windowClosed = true;
 	  // break from while loop
 	  break;
 	} else {
 	  logger.debug("Outside of crawl window, but repairing "
-	               + numCanCrawlOutsideWindow + " more URLs.");
-	  numCanCrawlOutsideWindow--;
+	               + numRepairedOutsideCrawlWindow + " more URLs.");
+	  numRepairedOutsideCrawlWindow++;
 	}
       }
       if (!spec.isIncluded(url)) {
