@@ -8,6 +8,10 @@
     <long>6000</long>
   </entry>
   <entry>
+    <string>plugin_version</string>
+    <string>2</string>
+  </entry>
+  <entry>
     <string>au_name</string>
     <string>&quot;Minerva - An Internet Journal of Philosophy Volume %s&quot;, volume_name</string>
   </entry>
@@ -22,9 +26,12 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>4,&quot;^(%s|%s)&quot;, base_url, base_url2</string>
       <string>1,&quot;%s~philos/vol%s/index.html&quot;, base_url, volume_name</string>
       <string>1,&quot;%s~philos/vol%s/&quot;, base_url, volume_name</string>
+      <string>1,&quot;%sstephen/vol%s/&quot;, base_url2, volume_name</string>
+      <string>1,&quot;%sstephen/.*\.[pP][dD][fF]&quot;, base_url2</string>
+      <string>1,&quot;%sstephen/permission\.htm&quot;, base_url2</string>
       <string>1,&quot;.*\.([cC][sS][sS]|[gG][iI][fF]|[jJ][pP][eE][gG]|[jJ][pP][gG]|[jJ][sS]|[pP][nN][gG])$&quot;</string>
     </list>
   </entry>
@@ -33,8 +40,23 @@
     <string>&quot;%s~philos/vol%s/index.html&quot;, base_url, volume_name</string>
   </entry>
   <entry>
+    <string>au_manifest</string>
+    <list>
+      <string>&quot;%s~philos/vol%s/index.html&quot;, base_url, volume_name</string>
+      <string>&quot;%sstephen/permission.htm&quot;, base_url2</string>
+    </list>
+  </entry>
+  <entry>
     <string>plugin_config_props</string>
     <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume_name</key>
+        <displayName>Volume Name</displayName>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
         <key>base_url</key>
         <displayName>Base URL</displayName>
@@ -45,10 +67,11 @@
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
-        <key>volume_name</key>
-        <displayName>Volume Name</displayName>
+        <key>base_url2</key>
+        <displayName>Second Base Url</displayName>
+        <description>Second base URL</description>
         <type>1</type>
-        <size>20</size>
+        <size>255</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
