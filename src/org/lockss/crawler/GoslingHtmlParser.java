@@ -1,10 +1,10 @@
 /*
- * $Id: GoslingHtmlParser.java,v 1.47 2006-11-15 23:00:08 troberts Exp $
+ * $Id: GoslingHtmlParser.java,v 1.48 2007-01-16 08:17:09 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -74,12 +74,12 @@ import java.util.*;
 import java.net.*;
 import java.io.*;
 
+import org.apache.commons.io.IOUtils;
 import org.htmlparser.util.*;
 
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.*;
 import org.lockss.config.*;
-
 
 public class GoslingHtmlParser implements ContentParser {
 
@@ -87,9 +87,13 @@ public class GoslingHtmlParser implements ContentParser {
   public static final String PARAM_BUFFER_CAPACITY =
     Configuration.PREFIX + "crawler.buffer_capacity";
 
-  public static final boolean DEFAULT_PARSE_JS = false;
   public static final String PARAM_PARSE_JS =
     Configuration.PREFIX + "crawler.parse_js";
+  public static final boolean DEFAULT_PARSE_JS = false;
+  
+  public static final String PARAM_PARSE_CSS =
+    Configuration.PREFIX + "crawler.parse_css";
+  public static final boolean DEFAULT_PARSE_CSS = true;
 
   protected static final String ATAG = "a";
   protected static final String APPLETTAG = "applet";
@@ -109,13 +113,14 @@ public class GoslingHtmlParser implements ContentParser {
   protected static final String OBJECTTAG = "object";
   protected static final String OPTIONTAG = "option";
   protected static final String SCRIPTTAG = "script";
+  protected static final String STYLETAG = "style";
   protected static final String SRC = "src";
   protected static final String TABLETAG = "table";
-  protected static final String TDTAG = "tc";
+  protected static final String TDTAG = "td";
+  protected static final String THTAG = "th";
   protected static final String VALUETAG = "value";
 
   protected static final String SCRIPTTAGEND = "/script>";
-
 
   protected static final String REFRESH = "refresh";
   protected static final String HTTP_EQUIV = "http-equiv";
@@ -171,8 +176,10 @@ public class GoslingHtmlParser implements ContentParser {
    *
    * @throws IOException
    */
-  public void parseForUrls(Reader reader, String srcUrl,
-			   ArchivalUnit au, ContentParser.FoundUrlCallback cb)
+  public void parseForUrls(Reader reader,
+                           String srcUrl,
+			   ArchivalUnit au,
+                           ContentParser.FoundUrlCallback cb)
       throws IOException {
     if (reader == null) {
       throw new IllegalArgumentException("Called with null reader");
@@ -181,36 +188,37 @@ public class GoslingHtmlParser implements ContentParser {
     } else if (cb == null) {
       throw new IllegalArgumentException("Called with null callback");
     }
-    this.srcUrl = srcUrl;
     this.reader = reader;
+    this.srcUrl = srcUrl;
 
     try {
       init();
-      if (isTrace) logger.debug2("Extracting urls from " + srcUrl);
-      String nextUrl = null;
-      while ((nextUrl = extractNextLink(ring, au)) != null) {
-	if (isTrace) {
-	  logger.debug2("Extracted "+nextUrl);
-	}
-	cb.foundUrl(nextUrl);
-      }
+      if (isTrace) logger.debug2("Extracting URLs from " + srcUrl);
+
+      do {
+        // keep calling extractNextLink
+      } while (extractNextLink(ring, au, cb));
     } finally {
       // Let go of large objects
       ring = null;
-      if (reader != null) {
-	try {
-	  reader.close();
-	} catch (IOException ignore) {}
-	reader = null;
-      }
+      IOUtils.closeQuietly(reader);
+      reader = null;
     }
+  }
+
+  protected void emit(ContentParser.FoundUrlCallback callback, String url) {
+    if (isTrace) {
+      logger.debug2("Extracted "+url);
+    }
+    callback.foundUrl(url);
   }
 
 
   /**
    * Keep calling skipLeadingWhiteSpace and refilling the char ring until there
    * is no more leading white space
-   * @param ring CharRing to strip whitespace from
+   * @param ring 
+   * CharRing to strip whitespace from
    * @param minKars minimum number of characters needed in the CharRing
    * @throws IOException
    */
@@ -231,7 +239,7 @@ public class GoslingHtmlParser implements ContentParser {
    * @throws IOException
    * @throws MalformedURLException
    */
-  protected String extractNextLink(CharRing ring, ArchivalUnit au)
+  protected boolean extractNextLink(CharRing ring, ArchivalUnit au, ContentParser.FoundUrlCallback cb)
       throws IOException, MalformedURLException {
     while (refill(MIN_TAG_LENGTH)) {
       //skip to the next tag
@@ -243,13 +251,13 @@ public class GoslingHtmlParser implements ContentParser {
 	// 	if (isTrace) logger.debug3("Found < at " + idx);
 	ring.skip(idx + 1);
 	skipWhiteSpace(ring, MIN_TAG_LENGTH);
-	if (!refill(MIN_TAG_LENGTH)) return null;
+	if (!refill(MIN_TAG_LENGTH)) return false;
 	if (ring.get(0) == '!' && ring.get(1) == '-' && ring.get(2) == '-') {
 	  // html comment, skip
 	  ring.skip(3);
 	  if (isTrace) logger.debug3("Searching for end of comment");
 	  while (true) {
-	    if (!refill(MIN_TAG_LENGTH)) return null;
+	    if (!refill(MIN_TAG_LENGTH)) return false;
 	    idx = ring.indexOf(">", -1, false);
 	    if (idx >= 2 &&
 		((ring.get(idx-1) == '-' && ring.get(idx-2) == '-') ||
@@ -269,8 +277,13 @@ public class GoslingHtmlParser implements ContentParser {
 	      ring.skip(ring.size() - 3);
 	    }
 	  }
-	} else if (ringStartsWithIgnoreCase(ring, "script>")) {
-	  readThroughTag(SCRIPTTAGEND);
+        } else if (ringStartsWithIgnoreCase(ring, "script>")) { // <script> (no attributes)
+          readThroughTag(SCRIPTTAGEND);
+        } else if (ringStartsWithIgnoreCase(ring, "style>")
+                   && CurrentConfig.getBooleanParam(PARAM_PARSE_CSS,
+                                                    DEFAULT_PARSE_CSS)) { // <style> (no attributes)
+          ring.skip("style>".length());
+          parseStyleContentsFromRing(au, cb);
 	} else {
 	  // html tag, read into StringBuffer (created lazily if needed)
 	  StringBuffer tagBuf = null;
@@ -301,19 +314,19 @@ public class GoslingHtmlParser implements ContentParser {
 	  }
 
 	  if (tagBuf != null && tagBuf.length() >= MIN_TAG_LENGTH) {
-	    String nextLink = parseLink(tagBuf, au);
-	    if (lastTagWasScript) {
+	    boolean nextLink = parseLink(tagBuf, au, cb);
+            if (lastTagWasScript) {
 	      readThroughTag(SCRIPTTAGEND);
 	      lastTagWasScript = false;
 	    }
-	    if (nextLink != null) {
-	      return nextLink;
+	    if (nextLink) {
+              return true;
 	    }
 	  }
 	}
       }
     }
-    return null;
+    return false;
   }
 
   private boolean ringStartsWithIgnoreCase(CharRing ring, String str) throws IOException {
@@ -381,7 +394,7 @@ public class GoslingHtmlParser implements ContentParser {
   /**
    * Method overridden in some sub classes, so change with care
    */
-  protected String extractLinkFromTag(StringBuffer link, ArchivalUnit au) {
+  protected String extractLinkFromTag(StringBuffer link, ArchivalUnit au, ContentParser.FoundUrlCallback cb) throws IOException {
     //String returnStr = null;
     switch (link.charAt(0)) {
       case 'a': //<a href=http://www.yahoo.com>
@@ -414,7 +427,6 @@ public class GoslingHtmlParser implements ContentParser {
             return (getAttributeValue(optionAttribute, link));
           }
         }
-
         break;
       case 'i': //<img src=image.gif>
       case 'I':
@@ -434,7 +446,7 @@ public class GoslingHtmlParser implements ContentParser {
           return (  getAttributeValue(HREF, link) );
         }
         break;
-      case 'b': //<body backgroung=background.gif>
+      case 'b': //<body background=background.gif>
       case 'B': //or <base href=http://www.example.com>
         if (beginsWithTag(link, BODYTAG)) {
           return (  getAttributeValue(BACKGROUNDSRC, link) );
@@ -456,11 +468,16 @@ public class GoslingHtmlParser implements ContentParser {
 	  }
 	}
         break;
-      case 's': //<script src=blah.js>
+      case 's': //<script src=blah.js> or <style type="text/css">...CSS...</style>
       case 'S':
         if (beginsWithTag(link, SCRIPTTAG)) {
           lastTagWasScript = true;
           return (  getAttributeValue(SRC, link) );
+        }
+        if (beginsWithTag(link, STYLETAG)
+            && CurrentConfig.getBooleanParam(PARAM_PARSE_CSS,
+                                             DEFAULT_PARSE_CSS)) {
+          parseStyleContentsFromRing(au, cb);
         }
         break;
       case 'm': //<meta http-equiv="refresh"
@@ -473,15 +490,64 @@ public class GoslingHtmlParser implements ContentParser {
 	  }
         }
         break;
-      case 't': //<tc background=back.gif> or <table background=back.gif>
-      case 'T':
-        if (beginsWithTag(link, TABLETAG) ||
-          beginsWithTag(link, TDTAG)) {
+      case 't': // <table background=back.gif> or <td background=back.gif> or <th background=back.gif> 
+      case 'T': // See http://msdn.microsoft.com/workshop/author/dhtml/reference/properties/background_2.asp
+        if (beginsWithTag(link, TABLETAG)
+            || beginsWithTag(link, TDTAG)
+            || beginsWithTag(link, THTAG)) {
           return (  getAttributeValue(BACKGROUNDSRC, link) );
         }
         break;
     }
     return null;
+  }
+
+  protected void parseStyleContentsFromRing(ArchivalUnit au, ContentParser.FoundUrlCallback cb) {
+    Reader cssReader = new Reader() {
+      
+      boolean closed = false;
+      
+      public void close() {
+        closed = true;
+      }
+      
+      public int read(char[] cbuf, int off, int len) throws IOException {
+        int ix = 0;
+        while (ix < len) {
+          int ret = read();
+          if (ret == -1) break; 
+          cbuf[off + ix] = (char)ret;
+          ++ix;
+        }
+        return ix == 0 ? -1 : ix;
+      }
+      
+      public int read() throws IOException {
+        if (!refill("</style>".length()) && !closed) {
+          logger.warning("A <style> section is running off the end of " + srcUrl);
+        }
+        if (ring.size() == 0 || ring.startsWithIgnoreCase("</style>")) {
+          return -1;
+        }
+        return ring.remove();
+      }
+    };
+
+    try {
+      CssParser cssParser = new CssParser();
+      cssParser.parseForUrls(cssReader, srcUrl, au, cb);
+    }
+    catch (IOException ioe) {
+      logger.error("The CSS parser failed to parse a <style> section in "
+                   + srcUrl, ioe);
+      try {
+        cssReader.close();
+        do {
+          // Finish reading from the CSS reader
+        } while (cssReader.read() != -1);
+      }
+      catch (IOException ignore) {}
+    }
   }
 
   private String getOptionAttribute(ArchivalUnit au) {
@@ -509,9 +575,9 @@ public class GoslingHtmlParser implements ContentParser {
    * @return string representation of the url from the link tag
    * @throws MalformedURLException
    */
-  protected String parseLink(StringBuffer link, ArchivalUnit au)
-      throws MalformedURLException {
-    String returnStr = extractLinkFromTag(link, au);
+  protected boolean parseLink(StringBuffer link, ArchivalUnit au, ContentParser.FoundUrlCallback cb)
+      throws IOException, MalformedURLException {
+    String returnStr = extractLinkFromTag(link, au, cb);
 
     if (returnStr != null) {
       if (isTrace) {
@@ -522,7 +588,13 @@ public class GoslingHtmlParser implements ContentParser {
 	//so we only will return absolute ones
 	logger.debug2("Malformed base URL: " + srcUrl +
 		      " checking if URL is abolute " + returnStr);
-	return UrlUtil.isAbsoluteUrl(returnStr) ? returnStr : null;
+	if (UrlUtil.isAbsoluteUrl(returnStr)) {
+          emit(cb, returnStr);
+          return true;
+        }
+        else {
+          return false;
+        }
       }
       try {
 	if (baseUrl == null) {
@@ -534,13 +606,19 @@ public class GoslingHtmlParser implements ContentParser {
 	logger.debug("Couldn't resolve URL, base: \"" + srcUrl +
 		     "\", link: \"" + returnStr + "\"",
 		     e);
-	return null;
+	return false;
       }
       if (isTrace) {
 	logger.debug2("Parsed: " + returnStr);
       }
     }
-    return returnStr;
+    if (returnStr != null) {
+      emit(cb, returnStr);
+      return true;
+    }
+    else {
+      return false;
+    }
   }
 
   /**

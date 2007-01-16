@@ -1,10 +1,10 @@
 /*
- * $Id: CssParser.java,v 1.1 2006-12-09 01:30:59 thib_gc Exp $
+ * $Id: CssParser.java,v 1.2 2007-01-16 08:17:09 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,8 +33,10 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.crawler;
 
 import java.io.*;
+import java.net.*;
 
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.util.*;
 import org.w3c.css.sac.*;
 import org.w3c.flute.parser.Parser;
 
@@ -47,37 +49,94 @@ import org.w3c.flute.parser.Parser;
 public class CssParser implements ContentParser {
 
   /**
+   * <p>A subclass of {@link CSSException} that wraps a Java-style
+   * {@link MalformedURLException}, so that it can be caught outside
+   * the CSS backend.</p>
+   * @author Thib Guicherd-Callin
+   */
+  private static class MalformedUrlException extends CSSException {
+    
+    /**
+     * <p>The Java-style {@link MalformedURLException} inside this
+     * exception.</p>
+     */
+    protected MalformedURLException javaMalformedUrlException;
+    
+    /**
+     * <p>Wraps a Java-style {@link MalformedURLException} into a new
+     * exception.</p>
+     * @param javaMalformedUrlException A Java-style
+     *                                  {@link MalformedURLException}.
+     */
+    public MalformedUrlException(MalformedURLException javaMalformedUrlException) {
+      this.javaMalformedUrlException = javaMalformedUrlException;
+    }
+    
+    /**
+     * <p>Retrieves this exception's underlying Java-style
+     * {@link MalformedURLException}.</p>
+     * @return The Java-style {@link MalformedURLException} inside
+     *         this exception
+     */
+    public MalformedURLException getJavaMalformedUrlException() {
+      return javaMalformedUrlException;
+    }
+    
+  }
+  
+  /**
    * <p>An implementation of {@link DocumentHandler} that extracts all
    * links (URIs) from a CSS document and passes them to a
    * {@link FoundUrlCallback} instance.</p>
    * @author Thib Guicherd-Callin
    */
-  public static class LockssDocumentHandler implements DocumentHandler {
+  private static class LockssDocumentHandler implements DocumentHandler {
 
     protected FoundUrlCallback callback;
     
-    public LockssDocumentHandler(FoundUrlCallback callback) {
+    protected URL baseUrl;
+    
+    public LockssDocumentHandler(URL baseUrl,
+                                 FoundUrlCallback callback) {
+      this.baseUrl = baseUrl;
       this.callback = callback;
     }
 
-    /* Inherit doucmentation */
+    /* Inherit documentation */
     public void importStyle(String uri,
                             SACMediaList media,
                             String defaultNamespaceURI)
         throws CSSException {
-      callback.foundUrl(uri);
+      emit(uri);
     }
 
-    /* Inherit doucmentation */
+    /* Inherit documentation */
     public void property(String name,
                          LexicalUnit value,
                          boolean important)
         throws CSSException {
       if (value.getLexicalUnitType() == LexicalUnit.SAC_URI) {
-        callback.foundUrl(value.getStringValue());
+        emit(value.getStringValue());
       }
     }
 
+    protected void emit(String url) throws CSSException {
+      if ("".equals(url)) {
+        throw new MalformedUrlException(new MalformedURLException("Empty URL"));
+      }
+      
+      try {
+        String resolved = UrlUtil.resolveUri(baseUrl, url);
+        if (logger.isDebug2()) {
+          logger.debug2("Found " + url + " which resolves to " + resolved);
+        }
+        callback.foundUrl(resolved);
+      }
+      catch (MalformedURLException javaMalformedUrlException) {
+        throw new MalformedUrlException(javaMalformedUrlException);
+      }
+    }
+    
     /*
      * All the following methods just ignore their event
      */
@@ -103,10 +162,25 @@ public class CssParser implements ContentParser {
                            String srcUrl,
                            ArchivalUnit au,
                            FoundUrlCallback cb)
-      throws IOException {
+      throws MalformedURLException, IOException {
+    logger.debug2("Parsing " + srcUrl);
+    URL baseUrl = new URL(srcUrl);
+    DocumentHandler documentHandler = new LockssDocumentHandler(baseUrl, cb);
     Parser parser = new Parser();
-    parser.setDocumentHandler(new LockssDocumentHandler(cb));
-    parser.parseStyleSheet(new InputSource(reader));
+    parser.setDocumentHandler(documentHandler);
+    
+    try {
+      parser.parseStyleSheet(new InputSource(reader));
+    }
+    catch (MalformedUrlException lockssMalformedUrlException) {
+      MalformedURLException javaMalformedUrlException =
+        lockssMalformedUrlException.getJavaMalformedUrlException();
+      logger.error("Malformed URL while parsing " + srcUrl,
+                   javaMalformedUrlException);
+      throw javaMalformedUrlException;
+    }
   }
+  
+  private static final Logger logger = Logger.getLogger("CssParser");
   
 }

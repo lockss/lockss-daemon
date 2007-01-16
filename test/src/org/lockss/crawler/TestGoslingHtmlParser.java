@@ -1,10 +1,10 @@
 /*
- * $Id: TestGoslingHtmlParser.java,v 1.33 2006-11-15 21:18:38 troberts Exp $
+ * $Id: TestGoslingHtmlParser.java,v 1.34 2007-01-16 08:17:09 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,7 +34,6 @@ package org.lockss.crawler;
 
 import java.io.*;
 import java.util.*;
-import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
 import org.lockss.plugin.*;
@@ -190,20 +189,103 @@ public class TestGoslingHtmlParser extends LockssTestCase {
     singleTagShouldParse("http://www.example.com/web_link.css",
 			 "<link href=", "</link>");
   }
+  
+  public void testDoCrawlStyleAbsolute() throws IOException {
+    performDoCrawlStyle("<style>",
+                        "http://www.example.com/",
+                        "http://www.example.com/");
+  }
+
+  public void testDoCrawlStyleRelative() throws IOException {
+    performDoCrawlStyle("<style>",
+                        "",
+                        "http://www.example.com/");
+  }
+
+  public void testDoCrawlStyleWithTypeAttributeAbsolute() throws IOException {
+    performDoCrawlStyle("<style type=\"text/css\">",
+                        "http://www.example.com/",
+                        "http://www.example.com/");
+  }
+
+  public void testDoCrawlStyleWithTypeAttributeRelative() throws IOException {
+    performDoCrawlStyle("<style type=\"text/css\">",
+                        "",
+                        "http://www.example.com/");
+  }
+
+  protected void performDoCrawlStyle(String openingStyleTag,
+                                     String givenPrefix,
+                                     String expectedPrefix)
+      throws IOException {
+    String url1 = "foo1.css";
+    String url2 = "foo2.css";
+    String url3 = "foo3.css";
+    String url4 = "foo4.css";
+    String url5 = "img5.gif";
+    String url6 = "img6.gif";
+
+    String source =
+      "<html>" +
+      " <head>" +
+      "  <title>Test</title>" +
+      "  " + openingStyleTag +
+      "@import url(\'" + givenPrefix + url1 + "\');" +
+      "@import url(\"" + givenPrefix + url2 + "\");" +
+      "@import \'" + givenPrefix + url3 + "\';" +
+      "@import \"" + givenPrefix + url4 + "\";" +
+      "foo {" +
+      " bar: url(\'" + givenPrefix + url5 + "\');" +
+      " baz: url(\"" + givenPrefix + url6 + "\");" +
+      "}" +
+      "  </style>" +
+      " </head>" +
+      " <body>" +
+      "  <p>Fake content</p>" +
+      " </body>" +
+      "</html>";
+    assertEquals(SetUtil.set(expectedPrefix + url1,
+                             expectedPrefix + url2,
+                             expectedPrefix + url3,
+                             expectedPrefix + url4,
+                             expectedPrefix + url5,
+                             expectedPrefix + url6),
+                 parseSingleSource(source));
+  }
 
   public void testDoCrawlBody() throws IOException {
     singleTagShouldParse("http://www.example.com/web_link.jpg",
 		   "<body background=", "</body>");
   }
 
+  /**
+   * @see <a href="http://msdn.microsoft.com/workshop/author/dhtml/reference/properties/background_2.asp">
+   *      Microsoft extension: <code>background</code> attribute for
+   *      <code>table</code>, <code>td</code> and <code>th</code></a>
+   */
   public void testDoCrawlTable() throws IOException {
     singleTagShouldParse("http://www.example.com/web_link.jpg",
 		   "<table background=", "</table>");
   }
 
-  public void testDoCrawlTc() throws IOException {
+  /**
+   * @see <a href="http://msdn.microsoft.com/workshop/author/dhtml/reference/properties/background_2.asp">
+   *      Microsoft extension: <code>background</code> attribute for
+   *      <code>table</code>, <code>td</code> and <code>th</code></a>
+   */
+  public void testDoCrawlTd() throws IOException {
     singleTagShouldParse("http://www.example.com/web_link.jpg",
-		   "<tc background=", "</tc>");
+                   "<td background=", "</td>");
+  }
+
+  /**
+   * @see <a href="http://msdn.microsoft.com/workshop/author/dhtml/reference/properties/background_2.asp">
+   *      Microsoft extension: <code>background</code> attribute for
+   *      <code>table</code>, <code>td</code> and <code>th</code></a>
+   */
+  public void testDoCrawlTh() throws IOException {
+    singleTagShouldParse("http://www.example.com/web_link.jpg",
+                   "<th background=", "</th>");
   }
 
   public void testDoCrawlScript() throws IOException {
@@ -360,16 +442,28 @@ public class TestGoslingHtmlParser extends LockssTestCase {
     checkBadTags(badTags, "</table>");
   }
 
-  public void testDoNotCrawlBadTcTag() throws IOException {
+  public void testDoNotCrawlBadTdTag() throws IOException {
     String[] badTags = {
       "<t background=",
-      "<tcl background=",
+      "<tdl background=",
       "<ta background=",
-      "<tc backgroun=",
-      "<tc backgroundl=",
-      "<tc backgrouno="
+      "<td backgroun=",
+      "<td backgroundl=",
+      "<td backgrouno="
     };
-    checkBadTags(badTags, "</table>");
+    checkBadTags(badTags, "</td>");
+  }
+
+  public void testDoNotCrawlBadThTag() throws IOException {
+    String[] badTags = {
+      "<t background=",
+      "<thl background=",
+      "<ta background=",
+      "<th backgroun=",
+      "<th backgroundl=",
+      "<th backgrouno="
+    };
+    checkBadTags(badTags, "</th>");
   }
 
   // Behavior currently depends on Java version, do disabled.  Crawler
