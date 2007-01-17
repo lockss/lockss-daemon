@@ -1,5 +1,5 @@
 /*
- * $Id: OaiHandler.java,v 1.12 2006-04-14 15:23:14 troberts Exp $
+ * $Id: OaiHandler.java,v 1.13 2007-01-17 19:51:48 troberts Exp $
  */
 
 /*
@@ -202,7 +202,7 @@ public class OaiHandler {
 //      logger.debug3("The content of listRecord : \n" + listRecords.toString() );
       //toString on ListRecords is currently not thread safe, so I commented this out
       //TSR 4/13/06
-      
+
       //collect and store all the oai records
 //       collectOaiRecords(listRecords); //XXX info collected is not being used now,
                                       //can turn off to increase performance
@@ -211,7 +211,7 @@ public class OaiHandler {
       NodeList metadataNodeList =
 	listRecords.getDocument().getElementsByTagName("metadata");
 
-      OaiMetadataHandler metadataHandler = oaiData.getMetadataHandler();
+      OaiMetadataHandler metadataHandler = new Oai_dcHandler();
 
       //apart from collecting urls, more actions might be done in the
       //metadata handler w.r.t. different metadata
