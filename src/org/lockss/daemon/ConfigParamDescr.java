@@ -1,10 +1,10 @@
 /*
- * $Id: ConfigParamDescr.java,v 1.33 2006-09-06 16:38:41 thib_gc Exp $
+ * $Id: ConfigParamDescr.java,v 1.34 2007-01-17 17:53:36 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -453,14 +453,14 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
         break;
       case TYPE_RANGE:
       { // case block
-        ret_val = StringUtil.breakAt(val,'-',2,true, true);
+        ret_val = StringUtil.breakAt(val, '-', 2, true, true);
         String s_min = (String)((Vector)ret_val).firstElement();
         String s_max = (String)((Vector)ret_val).lastElement();
-        if( !(s_min.compareTo(s_max) < 0) ) {
+        if ( !(s_min.compareTo(s_max) <= 0) ) {
           throw new InvalidFormatException("Invalid Range: " + val);
         }
         break;
-      } // case block
+      } // end case block
       case TYPE_NUM_RANGE:
       { // case block
         ret_val = StringUtil.breakAt(val,'-',2,true, true);
@@ -475,19 +475,19 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
            */
           Long l_min = NumberUtils.createLong(s_min);
           Long l_max = NumberUtils.createLong(s_max);
-          if(l_min.compareTo(l_max) < 0) {
+          if (l_min.compareTo(l_max) <= 0) {
             ((Vector)ret_val).setElementAt(l_min, 0);
             ((Vector)ret_val).setElementAt(l_max, 1);
             break;
           }
         }
         catch (NumberFormatException ex1) {
-          if(s_min.compareTo(s_max) < 0) {
+          if (s_min.compareTo(s_max) <= 0) {
             break;
           }
         }
-        throw new InvalidFormatException("Invalid  Numeric Range: " + val);
-      } // case block
+        throw new InvalidFormatException("Invalid Numeric Range: " + val);
+      } // end case block
       case TYPE_SET:
         ret_val = StringUtil.breakAt(val,',', 50, true, true);
         break;

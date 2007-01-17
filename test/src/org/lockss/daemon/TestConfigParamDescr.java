@@ -1,10 +1,10 @@
 /*
- * $Id: TestConfigParamDescr.java,v 1.7 2006-07-20 18:26:48 thib_gc Exp $
+ * $Id: TestConfigParamDescr.java,v 1.8 2007-01-17 17:53:36 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,6 +36,7 @@ import java.io.*;
 import java.util.*;
 
 import org.lockss.app.LockssApp;
+import org.lockss.daemon.ConfigParamDescr.InvalidFormatException;
 import org.lockss.test.*;
 import org.lockss.util.*;
 
@@ -146,7 +147,7 @@ public class TestConfigParamDescr extends LockssTestCase {
    * {@link ConfigParamDescr#DEFAULT_DESCR_ARRAY}.</p>
    * @throws Exception if an unexpected error occurs.
    */
-  public void testPostMarshalUnresolve() throws Exception {
+  public void testPostUnnarshalResolve() throws Exception {
     XStreamSerializer serializer = new XStreamSerializer();
     for (int ix = 0 ; ix < ConfigParamDescr.DEFAULT_DESCR_ARRAY.length ; ++ix) {
       File file = File.createTempFile("testfile", ".xml");
@@ -154,6 +155,80 @@ public class TestConfigParamDescr extends LockssTestCase {
       serializer.serialize(file, ConfigParamDescr.DEFAULT_DESCR_ARRAY[ix]);
       assertSame(ConfigParamDescr.DEFAULT_DESCR_ARRAY[ix],
                  serializer.deserialize(file));
+    }
+  }
+  
+  /**
+   * <p>Tests {@link ConfigParamDescr#getValueOfType(String)} for
+   * the {@link ConfigParamDescr} instance
+   * {@link ConfigParamDescr#ISSUE_RANGE}.</p>
+   * @throws Exception if any unexpected error occurs.
+   */
+  public void testGetValueOfTypeIssueRange() throws Exception {
+    ConfigParamDescr range = ConfigParamDescr.ISSUE_RANGE;
+    Object ret = null;
+    Vector vec = null;
+    
+    // Range
+    ret = range.getValueOfType("bar-foo");
+    assertTrue(ret instanceof Vector);
+    vec = (Vector)ret;
+    assertEquals(2, vec.size());
+    assertEquals("bar", vec.get(0));
+    assertEquals("foo", vec.get(1));
+    
+    // Trivial range
+    ret = range.getValueOfType("foo-foo");
+    assertTrue(ret instanceof Vector);
+    vec = (Vector)ret;
+    assertEquals(2, vec.size());
+    assertEquals("foo", vec.get(0));
+    assertEquals("foo", vec.get(1));
+    
+    // Invalid range
+    try {
+      ret = range.getValueOfType("foo-bar");
+      fail("Should have thrown InvalidFormatException");
+    }
+    catch (InvalidFormatException expected) {
+      // all is well
+    }
+  }
+
+  /**
+   * <p>Tests {@link ConfigParamDescr#getValueOfType(String)} for
+   * the {@link ConfigParamDescr} instance
+   * {@link ConfigParamDescr#NUM_ISSUE_RANGE}.</p>
+   * @throws Exception if any unexpected error occurs.
+   */
+  public void testGetValueOfTypeNumIssueRange() throws Exception {
+    ConfigParamDescr range = ConfigParamDescr.NUM_ISSUE_RANGE;
+    Object ret = null;
+    Vector vec = null;
+    
+    // Range
+    ret = range.getValueOfType("1-99");
+    assertTrue(ret instanceof Vector);
+    vec = (Vector)ret;
+    assertEquals(2, vec.size());
+    assertEquals(new Long(1), vec.get(0));
+    assertEquals(new Long(99), vec.get(1));
+    
+    // Trivial range
+    ret = range.getValueOfType("1-1");
+    assertTrue(ret instanceof Vector);
+    vec = (Vector)ret;
+    assertEquals(2, vec.size());
+    assertEquals(new Long(1), vec.get(0));
+    assertEquals(new Long(1), vec.get(1));
+    
+    // Invalid range
+    try {
+      ret = range.getValueOfType("99-1");
+      fail("Should have thrown InvalidFormatException");
+    }
+    catch (InvalidFormatException expected) {
+      // all is well
     }
   }
 
