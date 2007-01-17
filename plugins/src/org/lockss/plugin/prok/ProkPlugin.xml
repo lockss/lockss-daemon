@@ -8,8 +8,12 @@
     <long>6000</long>
   </entry>
   <entry>
+    <string>plugin_version</string>
+    <string>2</string>
+  </entry>
+  <entry>
     <string>au_name</string>
-    <string>&quot;Princeton Review of Knowledge Volume %s&quot;, volume_name</string>
+    <string>&quot;Princeton Report on Knowledge Volume %s&quot;, volume_name</string>
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
@@ -17,7 +21,7 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Princeton Review of Knowledge Plugin</string>
+    <string>Princeton Report on Knowledge Plugin</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
