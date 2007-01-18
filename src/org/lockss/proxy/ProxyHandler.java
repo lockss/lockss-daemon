@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.48 2007-01-14 08:01:35 tlipkis Exp $
+ * $Id: ProxyHandler.java,v 1.49 2007-01-18 02:28:09 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.48 2007-01-14 08:01:35 tlipkis Exp $
+// $Id: ProxyHandler.java,v 1.49 2007-01-18 02:28:09 tlipkis Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -100,6 +100,10 @@ public class ProxyHandler extends AbstractHttpHandler {
   ProxyHandler(LockssDaemon daemon) {
     theDaemon = daemon;
     pluginMgr = theDaemon.getPluginManager();
+    // XXX This is wrong.  All proxy instances get manager for normal
+    // proxy.  Each manager (audit, failover) should pass itself to the
+    // handler it creates.  But is mostly only used by normal proxy, and
+    // would require casting.
     proxyMgr = theDaemon.getProxyManager();
     neverProxy = CurrentConfig.getBooleanParam(PARAM_NEVER_PROXY,
 					       DEFAULT_NEVER_PROXY);
@@ -655,13 +659,15 @@ public class ProxyHandler extends AbstractHttpHandler {
 
       Collection candidateAus = null;
       int code=conn.getResponseCode();
-      switch (code) {
-      case HttpResponse.__200_OK:
-	// XXX check for login page
-      case HttpResponse.__304_Not_Modified:
-	break;
-      default:
-	candidateAus = pluginMgr.getCandidateAus(urlString);
+      if (proxyMgr.showManifestIndexForResponse(code)) {
+	switch (code) {
+	case HttpResponse.__200_OK:
+	  // XXX check for login page
+	case HttpResponse.__304_Not_Modified:
+	  break;
+	default:
+	  candidateAus = pluginMgr.getCandidateAus(urlString);
+	}
       }
       if (candidateAus != null && !candidateAus.isEmpty()) {
  	forwardResponseWithIndex(request, response, candidateAus, conn);
@@ -916,7 +922,7 @@ public class ProxyHandler extends AbstractHttpHandler {
   String hostMsg(String msg, String host, String reason) {
     host = HtmlUtil.htmlEncode(host);
     reason = HtmlUtil.htmlEncode(reason);
-    return msg + " " + host + " " + reason;
+    return msg + " <b>" + host + "</b> : " + reason;
   }
 
   void sendProxyErrorPage(IOException e,

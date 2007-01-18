@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyManager.java,v 1.38 2006-06-04 04:00:07 tlipkis Exp $
+ * $Id: ProxyManager.java,v 1.39 2007-01-18 02:28:09 tlipkis Exp $
  */
 
 /*
@@ -33,17 +33,15 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.proxy;
 
 import java.util.*;
+import org.mortbay.http.*;
+
 import org.lockss.app.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
-import org.lockss.config.ConfigManager;
-import org.lockss.config.Configuration;
+import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.jetty.*;
 import org.lockss.servlet.*;
-import org.mortbay.util.*;
-import org.mortbay.http.*;
-import org.mortbay.http.handler.*;
 
 /** LOCKSS proxy manager, starts main proxy.
  */
@@ -99,6 +97,14 @@ public class ProxyManager extends BaseProxyManager {
   static final int DEFAULT_HOST_DOWN_ACTION =
     HOST_DOWN_NO_CACHE_ACTION_DEFAULT;
 
+  /** A semicolon-separated list of response codes for which the manifest
+   * index should <b>not</b> be generated, or <code>all</code> to disable
+   * manifest indices for all server responses.  (Index is always generated
+   * if connection error (timeout, refuse, etc.) */
+  static final String PARAM_NO_MANIFEST_INDEX_RESPONSES =
+    PREFIX + "noManifestIndexResponses";
+  static final String DEFAULT_NO_MANIFEST_INDEX_RESPONSES = null;
+
   public static final String PARAM_PROXY_MAX_TOTAL_CONN =
     PREFIX + "connectionPool.max";
   public static final int DEFAULT_PROXY_MAX_TOTAL_CONN = 15;
@@ -143,6 +149,9 @@ public class ProxyManager extends BaseProxyManager {
   private FixedTimedMap urlCache;
   private boolean paramUrlCacheEnabled = DEFAULT_URL_CACHE_ENABLED;
   private long paramUrlCacheDuration = DEFAULT_URL_CACHE_DURATION;
+  private Map noManifestIndexResponses = new HashMap();
+  private boolean manifestIndexResponsesNone = false;
+
 
   public void setConfig(Configuration config, Configuration prevConfig,
 			Configuration.Differences changedKeys) {
@@ -182,6 +191,34 @@ public class ProxyManager extends BaseProxyManager {
 	      urlCache.setInterval(paramUrlCacheDuration);
 	    }
 	  }
+	}
+
+	String noindex = config.get(PARAM_NO_MANIFEST_INDEX_RESPONSES,
+				    DEFAULT_NO_MANIFEST_INDEX_RESPONSES);
+	Map newMap = null;
+	if (StringUtil.isNullString(noindex)) {
+	  newMap = new HashMap();
+	} else {
+	  if ("all".equalsIgnoreCase(noindex)) {
+	    manifestIndexResponsesNone = true;
+	  } else {
+	    newMap = new HashMap();
+	    List lst = StringUtil.breakAt(noindex, ';', 0, true);
+	    for (Iterator iter = lst.iterator(); iter.hasNext(); ) {
+	      String str = (String)iter.next();
+	      try {
+		newMap.put(new Integer(str), "");
+	      } catch (NumberFormatException e) {
+		log.warning("Invalid response code in " +
+			    PARAM_NO_MANIFEST_INDEX_RESPONSES +
+			    ": " + str + ", ignored");
+	      }
+	    }
+	  }
+	}
+	if (newMap != null) {
+	  noManifestIndexResponses = newMap;
+	  manifestIndexResponsesNone = false;
 	}
 
 	if (!isServerRunning() && getDaemon().isDaemonRunning()) {
@@ -300,4 +337,10 @@ public class ProxyManager extends BaseProxyManager {
       return false;
     }
   }
+
+  public boolean showManifestIndexForResponse(int status) {
+    if (manifestIndexResponsesNone) return false;
+    return noManifestIndexResponses.get(new Integer(status)) == null;
+  }
+
 }
