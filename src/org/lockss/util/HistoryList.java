@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryList.java,v 1.3 2005-10-11 05:48:30 tlipkis Exp $
+ * $Id: HistoryList.java,v 1.4 2007-01-18 02:42:52 tlipkis Exp $
  */
 
 /*
@@ -37,7 +37,7 @@ import java.util.*;
 /**
  * A list with a maximum size, which discards elements as new ones are added
  */
-public class HistoryList extends AbstractCollection {
+public class HistoryList extends AbstractList {
 
   private int max;
   private List list;
@@ -77,6 +77,14 @@ public class HistoryList extends AbstractCollection {
 
   public int size() {
     return list.size();
+  }
+
+  public Object get(int ix) {
+    return list.get(ix);
+  }
+
+  public Object set(int ix, Object element) {
+    return list.set(ix, element);
   }
 
   private void trim(int n) {
