@@ -1,5 +1,5 @@
 /*
- * $Id: TestProxyInfo.java,v 1.16 2007-01-14 08:13:11 tlipkis Exp $
+ * $Id: TestProxyInfo.java,v 1.17 2007-01-18 02:52:44 tlipkis Exp $
  */
 
 /*
@@ -111,13 +111,6 @@ public class TestProxyInfo extends LockssTestCase {
   }
 
   class MyMockArchivalUnit extends MockArchivalUnit {
-    private Collection urlStems;
-    public Collection getUrlStems() {
-      return urlStems;
-    }
-    void setUrlStems(Collection urlStems) {
-      this.urlStems = urlStems;
-    }
   }
 
   class MyRegistryArchivalUnit extends RegistryArchivalUnit {
