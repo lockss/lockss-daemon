@@ -1,10 +1,10 @@
 /*
- * $Id: TestIpFilter.java,v 1.7 2006-01-27 04:33:59 tlipkis Exp $
+ * $Id: TestIpFilter.java,v 1.8 2007-01-18 02:29:09 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -157,6 +157,13 @@ public class TestIpFilter extends LockssTestCase {
     assertNoMatch("127.0.1.0/24", "127.2.1.0");
     assertNoMatch("127.0.1/24", "127.0.2.0");
     assertNoMatch("127.0.1/25", "127.0.1.255");
+    assertMatch("127.*.*.*", "127.0.1.255");
+    assertMatch("0/1", "127.0.1.255");
+    assertMatch("128/1", "255.0.1.255");
+    assertNoMatch("0/1", "255.0.1.255");
+    assertNoMatch("128/1", "127.0.1.255");
+    assertMatch("0/0", "127.0.1.255");
+    assertMatch("0/0", "255.0.1.255");
   }
 
   public void testFilter() throws Exception {

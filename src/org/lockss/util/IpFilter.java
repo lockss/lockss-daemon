@@ -1,5 +1,5 @@
 /*
- * $Id: IpFilter.java,v 1.10 2006-01-27 04:51:29 tlipkis Exp $
+ * $Id: IpFilter.java,v 1.11 2007-01-18 02:29:09 tlipkis Exp $
  */
 
 /*
@@ -218,7 +218,11 @@ public class IpFilter {
       if (n != 4) {
 	throw new MalformedException("Must have 4 bytes", s);
       }
-      mask = (cidr == 32) ? -1 : -(1 << (32 - cidr));
+      switch (cidr) {
+      case 0: mask = 0; break;
+      case 32: mask = -1; break;
+      default: mask = -(1 << (32 - cidr)); break;
+      }
       if (mask != -1 && !maskOk) {
 	throw new MalformedException("Mask not allowed", s);
       }
