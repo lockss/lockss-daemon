@@ -1,5 +1,5 @@
 /*
- * $Id: LockssErrorHandler.java,v 1.1 2007-01-14 08:07:55 tlipkis Exp $
+ * $Id: LockssErrorHandler.java,v 1.2 2007-01-18 02:27:15 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright 1999-2004 Mort Bay Consulting Pty. Ltd.
-// $Id: LockssErrorHandler.java,v 1.1 2007-01-14 08:07:55 tlipkis Exp $
+// $Id: LockssErrorHandler.java,v 1.2 2007-01-18 02:27:15 tlipkis Exp $
 // ------------------------------------------------------------------------
 
 package org.lockss.jetty;
@@ -96,7 +96,6 @@ public class LockssErrorHandler extends AbstractHttpHandler {
     writer.write("</h2>\n");
     if (message != null) {
       writer.write("<pre>");
-      System.err.println("Message: " + message);
       writer.write(HtmlUtil.encode(message, HtmlUtil.ENCODE_TEXT));
       writer.write("</pre>\n");
     }
