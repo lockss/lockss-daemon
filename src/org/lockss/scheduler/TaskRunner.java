@@ -1,5 +1,5 @@
 /*
- * $Id: TaskRunner.java,v 1.38 2006-10-20 18:41:37 thib_gc Exp $
+ * $Id: TaskRunner.java,v 1.39 2007-01-18 02:28:27 tlipkis Exp $
  */
 
 /*
@@ -114,16 +114,16 @@ class TaskRunner {
   private int taskCtr = 0;
   private long totalTime = 0;
 
-  private static final int STAT_NONE = -1;
-  private static final int STAT_ACCEPTED = 0;
-  private static final int STAT_REFUSED = 1;
-  private static final int STAT_COMPLETED = 2;
-  private static final int STAT_EXPIRED = 3;
-  private static final int STAT_OVERRUN = 4;
-  private static final int STAT_CANCELLED = 5;
-  private static final int STAT_DROPPED = 6;
-  private static final int STAT_WAITING = 7;
-  private static final int NUM_STATS = 8;
+  static final int STAT_NONE = -1;
+  static final int STAT_ACCEPTED = 0;
+  static final int STAT_REFUSED = 1;
+  static final int STAT_COMPLETED = 2;
+  static final int STAT_EXPIRED = 3;
+  static final int STAT_OVERRUN = 4;
+  static final int STAT_CANCELLED = 5;
+  static final int STAT_DROPPED = 6;
+  static final int STAT_WAITING = 7;
+  static final int NUM_STATS = 8;
 
   private int backgroundStats[] = new int[NUM_STATS];
   private int foregroundStats[] = new int[NUM_STATS];
@@ -191,7 +191,6 @@ class TaskRunner {
       return true;
     } else {
       if (log.isDebug2()) log.debug2("Can't schedule task: " + task);
-      incrStats(task, STAT_REFUSED);
       return false;
     }
   }
@@ -210,6 +209,14 @@ class TaskRunner {
     } else {
       foregroundStats[stat]--;
     }
+  }
+
+  int getForegroundStat(int stat_ix) {
+    return foregroundStats[stat_ix];
+  }
+
+  int getBackgroundStat(int stat_ix) {
+    return backgroundStats[stat_ix];
   }
 
   /** Return true iff the task could be scheduled, but doesn't actually
@@ -274,6 +281,7 @@ class TaskRunner {
 	    SchedulableTask task = (SchedulableTask)iter.next();
 	    log.warning("Dropped " + task);
 	    task.setDropped();
+	    decrStats(task, STAT_WAITING);
 	    addOverrunner(task, STAT_DROPPED);
 	  }
 	}
@@ -372,6 +380,7 @@ class TaskRunner {
 	btask = scheduleHint(btask);
 	if (btask.getLatestStart().before(btask.getStart())) {
 	  // hint is after latest start, fail
+	  incrStats(btask, STAT_REFUSED);
 	  return false;
 	}
       }
@@ -398,6 +407,7 @@ class TaskRunner {
       incrStats(task, STAT_WAITING);
       return true;
     } else {
+      incrStats(task, STAT_REFUSED);
       return false;
     }
   }
@@ -448,6 +458,7 @@ class TaskRunner {
     }
     if (res) {
       incrStats(task, STAT_CANCELLED);
+      decrStats(task, STAT_WAITING);
     }
     return res;
   }
@@ -1227,8 +1238,9 @@ class TaskRunner {
       if (stats == backgroundStats) {
 	stxt(lst, backgroundTasks.size(), " running");
       }
-      stxt(lst, stats[STAT_WAITING], " waiting");
       stxt(lst, stats[STAT_COMPLETED], " completed");
+      stxt(lst, stats[STAT_WAITING], " waiting");
+      stxt(lst, stats[STAT_CANCELLED], " cancelled");
       stxt(lst, stats[STAT_EXPIRED], " expired");
       if (stats == foregroundStats) {
 	stxt(lst, stats[STAT_DROPPED], " delayed");

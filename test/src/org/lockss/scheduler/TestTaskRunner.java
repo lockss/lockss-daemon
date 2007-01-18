@@ -1,5 +1,5 @@
 /*
- * $Id: TestTaskRunner.java,v 1.16 2006-10-20 18:41:37 thib_gc Exp $
+ * $Id: TestTaskRunner.java,v 1.17 2007-01-18 02:28:26 tlipkis Exp $
  */
 
 /*
@@ -131,12 +131,23 @@ public class TestTaskRunner extends LockssTestCase {
     return s;
   }
 
+  void assertForegroundStat(int expected, int stat_ix) {
+    assertEquals(expected, tr.getForegroundStat(stat_ix));
+  }
+
+  void assertBackgroundStat(int expected, int stat_ix) {
+    assertEquals(expected, tr.getBackgroundStat(stat_ix));
+  }
+
+
   // ensure addToSchedule returns false if (Mock)Scheduler returns false
   public void testAddToScheduleFail() {
     fact.setResult(null);
     StepTask t1 = task(100, 200, 50);
     assertFalse(tr.addToSchedule(t1));
     assertEmpty(tr.getAcceptedTasks());
+    assertForegroundStat(0, TaskRunner.STAT_ACCEPTED);
+    assertForegroundStat(1, TaskRunner.STAT_REFUSED);
   }
 
   // ensure addToSchedule updates structures if (Mock)Scheduler returns true
@@ -147,11 +158,16 @@ public class TestTaskRunner extends LockssTestCase {
     fact.setResult(sched);
     assertTrue(tr.addToSchedule(t1));
     assertIsomorphic(ListUtil.list(t1), fact.scheduler.tasks);
+    assertForegroundStat(1, TaskRunner.STAT_ACCEPTED);
+    assertForegroundStat(0, TaskRunner.STAT_REFUSED);
     fact.setResult(sched);
     assertTrue(tr.addToSchedule(t2));
     assertEquals(SetUtil.set(t1, t2), SetUtil.theSet(fact.scheduler.tasks));
     assertEquals(sched, tr.getCurrentSchedule());
     assertEquals(SetUtil.set(t1, t2), SetUtil.theSet(tr.getAcceptedTasks()));
+    assertForegroundStat(2, TaskRunner.STAT_ACCEPTED);
+    assertForegroundStat(2, TaskRunner.STAT_WAITING);
+    assertForegroundStat(0, TaskRunner.STAT_REFUSED);
   }
 
   // Now with task dropping on
@@ -164,6 +180,9 @@ public class TestTaskRunner extends LockssTestCase {
     assertFalse(tr.addToSchedule(t1));
     assertEmpty(tr.getAcceptedTasks());
     assertEquals(1, fact.createArgs.size());
+    assertForegroundStat(1, TaskRunner.STAT_REFUSED);
+    assertForegroundStat(0, TaskRunner.STAT_WAITING);
+    assertForegroundStat(0, TaskRunner.STAT_DROPPED);
   }
 
   // one task to drop, two failed schedule tries
@@ -177,6 +196,10 @@ public class TestTaskRunner extends LockssTestCase {
     assertTrue(tr.addToSchedule(t1));
     assertIsomorphic(ListUtil.list(t1), fact.scheduler.tasks);
     assertEquals(SetUtil.set(t1), SetUtil.theSet(tr.getAcceptedTasks()));
+    assertForegroundStat(1, TaskRunner.STAT_ACCEPTED);
+    assertForegroundStat(0, TaskRunner.STAT_REFUSED);
+    assertForegroundStat(1, TaskRunner.STAT_WAITING);
+    assertForegroundStat(0, TaskRunner.STAT_DROPPED);
 
     assertFalse(tr.addToSchedule(t2));
     assertEquals(ListUtil.list(ListUtil.list(t1),
@@ -186,6 +209,10 @@ public class TestTaskRunner extends LockssTestCase {
     assertEquals(SetUtil.set(t1), SetUtil.theSet(fact.scheduler.tasks));
     assertEquals(sched, tr.getCurrentSchedule());
     assertEquals(SetUtil.set(t1), SetUtil.theSet(tr.getAcceptedTasks()));
+    assertForegroundStat(1, TaskRunner.STAT_ACCEPTED);
+    assertForegroundStat(1, TaskRunner.STAT_REFUSED);
+    assertForegroundStat(1, TaskRunner.STAT_WAITING);
+    assertForegroundStat(0, TaskRunner.STAT_DROPPED);
   }
 
   // one task not ready to start yet, so not droppable
@@ -228,6 +255,10 @@ public class TestTaskRunner extends LockssTestCase {
     assertTrue(tr.addToSchedule(t1));
     assertIsomorphic(ListUtil.list(t1), fact.scheduler.tasks);
     assertEquals(SetUtil.set(t1), SetUtil.theSet(tr.getAcceptedTasks()));
+    assertForegroundStat(1, TaskRunner.STAT_ACCEPTED);
+    assertForegroundStat(0, TaskRunner.STAT_REFUSED);
+    assertForegroundStat(1, TaskRunner.STAT_WAITING);
+    assertForegroundStat(0, TaskRunner.STAT_DROPPED);
 
     assertTrue(tr.addToSchedule(t2));
     assertEquals(ListUtil.list(ListUtil.list(t1),
@@ -241,6 +272,17 @@ public class TestTaskRunner extends LockssTestCase {
     assertEquals(sched2, tr.getCurrentSchedule());
     assertEquals(SetUtil.set(t1, t2), SetUtil.theSet(tr.getAcceptedTasks()));
     assertEquals(SetUtil.set(t1), SetUtil.theSet(tr.getOverrunTasks()));
+    assertForegroundStat(2, TaskRunner.STAT_ACCEPTED);
+    assertForegroundStat(0, TaskRunner.STAT_REFUSED);
+    assertForegroundStat(1, TaskRunner.STAT_WAITING);
+    assertForegroundStat(1, TaskRunner.STAT_DROPPED);
+
+    t2.cancel();
+    assertForegroundStat(2, TaskRunner.STAT_ACCEPTED);
+    assertForegroundStat(0, TaskRunner.STAT_REFUSED);
+    assertForegroundStat(0, TaskRunner.STAT_WAITING);
+    assertForegroundStat(1, TaskRunner.STAT_DROPPED);
+    assertForegroundStat(1, TaskRunner.STAT_CANCELLED);
   }
 
 
