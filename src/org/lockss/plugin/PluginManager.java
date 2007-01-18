@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.172 2007-01-14 08:03:25 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.173 2007-01-18 02:27:40 tlipkis Exp $
  */
 
 /*
@@ -168,9 +168,21 @@ public class PluginManager
   private Map auMap = Collections.synchronizedMap(new HashMap());
   // A set of all aus sorted by title.  The UI relies on this behavior.
   private Set auSet = new TreeSet(auComparator);
+
   // maps host to collections of AUs.  Used to quickly locate candidate AUs
-  // for incoming URLs
-  private MultiMap hostAus = new MultiValueMap();
+  // for incoming URLs.  Each collection is sorted in AU order (for proxy
+  // manifest index display).
+  private MultiMap hostAus = new HostAuMap();
+
+  private static class HostAuMap extends MultiValueMap {
+    HostAuMap() {
+      super(new HashMap(),
+	    new org.apache.commons.collections.Factory() {
+	      public Object create() {
+		return new TreeSet(new AuOrderComparator());
+	      }});
+    }
+  }
 
   private Set inactiveAuIds = Collections.synchronizedSet(new HashSet());
 
