@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockHasher.java,v 1.6 2006-06-12 21:42:30 smorabito Exp $
+ * $Id: TestBlockHasher.java,v 1.7 2007-01-18 02:26:49 tlipkis Exp $
  */
 
 /*
@@ -135,7 +135,9 @@ public class TestBlockHasher extends LockssTestCase {
     Event event = (Event)eventObj;
     HashBlock hblock = event.hblock;
     assertEquals(expectedUrl, hblock.getUrl());
-    assertEquals(expectedLength, hblock.currentVersion().getUnfilteredLength());
+    HashBlock.Version curver = hblock.currentVersion();
+    assertEquals(expectedLength, curver.getUnfilteredLength());
+    assertEquals(expectedLength, curver.getFilteredLength());
     for (int ix = 0; ix < event.byteArrays.length; ix++) {
       assertEquals(expectedHashed[ix], event.byteArrays[ix]);
     }
@@ -374,7 +376,7 @@ public class TestBlockHasher extends LockssTestCase {
   String s3 =
     "Now is the time for all good men to come to the aid of their party";
   String s4 = "The quick brown fox";
-  String s5 = rpt("a long string", 1000);
+  String s5 = rpt("a very long string", 2000);
 
   String rpt(String s, int cnt) {
     StringBuffer sb = new StringBuffer(s.length() * cnt);
@@ -534,7 +536,7 @@ public class TestBlockHasher extends LockssTestCase {
     byte[][] inits = {null, null};
     CachedUrlSetHasher hasher = new BlockHasher(cus, digs, inits, handRec);
     int len = s1.length() + s2.length() + s3.length();
-    assertEquals(len, hashToEnd(hasher, stepSize));
+    assertEquals(len * digs.length, hashToEnd(hasher, stepSize));
     assertTrue(hasher.finished());
     List events = handRec.getEvents();
     assertEquals(3, events.size());
@@ -565,7 +567,7 @@ public class TestBlockHasher extends LockssTestCase {
     byte[][] inits = { null, bytes(chal2), bytes(chal3) };
     CachedUrlSetHasher hasher = new BlockHasher(cus, digs, inits, handRec);
     int len = s1.length() + s2.length() + s3.length();
-    assertEquals(len, hashToEnd(hasher, stepSize));
+    assertEquals(len * digs.length, hashToEnd(hasher, stepSize));
     assertTrue(hasher.finished());
     List events = handRec.getEvents();
     assertEquals(3, events.size());

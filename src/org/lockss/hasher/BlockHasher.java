@@ -1,5 +1,5 @@
 /*
- * $Id: BlockHasher.java,v 1.7 2006-11-30 05:04:28 tlipkis Exp $
+ * $Id: BlockHasher.java,v 1.8 2007-01-18 02:26:49 tlipkis Exp $
  */
 
 /*
@@ -64,9 +64,9 @@ public class BlockHasher extends GenericHasher {
   EventHandler cb;
   // Array of input streams, one per version.
   private InputStream[] is = null;
-  // Total bytes hashed for this node.  This is a culmination of the hashing
-  // of all versions of the content, up to maxVersions
-  private long nodeBytesHashed;
+  // Total bytes hashed per version of this node.  Used for filtered
+  // content length
+  private long[] versionBytesHashed;
   private int maxVersions = DEFAULT_HASH_MAX_VERSIONS;
   // A counter of versions that have not yet finished hashing.  Used in the
   // per-version loop in hashNodeUpToNumBytes
@@ -184,16 +184,16 @@ public class BlockHasher extends GenericHasher {
         int bytesRead = is[ix].read(contentBytes[ix], 0, remaining);
         if (isTrace) log.debug3("Read "+bytesRead+" bytes from input stream");
         if (bytesRead >= 0) {
-          updateDigests(ix, contentBytes[ix], bytesRead);
-          bytesHashed += bytesRead;
-          nodeBytesHashed += bytesRead;
+          int hashed = updateDigests(ix, contentBytes[ix], bytesRead);
+	  versionBytesHashed[ix] += bytesRead;
+          bytesHashed += hashed;
           remaining -= bytesRead;
         } else {
           // This version has no more content to hash.
           if (isTrace) log.debug3("done hashing content: "+version);
           is[ix].close();
           is[ix] = null;
-          endVersion(ix, version, bytesHashed);
+	  endVersion(ix, version, versionBytesHashed[ix]);
           // Are we done with all our versions?
           if (--remainingVersions == 0) {
             is = null;
@@ -220,11 +220,14 @@ public class BlockHasher extends GenericHasher {
     super.abortHash();
   }
 
-  private void updateDigests(int index, byte[] content, int len) {
-    for (int ix = 0; ix < perVersionDigests[index].length; ix++) {
+  private int updateDigests(int index, byte[] content, int len) {
+    int nhashes = perVersionDigests[index].length;
+    for (int ix = 0; ix < nhashes; ix++) {
       if (isTrace) log.debug3("Updating digest " + ix + ", len = " + len);
       perVersionDigests[index][ix].update(content, 0, len);
     }
+    log.debug3("updateDigests(" + index + ",, " + len + "): " + len * nhashes);
+    return len * nhashes;
   }
 
   private void initDigests(int size) {
@@ -278,7 +281,7 @@ public class BlockHasher extends GenericHasher {
       is[ix] = versions[ix].openForHashing();
     }
     remainingVersions = versions.length;
-    nodeBytesHashed = 0;
+    versionBytesHashed = new long[remainingVersions];
     initDigests(versions.length);
   }
 
@@ -300,8 +303,8 @@ public class BlockHasher extends GenericHasher {
 
   public interface EventHandler {
     /** Called at the completion of each hash block (file or part of file)
-     * with the hash results.  The digests in the HashBlock will be reset
-     * when this method returns, so it must read the current digest values
+     * with the hash results.  The digests in the HashBlock may be reused
+     * when this method returns, so the current digest values must be read
      * before returning
      */
     void blockDone(HashBlock hblock);
