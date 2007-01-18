@@ -1,5 +1,5 @@
 /*
- * $Id: CollectionUtil.java,v 1.14 2006-04-11 08:29:47 tlipkis Exp $
+ * $Id: CollectionUtil.java,v 1.15 2007-01-18 02:28:46 tlipkis Exp $
  */
 
 /*
@@ -80,7 +80,7 @@ public class CollectionUtil {
     }
     // Sigh, can't rely on overloading to catch Sets due to static typing.
     // (E.g., we're likely to be called from assertIsomorphic())
-    if (a instanceof Set) {
+    if (a instanceof Set && b instanceof Set) {
       return ((Set)a).equals(b);
     }
     // Similarly.
@@ -108,7 +108,11 @@ public class CollectionUtil {
   // Check that the two collection types can possibly be equal.
   // Ordered vs. unordered (e.g., Set) can't be.
   private static boolean isCompatibleTypes(Collection a, Collection b) {
-    return (a instanceof Set) == (b instanceof Set);
+    return isOrdered(a) == isOrdered(b);
+  }
+
+  private static boolean isOrdered(Collection coll) {
+    return coll instanceof List || coll instanceof SortedSet;
   }
 
   /**
