@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.71 2006-10-17 04:36:49 adriz Exp $
+ * $Id: MockArchivalUnit.java,v 1.72 2007-01-18 02:29:30 tlipkis Exp $
  */
 
 /*
@@ -70,7 +70,10 @@ public class MockArchivalUnit implements ArchivalUnit {
   private FilterFactory filterFactory = null;
   private ContentParser parser = null;
   private TypedEntryMap propertyMap = new TypedEntryMap();
+  private List urlStems;
+
   private static final Logger logger = Logger.getLogger("MockArchivalUnit");
+
   public MockArchivalUnit(){
   }
 
@@ -95,7 +98,11 @@ public class MockArchivalUnit implements ArchivalUnit {
   }
 
   public Collection getUrlStems() {
-    return null;
+    return urlStems;
+  }
+
+  public void setUrlStems(List stems) {
+    urlStems = stems;
   }
 
   public CachedUrlSet getAuCachedUrlSet() {
