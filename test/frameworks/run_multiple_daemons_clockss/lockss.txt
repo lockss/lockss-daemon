@@ -81,3 +81,5 @@ org.lockss.crawler.threadPool.max=3
 org.lockss.baseau.defaultFetchRateLimiterSource=plugin
 
 org.lockss.platform.project=CLOCKSS
+
+org.lockss.crawlStatus.keepUrls=all
