@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.51 2007-01-19 19:32:19 troberts Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.52 2007-01-19 23:33:20 troberts Exp $
  */
 
 /*
@@ -502,13 +502,13 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
 
     File testFileDir = new File(tempDirPath + "/#content");
     File[] files = testFileDir.listFiles();
-    assertEquals(3, files.length);
+    assertEquals(2, files.length);
     File testFile = new File(testFileDir, "current");
     assertTrue(testFile.exists());
     testFile = new File(testFileDir, "current.props");
     assertTrue(testFile.exists());
-    testFile = new File(testFileDir, "1.props-123321");
-    assertFalse(testFile.exists());
+//    testFile = new File(testFileDir, "1.props-123321");
+//    assertFalse(testFile.exists());
   }
 
   public void testMakeNewIdenticalVersionOldWay() throws Exception {
@@ -588,13 +588,13 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
 
     File testFileDir = new File(tempDirPath + "/#content");
     File[] files = testFileDir.listFiles();
-    assertEquals(3, files.length);
+    assertEquals(2, files.length);
     File testFile = new File(testFileDir, "current");
     assertTrue(testFile.exists());
     testFile = new File(testFileDir, "current.props");
     assertTrue(testFile.exists());
-    testFile = new File(testFileDir, "1.props-123321");
-    assertFalse(testFile.exists());
+//    testFile = new File(testFileDir, "1.props-123321");
+//    assertFalse(testFile.exists());
   }
 
   public void testIdenticalVersionFixesVersionError() throws Exception {

@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.69 2007-01-19 19:32:18 troberts Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.70 2007-01-19 23:33:20 troberts Exp $
  */
 
 /*
@@ -572,9 +572,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
       // get versioned props file
       File verPropsFile;
       // name 'identical version' props differently
-      if (identicalVersion
-	  && CurrentConfig.getBooleanParam(PARAM_KEEP_ALL_PROPS_FOR_DUPE_FILE,
-	                                   DEFAULT_KEEP_ALL_PROPS_FOR_DUPE_FILE)) {
+      if (identicalVersion) {
         // rename to dated property version, using 'File.lastModified()'
         long date = currentPropsFile.lastModified();
         verPropsFile = getDatedVersionedPropsFile(currentVersion, date);
@@ -587,13 +585,17 @@ public class RepositoryNodeImpl implements RepositoryNode {
         verPropsFile = getVersionedPropsFile(currentVersion);
       }
 
-      // rename current properties to chosen file name
-      if (currentPropsFile.exists() &&
-          !PlatformUtil.updateAtomically(currentPropsFile,
-                                         verPropsFile)) {
-        String err = "Couldn't rename current property file: " + url;
-        logger.error(err);
-        throw new LockssRepository.RepositoryStateException(err);
+      if (CurrentConfig.getBooleanParam(PARAM_KEEP_ALL_PROPS_FOR_DUPE_FILE,
+                                        DEFAULT_KEEP_ALL_PROPS_FOR_DUPE_FILE)
+                                        || !identicalVersion) {
+	// rename current properties to chosen file name
+	if (currentPropsFile.exists() &&
+	    !PlatformUtil.updateAtomically(currentPropsFile,
+	                                   verPropsFile)) {
+	  String err = "Couldn't rename current property file: " + url;
+	  logger.error(err);
+	  throw new LockssRepository.RepositoryStateException(err);
+	}
       }
 
       // if not identical, rename content from 'temp' to 'current'
