@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.50 2007-01-14 07:59:11 tlipkis Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.51 2007-01-19 19:32:19 troberts Exp $
  */
 
 /*
@@ -53,10 +53,12 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
   private String tempDirPath;
   MockArchivalUnit mau;
 
+  Properties props;
+
   public void setUp() throws Exception {
     super.setUp();
     tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    Properties props = new Properties();
+    props = new Properties();
     props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
@@ -470,7 +472,50 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertEquals("test stream 2", resultStr);
   }
 
-  public void testMakeNewIdenticalVersion() throws Exception {
+  public void testMakeNewIdenticalVersionDefault() throws Exception {
+    Properties props = new Properties();
+    props.setProperty("test 1", "value 1");
+    MyMockRepositoryNode leaf = new MyMockRepositoryNode(
+        (RepositoryNodeImpl)createLeaf(
+        "http://www.example.com/testDir/test.cache", "test stream", props));
+    assertEquals(1, leaf.getCurrentVersion());
+    // set the file extension
+    leaf.dateValue = 123321;
+
+    props = new Properties();
+    props.setProperty("test 1", "value 2");
+    leaf.makeNewVersion();
+    leaf.setNewProperties(props);
+    writeToLeaf(leaf, "test stream");
+    leaf.sealNewVersion();
+    assertEquals(1, leaf.getCurrentVersion());
+
+    String resultStr = getLeafContent(leaf);
+    assertEquals("test stream", resultStr);
+    props = leaf.getNodeContents().getProperties();
+    assertEquals("value 2", props.getProperty("test 1"));
+
+    // make sure proper files exist
+    tempDirPath = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath, mau);
+    tempDirPath = LockssRepositoryImpl.mapUrlToFileLocation(tempDirPath,
+        "http://www.example.com/testDir/test.cache");
+
+    File testFileDir = new File(tempDirPath + "/#content");
+    File[] files = testFileDir.listFiles();
+    assertEquals(3, files.length);
+    File testFile = new File(testFileDir, "current");
+    assertTrue(testFile.exists());
+    testFile = new File(testFileDir, "current.props");
+    assertTrue(testFile.exists());
+    testFile = new File(testFileDir, "1.props-123321");
+    assertFalse(testFile.exists());
+  }
+
+  public void testMakeNewIdenticalVersionOldWay() throws Exception {
+    props.setProperty(RepositoryNodeImpl.PARAM_KEEP_ALL_PROPS_FOR_DUPE_FILE,
+                      "true");
+    ConfigurationUtil.setCurrentConfigFromProps(props);
+
     Properties props = new Properties();
     props.setProperty("test 1", "value 1");
     MyMockRepositoryNode leaf = new MyMockRepositoryNode(
@@ -507,6 +552,49 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertTrue(testFile.exists());
     testFile = new File(testFileDir, "1.props-123321");
     assertTrue(testFile.exists());
+  }
+
+  public void testMakeNewIdenticalVersionNewWay() throws Exception {
+    props.setProperty(RepositoryNodeImpl.PARAM_KEEP_ALL_PROPS_FOR_DUPE_FILE,
+                      "false");
+    ConfigurationUtil.setCurrentConfigFromProps(props);
+
+    Properties props = new Properties();
+    props.setProperty("test 1", "value 1");
+    MyMockRepositoryNode leaf = new MyMockRepositoryNode(
+        (RepositoryNodeImpl)createLeaf(
+        "http://www.example.com/testDir/test.cache", "test stream", props));
+    assertEquals(1, leaf.getCurrentVersion());
+    // set the file extension
+    leaf.dateValue = 123321;
+
+    props = new Properties();
+    props.setProperty("test 1", "value 2");
+    leaf.makeNewVersion();
+    leaf.setNewProperties(props);
+    writeToLeaf(leaf, "test stream");
+    leaf.sealNewVersion();
+    assertEquals(1, leaf.getCurrentVersion());
+
+    String resultStr = getLeafContent(leaf);
+    assertEquals("test stream", resultStr);
+    props = leaf.getNodeContents().getProperties();
+    assertEquals("value 2", props.getProperty("test 1"));
+
+    // make sure proper files exist
+    tempDirPath = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath, mau);
+    tempDirPath = LockssRepositoryImpl.mapUrlToFileLocation(tempDirPath,
+        "http://www.example.com/testDir/test.cache");
+
+    File testFileDir = new File(tempDirPath + "/#content");
+    File[] files = testFileDir.listFiles();
+    assertEquals(3, files.length);
+    File testFile = new File(testFileDir, "current");
+    assertTrue(testFile.exists());
+    testFile = new File(testFileDir, "current.props");
+    assertTrue(testFile.exists());
+    testFile = new File(testFileDir, "1.props-123321");
+    assertFalse(testFile.exists());
   }
 
   public void testIdenticalVersionFixesVersionError() throws Exception {

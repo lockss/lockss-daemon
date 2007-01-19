@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.68 2006-11-11 06:53:25 tlipkis Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.69 2007-01-19 19:32:18 troberts Exp $
  */
 
 /*
@@ -100,6 +100,10 @@ public class RepositoryNodeImpl implements RepositoryNode {
   // Token used in above props to indicate explicitly invalid.  Used to
   // distinguish invalidated from never-been-set.
   static final String INVALID = "U";
+
+  public static final String PARAM_KEEP_ALL_PROPS_FOR_DUPE_FILE =
+    Configuration.PREFIX + "repository.keepAllPropsForDupeFile";
+  public static final boolean DEFAULT_KEEP_ALL_PROPS_FOR_DUPE_FILE = false;
 
   // the filenames associated with the filesystem storage structure
   // the node property file
@@ -568,7 +572,9 @@ public class RepositoryNodeImpl implements RepositoryNode {
       // get versioned props file
       File verPropsFile;
       // name 'identical version' props differently
-      if (identicalVersion) {
+      if (identicalVersion
+	  && CurrentConfig.getBooleanParam(PARAM_KEEP_ALL_PROPS_FOR_DUPE_FILE,
+	                                   DEFAULT_KEEP_ALL_PROPS_FOR_DUPE_FILE)) {
         // rename to dated property version, using 'File.lastModified()'
         long date = currentPropsFile.lastModified();
         verPropsFile = getDatedVersionedPropsFile(currentVersion, date);
