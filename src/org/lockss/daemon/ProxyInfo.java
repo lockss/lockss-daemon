@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyInfo.java,v 1.21 2007-01-14 08:13:16 tlipkis Exp $
+ * $Id: ProxyInfo.java,v 1.22 2007-01-21 22:07:01 tlipkis Exp $
  */
 
 /*
@@ -241,7 +241,7 @@ public class ProxyInfo {
       buffer.append(getProxyHost());
       buffer.append(":");
       buffer.append(getProxyPort());
-      buffer.append("\"; }\n\n");
+      buffer.append("; DIRECT\"; }\n\n");
     }
 
     /**
