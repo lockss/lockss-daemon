@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyManager.java,v 1.39 2007-01-18 02:28:09 tlipkis Exp $
+ * $Id: ProxyManager.java,v 1.40 2007-01-21 22:06:32 tlipkis Exp $
  */
 
 /*
@@ -149,8 +149,7 @@ public class ProxyManager extends BaseProxyManager {
   private FixedTimedMap urlCache;
   private boolean paramUrlCacheEnabled = DEFAULT_URL_CACHE_ENABLED;
   private long paramUrlCacheDuration = DEFAULT_URL_CACHE_DURATION;
-  private Map noManifestIndexResponses = new HashMap();
-  private boolean manifestIndexResponsesNone = false;
+  private Set noManifestIndexResponses = new HashSet();
 
 
   public void setConfig(Configuration config, Configuration prevConfig,
@@ -195,30 +194,26 @@ public class ProxyManager extends BaseProxyManager {
 
 	String noindex = config.get(PARAM_NO_MANIFEST_INDEX_RESPONSES,
 				    DEFAULT_NO_MANIFEST_INDEX_RESPONSES);
-	Map newMap = null;
 	if (StringUtil.isNullString(noindex)) {
-	  newMap = new HashMap();
+	  noManifestIndexResponses = new HashSet();
+	} else if ("all".equalsIgnoreCase(noindex)) {
+	  noManifestIndexResponses = new UniversalSet();
 	} else {
-	  if ("all".equalsIgnoreCase(noindex)) {
-	    manifestIndexResponsesNone = true;
-	  } else {
-	    newMap = new HashMap();
-	    List lst = StringUtil.breakAt(noindex, ';', 0, true);
-	    for (Iterator iter = lst.iterator(); iter.hasNext(); ) {
-	      String str = (String)iter.next();
-	      try {
-		newMap.put(new Integer(str), "");
-	      } catch (NumberFormatException e) {
-		log.warning("Invalid response code in " +
-			    PARAM_NO_MANIFEST_INDEX_RESPONSES +
-			    ": " + str + ", ignored");
-	      }
+	  Set newSet = new HashSet();
+	  List lst = StringUtil.breakAt(noindex,
+					Constants.LIST_DELIM_CHAR,
+					0, true);
+	  for (Iterator iter = lst.iterator(); iter.hasNext(); ) {
+	    String str = (String)iter.next();
+	    try {
+	      newSet.add(new Integer(str));
+	    } catch (NumberFormatException e) {
+	      log.warning("Invalid response code in " +
+			  PARAM_NO_MANIFEST_INDEX_RESPONSES +
+			  ": " + str + ", ignored");
 	    }
 	  }
-	}
-	if (newMap != null) {
-	  noManifestIndexResponses = newMap;
-	  manifestIndexResponsesNone = false;
+	  noManifestIndexResponses = newSet;
 	}
 
 	if (!isServerRunning() && getDaemon().isDaemonRunning()) {
@@ -339,8 +334,7 @@ public class ProxyManager extends BaseProxyManager {
   }
 
   public boolean showManifestIndexForResponse(int status) {
-    if (manifestIndexResponsesNone) return false;
-    return noManifestIndexResponses.get(new Integer(status)) == null;
+    return ! noManifestIndexResponses.contains(new Integer(status));
   }
 
 }
