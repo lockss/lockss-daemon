@@ -1,5 +1,5 @@
 /*
- * $Id: TestUrlUtil.java,v 1.29 2007-01-14 07:54:37 tlipkis Exp $
+ * $Id: TestUrlUtil.java,v 1.30 2007-01-21 22:05:49 tlipkis Exp $
  */
 
 /*
@@ -67,6 +67,21 @@ public class TestUrlUtil extends LockssTestCase {
 
   public void assertSameNormalizePath(String s) {
     assertSame(s, normalizePath(s));
+  }
+
+  public void testNormalizeUrlEncodingCase() throws Exception {
+    assertSame("", UrlUtil.normalizeUrlEncodingCase(""));
+    assertSame("a", UrlUtil.normalizeUrlEncodingCase("a"));
+    assertSame("aB", UrlUtil.normalizeUrlEncodingCase("aB"));
+    assertEquals("%33", UrlUtil.normalizeUrlEncodingCase("%33"));
+    assertEquals("%AB%CD", UrlUtil.normalizeUrlEncodingCase("%ab%cd"));
+    assertEquals("foobar%d", UrlUtil.normalizeUrlEncodingCase("foobar%d"));
+    assertEquals("foobar%3D", UrlUtil.normalizeUrlEncodingCase("foobar%3d"));
+    assertEquals("%3Dfoobar", UrlUtil.normalizeUrlEncodingCase("%3dfoobar"));
+    assertEquals("%3Dfoobar%3D",
+		 UrlUtil.normalizeUrlEncodingCase("%3dfoobar%3d"));
+    assertEquals("foo%3Dbar", UrlUtil.normalizeUrlEncodingCase("foo%3Dbar"));
+    assertEquals("foo%3Dbar", UrlUtil.normalizeUrlEncodingCase("foo%3dbar"));
   }
 
   public void testNormalizePath() throws Exception {
@@ -271,6 +286,15 @@ public class TestUrlUtil extends LockssTestCase {
     assertEquals("http://a .b/bar?foo/../bar",
 		 UrlUtil.normalizeUrl("  ht\n   tp://a .b/foo/../bar?foo/../bar"));
 
+    assertEquals("http://a.b/bar%4Ffoo",
+		 UrlUtil.normalizeUrl("http://a.b/bar%4ffoo"));
+    assertEquals("http://a.b/bar%4Ffoo",
+		 UrlUtil.normalizeUrl("http://a.b/bar%4Ffoo"));
+    assertEquals("http://a.b/bar%4Ffoo?x=y%5Bz%5D",
+		 UrlUtil.normalizeUrl("http://a.b/bar%4ffoo?x=y%5bz%5d"));
+    assertEquals("http://a.b/bar%4Ffoo?x=y%5Bz%5D",
+		 UrlUtil.normalizeUrl("http://a.b/bar%4ffoo?x=y%5Bz%5D"));
+
     ConfigurationUtil.addFromArgs(UrlUtil.PARAM_PATH_TRAVERSAL_ACTION,
 				  "1");
     assertMode1();
@@ -449,8 +473,8 @@ public class TestUrlUtil extends LockssTestCase {
     assertEquals("foo", UrlUtil.minimallyEncodeUrl("foo"));
     assertEquals("foo%20", UrlUtil.minimallyEncodeUrl("foo "));
     assertEquals("f%22oo%20", UrlUtil.minimallyEncodeUrl("f\"oo "));
-    assertEquals("%20foo%7c", UrlUtil.minimallyEncodeUrl(" foo|"));
-    assertEquals("%5bfoo%5d", UrlUtil.minimallyEncodeUrl("[foo]"));
+    assertEquals("%20foo%7C", UrlUtil.minimallyEncodeUrl(" foo|"));
+    assertEquals("%5Bfoo%5D", UrlUtil.minimallyEncodeUrl("[foo]"));
   }
 
   boolean uri=false;

@@ -1,5 +1,5 @@
 /*
- * $Id: UrlUtil.java,v 1.42 2007-01-14 07:54:38 tlipkis Exp $
+ * $Id: UrlUtil.java,v 1.43 2007-01-21 22:05:49 tlipkis Exp $
  *
 
 Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
@@ -74,6 +74,11 @@ public class UrlUtil {
   public static final int DEFAULT_PATH_TRAVERSAL_ACTION =
     PATH_TRAVERSAL_ACTION_REMOVE;
 
+  /** If true, hex chars in URL encodings are normalized to upper case */
+  public static final String PARAM_NORMALIZE_URL_ENCODING_CASE =
+    PREFIX + "normalizeUrlEncodingCase";
+  public static final boolean DEFAULT_NORMALIZE_URL_ENCODING_CASE = true;
+
   /** If true, use Apache Commons HttpClient, if false use native Java
    * HttpURLConnection */
   static final String PARAM_USE_HTTPCLIENT = PREFIX + "useHttpClient";
@@ -81,6 +86,8 @@ public class UrlUtil {
 
   private static boolean useHttpClient = DEFAULT_USE_HTTPCLIENT;
   private static int pathTraversalAction = DEFAULT_PATH_TRAVERSAL_ACTION;
+  private static boolean normalizeUrlEncodingCase =
+    DEFAULT_NORMALIZE_URL_ENCODING_CASE;
 
 
   /** Called by org.lockss.config.MiscConfig
@@ -93,6 +100,9 @@ public class UrlUtil {
 					DEFAULT_USE_HTTPCLIENT);
       pathTraversalAction = config.getInt(PARAM_PATH_TRAVERSAL_ACTION,
 					  DEFAULT_PATH_TRAVERSAL_ACTION);
+      normalizeUrlEncodingCase =
+	config.getBoolean(PARAM_NORMALIZE_URL_ENCODING_CASE,
+			  DEFAULT_NORMALIZE_URL_ENCODING_CASE);
     }
   }
 
@@ -156,8 +166,18 @@ public class UrlUtil {
     } else {
       String normPath = normalizePath(path);
       if (!normPath.equals(path)) {
-	log.debug3("Normalized "+path+" to "+normPath);
+	if (log.isDebug3()) log.debug3("Normalized "+path+" to "+normPath);
 	path = normPath;
+	changed = true;
+      }
+    }
+
+    if (!StringUtil.isNullString(query)) {
+      String normQuery = normalizeUrlEncodingCase(query);
+      if (!normQuery.equals(query)) {
+	if (log.isDebug3())
+	  log.debug3("Normalized query "+query+" to "+normQuery);
+	query = normQuery;
 	changed = true;
       }
     }
@@ -250,6 +270,8 @@ public class UrlUtil {
     if (path.equals(".") || path.equals("./")) {
       return "";
     }
+    path = normalizeUrlEncodingCase(path);
+
     // quickly determine whether anything needs to be done
     if (! (path.endsWith("/.") || path.endsWith("/..") ||
 	   path.equals("..") || path.equals(".") ||
@@ -305,6 +327,31 @@ public class UrlUtil {
 	!(sb.length() == 1 && path.startsWith("/"))) {
       sb.append("/");
     }
+    return sb.toString();
+  }
+
+  public static String normalizeUrlEncodingCase(String str) {
+    if (!normalizeUrlEncodingCase) {
+      return str;
+    }      
+    int pos = str.indexOf('%');
+    if (pos < 0) {
+      return str;
+    }
+    StringBuffer sb = new StringBuffer(str);
+    int len = str.length();
+    do {
+      if (len < pos + 3) {
+	break;
+      }
+      char ch;
+      if (Character.isLowerCase(ch = sb.charAt(pos + 1))) {
+	sb.setCharAt(pos + 1, Character.toUpperCase(ch));
+      }
+      if (Character.isLowerCase(ch = sb.charAt(pos + 2))) {
+	sb.setCharAt(pos + 2, Character.toUpperCase(ch));
+      }
+    } while ((pos = str.indexOf('%', pos + 3)) >= 0);
     return sb.toString();
   }
 
@@ -439,9 +486,9 @@ public class UrlUtil {
   public static String minimallyEncodeUrl(String url) {
     url = StringUtil.replaceString(url, " ", "%20");
     url = StringUtil.replaceString(url, "\"", "%22");
-    url = StringUtil.replaceString(url, "|", "%7c");
-    url = StringUtil.replaceString(url, "[", "%5b");
-    url = StringUtil.replaceString(url, "]", "%5d");
+    url = StringUtil.replaceString(url, "|", "%7C");
+    url = StringUtil.replaceString(url, "[", "%5B");
+    url = StringUtil.replaceString(url, "]", "%5D");
     return url;
   }
 
