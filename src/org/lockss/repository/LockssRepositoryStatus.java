@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryStatus.java,v 1.26 2006-11-11 06:56:29 tlipkis Exp $
+ * $Id: LockssRepositoryStatus.java,v 1.27 2007-01-21 22:06:18 tlipkis Exp $
  */
 
 /*
@@ -130,7 +130,7 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
 	String repoSpec = (String)iter.next();
 	String path = LockssRepositoryImpl.getLocalRepositoryPath(repoSpec);
 	if (path != null) {
-	  roots.add(repoSpec.substring(6));
+	  roots.add(path);
 	}
       }
       roots.add(getDefaultRepositoryLocation());
@@ -173,13 +173,13 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
 		}
 	      }
 	    }
-	    rows.add(makeRow(sub, auid, stats));
+	    rows.add(makeRow(sub, root, auid, stats));
 	  }
 	}
       }
     }
 
-    Map makeRow(File dir, String auid, Stats stats) {
+    Map makeRow(File dir, String root, String auid, Stats stats) {
       String dirString = dir.toString();
       Map row = new HashMap();
       row.put("dir", dirString);
@@ -195,16 +195,11 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
 	  name = au.getName();
 	  Configuration auConfig = au.getConfiguration();
 	  String repoSpec = auConfig.get(PluginManager.AU_PARAM_REPOSITORY);
-	  if (repoSpec == null) {
-	    if (!dirString.startsWith(getDefaultRepositoryLocation())) {
-	      au = null;
-	    }
-	  } else {
-	    String root =
-	      LockssRepositoryImpl.getLocalRepositoryPath(repoSpec);
-	    if (root != null && !dirString.startsWith(root)) {
-	      au = null;
-	    }
+	  String repoRoot = (repoSpec == null)
+	    ? getDefaultRepositoryLocation()
+	    : LockssRepositoryImpl.getLocalRepositoryPath(repoSpec);
+	  if (!LockssRepositoryImpl.isDirInRepository(root, repoRoot)) {
+	    au = null;
 	  }
 	}
 

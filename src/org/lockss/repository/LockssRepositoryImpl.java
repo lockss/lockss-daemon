@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.73 2007-01-14 07:59:13 tlipkis Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.74 2007-01-21 22:06:18 tlipkis Exp $
  */
 
 /*
@@ -393,6 +393,40 @@ public class LockssRepositoryImpl
       }
     }
     return null;
+  }
+
+
+  // The OpenBSD platform has renamed the first disk from /cache to
+  // /cache.wd0, leaving behind a symbolic link in /cache .  This is
+  // transparent everywhere except the repository status table, which needs
+  // to match AU configs with AUs it finds when enumerating the repository.
+  // Existing AU configs have repository=local:/cache, so the relative link
+  // needs to be resolved to detect that that's the same as
+  // local:/cache.wd0
+
+  private static Map canonicalRoots = new HashMap();
+
+  public static boolean isDirInRepository(String dir, String repoRoot) {
+    if (dir.startsWith(repoRoot)) {
+      return true;
+    }
+    return canonRoot(dir).startsWith(canonRoot(repoRoot));
+  }
+
+  static String canonRoot(String root) {
+    synchronized (canonicalRoots) {
+      String canon = (String)canonicalRoots.get(root);
+      if (canon == null) {
+	try {
+	  canon = new File(root).getCanonicalPath();
+	  canonicalRoots.put(root, canon);
+	} catch (IOException e) {
+	  logger.warning("Can't canonicalize: " + root, e);
+	  return root;
+	}
+      }
+      return canon;
+    }
   }
 
   static String getCacheLocation() {
