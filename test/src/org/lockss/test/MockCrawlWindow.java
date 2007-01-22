@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawlWindow.java,v 1.1 2003-12-06 00:53:00 eaalto Exp $
+ * $Id: MockCrawlWindow.java,v 1.2 2007-01-22 22:10:41 troberts Exp $
  */
 
 /*
@@ -43,6 +43,10 @@ public class MockCrawlWindow implements CrawlWindow {
   boolean allowCrawl = true;
 
   public MockCrawlWindow() { }
+
+  public MockCrawlWindow(boolean allowCrawl) {
+    this.allowCrawl = allowCrawl;
+  }
 
   public boolean canCrawl() {
     return allowCrawl;
