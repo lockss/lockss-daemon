@@ -1,5 +1,5 @@
 /*
- * $Id: PermissionMap.java,v 1.16 2007-01-22 22:09:54 troberts Exp $
+ * $Id: PermissionMap.java,v 1.17 2007-01-22 23:57:19 troberts Exp $
  */
 
 /*
@@ -237,7 +237,7 @@ public class PermissionMap {
       case PermissionRecord.PERMISSION_CRAWL_WINDOW_CLOSED:
 	logger.debug("Couldn't fetch permission page, " +
 			"because crawl window was closed");
-	crawlStatus.setCrawlError("Crawl window closed, aborting permission check.");
+	crawlStatus.setCrawlError("Crawl window closed.");
 	return false;
       case PermissionRecord.PERMISSION_FETCH_FAILED:
         if (retryIfFailed) {
