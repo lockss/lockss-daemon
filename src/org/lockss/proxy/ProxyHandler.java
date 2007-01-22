@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.49 2007-01-18 02:28:09 tlipkis Exp $
+ * $Id: ProxyHandler.java,v 1.50 2007-01-22 08:07:41 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.49 2007-01-18 02:28:09 tlipkis Exp $
+// $Id: ProxyHandler.java,v 1.50 2007-01-22 08:07:41 tlipkis Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -1081,7 +1081,7 @@ public class ProxyHandler extends AbstractHttpHandler {
 		     PlatformUtil.getLocalHostname() +
 		     ") does not contain content for that URL, " +
 		     "but it does contain possibly related content " +
-		     "in the following AU(s):\n");
+		     "in the following Archival Units:\n");
 	Element ele = ServletUtil.manifestIndex(theDaemon, candidateAus);
 	ele.write(writer);
       }
