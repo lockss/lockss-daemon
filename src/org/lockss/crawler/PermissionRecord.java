@@ -1,5 +1,5 @@
 /*
- * $Id: PermissionRecord.java,v 1.6 2006-09-22 06:23:02 tlipkis Exp $
+ * $Id: PermissionRecord.java,v 1.7 2007-01-22 22:10:09 troberts Exp $
  */
 
 /*
@@ -46,6 +46,7 @@ public class PermissionRecord {
   public static final int PERMISSION_MISSING = 4;
   public static final int PERMISSION_REPOSITORY_ERROR = 5;
   public static final int PERMISSION_NOT_IN_CRAWL_SPEC = 6;
+  public static final int PERMISSION_CRAWL_WINDOW_CLOSED = 7;
 
   private String url;
   private String host;
