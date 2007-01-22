@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingHtmlParser.java,v 1.34 2007-01-16 08:17:09 thib_gc Exp $
+ * $Id: TestGoslingHtmlParser.java,v 1.35 2007-01-22 17:56:58 thib_gc Exp $
  */
 
 /*
@@ -226,24 +226,27 @@ public class TestGoslingHtmlParser extends LockssTestCase {
     String url6 = "img6.gif";
 
     String source =
-      "<html>" +
-      " <head>" +
-      "  <title>Test</title>" +
-      "  " + openingStyleTag +
-      "@import url(\'" + givenPrefix + url1 + "\');" +
-      "@import url(\"" + givenPrefix + url2 + "\");" +
-      "@import \'" + givenPrefix + url3 + "\';" +
-      "@import \"" + givenPrefix + url4 + "\";" +
-      "foo {" +
-      " bar: url(\'" + givenPrefix + url5 + "\');" +
-      " baz: url(\"" + givenPrefix + url6 + "\");" +
-      "}" +
-      "  </style>" +
-      " </head>" +
-      " <body>" +
-      "  <p>Fake content</p>" +
-      " </body>" +
-      "</html>";
+      "<html>\n" +
+      " <head>\n" +
+      "  <title>Test</title>\n" +
+      "  " + openingStyleTag + "\n" +
+      "<!--\n" +
+      "@import url(\'" + givenPrefix + url1 + "\');\n" +
+      "@import url(\"" + givenPrefix + url2 + "\");\n" +
+      "@import \'" + givenPrefix + url3 + "\';\n" +
+      "@import \"" + givenPrefix + url4 + "\";\n" +
+      "foo {\n" +
+      " bar: url(\'" + givenPrefix + url5 + "\');\n" +
+      " baz: url(\"" + givenPrefix + url6 + "\");\n" +
+      "}\n" +
+      "/* Comment */" +
+      "-->\n" +
+      "  </style>\n" +
+      " </head>\n" +
+      " <body>\n" +
+      "  <p>Fake content</p>\n" +
+      " </body>\n" +
+      "</html>\n";
     assertEquals(SetUtil.set(expectedPrefix + url1,
                              expectedPrefix + url2,
                              expectedPrefix + url3,

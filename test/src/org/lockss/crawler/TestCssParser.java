@@ -1,5 +1,5 @@
 /*
- * $Id: TestCssParser.java,v 1.2 2007-01-16 08:17:09 thib_gc Exp $
+ * $Id: TestCssParser.java,v 1.3 2007-01-22 17:56:58 thib_gc Exp $
  */
 
 /*
@@ -151,14 +151,15 @@ public class TestCssParser extends LockssTestCase {
     String url6 = "img6.gif";
 
     String source =
-      "@import url(\'" + url1 + "\');" +
-      "@import url(\"" + url2 + "\");" +
-      "@import \'" + url3 + "\';" +
-      "@import \"" + givenPrefix + url4 + "\";" +
-      "foo {" +
-      " bar: url(\'" + givenPrefix + url5 + "\');" +
-      " baz: url(\"" + givenPrefix + url6 + "\");" +
-      "}";
+      "@import url(\'" + url1 + "\');\n" +
+      "@import url(\"" + url2 + "\");\n" +
+      "@import \'" + url3 + "\';\n" +
+      "@import \"" + givenPrefix + url4 + "\";\n" +
+      "foo {\n" +
+      " bar: url(\'" + givenPrefix + url5 + "\');\n" +
+      " baz: url(\"" + givenPrefix + url6 + "\");\n" +
+      "}\n" +
+      "/* Comment */\n";
     
     Set found = new HashSet();
     new CssParser().parseForUrls(new StringReader(source),
