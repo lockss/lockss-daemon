@@ -1,5 +1,5 @@
 /*
- * $Id: TestPermissionMap.java,v 1.7 2006-11-14 19:21:28 tlipkis Exp $
+ * $Id: TestPermissionMap.java,v 1.8 2007-01-22 22:10:24 troberts Exp $
  */
 
 /*
@@ -31,10 +31,10 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.crawler;
-import java.util.ArrayList;
+import java.util.*;
 import java.io.*;
 
-import org.lockss.daemon.Crawler;
+import org.lockss.daemon.*;
 import org.lockss.test.*;
 import org.lockss.plugin.*;
 import org.lockss.util.ListUtil;
@@ -44,16 +44,34 @@ public class TestPermissionMap extends LockssTestCase {
   private String permissionUrl1 = "http://www.example.com/index.html";
   private String url1 = "http://www.example.com/link1.html";
 
+  private MockArchivalUnit mau;
+  private MockPermissionHelper helper;
 
   public void setUp() throws Exception {
     super.setUp();
 
     getMockLockssDaemon().getAlertManager(); //populates AlertManager
 
+    helper = new MyMockPermissionHelper();
+
     pMap = new PermissionMap(new MockArchivalUnit(),
                              new MockPermissionHelper(),
 			     new ArrayList(), null);
     putStatus(pMap, permissionUrl1, PermissionRecord.PERMISSION_OK);
+
+    mau = new MockArchivalUnit();
+    mau.setPlugin(new MockPlugin(getMockLockssDaemon()));
+    List startUrls = ListUtil.list(permissionPage1);
+
+    MockCrawlRule crawlRule = new MockCrawlRule();
+    crawlRule.addUrlToCrawl(permissionPage1);
+    mau.addUrl(permissionPage1);
+    CrawlSpec spec =
+      new SpiderCrawlSpec(startUrls,
+                          ListUtil.list(permissionPage1),
+                          crawlRule, 1);
+
+    mau.setCrawlSpec(spec);
   }
 
   void putStatus(PermissionMap map, String permissionUrl, int status)
@@ -81,27 +99,79 @@ public class TestPermissionMap extends LockssTestCase {
     }
   }
 
-  // XXX unfinished
-  public void testCheckPermission() throws Exception {
-    MockPermissionChecker checker1 = new MockPermissionChecker(1);
-    MockPermissionChecker checker2 = new MockPermissionChecker(1);
-    MyPermissionHelper helper = new MyPermissionHelper();
-    PermissionMap map = new PermissionMap(new MockArchivalUnit(),
-					  helper,
-					  ListUtil.list(checker1),
-					  checker2);
+  private static final String permissionPage1 =
+    "http://www.example.com/perm.html";
+
+  public void testCheckPermissionDaemonPermissionOnly() throws Exception {
+    PermissionMap map =
+      new PermissionMap(mau, helper,
+                        ListUtil.list(new MockPermissionChecker(999)),
+                        null);
+    map.init();
+    assertTrue(map.hasPermission("http://www.example.com/"));
+    assertNull(helper.getCrawlStatus().getCrawlError());
+  }
+
+  public void testCheckPermissionDaemonAndPluginPermission() throws Exception {
+    PermissionMap map =
+      new PermissionMap(mau, new MyMockPermissionHelper(),
+                        ListUtil.list(new MockPermissionChecker(999)),
+                        new MockPermissionChecker(999));
+    map.init();
+    assertTrue(map.hasPermission("http://www.example.com/"));
+    assertNull(helper.getCrawlStatus().getCrawlError());
+  }
+
+  public void testCheckPermissionDaemonPermissionRefuses() throws Exception {
+    PermissionMap map =
+      new PermissionMap(mau, helper,
+                        ListUtil.list(new MockPermissionChecker(0)),
+                        new MockPermissionChecker(999));
+    map.init();
+    assertFalse(map.hasPermission("http://www.example.com/"));
+    assertEquals("No permission statement on manifest page.",
+                 helper.getCrawlStatus().getCrawlError());
+  }
+
+  public void testCheckPermissionPluginPermissionRefuses() throws Exception {
+    PermissionMap map =
+      new PermissionMap(mau, helper,
+                        ListUtil.list(new MockPermissionChecker(999)),
+                        new MockPermissionChecker(0));
+    map.init();
+    assertFalse(map.hasPermission("http://www.example.com/"));
+    assertEquals("No permission statement on manifest page.",
+                 helper.getCrawlStatus().getCrawlError());
+  }
+
+  public void testCheckPermissionPluginCrawlWindowClosed() throws Exception {
+    CrawlSpec spec = mau.getCrawlSpec();
+    spec.setCrawlWindow(new MockCrawlWindow(false));
+
+    PermissionMap map =
+      new PermissionMap(mau, helper,
+                        ListUtil.list(new MockPermissionChecker(999)),
+                        new MockPermissionChecker(999));
+    map.init();
+    assertFalse(map.hasPermission("http://www.example.com/"));
+    assertEquals("Crawl window closed, aborting permission check.",
+                 helper.getCrawlStatus().getCrawlError());
   }
 
   // XXX unfinished
-  class MyPermissionHelper extends MockPermissionHelper {
+  class MyMockPermissionHelper extends MockPermissionHelper {
+    CrawlerStatus cStatus = new CrawlerStatus(null, null, null);
+
     public UrlCacher makeUrlCacher(String url) {
-      
-      return new MockUrlCacher("foo", new MockArchivalUnit());
+      MockUrlCacher muc =  new MockUrlCacher("foo", new MockArchivalUnit());
+      muc.setUncachedInputStream(new StringInputStream("Blah"));
+      return muc;
     }
 
     public BufferedInputStream resetInputStream(BufferedInputStream is,
-						String url) {
-      throw new UnsupportedOperationException("not implemented");
+						String url) throws IOException {
+      is.reset();
+      return is;
     }
 
     public void refetchPermissionPage(String url) {
@@ -109,7 +179,7 @@ public class TestPermissionMap extends LockssTestCase {
     }
 
     public CrawlerStatus getCrawlStatus() {
-      return new CrawlerStatus(null, null, null);
+      return cStatus;
     }
 
   }
