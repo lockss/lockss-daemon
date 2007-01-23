@@ -124,14 +124,21 @@ public class TestHtmlFilterInputStream extends LockssTestCase {
     String file = "rewind-test.txt";
     java.net.URL url = getClass().getResource(file);
     assertNotNull(file + " missing.", url);
-    InputStream in = UrlUtil.openInputStream(url.toString());
-    assertNotNull(in);
-    in = new BufferedInputStream(in);
-    InputStream expin = UrlUtil.openInputStream(url.toString());
-    Reader rdr = new InputStreamReader(expin, "iso-8859-1");
-    String exp = StringUtil.fromReader(rdr);
-    InputStream filt = new HtmlFilterInputStream(in, new IdentityXform());
-    assertInputStreamMatchesString(exp, filt);
+    InputStream in = null;
+    InputStream expin = null;
+    try {
+      in = UrlUtil.openInputStream(url.toString());
+      assertNotNull(in);
+      in = new BufferedInputStream(in);
+      expin = UrlUtil.openInputStream(url.toString());
+      Reader rdr = new InputStreamReader(expin, "iso-8859-1");
+      String exp = StringUtil.fromReader(rdr);
+      InputStream filt = new HtmlFilterInputStream(in, new IdentityXform());
+      assertInputStreamMatchesString(exp, filt);
+    } finally {
+      IOUtil.safeClose(in);
+      IOUtil.safeClose(expin);
+    }
   }
 
 
