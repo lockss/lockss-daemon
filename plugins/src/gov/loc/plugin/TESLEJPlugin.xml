@@ -1,56 +1,70 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Elements>
-  <MapElement>
-    <ElementKey>plugin_config_props</ElementKey>
-    <ElementValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.util.ArrayList">
-      <ConfigParamDescr>
-        <Key>volume</Key>
-        <DisplayName>Volume No.</DisplayName>
-        <Type>6</Type>
-        <Size>8</Size>
-        <Definitional>true</Definitional>
-      </ConfigParamDescr>
-      <ConfigParamDescr>
-        <Key>base_url</Key>
-        <DisplayName>Base URL</DisplayName>
-        <Description>Usually of the form http://&lt;journal-name&gt;.com/</Description>
-        <Type>3</Type>
-        <Size>40</Size>
-        <Definitional>true</Definitional>
-      </ConfigParamDescr>
-      <ConfigParamDescr>
-        <Key>num_issue_range</Key>
-        <DisplayName>Numeric Issue Range</DisplayName>
-        <Description>A Range of issues in the form: min-max</Description>
-        <Type>8</Type>
-        <Size>20</Size>
-        <Definitional>true</Definitional>
-      </ConfigParamDescr>
-    </ElementValue>
-  </MapElement>
-  <MapElement>
-    <ElementKey>au_crawlrules</ElementKey>
-    <ElementValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.util.ArrayList">
-      <string xsi:type="java:java.lang.String">4,"^%s", base_url</string>
-      <string xsi:type="java:java.lang.String">1,"%sTESLEJ-volume%d.html", base_url, volume</string>
-      <string xsi:type="java:java.lang.String">1,"^%sej%s/.*$", base_url, num_issue_range</string>
-      <string xsi:type="java:java.lang.String">1,"^%s.*\.gif$", base_url</string>
-    </ElementValue>
-  </MapElement>
-  <MapElement>
-    <ElementKey>plugin_name</ElementKey>
-    <ElementValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.lang.String">TESL-EJ</ElementValue>
-  </MapElement>
-  <MapElement>
-    <ElementKey>au_start_url</ElementKey>
-    <ElementValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.lang.String">"%sTESLEJ-volume%d.html", base_url, volume</ElementValue>
-  </MapElement>
-  <MapElement>
-    <ElementKey>au_name</ElementKey>
-    <ElementValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.lang.String">"%s %d", base_url, volume</ElementValue>
-  </MapElement>
-  <MapElement>
-    <ElementKey>plugin_identifier</ElementKey>
-    <ElementValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.lang.String">gov.loc.lockss.plugin.teslej.TeslejPlugin</ElementValue>
-  </MapElement>
-</Elements>
+<map>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>gov.loc.lockss.plugin.teslej.TeslejPlugin</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>3</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;TESL-EJ %d&quot;, volume</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>TESL-EJ Plugin</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;%sTESLEJ-volume%d.html&quot;, base_url, volume</string>
+      <string>1,&quot;^%sej%s/.*$&quot;, base_url, num_issue_range</string>
+      <string>1,&quot;^%s.*\.gif$&quot;, base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%sTESLEJ-volume%d.html&quot;, base_url, volume</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume</key>
+        <displayName>Volume No.</displayName>
+        <type>6</type>
+        <size>8</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>num_issue_range</key>
+        <displayName>Numeric Issue Range</displayName>
+        <description>A Range of issues in the form: min-max</description>
+        <type>8</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+</map>

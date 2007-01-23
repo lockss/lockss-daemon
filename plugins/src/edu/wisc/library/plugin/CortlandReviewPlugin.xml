@@ -1,66 +1,76 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Elements>
-  <MapElement>
-    <ElementKey>plugin_identifier</ElementKey>
-    <ElementValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.lang.String">edu.wisc.library.plugin.CortlandReviewPlugin</ElementValue>
-  </MapElement>
-  <MapElement>
-    <ElementKey>plugin_version</ElementKey>
-    <ElementValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.lang.String">2</ElementValue>
-  </MapElement>
-  <MapElement>
-    <ElementKey>au_name</ElementKey>
-    <ElementValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.lang.String">"Cortland Review %d", year</ElementValue>
-  </MapElement>
-  <MapElement>
-    <ElementKey>plugin_name</ElementKey>
-    <ElementValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.lang.String">Cortland Review</ElementValue>
-  </MapElement>
-  <MapElement>
-    <ElementKey>au_crawlrules</ElementKey>
-    <ElementValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.util.ArrayList">
-      <string xsi:type="java:java.lang.String">4,"^%s", base_url</string>
-      <string xsi:type="java:java.lang.String">1,"%sLOCKSS/cortlandreview_%d.html", base_url, year</string>
-      <string xsi:type="java:java.lang.String">1,"^%sfeatures/%02d/.*$", base_url, au_short_year</string>
-      <string xsi:type="java:java.lang.String">1,"^%simages/.*$", base_url</string>
-      <string xsi:type="java:java.lang.String">1,"%sissue/%s.*", base_url, num_issue_range</string>
-    </ElementValue>
-  </MapElement>
-  <MapElement>
-    <ElementKey>au_start_url</ElementKey>
-    <ElementValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.lang.String">"%sLOCKSS/cortlandreview_%d.html", base_url, year</ElementValue>
-  </MapElement>
-  <MapElement>
-    <ElementKey>plugin_crawl_type</ElementKey>
-    <ElementValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.lang.String">HTML Links</ElementValue>
-  </MapElement>
-  <MapElement>
-    <ElementKey>plugin_config_props</ElementKey>
-    <ElementValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.util.ArrayList">
-      <ConfigParamDescr>
-        <Key>num_issue_range</Key>
-        <DisplayName>Numeric Issue Range</DisplayName>
-        <Description>A Range of issues in the form: min-max</Description>
-        <Type>8</Type>
-        <Size>20</Size>
-        <Definitional>true</Definitional>
-      </ConfigParamDescr>
-      <ConfigParamDescr>
-        <Key>year</Key>
-        <DisplayName>Year</DisplayName>
-        <Description>Four digit year (e.g., 2004)</Description>
-        <Type>4</Type>
-        <Size>4</Size>
-        <Definitional>true</Definitional>
-      </ConfigParamDescr>
-      <ConfigParamDescr>
-        <Key>base_url</Key>
-        <DisplayName>Base URL</DisplayName>
-        <Description>Usually of the form http://&lt;journal-name&gt;.com/</Description>
-        <Type>3</Type>
-        <Size>40</Size>
-        <Definitional>true</Definitional>
-      </ConfigParamDescr>
-    </ElementValue>
-  </MapElement>
-</Elements>
+<map>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>edu.wisc.library.plugin.CortlandReviewPlugin</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>2</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;Cortland Review %d&quot;, year</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Cortland Review</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;%sLOCKSS/cortlandreview_%d.html&quot;, base_url, year</string>
+      <string>1,&quot;^%sfeatures/%02d/.*$&quot;, base_url, au_short_year</string>
+      <string>1,&quot;^%simages/.*$&quot;, base_url</string>
+      <string>1,&quot;%sissue/%s.*&quot;, base_url, num_issue_range</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%sLOCKSS/cortlandreview_%d.html&quot;, base_url, year</string>
+  </entry>
+  <entry>
+    <string>plugin_crawl_type</string>
+    <string>HTML Links</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>num_issue_range</key>
+        <displayName>Numeric Issue Range</displayName>
+        <description>A Range of issues in the form: min-max</description>
+        <type>8</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+</map>
