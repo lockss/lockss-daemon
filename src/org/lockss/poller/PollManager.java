@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.173 2006-11-11 06:56:30 tlipkis Exp $
+ * $Id: PollManager.java,v 1.174 2007-01-23 21:44:35 smorabito Exp $
  */
 
 /*
@@ -46,7 +46,7 @@ import org.lockss.plugin.*;
 import org.lockss.poller.v3.*;
 import org.lockss.poller.v3.V3Serializer.PollSerializerException;
 import org.lockss.protocol.*;
-import org.lockss.state.NodeManager;
+import org.lockss.state.*;
 import org.lockss.util.*;
 import EDU.oswego.cs.dl.util.concurrent.*;
 
@@ -65,6 +65,23 @@ public class PollManager
   static final String PARAM_RECENT_EXPIRATION = PREFIX + "expireRecent";
 
   static final long DEFAULT_RECENT_EXPIRATION = Constants.DAY;
+  
+  /** If true, empty poll state directories found at startup will be
+   * deleted.
+   */
+  static final String PARAM_DELETE_INVALID_POLL_STATE_DIRS =
+    PREFIX + "deleteInvalidPollStateDirs";
+  static final boolean DEFAULT_DELETE_INVALID_POLL_STATE_DIRS = true;
+  
+  public static final String PARAM_ENABLE_V3_POLLER =
+    org.lockss.poller.v3.V3PollFactory.PARAM_ENABLE_V3_POLLER;
+  public static final boolean DEFAULT_ENABLE_V3_POLLER =
+    org.lockss.poller.v3.V3PollFactory.DEFAULT_ENABLE_V3_POLLER;
+  
+  public static final String PARAM_ENABLE_V3_VOTER =
+    org.lockss.poller.v3.V3PollFactory.PARAM_ENABLE_V3_VOTER;
+  public static final boolean DEFAULT_ENABLE_V3_VOTER =
+    org.lockss.poller.v3.V3PollFactory.DEFAULT_ENABLE_V3_VOTER;
 
   // Items are moved between thePolls and theRecentPolls, so it's simplest
   // to synchronize all accesses on a single object.  That object is
@@ -89,6 +106,13 @@ public class PollManager
   private HashMap serializedPollers;
   private HashMap serializedVoters;
   private V3PollStatusAccessor v3Status;
+  private boolean deleteInvalidPollStateDirs =
+    DEFAULT_DELETE_INVALID_POLL_STATE_DIRS;
+  
+  // If true, restore V3 Voters
+  private boolean enablePollers = DEFAULT_ENABLE_V3_POLLER;
+  // If true, restore V3 Voters
+  private boolean enableVoters = DEFAULT_ENABLE_V3_VOTER;
   
   // Executor used to carry out serialized poll operations. 
   // Implementations include a queued poll executor and a pooled poll executor.
@@ -558,6 +582,23 @@ public class PollManager
     synchronized (pollMapLock) {
       theRecentPolls.put(key, pme);
     }
+    try {
+      theIDManager.storeIdentities();
+    } catch (ProtocolException ex) {
+      theLog.error("Unable to write Identity DB file.");
+    }
+
+    NodeManager nm = getDaemon().getNodeManager(p.getAu());
+
+    // XXX: This is hacked up, admittedly.  The entire NodeManager
+    //      and repository are getting overhauled anyway, so it makes
+    //      no sense to do the "right" thing here by integrating this
+    //      into the NodeManager somehow.
+    if (p.getType() == Poll.V3_POLL) {
+      // Retrieve the node state for the top-level AU
+      NodeStateImpl ns = (NodeStateImpl)nm.getNodeState(p.getCachedUrlSet());
+      ns.closeV3Poll(p.getKey());
+    }
 
     // XXX: V3 -- Only required for V1 polls.
     //
@@ -574,14 +615,8 @@ public class PollManager
         V1PollTally lastTally = (V1PollTally)tally;
         tally = lastTally.concatenateNameSubPollLists();
       }
-      NodeManager nm = getDaemon().getNodeManager(tally.getArchivalUnit());
       theLog.debug("handing poll results to node manager: " + tally);
       nm.updatePollResults(p.getCachedUrlSet(), tally);
-      try {
-        theIDManager.storeIdentities();
-      } catch (ProtocolException ex) {
-        theLog.error("Unable to write Identity DB file.");
-      }
       // free the activity lock
       ActivityRegulator.Lock lock = tally.getActivityLock();
       if(lock != null) {
@@ -691,6 +726,18 @@ public class PollManager
 	newConfig.getTimeInterval(PARAM_RECENT_EXPIRATION,
 				  DEFAULT_RECENT_EXPIRATION);
       theRecentPolls.setInterval(m_recentPollExpireTime);
+      
+      enablePollers =
+        CurrentConfig.getBooleanParam(PARAM_ENABLE_V3_POLLER,
+                                      DEFAULT_ENABLE_V3_POLLER);
+      
+      enableVoters =
+        CurrentConfig.getBooleanParam(PARAM_ENABLE_V3_VOTER,
+                                      DEFAULT_ENABLE_V3_VOTER);
+      
+      deleteInvalidPollStateDirs =
+        newConfig.getBoolean(PARAM_DELETE_INVALID_POLL_STATE_DIRS,
+                             DEFAULT_DELETE_INVALID_POLL_STATE_DIRS);
     }
     for (int i = 0; i < pf.length; i++) {
       if (pf[i] != null) {
@@ -735,74 +782,93 @@ public class PollManager
       return;
     }
     for (int ix = 0; ix < dirs.length; ix++) {
-      File poller = new File(dirs[ix],
-                             V3PollerSerializer.POLLER_STATE_BEAN);
-      if (poller != null && poller.exists()) {
-        // Add this poll dir to the serialized polls map.
-        try {
-          V3PollerSerializer pollSerializer =
-            new V3PollerSerializer(getDaemon(), dirs[ix]);
-          PollerStateBean psb = pollSerializer.loadPollerState();
-          // Check to see if this poll has expired.
-          long now = TimeBase.nowMs();
-          if (psb.getPollDeadline() <= now) {
-            theLog.info("Poll found in directory " + dirs[ix] + 
-                        " has expired, cleaning up directory and skipping.");
+      boolean restored = false;
+      // 1. See if there's a serialized poller.
+      if (enablePollers) {
+        File poller = new File(dirs[ix],
+                               V3PollerSerializer.POLLER_STATE_BEAN);
+        if (poller != null && poller.exists()) {
+          // Add this poll dir to the serialized polls map.
+          try {
+            V3PollerSerializer pollSerializer =
+              new V3PollerSerializer(getDaemon(), dirs[ix]);
+            PollerStateBean psb = pollSerializer.loadPollerState();
+            // Check to see if this poll has expired.
+            long now = TimeBase.nowMs();
+            if (psb.getPollDeadline() <= now) {
+              theLog.info("Poll found in directory " + dirs[ix] + 
+                          " has expired, cleaning up directory and skipping.");
+              FileUtil.delTree(dirs[ix]);
+              continue;
+            }
+            
+            theLog.debug2("Found saved poll for AU " + psb.getAuId()
+                          + " in directory " + dirs[ix]);
+            Set pollsForAu = null;
+            if ((pollsForAu = (Set)serializedPollers.get(psb.getAuId())) == null) {
+              pollsForAu = new HashSet();
+              serializedPollers.put(psb.getAuId(), pollsForAu);
+            }
+            pollsForAu.add(dirs[ix]);
+            restored = true;
+          } catch (PollSerializerException e) {
+            theLog.error("Exception while trying to restore poller from " +
+                         "directory: " + dirs[ix] + ".  Cleaning up dir.", e);
             FileUtil.delTree(dirs[ix]);
             continue;
           }
-          
-          theLog.debug2("Found saved poll for AU " + psb.getAuId()
-                        + " in directory " + dirs[ix]);
-          Set pollsForAu = null;
-          if ((pollsForAu = (Set)serializedPollers.get(psb.getAuId())) == null) {
-            pollsForAu = new HashSet();
-            serializedPollers.put(psb.getAuId(), pollsForAu);
-          }
-          pollsForAu.add(dirs[ix]);
-        } catch (PollSerializerException e) {
-          theLog.error("Exception while trying to restore poller from " +
-                       "directory: " + dirs[ix] + ".  Cleaning up dir.", e);
-          FileUtil.delTree(dirs[ix]);
-          continue;
+        } else {
+          theLog.debug("No serialized poller found in dir " + dirs[ix]);
         }
-      } else {
-        theLog.debug("No serialized poller found in dir " + dirs[ix]);
       }
-      File voter = new File(dirs[ix],
-                            V3VoterSerializer.VOTER_USER_DATA_FILE);
-
-      if (voter != null && voter.exists()) {
-        theLog.info("Found serialized voter in file: " + voter);
-        try {
-          V3VoterSerializer voterSerializer =
-            new V3VoterSerializer(getDaemon(), dirs[ix]);
-          VoterUserData vd = voterSerializer.loadVoterUserData();
-          // Check to see if this poll has expired.
-          long now = TimeBase.nowMs();
-          if (vd.getDeadline() <= now) {
-            theLog.info("Voter found in directory " + dirs[ix] + 
-                        " has expired, cleaning up directory and skipping.");
+      
+      // 2. See if there's a serialized voter.
+      if (enableVoters) {
+        File voter = new File(dirs[ix],
+                              V3VoterSerializer.VOTER_USER_DATA_FILE);
+        if (voter != null && voter.exists()) {
+          theLog.info("Found serialized voter in file: " + voter);
+          try {
+            V3VoterSerializer voterSerializer =
+              new V3VoterSerializer(getDaemon(), dirs[ix]);
+            VoterUserData vd = voterSerializer.loadVoterUserData();
+            // Check to see if this poll has expired.
+            long now = TimeBase.nowMs();
+            if (vd.getDeadline() <= now) {
+              theLog.info("Voter found in directory " + dirs[ix] + 
+                          " has expired, cleaning up directory and skipping.");
+              FileUtil.delTree(dirs[ix]);
+              continue;
+            }
+            
+            theLog.debug2("Found saved poll for AU " + vd.getAuId()
+                          + " in directory " + dirs[ix]);
+            Set pollsForAu = null;
+            if ((pollsForAu = (Set)serializedVoters.get(vd.getAuId())) == null) {
+              pollsForAu = new HashSet();
+              serializedVoters.put(vd.getAuId(), pollsForAu);
+            }
+            pollsForAu.add(dirs[ix]);
+            restored = true;
+          } catch (PollSerializerException e) {
+            theLog.error("Exception while trying to restore voter from " +
+                         "directory: " + dirs[ix] + ".  Cleaning up dir.", e);
             FileUtil.delTree(dirs[ix]);
             continue;
           }
-          
-          theLog.debug2("Found saved poll for AU " + vd.getAuId()
-                        + " in directory " + dirs[ix]);
-          Set pollsForAu = null;
-          if ((pollsForAu = (Set)serializedVoters.get(vd.getAuId())) == null) {
-            pollsForAu = new HashSet();
-            serializedVoters.put(vd.getAuId(), pollsForAu);
-          }
-          pollsForAu.add(dirs[ix]);
-        } catch (PollSerializerException e) {
-          theLog.error("Exception while trying to restore voter from " +
-                       "directory: " + dirs[ix] + ".  Cleaning up dir.", e);
-          FileUtil.delTree(dirs[ix]);
-          continue;
+        } else {
+          theLog.debug("No serialized voter found in dir " + dirs[ix]);
         }
+      }
+      
+      // If neither a voter nor a poller was found, this dir can be
+      // cleaned up, unless KEEP_EMPTY_POLLSTATE_DIRS is true.
+      if (!restored && deleteInvalidPollStateDirs) {
+        FileUtil.delTree(dirs[ix]);
+        theLog.debug("Deleting empty poll state directory " + dirs[ix]);
       } else {
-        theLog.debug("No serialized voter found in dir " + dirs[ix]);
+        theLog.debug("Not deleting empty poll state directory " + dirs[ix] +
+                     "due to config.");
       }
     }
   }
@@ -871,42 +937,62 @@ public class PollManager
     }
     return polls;
   }
-
-  public Collection getV3Pollers() {
+  
+  public synchronized Collection getActiveV3Pollers() {
     Collection polls = new ArrayList();
-    synchronized (pollMapLock) {
-      for (Iterator it = thePolls.values().iterator(); it.hasNext(); ) {
-        PollManagerEntry pme = (PollManagerEntry)it.next();
-        if (pme.isV3Poll() && pme.getPoll() instanceof V3Poller) {
-          polls.add(pme.getPoll());
-        }
-      }
-      for (Iterator it = theRecentPolls.values().iterator(); it.hasNext(); ) {
-        PollManagerEntry pme = (PollManagerEntry)it.next();
-        if (pme.isV3Poll() && pme.getPoll() instanceof V3Poller) {
-          polls.add(pme.getPoll());
-        }
+    for (Iterator it = thePolls.values().iterator(); it.hasNext(); ) {
+      PollManagerEntry pme = (PollManagerEntry)it.next();
+      if (pme.isV3Poll() && pme.getPoll() instanceof V3Poller) {
+        polls.add(pme.getPoll());
       }
     }
     return polls;
   }
-
-  public Collection getV3Voters() {
+  
+  public synchronized Collection getRecentV3Pollers() {
     Collection polls = new ArrayList();
-    synchronized (pollMapLock) {
-      for (Iterator it = thePolls.values().iterator(); it.hasNext(); ) {
-        PollManagerEntry pme = (PollManagerEntry)it.next();
-        if (pme.isV3Poll() && pme.getPoll() instanceof V3Voter) {
-          polls.add(pme.getPoll());
-        }
+    for (Iterator it = theRecentPolls.values().iterator(); it.hasNext(); ) {
+      PollManagerEntry pme = (PollManagerEntry)it.next();
+      if (pme.isV3Poll() && pme.getPoll() instanceof V3Poller) {
+        polls.add(pme.getPoll());
       }
-      for (Iterator it = theRecentPolls.values().iterator(); it.hasNext(); ) {
-        PollManagerEntry pme = (PollManagerEntry)it.next();
-        if (pme.isV3Poll() && pme.getPoll() instanceof V3Voter) {
-          polls.add(pme.getPoll());
-        }
+    }    
+    return polls;
+  }
+  
+  public synchronized Collection getV3Pollers() {
+    Collection polls = new ArrayList();
+    polls.addAll(getActiveV3Pollers());
+    polls.addAll(getRecentV3Pollers());
+    return polls;
+  }
+  
+  public synchronized Collection getActiveV3Voters() {
+    Collection polls = new ArrayList();
+    for (Iterator it = thePolls.values().iterator(); it.hasNext(); ) {
+      PollManagerEntry pme = (PollManagerEntry)it.next();
+      if (pme.isV3Poll() && pme.getPoll() instanceof V3Voter) {
+        polls.add(pme.getPoll());
       }
     }
+    return polls;
+  }
+  
+  public synchronized Collection getRecentV3Voters() {
+    Collection polls = new ArrayList();
+    for (Iterator it = theRecentPolls.values().iterator(); it.hasNext(); ) {
+      PollManagerEntry pme = (PollManagerEntry)it.next();
+      if (pme.isV3Poll() && pme.getPoll() instanceof V3Voter) {
+        polls.add(pme.getPoll());
+      }
+    }
+    return polls;
+  }
+  
+  public synchronized Collection getV3Voters() {
+    Collection polls = new ArrayList();
+    polls.addAll(getActiveV3Voters());
+    polls.addAll(getRecentV3Voters());
     return polls;
   }
 

@@ -55,7 +55,8 @@ public class DiskVoteBlocks extends BaseVoteBlocks {
    * Create a new VoteBlocks collection to be backed by a file in the supplied
    * directory.
    * 
-   * @param toDir Directory to use as temporary storage.
+   * @param toDir
+   *          Directory to use as temporary storage.
    * @throws IOException
    */
   public DiskVoteBlocks(File toDir) throws IOException {
@@ -66,15 +67,8 @@ public class DiskVoteBlocks extends BaseVoteBlocks {
   /**
    * Automagically restore File object following deserialization.
    */
-  protected Object postUnmarshalResolve(LockssApp lockssContext) {
+  protected void postUnmarshal(LockssApp lockssContext) {
     file = new File(filePath);
-    // Sanity Check
-    if (!file.exists()) {
-      throw new IllegalArgumentException("Unable to restore DiskVoteBlocks, "
-                                         + "because target voteblocks file "
-                                         + filePath + " does not " + "exist.");
-    }
-    return this;
   }
 
   public synchronized void addVoteBlock(VoteBlock b) throws IOException {
@@ -96,7 +90,7 @@ public class DiskVoteBlocks extends BaseVoteBlocks {
     try {
       // Shortcut for quickly finding the next iterable block
       if (i == nextVoteBlockIndex) {
-        raf.skipBytes((int)nextVoteBlockAddress);
+        raf.skipBytes((int) nextVoteBlockAddress);
       } else {
         for (int idx = 0; idx < i; idx++) {
           short len = raf.readShort();
@@ -134,7 +128,7 @@ public class DiskVoteBlocks extends BaseVoteBlocks {
     if (file != null && !file.delete() && log.isDebug2()) {
       log.debug2("Unable to delete file: " + file);
     }
-    
+
     file = null;
   }
 

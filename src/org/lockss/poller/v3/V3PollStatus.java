@@ -1,5 +1,5 @@
 /*
-* $Id: V3PollStatus.java,v 1.12 2006-12-13 23:37:42 smorabito Exp $
+* $Id: V3PollStatus.java,v 1.13 2007-01-23 21:44:35 smorabito Exp $
  */
 
 /*
@@ -83,6 +83,14 @@ public class V3PollStatus {
 
     private static final DecimalFormat agreementFormat =
       new DecimalFormat("0.00");
+    
+    /* DecimalFormat automatically applies half-even rounding to
+     * values being formatted under Java < 1.6.  This is a workaround. */ 
+    private static String doubleToPercent(double d) {
+      int i = (int)(d * 10000);
+      double pc = i / 100.0;
+      return agreementFormat.format(pc);
+    }
 
     // Sort by deadline, descending
     private final List sortRules =
@@ -155,8 +163,11 @@ public class V3PollStatus {
       row.put("talliedUrls", new Integer(poller.getTalliedUrls().size()));
       row.put("activeRepairs", new Integer(poller.getActiveRepairs().size()));
       row.put("completedRepairs", new Integer(poller.getCompletedRepairs().size()));
-      row.put("agreement", 
-              agreementFormat.format(poller.getPercentAgreement() * 100.0) + "%");
+      if (poller.getStatus() < V3Poller.POLLER_STATUS_TALLYING) {
+        row.put("agreement", "--");
+      } else {
+        row.put("agreement", doubleToPercent(poller.getPercentAgreement()) + "%");
+      }
       row.put("start", new Long(poller.getCreateTime()));
       row.put("deadline", poller.getDeadline());
       row.put("pollId",

@@ -1,5 +1,5 @@
 /*
- * $Id: XmlPropertyLoader.java,v 1.28 2006-05-03 03:22:42 smorabito Exp $
+ * $Id: XmlPropertyLoader.java,v 1.29 2007-01-23 21:44:36 smorabito Exp $
  */
 
 /*
@@ -332,7 +332,14 @@ public class XmlPropertyLoader {
      */
     private void startIfTag(Attributes attrs) {
       If curIf = new If();
-      if (attrs.getLength() > 0) {
+      // If there's a previous 'if', and it's false, AND we're in a 'then'
+      // clause, don't even bother evaluating this one, the parent makes
+      // it false.
+      if (!m_ifStack.empty() &&
+          !((If)m_ifStack.peek()).evalIf &&
+          ((If)m_ifStack.peek()).inThen) {
+        curIf.evalIf = false;
+      } else if (attrs.getLength() > 0) {
 	curIf.evalIf = evaluateAttributes(attrs);
       }
       m_ifStack.push(curIf);

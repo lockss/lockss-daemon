@@ -1,5 +1,5 @@
 /*
- * $Id: V3LcapMessage.java,v 1.25 2006-11-15 08:24:53 smorabito Exp $
+ * $Id: V3LcapMessage.java,v 1.26 2007-01-23 21:44:36 smorabito Exp $
  */
 
 /*
@@ -101,9 +101,22 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
   /** In Vote messages: A list of vote blocks for this vote. */
   VoteBlocks m_voteBlocks;
   
-  /** For poll messages, the required vote time for participants. */
+  /*
+   * Note:  voteDeadline has been deprecated in favor of voteDuration.  
+   * voteDeadline should be removed in a few releases (as of daemon release
+   * 1.22)
+   */
+  
+  /** For poll messages, the time by which a participant must have voted. 
+   * @deprecated */
   long m_voteDeadline;
 
+  /** For poll messages, the time left until a participant must have voted. */
+  long m_voteDuration;
+  
+  /** The platform group to which the sender of the message belongs. */
+  private String m_group;
+  
   /**
    * In Nominate messages: The list of outer circle nominees, in the form of
    * peer identity strings.
@@ -134,7 +147,7 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
   private int m_voteBlockThreshold = DEFAULT_VOTE_BLOCK_THRESHOLD;
  
   // Reference to the running daemon.  Must be restored post-serialization by
-  // the postUnmarshalResolve method.
+  // the postUnmarshal method.
   private transient LockssApp m_daemon; 
 
   /**
@@ -167,6 +180,7 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     m_voteBlocks = new MemoryVoteBlocks();
     m_pollProtocol = Poll.V3_PROTOCOL;
     m_messageDir = messageDir;
+    m_group = ConfigManager.getPlatformGroup();
     m_repairDataThreshold =
       CurrentConfig.getIntParam(PARAM_REPAIR_DATA_THRESHOLD,
                                 DEFAULT_REPAIR_DATA_THRESHOLD);
@@ -286,9 +300,11 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
       m_nominees = StringUtil.breakAt(nomineesString, ',');
     }
     m_voteDeadline = m_props.getLong("votedeadline", 0);
+    m_voteDuration = m_props.getLong("voteduration", 0);
     m_lastVoteBlockURL = m_props.getProperty("lastvoteblockurl");
     m_voteComplete = m_props.getBoolean("votecomplete", false);
     m_repairProps = m_props.getEncodedProperty("repairProps");
+    m_group = m_props.getProperty("group");
     
     // If we have vote blocks, pass them to a VoteBlock object.
     int voteBlockCount = dis.readInt();
@@ -440,6 +456,8 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     // V3 specific message parameters.
 
     m_props.putLong("votedeadline", m_voteDeadline);
+    m_props.putLong("voteduration", m_voteDuration);
+    m_props.setProperty("group", m_group);
     if (m_effortProof != null) {
       m_props.putByteArray("effortproof", m_effortProof);
     }
@@ -526,12 +544,22 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     this.m_voteComplete = val;
   }
   
+  /** @deprecated */
   public long getVoteDeadline() {
     return m_voteDeadline;
   }
   
+  /** @deprecated */
   public void setVoteDeadline(long l) {
     m_voteDeadline = l;
+  }
+  
+  public long getVoteDuration() {
+    return m_voteDuration;
+  }
+  
+  public void setVoteDuration(long l) {
+    m_voteDuration = l;
   }
 
   /**
@@ -614,6 +642,14 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
    */
   public void setInputStream(InputStream is) {
     this.m_repairDataInputStream = is;
+  }
+  
+  public String getGroup() {
+    return m_group;
+  }
+  
+  public void setGroup(String group) {
+    this.m_group = group;
   }
 
   /**
@@ -706,9 +742,8 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     return sb.toString();
   }
   
-  protected Object postUnmarshalResolve(LockssApp lockssContext) {
+  protected void postUnmarshal(LockssApp lockssContext) {
     m_daemon = lockssContext;
-    return this;
   }
 
   /**

@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.33 2006-12-13 23:37:42 smorabito Exp $
+ * $Id: V3Voter.java,v 1.34 2007-01-23 21:44:35 smorabito Exp $
  */
 
 /*
@@ -50,10 +50,11 @@ import org.lockss.scheduler.Schedule.*;
 import org.lockss.util.*;
 
 /**
- * Represents a voter in a V3 poll.
+ * <p>Represents a voter in a V3 poll.</p>
  *
- * State is maintained in a V3VoterState object.  On the voter's side
- * of a poll, this object is transient.
+ * <p>State is maintained in a V3VoterState object, which is periodically 
+ * serialized to disk so that polls may be resumed in case the daemon exits
+ * before the poll is over.</p>
  */
 public class V3Voter extends BasePoll {
   
@@ -77,7 +78,8 @@ public class V3Voter extends BasePoll {
   /** The minimum number of peers to select for a nomination message.
    * If there are fewer than this number of peers available to nominate,
    * an empty nomination message will be sent. */
-  public static final String PARAM_MIN_NOMINATION_SIZE = PREFIX + "minNominationSize";
+  public static final String PARAM_MIN_NOMINATION_SIZE =
+    PREFIX + "minNominationSize";
   public static final int DEFAULT_MIN_NOMINATION_SIZE = 1;
 
   /** The minimum number of peers to select for a nomination message. */
@@ -85,16 +87,23 @@ public class V3Voter extends BasePoll {
     PREFIX + "maxNominationSize";
   public static final int DEFAULT_MAX_NOMINATION_SIZE = 5;
   
+  /** The maximum allowable number of simultaneous V3 Voters */
+  public static final String PARAM_MAX_SIMULTANEOUS_V3_VOTERS =
+    PREFIX + "maxSimultaneousV3Voters";
+  public static final int DEFAULT_MAX_SIMULTANEOUS_V3_VOTERS = 60;
+  
   /**
    * If false, do not serve any repairs via V3.
    */
-  public static final String PARAM_ALLOW_V3_REPAIRS = PREFIX + "allowV3Repairs";
+  public static final String PARAM_ALLOW_V3_REPAIRS =
+    PREFIX + "allowV3Repairs";
   public static final boolean DEFAULT_ALLOW_V3_REPAIRS = true;
   
   /**
    * Directory in which to store message data.
    */
-  public static final String PARAM_V3_MESSAGE_REL_DIR = V3Poller.PARAM_V3_MESSAGE_REL_DIR;
+  public static final String PARAM_V3_MESSAGE_REL_DIR =
+    V3Poller.PARAM_V3_MESSAGE_REL_DIR;
   public static final String DEFAULT_V3_MESSAGE_REL_DIR = 
     V3Poller.DEFAULT_V3_MESSAGE_REL_DIR;
   
@@ -126,7 +135,9 @@ public class V3Voter extends BasePoll {
   private static final Logger log = Logger.getLogger("V3Voter");
 
   /**
-   * Create a new V3Voter to participate in a poll.
+   * <p>Upon receipt of a request to participate in a poll, create a new
+   * V3Voter.  The voter will not start running until {@link #startPoll()}
+   * is called by {@see org.lockss.poller.v3.V3PollFactory}</p>
    */
   public V3Voter(LockssDaemon daemon, V3LcapMessage msg)
       throws V3Serializer.PollSerializerException {
@@ -178,7 +189,7 @@ public class V3Voter extends BasePoll {
                                              makeVoterNonce(),
                                              msg.getEffortProof(),
                                              stateDir);
-      voterUserData.setVoteDeadline(msg.getVoteDeadline());
+      voterUserData.setVoteDeadline(TimeBase.nowMs() + msg.getVoteDuration());
     } catch (IOException ex) {
       log.critical("IOException while trying to create VoterUserData: ", ex);
       stopPoll();
@@ -205,14 +216,16 @@ public class V3Voter extends BasePoll {
       int r = theRandom.nextInt(max - min);
       nomineeCount = min + r;
     }
-    log.debug2("Will choose " + nomineeCount +
-    " outer circle nominees to send to poller");
+    log.debug2("Will choose " + nomineeCount
+               + " outer circle nominees to send to poller");
     stateMachine = makeStateMachine(voterUserData);
     checkpointPoll();
   }
 
   /**
-   * Restore a V3Voter from a previously saved poll.
+   * <p>Restore a V3Voter from a previously saved poll.  This method is called
+   * by {@see org.lockss.poller.PollManager} when the daemon starts up if a
+   * serialized voter is found.</p>
    */
   public V3Voter(LockssDaemon daemon, File pollDir)
       throws V3Serializer.PollSerializerException {
@@ -251,19 +264,30 @@ public class V3Voter extends BasePoll {
   }
   
   /**
-   * Reserve enough schedule time to 
+   * <p>Reserve enough schedule time to hash our content and send our vote.</p>
+   * 
+   * @return True if time could be scheduled, false otherwise.
    */
   public boolean reserveScheduleTime() {
-    CachedUrlSet cus = this.getCachedUrlSet();
-    long estimatedHashDuration = cus.estimatedHashDuration();
-    long now = TimeBase.nowMs();
     // XXX:  We need to reserve some padding for the estimated time it will
     // take to send the message.  'estimatedHashDuration' is probably way
     // too much for this, but a better estimate would require taking into 
     // account the number of URLs and versions that we expect to hash, since
     // the message size is proportional to the number of VoteBlock.Versions
+    
     long voteDeadline = voterUserData.getVoteDeadline();
+    long estimatedHashDuration = getCachedUrlSet().estimatedHashDuration();
+    long now = TimeBase.nowMs();
 
+    // Ensure the vote deadline has not already passed.
+    if (voteDeadline < now) {
+      log.warning("In poll " + getKey() + " called by peer "
+                  + voterUserData.getPollerId()
+                  + ", vote deadline (" + voteDeadline + ") has already "
+                  + "passed!  Can't reserve schedule time.");
+      return false;
+    }
+    
     if (estimatedHashDuration > (voteDeadline - now)) {
       log.warning("In poll " + getKey() + " called by peer " + 
                   voterUserData.getPollerId() +
@@ -272,6 +296,7 @@ public class V3Voter extends BasePoll {
                   (voteDeadline - now) + "ms)");
       return false;
     }
+
     Deadline earliestStart = Deadline.at(now + estimatedHashDuration);
     Deadline latestFinish =
       Deadline.at(voterUserData.getVoteDeadline() - estimatedHashDuration);
@@ -282,6 +307,8 @@ public class V3Voter extends BasePoll {
         // do nothing... yet!
       }
     };
+    
+    // Keep a hold of the task we're scheduling.
     this.task = new StepTask(earliestStart, latestFinish,
                              estimatedHashDuration,
                              tc, this) {
@@ -305,11 +332,17 @@ public class V3Voter extends BasePoll {
     return suc;
   }
 
+  /**
+   * <p>Start the V3Voter running and participate in the poll.  Called by
+   * {@link org.lockss.poller.v3.3PollFactory} when a vote request message
+   * has been received, and by {@link org.lockss.poller.PollManager} when
+   * restoring serialized voters.</p>
+   */
   public void startPoll() {
     log.debug("Starting poll " + voterUserData.getPollKey());
     Deadline pollDeadline = null;
     if (!continuedPoll) {
-      // Skip sanity check
+      // Skip deadline sanity check if this is a restored poll.
       pollDeadline = Deadline.at(voterUserData.getDeadline());
     } else {
       pollDeadline = Deadline.restoreDeadlineAt(voterUserData.getDeadline());
@@ -342,14 +375,22 @@ public class V3Voter extends BasePoll {
       return;
     }
 
+    // Register a callback for the end of the poll.
     TimerQueue.schedule(pollDeadline, new PollTimerCallback(), this);
 
-    // Schedule a little check for the vote deadline.  If we haven't voted
-    // by this time, we must stop the poll and stop participating.  There's
-    // no point wasting time in a hash after that.
+    // Register a callback for the end of the voting period.  We must have
+    // voted by this time, or we can't participate.
     TimerQueue.schedule(Deadline.at(voterUserData.getVoteDeadline()),
                         new TimerQueue.Callback() {
       public void timerExpired(Object cookie) {
+        // In practice, we must prevent this from happening. Unfortunately,
+        // due to the nature of the scheduler and the wide variety of machines
+        // in the field, it is quite possible for us to still be hashing when
+        // the vote deadline has arrived.
+        // 
+        // It's the poller's responsibility to ensure that it compensates for
+        // slow machines by padding the vote deadline as much as necessary to
+        // compensate for slow machines.
         if (!voterUserData.hashingDone()) {
           log.warning("Vote deadline has passed before my hashing was done " +
                       "in poll " + getKey() + ". Stopping the poll.");
@@ -358,6 +399,7 @@ public class V3Voter extends BasePoll {
       }
     }, this);
     
+    // Resume or start the state machine running.
     if (continuedPoll) {
       try {
 	stateMachine.resume(voterUserData.getPsmState());
@@ -375,6 +417,11 @@ public class V3Voter extends BasePoll {
     }
   }
 
+  /**
+   * Stop the poll and tell the {@link PollManager} to let go of us.
+   * 
+   * @param status The final status code of the poll, for the status table.
+   */
   public void stopPoll(final int status) {
     if (voterUserData.isPollActive()) {
       voterUserData.setActivePoll(false);
@@ -386,11 +433,6 @@ public class V3Voter extends BasePoll {
       task.cancel();
     }
     voterUserData.setStatus(status);
-    // Reset the duration and deadline to reflect reality
-    long oldDeadline = voterUserData.getDeadline();
-    long now = TimeBase.nowMs();
-    voterUserData.setDeadline(now);
-    voterUserData.setDuration(now - voterUserData.getCreateTime());
     // Clean up after the serializer
     pollSerializer.closePoll();
     pollManager.closeThePoll(voterUserData.getPollKey());
@@ -399,10 +441,16 @@ public class V3Voter extends BasePoll {
     release();
   }
   
+  /**
+   * Stop the poll with STATUS_COMPLETE.
+   */
   public void stopPoll() {
     stopPoll(STATUS_COMPLETE);
   }
 
+  /**
+   * Stop the poll with STATUS_ERROR.
+   */
   private void abortPoll() {
     stopPoll(STATUS_ERROR);
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.49 2006-12-13 23:37:42 smorabito Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.50 2007-01-23 21:44:36 smorabito Exp $
  */
 
 /*
@@ -78,6 +78,14 @@ public class ArchivalUnitStatus
   
   private static final DecimalFormat agreementFormat =
     new DecimalFormat("0.00");
+
+  /* DecimalFormat automatically applies half-even rounding to
+   * values being formatted under Java < 1.6.  This is a workaround. */ 
+  private static String doubleToPercent(double d) {
+    int i = (int)(d * 10000);
+    double pc = i / 100.0;
+    return agreementFormat.format(pc);
+  }
 
   public void startService() {
     super.startService();
@@ -245,8 +253,7 @@ public class ArchivalUnitStatus
             stat = "Waiting for Poll";
           }
         } else {
-          stat = agreementFormat.format(auState.getV3Agreement() * 100.0) +
-                 "% Agreement";
+          stat = doubleToPercent(auState.getV3Agreement()) + "% Agreement";
         }
       } else {
         rowMap.put("AuPolls",
@@ -608,8 +615,7 @@ public class ArchivalUnitStatus
             stat = "Waiting for Poll";
           }
         } else {
-          stat = agreementFormat.format(state.getV3Agreement() * 100.0) +
-                 "% Agreement";
+          stat = doubleToPercent(state.getV3Agreement()) + "% Agreement";
         }
       } else {
         stat = topNode.hasDamage() ? DAMAGE_STATE_DAMAGED : DAMAGE_STATE_OK;

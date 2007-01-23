@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollFactory.java,v 1.10 2006-12-13 20:38:08 smorabito Exp $
+ * $Id: V3PollFactory.java,v 1.11 2007-01-23 21:44:35 smorabito Exp $
  */
 
 /*
@@ -49,14 +49,14 @@ public class V3PollFactory extends BasePollFactory {
 
   private static final String PREFIX = Configuration.PREFIX + "poll.v3.";
 
-  /** The minimum duration multiplier for a V3 poll.  */
+  /** The duration multiplier for the minimum length of a V3 poll.  */
   public static final String PARAM_DURATION_MULTIPLIER_MIN =
     PREFIX + "minMultiplier";
-  public static final int DEFAULT_DURATION_MULTIPLIER_MIN = 2;
-  /** The maximum duration multiplier for a V3 poll */
+  public static final int DEFAULT_DURATION_MULTIPLIER_MIN = 10;
+  /** The duration multiplier for the maximum length of a V3 poll */
   public static final String PARAM_DURATION_MULTIPLIER_MAX =
     PREFIX + "maxMultiplier";
-  public static final int DEFAULT_DURATION_MULTIPLIER_MAX = 4;
+  public static final int DEFAULT_DURATION_MULTIPLIER_MAX = 20;
   /** The minimum duration for a V3 poll.  The minimum duration is calculated
    * from the hash duration and maximum number of participants, and this
    * parameter is no longer used.
@@ -68,7 +68,21 @@ public class V3PollFactory extends BasePollFactory {
   /** The maximum duration for a V3 poll */
   public static final String PARAM_POLL_DURATION_MAX = 
     PREFIX + "maxPollDuration";
-  public static long DEFAULT_POLL_DURATION_MAX = 5 * Constants.WEEK;
+  public static long DEFAULT_POLL_DURATION_MAX = 8 * Constants.WEEK;
+  
+  /** If set to 'false', do not start V3 Voters when vote requests are
+   * received.  This parameter is used by V3PollFactory and PollManager.
+   */
+  public static final String PARAM_ENABLE_V3_VOTER =
+    PREFIX + "enableV3Voter";
+  public static final boolean DEFAULT_ENABLE_V3_VOTER = true;
+
+  /** If set to 'false', do not start V3 Polls.  This parameter is used
+   * by NodeManagerImpl and PollManager.
+   */
+  public static final String PARAM_ENABLE_V3_POLLER =
+    PREFIX + "enableV3Poller";
+  public static final boolean DEFAULT_ENABLE_V3_POLLER = true;
 
   private int minDurationMultiplier = DEFAULT_DURATION_MULTIPLIER_MIN;
   private int maxDurationMultiplier = DEFAULT_DURATION_MULTIPLIER_MAX;
@@ -83,12 +97,14 @@ public class V3PollFactory extends BasePollFactory {
     return true;
   }
 
+  /**
+   * Create a V3 Poller or V3 Voter, as appropriate.
+   */
   public BasePoll createPoll(PollSpec pollspec, LockssDaemon daemon,
                              PeerIdentity orig, long duration,
                              String hashAlg, LcapMessage msg)
       throws ProtocolException {
     BasePoll retPoll = null;
-    IdentityManager idManager = daemon.getIdentityManager();
 
     CachedUrlSet cus = pollspec.getCachedUrlSet();
     // check for presence of item in the cache
@@ -116,42 +132,120 @@ public class V3PollFactory extends BasePollFactory {
       throw new ProtocolException("Unexpected poll type:" +
                                   pollspec.getPollType());
     }
+    
     try {
       if (msg == null) {
-        log.debug("Creating V3Poller to call a new poll...");
-        // XXX: Better keys?
-        String key =
-          String.valueOf(B64Code.encode(ByteArray.makeRandomBytes(20)));
-        retPoll = new V3Poller(pollspec, daemon, orig, key, duration, hashAlg);
+        // If there's no message, we're making a poller
+        retPoll = makeV3Poller(daemon, pollspec, orig, duration, hashAlg);
       } else {
-        // Ignore messages from ourself.
-        if (orig == idManager.getLocalPeerIdentity(Poll.V3_PROTOCOL)) {
-          log.info("Not responding to poll request from myself.");
-          return null;
-        }
-        
-        V3LcapMessage m = (V3LcapMessage)msg;
-        PollSpec s = new PollSpec(m);
-        // Only participate if we have and have successfully crawled this AU.
-        if (AuUtil.getAuState(au).getLastCrawlTime() > 0) { 
-          log.debug("Creating V3Voter to participate in poll " + m.getKey());
-          retPoll = new V3Voter(daemon, m);
-          retPoll.startPoll(); // Voters need to be started immediately.
-          if (((V3Voter)retPoll).isPollCompleted()) {
-            return null;
-          }
-        } else {
-          log.debug("Have not completed new content crawl.  Not " +
-                    "participating in vote.");
-        }
+        // If there's a message, we're making a voter
+        retPoll = makeV3Voter(msg, daemon, orig, au);
       }
     } catch (V3Serializer.PollSerializerException ex) {
       log.error("Serialization exception creating new V3Poller: ", ex);
+      return null;
     }
     return retPoll;
   }
+  
 
-  // XXX: Should V3 be different than 'standard'?
+  /**
+   * Construct a new V3 Poller to call a poll.
+   * 
+   * @param daemon The LOCKSS daemon.
+   * @param pollspec  The Poll Spec fotr this poll.
+   * @param orig  The caller of the poll.
+   * @param duration  The duration of the poll.
+   * @param hashAlg  The Hash Algorithm used to call the poll.
+   * @return A V3 Poller.
+   * @throws V3Serializer.PollSerializerException
+   */
+  private V3Poller makeV3Poller(LockssDaemon daemon, PollSpec pollspec,
+                                PeerIdentity orig, long duration,
+                                String hashAlg)
+      throws V3Serializer.PollSerializerException {
+    // Check to see if we're already running too many polls.
+    int maxPolls =
+      CurrentConfig.getIntParam(V3Poller.PARAM_MAX_SIMULTANEOUS_V3_POLLERS,
+                                V3Poller.DEFAULT_MAX_SIMULTANEOUS_V3_POLLERS);
+    int activePolls = daemon.getPollManager().getActiveV3Pollers().size();
+    if (activePolls >= maxPolls) {
+      log.info("Maximum number of V3 Pollers already running (" +
+               activePolls + ").  Not starting new V3 Poll due to " +
+               "configuration");
+      return null;
+    }
+    log.debug("Creating V3Poller to call a new poll...");
+    String key =
+      String.valueOf(B64Code.encode(ByteArray.makeRandomBytes(20)));
+    return new V3Poller(pollspec, daemon, orig, key, duration, hashAlg);
+  }
+
+  /**
+   * Construct a new V3 Voter to participate in a poll.
+   * 
+   * @param msg  The Poll message that invited this peer.
+   * @param daemon  The LOCKSS Daemon
+   * @param orig  The caller of the poll
+   * @param au  The ArchivalUnit on which the poll is being run.
+   * @return  An active V3 Voter.
+   * @throws V3Serializer.PollSerializerException
+   */
+  private V3Voter makeV3Voter(LcapMessage msg, LockssDaemon daemon,
+                              PeerIdentity orig, ArchivalUnit au)
+      throws V3Serializer.PollSerializerException {
+    V3Voter voter = null;
+    // Ignore messages from ourself.
+    if (orig == daemon.getIdentityManager().getLocalPeerIdentity(Poll.V3_PROTOCOL)) {
+      log.info("Not responding to poll request from myself.");
+      return null;
+    }
+    V3LcapMessage m = (V3LcapMessage)msg;
+    // Ignore messages not coming from our group
+    String ourGroup = ConfigManager.getPlatformGroup();
+    if (m.getGroup() == null ||
+        !m.getGroup().equals(ourGroup)) {
+      log.debug("Ignoring message from peer " + m.getOriginatorId()
+                + " in group " + m.getGroup() + " due to group mismatch (" 
+                + ourGroup  + ")");
+      return null;
+    }
+    
+    // Check to see if we're running too many polls already.
+    int maxVoters =
+      CurrentConfig.getIntParam(V3Voter.PARAM_MAX_SIMULTANEOUS_V3_VOTERS,
+                                V3Voter.DEFAULT_MAX_SIMULTANEOUS_V3_VOTERS);
+    int activeVoters = daemon.getPollManager().getActiveV3Voters().size();
+
+    if (activeVoters >= maxVoters) {
+      log.info("Maximum number of V3 Voters already running (" +
+               activeVoters + ").  Not starting new V3 Voter due to " +
+               "configuration");
+      return null;
+    }
+
+    // Only participate if we have and have successfully crawled this AU,
+    // and if 'enableV3Voter' is set.
+    boolean enableV3Voter =
+      CurrentConfig.getBooleanParam(PARAM_ENABLE_V3_VOTER,
+                                    DEFAULT_ENABLE_V3_VOTER);
+    if (enableV3Voter && 
+        AuUtil.getAuState(au).getLastCrawlTime() > 0) { 
+      log.debug("Creating V3Voter to participate in poll " + m.getKey());
+      voter = new V3Voter(daemon, m);
+      voter.startPoll(); // Voters need to be started immediately.
+      if (((V3Voter)voter).isPollCompleted()) {
+        return null;
+      }
+    } else {
+      log.debug("Have not completed new content crawl.  Not " +
+                "participating in vote.");
+    } 
+    
+    return voter;
+  }
+
+  // Not used.
   public int getPollActivity(PollSpec pollspec, PollManager pm) {
     return ActivityRegulator.STANDARD_CONTENT_POLL;
   }
@@ -174,11 +268,13 @@ public class V3PollFactory extends BasePollFactory {
     }
   }
 
+  // Not used.
   public long getMaxPollDuration(int pollType) {
     // only one type of V3 poll.
     return maxPollDuration;
   }
 
+  // Not used.
   public long getMinPollDuration(int pollType) {
     // only one type of V3 poll.
     return minPollDuration;
@@ -200,13 +296,13 @@ public class V3PollFactory extends BasePollFactory {
       CurrentConfig.getIntParam(V3Poller.PARAM_MAX_POLL_SIZE,
                                 V3Poller.DEFAULT_MAX_POLL_SIZE);
     
-    long voteDeadlinePadding =
+    long voteDurationPadding =
       CurrentConfig.getLongParam(V3Poller.PARAM_V3_EXTRA_POLL_TIME,
                                  V3Poller.DEFAULT_V3_EXTRA_POLL_TIME);
 
-    long voteDeadlineMultiplier =
-      CurrentConfig.getLongParam(V3Poller.PARAM_VOTE_DEADLINE_MULTIPLIER,
-                                 V3Poller.DEFAULT_VOTE_DEADLINE_MULTIPLIER);
+    long voteDurationMultiplier =
+      CurrentConfig.getLongParam(V3Poller.PARAM_VOTE_DURATION_MULTIPLIER,
+                                 V3Poller.DEFAULT_VOTE_DURATION_MULTIPLIER);
       
     long minHashTime = hashEst * (maxPollParticipants + 1);
     
@@ -217,12 +313,12 @@ public class V3PollFactory extends BasePollFactory {
     //   testing with run_multiple_daemons, etc.
     // - Can't be shorter than the vote deadline duration.
 
-    long voteDeadline = (hashEst * voteDeadlineMultiplier) + 
-      voteDeadlinePadding;
+    long voteDuration = (hashEst * voteDurationMultiplier) + 
+                        voteDurationPadding;
     
     long minPoll = Math.max(minDurationMultiplier * minHashTime +
-			    voteDeadlinePadding,
-			    voteDeadline);
+			    voteDurationPadding,
+			    voteDuration);
 
     // Maximum amount of time we want to allow the poll to run.
     long maxPoll = Math.min(minPoll * maxDurationMultiplier,

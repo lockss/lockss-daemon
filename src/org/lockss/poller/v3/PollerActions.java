@@ -1,5 +1,5 @@
 /*
- * $Id: PollerActions.java,v 1.13 2006-08-22 20:33:07 smorabito Exp $
+ * $Id: PollerActions.java,v 1.14 2007-01-23 21:44:35 smorabito Exp $
  */
 
 /*
@@ -73,7 +73,7 @@ public class PollerActions {
       V3LcapMessage msg = ud.makeMessage(V3LcapMessage.MSG_POLL);
       msg.setPollerNonce(ud.getPollerNonce());
       msg.setEffortProof(ud.getIntroEffortProof());
-      msg.setVoteDeadline(ud.getPoller().getVoteDeadline());
+      msg.setVoteDuration(ud.getPoller().getVoteDuration());
       ud.sendMessageTo(msg, ud.getVoterId());
       ud.setStatus(V3Poller.PEER_STATUS_WAITING_POLL_ACK);
     } catch (IOException ex) {

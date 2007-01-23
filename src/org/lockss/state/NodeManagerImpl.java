@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.211 2006-11-14 19:25:27 tlipkis Exp $
+ * $Id: NodeManagerImpl.java,v 1.212 2007-01-23 21:44:36 smorabito Exp $
  */
 
 /*
@@ -51,9 +51,10 @@ import sun.security.krb5.internal.*;
 public class NodeManagerImpl
   extends BaseLockssDaemonManager implements NodeManager {
 
-  public static final String PARAM_DISABLE_V3_POLLER =
-    Configuration.PREFIX + "poll.v3.disableV3Poller";
-  public static final boolean DEFAULT_DISABLE_V3_POLLER = false;
+  public static final String PARAM_ENABLE_V3_POLLER =
+    org.lockss.poller.v3.V3PollFactory.PARAM_ENABLE_V3_POLLER;
+  public static final boolean DEFAULT_ENABLE_V3_POLLER =
+    org.lockss.poller.v3.V3PollFactory.DEFAULT_ENABLE_V3_POLLER;
   
   // the various necessary managers
   NodeManagerManager nodeMgrMgr;
@@ -895,25 +896,26 @@ public class NodeManagerImpl
       // If calling V3 polls has been disabled through the appropriate
       // parameter, just return.  Having this call here is less than ideal,
       // but will be moved out when we ditch the NodeManager.
-      boolean disableV3Poller =
-        CurrentConfig.getBooleanParam(PARAM_DISABLE_V3_POLLER,
-                                      DEFAULT_DISABLE_V3_POLLER);
-      if (disableV3Poller) {
-        logger.debug("Skipping V3 poll on AU " + managedAu.getName() + 
-                     " due to configuration.");
-        return;
-      }
-      CachedUrlSet cus = nodeState.getCachedUrlSet();
-      if (cus.getSpec().isAu()) {
-        PollSpec spec = new PollSpec(cus, Poll.V3_POLL);
-        // Don't call a poll on this if we're already running a V3 poll on it.
-        if (!pollManager.isV3PollerRunning(spec) &&
-            getAuState().getLastCrawlTime() > 0) {
-          logger.debug("Starting V3 poll for " + managedAu.getName());
-          callV3ContentPoll();
-        } else {
-          logger.debug("Not calling poll on " + managedAu.getName());
+      boolean enableV3Poller =
+        CurrentConfig.getBooleanParam(PARAM_ENABLE_V3_POLLER,
+                                      DEFAULT_ENABLE_V3_POLLER);
+      if (enableV3Poller) {
+        CachedUrlSet cus = nodeState.getCachedUrlSet();
+        if (cus.getSpec().isAu()) {
+          PollSpec spec = new PollSpec(cus, Poll.V3_POLL);
+          // Don't call a poll on this if we're already running a V3 poll on it.
+          if (!pollManager.isV3PollerRunning(spec) &&
+              getAuState().getLastCrawlTime() > 0) {
+            logger.debug("Starting V3 poll for " + managedAu.getName());
+            callV3ContentPoll();
+          } else {
+            logger.debug("Poll already running, not calling another " +
+                         "poll on"  + managedAu.getName());
+          }
         }
+      } else {
+        logger.debug("Skipping poll on " + managedAu.getName() + 
+                     " due to configuration");
       }
       return;
     default:

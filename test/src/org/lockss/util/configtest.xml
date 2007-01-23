@@ -509,6 +509,19 @@
         </if>
       </else>
     </if>
+    
+    <if>
+      <test hostname="foohost" /> <!-- false -->
+      <then>
+        <property name="nestedIf.f.control" value="shouldnt" />
+        <if>
+          <test group="beta"/> <!-- true -->
+          <then>
+            <property name="nestedIf.f" value="foo" />
+          </then>
+        </if>
+      </then>
+    </if>
 
     <!-- Test nested booleans -->
     <!-- Expected values at each level are in the comments. -->

@@ -1,5 +1,5 @@
 /*
- * $Id: NodeStateImpl.java,v 1.34 2006-08-29 00:03:32 tlipkis Exp $
+ * $Id: NodeStateImpl.java,v 1.35 2007-01-23 21:44:36 smorabito Exp $
  */
 
 /*
@@ -82,7 +82,9 @@ public class NodeStateImpl
 
   protected transient CachedUrlSet cus;
   protected CrawlState crawlState;
-  protected List polls;
+  protected List v1Polls;
+  protected List activeV3Polls;
+  protected List completedV3Polls;
   protected transient List pollHistories = null; // CASTOR: probably unnecessary
   protected transient HistoryRepository repository;
   protected long hashDuration = -1;
@@ -99,9 +101,9 @@ public class NodeStateImpl
     // CASTOR: a priori unneeded after Castor is phased out
     this.cus = cus;
     this.crawlState = new CrawlState(bean.getCrawlStateBean());
-    this.polls = new ArrayList(bean.pollBeans.size());
+    this.v1Polls = new ArrayList(bean.pollBeans.size());
     for (int ii=0; ii<bean.pollBeans.size(); ii++) {
-      polls.add(ii, new PollState((PollStateBean)bean.pollBeans.get(ii)));
+      v1Polls.add(ii, new PollState((PollStateBean)bean.pollBeans.get(ii)));
     }
     this.hashDuration = bean.getAverageHashDuration();
     this.curState = bean.getState();
@@ -120,7 +122,9 @@ public class NodeStateImpl
                 List polls, HistoryRepository repository) {
     this.cus = cus;
     this.crawlState = crawlState;
-    this.polls = polls;
+    this.v1Polls = polls;
+    this.activeV3Polls = new ArrayList();
+    this.completedV3Polls = new ArrayList();
     this.repository = repository;
     this.hashDuration = hashDuration;
   }
@@ -199,7 +203,7 @@ public class NodeStateImpl
   }
 
   public Iterator getActivePolls() {
-    return (new ArrayList(polls)).iterator();
+    return (new ArrayList(v1Polls)).iterator();
   }
 
   private synchronized List findPollHistories() {
@@ -236,7 +240,7 @@ public class NodeStateImpl
   }
 
   protected void addPollState(PollState new_poll) {
-    polls.add(new_poll);
+    v1Polls.add(new_poll);
     // write-through
     repository.storeNodeState(this);
   }
@@ -253,9 +257,9 @@ public class NodeStateImpl
       pollHistories.add(-(pos + 1), finished_poll);
     }
     // remove this poll, and any lingering PollStates for it
-    while (polls.contains(finished_poll)) {
+    while (v1Polls.contains(finished_poll)) {
 //XXX concurrent
-      polls.remove(finished_poll);
+      v1Polls.remove(finished_poll);
     }
 
     // trim
@@ -293,11 +297,15 @@ public class NodeStateImpl
    */
   synchronized boolean trimHistoriesIfNeeded() {
     boolean changed = false;
+
+    int max = CurrentConfig.getIntParam(PARAM_POLL_HISTORY_MAX_COUNT,
+                                        DEFAULT_POLL_HISTORY_MAX_COUNT);
+    long maxHistoryAge =
+        CurrentConfig.getLongParam(PARAM_POLL_HISTORY_MAX_AGE,
+                                   DEFAULT_POLL_HISTORY_MAX_AGE);
+
     if (pollHistories.size() > 0) {
-      // trim any that are too old
-      long maxHistoryAge =
-	CurrentConfig.getLongParam(PARAM_POLL_HISTORY_MAX_AGE,
-				   DEFAULT_POLL_HISTORY_MAX_AGE);
+      // trim any that are too old.
       int size;
       int cnt = 0;
       while ((size = pollHistories.size()) > 0) {
@@ -316,8 +324,6 @@ public class NodeStateImpl
       }
 
       // trim oldest off if exceeds max size
-      int max = CurrentConfig.getIntParam(PARAM_POLL_HISTORY_MAX_COUNT,
-					  DEFAULT_POLL_HISTORY_MAX_COUNT);
       if (pollHistories.size() > max) {
 	int trimTo =
 	  CurrentConfig.getIntParam(PARAM_POLL_HISTORY_TRIM_TO, max);
@@ -329,6 +335,34 @@ public class NodeStateImpl
 	}
       }
     }
+
+    // XXX: Hacked on for V3 history.  Trim V3 list for age and length.
+
+    if (completedV3Polls.size() > 0) {
+      // trim any that are too old.
+      for (int ix = 0; ix < completedV3Polls.size() - 1; ix++ ) {
+        V3PollState ps = (V3PollState)completedV3Polls.get(ix);
+        // Remove based on poll end time, not start time.  Polls are only
+        // appended to the completed list when they end.
+        if (TimeBase.msSince(ps.getEndTime()) > maxHistoryAge) {
+          completedV3Polls.remove(ix);
+          changed = true;
+        } else {
+          break; // Stop looking.
+        }
+      }
+      
+      // trim off oldest polls if the list exceeds max size
+      if (completedV3Polls.size() > max) {
+        int trimTo =
+          CurrentConfig.getIntParam(PARAM_POLL_HISTORY_TRIM_TO, max);
+        while (completedV3Polls.size() > trimTo) {
+          completedV3Polls.remove(completedV3Polls.size() - 1);
+          changed = true;
+        }
+      }
+    }
+
     return changed;
   }
 
@@ -362,5 +396,38 @@ public class NodeStateImpl
   public void setCachedUrlSet(CachedUrlSet cus) {
     this.cus = cus;
   }
+  
+  /*
+   * XXX: Hacked on for V3, and not an example of proper design.  The Node
+   * Manager and probably the entire Repository are getting a major overhaul
+   * in the near future, and we're moving away from V1, so an entire
+   * re-design seems worthwhile.
+   */
 
+  public Collection getActiveV3Polls() {
+    return activeV3Polls;
+  }
+  
+  public Collection getCompletedV3Polls() {
+    return completedV3Polls;
+  }
+  
+  public synchronized void addV3PollState(V3PollState state) {
+    activeV3Polls.add(state);
+  }
+  
+  public synchronized V3PollState getLastV3PollState() {
+    return (V3PollState)completedV3Polls.get(completedV3Polls.size() - 1);
+  }
+  
+  public synchronized void closeV3Poll(String key) {
+    for (int idx = 0; idx < activeV3Polls.size(); idx++) { 
+      V3PollState state = (V3PollState)activeV3Polls.get(idx);
+      if (key.equals(state.getKey())) {
+        activeV3Polls.remove(idx);
+        completedV3Polls.add(state);
+      }
+    }
+  }
+  
 }

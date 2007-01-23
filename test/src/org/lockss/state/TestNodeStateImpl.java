@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeStateImpl.java,v 1.24 2006-08-27 05:06:24 tlipkis Exp $
+ * $Id: TestNodeStateImpl.java,v 1.25 2007-01-23 21:44:37 smorabito Exp $
  */
 
 /*
@@ -116,10 +116,10 @@ public class TestNodeStateImpl extends LockssTestCase {
     Iterator pollIt = state.getPollHistories();
     assertFalse(pollIt.hasNext());
 
-    assertEquals(3, state.polls.size());
+    assertEquals(3, state.v1Polls.size());
     PollHistory history = new PollHistory(1, "lwr1", "upr1", 0, 456, 0, null, false);
     state.closeActivePoll(history);
-    assertEquals(2, state.polls.size());
+    assertEquals(2, state.v1Polls.size());
 
     pollIt = state.getActivePolls();
     while (pollIt.hasNext()) {
@@ -172,11 +172,11 @@ public class TestNodeStateImpl extends LockssTestCase {
   }
 
   public void testCloseAdditionalStates() {
-    state.polls.add(new PollState(1, "lwr1", "upr1", 1, 0, Deadline.MAX, false));
-    assertEquals(4, state.polls.size());
+    state.v1Polls.add(new PollState(1, "lwr1", "upr1", 1, 0, Deadline.MAX, false));
+    assertEquals(4, state.v1Polls.size());
     PollHistory history = new PollHistory(1, "lwr1", "upr1", 0, 456, 0, null, false);
     state.closeActivePoll(history);
-    assertEquals(2, state.polls.size());
+    assertEquals(2, state.v1Polls.size());
   }
 
   public void testGetLastPollHistory() {

@@ -1,5 +1,5 @@
 /*
- * $Id: PollerStateBean.java,v 1.21 2006-12-13 20:38:08 smorabito Exp $
+ * $Id: PollerStateBean.java,v 1.22 2007-01-23 21:44:35 smorabito Exp $
  */
 
 /*
@@ -239,6 +239,15 @@ public class PollerStateBean implements LockssSerializable {
 
   public long getVoteDeadline() {
     return this.voteDeadline;
+  }
+  
+  public long getVoteDuration() {
+    long dur = voteDeadline - TimeBase.nowMs();
+    if (dur < 0) {
+      return 0;
+    } else {
+      return dur;
+    }
   }
 
   public long getDuration() {
@@ -551,7 +560,7 @@ public class PollerStateBean implements LockssSerializable {
       for (Iterator iter = pendingRepairs.keySet().iterator(); iter.hasNext(); ) {
         String url = (String)iter.next();
         Repair r = (Repair)pendingRepairs.get(url);
-        if (r.isPublisherRepair()) {
+        if (r != null && r.isPublisherRepair()) {
           publisherRepairs.add(url);
         }
       }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.90 2006-11-22 00:49:46 tlipkis Exp $
+ * $Id: TestPollManager.java,v 1.91 2007-01-23 21:44:37 smorabito Exp $
  */
 
 /*
@@ -540,7 +540,7 @@ public class TestPollManager extends LockssTestCase {
                         TimeBase.nowMs() + 50000, 
                         testID, tempDir, theDaemon);
     
-    pollMsg.setVoteDeadline(TimeBase.nowMs() + 20000);
+    pollMsg.setVoteDuration(20000);
       
     return new V3Voter(theDaemon, pollMsg);
   }
