@@ -1,2 +1,68 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Elements><MapElement><ElementKey>plugin_config_props</ElementKey><ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><ConfigParamDescr><Key>base_url</Key><DisplayName>Base URL</DisplayName><Description>Usually of the form http://&lt;journal-name&gt;.com/</Description><Type>3</Type><Size>40</Size><Definitional>true</Definitional></ConfigParamDescr><ConfigParamDescr><Key>year</Key><DisplayName>Year</DisplayName><Description>Four digit year (e.g., 2004)</Description><Type>4</Type><Size>4</Size><Definitional>true</Definitional></ConfigParamDescr></ElementValue></MapElement><MapElement><ElementKey>au_crawlrules</ElementKey><ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><string xsi:type="java:java.lang.String">4,"^%s", base_url</string><string xsi:type="java:java.lang.String">1,"%smanifest%02d\.htm", base_url, au_short_year</string><string xsi:type="java:java.lang.String">1,"%s.*%02d.*", base_url, au_short_year</string><string xsi:type="java:java.lang.String">1,"%sgraphics/.*", base_url</string><string xsi:type="java:java.lang.String">1,"%snov00/smbscthumb.gif", base_url</string><string xsi:type="java:java.lang.String">1,"%sabout.htm", base_url</string><string xsi:type="java:java.lang.String">1,"%ssubmit.htm", base_url</string><string xsi:type="java:java.lang.String">2,"^%s$", base_url</string></ElementValue></MapElement><MapElement><ElementKey>plugin_name</ElementKey><ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Journal of International Women's Studies</ElementValue></MapElement><MapElement><ElementKey>au_start_url</ElementKey><ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"%smanifest%d.htm", base_url, year</ElementValue></MapElement><MapElement><ElementKey>au_name</ElementKey><ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"Journal of International Women's Studies %d", year</ElementValue></MapElement><MapElement><ElementKey>plugin_identifier</ElementKey><ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">edu.columbia.plugin.JiwsPlugin</ElementValue></MapElement></Elements>
+<map>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>edu.columbia.plugin.JiwsPlugin</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>2</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;Journal of International Women&apos;s Studies %d&quot;, year</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Journal of International Women&apos;s Studies</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;%smanifest%02d\.htm&quot;, base_url, au_short_year</string>
+      <string>1,&quot;%smanifest.htm&quot;, base_url</string>
+      <string>1,&quot;%s.*%02d.*&quot;, base_url, au_short_year</string>
+      <string>1,&quot;%sgraphics/.*&quot;, base_url</string>
+      <string>1,&quot;%sabout.htm&quot;, base_url</string>
+      <string>1,&quot;%ssubmit.htm&quot;, base_url</string>
+      <string>1,&quot;.*\.([cC][sS][sS]|[gG][iI][fF]|[jJ][pP][eE][gG]|[jJ][pP][gG]|[jJ][sS]|[pP][nN][gG])$&quot;</string>
+      <string>1,&quot;%svol1/&quot;, base_url</string>
+      <string>2,&quot;^%s$&quot;, base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%smanifest.htm&quot;, base_url</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+</map>
