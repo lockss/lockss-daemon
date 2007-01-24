@@ -40,6 +40,171 @@
     <!-- Titles -->
     <property name="org.lockss.title">
 
+    <property name="EvergreenReview110">
+      <property name="title" value="Evergreen Review 110" />
+      <property name="journalTitle" value="Evergreen Review" />
+      <property name="plugin" value="org.lockss.plugin.evergreenreview.EvergreenReviewPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.evergreenreview.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="110" />
+      </property>
+      <property name="attributes.rights" value="openaccess" />
+    </property>
+    
+    <property name="EvergreenReview109">
+      <property name="title" value="Evergreen Review 109" />
+      <property name="journalTitle" value="Evergreen Review" />
+      <property name="plugin" value="org.lockss.plugin.evergreenreview.EvergreenReviewPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.evergreenreview.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="109" />
+      </property>
+      <property name="attributes.rights" value="openaccess" />
+    </property>
+    
+    <property name="EvergreenReview108">
+      <property name="title" value="Evergreen Review 108" />
+      <property name="journalTitle" value="Evergreen Review" />
+      <property name="plugin" value="org.lockss.plugin.evergreenreview.EvergreenReviewPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.evergreenreview.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="108" />
+      </property>
+      <property name="attributes.rights" value="openaccess" />
+    </property>
+    
+    <property name="EvergreenReview107">
+      <property name="title" value="Evergreen Review 107" />
+      <property name="journalTitle" value="Evergreen Review" />
+      <property name="plugin" value="org.lockss.plugin.evergreenreview.EvergreenReviewPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.evergreenreview.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="107" />
+      </property>
+      <property name="attributes.rights" value="openaccess" />
+    </property>
+    
+    <property name="EvergreenReview106">
+      <property name="title" value="Evergreen Review 106" />
+      <property name="journalTitle" value="Evergreen Review" />
+      <property name="plugin" value="org.lockss.plugin.evergreenreview.EvergreenReviewPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.evergreenreview.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="106" />
+      </property>
+      <property name="attributes.rights" value="openaccess" />
+    </property>
+    
+    <property name="EvergreenReview105">
+      <property name="title" value="Evergreen Review 105" />
+      <property name="journalTitle" value="Evergreen Review" />
+      <property name="plugin" value="org.lockss.plugin.evergreenreview.EvergreenReviewPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.evergreenreview.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="105" />
+      </property>
+      <property name="attributes.rights" value="openaccess" />
+    </property>
+    
+    <property name="EvergreenReview104">
+      <property name="title" value="Evergreen Review 104" />
+      <property name="journalTitle" value="Evergreen Review" />
+      <property name="plugin" value="org.lockss.plugin.evergreenreview.EvergreenReviewPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.evergreenreview.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="104" />
+      </property>
+      <property name="attributes.rights" value="openaccess" />
+    </property>
+    
+    <property name="EvergreenReview103">
+      <property name="title" value="Evergreen Review 103" />
+      <property name="journalTitle" value="Evergreen Review" />
+      <property name="plugin" value="org.lockss.plugin.evergreenreview.EvergreenReviewPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.evergreenreview.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="103" />
+      </property>
+      <property name="attributes.rights" value="openaccess" />
+    </property>
+    
+    <property name="EvergreenReview102">
+      <property name="title" value="Evergreen Review 102" />
+      <property name="journalTitle" value="Evergreen Review" />
+      <property name="plugin" value="org.lockss.plugin.evergreenreview.EvergreenReviewPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.evergreenreview.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="102" />
+      </property>
+      <property name="attributes.rights" value="openaccess" />
+    </property>
+    
+    <property name="EvergreenReview101">
+      <property name="title" value="Evergreen Review 101" />
+      <property name="journalTitle" value="Evergreen Review" />
+      <property name="plugin" value="org.lockss.plugin.evergreenreview.EvergreenReviewPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.evergreenreview.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="101" />
+      </property>
+      <property name="attributes.rights" value="openaccess" />
+    </property>
+    
+    <property name="EvergreenReview100">
+      <property name="title" value="Evergreen Review 100" />
+      <property name="journalTitle" value="Evergreen Review" />
+      <property name="plugin" value="org.lockss.plugin.evergreenreview.EvergreenReviewPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.evergreenreview.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="100" />
+      </property>
+      <property name="attributes.rights" value="openaccess" />
+    </property>
+    
     <property name="WaterSA2006">
       <property name="title" value="Water SA 2006" />
       <property name="journalTitle" value="Water SA" />
@@ -5427,8 +5592,8 @@
         <property name="attributes.rights" value="openaccess" />
       </property>
 
-      <property name="jiws2004">
-	<property name="title" value="Journal of International Women's Studies 2004" />
+      <property name="jiws2006">
+	<property name="title" value="Journal of International Women's Studies 2006" />
 	<property name="estSize" value="4MB" />
 	<property name="journalTitle" value="Journal of International Women's Studies" />
 	<property name="plugin" value="edu.columbia.plugin.JiwsPlugin" />
@@ -5438,7 +5603,7 @@
 	</property>
 	<property name="param.2">
 	  <property name="key" value="year" />
-	  <property name="value" value="2004" />
+	  <property name="value" value="2006" />
 	</property>
         <property name="attributes.rights" value="openaccess" />
       </property>
