@@ -1,10 +1,10 @@
 /*
- * $Id: DaemonStatus.java,v 1.67 2007-01-14 07:58:03 tlipkis Exp $
+ * $Id: DaemonStatus.java,v 1.68 2007-01-24 19:18:06 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -337,8 +337,8 @@ public class DaemonStatus extends LockssServlet {
 	// output column headings
 	for (int ix = 0; ix < cols; ix++) {
 	  ColumnDescriptor cd = cds[ix];
-	  table.newCell("class=colhead valign=bottom align=" +
-			((cols == 1) ? "center" : getColAlignment(cd)));
+	  table.newCell("class=\"colhead\" valign=\"bottom\" align=\"" +
+			((cols == 1) ? "center" : getColAlignment(cd)) + "\"");
 	  table.add(getColumnTitleElement(statTable, cd, rules));
 	  if (ix < (cols - 1)) {
 	    table.newCell("width=8");
@@ -361,7 +361,7 @@ public class DaemonStatus extends LockssServlet {
 	  ColumnDescriptor cd = cds[ix];
 	  Object val = rowMap.get(cd.getColumnName());
 
-	  table.newCell("valign=top align=" + getColAlignment(cd));
+	  table.newCell("valign=\"top\" align=\"" + getColAlignment(cd) + "\"");
 	  table.add(getDisplayString(val, cd.getType()));
 	  if (ix < (cols - 1)) {
 	    table.newCell();	// empty column for spacing
@@ -613,11 +613,11 @@ public class DaemonStatus extends LockssServlet {
     case ColumnDescriptor.TYPE_IP_ADDRESS:
     case ColumnDescriptor.TYPE_TIME_INTERVAL:
     default:
-      return "LEFT";
+      return "left";
     case ColumnDescriptor.TYPE_INT:
     case ColumnDescriptor.TYPE_PERCENT:
     case ColumnDescriptor.TYPE_FLOAT:	// tk - should align decimal points?
-      return "RIGHT";
+      return "right";
     }
   }
 
@@ -710,7 +710,11 @@ public class DaemonStatus extends LockssServlet {
       }
       return str;
     } else {
-      return convertDisplayString(val, type);
+      String str = convertDisplayString(val, type);
+      if (type == ColumnDescriptor.TYPE_STRING) {
+        str = HtmlUtil.htmlEncode(str);
+      }
+      return str;
     }
   }
 
