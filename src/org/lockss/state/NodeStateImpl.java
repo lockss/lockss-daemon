@@ -1,5 +1,5 @@
 /*
- * $Id: NodeStateImpl.java,v 1.35 2007-01-23 21:44:36 smorabito Exp $
+ * $Id: NodeStateImpl.java,v 1.36 2007-01-24 01:54:15 smorabito Exp $
  */
 
 /*
@@ -82,7 +82,7 @@ public class NodeStateImpl
 
   protected transient CachedUrlSet cus;
   protected CrawlState crawlState;
-  protected List v1Polls;
+  protected List polls;
   protected List activeV3Polls;
   protected List completedV3Polls;
   protected transient List pollHistories = null; // CASTOR: probably unnecessary
@@ -101,9 +101,9 @@ public class NodeStateImpl
     // CASTOR: a priori unneeded after Castor is phased out
     this.cus = cus;
     this.crawlState = new CrawlState(bean.getCrawlStateBean());
-    this.v1Polls = new ArrayList(bean.pollBeans.size());
+    this.polls = new ArrayList(bean.pollBeans.size());
     for (int ii=0; ii<bean.pollBeans.size(); ii++) {
-      v1Polls.add(ii, new PollState((PollStateBean)bean.pollBeans.get(ii)));
+      polls.add(ii, new PollState((PollStateBean)bean.pollBeans.get(ii)));
     }
     this.hashDuration = bean.getAverageHashDuration();
     this.curState = bean.getState();
@@ -122,7 +122,7 @@ public class NodeStateImpl
                 List polls, HistoryRepository repository) {
     this.cus = cus;
     this.crawlState = crawlState;
-    this.v1Polls = polls;
+    this.polls = polls;
     this.activeV3Polls = new ArrayList();
     this.completedV3Polls = new ArrayList();
     this.repository = repository;
@@ -203,7 +203,7 @@ public class NodeStateImpl
   }
 
   public Iterator getActivePolls() {
-    return (new ArrayList(v1Polls)).iterator();
+    return (new ArrayList(polls)).iterator();
   }
 
   private synchronized List findPollHistories() {
@@ -240,7 +240,7 @@ public class NodeStateImpl
   }
 
   protected void addPollState(PollState new_poll) {
-    v1Polls.add(new_poll);
+    polls.add(new_poll);
     // write-through
     repository.storeNodeState(this);
   }
@@ -257,9 +257,9 @@ public class NodeStateImpl
       pollHistories.add(-(pos + 1), finished_poll);
     }
     // remove this poll, and any lingering PollStates for it
-    while (v1Polls.contains(finished_poll)) {
+    while (polls.contains(finished_poll)) {
 //XXX concurrent
-      v1Polls.remove(finished_poll);
+      polls.remove(finished_poll);
     }
 
     // trim
