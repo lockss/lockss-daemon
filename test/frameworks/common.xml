@@ -105,6 +105,7 @@
 	<value>edu.nyu.plugin.bonefolder.BonefolderPlugin</value>
 	<value>edu.nyu.plugin.ejcjs.EJCJSPlugin</value>
 	<value>edu.nyu.plugin.ejce.EJCEPlugin</value>
+	<value>edu.nyu.plugin.entelequia.EntelequiaPlugin</value>
 	<value>edu.jhu.library.plugin.MedievalForumPlugin</value>
 	<value>edu.princeton.plugin.ncaw.19thCenturyArtWorldwidePlugin</value>
 	<value>org.lockss.plugin.msr.MSRPlugin</value>
@@ -154,6 +155,8 @@
 	<value>org.lockss.plugin.prok.ProkPlugin</value>
 	<value>org.lockss.plugin.minerva.MinervaPlugin</value>
 	<value>org.lockss.plugin.lapetitezine.LaPetiteZinePlugin</value>
+	<value>org.lockss.plugin.invisibleculture.InvisibleCulturePlugin</value>
+	<value>org.lockss.plugin.evergreenreview.EvergreenReviewPlugin</value>
       </list>
     </property>
 
