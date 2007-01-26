@@ -1,10 +1,10 @@
 /*
- * $Id: XmlStatusTable.java,v 1.11 2005-10-06 23:42:45 troberts Exp $
+ * $Id: XmlStatusTable.java,v 1.11.32.1 2007-01-26 17:39:10 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,6 +34,7 @@ package org.lockss.daemon.status;
 
 import java.util.*;
 
+import org.apache.commons.lang.StringEscapeUtils;
 import org.lockss.util.*;
 import org.lockss.servlet.DaemonStatus;
 
@@ -292,7 +293,11 @@ public class XmlStatusTable {
   }
 
   static String formatByType(Object object, int type) {
-    return DaemonStatus.convertDisplayString(object, type);
+    String str = DaemonStatus.convertDisplayString(object, type);
+    if (type == ColumnDescriptor.TYPE_STRING) {
+      str = StringEscapeUtils.escapeXml(str); 
+    }
+    return str;
   }
 
 }
