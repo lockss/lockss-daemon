@@ -1,5 +1,5 @@
 /*
- * $Id: AmericanMedicalAssociationPdfTransform.java,v 1.2 2007-01-26 21:46:29 thib_gc Exp $
+ * $Id: RockefellerUniversityPressPdfTransform.java,v 1.1 2007-01-26 21:46:29 thib_gc Exp $
  */
 
 /*
@@ -37,7 +37,7 @@ import java.io.IOException;
 import org.lockss.filter.pdf.*;
 import org.lockss.plugin.highwire.HighWirePdfFilterFactory.*;
 
-public class AmericanMedicalAssociationPdfTransform extends SimpleOutputDocumentTransform {
+public class RockefellerUniversityPressPdfTransform extends SimpleOutputDocumentTransform {
 
   public static class Simplified extends TextScrapingDocumentTransform {
     
@@ -51,14 +51,14 @@ public class AmericanMedicalAssociationPdfTransform extends SimpleOutputDocument
     }
     
   }
-  
-  public AmericanMedicalAssociationPdfTransform() throws IOException {
+
+  public RockefellerUniversityPressPdfTransform() throws IOException{
     super(new ConditionalDocumentTransform(// If on the first page...
                                            new TransformFirstPage(// ...collapsing "Downloaded from" and normalizing its hyperlink succeeds,
-                                                                  new CollapseDownloadedFromAndNormalizeHyperlink()),
+                                                                  new CollapseDownloadedFrom()),
                                            // Then on all other pages...
                                            new TransformEachPageExceptFirst(// ...collapse "Downloaded from" and normalize its hyperlink,
-                                                                            new CollapseDownloadedFromAndNormalizeHyperlink()),
+                                                                            new CollapseDownloadedFrom()),
                                            // ...and normalize the metadata
                                            new NormalizeMetadata()));
   }

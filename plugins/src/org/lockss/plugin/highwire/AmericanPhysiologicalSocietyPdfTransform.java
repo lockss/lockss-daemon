@@ -1,10 +1,10 @@
 /*
- * $Id: AmericanPhysiologicalSocietyPdfTransform.java,v 1.25 2006-11-20 22:37:28 thib_gc Exp $
+ * $Id: AmericanPhysiologicalSocietyPdfTransform.java,v 1.26 2007-01-26 21:46:29 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -147,15 +147,15 @@ public class AmericanPhysiologicalSocietyPdfTransform extends SimpleOutputDocume
     public DocumentTransform makePreliminaryTransform() throws IOException {
       return new ConditionalDocumentTransform(// If...
                                               new AggregateDocumentTransform(// ...on the first page...
-                                                                             new TransformFirstPage(// ...normalizing "Donwloaded from" succeeds...
-                                                                                                    new NormalizeDownloadedFrom()),
+                                                                             new TransformFirstPage(// ...collapsing "Donwloaded from" succeeds...
+                                                                                                    new CollapseDownloadedFrom()),
                                                                              // ...and on at least one page...
                                                                              new TransformEachPage(PdfUtil.OR,
                                                                                                    // ...normalizing "This information is current as of" succeeds,
                                                                                                    new NormalizeCurrentAsOf())),
                                               // ...then on every page except the first...
-                                              new TransformEachPageExceptFirst(// ...normalize "Downloaded from"
-                                                                               new NormalizeDownloadedFrom()));
+                                              new TransformEachPageExceptFirst(// ...collapse "Downloaded from"
+                                                                               new CollapseDownloadedFrom()));
     }
 
   }
@@ -163,15 +163,15 @@ public class AmericanPhysiologicalSocietyPdfTransform extends SimpleOutputDocume
   public AmericanPhysiologicalSocietyPdfTransform() throws IOException {
     super(new ConditionalDocumentTransform(// If...
                                            new AggregateDocumentTransform(// ...on the first page...
-                                                                          new TransformFirstPage(// ...collapsing "Downloaded from" succeeds...
-                                                                                                 new CollapseDownloadedFrom()),
+                                                                          new TransformFirstPage(// ...collapsing "Downloaded from" and normalizing its hyperlink succeeds...
+                                                                                                 new CollapseDownloadedFromAndNormalizeHyperlink()),
                                                                           // ...and on at least one page...
                                                                           new TransformEachPage(PdfUtil.OR,
                                                                                                 // ...normalizing "This information is current as of" succeeds,
                                                                                                 new NormalizeCurrentAsOf())),
                                            // ...then on every page except the first...
-                                           new TransformEachPageExceptFirst(// ...collapse "Downloaded from",
-                                                                            new CollapseDownloadedFrom()),
+                                           new TransformEachPageExceptFirst(// ...collapse "Downloaded from" and normalize its hyperlink,
+                                                                            new CollapseDownloadedFromAndNormalizeHyperlink()),
                                            // ...and normalize the metadata
                                            new NormalizeMetadata()));
   }

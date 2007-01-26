@@ -1,10 +1,10 @@
 /*
- * $Id: HighWirePdfFilterFactory.java,v 1.10 2006-12-16 00:37:44 thib_gc Exp $
+ * $Id: HighWirePdfFilterFactory.java,v 1.11 2007-01-26 21:46:29 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -81,7 +81,9 @@ public class HighWirePdfFilterFactory extends BasicPdfFilterFactory {
             break;
         }
       }
-      logger.debug3("AbstractOnePartDownloadedFromOperatorProcessor candidate match: " + ret);
+      if (logger.isDebug3()) {
+        logger.debug3("AbstractOnePartDownloadedFromOperatorProcessor candidate match: " + ret);
+      }
       return ret;
     }
       
@@ -149,7 +151,9 @@ public class HighWirePdfFilterFactory extends BasicPdfFilterFactory {
             break;
         }
       }
-      logger.debug3("AbstractThreePartDownloadedFromOperatorProcessor candidate match: " + ret);
+      if (logger.isDebug3()) {
+        logger.debug3("AbstractThreePartDownloadedFromOperatorProcessor candidate match: " + ret);
+      }
       return ret;
     }
   }
@@ -157,9 +161,18 @@ public class HighWirePdfFilterFactory extends BasicPdfFilterFactory {
   public static class CollapseDownloadedFrom extends AggregatePageTransform {
     
     public CollapseDownloadedFrom() throws IOException {
-      super(new AggregatePageTransform(PdfUtil.OR,
-                                       new CollapseOnePartDownloadedFrom(),
-                                       new CollapseThreePartDownloadedFrom()),
+      super(PdfUtil.OR,
+            new CollapseOnePartDownloadedFrom(),
+            new CollapseThreePartDownloadedFrom());
+    }
+    
+  }
+  
+  public static class CollapseDownloadedFromAndNormalizeHyperlink
+      extends AggregatePageTransform {
+    
+    public CollapseDownloadedFromAndNormalizeHyperlink() throws IOException {
+      super(new CollapseDownloadedFrom(),
             new NormalizeDownloadedFromHyperlink());
     }
     
@@ -195,13 +208,23 @@ public class HighWirePdfFilterFactory extends BasicPdfFilterFactory {
         extends AbstractThreePartDownloadedFromOperatorProcessor {
 
       public List getReplacement(List tokens) {
-        // Find first "BT"
-        int bt = PdfUtil.isBeginTextObject(tokens, 2) ? 2 : 0;
-        // Replace by an empty text object
-        return ListUtil.list(// Known to be "BT"
-                             tokens.get(bt),
-                             // Known to be "ET"
-                             tokens.get(tokens.size() - 1));
+        // Known to have at least three "BT" tokens
+        int bt = -1; int counter = 0;
+        for (int tok = tokens.size() - 1 ; counter < 3 && tok >= 0 ; ++tok) {
+          if (PdfUtil.isBeginTextObject(tokens, tok)) {
+            bt = tok; ++counter;
+          }
+        }
+        
+        // Replace by an empty text object, preserving earlier tokens
+        List ret = new ArrayList(bt + 2);
+        ret.addAll(// Tokens before the three text objects 
+                   tokens.subList(0, bt));
+        ret.addAll(ListUtil.list(// Known to be "BT"
+                                 tokens.get(bt),
+                                 // Known to be "ET"
+                                 tokens.get(tokens.size() - 1)));
+        return ret;
       }
 
     }
@@ -222,16 +245,6 @@ public class HighWirePdfFilterFactory extends BasicPdfFilterFactory {
     
   }
   
-  public static class NormalizeDownloadedFrom extends AggregatePageTransform {
-    
-    public NormalizeDownloadedFrom() throws IOException {
-      super(PdfUtil.OR,
-            new NormalizeOnePartDownloadedFrom(),
-            new NormalizeThreePartDownloadedFrom());
-    }
-    
-  }
-
   public static class NormalizeDownloadedFromHyperlink implements PageTransform {
 
     /* Inherit documentation */
@@ -252,60 +265,12 @@ public class HighWirePdfFilterFactory extends BasicPdfFilterFactory {
     public NormalizeMetadata() {
       super(// Remove the modification date
             new RemoveModificationDate(),
-            // Remove the text in the metadat section
+            // Remove the text in the metadata section
             new EraseMetadataSection(),
             // Remove the variable part of the document ID
             new NormalizeTrailerId());
     }
   
-  }
-  
-  public static class NormalizeOnePartDownloadedFrom extends PageStreamTransform {
-    
-    public static class NormalizeOnePartDownloadedFromOperatorProcessor
-        extends AbstractOnePartDownloadedFromOperatorProcessor {
-      
-      public List getReplacement(List tokens) {
-        // Look back from the end
-        int last = tokens.size() - 1;
-        // Only replace variable string in token [last-18]
-        List list = new ArrayList(tokens);
-        list.set(last - 18, new COSString(" "));
-        return list;
-      }
-      
-    }
-    
-    public NormalizeOnePartDownloadedFrom() throws IOException {
-      super(// "BT" operator: split unconditionally
-            PdfUtil.BEGIN_TEXT_OBJECT, SplitOperatorProcessor.class,
-            // "ET" operator: merge conditionally using NormalizeOnePartDownloadedFromOperatorProcessor
-            PdfUtil.END_TEXT_OBJECT, NormalizeOnePartDownloadedFromOperatorProcessor.class);
-    }
-    
-  }
-  
-  public static class NormalizeThreePartDownloadedFrom extends PageStreamTransform {
-
-    public static class NormalizeThreePartDownloadedFromOperatorProcessor
-        extends AbstractThreePartDownloadedFromOperatorProcessor {
-
-      public List getReplacement(List tokens) {
-        // Look back from the end
-        int last = tokens.size() - 1;
-        // Only replace variable string in token [last-40]
-        List list = new ArrayList(tokens);
-        list.set(last - 40, new COSString(" "));
-        return list;
-      }
-
-    }
-
-    public NormalizeThreePartDownloadedFrom() throws IOException {
-      super(// "ET" operator: inspect subsequences ending in "ET" using NormalizeThreePartDownloadedFromOperatorProcessor
-            PdfUtil.END_TEXT_OBJECT, NormalizeThreePartDownloadedFromOperatorProcessor.class);
-    }
-
   }
   
   public static class NormalizeTrailerId implements DocumentTransform {
@@ -317,6 +282,7 @@ public class HighWirePdfFilterFactory extends BasicPdfFilterFactory {
         if (idObj != null && idObj instanceof COSArray) {
           COSArray idArray = (COSArray)idObj;
           if (idArray.size() == 2) {
+            // [1] variable; replace arbitrarily by [0] which is not
             idArray.set(1, idArray.get(0));
             return true; // success
           }

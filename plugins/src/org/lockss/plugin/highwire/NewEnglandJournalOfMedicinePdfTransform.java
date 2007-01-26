@@ -1,10 +1,10 @@
 /*
- * $Id: NewEnglandJournalOfMedicinePdfTransform.java,v 1.9 2006-11-26 23:37:23 thib_gc Exp $
+ * $Id: NewEnglandJournalOfMedicinePdfTransform.java,v 1.10 2007-01-26 21:46:28 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
