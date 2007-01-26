@@ -2577,6 +2577,8 @@
 	<property name="value" value="172" />
       </property>
       <property name="attributes.publisher" value="Rockefeller University Press" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.RockefellerUniversityPress$Simplified" />
     </property>
 
     <property name="JournalofExperimentalMedicine202">
@@ -2592,6 +2594,8 @@
 	<property name="value" value="202" />
       </property>
       <property name="attributes.publisher" value="Rockefeller University Press" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.RockefellerUniversityPress$Simplified" />
     </property>
 
     <property name="TheJournalofGeneralPhysiology127">
@@ -2607,6 +2611,8 @@
 	<property name="value" value="127" />
       </property>
       <property name="attributes.publisher" value="Rockefeller University Press" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.RockefellerUniversityPress$Simplified" />
     </property>
 
     <property name="AdvancesinPsychiatricTreatment12">
