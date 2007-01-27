@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.45 2007-01-23 21:44:35 smorabito Exp $
+ * $Id: V3Poller.java,v 1.46 2007-01-27 00:44:48 smorabito Exp $
  */
 
 /*
@@ -171,7 +171,14 @@ public class V3Poller extends BasePoll {
     PREFIX + "voteMargin";
   public static final int DEFAULT_V3_VOTE_MARGIN =
     75;
-  
+
+  /** Define the maximum number of queued repair requests that will
+   * be allowed for this poll.  Zero (0) means that no repairs are 
+   * allowed.  Any value less than zero means unlimited.
+   */
+  public static final String PARAM_MAX_REPAIRS =  PREFIX + "maxRepairs";
+  public static final int DEFAULT_MAX_REPAIRS = 50;
+
   /** The maximum number of block errors that can be encountered
    * during the tally before the poll is aborted.
    */
@@ -232,6 +239,7 @@ public class V3Poller extends BasePoll {
   private int maxParticipants;
   private int quorum;
   private int outerCircleTarget;
+  private int maxRepairs = DEFAULT_MAX_REPAIRS;
   private long voteDeadlinePadding = DEFAULT_VOTE_DEADLINE_PADDING;
   private long hashBytesBeforeCheckpoint =
     DEFAULT_V3_HASH_BYTES_BEFORE_CHECKPOINT;
@@ -369,6 +377,7 @@ public class V3Poller extends BasePoll {
     repairFromCache = 
       c.getPercentage(PARAM_V3_REPAIR_FROM_CACHE_PERCENT,
                       DEFAULT_V3_REPAIR_FROM_CACHE_PERCENT);
+    maxRepairs = c.getInt(PARAM_MAX_REPAIRS, DEFAULT_MAX_REPAIRS);
     // Determine the proper location for the V3 message dir.
     List dSpaceList =
       CurrentConfig.getList(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST);
@@ -1131,8 +1140,16 @@ public class V3Poller extends BasePoll {
 
     PollerStateBean.RepairQueue repairQueue = pollerState.getRepairQueue();
     
-    log.debug("Deciding whether to repair from cache or publisher.  Repair " +
-              "from cache probability=" + repairFromCache);
+    // If we already have more than maxRepairs and maxRepairs is >= 0, 
+    // just return.  A value less than 0 means "unlimited repairs".
+    int len = repairQueue.size();
+    if (len >= 0 &&  len > maxRepairs) {
+      return;
+    }
+    
+    // If not, choose where to request the repair.
+    log.debug2("Deciding whether to repair from cache or publisher.  Repair " +
+               "from cache probability=" + repairFromCache);
     if (ProbabilisticChoice.choose(repairFromCache)) {
       // XXX:  Use plain hash as a hint for who to requet the repair from.
       PeerIdentity peer =
@@ -1143,6 +1160,10 @@ public class V3Poller extends BasePoll {
       // Repair from the publisher, unless this is a down title.
       if (!AuUtil.isPubDown(getAu())) {
         repairQueue.repairFromPublisher(url, votesForBlock);
+      } else {
+        log.debug2("Chose to repair block " + url + " in poll " + getKey() 
+                   + " from the publisher, but configuration "
+                   + "prevents repair from publisher.  Skipping.");
       }
     }
   }
