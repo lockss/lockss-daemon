@@ -1,5 +1,5 @@
 /*
- * $Id: PollerStateBean.java,v 1.22 2007-01-23 21:44:35 smorabito Exp $
+ * $Id: PollerStateBean.java,v 1.22.2.1 2007-01-27 00:47:29 smorabito Exp $
  */
 
 /*
@@ -603,7 +603,12 @@ public class PollerStateBean implements LockssSerializable {
     public synchronized List getCompletedRepairs() {
       return completedRepairs;
     }
-    
+
+    public int size() {
+      return pendingRepairs.size() + activeRepairs.size() + 
+             completedRepairs.size();
+    }
+
     /**
      * Mark an entire list of URls active.
      * 
