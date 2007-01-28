@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryManager.java,v 1.7 2006-11-09 01:44:53 thib_gc Exp $
+ * $Id: RepositoryManager.java,v 1.8 2007-01-28 05:45:06 tlipkis Exp $
  */
 
 /*
@@ -65,6 +65,17 @@ public class RepositoryManager
     GLOBAL_CACHE_PREFIX + "enabled";
   public static final boolean DEFAULT_GLOBAL_CACHE_ENABLED = false;
 
+  /** Max percent of time size calculation thread may run. */
+  public static final String PARAM_SIZE_CALC_MAX_LOAD =
+    PREFIX + "sizeCalcMaxLoad";
+  public static final float DEFAULT_SIZE_CALC_MAX_LOAD = 0.5F;
+
+  static final String WDOG_PARAM_SIZE_CALC = "SizeCalc";
+  static final long WDOG_DEFAULT_SIZE_CALC = Constants.DAY;
+
+  static final String PRIORITY_PARAM_SIZE_CALC = "SizeCalc";
+  static final int PRIORITY_DEFAULT_SIZE_CALC = Thread.NORM_PRIORITY - 1;
+
   private PlatformUtil platInfo = PlatformUtil.getInstance();
   private List repoList = Collections.EMPTY_LIST;
   int paramNodeCacheSize = DEFAULT_MAX_PER_AU_CACHE_SIZE;
@@ -73,6 +84,8 @@ public class RepositoryManager
   UniqueRefLruCache globalNodeCache =
       new UniqueRefLruCache(DEFAULT_MAX_GLOBAL_CACHE_SIZE);
   Map localRepos = new HashMap();
+
+  private float sizeCalcMaxLoad = DEFAULT_SIZE_CALC_MAX_LOAD;
 
   public void startService() {
     super.startService();
@@ -155,6 +168,8 @@ public class RepositoryManager
     LockssRepositoryImpl repo = (LockssRepositoryImpl)localRepos.get(path);
     if (repo == null) {
       repo =  new LockssRepositoryImpl(path);
+      repo.initService(getDaemon());
+      repo.startService();
       localRepos.put(path, repo);
     }
     return repo;
@@ -162,17 +177,19 @@ public class RepositoryManager
 
   /**
    * Return the disk space used by the AU, including all overhead,
-   * calculating it if necessary.
-   * @param repoAuPath the full patch to a an AU dir in a LockssRepositoryImpl
-   * @return the AU's disk usage in bytes.
+   * optionally calculating it if necessary.
+   * @param repoAuPath the full path to an AU dir in a LockssRepositoryImpl
+   * @param calcIfUnknown if true, size will calculated if unknown (time
+   * consumeing)
+   * @return the AU's disk usage in bytes, or -1 if unknown
    */
-  public long getRepoDiskUsage(String repoAuPath) {
+  public long getRepoDiskUsage(String repoAuPath, boolean calcIfUnknown) {
     LockssRepository repo = getRepositoryFromPath(repoAuPath);
     if (repo != null) {
       try {
 	RepositoryNode repoNode = repo.getNode(AuCachedUrlSetSpec.URL);
 	if (repoNode instanceof AuNodeImpl) {
-	  return ((AuNodeImpl)repoNode).getDiskUsage();
+	  return ((AuNodeImpl)repoNode).getDiskUsage(calcIfUnknown);
 	}
       } catch (MalformedURLException ignore) {
       }
@@ -192,4 +209,114 @@ public class RepositoryManager
   public UniqueRefLruCache getGlobalNodeCache() {
     return globalNodeCache;
   }
+
+  // Background thread to (re)calculate AU size and disk usage.
+
+  private Set sizeCalcQueue = new HashSet();
+  private BinarySemaphore sizeCalcSem = new BinarySemaphore();
+  private SizeCalcThread sizeCalcThread;
+
+  /** engqueue a size calculation for the AU */
+  public void queueSizeCalc(ArchivalUnit au) {
+    queueSizeCalc(AuUtil.getAuRepoNode(au));
+  }
+
+  /** engqueue a size calculation for the node */
+  public void queueSizeCalc(RepositoryNode node) {
+    synchronized (sizeCalcQueue) {
+      if (sizeCalcQueue.add(node)) {
+	log.debug2("Queue size calc: " + node);
+	startOrKickThread();
+      }
+    }
+  }
+
+  public int sizeCalcQueueLen() {
+    synchronized (sizeCalcQueue) {
+      return sizeCalcQueue.size();
+    }
+  }
+
+  void startOrKickThread() {
+    if (sizeCalcThread == null) {
+      log.debug2("Starting thread");
+      sizeCalcThread = new SizeCalcThread();
+      sizeCalcThread.start();
+      sizeCalcThread.waitRunning();
+    }
+    sizeCalcSem.give();
+  }
+
+  void stopThread() {
+    if (sizeCalcThread != null) {
+      log.debug2("Stopping thread");
+      sizeCalcThread.stopSizeCalc();
+      sizeCalcThread = null;
+    }
+  }
+
+  void doSizeCalc(RepositoryNode node) {
+    node.getTreeContentSize(null, true);
+    if (node instanceof AuNodeImpl) {
+      ((AuNodeImpl)node).getDiskUsage(true);
+    }
+  }
+
+  long sleepTimeToAchieveLoad(long runDuration, float maxLoad) {
+    return Math.round(((double)runDuration / maxLoad) - runDuration);
+  }
+
+  private class SizeCalcThread extends LockssThread {
+    private volatile boolean goOn = true;
+
+    private SizeCalcThread() {
+      super("SizeCalc");
+    }
+
+    public void lockssRun() {
+      setPriority(PRIORITY_PARAM_SIZE_CALC, PRIORITY_DEFAULT_SIZE_CALC);
+      startWDog(WDOG_PARAM_SIZE_CALC, WDOG_DEFAULT_SIZE_CALC);
+      triggerWDogOnExit(true);
+      nowRunning();
+
+      while (goOn) {
+	try {
+	  pokeWDog();
+	  if (sizeCalcQueue.isEmpty()) {
+	    Deadline timeout = Deadline.in(Constants.HOUR);
+	    sizeCalcSem.take(timeout);
+	  }
+	  RepositoryNode node;
+	  synchronized (sizeCalcQueue) {
+	    node = (RepositoryNode)CollectionUtil.getAnElement(sizeCalcQueue);
+	  }
+	  if (node != null) {
+	    long start = TimeBase.nowMs();
+	    log.debug2("CalcSize start: " + node);
+	    doSizeCalc(node);
+	    long dur = TimeBase.nowMs() - start;
+	    log.debug2("CalcSize finish (" +
+		      StringUtil.timeIntervalToString(dur) + "): " + node);
+	    synchronized (sizeCalcQueue) {
+	      sizeCalcQueue.remove(node);
+	    }
+	    pokeWDog();
+	    long sleep = sleepTimeToAchieveLoad(dur, sizeCalcMaxLoad);
+	    Deadline.in(sleep).sleep();
+	  }
+	} catch (InterruptedException e) {
+	  // just wakeup and check for exit
+	}
+      }
+      if (!goOn) {
+	triggerWDogOnExit(false);
+      }
+    }
+
+    private void stopSizeCalc() {
+      goOn = false;
+      interrupt();
+    }
+  }
+
 }

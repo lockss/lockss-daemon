@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.52 2007-01-19 23:33:20 troberts Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.53 2007-01-28 05:45:06 tlipkis Exp $
  */
 
 /*
@@ -36,7 +36,7 @@ import java.io.*;
 import java.util.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
-import org.lockss.daemon.RangeCachedUrlSetSpec;
+import org.lockss.daemon.*;
 import org.lockss.plugin.AuUrl;
 
 /**
@@ -66,6 +66,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
 
     theDaemon = getMockLockssDaemon();
     repo = theDaemon.getLockssRepository(mau);
+    repo.startService();
   }
 
   public void tearDown() throws Exception {
@@ -833,13 +834,17 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
                "test33", null);
 
     RepositoryNode leaf = repo.getNode("http://www.example.com/testDir");
-    assertEquals(26, leaf.getTreeContentSize(null));
+    assertEquals(-1, leaf.getTreeContentSize(null, false));
+    assertEquals(26, leaf.getTreeContentSize(null, true));
+    assertEquals(26, leaf.getTreeContentSize(null, false));
     leaf = repo.getNode("http://www.example.com/testDir/test1");
-    assertEquals(5, leaf.getTreeContentSize(null));
+    assertEquals(5, leaf.getTreeContentSize(null, true));
     leaf = repo.getNode("http://www.example.com/testDir/test3");
-    assertEquals(12, leaf.getTreeContentSize(null));
-    assertEquals(6, leaf.getTreeContentSize(new RangeCachedUrlSetSpec(
-        "http://www.example.com/testDir/test3", "/branch1", "/branch1")));
+    assertEquals(12, leaf.getTreeContentSize(null, true));
+    CachedUrlSetSpec cuss =
+      new RangeCachedUrlSetSpec("http://www.example.com/testDir/test3",
+				"/branch1", "/branch1");
+    assertEquals(6, leaf.getTreeContentSize(cuss, true));
   }
 
   public void testDetermineParentNode() throws Exception {
@@ -925,11 +930,11 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     RepositoryNodeImpl leaf =
         (RepositoryNodeImpl)repo.getNode("http://www.example.com/testDir");
     assertNull(leaf.nodeProps.getProperty(TREE_SIZE_PROPERTY));
-    assertEquals(4, leaf.getTreeContentSize(null));
+    assertEquals(4, leaf.getTreeContentSize(null, true));
     assertEquals("4", leaf.nodeProps.getProperty(TREE_SIZE_PROPERTY));
     leaf.markAsDeleted();
     assertTrue(isPropInvalid(leaf.nodeProps.getProperty(TREE_SIZE_PROPERTY)));
-    assertEquals(0, leaf.getTreeContentSize(null));
+    assertEquals(0, leaf.getTreeContentSize(null, true));
     assertEquals("0", leaf.nodeProps.getProperty(TREE_SIZE_PROPERTY));
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrlSet.java,v 1.19 2005-10-07 16:19:57 thib_gc Exp $
+ * $Id: BaseCachedUrlSet.java,v 1.20 2007-01-28 05:45:06 tlipkis Exp $
  */
 
 /*
@@ -301,7 +301,7 @@ public class BaseCachedUrlSet implements CachedUrlSet {
     if (totalNodeSize==0) {
       try {
 	RepositoryNode node = repository.getNode(getUrl());
-        totalNodeSize = node.getTreeContentSize(spec);
+        totalNodeSize = node.getTreeContentSize(spec, true);
       } catch (MalformedURLException mue) {
         // this shouldn't happen
         logger.error("Malformed URL exception on "+spec.getUrl());

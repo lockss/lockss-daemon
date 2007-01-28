@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryManager.java,v 1.5 2006-11-09 01:44:54 thib_gc Exp $
+ * $Id: TestRepositoryManager.java,v 1.6 2007-01-28 05:45:06 tlipkis Exp $
  */
 
 /*
@@ -35,14 +35,14 @@ import org.lockss.plugin.*;
 
 public class TestRepositoryManager extends LockssTestCase {
   private MockArchivalUnit mau;
-  private RepositoryManager mgr;
+  private MyRepositoryManager mgr;
 
   private MockLockssDaemon theDaemon;
 
   public void setUp() throws Exception {
     super.setUp();
     theDaemon = getMockLockssDaemon();
-    mgr = new RepositoryManager();
+    mgr = new MyRepositoryManager();
     theDaemon.setRepositoryManager(mgr);
     mgr.initService(theDaemon);
   }
@@ -98,6 +98,47 @@ public class TestRepositoryManager extends LockssTestCase {
   public void testGetRepositoryDF () throws Exception {
     PlatformUtil.DF df = mgr.getRepositoryDF("local:.");
     assertNotNull(df);
+  }
+
+  public void testSizeCalc () throws Exception {
+    SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
+    mgr.setSem(sem);
+    RepositoryNode node1 = new RepositoryNodeImpl("url1", "testDir", null);
+    RepositoryNode node2 = new RepositoryNodeImpl("url2", "testDir", null);
+    RepositoryNode node3 = new RepositoryNodeImpl("url3", "testDir", null);
+    mgr.queueSizeCalc(node1);
+    assertTrue(sem.take(TIMEOUT_SHOULDNT));
+    assertEquals(ListUtil.list(node1), mgr.getNodes());
+    mgr.queueSizeCalc(node2);
+    mgr.queueSizeCalc(node3);
+    assertTrue(sem.take(TIMEOUT_SHOULDNT));
+    if (mgr.getNodes().size() < 3) {
+      assertTrue(sem.take(TIMEOUT_SHOULDNT));
+    }
+    assertSameElements(ListUtil.list(node1, node2, node3), mgr.getNodes());
+  }
+
+  public void testSleepCalc () throws Exception {
+    assertEquals(90, mgr.sleepTimeToAchieveLoad(10L, .1F));
+    assertEquals(40, mgr.sleepTimeToAchieveLoad(10L, .2F));
+    assertEquals(10, mgr.sleepTimeToAchieveLoad(10L, .5F));
+    assertEquals(50, mgr.sleepTimeToAchieveLoad(150L, .75F));
+  }
+
+  class MyRepositoryManager extends RepositoryManager {
+    List nodes = new ArrayList();
+    SimpleBinarySemaphore sem;
+    void setSem(SimpleBinarySemaphore sem) {
+      this.sem = sem;
+    }
+    List getNodes() {
+      return nodes;
+    }
+    void doSizeCalc(RepositoryNode node) {
+      TimerUtil.guaranteedSleep(10);
+      nodes.add(node);
+      sem.give();
+    }    
   }
 
   class MyMockLockssRepositoryImpl extends LockssRepositoryImpl {

@@ -1,5 +1,5 @@
 /*
- * $Id: AuNodeImpl.java,v 1.11 2006-11-09 01:44:53 thib_gc Exp $
+ * $Id: AuNodeImpl.java,v 1.12 2007-01-28 05:45:06 tlipkis Exp $
  */
 
 /*
@@ -138,13 +138,14 @@ public class AuNodeImpl extends RepositoryNodeImpl {
     return childL;
   }
 
-  /** Return the disk space used by the AU, including all overhead */
-  public long getDiskUsage() {
+  /** Return the disk space used by the AU (including all overhead), if it
+   * is known, else return -1 */
+  public long getDiskUsage(boolean calcIfUnknown) {
     // size is cached until content size changes significantly
     ensureCurrentInfoLoaded();
     String cachedDu = nodeProps.getProperty(DU_SIZE_PROPERTY);
     String cachedDuContent = nodeProps.getProperty(DU_CONTENT_SIZE_PROPERTY);
-    long content = getTreeContentSize(null);
+    long content = getTreeContentSize(null, calcIfUnknown);
     if (isPropValid(cachedDu) && isPropValid(cachedDuContent)) {
       long maxDelta =
         CurrentConfig.getCurrentConfig().getSize(PARAM_RECOMPUTE_DU_DELTA,
@@ -155,6 +156,11 @@ public class AuNodeImpl extends RepositoryNodeImpl {
 	return du;
       }
     }
+    if (!calcIfUnknown) {
+      repository.queueSizeCalc(this);
+      return -1;
+    }
+    logger.debug("Recomputing du for " + nodeLocation);
     PlatformUtil platInfo = PlatformUtil.getInstance();
     long du = platInfo.getDiskUsage(nodeLocation);
     if (du > 0) {
