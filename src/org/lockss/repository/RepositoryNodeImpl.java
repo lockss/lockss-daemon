@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.70 2007-01-19 23:33:20 troberts Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.70.2.1 2007-01-28 05:32:50 tlipkis Exp $
  */
 
 /*
@@ -191,7 +191,8 @@ public class RepositoryNodeImpl implements RepositoryNode {
     return currentCacheFile.length();
   }
 
-  public long getTreeContentSize(CachedUrlSetSpec filter) {
+  public long getTreeContentSize(CachedUrlSetSpec filter,
+				 boolean calcIfUnknown) {
     // this caches the size recursively (for unfiltered queries)
     ensureCurrentInfoLoaded();
     // only cache if not filtered
@@ -204,6 +205,10 @@ public class RepositoryNodeImpl implements RepositoryNode {
       }
     }
     logger.debug2("No cached size at " + nodeLocation);
+    if (!calcIfUnknown) {
+      repository.queueSizeCalc(this);
+      return -1;
+    }
 
     long totalSize = 0;
     if (hasContent()) {
@@ -215,7 +220,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
     for (Iterator subNodes = listChildren(filter, false); subNodes.hasNext(); ) {
       // call recursively on all children
       RepositoryNode subNode = (RepositoryNode)subNodes.next();
-      totalSize += subNode.getTreeContentSize(null);
+      totalSize += subNode.getTreeContentSize(null, true);
       children++;
     }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: AuUtil.java,v 1.16 2006-10-06 20:11:53 tlipkis Exp $
+ * $Id: AuUtil.java,v 1.16.6.1 2007-01-28 05:32:51 tlipkis Exp $
  */
 
 /*
@@ -74,39 +74,40 @@ public class AuUtil {
     return nodeManager.getAuState();
   }
 
+  public static AuNodeImpl getAuRepoNode(ArchivalUnit au) {
+    LockssDaemon daemon = getDaemon(au);
+    LockssRepository repo = daemon.getLockssRepository(au);
+    try {
+      return(AuNodeImpl)repo.getNode(au.getAuCachedUrlSet().getUrl());
+    } catch (MalformedURLException e) {
+      throw new RuntimeException(e);
+    }
+  }
+
   /**
    * Return the size of the AU, calculating it if necessary.
    * @param au the AU
    * @return the AU's total content size.
    */
-  public static long getAuContentSize(ArchivalUnit au) {
+  public static long getAuContentSize(ArchivalUnit au,
+				      boolean calcIfUnknown) {
     LockssDaemon daemon = getDaemon(au);
-    LockssRepository repo = daemon.getLockssRepository(au);
-    try {
-      RepositoryNode repoNode = repo.getNode(au.getAuCachedUrlSet().getUrl());
-      return repoNode.getTreeContentSize(null);
-    } catch (MalformedURLException ignore) {
-      return -1;
-    }
+    RepositoryNode repoNode = getAuRepoNode(au);
+    return repoNode.getTreeContentSize(null, calcIfUnknown);
   }
 
   /**
    * Return the disk space used by the AU, including all overhead,
    * calculating it if necessary.
    * @param au the AU
+   * @param calcIfUnknown if true, disk usage will calculated if unknown
+   * (time consumeing)
    * @return the AU's disk usage in bytes.
    */
-  public static long getAuDiskUsage(ArchivalUnit au) {
+  public static long getAuDiskUsage(ArchivalUnit au, boolean calcIfUnknown) {
     LockssDaemon daemon = getDaemon(au);
-    LockssRepository repo = daemon.getLockssRepository(au);
-    try {
-      RepositoryNode repoNode = repo.getNode(au.getAuCachedUrlSet().getUrl());
-      if (repoNode instanceof AuNodeImpl) {
-	return ((AuNodeImpl)repoNode).getDiskUsage();
-      }
-    } catch (MalformedURLException ignore) {
-    }
-    return -1;
+    AuNodeImpl repoNode = getAuRepoNode(au);
+    return repoNode.getDiskUsage(calcIfUnknown);
   }
 
   /** Return true if the supplied AU config appears to be compatible with

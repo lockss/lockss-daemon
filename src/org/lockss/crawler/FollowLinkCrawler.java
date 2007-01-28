@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.54 2006-12-09 07:09:01 tlipkis Exp $
+ * $Id: FollowLinkCrawler.java,v 1.54.2.1 2007-01-28 05:32:51 tlipkis Exp $
  */
 
 /*
@@ -265,11 +265,10 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
   /** Separate method for easy overridability in unit tests, where
    * necessary environment may not be set up */
   protected void doCrawlEndActions() {
-    // Recompute the content tree size.  This can take a while, so do it
-    // now in background (crawl) thread since it's likely to be necessary, to
-    // make it more likely to be already computed when accessed from the UI.
-    AuUtil.getAuContentSize(au);
-    AuUtil.getAuDiskUsage(au);
+    // Cause the content size and disk usage to be calculated in a
+    // background thread
+    AuUtil.getAuContentSize(au, false);
+    AuUtil.getAuDiskUsage(au, false);
   }
 
   protected boolean withinCrawlWindow() {

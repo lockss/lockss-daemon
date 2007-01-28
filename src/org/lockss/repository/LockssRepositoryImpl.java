@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.74 2007-01-21 22:06:18 tlipkis Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.74.2.1 2007-01-28 05:32:51 tlipkis Exp $
  */
 
 /*
@@ -140,6 +140,10 @@ public class LockssRepositoryImpl
    * @param auConfig the new configuration
    */
   public void setAuConfig(Configuration auConfig) {
+  }
+
+  void queueSizeCalc(RepositoryNode node) {
+    repoMgr.queueSizeCalc(node);
   }
 
   public RepositoryNode getNode(String url) throws MalformedURLException {

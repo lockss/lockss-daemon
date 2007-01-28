@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryStatus.java,v 1.27 2007-01-21 22:06:18 tlipkis Exp $
+ * $Id: LockssRepositoryStatus.java,v 1.27.2.1 2007-01-28 05:32:51 tlipkis Exp $
  */
 
 /*
@@ -206,7 +206,10 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
 	if (au != null) {
 	  row.put("status", "Active");
 	  stats.active++;
-	  addDu(row, AuUtil.getAuDiskUsage(au));
+	  long du = AuUtil.getAuDiskUsage(au, false);
+	  if (du != -1) {
+	    addDu(row, du);
+	  }
 	  row.put("au", new StatusTable.Reference(name,
 						  AU_STATUS_TABLE_NAME,
 						  auid));
@@ -214,10 +217,9 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
 	  row.put("params", config);
 	} else {
 	  row.put("au", "");
-	  LockssRepositoryImpl repo =
-	    repoMgr.getRepositoryFromPath(dirString);
-	  if (repo != null) {
-	    addDu(row, repoMgr.getRepoDiskUsage(dirString));
+	  long du = repoMgr.getRepoDiskUsage(dirString, false);
+	  if (du != -1) {
+	    addDu(row, du);
 	  }
 	  Configuration config = pluginMgr.getStoredAuConfiguration(auid);
 	  Properties auidProps = null;
@@ -300,6 +302,7 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
       addIfNonZero(res, "Inactive", stats.inactive);
       addIfNonZero(res, "Deleted", stats.deleted);
       addIfNonZero(res, "Orphaned", stats.orphaned);
+      addIfNonZero(res, "Awaiting recalc", repoMgr.sizeCalcQueueLen());
       return res;
     }
 

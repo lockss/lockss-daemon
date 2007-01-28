@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.50 2007-01-23 21:44:36 smorabito Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.50.2.1 2007-01-28 05:32:50 tlipkis Exp $
  */
 
 /*
@@ -130,13 +130,15 @@ public class ArchivalUnitStatus
 
     static final String FOOT_STATUS = "Flags may follow status: C means the AU is complete, D means that the AU is no longer available from the publisher";
 
+    static final String FOOT_SIZE = "If blank, size has changed and is being recalculated.  Check again later.";
+
     private static final List columnDescriptors = ListUtil.list(
       new ColumnDescriptor("AuName", "Volume", ColumnDescriptor.TYPE_STRING),
 //       new ColumnDescriptor("AuNodeCount", "Nodes", ColumnDescriptor.TYPE_INT),
       new ColumnDescriptor("AuSize", "Content Size",
-			   ColumnDescriptor.TYPE_INT),
+			   ColumnDescriptor.TYPE_INT, FOOT_SIZE),
       new ColumnDescriptor("DiskUsage", "Disk Usage (MB)",
-			   ColumnDescriptor.TYPE_FLOAT),
+			   ColumnDescriptor.TYPE_FLOAT, FOOT_SIZE),
       new ColumnDescriptor("Peers", "Peers", ColumnDescriptor.TYPE_INT),
       new ColumnDescriptor("AuPolls", "Polls",
                            ColumnDescriptor.TYPE_INT),
@@ -157,9 +159,11 @@ public class ArchivalUnitStatus
 					 CatalogueOrderComparator.SINGLETON));
 
     private LockssDaemon theDaemon;
+    private RepositoryManager repoMgr;
 
     AuSummary(LockssDaemon theDaemon) {
       this.theDaemon = theDaemon;
+      repoMgr = theDaemon.getRepositoryManager();
     }
 
     public String getDisplayName() {
@@ -227,8 +231,14 @@ public class ArchivalUnitStatus
       //"AuID"
       rowMap.put("AuName", AuStatus.makeAuRef(au.getName(), au.getAuId()));
 //       rowMap.put("AuNodeCount", new Integer(-1));
-      rowMap.put("AuSize", new Long(AuUtil.getAuContentSize(au)));
-      rowMap.put("DiskUsage", new Double(((double)AuUtil.getAuDiskUsage(au)) / (1024*1024)));
+      long contentSize = AuUtil.getAuContentSize(au, false);
+      if (contentSize != -1) {
+	rowMap.put("AuSize", new Long(contentSize));
+      }
+      long du = AuUtil.getAuDiskUsage(au, false);
+      if (du != -1) {
+	rowMap.put("DiskUsage", new Double(((double)du) / (1024*1024)));
+      }
       rowMap.put("AuLastCrawl", new Long(auState.getLastCrawlTime()));
       rowMap.put("Peers", PeerRepair.makeAuRef("peers", au.getAuId()));
       rowMap.put("AuLastTreeWalk", new Long(auState.getLastTreeWalkTime()));
@@ -290,12 +300,19 @@ public class ArchivalUnitStatus
     }
 
     private List getSummaryInfo(Stats stats) {
+      List res = new ArrayList();
       String numaus = StringUtil.numberOfUnits(stats.aus, "Archival Unit",
 					       "Archival Units");
-      return
-	ListUtil.list(new StatusTable.SummaryInfo(null,
-						  ColumnDescriptor.TYPE_STRING,
-						  numaus));
+      res.add(new StatusTable.SummaryInfo(null,
+					  ColumnDescriptor.TYPE_STRING,
+					  numaus));
+      int n = repoMgr.sizeCalcQueueLen();
+      if (n != 0) {
+	res.add(new StatusTable.SummaryInfo(null,
+					    ColumnDescriptor.TYPE_STRING,
+					    n + " awaiting recalc"));
+      }
+      return res;
     }
   }
 
@@ -572,8 +589,10 @@ public class ArchivalUnitStatus
       if (!node.isLeaf()) {
 	rowMap.put("NodeChildCount",
 		   new OrderedObject(new Long(node.getChildCount())));
-	rowMap.put("NodeTreeSize",
-		   new OrderedObject(new Long(node.getTreeContentSize(null))));
+	long treeSize = node.getTreeContentSize(null, false);
+	if (treeSize != -1) {
+	  rowMap.put("NodeTreeSize", new OrderedObject(new Long(treeSize)));
+	}
       } else {
 	rowMap.put("NodeChildCount", DASH);
 	rowMap.put("NodeTreeSize", DASH);
@@ -621,18 +640,27 @@ public class ArchivalUnitStatus
         stat = topNode.hasDamage() ? DAMAGE_STATE_DAMAGED : DAMAGE_STATE_OK;
       }
       
+      long contentSize = AuUtil.getAuContentSize(au, false);
+      long du = AuUtil.getAuDiskUsage(au, false);
       List summaryList =  ListUtil.list(
             new StatusTable.SummaryInfo("Volume", ColumnDescriptor.TYPE_STRING,
                                         au.getName()),
 //             new StatusTable.SummaryInfo("Nodes", ColumnDescriptor.TYPE_INT,
 //                                         new Integer(-1)),
-            new StatusTable.SummaryInfo("Content Size",
-					ColumnDescriptor.TYPE_INT,
-                                        new Long(AuUtil.getAuContentSize(au))),
-            new StatusTable.SummaryInfo("Disk Usage (MB)",
+	    (contentSize != -1)
+	    ? new StatusTable.SummaryInfo("Content Size",
+					  ColumnDescriptor.TYPE_INT,
+					  new Long(contentSize))
+	    : new StatusTable.SummaryInfo("Content Size",
+					  ColumnDescriptor.TYPE_STRING,
+					  "Awaiting recalc"),
+	    (du != -1)
+	    ? new StatusTable.SummaryInfo("Disk Usage (MB)",
 					ColumnDescriptor.TYPE_FLOAT,
-                                        new Float(AuUtil.getAuDiskUsage(au) /
-						  (float)(1024 * 1024))),
+                                        new Float(du / (float)(1024 * 1024)))
+	    : new StatusTable.SummaryInfo("Disk Usage",
+					  ColumnDescriptor.TYPE_STRING,
+					  "Awaiting recalc"),
 	    new StatusTable.SummaryInfo("Status",
                                         ColumnDescriptor.TYPE_STRING,
                                         stat),

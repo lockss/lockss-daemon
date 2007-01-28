@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSimulatedContent.java,v 1.74 2006-08-07 07:43:40 tlipkis Exp $
+ * $Id: FuncSimulatedContent.java,v 1.74.14.1 2007-01-28 05:32:50 tlipkis Exp $
  */
 
 /*
@@ -110,7 +110,7 @@ public class FuncSimulatedContent extends LockssTestCase {
     metrics.setHashSpeed(100);
 
     theDaemon.getHistoryRepository(sau).startService();
-    theDaemon.getLockssRepository(sau);
+    theDaemon.getLockssRepository(sau).startService();
     theDaemon.getNodeManager(sau).startService();
   }
 
@@ -158,7 +158,7 @@ public class FuncSimulatedContent extends LockssTestCase {
 
     sau =
         (SimulatedArchivalUnit)theDaemon.getPluginManager().getAuFromId(auId2);
-    theDaemon.getLockssRepository(sau);
+    theDaemon.getLockssRepository(sau).startService();
     theDaemon.getNodeManager(sau).startService();
 
     createContent();
