@@ -1,5 +1,5 @@
 /*
- * $Id: CssParser.java,v 1.2 2007-01-16 08:17:09 thib_gc Exp $
+ * $Id: CssParser.java,v 1.2.2.1 2007-01-30 02:13:34 thib_gc Exp $
  */
 
 /*
@@ -175,8 +175,8 @@ public class CssParser implements ContentParser {
     catch (MalformedUrlException lockssMalformedUrlException) {
       MalformedURLException javaMalformedUrlException =
         lockssMalformedUrlException.getJavaMalformedUrlException();
-      logger.error("Malformed URL while parsing " + srcUrl,
-                   javaMalformedUrlException);
+      logger.siteError("Malformed URL while parsing " + srcUrl,
+                       javaMalformedUrlException);
       throw javaMalformedUrlException;
     }
   }
