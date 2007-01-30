@@ -1,5 +1,5 @@
 /*
- * $Id: PdfUtil.java,v 1.21 2006-12-14 01:02:23 thib_gc Exp $
+ * $Id: PdfUtil.java,v 1.21.2.1 2007-01-30 02:01:10 thib_gc Exp $
  */
 
 /*
@@ -936,7 +936,9 @@ return success;
    */
   public static boolean isBeginTextObject(List tokens,
                                           int index) {
-    return isBeginTextObject(tokens.get(index));
+    return 0 <= index
+    && index < tokens.size()
+    && isBeginTextObject(tokens.get(index));
   }
 
   /**
@@ -964,7 +966,9 @@ return success;
    */
   public static boolean isEndTextObject(List tokens,
                                         int index) {
-    return isEndTextObject(tokens.get(index));
+    return 0 <= index
+    && index < tokens.size()
+    && isEndTextObject(tokens.get(index));
   }
 
   /**
@@ -992,7 +996,9 @@ return success;
    */
   public static boolean isMoveToNextLineShowText(List tokens,
                                                  int index) {
-    return isMoveToNextLineShowText(tokens.get(index));
+    return 0 <= index
+    && index < tokens.size()
+    && isMoveToNextLineShowText(tokens.get(index));
   }
 
   /**
@@ -1018,7 +1024,9 @@ return success;
    */
   public static boolean isPdfFloat(List tokens,
                                    int index) {
-    return isPdfFloat(tokens.get(index));
+    return 0 <= index
+    && index < tokens.size()
+    && isPdfFloat(tokens.get(index));
   }
 
   /**
@@ -1040,7 +1048,9 @@ return success;
    */
   public static boolean isPdfInteger(List tokens,
                                      int index) {
-    return isPdfInteger(tokens.get(index));
+    return 0 <= index
+    && index < tokens.size()
+    && isPdfInteger(tokens.get(index));
   }
 
   /**
@@ -1062,7 +1072,9 @@ return success;
    */
   public static boolean isPdfNumber(List tokens,
                                     int index) {
-    return isPdfNumber(tokens.get(index));
+    return 0 <= index
+    && index < tokens.size()
+    && isPdfNumber(tokens.get(index));
   }
 
   /**
@@ -1087,7 +1099,9 @@ return success;
    */
   public static boolean isPdfString(List tokens,
                                     int index) {
-    return isPdfString(tokens.get(index));
+    return 0 <= index
+    && index < tokens.size()
+    && isPdfString(tokens.get(index));
   }
 
   /**
@@ -1111,7 +1125,9 @@ return success;
    */
   public static boolean isSetRgbColorNonStroking(List tokens,
                                                  int index) {
-    return isSetRgbColorNonStroking(tokens.get(index));
+    return 0 <= index
+    && index < tokens.size()
+    && isSetRgbColorNonStroking(tokens.get(index));
   }
 
   /**
@@ -1139,7 +1155,9 @@ return success;
    */
   public static boolean isSetSpacingMoveToNextLineShowText(List tokens,
                                                            int index) {
-    return isSetSpacingMoveToNextLineShowText(tokens.get(index));
+    return 0 <= index
+    && index < tokens.size()
+    && isSetSpacingMoveToNextLineShowText(tokens.get(index));
   }
 
   /**
@@ -1167,7 +1185,9 @@ return success;
    */
   public static boolean isShowText(List tokens,
                                    int index) {
-    return isShowText(tokens.get(index));
+    return 0 <= index
+    && index < tokens.size()
+    && isShowText(tokens.get(index));
   }
 
   /**
@@ -1195,7 +1215,9 @@ return success;
    */
   public static boolean isShowTextGlyphPositioning(List tokens,
                                                    int index) {
-    return isShowTextGlyphPositioning(tokens.get(index));
+    return 0 <= index
+    && index < tokens.size()
+    && isShowTextGlyphPositioning(tokens.get(index));
   }
 
   /**
@@ -1225,8 +1247,10 @@ return success;
   public static boolean matchPdfFloat(List tokens,
                                       int index,
                                       float num) {
-    return matchPdfFloat(tokens.get(index),
-                         num);
+    return 0 <= index
+    && index < tokens.size()
+    && matchPdfFloat(tokens.get(index),
+                     num);
   }
 
   /**
@@ -1258,8 +1282,10 @@ return success;
   public static boolean matchPdfInteger(List tokens,
                                         int index,
                                         int num) {
-    return matchPdfInteger(tokens.get(index),
-                           num);
+    return 0 <= index
+    && index < tokens.size()
+    && matchPdfInteger(tokens.get(index),
+                       num);
   }
 
   /**
@@ -1291,8 +1317,10 @@ return success;
   public static boolean matchPdfNumber(List tokens,
                                        int index,
                                        float num) {
-    return matchPdfNumber(tokens.get(index),
-                          num);
+    return 0 <= index
+    && index < tokens.size()
+    && matchPdfNumber(tokens.get(index),
+                      num);
   }
 
   /**
@@ -1325,8 +1353,10 @@ return success;
   public static boolean matchPdfOperator(List tokens,
                                          int index,
                                          String expectedOperator) {
-    return matchPdfOperator(tokens.get(index),
-                            expectedOperator);
+    return 0 <= index
+    && index < tokens.size()
+    && matchPdfOperator(tokens.get(index),
+                        expectedOperator);
   }
 
   /**
@@ -1356,8 +1386,10 @@ return success;
   public static boolean matchPdfString(List tokens,
                                        int index,
                                        String str) {
-    return matchPdfString(tokens.get(index),
-                          str);
+    return 0 <= index
+    && index < tokens.size()
+    && matchPdfString(tokens.get(index),
+                      str);
   }
 
   /**
@@ -1389,8 +1421,10 @@ return success;
   public static boolean matchPdfStringEndsWith(List tokens,
                                                int index,
                                                String str) {
-    return matchPdfStringEndsWith(tokens.get(index),
-                                  str);
+    return 0 <= index
+    && index < tokens.size()
+    && matchPdfStringEndsWith(tokens.get(index),
+                              str);
   }
 
   /**
@@ -1422,8 +1456,10 @@ return success;
   public static boolean matchPdfStringMatches(List tokens,
                                               int index,
                                               String regex) {
-    return matchPdfStringMatches(tokens.get(index),
-                                 regex);
+    return 0 <= index
+    && index < tokens.size()
+    && matchPdfStringMatches(tokens.get(index),
+                             regex);
   }
 
   /**
@@ -1455,8 +1491,10 @@ return success;
   public static boolean matchPdfStringStartsWith(List tokens,
                                                  int index,
                                                  String str) {
-    return matchPdfStringStartsWith(tokens.get(index),
-                                    str);
+    return 0 <= index
+    && index < tokens.size()
+    && matchPdfStringStartsWith(tokens.get(index),
+                                str);
   }
 
   /**
@@ -1607,7 +1645,7 @@ return success;
    * @param end    The index of the selected {@link #END_TEXT_OBJECT}
    *               candidate.
    * @return True if the selected tokens are the expected operators,
-   *         flase otherwise.
+   *         false otherwise.
    * @see #isBeginTextObject(List, int)
    * @see #isEndTextObject(List, int)
    */
