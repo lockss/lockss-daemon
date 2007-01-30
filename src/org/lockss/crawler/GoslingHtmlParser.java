@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingHtmlParser.java,v 1.48 2007-01-16 08:17:09 thib_gc Exp $
+ * $Id: GoslingHtmlParser.java,v 1.49 2007-01-30 02:19:11 thib_gc Exp $
  */
 
 /*
@@ -524,7 +524,7 @@ public class GoslingHtmlParser implements ContentParser {
       
       public int read() throws IOException {
         if (!refill("</style>".length()) && !closed) {
-          logger.warning("A <style> section is running off the end of " + srcUrl);
+          logger.siteWarning("A <style> section is running off the end of " + srcUrl);
         }
         if (ring.size() == 0 || ring.startsWithIgnoreCase("</style>")) {
           return -1;
@@ -538,10 +538,10 @@ public class GoslingHtmlParser implements ContentParser {
       cssParser.parseForUrls(cssReader, srcUrl, au, cb);
     }
     catch (IOException ioe) {
-      logger.error("The CSS parser failed to parse a <style> section in "
-                   + srcUrl, ioe);
+      logger.siteError("The CSS parser failed to parse a <style> section in " + srcUrl,
+                       ioe);
       try {
-        cssReader.close();
+        cssReader.close(); // the close() from above, not a typical close()
         do {
           // Finish reading from the CSS reader
         } while (cssReader.read() != -1);
