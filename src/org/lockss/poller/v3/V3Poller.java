@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.46 2007-01-27 00:44:48 smorabito Exp $
+ * $Id: V3Poller.java,v 1.47 2007-01-30 04:49:10 smorabito Exp $
  */
 
 /*
@@ -35,6 +35,8 @@ package org.lockss.poller.v3;
 import java.io.*;
 import java.security.*;
 import java.util.*;
+
+import org.apache.commons.collections.*;
 
 import org.lockss.app.*;
 import org.lockss.config.*;
@@ -126,6 +128,34 @@ public class V3Poller extends BasePoll {
   public static final String PARAM_DROP_EMPTY_NOMINATIONS =
     PREFIX + "dropEmptyNominations";
   public static final boolean DEFAULT_DROP_EMPTY_NOMINATIONS = false;
+  
+  /** If true, keep inviting peers into the poll until either enough
+   * participants have agreed to participate, OR the vote timer expires,
+   * whichever comes first.
+   */
+  public static final String PARAM_ENABLE_INVITATIONS =
+    PREFIX + "enableFollowupInvitations";
+  public static final boolean DEFAULT_ENABLE_INVITATIONS = true;
+  
+  /** The time to wait between inviting more peers, until at least
+   * MIN_POLL_SIZE have agreed to participate.
+   */
+  public static final String PARAM_TIME_BETWEEN_INVITATIONS =
+    PREFIX + "timeBetweenInvitations";
+  /** By default, wait two minutes between invitation messages and 
+   * re-invitations.  This is sufficiently long for a voter to receive
+   * and respond to an invitation if it has the AU and is willing to
+   * participate.
+   */
+  public static final long DEFAULT_TIME_BETWEEN_INVITATIONS =
+    2 * 60 * 1000; // 2 minutes;
+  
+  /** The maximum number of peers to invite into the poll during each
+   * followup invitation phase.
+   */
+  public static final String PARAM_INVITATION_SIZE = PREFIX + "invitationSize";
+  public static final int DEFAULT_INVITATION_SIZE = 10;
+  
 
   /** If true, just log a message rather than deleting files that are
    * considered to be missing from a majority of peers.
@@ -177,7 +207,7 @@ public class V3Poller extends BasePoll {
    * allowed.  Any value less than zero means unlimited.
    */
   public static final String PARAM_MAX_REPAIRS =  PREFIX + "maxRepairs";
-  public static final int DEFAULT_MAX_REPAIRS = 50;
+  public static final int DEFAULT_MAX_REPAIRS = 1000;
 
   /** The maximum number of block errors that can be encountered
    * during the tally before the poll is aborted.
@@ -248,8 +278,12 @@ public class V3Poller extends BasePoll {
   private static LockssRandom theRandom = new LockssRandom();
   private int blockErrorCount = 0;
   private int maxBlockErrorCount = DEFAULT_MAX_BLOCK_ERROR_COUNT;
+  private boolean enableInvitations = DEFAULT_ENABLE_INVITATIONS;
+  private long timeBetweenInvitations = DEFAULT_TIME_BETWEEN_INVITATIONS;
+  private int invitationSize = DEFAULT_INVITATION_SIZE;
 
   private SchedulableTask task;
+  private TimerQueue.Request invitationRequest;
   private TimerQueue.Request pollCompleteRequest;
   private TimerQueue.Request voteCompleteRequest;
   private long bytesHashedSinceLastCheckpoint = 0;
@@ -369,6 +403,10 @@ public class V3Poller extends BasePoll {
 				      DEFAULT_VOTE_DURATION_MULTIPLIER);
     voteDeadlinePadding = c.getTimeInterval(PARAM_VOTE_DEADLINE_PADDING,
                                             DEFAULT_VOTE_DEADLINE_PADDING);
+    timeBetweenInvitations =
+      c.getTimeInterval(PARAM_TIME_BETWEEN_INVITATIONS,
+                        DEFAULT_TIME_BETWEEN_INVITATIONS);
+    invitationSize = c.getInt(PARAM_INVITATION_SIZE, DEFAULT_INVITATION_SIZE);
     extraPollTime = c.getLong(PARAM_V3_EXTRA_POLL_TIME,
                               DEFAULT_V3_EXTRA_POLL_TIME);
     hashBytesBeforeCheckpoint = 
@@ -466,6 +504,26 @@ public class V3Poller extends BasePoll {
     for (Iterator it = innerCircleVoters.iterator(); it.hasNext();) {
       addInnerCircleVoter((PeerIdentity)it.next());
     }
+  }
+  
+  /**
+   * Given the total set of all known peers, and the set of peers already
+   * invited, return a new list of peers that should be invited into the poll.
+   * @param allPeers   All known V3 peers.
+   * @param existingPeers  Peers that have already been invited.
+   * @return  A new list of peers to invite.
+   */
+  Collection choosePeers(Collection allPeers, Collection invitedPeers,
+                         int count) {
+    // Subtract the peers who have already agreed to participate from
+    // the list of all peers.
+    //
+    Collection availablePeers = new HashSet(allPeers);
+    availablePeers.removeAll(invitedPeers);
+    // Select 'count' peers, or the entire list, whichever is smaller.
+    count = count > availablePeers.size() ? availablePeers.size() : count;
+    // Select up to 'size' peers
+    return CollectionUtil.randomSelection(availablePeers, count);
   }
 
   /**
@@ -623,6 +681,18 @@ public class V3Poller extends BasePoll {
         }
       }
     }
+    
+    if (enableInvitations) {
+      // Set up an event on the timer queue to check for accepted peers.
+      // If we haven't got enough peers, invite more.
+      log.debug("Scheduling check for more peers to invite in " +
+                timeBetweenInvitations + "ms.");
+      TimerQueue.schedule(Deadline.in(timeBetweenInvitations),
+                          new InvitationCallback(), this);
+    } else {
+      log.debug("Not scheduling a followup invitation check, " +
+                "due to configuration.");
+    }
   }
 
   /**
@@ -639,6 +709,10 @@ public class V3Poller extends BasePoll {
         if (task != null && !task.isExpired()) {
           log.debug2("Cancelling task");
           task.cancel();
+        }
+        if (invitationRequest != null) {
+          log.debug2("Cancelling invitation request timer event.");
+          TimerQueue.cancel(invitationRequest);
         }
         if (voteCompleteRequest != null) {
           log.debug2("Cancelling vote completion timer event.");
@@ -1561,14 +1635,68 @@ public class V3Poller extends BasePoll {
     return pollerState;
   }
 
+  /**
+   * @return The full set of peers available for inviting into the poll. 
+   */
   Collection getReferenceList() {
-    Collection refList = idManager.getTcpPeerIdentities();
-    log.debug2("Initial reference list for poll: " + refList);
-    return refList;
+    return idManager.getTcpPeerIdentities();
   }
 
   Class getPollerActionsClass() {
     return PollerActions.class;
+  }
+  
+  /**
+   * Check to see whether enough pollers have agreed to participate
+   * with us.  If not, invite more, and schedule another check.
+   */
+  private class InvitationCallback implements TimerQueue.Callback {
+    public void timerExpired(Object cookie) {
+      // Get a list of peers who have decided to participate.
+      int participatingPeers = 0;
+      for (Iterator it = theParticipants.values().iterator(); it.hasNext(); ) {
+        ParticipantUserData peer = (ParticipantUserData)it.next();
+        if (peer.isParticipating()) {
+          participatingPeers++;
+        }
+      }
+
+      if (participatingPeers >= getQuorum()) {
+        log.debug("[InvitationCallback] Enough peers are participating for " +
+                  "quorum.  Count=" + participatingPeers);
+      } else {
+        // Invite 'quorum' new peers to participate.
+        Collection newPeers =
+          choosePeers(getReferenceList(), theParticipants.keySet(),
+                      invitationSize);
+
+        log.debug("[InvitationCallback] Inviting " + newPeers.size()
+                  + " new peers to participate.");
+
+        for (Iterator it = newPeers.iterator(); it.hasNext(); ) {
+          PeerIdentity id = (PeerIdentity)it.next();
+          ParticipantUserData participant = makeParticipant(id);
+          theParticipants.put(id, participant);
+          // Start the participant running to send in the invitation.
+          try {
+            participant.getPsmInterp().start();
+          } catch (Exception ex) {
+            log.warning("Unable to add participant " + id + " to poll "
+                        + getKey(), ex);
+          }
+        }
+
+        // Schedule another check
+        invitationRequest =
+          TimerQueue.schedule(Deadline.in(timeBetweenInvitations),
+                              new InvitationCallback(),
+                              cookie);
+      }
+    }
+
+    public String toString() {
+      return "Poll Invitation Callback [" + getKey() + "]";
+    }
   }
 
   /**
@@ -1579,6 +1707,12 @@ public class V3Poller extends BasePoll {
    */
   private class VoteTallyCallback implements TimerQueue.Callback {
     public void timerExpired(Object cookie) {
+      
+      // Ensure that the invitation timer is cancelled.
+      if ( invitationRequest != null) {
+        TimerQueue.cancel(invitationRequest);
+        invitationRequest = null;
+      }
 
       // Prune "theParticipants", and remove any who have not cast a vote.
       // Iterate over a COPY of the participants, to avoid concurrent
