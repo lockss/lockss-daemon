@@ -1,5 +1,5 @@
 /*
- * $Id: ParticipantUserData.java,v 1.11 2006-12-06 21:20:54 smorabito Exp $
+ * $Id: ParticipantUserData.java,v 1.11.2.1 2007-01-30 04:48:53 smorabito Exp $
  */
 
 /*
@@ -219,6 +219,12 @@ public class ParticipantUserData implements LockssSerializable {
     return voteBlocks;
   }
 
+  /**
+   * @return true if this peer has agreed to participate in the poll.
+   */
+  public boolean isParticipating() {
+    return (status >= V3Poller.PEER_STATUS_ACCEPTED_POLL);
+  }
   /**
    * Return the vote block iterator for this peer.
    * @return the vote block iterator for this peer.
