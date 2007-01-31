@@ -1,5 +1,5 @@
 /*
- * $Id: NodeStateImpl.java,v 1.36 2007-01-24 01:54:15 smorabito Exp $
+ * $Id: NodeStateImpl.java,v 1.37 2007-01-31 00:37:10 smorabito Exp $
  */
 
 /*
@@ -34,7 +34,7 @@ package org.lockss.state;
 
 import java.util.*;
 
-import org.lockss.app.LockssDaemon;
+import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.plugin.CachedUrlSet;
 import org.lockss.util.*;
@@ -127,6 +127,19 @@ public class NodeStateImpl
     this.completedV3Polls = new ArrayList();
     this.repository = repository;
     this.hashDuration = hashDuration;
+  }
+  
+  /**
+   * When unmarshalling this object, check for any pre-Daemon 1.22
+   * nodestate objects and initialize null fields.
+   */
+  protected void postUnmarshal(LockssApp context) {
+    if (activeV3Polls == null) {
+      activeV3Polls = new ArrayList();
+    }
+    if (completedV3Polls == null) {
+      completedV3Polls = new ArrayList();
+    }
   }
 
   public CachedUrlSet getCachedUrlSet() {
