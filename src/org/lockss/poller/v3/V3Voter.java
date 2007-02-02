@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.34 2007-01-23 21:44:35 smorabito Exp $
+ * $Id: V3Voter.java,v 1.35 2007-02-02 23:21:17 thib_gc Exp $
  */
 
 /*
@@ -137,7 +137,7 @@ public class V3Voter extends BasePoll {
   /**
    * <p>Upon receipt of a request to participate in a poll, create a new
    * V3Voter.  The voter will not start running until {@link #startPoll()}
-   * is called by {@see org.lockss.poller.v3.V3PollFactory}</p>
+   * is called by {@link org.lockss.poller.v3.V3PollFactory}</p>
    */
   public V3Voter(LockssDaemon daemon, V3LcapMessage msg)
       throws V3Serializer.PollSerializerException {
@@ -224,7 +224,7 @@ public class V3Voter extends BasePoll {
 
   /**
    * <p>Restore a V3Voter from a previously saved poll.  This method is called
-   * by {@see org.lockss.poller.PollManager} when the daemon starts up if a
+   * by {@link org.lockss.poller.PollManager} when the daemon starts up if a
    * serialized voter is found.</p>
    */
   public V3Voter(LockssDaemon daemon, File pollDir)
@@ -334,7 +334,7 @@ public class V3Voter extends BasePoll {
 
   /**
    * <p>Start the V3Voter running and participate in the poll.  Called by
-   * {@link org.lockss.poller.v3.3PollFactory} when a vote request message
+   * {@link org.lockss.poller.v3.V3PollFactory} when a vote request message
    * has been received, and by {@link org.lockss.poller.PollManager} when
    * restoring serialized voters.</p>
    */
