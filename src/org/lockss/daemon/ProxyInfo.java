@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyInfo.java,v 1.22 2007-01-21 22:07:01 tlipkis Exp $
+ * $Id: ProxyInfo.java,v 1.23 2007-02-02 02:04:48 thib_gc Exp $
  */
 
 /*
@@ -355,7 +355,7 @@ public class ProxyInfo {
 
   /**
    * <p>A version of {@link FragmentBuilder} specialized to generate
-   * an EZProxy configuration fragment.</p>
+   * an EZproxy configuration fragment.</p>
    * @author Thib Guicherd-Callin
    */
   class EZProxyFragmentBuilder extends FragmentBuilder {
