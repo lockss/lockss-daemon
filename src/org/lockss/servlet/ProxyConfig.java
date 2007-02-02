@@ -1,10 +1,10 @@
 /*
- * $Id: ProxyConfig.java,v 1.21 2006-03-24 20:23:53 thib_gc Exp $
+ * $Id: ProxyConfig.java,v 1.22 2007-02-02 23:01:01 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
