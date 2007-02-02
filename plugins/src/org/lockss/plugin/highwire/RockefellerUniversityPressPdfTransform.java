@@ -1,5 +1,5 @@
 /*
- * $Id: RockefellerUniversityPressPdfTransform.java,v 1.1 2007-01-26 21:46:29 thib_gc Exp $
+ * $Id: RockefellerUniversityPressPdfTransform.java,v 1.2 2007-02-02 22:06:53 thib_gc Exp $
  */
 
 /*
@@ -54,10 +54,10 @@ public class RockefellerUniversityPressPdfTransform extends SimpleOutputDocument
 
   public RockefellerUniversityPressPdfTransform() throws IOException{
     super(new ConditionalDocumentTransform(// If on the first page...
-                                           new TransformFirstPage(// ...collapsing "Downloaded from" and normalizing its hyperlink succeeds,
+                                           new TransformFirstPage(// ...collapsing "Downloaded from" succeeds,
                                                                   new CollapseDownloadedFrom()),
                                            // Then on all other pages...
-                                           new TransformEachPageExceptFirst(// ...collapse "Downloaded from" and normalize its hyperlink,
+                                           new TransformEachPageExceptFirst(// ...collapse "Downloaded from" ,
                                                                             new CollapseDownloadedFrom()),
                                            // ...and normalize the metadata
                                            new NormalizeMetadata()));
