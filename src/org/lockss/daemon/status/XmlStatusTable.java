@@ -1,5 +1,5 @@
 /*
- * $Id: XmlStatusTable.java,v 1.12 2007-01-24 19:18:07 thib_gc Exp $
+ * $Id: XmlStatusTable.java,v 1.13 2007-02-04 09:17:44 tlipkis Exp $
  */
 
 /*
@@ -294,9 +294,9 @@ public class XmlStatusTable {
 
   static String formatByType(Object object, int type) {
     String str = DaemonStatus.convertDisplayString(object, type);
-    if (type == ColumnDescriptor.TYPE_STRING) {
-      str = StringEscapeUtils.escapeXml(str); 
-    }
+//     if (type == ColumnDescriptor.TYPE_STRING) {
+//       str = StringEscapeUtils.escapeXml(str); 
+//     }
     return str;
   }
 
