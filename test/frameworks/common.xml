@@ -303,10 +303,10 @@
         <property name="xpath" value="[attributes/publisher='American Society for Clinical Investigation']" />
       </property>
 
-      <property name="American Society for Clinical Nutrition">
-        <property name="name" value="All American Society for Clinical Nutrition Titles" />
+      <property name="American Society for Nutrition">
+        <property name="name" value="All American Society for Nutrition Titles" />
         <property name="class" value="xpath" />
-        <property name="xpath" value="[attributes/publisher='American Society for Clinical Nutrition']" />
+        <property name="xpath" value="[attributes/publisher='American Society for Nutrition']" />
       </property>
 
       <property name="American Society for Investigative Pathology">
@@ -319,12 +319,6 @@
         <property name="name" value="All American Society for Microbiology Titles" />
         <property name="class" value="xpath" />
         <property name="xpath" value="[attributes/publisher='American Society for Microbiology']" />
-      </property>
-
-      <property name="American Society for Nutritional Sciences">
-        <property name="name" value="All American Society for Nutritional Sciences Titles" />
-        <property name="class" value="xpath" />
-        <property name="xpath" value="[attributes/publisher='American Society for Nutritional Sciences']" />
       </property>
 
       <property name="American Society for Pharmacology and Experimental Therapeutics">

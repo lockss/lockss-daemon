@@ -738,7 +738,37 @@
       <property name="attributes.publisher" value="American Society for Clinical Investigation" />
     </property>
 
-    <property name="AmericanJournalofClinicalNutrition83">
+    <property name="AmericanJournalOfClinicalNutrition81">
+      <property name="title" value="American Journal of Clinical Nutrition Volume 81" />
+      <property name="journalTitle" value="American Journal of Clinical Nutrition" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.ajcn.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="81" />
+      </property>
+      <property name="attributes.publisher" value="American Society for Nutrition" />
+    </property>
+
+    <property name="AmericanJournalOfClinicalNutrition82">
+      <property name="title" value="American Journal of Clinical Nutrition Volume 82" />
+      <property name="journalTitle" value="American Journal of Clinical Nutrition" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.ajcn.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="82" />
+      </property>
+      <property name="attributes.publisher" value="American Society for Nutrition" />
+    </property>
+
+    <property name="AmericanJournalOfClinicalNutrition83">
       <property name="title" value="American Journal of Clinical Nutrition Volume 83" />
       <property name="journalTitle" value="American Journal of Clinical Nutrition" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
@@ -750,7 +780,22 @@
 	<property name="key" value="volume_name" />
 	<property name="value" value="83" />
       </property>
-      <property name="attributes.publisher" value="American Society for Clinical Nutrition" />
+      <property name="attributes.publisher" value="American Society for Nutrition" />
+    </property>
+
+    <property name="AmericanJournalOfClinicalNutrition84">
+      <property name="title" value="American Journal of Clinical Nutrition Volume 84" />
+      <property name="journalTitle" value="American Journal of Clinical Nutrition" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.ajcn.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="84" />
+      </property>
+      <property name="attributes.publisher" value="American Society for Nutrition" />
     </property>
 
     <property name="AmericanJournalOfPathology168">
@@ -951,7 +996,22 @@
       <property name="attributes.publisher" value="American Society for Microbiology" />
     </property>
 
-    <property name="JournalofNutrition136">
+    <property name="JournalOfNutrition135">
+      <property name="title" value="Journal of Nutrition Volume 135" />
+      <property name="journalTitle" value="Journal of Nutrition" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://jn.nutrition.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="135" />
+      </property>
+      <property name="attributes.publisher" value="American Society for Nutrition" />
+    </property>
+
+    <property name="JournalOfNutrition136">
       <property name="title" value="Journal of Nutrition Volume 136" />
       <property name="journalTitle" value="Journal of Nutrition" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
@@ -963,7 +1023,7 @@
 	<property name="key" value="volume_name" />
 	<property name="value" value="136" />
       </property>
-      <property name="attributes.publisher" value="American Society for Nutritional Sciences" />
+      <property name="attributes.publisher" value="American Society for Nutrition" />
     </property>
 
     <property name="DrugMetabolismandDisposition34">
