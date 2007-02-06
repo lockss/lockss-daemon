@@ -1,5 +1,5 @@
 /*
- * $Id: TestHeaderUtil.java,v 1.1 2005-01-29 19:58:45 troberts Exp $
+ * $Id: TestHeaderUtil.java,v 1.2 2007-02-06 00:55:38 tlipkis Exp $
  */
 
 /*
@@ -35,28 +35,33 @@ import org.lockss.test.*;
 
 public class TestHeaderUtil extends LockssTestCase {
 
-  public void testGetMimeTypeFromContentTypeNull() {
+  public void testGetMimeTypeFromContentType() {
     assertNull(HeaderUtil.getMimeTypeFromContentType(null));
-  }
-
-  public void testGetMimeTypeFromContentTypeMimeOnly() {
     assertEquals("text/html",
 		 HeaderUtil.getMimeTypeFromContentType("text/html"));
-  }
-
-  public void testGetMimeTypeFromContentTypeMimeOnlySpace() {
     assertEquals("text/html",
-		 HeaderUtil.getMimeTypeFromContentType(" text/html "));
-  }
-
-  public void testGetMimeTypeFromContentType() {
+		 HeaderUtil.getMimeTypeFromContentType(" Text/Html "));
     assertEquals("text/html",
-		 HeaderUtil.getMimeTypeFromContentType("text/html ; fake content type"));
-  }
-
-  public void testGetMimeTypeFromContentTypeSpace() {
+		 HeaderUtil.getMimeTypeFromContentType("TEXT/HTML ; charset=foo"));
     assertEquals("text/html",
-		 HeaderUtil.getMimeTypeFromContentType(" text/html ; fake content type"));
+		 HeaderUtil.getMimeTypeFromContentType(" text/html ; charset=foo"));
+    assertEquals("application/binary",
+		 HeaderUtil.getMimeTypeFromContentType("Application/Binary; charset=foo"));
+    assertSame(HeaderUtil.getMimeTypeFromContentType(" Text/Html "),
+	       HeaderUtil.getMimeTypeFromContentType(" Text/Html "));
   }
 
+  public void testGetCharsetFromContentType() {
+    assertNull(HeaderUtil.getCharsetFromContentType(null));
+    assertNull(HeaderUtil.getCharsetFromContentType("text/html"));
+    assertNull(HeaderUtil.getCharsetFromContentType("text/html;"));
+    assertNull(HeaderUtil.getCharsetFromContentType("text/html;foobar"));
+    assertNull(HeaderUtil.getCharsetFromContentType("text/html;charset"));
+    assertEquals("utf-8",
+		 HeaderUtil.getCharsetFromContentType("text/html;charset=UTF-8"));
+    assertEquals("iso8859-1",
+		 HeaderUtil.getCharsetFromContentType("text/html;charset=\"iso8859-1\""));
+    assertSame(HeaderUtil.getCharsetFromContentType("text/html;charset=\"iso8859-1\""),
+	       HeaderUtil.getCharsetFromContentType("text/html;charset=\"iso8859-1\""));
+  }
 }

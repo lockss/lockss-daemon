@@ -1,5 +1,5 @@
 /*
- * $Id: HeaderUtil.java,v 1.2 2005-10-11 05:48:30 tlipkis Exp $
+ * $Id: HeaderUtil.java,v 1.3 2007-02-06 00:55:38 tlipkis Exp $
  */
 
 /*
@@ -31,19 +31,73 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.util;
 
+import org.apache.commons.collections.map.LRUMap;
+import org.mortbay.util.*;
+
+
+/** Static utilities for dealing with HTTP headers */
 public class HeaderUtil {
 
-  public static String getMimeTypeFromContentType(String contentType) {
+  static LRUMap charsetMap = new LRUMap(100);
+  static LRUMap mimeTypeMap = new LRUMap(100);
+
+
+  static String extractMimeTypeFromContentType(String contentType) {
     if (contentType == null) {
       return null;
     }
-
     int idx = contentType.indexOf(";");
     if (idx < 0) {
       return contentType.trim();
     }
     return contentType.substring(0, idx).trim();
+  }
 
+  /** Extract the MIME type, if any, from a Content-Type header. The result
+   * is cached. */
+  public static String getMimeTypeFromContentType(String contentType) {
+    String mime = (String)mimeTypeMap.get(contentType);
+    if (mime == null) {
+      mime = extractMimeTypeFromContentType(contentType);
+      if (mime != null) {
+	mime = mime.toLowerCase();
+      }
+      mimeTypeMap.put(contentType, mime);
+    }
+    return mime;
+  }
+
+  public static String extractCharsetFromContentType(String contentType) {
+    if (contentType == null) {
+      return null;
+    }
+    int idx = contentType.indexOf(";");
+    if (idx > 0) {
+      int i1=contentType.indexOf("charset=",idx);
+      if (i1>=0) {
+	i1+=8;
+	int i2 = contentType.indexOf(' ',i1);
+	String charset =
+	  i2 > 0 ? contentType.substring(i1, i2) : contentType.substring(i1);
+	return QuotedStringTokenizer.unquote(charset);
+      }
+    }
+    return null;
+  }
+
+  /** Extract the charset, if any, from a Content-Type header,
+   * e.g.<code>text/html;charset=utf-8</code> ,
+   * <code>text/html;charset="utf-8"</code> .  The result is cached. */
+  public static String getCharsetFromContentType(String contentType) {
+    String charset = (String)charsetMap.get(contentType);
+    if (charset == null) {
+      charset = extractCharsetFromContentType(contentType);
+      if (charset != null) {
+	charset = charset.toLowerCase();
+      }
+      charsetMap.put(contentType, charset);
+    }
+    return charset;
   }
 
 }
