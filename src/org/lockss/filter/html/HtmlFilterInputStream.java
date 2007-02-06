@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlFilterInputStream.java,v 1.3 2007-01-14 08:10:43 tlipkis Exp $
+ * $Id: HtmlFilterInputStream.java,v 1.4 2007-02-06 00:53:07 tlipkis Exp $
  */
 
 /*
@@ -89,6 +89,7 @@ public class HtmlFilterInputStream extends InputStream {
   private FeedbackLogger fl = new FeedbackLogger();
 
   private InputStream in;
+  private String charset;
   private InputStream out = null;
   private HtmlTransform xform;
 
@@ -98,10 +99,16 @@ public class HtmlFilterInputStream extends InputStream {
    * @param xform HtmlTransform to apply to parsed NodeList
    */
   public HtmlFilterInputStream(InputStream in, HtmlTransform xform) {
+    this(in, null, xform);
+  }
+
+  public HtmlFilterInputStream(InputStream in, String charset,
+			       HtmlTransform xform) {
     if (in == null || xform == null) {
       throw new IllegalArgumentException("Called with a null argument");
     }
     this.in = in;
+    this.charset = charset;
     this.xform = xform;
   }
 
@@ -138,7 +145,7 @@ public class HtmlFilterInputStream extends InputStream {
     if (mark > 0) {
       in.mark(mark);
     }
-    Page pg = new Page(new InputStreamSource(in));
+    Page pg = new Page(new InputStreamSource(in, charset));
     Lexer lx = new Lexer(pg);
     Parser parser = new Parser(lx, fl);
 
