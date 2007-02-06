@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlackbirdPlugin.java,v 1.3 2007-01-14 08:06:16 tlipkis Exp $
+ * $Id: TestBlackbirdPlugin.java,v 1.4 2007-02-06 00:45:14 tlipkis Exp $
  */
 
 /*
@@ -33,10 +33,11 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.blackbird;
 
 import java.net.*;
-import java.util.Properties;
+import java.util.*;
 import org.lockss.test.*;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
+import org.lockss.extractor.*;
 import org.lockss.util.ListUtil;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.definable.*;
@@ -103,5 +104,20 @@ public class TestBlackbirdPlugin extends LockssTestCase {
     assertEquals(ListUtil.list(ConfigParamDescr.BASE_URL,
 			       ConfigParamDescr.VOLUME_NUMBER),
 		 plugin.getLocalAuConfigDescrs());
+  }
+
+  public void testRam() throws Exception {
+    LinkExtractor ext = plugin.getLinkExtractor("audio/x-pn-realaudio");
+    assertTrue(""+ext, ext instanceof RamLinkExtractor);
+    String ram = "rtsp://video.vcu.edu/blackbird/v0n0/foo/bar.rm\n" +
+      "--stop--\n" +
+      "pnm://video.vcu.edu/blackbird/v0n0/foo/bar.rm$";
+    final List urls = new ArrayList();
+    ext.extractUrls(null, new StringInputStream(ram), null, null,
+		    new LinkExtractor.Callback() {
+		      public void foundUrl(String url) {
+			urls.add(url);
+		      }});
+    assertEquals(ListUtil.list("http://www.blackbird.vcu.edu/lockss_media/v0n0/foo/bar.rm"), urls);
   }
 }
