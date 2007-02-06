@@ -1,5 +1,5 @@
 /*
- * $Id: LockssResourceHandler.java,v 1.15 2005-12-01 23:28:04 troberts Exp $
+ * $Id: LockssResourceHandler.java,v 1.16 2007-02-06 00:48:24 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Portions of this code are:
 // ===========================================================================
 // Copyright (c) 1996-2002 Mort Bay Consulting Pty. Ltd. All rights reserved.
-// $Id: LockssResourceHandler.java,v 1.15 2005-12-01 23:28:04 troberts Exp $
+// $Id: LockssResourceHandler.java,v 1.16 2007-02-06 00:48:24 tlipkis Exp $
 // ---------------------------------------------------------------------------
 
 package org.lockss.jetty;
@@ -53,6 +53,7 @@ import org.lockss.app.LockssDaemon;
 import org.lockss.config.CurrentConfig;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.proxy.ProxyManager;
+import org.lockss.util.*;
 
 /** Extension of ResourceHandler that allows flexibility in finding the
  * Resource.  Mostly copied here because some things in ResourceHandler
@@ -745,7 +746,7 @@ public class LockssResourceHandler extends AbstractHttpHandler {
                                                           ProxyManager.DEFAULT_REWRITE_GIF_PNG);
 	    if (!proxyMgr.isRepairRequest(request) &&
 		enableRewrite &&
-		"image/gif".equals(response.getContentType()) &&
+		"image/gif".equals(HeaderUtil.getMimeTypeFromContentType(response.getContentType())) &&
 		"from-cache".equals(response.getField("X-Lockss"))) {
 	      try {
 		JimiRasterImage img =

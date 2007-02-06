@@ -1,5 +1,5 @@
 /*
- * $Id: PTestPlugin.java,v 1.22 2006-05-27 06:36:04 tlipkis Exp $
+ * $Id: PTestPlugin.java,v 1.23 2007-02-06 00:48:24 tlipkis Exp $
  */
 
 /*
@@ -117,6 +117,10 @@ public class PTestPlugin {
 
     public long getContentSize() {
       return contents.length();
+    }
+
+    public String getContentType(){
+      return props.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE);
     }
 
     public CIProperties getProperties() {

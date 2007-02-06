@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawler.java,v 1.21 2006-11-14 19:21:29 tlipkis Exp $
+ * $Id: BaseCrawler.java,v 1.22 2007-02-06 00:48:24 tlipkis Exp $
  */
 
 /*
@@ -316,13 +316,10 @@ public abstract class BaseCrawler
    * found with different types of mime-types 
    */
   private void updateStatusMimeType(CachedUrl cu) {
-    CIProperties props = cu.getProperties();  
-    if (props != null) {
-      String conType = props.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE);
-      if (conType != null) {      
-	String mimeType = HeaderUtil.getMimeTypeFromContentType(conType);
-        crawlStatus.signalMimeTypeOfUrl(mimeType, cu.getUrl()); 
-      }
+    String conType = cu.getContentType();  
+    if (conType != null) {      
+      String mimeType = HeaderUtil.getMimeTypeFromContentType(conType);
+      crawlStatus.signalMimeTypeOfUrl(mimeType, cu.getUrl()); 
     }
     return;
   }

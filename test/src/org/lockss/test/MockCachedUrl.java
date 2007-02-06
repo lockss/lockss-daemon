@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrl.java,v 1.35 2006-09-23 19:23:56 tlipkis Exp $
+ * $Id: MockCachedUrl.java,v 1.36 2007-02-06 00:48:24 tlipkis Exp $
  */
 
 /*
@@ -207,6 +207,11 @@ public class MockCachedUrl implements CachedUrl {
 
   public CIProperties getProperties(){
     return cachedProp;
+  }
+
+  public String getContentType(){
+    if (cachedProp == null) return null;
+    return cachedProp.getProperty(PROPERTY_CONTENT_TYPE);
   }
 
     // Write interface - used by the crawler.
