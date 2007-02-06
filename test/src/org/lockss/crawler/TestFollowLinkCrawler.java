@@ -1,5 +1,5 @@
 /*
- * $Id: TestFollowLinkCrawler.java,v 1.22 2006-11-14 19:21:28 tlipkis Exp $
+ * $Id: TestFollowLinkCrawler.java,v 1.23 2007-02-06 00:51:04 tlipkis Exp $
  */
 
 /*
@@ -51,9 +51,9 @@ public class TestFollowLinkCrawler extends LockssTestCase {
   private static List testUrlList = ListUtil.list("http://example.com");
   private MockCrawlRule crawlRule = null;
   private String startUrl = "http://www.example.com/index.html";
-  private List startUrls = ListUtil.list(startUrl);
+  private List startUrls;
   private TestableFollowLinkCrawler crawler = null;
-  private MockContentParser parser = new MockContentParser();
+  private MockLinkExtractor extractor = new MockLinkExtractor();
 
   private static final String PARAM_RETRY_TIMES =
     Configuration.PREFIX + "BaseCrawler.numCacheRetries";
@@ -65,8 +65,10 @@ public class TestFollowLinkCrawler extends LockssTestCase {
 
     getMockLockssDaemon().getAlertManager();
 
+    MockPlugin plug = new MockPlugin(getMockLockssDaemon());
+    plug.initPlugin(getMockLockssDaemon());
     mau = new MyMockArchivalUnit();
-    mau.setPlugin(new MockPlugin(getMockLockssDaemon()));
+    mau.setPlugin(plug);
     mau.setAuId("MyMockTestAu");
     startUrls = ListUtil.list(startUrl);
     mcus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
@@ -79,7 +81,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
       ListUtil.list(new MyMockPermissionChecker(1));
 
     mau.setCrawlSpec(spec);
-    mau.setParser(parser);
+    mau.setLinkExtractor("text/html", extractor);
     Properties p = new Properties();
     p.setProperty(FollowLinkCrawler.PARAM_RETRY_PAUSE, "0");
     ConfigurationUtil.setCurrentConfigFromProps(p);
@@ -149,7 +151,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     assertTrue(crawler.doCrawl0());
    }
 
-  //Fetch startUrl, parser will return a single url that already exists
+  //Fetch startUrl, extractor will return a single url that already exists
   //we should only cache startUrl
   public void testDoesNotCacheExistingFile() {
     String url1="http://www.example.com/blah.html";
@@ -174,6 +176,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     mau.addUrl(startUrl, false, true);
     CIProperties props = new CIProperties();
+    props.put(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html");
     props.put(CachedUrl.PROPERTY_CONTENT_URL,
 	      "http://www.example.com/extra_level/");
     mau.addUrl(url1, false, true, props);
@@ -182,7 +185,85 @@ public class TestFollowLinkCrawler extends LockssTestCase {
 
     Set expected = SetUtil.set(startUrl);
     Set expectedSrcUrls = SetUtil.set("http://www.example.com/extra_level/");
-    assertEquals(expectedSrcUrls, parser.getSrcUrls());
+    assertEquals(expectedSrcUrls, extractor.getSrcUrls());
+  }
+
+  CIProperties fromArgs(String prop, String val) {
+    CIProperties props = new CIProperties();
+    props.put(prop, val);
+    return props;
+  }
+
+  public void testParseCharsetOff() {
+    ConfigurationUtil.addFromArgs(FollowLinkCrawler.PARAM_PARSE_USE_CHARSET,
+				  "false");
+    MockLinkExtractor ext2 = new MockLinkExtractor();
+    mau.setLinkExtractor("audio/inaudible", ext2);
+    String url1="http://www.example.com/one.html";
+    String url2="http://www.example.com/two.html";
+    String url3="http://www.example.com/three.html";
+
+    Set urls = SetUtil.set(url1, url2, url3);
+    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(urls);
+
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    mau.addUrl(startUrl, false, true);
+    mau.addUrl(url1, false, true, fromArgs(CachedUrl.PROPERTY_CONTENT_TYPE,
+					   "text/html"));
+    mau.addUrl(url2, false, true, fromArgs(CachedUrl.PROPERTY_CONTENT_TYPE,
+					   "text/html;charset=utf-8"));
+    mau.addUrl(url3, false, true, fromArgs(CachedUrl.PROPERTY_CONTENT_TYPE,
+					   "audio/inaudible"));
+
+    assertTrue(crawler.doCrawl());
+
+    Set exp =
+      SetUtil.set(ListUtil.list(mau, null, Constants.DEFAULT_ENCODING,
+				"http://www.example.com/one.html"),
+		  ListUtil.list(mau, null, Constants.DEFAULT_ENCODING,
+				"http://www.example.com/two.html"));
+    assertSameElements(exp, extractor.getArgs());
+
+     exp =
+      SetUtil.set(ListUtil.list(mau, null, Constants.DEFAULT_ENCODING,
+				"http://www.example.com/three.html"));
+    assertSameElements(exp, ext2.getArgs());
+  }
+
+  public void testParseCharsetOn() {
+    ConfigurationUtil.addFromArgs(FollowLinkCrawler.PARAM_PARSE_USE_CHARSET,
+				  "true");
+    MockLinkExtractor ext2 = new MockLinkExtractor();
+    mau.setLinkExtractor("audio/inaudible", ext2);
+    String url1="http://www.example.com/one.html";
+    String url2="http://www.example.com/two.html";
+    String url3="http://www.example.com/three.html";
+
+    Set urls = SetUtil.set(url1, url2, url3);
+    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(urls);
+
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    mau.addUrl(startUrl, false, true);
+    mau.addUrl(url1, false, true, fromArgs(CachedUrl.PROPERTY_CONTENT_TYPE,
+					   "text/html"));
+    mau.addUrl(url2, false, true, fromArgs(CachedUrl.PROPERTY_CONTENT_TYPE,
+					   "text/html;charset=utf-8"));
+    mau.addUrl(url3, false, true, fromArgs(CachedUrl.PROPERTY_CONTENT_TYPE,
+					   "audio/inaudible"));
+
+    assertTrue(crawler.doCrawl());
+
+    Set exp =
+      SetUtil.set(ListUtil.list(mau, null, Constants.DEFAULT_ENCODING,
+				"http://www.example.com/one.html"),
+		  ListUtil.list(mau, null, "utf-8",
+				"http://www.example.com/two.html"));
+    assertSameElements(exp, extractor.getArgs());
+
+     exp =
+      SetUtil.set(ListUtil.list(mau, null, Constants.DEFAULT_ENCODING,
+				"http://www.example.com/three.html"));
+    assertSameElements(exp, ext2.getArgs());
   }
 
   public void testReturnsFalseWhenFailingUnretryableExceptionThrown() {
@@ -271,7 +352,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     mau.addUrl(startUrl, false, true);
     ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(SetUtil.set(url1));
 
-    // parser.addUrlsToReturn(startUrl, SetUtil.set(url1));
+    // extractor.addUrlsToReturn(startUrl, SetUtil.set(url1));
     MyMockUnretryableCacheException exception =
       new MyMockUnretryableCacheException("Test exception");
     mau.addUrl(url1, exception, DEFAULT_RETRY_TIMES-1);
@@ -322,11 +403,11 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     mau.addUrl(url2,
 	       new CacheException.UnretryableException("Test exception"),
 	       retryNum);
-    parser.addUrlsToReturn(url2, SetUtil.set(url1));
+    extractor.addUrlsToReturn(url2, SetUtil.set(url1));
     mau.addUrl(url3,
 	       new CacheException.RetryableException("Test exception"),
 	       retryNum);
-    parser.addUrlsToReturn(url3, SetUtil.set(url1));
+    extractor.addUrlsToReturn(url3, SetUtil.set(url1));
     mau.addUrl(url1, new ExpectedIOException("Test exception"), retryNum);
 
     crawlRule.addUrlToCrawl(url1);
@@ -382,7 +463,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     String url2 = "http://www.example.com/link4.html";
     startUrls = ListUtil.list(startUrl);
     ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(SetUtil.set(url1));
-    parser.addUrlsToReturn(url1, SetUtil.set(url2));
+    extractor.addUrlsToReturn(url1, SetUtil.set(url2));
 
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     mau.addUrl(startUrl, true, true);
@@ -403,7 +484,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     String url2 = "http://www.example.com/link4.html";
     startUrls = ListUtil.list(startUrl);
     ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(SetUtil.set(url1));
-    parser.addUrlsToReturn(url1, SetUtil.set(url2));
+    extractor.addUrlsToReturn(url1, SetUtil.set(url2));
 
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     mau.addUrl(startUrl, true, true);
@@ -536,7 +617,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     String url3= "http://www.example.com/link3.html";
 
     ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(SetUtil.set(url1));
-    parser.addUrlsToReturn(url1, SetUtil.set(url1, url2, url3));
+    extractor.addUrlsToReturn(url1, SetUtil.set(url1, url2, url3));
     assertEquals(SetUtil.set(startUrl, url1, url3),
 		 crawlUrls(SetUtil.set(url1, url2, url3)));
   }
@@ -551,7 +632,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     String url3= "gopher://www.example.com/link3.html";
 
     ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(SetUtil.set(url1));
-    parser.addUrlsToReturn(url1, SetUtil.set(url1, url2, url3));
+    extractor.addUrlsToReturn(url1, SetUtil.set(url1, url2, url3));
     assertEquals(SetUtil.set(startUrl, url1),
 		 crawlUrls(SetUtil.set(url1, url2, url3)));
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
@@ -563,7 +644,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     String url3= "http://www.example.com/link3.html";
 
     ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(SetUtil.set(url1));
-    parser.addUrlsToReturn(url1, SetUtil.set(url1, url2, url3));
+    extractor.addUrlsToReturn(url1, SetUtil.set(url1, url2, url3));
     assertEquals(SetUtil.set(startUrl, url1, url2, url3),
 		 crawlUrls(SetUtil.set(url1, url2, url3)));
   }
@@ -575,7 +656,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
 
     ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(
         SetUtil.set(url1, url2, url3, startUrl));
-    parser.addUrlsToReturn(url1, SetUtil.set(startUrl));
+    extractor.addUrlsToReturn(url1, SetUtil.set(startUrl));
     assertEquals(SetUtil.set(startUrl, url1, url2, url3),
 		 crawlUrls(SetUtil.set(url1, url2, url3)));
   }
@@ -642,7 +723,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     aus.assertUpdatedCrawlListCalled(0); //not called for startUrl
   }
 
-  public void testMyFoundUrlCallback() {
+  public void testMyLinkExtractorCallback() {
     final String prefix = "http://www.example.com/"; // pseudo crawl rule
     MockArchivalUnit mau = new MockArchivalUnit() {
 	// shouldBeCached() is true of anything starting with prefix
@@ -655,7 +736,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
 	}
       };
     Set extractedUrls = new HashSet();
-    TestableFollowLinkCrawler.MyFoundUrlCallback mfuc =
+    TestableFollowLinkCrawler.MyLinkExtractorCallback mfuc =
       crawler.newFoundUrlCallback(Collections.EMPTY_SET,
 					       extractedUrls, mau);
     mfuc.foundUrl("http://www.example.com/foo.bar");
@@ -726,8 +807,8 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     ((BaseCrawler)crawler).daemonPermissionCheckers = ListUtil.list(
         new MyMockPermissionChecker(passPermissionCheck));
 
-    //set parser
-    mmau.setParser(parser);
+    //set extractor
+    mmau.setLinkExtractor("text/html", extractor);
 
     return mcus;
   }
@@ -1017,10 +1098,10 @@ public class TestFollowLinkCrawler extends LockssTestCase {
 		    null);
     }
 
-    MyFoundUrlCallback newFoundUrlCallback(Set parsedPages,
-					   Collection extractedUrls,
-					   ArchivalUnit au) {
-      return new MyFoundUrlCallback(parsedPages, extractedUrls, au);
+    MyLinkExtractorCallback newFoundUrlCallback(Set parsedPages,
+						Collection extractedUrls,
+						ArchivalUnit au) {
+      return new MyLinkExtractorCallback(parsedPages, extractedUrls, au);
     }
 
     protected boolean shouldFollowLink(){

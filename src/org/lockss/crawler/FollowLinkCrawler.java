@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.55 2007-01-28 05:45:07 tlipkis Exp $
+ * $Id: FollowLinkCrawler.java,v 1.56 2007-02-06 00:51:04 tlipkis Exp $
  */
 
 /*
@@ -42,6 +42,7 @@ import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.state.*;
+import org.lockss.extractor.*;
 
 /**
  * A abstract class that implemented by NewContentCrawler and OaiCrawler
@@ -73,6 +74,10 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
     Configuration.PREFIX + "BaseCrawler.reparse_all";
   public static final boolean DEFAULT_REPARSE_ALL = true;
 
+  public static final String PARAM_PARSE_USE_CHARSET =
+    Configuration.PREFIX + "BaseCrawler.parse_use_charset";
+  public static final boolean DEFAULT_PARSE_USE_CHARSET = false;
+
   public static final String PARAM_PERSIST_CRAWL_LIST =
     Configuration.PREFIX + "BaseCrawler.persist_crawl_list";
   public static final boolean DEFAULT_PERSIST_CRAWL_LIST = false;
@@ -99,6 +104,8 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 
   private boolean alwaysReparse = DEFAULT_REPARSE_ALL;
   private boolean usePersistantList = DEFAULT_PERSIST_CRAWL_LIST;
+  private boolean parseUseCharset = DEFAULT_PARSE_USE_CHARSET;
+
   protected int maxDepth = DEFAULT_MAX_CRAWL_DEPTH;
   private int maxRetries = DEFAULT_RETRY_TIMES;
   protected int lvlCnt = 0;
@@ -149,6 +156,9 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
  			  DEFAULT_REFETCH_IF_DAMAGED)) {
       fetchFlags.set(UrlCacher.REFETCH_IF_DAMAGE_FLAG);
     }
+    parseUseCharset = config.getBoolean(PARAM_PARSE_USE_CHARSET,
+				   DEFAULT_PARSE_USE_CHARSET);
+
   }
 
   protected boolean doCrawl0() {
@@ -379,15 +389,16 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	  //XXX quick fix; if-statement should be removed when we rework
 	  //handling of error condition
 	  if (cu.hasContent()) {
-	    ContentParser parser = getContentParser(cu);
-	    if (parser != null) {
+	    LinkExtractor extractor = getLinkExtractor(cu);
+	    if (extractor != null) {
 	      //IOException if the CU can't be read
 	      try {
-		parser.parseForUrls(cu.openForReading(),
-				    PluginUtil.getBaseUrl(cu),
-				    au, new MyFoundUrlCallback(parsedPages,
-							       extractedUrls,
-							       au));
+		extractor.extractUrls(au, cu.getUnfilteredInputStream(),
+				      getCharset(cu),
+				      PluginUtil.getBaseUrl(cu),
+				      new MyLinkExtractorCallback(parsedPages,
+								  extractedUrls,
+								  au));
 		if (extractedUrls.remove(url)){
 		  crawlStatus.removePendingUrl(url);
 		  logger.debug3("Removing self reference in " + url +
@@ -395,9 +406,9 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 		}
 		crawlStatus.signalUrlParsed(uc.getUrl());
 	      } catch (PluginException e) {
-		logger.error("Plugin content parser error", e);
+		logger.error("Plugin LinkExtractor error", e);
 		crawlStatus.signalErrorForUrl(uc.getUrl(),
-					      "Plugin content parser error: " +
+					      "Plugin LinkExtractor error: " +
 					      e.getMessage());
 		error = Crawler.STATUS_PLUGIN_ERROR;
 	      }		
@@ -415,6 +426,17 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
     }
     logger.debug3("Removing from parsing list: "+uc.getUrl());
     return (error == null);
+  }
+
+  private String getCharset(CachedUrl cu) {
+    String res = null;
+    if (parseUseCharset) {
+      res = HeaderUtil.getCharsetFromContentType(cu.getContentType());
+    }
+    if (res == null) {
+      res = Constants.DEFAULT_ENCODING;
+    }
+    return res;
   }
 
   private void cacheWithRetries(UrlCacher uc, int maxTries)
@@ -462,24 +484,18 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
     }
   }
 
-  private ContentParser getContentParser(CachedUrl cu) {
-    CIProperties props = cu.getProperties();
+  private LinkExtractor getLinkExtractor(CachedUrl cu) {
     ArchivalUnit au = cu.getArchivalUnit();
-    if (props != null) {
-      String contentType = props.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE);
-      return au.getContentParser(contentType);
-    }
-    return null;
+    return au.getLinkExtractor(cu.getContentType());
   }
 
-  class MyFoundUrlCallback
-    implements ContentParser.FoundUrlCallback {
+  class MyLinkExtractorCallback implements LinkExtractor.Callback {
     Set parsedPages;
     Collection extractedUrls;
     ArchivalUnit au;
 
-    public MyFoundUrlCallback(Set parsedPages, Collection extractedUrls,
-			      ArchivalUnit au) {
+    public MyLinkExtractorCallback(Set parsedPages, Collection extractedUrls,
+				   ArchivalUnit au) {
       this.parsedPages = parsedPages;
       this.extractedUrls = extractedUrls;
       this.au = au;
