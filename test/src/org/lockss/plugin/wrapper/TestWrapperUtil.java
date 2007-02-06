@@ -1,5 +1,5 @@
 /*
- * $Id: TestWrapperUtil.java,v 1.1 2006-12-09 07:09:00 tlipkis Exp $
+ * $Id: TestWrapperUtil.java,v 1.2 2007-02-06 01:03:07 tlipkis Exp $
  */
 
 /*
@@ -96,7 +96,7 @@ public class TestWrapperUtil extends LockssTestCase {
     assertRegistered(org.lockss.plugin.FilterFactory.class);
     assertRegistered(org.lockss.plugin.FilterRule.class);
     assertRegistered(org.lockss.plugin.UrlNormalizer.class);
-    assertRegistered(org.lockss.crawler.ContentParser.class);
+    assertRegistered(org.lockss.extractor.LinkExtractor.class);
     assertRegistered(LoginPageChecker.class);
     assertRegistered(PermissionCheckerFactory.class);
     assertRegistered(org.lockss.plugin.definable.DefinableArchivalUnit.ConfigurableCrawlWindow.class);

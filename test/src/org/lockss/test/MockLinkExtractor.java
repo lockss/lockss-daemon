@@ -1,10 +1,10 @@
 /*
- * $Id: ContentParserWrapper.java,v 1.1 2006-12-09 07:09:00 tlipkis Exp $
+ * $Id: MockLinkExtractor.java,v 1.1 2007-02-06 01:03:06 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -30,39 +30,56 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.wrapper;
+package org.lockss.test;
+import java.util.*;
 import java.io.*;
-import org.lockss.daemon.*;
+import org.lockss.util.*;
 import org.lockss.plugin.*;
-import org.lockss.crawler.*;
+import org.lockss.extractor.*;
 
-/** Error catching wrapper for ContentParser */
-public class ContentParserWrapper
-  implements ContentParser, PluginCodeWrapper {
+public class MockLinkExtractor implements LinkExtractor {
 
-  ContentParser inst;
+  private String urlToReturn = null;
+  private HashMap urlCollections = new HashMap();
 
-  public ContentParserWrapper(ContentParser inst) {
-    this.inst = inst;
+  private Set srcUrls = new HashSet();
+  private List args = new ArrayList();
+
+  public MockLinkExtractor() {
   }
 
-  public Object getWrappedObj() {
-    return inst;
-  }
-
-  public void parseForUrls(Reader reader, String srcUrl,
-			   ArchivalUnit au, ContentParser.FoundUrlCallback cb)
-      throws IOException, PluginException {
-    try {
-      inst.parseForUrls(reader, srcUrl, au, cb);
-    } catch (LinkageError e) {
-      throw new PluginException.LinkageError(e);
+  public void extractUrls(ArchivalUnit au, InputStream in, String encoding,
+			  String srcUrl, LinkExtractor.Callback cb) {
+    srcUrls.add(srcUrl);
+    args.add(ListUtil.list(au, in, encoding, srcUrl));
+    if (urlToReturn != null) {
+      cb.foundUrl(urlToReturn);
+    } else if (urlCollections != null) {
+      Collection collToAdd = (Collection)urlCollections.get(srcUrl);
+      if (collToAdd != null) {
+	Iterator it = collToAdd.iterator();
+	while(it.hasNext()) {
+	  cb.foundUrl((String)it.next());
+	}
+      }
     }
+
   }
 
-  static class Factory implements WrapperFactory {
-    public Object wrap(Object obj) {
-      return new ContentParserWrapper((ContentParser)obj);
-    }
+  public Set getSrcUrls() {
+    return srcUrls;
   }
+
+  public List getArgs() {
+    return args;
+  }
+
+  public void setUrlToReturn(String url) {
+    this.urlToReturn = url;
+  }
+
+  public void addUrlsToReturn(String url, Collection urls) {
+    urlCollections.put(url, urls);
+  }
+
 }

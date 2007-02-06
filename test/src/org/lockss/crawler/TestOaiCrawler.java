@@ -1,5 +1,5 @@
 /*
- * $Id: TestOaiCrawler.java,v 1.16 2006-11-14 19:21:28 tlipkis Exp $
+ * $Id: TestOaiCrawler.java,v 1.17 2007-02-06 01:03:07 tlipkis Exp $
  */
 
 /*
@@ -31,7 +31,7 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.crawler;
-import java.io.Reader;
+import java.io.*;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
@@ -217,9 +217,9 @@ public class TestOaiCrawler extends LockssTestCase {
     crawler.daemonPermissionCheckers =
       ListUtil.list(new MyMockPermissionChecker(1));
 
-    MockContentParser parser = new MockContentParser();
-    mau.setParser(parser);
-    parser.addUrlsToReturn(permissionUrl, ListUtil.list(url1));   
+    MockLinkExtractor extractor = new MockLinkExtractor();
+    mau.setLinkExtractor("text/html", extractor);
+    extractor.addUrlsToReturn(permissionUrl, ListUtil.list(url1));   
 
     //do the crawl
     assertTrue(crawler.doCrawl());
@@ -295,9 +295,10 @@ public class TestOaiCrawler extends LockssTestCase {
     mau.addUrl(url2, true, true);
     mau.addUrl(url3, true, true);
     mau.addUrl(url4, true, true);   
-    MockContentParser parser = new MockContentParser();
-    mau.setParser(parser);
-    parser.addUrlsToReturn(urloai, ListUtil.list(url1, url2, url3, url4));   
+    MockLinkExtractor extractor = new MockLinkExtractor();
+    mau.setLinkExtractor("text/html", extractor);
+    extractor.addUrlsToReturn(urloai,
+				 ListUtil.list(url1, url2, url3, url4));   
     crawlRule.addUrlToCrawl(url1);
     crawlRule.addUrlToCrawl(url2);   
     crawlRule.addUrlToCrawl(url4);

@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.28 2006-12-09 07:09:00 tlipkis Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.29 2007-02-06 01:03:07 tlipkis Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.daemon.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.crawler.*;
+import org.lockss.extractor.*;
 
 /**
  * TestConfigurableArchivalUnit: test case for the ConfigurableArchivalUnit
@@ -295,36 +296,28 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertEquals("return valuse", expectedReturn, actualReturn);
   }
 
-  public void testGetContentParser() {
+  public void testGetLinkExtractor() {
     // test we find the default
-    ContentParser parser;
-    parser = cau.getContentParser("text/html");
-    assertTrue(parser instanceof GoslingHtmlParser);
+    LinkExtractor extractor;
+    extractor = cau.getLinkExtractor("text/html");
+    assertTrue(extractor instanceof GoslingHtmlLinkExtractor);
 
     // test we don't find one that doesn't exist
-    parser = cau.getContentParser("text/ram");
-    assertNull(parser);
+    extractor = cau.getLinkExtractor("text/ram");
+    assertNull(extractor);
 
     // test we find one we've added
-    defMap.putString("text/ram_parser",
-		     "org.lockss.test.MockContentParser");
-    parser = cau.getContentParser("text/ram");
-    assertTrue(parser instanceof ContentParserWrapper);
-    assertTrue(WrapperUtil.unwrap(parser) instanceof MockContentParser);
-  }
+    defMap.putString("text/ram_link_extractor_factory",
+		     "org.lockss.test.MockLinkExtractorFactory");
+    cp.initMimeMap();
+    // hard to test wrapper here because getLinkExtractorFactory isn't exposed
 
-  public void testGetContentParserHandlesContentType() {
-    defMap.putString("text/ram_parser",
-		     "org.lockss.test.MockContentParser");
-
-    ContentParser parser = null;
-    parser = cau.getContentParser("text/ram ; random-content-type");
-    assertTrue(parser instanceof ContentParserWrapper);
-    assertTrue(WrapperUtil.unwrap(parser) instanceof MockContentParser);
-
-    parser = cau.getContentParser(" text/ram ");
-    assertTrue(parser instanceof ContentParserWrapper);
-    assertTrue(WrapperUtil.unwrap(parser) instanceof MockContentParser);
+    extractor = cau.getLinkExtractor("text/ram");
+    assertTrue("extractor is " + extractor,
+	       extractor instanceof MockLinkExtractor);
+    extractor = cau.getLinkExtractor("text/ram;charset=oddly");
+    assertTrue("extractor is " + extractor,
+	       extractor instanceof MockLinkExtractor);
   }
 
   public void testGetCrawlRule() throws LockssRegexpException {
@@ -478,33 +471,38 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertTrue(WrapperUtil.unwrap(rule) instanceof MyMockFilterRule);
   }
 
-  public void testGetFilterFactoryMimeType() {
+  public void testGetFilterFactoryMimeType() throws Exception {
     defMap.putString("text/html"+DefinableArchivalUnit.SUFFIX_FILTER_FACTORY,
 		     "org.lockss.plugin.definable.TestDefinableArchivalUnit$MyMockFilterFactory");
+    cp.initPlugin(getMockLockssDaemon(), defMap);
     FilterFactory fact = cau.getFilterFactory("text/html");
+    System.err.println("fact: " + fact);
     assertTrue(fact instanceof FilterFactoryWrapper);
     assertTrue(WrapperUtil.unwrap(fact) instanceof MyMockFilterFactory);
   }
 
-  public void testGetFilterFactoryMimeTypeSpace() {
+  public void testGetFilterFactoryMimeTypeSpace() throws Exception {
     defMap.putString("text/html"+DefinableArchivalUnit.SUFFIX_FILTER_FACTORY,
 		     "org.lockss.plugin.definable.TestDefinableArchivalUnit$MyMockFilterFactory");
+    cp.initPlugin(getMockLockssDaemon(), defMap);
     FilterFactory fact = cau.getFilterFactory(" text/html ");
     assertTrue(fact instanceof FilterFactoryWrapper);
     assertTrue(WrapperUtil.unwrap(fact) instanceof MyMockFilterFactory);
   }
 
-  public void testGetFilterFactoryContentType() {
+  public void testGetFilterFactoryContentType() throws Exception {
     defMap.putString("text/html"+DefinableArchivalUnit.SUFFIX_FILTER_FACTORY,
 		     "org.lockss.plugin.definable.TestDefinableArchivalUnit$MyMockFilterFactory");
+    cp.initPlugin(getMockLockssDaemon(), defMap);
     FilterFactory fact = cau.getFilterFactory("text/html ; random-char-set");
     assertTrue(fact instanceof FilterFactoryWrapper);
     assertTrue(WrapperUtil.unwrap(fact) instanceof MyMockFilterFactory);
   }
 
-  public void testGetFilterFactoryContentTypeSpace() {
+  public void testGetFilterFactoryContentTypeSpace() throws Exception {
     defMap.putString("text/html"+DefinableArchivalUnit.SUFFIX_FILTER_FACTORY,
 		     "org.lockss.plugin.definable.TestDefinableArchivalUnit$MyMockFilterFactory");
+    cp.initPlugin(getMockLockssDaemon(), defMap);
     FilterFactory fact = cau.getFilterFactory(" text/html ; random-char-set");
     assertTrue(fact instanceof FilterFactoryWrapper);
     assertTrue(WrapperUtil.unwrap(fact) instanceof MyMockFilterFactory);

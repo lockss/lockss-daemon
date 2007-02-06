@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.38 2007-01-14 08:06:04 tlipkis Exp $
+ * $Id: ArchivalUnit.java,v 1.39 2007-02-06 01:03:09 tlipkis Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ import java.util.*;
 
 import org.lockss.config.Configuration;
 import org.lockss.crawler.*;
+import org.lockss.extractor.*;
 import org.lockss.daemon.*;
 import org.lockss.state.*;
 import org.lockss.util.*;
@@ -189,14 +190,13 @@ public interface ArchivalUnit {
    */
   public boolean shouldCallTopLevelPoll(AuState aus);
 
-
   /**
-   * Get a {@link org.lockss.crawler.ContentParser} that knows how to parse
-   * the given content type
+   * Return a {@link LinkExtractor} that knows how to extract URLs from
+   * content of the given MIME type
    * @param contentType content type to get a content parser for
-   * @return a content parser for contentType if we have one, null otherwise
+   * @return A LinkExtractor or null
    */
-  public ContentParser getContentParser(String contentType);
+  public LinkExtractor getLinkExtractor(String contentType);
 
   /**
    * Return the {@link FilterRule} for the given contentType or null if there

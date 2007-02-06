@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.23 2006-12-09 07:09:00 tlipkis Exp $
+ * $Id: DefinablePlugin.java,v 1.24 2007-02-06 01:03:08 tlipkis Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import org.lockss.plugin.wrapper.*;
 import org.lockss.config.Configuration;
 import org.lockss.app.*;
 import org.lockss.daemon.*;
+import org.lockss.extractor.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.plugin.definable.DefinableArchivalUnit.ConfigurableCrawlWindow;
@@ -133,6 +134,7 @@ public class DefinablePlugin extends BasePlugin {
     this.definitionMap = defMap;
     // then call the overridden initializaton.
     super.initPlugin(daemon);
+    initMimeMap();
   }
 
   public String getLoadedFrom() {
@@ -194,6 +196,43 @@ public class DefinablePlugin extends BasePlugin {
 
   CacheResultHandler getCacheResultHandler() {
     return resultHandler;
+  }
+
+  String stripSuffix(String str, String suffix) {
+    return str.substring(0, str.length() - suffix.length());
+  }
+
+  protected void initMimeMap() throws PluginException.InvalidDefinition {
+    for (Iterator iter = definitionMap.entrySet().iterator(); iter.hasNext();){
+      Map.Entry ent = (Map.Entry)iter.next();
+      String key = (String)ent.getKey();
+      if (key.endsWith(DefinableArchivalUnit.SUFFIX_LINK_EXTRACTOR_FACTORY)) {
+	String mime =
+	  stripSuffix(key, DefinableArchivalUnit.SUFFIX_LINK_EXTRACTOR_FACTORY);
+	Object val = ent.getValue();
+	if (val instanceof String) {
+	  String factName = (String)val;
+	  log.debug("initMime " + mime + ": " + factName);
+	  MimeTypeInfo mti = mimeMap.modifyMimeTypeInfo(mime);
+	  LinkExtractorFactory fact =
+	    (LinkExtractorFactory)loadClass(factName,
+					    LinkExtractorFactory.class);
+	  mti.setLinkExtractorFactory(fact);
+	}
+      } else if (key.endsWith(DefinableArchivalUnit.SUFFIX_FILTER_FACTORY)) {
+	String mime = stripSuffix(key,
+				  DefinableArchivalUnit.SUFFIX_FILTER_FACTORY);
+	Object val = ent.getValue();
+	if (val instanceof String) {
+	  String factName = (String)val;
+	  log.debug("initMime " + mime + ": " + factName);
+	  MimeTypeInfo mti = mimeMap.modifyMimeTypeInfo(mime);
+	  FilterFactory fact =
+	    (FilterFactory)loadClass(factName, FilterFactory.class);
+	  mti.setFilterFactory(fact);
+	}
+      }
+    }
   }
 
   protected void initResultMap() throws PluginException.InvalidDefinition {
@@ -310,20 +349,6 @@ public class DefinablePlugin extends BasePlugin {
       }
     }
     return super.constructFilterRule(mimeType);
-  }
-
-  protected FilterFactory constructFilterFactory(String contentType) {
-    String mimeType = HeaderUtil.getMimeTypeFromContentType(contentType);
-
-    Object filter_el =
-      definitionMap.getMapElement(mimeType +
-				  DefinableArchivalUnit.SUFFIX_FILTER_FACTORY);
-
-    if (filter_el instanceof String) {
-      log.debug("Loading filter "+filter_el);
-      return (FilterFactory)loadClass((String)filter_el, FilterFactory.class);
-    }
-    return super.constructFilterFactory(mimeType);
   }
 
   public String getPluginId() {

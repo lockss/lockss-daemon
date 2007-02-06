@@ -1,5 +1,5 @@
 /*
- * $Id: ProbePermissionChecker.java,v 1.16 2007-01-16 08:17:09 thib_gc Exp $
+ * $Id: ProbePermissionChecker.java,v 1.17 2007-02-06 01:03:09 tlipkis Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import java.util.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
 import org.lockss.crawler.*;
+import org.lockss.extractor.*;
 
 /**
  * This Permission checker looks for a probe (a URL) which is identified by
@@ -69,11 +70,13 @@ public class ProbePermissionChecker implements PermissionChecker {
   public boolean checkPermission(Crawler.PermissionHelper pHelper,
 				 Reader inputReader, String permissionUrl) {
     probeUrl = null;
-    CustomHtmlParser parser = new CustomHtmlParser();
+    CustomHtmlLinkExtractor extractor = new CustomHtmlLinkExtractor();
     logger.debug3("Checking permission on "+permissionUrl);
     try {
-      parser.parseForUrls(inputReader, permissionUrl,
-			  au, new MyFoundUrlCallback());
+      // XXX ReaderInputStream needed until PermissionChecker changed to
+      // take InputStream instead of Reader
+      extractor.extractUrls(au, new ReaderInputStream(inputReader), null,
+			       permissionUrl, new MyFoundUrlCallback());
     } catch (IOException ex) {
       logger.error("Exception trying to parse permission url "+permissionUrl,
 		   ex);
@@ -109,10 +112,13 @@ public class ProbePermissionChecker implements PermissionChecker {
   }
 
 
-  private static class CustomHtmlParser extends GoslingHtmlParser {
+  private static class CustomHtmlLinkExtractor
+    extends GoslingHtmlLinkExtractor {
+
     private static final String LOCKSSPROBE = "lockss-probe";
 
-    protected String extractLinkFromTag(StringBuffer link, ArchivalUnit au, ContentParser.FoundUrlCallback cb) {
+    protected String extractLinkFromTag(StringBuffer link, ArchivalUnit au,
+					LinkExtractor.Callback cb) {
       String returnStr = null;
 
       switch (link.charAt(0)) {
@@ -134,7 +140,7 @@ public class ProbePermissionChecker implements PermissionChecker {
     }
   }
 
-  private class MyFoundUrlCallback implements ContentParser.FoundUrlCallback {
+  private class MyFoundUrlCallback implements LinkExtractor.Callback {
     public MyFoundUrlCallback() {
     }
 

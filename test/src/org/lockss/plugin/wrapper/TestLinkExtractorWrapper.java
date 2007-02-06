@@ -1,5 +1,5 @@
 /*
- * $Id: TestContentParserWrapper.java,v 1.1 2006-12-09 07:09:00 tlipkis Exp $
+ * $Id: TestLinkExtractorWrapper.java,v 1.1 2007-02-06 01:03:07 tlipkis Exp $
  */
 
 /*
@@ -38,41 +38,42 @@ import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.crawler.*;
 import org.lockss.test.*;
+import org.lockss.extractor.*;
 import org.lockss.util.*;
 
-public class TestContentParserWrapper extends LockssTestCase {
+public class TestLinkExtractorWrapper extends LockssTestCase {
 
   public void testWrap() throws PluginException, IOException {
-    ContentParser obj = new MockContentParser();
-    ContentParser wrapper =
-      (ContentParser)WrapperUtil.wrap(obj, ContentParser.class);
-    assertTrue(wrapper instanceof ContentParserWrapper);
-    assertTrue(WrapperUtil.unwrap(wrapper) instanceof MockContentParser);
+    LinkExtractor obj = new MockLinkExtractor();
+    LinkExtractor wrapper =
+      (LinkExtractor)WrapperUtil.wrap(obj, LinkExtractor.class);
+    assertTrue(wrapper instanceof LinkExtractorWrapper);
+    assertTrue(WrapperUtil.unwrap(wrapper) instanceof MockLinkExtractor);
 
-    Reader in = new StringReader("foo");
-    wrapper.parseForUrls(null, "foo", null, null);
-    MockContentParser mn = (MockContentParser)obj;
-    assertEquals(ListUtil.list(null, "foo", null, null), mn.args);
+    InputStream in = new StringInputStream("foo");
+    wrapper.extractUrls(null, in, null, "foo", null);
+    MockLinkExtractor mn = (MockLinkExtractor)obj;
+    assertEquals(ListUtil.list(null, in, null, "foo", null), mn.args);
   }
 
   public void testLinkageError() throws IOException {
-    ContentParser obj = new MockContentParser();
-    ContentParser wrapper =
-      (ContentParser)WrapperUtil.wrap(obj, ContentParser.class);
-    assertTrue(wrapper instanceof ContentParserWrapper);
-    assertTrue(WrapperUtil.unwrap(wrapper) instanceof MockContentParser);
+    LinkExtractor obj = new MockLinkExtractor();
+    LinkExtractor wrapper =
+      (LinkExtractor)WrapperUtil.wrap(obj, LinkExtractor.class);
+    assertTrue(wrapper instanceof LinkExtractorWrapper);
+    assertTrue(WrapperUtil.unwrap(wrapper) instanceof MockLinkExtractor);
     Error err = new LinkageError("bar");
-    MockContentParser a = (MockContentParser)obj;
+    MockLinkExtractor a = (MockLinkExtractor)obj;
     a.setError(err);
     try {
-      wrapper.parseForUrls(null, "foo", null, null);
+      wrapper.extractUrls(null, null, null, "foo", null);
       fail("Should have thrown PluginException");
     } catch (PluginException e) {
       assertTrue(e instanceof PluginException.LinkageError);
     }
   }
 
-  public static class MockContentParser implements ContentParser {
+  public static class MockLinkExtractor implements LinkExtractor {
     List args;
     Error error;
 
@@ -80,11 +81,10 @@ public class TestContentParserWrapper extends LockssTestCase {
       this.error = error;
     }
 
-    public void parseForUrls(Reader reader, String srcUrl,
-			     ArchivalUnit au,
-			     ContentParser.FoundUrlCallback cb)
+    public void extractUrls(ArchivalUnit au, InputStream in, String encoding,
+			    String srcUrl, LinkExtractor.Callback cb)
 	throws IOException {
-      args = ListUtil.list(reader, srcUrl, au, cb);
+      args = ListUtil.list(au, in, encoding, srcUrl, cb);
       if (error != null) {
 	throw error;
       }

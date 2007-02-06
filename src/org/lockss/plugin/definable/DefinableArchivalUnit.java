@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.52 2006-12-09 07:09:00 tlipkis Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.53 2007-02-06 01:03:08 tlipkis Exp $
  */
 
 /*
@@ -67,6 +67,8 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
   //public static final String KEY_AU_URL_NORMALIZER = "au_url_normalizer";
 
   public static final String SUFFIX_PARSER = "_parser";
+  public static final String SUFFIX_LINK_EXTRACTOR_FACTORY =
+    "_link_extractor_factory";
   public static final String SUFFIX_FILTER_RULE = "_filter";
   public static final String SUFFIX_FILTER_FACTORY = "_filter_factory";
 
@@ -269,23 +271,6 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 
   protected CrawlWindow makeCrawlWindow() {
     return getDefinablePlugin().makeCrawlWindow();
-  }
-
-  /**
-   * Currently the only ContentParser we have is GoslingHtmlParser, so this
-   * gets returned for any string that starts with "test/html".  Null otherwise
-   * @param contentType content-type string; first (or only) part is mime-type
-   * @return GoslingHtmlParser if mimeType starts with "test/html",
-   * null otherwise
-   */
-  public ContentParser getContentParser(String contentType) {
-    String mimeType = HeaderUtil.getMimeTypeFromContentType(contentType);
-    String parser_cl = definitionMap.getString(mimeType + SUFFIX_PARSER,
-                                               null);
-    if (parser_cl != null) {
-      return (ContentParser) loadClass(parser_cl, ContentParser.class);
-    }
-    return super.getContentParser(mimeType);
   }
 
 // ---------------------------------------------------------------------

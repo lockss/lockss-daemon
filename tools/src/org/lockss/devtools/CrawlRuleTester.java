@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlRuleTester.java,v 1.20 2006-11-10 00:20:35 troberts Exp $
+ * $Id: CrawlRuleTester.java,v 1.21 2007-02-06 01:03:06 tlipkis Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import org.lockss.crawler.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
+import org.lockss.extractor.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.config.*;
@@ -305,9 +306,9 @@ public class CrawlRuleTester extends Thread {
 	InputStream istr = conn.getResponseInputStream();
 	InputStreamReader reader = new InputStreamReader(istr);
 	//       MyMockCachedUrl mcu = new MyMockCachedUrl(srcUrl.toString(), reader);
-	GoslingHtmlParser parser = new GoslingHtmlParser();
-	parser.parseForUrls(reader, srcUrl.toString() ,
-			    null, new MyFoundUrlCallback());
+	GoslingHtmlLinkExtractor extractor = new GoslingHtmlLinkExtractor();
+	extractor.extractUrls(null, istr, null, srcUrl.toString(),
+			      new MyFoundUrlCallback());
 	istr.close();
 	depth_parsed[m_curDepth - 1]++;
       } finally {
@@ -437,8 +438,7 @@ public class CrawlRuleTester extends Thread {
     void close();
   }
 
-  private class MyFoundUrlCallback
-      implements ContentParser.FoundUrlCallback {
+  private class MyFoundUrlCallback implements LinkExtractor.Callback {
 
     MyFoundUrlCallback() {
     }
@@ -524,6 +524,10 @@ public class CrawlRuleTester extends Thread {
      * @return long
      */
     public long getContentSize() {
+      throw new UnsupportedOperationException("Not implemented");
+    }
+
+    public String getContentType() {
       throw new UnsupportedOperationException("Not implemented");
     }
 

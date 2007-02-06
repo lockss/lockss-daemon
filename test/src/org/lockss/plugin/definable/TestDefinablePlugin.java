@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinablePlugin.java,v 1.14 2006-12-09 07:09:00 tlipkis Exp $
+ * $Id: TestDefinablePlugin.java,v 1.15 2007-02-06 01:03:07 tlipkis Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.plugin.*;
 import org.lockss.plugin.wrapper.*;
 import org.lockss.plugin.base.*;
 import org.lockss.test.*;
+import org.lockss.extractor.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.HttpResultMap;
 
@@ -52,12 +53,12 @@ import org.lockss.util.urlconn.HttpResultMap;
 public class TestDefinablePlugin extends LockssTestCase {
   static final String DEFAULT_PLUGIN_VERSION = "1";
 
-  private DefinablePlugin definablePlugin = null;
+  private MyDefinablePlugin definablePlugin = null;
   ExternalizableMap defMap;
 
   protected void setUp() throws Exception {
     super.setUp();
-    definablePlugin = new DefinablePlugin();
+    definablePlugin = new MyDefinablePlugin();
     defMap = new ExternalizableMap();
     definablePlugin.initPlugin(getMockLockssDaemon(), defMap);
   }
@@ -65,6 +66,58 @@ public class TestDefinablePlugin extends LockssTestCase {
   protected void tearDown() throws Exception {
     definablePlugin = null;
     super.tearDown();
+  }
+
+  public void testInitMimeMapDefault() throws Exception {
+    // 2nd plugin to verify changes to 1st don't effect global mime map
+    MyDefinablePlugin p2 = new MyDefinablePlugin();
+    p2.initPlugin(getMockLockssDaemon(), new ExternalizableMap());
+    MimeTypeInfo mti;
+
+    mti = definablePlugin.getMimeTypeInfo("text/html");
+    assertTrue(mti.getLinkExtractorFactory()
+	       instanceof GoslingHtmlLinkExtractor.Factory);
+    mti = definablePlugin.getMimeTypeInfo("text/css");
+    assertTrue(mti.getLinkExtractorFactory()
+	       instanceof CssLinkExtractor.Factory);
+    mti = definablePlugin.getMimeTypeInfo("application/pdf");
+    assertNull(mti.getFilterFactory());
+
+    defMap.putString(  ("application/pdf"
+			+ DefinableArchivalUnit.SUFFIX_FILTER_FACTORY),
+		     "org.lockss.test.MockFilterFactory");
+    defMap.putString(  ("text/html"
+			+ DefinableArchivalUnit.SUFFIX_LINK_EXTRACTOR_FACTORY),
+		     "org.lockss.test.MockLinkExtractorFactory");
+    definablePlugin.initPlugin(getMockLockssDaemon(), defMap);
+
+    mti = definablePlugin.getMimeTypeInfo("text/html");
+    System.err.println("fact: " + mti.getLinkExtractorFactory());
+    assertTrue(mti.getLinkExtractorFactory()
+	       instanceof LinkExtractorFactoryWrapper);
+    assertTrue(WrapperUtil.unwrap(mti.getLinkExtractorFactory())
+	       instanceof MockLinkExtractorFactory);
+    mti = definablePlugin.getMimeTypeInfo("text/css");
+    assertTrue(mti.getLinkExtractorFactory()
+	       instanceof CssLinkExtractor.Factory);
+    mti = definablePlugin.getMimeTypeInfo("application/pdf");
+    assertTrue(mti.getFilterFactory()
+	       instanceof FilterFactoryWrapper);
+    assertTrue(WrapperUtil.unwrap(mti.getFilterFactory())
+	       instanceof MockFilterFactory);
+
+    // verify 2nd plugin still has mime defaults
+    mti = p2.getMimeTypeInfo("text/html");
+    assertTrue(mti.getLinkExtractorFactory()
+	       instanceof GoslingHtmlLinkExtractor.Factory);
+    mti = p2.getMimeTypeInfo("text/css");
+    assertTrue(mti.getLinkExtractorFactory()
+	       instanceof CssLinkExtractor.Factory);
+    mti = p2.getMimeTypeInfo("application/pdf");
+    assertNull(mti.getFilterFactory());
+  }
+
+  public void testInitMimeMap() {
   }
 
   public void testCreateAu() throws ArchivalUnit.ConfigurationException {
@@ -221,6 +274,12 @@ public class TestDefinablePlugin extends LockssTestCase {
     }
   }
 
+
+  public static class MyDefinablePlugin extends DefinablePlugin {
+    public MimeTypeInfo getMimeTypeInfo(String contentType) {
+      return super.getMimeTypeInfo(contentType);
+    }
+  }
 
   public static class MyNormalizer implements UrlNormalizer {
     public String normalizeUrl (String url, ArchivalUnit au) {

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.116 2007-01-14 08:03:04 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.117 2007-02-06 01:03:08 tlipkis Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.apache.commons.collections.map.LRUMap;
 
 import org.lockss.config.*;
 import org.lockss.crawler.*;
+import org.lockss.extractor.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.state.AuState;
@@ -679,21 +680,12 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   }
 
   /**
-   * Currently the only ContentParser we have is GoslingHtmlParser, so this
-   * gets returned for any string that starts with "test/html".  Null otherwise
+   * Return a LinkExtractor for the MIME type, or null.
    * @param contentType content type to get a content parser for
-   * @return GoslingHtmlParser if contentType starts with "test/html",
-   * null otherwise
    */
-  public ContentParser getContentParser(String contentType) {
-    String mimeType = HeaderUtil.getMimeTypeFromContentType(contentType);
-    if ("text/html".equalsIgnoreCase(mimeType)) {
-      return new GoslingHtmlParser();
-    }
-    else if ("text/css".equalsIgnoreCase(mimeType)) {
-      return new CssParser();
-    }
-    return null;
+  public LinkExtractor getLinkExtractor(String contentType)
+      throws PluginException.InvalidDefinition {
+    return plugin.getLinkExtractor(contentType);
   }
 
   /**

@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.73 2007-01-18 02:52:44 tlipkis Exp $
+ * $Id: MockArchivalUnit.java,v 1.74 2007-02-06 01:03:06 tlipkis Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.crawler.*;
 import org.lockss.util.*;
 import org.lockss.state.*;
 import org.lockss.plugin.*;
+import org.lockss.extractor.*;
 
 /**
  * This is a mock version of <code>ArchivalUnit</code> used for testing
@@ -68,7 +69,7 @@ public class MockArchivalUnit implements ArchivalUnit {
 
   private FilterRule filterRule = null;
   private FilterFactory filterFactory = null;
-  private ContentParser parser = null;
+  private Map extractors = new HashMap();
   private TypedEntryMap propertyMap = new TypedEntryMap();
   private List urlStems = Collections.EMPTY_LIST;
 
@@ -422,12 +423,17 @@ public class MockArchivalUnit implements ArchivalUnit {
     this.filterFactory = filterFactory;
   }
 
-  public ContentParser getContentParser(String mimeType) {
-    return parser;
+  public LinkExtractor getLinkExtractor(String contentType) {
+    String mimeType = HeaderUtil.getMimeTypeFromContentType(contentType);
+    LinkExtractor res = (LinkExtractor)extractors.get(mimeType);
+    if (res == null) {
+      res = (LinkExtractor)extractors.get("*");
+    }      
+    return res;
   }
 
-  public void setParser(ContentParser parser) {
-    this.parser = parser;
+  public void setLinkExtractor(String mimeType, LinkExtractor extractor) {
+    extractors.put(mimeType, extractor);
   }
 
   public String toString() {

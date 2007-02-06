@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArchivalUnit.java,v 1.38 2007-01-14 08:03:02 tlipkis Exp $
+ * $Id: TestBaseArchivalUnit.java,v 1.39 2007-02-06 01:03:07 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,8 @@ package org.lockss.plugin.base;
 
 import java.io.*;
 import java.util.*;
+import java.net.*;
+
 import org.lockss.daemon.*;
 import org.lockss.test.*;
 import org.lockss.plugin.*;
@@ -41,9 +43,9 @@ import org.lockss.util.*;
 import org.lockss.config.*;
 import org.lockss.crawler.*;
 import org.lockss.plugin.ArchivalUnit.*;
-import java.net.*;
 import org.lockss.plugin.ArchivalUnit.ConfigurationException;
 import org.lockss.plugin.base.BaseArchivalUnit.*;
+import org.lockss.extractor.*;
 
 public class TestBaseArchivalUnit extends LockssTestCase {
   private MyMockBaseArchivalUnit mbau;
@@ -70,6 +72,7 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     rules.add(new CrawlRules.RE(startUrl, CrawlRules.RE.MATCH_INCLUDE));
     CrawlRule rule = new CrawlRules.FirstMatch(rules);
     mplug = new MyMockPlugin();
+    mplug.initPlugin(getMockLockssDaemon());
     mbau =  new MyMockBaseArchivalUnit(mplug, auName, rule, startUrl);
   }
 
@@ -674,42 +677,44 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     assertFalse(mbau.shouldCrawlForNewContent(state));
   }
 
-  public void testGetContentParserNullMimeType() {
-    assertNull(mbau.getContentParser(null));
+  public void testGetLinkExtractorNullMimeType() {
+    assertNull(mbau.getLinkExtractor(null));
   }
 
-  public void testGetContentParserMissingMimeType() {
-    assertNull(mbau.getContentParser(""));
+  public void testGetLinkExtractorMissingMimeType() {
+    assertNull(mbau.getLinkExtractor(""));
   }
 
-  public void testGetContentParserCapitalization() {
-    assertTrue(mbau.getContentParser("text/html") 
-	       instanceof GoslingHtmlParser);
+  public void testGetLinkExtractorCapitalization() {
+    assertTrue(mbau.getLinkExtractor("text/html") 
+	       instanceof GoslingHtmlLinkExtractor);
 
-    assertTrue(mbau.getContentParser("Text/Html")
-	       instanceof GoslingHtmlParser);
+    assertTrue(mbau.getLinkExtractor("Text/Html")
+	       instanceof GoslingHtmlLinkExtractor);
   }
 
-  public void testGetContentParserSpaces() {
-    assertTrue(mbau.getContentParser(" text/html ")
-	       instanceof GoslingHtmlParser);
+  public void testGetLinkExtractorSpaces() {
+    assertTrue(mbau.getLinkExtractor(" text/html ")
+	       instanceof GoslingHtmlLinkExtractor);
   }
 
-  public void testGetContentParserJunkAfterContentType() {
-    assertTrue(mbau.getContentParser("text/html ; random content")
-	       instanceof GoslingHtmlParser);
+  public void testGetLinkExtractorJunkAfterContentType() {
+    assertTrue(mbau.getLinkExtractor("text/html ; random content")
+	       instanceof GoslingHtmlLinkExtractor);
   }
 
-  public void testGetContentParser_text_html() {
-    assertTrue(mbau.getContentParser("text/html") instanceof GoslingHtmlParser);
+  public void testGetLinkExtractor_text_html() {
+    assertTrue(mbau.getLinkExtractor("text/html")
+	       instanceof GoslingHtmlLinkExtractor);
   }
 
-  public void testGetContentParser_text_css() {
-    assertTrue(mbau.getContentParser("text/css") instanceof CssParser);
+  public void testGetLinkExtractor_text_css() {
+    assertTrue(mbau.getLinkExtractor("text/css")
+	       instanceof CssLinkExtractor);
   }
 
-  public void testGetContentParser_application_pdf() {
-    assertNull(mbau.getContentParser("application/pdf"));
+  public void testGetLinkExtractor_application_pdf() {
+    assertNull(mbau.getLinkExtractor("application/pdf"));
   }
 
   TitleConfig makeTitleConfig() {

@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.44 2007-01-14 08:02:34 tlipkis Exp $
+ * $Id: BasePlugin.java,v 1.45 2007-02-06 01:03:08 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.lockss.extractor.*;
 
 /**
  * Abstract base class for Plugins.  Plugins are encouraged to extend this
@@ -64,6 +65,7 @@ public abstract class BasePlugin
   protected Map titleConfigMap;
   // XXX need to generalize this
   protected CacheResultMap resultMap;
+  protected MimeTypeMap mimeMap;
   protected HashMap filterMap = new HashMap(4);
 
   Configuration.Callback configCb = new Configuration.Callback() {
@@ -86,6 +88,7 @@ public abstract class BasePlugin
   public void initPlugin(LockssDaemon daemon) {
     theDaemon = daemon;
     pluginMgr = theDaemon.getPluginManager();
+    mimeMap = new MimeTypeMap(MimeTypeMap.DEFAULT);
 
     theDaemon.getConfigManager().registerConfigurationCallback(configCb);
     initResultMap();
@@ -340,6 +343,38 @@ public abstract class BasePlugin
     }
   }
 
+  /**
+   * Return a {@link LinkExtractor} that knows how to extract URLs from
+   * content of the given MIME type
+   * @param contentType content type to get a content parser for
+   * @return A LinkExtractor or null
+   */
+  public LinkExtractor getLinkExtractor(String contentType)
+      throws PluginException.InvalidDefinition {
+    MimeTypeInfo mti = getMimeTypeInfo(contentType);
+    LinkExtractorFactory fact = mti.getLinkExtractorFactory();
+    if (fact != null) {
+      try {
+	return fact.createLinkExtractor(contentType);
+      } catch (PluginException e) {
+	throw new RuntimeException(e);
+      }
+    }
+    return null;
+  }
+
+  protected MimeTypeInfo getMimeTypeInfo(String contentType) {
+    if (contentType == null) {
+      log.debug3("getMimeTypeInfo: null content type");
+      return MimeTypeInfo.NULL_INFO;
+    }
+    MimeTypeInfo mti = mimeMap.getMimeTypeInfo(contentType);
+    if (mti == null) {
+      return MimeTypeInfo.NULL_INFO;
+    }
+    return mti;
+  }
+
   protected UrlNormalizer getUrlNormalizer() {
     return NullUrlNormalizer.INSTANCE;
   }
@@ -393,42 +428,17 @@ public abstract class BasePlugin
   }
 
   /**
-   * Returns a filter factory from the cache if found, otherwise calls
-   * 'constructFilterFactory()' and caches the result if non-null.
-   * Content-type is converted to lowercase.  If contenttype is null,
-   * returns null.
+   * Returns the filter factory for the mime type, if any
    * @param contentType the content type
    * @return the FilterFactory
    */
   public FilterFactory getFilterFactory(String contentType) {
-    if (contentType != null) {
-      Object obj = filterMap.get(contentType);
-      FilterFactory factory = null;
-      if (obj==null) {
-        factory = constructFilterFactory(contentType);
-        if (factory != null) {
-	  if (log.isDebug3()) log.debug3(contentType + " filter: " + factory);
-          filterMap.put(contentType, factory);
-        } else {
-	  if (log.isDebug3()) log.debug3("No filter for "+contentType);
-	}
-      } else if (obj instanceof FilterFactory) {
-	factory = (FilterFactory)obj;
-      }
-      return factory;
+    MimeTypeInfo mti = getMimeTypeInfo(contentType);
+    if (mti == null) {
+      return null;
     }
-    log.debug3("getFilterFactory: null content type");
-    return null;
+    if (log.isDebug3())
+      log.debug3(contentType + " filter: " + mti.getFilterFactory());
+    return mti.getFilterFactory();
   }
-
-  /**
-   * Override to provide proper filter factories.
-   * @param contentType content type
-   * @return null, since we don't filter by default
-   */
-  protected FilterFactory constructFilterFactory(String contentType) {
-    log.debug3("constructFilterFactory default: null");
-    return null;
-  }
-
 }
