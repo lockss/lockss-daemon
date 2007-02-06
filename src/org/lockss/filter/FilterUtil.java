@@ -1,5 +1,5 @@
 /*
- * $Id: FilterUtil.java,v 1.1 2006-09-16 22:55:44 tlipkis Exp $
+ * $Id: FilterUtil.java,v 1.2 2007-02-06 00:52:27 tlipkis Exp $
  */
 
 /*
@@ -50,27 +50,10 @@ public class FilterUtil {
    * underlying Reader.
    * @param in the InputStream to be wrapped
    * @param encoding the charset
+   * deprecated plugins should call StreamUtil.getReader() directly after
+   * 1.22 released
    */
   public static Reader getReader(InputStream in, String encoding) {
-    if (in instanceof ReaderInputStream) {
-      ReaderInputStream ris = (ReaderInputStream)in;
-      return ris.getReader();
-    }
-    try {
-      return new InputStreamReader(in, encoding);
-    } catch (UnsupportedEncodingException e1) {
-      log.error("No such encoding: " + encoding + ", trying " +
-		Constants.DEFAULT_ENCODING);
-      try {
-	return new InputStreamReader(in, Constants.DEFAULT_ENCODING);
-      } catch (UnsupportedEncodingException e2) {
-	log.critical("Default encoding not found: " +
-		     Constants.DEFAULT_ENCODING);
-	throw new RuntimeException(("UnsupportedEncodingException for both " +
-				    encoding + " and " +
-				    Constants.DEFAULT_ENCODING),
-				   e1);
-      }
-    }
+    return StreamUtil.getReader(in, encoding);
   }
 }

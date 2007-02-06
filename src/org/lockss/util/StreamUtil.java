@@ -1,5 +1,5 @@
 /*
- * $Id: StreamUtil.java,v 1.14 2006-10-07 23:11:03 tlipkis Exp $
+ * $Id: StreamUtil.java,v 1.15 2007-02-06 00:52:27 tlipkis Exp $
  */
 
 /*
@@ -231,5 +231,37 @@ public class StreamUtil {
     }
   }
 
+  /** Return a Reader that reads from the InputStream.  If the specified
+   * encoding is not found, tries {@link Constants#DEFAULT_ENCODING}.  If
+   * the supplied InputStream is a ReaderInputStream, returns the
+   * underlying Reader.
+   * @param in the InputStream to be wrapped
+   * @param encoding the charset
+   */
+  public static Reader getReader(InputStream in, String encoding) {
+    if (in instanceof ReaderInputStream) {
+      ReaderInputStream ris = (ReaderInputStream)in;
+      return ris.getReader();
+    }
+    if (encoding == null) {
+      encoding = Constants.DEFAULT_ENCODING;
+    }
+    try {
+      return new InputStreamReader(in, encoding);
+    } catch (UnsupportedEncodingException e1) {
+      log.error("No such encoding: " + encoding + ", trying " +
+		Constants.DEFAULT_ENCODING);
+      try {
+	return new InputStreamReader(in, Constants.DEFAULT_ENCODING);
+      } catch (UnsupportedEncodingException e2) {
+	log.critical("Default encoding not found: " +
+		     Constants.DEFAULT_ENCODING);
+	throw new RuntimeException(("UnsupportedEncodingException for both " +
+				    encoding + " and " +
+				    Constants.DEFAULT_ENCODING),
+				   e1);
+      }
+    }
+  }
 }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestFilterUtil.java,v 1.2 2006-09-17 07:24:46 tlipkis Exp $
+ * $Id: TestFilterUtil.java,v 1.3 2007-02-06 00:52:27 tlipkis Exp $
  */
 
 /*
@@ -48,11 +48,8 @@ public class TestFilterUtil extends LockssTestCase {
     InputStreamReader rdr;
     Charset def = Charset.forName(Constants.DEFAULT_ENCODING);
     Charset utf = Charset.forName("UTF-8");
-    try {
-      FilterUtil.getReader(in, null);
-      fail("getReader(..., null) should throw NPE");
-    } catch (NullPointerException e) {
-    }
+    rdr = (InputStreamReader)FilterUtil.getReader(in, null);
+    assertTrue(def.aliases().contains(rdr.getEncoding()));
     rdr = (InputStreamReader)FilterUtil.getReader(in, "ISO-8859-1");
     assertTrue(def.aliases().contains(rdr.getEncoding()));
     rdr = (InputStreamReader)FilterUtil.getReader(in, "utf-8");
