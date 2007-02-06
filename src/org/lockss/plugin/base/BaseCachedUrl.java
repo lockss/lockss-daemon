@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrl.java,v 1.27 2006-12-09 07:09:00 tlipkis Exp $
+ * $Id: BaseCachedUrl.java,v 1.28 2007-02-06 00:55:13 tlipkis Exp $
  */
 
 /*
@@ -56,6 +56,11 @@ public class BaseCachedUrl implements CachedUrl {
   private static final String PARAM_SHOULD_FILTER_HASH_STREAM =
     Configuration.PREFIX+"baseCachedUrl.filterHashStream";
   private static final boolean DEFAULT_SHOULD_FILTER_HASH_STREAM = true;
+
+  public static final String PARAM_FILTER_USE_CHARSET =
+    Configuration.PREFIX + "baseCachedUrl.filterUseCharset";
+  public static final boolean DEFAULT_FILTER_USE_CHARSET = false;
+
 
   public BaseCachedUrl(ArchivalUnit owner, String url) {
     this.au = owner;
@@ -153,8 +158,24 @@ public class BaseCachedUrl implements CachedUrl {
     return rnc.getInputStream();
   }
 
+  public String getContentType() {
+    CIProperties props = getProperties();
+    if (props != null) {
+      return props.getProperty(PROPERTY_CONTENT_TYPE);
+    }
+    return null;
+  }
+
   private String getEncoding() {
-    return Constants.DEFAULT_ENCODING;
+    String res = null;
+    if (CurrentConfig.getBooleanParam(PARAM_FILTER_USE_CHARSET,
+				      DEFAULT_FILTER_USE_CHARSET)) {
+      res = HeaderUtil.getCharsetFromContentType(getContentType());
+    }
+    if (res == null) {
+      res = Constants.DEFAULT_ENCODING;
+    }
+    return res;
   }
 
   public Reader openForReading() {
@@ -162,7 +183,7 @@ public class BaseCachedUrl implements CachedUrl {
     try {
       return
 	new BufferedReader(new InputStreamReader(rnc.getInputStream(),
-						getEncoding()));
+						 getEncoding()));
     } catch (IOException e) {
       // XXX Wrong Exception.  Should this method be declared to throw
       // UnsupportedEncodingException?
@@ -212,8 +233,7 @@ public class BaseCachedUrl implements CachedUrl {
   }
 
   protected InputStream getFilteredStream() {
-    CIProperties props = getProperties();
-    String contentType = props.getProperty(PROPERTY_CONTENT_TYPE);
+    String contentType = getContentType();
     // first look for a FilterFactory
     FilterFactory fact = au.getFilterFactory(contentType);
     if (fact != null) {

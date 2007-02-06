@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCachedUrl.java,v 1.17 2006-09-16 22:55:22 tlipkis Exp $
+ * $Id: TestBaseCachedUrl.java,v 1.18 2007-02-06 00:55:13 tlipkis Exp $
  */
 
 /*
@@ -281,6 +281,61 @@ public class TestBaseCachedUrl extends LockssTestCase {
       assertEquals(strFact, StringUtil.fromInputStream(urlIs));
     }
 
+    CIProperties fromArgs(String prop, String val) {
+      CIProperties props = new CIProperties();
+      props.put(prop, val);
+      return props;
+    }
+
+    public void testFilterUsesCharsetOn() throws Exception {
+      ConfigurationUtil.addFromArgs(BaseCachedUrl.PARAM_FILTER_USE_CHARSET,
+				    "true",
+				    PARAM_SHOULD_FILTER_HASH_STREAM, "true");
+      createLeaf(url1, "blah1 <test stream>",
+		 fromArgs(CachedUrl.PROPERTY_CONTENT_TYPE,
+			  "text/html;charset=utf-16be"));
+      createLeaf(url2, "blah2 <test stream>",
+		 fromArgs(CachedUrl.PROPERTY_CONTENT_TYPE,
+			  "text/html"));
+      String str = "This is a filtered stream";
+      MyMockFilterFactory fact =
+	new MyMockFilterFactory(new StringInputStream(str));
+      mau.setFilterFactory(fact);
+      CachedUrl cu1 = getTestCu(url1);
+      CachedUrl cu2 = getTestCu(url2);
+      assertEquals(str, StringUtil.fromInputStream(cu1.openForHashing()));
+      cu2.openForHashing();
+      List args = fact.getArgs();
+      assertEquals(ListUtil.list(mau, "utf-16be"), args.get(0));
+      assertEquals(ListUtil.list(mau, Constants.DEFAULT_ENCODING),
+		   args.get(1));
+    }
+
+    public void testFilterUsesCharsetOff() throws Exception {
+      ConfigurationUtil.addFromArgs(BaseCachedUrl.PARAM_FILTER_USE_CHARSET,
+				    "false",
+				    PARAM_SHOULD_FILTER_HASH_STREAM, "true");
+      createLeaf(url1, "blah1 <test stream>",
+		 fromArgs(CachedUrl.PROPERTY_CONTENT_TYPE,
+			  "text/html;charset=utf-16be"));
+      createLeaf(url2, "blah2 <test stream>",
+		 fromArgs(CachedUrl.PROPERTY_CONTENT_TYPE,
+			  "text/html"));
+      String str = "This is a filtered stream";
+      MyMockFilterFactory fact =
+	new MyMockFilterFactory(new StringInputStream(str));
+      mau.setFilterFactory(fact);
+      CachedUrl cu1 = getTestCu(url1);
+      CachedUrl cu2 = getTestCu(url2);
+      assertEquals(str, StringUtil.fromInputStream(cu1.openForHashing()));
+      cu2.openForHashing();
+      List args = fact.getArgs();
+      assertEquals(ListUtil.list(mau, Constants.DEFAULT_ENCODING),
+		   args.get(0));
+      assertEquals(ListUtil.list(mau, Constants.DEFAULT_ENCODING),
+		   args.get(1));
+    }
+
     public void testGetContentSize() throws Exception {
       createLeaf(url1, content1, null);
       createLeaf(url2, content2, null);
@@ -346,6 +401,7 @@ public class TestBaseCachedUrl extends LockssTestCase {
 
   class MyMockFilterFactory implements FilterFactory {
     InputStream in;
+    List args = new ArrayList();
 
     public MyMockFilterFactory(InputStream in) {
       this.in = in;
@@ -354,7 +410,12 @@ public class TestBaseCachedUrl extends LockssTestCase {
     public InputStream createFilteredInputStream(ArchivalUnit au,
 						 InputStream unfilteredIn,
 						 String encoding) {
+      args.add(ListUtil.list(au, encoding));
       return this.in;
+    }
+
+    List getArgs() {
+      return args;
     }
   }
 
