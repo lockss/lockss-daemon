@@ -157,6 +157,7 @@
       <property name="title" value="BMC Cancer Volume 6" />
       <property name="journalTitle" value="BMC Cancer" />
       <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+      <property name="estSize" value="250MB" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://www.biomedcentral.com/" />
@@ -176,6 +177,7 @@
       <property name="title" value="BMC Cardiovascular Disorders Volume 6" />
       <property name="journalTitle" value="BMC Cardiovascular Disorders" />
       <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+      <property name="estSize" value="90MB" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://www.biomedcentral.com/" />
@@ -195,6 +197,7 @@
       <property name="title" value="BMC Cell Biology Volume 7" />
       <property name="journalTitle" value="BMC Cell Biology" />
       <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+      <property name="estSize" value="450MB" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://www.biomedcentral.com/" />
@@ -214,6 +217,7 @@
       <property name="title" value="BMC Chemical Biology Volume 6" />
       <property name="journalTitle" value="BMC Chemical Biology" />
       <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+      <property name="estSize" value="15MB" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://www.biomedcentral.com/" />
@@ -233,6 +237,7 @@
       <property name="title" value="BMC Clinical Pathology Volume 6" />
       <property name="journalTitle" value="BMC Clinical Pathology" />
       <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+      <property name="estSize" value="50MB" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://www.biomedcentral.com/" />
@@ -252,6 +257,7 @@
       <property name="title" value="BMC Clinical Pharmacology Volume 6" />
       <property name="journalTitle" value="BMC Clinical Pharmacology" />
       <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+      <property name="estSize" value="25MB" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://www.biomedcentral.com/" />
@@ -271,6 +277,7 @@
       <property name="title" value="BMC Complementary and Alternative Medicine Volume 6" />
       <property name="journalTitle" value="BMC Complementary and Alternative Medicine" />
       <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+      <property name="estSize" value="75MB" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://www.biomedcentral.com/" />
@@ -290,6 +297,7 @@
       <property name="title" value="BMC Dermatology Volume 6" />
       <property name="journalTitle" value="BMC Dermatology" />
       <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+      <property name="estSize" value="60MB" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://www.biomedcentral.com/" />
@@ -309,6 +317,7 @@
       <property name="title" value="BMC Developmental Biology Volume 6" />
       <property name="journalTitle" value="BMC Developmental Biology" />
       <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+      <property name="estSize" value="400MB" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://www.biomedcentral.com/" />
@@ -328,6 +337,7 @@
       <property name="title" value="BMC Ear, Nose and Throat Disorders Volume 6" />
       <property name="journalTitle" value="BMC Ear, Nose and Throat Disorders" />
       <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+      <property name="estSize" value="35MB" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://www.biomedcentral.com/" />
@@ -347,6 +357,7 @@
       <property name="title" value="BMC Ecology Volume 6" />
       <property name="journalTitle" value="BMC Ecology" />
       <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+      <property name="estSize" value="65MB" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://www.biomedcentral.com/" />
@@ -366,6 +377,7 @@
       <property name="title" value="BMC Emergency Medicine Volume 6" />
       <property name="journalTitle" value="BMC Emergency Medicine" />
       <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+      <property name="estSize" value="20MB" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://www.biomedcentral.com/" />
@@ -385,6 +397,7 @@
       <property name="title" value="BMC Endocrine Disorders Volume 6" />
       <property name="journalTitle" value="BMC Endocrine Disorders" />
       <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+      <property name="estSize" value="20MB" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://www.biomedcentral.com/" />
@@ -404,6 +417,7 @@
       <property name="title" value="BMC Evolutionary Biology Volume 6" />
       <property name="journalTitle" value="BMC Evolutionary Biology" />
       <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+      <property name="estSize" value="400MB" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://www.biomedcentral.com/" />
@@ -537,6 +551,7 @@
       <property name="title" value="BMC Immunology Volume 7" />
       <property name="journalTitle" value="BMC Immunology" />
       <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+      <property name="estSize" value="90MB" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://www.biomedcentral.com/" />
@@ -556,6 +571,7 @@
       <property name="title" value="BMC Infectious Diseases Volume 6" />
       <property name="journalTitle" value="BMC Infectious Diseases" />
       <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+      <property name="estSize" value="130MB" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://www.biomedcentral.com/" />
@@ -574,6 +590,7 @@
     <property name="BMCInternationalHealthandHumanRights6">
       <property name="title" value="BMC International Health and Human Rights Volume 6" />
       <property name="journalTitle" value="BMC International Health and Human Rights" />
+      <property name="estSize" value="15MB" />
       <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -594,6 +611,7 @@
       <property name="title" value="BMC Medical Education Volume 6" />
       <property name="journalTitle" value="BMC Medical Education" />
       <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+      <property name="estSize" value="90MB" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://www.biomedcentral.com/" />
@@ -613,6 +631,7 @@
       <property name="title" value="BMC Medical Ethics Volume 7" />
       <property name="journalTitle" value="BMC Medical Ethics" />
       <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+      <property name="estSize" value="25MB" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://www.biomedcentral.com/" />
@@ -632,6 +651,7 @@
       <property name="title" value="BMC Medical Genetics Volume 7" />
       <property name="journalTitle" value="BMC Medical Genetics" />
       <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+      <property name="estSize" value="135MB" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://www.biomedcentral.com/" />
@@ -651,6 +671,7 @@
       <property name="title" value="BMC Medical Imaging Volume 6" />
       <property name="journalTitle" value="BMC Medical Imaging" />
       <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+      <property name="estSize" value="60MB" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://www.biomedcentral.com/" />
@@ -689,6 +710,7 @@
       <property name="title" value="BMC Medical Research Methodology Volume 6" />
       <property name="journalTitle" value="BMC Medical Research Methodology" />
       <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+      <property name="estSize" value="90MB" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://www.biomedcentral.com/" />
@@ -708,6 +730,7 @@
       <property name="title" value="BMC Medicine Volume 4" />
       <property name="journalTitle" value="BMC Medicine" />
       <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+      <property name="estSize" value="140MB" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://www.biomedcentral.com/" />
@@ -727,6 +750,7 @@
       <property name="title" value="BMC Microbiology Volume 6" />
       <property name="journalTitle" value="BMC Microbiology" />
       <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+      <property name="estSize" value="270MB" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://www.biomedcentral.com/" />
@@ -746,6 +770,7 @@
       <property name="title" value="BMC Molecular Biology Volume 7" />
       <property name="journalTitle" value="BMC Molecular Biology" />
       <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+      <property name="estSize" value="170MB" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://www.biomedcentral.com/" />
@@ -784,6 +809,7 @@
       <property name="title" value="BMC Nephrology Volume 7" />
       <property name="journalTitle" value="BMC Nephrology" />
       <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+      <property name="estSize" value="40MB" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://www.biomedcentral.com/" />
@@ -803,6 +829,7 @@
       <property name="title" value="BMC Neuroscience Volume 7" />
       <property name="journalTitle" value="BMC Neuroscience" />
       <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+      <property name="estSize" value="550MB" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://www.biomedcentral.com/" />
@@ -841,6 +868,7 @@
       <property name="title" value="BMC Nuclear Medicine Volume 6" />
       <property name="journalTitle" value="BMC Nuclear Medicine" />
       <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+      <property name="estSize" value="15MB" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://www.biomedcentral.com/" />
@@ -860,6 +888,7 @@
       <property name="title" value="BMC Nursing Volume 5" />
       <property name="journalTitle" value="BMC Nursing" />
       <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+      <property name="estSize" value="15MB" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://www.biomedcentral.com/" />
@@ -879,6 +908,7 @@
       <property name="title" value="BMC Ophthalmology Volume 6" />
       <property name="journalTitle" value="BMC Ophthalmology" />
       <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+      <property name="estSize" value="70MB" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://www.biomedcentral.com/" />
@@ -898,6 +928,7 @@
       <property name="title" value="BMC Oral Health Volume 6" />
       <property name="journalTitle" value="BMC Oral Health" />
       <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+      <property name="estSize" value="45MB" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://www.biomedcentral.com/" />
@@ -917,6 +948,7 @@
       <property name="title" value="BMC Palliative Care Volume 5" />
       <property name="journalTitle" value="BMC Palliative Care" />
       <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+      <property name="estSize" value="10MB" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://www.biomedcentral.com/" />
@@ -936,6 +968,7 @@
       <property name="title" value="BMC Pediatrics Volume 6" />
       <property name="journalTitle" value="BMC Pediatrics" />
       <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+      <property name="estSize" value="45MB" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://www.biomedcentral.com/" />
@@ -955,6 +988,7 @@
       <property name="title" value="BMC Pharmacology Volume 6" />
       <property name="journalTitle" value="BMC Pharmacology" />
       <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+      <property name="estSize" value="40MB" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://www.biomedcentral.com/" />
@@ -974,6 +1008,7 @@
       <property name="title" value="BMC Physiology Volume 6" />
       <property name="journalTitle" value="BMC Physiology" />
       <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+      <property name="estSize" value="30MB" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://www.biomedcentral.com/" />
@@ -993,6 +1028,7 @@
       <property name="title" value="BMC Plant Biology Volume 6" />
       <property name="journalTitle" value="BMC Plant Biology" />
       <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+      <property name="estSize" value="150MB" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://www.biomedcentral.com/" />
@@ -1012,6 +1048,7 @@
       <property name="title" value="BMC Pregnancy and Childbirth Volume 6" />
       <property name="journalTitle" value="BMC Pregnancy and Childbirth" />
       <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+      <property name="estSize" value="40MB" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://www.biomedcentral.com/" />
@@ -1031,6 +1068,7 @@
       <property name="title" value="BMC Psychiatry Volume 6" />
       <property name="journalTitle" value="BMC Psychiatry" />
       <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+      <property name="estSize" value="80MB" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://www.biomedcentral.com/" />
@@ -1050,6 +1088,7 @@
       <property name="title" value="BMC Public Health Volume 6" />
       <property name="journalTitle" value="BMC Public Health" />
       <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+      <property name="estSize" value="140MB" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://www.biomedcentral.com/" />
@@ -1069,6 +1108,7 @@
       <property name="title" value="BMC Pulmonary Medicine Volume 6" />
       <property name="journalTitle" value="BMC Pulmonary Medicine" />
       <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+      <property name="estSize" value="65MB" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://www.biomedcentral.com/" />
@@ -1088,6 +1128,7 @@
       <property name="title" value="BMC Structural Biology Volume 6" />
       <property name="journalTitle" value="BMC Structural Biology" />
       <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+      <property name="estSize" value="170MB" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://www.biomedcentral.com/" />
@@ -1107,6 +1148,7 @@
       <property name="title" value="BMC Surgery Volume 6" />
       <property name="journalTitle" value="BMC Surgery" />
       <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+      <property name="estSize" value="50MB" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://www.biomedcentral.com/" />
@@ -1126,6 +1168,7 @@
       <property name="title" value="BMC Systems Biology Volume 1" />
       <property name="journalTitle" value="BMC Systems Biology" />
       <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+      <property name="estSize" value="35MB" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://www.biomedcentral.com/" />
@@ -1145,6 +1188,7 @@
       <property name="title" value="BMC Urology Volume 6" />
       <property name="journalTitle" value="BMC Urology" />
       <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+      <property name="estSize" value="185MB" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://www.biomedcentral.com/" />
@@ -1164,6 +1208,7 @@
       <property name="title" value="BMC Veterinary Research Volume 2" />
       <property name="journalTitle" value="BMC Veterinary Research" />
       <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+      <property name="estSize" value="100MB" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://www.biomedcentral.com/" />
@@ -1183,6 +1228,7 @@
       <property name="title" value="BMC Women's Health Volume 6" />
       <property name="journalTitle" value="BMC Women's Health" />
       <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+      <property name="estSize" value="25MB" />
       <property name="param.1">
 	<property name="key" value="base_url" />
 	<property name="value" value="http://www.biomedcentral.com/" />
