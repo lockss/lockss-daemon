@@ -1,5 +1,5 @@
 /*
- * $Id: CssLinkExtractor.java,v 1.1 2007-02-06 00:37:58 tlipkis Exp $
+ * $Id: CssLinkExtractor.java,v 1.2 2007-02-07 19:32:21 thib_gc Exp $
  */
 
 /*
@@ -37,7 +37,6 @@ import java.net.*;
 
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.*;
-import org.lockss.filter.*;
 import org.w3c.css.sac.*;
 import org.w3c.flute.parser.Parser;
 
@@ -131,7 +130,7 @@ public class CssLinkExtractor implements LinkExtractor {
         if (logger.isDebug2()) {
           logger.debug2("Found " + url + " which resolves to " + resolved);
         }
-        callback.foundUrl(resolved);
+        callback.foundLink(resolved);
       }
       catch (MalformedURLException javaMalformedUrlException) {
         throw new MalformedUrlException(javaMalformedUrlException);
@@ -159,8 +158,10 @@ public class CssLinkExtractor implements LinkExtractor {
   }
   
   /* Inherit documentation */
-  public void extractUrls(ArchivalUnit au, InputStream in,
-			  String encoding, String srcUrl,
+  public void extractUrls(ArchivalUnit au,
+                          InputStream in,
+			  String encoding,
+                          String srcUrl,
 			  LinkExtractor.Callback cb)
       throws MalformedURLException, IOException {
     logger.debug2("Parsing " + srcUrl);
@@ -170,8 +171,10 @@ public class CssLinkExtractor implements LinkExtractor {
     parser.setDocumentHandler(documentHandler);
     
     try {
-      Reader rdr = StreamUtil.getReader(in, encoding);
-      parser.parseStyleSheet(new InputSource(rdr));
+      InputSource inputSource = new InputSource();
+      inputSource.setEncoding(encoding);
+      inputSource.setByteStream(in);
+      parser.parseStyleSheet(inputSource);
     }
     catch (MalformedUrlException lockssMalformedUrlException) {
       MalformedURLException javaMalformedUrlException =

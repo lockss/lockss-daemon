@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingHtmlLinkExtractor.java,v 1.1 2007-02-06 00:37:58 tlipkis Exp $
+ * $Id: TestGoslingHtmlLinkExtractor.java,v 1.2 2007-02-07 19:32:21 thib_gc Exp $
  */
 
 /*
@@ -44,7 +44,7 @@ public class TestGoslingHtmlLinkExtractor extends LockssTestCase {
   static String ENC = Constants.DEFAULT_ENCODING;
 
   GoslingHtmlLinkExtractor extractor = null;
-  MyFoundUrlCallback cb = null;
+  MyLinkExtractorCallback cb = null;
 
   MockArchivalUnit mau;
 
@@ -52,13 +52,13 @@ public class TestGoslingHtmlLinkExtractor extends LockssTestCase {
     super.setUp();
     mau = new MockArchivalUnit();
     extractor = new GoslingHtmlLinkExtractor();
-    cb = new MyFoundUrlCallback();
+    cb = new MyLinkExtractorCallback();
   }
 
   public void testThrowsOnNullInputStream() throws IOException {
     try {
       extractor.extractUrls(mau, null, ENC, "http://www.example.com/",
-			    new MyFoundUrlCallback());
+			    new MyLinkExtractorCallback());
       fail("Calling extractUrls with a null InputStream should have thrown");
     } catch (IllegalArgumentException iae) {
     }
@@ -67,7 +67,7 @@ public class TestGoslingHtmlLinkExtractor extends LockssTestCase {
   public void testThrowsOnNullSourceUrl() throws IOException {
     try {
       extractor.extractUrls(mau, new StringInputStream("Blah"), ENC,
-			    null, new MyFoundUrlCallback());
+			    null, new MyLinkExtractorCallback());
       fail("Calling extractUrls with a null CachedUrl should have thrown");
     } catch (IllegalArgumentException iae) {
     }
@@ -346,7 +346,7 @@ public class TestGoslingHtmlLinkExtractor extends LockssTestCase {
     String content = makeContent(url, startTag, endTag);
     mcu.setContent(content);
 
-    MyFoundUrlCallback cb = new MyFoundUrlCallback();
+    MyLinkExtractorCallback cb = new MyLinkExtractorCallback();
     extractor.extractUrls(mau, new StringInputStream(content), ENC,
 			"http://www.example.com", cb);
 
@@ -1012,10 +1012,10 @@ public class TestGoslingHtmlLinkExtractor extends LockssTestCase {
     return sb.toString();
   }
 
-  private class MyFoundUrlCallback implements LinkExtractor.Callback {
+  private class MyLinkExtractorCallback implements LinkExtractor.Callback {
     Set foundUrls = new HashSet();
 
-    public void foundUrl(String url) {
+    public void foundLink(String url) {
       foundUrls.add(url);
     }
 

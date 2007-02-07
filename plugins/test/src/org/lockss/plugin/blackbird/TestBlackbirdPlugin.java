@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlackbirdPlugin.java,v 1.4 2007-02-06 00:45:14 tlipkis Exp $
+ * $Id: TestBlackbirdPlugin.java,v 1.5 2007-02-07 19:32:21 thib_gc Exp $
  */
 
 /*
@@ -115,7 +115,7 @@ public class TestBlackbirdPlugin extends LockssTestCase {
     final List urls = new ArrayList();
     ext.extractUrls(null, new StringInputStream(ram), null, null,
 		    new LinkExtractor.Callback() {
-		      public void foundUrl(String url) {
+		      public void foundLink(String url) {
 			urls.add(url);
 		      }});
     assertEquals(ListUtil.list("http://www.blackbird.vcu.edu/lockss_media/v0n0/foo/bar.rm"), urls);

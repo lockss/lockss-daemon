@@ -1,5 +1,5 @@
 /*
- * $Id: TestRamLinkExtractor.java,v 1.1 2007-02-06 00:37:58 tlipkis Exp $
+ * $Id: TestRamLinkExtractor.java,v 1.2 2007-02-07 19:32:21 thib_gc Exp $
  */
 
 /*
@@ -42,20 +42,20 @@ public class TestRamLinkExtractor extends LockssTestCase {
   static String ENC = Constants.DEFAULT_ENCODING;
 
   private RamLinkExtractor extractor = null;
-  private MyFoundUrlCallback cb = null;
+  private MyLinkExtractorCallback cb = null;
   private MockArchivalUnit mau;
 
   public void setUp() throws Exception {
     super.setUp();
     mau = new MockArchivalUnit();
     extractor = RamLinkExtractor.makeBasicRamLinkExtractor();
-    cb = new MyFoundUrlCallback();
+    cb = new MyLinkExtractorCallback();
   }
 
   public void testThrows() throws IOException {
     try {
       extractor.extractUrls(mau, null, ENC, "http://www.example.com/",
-			    new MyFoundUrlCallback());
+			    new MyLinkExtractorCallback());
       fail("Calling extractUrls with a null InputStream should have thrown");
     } catch (IllegalArgumentException iae) {
     }
@@ -169,10 +169,10 @@ public class TestRamLinkExtractor extends LockssTestCase {
     assertEquals(expected, actual);
   }
 
-  private class MyFoundUrlCallback implements LinkExtractor.Callback {
+  private class MyLinkExtractorCallback implements LinkExtractor.Callback {
     Set foundUrls = new HashSet();
 
-    public void foundUrl(String url) {
+    public void foundLink(String url) {
       foundUrls.add(url);
     }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlRuleTester.java,v 1.21 2007-02-06 01:03:06 tlipkis Exp $
+ * $Id: CrawlRuleTester.java,v 1.22 2007-02-07 19:32:21 thib_gc Exp $
  */
 
 /*
@@ -308,7 +308,7 @@ public class CrawlRuleTester extends Thread {
 	//       MyMockCachedUrl mcu = new MyMockCachedUrl(srcUrl.toString(), reader);
 	GoslingHtmlLinkExtractor extractor = new GoslingHtmlLinkExtractor();
 	extractor.extractUrls(null, istr, null, srcUrl.toString(),
-			      new MyFoundUrlCallback());
+			      new MyLinkExtractorCallback());
 	istr.close();
 	depth_parsed[m_curDepth - 1]++;
       } finally {
@@ -438,12 +438,12 @@ public class CrawlRuleTester extends Thread {
     void close();
   }
 
-  private class MyFoundUrlCallback implements LinkExtractor.Callback {
+  private class MyLinkExtractorCallback implements LinkExtractor.Callback {
 
-    MyFoundUrlCallback() {
+    MyLinkExtractorCallback() {
     }
 
-    public void foundUrl(String url) {
+    public void foundLink(String url) {
 
       m_extracted.add(url);
       try {

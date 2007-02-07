@@ -1,5 +1,5 @@
 /*
- * $Id: TestCssLinkExtractor.java,v 1.1 2007-02-06 00:37:58 tlipkis Exp $
+ * $Id: TestCssLinkExtractor.java,v 1.2 2007-02-07 19:32:21 thib_gc Exp $
  */
 
 /*
@@ -51,7 +51,7 @@ public class TestCssLinkExtractor extends LockssTestCase {
   protected static class AlwaysFail implements LinkExtractor.Callback {
     
     /* Inherit documentation */
-    public void foundUrl(String url) {
+    public void foundLink(String url) {
       fail("Callback should not have been called");
     }
     
@@ -75,7 +75,7 @@ public class TestCssLinkExtractor extends LockssTestCase {
     }
     
     /* Inherit documentation */
-    public void foundUrl(String url) {
+    public void foundLink(String url) {
       found.add(url);
     }
   

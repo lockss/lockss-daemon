@@ -1,5 +1,5 @@
 /*
- * $Id: ProbePermissionChecker.java,v 1.17 2007-02-06 01:03:09 tlipkis Exp $
+ * $Id: ProbePermissionChecker.java,v 1.18 2007-02-07 19:32:21 thib_gc Exp $
  */
 
 /*
@@ -76,7 +76,7 @@ public class ProbePermissionChecker implements PermissionChecker {
       // XXX ReaderInputStream needed until PermissionChecker changed to
       // take InputStream instead of Reader
       extractor.extractUrls(au, new ReaderInputStream(inputReader), null,
-			       permissionUrl, new MyFoundUrlCallback());
+			       permissionUrl, new MyLinkExtractorCallback());
     } catch (IOException ex) {
       logger.error("Exception trying to parse permission url "+permissionUrl,
 		   ex);
@@ -140,11 +140,11 @@ public class ProbePermissionChecker implements PermissionChecker {
     }
   }
 
-  private class MyFoundUrlCallback implements LinkExtractor.Callback {
-    public MyFoundUrlCallback() {
+  private class MyLinkExtractorCallback implements LinkExtractor.Callback {
+    public MyLinkExtractorCallback() {
     }
 
-    public void foundUrl(String url) {
+    public void foundLink(String url) {
       if (probeUrl != null) {
 	logger.warning("Multiple probe URLs found on manifest page.  " +
 			"Old: "+probeUrl+" New: "+url);

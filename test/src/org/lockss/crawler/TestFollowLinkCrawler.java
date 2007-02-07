@@ -1,5 +1,5 @@
 /*
- * $Id: TestFollowLinkCrawler.java,v 1.23 2007-02-06 00:51:04 tlipkis Exp $
+ * $Id: TestFollowLinkCrawler.java,v 1.24 2007-02-07 19:32:21 thib_gc Exp $
  */
 
 /*
@@ -739,13 +739,13 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     TestableFollowLinkCrawler.MyLinkExtractorCallback mfuc =
       crawler.newFoundUrlCallback(Collections.EMPTY_SET,
 					       extractedUrls, mau);
-    mfuc.foundUrl("http://www.example.com/foo.bar");
-    mfuc.foundUrl("http://www.example.com/SESSION/foo.bar");
-    mfuc.foundUrl("HTTP://www.example.com/SESSION/foo.bar");
+    mfuc.foundLink("http://www.example.com/foo.bar");
+    mfuc.foundLink("http://www.example.com/SESSION/foo.bar");
+    mfuc.foundLink("HTTP://www.example.com/SESSION/foo.bar");
     assertEquals(SetUtil.set("http://www.example.com/foo.bar"), extractedUrls);
     extractedUrls.clear();
     // illegal url gets added depending on path traversal action
-    mfuc.foundUrl("http://www.example.com/foo/../..");
+    mfuc.foundLink("http://www.example.com/foo/../..");
     switch (CurrentConfig.getIntParam(UrlUtil.PARAM_PATH_TRAVERSAL_ACTION,
 				      UrlUtil.DEFAULT_PATH_TRAVERSAL_ACTION)) {
     case UrlUtil.PATH_TRAVERSAL_ACTION_ALLOW:

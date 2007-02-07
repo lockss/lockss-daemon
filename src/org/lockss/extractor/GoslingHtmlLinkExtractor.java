@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingHtmlLinkExtractor.java,v 1.1 2007-02-06 00:37:58 tlipkis Exp $
+ * $Id: GoslingHtmlLinkExtractor.java,v 1.2 2007-02-07 19:32:21 thib_gc Exp $
  */
 
 /*
@@ -81,7 +81,6 @@ import org.lockss.daemon.*;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.*;
 import org.lockss.config.*;
-import org.lockss.filter.*;
 
 public class GoslingHtmlLinkExtractor implements LinkExtractor {
 
@@ -213,7 +212,7 @@ public class GoslingHtmlLinkExtractor implements LinkExtractor {
     if (isTrace) {
       logger.debug2("Extracted "+url);
     }
-    callback.foundUrl(url);
+    callback.foundLink(url);
   }
 
 

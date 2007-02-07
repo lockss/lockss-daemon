@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.56 2007-02-06 00:51:04 tlipkis Exp $
+ * $Id: FollowLinkCrawler.java,v 1.57 2007-02-07 19:32:21 thib_gc Exp $
  */
 
 /*
@@ -505,7 +505,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
      * Check that we should cache this url and haven't already parsed it
      * @param url the url string, fully qualified (ie, not relative)
      */
-    public void foundUrl(String url) {
+    public void foundLink(String url) {
       if (!isSupportedUrlProtocol(url)) {
 	return;
       }

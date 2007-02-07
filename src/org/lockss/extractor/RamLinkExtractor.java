@@ -1,5 +1,5 @@
 /*
- * $Id: RamLinkExtractor.java,v 1.1 2007-02-06 00:37:58 tlipkis Exp $
+ * $Id: RamLinkExtractor.java,v 1.2 2007-02-07 19:32:21 thib_gc Exp $
  */
 
 /*
@@ -79,12 +79,12 @@ public class RamLinkExtractor implements LinkExtractor {
 	 line = bReader.readLine()) {
       line = line.trim();
       if (StringUtil.startsWithIgnoreCase(line, "http://")) {
-	cb.foundUrl(UrlUtil.stripQuery(line));
+	cb.foundLink(UrlUtil.stripQuery(line));
       } else if (source != null
 		 && dest != null
 		 && StringUtil.startsWithIgnoreCase(line, source)) {
 	line = translateString(line, source, dest);
-	cb.foundUrl(UrlUtil.stripQuery(line));
+	cb.foundLink(UrlUtil.stripQuery(line));
       }
     }
     IOUtil.safeClose(bReader);

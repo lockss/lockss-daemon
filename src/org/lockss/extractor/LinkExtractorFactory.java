@@ -1,5 +1,5 @@
 /*
- * $Id: LinkExtractorFactory.java,v 1.1 2007-02-06 00:37:58 tlipkis Exp $
+ * $Id: LinkExtractorFactory.java,v 1.2 2007-02-07 19:32:21 thib_gc Exp $
  */
 
 /*
@@ -31,8 +31,6 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.extractor;
-
-import java.io.*;
 
 import org.lockss.daemon.*;
 
