@@ -35,6 +35,7 @@
       <string>1,&quot;^%scontent/vol%s/&quot;, base_url, volume_name</string>
       <string>1,&quot;^%scgi/(content|content-nw|issue_pdf)/[^/]+/%s/&quot;, base_url, volume_name</string>
       <string>1,&quot;^%scgi/(data|eletters|framedreprint|issue_pdf|pdftoc|reprint|reprintframed|reprintsidebar|screenpdf|video|video_dl)/%s/&quot;, base_url, volume_name</string>
+      <string>1,&quot;^%scgi/(lookup)&quot;, base_url</string>
       <string>1,&quot;^%s(this_week)/%s/&quot;, base_url, volume_name</string>
       <string>2,&quot;^%scgi/(ac_external_ref|adclick|alerts|citemap|citmgr|eletter-submit|external_ref|folders|ijlink|login|mailafriend|reprintspermissions|search)&quot;, base_url</string>
       <string>2,&quot;^%s(adsystem)&quot;, base_url</string>
