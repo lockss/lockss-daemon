@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.74 2007-02-06 01:03:06 tlipkis Exp $
+ * $Id: MockArchivalUnit.java,v 1.75 2007-02-08 08:54:34 tlipkis Exp $
  */
 
 /*
@@ -439,7 +439,7 @@ public class MockArchivalUnit implements ArchivalUnit {
   public String toString() {
     StringBuffer sb = new StringBuffer();
     sb.append("[MockArchivalUnit: auId=");
-    sb.append(auId);
+    sb.append(getAuId());
     sb.append("]");
     return sb.toString();
   }
