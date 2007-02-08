@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyAccessHandler.java,v 1.10 2005-10-11 05:46:28 tlipkis Exp $
+ * $Id: ProxyAccessHandler.java,v 1.11 2007-02-08 08:57:17 tlipkis Exp $
  */
 
 /*
@@ -97,7 +97,7 @@ public class ProxyAccessHandler extends IpAccessHandler {
 	String urlString = uri.toString();
 	// XXX this should check all AUs containing URL for *any* with
 	// legal access, then should pass cuurl to next handler
-	CachedUrl cu = pluginMgr.findOneCachedUrl(urlString);
+	CachedUrl cu = pluginMgr.findCachedUrl(urlString);
 	try {
 	  if (log.isDebug2()) {
 	    log.debug2("cu: " + cu);

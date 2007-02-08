@@ -1,5 +1,5 @@
 /*
- * $Id: TestProxyAccessHandler.java,v 1.3 2005-10-11 05:51:04 tlipkis Exp $
+ * $Id: TestProxyAccessHandler.java,v 1.4 2007-02-08 08:57:17 tlipkis Exp $
  */
 
 /*
@@ -151,7 +151,7 @@ public class TestProxyAccessHandler extends LockssTestCase {
 
   private class MyMockPluginManager extends PluginManager {
     CachedUrl cu;
-    public CachedUrl findOneCachedUrl(String urlString) {
+    public CachedUrl findCachedUrl(String urlString) {
       return cu;
     }
 
