@@ -1,5 +1,5 @@
 /*
- * $Id: TestMimeTypeMap.java,v 1.1 2007-02-06 00:50:26 tlipkis Exp $
+ * $Id: TestMimeTypeMap.java,v 1.2 2007-02-08 08:56:35 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,6 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.daemon;
 
-// import java.io.*;
 import java.util.*;
 
 import org.lockss.app.LockssApp;

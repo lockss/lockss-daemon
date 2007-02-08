@@ -1,5 +1,5 @@
 /*
- * $Id: TestHeaderUtil.java,v 1.2 2007-02-06 00:55:38 tlipkis Exp $
+ * $Id: TestHeaderUtil.java,v 1.3 2007-02-08 08:56:35 tlipkis Exp $
  */
 
 /*
@@ -61,6 +61,10 @@ public class TestHeaderUtil extends LockssTestCase {
 		 HeaderUtil.getCharsetFromContentType("text/html;charset=UTF-8"));
     assertEquals("iso8859-1",
 		 HeaderUtil.getCharsetFromContentType("text/html;charset=\"iso8859-1\""));
+    assertEquals("foo-1",
+		 HeaderUtil.getCharsetFromContentType("text/html;charset=\"foo-1\";other=stuff"));
+    assertEquals("foo-1",
+		 HeaderUtil.getCharsetFromContentType("text/html;charset=foo-1;other=stuff"));
     assertSame(HeaderUtil.getCharsetFromContentType("text/html;charset=\"iso8859-1\""),
 	       HeaderUtil.getCharsetFromContentType("text/html;charset=\"iso8859-1\""));
   }

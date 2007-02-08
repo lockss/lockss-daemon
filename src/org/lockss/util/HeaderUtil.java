@@ -1,5 +1,5 @@
 /*
- * $Id: HeaderUtil.java,v 1.3 2007-02-06 00:55:38 tlipkis Exp $
+ * $Id: HeaderUtil.java,v 1.4 2007-02-08 08:56:35 tlipkis Exp $
  */
 
 /*
@@ -38,6 +38,11 @@ import org.mortbay.util.*;
 /** Static utilities for dealing with HTTP headers */
 public class HeaderUtil {
 
+  // These maps cache the normalized MIME type and charset string extracted
+  // from the Content-Type.  The theory is that there are a few standard
+  // variants of each in common use, so the string processing can be
+  // avoided in most cases without using significant storage.
+
   static LRUMap charsetMap = new LRUMap(100);
   static LRUMap mimeTypeMap = new LRUMap(100);
 
@@ -67,20 +72,15 @@ public class HeaderUtil {
     return mime;
   }
 
-  public static String extractCharsetFromContentType(String contentType) {
-    if (contentType == null) {
-      return null;
-    }
-    int idx = contentType.indexOf(";");
-    if (idx > 0) {
-      int i1=contentType.indexOf("charset=",idx);
-      if (i1>=0) {
-	i1+=8;
-	int i2 = contentType.indexOf(' ',i1);
-	String charset =
-	  i2 > 0 ? contentType.substring(i1, i2) : contentType.substring(i1);
-	return QuotedStringTokenizer.unquote(charset);
+  static String extractCharsetFromContentType(String contentType) {
+    int start, end;
+    if (contentType != null &&
+	(start = contentType.indexOf("charset=")) != -1) {
+      String res = contentType.substring(start + 8);
+      if ((end = res.indexOf(";")) > -1) {
+	res = res.substring(0, end);
       }
+      return QuotedStringTokenizer.unquote(res);
     }
     return null;
   }

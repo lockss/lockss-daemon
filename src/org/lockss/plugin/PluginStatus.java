@@ -1,5 +1,5 @@
 /*
- * $Id: PluginStatus.java,v 1.9 2006-10-31 07:01:06 thib_gc Exp $
+ * $Id: PluginStatus.java,v 1.10 2007-02-08 08:56:35 tlipkis Exp $
  */
 
 /*
@@ -275,7 +275,6 @@ class PluginDetail extends PluginStatus implements StatusAccessor {
       if (info != null) {
 	String url = info.getCuUrl();
 	if (url != null) {
-// 	  CachedUrl cu = mgr.findMostRecentCachedUrl(url);
 	  ArchivalUnit au = info.getRegistryAu();
 	  res.add(new StatusTable.SummaryInfo("Plugin Registry",
 					      ColumnDescriptor.TYPE_STRING,

@@ -1,5 +1,5 @@
 /*
- * $Id: MimeTypeInfo.java,v 1.1 2007-02-06 00:49:32 tlipkis Exp $
+ * $Id: MimeTypeInfo.java,v 1.2 2007-02-08 08:56:35 tlipkis Exp $
  */
 
 /*
@@ -28,8 +28,6 @@ package org.lockss.daemon;
 
 import java.util.*;
 import org.lockss.util.*;
-// import org.lockss.app.*;
-// import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;

@@ -1,5 +1,5 @@
 /*
- * $Id: MimeTypeMap.java,v 1.1 2007-02-06 00:50:26 tlipkis Exp $
+ * $Id: MimeTypeMap.java,v 1.2 2007-02-08 08:56:35 tlipkis Exp $
  */
 
 /*
@@ -28,8 +28,6 @@ package org.lockss.daemon;
 
 import java.util.*;
 import org.lockss.util.*;
-// import org.lockss.app.*;
-// import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
@@ -54,7 +52,6 @@ public class MimeTypeMap {
 
   private Map map = new HashMap();
   private MimeTypeMap parent;
-//   private boolean modifiable = true;
 
   public MimeTypeMap() {
   }
@@ -72,6 +69,11 @@ public class MimeTypeMap {
     map.put(mime, mti);
   }
 
+  /** Get the MimeTypeInfo for the specified contentType, from this map or
+   * its nearest parent.  Do not modify any MimeTypeInfo obtained with this
+   * method - use {@link #modifyMimeTypeInfo(String)} instead.
+   * @param contentType MIME type or value of Content-Type: header
+   * @return MimeTypeInfo if exists, else null. */
   public MimeTypeInfo getMimeTypeInfo(String contentType) {
     String mime = HeaderUtil.getMimeTypeFromContentType(contentType);
     MimeTypeInfo res = (MimeTypeInfo)map.get(mime);
@@ -81,8 +83,10 @@ public class MimeTypeMap {
     return res;
   }
 
-  /** Return a modifiable (<i>Ie</i>, local to this map) MimeTypeInfo for
-   * the given MIME type */
+  /** Return a modifiable (<i>Ie</i>, owned by this map) MimeTypeInfo for
+   * the given MIME type, creating one if necessary.
+   * @param contentType MIME type or value of Content-Type: header
+   * @return a MimeTypeInfo local to this MimeTypeMap. */
   public MimeTypeInfo modifyMimeTypeInfo(String contentType) {
     String mime = HeaderUtil.getMimeTypeFromContentType(contentType);
     MimeTypeInfo res = (MimeTypeInfo)map.get(mime);
