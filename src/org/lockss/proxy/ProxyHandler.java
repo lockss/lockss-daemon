@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.50 2007-01-22 08:07:41 tlipkis Exp $
+ * $Id: ProxyHandler.java,v 1.51 2007-02-08 08:57:59 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.50 2007-01-22 08:07:41 tlipkis Exp $
+// $Id: ProxyHandler.java,v 1.51 2007-02-08 08:57:59 tlipkis Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -87,6 +87,8 @@ public class ProxyHandler extends AbstractHttpHandler {
     Configuration.PREFIX + "proxy.neverProxy";
   static final boolean DEFAULT_NEVER_PROXY = false;
 
+  static final String CLOCKSS_UNSUBSCRIBED = "CLOCKSS_UNSUBSCRIBED";
+
   private LockssDaemon theDaemon = null;
   private PluginManager pluginMgr = null;
   private ProxyManager proxyMgr = null;
@@ -94,6 +96,7 @@ public class ProxyHandler extends AbstractHttpHandler {
   private LockssUrlConnectionPool quickFailConnPool = null;
   private String hostname;
   private boolean neverProxy = DEFAULT_NEVER_PROXY;
+  private boolean auditProxy = false;
   private boolean isFailOver = false;
   private URI failOverTargetUri;
 
@@ -120,6 +123,14 @@ public class ProxyHandler extends AbstractHttpHandler {
 	       LockssUrlConnectionPool quickFailConnPool) {
     this(daemon, pool);
     this.quickFailConnPool = quickFailConnPool;
+  }
+
+  /** If set to true, will act like an audit proxy.  (Content will be
+   * served only from the cache; requests will never be proxied, will serve
+   * CLOCKSS unsubscribed content */
+  public void setAuditProxy(boolean flg) {
+    auditProxy = flg;
+    setFromCacheOnly(flg);
   }
 
   /** If set to true, content will be served only from the cache; requests
@@ -278,17 +289,20 @@ public class ProxyHandler extends AbstractHttpHandler {
       sendIndexPage(request, response);
       return;
     }
-    CachedUrl cu = pluginMgr.findOneCachedUrl(urlString);
+    CachedUrl cu = pluginMgr.findCachedUrl(urlString);
 
     // Don't allow CLOCKSS to serve local content for unsubscribed AUs
-    if (cu != null && theDaemon.isClockss()) {
+    if (cu != null && theDaemon.isClockss() && !auditProxy) {
       ArchivalUnit au = cu.getArchivalUnit();
       switch (AuUtil.getAuState(au).getClockssSubscriptionStatus()) {
       case AuState.CLOCKSS_SUB_UNKNOWN:
       case AuState.CLOCKSS_SUB_NO:
       case AuState.CLOCKSS_SUB_INACCESSIBLE:
+	// Easiest (and safest) to act like we have no local content,
+	// except for error we generate if no publisher content.
 	cu = null;
-	break;
+	response.setAttribute(CLOCKSS_UNSUBSCRIBED, "");
+	return;
       case AuState.CLOCKSS_SUB_YES:
 	break;
       }
@@ -311,8 +325,13 @@ public class ProxyHandler extends AbstractHttpHandler {
 			 response, cu);
 	  return;
 	} else {
-	  // Don't forward request if it's a repair or we were told not to.
-	  response.sendError(HttpResponse.__404_Not_Found);
+	  if (response.getAttribute(CLOCKSS_UNSUBSCRIBED) != null) {
+	    response.sendError(HttpResponse.__403_Forbidden,
+			       "CLOCKSS unsubscribed content");
+	  } else {
+	    // Don't forward request if it's a repair or we were told not to.
+	    response.sendError(HttpResponse.__404_Not_Found);
+	  }
 	  request.setHandled(true);
 	  return;
 	}
@@ -657,22 +676,27 @@ public class ProxyHandler extends AbstractHttpHandler {
 	return;
       }
 
-      Collection candidateAus = null;
-      int code=conn.getResponseCode();
-      if (proxyMgr.showManifestIndexForResponse(code)) {
-	switch (code) {
-	case HttpResponse.__200_OK:
-	  // XXX check for login page
-	case HttpResponse.__304_Not_Modified:
-	  break;
-	default:
-	  candidateAus = pluginMgr.getCandidateAus(urlString);
-	}
-      }
-      if (candidateAus != null && !candidateAus.isEmpty()) {
- 	forwardResponseWithIndex(request, response, candidateAus, conn);
+      if (response.getAttribute(CLOCKSS_UNSUBSCRIBED) != null) {
+	response.sendError(HttpResponse.__403_Forbidden,
+			   "CLOCKSS unsubscribed content");
       } else {
-	forwardResponse(request, response, conn);
+	Collection candidateAus = null;
+	int code=conn.getResponseCode();
+	if (proxyMgr.showManifestIndexForResponse(code)) {
+	  switch (code) {
+	  case HttpResponse.__200_OK:
+	    // XXX check for login page
+	  case HttpResponse.__304_Not_Modified:
+	    break;
+	  default:
+	    candidateAus = pluginMgr.getCandidateAus(urlString);
+	  }
+	}
+	if (candidateAus != null && !candidateAus.isEmpty()) {
+	  forwardResponseWithIndex(request, response, candidateAus, conn);
+	} else {
+	  forwardResponse(request, response, conn);
+	}
       }
     } catch (Exception e) {
       log.error("doLockss error", e);
@@ -971,60 +995,16 @@ public class ProxyHandler extends AbstractHttpHandler {
 //     }
   }
 
-  void sendErrorPage0(HttpRequest request,
+  void sendErrorPage(HttpRequest request,
 		     HttpResponse response,
 		     int code, String msg)
       throws HttpException, IOException {
-    response.setStatus(code);
-    Integer codeInt = new Integer(code);
-    String respMsg = (String)HttpResponse.__statusMsg.get(codeInt);
-    if (respMsg == null) {
-      respMsg = Integer.toString(code);
-    }
-    response.setReason(respMsg);
-
-    response.setContentType(HttpFields.__TextHtml);
-    ByteArrayISO8859Writer writer = new ByteArrayISO8859Writer(2048);
-
-    URI uri = request.getURI();
-
-    writer.write("<html>\n<head>\n<title>Error ");
-    writer.write(Integer.toString(code));
-    writer.write(' ');
-    writer.write(respMsg);
-    writer.write("</title>\n");
-
-    writer.write("<body>\n");
-
-    writer.write("<h2>Proxy Error (");
-    writer.write(code + " " + respMsg);
-    writer.write(")</h2>");
-
-    writer.write("<font size=+1>");
-    writer.write(msg);
-    writer.write("<br>Attempting to proxy request for <b>");
-    writer.write(uri.toString());
-    writer.write("</b>");
-    writer.write("</font>");
-
-    writer.write("<br>");
-    writer.write("</p>\n<p><i><small>");
-    writer.write("<a href=\"" + Constants.LOCKSS_HOME_URL +
-		 "\">LOCKSS proxy</a>, ");
-    writer.write("<a href=\"http://jetty.mortbay.org/\">powered by Jetty</a>");
-    writer.write("</small></i></p>");
-    writer.write("\n</body>\n</html>\n");
-    writer.flush();
-    response.setContentLength(writer.size());
-    writer.writeTo(response.getOutputStream());
-    writer.destroy();
-
-    request.setHandled(true);
+    sendErrorPage(request, response, code, msg, null);
   }
 
   void sendErrorPage(HttpRequest request,
 		     HttpResponse response,
-		     int code, String msg)
+		     int code, String msg, Collection candidateAus)
       throws HttpException, IOException {
     response.setStatus(code);
     Integer codeInt = new Integer(code);
@@ -1063,7 +1043,7 @@ public class ProxyHandler extends AbstractHttpHandler {
     writer.write("</font>");
     writer.write("<br>");
 
-    writeErrorAuIndex(writer, urlString);
+    writeErrorAuIndex(writer, urlString, candidateAus);
     writeFooter(writer);
     writer.flush();
     response.setContentLength(writer.size());
@@ -1073,9 +1053,10 @@ public class ProxyHandler extends AbstractHttpHandler {
     request.setHandled(true);
   }
 
-  void writeErrorAuIndex(Writer writer, String urlString) throws IOException {
+  void writeErrorAuIndex(Writer writer, String urlString,
+			 Collection candidateAus)
+      throws IOException {
     if (true) {
-      Collection candidateAus = pluginMgr.getCandidateAus(urlString);
       if (candidateAus != null && !candidateAus.isEmpty()) {
 	writer.write("<br>This LOCKSS cache (" +
 		     PlatformUtil.getLocalHostname() +
@@ -1135,7 +1116,8 @@ public class ProxyHandler extends AbstractHttpHandler {
     String host = HtmlUtil.htmlEncode(request.getURI().getHost());
     String reason = conn.getResponseMessage();
     reason = HtmlUtil.htmlEncode(reason);
-    sendErrorPage(request, response, code, "The server <b>" + host +
-		  "</b> responded with <b>" + code + " " + reason + "</b>");
+    String msg = "The server <b>" + host + "</b> responded with <b>"
+      + code + " " + reason + "</b>";
+    sendErrorPage(request, response, code, msg, candidateAus);
   }
 }

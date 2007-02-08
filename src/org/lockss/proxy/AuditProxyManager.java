@@ -1,5 +1,5 @@
 /*
- * $Id: AuditProxyManager.java,v 1.7 2004-10-18 03:38:12 tlipkis Exp $
+ * $Id: AuditProxyManager.java,v 1.8 2007-02-08 08:57:59 tlipkis Exp $
  */
 
 /*
@@ -90,7 +90,7 @@ public class AuditProxyManager extends BaseProxyManager {
   protected org.lockss.proxy.ProxyHandler makeProxyHandler() {
     org.lockss.proxy.ProxyHandler handler =
       new org.lockss.proxy.ProxyHandler(getDaemon());
-    handler.setFromCacheOnly(true);
+    handler.setAuditProxy(true);
     return handler;
   }
 }
