@@ -13,6 +13,9 @@ while true ; do
     "-debug" )
       args="$args -Dorg.lockss.defaultLogLevel=DEBUG"
       shift; continue;;
+    "-jdb" )
+      jdb=1
+      shift; continue;;
     "-1.4" )
       if [ -z "$JAVA_14_HOME" ] ; then
 	echo "-1.4 option requires JAVA_14_HOME to point to 1.4 install dir"
@@ -60,7 +63,11 @@ echo running at `date`
 #echo CLASSPATH=$CLASSPATH
 # for large caches, need to pass "-ms4m -mx64m" to java
 #java org.lockss.app.LockssDaemon ${PROP_URL_LIST} >>test.out 2>&1 &
-java -mx256m $args org.lockss.app.LockssDaemon ${PROP_URL_LIST} >>test.out 2>&1 &
-echo $! >dpid
-wait `cat dpid`
-echo stopped with status $? at `date`
+if [ -z "$jdb" ]; then
+ java -mx256m $args org.lockss.app.LockssDaemon ${PROP_URL_LIST} >>test.out 2>&1 &
+ echo $! >dpid
+ wait `cat dpid`
+ echo stopped with status $? at `date`
+else
+ jdb -mx256m $args org.lockss.app.LockssDaemon ${PROP_URL_LIST}
+fi
