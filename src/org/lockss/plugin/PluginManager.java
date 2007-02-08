@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.173 2007-01-18 02:27:40 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.174 2007-02-08 08:56:57 tlipkis Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import java.util.jar.*;
 
 import org.apache.commons.collections.*;
 import org.apache.commons.collections.map.*;
+import org.apache.commons.collections.map.LRUMap;
 
 import org.lockss.app.*;
 import org.lockss.config.*;
@@ -47,6 +48,7 @@ import org.lockss.crawler.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.definable.DefinablePlugin;
 import org.lockss.poller.PollSpec;
+import org.lockss.state.*;
 import org.lockss.util.*;
 
 /**
@@ -179,7 +181,7 @@ public class PluginManager
       super(new HashMap(),
 	    new org.apache.commons.collections.Factory() {
 	      public Object create() {
-		return new TreeSet(new AuOrderComparator());
+		return new ArrayList(3);
 	      }});
     }
   }
@@ -1269,27 +1271,55 @@ public class PluginManager
    * @param url The URL to search for.
    * @return a CachedUrl, or null if URL not present in any AU
    */
-  public CachedUrl findOneCachedUrl(String url) {
+  public CachedUrl findCachedUrl(String url) {
     return findTheCachedUrl(url, false);
   }
 
-  public CachedUrl findMostRecentCachedUrl(String url) {
-    return findTheCachedUrl(url, true);
-  }
+//   public CachedUrl findMostRecentCachedUrl(String url) {
+//     return findTheCachedUrl(url, true);
+//   }
 
   /** Return a collection of all AUs that have content on the host of this
-   * url */
-  // XXX Should do something about the redundant normalization involved in
+   * url, sorted in AU title order.  */
+  // This method needs to copy the list anyway, to avoid CME, so this is as
+  // good a place as any to sort it.
+  //  XXX Should do something about the redundant normalization involved in
   // calling more than one of these methods
   public Collection getCandidateAus(String url) throws MalformedURLException {
     String normStem = UrlUtil.getUrlPrefix(UrlUtil.normalizeUrl(url));
-    return (Collection)hostAus.get(normStem);
+    synchronized (hostAus) {
+      Set res = new TreeSet(new AuOrderComparator());
+      res.addAll((Collection)hostAus.get(normStem));
+      return res;
+    }
   }  
 
-  /** Find a CachedUrl for the URL.  If mostRecent, search for the most
-   * recently collected file, else return the first one we find.
+  // Return actual list of candiate AUs, used only for testing
+  List getRawCandidateAus(String url) throws MalformedURLException {
+    String normStem = UrlUtil.getUrlPrefix(UrlUtil.normalizeUrl(url));
+    synchronized (hostAus) {
+      return (List)hostAus.get(normStem);
+    }
+  }
+
+  private Map recentCuMap = Collections.synchronizedMap(new LRUMap(20));
+
+
+  /** Find a CachedUrl for the URL.  
    */
-  private CachedUrl findTheCachedUrl(String url, boolean mostRecent) {
+  private CachedUrl findTheCachedUrl(String url, boolean findMostRecent) {
+    // Maintain a small cache of URL -> CU.  When ICP is in use, each URL
+    // will likely be looked up twice in quick succession
+
+    CachedUrl res = (CachedUrl)recentCuMap.get(url);
+    if (res == null) {
+      res = findTheCachedUrl0(url, findMostRecent);
+      recentCuMap.put(url, res);
+    }
+    return res;
+  }
+
+  private CachedUrl findTheCachedUrl0(String url, boolean findMostRecent) {
     // We don't know what AU it might be in, so can't do plugin-dependent
     // normalization yet.  But only need to do generic normalization once.
     // XXX This is wrong, as plugin-specific normalization is normally done
@@ -1300,28 +1330,35 @@ public class PluginManager
       normUrl = UrlUtil.normalizeUrl(url);
       normStem = UrlUtil.getUrlPrefix(normUrl);
     } catch (MalformedURLException e) {
-      log.warning("findMostRecentCachedUrl(" + url + ")", e);
+      log.warning("findTheCachedUrl(" + url + ")", e);
       return null;
     }
     synchronized (hostAus) {
-      Collection candidateAus = (Collection)hostAus.get(normStem);
+      ArrayList candidateAus = (ArrayList)hostAus.get(normStem);
       if (candidateAus == null) {
 	return null;
       }
-      CachedUrl best = null;
-      for (Iterator iter = candidateAus.iterator(); iter.hasNext();) {
+      CachedUrl bestCu = null;
+      int bestAuIx = -1;
+      int bestScore = 8;
+      int auIx = 0;
+      for (Iterator iter = candidateAus.iterator(); iter.hasNext(); auIx++) {
 	ArchivalUnit au = (ArchivalUnit)iter.next();
 	if (au.shouldBeCached(normUrl)) {
 	  try {
 	    String siteUrl = UrlUtil.normalizeUrl(normUrl, au);
 	    CachedUrl cu = au.makeCachedUrl(siteUrl);
 	    if (cu != null && cu.hasContent()) {
-	      if (!mostRecent) {
+	      int score = score(au, cu);
+	      if (score == 0) {
+		makeFirstCandidate(candidateAus, auIx);
 		return cu;
 	      }
-	      if (cuNewerThan(cu, best)) {
-		AuUtil.safeRelease(best);
-		best = cu;
+	      if (score < bestScore) {
+		AuUtil.safeRelease(bestCu);
+		bestCu = cu;
+		bestAuIx = auIx;
+		bestScore = score;
 	      } else {
 		cu.release();
 	      }
@@ -1333,19 +1370,51 @@ public class PluginManager
 	  }
 	}
       }
-      return best;
+      makeFirstCandidate(candidateAus, bestAuIx);
+      return bestCu;
     }
   }
 
-  // return true if cu1 is newer than cu2, or cu2 is null
-  // XXX - should compare last-modified times, or crawl times?
-  private boolean cuNewerThan(CachedUrl cu1, CachedUrl cu2) {
-    if (cu2 == null) return true;
-    return false;
-//     CIProperties p1 = cu1.getProperties();
-//     CIProperties p2 = cu2.getProperties();
-    //     Long.parseLong(p1.getProperty(HttpFields.__LastModified, "-1"));
+  // Move the AU in which we found the CU to the head of the list, as it's
+  // likely next request will be for the same AU.
+  private void makeFirstCandidate(List lst, int ix) {
+    if (ix > 0) {
+      synchronized (hostAus) {
+	Collections.swap(lst, ix, 0);
+      }
+    }
   }
+
+  // Combine the various elements of desirability into a single score;
+  // lower is better, zero is best.
+  private int score(ArchivalUnit au, CachedUrl cu) {
+    if (cu == null) return 4;
+    int res = 0;
+    if (isUnsubscribed(au)) res += 2;
+    if (isDamaged(cu)) res += 1;
+    return res;
+  }
+
+  private boolean isUnsubscribed(ArchivalUnit au) {
+    return (getDaemon().isClockss() &&
+	    (AuUtil.getAuState(au).getClockssSubscriptionStatus() !=
+	     AuState.CLOCKSS_SUB_YES));
+  }
+
+  // XXX
+  private boolean isDamaged(CachedUrl cu) {
+    return false;
+  }
+
+//   // return true if cu1 is newer than cu2, or cu2 is null
+//   // XXX - should compare last-modified times, or crawl times?
+//   private boolean cuNewerThan(CachedUrl cu1, CachedUrl cu2) {
+//     if (cu2 == null) return true;
+//     return false;
+// //     CIProperties p1 = cu1.getProperties();
+// //     CIProperties p2 = cu2.getProperties();
+//     //     Long.parseLong(p1.getProperty(HttpFields.__LastModified, "-1"));
+//   }
 
   /**
    * Return a list of all configured ArchivalUnits.  The UI relies on
@@ -1603,36 +1672,6 @@ public class PluginManager
 	  }
 	}
       }
-    }
-  }
-
-  /** Comparator for sorting Aus alphabetically by title.  This is used in a
-   * TreeSet, so must return 0 only for identical objects. */
-  static class AuOrderComparator implements Comparator {
-    CatalogueOrderComparator coc = CatalogueOrderComparator.SINGLETON;
-
-    public int compare(Object o1, Object o2) {
-      if (o1 == o2) {
-	return 0;
-      }
-      if (!((o1 instanceof ArchivalUnit)
-	    && (o2 instanceof ArchivalUnit))) {
-	throw new IllegalArgumentException("AuOrderComparator(" +
-					   o1.getClass().getName() + "," +
-					   o2.getClass().getName() + ")");
-      }
-      ArchivalUnit a1 = (ArchivalUnit)o1;
-      ArchivalUnit a2 = (ArchivalUnit)o2;
-      int res = coc.compare(a1.getName(), a2.getName());
-      if (res == 0) {
-	res = coc.compare(a1.getAuId(), a2.getAuId());
-      }
-      if (res == 0) {
-	// this can happen during testing.  Don't care about order, but
-	// mustn't be equal.
-	res = 1;
-      }
-      return res;
     }
   }
 

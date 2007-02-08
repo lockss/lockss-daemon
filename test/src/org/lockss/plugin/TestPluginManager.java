@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.76 2007-01-18 02:27:40 tlipkis Exp $
+ * $Id: TestPluginManager.java,v 1.77 2007-02-08 08:56:57 tlipkis Exp $
  */
 
 /*
@@ -46,7 +46,7 @@ import org.lockss.repository.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
 import org.lockss.repository.*;
-import org.lockss.state.HistoryRepositoryImpl;
+import org.lockss.state.*;
 
 /**
  * Test class for org.lockss.plugin.PluginManager
@@ -855,36 +855,112 @@ public class TestPluginManager extends LockssTestCase {
   }
 
 
-  public void testFindMostRecentCachedUrl() throws Exception {
-    String prefix = "http://foo.bar/";
+  public void testFindCachedUrl() throws Exception {
     String url1 = "http://foo.bar/baz";
     String url1a = "http://foo.bar:80/baz";
     String url1b = "http://FOO.BAR:80/baz";
-    String url2 = "http://foo.bar/not";
+    String url2 = "http://foo.bar/222";
+    String url3 = "http://foo.bar/333";
+    String url4 = "http://foo.bar/444";
     doConfig();
     MockPlugin mpi = (MockPlugin)mgr.getPlugin(mockPlugKey);
 
     // get the two archival units
     MockArchivalUnit au1 = (MockArchivalUnit)mgr.getAuFromId(mauauid1);
-//     ArchivalUnit au2 = mgr.getAuFromId(mauauid2);
-    assertNull(mgr.findMostRecentCachedUrl(url1));
-    CachedUrlSetSpec cuss = new MockCachedUrlSetSpec(prefix, null);
-    MockCachedUrlSet mcuss = new MockCachedUrlSet(au1, cuss);
+    MockArchivalUnit au2 = (MockArchivalUnit)mgr.getAuFromId(mauauid2);
+    assertNull(mgr.findCachedUrl(url1));
+    assertNull(mgr.findCachedUrl(url2));
     au1.addUrl(url1, true, true, null);
-    au1.setAuCachedUrlSet(mcuss);
-    CachedUrl cu = mgr.findMostRecentCachedUrl(url1);
-    assertNotNull(cu);
+    au2.addUrl(url2, true, true, null);
+    au1.addUrl(url3, true, true, null);
+    au2.addUrl(url3, true, true, null);
+    CachedUrl cu = mgr.findCachedUrl(url1);
     assertEquals(url1, cu.getUrl());
-    cu = mgr.findMostRecentCachedUrl(url1a);
-    assertNotNull(cu);
+    assertSame(au1, cu.getArchivalUnit());
+    cu = mgr.findCachedUrl(url1a);
     assertEquals(url1, cu.getUrl());
-    cu = mgr.findMostRecentCachedUrl(url1b);
-    assertNotNull(cu);
+    assertSame(au1, cu.getArchivalUnit());
+    cu = mgr.findCachedUrl(url1b);
     assertEquals(url1, cu.getUrl());
-    assertNull(mgr.findMostRecentCachedUrl(url2));
+    assertSame(au1, cu.getArchivalUnit());
+
+    cu = mgr.findCachedUrl(url2);
+    assertEquals(url2, cu.getUrl());
+    assertSame(au2, cu.getArchivalUnit());
+
+    cu = mgr.findCachedUrl(url3);
+    assertEquals(url3, cu.getUrl());
   }
 
-  public void testFindMostRecentCachedUrlWithNormalization()
+  AuState setUpAuState(MockArchivalUnit mau) {
+    // accessing the AuState requires NodeManager, HistoryRepository
+    MockHistoryRepository histRepo = new MockHistoryRepository();
+    histRepo.storeAuState(new AuState(mau, histRepo));
+    theDaemon.setHistoryRepository(histRepo, mau);
+    MockNodeManager nodeMgr = new MockNodeManager();
+    theDaemon.setNodeManager(nodeMgr, mau);
+    return AuUtil.getAuState(mau);
+  }
+
+  public void testFindCachedUrlClockss() throws Exception {
+    String url1 = "http://foo.bar/baz";
+    String url1a = "http://foo.bar:80/baz";
+    String url1b = "http://FOO.BAR:80/baz";
+    String url2 = "http://foo.bar/222";
+    String url3 = "http://foo.bar/333";
+    doConfig();
+    ConfigurationUtil.addFromArgs(ConfigManager.PARAM_PLATFORM_PROJECT,
+				  "clockss");
+    assertTrue(theDaemon.isClockss());
+    MockPlugin mpi = (MockPlugin)mgr.getPlugin(mockPlugKey);
+
+    // get the two archival units
+    MockArchivalUnit au1 = (MockArchivalUnit)mgr.getAuFromId(mauauid1);
+    MockArchivalUnit au2 = (MockArchivalUnit)mgr.getAuFromId(mauauid2);
+    AuState aus1 = setUpAuState(au1);
+    AuState aus2 = setUpAuState(au2);
+    aus1.setClockssSubscriptionStatus(AuState.CLOCKSS_SUB_NO);
+    aus2.setClockssSubscriptionStatus(AuState.CLOCKSS_SUB_YES);
+
+    assertSameElements(ListUtil.list(au1, au2),
+		       mgr.getCandidateAus("http://foo.bar/"));
+
+    assertNull(mgr.findCachedUrl(url1));
+    assertNull(mgr.findCachedUrl(url2));
+    au1.addUrl(url1, true, true, null);
+    au2.addUrl(url2, true, true, null);
+    au1.addUrl(url3, true, true, null);
+    au2.addUrl(url3, true, true, null);
+    CachedUrl cu = mgr.findCachedUrl(url1);
+    assertEquals(url1, cu.getUrl());
+    assertSame(au1, cu.getArchivalUnit());
+    // au1 should be at head of candidate list, having been found most recently
+    assertIsomorphic(ListUtil.list(au1, au2),
+		     mgr.getRawCandidateAus("http://foo.bar/"));
+    cu = mgr.findCachedUrl(url1a);
+    assertEquals(url1, cu.getUrl());
+    assertSame(au1, cu.getArchivalUnit());
+    cu = mgr.findCachedUrl(url1b);
+    assertEquals(url1, cu.getUrl());
+    assertSame(au1, cu.getArchivalUnit());
+    assertEquals(AuState.CLOCKSS_SUB_NO,
+		 AuUtil.getAuState(cu.getArchivalUnit()).getClockssSubscriptionStatus());
+
+    cu = mgr.findCachedUrl(url2);
+    assertEquals(url2, cu.getUrl());
+    assertSame(au2, cu.getArchivalUnit());
+    // now au2 should be at head of candidate list
+    assertIsomorphic(ListUtil.list(au2, au1),
+		     mgr.getRawCandidateAus("http://foo.bar/"));
+
+    cu = mgr.findCachedUrl(url3);
+    assertEquals(url3, cu.getUrl());
+    assertSame(au2, cu.getArchivalUnit());
+    assertEquals(AuState.CLOCKSS_SUB_YES,
+		 AuUtil.getAuState(cu.getArchivalUnit()).getClockssSubscriptionStatus());
+  }
+
+  public void testFindCachedUrlWithSiteNormalization()
       throws Exception {
     final String prefix = "http://foo.bar/"; // pseudo crawl rule prefix
     String url0 = "http://foo.bar/xxx/baz"; // normal form of test url
@@ -908,25 +984,22 @@ public class TestPluginManager extends LockssTestCase {
     mau.setAuId("mauauidddd");
     mgr.putAuInMap(mau);
     // neither url is found
-    assertNull(mgr.findMostRecentCachedUrl(url1));
-    assertNull(mgr.findMostRecentCachedUrl(url2));
+    assertNull(mgr.findCachedUrl(url1));
+    assertNull(mgr.findCachedUrl(url2));
     // create mock structure so that url0 exists with content
-    CachedUrlSetSpec cuss = new MockCachedUrlSetSpec(prefix, null);
-    MockCachedUrlSet mcuss = new MockCachedUrlSet(mau, cuss);
     mau.addUrl(url0, true, true, null);
-    mau.setAuCachedUrlSet(mcuss);
     // url1 should now be found, as url0
-    CachedUrl cu = mgr.findMostRecentCachedUrl(url1);
+    CachedUrl cu = mgr.findCachedUrl(url1);
     assertNotNull(cu);
     assertEquals(url0, cu.getUrl());
-    cu = mgr.findMostRecentCachedUrl(url1a);
+    cu = mgr.findCachedUrl(url1a);
     assertNotNull(cu);
     assertEquals(url0, cu.getUrl());
-    cu = mgr.findMostRecentCachedUrl(url1b);
+    cu = mgr.findCachedUrl(url1b);
     assertNotNull(cu);
     assertEquals(url0, cu.getUrl());
     // url2 still not found
-    assertNull(mgr.findMostRecentCachedUrl(url2));
+    assertNull(mgr.findCachedUrl(url2));
   }
 
   public void testGenerateAuId() {
