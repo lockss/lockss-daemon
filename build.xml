@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.210 2007-02-06 00:43:30 tlipkis Exp $
+ $Id: build.xml,v 1.211 2007-02-08 08:55:33 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
@@ -459,6 +459,7 @@ Test results in ${test.results}
          maxmemory="256m" haltonfailure="${halt}" failureproperty="failed"
          filtertrace="${filtertrace}" showoutput="${showoutput}">
       <junitelem/>
+      <jvmarg value="-server"/>
       <formatter type="plain" usefile="@{usefile}" />
       <classpath refid="@{cpid}" />
       <sysproperty key="java.library.path" value="${test.native}"/>

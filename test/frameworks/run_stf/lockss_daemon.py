@@ -1639,7 +1639,7 @@ class LockssDaemon:
 
     def start(self):
         if not self.isRunning:
-            cmd = '%s -cp %s -Dorg.lockss.defaultLogLevel=debug '\
+            cmd = '%s -server -cp %s -Dorg.lockss.defaultLogLevel=debug '\
                   'org.lockss.app.LockssDaemon %s > %s 2>&1 & '\
                   'echo $! > %s/dpid'\
                   % (self.javaBin, self.cp, ' '.join(self.configList),

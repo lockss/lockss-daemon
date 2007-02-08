@@ -60,7 +60,7 @@ while true ; do
 done
 
 if [ -z "$args" ]; then
-  args=-Dorg.lockss.defaultLogLevel=DEBUG
+  args=-server -Dorg.lockss.defaultLogLevel=DEBUG
 fi
 
 #PROP_URL_LIST="-p http://props.lockss.org:8001/daemon/forbidden.xml -p local.txt"
