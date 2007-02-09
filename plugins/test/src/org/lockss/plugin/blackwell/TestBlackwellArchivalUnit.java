@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlackwellArchivalUnit.java,v 1.5 2007-01-14 08:13:30 tlipkis Exp $
+ * $Id: TestBlackwellArchivalUnit.java,v 1.6 2007-02-09 19:32:31 troberts Exp $
  */
 
 /*
@@ -184,10 +184,10 @@ public class TestBlackwellArchivalUnit extends LockssPluginTestCase {
     assertShouldNotCache(baseUrl+"doi/pdf/10.1111/j.1540-8159.2006.00355",
 			 au, cus);
 
-    assertShouldCache(baseUrl+"template", au, cus);
-    assertShouldCache(baseUrl+"help", au, cus);
-    assertShouldCache(baseUrl+"template/foo", au, cus);
-    assertShouldCache(baseUrl+"help/foo", au, cus);
+    assertShouldNotCache(baseUrl+"template", au, cus);
+    assertShouldNotCache(baseUrl+"help", au, cus);
+    assertShouldNotCache(baseUrl+"template/foo", au, cus);
+    assertShouldNotCache(baseUrl+"help/foo", au, cus);
 
 
     assertShouldNotCache(baseUrl+"feedback", au, cus);
