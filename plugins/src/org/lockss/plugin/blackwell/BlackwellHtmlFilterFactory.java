@@ -1,5 +1,5 @@
 /*
- * $Id: BlackwellHtmlFilterFactory.java,v 1.2 2006-09-18 22:29:01 thib_gc Exp $
+ * $Id: BlackwellHtmlFilterFactory.java,v 1.3 2007-02-09 19:32:09 troberts Exp $
  */
 
 /*
@@ -48,6 +48,7 @@ public class BlackwellHtmlFilterFactory implements FilterFactory {
   static HtmlTagFilter.TagPair[] tagpairs = {
     new HtmlTagFilter.TagPair("<!-- Institution/Society Banners -->", "\n"),
     new HtmlTagFilter.TagPair("<!-- Ad Placeholder", "\n"),
+    new HtmlTagFilter.TagPair("<", ">"),
   };
   static List tagList = ListUtil.fromArray(tagpairs);
 
@@ -70,7 +71,7 @@ public class BlackwellHtmlFilterFactory implements FilterFactory {
 
     Reader rdr = FilterUtil.getReader(htmlFilter, encoding);
     Reader tagFilter = HtmlTagFilter.makeNestedFilter(rdr, tagList);
-    return new ReaderInputStream(tagFilter);
-//     return new ReaderInputStream(new WhiteSpaceFilter(tagFilter));
+    //    return new ReaderInputStream(tagFilter);
+    return new ReaderInputStream(new WhiteSpaceFilter(tagFilter));
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlackwellHtmlFilterFactory.java,v 1.1 2006-09-16 22:50:43 tlipkis Exp $
+ * $Id: TestBlackwellHtmlFilterFactory.java,v 1.2 2007-02-09 19:32:09 troberts Exp $
  */
 
 /*
@@ -50,7 +50,7 @@ public class TestBlackwellHtmlFilterFactory extends LockssTestCase {
   }
 
   private static final String in1 = 
-    "<center><span class=\"bannerstyle\">\n" +
+    "Test content<center><span class=\"bannerstyle\">\n" +
     "<!-- Institution/Society Banners -->Licensed by Stanford\n" +
     "<!-- Ad Placeholder Id 1017 --><img src=\"/sda/8432/JOPY_synergy.jpg\" width=\"445\" height=\"60\" border=\"0\">\n" +
     "<!-- Ad Placeholder Id 1016 -->\n" +
@@ -58,17 +58,17 @@ public class TestBlackwellHtmlFilterFactory extends LockssTestCase {
     "<!-- END REGION 2 -->\n";
 
   private static final String in2 = 
-    "<center><span class=\"bannerstyle\">\n" +
+    "<b>Test content</b><center><span class=\"bannerstyle\">\n" +
     "<!-- Institution/Society Banners -->Licensed by Generic U.\n" +
     "<!-- Ad Placeholder Id 1017 --><img src=\"/sda/9999/JOPY_synergy.jpg\" width=\"445\" height=\"60\" border=\"0\">\n" +
     "<!-- Ad Placeholder Id 1016 -->\n" +
     "</span></center>\n" +
     "<!-- END REGION 2 -->\n";
 
-  private static final String out = 
-    "<center><span class=\"bannerstyle\">\n" +
-    "</span></center>\n" +
-    "<!-- END REGION 2 -->\n";
+  private static final String out = "Test content ";
+//     "<center><span class=\"bannerstyle\">\n" +
+//     "</span></center>\n" +
+//     "<!-- END REGION 2 -->\n";
 
   public void testFilter() throws IOException {
     InputStream inA;
