@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.51 2007-02-08 08:57:59 tlipkis Exp $
+ * $Id: ProxyHandler.java,v 1.52 2007-02-10 06:53:13 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.51 2007-02-08 08:57:59 tlipkis Exp $
+// $Id: ProxyHandler.java,v 1.52 2007-02-10 06:53:13 tlipkis Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -86,8 +86,6 @@ public class ProxyHandler extends AbstractHttpHandler {
   static final String PARAM_NEVER_PROXY =
     Configuration.PREFIX + "proxy.neverProxy";
   static final boolean DEFAULT_NEVER_PROXY = false;
-
-  static final String CLOCKSS_UNSUBSCRIBED = "CLOCKSS_UNSUBSCRIBED";
 
   private LockssDaemon theDaemon = null;
   private PluginManager pluginMgr = null;
@@ -298,11 +296,9 @@ public class ProxyHandler extends AbstractHttpHandler {
       case AuState.CLOCKSS_SUB_UNKNOWN:
       case AuState.CLOCKSS_SUB_NO:
       case AuState.CLOCKSS_SUB_INACCESSIBLE:
-	// Easiest (and safest) to act like we have no local content,
-	// except for error we generate if no publisher content.
+	// If CLOCKSS unsubscribed content, forget that we have local copy
 	cu = null;
-	response.setAttribute(CLOCKSS_UNSUBSCRIBED, "");
-	return;
+	break;
       case AuState.CLOCKSS_SUB_YES:
 	break;
       }
@@ -325,13 +321,8 @@ public class ProxyHandler extends AbstractHttpHandler {
 			 response, cu);
 	  return;
 	} else {
-	  if (response.getAttribute(CLOCKSS_UNSUBSCRIBED) != null) {
-	    response.sendError(HttpResponse.__403_Forbidden,
-			       "CLOCKSS unsubscribed content");
-	  } else {
-	    // Don't forward request if it's a repair or we were told not to.
-	    response.sendError(HttpResponse.__404_Not_Found);
-	  }
+	  // Don't forward request if it's a repair or we were told not to.
+	  response.sendError(HttpResponse.__404_Not_Found);
 	  request.setHandled(true);
 	  return;
 	}
@@ -676,27 +667,23 @@ public class ProxyHandler extends AbstractHttpHandler {
 	return;
       }
 
-      if (response.getAttribute(CLOCKSS_UNSUBSCRIBED) != null) {
-	response.sendError(HttpResponse.__403_Forbidden,
-			   "CLOCKSS unsubscribed content");
+      Collection candidateAus = null;
+      int code=conn.getResponseCode();
+      if (proxyMgr.showManifestIndexForResponse(code)) {
+	switch (code) {
+	case HttpResponse.__200_OK:
+	  // XXX check for login page
+	case HttpResponse.__304_Not_Modified:
+	  break;
+	default:
+	  log.debug("Response: " + code + ", finding candidate AUs");
+	  candidateAus = pluginMgr.getCandidateAus(urlString);
+	}
+      }
+      if (candidateAus != null && !candidateAus.isEmpty()) {
+	forwardResponseWithIndex(request, response, candidateAus, conn);
       } else {
-	Collection candidateAus = null;
-	int code=conn.getResponseCode();
-	if (proxyMgr.showManifestIndexForResponse(code)) {
-	  switch (code) {
-	  case HttpResponse.__200_OK:
-	    // XXX check for login page
-	  case HttpResponse.__304_Not_Modified:
-	    break;
-	  default:
-	    candidateAus = pluginMgr.getCandidateAus(urlString);
-	  }
-	}
-	if (candidateAus != null && !candidateAus.isEmpty()) {
-	  forwardResponseWithIndex(request, response, candidateAus, conn);
-	} else {
-	  forwardResponse(request, response, conn);
-	}
+	forwardResponse(request, response, conn);
       }
     } catch (Exception e) {
       log.error("doLockss error", e);
