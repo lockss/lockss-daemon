@@ -1,5 +1,5 @@
 /*
- * $Id: StatusTable.java,v 1.48 2006-09-22 06:24:27 tlipkis Exp $
+ * $Id: StatusTable.java,v 1.49 2007-02-10 06:51:32 tlipkis Exp $
  */
 
 /*
@@ -346,8 +346,9 @@ public class StatusTable {
     /** Set the color.
      * @param color the name of the color (understandable by html)
      */
-    public void setColor(String color) {
+    public DisplayedValue setColor(String color) {
       this.color = color;
+      return this;
     }
 
     /** Get the color */
@@ -358,8 +359,9 @@ public class StatusTable {
     /** Set bold.
      * @param bold true if should be bold
      */
-    public void setBold(boolean bold) {
+    public DisplayedValue setBold(boolean bold) {
       this.bold = bold;
+      return this;
     }
 
     /** Get the bold */
