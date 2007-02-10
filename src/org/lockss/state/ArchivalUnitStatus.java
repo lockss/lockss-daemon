@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.51 2007-01-28 05:45:06 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.52 2007-02-10 06:53:46 tlipkis Exp $
  */
 
 /*
@@ -506,6 +506,14 @@ public class ArchivalUnitStatus
 	numRows = defaultNumRows;
       }
 
+      CrawlSpec spec = au.getCrawlSpec();
+      List startUrls;
+      if (spec instanceof SpiderCrawlSpec) {
+	startUrls = ((SpiderCrawlSpec)spec).getStartingUrls();
+      } else {
+	startUrls = Collections.EMPTY_LIST;
+      }
+
       List rowL = new ArrayList();
       Iterator cusIter = au.getAuCachedUrlSet().contentHashIterator();
       int endRow1 = startRow + numRows; // end row + 1
@@ -528,12 +536,14 @@ public class ArchivalUnitStatus
         if (cusn.getType() == CachedUrlSetNode.TYPE_CACHED_URL_SET) {
           cus = (CachedUrlSet)cusn;
         } else {
-          CachedUrlSetSpec spec = new RangeCachedUrlSetSpec(cusn.getUrl());
-          cus = au.makeCachedUrlSet(spec);
+          CachedUrlSetSpec cuss = new RangeCachedUrlSetSpec(cusn.getUrl());
+          cus = au.makeCachedUrlSet(cuss);
         }
+	String url = cus.getUrl();
         try {
-	  Map row = makeRow(au, repo.getNode(cus.getUrl()),
-			    nodeMan.getNodeState(cus));
+	  Map row = makeRow(au, repo.getNode(url),
+			    nodeMan.getNodeState(cus),
+			    startUrls.contains(url));
 	  row.put("sort", new Integer(curRow));
           rowL.add(row);
         } catch (MalformedURLException ignore) { }
@@ -547,16 +557,19 @@ public class ArchivalUnitStatus
     }
 
     private Map makeRow(ArchivalUnit au, RepositoryNode node,
-			NodeState state) {
+			NodeState state, boolean isStartUrl) {
       String url = node.getNodeUrl();
       boolean hasContent = node.hasContent();
-      Object val;
+      Object val = url;
+      if (isStartUrl) {
+	val = new StatusTable.DisplayedValue(val).setBold(true);
+      }
       HashMap rowMap = new HashMap();
       if (hasContent && isContentIsLink) {
 	Properties args = new Properties();
 	args.setProperty("auid", au.getAuId());
 	args.setProperty("url", url);
-	val = new StatusTable.SrvLink(url,
+	val = new StatusTable.SrvLink(val,
 				      LockssServlet.SERVLET_DISPLAY_CONTENT,
 				      args);
       } else {
