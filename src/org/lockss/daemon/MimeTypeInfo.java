@@ -1,5 +1,5 @@
 /*
- * $Id: MimeTypeInfo.java,v 1.2 2007-02-08 08:56:35 tlipkis Exp $
+ * $Id: MimeTypeInfo.java,v 1.3 2007-02-10 06:51:18 tlipkis Exp $
  */
 
 /*
@@ -33,49 +33,69 @@ import org.lockss.extractor.*;
 import org.lockss.plugin.*;
 
 /** Record of MIME type-specific factories (<i>eg</i>, FilterFactory,
- * LinkExtractorFactory), and static global defaults
+ * LinkExtractorFactory).  Primary interface is immutable.
  */
-public class MimeTypeInfo {
-  static Logger log = Logger.getLogger("MimeTypeInfo");
+public interface MimeTypeInfo {
+  /** An empty MimeTypeInfo */
+  public static MimeTypeInfo NULL_INFO = new MimeTypeInfo.Impl();
 
-  public static MimeTypeInfo NULL_INFO = new MimeTypeInfo();
+  /** Returns the FilterFactory, or null */
+  public FilterFactory getFilterFactory();
+  /** Returns the LinkExtractorFactory, or null */
+  public LinkExtractorFactory getLinkExtractorFactory();
+  /** Returns the RateLimiter, or null */
+  public RateLimiter getFetchRateLimiter();
 
-  private FilterFactory filterFactory;
-  private LinkExtractorFactory extractorFactory;
-  private RateLimiter fetchRateLimiter;
-
-  public MimeTypeInfo() {
+  /** Sub interface adds setters */
+  public interface Mutable extends MimeTypeInfo {
+    public Impl setFilterFactory(FilterFactory fact);
+    public Impl setLinkExtractorFactory(LinkExtractorFactory fact);
+    public Impl setFetchRateLimiter(RateLimiter limiter);
   }
 
-  public MimeTypeInfo(MimeTypeInfo toClone) {
-    if (toClone != null) {
-      filterFactory = toClone.getFilterFactory();
-      extractorFactory = toClone.getLinkExtractorFactory();
-      fetchRateLimiter = toClone.getFetchRateLimiter();
+  class Impl implements Mutable {
+    static Logger log = Logger.getLogger("MimeTypeInfo");
+
+    private FilterFactory filterFactory;
+    private LinkExtractorFactory extractorFactory;
+    private RateLimiter fetchRateLimiter;
+
+    public Impl() {
     }
-  }
 
-  public FilterFactory getFilterFactory() {
-    return filterFactory;
-  }
+    public Impl(MimeTypeInfo toClone) {
+      if (toClone != null) {
+	filterFactory = toClone.getFilterFactory();
+	extractorFactory = toClone.getLinkExtractorFactory();
+	fetchRateLimiter = toClone.getFetchRateLimiter();
+      }
+    }
 
-  public void setFilterFactory(FilterFactory fact) {
-    filterFactory = fact;
-  }
+    public FilterFactory getFilterFactory() {
+      return filterFactory;
+    }
 
-  public LinkExtractorFactory getLinkExtractorFactory() {
-    return extractorFactory;
-  }
+    public Impl setFilterFactory(FilterFactory fact) {
+      filterFactory = fact;
+      return this;
+    }
 
-  public void setLinkExtractorFactory(LinkExtractorFactory fact) {
-    extractorFactory = fact;
-  }
+    public LinkExtractorFactory getLinkExtractorFactory() {
+      return extractorFactory;
+    }
 
-  public RateLimiter getFetchRateLimiter() {
-    return fetchRateLimiter;
-  }
+    public Impl setLinkExtractorFactory(LinkExtractorFactory fact) {
+      extractorFactory = fact;
+      return this;
+    }
 
-  public void setFetchRateLimiter(RateLimiter limiter) {
-    fetchRateLimiter = limiter;
+    public RateLimiter getFetchRateLimiter() {
+      return fetchRateLimiter;
+    }
+
+    public Impl setFetchRateLimiter(RateLimiter limiter) {
+      fetchRateLimiter = limiter;
+      return this;
+    }
   }
 }

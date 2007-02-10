@@ -1,5 +1,5 @@
 /*
- * $Id: TestMimeTypeInfo.java,v 1.2 2007-02-08 08:56:35 tlipkis Exp $
+ * $Id: TestMimeTypeInfo.java,v 1.3 2007-02-10 06:51:18 tlipkis Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ import org.lockss.extractor.*;
 public class TestMimeTypeInfo extends LockssTestCase {
 
   public void testAccessors() {
-    MimeTypeInfo mti = new MimeTypeInfo();
+    MimeTypeInfo.Mutable mti = new MimeTypeInfo.Impl();
     assertNull(mti.getFilterFactory());
     assertNull(mti.getLinkExtractorFactory());
     assertNull(mti.getFetchRateLimiter());
@@ -65,7 +65,7 @@ public class TestMimeTypeInfo extends LockssTestCase {
     assertSame(rl, mti.getFetchRateLimiter());
 
     // test clone
-    MimeTypeInfo m2 = new MimeTypeInfo(mti);
+    MimeTypeInfo m2 = new MimeTypeInfo.Impl(mti);
     assertSame(ff, mti.getFilterFactory());
     assertSame(uf, mti.getLinkExtractorFactory());
     assertSame(rl, mti.getFetchRateLimiter());

@@ -1,5 +1,5 @@
 /*
- * $Id: MimeTypeMap.java,v 1.2 2007-02-08 08:56:35 tlipkis Exp $
+ * $Id: MimeTypeMap.java,v 1.3 2007-02-10 06:51:18 tlipkis Exp $
  */
 
 /*
@@ -38,11 +38,10 @@ import org.lockss.plugin.*;
 public class MimeTypeMap {
   static Logger log = Logger.getLogger("MimeTypeMap");
 
-  private static Map canonMap = new HashMap();
   public static MimeTypeMap DEFAULT = new MimeTypeMap();
 
-  private static MimeTypeInfo HTML = new MimeTypeInfo();
-  private static MimeTypeInfo CSS = new MimeTypeInfo();
+  private static MimeTypeInfo.Mutable HTML = new MimeTypeInfo.Impl();
+  private static MimeTypeInfo.Mutable CSS = new MimeTypeInfo.Impl();
   static {
     HTML.setLinkExtractorFactory(new GoslingHtmlLinkExtractor.Factory());
     DEFAULT.putMimeTypeInfo("text/html", HTML);
@@ -64,14 +63,14 @@ public class MimeTypeMap {
     return parent;
   }      
 
-  public void putMimeTypeInfo(String contentType, MimeTypeInfo mti) {
+  void putMimeTypeInfo(String contentType, MimeTypeInfo mti) {
     String mime = HeaderUtil.getMimeTypeFromContentType(contentType);
     map.put(mime, mti);
   }
 
-  /** Get the MimeTypeInfo for the specified contentType, from this map or
-   * its nearest parent.  Do not modify any MimeTypeInfo obtained with this
-   * method - use {@link #modifyMimeTypeInfo(String)} instead.
+  /** Return immutable view of MimeTypeInfo for the specified contentType,
+   * from this map or its nearest parent.  Use {@link
+   * #modifyMimeTypeInfo(String)} to get a mutable view.
    * @param contentType MIME type or value of Content-Type: header
    * @return MimeTypeInfo if exists, else null. */
   public MimeTypeInfo getMimeTypeInfo(String contentType) {
@@ -87,14 +86,14 @@ public class MimeTypeMap {
    * the given MIME type, creating one if necessary.
    * @param contentType MIME type or value of Content-Type: header
    * @return a MimeTypeInfo local to this MimeTypeMap. */
-  public MimeTypeInfo modifyMimeTypeInfo(String contentType) {
+  public MimeTypeInfo.Mutable modifyMimeTypeInfo(String contentType) {
     String mime = HeaderUtil.getMimeTypeFromContentType(contentType);
-    MimeTypeInfo res = (MimeTypeInfo)map.get(mime);
+    MimeTypeInfo.Mutable res = (MimeTypeInfo.Mutable)map.get(mime);
     if (res == null) {
       if (parent != null) {
-	res = new MimeTypeInfo(parent.getMimeTypeInfo(mime));
+	res = new MimeTypeInfo.Impl(parent.getMimeTypeInfo(mime));
       } else {
-	res = new MimeTypeInfo();
+	res = new MimeTypeInfo.Impl();
       }
       map.put(mime, res);
     }

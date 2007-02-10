@@ -1,5 +1,5 @@
 /*
- * $Id: TestMimeTypeMap.java,v 1.2 2007-02-08 08:56:35 tlipkis Exp $
+ * $Id: TestMimeTypeMap.java,v 1.3 2007-02-10 06:51:18 tlipkis Exp $
  */
 
 /*
@@ -47,16 +47,16 @@ import org.lockss.extractor.*;
 public class TestMimeTypeMap extends LockssTestCase {
 
   MimeTypeMap map;
-  MimeTypeInfo mti;
+  MimeTypeInfo.Mutable mti;
 
   public void setUp() {
     map = new MimeTypeMap();
-    mti = new MimeTypeInfo();
+    mti = new MimeTypeInfo.Impl();
   }
 
   public void testGetMimeTypeInfo() {
-    MimeTypeInfo mt1 = new MimeTypeInfo();
-    MimeTypeInfo mt2 = new MimeTypeInfo();
+    MimeTypeInfo mt1 = new MimeTypeInfo.Impl();
+    MimeTypeInfo mt2 = new MimeTypeInfo.Impl();
     map.putMimeTypeInfo("text/html", mt1);
     map.putMimeTypeInfo("text/css", mt2);
     assertSame(mt1, map.getMimeTypeInfo("text/html"));
@@ -67,9 +67,9 @@ public class TestMimeTypeMap extends LockssTestCase {
 
   public void testInherit() {
     MimeTypeMap child = new MimeTypeMap(map);
-    MimeTypeInfo mt1 = new MimeTypeInfo();
-    MimeTypeInfo mt2 = new MimeTypeInfo();
-    MimeTypeInfo mt3 = new MimeTypeInfo();
+    MimeTypeInfo mt1 = new MimeTypeInfo.Impl();
+    MimeTypeInfo mt2 = new MimeTypeInfo.Impl();
+    MimeTypeInfo mt3 = new MimeTypeInfo.Impl();
     map.putMimeTypeInfo("text/html", mt2);
     map.putMimeTypeInfo("text/css", mt3);
     assertSame(mt2, child.getMimeTypeInfo("text/html"));
@@ -94,7 +94,7 @@ public class TestMimeTypeMap extends LockssTestCase {
   public void testModifyMimeTypeInfo() {
     MimeTypeMap DEFAULT = MimeTypeMap.DEFAULT;
     MimeTypeMap child = new MimeTypeMap(DEFAULT);
-    MimeTypeInfo mt1 = child.modifyMimeTypeInfo("text/html");
+    MimeTypeInfo.Mutable mt1 = child.modifyMimeTypeInfo("text/html");
     assertTrue(DEFAULT.getMimeTypeInfo("TEXT/html").getLinkExtractorFactory()
 	       instanceof GoslingHtmlLinkExtractor.Factory);
     assertTrue(mt1.getLinkExtractorFactory()
