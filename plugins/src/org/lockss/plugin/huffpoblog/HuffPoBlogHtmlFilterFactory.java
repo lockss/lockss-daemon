@@ -1,5 +1,5 @@
 /*
- * $Id: HuffPoBlogFilterFactory.java,v 1.2 2006-09-18 22:29:00 thib_gc Exp $
+ * $Id: HuffPoBlogHtmlFilterFactory.java,v 1.1 2007-02-10 06:50:22 tlipkis Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import org.lockss.filter.*;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 
-public class HuffPoBlogFilterFactory implements FilterFactory {
+public class HuffPoBlogHtmlFilterFactory implements FilterFactory {
 
   public InputStream createFilteredInputStream(ArchivalUnit au,
 					       InputStream in,
@@ -92,7 +92,7 @@ public class HuffPoBlogFilterFactory implements FilterFactory {
 
     HtmlTransform xform = new HtmlCompoundTransform(xform1, xform2);
 
-    InputStream htmlFilter = new HtmlFilterInputStream(in, xform);
+    InputStream htmlFilter = new HtmlFilterInputStream(in, encoding, xform);
 
     List tagList = ListUtil.list(
 	new HtmlTagFilter.TagPair("<!-- begin ad tag -->", "<!-- End ad tag -->"),
