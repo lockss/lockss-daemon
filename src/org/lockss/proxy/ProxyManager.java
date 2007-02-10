@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyManager.java,v 1.40 2007-01-21 22:06:32 tlipkis Exp $
+ * $Id: ProxyManager.java,v 1.41 2007-02-10 06:53:34 tlipkis Exp $
  */
 
 /*
@@ -103,7 +103,7 @@ public class ProxyManager extends BaseProxyManager {
    * if connection error (timeout, refuse, etc.) */
   static final String PARAM_NO_MANIFEST_INDEX_RESPONSES =
     PREFIX + "noManifestIndexResponses";
-  static final String DEFAULT_NO_MANIFEST_INDEX_RESPONSES = null;
+  static final String DEFAULT_NO_MANIFEST_INDEX_RESPONSES = "301;302;303;307";
 
   public static final String PARAM_PROXY_MAX_TOTAL_CONN =
     PREFIX + "connectionPool.max";
