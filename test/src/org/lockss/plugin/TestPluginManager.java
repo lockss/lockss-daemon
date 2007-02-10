@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.77 2007-02-08 08:56:57 tlipkis Exp $
+ * $Id: TestPluginManager.java,v 1.78 2007-02-10 06:51:54 tlipkis Exp $
  */
 
 /*
@@ -827,6 +827,8 @@ public class TestPluginManager extends LockssTestCase {
   public void testGetCandidateAus() throws Exception {
     String h1 = "http://www.foo.org/";
     String h2 = "http://www.bar.org/";
+
+    assertNull(mgr.getCandidateAus(h1 + " foo.html"));
 
     MockArchivalUnit au0 = new MockArchivalUnit("au0");
     au0.setName("The Little Prince");
