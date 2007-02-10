@@ -1,5 +1,5 @@
 /*
- * $Id: HeaderUtil.java,v 1.4 2007-02-08 08:56:35 tlipkis Exp $
+ * $Id: HeaderUtil.java,v 1.5 2007-02-10 06:53:58 tlipkis Exp $
  */
 
 /*
@@ -52,10 +52,13 @@ public class HeaderUtil {
       return null;
     }
     int idx = contentType.indexOf(";");
+    String res;
     if (idx < 0) {
-      return contentType.trim();
+      res = contentType.trim();
+    } else {
+      res = contentType.substring(0, idx).trim();
     }
-    return contentType.substring(0, idx).trim();
+    return res.toLowerCase();
   }
 
   /** Extract the MIME type, if any, from a Content-Type header. The result
@@ -64,9 +67,6 @@ public class HeaderUtil {
     String mime = (String)mimeTypeMap.get(contentType);
     if (mime == null) {
       mime = extractMimeTypeFromContentType(contentType);
-      if (mime != null) {
-	mime = mime.toLowerCase();
-      }
       mimeTypeMap.put(contentType, mime);
     }
     return mime;
@@ -80,7 +80,7 @@ public class HeaderUtil {
       if ((end = res.indexOf(";")) > -1) {
 	res = res.substring(0, end);
       }
-      return QuotedStringTokenizer.unquote(res);
+      return QuotedStringTokenizer.unquote(res).toLowerCase();
     }
     return null;
   }
@@ -92,9 +92,6 @@ public class HeaderUtil {
     String charset = (String)charsetMap.get(contentType);
     if (charset == null) {
       charset = extractCharsetFromContentType(contentType);
-      if (charset != null) {
-	charset = charset.toLowerCase();
-      }
       charsetMap.put(contentType, charset);
     }
     return charset;
