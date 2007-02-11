@@ -20,7 +20,7 @@ fi
 CLASSPATH=@CLASSPATH@
 DAEMON_CLASS=org.lockss.app.LockssDaemon
 if [ "X${LOCKSS_JAVA_SWITCHES}" = "X" ]; then
-    LOCKSS_JAVA_SWITCHES="-server -Xmx120m -Dsun.net.inetaddr.ttl=3600 -showversion"
+    LOCKSS_JAVA_SWITCHES="-server -Xmx350m -Dsun.net.inetaddr.ttl=3600 -showversion"
 fi
 
 LOCAL_TXT=~/local.txt
@@ -37,10 +37,13 @@ else
     DAEMON_ARGS="-g prod ${DAEMON_ARGS}"
 fi
 
+LOCKSS_V3_IDENTITY="TCP:[${LOCKSS_IPADDR}]:${LOCKSS_V3_PORT}"
+
 #LOCKSS_JAVA_SWITCHES="${LOCKSS_JAVA_SWITCHES} -Dorg.lockss.defaultLogLevel=DEBUG3"
 
 cat >${LOCAL_TXT} <<EOF
 org.lockss.platform.localIPAddress=${LOCKSS_IPADDR}
+org.lockss.platform.v3.identity=${LOCKSS_V3_IDENTITY}
 org.lockss.platform.diskSpacePaths=${LOCKSS_DISK_PATHS}
 org.lockss.platform.version=@PLATFORM_VERSION@
 org.lockss.platform.sysadminemail=${LOCKSS_EMAIL}

@@ -228,6 +228,14 @@ until is_yes ${CONFIG_OK}; do
 	fi
     done
 
+    if [ "X${LOCKSS_V3_PORT}" = X ]; then
+	LOCKSS_V3_PORT=9729
+    fi
+    ask_for_input "LCAP V3 protocol port" ${LOCKSS_V3_PORT}
+    if [ "X${ANS}" != "X" ]; then
+	LOCKSS_V3_PORT="${ANS}"
+    fi
+
     if [ "X${LOCKSS_MAILHUB}" = X ]; then
 	LOCKSS_MAILHUB=localhost
     fi
@@ -291,6 +299,7 @@ until is_yes ${CONFIG_OK}; do
     cat >${TMP_CONFIG} <<EOF
 LOCKSS_HOSTNAME=${LOCKSS_HOSTNAME}
 LOCKSS_IPADDR=${LOCKSS_IPADDR}
+LOCKSS_V3_PORT=${LOCKSS_V3_PORT}
 LOCKSS_ACCESS_SUBNET=${LOCKSS_ACCESS_SUBNET}
 LOCKSS_MAILHUB=${LOCKSS_MAILHUB}
 LOCKSS_EMAIL=${LOCKSS_EMAIL}
