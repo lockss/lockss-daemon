@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.68 2006-12-09 07:09:00 tlipkis Exp $
+ * $Id: BaseUrlCacher.java,v 1.69 2007-02-11 02:29:15 tlipkis Exp $
  */
 
 /*
@@ -544,7 +544,7 @@ public class BaseUrlCacher implements UrlCacher {
 	  logger.warning("Max redirects hit, not redirecting " + origUrl +
 			 " past " + fetchUrl);
 	  throw e;
-	} else if (!processRedirectResponse(e instanceof CacheException.NoRetryPermUrlException)) {
+	} else if (!processRedirectResponse()) {
 	  throw e;
 	}
       }
@@ -610,10 +610,8 @@ public class BaseUrlCacher implements UrlCacher {
 
   /** Handle a single redirect response: determine whether it should be
    * followed and change the state (fetchUrl) to set up for the next fetch.
-   * @param writeToRedirectedUrl boolean indicating whether content should
-   * be written to the redirected URL
    * @return true if another request should be issued, false if not. */
-  private boolean processRedirectResponse(boolean writeToRedirectedUrl) {
+  private boolean processRedirectResponse() {
     //get the location header to find out where to redirect to
     String location = conn.getResponseHeaderValue("location");
     if (location == null) {
@@ -664,13 +662,10 @@ public class BaseUrlCacher implements UrlCacher {
       // (Still. sigh.)  The node should be written only once, so don't add
       // another entry for the slash redirection.
 
-      if (writeToRedirectedUrl &&
-	  !UrlUtil.isDirectoryRedirection(fetchUrl, newUrlString)) {
+      if (!UrlUtil.isDirectoryRedirection(fetchUrl, newUrlString)) {
 	if (otherNames == null) {
 	  otherNames = new ArrayList();
 	}
-	//XXX don't add to otherNames if 302, 303, 307
-	//
 	otherNames.add(newUrlString);
       }
       fetchUrl = newUrlString;

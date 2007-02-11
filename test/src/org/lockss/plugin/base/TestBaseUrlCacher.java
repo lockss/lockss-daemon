@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.50 2006-09-23 19:23:56 tlipkis Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.51 2007-02-11 02:29:15 tlipkis Exp $
  */
 
 /*
@@ -802,45 +802,6 @@ public class TestBaseUrlCacher extends LockssTestCase {
     assertCuProperty(redTo1, redTo3, CachedUrl.PROPERTY_CONTENT_URL);
     assertCuProperty(redTo2, redTo3, CachedUrl.PROPERTY_CONTENT_URL);
     assertCuProperty(redTo3, null, CachedUrl.PROPERTY_CONTENT_URL);
-  }
-
-  public void testRedirectWritesNoTemp() throws Exception {
-    String content = "oft redirected content";
-    mau.returnRealCachedUrl = true;
-    String redTo1 = "http://somewhere.else/foo";
-    String redTo2 = "http://somewhere.else/bar/x.html";
-    String redTo3 = "http://somewhere.else/bar/y.html";
-    MockConnectionMockBaseUrlCacher muc = new MockConnectionMockBaseUrlCacher(
-                                                                              mau,
-                                                                              TEST_URL);
-    MockPermissionMap map = new MockPermissionMap();
-    map.putStatus(TEST_URL, PermissionRecord.PERMISSION_OK);
-    map.putStatus(redTo1, PermissionRecord.PERMISSION_OK);
-    muc.setPermissionMapSource(new MockPermissionMapSource(map));
-    muc.addConnection(makeConn(302, "Moved to Spain", redTo1));
-    muc.addConnection(makeConn(303, "Moved to Spain", redTo2));
-    muc.addConnection(makeConn(307, "Moved to Spain", redTo3));
-    muc.addConnection(makeConn(200, "Ok", null, content));
-    muc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_STORE_ALL_IN_SPEC);
-    mau.addUrlToBeCached(redTo1);
-    mau.addUrlToBeCached(redTo2);
-    mau.addUrlToBeCached(redTo3);
-    muc.cache();
-    CIProperties p = muc.getUncachedProperties();
-    assertNull(p.getProperty("location"));
-    // XXX now we're not tracking the interveaning URLs
-    assertEquals(redTo3, p.getProperty(CachedUrl.PROPERTY_REDIRECTED_TO));
-
-    // verify all have the correct contents, and all but the last have a
-    // redirected-to header
-    assertCuContents(TEST_URL, content);
-    assertCuNoContent(redTo1);
-    assertCuNoContent(redTo2);
-    assertCuNoContent(redTo3);
-
-    assertCuProperty(TEST_URL, redTo3, CachedUrl.PROPERTY_REDIRECTED_TO);
-
-    assertCuProperty(TEST_URL, redTo3, CachedUrl.PROPERTY_CONTENT_URL);
   }
 
   public void testSimpleDirRedirect() throws Exception {
