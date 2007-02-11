@@ -1,5 +1,5 @@
 /*
- * $Id: TaskRunner.java,v 1.39 2007-01-18 02:28:27 tlipkis Exp $
+ * $Id: TaskRunner.java,v 1.40 2007-02-11 01:35:58 tlipkis Exp $
  */
 
 /*
@@ -104,8 +104,9 @@ class TaskRunner {
   private List acceptedTasks = new ArrayList();
   private Schedule currentSchedule;
   // overrun tasks, sorted by finish deadline
-  private TreeSet overrunTasks =
-    new TreeSet(SchedulableTask.latestFinishComparator());
+  private SortedSet overrunTasks =
+    Collections.synchronizedSortedSet(new TreeSet(SchedulableTask.
+						  latestFinishComparator()));
   // last n completed requests
   private HistoryList history = new HistoryList(DEFAULT_HISTORY_MAX);
   private StepThread stepThread;
@@ -520,7 +521,8 @@ class TaskRunner {
     return backgroundLoadFactor;
   }
 
-  TreeSet getOverrunTasks() {
+  // Used by tests only
+  SortedSet getOverrunTasks() {
     return overrunTasks;
   }
 
@@ -660,8 +662,9 @@ class TaskRunner {
     runningChunk = null;
     // run overrun task
     notifyExpiredOverrunners();
-    if (!overrunTasks.isEmpty()) {
-      runningTask = (StepTask)overrunTasks.first();
+    StepTask otask = getFirstOverrunTask();
+    if (otask != null) {
+      runningTask = otask;
       runningDeadline = (event == null ? runningTask.getLatestFinish()
 			 : Deadline.earliest(runningTask.getLatestFinish(),
 					     event.getStart())
@@ -674,6 +677,15 @@ class TaskRunner {
       runningDeadline = (event == null) ? Deadline.MAX : event.getStart();
       return false;
     }
+  }
+
+  StepTask getFirstOverrunTask() {
+    synchronized (overrunTasks) {
+      if (!overrunTasks.isEmpty()) {
+	return (StepTask)overrunTasks.first();
+      }
+    }
+    return null;
   }
 
   void addToHistory(Schedule.Event event) {
@@ -771,8 +783,8 @@ class TaskRunner {
   }
 
   void notifyExpiredOverrunners() {
-    while (!overrunTasks.isEmpty()) {
-      StepTask task = (StepTask)overrunTasks.first();
+    StepTask task;
+    while ((task = getFirstOverrunTask()) != null) {
       if (task.isExpired()) {
 	removeTask(task);
       } else {
