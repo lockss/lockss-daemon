@@ -701,7 +701,7 @@
       </property>
       <property name="param.3">
 	<property name="key" value="journal_issn" />
-	<property name="value" value="1472-694" />
+	<property name="value" value="1472-6947" />
       </property>
       <property name="attributes.publisher" value="BioMed Central" />
     </property>
@@ -800,7 +800,7 @@
       </property>
       <property name="param.3">
 	<property name="key" value="journal_issn" />
-	<property name="value" value="1471-247" />
+	<property name="value" value="1471-2474" />
       </property>
       <property name="attributes.publisher" value="BioMed Central" />
     </property>
@@ -841,25 +841,6 @@
       <property name="param.3">
 	<property name="key" value="journal_issn" />
 	<property name="value" value="1471-2202" />
-      </property>
-      <property name="attributes.publisher" value="BioMed Central" />
-    </property>
-    
-    <property name="BMCNewsandViews2">
-      <property name="title" value="BMC News and Views Volume 2" />
-      <property name="journalTitle" value="BMC News and Views" />
-      <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
-      <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://www.biomedcentral.com/" />
-      </property>
-      <property name="param.2">
-	<property name="key" value="volume_name" />
-	<property name="value" value="2" />
-      </property>
-      <property name="param.3">
-	<property name="key" value="journal_issn" />
-	<property name="value" value="1471-8219" />
       </property>
       <property name="attributes.publisher" value="BioMed Central" />
     </property>
