@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlackwellArchivalUnit.java,v 1.6 2007-02-09 19:32:31 troberts Exp $
+ * $Id: TestBlackwellArchivalUnit.java,v 1.7 2007-02-15 19:48:27 troberts Exp $
  */
 
 /*
@@ -130,7 +130,6 @@ public class TestBlackwellArchivalUnit extends LockssPluginTestCase {
     testNullParam(JOURNAL_ID_KEY);
     testNullParam(JOURNAL_ISSN_KEY);
     testNullParam(VOLUME_NAME_KEY);
-    testNullParam(YEAR_KEY);
   }
 
   public void testIllParams() throws Exception {
@@ -138,7 +137,6 @@ public class TestBlackwellArchivalUnit extends LockssPluginTestCase {
     testIllParam(JOURNAL_ID_KEY, "");
     testIllParam(JOURNAL_ISSN_KEY, "");
     testIllParam(VOLUME_NAME_KEY, "");
-    testIllParam(YEAR_KEY, "12345");
   }
 
 
@@ -181,7 +179,9 @@ public class TestBlackwellArchivalUnit extends LockssPluginTestCase {
     // ISSN and volue must match
     assertShouldNotCache(baseUrl+"doi/pdf/10.1111/j.1540-7234.2005.00355",
 			 au, cus);
-    assertShouldNotCache(baseUrl+"doi/pdf/10.1111/j.1540-8159.2006.00355",
+
+    //Now we ignore the year
+    assertShouldCache(baseUrl+"doi/pdf/10.1111/j.1540-8159.2006.00355",
 			 au, cus);
 
     assertShouldNotCache(baseUrl+"template", au, cus);

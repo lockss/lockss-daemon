@@ -16,16 +16,12 @@
     <string>&quot;%s, vol. %s&quot;, journal_id, volume_name</string>
   </entry>
   <entry>
-    <string>plugin_name</string>
-    <string>Blackwell</string>
-  </entry>
-  <entry>
     <string>au_def_new_content_crawl</string>
     <long>1209600000</long>
   </entry>
   <entry>
-    <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.blackwell.BlackwellHtmlFilterFactory</string>
+    <string>plugin_name</string>
+    <string>Blackwell</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
@@ -33,11 +29,15 @@
       <string>4,&quot;^%s&quot;, base_url</string>
       <string>2,&quot;^%s(templates/jsp/_synergy/help|help|sda)&quot;, base_url</string>
       <string>1,&quot;^%s.*\.(css|ico|gif|jpg|jpeg|png)$&quot;, base_url</string>
-      <string>1,&quot;^%sdoi/.*/.*%s\.%d&quot;, base_url, journal_issn, year</string>
+      <string>1,&quot;^%sdoi/.*/.*%s&quot;, base_url, journal_issn</string>
       <string>1,&quot;^%stoc/%s/%s/&quot;, base_url, journal_id, volume_name</string>
       <string>1,&quot;^%sclockss/%s/%s/manifest.html&quot;, base_url, journal_id, volume_name</string>
       <string>1,&quot;%s(userimages|templates/jsp/_synergy/images)/&quot;, base_url</string>
     </list>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.blackwell.BlackwellHtmlFilterFactory</string>
   </entry>
   <entry>
     <string>au_start_url</string>
@@ -50,15 +50,6 @@
   <entry>
     <string>plugin_config_props</string>
     <list>
-      <org.lockss.daemon.ConfigParamDescr>
-        <key>base_url</key>
-        <displayName>Base URL</displayName>
-        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
-        <type>3</type>
-        <size>40</size>
-        <definitional>true</definitional>
-        <defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
         <key>journal_id</key>
         <displayName>Journal Identifier</displayName>
@@ -86,11 +77,11 @@
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
-        <key>year</key>
-        <displayName>Year</displayName>
-        <description>Four digit year (e.g., 2004)</description>
-        <type>4</type>
-        <size>4</size>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
