@@ -214,6 +214,13 @@
         <property name="class" value="xpath" />
 	<property name="xpath" value="[attributes/publisher='Oxford University Press']" />
       </property>
+
+      <property name="blackwell">
+        <property name="name" value="All Blackwell Publications Titles" />
+        <property name="class" value="xpath" />
+	<property name="xpath" value="[attributes/publisher='Blackwell']" />
+      </property>
+
       <property name="AlphaMed Press">
         <property name="name" value="All AlphaMed Press Titles" />
         <property name="class" value="xpath" />
