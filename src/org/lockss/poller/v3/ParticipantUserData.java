@@ -1,5 +1,5 @@
 /*
- * $Id: ParticipantUserData.java,v 1.12 2007-01-30 04:49:10 smorabito Exp $
+ * $Id: ParticipantUserData.java,v 1.13 2007-02-16 23:08:32 smorabito Exp $
  */
 
 /*
@@ -381,10 +381,6 @@ public class ParticipantUserData implements LockssSerializable {
                              getPollerNonce(), getVoterNonce(), opcode,
                              getDeadline(), getPollerId(), messageDir,
                              poller.getLockssDaemon());
-  }
-
-  public V3LcapMessage makeMessage(int opcode, long sizeEst) {
-    return makeMessage(opcode);
   }
   
   /**

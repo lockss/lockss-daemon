@@ -1,5 +1,5 @@
 /*
- * $Id: PollerActions.java,v 1.14 2007-01-23 21:44:35 smorabito Exp $
+ * $Id: PollerActions.java,v 1.15 2007-02-16 23:08:32 smorabito Exp $
  */
 
 /*
@@ -138,9 +138,8 @@ public class PollerActions {
     log.debug2("Sending poll effort proof for voter " + ud.getVoterId()
                + " in poll " + ud.getKey());
     try {
-      V3LcapMessage msg1 = ud.makeMessage(V3LcapMessage.MSG_POLL_PROOF);
-      msg1.setEffortProof(ud.getRemainingEffortProof());
-      V3LcapMessage msg = msg1;
+      V3LcapMessage msg = ud.makeMessage(V3LcapMessage.MSG_POLL_PROOF);
+      msg.setEffortProof(ud.getRemainingEffortProof());
       ud.sendMessageTo(msg, ud.getVoterId());
     } catch (IOException ex) {
       log.error("Unable to send message: ", ex);
@@ -161,13 +160,13 @@ public class PollerActions {
     return V3Events.evtOk;
   }
 
-  public static PsmEvent handleReceiveVoterReadyToVote(PsmMsgEvent evt,
-                                                       PsmInterp interp) {
-    ParticipantUserData ud = getUserData(interp);
-    V3LcapMessage msg = (V3LcapMessage) evt.getMessage();
-    // XXX -- anything we need to verify here?
-    return V3Events.evtOk;
-  }
+//  public static PsmEvent handleReceiveVoterReadyToVote(PsmMsgEvent evt,
+//                                                       PsmInterp interp) {
+//    ParticipantUserData ud = getUserData(interp);
+//    V3LcapMessage msg = (V3LcapMessage) evt.getMessage();
+//    // XXX -- anything we need to verify here?
+//    return V3Events.evtOk;
+//  }
 
   public static PsmEvent handleSendVoteRequest(PsmEvent evt,
                                                PsmInterp interp) {

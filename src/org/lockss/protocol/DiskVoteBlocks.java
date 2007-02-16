@@ -55,8 +55,7 @@ public class DiskVoteBlocks extends BaseVoteBlocks {
    * Create a new VoteBlocks collection to be backed by a file in the supplied
    * directory.
    * 
-   * @param toDir
-   *          Directory to use as temporary storage.
+   * @param toDir  Directory to use as temporary storage.
    * @throws IOException
    */
   public DiskVoteBlocks(File toDir) throws IOException {

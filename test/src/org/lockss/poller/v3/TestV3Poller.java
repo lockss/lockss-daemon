@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.18 2007-01-30 04:49:10 smorabito Exp $
+ * $Id: TestV3Poller.java,v 1.19 2007-02-16 23:08:31 smorabito Exp $
  */
 
 /*
@@ -382,7 +382,7 @@ public class TestV3Poller extends LockssTestCase {
     byte[] pollerNonce = ByteArray.makeRandomBytes(20);
     ParticipantUserData ud = new ParticipantUserData(id, poller, tempDir);
     ud.setPollerNonce(pollerNonce);
-    VoteBlocks vb = new MemoryVoteBlocks();
+    VoteBlocks vb = new DiskVoteBlocks(tempDir);
     for (int i = 0; i < votes.length; i++) {
       vb.addVoteBlock(votes[i]);
     }

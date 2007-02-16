@@ -1,5 +1,5 @@
 /*
- * $Id: V3LcapMessage.java,v 1.26 2007-01-23 21:44:36 smorabito Exp $
+ * $Id: V3LcapMessage.java,v 1.27 2007-02-16 23:08:32 smorabito Exp $
  */
 
 /*
@@ -47,11 +47,6 @@ import org.lockss.util.StringUtil;
  * or remainders like V1 LCAP Messages.
  */
 public class V3LcapMessage extends LcapMessage implements LockssSerializable {
-  
-  /** Maximum allowable number of vote blocks before storing on disk */
-  public static final String PARAM_VOTE_BLOCK_THRESHOLD =
-    Configuration.PREFIX + "poll.v3.voteBlockThreshold";
-  public static final int DEFAULT_VOTE_BLOCK_THRESHOLD = 0;
   
   /** Maximum allowable size of repair data before storing on disk */
   public static final String PARAM_REPAIR_DATA_THRESHOLD =
@@ -144,7 +139,6 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
   private byte[] m_repairDataByteArray; // If not null, repair data is in memory
 
   private int m_repairDataThreshold = DEFAULT_REPAIR_DATA_THRESHOLD;
-  private int m_voteBlockThreshold = DEFAULT_VOTE_BLOCK_THRESHOLD;
  
   // Reference to the running daemon.  Must be restored post-serialization by
   // the postUnmarshal method.
@@ -177,16 +171,12 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
   public V3LcapMessage(File messageDir, LockssApp daemon) {
     m_daemon = daemon;
     m_props = new EncodedProperty();
-    m_voteBlocks = new MemoryVoteBlocks();
     m_pollProtocol = Poll.V3_PROTOCOL;
     m_messageDir = messageDir;
     m_group = ConfigManager.getPlatformGroup();
     m_repairDataThreshold =
       CurrentConfig.getIntParam(PARAM_REPAIR_DATA_THRESHOLD,
                                 DEFAULT_REPAIR_DATA_THRESHOLD);
-    m_voteBlockThreshold =
-      CurrentConfig.getIntParam(PARAM_VOTE_BLOCK_THRESHOLD,
-                                DEFAULT_VOTE_BLOCK_THRESHOLD);
   }
 
   public V3LcapMessage(String auId, String pollKey, String pluginVersion,
@@ -299,7 +289,6 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     if (nomineesString != null) {
       m_nominees = StringUtil.breakAt(nomineesString, ',');
     }
-    m_voteDeadline = m_props.getLong("votedeadline", 0);
     m_voteDuration = m_props.getLong("voteduration", 0);
     m_lastVoteBlockURL = m_props.getProperty("lastvoteblockurl");
     m_voteComplete = m_props.getBoolean("votecomplete", false);
@@ -311,15 +300,10 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     m_repairDataLen = dis.readLong();
 
     if (voteBlockCount > 0) {
-      if (voteBlockCount >= m_voteBlockThreshold) {
-        // Find the directory associated with this poll's state.
-        File stateDir =
-          ((LockssDaemon)m_daemon).getPollManager().getStateDir(m_key);
-        this.m_voteBlocks = new DiskVoteBlocks(voteBlockCount, dis,
-                                               stateDir);
-      } else {
-        this.m_voteBlocks = new MemoryVoteBlocks(voteBlockCount, dis);
-      }
+      // Find the directory associated with this poll's state.
+      File stateDir =
+        ((LockssDaemon)m_daemon).getPollManager().getStateDir(m_key);
+      m_voteBlocks = new DiskVoteBlocks(voteBlockCount, dis, stateDir);
     }
 
     // Read in the Repair Data, if any
@@ -584,27 +568,24 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
   }
 
   public void addVoteBlock(VoteBlock vb) throws IOException {
-    if ((m_voteBlocks instanceof MemoryVoteBlocks) &&
-        m_voteBlocks.size() >= m_voteBlockThreshold) {
-      try {
-        // Convert memory vote blocks to disk vote blocks.
-        log.debug("Disk threshold passed.  Converting from memory-based vote " +
-        "blocks to disk-backed vote blocks.");
-        DiskVoteBlocks nvb = new DiskVoteBlocks(m_messageDir);
-        for (VoteBlocksIterator iter = m_voteBlocks.iterator(); iter.hasNext(); ) {
-          nvb.addVoteBlock((VoteBlock)iter.next());
-        }
-      m_voteBlocks = nvb;
-      } catch (IOException ex) {
-        log.warning("Error while converting from memory-based vote blocks " +
-                    "to disk-backed vote blocks.", ex);
-      }
+    // Do lazy initialization on our voteblocks -- only vote messages
+    // have a voteBlocks field, this lets us save some memory on non-Vote
+    // messages
+    if (m_voteBlocks == null) {
+      // Find the directory associated with this poll's state for our voteblocks
+      File stateDir =
+        ((LockssDaemon)m_daemon).getPollManager().getStateDir(m_key);
+      m_voteBlocks = new DiskVoteBlocks(stateDir);
     }
     m_voteBlocks.addVoteBlock(vb);
   }
 
   public VoteBlocksIterator getVoteBlockIterator() {
-    return m_voteBlocks.iterator();
+    if (m_voteBlocks == null) {
+      return null;
+    } else {
+      return m_voteBlocks.iterator();
+    }
   }
 
   public VoteBlocks getVoteBlocks() {

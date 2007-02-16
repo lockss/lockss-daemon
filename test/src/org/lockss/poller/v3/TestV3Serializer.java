@@ -48,13 +48,15 @@ import org.lockss.protocol.psm.*;
 
 public class TestV3Serializer extends LockssTestCase {
 
+  File tempDir;
   String tempDirPath;
   LockssDaemon theDaemon;
   IdentityManager idManager;
 
   public void setUp() throws Exception {
     super.setUp();
-    tempDirPath = getTempDir().getAbsolutePath();
+    tempDir = getTempDir();
+    tempDirPath = tempDir.getAbsolutePath();
     theDaemon = getMockLockssDaemon();
     Properties p = new Properties();
     p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
@@ -204,7 +206,7 @@ public class TestV3Serializer extends LockssTestCase {
     ud.setReceiptEffortProof(ByteArray.makeRandomBytes(20));
     ud.setRemainingEffortProof(ByteArray.makeRandomBytes(20));
     ud.setRepairEffortProof(ByteArray.makeRandomBytes(20));
-    VoteBlocks blocks = new MemoryVoteBlocks();
+    VoteBlocks blocks = new DiskVoteBlocks(tempDir);
     blocks.addVoteBlock(V3TestUtils.makeVoteBlock("http://www.example.com/file1.html"));
     blocks.addVoteBlock(V3TestUtils.makeVoteBlock("http://www.example.com/file2.html"));
     ud.setVoteBlocks(blocks);
@@ -230,7 +232,7 @@ public class TestV3Serializer extends LockssTestCase {
     ud.setRemainingEffortProof(ByteArray.makeRandomBytes(20));
     ud.setRepairEffortProof(ByteArray.makeRandomBytes(20));
     ud.setRepairTarget("http://www.example.com/file1.html");
-    VoteBlocks blocks = new MemoryVoteBlocks();
+    VoteBlocks blocks = new DiskVoteBlocks(tempDir);
     blocks.addVoteBlock(V3TestUtils.makeVoteBlock("http://www.example.com/file1.html"));
     blocks.addVoteBlock(V3TestUtils.makeVoteBlock("http://www.example.com/file2.html"));
     ud.setVoteBlocks(blocks);
