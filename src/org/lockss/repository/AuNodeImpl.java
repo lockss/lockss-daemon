@@ -1,5 +1,5 @@
 /*
- * $Id: AuNodeImpl.java,v 1.12 2007-01-28 05:45:06 tlipkis Exp $
+ * $Id: AuNodeImpl.java,v 1.13 2007-02-20 01:36:25 tlipkis Exp $
  */
 
 /*
@@ -100,6 +100,9 @@ public class AuNodeImpl extends RepositoryNodeImpl {
     TreeMap childM = new TreeMap();
     // for all directories beneath Au level
     File[] urlDirs = nodeRootFile.listFiles();
+    if (urlDirs == null) {
+      return Collections.EMPTY_LIST;
+    }
     for (int ii=0; ii<urlDirs.length; ii++) {
       File urlDir = urlDirs[ii];
       if (!urlDir.isDirectory()) continue;
