@@ -1,5 +1,5 @@
 /*
- * $Id: UrlUtil.java,v 1.43 2007-01-21 22:05:49 tlipkis Exp $
+ * $Id: UrlUtil.java,v 1.44 2007-02-20 01:36:46 tlipkis Exp $
  *
 
 Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
@@ -820,6 +820,23 @@ public class UrlUtil {
       }
     }
     return null;
+  }
+
+  /**
+   * <p>Removes the protocol and its <code>://</code> component
+   * from a URL stem.</p>
+   * <p>Assumption: url stems always start with a protocol.</p>
+   * @param stem A URL stem.
+   * @return A new URL stem with the protocol removed.
+   */
+  public static String stripProtocol(String url) {
+    final String PROTOCOL_SUBSTRING = "://";
+    if (url == null) return null;
+    int pos = url.indexOf(PROTOCOL_SUBSTRING);
+    if (pos >= 0) {
+      return url.substring(pos + PROTOCOL_SUBSTRING.length());
+    }
+    return url;
   }
 
   /**

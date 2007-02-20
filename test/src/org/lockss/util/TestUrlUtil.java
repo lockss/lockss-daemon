@@ -1,5 +1,5 @@
 /*
- * $Id: TestUrlUtil.java,v 1.30 2007-01-21 22:05:49 tlipkis Exp $
+ * $Id: TestUrlUtil.java,v 1.31 2007-02-20 01:36:46 tlipkis Exp $
  */
 
 /*
@@ -754,6 +754,19 @@ public class TestUrlUtil extends LockssTestCase {
     assertEquals("rtsp://www.example.com/blah",
 		 UrlUtil.stripQuery("rtsp://www.example.com/blah?param1=blah"));
   }
+
+  public void testStripProtocol() {
+    assertNull(UrlUtil.stripProtocol(null));
+    assertEquals("", UrlUtil.stripProtocol(""));
+    assertEquals("www.example.com/",
+		 UrlUtil.stripProtocol("http://www.example.com/"));
+    assertEquals("www.example.com/",
+		 UrlUtil.stripProtocol("http://www.example.com/"));
+    assertEquals("www.example.com:8080/",
+		 UrlUtil.stripProtocol("rtsp://www.example.com:8080/"));
+  }
+
+
 
   public void testResolveJavascriptUrl() {
     assertEquals("http://www.example.com/link2.html",
