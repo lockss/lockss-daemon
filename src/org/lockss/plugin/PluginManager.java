@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.175 2007-02-10 06:51:54 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.176 2007-02-20 01:36:16 tlipkis Exp $
  */
 
 /*
@@ -1287,6 +1287,10 @@ public class PluginManager
   // calling more than one of these methods
   public Collection getCandidateAus(String url) throws MalformedURLException {
     String normStem = UrlUtil.getUrlPrefix(UrlUtil.normalizeUrl(url));
+    return getCandidateAusFromStem(normStem);
+  }
+
+  public Collection getCandidateAusFromStem(String normStem) {
     synchronized (hostAus) {
       Collection cand = (Collection)hostAus.get(normStem);
       if (cand != null) {
@@ -1297,6 +1301,18 @@ public class PluginManager
       return cand;
     }
   }  
+
+  /** Return a collection of all AUs that have content on the host of this
+   * url, sorted in AU title order.  */
+  // This method needs to copy the list anyway, to avoid CME, so this is as
+  // good a place as any to sort it.
+  //  XXX Should do something about the redundant normalization involved in
+  // calling more than one of these methods
+  public SortedSet getAllStems() {
+    synchronized (hostAus) {
+      return new TreeSet(hostAus.keySet());
+    }
+  }
 
   // Return actual list of candiate AUs, used only for testing
   List getRawCandidateAus(String url) throws MalformedURLException {
