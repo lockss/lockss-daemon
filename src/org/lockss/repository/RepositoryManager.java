@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryManager.java,v 1.8 2007-01-28 05:45:06 tlipkis Exp $
+ * $Id: RepositoryManager.java,v 1.9 2007-02-20 01:35:05 tlipkis Exp $
  */
 
 /*
@@ -293,10 +293,15 @@ public class RepositoryManager
 	  if (node != null) {
 	    long start = TimeBase.nowMs();
 	    log.debug2("CalcSize start: " + node);
-	    doSizeCalc(node);
-	    long dur = TimeBase.nowMs() - start;
-	    log.debug2("CalcSize finish (" +
-		      StringUtil.timeIntervalToString(dur) + "): " + node);
+	    long dur = 0;
+	    try {
+	      doSizeCalc(node);
+	      dur = TimeBase.nowMs() - start;
+	      log.debug2("CalcSize finish (" +
+			 StringUtil.timeIntervalToString(dur) + "): " + node);
+	    } catch (RuntimeException e) {
+	      log.warning("doSizeCalc: " + node, e);
+	    }
 	    synchronized (sizeCalcQueue) {
 	      sizeCalcQueue.remove(node);
 	    }

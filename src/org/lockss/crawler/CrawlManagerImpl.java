@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.108 2006-11-14 19:21:29 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.109 2007-02-20 01:35:05 tlipkis Exp $
  */
 
 /*
@@ -892,19 +892,24 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   }
 
   void possiblyStartCrawl(ArchivalUnit au) {
-    if (logger.isDebug3()) logger.debug3("checking au: " + au.getAuId());
-    if (shouldCrawlForNewContent(au)) {
-      CrawlManager.Callback rc = null;
-      if (au instanceof RegistryArchivalUnit) {
-	if (logger.isDebug3()) {
-	  logger.debug3("Adding callback to registry AU: " + au.getName());
+    try {
+      if (logger.isDebug3()) logger.debug3("checking au: " + au.getAuId());
+      if (shouldCrawlForNewContent(au)) {
+	CrawlManager.Callback rc = null;
+	if (au instanceof RegistryArchivalUnit) {
+	  if (logger.isDebug3()) {
+	    logger.debug3("Adding callback to registry AU: " + au.getName());
+	  }
+	  rc = new PluginManager.RegistryCallback(pluginMgr, au);
 	}
-	rc = new PluginManager.RegistryCallback(pluginMgr, au);
+	// Activity lock prevents AUs with pending crawls from being
+	// queued twice.  If ActivityRegulator goes away some other
+	// mechanism will be needed.
+	startNewContentCrawl(au, rc, null, null);
       }
-      // Activity lock prevents AUs with pending crawls from being
-      // queued twice.  If ActivityRegulator goes away some other
-      // mechanism will be needed.
-      startNewContentCrawl(au, rc, null, null);
+    } catch (IllegalArgumentException e) {
+      // XXX When NoSuchAuException is created, this should catch that
+      logger.warning("AU disappeared: " + au.getName());
     }
   }
 
