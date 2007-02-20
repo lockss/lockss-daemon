@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyInfo.java,v 1.25 2007-02-02 23:06:09 thib_gc Exp $
+ * $Id: ProxyInfo.java,v 1.26 2007-02-20 01:35:48 tlipkis Exp $
  */
 
 /*
@@ -62,7 +62,7 @@ public class ProxyInfo {
    * @author Thib Guicherd-Callin
    * @see #generateFragment
    */
-  public static abstract class FragmentBuilder {
+  public abstract class FragmentBuilder {
 
     /**
      * <p>A template method that generates a fragment from a map of
@@ -90,7 +90,7 @@ public class ProxyInfo {
      * @param urlStems The URL stem map.
      * @return A generated fragment, as a string.
      */
-    public String generateFragment(Map urlStems) {
+    public String generateFragment(Set urlStems) {
       StringBuffer buffer = new StringBuffer();
 
       // Bail if empty
@@ -99,64 +99,42 @@ public class ProxyInfo {
         return buffer.toString();
       }
 
-      // Sort entries
-      Set entries;
-      try {
-        entries = new TreeSet(new Comparator() {
-          public int compare(Object obj1, Object obj2) {
-            Entry entry1 = (Entry)obj1;
-            Entry entry2 = (Entry)obj2;
-            return FragmentBuilder.this.compare((String)entry1.getKey(),
-                                                (ArchivalUnit)entry1.getValue(),
-                                                (String)entry2.getKey(),
-                                                (ArchivalUnit)entry2.getValue());
-          }
-          public boolean equals(Object obj) {
-            return obj == this;
-          }
-        });
-        entries.addAll(urlStems.entrySet());
-      }
-      catch (Exception exc) {
-        entries = urlStems.entrySet(); // cannot order entries
-      }
-
       // Generate beginning
       generateBeginning(buffer);
 
       // Generate entries
-      for (Iterator iter = entries.iterator() ; iter.hasNext() ; ) {
-        Entry entry = (Entry)iter.next();
-        generateEntry(buffer,
-                      (String)entry.getKey(),
-                      (ArchivalUnit)entry.getValue());
+      for (Iterator iter = urlStems.iterator() ; iter.hasNext() ; ) {
+	String stem = (String)iter.next();
+	Collection aus = getPluginMgr().getCandidateAusFromStem(stem);
+	if (aus != null && !aus.isEmpty()) {
+	  // Assemble comment string:  AU1, AU2, n more AUs
+	  StringBuffer sb = new StringBuffer();
+	  Iterator auIter = aus.iterator();
+	  int n = 0;
+	  while (auIter.hasNext() && (n < getMaxCommentAus())) {
+	    ArchivalUnit au = (ArchivalUnit)auIter.next();
+	    if (n != 0) {
+	      sb.append(", ");
+	    }
+	    sb.append(au.getName());
+	    n++;
+	  }
+	  if (auIter.hasNext()) {
+	    sb.append(", ");
+	    sb.append(aus.size() - n);
+	    sb.append(" more AUs");
+	  }
+	  generateEntry(buffer, StringUtil.removeTrailing(stem, "/"),
+			sb.toString());
+	} else {
+	  log.warning("Stem has no AUs: " + stem);
+	}
       }
 
       // Generate end
       generateEnd(buffer);
 
       return buffer.toString();
-    }
-
-    /**
-     * <p>Compares two URL/AU pairs, to determine in which order
-     * the entries should appear in the fragment.</p>
-     * <p>The convention used is the same as that for
-     * {@link Comparable#compareTo}.</p>
-     * @param urlStem1 The first entry's URL stem.
-     * @param au1      The first entry's archival unit.
-     * @param urlStem2 The second entry's URL stem.
-     * @param au2      The second entry's archival unit.
-     * @return A negative integer if the first entry comes before the
-     *         second entry, a positive integer if the first entry
-     *         comes after the second entry, and zero if the two
-     *         entries are equivalent.
-     */
-    protected int compare(String urlStem1,
-                          ArchivalUnit au1,
-                          String urlStem2,
-                          ArchivalUnit au2) {
-      return removeProtocol(urlStem1).compareToIgnoreCase(removeProtocol(urlStem2));
     }
 
     /**
@@ -183,24 +161,11 @@ public class ProxyInfo {
      * associated archival unit.</p>
      * @param buffer  A {@link StringBuffer} instance to output into.
      * @param urlStem A url stem.
-     * @param au      The stem's corresponding archival unit.
+     * @param comment E.g., AU name
      */
     protected abstract void generateEntry(StringBuffer buffer,
                                           String urlStem,
-                                          ArchivalUnit au);
-
-    /**
-     * <p>Removes the protocol and its <code>://</code> component
-     * from a URL stem.</p>
-     * <p>Assumption: url stems always start with a protocol.</p>
-     * @param stem A URL stem.
-     * @return A new URL stem with the protocol removed.
-     */
-    protected static String removeProtocol(String stem) {
-      final String PROTOCOL_SUBSTRING = "://";
-      return stem.substring(stem.indexOf(PROTOCOL_SUBSTRING)
-                            + PROTOCOL_SUBSTRING.length());
-    }
+                                          String comment);
 
   }
 
@@ -230,9 +195,10 @@ public class ProxyInfo {
     }
 
     /* Inherit documentation */
-    public void generateEntry(StringBuffer buffer, String urlStem, ArchivalUnit au) {
+    public void generateEntry(StringBuffer buffer, String urlStem, 
+			      String comment) {
       buffer.append(" // ");
-      buffer.append(au.getName());
+      buffer.append(comment);
       buffer.append('\n');
       buffer.append(" if (shExpMatch(url, \"");
       buffer.append(shPattern(urlStem));
@@ -383,9 +349,10 @@ public class ProxyInfo {
     }
 
     /* Inherit documentation */
-    public void generateEntry(StringBuffer buffer, String urlStem, ArchivalUnit au) {
+    public void generateEntry(StringBuffer buffer, String urlStem,
+			      String comment) {
       buffer.append("Title ");
-      buffer.append(au.getName());
+      buffer.append(comment);
       buffer.append("\n");
       buffer.append("URL ");
       buffer.append(urlStem);
@@ -573,9 +540,10 @@ public class ProxyInfo {
     }
 
     /* Inherit documentation */
-    public void generateEntry(StringBuffer buffer, String urlStem, ArchivalUnit au) {
-      buffer.append("# " + au.getName() + "\n");
-      buffer.append(removeProtocol(urlStem) + "\n\n");
+    public void generateEntry(StringBuffer buffer, String urlStem,
+			      String comment) {
+      buffer.append("# " + comment + "\n");
+      buffer.append(UrlUtil.stripProtocol(urlStem) + "\n\n");
     }
 
   }
@@ -611,16 +579,23 @@ public class ProxyInfo {
     }
 
     /* Inherit documentation */
-    public void generateEntry(StringBuffer buffer, String urlStem, ArchivalUnit au) {
-      buffer.append("# " + au.getName() + "\n");
-      buffer.append("acl " + encodeAclName() + " dstdomain " + removeProtocol(urlStem) + "\n\n");
+    public void generateEntry(StringBuffer buffer, String urlStem,
+			      String comment) {
+      buffer.append("# " + comment + "\n");
+      buffer.append("acl " + encodeAclName() + " dstdomain " +
+		    UrlUtil.stripProtocol(urlStem) + "\n\n");
     }
 
   }
 
-  private String proxyHost;
+  static final String PARAM_MAX_COMMENT_AUS =
+    Configuration.PREFIX + "proxyInfo.maxCommentAus";
+  static final int DEFAULT_MAX_COMMENT_AUS = 2;
 
+  private String proxyHost;
   private int proxyPort = -1;
+
+  private int maxCommentAus = -1;
 
   /** Create a ProxyInfo using the local IP address as the proxy host */
   public ProxyInfo() {
@@ -635,7 +610,7 @@ public class ProxyInfo {
   /** Generate a PAC file string from the URL stem map, delegating to the
    * FindProxyForURL function in the pacFileToBeEncapsulated if no match is
    * found. */
-  public String generateEncapsulatedPacFile(Map urlStems,
+  public String generateEncapsulatedPacFile(Set urlStems,
 				            String pacFileToBeEncapsulated,
 				            String message) {
     return new EncapsulatedPacFileFragmentBuilder(
@@ -645,7 +620,7 @@ public class ProxyInfo {
   /** Generate a PAC file string from the URL stem map, delegating to the
    * FindProxyForURL function in the pacFileToBeEncapsulated if no match is
    * found. */
-  public String generateEncapsulatedPacFileFromURL(Map urlStems,
+  public String generateEncapsulatedPacFileFromURL(Set urlStems,
                                                    String url)
       throws IOException {
     InputStream bis = null;
@@ -663,47 +638,27 @@ public class ProxyInfo {
     }
   }
 
-  public String generateExternalSquidFragment(Map urlStems) {
+  public String generateExternalSquidFragment(Set urlStems) {
     return new ExternalSquidFragmentBuilder().generateFragment(urlStems);
   }
 
   /** Generate an EZproxy config fragment from the URL stem map */
-  public String generateEZProxyFragment(Map urlStems) {
+  public String generateEZProxyFragment(Set urlStems) {
     return new EZProxyFragmentBuilder().generateFragment(urlStems);
   }
 
   /** Generate a PAC file string from the URL stem map */
-  public String generatePacFile(Map urlStems) {
+  public String generatePacFile(Set urlStems) {
     return new PacFileFragmentBuilder().generateFragment(urlStems);
   }
 
-  public String generateSquidConfigFragment(Map urlStems) {
+  public String generateSquidConfigFragment(Set urlStems) {
     return new SquidConfigFragmentBuilder().generateFragment(urlStems);
   }
 
   /** Convenience method to get URL stem map for all AUs */
-  public Map getUrlStemMap() {
-    return getUrlStemMap(getAus());
-  }
-
-  /**
-   * @return Map of all URL stems to their AU
-   */
-  public Map getUrlStemMap(Collection aus) {
-    Map map = new HashMap();
-    PluginManager pmgr =
-      (PluginManager)LockssDaemon.getManager(LockssDaemon.PLUGIN_MANAGER);
-    for (Iterator iter = aus.iterator(); iter.hasNext(); ) {
-      ArchivalUnit au = (ArchivalUnit)iter.next();
-      if (!pmgr.isInternalAu(au)) {
-	for (Iterator urlIter = au.getUrlStems().iterator();
-	     urlIter.hasNext(); ) {
-	  String urlStem = (String)urlIter.next();
-	  map.put(StringUtil.removeTrailing(urlStem, "/"), au);
-	}
-      }
-    }
-    return map;
+  public Set getUrlStems() {
+    return getPluginMgr().getAllStems();
   }
 
   /** Determine the local proxy hostname.  Can be supplied by constructor
@@ -740,11 +695,23 @@ public class ProxyInfo {
     return proxyPort;
   }
 
+  private int getMaxCommentAus() {
+    if (maxCommentAus < 0) {
+      maxCommentAus =
+        CurrentConfig.getIntParam(PARAM_MAX_COMMENT_AUS,
+				  DEFAULT_MAX_COMMENT_AUS);
+    }
+    return maxCommentAus;
+  }
+
+  PluginManager getPluginMgr() {
+    return
+      (PluginManager)LockssDaemon.getManager(LockssDaemon.PLUGIN_MANAGER);
+  }
+
   /** Convenience method to get all AUs */
   private Collection getAus() {
-    PluginManager pmgr =
-      (PluginManager)LockssDaemon.getManager(LockssDaemon.PLUGIN_MANAGER);
-    return pmgr.getAllAus();
+    return getPluginMgr().getAllAus();
   }
 
   protected static Logger log = Logger.getLogger("ProxyInfo");

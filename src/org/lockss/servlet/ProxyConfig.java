@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyConfig.java,v 1.22 2007-02-02 23:01:01 thib_gc Exp $
+ * $Id: ProxyConfig.java,v 1.23 2007-02-20 01:35:47 tlipkis Exp $
  */
 
 /*
@@ -34,7 +34,7 @@ package org.lockss.servlet;
 
 import java.io.*;
 import java.net.UnknownHostException;
-import java.util.Map;
+import java.util.*;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletResponse;
@@ -64,7 +64,7 @@ public class ProxyConfig extends LockssServlet {
   private PrintWriter wrtr = null;
   private String encapsulate;
   private ProxyInfo pi;
-  private Map urlStems;
+  private Set urlStems;
   private boolean pacform;
 
   private PluginManager pluginMgr;
@@ -146,7 +146,7 @@ public class ProxyConfig extends LockssServlet {
 
   void generateProxyFile(String format) throws IOException {
     pi = new ProxyInfo(getMachineName());
-    urlStems = pi.getUrlStemMap();
+    urlStems = pi.getUrlStems();
 
     if (!pluginMgr.areAusStarted()) {
       resp.sendError(HttpServletResponse.SC_SERVICE_UNAVAILABLE);

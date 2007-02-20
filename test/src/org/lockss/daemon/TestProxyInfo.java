@@ -1,5 +1,5 @@
 /*
- * $Id: TestProxyInfo.java,v 1.19 2007-02-03 01:18:11 thib_gc Exp $
+ * $Id: TestProxyInfo.java,v 1.20 2007-02-20 01:35:47 tlipkis Exp $
  */
 
 /*
@@ -50,10 +50,13 @@ public class TestProxyInfo extends LockssTestCase {
   static final String HOST = "host.org";
 
   private ProxyInfo pi;
+  private Plugin plug;
 
   public void setUp() throws Exception {
     super.setUp();
     pi = new ProxyInfo(HOST);
+    plug = new MockPlugin();
+    getMockLockssDaemon().getPluginManager().startService();
   }
 
   public void testGetProxyHost() {
@@ -86,30 +89,19 @@ public class TestProxyInfo extends LockssTestCase {
 
   List urlStems = ListUtil.list("http://foo.bar", "http://x.com");
 
-  Map makeUrlStemMap() {
-    Map map = new TreeMap();
-    for (Iterator iter = urlStems.iterator(); iter.hasNext(); ) {
-      String urlStem = (String)iter.next();
-      ArchivalUnit au = new MockArchivalUnit();
-      map.put(urlStem, au);
-    }
-    return map;
+  Set makeUrlStemSet() {
+    return makeUrlStemSet(urlStems, 1);
   }
 
-  public void testGetUrlStemMap() throws Exception {
-    String stem1 = "http://foo1";
-    String stem2 = "http://foo2";
-    String stem3 = "http://foo3";
-    getMockLockssDaemon().getPluginManager();
-    MyMockArchivalUnit au1 = new MyMockArchivalUnit();
-    au1.setUrlStems(ListUtil.list(stem1, stem2));
-    MyRegistryArchivalUnit au2 =
-      new MyRegistryArchivalUnit(new RegistryPlugin());
-    au2.setUrlStems(ListUtil.list(stem3));
-    Map map = pi.getUrlStemMap(ListUtil.list(au1, au2));
-    assertSame(au1, map.get(stem1));
-    assertSame(au1, map.get(stem2));
-    assertEquals(2, map.size());
+  Set makeUrlStemSet(List stems, int ix) {
+    for (Iterator iter = stems.iterator(); iter.hasNext(); ix++) {
+      String urlStem = (String)iter.next();
+      MockArchivalUnit au = new MockArchivalUnit();
+      au.setName("MockAU " + ix);
+      au.setUrlStems(ListUtil.list(urlStem));
+      PluginTestUtil.registerArchivalUnit(plug, au);
+    }
+    return getMockLockssDaemon().getPluginManager().getAllStems();
   }
 
   class MyMockArchivalUnit extends MockArchivalUnit {
@@ -136,7 +128,7 @@ public class TestProxyInfo extends LockssTestCase {
     final String tailRE =
         " return \\\"DIRECT\\\";\\n"
       + "}\\n";
-    String pf = pi.generatePacFile(makeUrlStemMap());
+    String pf = pi.generatePacFile(makeUrlStemSet());
     assertMatchesRE("PAC file didn't match RE.  File contents:\n" + pf,
 		    headRE + ifsRE + tailRE, pf);
   }
@@ -160,7 +152,7 @@ public class TestProxyInfo extends LockssTestCase {
     final String pat =
       headRE + ifsRE + tailRE + StringUtil.escapeNonAlphaNum(encapsulated);
 
-    String pf = pi.generateEncapsulatedPacFile(makeUrlStemMap(), oldfile, "(msg)");
+    String pf = pi.generateEncapsulatedPacFile(makeUrlStemSet(), oldfile, "(msg)");
     assertMatchesRE("PAC file didn't match RE.  File contents:\n" + pf,
 		    pat, pf);
   }
@@ -175,17 +167,17 @@ public class TestProxyInfo extends LockssTestCase {
     final String frag =
         "Proxy host.org:9090\n"
       + "\n"
-      + "Title MockAU\n"
+      + "Title MockAU 1\n"
       + "URL http://foo.bar\n"
       + "Domain foo.bar\n"
       + "\n"
-      + "Title MockAU\n"
+      + "Title MockAU 2\n"
       + "URL http://x.com\n"
       + "Domain x.com\n"
       + "\n"
       + "Proxy\n";
 
-    String s = pi.generateEZProxyFragment(makeUrlStemMap());
+    String s = pi.generateEZProxyFragment(makeUrlStemSet());
     assertTrue(s.startsWith("#"));
     assertEquals(frag, removeCommentLines(s));
   }
@@ -223,16 +215,9 @@ public class TestProxyInfo extends LockssTestCase {
     final String url1 = "http://bar.com";
     final String url2 = "http://foo.com";
 
-    FragmentBuilder builder = new FragmentBuilder() {
-      protected void generateEntry(StringBuffer buffer, String urlStem, ArchivalUnit au) {}
+    FragmentBuilder builder = pi.new FragmentBuilder() {
+      protected void generateEntry(StringBuffer buffer, String urlStem, String comment) {}
     };
-
-    assertEquals("foo.com", FragmentBuilder.removeProtocol(url2));
-    assertNegative(builder.compare(url1, null, url2, null));
-    assertPositive(builder.compare(url2, null, url1, null));
-    assertEquals(0, builder.compare(url1, null, url1, null));
-    assertEquals(0, builder.compare(url1, null, url1.replaceAll("http", "ftp"), null));
-    assertEquals(0, builder.compare(url1, null, url1.toUpperCase(), null));
 
     StringBuffer buffer;
 
@@ -249,6 +234,32 @@ public class TestProxyInfo extends LockssTestCase {
     assertEquals("", buffer.toString());
   }
 
+  public void testFragmentBuilderComment() {
+    final List comments = new ArrayList();
+
+    FragmentBuilder builder = pi.new FragmentBuilder() {
+      protected void generateEntry(StringBuffer buffer, String urlStem,
+				   String comment) {
+	comments.add(comment);
+      }
+    };
+
+    String url = "http://host1.com/";
+    makeUrlStemSet(ListUtil.list(url), 1);
+    url = "http://host2.com/";
+    makeUrlStemSet(ListUtil.list(url, url), 10);
+    url = "http://host3.com/";
+    makeUrlStemSet(ListUtil.list(url, url, url), 20);
+    url = "http://host4.com/";
+    builder.generateFragment(makeUrlStemSet(ListUtil.list(url, url, url,
+							  url, url), 40));
+    assertEquals(ListUtil.list("MockAU 1",
+			       "MockAU 10, MockAU 11",
+			       "MockAU 20, MockAU 21, 1 more AUs",
+			       "MockAU 40, MockAU 41, 3 more AUs"),
+		 comments);
+  }
+
   public void testSquidFragmentBuilder() {
     MockLockssDaemon mockLockssDaemon = getMockLockssDaemon();
     IcpManager testableIcpManager = new IcpManager() {
@@ -261,7 +272,7 @@ public class TestProxyInfo extends LockssTestCase {
     testableIcpManager.startService();
     
     SquidFragmentBuilder builder = pi.new SquidFragmentBuilder() {
-      protected void generateEntry(StringBuffer buffer, String urlStem, ArchivalUnit au) {}
+      protected void generateEntry(StringBuffer buffer, String urlStem, String comment) {}
     };
 
     assertEquals(HOST.replaceAll("\\.", "-") + "-domains",
@@ -288,17 +299,9 @@ public class TestProxyInfo extends LockssTestCase {
     StringBuffer buffer;
 
     buffer = new StringBuffer();
-    builder.generateEntry(
-        buffer,
-        "http://foo.com",
-        new MockArchivalUnit() {
-          public String getName() { return "Foo"; }
-        }
-    );
-    assertMatchesRE(
-          "# Foo\\n"
-        + "foo.com",
-        removeEmptyLines(buffer.toString())
+    builder.generateEntry(buffer, "http://foo.com", "Foo");
+    assertMatchesRE("# Foo\\n" + "foo.com",
+		    removeEmptyLines(buffer.toString())
     );
   }
 
@@ -308,13 +311,7 @@ public class TestProxyInfo extends LockssTestCase {
     StringBuffer buffer;
 
     buffer = new StringBuffer();
-    builder.generateEntry(
-        buffer,
-        "http://foo.com",
-        new MockArchivalUnit() {
-          public String getName() { return "Foo"; }
-        }
-    );
+    builder.generateEntry(buffer, "http://foo.com", "Foo");
     assertMatchesRE(
           "# Foo\\n"
         + "acl " + builder.encodeAclName() + " dstdomain foo.com",
@@ -328,13 +325,7 @@ public class TestProxyInfo extends LockssTestCase {
     StringBuffer buffer;
 
     buffer = new StringBuffer();
-    builder.generateEntry(
-        buffer,
-        "http://foo.com",
-        new MockArchivalUnit() {
-          public String getName() { return "Foo"; }
-        }
-    );
+    builder.generateEntry(buffer, "http://foo.com", "Foo");
     assertMatchesRE(
           "Title Foo\\n"
         + "URL http://foo.com\\n"
@@ -349,13 +340,7 @@ public class TestProxyInfo extends LockssTestCase {
     StringBuffer buffer;
 
     buffer = new StringBuffer();
-    builder.generateEntry(
-        buffer,
-        "http://foo.com",
-        new MockArchivalUnit() {
-          public String getName() { return "Foo"; }
-        }
-    );
+    builder.generateEntry(buffer, "http://foo.com", "Foo");
     assertMatchesRE(
           " // Foo\\n"
         + " if \\(shExpMatch\\(url, \\\"http://foo\\.com/\\*\\\"\\)\\)\\n"
