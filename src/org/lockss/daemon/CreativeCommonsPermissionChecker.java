@@ -1,5 +1,5 @@
 /*
- * $Id: CreativeCommonsPermissionChecker.java,v 1.9 2007-02-22 01:07:00 smorabito Exp $
+ * $Id: CreativeCommonsPermissionChecker.java,v 1.10 2007-02-22 01:07:53 smorabito Exp $
  */
 
 /*
@@ -58,7 +58,6 @@ import org.lockss.util.*;
 public class CreativeCommonsPermissionChecker
   implements PermissionChecker {
 
-//  private static String RDF_START = "<rdf:RDF ";
   private static String RDF_START = "<rdf:RDF";
   private static String RDF_END = "</rdf:RDF>";
 
