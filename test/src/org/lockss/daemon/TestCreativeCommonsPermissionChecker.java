@@ -1,5 +1,5 @@
 /*
- * $Id: TestCreativeCommonsPermissionChecker.java,v 1.6 2006-02-14 05:22:46 tlipkis Exp $
+ * $Id: TestCreativeCommonsPermissionChecker.java,v 1.7 2007-02-22 01:07:00 smorabito Exp $
  */
 
 /*
@@ -160,6 +160,43 @@ public class TestCreativeCommonsPermissionChecker extends LockssTestCase {
     "" +
     "</rdf:RDF>";
 
+  private static final String entelequiaRDF = 
+    "License</a>.<!--/Creative Commons License--><!-- <rdf:RDF\n" +
+    "xmlns=\"http://web.resource.org/cc/\"\n" +
+    "xmlns:dc=\"http://purl.org/dc/elements/1.1/\"\n" +
+    "xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\">\n" +
+    "        <Work rdf:about=\"\">\n" +
+    "                <license\n" +
+    "rdf:resource=\"http://creativecommons.org/licenses/by-nc-nd/2.5/\"\n" +
+    "/>\n" +
+    "        <dc:type rdf:resource=\"http://purl.org/dc/dcmitype/Text\" />\n" +
+    "        </Work>\n" +
+    "        <License\n" +
+    "rdf:about=\"http://creativecommons.org/licenses/by-nc-nd/2.5/\"><permits\n" +
+    "rdf:resource=\"http://web.resource.org/cc/Reproduction\"/><permits\n" +
+    "rdf:resource=\"http://web.resource.org/cc/Distribution\"/><requires\n" +
+    "rdf:resource=\"http://web.resource.org/cc/Notice\"/><requires\n" +
+    "rdf:resource=\"http://web.resource.org/cc/Attribution\"/><prohibits\n" +
+    "rdf:resource=\"http://web.resource.org/cc/CommercialUse\"/></License></rdf:RDF>\n" +
+    "-->";
+  
+  // Bad start tag:  It reads rdf:RDFF instead of rdf:RDF.  Should not pass.
+  private static final String badStartTag =
+    "<rdf:RDFF xmlns=\"http://web.resource.org/cc/\"\n" +
+    "    xmlns:dc=\"http://purl.org/dc/elements/1.1/\"\n" +
+    "    xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\">\n" +
+    "<Work rdf:about=\"\">\n" +
+    "    <license rdf:resource=\"http://creativecommons.org/licenses/by/2.0/\" />\n" +
+    "</Work>\n\n" +
+    "<License rdf:about=\"http://creativecommons.org/licenses/by/2.0/\">\n" +
+    "    <permits rdf:resource=\"http://web.resource.org/cc/Distribution\" />\n" +
+    "    <requires rdf:resource=\"http://web.resource.org/cc/Notice\" />\n" +
+    "    <requires rdf:resource=\"http://web.resource.org/cc/Attribution\" />\n" +
+    "    <permits rdf:resource=\"http://web.resource.org/cc/DerivativeWorks\" />\n" +
+    "    <permits rdf:resource=\"http://web.resource.org/cc/Reproduction\" />\n" +
+    "</License>\n\n"+
+    "</rdf:RDF>";
+    
   // Imaginary URI.  The permission requires a valid URI for the SAX
   // parser.  If the CC RDF license contains a URI in the <Work
   // rdf:about="..."> attribute, this MUST MATCH IT to be valid.  If
@@ -232,4 +269,15 @@ public class TestCreativeCommonsPermissionChecker extends LockssTestCase {
     reader.close();
   }
 
+  public void testCheckEntelequia() throws Exception {
+    reader = new StringReader(entelequiaRDF);
+    assertTrue(cc.checkPermission(null, reader, pageURI));
+    reader.close();
+  }
+  
+  public void testCheckBadStartTag() throws Exception {
+    reader = new StringReader(badStartTag);
+    assertFalse(cc.checkPermission(null, reader, pageURI));
+    reader.close();
+  }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: CreativeCommonsPermissionChecker.java,v 1.8 2006-02-14 05:22:46 tlipkis Exp $
+ * $Id: CreativeCommonsPermissionChecker.java,v 1.9 2007-02-22 01:07:00 smorabito Exp $
  */
 
 /*
@@ -58,7 +58,8 @@ import org.lockss.util.*;
 public class CreativeCommonsPermissionChecker
   implements PermissionChecker {
 
-  private static String RDF_START = "<rdf:RDF ";
+//  private static String RDF_START = "<rdf:RDF ";
+  private static String RDF_START = "<rdf:RDF";
   private static String RDF_END = "</rdf:RDF>";
 
   // Maximum size for the RDF buffer
