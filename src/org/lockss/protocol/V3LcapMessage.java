@@ -1,5 +1,5 @@
 /*
- * $Id: V3LcapMessage.java,v 1.27 2007-02-16 23:08:32 smorabito Exp $
+ * $Id: V3LcapMessage.java,v 1.28 2007-02-22 05:35:49 smorabito Exp $
  */
 
 /*
@@ -582,7 +582,7 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
 
   public VoteBlocksIterator getVoteBlockIterator() {
     if (m_voteBlocks == null) {
-      return null;
+      return VoteBlocksIterator.EMPTY_ITERATOR;
     } else {
       return m_voteBlocks.iterator();
     }

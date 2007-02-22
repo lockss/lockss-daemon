@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.19 2007-02-16 23:08:31 smorabito Exp $
+ * $Id: TestV3Poller.java,v 1.20 2007-02-22 05:35:49 smorabito Exp $
  */
 
 /*
@@ -71,9 +71,16 @@ public class TestV3Poller extends LockssTestCase {
   private byte[][] pollerNonces;
   private byte[][] voterNonces;
   
+  private String localPeerKey = "TCP:[127.0.0.1]:9729";
+  
   private File tempDir;
 
   private static final String BASE_URL = "http://www.test.org/";
+  
+  private List initialPeers =
+    ListUtil.list("TCP:[10.1.0.1]:9729", "TCP:[10.1.0.2]:9729",
+                  "TCP:[10.1.0.3]:9729", "TCP:[10.1.0.4]:9729",
+                  "TCP:[10.1.0.5]:9729", "TCP:[10.1.0.6]:9729");
 
   private static String[] urls = {
     "lockssau:",
@@ -106,8 +113,8 @@ public class TestV3Poller extends LockssTestCase {
     this.tempDir = getTempDir();
     this.testau = setupAu();
     initRequiredServices();
-    this.pollerId = idmgr.stringToPeerIdentity("127.0.0.1");
-    this.voters = makeVoters(4);
+    this.pollerId = idmgr.stringToPeerIdentity(localPeerKey);
+    this.voters = makeVoters(initialPeers);
     this.pollerNonces = makeNonces();
     this.voterNonces = makeNonces();
     this.pollAcks = makePollAckMessages();
@@ -135,10 +142,11 @@ public class TestV3Poller extends LockssTestCase {
     return mau;
   }
 
-  private PeerIdentity[] makeVoters(int count) throws Exception {
-    PeerIdentity[] ids = new PeerIdentity[count];
-    for (int i = 0; i < count; i++) {
-      ids[i] = idmgr.stringToPeerIdentity("10.1.0." + (i+1));
+  private PeerIdentity[] makeVoters(List keys) throws Exception {
+    PeerIdentity[] ids = new PeerIdentity[keys.size()];
+    int idIndex = 0;
+    for (Iterator it = keys.iterator(); it.hasNext(); ) {
+      ids[idIndex++] = idmgr.findPeerIdentity((String)it.next());
     }
     return ids;
   }
@@ -176,10 +184,10 @@ public class TestV3Poller extends LockssTestCase {
                                             987654321,
                                             voters[i],
                                             tempDir, theDaemon);
-      msg.setNominees(ListUtil.list("10.0." + i + ".1",
-                                    "10.0." + i + ".2",
-                                    "10.0." + i + ".3",
-                                    "10.0." + i + ".4"));
+      msg.setNominees(ListUtil.list("TCP:[10.0." + i + ".1]:9729",
+                                    "TCP:[10.0." + i + ".2]:9729",
+                                    "TCP:[10.0." + i + ".3]:9729",
+                                    "TCP:[10.0." + i + ".4]:9729"));
       msgs[i] = msg;
     }
     return msgs;
@@ -388,6 +396,29 @@ public class TestV3Poller extends LockssTestCase {
     }
     ud.setVoteBlocks(vb);
     return ud;
+  }
+  
+  public void testGetReferenceList() throws Exception {
+    V3Poller v3Poller = makeV3Poller("key");
+    assertNotNull(v3Poller.getReferenceList());
+    assertEquals(6, v3Poller.getReferenceList().size());
+    IdentityManager idMgr = theDaemon.getIdentityManager();
+    idMgr.findPeerIdentity("TCP:[10.1.0.100]:9729");
+    assertEquals(7, v3Poller.getReferenceList().size());
+    idMgr.findPeerIdentity("TCP:[10.1.0.101]:9729");
+    assertEquals(8, v3Poller.getReferenceList().size());
+  }
+  
+  public void testGetReferenceListInitialPeersOnly() throws Exception {
+    ConfigurationUtil.addFromArgs(V3Poller.PARAM_ENABLE_DISCOVERY, "false");
+    V3Poller v3Poller = makeV3Poller("key");
+    assertNotNull(v3Poller.getReferenceList());
+    assertEquals(6, v3Poller.getReferenceList().size());
+    IdentityManager idMgr = theDaemon.getIdentityManager();
+    idMgr.findPeerIdentity("TCP:[10.1.0.100]:9729");
+    assertEquals(6, v3Poller.getReferenceList().size());
+    idMgr.findPeerIdentity("TCP:[10.1.0.101]:9729");
+    assertEquals(6, v3Poller.getReferenceList().size());
   }
   
   public void testTallyBlocksSucceedsOnExtraFileEdgeCase() throws Exception {
@@ -601,15 +632,15 @@ public class TestV3Poller extends LockssTestCase {
     private PeerIdentity[] mockVoters;
 
     MyMockV3Poller(PollSpec spec, LockssDaemon daemon, PeerIdentity id,
-               String pollkey, long duration, String hashAlg,
-               PeerIdentity[] voters)
+                   String pollkey, long duration, String hashAlg,
+                   PeerIdentity[] voters)
         throws PollSerializerException {
       super(spec, daemon, id, pollkey, duration, hashAlg);
       this.mockVoters = voters;
     }
-
-    Collection getReferenceList() {
-      return ListUtil.fromArray(voters);
+    
+    Collection XXXgetReferenceList() {
+      return ListUtil.fromArray(mockVoters);
     }
 
     public void sendMessageTo(V3LcapMessage msg, PeerIdentity to) {
@@ -651,9 +682,12 @@ public class TestV3Poller extends LockssTestCase {
     p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
     p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
+    p.setProperty(IdentityManager.PARAM_LOCAL_V3_IDENTITY, localPeerKey);
     p.setProperty(ConfigManager.PARAM_NEW_SCHEDULER, "true");
     p.setProperty(V3Poller.PARAM_MIN_POLL_SIZE, "4");
     p.setProperty(V3Poller.PARAM_MAX_POLL_SIZE, "4");
+    p.setProperty(IdentityManagerImpl.PARAM_INITIAL_PEERS,
+                  StringUtil.separatedString(initialPeers, ";"));
     p.setProperty(V3Poller.PARAM_QUORUM, "3");
     p.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
     p.setProperty(V3Serializer.PARAM_V3_STATE_LOCATION, tempDirPath);

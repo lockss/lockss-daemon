@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3LcapMessage.java,v 1.18 2007-02-16 23:08:32 smorabito Exp $
+ * $Id: TestV3LcapMessage.java,v 1.19 2007-02-22 05:35:49 smorabito Exp $
  */
 
 /*
@@ -239,21 +239,19 @@ public class TestV3LcapMessage extends LockssTestCase {
     assertEquals(a.getVoterNonce(), b.getVoterNonce());
     assertEquals(a.getPluginVersion(), b.getPluginVersion());
     assertEquals(a.getHashAlgorithm(), b.getHashAlgorithm());
-    List aVoteBlocks = new ArrayList();
-    VoteBlocksIterator iter = a.getVoteBlockIterator();
-    if (iter != null) {
-      while (iter.hasNext()) {
-        aVoteBlocks.add(iter.next());
-      }
+    assertEquals(a.isVoteComplete(), b.isVoteComplete());
+    assertEquals(a.getRepairDataLength(), b.getRepairDataLength());
+    assertEquals(a.getLastVoteBlockURL(), b.getLastVoteBlockURL());
+    assertIsomorphic(a.getNominees(), b.getNominees());
+    List aBlocks = new ArrayList();
+    List bBlocks = new ArrayList();
+    for (VoteBlocksIterator iter = a.getVoteBlockIterator(); iter.hasNext(); ) {
+      aBlocks.add(iter.next());
     }
-    List bVoteBlocks = new ArrayList();
-    iter = b.getVoteBlockIterator();
-    if (iter != null) {
-      while (iter.hasNext()) {
-        bVoteBlocks.add(iter.next());
-      }
+    for (VoteBlocksIterator iter = b.getVoteBlockIterator(); iter.hasNext(); ) {
+      bBlocks.add(iter.next());
     }
-    assertTrue(aVoteBlocks.equals(bVoteBlocks));
+    assertTrue(aBlocks.equals(bBlocks));
 
     //  TODO: Figure out how to test time.
 

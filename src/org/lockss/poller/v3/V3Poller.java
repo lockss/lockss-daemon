@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.47 2007-01-30 04:49:10 smorabito Exp $
+ * $Id: V3Poller.java,v 1.48 2007-02-22 05:35:48 smorabito Exp $
  */
 
 /*
@@ -156,6 +156,11 @@ public class V3Poller extends BasePoll {
   public static final String PARAM_INVITATION_SIZE = PREFIX + "invitationSize";
   public static final int DEFAULT_INVITATION_SIZE = 10;
   
+  /** If true, enable the discovery mechanism that attempts to invite peers
+   * from outside our Initial Peer List into polls. */
+  public static final String PARAM_ENABLE_DISCOVERY =
+    PREFIX + "enableDiscovery";
+  public static final boolean DEFAULT_ENABLE_DISCOVERY = true;
 
   /** If true, just log a message rather than deleting files that are
    * considered to be missing from a majority of peers.
@@ -288,6 +293,7 @@ public class V3Poller extends BasePoll {
   private TimerQueue.Request voteCompleteRequest;
   private long bytesHashedSinceLastCheckpoint = 0;
   private int voteDeadlineMultiplier = DEFAULT_VOTE_DURATION_MULTIPLIER;
+  private boolean enableDiscovery = DEFAULT_ENABLE_DISCOVERY;
   
   // Probability of repairing from another cache.  A number between
   // 0.0 and 1.0.
@@ -409,6 +415,8 @@ public class V3Poller extends BasePoll {
     invitationSize = c.getInt(PARAM_INVITATION_SIZE, DEFAULT_INVITATION_SIZE);
     extraPollTime = c.getLong(PARAM_V3_EXTRA_POLL_TIME,
                               DEFAULT_V3_EXTRA_POLL_TIME);
+    enableDiscovery = c.getBoolean(PARAM_ENABLE_DISCOVERY,
+                                   DEFAULT_ENABLE_DISCOVERY);
     hashBytesBeforeCheckpoint = 
       c.getLong(PARAM_V3_HASH_BYTES_BEFORE_CHECKPOINT,
                 DEFAULT_V3_HASH_BYTES_BEFORE_CHECKPOINT);
@@ -1636,10 +1644,22 @@ public class V3Poller extends BasePoll {
   }
 
   /**
-   * @return The full set of peers available for inviting into the poll. 
+   * @return The set of peers available for inviting into the poll.  The set
+   * returned is either the full set of all known peers, or  
    */
   Collection getReferenceList() {
-    return idManager.getTcpPeerIdentities();
+    if (enableDiscovery) {
+      return idManager.getTcpPeerIdentities();
+    } else {
+      Collection keys =
+        CurrentConfig.getList(IdentityManagerImpl.PARAM_INITIAL_PEERS,
+                              IdentityManagerImpl.DEFAULT_INITIAL_PEERS);
+      Collection initialPeers = new ArrayList(keys.size());
+      for (Iterator iter = keys.iterator(); iter.hasNext(); ) {
+        initialPeers.add(idManager.findPeerIdentity((String)iter.next()));
+      }
+      return initialPeers;
+    }
   }
 
   Class getPollerActionsClass() {

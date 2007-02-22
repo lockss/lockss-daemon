@@ -8,6 +8,16 @@ import org.lockss.util.*;
  * Provide an Iterator with a <tt>peek</tt> method.
  */
 public interface VoteBlocksIterator extends LockssSerializable {
+  
+  /** An empty, immutable VoteBlock iterator.  Calling next() or
+   * peek() throws NoSuchElementException.
+   */
+  public static final VoteBlocksIterator EMPTY_ITERATOR =
+    new VoteBlocksIterator() {
+      public boolean hasNext() { return false; }
+      public VoteBlock next() { throw new NoSuchElementException(); }
+      public VoteBlock peek() { throw new NoSuchElementException(); }
+    };
 
   /**
    * Return true if the iteration has more VoteBlock objects.
