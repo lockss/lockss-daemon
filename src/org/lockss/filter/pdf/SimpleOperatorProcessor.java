@@ -1,10 +1,10 @@
 /*
- * $Id: SimpleOperatorProcessor.java,v 1.8 2006-12-07 06:15:27 thib_gc Exp $
+ * $Id: SimpleOperatorProcessor.java,v 1.9 2007-02-23 19:41:34 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

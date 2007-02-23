@@ -1,10 +1,10 @@
 /*
- * $Id: TextScrapingDocumentTransform.java,v 1.3 2006-11-01 22:25:45 thib_gc Exp $
+ * $Id: TextScrapingDocumentTransform.java,v 1.4 2007-02-23 19:41:34 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

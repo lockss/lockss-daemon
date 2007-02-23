@@ -1,10 +1,9 @@
 /*
- * $Id: ConditionalSubsequenceOperatorProcessor.java,v 1.3 2006-11-13 21:27:11 thib_gc Exp $
+ * $Id: ConditionalSubsequenceOperatorProcessor.java,v 1.4 2007-02-23 19:41:34 thib_gc Exp $
  */
 
 /*
-
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+76 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
