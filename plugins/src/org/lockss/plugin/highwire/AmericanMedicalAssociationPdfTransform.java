@@ -1,5 +1,5 @@
 /*
- * $Id: AmericanMedicalAssociationPdfTransform.java,v 1.2 2007-01-26 21:46:29 thib_gc Exp $
+ * $Id: AmericanMedicalAssociationPdfTransform.java,v 1.3 2007-02-23 22:22:35 thib_gc Exp $
  */
 
 /*
@@ -43,7 +43,7 @@ public class AmericanMedicalAssociationPdfTransform extends SimpleOutputDocument
     
     public DocumentTransform makePreliminaryTransform() throws IOException {
       return new ConditionalDocumentTransform(// If on the first page...
-                                              new TransformFirstPage(// ...collpasing "Downloaded from" succeeds,
+                                              new TransformFirstPage(// ...collapsing "Downloaded from" succeeds,
                                                                      new CollapseDownloadedFrom()),
                                               // Then on all other pages...
                                               new TransformEachPageExceptFirst(// ...collapse "Downloaded from"
