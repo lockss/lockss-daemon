@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePdfFilterFactory.java,v 1.13 2007-02-23 23:32:13 thib_gc Exp $
+ * $Id: HighWirePdfFilterFactory.java,v 1.14 2007-02-23 23:54:04 thib_gc Exp $
  */
 
 /*
@@ -171,12 +171,12 @@ public class HighWirePdfFilterFactory extends BasicPdfFilterFactory {
     
   }
   
-  public static class CollapseDownloadedFromAndNormalizeHyperlink 
+  public static class CollapseDownloadedFromAndNormalizeHyperlinks 
       extends AggregatePageTransform {
     
-    public CollapseDownloadedFromAndNormalizeHyperlink() throws IOException {
+    public CollapseDownloadedFromAndNormalizeHyperlinks() throws IOException {
       super(new CollapseDownloadedFrom(),
-            new NormalizeDownloadedFromHyperlink());
+            new NormalizeHyperlinks());
     }
     
   }
@@ -270,21 +270,6 @@ public class HighWirePdfFilterFactory extends BasicPdfFilterFactory {
       return ret;
     }
     
-  }
-  
-  public static class NormalizeDownloadedFromHyperlink implements PageTransform {
-
-    /* Inherit documentation */
-    public boolean transform(PdfPage pdfPage) throws IOException {
-      if (pdfPage.getNumberOfAnnotations() > 0) {
-        PDRectangle rect = pdfPage.getAnnotation(pdfPage.getNumberOfAnnotations()-1).getRectangle();
-        rect.setLowerLeftY(12.34f);  // 12.34f is arbitrary
-        rect.setUpperRightY(56.78f); // 56.78f is arbitrary
-        return true; // success
-      }
-      return false; // all other cases are unexpected
-    }
-
   }
   
   public static class NormalizeMetadata extends AggregateDocumentTransform {

@@ -1,5 +1,5 @@
 /*
- * $Id: AmericanPhysiologicalSocietyPdfTransform.java,v 1.26 2007-01-26 21:46:29 thib_gc Exp $
+ * $Id: AmericanPhysiologicalSocietyPdfTransform.java,v 1.27 2007-02-23 23:54:04 thib_gc Exp $
  */
 
 /*
@@ -164,14 +164,14 @@ public class AmericanPhysiologicalSocietyPdfTransform extends SimpleOutputDocume
     super(new ConditionalDocumentTransform(// If...
                                            new AggregateDocumentTransform(// ...on the first page...
                                                                           new TransformFirstPage(// ...collapsing "Downloaded from" and normalizing its hyperlink succeeds...
-                                                                                                 new CollapseDownloadedFromAndNormalizeHyperlink()),
+                                                                                                 new CollapseDownloadedFromAndNormalizeHyperlinks()),
                                                                           // ...and on at least one page...
                                                                           new TransformEachPage(PdfUtil.OR,
                                                                                                 // ...normalizing "This information is current as of" succeeds,
                                                                                                 new NormalizeCurrentAsOf())),
                                            // ...then on every page except the first...
                                            new TransformEachPageExceptFirst(// ...collapse "Downloaded from" and normalize its hyperlink,
-                                                                            new CollapseDownloadedFromAndNormalizeHyperlink()),
+                                                                            new CollapseDownloadedFromAndNormalizeHyperlinks()),
                                            // ...and normalize the metadata
                                            new NormalizeMetadata()));
   }
