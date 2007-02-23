@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePdfFilterFactory.java,v 1.12 2007-01-26 22:29:29 thib_gc Exp $
+ * $Id: HighWirePdfFilterFactory.java,v 1.13 2007-02-23 23:32:13 thib_gc Exp $
  */
 
 /*
@@ -38,6 +38,9 @@ import java.util.*;
 import org.lockss.filter.pdf.*;
 import org.lockss.util.*;
 import org.pdfbox.cos.*;
+import org.pdfbox.pdmodel.common.PDRectangle;
+import org.pdfbox.pdmodel.interactive.action.type.*;
+import org.pdfbox.pdmodel.interactive.annotation.*;
 
 public class HighWirePdfFilterFactory extends BasicPdfFilterFactory {
 
@@ -168,7 +171,7 @@ public class HighWirePdfFilterFactory extends BasicPdfFilterFactory {
     
   }
   
-  public static class CollapseDownloadedFromAndNormalizeHyperlink
+  public static class CollapseDownloadedFromAndNormalizeHyperlink 
       extends AggregatePageTransform {
     
     public CollapseDownloadedFromAndNormalizeHyperlink() throws IOException {
@@ -245,14 +248,38 @@ public class HighWirePdfFilterFactory extends BasicPdfFilterFactory {
     
   }
   
+  public static class NormalizeHyperlinks implements PageTransform {
+    
+    public boolean transform(PdfPage pdfPage) throws IOException {
+      boolean ret = false; // Expecting at least one
+      
+      for (Iterator iter = pdfPage.getAnnotationIterator() ; iter.hasNext() ; ) {
+        PDAnnotation pdAnnotation = (PDAnnotation)iter.next();
+        if (pdAnnotation instanceof PDAnnotationLink) {
+          PDAnnotationLink pdAnnotationLink = (PDAnnotationLink)pdAnnotation;
+          PDAction pdAction = pdAnnotationLink.getAction();
+          if (pdAction instanceof PDActionURI) {
+            PDRectangle rect = pdAnnotation.getRectangle();
+            rect.setLowerLeftY(12.34f);  // 12.34f is arbitrary
+            rect.setUpperRightY(56.78f); // 56.78f is arbitrary
+            ret = true; // Found at least one
+          }
+        }
+      }
+      
+      return ret;
+    }
+    
+  }
+  
   public static class NormalizeDownloadedFromHyperlink implements PageTransform {
 
     /* Inherit documentation */
     public boolean transform(PdfPage pdfPage) throws IOException {
       if (pdfPage.getNumberOfAnnotations() > 0) {
-        COSArray array = pdfPage.getAnnotation(pdfPage.getNumberOfAnnotations()-1).getRectangle().getCOSArray();
-        array.set(1, new COSFloat(1.0f)); // 1.0f is arbitrary
-        array.set(3, new COSFloat(2.0f)); // 2.0f is arbitrary
+        PDRectangle rect = pdfPage.getAnnotation(pdfPage.getNumberOfAnnotations()-1).getRectangle();
+        rect.setLowerLeftY(12.34f);  // 12.34f is arbitrary
+        rect.setUpperRightY(56.78f); // 56.78f is arbitrary
         return true; // success
       }
       return false; // all other cases are unexpected
