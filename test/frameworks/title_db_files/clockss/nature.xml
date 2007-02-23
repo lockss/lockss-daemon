@@ -35,9 +35,394 @@
 
   <property name="org.lockss.title">
 
-    <property name="gene3">
-      <property name="title" value="Genes and Immunity Volume 3 (2003)" />
+    <property name="bmt30">
+      <property name="title" value="Bone Marrow Transplantation Volume 30 (2002)" />
+      <property name="journalTitle" value="Bone Marrow Transplantation" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="bmt" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="2002" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="30" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+      <property name="attributes.releaseStatus" value="pre-release" />
+    </property>
+
+    <property name="bmt29">
+      <property name="title" value="Bone Marrow Transplantation Volume 29 (2002)" />
+      <property name="journalTitle" value="Bone Marrow Transplantation" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="bmt" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="2002" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="29" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+      <property name="attributes.releaseStatus" value="pre-release" />
+    </property>
+
+    <property name="bmt28">
+      <property name="title" value="Bone Marrow Transplantation Volume 28 (2001)" />
+      <property name="journalTitle" value="Bone Marrow Transplantation" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="bmt" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="2001" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="28" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+      <property name="attributes.releaseStatus" value="pre-release" />
+    </property>
+
+    <property name="bmt27">
+      <property name="title" value="Bone Marrow Transplantation Volume 27 (2001)" />
+      <property name="journalTitle" value="Bone Marrow Transplantation" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="bmt" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="2001" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="27" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+      <property name="attributes.releaseStatus" value="pre-release" />
+    </property>
+
+
+    <property name="bmt26">
+      <property name="title" value="Bone Marrow Transplantation Volume 26 (2000)" />
+      <property name="journalTitle" value="Bone Marrow Transplantation" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="bmt" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="2000" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="26" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+      <property name="attributes.releaseStatus" value="pre-release" />
+    </property>
+
+    <property name="bmt25">
+      <property name="title" value="Bone Marrow Transplantation Volume 25 (2000)" />
+      <property name="journalTitle" value="Bone Marrow Transplantation" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="bmt" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="2000" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="25" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+      <property name="attributes.releaseStatus" value="pre-release" />
+    </property>
+
+    <property name="bmt24">
+      <property name="title" value="Bone Marrow Transplantation Volume 24 (1999)" />
+      <property name="journalTitle" value="Bone Marrow Transplantation" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="bmt" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="1999" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="24" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+      <property name="attributes.releaseStatus" value="pre-release" />
+    </property>
+
+    <property name="bmt23">
+      <property name="title" value="Bone Marrow Transplantation Volume 23 (1999)" />
+      <property name="journalTitle" value="Bone Marrow Transplantation" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="bmt" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="1999" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="23" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+      <property name="attributes.releaseStatus" value="pre-release" />
+    </property>
+
+    <property name="bmt22">
+      <property name="title" value="Bone Marrow Transplantation Volume 22 (1998)" />
+      <property name="journalTitle" value="Bone Marrow Transplantation" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="bmt" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="1998" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="22" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+      <property name="attributes.releaseStatus" value="pre-release" />
+    </property>
+
+    <property name="bmt21">
+      <property name="title" value="Bone Marrow Transplantation Volume 21 (1998)" />
+      <property name="journalTitle" value="Bone Marrow Transplantation" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="bmt" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="1998" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="21" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+      <property name="attributes.releaseStatus" value="pre-release" />
+    </property>
+
+    <property name="bmt20">
+      <property name="title" value="Bone Marrow Transplantation Volume 20 (1997)" />
+      <property name="journalTitle" value="Bone Marrow Transplantation" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="bmt" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="1997" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="20" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+      <property name="attributes.releaseStatus" value="pre-release" />
+    </property>
+
+    <property name="bmt19">
+      <property name="title" value="Bone Marrow Transplantation Volume 19 (1997)" />
+      <property name="journalTitle" value="Bone Marrow Transplantation" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="bmt" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="1997" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="19" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+      <property name="attributes.releaseStatus" value="pre-release" />
+    </property>
+
+    <property name="cgt9">
+      <property name="title" value="Cancer Gene Therapy Volume 9 (2002)" />
       <property name="journalTitle" value="Abacus" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="cgt" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="2002" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="9" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+      <property name="attributes.releaseStatus" value="pre-release" />
+    </property>
+
+    <property name="cgt8">
+      <property name="title" value="Cancer Gene Therapy Volume 8 (2001)" />
+      <property name="journalTitle" value="Abacus" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="cgt" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="2001" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="8" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+      <property name="attributes.releaseStatus" value="pre-release" />
+    </property>
+
+    <property name="cgt7">
+      <property name="title" value="Cancer Gene Therapy Volume 7 (2000)" />
+      <property name="journalTitle" value="Abacus" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="cgt" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="2000" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="7" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+      <property name="attributes.releaseStatus" value="pre-release" />
+    </property>
+
+    <property name="cgt6">
+      <property name="title" value="Cancer Gene Therapy Volume 6 (1999)" />
+      <property name="journalTitle" value="Abacus" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="cgt" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="1999" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="6" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+      <property name="attributes.releaseStatus" value="pre-release" />
+    </property>
+
+    <property name="gene3">
+      <property name="title" value="Genes and Immunity Volume 3 (2002)" />
+      <property name="journalTitle" value="Genes and Immunity" />
       <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -61,7 +446,7 @@
 
     <property name="gene2">
       <property name="title" value="Genes and Immunity Volume 2 (2001)" />
-      <property name="journalTitle" value="Abacus" />
+      <property name="journalTitle" value="Genes and Immunity" />
       <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -85,7 +470,7 @@
 
     <property name="gene1">
       <property name="title" value="Genes and Immunity Volume 1 (2000)" />
-      <property name="journalTitle" value="Abacus" />
+      <property name="journalTitle" value="Genes and Immunity" />
       <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
