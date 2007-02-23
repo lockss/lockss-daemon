@@ -1,10 +1,10 @@
 /*
- * $Id: PdfPage.java,v 1.4 2006-09-12 22:34:36 thib_gc Exp $
+ * $Id: PdfPage.java,v 1.5 2007-02-23 19:42:04 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -106,7 +106,7 @@ public class PdfPage {
   /**
    * @see #getAnnotations
    */
-  public ListIterator getAnnotationIterator() throws IOException {
+  public ListIterator /* of PDAnnotation */ getAnnotationIterator() throws IOException {
     return getAnnotations().listIterator();
   }
 
@@ -283,7 +283,7 @@ public class PdfPage {
   /**
    * @see PDPage#getAnnotations
    */
-  protected List getAnnotations() throws IOException {
+  protected List /* of PDAnnotation */ getAnnotations() throws IOException {
     return getPdPage().getAnnotations();
   }
 
