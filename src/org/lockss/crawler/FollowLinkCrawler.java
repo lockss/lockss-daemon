@@ -1,10 +1,10 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.57 2007-02-07 19:32:21 thib_gc Exp $
+ * $Id: FollowLinkCrawler.java,v 1.58 2007-02-25 23:06:38 dshr Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -157,7 +157,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
       fetchFlags.set(UrlCacher.REFETCH_IF_DAMAGE_FLAG);
     }
     parseUseCharset = config.getBoolean(PARAM_PARSE_USE_CHARSET,
-				   DEFAULT_PARSE_USE_CHARSET);
+					DEFAULT_PARSE_USE_CHARSET);
 
   }
 
@@ -330,6 +330,8 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	  }
 
 	  cacheWithRetries(uc, maxRetries);
+	  // Successfully fetched URL, call hook
+	  fetchedUrlHook(uc);
 	}
       } catch (CacheException.RepositoryException ex) {
 	// Failed.  Don't try this one again during this crawl.
@@ -482,6 +484,9 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	}
       }
     }
+  }
+
+  protected void fetchedUrlHook(UrlCacher uc) {
   }
 
   private LinkExtractor getLinkExtractor(CachedUrl cu) {

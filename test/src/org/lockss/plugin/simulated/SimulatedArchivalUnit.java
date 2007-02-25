@@ -1,10 +1,10 @@
 /*
- * $Id: SimulatedArchivalUnit.java,v 1.59 2006-11-11 06:56:29 tlipkis Exp $
+ * $Id: SimulatedArchivalUnit.java,v 1.60 2007-02-25 23:06:38 dshr Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -130,7 +130,7 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
    */
   public SimulatedContentGenerator getContentGenerator() {
     if (scgen == null) {
-      scgen = new SimulatedContentGenerator(fileRoot);
+      scgen = SimulatedContentGenerator.getInstance(fileRoot);
     }
     return scgen;
   }
@@ -185,7 +185,7 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
    */
   public static String mapUrlToContentFileName(String url) {
     String baseStr =  StringUtil.replaceString(url, SIMULATED_URL_ROOT,
-        SimulatedContentGenerator.ROOT_NAME);
+					       SimulatedContentGenerator.ROOT_NAME);
     return FileUtil.sysDepPath(baseStr);
   }
 
@@ -196,7 +196,7 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
    */
   public String mapContentFileNameToUrl(String filename) {
     String baseStr = StringUtil.replaceString(filename, simRoot,
-        SIMULATED_URL_ROOT);
+					      SIMULATED_URL_ROOT);
     return FileUtil.sysIndepPath(baseStr);
   }
 
@@ -234,7 +234,7 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
   }
 
   protected void loadAuConfigDescrs(Configuration config) throws
-      ConfigurationException {
+  ConfigurationException {
     try {
       fileRoot = config.get(SimulatedPlugin.AU_PARAM_ROOT);
       if (fileRoot == null) {
@@ -242,7 +242,7 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
           ArchivalUnit.ConfigurationException("Missing configuration value for: "+
                                               SimulatedPlugin.AU_PARAM_ROOT);
       }
-      SimulatedContentGenerator gen = new SimulatedContentGenerator(fileRoot);
+      SimulatedContentGenerator gen = SimulatedContentGenerator.getInstance(fileRoot);
 
       if (config.containsKey(SimulatedPlugin.AU_PARAM_DEPTH)) {
         gen.setTreeDepth(config.getInt(SimulatedPlugin.AU_PARAM_DEPTH));
@@ -252,22 +252,22 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
       }
       if (config.containsKey(SimulatedPlugin.AU_PARAM_NUM_FILES)) {
         gen.setNumFilesPerBranch(config.getInt(
-                   SimulatedPlugin.AU_PARAM_NUM_FILES));
+					       SimulatedPlugin.AU_PARAM_NUM_FILES));
       }
       if (config.containsKey(SimulatedPlugin.AU_PARAM_BIN_FILE_SIZE)) {
         gen.setBinaryFileSize(config.getInt(
-                   SimulatedPlugin.AU_PARAM_BIN_FILE_SIZE));
+					    SimulatedPlugin.AU_PARAM_BIN_FILE_SIZE));
       }
       if (config.containsKey(SimulatedPlugin.AU_PARAM_MAXFILE_NAME)) {
         gen.setMaxFilenameLength(config.getInt(
-                   SimulatedPlugin.AU_PARAM_MAXFILE_NAME));
+					       SimulatedPlugin.AU_PARAM_MAXFILE_NAME));
       }
       if (config.containsKey(SimulatedPlugin.AU_PARAM_FILE_TYPES)) {
         gen.setFileTypes(config.getInt(SimulatedPlugin.AU_PARAM_FILE_TYPES));
       }
       if (config.containsKey(SimulatedPlugin.AU_PARAM_ODD_BRANCH_CONTENT)) {
         gen.setOddBranchesHaveContent(config.getBoolean(
-            SimulatedPlugin.AU_PARAM_ODD_BRANCH_CONTENT));
+							SimulatedPlugin.AU_PARAM_ODD_BRANCH_CONTENT));
       }
       if (config.containsKey(SimulatedPlugin.AU_PARAM_BAD_FILE_LOC) &&
           config.containsKey(SimulatedPlugin.AU_PARAM_BAD_FILE_NUM)) {
@@ -277,9 +277,9 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
       if (config.containsKey(SimulatedPlugin.AU_PARAM_BAD_CACHED_FILE_LOC) &&
           config.containsKey(SimulatedPlugin.AU_PARAM_BAD_CACHED_FILE_NUM)) {
         toBeDamaged.add(gen.getUrlFromLoc(config.get(
-          SimulatedPlugin.AU_PARAM_BAD_CACHED_FILE_LOC),
-          config.get(
-          SimulatedPlugin.AU_PARAM_BAD_CACHED_FILE_NUM)));
+						     SimulatedPlugin.AU_PARAM_BAD_CACHED_FILE_LOC),
+					  config.get(
+						     SimulatedPlugin.AU_PARAM_BAD_CACHED_FILE_NUM)));
       }
       String spec = config.get(SimulatedPlugin.AU_PARAM_HASH_FILTER_SPEC);
       doFilter = !StringUtil.isNullString(spec);
@@ -361,5 +361,4 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
       return false;
     }
   }
-
 }

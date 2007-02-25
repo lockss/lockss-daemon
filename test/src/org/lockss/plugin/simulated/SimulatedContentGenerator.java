@@ -1,10 +1,10 @@
 /*
- * $Id: SimulatedContentGenerator.java,v 1.22 2006-04-05 22:57:37 tlipkis Exp $
+ * $Id: SimulatedContentGenerator.java,v 1.23 2007-02-25 23:06:38 dshr Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,6 +37,7 @@ import java.util.*;
 import java.text.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
+import org.lockss.config.*;
 import org.lockss.plugin.base.*;
 import org.lockss.crawler.*;
 import org.lockss.daemon.*;
@@ -84,13 +85,13 @@ public class SimulatedContentGenerator {
    * Path is substituted for the %1.
    */
   public static final String NORMAL_DIR_CONTENT =
-      "This is directory %1, depth %2.";
+    "This is directory %1, depth %2.";
   /**
    * Artificial content of a directory 'abnormal' status.
    * Path is substituted for the %1.
    */
   public static final String ABNORMAL_DIR_CONTENT =
-      "This is abnormal directory %1, depth %2.";
+    "This is abnormal directory %1, depth %2.";
 
   /**
    * Name of top directory in which the content is generated.
@@ -119,10 +120,10 @@ public class SimulatedContentGenerator {
   public static final String DIR_CONTENT_NAME = "branch_content";
 
 
- /**
-  * File-type value for text files.  Independent bitwise from the other
-  * file-types.
-  */
+  /**
+   * File-type value for text files.  Independent bitwise from the other
+   * file-types.
+   */
   public static final int FILE_TYPE_TXT = 1;
   /**
    * File-type value for html files.  Independent bitwise from the other
@@ -164,18 +165,31 @@ public class SimulatedContentGenerator {
   // Formatter to pad filename numbers with up to three leading zeros.
   private static NumberFormat fileNameFormatter = new DecimalFormat("000");
 
-  private String contentRoot;
+  protected String contentRoot;
+  protected static Logger logger = Logger.getLogger("SimulatedContentGenerator");
 
-/**
- * @param rootPath path where the content directory will be generated
- */
-  public SimulatedContentGenerator(String rootPath) {
+  /**
+   * @param rootPath path where the content directory will be generated
+   */
+  protected SimulatedContentGenerator(String rootPath) {
     String contentRootParent = rootPath;
     if (contentRootParent.length()>0 &&
         !contentRootParent.endsWith(File.separator)) {
       contentRootParent += File.separator;
     }
     contentRoot = contentRootParent + ROOT_NAME;
+  }
+
+  static SimulatedContentGenerator getInstance(String rootPath) {
+    SimulatedContentGenerator ret = null;
+    boolean arc = CurrentConfig.getBooleanParam("org.lockss.plugin.simulated.SimulatedContentGenerator.doArcFile", false);
+    logger.debug3("SimulatedContentGenerator.getInstance(" + rootPath + "," + arc + ")");
+    if (arc) {
+      ret = new SimulatedArcContentGenerator(rootPath);
+    } else {
+      ret = new SimulatedContentGenerator(rootPath);
+    }
+    return ret;
   }
 
   /**
@@ -325,20 +339,22 @@ public class SimulatedContentGenerator {
    * Deletes the generated content tree.
    */
   public void deleteContentTree() {
+    logger.debug("deleting " + contentRoot);
     FileUtil.delTree(new File(contentRoot));
   }
-/**
- * Generates a content tree using the current parameters.  Depth of 0 is
- * root (and files) only.  Depth >0 is number of sub-levels.  Each
- * directory contains the set number of files X number of file types (so
- * for numFiles=2, types=TXT + HTML, each directory would contain 2 txt
- * files, 2 html files, the index file, and any subdirectories).
- * @return the filename of the tree root
- */
+  /**
+   * Generates a content tree using the current parameters.  Depth of 0 is
+   * root (and files) only.  Depth >0 is number of sub-levels.  Each
+   * directory contains the set number of files X number of file types (so
+   * for numFiles=2, types=TXT + HTML, each directory would contain 2 txt
+   * files, 2 html files, the index file, and any subdirectories).
+   * @return the filename of the tree root
+   */
   public String generateContentTree() {
     // make an appropriate file tree
     File treeRoot = new File(contentRoot);
     if (!treeRoot.exists()) {
+      logger.debug3("Creating root at " + contentRoot);
       treeRoot.mkdirs();
     }
     // test abnormal status
@@ -377,6 +393,7 @@ public class SimulatedContentGenerator {
     String branchName = getDirectoryName(branchNum);
     File branchFile = new File(parentDir, branchName);
     if (!branchFile.exists()) {
+      logger.debug3("Creating branch at " + branchName);
       branchFile.mkdirs();
     }
 
@@ -403,6 +420,7 @@ public class SimulatedContentGenerator {
       File file = new File(parentDir, filename);
       FileOutputStream fos = new FileOutputStream(file);
       PrintWriter pw = new PrintWriter(fos);
+      logger.debug3("Creating file at " + file.getAbsolutePath());
       String file_content = getBranchContent(parentDir.getName(), depth,
                                              abnormal);
       pw.print(file_content);
@@ -419,6 +437,7 @@ public class SimulatedContentGenerator {
       File file = new File(parentDir, filename);
       FileOutputStream fos = new FileOutputStream(file);
       PrintWriter pw = new PrintWriter(fos);
+      logger.debug3("Creating index file at " + file.getAbsolutePath());
       String file_content = getIndexContent(parentDir, filename, permission);
       pw.print(file_content);
       pw.flush();
@@ -456,6 +475,7 @@ public class SimulatedContentGenerator {
       File file = new File(parentDir, fileName);
       FileOutputStream fos = new FileOutputStream(file);
       PrintWriter pw = new PrintWriter(fos);
+      logger.debug3("Creating TXT file at " + file.getAbsolutePath());
       String file_content =
 	getTxtContent(fileNum, depth, branchNum, isAbnormal);
       pw.print(file_content);
@@ -472,6 +492,7 @@ public class SimulatedContentGenerator {
       File file = new File(parentDir, filename);
       FileOutputStream fos = new FileOutputStream(file);
       PrintWriter pw = new PrintWriter(fos);
+      logger.debug3("Creating HTML file at " + file.getAbsolutePath());
       String file_content = getHtmlFileContent(filename, fileNum, depth,
 					       branchNum, isAbnormal);
       pw.print(file_content);
@@ -487,8 +508,9 @@ public class SimulatedContentGenerator {
       File file = new File(parentDir, fileName);
       FileOutputStream fos = new FileOutputStream(file);
       PrintWriter pw = new PrintWriter(fos);
+      logger.debug3("Creating PDF file at " + file.getAbsolutePath());
       String file_content = "";
-// XXX open local pdf file, copy to pw
+      // XXX open local pdf file, copy to pw
       pw.print(file_content);
       pw.flush();
       pw.close();
@@ -502,8 +524,9 @@ public class SimulatedContentGenerator {
       File file = new File(parentDir, fileName);
       FileOutputStream fos = new FileOutputStream(file);
       PrintWriter pw = new PrintWriter(fos);
+      logger.debug3("Creating JPEG file at " + file.getAbsolutePath());
       String file_content = "";
-// XXX open local jpeg file, copy to pw
+      // XXX open local jpeg file, copy to pw
       pw.print(file_content);
       pw.flush();
       pw.close();
@@ -513,15 +536,16 @@ public class SimulatedContentGenerator {
 
 
   private void createBinaryFile(File parentDir, int fileNum, int size) {
-      try {
-        String fileName = getFileName(fileNum, FILE_TYPE_BIN);
-        File file = new File(parentDir, fileName);
-        FileOutputStream fos = new FileOutputStream(file);
-        byte[] bytes = new byte[size];
-        Arrays.fill(bytes, (byte)1);
-        fos.write(bytes);
-        fos.close();
-      } catch (Exception e) { System.err.println(e); }
+    try {
+      String fileName = getFileName(fileNum, FILE_TYPE_BIN);
+      File file = new File(parentDir, fileName);
+      FileOutputStream fos = new FileOutputStream(file);
+      logger.debug3("Creating BIN file at " + file.getAbsolutePath());
+      byte[] bytes = new byte[size];
+      Arrays.fill(bytes, (byte)1);
+      fos.write(bytes);
+      fos.close();
+    } catch (Exception e) { System.err.println(e); }
   }
 
   /**
@@ -635,7 +659,7 @@ public class SimulatedContentGenerator {
         subLink = ".";
       }
       file_content += "<BR><A HREF=\"" + FileUtil.sysIndepPath(subLink) +
-          "\">" + subLink + "</A>";
+	"\">" + subLink + "</A>";
     }
     // insert a link to parent to ensure there are some duplicate links
     file_content += "<BR><A HREF=\"../index.html\">" + "parent" + "</A>";
@@ -671,21 +695,21 @@ public class SimulatedContentGenerator {
     }
 
     switch (fileType) {
-      case FILE_TYPE_TXT:
-        fileName.append(".txt");
-        break;
-      case FILE_TYPE_HTML:
-        fileName.append( ".html");
-        break;
-      case FILE_TYPE_PDF:
-        fileName.append( ".pdf");
-        break;
-      case FILE_TYPE_JPEG:
-        fileName.append( ".jpg");
-        break;
-      case FILE_TYPE_BIN:
-        fileName.append( ".bin");
-        break;
+    case FILE_TYPE_TXT:
+      fileName.append(".txt");
+      break;
+    case FILE_TYPE_HTML:
+      fileName.append( ".html");
+      break;
+    case FILE_TYPE_PDF:
+      fileName.append( ".pdf");
+      break;
+    case FILE_TYPE_JPEG:
+      fileName.append( ".jpg");
+      break;
+    case FILE_TYPE_BIN:
+      fileName.append( ".bin");
+      break;
     }
     return fileName.toString();
   }

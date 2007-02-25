@@ -1,10 +1,10 @@
 /*
- * $Id: Crawler.java,v 1.49 2006-11-14 19:21:28 tlipkis Exp $
+ * $Id: Crawler.java,v 1.50 2007-02-25 23:06:38 dshr Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -56,6 +56,7 @@ public interface Crawler {
   public static final int REPAIR = 1;
   public static final int BACKGROUND = 2;
   public static final int OAI = 3;
+  public static final int ARC = 4;
 
   public static final String STATUS_QUEUED = "Pending";
   public static final String STATUS_ACTIVE = "Active";

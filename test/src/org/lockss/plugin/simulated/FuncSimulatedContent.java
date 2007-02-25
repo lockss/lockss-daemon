@@ -1,28 +1,28 @@
 /*
- * $Id: FuncSimulatedContent.java,v 1.75 2007-01-28 05:45:06 tlipkis Exp $
+ * $Id: FuncSimulatedContent.java,v 1.76 2007-02-25 23:06:38 dshr Exp $
  */
 
 /*
- Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
- all rights reserved.
- Permission is hereby granted, free of charge, to any person obtaining a copy
- of this software and associated documentation files (the "Software"), to deal
- in the Software without restriction, including without limitation the rights
- to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- copies of the Software, and to permit persons to whom the Software is
- furnished to do so, subject to the following conditions:
- The above copyright notice and this permission notice shall be included in
- all copies or substantial portions of the Software.
- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
- STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
- WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
- IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- Except as contained in this notice, the name of Stanford University shall not
- be used in advertising or otherwise to promote the sale, use or other dealings
- in this Software without prior written authorization from Stanford University.
- */
+  Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+  all rights reserved.
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+  STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+  WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+  IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+  Except as contained in this notice, the name of Stanford University shall not
+  be used in advertising or otherwise to promote the sale, use or other dealings
+  in this Software without prior written authorization from Stanford University.
+*/
 
 package org.lockss.plugin.simulated;
 
@@ -40,7 +40,7 @@ import org.lockss.state.HistoryRepositoryImpl;
 import junit.framework.*;
 
 /**
- * Test class for functional tests on the content.
+ * Functional tests on the simulated content generator.
  */
 public class FuncSimulatedContent extends LockssTestCase {
   static final Logger log = Logger.getLogger("FuncSimulatedContent");
@@ -157,7 +157,7 @@ public class FuncSimulatedContent extends LockssTestCase {
     byte[] contentH = getHash(set, false);
 
     sau =
-        (SimulatedArchivalUnit)theDaemon.getPluginManager().getAuFromId(auId2);
+      (SimulatedArchivalUnit)theDaemon.getPluginManager().getAuFromId(auId2);
     theDaemon.getLockssRepository(sau).startService();
     theDaemon.getNodeManager(sau).startService();
 
@@ -170,7 +170,7 @@ public class FuncSimulatedContent extends LockssTestCase {
     assertTrue(Arrays.equals(contentH, contentH2));
   }
 
-  private void createContent() {
+  protected void createContent() {
     log.debug("createContent()");
     SimulatedContentGenerator scgen = sau.getContentGenerator();
     scgen.setFileTypes(SimulatedContentGenerator.FILE_TYPE_HTML +
@@ -183,7 +183,7 @@ public class FuncSimulatedContent extends LockssTestCase {
     assertTrue(scgen.isContentTree());
   }
 
-  private void crawlContent() {
+  protected void crawlContent() {
     log.debug("crawlContent()");
     CrawlSpec spec =
       new SpiderCrawlSpec(SimulatedArchivalUnit.SIMULATED_URL_START, null);
@@ -191,7 +191,7 @@ public class FuncSimulatedContent extends LockssTestCase {
     crawler.doCrawl();
   }
 
-  private void checkContent() throws IOException {
+  protected void checkContent() throws IOException {
     log.debug("checkContent()");
     checkRoot();
     checkLeaf();
@@ -199,7 +199,7 @@ public class FuncSimulatedContent extends LockssTestCase {
     checkDepth();
   }
 
-  private void checkFilter() throws Exception {
+  protected void checkFilter() throws Exception {
     log.debug("checkFilter()");
     CachedUrl cu = sau.makeCachedUrl(SimulatedArchivalUnit.SIMULATED_URL_ROOT
 				     + "/001file.html");
@@ -228,7 +228,7 @@ public class FuncSimulatedContent extends LockssTestCase {
     return ByteArray.fromHexString(hex);
   }
 
-  private void hashContent() throws Exception {
+  protected void hashContent() throws Exception {
     log.debug("hashContent()");
     measureHashSpeed();
 
@@ -244,7 +244,7 @@ public class FuncSimulatedContent extends LockssTestCase {
 		 fromHex("85E6213C3771BEAC5A4602CAF7982C6C222800D5"));
   }
 
-  private void checkDepth() {
+  protected void checkDepth() {
     log.debug("checkDepth()");
     String URL_ROOT = SimulatedArchivalUnit.SIMULATED_URL_ROOT;
     assertEquals(0, sau.getLinkDepth(URL_ROOT + "/index.html"));
@@ -255,7 +255,7 @@ public class FuncSimulatedContent extends LockssTestCase {
     assertEquals(2, sau.getLinkDepth(URL_ROOT + "/branch1/001file.html"));
   }
 
-  private void checkRoot() {
+  protected void checkRoot() {
     log.debug("checkRoot()");
     CachedUrlSet set = sau.getAuCachedUrlSet();
     Iterator setIt = set.flatSetIterator();
@@ -288,7 +288,7 @@ public class FuncSimulatedContent extends LockssTestCase {
     assertIsomorphic(expectedA, childL);
   }
 
-  private void checkLeaf() {
+  protected void checkLeaf() {
     log.debug("checkLeaf()");
     String parent = SimulatedArchivalUnit.SIMULATED_URL_ROOT + "/branch1";
     CachedUrlSetSpec spec = new RangeCachedUrlSetSpec(parent);
@@ -321,9 +321,9 @@ public class FuncSimulatedContent extends LockssTestCase {
     assertIsomorphic(expectedA, childL);
   }
 
-  private void checkUrlContent(String path, int fileNum, int depth,
-                               int branchNum, boolean isAbnormal,
-                               boolean isDamaged) throws IOException {
+  protected void checkUrlContent(String path, int fileNum, int depth,
+				 int branchNum, boolean isAbnormal,
+				 boolean isDamaged) throws IOException {
     String file = SimulatedArchivalUnit.SIMULATED_URL_ROOT + path;
     CachedUrl url = sau.makeCachedUrl(file);
     String content = getUrlContent(url);
@@ -331,11 +331,11 @@ public class FuncSimulatedContent extends LockssTestCase {
     if (path.endsWith(".html")) {
       String fn = path.substring(path.lastIndexOf("/") + 1);
       expectedContent = SimulatedContentGenerator.getHtmlFileContent(fn,
-        fileNum, depth, branchNum, isAbnormal);
+								     fileNum, depth, branchNum, isAbnormal);
     }
     else {
       expectedContent = SimulatedContentGenerator.getTxtContent(
-        fileNum, depth, branchNum, isAbnormal);
+								fileNum, depth, branchNum, isAbnormal);
     }
     if (isDamaged) {
       assertNotEquals(expectedContent, content);
@@ -345,13 +345,13 @@ public class FuncSimulatedContent extends LockssTestCase {
     }
   }
 
-  private void checkStoredContent() throws IOException {
+  protected void checkStoredContent() throws IOException {
     checkUrlContent("/001file.txt", 1, 0, 0, false, false);
     checkUrlContent("/branch1/branch1/001file.txt", 1, 2, 1, true, false);
     checkUrlContent(DAMAGED_CACHED_URL, 2, 2, 2, false, true);
   }
 
-  private void doDamageRemoveTest() throws Exception {
+  protected void doDamageRemoveTest() throws Exception {
     /* Cache the file again; this time the damage should be gone */
     String file = SimulatedArchivalUnit.SIMULATED_URL_ROOT + DAMAGED_CACHED_URL;
     UrlCacher uc = sau.makeUrlCacher(file);
@@ -379,7 +379,7 @@ public class FuncSimulatedContent extends LockssTestCase {
     assertTrue(estimate > 0);
     long estimatedTime = set.estimatedHashDuration();
     long size = ((Long)PrivilegedAccessor.getValue(set,
-        "totalNodeSize")).longValue();
+						   "totalNodeSize")).longValue();
     assertTrue(size > 0);
     System.out.println("b/ms: " + estimate);
     System.out.println("size: " + size);
@@ -403,7 +403,7 @@ public class FuncSimulatedContent extends LockssTestCase {
   }
 
   private byte[] getHash(CachedUrlSet set, boolean namesOnly) throws
-    IOException {
+  IOException {
     MessageDigest dig = null;
     try {
       dig = MessageDigest.getInstance("SHA-1");
