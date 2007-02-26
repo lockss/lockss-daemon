@@ -751,6 +751,8 @@
 	<property name="value" value="81" />
       </property>
       <property name="attributes.publisher" value="American Society for Nutrition" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.AmericanSocietyForNutritionPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanJournalOfClinicalNutrition82">
@@ -766,6 +768,8 @@
 	<property name="value" value="82" />
       </property>
       <property name="attributes.publisher" value="American Society for Nutrition" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.AmericanSocietyForNutritionPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanJournalOfClinicalNutrition83">
@@ -781,6 +785,8 @@
 	<property name="value" value="83" />
       </property>
       <property name="attributes.publisher" value="American Society for Nutrition" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.AmericanSocietyForNutritionPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanJournalOfClinicalNutrition84">
@@ -796,6 +802,8 @@
 	<property name="value" value="84" />
       </property>
       <property name="attributes.publisher" value="American Society for Nutrition" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.AmericanSocietyForNutritionPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanJournalOfPathology168">
@@ -1009,6 +1017,8 @@
 	<property name="value" value="135" />
       </property>
       <property name="attributes.publisher" value="American Society for Nutrition" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.AmericanSocietyForNutritionPdfTransform$Simplified" />
     </property>
 
     <property name="JournalOfNutrition136">
@@ -1024,6 +1034,8 @@
 	<property name="value" value="136" />
       </property>
       <property name="attributes.publisher" value="American Society for Nutrition" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.AmericanSocietyForNutritionPdfTransform$Simplified" />
     </property>
 
     <property name="DrugMetabolismandDisposition34">
