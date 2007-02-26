@@ -809,21 +809,6 @@
       <property name="attributes.publisher" value="Oxford University Press"/>
     </property>
 
-    <property name="BriefingsinBioinformatics6">
-      <property name="title" value="Briefings in Bioinformatics Volume 6"/>
-      <property name="journalTitle" value="Briefings in Bioinformatics"/>
-      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin"/>
-      <property name="param.1">
-        <property name="key" value="base_url"/>
-        <property name="value" value="http://bib.oxfordjournals.org/"/>
-      </property>
-      <property name="param.2">
-        <property name="key" value="volume_name"/>
-        <property name="value" value="6"/>
-      </property>
-      <property name="attributes.publisher" value="Oxford University Press"/>
-    </property>
-
     <property name="BriefingsinBioinformatics7">
       <property name="title" value="Briefings in Bioinformatics Volume 7"/>
       <property name="journalTitle" value="Briefings in Bioinformatics"/>
@@ -1671,6 +1656,21 @@
       <property name="attributes.publisher" value="Oxford University Press"/>
     </property>
 
+    <property name="EnglishHistoricalReview120">
+      <property name="title" value="English Historical Review Volume 120"/>
+      <property name="journalTitle" value="English Historical Review"/>
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin"/>
+      <property name="param.1">
+        <property name="key" value="base_url"/>
+        <property name="value" value="http://ehr.oxfordjournals.org/"/>
+      </property>
+      <property name="param.2">
+        <property name="key" value="volume_name"/>
+        <property name="value" value="120"/>
+      </property>
+      <property name="attributes.publisher" value="Oxford University Press"/>
+    </property>
+
     <property name="EnglishHistoricalReviewCXXI">
       <property name="title" value="English Historical Review Volume CXXI"/>
       <property name="journalTitle" value="English Historical Review"/>
@@ -1682,6 +1682,21 @@
       <property name="param.2">
         <property name="key" value="volume_name"/>
         <property name="value" value="CXXI"/>
+      </property>
+      <property name="attributes.publisher" value="Oxford University Press"/>
+    </property>
+
+    <property name="EnglishHistoricalReviewCXXII">
+      <property name="title" value="English Historical Review Volume CXXII"/>
+      <property name="journalTitle" value="English Historical Review"/>
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin"/>
+      <property name="param.1">
+        <property name="key" value="base_url"/>
+        <property name="value" value="http://ehr.oxfordjournals.org/"/>
+      </property>
+      <property name="param.2">
+        <property name="key" value="volume_name"/>
+        <property name="value" value="CXXII"/>
       </property>
       <property name="attributes.publisher" value="Oxford University Press"/>
     </property>
@@ -2355,22 +2370,6 @@
       <property name="attributes.publisher" value="Oxford University Press"/>
     </property>
 
-    <property name="FrenchStudiesBulletinLIX">
-      <property name="title" value="French Studies Bulletin Volume LIX"/>
-      <property name="journalTitle" value="French Studies Bulletin"/>
-      <property name="estSize" value="15MB"/>
-      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin"/>
-      <property name="param.1">
-        <property name="key" value="base_url"/>
-        <property name="value" value="http://fsb.oxfordjournals.org/"/>
-      </property>
-      <property name="param.2">
-        <property name="key" value="volume_name"/>
-        <property name="value" value="LIX"/>
-      </property>
-      <property name="attributes.publisher" value="Oxford University Press"/>
-    </property>
-
     <property name="FrenchStudiesBulletinLX">
       <property name="title" value="French Studies Bulletin Volume LX"/>
       <property name="journalTitle" value="French Studies Bulletin"/>
@@ -2853,22 +2852,6 @@
       <property name="attributes.publisher" value="Oxford University Press"/>
     </property>
 
-    <property name="IEICETranFundElecCommCompSciE88-A">
-      <property name="title" value="IEICE-Transactions on Fundamentals of Electronics, Communication &amp; Computer Science Volume E88-A"/>
-      <property name="journalTitle" value="IEICE-Transactions on Fundamentals of Electronics, Communication &amp; Computer Science"/>
-      <property name="estSize" value="300MB"/>
-      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin"/>
-      <property name="param.1">
-        <property name="key" value="base_url"/>
-        <property name="value" value="http://ietfec.oxfordjournals.org/"/>
-      </property>
-      <property name="param.2">
-        <property name="key" value="volume_name"/>
-        <property name="value" value="E88-A"/>
-      </property>
-      <property name="attributes.publisher" value="Oxford University Press"/>
-    </property>
-
     <property name="IEICETranFundElecCommCompSciE89-A">
       <property name="title" value="IEICE-Transactions on Fundamentals of Electronics, Communication &amp; Computer Science Volume E89-A"/>
       <property name="journalTitle" value="IEICE-Transactions on Fundamentals of Electronics, Communication &amp; Computer Science"/>
@@ -2897,22 +2880,6 @@
       <property name="param.2">
         <property name="key" value="volume_name"/>
         <property name="value" value="E90-A"/>
-      </property>
-      <property name="attributes.publisher" value="Oxford University Press"/>
-    </property>
-
-    <property name="IEICETransactionsonCommunicationsE88-B">
-      <property name="title" value="IEICE-Transactions on Communications Volume E88-B"/>
-      <property name="journalTitle" value="IEICE-Transactions on Communications"/>
-      <property name="estSize" value="200MB"/>
-      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin"/>
-      <property name="param.1">
-        <property name="key" value="base_url"/>
-        <property name="value" value="http://ietcom.oxfordjournals.org/"/>
-      </property>
-      <property name="param.2">
-        <property name="key" value="volume_name"/>
-        <property name="value" value="E88-B"/>
       </property>
       <property name="attributes.publisher" value="Oxford University Press"/>
     </property>
@@ -2949,22 +2916,6 @@
       <property name="attributes.publisher" value="Oxford University Press"/>
     </property>
 
-    <property name="IEICETransactionsonElectronicsE88-C">
-      <property name="title" value="IEICE-Transactions on Electronics Volume E88-C"/>
-      <property name="journalTitle" value="IEICE-Transactions on Electronics"/>
-      <property name="estSize" value="400MB"/>
-      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin"/>
-      <property name="param.1">
-        <property name="key" value="base_url"/>
-        <property name="value" value="http://ietele.oxfordjournals.org/"/>
-      </property>
-      <property name="param.2">
-        <property name="key" value="volume_name"/>
-        <property name="value" value="E88-C"/>
-      </property>
-      <property name="attributes.publisher" value="Oxford University Press"/>
-    </property>
-
     <property name="IEICETransactionsonElectronicsE89-C">
       <property name="title" value="IEICE-Transactions on Electronics Volume E89-C"/>
       <property name="journalTitle" value="IEICE-Transactions on Electronics"/>
@@ -2993,21 +2944,6 @@
       <property name="param.2">
         <property name="key" value="volume_name"/>
         <property name="value" value="E90-C"/>
-      </property>
-      <property name="attributes.publisher" value="Oxford University Press"/>
-    </property>
-
-    <property name="IEICETransactionsonInfoandSystemsE88-D">
-      <property name="title" value="IEICE-Transactions on Information and Systems Volume E88-D"/>
-      <property name="journalTitle" value="IEICE-Transactions on Info and Systems"/>
-      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin"/>
-      <property name="param.1">
-        <property name="key" value="base_url"/>
-        <property name="value" value="http://ietisy.oxfordjournals.org/"/>
-      </property>
-      <property name="param.2">
-        <property name="key" value="volume_name"/>
-        <property name="value" value="E88-D"/>
       </property>
       <property name="attributes.publisher" value="Oxford University Press"/>
     </property>
