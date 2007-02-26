@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.212 2007-02-25 23:06:38 dshr Exp $
+ $Id: build.xml,v 1.213 2007-02-26 21:59:36 dshr Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
@@ -226,9 +226,6 @@ Args:
   <property name="flute.jar" value="${lib}/flute-1.3.jar" />
   <!-- Needed by Flute: -->
   <property name="sac.jar" value="${lib}/sac-1.3.jar" />
-  <!-- Needed by ArcCrawler: -->
-  <property name="heritrix.jar" value="${lib}/heritrix-1.10.2.jar" />
-  <property name="heritrix-fastutil.jar" value="${lib}/fastutil-5.0.3-heritrix-subset-1.0.jar" />
 
   <property name="ext.javadoc"
                       value="http://documents.lockss.org/gamma-libs/" />
@@ -316,9 +313,6 @@ Args:
     <!-- jars needed to run the OAI harvester -->
     <pathelement path="${oai-harvester.jar}" />
     <pathelement path="${xalan.jar}" />
-    <!-- jars needed by the ArcCrawler -->
-    <pathelement path="${heritrix.jar}" />
-    <pathelement path="${heritrix-fastutil.jar}" />
   </path>
 
   <path id="run.classpath">

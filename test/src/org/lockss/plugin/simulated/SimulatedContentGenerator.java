@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedContentGenerator.java,v 1.23 2007-02-25 23:06:38 dshr Exp $
+ * $Id: SimulatedContentGenerator.java,v 1.24 2007-02-26 21:59:37 dshr Exp $
  */
 
 /*
@@ -185,7 +185,7 @@ public class SimulatedContentGenerator {
     boolean arc = CurrentConfig.getBooleanParam("org.lockss.plugin.simulated.SimulatedContentGenerator.doArcFile", false);
     logger.debug3("SimulatedContentGenerator.getInstance(" + rootPath + "," + arc + ")");
     if (arc) {
-      ret = new SimulatedArcContentGenerator(rootPath);
+      // ret = new SimulatedArcContentGenerator(rootPath);
     } else {
       ret = new SimulatedContentGenerator(rootPath);
     }
