@@ -854,10 +854,10 @@
       <property name="attributes.publisher" value="Oxford University Press"/>
     </property>
 
-    <property name="BritishJournalforthePhilosophyofScience57">
-      <property name="title" value="British Journal for the Philosophy of Science Volume 57"/>
+    <property name="TheBritishJournalforthePhilosophyofScience57">
+      <property name="title" value="The British Journal for the Philosophy of Science Volume 57"/>
       <property name="estSize" value="20MB"/>
-      <property name="journalTitle" value="British Journal for the Philosophy of Science"/>
+      <property name="journalTitle" value="The British Journal for the Philosophy of Science"/>
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin"/>
       <property name="param.1">
         <property name="key" value="base_url"/>
@@ -901,8 +901,8 @@
     </property>
 
     <property name="BritishJournalofAnaesthesia96">
-      <property name="title" value="BJA: British Journal of Anaesthesia Volume 96"/>
-      <property name="journalTitle" value="BJA: British Journal of Anaesthesia"/>
+      <property name="title" value="British Journal of Anaesthesia Volume 96"/>
+      <property name="journalTitle" value="British Journal of Anaesthesia"/>
       <property name="estSize" value="300MB"/>
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin"/>
       <property name="param.1">
@@ -7250,8 +7250,8 @@
 
 
     <property name="TheBritishJournalofAesthetics45">
-      <property name="title" value="The British Journal of Aesthetic Volume 45"/>
-      <property name="journalTitle" value="The British Journal of Aesthetic"/>
+      <property name="title" value="The British Journal of Aesthetics Volume 45"/>
+      <property name="journalTitle" value="The British Journal of Aesthetics"/>
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin"/>
       <property name="param.1">
         <property name="key" value="base_url"/>
@@ -7265,8 +7265,8 @@
     </property>
 
     <property name="TheBritishJournalofAesthetics46">
-      <property name="title" value="British Journal of Aesthetics Volume 46"/>
-      <property name="journalTitle" value="British Journal of Aesthetics"/>
+      <property name="title" value="The British Journal of Aesthetics Volume 46"/>
+      <property name="journalTitle" value="The British Journal of Aesthetics"/>
       <property name="estSize" value="20MB"/>
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin"/>
       <property name="param.1">
@@ -7281,8 +7281,8 @@
     </property>
 
     <property name="TheBritishJournalofAesthetics47">
-      <property name="title" value="The British Journal of Aesthetic Volume 47"/>
-      <property name="journalTitle" value="The British Journal of Aesthetic"/>
+      <property name="title" value="The British Journal of Aesthetics Volume 47"/>
+      <property name="journalTitle" value="The British Journal of Aesthetics"/>
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin"/>
       <property name="param.1">
         <property name="key" value="base_url"/>
@@ -7311,9 +7311,9 @@
     </property>
 
     <property name="TheBritishJournalofCriminology:AnInternationalReviewofCrimeandSociety46">
-      <property name="title" value="British Journal of Criminology Volume 46"/>
+      <property name="title" value="The British Journal of Criminology: An International Review of Crime and Society Volume 46"/>
       <property name="estSize" value="60MB"/>
-      <property name="journalTitle" value="British Journal of Criminology"/>
+      <property name="journalTitle" value="The British Journal of Criminology: An International Review of Crime and Society"/>
       <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin"/>
       <property name="param.1">
         <property name="key" value="base_url"/>
