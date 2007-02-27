@@ -1,5 +1,5 @@
 /*
- * $Id: NatureFilterRule.java,v 1.2 2006-10-02 23:49:40 troberts Exp $
+ * $Id: NatureFilterRule.java,v 1.3 2007-02-27 00:01:41 troberts Exp $
  */
 
 /*
@@ -44,9 +44,9 @@ public class NatureFilterRule implements FilterRule {
     List tagList = ListUtil.list(
                     new HtmlTagFilter.TagPair("<!-- end content -->", 
 					      "</html>", true),
-                    new HtmlTagFilter.TagPair("<!--", "-->", true),
+                    new HtmlTagFilter.TagPair("<!--", "-->", true, false),
 		    new HtmlTagFilter.TagPair("<script", "</script>", true),
-		    new HtmlTagFilter.TagPair("<", ">")
+		    new HtmlTagFilter.TagPair("<", ">", false, false)
 		    );
     Reader tagFilter = HtmlTagFilter.makeNestedFilter(reader, tagList);
     return new WhiteSpaceFilter(tagFilter);
