@@ -131,7 +131,6 @@
       <property name="attributes.releaseStatus" value="pre-release" />
     </property>
 
-
     <property name="bmt26">
       <property name="title" value="Bone Marrow Transplantation Volume 26 (2000)" />
       <property name="journalTitle" value="Bone Marrow Transplantation" />
@@ -324,6 +323,222 @@
       <property name="attributes.releaseStatus" value="pre-release" />
     </property>
 
+    <property name="cdd12">
+      <property name="title" value="Cell Death &amp; Differentiation Volume 12 (2005)" />
+      <property name="journalTitle" value="Cell Death &amp; Differentiation" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+        <property name="key" value="base_url" />
+        <property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+        <property name="key" value="journal_id" />
+        <property name="value" value="cdd" />
+      </property>
+      <property name="param.3">
+        <property name="key" value="year" />
+        <property name="value" value="2005" />
+      </property>
+      <property name="param.4">
+        <property name="key" value="volume" />
+        <property name="value" value="12" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+      <property name="attributes.releaseStatus" value="pre-release" />
+    </property>
+    
+    <property name="cdd11">
+      <property name="title" value="Cell Death &amp; Differentiation Volume 11 (2004)" />
+      <property name="journalTitle" value="Cell Death &amp; Differentiation" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+        <property name="key" value="base_url" />
+        <property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+        <property name="key" value="journal_id" />
+        <property name="value" value="cdd" />
+      </property>
+      <property name="param.3">
+        <property name="key" value="year" />
+        <property name="value" value="2004" />
+      </property>
+      <property name="param.4">
+        <property name="key" value="volume" />
+        <property name="value" value="11" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+      <property name="attributes.releaseStatus" value="pre-release" />
+    </property>
+    
+    <property name="cdd10">
+      <property name="title" value="Cell Death &amp; Differentiation Volume 10 (2003)" />
+      <property name="journalTitle" value="Cell Death &amp; Differentiation" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+        <property name="key" value="base_url" />
+        <property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+        <property name="key" value="journal_id" />
+        <property name="value" value="cdd" />
+      </property>
+      <property name="param.3">
+        <property name="key" value="year" />
+        <property name="value" value="2003" />
+      </property>
+      <property name="param.4">
+        <property name="key" value="volume" />
+        <property name="value" value="10" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+      <property name="attributes.releaseStatus" value="pre-release" />
+    </property>
+    
+    <property name="cdd9">
+      <property name="title" value="Cell Death &amp; Differentiation Volume 9 (2002)" />
+      <property name="journalTitle" value="Cell Death &amp; Differentiation" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+        <property name="key" value="base_url" />
+        <property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+        <property name="key" value="journal_id" />
+        <property name="value" value="cdd" />
+      </property>
+      <property name="param.3">
+        <property name="key" value="year" />
+        <property name="value" value="2002" />
+      </property>
+      <property name="param.4">
+        <property name="key" value="volume" />
+        <property name="value" value="9" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+      <property name="attributes.releaseStatus" value="pre-release" />
+    </property>
+    
+    <property name="cdd8">
+      <property name="title" value="Cell Death &amp; Differentiation Volume 8 (2001)" />
+      <property name="journalTitle" value="Cell Death &amp; Differentiation" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+        <property name="key" value="base_url" />
+        <property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+        <property name="key" value="journal_id" />
+        <property name="value" value="cdd" />
+      </property>
+      <property name="param.3">
+        <property name="key" value="year" />
+        <property name="value" value="2001" />
+      </property>
+      <property name="param.4">
+        <property name="key" value="volume" />
+        <property name="value" value="8" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+      <property name="attributes.releaseStatus" value="pre-release" />
+    </property>
+    
+    <property name="cdd7">
+      <property name="title" value="Cell Death &amp; Differentiation Volume 7 (2000)" />
+      <property name="journalTitle" value="Cell Death &amp; Differentiation" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+        <property name="key" value="base_url" />
+        <property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+        <property name="key" value="journal_id" />
+        <property name="value" value="cdd" />
+      </property>
+      <property name="param.3">
+        <property name="key" value="year" />
+        <property name="value" value="2000" />
+      </property>
+      <property name="param.4">
+        <property name="key" value="volume" />
+        <property name="value" value="7" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+      <property name="attributes.releaseStatus" value="pre-release" />
+    </property>
+    
+    <property name="cdd6">
+      <property name="title" value="Cell Death &amp; Differentiation Volume 6 (1999)" />
+      <property name="journalTitle" value="Cell Death &amp; Differentiation" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+        <property name="key" value="base_url" />
+        <property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+        <property name="key" value="journal_id" />
+        <property name="value" value="cdd" />
+      </property>
+      <property name="param.3">
+        <property name="key" value="year" />
+        <property name="value" value="1999" />
+      </property>
+      <property name="param.4">
+        <property name="key" value="volume" />
+        <property name="value" value="6" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+      <property name="attributes.releaseStatus" value="pre-release" />
+    </property>
+    
+    <property name="cdd5">
+      <property name="title" value="Cell Death &amp; Differentiation Volume 5 (1998)" />
+      <property name="journalTitle" value="Cell Death &amp; Differentiation" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+        <property name="key" value="base_url" />
+        <property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+        <property name="key" value="journal_id" />
+        <property name="value" value="cdd" />
+      </property>
+      <property name="param.3">
+        <property name="key" value="year" />
+        <property name="value" value="1998" />
+      </property>
+      <property name="param.4">
+        <property name="key" value="volume" />
+        <property name="value" value="5" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+      <property name="attributes.releaseStatus" value="pre-release" />
+    </property>
+    
+    <property name="cdd4">
+      <property name="title" value="Cell Death &amp; Differentiation Volume 4 (1997)" />
+      <property name="journalTitle" value="Cell Death &amp; Differentiation" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+        <property name="key" value="base_url" />
+        <property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+        <property name="key" value="journal_id" />
+        <property name="value" value="cdd" />
+      </property>
+      <property name="param.3">
+        <property name="key" value="year" />
+        <property name="value" value="1997" />
+      </property>
+      <property name="param.4">
+        <property name="key" value="volume" />
+        <property name="value" value="4" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+      <property name="attributes.releaseStatus" value="pre-release" />
+    </property>
+    
     <property name="cgt9">
       <property name="title" value="Cancer Gene Therapy Volume 9 (2002)" />
       <property name="journalTitle" value="Abacus" />
@@ -420,6 +635,294 @@
       <property name="attributes.releaseStatus" value="pre-release" />
     </property>
 
+    <property name="ejcn56">
+      <property name="title" value="European Journal of Clinical Nutrition Volume 56 (2002)" />
+      <property name="journalTitle" value="European Journal of Clinical Nutrition" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="ejcn" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="2002" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="56" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+      <property name="attributes.releaseStatus" value="pre-release" />
+    </property>
+
+    <property name="ejcn55">
+      <property name="title" value="European Journal of Clinical Nutrition Volume 55 (2001)" />
+      <property name="journalTitle" value="European Journal of Clinical Nutrition" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="ejcn" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="2001" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="55" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+      <property name="attributes.releaseStatus" value="pre-release" />
+    </property>
+
+    <property name="ejcn54">
+      <property name="title" value="European Journal of Clinical Nutrition Volume 54 (2000)" />
+      <property name="journalTitle" value="European Journal of Clinical Nutrition" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="ejcn" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="2000" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="54" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+      <property name="attributes.releaseStatus" value="pre-release" />
+    </property>
+
+    <property name="ejcn53">
+      <property name="title" value="European Journal of Clinical Nutrition Volume 53 (1999)" />
+      <property name="journalTitle" value="European Journal of Clinical Nutrition" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="ejcn" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="1999" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="53" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+      <property name="attributes.releaseStatus" value="pre-release" />
+    </property>
+
+    <property name="ejcn52">
+      <property name="title" value="European Journal of Clinical Nutrition Volume 52 (1998)" />
+      <property name="journalTitle" value="European Journal of Clinical Nutrition" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="ejcn" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="1998" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="52" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+      <property name="attributes.releaseStatus" value="pre-release" />
+    </property>
+
+    <property name="ejcn51">
+      <property name="title" value="European Journal of Clinical Nutrition Volume 51 (1997)" />
+      <property name="journalTitle" value="European Journal of Clinical Nutrition" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="ejcn" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="1997" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="51" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+      <property name="attributes.releaseStatus" value="pre-release" />
+    </property>
+
+    <property name="gt9">
+      <property name="title" value="Gene Therapy Volume 9 (2002)" />
+      <property name="journalTitle" value="Gene Therapy" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="gt" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="2002" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="9" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+      <property name="attributes.releaseStatus" value="pre-release" />
+    </property>
+
+    <property name="gt8">
+      <property name="title" value="Gene Therapy Volume 8 (2001)" />
+      <property name="journalTitle" value="Gene Therapy" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="gt" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="2001" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="8" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+      <property name="attributes.releaseStatus" value="pre-release" />
+    </property>
+
+    <property name="gt7">
+      <property name="title" value="Gene Therapy Volume 7 (2000)" />
+      <property name="journalTitle" value="Gene Therapy" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="gt" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="2000" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="7" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+      <property name="attributes.releaseStatus" value="pre-release" />
+    </property>
+
+    <property name="gt6">
+      <property name="title" value="Gene Therapy Volume 6 (1999)" />
+      <property name="journalTitle" value="Gene Therapy" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="gt" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="1999" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="6" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+      <property name="attributes.releaseStatus" value="pre-release" />
+    </property>
+
+    <property name="gt5">
+      <property name="title" value="Gene Therapy Volume 5 (1998)" />
+      <property name="journalTitle" value="Gene Therapy" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="gt" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="1998" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="5" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+      <property name="attributes.releaseStatus" value="pre-release" />
+    </property>
+
+    <property name="gt4">
+      <property name="title" value="Gene Therapy Volume 4 (1997)" />
+      <property name="journalTitle" value="Gene Therapy" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="gt" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="1997" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="4" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+      <property name="attributes.releaseStatus" value="pre-release" />
+    </property>
+
     <property name="gene3">
       <property name="title" value="Genes and Immunity Volume 3 (2002)" />
       <property name="journalTitle" value="Genes and Immunity" />
@@ -487,6 +990,294 @@
       <property name="param.4">
 	<property name="key" value="volume" />
 	<property name="value" value="1" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+      <property name="attributes.releaseStatus" value="pre-release" />
+    </property>
+
+    <property name="ijir14">
+      <property name="title" value="International Journal of Impotence Research Volume 14 (2002)" />
+      <property name="journalTitle" value="International Journal of Impotence Research" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="ijir" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="2002" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="14" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+      <property name="attributes.releaseStatus" value="pre-release" />
+    </property>
+
+    <property name="ijir13">
+      <property name="title" value="International Journal of Impotence Research Volume 13 (2001)" />
+      <property name="journalTitle" value="International Journal of Impotence Research" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="ijir" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="2001" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="13" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+      <property name="attributes.releaseStatus" value="pre-release" />
+    </property>
+
+    <property name="ijir12">
+      <property name="title" value="International Journal of Impotence Research Volume 12 (2000)" />
+      <property name="journalTitle" value="International Journal of Impotence Research" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="ijir" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="2000" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="12" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+      <property name="attributes.releaseStatus" value="pre-release" />
+    </property>
+
+    <property name="ijir11">
+      <property name="title" value="International Journal of Impotence Research Volume 11 (1999)" />
+      <property name="journalTitle" value="International Journal of Impotence Research" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="ijir" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="1999" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="11" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+      <property name="attributes.releaseStatus" value="pre-release" />
+    </property>
+
+    <property name="ijir10">
+      <property name="title" value="International Journal of Impotence Research Volume 10 (1998)" />
+      <property name="journalTitle" value="International Journal of Impotence Research" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="ijir" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="1998" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="10" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+      <property name="attributes.releaseStatus" value="pre-release" />
+    </property>
+
+    <property name="ijir9">
+      <property name="title" value="International Journal of Impotence Research Volume 9 (1997)" />
+      <property name="journalTitle" value="International Journal of Impotence Research" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="ijir" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="1997" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="9" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+      <property name="attributes.releaseStatus" value="pre-release" />
+    </property>
+
+    <property name="ijo26">
+      <property name="title" value="International Journal of Obesity Volume 26 (2002)" />
+      <property name="journalTitle" value="International Journal of Obesity" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="ijo" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="2002" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="26" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+      <property name="attributes.releaseStatus" value="pre-release" />
+    </property>
+
+    <property name="ijo25">
+      <property name="title" value="International Journal of Obesity Volume 25 (2001)" />
+      <property name="journalTitle" value="International Journal of Obesity" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="ijo" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="2001" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="25" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+      <property name="attributes.releaseStatus" value="pre-release" />
+    </property>
+
+    <property name="ijo24">
+      <property name="title" value="International Journal of Obesity Volume 24 (2000)" />
+      <property name="journalTitle" value="International Journal of Obesity" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="ijo" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="2000" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="24" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+      <property name="attributes.releaseStatus" value="pre-release" />
+    </property>
+
+    <property name="ijo23">
+      <property name="title" value="International Journal of Obesity Volume 23 (1999)" />
+      <property name="journalTitle" value="International Journal of Obesity" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="ijo" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="1999" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="23" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+      <property name="attributes.releaseStatus" value="pre-release" />
+    </property>
+
+    <property name="ijo22">
+      <property name="title" value="International Journal of Obesity Volume 22 (1998)" />
+      <property name="journalTitle" value="International Journal of Obesity" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="ijo" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="1998" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="22" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+      <property name="attributes.releaseStatus" value="pre-release" />
+    </property>
+
+    <property name="ijo21">
+      <property name="title" value="International Journal of Obesity Volume 21 (121217)" />
+      <property name="journalTitle" value="International Journal of Obesity" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="ijo" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="121217" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="21" />
       </property>
       <property name="attributes.publisher" value="Nature" />
       <property name="attributes.releaseStatus" value="pre-release" />
