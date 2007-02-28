@@ -157,6 +157,7 @@
 	<value>org.lockss.plugin.lapetitezine.LaPetiteZinePlugin</value>
 	<value>org.lockss.plugin.invisibleculture.InvisibleCulturePlugin</value>
 	<value>org.lockss.plugin.evergreenreview.EvergreenReviewPlugin</value>
+	<value>org.lockss.plugin.marsinformatics.MarsPlugin</value>
       </list>
     </property>
 
@@ -511,6 +512,12 @@
         <property name="name" value="All Society for the Study of Reproduction Titles" />
         <property name="class" value="xpath" />
         <property name="xpath" value="[attributes/publisher='Society for the Study of Reproduction']" />
+      </property>
+
+      <property name="Mars Informatics">
+        <property name="name" value="All Mars Informatics Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='Mars Informatics']" />
       </property>
 
       <property name="highwire">

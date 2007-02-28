@@ -6587,6 +6587,36 @@
       </property>
       <property name="attributes.rights" value="openaccess" />
     </property>
+    
+    <property name="Mars2005">
+      <property name="title" value="Mars Volume 2005" />
+      <property name="journalTitle" value="Mars" />
+      <property name="plugin" value="org.lockss.plugin.marsinformatics.MarsPlugin" />
+      <property name="param.1">
+	   <property name="key" value="base_url" />
+	   <property name="value" value="http://www.marsjournal.org/" />
+      </property>
+      <property name="param.2">
+       <property name="key" value="year" />
+       <property name="value" value="2005" />
+      </property>
+      <property name="attributes.rights" value="openaccess" />
+    </property>
+
+    <property name="Mars2006">
+      <property name="title" value="Mars Volume 2006" />
+      <property name="journalTitle" value="Mars" />
+      <property name="plugin" value="org.lockss.plugin.marsinformatics.MarsPlugin" />
+      <property name="param.1">
+	   <property name="key" value="base_url" />
+	   <property name="value" value="http://www.marsjournal.org/" />
+      </property>
+      <property name="param.2">
+       <property name="key" value="year" />
+       <property name="value" value="2006" />
+      </property>
+      <property name="attributes.rights" value="openaccess" />
+    </property>
 
   </property>
 </lockss-config>
