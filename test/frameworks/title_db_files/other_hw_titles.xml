@@ -1113,17 +1113,92 @@
       <property name="attributes.publisher" value="American Society for Pharmacology and Experimental Therapeutics" />
     </property>
 
+    <property name="PlantPhysiology137">
+      <property name="title" value="Plant Physiology Volume 140" />
+      <property name="journalTitle" value="Plant Physiology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+        <property name="key" value="base_url" />
+        <property name="value" value="http://www.plantphysiol.org/" />
+      </property>
+      <property name="param.2">
+        <property name="key" value="volume_name" />
+        <property name="value" value="137" />
+      </property>
+      <property name="attributes.publisher" value="American Society of Plant Biologists" />
+    </property>
+
+    <property name="PlantPhysiology138">
+      <property name="title" value="Plant Physiology Volume 138" />
+      <property name="journalTitle" value="Plant Physiology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+        <property name="key" value="base_url" />
+        <property name="value" value="http://www.plantphysiol.org/" />
+      </property>
+      <property name="param.2">
+        <property name="key" value="volume_name" />
+        <property name="value" value="138" />
+      </property>
+      <property name="attributes.publisher" value="American Society of Plant Biologists" />
+    </property>
+
+    <property name="PlantPhysiology139">
+      <property name="title" value="Plant Physiology Volume 139" />
+      <property name="journalTitle" value="Plant Physiology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+        <property name="key" value="base_url" />
+        <property name="value" value="http://www.plantphysiol.org/" />
+      </property>
+      <property name="param.2">
+        <property name="key" value="volume_name" />
+        <property name="value" value="139" />
+      </property>
+      <property name="attributes.publisher" value="American Society of Plant Biologists" />
+    </property>
+
     <property name="PlantPhysiology140">
       <property name="title" value="Plant Physiology Volume 140" />
       <property name="journalTitle" value="Plant Physiology" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://www.plantphysiol.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://www.plantphysiol.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="volume_name" />
-	<property name="value" value="140" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="140" />
+      </property>
+      <property name="attributes.publisher" value="American Society of Plant Biologists" />
+    </property>
+
+    <property name="PlantPhysiology141">
+      <property name="title" value="Plant Physiology Volume 141" />
+      <property name="journalTitle" value="Plant Physiology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+        <property name="key" value="base_url" />
+        <property name="value" value="http://www.plantphysiol.org/" />
+      </property>
+      <property name="param.2">
+        <property name="key" value="volume_name" />
+        <property name="value" value="141" />
+      </property>
+      <property name="attributes.publisher" value="American Society of Plant Biologists" />
+    </property>
+
+    <property name="PlantPhysiology142">
+      <property name="title" value="Plant Physiology Volume 142" />
+      <property name="journalTitle" value="Plant Physiology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+        <property name="key" value="base_url" />
+        <property name="value" value="http://www.plantphysiol.org/" />
+      </property>
+      <property name="param.2">
+        <property name="key" value="volume_name" />
+        <property name="value" value="142" />
       </property>
       <property name="attributes.publisher" value="American Society of Plant Biologists" />
     </property>
@@ -2864,7 +2939,7 @@
 	  <property name="key" value="volume_name" />
 	  <property name="value" value="17" />
 	</property>
-        <property name="attributes.publisher" value="AmericanSocietyofPlantBiologists" />
+        <property name="attributes.publisher" value="American Society of Plant Biologists" />
       </property>
 
       <property name="nejm352">
