@@ -219,7 +219,7 @@
       <property name="blackwell">
         <property name="name" value="All Blackwell Publications Titles" />
         <property name="class" value="xpath" />
-	<property name="xpath" value="[attributes/publisher='Blackwell']" />
+	<property name="xpath" value="[attributes/publisher='Blackwell Publications']" />
       </property>
 
       <property name="AlphaMed Press">
