@@ -1,131 +1,63 @@
 #!/bin/sh
 
-HELP="X"
+BASEDIR=`dirname $0`
 CACHEROOT=""
 MORECACHEROOT=""
 LOCKSSFRAMEWORKS="test/frameworks"
 
 # Display help if needed
+HELP="X"
 case "$1" in
- -h )
-  ;;
- -help )
-  ;;
- --help )
+ -h|-help|--help|-H )
   ;;
  * )
-  HELP=""
-  ;; 
+  HELP="";; 
 esac
-if [ -n "$HELP" -o -z "$1" ]; then
-cat << EOF
-cachefind [-h|-help|--help]
-cachefind [-rod|CROOT|[-rmd|-rmdc] [-1|-2|-3|-4|INST]] REPO .EXT [COMMAND...]
- Runs a find(1) job on a given LOCKSS cache (possibly in a custom location
- rooted at CROOT), possibly inside a given cache instance (or that designated
- by INST), within the chosen repository, looking for files with the desired
- extension EXT; then executes COMMAND on the most current version of the
- matching files in the repository using xargs(1).
+if [ -z "$1" -o -n "$HELP" ]; then
+ if [ "$1" != "-H" ]; then
+  ( cat <<EOF
+cachefind [-h|-help|--help|-H]
+cachefind [-root CROOT] [-rod|[-rmd|-rmdc] [-1|-2|-3|-4|-instance INST]]
+    REPO -- .EXT COMMAND...
+ Runs a find(1) job over a given LOCKSS repository (as found by cacherepo),
+ looking for files with the chosen extension EXT, executing COMMAND on the
+ most current version of the matching files in the repository using xargs(1).
+ The name of each file in COMMAND is the string {}. Note the double dash.
 -h
 -help
 --help
  Displays this message and exits.
--rod
- Uses the LOCKSS cache in the run_one_daemon framework.
--rmd
- Uses the LOCKSS cache in the run_multiple_daemons framework.
--rmdc
- Uses the LOCKSS cache in the run_multiple_daemons_clockss framework.
--1
- Uses LOCKSS instance #1 in the selected framework.
--2
- Uses LOCKSS instance #2 in the selected framework.
--3
- Uses LOCKSS instance #3 in the selected framework.
--4
- Uses LOCKSS instance #4 in the selected framework.
+-H
+ Displays only the lines of this message after this one and exits.
 EOF
-exit
+  )
+ fi
+ ( $BASEDIR/cacherepo -H )
+ exit
 fi
 
-# First parse the cache root
-case "$1" in
+CACHEREPOARGS=""
+while [ "$1" != "--" ]; do
+  CACHEREPOARGS="$CACHEREPOARGS $1"
+  shift # Consume one argument
+done
+shift # Consume "--"
 
- # LOCKSS run_one_daemon
- -rod )
-  CACHEROOT="$LOCKSSFRAMEWORKS/run_one_daemon/cache"
-  ;;
-
- # LOCKSS run_multiple_daemons
- -rmd )
-  CACHEROOT="$LOCKSSFRAMEWORKS/run_multiple_daemons"
-  MORECACHEROOT="X"
-  ;;
-
- # LOCKSS run_multiple_daemons_clockss
- -rmdc )
-  CACHEROOT="$LOCKSSFRAMEWORKS/run_multiple_daemons_clockss"
-  MORECACHEROOT="X"
-  ;;
-
- # User-defined
- * )
-  CACHEROOT="$1"
-  ;;
-
-esac
-shift # Consume one argument
-
-# Parse more of the cache root if necessary
-if [ -n "$MORECACHEROOT" ] ; then
- case "$1" in
-
-  # Daemon instance 1
-  -1 )
-   CACHEROOT="$CACHEROOT/test1/cache"
-   ;;
-
-  # Daemon instance 2
-  -2 )
-   CACHEROOT="$CACHEROOT/test2/cache"
-   ;;
-
-  # Daemon instance 3
-  -3 )
-   CACHEROOT="$CACHEROOT/test3/cache"
-   ;;
-
-  # Daemon instance 4
-  -4 )
-   CACHEROOT="$CACHEROOT/test4/cache"
-   ;;
-
-  # Custom subpath
-  * )
-   CACHEROOT="$CACHEROOT/$1"
-
- esac
- shift # Consume one argument
-fi
-
-# Parse the repository and check that it exists
-REPOSITORY=$1
-if [ ! -d "$CACHEROOT/$REPOSITORY" ] ; then
- echo "Error: $CACHEROOT/$REPOSITORY does not exist"
+# Invoke cacherepo
+REPOSITORY=`$BASEDIR/cacherepo $CACHEREPOARGS`
+if [ -z "$REPOSITORY" ]; then
+ ( cat <<EOF
+Error: error while computing the repository path.
+EOF
+ )
  exit 1
 fi
-shift # Consume one argument
 
 # Parse the extension
-EXTENSION=$1
-if [ "${EXTENSION%%${EXTENSION#.}}" != "." ] ; then
- EXTENSION="*.$EXTENSION" # Add dot
-else
- EXTENSION="*$EXTENSION"
-fi
+EXTENSION="*.${1#.}"
 shift # Consume one argument
 
 # Execute find job
-find $CACHEROOT/$REPOSITORY -type d -name "$EXTENSION" \
+find $REPOSITORY -type d -name "$EXTENSION" \
   | xargs -I {} echo {}/#content/current \
   | xargs -I {} $@

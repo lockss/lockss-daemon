@@ -1,0 +1,32 @@
+#!/bin/sh
+
+# Display help if needed
+HELP="X"
+case "$1" in
+ -h|-help|--help )
+  ;;
+ * )
+  HELP="";; 
+esac
+if [ -z "$1" -o -n "$HELP" ]; then
+ ( cat <<EOF
+urltopath [-h|-help|--help]
+urltopath URL
+ Prints a path suitable for LOCKSS repositories, with the protocol and the
+ host name swapped, from URL.
+-h
+-help
+--help
+ Displays this message and exits.
+EOF
+ )
+ exit
+fi
+
+RET=`perl -e 'if ($ARGV[0] =~ m{(.+)://([^/]+)/(.*)}) { print "$2/$1/$3\n"; }' "$1"`
+
+if [ -n "$RET" ]; then
+ echo "$RET"
+else
+ exit 1
+fi
