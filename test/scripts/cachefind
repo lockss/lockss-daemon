@@ -1,9 +1,10 @@
 #!/bin/sh
 
+#
+# $Id: cachefind,v 1.3 2007-03-06 00:58:51 thib_gc Exp $
+#
+
 BASEDIR=`dirname $0`
-CACHEROOT=""
-MORECACHEROOT=""
-LOCKSSFRAMEWORKS="test/frameworks"
 
 # Display help if needed
 HELP="X"
@@ -36,6 +37,7 @@ EOF
  exit
 fi
 
+# Consume cacherepo arguments
 CACHEREPOARGS=""
 while [ "$1" != "--" ]; do
   CACHEREPOARGS="$CACHEREPOARGS $1"

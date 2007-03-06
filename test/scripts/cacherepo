@@ -1,5 +1,9 @@
 #!/bin/sh
 
+#
+# $Id: cacherepo,v 1.2 2007-03-06 00:58:51 thib_gc Exp $
+#
+
 # Display help if needed
 HELP="X"
 case "$1" in
