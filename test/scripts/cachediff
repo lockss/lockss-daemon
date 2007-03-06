@@ -1,0 +1,143 @@
+#!/bin/sh
+
+#
+# $Id: cachediff,v 1.1 2007-03-06 00:59:17 thib_gc Exp $
+#
+
+BASEDIR=`dirname $0`
+
+# Display help if needed
+HELP="X"
+case "$1" in
+ -h|-help|--help|-H )
+  ;;
+ * )
+  HELP="";; 
+esac
+if [ -z "$1" -o -n "$HELP" ]; then
+ if [ "$1" != "-H" ]; then
+  ( cat <<EOF
+cachediff [-h|-help|--help|-H]
+cachediff -repo [-root CROOT1] [-rod|[-rmd|-rmdc] [-1|-2|-3|-4|
+    -instance INST1]] REPO1 [-repo [-root CROOT2] [-rod|[-rmd|-rmdc]
+    [-1|-2|-3|-4|-instance INST2]] REPO2|-prefix PREFIX2|-suffix SUFFIX2]
+    -- URL...
+ Performs a diff(1) on the current version of one or more URLs stored in
+ two LOCKSS repositories. The first one must be specified with -repo and
+ cacherepo syntax. The second one can either be specified fully with a
+ second -repo clause, or most of the cacherepo arguments from the first
+ one can be re-used with just the modifications in -suffix (or -prefix).
+ This script will count the shell words in SUFFIX2 (or PREFIX2), and 
+ replace the last (or first) words of the cacherepo arguments for the
+ first repository to form cacherepo arguments for the second repository.
+ If more than one URL is specified, the result of diff is piped through
+ less(1) for each pair of file.
+-h
+-help
+--help
+ Displays this message and exits.
+-H
+ Displays only the lines of this message after this one and exits.
+EOF
+  )
+ fi
+ ( cat <<EOF
+-repo
+ Begins the specification of the first (and possibly the second) repository.
+-prefix
+ Begins the specification of the second repository by changing the
+ specification of the first repository to begin with PREFIX2 instead.
+-suffix
+ Begins the specification of the second repository by changing the
+ specification of the second repository to end with SUFFIX2 instead.
+EOF
+ )
+ ( $BASEDIR/cacherepo -H )
+ exit
+fi
+
+# First argument should be "-repo"
+if [ "$1" != "-repo" ]; then
+ ( cat <<EOF
+Error: The first argument should be -repo.
+Help: use -h, -help or --help for more details.
+EOF
+ )
+fi
+shift # Consume "-repo"
+
+# Consume cacherepo arguments for the first repository
+CACHEREPOARGS1=""
+while [ "$1" != "-repo" -a "$1" != "-prefix" -a "$1" != "-suffix" ]; do
+ CACHEREPOARGS1="$CACHEREPOARGS1 $1"
+ shift # Consume one argument
+done
+
+# Invoke cacherepo for the first repository
+REPOSITORY1=`$BASEDIR/cacherepo $CACHEREPOARGS1`
+if [ -z "$REPOSITORY1" ]; then
+ ( cat <<EOF
+Error: error while computing the first repository path.
+EOF
+ )
+ exit 1
+fi
+
+CACHEREPOARGS2=""
+
+# Three cases: "-repo", "-prefix" or "-suffix"
+REPOTYPE="$1"
+SAVEREPOSITORY1="${CACHEREPOARGS1# }"
+shift # Consume repository type
+case "$REPOTYPE" in
+
+ -repo )
+  while [ "$1" != "--" ]; do
+   CACHEREPOARGS2="$CACHEREPOARGS2 $1"
+   shift # Consume one argument
+  done;;
+
+ -prefix )
+  while [ "$1" != "--" ]; do
+   CACHEREPOARGS2="$CACHEREPOARGS2 $1"
+   shift # Consume one argument
+   SAVEREPOSITORY1=`echo "$SAVEREPOSITORY1" | cut -d " " -f 2-` # Chop front
+  done
+  CACHEREPOARGS2="$CACHEREPOARGS2 $SAVEREPOSITORY1";; # Add rest
+
+ -suffix )
+  while [ "$1" != "--" ]; do
+   CACHEREPOARGS2="$CACHEREPOARGS2 $1"
+   shift # Consume one argument
+   i=`echo "$SAVEREPOSITORY1" | wc -w`
+   i=`expr $i - 1`
+   SAVEREPOSITORY1=`echo "$SAVEREPOSITORY1" | cut -d " " -f -$i` # Chop end
+  done
+  CACHEREPOARGS2="$SAVEREPOSITORY1 $CACHEREPOARGS2";; # Add rest
+
+esac
+shift # Consume "--"
+
+# Invoke cacherepo for the second repository
+REPOSITORY2=`$BASEDIR/cacherepo $CACHEREPOARGS2`
+if [ -z "$REPOSITORY2" ]; then
+ ( cat <<EOF
+Error: error while computing the second repository path.
+EOF
+ )
+ exit 1
+fi
+
+if [ -z "$2" ]; then
+ # Single URL
+ diff $REPOSITORY1/`$BASEDIR/urltopath $1`/\#content/current \
+      $REPOSITORY2/`$BASEDIR/urltopath $1`/\#content/current
+else
+ # Multiple URLs
+ while [ -n "$1" ]; do
+  diff $REPOSITORY1/`$BASEDIR/urltopath $1/\#content/current` \
+       $REPOSITORY2/`$BASEDIR/urltopath $1/\#content/current` \
+  | less
+ shift # Consume one URL
+ done
+fi
