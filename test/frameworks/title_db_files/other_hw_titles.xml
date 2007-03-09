@@ -2634,17 +2634,68 @@
       <property name="attributes.publisher" value="Massachusetts Medical Society" />
     </property>
 
+    <property name="NewEnglandJournalofMedicine352">
+      <property name="title" value="New England Journal of Medicine Volume 352" />
+      <property name="journalTitle" value="New England Journal of Medicine" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+        <property name="key" value="base_url" />
+        <property name="value" value="http://content.nejm.org/" />
+      </property>
+      <property name="param.2">
+        <property name="key" value="volume_name" />
+        <property name="value" value="352" />
+      </property>
+      <property name="attributes.publisher" value="Massachusetts Medical Society" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.NewEnglandJournalOfMedicinePdfTransform$Simplified" />
+    </property>
+
+    <property name="NewEnglandJournalofMedicine353">
+      <property name="title" value="New England Journal of Medicine Volume 353" />
+      <property name="journalTitle" value="New England Journal of Medicine" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+        <property name="key" value="base_url" />
+        <property name="value" value="http://content.nejm.org/" />
+      </property>
+      <property name="param.2">
+        <property name="key" value="volume_name" />
+        <property name="value" value="353" />
+      </property>
+      <property name="attributes.publisher" value="Massachusetts Medical Society" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.NewEnglandJournalOfMedicinePdfTransform$Simplified" />
+    </property>
+
     <property name="NewEnglandJournalofMedicine354">
       <property name="title" value="New England Journal of Medicine Volume 354" />
       <property name="journalTitle" value="New England Journal of Medicine" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://content.nejm.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://content.nejm.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="volume_name" />
-	<property name="value" value="354" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="354" />
+      </property>
+      <property name="attributes.publisher" value="Massachusetts Medical Society" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.NewEnglandJournalOfMedicinePdfTransform$Simplified" />
+    </property>
+
+    <property name="NewEnglandJournalofMedicine355">
+      <property name="title" value="New England Journal of Medicine Volume 355" />
+      <property name="journalTitle" value="New England Journal of Medicine" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+        <property name="key" value="base_url" />
+        <property name="value" value="http://content.nejm.org/" />
+      </property>
+      <property name="param.2">
+        <property name="key" value="volume_name" />
+        <property name="value" value="355" />
       </property>
       <property name="attributes.publisher" value="Massachusetts Medical Society" />
       <property name="attributes.hint_application/pdf_filter_factory"
@@ -2927,33 +2978,124 @@
         <property name="attributes.publisher" value="Hematology" />
       </property>
 
-      <property name="plantcell17">
-	<property name="title" value="Plant Cell Volume 17" />
-	<property name="journalTitle" value="Plant Cell" />
-	<property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
-	<property name="param.1">
-	  <property name="key" value="base_url" />
-	  <property name="value" value="http://www.plantcell.org/" />
-	</property>
-	<property name="param.2">
-	  <property name="key" value="volume_name" />
-	  <property name="value" value="17" />
-	</property>
+      <property name="PlantPhysiology137">
+        <property name="title" value="Plant Physiology Volume 137" />
+        <property name="journalTitle" value="Plant Physiology" />
+        <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://www.plantphysiol.org/" />
+        </property>
+        <property name="param.2">
+	      <property name="key" value="volume_name" />
+          <property name="value" value="137" />
+        </property>
         <property name="attributes.publisher" value="American Society of Plant Biologists" />
       </property>
 
-      <property name="nejm352">
-	<property name="title" value="New England Journal of Medicine Volume 352" />
-	<property name="journalTitle" value="New England Journal of Medicine" />
-	<property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
-	<property name="param.1">
-	  <property name="key" value="base_url" />
-	  <property name="value" value="http://content.nejm.org/" />
-	</property>
-	<property name="param.2">
-	  <property name="key" value="volume_name" />
-	  <property name="value" value="352" />
-	</property>
+      <property name="PlantPhysiology138">
+        <property name="title" value="Plant Physiology Volume 138" />
+        <property name="journalTitle" value="Plant Physiology" />
+        <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://www.plantphysiol.org/" />
+        </property>
+        <property name="param.2">
+	      <property name="key" value="volume_name" />
+          <property name="value" value="138" />
+        </property>
+        <property name="attributes.publisher" value="American Society of Plant Biologists" />
+      </property>
+
+      <property name="PlantPhysiology139">
+        <property name="title" value="Plant Physiology Volume 139" />
+        <property name="journalTitle" value="Plant Physiology" />
+        <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://www.plantphysiol.org/" />
+        </property>
+        <property name="param.2">
+	      <property name="key" value="volume_name" />
+          <property name="value" value="139" />
+        </property>
+        <property name="attributes.publisher" value="American Society of Plant Biologists" />
+      </property>
+
+      <property name="PlantPhysiology140">
+        <property name="title" value="Plant Physiology Volume 140" />
+        <property name="journalTitle" value="Plant Physiology" />
+        <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://www.plantphysiol.org/" />
+        </property>
+        <property name="param.2">
+	      <property name="key" value="volume_name" />
+          <property name="value" value="140" />
+        </property>
+        <property name="attributes.publisher" value="American Society of Plant Biologists" />
+      </property>
+
+      <property name="PlantPhysiology141">
+        <property name="title" value="Plant Physiology Volume 141" />
+        <property name="journalTitle" value="Plant Physiology" />
+        <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://www.plantphysiol.org/" />
+        </property>
+        <property name="param.2">
+	      <property name="key" value="volume_name" />
+          <property name="value" value="141" />
+        </property>
+        <property name="attributes.publisher" value="American Society of Plant Biologists" />
+      </property>
+
+      <property name="PlantPhysiology142">
+        <property name="title" value="Plant Physiology Volume 142" />
+        <property name="journalTitle" value="Plant Physiology" />
+        <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://www.plantphysiol.org/" />
+        </property>
+        <property name="param.2">
+	      <property name="key" value="volume_name" />
+          <property name="value" value="142" />
+        </property>
+        <property name="attributes.publisher" value="American Society of Plant Biologists" />
+      </property>
+
+      <property name="PlantCell17">
+        <property name="title" value="Plant Cell Volume 17" />
+        <property name="journalTitle" value="Plant Cell" />
+        <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://www.plantcell.org/" />
+        </property>
+        <property name="param.2">
+	      <property name="key" value="volume_name" />
+          <property name="value" value="17" />
+        </property>
+        <property name="attributes.publisher" value="American Society of Plant Biologists" />
+      </property>
+
+      <property name="PlantCell18">
+        <property name="title" value="Plant Cell Volume 18" />
+        <property name="journalTitle" value="Plant Cell" />
+        <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://www.plantcell.org/" />
+        </property>
+        <property name="param.2">
+	      <property name="key" value="volume_name" />
+          <property name="value" value="18" />
+        </property>
+        <property name="attributes.publisher" value="American Society of Plant Biologists" />
       </property>
 
     <property name="jhc52">
