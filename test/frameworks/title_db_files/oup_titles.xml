@@ -1392,21 +1392,6 @@
       <property name="attributes.publisher" value="Oxford University Press"/>
     </property>
 
-    <property name="ComputerJournal48">
-      <property name="title" value="Computer Journal Volume 48"/>
-      <property name="journalTitle" value="Computer Journal"/>
-      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin"/>
-      <property name="param.1">
-        <property name="key" value="base_url"/>
-        <property name="value" value="http://comjnl.oxfordjournals.org/"/>
-      </property>
-      <property name="param.2">
-        <property name="key" value="volume_name"/>
-        <property name="value" value="48"/>
-      </property>
-      <property name="attributes.publisher" value="Oxford University Press"/>
-    </property>
-
     <property name="ComputerJournal49">
       <property name="title" value="Computer Journal Volume 49"/>
       <property name="journalTitle" value="Computer Journal"/>
@@ -1804,21 +1789,6 @@
       <property name="param.2">
         <property name="key" value="volume_name"/>
         <property name="value" value="57"/>
-      </property>
-      <property name="attributes.publisher" value="Oxford University Press"/>
-    </property>
-
-    <property name="Europace7">
-      <property name="title" value="Europace Volume 7"/>
-      <property name="journalTitle" value="Europace"/>
-      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin"/>
-      <property name="param.1">
-        <property name="key" value="base_url"/>
-        <property name="value" value="http://europace.oxfordjournals.org/"/>
-      </property>
-      <property name="param.2">
-        <property name="key" value="volume_name"/>
-        <property name="value" value="7"/>
       </property>
       <property name="attributes.publisher" value="Oxford University Press"/>
     </property>
