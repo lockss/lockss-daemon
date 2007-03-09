@@ -4368,8 +4368,8 @@
       <property name="attributes.publisher" value="Oxford University Press"/>
     </property>
 
-    <property name="JournalofInternationalCriminalJustice3">
-      <property name="title" value="Journal of International Criminal Justice Volume 3"/>
+    <property name="JournalofInternationalCriminalJustice4">
+      <property name="title" value="Journal of International Criminal Justice Volume 4"/>
       <property name="journalTitle" value="Journal of International Criminal Justice"/>
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin"/>
       <property name="param.1">
@@ -4378,7 +4378,7 @@
       </property>
       <property name="param.2">
         <property name="key" value="volume_name"/>
-        <property name="value" value="3"/>
+        <property name="value" value="4"/>
       </property>
       <property name="attributes.publisher" value="Oxford University Press"/>
     </property>
