@@ -1960,21 +1960,6 @@
       <property name="attributes.publisher" value="Oxford University Press"/>
     </property>
 
-    <property name="EuropeanJournalofOrthodontics27">
-      <property name="title" value="European Journal of Orthodontics Volume 27"/>
-      <property name="journalTitle" value="European Journal of Orthodontics"/>
-      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin"/>
-      <property name="param.1">
-        <property name="key" value="base_url"/>
-        <property name="value" value="http://ejo.oxfordjournals.org/"/>
-      </property>
-      <property name="param.2">
-        <property name="key" value="volume_name"/>
-        <property name="value" value="27"/>
-      </property>
-      <property name="attributes.publisher" value="Oxford University Press"/>
-    </property>
-
     <property name="EuropeanJournalofOrthodontics28">
       <property name="title" value="European Journal of Orthodontics Volume 28"/>
       <property name="journalTitle" value="European Journal of Orthodontics"/>
@@ -4394,21 +4379,6 @@
       <property name="param.2">
         <property name="key" value="volume_name"/>
         <property name="value" value="3"/>
-      </property>
-      <property name="attributes.publisher" value="Oxford University Press"/>
-    </property>
-
-    <property name="JournalofInternationalCriminalJustice4">
-      <property name="title" value="Journal of International Criminal Justice Volume 4"/>
-      <property name="journalTitle" value="Journal of International Criminal Justice"/>
-      <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin"/>
-      <property name="param.1">
-        <property name="key" value="base_url"/>
-        <property name="value" value="http://jicj.oxfordjournals.org/"/>
-      </property>
-      <property name="param.2">
-        <property name="key" value="volume"/>
-        <property name="value" value="4"/>
       </property>
       <property name="attributes.publisher" value="Oxford University Press"/>
     </property>
@@ -7326,36 +7296,6 @@
       <property name="attributes.publisher" value="Oxford University Press"/>
     </property>
 
-    <property name="TheJournalofBiochemistry137">
-      <property name="title" value="The Journal of Biochemistry Volume 137"/>
-      <property name="journalTitle" value="The Journal of Biochemistry"/>
-      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin"/>
-      <property name="param.1">
-        <property name="key" value="base_url"/>
-        <property name="value" value="http://jb.oxfordjournals.org/"/>
-      </property>
-      <property name="param.2">
-        <property name="key" value="volume_name"/>
-        <property name="value" value="137"/>
-      </property>
-      <property name="attributes.publisher" value="Oxford University Press"/>
-    </property>
-
-    <property name="TheJournalofBiochemistry138">
-      <property name="title" value="The Journal of Biochemistry Volume 138"/>
-      <property name="journalTitle" value="The Journal of Biochemistry"/>
-      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin"/>
-      <property name="param.1">
-        <property name="key" value="base_url"/>
-        <property name="value" value="http://jb.oxfordjournals.org/"/>
-      </property>
-      <property name="param.2">
-        <property name="key" value="volume_name"/>
-        <property name="value" value="138"/>
-      </property>
-      <property name="attributes.publisher" value="Oxford University Press"/>
-    </property>
-
     <property name="TheJournalofBiochemistry139">
       <property name="title" value="The Journal of Biochemistry Volume 139"/>
       <property name="journalTitle" value="The Journal of Biochemistry"/>
@@ -7773,21 +7713,6 @@
       <property name="param.2">
         <property name="key" value="volume_name"/>
         <property name="value" value="96"/>
-      </property>
-      <property name="attributes.publisher" value="Oxford University Press"/>
-    </property>
-
-    <property name="Trusts&amp;Trustees11">
-      <property name="title" value="Trusts &amp; Trustees Volume 11"/>
-      <property name="journalTitle" value="Trusts &amp; Trustees"/>
-      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin"/>
-      <property name="param.1">
-        <property name="key" value="base_url"/>
-        <property name="value" value="http://tandt.oxfordjournals.org/"/>
-      </property>
-      <property name="param.2">
-        <property name="key" value="volume_name"/>
-        <property name="value" value="11"/>
       </property>
       <property name="attributes.publisher" value="Oxford University Press"/>
     </property>
