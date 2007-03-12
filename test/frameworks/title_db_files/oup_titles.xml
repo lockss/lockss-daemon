@@ -1470,21 +1470,6 @@
       <property name="attributes.publisher" value="Oxford University Press"/>
     </property>
 
-    <property name="DNAResearch12">
-      <property name="title" value="DNA Research Volume 12"/>
-      <property name="journalTitle" value="DNA Research"/>
-      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin"/>
-      <property name="param.1">
-        <property name="key" value="base_url"/>
-        <property name="value" value="http://dnaresearch.oxfordjournals.org/"/>
-      </property>
-      <property name="param.2">
-        <property name="key" value="volume_name"/>
-        <property name="value" value="12"/>
-      </property>
-      <property name="attributes.publisher" value="Oxford University Press"/>
-    </property>
-
     <property name="DNAResearch13">
       <property name="title" value="DNA Research Volume 13"/>
       <property name="estSize" value="30MB"/>
