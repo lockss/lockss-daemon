@@ -1,5 +1,5 @@
 /*
- * $Id: CssLinkExtractor.java,v 1.2 2007-02-07 19:32:21 thib_gc Exp $
+ * $Id: CssLinkExtractor.java,v 1.3 2007-03-13 01:14:39 thib_gc Exp $
  */
 
 /*
@@ -92,9 +92,9 @@ public class CssLinkExtractor implements LinkExtractor {
    */
   private static class LockssDocumentHandler implements DocumentHandler {
 
-    protected LinkExtractor.Callback callback;
-    
     protected URL baseUrl;
+    
+    protected LinkExtractor.Callback callback;
     
     public LockssDocumentHandler(URL baseUrl,
                                  LinkExtractor.Callback callback) {
