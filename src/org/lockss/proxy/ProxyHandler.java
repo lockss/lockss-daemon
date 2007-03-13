@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.52 2007-02-10 06:53:13 tlipkis Exp $
+ * $Id: ProxyHandler.java,v 1.53 2007-03-13 22:07:32 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.52 2007-02-10 06:53:13 tlipkis Exp $
+// $Id: ProxyHandler.java,v 1.53 2007-03-13 22:07:32 tlipkis Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -260,6 +260,11 @@ public class ProxyHandler extends AbstractHttpHandler {
       throws HttpException, IOException {
     URI uri = request.getURI();
 
+    if (!proxyMgr.isMethodAllowed(request.getMethod())) {
+      sendForbid(request,response,uri);
+      return;
+    }
+      
     // Is this a CONNECT request?
     if (HttpRequest.__CONNECT.equals(request.getMethod())) {
       response.setField(HttpFields.__Connection,"close"); // XXX Needed for IE????
@@ -385,7 +390,6 @@ public class ProxyHandler extends AbstractHttpHandler {
 	connectionHdr=null;
 
       // copy headers
-      boolean xForwardedFor=false;
       boolean hasContent=false;
       Enumeration en = request.getFieldNames();
 
@@ -402,29 +406,19 @@ public class ProxyHandler extends AbstractHttpHandler {
 	if (HttpFields.__ContentType.equalsIgnoreCase(hdr))
 	  hasContent=true;
 
-	xForwardedFor |=
-	  HttpFields.__XForwardedFor.equalsIgnoreCase(hdr);
-
 	Enumeration vals = request.getFieldValues(hdr);
 	while (vals.hasMoreElements()) {
 	  String val = (String)vals.nextElement();
 	  if (val!=null) {
-	    //                         connection.addRequestProperty(hdr,val);
-	    connection.setRequestProperty(hdr, val);
+	    connection.addRequestProperty(hdr,val);
 	  }
 	}
       }
 
       // Proxy headers
       connection.setRequestProperty("Via", makeVia(request));
-      if (!xForwardedFor) {
-	// XXX Should be addRequest... , but that doesn't exist in 1.3
-	// connection.addRequestProperty(HttpFields.__XForwardedFor,
-	//                               request.getRemoteAddr());
-	connection.setRequestProperty(HttpFields.__XForwardedFor,
-				      request.getRemoteAddr());
-
-      }
+      connection.addRequestProperty(HttpFields.__XForwardedFor,
+				    request.getRemoteAddr());
       // a little bit of cache control
       String cache_control = request.getField(HttpFields.__CacheControl);
       if (cache_control!=null &&
@@ -549,7 +543,6 @@ public class ProxyHandler extends AbstractHttpHandler {
 	connectionHdr=null;
 
       // copy request headers into new request
-      boolean xForwardedFor=false;
       boolean hasContent=false;
       String ifModified = null;
 
@@ -562,8 +555,6 @@ public class ProxyHandler extends AbstractHttpHandler {
 	if (connectionHdr!=null && connectionHdr.indexOf(hdr)>=0) continue;
 
 	if (HttpFields.__ContentType.equalsIgnoreCase(hdr)) hasContent=true;
-
-	xForwardedFor |= HttpFields.__XForwardedFor.equalsIgnoreCase(hdr);
 
 	if (isInCache) {
 	  if (HttpFields.__IfModifiedSince.equalsIgnoreCase(hdr)) {
@@ -611,11 +602,8 @@ public class ProxyHandler extends AbstractHttpHandler {
 
       // Proxy-specifix headers
       conn.addRequestProperty("Via", makeVia(request));
-      if (!xForwardedFor) {
-	conn.addRequestProperty(HttpFields.__XForwardedFor,
-				request.getRemoteAddr());
-
-      }
+      conn.addRequestProperty(HttpFields.__XForwardedFor,
+			      request.getRemoteAddr());
 
       // If we ever handle input, this is (more-or-less) the HttpClient way
       // to do it

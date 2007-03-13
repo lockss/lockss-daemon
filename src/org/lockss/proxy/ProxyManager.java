@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyManager.java,v 1.41 2007-02-10 06:53:34 tlipkis Exp $
+ * $Id: ProxyManager.java,v 1.42 2007-03-13 22:07:32 tlipkis Exp $
  */
 
 /*
@@ -105,6 +105,12 @@ public class ProxyManager extends BaseProxyManager {
     PREFIX + "noManifestIndexResponses";
   static final String DEFAULT_NO_MANIFEST_INDEX_RESPONSES = "301;302;303;307";
 
+  /** A semicolon-separated list of HTTP methods that the proxy should
+   * never allow */
+  static final String PARAM_DISALLOWED_METHODS =
+    PREFIX + "disallowedMethods";
+  static final String DEFAULT_DISALLOWED_METHODS = HttpRequest.__CONNECT;
+
   public static final String PARAM_PROXY_MAX_TOTAL_CONN =
     PREFIX + "connectionPool.max";
   public static final int DEFAULT_PROXY_MAX_TOTAL_CONN = 15;
@@ -150,6 +156,7 @@ public class ProxyManager extends BaseProxyManager {
   private boolean paramUrlCacheEnabled = DEFAULT_URL_CACHE_ENABLED;
   private long paramUrlCacheDuration = DEFAULT_URL_CACHE_DURATION;
   private Set noManifestIndexResponses = new HashSet();
+  private Set disallowedMethods = new HashSet();
 
 
   public void setConfig(Configuration config, Configuration prevConfig,
@@ -214,6 +221,22 @@ public class ProxyManager extends BaseProxyManager {
 	    }
 	  }
 	  noManifestIndexResponses = newSet;
+	}
+
+	String disallowed = config.get(PARAM_DISALLOWED_METHODS,
+				       DEFAULT_DISALLOWED_METHODS);
+	if (StringUtil.isNullString(noindex)) {
+	  disallowedMethods = new HashSet();
+	} else {
+	  Set newSet = new HashSet();
+	  List lst = StringUtil.breakAt(disallowed,
+					Constants.LIST_DELIM_CHAR,
+					0, true);
+	  for (Iterator iter = lst.iterator(); iter.hasNext(); ) {
+	    String str = (String)iter.next();
+	    newSet.add(str.toUpperCase());
+	  }
+	  disallowedMethods = newSet;
 	}
 
 	if (!isServerRunning() && getDaemon().isDaemonRunning()) {
@@ -335,6 +358,10 @@ public class ProxyManager extends BaseProxyManager {
 
   public boolean showManifestIndexForResponse(int status) {
     return ! noManifestIndexResponses.contains(new Integer(status));
+  }
+
+  public boolean isMethodAllowed(String method) {
+    return ! disallowedMethods.contains(method);
   }
 
 }

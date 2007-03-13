@@ -1,5 +1,5 @@
 /*
- * $Id: TestProxyManager.java,v 1.4 2007-01-18 02:28:09 tlipkis Exp $
+ * $Id: TestProxyManager.java,v 1.5 2007-03-13 22:07:32 tlipkis Exp $
  */
 
 /*
@@ -154,6 +154,28 @@ public class TestProxyManager extends LockssTestCase {
     assertTrue(mgr.showManifestIndexForResponse(404));
     assertTrue(mgr.showManifestIndexForResponse(403));
     assertTrue(mgr.showManifestIndexForResponse(401));
+
+  }
+
+  public void testIsMethodAllowed() throws Exception {
+    assertTrue(mgr.isMethodAllowed("GET"));
+    assertTrue(mgr.isMethodAllowed("POST"));
+    assertTrue(mgr.isMethodAllowed("HEAD"));
+    assertFalse(mgr.isMethodAllowed("CONNECT"));
+
+    ConfigurationUtil.setFromArgs(ProxyManager.PARAM_DISALLOWED_METHODS,
+				  "CONNECT;POST");
+    assertTrue(mgr.isMethodAllowed("GET"));
+    assertFalse(mgr.isMethodAllowed("POST"));
+    assertTrue(mgr.isMethodAllowed("HEAD"));
+    assertFalse(mgr.isMethodAllowed("CONNECT"));
+
+    ConfigurationUtil.setFromArgs(ProxyManager.PARAM_DISALLOWED_METHODS,
+				  "");
+    assertTrue(mgr.isMethodAllowed("GET"));
+    assertTrue(mgr.isMethodAllowed("POST"));
+    assertTrue(mgr.isMethodAllowed("HEAD"));
+    assertTrue(mgr.isMethodAllowed("CONNECT"));
 
   }
 
