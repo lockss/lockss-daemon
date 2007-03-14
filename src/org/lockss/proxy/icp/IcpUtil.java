@@ -1,10 +1,10 @@
 /*
- * $Id: IcpUtil.java,v 1.8 2006-01-31 01:29:19 thib_gc Exp $
+ * $Id: IcpUtil.java,v 1.9 2007-03-14 23:39:41 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -154,10 +154,10 @@ public class IcpUtil {
    * @param offset A byte offset.
    * @return The IP address obtained from the 4 bytes at the given
    *         offset of the argument buffer.
-   * @throws IcpProtocolException if any exception arises.
+   * @throws IcpException if any exception arises.
    */
   public static IPAddr getIpFromBuffer(ByteBuffer in, int offset)
-      throws IcpProtocolException {
+      throws IcpException {
     try {
       byte[] ipBytes = new byte[4];
       int rawIpInt = in.getInt(offset);
@@ -168,7 +168,7 @@ public class IcpUtil {
       return IPAddr.getByAddress(ipBytes);
     }
     catch (Exception exc) {
-      throw new IcpProtocolException(
+      throw new IcpException(
           "Error while parsing IP from byte buffer", exc);
     }
   }
@@ -302,7 +302,7 @@ public class IcpUtil {
     try {
       return getIpFromBuffer(in, OFFSET_INT_REQUESTER);
     }
-    catch (IcpProtocolException ipe) {
+    catch (IcpException ipe) {
       throw new IndexOutOfBoundsException(ipe.getMessage());
     }
   }
@@ -325,7 +325,7 @@ public class IcpUtil {
     try {
       return getIpFromBuffer(in, OFFSET_INT_SENDER);
     }
-    catch (IcpProtocolException ipe) {
+    catch (IcpException ipe) {
       throw new IndexOutOfBoundsException(ipe.getMessage());
     }
   }

@@ -1,10 +1,10 @@
 /*
- * $Id: IcpFactoryImpl.java,v 1.20 2006-01-31 01:29:19 thib_gc Exp $
+ * $Id: IcpFactoryImpl.java,v 1.21 2007-03-14 23:39:41 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -186,9 +186,9 @@ public class IcpFactoryImpl extends BaseIcpFactory {
 
     /* Inherit documentation */
     public IcpMessage makeDenied()
-        throws IcpProtocolException {
+        throws IcpException {
       if (!isQuery()) {
-        throw new IcpProtocolException(DENIED_NOT_QUERY_ERROR);
+        throw new IcpException(DENIED_NOT_QUERY_ERROR);
       }
       return new IcpMessageImpl(getUdpAddress(),
                                 getUdpPort(),
@@ -204,9 +204,9 @@ public class IcpFactoryImpl extends BaseIcpFactory {
 
     /* Inherit documentation */
     public IcpMessage makeError()
-        throws IcpProtocolException {
+        throws IcpException {
       if (!isQuery()) {
-        throw new IcpProtocolException(ERR_NOT_QUERY_ERROR);
+        throw new IcpException(ERR_NOT_QUERY_ERROR);
       }
       return new IcpMessageImpl(getUdpAddress(),
                                 getUdpPort(),
@@ -222,9 +222,9 @@ public class IcpFactoryImpl extends BaseIcpFactory {
 
     /* Inherit documentation */
     public IcpMessage makeHit()
-        throws IcpProtocolException {
+        throws IcpException {
       if (!isQuery()) {
-        throw new IcpProtocolException(HIT_NOT_QUERY_ERROR);
+        throw new IcpException(HIT_NOT_QUERY_ERROR);
       }
       return new IcpMessageImpl(getUdpAddress(),
                                 getUdpPort(),
@@ -240,12 +240,12 @@ public class IcpFactoryImpl extends BaseIcpFactory {
 
     /* Inherit documentation */
     public IcpMessage makeHit(short srcRttResponse)
-        throws IcpProtocolException {
+        throws IcpException {
       if (!isQuery()) {
-        throw new IcpProtocolException(HIT_NOT_QUERY_ERROR);
+        throw new IcpException(HIT_NOT_QUERY_ERROR);
       }
       if (!requestsSrcRtt()) {
-        throw new IcpProtocolException(SRC_RTT_NOT_REQUESTED_ERROR);
+        throw new IcpException(SRC_RTT_NOT_REQUESTED_ERROR);
       }
       return new IcpMessageImpl(getUdpAddress(),
                                 getUdpPort(),
@@ -261,12 +261,12 @@ public class IcpFactoryImpl extends BaseIcpFactory {
 
     /* Inherit documentation */
     public IcpMessage makeHitObj(byte[] payloadObject)
-        throws IcpProtocolException {
+        throws IcpException {
       if (payloadObject == null) {
         throw new NullPointerException(NULL_PAYLOAD_OBJECT_ERROR);
       }
       if (!isQuery()) {
-        throw new IcpProtocolException(HIT_OBJ_NOT_QUERY_ERROR);
+        throw new IcpException(HIT_OBJ_NOT_QUERY_ERROR);
       }
       return new IcpMessageImpl(getUdpAddress(),
                                 getUdpPort(),
@@ -285,15 +285,15 @@ public class IcpFactoryImpl extends BaseIcpFactory {
     /* Inherit documentation */
     public IcpMessage makeHitObj(short srcRttResponse,
                                  byte[] payloadObject)
-        throws IcpProtocolException {
+        throws IcpException {
       if (payloadObject == null) {
         throw new NullPointerException(NULL_PAYLOAD_OBJECT_ERROR);
       }
       if (!isQuery()) {
-        throw new IcpProtocolException(HIT_OBJ_NOT_QUERY_ERROR);
+        throw new IcpException(HIT_OBJ_NOT_QUERY_ERROR);
       }
       if (!requestsSrcRtt()) {
-        throw new IcpProtocolException(SRC_RTT_NOT_REQUESTED_ERROR);
+        throw new IcpException(SRC_RTT_NOT_REQUESTED_ERROR);
       }
       return new IcpMessageImpl(getUdpAddress(),
                                 getUdpPort(),
@@ -310,9 +310,9 @@ public class IcpFactoryImpl extends BaseIcpFactory {
 
     /* Inherit documentation */
     public IcpMessage makeMiss()
-        throws IcpProtocolException {
+        throws IcpException {
       if (!isQuery()) {
-        throw new IcpProtocolException(MISS_NOT_QUERY_ERROR);
+        throw new IcpException(MISS_NOT_QUERY_ERROR);
       }
       return new IcpMessageImpl(getUdpAddress(),
                                 getUdpPort(),
@@ -328,12 +328,12 @@ public class IcpFactoryImpl extends BaseIcpFactory {
 
     /* Inherit documentation */
     public IcpMessage makeMiss(short srcRttResponse)
-        throws IcpProtocolException {
+        throws IcpException {
       if (!isQuery()) {
-        throw new IcpProtocolException(MISS_NOT_QUERY_ERROR);
+        throw new IcpException(MISS_NOT_QUERY_ERROR);
       }
       if (!requestsSrcRtt()) {
-        throw new IcpProtocolException(SRC_RTT_NOT_REQUESTED_ERROR);
+        throw new IcpException(SRC_RTT_NOT_REQUESTED_ERROR);
       }
       return new IcpMessageImpl(getUdpAddress(),
                                 getUdpPort(),
@@ -349,9 +349,9 @@ public class IcpFactoryImpl extends BaseIcpFactory {
 
     /* Inherit documentation */
     public IcpMessage makeMissNoFetch()
-        throws IcpProtocolException {
+        throws IcpException {
       if (!isQuery()) {
-        throw new IcpProtocolException(MISS_NOFETCH_NOT_QUERY_ERROR);
+        throw new IcpException(MISS_NOFETCH_NOT_QUERY_ERROR);
       }
       return new IcpMessageImpl(getUdpAddress(),
                                 getUdpPort(),
@@ -367,12 +367,12 @@ public class IcpFactoryImpl extends BaseIcpFactory {
 
     /* Inherit documentation */
     public IcpMessage makeMissNoFetch(short srcRttResponse)
-        throws IcpProtocolException {
+        throws IcpException {
       if (!isQuery()) {
-        throw new IcpProtocolException(MISS_NOFETCH_NOT_QUERY_ERROR);
+        throw new IcpException(MISS_NOFETCH_NOT_QUERY_ERROR);
       }
       if (!requestsSrcRtt()) {
-        throw new IcpProtocolException(SRC_RTT_NOT_REQUESTED_ERROR);
+        throw new IcpException(SRC_RTT_NOT_REQUESTED_ERROR);
       }
       return new IcpMessageImpl(getUdpAddress(),
                                 getUdpPort(),
@@ -460,7 +460,7 @@ public class IcpFactoryImpl extends BaseIcpFactory {
 
   /* Inherit documentation */
   public IcpMessage makeMessage(DatagramPacket udpPacket)
-      throws IcpProtocolException {
+      throws IcpException {
     return parseIcp(udpPacket);
   }
 
@@ -508,10 +508,10 @@ public class IcpFactoryImpl extends BaseIcpFactory {
    * <p>Parses a UDP packet into an ICP message.</p>
    * @param packet A UDP packet.
    * @return An ICP message.
-   * @throws IcpProtocolException
+   * @throws IcpException
    */
   private static IcpMessage parseIcp(DatagramPacket packet)
-      throws IcpProtocolException {
+      throws IcpException {
 
     //  Local variables
     byte opcode;
@@ -535,11 +535,11 @@ public class IcpFactoryImpl extends BaseIcpFactory {
       // Unconditional processing
       opcode = IcpUtil.getOpcodeFromBuffer(in);
       if (!IcpUtil.isValidOpcode(opcode)) {
-        throw new IcpProtocolException("Invalid opcode: " + opcode);
+        throw new IcpException("Invalid opcode: " + opcode);
       }
       version = IcpUtil.getVersionFromBuffer(in);
       if (version != IcpMessage.ICP_VERSION) {
-        throw new IcpProtocolException("Unknown version: " + version);
+        throw new IcpException("Unknown version: " + version);
       }
 
       length = IcpUtil.getLengthFromBuffer(in);
@@ -610,11 +610,11 @@ public class IcpFactoryImpl extends BaseIcpFactory {
 
       return ret;
     }
-    catch (IcpProtocolException ipe) {
+    catch (IcpException ipe) {
       throw ipe; // rethrow
     }
     catch (Exception exc) {
-      throw new IcpProtocolException("Error while decoding ICP packet", exc);
+      throw new IcpException("Error while decoding ICP packet", exc);
     }
   }
 

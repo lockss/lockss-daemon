@@ -1,10 +1,10 @@
 /*
- * $Id: IcpFactoryTester.java,v 1.2 2006-01-31 01:32:14 thib_gc Exp $
+ * $Id: IcpFactoryTester.java,v 1.3 2007-03-14 23:39:41 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -71,7 +71,7 @@ public abstract class IcpFactoryTester extends LockssTestCase {
         expectMessage(MockIcpMessage.getTestMessage(test), message);
         logger.info("testMakeMessage: PASSED test #" + test);
       }
-      catch (IcpProtocolException ipe) {
+      catch (IcpException ipe) {
         logger.error("testMakeMessage: FAILED test #" + test, ipe);
         ++failed;
       }

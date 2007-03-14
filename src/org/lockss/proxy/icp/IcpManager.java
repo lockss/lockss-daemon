@@ -1,5 +1,5 @@
 /*
- * $Id: IcpManager.java,v 1.33 2007-02-08 08:57:58 tlipkis Exp $
+ * $Id: IcpManager.java,v 1.34 2007-03-14 23:39:41 thib_gc Exp $
  */
 
 /*
@@ -53,6 +53,11 @@ public class IcpManager
     implements ConfigurableManager {
 
   /**
+   * 
+   */
+  public static final String SERVER_NAME = "IcpProxy";
+  
+  /**
    * <p>A name fragment for named parameters related to ICP.</p>
    * @see LockssRunnable#PARAM_NAMED_THREAD_PRIORITY
    * @see LockssRunnable#PARAM_NAMED_WDOG_INTERVAL
@@ -78,10 +83,6 @@ public class IcpManager
   public static final String PREFIX_PLATFORM =
     Configuration.PLATFORM + FRAGMENT_ICP_DOT;
 
-  /*
-   * begin PRIVATE NESTED CLASS
-   * ==========================
-   */
   /**
    * <p>A {@link LockssRunnable} object that listens for incoming
    * ICP packets.</p>
@@ -185,7 +186,7 @@ public class IcpManager
           catch (SocketTimeoutException steIgnore) {
             // drop down to finally
           }
-          catch (IcpProtocolException ipe) {
+          catch (IcpException ipe) {
             // Bad packet
             if (logger.isDebug3()) {
               StringBuffer sb = new StringBuffer();
@@ -259,10 +260,6 @@ public class IcpManager
     }
 
   }
-  /*
-   * end PRIVATE NESTED CLASS
-   * ========================
-   */
 
   /**
    * <p>A UDP socket for use by the ICP socket.</p>
@@ -426,12 +423,12 @@ public class IcpManager
           }
         }
       }
-      catch (IcpProtocolException ipe) {
+      catch (IcpException ipe) {
         logger.debug2("processMessage: ERR", ipe);
         try {
           response = message.makeError();
         }
-        catch (IcpProtocolException ipe2) {
+        catch (IcpException ipe2) {
           logger.debug2("processMessage: double exception", ipe2);
           return; // abort
         }
@@ -474,7 +471,7 @@ public class IcpManager
     if (getDaemon().isClockss()) {
       ArchivalUnit au = cu.getArchivalUnit();
       return AuUtil.getAuState(au).getClockssSubscriptionStatus()
-	!= AuState.CLOCKSS_SUB_YES;
+	         != AuState.CLOCKSS_SUB_YES;
     }
     return false;
   }      
@@ -529,7 +526,7 @@ public class IcpManager
         return; // go to finally block
       }
 
-      if (!getDaemon().getResourceManager().reserveUdpPort(port, getClass())) {
+      if (!getDaemon().getResourceManager().reserveUdpPort(port, SERVER_NAME)) {
         logger.debug("startSocket: could not reserve UDP port " + port);
         return; // go to finally block
       }
@@ -555,7 +552,7 @@ public class IcpManager
       success = true;
     }
     catch (SocketException se) {
-      forget(); // revert instantions
+      forget(); // revert instantiatons
       logger.warning("startSocket: SocketException", se);
     }
     finally {
@@ -586,7 +583,7 @@ public class IcpManager
       icpRunnable.waitExited();
 
       // Clean up
-      getDaemon().getResourceManager().releaseUdpPort(port, getClass());
+      getDaemon().getResourceManager().releaseUdpPort(port, SERVER_NAME);
       forget();
       logger.debug("stopSocket: end");
     }

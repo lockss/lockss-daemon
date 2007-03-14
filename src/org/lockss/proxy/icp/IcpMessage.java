@@ -1,10 +1,10 @@
 /*
- * $Id: IcpMessage.java,v 1.6 2006-01-31 01:29:19 thib_gc Exp $
+ * $Id: IcpMessage.java,v 1.7 2007-03-14 23:39:41 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -253,55 +253,55 @@ public interface IcpMessage {
   /**
    * <p>Produces a denied message in response to this message.</p>
    * @return A denied message in response to the query.
-   * @throws IcpProtocolException if this message is not a query.
+   * @throws IcpException if this message is not a query.
    * @see #isQuery
    */
   IcpMessage makeDenied()
-      throws IcpProtocolException;
+      throws IcpException;
 
   /**
    * <p>Produces an error message in response to this message.</p>
    * @return An error message in response to this message.
-   * @throws IcpProtocolException if this message is not a query.
+   * @throws IcpException if this message is not a query.
    * @see #isQuery
    */
   IcpMessage makeError()
-      throws IcpProtocolException;
+      throws IcpException;
 
   /**
    * <p>Produces a hit response to this message.</p>
    * @return A hit response based on this message.
-   * @throws IcpProtocolException if this message is not a query.
+   * @throws IcpException if this message is not a query.
    * @see #isQuery
    */
   IcpMessage makeHit()
-      throws IcpProtocolException;
+      throws IcpException;
 
   /**
    * <p>Produces a hit response to this message, with the given source
    * return trip time.</p>
    * @param srcRttResponse A source return trip time.
    * @return A hit response based on this message.
-   * @throws IcpProtocolException if this message is not a query, or
+   * @throws IcpException if this message is not a query, or
    *                              if the query did not request a
    *                              source return trip time response.
    * @see #isQuery
    * @see #requestsSrcRtt
    */
   IcpMessage makeHit(short srcRttResponse)
-      throws IcpProtocolException;
+      throws IcpException;
 
   /**
    * <p>Produces a hit-object response to this message using the given
    * array of bytes.</p>
    * @param payloadObject A payload as an array of bytes.
    * @return A hit-object response based on this message.
-   * @throws IcpProtocolException if this message is not a query.
+   * @throws IcpException if this message is not a query.
    * @throws NullPointerException if payloadObject is null.
    * @see #isQuery
    */
   IcpMessage makeHitObj(byte[] payloadObject)
-      throws IcpProtocolException;
+      throws IcpException;
 
   /**
    * <p>Produces a hit-object response to this message using the given
@@ -309,7 +309,7 @@ public interface IcpMessage {
    * @param srcRttResponse A source return trip time.
    * @param payloadObject  A payload as an array of bytes.
    * @return A hit response based on this message.
-   * @throws IcpProtocolException if this message is not a query, or
+   * @throws IcpException if this message is not a query, or
    *                              if the query did not request a
    *                              source return trip time response.
    * @throws NullPointerException if payloadObject is null.
@@ -318,53 +318,53 @@ public interface IcpMessage {
    */
   IcpMessage makeHitObj(short srcRttResponse,
                         byte[] payloadObject)
-      throws IcpProtocolException;
+      throws IcpException;
 
   /**
    * <p>Produces a miss response to this message.</p>
    * @return A miss response based on this message.
-   * @throws IcpProtocolException if this message is not a query.
+   * @throws IcpException if this message is not a query.
    * @see #isQuery
    */
   IcpMessage makeMiss()
-      throws IcpProtocolException;
+      throws IcpException;
 
   /**
    * <p>Produces a miss response to this message, with the given
    * source return trip time.</p>
    * @param srcRttResponse A source return trip time.
    * @return A miss response based on this message.
-   * @throws IcpProtocolException if this message is not a query, or
+   * @throws IcpException if this message is not a query, or
    *                              if the query did not request a
    *                              source return trip time response.
    * @see #isQuery
    * @see #requestsSrcRtt
    */
   IcpMessage makeMiss(short srcRttResponse)
-      throws IcpProtocolException;
+      throws IcpException;
 
   /**
    * <p>Produces a miss-no-fectch response to this message.</p>
    * @return A miss-no-fetch response based on this message.
-   * @throws IcpProtocolException if this message is not a query.
+   * @throws IcpException if this message is not a query.
    * @see #isQuery
    */
   IcpMessage makeMissNoFetch()
-      throws IcpProtocolException;
+      throws IcpException;
 
   /**
    * <p>Produces a miss-no-fetch response to this message, with the
    * given source return trip time.</p>
    * @param srcRttResponse A source return trip time.
    * @return A miss response based on this message.
-   * @throws IcpProtocolException if this message is not a query, or
+   * @throws IcpException if this message is not a query, or
    *                              if the query did not request a
    *                              source return trip time response.
    * @see #isQuery
    * @see #requestsSrcRtt
    */
   IcpMessage makeMissNoFetch(short srcRttResponse)
-      throws IcpProtocolException;
+      throws IcpException;
 
   /**
    * <p>Constructs a UDP packet to the given address and port, from

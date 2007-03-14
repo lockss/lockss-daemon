@@ -1,10 +1,10 @@
 /*
- * $Id: IcpFactory.java,v 1.6 2006-01-31 01:29:19 thib_gc Exp $
+ * $Id: IcpFactory.java,v 1.7 2007-03-14 23:39:41 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -48,11 +48,11 @@ public interface IcpFactory {
    * <p>Produces an ICP message from a received UDP packet.</p>
    * @param udpPacket A UDP packet.
    * @return An ICP message based on the UDP packet.
-   * @throws IcpProtocolException if the UDP packet cannot be parsed
+   * @throws IcpException if the UDP packet cannot be parsed
    *                              into an ICP message.
    */
   IcpMessage makeMessage(DatagramPacket udpPacket)
-      throws IcpProtocolException;
+      throws IcpException;
 
   /**
    * <p>Equivalent to calling

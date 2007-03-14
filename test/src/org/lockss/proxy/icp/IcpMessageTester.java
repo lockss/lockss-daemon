@@ -1,10 +1,10 @@
 /*
- * $Id: IcpMessageTester.java,v 1.1 2006-01-31 01:29:19 thib_gc Exp $
+ * $Id: IcpMessageTester.java,v 1.2 2007-03-14 23:39:41 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -59,9 +59,9 @@ public abstract class IcpMessageTester extends LockssTestCase {
     /**
      * <p>Make a response to the given query.</p>
      * @return An ICP message.
-     * @throws IcpProtocolException if an ICP error occurs.
+     * @throws IcpException if an ICP error occurs.
      */
-    IcpMessage makeResponse() throws IcpProtocolException;
+    IcpMessage makeResponse() throws IcpException;
 
   }
   /*
@@ -83,9 +83,9 @@ public abstract class IcpMessageTester extends LockssTestCase {
     /**
      * <p>Make a response to the given query.</p>
      * @return An ICP message.
-     * @throws IcpProtocolException if an ICP error occurs.
+     * @throws IcpException if an ICP error occurs.
      */
-    IcpMessage makeSrcRttResponse() throws IcpProtocolException;
+    IcpMessage makeSrcRttResponse() throws IcpException;
 
   }
   /*
@@ -110,7 +110,7 @@ public abstract class IcpMessageTester extends LockssTestCase {
    */
   public void testMakeDenied() throws Exception {
     ResponseTester tester = new ResponseTester() {
-      public IcpMessage makeResponse() throws IcpProtocolException {
+      public IcpMessage makeResponse() throws IcpException {
         return makeQuery().makeDenied();
       }
     };
@@ -123,7 +123,7 @@ public abstract class IcpMessageTester extends LockssTestCase {
    */
   public void testMakeError() throws Exception {
     ResponseTester tester = new ResponseTester() {
-      public IcpMessage makeResponse() throws IcpProtocolException {
+      public IcpMessage makeResponse() throws IcpException {
         return makeQuery().makeError();
       }
     };
@@ -136,7 +136,7 @@ public abstract class IcpMessageTester extends LockssTestCase {
    */
   public void testMakeHit() throws Exception {
     ResponseTester tester = new ResponseTester() {
-      public IcpMessage makeResponse() throws IcpProtocolException {
+      public IcpMessage makeResponse() throws IcpException {
         return makeQuery().makeHit();
       }
     };
@@ -150,10 +150,10 @@ public abstract class IcpMessageTester extends LockssTestCase {
    */
   public void testMakeHitObj() throws Exception {
     SrcRttResponseTester tester = new SrcRttResponseTester() {
-      public IcpMessage makeResponse() throws IcpProtocolException {
+      public IcpMessage makeResponse() throws IcpException {
         return makeQuery().makeHitObj(MockIcpMessage.getMockPayloadData());
       }
-      public IcpMessage makeSrcRttResponse() throws IcpProtocolException {
+      public IcpMessage makeSrcRttResponse() throws IcpException {
         return makeQueryRequestSrcRtt().makeHitObj(MockIcpMessage.getMockSrcRttResponse(),
                                                    MockIcpMessage.getMockPayloadData());
       }
@@ -182,10 +182,10 @@ public abstract class IcpMessageTester extends LockssTestCase {
    */
   public void testMakeHitSrcRtt() throws Exception {
     SrcRttResponseTester tester = new SrcRttResponseTester() {
-      public IcpMessage makeResponse() throws IcpProtocolException {
+      public IcpMessage makeResponse() throws IcpException {
         return makeQuery().makeHit();
       }
-      public IcpMessage makeSrcRttResponse() throws IcpProtocolException {
+      public IcpMessage makeSrcRttResponse() throws IcpException {
         return makeQueryRequestSrcRtt().makeHit(MockIcpMessage.getMockSrcRttResponse());
       }
     };
@@ -198,7 +198,7 @@ public abstract class IcpMessageTester extends LockssTestCase {
    */
   public void testMakeMiss() throws Exception {
     ResponseTester tester = new ResponseTester() {
-      public IcpMessage makeResponse() throws IcpProtocolException {
+      public IcpMessage makeResponse() throws IcpException {
         return makeQuery().makeMiss();
       }
     };
@@ -211,7 +211,7 @@ public abstract class IcpMessageTester extends LockssTestCase {
    */
   public void testMakeMissNoFetch() throws Exception {
     ResponseTester tester = new ResponseTester() {
-      public IcpMessage makeResponse() throws IcpProtocolException {
+      public IcpMessage makeResponse() throws IcpException {
         return makeQuery().makeMissNoFetch();
       }
     };
@@ -224,10 +224,10 @@ public abstract class IcpMessageTester extends LockssTestCase {
    */
   public void testMakeMissNoFetchSrcRtt() throws Exception {
     SrcRttResponseTester tester = new SrcRttResponseTester() {
-      public IcpMessage makeResponse() throws IcpProtocolException {
+      public IcpMessage makeResponse() throws IcpException {
         return makeQuery().makeMissNoFetch();
       }
-      public IcpMessage makeSrcRttResponse() throws IcpProtocolException {
+      public IcpMessage makeSrcRttResponse() throws IcpException {
         return makeQueryRequestSrcRtt().makeMissNoFetch(MockIcpMessage.getMockSrcRttResponse());
       }
     };
@@ -240,10 +240,10 @@ public abstract class IcpMessageTester extends LockssTestCase {
    */
   public void testMakeMissSrcRtt() throws Exception {
     SrcRttResponseTester tester = new SrcRttResponseTester() {
-      public IcpMessage makeResponse() throws IcpProtocolException {
+      public IcpMessage makeResponse() throws IcpException {
         return makeQuery().makeMiss();
       }
-      public IcpMessage makeSrcRttResponse() throws IcpProtocolException {
+      public IcpMessage makeSrcRttResponse() throws IcpException {
         return makeQueryRequestSrcRtt().makeMiss(MockIcpMessage.getMockSrcRttResponse());
       }
     };
@@ -271,7 +271,7 @@ public abstract class IcpMessageTester extends LockssTestCase {
         assertEquals(sample.getData(), packet.getData());
         logger.info("testToDatagramPacket: PASSED test #" + test);
       }
-      catch (IcpProtocolException ipe) {
+      catch (IcpException ipe) {
         logger.error("testToDatagramPacket: FAILED test #" + test, ipe);
         ++failed;
       }
