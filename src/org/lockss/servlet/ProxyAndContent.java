@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyAndContent.java,v 1.18 2006-03-28 00:26:01 thib_gc Exp $
+ * $Id: ProxyAndContent.java,v 1.19 2007-03-14 23:41:58 thib_gc Exp $
  */
 
 /*
@@ -164,7 +164,7 @@ public class ProxyAndContent extends LockssServlet {
                                       FILTER_FOOT,
                                       ICP_PORT_NAME,
                                       getDefaultIcpPort(),
-                                      resourceMgr.getUsableUdpPorts(AuditProxyManager.SERVER_NAME));
+                                      resourceMgr.getUsableUdpPorts(IcpManager.SERVER_NAME));
     }
     else {
       final String ICP_DISABLED_FOOT =
