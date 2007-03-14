@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingPeerChannel.java,v 1.16 2007-01-14 08:02:07 tlipkis Exp $
+ * $Id: BlockingPeerChannel.java,v 1.17 2007-03-14 05:53:18 tlipkis Exp $
  */
 
 /*
@@ -276,7 +276,7 @@ class BlockingPeerChannel implements PeerChannel {
       try {
 	startConnectedChannel();
       } catch (IOException e) {
-	abortChannel();
+	abortChannel(e);
       }
     }
   }
@@ -331,18 +331,33 @@ class BlockingPeerChannel implements PeerChannel {
   }
 
   void abortChannel() {
-    stopChannel(true);
+    stopChannel(true, null, null);
+  }
+
+  void abortChannel(Throwable t) {
+    stopChannel(true, t != null ? t.toString() : null, t);
+  }
+
+  void abortChannel(String msg, Throwable t) {
+    stopChannel(true, msg, t);
+  }
+
+  void abortChannel(String msg) {
+    stopChannel(true, msg, null);
   }
 
   void stopChannel() {
-    stopChannel(false);
+    stopChannel(false, null, null);
   }
 
   static int[] stopIgnStates = {STATE_INIT, STATE_CLOSED, STATE_CLOSING};
 
-  void stopChannel(boolean abort) {
+  void stopChannel(boolean abort, String msg, Throwable t) {
     if (notStateTrans(stopIgnStates, STATE_CLOSING)) {
-      if (abort && peer != null) log.warning("Aborting " + peer.getIdString());
+      if (msg != null || t != null) {
+	if (msg == null) msg = "Aborting " + peer.getIdString();
+	log.warning(msg, t);
+      }
       scomm.dissociateChannelFromPeer(this, peer);
       IOUtil.safeClose(sock);
       IOUtil.safeClose(ins);
@@ -388,8 +403,7 @@ class BlockingPeerChannel implements PeerChannel {
 	lastActiveTime != 0 &&
 	!isSendIdle() &&
 	TimeBase.msSince(lastActiveTime) > scomm.getChannelHungTime()) {
-      log.warning(p()+"Hung sending");
-      abortChannel();
+      abortChannel(p()+"Hung sending");
     }
   }
 
@@ -406,16 +420,15 @@ class BlockingPeerChannel implements PeerChannel {
 	log.debug2("Connected to " + peer);
       } catch (IOException e) {
 	connector.cancelTimeout();
-	log.warning("Connect failed to " + peer + ": " + e.toString());
 	stateTrans(STATE_CONNECTING, STATE_CONNECT_FAIL);
-	abortChannel();
+	abortChannel("Connect failed to " + peer + ": " + e.toString());
 	return;
       }
       try {
 	stateTrans(STATE_CONNECTING, STATE_STARTING);
 	startConnectedChannel();
       } catch (IOException e) {
-	abortChannel();
+	abortChannel(e);
 	return;
       }
     } else {
@@ -433,11 +446,10 @@ class BlockingPeerChannel implements PeerChannel {
       scomm.execute(runner);
     } catch (InterruptedException e) {
       // Can happen if we get aborted while starting pool thread
-      log.warning("startReader()", e);
-      abortChannel();
+      abortChannel("startReader()", e);
     } catch (RuntimeException e) {
       log.warning("startReader()", e);
-      abortChannel();
+      abortChannel("startReader()", e);
     }
   }
 
@@ -451,11 +463,9 @@ class BlockingPeerChannel implements PeerChannel {
       wtWriter = writer = runner;
     } catch (InterruptedException e) {
       // Can happen if we get aborted while starting pool thread
-      log.warning("startWriter()", e);
-      abortChannel();
+      abortChannel("startWriter()", e);
     } catch (RuntimeException e) {
-      log.warning("startWriter()", e);
-      abortChannel();
+      abortChannel("startWriter()", e);
     }
   }
 
@@ -499,17 +509,17 @@ class BlockingPeerChannel implements PeerChannel {
     } catch (SocketException e) {
       // Expected when closing
       if (!(state == STATE_CLOSED || state == STATE_CLOSING)) {
-	log.warning("handleInputStream: " + e.toString());
+	abortChannel("handleInputStream: " + e.toString());
+      } else {
+	abortChannel();
       }
-      abortChannel();
     } catch (IOException e) {
       // These are unexpected
       if (log.isDebug3()) {
-	log.warning("handleInputStream", e);
+	abortChannel("handleInputStream", e);
       } else {
-	log.warning("handleInputStream: " + e.toString());
+	abortChannel("handleInputStream: " + e.toString());
       }
-      abortChannel();
     }
     // exit thread
   }
@@ -649,7 +659,7 @@ class BlockingPeerChannel implements PeerChannel {
   boolean readHeader() throws IOException {
     if (!readBuf(rcvHeader, HEADER_LEN)) {
       // connection closed cleanly
-      log.debug2("Input closed");
+      if (log.isDebug2()) log.debug2(p()+"Input closed");
       return false;
     }
     if (rcvHeader[HEADER_OFF_CHECK] != HEADER_CHECK) {
@@ -735,12 +745,10 @@ class BlockingPeerChannel implements PeerChannel {
 	      sock.shutdownOutput();
 	      break;
 	    } catch (IOException e) {
-	      log.debug("shutdownOutput", e);
-	      abortChannel();
+	      abortChannel("shutdownOutput", e);
 	      break;
 	    } catch (UnsupportedOperationException e) {
-	      log.debug("shutdownOutput() not implemented for SSL");
-	      abortChannel();
+	      abortChannel("shutdownOutput() not implemented for SSL");
 	    }
 	  }
 	}
@@ -748,7 +756,7 @@ class BlockingPeerChannel implements PeerChannel {
     } catch (InterruptedException e) {
       abortChannel();
     } catch (IOException e) {
-      abortChannel();
+      abortChannel(e);
     }
   }
 

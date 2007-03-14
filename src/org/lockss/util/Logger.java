@@ -1,5 +1,5 @@
 /*
- * $Id: Logger.java,v 1.50 2006-09-18 22:41:50 tlipkis Exp $
+ * $Id: Logger.java,v 1.51 2007-03-14 05:53:18 tlipkis Exp $
  */
 
 /*
@@ -624,31 +624,33 @@ public class Logger {
     idThread = ena;
   }
 
+  private volatile String unannouncedName = null;
+  private volatile String announcedName = null;
+
   public void threadNameChanged() {
     Thread thread = Thread.currentThread();
-    synchronized (threadIds) {
-      String id = (String)threadIds.get(thread);
-      if (id != null) {
-	info("ThreadId " + id + " is now " + thread.getName());
-      }
+    String name = thread.getName();
+    if (!name.equals(announcedName)) {
+      unannouncedName = name;
     }
   }
 
   String getThreadId(Thread thread) {
     String id;
-    boolean created = false;
     synchronized (threadIds) {
       id = (String)threadIds.get(thread);
       if (id == null) {
 	id = Integer.toString(++threadCtr);
 	threadIds.put(thread, id);
-	created = true;
+	unannouncedName = thread.getName();
       }
     }
-    // This recursive call MUST be AFTER the threadIds map is updated, but
-    // there is no reason to do it while synchronized
-    if (created) {
-      info("ThreadId " + id + " is " + thread.getName());
+    // This recursive call MUST be AFTER the threadIds map is updated, and
+    // AFTER setting unannouncedName to null
+    if (unannouncedName != null) {
+      String name = unannouncedName;
+      unannouncedName = null;
+      info("ThreadId " + id + " is " + name);
     }
     return id;
   }

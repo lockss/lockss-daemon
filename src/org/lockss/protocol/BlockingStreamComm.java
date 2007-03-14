@@ -1,10 +1,10 @@
 /*
- * $Id: BlockingStreamComm.java,v 1.24 2006-12-06 05:19:02 tlipkis Exp $
+ * $Id: BlockingStreamComm.java,v 1.25 2007-03-14 05:53:18 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -45,6 +45,7 @@ import org.lockss.util.*;
 import org.lockss.util.Queue;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
+import org.lockss.daemon.status.*;
 import org.lockss.app.*;
 import org.lockss.poller.*;
 
@@ -213,16 +214,16 @@ public class BlockingStreamComm
   private IdentityManager idMgr;
   private OneShot configShot = new OneShot();
 
-  private FifoQueue rcvQueue;		// received packets from LcapSocket
+  private FifoQueue rcvQueue;	     // PeerMessages received from channels
   private ReceiveThread rcvThread;
   private ListenThread listenThread;
   // Synchronization lock for rcv thread, listen thread manipulations
   private Object threadLock = new Object();
 
-  // Maps PeerIdentity to primary PeerChannel
-  Map channels = new HashMap();		// used as lock for both maps
+  // Maps PeerIdentity to primary PeerChannel (and used as lock for both maps)
+  MaxSizeRecordingMap channels = new MaxSizeRecordingMap();
   // Maps PeerIdentity to secondary PeerChannel
-  Map rcvChannels = new HashMap();
+  MaxSizeRecordingMap rcvChannels = new MaxSizeRecordingMap();
 
   private Vector messageHandlers = new Vector(); // Vector is synchronized
 
@@ -603,7 +604,7 @@ public class BlockingStreamComm
 	(BlockingPeerChannel)channels.get(peer);
       if (currentChan == null) {
 	channels.put(peer, chan);	// normal association
-	log.debug("Associated " + chan);
+	log.debug2("Associated " + chan);
       } else if (currentChan == chan) {
 	log.warning("Redundant peer-channel association (" + chan + ")");
       } else {
@@ -611,10 +612,10 @@ public class BlockingStreamComm
 	  (BlockingPeerChannel)rcvChannels.get(peer);
 	if (rcvChan == null) {
 	  rcvChannels.put(peer, chan);	// normal secondary association
-	  log.debug("Associated secondary " + chan);
+	  log.debug2("Associated secondary " + chan);
 	} else if (rcvChan == chan) {
-	  log.debug("Redundant secondary peer-channel association(" +
-		    chan +")");
+	  log.debug2("Redundant secondary peer-channel association(" +
+		     chan +")");
 	} else {
 	  // maybe should replace if new working and old not.  but old will
 	  // eventually timeout and close anyway
@@ -634,12 +635,12 @@ public class BlockingStreamComm
 	(BlockingPeerChannel)channels.get(peer);
       if (currentChan == chan) {
 	channels.remove(peer);
-	log.debug("Removed: " + chan);
+	log.debug2("Removed: " + chan);
       }
       BlockingPeerChannel rcvChan = (BlockingPeerChannel)rcvChannels.get(peer);
       if (rcvChan == chan) {
 	rcvChannels.remove(peer);
-	log.debug("Removed secondary: " + chan);
+	log.debug2("Removed secondary: " + chan);
       }
     }
   }
@@ -659,7 +660,7 @@ public class BlockingStreamComm
 	// found secondary, no primary.  promote secondary to primary
 	channels.put(pid, chan);
 	rcvChannels.remove(pid);
-	log.debug("Promoted " + chan);
+	log.debug2("Promoted " + chan);
 	return chan;
       }
       // new primary channel, if we have room
@@ -669,14 +670,14 @@ public class BlockingStreamComm
       }
       chan = getSocketFactory().newPeerChannel(this, pid);
       channels.put(pid, chan);
-      log.debug("Added " + chan);
+      log.debug2("Added " + chan);
       try {
 	chan.startOriginate();
 	return chan;
       } catch (IOException e) {
 	log.warning("Can't make channel", e);
 	channels.remove(pid);
-	log.debug("Removed " + chan);
+	log.debug2("Removed " + chan);
 	throw e;
       }
     }
@@ -877,7 +878,8 @@ public class BlockingStreamComm
     if (sock.isClosed()) {
       throw new SocketException("socket closed during handshake");
     }
-    log.debug("Accepted connection from " + new IPAddr(sock.getInetAddress()));
+    log.debug2("Accepted connection from " +
+	       new IPAddr(sock.getInetAddress()));
     BlockingPeerChannel chan = getSocketFactory().newPeerChannel(this, sock);
     chan.startIncoming();
   }
@@ -1162,7 +1164,7 @@ public class BlockingStreamComm
       }
       SSLSocket s = (SSLSocket)
 	  sslSocketFactory.createSocket(addr.getInetAddr(), port);
-      log.debug("New SSL client socket: " + port + "@" + addr.toString());
+      log.debug2("New SSL client socket: " + port + "@" + addr.toString());
       if (paramSslClientAuth) {
 	handShake(s);
       }
@@ -1182,4 +1184,62 @@ public class BlockingStreamComm
     }
   }
 
+  private static final List statusColDescs =
+    ListUtil.list(
+		  new ColumnDescriptor("Peer", "Peer",
+				       ColumnDescriptor.TYPE_STRING)
+		  );
+
+  private class Status implements StatusAccessor {
+    // port, proto, u/m, direction, compressed, pkts, bytes
+    long start;
+
+    public String getDisplayName() {
+      return "Comm Statistics";
+    }
+
+    public boolean requiresKey() {
+      return false;
+    }
+
+    public void populateTable(StatusTable table) {
+//       table.setResortable(false);
+//       table.setDefaultSortRules(statusSortRules);
+      String key = table.getKey();
+      table.setColumnDescriptors(statusColDescs);
+      table.setRows(getRows(key));
+      table.setSummaryInfo(getSummaryInfo(key));
+    }
+
+    private List getSummaryInfo(String key) {
+      List res = new ArrayList();
+      res.add(new StatusTable.SummaryInfo("Max channels",
+					  ColumnDescriptor.TYPE_INT,
+					  channels.getMaxSize()));
+      
+      res.add(new StatusTable.SummaryInfo("Max rcvChannels",
+					  ColumnDescriptor.TYPE_INT,
+					  rcvChannels.getMaxSize()));
+      return res;
+    }
+
+    private List getRows(String key) {
+      List table = new ArrayList();
+      synchronized (channels) {
+	for (Iterator iter = channels.entrySet().iterator(); iter.hasNext();) {
+	  Map.Entry ent = (Map.Entry)iter.next();
+	  PeerIdentity pid = (PeerIdentity)ent.getKey();
+	  BlockingPeerChannel chan = (BlockingPeerChannel)ent.getValue();
+	  table.add(makeRow(pid, chan));
+	}
+      }
+      return table;
+    }
+
+    private Map makeRow(PeerIdentity pid, BlockingPeerChannel chan) {
+      Map row = new HashMap();
+      row.put("Peer", pid.getIdString());
+      return row;
+    }
+  }
 }
