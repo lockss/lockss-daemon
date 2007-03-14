@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManagerStatus.java,v 1.2 2005-10-06 08:21:56 tlipkis Exp $
+ * $Id: IdentityManagerStatus.java,v 1.3 2007-03-14 05:53:41 tlipkis Exp $
  */
 
 /*
@@ -34,7 +34,9 @@ import java.util.*;
 import org.lockss.daemon.status.*;
 import org.lockss.util.*;
 
-public class IdentityManagerStatus implements StatusAccessor {
+public class IdentityManagerStatus
+  implements StatusAccessor,  StatusAccessor.DebugOnly {
+
   private Map theIdentities;
 
   public IdentityManagerStatus(Map theIdentities) {
