@@ -1,5 +1,5 @@
 /*
- * $Id: PermissionMap.java,v 1.17 2007-01-22 23:57:19 troberts Exp $
+ * $Id: PermissionMap.java,v 1.18 2007-03-14 05:52:48 tlipkis Exp $
  */
 
 /*
@@ -416,7 +416,7 @@ public class PermissionMap {
       }
       // if we didn't find at least one required lockss permission - fail.
       if(needPermission) {
-        logger.error("No LOCKSS crawl permission on " + pUrl);
+        logger.error("No (C)LOCKSS crawl permission on " + pUrl);
         is.close();
         return false;
       }
