@@ -1,5 +1,5 @@
 /*
-* $Id: PollerStatus.java,v 1.25 2006-10-20 18:41:37 thib_gc Exp $
+* $Id: PollerStatus.java,v 1.26 2007-03-14 05:53:32 tlipkis Exp $
  */
 
 /*
@@ -63,7 +63,7 @@ public class PollerStatus {
   static class ManagerStatus
     extends PollerStatus implements StatusAccessor {
     static final String TABLE_NAME = MANAGER_STATUS_TABLE_NAME;
-    private static String POLLMANAGER_TABLE_TITLE = "Polls";
+    private static String POLLMANAGER_TABLE_TITLE = "V1 Polls";
 
     static final int STRINGTYPE = ColumnDescriptor.TYPE_STRING;
     static final int DATETYPE = ColumnDescriptor.TYPE_DATE;
