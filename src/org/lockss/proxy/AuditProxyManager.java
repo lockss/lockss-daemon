@@ -1,10 +1,10 @@
 /*
- * $Id: AuditProxyManager.java,v 1.8 2007-02-08 08:57:59 tlipkis Exp $
+ * $Id: AuditProxyManager.java,v 1.9 2007-03-16 21:23:08 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,16 +32,8 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.proxy;
 
-import java.util.*;
-import org.lockss.app.*;
 import org.lockss.util.*;
-import org.lockss.util.urlconn.*;
 import org.lockss.config.Configuration;
-import org.lockss.daemon.*;
-import org.lockss.jetty.*;
-import org.mortbay.util.*;
-import org.mortbay.http.*;
-import org.mortbay.http.handler.*;
 
 /** Audit proxy manager, starts a proxy that serves only content from the
  * cache, useful for auditing the content.
