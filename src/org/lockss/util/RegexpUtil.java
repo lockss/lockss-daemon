@@ -1,5 +1,5 @@
 /*
- * $Id: RegexpUtil.java,v 1.6 2005-10-11 05:48:29 tlipkis Exp $
+ * $Id: RegexpUtil.java,v 1.7 2007-03-16 23:32:11 dshr Exp $
  */
 
 /*
@@ -89,7 +89,7 @@ public class RegexpUtil {
    * @return true iff s matches re
    * @throws RuntimeException if re is malformed */
   public static boolean isMatchRe(String s, String re) {
-    Pattern pat = (Pattern)compiledPatterns.get(s);
+    Pattern pat = (Pattern)compiledPatterns.get(re);
     if (pat == null) {
       pat = uncheckedCompile(re, Perl5Compiler.READ_ONLY_MASK);
       compiledPatterns.put(re, pat);
