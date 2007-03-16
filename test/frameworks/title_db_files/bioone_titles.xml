@@ -39,7 +39,7 @@
   <lockss-config>
     <!-- Titles -->
     <property name="org.lockss.title">
-      <property name="ambio33">
+      <property name="BioOneambio33">
 	<property name="title" value="AMBIO: A Journal of the Human Environment Volume 33" />
 	<property name="estSize" value="50MB" />
 	<property name="journalTitle" value="AMBIO: A Journal of the Human Environment" />
@@ -59,7 +59,7 @@
       </property>
 
 
-      <property name="abt66">
+      <property name="BioOneabt66">
 	<property name="title" value="The American Biology Teacher Volume 66" />
 	<property name="estSize" value="40MB" />
 	<property name="journalTitle" value="The American Biology Teacher" />
@@ -78,7 +78,7 @@
 	</property>
       </property>
 
-      <property name="fren94">
+      <property name="BioOnefren94">
 	<property name="title" value="American Fern Journal Volume 94" />
 	<property name="estSize" value="5MB" />
 	<property name="journalTitle" value="American Fern Journal" />
@@ -97,7 +97,7 @@
 	</property>
       </property>
 
-      <property name="amn152">
+      <property name="BioOneamn152">
 	<property name="title" value="The American Midland Naturalist Volume 152" />
 	<property name="estSize" value="9MB" />
 	<property name="journalTitle" value="The American Midland Naturalist" />
@@ -116,7 +116,7 @@
 	</property>
       </property>
 
-      <property name="amn460">
+      <property name="BioOneamn460">
 	<property name="title" value="American Museum Novitates Volume 460" />
 	<property name="estSize" value="1MB" />
 	<property name="journalTitle" value="American Museum Novitates" />
@@ -135,7 +135,7 @@
 	</property>
       </property>
 
-      <property name="americanzoo41">
+      <property name="BioOneamericanzoo41">
 	<property name="title" value="American Zoologist Volume 41" />
 	<property name="estSize" value="50MB" />
 	<property name="journalTitle" value="American Zoologist" />
@@ -154,7 +154,7 @@
 	</property>
       </property>
 
-      <property name="esa97">
+      <property name="BioOneesa97">
 	<property name="title" value="Annals of the Entomological Society of America Volume 97" />
 	<property name="estSize" value="121MB" />
 	<property name="journalTitle" value="Annals of the Entomological Society of America" />
@@ -173,7 +173,7 @@
 	</property>
       </property>
 
-      <property name="avs7">
+      <property name="BioOneavs7">
 	<property name="title" value="Applied Vegetation Science Volume 7" />
 	<property name="estSize" value="22MB" />
 	<property name="journalTitle" value="Applied Vegetation Science" />
@@ -192,7 +192,7 @@
 	</property>
       </property>
 
-      <property name="aaaresearch36">
+      <property name="BioOneaaaresearch36">
 	<property name="title" value="Arctic, Antarctic, and Alpine Research Volume 36" />
 	<property name="estSize" value="15MB" />
 	<property name="journalTitle" value="Arctic, Antarctic, and Alpine Research" />
@@ -211,7 +211,7 @@
 	</property>
       </property>
 
-      <property name="auk121">
+      <property name="BioOneauk121">
 	<property name="title" value="The Auk Volume 121" />
 	<property name="estSize" value="86MB" />
 	<property name="journalTitle" value="The Auk" />
@@ -230,7 +230,7 @@
 	</property>
       </property>
 
-      <property name="aviandiseases48">
+      <property name="BioOneaviandiseases48">
 	<property name="title" value="Avian Diseases Volume 48" />
 	<property name="estSize" value="22MB" />
 	<property name="journalTitle" value="Avian Diseases" />
@@ -249,7 +249,7 @@
 	</property>
       </property>
 
-      <property name="BiologyofReproduction072">
+      <property name="BioOneBiologyofReproduction072">
 	<property name="title" value="Biology of Reproduction Volume 72" />
 	<property name="journalTitle" value="Biology of Reproduction" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -267,7 +267,7 @@
 	</property>
       </property>
 
-      <property name="BIOS075">
+      <property name="BioOneBIOS075">
 	<property name="title" value="BIOS Volume 75" />
 	<property name="journalTitle" value="BIOS" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -285,7 +285,7 @@
 	</property>
       </property>
 
-      <property name="BioScience055">
+      <property name="BioOneBioScience055">
 	<property name="title" value="BioScience Volume 55" />
 	<property name="journalTitle" value="BioScience" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -303,7 +303,7 @@
 	</property>
       </property>
 
-      <property name="BIOTROPICA036">
+      <property name="BioOneBIOTROPICA036">
 	<property name="title" value="BIOTROPICA Volume 36" />
 	<property name="journalTitle" value="BIOTROPICA" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -321,7 +321,7 @@
 	</property>
       </property>
 
-      <property name="TheBotanicalReview070">
+      <property name="BioOneTheBotanicalReview070">
 	<property name="title" value="The Botanical Review Volume 70" />
 	<property name="journalTitle" value="The Botanical Review" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -339,7 +339,7 @@
 	</property>
       </property>
 
-      <property name="Brittonia056">
+      <property name="BioOneBrittonia056">
 	<property name="title" value="Brittonia Volume 56" />
 	<property name="journalTitle" value="Brittonia" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -357,7 +357,7 @@
 	</property>
       </property>
 
-      <property name="TheBryologist107">
+      <property name="BioOneTheBryologist107">
 	<property name="title" value="The Bryologist Volume 107" />
 	<property name="journalTitle" value="The Bryologist" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -375,7 +375,7 @@
 	</property>
       </property>
 
-      <property name="BulletinoftheAmericanMuseumofNaturalHistory287">
+      <property name="BioOneBulletinoftheAmericanMuseumofNaturalHistory287">
 	<property name="title" value="Bulletin of the American Museum of Natural History Volume 287" />
 	<property name="journalTitle" value="Bulletin of the American Museum of Natural History" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -393,7 +393,7 @@
 	</property>
       </property>
 
-      <property name="Castanea069">
+      <property name="BioOneCastanea069">
 	<property name="title" value="Castanea Volume 69" />
 	<property name="journalTitle" value="Castanea" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -411,7 +411,7 @@
 	</property>
       </property>
 
-      <property name="CellStress&amp;Chaperones009">
+      <property name="BioOneCellStress&amp;Chaperones009">
 	<property name="title" value="Cell Stress &amp; Chaperones Volume 9" />
 	<property name="journalTitle" value="Cell Stress &amp; Chaperones" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -429,7 +429,7 @@
 	</property>
       </property>
 
-      <property name="TheColeopteristsBulletin058">
+      <property name="BioOneTheColeopteristsBulletin058">
 	<property name="title" value="The Coleopterists Bulletin Volume 58" />
 	<property name="journalTitle" value="The Coleopterists Bulletin" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -447,7 +447,7 @@
 	</property>
       </property>
 
-      <property name="ComparativeParasitology072">
+      <property name="BioOneComparativeParasitology072">
 	<property name="title" value="Comparative Parasitology Volume 72" />
 	<property name="journalTitle" value="Comparative Parasitology" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -465,7 +465,7 @@
 	</property>
       </property>
 
-      <property name="TheCondor107">
+      <property name="BioOneTheCondor107">
 	<property name="title" value="The Condor Volume 107" />
 	<property name="journalTitle" value="The Condor" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -483,7 +483,7 @@
 	</property>
       </property>
 
-      <property name="Copeia004">
+      <property name="BioOneCopeia004">
 	<property name="title" value="Copeia Volume 4" />
 	<property name="journalTitle" value="Copeia" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -501,7 +501,7 @@
 	</property>
       </property>
 
-      <property name="EconomicBotany058">
+      <property name="BioOneEconomicBotany058">
 	<property name="title" value="Economic Botany Volume 58" />
 	<property name="journalTitle" value="Economic Botany" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -519,7 +519,7 @@
 	</property>
       </property>
 
-      <property name="EnvironmentalEntomology033">
+      <property name="BioOneEnvironmentalEntomology033">
 	<property name="title" value="Environmental Entomology Volume 33" />
 	<property name="journalTitle" value="Environmental Entomology" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -537,7 +537,7 @@
 	</property>
       </property>
 
-      <property name="Evolution059">
+      <property name="BioOneEvolution059">
 	<property name="title" value="Evolution Volume 59" />
 	<property name="journalTitle" value="Evolution" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -555,7 +555,7 @@
 	</property>
       </property>
 
-      <property name="FloridaEntomologist087">
+      <property name="BioOneFloridaEntomologist087">
 	<property name="title" value="Florida Entomologist Volume 87" />
 	<property name="journalTitle" value="Florida Entomologist" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -573,7 +573,7 @@
 	</property>
       </property>
 
-      <property name="Herpetologica061">
+      <property name="BioOneHerpetologica061">
 	<property name="title" value="Herpetologica Volume 61" />
 	<property name="journalTitle" value="Herpetologica" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -591,7 +591,7 @@
 	</property>
       </property>
 
-      <property name="HerpetologicalMonographs018">
+      <property name="BioOneHerpetologicalMonographs018">
 	<property name="title" value="Herpetological Monographs Volume 18" />
 	<property name="journalTitle" value="Herpetological Monographs" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -609,7 +609,7 @@
 	</property>
       </property>
 
-      <property name="InVitroCellular&amp;DevelopmentalBiology-Animal040">
+      <property name="BioOneInVitroCellular&amp;DevelopmentalBiology-Animal040">
 	<property name="title" value="In Vitro Cellular &amp; Developmental Biology - Animal Volume 40" />
 	<property name="journalTitle" value="In Vitro Cellular &amp; Developmental Biology - Animal" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -627,7 +627,7 @@
 	</property>
       </property>
 
-      <property name="InVitroCellularandDevelopmentalBiology-Plant040">
+      <property name="BioOneInVitroCellularandDevelopmentalBiology-Plant040">
 	<property name="title" value="In Vitro Cellular and Developmental Biology - Plant Volume 40" />
 	<property name="journalTitle" value="In Vitro Cellular and Developmental Biology - Plant" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -645,7 +645,7 @@
 	</property>
       </property>
 
-      <property name="IntegrativeandComparativeBiology044">
+      <property name="BioOneIntegrativeandComparativeBiology044">
 	<property name="title" value="Integrative and Comparative Biology Volume 44" />
 	<property name="journalTitle" value="Integrative and Comparative Biology" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -663,7 +663,7 @@
 	</property>
       </property>
 
-      <property name="JournalofArachnology032">
+      <property name="BioOneJournalofArachnology032">
 	<property name="title" value="Journal of Arachnology Volume 32" />
 	<property name="journalTitle" value="Journal of Arachnology" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -681,7 +681,7 @@
 	</property>
       </property>
 
-      <property name="JournalofAvianMedicineandSurgery019">
+      <property name="BioOneJournalofAvianMedicineandSurgery019">
 	<property name="title" value="Journal of Avian Medicine and Surgery Volume 19" />
 	<property name="journalTitle" value="Journal of Avian Medicine and Surgery" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -699,7 +699,7 @@
 	</property>
       </property>
 
-      <property name="JournalofCoastalConservation009">
+      <property name="BioOneJournalofCoastalConservation009">
 	<property name="title" value="Journal of Coastal Conservation Volume 9" />
 	<property name="journalTitle" value="Journal of Coastal Conservation" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -717,7 +717,7 @@
 	</property>
       </property>
 
-      <property name="JournalofCrustaceanBiology024">
+      <property name="BioOneJournalofCrustaceanBiology024">
 	<property name="title" value="Journal of Crustacean Biology Volume 24" />
 	<property name="journalTitle" value="Journal of Crustacean Biology" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -735,7 +735,7 @@
 	</property>
       </property>
 
-      <property name="JournalofEconomicEntomology097">
+      <property name="BioOneJournalofEconomicEntomology097">
 	<property name="title" value="Journal of Economic Entomology Volume 97" />
 	<property name="journalTitle" value="Journal of Economic Entomology" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -753,7 +753,7 @@
 	</property>
       </property>
 
-      <property name="TheJournalofEukaryoticMicrobiology051">
+      <property name="BioOneTheJournalofEukaryoticMicrobiology051">
 	<property name="title" value="The Journal of Eukaryotic Microbiology Volume 51" />
 	<property name="journalTitle" value="The Journal of Eukaryotic Microbiology" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -771,7 +771,7 @@
 	</property>
       </property>
 
-      <property name="JournalofFieldOrnithology076">
+      <property name="BioOneJournalofFieldOrnithology076">
 	<property name="title" value="Journal of Field Ornithology Volume 76" />
 	<property name="journalTitle" value="Journal of Field Ornithology" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -789,7 +789,7 @@
 	</property>
       </property>
 
-      <property name="JournalofHerpetology038">
+      <property name="BioOneJournalofHerpetology038">
 	<property name="title" value="Journal of Herpetology Volume 38" />
 	<property name="journalTitle" value="Journal of Herpetology" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -807,7 +807,7 @@
 	</property>
       </property>
 
-      <property name="JournalofInsectScience004">
+      <property name="BioOneJournalofInsectScience004">
 	<property name="title" value="Journal of Insect Science Volume 4" />
 	<property name="journalTitle" value="Journal of Insect Science" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -825,7 +825,7 @@
 	</property>
       </property>
 
-      <property name="JournalofMammalogy086">
+      <property name="BioOneJournalofMammalogy086">
 	<property name="title" value="Journal of Mammalogy Volume 86" />
 	<property name="journalTitle" value="Journal of Mammalogy" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -843,7 +843,7 @@
 	</property>
       </property>
 
-      <property name="JournalofMedicalEntomology042">
+      <property name="BioOneJournalofMedicalEntomology042">
 	<property name="title" value="Journal of Medical Entomology Volume 42" />
 	<property name="journalTitle" value="Journal of Medical Entomology" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -861,7 +861,7 @@
 	</property>
       </property>
 
-      <property name="JournalofOrthopteraResearch012">
+      <property name="BioOneJournalofOrthopteraResearch012">
 	<property name="title" value="Journal of Orthoptera Research Volume 12" />
 	<property name="journalTitle" value="Journal of Orthoptera Research" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -879,7 +879,7 @@
 	</property>
       </property>
 
-      <property name="JournalofPaleontology079">
+      <property name="BioOneJournalofPaleontology079">
 	<property name="title" value="Journal of Paleontology Volume 79" />
 	<property name="journalTitle" value="Journal of Paleontology" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -897,7 +897,7 @@
 	</property>
       </property>
 
-      <property name="JournalofParasitology090">
+      <property name="BioOneJournalofParasitology090">
 	<property name="title" value="Journal of Parasitology Volume 90" />
 	<property name="journalTitle" value="Journal of Parasitology" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -915,7 +915,7 @@
 	</property>
       </property>
 
-      <property name="JournaloftheNewYorkEntomologicalSociety112">
+      <property name="BioOneJournaloftheNewYorkEntomologicalSociety112">
 	<property name="title" value="Journal of the New York Entomological Society Volume 112" />
 	<property name="journalTitle" value="Journal of the New York Entomological Society" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -933,7 +933,7 @@
 	</property>
       </property>
 
-      <property name="JournaloftheNorthAmericanBenthologicalSociety024">
+      <property name="BioOneJournaloftheNorthAmericanBenthologicalSociety024">
 	<property name="title" value="Journal of the North American Benthological Society Volume 24" />
 	<property name="journalTitle" value="Journal of the North American Benthological Society" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -951,7 +951,7 @@
 	</property>
       </property>
 
-      <property name="JournalofVegetationScience015">
+      <property name="BioOneJournalofVegetationScience015">
 	<property name="title" value="Journal of Vegetation Science Volume 15" />
 	<property name="journalTitle" value="Journal of Vegetation Science" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -969,7 +969,7 @@
 	</property>
       </property>
 
-      <property name="JournalofVertebratePaleontology024">
+      <property name="BioOneJournalofVertebratePaleontology024">
 	<property name="title" value="Journal of Vertebrate Paleontology Volume 24" />
 	<property name="journalTitle" value="Journal of Vertebrate Paleontology" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -987,7 +987,7 @@
 	</property>
       </property>
 
-      <property name="JournalofZooandWildlifeMedicine035">
+      <property name="BioOneJournalofZooandWildlifeMedicine035">
 	<property name="title" value="Journal of Zoo and Wildlife Medicine Volume 35" />
 	<property name="journalTitle" value="Journal of Zoo and Wildlife Medicine" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -1005,7 +1005,7 @@
 	</property>
       </property>
 
-      <property name="MammalianSpecies761">
+      <property name="BioOneMammalianSpecies761">
 	<property name="title" value="Mammalian Species Volume 761" />
 	<property name="journalTitle" value="Mammalian Species" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -1023,7 +1023,7 @@
 	</property>
       </property>
 
-      <property name="Micropaleontology048">
+      <property name="BioOneMicropaleontology048">
 	<property name="title" value="Micropaleontology Volume 48" />
 	<property name="journalTitle" value="Micropaleontology" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -1041,7 +1041,7 @@
 	</property>
       </property>
 
-      <property name="MountainResearchandDevelopment024">
+      <property name="BioOneMountainResearchandDevelopment024">
 	<property name="title" value="Mountain Research and Development Volume 24" />
 	<property name="journalTitle" value="Mountain Research and Development" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -1059,7 +1059,7 @@
 	</property>
       </property>
 
-      <property name="NortheasternNaturalist011">
+      <property name="BioOneNortheasternNaturalist011">
 	<property name="title" value="Northeastern Naturalist Volume 11" />
 	<property name="journalTitle" value="Northeastern Naturalist" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -1077,7 +1077,7 @@
 	</property>
       </property>
 
-      <property name="NorthwesternNaturalist085">
+      <property name="BioOneNorthwesternNaturalist085">
 	<property name="title" value="Northwestern Naturalist Volume 85" />
 	<property name="journalTitle" value="Northwestern Naturalist" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -1095,7 +1095,7 @@
 	</property>
       </property>
 
-      <property name="PALAIOS020">
+      <property name="BioOnePALAIOS020">
 	<property name="title" value="PALAIOS Volume 20" />
 	<property name="journalTitle" value="PALAIOS" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -1113,7 +1113,7 @@
 	</property>
       </property>
 
-      <property name="Paleobiology031">
+      <property name="BioOnePaleobiology031">
 	<property name="title" value="Paleobiology Volume 31" />
 	<property name="journalTitle" value="Paleobiology" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -1131,7 +1131,7 @@
 	</property>
       </property>
 
-      <property name="PhotochemistryandPhotobiology080">
+      <property name="BioOnePhotochemistryandPhotobiology080">
 	<property name="title" value="Photochemistry and Photobiology Volume 80" />
 	<property name="journalTitle" value="Photochemistry and Photobiology" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -1149,7 +1149,7 @@
 	</property>
       </property>
 
-      <property name="ProceedingsoftheAcademyofNaturalSciencesofPhiladelphia154">
+      <property name="BioOneProceedingsoftheAcademyofNaturalSciencesofPhiladelphia154">
 	<property name="title" value="Proceedings of the Academy of Natural Sciences of Philadelphia Volume 154" />
 	<property name="journalTitle" value="Proceedings of the Academy of Natural Sciences of Philadelphia" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -1167,7 +1167,7 @@
 	</property>
       </property>
 
-      <property name="RadiationResearch163">
+      <property name="BioOneRadiationResearch163">
 	<property name="title" value="Radiation Research Volume 163" />
 	<property name="journalTitle" value="Radiation Research" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -1185,7 +1185,7 @@
 	</property>
       </property>
 
-      <property name="RangelandEcology&amp;Management058">
+      <property name="BioOneRangelandEcology&amp;Management058">
 	<property name="title" value="Rangeland Ecology &amp; Management Volume 58" />
 	<property name="journalTitle" value="Rangeland Ecology &amp; Management" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -1203,7 +1203,7 @@
 	</property>
       </property>
 
-      <property name="Rangelands027">
+      <property name="BioOneRangelands027">
 	<property name="title" value="Rangelands Volume 27" />
 	<property name="journalTitle" value="Rangelands" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -1221,7 +1221,7 @@
 	</property>
       </property>
 
-      <property name="TheSocietyofWetlandScientistsBulletin021">
+      <property name="BioOneTheSocietyofWetlandScientistsBulletin021">
 	<property name="title" value="The Society of Wetland Scientists Bulletin Volume 21" />
 	<property name="journalTitle" value="The Society of Wetland Scientists Bulletin" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -1239,7 +1239,7 @@
 	</property>
       </property>
 
-      <property name="SoutheasternNaturalist003">
+      <property name="BioOneSoutheasternNaturalist003">
 	<property name="title" value="Southeastern Naturalist Volume 3" />
 	<property name="journalTitle" value="Southeastern Naturalist" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -1257,7 +1257,7 @@
 	</property>
       </property>
 
-      <property name="TheSouthwesternNaturalist049">
+      <property name="BioOneTheSouthwesternNaturalist049">
 	<property name="title" value="The Southwestern Naturalist Volume 49" />
 	<property name="journalTitle" value="The Southwestern Naturalist" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -1275,7 +1275,7 @@
 	</property>
       </property>
 
-      <property name="SystematicBotany028">
+      <property name="BioOneSystematicBotany028">
 	<property name="title" value="Systematic Botany Volume 28" />
 	<property name="journalTitle" value="Systematic Botany" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -1293,7 +1293,7 @@
 	</property>
       </property>
 
-      <property name="TransactionsoftheKansasAcademyofScience107">
+      <property name="BioOneTransactionsoftheKansasAcademyofScience107">
 	<property name="title" value="Transactions of the Kansas Academy of Science Volume 107" />
 	<property name="journalTitle" value="Transactions of the Kansas Academy of Science" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -1311,7 +1311,7 @@
 	</property>
       </property>
 
-      <property name="Waterbirds027">
+      <property name="BioOneWaterbirds027">
 	<property name="title" value="Waterbirds Volume 27" />
 	<property name="journalTitle" value="Waterbirds" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -1329,7 +1329,7 @@
 	</property>
       </property>
 
-      <property name="WeedScience053">
+      <property name="BioOneWeedScience053">
 	<property name="title" value="Weed Science Volume 53" />
 	<property name="journalTitle" value="Weed Science" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -1347,7 +1347,7 @@
 	</property>
       </property>
 
-      <property name="WeedTechnology018">
+      <property name="BioOneWeedTechnology018">
 	<property name="title" value="Weed Technology Volume 18" />
 	<property name="journalTitle" value="Weed Technology" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -1365,7 +1365,7 @@
 	</property>
       </property>
 
-      <property name="Wetlands024">
+      <property name="BioOneWetlands024">
 	<property name="title" value="Wetlands Volume 24" />
 	<property name="journalTitle" value="Wetlands" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
@@ -1383,7 +1383,7 @@
 	</property>
       </property>
 
-      <property name="TheWilsonBulletin116">
+      <property name="BioOneTheWilsonBulletin116">
 	<property name="title" value="The Wilson Bulletin Volume 116" />
 	<property name="journalTitle" value="The Wilson Bulletin" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
