@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlSpec.java,v 1.18 2005-10-20 16:43:31 troberts Exp $
+ * $Id: CrawlSpec.java,v 1.19 2007-03-17 21:31:31 dshr Exp $
  */
 
 /*
@@ -91,6 +91,11 @@ public interface CrawlSpec {
    * @return the LoginPageChecker for this crawl, or null if there isn't one
    */
   public LoginPageChecker getLoginPageChecker();
+
+  /**
+   * @return pattern to recognize ARC files
+   */
+  public String arcFilePattern();
 
 }
 

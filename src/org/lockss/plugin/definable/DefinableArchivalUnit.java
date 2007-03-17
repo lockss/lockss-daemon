@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.53 2007-02-06 01:03:08 tlipkis Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.54 2007-03-17 21:31:31 dshr Exp $
  */
 
 /*
@@ -57,12 +57,14 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 
   public static final String PREFIX_NUMERIC = "numeric_";
   public static final int DEFAULT_AU_CRAWL_DEPTH = 1;
+  public static final String DEFAULT_AU_ARC_PATTERN = null;
   public static final String KEY_AU_NAME = "au_name";
   public static final String KEY_AU_CRAWL_RULES = "au_crawlrules";
   public static final String KEY_AU_CRAWL_WINDOW = "au_crawlwindow";
   public static final String KEY_AU_CRAWL_WINDOW_SER = "au_crawlwindow_ser";
   public static final String KEY_AU_EXPECTED_BASE_PATH = "au_expected_base_path";
   public static final String KEY_AU_CRAWL_DEPTH = "au_crawl_depth";
+  public static final String KEY_AU_ARC_PATTERN = "au_arc_pattern";
   public static final String KEY_AU_MANIFEST = "au_manifest";
   //public static final String KEY_AU_URL_NORMALIZER = "au_url_normalizer";
 
@@ -220,6 +222,8 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     }
     else  { // for now use the default spider crawl spec
       int depth = definitionMap.getInt(KEY_AU_CRAWL_DEPTH, DEFAULT_AU_CRAWL_DEPTH);
+      String arcPattern = definitionMap.getString(KEY_AU_ARC_PATTERN,
+						  DEFAULT_AU_ARC_PATTERN);
       //XXX change to a list
 //       String startUrl = paramMap.getString(AU_START_URL);
 
@@ -227,7 +231,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
       return new SpiderCrawlSpec(ListUtil.list(startUrlString),
 				 getPermissionPages(), rule, depth,
 				 makePermissionChecker(),
-				 makeLoginPageChecker());
+				 makeLoginPageChecker(), arcPattern);
     }
   }
 

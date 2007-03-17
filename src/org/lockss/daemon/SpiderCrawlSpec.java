@@ -1,5 +1,5 @@
 /*
- * $Id: SpiderCrawlSpec.java,v 1.5 2005-10-20 21:46:34 troberts Exp $
+ * $Id: SpiderCrawlSpec.java,v 1.6 2007-03-17 21:31:31 dshr Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ public final class SpiderCrawlSpec extends BaseCrawlSpec {
 
   private List startList;
   private int refetchDepth = -1;
+  private String arcPattern = null;
 
   /**
    * Create a SpiderCrawlSpec with the specified start list and rule.
@@ -85,6 +86,32 @@ public final class SpiderCrawlSpec extends BaseCrawlSpec {
 			 PermissionChecker permissionChecker,
 			 LoginPageChecker loginPageChecker)
       throws ClassCastException {
+    this(startUrls, permissionUrls, rule, refetchDepth, permissionChecker,
+	 loginPageChecker, null);
+  }
+
+  /**
+   * Create a SpiderCrawlSpec with the specified start list and rule.
+   * @param startUrls a list of Strings specifying starting points
+   * for the crawl
+   * @param permissionUrls a list of urls from which permission can be obtained.
+   * @param rule filter to determine which URLs encountered in the crawl
+   * should themselves be crawled.  A null rule is always true.
+   * @param refetchDepth depth to always refetch
+   * @param permissionChecker a permissionChecker specified by plugin
+   * @param arcPattern regexp to recognize ARC files
+   * @throws IllegalArgumentException if the url list is empty.
+   * @throws NullPointerException if any elements of startUrls is null.
+   * @throws ClassCastException if any elements of startUrls is not a String.
+   */
+  public SpiderCrawlSpec(List startUrls,
+			 List permissionUrls,
+			 CrawlRule rule,
+			 int refetchDepth,
+			 PermissionChecker permissionChecker,
+			 LoginPageChecker loginPageChecker,
+			 String arcPattern)
+      throws ClassCastException {
     super(permissionUrls, rule, permissionChecker, loginPageChecker);
     if(startUrls.isEmpty()) {
       throw new
@@ -96,6 +123,7 @@ public final class SpiderCrawlSpec extends BaseCrawlSpec {
     }
     startList = ListUtil.immutableListOfType(startUrls, String.class);
     this.refetchDepth = refetchDepth;
+    this.arcPattern = arcPattern;
   }
 
   /**
@@ -152,6 +180,13 @@ public final class SpiderCrawlSpec extends BaseCrawlSpec {
    */
   public int getRefetchDepth() {
     return refetchDepth;
+  }
+
+  /**
+   * @return pattern to recognize ARC files
+   */
+  public String arcFilePattern() {
+    return arcPattern;
   }
 
 }

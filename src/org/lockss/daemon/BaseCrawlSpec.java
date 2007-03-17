@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawlSpec.java,v 1.7 2005-10-20 22:57:49 troberts Exp $
+ * $Id: BaseCrawlSpec.java,v 1.8 2007-03-17 21:31:31 dshr Exp $
  */
 
 /*
@@ -128,6 +128,10 @@ public abstract class BaseCrawlSpec implements CrawlSpec {
 
   public LoginPageChecker getLoginPageChecker() {
     return loginPageChecker;
+  }
+
+  public String arcFilePattern() {
+    return null;
   }
 
 }
