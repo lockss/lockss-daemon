@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNode.java,v 1.20 2007-01-28 05:45:06 tlipkis Exp $
+ * $Id: RepositoryNode.java,v 1.21 2007-03-17 04:19:30 smorabito Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.repository;
 import java.io.*;
 import java.util.*;
 import org.lockss.daemon.CachedUrlSetSpec;
+import org.lockss.protocol.PeerIdentity;
 
 /**
  * RepositoryNode is used to store the contents and
@@ -229,6 +230,20 @@ public interface RepositoryNode extends RepositoryNodeVersion {
    * @see RepositoryNode#makeNewVersion()
    */
   public void setNewProperties(Properties newProps);
+  
+  /**
+   * Signal that the given peers have agreed with this node, creating an
+   * agreement history file if necessary.
+   * @param peers A collection of peers for which to signal agreement.
+   */
+  public void signalAgreement(Collection peers);
+  
+  /**
+   * Returns true if the PeerIdentity has ever agreed with this node during
+   * a poll.
+   * @param peer The peer to check for agreement with this node.
+   */
+  public boolean hasAgreement(PeerIdentity peer);
 
   /**
    * RepositoryNodeContents is used to obtain Properties and InputStream.

@@ -41,6 +41,15 @@ public interface VoteBlocks extends LockssSerializable {
   public InputStream getInputStream() throws IOException;
 
   /**
+   * Return a VoteBlock for the specified URL, or null if no VoteBlock
+   * is found in the collection.
+   * 
+   * @return The requested VoteBlock, or null.
+   * @param url The URL to search for.
+   */
+  public VoteBlock getVoteBlock(String url);
+  
+  /**
    * Obtain an iterator over the VoteBlocks collection.
    * 
    * @return An iterator representing the VoteBlocks.

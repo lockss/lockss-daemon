@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.48 2007-02-22 05:35:48 smorabito Exp $
+ * $Id: V3Poller.java,v 1.49 2007-03-17 04:19:30 smorabito Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.poller.v3;
 
 import java.io.*;
+import java.net.MalformedURLException;
 import java.security.*;
 import java.util.*;
 
@@ -48,7 +49,7 @@ import org.lockss.poller.*;
 import org.lockss.poller.v3.V3Serializer.*;
 import org.lockss.protocol.*;
 import org.lockss.protocol.psm.*;
-import org.lockss.repository.RepositoryManager;
+import org.lockss.repository.*;
 import org.lockss.scheduler.*;
 import org.lockss.scheduler.Schedule.*;
 import org.lockss.state.*;
@@ -970,7 +971,6 @@ public class V3Poller extends BasePoll {
               log.debug3("Participant " + voter.getVoterId() + 
                          " seems to have an extra block that I don't: " +
                          vb.getUrl());
-              tally.addVoteForBlock(voter.getVoterId(), vb);
               tally.addMissingBlockVoter(voter.getVoterId(), vb.getUrl());
               missingBlockVoters++;
               iter.next();
@@ -982,7 +982,6 @@ public class V3Poller extends BasePoll {
               if (lowestUrl == null) {
                 log.debug3("Our blocks are the same, now we'll compare them.");
                 iter.next();
-                tally.addVoteForBlock(voter.getVoterId(), vb);
                 compareBlocks(voter.getVoterId(), ++digestIndex, vb, hb, tally);
               } else {
                 log.debug3("Not incrementing peer's vote block iterator");
@@ -1033,7 +1032,6 @@ public class V3Poller extends BasePoll {
         try {
           if (iter.peek() != null) {
             VoteBlock vb = iter.next();
-            tally.addVoteForBlock(voter.getVoterId(), vb);
             tally.addMissingBlockVoter(voter.getVoterId(), vb.getUrl());
             missingBlockVoters++;
           }
@@ -1074,9 +1072,22 @@ public class V3Poller extends BasePoll {
     setStatus(V3Poller.POLLER_STATUS_TALLYING);
     int result = tally.getTallyResult();
     PollerStateBean.TallyStatus tallyStatus = pollerState.getTallyStatus();
+    
+    // If there are any agreeing peers, update our agreement
+    // history for them.
+    
+    if (tally.getAgreeVoters().size() > 0) {
+      try {
+        RepositoryNode node = AuUtil.getRepositoryNode(getAu(), url);
+        if (node != null)
+          node.signalAgreement(tally.getAgreeVoters());
+      } catch (MalformedURLException ex) {
+        log.error("Malformed URL while updating agreement history: " 
+                  + url);
+      }
+    }
 
     // Linked hash map - order is significant
-    LinkedHashMap votesForBlock = tally.getVotesForBlock();
     String pollKey = pollerState.getPollKey();
     switch(result) {
     case BlockTally.RESULT_WON:
@@ -1087,7 +1098,7 @@ public class V3Poller extends BasePoll {
     case BlockTally.RESULT_LOST:
       tallyStatus.addDisagreedUrl(url);
       log.info("Lost tally for block " + url + " in poll " + getKey());
-      requestRepair(url, tally.getDisagreeVoters(), votesForBlock);
+      requestRepair(url, tally.getDisagreeVoters());
       break;
     case BlockTally.RESULT_LOST_EXTRA_BLOCK:
       log.info("Lost tally. Removing extra block " + url +
@@ -1100,8 +1111,7 @@ public class V3Poller extends BasePoll {
       tallyStatus.addDisagreedUrl(url);
       String missingURL = tally.getMissingBlockUrl();
       requestRepair(missingURL,
-                    tally.getMissingBlockVoters(missingURL),
-                    votesForBlock);
+                    tally.getMissingBlockVoters(missingURL));
       break;
     case BlockTally.RESULT_NOQUORUM:
       tallyStatus.addNoQuorumUrl(url);
@@ -1214,11 +1224,9 @@ public class V3Poller extends BasePoll {
    * 
    * @param url
    * @param disagreeingVoters Set of disagreeing voters.
-   * @param votesForBlock Ordered map of votes previously collected for this block
    */
   private void requestRepair(final String url,
-                             final Collection disagreeingVoters,
-                             final LinkedHashMap votesForBlock) {
+                             final Collection disagreeingVoters) {
 
     PollerStateBean.RepairQueue repairQueue = pollerState.getRepairQueue();
     
@@ -1233,15 +1241,13 @@ public class V3Poller extends BasePoll {
     log.debug2("Deciding whether to repair from cache or publisher.  Repair " +
                "from cache probability=" + repairFromCache);
     if (ProbabilisticChoice.choose(repairFromCache)) {
-      // XXX:  Use plain hash as a hint for who to requet the repair from.
-      PeerIdentity peer =
-        (PeerIdentity)CollectionUtil.randomSelection(disagreeingVoters);
+      PeerIdentity peer = findPeerForRepair(disagreeingVoters);
       log.debug2("Requesting repair for target: " + url + " from " + peer);
-      repairQueue.repairFromPeer(url, votesForBlock, peer);
+      repairQueue.repairFromPeer(url, peer);
     } else {
       // Repair from the publisher, unless this is a down title.
       if (!AuUtil.isPubDown(getAu())) {
-        repairQueue.repairFromPublisher(url, votesForBlock);
+        repairQueue.repairFromPublisher(url);
       } else {
         log.debug2("Chose to repair block " + url + " in poll " + getKey() 
                    + " from the publisher, but configuration "
@@ -1250,12 +1256,16 @@ public class V3Poller extends BasePoll {
     }
   }
 
+  /* Select a peer to attempt repair from. */
+  PeerIdentity findPeerForRepair(Collection disagreeingVoters) {
+    return (PeerIdentity)CollectionUtil.randomSelection(disagreeingVoters);
+  }
+
   /**
    * Request a repair from the specified peer for the specified URL.  Called
    * from doRepairs().
    */
-  private void requestRepairFromPeer(String url, PeerIdentity peer,
-                                     LinkedHashMap votesForBlock) {
+  private void requestRepairFromPeer(String url, PeerIdentity peer) {
     log.debug2("Requesting repair for target: " + url + " from "
               + peer);
     ParticipantUserData ud =
@@ -1358,8 +1368,7 @@ public class V3Poller extends BasePoll {
 
       for (Iterator iter = pendingPeerRepairs.iterator(); iter.hasNext(); ) {
         PollerStateBean.Repair r = (PollerStateBean.Repair)iter.next();
-        this.requestRepairFromPeer(r.getUrl(), r.getRepairFrom(), 
-                                   r.getPreviousVotes());
+        requestRepairFromPeer(r.getUrl(), r.getRepairFrom());
         queue.markActive(r.getUrl());
       }
 
@@ -1367,8 +1376,8 @@ public class V3Poller extends BasePoll {
   }
 
   /**
-   * Callback used to schedule a small re-check hash
-   * when a repair has been received.
+   * Callback used to schedule a small re-check hash when a repair has 
+   * been received.
    */
   public void receivedRepair(final String url) {
     final BlockHasher.EventHandler blockDone =
@@ -1378,15 +1387,16 @@ public class V3Poller extends BasePoll {
           pollManager.runTask(new PollRunner.Task("Received Repair Block Complete", getKey()) {
             public void lockssRun() {
               PollerStateBean.RepairQueue rq = pollerState.getRepairQueue();
-              Map votesForBlock = rq.getVotesForBlock(url);
               log.debug3("Finished hashing repair sent for block " + hblock);
               // Replay the block comparison using the new hash results.
               int digestIndex = 0;
               BlockTally tally = new BlockTally(pollerState.getQuorum());
-              for (Iterator iter = votesForBlock.keySet().iterator(); iter.hasNext(); ) {
+              for (Iterator iter = theParticipants.keySet().iterator();
+                   iter.hasNext(); ) {
                 digestIndex++;
                 PeerIdentity id = (PeerIdentity)iter.next();
-                VoteBlock vb = (VoteBlock)votesForBlock.get(id);
+                VoteBlock vb = 
+                  ((ParticipantUserData)theParticipants.get(id)).getVoteBlocks().getVoteBlock(url);
                 compareBlocks(id, digestIndex, vb, hblock, tally);
               }
               tally.tallyVotes();
@@ -2044,7 +2054,7 @@ public class V3Poller extends BasePoll {
   public Set getNoQuorumUrls() {
     return pollerState.getTallyStatus().noQuorumUrls;
   }
-  
+
   /**
    * Release members not used after the poll has been closed.
    */

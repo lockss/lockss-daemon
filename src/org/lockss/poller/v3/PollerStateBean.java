@@ -1,5 +1,5 @@
 /*
- * $Id: PollerStateBean.java,v 1.23 2007-01-27 00:44:48 smorabito Exp $
+ * $Id: PollerStateBean.java,v 1.24 2007-03-17 04:19:30 smorabito Exp $
  */
 
 /*
@@ -440,13 +440,8 @@ public class PollerStateBean implements LockssSerializable {
     /** Peer from which to request a repair. If null, this is a 
      * publisher repair. */
     protected PeerIdentity repairFrom;
-    /** Ordered map of peers to votes cast for this block. */
-    protected LinkedHashMap previousVotes;
-    
-    /**
-     * The following deprecated members were emoved in daemon 1.20.
-     */
-    
+    /** @deprecated */
+    protected LinkedHashMap previousVotes = null;
     /** @deprecated */ 
     protected boolean repairFromPublisher = false;
     /** @deprecated */
@@ -458,8 +453,8 @@ public class PollerStateBean implements LockssSerializable {
      * @param url
      * @param previousVotes
      */
-    public Repair(String url, LinkedHashMap previousVotes) {
-      this(url, previousVotes, null);
+    public Repair(String url) {
+      this(url, null);
     }
     
     /**
@@ -469,18 +464,19 @@ public class PollerStateBean implements LockssSerializable {
      * @param previousVotes
      * @param repairFrom
      */
-    public Repair(String url, LinkedHashMap previousVotes, PeerIdentity repairFrom) {
+    public Repair(String url, PeerIdentity repairFrom) {
       this.url = url;
-      this.previousVotes = previousVotes;
       this.repairFrom = repairFrom;
     }
 
+    /** @deprecated */
     public LinkedHashMap getPreviousVotes() {
-      return previousVotes;
+      throw new UnsupportedOperationException("No longer implemented.");
     }
 
+    /** @deprecated */
     public void setPreviousVotes(LinkedHashMap previousVotes) {
-      this.previousVotes = previousVotes;
+      throw new UnsupportedOperationException("No longer implemented.");
     }
 
     public PeerIdentity getRepairFrom() {
@@ -526,13 +522,13 @@ public class PollerStateBean implements LockssSerializable {
       this.completedRepairs = new ArrayList();
     }
 
-    public synchronized void repairFromPublisher(String url, LinkedHashMap previousVotes) {
-      pendingRepairs.put(url, new Repair(url, previousVotes));
+    public synchronized void repairFromPublisher(String url) {
+      pendingRepairs.put(url, new Repair(url));
     }
     
-    public synchronized void repairFromPeer(String url, LinkedHashMap previousVotes, 
+    public synchronized void repairFromPeer(String url, 
                                             PeerIdentity peer) {
-      pendingRepairs.put(url, new Repair(url, previousVotes, peer));
+      pendingRepairs.put(url, new Repair(url, peer));
     }
     
     /**
@@ -583,13 +579,9 @@ public class PollerStateBean implements LockssSerializable {
       return peerRepairs;
     }
 
+    /** @deprecated */
     public synchronized Map getVotesForBlock(String url) {
-      Repair rep = (Repair)activeRepairs.get(url);
-      if (rep != null) {
-        return rep.getPreviousVotes();
-      } else {
-        return null;
-      }
+      throw new UnsupportedOperationException("No longer implemented.");
     }
     
     public synchronized List getPendingRepairs() {

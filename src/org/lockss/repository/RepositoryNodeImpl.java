@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.71 2007-01-28 05:45:06 tlipkis Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.72 2007-03-17 04:19:30 smorabito Exp $
  */
 
 /*
@@ -37,13 +37,15 @@ import java.net.MalformedURLException;
 import java.util.*;
 
 import org.lockss.config.*;
+import org.lockss.protocol.*;
 import org.lockss.daemon.CachedUrlSetSpec;
 import org.lockss.plugin.AuUrl;
 import org.lockss.util.*;
 
 /**
- * RepositoryNode is used to store the contents and meta-information of urls
- * being cached.  It stores the content in the following form:
+ * <p>RepositoryNode is used to store the contents and meta-information of urls
+ * being cached.  It stores the content in the following form:</p>
+ * <pre>
  *   /cache (root)
  *     /'a' (AU directory, 'a'->'z'->'aa' and so on)
  *       /www.example.com (domain)
@@ -51,6 +53,7 @@ import org.lockss.util.*;
  *           /branch (intermediate path branch)
  *             /file (root of file's storage)
  *               -#node_props (the node properties file)
+ *               -#agreement (the peers who we know have agreed with this node)
  *               /#content (the content dir)
  *                 -current (current version '2' content)
  *                 -current.props (current version '2' props)
@@ -59,8 +62,10 @@ import org.lockss.util.*;
  *                 -2.props-1234563216 (time-stamped props for identical
  *                                      version of '2' content)
  *               /child (child node, with its own '#content' and the like)
+ *  </pre>
  *
- *  When deactiveated, 'current'->'inactive' and 'current.props'->'inactive.props'.
+ *  <p>When deactiveated, 'current'->'inactive' and 
+ *  'current.props'->'inactive.props'.</p>
  */
 public class RepositoryNodeImpl implements RepositoryNode {
 
@@ -70,6 +75,11 @@ public class RepositoryNodeImpl implements RepositoryNode {
   public static final String PARAM_VERSION_TIMEOUT = Configuration.PREFIX +
       "repository.version.timeout";
   static final long DEFAULT_VERSION_TIMEOUT = 5 * Constants.HOUR; // 5 hours
+  
+  /** If true, enable the tracking of agreement. */
+  public static final String PARAM_ENABLE_AGREEMENT = Configuration.PREFIX +
+      "repository.enableAgreement";
+  public static final boolean DEFAULT_ENABLE_AGREEMENT = true;
 
   /** If true, input streams are monitored for missed close()s */
   public static final String PARAM_MONITOR_INPUT_STREAMS =
@@ -105,6 +115,10 @@ public class RepositoryNodeImpl implements RepositoryNode {
     Configuration.PREFIX + "repository.keepAllPropsForDupeFile";
   public static final boolean DEFAULT_KEEP_ALL_PROPS_FOR_DUPE_FILE = false;
 
+  // the agreement history file
+  static final String AGREEMENT_FILENAME = "#agreement";
+  // Temporary file used when writing a new agreement history.
+  static final String TEMP_AGREEMENT_FILENAME = "#agreement.temp";
   // the filenames associated with the filesystem storage structure
   // the node property file
   static final String NODE_PROPS_FILENAME = "#node_props";
@@ -144,6 +158,8 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
   protected File nodeRootFile = null;
   protected File nodePropsFile = null;
+  protected File agreementFile = null;
+  protected File tempAgreementFile = null;
   protected File currentCacheFile;
   protected File currentPropsFile;
   File tempCacheFile;
@@ -864,6 +880,22 @@ public class RepositoryNodeImpl implements RepositoryNode {
       is.close();
     }
   }
+  
+  public synchronized boolean hasAgreement(PeerIdentity id) {
+    Set agreeingPeers = loadAgreementHistory();
+    return (agreeingPeers.contains(id.getIdString()));
+  }
+  
+  public synchronized void signalAgreement(Collection peers) {
+    // loadAgreementHistory may return an empty immutable set, so
+    // it's important to load into a shallow copy.
+    Set agreeingPeers = new HashSet(loadAgreementHistory());
+    for (Iterator it = peers.iterator(); it.hasNext(); ) {
+      String key = ((PeerIdentity)it.next()).getIdString();
+      agreeingPeers.add(key);
+    }
+    storeAgreementHistory(agreeingPeers);
+  }
 
   public void setNewProperties(Properties newProps) {
     if (!newVersionOpen) {
@@ -952,6 +984,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
     initNodePropsFile();
   }
 
+  
   /**
    * Load the node properties.
    */
@@ -970,6 +1003,110 @@ public class RepositoryNodeImpl implements RepositoryNode {
       logger.error("Error loading node props from " + nodePropsFile.getPath(),
 		   e);
       throw new LockssRepository.RepositoryStateException("Couldn't load properties file.");
+    }
+  }
+  
+  /**
+   * Return a set of PeerIdentity keys that have agreed with this node.
+   * 
+   * JAVA15: Set<String>
+   */
+  Set loadAgreementHistory() {
+    if (agreementFile == null) {
+      initAgreementFile();
+    }
+    BufferedInputStream is = null;
+    try {
+      if (agreementFile.exists()) {
+        is = new BufferedInputStream(new FileInputStream(agreementFile));
+        return decodeAgreementHistory(is);
+      } else {
+        return Collections.EMPTY_SET;
+      }
+    } catch (Exception e) {
+      logger.error("Error loading agreement history", e);
+      throw new LockssRepository.RepositoryStateException("Couldn't load agreement file.");
+    } finally {
+      IOUtil.safeClose(is);
+    }
+  }
+  
+  /** Consume the input stream, decoding peer identity keys  */
+  Set decodeAgreementHistory(InputStream is) {
+    Set history = new HashSet();
+    String id;
+    try {
+      while ((id = IDUtil.decodeOneKey(is)) != null) {
+        history.add(id);
+      }
+    } catch (IdentityParseException ex) {
+      // IDUtil.decodeOneKey will do its best to leave us at the
+      // start of the next key, but there's no guarantee.  All we can
+      // do here is log the fact that there was an error, and try
+      // again.
+      logger.error("Parse error while trying to decode agreement " +
+                   "history: " + ex);
+    }
+    return history;
+  }
+
+  /* Rename a potentially corrupt agreement history file */
+  void backupAgreementHistoryFile() {
+    try {
+      PlatformUtil.updateAtomically(agreementFile,
+                                    new File(agreementFile.getCanonicalFile() + ".old"));
+    } catch (IOException ex) {
+      // This would only be caused by getCanonicalFile() throwing IOException.
+      // Worthy of a stack trace.
+      logger.error("Unable to back-up suspect agreement history file:", ex);
+    }
+  }
+  
+  /**
+   * Store a list of agreement histories.
+   * @param peers A list of peer keys for which agreement has been found.
+   */
+  synchronized void storeAgreementHistory(Collection peers) {
+    DataOutputStream dos = null;
+    if (tempAgreementFile == null) {
+      initTempAgreementFile();
+    }
+    if (agreementFile == null) {
+      initAgreementFile();
+    }
+    try {
+      // Loop until there are no IdentityParseExceptions
+      boolean errors = false;
+      outer:
+      do {
+        dos = new DataOutputStream(new FileOutputStream(tempAgreementFile));
+        for (Iterator it = peers.iterator(); it.hasNext(); ) {
+          String key = (String)it.next();
+          try {
+            dos.write(IDUtil.encodeTCPKey(key));
+          } catch (IdentityParseException ex) {
+            logger.error("Unable to store identity key: " + key);
+            // Close the errored file.
+            IOUtil.safeClose(dos);
+            // Set the error flag
+            errors = true;
+            // Delete the offending, un-storable key
+            peers.remove(key);
+            break outer;
+          }
+        }
+        errors = false;
+        if (!PlatformUtil.updateAtomically(tempAgreementFile, agreementFile)) {
+          logger.error("Unable to rename temporary agreement history file " +
+                       tempAgreementFile);
+        }
+      } while (errors);
+    } catch (IOException ex) {
+      logger.error("Exception while trying to store agreement history file "
+                   + agreementFile, ex);
+      backupAgreementHistoryFile();
+    } finally {
+      IOUtil.safeClose(dos);
     }
   }
 
@@ -1311,6 +1448,14 @@ public class RepositoryNodeImpl implements RepositoryNode {
   private void initTempPropsFile() {
     tempPropsFile = new File(getContentDir(), TEMP_PROPS_FILENAME);
   }
+  
+  private void initAgreementFile() {
+    agreementFile = new File(nodeLocation, AGREEMENT_FILENAME);
+  }
+  
+  private void initTempAgreementFile() {
+    tempAgreementFile = new File(nodeLocation, TEMP_AGREEMENT_FILENAME);
+  }
 
   private void initNodePropsFile() {
     nodePropsFile = new File(nodeLocation, NODE_PROPS_FILENAME);
@@ -1396,7 +1541,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
     buffer.append(date);
     return new File(getContentDir(), buffer.toString());
   }
-
+  
   public String toString() {
     return "[reponode: " + url + "]";
   }

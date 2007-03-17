@@ -116,6 +116,29 @@ public class DiskVoteBlocks extends BaseVoteBlocks {
       IOUtil.safeClose(raf);
     }
   }
+  
+  /** Search the collection for the requested VoteBlock.
+   * 
+   * XXX: This is implemented as a simple linear search, so it is O(n).
+   * The disk structure is not terribly easy to seek into because each
+   * record is variable length, so I'm not sure it will be easy to implement
+   * binary search and improve performance.  Therefore, this method should
+   * be used with care, and sparingly.
+   */
+  public VoteBlock getVoteBlock(String url) {
+    try {
+      for (VoteBlocksIterator it = iterator(); it.hasNext(); ) {
+        VoteBlock vb = (VoteBlock)it.next();
+        if (url.equals(vb.getUrl())) {
+          return vb;
+        }
+      }
+      return null;
+    } catch (IOException ex) {
+      log.error("IOException while searching for VoteBlock " + url, ex);
+      return null;
+    }
+  }
 
   public int size() {
     return size;

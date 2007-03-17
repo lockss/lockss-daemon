@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssRepository.java,v 1.12 2004-09-27 22:38:34 smorabito Exp $
+ * $Id: MockLockssRepository.java,v 1.13 2007-03-17 04:19:30 smorabito Exp $
  */
 
 /*
@@ -50,7 +50,7 @@ public class MockLockssRepository implements LockssRepository {
 
   public MockLockssRepository() { }
 
-  MockLockssRepository(String rootPath, ArchivalUnit au) {
+  public MockLockssRepository(String rootPath, ArchivalUnit au) {
     rootLocation = rootPath;
     repoAu = au;
     nodeCache = new HashMap();

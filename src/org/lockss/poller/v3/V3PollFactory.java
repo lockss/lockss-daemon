@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollFactory.java,v 1.11 2007-01-23 21:44:35 smorabito Exp $
+ * $Id: V3PollFactory.java,v 1.12 2007-03-17 04:19:30 smorabito Exp $
  */
 
 /*
@@ -170,9 +170,9 @@ public class V3PollFactory extends BasePollFactory {
                                 V3Poller.DEFAULT_MAX_SIMULTANEOUS_V3_POLLERS);
     int activePolls = daemon.getPollManager().getActiveV3Pollers().size();
     if (activePolls >= maxPolls) {
-      log.info("Maximum number of V3 Pollers already running (" +
-               activePolls + ").  Not starting new V3 Poll due to " +
-               "configuration");
+      log.info("Not starting new V3 Poll on AU " + pollspec.getAuId()
+               + ".  Maximum number of active pollers is " + maxPolls 
+               + "; " + activePolls + " are already running.");
       return null;
     }
     log.debug("Creating V3Poller to call a new poll...");
@@ -218,9 +218,9 @@ public class V3PollFactory extends BasePollFactory {
     int activeVoters = daemon.getPollManager().getActiveV3Voters().size();
 
     if (activeVoters >= maxVoters) {
-      log.info("Maximum number of V3 Voters already running (" +
-               activeVoters + ").  Not starting new V3 Voter due to " +
-               "configuration");
+      log.info("Not starting new V3 Voter for poll on AU " 
+               + au.getAuId() + ".  Maximum number of active voters is " 
+               + maxVoters + "; " + activeVoters + " are already running.");
       return null;
     }
 

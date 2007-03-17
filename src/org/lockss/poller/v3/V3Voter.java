@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.35 2007-02-02 23:21:17 thib_gc Exp $
+ * $Id: V3Voter.java,v 1.36 2007-03-17 04:19:30 smorabito Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.poller.v3;
 
 import java.io.*;
+import java.net.MalformedURLException;
 import java.security.*;
 import java.util.*;
 
@@ -45,6 +46,7 @@ import org.lockss.poller.*;
 import org.lockss.poller.v3.V3Serializer.PollSerializerException;
 import org.lockss.protocol.*;
 import org.lockss.protocol.psm.*;
+import org.lockss.repository.RepositoryNode;
 import org.lockss.scheduler.*;
 import org.lockss.scheduler.Schedule.*;
 import org.lockss.util.*;
@@ -124,7 +126,6 @@ public class V3Voter extends BasePoll {
   private boolean continuedPoll = false;
   private int nomineeCount;
   private File stateDir;
-  private boolean allowRepairs = DEFAULT_ALLOW_V3_REPAIRS;
   private int blockErrorCount = 0;
   private int maxBlockErrorCount = V3Poller.DEFAULT_MAX_BLOCK_ERROR_COUNT;
 
@@ -202,9 +203,6 @@ public class V3Voter extends BasePoll {
                                         DEFAULT_MIN_NOMINATION_SIZE);
     int max = CurrentConfig.getIntParam(PARAM_MAX_NOMINATION_SIZE,
                                         DEFAULT_MAX_NOMINATION_SIZE);
-    allowRepairs = CurrentConfig.getBooleanParam(PARAM_ALLOW_V3_REPAIRS,
-                                                 DEFAULT_ALLOW_V3_REPAIRS);
-
     if (min > max) {
       throw new IllegalArgumentException("Impossible nomination size range: "
                                          + (max - min));
@@ -261,6 +259,13 @@ public class V3Voter extends BasePoll {
     });
 
     return interp;
+  }
+  
+  /**
+   * Provides a default no-arg constructor to be used for unit testing.
+   */
+  protected V3Voter() {
+    
   }
   
   /**
@@ -784,7 +789,26 @@ public class V3Voter extends BasePoll {
    * given AU and URL.
    */
   boolean serveRepairs(PeerIdentity pid, ArchivalUnit au, String url) {
-    return(idManager.hasAgreed(pid, au) && allowRepairs);
+    try {
+      RepositoryNode node = AuUtil.getRepositoryNode(au, url);
+      boolean previousAgreement = node.hasAgreement(pid);
+      if (previousAgreement) {
+        log.debug("Previous agreement found for peer " + pid + " on URL "
+                  + url);
+      } else {
+        log.debug("No previous agreement found for peer " + pid + " on URL "
+                  + url);
+      }
+      boolean allowRepairs = 
+        CurrentConfig.getBooleanParam(PARAM_ALLOW_V3_REPAIRS,
+                                      DEFAULT_ALLOW_V3_REPAIRS);
+      return(previousAgreement && allowRepairs);
+    } catch (MalformedURLException ex) {
+      // Log the error, but certainly don't serve the repair.
+      log.error("serveRepairs: The URL " + url + " appears to be malformed. "
+                + "Cannot serve repairs for this URL.");
+      return false;
+    }
   }
 
   /**

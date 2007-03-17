@@ -1,5 +1,5 @@
 /*
- * $Id: MockRepositoryNode.java,v 1.14 2007-01-28 05:45:05 tlipkis Exp $
+ * $Id: MockRepositoryNode.java,v 1.15 2007-03-17 04:19:30 smorabito Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.test;
 import java.io.*;
 import java.util.*;
 import org.lockss.daemon.CachedUrlSetSpec;
+import org.lockss.protocol.PeerIdentity;
 import org.lockss.repository.*;
 import org.lockss.util.*;
 
@@ -52,6 +53,7 @@ public class MockRepositoryNode implements RepositoryNode {
   public InputStream curInput;
   public Properties curProps;
   public int currentVersion = -1;
+  public HashSet agreeingPeers = new HashSet();
 
   public String url;
   public String nodeLocation;
@@ -183,6 +185,16 @@ public class MockRepositoryNode implements RepositoryNode {
     return new MockRepositoryNodeContents(curInput, curProps);
   }
 
+  public void signalAgreement(Collection ids) {
+    for (Iterator it = ids.iterator(); it.hasNext(); ) {
+      agreeingPeers.add((PeerIdentity)it.next());
+    }
+  }
+  
+  public boolean hasAgreement(PeerIdentity id) {
+    return agreeingPeers.contains(id);
+  }
+  
   public OutputStream getNewOutputStream() {
     throw new UnsupportedOperationException("Not supported.");
   }

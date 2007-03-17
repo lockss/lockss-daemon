@@ -1,5 +1,5 @@
 /*
- * $Id: AuUtil.java,v 1.17 2007-01-28 05:45:06 tlipkis Exp $
+ * $Id: AuUtil.java,v 1.18 2007-03-17 04:19:29 smorabito Exp $
  */
 
 /*
@@ -82,6 +82,20 @@ public class AuUtil {
     } catch (MalformedURLException e) {
       throw new RuntimeException(e);
     }
+  }
+  
+  /**
+   * @param au An ArchivalUnit
+   * @param url A URL
+   * @return The RepositoryNode representing the URL in the given AU.
+   * 
+   * @throws MalformedURLException if the URL cannot be parsed.
+   */
+  public static RepositoryNode getRepositoryNode(ArchivalUnit au, String url) 
+      throws MalformedURLException {
+    LockssDaemon daemon = getDaemon(au);
+    LockssRepository repo = daemon.getLockssRepository(au);
+    return repo.getNode(url);
   }
 
   /**

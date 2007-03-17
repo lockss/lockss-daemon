@@ -1,5 +1,5 @@
 /*
- * $Id: BlockTally.java,v 1.12 2006-12-06 21:20:54 smorabito Exp $
+ * $Id: BlockTally.java,v 1.13 2007-03-17 04:19:29 smorabito Exp $
  */
 
 /*
@@ -65,8 +65,10 @@ public class BlockTally {
   // This is a map of URLs to peer identities.
   // JAVA5: Map<String,Set<PeerIdentity>>
   private Map missingBlockVoters = new HashMap();
-  // Ordered map of votes for this block.  The order is significant.
-  // JAVA5: OrderedHashMap<PeerIdentity,VoteBlock>
+  /** 
+   * Deprecated in Daemon 1.23.
+   * @deprecated
+   */
   private LinkedHashMap votes = new LinkedHashMap();
   // Name of the missing block, if any.
   private String missingBlockUrl;
@@ -90,7 +92,6 @@ public class BlockTally {
     disagreeVoters = new ArrayList();
     extraBlockVoters = new ArrayList();
     missingBlockVoters = new HashMap();
-    votes = new LinkedHashMap();
     missingBlockUrl = null;
     result = RESULT_HASHING;
   }
@@ -244,11 +245,19 @@ public class BlockTally {
     return (Set)missingBlockVoters.get(url);
   }
 
+  /**
+   * Deprecated in Daemon 1.23. 
+   * @deprecated
+   */
   public void addVoteForBlock(PeerIdentity id, VoteBlock vb) {
-    votes.put(id, vb);
+    throw new UnsupportedOperationException("No longer implemented.");
   }
 
+  /**
+   * Deprecated in Daemon 1.23. 
+   * @deprecated
+   */
   public LinkedHashMap getVotesForBlock() {
-    return votes;
+    throw new UnsupportedOperationException("No longer implemented.");
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.20 2007-02-22 05:35:49 smorabito Exp $
+ * $Id: TestV3Poller.java,v 1.21 2007-03-17 04:19:30 smorabito Exp $
  */
 
 /*
@@ -109,10 +109,12 @@ public class TestV3Poller extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
+    theDaemon = getMockLockssDaemon();
     TimeBase.setSimulated();
     this.tempDir = getTempDir();
     this.testau = setupAu();
     initRequiredServices();
+    setupRepo(testau);
     this.pollerId = idmgr.stringToPeerIdentity(localPeerKey);
     this.voters = makeVoters(initialPeers);
     this.pollerNonces = makeNonces();
@@ -126,7 +128,7 @@ public class TestV3Poller extends LockssTestCase {
   private MockArchivalUnit setupAu() {
     MockArchivalUnit mau = new MockArchivalUnit();
     mau.setAuId("mock");
-    MockPlugin plug = new MockPlugin();
+    MockPlugin plug = new MockPlugin(theDaemon);
     mau.setPlugin(plug);
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     cus.setEstimatedHashDuration(1000);
@@ -140,6 +142,14 @@ public class TestV3Poller extends LockssTestCase {
     cus.setHashItSource(files);
     cus.setFlatItSource(files);
     return mau;
+  }
+  
+  private void setupRepo(ArchivalUnit au) throws Exception {
+    MockLockssRepository repo = new MockLockssRepository("/foo", au);
+    for (int ix =  0; ix < urls.length; ix++) {
+      repo.createNewNode(urls[ix]);
+    }
+    ((MockLockssDaemon)theDaemon).setLockssRepository(repo, au);
   }
 
   private PeerIdentity[] makeVoters(List keys) throws Exception {
@@ -664,7 +674,6 @@ public class TestV3Poller extends LockssTestCase {
   }
 
   private void initRequiredServices() {
-    theDaemon = getMockLockssDaemon();
     pollmanager = theDaemon.getPollManager();
     hashService = theDaemon.getHashService();
 
