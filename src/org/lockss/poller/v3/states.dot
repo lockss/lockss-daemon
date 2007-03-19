@@ -1,6 +1,6 @@
 /* -*- Mode: C -*- */
 /*
- * $Id: states.dot,v 1.5 2006-01-12 03:13:30 smorabito Exp $
+ * $Id: states.dot,v 1.6 2007-03-19 19:57:19 smorabito Exp $
  */
 /*
 Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
@@ -54,16 +54,11 @@ digraph StateMachine {
     ProveRemainingEffort -> SendPollProof [label="evtOk",fontsize="10"];
     SendPollProof -> WaitNominate [label="evtOk",fontsize="10"];
     WaitNominate -> SendVoteRequest [label="msgNominate",fontsize="10"];
-    WaitVote -> TallyVote [label="msgVote",fontsize="10"];
-    TallyVote -> TallyVote [label="evtWaitTallyComplete",fontsize="10"];
-    TallyVote -> SendVoteRequest [label="incomplete",fontsize="10"];
     SendVoteRequest -> WaitVote [label="evtOk",fontsize="10"];
-    TallyVote -> ProveRepairEffort [label="needRepair",fontsize="10"];
-    TallyVote -> SendReceipt [label="done",fontsize="10"];
-    ProveRepairEffort -> SendRepairRequest [label="evtOk",fontsize="10"];
-    SendRepairRequest -> WaitRepair [label="evtOk",fontsize="10"];
-    WaitRepair -> ProcessRepair [label="msgRepair",fontsize="10"];
-    ProcessRepair -> TallyVote [label="repairOk",fontsize="10"];
+    WaitVote -> TallyVote [label="msgVote",fontsize="10"];
+    TallyVote -> TallyVote [label="evtWaitBlockComplete",fontsize="10"];
+    TallyVote -> SendVoteRequest [label="evtVoteIncomplete",fontsize="10"];
+    TallyVote -> SendReceipt [label="evtVoteComplete",fontsize="10"];
     SendReceipt -> PollerFinalize [label="evtOk",fontsize="10"];
   }
 
@@ -73,9 +68,10 @@ digraph StateMachine {
     fontsize="14";
     label="Voter State Table";
 
-    VerifyPollEffort [shape=box];
+    Initialize [shape=box];
     VoterFinalize [shape=box];
 
+    Initialize -> VerifyPollEffort [label="msgPoll",fontsize="10"];
     VerifyPollEffort -> ProvePollAck [label="evtOk",fontsize="10"];
     ProvePollAck -> SendPollAck [label="evtOk",fontsize="10"];
     SendPollAck -> WaitPollProof [label="evtOk",fontsize="10"];
@@ -106,6 +102,4 @@ digraph StateMachine {
   SendVoteRequest -> WaitReceipt [style=dotted];
   SendPollProof -> WaitPollProof [style=dotted];
   SendReceipt -> WaitReceipt [style=dotted];
-  SendRepairRequest -> WaitReceipt [style=dotted];
-  SendRepair -> WaitRepair [style=dotted];
 }
