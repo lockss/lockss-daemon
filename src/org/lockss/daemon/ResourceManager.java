@@ -1,8 +1,8 @@
 /*
- * $Id: ResourceManager.java,v 1.10 2007-03-14 23:42:16 thib_gc Exp $
+ * $Id: ResourceManager.java,v 1.11 2007-03-19 21:31:49 thib_gc Exp $
  *
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -47,7 +47,7 @@ public class ResourceManager extends BaseLockssManager  {
   /**
    * <p>A logger for use by this class.</p>
    */
-  protected static Logger log = Logger.getLogger("ResourceManager");
+  protected static Logger logger = Logger.getLogger("ResourceManager");
 
   /**
    * <p>A map keyed by resource identifiers; the values are ownership
@@ -85,14 +85,17 @@ public class ResourceManager extends BaseLockssManager  {
   private boolean reserve(String resource, Object token) {
     // assumes synchronized
     Object curTok = inUse.get(resource);
+    boolean ret = false;
     if (curTok == null) {
       inUse.put(resource, token);
-      return true;
+      ret = true;
     } else if (curTok.equals(token)) {
-      return true;
-    } else {
-      return false;
+      ret = true;
     }
+    if (ret) {
+      logger.info("Resource " + resource + " held by token " + token);
+    }
+    return ret;
   }
 
   /**
@@ -107,14 +110,17 @@ public class ResourceManager extends BaseLockssManager  {
   private boolean release(String resource, Object token) {
     // assumes synchronized
     Object curTok = inUse.get(resource);
+    boolean ret = false;
     if (curTok == null) {
-      return true;
+      ret = true;
     } else if (curTok.equals(token)) {
       inUse.remove(resource);
-      return true;
-    } else {
-      return false;
+      ret = true;
     }
+    if (ret) {
+      logger.info("Resource " + resource + " no longer held by " + token);
+    }
+    return ret;
   }
 
   /**
@@ -267,5 +273,5 @@ public class ResourceManager extends BaseLockssManager  {
    * <p>An internal prefix to build UDP port identifiers.</p>
    */
   private static final String UDP_PREFIX = "udp:";
-
+  
 }
