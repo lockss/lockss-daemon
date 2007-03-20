@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.214 2007-03-17 21:31:30 dshr Exp $
+ $Id: build.xml,v 1.215 2007-03-20 00:43:18 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
@@ -261,6 +261,7 @@ Args:
 
   <property name="requires-1.4" value="test/requires-1.4"/>
   <property name="requires-1.5" value="test/requires-1.5"/>
+  <property name="requires-1.6" value="test/requires-1.6"/>
 
   <!--  Compiler options -->
   <property name="javac.debug"             value="on" />
@@ -505,16 +506,23 @@ Test results in ${test.results}
      </or>
     </condition>
 
-    <!-- Require at least Java 1.4, but allow builds if force is set -->
+    <condition property="is-java-1.6">
+     <or>
+      <equals arg1="1.6" arg2="${ant.java.version}"/>
+      <equals arg1="1.7" arg2="${ant.java.version}"/>
+     </or>
+    </condition>
+
+    <!-- Require at least Java 1.5, but allow builds if force is set -->
     <condition property="is-sufficient-java-version">
      <or>
-      <istrue value="${is-java-1.4}" />
+      <istrue value="${is-java-1.5}" />
       <istrue value="${force}" />
      </or>
     </condition>
 
     <fail unless="is-sufficient-java-version">
-Java ${ant.java.version} found, 1.4 required
+Java ${ant.java.version} found, 1.5 required
     </fail>
 
     <condition property="detected.os" value="unix">
@@ -560,6 +568,12 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
   <target name="-check-if-1.5" depends="prepare" >
     <fail unless="is-java-1.5">
 The target you have selected requires compiling under JDK 1.5.  Use the rant -1.5 option
+    </fail>
+  </target>
+
+  <target name="-check-if-1.6" depends="prepare" >
+    <fail unless="is-java-1.6">
+The target you have selected requires compiling under JDK 1.6.  Use the rant -1.6 option
     </fail>
   </target>
 
@@ -684,6 +698,7 @@ The target you have selected requires compiling under JDK 1.5.  Use the rant -1.
        <include name="**/*.java"/>
        <excludesfile name="${requires-1.4}" unless="is-java-1.4" />
        <excludesfile name="${requires-1.5}" unless="is-java-1.5" />
+       <excludesfile name="${requires-1.6}" unless="is-java-1.6" />
      </javacelem>
     </dojavac>
     <copy todir="${test.classes}" >
@@ -1512,6 +1527,7 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
           <excludesfile name="${excludesfile}" if="excludesfile" />
           <excludesfile name="${requires-1.4}" unless="is-java-1.4" />
           <excludesfile name="${requires-1.5}" unless="is-java-1.5" />
+          <excludesfile name="${requires-1.6}" unless="is-java-1.6" />
         </fileset>
       </batchtest>
      </junitelem>
@@ -1617,6 +1633,7 @@ Test results in ${test.results}
 	 <include name="**/${class}.java" />
          <excludesfile name="${requires-1.4}" unless="is-java-1.4" />
          <excludesfile name="${requires-1.5}" unless="is-java-1.5" />
+         <excludesfile name="${requires-1.6}" unless="is-java-1.6" />
       </fileset>
       <!-- test whether fileset is empty by converting it to a string -->
       <pathconvert refid="test.one.filesetid" property="test.one.files"
