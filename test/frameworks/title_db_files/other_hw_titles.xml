@@ -1344,7 +1344,7 @@
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
         <property name="key" value="base_url" />
-        <property name="value" value="http://ard.bmjjournals.com/" />
+        <property name="value" value="http://ard.bmj.com/" />
       </property>
       <property name="param.2">
         <property name="key" value="volume_name" />
@@ -1359,7 +1359,7 @@
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
         <property name="key" value="base_url" />
-        <property name="value" value="http://ard.bmjjournals.com/" />
+        <property name="value" value="http://ard.bmj.com/" />
       </property>
       <property name="param.2">
         <property name="key" value="volume_name" />
@@ -1464,7 +1464,7 @@
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
         <property name="key" value="base_url" />
-        <property name="value" value="http://bmj.bmjjournals.com/" />
+        <property name="value" value="http://www.bmj.com/" />
       </property>
       <property name="param.2">
         <property name="key" value="volume_name" />
@@ -1479,7 +1479,7 @@
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
         <property name="key" value="base_url" />
-        <property name="value" value="http://bmj.bmjjournals.com/" />
+        <property name="value" value="http://www.bmj.com/" />
       </property>
       <property name="param.2">
         <property name="key" value="volume_name" />
@@ -1494,7 +1494,7 @@
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
         <property name="key" value="base_url" />
-        <property name="value" value="http://bmj.bmjjournals.com/" />
+        <property name="value" value="http://www.bmj.com/" />
       </property>
       <property name="param.2">
         <property name="key" value="volume_name" />
@@ -1509,7 +1509,7 @@
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
         <property name="key" value="base_url" />
-        <property name="value" value="http://bmj.bmjjournals.com/" />
+        <property name="value" value="http://www.bmj.com/" />
       </property>
       <property name="param.2">
         <property name="key" value="volume_name" />
