@@ -1457,6 +1457,66 @@
       </property>
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
+    
+    <property name="HighWireBritishJournalofOphthalmology90">
+      <property name="title" value="British Journal of Ophthalmology Volume 90" />
+      <property name="journalTitle" value="British Journal of Ophthalmology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+        <property name="key" value="base_url" />
+        <property name="value" value="http://bjo.bmj.com/" />
+      </property>
+      <property name="param.2">
+        <property name="key" value="volume_name" />
+        <property name="value" value="90" />
+      </property>
+      <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
+    </property>
+
+    <property name="HighWireBritishJournalofOphthalmology91">
+      <property name="title" value="British Journal of Ophthalmology Volume 91" />
+      <property name="journalTitle" value="British Journal of Ophthalmology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+        <property name="key" value="base_url" />
+        <property name="value" value="http://bjo.bmj.com/" />
+      </property>
+      <property name="param.2">
+        <property name="key" value="volume_name" />
+        <property name="value" value="91" />
+      </property>
+      <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
+    </property>
+
+    <property name="HighWireBritishJournalofSportsMedicine39">
+      <property name="title" value="British Journal of Sports Medicine Volume 39" />
+      <property name="journalTitle" value="British Journal of Sports Medicine" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+        <property name="key" value="base_url" />
+        <property name="value" value="http://bjsm.bmj.com/" />
+      </property>
+      <property name="param.2">
+        <property name="key" value="volume_name" />
+        <property name="value" value="39" />
+      </property>
+      <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
+    </property>
+
+    <property name="HighWireBritishJournalofSportsMedicine40">
+      <property name="title" value="British Journal of Sports Medicine Volume 40" />
+      <property name="journalTitle" value="British Journal of Sports Medicine" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+        <property name="key" value="base_url" />
+        <property name="value" value="http://bjsm.bmj.com/" />
+      </property>
+      <property name="param.2">
+        <property name="key" value="volume_name" />
+        <property name="value" value="40" />
+      </property>
+      <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
+    </property>
 
     <property name="HighWireBMJ330">
       <property name="title" value="BMJ Volume 330" />
@@ -1518,47 +1578,17 @@
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
-    <property name="HighWireBMJCareerFocus332">
-      <property name="title" value="BMJ Career Focus Volume 332" />
-      <property name="journalTitle" value="BMJ Career Focus" />
+    <property name="HighWireEmergencyMedicineJournal22">
+      <property name="title" value="Emergency Medicine Journal Volume 22" />
+      <property name="journalTitle" value="Emergency Medicine Journal" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://careerfocus.bmjjournals.com/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://emj.bmj.com/" />
       </property>
       <property name="param.2">
-	<property name="key" value="volume_name" />
-	<property name="value" value="332" />
-      </property>
-      <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
-    </property>
-
-    <property name="HighWireBritishJournalofOphthalmology90">
-      <property name="title" value="British Journal of Ophthalmology Volume 90" />
-      <property name="journalTitle" value="British Journal of Ophthalmology" />
-      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
-      <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://bjo.bmjjournals.com/" />
-      </property>
-      <property name="param.2">
-	<property name="key" value="volume_name" />
-	<property name="value" value="90" />
-      </property>
-      <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
-    </property>
-
-    <property name="HighWireBritishJournalofSportsMedicine40">
-      <property name="title" value="British Journal of Sports Medicine Volume 40" />
-      <property name="journalTitle" value="British Journal of Sports Medicine" />
-      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
-      <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://bjsm.bmjjournals.com/" />
-      </property>
-      <property name="param.2">
-	<property name="key" value="volume_name" />
-	<property name="value" value="40" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="22" />
       </property>
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
@@ -1568,12 +1598,27 @@
       <property name="journalTitle" value="Emergency Medicine Journal" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://emj.bmjjournals.com/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://emj.bmj.com/" />
       </property>
       <property name="param.2">
-	<property name="key" value="volume_name" />
-	<property name="value" value="23" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="23" />
+      </property>
+      <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
+    </property>
+
+    <property name="HighWireEvidenceBasedMedicine10">
+      <property name="title" value="Evidence-Based Medicine Volume 10" />
+      <property name="journalTitle" value="Evidence-Based Medicine" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+        <property name="key" value="base_url" />
+        <property name="value" value="http://ebm.bmj.com/" />
+      </property>
+      <property name="param.2">
+        <property name="key" value="volume_name" />
+        <property name="value" value="10" />
       </property>
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
@@ -1583,12 +1628,27 @@
       <property name="journalTitle" value="Evidence-Based Medicine" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://ebm.bmjjournals.com/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://ebm.bmj.com/" />
       </property>
       <property name="param.2">
-	<property name="key" value="volume_name" />
-	<property name="value" value="11" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="11" />
+      </property>
+      <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
+    </property>
+
+    <property name="HighWireEvidenceBasedMentalHealth8">
+      <property name="title" value="Evidence-Based Mental Health Volume 8" />
+      <property name="journalTitle" value="Evidence-Based Mental Health" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+        <property name="key" value="base_url" />
+        <property name="value" value="http://ebmh.bmj.com/" />
+      </property>
+      <property name="param.2">
+        <property name="key" value="volume_name" />
+        <property name="value" value="8" />
       </property>
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
@@ -1598,12 +1658,27 @@
       <property name="journalTitle" value="Evidence-Based Mental Health" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://ebmh.bmjjournals.com/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://ebmh.bmj.com/" />
       </property>
       <property name="param.2">
-	<property name="key" value="volume_name" />
-	<property name="value" value="9" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="9" />
+      </property>
+      <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
+    </property>
+
+    <property name="HighWireEvidenceBasedNursing8">
+      <property name="title" value="Evidence-Based Nursing Volume 8" />
+      <property name="journalTitle" value="Evidence-Based Nursing" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+        <property name="key" value="base_url" />
+        <property name="value" value="http://ebn.bmj.com/" />
+      </property>
+      <property name="param.2">
+        <property name="key" value="volume_name" />
+        <property name="value" value="8" />
       </property>
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
@@ -1613,12 +1688,27 @@
       <property name="journalTitle" value="Evidence-Based Nursing" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://ebn.bmjjournals.com/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://ebn.bmj.com/" />
       </property>
       <property name="param.2">
-	<property name="key" value="volume_name" />
-	<property name="value" value="9" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="9" />
+      </property>
+      <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
+    </property>
+
+    <property name="HighWireGut54">
+      <property name="title" value="Gut Volume 54" />
+      <property name="journalTitle" value="Gut" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+         <property name="key" value="base_url" />
+         <property name="value" value="http://gut.bmj.com/" />
+      </property>
+      <property name="param.2">
+         <property name="key" value="volume_name" />
+         <property name="value" value="54" />
       </property>
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
@@ -1628,12 +1718,27 @@
       <property name="journalTitle" value="Gut" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://gut.bmjjournals.com/" />
+         <property name="key" value="base_url" />
+         <property name="value" value="http://gut.bmj.com/" />
       </property>
       <property name="param.2">
-	<property name="key" value="volume_name" />
-	<property name="value" value="55" />
+         <property name="key" value="volume_name" />
+         <property name="value" value="55" />
+      </property>
+      <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
+    </property>
+
+    <property name="HighWireHeart91">
+      <property name="title" value="Heart Volume 91" />
+      <property name="journalTitle" value="Heart" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+        <property name="key" value="base_url" />
+        <property name="value" value="http://heart.bmj.com/" />
+      </property>
+      <property name="param.2">
+        <property name="key" value="volume_name" />
+        <property name="value" value="91" />
       </property>
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
@@ -1643,12 +1748,27 @@
       <property name="journalTitle" value="Heart" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://heart.bmjjournals.com/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://heart.bmj.com/" />
       </property>
       <property name="param.2">
-	<property name="key" value="volume_name" />
-	<property name="value" value="92" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="92" />
+      </property>
+      <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
+    </property>
+
+    <property name="HighWireInjuryPrevention11">
+      <property name="title" value="Injury Prevention Volume 11" />
+      <property name="journalTitle" value="Injury Prevention" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+        <property name="key" value="base_url" />
+        <property name="value" value="http://ip.bmj.com/" />
+      </property>
+      <property name="param.2">
+        <property name="key" value="volume_name" />
+        <property name="value" value="11" />
       </property>
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
@@ -1658,12 +1778,27 @@
       <property name="journalTitle" value="Injury Prevention" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://ip.bmjjournals.com/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://ip.bmj.com/" />
       </property>
       <property name="param.2">
-	<property name="key" value="volume_name" />
-	<property name="value" value="12" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="12" />
+      </property>
+      <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
+    </property>
+
+    <property name="HighWireJournalofClinicalPathology58">
+      <property name="title" value="Journal of Clinical Pathology Volume 58" />
+      <property name="journalTitle" value="Journal of Clinical Pathology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+        <property name="key" value="base_url" />
+        <property name="value" value="http://jcp.bmj.com/" />
+      </property>
+      <property name="param.2">
+        <property name="key" value="volume_name" />
+        <property name="value" value="58" />
       </property>
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
@@ -1673,12 +1808,27 @@
       <property name="journalTitle" value="Journal of Clinical Pathology" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://jcp.bmjjournals.com/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://jcp.bmj.com/" />
       </property>
       <property name="param.2">
-	<property name="key" value="volume_name" />
-	<property name="value" value="59" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="59" />
+      </property>
+      <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
+    </property>
+
+    <property name="HighWireJournalofEpidemiologyCommunityHealth59">
+      <property name="title" value="Journal of Epidemiology &amp; Community Health Volume 59" />
+      <property name="journalTitle" value="Journal of Epidemiology &amp; Community Health" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+        <property name="key" value="base_url" />
+        <property name="value" value="http://jech.bmj.com/" />
+      </property>
+      <property name="param.2">
+        <property name="key" value="volume_name" />
+        <property name="value" value="59" />
       </property>
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
@@ -1688,12 +1838,27 @@
       <property name="journalTitle" value="Journal of Epidemiology &amp; Community Health" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://jech.bmjjournals.com/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://jech.bmj.com/" />
       </property>
       <property name="param.2">
-	<property name="key" value="volume_name" />
-	<property name="value" value="60" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="60" />
+      </property>
+      <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
+    </property>
+
+    <property name="HighWireJournalofMedicalEthics31">
+      <property name="title" value="Journal of Medical Ethics Volume 31" />
+      <property name="journalTitle" value="Journal of Medical Ethics" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+        <property name="key" value="base_url" />
+        <property name="value" value="http://jme.bmj.com/" />
+      </property>
+      <property name="param.2">
+        <property name="key" value="volume_name" />
+        <property name="value" value="31" />
       </property>
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
@@ -1703,12 +1868,27 @@
       <property name="journalTitle" value="Journal of Medical Ethics" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://jme.bmjjournals.com/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://jme.bmj.com/" />
       </property>
       <property name="param.2">
-	<property name="key" value="volume_name" />
-	<property name="value" value="32" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="32" />
+      </property>
+      <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
+    </property>
+
+    <property name="HighWireJournalofMedicalGenetics42">
+      <property name="title" value="Journal of Medical Genetics Volume 42" />
+      <property name="journalTitle" value="Journal of Medical Genetics" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+        <property name="key" value="base_url" />
+        <property name="value" value="http://jmg.bmj.com/" />
+      </property>
+      <property name="param.2">
+        <property name="key" value="volume_name" />
+        <property name="value" value="42" />
       </property>
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
@@ -1718,12 +1898,27 @@
       <property name="journalTitle" value="Journal of Medical Genetics" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://jmg.bmjjournals.com/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://jmg.bmj.com/" />
       </property>
       <property name="param.2">
-	<property name="key" value="volume_name" />
-	<property name="value" value="43" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="43" />
+      </property>
+      <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
+    </property>
+
+    <property name="HighWireJournalofNeurologyNeurosurgeryPsychiatry76">
+      <property name="title" value="Journal of Neurology, Neurosurgery &amp; Psychiatry Volume 76" />
+      <property name="journalTitle" value="Journal of Neurology, Neurosurgery &amp; Psychiatry" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+        <property name="key" value="base_url" />
+        <property name="value" value="http://jnnp.bmj.com/" />
+      </property>
+      <property name="param.2">
+        <property name="key" value="volume_name" />
+        <property name="value" value="76" />
       </property>
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
@@ -1733,12 +1928,12 @@
       <property name="journalTitle" value="Journal of Neurology, Neurosurgery &amp; Psychiatry" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://jnnp.bmjjournals.com/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://jnnp.bmj.com/" />
       </property>
       <property name="param.2">
-	<property name="key" value="volume_name" />
-	<property name="value" value="77" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="77" />
       </property>
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
@@ -1748,12 +1943,42 @@
       <property name="journalTitle" value="Medical Humanities" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://mh.bmjjournals.com/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://mh.bmj.com/" />
       </property>
       <property name="param.2">
-	<property name="key" value="volume_name" />
-	<property name="value" value="31" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="31" />
+      </property>
+      <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
+    </property>
+
+    <property name="HighWireMedicalHumanities32">
+      <property name="title" value="Medical Humanities Volume 32" />
+      <property name="journalTitle" value="Medical Humanities" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+        <property name="key" value="base_url" />
+        <property name="value" value="http://mh.bmj.com/" />
+      </property>
+      <property name="param.2">
+        <property name="key" value="volume_name" />
+        <property name="value" value="32" />
+      </property>
+      <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
+    </property>
+
+    <property name="HighWireOccupationalandEnvironmentalMedicine62">
+      <property name="title" value="Occupational and Environmental Medicine Volume 62" />
+      <property name="journalTitle" value="Occupational and Environmental Medicine" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+        <property name="key" value="base_url" />
+        <property name="value" value="http://oem.bmj.com/" />
+      </property>
+      <property name="param.2">
+        <property name="key" value="volume_name" />
+        <property name="value" value="62" />
       </property>
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
@@ -1763,12 +1988,27 @@
       <property name="journalTitle" value="Occupational and Environmental Medicine" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://oem.bmjjournals.com/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://oem.bmj.com/" />
       </property>
       <property name="param.2">
-	<property name="key" value="volume_name" />
-	<property name="value" value="63" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="63" />
+      </property>
+      <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
+    </property>
+
+    <property name="HighWirePostgraduateMedicalJournal81">
+      <property name="title" value="Postgraduate Medical Journal Volume 81" />
+      <property name="journalTitle" value="Postgraduate Medical Journal" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pmj.bmj.com/" />
+      </property>
+      <property name="param.2">
+        <property name="key" value="volume_name" />
+        <property name="value" value="81" />
       </property>
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
@@ -1778,12 +2018,57 @@
       <property name="journalTitle" value="Postgraduate Medical Journal" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pmj.bmjjournals.com/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pmj.bmj.com/" />
       </property>
       <property name="param.2">
-	<property name="key" value="volume_name" />
-	<property name="value" value="82" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="82" />
+      </property>
+      <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
+    </property>
+
+    <property name="HighWirePracticalNeurology5">
+      <property name="title" value="Practical Neurology Volume 5" />
+      <property name="journalTitle" value="Practical Neurology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pn.bmj.com/" />
+      </property>
+      <property name="param.2">
+        <property name="key" value="volume_name" />
+        <property name="value" value="5" />
+      </property>
+      <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
+    </property>
+
+    <property name="HighWirePracticalNeurology6">
+      <property name="title" value="Practical Neurology Volume 6" />
+      <property name="journalTitle" value="Practical Neurology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pn.bmj.com/" />
+      </property>
+      <property name="param.2">
+        <property name="key" value="volume_name" />
+        <property name="value" value="6" />
+      </property>
+      <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
+    </property>
+
+    <property name="HighWireQualityandSafetyinHealthCare14">
+      <property name="title" value="Quality and Safety in Health Care Volume 14" />
+      <property name="journalTitle" value="Quality and Safety in Health Care" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+        <property name="key" value="base_url" />
+        <property name="value" value="http://qhc.bmj.com/" />
+      </property>
+      <property name="param.2">
+        <property name="key" value="volume_name" />
+        <property name="value" value="14" />
       </property>
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
@@ -1793,12 +2078,27 @@
       <property name="journalTitle" value="Quality and Safety in Health Care" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://qhc.bmjjournals.com/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://qhc.bmj.com/" />
       </property>
       <property name="param.2">
-	<property name="key" value="volume_name" />
-	<property name="value" value="15" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="15" />
+      </property>
+      <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
+    </property>
+
+    <property name="HighWireSexuallyTransmittedInfections81">
+      <property name="title" value="Sexually Transmitted Infections Volume 81" />
+      <property name="journalTitle" value="Sexually Transmitted Infections" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+        <property name="key" value="base_url" />
+        <property name="value" value="http://sti.bmj.com/" />
+      </property>
+      <property name="param.2">
+        <property name="key" value="volume_name" />
+        <property name="value" value="81" />
       </property>
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
@@ -1808,12 +2108,27 @@
       <property name="journalTitle" value="Sexually Transmitted Infections" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://sti.bmjjournals.com/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://sti.bmj.com/" />
       </property>
       <property name="param.2">
-	<property name="key" value="volume_name" />
-	<property name="value" value="82" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="82" />
+      </property>
+      <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
+    </property>
+
+    <property name="HighWireThorax60">
+      <property name="title" value="Thorax Volume 60" />
+      <property name="journalTitle" value="Thorax" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+        <property name="key" value="base_url" />
+        <property name="value" value="http://thorax.bmj.com/" />
+      </property>
+      <property name="param.2">
+        <property name="key" value="volume_name" />
+        <property name="value" value="60" />
       </property>
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
@@ -1823,12 +2138,12 @@
       <property name="journalTitle" value="Thorax" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://thorax.bmjjournals.com/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://thorax.bmj.com/" />
       </property>
       <property name="param.2">
-	<property name="key" value="volume_name" />
-	<property name="value" value="61" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="61" />
       </property>
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
@@ -1838,12 +2153,42 @@
       <property name="journalTitle" value="Tobacco Control" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://tc.bmjjournals.com/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://tc.bmj.com/" />
       </property>
       <property name="param.2">
-	<property name="key" value="volume_name" />
-	<property name="value" value="15" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="15" />
+      </property>
+      <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
+    </property>
+
+    <property name="HighWireTobaccoControl14">
+      <property name="title" value="Tobacco Control Volume 14" />
+      <property name="journalTitle" value="Tobacco Control" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+        <property name="key" value="base_url" />
+        <property name="value" value="http://tc.bmj.com/" />
+      </property>
+      <property name="param.2">
+        <property name="key" value="volume_name" />
+        <property name="value" value="14" />
+      </property>
+      <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
+    </property>
+
+    <property name="HighWireTobaccoControl15">
+      <property name="title" value="Tobacco Control Volume 15" />
+      <property name="journalTitle" value="Tobacco Control" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+        <property name="key" value="base_url" />
+        <property name="value" value="http://tc.bmj.com/" />
+      </property>
+      <property name="param.2">
+        <property name="key" value="volume_name" />
+        <property name="value" value="15" />
       </property>
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
