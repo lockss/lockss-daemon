@@ -40,6 +40,21 @@
     <!-- Titles -->
     <property name="org.lockss.title">
 
+    <property name="AppleValleyReview2006">
+      <property name="title" value="Apple Valley Review 2006" />
+      <property name="journalTitle" value="Apple Valley" />
+      <property name="plugin" value="org.lockss.plugin.applevalleyreview.AppleValleyReviewPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.leahbrowning.net/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="year" />
+	<property name="value" value="2006" />
+      </property>
+      <property name="attributes.rights" value="openaccess" />
+    </property>
+    
     <property name="EvergreenReview110">
       <property name="title" value="Evergreen Review 110" />
       <property name="journalTitle" value="Evergreen Review" />
