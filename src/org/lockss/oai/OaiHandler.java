@@ -1,5 +1,5 @@
 /*
- * $Id: OaiHandler.java,v 1.13 2007-01-17 19:51:48 troberts Exp $
+ * $Id: OaiHandler.java,v 1.14 2007-03-26 20:48:54 troberts Exp $
  */
 
 /*
@@ -233,21 +233,21 @@ public class OaiHandler {
 	  // we must encode any special characters in it.
  	  listRecords = new ListRecords(baseUrl, resumptionToken);
 	}
-       } catch (IOException ioe) {
-         logError("In getting ResumptionToken and requesting new ListRecords",
-		  ioe);
-       } catch (NoSuchFieldException nsfe) {
- 	logError("In getting ResumptionToken and requesting new ListRecords",
- 		 nsfe);
-       } catch (TransformerException tfe) {
- 	logError("In getting ResumptionToken and requesting new ListRecords",
- 		 tfe);
+      } catch (IOException ioe) {
+	logError("In getting ResumptionToken and requesting new ListRecords",
+	         ioe);
+      } catch (NoSuchFieldException nsfe) {
+	logError("In getting ResumptionToken and requesting new ListRecords",
+	         nsfe);
+      } catch (TransformerException tfe) {
+	logError("In getting ResumptionToken and requesting new ListRecords",
+	         tfe);
       } catch (SAXException saxe) {
 	logError("In getting ResumptionToken and requesting new ListRecords",
-		 saxe);
+	         saxe);
       } catch (ParserConfigurationException pce) {
 	logError("In getting ResumptionToken and requesting new ListRecords",
-		 pce);
+	         pce);
       }
 
     } //loop until there is no resumptionToken
@@ -306,7 +306,7 @@ public class OaiHandler {
    * XXX need to be rewritten to reflect errors in crawlStatus
    */
   protected void logError(String msg, Exception ex) {
-    logger.error(msg, ex);
+    logger.siteError(msg, ex);
     errList.addFirst(ex);
   }
 

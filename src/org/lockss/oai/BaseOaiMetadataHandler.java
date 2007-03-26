@@ -1,5 +1,5 @@
 /*
- * $Id: BaseOaiMetadataHandler.java,v 1.6 2005-10-11 05:45:13 tlipkis Exp $
+ * $Id: BaseOaiMetadataHandler.java,v 1.7 2007-03-26 20:48:54 troberts Exp $
  */
 
 /*
@@ -114,8 +114,8 @@ public class BaseOaiMetadataHandler implements OaiMetadataHandler{
 	    articleUrls.add(str);
 	    logger.debug3("node (" + i + ") value = " + str);
 	  } else {
-	    logger.error("No XML elements with the tag name : "+urlContainerTagName+
-			 " in the namespace : "+metadataNamespaceUrl);
+	    logger.siteError("No XML elements with the tag name : "+urlContainerTagName+
+	                     " in the namespace : "+metadataNamespaceUrl);
 	  }
 	}
     }

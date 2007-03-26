@@ -1,5 +1,5 @@
 /*
- * $Id: PermissionMap.java,v 1.18 2007-03-14 05:52:48 tlipkis Exp $
+ * $Id: PermissionMap.java,v 1.19 2007-03-26 20:48:53 troberts Exp $
  */
 
 /*
@@ -217,7 +217,7 @@ public class PermissionMap {
       case PermissionRecord.PERMISSION_OK:
         return true;
       case PermissionRecord.PERMISSION_NOT_OK:
-        logger.error("No permission statement on manifest page: " + pUrl);
+        logger.siteError("No permission statement on manifest page: " + pUrl);
         crawlStatus.setCrawlError("No permission statement on manifest page.");
         return false;
       case PermissionRecord.PERMISSION_MISSING:
@@ -356,7 +356,7 @@ public class PermissionMap {
 				    "Can't store page: " + ex.getMessage());
       crawlErr = Crawler.STATUS_REPO_ERR;
     } catch (CacheException ex) {
-      logger.error("CacheException reading permission page", ex);
+      logger.siteError("CacheException reading permission page", ex);
       status = PermissionRecord.PERMISSION_FETCH_FAILED;
       crawlStatus.signalErrorForUrl(pUrl, ex.getMessage());
       crawlErr = "Cannot fetch permission page.";
@@ -416,7 +416,7 @@ public class PermissionMap {
       }
       // if we didn't find at least one required lockss permission - fail.
       if(needPermission) {
-        logger.error("No (C)LOCKSS crawl permission on " + pUrl);
+        logger.siteError("No (C)LOCKSS crawl permission on " + pUrl);
         is.close();
         return false;
       }
@@ -429,7 +429,7 @@ public class PermissionMap {
       Reader reader = new InputStreamReader(is, Constants.DEFAULT_ENCODING);
       if (pluginPermissionChecker != null) {
 	if (!pluginPermissionChecker.checkPermission(pHelper, reader, pUrl)) {
-	  logger.error("No plugin crawl permission on " + pUrl);
+	  logger.siteError("No plugin crawl permission on " + pUrl);
 	  is.close();
 	  return false;
 	} else {

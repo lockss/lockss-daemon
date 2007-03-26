@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.58 2007-02-25 23:06:38 dshr Exp $
+ * $Id: FollowLinkCrawler.java,v 1.59 2007-03-26 20:48:53 troberts Exp $
  */
 
 /*
@@ -345,7 +345,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	failedUrls.add(uc.getUrl());
 	crawlStatus.signalErrorForUrl(uc.getUrl(), ex.getMessage());
 	if (ex.isAttributeSet(CacheException.ATTRIBUTE_FAIL)) {
-	  logger.error("Problem caching "+uc+". Continuing", ex);
+	  logger.siteError("Problem caching "+uc+". Continuing", ex);
 	  error = Crawler.STATUS_FETCH_ERROR;
 	} else {
 	  logger.warning(uc+" not found on publisher's site", ex);
@@ -413,7 +413,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 					      "Plugin LinkExtractor error: " +
 					      e.getMessage());
 		error = Crawler.STATUS_PLUGIN_ERROR;
-	      }		
+	      }
 	    }
 	    parsedPages.add(uc.getUrl());
 	  }
