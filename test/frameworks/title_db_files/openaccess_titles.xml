@@ -40,6 +40,36 @@
     <!-- Titles -->
     <property name="org.lockss.title">
 
+    <property name="EntelequiaRevista]InterdisciplinarNumber2">
+      <property name="title" value="Entelequia. Revista Interdisciplinar Number 2" />
+      <property name="journalTitle" value="Entelequia. Revista Interdisciplinar" />
+      <property name="plugin" value="edu.nyu.plugin.entelequia.EntelequiaPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.eumed.net/entelequia/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="2" />
+      </property>
+      <property name="attributes.rights" value="openaccess" />
+    </property>
+    
+    <property name="EntelequiaRevista]InterdisciplinarNumber1">
+      <property name="title" value="Entelequia. Revista Interdisciplinar Number 1" />
+      <property name="journalTitle" value="Entelequia. Revista Interdisciplinar" />
+      <property name="plugin" value="edu.nyu.plugin.entelequia.EntelequiaPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.eumed.net/entelequia/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume" />
+	<property name="value" value="1" />
+      </property>
+      <property name="attributes.rights" value="openaccess" />
+    </property>
+    
     <property name="AppleValleyReview2006">
       <property name="title" value="Apple Valley Review 2006" />
       <property name="journalTitle" value="Apple Valley" />
