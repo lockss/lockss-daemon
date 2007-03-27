@@ -1,30 +1,40 @@
 <map>
   <entry>
     <string>plugin_identifier</string>
-    <string>edu.nyu.plugin.EntelequiaPlugin</string>
+    <string>edu.nyu.plugin.entelequia.EntelequiaPlugin</string>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
     <long>6000</long>
   </entry>
   <entry>
-    <string>plugin_name</string>
-    <string>Entelequia Plugin</string>
+    <string>au_name</string>
+    <string>&quot;Entelequia. Revista Interdisciplinar Number %d&quot;, volume</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
     <long>1209600000</long>
   </entry>
   <entry>
+    <string>plugin_name</string>
+    <string>Entelequia Plugin</string>
+  </entry>
+  <entry>
     <string>au_crawlrules</string>
     <list>
       <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;%s/lockss/manifest%s.html%.03d&quot;, base_url, volume</string>
+      <string>1,&quot;%slockss/manifest%.03d\.html&quot;, base_url, volume</string>
+      <string>1,&quot;%se(n|s)\.ant\.php\?a=%d&quot;, base_url, volume</string>
+      <string>1,&quot;%spdf/e.*\.pdf&quot;, base_url</string>
+      <string>1,&quot;%se(n|s)\.art.php\?a=%.02d&quot;, base_url, volume</string>
+      <string>1,&quot;%se(n|s)\.(boards|contact|editorial|call|faq)\.php&quot;, base_url</string>
+      <string>1,&quot;%sxml/dc/%.02d&quot;, base_url, volume</string>
+      <string>1,&quot;.*\.([cC][sS][sS]|[gG][iI][fF]|[jJ][pP][eE][gG]|[jJ][pP][gG]|[jJ][sS]|[pP][nN][gG]|[mM][pP]3)$&quot;</string>
     </list>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%s/lockss/manifest%s.html%.03d&quot;, base_url, volume</string>
+    <string>&quot;%slockss/manifest%.03d.html&quot;, base_url, volume</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
