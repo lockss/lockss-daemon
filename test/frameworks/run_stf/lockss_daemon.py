@@ -420,6 +420,12 @@ class Client:
 
         (summary, table) = self.__getStatusTable('crawl_status_table', key)
         return table
+    
+    def getSingleCrawlStatus(self, au, key):
+        """
+        Return the detailed crawl status table for the specified AU and key.
+        """
+        return self.__getStatusTable('single_crawl_status_table', key)
 
     def getAuRepository(self, au):
         """ RepositoryStatus table does not accept key, so loop through it until
@@ -616,22 +622,42 @@ class Client:
         else:
             url = au.startUrl
         tab = self.getCrawlStatus(au)
+        # Look for each 'Repair' crawl.
         for row in tab:
-            if not row["start_urls"] == url or not row['crawl_type'] == "Repair":
+            if not row['crawl_type'] == "Repair" and \
+                   row['crawl_status']['key'] == "Successful":
                 continue
-            return not row['sources'] == "Publisher"
+            # This is a successful repair crawl, get the key to look
+            # into the detail status table.
+            crawlkey = row['crawl_status']['key']
+            (summary, repairTab) = self.getSingleCrawlStatus(au, crawlkey)
+            
+            return (summary['Starting Url(s)'] == ("[%s]" % node.url) and \
+                    not summary['Source'] == 'Publisher')
+        
+        #otherwise
         return False
 
     def isContentRepairedFromPublisher(self, au, node):
         """ Return true iff the given content node has been repaired by
         crawling the publisher. """
         tab = self.getCrawlStatus(au)
+        # Look for each 'Repair' crawl.
         for row in tab:
-            if not row["start_urls"] == node.url or not row['crawl_type'] == "Repair":
+            if not row['crawl_type'] == "Repair" and \
+                   row['crawl_status']['key'] == "Successful":
                 continue
-            return not row['sources'] == "Publisher"
+            # This is a successful repair crawl, get the key to look
+            # into the detail status table.
+            crawlkey = row['crawl_status']['key']
+            (summary, repairTab) = self.getSingleCrawlStatus(au, crawlkey)
+            
+            return (summary['Starting Url(s)'] == ("[%s]" % node.url) and \
+                    summary['Source'] == 'Publisher')
+        
+        #otherwise
         return False
-
+            
     def isNameRepaired(self, au, node=None):
         """ Return true if the AU has been repaired by non-ranged name poll """
         tab = self.getAuV1Polls(au)
