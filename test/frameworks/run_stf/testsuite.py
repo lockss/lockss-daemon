@@ -2097,12 +2097,12 @@ def immediateFailingTests():
 ##
 def postTagTests():
     suite = unittest.TestSuite()
-    suite.addTest(simpleTests())
-    suite.addTest(rangedTests())
-    suite.addTest(randomTests())
+#    suite.addTest(simpleTests())
+#    suite.addTest(rangedTests())
+#    suite.addTest(randomTests())
     suite.addTest(tinyUiTests())
-    suite.addTest(repairFromCacheTests())
-    suite.addTest(totalLossRecoveryTests())
+#    suite.addTest(repairFromCacheTests())
+#    suite.addTest(totalLossRecoveryTests())
     suite.addTest(v3Tests())
     return suite
 
