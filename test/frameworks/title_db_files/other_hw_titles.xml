@@ -1764,7 +1764,7 @@
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
         <property name="key" value="base_url" />
-        <property name="value" value="http://ip.bmj.com/" />
+        <property name="value" value="http://injuryprevention.bmj.com/" />
       </property>
       <property name="param.2">
         <property name="key" value="volume_name" />
@@ -1779,7 +1779,7 @@
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
         <property name="key" value="base_url" />
-        <property name="value" value="http://ip.bmj.com/" />
+        <property name="value" value="http://injuryprevention.bmj.com/" />
       </property>
       <property name="param.2">
         <property name="key" value="volume_name" />
@@ -2154,7 +2154,7 @@
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
         <property name="key" value="base_url" />
-        <property name="value" value="http://tc.bmj.com/" />
+        <property name="value" value="http://tobaccocontrol.bmj.com/" />
       </property>
       <property name="param.2">
         <property name="key" value="volume_name" />
@@ -2169,7 +2169,7 @@
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
         <property name="key" value="base_url" />
-        <property name="value" value="http://tc.bmj.com/" />
+        <property name="value" value="http://tobaccocontrol.bmj.com/" />
       </property>
       <property name="param.2">
         <property name="key" value="volume_name" />
