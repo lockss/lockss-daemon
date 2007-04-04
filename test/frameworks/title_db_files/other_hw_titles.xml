@@ -2193,17 +2193,62 @@
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
+    <property name="HighWireCanadianMedicalAssociationJournal172">
+      <property name="title" value="Canadian Medical Association Journal Volume 172" />
+      <property name="journalTitle" value="Canadian Medical Association Journal" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+        <property name="key" value="base_url" />
+        <property name="value" value="http://www.cmaj.ca/" />
+      </property>
+      <property name="param.2">
+        <property name="key" value="volume_name" />
+        <property name="value" value="172" />
+      </property>
+      <property name="attributes.publisher" value="Canadian Medical Association" />
+    </property>
+
+    <property name="HighWireCanadianMedicalAssociationJournal173">
+      <property name="title" value="Canadian Medical Association Journal Volume 173" />
+      <property name="journalTitle" value="Canadian Medical Association Journal" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+        <property name="key" value="base_url" />
+        <property name="value" value="http://www.cmaj.ca/" />
+      </property>
+      <property name="param.2">
+        <property name="key" value="volume_name" />
+        <property name="value" value="173" />
+      </property>
+      <property name="attributes.publisher" value="Canadian Medical Association" />
+    </property>
+
     <property name="HighWireCanadianMedicalAssociationJournal174">
       <property name="title" value="Canadian Medical Association Journal Volume 174" />
       <property name="journalTitle" value="Canadian Medical Association Journal" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://www.cmaj.ca/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://www.cmaj.ca/" />
       </property>
       <property name="param.2">
-	<property name="key" value="volume_name" />
-	<property name="value" value="174" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="174" />
+      </property>
+      <property name="attributes.publisher" value="Canadian Medical Association" />
+    </property>
+
+    <property name="HighWireCanadianMedicalAssociationJournal175">
+      <property name="title" value="Canadian Medical Association Journal Volume 175" />
+      <property name="journalTitle" value="Canadian Medical Association Journal" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+        <property name="key" value="base_url" />
+        <property name="value" value="http://www.cmaj.ca/" />
+      </property>
+      <property name="param.2">
+        <property name="key" value="volume_name" />
+        <property name="value" value="175" />
       </property>
       <property name="attributes.publisher" value="Canadian Medical Association" />
     </property>
