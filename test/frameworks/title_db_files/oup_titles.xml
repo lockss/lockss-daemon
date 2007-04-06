@@ -3678,36 +3678,6 @@
       <property name="attributes.publisher" value="Oxford University Press"/>
     </property>
 
-    <property name="HighWireJNCIJournaloftheNationalCancerInstitute97">
-      <property name="title" value="JNCI Journal of the National Cancer Institute Volume 97"/>
-      <property name="journalTitle" value="JNCI Journal of the National Cancer Institute"/>
-      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin"/>
-      <property name="param.1">
-        <property name="key" value="base_url"/>
-        <property name="value" value="http://jnci.oxfordjournals.org/"/>
-      </property>
-      <property name="param.2">
-        <property name="key" value="volume_name"/>
-        <property name="value" value="97"/>
-      </property>
-      <property name="attributes.publisher" value="Oxford University Press"/>
-    </property>
-
-    <property name="HighWireJNCIJournaloftheNationalCancerInstitute98">
-      <property name="title" value="JNCI Journal of the National Cancer Institute Volume 98"/>
-      <property name="journalTitle" value="JNCI Journal of the National Cancer Institute"/>
-      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin"/>
-      <property name="param.1">
-        <property name="key" value="base_url"/>
-        <property name="value" value="http://jnci.oxfordjournals.org/"/>
-      </property>
-      <property name="param.2">
-        <property name="key" value="volume_name"/>
-        <property name="value" value="98"/>
-      </property>
-      <property name="attributes.publisher" value="Oxford University Press"/>
-    </property>
-
     <property name="HighWireJNCIJournaloftheNationalCancerInstitute99">
       <property name="title" value="JNCI Journal of the National Cancer Institute Volume 99"/>
       <property name="journalTitle" value="JNCI Journal of the National Cancer Institute"/>
@@ -5084,21 +5054,6 @@
       <property name="param.2">
         <property name="key" value="volume_name"/>
         <property name="value" value="6"/>
-      </property>
-      <property name="attributes.publisher" value="Oxford University Press"/>
-    </property>
-
-    <property name="HighWireJournaloftheNationalCancerInstitute98">
-      <property name="title" value="Journal of the National Cancer Institute Volume 98"/>
-      <property name="journalTitle" value="Journal of the National Cancer Institute"/>
-      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin"/>
-      <property name="param.1">
-        <property name="key" value="base_url"/>
-        <property name="value" value="http://jncicancerspectrum.oxfordjournals.org/"/>
-      </property>
-      <property name="param.2">
-        <property name="key" value="volume_name"/>
-        <property name="value" value="98"/>
       </property>
       <property name="attributes.publisher" value="Oxford University Press"/>
     </property>
@@ -7870,20 +7825,6 @@
       <property name="attributes.publisher" value="Oxford University Press"/>
     </property>
 
-    <property name="HighWireJournaloftheNationalCancerInstitute97">
-      <property name="title" value="Journal of the National Cancer Institute Volume 97"/>
-      <property name="journalTitle" value="Journal of the National Cancer Institute"/>
-      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin"/>
-      <property name="param.1">
-        <property name="key" value="base_url"/>
-        <property name="value" value="http://jncicancerspectrum.oxfordjournals.org/"/>
-      </property>
-      <property name="param.2">
-        <property name="key" value="volume_name"/>
-        <property name="value" value="97"/>
-      </property>
-      <property name="attributes.publisher" value="Oxford University Press"/>
-    </property>
   </property>
   <!-- End down titles -->
 </lockss-config>
