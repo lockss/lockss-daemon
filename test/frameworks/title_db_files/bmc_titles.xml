@@ -4751,6 +4751,139 @@
       <property name="attributes.publisher" value="BioMed Central" />
     </property>
 
+    <property name="BMCNeurology1">
+      <property name="title" value="BMC Neurology Volume 1" />
+      <property name="journalTitle" value="BMC Neurology" />
+      <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.biomedcentral.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="1" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="journal_issn" />
+	<property name="value" value="1471-2377" />
+      </property>
+      <property name="attributes.publisher" value="BioMed Central" />
+    </property>
+
+    <property name="BMCNeurology2">
+      <property name="title" value="BMC Neurology Volume 2" />
+      <property name="journalTitle" value="BMC Neurology" />
+      <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.biomedcentral.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="2" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="journal_issn" />
+	<property name="value" value="1471-2377" />
+      </property>
+      <property name="attributes.publisher" value="BioMed Central" />
+    </property>
+
+    <property name="BMCNeurology3">
+      <property name="title" value="BMC Neurology Volume 3" />
+      <property name="journalTitle" value="BMC Neurology" />
+      <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.biomedcentral.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="3" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="journal_issn" />
+	<property name="value" value="1471-2377" />
+      </property>
+      <property name="attributes.publisher" value="BioMed Central" />
+    </property>
+
+    <property name="BMCNeurology4">
+      <property name="title" value="BMC Neurology Volume 4" />
+      <property name="journalTitle" value="BMC Neurology" />
+      <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.biomedcentral.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="4" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="journal_issn" />
+	<property name="value" value="1471-2377" />
+      </property>
+      <property name="attributes.publisher" value="BioMed Central" />
+    </property>
+
+    <property name="BMCNeurology5">
+      <property name="title" value="BMC Neurology Volume 5" />
+      <property name="journalTitle" value="BMC Neurology" />
+      <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.biomedcentral.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="5" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="journal_issn" />
+	<property name="value" value="1471-2377" />
+      </property>
+      <property name="attributes.publisher" value="BioMed Central" />
+    </property>
+
+    <property name="BMCNeurology6">
+      <property name="title" value="BMC Neurology Volume 6" />
+      <property name="journalTitle" value="BMC Neurology" />
+      <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.biomedcentral.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="6" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="journal_issn" />
+	<property name="value" value="1471-2377" />
+      </property>
+      <property name="attributes.publisher" value="BioMed Central" />
+    </property>
+
+    <property name="BMCNeurology7">
+      <property name="title" value="BMC Neurology Volume 7" />
+      <property name="journalTitle" value="BMC Neurology" />
+      <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.biomedcentral.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="7" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="journal_issn" />
+	<property name="value" value="1471-2377" />
+      </property>
+      <property name="attributes.publisher" value="BioMed Central" />
+    </property>
+
     <property name="BMCNeuroscience1">
       <property name="title" value="BMC Neuroscience Volume 1" />
       <property name="journalTitle" value="BMC Neuroscience" />
