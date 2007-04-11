@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.36 2007-03-17 04:19:30 smorabito Exp $
+ * $Id: V3Voter.java,v 1.37 2007-04-11 22:01:44 smorabito Exp $
  */
 
 /*
@@ -742,8 +742,13 @@ public class V3Voter extends BasePoll {
   }
 
   private class BlockEventHandler implements BlockHasher.EventHandler {
-    public void blockStart(HashBlock block) { /* do nothing */ }
+    public void blockStart(HashBlock block) { 
+      log.debug2("Poll " + getKey() + ": Starting hash for block " 
+                 + block.getUrl());
+    }
     public void blockDone(HashBlock block) {
+      log.debug2("Poll " + getKey() + ": Ending hash for block " 
+                 + block.getUrl());
       blockHashComplete(block);
     }
   }
