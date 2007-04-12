@@ -1,85 +1,91 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Elements>
-  <MapElement>
-    <ElementKey>au_start_url</ElementKey>
-    <ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"%sacs/journals/toc.njs_select_issue?in_coden=%s&amp;in_volume=%d&amp;in_decade=%d", base_url, journal_key, volume, year</ElementValue>
-  </MapElement>
-  <MapElement>
-    <ElementKey>plugin_name</ElementKey>
-    <ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">ACS</ElementValue>
-  </MapElement>
-  <MapElement>
-    <ElementKey>au_crawl_depth</ElementKey>
-    <ElementValue xsi:type="java:java.lang.Integer" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">2</ElementValue>
-  </MapElement>
-  <MapElement>
-    <ElementKey>au_crawlrules</ElementKey>
-    <ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <string xsi:type="java:java.lang.String">1,"%sacs/journals/toc.njs_select.*in_coden=%s.*in_volume=%d.*", base_url, journal_key, volume</string>
-      <string xsi:type="java:java.lang.String">1,"%sacs/journals/toc.page.*incoden=%s.*involume=%d.*", base_url, journal_key, volume</string>
-      <string xsi:type="java:java.lang.String">4,"^%s", article_url</string>
-      <string xsi:type="java:java.lang.String">1,".*.gif"</string>
-      <string xsi:type="java:java.lang.String">1,".*.jpg"</string>
-      <string xsi:type="java:java.lang.String">1,".*.css"</string>
-      <string xsi:type="java:java.lang.String">1,"%s.*incoden=%s.*involume=%d", article_url, journal_key, volume</string>
-      <string xsi:type="java:java.lang.String">1,"%scgi-bin/article.cgi.*%s/%d/%d/.*", article_url, journal_key, year, volume</string>
-      <string xsi:type="java:java.lang.String">1,".*supporting_information.page.*"</string>
-    </ElementValue>
-  </MapElement>
-  <MapElement>
-    <ElementKey>au_name</ElementKey>
-    <ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"%s, %s, vol. %d", base_url_host, journal_key, volume</ElementValue>
-  </MapElement>
-  <MapElement>
-    <ElementKey>au_def_pause_time</ElementKey>
-    <ElementValue xsi:type="java:java.lang.Long" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">10000</ElementValue>
-  </MapElement>
-  <MapElement>
-    <ElementKey>plugin_config_props</ElementKey>
-    <ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <ConfigParamDescr>
-        <Key>base_url</Key>
-        <DisplayName>Base URL</DisplayName>
-        <Description>Usually of the form http://&lt;journal-name&gt;.com/</Description>
-        <Type>3</Type>
-        <Size>40</Size>
-        <Definitional>true</Definitional>
-      </ConfigParamDescr>
-      <ConfigParamDescr>
-        <Key>article_url</Key>
-        <DisplayName>Article URL</DisplayName>
-        <Description>base url for articles</Description>
-        <Type>3</Type>
-        <Size>40</Size>
-        <Definitional>true</Definitional>
-      </ConfigParamDescr>
-      <ConfigParamDescr>
-        <Key>journal_key</Key>
-        <DisplayName>Journal ID</DisplayName>
-        <Description>Key used to identify journal in script (e.g. 'jcisd8').</Description>
-        <Type>1</Type>
-        <Size>20</Size>
-        <Definitional>true</Definitional>
-      </ConfigParamDescr>
-      <ConfigParamDescr>
-        <Key>volume</Key>
-        <DisplayName>Volume No.</DisplayName>
-        <Type>6</Type>
-        <Size>8</Size>
-        <Definitional>true</Definitional>
-      </ConfigParamDescr>
-      <ConfigParamDescr>
-        <Key>year</Key>
-        <DisplayName>Year</DisplayName>
-        <Description>Four digit year (e.g., 2004)</Description>
-        <Type>4</Type>
-        <Size>4</Size>
-        <Definitional>true</Definitional>
-      </ConfigParamDescr>
-    </ElementValue>
-  </MapElement>
-  <MapElement>
-    <ElementKey>plugin_version</ElementKey>
-    <ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">1</ElementValue>
-  </MapElement>
-</Elements>
+<map>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>10000</long>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>au_crawl_depth</string>
+    <int>2</int>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;%s, %s, vol. %d&quot;, base_url_host, journal_key, volume</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>ACS</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,&quot;(%s|%s)acs/journals/toc.clockss_manifest\?incoden=%s&amp;involume=%d.*&quot;, base_url, article_url, journal_key, volume</string>
+      <string>1,&quot;%sacs/journals/toc.page.*incoden=%s.*involume=%d.*&quot;, base_url, journal_key, volume</string>
+      <string>4,&quot;^%s&quot;, article_url</string>
+      <string>1,&quot;.*.gif&quot;</string>
+      <string>1,&quot;.*.jpg&quot;</string>
+      <string>1,&quot;.*.css&quot;</string>
+      <string>1,&quot;%s.*incoden=%s.*involume=%d&quot;, article_url, journal_key, volume</string>
+      <string>1,&quot;%scgi-bin/(abstract|archive|article)\.cgi.*%s/[12][0-9][0-9][0-9]/%d/.*&quot;, article_url, journal_key, volume</string>
+      <string>1,&quot;.*supporting_information.page.*&quot;</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%sacs/journals/toc.clockss_manifest?incoden=%s&amp;involume=%d&quot;, base_url, journal_key, volume</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume</key>
+        <displayName>Volume No.</displayName>
+        <type>6</type>
+        <size>8</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>article_url</key>
+        <displayName>Article URL</displayName>
+        <description>base url for articles</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_key</key>
+        <displayName>Journal ID</displayName>
+        <description>Key used to identify journal in script (e.g. &apos;jcisd8&apos;).</description>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_manifest</string>
+    <list>
+      <string>&quot;%sacs/journals/toc.clockss_manifest?incoden=%s&amp;involume=%d&quot;, base_url, journal_key, volume</string>
+      <string>&quot;%sacs/journals/toc.clockss_manifest?incoden=%s&amp;involume=%d&quot;, article_url, journal_key, volume</string>
+    </list>
+  </entry>
+</map>
