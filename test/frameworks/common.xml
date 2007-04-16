@@ -336,6 +336,12 @@
         <property name="xpath" value="[attributes/publisher='American Society for Pharmacology and Experimental Therapeutics']" />
       </property>
 
+      <property name="ASA-CSSA-SSSA">
+        <property name="name" value="All American Society of Agronomy - Crop Science Society of America - Soil Science Society of America Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='ASA-CSSA-SSSA']" />
+      </property>
+
       <property name="American Society of Hematology">
         <property name="name" value="All American Society of Hematology Titles" />
         <property name="class" value="xpath" />
