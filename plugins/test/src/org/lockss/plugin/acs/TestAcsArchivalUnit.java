@@ -1,5 +1,5 @@
 /*
- * $Id: TestAcsArchivalUnit.java,v 1.8 2007-01-14 08:13:34 tlipkis Exp $
+ * $Id: TestAcsArchivalUnit.java,v 1.9 2007-04-16 17:15:13 troberts Exp $
  */
 
 /*
@@ -142,17 +142,6 @@ public class TestAcsArchivalUnit
     catch (ArchivalUnit.ConfigurationException e) {}
   }
 
-  public void testConstructNegativeYear() throws Exception {
-    URL a_url = new URL(ARTICLE_ROOT);
-    URL base = new URL(ROOT_URL);
-
-    try {
-      makeAu(base, a_url, JOURNAL_KEY, VOL_ID, -1);
-      fail("Should have thrown ArchivalUnit.ConfigurationException");
-    }
-    catch (ArchivalUnit.ConfigurationException e) {}
-  }
-
   public void testShouldCacheProperPages() throws Exception {
     URL art_url = new URL(ARTICLE_ROOT);
     URL base_url = new URL(ROOT_URL);
@@ -198,7 +187,7 @@ public class TestAcsArchivalUnit
     // we don't cache abstracts
     url = a_root + "cgi-bin/abstract.cgi/" + JOURNAL_KEY +"/" + VOL_YEAR + "/"
         + VOL_ID + "/i01/abs/ci010133j.html";
-    shouldCacheTest(url, false, acsAu, cus);
+    shouldCacheTest(url, true, acsAu, cus);
 
     // we don't cache supporting info
 
@@ -225,8 +214,8 @@ public class TestAcsArchivalUnit
 
   public void testStartUrlConstruction() throws Exception {
     String expected = ROOT_URL +
-        "acs/journals/toc.njs_select_issue?in_coden=" +
-        JOURNAL_KEY + "&in_volume=" + VOL_ID + "&in_decade=2003";
+        "acs/journals/toc.clockss_manifest?incoden=" +
+        JOURNAL_KEY + "&involume=" + VOL_ID;
     URL a_url = new URL(ARTICLE_ROOT);
     URL base = new URL(ROOT_URL);
     DefinableArchivalUnit acsAu = makeAu(base, a_url, JOURNAL_KEY, VOL_ID, VOL_YEAR);
@@ -237,12 +226,9 @@ public class TestAcsArchivalUnit
     URL a_url = new URL(ARTICLE_ROOT);
     URL base = new URL(ROOT_URL);
     String stem1 = "http://pubs3.acs.org/";
-    DefinableArchivalUnit acsAu1 = makeAu(base, a_url, JOURNAL_KEY, VOL_ID, VOL_YEAR);
-    assertEquals(ListUtil.list(stem1), acsAu1.getUrlStems());
-
     String stem2 = "http://pubs.acs.org/";
-    DefinableArchivalUnit acsAu2 = makeAu(a_url, a_url, JOURNAL_KEY, VOL_ID, VOL_YEAR);
-    assertEquals(ListUtil.list(stem2), acsAu2.getUrlStems());
+    DefinableArchivalUnit acsAu1 = makeAu(base, a_url, JOURNAL_KEY, VOL_ID, VOL_YEAR);
+    assertEquals(ListUtil.list(stem1, stem2), acsAu1.getUrlStems());
   }
 
   public void testShouldDoNewContentCrawlTooEarly() throws Exception {

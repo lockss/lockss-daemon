@@ -1,5 +1,5 @@
 /*
- * $Id: TestAcsPlugin.java,v 1.3 2007-01-14 08:06:16 tlipkis Exp $
+ * $Id: TestAcsPlugin.java,v 1.4 2007-04-16 17:15:13 troberts Exp $
  */
 
 /*
@@ -116,12 +116,11 @@ public class TestAcsPlugin extends LockssTestCase {
   }
 
   public void testGetAuConfigProperties() {
-    assertEquals(ListUtil.list(ConfigParamDescr.BASE_URL,
-                               ARTICLE_URL,
-                               JOURNAL_KEY,
-			       ConfigParamDescr.VOLUME_NUMBER,
-                               ConfigParamDescr.YEAR),
-		 plugin.getLocalAuConfigDescrs());
+    assertIsomorphic(ListUtil.list(ConfigParamDescr.VOLUME_NUMBER,
+				   ConfigParamDescr.BASE_URL,
+				   ARTICLE_URL,
+				   JOURNAL_KEY),
+		     plugin.getLocalAuConfigDescrs());
   }
 
   public static void main(String[] argv) {
