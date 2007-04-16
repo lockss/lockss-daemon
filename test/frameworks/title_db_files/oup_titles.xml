@@ -7825,6 +7825,66 @@
       <property name="attributes.publisher" value="Oxford University Press"/>
     </property>
 
+    <property name="HighWireJournaloftheLondonMathematicalSociety75">
+      <property name="title" value="Journal of the London Mathematical Society Volume 75" />
+      <property name="journalTitle" value="Journal of the London Mathematical Society" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://jlms.oxfordjournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="75" />
+      </property>
+      <property name="attributes.publisher" value="Oxford University Press" />
+    </property>
+
+    <property name="HighWireBulletinoftheLondonMathematicalSociety39">
+      <property name="title" value="Bulletin of the London Mathematical Society Volume 39" />
+      <property name="journalTitle" value="Bulletin of the London Mathematical Society" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://blms.oxfordjournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="39" />
+      </property>
+      <property name="attributes.publisher" value="Oxford University Press" />
+    </property>
+
+    <property name="HighWireInternationalJournalofTransitionalJustice1">
+      <property name="title" value="International Journal of Transitional Justice Volume 1" />
+      <property name="journalTitle" value="International Journal of Transitional Justice" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://ijtj.oxfordjournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="1" />
+      </property>
+      <property name="attributes.publisher" value="Oxford University Press" />
+    </property>
+
+    <property name="HighWireLiteraryImagination8">
+      <property name="title" value="Literary Imagination Volume 8" />
+      <property name="journalTitle" value="Literary Imagination" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http//litimag.oxfordjournals.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="8" />
+      </property>
+      <property name="attributes.publisher" value="Oxford University Press" />
+    </property>
+
   </property>
   <!-- End down titles -->
 </lockss-config>
