@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.54 2007-03-17 21:31:31 dshr Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.55 2007-04-17 19:33:42 troberts Exp $
  */
 
 /*
@@ -176,9 +176,9 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
       }
     }
 
-    if (rules.size() > 0)
+    if (rules.size() > 0) {
       return new CrawlRules.FirstMatch(rules);
-    else {
+    } else {
       log.error("No crawl rules found for plugin: " + makeName());
       return null;
     }
@@ -219,8 +219,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
       return new OaiCrawlSpec(makeOaiData(), getPermissionPages(),
                               null, rule, follow_links,
                               makeLoginPageChecker());
-    }
-    else  { // for now use the default spider crawl spec
+    } else { // for now use the default spider crawl spec
       int depth = definitionMap.getInt(KEY_AU_CRAWL_DEPTH, DEFAULT_AU_CRAWL_DEPTH);
       String arcPattern = definitionMap.getString(KEY_AU_ARC_PATTERN,
 						  DEFAULT_AU_ARC_PATTERN);
@@ -312,19 +311,16 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
           Vector vec = (Vector) val;
           if(vec.elementAt(0) instanceof Long) {
             substitute_args.add(NUM_SUBSTITUTION_STRING);
-          }
-          else {
+          } else {
             substitute_args.add(RANGE_SUBSTITUTION_STRING);
           }
-        }
-        else {
+        } else {
 	  if (quoteRegexp && val instanceof String) {
 	    val = Perl5Compiler.quotemeta((String)val);
 	  }
           substitute_args.add(val);
         }
-      }
-      else {
+      } else {
         log.warning("misssing argument for : " + key);
         has_all_args = false;
       }
@@ -333,8 +329,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     if (has_all_args) {
       PrintfFormat pf = new PrintfFormat(format);
       converted_string = pf.sprintf(substitute_args.toArray());
-    }
-    else {
+    } else {
       log.warning("missing variable arguments");
     }
     return converted_string;
