@@ -223,6 +223,12 @@
 	<property name="xpath" value="[attributes/publisher='Blackwell Publications']" />
       </property>
 
+      <property name="acs">
+        <property name="name" value="All American Chemical Society Titles" />
+        <property name="class" value="xpath" />
+	<property name="xpath" value="[attributes/publisher='American Chemical Society']" />
+      </property>
+
       <property name="AlphaMed Press">
         <property name="name" value="All AlphaMed Press Titles" />
         <property name="class" value="xpath" />
