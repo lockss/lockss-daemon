@@ -1,5 +1,5 @@
 /*
- * $Id: TestAcsPlugin.java,v 1.4 2007-04-16 17:15:13 troberts Exp $
+ * $Id: TestAcsPlugin.java,v 1.5 2007-04-17 19:33:11 troberts Exp $
  */
 
 /*
@@ -62,7 +62,7 @@ public class TestAcsPlugin extends LockssTestCase {
   }
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
   static final String YEAR_KEY = ConfigParamDescr.YEAR.getKey();
-  static final String VOL_KEY = ConfigParamDescr.VOLUME_NUMBER.getKey();
+  static final String VOL_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
   static final String JRNL_KEY = JOURNAL_KEY.getKey();
   static final String ARTICAL_KEY = ARTICLE_URL.getKey();
 
@@ -86,7 +86,6 @@ public class TestAcsPlugin extends LockssTestCase {
     props.setProperty(ARTICAL_KEY, "http://www.example.com/");
     props.setProperty(JRNL_KEY,"abcd");
     props.setProperty(BASE_URL_KEY, "blah");
-    props.setProperty(YEAR_KEY, "2003");
     try {
       DefinableArchivalUnit au = makeAuFromProps(props);
       fail ("Didn't throw InstantiationException when given a bad url");
@@ -104,7 +103,6 @@ public class TestAcsPlugin extends LockssTestCase {
     props.setProperty(ARTICAL_KEY, "http://www.example.com/");
     props.setProperty(JRNL_KEY,"abcd");
     props.setProperty(BASE_URL_KEY, "http://www.example.com/");
-    props.setProperty(YEAR_KEY, "2003");
 
     DefinableArchivalUnit au = makeAuFromProps(props);
     assertEquals("www.example.com, abcd, vol. 322", au.getName());
@@ -116,7 +114,7 @@ public class TestAcsPlugin extends LockssTestCase {
   }
 
   public void testGetAuConfigProperties() {
-    assertIsomorphic(ListUtil.list(ConfigParamDescr.VOLUME_NUMBER,
+    assertIsomorphic(ListUtil.list(ConfigParamDescr.VOLUME_NAME,
 				   ConfigParamDescr.BASE_URL,
 				   ARTICLE_URL,
 				   JOURNAL_KEY),
