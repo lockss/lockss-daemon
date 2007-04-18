@@ -3567,7 +3567,7 @@
       <property name="PlantCell17">
         <property name="title" value="Plant Cell Volume 17" />
         <property name="journalTitle" value="Plant Cell" />
-        <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+        <property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.plantcell.org/" />
