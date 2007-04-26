@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.38 2007-01-14 07:55:30 tlipkis Exp $
+ * $Id: ServletUtil.java,v 1.39 2007-04-26 01:40:05 tlipkis Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import java.util.List;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.collections.CollectionUtils;
+import org.apache.commons.collections.map.*;
 import org.apache.commons.lang.mutable.*;
 import org.lockss.config.*;
 import org.lockss.app.*;
@@ -409,7 +410,7 @@ public class ServletUtil {
                             int border,
                             String tooltip) {
     Image img = image(file, width, height, border);
-    img.alt(tooltip);		 	// some browsers (IE) use alt tag
+    img.alt(tooltip);			// some browsers (IE) use alt tag
     img.attribute("title", tooltip);	// some (Mozilla) use title tag
     return img;
   }
@@ -816,14 +817,26 @@ public class ServletUtil {
       tbl.addHeading("Free");
       tbl.addHeading("%Full");
 
-      boolean first = true;
+      ListOrderedMap repomap = new ListOrderedMap();
+      String mostFree = null;
       for (Iterator iter = repos.iterator(); iter.hasNext(); ) {
         String repo = (String)iter.next();
         PlatformUtil.DF df = remoteApi.getRepositoryDF(repo);
+	repomap.put(repo, df);
+	if (mostFree == null ||
+	    ((PlatformUtil.DF)repomap.get(mostFree)).getAvail() <
+	    df.getAvail()) {
+	  mostFree = repo;
+	}
+      }
+      for (Iterator iter = repomap.entrySet().iterator(); iter.hasNext(); ) {
+	Map.Entry entry = (Map.Entry)iter.next();
+        String repo = (String)entry.getKey();
+        PlatformUtil.DF df = (PlatformUtil.DF)entry.getValue();
 
         tbl.newRow();
         tbl.newCell(ALIGN_LEFT); // "Repository"
-        tbl.add(radioButton(servlet, repoTag, repo, first));
+        tbl.add(radioButton(servlet, repoTag, repo, repo == mostFree));
         if (df != null) {
           tbl.newCell(ALIGN_RIGHT); // "Size"
           tbl.add(SPACE);
@@ -835,7 +848,6 @@ public class ServletUtil {
           tbl.add(SPACE);
           tbl.add(df.getPercentString());
         }
-        first = false;
       }
 
       comp.add(tbl);
@@ -1082,7 +1094,7 @@ public class ServletUtil {
   }
 
   public static Element makeRepoTable(LockssServlet servlet,
-                                      Iterator repoIter,
+                                      Map repoMap,
                                       String keyDefaultRepo) {
     Table tbl = new Table(REPOTABLE_BORDER, REPOTABLE_ATTRIBUTES);
     tbl.newRow();
@@ -1096,9 +1108,21 @@ public class ServletUtil {
     tbl.addHeading("%Full");
 
     // Populate repo key table
-    for (int ix = 1 ; repoIter.hasNext() ; ++ix) {
-      // Get entry
-      Map.Entry entry = (Map.Entry)repoIter.next();
+    String mostFree = null;
+    for (Iterator iter = repoMap.entrySet().iterator(); iter.hasNext(); ) {
+      Map.Entry entry = (Map.Entry)iter.next();
+      String repo = (String)entry.getKey();
+      PlatformUtil.DF df = (PlatformUtil.DF)entry.getValue();
+      if (mostFree == null ||
+	  df.getAvail() >
+	  ((PlatformUtil.DF)repoMap.get(mostFree)).getAvail()) {
+	mostFree = repo;
+      }
+    }
+    int ix = 0;
+    for (Iterator iter = repoMap.entrySet().iterator(); iter.hasNext(); ) {
+      ix++;
+      Map.Entry entry = (Map.Entry)iter.next();
       String repo = (String)entry.getKey();
       PlatformUtil.DF df = (PlatformUtil.DF)entry.getValue();
 
@@ -1106,7 +1130,7 @@ public class ServletUtil {
       tbl.newRow(REPOTABLE_ROW_ATTRIBUTES);
       tbl.newCell(ALIGN_CENTER); // "Default"
       tbl.add(radioButton(servlet, keyDefaultRepo, Integer.toString(ix),
-                  null, ix == 1));
+			  null, repo == mostFree));
       tbl.newCell(ALIGN_RIGHT); // "Disk"
       tbl.add(Integer.toString(ix) + "." + SPACE);
       tbl.newCell(ALIGN_LEFT); // "Location"
