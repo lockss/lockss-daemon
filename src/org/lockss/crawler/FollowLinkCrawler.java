@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.59 2007-03-26 20:48:53 troberts Exp $
+ * $Id: FollowLinkCrawler.java,v 1.60 2007-04-26 01:39:15 tlipkis Exp $
  */
 
 /*
@@ -225,7 +225,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	    logger.debug("Expected exception while aborting crawl: " + e);
 	    return aborted();
 	  }
-	  logger.warning("Unexpected exception in crawl", e);
+	  logger.warning("Unexpected exception processing: " + nextUrl, e);
 	}
 	urlsToCrawl.remove(nextUrl);
 	if  (!crawlRes) {
