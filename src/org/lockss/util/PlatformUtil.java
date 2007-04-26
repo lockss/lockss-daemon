@@ -1,5 +1,5 @@
 /*
- * $Id: PlatformUtil.java,v 1.4 2007-01-14 08:14:53 tlipkis Exp $
+ * $Id: PlatformUtil.java,v 1.5 2007-04-26 01:40:45 tlipkis Exp $
  */
 
 /*
@@ -69,6 +69,9 @@ public class PlatformUtil {
       }
       if (SystemUtils.IS_OS_WINDOWS) {
         instance = new Windows();
+      }
+      if (SystemUtils.IS_OS_SOLARIS) {
+        instance = new Solaris();
       }
       if (instance == null) {
 	log.warning("No OS-specific PlatformInfo for '" + os + "'");
@@ -470,6 +473,28 @@ public class PlatformUtil {
     }
   }
 
+  public static class Solaris extends PlatformUtil {
+    // XXX If only the args are different you can refactor to make that
+    // overridable
+    public DF getDF(String path) throws UnsupportedException {
+      return super.getDF(path);
+    }
+
+    public int getPid() throws UnsupportedException {
+      throw new UnsupportedException("Don't know how to get PID on Solaris");
+    }
+
+    /** Get PID of main java process */
+    public int getMainPid() throws UnsupportedException {
+      throw new UnsupportedException("Don't know how to get PID on Solaris");
+    }
+    
+    public Vector getProcStats(String pid) throws UnsupportedException {
+      throw new
+	UnsupportedException("Don't know how to get proc state on Solaris");
+    }
+  }
+
   public static class Windows extends PlatformUtil {
     
     public synchronized boolean updateFileAtomically(File updated, File target) {
@@ -530,7 +555,7 @@ public class PlatformUtil {
       }
     }
   }
-  
+
   /** Struct holding disk space info (from df) */
   public static class DF {
     String fs;
