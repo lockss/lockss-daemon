@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingHtmlLinkExtractor.java,v 1.2 2007-02-07 19:32:21 thib_gc Exp $
+ * $Id: TestGoslingHtmlLinkExtractor.java,v 1.3 2007-04-26 01:38:58 tlipkis Exp $
  */
 
 /*
@@ -209,6 +209,25 @@ public class TestGoslingHtmlLinkExtractor extends LockssTestCase {
                         "http://www.example.com/");
   }
 
+  // ensure that scanning continues after a nested parser throws an error
+  public void testDoCrawlStyleError() throws IOException {
+    String url1= "http://example.com/blah1.html";
+    String url2= "http://example.com/blah2.html";
+    String url3= "http://example.com/blah3.html";
+    String source =
+      "<html><head>"+
+      "<style type=\"text/css\">\n" +
+      "<!--\n" +
+      "@import url(\'" + url1 + "\');\n" + // ensure css parser got invoked
+      "foo {bgcolor: #FFFF};" +		   // and that this causes an error
+      "@import url(\'" + url2 + "\');\n" + // so that this one isn't found
+      "-->\n" +
+      "  </style>\n" +
+      "<a href=" + url3 + "></a>" +	// and this one is
+      "</head></html>";
+    assertEquals(SetUtil.set(url1, url3), parseSingleSource(source));
+  }
+
   protected void performDoCrawlStyle(String openingStyleTag,
                                      String givenPrefix,
                                      String expectedPrefix)
@@ -341,7 +360,7 @@ public class TestGoslingHtmlLinkExtractor extends LockssTestCase {
   private void singleTagParse(String url, String startTag,
 			      String endTag, ArchivalUnit au,
 			      boolean shouldParse)
-  throws IOException {
+      throws IOException {
     MockCachedUrl mcu = new MockCachedUrl("http://www.example.com");
     String content = makeContent(url, startTag, endTag);
     mcu.setContent(content);

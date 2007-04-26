@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingHtmlLinkExtractor.java,v 1.2 2007-02-07 19:32:21 thib_gc Exp $
+ * $Id: GoslingHtmlLinkExtractor.java,v 1.3 2007-04-26 01:38:58 tlipkis Exp $
  */
 
 /*
@@ -547,22 +547,14 @@ public class GoslingHtmlLinkExtractor implements LinkExtractor {
       if (cssExtractor != null) {
 	cssExtractor.extractUrls(au, cssIn, encoding, srcUrl, cb);
       }
-    }
-    catch (IOException ioe) {
+    } catch (Exception e) {
+      // Important to catch RuntimeExceptions here or a CSS error will
+      // abort processing of the rest of the html on the page
       logger.siteError("The CSS parser failed to parse a <style> section in "
-		       + srcUrl, ioe);
+		       + srcUrl, e);
       try {
-	IOUtil.safeClose(cssIn);
 	readToEof(cssIn);
-      }
-      catch (IOException ignore) {}
-    }
-    catch (PluginException e) {
-      logger.error("The CSS parser failed to parse a <style> section in "
-                   + srcUrl, e);
-      try {
 	IOUtil.safeClose(cssIn);
-	readToEof(cssIn);
       }
       catch (IOException ignore) {}
     }
