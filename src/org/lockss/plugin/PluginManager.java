@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.176 2007-02-20 01:36:16 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.177 2007-04-26 01:39:44 tlipkis Exp $
  */
 
 /*
@@ -1481,7 +1481,11 @@ public class PluginManager
 
   /** Find all the plugins that support the given title */
   public Collection getTitlePlugins(String title) {
-    return (Collection)getTitleMap().get(title);
+    Collection res = (Collection)getTitleMap().get(title);
+    if (res != null) {
+      return res;
+    }
+    return Collections.EMPTY_LIST;
   }
 
   /** Return all known TitleConfigs */
@@ -1930,15 +1934,20 @@ public class PluginManager
     }
 
     File blessedJar = null;
-    try {
-      // Validate and bless the JAR file from the CU.
-      blessedJar = jarValidator.getBlessedJar(cu);
-    } catch (IOException ex) {
-      log.error("Error processing jar file: " + url, ex);
+    if (cu.getContentSize() == 0) {
+      log.debug("Empty plugin jar: " + cu);
       return;
-    } catch (JarValidator.JarValidationException ex) {
-      log.error("CachedUrl did not validate: " + cu, ex);
-      return;
+    } else {
+      try {
+	// Validate and bless the JAR file from the CU.
+	blessedJar = jarValidator.getBlessedJar(cu);
+      } catch (IOException ex) {
+	log.error("Error processing jar file: " + url, ex);
+	return;
+      } catch (JarValidator.JarValidationException ex) {
+	log.error("CachedUrl did not validate: " + cu, ex);
+	return;
+      }
     }
 
     // Update the cuNodeVersion map now that we have the blessed Jar.
