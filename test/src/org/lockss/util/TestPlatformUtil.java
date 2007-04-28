@@ -1,5 +1,5 @@
 /*
- * $Id: TestPlatformUtil.java,v 1.2 2006-11-22 00:53:41 tlipkis Exp $
+ * $Id: TestPlatformUtil.java,v 1.3 2007-04-28 00:21:50 dshr Exp $
  */
 
 /*
@@ -87,11 +87,13 @@ public class TestPlatformUtil extends LockssTestCase {
   }
 
   public void testNonexistentPathNullDF() throws Exception {
+    String javatmp = System.getProperty("java.io.tmpdir");
     PlatformUtil.DF df =
-      info.getDF(System.getProperty("java.io.tmpdir"));
-    assertNotNull(df);
-    df = info.getDF("/very_unlik_elyd_irect_oryname/4x3");
-    assertNull(df);
+      info.getDF(javatmp);
+    assertNotNull(javatmp + " is null", df);
+    javatmp = "/very_unlik_elyd_irect_oryname/4x3";
+    df = info.getDF(javatmp);
+    assertNull(javatmp, df);
   }
 
   public void testMakeDF() throws Exception {

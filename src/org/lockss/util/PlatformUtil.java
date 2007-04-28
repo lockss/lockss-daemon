@@ -1,5 +1,5 @@
 /*
- * $Id: PlatformUtil.java,v 1.5 2007-04-26 01:40:45 tlipkis Exp $
+ * $Id: PlatformUtil.java,v 1.6 2007-04-28 00:21:50 dshr Exp $
  */
 
 /*
@@ -67,10 +67,13 @@ public class PlatformUtil {
       if ("openbsd".equalsIgnoreCase(os)) {
 	instance = new OpenBSD();
       }
+      if ("mac os".equalsIgnoreCase(os)) {
+	instance = new MacOS();
+      }
       if (SystemUtils.IS_OS_WINDOWS) {
         instance = new Windows();
       }
-      if (SystemUtils.IS_OS_SOLARIS) {
+      if (/*SystemUtils.IS_OS_SOLARIS*/ "sunos".equalsIgnoreCase(os)) {
         instance = new Solaris();
       }
       if (instance == null) {
@@ -192,8 +195,13 @@ public class PlatformUtil {
 
   }
 
+
   public DF getDF(String path) throws UnsupportedException {
-    String cmd = "df -k -P " + path;
+    return getDF(path, "-k -P");
+  }
+
+  public DF getDF(String path, String dfArgs) throws UnsupportedException {
+    String cmd = "df " + dfArgs + " " + path;
     if (log.isDebug2()) log.debug2("cmd: " + cmd);
     try {
       Process p = rt().exec(cmd);
@@ -206,6 +214,7 @@ public class PlatformUtil {
 	int exit = p.waitFor();
 	rdr.close();
 	if (exit != 0) {
+          if (log.isDebug()) log.debug("cmd: " + cmd + " exit code " + exit);
 	  return null;
 	}
       } catch (IOException e) {
@@ -235,10 +244,11 @@ public class PlatformUtil {
     StringTokenizer st = new StringTokenizer(line, " \t");
     int ntok = 0;
     while (st.hasMoreTokens()) {
+      String tok = st.nextToken();
       if (ntok > 5) {
 	return null;
       }
-      tokens[ntok++] = st.nextToken();
+      tokens[ntok++] = tok;
     }
     if (ntok != 6) {
       return null;
@@ -474,10 +484,10 @@ public class PlatformUtil {
   }
 
   public static class Solaris extends PlatformUtil {
-    // XXX If only the args are different you can refactor to make that
-    // overridable
+    public String dfArgs = "-k";
+
     public DF getDF(String path) throws UnsupportedException {
-      return super.getDF(path);
+      return (super.getDF(path, dfArgs));
     }
 
     public int getPid() throws UnsupportedException {
@@ -494,6 +504,30 @@ public class PlatformUtil {
 	UnsupportedException("Don't know how to get proc state on Solaris");
     }
   }
+
+
+  public static class MacOS extends PlatformUtil {
+    public String dfArgs = "-k";
+
+    public DF getDF(String path) throws UnsupportedException {
+      return (super.getDF(path, dfArgs));
+    }
+
+    public int getPid() throws UnsupportedException {
+      throw new UnsupportedException("Don't know how to get PID on MacOS");
+    }
+
+    /** Get PID of main java process */
+    public int getMainPid() throws UnsupportedException {
+      throw new UnsupportedException("Don't know how to get PID on MacOS");
+    }
+    
+    public Vector getProcStats(String pid) throws UnsupportedException {
+      throw new
+	UnsupportedException("Don't know how to get proc state on MacOS");
+    }
+  }
+
 
   public static class Windows extends PlatformUtil {
     

@@ -1,5 +1,5 @@
 /*
- * $Id: TestIcpManager.java,v 1.13 2007-03-14 23:39:41 thib_gc Exp $
+ * $Id: TestIcpManager.java,v 1.14 2007-04-28 00:21:50 dshr Exp $
  */
 
 /*
@@ -151,7 +151,7 @@ public class TestIcpManager extends LockssTestCase {
   }
 
   private int getNewPort() {
-    return port++;
+    return port += 7;
   }
 
   private void setEnabled(boolean enabled, int port) {
