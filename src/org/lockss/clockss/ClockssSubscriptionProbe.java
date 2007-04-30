@@ -1,5 +1,5 @@
 /*
- * $Id: ClockssSubscriptionProbe.java,v 1.1 2006-09-22 06:21:51 tlipkis Exp $
+ * $Id: ClockssSubscriptionProbe.java,v 1.2 2007-04-30 04:52:46 tlipkis Exp $
  */
 
 /*
@@ -76,6 +76,7 @@ public class ClockssSubscriptionProbe {
     case AuState.CLOCKSS_SUB_UNKNOWN:
     case AuState.CLOCKSS_SUB_YES:
     case AuState.CLOCKSS_SUB_INACCESSIBLE:
+    case AuState.CLOCKSS_SUB_NOT_MAINTAINED:
       switch (probeState) {
       case PROBE_NONE:
 	uc.setLocalAddress(mgr.getInstitutionSubscriptionAddr());
@@ -122,6 +123,7 @@ public class ClockssSubscriptionProbe {
       switch (aus.getClockssSubscriptionStatus()) {
       case AuState.CLOCKSS_SUB_UNKNOWN:
       case AuState.CLOCKSS_SUB_INACCESSIBLE:
+      case AuState.CLOCKSS_SUB_NOT_MAINTAINED:
 	switch (probeState) {
 	case PROBE_INST:
 	  aus.setClockssSubscriptionStatus(AuState.CLOCKSS_SUB_YES);

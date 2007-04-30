@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.53 2007-03-13 22:07:32 tlipkis Exp $
+ * $Id: ProxyHandler.java,v 1.54 2007-04-30 04:52:46 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.53 2007-03-13 22:07:32 tlipkis Exp $
+// $Id: ProxyHandler.java,v 1.54 2007-04-30 04:52:46 tlipkis Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -295,7 +295,7 @@ public class ProxyHandler extends AbstractHttpHandler {
     CachedUrl cu = pluginMgr.findCachedUrl(urlString);
 
     // Don't allow CLOCKSS to serve local content for unsubscribed AUs
-    if (cu != null && theDaemon.isClockss() && !auditProxy) {
+    if (cu != null && theDaemon.isDetectClockssSubscription() && !auditProxy) {
       ArchivalUnit au = cu.getArchivalUnit();
       switch (AuUtil.getAuState(au).getClockssSubscriptionStatus()) {
       case AuState.CLOCKSS_SUB_UNKNOWN:

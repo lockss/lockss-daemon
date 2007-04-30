@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.89 2007-03-20 00:43:18 tlipkis Exp $
+ * $Id: LockssDaemon.java,v 1.90 2007-04-30 04:52:46 tlipkis Exp $
  */
 
 /*
@@ -244,6 +244,14 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
    */
   public boolean isClockss() {
     return isClockss;
+  }
+
+  /**
+   * Convenience method returns {@link
+   * ClockssParams#isDetectClockssSubscription()}
+   */
+  public boolean isDetectClockssSubscription() {
+    return isClockss() && getClockssParams().isDetectSubscription();
   }
 
   /** Stop the daemon.  Currently only used in testing. */

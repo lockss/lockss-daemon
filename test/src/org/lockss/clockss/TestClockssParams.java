@@ -1,5 +1,5 @@
 /*
- * $Id: TestClockssParams.java,v 1.1 2006-08-07 07:37:18 tlipkis Exp $
+ * $Id: TestClockssParams.java,v 1.2 2007-04-30 04:52:45 tlipkis Exp $
  */
 
 /*
@@ -65,6 +65,16 @@ public class TestClockssParams extends LockssTestCase {
 		 mgr.getInstitutionSubscriptionAddr().getHostAddress());
     assertEquals(CLOCKSS_ADDR,
 		 mgr.getClockssSubscriptionAddr().getHostAddress());
+  }
+
+  public void testEnable() throws Exception {
+    MockLockssDaemon daemon = getMockLockssDaemon();
+    ClockssParams mgr = new ClockssParams();
+    mgr.initService(daemon);
+    mgr.startService();
+    assertFalse(mgr.isDetectSubscription());
+    ConfigurationUtil.setFromArgs(ClockssParams.PARAM_ENABLE_CLOCKSS_SUBSCRIPTION_DETECTION, "true");
+    assertTrue(mgr.isDetectSubscription());
   }
 
 }

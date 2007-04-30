@@ -1,5 +1,5 @@
 /*
- * $Id: PermissionMap.java,v 1.19 2007-03-26 20:48:53 troberts Exp $
+ * $Id: PermissionMap.java,v 1.20 2007-04-30 04:52:46 tlipkis Exp $
  */
 
 /*
@@ -277,7 +277,7 @@ public class PermissionMap {
    * @return a PermissionRecord.PERMISSION_XXX status code
    */
   int probe(PermissionRecord rec) {
-    if (getDaemon().isClockss()) {
+    if (getDaemon().isDetectClockssSubscription()) {
       return clockssProbe(rec);
     } else {
       return probe0(rec);

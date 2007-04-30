@@ -1,5 +1,5 @@
 /*
- * $Id: TestClockssUrlCacher.java,v 1.3 2006-09-16 07:17:06 tlipkis Exp $
+ * $Id: TestClockssUrlCacher.java,v 1.4 2007-04-30 04:52:45 tlipkis Exp $
  */
 
 /*
@@ -73,11 +73,10 @@ public class TestClockssUrlCacher extends LockssTestCase {
     expin2 = new StringInputStream("a");
 
     MockLockssDaemon daemon = getMockLockssDaemon();
+    daemon.setClockss(true);
     mp = new MockPlugin();
     mp.initPlugin(daemon);
     mau = new MockArchivalUnit(mp);
-    muc = new MyUrlCacher(URL, mau);
-    cuc = new ClockssUrlCacher(muc);
     // accessing the AuState requires NodeManager, HistoryRepository
     MockHistoryRepository histRepo = new MockHistoryRepository();
     histRepo.storeAuState(new AuState(mau, histRepo));
@@ -88,8 +87,11 @@ public class TestClockssUrlCacher extends LockssTestCase {
     Properties p = new Properties();
     p.put(ClockssParams.PARAM_INSTITUTION_SUBSCRIPTION_ADDR, INST_ADDR);
     p.put(ClockssParams.PARAM_CLOCKSS_SUBSCRIPTION_ADDR, CLOCKSS_ADDR);
+    p.put(ClockssParams.PARAM_ENABLE_CLOCKSS_SUBSCRIPTION_DETECTION, "true");
     ConfigurationUtil.addFromProps(p);
     daemon.getClockssParams().startService();
+    muc = new MyUrlCacher(URL, mau);
+    cuc = new ClockssUrlCacher(muc);
   }
 
   List append(List l, Object o) {
@@ -108,6 +110,21 @@ public class TestClockssUrlCacher extends LockssTestCase {
     l.add(o2);
     l.add(o3);
     return l;
+  }
+
+  public void testDetectDisabled() throws Exception {
+    ConfigurationUtil.addFromArgs(ClockssParams.PARAM_ENABLE_CLOCKSS_SUBSCRIPTION_DETECTION, "false");
+    muc = new MyUrlCacher(URL, mau);
+    cuc = new ClockssUrlCacher(muc);
+
+    assertEquals(AuState.CLOCKSS_SUB_UNKNOWN,
+		 aus.getClockssSubscriptionStatus());
+    muc.setResults(ListUtil.list(expin, expin2));
+    assertSame(expin, cuc.getUncachedInputStream());
+    List events = ListUtil.list(EVENT_SETCLOCKSS, EVENT_INPUTSTREAM);
+    assertEquals(events, muc.events);
+    assertEquals(AuState.CLOCKSS_SUB_NOT_MAINTAINED,
+		 aus.getClockssSubscriptionStatus());
   }
 
   public void testSubUnknownInst1() throws Exception {

@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.177 2007-04-26 01:39:44 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.178 2007-04-30 04:52:46 tlipkis Exp $
  */
 
 /*
@@ -1416,7 +1416,7 @@ public class PluginManager
   }
 
   private boolean isUnsubscribed(ArchivalUnit au) {
-    return (getDaemon().isClockss() &&
+    return (getDaemon().isDetectClockssSubscription() &&
 	    (AuUtil.getAuState(au).getClockssSubscriptionStatus() !=
 	     AuState.CLOCKSS_SUB_YES));
   }

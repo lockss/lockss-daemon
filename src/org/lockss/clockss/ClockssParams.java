@@ -1,5 +1,5 @@
 /*
- * $Id: ClockssParams.java,v 1.1 2006-08-07 07:37:19 tlipkis Exp $
+ * $Id: ClockssParams.java,v 1.2 2007-04-30 04:52:46 tlipkis Exp $
  */
 
 /*
@@ -49,6 +49,13 @@ public class ClockssParams
 
   public static final String PREFIX = Configuration.PREFIX + "clockss.";
 
+  /** Enable/disable CLOCKSS subscription detection */
+  public static final String PARAM_ENABLE_CLOCKSS_SUBSCRIPTION_DETECTION =
+    PREFIX + "detectSubscription";
+
+  public static final boolean DEFAULT_ENABLE_CLOCKSS_SUBSCRIPTION_DETECTION =
+    false;
+
   /** Second IP address, for CLOCKSS subscription detection */
   public static final String PARAM_CLOCKSS_SUBSCRIPTION_ADDR =
     PREFIX + "clockssAddr";
@@ -57,6 +64,8 @@ public class ClockssParams
   public static final String PARAM_INSTITUTION_SUBSCRIPTION_ADDR =
     PREFIX + "institutionAddr";
 
+  private boolean isDetectSubscription =
+    DEFAULT_ENABLE_CLOCKSS_SUBSCRIPTION_DETECTION;
   private IPAddr institutionSubscriptionAddr;
   private IPAddr clockssSubscriptionAddr;
 
@@ -67,6 +76,10 @@ public class ClockssParams
   public void setConfig(Configuration config, Configuration oldConfig,
 			Configuration.Differences changedKeys) {
     if (changedKeys.contains(PREFIX)) {
+      isDetectSubscription =
+	config.getBoolean(PARAM_ENABLE_CLOCKSS_SUBSCRIPTION_DETECTION,
+			  DEFAULT_ENABLE_CLOCKSS_SUBSCRIPTION_DETECTION);
+
       String inst = config.get(PARAM_INSTITUTION_SUBSCRIPTION_ADDR);
       if (inst == null) {
 	institutionSubscriptionAddr = null;
@@ -90,6 +103,10 @@ public class ClockssParams
       log.debug("CLOCKSS institution addr: " + institutionSubscriptionAddr +
 		", CLOCKSS addr: " + clockssSubscriptionAddr);
     }
+  }
+
+  public boolean isDetectSubscription() {
+    return isDetectSubscription;
   }
 
   public IPAddr getInstitutionSubscriptionAddr() {

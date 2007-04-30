@@ -1,5 +1,5 @@
 /*
- * $Id: IcpManager.java,v 1.34 2007-03-14 23:39:41 thib_gc Exp $
+ * $Id: IcpManager.java,v 1.35 2007-04-30 04:52:46 tlipkis Exp $
  */
 
 /*
@@ -468,7 +468,7 @@ public class IcpManager
   }
 
   private boolean isClockssUnsubscribed(CachedUrl cu) {
-    if (getDaemon().isClockss()) {
+    if (getDaemon().isDetectClockssSubscription()) {
       ArchivalUnit au = cu.getArchivalUnit();
       return AuUtil.getAuState(au).getClockssSubscriptionStatus()
 	         != AuState.CLOCKSS_SUB_YES;

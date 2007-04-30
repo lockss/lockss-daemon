@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssDaemon.java,v 1.59 2006-08-09 01:57:38 tlipkis Exp $
+ * $Id: MockLockssDaemon.java,v 1.60 2007-04-30 04:52:45 tlipkis Exp $
  */
 
 /*
@@ -453,6 +453,16 @@ public class MockLockssDaemon extends LockssDaemon {
       managerMap.put(LockssDaemon.CLOCKSS_PARAMS, clockssParams);
     }
     return clockssParams;
+  }
+
+  private boolean forceIsClockss = false;
+
+  public void setClockss(boolean val) {
+    forceIsClockss = val;
+  }
+
+  public boolean isClockss() {
+    return forceIsClockss || super.isClockss();
   }
 
   /**

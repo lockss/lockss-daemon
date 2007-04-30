@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.52 2007-02-10 06:53:46 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.53 2007-04-30 04:52:46 tlipkis Exp $
  */
 
 /*
@@ -173,7 +173,7 @@ public class ArchivalUnitStatus
     public void populateTable(StatusTable table)
         throws StatusService.NoSuchTableException {
       List cols = columnDescriptors;
-      if (theDaemon.isClockss()) {
+      if (theDaemon.isDetectClockssSubscription()) {
 	cols = new ArrayList(cols);
 	cols.remove(cols.size() - 1);
 	cols.add(new ColumnDescriptor("Subscribed", "Subscribed",
@@ -291,7 +291,7 @@ public class ArchivalUnitStatus
 
       rowMap.put("Damaged", stat);
 
-      if (theDaemon.isClockss()) {
+      if (theDaemon.isDetectClockssSubscription()) {
 	rowMap.put("Subscribed",
 		   AuUtil.getAuState(au).getClockssSubscriptionStatusString());
       }
@@ -699,7 +699,7 @@ public class ArchivalUnitStatus
                                         ColumnDescriptor.TYPE_STRING,
                                         "-")
             );
-      if (theDaemon.isClockss()) {
+      if (theDaemon.isDetectClockssSubscription()) {
 	String subStatus =
 	  AuUtil.getAuState(au).getClockssSubscriptionStatusString();
 	summaryList.add(clockssPos,
