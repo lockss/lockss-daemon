@@ -1,5 +1,5 @@
 /*
- * $Id: BlackwellHtmlFilterFactory.java,v 1.3 2007-02-09 19:32:09 troberts Exp $
+ * $Id: BlackwellHtmlFilterFactory.java,v 1.4 2007-05-01 22:36:44 troberts Exp $
  */
 
 /*
@@ -61,9 +61,23 @@ public class BlackwellHtmlFilterFactory implements FilterFactory {
     // <option value="#citart1">This article is cited by the following
     // articles in Blackwell Synergy and CrossRef</option>
 
-    NodeFilter invCiteSelOption =
+    NodeFilter[] filters = new NodeFilter[3];
+    filters[0] =
       HtmlNodeFilters.tagWithText("option", "article is cited by", true);
-    HtmlTransform xform1 = HtmlNodeFilterTransform.exclude(invCiteSelOption);
+
+    filters[1] =
+      HtmlNodeFilters.tagWithAttribute("ul", "class", "citedBy");
+
+    filters[2] =
+      HtmlNodeFilters.tagWithText("h3", "article is cited by", true);
+
+    //    "<h3 id=\"CitedBy\">This article is cited by:</h3></div>" +
+
+    OrFilter combineFilter = new OrFilter();
+    combineFilter.setPredicates(filters);
+
+    HtmlTransform xform1 =
+      HtmlNodeFilterTransform.exclude(combineFilter);
 
     // Still need to remove actual inverse citation section
 
