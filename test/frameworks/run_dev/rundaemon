@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /bin/sh
 
 group="dev"
 
@@ -60,7 +60,8 @@ while true ; do
 done
 
 if [ -z "$args" ]; then
-  args=-server -Dorg.lockss.defaultLogLevel=DEBUG
+  args="-server -Dorg.lockss.defaultLogLevel=DEBUG"
+  PATH="$JAVA_HOME/bin:$PATH"
 fi
 
 #PROP_URL_LIST="-p http://props.lockss.org:8001/daemon/forbidden.xml -p local.txt"
