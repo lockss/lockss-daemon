@@ -1,5 +1,5 @@
 /*
- * $Id: IpFilter.java,v 1.11 2007-01-18 02:29:09 tlipkis Exp $
+ * $Id: IpFilter.java,v 1.12 2007-05-01 23:34:54 tlipkis Exp $
  */
 
 /*
@@ -257,6 +257,12 @@ public class IpFilter {
 	// both have mask, treat as equals()
 	return equals(ip);
       }
+    }
+
+    /** Return number of one bits in mask
+     */
+    public int getMaskBits() {
+      return cidr;
     }
 
     /** Return string representation

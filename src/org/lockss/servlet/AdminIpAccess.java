@@ -1,5 +1,5 @@
 /*
- * $Id: AdminIpAccess.java,v 1.6 2006-01-12 01:12:50 thib_gc Exp $
+ * $Id: AdminIpAccess.java,v 1.7 2007-05-01 23:34:54 tlipkis Exp $
  */
 
 /*
@@ -39,7 +39,7 @@ import org.lockss.config.ConfigManager;
 public class AdminIpAccess extends IpAccessControl {
   private static final String exp =
     "Enter the list of IP addresses that should be allowed to access the " +
-    "administrative user interface on this cache.  " +
+    "administrative user interface on this LOCKSS box.  " +
     commonExp;
 
   protected String getExplanation() {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestIpFilter.java,v 1.8 2007-01-18 02:29:09 tlipkis Exp $
+ * $Id: TestIpFilter.java,v 1.9 2007-05-01 23:34:54 tlipkis Exp $
  */
 
 /*
@@ -130,6 +130,24 @@ public class TestIpFilter extends LockssTestCase {
     assertMalformed("36.48.0.23/33", true);
     assertMalformed("36.48.0.4/29", true);
     assertMalformed("36.48.0.2/", true);
+  }
+
+  public void testMaskBits() throws Exception {
+    IpFilter.Mask m;
+    m = new IpFilter.Mask("1.2.3.4", true);
+    assertEquals(32, m.getMaskBits());
+    m = new IpFilter.Mask("1.2.3.*", true);
+    assertEquals(24, m.getMaskBits());
+    m = new IpFilter.Mask("1.*.*.*", true);
+    assertEquals(8, m.getMaskBits());
+    m = new IpFilter.Mask("*.*.*.*", true);
+    assertEquals(0, m.getMaskBits());
+    m = new IpFilter.Mask("1.2.3.4/32", true);
+    assertEquals(32, m.getMaskBits());
+    m = new IpFilter.Mask("1.2.3.4/31", true);
+    assertEquals(31, m.getMaskBits());
+    m = new IpFilter.Mask("1.2.3.0/24", true);
+    assertEquals(24, m.getMaskBits());
   }
 
   public void testMaskEquals() throws Exception {

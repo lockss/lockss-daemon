@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyIpAccess.java,v 1.25 2006-03-24 23:56:24 thib_gc Exp $
+ * $Id: ProxyIpAccess.java,v 1.26 2007-05-01 23:34:54 tlipkis Exp $
  */
 
 /*
@@ -51,7 +51,7 @@ public class ProxyIpAccess extends IpAccessControl {
 
   private static final String exp =
     "Enter the list of IP addresses that should be allowed to use this " +
-    "cache as a proxy server, and access the content stored on it.  " +
+    "LOCKSS box as a proxy server, and access the content preserved on it.  " +
     commonExp;
 
   protected String getExplanation() {

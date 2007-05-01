@@ -1,5 +1,5 @@
 /*
- * $Id: IpAccessControl.java,v 1.37 2006-03-28 23:24:43 thib_gc Exp $
+ * $Id: IpAccessControl.java,v 1.38 2007-05-01 23:34:54 tlipkis Exp $
  */
 
 /*
@@ -46,11 +46,28 @@ import org.lockss.util.*;
  */
 public abstract class IpAccessControl extends LockssServlet {
 
+  public static final String PREFIX = Configuration.PREFIX + "ui.";
+  /** Warn and require confirmation if a subnet mask in an IP access
+   * control inclusion list has fewer bits than this */
+  public static final String PARAM_WARN_BELOW_BITS =
+    PREFIX + "subnetMaskBitsWarn";
+  public static final int DEFAULT_WARN_BELOW_BITS = 16;
+  /** Disallow subnet masks with fewer bits than this in IP access control
+   * inclusion lists */
+  public static final String PARAM_ERROR_BELOW_BITS =
+    PREFIX + "subnetMaskBitsError";
+  public static final int DEFAULT_ERROR_BELOW_BITS = 8;
+
   private static final String DENY_IPS_NAME = "exc_ips";
   private static final String ALLOW_IPS_NAME = "inc_ips";
   public static final String SUFFIX_IP_INCLUDE = "include";
   public static final String SUFFIX_IP_EXCLUDE = "exclude";
   public static final String SUFFIX_PLATFORM_ACCESS = "platformAccess";
+
+  private enum PermissivenessCheck { NONE, WARN, ERROR }
+
+  public static final String ACTION_UPDATE = "Update";
+  public static final String ACTION_CONFIRM = "Confirm";
 
   private static final String footIP =
     "List individual IP addresses (<code>172.16.31.14</code>), " +
@@ -76,6 +93,11 @@ public abstract class IpAccessControl extends LockssServlet {
   private Vector exclErrs;
   protected boolean isForm;
 
+  private int warnBits;
+  private int errorBits;
+  private boolean confirm;
+  private int warnings;
+
   public void init(ServletConfig config) throws ServletException {
     super.init(config);
     configMgr = getLockssApp().getConfigManager();
@@ -89,9 +111,16 @@ public abstract class IpAccessControl extends LockssServlet {
     exclErrs = null;
     formIncl = null;
     formExcl = null;
+    statusMsg = null;
     errMsg = null;
+    confirm = false;
+    warnings = 0;
 
-    if ("Update".equals(action)){
+    if (ACTION_CONFIRM.equals(action)) {
+      confirm = true;
+      action = ACTION_UPDATE;
+    }
+    if (ACTION_UPDATE.equals(action)) {
       readForm();
       doUpdate();
     } else {
@@ -100,10 +129,16 @@ public abstract class IpAccessControl extends LockssServlet {
   }
 
   protected void readForm() {
+    Configuration config = configMgr.getCurrentConfig();
+    warnBits = config.getInt(PARAM_WARN_BELOW_BITS,
+			     DEFAULT_WARN_BELOW_BITS);
+    errorBits = config.getInt(PARAM_ERROR_BELOW_BITS,
+			      DEFAULT_ERROR_BELOW_BITS);
     formIncl = ipStrToVector(req.getParameter(ALLOW_IPS_NAME));
     formExcl = ipStrToVector(req.getParameter(DENY_IPS_NAME));
-    inclErrs = findInvalidIps(formIncl);
-    exclErrs = findInvalidIps(formExcl);
+    inclErrs = findInvalidIps(formIncl, (confirm ? PermissivenessCheck.ERROR :
+					 PermissivenessCheck.WARN));
+    exclErrs = findInvalidIps(formExcl, PermissivenessCheck.NONE);
   }
 
   protected void doUpdate() throws IOException {
@@ -112,6 +147,7 @@ public abstract class IpAccessControl extends LockssServlet {
     } else {
       try {
 	saveChanges();
+	statusMsg = "Update successful";
       } catch (Exception e) {
 	log.error("Error saving changes", e);
 	errMsg = "Error: Couldn't save changes:<br>" + e.toString();
@@ -152,16 +188,18 @@ public abstract class IpAccessControl extends LockssServlet {
       throws IOException {
     // Create and start laying out page
     Page page = newPage();
+    layoutErrorBlock(page);
     ServletUtil.layoutExplanationBlock(page, getExplanation());
     page.add("<br>");
 
     // Create and layout form
     Form form = ServletUtil.newForm(srvURL(myServletDescr()));
-    layoutErrorBlock(form);
     ServletUtil.layoutIpAllowDenyTable(this, form, incl, excl, footIP,
         inclErrs, exclErrs, ALLOW_IPS_NAME, DENY_IPS_NAME);
     additionalFormLayout(form);
-    ServletUtil.layoutSubmitButton(this, form, "Update");
+    boolean doConfirm = warnings != 0 && warnings == inclErrs.size();
+    ServletUtil.layoutSubmitButton(this, form,
+				   doConfirm ? ACTION_CONFIRM : ACTION_UPDATE);
     page.add(form);
 
     // Finish laying out page
@@ -178,7 +216,7 @@ public abstract class IpAccessControl extends LockssServlet {
    * @param ipList vector containing strings representing the ip addresses
    * @return vector of the malformed ip addresses
    */
-  public Vector findInvalidIps(Vector ipList) {
+  public Vector findInvalidIps(Vector ipList, PermissivenessCheck perm) {
     Vector errorIPs = new Vector();
 
     if (ipList != null) {
@@ -186,8 +224,25 @@ public abstract class IpAccessControl extends LockssServlet {
 	String ipStr = (String)iter.next();
 	IpFilter.Mask ip;
 	try {
-	  // value not used, constructor called to check if malformed
+	  // Constructor throws if malformed
 	  ip = new IpFilter.Mask(ipStr, true);
+	  switch (perm) {
+	  case WARN:
+	  case ERROR:
+	    int b = ip.getMaskBits();
+	    if (b < errorBits) {
+	      errorIPs.addElement(ipStr + ": Subnet mask with fewer than " +
+				  errorBits + " bits not allowed");
+	    } else if (perm == PermissivenessCheck.WARN && b < warnBits) {
+	      warnings++;
+	      errorIPs.addElement(ipStr +
+				  ": Please confirm that you wish to allow " +
+				  "access from all " + (1 << (32 - b)) +
+				  " IP addresses in this range");
+	    }
+	    break;
+	  case NONE:
+	  }
 	} catch (IpFilter.MalformedException e) {
 	  errorIPs.addElement(ipStr + ":  " + e.getMessage());
 	}
