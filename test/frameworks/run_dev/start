@@ -1,1 +1,68 @@
+#!/bin/sh
+if [ ! -f local.txt ]
+then
+	LOCAL_IP=""
+	ECHO="echo -n"
+	SHA1SUM="sha1sum"
+	OS="`uname -s`"
+	case ${OS} in
+	SunOS)
+		ECHO="/usr/ucb/echo -n"
+		;;
+	OpenBSD)
+		SHA1SUM="sha1"
+		;;
+	esac
+	while [ "X${LOCAL_IP}" = X ]
+	do
+		${ECHO} "Local IP address? "
+		read LOCAL_IP
+	done
+	FQDN=""
+	while [ "X${FQDN}" = X ]
+	do
+		${ECHO} "Fully-qualified domain name? "
+		read FQDN
+	done
+	PWDHASH=""
+	while [ "X${PWDHASH}" = X ]
+	do
+		${ECHO} "Password for admin UI? "
+		STTY_ORIG=`stty -g`
+	        stty -echo
+	        read ANS
+		if [ "X${ANS}" != X ]
+		then
+			PWDHASH=SHA1:`${ECHO} ${ANS} | ${SHA1SUM} | sed 's/ .*//'`
+			ANS=""
+		fi
+	        stty $STTY_ORIG
+	        echo
+	done
+	if [ ! -d ./cache ]
+	then
+		mkdir ./cache
+	fi
+	cat >local.txt  <<Funky-EOF
+org.lockss.platform.localIPAddress=${LOCAL_IP}
+org.lockss.platform.localIPs=${LOCAL_IP}
+org.lockss.platform.diskSpacePaths=./cache
+org.lockss.platform.version=243
+org.lockss.platform.operatingSystem=${OS}
+org.lockss.platform.sysadminemail=lockssdiag@lockss.org
+org.lockss.platform.accesssubnet=171.66.236.*
+org.lockss.platform.smtphost=smtp.lockss.org
+org.lockss.platform.smtpport=25
+#org.lockss.platform.logdirectory=./log
+#org.lockss.platform.logfile=daemon
+#org.lockss.log.targets=org.lockss.util.FileTarget
+org.lockss.platform.fqdn=${FQDN}
+org.lockss.platform.ui.username=lockss
+org.lockss.platform.ui.password=${PWDHASH}
+org.lockss.platform.externalconfiguration=
+org.lockss.platform.icp.enabled=false
+org.lockss.platform.v3.identity=TCP:[${LOCAL_IP}]:9729
+org.lockss.platform.unfilteredTcpPorts=9091,8081,9090,9729
+Funky-EOF
+fi
 ./doall start "$@"
