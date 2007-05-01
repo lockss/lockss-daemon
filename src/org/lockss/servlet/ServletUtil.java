@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.39 2007-04-26 01:40:05 tlipkis Exp $
+ * $Id: ServletUtil.java,v 1.40 2007-05-01 23:34:04 tlipkis Exp $
  */
 
 /*
@@ -497,13 +497,14 @@ public class ServletUtil {
     comp.add(tbl);
   }
 
-  public static void layoutAuStatus(Page page,
-                                    Iterator auStatusEntryIter) {
+  public static void layoutAuStatus(LockssServlet servlet,
+				    Page page,
+				    List<BatchAuStatus.Entry> auStatusList) {
+    Set userMessages = new HashSet();
     Table tbl = new Table(AUSTATUS_TABLE_BORDER, AUSTATUS_TABLE_ATTRIBUTES);
     tbl.addHeading("Status");
     tbl.addHeading("Archival Unit");
-    while (auStatusEntryIter.hasNext()) {
-      BatchAuStatus.Entry stat = (BatchAuStatus.Entry)auStatusEntryIter.next();
+    for (BatchAuStatus.Entry stat : auStatusList) {
       tbl.newRow();
       tbl.newCell();
       tbl.add(SPACE);
@@ -512,10 +513,29 @@ public class ServletUtil {
       tbl.newCell();
       String name = stat.getName();
       tbl.add(name != null ? encodeText(name) : stat.getAuId());
-      if (stat.getExplanation() != null) {
+      String exp = stat.getExplanation();
+      String umsg = stat.getUserMessage();
+      if (exp != null || umsg != null) {
+	StringBuilder sb = new StringBuilder();
+	if (exp != null) {
+	  sb.append(exp);
+	}
+	if (umsg != null) {
+	  sb.append("See note");
+	  sb.append(servlet.addFootnote(umsg));
+	}
         tbl.newCell();
-        tbl.add(stat.getExplanation());
+        tbl.add(sb.toString());
       }
+      if (stat.getUserMessage() != null) {
+	userMessages.add(stat.getUserMessage());
+      }
+    }
+    if (!userMessages.isEmpty()) {
+      layoutExplanationBlock(page,
+			     "<font color=\"red\" size=\"+1\">" +
+			     "Some of the titles you just configured may require additional action.  Please see the notes at the bottom of this page." +
+			     "</font>");
     }
     page.add(tbl);
   }
@@ -1368,8 +1388,7 @@ public class ServletUtil {
     if (errs != null && (size = errs.size()) > 0) {
       composite.add(ALLOWDENYERRORS_BEFORE);
       composite.add(Integer.toString(size));
-      composite.add(size == 1 ? " entry has" : " entries have");
-      composite.add(" errors:");
+      composite.add(size == 1 ? " error/warning" : " errors/warnings");
       composite.add(ALLOWDENYERRORS_AFTER);
       for (Iterator iter = errs.iterator() ; iter.hasNext() ; ) {
         composite.add((String)iter.next());

@@ -1,5 +1,5 @@
 /*
- * $Id: BatchAuConfig.java,v 1.33 2007-04-26 01:40:05 tlipkis Exp $
+ * $Id: BatchAuConfig.java,v 1.34 2007-05-01 23:34:04 tlipkis Exp $
  */
 
 /*
@@ -625,9 +625,16 @@ public class BatchAuConfig extends LockssServlet {
 
     Page page = newPage();
     layoutErrorBlock(page);
-    ServletUtil.layoutExplanationBlock(page, okCnt + " AUs " + verb.past +
-        ", " + errCnt + " skipped");
-    ServletUtil.layoutAuStatus(page, statusList.iterator());
+    StringBuilder sb = new StringBuilder();
+    sb.append(okCnt);
+    sb.append(okCnt == 1 ? " AU " : " AUs ");
+    sb.append(verb.past);
+    if (errCnt != 0) {
+      sb.append(errCnt);
+      sb.append(" skipped");
+    }
+    ServletUtil.layoutExplanationBlock(page, sb.toString());
+    ServletUtil.layoutAuStatus(this, page, statusList);
     endPage(page);
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: AuUtil.java,v 1.18 2007-03-17 04:19:29 smorabito Exp $
+ * $Id: AuUtil.java,v 1.19 2007-05-01 23:34:05 tlipkis Exp $
  */
 
 /*
@@ -42,6 +42,7 @@ import org.lockss.daemon.*;
 import org.lockss.state.*;
 import org.lockss.poller.*;
 import org.lockss.repository.*;
+import org.lockss.plugin.definable.*;
 
 /**
  * Static AU- and plugin-related utility methods.  These might logically
@@ -122,6 +123,12 @@ public class AuUtil {
     LockssDaemon daemon = getDaemon(au);
     AuNodeImpl repoNode = getAuRepoNode(au);
     return repoNode.getDiskUsage(calcIfUnknown);
+  }
+
+  public static String getConfigUserMessage(ArchivalUnit au) {
+    // XXX change this to not require string to be copied into each AU
+    TypedEntryMap map = au.getProperties();
+    return map.getString(DefinableArchivalUnit.KEY_AU_CONFIG_USER_MSG, null);
   }
 
   /** Return true if the supplied AU config appears to be compatible with

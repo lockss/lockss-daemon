@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.117 2007-02-06 01:03:08 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.118 2007-05-01 23:34:05 tlipkis Exp $
  */
 
 /*
@@ -122,6 +122,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   public static final String KEY_PAUSE_TIME = "pause_time";
   static final public String KEY_AU_DEFAULT_NEW_CONTENT_CRAWL_INTERVAL = "au_def_new_content_crawl";
   static final public String KEY_AU_DEFAULT_PAUSE_TIME = "au_def_pause_time";
+  static final public String KEY_AU_CONFIG_USER_MSG = "au_config_user_msg";
 
   static final public String PREFIX_AU_SHORT_YEAR = "au_short_";
   static final public String SUFFIX_AU_HOST = "_host";
@@ -328,7 +329,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     titleDbChanged();
   }
 
-  void addImpliedConfigParams() {
+  protected void addImpliedConfigParams() {
     for (Iterator it = plugin.getAuConfigDescrs().iterator();
 	 it.hasNext() ; ) {
       ConfigParamDescr descr = (ConfigParamDescr)it.next();

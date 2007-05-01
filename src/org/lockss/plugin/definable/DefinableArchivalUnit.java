@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.55 2007-04-17 19:33:42 troberts Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.56 2007-05-01 23:34:04 tlipkis Exp $
  */
 
 /*
@@ -147,6 +147,16 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
                                   DEFAULT_AU_MAX_FILE_SIZE);
     paramMap.putLong(KEY_AU_MAX_FILE_SIZE, l_val);
 
+  }
+
+  protected void addImpliedConfigParams() {
+    super.addImpliedConfigParams();
+    String umsg =
+      definitionMap.getString(DefinablePlugin.KEY_PLUGIN_AU_CONFIG_USER_MSG,
+			      null);
+    if (umsg != null) {
+      paramMap.putString(KEY_AU_CONFIG_USER_MSG, umsg);
+    }
   }
 
   protected String makeName() {

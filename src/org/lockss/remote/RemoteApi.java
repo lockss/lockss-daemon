@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.58 2007-01-14 08:14:58 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.59 2007-05-01 23:34:04 tlipkis Exp $
  */
 
 /*
@@ -104,6 +104,9 @@ public class RemoteApi
   public static final int BATCH_ADD_REACTIVATE = 2;
   /** "Restore from backup" opcode for batchAddAus(), batchProcessAus() */
   public static final int BATCH_ADD_RESTORE = 3;
+
+  public static final String[] BATCH_ADD_OP_STRINGS = {
+    "", "Batch Add", "Batch Reactivate", "Batch Restore" };
 
   private PluginManager pluginMgr;
   private ConfigManager configMgr;
@@ -675,7 +678,7 @@ public class RemoteApi
       throws IOException, InvalidAuConfigBackupFile {
     int commentLen = AU_BACKUP_FILE_COMMENT.length();
     // There is apparently hidden buffering in the InputStreamReader's
-    // StreamDecoder which throws off our calcualation as to how much
+    // StreamDecoder which throws off our calculation as to how much
     // auTxtStream needs to buffer, so use a large number
     auTxtStream.mark(paramBackupStreamMarkSize);
     BufferedReader rdr =
@@ -871,6 +874,14 @@ public class RemoteApi
     return b ? "true" : "false";
   }
 
+  String addOpName(int addOp) {
+    try {
+      return BATCH_ADD_OP_STRINGS[addOp];
+    } catch (Exception e) {
+      return Integer.toString(addOp);
+    }
+  }
+
   BatchAuStatus.Entry batchProcessOneAu(boolean doCreate,
 					int addOp,
 					PluginProxy pluginp,
@@ -914,7 +925,7 @@ public class RemoteApi
 	stat.setName(au.getName());
       }
       if (normOld.equals(normNew)) {
-	log.debug("Restore: same config: " + auid);
+	if (doCreate) log.debug(addOpName(addOp) + ": same config: " + auid);
 	stat.setStatus("Exists", STATUS_ORDER_LOW);
 	if (oldConfig.getBoolean(PluginManager.AU_PARAM_DISABLED, false)) {
 	  stat.setExplanation("Already Exists (inactive)");
@@ -922,8 +933,10 @@ public class RemoteApi
 	  stat.setExplanation("Already Exists");
 	}
       } else {
-	log.debug("Restore: conflicting config: " + auid +
-		  ", current: " + normOld + ", new: " + normNew);
+	if (doCreate) {
+	  log.debug(addOpName(addOp) + ": conflicting config: " + auid +
+		    ", current: " + normOld + ", new: " + normNew);
+	}
 	stat.setStatus("Conflict", STATUS_ORDER_ERROR);
 	Set diffKeys = normNew.differentKeys(normOld);
 	StringBuffer sb = new StringBuffer();
@@ -955,7 +968,7 @@ public class RemoteApi
 	stat.setConfig(auConfig);
 	if (auConfig.getBoolean(PluginManager.AU_PARAM_DISABLED, false)) {
 	  if (doCreate) {
-	    log.debug("Restore: inactive: " + auid);
+	    log.debug(addOpName(addOp) + " inactive: " + auid);
 	    pluginMgr.updateAuConfigFile(auid, auConfig);
 	    stat.setStatus("Added (inactive)", STATUS_ORDER_NORM);
 	  } else {
@@ -963,10 +976,14 @@ public class RemoteApi
 	  }
 	} else {
 	  if (doCreate) {
-	    log.debug("Restore: active: " + auid);
+	    log.debug(addOpName(addOp) + auid);
 	    AuProxy aup = createAndSaveAuConfiguration(pluginp, auConfig);
 	    stat.setStatus("Added", STATUS_ORDER_NORM);
 	    stat.setName(aup.getName());
+	    String usrMsg = AuUtil.getConfigUserMessage(aup.getAu());
+	    if (usrMsg != null) {
+	      stat.setUserMessage(usrMsg);
+	    }
 	    restoreAuStateFiles(aup, bi);
 	  } else {
 	    stat.setStatus(null, STATUS_ORDER_NORM);
@@ -1184,7 +1201,7 @@ public class RemoteApi
 
 
   public static class BatchAuStatus {
-    private List statusList = new ArrayList();
+    private List statusList = new ArrayList<BatchAuStatus.Entry>();
     private List sortedList;
     private int ok = 0;
     private BackupInfo bi;
@@ -1204,7 +1221,7 @@ public class RemoteApi
       return bi;
     }
 
-    public List getStatusList() {
+    public List<BatchAuStatus.Entry> getStatusList() {
       if (sortedList == null) {
 	Collections.sort(statusList);
 	sortedList = statusList;
@@ -1223,8 +1240,7 @@ public class RemoteApi
     }
     public boolean hasOk() {
       List lst = getStatusList();
-      for (Iterator iter = lst.iterator(); iter.hasNext(); ) {
-	BatchAuStatus.Entry status = (BatchAuStatus.Entry)iter.next();
+      for (BatchAuStatus.Entry status : getStatusList()) {
 	if (status.isOk()) {
 	  return true;
 	}
@@ -1233,9 +1249,7 @@ public class RemoteApi
     }
 
     public boolean hasNotOk() {
-      List lst = getStatusList();
-      for (Iterator iter = lst.iterator(); iter.hasNext(); ) {
-	BatchAuStatus.Entry status = (BatchAuStatus.Entry)iter.next();
+      for (BatchAuStatus.Entry status : getStatusList()) {
 	if (!status.isOk()) {
 	  return true;
 	}
@@ -1252,9 +1266,7 @@ public class RemoteApi
     public boolean hasAtLeast(int thatMany) {
       if (hasNotOk()) {
         int size = 0;
-        for (Iterator iter = getStatusList().iterator(); iter.hasNext(); ) {
-          BatchAuStatus.Entry rs =
-            (BatchAuStatus.Entry)iter.next();
+	for (BatchAuStatus.Entry rs : getStatusList()) {
           if (rs.isOk()) {
             if (++size >= thatMany) return true;
           }
@@ -1276,6 +1288,7 @@ public class RemoteApi
       private String name;
       private String status;
       private String explanation;
+      private String userMessage;
       private TitleConfig tc;
       private Configuration config;
       private List repoNames;
@@ -1301,6 +1314,9 @@ public class RemoteApi
       }
       public String getExplanation() {
 	return explanation;
+      }
+      public String getUserMessage() {
+	return userMessage;
       }
       public TitleConfig getTitleConfig() {
 	return tc;
@@ -1332,6 +1348,9 @@ public class RemoteApi
       }
       void setExplanation(String s) {
 	this.explanation = s;
+      }
+      void setUserMessage(String s) {
+	this.userMessage = s;
       }
       void setTitleConfig(TitleConfig tc) {
 	this.tc = tc;

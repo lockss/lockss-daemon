@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.29 2007-02-06 01:03:07 tlipkis Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.30 2007-05-01 23:34:02 tlipkis Exp $
  */
 
 /*
@@ -283,6 +283,17 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     String expectedReturn = "http://www.example.com/lockss-volume/43.html";
     String actualReturn = cau.makeStartUrl();
     assertEquals("return value", expectedReturn, actualReturn);
+  }
+
+  public void testUserMessage() {
+    String str = "test user msg";
+    Collection configProps = ListUtil.list(ConfigParamDescr.BASE_URL,
+					   ConfigParamDescr.VOLUME_NUMBER);
+    defMap.putCollection(DefinablePlugin.KEY_PLUGIN_CONFIG_PROPS,
+			 configProps);
+    defMap.putString(DefinablePlugin.KEY_PLUGIN_AU_CONFIG_USER_MSG, str);
+    cau.addImpliedConfigParams();
+    assertEquals(str, cau.getProperties().getString(DefinableArchivalUnit.KEY_AU_CONFIG_USER_MSG, null));
   }
 
   public void testGetManifestPage() {
