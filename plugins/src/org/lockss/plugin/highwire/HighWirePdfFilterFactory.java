@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePdfFilterFactory.java,v 1.14 2007-02-23 23:54:04 thib_gc Exp $
+ * $Id: HighWirePdfFilterFactory.java,v 1.15 2007-05-05 00:10:36 thib_gc Exp $
  */
 
 /*
@@ -70,7 +70,7 @@ public class HighWirePdfFilterFactory extends BasicPdfFilterFactory {
             // Not BT
             if (PdfUtil.isBeginTextObject(tokens,tok)) { break iteration; }
             // Tj and its argument is a domain name string
-            if (PdfUtil.matchShowTextMatches(tokens, tok, "[-0-9A-Za-z]+(?:\\.[-0-9A-Za-z]+)+")) { ++progress; }
+            if (PdfUtil.matchShowTextMatches(tokens, tok, "(?:http://)?[-0-9A-Za-z]+(?:\\.[-0-9A-Za-z]+)+")) { ++progress; }
             break;
           case 3:
             // Not BT
@@ -132,23 +132,23 @@ public class HighWirePdfFilterFactory extends BasicPdfFilterFactory {
             // Not BT
             if (PdfUtil.isBeginTextObject(tokens,tok)) { break iteration; }
             // Tj and its argument is a domain name string
-            if (PdfUtil.matchShowTextMatches(tokens, tok, "[-0-9A-Za-z]+(?:\\.[-0-9A-Za-z]+)+")) { ++progress; }
+            if (PdfUtil.matchShowTextMatches(tokens, tok, "(?:http://)?[-0-9A-Za-z]+(?:\\.[-0-9A-Za-z]+)+")) { ++progress; }
             break;
-          case 5:
+          case 5: logger.critical("case 5");
             // BT
             if (PdfUtil.isBeginTextObject(tokens,tok)) { ++progress; }
             break;
-          case 6:
+          case 6: logger.critical("case 6");
             // ET
             if (PdfUtil.isEndTextObject(tokens,tok)) { ++progress; }
             break;
-          case 7:
+          case 7: logger.critical("case 7");
             // Not BT
             if (PdfUtil.isBeginTextObject(tokens,tok)) { break iteration; }
             // Tj and its string argument
             if (PdfUtil.matchShowText(tokens, tok)) { ++progress; }
             break;
-          case 8:
+          case 8: logger.critical("case 8");
             // BT
             if (PdfUtil.isBeginTextObject(tokens,tok)) { ret = true; break iteration; }
             break;
