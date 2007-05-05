@@ -347,9 +347,9 @@
                value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
       </property>
 
-      <property name="HighWireTheANNALSoftheAmericanAcademyofPoliticalandSocialScience604">
-	<property name="title" value="The ANNALS of the American Academy of Political and Social Science Volume 604" />
-	<property name="journalTitle" value="The ANNALS of the American Academy of Political and Social Science" />
+      <property name="HighWireTheAnnalsoftheAmericanAcademyofPoliticalandSocialScience604">
+	<property name="title" value="The Annals of the American Academy of Political and Social Science Volume 604" />
+	<property name="journalTitle" value="The Annals of the American Academy of Political and Social Science" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
 	<property name="estSize" value="10MB" />
 	<property name="param.1">
