@@ -2333,12 +2333,12 @@
       <property name="journalTitle" value="Development" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://dev.biologists.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://dev.biologists.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="volume_name" />
-	<property name="value" value="133" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="133" />
       </property>
       <property name="attributes.publisher" value="Company of Biologists" />
     </property>
@@ -2348,12 +2348,12 @@
       <property name="journalTitle" value="Journal of Cell Science" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://jcs.biologists.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://jcs.biologists.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="volume_name" />
-	<property name="value" value="119" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="119" />
       </property>
       <property name="attributes.publisher" value="Company of Biologists" />
     </property>
@@ -2363,12 +2363,12 @@
       <property name="journalTitle" value="Journal of Experimental Biology" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://jeb.biologists.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://jeb.biologists.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="volume_name" />
-	<property name="value" value="209" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="209" />
       </property>
       <property name="attributes.publisher" value="Company of Biologists" />
     </property>
