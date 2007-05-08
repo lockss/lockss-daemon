@@ -9,19 +9,23 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>au_name</string>
     <string>&quot;%s, vol. %s&quot;, journal_id, volume_name</string>
   </entry>
   <entry>
+    <string>plugin_name</string>
+    <string>Blackwell</string>
+  </entry>
+  <entry>
     <string>au_def_new_content_crawl</string>
     <long>1209600000</long>
   </entry>
   <entry>
-    <string>plugin_name</string>
-    <string>Blackwell</string>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.blackwell.BlackwellHtmlFilterFactory</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
@@ -29,15 +33,11 @@
       <string>4,&quot;^%s&quot;, base_url</string>
       <string>2,&quot;^%s(templates/jsp/_synergy/help|help|sda)&quot;, base_url</string>
       <string>1,&quot;^%s.*\.(css|ico|gif|jpg|jpeg|png)$&quot;, base_url</string>
-      <string>1,&quot;^%sdoi/.*/.*%s&quot;, base_url, journal_issn</string>
+      <string>1,&quot;^%sdoi/.*/.*&quot;, base_url</string>
       <string>1,&quot;^%stoc/%s/%s/&quot;, base_url, journal_id, volume_name</string>
       <string>1,&quot;^%sclockss/%s/%s/manifest.html&quot;, base_url, journal_id, volume_name</string>
       <string>1,&quot;%s(userimages|templates/jsp/_synergy/images)/&quot;, base_url</string>
     </list>
-  </entry>
-  <entry>
-    <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.blackwell.BlackwellHtmlFilterFactory</string>
   </entry>
   <entry>
     <string>au_start_url</string>
@@ -46,6 +46,10 @@
   <entry>
     <string>required_daemon_version</string>
     <string>1.20.0</string>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.blackwell.BlackwellUrlNormalizer</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -86,9 +90,5 @@
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
     </list>
-  </entry>
-  <entry>
-    <string>au_url_normalizer</string>
-    <string>org.lockss.plugin.blackwell.BlackwellUrlNormalizer</string>
   </entry>
 </map>
