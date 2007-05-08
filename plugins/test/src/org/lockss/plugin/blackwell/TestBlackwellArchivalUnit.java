@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlackwellArchivalUnit.java,v 1.7 2007-02-15 19:48:27 troberts Exp $
+ * $Id: TestBlackwellArchivalUnit.java,v 1.8 2007-05-08 23:54:21 troberts Exp $
  */
 
 /*
@@ -176,8 +176,8 @@ public class TestBlackwellArchivalUnit extends LockssPluginTestCase {
 		      au, cus);
     assertShouldCache(baseUrl+"doi/pdf/10.1111/j.1540-8159.2005.00355",
 		      au, cus);
-    // ISSN and volue must match
-    assertShouldNotCache(baseUrl+"doi/pdf/10.1111/j.1540-7234.2005.00355",
+    // we now ignore the ISSN
+    assertShouldCache(baseUrl+"doi/pdf/10.1111/j.1540-7234.2005.00355",
 			 au, cus);
 
     //Now we ignore the year
