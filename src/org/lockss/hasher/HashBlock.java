@@ -1,5 +1,5 @@
 /*
- * $Id: HashBlock.java,v 1.7 2006-12-06 05:19:02 tlipkis Exp $
+ * $Id: HashBlock.java,v 1.8 2007-05-09 10:34:16 smorabito Exp $
  */
 
 /*
@@ -64,10 +64,12 @@ public class HashBlock implements LockssSerializable {
                          long filteredOffset,
                          long filteredLength,
                          MessageDigest[] digests,
-                         int repositoryVersion) {
+                         int repositoryVersion,
+                         Throwable hashError) {
     versions.add(new HashBlock.Version(unfilteredOffset, unfilteredLength,
                                        filteredOffset, filteredLength,
-                                       digests, repositoryVersion));
+                                       digests, repositoryVersion,
+                                       hashError));
     totalFilteredBytes += filteredLength; 
   }
   
@@ -120,15 +122,18 @@ public class HashBlock implements LockssSerializable {
     boolean lastVersion;
     byte[][] hashes;
     int repositoryVersion;
-    
+    Throwable hashError;
+
     public Version(long unfilteredOffset, long unfilteredLength,
                    long filteredOffset, long filteredLength,
-                   MessageDigest[] digests, int repositoryVersion) {
+                   MessageDigest[] digests, int repositoryVersion,
+                   Throwable hashError) {
       this.unfilteredOffset = unfilteredOffset;
       this.unfilteredLength = unfilteredLength;
       this.filteredOffset = filteredOffset;
       this.filteredLength = filteredLength;
       this.repositoryVersion = repositoryVersion;
+      this.hashError = hashError;
       setDigests(digests);
     }
 
@@ -174,6 +179,14 @@ public class HashBlock implements LockssSerializable {
 
     public byte[][] getHashes() {
       return hashes;
+    }
+    
+    public void setHashError(Throwable t) {
+      hashError = t;
+    }
+    
+    public Throwable getHashError() {
+      return hashError;
     }
 
     public void setEndOfFile(boolean val) {

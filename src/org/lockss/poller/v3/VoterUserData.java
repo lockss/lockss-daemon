@@ -1,5 +1,5 @@
 /*
- * $Id: VoterUserData.java,v 1.19 2006-12-13 20:38:08 smorabito Exp $
+ * $Id: VoterUserData.java,v 1.20 2007-05-09 10:34:11 smorabito Exp $
  */
 
 /*
@@ -48,7 +48,7 @@ import org.lockss.util.*;
 public class VoterUserData
   implements LockssSerializable {
 
-  private LcapMessage pollMessage;
+  private V3LcapMessage pollMessage;
   private PeerIdentity pollerId;
   private String auId;
   private String pollKey;
@@ -115,7 +115,7 @@ public class VoterUserData
   }
 
   public void setPollMessage(LcapMessage msg) {
-    this.pollMessage = msg;
+    this.pollMessage = (V3LcapMessage)msg;
   }
 
   public LcapMessage getPollMessage() {
@@ -398,6 +398,7 @@ public class VoterUserData
    * Release unneeded resources used by this object at the end of a poll.
    */
   public void release() {
+    deadline = TimeBase.nowMs();
     introEffortProof = null;
     pollAckEffortProof = null;
     receiptEffortProof = null;

@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBlock.java,v 1.11 2006-07-19 18:01:00 tlipkis Exp $
+ * $Id: VoteBlock.java,v 1.12 2007-05-09 10:34:09 smorabito Exp $
  */
 
 /*
@@ -49,6 +49,7 @@ public class VoteBlock implements LockssSerializable {
   public static final String VB_UOFFSET = "uo"; // Unfiltered offset
   public static final String VB_NH = "nh"; // Nonced hash
   public static final String VB_PH = "ph"; // Plain hash
+  public static final String VB_ERR = "err"; // Hashing error flag
 
   /* Vote type enum.  Is this a vote on content, headers, or metadata? */
   public static final int CONTENT_VOTE = 0;
@@ -102,9 +103,10 @@ public class VoteBlock implements LockssSerializable {
       long filteredOffset = vp.getLong(VB_FOFFSET, 0);
       byte[] plainHash = vp.getByteArray(VB_PH, ByteArray.EMPTY_BYTE_ARRAY);
       byte[] noncedHash = vp.getByteArray(VB_NH, ByteArray.EMPTY_BYTE_ARRAY);
+      boolean hashError = vp.getBoolean(VB_ERR, false);
       versions.add(new VoteBlock.Version(unfilteredOffset, unfilteredLength,
                                          filteredOffset, filteredLength,
-                                         plainHash, noncedHash));
+                                         plainHash, noncedHash, hashError));
     }
   }
   
@@ -112,8 +114,7 @@ public class VoteBlock implements LockssSerializable {
     EncodedProperty props = new EncodedProperty();
     props.put(VB_URL, url);
     props.putInt(VB_VT, voteType);
-    // JAVA5: List<EncodedProperty>
-    List vers = new ArrayList(versions.size());
+    List<EncodedProperty> vers = new ArrayList<EncodedProperty>(versions.size());
     for (Iterator iter = versions.iterator(); iter.hasNext(); ) {
       EncodedProperty vp = new EncodedProperty();
       VoteBlock.Version ver = (VoteBlock.Version)iter.next();
@@ -123,6 +124,7 @@ public class VoteBlock implements LockssSerializable {
       vp.putLong(VB_FOFFSET, ver.getFilteredOffset());
       vp.putByteArray(VB_PH, ver.getPlainHash());
       vp.putByteArray(VB_NH, ver.getHash());
+      vp.putBoolean(VB_ERR, ver.getHashError());
       vers.add(vp);
     }
     props.putEncodedPropertyList(VB_VERSIONS, vers);
@@ -181,13 +183,15 @@ public class VoteBlock implements LockssSerializable {
    * @param unfilteredOffset The unfiltered offset of the version.
    * @param plainHash The plain hash of the content.
    * @param noncedHash The nonced hash of the content.
+   * @param hashError True if there was an error while hashing for this version.
    */
   public void addVersion(long filteredOffset, long filteredLength,
                          long unfilteredOffset, long unfilteredLength,
-                         byte[] plainHash, byte[] noncedHash) {
+                         byte[] plainHash, byte[] noncedHash,
+                         boolean hashError) {
     versions.add(new VoteBlock.Version(filteredOffset, filteredLength,
-                                          unfilteredOffset, unfilteredLength,
-                                          plainHash, noncedHash));
+                                       unfilteredOffset, unfilteredLength,
+                                       plainHash, noncedHash, hashError));
   }
   
   public String getUrl() {
@@ -268,6 +272,7 @@ public class VoteBlock implements LockssSerializable {
     private long unfilteredLength = 0;
     private byte[] plainHash;
     private byte[] noncedHash;
+    private boolean hashError = false;
 
     /**
      * Special constructor to create a VoteBlock from an EncodedProperty.
@@ -283,17 +288,19 @@ public class VoteBlock implements LockssSerializable {
       filteredLength = props.getLong(VB_FLEN, filteredLength);
       plainHash = props.getByteArray(VB_PH, ByteArray.EMPTY_BYTE_ARRAY);
       noncedHash = props.getByteArray(VB_NH, ByteArray.EMPTY_BYTE_ARRAY);
+      hashError = props.getBoolean(VB_ERR, hashError);
     }
 
     public Version(long fOffset, long fLength,
                    long uOffset, long uLength,
-                   byte[] plainHash, byte[] challengeHash) {
+                   byte[] plainHash, byte[] challengeHash, boolean hashError) {
       this.filteredOffset = fOffset;
       this.filteredLength = fLength;
       this.unfilteredOffset = uOffset;
       this.unfilteredLength = uLength;
       this.plainHash = plainHash;
       this.noncedHash = challengeHash;
+      this.hashError = hashError;
     }
 
     public long getFilteredLength() {
@@ -343,6 +350,14 @@ public class VoteBlock implements LockssSerializable {
     public void setPlainHash(byte[] b) {
       this.plainHash = b;
     }
+    
+    public boolean getHashError() {
+      return hashError;
+    }
+    
+    public void setHashError(boolean b) {
+      this.hashError = b;
+    }
 
     public String toString() {
       StringBuffer sb = new StringBuffer("[VoteBlock.Version: ");
@@ -355,7 +370,8 @@ public class VoteBlock implements LockssSerializable {
                 + ", ");
       sb.append("ph = " +
                 (plainHash == null ? "null" : new String(B64Code.encode(plainHash)))
-                + "]");
+                + ", ");
+      sb.append("err = " + (hashError ? "true" : "false") + "]");
       return sb.toString();
     }
 

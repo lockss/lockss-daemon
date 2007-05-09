@@ -1,5 +1,5 @@
 /*
- * $Id: FuncV3Voter.java,v 1.16 2007-01-23 21:44:37 smorabito Exp $
+ * $Id: FuncV3Voter.java,v 1.17 2007-05-09 10:34:13 smorabito Exp $
  */
 
 /*
@@ -117,6 +117,7 @@ public class FuncV3Voter extends LockssTestCase {
                   "TCP:[127.0.0.2]:3456,TCP:[127.0.0.3]:3456,"
                   + "TCP:[127.0.0.4]:3456,TCP:[127.0.0.5]:3456,"
                   + "TCP:[127.0.0.6]:3456,TCP:[127.0.0.7]:3456");
+    p.setProperty(ConfigManager.PARAM_DAEMON_GROUP, "nogroup");
     ConfigurationUtil.setCurrentConfigFromProps(p);
     idmgr = theDaemon.getIdentityManager();
     pollmanager = theDaemon.getPollManager();
@@ -192,6 +193,7 @@ public class FuncV3Voter extends LockssTestCase {
                         V3LcapMessage.MSG_POLL_PROOF,
                         msgDeadline, pollerId, tempDir, theDaemon);
     msg.setEffortProof(ByteArray.makeRandomBytes(20));
+    msg.setVoterNonce(ByteArray.makeRandomBytes(20));
     return msg;
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManager.java,v 1.74 2006-09-19 01:10:12 smorabito Exp $
+ * $Id: IdentityManager.java,v 1.75 2007-05-09 10:34:10 smorabito Exp $
  */
 
 /*
@@ -426,6 +426,11 @@ public interface IdentityManager extends LockssManager {
   public Map getDisagreed(ArchivalUnit au);
 
   public boolean hasAgreeMap(ArchivalUnit au);
+  
+  /**
+   * <p>Remove a peer from our list of known peers.
+   */
+  public void removePeer(String key);
 
   /**
    * <p>Copies the identity agreement file for the AU to the given

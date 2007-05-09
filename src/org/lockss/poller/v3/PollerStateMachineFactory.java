@@ -1,5 +1,5 @@
 /*
- * $Id: PollerStateMachineFactory.java,v 1.7 2006-03-01 02:50:14 smorabito Exp $
+ * $Id: PollerStateMachineFactory.java,v 1.8 2007-05-09 10:34:11 smorabito Exp $
  */
 
 /*
@@ -63,7 +63,13 @@ public class PollerStateMachineFactory {
                      new PsmResponse(V3Events.msgPollAck,
                                      new PsmMethodMsgAction(actionClass,
                                                            "handleReceivePollAck")),
-                     new PsmResponse(V3Events.evtOk, "VerifyPollAckEffort")).setResumable(true),
+                     new PsmResponse(V3Events.evtOk, "VerifyPollAckEffort"),
+                     new PsmResponse(V3Events.evtDeclinePoll,
+                                     new PsmMethodAction(actionClass,
+                                                         "handleDeclinePoll")),
+                     new PsmResponse(V3Events.evtFinalize,
+                                     "Finalize")).setResumable(true),
+                              
         new PsmState("VerifyPollAckEffort",
                      new PsmMethodAction(actionClass,
                                         "handleVerifyPollAckEffort"),

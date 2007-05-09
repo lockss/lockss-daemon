@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.37 2007-04-11 22:01:44 smorabito Exp $
+ * $Id: V3Voter.java,v 1.38 2007-05-09 10:34:10 smorabito Exp $
  */
 
 /*
@@ -68,11 +68,13 @@ public class V3Voter extends BasePoll {
   public static final int STATUS_COMPLETE = 5;
   public static final int STATUS_EXPIRED = 6;
   public static final int STATUS_ERROR = 7;
+  public static final int STATUS_DECLINED_POLL = 8;
   
   public static final String[] STATUS_STRINGS = 
   {
    "Initialized", "Accepted Poll", "Hashing", "Voted",
-   "No Time Available", "Complete", "Expired w/o Voting", "Error"
+   "No Time Available", "Complete", "Expired w/o Voting", "Error",
+   "Declined Poll"
   };
 
   static String PREFIX = Configuration.PREFIX + "poll.v3.";
@@ -190,6 +192,7 @@ public class V3Voter extends BasePoll {
                                              makeVoterNonce(),
                                              msg.getEffortProof(),
                                              stateDir);
+      voterUserData.setPollMessage(msg);
       voterUserData.setVoteDeadline(TimeBase.nowMs() + msg.getVoteDuration());
     } catch (IOException ex) {
       log.critical("IOException while trying to create VoterUserData: ", ex);
@@ -635,7 +638,8 @@ public class V3Voter extends BasePoll {
                     ver.getUnfilteredOffset(),
                     ver.getUnfilteredLength(),
                     plainDigest,
-                    challengeDigest);
+                    challengeDigest,
+                    ver.getHashError() != null);
     }
     
     // Add this vote block to our hash block container.
@@ -820,6 +824,8 @@ public class V3Voter extends BasePoll {
    * Checkpoint the current state of the voter.
    */
   void checkpointPoll() {
+    // This is sometimes the case during testing.
+    if (pollSerializer == null) return;
     try {
       pollSerializer.saveVoterUserData(voterUserData);
     } catch (PollSerializerException ex) {
@@ -846,6 +852,7 @@ public class V3Voter extends BasePoll {
    * Release unneeded resources.
    */
   public void release() {
+    if (task != null) task.cancel();
     voterUserData.release();
     stateDir = null;
     task = null;

@@ -1,5 +1,5 @@
 /*
- * $Id: TestVoteBlock.java,v 1.1 2006-06-02 20:27:16 smorabito Exp $
+ * $Id: TestVoteBlock.java,v 1.2 2007-05-09 10:34:06 smorabito Exp $
  */
 
 /*
@@ -52,20 +52,20 @@ public class TestVoteBlock extends LockssTestCase {
 
     // One version.
     vb = new VoteBlock("foo", VoteBlock.CONTENT_VOTE);
-    vb.addVersion(0, 0, 0, 0, testBytes, testBytes);
+    vb.addVersion(0, 0, 0, 0, testBytes, testBytes, false);
     assertEquals(1, vb.size());
     
     // Eight versions.
     vb = new VoteBlock("foo", VoteBlock.CONTENT_VOTE);
     for (int ix = 0; ix < 8; ix++) {
-      vb.addVersion(0, 0, 0, 0, testBytes, testBytes);
+      vb.addVersion(0, 0, 0, 0, testBytes, testBytes, false);
     }
     assertEquals(8, vb.size());
     
     // 33 versions.
     vb = new VoteBlock("foo", VoteBlock.CONTENT_VOTE);
     for (int ix = 0; ix < 33; ix++) {
-      vb.addVersion(0, 0, 0, 0, testBytes, testBytes);
+      vb.addVersion(0, 0, 0, 0, testBytes, testBytes, false);
     }
     assertEquals(33, vb.size());
   }
@@ -93,10 +93,10 @@ public class TestVoteBlock extends LockssTestCase {
     VoteBlock vb;
     vb = new VoteBlock("foo");
     
-    vb.addVersion(0, 1, 0, 1, testBytes, testBytes);
-    vb.addVersion(0, 2, 0, 2, testBytes, testBytes);
-    vb.addVersion(0, 3, 0, 3, testBytes, testBytes);
-    vb.addVersion(0, 4, 0, 4, testBytes, testBytes);
+    vb.addVersion(0, 1, 0, 1, testBytes, testBytes, false);
+    vb.addVersion(0, 2, 0, 2, testBytes, testBytes, false);
+    vb.addVersion(0, 3, 0, 3, testBytes, testBytes, false);
+    vb.addVersion(0, 4, 0, 4, testBytes, testBytes, false);
     
     assertEquals(4, vb.size());
     
@@ -118,10 +118,10 @@ public class TestVoteBlock extends LockssTestCase {
     vb1 = new VoteBlock("foo");
     vb1.addVersion(0, 1024, 0, 1024,
                    ByteArray.makeRandomBytes(20),
-                   ByteArray.makeRandomBytes(20));
+                   ByteArray.makeRandomBytes(20), false);
     vb1.addVersion(0, 2048, 0, 2048,
                    ByteArray.makeRandomBytes(20),
-                   ByteArray.makeRandomBytes(20));
+                   ByteArray.makeRandomBytes(20), false);
     assertSame(vb1.currentVersion(), vb1.getVersion(0));
   }
   
@@ -136,7 +136,7 @@ public class TestVoteBlock extends LockssTestCase {
     for (int ix = 0; ix < 10; ix++) {
       vb.addVersion(0, 1024, 0, 1024,
                     ByteArray.makeRandomBytes(20),
-                    ByteArray.makeRandomBytes(20));
+                    ByteArray.makeRandomBytes(20), false);
     }
     
     Iterator iter = vb.versionIterator();
@@ -161,7 +161,7 @@ public class TestVoteBlock extends LockssTestCase {
     for (int ix = 0; ix < 10; ix++) {
       vb.addVersion(0, ix, 0, ix,
                     ByteArray.makeRandomBytes(20),
-                    ByteArray.makeRandomBytes(20));
+                    ByteArray.makeRandomBytes(20), false);
     }
     
     VoteBlock.Version[] versions = vb.getVersions();
@@ -179,10 +179,10 @@ public class TestVoteBlock extends LockssTestCase {
     vb1 = new VoteBlock("foo", VoteBlock.CONTENT_VOTE);
     vb1.addVersion(0, 1024, 0, 1024,
                    ByteArray.makeRandomBytes(20),
-                   ByteArray.makeRandomBytes(20));
+                   ByteArray.makeRandomBytes(20), false);
     vb1.addVersion(0, 2048, 0, 2048,
                    ByteArray.makeRandomBytes(20),
-                   ByteArray.makeRandomBytes(20));
+                   ByteArray.makeRandomBytes(20), false);
                    
     // Encode.
     byte[] enc = vb1.getEncoded();

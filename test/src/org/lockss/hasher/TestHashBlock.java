@@ -17,7 +17,7 @@ public class TestHashBlock extends LockssTestCase {
     digests[0] = MessageDigest.getInstance("MD5");
     digests[0].update("foobarbazquux".getBytes());
     
-    block.addVersion(0, 100, 0, 100, digests, versionNum);    
+    block.addVersion(0, 100, 0, 100, digests, versionNum, null);    
   }
   
   public void testArraySortOrder() throws Exception {

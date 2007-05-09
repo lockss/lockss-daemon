@@ -1,5 +1,5 @@
 /*
- * $Id: PollerActions.java,v 1.15 2007-02-16 23:08:32 smorabito Exp $
+ * $Id: PollerActions.java,v 1.16 2007-05-09 10:34:11 smorabito Exp $
  */
 
 /*
@@ -94,12 +94,14 @@ public class PollerActions {
     // so for now we're just checking the voter nonce.
     byte[] voterPollAckEffortProof = msg.getEffortProof();
     byte[] voterNonce = msg.getVoterNonce();
-    if (voterNonce == null) {
+    if (voterNonce == null || voterNonce.length == 0) {
+      // The peer must send a reason for declining the poll.
       log.info("Peer " + ud.getVoterId() + " sent no voter nonce, "
-               + "declining to participate in the poll.");
-      // Remove the peer from the poll.
-      ud.removeParticipant();
-      return V3Events.evtError;
+               + "declining to participate in poll " + ud.getKey()
+               + ".  Reason: " + msg.getNak());
+      // TODO: Switch here based on reasons for declining poll.  At the moment,
+      // there is only one reason, NAK_GROUP_MISMATCH.
+      return V3Events.evtDeclinePoll;
     } else {
       ud.setVoterNonce(voterNonce);
       ud.setStatus(V3Poller.PEER_STATUS_ACCEPTED_POLL);
@@ -108,6 +110,16 @@ public class PollerActions {
                ByteArray.toBase64(voterNonce));
       return V3Events.evtOk;
     }
+  }
+  
+  public static PsmEvent handleDeclinePoll(PsmEvent evt, PsmInterp interp) {
+    // Remove the participant from the poll.
+    ParticipantUserData ud = getUserData(interp);
+    IdentityManager idMgr = ud.getPoller().getIdentityManager();
+    idMgr.removePeer(ud.getVoterId().getIdString());
+    ud.removeParticipant();
+    log.info("Removed peer " + ud.getVoterId() + " from peer list.");
+    return V3Events.evtFinalize;
   }
 
   public static PsmEvent handleVerifyPollAckEffort(PsmEvent evt,

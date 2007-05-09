@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManagerImpl.java,v 1.20 2006-11-11 06:56:30 tlipkis Exp $
+ * $Id: IdentityManagerImpl.java,v 1.21 2007-05-09 10:34:10 smorabito Exp $
  */
 
 /*
@@ -1110,6 +1110,15 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
     Map map = findAuAgreeMap(au);
     synchronized (map) {
       return !map.isEmpty();
+    }
+  }
+  
+  public void removePeer(String key) {
+    log.debug("Removing peer " + key);
+    synchronized (thePeerIdentities) {
+      PeerIdentity pid = (PeerIdentity)(thePeerIdentities.get(key));
+      thePeerIdentities.remove(key);
+      theIdentities.remove(pid);
     }
   }
 

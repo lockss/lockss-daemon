@@ -1,5 +1,5 @@
 /*
- * $Id: BlockHasher.java,v 1.8 2007-01-18 02:26:49 tlipkis Exp $
+ * $Id: BlockHasher.java,v 1.9 2007-05-09 10:34:16 smorabito Exp $
  */
 
 /*
@@ -181,29 +181,44 @@ public class BlockHasher extends GenericHasher {
         contentBytes[ix] = new byte[numBytes + 100];
       }
       while (remaining > 0 && is[ix] != null) {
-        int bytesRead = is[ix].read(contentBytes[ix], 0, remaining);
-        if (isTrace) log.debug3("Read "+bytesRead+" bytes from input stream");
-        if (bytesRead >= 0) {
-          int hashed = updateDigests(ix, contentBytes[ix], bytesRead);
-	  versionBytesHashed[ix] += bytesRead;
-          bytesHashed += hashed;
-          remaining -= bytesRead;
-        } else {
-          // This version has no more content to hash.
-          if (isTrace) log.debug3("done hashing content: "+version);
-          is[ix].close();
-          is[ix] = null;
-	  endVersion(ix, version, versionBytesHashed[ix]);
-          // Are we done with all our versions?
-          if (--remainingVersions == 0) {
-            is = null;
-            endOfNode();
-            break outer;
+        HashBlock.Version hbVersion = null;
+        try {
+          int bytesRead = is[ix].read(contentBytes[ix], 0, remaining);
+          if (isTrace) log.debug3("Read "+bytesRead+" bytes from input stream");
+          if (bytesRead >= 0) {
+            int hashed = updateDigests(ix, contentBytes[ix], bytesRead);
+            versionBytesHashed[ix] += bytesRead;
+            bytesHashed += hashed;
+            remaining -= bytesRead;
+          } else {
+            // This version has no more content to hash.
+            if (isTrace) log.debug3("done hashing content: "+version);
+            is[ix].close();
+            is[ix] = null;
+            hbVersion = endVersion(ix, version, versionBytesHashed[ix]);
+            if (--remainingVersions == 0) {
+              is = null;
+              endOfNode();
+              break outer;
+            }
           }
+        } catch (Throwable t) {
+          log.error("Caught exception while trying to hash", t);
+          if (hbVersion == null) {
+            endVersion(ix, version, versionBytesHashed[ix], t);
+            if (--remainingVersions == 0) {
+              is = null;
+              endOfNode();
+              break outer;
+            }
+          } else {
+            hbVersion.setHashError(t);
+          }
+          continue outer;
         }
       }
     }
-    
+
     
     if (isTrace) log.debug3(bytesHashed+" bytes hashed in this step");
     return bytesHashed;
@@ -278,11 +293,15 @@ public class BlockHasher extends GenericHasher {
     if (isTrace) log.debug3("opening "+curCu+" for hashing");
     is = new InputStream[versions.length];
     for (int ix = 0; ix < versions.length; ix++) {
-      is[ix] = versions[ix].openForHashing();
+      is[ix] = getInputStream(versions[ix]);
     }
     remainingVersions = versions.length;
     versionBytesHashed = new long[remainingVersions];
     initDigests(versions.length);
+  }
+  
+  protected InputStream getInputStream(CachedUrl cu) {
+    return cu.openForHashing();
   }
 
   protected void endOfNode() {
@@ -294,11 +313,20 @@ public class BlockHasher extends GenericHasher {
     }
   }
   
-  protected void endVersion(int index, CachedUrl version, long bytesHashed) {
+  protected HashBlock.Version endVersion(int index, CachedUrl version,
+                                         long bytesHashed, 
+                                         Throwable hashError) {
     if (hblock != null) {
       hblock.addVersion(0, version.getContentSize(), 0, bytesHashed,
-                        perVersionDigests[index], version.getVersion());
+                        perVersionDigests[index], version.getVersion(),
+                        hashError);
+      return hblock.lastVersion();
     }
+    return null;
+  }
+
+  protected HashBlock.Version endVersion(int index, CachedUrl version, long bytesHashed) {
+    return endVersion(index, version, bytesHashed, null);
   }
 
   public interface EventHandler {

@@ -1,5 +1,5 @@
 /*
- * $Id: VoterActions.java,v 1.15 2007-01-23 21:44:36 smorabito Exp $
+ * $Id: VoterActions.java,v 1.16 2007-05-09 10:34:11 smorabito Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.poller.v3;
 import java.io.IOException;
 import java.security.*;
 
+import org.lockss.config.ConfigManager;
 import org.lockss.plugin.*;
 import org.lockss.protocol.*;
 import org.lockss.protocol.psm.*;
@@ -72,18 +73,50 @@ public class VoterActions {
 
   public static PsmEvent handleSendPollAck(PsmEvent evt, PsmInterp interp) {
     VoterUserData ud = getUserData(interp);
-    ud.setStatus(V3Voter.STATUS_ACCEPTED_POLL);
+
+    // Verify whether the poller is in our platform group.  If they
+    // are not, decline the poll, and send a NAK with the status
+    // NAK_GROUP_MISMATCH
+    String pollerGroup = null;
+    if (ud.getPollMessage() != null) {
+      pollerGroup = ((V3LcapMessage)ud.getPollMessage()).getGroup();
+    }
+    String ourGroup = ConfigManager.getPlatformGroup();
+
     V3LcapMessage msg = ud.makeMessage(V3LcapMessage.MSG_POLL_ACK);
     msg.setEffortProof(ud.getPollAckEffortProof());
-    msg.setVoterNonce(ud.getVoterNonce());
+
     try {
-      ud.sendMessageTo(msg, ud.getPollerId());
-      log.debug2("Sent PollAck message to");
-    } catch (IOException ex) {
-      log.error("Unable to send message: ", ex);
+      if (ourGroup.equalsIgnoreCase(pollerGroup)) {
+        // Accept the poll and set status
+        ud.setStatus(V3Voter.STATUS_ACCEPTED_POLL);
+        msg.setVoterNonce(ud.getVoterNonce());
+
+        // Send message
+        ud.sendMessageTo(msg, ud.getPollerId());
+        log.debug2("Sent PollAck message to " + ud.getPollerId() + " in poll " 
+                   + ud.getPollKey());
+        return V3Events.evtOk;
+      } else {
+        // Reject the poll and set status
+        msg.setVoterNonce(null);
+        msg.setNak(V3LcapMessage.PollNak.NAK_GROUP_MISMATCH);
+
+        // Send message
+        ud.sendMessageTo(msg, ud.getPollerId());
+
+        // Stop the poll.
+        ud.getVoter().getIdentityManager().removePeer(ud.getPollerId().getIdString());
+        ud.getVoter().stopPoll(V3Voter.STATUS_DECLINED_POLL);
+        log.debug2("Rejected message for " + ud.getPollerId() + " in poll " 
+                   + ud.getPollKey());
+        log.debug2("Our group: " + ourGroup + "; Their group: " + pollerGroup);
+        return V3Events.evtDeclinePoll;
+      }
+    } catch (Throwable t) {
+      log.error("Unable to send message: ", t);
       return V3Events.evtError;
     }
-    return V3Events.evtOk;
   }
 
   public static PsmEvent handleReceivePollProof(PsmMsgEvent evt,

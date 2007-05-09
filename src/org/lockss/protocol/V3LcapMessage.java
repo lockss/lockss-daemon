@@ -1,5 +1,5 @@
 /*
- * $Id: V3LcapMessage.java,v 1.28 2007-02-22 05:35:49 smorabito Exp $
+ * $Id: V3LcapMessage.java,v 1.29 2007-05-09 10:34:09 smorabito Exp $
  */
 
 /*
@@ -69,6 +69,10 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     "Nominate", "VoteRequest", "Vote", "RepairReq", "RepairRep",
     "EvaluationReceipt", "NoOp" };
   private static Logger log = Logger.getLogger("V3LcapMessage");
+  
+  
+  // Poll rejection codes.
+  public static enum PollNak { NAK_GROUP_MISMATCH };
 
   // V3 Protocol revision history:
   //  3 - The internal representation of VoteBlocks has changed.  Vote
@@ -109,6 +113,9 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
   /** For poll messages, the time left until a participant must have voted. */
   long m_voteDuration;
   
+  /** NAK reason, if this is a NAK message. */
+  private PollNak m_nak;
+
   /** The platform group to which the sender of the message belongs. */
   private String m_group;
   
@@ -545,6 +552,14 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
   public void setVoteDuration(long l) {
     m_voteDuration = l;
   }
+  
+  public void setNak(PollNak nak) {
+    m_nak = nak;
+  }
+  
+  public PollNak getNak() {
+    return m_nak;
+  }
 
   /**
    * In Vote messages, determine whether more vote blocks are available.
@@ -711,8 +726,10 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
       sb.append(m_key);
       sb.append(" PN:");
       sb.append(ByteArray.toBase64(m_pollerNonce));
-      sb.append(" VN:");
-      sb.append(ByteArray.toBase64(m_voterNonce));
+      if (m_voterNonce != null) {
+        sb.append(" VN:");
+        sb.append(ByteArray.toBase64(m_voterNonce));
+      }
       if (m_voteBlocks != null) {
         sb.append(" B:");
         sb.append(String.valueOf(m_voteBlocks.size()));

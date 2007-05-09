@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.49 2007-03-17 04:19:30 smorabito Exp $
+ * $Id: V3Poller.java,v 1.50 2007-05-09 10:34:11 smorabito Exp $
  */
 
 /*
@@ -965,7 +965,6 @@ public class V3Poller extends BasePoll {
             // blocks.
             tally.addExtraBlockVoter(voter.getVoterId());
           } else {
-            // Cache results in case we need to check this repair.
             int sortOrder = hb.getUrl().compareTo(vb.getUrl());
             if (sortOrder > 0) {
               log.debug3("Participant " + voter.getVoterId() + 
@@ -1383,7 +1382,7 @@ public class V3Poller extends BasePoll {
     final BlockHasher.EventHandler blockDone =
       new BlockHasher.EventHandler() {
         public void blockDone(final HashBlock hblock) {
-          
+          // XXX: Handle errors here
           pollManager.runTask(new PollRunner.Task("Received Repair Block Complete", getKey()) {
             public void lockssRun() {
               PollerStateBean.RepairQueue rq = pollerState.getRepairQueue();
@@ -1468,10 +1467,21 @@ public class V3Poller extends BasePoll {
 
     log.debug3("Comparing block " + voteBlock.getUrl() + " against peer " +
                id + " in poll " + getKey());
-    
+
+    int disagreementCount = 0;
+
     for (int hbIdx = 0; hbIdx < hbVersions.length;  hbIdx++ ) {
       byte[] hasherResults = hbVersions[hbIdx].getHashes()[hashIndex];
       for (int vbIdx = 0; vbIdx < vbVersions.length; vbIdx++) {
+        // If there were any hashing errors, we need to count this
+        // as an abstension by not adding it to the tally.  If we don't
+        // have enough voters, this will be a no quorum block.
+        boolean hashError = vbVersions[vbIdx].getHashError();
+        if (hashError) {
+          log.info("Voter version " + vbIdx + " had a hashing error. "
+                   + "Counting as an abstension.");
+          continue;
+        }
         byte[] voterResults = vbVersions[vbIdx].getHash();
         if (log.isDebug3()) {
           log.debug3("Comparing voter's version " + vbIdx +
@@ -1489,15 +1499,18 @@ public class V3Poller extends BasePoll {
           ParticipantUserData ud = (ParticipantUserData)theParticipants.get(id);
           if (ud != null) ud.incrementAgreedBlocks();
           return;
+        } else {
+          disagreementCount++;
         }
       }
     }
 
-    // If we've made it here, there's no agreement on this block.
-    log.debug3("No agreement found for any version of block " +
-               voteBlock.getUrl() + ".  Lost tally, adding voter " + id +
-               " to the disagreeing voter list.");
-    tally.addDisagreeVoter(id);
+    if (disagreementCount == (vbVersions.length * hbVersions.length)) {
+      log.debug3("No agreement found for any version of block " +
+                 voteBlock.getUrl() + ".  Lost tally, adding voter " + id +
+                 " to the disagreeing voter list.");
+      tally.addDisagreeVoter(id);
+    }
   }
 
 
@@ -1942,6 +1955,13 @@ public class V3Poller extends BasePoll {
    */
   public int getVersion() {
     return pollerState.getProtocolVersion();
+  }
+  
+  /**
+   * Return the ID Manager.
+   */
+  public IdentityManager getIdentityManager() {
+    return idManager;
   }
 
   /**

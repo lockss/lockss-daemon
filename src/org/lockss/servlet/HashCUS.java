@@ -1,5 +1,5 @@
 /*
- * $Id: HashCUS.java,v 1.35 2006-12-06 05:19:02 tlipkis Exp $
+ * $Id: HashCUS.java,v 1.36 2007-05-09 10:34:12 smorabito Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.servlet;
 import javax.servlet.*;
 import java.io.*;
 import java.util.*;
+import java.util.List;
 import java.text.*;
 import java.security.*;
 import org.mortbay.html.*;

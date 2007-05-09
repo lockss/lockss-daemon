@@ -1,5 +1,5 @@
 /*
- * $Id: VoterStateMachineFactory.java,v 1.8 2006-03-01 02:50:14 smorabito Exp $
+ * $Id: VoterStateMachineFactory.java,v 1.9 2007-05-09 10:34:11 smorabito Exp $
  */
 
 /*
@@ -69,6 +69,7 @@ public class VoterStateMachineFactory {
                    new PsmResponse(V3Events.evtOk, "SendPollAck")).setResumable(true),
       new PsmState("SendPollAck",
                    new PsmMethodAction(actionClass, "handleSendPollAck"),
+                   new PsmResponse(V3Events.evtDeclinePoll, "Finalize"),
                    new PsmResponse(V3Events.evtOk, "WaitPollProof")).setResumable(true),
       new PsmState("WaitPollProof", PsmWait.FOREVER,
                    new PsmResponse(V3Events.msgPollProof,

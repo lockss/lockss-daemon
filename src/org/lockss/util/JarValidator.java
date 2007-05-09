@@ -1,5 +1,5 @@
 /*
- * $Id: JarValidator.java,v 1.6 2005-10-10 20:25:49 smorabito Exp $
+ * $Id: JarValidator.java,v 1.7 2007-05-09 10:34:13 smorabito Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import java.util.jar.*;
+import java.security.CodeSigner;
 import java.security.KeyStore;
 import java.security.KeyStoreException;
 import java.security.cert.*;
@@ -264,44 +265,19 @@ public class JarValidator {
   }
 
   /**
-   * JAVA1.5
-   *
-   * Method made necessary by changes in Java 1.5.  Return all the certificates
-   * for a specified JarEntry.
+   * Return all the certificates for a specified JarEntry.
    *
    * @param entry
    */
   private Certificate[] getCertificates(JarEntry entry) {
-    Certificate[] certs = entry.getCertificates();
+    Certificate[] certs = null;
 
-    // Try it the 1.5 way.
-    if (certs == null) {
-      try {
-        // JAVA1.5
-        // CodeSigner[] codeSigners = entry.getCodeSigners()
-        Method getCodeSigners =
-          entry.getClass().getMethod("getCodeSigners", new Class[0]);
-        // This call will fail in 1.4, let the catch handle it.
-        Object[] codeSigners =
-          (Object[])getCodeSigners.invoke(entry, new Object[0]);
-        if (codeSigners != null && codeSigners.length > 0) {
-          // JAVA1.5
-          // List<Certificate> list = codeSigner.getSignerCertPath().getCertificates();
-          Class codeSigner = Class.forName("java.security.CodeSigner");
-          Method getSignerCertPath =
-            codeSigner.getMethod("getSignerCertPath", new Class[0]);
-          CertPath certPath =
-            (CertPath)getSignerCertPath.invoke(Array.get(codeSigners, 0),
-                                               new Object[0]);
-          List list = certPath.getCertificates();
-          certs = (Certificate[])list.toArray(new Certificate[list.size()]);
-        }
-      } catch (NoSuchMethodException ex) {
-        // Silently fall-through, Java version < 1.5.
-      } catch (Exception ex) {
-        log.error("Unexpected exception getting certificates for JarEntry "
-                  + entry, ex);
-      }
+    CodeSigner[] codeSigners = entry.getCodeSigners();
+    if (codeSigners != null && codeSigners.length > 0) {
+      // Use only the first code signer.
+      CodeSigner signer = codeSigners[0];
+      List certList = signer.getSignerCertPath().getCertificates();
+      certs = (Certificate[])certList.toArray(new Certificate[certList.size()]);
     }
 
     return certs;

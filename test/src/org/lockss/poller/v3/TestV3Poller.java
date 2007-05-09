@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.21 2007-03-17 04:19:30 smorabito Exp $
+ * $Id: TestV3Poller.java,v 1.22 2007-05-09 10:34:13 smorabito Exp $
  */
 
 /*
@@ -369,7 +369,7 @@ public class TestV3Poller extends LockssTestCase {
     
     block.addVersion(0, content.length(), 
                      0, content.length(), 
-                     digests, TestV3Poller.hbVersionNum++);    
+                     digests, TestV3Poller.hbVersionNum++, null);    
   }
   
   private VoteBlock makeVoteBlock(String url) {
@@ -390,7 +390,7 @@ public class TestV3Poller extends LockssTestCase {
     byte[] hash = md.digest();
     block.addVersion(0, content.length(), 
                      0, content.length(),
-                     hash, hash);
+                     hash, hash, false);
   }
   
   private ParticipantUserData makeParticipant(PeerIdentity id,
@@ -611,7 +611,7 @@ public class TestV3Poller extends LockssTestCase {
     
     blockTally.tallyVotes();
     
-    assertEquals(blockTally.getTallyResult(), BlockTally.RESULT_LOST);
+    assertEquals(BlockTally.RESULT_LOST, blockTally.getTallyResult());
   }
   
   private V3Poller makeV3Poller(String key) throws Exception {

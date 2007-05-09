@@ -1,5 +1,5 @@
 /*
-* $Id: MockIdentityManager.java,v 1.11 2006-09-19 01:10:12 smorabito Exp $
+* $Id: MockIdentityManager.java,v 1.12 2007-05-09 10:34:06 smorabito Exp $
  */
 
 /*
@@ -78,6 +78,10 @@ public class MockIdentityManager implements IdentityManager {
   public PeerIdentity findPeerIdentity(String key) {
     return (PeerIdentity)piMap.get(key);
   }
+  
+  public void removePeer(String key) {
+    piMap.remove(key);
+  }
 
   public PeerIdentity ipAddrToPeerIdentity(IPAddr addr, int port) {
     String key = ""+addr+port;
@@ -129,6 +133,10 @@ public class MockIdentityManager implements IdentityManager {
 
   public int getMaxReputation() {
     return maxRep;
+  }
+  
+  public Map getIdentities() {
+    return piMap;
   }
 
   public void setMaxReputation(int maxRep) {

@@ -37,7 +37,7 @@ public class V3TestUtils {
     for (int ix = 0; ix < versions; ix++) {
       vb.addVersion(0L, 1000L, 0L, 1000L,
                     ByteArray.makeRandomBytes(20),
-                    ByteArray.makeRandomBytes(20));
+                    ByteArray.makeRandomBytes(20), false);
     }
     return vb;
   }
