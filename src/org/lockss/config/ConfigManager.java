@@ -1,10 +1,10 @@
 /*
- * $Id: ConfigManager.java,v 1.43 2006-11-22 00:49:26 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.44 2007-05-10 23:40:50 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,6 +36,8 @@ import java.io.*;
 import java.util.*;
 import java.net.URL;
 
+import org.apache.commons.collections.Predicate;
+import org.apache.commons.collections.PredicateUtils;
 import org.lockss.app.*;
 import org.lockss.clockss.*;
 import org.lockss.daemon.*;
@@ -77,6 +79,15 @@ public class ConfigManager implements LockssManager {
   static final boolean DEFAULT_NEW_SCHEDULER = true;
 
   public static final String PARAM_TITLE_DB = Configuration.PREFIX + "title";
+
+  /** List of URLs of title DBs locally set on cache from UI.  Do not set
+   * on prop server */
+  public static final String PARAM_USER_TITLE_DB_URLS =
+    Configuration.PREFIX + "userTitleDbs";
+
+  /** List of URLs of title DBs */
+  public static final String PARAM_TITLE_DB_URLS =
+    Configuration.PREFIX + "titleDbs";
 
   /** Common prefix of platform config params */
   public static final String PLATFORM = Configuration.PLATFORM;
@@ -131,6 +142,7 @@ public class ConfigManager implements LockssManager {
 
   public static final String CONFIG_FILE_UI_IP_ACCESS = "ui_ip_access.txt";
   public static final String CONFIG_FILE_PROXY_IP_ACCESS = "proxy_ip_access.txt";
+  public static final String CONFIG_FILE_PLUGIN_CONFIG = "plugin.txt";
   public static final String CONFIG_FILE_AU_CONFIG = "au.txt";
   public static final String CONFIG_FILE_BUNDLED_TITLE_DB = "titledb.xml";
   public static final String CONFIG_FILE_ICP_SERVER = "icp_server_config.txt"; // in use
@@ -141,6 +153,7 @@ public class ConfigManager implements LockssManager {
   static String cacheConfigFiles[] = {
     CONFIG_FILE_UI_IP_ACCESS,
     CONFIG_FILE_PROXY_IP_ACCESS,
+    CONFIG_FILE_PLUGIN_CONFIG,
     CONFIG_FILE_AU_CONFIG,
     CONFIG_FILE_ICP_SERVER, // in use
     CONFIG_FILE_AUDIT_PROXY, // in use
@@ -164,10 +177,13 @@ public class ConfigManager implements LockssManager {
   private List configChangedCallbacks = new ArrayList();
 
   private List cacheConfigFileList = null;
-  private List configUrlList;	// list of config file urls
+  private List configUrlList;		// list of config file urls
   // XXX needs synchronization
-  private List titledbUrlList;  // list of titledb JAR urls
-  private String groupName;     // daemon group name
+  private List titledbUrlList;		// global titledb urls
+  private List pluginTitledbUrlList;	// list of titledb urls (usually
+					// jar:) specified by plugins
+  private List userTitledbUrlList;	// titledb urls added from UI
+  private String groupName;		// daemon group name
 
   private String recentLoadError;
 
@@ -199,7 +215,6 @@ public class ConfigManager implements LockssManager {
     if (urls != null) {
       configUrlList = new ArrayList(urls);
     }
-    this.titledbUrlList = new ArrayList();
     this.groupName = groupName;
     registerConfigurationCallback(Logger.getConfigCallback());
     registerConfigurationCallback(MiscConfig.getConfigCallback());
@@ -420,7 +435,7 @@ public class ConfigManager implements LockssManager {
     if (groupName != null) {
       newConfig.put(PARAM_DAEMON_GROUP, groupName);
     }
-    loadList(newConfig, getConfigGenerations(urlList, true, "props"));
+    loadList(newConfig, getConfigGenerations(urlList, true, true, "props"));
     return newConfig;
   }
 
@@ -452,18 +467,50 @@ public class ConfigManager implements LockssManager {
   }
 
   ConfigFile.Generation getConfigGeneration(String url, boolean required,
-					    String msg)
+					    boolean reload, String msg)
+      throws IOException {
+    return getConfigGeneration(url, required, reload, msg, null);
+  }
+
+  ConfigFile.Generation getConfigGeneration(String url, boolean required,
+					    boolean reload, String msg,
+					    Predicate keyPredicate)
       throws IOException {
     log.debug2("Loading " + msg + " from: " + url);
-    return getConfigGeneration(configCache.find(url), required, msg);
+    return getConfigGeneration(configCache.find(url),
+			       required, reload, msg, keyPredicate);
+  }
+
+  void checkConfig(ConfigFile.Generation gen, Predicate keyPredicate)
+      throws IOException {
+    for (String key : gen.getConfig().keySet()) {
+      if (!keyPredicate.evaluate(key)) {
+	String msg = "Illegal config key: " + key + " in " + gen.getUrl();
+	log.error(msg);
+	throw new IOException(msg);
+      }
+    }
   }
 
   ConfigFile.Generation getConfigGeneration(ConfigFile cf, boolean required,
-					    String msg)
+					    boolean reload, String msg)
+      throws IOException {
+    return getConfigGeneration(cf, required, reload, msg, null);
+  }
+
+  ConfigFile.Generation getConfigGeneration(ConfigFile cf, boolean required,
+					    boolean reload, String msg,
+					    Predicate keyPredicate)
       throws IOException {
     try {
-      cf.setNeedsReload();
-      return cf.getGeneration();
+      if (reload) {
+	cf.setNeedsReload();
+      }
+      ConfigFile.Generation gen = cf.getGeneration();
+      if (keyPredicate != null) {
+	checkConfig(gen, keyPredicate);
+      }
+      return gen;
     } catch (IOException e) {
       String url = cf.getFileUrl();
       if (e instanceof FileNotFoundException &&
@@ -479,7 +526,7 @@ public class ConfigManager implements LockssManager {
 	if (e instanceof FileNotFoundException) {
 	  log.debug3("Non-required file not found " + url);
 	} else {
-	  log.debug3("Unexpected error loaded non-required file " + url, e);
+	  log.debug3("Unexpected error loading non-required file " + url, e);
 	}
 	return null;
       }
@@ -501,18 +548,29 @@ public class ConfigManager implements LockssManager {
     return false;
   }
 
-  List getConfigGenerations(Collection urls, boolean required, String msg)
+  List getConfigGenerations(Collection urls, boolean required,
+			    boolean reload, String msg)
       throws IOException {
+    return getConfigGenerations(urls, required, reload, msg,
+				PredicateUtils.truePredicate());
+  }
+
+  List getConfigGenerations(Collection urls, boolean required,
+			    boolean reload, String msg,
+			    Predicate keyPredicate)
+      throws IOException {
+
     if (urls == null) return Collections.EMPTY_LIST;
     List res = new ArrayList(urls.size());
     for (Iterator iter = urls.iterator(); iter.hasNext(); ) {
       Object o = iter.next();
       ConfigFile.Generation gen;
       if (o instanceof ConfigFile) {
-	gen = getConfigGeneration((ConfigFile)o, required, msg);
+	gen = getConfigGeneration((ConfigFile)o, required, reload, msg,
+				  keyPredicate);
       } else {
 	String url = o.toString();
-	gen = getConfigGeneration(url, required, msg);
+	gen = getConfigGeneration(url, required, reload, msg, keyPredicate);
       }
       if (gen != null) {
 	res.add(gen);
@@ -521,18 +579,40 @@ public class ConfigManager implements LockssManager {
     return res;
   }
 
-  List getStandardConfigGenerations(List urls) throws IOException {
+  // Restrict title DB files to set props only below o.l.title and
+  // o.l.titleSet
+
+  static final String titleDot = PARAM_TITLE_DB + ".";
+  static final String titleSetDot = PluginManager.PARAM_TITLE_SETS + ".";
+
+  Predicate titleDbOnlyPred = new Predicate() {
+      public boolean evaluate(Object obj) {
+	if (obj instanceof String) {
+	  return ((String)obj).startsWith(titleDot) ||
+	    ((String)obj).startsWith(titleSetDot);
+	}
+	return false;
+      }};
+
+  List getStandardConfigGenerations(List urls, boolean reload)
+      throws IOException {
     List res = new ArrayList(20);
-    res.addAll(getConfigGenerations(titledbUrlList, false, "bundled titledb"));
-    List configGens = getConfigGenerations(urls, true, "props");
+    res.addAll(getConfigGenerations(titledbUrlList, false, reload,
+				    "global titledb", titleDbOnlyPred));
+    res.addAll(getConfigGenerations(pluginTitledbUrlList, false, reload,
+				    "plugin-bundled titledb",
+				    titleDbOnlyPred));
+    res.addAll(getConfigGenerations(userTitledbUrlList, false, reload,
+				    "user title DBs", titleDbOnlyPred));
+    List configGens = getConfigGenerations(urls, true, reload, "props");
     res.addAll(configGens);
     initCacheConfig(configGens);
-    res.addAll(getCacheConfigGenerations());
+    res.addAll(getCacheConfigGenerations(reload));
     return res;
   }
 
-  List getCacheConfigGenerations() throws IOException {
-    List localGens = getConfigGenerations(getCacheConfigFiles(), false,
+  List getCacheConfigGenerations(boolean reload) throws IOException {
+    List localGens = getConfigGenerations(getCacheConfigFiles(), false, reload,
 					  "cache config");
     if (!localGens.isEmpty()) {
       hasLocalCacheConfig = true;
@@ -544,14 +624,25 @@ public class ConfigManager implements LockssManager {
     return updateConfig(configUrlList);
   }
 
+  private volatile boolean needImmediateReload = false;
+
   public boolean updateConfig(List urls) {
+    needImmediateReload = false;
+    boolean res = updateConfigOnce(urls, true);
+    if (res && needImmediateReload) {
+      updateConfigOnce(urls, false);
+    }
+    return res;
+  }
+
+  public boolean updateConfigOnce(List urls, boolean reload) {
     if (currentConfig.isEmpty()) {
       // first load preceded by platform config setup
       setupPlatformConfig(urls);
     }
     List gens;
     try {
-      gens = getStandardConfigGenerations(urls);
+      gens = getStandardConfigGenerations(urls, reload);
     } catch (IOException e) {
       log.error("Error loading config", e);
 //       recentLoadError = e.toString();
@@ -667,6 +758,15 @@ public class ConfigManager implements LockssManager {
 					    DEFAULT_RELOAD_INTERVAL);
     if (changedKeys.contains(PARAM_PLATFORM_VERSION)) {
       platVer = null;
+    }
+    if (changedKeys.contains(PARAM_USER_TITLE_DB_URLS) ||
+	changedKeys.contains(PARAM_TITLE_DB_URLS)) {
+      userTitledbUrlList = config.getList(PARAM_USER_TITLE_DB_URLS);
+      titledbUrlList = config.getList(PARAM_TITLE_DB_URLS);
+      log.debug("titledbUrlList: " + titledbUrlList +
+		", userTitledbUrlList: " + userTitledbUrlList);
+      // Currently this requires a(nother immediate) reload.
+      needImmediateReload = true;
     }
   }
 
@@ -832,7 +932,7 @@ public class ConfigManager implements LockssManager {
 
   /**
    * Add a collection of bundled titledb config jar URLs to
-   * the titledbUrlList.
+   * the pluginTitledbUrlList.
    */
   public void addTitleDbConfigFrom(Collection classloaders) {
     boolean needReload = false;
@@ -841,7 +941,7 @@ public class ConfigManager implements LockssManager {
       ClassLoader cl = (ClassLoader)it.next();
       URL titleDbUrl = cl.getResource(CONFIG_FILE_BUNDLED_TITLE_DB);
       if (titleDbUrl != null) {
-	titledbUrlList.add(titleDbUrl);
+	pluginTitledbUrlList.add(titleDbUrl);
 	needReload = true;
       }
     }
@@ -1354,6 +1454,8 @@ public class ConfigManager implements LockssManager {
     private long lastReload = 0;
     private volatile boolean goOn = true;
     private Deadline nextReload;
+    private volatile boolean running = false;
+    private volatile boolean goAgain = false;
 
     private HandlerThread(String name) {
       super(name);
@@ -1368,6 +1470,7 @@ public class ConfigManager implements LockssManager {
       // according to org.lockss.parameterReloadInterval, or 30 minutes.
       while (goOn) {
 	pokeWDog();
+	running = true;
 	if (updateConfig()) {
 	  if (tiny != null) {
 	    stopTinyUi();
@@ -1392,13 +1495,15 @@ public class ConfigManager implements LockssManager {
 	nextReload = Deadline.inRandomRange(reloadInterval - reloadRange,
 					    reloadInterval + reloadRange);
 	log.debug2(nextReload.toString());
-	if (goOn) {
+	running = false;
+	if (goOn && !goAgain) {
 	  try {
 	    nextReload.sleep();
 	  } catch (InterruptedException e) {
 	    // just wakeup and check for exit
 	  }
 	}
+	goAgain = false;
       }
     }
 
@@ -1408,6 +1513,11 @@ public class ConfigManager implements LockssManager {
     }
 
     void forceReload() {
+      if (running) {
+	// can be called from reload thread, in which case an immediate
+	// repeat is necessary
+	goAgain = true;
+      }
       if (nextReload != null) {
 	nextReload.expire();
       }

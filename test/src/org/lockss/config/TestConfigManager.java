@@ -1,10 +1,10 @@
 /*
- * $Id: TestConfigManager.java,v 1.21 2006-11-22 00:49:26 tlipkis Exp $
+ * $Id: TestConfigManager.java,v 1.22 2007-05-10 23:40:49 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -581,18 +581,44 @@ public class TestConfigManager extends LockssTestCase {
     assertEquals("333", c2.get("org.lockss.au.fooauid.baz"));
   }
 
+  public void testLoadTitleDb() throws IOException {
+    List gens;
+
+    String u2 = FileTestUtil.urlOfString("org.lockss.title.foo=bar");
+    String u1 = FileTestUtil.urlOfString("a=1\norg.lockss.titleDbs="+u2);
+    assertTrue(mgr.updateConfig(ListUtil.list(u1)));
+    Configuration config = mgr.getCurrentConfig();
+    assertEquals("bar", config.get("org.lockss.title.foo"));
+    assertEquals("1", config.get("a"));
+  }
+
+  // Currently an illegal key prevents loading the entire file.  I'm not
+  // sure that's desirable
+  public void testLoadIllTitleDb() throws IOException {
+    List gens;
+
+    String u2 = FileTestUtil.urlOfString("org.lockss.notTitleDb.foo=bar\n" +
+					 "org.lockss.title.x.foo=bar");
+    String u1 = FileTestUtil.urlOfString("a=1\norg.lockss.titleDbs="+u2);
+    assertTrue(mgr.updateConfig(ListUtil.list(u1)));
+    Configuration config = mgr.getCurrentConfig();
+    assertEquals(null, config.get("org.lockss.title.x.foo"));
+    assertEquals(null, config.get("org.lockss.notTitleDb.foo"));
+    assertEquals("1", config.get("a"));
+  }
+
   public void testIsChanged() throws IOException {
     List gens;
 
     String u1 = FileTestUtil.urlOfString("a=1");
     String u2 = FileTestUtil.urlOfString("a=2");
-    gens = mgr.getConfigGenerations(ListUtil.list(u1, u2), true, "test");
+    gens = mgr.getConfigGenerations(ListUtil.list(u1, u2), true, true, "test");
     assertTrue(mgr.isChanged(gens));
     mgr.updateGenerations(gens);
     assertFalse(mgr.isChanged(gens));
     FileConfigFile cf = (FileConfigFile)mgr.getConfigCache().find(u2);
     cf.storedConfig(newConfiguration());
-    gens = mgr.getConfigGenerations(ListUtil.list(u1, u2), true, "test");
+    gens = mgr.getConfigGenerations(ListUtil.list(u1, u2), true, true, "test");
     assertTrue(mgr.isChanged(gens));
   }
 
@@ -601,7 +627,7 @@ public class TestConfigManager extends LockssTestCase {
     List gens =
       mgr.getConfigGenerations(ListUtil.list(FileTestUtil.urlOfString(c1),
 					     FileTestUtil.urlOfString(c1a)),
-			       true, "props");
+			       true, true, "props");
     mgr.loadList(config, gens);
     assertEquals("12", config.get("prop1"));
     assertEquals("xxx", config.get("prop2"));
@@ -625,7 +651,7 @@ public class TestConfigManager extends LockssTestCase {
     assertFalse(mgr.hasLocalCacheConfig());
 
     // loading local shouldn't set flag because no files
-    mgr.getCacheConfigGenerations();
+    mgr.getCacheConfigGenerations(true);
     assertFalse(mgr.hasLocalCacheConfig());
 
     // write a local config file
@@ -635,7 +661,7 @@ public class TestConfigManager extends LockssTestCase {
     assertFalse(mgr.hasLocalCacheConfig());
 
     // load it to set flag
-    mgr.getCacheConfigGenerations();
+    mgr.getCacheConfigGenerations(true);
 
     assertTrue(mgr.hasLocalCacheConfig());
   }

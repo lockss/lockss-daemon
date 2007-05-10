@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.20 2006-07-13 22:16:18 smorabito Exp $
+ * $Id: Configuration.java,v 1.21 2007-05-10 23:40:50 tlipkis Exp $
  */
 
 /*
@@ -569,7 +569,7 @@ public abstract class Configuration {
 
   /** Returns the set of keys in the configuration.
    */
-  public abstract Set keySet();
+  public abstract Set<String> keySet();
 
   /** Returns an <code>Iterator</code> over all the keys in the configuration.
    */
