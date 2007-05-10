@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.40 2007-05-01 23:34:04 tlipkis Exp $
+ * $Id: ServletUtil.java,v 1.41 2007-05-10 23:41:53 tlipkis Exp $
  */
 
 /*
@@ -1219,7 +1219,7 @@ public class ServletUtil {
    * @param checked If true, the checkbox is initially checked.
    * @return A checkbox {@link Element}.
    */
-  private static Element checkbox(LockssServlet servlet,
+  public static Element checkbox(LockssServlet servlet,
                                   String key,
                                   String value,
                                   boolean checked) {
@@ -1233,7 +1233,7 @@ public class ServletUtil {
    * @param checked If true, box is initially checked
    * @return a checkbox Element
    */
-  private static Element checkbox(LockssServlet servlet,
+  public static Element checkbox(LockssServlet servlet,
                                   String key,
                                   String value,
                                   String text,

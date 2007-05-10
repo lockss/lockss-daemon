@@ -1,5 +1,5 @@
 /*
- * $Id: ThreadDump.java,v 1.6 2007-04-26 01:40:22 tlipkis Exp $
+ * $Id: ThreadDump.java,v 1.7 2007-05-10 23:41:53 tlipkis Exp $
  */
 
 /*
@@ -61,8 +61,6 @@ public class ThreadDump extends LockssServlet {
   /** Handle a request */
   public void lockssHandleRequest() throws IOException {
     platInfo.threadDump(true);
-    resp.setHeader("pragma", "no-cache");
-    resp.setHeader("Cache-control", "no-cache");
     dumpMXBean();
   }
 

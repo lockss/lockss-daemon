@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.89 2006-12-05 21:37:41 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.90 2007-05-10 23:41:53 tlipkis Exp $
  */
 
 /*
@@ -81,6 +81,11 @@ public abstract class LockssServlet extends HttpServlet
   static final String PARAM_UI_WARNING =
     Configuration.PREFIX + "ui.warning";
 
+  /** PluginConfig servlet is visible if true.  Set for PLNs, etc. */
+  static final String PARAM_ALLOW_PLUGIN_CONFIG =
+    Configuration.PREFIX + "ui.allowPluginConfig";
+  static final boolean DEFAULT_ALLOW_PLUGIN_CONFIG = false;
+
   // Name given to form element whose value is the action that should be
   // performed when the form is submitted.  (Not always the submit button.)
   public static final String ACTION_TAG = "lockssAction";
@@ -119,6 +124,7 @@ public abstract class LockssServlet extends HttpServlet
   private int tabindex;
   ServletDescr _myServletDescr = null;
   private String myName = null;
+  private boolean allowPluginConfig = DEFAULT_ALLOW_PLUGIN_CONFIG;
 
   // number submit buttons sequentially so unit tests can find them
   protected int submitButtonNumber = 0;
@@ -163,6 +169,17 @@ public abstract class LockssServlet extends HttpServlet
                      "Info for configuring browsers and proxies"
                      + "<br>"
                      + "to access preserved content on this cache");
+  protected static final ServletDescr SERVLET_PLUGIN_CONFIG =
+    new ServletDescr(PluginConfig.class,
+                     "Plugin Configuration",
+                     ServletDescr.IN_NAV | ServletDescr.IN_UIHOME,
+                     "Manage plugin repositories, title databases") {
+      public boolean isInNav(LockssServlet servlet) {
+	return servlet.allowPluginConfig;
+      }
+      public boolean isInUiHome(LockssServlet servlet) {
+	return isInNav(servlet);
+      }};
   protected static final ServletDescr SERVLET_DAEMON_STATUS =
     new ServletDescr(DaemonStatus.class,
                      "Daemon Status",
@@ -194,9 +211,7 @@ public abstract class LockssServlet extends HttpServlet
 	  ((LocalServletManager)mgr).hasIsoFiles();
       }
       public boolean isInUiHome(LockssServlet servlet) {
-	ServletManager mgr = servlet.getServletManager();
-	return (mgr instanceof LocalServletManager) &&
-	  ((LocalServletManager)mgr).hasIsoFiles();
+	return isInNav(servlet);
       }};
   protected static final ServletDescr SERVLET_THREAD_DUMP =
     new ServletDescr("org.lockss.servlet.ThreadDump",
@@ -239,6 +254,7 @@ public abstract class LockssServlet extends HttpServlet
      SERVLET_HOME,
      SERVLET_BATCH_AU_CONFIG,
      SERVLET_AU_CONFIG,
+     SERVLET_PLUGIN_CONFIG,
      SERVLET_ADMIN_ACCESS_CONTROL,
      SERVLET_PROXY_ACCESS_CONTROL,
      SERVLET_PROXY_AND_CONTENT,
@@ -290,6 +306,9 @@ public abstract class LockssServlet extends HttpServlet
     context = config.getServletContext();
     theApp = (LockssApp)context.getAttribute("LockssApp");
     servletMgr = theApp.getServletManager();
+    allowPluginConfig =
+      CurrentConfig.getBooleanParam(PARAM_ALLOW_PLUGIN_CONFIG,
+				    DEFAULT_ALLOW_PLUGIN_CONFIG);
   }
 
   public ServletManager getServletManager() {
@@ -311,6 +330,10 @@ public abstract class LockssServlet extends HttpServlet
 	logParams();
       }
       resp.setContentType("text/html");
+      // Don't want anything served by a servlet to be cached
+      resp.setHeader("pragma", "no-cache");
+      resp.setHeader("Cache-control", "no-cache");
+
       footNumber = 0;
       tabindex = 1;
       reqURL = new URL(UrlUtil.getRequestURL(req));
