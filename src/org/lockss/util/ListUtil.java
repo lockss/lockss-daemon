@@ -1,5 +1,5 @@
 /*
- * $Id: ListUtil.java,v 1.10 2004-12-07 05:14:36 tlipkis Exp $
+ * $Id: ListUtil.java,v 1.11 2007-05-10 23:42:20 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -188,6 +188,18 @@ public class ListUtil {
         l.add(object11);
         return l;
     }
+
+  /**
+   * Append lists together. */
+  public static List append(List... lists) {
+    List res = new ArrayList();
+    for (int ix = 0; ix < lists.length; ix++) {
+      if (lists[ix] != null) {
+	res.addAll(lists[ix]);
+      }
+    }
+    return res;
+  }
 
   /** Create a list containing the elements of an array */
     public static List fromArray(Object array[]) {
