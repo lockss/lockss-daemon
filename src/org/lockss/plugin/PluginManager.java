@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.178 2007-04-30 04:52:46 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.179 2007-05-10 23:41:10 tlipkis Exp $
  */
 
 /*
@@ -80,9 +80,25 @@ public class PluginManager
     Configuration.PREFIX + "plugin.removeStoppedAus";
   static final boolean DEFAULT_REMOVE_STOPPED_AUS = true;
 
-  /** A list of Plugin Registry URLs. */
+  /** Global list of plugin registry URLs. */
   static final String PARAM_PLUGIN_REGISTRIES =
     Configuration.PREFIX + "plugin.registries";
+
+  /** List of user-specified plugin registry URLs. */
+  public static final String PARAM_USER_PLUGIN_REGISTRIES =
+    Configuration.PREFIX + "plugin.userRegistries";
+
+  /** If true, default list of plugin registries from prop server is used
+   * in addition to user-specified registries */
+  public static final String PARAM_USE_DEFAULT_PLUGIN_REGISTRIES =
+    Configuration.PREFIX + "plugin.useDefaultRegistries";
+  public static final boolean DEFAULT_USE_DEFAULT_PLUGIN_REGISTRIES = true;
+
+  /** If true, default plugin signature keystore is used in addition to
+   * user-specified keystore */
+  public static final String PARAM_USE_DEFAULT_KEYSTORE =
+    Configuration.PREFIX + "plugin.useDefaultKeystore";
+  public static final boolean DEFAULT_USE_DEFAULT_KEYSTORE = true;
 
   /** If true (the default), plugins that appear both in a loadable plugin
    * registry jar and on the local classpath will be loaded from the
@@ -109,6 +125,20 @@ public class PluginManager
   static final String PARAM_KEYSTORE_PASSWORD = KEYSTORE_PREFIX + "password";
   static final String DEFAULT_KEYSTORE_PASSWORD = "password";
 
+  /** Common prefix of user-specified plugin keystore params */
+  static final String USER_KEYSTORE_PREFIX =
+    Configuration.PREFIX + "plugin.userKeystore.";
+
+  /** The location of a Java JKS keystore to use for verifying
+      loadable plugins (optional). */
+  public static final String PARAM_USER_KEYSTORE_LOCATION =
+    USER_KEYSTORE_PREFIX + "location";
+  /** The password to use when opening the loadable plugin
+      verification keystore (optional). */
+  public static final String PARAM_USER_KEYSTORE_PASSWORD =
+    USER_KEYSTORE_PREFIX + "password";
+
+
   /** The amount of time to wait when processing loadable plugins.
       This process delays the start of AUs, so the timeout should not
       be too long. */
@@ -125,7 +155,8 @@ public class PluginManager
     "xml";
 
   /** Root of TitleSet definitions.  */
-  static final String PARAM_TITLE_SETS = Configuration.PREFIX + "titleSet";
+  public static final String PARAM_TITLE_SETS =
+    Configuration.PREFIX + "titleSet";
 
   static final String TITLE_SET_PARAM_CLASS = "class";
   static final String TITLE_SET_PARAM_NAME = "name";
@@ -152,6 +183,9 @@ public class PluginManager
     DefinablePlugin.class.getName();
 
   private static Logger log = Logger.getLogger("PluginMgr");
+
+  private boolean useDefaultPluginRegistries =
+    DEFAULT_USE_DEFAULT_PLUGIN_REGISTRIES;
 
   private ConfigManager configMgr;
 
@@ -256,7 +290,7 @@ public class PluginManager
 
     Configuration config = CurrentConfig.getCurrentConfig();
     log.debug("Initializing loadable plugin registries before starting AUs");
-    initLoadablePluginRegistries(config.getList(PARAM_PLUGIN_REGISTRIES));
+    initLoadablePluginRegistries(getPluginRegistryUrls(config));
     initPluginRegistry(config);
     configureAllPlugins(config);
     loadablePluginsReady = true;
@@ -264,6 +298,15 @@ public class PluginManager
 
   public void setLoadablePluginsReady(boolean val) {
     loadablePluginsReady = val;
+  }
+
+  List getPluginRegistryUrls(Configuration config) {
+    if (useDefaultPluginRegistries) {
+      return ListUtil.append(config.getList(PARAM_PLUGIN_REGISTRIES),
+			     config.getList(PARAM_USER_PLUGIN_REGISTRIES));
+    } else {
+      return config.getList(PARAM_USER_PLUGIN_REGISTRIES);
+    }
   }
 
   public boolean areAusStarted() {
@@ -292,15 +335,15 @@ public class PluginManager
     }
 
     // If the keystore or password has changed, update.
-    if (changedKeys.contains(KEYSTORE_PREFIX)) {
-      String keystoreLoc =
-        config.get(PARAM_KEYSTORE_LOCATION,
-                   DEFAULT_KEYSTORE_LOCATION);
-      String keystorePass =
-        config.get(PARAM_KEYSTORE_PASSWORD,
-                   DEFAULT_KEYSTORE_PASSWORD);
-      keystore = initKeystore(keystoreLoc, keystorePass);
+    if (changedKeys.contains(KEYSTORE_PREFIX) ||
+	changedKeys.contains(USER_KEYSTORE_PREFIX)) {
+      keystoreInited = false;
+      initKeystore(configMgr.getCurrentConfig());
     }
+
+    useDefaultPluginRegistries =
+      config.getBoolean(PARAM_USE_DEFAULT_PLUGIN_REGISTRIES,
+			DEFAULT_USE_DEFAULT_PLUGIN_REGISTRIES);
 
     // Process any changed TitleSets
     if (changedKeys.contains(PARAM_TITLE_SETS)) {
@@ -310,8 +353,10 @@ public class PluginManager
     // Don't load or start other plugins until the daemon is running.
     if (loadablePluginsReady) {
       // Process loadable plugin registries.
-      if (changedKeys.contains(PARAM_PLUGIN_REGISTRIES)) {
-	initLoadablePluginRegistries(config.getList(PARAM_PLUGIN_REGISTRIES));
+      if (changedKeys.contains(PARAM_PLUGIN_REGISTRIES) ||
+	  changedKeys.contains(PARAM_USER_PLUGIN_REGISTRIES) ||
+	  changedKeys.contains(PARAM_USE_DEFAULT_PLUGIN_REGISTRIES)) {
+	initLoadablePluginRegistries(getPluginRegistryUrls(config));
       }
 
       // Process the built-in plugin registry.
@@ -1573,18 +1618,7 @@ public class PluginManager
    */
   void initLoadablePluginRegistries(List urls) {
     // Load the keystore if necessary
-    if (!isKeystoreInited()) {
-      String keystoreLoc =
-        CurrentConfig.getParam(PARAM_KEYSTORE_LOCATION,
-                               DEFAULT_KEYSTORE_LOCATION);
-      String keystorePass =
-        CurrentConfig.getParam(PARAM_KEYSTORE_PASSWORD,
-                               DEFAULT_KEYSTORE_PASSWORD);
-      keystore = initKeystore(keystoreLoc, keystorePass);
-      if (keystore != null) {
-        keystoreInited = true;
-      }
-    }
+    initKeystore(configMgr.getCurrentConfig());
 
     if (urls.isEmpty()) {
       return;
@@ -1768,6 +1802,7 @@ public class PluginManager
 	log.error("Unable to load keystore!  Loadable plugins will " +
 		  "not be available.");
       } else {
+	log.debug("Loading keystore: " + keystoreLoc);
         ks = KeyStore.getInstance("JKS", "SUN");
 	if (keystoreLoc.startsWith(File.separator)) {
 	  InputStream kin = new FileInputStream(new File(keystoreLoc));
@@ -1781,8 +1816,13 @@ public class PluginManager
 	  URL keystoreUrl = new URL(keystoreLoc);
           ks.load(keystoreUrl.openStream(), keystorePass.toCharArray());
         } else {
-	  ks.load(getClass().getClassLoader().getResourceAsStream(keystoreLoc),
-	          keystorePass.toCharArray());
+	  InputStream kin =
+	    getClass().getClassLoader().getResourceAsStream(keystoreLoc);
+	  if (kin == null) {
+	    throw new IOException("Keystore reousrce not found: " +
+				  keystoreLoc);
+	  }
+	  ks.load(kin, keystorePass.toCharArray());
 	}
       }
 
@@ -1798,6 +1838,23 @@ public class PluginManager
 
   private boolean isKeystoreInited() {
     return keystoreInited;
+  }
+
+  private void initKeystore(Configuration config) {
+    if (!isKeystoreInited()) {
+      String keystoreLoc =
+        config.get(PARAM_USER_KEYSTORE_LOCATION,
+		   config.get(PARAM_KEYSTORE_LOCATION,
+			      DEFAULT_KEYSTORE_LOCATION));
+      String keystorePass =
+	config.get(PARAM_USER_KEYSTORE_PASSWORD,
+		   config.get(PARAM_KEYSTORE_PASSWORD,
+			      DEFAULT_KEYSTORE_PASSWORD));
+      keystore = initKeystore(keystoreLoc, keystorePass);
+      if (keystore != null) {
+        keystoreInited = true;
+      }
+    }
   }
 
   // used by unit tests.
