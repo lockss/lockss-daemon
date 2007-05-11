@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.50 2007-05-09 10:34:11 smorabito Exp $
+ * $Id: V3Poller.java,v 1.51 2007-05-11 02:46:28 smorabito Exp $
  */
 
 /*
@@ -72,11 +72,13 @@ public class V3Poller extends BasePoll {
   public static final int PEER_STATUS_COMPLETE = 6;
   public static final int PEER_STATUS_ERROR = 7;
   public static final int PEER_STATUS_DROPPED_OUT = 8;
+  public static final int PEER_STATUS_DECLINED_POLL = 9;
 
   public static final String[] PEER_STATUS_STRINGS =
   {
    "Initialized", "Invited", "Accepted Poll", "Sent Nominees",
-   "Waiting for Vote", "Voted", "Complete", "Error", "Dropped Out"
+   "Waiting for Vote", "Voted", "Complete", "Error", "Dropped Out",
+   "Declined Poll"
   };
 
   public static final int POLLER_STATUS_STARTING = 0;

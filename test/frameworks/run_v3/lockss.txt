@@ -46,6 +46,7 @@ org.lockss.baseau.toplevel.poll.interval.min=5m
 org.lockss.baseau.toplevel.poll.interval.max=15m
 
 # V3
+org.lockss.comm.enabled=false
 org.lockss.scomm.enabled=true
 org.lockss.scomm.maxMessageSize=3355443
 org.lockss.poll.v3.timeBetweenInvitations=30s
