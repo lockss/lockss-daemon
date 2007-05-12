@@ -3258,17 +3258,170 @@
       <property name="attributes.publisher" value="Radiological Society of North America" />
     </property>
 
-    <property name="HighWireTheJournalofCellBiology172">
-      <property name="title" value="The Journal of Cell Biology Volume 172" />
-      <property name="journalTitle" value="The Journal of Cell Biology" />
+      <property name="HighWireTheJournalofCellBiology168">
+        <property name="title" value="The Journal of Cell Biology Volume 168" />
+        <property name="journalTitle" value="The Journal of Cell Biology" />
+        <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://www.jcb.org/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="volume_name" />
+          <property name="value" value="168" />
+        </property>
+        <property name="attributes.publisher" value="Rockefeller University Press" />
+        <property name="attributes.hint_application/pdf_filter_factory"
+                  value="org.lockss.plugin.highwire.RockefellerUniversityPressPdfTransform$Simplified" />
+      </property>
+
+      <property name="HighWireTheJournalofCellBiology169">
+        <property name="title" value="The Journal of Cell Biology Volume 169" />
+        <property name="journalTitle" value="The Journal of Cell Biology" />
+        <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://www.jcb.org/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="volume_name" />
+          <property name="value" value="169" />
+        </property>
+        <property name="attributes.publisher" value="Rockefeller University Press" />
+        <property name="attributes.hint_application/pdf_filter_factory"
+                  value="org.lockss.plugin.highwire.RockefellerUniversityPressPdfTransform$Simplified" />
+      </property>
+
+      <property name="HighWireTheJournalofCellBiology170">
+        <property name="title" value="The Journal of Cell Biology Volume 170" />
+        <property name="journalTitle" value="The Journal of Cell Biology" />
+        <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://www.jcb.org/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="volume_name" />
+          <property name="value" value="170" />
+        </property>
+        <property name="attributes.publisher" value="Rockefeller University Press" />
+        <property name="attributes.hint_application/pdf_filter_factory"
+                  value="org.lockss.plugin.highwire.RockefellerUniversityPressPdfTransform$Simplified" />
+      </property>
+
+      <property name="HighWireTheJournalofCellBiology171">
+        <property name="title" value="The Journal of Cell Biology Volume 171" />
+        <property name="journalTitle" value="The Journal of Cell Biology" />
+        <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://www.jcb.org/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="volume_name" />
+          <property name="value" value="171" />
+        </property>
+        <property name="attributes.publisher" value="Rockefeller University Press" />
+        <property name="attributes.hint_application/pdf_filter_factory"
+                  value="org.lockss.plugin.highwire.RockefellerUniversityPressPdfTransform$Simplified" />
+      </property>
+
+      <property name="HighWireTheJournalofCellBiology172">
+        <property name="title" value="The Journal of Cell Biology Volume 172" />
+        <property name="journalTitle" value="The Journal of Cell Biology" />
+        <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://www.jcb.org/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="volume_name" />
+          <property name="value" value="172" />
+        </property>
+        <property name="attributes.publisher" value="Rockefeller University Press" />
+        <property name="attributes.hint_application/pdf_filter_factory"
+                  value="org.lockss.plugin.highwire.RockefellerUniversityPressPdfTransform$Simplified" />
+      </property>
+
+      <property name="HighWireTheJournalofCellBiology173">
+        <property name="title" value="The Journal of Cell Biology Volume 173" />
+        <property name="journalTitle" value="The Journal of Cell Biology" />
+        <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://www.jcb.org/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="volume_name" />
+          <property name="value" value="173" />
+        </property>
+        <property name="attributes.publisher" value="Rockefeller University Press" />
+        <property name="attributes.hint_application/pdf_filter_factory"
+                  value="org.lockss.plugin.highwire.RockefellerUniversityPressPdfTransform$Simplified" />
+      </property>
+
+      <property name="HighWireTheJournalofCellBiology174">
+        <property name="title" value="The Journal of Cell Biology Volume 174" />
+        <property name="journalTitle" value="The Journal of Cell Biology" />
+        <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://www.jcb.org/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="volume_name" />
+          <property name="value" value="174" />
+        </property>
+        <property name="attributes.publisher" value="Rockefeller University Press" />
+        <property name="attributes.hint_application/pdf_filter_factory"
+                  value="org.lockss.plugin.highwire.RockefellerUniversityPressPdfTransform$Simplified" />
+      </property>
+
+      <property name="HighWireTheJournalofCellBiology175">
+        <property name="title" value="The Journal of Cell Biology Volume 175" />
+        <property name="journalTitle" value="The Journal of Cell Biology" />
+        <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://www.jcb.org/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="volume_name" />
+          <property name="value" value="175" />
+        </property>
+        <property name="attributes.publisher" value="Rockefeller University Press" />
+        <property name="attributes.hint_application/pdf_filter_factory"
+                  value="org.lockss.plugin.highwire.RockefellerUniversityPressPdfTransform$Simplified" />
+      </property>
+
+      <property name="HighWireTheJournalofCellBiology176">
+        <property name="title" value="The Journal of Cell Biology Volume 176" />
+        <property name="journalTitle" value="The Journal of Cell Biology" />
+        <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://www.jcb.org/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="volume_name" />
+          <property name="value" value="176" />
+        </property>
+        <property name="attributes.publisher" value="Rockefeller University Press" />
+        <property name="attributes.hint_application/pdf_filter_factory"
+                  value="org.lockss.plugin.highwire.RockefellerUniversityPressPdfTransform$Simplified" />
+      </property>
+
+    <property name="HighWireJournalofExperimentalMedicine201">
+      <property name="title" value="Journal of Experimental Medicine Volume 201" />
+      <property name="journalTitle" value="Journal of Experimental Medicine" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
-	<property name="value" value="http://www.jcb.org/" />
+	<property name="value" value="http://www.jem.org/" />
       </property>
       <property name="param.2">
 	<property name="key" value="volume_name" />
-	<property name="value" value="172" />
+	<property name="value" value="201" />
       </property>
       <property name="attributes.publisher" value="Rockefeller University Press" />
       <property name="attributes.hint_application/pdf_filter_factory"
@@ -3292,6 +3445,23 @@
                 value="org.lockss.plugin.highwire.RockefellerUniversityPressPdfTransform$Simplified" />
     </property>
 
+    <property name="HighWireJournalofExperimentalMedicine203">
+      <property name="title" value="Journal of Experimental Medicine Volume 203" />
+      <property name="journalTitle" value="Journal of Experimental Medicine" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.jem.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="203" />
+      </property>
+      <property name="attributes.publisher" value="Rockefeller University Press" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.RockefellerUniversityPressPdfTransform$Simplified" />
+    </property>
+
     <property name="HighWireTheJournalofGeneralPhysiology127">
       <property name="title" value="The Journal of General Physiology Volume 127" />
       <property name="journalTitle" value="The Journal of General Physiology" />
@@ -3303,6 +3473,23 @@
       <property name="param.2">
 	<property name="key" value="volume_name" />
 	<property name="value" value="127" />
+      </property>
+      <property name="attributes.publisher" value="Rockefeller University Press" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.RockefellerUniversityPressPdfTransform$Simplified" />
+    </property>
+
+    <property name="HighWireTheJournalofGeneralPhysiology128">
+      <property name="title" value="The Journal of General Physiology Volume 128" />
+      <property name="journalTitle" value="The Journal of General Physiology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.jgp.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="128" />
       </property>
       <property name="attributes.publisher" value="Rockefeller University Press" />
       <property name="attributes.hint_application/pdf_filter_factory"
