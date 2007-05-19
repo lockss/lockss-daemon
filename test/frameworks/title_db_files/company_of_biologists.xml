@@ -4092,11 +4092,11 @@
 
     <!-- End Journal of Cell Science -->
 
-		<!-- Begin Journal of Experimental Biology -->
+    <!-- Begin Journal of Experimental Biology -->
 
-      <property name="HighWireJournalofCellScience1">
-        <property name="title" value="Journal of Cell Science Volume 1" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology1">
+        <property name="title" value="Journal of Experimental Biology Volume 1" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4109,9 +4109,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience2">
-        <property name="title" value="Journal of Cell Science Volume 2" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology2">
+        <property name="title" value="Journal of Experimental Biology Volume 2" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4124,9 +4124,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience3">
-        <property name="title" value="Journal of Cell Science Volume 3" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology3">
+        <property name="title" value="Journal of Experimental Biology Volume 3" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4139,9 +4139,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience4">
-        <property name="title" value="Journal of Cell Science Volume 4" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology4">
+        <property name="title" value="Journal of Experimental Biology Volume 4" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4154,9 +4154,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience5">
-        <property name="title" value="Journal of Cell Science Volume 5" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology5">
+        <property name="title" value="Journal of Experimental Biology Volume 5" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4169,9 +4169,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience6">
-        <property name="title" value="Journal of Cell Science Volume 6" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology6">
+        <property name="title" value="Journal of Experimental Biology Volume 6" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4184,9 +4184,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience7">
-        <property name="title" value="Journal of Cell Science Volume 7" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology7">
+        <property name="title" value="Journal of Experimental Biology Volume 7" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4199,9 +4199,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience8">
-        <property name="title" value="Journal of Cell Science Volume 8" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology8">
+        <property name="title" value="Journal of Experimental Biology Volume 8" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4214,9 +4214,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience9">
-        <property name="title" value="Journal of Cell Science Volume 9" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology9">
+        <property name="title" value="Journal of Experimental Biology Volume 9" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4229,9 +4229,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience10">
-        <property name="title" value="Journal of Cell Science Volume 10" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology10">
+        <property name="title" value="Journal of Experimental Biology Volume 10" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4244,9 +4244,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience11">
-        <property name="title" value="Journal of Cell Science Volume 11" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology11">
+        <property name="title" value="Journal of Experimental Biology Volume 11" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4259,9 +4259,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience12">
-        <property name="title" value="Journal of Cell Science Volume 12" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology12">
+        <property name="title" value="Journal of Experimental Biology Volume 12" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4274,9 +4274,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience13">
-        <property name="title" value="Journal of Cell Science Volume 13" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology13">
+        <property name="title" value="Journal of Experimental Biology Volume 13" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4289,9 +4289,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience14">
-        <property name="title" value="Journal of Cell Science Volume 14" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology14">
+        <property name="title" value="Journal of Experimental Biology Volume 14" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4304,9 +4304,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience15">
-        <property name="title" value="Journal of Cell Science Volume 15" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology15">
+        <property name="title" value="Journal of Experimental Biology Volume 15" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4319,9 +4319,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience16">
-        <property name="title" value="Journal of Cell Science Volume 16" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology16">
+        <property name="title" value="Journal of Experimental Biology Volume 16" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4334,9 +4334,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience17">
-        <property name="title" value="Journal of Cell Science Volume 17" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology17">
+        <property name="title" value="Journal of Experimental Biology Volume 17" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4349,9 +4349,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience18">
-        <property name="title" value="Journal of Cell Science Volume 18" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology18">
+        <property name="title" value="Journal of Experimental Biology Volume 18" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4364,9 +4364,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience19">
-        <property name="title" value="Journal of Cell Science Volume 19" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology19">
+        <property name="title" value="Journal of Experimental Biology Volume 19" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4379,9 +4379,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience20">
-        <property name="title" value="Journal of Cell Science Volume 20" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology20">
+        <property name="title" value="Journal of Experimental Biology Volume 20" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4394,9 +4394,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience21">
-        <property name="title" value="Journal of Cell Science Volume 21" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology21">
+        <property name="title" value="Journal of Experimental Biology Volume 21" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4409,9 +4409,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience22">
-        <property name="title" value="Journal of Cell Science Volume 22" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology22">
+        <property name="title" value="Journal of Experimental Biology Volume 22" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4424,9 +4424,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience23">
-        <property name="title" value="Journal of Cell Science Volume 23" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology23">
+        <property name="title" value="Journal of Experimental Biology Volume 23" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4439,9 +4439,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience24">
-        <property name="title" value="Journal of Cell Science Volume 24" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology24">
+        <property name="title" value="Journal of Experimental Biology Volume 24" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4454,9 +4454,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience25">
-        <property name="title" value="Journal of Cell Science Volume 25" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology25">
+        <property name="title" value="Journal of Experimental Biology Volume 25" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4469,9 +4469,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience26">
-        <property name="title" value="Journal of Cell Science Volume 26" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology26">
+        <property name="title" value="Journal of Experimental Biology Volume 26" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4484,9 +4484,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience27">
-        <property name="title" value="Journal of Cell Science Volume 27" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology27">
+        <property name="title" value="Journal of Experimental Biology Volume 27" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4499,9 +4499,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience28">
-        <property name="title" value="Journal of Cell Science Volume 28" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology28">
+        <property name="title" value="Journal of Experimental Biology Volume 28" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4514,9 +4514,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience29">
-        <property name="title" value="Journal of Cell Science Volume 29" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology29">
+        <property name="title" value="Journal of Experimental Biology Volume 29" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4529,9 +4529,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience30">
-        <property name="title" value="Journal of Cell Science Volume 30" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology30">
+        <property name="title" value="Journal of Experimental Biology Volume 30" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4544,9 +4544,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience31">
-        <property name="title" value="Journal of Cell Science Volume 31" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology31">
+        <property name="title" value="Journal of Experimental Biology Volume 31" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4559,9 +4559,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience32">
-        <property name="title" value="Journal of Cell Science Volume 32" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology32">
+        <property name="title" value="Journal of Experimental Biology Volume 32" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4574,9 +4574,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience33">
-        <property name="title" value="Journal of Cell Science Volume 33" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology33">
+        <property name="title" value="Journal of Experimental Biology Volume 33" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4589,9 +4589,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience34">
-        <property name="title" value="Journal of Cell Science Volume 34" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology34">
+        <property name="title" value="Journal of Experimental Biology Volume 34" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4604,9 +4604,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience35">
-        <property name="title" value="Journal of Cell Science Volume 35" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology35">
+        <property name="title" value="Journal of Experimental Biology Volume 35" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4619,9 +4619,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience36">
-        <property name="title" value="Journal of Cell Science Volume 36" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology36">
+        <property name="title" value="Journal of Experimental Biology Volume 36" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4634,9 +4634,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience37">
-        <property name="title" value="Journal of Cell Science Volume 37" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology37">
+        <property name="title" value="Journal of Experimental Biology Volume 37" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4649,9 +4649,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience38">
-        <property name="title" value="Journal of Cell Science Volume 38" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology38">
+        <property name="title" value="Journal of Experimental Biology Volume 38" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4664,9 +4664,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience39">
-        <property name="title" value="Journal of Cell Science Volume 39" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology39">
+        <property name="title" value="Journal of Experimental Biology Volume 39" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4679,9 +4679,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience40">
-        <property name="title" value="Journal of Cell Science Volume 40" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology40">
+        <property name="title" value="Journal of Experimental Biology Volume 40" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4694,9 +4694,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience41">
-        <property name="title" value="Journal of Cell Science Volume 41" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology41">
+        <property name="title" value="Journal of Experimental Biology Volume 41" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4709,9 +4709,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience42">
-        <property name="title" value="Journal of Cell Science Volume 42" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology42">
+        <property name="title" value="Journal of Experimental Biology Volume 42" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4724,9 +4724,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience43">
-        <property name="title" value="Journal of Cell Science Volume 43" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology43">
+        <property name="title" value="Journal of Experimental Biology Volume 43" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4739,9 +4739,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience44">
-        <property name="title" value="Journal of Cell Science Volume 44" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology44">
+        <property name="title" value="Journal of Experimental Biology Volume 44" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4754,9 +4754,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience45">
-        <property name="title" value="Journal of Cell Science Volume 45" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology45">
+        <property name="title" value="Journal of Experimental Biology Volume 45" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4769,9 +4769,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience46">
-        <property name="title" value="Journal of Cell Science Volume 46" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology46">
+        <property name="title" value="Journal of Experimental Biology Volume 46" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4784,9 +4784,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience47">
-        <property name="title" value="Journal of Cell Science Volume 47" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology47">
+        <property name="title" value="Journal of Experimental Biology Volume 47" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4799,9 +4799,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience48">
-        <property name="title" value="Journal of Cell Science Volume 48" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology48">
+        <property name="title" value="Journal of Experimental Biology Volume 48" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4814,9 +4814,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience49">
-        <property name="title" value="Journal of Cell Science Volume 49" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology49">
+        <property name="title" value="Journal of Experimental Biology Volume 49" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4829,9 +4829,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience50">
-        <property name="title" value="Journal of Cell Science Volume 50" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology50">
+        <property name="title" value="Journal of Experimental Biology Volume 50" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4844,9 +4844,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience51">
-        <property name="title" value="Journal of Cell Science Volume 51" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology51">
+        <property name="title" value="Journal of Experimental Biology Volume 51" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4859,9 +4859,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience52">
-        <property name="title" value="Journal of Cell Science Volume 52" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology52">
+        <property name="title" value="Journal of Experimental Biology Volume 52" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4874,9 +4874,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience53">
-        <property name="title" value="Journal of Cell Science Volume 53" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology53">
+        <property name="title" value="Journal of Experimental Biology Volume 53" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4889,9 +4889,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience54">
-        <property name="title" value="Journal of Cell Science Volume 54" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology54">
+        <property name="title" value="Journal of Experimental Biology Volume 54" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4904,9 +4904,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience55">
-        <property name="title" value="Journal of Cell Science Volume 55" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology55">
+        <property name="title" value="Journal of Experimental Biology Volume 55" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4919,9 +4919,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience56">
-        <property name="title" value="Journal of Cell Science Volume 56" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology56">
+        <property name="title" value="Journal of Experimental Biology Volume 56" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4934,9 +4934,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience57">
-        <property name="title" value="Journal of Cell Science Volume 57" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology57">
+        <property name="title" value="Journal of Experimental Biology Volume 57" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4949,9 +4949,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience58">
-        <property name="title" value="Journal of Cell Science Volume 58" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology58">
+        <property name="title" value="Journal of Experimental Biology Volume 58" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4964,9 +4964,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience59">
-        <property name="title" value="Journal of Cell Science Volume 59" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology59">
+        <property name="title" value="Journal of Experimental Biology Volume 59" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4979,9 +4979,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience60">
-        <property name="title" value="Journal of Cell Science Volume 60" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology60">
+        <property name="title" value="Journal of Experimental Biology Volume 60" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -4994,9 +4994,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience61">
-        <property name="title" value="Journal of Cell Science Volume 61" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology61">
+        <property name="title" value="Journal of Experimental Biology Volume 61" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5009,9 +5009,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience62">
-        <property name="title" value="Journal of Cell Science Volume 62" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology62">
+        <property name="title" value="Journal of Experimental Biology Volume 62" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5024,9 +5024,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience63">
-        <property name="title" value="Journal of Cell Science Volume 63" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology63">
+        <property name="title" value="Journal of Experimental Biology Volume 63" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5039,9 +5039,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience64">
-        <property name="title" value="Journal of Cell Science Volume 64" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology64">
+        <property name="title" value="Journal of Experimental Biology Volume 64" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5054,9 +5054,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience65">
-        <property name="title" value="Journal of Cell Science Volume 65" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology65">
+        <property name="title" value="Journal of Experimental Biology Volume 65" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5069,9 +5069,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience66">
-        <property name="title" value="Journal of Cell Science Volume 66" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology66">
+        <property name="title" value="Journal of Experimental Biology Volume 66" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5084,9 +5084,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience67">
-        <property name="title" value="Journal of Cell Science Volume 67" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology67">
+        <property name="title" value="Journal of Experimental Biology Volume 67" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5099,9 +5099,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience68">
-        <property name="title" value="Journal of Cell Science Volume 68" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology68">
+        <property name="title" value="Journal of Experimental Biology Volume 68" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5114,9 +5114,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience69">
-        <property name="title" value="Journal of Cell Science Volume 69" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology69">
+        <property name="title" value="Journal of Experimental Biology Volume 69" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5129,9 +5129,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience70">
-        <property name="title" value="Journal of Cell Science Volume 70" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology70">
+        <property name="title" value="Journal of Experimental Biology Volume 70" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5144,9 +5144,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience71">
-        <property name="title" value="Journal of Cell Science Volume 71" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology71">
+        <property name="title" value="Journal of Experimental Biology Volume 71" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5159,9 +5159,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience72">
-        <property name="title" value="Journal of Cell Science Volume 72" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology72">
+        <property name="title" value="Journal of Experimental Biology Volume 72" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5174,9 +5174,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience73">
-        <property name="title" value="Journal of Cell Science Volume 73" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology73">
+        <property name="title" value="Journal of Experimental Biology Volume 73" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5189,9 +5189,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience74">
-        <property name="title" value="Journal of Cell Science Volume 74" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology74">
+        <property name="title" value="Journal of Experimental Biology Volume 74" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5204,9 +5204,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience75">
-        <property name="title" value="Journal of Cell Science Volume 75" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology75">
+        <property name="title" value="Journal of Experimental Biology Volume 75" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5219,9 +5219,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience76">
-        <property name="title" value="Journal of Cell Science Volume 76" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology76">
+        <property name="title" value="Journal of Experimental Biology Volume 76" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5234,9 +5234,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience77">
-        <property name="title" value="Journal of Cell Science Volume 77" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology77">
+        <property name="title" value="Journal of Experimental Biology Volume 77" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5249,9 +5249,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience78">
-        <property name="title" value="Journal of Cell Science Volume 78" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology78">
+        <property name="title" value="Journal of Experimental Biology Volume 78" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5264,9 +5264,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience79">
-        <property name="title" value="Journal of Cell Science Volume 79" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology79">
+        <property name="title" value="Journal of Experimental Biology Volume 79" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5279,9 +5279,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience80">
-        <property name="title" value="Journal of Cell Science Volume 80" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology80">
+        <property name="title" value="Journal of Experimental Biology Volume 80" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5294,9 +5294,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience81">
-        <property name="title" value="Journal of Cell Science Volume 81" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology81">
+        <property name="title" value="Journal of Experimental Biology Volume 81" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5309,9 +5309,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience82">
-        <property name="title" value="Journal of Cell Science Volume 82" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology82">
+        <property name="title" value="Journal of Experimental Biology Volume 82" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5324,9 +5324,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience83">
-        <property name="title" value="Journal of Cell Science Volume 83" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology83">
+        <property name="title" value="Journal of Experimental Biology Volume 83" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5339,9 +5339,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience84">
-        <property name="title" value="Journal of Cell Science Volume 84" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology84">
+        <property name="title" value="Journal of Experimental Biology Volume 84" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5354,9 +5354,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience85">
-        <property name="title" value="Journal of Cell Science Volume 85" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology85">
+        <property name="title" value="Journal of Experimental Biology Volume 85" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5369,9 +5369,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience86">
-        <property name="title" value="Journal of Cell Science Volume 86" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology86">
+        <property name="title" value="Journal of Experimental Biology Volume 86" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5384,9 +5384,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience87">
-        <property name="title" value="Journal of Cell Science Volume 87" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology87">
+        <property name="title" value="Journal of Experimental Biology Volume 87" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5399,9 +5399,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience88">
-        <property name="title" value="Journal of Cell Science Volume 88" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology88">
+        <property name="title" value="Journal of Experimental Biology Volume 88" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5414,9 +5414,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience89">
-        <property name="title" value="Journal of Cell Science Volume 89" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology89">
+        <property name="title" value="Journal of Experimental Biology Volume 89" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5429,9 +5429,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience90">
-        <property name="title" value="Journal of Cell Science Volume 90" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology90">
+        <property name="title" value="Journal of Experimental Biology Volume 90" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5444,9 +5444,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience91">
-        <property name="title" value="Journal of Cell Science Volume 91" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology91">
+        <property name="title" value="Journal of Experimental Biology Volume 91" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5459,9 +5459,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience92">
-        <property name="title" value="Journal of Cell Science Volume 92" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology92">
+        <property name="title" value="Journal of Experimental Biology Volume 92" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5474,9 +5474,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience93">
-        <property name="title" value="Journal of Cell Science Volume 93" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology93">
+        <property name="title" value="Journal of Experimental Biology Volume 93" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5489,9 +5489,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience94">
-        <property name="title" value="Journal of Cell Science Volume 94" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology94">
+        <property name="title" value="Journal of Experimental Biology Volume 94" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5504,9 +5504,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience95">
-        <property name="title" value="Journal of Cell Science Volume 95" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology95">
+        <property name="title" value="Journal of Experimental Biology Volume 95" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5519,9 +5519,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience96">
-        <property name="title" value="Journal of Cell Science Volume 96" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology96">
+        <property name="title" value="Journal of Experimental Biology Volume 96" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5534,9 +5534,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience97">
-        <property name="title" value="Journal of Cell Science Volume 97" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology97">
+        <property name="title" value="Journal of Experimental Biology Volume 97" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5549,9 +5549,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience98">
-        <property name="title" value="Journal of Cell Science Volume 98" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology98">
+        <property name="title" value="Journal of Experimental Biology Volume 98" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5564,9 +5564,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience99">
-        <property name="title" value="Journal of Cell Science Volume 99" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology99">
+        <property name="title" value="Journal of Experimental Biology Volume 99" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5579,9 +5579,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience100">
-        <property name="title" value="Journal of Cell Science Volume 100" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology100">
+        <property name="title" value="Journal of Experimental Biology Volume 100" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5594,9 +5594,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience101">
-        <property name="title" value="Journal of Cell Science Volume 101" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology101">
+        <property name="title" value="Journal of Experimental Biology Volume 101" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5609,9 +5609,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience102">
-        <property name="title" value="Journal of Cell Science Volume 102" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology102">
+        <property name="title" value="Journal of Experimental Biology Volume 102" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5624,9 +5624,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience103">
-        <property name="title" value="Journal of Cell Science Volume 103" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology103">
+        <property name="title" value="Journal of Experimental Biology Volume 103" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5639,9 +5639,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience104">
-        <property name="title" value="Journal of Cell Science Volume 104" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology104">
+        <property name="title" value="Journal of Experimental Biology Volume 104" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5654,9 +5654,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience105">
-        <property name="title" value="Journal of Cell Science Volume 105" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology105">
+        <property name="title" value="Journal of Experimental Biology Volume 105" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5669,9 +5669,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience106">
-        <property name="title" value="Journal of Cell Science Volume 106" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology106">
+        <property name="title" value="Journal of Experimental Biology Volume 106" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5684,9 +5684,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience107">
-        <property name="title" value="Journal of Cell Science Volume 107" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology107">
+        <property name="title" value="Journal of Experimental Biology Volume 107" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5699,9 +5699,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience108">
-        <property name="title" value="Journal of Cell Science Volume 108" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology108">
+        <property name="title" value="Journal of Experimental Biology Volume 108" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5714,9 +5714,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience109">
-        <property name="title" value="Journal of Cell Science Volume 109" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology109">
+        <property name="title" value="Journal of Experimental Biology Volume 109" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5729,9 +5729,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience110">
-        <property name="title" value="Journal of Cell Science Volume 110" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology110">
+        <property name="title" value="Journal of Experimental Biology Volume 110" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5744,9 +5744,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience111">
-        <property name="title" value="Journal of Cell Science Volume 111" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology111">
+        <property name="title" value="Journal of Experimental Biology Volume 111" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5759,9 +5759,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience112">
-        <property name="title" value="Journal of Cell Science Volume 112" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology112">
+        <property name="title" value="Journal of Experimental Biology Volume 112" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5774,9 +5774,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience113">
-        <property name="title" value="Journal of Cell Science Volume 113" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology113">
+        <property name="title" value="Journal of Experimental Biology Volume 113" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5789,9 +5789,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience114">
-        <property name="title" value="Journal of Cell Science Volume 114" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology114">
+        <property name="title" value="Journal of Experimental Biology Volume 114" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5804,9 +5804,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience115">
-        <property name="title" value="Journal of Cell Science Volume 115" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology115">
+        <property name="title" value="Journal of Experimental Biology Volume 115" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5819,9 +5819,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience116">
-        <property name="title" value="Journal of Cell Science Volume 116" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology116">
+        <property name="title" value="Journal of Experimental Biology Volume 116" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5834,9 +5834,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience117">
-        <property name="title" value="Journal of Cell Science Volume 117" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology117">
+        <property name="title" value="Journal of Experimental Biology Volume 117" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5849,9 +5849,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience118">
-        <property name="title" value="Journal of Cell Science Volume 118" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology118">
+        <property name="title" value="Journal of Experimental Biology Volume 118" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5864,9 +5864,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience119">
-        <property name="title" value="Journal of Cell Science Volume 119" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology119">
+        <property name="title" value="Journal of Experimental Biology Volume 119" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5879,9 +5879,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience120">
-        <property name="title" value="Journal of Cell Science Volume 120" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology120">
+        <property name="title" value="Journal of Experimental Biology Volume 120" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5894,9 +5894,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience121">
-        <property name="title" value="Journal of Cell Science Volume 121" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology121">
+        <property name="title" value="Journal of Experimental Biology Volume 121" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5909,9 +5909,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience122">
-        <property name="title" value="Journal of Cell Science Volume 122" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology122">
+        <property name="title" value="Journal of Experimental Biology Volume 122" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5924,9 +5924,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience123">
-        <property name="title" value="Journal of Cell Science Volume 123" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology123">
+        <property name="title" value="Journal of Experimental Biology Volume 123" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5939,9 +5939,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience124">
-        <property name="title" value="Journal of Cell Science Volume 124" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology124">
+        <property name="title" value="Journal of Experimental Biology Volume 124" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5954,9 +5954,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience125">
-        <property name="title" value="Journal of Cell Science Volume 125" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology125">
+        <property name="title" value="Journal of Experimental Biology Volume 125" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5969,9 +5969,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience126">
-        <property name="title" value="Journal of Cell Science Volume 126" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology126">
+        <property name="title" value="Journal of Experimental Biology Volume 126" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5984,9 +5984,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience127">
-        <property name="title" value="Journal of Cell Science Volume 127" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology127">
+        <property name="title" value="Journal of Experimental Biology Volume 127" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -5999,9 +5999,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience128">
-        <property name="title" value="Journal of Cell Science Volume 128" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology128">
+        <property name="title" value="Journal of Experimental Biology Volume 128" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6014,9 +6014,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience129">
-        <property name="title" value="Journal of Cell Science Volume 129" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology129">
+        <property name="title" value="Journal of Experimental Biology Volume 129" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6029,9 +6029,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience130">
-        <property name="title" value="Journal of Cell Science Volume 130" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology130">
+        <property name="title" value="Journal of Experimental Biology Volume 130" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6044,9 +6044,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience131">
-        <property name="title" value="Journal of Cell Science Volume 131" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology131">
+        <property name="title" value="Journal of Experimental Biology Volume 131" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6059,9 +6059,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience132">
-        <property name="title" value="Journal of Cell Science Volume 132" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology132">
+        <property name="title" value="Journal of Experimental Biology Volume 132" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6074,9 +6074,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience133">
-        <property name="title" value="Journal of Cell Science Volume 133" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology133">
+        <property name="title" value="Journal of Experimental Biology Volume 133" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6089,9 +6089,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience134">
-        <property name="title" value="Journal of Cell Science Volume 134" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology134">
+        <property name="title" value="Journal of Experimental Biology Volume 134" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6104,9 +6104,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience135">
-        <property name="title" value="Journal of Cell Science Volume 135" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology135">
+        <property name="title" value="Journal of Experimental Biology Volume 135" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6119,9 +6119,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience136">
-        <property name="title" value="Journal of Cell Science Volume 136" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology136">
+        <property name="title" value="Journal of Experimental Biology Volume 136" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6134,9 +6134,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience137">
-        <property name="title" value="Journal of Cell Science Volume 137" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology137">
+        <property name="title" value="Journal of Experimental Biology Volume 137" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6149,9 +6149,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience138">
-        <property name="title" value="Journal of Cell Science Volume 138" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology138">
+        <property name="title" value="Journal of Experimental Biology Volume 138" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6164,9 +6164,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience139">
-        <property name="title" value="Journal of Cell Science Volume 139" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology139">
+        <property name="title" value="Journal of Experimental Biology Volume 139" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6179,9 +6179,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience140">
-        <property name="title" value="Journal of Cell Science Volume 140" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology140">
+        <property name="title" value="Journal of Experimental Biology Volume 140" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6194,9 +6194,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience141">
-        <property name="title" value="Journal of Cell Science Volume 141" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology141">
+        <property name="title" value="Journal of Experimental Biology Volume 141" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6209,9 +6209,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience142">
-        <property name="title" value="Journal of Cell Science Volume 142" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology142">
+        <property name="title" value="Journal of Experimental Biology Volume 142" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6224,9 +6224,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience143">
-        <property name="title" value="Journal of Cell Science Volume 143" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology143">
+        <property name="title" value="Journal of Experimental Biology Volume 143" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6239,9 +6239,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience144">
-        <property name="title" value="Journal of Cell Science Volume 144" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology144">
+        <property name="title" value="Journal of Experimental Biology Volume 144" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6254,9 +6254,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience145">
-        <property name="title" value="Journal of Cell Science Volume 145" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology145">
+        <property name="title" value="Journal of Experimental Biology Volume 145" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6269,9 +6269,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience146">
-        <property name="title" value="Journal of Cell Science Volume 146" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology146">
+        <property name="title" value="Journal of Experimental Biology Volume 146" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6284,9 +6284,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience147">
-        <property name="title" value="Journal of Cell Science Volume 147" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology147">
+        <property name="title" value="Journal of Experimental Biology Volume 147" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6299,9 +6299,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience148">
-        <property name="title" value="Journal of Cell Science Volume 148" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology148">
+        <property name="title" value="Journal of Experimental Biology Volume 148" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6314,9 +6314,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience149">
-        <property name="title" value="Journal of Cell Science Volume 149" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology149">
+        <property name="title" value="Journal of Experimental Biology Volume 149" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6329,9 +6329,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience150">
-        <property name="title" value="Journal of Cell Science Volume 150" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology150">
+        <property name="title" value="Journal of Experimental Biology Volume 150" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6344,9 +6344,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience151">
-        <property name="title" value="Journal of Cell Science Volume 151" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology151">
+        <property name="title" value="Journal of Experimental Biology Volume 151" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6359,9 +6359,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience152">
-        <property name="title" value="Journal of Cell Science Volume 152" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology152">
+        <property name="title" value="Journal of Experimental Biology Volume 152" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6374,9 +6374,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience153">
-        <property name="title" value="Journal of Cell Science Volume 153" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology153">
+        <property name="title" value="Journal of Experimental Biology Volume 153" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6389,9 +6389,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience154">
-        <property name="title" value="Journal of Cell Science Volume 154" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology154">
+        <property name="title" value="Journal of Experimental Biology Volume 154" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6404,9 +6404,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience155">
-        <property name="title" value="Journal of Cell Science Volume 155" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology155">
+        <property name="title" value="Journal of Experimental Biology Volume 155" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6419,9 +6419,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience156">
-        <property name="title" value="Journal of Cell Science Volume 156" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology156">
+        <property name="title" value="Journal of Experimental Biology Volume 156" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6434,9 +6434,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience157">
-        <property name="title" value="Journal of Cell Science Volume 157" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology157">
+        <property name="title" value="Journal of Experimental Biology Volume 157" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6449,9 +6449,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience158">
-        <property name="title" value="Journal of Cell Science Volume 158" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology158">
+        <property name="title" value="Journal of Experimental Biology Volume 158" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6464,9 +6464,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience159">
-        <property name="title" value="Journal of Cell Science Volume 159" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology159">
+        <property name="title" value="Journal of Experimental Biology Volume 159" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6479,9 +6479,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience160">
-        <property name="title" value="Journal of Cell Science Volume 160" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology160">
+        <property name="title" value="Journal of Experimental Biology Volume 160" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6494,9 +6494,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience161">
-        <property name="title" value="Journal of Cell Science Volume 161" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology161">
+        <property name="title" value="Journal of Experimental Biology Volume 161" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6509,9 +6509,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience162">
-        <property name="title" value="Journal of Cell Science Volume 162" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology162">
+        <property name="title" value="Journal of Experimental Biology Volume 162" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6524,9 +6524,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience163">
-        <property name="title" value="Journal of Cell Science Volume 163" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology163">
+        <property name="title" value="Journal of Experimental Biology Volume 163" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6539,9 +6539,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience164">
-        <property name="title" value="Journal of Cell Science Volume 164" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology164">
+        <property name="title" value="Journal of Experimental Biology Volume 164" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6554,9 +6554,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience165">
-        <property name="title" value="Journal of Cell Science Volume 165" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology165">
+        <property name="title" value="Journal of Experimental Biology Volume 165" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6569,9 +6569,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience166">
-        <property name="title" value="Journal of Cell Science Volume 166" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology166">
+        <property name="title" value="Journal of Experimental Biology Volume 166" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6584,9 +6584,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience167">
-        <property name="title" value="Journal of Cell Science Volume 167" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology167">
+        <property name="title" value="Journal of Experimental Biology Volume 167" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6599,9 +6599,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience168">
-        <property name="title" value="Journal of Cell Science Volume 168" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology168">
+        <property name="title" value="Journal of Experimental Biology Volume 168" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6614,9 +6614,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience169">
-        <property name="title" value="Journal of Cell Science Volume 169" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology169">
+        <property name="title" value="Journal of Experimental Biology Volume 169" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6629,9 +6629,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience170">
-        <property name="title" value="Journal of Cell Science Volume 170" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology170">
+        <property name="title" value="Journal of Experimental Biology Volume 170" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6644,9 +6644,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience171">
-        <property name="title" value="Journal of Cell Science Volume 171" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology171">
+        <property name="title" value="Journal of Experimental Biology Volume 171" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6659,9 +6659,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience172">
-        <property name="title" value="Journal of Cell Science Volume 172" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology172">
+        <property name="title" value="Journal of Experimental Biology Volume 172" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6674,9 +6674,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience173">
-        <property name="title" value="Journal of Cell Science Volume 173" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology173">
+        <property name="title" value="Journal of Experimental Biology Volume 173" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6689,9 +6689,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience174">
-        <property name="title" value="Journal of Cell Science Volume 174" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology174">
+        <property name="title" value="Journal of Experimental Biology Volume 174" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6704,9 +6704,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience175">
-        <property name="title" value="Journal of Cell Science Volume 175" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology175">
+        <property name="title" value="Journal of Experimental Biology Volume 175" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6719,9 +6719,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience176">
-        <property name="title" value="Journal of Cell Science Volume 176" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology176">
+        <property name="title" value="Journal of Experimental Biology Volume 176" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6734,9 +6734,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience177">
-        <property name="title" value="Journal of Cell Science Volume 177" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology177">
+        <property name="title" value="Journal of Experimental Biology Volume 177" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6749,9 +6749,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience178">
-        <property name="title" value="Journal of Cell Science Volume 178" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology178">
+        <property name="title" value="Journal of Experimental Biology Volume 178" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6764,9 +6764,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience179">
-        <property name="title" value="Journal of Cell Science Volume 179" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology179">
+        <property name="title" value="Journal of Experimental Biology Volume 179" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6779,9 +6779,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience180">
-        <property name="title" value="Journal of Cell Science Volume 180" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology180">
+        <property name="title" value="Journal of Experimental Biology Volume 180" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6794,9 +6794,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience181">
-        <property name="title" value="Journal of Cell Science Volume 181" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology181">
+        <property name="title" value="Journal of Experimental Biology Volume 181" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6809,9 +6809,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience182">
-        <property name="title" value="Journal of Cell Science Volume 182" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology182">
+        <property name="title" value="Journal of Experimental Biology Volume 182" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6824,9 +6824,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience183">
-        <property name="title" value="Journal of Cell Science Volume 183" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology183">
+        <property name="title" value="Journal of Experimental Biology Volume 183" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6839,9 +6839,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience184">
-        <property name="title" value="Journal of Cell Science Volume 184" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology184">
+        <property name="title" value="Journal of Experimental Biology Volume 184" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6854,9 +6854,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience185">
-        <property name="title" value="Journal of Cell Science Volume 185" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology185">
+        <property name="title" value="Journal of Experimental Biology Volume 185" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6869,9 +6869,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience186">
-        <property name="title" value="Journal of Cell Science Volume 186" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology186">
+        <property name="title" value="Journal of Experimental Biology Volume 186" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6884,9 +6884,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience187">
-        <property name="title" value="Journal of Cell Science Volume 187" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology187">
+        <property name="title" value="Journal of Experimental Biology Volume 187" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6899,9 +6899,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience188">
-        <property name="title" value="Journal of Cell Science Volume 188" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology188">
+        <property name="title" value="Journal of Experimental Biology Volume 188" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6914,9 +6914,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience189">
-        <property name="title" value="Journal of Cell Science Volume 189" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology189">
+        <property name="title" value="Journal of Experimental Biology Volume 189" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6929,9 +6929,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience190">
-        <property name="title" value="Journal of Cell Science Volume 190" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology190">
+        <property name="title" value="Journal of Experimental Biology Volume 190" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6944,9 +6944,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience191">
-        <property name="title" value="Journal of Cell Science Volume 191" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology191">
+        <property name="title" value="Journal of Experimental Biology Volume 191" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6959,9 +6959,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience192">
-        <property name="title" value="Journal of Cell Science Volume 192" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology192">
+        <property name="title" value="Journal of Experimental Biology Volume 192" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6974,9 +6974,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience193">
-        <property name="title" value="Journal of Cell Science Volume 193" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology193">
+        <property name="title" value="Journal of Experimental Biology Volume 193" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -6989,9 +6989,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience194">
-        <property name="title" value="Journal of Cell Science Volume 194" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology194">
+        <property name="title" value="Journal of Experimental Biology Volume 194" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -7004,9 +7004,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience195">
-        <property name="title" value="Journal of Cell Science Volume 195" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology195">
+        <property name="title" value="Journal of Experimental Biology Volume 195" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -7019,9 +7019,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience196">
-        <property name="title" value="Journal of Cell Science Volume 196" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology196">
+        <property name="title" value="Journal of Experimental Biology Volume 196" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -7034,9 +7034,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience197">
-        <property name="title" value="Journal of Cell Science Volume 197" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology197">
+        <property name="title" value="Journal of Experimental Biology Volume 197" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -7049,9 +7049,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience198">
-        <property name="title" value="Journal of Cell Science Volume 198" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology198">
+        <property name="title" value="Journal of Experimental Biology Volume 198" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -7064,9 +7064,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience199">
-        <property name="title" value="Journal of Cell Science Volume 199" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology199">
+        <property name="title" value="Journal of Experimental Biology Volume 199" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -7079,9 +7079,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience200">
-        <property name="title" value="Journal of Cell Science Volume 200" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology200">
+        <property name="title" value="Journal of Experimental Biology Volume 200" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -7094,9 +7094,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience201">
-        <property name="title" value="Journal of Cell Science Volume 201" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology201">
+        <property name="title" value="Journal of Experimental Biology Volume 201" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -7109,9 +7109,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience202">
-        <property name="title" value="Journal of Cell Science Volume 202" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology202">
+        <property name="title" value="Journal of Experimental Biology Volume 202" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -7124,9 +7124,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience203">
-        <property name="title" value="Journal of Cell Science Volume 203" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology203">
+        <property name="title" value="Journal of Experimental Biology Volume 203" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -7139,9 +7139,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience204">
-        <property name="title" value="Journal of Cell Science Volume 204" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology204">
+        <property name="title" value="Journal of Experimental Biology Volume 204" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -7154,9 +7154,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience205">
-        <property name="title" value="Journal of Cell Science Volume 205" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology205">
+        <property name="title" value="Journal of Experimental Biology Volume 205" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -7169,9 +7169,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience206">
-        <property name="title" value="Journal of Cell Science Volume 206" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology206">
+        <property name="title" value="Journal of Experimental Biology Volume 206" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -7184,9 +7184,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience207">
-        <property name="title" value="Journal of Cell Science Volume 207" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology207">
+        <property name="title" value="Journal of Experimental Biology Volume 207" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -7199,9 +7199,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience208">
-        <property name="title" value="Journal of Cell Science Volume 208" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology208">
+        <property name="title" value="Journal of Experimental Biology Volume 208" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -7214,9 +7214,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience209">
-        <property name="title" value="Journal of Cell Science Volume 209" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology209">
+        <property name="title" value="Journal of Experimental Biology Volume 209" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -7229,9 +7229,9 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-      <property name="HighWireJournalofCellScience210">
-        <property name="title" value="Journal of Cell Science Volume 210" />
-        <property name="journalTitle" value="Journal of Cell Science" />
+      <property name="HighWireJournalofExperimentalBiology210">
+        <property name="title" value="Journal of Experimental Biology Volume 210" />
+        <property name="journalTitle" value="Journal of Experimental Biology" />
         <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
@@ -7244,7 +7244,7 @@
         <property name="attributes.publisher" value="Company of Biologists" />
       </property>
 
-		<!-- End Journal of Experimental Biology -->
+    <!-- End Journal of Experimental Biology -->
 
   </property>
 </lockss-config>
