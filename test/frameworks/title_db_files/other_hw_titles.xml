@@ -2328,51 +2328,6 @@
       <property name="attributes.publisher" value="Cold Spring Harbor Laboratory Press" />
     </property>
 
-    <property name="HighWireDevelopment133">
-      <property name="title" value="Development Volume 133" />
-      <property name="journalTitle" value="Development" />
-      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
-      <property name="param.1">
-        <property name="key" value="base_url" />
-        <property name="value" value="http://dev.biologists.org/" />
-      </property>
-      <property name="param.2">
-        <property name="key" value="volume_name" />
-        <property name="value" value="133" />
-      </property>
-      <property name="attributes.publisher" value="Company of Biologists" />
-    </property>
-
-    <property name="HighWireJournalofCellScience119">
-      <property name="title" value="Journal of Cell Science Volume 119" />
-      <property name="journalTitle" value="Journal of Cell Science" />
-      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
-      <property name="param.1">
-        <property name="key" value="base_url" />
-        <property name="value" value="http://jcs.biologists.org/" />
-      </property>
-      <property name="param.2">
-        <property name="key" value="volume_name" />
-        <property name="value" value="119" />
-      </property>
-      <property name="attributes.publisher" value="Company of Biologists" />
-    </property>
-
-    <property name="HighWireJournalofExperimentalBiology209">
-      <property name="title" value="Journal of Experimental Biology Volume 209" />
-      <property name="journalTitle" value="Journal of Experimental Biology" />
-      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
-      <property name="param.1">
-        <property name="key" value="base_url" />
-        <property name="value" value="http://jeb.biologists.org/" />
-      </property>
-      <property name="param.2">
-        <property name="key" value="volume_name" />
-        <property name="value" value="209" />
-      </property>
-      <property name="attributes.publisher" value="Company of Biologists" />
-    </property>
-
     <property name="HighWireAmericanLiteraryScholarship2003">
       <property name="title" value="American Literary Scholarship Volume 2003" />
       <property name="journalTitle" value="American Literary Scholarship" />
