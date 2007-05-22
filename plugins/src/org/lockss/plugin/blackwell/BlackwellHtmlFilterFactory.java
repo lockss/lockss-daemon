@@ -1,5 +1,5 @@
 /*
- * $Id: BlackwellHtmlFilterFactory.java,v 1.4 2007-05-01 22:36:44 troberts Exp $
+ * $Id: BlackwellHtmlFilterFactory.java,v 1.5 2007-05-22 19:00:59 troberts Exp $
  */
 
 /*
@@ -61,7 +61,7 @@ public class BlackwellHtmlFilterFactory implements FilterFactory {
     // <option value="#citart1">This article is cited by the following
     // articles in Blackwell Synergy and CrossRef</option>
 
-    NodeFilter[] filters = new NodeFilter[3];
+    NodeFilter[] filters = new NodeFilter[8];
     filters[0] =
       HtmlNodeFilters.tagWithText("option", "article is cited by", true);
 
@@ -70,6 +70,21 @@ public class BlackwellHtmlFilterFactory implements FilterFactory {
 
     filters[2] =
       HtmlNodeFilters.tagWithText("h3", "article is cited by", true);
+
+    filters[3] =
+      HtmlNodeFilters.tagWithAttribute("div", "class", "xlink");
+
+    filters[4] =
+      HtmlNodeFilters.tagWithAttribute("h2", "class", "title_surtitle");
+
+    filters[5] =
+      HtmlNodeFilters.tagWithAttribute("div", "class", "article_begins");
+
+    filters[6] =
+      HtmlNodeFilters.tagWithAttribute("div", "id", "header");
+
+    filters[7] =
+      HtmlNodeFilters.tagWithAttribute("form", "id", "quick_link");
 
     //    "<h3 id=\"CitedBy\">This article is cited by:</h3></div>" +
 
