@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.41 2007-05-10 23:41:53 tlipkis Exp $
+ * $Id: ServletUtil.java,v 1.42 2007-05-23 02:27:32 tlipkis Exp $
  */
 
 /*
@@ -105,6 +105,12 @@ public class ServletUtil {
     }
 
   }
+
+  static Logger log = Logger.getLogger("ServletUtil");
+
+  /** Groups names not to display in header */
+  static final String PARAM_DONT_DISPLAY_GROUPS =
+    Configuration.PREFIX + "ui.dontDisplayGroups";
 
   /** Format to display date/time in headers */
   public static final DateFormat headerDf =
@@ -706,6 +712,17 @@ public class ServletUtil {
     composite.add(exp);
   }
 
+  static void addBold(Composite comp, String str) {
+    comp.add("<b>");
+    comp.add(str);
+    comp.add("</b>");
+  }
+
+  static boolean shouldDisplayGroups(List groups) {
+    List dontGroups = CurrentConfig.getList(PARAM_DONT_DISPLAY_GROUPS);
+    return groups != null && !CollectionUtils.containsAny(groups, dontGroups);
+  }
+
   public static void layoutHeader(LockssServlet servlet,
                                   Page page,
                                   String heading,
@@ -730,9 +747,27 @@ public class ServletUtil {
     table.add(HEADER_HEADING_AFTER);
     table.add("<br>");
 
+    addBold(table, machineName);
+    List<String> groups = ConfigManager.getPlatformGroupList();
+    if (shouldDisplayGroups(groups)) {
+      table.add("&nbsp;&nbsp;(");
+      if (groups.size() == 1) {
+	addBold(table, groups.get(0));
+	table.add(" group");
+      } else {
+	table.add(StringUtil.separatedDelimitedString(groups, ", ",
+						      "<b>", "</b>"));
+	table.add(" groups");
+      }
+      table.add(")");
+    }
+    table.add("<br>");
+
     String since =
       StringUtil.timeIntervalToString(TimeBase.msSince(startDate.getTime()));
-    table.add(machineName + " at " + headerDf.format(new Date()) + ", up " + since);
+    table.add(headerDf.format(new Date()));
+    table.add(", up ");
+    table.add(since);
 
     table.newCell("valign=\"center\" align=\"center\" width=\"20%\"");
     layoutNavTable(servlet, table, descrIterator, machineNameClientAddr);
