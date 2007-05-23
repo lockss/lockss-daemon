@@ -1,5 +1,5 @@
 /*
- * $Id: BlackwellHtmlFilterFactory.java,v 1.5 2007-05-22 19:00:59 troberts Exp $
+ * $Id: BlackwellHtmlFilterFactory.java,v 1.6 2007-05-23 02:27:51 tlipkis Exp $
  */
 
 /*
@@ -96,7 +96,7 @@ public class BlackwellHtmlFilterFactory implements FilterFactory {
 
     // Still need to remove actual inverse citation section
 
-    InputStream htmlFilter = new HtmlFilterInputStream(in, xform1);
+    InputStream htmlFilter = new HtmlFilterInputStream(in, encoding, xform1);
 
     Reader rdr = FilterUtil.getReader(htmlFilter, encoding);
     Reader tagFilter = HtmlTagFilter.makeNestedFilter(rdr, tagList);
