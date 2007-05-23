@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfiguration.java,v 1.9 2006-04-05 22:30:54 tlipkis Exp $
+ * $Id: TestConfiguration.java,v 1.10 2007-05-23 02:26:54 tlipkis Exp $
  */
 
 /*
@@ -262,6 +262,13 @@ public class TestConfiguration extends LockssTestCase {
     Configuration config = newConfiguration();
     config.load(loadFCF(FileTestUtil.urlOfString("prop.p1=a;;b;")));
     assertEquals(ListUtil.list("a", "b"), config.getList("prop.p1"));
+  }
+
+  public void testGetListDefault() throws IOException {
+    Configuration config = newConfiguration();
+    assertEquals(Collections.EMPTY_LIST, config.getList("foo"));
+    assertEquals(ListUtil.list("bar"), config.getList("foo",
+						      ListUtil.list("bar")));
   }
 
   private static final String c2 =

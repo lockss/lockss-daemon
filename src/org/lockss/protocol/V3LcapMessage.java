@@ -1,5 +1,5 @@
 /*
- * $Id: V3LcapMessage.java,v 1.29 2007-05-09 10:34:09 smorabito Exp $
+ * $Id: V3LcapMessage.java,v 1.30 2007-05-23 02:26:54 tlipkis Exp $
  */
 
 /*
@@ -116,8 +116,8 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
   /** NAK reason, if this is a NAK message. */
   private PollNak m_nak;
 
-  /** The platform group to which the sender of the message belongs. */
-  private String m_group;
+  /** The platform groups to which the sender of the message belongs. */
+  private String m_groups;
   
   /**
    * In Nominate messages: The list of outer circle nominees, in the form of
@@ -180,7 +180,7 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     m_props = new EncodedProperty();
     m_pollProtocol = Poll.V3_PROTOCOL;
     m_messageDir = messageDir;
-    m_group = ConfigManager.getPlatformGroup();
+    m_groups = ConfigManager.getPlatformGroups();
     m_repairDataThreshold =
       CurrentConfig.getIntParam(PARAM_REPAIR_DATA_THRESHOLD,
                                 DEFAULT_REPAIR_DATA_THRESHOLD);
@@ -300,7 +300,7 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     m_lastVoteBlockURL = m_props.getProperty("lastvoteblockurl");
     m_voteComplete = m_props.getBoolean("votecomplete", false);
     m_repairProps = m_props.getEncodedProperty("repairProps");
-    m_group = m_props.getProperty("group");
+    m_groups = m_props.getProperty("groups");
     
     // If we have vote blocks, pass them to a VoteBlock object.
     int voteBlockCount = dis.readInt();
@@ -448,7 +448,7 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
 
     m_props.putLong("votedeadline", m_voteDeadline);
     m_props.putLong("voteduration", m_voteDuration);
-    m_props.setProperty("group", m_group);
+    m_props.setProperty("groups", m_groups);
     if (m_effortProof != null) {
       m_props.putByteArray("effortproof", m_effortProof);
     }
@@ -640,12 +640,12 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     this.m_repairDataInputStream = is;
   }
   
-  public String getGroup() {
-    return m_group;
+  public String getGroups() {
+    return m_groups;
   }
   
-  public void setGroup(String group) {
-    this.m_group = group;
+  public void setGroups(String groups) {
+    this.m_groups = groups;
   }
 
   /**
@@ -722,6 +722,10 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
       sb.append(getOpcodeString());
     } else {
       sb.append(getOpcodeString());
+      if (getNak() != null) {
+	sb.append(" Nak:");
+	sb.append(getNak());
+      }
       sb.append(" Key:");
       sb.append(m_key);
       sb.append(" PN:");

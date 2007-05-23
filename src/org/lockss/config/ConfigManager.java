@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.44 2007-05-10 23:40:50 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.45 2007-05-23 02:26:54 tlipkis Exp $
  */
 
 /*
@@ -108,9 +108,11 @@ public class ConfigManager implements LockssManager {
   public static final String PARAM_PLATFORM_PROJECT = PLATFORM + "project";
   public static final String DEFAULT_PLATFORM_PROJECT = "lockss";
 
-  /** Group name, for group= config file conditional */
-  public static final String PARAM_DAEMON_GROUP = DAEMON + "group";
+  /** Group names, for group= config file conditional */
+  public static final String PARAM_DAEMON_GROUPS = DAEMON + "groups";
   public static final String DEFAULT_DAEMON_GROUP = "nogroup";
+  public static final List DEFAULT_DAEMON_GROUP_LIST =
+    ListUtil.list(DEFAULT_DAEMON_GROUP);
 
   /** Local (routable) IP address, for lcap identity */
   public static final String PARAM_PLATFORM_IP_ADDRESS =
@@ -183,7 +185,7 @@ public class ConfigManager implements LockssManager {
   private List pluginTitledbUrlList;	// list of titledb urls (usually
 					// jar:) specified by plugins
   private List userTitledbUrlList;	// titledb urls added from UI
-  private String groupName;		// daemon group name
+  private String groupNames;		// daemon group names
 
   private String recentLoadError;
 
@@ -211,11 +213,11 @@ public class ConfigManager implements LockssManager {
     this(urls, null);
   }
 
-  public ConfigManager(List urls, String groupName) {
+  public ConfigManager(List urls, String groupNames) {
     if (urls != null) {
       configUrlList = new ArrayList(urls);
     }
-    this.groupName = groupName;
+    this.groupNames = groupNames;
     registerConfigurationCallback(Logger.getConfigCallback());
     registerConfigurationCallback(MiscConfig.getConfigCallback());
   }
@@ -267,8 +269,8 @@ public class ConfigManager implements LockssManager {
     return theMgr;
   }
 
-  public static ConfigManager makeConfigManager(List urls, String groupName) {
-    theMgr = new ConfigManager(urls, groupName);
+  public static ConfigManager makeConfigManager(List urls, String groupNames) {
+    theMgr = new ConfigManager(urls, groupNames);
     return theMgr;
   }
 
@@ -279,6 +281,17 @@ public class ConfigManager implements LockssManager {
   /** Factory to create instance of appropriate class */
   public static Configuration newConfiguration() {
     return new ConfigurationPropTreeImpl();
+  }
+
+  Configuration initNewConfiguration() {
+    Configuration newConfig = newConfiguration();
+
+    // Add platform-like params before calling loadList() as they affect
+    // conditional processing
+    if (groupNames != null) {
+      newConfig.put(PARAM_DAEMON_GROUPS, groupNames.toLowerCase());
+    }
+    return newConfig;
   }
 
   /** Return current configuration */
@@ -351,8 +364,13 @@ public class ConfigManager implements LockssManager {
     return platVer;
   }
 
-  public static String getPlatformGroup() {
-    return getPlatformConfig().get(PARAM_DAEMON_GROUP, DEFAULT_DAEMON_GROUP);
+  public static String getPlatformGroups() {
+    return getPlatformConfig().get(PARAM_DAEMON_GROUPS, DEFAULT_DAEMON_GROUP);
+  }
+
+  public static List getPlatformGroupList() {
+    return getPlatformConfig().getList(PARAM_DAEMON_GROUPS,
+				       DEFAULT_DAEMON_GROUP_LIST);
   }
 
   public static String getPlatformHostname() {
@@ -422,19 +440,13 @@ public class ConfigManager implements LockssManager {
    * Return a new <code>Configuration</code> instance loaded from the
    * url list
    */
-  public Configuration readConfig(List urlList, String groupName)
+  public Configuration readConfig(List urlList, String groupNames)
       throws IOException {
     if (urlList == null) {
       return null;
     }
 
-    Configuration newConfig = newConfiguration();
-
-    // Add platform-like params before calling loadList() as they affect
-    // conditional processing
-    if (groupName != null) {
-      newConfig.put(PARAM_DAEMON_GROUP, groupName);
-    }
+    Configuration newConfig = initNewConfiguration();
     loadList(newConfig, getConfigGenerations(urlList, true, true, "props"));
     return newConfig;
   }
@@ -655,12 +667,7 @@ public class ConfigManager implements LockssManager {
       }
       return false;
     }
-    Configuration newConfig = newConfiguration();
-    // Add platform-like params before calling loadList() as they affect
-    // conditional processing
-    if (groupName != null) {
-      newConfig.put(PARAM_DAEMON_GROUP, groupName);
-    }
+    Configuration newConfig = initNewConfiguration();
     loadList(newConfig, gens);
 
     return installConfig(newConfig, gens);
@@ -676,12 +683,7 @@ public class ConfigManager implements LockssManager {
   }
 
   void setupPlatformConfig(List urls) {
-    Configuration platConfig = newConfiguration();
-    // Add platform-like params before calling loadList() as they affect
-    // conditional processing
-    if (groupName != null) {
-      platConfig.put(PARAM_DAEMON_GROUP, groupName);
-    }
+    Configuration platConfig = initNewConfiguration();
     for (Iterator iter = urls.iterator(); iter.hasNext();) {
       Object o = iter.next();
       ConfigFile cf;

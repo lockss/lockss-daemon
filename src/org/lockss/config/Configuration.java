@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.21 2007-05-10 23:40:50 tlipkis Exp $
+ * $Id: Configuration.java,v 1.22 2007-05-23 02:26:54 tlipkis Exp $
  */
 
 /*
@@ -77,8 +77,14 @@ public abstract class Configuration {
     return ConfigManager.getPlatformVersion();
   }
 
-  public static String getPlatformGroup() {
-    return ConfigManager.getPlatformGroup();
+  public String getPlatformGroups() {
+    return get(ConfigManager.PARAM_DAEMON_GROUPS,
+	       ConfigManager.DEFAULT_DAEMON_GROUP);
+  }
+
+  public List getPlatformGroupList() {
+    return getList(ConfigManager.PARAM_DAEMON_GROUPS,
+		   ConfigManager.DEFAULT_DAEMON_GROUP_LIST);
   }
 
   public static String getPlatformHostname() {
@@ -322,11 +328,11 @@ public abstract class Configuration {
   public abstract List getList(String key);
 
   public List getList(String key, List dfault) {
-    List retVal = getList(key);
-    if (retVal == null) {
+    if (get(key) != null) {
+      return getList(key);
+    } else {
       return dfault;
     }
-    return retVal;
   }
 
   /** Return the config value as a long.

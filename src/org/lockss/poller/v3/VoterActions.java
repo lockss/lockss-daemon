@@ -1,5 +1,5 @@
 /*
- * $Id: VoterActions.java,v 1.16 2007-05-09 10:34:11 smorabito Exp $
+ * $Id: VoterActions.java,v 1.17 2007-05-23 02:26:54 tlipkis Exp $
  */
 
 /*
@@ -33,7 +33,9 @@
 package org.lockss.poller.v3;
 
 import java.io.IOException;
+import java.util.*;
 import java.security.*;
+import org.apache.commons.collections.CollectionUtils;
 
 import org.lockss.config.ConfigManager;
 import org.lockss.plugin.*;
@@ -77,17 +79,19 @@ public class VoterActions {
     // Verify whether the poller is in our platform group.  If they
     // are not, decline the poll, and send a NAK with the status
     // NAK_GROUP_MISMATCH
-    String pollerGroup = null;
-    if (ud.getPollMessage() != null) {
-      pollerGroup = ((V3LcapMessage)ud.getPollMessage()).getGroup();
+    List pollerGroups = null;
+    V3LcapMessage msgIn = (V3LcapMessage)ud.getPollMessage();
+    if (msgIn != null) {
+      pollerGroups = StringUtil.breakAt(msgIn.getGroups(), ';');
     }
-    String ourGroup = ConfigManager.getPlatformGroup();
+    List ourGroups = ConfigManager.getPlatformGroupList();
 
     V3LcapMessage msg = ud.makeMessage(V3LcapMessage.MSG_POLL_ACK);
     msg.setEffortProof(ud.getPollAckEffortProof());
 
     try {
-      if (ourGroup.equalsIgnoreCase(pollerGroup)) {
+      if (pollerGroups != null &&
+	  CollectionUtils.containsAny(ourGroups, pollerGroups)) {
         // Accept the poll and set status
         ud.setStatus(V3Voter.STATUS_ACCEPTED_POLL);
         msg.setVoterNonce(ud.getVoterNonce());
@@ -110,7 +114,8 @@ public class VoterActions {
         ud.getVoter().stopPoll(V3Voter.STATUS_DECLINED_POLL);
         log.debug2("Rejected message for " + ud.getPollerId() + " in poll " 
                    + ud.getPollKey());
-        log.debug2("Our group: " + ourGroup + "; Their group: " + pollerGroup);
+        log.debug2("Our groups: " + ourGroups +
+		   "; Their groups: " + pollerGroups);
         return V3Events.evtDeclinePoll;
       }
     } catch (Throwable t) {

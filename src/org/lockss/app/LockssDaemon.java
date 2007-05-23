@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.90 2007-04-30 04:52:46 tlipkis Exp $
+ * $Id: LockssDaemon.java,v 1.91 2007-05-23 02:26:54 tlipkis Exp $
  */
 
 /*
@@ -118,6 +118,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   public static final String AU_TREEWALK_MANAGER = "AuTreeWalkManager";
   public static final String REPOSITORY_STATUS = "RepositoryStatus";
   public static final String ARCHIVAL_UNIT_STATUS = "ArchivalUnitStatus";
+  public static final String PLATFORM_CONFIG_STATUS = "PlatformConfigStatus";
   public static final String ICP_MANAGER = "IcpManager";
   public static final String CRON = "Cron";
   public static final String CLOCKSS_PARAMS = "ClockssParams";
@@ -162,6 +163,8 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     new ManagerDesc(NODE_MANAGER_MANAGER, "org.lockss.state.NodeManagerManager"),
     new ManagerDesc(ICP_MANAGER,
 		    "org.lockss.proxy.icp.IcpManager"),
+    new ManagerDesc(PLATFORM_CONFIG_STATUS,
+		    "org.lockss.config.PlatformConfigStatus"),
     new ManagerDesc(ARCHIVAL_UNIT_STATUS,
 		    "org.lockss.state.ArchivalUnitStatus"),
     new ManagerDesc(REPOSITORY_STATUS,
@@ -208,8 +211,8 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     theDaemon = this;
   }
 
-  protected LockssDaemon(List propUrls, String groupName) {
-    super(propUrls, groupName);
+  protected LockssDaemon(List propUrls, String groupNames) {
+    super(propUrls, groupNames);
     theDaemon = this;
   }
 
@@ -796,7 +799,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
    */
   protected static StartupOptions getStartupOptions(String[] args) {
     List propUrls = new ArrayList();
-    String groupName = null;
+    String groupNames = null;
 
     // True if named command line arguments are being passed to
     // the daemon at startup.  Otherwise, just treat the command
@@ -806,7 +809,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
 
     for (int i = 0; i < args.length - 1; i++) {
       if (args[i].equals(StartupOptions.OPTION_GROUP)) {
-	groupName = args[++i];
+	groupNames = args[++i];
 	useNewSyntax = true;
       }
       else if (args[i].equals(StartupOptions.OPTION_PROPURL)) {
@@ -824,7 +827,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
       propUrls = ListUtil.fromArray(args);
     }
 
-    return new StartupOptions(propUrls, groupName);
+    return new StartupOptions(propUrls, groupNames);
   }
 
   /**
@@ -835,8 +838,8 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
    * -p url1 -p url2;url3;url4
    *     Load properties from url1 AND from one of
    *     (url2 | url3 | url4)
-   * -g group_name
-   *     Set the daemon group to 'group_name'
+   * -g group_name[;group_2;group_3]
+   *     Set the daemon groups.  Multiple groups separated by semicolon.
    */
   public static void main(String[] args) {
     LockssDaemon daemon;
@@ -851,7 +854,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
 
     try {
       daemon = new LockssDaemon(opts.getPropUrls(),
-				opts.getGroupName());
+				opts.getGroupNames());
       daemon.startDaemon();
       // raise priority after starting other threads, so we won't get
       // locked out and fail to exit when told.
@@ -880,7 +883,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
 
   /**
    * Command line startup options container.
-   * Currently supports propUrl (-p) and daemon group (-g)
+   * Currently supports propUrl (-p) and daemon groups (-g)
    * parameters.
    */
   static class StartupOptions {
@@ -888,20 +891,20 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     public static final String OPTION_PROPURL = "-p";
     public static final String OPTION_GROUP = "-g";
 
-    private String groupName;
+    private String groupNames;
     private List propUrls;
 
-    public StartupOptions(List propUrls, String groupName) {
+    public StartupOptions(List propUrls, String groupNames) {
       this.propUrls = propUrls;
-      this.groupName = groupName;
+      this.groupNames = groupNames;
     }
 
     public List getPropUrls() {
       return propUrls;
     }
 
-    public String getGroupName() {
-      return groupName;
+    public String getGroupNames() {
+      return groupNames;
     }
   }
 }

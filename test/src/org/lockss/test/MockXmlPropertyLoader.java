@@ -1,5 +1,5 @@
 /*
- * $Id: MockXmlPropertyLoader.java,v 1.3 2005-07-11 18:41:53 smorabito Exp $
+ * $Id: MockXmlPropertyLoader.java,v 1.4 2007-05-23 02:26:53 tlipkis Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.test;
 
+import java.util.*;
 import org.lockss.util.*;
 
 public class MockXmlPropertyLoader extends XmlPropertyLoader {
@@ -41,10 +42,10 @@ public class MockXmlPropertyLoader extends XmlPropertyLoader {
   private Version m_daemonVersion;
   private PlatformVersion m_platformVersion;
   private String m_hostname;
-  private String m_group;
+  private String m_groups;
 
   public void setVersions(String daemonVersion, String platformVersion,
-			  String hostname, String group) {
+			  String hostname, String groups) {
     if (daemonVersion == null) {
       this.m_daemonVersion = null;
     } else {
@@ -58,7 +59,7 @@ public class MockXmlPropertyLoader extends XmlPropertyLoader {
     }
 
     this.m_hostname = hostname;
-    this.m_group = group;
+    this.m_groups = groups;
   }
 
 
@@ -74,7 +75,7 @@ public class MockXmlPropertyLoader extends XmlPropertyLoader {
     return m_hostname;
   }
 
-  public String getPlatformGroup() {
-    return m_group;
+  public List<String> getPlatformGroupList() {
+    return StringUtil.breakAt(m_groups, ';');
   }
 }

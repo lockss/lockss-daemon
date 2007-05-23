@@ -1,5 +1,5 @@
 /*
- * $Id: XmlPropertyLoader.java,v 1.29 2007-01-23 21:44:36 smorabito Exp $
+ * $Id: XmlPropertyLoader.java,v 1.30 2007-05-23 02:26:54 tlipkis Exp $
  */
 
 /*
@@ -105,8 +105,8 @@ public class XmlPropertyLoader {
     return ConfigManager.getPlatformHostname();
   }
 
-  public String getPlatformGroup() {
-    return ConfigManager.getPlatformGroup();
+  public List getPlatformGroupList() {
+    return ConfigManager.getPlatformGroupList();
   }
 
   /**
@@ -157,7 +157,7 @@ public class XmlPropertyLoader {
     private PlatformVersion m_sysPlatformVer;
     private Version m_sysDaemonVer;
     private String m_sysPlatformName;
-    private String m_sysGroup;
+    private List m_sysGroups;
     private String m_sysHostname;
 
     /**
@@ -171,13 +171,13 @@ public class XmlPropertyLoader {
       if (m_sysPlatformVer != null) {
 	m_sysPlatformName = m_sysPlatformVer.getName();
       }
-      m_sysGroup = getPlatformGroup();
+      m_sysGroups = getPlatformGroupList();
       m_sysHostname = getPlatformHostname();
 
       m_props = props;
       log.debug2("Conditionals: {platformVer=" + m_sysPlatformVer + "}, " +
 		 "{daemonVer=" + m_sysDaemonVer + "}, " +
-		 "{group=" + m_sysGroup + "}, " +
+		 "{groups=" + m_sysGroups + "}, " +
 		 "{hostname=" + m_sysHostname + "}, " +
 		 "{platformName=" + m_sysPlatformName + "}");
     }
@@ -635,7 +635,7 @@ public class XmlPropertyLoader {
        * Group membership checking.
        */
       if (group != null) {
-	returnVal &= StringUtil.equalStringsIgnoreCase(m_sysGroup, group);
+	returnVal &= m_sysGroups.contains(group);
       }
 
       /*
