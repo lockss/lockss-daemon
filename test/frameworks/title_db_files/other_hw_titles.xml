@@ -3496,17 +3496,62 @@
       <property name="attributes.publisher" value="Royal College of Psychiatrists" />
     </property>
 
+    <property name="HighWireInternationalJournalofSystematicandEvolutionaryMicrobiology55">
+      <property name="title" value="International Journal of Systematic and Evolutionary Microbiology Volume 55" />
+      <property name="journalTitle" value="International Journal of Systematic and Evolutionary Microbiology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+        <property name="key" value="base_url" />
+        <property name="value" value="http://ijs.sgmjournals.org/" />
+      </property>
+      <property name="param.2">
+        <property name="key" value="volume_name" />
+        <property name="value" value="55" />
+      </property>
+      <property name="attributes.publisher" value="Society for General Microbiology" />
+    </property>
+
     <property name="HighWireInternationalJournalofSystematicandEvolutionaryMicrobiology56">
       <property name="title" value="International Journal of Systematic and Evolutionary Microbiology Volume 56" />
       <property name="journalTitle" value="International Journal of Systematic and Evolutionary Microbiology" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://ijs.sgmjournals.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://ijs.sgmjournals.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="volume_name" />
-	<property name="value" value="56" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="56" />
+      </property>
+      <property name="attributes.publisher" value="Society for General Microbiology" />
+    </property>
+
+    <property name="HighWireInternationalJournalofSystematicandEvolutionaryMicrobiology57">
+      <property name="title" value="International Journal of Systematic and Evolutionary Microbiology Volume 57" />
+      <property name="journalTitle" value="International Journal of Systematic and Evolutionary Microbiology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+        <property name="key" value="base_url" />
+        <property name="value" value="http://ijs.sgmjournals.org/" />
+      </property>
+      <property name="param.2">
+        <property name="key" value="volume_name" />
+        <property name="value" value="57" />
+      </property>
+      <property name="attributes.publisher" value="Society for General Microbiology" />
+    </property>
+
+    <property name="HighWireJournalofGeneralVirology86">
+      <property name="title" value="Journal of General Virology Volume 86" />
+      <property name="journalTitle" value="Journal of General Virology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+        <property name="key" value="base_url" />
+        <property name="value" value="http://vir.sgmjournals.org/" />
+      </property>
+      <property name="param.2">
+        <property name="key" value="volume_name" />
+        <property name="value" value="86" />
       </property>
       <property name="attributes.publisher" value="Society for General Microbiology" />
     </property>
@@ -3516,12 +3561,42 @@
       <property name="journalTitle" value="Journal of General Virology" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://vir.sgmjournals.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://vir.sgmjournals.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="volume_name" />
-	<property name="value" value="87" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="87" />
+      </property>
+      <property name="attributes.publisher" value="Society for General Microbiology" />
+    </property>
+
+    <property name="HighWireJournalofGeneralVirology88">
+      <property name="title" value="Journal of General Virology Volume 88" />
+      <property name="journalTitle" value="Journal of General Virology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+        <property name="key" value="base_url" />
+        <property name="value" value="http://vir.sgmjournals.org/" />
+      </property>
+      <property name="param.2">
+        <property name="key" value="volume_name" />
+        <property name="value" value="88" />
+      </property>
+      <property name="attributes.publisher" value="Society for General Microbiology" />
+    </property>
+
+    <property name="HighWireJournalofMedicalMicrobiology54">
+      <property name="title" value="Journal of Medical Microbiology Volume 54" />
+      <property name="journalTitle" value="Journal of Medical Microbiology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+        <property name="key" value="base_url" />
+        <property name="value" value="http://jmm.sgmjournals.org/" />
+      </property>
+      <property name="param.2">
+        <property name="key" value="volume_name" />
+        <property name="value" value="54" />
       </property>
       <property name="attributes.publisher" value="Society for General Microbiology" />
     </property>
@@ -3531,12 +3606,42 @@
       <property name="journalTitle" value="Journal of Medical Microbiology" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://jmm.sgmjournals.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://jmm.sgmjournals.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="volume_name" />
-	<property name="value" value="55" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="55" />
+      </property>
+      <property name="attributes.publisher" value="Society for General Microbiology" />
+    </property>
+
+    <property name="HighWireJournalofMedicalMicrobiology56">
+      <property name="title" value="Journal of Medical Microbiology Volume 56" />
+      <property name="journalTitle" value="Journal of Medical Microbiology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+        <property name="key" value="base_url" />
+        <property name="value" value="http://jmm.sgmjournals.org/" />
+      </property>
+      <property name="param.2">
+        <property name="key" value="volume_name" />
+        <property name="value" value="56" />
+      </property>
+      <property name="attributes.publisher" value="Society for General Microbiology" />
+    </property>
+
+    <property name="HighWireMicrobiology151">
+      <property name="title" value="Microbiology Volume 151" />
+      <property name="journalTitle" value="Microbiology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+        <property name="key" value="base_url" />
+        <property name="value" value="http://mic.sgmjournals.org/" />
+      </property>
+      <property name="param.2">
+        <property name="key" value="volume_name" />
+        <property name="value" value="151" />
       </property>
       <property name="attributes.publisher" value="Society for General Microbiology" />
     </property>
@@ -3546,12 +3651,27 @@
       <property name="journalTitle" value="Microbiology" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://mic.sgmjournals.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://mic.sgmjournals.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="volume_name" />
-	<property name="value" value="152" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="152" />
+      </property>
+      <property name="attributes.publisher" value="Society for General Microbiology" />
+    </property>
+
+    <property name="HighWireMicrobiology153">
+      <property name="title" value="Microbiology Volume 153" />
+      <property name="journalTitle" value="Microbiology" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+        <property name="key" value="base_url" />
+        <property name="value" value="http://mic.sgmjournals.org/" />
+      </property>
+      <property name="param.2">
+        <property name="key" value="volume_name" />
+        <property name="value" value="153" />
       </property>
       <property name="attributes.publisher" value="Society for General Microbiology" />
     </property>
