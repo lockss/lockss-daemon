@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlUrlsStatusAccessor.java,v 1.3 2006-11-14 19:21:29 tlipkis Exp $
+ * $Id: CrawlUrlsStatusAccessor.java,v 1.4 2007-05-28 05:23:26 tlipkis Exp $
  */
 
 /*
@@ -182,7 +182,14 @@ public class CrawlUrlsStatusAccessor implements StatusAccessor {
     } else if (PENDING_TABLE_NAME.equals(tableStr)) {
       rows = urlSetToRows(status.getUrlsPending());
     } else if (EXCLUDED_TABLE_NAME.equals(tableStr)) {
-      rows = urlSetToRows(status.getUrlsExcluded());
+      Collection excl = status.getUrlsExcluded();
+      rows = new ArrayList(excl.size() + 1);
+      if (status.getNumExcludedExcludes() > 0) {
+	rows.add(makeRow( (status.getNumExcludedExcludes() +
+			   " or fewer additional off-site URLS"),
+			  0));
+      }
+      rows = urlSetToRows(rows, excl);
     } else if (ERROR_TABLE_NAME.equals(tableStr)) {
       Map errorMap = status.getUrlsWithErrors();
       Set errorUrls = errorMap.keySet();
@@ -203,7 +210,14 @@ public class CrawlUrlsStatusAccessor implements StatusAccessor {
    */
   private List urlSetToRows(Collection urls) {
     List rows = new ArrayList(urls.size());
-    int ix = 1;
+    return urlSetToRows(rows, urls);
+  }
+
+  /**
+   * Take a set of URLs and make a row for each, where row{"URL"}=<url>
+   */
+  private List urlSetToRows(List rows, Collection urls) {
+    int ix = rows.size();
     for (Iterator it = urls.iterator(); it.hasNext();) {
       String url = (String)it.next();
       rows.add(makeRow(url, ix++));

@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerStatus.java,v 1.2 2006-11-27 06:29:16 tlipkis Exp $
+ * $Id: CrawlerStatus.java,v 1.3 2007-05-28 05:23:26 tlipkis Exp $
  */
 
 /*
@@ -73,6 +73,12 @@ public class CrawlerStatus {
     Configuration.PREFIX + "crawlStatus.keepUrls";
   public static final String DEFAULT_KEEP_URLS = "errors, sources";
 
+  /** Max number of off-site excluded URLs to keep; any more are just
+   * counted.  -1 is the same as infinite. */
+  public static final String PARAM_KEEP_OFF_HOST_EXCLUDES =
+    Configuration.PREFIX + "crawlStatus.keepOffHostExcludes";
+  public static final int DEFAULT_KEEP_OFF_HOST_EXCLUDES = 50;
+
   private static int ctr = 0;		// Instance counter (for getKey())
 
   private String key;
@@ -84,11 +90,14 @@ public class CrawlerStatus {
   protected String type;
   private long contentBytesFetched = 0;
   private String paramRecordUrls;
+  private int paramKeepOffHostExcludes = DEFAULT_KEEP_OFF_HOST_EXCLUDES;
   private String forceRecord;
 
   protected UrlCount sources;
   protected UrlCount fetched;
   protected UrlCount excluded;
+  protected int excludedExcludes = 0;
+  protected int includedExcludes = 0;
   protected UrlCount notModified;
   protected UrlCount parsed;
   protected UrlCount pending;
@@ -111,16 +120,25 @@ public class CrawlerStatus {
     this.forceRecord = forceRecord;
   }
 
-  /** Create UrlCounters with or without lists/maps */
+  /** Create UrlCounters with or without lists/maps.  Create ListCounters
+   * for those lists that are already maintained as sets by the crawler (so
+   * no dups); SetCounters for others. */
   void initCounters() {
-    String recordUrls = CurrentConfig.getParam(PARAM_RECORD_URLS,
-					       DEFAULT_RECORD_URLS);
+    Configuration config = ConfigManager.getCurrentConfig();
+
+    paramKeepOffHostExcludes = config.getInt(PARAM_KEEP_OFF_HOST_EXCLUDES,
+					     DEFAULT_KEEP_OFF_HOST_EXCLUDES);
+    if (paramKeepOffHostExcludes == -1) {
+      paramKeepOffHostExcludes = Integer.MAX_VALUE;
+    }
+
+    String recordUrls = config.get(PARAM_RECORD_URLS, DEFAULT_RECORD_URLS);
     if (forceRecord != null && !recordUrls.equalsIgnoreCase(ALL_URLS)) {
       recordUrls += forceRecord;
     }
     if (paramRecordUrls == null || !paramRecordUrls.equals(recordUrls)) {
       fetched = newListCounter("fetched", recordUrls);
-      excluded = newListCounter("excluded", recordUrls);
+      excluded = newSetCounter("excluded", recordUrls);
       notModified = newListCounter("notModified", recordUrls);
       parsed = newListCounter("parsed", recordUrls);
       sources = newListCounter("source", recordUrls);
@@ -315,11 +333,44 @@ public class CrawlerStatus {
   // Excluded
 
   public synchronized void signalUrlExcluded(String url) {
-    excluded.addToList(url);
+    if (excluded.hasList() && isOffHost(url)) {
+      if (includedExcludes >= paramKeepOffHostExcludes) {
+	excludedExcludes++;
+      } else {
+	int cnt = excluded.getCount();
+	excluded.addToList(url);
+	if (cnt != excluded.getCount()) {
+	  includedExcludes++;
+	}
+      }
+    } else {
+      excluded.addToList(url);
+    }
   }
 
   public UrlCount getExcludedCtr() {
     return excluded;
+  }
+
+  public int getExcludedExcludes() {
+    return excludedExcludes;
+  }
+
+  private boolean isOffHost(String url) {
+    Collection<String> stems = au.getUrlStems();
+    if (stems == null) {
+      return false;
+    }
+    for (String stem : stems) {
+      if (StringUtil.startsWithIgnoreCase(url, stem)) {
+	return false;
+      }
+    }
+    return true;
+  }
+
+  public int getNumExcludedExcludes() {
+    return excludedExcludes;
   }
 
   /**

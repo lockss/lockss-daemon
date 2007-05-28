@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlerStatus.java,v 1.1 2006-11-14 19:21:28 tlipkis Exp $
+ * $Id: TestCrawlerStatus.java,v 1.2 2007-05-28 05:23:25 tlipkis Exp $
  */
 
 /*
@@ -48,12 +48,19 @@ import org.lockss.crawler.CrawlerStatus.UrlCountWithMap;
  */
 public class TestCrawlerStatus extends LockssTestCase {
 
+  String url1 = "http://example.com/foo1";
+  String url2 = "http://example.com/foobar2";
+  String url3 = "http://example.com/query?foo=bar";
+  String url_off1 = "http://nother.host/path/1";
+  String url_off2 = "http://nother.host/path/2";
+
   MockArchivalUnit mau;
   CrawlerStatus cs;
 
   public void setUp() throws Exception {
     super.setUp();
     mau = new MockArchivalUnit();
+    mau.setUrlStems(ListUtil.list("http://example.com/"));
     cs = new CrawlerStatus(mau, null, "a type");
   }
 
@@ -257,10 +264,6 @@ public class TestCrawlerStatus extends LockssTestCase {
     assertEmpty(u3.getMap());
   }
 
-  String url1 = "http://example.com/foo1";
-  String url2 = "http://example.com/foobar2";
-  String url3 = "http://example.com/query?foo=bar";
-
   public void testFetched() {
     assertEmpty(cs.getUrlsFetched());
     assertEquals(0, cs.getNumFetched());
@@ -339,6 +342,9 @@ public class TestCrawlerStatus extends LockssTestCase {
   }
 
   public void testExcluded() {
+    ConfigurationUtil.setFromArgs(CrawlerStatus.PARAM_KEEP_OFF_HOST_EXCLUDES,
+				  "50");
+    cs = new CrawlerStatus(mau, null, "a type");
     assertEmpty(cs.getUrlsExcluded());
     assertEquals(0, cs.getNumExcluded());
     UrlCount uc = cs.getExcludedCtr();
@@ -355,9 +361,40 @@ public class TestCrawlerStatus extends LockssTestCase {
 
     cs.signalUrlExcluded(url2);
     cs.signalUrlExcluded(url1);
+    cs.signalUrlExcluded(url_off1);
 
-    assertEquals(ListUtil.list(url1, url2, url1), cs.getUrlsExcluded());
+    assertEquals(ListUtil.list(url1, url2, url_off1), cs.getUrlsExcluded());
     assertEquals(3, cs.getNumExcluded());
+    uc = cs.getExcludedCtr();
+    assertEquals(cs.getUrlsExcluded(), uc.getList());
+    assertEquals(3, uc.getCount());
+  }
+
+  public void testExcludedExcludes() {
+    ConfigurationUtil.setFromArgs(CrawlerStatus.PARAM_KEEP_OFF_HOST_EXCLUDES,
+				  "1");
+    cs = new CrawlerStatus(mau, null, "a type");
+    assertEmpty(cs.getUrlsExcluded());
+    assertEquals(0, cs.getNumExcluded());
+    UrlCount uc = cs.getExcludedCtr();
+    assertEmpty(uc.getList());
+    assertEquals(0, uc.getCount());
+    assertEquals(0, cs.getNumExcludedExcludes());
+    
+    cs.signalUrlExcluded(url1);
+
+    cs.signalUrlExcluded(url2);
+    cs.signalUrlExcluded(url1);
+    assertEquals(2, cs.getNumExcluded());
+    assertEquals(0, cs.getNumExcludedExcludes());
+    cs.signalUrlExcluded(url_off1);
+    assertEquals(3, cs.getNumExcluded());
+    assertEquals(0, cs.getNumExcludedExcludes());
+    cs.signalUrlExcluded(url_off2);
+
+    assertEquals(ListUtil.list(url1, url2, url_off1), cs.getUrlsExcluded());
+    assertEquals(3, cs.getNumExcluded());
+    assertEquals(1, cs.getNumExcludedExcludes());
     uc = cs.getExcludedCtr();
     assertEquals(cs.getUrlsExcluded(), uc.getList());
     assertEquals(3, uc.getCount());
