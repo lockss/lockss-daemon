@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescr.java,v 1.34 2007-01-17 17:53:36 thib_gc Exp $
+ * $Id: ConfigParamDescr.java,v 1.35 2007-05-28 05:23:54 tlipkis Exp $
  */
 
 /*
@@ -121,6 +121,14 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
     .setType(TYPE_URL)
     .setSize(40)
     .setDescription("Usually of the form http://<journal-name>.com/");
+
+  public static final ConfigParamDescr BASE_URL2 =
+    new ConfigParamDescr()
+    .setKey("base_url2")
+    .setDisplayName("Second Base URL")
+    .setType(TYPE_URL)
+    .setSize(40)
+    .setDescription("Use if AU spans two hosts");
 
   public static final ConfigParamDescr JOURNAL_DIR =
     new ConfigParamDescr()
