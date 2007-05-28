@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.30 2007-05-01 23:34:02 tlipkis Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.31 2007-05-28 05:24:28 tlipkis Exp $
  */
 
 /*
@@ -285,26 +285,60 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertEquals("return value", expectedReturn, actualReturn);
   }
 
-  public void testUserMessage() {
+  public void testUserMessage() throws Exception {
     String str = "test user msg";
     Collection configProps = ListUtil.list(ConfigParamDescr.BASE_URL,
 					   ConfigParamDescr.VOLUME_NUMBER);
     defMap.putCollection(DefinablePlugin.KEY_PLUGIN_CONFIG_PROPS,
 			 configProps);
     defMap.putString(DefinablePlugin.KEY_PLUGIN_AU_CONFIG_USER_MSG, str);
+    Properties props = new Properties();
+    props.put(ConfigParamDescr.BASE_URL.getKey(), "http://www.example.com/");
+    props.put(ConfigParamDescr.VOLUME_NUMBER.getKey(), "42");
+    cau.setConfiguration(ConfigurationUtil.fromProps(props));
     cau.addImpliedConfigParams();
     assertEquals(str, cau.getProperties().getString(DefinableArchivalUnit.KEY_AU_CONFIG_USER_MSG, null));
   }
 
-  public void testGetManifestPage() {
-
-    configMap.putString("HOST", "www.example.com");
-    configMap.putInt("YEAR", 2003);
+  public void testGetManifestPage() throws Exception {
+    String baseKey = ConfigParamDescr.BASE_URL.getKey();
+    String volKey = ConfigParamDescr.VOLUME_NUMBER.getKey();
+    Collection configProps = ListUtil.list(ConfigParamDescr.BASE_URL,
+					   ConfigParamDescr.VOLUME_NUMBER);
+    defMap.putCollection(DefinablePlugin.KEY_PLUGIN_CONFIG_PROPS,
+			 configProps);
     defMap.putString(DefinableArchivalUnit.KEY_AU_MANIFEST,
-            "\"http://%s/contents-by-date.%d.shtml\", HOST, YEAR");
-    String expectedReturn = "http://www.example.com/contents-by-date.2003.shtml";
-    String actualReturn = (String)cau.getPermissionPages().get(0);
-    assertEquals("return valuse", expectedReturn, actualReturn);
+		     "\"%scontents-by-date.%d.shtml\", " +
+		     baseKey + ", " + volKey);
+    Properties props = new Properties();
+    props.put(baseKey, "http://www.example.com/");
+    props.put(volKey, "2003");
+    cau.setConfiguration(ConfigurationUtil.fromProps(props));
+    String expected = "http://www.example.com/contents-by-date.2003.shtml";
+    assertEquals(ListUtil.list(expected), cau.getPermissionPages());
+    assertEquals(ListUtil.list("http://www.example.com/"), cau.getUrlStems());
+  }
+
+  public void testGetMultiplePermissionPages() throws Exception {
+    String baseKey = ConfigParamDescr.BASE_URL.getKey();
+    String b2Key = ConfigParamDescr.BASE_URL2.getKey();
+    Collection configProps = ListUtil.list(ConfigParamDescr.BASE_URL,
+					   ConfigParamDescr.BASE_URL2);
+    defMap.putCollection(DefinablePlugin.KEY_PLUGIN_CONFIG_PROPS,
+			 configProps);
+    defMap.putCollection(DefinableArchivalUnit.KEY_AU_MANIFEST,
+			 ListUtil.list("\"%sfoo/\", " + baseKey,
+				       "\"%sbar/\", " + b2Key));
+    Properties props = new Properties();
+    props.put(baseKey, "http://www.example.com/");
+    props.put(b2Key, "http://mmm.example.org/");
+    cau.setConfiguration(ConfigurationUtil.fromProps(props));
+    String exp1 = "http://www.example.com/foo/";
+    String exp2 = "http://mmm.example.org/bar/";
+    assertEquals(ListUtil.list(exp1, exp2), cau.getPermissionPages());
+    assertEquals(ListUtil.list("http://www.example.com/",
+			       "http://mmm.example.org/"),
+		 cau.getUrlStems());
   }
 
   public void testGetLinkExtractor() {
