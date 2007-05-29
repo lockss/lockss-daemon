@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.53 2007-04-30 04:52:46 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.54 2007-05-29 06:23:59 tlipkis Exp $
  */
 
 /*
@@ -655,6 +655,12 @@ public class ArchivalUnitStatus
       
       long contentSize = AuUtil.getAuContentSize(au, false);
       long du = AuUtil.getAuDiskUsage(au, false);
+
+      StatusTable.SrvLink urlListLink =
+	new StatusTable.SrvLink("URL list",
+				LockssServlet.SERVLET_LIST_URLS,
+				PropUtil.fromArgs("auid", au.getAuId()));
+
       List summaryList =  ListUtil.list(
             new StatusTable.SummaryInfo("Volume", ColumnDescriptor.TYPE_STRING,
                                         au.getName()),
@@ -683,21 +689,25 @@ public class ArchivalUnitStatus
 //             new StatusTable.SummaryInfo("Volume Complete",
 //                                         ColumnDescriptor.TYPE_STRING,
 //                                         (AuUtil.isClosed(au) ? "Yes" : "No")),
-	    new StatusTable.SummaryInfo("Polling Protocol Version",
-					ColumnDescriptor.TYPE_INT,
-					new Integer(AuUtil.getProtocolVersion(au))),
+// 	    new StatusTable.SummaryInfo("Polling Protocol Version",
+// 					ColumnDescriptor.TYPE_INT,
+// 					new Integer(AuUtil.getProtocolVersion(au))),
             new StatusTable.SummaryInfo("Last Crawl Time",
                                         ColumnDescriptor.TYPE_DATE,
                                         new Long(state.getLastCrawlTime())),
             new StatusTable.SummaryInfo("Last Top-level Poll",
                                         ColumnDescriptor.TYPE_DATE,
                                         new Long(state.getLastTopLevelPollTime())),
-            new StatusTable.SummaryInfo("Last Treewalk",
-                                        ColumnDescriptor.TYPE_DATE,
-                                        new Long(state.getLastTreeWalkTime())),
-            new StatusTable.SummaryInfo("Current Activity",
-                                        ColumnDescriptor.TYPE_STRING,
-                                        "-")
+            new StatusTable.SummaryInfo(null,
+					ColumnDescriptor.TYPE_STRING,
+					urlListLink)
+
+//             new StatusTable.SummaryInfo("Last Treewalk",
+//                                         ColumnDescriptor.TYPE_DATE,
+//                                         new Long(state.getLastTreeWalkTime())),
+//             new StatusTable.SummaryInfo("Current Activity",
+//                                         ColumnDescriptor.TYPE_STRING,
+//                                         "-")
             );
       if (theDaemon.isDetectClockssSubscription()) {
 	String subStatus =
