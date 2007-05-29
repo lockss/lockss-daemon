@@ -1,5 +1,5 @@
 /*
- * $Id: EditableDefinablePlugin.java,v 1.28 2006-10-31 17:53:45 thib_gc Exp $
+ * $Id: EditableDefinablePlugin.java,v 1.28.2.1 2007-05-29 00:56:29 smorabito Exp $
  */
 
 /*
@@ -183,10 +183,10 @@ public class EditableDefinablePlugin extends DefinablePlugin {
     logger.info("Retrieving the AU crawl rules");
     Collection defaultCrawlRules = new ArrayList();
     defaultCrawlRules.add(DEFAULT_RULE_EXCLUDENOMATCH_BASEURL);
-    String startUrl = getAuStartUrl();
-    if (startUrl != null) {
-      defaultCrawlRules.add(DEFAULT_RULE_INCLUDE_STARTURL_FRAGMENT + startUrl);
-    }
+//    String startUrl = getAuStartUrl();
+//    if (startUrl != null) {
+//      defaultCrawlRules.add(DEFAULT_RULE_INCLUDE_STARTURL_FRAGMENT + startUrl);
+//    }
     if (logger.isDebug()) {
       logger.debug("Retrieving the AU crawl rules in detail");
       List rules = (List)definitionMap.getCollection(DefinableArchivalUnit.KEY_AU_CRAWL_RULES, null);
