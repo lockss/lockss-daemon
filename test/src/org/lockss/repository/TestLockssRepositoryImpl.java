@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.61 2007-01-21 22:06:18 tlipkis Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.62 2007-05-29 01:05:45 tlipkis Exp $
  */
 
 /*
@@ -203,6 +203,15 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     }
   }
 
+  public void testGetNodeWithPort() throws Exception {
+    createLeaf("http://www.example.com:22/testDir", "test stream", null);
+    assertNull(repo.getNode("http://www.example.com/testDir"));
+    RepositoryNode node =
+      repo.getNode("http://www.example.com:22/testDir");
+    assertTrue(node.hasContent());
+    assertEquals("http://www.example.com:22/testDir", node.getNodeUrl());
+  }
+
   public void testDotUrlHandling() throws Exception {
     //testing correction of nodes with bad '..'-including urls,
     //filtering the first '..' but resolving the second
@@ -225,10 +234,15 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     } catch (MalformedURLException mue) { }
   }
 
-  public void testSlashRemoval() throws Exception {
-    String testUrl = "http://www.example.com/test/";
-    String expected = "http://www.example.com/test";
-    assertEquals(expected, LockssRepositoryImpl.canonicalizePath(testUrl));
+  public void testCanonicalizePath() throws Exception {
+    assertEquals("http://www.example.com/test",
+		 LockssRepositoryImpl.canonicalizePath("http://www.example.com/test/"));
+    assertEquals("http://foo.com/test",
+		 LockssRepositoryImpl.canonicalizePath("http://foo.com/bar/../test/"));
+    assertEquals("http://foo.com:20/test",
+		 LockssRepositoryImpl.canonicalizePath("http://foo.com:20/test/"));
+    assertEquals("http://foo.com:20/test",
+		 LockssRepositoryImpl.canonicalizePath("http://foo.com:20/bar/../test/"));
   }
 
   public void testGetAuNode() throws Exception {

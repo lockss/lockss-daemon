@@ -1,5 +1,5 @@
 /*
- * $Id: AuNodeImpl.java,v 1.13 2007-02-20 01:36:25 tlipkis Exp $
+ * $Id: AuNodeImpl.java,v 1.14 2007-05-29 01:05:45 tlipkis Exp $
  */
 
 /*
@@ -117,7 +117,7 @@ public class AuNodeImpl extends RepositoryNodeImpl {
         String protocolStr = protocolDir.getName();
         // use as top-level, with protocol-URL as url
         try {
-          String dirName = new URL(protocolStr, urlStr, "").toString();
+          String dirName = protocolStr + "://" + urlStr;
           RepositoryNode node = repository.getNode(dirName);
           // add all nodes which are internal or active leaves
           if (!node.isLeaf() || (!node.isContentInactive()) || includeInactive) {

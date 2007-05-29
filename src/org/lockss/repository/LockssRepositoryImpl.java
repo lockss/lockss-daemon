@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.75 2007-01-28 05:45:06 tlipkis Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.76 2007-05-29 01:05:45 tlipkis Exp $
  */
 
 /*
@@ -294,46 +294,8 @@ public class LockssRepositoryImpl
    */
   public static String canonicalizePath(String url)
       throws MalformedURLException {
-    String canonUrl;
-    try {
-      URL testUrl = new URL(url);
-      String path = testUrl.getPath();
-      // look for '.' or '..' elements
-      if (path.indexOf("/.")>=0) {
-        // check if path traversal is legal
-        if (FileUtil.isLegalPath(path)) {
-          // canonicalize to remove urls including '..' and '.'
-          path = TEST_PREFIX + path;
-          File testFile = new File(path);
-          String canonPath = testFile.getCanonicalPath();
-          String sysDepPrefix = FileUtil.sysDepPath(TEST_PREFIX);
-          int pathIndex = canonPath.indexOf(sysDepPrefix) +
-              sysDepPrefix.length();
-          // reconstruct the url
-          canonUrl = testUrl.getProtocol() + "://" +
-              testUrl.getHost().toLowerCase() +
-              FileUtil.sysIndepPath(canonPath.substring(pathIndex));
-          // restore the query, if any
-          String query = testUrl.getQuery();
-          if (query!=null) {
-            canonUrl += "?" + query;
-          }
-        } else {
-          logger.error("Illegal URL detected: "+url);
-          throw new MalformedURLException("Illegal URL detected.");
-        }
-      } else {
-        // clean path, no testing needed
-        canonUrl = url;
-      }
-    } catch (MalformedURLException e) {
-      logger.warning("Can't canonicalize path: " + e);
-      throw e;
-    } catch (IOException e) {
-      logger.warning("Can't canonicalize path: " + e);
-      throw new MalformedURLException(url);
-    }
-
+    String canonUrl =
+      UrlUtil.normalizeUrl(url, UrlUtil.PATH_TRAVERSAL_ACTION_THROW);
     // canonicalize "dir" and "dir/"
     // XXX if these are ever two separate nodes, this is wrong
     if (canonUrl.endsWith(UrlUtil.URL_PATH_SEPARATOR)) {
@@ -486,6 +448,11 @@ public class LockssRepositoryImpl
       buffer.append(File.separator);
     }
     buffer.append(url.getHost().toLowerCase());
+    int port = url.getPort();
+    if (port != -1) {
+      buffer.append(":");
+      buffer.append(port);
+    }
     buffer.append(File.separator);
     buffer.append(url.getProtocol());
     buffer.append(escapePath(StringUtil.replaceString(url.getPath(),
