@@ -6663,5 +6663,16 @@
       <property name="attributes.rights" value="openaccess" />
     </property>
 
+    <property name="DSHRBlog">
+      <property name="title" value="DSHR Blog" />
+      <property name="journalTitle" value="DSHRBlog" />
+      <property name="plugin" value="org.lockss.plugin.blogger.BloggerPlugin" />
+      <property name="param.1">
+	   <property name="key" value="base_url" />
+	   <property name="value" value="http://blog.dshr.org/" />
+      </property>
+      <property name="attributes.rights" value="openaccess" />
+    </property>
+
   </property>
 </lockss-config>
