@@ -1,5 +1,5 @@
 /*
- * $Id: AuUtil.java,v 1.19 2007-05-01 23:34:05 tlipkis Exp $
+ * $Id: AuUtil.java,v 1.20 2007-06-06 19:17:53 smorabito Exp $
  */
 
 /*
@@ -59,7 +59,7 @@ public class AuUtil {
   public static final String PARAM_POLL_PROTOCOL_VERSION =
     Configuration.PREFIX + "poll.defaultPollProtocol";
   private static final int DEFAULT_POLL_PROTOCOL_VERSION =
-    Poll.V1_PROTOCOL;
+    Poll.V3_PROTOCOL;
 
   public static LockssDaemon getDaemon(ArchivalUnit au) {
     return au.getPlugin().getDaemon();
