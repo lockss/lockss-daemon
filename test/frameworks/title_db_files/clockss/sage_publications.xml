@@ -47,6 +47,8 @@
 	<property name="value" value="4" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AccountingHistory5">
@@ -62,6 +64,8 @@
 	<property name="value" value="5" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AccountingHistory6">
@@ -77,6 +81,8 @@
 	<property name="value" value="6" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AccountingHistory7">
@@ -92,6 +98,8 @@
 	<property name="value" value="7" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AccountingHistory8">
@@ -107,6 +115,8 @@
 	<property name="value" value="8" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AccountingHistory9">
@@ -122,6 +132,8 @@
 	<property name="value" value="9" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AccountingHistory10">
@@ -137,6 +149,8 @@
 	<property name="value" value="10" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AccountingHistory11">
@@ -152,6 +166,8 @@
 	<property name="value" value="11" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="ActaSociologica46">
@@ -167,6 +183,8 @@
 	<property name="value" value="46" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="ActaSociologica47">
@@ -182,6 +200,8 @@
 	<property name="value" value="47" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="ActaSociologica48">
@@ -197,6 +217,8 @@
 	<property name="value" value="48" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="ActaSociologica49">
@@ -212,6 +234,8 @@
 	<property name="value" value="49" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="ActionResearch1">
@@ -227,6 +251,8 @@
 	<property name="value" value="1" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="ActionResearch2">
@@ -242,6 +268,8 @@
 	<property name="value" value="2" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="ActionResearch3">
@@ -257,6 +285,8 @@
 	<property name="value" value="3" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="ActionResearch4">
@@ -272,6 +302,8 @@
 	<property name="value" value="4" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="ActiveLearninginHigherEducation1">
@@ -287,6 +319,8 @@
 	<property name="value" value="1" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="ActiveLearninginHigherEducation2">
@@ -302,6 +336,8 @@
 	<property name="value" value="2" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="ActiveLearninginHigherEducation3">
@@ -317,6 +353,8 @@
 	<property name="value" value="3" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="ActiveLearninginHigherEducation4">
@@ -332,6 +370,8 @@
 	<property name="value" value="4" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="ActiveLearninginHigherEducation5">
@@ -347,6 +387,8 @@
 	<property name="value" value="5" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="ActiveLearninginHigherEducation6">
@@ -362,6 +404,8 @@
 	<property name="value" value="6" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="ActiveLearninginHigherEducation7">
@@ -377,6 +421,8 @@
 	<property name="value" value="7" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AdaptiveBehavior9">
@@ -392,6 +438,8 @@
 	<property name="value" value="9" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AdaptiveBehavior10">
@@ -407,6 +455,8 @@
 	<property name="value" value="10" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AdaptiveBehavior11">
@@ -422,6 +472,8 @@
 	<property name="value" value="11" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AdaptiveBehavior12">
@@ -437,6 +489,8 @@
 	<property name="value" value="12" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AdaptiveBehavior13">
@@ -452,6 +506,8 @@
 	<property name="value" value="13" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AdaptiveBehavior14">
@@ -467,6 +523,8 @@
 	<property name="value" value="14" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AdministrationAndSociety31">
@@ -482,6 +540,8 @@
 	<property name="value" value="31" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AdministrationAndSociety32">
@@ -497,6 +557,8 @@
 	<property name="value" value="32" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AdministrationAndSociety33">
@@ -512,6 +574,8 @@
 	<property name="value" value="33" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AdministrationAndSociety34">
@@ -527,6 +591,8 @@
 	<property name="value" value="34" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AdministrationAndSociety35">
@@ -542,6 +608,8 @@
 	<property name="value" value="35" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AdministrationAndSociety36">
@@ -557,6 +625,8 @@
 	<property name="value" value="36" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AdministrationAndSociety37">
@@ -572,6 +642,8 @@
 	<property name="value" value="37" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AdministrationAndSociety38">
@@ -587,6 +659,8 @@
 	<property name="value" value="38" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AdultEducationQuarterly49">
@@ -602,6 +676,8 @@
 	<property name="value" value="49" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AdultEducationQuarterly50">
@@ -617,6 +693,8 @@
 	<property name="value" value="50" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AdultEducationQuarterly51">
@@ -632,6 +710,8 @@
 	<property name="value" value="51" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AdultEducationQuarterly52">
@@ -647,6 +727,8 @@
 	<property name="value" value="52" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AdultEducationQuarterly53">
@@ -662,6 +744,8 @@
 	<property name="value" value="53" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AdultEducationQuarterly54">
@@ -677,6 +761,8 @@
 	<property name="value" value="54" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AdultEducationQuarterly55">
@@ -692,6 +778,8 @@
 	<property name="value" value="55" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AdultEducationQuarterly56">
@@ -707,6 +795,8 @@
 	<property name="value" value="56" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AdvancesinDevelopingHumanResources3">
@@ -722,6 +812,8 @@
 	<property name="value" value="3" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AdvancesinDevelopingHumanResources4">
@@ -737,6 +829,8 @@
 	<property name="value" value="4" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AdvancesinDevelopingHumanResources5">
@@ -752,6 +846,8 @@
 	<property name="value" value="5" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AdvancesinDevelopingHumanResources6">
@@ -767,6 +863,8 @@
 	<property name="value" value="6" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AdvancesinDevelopingHumanResources7">
@@ -782,6 +880,8 @@
 	<property name="value" value="7" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AdvancesinDevelopingHumanResources8">
@@ -797,6 +897,8 @@
 	<property name="value" value="8" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="Affilia14">
@@ -812,6 +914,8 @@
 	<property name="value" value="14" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="Affilia15">
@@ -827,6 +931,8 @@
 	<property name="value" value="15" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="Affilia16">
@@ -842,6 +948,8 @@
 	<property name="value" value="16" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="Affilia17">
@@ -857,6 +965,8 @@
 	<property name="value" value="17" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="Affilia18">
@@ -872,6 +982,8 @@
 	<property name="value" value="18" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="Affilia19">
@@ -887,6 +999,8 @@
 	<property name="value" value="19" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="Affilia20">
@@ -902,6 +1016,8 @@
 	<property name="value" value="20" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="Affilia21">
@@ -917,6 +1033,8 @@
 	<property name="value" value="21" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanJournalofAlzheimer'sDiseaseandOtherDementias14">
@@ -932,6 +1050,8 @@
 	<property name="value" value="14" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanJournalofAlzheimer'sDiseaseandOtherDementias15">
@@ -947,6 +1067,8 @@
 	<property name="value" value="15" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanJournalofAlzheimer'sDiseaseandOtherDementias16">
@@ -962,6 +1084,8 @@
 	<property name="value" value="16" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanJournalofAlzheimer'sDiseaseandOtherDementias17">
@@ -977,6 +1101,8 @@
 	<property name="value" value="17" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanJournalofAlzheimer'sDiseaseandOtherDementias18">
@@ -992,6 +1118,8 @@
 	<property name="value" value="18" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanJournalofAlzheimer'sDiseaseandOtherDementias19">
@@ -1007,6 +1135,8 @@
 	<property name="value" value="19" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanJournalofAlzheimer'sDiseaseandOtherDementias20">
@@ -1022,6 +1152,8 @@
 	<property name="value" value="20" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanJournalofAlzheimer'sDiseaseandOtherDementias21">
@@ -1037,6 +1169,8 @@
 	<property name="value" value="21" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanJournalofEvaluation20">
@@ -1052,6 +1186,8 @@
 	<property name="value" value="20" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanJournalofEvaluation21">
@@ -1067,6 +1203,8 @@
 	<property name="value" value="21" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanJournalofEvaluation22">
@@ -1082,6 +1220,8 @@
 	<property name="value" value="22" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanJournalofEvaluation23">
@@ -1097,6 +1237,8 @@
 	<property name="value" value="23" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanJournalofEvaluation24">
@@ -1112,6 +1254,8 @@
 	<property name="value" value="24" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanJournalofEvaluation25">
@@ -1127,6 +1271,8 @@
 	<property name="value" value="25" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanJournalofEvaluation26">
@@ -1142,6 +1288,8 @@
 	<property name="value" value="26" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanJournalofEvaluation27">
@@ -1157,6 +1305,8 @@
 	<property name="value" value="27" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanJournalofHospiceandPalliativeMedicine16">
@@ -1172,6 +1322,8 @@
 	<property name="value" value="16" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanJournalofHospiceandPalliativeMedicine17">
@@ -1187,6 +1339,8 @@
 	<property name="value" value="17" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanJournalofHospiceandPalliativeMedicine18">
@@ -1202,6 +1356,8 @@
 	<property name="value" value="18" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanJournalofHospiceandPalliativeMedicine19">
@@ -1217,6 +1373,8 @@
 	<property name="value" value="19" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanJournalofHospiceandPalliativeMedicine20">
@@ -1232,6 +1390,8 @@
 	<property name="value" value="20" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanJournalofHospiceandPalliativeMedicine21">
@@ -1247,6 +1407,8 @@
 	<property name="value" value="21" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanJournalofHospiceandPalliativeMedicine22">
@@ -1262,6 +1424,8 @@
 	<property name="value" value="22" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanJournalofHospiceandPalliativeMedicine23">
@@ -1277,6 +1441,8 @@
 	<property name="value" value="23" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanJournalofMedicalQuality14">
@@ -1292,6 +1458,8 @@
 	<property name="value" value="14" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanJournalofMedicalQuality15">
@@ -1307,6 +1475,8 @@
 	<property name="value" value="15" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanJournalofMedicalQuality16">
@@ -1322,6 +1492,8 @@
 	<property name="value" value="16" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanJournalofMedicalQuality17">
@@ -1337,6 +1509,8 @@
 	<property name="value" value="17" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanJournalofMedicalQuality18">
@@ -1352,6 +1526,8 @@
 	<property name="value" value="18" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanJournalofMedicalQuality19">
@@ -1367,6 +1543,8 @@
 	<property name="value" value="19" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanJournalofMedicalQuality20">
@@ -1382,6 +1560,8 @@
 	<property name="value" value="20" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanJournalofMedicalQuality21">
@@ -1397,6 +1577,8 @@
 	<property name="value" value="21" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanJournalofSportsMedicine27">
@@ -1412,6 +1594,8 @@
 	<property name="value" value="27" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanJournalofSportsMedicine28">
@@ -1427,6 +1611,8 @@
 	<property name="value" value="28" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanJournalofSportsMedicine29">
@@ -1442,6 +1628,8 @@
 	<property name="value" value="29" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanJournalofSportsMedicine30">
@@ -1457,6 +1645,8 @@
 	<property name="value" value="30" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanJournalofSportsMedicine31">
@@ -1472,6 +1662,8 @@
 	<property name="value" value="31" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanJournalofSportsMedicine32">
@@ -1487,6 +1679,8 @@
 	<property name="value" value="32" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanJournalofSportsMedicine33">
@@ -1502,6 +1696,8 @@
 	<property name="value" value="33" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanJournalofSportsMedicine34">
@@ -1517,6 +1713,8 @@
 	<property name="value" value="34" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanPoliticsResearch27">
@@ -1532,6 +1730,8 @@
 	<property name="value" value="27" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanPoliticsResearch28">
@@ -1547,6 +1747,8 @@
 	<property name="value" value="28" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanPoliticsResearch29">
@@ -1562,6 +1764,8 @@
 	<property name="value" value="29" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanPoliticsResearch30">
@@ -1577,6 +1781,8 @@
 	<property name="value" value="30" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanPoliticsResearch31">
@@ -1592,6 +1798,8 @@
 	<property name="value" value="31" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanPoliticsResearch32">
@@ -1607,6 +1815,8 @@
 	<property name="value" value="32" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanPoliticsResearch33">
@@ -1622,6 +1832,8 @@
 	<property name="value" value="33" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanPoliticsResearch34">
@@ -1637,6 +1849,8 @@
 	<property name="value" value="34" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanReviewofPublicAdministration29">
@@ -1652,6 +1866,8 @@
 	<property name="value" value="29" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanReviewofPublicAdministration30">
@@ -1667,6 +1883,8 @@
 	<property name="value" value="30" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanReviewofPublicAdministration31">
@@ -1682,6 +1900,8 @@
 	<property name="value" value="31" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanReviewofPublicAdministration32">
@@ -1697,6 +1917,8 @@
 	<property name="value" value="32" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanReviewofPublicAdministration33">
@@ -1712,6 +1934,8 @@
 	<property name="value" value="33" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanReviewofPublicAdministration34">
@@ -1727,6 +1951,8 @@
 	<property name="value" value="34" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanReviewofPublicAdministration35">
@@ -1742,6 +1968,8 @@
 	<property name="value" value="35" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AmericanReviewofPublicAdministration36">
@@ -1757,6 +1985,8 @@
 	<property name="value" value="36" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="Angiology55">
@@ -1772,6 +2002,8 @@
 	<property name="value" value="55" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="Angiology56">
@@ -1787,6 +2019,8 @@
 	<property name="value" value="56" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AnthropologicalTheory1">
@@ -1802,6 +2036,8 @@
 	<property name="value" value="1" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AnthropologicalTheory2">
@@ -1817,6 +2053,8 @@
 	<property name="value" value="2" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AnthropologicalTheory3">
@@ -1832,6 +2070,8 @@
 	<property name="value" value="3" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AnthropologicalTheory4">
@@ -1847,6 +2087,8 @@
 	<property name="value" value="4" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AnthropologicalTheory5">
@@ -1862,6 +2104,8 @@
 	<property name="value" value="5" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AnthropologicalTheory6">
@@ -1877,6 +2121,8 @@
 	<property name="value" value="6" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AppliedPsychologicalMeasurement23">
@@ -1892,6 +2138,8 @@
 	<property name="value" value="23" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AppliedPsychologicalMeasurement24">
@@ -1907,6 +2155,8 @@
 	<property name="value" value="24" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AppliedPsychologicalMeasurement25">
@@ -1922,6 +2172,8 @@
 	<property name="value" value="25" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AppliedPsychologicalMeasurement26">
@@ -1937,6 +2189,8 @@
 	<property name="value" value="26" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AppliedPsychologicalMeasurement27">
@@ -1952,6 +2206,8 @@
 	<property name="value" value="27" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AppliedPsychologicalMeasurement28">
@@ -1967,6 +2223,8 @@
 	<property name="value" value="28" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AppliedPsychologicalMeasurement29">
@@ -1982,6 +2240,8 @@
 	<property name="value" value="29" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AppliedPsychologicalMeasurement30">
@@ -1997,6 +2257,8 @@
 	<property name="value" value="30" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AramaicStudies2">
@@ -2012,6 +2274,8 @@
 	<property name="value" value="2" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AramaicStudies3">
@@ -2027,6 +2291,8 @@
 	<property name="value" value="3" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="ArmedForcesAndSociety25">
@@ -2042,6 +2308,8 @@
 	<property name="value" value="25" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="ArmedForcesAndSociety26">
@@ -2057,6 +2325,8 @@
 	<property name="value" value="26" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="ArmedForcesAndSociety27">
@@ -2072,6 +2342,8 @@
 	<property name="value" value="27" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="ArmedForcesAndSociety28">
@@ -2087,6 +2359,8 @@
 	<property name="value" value="28" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="ArmedForcesAndSociety29">
@@ -2102,6 +2376,8 @@
 	<property name="value" value="29" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="ArmedForcesAndSociety30">
@@ -2117,6 +2393,8 @@
 	<property name="value" value="30" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="ArmedForcesAndSociety31">
@@ -2132,6 +2410,8 @@
 	<property name="value" value="31" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="ArmedForcesAndSociety32">
@@ -2147,6 +2427,8 @@
 	<property name="value" value="32" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="ArtsandHumanitiesinHigherEducation1">
@@ -2162,6 +2444,8 @@
 	<property name="value" value="1" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="ArtsandHumanitiesinHigherEducation2">
@@ -2177,6 +2461,8 @@
 	<property name="value" value="2" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="ArtsandHumanitiesinHigherEducation3">
@@ -2192,6 +2478,8 @@
 	<property name="value" value="3" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="ArtsandHumanitiesinHigherEducation4">
@@ -2207,6 +2495,8 @@
 	<property name="value" value="4" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="ArtsandHumanitiesinHigherEducation5">
@@ -2222,6 +2512,8 @@
 	<property name="value" value="5" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AsiaPacificJournalofHumanResources40">
@@ -2237,6 +2529,8 @@
 	<property name="value" value="40" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AsiaPacificJournalofHumanResources41">
@@ -2252,6 +2546,8 @@
 	<property name="value" value="41" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AsiaPacificJournalofHumanResources42">
@@ -2267,6 +2563,8 @@
 	<property name="value" value="42" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AsiaPacificJournalofHumanResources43">
@@ -2282,6 +2580,8 @@
 	<property name="value" value="43" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AsiaPacificJournalofHumanResources44">
@@ -2297,6 +2597,8 @@
 	<property name="value" value="44" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AsianJournalofManagementCases1">
@@ -2312,6 +2614,8 @@
 	<property name="value" value="1" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AsianJournalofManagementCases2">
@@ -2327,6 +2631,8 @@
 	<property name="value" value="2" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="AsianJournalofManagementCases3">
@@ -2342,6 +2648,8 @@
 	<property name="value" value="3" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="Assessment6">
@@ -2357,6 +2665,8 @@
 	<property name="value" value="6" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="Assessment7">
@@ -2372,6 +2682,8 @@
 	<property name="value" value="7" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="Assessment8">
@@ -2387,6 +2699,8 @@
 	<property name="value" value="8" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="Assessment9">
@@ -2402,6 +2716,8 @@
 	<property name="value" value="9" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="Assessment10">
@@ -2417,6 +2733,8 @@
 	<property name="value" value="10" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="Assessment11">
@@ -2432,6 +2750,8 @@
 	<property name="value" value="11" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="Assessment12">
@@ -2447,6 +2767,8 @@
 	<property name="value" value="12" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="Assessment13">
@@ -2462,6 +2784,8 @@
 	<property name="value" value="13" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="Autism3">
@@ -2477,6 +2801,8 @@
 	<property name="value" value="3" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="Autism4">
@@ -2492,6 +2818,8 @@
 	<property name="value" value="4" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="Autism5">
@@ -2507,6 +2835,8 @@
 	<property name="value" value="5" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="Autism6">
@@ -2522,6 +2852,8 @@
 	<property name="value" value="6" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="Autism7">
@@ -2537,6 +2869,8 @@
 	<property name="value" value="7" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="Autism8">
@@ -2552,6 +2886,8 @@
 	<property name="value" value="8" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="Autism9">
@@ -2567,6 +2903,8 @@
 	<property name="value" value="9" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="Autism10">
@@ -2582,6 +2920,8 @@
 	<property name="value" value="10" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BehaviorModification23">
@@ -2597,6 +2937,8 @@
 	<property name="value" value="23" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BehaviorModification24">
@@ -2612,6 +2954,8 @@
 	<property name="value" value="24" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BehaviorModification25">
@@ -2627,6 +2971,8 @@
 	<property name="value" value="25" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BehaviorModification26">
@@ -2642,6 +2988,8 @@
 	<property name="value" value="26" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BehaviorModification27">
@@ -2657,6 +3005,8 @@
 	<property name="value" value="27" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BehaviorModification28">
@@ -2672,6 +3022,8 @@
 	<property name="value" value="28" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BehaviorModification29">
@@ -2687,6 +3039,8 @@
 	<property name="value" value="29" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BehaviorModification30">
@@ -2702,6 +3056,8 @@
 	<property name="value" value="30" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BehavioralandCognitiveNeuroscienceReviews1">
@@ -2717,6 +3073,8 @@
 	<property name="value" value="1" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BehavioralandCognitiveNeuroscienceReviews2">
@@ -2732,6 +3090,8 @@
 	<property name="value" value="2" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BehavioralandCognitiveNeuroscienceReviews3">
@@ -2747,6 +3107,8 @@
 	<property name="value" value="3" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BehavioralandCognitiveNeuroscienceReviews4">
@@ -2762,6 +3124,8 @@
 	<property name="value" value="4" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BehavioralandCognitiveNeuroscienceReviews5">
@@ -2777,6 +3141,8 @@
 	<property name="value" value="5" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BiologicalResearchForNursing1">
@@ -2792,6 +3158,8 @@
 	<property name="value" value="1" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BiologicalResearchForNursing2">
@@ -2807,6 +3175,8 @@
 	<property name="value" value="2" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BiologicalResearchForNursing3">
@@ -2822,6 +3192,8 @@
 	<property name="value" value="3" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BiologicalResearchForNursing4">
@@ -2837,6 +3209,8 @@
 	<property name="value" value="4" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BiologicalResearchForNursing5">
@@ -2852,6 +3226,8 @@
 	<property name="value" value="5" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BiologicalResearchForNursing6">
@@ -2867,6 +3243,8 @@
 	<property name="value" value="6" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BiologicalResearchForNursing7">
@@ -2882,6 +3260,8 @@
 	<property name="value" value="7" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BiologicalResearchForNursing8">
@@ -2897,6 +3277,8 @@
 	<property name="value" value="8" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BodyAndSociety5">
@@ -2912,6 +3294,8 @@
 	<property name="value" value="5" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BodyAndSociety6">
@@ -2927,6 +3311,8 @@
 	<property name="value" value="6" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BodyAndSociety7">
@@ -2942,6 +3328,8 @@
 	<property name="value" value="7" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BodyAndSociety8">
@@ -2957,6 +3345,8 @@
 	<property name="value" value="8" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BodyAndSociety9">
@@ -2972,6 +3362,8 @@
 	<property name="value" value="9" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BodyAndSociety10">
@@ -2987,6 +3379,8 @@
 	<property name="value" value="10" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BodyAndSociety11">
@@ -3002,6 +3396,8 @@
 	<property name="value" value="11" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BodyAndSociety12">
@@ -3017,6 +3413,8 @@
 	<property name="value" value="12" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BritishJournalofVisualImpairment22">
@@ -3032,6 +3430,8 @@
 	<property name="value" value="22" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BritishJournalofVisualImpairment23">
@@ -3047,6 +3447,8 @@
 	<property name="value" value="23" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BritishJournalofVisualImpairment24">
@@ -3062,6 +3464,8 @@
 	<property name="value" value="24" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BritishJournalismReview14">
@@ -3077,6 +3481,8 @@
 	<property name="value" value="14" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BritishJournalismReview15">
@@ -3092,6 +3498,8 @@
 	<property name="value" value="15" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BritishJournalismReview16">
@@ -3107,6 +3515,8 @@
 	<property name="value" value="16" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BritishJournalismReview17">
@@ -3122,6 +3532,8 @@
 	<property name="value" value="17" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BulletinofScience,TechnologyAndSociety19">
@@ -3137,6 +3549,8 @@
 	<property name="value" value="19" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BulletinofScience,TechnologyAndSociety20">
@@ -3152,6 +3566,8 @@
 	<property name="value" value="20" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BulletinofScience,TechnologyAndSociety21">
@@ -3167,6 +3583,8 @@
 	<property name="value" value="21" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BulletinofScience,TechnologyAndSociety22">
@@ -3182,6 +3600,8 @@
 	<property name="value" value="22" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BulletinofScience,TechnologyAndSociety23">
@@ -3197,6 +3617,8 @@
 	<property name="value" value="23" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BulletinofScience,TechnologyAndSociety24">
@@ -3212,6 +3634,8 @@
 	<property name="value" value="24" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BulletinofScience,TechnologyAndSociety25">
@@ -3227,6 +3651,8 @@
 	<property name="value" value="25" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BulletinofScience,TechnologyAndSociety26">
@@ -3242,6 +3668,8 @@
 	<property name="value" value="26" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BusinessAndSociety38">
@@ -3257,6 +3685,8 @@
 	<property name="value" value="38" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BusinessAndSociety39">
@@ -3272,6 +3702,8 @@
 	<property name="value" value="39" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BusinessAndSociety40">
@@ -3287,6 +3719,8 @@
 	<property name="value" value="40" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BusinessAndSociety41">
@@ -3302,6 +3736,8 @@
 	<property name="value" value="41" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BusinessAndSociety42">
@@ -3317,6 +3753,8 @@
 	<property name="value" value="42" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BusinessAndSociety43">
@@ -3332,6 +3770,8 @@
 	<property name="value" value="43" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BusinessAndSociety44">
@@ -3347,6 +3787,8 @@
 	<property name="value" value="44" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BusinessAndSociety45">
@@ -3362,6 +3804,8 @@
 	<property name="value" value="45" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BusinessCommunicationQuarterly67">
@@ -3377,6 +3821,8 @@
 	<property name="value" value="67" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BusinessCommunicationQuarterly68">
@@ -3392,6 +3838,8 @@
 	<property name="value" value="68" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BusinessCommunicationQuarterly69">
@@ -3407,6 +3855,8 @@
 	<property name="value" value="69" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BusinessInformationReview16">
@@ -3422,6 +3872,8 @@
 	<property name="value" value="16" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BusinessInformationReview17">
@@ -3437,6 +3889,8 @@
 	<property name="value" value="17" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BusinessInformationReview18">
@@ -3452,6 +3906,8 @@
 	<property name="value" value="18" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BusinessInformationReview19">
@@ -3467,6 +3923,8 @@
 	<property name="value" value="19" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BusinessInformationReview20">
@@ -3482,6 +3940,8 @@
 	<property name="value" value="20" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BusinessInformationReview21">
@@ -3497,6 +3957,8 @@
 	<property name="value" value="21" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BusinessInformationReview22">
@@ -3512,6 +3974,8 @@
 	<property name="value" value="22" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="BusinessInformationReview23">
@@ -3527,6 +3991,8 @@
 	<property name="value" value="23" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="EnvironmentandUrbanization11">
@@ -3542,6 +4008,8 @@
 	<property name="value" value="11" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="EnvironmentandUrbanization12">
@@ -3557,6 +4025,8 @@
 	<property name="value" value="12" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="EnvironmentandUrbanization13">
@@ -3572,6 +4042,8 @@
 	<property name="value" value="13" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="EnvironmentandUrbanization14">
@@ -3587,6 +4059,8 @@
 	<property name="value" value="14" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="EnvironmentandUrbanization15">
@@ -3602,6 +4076,8 @@
 	<property name="value" value="15" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="EnvironmentandUrbanization16">
@@ -3617,6 +4093,8 @@
 	<property name="value" value="16" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="EnvironmentandUrbanization17">
@@ -3632,6 +4110,8 @@
 	<property name="value" value="17" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
 
     <property name="EnvironmentandUrbanization18">
@@ -3647,6 +4127,8 @@
 	<property name="value" value="18" />
       </property>
       <property name="attributes.publisher" value="SAGE Publications" />
+      <property name="attributes.hint_application/pdf_filter_factory"
+	value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
     </property>
     
   </property>
