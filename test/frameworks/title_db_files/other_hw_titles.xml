@@ -1350,6 +1350,8 @@
         <property name="key" value="volume_name" />
         <property name="value" value="64" />
       </property>
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified" />
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
@@ -1365,6 +1367,8 @@
         <property name="key" value="volume_name" />
         <property name="value" value="65" />
       </property>
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified" />
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
@@ -1380,6 +1384,8 @@
         <property name="key" value="volume_name" />
         <property name="value" value="90" />
       </property>
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified" />
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
@@ -1395,6 +1401,8 @@
         <property name="key" value="volume_name" />
         <property name="value" value="91" />
       </property>
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified" />
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
@@ -1410,6 +1418,8 @@
         <property name="key" value="volume_name" />
         <property name="value" value="90" />
       </property>
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified" />
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
@@ -1425,6 +1435,8 @@
         <property name="key" value="volume_name" />
         <property name="value" value="91" />
       </property>
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified" />
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
@@ -1440,6 +1452,8 @@
         <property name="key" value="volume_name" />
         <property name="value" value="90" />
       </property>
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified" />
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
@@ -1455,6 +1469,8 @@
         <property name="key" value="volume_name" />
         <property name="value" value="91" />
       </property>
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified" />
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
     
@@ -1470,6 +1486,8 @@
         <property name="key" value="volume_name" />
         <property name="value" value="90" />
       </property>
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified" />
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
@@ -1485,6 +1503,8 @@
         <property name="key" value="volume_name" />
         <property name="value" value="91" />
       </property>
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified" />
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
@@ -1500,6 +1520,8 @@
         <property name="key" value="volume_name" />
         <property name="value" value="39" />
       </property>
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified" />
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
@@ -1515,6 +1537,8 @@
         <property name="key" value="volume_name" />
         <property name="value" value="40" />
       </property>
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified" />
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
@@ -1530,6 +1554,8 @@
         <property name="key" value="volume_name" />
         <property name="value" value="330" />
       </property>
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified" />
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
@@ -1545,6 +1571,8 @@
         <property name="key" value="volume_name" />
         <property name="value" value="331" />
       </property>
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified" />
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
@@ -1560,6 +1588,8 @@
         <property name="key" value="volume_name" />
         <property name="value" value="332" />
       </property>
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified" />
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
@@ -1575,6 +1605,8 @@
         <property name="key" value="volume_name" />
         <property name="value" value="333" />
       </property>
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified" />
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
@@ -1590,6 +1622,8 @@
         <property name="key" value="volume_name" />
         <property name="value" value="22" />
       </property>
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified" />
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
@@ -1605,6 +1639,8 @@
         <property name="key" value="volume_name" />
         <property name="value" value="23" />
       </property>
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified" />
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
@@ -1620,6 +1656,8 @@
         <property name="key" value="volume_name" />
         <property name="value" value="10" />
       </property>
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified" />
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
@@ -1635,6 +1673,8 @@
         <property name="key" value="volume_name" />
         <property name="value" value="11" />
       </property>
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified" />
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
@@ -1650,6 +1690,8 @@
         <property name="key" value="volume_name" />
         <property name="value" value="8" />
       </property>
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified" />
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
@@ -1665,6 +1707,8 @@
         <property name="key" value="volume_name" />
         <property name="value" value="9" />
       </property>
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified" />
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
@@ -1680,6 +1724,8 @@
         <property name="key" value="volume_name" />
         <property name="value" value="8" />
       </property>
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified" />
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
@@ -1695,6 +1741,8 @@
         <property name="key" value="volume_name" />
         <property name="value" value="9" />
       </property>
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified" />
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
@@ -1710,6 +1758,8 @@
          <property name="key" value="volume_name" />
          <property name="value" value="54" />
       </property>
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified" />
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
@@ -1725,6 +1775,8 @@
          <property name="key" value="volume_name" />
          <property name="value" value="55" />
       </property>
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified" />
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
@@ -1740,6 +1792,8 @@
         <property name="key" value="volume_name" />
         <property name="value" value="91" />
       </property>
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified" />
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
@@ -1755,6 +1809,8 @@
         <property name="key" value="volume_name" />
         <property name="value" value="92" />
       </property>
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified" />
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
@@ -1770,6 +1826,8 @@
         <property name="key" value="volume_name" />
         <property name="value" value="11" />
       </property>
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified" />
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
@@ -1785,6 +1843,8 @@
         <property name="key" value="volume_name" />
         <property name="value" value="12" />
       </property>
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified" />
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
@@ -1800,6 +1860,8 @@
         <property name="key" value="volume_name" />
         <property name="value" value="58" />
       </property>
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified" />
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
@@ -1815,6 +1877,8 @@
         <property name="key" value="volume_name" />
         <property name="value" value="59" />
       </property>
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified" />
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
@@ -1830,6 +1894,8 @@
         <property name="key" value="volume_name" />
         <property name="value" value="59" />
       </property>
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified" />
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
@@ -1845,6 +1911,8 @@
         <property name="key" value="volume_name" />
         <property name="value" value="60" />
       </property>
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified" />
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
@@ -1860,6 +1928,8 @@
         <property name="key" value="volume_name" />
         <property name="value" value="31" />
       </property>
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified" />
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
@@ -1875,6 +1945,8 @@
         <property name="key" value="volume_name" />
         <property name="value" value="32" />
       </property>
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified" />
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
@@ -1890,6 +1962,8 @@
         <property name="key" value="volume_name" />
         <property name="value" value="42" />
       </property>
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified" />
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
@@ -1905,6 +1979,8 @@
         <property name="key" value="volume_name" />
         <property name="value" value="43" />
       </property>
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified" />
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
@@ -1920,6 +1996,8 @@
         <property name="key" value="volume_name" />
         <property name="value" value="76" />
       </property>
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified" />
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
@@ -1935,6 +2013,8 @@
         <property name="key" value="volume_name" />
         <property name="value" value="77" />
       </property>
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified" />
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
@@ -1950,6 +2030,8 @@
         <property name="key" value="volume_name" />
         <property name="value" value="31" />
       </property>
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified" />
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
@@ -1965,6 +2047,8 @@
         <property name="key" value="volume_name" />
         <property name="value" value="32" />
       </property>
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified" />
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
@@ -1980,6 +2064,8 @@
         <property name="key" value="volume_name" />
         <property name="value" value="62" />
       </property>
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified" />
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
@@ -1995,6 +2081,8 @@
         <property name="key" value="volume_name" />
         <property name="value" value="63" />
       </property>
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified" />
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
@@ -2010,6 +2098,8 @@
         <property name="key" value="volume_name" />
         <property name="value" value="81" />
       </property>
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified" />
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
@@ -2025,6 +2115,8 @@
         <property name="key" value="volume_name" />
         <property name="value" value="82" />
       </property>
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified" />
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
@@ -2040,6 +2132,8 @@
         <property name="key" value="volume_name" />
         <property name="value" value="5" />
       </property>
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified" />
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
@@ -2055,6 +2149,8 @@
         <property name="key" value="volume_name" />
         <property name="value" value="6" />
       </property>
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified" />
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
@@ -2070,6 +2166,8 @@
         <property name="key" value="volume_name" />
         <property name="value" value="14" />
       </property>
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified" />
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
@@ -2085,6 +2183,8 @@
         <property name="key" value="volume_name" />
         <property name="value" value="15" />
       </property>
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified" />
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
@@ -2100,6 +2200,8 @@
         <property name="key" value="volume_name" />
         <property name="value" value="81" />
       </property>
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified" />
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
@@ -2115,6 +2217,8 @@
         <property name="key" value="volume_name" />
         <property name="value" value="82" />
       </property>
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified" />
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
@@ -2130,6 +2234,8 @@
         <property name="key" value="volume_name" />
         <property name="value" value="60" />
       </property>
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified" />
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
@@ -2145,21 +2251,8 @@
         <property name="key" value="volume_name" />
         <property name="value" value="61" />
       </property>
-      <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
-    </property>
-
-    <property name="HighWireTobaccoControl15">
-      <property name="title" value="Tobacco Control Volume 15" />
-      <property name="journalTitle" value="Tobacco Control" />
-      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
-      <property name="param.1">
-        <property name="key" value="base_url" />
-        <property name="value" value="http://tobaccocontrol.bmj.com/" />
-      </property>
-      <property name="param.2">
-        <property name="key" value="volume_name" />
-        <property name="value" value="15" />
-      </property>
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified" />
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
@@ -2175,6 +2268,8 @@
         <property name="key" value="volume_name" />
         <property name="value" value="14" />
       </property>
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified" />
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
@@ -2184,12 +2279,14 @@
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
         <property name="key" value="base_url" />
-        <property name="value" value="http://tc.bmj.com/" />
+        <property name="value" value="http://tobaccocontrol.bmj.com/" />
       </property>
       <property name="param.2">
         <property name="key" value="volume_name" />
         <property name="value" value="15" />
       </property>
+      <property name="attributes.hint_application/pdf_filter_factory"
+                value="org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified" />
       <property name="attributes.publisher" value="British Medical Journal Publishing Group" />
     </property>
 
