@@ -211,7 +211,7 @@
       <property name="sage">
         <property name="name" value="All SAGE Titles" />
         <property name="class" value="xpath" />
-	<property name="xpath" value="[attributes/publisher='sage']" />
+	<property name="xpath" value="[attributes/publisher='sage' or attributes/publisher='SAGE Publications']" />
       </property>
 
       <property name="oup">
