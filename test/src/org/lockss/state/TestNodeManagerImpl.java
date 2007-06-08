@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.138 2007-01-24 01:54:15 smorabito Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.139 2007-06-08 21:18:57 smorabito Exp $
  */
 /*
  Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -63,6 +63,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     p.setProperty(NodeManagerManager.PARAM_MAX_PER_AU_CACHE_SIZE, "10");
     p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.1.2.3");
     p.setProperty(NodeManagerManager.PARAM_RECALL_DELAY, "5s");
+    p.setProperty(AuUtil.PARAM_POLL_PROTOCOL_VERSION, "1");
     ConfigurationUtil.setCurrentConfigFromProps(p);
     mau = new MockArchivalUnit();
     mau.setPlugin(new MockPlugin());

@@ -1,5 +1,5 @@
 /*
- * $Id: TestV1TreeWalkImpl.java,v 1.8 2006-10-06 20:11:53 tlipkis Exp $
+ * $Id: TestV1TreeWalkImpl.java,v 1.9 2007-06-08 21:18:57 smorabito Exp $
  */
 
 /*
@@ -61,6 +61,7 @@ public class TestV1TreeWalkImpl extends LockssTestCase {
     props.setProperty(TreeWalkManager.PARAM_TREEWALK_INTERVAL_MIN, "100");
     props.setProperty(TreeWalkManager.PARAM_TREEWALK_INTERVAL_MAX, "100");
     props.setProperty(NodeManagerManager.PARAM_RECALL_DELAY, "5s");
+    props.setProperty(AuUtil.PARAM_POLL_PROTOCOL_VERSION, "1");
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
     mau = new MockArchivalUnit();
