@@ -24,6 +24,14 @@
     <long>1209600000</long>
   </entry>
   <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.acs.AcsUrlNormalizer</string>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.acs.AcsHtmlFilterFactory</string>
+  </entry>
+  <entry>
     <string>au_crawlrules</string>
     <list>
       <string>1,&quot;(%s|%s)acs/journals/toc.clockss_manifest\?incoden=%s&amp;involume=%s.*&quot;, base_url, article_url, journal_key, volume_name</string>
