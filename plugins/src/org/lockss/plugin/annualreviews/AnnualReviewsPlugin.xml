@@ -22,7 +22,8 @@
       <string>2,&quot;^%s(action|loi|search|feedback|edcom)&quot;, base_url</string>
       <string>1,&quot;^%s.*\.(js|css|ico|gif|jpg|jpeg|png)$&quot;, base_url</string>
       <string>1,&quot;^%stoc/%s/%d/&quot;, base_url, journal_id, volume</string>
-      <string>1,&quot;%sdoi/(pdf|abs|full)/.*/.*%s\.%d&quot;, base_url, journal_id, volume</string>
+      <string>1,&quot;%sdoi/(pdf|abs|full).*/.*%s\.%.02d.*&quot;, base_url, short_journal_id, volume</string>
+      <string>1,&quot;%sdoi/(pdf|abs|full)/.*/.*%s\.%.02d.*&quot;, base_url, journal_id, volume</string>
       <string>1,&quot;%slockss/%s/%d/index.html&quot;, base_url, journal_id, volume</string>
     </list>
   </entry>
@@ -33,15 +34,6 @@
   <entry>
     <string>plugin_config_props</string>
     <list>
-      <org.lockss.daemon.ConfigParamDescr>
-        <key>base_url</key>
-        <displayName>Base URL</displayName>
-        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
-        <type>3</type>
-        <size>40</size>
-        <definitional>true</definitional>
-        <defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
         <key>volume</key>
         <displayName>Volume No.</displayName>
@@ -57,6 +49,24 @@
         <type>1</type>
         <size>40</size>
         <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>short_journal_id</key>
+        <displayName>Two-letter Journal Identifier</displayName>
+        <description></description>
+        <type>1</type>
+        <size>2</size>
+        <definitional>false</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
     </list>

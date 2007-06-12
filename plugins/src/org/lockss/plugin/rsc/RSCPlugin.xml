@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;RSC %s %d (%s)&quot;, journal_id, year, base_url</string>
+    <string>&quot;RSC %s %d (%s)&quot;, journal_id, volume, base_url</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -26,19 +26,19 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,&quot;%s.*&quot;, resolver_url</string>
+      <string>1,&quot;%s\?DOI=&quot;, resolver_url</string>
       <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;^%spublishing/journals/lockss/\?journalid=%s&amp;volume=%d.*&quot;, base_url, journal_id, volume</string>
-      <string>1,&quot;^%spublishing/journals/lockss/\?journalid=%s.*&amp;year=%d.*&quot;, base_url, journal_id, year</string>
+      <string>1,&quot;%spublishing/journals/lockss/\?journalid=%s&amp;volume=%d&amp;year=%d&quot;, base_url, journal_id, volume, year</string>
       <string>1,&quot;^%s.*\.(js|css|ico|gif|jpg|jpeg|png)&quot;, base_url</string>
       <string>1,&quot;%spublishing/journals/.*article\.asp\?doi=.*&quot;, base_url</string>
       <string>1,&quot;%sej/.*\.pdf&quot;, base_url</string>
       <string>1,&quot;%sdelivery/_ArticleLinking/DisplayArticleForFree\.cfm.*&quot;, base_url</string>
+      <string>1,&quot;%spublishing/journals/lockss/\?journalid=%s&amp;volume=%d&amp;year=%d&amp;issue=.*&quot;, base_url, journal_id, volume, year</string>
     </list>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%spublishing/journals/lockss/?journalid=%s&quot;, base_url, journal_id</string>
+    <string>&quot;%spublishing/journals/lockss/?journalid=%s&amp;volume=%d&amp;year=%d&quot;, base_url, journal_id, volume, year</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -70,20 +70,20 @@
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
-        <key>year</key>
-        <displayName>Year</displayName>
-        <description>Four digit year (e.g., 2004)</description>
-        <type>4</type>
-        <size>4</size>
-        <definitional>true</definitional>
-        <defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr>
-      <org.lockss.daemon.ConfigParamDescr>
         <key>base_url</key>
         <displayName>Base URL</displayName>
         <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
         <type>3</type>
         <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description></description>
+        <type>2</type>
+        <size>4</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
