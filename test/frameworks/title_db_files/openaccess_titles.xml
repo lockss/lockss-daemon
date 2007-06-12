@@ -1115,6 +1115,38 @@
         <property name="attributes.rights" value="openaccess" />
       </property>
 
+      <property name="secrecynewsIRP">
+	<property name="title" value="Secrecy News Intelligence Resource Program" />
+	<property name="estSize" value="40MB" />
+	<property name="journalTitle" value="Secrecy News" />
+	<property name="plugin" value="org.lockss.plugin.secrecynews.SecrecyNewsSpecialCollectionsPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.fas.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume_name" />
+	  <property name="value" value="irp" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="secrecynews2007">
+	<property name="title" value="Secrecy News 2007" />
+	<property name="estSize" value="40MB" />
+	<property name="journalTitle" value="Secrecy News" />
+	<property name="plugin" value="org.lockss.plugin.secrecynews.SecrecyNewsPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.fas.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2007" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
       <property name="secrecynews2006">
 	<property name="title" value="Secrecy News 2006" />
 	<property name="estSize" value="40MB" />
