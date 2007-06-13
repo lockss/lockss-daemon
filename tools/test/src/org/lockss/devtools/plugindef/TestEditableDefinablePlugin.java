@@ -1,5 +1,5 @@
 /*
- * $Id: TestEditableDefinablePlugin.java,v 1.23 2006-10-31 07:01:06 thib_gc Exp $
+ * $Id: TestEditableDefinablePlugin.java,v 1.24 2007-06-13 22:14:41 tlipkis Exp $
  */
 
 /*
@@ -197,6 +197,7 @@ public class TestEditableDefinablePlugin
     set.add(ConfigParamDescr.VOLUME_NAME);
     set.add(ConfigParamDescr.YEAR);
     set.add(ConfigParamDescr.BASE_URL);
+    set.add(ConfigParamDescr.BASE_URL2);
     set.add(ConfigParamDescr.JOURNAL_ID);
     set.add(ConfigParamDescr.JOURNAL_ISSN);
     set.add(ConfigParamDescr.PUBLISHER_NAME);
