@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollFactory.java,v 1.13 2007-05-09 10:34:11 smorabito Exp $
+ * $Id: V3PollFactory.java,v 1.13.2.1 2007-06-17 05:54:11 smorabito Exp $
  */
 
 /*
@@ -229,17 +229,22 @@ public class V3PollFactory extends BasePollFactory {
     boolean enableV3Voter =
       CurrentConfig.getBooleanParam(PARAM_ENABLE_V3_VOTER,
                                     DEFAULT_ENABLE_V3_VOTER);
-    if (enableV3Voter && 
-        AuUtil.getAuState(au).getLastCrawlTime() > 0) { 
-      log.debug("Creating V3Voter to participate in poll " + m.getKey());
-      voter = new V3Voter(daemon, m);
-      voter.startPoll(); // Voters need to be started immediately.
-      if (((V3Voter)voter).isPollCompleted()) {
-        return null;
+    if (enableV3Voter) { 
+      if (AuUtil.getAuState(au).getLastCrawlTime() > 0 ||
+          AuUtil.isPubDown(au)) { 
+        log.debug("Creating V3Voter to participate in poll " + m.getKey());
+        voter = new V3Voter(daemon, m);
+        voter.startPoll(); // Voters need to be started immediately.
+        if (((V3Voter)voter).isPollCompleted()) {
+          return null;
+        }
+      } else {
+        log.debug("Have not completed new content crawl, and publisher " +
+                  "is not down, so not participating in poll " + m.getKey());
       }
     } else {
-      log.debug("Have not completed new content crawl.  Not " +
-                "participating in vote.");
+      log.debug("V3 Voter not enabled, so not participating in poll " +
+                m.getKey());
     } 
     
     return voter;
