@@ -1,8 +1,0 @@
-org.lockss.proxy.start=no
-org.lockss.ui.port=8084
-org.lockss.localIPAddress=127.0.0.1
-
-# Disable V3 poll calling
-org.lockss.poll.v3.enableV3Poller=false
-
-org.lockss.localV3Identity=TCP:[127.0.0.1]:9724

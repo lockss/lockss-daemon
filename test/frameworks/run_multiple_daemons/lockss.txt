@@ -1,17 +1,3 @@
-# configure simulated AU for v1
-#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~V1.root=V1
-#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~V1.branch=3
-#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~V1.depth=2
-#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~V1.numFiles=4
-
-# AU suitable for V3 testing
-#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~V3.root=V3
-#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~V3.branch=1
-#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~V3.depth=0
-#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~V3.fileTypes=17
-#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~V3.numFiles=20
-#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~V3.binFileSize=2048
-
 # LOCKSS & LCAP tuning parameters
 org.lockss.log.default.level=debug
 

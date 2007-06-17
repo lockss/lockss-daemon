@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.51 2007-05-11 02:46:28 smorabito Exp $
+ * $Id: V3Poller.java,v 1.52 2007-06-17 05:23:13 smorabito Exp $
  */
 
 /*
@@ -245,6 +245,10 @@ public class V3Poller extends BasePoll {
   public static final double DEFAULT_V3_REPAIR_FROM_CACHE_PERCENT =
     CrawlManagerImpl.DEFAULT_REPAIR_FROM_CACHE_PERCENT;
   
+  public static final String PARAM_V3_ENABLE_REPAIR_FROM_CACHE =
+    PREFIX + "enableRepairFromCache";
+  public static final boolean DEFAULT_V3_ENABLE_REPAIR_FROM_CACHE = true;
+  
   /**
    * The number of bytes to hash before saving poll status during hashing.
    */
@@ -302,6 +306,9 @@ public class V3Poller extends BasePoll {
   // 0.0 and 1.0.
   private double repairFromCache =
     V3Poller.DEFAULT_V3_REPAIR_FROM_CACHE_PERCENT;
+  
+  private boolean enableRepairFromCache =
+    V3Poller.DEFAULT_V3_ENABLE_REPAIR_FROM_CACHE;
 
   /**
    * <p>Create a new Poller to call a V3 Poll.</p>
@@ -1241,19 +1248,14 @@ public class V3Poller extends BasePoll {
     // If not, choose where to request the repair.
     log.debug2("Deciding whether to repair from cache or publisher.  Repair " +
                "from cache probability=" + repairFromCache);
-    if (ProbabilisticChoice.choose(repairFromCache)) {
+    if (ProbabilisticChoice.choose(repairFromCache) ||
+        (enableRepairFromCache && AuUtil.isPubDown(getAu()))) {
       PeerIdentity peer = findPeerForRepair(disagreeingVoters);
       log.debug2("Requesting repair for target: " + url + " from " + peer);
       repairQueue.repairFromPeer(url, peer);
     } else {
-      // Repair from the publisher, unless this is a down title.
-      if (!AuUtil.isPubDown(getAu())) {
-        repairQueue.repairFromPublisher(url);
-      } else {
-        log.debug2("Chose to repair block " + url + " in poll " + getKey() 
-                   + " from the publisher, but configuration "
-                   + "prevents repair from publisher.  Skipping.");
-      }
+      log.debug2("Requesting repair for target: " + url + " from publisher");
+      repairQueue.repairFromPublisher(url);
     }
   }
 

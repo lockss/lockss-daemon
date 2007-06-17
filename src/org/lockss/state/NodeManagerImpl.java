@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.212 2007-01-23 21:44:36 smorabito Exp $
+ * $Id: NodeManagerImpl.java,v 1.213 2007-06-17 05:23:14 smorabito Exp $
  */
 
 /*
@@ -904,13 +904,22 @@ public class NodeManagerImpl
         if (cus.getSpec().isAu()) {
           PollSpec spec = new PollSpec(cus, Poll.V3_POLL);
           // Don't call a poll on this if we're already running a V3 poll on it.
-          if (!pollManager.isV3PollerRunning(spec) &&
-              getAuState().getLastCrawlTime() > 0) {
+          if (pollManager.isV3PollerRunning(spec)) {
+            logger.debug("Poll already running, not calling another poll " +
+                         "on " + managedAu.getName());
+            return;
+          }
+          
+          // If this AU has successfully crawled in the past, or if it
+          // is a closed AU (publisher is no longer available), then
+          // start a poll.
+          if (getAuState().getLastCrawlTime() > 0 ||
+              AuUtil.isPubDown(managedAu)) {
             logger.debug("Starting V3 poll for " + managedAu.getName());
             callV3ContentPoll();
           } else {
-            logger.debug("Poll already running, not calling another " +
-                         "poll on"  + managedAu.getName());
+            logger.debug("AU is not closed, and no crawl has finished.  Not " +
+                         "starting new poll on " + managedAu.getName());
           }
         }
       } else {
