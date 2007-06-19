@@ -1,0 +1,60 @@
+<map>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume</key>
+        <displayName>Volume No.</displayName>
+        <type>6</type>
+        <size>8</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>2</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;UNA McDonald Photos (%.02d)&quot;, volume</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;http://www2.una.edu/agordon/permission%.02d.html&quot;, volume</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>McDonald Photos Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>edu.una.plugin.McDonaldPhotosPlugin</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,&quot;http://www2\.una\.edu/library/McDonald/mcd.*&quot;</string>
+      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;http://www2.una.edu/agordon/permission%.02d.html&quot;, volume</string>
+    </list>
+  </entry>
+</map>
