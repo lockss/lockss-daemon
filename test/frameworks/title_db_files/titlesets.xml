@@ -87,18 +87,6 @@
 	<property name="xpath" value="[attributes/publisher='Oxford University Press']" />
       </property>
 
-      <property name="blackwell">
-        <property name="name" value="All Blackwell Publications Titles" />
-        <property name="class" value="xpath" />
-	<property name="xpath" value="[attributes/publisher='Blackwell Publications']" />
-      </property>
-
-      <property name="acs">
-        <property name="name" value="All American Chemical Society Titles" />
-        <property name="class" value="xpath" />
-	<property name="xpath" value="[attributes/publisher='American Chemical Society']" />
-      </property>
-
       <property name="AlphaMed Press">
         <property name="name" value="All AlphaMed Press Titles" />
         <property name="class" value="xpath" />
@@ -407,12 +395,6 @@
 	<property name="name" value="All HighWire Titles" />
 	<property name="class" value="xpath" />
 	<property name="xpath" value="[pluginName='org.lockss.plugin.highwire.HighWirePlugin']" />
-      </property>
-
-      <property name="nature">
-        <property name="name" value="All Nature Titles" />
-        <property name="class" value="xpath" />
-	<property name="xpath" value="[attributes/publisher='Nature']" />
       </property>
 
       <property name="locksscard">
