@@ -1,5 +1,7 @@
 #! /bin/bash
 
+TITLE_DBS="../title_db_files/*.xml"
+
 while true ; do
   case "$1" in
     "-classpath" )
@@ -15,6 +17,9 @@ while true ; do
       shift; continue;;
     "-jdb" )
       jdb=1
+      shift; continue;;
+    "-notitle" )
+      TITLE_DBS=""
       shift; continue;;
     "-1.4" )
       if [ -z "$JAVA_14_HOME" ] ; then
@@ -49,7 +54,8 @@ if [ -z "$args" ]; then
   args=-Dorg.lockss.defaultLogLevel=DEBUG
 fi
 
-PROP_URL_LIST="../common.xml ../title_db_files/*.xml lockss.txt lockss.opt"
+PROP_URL_LIST="../common.xml ${TITLE_DBS} lockss.txt lockss.opt"
+PROP_ARGS=`echo $PROP_URL_LIST | awk '{ print "-p " $0 }' "RS=\040"`
 
 # local copy of lockss jars allows recompile while we're running
 mkdir -p lib
@@ -62,12 +68,12 @@ export CLASSPATH
 echo running at `date`
 #echo CLASSPATH=$CLASSPATH
 # for large caches, need to pass "-ms4m -mx64m" to java
-#java org.lockss.app.LockssDaemon ${PROP_URL_LIST} >>test.out 2>&1 &
+#java org.lockss.app.LockssDaemon ${PROP_ARGS} >>test.out 2>&1 &
 if [ -z "$jdb" ]; then
- java -mx256m $args org.lockss.app.LockssDaemon ${PROP_URL_LIST} >>test.out 2>&1 &
+ java -mx256m $args org.lockss.app.LockssDaemon ${PROP_ARGS} >>test.out 2>&1 &
  echo $! >dpid
  wait `cat dpid`
  echo stopped with status $? at `date`
 else
- jdb -mx256m $args org.lockss.app.LockssDaemon ${PROP_URL_LIST}
+ jdb -mx256m $args org.lockss.app.LockssDaemon ${PROP_ARGS}
 fi
