@@ -1,5 +1,5 @@
 /*
- * $Id: BatchAuConfig.java,v 1.34 2007-05-01 23:34:04 tlipkis Exp $
+ * $Id: BatchAuConfig.java,v 1.35 2007-06-21 07:30:44 tlipkis Exp $
  */
 
 /*
@@ -304,31 +304,40 @@ public class BatchAuConfig extends LockssServlet {
     layoutErrorBlock(page);
 
     // Prepare sets
-    String grayAction = CurrentConfig.getParam(PARAM_GREY_TITLESET_ACTION,
-                                               DEFAULT_GREY_TITLESET_ACTION);
-    boolean doGray = "All".equalsIgnoreCase(grayAction) ||
-      (verb == VERB_ADD && "Add".equalsIgnoreCase(grayAction));
-    MutableBoolean isAnySelectable = new MutableBoolean(false);
-    MutableInt buttonNumber = new MutableInt(submitButtonNumber);
-    Composite chooseSets = ServletUtil.makeChooseSets(this, remoteApi,
-        pluginMgr.getTitleSets().iterator(), verb, KEY_TITLE_SET,
-        doGray, isAnySelectable, "Select Titles", ACTION_SELECT_AUS,
-        buttonNumber, 10);
-    submitButtonNumber = buttonNumber.intValue();
+    Collection titleSets = pluginMgr.getTitleSets();
+    if (titleSets.isEmpty()) {
+      ServletUtil.layoutExplanationBlock(page, "No titlesets are defined.");
+    } else {
+      String grayAction = CurrentConfig.getParam(PARAM_GREY_TITLESET_ACTION,
+						 DEFAULT_GREY_TITLESET_ACTION);
+      boolean doGray = "All".equalsIgnoreCase(grayAction) ||
+	(verb == VERB_ADD && "Add".equalsIgnoreCase(grayAction));
+      MutableBoolean isAnySelectable = new MutableBoolean(false);
+      MutableInt buttonNumber = new MutableInt(submitButtonNumber);
+      Composite chooseSets = ServletUtil.makeChooseSets(this, remoteApi,
+							titleSets.iterator(),
+							verb,
+							KEY_TITLE_SET,
+							doGray,
+							isAnySelectable,
+							"Select Titles",
+							ACTION_SELECT_AUS,
+							buttonNumber, 10);
+      submitButtonNumber = buttonNumber.intValue();
 
-    if (isAnySelectable.booleanValue()) {
-      // Display set chooser
-      ServletUtil.layoutExplanationBlock(page,
-          "Select one or more collections of titles to " + verb.word + ", then click \"Select Titles\".");
-      ServletUtil.layoutChooseSets(srvURL(myServletDescr()), page,
-          chooseSets, ACTION_TAG, KEY_VERB, verb);
+      if (isAnySelectable.booleanValue()) {
+	// Display set chooser
+	ServletUtil.layoutExplanationBlock(page,
+					   "Select one or more collections of titles to " + verb.word + ", then click \"Select Titles\".");
+	ServletUtil.layoutChooseSets(srvURL(myServletDescr()), page,
+				     chooseSets, ACTION_TAG, KEY_VERB, verb);
+      } else {
+	// Set chooser not needed
+	String msg = "All titles in all predefined collections of titles " +
+	  "already exist on this cache.";
+	ServletUtil.layoutExplanationBlock(page, msg);
+      }
     }
-    else {
-      // Set chooser not needed
-      ServletUtil.layoutExplanationBlock(page,
-          "All titles in all predefined collections of titles already exist on this cache.");
-    }
-
     // End page
     if (action != null) {
       ServletUtil.layoutBackLink(page,
