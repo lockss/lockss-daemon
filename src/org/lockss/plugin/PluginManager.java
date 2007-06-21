@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.179 2007-05-10 23:41:10 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.180 2007-06-21 07:30:29 tlipkis Exp $
  */
 
 /*
@@ -1515,13 +1515,17 @@ public class PluginManager
     return new ArrayList(getRegistryPlugin().getAllAus());
   }
 
+  Object titleMonitor = new Object();
+
   /** Return all the known titles from the title db, sorted by title */
   public List findAllTitles() {
-    if (allTitles == null) {
-      allTitles = new ArrayList(getTitleMap().keySet());
-      Collections.sort(allTitles, CatalogueOrderComparator.SINGLETON);
+    synchronized (titleMonitor) {
+      if (allTitles == null) {
+	allTitles = new ArrayList(getTitleMap().keySet());
+	Collections.sort(allTitles, CatalogueOrderComparator.SINGLETON);
+      }
+      return allTitles;
     }
-    return allTitles;
   }
 
   /** Find all the plugins that support the given title */
@@ -1535,38 +1539,44 @@ public class PluginManager
 
   /** Return all known TitleConfigs */
   public List findAllTitleConfigs() {
-    if (allTitleConfigs == null) {
-      List titles = findAllTitles();
-      List res = new ArrayList(titles.size());
-      for (Iterator titer = titles.iterator(); titer.hasNext();) {
-	String title = (String)titer.next();
-	for (Iterator piter = getTitlePlugins(title).iterator();
-	     piter.hasNext();) {
-	  Plugin plugin = (Plugin)piter.next();
-	  TitleConfig tc = plugin.getTitleConfig(title);
-	  if (tc != null) {
-	    res.add(tc);
-	  } else {
-	    log.warning("getTitleConfig(" + plugin + ", " + title + ") = null");
+    synchronized (titleMonitor) {
+      if (allTitleConfigs == null) {
+	List titles = findAllTitles();
+	List res = new ArrayList(titles.size());
+	for (Iterator titer = titles.iterator(); titer.hasNext();) {
+	  String title = (String)titer.next();
+	  for (Iterator piter = getTitlePlugins(title).iterator();
+	       piter.hasNext();) {
+	    Plugin plugin = (Plugin)piter.next();
+	    TitleConfig tc = plugin.getTitleConfig(title);
+	    if (tc != null) {
+	      res.add(tc);
+	    } else {
+	      log.warning("getTitleConfig(" + plugin + ", " + title + ") = null");
+	    }
 	  }
 	}
+	allTitleConfigs = res;
       }
-      allTitleConfigs = res;
+      return allTitleConfigs;
     }
-    return allTitleConfigs;
   }
 
   public void resetTitles() {
-    titleMap = null;
-    allTitles = null;
-    allTitleConfigs = null;
+    synchronized (titleMonitor) {
+      titleMap = null;
+      allTitles = null;
+      allTitleConfigs = null;
+    }
   }
 
   public Map getTitleMap() {
-    if (titleMap == null) {
-      titleMap = buildTitleMap();
+    synchronized (titleMonitor) {
+      if (titleMap == null) {
+	titleMap = buildTitleMap();
+      }
+      return titleMap;
     }
-    return titleMap;
   }
 
   Map buildTitleMap() {
@@ -1828,7 +1838,7 @@ public class PluginManager
 
     } catch (Exception ex) {
       // ensure the keystore is null.
-      log.error("Unable to load keystore", ex);
+      log.error("Unable to load keystore from " + keystoreLoc, ex);
       return null;
     }
 
@@ -1841,15 +1851,20 @@ public class PluginManager
   }
 
   private void initKeystore(Configuration config) {
+    String keystoreLoc;
+    String keystorePass;
+
     if (!isKeystoreInited()) {
-      String keystoreLoc =
-        config.get(PARAM_USER_KEYSTORE_LOCATION,
-		   config.get(PARAM_KEYSTORE_LOCATION,
-			      DEFAULT_KEYSTORE_LOCATION));
-      String keystorePass =
-	config.get(PARAM_USER_KEYSTORE_PASSWORD,
-		   config.get(PARAM_KEYSTORE_PASSWORD,
-			      DEFAULT_KEYSTORE_PASSWORD));
+      keystoreLoc = config.get(PARAM_USER_KEYSTORE_LOCATION);
+      if (!StringUtil.isNullString(keystoreLoc)) {
+	keystorePass = config.get(PARAM_USER_KEYSTORE_PASSWORD,
+				  DEFAULT_KEYSTORE_PASSWORD);
+      } else {
+	keystoreLoc = config.get(PARAM_KEYSTORE_LOCATION,
+				 DEFAULT_KEYSTORE_LOCATION);
+	keystorePass = config.get(PARAM_KEYSTORE_PASSWORD,
+				  DEFAULT_KEYSTORE_PASSWORD);
+      }
       keystore = initKeystore(keystoreLoc, keystorePass);
       if (keystore != null) {
         keystoreInited = true;
