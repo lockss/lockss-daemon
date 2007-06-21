@@ -47,7 +47,8 @@ for i in 1 2 3 4 ; do
 	fi
     else
         if [ -f dpid ] ; then
-	    kill `cat dpid` && rm -f dpid
+	    kill `cat dpid`
+            rm -f dpid
             echo stopped in `pwd`
 	else
 	    echo daemon not running in `pwd`
