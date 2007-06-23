@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.118 2007-05-01 23:34:05 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.119 2007-06-23 05:37:00 tlipkis Exp $
  */
 
 /*
@@ -329,7 +329,8 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     titleDbChanged();
   }
 
-  protected void addImpliedConfigParams() {
+  protected void addImpliedConfigParams()
+      throws ArchivalUnit.ConfigurationException {
     for (Iterator it = plugin.getAuConfigDescrs().iterator();
 	 it.hasNext() ; ) {
       ConfigParamDescr descr = (ConfigParamDescr)it.next();
@@ -457,6 +458,10 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   public boolean shouldBeCached(String url) {
     boolean val = getCrawlSpec().isIncluded(url);
     return val;
+  }
+
+  public boolean isLoginPageUrl(String url) {
+    return false;
   }
 
   public String siteNormalizeUrl(String url) {

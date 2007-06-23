@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.82 2007-02-06 00:48:24 tlipkis Exp $
+ * $Id: NullPlugin.java,v 1.83 2007-06-23 05:37:00 tlipkis Exp $
  */
 
 /*
@@ -389,6 +389,10 @@ public class NullPlugin {
     }
 
     public boolean shouldBeCached(String url) {
+      return false;
+    }
+
+    public boolean isLoginPageUrl(String url) {
       return false;
     }
 

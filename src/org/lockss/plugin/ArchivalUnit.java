@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.39 2007-02-06 01:03:09 tlipkis Exp $
+ * $Id: ArchivalUnit.java,v 1.40 2007-06-23 05:37:00 tlipkis Exp $
  */
 
 /*
@@ -103,6 +103,13 @@ public interface ArchivalUnit {
    * @return true if it should be cached
    */
   public boolean shouldBeCached(String url);
+
+  /**
+   * Return true if the URL is that of a login page.
+   * @param url the url to test
+   * @return true if login page URL
+   */
+  public boolean isLoginPageUrl(String url);
 
   /**
    * Return the {@link CachedUrlSet} representing the entire contents
