@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.31 2007-05-28 05:24:28 tlipkis Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.32 2007-06-23 05:37:43 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.plugin.definable;
 import java.util.*;
 import java.io.*;
 
+import org.lockss.config.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.wrapper.*;
 import org.lockss.daemon.*;
@@ -285,12 +286,16 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertEquals("return value", expectedReturn, actualReturn);
   }
 
-  public void testUserMessage() throws Exception {
-    String str = "test user msg";
+  void setStdConfigProps() {
     Collection configProps = ListUtil.list(ConfigParamDescr.BASE_URL,
 					   ConfigParamDescr.VOLUME_NUMBER);
     defMap.putCollection(DefinablePlugin.KEY_PLUGIN_CONFIG_PROPS,
 			 configProps);
+  }  
+
+  public void testUserMessage() throws Exception {
+    String str = "test user msg";
+    setStdConfigProps();
     defMap.putString(DefinablePlugin.KEY_PLUGIN_AU_CONFIG_USER_MSG, str);
     Properties props = new Properties();
     props.put(ConfigParamDescr.BASE_URL.getKey(), "http://www.example.com/");
@@ -303,10 +308,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
   public void testGetManifestPage() throws Exception {
     String baseKey = ConfigParamDescr.BASE_URL.getKey();
     String volKey = ConfigParamDescr.VOLUME_NUMBER.getKey();
-    Collection configProps = ListUtil.list(ConfigParamDescr.BASE_URL,
-					   ConfigParamDescr.VOLUME_NUMBER);
-    defMap.putCollection(DefinablePlugin.KEY_PLUGIN_CONFIG_PROPS,
-			 configProps);
+    setStdConfigProps();
     defMap.putString(DefinableArchivalUnit.KEY_AU_MANIFEST,
 		     "\"%scontents-by-date.%d.shtml\", " +
 		     baseKey + ", " + volKey);
@@ -456,6 +458,42 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     }
   }
 
+  public void testIsLoginPageUrl() throws ArchivalUnit.ConfigurationException {
+    String pat = "\"%s.*\\?.*\\blogin=yes\\b.*\", base_url";
+    setStdConfigProps();
+    defMap.putString(DefinableArchivalUnit.KEY_AU_REDIRECT_TO_LOGIN_URL_PATTERN, pat);
+    Configuration config =
+      ConfigurationUtil.fromArgs(ConfigParamDescr.BASE_URL.getKey(),
+				 "http://example.com/",
+				 ConfigParamDescr.VOLUME_NUMBER.getKey(),
+				 "42");
+    cau.setConfiguration(config);
+
+    assertFalse(cau.isLoginPageUrl("http://example.com/baz/"));
+    assertTrue(cau.isLoginPageUrl("http://example.com/baz?login=yes"));
+    assertTrue(cau.isLoginPageUrl("http://example.com/baz?a=b&login=yes"));
+    assertTrue(cau.isLoginPageUrl("http://example.com/baz?login=yes&b=a"));
+    assertFalse(cau.isLoginPageUrl("http://example.com/baz?xlogin=yes&b=a"));
+    assertFalse(cau.isLoginPageUrl("http://example.com/baz?login=yesy&b=a"));
+  }
+
+  public void testIsLoginPageUrlBadPat()
+      throws ArchivalUnit.ConfigurationException {
+    String pat = "\"%s.*\\?.*\\blo[gin=yes\\b.*\", base_url";
+    setStdConfigProps();
+    defMap.putString(DefinableArchivalUnit.KEY_AU_REDIRECT_TO_LOGIN_URL_PATTERN, pat);
+    Configuration config =
+      ConfigurationUtil.fromArgs(ConfigParamDescr.BASE_URL.getKey(),
+				 "http://example.com/",
+				 ConfigParamDescr.VOLUME_NUMBER.getKey(),
+				 "42");
+    try {
+      cau.setConfiguration(config);
+      cau.addImpliedConfigParams();
+    } catch (ArchivalUnit.ConfigurationException e) {
+      assertMatchesRE("Can't compile URL pattern", e.getMessage());
+    }
+  }
 
   /*
   public void testMakeCrawlSpec() throws Exception {

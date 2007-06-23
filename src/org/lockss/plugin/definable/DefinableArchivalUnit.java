@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.56 2007-05-01 23:34:04 tlipkis Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.57 2007-06-23 05:37:43 tlipkis Exp $
  */
 
 /*
@@ -35,7 +35,7 @@ import java.net.*;
 import java.util.*;
 
 import org.apache.commons.collections.*;
-import org.apache.oro.text.regex.Perl5Compiler;
+import org.apache.oro.text.regex.*;
 import org.lockss.config.Configuration;
 import org.lockss.crawler.*;
 import org.lockss.daemon.*;
@@ -77,7 +77,10 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
   public static final String KEY_AU_PERMISSION_CHECKER_FACTORY =
     "au_permission_checker_factory";
 
-  public static final String KEY_AU_LOGIN_PAGE_CHECKER = "au_login_page_checker";
+  public static final String KEY_AU_LOGIN_PAGE_CHECKER =
+    "au_login_page_checker";
+  public static final String KEY_AU_REDIRECT_TO_LOGIN_URL_PATTERN =
+    "au_redirect_to_login_url_pattern";
 
   public static final String RANGE_SUBSTITUTION_STRING = "(.*)";
   public static final String NUM_SUBSTITUTION_STRING = "(\\d+)";
@@ -149,7 +152,8 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 
   }
 
-  protected void addImpliedConfigParams() {
+  protected void addImpliedConfigParams()
+      throws ArchivalUnit.ConfigurationException {
     super.addImpliedConfigParams();
     String umsg =
       definitionMap.getString(DefinablePlugin.KEY_PLUGIN_AU_CONFIG_USER_MSG,
@@ -157,7 +161,37 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     if (umsg != null) {
       paramMap.putString(KEY_AU_CONFIG_USER_MSG, umsg);
     }
+    String urlPat =
+      (String)definitionMap.getMapElement(KEY_AU_REDIRECT_TO_LOGIN_URL_PATTERN);
+    if (urlPat != null) {
+      paramMap.setMapElement(KEY_AU_REDIRECT_TO_LOGIN_URL_PATTERN,
+			     makeLoginUrlPattern(urlPat));
+    }
   }
+
+  protected Pattern makeLoginUrlPattern(String val)
+      throws ArchivalUnit.ConfigurationException {
+
+    String patStr = convertVariableRegexpString(val);
+    try {
+      return
+	RegexpUtil.getCompiler().compile(patStr, Perl5Compiler.READ_ONLY_MASK);
+    } catch (MalformedPatternException e) {
+      String msg = "Can't compile URL pattern: " + patStr;
+      log.error(msg + ": " + e.toString());
+      throw new ArchivalUnit.ConfigurationException(msg, e);
+    }
+  }
+
+  public boolean isLoginPageUrl(String url) {
+    Pattern urlPat =
+      (Pattern)paramMap.getMapElement(KEY_AU_REDIRECT_TO_LOGIN_URL_PATTERN);
+    if (urlPat == null) {
+      return false;
+    }
+    Perl5Matcher matcher = RegexpUtil.getMatcher();
+    return  matcher.contains(url, urlPat);
+  }    
 
   protected String makeName() {
     String namestr = definitionMap.getString(KEY_AU_NAME, "");
