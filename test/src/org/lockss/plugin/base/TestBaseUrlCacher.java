@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.51 2007-02-11 02:29:15 tlipkis Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.52 2007-06-23 05:37:19 tlipkis Exp $
  */
 
 /*
@@ -727,6 +727,26 @@ public class TestBaseUrlCacher extends LockssTestCase {
       assertEquals("301 Moved to Spain", e.getMessage());
       CIProperties p = muc.getUncachedProperties();
       assertEquals(redTo, p.getProperty("location"));
+    }
+  }
+
+  public void testRedirectToLoginURL() throws Exception {
+    String redTo = "http://somewhere.else/foo";
+    mau.setLoginPageUrls(ListUtil.list(redTo));
+    MockConnectionMockBaseUrlCacher muc =
+      new MockConnectionMockBaseUrlCacher(mau, TEST_URL);
+    MockPermissionMap map = new MockPermissionMap();
+    map.putStatus(TEST_URL, PermissionRecord.PERMISSION_OK);
+    map.putStatus(redTo, PermissionRecord.PERMISSION_OK);
+    muc.setPermissionMapSource(new MockPermissionMapSource(map));
+    muc.addConnection(makeConn(301, "Moved to Spain", redTo));
+    muc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_STORE_ALL_IN_SPEC);
+    mau.addUrlToBeCached(redTo);
+    try {
+      InputStream is = muc.getUncachedInputStream();
+      fail("Should have thrown PermissionException");
+    } catch (CacheException.PermissionException e) {
+      assertEquals("Redirected to login page: " + redTo, e.getMessage());
     }
   }
 
