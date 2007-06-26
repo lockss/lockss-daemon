@@ -5,9 +5,20 @@
 # Must be run before LOCKSS daemon can be started
 #
 
-CONFIG_FILE=/etc/lockss/config.dat
-LOCKSS_USER=lockss
-
+OS_TYPE=`uname -s`
+case ${OS_TYPE} in
+SunOS)
+        LOCKSS_USER=lockss
+        CONFIG_USER=`/usr/ucb/whoami`
+        LOCKSS_HOME=~lockss
+	CONFIG_FILE=${LOCKSS_HOME}/etc/lockss/config.dat
+        ;;
+Linux)
+        LOCKSS_USER=lockss
+        CONFIG_USER=`whoami`
+	CONFIG_FILE=/etc/lockss/config.dat
+        ;;
+esac
 
 ask_for_input() {
     echo -n "$1: [$2] "
@@ -135,7 +146,12 @@ check_writable() {
     local DIR="$1"
     true&
     local PROBE_FILE=${DIR}/probe_$!
-    if sudo -u ${LOCKSS_USER} touch ${PROBE_FILE} >/dev/null 2>&1; then
+    if [ "X${CONFIG_USER}" != "X${LOCKSS_USER}" ] ; then
+	SUDO="sudo -u ${LOCKSS_USER}"
+    else
+	SUDO=""
+    fi
+    if ${SUDO} touch ${PROBE_FILE} >/dev/null 2>&1; then
 	rm -f ${PROBE_FILE}
 	return 0
     else
@@ -148,7 +164,10 @@ init_one_dir() {
     if [ ! -d "${DIR}" ]; then
 	ask_for_input "${DIR} does not exist; shall I create it" Y
 	if is_yes "${ANS}"; then
-	    mkdir -p "${DIR}" && chown ${LOCKSS_USER} "${DIR}"
+	    mkdir -p "${DIR}"
+	    if [ "X${CONFIG_USER}" != ${LOCKSS_USER} ] ; then
+		chown ${LOCKSS_USER} "${DIR}"
+	    fi
 	    if check_writable "${DIR}"; then
 		return 0
 	    else
@@ -242,6 +261,27 @@ until is_yes ${CONFIG_OK}; do
     ask_for_input "Mail relay for this machine" ${LOCKSS_MAILHUB}
     LOCKSS_MAILHUB="${ANS}"
 
+    NEED_USER=N
+    if [ "X${LOCKSS_MAILHUB_USER}" != X ] ; then
+	NEED_USER=Y
+    fi
+    ask_for_input "Does ${LOCKSS_MAILHUB} need user & password" ${NEED_USER}
+    if is_yes "${ANS}"
+    then
+	ask_for_input "User for ${LOCKSS_MAILHUB}" ${LOCKSS_MAILHUB_USER}
+	LOCKSS_MAILHUB_USER="${ANS}"
+	MAILHUB_PASSWORD=
+	while [ "X${MAILHUB_PASSWORD}" = X ] ; do
+	    ask_for_input_shadow "Password for ${LOCKSS_MAILHUB_USER}@${LOCKSS_MAILHUB}" ""
+	    P1=${ANS}
+	    ask_for_input_shadow "Again" ""
+	    if [ "X${ANS}" = "X${P1}" ] ; then
+		MAILHUB_PASSWORD="${ANS}"
+	    fi
+        done
+	LOCKSS_MAILHUB_PASSWORD="\"${MAILHUB_PASSWORD}\""
+    fi
+
     ask_for_input "E-mail address for administrator" ${LOCKSS_EMAIL}
     LOCKSS_EMAIL="${ANS}"
 
@@ -287,9 +327,9 @@ until is_yes ${CONFIG_OK}; do
 	done
 	ask_for_input_shadow "Password for web UI administration (again)" ""
 	if [ "X${ANS}" = "X${P1}" ]; then
-	    MD5=`echo -n "${P1}" | md5sum`
-	    MD5=`echo ${MD5} | sed 's/ .*$//'`
-	    LOCKSS_ADMIN_PASSWD="MD5:${MD5}"
+	    SHA1=`echo -n "${P1}" | sha1sum`
+	    SHA1=`echo ${SHA1} | sed 's/ .*$//'`
+	    LOCKSS_ADMIN_PASSWD="SHA1:${SHA1}"
 	fi
     done
 
@@ -302,6 +342,8 @@ LOCKSS_IPADDR=${LOCKSS_IPADDR}
 LOCKSS_V3_PORT=${LOCKSS_V3_PORT}
 LOCKSS_ACCESS_SUBNET=${LOCKSS_ACCESS_SUBNET}
 LOCKSS_MAILHUB=${LOCKSS_MAILHUB}
+LOCKSS_MAILHUB_USER=${LOCKSS_MAILHUB_USER}
+LOCKSS_MAILHUB_PASSWORD=${LOCKSS_MAILHUB_PASSWORD}
 LOCKSS_EMAIL=${LOCKSS_EMAIL}
 LOCKSS_JAVA_CMD=${LOCKSS_JAVA_CMD}
 LOCKSS_JAVA_SWITCHES=${LOCKSS_JAVA_SWITCHES}

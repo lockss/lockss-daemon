@@ -4,11 +4,25 @@ if [ "X$1" = Xwait ]; then
     WAIT=Y
 fi
 
-DAEMON_PID_FILE="/var/run/lockss.pid"
+OS_TYPE=`uname -s`
+case ${OS_TYPE} in
+SunOS)  
+        LOCKSS_USER=lockss
+        LOCKSS_HOME=~lockss
+	DAEMON_PID_FILE="${LOCKSS_HOME}/var/run/lockss.pid"
+	CFG_FILE=${LOCKSS_HOME}/etc/lockss/config.dat
+	CFG_SCRIPT=${LOCKSS_HOME}/etc/lockss/hostconfig
+	LOGFILE=${LOCKSS_HOME}/var/log/lockss/stdout
+        ;;      
+Linux)          
+        LOCKSS_USER=lockss
+	DAEMON_PID_FILE="/var/run/lockss.pid"
+	CFG_FILE=/etc/lockss/config.dat
+	CFG_SCRIPT=/etc/lockss/hostconfig
+	LOGFILE=/var/log/lockss/stdout
+        ;;
+esac
 
-CFG_FILE=/etc/lockss/config.dat
-CFG_SCRIPT=/etc/lockss/hostconfig
-LOGFILE=/var/log/lockss/stdout
 
 if [ -f ${CFG_FILE} ]; then
   . ${CFG_FILE}
@@ -58,6 +72,7 @@ org.lockss.platform.ui.username=${LOCKSS_ADMIN_USER}
 org.lockss.platform.ui.password=${LOCKSS_ADMIN_PASSWD}
 EOF
 
+cd "${LOCKSS_HOME}"
 echo "Starting daemon at `date`" >> ${LOGFILE}
 ${LOCKSS_JAVA_CMD} ${LOCKSS_JAVA_SWITCHES} -classpath ${CLASSPATH} ${DAEMON_CLASS} ${DAEMON_ARGS} >> "$LOGFILE" 2>&1 &
 echo $! >${DAEMON_PID_FILE}

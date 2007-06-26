@@ -1,10 +1,25 @@
 #!/bin/sh
 
-DAEMON_PID_FILE=/var/run/lockss.pid
-LOGFILE=/var/log/lockss/stdout
-
-CFG_FILE=/etc/lockss/config.dat
-CFG_SCRIPT=/etc/lockss/hostconfig
+OS_TYPE=`uname -s`
+case ${OS_TYPE} in
+SunOS)
+        LOCKSS_USER=lockss
+        LOCKSS_HOME=~lockss
+        DAEMON_PID_FILE="${LOCKSS_HOME}/var/run/lockss.pid"
+        CFG_FILE=${LOCKSS_HOME}/etc/lockss/config.dat
+        CFG_SCRIPT=${LOCKSS_HOME}/etc/lockss/hostconfig
+        LOGFILE=${LOCKSS_HOME}/var/log/lockss/stdout
+	RUNSCRIPT=${LOCKSS_HOME}/etc/lockss/rundaemon
+        ;;
+Linux)
+        LOCKSS_USER=lockss
+        DAEMON_PID_FILE="/var/run/lockss.pid"
+        CFG_FILE=/etc/lockss/config.dat
+        CFG_SCRIPT=/etc/lockss/hostconfig
+        LOGFILE=/var/log/lockss/stdout
+	RUNSCRIPT=/etc/lockss/rundaemon
+        ;;
+esac
 
 if [ -f ${CFG_FILE} ]; then
   . ${CFG_FILE}

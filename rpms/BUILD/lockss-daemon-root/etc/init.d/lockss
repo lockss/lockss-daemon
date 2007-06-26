@@ -3,12 +3,28 @@
 . /etc/init.d/functions
 . /etc/profile
 
-LOCKSS_USER=lockss
-LOG_DIR="/var/log/lockss"
-LOG_FILE="${LOG_DIR}/stdout"
-PID_FILE="/var/run/lockss.pid"
-CFG_FILE=/etc/lockss/hostconfig
-KEEP_GOING=~lockss/KeepGoing
+OS_TYPE=`uname -s`
+case ${OS_TYPE} in
+SunOS)
+	LOCKSS_USER=lockss
+	CONFIG_USER=`/usr/ucb/whoami`
+	LOCKSS_HOME=~lockss
+	LOG_DIR="${LOCKSS_HOME}/var/log/lockss"
+	LOG_FILE="${LOG_DIR}/stdout"
+	PID_FILE="${LOCKSS_HOME}/var/run/lockss.pid"
+	CFG_FILE=${LOCKSS_HOME}/etc/lockss/hostconfig
+	KEEP_GOING=~lockss/KeepGoing
+	;;
+Linux)
+	LOCKSS_USER=lockss
+	CONFIG_USER=`whoami`
+	LOG_DIR="/var/log/lockss"
+	LOG_FILE="${LOG_DIR}/stdout"
+	PID_FILE="/var/run/lockss.pid"
+	CFG_FILE=/etc/lockss/hostconfig
+	KEEP_GOING=~lockss/KeepGoing
+	;;
+esac
 
 TIMESTAMP=`date`
 
@@ -20,19 +36,26 @@ case "$1" in
 	fi
 	if [ ! -d ${LOG_DIR} ]; then
 	    mkdir -p ${LOG_DIR}
-	    chown ${LOCKSS_USER} ${LOG_DIR}
-	    chmod 755 ${LOG_DIR}
+	    if [ "X${CONFIG_USER}" != "X${LOCKSS_USER}" ] ; then
+		chown ${LOCKSS_USER} ${LOG_DIR}
+		chmod 755 ${LOG_DIR}
+	    fi
 	fi
 	if [ ! -f ${PID_FILE} ]; then
 	    touch ${PID_FILE}
 	fi
-	chown ${LOCKSS_USER} ${PID_FILE}
-	chmod 644 ${PID_FILE}
+	if [ "X${CONFIG_USER}" != "X${LOCKSS_USER}" ] ; then
+	    chown ${LOCKSS_USER} ${PID_FILE}
+	    chmod 644 ${PID_FILE}
+	fi
 	echo "Starting LOCKSS"
 	echo "Starting LOCKSS at $TIMESTAMP" >> ${LOG_FILE}
-	chown ${LOCKSS_USER} ${LOG_FILE}
-	daemon --user ${LOCKSS_USER} --check lockss /etc/lockss/runforever
-#	daemon --user ${LOCKSS_USER} --check lockss /etc/lockss/rundaemon
+	if [ "X${CONFIG_USER}" != "X${LOCKSS_USER}" ] ; then
+	    chown ${LOCKSS_USER} ${LOG_FILE}
+	    daemon --user ${LOCKSS_USER} --check lockss /etc/lockss/runforever
+	else
+	    sh /etc/lockss/rundaemon
+	fi
 	echo "."
 	;;
     stop)
