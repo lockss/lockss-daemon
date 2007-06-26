@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.215 2007-03-20 00:43:18 tlipkis Exp $
+ $Id: build.xml,v 1.216 2007-06-26 22:56:00 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
@@ -66,6 +66,7 @@ Args:
  Release targets (jar-lockss, rpm))
   -Dreleasename=string     Name of daemon release, if building a release.
   -Drpmrelease=string      Name of RPM release, if building an RPM.
+  -Dtarrelease=string      Name of tar release, if building an tar.
 
  Javadoc targets (javadoc, javadoc-test)
   -Dauthor=true            Include author info in javadoc.
@@ -1073,6 +1074,55 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
     <copy todir="${protorpm.rpms}" >
      <fileset refid="rpm.filesetid" />
     </copy>
+  </target>
+
+  <!-- ==================================================================== -->
+  <target name="tar" depends="jar-lockss,check.contrib"
+   description="Package up the daemon as a tar" >
+
+    <mkdir dir="${temp.build}" />
+    <tempfile property="temp.tar.dir" destdir="${temp.build}" prefix="tar"/>
+    <mkdir dir="${temp.tar.dir}" />
+
+    <property name="tarrelease" value="1" />
+
+    <property name="prototar.top"
+		value="${basedir}/rpms/BUILD/lockss-daemon-root" />
+    <property name="tar.top" value="${temp.tar.dir}" />
+    <property name="tar.root" value="${tar.top}" />
+    <property name="tar.jardir" value="${tar.root}/usr/share/lockss" />
+    <property name="tar.lockss.etc" value="${tar.root}/etc/lockss" />
+    <property name="tar.scripts"
+ 	value="etc/lockss/hostconfig etc/lockss/rundaemon etc/lockss/runforever etc/init.d/lockss" />
+
+
+    <!-- make classpath to substitute into start script -->
+    <pathconvert refid="prod.run.classpath" property="tar.clspth"
+       targetos="unix">
+      <map from="${basedir}/lib" to="./usr/share/lockss" />
+    </pathconvert>
+    <!-- copy prototype tar tree to tmp dir -->
+    <copy todir="${tar.top}" >
+      <fileset dir="${prototar.top}" />
+      <filterset>
+       <filter token="CLASSPATH" value="${tar.clspth}"/>
+       <filter token="RELEASENAME" value="${releasename}"/>
+       <filter token="PLATFORM_VERSION" value="-${tarrelease}"/>
+      </filterset>
+    </copy>
+
+    <!-- copy jars on run.classpath to jardir -->
+    <pathtofileset dir="" pathrefid="prod.run.classpath"
+      name="tar.jars.set" ignorenonrelative="true" />
+    <copy todir="${tar.jardir}" flatten="true" >
+     <fileset refid="tar.jars.set" />
+    </copy>
+    <tar destfile="./lockss-daemon.tgz" compression="gzip">
+     <tarfileset dir="${tar.top}" includes="${tar.scripts}" mode="755" />
+     <tarfileset dir="${tar.top}" excludes="${tar.scripts}" />
+<!--      <tarfileset dir="${tar.top}" mode="755" includes="plugintool" /> -->
+<!--      <tarfileset dir="${temp.pkg.dir}" excludes="plugintool" /> -->
+    </tar>
   </target>
 
   <!-- ==================================================================== -->
