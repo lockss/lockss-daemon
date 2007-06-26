@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.216 2007-06-26 22:56:00 tlipkis Exp $
+ $Id: build.xml,v 1.217 2007-06-26 23:27:21 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
@@ -1120,8 +1120,6 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
     <tar destfile="./lockss-daemon.tgz" compression="gzip">
      <tarfileset dir="${tar.top}" includes="${tar.scripts}" mode="755" />
      <tarfileset dir="${tar.top}" excludes="${tar.scripts}" />
-<!--      <tarfileset dir="${tar.top}" mode="755" includes="plugintool" /> -->
-<!--      <tarfileset dir="${temp.pkg.dir}" excludes="plugintool" /> -->
     </tar>
   </target>
 
