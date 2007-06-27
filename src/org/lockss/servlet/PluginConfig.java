@@ -1,5 +1,5 @@
 /*
- * $Id: PluginConfig.java,v 1.1 2007-05-10 23:41:53 tlipkis Exp $
+ * $Id: PluginConfig.java,v 1.2 2007-06-27 07:49:55 tlipkis Exp $
  */
 
 /*
@@ -272,7 +272,7 @@ public class PluginConfig extends LockssServlet {
 
     props.put(PluginManager.PARAM_USER_PLUGIN_REGISTRIES, plugStr);
     props.put(ConfigManager.PARAM_USER_TITLE_DB_URLS, titleStr);
-    if (keystoreUrl != null) {
+    if (!StringUtil.isNullString(keystoreUrl)) {
       props.put(PluginManager.PARAM_USER_KEYSTORE_LOCATION, keystoreUrl);
       props.put(PluginManager.PARAM_USER_KEYSTORE_PASSWORD,
 		keystorePassword);
