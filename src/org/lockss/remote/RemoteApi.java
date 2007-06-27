@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.59 2007-05-01 23:34:04 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.60 2007-06-27 07:49:49 tlipkis Exp $
  */
 
 /*
@@ -799,27 +799,32 @@ public class RemoteApi
    */
   public BatchAuStatus deleteAus(List auids) {
     BatchAuStatus bas = new BatchAuStatus();
-    for (Iterator iter = auids.iterator(); iter.hasNext(); ) {
-      String auid = (String)iter.next();
-      BatchAuStatus.Entry stat = bas.newEntry(auid);
-      ArchivalUnit au = pluginMgr.getAuFromId(auid);
-      if (au != null) {
-	stat.setName(au.getName());
-	try {
-	  pluginMgr.deleteAu(au);
-	  stat.setStatus("Deleted", STATUS_ORDER_NORM);
-	} catch (Exception e) {
-	  log.warning("Error deleting AU", e);
-	  stat.setStatus("Possibly Not Deleted", STATUS_ORDER_WARN);
-	  stat.setExplanation("Error deleting: " + e.getMessage());
+    try {
+      configMgr.doingAuBatch(true);
+      for (Iterator iter = auids.iterator(); iter.hasNext(); ) {
+	String auid = (String)iter.next();
+	BatchAuStatus.Entry stat = bas.newEntry(auid);
+	ArchivalUnit au = pluginMgr.getAuFromId(auid);
+	if (au != null) {
+	  stat.setName(au.getName());
+	  try {
+	    pluginMgr.deleteAu(au);
+	    stat.setStatus("Deleted", STATUS_ORDER_NORM);
+	  } catch (Exception e) {
+	    log.warning("Error deleting AU", e);
+	    stat.setStatus("Possibly Not Deleted", STATUS_ORDER_WARN);
+	    stat.setExplanation("Error deleting: " + e.getMessage());
+	  }
+	} else {
+	  stat.setStatus("Not Found", STATUS_ORDER_WARN);
+	  stat.setName(auid);
 	}
-      } else {
-	stat.setStatus("Not Found", STATUS_ORDER_WARN);
-	stat.setName(auid);
+	bas.add(stat);
       }
-      bas.add(stat);
-    }
-    return bas;
+      return bas;
+    } finally {
+      configMgr.doingAuBatch(false);
+    }	       
   }
 
   /** Deactivate a batch of AUs
@@ -828,26 +833,31 @@ public class RemoteApi
    */
   public BatchAuStatus deactivateAus(List auids) {
     BatchAuStatus bas = new BatchAuStatus();
-    for (Iterator iter = auids.iterator(); iter.hasNext(); ) {
-      String auid = (String)iter.next();
-      BatchAuStatus.Entry stat = bas.newEntry(auid);
-      ArchivalUnit au = pluginMgr.getAuFromId(auid);
-      if (au != null) {
-	stat.setName(au.getName());
-	try {
-	  pluginMgr.deactivateAu(au);
-	  stat.setStatus("Deactivated", STATUS_ORDER_NORM);
-	} catch (IOException e) {
-	  stat.setStatus("Not Deactivated", STATUS_ORDER_WARN);
-	  stat.setExplanation("Error deleting: " + e.getMessage());
+    try {
+      configMgr.doingAuBatch(true);
+      for (Iterator iter = auids.iterator(); iter.hasNext(); ) {
+	String auid = (String)iter.next();
+	BatchAuStatus.Entry stat = bas.newEntry(auid);
+	ArchivalUnit au = pluginMgr.getAuFromId(auid);
+	if (au != null) {
+	  stat.setName(au.getName());
+	  try {
+	    pluginMgr.deactivateAu(au);
+	    stat.setStatus("Deactivated", STATUS_ORDER_NORM);
+	  } catch (IOException e) {
+	    stat.setStatus("Not Deactivated", STATUS_ORDER_WARN);
+	    stat.setExplanation("Error deleting: " + e.getMessage());
+	  }
+	} else {
+	  stat.setStatus("Not Found", STATUS_ORDER_WARN);
+	  stat.setName(auid);
 	}
-      } else {
-	stat.setStatus("Not Found", STATUS_ORDER_WARN);
-	stat.setName(auid);
+	bas.add(stat);
       }
-      bas.add(stat);
-    }
-    return bas;
+      return bas;
+    } finally {
+      configMgr.doingAuBatch(false);
+    }	       
   }
 
   /** Canonicalize a configuration so we can check it for equality with
