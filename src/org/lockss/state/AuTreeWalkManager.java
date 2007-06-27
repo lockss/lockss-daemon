@@ -1,5 +1,5 @@
 /*
- * $Id: AuTreeWalkManager.java,v 1.14 2006-08-07 18:47:48 tlipkis Exp $
+ * $Id: AuTreeWalkManager.java,v 1.15 2007-06-27 07:50:36 tlipkis Exp $
  */
 
 /*
@@ -136,6 +136,8 @@ public class AuTreeWalkManager
 	startWDog(TreeWalkManager.WDOG_PARAM_TREEWALK,
 		  TreeWalkManager.WDOG_DEFAULT_TREEWALK);
 	happened = runWalker(finishBy);
+      } catch (RuntimeException e) {
+	log.error("Error in treewalk", e);
       } finally {
 	// we are done running, in the sense that we should no longer be
 	// aborted if the FINISHED taskEvent occurs.  (In fact, we're about
