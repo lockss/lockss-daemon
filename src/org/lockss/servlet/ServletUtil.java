@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.43 2007-05-28 05:24:14 tlipkis Exp $
+ * $Id: ServletUtil.java,v 1.44 2007-06-27 07:50:28 tlipkis Exp $
  */
 
 /*
@@ -941,7 +941,14 @@ public class ServletUtil {
   public static void layoutSubmitButton(LockssServlet servlet,
                                         Composite composite,
                                         String value) {
-    Input submit = new Input(Input.Submit, "action", value);
+    layoutSubmitButton(servlet, composite, "action", value);
+  }
+
+  public static void layoutSubmitButton(LockssServlet servlet,
+                                        Composite composite,
+					String key,
+                                        String value) {
+    Input submit = new Input(Input.Submit, key, value);
     servlet.setTabOrder(submit);
     composite.add(SUBMIT_BEFORE + submit + SUBMIT_AFTER);
   }
