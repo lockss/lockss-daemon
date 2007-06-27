@@ -64,7 +64,7 @@ org.lockss.platform.sysadminemail=${LOCKSS_EMAIL}
 org.lockss.platform.accesssubnet=${LOCKSS_ACCESS_SUBNET}
 org.lockss.platform.smtphost=${LOCKSS_MAILHUB}
 org.lockss.platform.smtpport=25
-org.lockss.platform.logdirectory=/var/log/lockss
+org.lockss.platform.logdirectory=${LOCKSS_HOME}/var/log/lockss
 org.lockss.platform.logfile=daemon
 org.lockss.log.targets=org.lockss.util.FileTarget
 org.lockss.platform.fqdn=${LOCKSS_HOSTNAME}
@@ -72,7 +72,7 @@ org.lockss.platform.ui.username=${LOCKSS_ADMIN_USER}
 org.lockss.platform.ui.password=${LOCKSS_ADMIN_PASSWD}
 EOF
 
-cd "${LOCKSS_HOME}"
+cd ${LOCKSS_HOME}
 echo "Starting daemon at `date`" >> ${LOGFILE}
 ${LOCKSS_JAVA_CMD} ${LOCKSS_JAVA_SWITCHES} -classpath ${CLASSPATH} ${DAEMON_CLASS} ${DAEMON_ARGS} >> "$LOGFILE" 2>&1 &
 echo $! >${DAEMON_PID_FILE}

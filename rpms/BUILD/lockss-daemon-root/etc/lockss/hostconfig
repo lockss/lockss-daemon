@@ -5,21 +5,6 @@
 # Must be run before LOCKSS daemon can be started
 #
 
-OS_TYPE=`uname -s`
-case ${OS_TYPE} in
-SunOS)
-        LOCKSS_USER=lockss
-        CONFIG_USER=`/usr/ucb/whoami`
-        LOCKSS_HOME=~lockss
-	CONFIG_FILE=${LOCKSS_HOME}/etc/lockss/config.dat
-        ;;
-Linux)
-        LOCKSS_USER=lockss
-        CONFIG_USER=`whoami`
-	CONFIG_FILE=/etc/lockss/config.dat
-        ;;
-esac
-
 ask_for_input() {
     echo -n "$1: [$2] "
     read ANS
@@ -206,7 +191,27 @@ init_one_dir() {
 # Start
 ###
 
-echo "LOCKSS host configuration.  For more information see /etc/lockss/README"
+OS_TYPE=`uname -s`
+case ${OS_TYPE} in
+SunOS)
+        LOCKSS_USER=lockss
+        CONFIG_USER=`/usr/ucb/whoami`
+        LOCKSS_HOME=~lockss
+	CONFIG_FILE=${LOCKSS_HOME}/etc/lockss/config.dat
+	PATH=/usr/ucb:$PATH
+	LOCAL_HOSTNAME=`uname -n`
+	LOCAL_IPADDR=`ifconfig -a | grep inet | tail -1 | sed 's/.*inet \(.*\) netmask.*/\1/'`
+        ;;
+Linux)
+        LOCKSS_USER=lockss
+        CONFIG_USER=`whoami`
+	CONFIG_FILE=/etc/lockss/config.dat
+	LOCAL_HOSTNAME=`hostname -f`
+	LOCAL_IPADDR=`hostname -i`
+        ;;
+esac
+
+echo "LOCKSS host configuration for ${OS_TYPE}.  For more information see /etc/lockss/README"
 
 if [ -r "${CONFIG_FILE}" ]; then
     echo "Setting defaults from existing config: ${CONFIG_FILE}"
@@ -217,13 +222,13 @@ CONFIG_OK=N
 until is_yes ${CONFIG_OK}; do
 
     if [ "X${LOCKSS_HOSTNAME}" = X ]; then
-	LOCKSS_HOSTNAME=`hostname -f`
+	LOCKSS_HOSTNAME=${LOCAL_HOSTNAME}
     fi
     ask_for_input "Fully qualified hostname (FQDN) of this machine" "${LOCKSS_HOSTNAME}"
     LOCKSS_HOSTNAME=${ANS}
 
     if [ "X${LOCKSS_IPADDR}" = X ]; then
-	LOCKSS_IPADDR=`hostname -i`
+	LOCKSS_IPADDR=${LOCAL_IPADDR}
     fi
     IP_OK=N
     until is_yes ${IP_OK}; do
@@ -370,5 +375,11 @@ EOF
 	echo "LOCKSS will start automatically at next reboot, or you may"
 	echo " start it now by running   /etc/init.d/lockss start"
 	CONFIG_OK=Y
+    fi
+    if [ ! -d $(LOCKSS_HOME}/var/run ] ; then
+	mkdir -p ${LOCKSS_HOME}/var/run
+    fi
+    if [ ! -d $(LOCKSS_HOME}/var/log/lockss ] ; then
+	mkdir -p ${LOCKSS_HOME}/var/log/lockss
     fi
 done
