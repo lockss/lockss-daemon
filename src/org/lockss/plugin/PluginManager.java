@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.180 2007-06-21 07:30:29 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.181 2007-06-27 07:49:34 tlipkis Exp $
  */
 
 /*
@@ -379,7 +379,7 @@ public class PluginManager
       plugList = CollectionUtil.randomPermutation(plugList);
       for (Iterator iter = plugList.iterator(); iter.hasNext(); ) {
 	String pluginKey = (String)iter.next();
-	log.debug("Configuring plugin key: " + pluginKey);
+	log.debug2("Configuring plugin key: " + pluginKey);
 	Configuration pluginConf = allPlugs.getConfigTree(pluginKey);
 	Configuration prevPluginConf =
 	  currentAllPlugs.getConfigTree(pluginKey);
