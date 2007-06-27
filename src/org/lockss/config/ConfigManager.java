@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.45 2007-05-23 02:26:54 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.46 2007-06-27 07:49:08 tlipkis Exp $
  */
 
 /*
@@ -150,6 +150,7 @@ public class ConfigManager implements LockssManager {
   public static final String CONFIG_FILE_ICP_SERVER = "icp_server_config.txt"; // in use
   public static final String CONFIG_FILE_AUDIT_PROXY = "audit_proxy_config.txt"; // in use
   public static final String CONFIG_FILE_ACCESS_GROUPS = "access_groups_config.txt"; // not yet in use
+  public static final String CONFIG_FILE_CRAWL_PROXY = "crawl_proxy.txt";
 
   /** array of local cache config file names */
   static String cacheConfigFiles[] = {
@@ -160,6 +161,7 @@ public class ConfigManager implements LockssManager {
     CONFIG_FILE_ICP_SERVER, // in use
     CONFIG_FILE_AUDIT_PROXY, // in use
     CONFIG_FILE_ACCESS_GROUPS, // not yet in use
+    CONFIG_FILE_CRAWL_PROXY,
   };
 
   // MUST pass in explicit log level to avoid recursive call back to
