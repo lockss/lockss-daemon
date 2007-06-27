@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawler.java,v 1.22 2007-02-06 00:48:24 tlipkis Exp $
+ * $Id: BaseCrawler.java,v 1.23 2007-06-27 07:49:20 tlipkis Exp $
  */
 
 /*
@@ -71,6 +71,11 @@ public abstract class BaseCrawler
   public static final String PARAM_DATA_TIMEOUT =
     Configuration.PREFIX + "crawler.timeout.data";
   public static final long DEFAULT_DATA_TIMEOUT = 30 * Constants.MINUTE;
+
+  /** Proxy crawls if true (except repair-from-cache) */
+  public static final String PARAM_PROXY_ENABLED =
+    Configuration.PREFIX + "crawler.proxy.enabled";
+  public static final boolean DEFAULT_PROXY_ENABLED = false;
 
   /** Proxy host for crawls (except repair-from-cache) */
   public static final String PARAM_PROXY_HOST =
@@ -168,15 +173,20 @@ public abstract class BaseCrawler
     connectionPool.setConnectTimeout(connectTimeout);
     connectionPool.setDataTimeout(dataTimeout);
 
-    proxyHost = config.get(PARAM_PROXY_HOST);
-    proxyPort = config.getInt(PARAM_PROXY_PORT, DEFAULT_PROXY_PORT);
-    if (StringUtil.isNullString(proxyHost) || proxyPort <= 0) {
-      proxyHost = null;
+    boolean proxyEnabled = config.getBoolean(PARAM_PROXY_ENABLED,
+					     DEFAULT_PROXY_ENABLED);
+    if (proxyEnabled) {
+      proxyHost = config.get(PARAM_PROXY_HOST);
+      proxyPort = config.getInt(PARAM_PROXY_PORT, DEFAULT_PROXY_PORT);
+      if (StringUtil.isNullString(proxyHost) || proxyPort <= 0) {
+	proxyHost = null;
+      } else {
+	if (logger.isDebug()) logger.debug("Proxying through " + proxyHost
+					   + ":" + proxyPort);
+      }
     } else {
-      if (logger.isDebug()) logger.debug("Proxying through " + proxyHost
-					 + ":" + proxyPort);
+      proxyHost = null;
     }
-
   }
 
   List getDaemonPermissionCheckers() {
