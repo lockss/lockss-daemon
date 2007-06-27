@@ -376,10 +376,10 @@ EOF
 	echo " start it now by running   /etc/init.d/lockss start"
 	CONFIG_OK=Y
     fi
-    if [ ! -d $(LOCKSS_HOME}/var/run ] ; then
+    if [ ! -d ${LOCKSS_HOME}/var/run ] ; then
 	mkdir -p ${LOCKSS_HOME}/var/run
     fi
-    if [ ! -d $(LOCKSS_HOME}/var/log/lockss ] ; then
+    if [ ! -d ${LOCKSS_HOME}/var/log/lockss ] ; then
 	mkdir -p ${LOCKSS_HOME}/var/log/lockss
     fi
 done
