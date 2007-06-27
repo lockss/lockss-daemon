@@ -1,5 +1,5 @@
 /*
- * $Id: TestFollowLinkCrawler.java,v 1.24 2007-02-07 19:32:21 thib_gc Exp $
+ * $Id: TestFollowLinkCrawler.java,v 1.25 2007-06-27 08:07:47 tlipkis Exp $
  */
 
 /*
@@ -131,8 +131,12 @@ public class TestFollowLinkCrawler extends LockssTestCase {
   }
 
   public void testMakeUrlCacherProxy() {
-    ConfigurationUtil.setFromArgs(FollowLinkCrawler.PARAM_PROXY_HOST, "pr.wub",
-				  FollowLinkCrawler.PARAM_PROXY_PORT, "27");
+    Properties p = new Properties();
+    p.put(FollowLinkCrawler.PARAM_PROXY_ENABLED, "true");
+    p.put(FollowLinkCrawler.PARAM_PROXY_HOST, "pr.wub");
+    p.put(FollowLinkCrawler.PARAM_PROXY_PORT, "27");
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+
     crawler.setCrawlConfig(ConfigManager.getCurrentConfig());
     mau.addUrl(startUrl);
     crawler.makeUrlCacher(startUrl);
