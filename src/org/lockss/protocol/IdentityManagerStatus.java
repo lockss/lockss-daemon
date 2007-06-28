@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManagerStatus.java,v 1.3 2007-03-14 05:53:41 tlipkis Exp $
+ * $Id: IdentityManagerStatus.java,v 1.4 2007-06-28 07:14:23 smorabito Exp $
  */
 
 /*
@@ -37,9 +37,9 @@ import org.lockss.util.*;
 public class IdentityManagerStatus
   implements StatusAccessor,  StatusAccessor.DebugOnly {
 
-  private Map theIdentities;
+  private Map<PeerIdentity,PeerIdentityStatus> theIdentities;
 
-  public IdentityManagerStatus(Map theIdentities) {
+  public IdentityManagerStatus(Map<PeerIdentity,PeerIdentityStatus> theIdentities) {
     this.theIdentities = theIdentities;
   }
 
@@ -50,34 +50,36 @@ public class IdentityManagerStatus
     ListUtil.list(
 		  new ColumnDescriptor("ip", "IP",
 				       ColumnDescriptor.TYPE_STRING),
-		  new ColumnDescriptor("lastPkt", "Last Pkt",
+		  new ColumnDescriptor("lastMessage", "Last Message",
 				       ColumnDescriptor.TYPE_DATE,
-				       "Last time a packet that originated " +
-				       "at IP was received"),
-		  new ColumnDescriptor("lastOp", "Last Op",
-				       ColumnDescriptor.TYPE_DATE,
-				       "Last time a non-NoOp packet that " +
-				       "originated at IP was received"),
-		  new ColumnDescriptor("origTot", "Orig Tot",
-				       ColumnDescriptor.TYPE_INT,
-				       "Total packets received that " +
+				       "Last time a message that originated " +
+				       "at IP was received."),
+		  new ColumnDescriptor("lastOp", "Mesage Type",
+				       ColumnDescriptor.TYPE_STRING,
+				       "Last message type that " +
 				       "originated at IP."),
-		  new ColumnDescriptor("origOp", "Orig Op",
+		  new ColumnDescriptor("origTot", "Messages",
 				       ColumnDescriptor.TYPE_INT,
-				       "Total non-noop packets received that "+
+				       "Total messages received that " +
 				       "originated at IP."),
-		  new ColumnDescriptor("sendOrig", "1 Hop",
-				       ColumnDescriptor.TYPE_INT,
-				       "Packets arriving from originator " +
-				       "in one hop."),
-		  new ColumnDescriptor("sendFwd", "Fwd",
-				       ColumnDescriptor.TYPE_INT,
-				       "Packets forwarded by IP to us."),
-		  new ColumnDescriptor("dup", "Dup",
-				       ColumnDescriptor.TYPE_INT,
-				       "Duplicate packets received from IP."),
-		  new ColumnDescriptor("reputation", "Reputation",
-				       ColumnDescriptor.TYPE_INT)
+		  new ColumnDescriptor("origLastPoller", "Last Poll",
+		                       ColumnDescriptor.TYPE_DATE,
+		                       "Last time that IP called a poll " +
+		                       "in which this cache participated " +
+		                       "as a voter."),
+                  new ColumnDescriptor("origLastVoter", "Last Vote",
+                                       ColumnDescriptor.TYPE_DATE,
+                                       "Last time that IP agreed to " +
+                                       "participate as a voter in a poll " +
+                                       "called by this cache."),                       
+                  new ColumnDescriptor("origPoller", "Polls Called",
+                                       ColumnDescriptor.TYPE_INT,
+                                       "Total number of polls in which " +
+                                       "IP participated as the Poller."),
+                  new ColumnDescriptor("origVoter", "Votes Cast",
+                                       ColumnDescriptor.TYPE_INT,
+                                       "Total number of polls in which " +
+                                       "IP participated as a Voter.")
 		  );
 
   public String getDisplayName() {
@@ -98,16 +100,14 @@ public class IdentityManagerStatus
 
   private List getRows(String key) {
     List table = new ArrayList();
-    for (Iterator iter = theIdentities.values().iterator();
-	 iter.hasNext();) {
-      table.add(makeRow((LcapIdentity)iter.next()));
+    for (PeerIdentity pid : theIdentities.keySet()) {
+      table.add(makeRow(pid, theIdentities.get(pid)));
     }
     return table;
   }
 
-  private Map makeRow(LcapIdentity id) {
+  private Map makeRow(PeerIdentity pid, PeerIdentityStatus status) {
     Map row = new HashMap();
-    PeerIdentity pid = id.getPeerIdentity();
     if (pid.isLocalIdentity()) {
       StatusTable.DisplayedValue val =
 	new StatusTable.DisplayedValue(pid.getIdString());
@@ -116,17 +116,17 @@ public class IdentityManagerStatus
     } else {
       row.put("ip", pid.getIdString());
     }
-    row.put("lastPkt", new Long(id.getLastActiveTime()));
-    row.put("lastOp", new Long(id.getLastOpTime()));
-    row.put("origTot", new Long(id.getEventCount(LcapIdentity.EVENT_ORIG)));
-    row.put("origOp",
-	    new Long(id.getEventCount(LcapIdentity.EVENT_ORIG_OP)));
-    row.put("sendOrig",
-	    new Long(id.getEventCount(LcapIdentity.EVENT_SEND_ORIG)));
-    row.put("sendFwd",
-	    new Long(id.getEventCount(LcapIdentity.EVENT_SEND_FWD)));
-    row.put("dup", new Long(id.getEventCount(LcapIdentity.EVENT_DUPLICATE)));
-    row.put("reputation", new Long(id.getReputation()));
+    row.put("lastMessage", new Long(status.getLastMessageTime()));
+    row.put("lastOp", getMessageType(status.getLastMessageOpCode()));
+    row.put("origTot", new Long(status.getTotalMessages()));
+    row.put("origPoller",
+            new Long(status.getTotalPollerPolls()));
+    row.put("origLastPoller",
+            new Long(status.getLastPollerTime()));
+    row.put("origVoter",
+	    new Long(status.getTotalVoterPolls()));
+    row.put("origLastVoter",
+            new Long(status.getLastVoterTime()));
     return row;
   }
 
@@ -137,4 +137,17 @@ public class IdentityManagerStatus
     // 					  new Integer(0)));
     return res;
   }
+  
+  private String getMessageType(int opcode) {
+    if (opcode >= V3LcapMessage.POLL_MESSAGES_BASE && 
+        opcode < (V3LcapMessage.POLL_MESSAGES.length +
+            V3LcapMessage.POLL_MESSAGES_BASE)) {
+      return V3LcapMessage.POLL_MESSAGES[opcode - 
+                                         V3LcapMessage.POLL_MESSAGES_BASE]
+                                         + " (" + opcode + ")";
+    } else {
+      return "n/a";
+    }
+  }
+
 }

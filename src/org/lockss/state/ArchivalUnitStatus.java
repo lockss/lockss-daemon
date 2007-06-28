@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.55 2007-06-17 05:23:14 smorabito Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.56 2007-06-28 07:14:24 smorabito Exp $
  */
 
 /*
@@ -256,7 +256,7 @@ public class ArchivalUnitStatus
         // XXX: hasV3Poll() is a stopgap added for daemon 1.21.  See
         //      the method declaration for more information.  It should
         //      eventually be removed, but is harmless for now.
-        if (auState.getV3Agreement() < 0 || !auState.hasV3Poll()) {
+        if (auState.getV3Agreement() < 0) {
           if (auState.lastCrawlTime > 0 || AuUtil.isPubDown(au)) {
             stat = "Waiting for Poll";
           } else {
@@ -637,10 +637,7 @@ public class ArchivalUnitStatus
       // Make the status string.
       Object stat = null;
       if (AuUtil.getProtocolVersion(au) == Poll.V3_PROTOCOL) {
-        // XXX: hasV3Poll() is a stopgap added for daemon 1.21.  See
-        //      the method declaration for more information.  It should
-        //      eventually be removed, but is harmless for now.
-        if (state.getV3Agreement() < 0 || !state.hasV3Poll()) {
+        if (state.getV3Agreement() < 0) {
           if (state.lastCrawlTime < 0) {
             stat = "Waiting for Crawl";
           } else {
@@ -980,11 +977,7 @@ public class ArchivalUnitStatus
       List summaryList =  ListUtil.list(
             new StatusTable.SummaryInfo("Peers holding AU",
 					ColumnDescriptor.TYPE_INT,
-                                        new Integer(totalPeers)),
-            new StatusTable.SummaryInfo("Peers",
-					ColumnDescriptor.TYPE_STRING,
-                                        PeerVoteSummary.makeAuRef("Voting on AU", au.getAuId()))
-            );
+                                        new Integer(totalPeers)));
       return summaryList;
     }
 

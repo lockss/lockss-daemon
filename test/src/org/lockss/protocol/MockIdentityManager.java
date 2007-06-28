@@ -1,5 +1,5 @@
 /*
-* $Id: MockIdentityManager.java,v 1.12 2007-05-09 10:34:06 smorabito Exp $
+* $Id: MockIdentityManager.java,v 1.13 2007-06-28 07:14:25 smorabito Exp $
  */
 
 /*
@@ -317,6 +317,14 @@ public class MockIdentityManager implements IdentityManager {
   }
 
   public LcapIdentity findLcapIdentity(PeerIdentity pid, String key) {
+    throw new UnsupportedOperationException("not implemented");
+  }
+
+  public PeerIdentityStatus getPeerIdentityStatus(PeerIdentity pid) {
+    throw new UnsupportedOperationException("not implemented");
+  }
+
+  public PeerIdentityStatus getPeerIdentityStatus(String key) {
     throw new UnsupportedOperationException("not implemented");
   }
 

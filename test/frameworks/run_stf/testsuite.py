@@ -1890,13 +1890,18 @@ class TotalLossRecoveryV3TestCase(V3TestCase):
         # Pick a client to damage.
         self.damagedClient = self.clients[0]
         
-        # Two AUs: One for before the loss, one for after.
-        simAu = SimulatedAu('simContent', 0, 0, 0, protocolVersion=3)
+        ## Define a simulated AU
+        simAu = SimulatedAu('simContent', 0, 0, 30, protocolVersion=3)
+
+        ## Enable polling on all peers.
+        pollingConf = {"org.lockss.poller.v3.enableV3Poller":"true",
+                       "org.lockss.poller.v3.enableV3Voter":"true"}
 
         ## Create simulated AUs
         log.info("Creating simulated AUs.")
         for client in self.clients:
             client.createAu(simAu)
+            self.framework.appendLocalConfig(pollingConf, client)
 
         ## Assert that the AUs have been crawled.
         log.info("Waiting for simulated AUs to crawl.")
@@ -1912,18 +1917,20 @@ class TotalLossRecoveryV3TestCase(V3TestCase):
         log.info("Requesting tree walk.")
         client.requestTreeWalk(simAu)
 
-        # expect to see a top level content poll called
-        log.info("Waiting for a V3 poll.")
-        assert client.waitForV3Poller(simAu),\
-            "Never called V3 poll."
-        log.info("Called V3 poll.")
+        # expect to see a top level content poll called by all peers.
+        log.info("Waiting for a V3 poll by all simulated caches")
+        for c in self.clients:
+            assert c.waitForV3Poller(simAu), "Never called V3 poll."
+            log.info("Client on port %s called V3 poll..." % c.port)
 
-        log.info("Waiting to win V3 poll.")
-        assert client.waitForWonV3Poll(simAu, timeout=self.timeout),\
-           "Never won V3 poll"
-        log.info("Won V3 poll.")
+        # expect that each client will have wone a top-level v3 poll
+        log.info("Waiting for all peers to win their polls")
+        for c in self.clients:
+            assert c.waitForWonV3Poll(simAu, timeout=self.timeout),\
+                   ("Client on port %s never won V3 poll" % c.port)
+            log.info("Client on port %s won V3 poll..." % c.port)
 
-        log.info("Backing up cache configuration...")
+        log.info("Backing up cache configuration on victim cache...")
         client.backupConfiguration()
         log.info("Backed up successfully.")
 
@@ -1940,7 +1947,7 @@ class TotalLossRecoveryV3TestCase(V3TestCase):
         # 'publisher down' when it is restored.
         #
         extraConf = {"org.lockss.auconfig.allowEditDefaultOnlyParams": "true",
-                     "org.lockss.plugin.registry": "org.lockss.plugin.simulated.SimulatedPlugin",
+#                     "org.lockss.plugin.registry": "org.lockss.plugin.simulated.SimulatedPlugin",
                      "org.lockss.title.sim1.title": "Simulated Content: simContent",
                      "org.lockss.title.sim1.journalTitle": "Simulated Content",
                      "org.lockss.title.sim1.plugin": "org.lockss.plugin.simulated.SimulatedPlugin",
@@ -1951,11 +1958,11 @@ class TotalLossRecoveryV3TestCase(V3TestCase):
                      "org.lockss.title.sim1.param.3.key": "branch",
                      "org.lockss.title.sim1.param.3.value": "0",
                      "org.lockss.title.sim1.param.4.key": "numFiles",
-                     "org.lockss.title.sim1.param.4.value": "0",
-                     "org.lockss.title.sim1.param.5.key": "pub_down",
-                     "org.lockss.title.sim1.param.5.value": "true",
-                     "org.lockss.title.sim1.param.6.key": "protocol_version",
-                     "org.lockss.title.sim1.param.6.value": "3"}
+                     "org.lockss.title.sim1.param.4.value": "30",
+                     "org.lockss.title.sim1.param.pub_down.key": "pub_down",
+                     "org.lockss.title.sim1.param.pub_down.value": "true"}
+#                     "org.lockss.title.sim1.param.protocol.key": "protocol_version",
+#                     "org.lockss.title.sim1.param.protocol.value": "3"}
 
         self.framework.appendLocalConfig(extraConf, client)
 
@@ -2053,6 +2060,7 @@ def simpleV3Tests():
     suite.addTest(LastFileExtraV3TestCase())
     suite.addTest(VotersDontParticipateV3TestCase())
     suite.addTest(NoQuorumV3TestCase())
+    suite.addTest(TotalLossRecoveryV3TestCase())
     return suite
 
 def randomV3Tests():

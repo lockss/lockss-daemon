@@ -1,5 +1,5 @@
 /*
- * $Id: PollerActions.java,v 1.17 2007-05-11 02:46:27 smorabito Exp $
+ * $Id: PollerActions.java,v 1.18 2007-06-28 07:14:23 smorabito Exp $
  */
 
 /*
@@ -108,6 +108,14 @@ public class PollerActions {
       log.info("Peer " + ud.getVoterId() + " accepted invitation for poll " + 
                ud.getKey() + " and sent voter nonce " +
                ByteArray.toBase64(voterNonce));
+      
+      // Update the peer status.
+      PeerIdentityStatus status = ud.getPoller().getIdentityManager().
+                                  getPeerIdentityStatus(msg.getOriginatorId());
+      if (status != null) {
+        status.joinedPoll();
+      }
+      
       return V3Events.evtOk;
     }
   }

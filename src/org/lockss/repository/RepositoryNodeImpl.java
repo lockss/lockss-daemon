@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.72 2007-03-17 04:19:30 smorabito Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.73 2007-06-28 07:14:23 smorabito Exp $
  */
 
 /*
@@ -887,9 +887,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
   }
   
   public synchronized void signalAgreement(Collection peers) {
-    // loadAgreementHistory may return an empty immutable set, so
-    // it's important to load into a shallow copy.
-    Set agreeingPeers = new HashSet(loadAgreementHistory());
+    Set agreeingPeers = loadAgreementHistory();
     for (Iterator it = peers.iterator(); it.hasNext(); ) {
       String key = ((PeerIdentity)it.next()).getIdString();
       agreeingPeers.add(key);
@@ -1015,13 +1013,14 @@ public class RepositoryNodeImpl implements RepositoryNode {
     if (agreementFile == null) {
       initAgreementFile();
     }
-    BufferedInputStream is = null;
+    DataInputStream is = null;
     try {
       if (agreementFile.exists()) {
-        is = new BufferedInputStream(new FileInputStream(agreementFile));
+        is = new DataInputStream(new FileInputStream(agreementFile));
         return decodeAgreementHistory(is);
       } else {
-        return Collections.EMPTY_SET;
+        // Return an empty (but mutable) set.
+        return new HashSet();
       }
     } catch (Exception e) {
       logger.error("Error loading agreement history", e);
@@ -1032,7 +1031,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
   }
   
   /** Consume the input stream, decoding peer identity keys  */
-  Set decodeAgreementHistory(InputStream is) {
+  Set decodeAgreementHistory(DataInputStream is) {
     Set history = new HashSet();
     String id;
     try {
@@ -1045,7 +1044,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
       // do here is log the fact that there was an error, and try
       // again.
       logger.error("Parse error while trying to decode agreement " +
-                   "history: " + ex);
+                   "history file " + agreementFile + ": " + ex);
     }
     return history;
   }

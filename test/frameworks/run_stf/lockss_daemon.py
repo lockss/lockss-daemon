@@ -535,7 +535,7 @@ class Client:
                 pollKey = row['pollId']['key']
                 (summary, table) = self.getV3PollerDetail(pollKey)
                 allUrls = int(summary['Total URLs In Vote'])
-                agreeUrls = int(summary['Agreeing URLs'])
+                agreeUrls = int(summary['Agreeing URLs']['value'])
                 repairs = int(summary['Completed Repairs']['value'])
                 return ((repairs == allUrls) and (agreeUrls == allUrls))
         return False

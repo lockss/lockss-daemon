@@ -1,5 +1,5 @@
 /*
- * $Id: AuState.java,v 1.27 2007-04-30 04:52:46 tlipkis Exp $
+ * $Id: AuState.java,v 1.28 2007-06-28 07:14:24 smorabito Exp $
  */
 
 /*
@@ -52,8 +52,7 @@ public class AuState implements LockssSerializable {
   protected int clockssSubscriptionStatus;
   protected double v3Agreement = -1.0;
   //Has there ever been a completed V3 poll?
-  // XXX: Added for daemon 1.21.  This should be deprecated after a release
-  //      or two, and removed completely a few more releases after that.
+  /** @deprecated */
   protected boolean hasV3Poll = false;
 
   private static final Logger log = Logger.getLogger("AuState");
@@ -64,13 +63,12 @@ public class AuState implements LockssSerializable {
   static final int URL_UPDATE_LIMIT = 1;
 
   public AuState(ArchivalUnit au, HistoryRepository historyRepo) {
-    this(au, -1, -1, -1, null, CLOCKSS_SUB_UNKNOWN, -1.0, false, historyRepo);
+    this(au, -1, -1, -1, null, CLOCKSS_SUB_UNKNOWN, -1.0, historyRepo);
   }
 
   protected AuState(ArchivalUnit au, long lastCrawlTime, long lastTopLevelPoll,
                     long lastTreeWalk, HashSet crawlUrls,
-		    int clockssSubscriptionStatus,
-                    double v3Agreement, boolean hasV3Poll,
+		    int clockssSubscriptionStatus, double v3Agreement,
                     HistoryRepository historyRepo) {
     this.au = au;
     this.lastCrawlTime = lastCrawlTime;
@@ -79,7 +77,6 @@ public class AuState implements LockssSerializable {
     this.crawlUrls = crawlUrls;
     this.clockssSubscriptionStatus = clockssSubscriptionStatus;
     this.v3Agreement = v3Agreement;
-    this.hasV3Poll = hasV3Poll;
     this.historyRepo = historyRepo;
   }
 
@@ -133,9 +130,6 @@ public class AuState implements LockssSerializable {
 
   public void setV3Agreement(double d) {
     v3Agreement = d;
-    if (!hasV3Poll()) {
-      hasV3Poll(true);
-    }
     historyRepo.storeAuState(this);
   }
 
@@ -143,10 +137,22 @@ public class AuState implements LockssSerializable {
     return v3Agreement;
   }
   
+  /** 
+   * Deprecated in Daemon 1.25.  Please remove after a few
+   * daemon releases.
+   * 
+   * @deprecated
+   */
   public void hasV3Poll(boolean b) {
     hasV3Poll = b;
   }
   
+  /** 
+   * Deprecated in Daemon 1.25.  Please remove after a few
+   * daemon releases.
+   * 
+   * @deprecated
+   */
   public boolean hasV3Poll() {
     return hasV3Poll;
   }

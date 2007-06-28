@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManager.java,v 1.75 2007-05-09 10:34:10 smorabito Exp $
+ * $Id: IdentityManager.java,v 1.76 2007-06-28 07:14:23 smorabito Exp $
  */
 
 /*
@@ -91,9 +91,21 @@ public interface IdentityManager extends LockssManager {
   public static final String PARAM_IDDB_DIR = PREFIX + "database.dir";
 
   /**
+   * <p>The name of the pre-V3 IDDB file.</p>
+   */
+  public static final String V1_IDDB_FILENAME = "iddb.xml";
+
+  /**
+   * <p>If true, any old (V1) IDDB files will be deleted on startup.</p>
+   */
+  public static final String PARAM_DELETE_OLD_IDDB_FILES =
+    PREFIX + "deleteOldIddbFiles";
+  public static final boolean DEFAULT_DELETE_OLD_IDDB_FILES = false;
+
+  /**
    * <p>The name of the IDDB file.</p>
    */
-  public static final String IDDB_FILENAME = "iddb.xml";
+  public static final String IDDB_FILENAME = "iddb_v3.xml";
 
   /**
    * <p>The mapping file for this class.</p>
@@ -315,9 +327,10 @@ public interface IdentityManager extends LockssManager {
   public void writeIdentityDbTo(OutputStream out) throws IOException;
 
   /**
-   * <p>A Castor helper method to convert an identity map into a
-   * serializable bean.</p>
-   * @return An IdentityListBean corresponding to the identity map.
+   * Deprecated as of daemon 1.25.  There are currently no callers of this
+   * method.  Please remove after a few daemon releases.
+   * 
+   * @deprecated
    */
   public IdentityListBean getIdentityListBean();
 
@@ -362,16 +375,6 @@ public interface IdentityManager extends LockssManager {
                                      float agreement);
   
   /**
-   * Signal agreement with a peer on a specific node.
-   * 
-   * @param pid The {@link PeerIdentity} of the agreeing peer.
-   * @param au The {@link ArchivalUnit}.
-   * @param url The node on which agreement was found.
-   */
-  /**** Implement for 1.21 ****/ 
-  // public void signalAgreed(PeerIdentity pid, ArchivalUnit au, String url);
-  
-  /**
    * Return the percent agreement for a given peer on a given
    * {@link ArchivalUnit}.  Used only by V3 Polls.
    * 
@@ -380,17 +383,6 @@ public interface IdentityManager extends LockssManager {
    * @return The percent agreement for the peer on the au.
    */
   public float getPercentAgreement(PeerIdentity pid, ArchivalUnit au);
-  
-  /**
-   * 
-   * @param pid The {@link PeerIdentity}.
-   * @param au The {@link ArchivalUnit}.
-   * @param url The specific node in the URL for which to check for
-   *            agreement.
-   * @return True if the peer has agreed on the specified URL.
-   */
-  /**** Implement for 1.21 ****/
-  // public boolean hasAgreed(PeerIdentity pid, ArchivalUnit au, String url);
   
   /**
    * <p>Peers with whom we have had any disagreement since the last
@@ -450,6 +442,18 @@ public interface IdentityManager extends LockssManager {
    */
   public void readIdentityAgreementFrom(ArchivalUnit au, InputStream in)
       throws IOException;
+  
+  /**
+   * @param pid The PeerIdentity.
+   * @return The PeerIdentityStatus associated with the given PeerIdentity.
+   */
+  public PeerIdentityStatus getPeerIdentityStatus(PeerIdentity pid);
+  
+  /**
+   * @param key The Identity Key
+   * @return The PeerIdentityStatus associated with the given PeerIdentity.
+   */
+  public PeerIdentityStatus getPeerIdentityStatus(String key);
 
   public static class IdentityAgreement implements LockssSerializable {
     private long lastAgree = 0;

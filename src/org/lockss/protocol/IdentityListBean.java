@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityListBean.java,v 1.5 2005-09-06 23:24:53 thib_gc Exp $
+ * $Id: IdentityListBean.java,v 1.6 2007-06-28 07:14:23 smorabito Exp $
  */
 
 /*
@@ -34,6 +34,12 @@ package org.lockss.protocol;
 import java.io.Serializable;
 import java.util.Collection;
 
+/**
+ * As of daemon 1.25, this class is deprecated.  Please delete this class
+ * after several daemon releases.
+ * 
+ * @deprecated
+ */
 public class IdentityListBean implements Serializable {
   Collection idBeans;
 

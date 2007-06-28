@@ -1,5 +1,5 @@
 /*
- * $Id: TestIDUtil.java,v 1.1 2007-03-17 04:19:31 smorabito Exp $
+ * $Id: TestIDUtil.java,v 1.2 2007-06-28 07:14:26 smorabito Exp $
  */
 
 /*
@@ -303,7 +303,7 @@ public class TestIDUtil extends LockssTestCase {
     encodedKey[7] = (byte)0x00;
     
     try {
-      IDUtil.decodeOneKey(new ByteArrayInputStream(encodedKey));
+      IDUtil.decodeOneKey(new DataInputStream(new ByteArrayInputStream(encodedKey)));
       // Should throw.
       fail("Should have thrown IdentityParseException");
     } catch (IdentityParseException ex) {

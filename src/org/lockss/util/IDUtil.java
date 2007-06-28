@@ -1,5 +1,5 @@
 /*
- * $Id: IDUtil.java,v 1.4 2007-03-17 04:19:30 smorabito Exp $
+ * $Id: IDUtil.java,v 1.5 2007-06-28 07:14:24 smorabito Exp $
  *
 
  Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
@@ -84,11 +84,11 @@ public class IDUtil {
    * try to leave the stream at the start of the next key, but there
    * is no guarantee.
    * 
+   * @return The decoded key, or null if at the end of the stream.
    * @throws IdentityParseException if the key cannot be parsed.
    */
-  public static String decodeOneKey(InputStream is)
+  public static String decodeOneKey(DataInputStream dis)
       throws IdentityParseException {
-    DataInputStream dis = new DataInputStream(is);
     // Read the protocol byte off the input stream.
     try {
       byte protocol = dis.readByte();
@@ -105,6 +105,10 @@ public class IDUtil {
         throw new IdentityParseException("Unexpected protocol header " +
                                          protocol);
       }
+    } catch (EOFException ex) {
+      // Return null.
+      log.debug2("End of agreement history file reached, returning null");
+      return null;
     } catch (IOException ex) {
       throw new IdentityParseException("Cannot read from agreement history file.");
     }

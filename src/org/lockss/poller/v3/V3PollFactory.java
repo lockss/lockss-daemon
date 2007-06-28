@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollFactory.java,v 1.14 2007-06-17 05:23:13 smorabito Exp $
+ * $Id: V3PollFactory.java,v 1.15 2007-06-28 07:14:23 smorabito Exp $
  */
 
 /*
@@ -194,9 +194,10 @@ public class V3PollFactory extends BasePollFactory {
   private V3Voter makeV3Voter(LcapMessage msg, LockssDaemon daemon,
                               PeerIdentity orig, ArchivalUnit au)
       throws V3Serializer.PollSerializerException {
+    IdentityManager idMgr = daemon.getIdentityManager();
     V3Voter voter = null;
     // Ignore messages from ourself.
-    if (orig == daemon.getIdentityManager().getLocalPeerIdentity(Poll.V3_PROTOCOL)) {
+    if (orig == idMgr.getLocalPeerIdentity(Poll.V3_PROTOCOL)) {
       log.info("Not responding to poll request from myself.");
       return null;
     }
@@ -247,6 +248,11 @@ public class V3PollFactory extends BasePollFactory {
                 m.getKey());
     } 
     
+    // Update the status of the peer that called this poll.
+    PeerIdentityStatus status = idMgr.getPeerIdentityStatus(orig);
+    if (status != null) {
+      status.calledPoll();
+    }
     return voter;
   }
 

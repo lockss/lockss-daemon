@@ -1,5 +1,5 @@
 /*
- * $Id: TestIdentityManagerImpl.java,v 1.14 2006-09-19 01:10:12 smorabito Exp $
+ * $Id: TestIdentityManagerImpl.java,v 1.15 2007-06-28 07:14:25 smorabito Exp $
  */
 
 /*
@@ -899,7 +899,7 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
 
     for (Iterator iter = idMap.values().iterator();
 	 iter.hasNext();) {
-      LcapIdentity id = (LcapIdentity)iter.next();
+      LcapIdentity id = ((PeerIdentityStatus)iter.next()).getLcapIdentity();
       assertTrue(id.getPeerIdentity() + " not found in " + expectedAddresses,
 		 expectedAddresses.contains(id.getPeerIdentity().getIdString()));
     }
