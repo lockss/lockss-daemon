@@ -31,11 +31,12 @@
     <string>au_crawlrules</string>
     <list>
       <string>4,&quot;^(%s|%s)&quot;, base_url, base_url2</string>
-      <string>1,&quot;%sEJ/volume/-lockss=1/%s/%d&quot;, base_url, journal_id, volume</string>
-      <string>1,&quot;%sEJ/volume/-lockss=1/%s/%d&quot;, base_url2, journal_id, volume</string>
-      <string>2,&quot;.*/(help|login)/.*&quot;</string>
-      <string>1,&quot;%sEJ/(abstract|refs|article|mmedia|toc)/%s/%d/.*&quot;, base_url, journal_id, volume</string>
-      <string>1,&quot;%slinks/.*&quot;, base_url2</string>
+      <string>1,&quot;^(%s|%s).*\.(gif|css|jpeg|jpg)$&quot;, base_url, base_url2</string>
+      <string>1,&quot;^(%s|%s)EJ/volume/-lockss=1/%s/%d$&quot;, base_url, base_url2, journal_id, volume</string>
+      <string>1,&quot;^%sEJ/(abstract|refs|article|mmedia|toc)/%s/%d/&quot;, base_url, journal_id, volume</string>
+      <string>1,&quot;^%sEJ/(contact|referees)/%s/&quot;, base_url, journal_id</string>
+      <string>1,&quot;^%slinks/&quot;, base_url2</string>
+      <string>1,&quot;^%scopyrt.html$&quot;, base_url</string>
     </list>
   </entry>
   <entry>
