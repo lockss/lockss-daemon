@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyAndContent.java,v 1.20 2007-06-27 07:50:13 tlipkis Exp $
+ * $Id: ProxyAndContent.java,v 1.21 2007-06-28 01:06:03 tlipkis Exp $
  */
 
 /*
@@ -141,6 +141,7 @@ public class ProxyAndContent extends LockssServlet {
   private void displayProxyServer() throws IOException {
     // Start page
     Page page = newPage();
+    addJavaScript(page);
     ServletUtil.layoutExplanationBlock(page, PROXY_SERVER_EXPLANATION);
     layoutErrorBlock(page);
 
@@ -247,6 +248,7 @@ public class ProxyAndContent extends LockssServlet {
   private void displayProxyClient() throws IOException {
     // Start page
     Page page = newPage();
+    addJavaScript(page);
     ServletUtil.layoutExplanationBlock(page, PROXY_CLIENT_EXPLANATION);
     layoutErrorBlock(page);
 
@@ -258,13 +260,21 @@ public class ProxyAndContent extends LockssServlet {
     tbl.newRow();
     tbl.newCell("align=\"center\"");
 
+    Input hostElem = new Input(Input.Text, CRAWL_PROXY_HOST_NAME,
+			       getDefaultCrawlProxyHost());
+    Input portElem = new Input(Input.Text, CRAWL_PROXY_PORT_NAME,
+			       getDefaultCrawlProxyPort());
+
     // "enable" element
     Input enaElem = new Input(Input.Checkbox, CRAWL_PROXY_ENABLE_NAME, "1");
     if (getDefaultCrawlProxyEnable()) {
       enaElem.check();
+    } else {
+      hostElem.attribute("disabled", "true");
+      portElem.attribute("disabled", "true");
     }
-//     elem.attribute("onchange",
-// 		    "SelectEnable(this,'plugin_sel')");
+    enaElem.attribute("onchange",
+		      "selectEnable(this,'host_entry', 'port_entry')");
     setTabOrder(enaElem);
     tbl.add(enaElem);
     tbl.add("Proxy crawls");
@@ -273,15 +283,14 @@ public class ProxyAndContent extends LockssServlet {
     tbl.newCell("align=\"center\"");
 
     tbl.add("HTTP Proxy:&nbsp;");
-    Input hostElem = new Input(Input.Text, CRAWL_PROXY_HOST_NAME,
-			       getDefaultCrawlProxyHost());
     hostElem.setSize(40);
+    hostElem.attribute("id", "host_entry");
     setTabOrder(hostElem);
     tbl.add(hostElem);
     tbl.add(" Port:&nbsp;");
-    Input portElem = new Input(Input.Text, CRAWL_PROXY_PORT_NAME,
-			       getDefaultCrawlProxyPort());
+
     portElem.setSize(6);
+    portElem.attribute("id", "port_entry");
     setTabOrder(portElem);
     tbl.add(portElem);
 
@@ -446,9 +455,9 @@ public class ProxyAndContent extends LockssServlet {
 
   /* package */ static void saveAuditAndIcp(ConfigManager configMgr,
                                             boolean auditEnable,
-                                            int auditPort,
+                                            String auditPort,
                                             boolean icpEnable,
-                                            int icpPort)
+                                            String icpPort)
         throws IOException {
     final String TRUE = "true";
     final String FALSE = "false";
@@ -457,7 +466,7 @@ public class ProxyAndContent extends LockssServlet {
     // Save audit proxy config
     config = ConfigManager.newConfiguration();
     config.put(PARAM_AUDIT_ENABLE, auditEnable ? TRUE : FALSE);
-    config.put(PARAM_AUDIT_PORT, Integer.toString(auditPort));
+    config.put(PARAM_AUDIT_PORT, auditPort);
     configMgr.modifyCacheConfigFile(config,
                                     ConfigManager.CONFIG_FILE_AUDIT_PROXY,
                                     CONFIG_FILE_COMMENT);
@@ -465,7 +474,7 @@ public class ProxyAndContent extends LockssServlet {
     // Save ICP server config
     config = ConfigManager.newConfiguration();
     config.put(IcpManager.PARAM_ICP_ENABLED, icpEnable ? TRUE : FALSE);
-    config.put(IcpManager.PARAM_ICP_PORT, Integer.toString(icpPort));
+    config.put(IcpManager.PARAM_ICP_PORT, icpPort);
     configMgr.modifyCacheConfigFile(config,
                                     ConfigManager.CONFIG_FILE_ICP_SERVER,
                                     CONFIG_FILE_COMMENT);
@@ -473,7 +482,15 @@ public class ProxyAndContent extends LockssServlet {
 
   private void processUpdateProxyServer_SaveChanges() throws IOException {
     // temporary measure
-    saveAuditAndIcp(configMgr, formAuditEnable, auditPort, formIcpEnable, icpPort);
+    String auditp =
+      formAuditEnable ? Integer.toString(auditPort) :
+      CurrentConfig.getParam(PARAM_AUDIT_PORT);
+
+    String icpp =
+      formIcpEnable ? Integer.toString(icpPort) :
+      CurrentConfig.getParam(IcpManager.PARAM_ICP_PORT);
+
+    saveAuditAndIcp(configMgr, formAuditEnable, auditp, formIcpEnable, icpp);
   }
 
   private void processUpdateProxyClient() throws IOException {
@@ -483,6 +500,10 @@ public class ProxyAndContent extends LockssServlet {
       !StringUtil.isNullString(req.getParameter(CRAWL_PROXY_ENABLE_NAME));
     formCrawlProxyPort = req.getParameter(CRAWL_PROXY_PORT_NAME);
     formCrawlProxyHost = req.getParameter(CRAWL_PROXY_HOST_NAME);
+
+    if (formCrawlProxyEnable && StringUtil.isNullString(formCrawlProxyHost)) {
+      errList.add("Proxy host must be filled in");
+    }      
 
     int proxyPort = 0;
     try {
@@ -504,10 +525,18 @@ public class ProxyAndContent extends LockssServlet {
     else {
       // There were no errors
       try {
-        processUpdateProxyClient_SaveChanges(configMgr,
-					     formCrawlProxyEnable,
-					     formCrawlProxyHost,
-					     proxyPort);
+	if (formCrawlProxyEnable) {
+	  processUpdateProxyClient_SaveChanges(configMgr,
+					       formCrawlProxyEnable,
+					       formCrawlProxyHost,
+					       formCrawlProxyPort);
+	} else {
+	  String host = CurrentConfig.getParam(BaseCrawler.PARAM_PROXY_HOST);
+	  String port = CurrentConfig.getParam(BaseCrawler.PARAM_PROXY_PORT);
+	  processUpdateProxyClient_SaveChanges(configMgr,
+					       formCrawlProxyEnable,
+					       host, port);
+	}
 	statusMsg = "Update successful";
       }
       catch (IOException ioe) {
@@ -523,18 +552,16 @@ public class ProxyAndContent extends LockssServlet {
     processUpdateProxyClient_SaveChanges(ConfigManager configMgr,
 					 boolean crawlProxyEnable,
 					 String crawlProxyHost,
-					 int crawlProxyPort)
+					 String crawlProxyPort)
       throws IOException {
-    final String TRUE = "true";
-    final String FALSE = "false";
-    Configuration config;
 
-    // Save audit proxy config
-    config = ConfigManager.newConfiguration();
+    Configuration config = ConfigManager.newConfiguration();
     config.put(BaseCrawler.PARAM_PROXY_ENABLED,
 	       Boolean.toString(crawlProxyEnable));
-    config.put(BaseCrawler.PARAM_PROXY_HOST, crawlProxyHost);
-    config.put(BaseCrawler.PARAM_PROXY_PORT, Integer.toString(crawlProxyPort));
+    if (!StringUtil.isNullString(crawlProxyHost)) {
+      config.put(BaseCrawler.PARAM_PROXY_HOST, crawlProxyHost);
+    }
+    config.put(BaseCrawler.PARAM_PROXY_PORT, crawlProxyPort);
     configMgr.modifyCacheConfigFile(config,
                                     ConfigManager.CONFIG_FILE_CRAWL_PROXY,
                                     "Crawl proxy options");

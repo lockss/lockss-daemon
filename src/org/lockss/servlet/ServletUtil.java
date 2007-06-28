@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.44 2007-06-27 07:50:28 tlipkis Exp $
+ * $Id: ServletUtil.java,v 1.45 2007-06-28 01:06:03 tlipkis Exp $
  */
 
 /*
@@ -655,6 +655,9 @@ public class ServletUtil {
     if (defaultEnable) {
       enaElem.check();
     }
+    String portFieldId = "id_" + portFieldName;
+    enaElem.attribute("onchange",
+		      "selectEnable(this,'" + portFieldId + "')");
     servlet.setTabOrder(enaElem);
     table.add(enaElem);
     table.add("Enable " + enableDescription);
@@ -664,6 +667,7 @@ public class ServletUtil {
     // "port" element
     Input portElem = new Input(Input.Text, portFieldName, defaultPort);
     portElem.setSize(6);
+    portElem.attribute("id", portFieldId);
     servlet.setTabOrder(portElem);
     table.add(portElem);
 
