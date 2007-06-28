@@ -30,7 +30,7 @@ public class AcsUrlNormalizer implements UrlNormalizer {
   public String normalizeUrl(String url, ArchivalUnit au)
       throws PluginException {
     int idx = url.indexOf(QUERY_ARG);
-    return idx == -1 ? url : url.replaceFirst("sessid=[0-9]+", "sessid=");
+    return idx == -1 ? url : url.replaceFirst("sessid=[0-9]+", "sessid=LOCKSS-FAKE-SESSION-ID");
   }
 
 }
