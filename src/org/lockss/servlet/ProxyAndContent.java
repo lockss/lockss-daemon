@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyAndContent.java,v 1.21 2007-06-28 01:06:03 tlipkis Exp $
+ * $Id: ProxyAndContent.java,v 1.22 2007-06-28 03:58:18 tlipkis Exp $
  */
 
 /*
@@ -370,7 +370,7 @@ public class ProxyAndContent extends LockssServlet {
 
   private boolean isLegalIcpPort(int port) {
     return port >= 1024 &&
-        resourceMgr.isUdpPortAvailable(port, IcpManager.class);
+        resourceMgr.isUdpPortAvailable(port, IcpManager.SERVER_NAME);
   }
 
   private LinkWithExplanation makeDescriptor(String linkText,
