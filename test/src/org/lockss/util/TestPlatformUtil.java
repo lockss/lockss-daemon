@@ -1,5 +1,5 @@
 /*
- * $Id: TestPlatformUtil.java,v 1.3 2007-04-28 00:21:50 dshr Exp $
+ * $Id: TestPlatformUtil.java,v 1.4 2007-06-28 06:07:09 tlipkis Exp $
  */
 
 /*
@@ -65,6 +65,10 @@ public class TestPlatformUtil extends LockssTestCase {
     ConfigurationUtil.setFromArgs(PlatformUtil.PARAM_UNFILTERED_TCP_PORTS,
 				  "9900;1234");
     assertEquals(ListUtil.list("9900", "1234"), info.getUnfilteredTcpPorts());
+    ConfigurationUtil.setFromArgs(PlatformUtil.PARAM_UNFILTERED_TCP_PORTS,
+				  "9900,1234,333");
+    assertEquals(ListUtil.list("9900", "1234", "333"),
+		 info.getUnfilteredTcpPorts());
   }
 
   public void testDiskUsageNonexistentPath() throws Exception {

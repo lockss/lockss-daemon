@@ -1,5 +1,5 @@
 /*
- * $Id: PlatformUtil.java,v 1.6 2007-04-28 00:21:50 dshr Exp $
+ * $Id: PlatformUtil.java,v 1.7 2007-06-28 06:07:09 tlipkis Exp $
  */
 
 /*
@@ -93,7 +93,14 @@ public class PlatformUtil {
 
   public List getUnfilteredTcpPorts() {
     Configuration config = CurrentConfig.getCurrentConfig();
-    return config.getList(PARAM_UNFILTERED_TCP_PORTS);
+    List lst = config.getList(PARAM_UNFILTERED_TCP_PORTS);
+    // CD <= 248 use comma as separator in this string
+    String str;
+    if (lst.size() == 1 &&
+	((str = (String)lst.get(0)).indexOf(',') != -1)) {
+      return StringUtil.breakAt(str, ',', 0, true);
+    }
+    return lst;
   }
 
   public List getUnfilteredUdpPorts() {
