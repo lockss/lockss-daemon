@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyIpAccess.java,v 1.26 2007-05-01 23:34:54 tlipkis Exp $
+ * $Id: ProxyIpAccess.java,v 1.27 2007-06-28 01:14:21 tlipkis Exp $
  */
 
 /*
@@ -77,7 +77,10 @@ public class ProxyIpAccess extends IpAccessControl {
     boolean icpEnable = getLockssDaemon().getIcpManager().isIcpServerRunning();
     int icpPort = getLockssDaemon().getIcpManager().getCurrentPort();
     ProxyAndContent.saveAuditAndIcp(configMgr,
-        auditEnable, auditPort, icpEnable, icpPort);
+				    auditEnable,
+				    Integer.toString(auditPort),
+				    icpEnable,
+				    Integer.toString(icpPort));
     super.saveChanges();
   }
 

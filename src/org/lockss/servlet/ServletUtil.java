@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.45 2007-06-28 01:06:03 tlipkis Exp $
+ * $Id: ServletUtil.java,v 1.46 2007-06-28 01:09:29 tlipkis Exp $
  */
 
 /*
@@ -650,10 +650,14 @@ public class ServletUtil {
     // Start line
     table.newCell(ENABLEPORT_CELL_ATTRIBUTES);
 
+    Input portElem = new Input(Input.Text, portFieldName, defaultPort);
+
     // "enable" element
     Input enaElem = new Input(Input.Checkbox, enableFieldName, "1");
     if (defaultEnable) {
       enaElem.check();
+    } else {
+      portElem.attribute("disabled", "true");
     }
     String portFieldId = "id_" + portFieldName;
     enaElem.attribute("onchange",
@@ -665,7 +669,6 @@ public class ServletUtil {
     table.add(" on port&nbsp;");
 
     // "port" element
-    Input portElem = new Input(Input.Text, portFieldName, defaultPort);
     portElem.setSize(6);
     portElem.attribute("id", portFieldId);
     servlet.setTabOrder(portElem);

@@ -52,6 +52,18 @@ function cascadeSelectEnable(elem, nextId) {
  }
 }
 
+function selectEnable(elem, id1, id2) {
+ var enable = elem.checked;
+ var el1 = document.getElementById(id1);
+ if (el1 !== undefined) {
+  el1.disabled = !enable;
+ }
+ var el2 = document.getElementById(id2);
+ if (el2 !== undefined) {
+  el2.disabled = !enable;
+ }
+}
+
 function selectAll(form, clear) {
  for (var i=0;i < form.length;i++) {
   elem = form.elements[i];
