@@ -6,6 +6,11 @@ export PROJECT_DIR
 
 if [ "$1" = "clean" ] ; then
   rm -rf lib
+	for i in 1 2 3 4 ; do
+		cd test$i
+		rm -rf root_?
+		cd ..
+	done
 fi
 
 if [ "$1" = "start" ] ; then

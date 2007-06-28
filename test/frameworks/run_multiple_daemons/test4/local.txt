@@ -1,10 +1,5 @@
 org.lockss.ui.port=8084
 
-org.lockss.localIPAddress=4.4.4.4
-org.lockss.comm.unicast.port=9003
-org.lockss.comm.unicast.sendToPort=9000
-org.lockss.comm.unicast.sendToAddr=127.0.0.1
-
 #test settings
 org.lockss.test.doTreewalk=false
 org.lockss.test.treewalk.auId=org|lockss|plugin|simulated|SimulatedPlugin&root~localA
