@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingStreamComm.java,v 1.25 2007-03-14 05:53:18 tlipkis Exp $
+ * $Id: BlockingStreamComm.java,v 1.26 2007-06-28 06:06:44 tlipkis Exp $
  */
 
 /*
@@ -58,6 +58,8 @@ public class BlockingStreamComm
   implements ConfigurableManager, LcapStreamComm, PeerMessage.Factory {
 
   static Logger log = Logger.getLogger("SComm");
+
+  public static final String SERVER_NAME = "StreamComm";
 
   /** Use V3 over SSL **/
   public static final String PARAM_USE_V3_OVER_SSL = PREFIX + "v3OverSsl";
@@ -736,6 +738,10 @@ public class BlockingStreamComm
     rcvQueue = new FifoQueue();
     try {
       int port = myPeerAddr.getPort();
+      if (!getDaemon().getResourceManager().reserveTcpPort(port,
+							   SERVER_NAME)) {
+	throw new IOException("TCP port " + port + " unavailable");
+      }
       log.debug("Listening on port " + port);
       listenSock =
 	getSocketFactory().newServerSocket(port, paramBacklog);
