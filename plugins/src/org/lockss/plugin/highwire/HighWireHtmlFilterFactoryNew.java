@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireHtmlFilterFactoryNew.java,v 1.2 2007-06-22 21:53:33 troberts Exp $
+ * $Id: HighWireHtmlFilterFactoryNew.java,v 1.3 2007-06-29 18:27:13 troberts Exp $
  */
 
 /*
@@ -46,6 +46,9 @@ public class HighWireHtmlFilterFactoryNew implements FilterFactory {
 
   // Remove everything on the line after these comments
   static HtmlTagFilter.TagPair[] tagpairs = {
+    new HtmlTagFilter.TagPair("<A NAME=\"relation_type_", "</HTML>", 
+			      true, false),
+    new HtmlTagFilter.TagPair("<A NAME=\"otherarticles\">", "</HTML>"),
     new HtmlTagFilter.TagPair("<", ">"),
   };
   static List tagList = ListUtil.fromArray(tagpairs);
@@ -54,7 +57,7 @@ public class HighWireHtmlFilterFactoryNew implements FilterFactory {
 					       InputStream in,
 					       String encoding) {
 
-    NodeFilter[] filters = new NodeFilter[4];
+    NodeFilter[] filters = new NodeFilter[8];
     filters[0] =
       HtmlNodeFilters.tagWithAttribute("div", "id", "authenticationstring");
 
@@ -65,6 +68,18 @@ public class HighWireHtmlFilterFactoryNew implements FilterFactory {
 
     filters[3] =
       HtmlNodeFilters.tagWithAttribute("table", "class", "content_box_inner_table");
+
+    filters[4] =
+      HtmlNodeFilters.tagWithAttribute("a", "class", "contentbox");
+
+    filters[5] =
+      HtmlNodeFilters.tagWithAttribute("div", "id", "ArchivesNav");
+
+    filters[6] =
+      HtmlNodeFilters.tagWithText("strong", "related", true);
+
+    filters[7] =
+      HtmlNodeFilters.lowestLevelMatchFilter(HtmlNodeFilters.tagWithText("table", "Related Content", false));
 
     OrFilter combineFilter = new OrFilter();
     combineFilter.setPredicates(filters);
@@ -81,4 +96,6 @@ public class HighWireHtmlFilterFactoryNew implements FilterFactory {
     //    return new ReaderInputStream(tagFilter);
     return new ReaderInputStream(new WhiteSpaceFilter(tagFilter));
   }
+
+
 }
