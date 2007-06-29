@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlNodeFilters.java,v 1.1 2006-09-18 22:29:01 thib_gc Exp $
+ * $Id: HtmlNodeFilters.java,v 1.2 2007-06-29 18:26:59 troberts Exp $
  */
 
 /*
@@ -182,6 +182,15 @@ public class HtmlNodeFilters {
    */
   public static NodeFilter commentWithRegex(String regex, boolean ignoreCase) {
     return new CommentRegexFilter(regex, ignoreCase);
+  }
+
+  /** Create a NodeFilter that matches the lowest level node that matches the
+   * specified filter.  This is useful for searching for text within a tag, 
+   * because the default is to match parent nodes as well.
+   */
+  public static NodeFilter lowestLevelMatchFilter(NodeFilter filter) {
+    return new AndFilter(filter,
+			 new NotFilter(new HasChildFilter(filter, true)));
   }
 
   /**
