@@ -929,7 +929,6 @@
     <property name="HighWireClinicalMicrobiologyReviews18">
       <property name="title" value="Clinical Microbiology Reviews Volume 18" />
       <property name="journalTitle" value="Clinical Microbiology Reviews" />
-      <property name="estSize" value="60MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -961,7 +960,6 @@
     <property name="HighWireEukaryoticCell4">
       <property name="title" value="Eukaryotic Cell Volume 4" />
       <property name="journalTitle" value="Eukaryotic Cell" />
-      <property name="estSize" value="700MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
@@ -990,21 +988,6 @@
       <property name="attributes.publisher" value="American Society for Microbiology" />
     </property>
 
-    <property name="HighWireInfectionandImmunity74">
-      <property name="title" value="Infection and Immunity Volume 74" />
-      <property name="journalTitle" value="Infection and Immunity" />
-      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
-      <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://iai.asm.org/" />
-      </property>
-      <property name="param.2">
-	<property name="key" value="volume_name" />
-	<property name="value" value="74" />
-      </property>
-      <property name="attributes.publisher" value="American Society for Microbiology" />
-    </property>
-
     <property name="HighWireInfectionandImmunity73">
       <property name="title" value="Infection and Immunity Volume 73" />
       <property name="journalTitle" value="Infection and Immunity" />
@@ -1016,6 +999,21 @@
       <property name="param.2">
 	<property name="key" value="volume_name" />
 	<property name="value" value="73" />
+      </property>
+      <property name="attributes.publisher" value="American Society for Microbiology" />
+    </property>
+
+    <property name="HighWireInfectionandImmunity74">
+      <property name="title" value="Infection and Immunity Volume 74" />
+      <property name="journalTitle" value="Infection and Immunity" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://iai.asm.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="74" />
       </property>
       <property name="attributes.publisher" value="American Society for Microbiology" />
     </property>
@@ -1113,7 +1111,6 @@
     <property name="HighWireMicrobiologyandMolecularBiologyReviews69">
       <property name="title" value="Microbiology and Molecular Biology Reviews Volume 69" />
       <property name="journalTitle" value="Microbiology and Molecular Biology Reviews" />
-      <property name="estSize" value="150MB" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
 	<property name="key" value="base_url" />
