@@ -1,5 +1,5 @@
 /*
- * $Id: FuncArcCrawler2.java,v 1.1 2007-03-17 21:31:31 dshr Exp $
+ * $Id: FuncArcCrawler2.java,v 1.2 2007-07-03 16:51:09 dshr Exp $
  */
 
 /*
@@ -171,7 +171,7 @@ public class FuncArcCrawler2 extends LockssTestCase {
     log.debug3("Actual content size = " + actualSize);
     long error = 29368 - actualSize;
     error = (error < 0 ? -error : error);
-    assertTrue(error < 60);
+    assertTrue("ARC file changed size by " + error + " bytes", error < 70);
 
   }
 
