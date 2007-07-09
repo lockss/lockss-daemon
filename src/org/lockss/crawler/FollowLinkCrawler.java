@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.60 2007-04-26 01:39:15 tlipkis Exp $
+ * $Id: FollowLinkCrawler.java,v 1.60.4.1 2007-07-09 05:46:45 tlipkis Exp $
  */
 
 /*
@@ -226,6 +226,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	    return aborted();
 	  }
 	  logger.warning("Unexpected exception processing: " + nextUrl, e);
+	  crawlStatus.signalErrorForUrl(nextUrl, e.toString());
 	}
 	urlsToCrawl.remove(nextUrl);
 	if  (!crawlRes) {
@@ -394,8 +395,10 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	    LinkExtractor extractor = getLinkExtractor(cu);
 	    if (extractor != null) {
 	      //IOException if the CU can't be read
+	      InputStream in = null;
 	      try {
-		extractor.extractUrls(au, cu.getUnfilteredInputStream(),
+		in = cu.getUnfilteredInputStream();
+		extractor.extractUrls(au, in,
 				      getCharset(cu),
 				      PluginUtil.getBaseUrl(cu),
 				      new MyLinkExtractorCallback(parsedPages,
@@ -413,6 +416,8 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 					      "Plugin LinkExtractor error: " +
 					      e.getMessage());
 		error = Crawler.STATUS_PLUGIN_ERROR;
+	      } finally {
+		IOUtil.safeClose(in);
 	      }
 	    }
 	    parsedPages.add(uc.getUrl());
