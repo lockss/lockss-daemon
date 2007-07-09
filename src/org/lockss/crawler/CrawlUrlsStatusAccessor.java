@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlUrlsStatusAccessor.java,v 1.4 2007-05-28 05:23:26 tlipkis Exp $
+ * $Id: CrawlUrlsStatusAccessor.java,v 1.4.2.1 2007-07-09 05:46:53 tlipkis Exp $
  */
 
 /*
@@ -111,6 +111,7 @@ public class CrawlUrlsStatusAccessor implements StatusAccessor {
     table.setColumnDescriptors(getColDescs(tableStr, status));
     table.setTitle(getTableTitle(status, tableStr));
     table.setRows(makeRows(status, tableStr));
+    table.setSummaryInfo(getSummaryInfo(tableStr, status));
   }
 
   private String getTableTitle(CrawlerStatus status, String tableStr) {
@@ -182,14 +183,7 @@ public class CrawlUrlsStatusAccessor implements StatusAccessor {
     } else if (PENDING_TABLE_NAME.equals(tableStr)) {
       rows = urlSetToRows(status.getUrlsPending());
     } else if (EXCLUDED_TABLE_NAME.equals(tableStr)) {
-      Collection excl = status.getUrlsExcluded();
-      rows = new ArrayList(excl.size() + 1);
-      if (status.getNumExcludedExcludes() > 0) {
-	rows.add(makeRow( (status.getNumExcludedExcludes() +
-			   " or fewer additional off-site URLS"),
-			  0));
-      }
-      rows = urlSetToRows(rows, excl);
+      rows = urlSetToRows(status.getUrlsExcluded());
     } else if (ERROR_TABLE_NAME.equals(tableStr)) {
       Map errorMap = status.getUrlsWithErrors();
       Set errorUrls = errorMap.keySet();
@@ -237,6 +231,23 @@ public class CrawlUrlsStatusAccessor implements StatusAccessor {
     row.put(CRAWL_ERROR, error);
     return row;
   }
+
+  List getSummaryInfo(String tableStr, CrawlerStatus status) {
+    if (EXCLUDED_TABLE_NAME.equals(tableStr)) {
+      Collection excl = status.getUrlsExcluded();
+      if (status.getNumExcludedExcludes() > 0) {
+	List summary = new ArrayList();
+	String str = status.getNumExcludedExcludes() +
+	  " or fewer additional off-site URLS were excluded but not listed";
+	summary.add(new StatusTable.SummaryInfo(null,
+						ColumnDescriptor.TYPE_STRING,
+						str));
+	return summary;
+      }
+    }
+    return null;
+  }
+
 
   public String getDisplayName() {
     throw new UnsupportedOperationException("No generic name for SingleCrawlStatus");
