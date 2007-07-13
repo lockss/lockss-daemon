@@ -6699,6 +6699,7 @@
       <property name="title" value="DSHR Blog" />
       <property name="journalTitle" value="DSHRBlog" />
       <property name="plugin" value="org.lockss.plugin.blogger.BloggerPlugin" />
+      <property name="estSize" value="15MB" />
       <property name="param.1">
 	   <property name="key" value="base_url" />
 	   <property name="value" value="http://blog.dshr.org/" />
