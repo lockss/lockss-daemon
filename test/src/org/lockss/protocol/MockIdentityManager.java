@@ -1,5 +1,5 @@
 /*
-* $Id: MockIdentityManager.java,v 1.13 2007-06-28 07:14:25 smorabito Exp $
+* $Id: MockIdentityManager.java,v 1.14 2007-07-13 21:23:50 tlipkis Exp $
  */
 
 /*
@@ -156,6 +156,7 @@ public class MockIdentityManager implements IdentityManager {
   }
 
 
+  /** @deprecated */
   public IdentityListBean getIdentityListBean() {
     throw new UnsupportedOperationException("not implemented");
   }
