@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.46 2007-06-28 01:09:29 tlipkis Exp $
+ * $Id: ServletUtil.java,v 1.46.2.1 2007-07-13 21:15:40 tlipkis Exp $
  */
 
 /*
@@ -1512,6 +1512,19 @@ public class ServletUtil {
     tbl.newCell(ALIGN_RIGHT);
     tbl.add(javascriptButton(servlet, "Clear All", "selectAll(this.form, 1);"));
     return tbl;
+  }
+
+  public static Composite layoutSelectAu(LockssServlet servlet, String key,
+					 String preselId) {
+    Select sel = new Select(key, false);
+    sel.add("", preselId == null, "");
+    PluginManager pluginMgr = servlet.getLockssDaemon().getPluginManager();
+    for (Iterator iter = pluginMgr.getAllAus().iterator(); iter.hasNext(); ) {
+      ArchivalUnit au0 = (ArchivalUnit)iter.next();
+      String id = au0.getAuId();
+      sel.add(au0.getName(), id.equals(preselId), id);
+    }
+    return sel;
   }
 
   private static String multiline(String str) {
