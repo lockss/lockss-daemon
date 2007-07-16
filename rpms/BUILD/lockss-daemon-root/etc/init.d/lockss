@@ -6,9 +6,17 @@
 OS_TYPE=`uname -s`
 case ${OS_TYPE} in
 SunOS)
-	LOCKSS_USER=lockss
+        if [ "X${LOCKSS_USER}" = X ]
+        then
+                LOCKSS_USER=lockss
+        fi
+        if [ "X${LOCKSS_HOME}" = X ]
+        then
+                # Next line wierd because of evaluation order of
+                # ~ and shell parameters
+                LOCKSS_HOME=`echo "cd ~${LOCKSS_USER} ; pwd" | bash`
+        fi
 	CONFIG_USER=`/usr/ucb/whoami`
-	LOCKSS_HOME=~lockss
 	LOG_DIR="${LOCKSS_HOME}/var/log/lockss"
 	LOG_FILE="${LOG_DIR}/stdout"
 	PID_FILE="${LOCKSS_HOME}/var/run/lockss.pid"

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 if [ "X$1" = Xwait ]; then
     WAIT=Y
@@ -7,12 +7,21 @@ fi
 OS_TYPE=`uname -s`
 case ${OS_TYPE} in
 SunOS)  
-        LOCKSS_USER=lockss
-        LOCKSS_HOME=~lockss
+        if [ "X${LOCKSS_USER}" = X ]
+	then
+		LOCKSS_USER=lockss
+	fi
+	if [ "X${LOCKSS_HOME}" = X ]
+	then
+		# Next line wierd because of evaluation order of
+		# ~ and shell parameters
+        	LOCKSS_HOME=`echo "cd ~${LOCKSS_USER} ; pwd" | bash`
+	fi
 	DAEMON_PID_FILE="${LOCKSS_HOME}/var/run/lockss.pid"
 	CFG_FILE=${LOCKSS_HOME}/etc/lockss/config.dat
 	CFG_SCRIPT=${LOCKSS_HOME}/etc/lockss/hostconfig
 	LOGFILE=${LOCKSS_HOME}/var/log/lockss/stdout
+	LOCAL_TXT=${LOCKSS_HOME}/var/run/local.txt
         ;;      
 Linux)          
         LOCKSS_USER=lockss
@@ -20,6 +29,7 @@ Linux)
 	CFG_FILE=/etc/lockss/config.dat
 	CFG_SCRIPT=/etc/lockss/hostconfig
 	LOGFILE=/var/log/lockss/stdout
+	LOCAL_TXT=~/local.txt
         ;;
 esac
 
@@ -37,7 +47,6 @@ if [ "X${LOCKSS_JAVA_SWITCHES}" = "X" ]; then
     LOCKSS_JAVA_SWITCHES="-server -Xmx350m -Dsun.net.inetaddr.ttl=3600 -showversion"
 fi
 
-LOCAL_TXT=~/local.txt
 # if LOCKSS_PROPS_URL starts with "-" it is assumed to be the of the form
 #    -p <url1> [-p <url2> ...]
 if [ "X${LOCKSS_PROPS_URL}" = "X-*" ]; then
