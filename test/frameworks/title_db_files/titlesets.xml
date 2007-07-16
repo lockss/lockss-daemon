@@ -397,6 +397,12 @@
 	<property name="xpath" value="[pluginName='org.lockss.plugin.highwire.HighWirePlugin']" />
       </property>
 
+      <property name="Emerald Group Publishing">
+	<property name="name" value="All Emerald Group Publishing Titles" />
+	<property name="class" value="xpath" />
+	<property name="xpath" value="[pluginName='org.lockss.plugin.emerald.EmeraldPlugin']" />
+      </property>
+
       <property name="locksscard">
 	<property name="name" value="LOCKSS Card" />
 	<property name="class" value="xpath" />
