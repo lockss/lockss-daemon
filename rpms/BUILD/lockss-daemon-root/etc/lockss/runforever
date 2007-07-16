@@ -3,8 +3,16 @@
 OS_TYPE=`uname -s`
 case ${OS_TYPE} in
 SunOS)
-        LOCKSS_USER=lockss
-        LOCKSS_HOME=~lockss
+        if [ "X${LOCKSS_USER}" = X ]
+        then
+                LOCKSS_USER=lockss
+        fi
+        if [ "X${LOCKSS_HOME}" = X ]
+        then
+                # Next line wierd because of evaluation order of
+                # ~ and shell parameters
+                LOCKSS_HOME=`echo "cd ~${LOCKSS_USER} ; pwd" | bash`
+        fi
         DAEMON_PID_FILE="${LOCKSS_HOME}/var/run/lockss.pid"
         CFG_FILE=${LOCKSS_HOME}/etc/lockss/config.dat
         CFG_SCRIPT=${LOCKSS_HOME}/etc/lockss/hostconfig
