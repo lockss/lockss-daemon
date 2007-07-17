@@ -863,28 +863,7 @@
       <property name="attributes.publisher" value="Blackwell Publications"/>
     </property>
 
-    <property name="ActaArchaeologica73">
-      <property name="title" value="Acta Archaeologica Volume 73 (2002)"/>
-      <property name="journalTitle" value="Acta Archaeologica"/>
-      <property name="plugin" value="org.lockss.plugin.blackwell.BlackwellPlugin"/>
-      <property name="param.1">
-	<property name="key" value="base_url"/>
-	<property name="value" value="http://www.blackwell-synergy.com/"/>
-      </property>
-      <property name="param.2">
-	<property name="key" value="journal_id"/>
-	<property name="value" value="aar"/>
-      </property>
-      <property name="param.3">
-	<property name="key" value="journal_issn"/>
-	<property name="value" value="1600-0390"/>
-      </property>
-      <property name="param.4">
-	<property name="key" value="volume_name"/>
-	<property name="value" value="73"/>
-      </property>
-      <property name="attributes.publisher" value="Blackwell Publications"/>
-    </property>
+   <!-- There is no Acta Archaeologica Volume 73 (2002), see http://www.blackwell-synergy.com/loi/AAR -->
 
     <property name="ActaArchaeologica74">
       <property name="title" value="Acta Archaeologica Volume 74 (2003)"/>
@@ -2557,28 +2536,7 @@
       <property name="attributes.publisher" value="Blackwell Publications"/>
     </property>
 
-    <property name="ActaNeuropsychiatrica17">
-      <property name="title" value="Acta Neuropsychiatrica Volume 17"/>
-      <property name="journalTitle" value="Acta Neuropsychiatrica"/>
-      <property name="plugin" value="org.lockss.plugin.blackwell.BlackwellPlugin"/>
-      <property name="param.1">
-	<property name="key" value="base_url"/>
-	<property name="value" value="http://www.blackwell-synergy.com/"/>
-      </property>
-      <property name="param.2">
-	<property name="key" value="journal_id"/>
-	<property name="value" value="acn"/>
-      </property>
-      <property name="param.3">
-	<property name="key" value="journal_issn"/>
-	<property name="value" value="1601-5215"/>
-      </property>
-      <property name="param.4">
-	<property name="key" value="volume_name"/>
-	<property name="value" value="17"/>
-      </property>
-      <property name="attributes.publisher" value="Blackwell Publications"/>
-    </property>
+    <!-- There is no Acta Neuropsychiatrica Volume 17, see http://www.blackwell-synergy.com/loi/ACN -->
 
     <property name="ActaNeuropsychiatrica18">
       <property name="title" value="Acta Neuropsychiatrica Volume 18"/>
