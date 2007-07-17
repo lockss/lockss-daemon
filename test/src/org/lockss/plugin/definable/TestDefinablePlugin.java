@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinablePlugin.java,v 1.15 2007-02-06 01:03:07 tlipkis Exp $
+ * $Id: TestDefinablePlugin.java,v 1.16 2007-07-17 06:03:48 tlipkis Exp $
  */
 
 /*
@@ -82,6 +82,7 @@ public class TestDefinablePlugin extends LockssTestCase {
 	       instanceof CssLinkExtractor.Factory);
     mti = definablePlugin.getMimeTypeInfo("application/pdf");
     assertNull(mti.getFilterFactory());
+    assertNull(mti.getFetchRateLimiter());
 
     defMap.putString(  ("application/pdf"
 			+ DefinableArchivalUnit.SUFFIX_FILTER_FACTORY),
@@ -89,6 +90,9 @@ public class TestDefinablePlugin extends LockssTestCase {
     defMap.putString(  ("text/html"
 			+ DefinableArchivalUnit.SUFFIX_LINK_EXTRACTOR_FACTORY),
 		     "org.lockss.test.MockLinkExtractorFactory");
+    defMap.putString(  ("application/pdf"
+			+ DefinableArchivalUnit.SUFFIX_FETCH_RATE_LIMITER),
+		     "1/30s");
     definablePlugin.initPlugin(getMockLockssDaemon(), defMap);
 
     mti = definablePlugin.getMimeTypeInfo("text/html");
@@ -97,14 +101,17 @@ public class TestDefinablePlugin extends LockssTestCase {
 	       instanceof LinkExtractorFactoryWrapper);
     assertTrue(WrapperUtil.unwrap(mti.getLinkExtractorFactory())
 	       instanceof MockLinkExtractorFactory);
+    assertNull(mti.getFetchRateLimiter());
     mti = definablePlugin.getMimeTypeInfo("text/css");
     assertTrue(mti.getLinkExtractorFactory()
 	       instanceof CssLinkExtractor.Factory);
+    assertNull(mti.getFetchRateLimiter());
     mti = definablePlugin.getMimeTypeInfo("application/pdf");
     assertTrue(mti.getFilterFactory()
 	       instanceof FilterFactoryWrapper);
     assertTrue(WrapperUtil.unwrap(mti.getFilterFactory())
 	       instanceof MockFilterFactory);
+    assertEquals("1/30s", mti.getFetchRateLimiter().getRate());
 
     // verify 2nd plugin still has mime defaults
     mti = p2.getMimeTypeInfo("text/html");
@@ -115,6 +122,7 @@ public class TestDefinablePlugin extends LockssTestCase {
 	       instanceof CssLinkExtractor.Factory);
     mti = p2.getMimeTypeInfo("application/pdf");
     assertNull(mti.getFilterFactory());
+    assertNull(mti.getFetchRateLimiter());
   }
 
   public void testInitMimeMap() {

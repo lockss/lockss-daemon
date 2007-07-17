@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.26 2007-05-01 23:34:04 tlipkis Exp $
+ * $Id: DefinablePlugin.java,v 1.27 2007-07-17 06:03:48 tlipkis Exp $
  */
 
 /*
@@ -210,13 +210,13 @@ public class DefinablePlugin extends BasePlugin {
     for (Iterator iter = definitionMap.entrySet().iterator(); iter.hasNext();){
       Map.Entry ent = (Map.Entry)iter.next();
       String key = (String)ent.getKey();
+      Object val = ent.getValue();
       if (key.endsWith(DefinableArchivalUnit.SUFFIX_LINK_EXTRACTOR_FACTORY)) {
 	String mime =
 	  stripSuffix(key, DefinableArchivalUnit.SUFFIX_LINK_EXTRACTOR_FACTORY);
-	Object val = ent.getValue();
 	if (val instanceof String) {
 	  String factName = (String)val;
-	  log.debug("initMime " + mime + ": " + factName);
+	  log.debug(mime + " link extractor: " + factName);
 	  MimeTypeInfo.Mutable mti = mimeMap.modifyMimeTypeInfo(mime);
 	  LinkExtractorFactory fact =
 	    (LinkExtractorFactory)loadClass(factName,
@@ -226,14 +226,27 @@ public class DefinablePlugin extends BasePlugin {
       } else if (key.endsWith(DefinableArchivalUnit.SUFFIX_FILTER_FACTORY)) {
 	String mime = stripSuffix(key,
 				  DefinableArchivalUnit.SUFFIX_FILTER_FACTORY);
-	Object val = ent.getValue();
 	if (val instanceof String) {
 	  String factName = (String)val;
-	  log.debug("initMime " + mime + ": " + factName);
+	  log.debug(mime + " filter: " + factName);
 	  MimeTypeInfo.Mutable mti = mimeMap.modifyMimeTypeInfo(mime);
 	  FilterFactory fact =
 	    (FilterFactory)loadClass(factName, FilterFactory.class);
 	  mti.setFilterFactory(fact);
+	}
+      } else if (key.endsWith(DefinableArchivalUnit.SUFFIX_FETCH_RATE_LIMITER)) {
+	String mime =
+	  stripSuffix(key, DefinableArchivalUnit.SUFFIX_FETCH_RATE_LIMITER);
+	if (val instanceof String) {
+	  String rate = (String)val;
+	  log.debug(mime + " fetch rate: " + rate);
+	  MimeTypeInfo.Mutable mti = mimeMap.modifyMimeTypeInfo(mime);
+	  RateLimiter limit = mti.getFetchRateLimiter();
+	  if (limit != null) {
+	    limit.setRate(rate);
+	  } else {
+	    mti.setFetchRateLimiter(new RateLimiter(rate));
+	  }
 	}
       }
     }

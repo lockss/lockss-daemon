@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedArchivalUnit.java,v 1.60 2007-02-25 23:06:38 dshr Exp $
+ * $Id: SimulatedArchivalUnit.java,v 1.61 2007-07-17 06:03:48 tlipkis Exp $
  */
 
 /*
@@ -75,6 +75,7 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
   private String auId = StringUtil.gensym("SimAU_");
   String simRoot; //sim root dir returned by content generator
   private boolean doFilter = false;
+  private List pauseContentTypes = new ArrayList();
 
   Set toBeDamaged = new HashSet();
 
@@ -172,8 +173,12 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
     getContentGenerator().deleteContentTree();
   }
 
-  public void pauseBeforeFetch() {
-    // no pauses since this is a test unit
+  public void pauseBeforeFetch(String previousContentType) {
+    pauseContentTypes.add(previousContentType);
+  }
+
+  public List getPauseContentTypes() {
+    return pauseContentTypes;
   }
 
   /**

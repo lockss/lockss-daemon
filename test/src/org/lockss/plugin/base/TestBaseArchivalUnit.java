@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArchivalUnit.java,v 1.39 2007-02-06 01:03:07 tlipkis Exp $
+ * $Id: TestBaseArchivalUnit.java,v 1.40 2007-07-17 06:03:48 tlipkis Exp $
  */
 
 /*
@@ -48,7 +48,7 @@ import org.lockss.plugin.base.BaseArchivalUnit.*;
 import org.lockss.extractor.*;
 
 public class TestBaseArchivalUnit extends LockssTestCase {
-  private MyMockBaseArchivalUnit mbau;
+  private MyBaseArchivalUnit mbau;
   private MyMockPlugin mplug;
   private String baseUrl = "http://www.example.com/foo/";
   private String startUrl = baseUrl + "/index.html";
@@ -73,7 +73,7 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     CrawlRule rule = new CrawlRules.FirstMatch(rules);
     mplug = new MyMockPlugin();
     mplug.initPlugin(getMockLockssDaemon());
-    mbau =  new MyMockBaseArchivalUnit(mplug, auName, rule, startUrl);
+    mbau =  new MyBaseArchivalUnit(mplug, auName, rule, startUrl);
   }
 
   public void tearDown() throws Exception {
@@ -84,11 +84,11 @@ public class TestBaseArchivalUnit extends LockssTestCase {
 
   public void testIllConst() {
     try {
-      new MyMockBaseArchivalUnit(new MyNullPlugin());
+      new MyBaseArchivalUnit(new MyNullPlugin());
       fail("new BaseArchivalUnit(non-BasePlugin) should throw");
     } catch (IllegalArgumentException ex) {
     }
-  }  
+  }
 
   public void testSetConfiguration() throws ConfigurationException {
     // unconfigured  - return null
@@ -126,7 +126,7 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     props.setProperty(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
     props.setProperty(ConfigParamDescr.YEAR.getKey(), Integer.toString(year));
     Configuration config = ConfigurationUtil.fromProps(props);
-    mbau = new MyMockBaseArchivalUnit(mplug);
+    mbau = new MyBaseArchivalUnit(mplug);
     mbau.setConfiguration(config);
     BaseArchivalUnit.ParamHandlerMap paramMap = mbau.getParamMap();
     assertEquals(baseUrl,
@@ -298,9 +298,9 @@ public class TestBaseArchivalUnit extends LockssTestCase {
   }
 
   public void testFindFetchRateLimiterPlugin() throws Exception {
-    MyMockBaseArchivalUnit mbau2 = new MyMockBaseArchivalUnit(mplug);
-    MyMockBaseArchivalUnit mbau3 =
-      new MyMockBaseArchivalUnit(new MyMockPlugin());
+    MyBaseArchivalUnit mbau2 = new MyBaseArchivalUnit(mplug);
+    MyBaseArchivalUnit mbau3 =
+      new MyBaseArchivalUnit(new MyMockPlugin());
 
     mbau.getParamMap().putString(BaseArchivalUnit.KEY_AU_FETCH_RATE_LIMITER_SOURCE,
 				 "plugin");
@@ -319,9 +319,9 @@ public class TestBaseArchivalUnit extends LockssTestCase {
   public void testFindFetchRateLimiterDefaultPlugin() throws Exception {
     ConfigurationUtil.setFromArgs(BaseArchivalUnit.PARAM_DEFAULT_FETCH_RATE_LIMITER_SOURCE,
 				  "plugin");
-    MyMockBaseArchivalUnit mbau2 = new MyMockBaseArchivalUnit(mplug);
-    MyMockBaseArchivalUnit mbau3 =
-      new MyMockBaseArchivalUnit(new MyMockPlugin());
+    MyBaseArchivalUnit mbau2 = new MyBaseArchivalUnit(mplug);
+    MyBaseArchivalUnit mbau3 =
+      new MyBaseArchivalUnit(new MyMockPlugin());
 
     RateLimiter limit = mbau.findFetchRateLimiter();
     RateLimiter limit2 = mbau2.findFetchRateLimiter();
@@ -334,7 +334,7 @@ public class TestBaseArchivalUnit extends LockssTestCase {
   public void testFindFetchRateLimiterDefaultIllegal() throws Exception {
     ConfigurationUtil.setFromArgs(BaseArchivalUnit.PARAM_DEFAULT_FETCH_RATE_LIMITER_SOURCE,
 				  "Thurgood Marshall");
-    MyMockBaseArchivalUnit mbau2 = new MyMockBaseArchivalUnit(mplug);
+    MyBaseArchivalUnit mbau2 = new MyBaseArchivalUnit(mplug);
 
     RateLimiter limit = mbau.findFetchRateLimiter();
     RateLimiter limit2 = mbau2.findFetchRateLimiter();
@@ -343,9 +343,9 @@ public class TestBaseArchivalUnit extends LockssTestCase {
   }
 
   public void testFindFetchRateLimiterHost() throws Exception {
-    MyMockBaseArchivalUnit mbau2 = new MyMockBaseArchivalUnit(mplug);
-    MyMockBaseArchivalUnit mbau3 =
-      new MyMockBaseArchivalUnit(new MyMockPlugin());
+    MyBaseArchivalUnit mbau2 = new MyBaseArchivalUnit(mplug);
+    MyBaseArchivalUnit mbau3 =
+      new MyBaseArchivalUnit(new MyMockPlugin());
     mbau.getParamMap().putString(BaseArchivalUnit.KEY_AU_FETCH_RATE_LIMITER_SOURCE,
 				 "host:base_url");
     mbau2.getParamMap().putString(BaseArchivalUnit.KEY_AU_FETCH_RATE_LIMITER_SOURCE,
@@ -377,9 +377,9 @@ public class TestBaseArchivalUnit extends LockssTestCase {
 
   public void testFindFetchRateLimiterTitleAttr() throws Exception {
     String src = BaseArchivalUnit.KEY_AU_FETCH_RATE_LIMITER_SOURCE;
-    MyMockBaseArchivalUnit mbau2 = new MyMockBaseArchivalUnit(mplug);
-    MyMockBaseArchivalUnit mbau3 = new MyMockBaseArchivalUnit(mplug);
-    MyMockBaseArchivalUnit mbau4 = new MyMockBaseArchivalUnit(mplug);
+    MyBaseArchivalUnit mbau2 = new MyBaseArchivalUnit(mplug);
+    MyBaseArchivalUnit mbau3 = new MyBaseArchivalUnit(mplug);
+    MyBaseArchivalUnit mbau4 = new MyBaseArchivalUnit(mplug);
     mbau.getParamMap().putString(src, "title_attribute:server");
     mbau2.getParamMap().putString(src, "title_attribute:server");
     mbau3.getParamMap().putString(src, "title_attribute:client");
@@ -413,13 +413,43 @@ public class TestBaseArchivalUnit extends LockssTestCase {
 	       limit3);
   }
 
-  public Map setTCAttrs(MyMockBaseArchivalUnit mau, String key, String val) {
+  public Map setTCAttrs(MyBaseArchivalUnit mau, String key, String val) {
     TitleConfig tc = new TitleConfig("foo", new MockPlugin());
     Map attrs = new HashMap();
     attrs.put(key, val);
     tc.setAttributes(attrs);
     mau.setTitleConfig(tc);
     return attrs;
+  }
+
+  public void testPause() throws ConfigurationException {
+    TimeBase.setSimulated(1000);
+    Configuration config = ConfigManager.newConfiguration();
+    config.put(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
+    config.put(ConfigParamDescr.VOLUME_NUMBER.getKey(), "10");
+    config.put(BaseArchivalUnit.KEY_PAUSE_TIME, "7s");
+    mbau.setConfiguration(config);
+    mbau = new MyBaseArchivalUnit(mplug);
+    mbau.setConfiguration(config);
+    MockRateLimiter glimit = new MockRateLimiter("3/17s");
+    MockRateLimiter mlimit1 = new MockRateLimiter("4/1s");
+    MockRateLimiter mlimit2 = new MockRateLimiter("1/4s");
+    String mime1 = "application/pdf";
+    String mime2 = "text/html";
+    mbau.setFetchRateLimiter(glimit);
+    assertEmpty(glimit.eventList);
+    mbau.pauseBeforeFetch(mime1);
+    assertEquals(ListUtil.list("fifoWaitAndSignalEvent"), glimit.eventList);
+    assertEmpty(mlimit1.eventList);
+    assertEmpty(mlimit2.eventList);
+    mplug.setFetchRateLimiter(mime1, mlimit1);
+    mplug.setFetchRateLimiter(mime2, mlimit2);
+    mbau.pauseBeforeFetch(mime1);
+    assertEquals(ListUtil.list("fifoWaitAndSignalEvent",
+			       "fifoWaitAndSignalEvent"),
+		 glimit.eventList);
+    assertEquals(ListUtil.list("fifoWaitAndSignalEvent"), mlimit1.eventList);
+    assertEmpty(mlimit2.eventList);
   }
 
   public void testGetName() throws ConfigurationException {
@@ -510,7 +540,7 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     Configuration config = ConfigurationUtil.fromProps(props);
     mbau.setBaseAuParams(config);
     assertEquals(ListUtil.list("http://www.example.com/"), mbau.getUrlStems());
-    
+
     mbau.setPermissionPages(ListUtil.list(baseUrl,
 					  "http://foo.other.com:8080/vol20/manifest.html"));
     assertEquals(ListUtil.list("http://www.example.com/",
@@ -686,7 +716,7 @@ public class TestBaseArchivalUnit extends LockssTestCase {
   }
 
   public void testGetLinkExtractorCapitalization() {
-    assertTrue(mbau.getLinkExtractor("text/html") 
+    assertTrue(mbau.getLinkExtractor("text/html")
 	       instanceof GoslingHtmlLinkExtractor);
 
     assertTrue(mbau.getLinkExtractor("Text/Html")
@@ -780,7 +810,7 @@ public class TestBaseArchivalUnit extends LockssTestCase {
   }
 
   public static void main(String[] argv) {
-    String[] testCaseList = { MyMockBaseArchivalUnit.class.getName()};
+    String[] testCaseList = { MyBaseArchivalUnit.class.getName()};
     junit.swingui.TestRunner.main(testCaseList);
   }
 
@@ -851,7 +881,7 @@ public class TestBaseArchivalUnit extends LockssTestCase {
 
   }
 
-  static class MyMockBaseArchivalUnit extends BaseArchivalUnit {
+  static class MyBaseArchivalUnit extends BaseArchivalUnit {
     private String auId = null;
     private String m_name = "MockBaseArchivalUnit";
     private CrawlRule m_rules = null;
@@ -862,7 +892,7 @@ public class TestBaseArchivalUnit extends LockssTestCase {
 
     private String mimeTypeCalledWith = null;
 
-    MyMockBaseArchivalUnit(Plugin plugin, String name, CrawlRule rules,
+    MyBaseArchivalUnit(Plugin plugin, String name, CrawlRule rules,
 			   String startUrl) {
       super(plugin);
       m_name = name;
@@ -870,7 +900,7 @@ public class TestBaseArchivalUnit extends LockssTestCase {
       m_rules = rules;
    }
 
-    public MyMockBaseArchivalUnit(Plugin myPlugin) {
+    public MyBaseArchivalUnit(Plugin myPlugin) {
       super(myPlugin);
     }
 
@@ -937,6 +967,10 @@ public class TestBaseArchivalUnit extends LockssTestCase {
 
     public void setTitleConfig(TitleConfig tc) {
       this.tc = tc;
+    }
+
+    public void setFetchRateLimiter(RateLimiter limit) {
+      fetchRateLimiter = limit;      
     }
   }
 }

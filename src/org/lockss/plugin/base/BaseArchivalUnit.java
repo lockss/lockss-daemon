@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.119 2007-06-23 05:37:00 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.120 2007-07-17 06:03:48 tlipkis Exp $
  */
 
 /*
@@ -449,7 +449,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
       return Collections.EMPTY_LIST;
     }
   }
-    
+
   /**
    * Determine whether the url falls within the CrawlSpec.
    * @param url the url
@@ -478,12 +478,27 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     return makeCachedUrlSet(new AuCachedUrlSetSpec());
   }
 
-  public void pauseBeforeFetch() {
+  public void pauseBeforeFetch(String previousContentType) {
     RateLimiter limit = findFetchRateLimiter();;
     try {
+      if (logger.isDebug3()) logger.debug3("Pausing: " + limit.rateString());
       limit.fifoWaitAndSignalEvent();
     } catch (InterruptedException ignore) {
       // no action
+    }
+    if (previousContentType != null) {
+      RateLimiter mimeLimit = plugin.getFetchRateLimiter(previousContentType);
+      if (mimeLimit != null) {
+	try {
+	  if (logger.isDebug3()) {
+	    logger.debug3("Pausing (" + previousContentType
+			  + "): " + mimeLimit.rateString());
+	  }
+	  mimeLimit.fifoWaitAndSignalEvent();
+	} catch (InterruptedException ignore) {
+	  // no action
+	}
+      }
     }
   }
 

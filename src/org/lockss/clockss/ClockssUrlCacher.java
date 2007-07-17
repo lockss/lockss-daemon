@@ -1,5 +1,5 @@
 /*
- * $Id: ClockssUrlCacher.java,v 1.6 2007-04-30 04:52:46 tlipkis Exp $
+ * $Id: ClockssUrlCacher.java,v 1.7 2007-07-17 06:03:49 tlipkis Exp $
  */
 
 /*
@@ -107,6 +107,10 @@ public class ClockssUrlCacher implements UrlCacher {
 
   public void setWatchdog(LockssWatchdog wdog) {
     uc.setWatchdog(wdog);
+  }
+
+  public void setPreviousContentType(String previousContentType) {
+    uc.setPreviousContentType(previousContentType);
   }
 
   public void storeContent(InputStream input, CIProperties headers)

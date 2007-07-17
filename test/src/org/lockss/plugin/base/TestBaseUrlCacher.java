@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.52 2007-06-23 05:37:19 tlipkis Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.53 2007-07-17 06:03:48 tlipkis Exp $
  */
 
 /*
@@ -1183,7 +1183,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
       }
     }
 
-    public void pauseBeforeFetch() {
+    public void pauseBeforeFetch(String previousContentType) {
       pauseBeforeFetchCounter++;
     }
   }

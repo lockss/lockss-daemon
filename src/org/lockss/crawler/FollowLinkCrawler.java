@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.61 2007-07-09 05:47:26 tlipkis Exp $
+ * $Id: FollowLinkCrawler.java,v 1.62 2007-07-17 06:03:49 tlipkis Exp $
  */
 
 /*
@@ -114,9 +114,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
   protected Set extractedUrls;
   protected boolean cachingStartUrls = false; //added to report an error when
                                               //not able to cache a starting Url
-
   protected BitSet fetchFlags = new BitSet();
-
 
   public FollowLinkCrawler(ArchivalUnit au, CrawlSpec crawlSpec, AuState aus) {
     super(au, crawlSpec, aus);

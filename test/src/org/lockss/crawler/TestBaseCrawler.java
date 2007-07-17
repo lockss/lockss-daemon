@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCrawler.java,v 1.11 2007-02-06 01:03:07 tlipkis Exp $
+ * $Id: TestBaseCrawler.java,v 1.12 2007-07-17 06:03:48 tlipkis Exp $
  */
 
 /*
@@ -237,7 +237,9 @@ public class TestBaseCrawler extends LockssTestCase {
     assertNotNull(uc);
     assertFalse("UrlCacher shouldn't be a ClockssUrlCacher",
 		uc instanceof ClockssUrlCacher);
-    assertSame(crawler, ((MockUrlCacher)uc).getPermissionMapSource());
+    MockUrlCacher muc = (MockUrlCacher)uc;
+    assertSame(crawler, muc.getPermissionMapSource());
+    assertNull(muc.getPreviousContentType());
   }
 
   public void testMakeUrlCacherClockss() {
@@ -247,6 +249,20 @@ public class TestBaseCrawler extends LockssTestCase {
     assertNotNull(uc);
     assertTrue("UrlCacher should be a ClockssUrlCacher",
 	       uc instanceof ClockssUrlCacher);
+  }
+
+  public void testMakeUrlCacherWithMimeType() {
+    crawler.previousContentType = "app/foo";
+    UrlCacher uc = crawler.makeUrlCacher(startUrl);
+    assertNotNull(uc);
+    assertFalse("UrlCacher shouldn't be a ClockssUrlCacher",
+		uc instanceof ClockssUrlCacher);
+    MockUrlCacher muc = (MockUrlCacher)uc;
+    assertSame(crawler, muc.getPermissionMapSource());
+    assertEquals("app/foo", muc.getPreviousContentType());
+
+    UrlCacher uc2 = crawler.makeUrlCacher(permissionPage);
+    assertEquals(null, ((MockUrlCacher)uc2).getPreviousContentType());
   }
 
   public void testGetPermissionMap() throws MalformedURLException {
@@ -314,15 +330,15 @@ public class TestBaseCrawler extends LockssTestCase {
 //     assertFalse(crawler.doCrawl0Called());
   }
 
-//   public void testReturnsTrueWhenCrawlSuccessful() {
-//     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
-//     String url1="http://www.example.com/blah.html";
-//     mau.addUrl(startUrl, false, true);
-//     extractor.addUrlsToReturn(startUrl, SetUtil.set(url1));
-//     mau.addUrl(url1, false, true);
+  public void testReturnsTrueWhenCrawlSuccessful() {
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    String url1="http://www.example.com/blah.html";
+    mau.addUrl(startUrl, false, true);
+    extractor.addUrlsToReturn(startUrl, SetUtil.set(url1));
+    mau.addUrl(url1, false, true);
 
-//     assertTrue(crawler.doCrawl());
-//    }
+    assertTrue(crawler.doCrawl());
+   }
 
 //   public void testReturnsFalseWhenFailingUnretryableExceptionThrown() {
 //     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();

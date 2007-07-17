@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawler.java,v 1.23 2007-06-27 07:49:20 tlipkis Exp $
+ * $Id: BaseCrawler.java,v 1.24 2007-07-17 06:03:49 tlipkis Exp $
  */
 
 /*
@@ -95,6 +95,11 @@ public abstract class BaseCrawler
   public static final boolean DEFAULT_ABORT_ON_FIRST_NO_PERMISSION =
     true;
 
+  public static final String PARAM_MIME_TYPE_PAUSE_AFTER_304 =
+    Configuration.PREFIX + "crawler.mimeTypePauseAfter304";
+  public static final boolean DEFAULT_MIME_TYPE_PAUSE_AFTER_304 =
+    false;
+
   // Max amount we'll buffer up to avoid refetching the permissions page
   static final int PERM_BUFFER_MAX = 16 * 1024;
 
@@ -113,6 +118,8 @@ public abstract class BaseCrawler
 
   protected LockssWatchdog wdog = null;
 
+  protected boolean mimeTypePauseAfter304 = DEFAULT_MIME_TYPE_PAUSE_AFTER_304;
+
   protected abstract boolean doCrawl0();
   public abstract int getType();
 
@@ -130,6 +137,8 @@ public abstract class BaseCrawler
   protected int proxyPort;
 
   protected PermissionMap permissionMap = null;
+
+  protected String previousContentType;
 
   protected BaseCrawler(ArchivalUnit au, CrawlSpec spec, AuState aus) {
     if (au == null) {
@@ -187,6 +196,9 @@ public abstract class BaseCrawler
     } else {
       proxyHost = null;
     }
+    mimeTypePauseAfter304 =
+      config.getBoolean(PARAM_MIME_TYPE_PAUSE_AFTER_304,
+			DEFAULT_MIME_TYPE_PAUSE_AFTER_304);
   }
 
   List getDaemonPermissionCheckers() {
@@ -296,15 +308,25 @@ public abstract class BaseCrawler
       crawlStatus.signalUrlFetched(uc.getUrl());
       // XXX add getCachedProperties() to UrlCacher so don't have to create
       // CachedUrl (read props, open InputStream)
-      CachedUrl cu = uc.getCachedUrl();
-      updateStatusMimeType(cu);
-      if (cu.hasContent()) {
-	crawlStatus.addContentBytesFetched(cu.getContentSize());
+      {
+	CachedUrl cu = uc.getCachedUrl();
+	updateStatusMimeType(cu);
+	if (cu.hasContent()) {
+	  crawlStatus.addContentBytesFetched(cu.getContentSize());
+	  previousContentType = cu.getContentType();
+	}
+	cu.release();
       }
-      cu.release();
       break;
     case UrlCacher.CACHE_RESULT_NOT_MODIFIED:
       crawlStatus.signalUrlNotModified(uc.getUrl());
+      if (mimeTypePauseAfter304) {
+	CachedUrl cu = uc.getCachedUrl();
+	if (cu.hasContent()) {
+	  previousContentType = cu.getContentType();
+	}
+	cu.release();
+      }
       break;
     }
   }
@@ -319,6 +341,10 @@ public abstract class BaseCrawler
     uc.setConnectionPool(connectionPool);
     uc.setPermissionMapSource(this);
     uc.setWatchdog(wdog);
+    if (previousContentType != null) {
+      uc.setPreviousContentType(previousContentType);
+      previousContentType = null;
+    }
     return uc;
   }
   /**  

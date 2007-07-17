@@ -1,5 +1,5 @@
 /*
- * $Id: UrlCacher.java,v 1.27 2006-10-07 23:13:38 tlipkis Exp $
+ * $Id: UrlCacher.java,v 1.28 2007-07-17 06:03:49 tlipkis Exp $
  */
 
 /*
@@ -130,7 +130,7 @@ public interface UrlCacher {
    * sorce of outgoing URL connections */
   public void setLocalAddress(IPAddr localAddr);
 
-  /** Set the host and port the UrlCache should proxy through */
+  /** Set the host and port the UrlCacher should proxy through */
   public void setProxy(String proxyHost, int proxyPort);
 
   /**
@@ -154,6 +154,10 @@ public interface UrlCacher {
    * @see StreamUtil#copy(InputStream, OutputStream, long, LockssWatchdog)
    */
   public void setWatchdog(LockssWatchdog wdog);
+
+  /** Set the content type just fetched, for MIME-type dependent rate
+   * limiters */
+  public void setPreviousContentType(String prevContentType);
 
   /**
    * Copies the content and properties from the source into the cache.

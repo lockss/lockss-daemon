@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.70 2007-06-23 05:37:19 tlipkis Exp $
+ * $Id: BaseUrlCacher.java,v 1.71 2007-07-17 06:03:48 tlipkis Exp $
  */
 
 /*
@@ -84,15 +84,15 @@ public class BaseUrlCacher implements UrlCacher {
   private IPAddr localAddr = null;
   private Properties reqProps;
   private LockssWatchdog wdog;
-
+  private String previousContentType;
   private BitSet fetchFlags = new BitSet();
 
   private static final String SHOULD_REFETCH_ON_SET_COOKIE =
     "refetch_on_set_cookie";
   private static final boolean DEFAULT_SHOULD_REFETCH_ON_SET_COOKIE = true;
 
-  // Max amount we'll buffer up to avoid refetching a page when we check if it's
-  // a login page
+  // Max amount we'll buffer up to avoid refetching a page when we check if
+  // it's a login page
   static final int LOGIN_BUFFER_MAX = 16 * 1024;
 
   public BaseUrlCacher(ArchivalUnit owner, String url) {
@@ -194,6 +194,10 @@ public class BaseUrlCacher implements UrlCacher {
     this.wdog = wdog;
   }
 
+  public void setPreviousContentType(String previousContentType) {
+    this.previousContentType = previousContentType;
+  }
+
   private boolean isDamaged() {
     DamagedNodeSet dnSet = nodeMgr.getDamagedNodes();
     if (dnSet == null) {
@@ -221,7 +225,7 @@ public class BaseUrlCacher implements UrlCacher {
 
   private int cache(String lastModified) throws IOException {
     logger.debug3("Pausing before fetching content");
-    au.pauseBeforeFetch();
+    au.pauseBeforeFetch(previousContentType);
     logger.debug3("Done pausing");
     InputStream input = getUncachedInputStream(lastModified);
     // null input indicates unmodified content, so skip caching
@@ -715,4 +719,6 @@ public class BaseUrlCacher implements UrlCacher {
     }
     return null;
   }
+
+
 }

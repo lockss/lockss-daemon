@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.40 2007-06-23 05:37:00 tlipkis Exp $
+ * $Id: ArchivalUnit.java,v 1.41 2007-07-17 06:03:49 tlipkis Exp $
  */
 
 /*
@@ -164,7 +164,7 @@ public interface ArchivalUnit {
   /**
    * Sleeps for the interval needed between requests to the server
    */
-  public void pauseBeforeFetch();
+  public void pauseBeforeFetch(String previousContentType);
 
   /**
    * Return the RateLimiter for page fetches from the publisher's server.
