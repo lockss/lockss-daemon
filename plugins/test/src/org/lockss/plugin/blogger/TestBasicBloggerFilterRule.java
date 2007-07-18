@@ -1,5 +1,5 @@
 /*
- * $Id: TestBloggerFilterRule.java,v 1.2 2007-07-18 20:43:14 thib_gc Exp $
+ * $Id: TestBasicBloggerFilterRule.java,v 1.1 2007-07-18 20:58:01 thib_gc Exp $
  */
 
 /*
@@ -36,7 +36,7 @@ import java.io.*;
 import org.lockss.util.*;
 import org.lockss.test.LockssTestCase;
 
-public class TestBloggerFilterRule extends LockssTestCase {
+public class TestBasicBloggerFilterRule extends LockssTestCase {
   private BasicBloggerFilterRule rule;
 
   private static final String filterStart = "<!--LOCKSS ignore start-->";
