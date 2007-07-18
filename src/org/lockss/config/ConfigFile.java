@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigFile.java,v 1.11 2006-04-05 22:29:12 tlipkis Exp $
+ * $Id: ConfigFile.java,v 1.12 2007-07-18 07:12:56 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.config;
 
 import java.io.*;
 import org.lockss.util.*;
+import org.lockss.util.urlconn.*;
 
 /**
  * Common functionality for a config file loadable from a URL or filename,
@@ -68,6 +69,10 @@ public interface ConfigFile {
    */
   public void setNeedsReload();
 
+  public void setConnectionPool(LockssUrlConnectionPool connPool);
+
+  public void setProperty(String key, Object val);
+
   /** Return the Configuration object built from this file
    */
   public Configuration getConfiguration() throws IOException;
@@ -75,7 +80,7 @@ public interface ConfigFile {
   /** Represents a single generation (version) of the contents of a
    * ConfigFile, to make it easy to determine when the contents has
    * changed */
-  public class Generation {
+  public static class Generation {
     private ConfigFile cf;
     private Configuration config;
     private int generation;
@@ -92,6 +97,9 @@ public interface ConfigFile {
     }
     public String getUrl() {
       return cf.getFileUrl();
+    }
+    public ConfigFile getConfigFile() {
+      return cf;
     }
   }
 

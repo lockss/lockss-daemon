@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigFile.java,v 1.5 2006-06-01 23:47:41 tlipkis Exp $
+ * $Id: TestConfigFile.java,v 1.6 2007-07-18 07:12:56 tlipkis Exp $
  */
 
 /*
@@ -384,6 +384,21 @@ public abstract class TestConfigFile extends LockssTestCase {
       testCantRead(hcf, "403: Forbidden<br>this is a hint$");
     }
 
+    public void testXLockssInfo() throws IOException {
+      InputStream in = new StringInputStream(xml1);
+      MyHttpConfigFile hcf =
+	new MyHttpConfigFile("http://foo.bar/lockss.xml", in);
+      hcf.setProperty("X-Lockss-Info", "daemon=1.3.1");
+      Configuration config = hcf.getConfiguration();
+      assertTrue(hcf.isLoaded());
+      assertEquals("daemon=1.3.1", hcf.connReqHdrs.get("X-Lockss-Info"));
+      hcf.connReqHdrs.clear();
+      hcf.setProperty("X-Lockss-Info", null);
+      hcf.getConfiguration();
+      assertTrue(hcf.isLoaded());
+      assertEquals(null, hcf.connReqHdrs.get("X-Lockss-Info"));
+    }
+
     public void testGzip() throws IOException {
       InputStream zin = new GZIPpedInputStream(xml1);
       MyHttpConfigFile hcf =
@@ -409,6 +424,22 @@ public abstract class TestConfigFile extends LockssTestCase {
       }
     }
 
+    public void testSetConnectionPool1() throws IOException {
+      MyHttpConfigFile hcf =
+	new MyHttpConfigFile("http://foo.bar/lockss.xml");
+      LockssUrlConnectionPool pool = new LockssUrlConnectionPool();
+      hcf.setConnectionPool(pool);
+      assertSame(pool, hcf.getConnectionPool());
+    }
+
+    public void testSetConnectionPool2() throws IOException {
+      MyHttpConfigFile hcf =
+	new MyHttpConfigFile("http://foo.bar/lockss.xml");
+      LockssUrlConnectionPool pool = hcf.getConnectionPool();
+      assertNotNull(pool);
+      assertSame(pool, hcf.getConnectionPool());
+    }
+
   }
 
   /** HTTPConfigFile that uses a programmable MockLockssUrlConnection */
@@ -419,6 +450,7 @@ public abstract class TestConfigFile extends LockssTestCase {
     int resp = 200;
     String respMsg = null;
     IOException executeExecption;
+    Properties connReqHdrs = new Properties();
 
     public MyHttpConfigFile(String url) {
       this(url, "");
@@ -477,8 +509,8 @@ public abstract class TestConfigFile extends LockssTestCase {
 	  if (executeExecption != null) {
 	    throw executeExecption;
 	  }
-	  String ifSinze = getRequestProperty("if-modified-since");
-	  if (ifSinze != null && ifSinze.equalsIgnoreCase(lastModified)) {
+	  String ifSince = getRequestProperty("if-modified-since");
+	  if (ifSince != null && ifSince.equalsIgnoreCase(lastModified)) {
 	    this.setResponseCode(HttpURLConnection.HTTP_NOT_MODIFIED);
 	  } else {
 	    if (o instanceof String) {
@@ -496,6 +528,11 @@ public abstract class TestConfigFile extends LockssTestCase {
 	    this.setResponseMessage(respMsg);
 	  }
 	}
+      }
+
+      public void setRequestProperty(String key, String value) {
+	super.setRequestProperty(key, value);
+	connReqHdrs.setProperty(key, value);
       }
 
       public String getResponseContentEncoding() {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestDaemonVersion.java,v 1.3 2006-09-16 22:58:33 tlipkis Exp $
+ * $Id: TestDaemonVersion.java,v 1.4 2007-07-18 07:12:55 tlipkis Exp $
  */
 
 /*
@@ -71,6 +71,10 @@ public class TestDaemonVersion extends LockssTestCase {
     assertIllegalFormat("1.2.$");
     assertIllegalFormat("2.3b.5");
     assertIllegalFormat("2.b.5");
+  }
+
+  public void testDisplayString() {
+    assertEquals("1.2.3", new DaemonVersion("1.2.3").displayString());
   }
 
   public void testToLong() {

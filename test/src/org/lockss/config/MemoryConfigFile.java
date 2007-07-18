@@ -1,5 +1,5 @@
 /*
- * $Id: MemoryConfigFile.java,v 1.1 2006-04-05 22:32:03 tlipkis Exp $
+ * $Id: MemoryConfigFile.java,v 1.2 2007-07-18 07:12:56 tlipkis Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.config;
 import java.io.*;
 
 import org.lockss.util.*;
+import org.lockss.util.urlconn.*;
 
 /**
  * A ConfigFile wrapper for an in-memory Configuration
@@ -53,6 +54,7 @@ public class MemoryConfigFile implements ConfigFile {
   private boolean m_isPlatformFile = false;
   private ConfigurationPropTreeImpl m_config;
   private int m_generation = 0;
+  private LockssUrlConnectionPool connPool;
 
   /**
    * Create a ConfigFile for the URL
@@ -70,6 +72,17 @@ public class MemoryConfigFile implements ConfigFile {
 //     this.gen = new ConfigFile.Generation(this, config, gen) ;
     this.gen = new MyGeneration(this, config, gen) ;
 //     log.info("MemoryConfigFile: " + config);
+  }
+
+  public void setConnectionPool(LockssUrlConnectionPool connPool) {
+    this.connPool = connPool;
+  }
+
+  public LockssUrlConnectionPool getConnectionPool() {
+    return connPool;
+  }
+
+  public void setProperty(String key, Object val) {
   }
 
   public String getFileUrl() {

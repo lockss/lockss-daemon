@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonVersion.java,v 1.6 2006-09-16 22:58:33 tlipkis Exp $
+ * $Id: DaemonVersion.java,v 1.7 2007-07-18 07:12:56 tlipkis Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import java.util.StringTokenizer;
  */
 public class DaemonVersion implements Version, Comparable {
 
+  private String m_verStr;
   private int m_versionMajor;
   private int m_versionMinor;
   private int m_versionBuild;
@@ -72,6 +73,7 @@ public class DaemonVersion implements Version, Comparable {
 	+ ver);
     }
 
+    m_verStr = ver;
     try {
       if (st.hasMoreTokens()) {
 	m_versionMajor = parseToken(st.nextToken());
@@ -118,6 +120,10 @@ public class DaemonVersion implements Version, Comparable {
       throw new IllegalArgumentException("Token is too long: " + intPart);
     }
     return Integer.parseInt(intPart, 10);
+  }
+
+  public String displayString() {
+    return m_verStr;
   }
 
   public String toString() {

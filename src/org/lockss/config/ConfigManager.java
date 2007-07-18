@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.46 2007-06-27 07:49:08 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.47 2007-07-18 07:12:56 tlipkis Exp $
  */
 
 /*
@@ -50,6 +50,7 @@ import org.lockss.repository.*;
 import org.lockss.servlet.*;
 import org.lockss.state.*;
 import org.lockss.util.*;
+import org.lockss.util.urlconn.*;
 
 /** ConfigManager loads and periodically reloads the LOCKSS configuration
  * parameters, and provides services for updating locally changeable
@@ -62,6 +63,9 @@ public class ConfigManager implements LockssManager {
   static final String MYPREFIX = PREFIX + "config.";
   static final String PARAM_RELOAD_INTERVAL = MYPREFIX + "reloadInterval";
   static final long DEFAULT_RELOAD_INTERVAL = 30 * Constants.MINUTE;
+
+  static final String PARAM_SEND_VERSION_EVERY = MYPREFIX + "sendVersionEvery";
+  static final long DEFAULT_SEND_VERSION_EVERY = 1 * Constants.DAY;
 
   static final String WDOG_PARAM_CONFIG = "Config";
   static final long WDOG_DEFAULT_CONFIG = 2 * Constants.HOUR;
@@ -204,8 +208,11 @@ public class ConfigManager implements LockssManager {
   private HandlerThread handlerThread; // reload handler thread
 
   private ConfigCache configCache = new ConfigCache();
+  private volatile boolean needImmediateReload = false;
+  private LockssUrlConnectionPool connPool = new LockssUrlConnectionPool();
 
   private long reloadInterval = 10 * Constants.MINUTE;
+  private long sendVersionEvery = DEFAULT_SEND_VERSION_EVERY;
 
   public ConfigManager() {
     this(null, null);
@@ -226,6 +233,10 @@ public class ConfigManager implements LockssManager {
 
   public ConfigCache getConfigCache() {
     return configCache;
+  }
+
+  LockssUrlConnectionPool getConnectionPool() {
+    return connPool;
   }
 
   public void initService(LockssApp app) throws LockssAppException {
@@ -517,6 +528,12 @@ public class ConfigManager implements LockssManager {
 					    Predicate keyPredicate)
       throws IOException {
     try {
+      cf.setConnectionPool(connPool);
+      if (sendVersionInfo != null && "props".equals(msg)) {
+	cf.setProperty(Constants.X_LOCKSS_INFO, sendVersionInfo);
+      } else {
+	cf.setProperty(Constants.X_LOCKSS_INFO, null);
+      }
       if (reload) {
 	cf.setNeedsReload();
       }
@@ -611,6 +628,10 @@ public class ConfigManager implements LockssManager {
   List getStandardConfigGenerations(List urls, boolean reload)
       throws IOException {
     List res = new ArrayList(20);
+
+    List configGens = getConfigGenerations(urls, true, reload, "props");
+    res.addAll(configGens);
+
     res.addAll(getConfigGenerations(titledbUrlList, false, reload,
 				    "global titledb", titleDbOnlyPred));
     res.addAll(getConfigGenerations(pluginTitledbUrlList, false, reload,
@@ -618,8 +639,6 @@ public class ConfigManager implements LockssManager {
 				    titleDbOnlyPred));
     res.addAll(getConfigGenerations(userTitledbUrlList, false, reload,
 				    "user title DBs", titleDbOnlyPred));
-    List configGens = getConfigGenerations(urls, true, reload, "props");
-    res.addAll(configGens);
     initCacheConfig(configGens);
     res.addAll(getCacheConfigGenerations(reload));
     return res;
@@ -638,21 +657,31 @@ public class ConfigManager implements LockssManager {
     return updateConfig(configUrlList);
   }
 
-  private volatile boolean needImmediateReload = false;
-
   public boolean updateConfig(List urls) {
     needImmediateReload = false;
     boolean res = updateConfigOnce(urls, true);
     if (res && needImmediateReload) {
       updateConfigOnce(urls, false);
     }
+    connPool.closeIdleConnections(0);
     return res;
   }
+
+  private String sendVersionInfo;
+  private long lastSendVersion;
 
   public boolean updateConfigOnce(List urls, boolean reload) {
     if (currentConfig.isEmpty()) {
       // first load preceded by platform config setup
       setupPlatformConfig(urls);
+    }
+    if (currentConfig.isEmpty() ||
+	TimeBase.msSince(lastSendVersion) >= sendVersionEvery) {
+      LockssApp app = getApp();
+      sendVersionInfo = getVersionString();
+      lastSendVersion = TimeBase.nowMs();
+    } else {
+      sendVersionInfo = null;
     }
     List gens;
     try {
@@ -674,6 +703,48 @@ public class ConfigManager implements LockssManager {
 
     return installConfig(newConfig, gens);
   }
+
+  Properties getVersionProps() {
+    Properties p = new Properties();
+    PlatformVersion pver = getPlatformVersion();
+    if (pver != null) {
+      putIf(p, "platform", pver.displayString());
+    }
+    DaemonVersion dver = getDaemonVersion();
+    if (dver != null) {
+      putIf(p, "daemon", dver.displayString());
+    } else {
+      putIf(p, "built",
+	    BuildInfo.getBuildProperty(BuildInfo.BUILD_TIMESTAMP));
+      putIf(p, "built_on", BuildInfo.getBuildProperty(BuildInfo.BUILD_HOST));
+    }
+    putIf(p, "groups",
+	  StringUtil.separatedString(getPlatformGroupList(), ";"));
+    putIf(p, "host", getPlatformHostname());
+    return p;
+  }
+
+  void putIf(Properties p, String key, String val) {
+    if (val != null) {
+      p.put(key, val);
+    }
+  }
+
+  String getVersionString() {
+    StringBuilder sb = new StringBuilder();
+    for (Iterator iter = getVersionProps().entrySet().iterator();
+	 iter.hasNext(); ) {
+      Map.Entry ent = (Map.Entry)iter.next();
+      sb.append(ent.getKey());
+      sb.append("=");
+      sb.append(StringUtil.csvEncode((String)ent.getValue()));
+      if (iter.hasNext()) {
+	sb.append(",");
+      }
+    }
+    return sb.toString();
+  }
+
 
   void loadList(Configuration intoConfig, Collection gens) {
     for (Iterator iter = gens.iterator(); iter.hasNext(); ) {
@@ -758,13 +829,26 @@ public class ConfigManager implements LockssManager {
 				   Configuration oldConfig,
 				   Configuration.Differences changedKeys) {
 
-    reloadInterval = config.getTimeInterval(PARAM_RELOAD_INTERVAL,
-					    DEFAULT_RELOAD_INTERVAL);
+    if (changedKeys.contains(PARAM_RELOAD_INTERVAL)) {
+      reloadInterval = config.getTimeInterval(PARAM_RELOAD_INTERVAL,
+					      DEFAULT_RELOAD_INTERVAL);
+    }
+    if (changedKeys.contains(PARAM_SEND_VERSION_EVERY)) {
+      sendVersionEvery = config.getTimeInterval(PARAM_SEND_VERSION_EVERY,
+						DEFAULT_SEND_VERSION_EVERY);
+    }
+
     if (changedKeys.contains(PARAM_PLATFORM_VERSION)) {
       platVer = null;
     }
-    if (changedKeys.contains(PARAM_USER_TITLE_DB_URLS) ||
-	changedKeys.contains(PARAM_TITLE_DB_URLS)) {
+    // check for presence of title db url keys on first load, as
+    // changedKeys.containsKey() is true of all keys then and would lead to
+    // always reloading the first time.
+    if (oldConfig.isEmpty()
+	? (config.containsKey(PARAM_USER_TITLE_DB_URLS)
+	   || config.containsKey(PARAM_TITLE_DB_URLS))
+	: (changedKeys.contains(PARAM_USER_TITLE_DB_URLS)
+	   || changedKeys.contains(PARAM_TITLE_DB_URLS))) {
       userTitledbUrlList = config.getList(PARAM_USER_TITLE_DB_URLS);
       titledbUrlList = config.getList(PARAM_TITLE_DB_URLS);
       log.debug("titledbUrlList: " + titledbUrlList +

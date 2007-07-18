@@ -1,5 +1,5 @@
 /*
- * $Id: LockssUrlConnectionPool.java,v 1.3 2005-10-03 06:03:49 tlipkis Exp $
+ * $Id: LockssUrlConnectionPool.java,v 1.4 2007-07-18 07:12:56 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -94,6 +94,13 @@ public class LockssUrlConnectionPool {
   public void setDataTimeout(long dataTimeout) {
     this.dataTimeout = shortenToInt(dataTimeout);
     hcConnManager.getParams().setSoTimeout(this.dataTimeout);
+  }
+
+  /** Close connections that have been idle for at least idleTime.  If
+   * zero, close all connections not currently actuve.  Use this when
+   * you're done with the connection pool for a while. */
+  public void closeIdleConnections(long idleTime) {
+    hcConnManager.closeIdleConnections(idleTime);
   }
 
   private HttpClient setupNewHttpClient() {

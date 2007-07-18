@@ -1,5 +1,5 @@
 /*
- * $Id: HTTPConfigFile.java,v 1.10 2007-06-28 06:06:20 tlipkis Exp $
+ * $Id: HTTPConfigFile.java,v 1.11 2007-07-18 07:12:56 tlipkis Exp $
  */
 
 /*
@@ -58,18 +58,29 @@ public class HTTPConfigFile extends BaseConfigFile {
 
   private String m_httpLastModifiedString = null;
 
+  private LockssUrlConnectionPool m_connPool;
+
   public HTTPConfigFile(String url) {
     super(url);
+  }
+
+  public void setConnectionPool(LockssUrlConnectionPool connPool) {
+    m_connPool = connPool;
+  }
+
+  LockssUrlConnectionPool getConnectionPool() {
+    if (m_connPool == null) {
+      m_connPool = new LockssUrlConnectionPool();
+    }
+    return m_connPool;
   }
 
   // overridden for testing
   protected LockssUrlConnection openUrlConnection(String url)
       throws IOException {
-    // XXX If/when more than one file is fetched from props server, this
-    // should use a common connection pool so connection gets resused.
-    // XXX should do something about closing connection promptly
-    LockssUrlConnectionPool connPool = new LockssUrlConnectionPool();
     Configuration conf = ConfigManager.getCurrentConfig();
+
+    LockssUrlConnectionPool connPool = getConnectionPool();
 
     connPool.setConnectTimeout(conf.getTimeInterval(PARAM_CONNECT_TIMEOUT,
 						    DEFAULT_CONNECT_TIMEOUT));
@@ -100,6 +111,12 @@ public class HTTPConfigFile extends BaseConfigFile {
     }
     conn.setRequestProperty("Accept-Encoding", "gzip");
 
+    if (m_props != null) {
+      Object x = m_props.get(Constants.X_LOCKSS_INFO);
+      if (x instanceof String) {
+	conn.setRequestProperty(Constants.X_LOCKSS_INFO, (String)x);
+      }
+    }
     conn.execute();
 
     int resp = conn.getResponseCode();

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseConfigFile.java,v 1.3 2006-06-01 23:47:41 tlipkis Exp $
+ * $Id: BaseConfigFile.java,v 1.4 2007-07-18 07:12:56 tlipkis Exp $
  */
 
 /*
@@ -33,7 +33,9 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.config;
 
 import java.io.*;
+import java.util.*;
 import org.lockss.util.*;
+import org.lockss.util.urlconn.*;
 
 /**
  * Common functionality for a config file loadable from a URL or filename,
@@ -53,6 +55,7 @@ public abstract class BaseConfigFile implements ConfigFile {
   protected boolean m_isPlatformFile = false;
   protected ConfigurationPropTreeImpl m_config;
   protected int m_generation = 0;
+  protected Map m_props;
 
   /**
    * Create a ConfigFile for the URL
@@ -126,6 +129,16 @@ public abstract class BaseConfigFile implements ConfigFile {
    */
   public void setNeedsReload() {
     m_needsReload = true;
+  }
+
+  public void setConnectionPool(LockssUrlConnectionPool connPool) {
+  }
+
+  public void setProperty(String key, Object val) {
+    if (m_props == null) {
+      m_props = new HashMap();
+    }
+    m_props.put(key, val);
   }
 
   /** Return the Configuration object built from this file

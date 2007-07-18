@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigManager.java,v 1.23 2007-05-23 02:26:54 tlipkis Exp $
+ * $Id: TestConfigManager.java,v 1.24 2007-07-18 07:12:56 tlipkis Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.util.*;
 
 import org.lockss.test.*;
 import org.lockss.util.*;
+import org.lockss.util.urlconn.*;
 import org.lockss.clockss.*;
 
 /**
@@ -646,6 +647,43 @@ public class TestConfigManager extends LockssTestCase {
     assertEquals("xxx", config.get("prop2"));
     assertTrue(config.getBoolean("prop3", false));
     assertEquals("yyy", config.get("prop4"));
+  }
+
+  public void testConnPool() throws IOException {
+    LockssUrlConnectionPool pool = mgr.getConnectionPool();
+    Configuration config = ConfigManager.newConfiguration();
+    config.put("bar", "false");
+    MemoryConfigFile cf1 = new MemoryConfigFile("a", config, 1);
+    MemoryConfigFile cf2 = new MemoryConfigFile("a", config, 1);
+    
+    List<ConfigFile.Generation> gens =
+      mgr.getConfigGenerations(ListUtil.list(cf1, cf2), true, true, "props");
+    for (ConfigFile.Generation gen : gens) {
+      MemoryConfigFile cf = (MemoryConfigFile)gen.getConfigFile();
+      assertSame(pool, cf.getConnectionPool());
+    }
+  }
+
+  public void testXLockssInfo() throws IOException {
+    TimeBase.setSimulated(1000);
+    String u1 = FileTestUtil.urlOfString("org.lockss.foo=bar");
+    assertTrue(mgr.updateConfig(ListUtil.list(u1)));
+    BaseConfigFile cf = (BaseConfigFile)mgr.getConfigCache().find(u1);
+    String info = (String)cf.m_props.get("X-Lockss-Info");
+    assertMatchesRE("groups=nogroup", info);
+    // official build will set daemon, unofficial will set built_on
+    assertMatchesRE("daemon=|built_on=", info);
+    cf.setNeedsReload();
+    assertFalse(mgr.updateConfig(ListUtil.list(u1)));
+    info = (String)cf.m_props.get("X-Lockss-Info");
+    assertEquals(null, info);
+    TimeBase.step(ConfigManager.DEFAULT_SEND_VERSION_EVERY + 1);
+    cf.setNeedsReload();
+    assertFalse(mgr.updateConfig(ListUtil.list(u1)));
+    info = (String)cf.m_props.get("X-Lockss-Info");
+    assertMatchesRE("groups=nogroup", info);
+    // official build will set daemon, unofficial will set built_on
+    assertMatchesRE("daemon=|built_on=", info);
   }
 
   public void testHasLocalCacheConfig() throws Exception {

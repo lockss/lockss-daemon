@@ -1,5 +1,5 @@
 /*
- * $Id: Constants.java,v 1.15 2006-10-07 23:11:30 tlipkis Exp $
+ * $Id: Constants.java,v 1.16 2007-07-18 07:12:56 tlipkis Exp $
  */
 
 /*
@@ -90,6 +90,9 @@ public interface Constants {
 
   /** X-LOCKSS value indicating this response comes from the cache */
   public static String X_LOCKSS_FROM_CACHE = "from-cache";
+
+  /** Header used in props fetches to supply version info */
+  public static String X_LOCKSS_INFO = "X-Lockss-Info";
 
   /** The real identity of a repairer sending a request to localhost, for
    * testing */
