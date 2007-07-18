@@ -19,8 +19,8 @@
     <string>au_crawlrules</string>
     <list>
       <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1, &quot;%slockss-%d.html&quot;, base_url, year</string>
-      <string>1, &quot;%s%d/.*&quot;, base_url, year</string>
+      <string>1,&quot;%slockss-%d.html&quot;, base_url, year</string>
+      <string>1,&quot;%s%d(-[0-9])?/&quot;, base_url, year</string>
     </list>
   </entry>
   <entry>
