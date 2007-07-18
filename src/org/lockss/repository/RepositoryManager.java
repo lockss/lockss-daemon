@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryManager.java,v 1.9 2007-02-20 01:35:05 tlipkis Exp $
+ * $Id: RepositoryManager.java,v 1.10 2007-07-18 07:13:09 tlipkis Exp $
  */
 
 /*
@@ -129,6 +129,10 @@ public class RepositoryManager
 	log.debug("global node cache size: " + paramGlobalNodeCacheSize);
 	globalNodeCache.setMaxSize(paramGlobalNodeCacheSize);
       }
+    }
+    if (changedKeys.contains(PARAM_SIZE_CALC_MAX_LOAD)) {
+      sizeCalcMaxLoad = config.getPercentage(PARAM_SIZE_CALC_MAX_LOAD,
+					     DEFAULT_SIZE_CALC_MAX_LOAD);
     }
   }
 
