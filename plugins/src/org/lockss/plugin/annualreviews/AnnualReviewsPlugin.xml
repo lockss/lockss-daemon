@@ -13,18 +13,18 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Annual Reviews</string>
+    <string>Annual Reviews Plugin</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
     <list>
       <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;^%slockss/%s/%d/index.html&quot;, base_url, journal_id, volume</string>
       <string>2,&quot;^%s(action|loi|search|feedback|edcom)&quot;, base_url</string>
-      <string>1,&quot;^%s.*\.(js|css|ico|gif|jpg|jpeg|png)$&quot;, base_url</string>
+      <string>1,&quot;^%s.*\.(js|css|ico|gif|jpe?g|png)$&quot;, base_url</string>
       <string>1,&quot;^%stoc/%s/%d/&quot;, base_url, journal_id, volume</string>
-      <string>1,&quot;%sdoi/(pdf|abs|full).*/.*%s\.%.02d.*&quot;, base_url, short_journal_id, volume</string>
-      <string>1,&quot;%sdoi/(pdf|abs|full)/.*/.*%s\.%.02d.*&quot;, base_url, journal_id, volume</string>
-      <string>1,&quot;%slockss/%s/%d/index.html&quot;, base_url, journal_id, volume</string>
+      <string>1,&quot;^%sdoi/(pdf|abs|full).*/%s\.%.02d&quot;, base_url, short_journal_id, volume</string>
+      <string>1,&quot;^%sdoi/(pdf|abs|full)/.*/%s\.%.02d&quot;, base_url, journal_id, volume</string>
     </list>
   </entry>
   <entry>
