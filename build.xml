@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
+
 ========================================================================
- $Id: build.xml,v 1.218 2007-07-16 18:07:16 tlipkis Exp $
+ $Id: build.xml,v 1.219 2007-07-24 00:11:13 thib_gc Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -183,7 +185,9 @@ Args:
 <!--    <property name="xml.jar"  value="${lib}/org.apache.crimson.jar"/> -->
   <property name="log4j.jar" value="${lib}/log4j-1.2.13.jar"/>
   <property name="commons.lang.jar"
-  				  value="${lib}/commons-lang-2.2.jar"/>
+				  value="${lib}/commons-lang-2.2.jar"/>
+  <property name="commons.cli.jar"
+  				  value="${lib}/commons-cli-1.1.jar"/>
   <property name="commons.collections.jar"
   				  value="${lib}/commons-collections-3.2.jar"/>
   <property name="commons.logging.jar"
@@ -380,6 +384,7 @@ Args:
     <pathelement path="${lockss.jar}" />
     <path refid="compile.classpath" />
     <pathelement path="${jdk.tools.jar}" />
+    <pathelement path="${commons.cli.jar}" />
   </path>
 
   <path id="tools.run.classpath">

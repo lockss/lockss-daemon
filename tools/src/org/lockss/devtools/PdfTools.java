@@ -1,10 +1,10 @@
 /*
- * $Id: PdfTools.java,v 1.16 2006-09-27 17:32:57 thib_gc Exp $
+ * $Id: PdfTools.java,v 1.17 2007-07-24 00:11:13 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,9 +35,9 @@ package org.lockss.devtools;
 import java.io.*;
 import java.util.Iterator;
 
+import org.apache.commons.cli.*;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.io.output.*;
-import org.apache.commons.io.output.NullOutputStream;
 import org.lockss.filter.pdf.*;
 import org.lockss.filter.pdf.DocumentTransformUtil.*;
 import org.lockss.filter.pdf.PageTransformUtil.IdentityPageTransform;
@@ -52,6 +52,12 @@ import org.pdfbox.pdmodel.interactive.annotation.PDAnnotation;
  * @author Thib Guicherd-Callin
  */
 public class PdfTools {
+
+  private static final String HELP_DESCR = "display this usage message";
+
+  protected static final char HELP_CHAR = 'h';
+
+  protected static final String HELP_STR = "help";
 
   public static class DumpAnnotations extends IdentityPageTransform {
     public boolean transform(PdfPage pdfPage) throws IOException {
@@ -274,7 +280,7 @@ public class PdfTools {
 
   protected static final String USAGE_MESSAGE =
     "\tant run-tool -Dclass=" + PdfTools.class.getName() + "\n" +
-    "\t\t-Dargs=\"-in in.pdf [options/commands...]\"" +
+    "\t\t-Dargs=\"-in in.pdf [options/commands...]\"\n" +
     "Help\n" +
     " -h -help -usage     Displays this message\n" +
     "Commands\n" +
@@ -295,16 +301,20 @@ public class PdfTools {
     "Unimplemented\n" +
     " -pagedictionary\n";
 
-  public static void main(String[] args) throws IOException {
-    try {
-      if (!(parseHelp(args) && parseArgs(args) && validateArgs() && setUpInputOutput() && applyTransforms())) {
-        System.exit(1);
-      }
-    }
-    finally {
-      tearDownInputOutput();
-    }
-  }
+//  public static void main(String[] args) throws IOException {
+//    try {
+//      if (!(   parseHelp(args)
+//    		&& parseArgs(args)
+//    		&& validateArgs()
+//    		&& setUpInputOutput()
+//    		&& applyTransforms())) {
+//        System.exit(1);
+//      }
+//    }
+//    finally {
+//      tearDownInputOutput();
+//    }
+//  }
 
   protected static boolean applyTransforms() throws IOException {
     AggregateDocumentTransform documentTransform = new AggregateDocumentTransform();
@@ -619,4 +629,116 @@ public class PdfTools {
     return true;
   }
 
+  protected static Options prepareOptions() {
+    Options options = new Options();
+    
+    OptionGroup leadingGroup = new OptionGroup();
+    
+    OptionBuilder.withDescription(HELP_DESCR);
+    OptionBuilder.withLongOpt(HELP_STR);
+    leadingGroup.addOption(OptionBuilder.create(HELP_CHAR));
+    
+    OptionBuilder.hasArg();
+    OptionBuilder.withArgName("inputfile");
+    OptionBuilder.withDescription("specifies the input file");
+    OptionBuilder.withLongOpt("input");
+    leadingGroup.addOption(OptionBuilder.create('i'));
+    
+    leadingGroup.setRequired(true);
+    options.addOptionGroup(leadingGroup);
+    
+    OptionGroup transformGroup = new OptionGroup();
+    
+    OptionBuilder.isRequired();
+    OptionBuilder.hasArg();
+    OptionBuilder.withArgName("transformclass");
+    OptionBuilder.withDescription("apply a transform");
+    OptionBuilder.withLongOpt("apply");
+    transformGroup.addOption(OptionBuilder.create('a'));
+    
+    OptionBuilder.withDescription("rewrite the input file");
+    OptionBuilder.withLongOpt("rewrite");
+    transformGroup.addOption(OptionBuilder.create('r'));
+    
+    options.addOptionGroup(transformGroup);
+    
+    OptionBuilder.withDescription("duplicate all output to the console");
+    OptionBuilder.withLongOpt("console");
+    options.addOption(OptionBuilder.create('c'));
+    
+    OptionBuilder.withDescription("dump the document metadata");
+    OptionBuilder.withLongOpt("metadata");
+    options.addOption(OptionBuilder.create('m'));
+    
+    OptionBuilder.withDescription("dump the token stream of each page with numbers");
+    OptionBuilder.withLongOpt("numbered-page-streams");
+    options.addOption(OptionBuilder.create('N'));
+    
+    OptionBuilder.hasArg();
+    OptionBuilder.withArgName("outputfile");
+    OptionBuilder.withDescription("specifies the output file");
+    OptionBuilder.withLongOpt("output");
+    options.addOption(OptionBuilder.create('o'));
+    
+    OptionBuilder.withDescription("dump the annotations of each page");
+    OptionBuilder.withLongOpt("page-annotations");
+    options.addOption(OptionBuilder.create('A'));
+    
+    OptionBuilder.withDescription("dump the boxes of each page");
+    OptionBuilder.withLongOpt("page-boxes");
+    options.addOption(OptionBuilder.create('B'));
+    
+    OptionBuilder.withDescription("dump the dictionary of each page");
+    OptionBuilder.withLongOpt("page-dictionaries");
+    options.addOption(OptionBuilder.create('D'));
+    
+    OptionBuilder.withDescription("dump the token stream of each page");
+    OptionBuilder.withLongOpt("page-streams");
+    options.addOption(OptionBuilder.create('S'));
+    
+    OptionBuilder.withDescription("dump the document trailer");
+    OptionBuilder.withLongOpt("trailer");
+    options.addOption(OptionBuilder.create('r'));
+    
+    OptionBuilder.withDescription("produce verbose output");
+    OptionBuilder.withLongOpt("verbose");
+    options.addOption(OptionBuilder.create('v'));
+    
+    return options;
+  }
+  
+  public static void main(String[] args) {
+    try {
+      // Parse the command line
+      Options options = prepareOptions();
+      CommandLineParser parser = new GnuParser();
+      CommandLine commandLine = parser.parse(options, args);
+
+      // Display the usage message
+      if (commandLine.hasOption(HELP_CHAR)) {
+        new HelpFormatter().printHelp("java " + PdfTools.class.getName(), options, true);
+        return;
+      }
+      
+      PdfTools pdfTools = new PdfTools();
+      pdfTools.processCommandLine(commandLine);
+    }
+    catch (Exception exc) {
+      exc.printStackTrace();
+      System.exit(1);
+    }
+    
+  }
+  
+  protected CommandLine commandLine;
+  
+  protected synchronized void processCommandLine(CommandLine commandLine) {
+    this.commandLine = commandLine;
+    validateCommandLine();
+  }
+  
+  protected void validateCommandLine() {
+    
+  }
+  
 }
