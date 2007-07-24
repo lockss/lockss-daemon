@@ -1,5 +1,5 @@
 /*
- * $Id: PdfTools.java,v 1.17 2007-07-24 00:11:13 thib_gc Exp $
+ * $Id: PdfTools.java,v 1.18 2007-07-24 00:16:42 thib_gc Exp $
  */
 
 /*
@@ -662,9 +662,21 @@ public class PdfTools {
     
     options.addOptionGroup(transformGroup);
     
+    OptionBuilder.withDescription("dump the annotations of each page");
+    OptionBuilder.withLongOpt("page-annotations");
+    options.addOption(OptionBuilder.create('A'));
+    
+    OptionBuilder.withDescription("dump the boxes of each page");
+    OptionBuilder.withLongOpt("page-boxes");
+    options.addOption(OptionBuilder.create('B'));
+    
     OptionBuilder.withDescription("duplicate all output to the console");
     OptionBuilder.withLongOpt("console");
     options.addOption(OptionBuilder.create('c'));
+    
+    OptionBuilder.withDescription("dump the dictionary of each page");
+    OptionBuilder.withLongOpt("page-dictionaries");
+    options.addOption(OptionBuilder.create('D'));
     
     OptionBuilder.withDescription("dump the document metadata");
     OptionBuilder.withLongOpt("metadata");
@@ -680,25 +692,13 @@ public class PdfTools {
     OptionBuilder.withLongOpt("output");
     options.addOption(OptionBuilder.create('o'));
     
-    OptionBuilder.withDescription("dump the annotations of each page");
-    OptionBuilder.withLongOpt("page-annotations");
-    options.addOption(OptionBuilder.create('A'));
-    
-    OptionBuilder.withDescription("dump the boxes of each page");
-    OptionBuilder.withLongOpt("page-boxes");
-    options.addOption(OptionBuilder.create('B'));
-    
-    OptionBuilder.withDescription("dump the dictionary of each page");
-    OptionBuilder.withLongOpt("page-dictionaries");
-    options.addOption(OptionBuilder.create('D'));
-    
     OptionBuilder.withDescription("dump the token stream of each page");
     OptionBuilder.withLongOpt("page-streams");
     options.addOption(OptionBuilder.create('S'));
     
     OptionBuilder.withDescription("dump the document trailer");
     OptionBuilder.withLongOpt("trailer");
-    options.addOption(OptionBuilder.create('r'));
+    options.addOption(OptionBuilder.create('t'));
     
     OptionBuilder.withDescription("produce verbose output");
     OptionBuilder.withLongOpt("verbose");
