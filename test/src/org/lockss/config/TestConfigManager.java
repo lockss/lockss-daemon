@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigManager.java,v 1.25 2007-07-26 03:42:39 tlipkis Exp $
+ * $Id: TestConfigManager.java,v 1.26 2007-07-26 04:39:19 tlipkis Exp $
  */
 
 /*
@@ -608,11 +608,16 @@ public class TestConfigManager extends LockssTestCase {
     assertEquals("1", config.get("a"));
   }
 
+  public void testFailedLoadDoesntSetHaveConfig() throws IOException {
+    String u1 = "malformed://url/";
+    assertFalse(mgr.waitConfig(Deadline.EXPIRED));
+    assertFalse(mgr.updateConfig(ListUtil.list(u1)));
+    assertFalse(mgr.waitConfig(Deadline.EXPIRED));
+  }
+
   // Currently an illegal key prevents loading the entire file.  I'm not
   // sure that's desirable
   public void testLoadIllTitleDb() throws IOException {
-    List gens;
-
     String u2 = FileTestUtil.urlOfString("org.lockss.notTitleDb.foo=bar\n" +
 					 "org.lockss.title.x.foo=bar");
     String u1 = FileTestUtil.urlOfString("a=1\norg.lockss.titleDbs="+u2);

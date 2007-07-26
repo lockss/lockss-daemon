@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.48 2007-07-26 03:42:39 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.49 2007-07-26 04:39:20 tlipkis Exp $
  */
 
 /*
@@ -669,7 +669,9 @@ public class ConfigManager implements LockssManager {
     if (res && needImmediateReload) {
       updateConfigOnce(urls, false);
     }
-    haveConfig.fill();
+    if (res) {
+      haveConfig.fill();
+    }
     connPool.closeIdleConnections(0);
     return res;
   }
