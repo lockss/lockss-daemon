@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingStreamComm.java,v 1.26 2007-06-28 06:06:44 tlipkis Exp $
+ * $Id: BlockingStreamComm.java,v 1.26.2.1 2007-07-26 17:04:20 tlipkis Exp $
  */
 
 /*
@@ -240,6 +240,26 @@ public class BlockingStreamComm
     super.startService();
     idMgr = getDaemon().getIdentityManager();
     resetConfig();
+    try {
+      myPeerId = getLocalPeerIdentity();
+    } catch (Exception e) {
+      log.critical("No V3 identity, not starting stream comm", e);
+      enabled = false;
+      return;
+    }
+    log.debug("Local V3 peer: " + myPeerId);
+    try {
+      PeerAddress pad = myPeerId.getPeerAddress();
+      if (pad instanceof PeerAddress.Tcp) {
+	myPeerAddr = (PeerAddress.Tcp)pad;
+      } else {
+	log.error("Disabling stream comm; no local TCP peer address: " + pad);
+	enabled = false;
+      }
+    } catch (IdentityManager.MalformedIdentityKeyException e) {
+      log.error("Disabling stream comm; local address malformed", e);
+      enabled = false;
+    }
     if (enabled) {
       start();
 //       getDaemon().getStatusService().registerStatusAccessor("SCommStats",
@@ -326,26 +346,6 @@ public class BlockingStreamComm
     paramPoolKeepaliveTime =
       config.getTimeInterval(PARAM_CHANNEL_THREAD_POOL_KEEPALIVE,
 			     DEFAULT_CHANNEL_THREAD_POOL_KEEPALIVE);
-    try {
-      myPeerId = getLocalPeerIdentity();
-    } catch (Exception e) {
-      log.critical("No V3 identity, not starting stream comm");
-      enabled = false;
-      return;
-    }
-    log.debug("Local V3 peer: " + myPeerId);
-    try {
-      PeerAddress pad = myPeerId.getPeerAddress();
-      if (pad instanceof PeerAddress.Tcp) {
-	myPeerAddr = (PeerAddress.Tcp)pad;
-      } else {
-	log.error("Disabling stream comm; no local TCP peer address: " + pad);
-	enabled = false;
-      }
-    } catch (IdentityManager.MalformedIdentityKeyException e) {
-      log.error("Disabling stream comm; no local address", e);
-      enabled = false;
-    }
     if (changedKeys.contains(PARAM_USE_V3_OVER_SSL)) {
       paramUseV3OverSsl = config.getBoolean(PARAM_USE_V3_OVER_SSL,
 					    DEFAULT_USE_V3_OVER_SSL);
