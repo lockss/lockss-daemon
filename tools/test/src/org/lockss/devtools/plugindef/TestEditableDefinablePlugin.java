@@ -1,5 +1,5 @@
 /*
- * $Id: TestEditableDefinablePlugin.java,v 1.24 2007-06-13 22:14:41 tlipkis Exp $
+ * $Id: TestEditableDefinablePlugin.java,v 1.25 2007-07-26 03:43:33 tlipkis Exp $
  */
 
 /*
@@ -174,6 +174,7 @@ public class TestEditableDefinablePlugin
     set.add("org.lockss.util.urlconn.CacheException$NoRetryNewUrlException");
     set.add("org.lockss.util.urlconn.CacheException$NoRetryPermUrlException");
     set.add("org.lockss.util.urlconn.CacheException$NoRetryTempUrlException");
+    set.add("org.lockss.util.urlconn.CacheException$RedirectOutsideCrawlSpecException");
     set.add("org.lockss.util.urlconn.CacheException$PermissionException");
     set.add("org.lockss.util.urlconn.CacheException$ExpectedNoRetryException");
     set.add("org.lockss.util.urlconn.CacheException$NoRetryDeadLinkException");

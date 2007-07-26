@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.53 2007-07-17 06:03:48 tlipkis Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.54 2007-07-26 03:43:33 tlipkis Exp $
  */
 
 /*
@@ -594,8 +594,8 @@ public class TestBaseUrlCacher extends LockssTestCase {
     try {
       InputStream is = muc.getUncachedInputStream();
       fail("Should have thrown RetryNewUrlException");
-    } catch (CacheException.NoRetryNewUrlException e) {
-      assertEquals("301 Moved to Fresno", e.getMessage());
+    } catch (CacheException.RedirectOutsideCrawlSpecException e) {
+      assertEquals(redTo, e.getMessage());
       CIProperties p = muc.getUncachedProperties();
       assertEquals(redTo, p.getProperty("location"));
     }

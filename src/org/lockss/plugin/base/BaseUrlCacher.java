@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.71 2007-07-17 06:03:48 tlipkis Exp $
+ * $Id: BaseUrlCacher.java,v 1.72 2007-07-26 03:43:33 tlipkis Exp $
  */
 
 /*
@@ -620,8 +620,8 @@ public class BaseUrlCacher implements UrlCacher {
     String location = conn.getResponseHeaderValue("location");
     if (location == null) {
       // got a redirect response, but no location header
-      logger.error("Received redirect response " + conn.getResponseCode()
-		   + " but no location header");
+      logger.siteError("Received redirect response " + conn.getResponseCode()
+		       + " but no location header");
       return false;
     }
     if (logger.isDebug3()) {
@@ -635,7 +635,9 @@ public class BaseUrlCacher implements UrlCacher {
 	if (!au.shouldBeCached(newUrlString)) {
 	  logger.warning("Redirect not in crawl spec: " + newUrlString +
 			 " from: " + origUrl);
-	  return false;
+ 	  throw
+	    new CacheException.RedirectOutsideCrawlSpecException(newUrlString);
+	  //	  return false;
 	}
       }
       if (au.isLoginPageUrl(newUrlString)) {
@@ -680,7 +682,8 @@ public class BaseUrlCacher implements UrlCacher {
       logger.debug2("Following redirect to " + newUrlString);
       return true;
     } catch (MalformedURLException e) {
-      logger.warning("Redirected location '" + location + "' is malformed", e);
+      logger.siteWarning("Redirected location '" + location +
+			 "' is malformed", e);
       return false;
     }
   }

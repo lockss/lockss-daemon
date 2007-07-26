@@ -1,5 +1,5 @@
 /*
- * $Id: CacheException.java,v 1.10 2006-08-07 07:40:44 tlipkis Exp $
+ * $Id: CacheException.java,v 1.11 2007-07-26 03:43:33 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -274,6 +274,21 @@ public class CacheException extends IOException {
     public MalformedURLException(Exception e) {
       super(e.toString());
       nestedException = e;
+    }
+
+    protected void setAttributes() {
+      attributeBits.clear(ATTRIBUTE_FAIL);
+    }
+  }
+
+  public static class RedirectOutsideCrawlSpecException
+      extends UnretryableException {
+    public RedirectOutsideCrawlSpecException() {
+      super();
+    }
+
+    public RedirectOutsideCrawlSpecException(String message) {
+      super(message);
     }
 
     protected void setAttributes() {
