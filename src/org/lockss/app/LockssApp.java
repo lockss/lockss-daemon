@@ -1,5 +1,5 @@
 /*
- * $Id: LockssApp.java,v 1.15 2007-05-23 02:26:54 tlipkis Exp $
+ * $Id: LockssApp.java,v 1.15.2.1 2007-07-26 17:04:56 tlipkis Exp $
  */
 
 /*
@@ -440,7 +440,10 @@ public abstract class LockssApp {
     configMgr.initService(this);
     configMgr.startService();
     log.info("Waiting for config");
-    configMgr.waitConfig();
+    if (!configMgr.waitConfig()) {
+      log.critical("Initial config load timed out");
+      System.exit(Constants.EXIT_CODE_RESOURCE_UNAVAILABLE);
+    }
     log.info("Config loaded");
 
     prevExitOnce = CurrentConfig.getBooleanParam(PARAM_APP_EXIT_ONCE,

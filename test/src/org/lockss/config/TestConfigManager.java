@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigManager.java,v 1.23 2007-05-23 02:26:54 tlipkis Exp $
+ * $Id: TestConfigManager.java,v 1.23.2.1 2007-07-26 17:04:55 tlipkis Exp $
  */
 
 /*
@@ -599,7 +599,9 @@ public class TestConfigManager extends LockssTestCase {
 
     String u2 = FileTestUtil.urlOfString("org.lockss.title.foo=bar");
     String u1 = FileTestUtil.urlOfString("a=1\norg.lockss.titleDbs="+u2);
+    assertFalse(mgr.waitConfig(Deadline.EXPIRED));
     assertTrue(mgr.updateConfig(ListUtil.list(u1)));
+    assertTrue(mgr.waitConfig(Deadline.EXPIRED));
     Configuration config = mgr.getCurrentConfig();
     assertEquals("bar", config.get("org.lockss.title.foo"));
     assertEquals("1", config.get("a"));

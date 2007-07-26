@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.46 2007-06-27 07:49:08 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.46.2.1 2007-07-26 17:04:55 tlipkis Exp $
  */
 
 /*
@@ -422,6 +422,12 @@ public class ConfigManager implements LockssManager {
 		    Configuration.Differences diffs) {
     // run our own "callback"
     configurationChanged(newConfig, oldConfig, diffs);
+    // It's tempting to do
+    //     if (needImmediateReload) return;
+    // here, as there's no point in running the callbacks yet if we're
+    // going to do another config load immediately.  But that optimization
+    // requires calculating diffs that encompass both loads.
+
     // copy the list of callbacks as it could change during the loop.
     List cblist = new ArrayList(configChangedCallbacks);
     for (Iterator iter = cblist.iterator(); iter.hasNext();) {
@@ -646,6 +652,9 @@ public class ConfigManager implements LockssManager {
     if (res && needImmediateReload) {
       updateConfigOnce(urls, false);
     }
+    if (res) {
+      haveConfig.fill();
+    }
     return res;
   }
 
@@ -742,7 +751,6 @@ public class ConfigManager implements LockssManager {
     updateGenerations(gens);
     logConfigLoaded(newConfig, oldConfig, diffs, gens);
     runCallbacks(newConfig, oldConfig, diffs);
-    haveConfig.fill();
     return true;
   }
 
