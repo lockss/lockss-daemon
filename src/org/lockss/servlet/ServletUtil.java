@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.47 2007-07-04 06:48:08 tlipkis Exp $
+ * $Id: ServletUtil.java,v 1.48 2007-07-26 03:44:09 tlipkis Exp $
  */
 
 /*
@@ -888,10 +888,12 @@ public class ServletUtil {
         String repo = (String)iter.next();
         PlatformUtil.DF df = remoteApi.getRepositoryDF(repo);
 	repomap.put(repo, df);
-	if (mostFree == null ||
-	    ((PlatformUtil.DF)repomap.get(mostFree)).getAvail() <
-	    df.getAvail()) {
-	  mostFree = repo;
+	if (df != null) {
+	  if (mostFree == null ||
+	      ((PlatformUtil.DF)repomap.get(mostFree)).getAvail() <
+	      df.getAvail()) {
+	    mostFree = repo;
+	  }
 	}
       }
       for (Iterator iter = repomap.entrySet().iterator(); iter.hasNext(); ) {
@@ -1185,10 +1187,12 @@ public class ServletUtil {
       Map.Entry entry = (Map.Entry)iter.next();
       String repo = (String)entry.getKey();
       PlatformUtil.DF df = (PlatformUtil.DF)entry.getValue();
-      if (mostFree == null ||
-	  df.getAvail() >
-	  ((PlatformUtil.DF)repoMap.get(mostFree)).getAvail()) {
-	mostFree = repo;
+      if (df != null) {
+	if (mostFree == null ||
+	    df.getAvail() >
+	    ((PlatformUtil.DF)repoMap.get(mostFree)).getAvail()) {
+	  mostFree = repo;
+	}
       }
     }
     int ix = 0;
