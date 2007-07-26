@@ -206,6 +206,12 @@
         <property name="xpath" value="[attributes/publisher='ASA-CSSA-SSSA']" />
       </property>
 
+      <property name="American Society of Animal Science">
+        <property name="name" value="All American Society of Animal Science Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='American Society of Animal Science']" />
+      </property>
+
       <property name="American Society of Hematology">
         <property name="name" value="All American Society of Hematology Titles" />
         <property name="class" value="xpath" />
