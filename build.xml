@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.217.2.1 2007-07-16 18:06:57 tlipkis Exp $
+ $Id: build.xml,v 1.217.2.2 2007-07-26 02:52:10 dshr Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
@@ -1000,6 +1000,7 @@ ULIMIT_MEMORY=unlimited
 ULIMIT_STACK=14000
 ULIMIT_FILES=512
 JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 -Dorg.lockss.synchronizeDns=true -showversion -Dorg.lockss.defaultLogLevel=debug2"
+JAVA_COMMAND_ARGS="${JAVA_COMMAND_ARGS} -Djavax.net.ssl.keyStore=/cache/tmp/keystore.jceks -Djavax.net.ssl.keyStorePassword=A-Very-Bad-Password -Djavax.net.ssl.keyStoreType=JCEKS -Djavax.net.ssl.trustStore=/cache/tmp/keystore.jceks -Djavax.net.ssl.trustStorePassword=A-Very-Bad-Password -Djavax.net.ssl.trustStoreType=JCEKS"
 </echo>
     <!-- Copy maxheap script to lib dir (XXX should be in platform) -->
     <copy file="${scripts}/maxheap"
