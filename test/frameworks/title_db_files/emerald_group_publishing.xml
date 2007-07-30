@@ -1459,5 +1459,1164 @@
         <property name="attributes.publisher" value="Emerald Group Publishing" />
       </property>
 
+      <property name="EmeraldBalticJournalofManagement1">
+        <property name="title" value="Baltic Journal of Management Volume 1" />
+        <property name="journalTitle" value="Baltic Journal of Management" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="1746-5265" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="1" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldBalticJournalofManagement2">
+        <property name="title" value="Baltic Journal of Management Volume 2" />
+        <property name="journalTitle" value="Baltic Journal of Management" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="1746-5265" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="2" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldBenchmarkingAnInternationalJournal1">
+        <property name="title" value="Benchmarking: An International Journal Volume 1" />
+        <property name="journalTitle" value="Benchmarking: An International Journal" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="1463-5771" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="1" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldBenchmarkingAnInternationalJournal2">
+        <property name="title" value="Benchmarking: An International Journal Volume 2" />
+        <property name="journalTitle" value="Benchmarking: An International Journal" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="1463-5771" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="2" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldBenchmarkingAnInternationalJournal3">
+        <property name="title" value="Benchmarking: An International Journal Volume 3" />
+        <property name="journalTitle" value="Benchmarking: An International Journal" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="1463-5771" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="3" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldBenchmarkingAnInternationalJournal4">
+        <property name="title" value="Benchmarking: An International Journal Volume 4" />
+        <property name="journalTitle" value="Benchmarking: An International Journal" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="1463-5771" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="4" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldBenchmarkingAnInternationalJournal5">
+        <property name="title" value="Benchmarking: An International Journal Volume 5" />
+        <property name="journalTitle" value="Benchmarking: An International Journal" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="1463-5771" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="5" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldBenchmarkingAnInternationalJournal6">
+        <property name="title" value="Benchmarking: An International Journal Volume 6" />
+        <property name="journalTitle" value="Benchmarking: An International Journal" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="1463-5771" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="6" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldBenchmarkingAnInternationalJournal7">
+        <property name="title" value="Benchmarking: An International Journal Volume 7" />
+        <property name="journalTitle" value="Benchmarking: An International Journal" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="1463-5771" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="7" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldBenchmarkingAnInternationalJournal8">
+        <property name="title" value="Benchmarking: An International Journal Volume 8" />
+        <property name="journalTitle" value="Benchmarking: An International Journal" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="1463-5771" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="8" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldBenchmarkingAnInternationalJournal9">
+        <property name="title" value="Benchmarking: An International Journal Volume 9" />
+        <property name="journalTitle" value="Benchmarking: An International Journal" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="1463-5771" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="9" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldBenchmarkingAnInternationalJournal10">
+        <property name="title" value="Benchmarking: An International Journal Volume 10" />
+        <property name="journalTitle" value="Benchmarking: An International Journal" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="1463-5771" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="10" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldBenchmarkingAnInternationalJournal11">
+        <property name="title" value="Benchmarking: An International Journal Volume 11" />
+        <property name="journalTitle" value="Benchmarking: An International Journal" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="1463-5771" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="11" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldBenchmarkingAnInternationalJournal12">
+        <property name="title" value="Benchmarking: An International Journal Volume 12" />
+        <property name="journalTitle" value="Benchmarking: An International Journal" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="1463-5771" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="12" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldBenchmarkingAnInternationalJournal13">
+        <property name="title" value="Benchmarking: An International Journal Volume 13" />
+        <property name="journalTitle" value="Benchmarking: An International Journal" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="1463-5771" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="13" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldBenchmarkingAnInternationalJournal14">
+        <property name="title" value="Benchmarking: An International Journal Volume 14" />
+        <property name="journalTitle" value="Benchmarking: An International Journal" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="1463-5771" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="14" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldTheBottomLineManagingLibraryFinances9">
+        <property name="title" value="The Bottom Line: Managing Library Finances Volume 9" />
+        <property name="journalTitle" value="The Bottom Line: Managing Library Finances" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="0888-045X" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="9" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldTheBottomLineManagingLibraryFinances10">
+        <property name="title" value="The Bottom Line: Managing Library Finances Volume 10" />
+        <property name="journalTitle" value="The Bottom Line: Managing Library Finances" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="0888-045X" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="10" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldTheBottomLineManagingLibraryFinances11">
+        <property name="title" value="The Bottom Line: Managing Library Finances Volume 11" />
+        <property name="journalTitle" value="The Bottom Line: Managing Library Finances" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="0888-045X" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="11" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldTheBottomLineManagingLibraryFinances12">
+        <property name="title" value="The Bottom Line: Managing Library Finances Volume 12" />
+        <property name="journalTitle" value="The Bottom Line: Managing Library Finances" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="0888-045X" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="12" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldTheBottomLineManagingLibraryFinances13">
+        <property name="title" value="The Bottom Line: Managing Library Finances Volume 13" />
+        <property name="journalTitle" value="The Bottom Line: Managing Library Finances" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="0888-045X" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="13" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldTheBottomLineManagingLibraryFinances14">
+        <property name="title" value="The Bottom Line: Managing Library Finances Volume 14" />
+        <property name="journalTitle" value="The Bottom Line: Managing Library Finances" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="0888-045X" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="14" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldTheBottomLineManagingLibraryFinances15">
+        <property name="title" value="The Bottom Line: Managing Library Finances Volume 15" />
+        <property name="journalTitle" value="The Bottom Line: Managing Library Finances" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="0888-045X" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="15" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldTheBottomLineManagingLibraryFinances16">
+        <property name="title" value="The Bottom Line: Managing Library Finances Volume 16" />
+        <property name="journalTitle" value="The Bottom Line: Managing Library Finances" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="0888-045X" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="16" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldTheBottomLineManagingLibraryFinances17">
+        <property name="title" value="The Bottom Line: Managing Library Finances Volume 17" />
+        <property name="journalTitle" value="The Bottom Line: Managing Library Finances" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="0888-045X" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="17" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldTheBottomLineManagingLibraryFinances18">
+        <property name="title" value="The Bottom Line: Managing Library Finances Volume 18" />
+        <property name="journalTitle" value="The Bottom Line: Managing Library Finances" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="0888-045X" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="18" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldTheBottomLineManagingLibraryFinances19">
+        <property name="title" value="The Bottom Line: Managing Library Finances Volume 19" />
+        <property name="journalTitle" value="The Bottom Line: Managing Library Finances" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="0888-045X" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="19" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldTheBottomLineManagingLibraryFinances20">
+        <property name="title" value="The Bottom Line: Managing Library Finances Volume 20" />
+        <property name="journalTitle" value="The Bottom Line: Managing Library Finances" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="0888-045X" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="20" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldBritishFoodJournal91">
+        <property name="title" value="British Food Journal Volume 91" />
+        <property name="journalTitle" value="British Food Journal" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="0007-070X" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="91" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldBritishFoodJournal92">
+        <property name="title" value="British Food Journal Volume 92" />
+        <property name="journalTitle" value="British Food Journal" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="0007-070X" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="92" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldBritishFoodJournal93">
+        <property name="title" value="British Food Journal Volume 93" />
+        <property name="journalTitle" value="British Food Journal" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="0007-070X" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="93" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldBritishFoodJournal94">
+        <property name="title" value="British Food Journal Volume 94" />
+        <property name="journalTitle" value="British Food Journal" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="0007-070X" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="94" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldBritishFoodJournal95">
+        <property name="title" value="British Food Journal Volume 95" />
+        <property name="journalTitle" value="British Food Journal" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="0007-070X" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="95" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldBritishFoodJournal96">
+        <property name="title" value="British Food Journal Volume 96" />
+        <property name="journalTitle" value="British Food Journal" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="0007-070X" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="96" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldBritishFoodJournal97">
+        <property name="title" value="British Food Journal Volume 97" />
+        <property name="journalTitle" value="British Food Journal" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="0007-070X" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="97" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldBritishFoodJournal98">
+        <property name="title" value="British Food Journal Volume 98" />
+        <property name="journalTitle" value="British Food Journal" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="0007-070X" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="98" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldBritishFoodJournal99">
+        <property name="title" value="British Food Journal Volume 99" />
+        <property name="journalTitle" value="British Food Journal" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="0007-070X" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="99" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldBritishFoodJournal100">
+        <property name="title" value="British Food Journal Volume 100" />
+        <property name="journalTitle" value="British Food Journal" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="0007-070X" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="100" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldBritishFoodJournal101">
+        <property name="title" value="British Food Journal Volume 101" />
+        <property name="journalTitle" value="British Food Journal" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="0007-070X" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="101" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldBritishFoodJournal102">
+        <property name="title" value="British Food Journal Volume 102" />
+        <property name="journalTitle" value="British Food Journal" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="0007-070X" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="102" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldBritishFoodJournal103">
+        <property name="title" value="British Food Journal Volume 103" />
+        <property name="journalTitle" value="British Food Journal" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="0007-070X" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="103" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldBritishFoodJournal104">
+        <property name="title" value="British Food Journal Volume 104" />
+        <property name="journalTitle" value="British Food Journal" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="0007-070X" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="104" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldBritishFoodJournal105">
+        <property name="title" value="British Food Journal Volume 105" />
+        <property name="journalTitle" value="British Food Journal" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="0007-070X" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="105" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldBritishFoodJournal106">
+        <property name="title" value="British Food Journal Volume 106" />
+        <property name="journalTitle" value="British Food Journal" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="0007-070X" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="106" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldBritishFoodJournal107">
+        <property name="title" value="British Food Journal Volume 107" />
+        <property name="journalTitle" value="British Food Journal" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="0007-070X" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="107" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldBritishFoodJournal108">
+        <property name="title" value="British Food Journal Volume 108" />
+        <property name="journalTitle" value="British Food Journal" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="0007-070X" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="108" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldBritishFoodJournal109">
+        <property name="title" value="British Food Journal Volume 109" />
+        <property name="journalTitle" value="British Food Journal" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="0007-070X" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="109" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldBusinessProcessManagementJournal1">
+        <property name="title" value="Business Process Management Journal Volume 1" />
+        <property name="journalTitle" value="Business Process Management Journal" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="1463-7154" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="1" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldBusinessProcessManagementJournal2">
+        <property name="title" value="Business Process Management Journal Volume 2" />
+        <property name="journalTitle" value="Business Process Management Journal" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="1463-7154" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="2" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldBusinessProcessManagementJournal3">
+        <property name="title" value="Business Process Management Journal Volume 3" />
+        <property name="journalTitle" value="Business Process Management Journal" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="1463-7154" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="3" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldBusinessProcessManagementJournal4">
+        <property name="title" value="Business Process Management Journal Volume 4" />
+        <property name="journalTitle" value="Business Process Management Journal" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="1463-7154" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="4" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldBusinessProcessManagementJournal5">
+        <property name="title" value="Business Process Management Journal Volume 5" />
+        <property name="journalTitle" value="Business Process Management Journal" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="1463-7154" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="5" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldBusinessProcessManagementJournal6">
+        <property name="title" value="Business Process Management Journal Volume 6" />
+        <property name="journalTitle" value="Business Process Management Journal" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="1463-7154" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="6" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldBusinessProcessManagementJournal7">
+        <property name="title" value="Business Process Management Journal Volume 7" />
+        <property name="journalTitle" value="Business Process Management Journal" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="1463-7154" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="7" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldBusinessProcessManagementJournal8">
+        <property name="title" value="Business Process Management Journal Volume 8" />
+        <property name="journalTitle" value="Business Process Management Journal" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="1463-7154" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="8" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldBusinessProcessManagementJournal9">
+        <property name="title" value="Business Process Management Journal Volume 9" />
+        <property name="journalTitle" value="Business Process Management Journal" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="1463-7154" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="9" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldBusinessProcessManagementJournal10">
+        <property name="title" value="Business Process Management Journal Volume 10" />
+        <property name="journalTitle" value="Business Process Management Journal" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="1463-7154" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="10" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldBusinessProcessManagementJournal11">
+        <property name="title" value="Business Process Management Journal Volume 11" />
+        <property name="journalTitle" value="Business Process Management Journal" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="1463-7154" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="11" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldBusinessProcessManagementJournal12">
+        <property name="title" value="Business Process Management Journal Volume 12" />
+        <property name="journalTitle" value="Business Process Management Journal" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="1463-7154" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="12" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldBusinessProcessManagementJournal13">
+        <property name="title" value="Business Process Management Journal Volume 13" />
+        <property name="journalTitle" value="Business Process Management Journal" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="1463-7154" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="13" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
+      <property name="EmeraldBusinessStrategySeries8">
+        <property name="title" value="Business Strategy Series Volume 8" />
+        <property name="journalTitle" value="Business Strategy Series" />
+        <property name="plugin" value="org.lockss.plugin.emerald.EmeraldPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://uat.emeraldinsight.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_issn" />
+          <property name="value" value="1751-5637" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume_name" />
+          <property name="value" value="8" />
+        </property>
+        <property name="attributes.publisher" value="Emerald Group Publishing" />
+      </property>
+
   </property>
 </lockss-config>
