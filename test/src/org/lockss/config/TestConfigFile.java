@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigFile.java,v 1.6 2007-07-18 07:12:56 tlipkis Exp $
+ * $Id: TestConfigFile.java,v 1.7 2007-07-31 06:31:28 tlipkis Exp $
  */
 
 /*
@@ -414,7 +414,7 @@ public abstract class TestConfigFile extends LockssTestCase {
     public void testNullExceptionMessage() throws IOException {
       MyHttpConfigFile hcf =
 	new MyHttpConfigFile("http://foo.bar/lockss.xml", "");
-      hcf.setExecuteException(new IOException(null));
+      hcf.setExecuteException(new IOException((String)null));
       try {
 	Configuration config = hcf.getConfiguration();
 	fail("Should throw");

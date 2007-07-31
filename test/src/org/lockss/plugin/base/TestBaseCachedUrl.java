@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCachedUrl.java,v 1.18 2007-02-06 00:55:13 tlipkis Exp $
+ * $Id: TestBaseCachedUrl.java,v 1.19 2007-07-31 06:31:28 tlipkis Exp $
  */
 
 /*
@@ -118,7 +118,7 @@ public class TestBaseCachedUrl extends LockssTestCase {
   }
 
   // helper for above tests
-  private class MyCachedUrl extends BaseCachedUrl {
+  private static class MyCachedUrl extends BaseCachedUrl {
     private boolean gotUnfilteredStream = false;
     private boolean gotFilteredStream = false;
     private CIProperties props = new CIProperties();

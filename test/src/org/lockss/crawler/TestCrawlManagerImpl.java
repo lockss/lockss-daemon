@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.69 2006-11-14 19:21:28 tlipkis Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.70 2007-07-31 06:31:28 tlipkis Exp $
  */
 
 /*
@@ -941,7 +941,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     }
   }
 
-  private class TestCrawlCB implements CrawlManager.Callback {
+  private static class TestCrawlCB implements CrawlManager.Callback {
     SimpleBinarySemaphore sem;
     boolean called = false;
     Object cookie;
@@ -1138,7 +1138,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     }
   }
 
-  private class ThrowingAU extends NullPlugin.ArchivalUnit {
+  private static class ThrowingAU extends NullPlugin.ArchivalUnit {
     public CachedUrlSet makeCachedUrlSet(CachedUrlSetSpec spec) {
       throw new ExpectedRuntimeException("I throw");
     }
