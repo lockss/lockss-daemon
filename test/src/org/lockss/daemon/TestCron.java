@@ -1,5 +1,5 @@
 /*
- * $Id: TestCron.java,v 1.5 2006-03-06 17:47:05 tlipkis Exp $
+ * $Id: TestCron.java,v 1.6 2007-07-31 07:55:11 tlipkis Exp $
  */
 
 /*
@@ -59,6 +59,10 @@ public class TestCron extends LockssTestCase {
   }
 
   void initCron(Cron.Task task) {
+    Properties p = new Properties();
+    p.put(org.lockss.util.ObjectSerializer.PARAM_FAILED_DESERIALIZATION_MODE,
+	  org.lockss.util.ObjectSerializer.FAILED_DESERIALIZATION_IGNORE+"");
+    ConfigurationUtil.addFromProps(p);
     cron = new MyCron(task);
     cron.initService(daemon);
     daemon.setDaemonInited(true);
@@ -100,15 +104,16 @@ public class TestCron extends LockssTestCase {
   }
 
   public void testCron() throws IOException {
-    TimeBase.setSimulated(1000);
-    TestTask task = new TestTask(daemon);
-    initCron(task);
     File dir = getTempDir();
     Properties p = new Properties();
     p.put(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, dir.toString());
     p.put(Cron.PARAM_SLEEP, "10");
     p.put(Cron.PARAM_ENABLED, "true");
     ConfigurationUtil.setCurrentConfigFromProps(p);
+    TimeBase.setSimulated(1000);
+    TestTask task = new TestTask(daemon);
+    initCron(task);
+    
     cron.startService();
     TimeBase.step(10);
     assertEquals(ListUtil.list(new Long(1010)), task.getTrace());
