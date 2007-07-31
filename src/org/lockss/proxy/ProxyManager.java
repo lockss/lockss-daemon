@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyManager.java,v 1.42 2007-03-13 22:07:32 tlipkis Exp $
+ * $Id: ProxyManager.java,v 1.43 2007-07-31 06:30:09 tlipkis Exp $
  */
 
 /*
@@ -81,6 +81,17 @@ public class ProxyManager extends BaseProxyManager {
   static final String PARAM_HOST_DOWN_RETRY = PREFIX + "hostDownRetry";
   static final long DEFAULT_HOST_DOWN_RETRY = 10 * Constants.MINUTE;
 
+  /** Cookie policy in effect for proxy connections to origin server. {@see
+   * org.lockss.util.Constants}.  Set to <code>default</code> to use
+   * daemon's default cookie policy, {@see
+   * HttpClientUrlConnection#PARAM_COOKIE_POLICY}. */
+  static final String PARAM_COOKIE_POLICY = PREFIX + "cookiePolicy";
+  static final String DEFAULT_COOKIE_POLICY = "ignore";
+  /** Set {@see #PARAM_COOKIE_POLICY} to this to have proxy use daemon's
+   * default cookie policy, {@see
+   * HttpClientUrlConnection#PARAM_COOKIE_POLICY}. */
+  static final String COOKIE_POLICY_DEFAULT = "default";
+
   public static final int HOST_DOWN_NO_CACHE_ACTION_504 = 1;
   public static final int HOST_DOWN_NO_CACHE_ACTION_QUICK = 2;
   public static final int HOST_DOWN_NO_CACHE_ACTION_NORMAL = 3;
@@ -150,6 +161,7 @@ public class ProxyManager extends BaseProxyManager {
 
   private long paramHostDownRetryTime = DEFAULT_HOST_DOWN_RETRY;
   private int paramHostDownAction = HOST_DOWN_NO_CACHE_ACTION_DEFAULT;
+  private String paramCookiePolicy = null;
   private FixedTimedMap hostsDown = new FixedTimedMap(paramHostDownRetryTime);
   private Set hostsEverDown = new HashSet();
   private FixedTimedMap urlCache;
@@ -181,8 +193,10 @@ public class ProxyManager extends BaseProxyManager {
 	synchronized (hostsDown) {
 	  hostsDown.setInterval(paramHostDownRetryTime);
 	}
-	paramHostDownAction =   config.getInt(PARAM_HOST_DOWN_ACTION,
-					      DEFAULT_HOST_DOWN_ACTION);
+	paramHostDownAction = config.getInt(PARAM_HOST_DOWN_ACTION,
+					    DEFAULT_HOST_DOWN_ACTION);
+	paramCookiePolicy = config.get(PARAM_COOKIE_POLICY,
+				       DEFAULT_COOKIE_POLICY);
 
 	paramUrlCacheEnabled = config.getBoolean(PARAM_URL_CACHE_ENABLED,
 						 DEFAULT_URL_CACHE_ENABLED);
@@ -250,6 +264,10 @@ public class ProxyManager extends BaseProxyManager {
 
   public int getHostDownAction() {
     return paramHostDownAction;
+  }
+
+  public String getCookiePolicy() {
+    return paramCookiePolicy;
   }
 
   /** @return the proxy port */

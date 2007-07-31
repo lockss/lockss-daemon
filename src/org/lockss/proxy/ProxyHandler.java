@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.54 2007-04-30 04:52:46 tlipkis Exp $
+ * $Id: ProxyHandler.java,v 1.55 2007-07-31 06:30:10 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.54 2007-04-30 04:52:46 tlipkis Exp $
+// $Id: ProxyHandler.java,v 1.55 2007-07-31 06:30:10 tlipkis Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -604,6 +604,11 @@ public class ProxyHandler extends AbstractHttpHandler {
       conn.addRequestProperty("Via", makeVia(request));
       conn.addRequestProperty(HttpFields.__XForwardedFor,
 			      request.getRemoteAddr());
+      String cookiePolicy = proxyMgr.getCookiePolicy();
+      if (cookiePolicy != null &&
+	  !cookiePolicy.equalsIgnoreCase(ProxyManager.COOKIE_POLICY_DEFAULT)) {
+	conn.setCookiePolicy(cookiePolicy);
+      }
 
       // If we ever handle input, this is (more-or-less) the HttpClient way
       // to do it
