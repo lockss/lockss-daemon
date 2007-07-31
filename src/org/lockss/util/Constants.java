@@ -1,5 +1,5 @@
 /*
- * $Id: Constants.java,v 1.16 2007-07-18 07:12:56 tlipkis Exp $
+ * $Id: Constants.java,v 1.17 2007-07-31 06:40:33 tlipkis Exp $
  */
 
 /*
@@ -97,6 +97,17 @@ public interface Constants {
   /** The real identity of a repairer sending a request to localhost, for
    * testing */
   public static String X_LOCKSS_REAL_ID = "X-Lockss-Id";
+
+  // Cookie policies.
+
+  /** Cookie policy: ignore cookies */
+  public static String COOKIE_POLICY_IGNORE = "ignore";
+  /** Cookie policy: Netscape draft policy */
+  public static String COOKIE_POLICY_NETSCAPE = "netscape";
+  /** Cookie policy: Common browser compatibility */
+  public static String COOKIE_POLICY_COMPATIBILITY = "compatibility";
+  /** Cookie policy: RFC 2109  */
+  public static String COOKIE_POLICY_RFC_2109 = "rfc2109";
 
   // Exit codes
 
