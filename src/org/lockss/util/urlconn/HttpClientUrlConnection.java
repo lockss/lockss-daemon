@@ -1,5 +1,5 @@
 /*
- * $Id: HttpClientUrlConnection.java,v 1.24 2006-08-02 02:51:40 tlipkis Exp $
+ * $Id: HttpClientUrlConnection.java,v 1.25 2007-07-31 06:30:55 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -65,13 +65,8 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
       HttpParams params = DefaultHttpParams.getDefaultParams();
       if (diffs.contains(PARAM_COOKIE_POLICY)) {
 	String policy = config.get(PARAM_COOKIE_POLICY, DEFAULT_COOKIE_POLICY);
-	if ("rfc2109".equalsIgnoreCase(policy)) {
-	  setDefaultCookiePolicy(params, CookiePolicy.RFC_2109);
-	} else if ("netscape".equalsIgnoreCase(policy)) {
-	  setDefaultCookiePolicy(params, CookiePolicy.NETSCAPE);
-	} else {	//  if ("compatibility".equalsIgnoreCase(policy)) {
-	  setDefaultCookiePolicy(params, CookiePolicy.BROWSER_COMPATIBILITY);
-	}
+	params.setParameter(HttpMethodParams.COOKIE_POLICY,
+			    getCookiePolicy(policy));
       }
       if (diffs.contains(PARAM_SINGLE_COOKIE_HEADER)) {
 	boolean val = config.getBoolean(PARAM_SINGLE_COOKIE_HEADER,
@@ -82,10 +77,21 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
     }
   }
 
-  static void setDefaultCookiePolicy(HttpParams params, String policy) {
-    params.setParameter(HttpMethodParams.COOKIE_POLICY, policy);
+  static String getCookiePolicy(String policy) {
+    if (Constants.COOKIE_POLICY_RFC_2109.equalsIgnoreCase(policy)) {
+      return CookiePolicy.RFC_2109;
+    } else if (Constants.COOKIE_POLICY_NETSCAPE.equalsIgnoreCase(policy)) {
+      return CookiePolicy.NETSCAPE;
+    } else if (Constants.COOKIE_POLICY_IGNORE.equalsIgnoreCase(policy)) {
+      return CookiePolicy.IGNORE_COOKIES;
+    } else if (Constants.COOKIE_POLICY_COMPATIBILITY.equalsIgnoreCase(policy)) {
+      return CookiePolicy.BROWSER_COMPATIBILITY;
+    } else {
+      log.warning("Unknown cookie policy: " + policy +
+		  ", using BROWSER_COMPATIBILITY");
+      return CookiePolicy.BROWSER_COMPATIBILITY;
+    }
   }
-
 
   private HttpClient client;
   private HttpMethod method;
@@ -209,6 +215,12 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
     method.setFollowRedirects(followRedirects);
   }
 
+  public void setCookiePolicy(String policy) {
+    assertNotExecuted();
+    HttpParams params = method.getParams();
+    params.setParameter(HttpMethodParams.COOKIE_POLICY,
+			getCookiePolicy(policy));
+  }
 
   public String getResponseHeaderFieldVal(int n) {
     assertExecuted();

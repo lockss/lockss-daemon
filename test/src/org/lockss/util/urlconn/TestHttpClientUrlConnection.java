@@ -1,5 +1,5 @@
 /*
- * $Id: TestHttpClientUrlConnection.java,v 1.16 2006-08-02 03:00:28 tlipkis Exp $
+ * $Id: TestHttpClientUrlConnection.java,v 1.17 2007-07-31 06:30:55 tlipkis Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import org.lockss.daemon.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.apache.commons.httpclient.*;
+import org.apache.commons.httpclient.cookie.CookiePolicy;
 
 /**
  * Test class for org.lockss.util.urlconn.HttpClientUrlConnection
@@ -71,6 +72,24 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
   public void testPred() {
     assertTrue(conn.isHttp());
     assertTrue(conn.canProxy());
+  }
+
+  String getCookiePolicy(String policy) {
+    return HttpClientUrlConnection.getCookiePolicy(policy);
+  }
+
+  public void testGetCookiePolicy() throws Exception {
+    assertEquals(CookiePolicy.RFC_2109,
+		 getCookiePolicy(Constants.COOKIE_POLICY_RFC_2109));
+
+    assertEquals(CookiePolicy.NETSCAPE,
+		 getCookiePolicy(Constants.COOKIE_POLICY_NETSCAPE));
+
+    assertEquals(CookiePolicy.IGNORE_COOKIES,
+		 getCookiePolicy(Constants.COOKIE_POLICY_IGNORE));
+
+    assertEquals(CookiePolicy.BROWSER_COMPATIBILITY,
+		 getCookiePolicy(Constants.COOKIE_POLICY_COMPATIBILITY));
   }
 
   public void testMalformedUrl() throws Exception {

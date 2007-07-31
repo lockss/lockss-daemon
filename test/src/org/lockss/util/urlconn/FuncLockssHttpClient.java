@@ -1,5 +1,5 @@
 /*
- * $Id: FuncLockssHttpClient.java,v 1.9 2006-09-03 22:37:12 tlipkis Exp $
+ * $Id: FuncLockssHttpClient.java,v 1.10 2007-07-31 06:30:55 tlipkis Exp $
  */
 
 /*
@@ -377,6 +377,14 @@ public class FuncLockssHttpClient extends LockssTestCase {
     testCookie("NETSCAPE", true);
   }
 
+  public void testCookieIgnore() throws Exception {
+    testCookie("IGNORE", false);
+  }
+
+  public void testCookieIgnoreA() throws Exception {
+    testCookie("IGNORE", true);
+  }
+
   public void testCookieDefault() throws Exception {
     testCookie("default", true);
   }
@@ -425,7 +433,9 @@ public class FuncLockssHttpClient extends LockssTestCase {
       c1 = "monster=42";
       c2 = "cutter=leaf";
     }
-    if (singleHeader) {
+    if (policy.equalsIgnoreCase("ignore")) {
+      assertNoHeaderLine("^Cookie:", th.getRequest(1));
+    } else if (singleHeader) {
       assertHeaderLine("^Cookie: " + ver + c1 + "; " + c2, th.getRequest(1));
     } else {
       assertHeaderLine("^Cookie: " + ver + c1, th.getRequest(1));
