@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.22 2007-05-09 10:34:13 smorabito Exp $
+ * $Id: TestV3Poller.java,v 1.23 2007-07-31 06:31:51 tlipkis Exp $
  */
 
 /*
@@ -673,19 +673,15 @@ public class TestV3Poller extends LockssTestCase {
     }
   }
 
-  private void initRequiredServices() {
+  private void initRequiredServices() throws Exception {
     pollmanager = theDaemon.getPollManager();
     hashService = theDaemon.getHashService();
 
     theDaemon.getPluginManager();
 
-    tempDirPath = null;
-    try {
-      tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    }
-    catch (IOException ex) {
-      fail("unable to create a temporary directory");
-    }
+    tempDir = getTempDir();
+    tempDirPath = tempDir.getAbsolutePath();
+    System.setProperty("java.io.tmpdir", tempDirPath);
 
     Properties p = new Properties();
     p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");

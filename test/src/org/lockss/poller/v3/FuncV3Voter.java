@@ -1,5 +1,5 @@
 /*
- * $Id: FuncV3Voter.java,v 1.18 2007-05-23 02:26:53 tlipkis Exp $
+ * $Id: FuncV3Voter.java,v 1.19 2007-07-31 06:31:51 tlipkis Exp $
  */
 
 /*
@@ -84,7 +84,8 @@ public class FuncV3Voter extends LockssTestCase {
     TimeBase.setSimulated();
     msgDeadline = TimeBase.nowMs() + 100000;
     tempDir = getTempDir();
-    tempDirPath = tempDir.getAbsolutePath() + File.separator;
+    tempDirPath = tempDir.getAbsolutePath();
+    System.setProperty("java.io.tmpdir", tempDirPath);
     startDaemon();
   }
 

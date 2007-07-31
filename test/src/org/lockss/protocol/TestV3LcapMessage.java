@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3LcapMessage.java,v 1.19 2007-02-22 05:35:49 smorabito Exp $
+ * $Id: TestV3LcapMessage.java,v 1.20 2007-07-31 06:31:51 tlipkis Exp $
  */
 
 /*
@@ -75,6 +75,8 @@ public class TestV3LcapMessage extends LockssTestCase {
     theDaemon = getMockLockssDaemon();
     tempDir = getTempDir();
     String tempDirPath = tempDir.getAbsolutePath();
+    System.setProperty("java.io.tmpdir", tempDirPath);
+
     Properties p = new Properties();
     p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
     p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
