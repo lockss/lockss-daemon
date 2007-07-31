@@ -1,5 +1,5 @@
 /*
- * $Id: BasicPdfFilterFactory.java,v 1.4 2007-02-23 19:41:34 thib_gc Exp $
+ * $Id: BasicPdfFilterFactory.java,v 1.5 2007-07-31 22:40:24 thib_gc Exp $
  */
 
 /*
@@ -55,6 +55,7 @@ public class BasicPdfFilterFactory implements FilterFactory {
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
                                                String encoding) {
+    logger.debug2("Basic PDF filter factory for: " + au.getName());
     OutputDocumentTransform documentTransform = PdfUtil.getOutputDocumentTransform(au);
     if (documentTransform == null) {
       logger.debug2("Unfiltered");
