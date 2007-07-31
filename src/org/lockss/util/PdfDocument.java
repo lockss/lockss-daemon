@@ -1,5 +1,5 @@
 /*
- * $Id: PdfDocument.java,v 1.16 2007-02-23 19:42:04 thib_gc Exp $
+ * $Id: PdfDocument.java,v 1.17 2007-07-31 08:40:05 thib_gc Exp $
  */
 
 /*
@@ -156,7 +156,8 @@ public class PdfDocument {
   }
 
   public String getMetadataAsString() throws IOException {
-    return getMetadata().getInputStreamAsString();
+    PDMetadata metadata = getMetadata();
+    return metadata == null ? null : metadata.getInputStreamAsString();
   }
 
   /**
@@ -313,11 +314,11 @@ public class PdfDocument {
   public void removePage(int index) throws IOException {
     getPdDocument().removePage(index);
   }
-  
+
   public void removePage(PdfPage pdfPage) throws IOException {
     removePage(pdfPage.getPdPage());
   }
-  
+
   /**
    * <p>Unsets the producer from the document information.</p>
    * @throws IOException if any processing error occurs.
@@ -326,7 +327,7 @@ public class PdfDocument {
   public void removeProducer() throws IOException {
     setProducer(null);
   }
-  
+
   /**
    * <p>Unsets the subject from the document information.</p>
    * @throws IOException if any processing error occurs.
@@ -468,7 +469,7 @@ public class PdfDocument {
   protected void parse() throws IOException {
     // Parse the document before using it
     getPdfParser().parse();
-    
+
     // Trivial decryption if encrypted without a password
     if (getPdDocument().isEncrypted()) {
       try {

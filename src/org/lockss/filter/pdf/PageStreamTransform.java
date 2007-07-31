@@ -1,5 +1,5 @@
 /*
- * $Id: PageStreamTransform.java,v 1.10 2007-02-23 19:41:34 thib_gc Exp $
+ * $Id: PageStreamTransform.java,v 1.11 2007-07-31 08:40:05 thib_gc Exp $
  */
 
 /*
@@ -255,6 +255,8 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
    */
   protected boolean atLeastOneChange;
 
+  protected PdfPage currentPdfPage;
+
   /**
    * <p>The output list stack.</p>
    */
@@ -399,6 +401,14 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
                            pdfOperatorString4, pdfOperatorProcessor4.getName()));
   }
 
+  public synchronized boolean getChangeFlag() {
+    return atLeastOneChange;
+  }
+
+  public PdfPage getCurrentPdfPage() {
+    return currentPdfPage;
+  }
+
   /**
    * <p>Gets the output list currently at the top of the output list
    * stack.</p>
@@ -466,6 +476,11 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
     listStack.push(new ArrayList()); // FIXME: initial capacity?
   }
 
+  public synchronized void setChangeFlag(boolean atLeastOneChange) {
+    logger.debug3(atLeastOneChange ? "Change flag set" : "Change flag cleared");
+    this.atLeastOneChange = atLeastOneChange;
+  }
+
   /**
    * <p>Notifies this transform that there has been a change in the
    * output list compared to the original token stream.</p>
@@ -514,6 +529,7 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
 
     // Iterate over stream
     reset();
+    this.currentPdfPage = pdfPage;
     processStream(pdfPage.getPdPage(),
                   pdfPage.findResources(),
                   pdfPage.getContentStream());
@@ -557,6 +573,22 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
    */
   private static Logger logger = Logger.getLogger("PageStreamTransform");
 
+  public static Properties rewriteProperties(Properties customOperatorProcessors,
+                                             String defaultOperatorProcessorClassName) {
+
+    if (customOperatorProcessors == null) {
+      throw new NullPointerException("Custom operator processors cannot be specified by a null Properties instance.");
+    }
+    Properties properties = new Properties();
+    for (Iterator iter = PdfUtil.getPdfOperators() ; iter.hasNext() ; ) {
+      String key = (String)iter.next();
+      properties.setProperty(key,
+                             customOperatorProcessors.getProperty(key,
+                                                                  defaultOperatorProcessorClassName));
+    }
+    return properties;
+  }
+
   /**
    * <p>Assembles a new {@link Properties} object that maps keys from
    * {@link PdfUtil#getPdfOperators} not found in the argument to
@@ -575,17 +607,7 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
    * @throws NullPointerException if the argument is null
    */
   protected static Properties rewriteProperties(Properties customOperatorProcessors) {
-    if (customOperatorProcessors == null) {
-      throw new NullPointerException("Custom operator processors cannot be specified by a null Properties instance.");
-    }
-    Properties properties = new Properties();
-    for (Iterator iter = PdfUtil.getPdfOperators() ; iter.hasNext() ; ) {
-      String key = (String)iter.next();
-      properties.setProperty(key,
-                             customOperatorProcessors.getProperty(key,
-                                                                  SimpleOperatorProcessor.class.getName()));
-    }
-    return properties;
+    return rewriteProperties(customOperatorProcessors, SimpleOperatorProcessor.class.getName());
   }
 
 }

@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.219 2007-07-24 00:11:13 thib_gc Exp $
+ $Id: build.xml,v 1.220 2007-07-31 08:40:05 thib_gc Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -197,7 +197,7 @@ Args:
   <property name="commons.httpclient.jar"
   			value="${lib}/commons-httpclient-3.0-rc4.jar"/>
   <property name="commons.io.jar"
-	        value="${lib}/commons-io-1.2.jar" />
+	        value="${lib}/commons-io-1.3.2.jar" />
   <property name="commons.jxpath.jar"
 				  value="${lib}/commons-jxpath-1.2.jar"/>
   <property name="concurrent.jar" value="${lib}/concurrent.jar"/>
