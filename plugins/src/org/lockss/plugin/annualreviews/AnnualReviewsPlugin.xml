@@ -1,5 +1,13 @@
 <map>
   <entry>
+    <string>plugin_version</string>
+    <string>2</string>
+  </entry>
+  <entry>
+    <string>required_daemon_version</string>
+    <string>1.26.0</string>
+  </entry>
+  <entry>
     <string>au_def_pause_time</string>
     <long>6000</long>
   </entry>
@@ -63,12 +71,16 @@
       <org.lockss.daemon.ConfigParamDescr>
         <key>short_journal_id</key>
         <displayName>Two-letter Journal Identifier</displayName>
-        <description></description>
+        <description>Legacy two-letter identifier for journal</description>
         <type>1</type>
         <size>2</size>
         <definitional>false</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
     </list>
+  </entry>
+  <entry>
+    <string>application/pdf_filter_factory</string>
+    <string>org.lockss.plugin.annualreviews.AnnualReviewsPdfFilterFactory</string>
   </entry>
 </map>
