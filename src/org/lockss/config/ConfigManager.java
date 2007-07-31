@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.46.2.1 2007-07-26 17:04:55 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.46.2.2 2007-07-31 00:30:11 smorabito Exp $
  */
 
 /*
@@ -291,7 +291,11 @@ public class ConfigManager implements LockssManager {
     // Add platform-like params before calling loadList() as they affect
     // conditional processing
     if (groupNames != null) {
-      newConfig.put(PARAM_DAEMON_GROUPS, groupNames.toLowerCase());
+      
+      // WORKAROUND FOR DAEMON 1.25 BRANCH ONLY!
+      // See Also: VoterActions     
+//      newConfig.put(PARAM_DAEMON_GROUPS, groupNames.toLowerCase());
+      newConfig.put(PARAM_DAEMON_GROUPS, groupNames);
     }
     return newConfig;
   }

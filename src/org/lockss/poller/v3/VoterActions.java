@@ -1,5 +1,5 @@
 /*
- * $Id: VoterActions.java,v 1.17 2007-05-23 02:26:54 tlipkis Exp $
+ * $Id: VoterActions.java,v 1.17.2.1 2007-07-31 00:30:10 smorabito Exp $
  */
 
 /*
@@ -72,26 +72,42 @@ public class VoterActions {
     ud.setPollAckEffortProof(pollAckEffort);
     return V3Events.evtOk;
   }
+  
+  /* 
+   * Verify whether the poller is in our platform group.  If they
+   * are not, return false.
+   */
+  private static boolean isOurGroup(V3LcapMessage msgIn) {
+    List<String> pollerGroups = new ArrayList<String>();
+    if (msgIn != null) {
+      for (String group: (List<String>)StringUtil.breakAt(msgIn.getGroups(), ';')) {
+        pollerGroups.add(group.toLowerCase());
+      }
+    }
+    
+    List<String> ourGroups = new ArrayList<String>();
+    for (String group : (List<String>)ConfigManager.getPlatformGroupList()) {
+      ourGroups.add(group.toLowerCase());
+    }
+
+    log.debug2("Our groups: " + ourGroups +
+               "; Their groups: " + pollerGroups);
+
+    return pollerGroups != null && CollectionUtils.containsAny(ourGroups,
+                                                               pollerGroups);
+  }
 
   public static PsmEvent handleSendPollAck(PsmEvent evt, PsmInterp interp) {
     VoterUserData ud = getUserData(interp);
-
-    // Verify whether the poller is in our platform group.  If they
-    // are not, decline the poll, and send a NAK with the status
-    // NAK_GROUP_MISMATCH
-    List pollerGroups = null;
-    V3LcapMessage msgIn = (V3LcapMessage)ud.getPollMessage();
-    if (msgIn != null) {
-      pollerGroups = StringUtil.breakAt(msgIn.getGroups(), ';');
-    }
-    List ourGroups = ConfigManager.getPlatformGroupList();
-
+    
     V3LcapMessage msg = ud.makeMessage(V3LcapMessage.MSG_POLL_ACK);
     msg.setEffortProof(ud.getPollAckEffortProof());
 
     try {
-      if (pollerGroups != null &&
-	  CollectionUtils.containsAny(ourGroups, pollerGroups)) {
+      /* decline the poll, and send a NAK with the status
+       * NAK_GROUP_MISMATCH if we should not reply to this poll.
+       */
+      if (isOurGroup((V3LcapMessage)ud.getPollMessage())) {
         // Accept the poll and set status
         ud.setStatus(V3Voter.STATUS_ACCEPTED_POLL);
         msg.setVoterNonce(ud.getVoterNonce());
@@ -114,8 +130,6 @@ public class VoterActions {
         ud.getVoter().stopPoll(V3Voter.STATUS_DECLINED_POLL);
         log.debug2("Rejected message for " + ud.getPollerId() + " in poll " 
                    + ud.getPollKey());
-        log.debug2("Our groups: " + ourGroups +
-		   "; Their groups: " + pollerGroups);
         return V3Events.evtDeclinePoll;
       }
     } catch (Throwable t) {

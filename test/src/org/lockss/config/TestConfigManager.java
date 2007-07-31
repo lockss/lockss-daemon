@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigManager.java,v 1.23.2.1 2007-07-26 17:04:55 tlipkis Exp $
+ * $Id: TestConfigManager.java,v 1.23.2.2 2007-07-31 00:30:11 smorabito Exp $
  */
 
 /*
@@ -225,8 +225,10 @@ public class TestConfigManager extends LockssTestCase {
   public void testInitNewConfiguration() throws Exception {
     mgr =  new ConfigManager(ListUtil.list("foo"), "group1;GROUP2");
     Configuration config = mgr.initNewConfiguration();
-    assertEquals("group1;group2", config.getPlatformGroups());
-    assertEquals(ListUtil.list("group1", "group2"),
+    // WORKAROUND FOR DAEMON 1.25 BRANCH ONLY!
+    // See Also: VoterActions
+    assertEquals("group1;GROUP2", config.getPlatformGroups());
+    assertEquals(ListUtil.list("group1", "GROUP2"),
 		 config.getPlatformGroupList());
   }
 
