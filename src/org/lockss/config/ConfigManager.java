@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.49 2007-07-26 04:39:20 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.50 2007-07-31 06:29:55 tlipkis Exp $
  */
 
 /*
@@ -371,6 +371,7 @@ public class ConfigManager implements LockssManager {
 	try {
 	  platVer = new PlatformVersion(ver);
 	} catch (RuntimeException e) {
+	  log.warning("Illegal platform version: " + ver, e);
 	}
       }
     }
