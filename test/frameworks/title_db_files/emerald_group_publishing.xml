@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE lockss-config [
+  <!ELEMENT lockss-config (if|property)+>
   <!ELEMENT property (property|list|value|if)*>
   <!ELEMENT list (value)+>
   <!ELEMENT value (#PCDATA)>
@@ -28,11 +30,9 @@
   <!ATTLIST if platformVersionMax CDATA #IMPLIED>
   <!ATTLIST if platformVersion CDATA #IMPLIED>
 ]>
-<!-- Common config for all test frameworks -->
-<!-- This is included in the list of prop files by all the run_xxx_daemon -->
-<!-- scripts -->
+
 <lockss-config>
-  <!-- Titles -->
+  <property name="org.lockss.title">
 
       <property name="EmeraldJournalofAccountingandOrganizationalChange1"> 
         <property name="title" value="Journal of Accounting and Organizational Change  Volume 1" />
@@ -32449,6 +32449,5 @@
       </property>
 
   </property>
-  <!-- End down titles -->
 </lockss-config>
  
