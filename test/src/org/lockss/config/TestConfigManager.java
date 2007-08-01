@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigManager.java,v 1.26 2007-07-26 04:39:19 tlipkis Exp $
+ * $Id: TestConfigManager.java,v 1.27 2007-08-01 04:49:39 tlipkis Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import java.util.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
+import org.lockss.protocol.*;
 import org.lockss.clockss.*;
 
 /**
@@ -50,7 +51,7 @@ public class TestConfigManager extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-    mgr =  ConfigManager.makeConfigManager();
+    mgr = ConfigManager.makeConfigManager();
   }
 
   public void tearDown() throws Exception {
@@ -393,6 +394,27 @@ public class TestConfigManager extends LockssTestCase {
     File cdir = new File(tmpdir, relConfigPath);
     assertTrue(cdir.exists());
     Configuration config = CurrentConfig.getCurrentConfig();
+  }
+
+  public void testGetVersionString() throws Exception {
+    Properties props = new Properties();
+    props.put(ConfigManager.PARAM_PLATFORM_VERSION, "321");
+    props.put(ConfigManager.PARAM_DAEMON_VERSION, "1.44.2");
+    ConfigurationUtil.setCurrentConfigFromProps(props);
+    List pairs = StringUtil.breakAt(mgr.getVersionString(), ',');
+    assertEquals(SetUtil.set("groups=nogroup",
+			     "platform=OpenBSD CD 321",
+			     "daemon=1.44.2"),
+		 SetUtil.theSet(pairs));
+    mgr.setGroups("grouper");
+    ConfigurationUtil.addFromArgs(IdentityManager.PARAM_LOCAL_V3_IDENTITY,
+				  "tcp:[111.32.14.5]:9876");
+    pairs = StringUtil.breakAt(mgr.getVersionString(), ',');
+    assertEquals(SetUtil.set("groups=grouper",
+			     "peerid=tcp:[111.32.14.5]:9876",
+			     "platform=OpenBSD CD 321",
+			     "daemon=1.44.2"),
+		 SetUtil.theSet(pairs));
   }
 
   public void testMiscTmpdir() throws Exception {
