@@ -1,5 +1,5 @@
 /*
- * $Id: CurrentConfig.java,v 1.3 2006-02-01 08:43:50 tlipkis Exp $
+ * $Id: CurrentConfig.java,v 1.4 2007-08-01 04:49:47 tlipkis Exp $
  */
 
 /*
@@ -51,13 +51,21 @@ public class CurrentConfig {
   /** Static convenience method to get param from current configuration.
    */
   public static String getParam(String key) {
-    return getCurrentConfig().get(key);
+    Configuration cur = getCurrentConfig();
+    if (cur == null) {
+      return null;
+    }
+    return cur.get(key);
   }
 
   /** Static convenience method to get param from current configuration.
    */
   public static String getParam(String key, String dfault) {
-    return getCurrentConfig().get(key, dfault);
+    Configuration cur = getCurrentConfig();
+    if (cur == null) {
+      return dfault;
+    }
+    return cur.get(key, dfault);
   }
 
   /** Static convenience method to get param from current configuration.
@@ -69,7 +77,11 @@ public class CurrentConfig {
   /** Static convenience method to get param from current configuration.
    */
   public static boolean getBooleanParam(String key, boolean dfault) {
-    return getCurrentConfig().getBoolean(key, dfault);
+    Configuration cur = getCurrentConfig();
+    if (cur == null) {
+      return dfault;
+    }
+    return cur.getBoolean(key, dfault);
   }
 
   /** Static convenience method to get param from current configuration.
@@ -81,7 +93,11 @@ public class CurrentConfig {
   /** Static convenience method to get param from current configuration.
    */
   public static int getIntParam(String key, int dfault) {
-    return getCurrentConfig().getInt(key, dfault);
+    Configuration cur = getCurrentConfig();
+    if (cur == null) {
+      return dfault;
+    }
+    return cur.getInt(key, dfault);
   }
 
   /** Static convenience method to get param from current configuration.
@@ -93,7 +109,11 @@ public class CurrentConfig {
   /** Static convenience method to get param from current configuration.
    */
   public static long getLongParam(String key, long dfault) {
-    return getCurrentConfig().getLong(key, dfault);
+    Configuration cur = getCurrentConfig();
+    if (cur == null) {
+      return dfault;
+    }
+    return cur.getLong(key, dfault);
   }
 
   /** Static convenience method to get param from current configuration.
@@ -105,7 +125,11 @@ public class CurrentConfig {
   /** Static convenience method to get param from current configuration.
    */
   public static long getTimeIntervalParam(String key, long dfault) {
-    return getCurrentConfig().getTimeInterval(key, dfault);
+    Configuration cur = getCurrentConfig();
+    if (cur == null) {
+      return dfault;
+    }
+    return cur.getTimeInterval(key, dfault);
   }
 
   /** Static convenience method to get a <code>Configuration</code>
@@ -133,13 +157,21 @@ public class CurrentConfig {
    * configuration.
    */
    public static List getList(String key) {
-     return getCurrentConfig().getList(key);
+    Configuration cur = getCurrentConfig();
+    if (cur == null) {
+      return null;
+    }
+     return cur.getList(key);
    }
 
    /** Static convenience method to get a list from the current
     * configuration.
     */
    public static List getList(String key, List dfault) {
-     return getCurrentConfig().getList(key, dfault);
+    Configuration cur = getCurrentConfig();
+    if (cur == null) {
+      return dfault;
+    }
+     return cur.getList(key, dfault);
    }
 }
