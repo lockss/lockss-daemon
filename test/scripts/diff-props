@@ -4,7 +4,7 @@ usage() {
   echo "usage: $0 [-d diff-args] [-a args] [-1 args1] [-2 args2] <url1> <url2>"
   echo "  Runs ConfigDump to load two prop files (txt or xml), compares them"
   echo "  and outputs any differences in the resulting Configuration.  Exits
-  echo "  with zero status if same."
+  echo "  with zero status if same.  URLs can be either URL or filename."
   echo "  -a passes same args to both invocations of ConfigDump, -1 and -2
   echo "  pass args1 and args2 to ConfigDump when fetching url1 and url2,"
   echo "  respectively.  E.g.,"
@@ -49,8 +49,8 @@ TEMP_PREFIX=/tmp/props
 t1=`mktemp ${TEMP_PREFIX}.XXXXXX`
 t2=`mktemp ${TEMP_PREFIX}.XXXXXX`
 
-test/scripts/run-class $jver ConfigDump $args1 -o $t1 "$f1"
-test/scripts/run-class $jver ConfigDump $args2 -o $t2 "$f2"
+test/scripts/run-class $jver ConfigDump -t $args1 -o $t1 "$f1"
+test/scripts/run-class $jver ConfigDump -t $args2 -o $t2 "$f2"
 
 lbl1="$f1"
 [ -n "$args1" ] && lbl1="$lbl1 $args1"
