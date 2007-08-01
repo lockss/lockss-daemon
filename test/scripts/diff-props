@@ -49,8 +49,8 @@ TEMP_PREFIX=/tmp/props
 t1=`mktemp ${TEMP_PREFIX}.XXXXXX`
 t2=`mktemp ${TEMP_PREFIX}.XXXXXX`
 
-test/scripts/run-class $jver ConfigDump -t $args1 -o $t1 "$f1"
-test/scripts/run-class $jver ConfigDump -t $args2 -o $t2 "$f2"
+test/scripts/run-class $jver ConfigDump -t $args1 -o $t1 "$f1" || exit 1
+test/scripts/run-class $jver ConfigDump -t $args2 -o $t2 "$f2" || exit 1
 
 lbl1="$f1"
 [ -n "$args1" ] && lbl1="$lbl1 $args1"
