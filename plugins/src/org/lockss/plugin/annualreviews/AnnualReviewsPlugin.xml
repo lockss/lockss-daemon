@@ -83,4 +83,8 @@
     <string>application/pdf_filter_factory</string>
     <string>org.lockss.plugin.annualreviews.AnnualReviewsPdfFilterFactory</string>
   </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.annualreviews.AnnualReviewsUrlNormalizer</string>
+  </entry>
 </map>

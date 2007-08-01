@@ -1,5 +1,5 @@
 /*
- * $Id: AnnualReviewsPdfFilterFactory.java,v 1.1 2007-07-31 22:50:41 thib_gc Exp $
+ * $Id: AnnualReviewsPdfFilterFactory.java,v 1.2 2007-08-01 08:13:36 thib_gc Exp $
  */
 
 /*
@@ -43,6 +43,16 @@ import org.lockss.util.*;
 public class AnnualReviewsPdfFilterFactory
     extends SimpleOutputDocumentTransform
     implements FilterFactory {
+
+  public static class NormalizeMetadata implements DocumentTransform {
+
+    public boolean transform(PdfDocument pdfDocument) throws IOException {
+      pdfDocument.removeCreationDate();
+      pdfDocument.removeModificationDate();
+      return true;
+    }
+
+  }
 
   public static class NormalizeXObjects extends AggregatePageTransform {
 
@@ -175,8 +185,8 @@ public class AnnualReviewsPdfFilterFactory
 
   public AnnualReviewsPdfFilterFactory() throws IOException {
     super(new ConditionalDocumentTransform(new TransformFirstPage(new NormalizeXObjects()),
-                                           new TransformEachPageExceptFirst(new NormalizeXObjects())/*,
-                                           new NormalizeMetadata()*/));
+                                           new TransformEachPageExceptFirst(new NormalizeXObjects()),
+                                           new NormalizeMetadata()));
   }
 
   public InputStream createFilteredInputStream(ArchivalUnit au,
