@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.220 2007-07-31 08:40:05 thib_gc Exp $
+ $Id: build.xml,v 1.221 2007-08-01 15:40:11 thib_gc Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -185,7 +185,7 @@ Args:
 <!--    <property name="xml.jar"  value="${lib}/org.apache.crimson.jar"/> -->
   <property name="log4j.jar" value="${lib}/log4j-1.2.13.jar"/>
   <property name="commons.lang.jar"
-				  value="${lib}/commons-lang-2.2.jar"/>
+				  value="${lib}/commons-lang-2.3.jar"/>
   <property name="commons.cli.jar"
   				  value="${lib}/commons-cli-1.1.jar"/>
   <property name="commons.collections.jar"
