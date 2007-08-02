@@ -1300,6 +1300,121 @@
       <property name="attributes.publisher" value="Nature" />
     </property>
 
+    <property name="ijo31">
+      <property name="title" value="International Journal of Obesity Volume 31 (2007)" />
+      <property name="journalTitle" value="International Journal of Obesity" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="ijo" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="2007" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="31" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+    </property>
+
+    <property name="ijo30">
+      <property name="title" value="International Journal of Obesity Volume 30 (2006)" />
+      <property name="journalTitle" value="International Journal of Obesity" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="ijo" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="2006" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="30" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+    </property>
+
+    <property name="ijo29">
+      <property name="title" value="International Journal of Obesity Volume 29 (2005)" />
+      <property name="journalTitle" value="International Journal of Obesity" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="ijo" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="2005" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="29" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+    </property>
+
+    <property name="ijo28">
+      <property name="title" value="International Journal of Obesity Volume 28 (2004)" />
+      <property name="journalTitle" value="International Journal of Obesity" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="ijo" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="2004" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="28" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+    </property>
+
+    <property name="ijo27">
+      <property name="title" value="International Journal of Obesity Volume 27 (2003)" />
+      <property name="journalTitle" value="International Journal of Obesity" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="ijo" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="2003" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="27" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+    </property>
+
     <property name="ijo26">
       <property name="title" value="International Journal of Obesity Volume 26 (2002)" />
       <property name="journalTitle" value="International Journal of Obesity" />
