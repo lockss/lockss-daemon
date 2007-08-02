@@ -1531,7 +1531,7 @@
     </property>
 
     <property name="ijo21">
-      <property name="title" value="International Journal of Obesity Volume 21 (121217)" />
+      <property name="title" value="International Journal of Obesity Volume 21 (1997)" />
       <property name="journalTitle" value="International Journal of Obesity" />
       <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
       <property name="param.1">
@@ -1544,7 +1544,7 @@
       </property>
       <property name="param.3">
 	<property name="key" value="year" />
-	<property name="value" value="121217" />
+	<property name="value" value="1997" />
       </property>
       <property name="param.4">
 	<property name="key" value="volume" />
