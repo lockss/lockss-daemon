@@ -70,6 +70,11 @@
 	<property name="class" value="xpath" />
 	<property name="xpath" value="[pluginName='org.lockss.plugin.ams.AMSPlugin']" />
       </property>
+      <property name="annualreviews">
+	<property name="name" value="All Annual Reviews Titles" />
+	<property name="class" value="xpath" />
+	<property name="xpath" value="[pluginName='org.lockss.plugin.annualreviews.AnnualReviewsPlugin']" />
+      </property>
       <property name="iop">
 	<property name="name" value="All IOP Titles" />
 	<property name="class" value="xpath" />
