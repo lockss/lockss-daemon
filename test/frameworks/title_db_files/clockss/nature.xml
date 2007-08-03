@@ -748,6 +748,98 @@
       <property name="attributes.publisher" value="Nature" />
     </property>
 
+    <property name="cgt13">
+      <property name="title" value="Cancer Gene Therapy Volume 13 (2006)" />
+      <property name="journalTitle" value="Abacus" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="cgt" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="2006" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="13" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+    </property>
+
+    <property name="cgt12">
+      <property name="title" value="Cancer Gene Therapy Volume 12 (2005)" />
+      <property name="journalTitle" value="Abacus" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="cgt" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="2005" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="12" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+    </property>
+
+    <property name="cgt11">
+      <property name="title" value="Cancer Gene Therapy Volume 11 (2004)" />
+      <property name="journalTitle" value="Abacus" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="cgt" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="2004" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="11" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+    </property>
+
+    <property name="cgt10">
+      <property name="title" value="Cancer Gene Therapy Volume 10 (2003)" />
+      <property name="journalTitle" value="Abacus" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="cgt" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="2003" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="10" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+    </property>
+
     <property name="cgt9">
       <property name="title" value="Cancer Gene Therapy Volume 9 (2002)" />
       <property name="journalTitle" value="Abacus" />
