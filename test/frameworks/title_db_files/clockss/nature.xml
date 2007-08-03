@@ -1208,6 +1208,98 @@
       <property name="attributes.publisher" value="Nature" />
     </property>
 
+    <property name="gene7">
+      <property name="title" value="Genes and Immunity Volume 7 (2006)" />
+      <property name="journalTitle" value="Genes and Immunity" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="gene" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="2006" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="7" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+    </property>
+
+    <property name="gene6">
+      <property name="title" value="Genes and Immunity Volume 6 (2005)" />
+      <property name="journalTitle" value="Genes and Immunity" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="gene" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="2005" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="6" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+    </property>
+
+    <property name="gene5">
+      <property name="title" value="Genes and Immunity Volume 5 (2004)" />
+      <property name="journalTitle" value="Genes and Immunity" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="gene" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="2004" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="5" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+    </property>
+
+    <property name="gene4">
+      <property name="title" value="Genes and Immunity Volume 4 (2003)" />
+      <property name="journalTitle" value="Genes and Immunity" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="gene" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="2003" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="4" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+    </property>
+
     <property name="gene3">
       <property name="title" value="Genes and Immunity Volume 3 (2002)" />
       <property name="journalTitle" value="Genes and Immunity" />
@@ -1273,6 +1365,98 @@
       <property name="param.4">
 	<property name="key" value="volume" />
 	<property name="value" value="1" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+    </property>
+
+    <property name="ijir18">
+      <property name="title" value="International Journal of Impotence Research Volume 18 (2006)" />
+      <property name="journalTitle" value="International Journal of Impotence Research" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="ijir" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="2006" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="18" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+    </property>
+
+    <property name="ijir17">
+      <property name="title" value="International Journal of Impotence Research Volume 17 (2005)" />
+      <property name="journalTitle" value="International Journal of Impotence Research" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="ijir" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="2005" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="17" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+    </property>
+
+    <property name="ijir16">
+      <property name="title" value="International Journal of Impotence Research Volume 16 (2004)" />
+      <property name="journalTitle" value="International Journal of Impotence Research" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="ijir" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="2004" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="16" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+    </property>
+
+    <property name="ijir15">
+      <property name="title" value="International Journal of Impotence Research Volume 15 (2003)" />
+      <property name="journalTitle" value="International Journal of Impotence Research" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="ijir" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="2003" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="15" />
       </property>
       <property name="attributes.publisher" value="Nature" />
     </property>
