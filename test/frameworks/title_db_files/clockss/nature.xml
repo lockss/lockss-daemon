@@ -518,6 +518,29 @@
       <property name="attributes.publisher" value="Nature" />
     </property>
 
+    <property name="cdd13">
+      <property name="title" value="Cell Death &amp; Differentiation Volume 13 (2006)" />
+      <property name="journalTitle" value="Cell Death &amp; Differentiation" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+        <property name="key" value="base_url" />
+        <property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+        <property name="key" value="journal_id" />
+        <property name="value" value="cdd" />
+      </property>
+      <property name="param.3">
+        <property name="key" value="year" />
+        <property name="value" value="2006" />
+      </property>
+      <property name="param.4">
+        <property name="key" value="volume" />
+        <property name="value" value="13" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+    </property>
+
     <property name="cdd12">
       <property name="title" value="Cell Death &amp; Differentiation Volume 12 (2005)" />
       <property name="journalTitle" value="Cell Death &amp; Differentiation" />
