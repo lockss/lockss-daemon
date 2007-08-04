@@ -1,5 +1,5 @@
 /*
- * $Id: BuildPermKeyStores.java,v 1.1 2007-08-03 23:06:35 dshr Exp $
+ * $Id: BuildPermKeyStores.java,v 1.2 2007-08-04 03:09:54 dshr Exp $
  */
 
 /*
@@ -166,7 +166,7 @@ public class BuildPermKeyStores {
 	    return null;  // will fail subsequently
 	}
 	String keyStoreFile = domainName + ".jceks";
-	String keyStorePassword = password;
+	String keyStorePassword = domainName;
 	System.setProperty(PREFIX, keyStoreFile);
 	System.setProperty(PREFIX + "Password", keyStorePassword);
 	System.setProperty(PREFIX + "Type", ks.getType());
@@ -183,7 +183,7 @@ public class BuildPermKeyStores {
 					   String domainName, String password) {
 	String keyAlias = domainName + keySuffix;
 	String certAlias = domainName + crtSuffix;
-	String keyStorePassword = password;
+	String keyStorePassword = domainName;
 	String keyStoreFileName = domainName + ".jceks";
 	File keyStoreFile = new File(keyStoreFileName);
 	if (keyStoreFile.exists()) {
@@ -262,7 +262,7 @@ public class BuildPermKeyStores {
 	OUTdebug("About to store " + keyAlias + " in key store");
 	try {
 	    keyStore.setKeyEntry(keyAlias, privKey,
-				 keyStorePassword.toCharArray(), chain);
+				 password.toCharArray(), chain);
 	} catch (KeyStoreException e) {
 	    OUTdebug("keyStore.setKeyEntry() threw " + e);
 	    return;
@@ -270,7 +270,7 @@ public class BuildPermKeyStores {
 	try {
 	    OUTdebug("About to getKeyEntry()");
 	    Key myKey = keyStore.getKey(keyAlias,
-					keyStorePassword.toCharArray());
+					password.toCharArray());
 	    OUTdebug("MyKey: " + myKey.getAlgorithm() + " " +
 		      myKey.getFormat());
 	} catch (Throwable e) {
@@ -316,7 +316,7 @@ public class BuildPermKeyStores {
     private static void writeKeyStore(String domainName, KeyStore ks, String password) {
 	String keyStoreFile = domainName + ".jceks";
 	String passwordFile = domainName + ".pass";
-	String keyStorePassword = password;
+	String keyStorePassword = domainName;
 	System.setProperty(PREFIX, keyStoreFile);
 	System.setProperty(PREFIX + "Password", keyStorePassword);
 	System.setProperty(PREFIX + "Type", ks.getType());
@@ -335,7 +335,7 @@ public class BuildPermKeyStores {
 	try {
 	    OUTdebug("Writing Password to " + passwordFile);
 	    PrintWriter pw = new PrintWriter(new FileOutputStream(passwordFile));
-	    pw.println(keyStorePassword);
+	    pw.print(password);
 	    pw.close();
 	    OUTdebug("Done storing Password in " + passwordFile);
 	} catch (Exception e) {
@@ -344,7 +344,7 @@ public class BuildPermKeyStores {
     }
 
     private static void OUTdebug(String s) {
-	if (false)
+	if (true)
 	    System.err.println("debug:" + s);
     }
     private static void OUTerror(String s) {
