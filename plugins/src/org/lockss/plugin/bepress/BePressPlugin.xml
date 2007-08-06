@@ -1,2 +1,71 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Elements><MapElement><ElementKey>au_start_url</ElementKey><ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"%s%s/lockss-volume%d.html", base_url, journal_abbr, volume</ElementValue></MapElement><MapElement><ElementKey>au_name</ElementKey><ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"BePress: %s volume %d", journal_abbr, volume</ElementValue></MapElement><MapElement><ElementKey>plugin_config_props</ElementKey><ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><ConfigParamDescr><Key>journal_abbr</Key><DisplayName>Journal Abbreviation</DisplayName><Description>Abbreviation for journal (often used as part of file names).</Description><Type>1</Type><Size>10</Size><Definitional>true</Definitional></ConfigParamDescr><ConfigParamDescr><Key>volume</Key><DisplayName>Volume No.</DisplayName><Type>6</Type><Size>8</Size><Definitional>true</Definitional></ConfigParamDescr><ConfigParamDescr><Key>base_url</Key><DisplayName>Base URL</DisplayName><Description>Usually of the form http://&lt;journal-name&gt;.com/</Description><Type>3</Type><Size>40</Size><Definitional>true</Definitional></ConfigParamDescr></ElementValue></MapElement><MapElement><ElementKey>base_url_host</ElementKey><ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">www.bepress.com</ElementValue></MapElement><MapElement><ElementKey>base_url_path</ElementKey><ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">/</ElementValue></MapElement><MapElement><ElementKey>volume</ElementKey><ElementValue xsi:type="java:java.lang.Integer" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">8</ElementValue></MapElement><MapElement><ElementKey>plugin_name</ElementKey><ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">BePress</ElementValue></MapElement><MapElement><ElementKey>au_crawlrules</ElementKey><ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><string xsi:type="java:java.lang.String">4,"^%s", base_url</string><string xsi:type="java:java.lang.String">1,"%s/lockss-volume%d.html", journal_abbr, volume</string><string xsi:type="java:java.lang.String">1,"%s/vol%d/iss[0-9]+", journal_abbr, volume</string><string xsi:type="java:java.lang.String">1,"vol%d/iss[0-9]+/[a-z]+[0-9]+", volume</string><string xsi:type="java:java.lang.String">1,"cgi/viewcontent.cgi\?.*context=%s.*", journal_abbr</string></ElementValue></MapElement><MapElement><ElementKey>journal_abbr</ElementKey><ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">snde</ElementValue></MapElement><MapElement><ElementKey>base_url</ElementKey><ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">http://www.bepress.com/</ElementValue></MapElement></Elements>
+<map>
+  <entry>
+    <string>plugin_version</string>
+    <string>2</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;BePress: %s volume %d&quot;, journal_abbr, volume</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>BePress</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;%s/lockss-volume%d.html&quot;, journal_abbr, volume</string>
+      <string>1,&quot;%s/vol%d/iss[0-9]+&quot;, journal_abbr, volume</string>
+      <string>1,&quot;vol%d/iss[0-9]+/[a-z]+[0-9]+&quot;, volume</string>
+      <string>1,&quot;cgi/viewcontent.cgi\?.*context=%s.*&quot;, journal_abbr</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%s%s/lockss-volume%d.html&quot;, base_url, journal_abbr, volume</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.bepress.BePressPlugin</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_abbr</key>
+        <displayName>Journal Abbreviation</displayName>
+        <description>Abbreviation for journal (often used as part of file names).</description>
+        <type>1</type>
+        <size>10</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume</key>
+        <displayName>Volume No.</displayName>
+        <type>6</type>
+        <size>8</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+</map>
