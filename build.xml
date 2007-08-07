@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.221 2007-08-01 15:40:11 thib_gc Exp $
+ $Id: build.xml,v 1.222 2007-08-07 00:55:40 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -805,7 +805,7 @@ The target you have selected requires compiling under JDK 1.6.  Use the rant -1.
   </target>
 
   <!-- ==================================================================== -->
-  <target name="build-info" depends="build-info-if-needed"
+  <target name="build-info" depends="build-info-if-needed,-set.hostname"
        unless="jar.is.up.to.date">
     <!--  The prop names used here are also known to
           org.lockss.util.BuildInfo class -->
@@ -824,7 +824,7 @@ The target you have selected requires compiling under JDK 1.6.  Use the rant -1.
 	     pattern="dd-MMM-yy' 'HH:mm:ss"
 	     value="now"/>
       <entry key="build.user.name" value="${user.name}"/>
-      <entry key="build.host" value="${env.HOSTNAME}"/>
+      <entry key="build.host" value="${hostname}"/>
       <entry key="build.releasename" value="${releasename}"/>
       <entry key="build.cvs.tag" value="$Name: not supported by cvs2svn $"/>
     </propertyfile>
@@ -855,6 +855,20 @@ The target you have selected requires compiling under JDK 1.6.  Use the rant -1.
       <arg line="-c &quot;find . -name CVS -type d -exec echo Dir \{\} \; -exec grep &apos;^/&apos; {}/Entries \;&quot;" />
     </exec>
 -->
+  </target>
+
+  <!-- Set hostname from HOSTNAME env var if set, else 'hostname' program -->
+  <target name="-set.hostname" depends="compile-lockss,check.contrib">
+    <if>
+      <isset property="env.HOSTNAME" />
+      <then>
+        <property name="hostname" value="${env.HOSTNAME}"/>
+      </then>
+      <else>
+        <exec executable="hostname" outputproperty="hostname"
+              failifexecutionfails="false"/>
+      </else>
+    </if>
   </target>
 
   <!-- ==================================================================== -->
