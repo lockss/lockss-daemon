@@ -932,6 +932,98 @@
       <property name="attributes.publisher" value="Nature" />
     </property>
 
+    <property name="ejcn60">
+      <property name="title" value="European Journal of Clinical Nutrition Volume 60 (2006)" />
+      <property name="journalTitle" value="European Journal of Clinical Nutrition" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="ejcn" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="2006" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="60" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+    </property>
+
+    <property name="ejcn59">
+      <property name="title" value="European Journal of Clinical Nutrition Volume 59 (2005)" />
+      <property name="journalTitle" value="European Journal of Clinical Nutrition" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="ejcn" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="2005" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="59" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+    </property>
+
+    <property name="ejcn58">
+      <property name="title" value="European Journal of Clinical Nutrition Volume 58 (2004)" />
+      <property name="journalTitle" value="European Journal of Clinical Nutrition" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="ejcn" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="2004" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="58" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+    </property>
+
+    <property name="ejcn57">
+      <property name="title" value="European Journal of Clinical Nutrition Volume 57 (2003)" />
+      <property name="journalTitle" value="European Journal of Clinical Nutrition" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="ejcn" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="2003" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="57" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+    </property>
+
     <property name="ejcn56">
       <property name="title" value="European Journal of Clinical Nutrition Volume 56 (2002)" />
       <property name="journalTitle" value="European Journal of Clinical Nutrition" />
@@ -1066,6 +1158,98 @@
       <property name="param.4">
 	<property name="key" value="volume" />
 	<property name="value" value="51" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+    </property>
+
+    <property name="gt13">
+      <property name="title" value="Gene Therapy Volume 13 (2006)" />
+      <property name="journalTitle" value="Gene Therapy" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="gt" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="2006" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="13" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+    </property>
+
+    <property name="gt12">
+      <property name="title" value="Gene Therapy Volume 12 (2005)" />
+      <property name="journalTitle" value="Gene Therapy" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="gt" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="2005" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="12" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+    </property>
+
+    <property name="gt11">
+      <property name="title" value="Gene Therapy Volume 1 (2004)" />
+      <property name="journalTitle" value="Gene Therapy" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="gt" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="2004" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="11" />
+      </property>
+      <property name="attributes.publisher" value="Nature" />
+    </property>
+
+    <property name="gt10">
+      <property name="title" value="Gene Therapy Volume 10 (2003)" />
+      <property name="journalTitle" value="Gene Therapy" />
+      <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.nature.com/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="journal_id" />
+	<property name="value" value="gt" />
+      </property>
+      <property name="param.3">
+	<property name="key" value="year" />
+	<property name="value" value="2003" />
+      </property>
+      <property name="param.4">
+	<property name="key" value="volume" />
+	<property name="value" value="10" />
       </property>
       <property name="attributes.publisher" value="Nature" />
     </property>
