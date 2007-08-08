@@ -3,9 +3,9 @@
 usage() {
   echo "usage: $0 [-d diff-args] [-a args] [-1 args1] [-2 args2] <url1> <url2>"
   echo "  Runs ConfigDump to load two prop files (txt or xml), compares them"
-  echo "  and outputs any differences in the resulting Configuration.  Exits
+  echo "  and outputs any differences in the resulting Configuration.  Exits:"
   echo "  with zero status if same.  URLs can be either URL or filename."
-  echo "  -a passes same args to both invocations of ConfigDump, -1 and -2
+  echo "  -a passes same args to both invocations of ConfigDump, -1 and -2:"
   echo "  pass args1 and args2 to ConfigDump when fetching url1 and url2,"
   echo "  respectively.  E.g.,"
   echo "   $0 -a \"-g dev\" http://props.lockss.org:8001/lockss.xml http://..."
