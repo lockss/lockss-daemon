@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssPermission.java,v 1.3 2006-08-07 07:40:21 tlipkis Exp $
+ * $Id: TestLockssPermission.java,v 1.4 2007-08-08 22:45:27 dshr Exp $
  */
 
 /*
@@ -68,18 +68,21 @@ public class TestLockssPermission extends LockssTestCase {
 
   /**
    * To catch changes to the permission checker list
-   * Currently, this should have two checkers:
+   * Currently, this should have three checkers:
    * 1) A StringPermissionChecker with the LOCKSS Permission Statement
    * 2) A CreativeCommonsPermissionChecker
+   * 3) A CreativeCommonsV3PermissionChecker
    */
   public void testGetCheckersHasProperCheckers() {
     List checkers = new LockssPermission().getCheckers();
-    assertEquals("Expected two Permission checkers, but only found one",
-		 2, checkers.size());
+    assertEquals("Expected three Permission checkers, but found ",
+		 3, checkers.size());
     assertTrue("First checker wasn't a StringPermission Checker",
 	       checkers.get(0) instanceof StringPermissionChecker);
     assertTrue("Second checker wasn't a CreativeCommonsPermissionChecker",
 	       checkers.get(1) instanceof CreativeCommonsPermissionChecker);
+    assertTrue("Third checker wasn't a CreativeCommonsV3PermissionChecker",
+	       checkers.get(2) instanceof CreativeCommonsV3PermissionChecker);
   }
 
 }
