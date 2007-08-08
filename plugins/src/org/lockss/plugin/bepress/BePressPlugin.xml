@@ -70,6 +70,6 @@
   </entry>
   <entry>
     <string>au_redirect_to_login_url_pattern</string>
-    <string>&quot;%scgi/login.cgi&quot;</string>
+    <string>&quot;%scgi/login.cgi&quot;, base_url</string>
   <entry>
 </map>
