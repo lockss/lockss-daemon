@@ -58,5 +58,3 @@ org.lockss.monitor.inputStreams=true
 org.lockss.thread.hungThreadDump = true
 
 org.lockss.crawlStatus.keepUrls=all
-org.lockss.platform.ui.password=SHA1:a1baf95187cacbab3804756042171cc1c8a11244
-org.lockss.platform.ui.username=lockss
