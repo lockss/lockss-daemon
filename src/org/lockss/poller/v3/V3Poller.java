@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.52 2007-06-17 05:23:13 smorabito Exp $
+ * $Id: V3Poller.java,v 1.53 2007-08-08 22:26:58 smorabito Exp $
  */
 
 /*
@@ -1683,7 +1683,13 @@ public class V3Poller extends BasePoll {
                               IdentityManagerImpl.DEFAULT_INITIAL_PEERS);
       Collection initialPeers = new ArrayList(keys.size());
       for (Iterator iter = keys.iterator(); iter.hasNext(); ) {
-        initialPeers.add(idManager.findPeerIdentity((String)iter.next()));
+        String key = (String)iter.next();
+        PeerIdentity id = (PeerIdentity)idManager.findPeerIdentity(key);
+        // Never include a LocalPeerIdentity - we don't want to include
+        // ourselves
+        if (id != null && !id.isLocalIdentity()) {
+          initialPeers.add(id);
+        }
       }
       return initialPeers;
     }

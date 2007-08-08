@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.23 2007-07-31 06:31:51 tlipkis Exp $
+ * $Id: TestV3Poller.java,v 1.24 2007-08-08 22:26:58 smorabito Exp $
  */
 
 /*
@@ -429,6 +429,25 @@ public class TestV3Poller extends LockssTestCase {
     assertEquals(6, v3Poller.getReferenceList().size());
     idMgr.findPeerIdentity("TCP:[10.1.0.101]:9729");
     assertEquals(6, v3Poller.getReferenceList().size());
+  }
+  
+  public void testGetReferenceListDoesNotIncludeLocalIdentity() throws Exception {
+    ConfigurationUtil.addFromArgs(V3Poller.PARAM_ENABLE_DISCOVERY, "false");
+    // append our local config to the initial Peer List
+    List initialPeersCopy = new ArrayList(initialPeers);
+    initialPeersCopy.add(localPeerKey);
+    
+    ConfigurationUtil.addFromArgs(IdentityManagerImpl.PARAM_INITIAL_PEERS,
+                                  StringUtil.separatedString(initialPeersCopy, ";"));
+    
+    V3Poller v3Poller = makeV3Poller("key");
+    assertNotNull(v3Poller.getReferenceList());
+    IdentityManager idMgr = theDaemon.getIdentityManager();
+    // Sanity check
+    assertTrue(idMgr.findPeerIdentity(localPeerKey).isLocalIdentity());
+    // Should NOT be included in reference list
+    assertEquals(6, v3Poller.getReferenceList().size());
+    assertFalse(v3Poller.getReferenceList().contains(idMgr.findPeerIdentity(localPeerKey)));
   }
   
   public void testTallyBlocksSucceedsOnExtraFileEdgeCase() throws Exception {
