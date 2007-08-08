@@ -5,7 +5,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;BePress %s Volume %d&quot;, journal_abbr, volume</string>
+    <string>&quot;Berkeley Electronic Press %s %s %d&quot;, base_url, journal_abbr, volume</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -22,7 +22,7 @@
       <string>1,&quot;^%s%s/lockss-volume%d.html$&quot;, base_url, journal_abbr, volume</string>
       <string>1,&quot;^%s%s/(topics/)?vol%d&quot;, base_url, journal_abbr, volume</string>
       <string>1,&quot;^%s%s/%d/&quot;, base_url, journal_abbr, volume</string>
-      <string>1,&quot;^%scgi/viewcontent.cgi\?.*context=%s&quot;, base_url, journal_abbr</string>
+      <string>1,&quot;^%scgi/viewcontent\.cgi\?.*context=%s&quot;, base_url, journal_abbr</string>
       <string>1,&quot;\.([Cc][Ss][Ss]|[Gg][Ii][Ff]|[Jj][Pp][Ee]?[Gg]|[Jj][Ss]|[Pp][Nn][Gg])$&quot;, journal_abbr</string>
     </list>
   </entry>
@@ -71,6 +71,6 @@
   </entry>
   <entry>
     <string>au_redirect_to_login_url_pattern</string>
-    <string>&quot;%scgi/login.cgi&quot;, base_url</string>
+    <string>&quot;%scgi/login\.cgi&quot;, base_url</string>
   </entry>
 </map>
