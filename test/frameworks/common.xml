@@ -138,7 +138,7 @@
 	<value>org.lockss.plugin.jscm.JSCMPlugin</value>
 	<value>org.lockss.plugin.secrecynews.SecrecyNewsPlugin</value>
 	<value>org.lockss.plugin.huffpoblog.HuffPoBlogPlugin</value>
-	<value>org.lockss.plugin.blogger.BloggerPlugin</value>
+	<value>org.lockss.plugin.blogger.BasicBloggerPlugin</value>
 	<value>de.huberlin.edoc.plugin.cmsjournal.CMSJournalPlugin</value>
 	<value>org.lockss.plugin.etd.humboldtplugin.HumboldtPlugin</value>
 	<value>org.lockss.plugin.etd.uctetdplugin.UCTETDPlugin</value>
