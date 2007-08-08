@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.72 2007-07-26 03:43:33 tlipkis Exp $
+ * $Id: BaseUrlCacher.java,v 1.73 2007-08-08 21:53:49 tlipkis Exp $
  */
 
 /*
@@ -631,6 +631,12 @@ public class BaseUrlCacher implements UrlCacher {
     // update the current location with the redirect location.
     try {
       String newUrlString = UrlUtil.resolveUri(fetchUrl, location);
+      // Check redirect to login page *before* crawl spec, else plugins
+      // would have to include login page URLs in crawl spec
+      if (au.isLoginPageUrl(newUrlString)) {
+	String msg = "Redirected to login page: " + newUrlString;
+	throw new CacheException.PermissionException(msg);
+      }
       if (isRedirectOption(REDIRECT_OPTION_IF_CRAWL_SPEC)) {
 	if (!au.shouldBeCached(newUrlString)) {
 	  logger.warning("Redirect not in crawl spec: " + newUrlString +
@@ -639,10 +645,6 @@ public class BaseUrlCacher implements UrlCacher {
 	    new CacheException.RedirectOutsideCrawlSpecException(newUrlString);
 	  //	  return false;
 	}
-      }
-      if (au.isLoginPageUrl(newUrlString)) {
-	String msg = "Redirected to login page: " + newUrlString;
-	throw new CacheException.PermissionException(msg);
       }
       PermissionMap permissionMap = null;
       if (permissionMapSource != null) {
