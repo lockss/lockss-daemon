@@ -1,15 +1,15 @@
 <map>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;BePress: %s volume %d&quot;, journal_abbr, volume</string>
+    <string>&quot;BePress %s Volume %d&quot;, journal_abbr, volume</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>BePress</string>
+    <string>Berkeley Electronic Press Plugin</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -19,10 +19,10 @@
     <string>au_crawlrules</string>
     <list>
       <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;%s/lockss-volume%d.html&quot;, journal_abbr, volume</string>
-      <string>1,&quot;%s/vol%d/iss[0-9]+&quot;, journal_abbr, volume</string>
-      <string>1,&quot;vol%d/iss[0-9]+/[a-z]+[0-9]+&quot;, volume</string>
-      <string>1,&quot;cgi/viewcontent.cgi\?.*context=%s.*&quot;, journal_abbr</string>
+      <string>1,&quot;^%s%s/lockss-volume%d.html$&quot;, base_url, journal_abbr, volume</string>
+      <string>1,&quot;^%s%s/vol%d&quot;, base_url, journal_abbr, volume</string>
+      <string>1,&quot;^%scgi/viewcontent.cgi\?.*context=%s&quot;, base_url, journal_abbr</string>
+      <string>1,&quot;\.([Cc][Ss][Ss]|[Gg][Ii][Ff]|[Jj][Pp][Ee]?[Gg]|[Jj][Ss]|[Pp][Nn][Gg])$&quot;, journal_abbr</string>
     </list>
   </entry>
   <entry>
@@ -68,4 +68,8 @@
       </org.lockss.daemon.ConfigParamDescr>
     </list>
   </entry>
+  <entry>
+    <string>au_redirect_to_login_url_pattern</string>
+    <string>&quot;%scgi/login.cgi&quot;</string>
+  <entry>
 </map>
