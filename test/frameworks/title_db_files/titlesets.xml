@@ -65,6 +65,11 @@
 	<property name="class" value="xpath" />
 	<property name="xpath" value="[pluginName='org.lockss.plugin.bioone.BioOnePlugin']" />
       </property>
+      <property name="Berkeley Electronic Press">
+	<property name="name" value="All Berkeley Electronic Press Titles" />
+	<property name="class" value="xpath" />
+	<property name="xpath" value="[attributes/publisher='Berkeley Electronic Press']" />
+      </property>
       <property name="ams">
 	<property name="name" value="All AMS Titles" />
 	<property name="class" value="xpath" />
