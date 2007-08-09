@@ -707,6 +707,306 @@
       <property name="attributes.publisher" value="American Society for Biochemistry and Molecular Biology" />
     </property>
 
+    <property name="HighWireCBELifeSciencesEducation1">
+      <property name="title" value="CBE - Life Sciences Education Volume 1" />
+      <property name="journalTitle" value="CBE - Life Sciences Education" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.lifescied.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="1" />
+      </property>
+      <property name="attributes.publisher" value="American Society for Cell Biology" />
+    </property>
+
+    <property name="HighWireCBELifeSciencesEducation2">
+      <property name="title" value="CBE - Life Sciences Education Volume 2" />
+      <property name="journalTitle" value="CBE - Life Sciences Education" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.lifescied.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="2" />
+      </property>
+      <property name="attributes.publisher" value="American Society for Cell Biology" />
+    </property>
+
+    <property name="HighWireCBELifeSciencesEducation3">
+      <property name="title" value="CBE - Life Sciences Education Volume 3" />
+      <property name="journalTitle" value="CBE - Life Sciences Education" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.lifescied.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="3" />
+      </property>
+      <property name="attributes.publisher" value="American Society for Cell Biology" />
+    </property>
+
+    <property name="HighWireCBELifeSciencesEducation4">
+      <property name="title" value="CBE - Life Sciences Education Volume 4" />
+      <property name="journalTitle" value="CBE - Life Sciences Education" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.lifescied.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="4" />
+      </property>
+      <property name="attributes.publisher" value="American Society for Cell Biology" />
+    </property>
+
+    <property name="HighWireCBELifeSciencesEducation5">
+      <property name="title" value="CBE - Life Sciences Education Volume 5" />
+      <property name="journalTitle" value="CBE - Life Sciences Education" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.lifescied.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="5" />
+      </property>
+      <property name="attributes.publisher" value="American Society for Cell Biology" />
+    </property>
+
+    <property name="HighWireCBELifeSciencesEducation6">
+      <property name="title" value="CBE - Life Sciences Education Volume 6" />
+      <property name="journalTitle" value="CBE - Life Sciences Education" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.lifescied.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="6" />
+      </property>
+      <property name="attributes.publisher" value="American Society for Cell Biology" />
+    </property>
+
+    <property name="HighWireMolecularBiologyoftheCell3">
+      <property name="title" value="Molecular Biology of the Cell Volume 3" />
+      <property name="journalTitle" value="Molecular Biology of the Cell" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.molbiolcell.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="3" />
+      </property>
+      <property name="attributes.publisher" value="American Society for Cell Biology" />
+    </property>
+
+    <property name="HighWireMolecularBiologyoftheCell4">
+      <property name="title" value="Molecular Biology of the Cell Volume 4" />
+      <property name="journalTitle" value="Molecular Biology of the Cell" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.molbiolcell.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="4" />
+      </property>
+      <property name="attributes.publisher" value="American Society for Cell Biology" />
+    </property>
+
+    <property name="HighWireMolecularBiologyoftheCell5">
+      <property name="title" value="Molecular Biology of the Cell Volume 5" />
+      <property name="journalTitle" value="Molecular Biology of the Cell" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.molbiolcell.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="5" />
+      </property>
+      <property name="attributes.publisher" value="American Society for Cell Biology" />
+    </property>
+
+    <property name="HighWireMolecularBiologyoftheCell6">
+      <property name="title" value="Molecular Biology of the Cell Volume 6" />
+      <property name="journalTitle" value="Molecular Biology of the Cell" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.molbiolcell.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="6" />
+      </property>
+      <property name="attributes.publisher" value="American Society for Cell Biology" />
+    </property>
+
+    <property name="HighWireMolecularBiologyoftheCell7">
+      <property name="title" value="Molecular Biology of the Cell Volume 7" />
+      <property name="journalTitle" value="Molecular Biology of the Cell" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.molbiolcell.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="7" />
+      </property>
+      <property name="attributes.publisher" value="American Society for Cell Biology" />
+    </property>
+
+    <property name="HighWireMolecularBiologyoftheCell8">
+      <property name="title" value="Molecular Biology of the Cell Volume 8" />
+      <property name="journalTitle" value="Molecular Biology of the Cell" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.molbiolcell.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="8" />
+      </property>
+      <property name="attributes.publisher" value="American Society for Cell Biology" />
+    </property>
+
+    <property name="HighWireMolecularBiologyoftheCell9">
+      <property name="title" value="Molecular Biology of the Cell Volume 9" />
+      <property name="journalTitle" value="Molecular Biology of the Cell" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.molbiolcell.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="9" />
+      </property>
+      <property name="attributes.publisher" value="American Society for Cell Biology" />
+    </property>
+
+    <property name="HighWireMolecularBiologyoftheCell10">
+      <property name="title" value="Molecular Biology of the Cell Volume 10" />
+      <property name="journalTitle" value="Molecular Biology of the Cell" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.molbiolcell.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="10" />
+      </property>
+      <property name="attributes.publisher" value="American Society for Cell Biology" />
+    </property>
+
+    <property name="HighWireMolecularBiologyoftheCell11">
+      <property name="title" value="Molecular Biology of the Cell Volume 11" />
+      <property name="journalTitle" value="Molecular Biology of the Cell" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.molbiolcell.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="11" />
+      </property>
+      <property name="attributes.publisher" value="American Society for Cell Biology" />
+    </property>
+
+    <property name="HighWireMolecularBiologyoftheCell12">
+      <property name="title" value="Molecular Biology of the Cell Volume 12" />
+      <property name="journalTitle" value="Molecular Biology of the Cell" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.molbiolcell.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="12" />
+      </property>
+      <property name="attributes.publisher" value="American Society for Cell Biology" />
+    </property>
+
+    <property name="HighWireMolecularBiologyoftheCell13">
+      <property name="title" value="Molecular Biology of the Cell Volume 13" />
+      <property name="journalTitle" value="Molecular Biology of the Cell" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.molbiolcell.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="13" />
+      </property>
+      <property name="attributes.publisher" value="American Society for Cell Biology" />
+    </property>
+
+    <property name="HighWireMolecularBiologyoftheCell14">
+      <property name="title" value="Molecular Biology of the Cell Volume 14" />
+      <property name="journalTitle" value="Molecular Biology of the Cell" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.molbiolcell.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="14" />
+      </property>
+      <property name="attributes.publisher" value="American Society for Cell Biology" />
+    </property>
+
+    <property name="HighWireMolecularBiologyoftheCell15">
+      <property name="title" value="Molecular Biology of the Cell Volume 15" />
+      <property name="journalTitle" value="Molecular Biology of the Cell" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.molbiolcell.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="15" />
+      </property>
+      <property name="attributes.publisher" value="American Society for Cell Biology" />
+    </property>
+
+    <property name="HighWireMolecularBiologyoftheCell16">
+      <property name="title" value="Molecular Biology of the Cell Volume 16" />
+      <property name="journalTitle" value="Molecular Biology of the Cell" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.molbiolcell.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="16" />
+      </property>
+      <property name="attributes.publisher" value="American Society for Cell Biology" />
+    </property>
+
     <property name="HighWireMolecularBiologyoftheCell17">
       <property name="title" value="Molecular Biology of the Cell Volume 17" />
       <property name="journalTitle" value="Molecular Biology of the Cell" />
@@ -718,6 +1018,21 @@
       <property name="param.2">
 	<property name="key" value="volume_name" />
 	<property name="value" value="17" />
+      </property>
+      <property name="attributes.publisher" value="American Society for Cell Biology" />
+    </property>
+
+    <property name="HighWireMolecularBiologyoftheCell18">
+      <property name="title" value="Molecular Biology of the Cell Volume 18" />
+      <property name="journalTitle" value="Molecular Biology of the Cell" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://www.molbiolcell.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="18" />
       </property>
       <property name="attributes.publisher" value="American Society for Cell Biology" />
     </property>
