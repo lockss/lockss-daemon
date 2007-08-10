@@ -1,5 +1,5 @@
 /*
- * $Id: BaseProxyManager.java,v 1.13 2007-01-14 08:07:54 tlipkis Exp $
+ * $Id: BaseProxyManager.java,v 1.14 2007-08-10 07:12:35 tlipkis Exp $
  */
 
 /*
@@ -55,6 +55,7 @@ public abstract class BaseProxyManager extends JettyManager {
   protected String excludeIps;
   protected boolean logForbidden;
   protected IpAccessHandler accessHandler;
+  protected ProxyHandler handler;
 
   /* ------- LockssManager implementation ------------------ */
   /**
@@ -124,7 +125,7 @@ public abstract class BaseProxyManager extends JettyManager {
       HttpContext context = server.getContext(null, "/");
 
       context.setAttribute(HttpContext.__ErrorHandler,
-			   new LockssErrorHandler("proxy")); 
+			   new LockssErrorHandler("proxy"));
 
       // In this environment there is no point in consuming memory with
       // cached resources
@@ -136,7 +137,8 @@ public abstract class BaseProxyManager extends JettyManager {
       context.addHandler(accessHandler);
 
       // Add a proxy handler to the context
-      context.addHandler(makeProxyHandler());
+      handler = makeProxyHandler();
+      context.addHandler(handler);
 
       // Add a CuResourceHandler to handle requests for locally cached
       // content that the proxy handler modified and passed on.

@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyManager.java,v 1.43 2007-07-31 06:30:09 tlipkis Exp $
+ * $Id: ProxyManager.java,v 1.44 2007-08-10 07:12:35 tlipkis Exp $
  */
 
 /*
@@ -149,6 +149,16 @@ public class ProxyManager extends BaseProxyManager {
   public static final long DEFAULT_PROXY_QUICK_DATA_TIMEOUT =
     5  * Constants.MINUTE;
 
+  public static final String PARAM_CLOSE_IDLE_CONNECTION_INTERVAL =
+    PREFIX + "closeIdleConnections.interval";
+  public static final long DEFAULT_CLOSE_IDLE_CONNECTION_INTERVAL =
+    10 * Constants.MINUTE;
+
+  public static final String PARAM_CLOSE_IDLE_CONNECTION_IDLE_TIME =
+    PREFIX + "closeIdleConnections.idleTime";
+  public static final long DEFAULT_CLOSE_IDLE_CONNECTION_IDLE_TIME =
+    10 * Constants.MINUTE;
+
   /** Content Re-Writing Support - GIF to PNG */
   public static final String PARAM_REWRITE_GIF_PNG =
     PREFIX + "contentRewrite.gifToPng";
@@ -167,8 +177,13 @@ public class ProxyManager extends BaseProxyManager {
   private FixedTimedMap urlCache;
   private boolean paramUrlCacheEnabled = DEFAULT_URL_CACHE_ENABLED;
   private long paramUrlCacheDuration = DEFAULT_URL_CACHE_DURATION;
+  private long paramCloseIdleConnectionsInterval =
+    DEFAULT_CLOSE_IDLE_CONNECTION_INTERVAL;
+  private long paramCloseIdleConnectionsIdleTime =
+    DEFAULT_CLOSE_IDLE_CONNECTION_IDLE_TIME;
   private Set noManifestIndexResponses = new HashSet();
   private Set disallowedMethods = new HashSet();
+  private TimerQueue.Request closeTimer;
 
 
   public void setConfig(Configuration config, Configuration prevConfig,
@@ -179,6 +194,13 @@ public class ProxyManager extends BaseProxyManager {
       start = config.getBoolean(PARAM_START, DEFAULT_START);
 
       if (start) {
+	paramCloseIdleConnectionsInterval =
+	  config.getTimeInterval(PARAM_CLOSE_IDLE_CONNECTION_INTERVAL,
+				 DEFAULT_CLOSE_IDLE_CONNECTION_INTERVAL);
+	paramCloseIdleConnectionsIdleTime =
+	  config.getTimeInterval(PARAM_CLOSE_IDLE_CONNECTION_IDLE_TIME,
+				 DEFAULT_CLOSE_IDLE_CONNECTION_IDLE_TIME);
+
 	includeIps = config.get(PARAM_IP_INCLUDE, "");
 	excludeIps = config.get(PARAM_IP_EXCLUDE, "");
 	logForbidden = config.getBoolean(PARAM_LOG_FORBIDDEN,
@@ -261,6 +283,48 @@ public class ProxyManager extends BaseProxyManager {
       }
     }
   }
+
+  protected void startProxy() {
+    stopCloseTimer();
+    super.startProxy();
+    startCloseTimer();
+  }
+
+  protected void stopProxy() {
+    stopCloseTimer();
+    super.stopProxy();
+  }
+
+  private void startCloseTimer() {
+    closeTimer =
+      TimerQueue.schedule(Deadline.in(paramCloseIdleConnectionsInterval),
+			  paramCloseIdleConnectionsInterval,
+			  timerCallback, null);
+  }
+
+  private void stopCloseTimer() {
+    if (closeTimer != null) {
+      TimerQueue.cancel(closeTimer);
+      closeTimer = null;
+    }
+  }
+    
+  private void closeIdleConnections() {
+    if (handler != null) {
+      handler.closeIdleConnections(paramCloseIdleConnectionsIdleTime);
+    }
+  }
+
+  // TimerQueue callback singleton.
+  private TimerQueue.Callback timerCallback =
+    new TimerQueue.Callback() {
+      public void timerExpired(Object cookie) {
+	closeIdleConnections();
+      }
+      public String toString() {
+	return "Proxy socket cleanup";
+      }
+    };
 
   public int getHostDownAction() {
     return paramHostDownAction;

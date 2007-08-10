@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.55 2007-07-31 06:30:10 tlipkis Exp $
+ * $Id: ProxyHandler.java,v 1.56 2007-08-10 07:12:35 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.55 2007-07-31 06:30:10 tlipkis Exp $
+// $Id: ProxyHandler.java,v 1.56 2007-08-10 07:12:35 tlipkis Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -123,6 +123,8 @@ public class ProxyHandler extends AbstractHttpHandler {
     this.quickFailConnPool = quickFailConnPool;
   }
 
+  // Entry points from ProxyManager
+
   /** If set to true, will act like an audit proxy.  (Content will be
    * served only from the cache; requests will never be proxied, will serve
    * CLOCKSS unsubscribed content */
@@ -143,6 +145,21 @@ public class ProxyHandler extends AbstractHttpHandler {
   public void setProxiedTarget(String target) {
     failOverTargetUri = new URI(target);
     isFailOver = true;
+  }
+
+  public void closeIdleConnections(long idleTime) {
+    log.debug2("Closing idle connections");
+    closeIdleConnections(quickFailConnPool, idleTime);
+    closeIdleConnections(connPool, idleTime);
+  }
+
+  private void closeIdleConnections(LockssUrlConnectionPool pool,
+				    long idleTime) {
+    try {
+      pool.closeIdleConnections(0);
+    } catch (RuntimeException e) {
+      log.warning("closeIdleConnections: ", e);
+    }
   }
 
   /** Create a Via header value:
