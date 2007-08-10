@@ -1,5 +1,5 @@
 /*
- * $Id: TimerQueue.java,v 1.31 2006-11-27 06:34:00 tlipkis Exp $
+ * $Id: TimerQueue.java,v 1.32 2007-08-10 07:28:02 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -56,7 +56,18 @@ public class TimerQueue {
    */
   public static Request schedule(Deadline deadline, Callback callback,
 				 Object cookie) {
-    return singleton.add(deadline, callback, cookie);
+    return singleton.add(deadline, 0, callback, cookie);
+  }
+
+  /** Schedule a repeating event.  At time <code>deadline</code>, then
+   * every <code>repeatInterval</code> milliseconds, <code>callback</code>
+   * will be called with <code>cookie</code> as an argument.
+   * @return a TimerQueue.Request object, which can be used to cancel the
+   * request.
+   */
+  public static Request schedule(Deadline deadline, long repeatInterval,
+				 Callback callback, Object cookie) {
+    return singleton.add(deadline, repeatInterval, callback, cookie);
   }
 
   /** Cancel a previously scheduled request.
@@ -87,9 +98,11 @@ public class TimerQueue {
     singleton = tq;
   }
 
-  private Request add(Deadline deadline, Callback callback, Object cookie) {
+  private Request add(Deadline deadline, long repeatInterval,
+		      Callback callback, Object cookie) {
     Request req = new Request(deadline, callback, cookie);
     req.deadline.registerCallback(req.deadlineCb);
+    req.repeatInterval = repeatInterval;
     queue.put(req);
     startOrKickThread();
     return req;
@@ -112,7 +125,7 @@ public class TimerQueue {
     // our own request on the queue (which will come after any with earlier
     // or equal deadlines) and wait for it to happen.
     final BinarySemaphore sem = new BinarySemaphore();
-    add(Deadline.in(0),
+    add(Deadline.in(0), 0,
 	new Callback() {
 	  public void timerExpired(Object cookie) {
 	    sem.give();
@@ -125,9 +138,10 @@ public class TimerQueue {
   }
 
 
-  /** Timer Request element; only used to cancel a request. */
+  /** Timer Queue element. */
   public class Request implements Comparable {
     private Deadline deadline;
+    private long repeatInterval;
     private Callback callback;
     private Object cookie;
     private Deadline.Callback deadlineCb;
@@ -141,6 +155,12 @@ public class TimerQueue {
 	  public void changed(Deadline deadline) {
 	    deadlineChanged(deadline);
 	  }};
+    }
+
+    private Request(Deadline deadline, long repeatInterval,
+		    Callback callback, Object cookie) {
+      this(deadline, callback, cookie);
+      this.repeatInterval = repeatInterval;
     }
 
     public Deadline getDeadline() {
@@ -162,7 +182,12 @@ public class TimerQueue {
 	log.error("Timer callback threw", e);
       }
     }
-    queue.remove(req);
+    if (!req.cancelled && req.repeatInterval > 0) {
+      req.deadline.expireIn(req.repeatInterval);
+      deadlineChanged(req.deadline);
+    } else {
+      queue.remove(req);
+    }
   }
 
   // Allow to be overridden for testing.
