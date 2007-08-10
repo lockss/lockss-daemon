@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawler.java,v 1.24 2007-07-17 06:03:49 tlipkis Exp $
+ * $Id: BaseCrawler.java,v 1.25 2007-08-10 07:12:11 tlipkis Exp $
  */
 
 /*
@@ -259,6 +259,14 @@ public abstract class BaseCrawler
       throw e;
     } finally {
       crawlStatus.signalCrawlEnded();
+      if (connectionPool != null) {
+	try {
+	  connectionPool.closeIdleConnections(0);
+	  connectionPool = null;
+	} catch (RuntimeException e) {
+	  logger.warning("closeIdleConnections", e);
+	}
+      }
     }
   }
 
