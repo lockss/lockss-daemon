@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.84 2007-07-17 06:03:48 tlipkis Exp $
+ * $Id: NullPlugin.java,v 1.85 2007-08-12 01:48:58 tlipkis Exp $
  */
 
 /*
@@ -117,6 +117,9 @@ public class NullPlugin {
       return null;
     }
 
+    public Object newAuxClass(String className, Class expectedType) {
+      return null;
+    }
   }
 
   /**

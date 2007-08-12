@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.27 2007-07-17 06:03:48 tlipkis Exp $
+ * $Id: DefinablePlugin.java,v 1.28 2007-08-12 01:48:58 tlipkis Exp $
  */
 
 /*
@@ -34,7 +34,6 @@ package org.lockss.plugin.definable;
 
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
-import org.lockss.plugin.wrapper.*;
 import org.lockss.config.Configuration;
 import org.lockss.app.*;
 import org.lockss.daemon.*;
@@ -91,7 +90,6 @@ public class DefinablePlugin extends BasePlugin {
 
   protected ExternalizableMap definitionMap = new ExternalizableMap();
   protected CacheResultHandler resultHandler = null;
-  protected ClassLoader classLoader;
   protected String loadedFrom;
   protected CrawlWindow crawlWindow;
 
@@ -143,10 +141,6 @@ public class DefinablePlugin extends BasePlugin {
 
   public String getLoadedFrom() {
     return loadedFrom;
-  }
-
-  ClassLoader getClassLoader() {
-    return classLoader;
   }
 
   public String getPluginName() {
@@ -219,8 +213,8 @@ public class DefinablePlugin extends BasePlugin {
 	  log.debug(mime + " link extractor: " + factName);
 	  MimeTypeInfo.Mutable mti = mimeMap.modifyMimeTypeInfo(mime);
 	  LinkExtractorFactory fact =
-	    (LinkExtractorFactory)loadClass(factName,
-					    LinkExtractorFactory.class);
+	    (LinkExtractorFactory)newAuxClass(factName,
+					      LinkExtractorFactory.class);
 	  mti.setLinkExtractorFactory(fact);
 	}
       } else if (key.endsWith(DefinableArchivalUnit.SUFFIX_FILTER_FACTORY)) {
@@ -231,7 +225,7 @@ public class DefinablePlugin extends BasePlugin {
 	  log.debug(mime + " filter: " + factName);
 	  MimeTypeInfo.Mutable mti = mimeMap.modifyMimeTypeInfo(mime);
 	  FilterFactory fact =
-	    (FilterFactory)loadClass(factName, FilterFactory.class);
+	    (FilterFactory)newAuxClass(factName, FilterFactory.class);
 	  mti.setFilterFactory(fact);
 	}
       } else if (key.endsWith(DefinableArchivalUnit.SUFFIX_FETCH_RATE_LIMITER)) {
@@ -261,7 +255,8 @@ public class DefinablePlugin extends BasePlugin {
     if (handler_class != null) {
       try {
         resultHandler =
-            (CacheResultHandler) Class.forName(handler_class).newInstance();
+            (CacheResultHandler)newAuxClass(handler_class,
+					    CacheResultHandler.class);
         resultHandler.init(resultMap);
       }
       catch (Exception ex) {
@@ -287,8 +282,11 @@ public class DefinablePlugin extends BasePlugin {
             Vector s_vec = StringUtil.breakAt(entry, '=', 2, true, true);
             class_name = (String) s_vec.get(1);
             int code = Integer.parseInt(((String) s_vec.get(0)));
-            // now lets add the entry into the map.
+	    // Add the result class to the map.  Result classes are loaded
+	    // from system classpath - there's no need for plugin-local
+	    // exceptions
             Class result_class = null;
+	    // 
             result_class = Class.forName(class_name);
             ( (HttpResultMap) resultMap).storeMapEntry(code, result_class);
           }
@@ -321,8 +319,8 @@ public class DefinablePlugin extends BasePlugin {
 				null);
       if (window_class != null) {
 	ConfigurableCrawlWindow ccw =
-	  (ConfigurableCrawlWindow) loadClass(window_class,
-					      ConfigurableCrawlWindow.class);
+	  (ConfigurableCrawlWindow) newAuxClass(window_class,
+						ConfigurableCrawlWindow.class);
 	try {
 	  window = ccw.makeCrawlWindow();
 	} catch (PluginException e) {
@@ -341,7 +339,7 @@ public class DefinablePlugin extends BasePlugin {
 				null);
       if (normalizerClass != null) {
 	urlNorm =
-	  (UrlNormalizer)loadClass(normalizerClass, UrlNormalizer.class);
+	  (UrlNormalizer)newAuxClass(normalizerClass, UrlNormalizer.class);
       } else {
 	urlNorm = NullUrlNormalizer.INSTANCE;
       }
@@ -358,7 +356,7 @@ public class DefinablePlugin extends BasePlugin {
 
     if (filter_el instanceof String) {
       log.debug("Loading filter "+filter_el);
-      return (FilterRule) loadClass( (String) filter_el, FilterRule.class);
+      return (FilterRule) newAuxClass( (String) filter_el, FilterRule.class);
     }
     else if (filter_el instanceof List) {
       if ( ( (List) filter_el).size() > 0) {
@@ -379,36 +377,4 @@ public class DefinablePlugin extends BasePlugin {
     }
     return className;
   }
-
-
-  // ---------------------------------------------------------------------
-  //   CLASS LOADING SUPPORT ROUTINES
-  // ---------------------------------------------------------------------
-
-  Object loadClass(String className, Class loadedClass) {
-    Object obj = null;
-    try {
-      obj = Class.forName(className, true, classLoader).newInstance();
-    } catch (Exception ex) {
-      log.error("Could not load " + className, ex);
-      throw new
-	PluginException.InvalidDefinition(getPluginName() + ": unable to create " +
-				   loadedClass + " from " + className, ex);
-    } catch (LinkageError le) {
-      log.error("Could not load " + className, le);
-      throw new
-	PluginException.InvalidDefinition(getPluginName() + " unable to create " +
-				   loadedClass + " from " + className, le);
-    }
-    if (!loadedClass.isInstance(obj)) {
-      log.error(className + " is not a " + loadedClass.getName());
-      throw new
-	PluginException.InvalidDefinition(getPluginName() + ": wrong class, " +
-				   className + " is " +
-				   obj.getClass().getName() +
-				   ", should be " + loadedClass);
-    }
-    return obj = WrapperUtil.wrap(obj, loadedClass);      
-  }
-
 }

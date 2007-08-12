@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.46 2007-07-17 06:03:48 tlipkis Exp $
+ * $Id: BasePlugin.java,v 1.47 2007-08-12 01:48:58 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.wrapper.*;
 import org.lockss.extractor.*;
 
 /**
@@ -67,6 +68,8 @@ public abstract class BasePlugin
   protected CacheResultMap resultMap;
   protected MimeTypeMap mimeMap;
   protected HashMap filterMap = new HashMap(4);
+  // ClassLoader used to load plugin.  null if not loadable plugin
+  protected ClassLoader classLoader;
 
   Configuration.Callback configCb = new Configuration.Callback() {
       public void configurationChanged(Configuration newConfig,
@@ -254,6 +257,7 @@ public abstract class BasePlugin
     }
     res.add(ConfigParamDescr.AU_CLOSED);
     res.add(ConfigParamDescr.PUB_DOWN);
+    res.add(ConfigParamDescr.PUB_NEVER);
     res.add(ConfigParamDescr.PROTOCOL_VERSION);
     return res;
   }
@@ -455,5 +459,49 @@ public abstract class BasePlugin
     if (log.isDebug3())
       log.debug3(contentType + " rate limiter: " + mti.getFetchRateLimiter());
     return mti.getFetchRateLimiter();
+  }
+
+  // ---------------------------------------------------------------------
+  //   CLASS LOADING SUPPORT ROUTINES
+  // ---------------------------------------------------------------------
+
+  /** Retuen the ClassLoader that was used to load the plugin, or null if
+   * not a loadable plugin or loaded from system classpath */
+  ClassLoader getClassLoader() {
+    return classLoader;
+  }
+
+  /** Create and return a new instance of a plugin auxilliary class.
+   * @param className the name of the auxilliary class
+   * @param expectedType Type (class or interface) of expected rexult
+   */
+  public Object newAuxClass(String className, Class expectedType) {
+    Object obj = null;
+    try {
+      if (classLoader != null) {
+	obj = Class.forName(className, true, classLoader).newInstance();
+      } else {
+	obj = Class.forName(className).newInstance();
+      }
+    } catch (Exception ex) {
+      log.error("Could not load " + className, ex);
+      throw new
+	PluginException.InvalidDefinition(getPluginName() + ": unable to create " +
+				   expectedType + " from " + className, ex);
+    } catch (LinkageError le) {
+      log.error("Could not load " + className, le);
+      throw new
+	PluginException.InvalidDefinition(getPluginName() + " unable to create " +
+				   expectedType + " from " + className, le);
+    }
+    if (!expectedType.isInstance(obj)) {
+      log.error(className + " is not a " + expectedType.getName());
+      throw new
+	PluginException.InvalidDefinition(getPluginName() + ": wrong class, " +
+				   className + " is " +
+				   obj.getClass().getName() +
+				   ", should be " + expectedType);
+    }
+    return obj = WrapperUtil.wrap(obj, expectedType);      
   }
 }

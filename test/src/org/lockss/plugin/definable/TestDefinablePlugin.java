@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinablePlugin.java,v 1.16 2007-07-17 06:03:48 tlipkis Exp $
+ * $Id: TestDefinablePlugin.java,v 1.17 2007-08-12 01:48:58 tlipkis Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import org.lockss.plugin.base.*;
 import org.lockss.test.*;
 import org.lockss.extractor.*;
 import org.lockss.util.*;
-import org.lockss.util.urlconn.HttpResultMap;
+import org.lockss.util.urlconn.*;
 
 /**
  * <p>TestConfigurablePlugin: test case for ConfigurablePlugin</p>
@@ -233,7 +233,9 @@ public class TestDefinablePlugin extends LockssTestCase {
     // test using a special class
     map.putString(DefinablePlugin.KEY_EXCEPTION_HANDLER,name);
     plugin.initResultMap();
-    assertTrue(plugin.getCacheResultHandler() instanceof MockHttpResultHandler);
+    CacheResultHandler hand = plugin.getCacheResultHandler();
+    assertTrue(hand instanceof CacheResultHandlerWrapper);
+    assertTrue(WrapperUtil.unwrap(hand) instanceof MockHttpResultHandler);
 
   }
 

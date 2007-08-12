@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.58 2007-07-17 06:03:48 tlipkis Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.59 2007-08-12 01:48:58 tlipkis Exp $
  */
 
 /*
@@ -206,7 +206,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 
     if (rule instanceof String) {
 	CrawlRuleFromAuFactory fact = (CrawlRuleFromAuFactory)
-            loadClass((String) rule, CrawlRuleFromAuFactory.class);
+            newAuxClass((String) rule, CrawlRuleFromAuFactory.class);
 	return fact.createCrawlRule(this);
     }
     List rules = new LinkedList();
@@ -286,8 +286,8 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
       return null;
     }
     LoginPageChecker checker =
-      (LoginPageChecker) loadClass(loginPageCheckerClass,
-				   LoginPageChecker.class);
+      (LoginPageChecker)newAuxClass(loginPageCheckerClass,
+				    LoginPageChecker.class);
     return checker;
   }
 
@@ -301,8 +301,8 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 	       permissionCheckerFactoryClass);
 
     PermissionCheckerFactory fact =
-      (PermissionCheckerFactory) loadClass(permissionCheckerFactoryClass,
-					   PermissionCheckerFactory.class);
+      (PermissionCheckerFactory)newAuxClass(permissionCheckerFactoryClass,
+					    PermissionCheckerFactory.class);
     log.debug("Loaded PermissionCheckerFactory: " + fact);
     try {
       List permissionCheckers = fact.createPermissionCheckers(this);
@@ -325,8 +325,8 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 //   CLASS LOADING SUPPORT ROUTINES
 // ---------------------------------------------------------------------
 
-  Object loadClass(String className, Class loadedClass) {
-    return getDefinablePlugin().loadClass(className, loadedClass);
+  Object newAuxClass(String className, Class expectedType) {
+    return getDefinablePlugin().newAuxClass(className, expectedType);
   }
 
 // ---------------------------------------------------------------------

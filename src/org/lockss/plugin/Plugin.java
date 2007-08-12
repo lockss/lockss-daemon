@@ -1,5 +1,5 @@
 /*
- * $Id: Plugin.java,v 1.25 2006-09-16 22:58:34 tlipkis Exp $
+ * $Id: Plugin.java,v 1.26 2007-08-12 01:48:58 tlipkis Exp $
  */
 
 /*
@@ -146,5 +146,9 @@ public interface Plugin {
    */
   public LockssDaemon getDaemon();
 
-
+  /** Create and return a new instance of a plugin auxilliary class.
+   * @param className the name of the auxilliary class
+   * @param expectedType Type (class or interface) of expected rexult
+   */
+  public Object newAuxClass(String className, Class expectedType);
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: PdfUtil.java,v 1.24 2007-07-31 22:50:13 thib_gc Exp $
+ * $Id: PdfUtil.java,v 1.25 2007-08-12 01:48:58 tlipkis Exp $
  */
 
 /*
@@ -747,32 +747,15 @@ return success;
       return null;
     }
     try {
-      OutputDocumentTransform ret = (OutputDocumentTransform)Class.forName(className).newInstance();
+      OutputDocumentTransform ret =
+	(OutputDocumentTransform)au.getPlugin().newAuxClass(className, OutputDocumentTransform.class);
       logger.debug2("Successfully loaded and instantiated " + ret.getClass().getName());
       return ret;
-    }
-    catch (ExceptionInInitializerError eiie) {
-      logger.error("An initializer threw while dynamically loading a PDF transform", eiie);
+    } catch (org.lockss.daemon.PluginException.InvalidDefinition e) {
+      logger.error("Can't load PDF transform", e);
       return null;
-    }
-    catch (LinkageError le) {
-      logger.error("A linkage error occurred while dynamically loading a PDF transform", le);
-      return null;
-    }
-    catch (ClassNotFoundException cnfe) {
-      logger.error("Could not find class " + className + " while dynamically loading a PDF transform", cnfe);
-      return null;
-    }
-    catch (IllegalAccessException iae) {
-      logger.error("Class " + className + " (or its no-argument constructor) is not accessible", iae);
-      return null;
-    }
-    catch (InstantiationException ie) {
-      logger.error("Exception while instantiating class " + className, ie);
-      return null;
-    }
-    catch (ClassCastException cce) {
-      logger.error("Class " + className + " is not of type " + OutputDocumentTransform.class.getName(), cce);
+    } catch (RuntimeException e) {
+      logger.error("Can't load PDF transform", e);
       return null;
     }
   }
