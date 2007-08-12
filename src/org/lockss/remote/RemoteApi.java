@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.60 2007-06-27 07:49:49 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.61 2007-08-12 04:53:29 tlipkis Exp $
  */
 
 /*
@@ -806,7 +806,7 @@ public class RemoteApi
 	BatchAuStatus.Entry stat = bas.newEntry(auid);
 	ArchivalUnit au = pluginMgr.getAuFromId(auid);
 	if (au != null) {
-	  stat.setName(au.getName());
+	  stat.setName(au.getName(), au.getPlugin());
 	  try {
 	    pluginMgr.deleteAu(au);
 	    stat.setStatus("Deleted", STATUS_ORDER_NORM);
@@ -840,7 +840,7 @@ public class RemoteApi
 	BatchAuStatus.Entry stat = bas.newEntry(auid);
 	ArchivalUnit au = pluginMgr.getAuFromId(auid);
 	if (au != null) {
-	  stat.setName(au.getName());
+	  stat.setName(au.getName(), au.getPlugin());
 	  try {
 	    pluginMgr.deactivateAu(au);
 	    stat.setStatus("Deactivated", STATUS_ORDER_NORM);
@@ -908,7 +908,7 @@ public class RemoteApi
     if (name == null) {
       name = auConfig.get(AU_PARAM_DISPLAY_NAME);
     }
-    stat.setName(name);
+    stat.setName(name, pluginp);
 
     if (pluginp == null) {
       stat.setStatus("Error", STATUS_ORDER_ERROR);
@@ -932,7 +932,7 @@ public class RemoteApi
       Configuration normNew = normalizedAuConfig(auConfig);
       ArchivalUnit au = pluginMgr.getAuFromId(auid);
       if (au != null) {
-	stat.setName(au.getName());
+	stat.setName(au.getName(), au.getPlugin());
       }
       if (normOld.equals(normNew)) {
 	if (doCreate) log.debug(addOpName(addOp) + ": same config: " + auid);
@@ -989,7 +989,7 @@ public class RemoteApi
 	    log.debug(addOpName(addOp) + auid);
 	    AuProxy aup = createAndSaveAuConfiguration(pluginp, auConfig);
 	    stat.setStatus("Added", STATUS_ORDER_NORM);
-	    stat.setName(aup.getName());
+	    stat.setName(aup.getName(), aup.getPlugin());
 	    String usrMsg = AuUtil.getConfigUserMessage(aup.getAu());
 	    if (usrMsg != null) {
 	      stat.setUserMessage(usrMsg);
@@ -1012,7 +1012,7 @@ public class RemoteApi
     // If a restored AU config has no name, it's probably an old one.  Try
     // to look up the name in the title DB
     if (addOp == BATCH_ADD_RESTORE && stat.getName() == null) {
-      stat.setName(titleFromDB(pluginp, auConfig));
+      stat.setName(titleFromDB(pluginp, auConfig), pluginp);
     }
     if (stat.getName() == null) {
       stat.setName("Unknown");
@@ -1085,7 +1085,7 @@ public class RemoteApi
 			      auid, tc.getConfig(), null);
 	  stat.setTitleConfig(tc);
 	  if ("Unknown".equalsIgnoreCase(stat.getName())) {
-	    stat.setName(tc.getDisplayName());
+	    stat.setName(tc.getDisplayName(), pluginp);
 	  }
           bas.add(stat);
 	} catch (RuntimeException e) {
@@ -1118,8 +1118,8 @@ public class RemoteApi
       BatchAuStatus.Entry stat = bas.newEntry();
       String plugName = tc.getPluginName();
       stat.setTitleConfig(tc);
-      stat.setName(tc.getDisplayName());
       PluginProxy pluginp = findPluginProxy(plugName);
+      stat.setName(tc.getDisplayName(), pluginp);
       if (pluginp == null) {
 	stat.setStatus("DNE", STATUS_ORDER_LOW);
 	stat.setExplanation("Does not exist");
@@ -1175,7 +1175,7 @@ public class RemoteApi
 				auid, tc.getConfig(), null);
 	    stat.setTitleConfig(tc);
 	    if ("Unknown".equalsIgnoreCase(stat.getName())) {
-	      stat.setName(tc.getDisplayName());
+	      stat.setName(tc.getDisplayName(), pluginp);
 	    }
 	    bas.add(stat);
 	  }
@@ -1352,6 +1352,22 @@ public class RemoteApi
       }
       void setName(String s) {
 	this.name = s;
+      }
+      void setName(String s, Plugin plugin) {
+	if (s == null) {
+	  this.name = s;
+	  return;
+	}
+	String plat = plugin.getPublishingPlatform();
+	this.name = (plat != null) ? (s + " (" + plat + ")") : s;
+      }
+      void setName(String s, PluginProxy pluginp) {
+	if (s == null) {
+	  this.name = s;
+	  return;
+	}
+	String plat = pluginp.getPublishingPlatform();
+	this.name = (plat != null) ? (s + " (" + plat + ")") : s;
       }
       void setAuid(String auid) {
 	this.auid = auid;

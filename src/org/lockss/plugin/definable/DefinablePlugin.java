@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.28 2007-08-12 01:48:58 tlipkis Exp $
+ * $Id: DefinablePlugin.java,v 1.29 2007-08-12 04:53:30 tlipkis Exp $
  */
 
 /*
@@ -59,6 +59,8 @@ public class DefinablePlugin extends BasePlugin {
   public static final String KEY_PLUGIN_VERSION = "plugin_version";
   public static final String KEY_REQUIRED_DAEMON_VERSION =
     "required_daemon_version";
+  public static final String KEY_PUBLISHING_PLATFORM =
+    "plugin_publishing_platform";
   public static final String KEY_PLUGIN_CONFIG_PROPS = "plugin_config_props";
   public static final String KEY_EXCEPTION_HANDLER =
       "plugin_cache_result_handler";
@@ -162,6 +164,10 @@ public class DefinablePlugin extends BasePlugin {
   public String getRequiredDaemonVersion() {
     return definitionMap.getString(KEY_REQUIRED_DAEMON_VERSION,
 				   DEFAULT_REQUIRED_DAEMON_VERSION);
+  }
+
+  public String getPublishingPlatform() {
+    return definitionMap.getString(KEY_PUBLISHING_PLATFORM, null);
   }
 
   public String getPluginNotes() {

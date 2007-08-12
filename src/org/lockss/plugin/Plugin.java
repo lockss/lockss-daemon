@@ -1,5 +1,5 @@
 /*
- * $Id: Plugin.java,v 1.26 2007-08-12 01:48:58 tlipkis Exp $
+ * $Id: Plugin.java,v 1.27 2007-08-12 04:53:30 tlipkis Exp $
  */
 
 /*
@@ -87,6 +87,12 @@ public interface Plugin {
    * @return the name
    */
   public String getPluginName();
+
+  /**
+   * Return the human-readable name of the publishing platform, if any.
+   * @return the name
+   */
+  public String getPublishingPlatform();
 
   /**
    * Return the list of names of the {@link ArchivalUnit}s and volranges

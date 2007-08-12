@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.62 2006-11-10 07:26:09 tlipkis Exp $
+ * $Id: AuConfig.java,v 1.63 2007-08-12 04:53:29 tlipkis Exp $
  */
 
 /*
@@ -402,8 +402,11 @@ public class AuConfig extends LockssServlet {
 	}
 	String selText = encodeText(title);
 	String dispText = selText;
-	if (includePluginInTitleSelect) {
-	  if (titlePlugin != null) {
+	if (titlePlugin != null) {
+	  String plat = titlePlugin.getPublishingPlatform();
+	  if (plat != null) {
+	    dispText = selText + " (" + plat + ")";
+	  } else if (includePluginInTitleSelect) {
 	    String plugName = titlePlugin.getPluginName();
 	    dispText = selText + " (" + plugName + ")";
 	  }

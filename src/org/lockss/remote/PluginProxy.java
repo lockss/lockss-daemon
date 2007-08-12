@@ -1,5 +1,5 @@
 /*
- * $Id: PluginProxy.java,v 1.4 2005-02-02 09:42:26 tlipkis Exp $
+ * $Id: PluginProxy.java,v 1.5 2007-08-12 04:53:30 tlipkis Exp $
  */
 
 /*
@@ -93,6 +93,10 @@ public class PluginProxy {
    */
   public String getPluginName() {
     return plugin.getPluginName();
+  }
+
+  public String getPublishingPlatform() {
+    return plugin.getPublishingPlatform();
   }
 
   /**

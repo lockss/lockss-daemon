@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.47 2007-08-12 01:48:58 tlipkis Exp $
+ * $Id: BasePlugin.java,v 1.48 2007-08-12 04:53:30 tlipkis Exp $
  */
 
 /*
@@ -111,6 +111,13 @@ public abstract class BasePlugin
    */
   public String getRequiredDaemonVersion() {
     return "0.0.0";
+  }
+
+  /** Subclasses should override this if they want to supply a publishing
+   * platform name
+   */
+  public String getPublishingPlatform() {
+    return null;
   }
 
   /**

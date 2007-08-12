@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinablePlugin.java,v 1.17 2007-08-12 01:48:58 tlipkis Exp $
+ * $Id: TestDefinablePlugin.java,v 1.18 2007-08-12 04:53:29 tlipkis Exp $
  */
 
 /*
@@ -195,6 +195,14 @@ public class TestDefinablePlugin extends LockssTestCase {
     definablePlugin.initPlugin(daemon, extMapName);
     assertEquals("org.lockss.test.MockConfigurablePlugin",
                  definablePlugin.getPluginId());
+  }
+
+  public void testGetPublishingPlatform() throws Exception {
+    assertNull("Internal", definablePlugin.getPublishingPlatform());
+    String expectedReturn = "Publisher Platform Shoes";
+    defMap.putString(DefinablePlugin.KEY_PUBLISHING_PLATFORM, expectedReturn);
+    assertEquals("return value", expectedReturn,
+		 definablePlugin.getPublishingPlatform());
   }
 
   public void testInitPlugin() throws Exception {

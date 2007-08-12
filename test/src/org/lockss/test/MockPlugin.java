@@ -1,5 +1,5 @@
 /*
- * $Id: MockPlugin.java,v 1.26 2007-07-17 06:03:48 tlipkis Exp $
+ * $Id: MockPlugin.java,v 1.27 2007-08-12 04:53:29 tlipkis Exp $
  */
 
 /*
@@ -56,6 +56,7 @@ public class MockPlugin extends BasePlugin implements PluginTestable {
   private int stopCtr = 0;
   private Configuration auConfig;
   private String pluginVer = "MockVersion";
+  private String pubPlatform = null;
   private String requiredDaemonVersion = "0.0.0";
   private List auConfigDescrs = ListUtil.list(ConfigParamDescr.BASE_URL,
 					      ConfigParamDescr.VOLUME_NUMBER);
@@ -113,6 +114,14 @@ public class MockPlugin extends BasePlugin implements PluginTestable {
 
   public String getPluginName() {
     return "Mock Plugin";
+  }
+
+  public String getPublishingPlatform() {
+    return pubPlatform;
+  }
+
+  public void setPublishingPlatform(String pubPlatform) {
+    this.pubPlatform = pubPlatform;
   }
 
   /**
