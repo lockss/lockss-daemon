@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.48 2007-08-12 04:53:30 tlipkis Exp $
+ * $Id: BasePlugin.java,v 1.49 2007-08-12 06:29:51 tlipkis Exp $
  */
 
 /*
@@ -478,6 +478,11 @@ public abstract class BasePlugin
     return classLoader;
   }
 
+  PluginException.InvalidDefinition auxErr(String msg, Throwable t) {
+    log.error(msg, t);
+    return new PluginException.InvalidDefinition(msg, t);
+  }
+
   /** Create and return a new instance of a plugin auxilliary class.
    * @param className the name of the auxilliary class
    * @param expectedType Type (class or interface) of expected rexult
@@ -490,25 +495,34 @@ public abstract class BasePlugin
       } else {
 	obj = Class.forName(className).newInstance();
       }
-    } catch (Exception ex) {
-      log.error("Could not load " + className, ex);
-      throw new
-	PluginException.InvalidDefinition(getPluginName() + ": unable to create " +
-				   expectedType + " from " + className, ex);
-    } catch (LinkageError le) {
-      log.error("Could not load " + className, le);
-      throw new
-	PluginException.InvalidDefinition(getPluginName() + " unable to create " +
-				   expectedType + " from " + className, le);
+    } catch (ExceptionInInitializerError e) {
+      throw auxErr("Initializer error in dynamically loaded class "
+		   + className,
+		   e);
+    } catch (LinkageError e) {
+      throw auxErr("Linkage error in dynamically loaded class " + className,
+		   e);
+    } catch (ClassNotFoundException e) {
+      throw auxErr("Dynamically loadable class not found " + className,
+		   e);
+    } catch (IllegalAccessException e) {
+      throw auxErr("Class " + className
+		   + " (or its no-argument constructor) is not public",
+		   e);
+    } catch (InstantiationException e) {
+      throw auxErr("Error instantiating dynamically loaded class " + className,
+		   e);
+    } catch (ClassCastException e) {
+      // can't happen
+      throw auxErr("Class " + className + " is not of type "
+		   + expectedType.getName(),
+		   e);
+    } catch (Exception e) {
+      throw auxErr("Error loading class " + className, e);
     }
     if (!expectedType.isInstance(obj)) {
-      log.error(className + " is not a " + expectedType.getName());
-      throw new
-	PluginException.InvalidDefinition(getPluginName() + ": wrong class, " +
-				   className + " is " +
-				   obj.getClass().getName() +
-				   ", should be " + expectedType);
+      throw auxErr(className + " is not a " + expectedType.getName(), null);
     }
-    return obj = WrapperUtil.wrap(obj, expectedType);      
+    return WrapperUtil.wrap(obj, expectedType);      
   }
 }
