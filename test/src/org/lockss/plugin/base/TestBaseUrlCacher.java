@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.55 2007-08-08 21:53:49 tlipkis Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.56 2007-08-12 01:48:05 tlipkis Exp $
  */
 
 /*
@@ -136,7 +136,8 @@ public class TestBaseUrlCacher extends LockssTestCase {
     assertEquals(UrlCacher.CACHE_RESULT_FETCHED, cacher.cache());
     assertTrue(cacher.wasStored);
     assertEquals(2, cacher.getUncachedInputStreamCount);
-    assertEquals(2, cacher.getUncachedPropertiesCount);
+    // getUncachedProperties() called twice each time due to login page check
+    assertEquals(4, cacher.getUncachedPropertiesCount);
     assertEquals(1, pauseBeforeFetchCounter);
   }
 
@@ -154,7 +155,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
     assertEquals(UrlCacher.CACHE_RESULT_FETCHED, cacher.cache());
     assertTrue(cacher.wasStored);
     assertEquals(1, cacher.getUncachedInputStreamCount);
-    assertEquals(1, cacher.getUncachedPropertiesCount);
+    assertEquals(2, cacher.getUncachedPropertiesCount);
     assertEquals(1, pauseBeforeFetchCounter);
   }
 
@@ -1107,7 +1108,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
       this.pMap = pMap;
     }
 
-    public InputStream getUncachedInputStream(String lastModified) {
+    public InputStream getUncachedInputStreamOnly(String lastModified) {
       // simple version which returns null if shouldn't fetch
       // if (lastCached < TimeBase.nowMs()) {
       getUncachedInputStreamCount++;

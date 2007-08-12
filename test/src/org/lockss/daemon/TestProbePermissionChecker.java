@@ -1,5 +1,5 @@
 /*
- * $Id: TestProbePermissionChecker.java,v 1.7 2006-02-14 05:22:46 tlipkis Exp $
+ * $Id: TestProbePermissionChecker.java,v 1.8 2007-08-12 01:48:05 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.daemon;
 import java.io.*;
 import java.util.*;
 import org.lockss.test.*;
+import org.lockss.util.urlconn.*;
 import org.lockss.plugin.*;
 
 public class TestProbePermissionChecker extends LockssTestCase {
@@ -133,35 +134,38 @@ public class TestProbePermissionChecker extends LockssTestCase {
 				   url));
   }
 
-  public void testProbe() {
-//     String probeUrl = "http://www.example.com/cgi/content/full/14/9/1109";
+  public void testProbeNoLoginPage() {
+    String probeUrl = "http://www.example.com/cgi/content/full/14/9/1109";
 
-//     String url = "http://www.example.com";
-//     mau.addUrl(url, true, true);
-//     mau.addContent(url, htmlSourceWProbe);
-//     mau.addUrl(probeUrl, true, true);
-//     mau.addContent(probeUrl, "");
+    String url = "http://www.example.com";
+    mau.addUrl(url, true, true);
+    mau.addContent(url, htmlSourceWProbe);
+    mau.addUrl(probeUrl, true, true);
+    mau.addContent(probeUrl, "");
 
-//     MockLoginPageChecker mockLPC = new MockLoginPageChecker(false);
+    MockLoginPageChecker mockLPC = new MockLoginPageChecker(false);
 
-//     pc = new ProbePermissionChecker(mockLPC, mau);
+    pc = new ProbePermissionChecker(mockLPC, mau);
     pc = makeProbePC(new MockLoginPageChecker(false));
     assertTrue("Didn't give permission when there was a probe",
 		pc.checkPermission(helper, new StringReader(htmlSourceWProbe),
 				   "http://www.example.com"));
   }
 
-  public void testProbeCheckerRefuses() {
-//     String probeUrl = "http://www.example.com/cgi/content/full/14/9/1109";
+  public void testProbeIsLoginPage() {
+    String probeUrl = "http://www.example.com/cgi/content/full/14/9/1109";
 
-//     String url = "http://www.example.com";
-//     mau.addUrl(url, true, true);
-//     mau.addContent(url, htmlSourceWProbe);
-//     mau.addUrl(probeUrl, true, true);
+    String url = "http://www.example.com";
+    mau.addUrl(url, true, true);
+    mau.addContent(url, htmlSourceWProbe);
+    mau.addUrl(probeUrl, true, true);
+    MockUrlCacher muc = (MockUrlCacher)mau.makeUrlCacher(probeUrl);
+    muc.setCachingException(new CacheException.PermissionException("Found a login page"),
+			    1);
 
-//     MockLoginPageChecker mockLPC = new MockLoginPageChecker(true);
+    MockLoginPageChecker mockLPC = new MockLoginPageChecker(true);
 
-//     pc = new ProbePermissionChecker(mockLPC, mau);
+    pc = new ProbePermissionChecker(mockLPC, mau);
     pc = makeProbePC(new MockLoginPageChecker(true));
     assertFalse("Gave permission when the nested checker denied it",
 	       pc.checkPermission(helper, new StringReader(htmlSourceWProbe),
@@ -170,13 +174,6 @@ public class TestProbePermissionChecker extends LockssTestCase {
   }
 
   private ProbePermissionChecker makeProbePC(LoginPageChecker lpc) {
-    String probeUrl = "http://www.example.com/cgi/content/full/14/9/1109";
-
-    String url = "http://www.example.com";
-    mau.addUrl(url, true, true);
-    mau.addContent(url, htmlSourceWProbe);
-    mau.addUrl(probeUrl, true, true);
-
     return new ProbePermissionChecker(lpc, mau);
   }
 

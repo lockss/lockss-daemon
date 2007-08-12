@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.73 2007-08-08 21:53:49 tlipkis Exp $
+ * $Id: BaseUrlCacher.java,v 1.74 2007-08-12 01:48:05 tlipkis Exp $
  */
 
 /*
@@ -249,8 +249,6 @@ public class BaseUrlCacher implements UrlCacher {
 	  headers = getHeaders();
 	}
       }
-//      input = checkLoginPage(new BufferedInputStream(input), headers);
-      input = checkLoginPage(input, headers);
       storeContent(input, headers);
       if (fetchFlags.get(CLEAR_DAMAGE_FLAG)) {
 	DamagedNodeSet dnSet = nodeMgr.getDamagedNodes();
@@ -288,7 +286,8 @@ public class BaseUrlCacher implements UrlCacher {
    * Try to reset the provided input stream, if we can't then return
    * new input stream for the given url
    */
-  private InputStream resetInputStream(InputStream is, String url)
+  private InputStream resetInputStream(InputStream is, String url,
+				       String lastModified)
       throws IOException {
     try {
       is.reset();
@@ -296,12 +295,13 @@ public class BaseUrlCacher implements UrlCacher {
       logger.debug("Couldn't reset input stream, so getting new one", e);
       is.close();
       releaseConnection();
-      is = new BufferedInputStream(getUncachedInputStream());
+      is = new BufferedInputStream(getUncachedInputStreamOnly(lastModified));
     }
     return is;
   }
 
-  private InputStream checkLoginPage(InputStream input, Properties headers)
+  private InputStream checkLoginPage(InputStream input, Properties headers,
+				     String lastModified)
       throws IOException {
     LoginPageChecker checker = au.getCrawlSpec().getLoginPageChecker();
     if (checker != null) {
@@ -315,7 +315,7 @@ public class BaseUrlCacher implements UrlCacher {
 	if (checker.isLoginPage(headers, reader)) {
 	  throw new CacheException.PermissionException("Found a login page");
 	} else {
-	  input = resetInputStream(input, fetchUrl);
+	  input = resetInputStream(input, fetchUrl, lastModified);
 	}
       } catch (PluginException e) {
         throw new RuntimeException(e);
@@ -427,7 +427,17 @@ public class BaseUrlCacher implements UrlCacher {
     }
   }
 
-  public InputStream getUncachedInputStream() throws IOException {
+  /**
+   * Gets an InputStream for this URL, using the last modified time as
+   * 'if-modified-since'.  Checks for login pages.  If a 304 is generated
+   * (not modified), it returns null.  Subclasses probably want to override
+   * {@link #getUncachedInputStreamOnly(String)}
+   * @param lastModified the last modified time
+   * @return the InputStream, or null
+   * @throws CacheException.PermissionException if the
+   * @throws IOException
+   */
+  public final InputStream getUncachedInputStream() throws IOException {
     return getUncachedInputStream(null);
   }
 
@@ -439,7 +449,14 @@ public class BaseUrlCacher implements UrlCacher {
    * @return the InputStream, or null
    * @throws IOException
    */
-  protected InputStream getUncachedInputStream(String lastModified)
+  protected final InputStream getUncachedInputStream(String lastModified)
+      throws IOException {
+    InputStream is = getUncachedInputStreamOnly(lastModified);
+    is = checkLoginPage(is, getHeaders(), lastModified);
+    return is;
+  }
+
+  protected InputStream getUncachedInputStreamOnly(String lastModified)
       throws IOException {
     InputStream input = null;
     try {

@@ -1,5 +1,5 @@
 /*
- * $Id: ProbePermissionChecker.java,v 1.18 2007-02-07 19:32:21 thib_gc Exp $
+ * $Id: ProbePermissionChecker.java,v 1.19 2007-08-12 01:48:05 tlipkis Exp $
  */
 
 /*
@@ -89,20 +89,13 @@ public class ProbePermissionChecker implements PermissionChecker {
 	// XXX is this the right redirect option?
 	uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW_ON_HOST);
  	InputStream is = new BufferedInputStream(uc.getUncachedInputStream());
-	Properties props = uc.getUncachedProperties();
-
-//         is.mark(PERM_BUFFER_MAX);
-
-	Reader reader = new InputStreamReader(is, Constants.DEFAULT_ENCODING);
-
-	boolean isLoginPage = checker.isLoginPage(props, reader);
-	logger.debug3(isLoginPage ? "Found a login page" : "Not a login page");
-	return !isLoginPage;
+	logger.debug3("Not a login page");
+	return true;
+      } catch (org.lockss.util.urlconn.CacheException.PermissionException ex) {
+	logger.debug3("Found a login page");
+	return false;
       } catch (IOException ex) {
 	logger.error("Exception trying to check for login page "+probeUrl, ex);
-	return false;
-      } catch (PluginException e) {
-	logger.error("PluginException checking for login page "+probeUrl, e);
 	return false;
       }	
     } else {
