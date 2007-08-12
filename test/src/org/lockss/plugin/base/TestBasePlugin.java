@@ -1,5 +1,5 @@
 /*
- * $Id: TestBasePlugin.java,v 1.15 2007-07-17 06:03:48 tlipkis Exp $
+ * $Id: TestBasePlugin.java,v 1.16 2007-08-12 01:47:15 tlipkis Exp $
  */
 
 /*
@@ -74,6 +74,17 @@ public class TestBasePlugin extends LockssTestCase {
       mbp.configureAu(null, null);
       fail("Didn't throw ArchivalUnit.ConfigurationException");
     } catch (ArchivalUnit.ConfigurationException e) { }
+  }
+
+  public void testGetAuConfigDescrs() {
+    mbp.setConfigDescrs(ListUtil.list(PD_VOL, PD_YEAR));
+    List descrs = mbp.getAuConfigDescrs();
+    assertEquals(SetUtil.set(PD_VOL, PD_YEAR,
+			     ConfigParamDescr.AU_CLOSED,
+			     ConfigParamDescr.PUB_DOWN,
+			     ConfigParamDescr.PUB_NEVER,
+			     ConfigParamDescr.PROTOCOL_VERSION),
+		 SetUtil.theSet(descrs));
   }
 
   public void testInitTitleDB() {

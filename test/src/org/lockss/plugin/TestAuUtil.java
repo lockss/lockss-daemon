@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuUtil.java,v 1.6 2006-08-07 07:41:08 tlipkis Exp $
+ * $Id: TestAuUtil.java,v 1.7 2007-08-12 01:47:15 tlipkis Exp $
  */
 
 /*
@@ -109,8 +109,10 @@ public class TestAuUtil extends LockssTestCase {
   public void testIsPubDown() throws Exception {
     LocalMockArchivalUnit mau = new LocalMockArchivalUnit();
     assertFalse(AuUtil.isPubDown(mau));
+    assertFalse(AuUtil.isPubNever(mau));
     mau.setConfiguration(ConfigurationUtil.fromArgs(ConfigParamDescr.PUB_DOWN.getKey(), "true"));
     assertTrue(AuUtil.isPubDown(mau));
+    assertFalse(AuUtil.isPubNever(mau));
     mau.setTitleConfig(makeTitleConfig(ConfigParamDescr.PUB_DOWN, "false"));
     assertTrue(AuUtil.isPubDown(mau));
     mau.setConfiguration(ConfigurationUtil.fromArgs("foo", "bar"));
@@ -128,6 +130,36 @@ public class TestAuUtil extends LockssTestCase {
 						 "false")));
     assertFalse(AuUtil.isPubDown(makeTitleConfig(ConfigParamDescr.BASE_URL,
 						 "http://foo.bar/")));
+  }
+
+  public void testIsPubNever() throws Exception {
+    LocalMockArchivalUnit mau = new LocalMockArchivalUnit();
+    assertFalse(AuUtil.isPubNever(mau));
+    assertFalse(AuUtil.isPubDown(mau));
+    mau.setConfiguration(ConfigurationUtil.fromArgs(ConfigParamDescr.PUB_NEVER.getKey(), "true"));
+    assertTrue(AuUtil.isPubNever(mau));
+    assertTrue(AuUtil.isPubDown(mau));
+    mau.setTitleConfig(makeTitleConfig(ConfigParamDescr.PUB_NEVER, "false"));
+    assertTrue(AuUtil.isPubNever(mau));
+    assertTrue(AuUtil.isPubDown(mau));
+    mau.setConfiguration(ConfigurationUtil.fromArgs("foo", "bar"));
+    assertFalse(AuUtil.isPubNever(mau));
+    assertFalse(AuUtil.isPubDown(mau));
+    mau.setTitleConfig(makeTitleConfig(ConfigParamDescr.PUB_NEVER, "true"));
+    assertTrue(AuUtil.isPubNever(mau));
+    assertTrue(AuUtil.isPubDown(mau));
+    mau.setTitleConfig(makeTitleConfig(ConfigParamDescr.PUB_NEVER, "false"));
+    assertFalse(AuUtil.isPubNever(mau));
+    assertFalse(AuUtil.isPubDown(mau));
+  }
+
+  public void testIsPubNeverTC() throws Exception {
+    assertTrue(AuUtil.isPubNever(makeTitleConfig(ConfigParamDescr.PUB_NEVER,
+						 "true")));
+    assertFalse(AuUtil.isPubNever(makeTitleConfig(ConfigParamDescr.PUB_NEVER,
+						  "false")));
+    assertFalse(AuUtil.isPubNever(makeTitleConfig(ConfigParamDescr.BASE_URL,
+						  "http://foo.bar/")));
   }
 
   public void testGetTitleAttribute() {

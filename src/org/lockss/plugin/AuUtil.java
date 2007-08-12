@@ -1,5 +1,5 @@
 /*
- * $Id: AuUtil.java,v 1.20 2007-06-06 19:17:53 smorabito Exp $
+ * $Id: AuUtil.java,v 1.21 2007-08-12 01:47:15 tlipkis Exp $
  */
 
 /*
@@ -186,13 +186,25 @@ public class AuUtil {
   }
 
   public static boolean isPubDown(ArchivalUnit au) {
+    return isPubNever(au) ||
+      getBoolValue(getAuParamOrTitleDefault(au, ConfigParamDescr.PUB_DOWN),
+		   false);
+  }
+
+  public static boolean isPubNever(ArchivalUnit au) {
     return getBoolValue(getAuParamOrTitleDefault(au,
-						 ConfigParamDescr.PUB_DOWN),
+						 ConfigParamDescr.PUB_NEVER),
 			false);
   }
 
   public static boolean isPubDown(TitleConfig tc) {
-    return getBoolValue(getTitleDefault(tc, ConfigParamDescr.PUB_DOWN),
+    return isPubNever(tc) ||
+      getBoolValue(getTitleDefault(tc, ConfigParamDescr.PUB_DOWN),
+		   false);
+  }
+
+  public static boolean isPubNever(TitleConfig tc) {
+    return getBoolValue(getTitleDefault(tc, ConfigParamDescr.PUB_NEVER),
 			false);
   }
 

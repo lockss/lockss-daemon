@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescr.java,v 1.36 2007-06-13 22:14:41 tlipkis Exp $
+ * $Id: ConfigParamDescr.java,v 1.37 2007-08-12 01:47:15 tlipkis Exp $
  */
 
 /*
@@ -204,6 +204,16 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
     .setDisplayName("Pub Down")
     .setType(TYPE_BOOLEAN)
     .setDescription("If true, AU is no longer available from the publisher");
+
+  // See ProxyHandler
+  public static final ConfigParamDescr PUB_NEVER =
+    new ConfigParamDescr()
+    .setDefinitional(false)
+    .setDefaultOnly(true)
+    .setKey("pub_never")
+    .setDisplayName("Pub Never")
+    .setType(TYPE_BOOLEAN)
+    .setDescription("If true, don't try to access any content from publisher");
 
   public static final ConfigParamDescr PROTOCOL_VERSION =
     new ConfigParamDescr()

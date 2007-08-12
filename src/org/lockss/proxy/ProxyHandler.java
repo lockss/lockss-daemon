@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.56 2007-08-10 07:12:35 tlipkis Exp $
+ * $Id: ProxyHandler.java,v 1.57 2007-08-12 01:47:15 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.56 2007-08-10 07:12:35 tlipkis Exp $
+// $Id: ProxyHandler.java,v 1.57 2007-08-12 01:47:15 tlipkis Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -512,6 +512,10 @@ public class ProxyHandler extends AbstractHttpHandler {
     }
   }
 
+  boolean isPubNever(CachedUrl cu) {
+    return cu != null && AuUtil.isPubNever(cu.getArchivalUnit());
+  }
+
   /** Proxy a connection using LockssUrlConnection */
   void doLockss(String pathInContext,
 		String pathParams,
@@ -528,9 +532,25 @@ public class ProxyHandler extends AbstractHttpHandler {
       // publisher for newer content.
       // XXX This needs to forward the request to the publisher (but not
       // wait for the result) so the publisher can count the access.
-      if (isInCache && proxyMgr.isRecentlyAccessedUrl(urlString)) {
+      if (isInCache && (proxyMgr.isRecentlyAccessedUrl(urlString)
+			|| isPubNever(cu))) {
+	if (log.isDebug2()) log.debug2("Nopub: " + cu.getUrl());
 	serveFromCache(pathInContext, pathParams, request, response, cu);
 	return;
+      }
+      if (isPubNever(cu)) {
+	Collection candidateAus = pluginMgr.getCandidateAus(urlString);
+	if (candidateAus != null && !candidateAus.isEmpty()) {
+	  sendErrorPage(request, response, 404,
+			"Host " + request.getURI().getHost() +
+			" no longer has content",
+			candidateAus);
+	  return;
+	} else {
+	  // what to do here?  No content, no candidate AUs, no pub.
+	  // send 404
+	  return;
+	}
       }
       boolean useQuick =
 	(isInCache ||
