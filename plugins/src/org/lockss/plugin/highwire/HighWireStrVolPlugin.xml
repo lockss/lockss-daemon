@@ -9,7 +9,11 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>15</string>
+    <string>16</string>
+  </entry>
+  <entry>
+    <string>required_daemon_version</string>
+    <string>1.26.0</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -47,10 +51,6 @@
   <entry>
     <string>au_start_url</string>
     <string>&quot;%slockss-manifest/vol_%s_manifest.dtl&quot;, base_url, volume_name</string>
-  </entry>
-  <entry>
-    <string>required_daemon_version</string>
-    <string>1.22.0</string>
   </entry>
   <entry>
     <string>application/pdf_filter_factory</string>

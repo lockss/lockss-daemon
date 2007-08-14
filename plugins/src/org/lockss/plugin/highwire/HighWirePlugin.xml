@@ -23,7 +23,11 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>11</string>
+    <string>12</string>
+  </entry>
+  <entry>
+    <string>required_daemon_version</string>
+    <string>1.26.0</string>
   </entry>
   <entry>
     <string>au_login_page_checker</string>
