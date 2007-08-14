@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.53 2007-08-08 22:26:58 smorabito Exp $
+ * $Id: V3Poller.java,v 1.54 2007-08-14 03:10:25 smorabito Exp $
  */
 
 /*
@@ -49,6 +49,7 @@ import org.lockss.poller.*;
 import org.lockss.poller.v3.V3Serializer.*;
 import org.lockss.protocol.*;
 import org.lockss.protocol.psm.*;
+import org.lockss.protocol.V3LcapMessage.PollNak;
 import org.lockss.repository.*;
 import org.lockss.scheduler.*;
 import org.lockss.scheduler.Schedule.*;
@@ -783,27 +784,27 @@ public class V3Poller extends BasePoll {
       (int)(pollerState.getOuterCircleTarget() / theParticipants.size());
     log.debug2("Target for nominees from each inner circle participant: " +
                targetSize);
-
     Collection outerCircle = constructOuterCircle(targetSize);
-
     // Now start polling the outer circle.
-    for (Iterator it = outerCircle.iterator(); it.hasNext(); ) {
-      String idStr = (String) it.next();
-      PeerIdentity id = idManager.findPeerIdentity(idStr);
-      if (!theParticipants.containsKey(id)) {
-        log.debug2("Adding new peer " + id + " to the outer circle");
-        ParticipantUserData participant = makeParticipant(id);
-        participant.isOuterCircle(true);
-        theParticipants.put(id, participant);
-        try {
-          participant.getPsmInterp().start();
-        } catch (PsmException e) {
-          log.warning("State machine error, removing peer from poll.", e);
-          // Drop this peer from the poll.
-          removeParticipant(id);
+    synchronized(theParticipants) {
+      for (Iterator it = outerCircle.iterator(); it.hasNext(); ) {
+        String idStr = (String) it.next();
+        PeerIdentity id = idManager.findPeerIdentity(idStr);
+        if (!theParticipants.keySet().contains(id)) {
+          log.debug2("Adding new peer " + id + " to the outer circle");
+          ParticipantUserData participant = makeParticipant(id);
+          participant.isOuterCircle(true);
+          theParticipants.put(id, participant);
+          try {
+            participant.getPsmInterp().start();
+          } catch (PsmException e) {
+            log.warning("State machine error, removing peer from poll.", e);
+            // Drop this peer from the poll.
+            removeParticipant(id);
+          }
+        } else {
+          log.debug("We already have peer " + id + " in our list of voters");
         }
-      } else {
-        log.debug2("We already have peer " + id + " in our list of voters");
       }
     }
   }
@@ -815,13 +816,25 @@ public class V3Poller extends BasePoll {
     // we can.
     for (Iterator it = theParticipants.values().iterator(); it.hasNext(); ) {
       ParticipantUserData participant = (ParticipantUserData)it.next();
-      List nominees = participant.getNominees();
+
+      if (participant.getNominees() == null)
+        continue;
+
+      List<String> nominees = new ArrayList<String>();
+      
+      // Reject any nominees we should not include.
+      for (String pidKey : (List<String>)participant.getNominees()) {
+        if (shouldIncludePeer(pidKey)) {
+          nominees.add(pidKey);
+        }
+      }
+
       if (nominees == null || nominees.size() == 0) {
         // If we want to drop peers that don't send any nominees,
         // they will have already been removed at this point,
         // so just log a debug statement and go on.
         log.debug2("Peer " + participant.getVoterId()
-                   + " did not nominate anyone");
+                   + " did not nominate anyone we can include.");
         continue;
       } else if (nominees.size() < target) {
         log.warning("Peer " + participant.getVoterId() +
@@ -1656,7 +1669,10 @@ public class V3Poller extends BasePoll {
       try {
         interp.handleEvent(evt);
       } catch (PsmException e) {
-        log.warning("State machine error", e);
+        log.warning("State machine exception handling message of type "
+                    + msg.getOpcodeString() + " from peer "
+                    + msg.getOriginatorId() + " in poll "
+                    + getKey(), e);
       }
     } else {
       log.error("No voter user data for peer.  May have " +
@@ -1675,24 +1691,50 @@ public class V3Poller extends BasePoll {
    * returned is either the full set of all known peers, or  
    */
   Collection getReferenceList() {
+    Collection initialPeers = new ArrayList();
     if (enableDiscovery) {
-      return idManager.getTcpPeerIdentities();
+      Collection allTCPPeers = idManager.getTcpPeerIdentities();
+      for (Iterator iter = allTCPPeers.iterator(); iter.hasNext(); ) {
+        PeerIdentity id = (PeerIdentity)iter.next();
+        if (shouldIncludePeer(id)) {
+          initialPeers.add(id);
+        }
+      }
     } else {
       Collection keys =
         CurrentConfig.getList(IdentityManagerImpl.PARAM_INITIAL_PEERS,
                               IdentityManagerImpl.DEFAULT_INITIAL_PEERS);
-      Collection initialPeers = new ArrayList(keys.size());
       for (Iterator iter = keys.iterator(); iter.hasNext(); ) {
         String key = (String)iter.next();
         PeerIdentity id = (PeerIdentity)idManager.findPeerIdentity(key);
-        // Never include a LocalPeerIdentity - we don't want to include
-        // ourselves
-        if (id != null && !id.isLocalIdentity()) {
+        if (shouldIncludePeer(id)) {
           initialPeers.add(id);
         }
       }
-      return initialPeers;
     }
+    return initialPeers;
+  }
+  
+  private boolean shouldIncludePeer(String pidKey) {
+    return shouldIncludePeer(idManager.findPeerIdentity(pidKey));
+  }
+  
+  private boolean shouldIncludePeer(PeerIdentity pid) {
+    log.debug("shouldIncludePeer(" + pid + ") being called...");
+    // Never include a local id.
+    if (pid.isLocalIdentity()) { return false; }
+    PeerIdentityStatus status = idManager.getPeerIdentityStatus(pid);
+    if (status != null) {
+      // Never include a peer that has rejected one of our polls in
+      // the past because of a group mismatch.
+      if (status.getLastPollNak() != null &&
+          status.getLastPollNak() == PollNak.NAK_GROUP_MISMATCH) {
+        return false;
+      }
+    }
+ 
+    // Otherwise, return true
+    return true;
   }
 
   Class getPollerActionsClass() {

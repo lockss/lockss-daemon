@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManagerStatus.java,v 1.4 2007-06-28 07:14:23 smorabito Exp $
+ * $Id: IdentityManagerStatus.java,v 1.5 2007-08-14 03:10:26 smorabito Exp $
  */
 
 /*
@@ -79,7 +79,15 @@ public class IdentityManagerStatus
                   new ColumnDescriptor("origVoter", "Votes Cast",
                                        ColumnDescriptor.TYPE_INT,
                                        "Total number of polls in which " +
-                                       "IP participated as a Voter.")
+                                       "IP participated as a Voter."),
+                  new ColumnDescriptor("pollsRejected", "Polls Rejected",
+                                       ColumnDescriptor.TYPE_INT,
+                                       "Total number of poll requests "
+                                       + "rejected by this peer"),
+                  new ColumnDescriptor("pollNak", "NAK Reason",
+                                       ColumnDescriptor.TYPE_INT,
+                                       "Reason for most recent poll request " +
+                                       "rejection, if any.")
 		  );
 
   public String getDisplayName() {
@@ -127,6 +135,10 @@ public class IdentityManagerStatus
 	    new Long(status.getTotalVoterPolls()));
     row.put("origLastVoter",
             new Long(status.getLastVoterTime()));
+    row.put("pollsRejected",
+            new Long(status.getTotalRejectedPolls()));
+    row.put("pollNak",
+            status.getLastPollNak());
     return row;
   }
 

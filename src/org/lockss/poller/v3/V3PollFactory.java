@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollFactory.java,v 1.15 2007-06-28 07:14:23 smorabito Exp $
+ * $Id: V3PollFactory.java,v 1.16 2007-08-14 03:10:25 smorabito Exp $
  */
 
 /*
@@ -32,8 +32,12 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.poller.v3;
 
+import java.io.IOException;
+import java.util.*;
+
 import org.mortbay.util.*;
 
+import org.apache.commons.collections.CollectionUtils;
 import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.config.Configuration.*;
@@ -41,6 +45,7 @@ import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.poller.*;
 import org.lockss.protocol.*;
+import org.lockss.protocol.V3LcapMessage.PollNak;
 import org.lockss.state.*;
 import org.lockss.util.*;
 import org.lockss.util.StringUtil;
@@ -202,15 +207,31 @@ public class V3PollFactory extends BasePollFactory {
       return null;
     }
     V3LcapMessage m = (V3LcapMessage)msg;
-//    // Ignore messages not coming from our group
-//    String ourGroup = ConfigManager.getPlatformGroup();
-//    if (m.getGroup() == null ||
-//        !m.getGroup().equals(ourGroup)) {
-//      log.debug("Ignoring message from peer " + m.getOriginatorId()
-//                + " in group " + m.getGroup() + " due to group mismatch (" 
-//                + ourGroup  + ")");
-//      return null;
-//    }
+    // Ignore messages not coming from our group
+    List ourGroups = ConfigManager.getPlatformGroupList();
+    if (m.getGroupList() == null ||
+        !CollectionUtils.containsAny(ourGroups, m.getGroupList())) {
+
+      // Instantly reject the poll by sending a reply to the poller,
+      // without a nonce or effort proof, and with the proper NAK code.
+      V3LcapMessage response =
+        new V3LcapMessage(au.getAuId(), msg.getKey(),
+                          msg.getPluginVersion(), null, null,
+                          V3LcapMessage.MSG_POLL_ACK,
+                          TimeBase.nowMs() + msg.getDuration(),
+                          idMgr.getLocalPeerIdentity(Poll.V3_PROTOCOL),
+                          null, daemon);
+      
+      response.setNak(PollNak.NAK_GROUP_MISMATCH);
+
+      try {
+        daemon.getPollManager().sendMessageTo(response, orig);
+      } catch (IOException ex) {
+        log.error("IOException trying to send POLL_ACK message: " + ex);
+      }
+
+      return null;
+    }
     
     // Check to see if we're running too many polls already.
     int maxVoters =

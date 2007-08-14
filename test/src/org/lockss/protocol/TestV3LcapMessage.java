@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3LcapMessage.java,v 1.20 2007-07-31 06:31:51 tlipkis Exp $
+ * $Id: TestV3LcapMessage.java,v 1.21 2007-08-14 03:10:26 smorabito Exp $
  */
 
 /*
@@ -144,6 +144,21 @@ public class TestV3LcapMessage extends LockssTestCase {
       "VN:AQIDBAUGBwgJAAECAwQFBgcICQA= " +
       "B:10 ver 3 rev 3]";
     assertEquals(expectedResult, m_testMsg.toString());
+  }
+  
+  public void getGroup() throws Exception {
+    m_testMsg.setGroups(null);
+    assertNull(m_testMsg.getGroups());
+    assertNull(m_testMsg.getGroupList());
+    m_testMsg.setGroups("foo");
+    assertEquals("foo", m_testMsg.getGroups());
+    assertEquals(ListUtil.list("foo"), m_testMsg.getGroupList());
+    m_testMsg.setGroups("foo;bar");
+    assertEquals("foo;bar", m_testMsg.getGroups());
+    assertEquals(ListUtil.list("foo", "bar"), m_testMsg.getGroupList());
+    m_testMsg.setGroups("foo;bar;baz");
+    assertEquals("foo;bar;baz", m_testMsg.getGroups());
+    assertEquals(ListUtil.list("foo", "bar", "baz"), m_testMsg.getGroupList());
   }
 
   public void testNoOpEncoding() throws Exception {

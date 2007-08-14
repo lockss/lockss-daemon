@@ -1,5 +1,5 @@
 /*
- * $Id: ParticipantUserData.java,v 1.13 2007-02-16 23:08:32 smorabito Exp $
+ * $Id: ParticipantUserData.java,v 1.14 2007-08-14 03:10:25 smorabito Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ package org.lockss.poller.v3;
 
 import org.lockss.plugin.CachedUrlSet;
 import org.lockss.protocol.*;
+import org.lockss.protocol.V3LcapMessage.PollNak;
 import org.lockss.protocol.psm.*;
 import org.lockss.util.*;
 
@@ -64,6 +65,8 @@ public class ParticipantUserData implements LockssSerializable {
   private long talliedUrls;
   /** The number of blocks that the poller agrees with for this peer */
   private long agreeUrls;
+  /** The poll NAK code, if any */
+  private PollNak pollNak;
 
   /** Transient non-serialized fields */
   private transient V3Poller poller;
@@ -351,6 +354,14 @@ public class ParticipantUserData implements LockssSerializable {
     } else {
       return 0.0f;
     }
+  }
+
+  public PollNak getPollNak() {
+    return pollNak;
+  }
+
+  public void setPollNak(PollNak pollNak) {
+    this.pollNak = pollNak;
   }
 
   /** Poller delegate methods */

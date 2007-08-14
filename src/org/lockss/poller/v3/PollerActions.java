@@ -1,5 +1,5 @@
 /*
- * $Id: PollerActions.java,v 1.18 2007-06-28 07:14:23 smorabito Exp $
+ * $Id: PollerActions.java,v 1.19 2007-08-14 03:10:25 smorabito Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import java.util.*;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.UrlCacher;
 import org.lockss.plugin.base.BaseUrlCacher;
+import org.lockss.protocol.V3LcapMessage.PollNak;
 import org.lockss.protocol.psm.*;
 import org.lockss.protocol.*;
 import org.lockss.util.*;
@@ -99,9 +100,13 @@ public class PollerActions {
       log.info("Peer " + ud.getVoterId() + " sent no voter nonce, "
                + "declining to participate in poll " + ud.getKey()
                + ".  Reason: " + msg.getNak());
-      // TODO: Switch here based on reasons for declining poll.  At the moment,
-      // there is only one reason, NAK_GROUP_MISMATCH.
-      return V3Events.evtDeclinePoll;
+      // Switch based on the type of NAK received.  At the moment, there
+      // is only one.
+      switch (msg.getNak()) {
+      default:
+        ud.setPollNak(PollNak.NAK_GROUP_MISMATCH);
+        return V3Events.evtDeclinePoll;
+      }
     } else {
       ud.setVoterNonce(voterNonce);
       ud.setStatus(V3Poller.PEER_STATUS_ACCEPTED_POLL);
@@ -120,14 +125,15 @@ public class PollerActions {
     }
   }
   
-  public static PsmEvent handleDeclinePoll(PsmEvent evt, PsmInterp interp) {
+  public static PsmEvent handleDeclinePoll(PsmEvent evt,  PsmInterp interp) {
     // Remove the participant from the poll.
     ParticipantUserData ud = getUserData(interp);
     IdentityManager idMgr = ud.getPoller().getIdentityManager();
-    idMgr.removePeer(ud.getVoterId().getIdString());
     ud.setStatus(V3Poller.PEER_STATUS_DECLINED_POLL);
-//    ud.removeParticipant();
-//    log.info("Removed peer " + ud.getVoterId() + " from peer list.");
+    ud.removeParticipant();
+    log.info("Removed peer " + ud.getVoterId() + " from peer list becase "
+             + "it declined the poll.");
+    idMgr.getPeerIdentityStatus(ud.getVoterId()).rejectedPoll(ud.getPollNak());
     return V3Events.evtFinalize;
   }
 
@@ -180,14 +186,6 @@ public class PollerActions {
     ud.nominatePeers(nominees);
     return V3Events.evtOk;
   }
-
-//  public static PsmEvent handleReceiveVoterReadyToVote(PsmMsgEvent evt,
-//                                                       PsmInterp interp) {
-//    ParticipantUserData ud = getUserData(interp);
-//    V3LcapMessage msg = (V3LcapMessage) evt.getMessage();
-//    // XXX -- anything we need to verify here?
-//    return V3Events.evtOk;
-//  }
 
   public static PsmEvent handleSendVoteRequest(PsmEvent evt,
                                                PsmInterp interp) {

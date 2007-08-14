@@ -1,5 +1,5 @@
 /*
- * $Id: FuncV3Voter.java,v 1.19 2007-07-31 06:31:51 tlipkis Exp $
+ * $Id: FuncV3Voter.java,v 1.20 2007-08-14 03:10:26 smorabito Exp $
  */
 
 /*
@@ -285,75 +285,6 @@ public class FuncV3Voter extends LockssTestCase {
     assertFalse(voter1.isPollCompleted());
     assertTrue(voter2.isPollActive());
     assertFalse(voter2.isPollCompleted());
-  }
-
-  public void testWrongGroup1() throws Exception {
-    ConfigurationUtil.addFromArgs(ConfigManager.PARAM_DAEMON_GROUPS,
-				  "foogroup");
-    this.msgPoll = makePollMsg();
-    ConfigurationUtil.addFromArgs(ConfigManager.PARAM_DAEMON_GROUPS,
-				  "bargroup");
-    PollSpec ps = new PollSpec(testau.getAuCachedUrlSet(), null, null,
-                               Poll.V1_CONTENT_POLL);
-    byte[] introEffortProof = ByteArray.makeRandomBytes(20);
-      
-    MyMockV3Voter voter = new MyMockV3Voter(theDaemon, msgPoll);
-
-    voter.startPoll();
-
-    voter.receiveMessage(msgPoll);
-
-    V3LcapMessage pollAck = voter.getSentMessage();
-    assertNotNull(pollAck);
-    log.debug("pollAck: " + pollAck);
-    assertEquals(V3LcapMessage.MSG_POLL_ACK, pollAck.getOpcode());
-    assertEquals(V3LcapMessage.PollNak.NAK_GROUP_MISMATCH, pollAck.getNak());
-  }
-  
-  public void testWrongGroup2() throws Exception {
-    ConfigurationUtil.addFromArgs(ConfigManager.PARAM_DAEMON_GROUPS,
-				  "foogroup;bargroup");
-    this.msgPoll = makePollMsg();
-    ConfigurationUtil.addFromArgs(ConfigManager.PARAM_DAEMON_GROUPS,
-				  "group1;group2");
-    PollSpec ps = new PollSpec(testau.getAuCachedUrlSet(), null, null,
-                               Poll.V1_CONTENT_POLL);
-    byte[] introEffortProof = ByteArray.makeRandomBytes(20);
-      
-    MyMockV3Voter voter = new MyMockV3Voter(theDaemon, msgPoll);
-
-    voter.startPoll();
-
-    voter.receiveMessage(msgPoll);
-
-    V3LcapMessage pollAck = voter.getSentMessage();
-    assertNotNull(pollAck);
-    log.debug("pollAck: " + pollAck);
-    assertEquals(V3LcapMessage.MSG_POLL_ACK, pollAck.getOpcode());
-    assertEquals(V3LcapMessage.PollNak.NAK_GROUP_MISMATCH, pollAck.getNak());
-  }
-  
-  public void testOverlappingGroups() throws Exception {
-    ConfigurationUtil.addFromArgs(ConfigManager.PARAM_DAEMON_GROUPS,
-				  "foogroup;bargroup");
-    this.msgPoll = makePollMsg();
-    ConfigurationUtil.addFromArgs(ConfigManager.PARAM_DAEMON_GROUPS,
-				  "bargroup;group2");
-    PollSpec ps = new PollSpec(testau.getAuCachedUrlSet(), null, null,
-                               Poll.V1_CONTENT_POLL);
-    byte[] introEffortProof = ByteArray.makeRandomBytes(20);
-      
-    MyMockV3Voter voter = new MyMockV3Voter(theDaemon, msgPoll);
-
-    voter.startPoll();
-
-    voter.receiveMessage(msgPoll);
-
-    V3LcapMessage pollAck = voter.getSentMessage();
-    assertNotNull(pollAck);
-    log.debug("pollAck: " + pollAck);
-    assertEquals(V3LcapMessage.MSG_POLL_ACK, pollAck.getOpcode());
-    assertNull(pollAck.getNak());
   }
   
   private class MyMockV3Voter extends V3Voter {

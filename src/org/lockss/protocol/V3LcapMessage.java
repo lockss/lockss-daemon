@@ -1,5 +1,5 @@
 /*
- * $Id: V3LcapMessage.java,v 1.30 2007-05-23 02:26:54 tlipkis Exp $
+ * $Id: V3LcapMessage.java,v 1.31 2007-08-14 03:10:26 smorabito Exp $
  */
 
 /*
@@ -72,7 +72,14 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
   
   
   // Poll rejection codes.
-  public static enum PollNak { NAK_GROUP_MISMATCH };
+  public static enum PollNak { 
+    NAK_GROUP_MISMATCH {
+      public String toString() { return "Incorrect Group"; }
+    },
+    NAK_NO_TIME {
+      public String toString() { return "Not Enough Time"; }
+    }
+   };
 
   // V3 Protocol revision history:
   //  3 - The internal representation of VoteBlocks has changed.  Vote
@@ -642,6 +649,10 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
   
   public String getGroups() {
     return m_groups;
+  }
+  
+  public List getGroupList() {
+    return StringUtil.breakAt(m_groups, ';');
   }
   
   public void setGroups(String groups) {

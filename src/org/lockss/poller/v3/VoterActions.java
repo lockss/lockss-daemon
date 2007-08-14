@@ -1,5 +1,5 @@
 /*
- * $Id: VoterActions.java,v 1.18 2007-07-31 00:30:37 smorabito Exp $
+ * $Id: VoterActions.java,v 1.19 2007-08-14 03:10:25 smorabito Exp $
  */
 
 /*
@@ -78,17 +78,8 @@ public class VoterActions {
    * are not, return false.
    */
   private static boolean isOurGroup(V3LcapMessage msgIn) {
-    List<String> pollerGroups = new ArrayList<String>();
-    if (msgIn != null) {
-      for (String group: (List<String>)StringUtil.breakAt(msgIn.getGroups(), ';')) {
-        pollerGroups.add(group.toLowerCase());
-      }
-    }
-    
-    List<String> ourGroups = new ArrayList<String>();
-    for (String group : (List<String>)ConfigManager.getPlatformGroupList()) {
-      ourGroups.add(group.toLowerCase());
-    }
+    List ourGroups = msgIn.getGroupList();
+    List pollerGroups = ConfigManager.getPlatformGroupList();
 
     log.debug2("Our groups: " + ourGroups +
                "; Their groups: " + pollerGroups);
@@ -98,40 +89,24 @@ public class VoterActions {
   }
 
   public static PsmEvent handleSendPollAck(PsmEvent evt, PsmInterp interp) {
+    // Note:  Poller Group membership checking will have happened
+    // before this point.  See V3PollFactory.
+    
     VoterUserData ud = getUserData(interp);
     
     V3LcapMessage msg = ud.makeMessage(V3LcapMessage.MSG_POLL_ACK);
     msg.setEffortProof(ud.getPollAckEffortProof());
 
+    // Accept the poll and set status
+    ud.setStatus(V3Voter.STATUS_ACCEPTED_POLL);
+    msg.setVoterNonce(ud.getVoterNonce());
+
     try {
-      /* decline the poll, and send a NAK with the status
-       * NAK_GROUP_MISMATCH if we should not reply to this poll.
-       */
-      if (isOurGroup((V3LcapMessage)ud.getPollMessage())) {
-        // Accept the poll and set status
-        ud.setStatus(V3Voter.STATUS_ACCEPTED_POLL);
-        msg.setVoterNonce(ud.getVoterNonce());
-
-        // Send message
-        ud.sendMessageTo(msg, ud.getPollerId());
-        log.debug2("Sent PollAck message to " + ud.getPollerId() + " in poll " 
-                   + ud.getPollKey());
-        return V3Events.evtOk;
-      } else {
-        // Reject the poll and set status
-        msg.setVoterNonce(null);
-        msg.setNak(V3LcapMessage.PollNak.NAK_GROUP_MISMATCH);
-
-        // Send message
-        ud.sendMessageTo(msg, ud.getPollerId());
-
-        // Stop the poll.
-        ud.getVoter().getIdentityManager().removePeer(ud.getPollerId().getIdString());
-        ud.getVoter().stopPoll(V3Voter.STATUS_DECLINED_POLL);
-        log.debug2("Rejected message for " + ud.getPollerId() + " in poll " 
-                   + ud.getPollKey());
-        return V3Events.evtDeclinePoll;
-      }
+      // Send message
+      ud.sendMessageTo(msg, ud.getPollerId());
+      log.debug2("Sent PollAck message to " + ud.getPollerId() + " in poll " 
+                 + ud.getPollKey());
+      return V3Events.evtOk;
     } catch (Throwable t) {
       log.error("Unable to send message: ", t);
       return V3Events.evtError;

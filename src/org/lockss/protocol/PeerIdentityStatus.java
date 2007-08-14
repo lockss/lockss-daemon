@@ -1,5 +1,5 @@
 /*
- * $Id: PeerIdentityStatus.java,v 1.1 2007-06-28 07:14:23 smorabito Exp $
+ * $Id: PeerIdentityStatus.java,v 1.2 2007-08-14 03:10:26 smorabito Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.protocol;
 
+import org.lockss.protocol.V3LcapMessage.PollNak;
 import org.lockss.util.*;
 
 public class PeerIdentityStatus implements LockssSerializable {
@@ -48,11 +49,14 @@ public class PeerIdentityStatus implements LockssSerializable {
   // The number of polls this peer has participated in with us, in which
   // we were the poller, and they were the voter.
   private int totalVoterPolls = 0;
-  
+    
   // The number of polls this peer has participated in with us, in which
   // we were the VOTER, and they were the POLLER.
   private int totalPollerPolls = 0;
   
+  // The number of poll requests this peer has rejected.
+  private int totalRejectedPolls = 0;
+
   // The total number of messages exchanged with this peer.
   private long totalMessages = 0;
 
@@ -61,6 +65,12 @@ public class PeerIdentityStatus implements LockssSerializable {
 
   // The time that the peer last participated with us as a voter.
   private long lastVoterTime;
+  
+  // The last time that this peer rejected a poll from us.
+  private long lastRejectionTime;
+  
+  // The PollNak code of the last rejection, if any.
+  private PollNak lastPollNak;
 
   /**
    * Construct a new PeerIdentityStatus object.
@@ -144,6 +154,21 @@ public class PeerIdentityStatus implements LockssSerializable {
   public void setTotalPollerPolls(int totalPollerPolls) {
     this.totalPollerPolls = totalPollerPolls;
   }
+  
+  /**
+   * @return The total number of poll requests rejected by this peer.
+   */
+  public int getTotalRejectedPolls() {
+    return this.totalRejectedPolls;
+  }
+  
+  /**
+   * @param totalRejectedPolls The total number of poll requests rejected
+   * by this peer.
+   */
+  public void setTotalRejectedPolls(int totalRejectedPolls) {
+    this.totalRejectedPolls = totalRejectedPolls;
+  }
 
   /**
    * @return the total number of messages heard from this peer.
@@ -186,8 +211,37 @@ public class PeerIdentityStatus implements LockssSerializable {
   public void setLastVoterTime(long lastVoteTime) {
     this.lastVoterTime = lastVoteTime;
   }
-
   
+  /**
+   * @return The last time that this peer rejected a poll request from us.
+   */
+  public long getLastRejectionTime() {
+    return lastRejectionTime;
+  }
+  
+  /**
+   * @param lastRejectionTime The last time that this peer rejected a poll
+   * request from us.
+   */
+  public void setLastRejectionTime(long lastRejectionTime) {
+    this.lastRejectionTime = lastRejectionTime;
+  }
+
+  /**
+   * @return The Poll NAK code for the last poll rejection.  Null if no
+   * poll has ever been rejected.
+   */
+  public PollNak getLastPollNak() {
+    return lastPollNak;
+  }
+
+  /**
+   * @param lastPollNak The Poll NAK code for the last poll rejection.
+   */
+  public void setLastPollNak(PollNak lastPollNak) {
+    this.lastPollNak = lastPollNak;
+  }
+
   /**
    * Signal the receipt of a message from the given peer.  As a side effect,
    * the total number of messages, the last message opcode, and the last message
@@ -226,6 +280,15 @@ public class PeerIdentityStatus implements LockssSerializable {
   public void joinedPoll() {
     this.totalVoterPolls++;
     setLastVoterTime(TimeBase.nowMs());
+  }
+  
+  /*
+   * Signal that this peer has rejected a poll request from us.
+   */
+  public void rejectedPoll(PollNak reason) {
+    this.totalRejectedPolls++;
+    setLastPollNak(reason);
+    setLastRejectionTime(TimeBase.nowMs());
   }
 
 }

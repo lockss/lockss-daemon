@@ -1,5 +1,5 @@
 /*
- * $Id: TestPoll.java,v 1.98 2006-12-05 21:38:26 tlipkis Exp $
+ * $Id: TestPoll.java,v 1.99 2007-08-14 03:10:26 smorabito Exp $
  */
 
 /*
@@ -187,7 +187,6 @@ public class TestPoll extends LockssTestCase {
 
     assertEquals(2, np.m_tally.numAgree);
     assertEquals(9, np.m_tally.numDisagree);
-    assertEquals(Tallier.RESULT_LOST, np.m_tally.getTallyResult());
 
     // build a master list
     np.buildPollLists(np.m_tally.pollVotes.iterator());
