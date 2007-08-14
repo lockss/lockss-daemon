@@ -1,5 +1,5 @@
 /*
- * $Id: FormXObjectOperatorProcessor.java,v 1.1 2007-07-31 08:40:05 thib_gc Exp $
+ * $Id: FormXObjectOperatorProcessor.java,v 1.2 2007-08-14 09:19:27 thib_gc Exp $
  */
 
 /*
@@ -94,7 +94,7 @@ public class FormXObjectOperatorProcessor extends SimpleOperatorProcessor {
 
       // Restore the state of the current stream transform
       pageStreamTransform.mergeOutputList(new ArrayList());
-      pageStreamTransform.setChangeFlag(saveFlag);
+      pageStreamTransform.setChangeFlag(saveFlag || pageStreamTransform.getChangeFlag());
     }
   }
 
