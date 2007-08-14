@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePdfFilterFactory.java,v 1.16 2007-05-05 16:15:26 thib_gc Exp $
+ * $Id: HighWirePdfFilterFactory.java,v 1.17 2007-08-14 23:55:36 thib_gc Exp $
  */
 
 /*
@@ -46,7 +46,7 @@ public class HighWirePdfFilterFactory extends BasicPdfFilterFactory {
 
   public static abstract class AbstractOnePartDownloadedFromOperatorProcessor
       extends ConditionalMergeOperatorProcessor {
-    
+
     /* Inherit documentation */
     public boolean identify(List tokens) {
       boolean ret = false;
@@ -89,12 +89,12 @@ public class HighWirePdfFilterFactory extends BasicPdfFilterFactory {
       }
       return ret;
     }
-      
+
   }
-  
+
   public static abstract class AbstractThreePartDownloadedFromOperatorProcessor
       extends ConditionalSubsequenceOperatorProcessor {
-    
+
     /* Inherit documentation */
     public int getSubsequenceLength() {
       // Examine the last 54 tokens in the output sequence
@@ -160,32 +160,32 @@ public class HighWirePdfFilterFactory extends BasicPdfFilterFactory {
       return ret;
     }
   }
-  
+
   public static class CollapseDownloadedFrom extends AggregatePageTransform {
-    
+
     public CollapseDownloadedFrom() throws IOException {
       super(PdfUtil.OR,
             new CollapseOnePartDownloadedFrom(),
             new CollapseThreePartDownloadedFrom());
     }
-    
+
   }
-  
-  public static class CollapseDownloadedFromAndNormalizeHyperlinks 
+
+  public static class CollapseDownloadedFromAndNormalizeHyperlinks
       extends AggregatePageTransform {
-    
+
     public CollapseDownloadedFromAndNormalizeHyperlinks() throws IOException {
       super(new CollapseDownloadedFrom(),
             new NormalizeHyperlinks());
     }
-    
+
   }
-  
+
   public static class CollapseOnePartDownloadedFrom extends PageStreamTransform {
-    
+
     public static class CollapseOnePartDownloadedFromOperatorProcessor
         extends AbstractOnePartDownloadedFromOperatorProcessor {
-      
+
       public List getReplacement(List tokens) {
         // Replace by an empty text object
         return ListUtil.list(// Known to be "BT"
@@ -193,18 +193,18 @@ public class HighWirePdfFilterFactory extends BasicPdfFilterFactory {
                              // Known to be "ET"
                              tokens.get(tokens.size() - 1));
       }
-      
+
     }
-    
+
     public CollapseOnePartDownloadedFrom() throws IOException {
       super(// "BT" operator: split unconditionally
             PdfUtil.BEGIN_TEXT_OBJECT, SplitOperatorProcessor.class,
             // "ET" operator: merge conditionally using CollapseOnePartDownloadedFromOperatorProcessor
             PdfUtil.END_TEXT_OBJECT, CollapseOnePartDownloadedFromOperatorProcessor.class);
     }
-    
+
   }
-  
+
   public static class CollapseThreePartDownloadedFrom extends PageStreamTransform {
 
     public static class CollapseThreePartDownloadedFromOperatorProcessor
@@ -218,10 +218,10 @@ public class HighWirePdfFilterFactory extends BasicPdfFilterFactory {
             bt = tok; ++counter;
           }
         }
-        
+
         // Replace by an empty text object, preserving earlier tokens
         List ret = new ArrayList(bt + 2);
-        ret.addAll(// Tokens before the three text objects 
+        ret.addAll(// Tokens before the three text objects
                    tokens.subList(0, bt));
         ret.addAll(ListUtil.list(// Known to be "BT"
                                  tokens.get(bt),
@@ -238,21 +238,21 @@ public class HighWirePdfFilterFactory extends BasicPdfFilterFactory {
     }
 
   }
-  
+
   public static class EraseMetadataSection implements DocumentTransform {
-    
+
     public boolean transform(PdfDocument pdfDocument) throws IOException {
       pdfDocument.setMetadata(" ");
       return true;
     }
-    
+
   }
-  
+
   public static class NormalizeHyperlinks implements PageTransform {
-    
+
     public boolean transform(PdfPage pdfPage) throws IOException {
       boolean ret = false; // Expecting at least one
-      
+
       for (Iterator iter = pdfPage.getAnnotationIterator() ; iter.hasNext() ; ) {
         PDAnnotation pdAnnotation = (PDAnnotation)iter.next();
         if (pdAnnotation instanceof PDAnnotationLink) {
@@ -266,12 +266,12 @@ public class HighWirePdfFilterFactory extends BasicPdfFilterFactory {
           }
         }
       }
-      
+
       return ret;
     }
-    
+
   }
-  
+
   public static class NormalizeMetadata extends AggregateDocumentTransform {
 
     public NormalizeMetadata() {
@@ -282,11 +282,11 @@ public class HighWirePdfFilterFactory extends BasicPdfFilterFactory {
             // Remove the variable part of the document ID
             new NormalizeTrailerId());
     }
-  
+
   }
-  
+
   public static class NormalizeTrailerId implements DocumentTransform {
-    
+
     public boolean transform(PdfDocument pdfDocument) throws IOException {
       COSDictionary trailer = pdfDocument.getTrailer();
       if (trailer != null) {
@@ -302,18 +302,18 @@ public class HighWirePdfFilterFactory extends BasicPdfFilterFactory {
       }
       return false; // all other cases are unexpected
     }
-    
+
   }
-  
+
   public static class RemoveModificationDate implements DocumentTransform {
-    
+
     public boolean transform(PdfDocument pdfDocument) throws IOException {
       pdfDocument.removeModificationDate();
       return true;
     }
-    
+
   }
-  
+
   /**
    * <p>A logger for use by this class.</p>
    */
