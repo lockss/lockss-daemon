@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.54 2007-08-14 03:10:25 smorabito Exp $
+ * $Id: V3Poller.java,v 1.55 2007-08-15 08:32:41 smorabito Exp $
  */
 
 /*
@@ -641,11 +641,12 @@ public class V3Poller extends BasePoll {
 
     // Schedule the vote tally callback.  The poll will tally votes no earlier
     // than this deadline.
-    if (voteCompleteDeadline.expired() &&
-        (pollerState.getVotedPeers().size() <= pollerState.getQuorum())) {
-      log.info("Not enough pollers voted before restoring poll " +
+    if ((voteCompleteDeadline.expired() &&
+        pollerState.getVotedPeers().size() <= pollerState.getQuorum()) ||
+        pollDeadline.expired()) {
+      log.info("Poll expired before tallying could complete: " +
                pollerState.getPollKey());
-      stopPoll();
+      stopPoll(V3Poller.POLLER_STATUS_EXPIRED);
       return;
     } else {
       voteCompleteRequest =
@@ -653,22 +654,14 @@ public class V3Poller extends BasePoll {
                             new VoteTallyCallback(), this);
     }
 
-    // Check to see if we're restoring a poll whose deadline has already
-    // passed.
-    if (pollDeadline.expired()) {
-      log.info("Not restoring expired poll " + pollerState.getPollKey());
-      stopPoll();
-      return;
-    } else {
+    if (reserveScheduleTime(theParticipants.size())) {
+      log.debug("Scheduled time for a new poll with a requested poll size of "
+                + theParticipants.size());
+
       // Schedule the poll deadline.  The poll must complete by this time.
       pollCompleteRequest =
         TimerQueue.schedule(pollDeadline,
                             new PollCompleteCallback(), this);
-    }
-
-    if (reserveScheduleTime(theParticipants.size())) {
-      log.debug("Scheduled time for a new poll with a requested poll size of "
-                + theParticipants.size());
 
       // Sanity check.  This really *should not* ever happen.
       if (pollerState.getVoteDeadline() >= getDeadline().getExpirationTime()) {
@@ -1482,19 +1475,28 @@ public class V3Poller extends BasePoll {
     VoteBlock.Version[] vbVersions = voteBlock.getVersions();
     HashBlock.Version[] hbVersions = hashBlock.getVersions();
 
-    log.debug3("Comparing block " + voteBlock.getUrl() + " against peer " +
+    log.debug3("Comparing block " + hashBlock.getUrl() + " against peer " +
                id + " in poll " + getKey());
 
     int disagreementCount = 0;
 
     for (int hbIdx = 0; hbIdx < hbVersions.length;  hbIdx++ ) {
       byte[] hasherResults = hbVersions[hbIdx].getHashes()[hashIndex];
+      Throwable pollerHashError = hbVersions[hbIdx].getHashError();
+
+      // If we had a hash error on this version, we need to count this
+      // as an abstension by not tallying it.
+      if (pollerHashError != null) {
+        this.pollerState.getTallyStatus().addErrorUrl(hashBlock.getUrl(),
+                                                      pollerHashError);
+        continue;
+      }
+      
       for (int vbIdx = 0; vbIdx < vbVersions.length; vbIdx++) {
         // If there were any hashing errors, we need to count this
         // as an abstension by not adding it to the tally.  If we don't
         // have enough voters, this will be a no quorum block.
-        boolean hashError = vbVersions[vbIdx].getHashError();
-        if (hashError) {
+        if (vbVersions[vbIdx].getHashError()) {
           log.info("Voter version " + vbIdx + " had a hashing error. "
                    + "Counting as an abstension.");
           continue;
@@ -2108,6 +2110,7 @@ public class V3Poller extends BasePoll {
     allUrls.addAll(getDisagreedUrls());
     allUrls.addAll(getTooCloseUrls());
     allUrls.addAll(getNoQuorumUrls());
+    allUrls.addAll(getErrorUrls().keySet());
     return allUrls;
   }
 
@@ -2125,6 +2128,10 @@ public class V3Poller extends BasePoll {
 
   public Set getNoQuorumUrls() {
     return pollerState.getTallyStatus().noQuorumUrls;
+  }
+  
+  public Map<String,String> getErrorUrls() {
+    return pollerState.getTallyStatus().errorUrls;
   }
 
   /**

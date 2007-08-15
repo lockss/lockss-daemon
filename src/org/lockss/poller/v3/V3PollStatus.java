@@ -1,5 +1,5 @@
 /*
-* $Id: V3PollStatus.java,v 1.14 2007-08-15 07:09:36 tlipkis Exp $
+* $Id: V3PollStatus.java,v 1.15 2007-08-15 08:32:41 smorabito Exp $
  */
 
 /*
@@ -62,6 +62,7 @@ public class V3PollStatus {
   public static final String TOO_CLOSE_TABLE_NAME = "V3TooCloseURLsTable";
   public static final String AGREE_TABLE_NAME = "V3AgreeURLsTable";
   public static final String DISAGREE_TABLE_NAME = "V3DisagreeURLsTable";
+  public static final String ERROR_TABLE_NAME = "V3ErrorURLsTable";
 
   protected PollManager pollManager;
   private static Logger theLog = Logger.getLogger("V3PollerStatus");
@@ -108,10 +109,10 @@ public class V3PollStatus {
                                          ColumnDescriptor.TYPE_INT,
                                          "Total number of URLs examined so " +
                                          "far in this poll."),
-                    new ColumnDescriptor("activeRepairs", "Repairs (A)",
+                    new ColumnDescriptor("Errors", "Hash Errors",
                                          ColumnDescriptor.TYPE_INT,
-                                         "Active repairs."),
-                    new ColumnDescriptor("completedRepairs", "Repairs (C)",
+                                         "Errors encountered while hashing content."),
+                    new ColumnDescriptor("completedRepairs", "Repairs",
                                          ColumnDescriptor.TYPE_INT,
                                          "Completed repairs."),
                     new ColumnDescriptor("agreement", "Agreement",
@@ -163,12 +164,12 @@ public class V3PollStatus {
       row.put("participants", new Integer(poller.getPollSize()));
       row.put("status", poller.getStatusString());
       row.put("talliedUrls", new Integer(poller.getTalliedUrls().size()));
-      row.put("activeRepairs", new Integer(poller.getActiveRepairs().size()));
+      row.put("hashErrors", new Integer(poller.getErrorUrls().size()));
       row.put("completedRepairs", new Integer(poller.getCompletedRepairs().size()));
-      if (poller.getStatus() < V3Poller.POLLER_STATUS_TALLYING) {
-        row.put("agreement", "--");
-      } else {
+      if (poller.getStatus() == V3Poller.PEER_STATUS_COMPLETE) {
         row.put("agreement", doubleToPercent(poller.getPercentAgreement()) + "%");
+      } else {
+        row.put("agreement", "--");
       }
       row.put("start", new Long(poller.getCreateTime()));
       row.put("deadline", poller.getDeadline());
@@ -426,39 +427,70 @@ public class V3PollStatus {
       summary.add(new SummaryInfo("Duration",
                                   ColumnDescriptor.TYPE_TIME_INTERVAL,
                                   new Long(poll.getDuration())));
+      if (poll.getErrorUrls().size() > 0) {
+        summary.add(new SummaryInfo("URLs with Hash errors",
+                                    ColumnDescriptor.TYPE_STRING,
+                                    new StatusTable.Reference(new Integer(poll.getErrorUrls().size()),
+                                                              "V3ErrorURLsTable",
+                                                              poll.getKey())));
+      }
+
+      int activeRepairs = poll.getActiveRepairs().size();
+      int talliedUrls = poll.getTalliedUrls().size();
+      int agreeUrls = poll.getAgreedUrls().size();
+      int disagreeUrls = poll.getDisagreedUrls().size();
+      int noQuorumUrls = poll.getNoQuorumUrls().size();
+      int tooCloseUrls = poll.getTooCloseUrls().size();
+      int completedRepairs = poll.getCompletedRepairs().size();
+        
       summary.add(new SummaryInfo("Total URLs In Vote",
                                   ColumnDescriptor.TYPE_INT,
-                                  new Integer(poll.getTalliedUrls().size())));
-      summary.add(new SummaryInfo("Agreeing URLs",
-                                  ColumnDescriptor.TYPE_INT,
-                                  new StatusTable.Reference(new Integer(poll.getAgreedUrls().size()),
-                                                            "V3AgreeURLsTable",
-                                                            poll.getKey())));
-      summary.add(new SummaryInfo("Disagreeing URLs",
-                                  ColumnDescriptor.TYPE_INT,
-                                  new StatusTable.Reference(new Integer(poll.getDisagreedUrls().size()),
-                                                            "V3DisagreeURLsTable",
-                                                            poll.getKey())));
-      summary.add(new SummaryInfo("No Quorum URLs",
-                                  ColumnDescriptor.TYPE_INT,
-                                  new StatusTable.Reference(new Integer(poll.getNoQuorumUrls().size()),
-                                                            "V3NoQuorumURLsTable",
-                                                            poll.getKey())));
-      summary.add(new SummaryInfo("Too Close URLs",
-                                  ColumnDescriptor.TYPE_INT,
-                                  new StatusTable.Reference(new Integer(poll.getTooCloseUrls().size()),
-                                                            "V3TooCloseURLsTable",
-                                                            poll.getKey())));
-      summary.add(new SummaryInfo("Active Repairs",
-                                  ColumnDescriptor.TYPE_INT,
-                                  new StatusTable.Reference(new Integer(poll.getActiveRepairs().size()),
-                                                            "V3ActiveRepairsTable",
-                                                            poll.getKey())));
-      summary.add(new SummaryInfo("Completed Repairs",
-                                  ColumnDescriptor.TYPE_INT,
-                                  new StatusTable.Reference(new Integer(poll.getCompletedRepairs().size()),
-                                                            "V3CompletedRepairsTable",
-                                                            poll.getKey())));
+                                  new Integer(talliedUrls)));
+      if (agreeUrls > 0) {
+        summary.add(new SummaryInfo("Agreeing URLs",
+                                    ColumnDescriptor.TYPE_INT,
+                                    new StatusTable.Reference(new Integer(agreeUrls),
+                                                              "V3AgreeURLsTable",
+                                                              poll.getKey())));
+      }
+      if (disagreeUrls > 0) {
+        summary.add(new SummaryInfo("Disagreeing URLs",
+                                    ColumnDescriptor.TYPE_INT,
+                                    new StatusTable.Reference(new Integer(disagreeUrls),
+                                                              "V3DisagreeURLsTable",
+                                                              poll.getKey())));
+      }
+      if (noQuorumUrls > 0) {
+        summary.add(new SummaryInfo("No Quorum URLs",
+                                    ColumnDescriptor.TYPE_INT,
+                                    new StatusTable.Reference(new Integer(noQuorumUrls),
+                                                              "V3NoQuorumURLsTable",
+                                                              poll.getKey())));
+      }
+      if (tooCloseUrls > 0) {
+        summary.add(new SummaryInfo("Too Close URLs",
+                                    ColumnDescriptor.TYPE_INT,
+                                    new StatusTable.Reference(new Integer(tooCloseUrls),
+                                                              "V3TooCloseURLsTable",
+                                                              poll.getKey())));
+      }
+      if (completedRepairs > 0) {
+        summary.add(new SummaryInfo("Completed Repairs",
+                                    ColumnDescriptor.TYPE_INT,
+                                    new StatusTable.Reference(new Integer(completedRepairs),
+                                                              "V3CompletedRepairsTable",
+                                                              poll.getKey())));
+      }
+      if (activeRepairs > 0) {
+        String message = poll.isPollActive() ? "Queued Repairs" : "Incomplete Repairs";
+        summary.add(new SummaryInfo("Queued Repairs",
+                                    ColumnDescriptor.TYPE_INT,
+                                    new StatusTable.Reference(new Integer(activeRepairs),
+                                                              "V3ActiveRepairsTable",
+                                                              poll.getKey())));
+        
+      }
+    
       long remain = TimeBase.msUntil(poll.getDeadline().getExpirationTime());
       if (remain >= 0) {
         summary.add(new SummaryInfo("Remaining",
@@ -766,6 +798,60 @@ public class V3PollStatus {
       return true;
     }
   }
+  
+  public static class V3ErrorURLs extends V3PollStatus 
+      implements StatusAccessor {
+    static final String TABLE_TITLE = "V3 Poll Details - URLs with Hash Errors";
+    private final List sortRules =
+      ListUtil.list(new StatusTable.SortRule("url",
+                                             CatalogueOrderComparator.SINGLETON));
+    private final List colDescs =
+      ListUtil.list(new ColumnDescriptor("url", "URL",
+                                         ColumnDescriptor.TYPE_STRING),
+                    new ColumnDescriptor("erorr", "Error",
+                                         ColumnDescriptor.TYPE_STRING));
+    public V3ErrorURLs(PollManager manager) {
+      super(manager);
+    }
+    public void populateTable(StatusTable table) throws NoSuchTableException {
+      String key = table.getKey();
+      V3Poller poller = null;
+      try {
+        poller = (V3Poller)pollManager.getPoll(key);
+      } catch (ClassCastException ex) {
+        theLog.error("Expected V3Poller, but got " +
+                     pollManager.getPoll(key).getClass().getName());
+        return;
+      }
+      if (poller == null) return;
+      table.setTitle("V3 Poll Details - URLs with Hash Errors in poll " + poller.getKey());
+      table.setColumnDescriptors(colDescs);
+      table.setDefaultSortRules(sortRules);
+      table.setRows(getRows(poller));
+    }
+    private List getRows(V3Poller poller) {
+      List rows = new ArrayList();
+      Map errorUrls = poller.getErrorUrls();
+      synchronized(errorUrls) {
+        for (Iterator it = errorUrls.keySet().iterator(); it.hasNext(); ) {
+          String url = (String)it.next();
+          String exceptionMessage = (String)errorUrls.get(url);
+          Map row = new HashMap();
+          row.put("url", url);
+          row.put("error", exceptionMessage);
+          rows.add(row);
+        }
+      }
+      return rows;
+    }
+    public String getDisplayName() {
+      return TABLE_TITLE;
+    }
+    public boolean requiresKey() {
+      return true;
+    }
+  }
+
   /**
    * <p>The full status of an individual V3 Poll in which we are acting as a
    * participant.  Requires the PollID as a key.</p>

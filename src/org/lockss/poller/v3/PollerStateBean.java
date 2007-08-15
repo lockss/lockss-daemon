@@ -1,5 +1,5 @@
 /*
- * $Id: PollerStateBean.java,v 1.24 2007-03-17 04:19:30 smorabito Exp $
+ * $Id: PollerStateBean.java,v 1.25 2007-08-15 08:32:41 smorabito Exp $
  */
 
 /*
@@ -395,12 +395,14 @@ public class PollerStateBean implements LockssSerializable {
     public Set disagreedUrls;
     public Set tooCloseUrls;
     public Set noQuorumUrls;
+    public Map<String,String> errorUrls;
 
     public TallyStatus() {
       agreedUrls = new HashSet();
       disagreedUrls = new HashSet();
       tooCloseUrls = new HashSet();
       noQuorumUrls = new HashSet();
+      errorUrls = new HashMap();
     }
 
     public void addAgreedUrl(String url) {
@@ -422,12 +424,18 @@ public class PollerStateBean implements LockssSerializable {
       removeUrl(url);
       noQuorumUrls.add(url);
     }
+    
+    public void addErrorUrl(String url, Throwable t) {
+      removeUrl(url);
+      errorUrls.put(url, t.getMessage());
+    }
 
     private void removeUrl(String url) {
       agreedUrls.remove(url);
       disagreedUrls.remove(url);
       tooCloseUrls.remove(url);
       noQuorumUrls.remove(url);
+      errorUrls.remove(url);
     }
   }
 

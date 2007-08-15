@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.177 2007-08-15 07:09:36 tlipkis Exp $
+ * $Id: PollManager.java,v 1.178 2007-08-15 08:32:41 smorabito Exp $
  */
 
 /*
@@ -188,6 +188,8 @@ public class PollManager
                                       new V3PollStatus.V3AgreeURLs(this));
     statusServ.registerStatusAccessor(V3PollStatus.DISAGREE_TABLE_NAME,
                                       new V3PollStatus.V3DisagreeURLs(this));
+    statusServ.registerStatusAccessor(V3PollStatus.ERROR_TABLE_NAME,
+                                      new V3PollStatus.V3ErrorURLs(this));
 
     // register our AU event handler
     auEventHandler = new AuEventHandler.Base() {
@@ -232,6 +234,7 @@ public class PollManager
     statusServ.unregisterStatusAccessor(V3PollStatus.TOO_CLOSE_TABLE_NAME);
     statusServ.unregisterStatusAccessor(V3PollStatus.AGREE_TABLE_NAME);
     statusServ.unregisterStatusAccessor(V3PollStatus.DISAGREE_TABLE_NAME);
+    statusServ.unregisterStatusAccessor(V3PollStatus.ERROR_TABLE_NAME);
     statusServ.unregisterObjectReferenceAccessor(PollerStatus.MANAGER_STATUS_TABLE_NAME,
                                                  ArchivalUnit.class);
 
