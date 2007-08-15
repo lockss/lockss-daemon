@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.68 2007-01-24 19:18:06 thib_gc Exp $
+ * $Id: DaemonStatus.java,v 1.69 2007-08-15 07:10:02 tlipkis Exp $
  */
 
 /*
@@ -41,7 +41,7 @@ import javax.servlet.*;
 import org.mortbay.html.*;
 import org.w3c.dom.Document;
 
-import org.lockss.config.CurrentConfig;
+import org.lockss.config.*;
 import org.lockss.daemon.status.*;
 import org.lockss.plugin.PluginManager;
 import org.lockss.util.*;
@@ -131,7 +131,7 @@ public class DaemonStatus extends LockssServlet {
     tableName = req.getParameter("table");
     tableKey = req.getParameter("key");
     if (StringUtil.isNullString(tableName)) {
-      tableName = StatusService.ALL_TABLES_TABLE;
+      tableName = statSvc.getDefaultTableName();
     }
     if (StringUtil.isNullString(tableKey)) {
       tableKey = null;
@@ -195,9 +195,11 @@ public class DaemonStatus extends LockssServlet {
     PrintWriter wrtr = resp.getWriter();
     resp.setContentType("text/plain");
 
-    String vPlatform = CurrentConfig.getParam(PARAM_PLATFORM_VERSION);
-    if (vPlatform != null) {
-      vPlatform = ", cd=" + vPlatform;
+//     String vPlatform = CurrentConfig.getParam(PARAM_PLATFORM_VERSION);
+    String vPlatform;
+    PlatformVersion pVer = ConfigManager.getPlatformVersion();
+    if (pVer != null) {
+      vPlatform = ", platform=" + StringUtil.csvEncode(pVer.displayString());
     } else {
       vPlatform = "";
     }
@@ -685,7 +687,7 @@ public class DaemonStatus extends LockssServlet {
 	sb.append(urlEncode((String)ent.getValue()));
       }
     }
-    return srvLink(myServletDescr(), getDisplayString1(ref.getValue(), type),
+    return srvLink(myServletDescr(), getDisplayString(ref.getValue(), type),
 		   sb.toString());
   }
 
