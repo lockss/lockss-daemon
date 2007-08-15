@@ -1819,6 +1819,10 @@ org.lockss.comm.multicast.verify=no
 org.lockss.protocol.ttl=2
 org.lockss.protocol.hashAlgorithm=SHA-1
 
+# crawl settings
+org.lockss.crawler.startCrawlsInitialDelay=1m
+org.lockss.crawler.startCrawlsInterval=30s
+
 # poll settings
 org.lockss.poll.maxpolls=20
 org.lockss.poll.quorum=3
