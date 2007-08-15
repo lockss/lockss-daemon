@@ -1,5 +1,5 @@
 /*
- * $Id: PlatformUtil.java,v 1.7 2007-06-28 06:07:09 tlipkis Exp $
+ * $Id: PlatformUtil.java,v 1.8 2007-08-15 07:11:15 tlipkis Exp $
  */
 
 /*
@@ -238,7 +238,7 @@ public class PlatformUtil {
       if (lines == null || lines.size() < 2) {
 	return null;
       }
-      return makeDFFromLine((String)lines.get(1));
+      return makeDFFromLine(path, (String)lines.get(1));
     } catch (Exception e) {
       log.warning("DF(" + path + ")", e);
       return null;
@@ -246,7 +246,7 @@ public class PlatformUtil {
 
   }
 
-  DF makeDFFromLine(String line) {
+  DF makeDFFromLine(String path, String line) {
     String[] tokens = new String[6];
     StringTokenizer st = new StringTokenizer(line, " \t");
     int ntok = 0;
@@ -261,6 +261,7 @@ public class PlatformUtil {
       return null;
     }
     DF df = new DF();
+    df.path = path;
     df.fs = tokens[0];
     df.size = getInt(tokens[1]);
     df.used = getInt(tokens[2]);
@@ -599,6 +600,7 @@ public class PlatformUtil {
 
   /** Struct holding disk space info (from df) */
   public static class DF {
+    String path;
     String fs;
     int size;
     int used;
@@ -607,8 +609,18 @@ public class PlatformUtil {
     double percent = -1.0;
     String mnt;
 
+    public static DF makeThreshold(int minFreeMB, double minFreePercent) {
+      DF df = new DF();
+      df.avail = minFreeMB * 1024;
+      df.percent = minFreePercent == 0.0 ? -1.0 : 1.0 - minFreePercent;
+      return df;
+    }
+
     public String getFs() {
       return fs;
+    }
+    public String getPath() {
+      return path;
     }
     public int getSize() {
       return size;
@@ -630,6 +642,17 @@ public class PlatformUtil {
     }
     public String toString() {
       return "[DF: " + fs + "]";
+    }
+    public boolean isFullerThan(DF threshold) {
+      if (threshold.getAvail() > 0 &&
+	  threshold.getAvail() >= getAvail()) {
+	return true;
+      }
+      if (threshold.getPercent() > 0 &&
+	  threshold.getPercent() <= getPercent()) {
+	return true;
+      }
+      return false;
     }
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestPlatformUtil.java,v 1.4 2007-06-28 06:07:09 tlipkis Exp $
+ * $Id: TestPlatformUtil.java,v 1.5 2007-08-15 07:11:14 tlipkis Exp $
  */
 
 /*
@@ -102,8 +102,9 @@ public class TestPlatformUtil extends LockssTestCase {
 
   public void testMakeDF() throws Exception {
     String str = "/dev/hda2  26667896   9849640  15463576    39% /";
-    PlatformUtil.DF df = info.makeDFFromLine(str);
+    PlatformUtil.DF df = info.makeDFFromLine("/mnt", str);
     assertNotNull(df);
+    assertEquals("/mnt", df.getPath());
     assertEquals(26667896, df.getSize());
     assertEquals(9849640, df.getUsed());
     assertEquals(15463576, df.getAvail());
@@ -113,8 +114,9 @@ public class TestPlatformUtil extends LockssTestCase {
 
   public void testMakeDFIll1() throws Exception {
     String str = "/dev/hda2  26667896   9849640  -1546    39% /";
-    PlatformUtil.DF df = info.makeDFFromLine(str);
+    PlatformUtil.DF df = info.makeDFFromLine("/mnt", str);
     assertNotNull(df);
+    assertEquals("/mnt", df.getPath());
     assertEquals(26667896, df.getSize());
     assertEquals(9849640, df.getUsed());
     assertEquals(-1546, df.getAvail());
@@ -125,13 +127,30 @@ public class TestPlatformUtil extends LockssTestCase {
   public void testMakeDFIll2() throws Exception {
     // linux df running under linux emul on OpenBSD can produce this
     String str = "-  26667896   9849640  4294426204    101% /";
-    PlatformUtil.DF df = info.makeDFFromLine(str);
+    PlatformUtil.DF df = info.makeDFFromLine("/mnt", str);
     assertNotNull(df);
+    assertEquals("/mnt", df.getPath());
     assertEquals(26667896, df.getSize());
     assertEquals(9849640, df.getUsed());
     assertEquals(0, df.getAvail());
     assertEquals("101%", df.getPercentString());
     assertEquals(1.01, df.getPercent(), .0000001);
+  }
+
+  PlatformUtil.DF makeThresh(int minFreeMB, double minFreePercent) {
+    return PlatformUtil.DF.makeThreshold(minFreeMB, minFreePercent);
+  }
+
+  public void testIsFullerThan() throws Exception {
+    String str = "/dev/hda2  26667896   9849640  15463576    73% /";
+    PlatformUtil.DF df = info.makeDFFromLine("/mnt", str);
+    assertFalse(df.isFullerThan(makeThresh(100, 0)));
+    assertFalse(df.isFullerThan(makeThresh(15000, 0)));
+    assertTrue(df.isFullerThan(makeThresh(16000, 0)));
+    assertTrue(df.isFullerThan(makeThresh(16000, .3)));
+    assertTrue(df.isFullerThan(makeThresh(100, .30)));
+    assertFalse(df.isFullerThan(makeThresh(100, .20)));
+    assertFalse(df.isFullerThan(makeThresh(0, 0)));
   }
 
   public void xtestThreadDump() throws Exception {
