@@ -4043,6 +4043,21 @@
       <property name="attributes.publisher" value="Royal College of Psychiatrists" />
     </property>
 
+    <property name="HighWireAdvancesinPsychiatricTreatment12">
+      <property name="title" value="Advances in Psychiatric Treatment Volume 12" />
+      <property name="journalTitle" value="Advances in Psychiatric Treatment" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://apt.rcpsych.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="12" />
+      </property>
+      <property name="attributes.publisher" value="Royal College of Psychiatrists" />
+    </property>
+
     <property name="HighWireAdvancesinPsychiatricTreatment13">
       <property name="title" value="Advances in Psychiatric Treatment Volume 13" />
       <property name="journalTitle" value="Advances in Psychiatric Treatment" />
