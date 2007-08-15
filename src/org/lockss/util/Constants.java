@@ -1,5 +1,5 @@
 /*
- * $Id: Constants.java,v 1.17 2007-07-31 06:40:33 tlipkis Exp $
+ * $Id: Constants.java,v 1.18 2007-08-15 07:10:54 tlipkis Exp $
  */
 
 /*
@@ -108,6 +108,13 @@ public interface Constants {
   public static String COOKIE_POLICY_COMPATIBILITY = "compatibility";
   /** Cookie policy: RFC 2109  */
   public static String COOKIE_POLICY_RFC_2109 = "rfc2109";
+
+  // Colors
+
+  public static final String COLOR_WHITE = "#ffffff";
+  public static final String COLOR_BLACK = "#000000";
+  public static final String COLOR_RED = "#ff0000";
+  public static final String COLOR_ORANGE = "#ff6600";
 
   // Exit codes
 
