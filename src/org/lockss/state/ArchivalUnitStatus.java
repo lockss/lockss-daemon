@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.56 2007-06-28 07:14:24 smorabito Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.57 2007-08-15 07:09:36 tlipkis Exp $
  */
 
 /*
@@ -94,6 +94,8 @@ public class ArchivalUnitStatus
     StatusService statusServ = theDaemon.getStatusService();
     statusServ.registerStatusAccessor(SERVICE_STATUS_TABLE_NAME,
                                       new AuSummary(theDaemon));
+    statusServ.registerOverviewAccessor(SERVICE_STATUS_TABLE_NAME,
+                                      new Overview(theDaemon));
     statusServ.registerStatusAccessor(AUIDS_TABLE_NAME,
                                       new AuIds(theDaemon));
     statusServ.registerStatusAccessor(AU_STATUS_TABLE_NAME,
@@ -148,8 +150,6 @@ public class ArchivalUnitStatus
       new ColumnDescriptor("AuLastPoll", "Last Poll",
                            ColumnDescriptor.TYPE_DATE),
       new ColumnDescriptor("AuLastCrawl", "Last Crawl",
-                           ColumnDescriptor.TYPE_DATE),
-      new ColumnDescriptor("AuLastTreeWalk", "Last TreeWalk",
                            ColumnDescriptor.TYPE_DATE)
       );
 
@@ -241,7 +241,6 @@ public class ArchivalUnitStatus
       }
       rowMap.put("AuLastCrawl", new Long(auState.getLastCrawlTime()));
       rowMap.put("Peers", PeerRepair.makeAuRef("peers", au.getAuId()));
-      rowMap.put("AuLastTreeWalk", new Long(auState.getLastTreeWalkTime()));
       rowMap.put("AuLastPoll", new Long(auState.getLastTopLevelPollTime()));
       
       Object stat;
@@ -658,63 +657,69 @@ public class ArchivalUnitStatus
 				LockssServlet.SERVLET_LIST_URLS,
 				PropUtil.fromArgs("auid", au.getAuId()));
 
-      List summaryList =  ListUtil.list(
-            new StatusTable.SummaryInfo("Volume", ColumnDescriptor.TYPE_STRING,
-                                        au.getName()),
-//             new StatusTable.SummaryInfo("Nodes", ColumnDescriptor.TYPE_INT,
-//                                         new Integer(-1)),
-	    (contentSize != -1)
-	    ? new StatusTable.SummaryInfo("Content Size",
-					  ColumnDescriptor.TYPE_INT,
-					  new Long(contentSize))
-	    : new StatusTable.SummaryInfo("Content Size",
+      List res = new ArrayList();
+      res.add(new StatusTable.SummaryInfo("Volume",
 					  ColumnDescriptor.TYPE_STRING,
-					  "Awaiting recalc"),
-	    (du != -1)
-	    ? new StatusTable.SummaryInfo("Disk Usage (MB)",
+					  au.getName()));
+      if (contentSize != -1) {
+	res.add(new StatusTable.SummaryInfo("Content Size",
+					    ColumnDescriptor.TYPE_INT,
+					    new Long(contentSize)));
+      } else {
+	res.add(new StatusTable.SummaryInfo("Content Size",
+					    ColumnDescriptor.TYPE_STRING,
+					    "Awaiting recalc"));
+      }
+      if (du != -1) {
+	 res.add(new StatusTable.SummaryInfo("Disk Usage (MB)",
 					ColumnDescriptor.TYPE_FLOAT,
-                                        new Float(du / (float)(1024 * 1024)))
-	    : new StatusTable.SummaryInfo("Disk Usage",
+                                        new Float(du / (float)(1024 * 1024))));
+      } else {
+	res.add(new StatusTable.SummaryInfo("Disk Usage",
+					    ColumnDescriptor.TYPE_STRING,
+					    "Awaiting recalc"));
+      }
+      res.add(new StatusTable.SummaryInfo("Status",
 					  ColumnDescriptor.TYPE_STRING,
-					  "Awaiting recalc"),
-	    new StatusTable.SummaryInfo("Status",
-                                        ColumnDescriptor.TYPE_STRING,
-                                        stat),
-            new StatusTable.SummaryInfo("Available From Publisher",
-                                        ColumnDescriptor.TYPE_STRING,
-                                        (AuUtil.isPubDown(au) ? "No" : "Yes")),
-//             new StatusTable.SummaryInfo("Volume Complete",
-//                                         ColumnDescriptor.TYPE_STRING,
-//                                         (AuUtil.isClosed(au) ? "Yes" : "No")),
-// 	    new StatusTable.SummaryInfo("Polling Protocol Version",
-// 					ColumnDescriptor.TYPE_INT,
-// 					new Integer(AuUtil.getProtocolVersion(au))),
-            new StatusTable.SummaryInfo("Last Crawl Time",
-                                        ColumnDescriptor.TYPE_DATE,
-                                        new Long(state.getLastCrawlTime())),
-            new StatusTable.SummaryInfo("Last Top-level Poll",
-                                        ColumnDescriptor.TYPE_DATE,
-                                        new Long(state.getLastTopLevelPollTime())),
-            new StatusTable.SummaryInfo(null,
-					ColumnDescriptor.TYPE_STRING,
-					urlListLink)
-
-//             new StatusTable.SummaryInfo("Last Treewalk",
-//                                         ColumnDescriptor.TYPE_DATE,
-//                                         new Long(state.getLastTreeWalkTime())),
-//             new StatusTable.SummaryInfo("Current Activity",
-//                                         ColumnDescriptor.TYPE_STRING,
-//                                         "-")
-            );
+					  stat));
+      String plat = au.getPlugin().getPublishingPlatform();
+      if (plat != null) {
+	res.add(new StatusTable.SummaryInfo("Publishing Platform",
+					    ColumnDescriptor.TYPE_STRING,
+					    plat));
+      }
+      res.add(new StatusTable.SummaryInfo("Available From Publisher",
+					  ColumnDescriptor.TYPE_STRING,
+					  (AuUtil.isPubDown(au)
+					   ? "No" : "Yes")));
+//             res.add(new StatusTable.SummaryInfo("Volume Complete",
+// 						ColumnDescriptor.TYPE_STRING,
+// 						(AuUtil.isClosed(au)
+// 						 ? "Yes" : "No")));
+// 	    res.add(new StatusTable.SummaryInfo("Polling Protocol Version",
+// 						ColumnDescriptor.TYPE_INT,
+// 						new Integer(AuUtil.getProtocolVersion(au))));
+            res.add(new StatusTable.SummaryInfo("Last Crawl Time",
+						ColumnDescriptor.TYPE_DATE,
+						new Long(state.getLastCrawlTime())));
+            res.add(new StatusTable.SummaryInfo("Last Top-level Poll",
+						ColumnDescriptor.TYPE_DATE,
+						new Long(state.getLastTopLevelPollTime())));
+            res.add(new StatusTable.SummaryInfo(null,
+						ColumnDescriptor.TYPE_STRING,
+						urlListLink));
+//             res.add(new StatusTable.SummaryInfo("Current Activity",
+// 						ColumnDescriptor.TYPE_STRING,
+// 						"-"));
       if (theDaemon.isDetectClockssSubscription()) {
 	String subStatus =
 	  AuUtil.getAuState(au).getClockssSubscriptionStatusString();
-	summaryList.add(clockssPos,
-			new StatusTable.SummaryInfo("Subscribed",
-						    ColumnDescriptor.TYPE_STRING,
-						    subStatus));
+	res.add(clockssPos,
+		new StatusTable.SummaryInfo("Subscribed",
+					    ColumnDescriptor.TYPE_STRING,
+					    subStatus));
       }
-      return summaryList;
+      return res;
     }
 
     // utility method for making a Reference
@@ -986,6 +991,53 @@ public class ArchivalUnitStatus
                                                   String key) {
       return new StatusTable.Reference(value, PEERS_REPAIR_TABLE_NAME,
                                        key);
+    }
+  }
+
+  static class Overview implements OverviewAccessor {
+
+    private LockssDaemon daemon;
+    private PluginManager pluginMgr;
+
+    public Overview(LockssDaemon daemon) {
+      this.daemon = daemon;
+      this.pluginMgr = daemon.getPluginManager();
+    }
+
+    public Object getOverview(String tableName, BitSet options) {
+      boolean isDebug = options.get(StatusTable.OPTION_DEBUG_USER);
+      List res = new ArrayList();
+      int total = 0;
+      int internal = 0;
+      int needsCrawl = 0;
+      for (ArchivalUnit au : pluginMgr.getAllAus()) {
+	if (pluginMgr.isInternalAu(au)) {
+	  internal++;
+	  if (!isDebug) {
+	    continue;
+	  }
+	}
+	total++;
+	AuState aus = AuUtil.getAuState(au);
+	if (aus.getLastCrawlTime() <= 0) {
+	  needsCrawl++;
+	}
+      }
+      StringBuilder sb = new StringBuilder();
+      sb.append(StringUtil.numberOfUnits(total, "Archival Unit",
+					 "Archival Units"));
+      if (internal != 0 && isDebug) {
+	sb.append(" (");
+	sb.append(internal);
+	sb.append(" internal)");
+      }
+      if (needsCrawl != 0) {
+	sb.append(", ");
+	sb.append(needsCrawl);
+	sb.append(" not collected");
+      }
+      return new StatusTable.Reference(sb.toString(),
+				       SERVICE_STATUS_TABLE_NAME);
     }
   }
 }

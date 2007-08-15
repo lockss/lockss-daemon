@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.39 2007-05-11 02:46:27 smorabito Exp $
+ * $Id: V3Voter.java,v 1.40 2007-08-15 07:09:36 tlipkis Exp $
  */
 
 /*
@@ -788,6 +788,10 @@ public class V3Voter extends BasePoll {
   
   public String getStatusString() {
     return V3Voter.STATUS_STRINGS[voterUserData.getStatus()];
+  }
+  
+  public int getStatus() {
+    return voterUserData.getStatus();
   }
   
   IdentityManager getIdentityManager() {

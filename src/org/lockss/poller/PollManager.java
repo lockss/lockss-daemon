@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.176 2007-02-22 19:47:30 smorabito Exp $
+ * $Id: PollManager.java,v 1.177 2007-08-15 07:09:36 tlipkis Exp $
  */
 
 /*
@@ -166,8 +166,12 @@ public class PollManager
     // V3 status
     statusServ.registerStatusAccessor(V3PollStatus.POLLER_STATUS_TABLE_NAME,
                                       new V3PollStatus.V3PollerStatus(this));
+    statusServ.registerOverviewAccessor(V3PollStatus.POLLER_STATUS_TABLE_NAME,
+				       new V3PollStatus.PollOverview(this));
     statusServ.registerStatusAccessor(V3PollStatus.VOTER_STATUS_TABLE_NAME,
                                       new V3PollStatus.V3VoterStatus(this));
+    statusServ.registerOverviewAccessor(V3PollStatus.VOTER_STATUS_TABLE_NAME,
+				       new V3PollStatus.VoterOverview(this));
     statusServ.registerStatusAccessor(V3PollStatus.POLLER_DETAIL_TABLE_NAME,
                                       new V3PollStatus.V3PollerStatusDetail(this));
     statusServ.registerStatusAccessor(V3PollStatus.VOTER_DETAIL_TABLE_NAME,
@@ -217,7 +221,9 @@ public class PollManager
     statusServ.unregisterStatusAccessor(PollerStatus.MANAGER_STATUS_TABLE_NAME);
     statusServ.unregisterStatusAccessor(PollerStatus.POLL_STATUS_TABLE_NAME);
     statusServ.unregisterStatusAccessor(V3PollStatus.POLLER_STATUS_TABLE_NAME);
+    statusServ.unregisterOverviewAccessor(V3PollStatus.POLLER_STATUS_TABLE_NAME);
     statusServ.unregisterStatusAccessor(V3PollStatus.VOTER_STATUS_TABLE_NAME);
+    statusServ.unregisterOverviewAccessor(V3PollStatus.VOTER_STATUS_TABLE_NAME);
     statusServ.unregisterStatusAccessor(V3PollStatus.POLLER_DETAIL_TABLE_NAME);
     statusServ.unregisterStatusAccessor(V3PollStatus.VOTER_DETAIL_TABLE_NAME);
     statusServ.unregisterStatusAccessor(V3PollStatus.ACTIVE_REPAIRS_TABLE_NAME);

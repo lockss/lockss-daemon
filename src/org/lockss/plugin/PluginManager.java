@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.181 2007-06-27 07:49:34 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.182 2007-08-15 07:09:37 tlipkis Exp $
  */
 
 /*
@@ -204,6 +204,7 @@ public class PluginManager
   private Map auMap = Collections.synchronizedMap(new HashMap());
   // A set of all aus sorted by title.  The UI relies on this behavior.
   private Set auSet = new TreeSet(auComparator);
+  private List auList = null;
 
   // maps host to collections of AUs.  Used to quickly locate candidate AUs
   // for incoming URLs.  Each collection is sorted in AU order (for proxy
@@ -719,6 +720,7 @@ public class PluginManager
     synchronized (auSet) {
       auMap.remove(auid);
       auSet.remove(au);
+      auList = null;
     }
     delHostAus(au);
 
@@ -791,6 +793,7 @@ public class PluginManager
     synchronized (auSet) {
       auMap.put(au.getAuId(), au);
       auSet.add(au);
+      auList = null;
     }
     addHostAus(au);
   }
@@ -1488,9 +1491,12 @@ public class PluginManager
    *
    * @return the List of aus
    */
-  public List getAllAus() {
+  public List<ArchivalUnit> getAllAus() {
     synchronized (auSet) {
-      return new ArrayList(auSet);
+      if (auList == null) {
+	auList = new ArrayList(auSet);
+      }
+      return auList;
     }
   }
 

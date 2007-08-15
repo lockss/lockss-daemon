@@ -1,5 +1,5 @@
 /*
- * $Id: HashSvcSchedImpl.java,v 1.23 2006-12-05 21:37:21 tlipkis Exp $
+ * $Id: HashSvcSchedImpl.java,v 1.24 2007-08-15 07:09:37 tlipkis Exp $
  */
 
 /*
@@ -54,6 +54,8 @@ public class HashSvcSchedImpl
 
   protected static Logger log = Logger.getLogger("HashSvcSchedImpl");
 
+  public static final String HASH_STATUS_TABLE = "HashQ";
+
   private SchedService sched = null;
   private long estPadConstant = 0;
   private long estPadPercent = 0;
@@ -77,8 +79,9 @@ public class HashSvcSchedImpl
     super.startService();
     log.debug("startService()");
     sched = getDaemon().getSchedService();
-    getDaemon().getStatusService().registerStatusAccessor("HashQ",
-							  new Status());
+    StatusService statSvc = getDaemon().getStatusService();
+    statSvc.registerStatusAccessor(HASH_STATUS_TABLE, new Status());
+    statSvc.registerOverviewAccessor(HASH_STATUS_TABLE, new HashOverview());
   }
 
   /**
@@ -86,7 +89,9 @@ public class HashSvcSchedImpl
    * @see org.lockss.app.LockssManager#stopService()
    */
   public void stopService() {
-    getDaemon().getStatusService().unregisterStatusAccessor("HashQ");
+    StatusService statSvc = getDaemon().getStatusService();
+    statSvc.unregisterStatusAccessor(HASH_STATUS_TABLE);
+    statSvc.unregisterOverviewAccessor(HASH_STATUS_TABLE);
     super.stopService();
   }
 
@@ -497,23 +502,44 @@ public class HashSvcSchedImpl
 					  ColumnDescriptor.TYPE_TIME_INTERVAL,
 					  new Long(totalTime)));
       if (totalTime != 0) {
-	BigInteger bigTotal = BigInteger.valueOf(totalTime);
-	long bpms = totalBytesHashed.divide(bigTotal).intValue();
-	String s;
-	if (bpms >= 100) {
-	  s = Long.toString(bpms);
-	} else {
-	long bpsec =
-	  totalBytesHashed.multiply(big1000).divide(bigTotal).intValue();
-	  s = fmt_2dec.format((double)bpsec / (double)1000);
-	}
 	res.add(new StatusTable.SummaryInfo("Bytes/ms",
 					    ColumnDescriptor.TYPE_STRING,
-					    s));
+					    hashRate(totalBytesHashed,
+						     totalTime)));
       }
       return res;
     }
+  }
 
+  String hashRate(BigInteger bytes, long time) {
+    BigInteger bigTotal = BigInteger.valueOf(time);
+    long bpms = bytes.divide(bigTotal).intValue();
+    if (bpms >= 100) {
+      return Long.toString(bpms);
+    } else {
+      long bpsec =
+	bytes.multiply(big1000).divide(bigTotal).intValue();
+      return fmt_2dec.format((double)bpsec / (double)1000);
+    }
+  }    
+
+  class HashOverview implements OverviewAccessor {
+
+    public Object getOverview(String tableName, BitSet options) {
+      List res = new ArrayList();
+
+      res.add(totalBytesHashed + " bytes hashed");
+      if (totalTime != 0) {
+	res.add(" in " + StringUtil.timeIntervalToString(totalTime));
+	res.add(" at " + hashRate(totalBytesHashed, totalTime) + " bytes/ms");
+      }
+      int wait = queue.size();
+      if (wait != 0) {
+	res.add(", " + wait + " waiting");
+      }
+      String summ = StringUtil.separatedString(res, ", ");
+      return new StatusTable.Reference(summ, HASH_STATUS_TABLE);
+    }
   }
 
   static class TaskState implements Comparable {

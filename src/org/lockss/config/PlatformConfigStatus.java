@@ -1,5 +1,5 @@
 /*
- * $Id: PlatformConfigStatus.java,v 1.1 2007-05-23 02:27:09 tlipkis Exp $
+ * $Id: PlatformConfigStatus.java,v 1.2 2007-08-15 07:09:37 tlipkis Exp $
  */
 
 /*
@@ -66,22 +66,6 @@ public class PlatformConfigStatus extends BaseLockssDaemonManager {
     PCStatus(LockssDaemon daemon) {
       this.daemon = daemon;
     }
-
-    private final List colDescs =
-      ListUtil.list(
-		    new ColumnDescriptor("plugin", "Name",
-					 ColumnDescriptor.TYPE_STRING),
-		    new ColumnDescriptor("version", "Version",
-					 ColumnDescriptor.TYPE_STRING),
-		    new ColumnDescriptor("type", "Type",
-					 ColumnDescriptor.TYPE_STRING),
-		    // 		  new ColumnDescriptor("id", "Plugin ID",
-		    // 				       ColumnDescriptor.TYPE_STRING),
-		    new ColumnDescriptor("registry", "Registry",
-					 ColumnDescriptor.TYPE_STRING)
-		    // 		  new ColumnDescriptor("cu", "Loaded From",
-		    // 				       ColumnDescriptor.TYPE_STRING)
-		    );
 
     public String getDisplayName() {
       return "Platform Configuration";

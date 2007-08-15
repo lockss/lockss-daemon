@@ -1,5 +1,5 @@
 /*
-* $Id: PollerStatus.java,v 1.26 2007-03-14 05:53:32 tlipkis Exp $
+* $Id: PollerStatus.java,v 1.27 2007-08-15 07:09:36 tlipkis Exp $
  */
 
 /*
@@ -544,7 +544,7 @@ public class PollerStatus {
       return cnt;
     }
 
-    public StatusTable.Reference getReference(Object obj, String tableName) {
+    public StatusTable.Reference getReference(String tableName, Object obj) {
       ArchivalUnit au = (ArchivalUnit)obj;
       String auid = au.getAuId();
       String keys =

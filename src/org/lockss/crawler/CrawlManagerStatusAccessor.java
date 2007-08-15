@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerStatusAccessor.java,v 1.14 2006-11-14 19:21:29 tlipkis Exp $
+ * $Id: CrawlManagerStatusAccessor.java,v 1.15 2007-08-15 07:09:37 tlipkis Exp $
  */
 
 /*
@@ -237,13 +237,6 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
   }
 
   /**
-   * Return a reference object to the table, displaying the value
-   */
-  private Object makeRef(long value, String tableName, String key) {
-    return new StatusTable.Reference(new Long(value), tableName, key);
-  }
-
-  /**
    * If the UrlCounter has a collection, return a reference to it, else
    * just the count
    */
@@ -254,6 +247,13 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
 		     CRAWL_URLS_STATUS_ACCESSOR, crawlKey + "." + subkey);
     }
     return new Long(ctr.getCount());
+  }
+
+  /**
+   * Return a reference object to the table, displaying the value
+   */
+  private Object makeRef(long value, String tableName, String key) {
+    return new StatusTable.Reference(new Long(value), tableName, key);
   }
 
   /**
@@ -306,6 +306,40 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
       sortRules.add(new StatusTable.SortRule(DURATION_COL_NAME, false));
     }
     return sortRules;
+  }
+
+  static class CrawlOverview implements OverviewAccessor {
+
+    private CrawlManager.StatusSource statusSource;
+    private PluginManager pluginMgr;
+
+    public CrawlOverview(CrawlManager.StatusSource statusSource) {
+      this.statusSource = statusSource;
+      this.pluginMgr = statusSource.getDaemon().getPluginManager();
+    }
+
+    public Object getOverview(String tableName, BitSet options) {
+      List res = new ArrayList();
+      boolean includeInternalAus = options.get(StatusTable.OPTION_DEBUG_USER);
+      CrawlManagerStatus cms = statusSource.getStatus();
+      List<CrawlerStatus> allCrawls = cms.getCrawlStatusList();
+      if (allCrawls != null) {
+	int active = 0;
+	for (CrawlerStatus crawlStat : allCrawls) {
+	  if (!includeInternalAus &&
+	      pluginMgr.isInternalAu(crawlStat.getAu())) {
+	    continue;
+	  }
+	  if (Crawler.STATUS_ACTIVE.equals(crawlStat.getCrawlStatus())) {
+	    active++;
+	  }
+	}
+	String s =
+	  StringUtil.numberOfUnits(active, "active crawl", "active crawls");
+	res.add(new StatusTable.Reference(s, CrawlManagerImpl.CRAWL_STATUS_TABLE_NAME));
+      }
+      return res;
+    }
   }
 
   static class Counts {

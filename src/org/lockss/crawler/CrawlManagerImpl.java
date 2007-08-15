@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.110 2007-03-17 21:31:30 dshr Exp $
+ * $Id: CrawlManagerImpl.java,v 1.111 2007-08-15 07:09:37 tlipkis Exp $
  */
 
 /*
@@ -159,11 +159,11 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   static final String PRIORITY_PARAM_CRAWLER = "Crawler";
   static final int PRIORITY_DEFAULT_CRAWLER = Thread.NORM_PRIORITY - 1;
 
-  private static final String CRAWL_STATUS_TABLE_NAME = "crawl_status_table";
+  public static final String CRAWL_STATUS_TABLE_NAME = "crawl_status_table";
   public static final String CRAWL_URLS_STATUS_TABLE =
                                     "crawl_urls";
   public static final String SINGLE_CRAWL_STATUS_TABLE =
-                                    "single_crawl_status_table";                  
+                                    "single_crawl_status_table";
 
   private PluginManager pluginMgr;
 
@@ -208,6 +208,8 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     StatusService statusServ = getDaemon().getStatusService();
     statusServ.registerStatusAccessor(CRAWL_STATUS_TABLE_NAME,
 				      new CrawlManagerStatusAccessor(this));
+    statusServ.registerOverviewAccessor(CRAWL_STATUS_TABLE_NAME,
+					new CrawlManagerStatusAccessor.CrawlOverview(this));
     statusServ.registerStatusAccessor(CRAWL_URLS_STATUS_TABLE,
 				      new CrawlUrlsStatusAccessor(this));
     statusServ.registerStatusAccessor(SINGLE_CRAWL_STATUS_TABLE,
@@ -258,6 +260,9 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     StatusService statusServ = getDaemon().getStatusService();
     if (statusServ != null) {
       statusServ.unregisterStatusAccessor(CRAWL_STATUS_TABLE_NAME);
+      statusServ.unregisterOverviewAccessor(CRAWL_STATUS_TABLE_NAME);
+      statusServ.unregisterStatusAccessor(CRAWL_URLS_STATUS_TABLE);
+      statusServ.unregisterStatusAccessor(SINGLE_CRAWL_STATUS_TABLE);
     }
     super.stopService();
   }
@@ -542,8 +547,8 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       return;
     }
     if (spec != null && !spec.inCrawlWindow()) {
-      logger.debug("Not starting new content crawl due to crawl window: "
-		   + au);
+      logger.debug2("Not starting new content crawl due to crawl window: "
+		    + au);
       callCallback(cb, cookie, false, null);
       return;
     }
@@ -554,8 +559,8 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 			       PARAM_MAX_NEW_CONTENT_RATE,
 			       DEFAULT_MAX_NEW_CONTENT_RATE);
       if (!limiter.isEventOk()) {
-	logger.debug("Not starting new content crawl due to rate limiter: "
-		     + au);
+	logger.debug2("Not starting new content crawl due to rate limiter: "
+		      + au);
 	callCallback(cb, cookie, false, null);
 	return;
       }

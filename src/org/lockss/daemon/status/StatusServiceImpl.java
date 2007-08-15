@@ -1,5 +1,5 @@
 /*
- * $Id: StatusServiceImpl.java,v 1.30 2005-11-16 04:25:52 tlipkis Exp $
+ * $Id: StatusServiceImpl.java,v 1.31 2007-08-15 07:09:37 tlipkis Exp $
  */
 
 /*
@@ -37,19 +37,42 @@ import java.util.*;
 import org.apache.oro.text.regex.*;
 import org.lockss.app.*;
 import org.lockss.util.*;
+import org.lockss.config.*;
 
 /**
  * Main implementation of {@link StatusService}
  */
 public class StatusServiceImpl
-  extends BaseLockssManager implements StatusService {
+  extends BaseLockssManager implements StatusService, ConfigurableManager {
+
+  /**
+   * Name of default daemon status table
+   */
+  public static final String PARAM_DEFAULT_TABLE =
+    Configuration.PREFIX + "status.defaultTable";
+  public static final String DEFAULT_DEFAULT_TABLE =
+    OverviewStatus.OVERVIEW_STATUS_TABLE;
+
   private static Logger logger = Logger.getLogger("StatusServiceImpl");
+
+  private String paramDefaultTable = DEFAULT_DEFAULT_TABLE;
+
   private Map statusAccessors = new HashMap();
+  private Map overviewAccessors = new HashMap();
   private Map objRefAccessors = new HashMap();
 
   public void startService() {
     super.startService();
     registerStatusAccessor(ALL_TABLES_TABLE, new AllTableStatusAccessor());
+  }
+
+  public void setConfig(Configuration config, Configuration oldConfig,
+			Configuration.Differences changedKeys) {
+    paramDefaultTable = config.get(PARAM_DEFAULT_TABLE, DEFAULT_DEFAULT_TABLE);
+  }
+
+  public String getDefaultTableName() {
+    return paramDefaultTable;
   }
 
   public StatusTable getTable(String tableName, String key)
@@ -132,13 +155,58 @@ public class StatusServiceImpl
     logger.debug("Unregistered statusAccessor for table "+tableName);
   }
 
+  public void registerOverviewAccessor(String tableName,
+				       OverviewAccessor acc) {
+    if (isBadTableName(tableName)) {
+      throw new InvalidTableNameException("Invalid table name: "+tableName);
+    }
+
+    synchronized(overviewAccessors) {
+      Object oldAccessor = overviewAccessors.get(tableName);
+      if (oldAccessor != null) {
+	throw new
+	  StatusService.MultipleRegistrationException(oldAccessor
+						      +" already registered "
+						      +"for "+tableName);
+      }
+      overviewAccessors.put(tableName, acc);
+    }
+    logger.debug("Registered overview accessor for table "+tableName);
+  }
+
+  public void unregisterOverviewAccessor(String tableName){
+    synchronized(overviewAccessors) {
+      overviewAccessors.remove(tableName);
+    }
+    logger.debug("Unregistered overviewAccessor for table "+tableName);
+  }
+
+  static final BitSet EMPTY_BITSET = new BitSet();
+
+  public Object getOverview(String tableName) {
+    return getOverview(tableName, null);
+  }
+
+  public Object getOverview(String tableName, BitSet options) {
+    OverviewAccessor acc;
+    synchronized (overviewAccessors) {
+      acc = (OverviewAccessor)overviewAccessors.get(tableName);
+    }
+    if (acc != null) {
+      return acc.getOverview(tableName,
+			     (options == null) ? EMPTY_BITSET : options);
+    } else {
+      return null;
+    }
+  }
+
   public StatusTable.Reference getReference(String tableName, Object obj) {
     ObjRefAccessorSpec spec;
     synchronized (objRefAccessors) {
       spec = (ObjRefAccessorSpec)objRefAccessors.get(tableName);
     }
     if (spec != null && spec.cls.isInstance(obj)) {
-      return spec.accessor.getReference(obj, tableName);
+      return spec.accessor.getReference(tableName, obj);
     } else {
       return null;
     }

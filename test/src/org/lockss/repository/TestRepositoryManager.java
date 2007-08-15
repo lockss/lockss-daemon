@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryManager.java,v 1.6 2007-01-28 05:45:06 tlipkis Exp $
+ * $Id: TestRepositoryManager.java,v 1.7 2007-08-15 07:09:36 tlipkis Exp $
  */
 
 /*
@@ -82,6 +82,26 @@ public class TestRepositoryManager extends LockssTestCase {
 				  "37",
 				  "org.lockss.somethingElse", "bar");
     assertEquals(1, repo1.cnt);
+
+    PlatformUtil.DF warn = mgr.getDiskWarnThreshold();
+    PlatformUtil.DF full = mgr.getDiskFullThreshold();
+    assertEquals(5000 * 1024, warn.getAvail());
+    assertEquals(0.98, warn.getPercent(), .00001);
+    assertEquals(100 * 1024, full.getAvail());
+    assertEquals(0.99, full.getPercent(), .00001);
+
+    Properties p = new Properties();
+    p.put(RepositoryManager.PARAM_DISK_WARN_FRRE_MB, "17");
+    p.put(RepositoryManager.PARAM_DISK_WARN_FRRE_PERCENT, "20");
+    p.put(RepositoryManager.PARAM_DISK_FULL_FRRE_MB, "7");
+    p.put(RepositoryManager.PARAM_DISK_FULL_FRRE_PERCENT, "10");
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+    warn = mgr.getDiskWarnThreshold();
+    full = mgr.getDiskFullThreshold();
+    assertEquals(17 * 1024, warn.getAvail());
+    assertEquals(0.80, warn.getPercent(), .00001);
+    assertEquals(7 * 1024, full.getAvail());
+    assertEquals(0.90, full.getPercent(), .00001);
   }
 
   public void testGetRepositoryList() throws Exception {

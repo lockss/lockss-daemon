@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerStatusAccessor.java,v 1.10 2006-11-02 04:18:38 tlipkis Exp $
+ * $Id: TestCrawlManagerStatusAccessor.java,v 1.11 2007-08-15 07:09:36 tlipkis Exp $
  */
 
 /*
@@ -305,6 +305,30 @@ public class TestCrawlManagerStatusAccessor extends LockssTestCase {
     assertEquals(CRAWL_URLS_TABLE, ref.getTableName());
   }
 
+  public void testOverview() {
+    CrawlManagerStatusAccessor.CrawlOverview acc =
+      new CrawlManagerStatusAccessor.CrawlOverview(statusSource);
+
+    MockCrawlStatus status = new MockCrawlStatus();
+    status.setCrawlStatus(Crawler.STATUS_ACTIVE);
+
+    MockCrawlStatus status2 = new MockCrawlStatus();
+
+    statusSource.setCrawlStatusList(ListUtil.list(status, status2));
+
+    Object over = acc.getOverview("foo", new BitSet());
+    List lst = (List)over;
+    StatusTable.Reference ref = (StatusTable.Reference)lst.get(0);
+    assertEquals("crawl_status_table", ref.getTableName());
+    assertEquals("1 active crawl", ref.getValue());
+
+    status2.setCrawlStatus(Crawler.STATUS_ACTIVE);
+    over = acc.getOverview("foo", new BitSet());
+    lst = (List)over;
+    ref = (StatusTable.Reference)lst.get(0);
+    assertEquals("crawl_status_table", ref.getTableName());
+    assertEquals("2 active crawls", ref.getValue());
+  }
 
   public void testCrawlType() {
     StatusTable table = new StatusTable("test");

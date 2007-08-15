@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryStatus.java,v 1.28 2007-01-28 05:45:06 tlipkis Exp $
+ * $Id: LockssRepositoryStatus.java,v 1.29 2007-08-15 07:09:36 tlipkis Exp $
  */
 
 /*
@@ -67,12 +67,15 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
 				      new RepoStatusAccessor(theDaemon));
     statusServ.registerStatusAccessor(SPACE_TABLE_NAME,
 				      new RepoSpaceStatusAccessor(theDaemon));
+    statusServ.registerOverviewAccessor(SPACE_TABLE_NAME,
+				      new Overview(theDaemon));
   }
 
   public void stopService() {
     StatusService statusServ = getDaemon().getStatusService();
     statusServ.unregisterStatusAccessor(SERVICE_STATUS_TABLE_NAME);
     statusServ.unregisterStatusAccessor(SPACE_TABLE_NAME);
+    statusServ.unregisterOverviewAccessor(SPACE_TABLE_NAME);
     super.stopService();
   }
 
@@ -318,6 +321,7 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
   static class RepoSpaceStatusAccessor implements StatusAccessor {
     private LockssDaemon daemon;
     private RemoteApi remoteApi;
+    private RepositoryManager repoMgr;
 
     private static final List columnDescriptors = ListUtil.list
       (new ColumnDescriptor("repo", "Repository",
@@ -333,7 +337,7 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
 
     RepoSpaceStatusAccessor(LockssDaemon daemon) {
       this.daemon = daemon;
-      remoteApi = daemon.getRemoteApi();
+      repoMgr = daemon.getRepositoryManager();
     }
 
     public String getDisplayName() {
@@ -353,6 +357,7 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
     }
 
     private List getRows() {
+      RemoteApi remoteApi = daemon.getRemoteApi();
       List repos = remoteApi.getRepositoryList();
       List rows = new ArrayList();
       for (Iterator iter = repos.iterator(); iter.hasNext(); ) {
@@ -363,8 +368,18 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
 	if (df != null) {
 	  row.put("size", orderedKBObj(df.getSize()));
 	  row.put("used", orderedKBObj(df.getUsed()));
-	  row.put("free", orderedKBObj(df.getAvail()));
-	  row.put("percent", new Double(df.getPercent()));
+	  Object avail = orderedKBObj(df.getAvail());
+	  double percent = df.getPercent();
+	  if (df.isFullerThan(repoMgr.getDiskFullThreshold())) {
+	    row.put("free", new StatusTable.DisplayedValue(avail).setColor(Constants.COLOR_RED));
+	    row.put("percent", new StatusTable.DisplayedValue(percent).setColor(Constants.COLOR_RED));
+	  } else if (df.isFullerThan(repoMgr.getDiskWarnThreshold())) {
+	    row.put("free", new StatusTable.DisplayedValue(avail).setColor(Constants.COLOR_ORANGE));
+	    row.put("percent", new StatusTable.DisplayedValue(percent).setColor(Constants.COLOR_ORANGE));
+	  } else {
+	    row.put("free", avail);
+	    row.put("percent", percent);
+	  }
 	} else {
 	  row.put("size", "unavailable");
 	}
@@ -389,4 +404,49 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
       return res;
     }
   }
+
+  static class Overview implements OverviewAccessor {
+
+    private LockssDaemon daemon;
+    private RepositoryManager repoMgr;
+
+    public Overview(LockssDaemon daemon) {
+      this.daemon = daemon;
+      repoMgr = daemon.getRepositoryManager();
+    }
+
+    public Object getOverview(String tableName, BitSet options) {
+      RemoteApi remoteApi = daemon.getRemoteApi();
+      List repos = remoteApi.getRepositoryList();
+      List res = new ArrayList();
+      res.add(StringUtil.numberOfUnits(repos.size(), "disk: ", "disks: "));
+      for (Iterator iter = repos.iterator(); iter.hasNext(); ) {
+	String repo = (String)iter.next();
+	PlatformUtil.DF df = remoteApi.getRepositoryDF(repo);
+	if (df != null) {
+	  StringBuilder sb = new StringBuilder();
+	  sb.append(StringUtil.sizeKBToString(df.getSize()));
+	  sb.append(", ");
+	  sb.append(Long.toString(Math.round(df.getPercent() * 100)));
+	  sb.append("% full");
+	  Object s = sb.toString();
+ 	  if (df.isFullerThan(repoMgr.getDiskFullThreshold())) {
+	    s = new StatusTable.DisplayedValue(s)
+	      .setColor(Constants.COLOR_RED);
+	  } else if (df.isFullerThan(repoMgr.getDiskWarnThreshold())) {
+	    s = new StatusTable.DisplayedValue(s)
+	      .setColor(Constants.COLOR_ORANGE);
+	  }
+	  res.add(s);
+	} else {
+	  res.add("???");
+	}
+	if (iter.hasNext()) {
+	  res.add("; ");
+	}
+      }
+      return new StatusTable.Reference(res, SPACE_TABLE_NAME);
+    }
+  }
+
 }

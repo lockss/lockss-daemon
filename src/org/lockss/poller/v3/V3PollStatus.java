@@ -1,5 +1,5 @@
 /*
-* $Id: V3PollStatus.java,v 1.13 2007-01-23 21:44:35 smorabito Exp $
+* $Id: V3PollStatus.java,v 1.14 2007-08-15 07:09:36 tlipkis Exp $
  */
 
 /*
@@ -43,6 +43,8 @@ import org.lockss.plugin.*;
 import org.lockss.poller.*;
 import org.lockss.poller.PollManager.*;
 import org.lockss.poller.v3.*;
+import static org.lockss.poller.v3.V3Poller.*;
+import static org.lockss.poller.v3.V3Voter.*;
 import org.lockss.protocol.*;
 
 /**
@@ -244,6 +246,103 @@ public class V3PollStatus {
                                         "V3VoterDetailTable",
                                         voter.getKey()));
       return row;
+    }
+  }
+
+  public static class PollOverview
+    extends V3PollerStatus implements OverviewAccessor {
+
+    public PollOverview(PollManager pollManager) {
+      super(pollManager);
+    }
+
+    public Object getOverview(String tableName, BitSet options) {
+      int nActive = 0;
+      int nNoQuorum = 0;
+      int nComplete = 0;
+      int nTooBusy = 0;
+      for (V3Poller poller :
+	     (Collection<V3Poller>)pollManager.getV3Pollers()) {
+	switch (poller.getStatus()) {
+	case POLLER_STATUS_STARTING:
+	case POLLER_STATUS_RESUMING:
+	case POLLER_STATUS_INVITING_PEERS:
+	case POLLER_STATUS_HASHING:
+	case POLLER_STATUS_TALLYING:
+	case POLLER_STATUS_WAITING_REPAIRS:
+	  nActive++;
+	  break;
+	case POLLER_STATUS_COMPLETE:
+	  nComplete++;
+	  break;
+	case POLLER_STATUS_NO_QUORUM:
+	  nNoQuorum++;
+	  break;
+	case POLLER_STATUS_ERROR:
+	case POLLER_STATUS_EXPIRED:
+	  break;
+	case POLLER_STATUS_NO_TIME:
+	  nTooBusy++;
+	  break;
+	}
+      }
+      List lst = new ArrayList();
+
+      lst.add(StringUtil.numberOfUnits(nActive,
+				       "active poll", "active polls"));
+      if (nComplete > 0) lst.add(nComplete + " complete");
+      if (nNoQuorum > 0) lst.add(nNoQuorum + " no quorum");
+      if (nTooBusy > 0) lst.add(nTooBusy + " too busy");
+      String summ = StringUtil.separatedString(lst, ", ");
+      return new StatusTable.Reference(summ, POLLER_STATUS_TABLE_NAME);
+    }
+  }
+
+  public static class VoterOverview
+    extends V3PollerStatus implements OverviewAccessor {
+
+    public VoterOverview(PollManager pollManager) {
+      super(pollManager);
+    }
+
+    public Object getOverview(String tableName, BitSet options) {
+      int nActive = 0;
+      int nError = 0;
+      int nComplete = 0;
+      int nTooBusy = 0;
+      for (V3Voter voter :
+	     (Collection<V3Voter>)pollManager.getV3Voters()) {
+	switch (voter.getStatus()) {
+	case STATUS_INITIALIZED:
+	case STATUS_ACCEPTED_POLL:
+	case STATUS_HASHING:
+	case STATUS_VOTED:
+	  nActive++;
+	  break;
+	case STATUS_NO_TIME:
+	  nTooBusy++;
+	  break;
+	case STATUS_COMPLETE:
+	  nComplete++;
+	  break;
+	case STATUS_EXPIRED:
+	case STATUS_ERROR:
+	  nError++;
+	  break;
+	case STATUS_DECLINED_POLL:
+	case STATUS_VOTE_ACCEPTED:
+	  break;
+	}
+      }
+      List lst = new ArrayList();
+
+      lst.add(StringUtil.numberOfUnits(nActive,
+				       "active vote", "active votes"));
+      if (nComplete > 0) lst.add(nComplete + " complete");
+      if (nTooBusy > 0) lst.add(nTooBusy + " too busy");
+      if (nError > 0) lst.add(nError + " error");
+      String summ = StringUtil.separatedString(lst, ", ");
+      return new StatusTable.Reference(summ, VOTER_STATUS_TABLE_NAME);
     }
   }
 

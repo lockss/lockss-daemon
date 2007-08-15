@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryManager.java,v 1.10 2007-07-18 07:13:09 tlipkis Exp $
+ * $Id: RepositoryManager.java,v 1.11 2007-08-15 07:09:36 tlipkis Exp $
  */
 
 /*
@@ -76,6 +76,20 @@ public class RepositoryManager
   static final String PRIORITY_PARAM_SIZE_CALC = "SizeCalc";
   static final int PRIORITY_DEFAULT_SIZE_CALC = Thread.NORM_PRIORITY - 1;
 
+  static final String DISK_PREFIX = PREFIX + "diskSpace.";
+  
+
+  static final String PARAM_DISK_WARN_FRRE_MB = DISK_PREFIX + "warn.freeMB";
+  static final int DEFAULT_DISK_WARN_FRRE_MB = 5000;
+  static final String PARAM_DISK_FULL_FRRE_MB = DISK_PREFIX + "full.freeMB";
+  static final int DEFAULT_DISK_FULL_FRRE_MB = 100;
+  static final String PARAM_DISK_WARN_FRRE_PERCENT =
+    DISK_PREFIX + "warn.freePercent";
+  static final double DEFAULT_DISK_WARN_FRRE_PERCENT = .02;
+  static final String PARAM_DISK_FULL_FRRE_PERCENT =
+    DISK_PREFIX + "full.freePercent";
+  static final double DEFAULT_DISK_FULL_FRRE_PERCENT = .01;
+
   private PlatformUtil platInfo = PlatformUtil.getInstance();
   private List repoList = Collections.EMPTY_LIST;
   int paramNodeCacheSize = DEFAULT_MAX_PER_AU_CACHE_SIZE;
@@ -84,6 +98,13 @@ public class RepositoryManager
   UniqueRefLruCache globalNodeCache =
       new UniqueRefLruCache(DEFAULT_MAX_GLOBAL_CACHE_SIZE);
   Map localRepos = new HashMap();
+
+  PlatformUtil.DF paramDFWarn =
+    PlatformUtil.DF.makeThreshold(DEFAULT_DISK_WARN_FRRE_MB,
+				  DEFAULT_DISK_WARN_FRRE_PERCENT);
+  PlatformUtil.DF paramDFFull =
+    PlatformUtil.DF.makeThreshold(DEFAULT_DISK_FULL_FRRE_MB,
+				  DEFAULT_DISK_FULL_FRRE_PERCENT);
 
   private float sizeCalcMaxLoad = DEFAULT_SIZE_CALC_MAX_LOAD;
 
@@ -130,6 +151,18 @@ public class RepositoryManager
 	globalNodeCache.setMaxSize(paramGlobalNodeCacheSize);
       }
     }
+    if (changedKeys.contains(DISK_PREFIX)) {
+      int minMB = config.getInt(PARAM_DISK_WARN_FRRE_MB,
+				DEFAULT_DISK_WARN_FRRE_MB);
+      double minPer = config.getPercentage(PARAM_DISK_WARN_FRRE_PERCENT,
+					   DEFAULT_DISK_WARN_FRRE_PERCENT);
+      paramDFWarn = PlatformUtil.DF.makeThreshold(minMB, minPer);
+      minMB = config.getInt(PARAM_DISK_FULL_FRRE_MB,
+				DEFAULT_DISK_FULL_FRRE_MB);
+      minPer = config.getPercentage(PARAM_DISK_FULL_FRRE_PERCENT,
+					   DEFAULT_DISK_FULL_FRRE_PERCENT);
+      paramDFFull = PlatformUtil.DF.makeThreshold(minMB, minPer);
+    }
     if (changedKeys.contains(PARAM_SIZE_CALC_MAX_LOAD)) {
       sizeCalcMaxLoad = config.getPercentage(PARAM_SIZE_CALC_MAX_LOAD,
 					     DEFAULT_SIZE_CALC_MAX_LOAD);
@@ -150,6 +183,14 @@ public class RepositoryManager
     } catch (PlatformUtil.UnsupportedException e) {
       return null;
     }
+  }
+
+  public PlatformUtil.DF getDiskWarnThreshold() {
+    return paramDFWarn;
+  }
+
+  public PlatformUtil.DF getDiskFullThreshold() {
+    return paramDFFull;
   }
 
   public List findExistingRepositoriesFor(String auid) {

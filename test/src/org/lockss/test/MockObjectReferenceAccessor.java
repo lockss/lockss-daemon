@@ -1,5 +1,5 @@
 /*
- * $Id: MockObjectReferenceAccessor.java,v 1.2 2003-06-20 22:34:56 claire Exp $
+ * $Id: MockObjectReferenceAccessor.java,v 1.3 2007-08-15 07:09:36 tlipkis Exp $
  */
 
 /*
@@ -40,7 +40,7 @@ public class MockObjectReferenceAccessor implements ObjectReferenceAccessor {
   private String table;
   private StatusTable.Reference ref;
 
-  public StatusTable.Reference getReference(Object obj, String tableName) {
+  public StatusTable.Reference getReference(String tableName, Object obj) {
     this.obj = obj;
     this.table = tableName;
     return ref;

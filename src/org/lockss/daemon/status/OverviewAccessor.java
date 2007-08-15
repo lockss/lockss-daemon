@@ -1,5 +1,5 @@
 /*
- * $Id: ObjectReferenceAccessor.java,v 1.5 2007-08-15 07:09:37 tlipkis Exp $
+ * $Id: OverviewAccessor.java,v 1.1 2007-08-15 07:09:37 tlipkis Exp $
  */
 
 /*
@@ -32,22 +32,16 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.daemon.status;
 
-/**
- * Objects wishing to provide references to tables should implement this
- *
- * Used by {@link StatusService} to generate {@link StatusTable.Reference}s.
- */
+import java.util.*;
 
-public interface ObjectReferenceAccessor {
+/**
+ * Accessor for an overview status line for a subsystem
+ */
+public interface OverviewAccessor {
   /**
-   * Create a {@link StatusTable.Reference} to the named table with a key
-   * appropriate to select and/or filter on the supplied object.
-   * @param obj Object used to generate the key
-   * @param tableName table name under which this ObjectReferenceAccessor
-   * was registered.
-   * @return a {@link StatusTable.Reference} with a key derived from the
-   * object, and a value appropriate to display in a link to the
-   * referred-to table.
+   * Return an Object (presumaly a List) which displays as an overview of
+   * the status of a subsystem, and contains reference(s) to more detailed
+   * status of the subsystem
    */
-  public StatusTable.Reference getReference(String tableName, Object obj);
+  public Object getOverview(String tableName, BitSet options);
 }
