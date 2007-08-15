@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.48 2007-07-26 03:44:09 tlipkis Exp $
+ * $Id: ServletUtil.java,v 1.49 2007-08-15 07:10:29 tlipkis Exp $
  */
 
 /*
@@ -49,6 +49,7 @@ import org.lockss.jetty.MyTextArea;
 import org.lockss.plugin.*;
 import org.lockss.remote.*;
 import org.lockss.remote.RemoteApi.BatchAuStatus;
+import org.lockss.repository.*;
 import org.lockss.servlet.BatchAuConfig.Verb;
 import org.lockss.util.*;
 import org.mortbay.html.*;
@@ -217,8 +218,6 @@ public class ServletUtil {
 
   private static final int CHOOSESETS_TABLE_BORDER = 0;
 
-  private static final String COLOR_WHITE = "#ffffff"; /* (a) */
-
   private static final String DOCTYPE =
     "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">";
 
@@ -297,7 +296,7 @@ public class ServletUtil {
     "<ol><font size=\"-1\">";
 
   private static final String PAGE_BGCOLOR =
-    COLOR_WHITE;
+    Constants.COLOR_WHITE;
 
   private static final String REPOCHOICE_CELL_ATTRIBUTES =
     "colspan=\"4\" align=\"center\"";
@@ -867,8 +866,10 @@ public class ServletUtil {
                                       RemoteApi remoteApi,
                                       String repoFootnote,
                                       String repoTag) {
-    Table tbl = new Table(REPOCHOICE_TABLE_BORDER, REPOCHOICE_TABLE_ATTRIBUTES);
-    List repos = remoteApi.getRepositoryList();
+    RepositoryManager repoMgr =
+      servlet.getLockssDaemon().getRepositoryManager();
+
+    Table tbl = new Table(REPOCHOICE_TABLE_BORDER, REPOCHOICE_TABLE_ATTRIBUTES);    List repos = remoteApi.getRepositoryList();
 
     if (repos.size() > 1) {
       tbl.newRow();
@@ -904,20 +905,26 @@ public class ServletUtil {
         tbl.newRow();
         tbl.newCell(ALIGN_LEFT); // "Repository"
         tbl.add(radioButton(servlet, repoTag, repo, repo == mostFree));
-        if (df != null) {
-          tbl.newCell(ALIGN_RIGHT); // "Size"
-          tbl.add(SPACE);
-          tbl.add(StringUtil.sizeKBToString(df.getSize()));
-          tbl.newCell(ALIGN_RIGHT); // "Free"
-          tbl.add(SPACE);
-          tbl.add(StringUtil.sizeKBToString(df.getAvail()));
-          tbl.newCell(ALIGN_RIGHT); // "%Full"
-          tbl.add(SPACE);
-          tbl.add(df.getPercentString());
-        }
+	addDfToRow(repoMgr, df, tbl);
       }
 
       comp.add(tbl);
+    }
+  }
+
+  static void addDfToRow(RepositoryManager repoMgr,
+			 PlatformUtil.DF df, Table tbl) {
+    if (df != null) {
+      tbl.newCell(ALIGN_RIGHT); // "Size"
+      tbl.add(SPACE);
+      tbl.add(StringUtil.sizeKBToString(df.getSize()));
+      tbl.newCell(ALIGN_RIGHT); // "Free"
+      tbl.add(SPACE);
+      tbl.add(diskSpaceColor(repoMgr, df,
+			     StringUtil.sizeKBToString(df.getAvail())));
+      tbl.newCell(ALIGN_RIGHT); // "%Full"
+      tbl.add(SPACE);
+      tbl.add(diskSpaceColor(repoMgr, df, df.getPercentString()));
     }
   }
 
@@ -1170,6 +1177,9 @@ public class ServletUtil {
   public static Element makeRepoTable(LockssServlet servlet,
                                       Map repoMap,
                                       String keyDefaultRepo) {
+    RepositoryManager repoMgr =
+      servlet.getLockssDaemon().getRepositoryManager();
+
     Table tbl = new Table(REPOTABLE_BORDER, REPOTABLE_ATTRIBUTES);
     tbl.newRow();
     tbl.addHeading("Available Disks", "colspan=\"6\"");
@@ -1211,23 +1221,28 @@ public class ServletUtil {
       tbl.add(Integer.toString(ix) + "." + SPACE);
       tbl.newCell(ALIGN_LEFT); // "Location"
       tbl.add(repo);
-      if (df != null) {
-        tbl.newCell(ALIGN_RIGHT); // "Size"
-        tbl.add(SPACE);
-        tbl.add(StringUtil.sizeKBToString(df.getSize()));
-        tbl.newCell(ALIGN_RIGHT); // "Free"
-        tbl.add(SPACE);
-        tbl.add(StringUtil.sizeKBToString(df.getAvail()));
-        tbl.newCell(ALIGN_RIGHT); // "%Full"
-        tbl.add(SPACE);
-        tbl.add(df.getPercentString());
-      }
+      addDfToRow(repoMgr, df, tbl);
     }
 
     tbl.newRow();
     tbl.newCell("colspan=\"6\"");
     tbl.add(Break.rule);
     return tbl;
+  }
+
+  static String diskSpaceColor(RepositoryManager repoMgr,
+			       PlatformUtil.DF df, String s) {
+    String color = null;
+    if (df.isFullerThan(repoMgr.getDiskFullThreshold())) {
+      color = Constants.COLOR_RED;
+    } else if (df.isFullerThan(repoMgr.getDiskWarnThreshold())) {
+      color = Constants.COLOR_ORANGE;
+    }      
+    if (color != null) {
+      return "<font color=\"" + color + "\">" + s + "</font>";
+    } else {
+      return s;
+    }
   }
 
   /**
