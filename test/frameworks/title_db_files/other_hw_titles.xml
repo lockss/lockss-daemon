@@ -4028,8 +4028,8 @@
                 value="org.lockss.plugin.highwire.RockefellerUniversityPressPdfTransform$Simplified" />
     </property>
 
-    <property name="HighWireAdvancesinPsychiatricTreatment12">
-      <property name="title" value="Advances in Psychiatric Treatment Volume 12" />
+    <property name="HighWireAdvancesinPsychiatricTreatment11">
+      <property name="title" value="Advances in Psychiatric Treatment Volume 11" />
       <property name="journalTitle" value="Advances in Psychiatric Treatment" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
@@ -4038,7 +4038,52 @@
       </property>
       <property name="param.2">
 	<property name="key" value="volume_name" />
-	<property name="value" value="12" />
+	<property name="value" value="11" />
+      </property>
+      <property name="attributes.publisher" value="Royal College of Psychiatrists" />
+    </property>
+
+    <property name="HighWireAdvancesinPsychiatricTreatment13">
+      <property name="title" value="Advances in Psychiatric Treatment Volume 13" />
+      <property name="journalTitle" value="Advances in Psychiatric Treatment" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://apt.rcpsych.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="13" />
+      </property>
+      <property name="attributes.publisher" value="Royal College of Psychiatrists" />
+    </property>
+
+    <property name="HighWireTheBritishJournalofPsychiatry186">
+      <property name="title" value="The British Journal of Psychiatry Volume 186" />
+      <property name="journalTitle" value="The British Journal of Psychiatry" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://bjp.rcpsych.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="186" />
+      </property>
+      <property name="attributes.publisher" value="Royal College of Psychiatrists" />
+    </property>
+
+    <property name="HighWireTheBritishJournalofPsychiatry187">
+      <property name="title" value="The British Journal of Psychiatry Volume 187" />
+      <property name="journalTitle" value="The British Journal of Psychiatry" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://bjp.rcpsych.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="187" />
       </property>
       <property name="attributes.publisher" value="Royal College of Psychiatrists" />
     </property>
@@ -4058,6 +4103,50 @@
       <property name="attributes.publisher" value="Royal College of Psychiatrists" />
     </property>
 
+    <property name="HighWireTheBritishJournalofPsychiatry189">
+      <property name="title" value="The British Journal of Psychiatry Volume 189" />
+      <property name="journalTitle" value="The British Journal of Psychiatry" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://bjp.rcpsych.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="189" />
+      </property>
+      <property name="attributes.publisher" value="Royal College of Psychiatrists" />
+    </property>
+
+    <property name="HighWireTheBritishJournalofPsychiatry190">
+      <property name="title" value="The British Journal of Psychiatry Volume 190" />
+      <property name="journalTitle" value="The British Journal of Psychiatry" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://bjp.rcpsych.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="190" />
+      </property>
+      <property name="attributes.publisher" value="Royal College of Psychiatrists" />
+    </property>
+
+    <property name="HighWirePsychiatricBulletin29">
+      <property name="title" value="Psychiatric Bulletin Volume 29" />
+      <property name="journalTitle" value="Psychiatric Bulletin" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://pb.rcpsych.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="29" />
+      </property>
+      <property name="attributes.publisher" value="Royal College of Psychiatrists" />
+    </property>
     <property name="HighWirePsychiatricBulletin30">
       <property name="title" value="Psychiatric Bulletin Volume 30" />
       <property name="journalTitle" value="Psychiatric Bulletin" />
@@ -4069,6 +4158,21 @@
       <property name="param.2">
 	<property name="key" value="volume_name" />
 	<property name="value" value="30" />
+      </property>
+      <property name="attributes.publisher" value="Royal College of Psychiatrists" />
+    </property>
+
+    <property name="HighWirePsychiatricBulletin31">
+      <property name="title" value="Psychiatric Bulletin Volume 31" />
+      <property name="journalTitle" value="Psychiatric Bulletin" />
+      <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+      <property name="param.1">
+	<property name="key" value="base_url" />
+	<property name="value" value="http://pb.rcpsych.org/" />
+      </property>
+      <property name="param.2">
+	<property name="key" value="volume_name" />
+	<property name="value" value="31" />
       </property>
       <property name="attributes.publisher" value="Royal College of Psychiatrists" />
     </property>
