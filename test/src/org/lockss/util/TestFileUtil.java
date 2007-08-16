@@ -1,5 +1,5 @@
 /*
- * $Id: TestFileUtil.java,v 1.8 2005-10-11 05:52:45 tlipkis Exp $
+ * $Id: TestFileUtil.java,v 1.9 2007-08-16 02:22:42 tlipkis Exp $
  */
 
 /*
@@ -181,6 +181,33 @@ public class TestFileUtil extends LockssTestCase {
     assertFalse(dir.exists());
   }
 
-}
+  public void testDelTreeNoDir() throws IOException {
+    File dir = FileUtil.createTempDir("deltree", null);
+    File d1 = new File(dir, "foo");
+    assertFalse(d1.exists());
+    assertTrue(FileUtil.delTree(d1));
+  }
 
+  public void testEmptyDir() throws IOException {
+    File dir = FileUtil.createTempDir("deltree", null);
+    File d1 = new File(dir, "foo");
+    assertTrue(d1.mkdir());
+    File d2 = new File(d1, "bar");
+    assertTrue(d2.mkdir());
+    assertTrue(new File(dir, "f1").createNewFile());
+    assertTrue(new File(d1, "d1f1").createNewFile());
+    assertTrue(new File(d2, "d2f1").createNewFile());
+    assertFalse(dir.delete());
+    assertTrue(FileUtil.emptyDir(dir));
+    String files[] = dir.list();
+    assertEquals(0, files.length);
+  }
+
+  public void testEmptyDirNoDir() throws IOException {
+    File dir = FileUtil.createTempDir("deltree", null);
+    File d1 = new File(dir, "foo");
+    assertFalse(d1.exists());
+    assertFalse(FileUtil.emptyDir(d1));
+  }
+}
 

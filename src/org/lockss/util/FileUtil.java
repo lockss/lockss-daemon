@@ -1,5 +1,5 @@
 /*
- * $Id: FileUtil.java,v 1.7 2006-11-09 01:44:54 thib_gc Exp $
+ * $Id: FileUtil.java,v 1.8 2007-08-16 02:22:42 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -274,6 +274,10 @@ public class FileUtil {
    * @return true iff successful */
   public static boolean emptyDir(File dir) {
     String files[] = dir.list();
+    if (files == null) {
+      return false;		  // true would imply there's an empty
+				  // dir, which there doesn't seem to be
+    }
     boolean ret = true;
     for (int i = 0; i < files.length; i++) {
       File f = new File(dir, files[i]);
@@ -290,7 +294,10 @@ public class FileUtil {
   /** Delete a directory and its contents.
    * @return true iff successful */
   public static boolean delTree(File dir) {
-    return emptyDir(dir) && dir.delete();
+    emptyDir(dir);
+    if (dir.delete()) {
+      return true;
+    } else return !dir.exists();
   }
 
   private static File generateFile(String prefix, String suffix, File dir)
