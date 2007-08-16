@@ -1,5 +1,5 @@
 /*
- * $Id: BatchAuConfig.java,v 1.35 2007-06-21 07:30:44 tlipkis Exp $
+ * $Id: BatchAuConfig.java,v 1.36 2007-08-16 02:22:17 tlipkis Exp $
  */
 
 /*
@@ -416,15 +416,14 @@ public class BatchAuConfig extends LockssServlet {
     frm.add(new Input(Input.Hidden, ACTION_TAG));
     frm.add(new Input(Input.Hidden, KEY_VERB, verb.valStr));
 
-    // Only if repoFlg
-    if (repoFlg) {
-      OrderedMap repoChoices = new LinkedMap();
-      for (Iterator iter = repos.iterator(); iter.hasNext(); ) {
-        String repo = (String)iter.next();
-        PlatformUtil.DF df = remoteApi.getRepositoryDF(repo);
-        repoChoices.put(repo, df);
-      }
+    OrderedMap repoChoices = new LinkedMap();
+    for (Iterator iter = repos.iterator(); iter.hasNext(); ) {
+      String repo = (String)iter.next();
+      PlatformUtil.DF df = remoteApi.getRepositoryDF(repo);
+      repoChoices.put(repo, df);
+    }
       frm.add(ServletUtil.makeRepoTable(this, repoChoices, KEY_DEFAULT_REPO));
+    if (repoFlg) {
       session.setAttribute(SESSION_KEY_REPO_MAP, repoChoices);
     }
 
@@ -477,7 +476,7 @@ public class BatchAuConfig extends LockssServlet {
     String[] auids = req.getParameterValues(KEY_AUID);
     String defaultRepo = null;
     String defRepoId = getParameter(KEY_DEFAULT_REPO);
-    if (!StringUtil.isNullString(defRepoId)) {
+    if (!StringUtil.isNullString(defRepoId) && repoMap != null) {
       try {
 	int n = Integer.parseInt(defRepoId);
 	defaultRepo = (String)repoMap.get(n - 1);
@@ -499,7 +498,7 @@ public class BatchAuConfig extends LockssServlet {
       Configuration tcConfig = (Configuration)auConfs.get(auid);
       tcConfig.remove(PluginManager.AU_PARAM_REPOSITORY);
       String repoId = getParameter(KEY_REPO + "_" + auid);
-      if (!StringUtil.isNullString(repoId)) {
+      if (!StringUtil.isNullString(repoId) && repoMap != null) {
 	try {
 	  int repoIx = Integer.parseInt(repoId);
 	  if (!StringUtil.isNullString(repoId)) {

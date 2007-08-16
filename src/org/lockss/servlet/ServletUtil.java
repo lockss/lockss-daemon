@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.49 2007-08-15 07:10:29 tlipkis Exp $
+ * $Id: ServletUtil.java,v 1.50 2007-08-16 02:22:17 tlipkis Exp $
  */
 
 /*
@@ -870,46 +870,52 @@ public class ServletUtil {
       servlet.getLockssDaemon().getRepositoryManager();
 
     Table tbl = new Table(REPOCHOICE_TABLE_BORDER, REPOCHOICE_TABLE_ATTRIBUTES);    List repos = remoteApi.getRepositoryList();
+    boolean isChoice = repos.size() > 1;
 
-    if (repos.size() > 1) {
-      tbl.newRow();
-      tbl.newCell(REPOCHOICE_CELL_ATTRIBUTES);
+    tbl.newRow();
+    tbl.newCell(REPOCHOICE_CELL_ATTRIBUTES);
+    if (isChoice) {
       tbl.add("Select Repository");
       tbl.add(servlet.addFootnote(repoFootnote));
+    } else {
+      tbl.add("Disk Space");
+    }
+    tbl.newRow();
+    tbl.addHeading("Repository");
+    tbl.addHeading("Size");
+    tbl.addHeading("Free");
+    tbl.addHeading("%Full");
 
-      tbl.newRow();
-      tbl.addHeading("Repository");
-      tbl.addHeading("Size");
-      tbl.addHeading("Free");
-      tbl.addHeading("%Full");
-
-      ListOrderedMap repomap = new ListOrderedMap();
-      String mostFree = null;
-      for (Iterator iter = repos.iterator(); iter.hasNext(); ) {
-        String repo = (String)iter.next();
-        PlatformUtil.DF df = remoteApi.getRepositoryDF(repo);
-	repomap.put(repo, df);
-	if (df != null) {
-	  if (mostFree == null ||
-	      ((PlatformUtil.DF)repomap.get(mostFree)).getAvail() <
-	      df.getAvail()) {
-	    mostFree = repo;
-	  }
+    ListOrderedMap repomap = new ListOrderedMap();
+    String mostFree = null;
+    for (Iterator iter = repos.iterator(); iter.hasNext(); ) {
+      String repo = (String)iter.next();
+      PlatformUtil.DF df = remoteApi.getRepositoryDF(repo);
+      repomap.put(repo, df);
+      if (df != null) {
+	if (mostFree == null ||
+	    ((PlatformUtil.DF)repomap.get(mostFree)).getAvail() <
+	    df.getAvail()) {
+	  mostFree = repo;
 	}
       }
-      for (Iterator iter = repomap.entrySet().iterator(); iter.hasNext(); ) {
-	Map.Entry entry = (Map.Entry)iter.next();
-        String repo = (String)entry.getKey();
-        PlatformUtil.DF df = (PlatformUtil.DF)entry.getValue();
-
-        tbl.newRow();
-        tbl.newCell(ALIGN_LEFT); // "Repository"
-        tbl.add(radioButton(servlet, repoTag, repo, repo == mostFree));
-	addDfToRow(repoMgr, df, tbl);
-      }
-
-      comp.add(tbl);
     }
+    for (Iterator iter = repomap.entrySet().iterator(); iter.hasNext(); ) {
+      Map.Entry entry = (Map.Entry)iter.next();
+      String repo = (String)entry.getKey();
+      PlatformUtil.DF df = (PlatformUtil.DF)entry.getValue();
+
+      tbl.newRow();
+      tbl.newCell(ALIGN_LEFT); // "Repository"
+      if (isChoice) {
+	tbl.add(radioButton(servlet, repoTag, repo, repo == mostFree));
+      } else {
+	tbl.add(repo);
+      }
+      addDfToRow(repoMgr, df, tbl);
+    }
+
+    comp.add(tbl);
   }
 
   static void addDfToRow(RepositoryManager repoMgr,
@@ -1179,33 +1185,43 @@ public class ServletUtil {
                                       String keyDefaultRepo) {
     RepositoryManager repoMgr =
       servlet.getLockssDaemon().getRepositoryManager();
+    boolean isChoice = repoMap.size() > 1;
 
     Table tbl = new Table(REPOTABLE_BORDER, REPOTABLE_ATTRIBUTES);
     tbl.newRow();
-    tbl.addHeading("Available Disks", "colspan=\"6\"");
+    if (isChoice) {
+      tbl.addHeading("Available Disks", "colspan=\"6\"");
+    } else {
+      tbl.addHeading("Disk Space", "colspan=\"4\"");
+    }
     tbl.newRow();
-    tbl.addHeading("Default");
-    tbl.addHeading("Disk");
+    if (isChoice) {
+      tbl.addHeading("Default");
+      tbl.addHeading("Disk");
+    }
     tbl.addHeading("Location");
     tbl.addHeading("Size");
     tbl.addHeading("Free");
     tbl.addHeading("%Full");
 
-    // Populate repo key table
     String mostFree = null;
-    for (Iterator iter = repoMap.entrySet().iterator(); iter.hasNext(); ) {
-      Map.Entry entry = (Map.Entry)iter.next();
-      String repo = (String)entry.getKey();
-      PlatformUtil.DF df = (PlatformUtil.DF)entry.getValue();
-      if (df != null) {
-	if (mostFree == null ||
-	    df.getAvail() >
-	    ((PlatformUtil.DF)repoMap.get(mostFree)).getAvail()) {
-	  mostFree = repo;
+    if (isChoice) {
+      // find disk with most free space
+      for (Iterator iter = repoMap.entrySet().iterator(); iter.hasNext(); ) {
+	Map.Entry entry = (Map.Entry)iter.next();
+	String repo = (String)entry.getKey();
+	PlatformUtil.DF df = (PlatformUtil.DF)entry.getValue();
+	if (df != null) {
+	  if (mostFree == null ||
+	      df.getAvail() >
+	      ((PlatformUtil.DF)repoMap.get(mostFree)).getAvail()) {
+	    mostFree = repo;
+	  }
 	}
       }
     }
     int ix = 0;
+    // Populate repo key table
     for (Iterator iter = repoMap.entrySet().iterator(); iter.hasNext(); ) {
       ix++;
       Map.Entry entry = (Map.Entry)iter.next();
@@ -1214,11 +1230,13 @@ public class ServletUtil {
 
       // Populate row for entry
       tbl.newRow(REPOTABLE_ROW_ATTRIBUTES);
-      tbl.newCell(ALIGN_CENTER); // "Default"
-      tbl.add(radioButton(servlet, keyDefaultRepo, Integer.toString(ix),
-			  null, repo == mostFree));
-      tbl.newCell(ALIGN_RIGHT); // "Disk"
-      tbl.add(Integer.toString(ix) + "." + SPACE);
+      if (isChoice) {
+	tbl.newCell(ALIGN_CENTER); // "Default"
+	tbl.add(radioButton(servlet, keyDefaultRepo, Integer.toString(ix),
+			    null, repo == mostFree));
+	tbl.newCell(ALIGN_RIGHT); // "Disk"
+	tbl.add(Integer.toString(ix) + "." + SPACE);
+      }
       tbl.newCell(ALIGN_LEFT); // "Location"
       tbl.add(repo);
       addDfToRow(repoMgr, df, tbl);
@@ -1607,7 +1625,7 @@ public class ServletUtil {
   public static Element notStartedWarning() {
     Composite warning = new Composite();
     warning.add("<center><font color=red size=+1>");
-    warning.add("This LOCKSS Cache is still starting.  Table contents may be incomplete.");
+    warning.add("This LOCKSS box is still starting.  Table contents may be incomplete.");
     warning.add("</font></center><br>");
     return warning;
   }
