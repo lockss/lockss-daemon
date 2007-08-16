@@ -1,5 +1,5 @@
 /*
- * $Id: TestServletUtil.java,v 1.3 2007-01-14 07:55:29 tlipkis Exp $
+ * $Id: TestServletUtil.java,v 1.4 2007-08-16 02:38:54 tlipkis Exp $
  */
 
 /*
@@ -100,7 +100,7 @@ public class TestServletUtil extends LockssTestCase {
       "</td></tr>" +
       (!started ? ("<tr><td align=\"center\" colspan=\"3\"><center>" +
 		     "<font color=red size=\\+1>" +
-		     "This LOCKSS Cache is still starting.  " +
+		     "This LOCKSS box is still starting.  " +
 		     "Table contents may be incomplete.</font></center>" +
 		     "<br></td></tr>")
        : "") +
