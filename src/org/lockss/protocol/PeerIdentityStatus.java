@@ -1,5 +1,5 @@
 /*
- * $Id: PeerIdentityStatus.java,v 1.2 2007-08-14 03:10:26 smorabito Exp $
+ * $Id: PeerIdentityStatus.java,v 1.3 2007-08-17 07:37:02 smorabito Exp $
  */
 
 /*
@@ -56,6 +56,9 @@ public class PeerIdentityStatus implements LockssSerializable {
   
   // The number of poll requests this peer has rejected.
   private int totalRejectedPolls = 0;
+  
+  // The number of poll invitations we have sent to this peer.
+  private long totalPollInvitations = 0;
 
   // The total number of messages exchanged with this peer.
   private long totalMessages = 0;
@@ -68,6 +71,9 @@ public class PeerIdentityStatus implements LockssSerializable {
   
   // The last time that this peer rejected a poll from us.
   private long lastRejectionTime;
+  
+  // The last time that we tried to invite this peer into a poll.
+  private long lastPollInvitationTime;
   
   // The PollNak code of the last rejection, if any.
   private PollNak lastPollNak;
@@ -169,6 +175,21 @@ public class PeerIdentityStatus implements LockssSerializable {
   public void setTotalRejectedPolls(int totalRejectedPolls) {
     this.totalRejectedPolls = totalRejectedPolls;
   }
+  
+  /**
+   * @return The total number of polls this peer has been invited into.
+   */
+  public long getTotalPollInvitatioins() {
+    return totalPollInvitations;
+  }
+  
+  /**
+   * @param totalInvitations The total number of polls this peer has been
+   * invited into.
+   */
+  public void setTotalPollInvitations(long totalInvitations) {
+    this.totalPollInvitations = totalInvitations;
+  }
 
   /**
    * @return the total number of messages heard from this peer.
@@ -226,6 +247,20 @@ public class PeerIdentityStatus implements LockssSerializable {
   public void setLastRejectionTime(long lastRejectionTime) {
     this.lastRejectionTime = lastRejectionTime;
   }
+  
+  /**
+   * @return The last time that we attempted to invite this peer into a poll.
+   */
+  public long getLastPollInvitationTime() {
+    return lastPollInvitationTime;
+  }
+
+  /**
+   * @return The last time that we attempted to invite this peer into a poll.
+   */
+  public void setLastPollInvitationTime(long pollInvitationTime) {
+    this.lastPollInvitationTime = pollInvitationTime;
+  }
 
   /**
    * @return The Poll NAK code for the last poll rejection.  Null if no
@@ -264,6 +299,14 @@ public class PeerIdentityStatus implements LockssSerializable {
     totalMessages++;
     setLastMessageOpCode(msgOpCode);
     setLastMessageTime(TimeBase.nowMs());
+  }
+  
+  /**
+   * Signal that we have invited this peer to participate in a poll.
+   */
+  public void invitedPeer() {
+    totalPollInvitations++;
+    setLastPollInvitationTime(TimeBase.nowMs());
   }
   
   /**

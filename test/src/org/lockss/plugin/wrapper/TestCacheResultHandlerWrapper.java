@@ -1,5 +1,5 @@
 /*
- * $Id: TestCacheResultHandlerWrapper.java,v 1.1 2006-12-09 07:09:00 tlipkis Exp $
+ * $Id: TestCacheResultHandlerWrapper.java,v 1.2 2007-08-17 07:37:02 smorabito Exp $
  */
 
 /*
@@ -51,7 +51,7 @@ public class TestCacheResultHandlerWrapper extends LockssTestCase {
 
     wrapper.init(null);
     MockCacheResultHandler mn = (MockCacheResultHandler)obj;
-    assertEquals(ListUtil.list(null), mn.args);
+    assertEquals(ListUtil.list((Object)null), mn.args);
   }
 
   public void testWrapHandleResult() throws PluginException, IOException {

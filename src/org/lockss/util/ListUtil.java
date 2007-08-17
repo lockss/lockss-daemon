@@ -1,5 +1,5 @@
 /*
- * $Id: ListUtil.java,v 1.11 2007-05-10 23:42:20 tlipkis Exp $
+ * $Id: ListUtil.java,v 1.12 2007-08-17 07:37:02 smorabito Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -35,181 +35,49 @@ import java.util.*;
 /**
  * Create a list of Object from a call list. */
 public class ListUtil {
-    /**
-     * Don't construct. */
-    private ListUtil() {
-    }
+  /**
+   * Don't construct. */
+  private ListUtil() {
+  }
+  
+  /**
+   * Return an empty array list. */
+  public static List list() {
+    return new ArrayList();
+  }
 
-    /**
-     * Create list from arg list. */
-    public static List list() {
-	return new ArrayList();
+  /**
+   * Create a list from any number of arguments. */
+  public static List list(Object... elements) {
+    List l = new ArrayList();
+    if (elements == null) { return l; }
+    for (Object arg : elements) {
+      l.add(arg);
     }
-
-    /**
-     * Create list from arg list. */
-    public static List list(Object object1) {
-	List l = new ArrayList();
-	l.add(object1);
-	return l;
-    }
-
-    /**
-     * Create list from arg list. */
-    public static List list(Object object1, Object object2) {
-	List l = list(object1);
-	l.add(object2);
-	return l;
-    }
-
-    /**
-     * Create list from arg list. */
-    public static List list(Object object1,
-			    Object object2,
-			    Object object3) {
-	List l = list(object1, object2);
-	l.add(object3);
-	return l;
-    }
-
-    /**
-     * Create list from arg list. */
-    public static List list(Object object1,
-			    Object object2,
-			    Object object3,
-			    Object object4) {
-	List l = list(object1, object2, object3);
-	l.add(object4);
-	return l;
-    }
-
-    /**
-     * Create list from arg list. */
-    public static List list(Object object1,
-			    Object object2,
-			    Object object3,
-			    Object object4,
-			    Object object5) {
-	List l = list(object1, object2, object3, object4);
-	l.add(object5);
-	return l;
-    }
-
-    /**
-     * Create list from arg list. */
-    public static List list(Object object1,
-			    Object object2,
-			    Object object3,
-			    Object object4,
-			    Object object5,
-			    Object object6) {
-	List l = list(object1, object2, object3, object4, object5);
-	l.add(object6);
-	return l;
-    }
-    /**
-     * Create list from arg list. */
-    public static List list(Object object1,
-			    Object object2,
-			    Object object3,
-			    Object object4,
-			    Object object5,
-			    Object object6,
-			    Object object7) {
-	List l = list(object1, object2, object3, object4, object5,
-		      object6);
-	l.add(object7);
-	return l;
-    }
-    /**
-     * Create list from arg list. */
-    public static List list(Object object1,
-			    Object object2,
-			    Object object3,
-			    Object object4,
-			    Object object5,
-			    Object object6,
-			    Object object7,
-			    Object object8) {
-	List l = list(object1, object2, object3, object4, object5,
-		      object6, object7);
-	l.add(object8);
-	return l;
-    }
-    /**
-     * Create list from arg list. */
-    public static List list(Object object1,
-			    Object object2,
-			    Object object3,
-			    Object object4,
-			    Object object5,
-			    Object object6,
-			    Object object7,
-			    Object object8,
-			    Object object9) {
-	List l = list(object1, object2, object3, object4, object5,
-		      object6, object7, object8);
-	l.add(object9);
-	return l;
-    }
-    /**
-     * Create list from arg list. */
-    public static List list(Object object1,
-			    Object object2,
-			    Object object3,
-			    Object object4,
-			    Object object5,
-			    Object object6,
-			    Object object7,
-			    Object object8,
-			    Object object9,
-			    Object object10) {
-	List l = list(object1, object2, object3, object4, object5,
-		      object6, object7, object8, object9);
-	l.add(object10);
-	return l;
-    }
-
-    /**
-     * Create list from arg list. */
-    public static List list(Object object1,
-                            Object object2,
-                            Object object3,
-                            Object object4,
-                            Object object5,
-                            Object object6,
-                            Object object7,
-                            Object object8,
-                            Object object9,
-                            Object object10,
-                            Object object11) {
-        List l = list(object1, object2, object3, object4, object5,
-                      object6, object7, object8, object9, object10);
-        l.add(object11);
-        return l;
-    }
-
+    return l;
+  }
+  
   /**
    * Append lists together. */
   public static List append(List... lists) {
     List res = new ArrayList();
     for (int ix = 0; ix < lists.length; ix++) {
       if (lists[ix] != null) {
-	res.addAll(lists[ix]);
+        res.addAll(lists[ix]);
       }
     }
     return res;
   }
-
+  
   /** Create a list containing the elements of an array */
-    public static List fromArray(Object array[]) {
-	List l = list();
-	for (int i = 0; i < array.length; i++) {
-	    l.add(array[i]);
-	}
-	return l;
+  public static List fromArray(Object array[]) {
+    List l = list();
+    for (Object o : array) {
+      l.add(o);
     }
-
+    return l;
+  }
+  
   /** Add all elements of ofList to toList  */
   public static LinkedList prependAll(List ofList, LinkedList toList) {
     if (ofList == null) {

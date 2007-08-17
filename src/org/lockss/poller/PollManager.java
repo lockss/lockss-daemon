@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.178 2007-08-15 08:32:41 smorabito Exp $
+ * $Id: PollManager.java,v 1.179 2007-08-17 07:37:02 smorabito Exp $
  */
 
 /*
@@ -875,8 +875,8 @@ public class PollManager
       // cleaned up, unless KEEP_INVALID_POLLSTATE_DIRS is true.
       if (!restored) {
         if (deleteInvalidPollStateDirs) {
-          FileUtil.delTree(dirs[ix]);
           theLog.debug("Deleting invalid poll state directory " + dirs[ix]);
+          FileUtil.delTree(dirs[ix]);
         } else {
           theLog.debug("Not deleting invalid poll state directory " 
                        + dirs[ix]  + " due to config.");

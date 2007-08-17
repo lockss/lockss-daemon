@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.24 2007-08-08 22:26:58 smorabito Exp $
+ * $Id: TestV3Poller.java,v 1.25 2007-08-17 07:37:03 smorabito Exp $
  */
 
 /*
@@ -631,6 +631,38 @@ public class TestV3Poller extends LockssTestCase {
     blockTally.tallyVotes();
     
     assertEquals(BlockTally.RESULT_LOST, blockTally.getTallyResult());
+  }
+  
+  public void testInviteProb() throws Exception {
+    V3Poller poller = makeV3Poller("key");
+    
+    assertEquals(1.0, poller.inviteProb(-1, 0));
+    assertEquals(1.0, poller.inviteProb(0, -1));
+    assertEquals(1.0, poller.inviteProb(0, 0));
+    assertEquals(1.0, poller.inviteProb(1, 1));
+    assertEquals(1.0, poller.inviteProb(10, 1));
+    assertEquals(1.0, poller.inviteProb(1, 10));
+    
+    assertEquals(1.0, poller.inviteProb(1000L*60L*60L*24L*1, 0));
+    assertEquals(1.0, poller.inviteProb(1000L*60L*60L*24L*4, 0));
+    assertEquals(1.0, poller.inviteProb(1000L*60L*60L*24L*5, 0));
+    assertEquals(5.0/6.0, poller.inviteProb(1000L*60L*60L*24L*6, 0));
+    assertEquals(5.0/6.0, poller.inviteProb(1000L*60L*60L*24L*14, 0));
+    assertEquals(5.0/6.0, poller.inviteProb(1000L*60L*60L*24L*15, 0));
+    assertEquals(4.0/6.0, poller.inviteProb(1000L*60L*60L*24L*16, 0));
+    assertEquals(4.0/6.0, poller.inviteProb(1000L*60L*60L*24L*29, 0));
+    assertEquals(4.0/6.0, poller.inviteProb(1000L*60L*60L*24L*30, 0));
+    assertEquals(3.0/6.0, poller.inviteProb(1000L*60L*60L*24L*31, 0));
+    assertEquals(3.0/6.0, poller.inviteProb(1000L*60L*60L*24L*59, 0));
+    assertEquals(3.0/6.0, poller.inviteProb(1000L*60L*60L*24L*60, 0));
+    assertEquals(2.0/6.0, poller.inviteProb(1000L*60L*60L*24L*61, 0));
+    assertEquals(2.0/6.0, poller.inviteProb(1000L*60L*60L*24L*89, 0));
+    assertEquals(2.0/6.0, poller.inviteProb(1000L*60L*60L*24L*90, 0));
+    assertEquals(1.0/6.0, poller.inviteProb(1000L*60L*60L*24L*91, 0));
+    assertEquals(1.0/6.0, poller.inviteProb(1000L*60L*60L*24L*200, 0));
+    assertEquals(1.0/6.0, poller.inviteProb(1000L*60L*60L*24L*400, 0));
+    assertEquals(1.0/6.0, poller.inviteProb(1000L*60L*60L*24L*800, 0));
+    assertEquals(1.0/6.0, poller.inviteProb(1000L*60L*60L*24L*1600, 0));
   }
   
   private V3Poller makeV3Poller(String key) throws Exception {

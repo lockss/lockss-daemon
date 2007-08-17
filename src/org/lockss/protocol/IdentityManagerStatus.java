@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManagerStatus.java,v 1.5 2007-08-14 03:10:26 smorabito Exp $
+ * $Id: IdentityManagerStatus.java,v 1.6 2007-08-17 07:37:02 smorabito Exp $
  */
 
 /*
@@ -71,7 +71,15 @@ public class IdentityManagerStatus
                                        ColumnDescriptor.TYPE_DATE,
                                        "Last time that IP agreed to " +
                                        "participate as a voter in a poll " +
-                                       "called by this cache."),                       
+                                       "called by this cache."),
+                  new ColumnDescriptor("origLastInvitation", "Last Invitation",
+                                       ColumnDescriptor.TYPE_DATE,
+                                       "Last time this peer was invited into " +
+                                       "a poll."),
+                  new ColumnDescriptor("origTotalInvitations", "Invitations",
+                                       ColumnDescriptor.TYPE_DATE,
+                                       "Total number of invitations sent to " +
+                                       "this peer."),
                   new ColumnDescriptor("origPoller", "Polls Called",
                                        ColumnDescriptor.TYPE_INT,
                                        "Total number of polls in which " +
@@ -135,6 +143,10 @@ public class IdentityManagerStatus
 	    new Long(status.getTotalVoterPolls()));
     row.put("origLastVoter",
             new Long(status.getLastVoterTime()));
+    row.put("origLastInvitation",
+            new Long(status.getLastPollInvitationTime()));
+    row.put("origTotalInvitations",
+            new Long(status.getTotalPollInvitatioins()));
     row.put("pollsRejected",
             new Long(status.getTotalRejectedPolls()));
     row.put("pollNak",

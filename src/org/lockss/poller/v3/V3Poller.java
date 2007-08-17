@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.55 2007-08-15 08:32:41 smorabito Exp $
+ * $Id: V3Poller.java,v 1.56 2007-08-17 07:37:03 smorabito Exp $
  */
 
 /*
@@ -1721,22 +1721,63 @@ public class V3Poller extends BasePoll {
     return shouldIncludePeer(idManager.findPeerIdentity(pidKey));
   }
   
-  private boolean shouldIncludePeer(PeerIdentity pid) {
+  boolean shouldIncludePeer(PeerIdentity pid) {
     log.debug("shouldIncludePeer(" + pid + ") being called...");
     // Never include a local id.
     if (pid.isLocalIdentity()) { return false; }
     PeerIdentityStatus status = idManager.getPeerIdentityStatus(pid);
     if (status != null) {
+      
       // Never include a peer that has rejected one of our polls in
       // the past because of a group mismatch.
       if (status.getLastPollNak() != null &&
           status.getLastPollNak() == PollNak.NAK_GROUP_MISMATCH) {
         return false;
       }
+      
+      // Finally, make a probabilistic choice weighted by the last time that
+      // we heard from this peer.
+      return ProbabilisticChoice.choose(inviteProb(status.getLastPollInvitationTime(),
+                                                   status.getLastMessageTime()));
     }
  
-    // Otherwise, return true
+    // If we get this far, return true.
     return true;
+  }
+  
+  /**
+   * Given a peer identity, compute a probability (a float between 0.0 and
+   * 1.0) that the peer should be considered for invitation into the
+   * poll.
+   *  
+   * @param lastPollInvitationTime  The last time we attempted to invite
+   *      the target peer into a poll.
+   * @param lastMessageTime  The last time that we received any kind of
+   *      message from the target peer.
+   * @return A number between 0.0 and 1.0 representing the probability
+   *      that we want to try to invite this peer into a poll.
+   */
+  double inviteProb(long lastPollInvitationTime,
+                    long lastMessageTime) {
+    // If we have never tried to contact this peer, we definitely want to try
+    // them out.
+    if (lastPollInvitationTime <= 0) return 1.0;
+
+    long delta = lastPollInvitationTime - lastMessageTime;
+    
+    if (delta <= 1000L*60L*60L*24L*5) {           // < 5 days, or negative
+      return 1.0;
+    } else if (delta <= 1000L*60L*60L*24L*15) {   // < 15 days
+      return 5.0/6.0;
+    } else if (delta <= 1000L*60L*60L*24L*30) {   // < 30 days
+      return 4.0/6.0;
+    } else if (delta <= 1000L*60L*60L*24L*60) {   // < 60 days
+      return 3.0/6.0;
+    } else if (delta <= 1000L*60L*60L*24L*90) {   // < 90 days
+      return 2.0/6.0;
+    } else {                                      // > 90 days
+      return 1.0/6.0;
+    }
   }
 
   Class getPollerActionsClass() {
