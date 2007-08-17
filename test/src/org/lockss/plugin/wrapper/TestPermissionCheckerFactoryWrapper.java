@@ -1,5 +1,5 @@
 /*
- * $Id: TestPermissionCheckerFactoryWrapper.java,v 1.1 2006-12-09 07:09:00 tlipkis Exp $
+ * $Id: TestPermissionCheckerFactoryWrapper.java,v 1.2 2007-08-17 21:41:09 thib_gc Exp $
  */
 
 /*
@@ -49,7 +49,7 @@ public class TestPermissionCheckerFactoryWrapper extends LockssTestCase {
     assertTrue(WrapperUtil.unwrap(wrapper) instanceof MockPermissionCheckerFactory);
 
     MockArchivalUnit mau = new MockArchivalUnit();
-    assertEquals(ListUtil.list(null), wrapper.createPermissionCheckers(mau));
+    assertEquals(ListUtil.list((Object)null), wrapper.createPermissionCheckers(mau));
     MockPermissionCheckerFactory mn = (MockPermissionCheckerFactory)obj;
     assertEquals(ListUtil.list(mau), mn.args);
   }
@@ -85,7 +85,7 @@ public class TestPermissionCheckerFactoryWrapper extends LockssTestCase {
       if (error != null) {
 	throw error;
       }
-      return ListUtil.list(null);
+      return ListUtil.list((Object)null);
     }
   }
 }
