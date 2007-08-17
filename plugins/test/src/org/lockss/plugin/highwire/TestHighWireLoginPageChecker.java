@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireLoginPageChecker.java,v 1.3 2006-07-19 16:44:44 thib_gc Exp $
+ * $Id: TestHighWireLoginPageChecker.java,v 1.4 2007-08-17 21:17:27 thib_gc Exp $
  */
 
 /*
@@ -101,7 +101,7 @@ public class TestHighWireLoginPageChecker extends LockssTestCase {
     assertFalse(checker.isLoginPage(props, reader));
   }
 
-  public void testHasDifferenCacheControlHeader() throws IOException {
+  public void testHasDifferentCacheControlHeader() throws IOException {
     HighWireLoginPageChecker checker = new HighWireLoginPageChecker();
     CIProperties props = new CIProperties();
     props.put("Cache-Control", "blah");
@@ -112,7 +112,7 @@ public class TestHighWireLoginPageChecker extends LockssTestCase {
     assertFalse(reader.readWasCalled());
   }
 
-  public void testHasDifferenCacheControlHeaderButLoginPage()
+  public void testHasDifferentCacheControlHeaderButLoginPage()
       throws IOException {
     HighWireLoginPageChecker checker = new HighWireLoginPageChecker();
     CIProperties props = new CIProperties();
