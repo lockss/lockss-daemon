@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigManager.java,v 1.27 2007-08-01 04:49:39 tlipkis Exp $
+ * $Id: TestConfigManager.java,v 1.27.2.1 2007-08-18 16:10:44 tlipkis Exp $
  */
 
 /*
@@ -402,19 +402,35 @@ public class TestConfigManager extends LockssTestCase {
     props.put(ConfigManager.PARAM_DAEMON_VERSION, "1.44.2");
     ConfigurationUtil.setCurrentConfigFromProps(props);
     List pairs = StringUtil.breakAt(mgr.getVersionString(), ',');
-    assertEquals(SetUtil.set("groups=nogroup",
-			     "platform=OpenBSD CD 321",
-			     "daemon=1.44.2"),
-		 SetUtil.theSet(pairs));
+    String release = BuildInfo.getBuildProperty(BuildInfo.BUILD_RELEASENAME);
+    if (release != null) {
+      assertEquals(SetUtil.set("groups=nogroup",
+			       "platform=OpenBSD CD 321",
+			       "daemon=" + release),
+		   SetUtil.theSet(pairs));
+    } else {
+      assertEquals(SetUtil.set("groups=nogroup",
+			       "platform=OpenBSD CD 321",
+			       "daemon=1.44.2"),
+		   SetUtil.theSet(pairs));
+    }
     mgr.setGroups("grouper");
     ConfigurationUtil.addFromArgs(IdentityManager.PARAM_LOCAL_V3_IDENTITY,
 				  "tcp:[111.32.14.5]:9876");
     pairs = StringUtil.breakAt(mgr.getVersionString(), ',');
-    assertEquals(SetUtil.set("groups=grouper",
-			     "peerid=tcp:[111.32.14.5]:9876",
-			     "platform=OpenBSD CD 321",
-			     "daemon=1.44.2"),
-		 SetUtil.theSet(pairs));
+    if (release != null) {
+      assertEquals(SetUtil.set("groups=grouper",
+			       "peerid=tcp:[111.32.14.5]:9876",
+			       "platform=OpenBSD CD 321",
+			       "daemon=" + release),
+		   SetUtil.theSet(pairs));
+    } else {
+      assertEquals(SetUtil.set("groups=grouper",
+			       "peerid=tcp:[111.32.14.5]:9876",
+			       "platform=OpenBSD CD 321",
+			       "daemon=1.44.2"),
+		   SetUtil.theSet(pairs));
+    }
   }
 
   public void testMiscTmpdir() throws Exception {
