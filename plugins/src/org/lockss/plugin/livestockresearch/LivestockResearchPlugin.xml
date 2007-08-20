@@ -4,10 +4,6 @@
     <string>org.lockss.plugin.livestockresearch.LivestockResearchPlugin</string>
   </entry>
   <entry>
-    <string>au_expected_base_path</string>
-    <string>/clogic/</string>
-  </entry>
-  <entry>
     <string>au_def_pause_time</string>
     <long>6000</long>
   </entry>
