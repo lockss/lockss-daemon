@@ -1,5 +1,5 @@
 /*
- * $Id: AnnualReviewsPdfFilterFactory.java,v 1.3 2007-08-14 09:19:26 thib_gc Exp $
+ * $Id: AnnualReviewsPdfFilterFactory.java,v 1.1 2007-08-20 18:00:07 thib_gc Exp $
  */
 
 /*
@@ -30,7 +30,7 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.annualreviews;
+package uk.org.lockss.plugin.annualreviews;
 
 import java.io.*;
 import java.util.List;

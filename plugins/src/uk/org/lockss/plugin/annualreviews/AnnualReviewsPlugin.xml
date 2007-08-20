@@ -1,7 +1,11 @@
 <map>
   <entry>
+    <string>plugin_identifier</string>
+    <string>uk.org.lockss.plugin.annualreviews.AnnualReviewsPlugin</string>
+  </entry>
+  <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -81,10 +85,10 @@
   </entry>
   <entry>
     <string>application/pdf_filter_factory</string>
-    <string>org.lockss.plugin.annualreviews.AnnualReviewsPdfFilterFactory</string>
+    <string>uk.org.lockss.plugin.annualreviews.AnnualReviewsPdfFilterFactory</string>
   </entry>
   <entry>
     <string>au_url_normalizer</string>
-    <string>org.lockss.plugin.annualreviews.AnnualReviewsUrlNormalizer</string>
+    <string>uk.org.lockss.plugin.annualreviews.AnnualReviewsUrlNormalizer</string>
   </entry>
 </map>

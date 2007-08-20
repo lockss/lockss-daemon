@@ -40,7 +40,7 @@
       <property name="title" value="Biochemistry Volume 75"/>
       <property name="journalTitle" value="Biochemistry"/>
       <property name="estSize" value="10MB"/>
-      <property name="plugin" value="org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
+      <property name="plugin" value="uk.org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
       <property name="param.1">
         <property name="key" value="volume"/>
         <property name="value" value="75"/>
@@ -64,7 +64,7 @@
       <property name="title" value="Biochemistry Volume 74"/>
       <property name="journalTitle" value="Biochemistry"/>
       <property name="estSize" value="10MB"/>
-      <property name="plugin" value="org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
+      <property name="plugin" value="uk.org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
       <property name="param.1">
         <property name="key" value="volume"/>
         <property name="value" value="74"/>
@@ -83,12 +83,12 @@
       </property>
       <property name="attributes.publisher" value="Annual Reviews"/>
     </property>
-   
+
     <property name="AnnualReviewsBiochemistry73">
       <property name="title" value="Biochemistry Volume 73"/>
       <property name="journalTitle" value="Biochemistry"/>
       <property name="estSize" value="10MB"/>
-      <property name="plugin" value="org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
+      <property name="plugin" value="uk.org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
       <property name="param.1">
         <property name="key" value="volume"/>
         <property name="value" value="73"/>
@@ -112,7 +112,7 @@
       <property name="title" value="Biochemistry Volume 72"/>
       <property name="journalTitle" value="Biochemistry"/>
       <property name="estSize" value="10MB"/>
-      <property name="plugin" value="org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
+      <property name="plugin" value="uk.org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
       <property name="param.1">
         <property name="key" value="volume"/>
         <property name="value" value="72"/>
@@ -136,7 +136,7 @@
       <property name="title" value="Biochemistry Volume 71"/>
       <property name="journalTitle" value="Biochemistry"/>
       <property name="estSize" value="10MB"/>
-      <property name="plugin" value="org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
+      <property name="plugin" value="uk.org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
       <property name="param.1">
         <property name="key" value="volume"/>
         <property name="value" value="71"/>
@@ -160,7 +160,7 @@
       <property name="title" value="Biochemistry Volume 70"/>
       <property name="journalTitle" value="Biochemistry"/>
       <property name="estSize" value="10MB"/>
-      <property name="plugin" value="org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
+      <property name="plugin" value="uk.org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
       <property name="param.1">
         <property name="key" value="volume"/>
         <property name="value" value="70"/>
@@ -184,7 +184,7 @@
       <property name="title" value="Biochemistry Volume 69"/>
       <property name="journalTitle" value="Biochemistry"/>
       <property name="estSize" value="10MB"/>
-      <property name="plugin" value="org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
+      <property name="plugin" value="uk.org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
       <property name="param.1">
         <property name="key" value="volume"/>
         <property name="value" value="69"/>
@@ -208,7 +208,7 @@
       <property name="title" value="Biochemistry Volume 68"/>
       <property name="journalTitle" value="Biochemistry"/>
       <property name="estSize" value="10MB"/>
-      <property name="plugin" value="org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
+      <property name="plugin" value="uk.org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
       <property name="param.1">
         <property name="key" value="volume"/>
         <property name="value" value="68"/>
@@ -232,7 +232,7 @@
       <property name="title" value="Biochemistry Volume 67"/>
       <property name="journalTitle" value="Biochemistry"/>
       <property name="estSize" value="10MB"/>
-      <property name="plugin" value="org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
+      <property name="plugin" value="uk.org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
       <property name="param.1">
         <property name="key" value="volume"/>
         <property name="value" value="67"/>
@@ -256,7 +256,7 @@
       <property name="title" value="Biochemistry Volume 66"/>
       <property name="journalTitle" value="Biochemistry"/>
       <property name="estSize" value="10MB"/>
-      <property name="plugin" value="org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
+      <property name="plugin" value="uk.org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
       <property name="param.1">
         <property name="key" value="volume"/>
         <property name="value" value="66"/>
@@ -280,7 +280,7 @@
       <property name="title" value="Biomedical Engineering Volume 9"/>
       <property name="journalTitle" value="Biomedical Engineering"/>
       <property name="estSize" value="10MB"/>
-      <property name="plugin" value="org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
+      <property name="plugin" value="uk.org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
       <property name="param.1">
         <property name="key" value="volume"/>
         <property name="value" value="9"/>
@@ -304,7 +304,7 @@
       <property name="title" value="Biomedical Engineering Volume 8"/>
       <property name="journalTitle" value="Biomedical Engineering"/>
       <property name="estSize" value="10MB"/>
-      <property name="plugin" value="org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
+      <property name="plugin" value="uk.org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
       <property name="param.1">
         <property name="key" value="volume"/>
         <property name="value" value="8"/>
@@ -328,7 +328,7 @@
       <property name="title" value="Biomedical Engineering Volume 7"/>
       <property name="journalTitle" value="Biomedical Engineering"/>
       <property name="estSize" value="10MB"/>
-      <property name="plugin" value="org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
+      <property name="plugin" value="uk.org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
       <property name="param.1">
         <property name="key" value="volume"/>
         <property name="value" value="7"/>
@@ -352,7 +352,7 @@
       <property name="title" value="Biomedical Engineering Volume 6"/>
       <property name="journalTitle" value="Biomedical Engineering"/>
       <property name="estSize" value="10MB"/>
-      <property name="plugin" value="org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
+      <property name="plugin" value="uk.org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
       <property name="param.1">
         <property name="key" value="volume"/>
         <property name="value" value="6"/>
@@ -376,7 +376,7 @@
       <property name="title" value="Biomedical Engineering Volume 5"/>
       <property name="journalTitle" value="Biomedical Engineering"/>
       <property name="estSize" value="10MB"/>
-      <property name="plugin" value="org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
+      <property name="plugin" value="uk.org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
       <property name="param.1">
         <property name="key" value="volume"/>
         <property name="value" value="5"/>
@@ -400,7 +400,7 @@
       <property name="title" value="Biomedical Engineering Volume 4"/>
       <property name="journalTitle" value="Biomedical Engineering"/>
       <property name="estSize" value="10MB"/>
-      <property name="plugin" value="org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
+      <property name="plugin" value="uk.org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
       <property name="param.1">
         <property name="key" value="volume"/>
         <property name="value" value="4"/>
@@ -424,7 +424,7 @@
       <property name="title" value="Biomedical Engineering Volume 3"/>
       <property name="journalTitle" value="Biomedical Engineering"/>
       <property name="estSize" value="10MB"/>
-      <property name="plugin" value="org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
+      <property name="plugin" value="uk.org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
       <property name="param.1">
         <property name="key" value="volume"/>
         <property name="value" value="3"/>
@@ -448,7 +448,7 @@
       <property name="title" value="Biomedical Engineering Volume 2"/>
       <property name="journalTitle" value="Biomedical Engineering"/>
       <property name="estSize" value="10MB"/>
-      <property name="plugin" value="org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
+      <property name="plugin" value="uk.org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
       <property name="param.1">
         <property name="key" value="volume"/>
         <property name="value" value="2"/>
@@ -472,7 +472,7 @@
       <property name="title" value="Biomedical Engineering Volume 1"/>
       <property name="journalTitle" value="Biomedical Engineering"/>
       <property name="estSize" value="10MB"/>
-      <property name="plugin" value="org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
+      <property name="plugin" value="uk.org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
       <property name="param.1">
         <property name="key" value="volume"/>
         <property name="value" value="1"/>
@@ -496,7 +496,7 @@
       <property name="title" value="Biophysics and Biomolecular Structure Volume 36"/>
       <property name="journalTitle" value="Biophysics and Biomolecular Structure"/>
       <property name="estSize" value="10MB"/>
-      <property name="plugin" value="org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
+      <property name="plugin" value="uk.org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
       <property name="param.1">
         <property name="key" value="volume"/>
         <property name="value" value="36"/>
@@ -520,7 +520,7 @@
       <property name="title" value="Biophysics and Biomolecular Structure Volume 35"/>
       <property name="journalTitle" value="Biophysics and Biomolecular Structure"/>
       <property name="estSize" value="10MB"/>
-      <property name="plugin" value="org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
+      <property name="plugin" value="uk.org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
       <property name="param.1">
         <property name="key" value="volume"/>
         <property name="value" value="35"/>
@@ -545,7 +545,7 @@
       <property name="title" value="Biophysics and Biomolecular Structure Volume 34"/>
       <property name="journalTitle" value="Biophysics and Biomolecular Structure"/>
       <property name="estSize" value="10MB"/>
-      <property name="plugin" value="org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
+      <property name="plugin" value="uk.org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
       <property name="param.1">
         <property name="key" value="volume"/>
         <property name="value" value="34"/>
@@ -570,7 +570,7 @@
       <property name="title" value="Biophysics and Biomolecular Structure Volume 33"/>
       <property name="journalTitle" value="Biophysics and Biomolecular Structure"/>
       <property name="estSize" value="10MB"/>
-      <property name="plugin" value="org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
+      <property name="plugin" value="uk.org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
       <property name="param.1">
         <property name="key" value="volume"/>
         <property name="value" value="33"/>
@@ -595,7 +595,7 @@
       <property name="title" value="Biophysics and Biomolecular Structure Volume 32"/>
       <property name="journalTitle" value="Biophysics and Biomolecular Structure"/>
       <property name="estSize" value="10MB"/>
-      <property name="plugin" value="org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
+      <property name="plugin" value="uk.org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
       <property name="param.1">
         <property name="key" value="volume"/>
         <property name="value" value="32"/>
@@ -620,7 +620,7 @@
       <property name="title" value="Biophysics and Biomolecular Structure Volume 31"/>
       <property name="journalTitle" value="Biophysics and Biomolecular Structure"/>
       <property name="estSize" value="10MB"/>
-      <property name="plugin" value="org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
+      <property name="plugin" value="uk.org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
       <property name="param.1">
         <property name="key" value="volume"/>
         <property name="value" value="31"/>
@@ -645,7 +645,7 @@
       <property name="title" value="Biophysics and Biomolecular Structure Volume 30"/>
       <property name="journalTitle" value="Biophysics and Biomolecular Structure"/>
       <property name="estSize" value="10MB"/>
-      <property name="plugin" value="org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
+      <property name="plugin" value="uk.org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
       <property name="param.1">
         <property name="key" value="volume"/>
         <property name="value" value="30"/>
@@ -670,7 +670,7 @@
       <property name="title" value="Biophysics and Biomolecular Structure Volume 29"/>
       <property name="journalTitle" value="Biophysics and Biomolecular Structure"/>
       <property name="estSize" value="10MB"/>
-      <property name="plugin" value="org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
+      <property name="plugin" value="uk.org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
       <property name="param.1">
         <property name="key" value="volume"/>
         <property name="value" value="29"/>
@@ -695,7 +695,7 @@
       <property name="title" value="Biophysics and Biomolecular Structure Volume 28"/>
       <property name="journalTitle" value="Biophysics and Biomolecular Structure"/>
       <property name="estSize" value="10MB"/>
-      <property name="plugin" value="org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
+      <property name="plugin" value="uk.org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
       <property name="param.1">
         <property name="key" value="volume"/>
         <property name="value" value="28"/>
@@ -720,7 +720,7 @@
       <property name="title" value="Biophysics and Biomolecular Structure Volume 27"/>
       <property name="journalTitle" value="Biophysics and Biomolecular Structure"/>
       <property name="estSize" value="10MB"/>
-      <property name="plugin" value="org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
+      <property name="plugin" value="uk.org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
       <property name="param.1">
         <property name="key" value="volume"/>
         <property name="value" value="27"/>
@@ -744,7 +744,7 @@
       <property name="title" value="Biophysics and Biomolecular Structure Volume 26"/>
       <property name="journalTitle" value="Biophysics and Biomolecular Structure"/>
       <property name="estSize" value="10MB"/>
-      <property name="plugin" value="org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
+      <property name="plugin" value="uk.org.lockss.plugin.annualreviews.AnnualReviewsPlugin"/>
       <property name="param.1">
         <property name="key" value="volume"/>
         <property name="value" value="26"/>

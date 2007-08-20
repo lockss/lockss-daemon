@@ -1,5 +1,5 @@
 /*
- * $Id: AnnualReviewsUrlNormalizer.java,v 1.1 2007-08-01 08:13:36 thib_gc Exp $
+ * $Id: AnnualReviewsUrlNormalizer.java,v 1.1 2007-08-20 18:00:07 thib_gc Exp $
  */
 
 /*
@@ -30,7 +30,7 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.annualreviews;
+package uk.org.lockss.plugin.annualreviews;
 
 import org.apache.commons.lang.StringUtils;
 import org.lockss.daemon.PluginException;

@@ -78,7 +78,7 @@
       <property name="annualreviews">
 	<property name="name" value="All Annual Reviews Titles" />
 	<property name="class" value="xpath" />
-	<property name="xpath" value="[pluginName='org.lockss.plugin.annualreviews.AnnualReviewsPlugin']" />
+	<property name="xpath" value="[pluginName='uk.org.lockss.plugin.annualreviews.AnnualReviewsPlugin']" />
       </property>
       <property name="iop">
 	<property name="name" value="All IOP Titles" />
@@ -86,7 +86,7 @@
 	<property name="xpath" value="[pluginName='org.lockss.plugin.iop.IOPPlugin']" />
       </property>
       <property name="sage">
-        <property name="name" value="All SAGE Titles" />
+        <property name="name" value="All SAGE Publications Titles" />
         <property name="class" value="xpath" />
 	<property name="xpath" value="[attributes/publisher='sage' or attributes/publisher='SAGE Publications']" />
       </property>
