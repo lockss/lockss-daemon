@@ -1,5 +1,5 @@
 /*
- * $Id: ProbePermissionChecker.java,v 1.19 2007-08-12 01:48:05 tlipkis Exp $
+ * $Id: ProbePermissionChecker.java,v 1.20 2007-08-20 22:48:50 tlipkis Exp $
  */
 
 /*
@@ -51,20 +51,22 @@ public class ProbePermissionChecker implements PermissionChecker {
 
 
   String probeUrl = null;
-  LoginPageChecker checker;
 
   private static Logger logger = Logger.getLogger("ProbePermissionChecker");
 
   ArchivalUnit au;
 
-  public ProbePermissionChecker(LoginPageChecker checker, ArchivalUnit au) {
-    if (checker == null) {
-      throw new NullPointerException("Called with null permission checker");
-    } else if (au == null) {
+  public ProbePermissionChecker(ArchivalUnit au) {
+    if (au == null) {
       throw new NullPointerException("Called with null archival unit");
     }
     this.au = au;
-    this.checker = checker;
+  }
+
+  // For compatibility with plugins that supply a LoginPageChecker (which
+  // is not used)
+  public ProbePermissionChecker(LoginPageChecker checker, ArchivalUnit au) {
+    this(au);
   }
 
   public boolean checkPermission(Crawler.PermissionHelper pHelper,

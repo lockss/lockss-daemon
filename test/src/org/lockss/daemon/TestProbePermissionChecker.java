@@ -1,5 +1,5 @@
 /*
- * $Id: TestProbePermissionChecker.java,v 1.8 2007-08-12 01:48:05 tlipkis Exp $
+ * $Id: TestProbePermissionChecker.java,v 1.9 2007-08-20 22:48:50 tlipkis Exp $
  */
 
 /*
@@ -91,20 +91,9 @@ public class TestProbePermissionChecker extends LockssTestCase {
     helper = new MyPermissionHelper(mau);
   }
 
-
-
-
-  public void testConstructorNullChecker() {
-    try {
-      new ProbePermissionChecker(null, new MockArchivalUnit());
-      fail("Calling ProbePermissionChecker constructor with a null permission checker should throw");
-    } catch (NullPointerException ex) {
-    }
-  }
-
   public void testConstructorNullArchivalUnit() {
     try {
-      new ProbePermissionChecker(new MockLoginPageChecker(), null);
+      new ProbePermissionChecker(null);
       fail("Calling ProbePermissionChecker constructor with a null Archival Unit should throw");
     } catch (NullPointerException ex) {
     }
@@ -115,26 +104,25 @@ public class TestProbePermissionChecker extends LockssTestCase {
     mau.addUrl(url, true, true);
     mau.addContent(url, htmlSourceWOProbe);
 
-    pc = new ProbePermissionChecker(new MockLoginPageChecker(), mau);
+    pc = new ProbePermissionChecker(mau);
     assertFalse("Incorrectly gave permission when there was no probe",
 		pc.checkPermission(helper,
 				   new StringReader(htmlSourceWOLinkTag),
 				   url));
   }
 
-
   public void testNoProbe() {
     String url = "http://www.example.com";
     mau.addUrl(url, true, true);
     mau.addContent(url, htmlSourceWOProbe);
 
-    pc = new ProbePermissionChecker(new MockLoginPageChecker(), mau);
+    pc = new ProbePermissionChecker(mau);
     assertFalse("Incorrectly gave permission when there was no probe",
 		pc.checkPermission(helper, new StringReader(htmlSourceWOProbe),
 				   url));
   }
 
-  public void testProbeNoLoginPage() {
+  public void testProbeHasPermission() {
     String probeUrl = "http://www.example.com/cgi/content/full/14/9/1109";
 
     String url = "http://www.example.com";
@@ -143,16 +131,13 @@ public class TestProbePermissionChecker extends LockssTestCase {
     mau.addUrl(probeUrl, true, true);
     mau.addContent(probeUrl, "");
 
-    MockLoginPageChecker mockLPC = new MockLoginPageChecker(false);
-
-    pc = new ProbePermissionChecker(mockLPC, mau);
-    pc = makeProbePC(new MockLoginPageChecker(false));
+    pc = new ProbePermissionChecker(mau);
     assertTrue("Didn't give permission when there was a probe",
 		pc.checkPermission(helper, new StringReader(htmlSourceWProbe),
 				   "http://www.example.com"));
   }
 
-  public void testProbeIsLoginPage() {
+  public void testProbeNoPermission() {
     String probeUrl = "http://www.example.com/cgi/content/full/14/9/1109";
 
     String url = "http://www.example.com";
@@ -160,21 +145,13 @@ public class TestProbePermissionChecker extends LockssTestCase {
     mau.addContent(url, htmlSourceWProbe);
     mau.addUrl(probeUrl, true, true);
     MockUrlCacher muc = (MockUrlCacher)mau.makeUrlCacher(probeUrl);
-    muc.setCachingException(new CacheException.PermissionException("Found a login page"),
+    muc.setCachingException(new CacheException.PermissionException("test"),
 			    1);
 
-    MockLoginPageChecker mockLPC = new MockLoginPageChecker(true);
-
-    pc = new ProbePermissionChecker(mockLPC, mau);
-    pc = makeProbePC(new MockLoginPageChecker(true));
+    pc = new ProbePermissionChecker(mau);
     assertFalse("Gave permission when the nested checker denied it",
 	       pc.checkPermission(helper, new StringReader(htmlSourceWProbe),
 				  "http://www.example.com"));
-
-  }
-
-  private ProbePermissionChecker makeProbePC(LoginPageChecker lpc) {
-    return new ProbePermissionChecker(lpc, mau);
   }
 
   static class MyPermissionHelper extends MockPermissionHelper {
@@ -186,23 +163,6 @@ public class TestProbePermissionChecker extends LockssTestCase {
 
     public UrlCacher makeUrlCacher(String url) {
       return au.makeUrlCacher(url);
-    }
-  }
-
-  private static class MockLoginPageChecker implements LoginPageChecker {
-    private boolean returnVal = false;
-
-    public MockLoginPageChecker() {
-      this(false);
-    }
-
-    public MockLoginPageChecker(boolean returnVal) {
-      this.returnVal = returnVal;
-    }
-
-
-    public boolean isLoginPage(Properties props, Reader reader) {
-      return returnVal;
     }
   }
 }
