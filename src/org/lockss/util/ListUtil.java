@@ -1,5 +1,5 @@
 /*
- * $Id: ListUtil.java,v 1.12 2007-08-17 07:37:02 smorabito Exp $
+ * $Id: ListUtil.java,v 1.12.2.1 2007-08-21 03:34:17 smorabito Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -55,6 +55,154 @@ public class ListUtil {
       l.add(arg);
     }
     return l;
+  }
+  
+  /* NOTE:  The following non-varargs methods cannot yet be removed, because
+   * external plugin code relies on them as of the 1.26 daemon release.
+   * Until the plugin code is audited and updated, these methods must remain.
+   */
+
+  /**
+   * Create list from arg list. */
+  public static List list(Object object1) {
+      List l = new ArrayList();
+      l.add(object1);
+      return l;
+  }
+
+  /**
+   * Create list from arg list. */
+  public static List list(Object object1, Object object2) {
+      List l = list(object1);
+      l.add(object2);
+      return l;
+  }
+
+  /**
+   * Create list from arg list. */
+  public static List list(Object object1,
+                          Object object2,
+                          Object object3) {
+      List l = list(object1, object2);
+      l.add(object3);
+      return l;
+  }
+
+  /**
+   * Create list from arg list. */
+  public static List list(Object object1,
+                          Object object2,
+                          Object object3,
+                          Object object4) {
+      List l = list(object1, object2, object3);
+      l.add(object4);
+      return l;
+  }
+
+  /**
+   * Create list from arg list. */
+  public static List list(Object object1,
+                          Object object2,
+                          Object object3,
+                          Object object4,
+                          Object object5) {
+      List l = list(object1, object2, object3, object4);
+      l.add(object5);
+      return l;
+  }
+
+  /**
+   * Create list from arg list. */
+  public static List list(Object object1,
+                          Object object2,
+                          Object object3,
+                          Object object4,
+                          Object object5,
+                          Object object6) {
+      List l = list(object1, object2, object3, object4, object5);
+      l.add(object6);
+      return l;
+  }
+  /**
+   * Create list from arg list. */
+  public static List list(Object object1,
+                          Object object2,
+                          Object object3,
+                          Object object4,
+                          Object object5,
+                          Object object6,
+                          Object object7) {
+      List l = list(object1, object2, object3, object4, object5,
+                    object6);
+      l.add(object7);
+      return l;
+  }
+  /**
+   * Create list from arg list. */
+  public static List list(Object object1,
+                          Object object2,
+                          Object object3,
+                          Object object4,
+                          Object object5,
+                          Object object6,
+                          Object object7,
+                          Object object8) {
+      List l = list(object1, object2, object3, object4, object5,
+                    object6, object7);
+      l.add(object8);
+      return l;
+  }
+  /**
+   * Create list from arg list. */
+  public static List list(Object object1,
+                          Object object2,
+                          Object object3,
+                          Object object4,
+                          Object object5,
+                          Object object6,
+                          Object object7,
+                          Object object8,
+                          Object object9) {
+      List l = list(object1, object2, object3, object4, object5,
+                    object6, object7, object8);
+      l.add(object9);
+      return l;
+  }
+  /**
+   * Create list from arg list. */
+  public static List list(Object object1,
+                          Object object2,
+                          Object object3,
+                          Object object4,
+                          Object object5,
+                          Object object6,
+                          Object object7,
+                          Object object8,
+                          Object object9,
+                          Object object10) {
+      List l = list(object1, object2, object3, object4, object5,
+                    object6, object7, object8, object9);
+      l.add(object10);
+      return l;
+  }
+
+  /**
+   * Create list from arg list. */
+  public static List list(Object object1,
+                          Object object2,
+                          Object object3,
+                          Object object4,
+                          Object object5,
+                          Object object6,
+                          Object object7,
+                          Object object8,
+                          Object object9,
+                          Object object10,
+                          Object object11) {
+      List l = list(object1, object2, object3, object4, object5,
+                    object6, object7, object8, object9, object10);
+      l.add(object11);
+      return l;
   }
   
   /**
