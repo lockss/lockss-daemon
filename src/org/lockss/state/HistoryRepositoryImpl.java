@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.74 2007-06-28 07:14:24 smorabito Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.74.4.1 2007-08-22 06:48:26 tlipkis Exp $
  */
 
 /*
@@ -622,11 +622,22 @@ public class HistoryRepositoryImpl
     if (AuUrl.isAuUrl(urlStr)) {
       return rootLocation;
     } else {
-      return LockssRepositoryImpl.mapUrlToFileLocation(rootLocation,
-          LockssRepositoryImpl.canonicalizePath(urlStr));
+      return
+	LockssRepositoryImpl.mapUrlToFileLocation(rootLocation,
+						  canonicalizePath(urlStr));
     }
   }
 
+  String canonicalizePath(String url) throws MalformedURLException {
+    String canonUrl =
+      UrlUtil.normalizeUrl(url, UrlUtil.PATH_TRAVERSAL_ACTION_THROW);
+    // canonicalize "dir" and "dir/"
+    // XXX if these are ever two separate nodes, this is wrong
+    if (canonUrl.endsWith(UrlUtil.URL_PATH_SEPARATOR)) {
+      canonUrl = canonUrl.substring(0, canonUrl.length()-1);
+    }
+    return canonUrl;
+  }
 
   /**
    * Checks the file system to see if name updates are necessary.  Currently

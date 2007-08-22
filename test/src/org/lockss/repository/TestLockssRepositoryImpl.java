@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.62 2007-05-29 01:05:45 tlipkis Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.62.4.1 2007-08-22 06:48:26 tlipkis Exp $
  */
 
 /*
@@ -236,13 +236,13 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
 
   public void testCanonicalizePath() throws Exception {
     assertEquals("http://www.example.com/test",
-		 LockssRepositoryImpl.canonicalizePath("http://www.example.com/test/"));
+		 repo.canonicalizePath("http://www.example.com/test/"));
     assertEquals("http://foo.com/test",
-		 LockssRepositoryImpl.canonicalizePath("http://foo.com/bar/../test/"));
+		 repo.canonicalizePath("http://foo.com/bar/../test/"));
     assertEquals("http://foo.com:20/test",
-		 LockssRepositoryImpl.canonicalizePath("http://foo.com:20/test/"));
+		 repo.canonicalizePath("http://foo.com:20/test/"));
     assertEquals("http://foo.com:20/test",
-		 LockssRepositoryImpl.canonicalizePath("http://foo.com:20/bar/../test/"));
+		 repo.canonicalizePath("http://foo.com:20/bar/../test/"));
   }
 
   public void testGetAuNode() throws Exception {

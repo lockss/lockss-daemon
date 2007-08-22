@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.54 2007-03-17 04:19:30 smorabito Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.54.8.1 2007-08-22 06:48:26 tlipkis Exp $
  */
 
 /*
@@ -33,11 +33,13 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.repository;
 
 import java.io.*;
+import java.net.*;
 import java.util.*;
 import org.lockss.test.*;
+import org.lockss.app.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
-import org.lockss.plugin.AuUrl;
+import org.lockss.plugin.*;
 import org.lockss.protocol.*;
 
 /**
@@ -50,7 +52,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     RepositoryNodeImpl.CHILD_COUNT_PROPERTY;
 
   private MockLockssDaemon theDaemon;
-  private LockssRepository repo;
+  private MyLockssRepositoryImpl repo;
   private String tempDirPath;
   MockArchivalUnit mau;
 
@@ -66,7 +68,9 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     mau = new MockArchivalUnit();
 
     theDaemon = getMockLockssDaemon();
-    repo = theDaemon.getLockssRepository(mau);
+    repo = (MyLockssRepositoryImpl)MyLockssRepositoryImpl.createNewLockssRepository(mau);
+    theDaemon.setAuManager(LockssDaemon.LOCKSS_REPOSITORY, mau, repo);
+    repo.initService(theDaemon);
     repo.startService();
   }
 
@@ -369,6 +373,189 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     }
     expectedA = new String[] { };
     assertIsomorphic(expectedA, childL);
+  }
+
+  String normalizeName(RepositoryNodeImpl node, String name) {
+    return node.normalize(new File(name)).getPath();
+  }
+
+  public void testNormalize() throws Exception {
+    RepositoryNodeImpl node = new RepositoryNodeImpl("foo", "bar", null);
+    // nothing to normalize
+    File file = new File("foo/bar/baz");
+    assertSame(file, node.normalize(file));
+    file = new File("foo/bar/ba%ABz");
+    assertSame(file, node.normalize(file));
+    // unnormalized in parent dir name is left alone
+    file = new File("ba%abz/bar");
+    assertSame(file, node.normalize(file));
+    file = new File("foo/ba%abz/bar");
+    assertSame(file, node.normalize(file));
+    // should be normalized
+    assertEquals("ba%ABz", normalizeName(node, "ba%aBz"));
+    assertEquals("/ba%ABz", normalizeName(node, "/ba%aBz"));
+    assertEquals("foo/bar/ba%ABz", normalizeName(node, "foo/bar/ba%aBz"));
+    assertEquals("foo/bar/ba%ABz", normalizeName(node, "foo/bar/ba%Abz"));
+    assertEquals("foo/bar/ba%ABz", normalizeName(node, "foo/bar/ba%abz"));
+    assertEquals("foo/bar/ba%abz/ba%ABz", normalizeName(node, "foo/bar/ba%abz/ba%abz"));
+  }
+
+  List getChildNames(String nodeName) throws MalformedURLException {
+    RepositoryNode dirEntry = repo.getNode(nodeName);
+    ArrayList res = new ArrayList();
+    for (Iterator childIt = dirEntry.listChildren(null, false);
+	 childIt.hasNext(); ) {
+      RepositoryNode node = (RepositoryNode)childIt.next();
+      res.add(node.getNodeUrl());
+    }
+    return res;
+  }
+
+  public void testFixUnnormalized_Rename() throws Exception {
+    repo.setDontNormalize(true);
+    ConfigurationUtil.addFromArgs(RepositoryNodeImpl.PARAM_FIX_UNNORMALIZED,
+				  "false");
+    createLeaf("http://www.example.com/testDir/branch%3c1/leaf%2C1",
+               "test stream", null);
+    createLeaf("http://www.example.com/testDir/branch%3c1/leaf%2c2",
+               "test stream", null);
+    createLeaf("http://www.example.com/testDir/branch2/leaf3",
+               "test stream", null);
+    createLeaf("http://www.example.com/testDir/branch2", "test stream", null);
+    createLeaf("http://www.example.com/testDir/leaf4", "test stream", null);
+
+    String[] expectedA = new String[] {
+      "http://www.example.com/testDir/branch%3c1",
+      "http://www.example.com/testDir/branch2",
+      "http://www.example.com/testDir/leaf4"
+      };
+    assertIsomorphic(expectedA,
+		     getChildNames(("http://www.example.com/testDir")));
+
+    ConfigurationUtil.addFromArgs(RepositoryNodeImpl.PARAM_FIX_UNNORMALIZED,
+				  "true");
+    String[] expectedB = new String[] {
+      "http://www.example.com/testDir/branch%3C1",
+      "http://www.example.com/testDir/branch2",
+      "http://www.example.com/testDir/leaf4"
+      };
+    assertIsomorphic(expectedB,
+		     getChildNames(("http://www.example.com/testDir")));
+
+    ConfigurationUtil.addFromArgs(RepositoryNodeImpl.PARAM_FIX_UNNORMALIZED,
+				  "false");
+    assertIsomorphic(expectedB,
+		     getChildNames(("http://www.example.com/testDir")));
+
+    String[] expectedC = new String[] {
+      "http://www.example.com/testDir/branch%3C1/leaf%2C1",
+      "http://www.example.com/testDir/branch%3C1/leaf%2c2",
+      };
+    assertIsomorphic(expectedC,
+		     getChildNames(("http://www.example.com/testDir/branch%3C1")));
+
+    ConfigurationUtil.addFromArgs(RepositoryNodeImpl.PARAM_FIX_UNNORMALIZED,
+				  "true");
+    assertIsomorphic(expectedB,
+		     getChildNames(("http://www.example.com/testDir")));
+
+    String[] expectedD = new String[] {
+      "http://www.example.com/testDir/branch%3C1/leaf%2C1",
+      "http://www.example.com/testDir/branch%3C1/leaf%2C2",
+      };
+    assertIsomorphic(expectedD,
+		     getChildNames(("http://www.example.com/testDir/branch%3C1")));
+  }
+
+  public void testFixUnnormalizedMultiple_Delete() throws Exception {
+    repo.setDontNormalize(true);
+    ConfigurationUtil.addFromArgs(RepositoryNodeImpl.PARAM_FIX_UNNORMALIZED,
+				  "false");
+    createLeaf("http://www.example.com/testDir/leaf%2C1",
+               "test stream", null);
+    createLeaf("http://www.example.com/testDir/leaf%2c1",
+               "test stream", null);
+    createLeaf("http://www.example.com/testDir/leaf3",
+               "test stream", null);
+
+    String[] expectedA = new String[] {
+      "http://www.example.com/testDir/leaf%2C1",
+      "http://www.example.com/testDir/leaf%2c1",
+      "http://www.example.com/testDir/leaf3",
+      };
+    assertIsomorphic(expectedA,
+		     getChildNames(("http://www.example.com/testDir")));
+
+    ConfigurationUtil.addFromArgs(RepositoryNodeImpl.PARAM_FIX_UNNORMALIZED,
+				  "true");
+    String[] expectedB = new String[] {
+      "http://www.example.com/testDir/leaf%2C1",
+      "http://www.example.com/testDir/leaf3",
+      };
+    assertIsomorphic(expectedB,
+		     getChildNames(("http://www.example.com/testDir")));
+
+    ConfigurationUtil.addFromArgs(RepositoryNodeImpl.PARAM_FIX_UNNORMALIZED,
+				  "false");
+    assertIsomorphic(expectedB,
+		     getChildNames(("http://www.example.com/testDir")));
+  }
+
+  public void testFixUnnormalizedMultiple_DeleteMultiple() throws Exception {
+    repo.setDontNormalize(true);
+    ConfigurationUtil.addFromArgs(RepositoryNodeImpl.PARAM_FIX_UNNORMALIZED,
+				  "false");
+    createLeaf("http://www.example.com/testDir/leaf%CA%3E",
+               "test stream", null);
+    createLeaf("http://www.example.com/testDir/leaf%cA%3E",
+               "test stream", null);
+    createLeaf("http://www.example.com/testDir/leaf%ca%3E",
+               "test stream", null);
+    createLeaf("http://www.example.com/testDir/leaf%ca%3e",
+               "test stream", null);
+    createLeaf("http://www.example.com/testDir/leaf3",
+               "test stream", null);
+
+    String[] expectedA = new String[] {
+      "http://www.example.com/testDir/leaf%CA%3E",
+      "http://www.example.com/testDir/leaf%cA%3E",
+      "http://www.example.com/testDir/leaf%ca%3E",
+      "http://www.example.com/testDir/leaf%ca%3e",
+      "http://www.example.com/testDir/leaf3",
+      };
+    assertIsomorphic(expectedA,
+		     getChildNames(("http://www.example.com/testDir")));
+
+    ConfigurationUtil.addFromArgs(RepositoryNodeImpl.PARAM_FIX_UNNORMALIZED,
+				  "true");
+    String[] expectedB = new String[] {
+      "http://www.example.com/testDir/leaf%CA%3E",
+      "http://www.example.com/testDir/leaf3",
+      };
+    assertIsomorphic(expectedB,
+		     getChildNames(("http://www.example.com/testDir")));
+
+    ConfigurationUtil.addFromArgs(RepositoryNodeImpl.PARAM_FIX_UNNORMALIZED,
+				  "false");
+    assertIsomorphic(expectedB,
+		     getChildNames(("http://www.example.com/testDir")));
+  }
+
+  public void testFixUnnormalized_DontFixParent() throws Exception {
+    repo.setDontNormalize(true);
+    createLeaf("http://www.example.com/testDir/branch%3c1/leaf%2C1",
+               "test stream", null);
+    createLeaf("http://www.example.com/testDir/branch%3c1/leaf%2c2",
+               "test stream", null);
+
+    ConfigurationUtil.addFromArgs(RepositoryNodeImpl.PARAM_FIX_UNNORMALIZED,
+				  "true");
+    String[] expectedA = new String[] {
+      "http://www.example.com/testDir/branch%3c1/leaf%2C1",
+      "http://www.example.com/testDir/branch%3c1/leaf%2C2",
+      };
+    assertIsomorphic(expectedA,
+		     getChildNames(("http://www.example.com/testDir/branch%3c1")));
   }
 
   public void testEntrySort() throws Exception {
@@ -1580,5 +1767,46 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
         return super.ensureDirExists(dirFile);
       }
     }
+  }
+
+  static class MyLockssRepositoryImpl extends LockssRepositoryImpl {
+    boolean dontNormalize = false;
+    void setDontNormalize(boolean val) {
+      dontNormalize = val;
+    }
+
+    MyLockssRepositoryImpl(String rootPath) {
+      super(rootPath);
+    }
+
+    public String canonicalizePath(String url)
+	throws MalformedURLException {
+      if (dontNormalize) return url;
+      return super.canonicalizePath(url);
+    }
+
+    public static LockssRepository createNewLockssRepository(ArchivalUnit au) {
+      String root = getRepositoryRoot(au);
+      if (root == null) {
+	throw new LockssRepository.RepositoryStateException("null root");
+      }
+      String auDir = LockssRepositoryImpl.mapAuToFileLocation(root, au);
+      log.debug("repo: " + auDir + ", au: " + au.getName());
+//       staticCacheLocation = extendCacheLocation(root);
+      LockssRepositoryImpl repo = new MyLockssRepositoryImpl(auDir);
+      Plugin plugin = au.getPlugin();
+      if (plugin != null) {
+	LockssDaemon daemon = plugin.getDaemon();
+	if (daemon != null) {
+	  RepositoryManager mgr = daemon.getRepositoryManager();
+	  if (mgr != null) {
+	    mgr.setRepositoryForPath(auDir, repo);
+	  }
+	}
+      }
+      return repo;
+    }
+
+
   }
 }
