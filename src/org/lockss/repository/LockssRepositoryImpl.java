@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.76 2007-05-29 01:05:45 tlipkis Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.77 2007-08-22 06:47:00 tlipkis Exp $
  */
 
 /*
@@ -292,7 +292,7 @@ public class LockssRepositoryImpl
    * @return String the canonicalized url
    * @throws MalformedURLException
    */
-  public static String canonicalizePath(String url)
+  public String canonicalizePath(String url)
       throws MalformedURLException {
     String canonUrl =
       UrlUtil.normalizeUrl(url, UrlUtil.PATH_TRAVERSAL_ACTION_THROW);

@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssDaemon.java,v 1.60 2007-04-30 04:52:45 tlipkis Exp $
+ * $Id: MockLockssDaemon.java,v 1.61 2007-08-22 06:46:59 tlipkis Exp $
  */
 
 /*
@@ -665,7 +665,7 @@ public class MockLockssDaemon extends LockssDaemon {
     }
   }
 
-  void setAuManager(String key, ArchivalUnit au, LockssAuManager mgr) {
+  public void setAuManager(String key, ArchivalUnit au, LockssAuManager mgr) {
     setAuManager(findAuManagerDesc(key), au, mgr);
   }
 

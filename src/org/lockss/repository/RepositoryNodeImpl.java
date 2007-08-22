@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.73 2007-06-28 07:14:23 smorabito Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.74 2007-08-22 06:47:00 tlipkis Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.repository;
 import java.io.*;
 import java.net.MalformedURLException;
 import java.util.*;
+import org.apache.oro.text.regex.*;
 
 import org.lockss.config.*;
 import org.lockss.protocol.*;
@@ -114,6 +115,11 @@ public class RepositoryNodeImpl implements RepositoryNode {
   public static final String PARAM_KEEP_ALL_PROPS_FOR_DUPE_FILE =
     Configuration.PREFIX + "repository.keepAllPropsForDupeFile";
   public static final boolean DEFAULT_KEEP_ALL_PROPS_FOR_DUPE_FILE = false;
+
+  /** If true, repair nodes that have lowercase URL-encoding chars */
+  public static final String PARAM_FIX_UNNORMALIZED =
+    Configuration.PREFIX + "repository.fixUnnormalized";
+  public static final boolean DEFAULT_FIX_UNNORMALIZED = true;
 
   // the agreement history file
   static final String AGREEMENT_FILENAME = "#agreement";
@@ -306,6 +312,10 @@ public class RepositoryNodeImpl implements RepositoryNode {
       listSize = Math.min(40, children.length);
     }
 
+    boolean checkUnnormalized =
+      CurrentConfig.getBooleanParam(PARAM_FIX_UNNORMALIZED,
+				    DEFAULT_FIX_UNNORMALIZED);
+
     ArrayList childL = new ArrayList(listSize);
     for (int ii=0; ii<children.length; ii++) {
       File child = children[ii];
@@ -314,7 +324,12 @@ public class RepositoryNodeImpl implements RepositoryNode {
         // must be ignored
         continue;
       }
-
+      if (checkUnnormalized) {
+	child = checkUnnormalized(child, children, ii);
+      }
+      if (child == null) {
+	continue;
+      }
       String childUrl = constructChildUrl(url, child.getName());
       if ((filter==null) || (filter.matches(childUrl))) {
         try {
@@ -338,6 +353,55 @@ public class RepositoryNodeImpl implements RepositoryNode {
       }
     }
     return childL;
+  }
+
+  private static Pattern UNNORMALIZED =
+    RegexpUtil.uncheckedCompile(".*%([a-z]|.[a-z]).*",
+				Perl5Compiler.READ_ONLY_MASK);
+
+  File normalize(File file) {
+    String name = file.getName();
+    if (name.indexOf('%') == -1) {
+      return file;
+    }
+    Perl5Matcher matcher = RegexpUtil.getMatcher();
+    if (!matcher.matches(name, UNNORMALIZED)) {
+      return file;
+    }
+    String normName = UrlUtil.normalizeUrlEncodingCase(name);
+    if (normName.equals(name)) {
+      return file;
+    }
+    return new File(file.getParent(), normName);
+  }
+
+  File checkUnnormalized(File file, File[] all, int ix) {
+    File norm = normalize(file);
+    if (norm == file) {
+      return file;
+    }
+    synchronized (this) {
+      if (file.exists()) {
+	if (norm.exists()) {
+	  if (FileUtil.delTree(file)) {
+	    logger.debug("Deleted redundant unnormalized: " + file);
+	  } else {
+	    logger.error("Couldn't delete unnormalized: " + file);
+	  }
+	  all[ix] = null;
+	} else {
+	  if (file.renameTo(norm)) {
+	    logger.debug("Renamed unnormalized: " + file + " to " + norm);
+	    all[ix] = norm;
+	  } else {
+	    logger.error("Couldn't rename unnormalized: " + file +
+			 " to " + norm);
+	    all[ix] = null;
+	  }
+	}
+      }
+    }
+    return all[ix];
   }
 
   public int getChildCount() {
