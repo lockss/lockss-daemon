@@ -537,6 +537,167 @@
         <property name="attributes.rights" value="openaccess" />
       </property>
 
+      <property name="Janus Head Volume 3">
+	<property name="title" value="Janus Head Volume 3" />
+	<property name="journalTitle" value="Janus Head" />
+	<property name="plugin" value="org.lockss.plugin.janushead.JanusHeadPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.janushead.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="3" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="Janus Head Volume 4">
+	<property name="title" value="Janus Head Volume 4" />
+	<property name="journalTitle" value="Janus Head" />
+	<property name="plugin" value="org.lockss.plugin.janushead.JanusHeadPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.janushead.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="4" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+      
+      <property name="Janus Head Volume 5">
+	<property name="title" value="Janus Head Volume 5" />
+	<property name="journalTitle" value="Janus Head" />
+	<property name="plugin" value="org.lockss.plugin.janushead.JanusHeadPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.janushead.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="5" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+      
+      <property name="Janus Head Volume 6">
+	<property name="title" value="Janus Head Volume 6" />
+	<property name="journalTitle" value="Janus Head" />
+	<property name="plugin" value="org.lockss.plugin.janushead.JanusHeadPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.janushead.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="6" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+      
+      <property name="Janus Head Volume 7">
+	<property name="title" value="Janus Head Volume 7" />
+	<property name="journalTitle" value="Janus Head" />
+	<property name="plugin" value="org.lockss.plugin.janushead.JanusHeadPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.janushead.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="7" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+      
+      <property name="Janus Head Volume 8">
+	<property name="title" value="Janus Head Volume 8" />
+	<property name="journalTitle" value="Janus Head" />
+	<property name="plugin" value="org.lockss.plugin.janushead.JanusHeadPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.janushead.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="8" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+      
+      <property name="Janus Head Volume 9">
+	<property name="title" value="Janus Head Volume 9" />
+	<property name="journalTitle" value="Janus Head" />
+	<property name="plugin" value="org.lockss.plugin.janushead.JanusHeadPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.janushead.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="9" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+      
+      <property name="Janus Head Volume 10">
+	<property name="title" value="Janus Head Volume 10" />
+	<property name="journalTitle" value="Janus Head" />
+	<property name="plugin" value="org.lockss.plugin.janushead.JanusHeadPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.janushead.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="10" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+      
+      <property name="Janus Head Volume 11">
+	<property name="title" value="Janus Head Volume 11" />
+	<property name="journalTitle" value="Janus Head" />
+	<property name="plugin" value="org.lockss.plugin.janushead.JanusHeadPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.janushead.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="11" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+      
+      <property name="Janus Head Volume 12">
+	<property name="title" value="Janus Head Volume 12" />
+	<property name="journalTitle" value="Janus Head" />
+	<property name="plugin" value="org.lockss.plugin.janushead.JanusHeadPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.janushead.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="12" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+      
+      <property name="Janus Head Volumes 1, 2, and 2001 - Special Issue">
+	<property name="title" value="Janus Head Volumes 1, 2, and 2001 - Special Issue" />
+	<property name="journalTitle" value="Janus Head" />
+	<property name="plugin" value="org.lockss.plugin.janushead.JanusHeadLegacyPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.janushead.org/" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
       <property name="lapetitezine2003">
 	<property name="title" value="La Petite Zine 2003" />
 	<property name="journalTitle" value="La Petite Zine" />
