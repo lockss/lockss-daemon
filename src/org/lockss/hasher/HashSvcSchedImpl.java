@@ -1,5 +1,5 @@
 /*
- * $Id: HashSvcSchedImpl.java,v 1.24 2007-08-15 07:09:37 tlipkis Exp $
+ * $Id: HashSvcSchedImpl.java,v 1.25 2007-08-22 06:45:15 tlipkis Exp $
  */
 
 /*
@@ -523,19 +523,22 @@ public class HashSvcSchedImpl
     }
   }    
 
+  static NumberFormat bigIntFmt = NumberFormat.getInstance();
+
   class HashOverview implements OverviewAccessor {
 
     public Object getOverview(String tableName, BitSet options) {
       List res = new ArrayList();
 
-      res.add(totalBytesHashed + " bytes hashed");
+      String bytes = bigIntFmt.format(totalBytesHashed) + " bytes hashed";
+      res.add(bytes);
       if (totalTime != 0) {
 	res.add(" in " + StringUtil.timeIntervalToString(totalTime));
 	res.add(" at " + hashRate(totalBytesHashed, totalTime) + " bytes/ms");
       }
       int wait = queue.size();
       if (wait != 0) {
-	res.add(", " + wait + " waiting");
+	res.add(wait + " waiting");
       }
       String summ = StringUtil.separatedString(res, ", ");
       return new StatusTable.Reference(summ, HASH_STATUS_TABLE);
