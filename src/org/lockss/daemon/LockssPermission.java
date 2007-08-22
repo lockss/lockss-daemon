@@ -1,10 +1,10 @@
 /*
- * $Id: LockssPermission.java,v 1.4 2007-08-08 22:45:27 dshr Exp $
+ * $Id: LockssPermission.java,v 1.4.2.1 2007-08-22 22:31:37 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,31 +33,38 @@ package org.lockss.daemon;
 
 import java.util.*;
 
-/**
- * <p>Title: </p>
- * <p>@author Claire Griffin</p>
- * <p>@version 1.0</p>
- * <p> </p>
- *  not attributable
- *
+/** The acceptable permission statements, one of which LOCKSS needs to see
+ * before it will collect content
  */
 
 public class LockssPermission {
   public static final String LOCKSS_PERMISSION_STRING =
   "LOCKSS system has permission to collect, preserve, and serve this Archival Unit";
 
-  ArrayList permissionList = new ArrayList();
+  public static final String LOCKSS_OPEN_ACCESS_PERMISSION_STRING =
+  "LOCKSS system has permission to collect, preserve, and serve this open access Archival Unit";
+
+  List permissionList;
 
   public LockssPermission() {
-    StringPermissionChecker spc =
-      new StringPermissionChecker(LOCKSS_PERMISSION_STRING,
-                                  new StringPermissionChecker.StringFilterRule());
-    permissionList.add(spc);
-    permissionList.add(new CreativeCommonsPermissionChecker());
-    permissionList.add(new CreativeCommonsV3PermissionChecker());
+    ArrayList lst = new ArrayList();
+    StringPermissionChecker spc;
+
+    spc = new StringPermissionChecker(LOCKSS_PERMISSION_STRING,
+				      new StringPermissionChecker.StringFilterRule());
+    lst.add(spc);
+
+    spc = new StringPermissionChecker(LOCKSS_OPEN_ACCESS_PERMISSION_STRING,
+				      new StringPermissionChecker.StringFilterRule());
+    lst.add(spc);
+
+    lst.add(new CreativeCommonsPermissionChecker());
+    lst.add(new CreativeCommonsV3PermissionChecker());
+    lst.trimToSize();
+    permissionList = Collections.unmodifiableList(lst);
   }
 
   public List getCheckers() {
-    return Collections.unmodifiableList(permissionList);
+    return permissionList;
   }
 }
