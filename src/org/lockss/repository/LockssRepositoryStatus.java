@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryStatus.java,v 1.29 2007-08-15 07:09:36 tlipkis Exp $
+ * $Id: LockssRepositoryStatus.java,v 1.29.2.1 2007-08-22 06:47:39 tlipkis Exp $
  */
 
 /*
@@ -426,9 +426,11 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
 	if (df != null) {
 	  StringBuilder sb = new StringBuilder();
 	  sb.append(StringUtil.sizeKBToString(df.getSize()));
-	  sb.append(", ");
+	  sb.append(" (");
 	  sb.append(Long.toString(Math.round(df.getPercent() * 100)));
-	  sb.append("% full");
+	  sb.append("% full, ");
+	  sb.append(StringUtil.sizeKBToString(df.getAvail()));
+	  sb.append(" free)");
 	  Object s = sb.toString();
  	  if (df.isFullerThan(repoMgr.getDiskFullThreshold())) {
 	    s = new StatusTable.DisplayedValue(s)
@@ -442,7 +444,7 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
 	  res.add("???");
 	}
 	if (iter.hasNext()) {
-	  res.add("; ");
+	  res.add(", ");
 	}
       }
       return new StatusTable.Reference(res, SPACE_TABLE_NAME);
