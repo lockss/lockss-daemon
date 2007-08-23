@@ -68,8 +68,11 @@
 	<value>org.lockss.plugin.othervoices.OtherVoicesPlugin</value>
 	<value>org.lockss.plugin.bepress.BePressPlugin</value>
 	<value>org.lockss.plugin.bioone.BioOnePlugin</value>
-	<value>org.lockss.plugin.disputatio.DisputatioPlugin</value>
 	<value>org.lockss.plugin.GendersPlugin</value>
+	<value>org.lockss.plugin.disputatio.DisputatioPlugin</value>
+	<value>org.lockss.plugin.janushead.JanusHeadLegacyPlugin</value>
+	<value>org.lockss.plugin.janushead.JanusHeadPlugin</value>
+	<value>org.lockss.plugin.livestockresearch.LivestockResearchPlugin</value>
 	<value>org.lockss.plugin.ShadowPlugin</value>
 	<value>org.lockss.plugin.iop.IOPPlugin</value>
 	<value>org.lockss.plugin.locksscard.LockssCardPlugin</value>
@@ -165,6 +168,7 @@
 	<value>org.lockss.plugin.marsinformatics.MarsPlugin</value>
 	<value>org.lockss.plugin.applevalleyreview.AppleValleyReviewPlugin</value>
 	<value>org.lockss.plugin.secrecynews.SecrecyNewsSpecialCollectionsPlugin</value>
+	<value>org.lockss.plugin.usenix.UsenixPlugin</value>
 	<value>org.lockss.plugin.emerald.EmeraldPlugin</value>
       </list>
     </property>
