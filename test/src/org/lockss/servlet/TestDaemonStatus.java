@@ -1,5 +1,5 @@
 /*
- * $Id: TestDaemonStatus.java,v 1.8 2007-01-24 19:18:08 thib_gc Exp $
+ * $Id: TestDaemonStatus.java,v 1.9 2007-08-23 07:03:16 tlipkis Exp $
  */
 
 /*
@@ -142,7 +142,7 @@ public class TestDaemonStatus extends LockssServletTestCase {
     WebRequest request = new GetMethodWebRequest("http://null/DaemonStatus");
     request.setParameter( "table", table );
     if (text) {
-      request.setParameter( "text", "1");
+      request.setParameter( "output", "text");
     }
     return sClient.getResponse(request);
   }
