@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.40 2007-08-15 07:09:36 tlipkis Exp $
+ * $Id: V3Voter.java,v 1.40.2.1 2007-08-23 01:29:52 smorabito Exp $
  */
 
 /*
@@ -104,6 +104,23 @@ public class V3Voter extends BasePoll {
     PREFIX + "allowV3Repairs";
   public static final boolean DEFAULT_ALLOW_V3_REPAIRS = true;
   
+  /**
+   * If true, use per-URL agreement to determine whether it's OK to serve
+   * a repair.  If false, rely on partial agreement level for serving
+   * repairs.
+   */
+  public static final String PARAM_ENABLE_PER_URL_AGREEMENT =
+    PREFIX + "enablePerUrlAgreement";
+  public static final boolean DEFAULT_ENABLE_PER_URL_AGREEMENT = false;
+  
+  /**
+   * The minimum percent agreement required before we're willing to serve
+   * repairs, if using per-AU agreement.
+   */
+  public static final String PARAM_MIN_PERCENT_AGREEMENT_FOR_REPAIRS =
+    PREFIX + "minPercentAgreementForRepairs";
+  public static final double DEFAULT_MIN_PERCENT_AGREEMENT_FOR_REPAIRS = 0.5f; 
+
   /**
    * Directory in which to store message data.
    */
@@ -803,25 +820,43 @@ public class V3Voter extends BasePoll {
    * given AU and URL.
    */
   boolean serveRepairs(PeerIdentity pid, ArchivalUnit au, String url) {
-    try {
-      RepositoryNode node = AuUtil.getRepositoryNode(au, url);
-      boolean previousAgreement = node.hasAgreement(pid);
-      if (previousAgreement) {
-        log.debug("Previous agreement found for peer " + pid + " on URL "
-                  + url);
-      } else {
-        log.debug("No previous agreement found for peer " + pid + " on URL "
-                  + url);
+    boolean allowRepairs = 
+      CurrentConfig.getBooleanParam(PARAM_ALLOW_V3_REPAIRS,
+                                    DEFAULT_ALLOW_V3_REPAIRS);
+    
+    // Short circuit.
+    if (!allowRepairs) return false;
+    
+    boolean perUrlAgreement =
+      CurrentConfig.getBooleanParam(PARAM_ENABLE_PER_URL_AGREEMENT,
+                                    DEFAULT_ENABLE_PER_URL_AGREEMENT);
+
+    if (perUrlAgreement) {
+      // Use per-URL agreement.
+      try {
+        RepositoryNode node = AuUtil.getRepositoryNode(au, url);
+        boolean previousAgreement = node.hasAgreement(pid);
+        if (previousAgreement) {
+          log.debug("Previous agreement found for peer " + pid + " on URL "
+                    + url);
+        } else {
+          log.debug("No previous agreement found for peer " + pid + " on URL "
+                    + url);
+        }
+        return previousAgreement;
+      } catch (MalformedURLException ex) {
+        // Log the error, but certainly don't serve the repair.
+        log.error("serveRepairs: The URL " + url + " appears to be malformed. "
+                  + "Cannot serve repairs for this URL.");
+        return false;
       }
-      boolean allowRepairs = 
-        CurrentConfig.getBooleanParam(PARAM_ALLOW_V3_REPAIRS,
-                                      DEFAULT_ALLOW_V3_REPAIRS);
-      return(previousAgreement && allowRepairs);
-    } catch (MalformedURLException ex) {
-      // Log the error, but certainly don't serve the repair.
-      log.error("serveRepairs: The URL " + url + " appears to be malformed. "
-                + "Cannot serve repairs for this URL.");
-      return false;
+    } else {
+      // Use per-AU agreement.
+      float percentAgreement = idManager.getPercentAgreement(pid, au);
+      float minPercentForRepair =
+        CurrentConfig.getCurrentConfig().getPercentage(PARAM_MIN_PERCENT_AGREEMENT_FOR_REPAIRS,
+                                                       DEFAULT_MIN_PERCENT_AGREEMENT_FOR_REPAIRS);
+      return (percentAgreement >= minPercentForRepair);
     }
   }
 

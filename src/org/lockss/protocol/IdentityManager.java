@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManager.java,v 1.76 2007-06-28 07:14:23 smorabito Exp $
+ * $Id: IdentityManager.java,v 1.76.4.1 2007-08-23 01:29:52 smorabito Exp $
  */
 
 /*
@@ -124,7 +124,7 @@ public interface IdentityManager extends LockssManager {
    * with a peer.
    */
   public static final float DEFAULT_MIN_PERCENT_AGREEMENT =
-    0.9f;
+    0.5f;
 
   /**
    * <p>The MAX_DELTA reputation constant.</p>
