@@ -33,6 +33,7 @@
       <string>4,&quot;^%s.*&quot;, base_url</string>
       <string>1,&quot;%sarchives.cfm&quot;, base_url</string>
       <string>1,&quot;%s%d-[0-9]+/&quot;, base_url, volume</string>
+      <string>1,&quot;^%s.*\.([cC][sS][sS]|[gG][iI][fF]|[jJ][pP][eE]?[gG]|[jJ][sS]|[pP][nN][gG]|[tT][iI][fF]?[fF])$&quot;, base_url</string>S
     </list>
   </entry>
   <entry>

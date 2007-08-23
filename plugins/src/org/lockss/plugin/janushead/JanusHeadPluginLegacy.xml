@@ -35,6 +35,7 @@
       <string>1,&quot;%sgwu-2001/.*&quot;, base_url</string>
       <string>1,&quot;%s2-2/.*&quot;, base_url</string>
       <string>1,&quot;%sJH.*&quot;, base_url</string>
+      <string>1,&quot;^%s.*\.([cC][sS][sS]|[gG][iI][fF]|[jJ][pP][eE]?[gG]|[jJ][sS]|[pP][nN][gG]|[tT][iI][fF]?[fF])$&quot;, base_url</string>S
     </list>
   </entry>
   <entry>

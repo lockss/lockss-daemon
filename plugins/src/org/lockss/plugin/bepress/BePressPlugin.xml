@@ -23,7 +23,7 @@
       <string>1,&quot;^%s%s/(topics/)?vol%d&quot;, base_url, journal_abbr, volume</string>
       <string>1,&quot;^%s%s/%d/&quot;, base_url, journal_abbr, volume</string>
       <string>1,&quot;^%scgi/viewcontent\.cgi\?.*context=%s&quot;, base_url, journal_abbr</string>
-      <string>1,&quot;\.([Cc][Ss][Ss]|[Gg][Ii][Ff]|[Jj][Pp][Ee]?[Gg]|[Jj][Ss]|[Pp][Nn][Gg])$&quot;, journal_abbr</string>
+      <string>1,&quot;^%s.*\.([cC][sS][sS]|[gG][iI][fF]|[jJ][pP][eE]?[gG]|[jJ][sS]|[pP][nN][gG]|[tT][iI][fF]?[fF])$&quot;, base_url</string>S
     </list>
   </entry>
   <entry>
