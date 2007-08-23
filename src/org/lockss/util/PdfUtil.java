@@ -1,5 +1,5 @@
 /*
- * $Id: PdfUtil.java,v 1.25 2007-08-12 01:48:58 tlipkis Exp $
+ * $Id: PdfUtil.java,v 1.26 2007-08-23 07:09:40 thib_gc Exp $
  */
 
 /*
@@ -708,6 +708,10 @@ return success;
       pdfDocument.save(outputStream);
       return ret;
     }
+    catch (OutOfMemoryError oome) {
+      logger.error("Out of memory in the PDF framework", oome);
+      throw oome; // rethrow
+    }
     catch (IOException ioe) {
       logger.error("Document transform failed", ioe);
       return false;
@@ -729,6 +733,10 @@ return success;
         pdfDocument.save(outputStream);
       }
       return new ByteArrayInputStream(outputStream.toByteArray());
+    }
+    catch (OutOfMemoryError oome) {
+      logger.error("Out of memory in the PDF framework", oome);
+      throw oome; // rethrow
     }
     catch (IOException ioe) {
       logger.error("Transform from input stream failed", ioe);
