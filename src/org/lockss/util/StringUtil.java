@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.78 2007-01-14 07:53:43 tlipkis Exp $
+ * $Id: StringUtil.java,v 1.79 2007-08-23 06:21:11 tlipkis Exp $
  */
 
 /*
@@ -65,7 +65,7 @@ public class StringUtil {
       return source;
     }
     int sourceLen = source.length();
-    StringBuffer sb = new StringBuffer(sourceLen);
+    StringBuilder sb = new StringBuilder(sourceLen);
     int oldIdx = 0;
     do {
       for (int ix = oldIdx; ix < thisIdx; ix++) {
@@ -91,7 +91,7 @@ public class StringUtil {
       return source;
     } else {
       int sourceLen = source.length();
-      StringBuffer sb = new StringBuffer(sourceLen);
+      StringBuilder sb = new StringBuilder(sourceLen);
       sb.append(source.substring(0, index));
       sb.append(newstr);
       if (index + oldLen < sourceLen) {
@@ -109,7 +109,7 @@ public class StringUtil {
    */
   public static String separatedString(Collection c, String separator) {
     return separatedString(c, "", separator, "",
-			   new StringBuffer()).toString();
+			   new StringBuilder()).toString();
   }
 
   /**
@@ -120,7 +120,7 @@ public class StringUtil {
    */
   public static String separatedString(Object[] arr, String separator) {
     return separatedString(ListUtil.fromArray(arr), "", separator, "",
-			   new StringBuffer()).toString();
+			   new StringBuilder()).toString();
   }
 
   /**
@@ -135,7 +135,7 @@ public class StringUtil {
       col.add(Integer.toString(arr[ii]));
     }
     return separatedString(col, "", separator, "",
-                           new StringBuffer()).toString();
+                           new StringBuilder()).toString();
   }
 
   /**
@@ -150,18 +150,18 @@ public class StringUtil {
       col.add(Long.toString(arr[ii]));
     }
     return separatedString(col, "", separator, "",
-                           new StringBuffer()).toString();
+                           new StringBuilder()).toString();
   }
 
   /**
    * Concatenate elements of collection into string, with separators
    * @param c - Collection of object (on which toString() will be called)
    * @param separator - String to put between elements
-   * @param sb - StringBuffer to write result into
+   * @param sb - StringBuilder to write result into
    * @return sb
    */
-  public static StringBuffer separatedString(Collection c, String separator,
-                                             StringBuffer sb) {
+  public static StringBuilder separatedString(Collection c, String separator,
+                                             StringBuilder sb) {
     return separatedString(c, "", separator, "", sb);
   }
 
@@ -177,7 +177,7 @@ public class StringUtil {
                                                 String delimiter) {
     return separatedString(c, delimiter,
 			   delimiter + separator + delimiter, delimiter,
-			   new StringBuffer()).toString();
+			   new StringBuilder()).toString();
   }
 
   /**
@@ -194,7 +194,7 @@ public class StringUtil {
                                                 String delimiter2) {
     return separatedString(c, delimiter1,
                            delimiter2 + separator + delimiter1, delimiter2,
-                           new StringBuffer()).toString();
+                           new StringBuilder()).toString();
   }
 
   /**
@@ -208,7 +208,7 @@ public class StringUtil {
   public static String terminatedSeparatedString(Collection c, String separator,
                                                  String terminator) {
     return separatedString(c, "", separator, terminator,
-			   new StringBuffer()).toString();
+			   new StringBuilder()).toString();
   }
 
   /**
@@ -220,11 +220,11 @@ public class StringUtil {
    * @param separatorLast - String to place after last element
    * @return Concatenated string
    */
-  public static StringBuffer separatedString(Collection c,
+  public static StringBuilder separatedString(Collection c,
 					     String separatorFirst,
                                              String separatorInner,
                                              String separatorLast,
-                                             StringBuffer sb) {
+                                             StringBuilder sb) {
     if (c == null) {
       return sb;
     }
@@ -534,13 +534,15 @@ public class StringUtil {
 			   Util.SUBSTITUTE_ALL);
   }
 
-  /** Escape all commas and backslashes with backslash, allowing result to
-   * be included in csv text */
-  public static String csvEncode(String s) {
-    int pos = Math.max(s.indexOf('\\'), s.indexOf(','));
-    if (pos < 0) return s;
+  /** Escape values (and keys) to be included in a comma-separated string
+   * of key=value.  Comma, equaps and backslash are escaped with
+   * backslash */
+  public static String ckvEscape(String s) {
+    if (s.indexOf('\\') < 0 && s.indexOf(',') < 0 && s.indexOf('=') < 0) {
+      return s;
+    }
     int len = s.length();
-    StringBuffer sb = new StringBuffer(len + 8);
+    StringBuilder sb = new StringBuilder(len + 8);
     for (int ix = 0; ix < len; ix++) {
       char c = s.charAt(ix);
       switch(c) {
@@ -560,6 +562,37 @@ public class StringUtil {
       }
     }
     return sb.toString();
+  }
+
+  /** Encode a string to be included in a CSV.  Values containins comma,
+   * space or quote are quoted, quotes are doubled */
+  public static String csvEncode(String s) {
+    if (s.indexOf('"') >= 0) {
+      int len = s.length();
+      StringBuilder sb = new StringBuilder(len + 5);
+      sb.append("\"");
+      for (int ix = 0; ix < len; ix++) {
+	char c = s.charAt(ix);
+	switch (c) {
+	case '\"':
+	  sb.append("\"\"");
+	  break;
+	default:
+	  sb.append(c);
+	  break;
+	}
+      }
+      sb.append("\"");
+      return sb.toString();
+    }
+    if (s.indexOf(' ') >= 0 || s.indexOf(',') >= 0) {
+      StringBuilder sb = new StringBuilder(s.length() + 2);
+      sb.append("\"");
+      sb.append(s);
+      sb.append("\"");
+      return sb.toString();
+    }
+    return s;
   }
 
   /**
@@ -590,7 +623,7 @@ public class StringUtil {
    * maxSize chars */
   public static String fromReader(Reader r, int maxSize) throws IOException {
     char[] buf = new char[1000];
-    StringBuffer sb = new StringBuffer(1000);
+    StringBuilder sb = new StringBuilder(1000);
     int len;
     while ((len = r.read(buf)) >= 0) {
       sb.append(buf, 0, len);
@@ -795,7 +828,7 @@ public class StringUtil {
 
   /** Trim leading and trailing blank lines from a block of text */
   public static String trimBlankLines(String txt) {
-    StringBuffer buf = new StringBuffer(txt);
+    StringBuilder buf = new StringBuilder(txt);
     while (buf.length()>0 && buf.charAt(0) == '\n') {
       buf.deleteCharAt(0);
     }
@@ -870,7 +903,7 @@ public class StringUtil {
    * @return a string in the form dDhHmMsS
    */
   public static String timeIntervalToString(long millis) {
-    StringBuffer sb = new StringBuffer();
+    StringBuilder sb = new StringBuilder();
 
     if (millis < 0) {
       sb.append("-");
@@ -879,7 +912,7 @@ public class StringUtil {
     return posTimeIntervalToString(millis, sb);
   }
 
-  private static String posTimeIntervalToString(long millis, StringBuffer sb) {
+  private static String posTimeIntervalToString(long millis, StringBuilder sb) {
     if (millis < 10 * Constants.SECOND) {
       sb.append(millis);
       sb.append("ms");
@@ -915,6 +948,9 @@ public class StringUtil {
   static final String[] byteSuffixes = {"KB", "MB", "GB", "TB", "PB"};
 
   public static String sizeToString(long size) {
+    if (size < 1024) {
+      return size + "B";
+    }
     return sizeKBToString(size / 1024);
   }
 
@@ -925,7 +961,7 @@ public class StringUtil {
     int len = byteSuffixes.length;
     for (int ix = 0; ix < len; ix++) {
       if (x < base || ix == len-1) {
-	StringBuffer sb = new StringBuffer();
+	StringBuilder sb = new StringBuilder();
 	if (x < 10.0) {
 	  sb.append(fmt_1dec.format(x));
 	} else {
@@ -965,7 +1001,7 @@ public class StringUtil {
    *   to uppercase.
    */
   public static String titleCase(String txt) {
-    StringBuffer buf = new StringBuffer(txt);
+    StringBuilder buf = new StringBuilder(txt);
     int len = buf.length();
     buf.setCharAt(0,Character.toUpperCase(buf.charAt(0)));
     for (int i=1; i<len; i++) {

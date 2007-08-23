@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.66 2007-01-14 07:53:40 tlipkis Exp $
+ * $Id: TestStringUtil.java,v 1.67 2007-08-23 06:21:11 tlipkis Exp $
  */
 
 /*
@@ -141,11 +141,22 @@ public class TestStringUtil extends LockssTestCase {
     assertEquals("\\ 1\\.2\\\\3\\?", StringUtil.escapeNonAlphaNum(" 1.2\\3?"));
   }
 
+  public void testCkvEscape() {
+    assertEquals("", StringUtil.ckvEscape(""));
+    assertSame("foo", StringUtil.ckvEscape("foo"));
+    assertEquals("foo\\\\bar\\,x", StringUtil.ckvEscape("foo\\bar,x"));
+    assertEquals("key\\=val", StringUtil.ckvEscape("key=val"));
+    assertEquals("key\\=val\\,k", StringUtil.ckvEscape("key=val,k"));
+  }
+
   public void testCsvEncode() {
     assertEquals("", StringUtil.csvEncode(""));
     assertSame("foo", StringUtil.csvEncode("foo"));
-    assertEquals("foo\\\\bar\\,x", StringUtil.csvEncode("foo\\bar,x"));
-    assertEquals("key\\=val\\,k", StringUtil.csvEncode("key=val,k"));
+    assertEquals("foo\\bar", StringUtil.csvEncode("foo\\bar"));
+    assertEquals("\"foo,bar\"", StringUtil.csvEncode("foo,bar"));
+    assertEquals("\"quote\"\"me\"\"\"", StringUtil.csvEncode("quote\"me\""));
+    assertEquals("\"quote \"\"me\"\" now\"",
+		 StringUtil.csvEncode("quote \"me\" now"));
   }
 
   public void testCountOccurences() {
@@ -558,6 +569,16 @@ public class TestStringUtil extends LockssTestCase {
     assertEquals("3.7GB", StringUtil.sizeKBToString((long)(3.7 * 1024*1024)));
     assertEquals("432GB", StringUtil.sizeKBToString(432 * 1024*1024));
     assertEquals("3.7TB", StringUtil.sizeKBToString((long)(3.7 * 1024*1024*1024)));
+  }
+
+  public void testSizeToString() throws Exception {
+    assertEquals("0B", StringUtil.sizeToString(0));
+    assertEquals("123B", StringUtil.sizeToString(123));
+    assertEquals("1023B", StringUtil.sizeToString(1023));
+    assertEquals("1.0KB", StringUtil.sizeToString(1024));
+    assertEquals("1.0KB", StringUtil.sizeToString(1025));
+    assertEquals("123KB", StringUtil.sizeToString(123*1024));
+    assertEquals("123MB", StringUtil.sizeToString(123*1024*1024));
   }
 
   public void testTrimStackTrace() {

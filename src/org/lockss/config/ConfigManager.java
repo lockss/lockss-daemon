@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.51 2007-08-01 04:49:40 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.52 2007-08-23 06:21:11 tlipkis Exp $
  */
 
 /*
@@ -749,7 +749,7 @@ public class ConfigManager implements LockssManager {
       Map.Entry ent = (Map.Entry)iter.next();
       sb.append(ent.getKey());
       sb.append("=");
-      sb.append(StringUtil.csvEncode((String)ent.getValue()));
+      sb.append(StringUtil.ckvEscape((String)ent.getValue()));
       if (iter.hasNext()) {
 	sb.append(",");
       }
