@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyAndContent.java,v 1.22 2007-06-28 03:58:18 tlipkis Exp $
+ * $Id: ProxyAndContent.java,v 1.23 2007-08-23 06:33:27 tlipkis Exp $
  */
 
 /*
@@ -394,7 +394,7 @@ public class ProxyAndContent extends LockssServlet {
     // Prepare error message
     if (errList.size() > 0) {
       // There were errors
-      StringBuffer buffer = new StringBuffer();
+      StringBuilder buffer = new StringBuilder();
       StringUtil.separatedString(errList, "<br>", buffer);
       errMsg = buffer.toString();
     }
@@ -518,7 +518,7 @@ public class ProxyAndContent extends LockssServlet {
     // Prepare error message
     if (errList.size() > 0) {
       // There were errors
-      StringBuffer buffer = new StringBuffer();
+      StringBuilder buffer = new StringBuilder();
       StringUtil.separatedString(errList, "<br>", buffer);
       errMsg = buffer.toString();
     }

@@ -1,5 +1,5 @@
 /*
-* $Id: PollerStatus.java,v 1.27 2007-08-15 07:09:36 tlipkis Exp $
+* $Id: PollerStatus.java,v 1.28 2007-08-23 06:33:27 tlipkis Exp $
  */
 
 /*
@@ -281,7 +281,7 @@ public class PollerStatus {
       if (url != null) {
 	suffix.add("on " + url);
       }
-      StringBuffer sb = new StringBuffer();
+      StringBuilder sb = new StringBuilder();
       StringUtil.separatedString(prefix, "", ", ", " ", sb);
       sb.append("Polls");
       StringUtil.separatedString(suffix, " ", ", ", "", sb);

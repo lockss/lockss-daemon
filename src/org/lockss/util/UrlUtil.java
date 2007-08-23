@@ -1,5 +1,5 @@
 /*
- * $Id: UrlUtil.java,v 1.45 2007-05-29 01:06:06 tlipkis Exp $
+ * $Id: UrlUtil.java,v 1.46 2007-08-23 06:33:27 tlipkis Exp $
  *
 
 Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
@@ -321,7 +321,7 @@ public class UrlUtil {
       }
     }
 
-    StringBuffer sb = new StringBuffer();
+    StringBuilder sb = new StringBuilder();
     if (path.startsWith("/")) {
       sb.append("/");
     }
