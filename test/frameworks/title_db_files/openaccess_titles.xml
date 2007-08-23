@@ -645,7 +645,7 @@
       <property name="Janus Head Volumes 1, 2, and 2001 - Special Issue">
 	<property name="title" value="Janus Head Volumes 1, 2, and 2001 - Special Issue" />
 	<property name="journalTitle" value="Janus Head" />
-	<property name="plugin" value="org.lockss.plugin.janushead.JanusHeadLegacyPlugin" />
+	<property name="plugin" value="org.lockss.plugin.janushead.JanusHeadPluginLegacy" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://www.janushead.org/" />
