@@ -9,11 +9,11 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Janus Head %d&quot;, volume</string>
+    <string>&quot;Janus Head Volume %d&quot;, volume</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -25,13 +25,13 @@
   </entry>
   <entry>
     <string>plugin_notes</string>
-    <string>This is the plugin for Janus Head volume 3 and after, not including special collections.</string>
+    <string>This is the plugin for Janus Head volume 3 and after, not including special issues.</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
     <list>
       <string>4,&quot;^%s.*&quot;, base_url</string>
-      <string>1,&quot;%s%d-[0-9]+/.*&quot;, base_url, volume</string>
+      <string>1,&quot;%s%d-[0-9]+/&quot;, base_url, volume</string>
     </list>
   </entry>
   <entry>

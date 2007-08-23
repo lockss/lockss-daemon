@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.janushead.JanusHeadLegacyPlugin</string>
+    <string>org.lockss.plugin.janushead.JanusHeadPluginLegacy</string>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
@@ -9,15 +9,15 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Janus Head Volumes 1, 2, and 2001 Special Issue &quot;</string>
+    <string>&quot;Janus Head Volumes 1, 2, and 2001 Special Issues &quot;</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Janus Head Legacy Plugin</string>
+    <string>Janus Head Plugin (Legacy)</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -25,7 +25,7 @@
   </entry>
   <entry>
     <string>plugin_notes</string>
-    <string>This is the legacy plugin for Janus Head volumes 1, 2  and special collections.</string>
+    <string>This is the legacy plugin for Janus Head volumes 1, 2  and special issues.</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
