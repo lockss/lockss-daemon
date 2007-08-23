@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.56 2007-08-17 07:37:03 smorabito Exp $
+ * $Id: V3Poller.java,v 1.57 2007-08-23 01:29:56 smorabito Exp $
  */
 
 /*
@@ -699,8 +699,9 @@ public class V3Poller extends BasePoll {
       // If we haven't got enough peers, invite more.
       log.debug("Scheduling check for more peers to invite in " +
                 timeBetweenInvitations + "ms.");
-      TimerQueue.schedule(Deadline.in(timeBetweenInvitations),
-                          new InvitationCallback(), this);
+      invitationRequest = 
+        TimerQueue.schedule(Deadline.in(timeBetweenInvitations),
+                            new InvitationCallback(), this);
     } else {
       log.debug("Not scheduling a followup invitation check, " +
                 "due to configuration.");

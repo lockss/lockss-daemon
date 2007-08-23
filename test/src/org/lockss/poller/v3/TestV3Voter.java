@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Voter.java,v 1.3 2007-03-17 04:19:30 smorabito Exp $
+ * $Id: TestV3Voter.java,v 1.4 2007-08-23 01:29:56 smorabito Exp $
  */
 
 /*
@@ -87,22 +87,26 @@ public class TestV3Voter extends LockssTestCase {
   
   public void testServeRepairsWithNoAgreementAndFalseProperty() {
     ConfigurationUtil.setFromArgs(V3Voter.PARAM_ALLOW_V3_REPAIRS, "false");
+    ConfigurationUtil.addFromArgs(V3Voter.PARAM_ENABLE_PER_URL_AGREEMENT, "true");
     assertFalse(voter.serveRepairs(repairRequestor, au, repairUrl));
   }
   
   public void testServeRepairsWithNoAgreementAndTrueProperty() {
     ConfigurationUtil.setFromArgs(V3Voter.PARAM_ALLOW_V3_REPAIRS, "true");
+    ConfigurationUtil.addFromArgs(V3Voter.PARAM_ENABLE_PER_URL_AGREEMENT, "true");
     assertFalse(voter.serveRepairs(repairRequestor, au, repairUrl));
   }
   
   public void testServeRepairsWithAgreementAndFalseProperty() {
     ConfigurationUtil.setFromArgs(V3Voter.PARAM_ALLOW_V3_REPAIRS, "false");
+    ConfigurationUtil.addFromArgs(V3Voter.PARAM_ENABLE_PER_URL_AGREEMENT, "true");
     repoNode.signalAgreement(ListUtil.list(repairRequestor));
     assertFalse(voter.serveRepairs(repairRequestor, au, repairUrl));
   }
 
   public void testServeRepairsWithAgreementAndTrueProperty() {
     ConfigurationUtil.setFromArgs(V3Voter.PARAM_ALLOW_V3_REPAIRS, "true");
+    ConfigurationUtil.addFromArgs(V3Voter.PARAM_ENABLE_PER_URL_AGREEMENT, "true");
     repoNode.signalAgreement(ListUtil.list(repairRequestor));
     assertTrue(voter.serveRepairs(repairRequestor, au, repairUrl));
   }

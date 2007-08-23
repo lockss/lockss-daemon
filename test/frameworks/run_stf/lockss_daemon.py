@@ -534,9 +534,22 @@ class Client:
                 # Found the right entry
                 pollKey = row['pollId']['key']
                 (summary, table) = self.getV3PollerDetail(pollKey)
-                allUrls = int(summary['Total URLs In Vote'])
-                agreeUrls = int(summary['Agreeing URLs']['value'])
-                repairs = int(summary['Completed Repairs']['value'])
+
+                try:
+                    allUrls = int(summary['Total URLs In Vote'])
+                except KeyError, e: # Not available
+                    allUrls = 0
+
+                try:
+                    agreeUrls = int(summary['Agreeing URLs']['value'])
+                except KeyError, e: # Not available
+                    agreeUrls = 0
+
+                try:
+                    repairs = int(summary['Completed Repairs']['value'])
+                except KeyError, e: # Not available
+                    repairs = 0
+
                 return ((repairs == allUrls) and (agreeUrls == allUrls))
         return False
                 
@@ -552,9 +565,22 @@ class Client:
                 # Found the right entry
                 pollKey = row['pollId']['key']
                 (summary, table) = self.getV3PollerDetail(pollKey)
-                allUrls = int(summary['Total URLs In Vote'])
-                agreeUrls = int(summary['Agreeing URLs']['value'])
-                repairs = int(summary['Completed Repairs']['value'])
+
+                try:
+                    allUrls = int(summary['Total URLs In Vote'])
+                except KeyError, e: # Not available
+                    allUrls = 0
+
+                try:
+                    agreeUrls = int(summary['Agreeing URLs']['value'])
+                except KeyError, e: # Not available
+                    agreeUrls = 0
+
+                try:
+                    repairs = int(summary['Completed Repairs']['value'])
+                except KeyError, e: # Not available
+                    repairs = 0
+
                 return (len(nodeList) == repairs and (agreeUrls == allUrls))
                 # TODO: This will really need to be improved when the status
                 # tables are better!  Need a way to determine whether this particular NODE was
