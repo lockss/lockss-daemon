@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Janus Head Volumes 1, 2, and 2001 Special Issues &quot;</string>
+    <string>&quot;Janus Head Volumes 1-2, and special issues&quot;</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -25,12 +25,13 @@
   </entry>
   <entry>
     <string>plugin_notes</string>
-    <string>This is the legacy plugin for Janus Head volumes 1, 2  and special issues.</string>
+    <string>This is the legacy plugin for Janus Head volumes 1-2  and special issues.</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
     <list>
       <string>4,&quot;^%s.*&quot;, base_url</string>
+      <string>1,&quot;%sarchives.cfm&quot;, base_url</string>
       <string>1,&quot;%sgwu-2001/.*&quot;, base_url</string>
       <string>1,&quot;%s2-2/.*&quot;, base_url</string>
       <string>1,&quot;%sJH.*&quot;, base_url</string>

@@ -537,7 +537,7 @@
         <property name="attributes.rights" value="openaccess" />
       </property>
 
-      <property name="Janus Head Volume 3">
+      <property name="JanusHead3">
 	<property name="title" value="Janus Head Volume 3" />
 	<property name="journalTitle" value="Janus Head" />
 	<property name="plugin" value="org.lockss.plugin.janushead.JanusHeadPlugin" />
@@ -552,7 +552,7 @@
         <property name="attributes.rights" value="openaccess" />
       </property>
 
-      <property name="Janus Head Volume 4">
+      <property name="JanusHead4">
 	<property name="title" value="Janus Head Volume 4" />
 	<property name="journalTitle" value="Janus Head" />
 	<property name="plugin" value="org.lockss.plugin.janushead.JanusHeadPlugin" />
@@ -567,7 +567,7 @@
         <property name="attributes.rights" value="openaccess" />
       </property>
 
-      <property name="Janus Head Volume 5">
+      <property name="JanusHead5">
 	<property name="title" value="Janus Head Volume 5" />
 	<property name="journalTitle" value="Janus Head" />
 	<property name="plugin" value="org.lockss.plugin.janushead.JanusHeadPlugin" />
@@ -582,7 +582,7 @@
         <property name="attributes.rights" value="openaccess" />
       </property>
 
-      <property name="Janus Head Volume 6">
+      <property name="JanusHead6">
 	<property name="title" value="Janus Head Volume 6" />
 	<property name="journalTitle" value="Janus Head" />
 	<property name="plugin" value="org.lockss.plugin.janushead.JanusHeadPlugin" />
@@ -597,7 +597,7 @@
         <property name="attributes.rights" value="openaccess" />
       </property>
 
-      <property name="Janus Head Volume 7">
+      <property name="JanusHead7">
 	<property name="title" value="Janus Head Volume 7" />
 	<property name="journalTitle" value="Janus Head" />
 	<property name="plugin" value="org.lockss.plugin.janushead.JanusHeadPlugin" />
@@ -612,7 +612,7 @@
         <property name="attributes.rights" value="openaccess" />
       </property>
 
-      <property name="Janus Head Volume 8">
+      <property name="JanusHead8">
 	<property name="title" value="Janus Head Volume 8" />
 	<property name="journalTitle" value="Janus Head" />
 	<property name="plugin" value="org.lockss.plugin.janushead.JanusHeadPlugin" />
@@ -627,7 +627,7 @@
         <property name="attributes.rights" value="openaccess" />
       </property>
 
-      <property name="Janus Head Volume 9">
+      <property name="JanusHead9">
 	<property name="title" value="Janus Head Volume 9" />
 	<property name="journalTitle" value="Janus Head" />
 	<property name="plugin" value="org.lockss.plugin.janushead.JanusHeadPlugin" />
@@ -642,8 +642,8 @@
         <property name="attributes.rights" value="openaccess" />
       </property>
 
-      <property name="Janus Head Volumes 1, 2, and special issues">
-	<property name="title" value="Janus Head Volumes 1, 2, and special issues" />
+      <property name="JanusHead1and2andSpecialIssues">
+	<property name="title" value="Janus Head Volumes 1-2, and special issues" />
 	<property name="journalTitle" value="Janus Head" />
 	<property name="plugin" value="org.lockss.plugin.janushead.JanusHeadPluginLegacy" />
 	<property name="param.1">
