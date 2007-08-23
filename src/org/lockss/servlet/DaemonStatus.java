@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.69 2007-08-15 07:10:02 tlipkis Exp $
+ * $Id: DaemonStatus.java,v 1.70 2007-08-23 06:21:25 tlipkis Exp $
  */
 
 /*
@@ -57,6 +57,7 @@ public class DaemonStatus extends LockssServlet {
   static final int OUTPUT_HTML = 1;
   static final int OUTPUT_TEXT = 2;
   static final int OUTPUT_XML = 3;
+  static final int OUTPUT_CSV = 4;
 
   /** Format to display date/time in tables */
   public static final DateFormat tableDf =
@@ -95,10 +96,6 @@ public class DaemonStatus extends LockssServlet {
   public void lockssHandleRequest() throws IOException {
     outputFmt = OUTPUT_HTML;	// default output is html
 
-    // allow "text=" for backwards compatibility
-    if (req.getParameter("text") != null) {
-      outputFmt = OUTPUT_TEXT;
-    }
     String outputParam = req.getParameter("output");
     if (!StringUtil.isNullString(outputParam)) {
       if ("html".equalsIgnoreCase(outputParam)) {
@@ -107,6 +104,8 @@ public class DaemonStatus extends LockssServlet {
 	outputFmt = OUTPUT_XML;
       } else if ("text".equalsIgnoreCase(outputParam)) {
 	outputFmt = OUTPUT_TEXT;
+      } else if ("csv".equalsIgnoreCase(outputParam)) {
+	outputFmt = OUTPUT_CSV;
       } else {
 	log.warning("Unknown output format: " + outputParam);
       }
@@ -155,6 +154,9 @@ public class DaemonStatus extends LockssServlet {
     case OUTPUT_TEXT:
       doTextStatusTable();
       break;
+    case OUTPUT_CSV:
+      doCsvStatusTable();
+      break;
     }
   }
 
@@ -199,7 +201,7 @@ public class DaemonStatus extends LockssServlet {
     String vPlatform;
     PlatformVersion pVer = ConfigManager.getPlatformVersion();
     if (pVer != null) {
-      vPlatform = ", platform=" + StringUtil.csvEncode(pVer.displayString());
+      vPlatform = ", platform=" + StringUtil.ckvEscape(pVer.displayString());
     } else {
       vPlatform = "";
     }
@@ -398,9 +400,9 @@ public class DaemonStatus extends LockssServlet {
       return;
     }
     wrtr.println();
-    wrtr.print("table=" + StringUtil.csvEncode(statTable.getTitle()));
+    wrtr.print("table=" + StringUtil.ckvEscape(statTable.getTitle()));
     if (tableKey != null) {
-      wrtr.print(",key=" + StringUtil.csvEncode(tableKey));
+      wrtr.print(",key=" + StringUtil.ckvEscape(tableKey));
     }
 
     java.util.List summary = statTable.getSummaryInfo();
@@ -412,7 +414,7 @@ public class DaemonStatus extends LockssServlet {
 	wrtr.print("=");
 	Object dispVal = getTextDisplayString(sInfo.getValue());
 	String valStr = dispVal != null ? dispVal.toString() : "(null)";
-	wrtr.print(StringUtil.csvEncode(valStr));
+	wrtr.print(StringUtil.ckvEscape(valStr));
       }
     }
     wrtr.println();
@@ -432,7 +434,7 @@ public class DaemonStatus extends LockssServlet {
 	  Object val = rowMap.get(key);
 	  Object dispVal = getTextDisplayString(val);
 	  String valStr = dispVal != null ? dispVal.toString() : "(null)";
-	  wrtr.print(key + "=" + StringUtil.csvEncode(valStr));
+	  wrtr.print(key + "=" + StringUtil.ckvEscape(valStr));
 	  if (iter.hasNext()) {
 	    wrtr.print(",");
 	  } else {
@@ -440,6 +442,56 @@ public class DaemonStatus extends LockssServlet {
 	  }
 	}
       }
+    }
+  }
+
+  // Build the table, writing csv to wrtr
+  private void doCsvStatusTable() throws IOException {
+    PrintWriter wrtr = resp.getWriter();
+    resp.setContentType("text/plain");
+
+    StatusTable statTable;
+    try {
+      statTable = makeTable();
+    } catch (StatusService.NoSuchTableException e) {
+      wrtr.println("No table: " + e.toString());
+      return;
+    } catch (Exception e) {
+      wrtr.println("Error getting table: " + e.toString());
+      return;
+    }
+    java.util.List<ColumnDescriptor> colList =
+      statTable.getColumnDescriptors();
+    java.util.List<Map> rowList = getRowList(statTable);
+    if (colList != null) {
+      for (Iterator colIter = colList.iterator(); colIter.hasNext(); ) {
+	ColumnDescriptor cd = (ColumnDescriptor)colIter.next();
+	wrtr.print(StringUtil.csvEncode(cd.getTitle()));
+	if (colIter.hasNext()) {
+	  wrtr.print(",");
+	} else {
+	  wrtr.println();
+	}
+      }
+      if (rowList != null) {
+	// output rows
+	for (Map rowMap : rowList) {
+	  for (Iterator colIter = colList.iterator(); colIter.hasNext(); ) {
+	    ColumnDescriptor cd = (ColumnDescriptor)colIter.next();
+	    Object val = rowMap.get(cd.getColumnName());
+	    Object dispVal = getTextDisplayString(val);
+	    String valStr = dispVal != null ? dispVal.toString() : "(null)";
+	    wrtr.print(StringUtil.csvEncode(valStr));
+	    if (colIter.hasNext()) {
+	      wrtr.print(",");
+	    } else {
+	      wrtr.println();
+	    }
+	  }
+	}
+      }
+    } else {
+      wrtr.println("(Empty table)");
     }
   }
 
