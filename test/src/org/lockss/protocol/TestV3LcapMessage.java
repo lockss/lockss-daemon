@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3LcapMessage.java,v 1.21 2007-08-14 03:10:26 smorabito Exp $
+ * $Id: TestV3LcapMessage.java,v 1.21.2.1 2007-08-24 00:41:16 smorabito Exp $
  */
 
 /*
@@ -198,6 +198,41 @@ public class TestV3LcapMessage extends LockssTestCase {
     byte[] repairCopy = out.toByteArray();
     assertEquals(m_repairData, repairCopy);
   }
+  
+  public void testNullPollNak() throws Exception {
+    V3LcapMessage src = this.makePollAckMessage(null);
+    InputStream srcStream = src.getInputStream();
+    V3LcapMessage copy = new V3LcapMessage(srcStream, tempDir, theDaemon);
+    assertEqualMessages(src, copy);
+    assertNull(src.getNak());
+    assertNull(copy.getNak());
+  }
+  
+  public void testNonNullPollNak1() throws Exception {
+    V3LcapMessage src =
+      this.makePollAckMessage(V3LcapMessage.PollNak.NAK_GROUP_MISMATCH);
+    InputStream srcStream = src.getInputStream();
+    V3LcapMessage copy = new V3LcapMessage(srcStream, tempDir, theDaemon);
+    assertEqualMessages(src, copy);
+    assertNotNull(src.getNak());
+    assertNotNull(copy.getNak());
+    assertTrue(src.getNak().equals(V3LcapMessage.PollNak.NAK_GROUP_MISMATCH));
+    assertTrue(copy.getNak().equals(V3LcapMessage.PollNak.NAK_GROUP_MISMATCH));
+    assertEquals(src.getNak(), copy.getNak());
+  }
+  
+  public void testNonNullPollNak2() throws Exception {
+    V3LcapMessage src =
+      this.makePollAckMessage(V3LcapMessage.PollNak.NAK_NO_TIME);
+    InputStream srcStream = src.getInputStream();
+    V3LcapMessage copy = new V3LcapMessage(srcStream, tempDir, theDaemon);
+    assertEqualMessages(src, copy);
+    assertNotNull(src.getNak());
+    assertNotNull(copy.getNak());
+    assertTrue(src.getNak().equals(V3LcapMessage.PollNak.NAK_NO_TIME));
+    assertTrue(copy.getNak().equals(V3LcapMessage.PollNak.NAK_NO_TIME));
+    assertEquals(src.getNak(), copy.getNak());
+  }
 
   public void testRequestMessageCreation() throws Exception {
     V3LcapMessage reqMsg =
@@ -272,6 +307,20 @@ public class TestV3LcapMessage extends LockssTestCase {
 
     //  TODO: Figure out how to test time.
 
+  }
+  
+  private V3LcapMessage makePollAckMessage(V3LcapMessage.PollNak nak) {
+    V3LcapMessage msg = new V3LcapMessage("ArchivalID_2", "key", "Plug42",
+                                          m_testBytes,
+                                          m_testBytes,
+                                          V3LcapMessage.MSG_POLL_ACK,
+                                          987654321, m_testID, tempDir,
+                                          theDaemon);
+    if (nak != null) {
+      msg.setNak(nak);
+    }
+    
+    return msg;
   }
   
   private V3LcapMessage makeRepairMessage(int size) {

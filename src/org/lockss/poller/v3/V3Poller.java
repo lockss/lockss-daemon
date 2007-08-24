@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.56.2.1 2007-08-23 01:29:52 smorabito Exp $
+ * $Id: V3Poller.java,v 1.56.2.2 2007-08-24 00:41:16 smorabito Exp $
  */
 
 /*
@@ -1723,7 +1723,6 @@ public class V3Poller extends BasePoll {
   }
   
   boolean shouldIncludePeer(PeerIdentity pid) {
-    log.debug("shouldIncludePeer(" + pid + ") being called...");
     // Never include a local id.
     if (pid.isLocalIdentity()) { return false; }
     PeerIdentityStatus status = idManager.getPeerIdentityStatus(pid);
@@ -2152,7 +2151,6 @@ public class V3Poller extends BasePoll {
     allUrls.addAll(getDisagreedUrls());
     allUrls.addAll(getTooCloseUrls());
     allUrls.addAll(getNoQuorumUrls());
-    allUrls.addAll(getErrorUrls().keySet());
     return allUrls;
   }
 

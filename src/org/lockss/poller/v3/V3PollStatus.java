@@ -1,5 +1,5 @@
 /*
-* $Id: V3PollStatus.java,v 1.15 2007-08-15 08:32:41 smorabito Exp $
+* $Id: V3PollStatus.java,v 1.15.2.1 2007-08-24 00:41:16 smorabito Exp $
  */
 
 /*
@@ -164,7 +164,11 @@ public class V3PollStatus {
       row.put("participants", new Integer(poller.getPollSize()));
       row.put("status", poller.getStatusString());
       row.put("talliedUrls", new Integer(poller.getTalliedUrls().size()));
-      row.put("hashErrors", new Integer(poller.getErrorUrls().size()));
+      if (poller.getErrorUrls() != null) {
+        row.put("hashErrors", new Integer(poller.getErrorUrls().size()));
+      } else {
+        row.put("hashErrors", "--");
+      }
       row.put("completedRepairs", new Integer(poller.getCompletedRepairs().size()));
       if (poller.getStatus() == V3Poller.PEER_STATUS_COMPLETE) {
         row.put("agreement", doubleToPercent(poller.getPercentAgreement()) + "%");
@@ -427,7 +431,7 @@ public class V3PollStatus {
       summary.add(new SummaryInfo("Duration",
                                   ColumnDescriptor.TYPE_TIME_INTERVAL,
                                   new Long(poll.getDuration())));
-      if (poll.getErrorUrls().size() > 0) {
+      if (poll.getErrorUrls() != null && poll.getErrorUrls().size() > 0) {
         summary.add(new SummaryInfo("URLs with Hash errors",
                                     ColumnDescriptor.TYPE_STRING,
                                     new StatusTable.Reference(new Integer(poll.getErrorUrls().size()),
