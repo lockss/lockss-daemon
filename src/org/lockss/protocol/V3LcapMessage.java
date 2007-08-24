@@ -1,5 +1,5 @@
 /*
- * $Id: V3LcapMessage.java,v 1.31 2007-08-14 03:10:26 smorabito Exp $
+ * $Id: V3LcapMessage.java,v 1.32 2007-08-24 00:41:22 smorabito Exp $
  */
 
 /*
@@ -78,6 +78,9 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     },
     NAK_NO_TIME {
       public String toString() { return "Not Enough Time"; }
+    },
+    NAK_UNKNOWN {
+      public String toString() { return "Unknown"; }
     }
    };
 
@@ -308,6 +311,10 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     m_voteComplete = m_props.getBoolean("votecomplete", false);
     m_repairProps = m_props.getEncodedProperty("repairProps");
     m_groups = m_props.getProperty("groups");
+    String nakString = m_props.getProperty("nak");
+    if (nakString != null) {
+      m_nak = PollNak.valueOf(nakString);
+    }
     
     // If we have vote blocks, pass them to a VoteBlock object.
     int voteBlockCount = dis.readInt();
@@ -456,6 +463,9 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     m_props.putLong("votedeadline", m_voteDeadline);
     m_props.putLong("voteduration", m_voteDuration);
     m_props.setProperty("groups", m_groups);
+    if (m_nak != null) {
+      m_props.setProperty("nak", m_nak.name());
+    }
     if (m_effortProof != null) {
       m_props.putByteArray("effortproof", m_effortProof);
     }
