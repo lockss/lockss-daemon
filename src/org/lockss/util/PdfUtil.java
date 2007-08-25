@@ -1,5 +1,5 @@
 /*
- * $Id: PdfUtil.java,v 1.25.2.1 2007-08-23 06:44:06 thib_gc Exp $
+ * $Id: PdfUtil.java,v 1.25.2.2 2007-08-25 21:45:20 thib_gc Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.io.*;
 import java.util.*;
 
 import org.apache.commons.collections.iterators.*;
+import org.apache.commons.io.output.*;
 import org.apache.commons.io.output.ByteArrayOutputStream;
 import org.lockss.filter.pdf.*;
 import org.lockss.plugin.*;
@@ -722,17 +723,33 @@ return success;
                                                  InputStream inputStream) {
     PdfDocument pdfDocument = null;
     try {
+      // Parse the PDF file
       pdfDocument = new PdfDocument(inputStream);
-      ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+
+      // Create a thresholding output stream
+      File tempFile = FileUtil.createTempFile("PdfUtil", ".tmp");
+      tempFile.deleteOnExit();
+      DeferredFileOutputStream outputStream = new DeferredFileOutputStream(1024 * 1024, tempFile);
+
+      // Apply the output document transform into the output stream
       if (documentTransform.transform(pdfDocument, outputStream)) {
         logger.debug2("Transform from input stream succeeded");
       }
       else {
         logger.debug2("Transform from input stream did not succeed; using PDF document as is");
-        outputStream = new ByteArrayOutputStream();
+        File tempFile2 = FileUtil.createTempFile("PdfUtil", ".tmp");
+        tempFile.deleteOnExit();
+        outputStream = new DeferredFileOutputStream(1024 * 1024, tempFile2);
         pdfDocument.save(outputStream);
       }
-      return new ByteArrayInputStream(outputStream.toByteArray());
+
+      // Return the transformed PDF file as an input stream
+      if (outputStream.isInMemory()) {
+        return new ByteArrayInputStream(outputStream.getData());
+      }
+      else {
+        return new FileInputStream(tempFile);
+      }
     }
     catch (OutOfMemoryError oome) {
       logger.error("Out of memory in the PDF framework", oome);
