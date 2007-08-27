@@ -1,5 +1,5 @@
 /*
- * $Id: PdfUtil.java,v 1.27 2007-08-25 21:58:53 thib_gc Exp $
+ * $Id: PdfUtil.java,v 1.28 2007-08-27 06:50:55 tlipkis Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import java.util.*;
 import org.apache.commons.collections.iterators.*;
 import org.apache.commons.io.output.*;
 import org.apache.commons.io.output.ByteArrayOutputStream;
+import org.lockss.config.*;
 import org.lockss.filter.pdf.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.definable.DefinableArchivalUnit;
@@ -49,6 +50,12 @@ import org.pdfbox.util.PDFOperator;
  * @author Thib Guicherd-Callin
  */
 public class PdfUtil {
+
+  /** Filtered PDF files smaller than this will be kept in memory, larger
+   * than this will be written to a temp file */
+  static final String PARAM_TEMP_STREAM_THRESHOLD =
+    Configuration.PREFIX + "pdfutil.tempStreamThreshold";
+  static final int DEFAULT_TEMP_STREAM_THRESHOLD = 1024 * 1024;
 
   /**
    * <p>An interface for looping policies.</p>
@@ -722,33 +729,45 @@ return success;
   public static InputStream applyFromInputStream(OutputDocumentTransform documentTransform,
                                                  InputStream inputStream) {
     PdfDocument pdfDocument = null;
+    DeferredTempFileOutputStream outputStream = null;
+    Configuration config = CurrentConfig.getCurrentConfig();
+    int tempStreamThreshold = config.getInt(PARAM_TEMP_STREAM_THRESHOLD,
+					    DEFAULT_TEMP_STREAM_THRESHOLD);
     try {
       // Parse the PDF file
       pdfDocument = new PdfDocument(inputStream);
 
       // Create a thresholding output stream
-      File tempFile = FileUtil.createTempFile("PdfUtil", ".tmp");
-      tempFile.deleteOnExit();
-      DeferredFileOutputStream outputStream = new DeferredFileOutputStream(1024 * 1024, tempFile);
-
+      outputStream = new DeferredTempFileOutputStream(tempStreamThreshold);
       // Apply the output document transform into the output stream
       if (documentTransform.transform(pdfDocument, outputStream)) {
-        logger.debug2("Transform from input stream succeeded");
+	outputStream.close();
+	logger.debug2("Transform from input stream succeeded");
       }
       else {
-        logger.debug2("Transform from input stream did not succeed; using PDF document as is");
-        File tempFile2 = FileUtil.createTempFile("PdfUtil", ".tmp");
-        tempFile.deleteOnExit();
-        outputStream = new DeferredFileOutputStream(1024 * 1024, tempFile2);
-        pdfDocument.save(outputStream);
+	deleteTempFile(outputStream);
+	logger.debug2("Transform from input stream did not succeed; using PDF document as is");
+	outputStream = new DeferredTempFileOutputStream(tempStreamThreshold);
+	pdfDocument.save(outputStream);
+	outputStream.close();
       }
 
       // Return the transformed PDF file as an input stream
       if (outputStream.isInMemory()) {
-        return new ByteArrayInputStream(outputStream.getData());
+	return new ByteArrayInputStream(outputStream.getData());
       }
       else {
-        return new FileInputStream(tempFile);
+	// If temp file was created, arrange for it to be deleted when
+	// the input stream is closed.
+	File tempFile = outputStream.getFile();
+	InputStream fileStream =
+	  new BufferedInputStream(new FileInputStream(tempFile));
+	CloseCallbackInputStream.Callback cb =
+	  new CloseCallbackInputStream.Callback() {
+	    public void streamClosed(Object file) {
+	      ((File)file).delete();
+	    }};
+	return new CloseCallbackInputStream(fileStream, cb, tempFile);
       }
     }
     catch (OutOfMemoryError oome) {
@@ -757,10 +776,21 @@ return success;
     }
     catch (IOException ioe) {
       logger.error("Transform from input stream failed", ioe);
+      if (outputStream != null) {
+	deleteTempFile(outputStream);
+      }
       return null;
     }
     finally {
       PdfDocument.close(pdfDocument);
+    }
+  }
+
+  private static void deleteTempFile(DeferredTempFileOutputStream dtfos) {
+    try {
+      dtfos.deleteTempFile();
+    } catch (Exception e) {
+      logger.error("Couldn't delete failed PDF temp file", e);
     }
   }
 
