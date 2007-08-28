@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrlSet.java,v 1.20 2007-01-28 05:45:06 tlipkis Exp $
+ * $Id: BaseCachedUrlSet.java,v 1.21 2007-08-28 21:33:20 tlipkis Exp $
  */
 
 /*
@@ -229,6 +229,13 @@ public class BaseCachedUrlSet implements CachedUrlSet {
         newEst = elapsed;
       }
     }
+    logger.debug("storeActualHashDuration(" +
+		 StringUtil.timeIntervalToString(elapsed) +
+		 ", " + err + ") = " +
+		 StringUtil.timeIntervalToString(newEst));
+    if (newEst > Constants.DAY) {
+      logger.error("Unreasonably long has estimate", new Throwable());
+    }
     nodeManager.hashFinished(this, newEst);
   }
 
@@ -277,13 +284,19 @@ public class BaseCachedUrlSet implements CachedUrlSet {
     try {
       bytesPerMs = metrics.getBytesPerMsHashEstimate();
       if (bytesPerMs > 0) {
+	logger.debug("Estimate from size: " + size + "/" + bytesPerMs + " = " +
+		     StringUtil.timeIntervalToString(size / bytesPerMs));
 	return (size / bytesPerMs);
       } else {
-	logger.warning("Hash speed estimate was 0, using default");
+	logger.warning("Hash speed estimate was 0, using default: " +
+		       StringUtil.timeIntervalToString(size /
+						       BYTES_PER_MS_DEFAULT));
 	return size / BYTES_PER_MS_DEFAULT;
       }
     } catch (SystemMetrics.NoHashEstimateAvailableException ie) {
-      logger.warning("No hash estimate available, using default");
+      logger.warning("No hash estimate available, using default: " +
+		     StringUtil.timeIntervalToString(size /
+						     BYTES_PER_MS_DEFAULT));
       return size / BYTES_PER_MS_DEFAULT;
     }
   }
