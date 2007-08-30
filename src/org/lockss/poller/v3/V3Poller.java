@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.56.2.2 2007-08-24 00:41:16 smorabito Exp $
+ * $Id: V3Poller.java,v 1.56.2.3 2007-08-30 09:55:34 smorabito Exp $
  */
 
 /*
@@ -642,7 +642,7 @@ public class V3Poller extends BasePoll {
     // Schedule the vote tally callback.  The poll will tally votes no earlier
     // than this deadline.
     if ((voteCompleteDeadline.expired() &&
-        pollerState.getVotedPeers().size() <= pollerState.getQuorum()) ||
+        pollerState.votedPeerCount() <= pollerState.getQuorum()) ||
         pollDeadline.expired()) {
       log.info("Poll expired before tallying could complete: " +
                pollerState.getPollKey());
@@ -712,7 +712,7 @@ public class V3Poller extends BasePoll {
    * Stop the poll, and set the supplied status.
    */
   public void stopPoll(final int status) {
-    // Want this action to be serialized.
+    // Want this action to be serialized with the other poll actions.
     pollManager.runTask(new PollRunner.Task("Stopping Poll", getKey()) {
       public void lockssRun() {
         log.info("Stopping poll " + getKey() + " with status " + 
@@ -952,6 +952,16 @@ public class V3Poller extends BasePoll {
       for (Iterator it = theParticipants.values().iterator(); it.hasNext();) {
         ParticipantUserData voter = (ParticipantUserData)it.next();
         VoteBlocksIterator iter = voter.getVoteBlockIterator();
+        
+        if (iter == null) {
+          log.warning("Voter " + voter + " gave us a null vote block iterator " 
+                      + " while tallying block " + hb.getUrl()
+                      + " in poll " + getKey() + ".  It is possible that the " 
+                      + " poller had no votes to cast, but it could also be "
+                      + " a problem.");
+          // Next voter.
+          continue;
+        }
 
         VoteBlock vb = null;
         try {
@@ -972,6 +982,16 @@ public class V3Poller extends BasePoll {
       for (Iterator it = theParticipants.values().iterator(); it.hasNext();) {
         ParticipantUserData voter = (ParticipantUserData)it.next();
         VoteBlocksIterator iter = voter.getVoteBlockIterator();
+
+        if (iter == null) {
+          log.warning("Voter " + voter + " gave us a null vote block iterator " 
+                      + " while tallying block " + hb.getUrl()
+                      + " in poll " + getKey() + ".  It is possible that the " 
+                      + " poller had no votes to cast, but it could also be "
+                      + " a problem.");
+          // Next voter.
+          continue;
+        }
 
         VoteBlock vb = null;
         try {
@@ -1043,6 +1063,16 @@ public class V3Poller extends BasePoll {
       for (Iterator it = theParticipants.values().iterator(); it.hasNext();) {
         ParticipantUserData voter = (ParticipantUserData)it.next();
         VoteBlocksIterator iter = voter.getVoteBlockIterator();
+        
+        if (iter == null) {
+          log.warning("Voter " + voter + " gave us a null vote block iterator " 
+                      + " while finishing the tally "
+                      + " in poll " + getKey() + ".  It is possible that the " 
+                      + " poller had no votes to cast, but it could also be "
+                      + " a problem.");
+          // Next voter.
+          continue;
+        }
 
         try {
           if (iter.peek() != null) {
@@ -1061,7 +1091,11 @@ public class V3Poller extends BasePoll {
       // Do not tally if this is the last time through the loop.
       if (missingBlockVoters > 0) {
         tally.tallyVotes();
-        checkTally(tally, tally.getMissingBlockUrl(), false);
+        // This may be null if the tally does not yet have consensus on what
+        // the name of the missing block is.
+        if (tally.getMissingBlockUrl() != null) {
+          checkTally(tally, tally.getMissingBlockUrl(), false);
+        }
       }
 
     } while (missingBlockVoters > 0);
@@ -1084,6 +1118,11 @@ public class V3Poller extends BasePoll {
   private void checkTally(BlockTally tally,
                           String url,
                           boolean markComplete) {
+    // Should never happen -- if it does, track it down.
+    if (url == null) {
+      throw new NullPointerException("Passed a null url to checkTally!");
+    }
+    
     setStatus(V3Poller.POLLER_STATUS_TALLYING);
     int result = tally.getTallyResult();
     PollerStateBean.TallyStatus tallyStatus = pollerState.getTallyStatus();
@@ -1276,8 +1315,8 @@ public class V3Poller extends BasePoll {
    * from doRepairs().
    */
   private void requestRepairFromPeer(String url, PeerIdentity peer) {
-    log.debug2("Requesting repair for target: " + url + " from "
-              + peer);
+    log.debug2("Requesting repair for URL " + url + " from "
+               + peer);
     ParticipantUserData ud =
       (ParticipantUserData)theParticipants.get(peer);
     V3LcapMessage msg = ud.makeMessage(V3LcapMessage.MSG_REPAIR_REQ);
@@ -1407,13 +1446,24 @@ public class V3Poller extends BasePoll {
                 PeerIdentity id = (PeerIdentity)iter.next();
                 VoteBlock vb = 
                   ((ParticipantUserData)theParticipants.get(id)).getVoteBlocks().getVoteBlock(url);
-                compareBlocks(id, digestIndex, vb, hblock, tally);
+                if (vb == null) {
+                  log.debug("Voter " + id + " does not seem to have url " + url + " in his vote blocks.");
+                  // The voter did not have this URL in the first place.
+                  tally.addMissingBlockVoter(id, url);
+                } else {
+                  compareBlocks(id, digestIndex, vb, hblock, tally);
+                }
               }
               tally.tallyVotes();
               log.debug3("After-vote hash tally for repaired block " + url
                          + ": " + tally.getStatusString());
               setStatus(V3Poller.POLLER_STATUS_TALLYING);
-              checkTally(tally, hblock.getUrl(), true);
+              checkTally(tally, url, true);
+            }
+            
+            public String toString() {
+              return "[After-repair tally of " + url + " in poll " 
+                     + getKey() + "]";
             }
           });
         }
@@ -1428,10 +1478,17 @@ public class V3Poller extends BasePoll {
               // If there are no more repairs outstanding, go ahead and
               // stop the poll at this point.
               PollerStateBean.RepairQueue queue = pollerState.getRepairQueue();
-              if (queue.getPendingRepairs().size() == 0 &&
-                  queue.getActiveRepairs().size() == 0) {
+              int pending = queue.getPendingRepairs().size();
+              int active = queue.getActiveRepairs().size();
+              log.debug2("Repair hash on one block done.  Pending repairs="
+                         + pending + "; Active repairs=" + active);
+              if (pending == 0 && active == 0) {
                 voteComplete();
               }
+            }
+            
+            public String toString() {
+              return "[Repairs complete check for poll " + getKey() + "]";
             }
           });
         }
@@ -1450,6 +1507,11 @@ public class V3Poller extends BasePoll {
         if (!hashing) {
           log.warning("Failed to schedule a repair check hash for block " + url);
         }
+      }
+      
+      public String toString() {
+        return "[Scheduling repair hash of " + url + " in poll "
+                + getKey() + "]";
       }
     });
     
@@ -1486,7 +1548,7 @@ public class V3Poller extends BasePoll {
       Throwable pollerHashError = hbVersions[hbIdx].getHashError();
 
       // If we had a hash error on this version, we need to count this
-      // as an abstension by not tallying it.
+      // as an abstenion by not tallying it.
       if (pollerHashError != null) {
         this.pollerState.getTallyStatus().addErrorUrl(hashBlock.getUrl(),
                                                       pollerHashError);
@@ -1536,6 +1598,11 @@ public class V3Poller extends BasePoll {
 
   // The vote is over.
   private void voteComplete() {
+    if (idManager == null) {
+      log.warning("voteComplete() called on a possibly closed poll: "
+                  + getKey());
+      return;
+    }
     for (Iterator iter = theParticipants.values().iterator(); iter.hasNext();) {
       ParticipantUserData ud = (ParticipantUserData)iter.next();
       PsmInterp interp = ud.getPsmInterp();
@@ -1628,11 +1695,13 @@ public class V3Poller extends BasePoll {
    * Checkpoint the per-poll state.
    */
   private void checkpointPoll() {
-    try {
-      serializer.savePollerState(pollerState);
-      bytesHashedSinceLastCheckpoint = 0;
-    } catch (PollSerializerException ex) {
-      log.warning("Unable to save poller state", ex);
+    if (serializer != null) {
+      try {
+        serializer.savePollerState(pollerState);
+        bytesHashedSinceLastCheckpoint = 0;
+      } catch (PollSerializerException ex) {
+        log.warning("Unable to save poller state", ex);
+      }
     }
   }
 
@@ -1642,7 +1711,16 @@ public class V3Poller extends BasePoll {
    */
   private void checkpointParticipant(ParticipantUserData ud)
       throws PollSerializerException {
-    serializer.savePollerUserData(ud);
+    // Should never happen.
+    if (ud == null) {
+      throw new NullPointerException("checkpointParticipant was passed a " +
+      		"null ParticipantUserData reference.");
+    }
+    // May happen if a deferred action happens after this poll has been
+    // cleaned up.
+    if (serializer != null) {
+      serializer.savePollerUserData(ud);
+    }
   }
 
   /**
@@ -1695,6 +1773,12 @@ public class V3Poller extends BasePoll {
    */
   Collection getReferenceList() {
     Collection initialPeers = new ArrayList();
+
+    if (idManager == null) {
+      log.warning("getReferenceList possibly called after poll closed!");
+      return initialPeers;
+    }
+    
     if (enableDiscovery) {
       Collection allTCPPeers = idManager.getTcpPeerIdentities();
       for (Iterator iter = allTCPPeers.iterator(); iter.hasNext(); ) {
@@ -1858,7 +1942,7 @@ public class V3Poller extends BasePoll {
       Collection peerListCopy = new ArrayList(theParticipants.keySet());
       for (Iterator it = peerListCopy.iterator(); it.hasNext(); ) {
         PeerIdentity id = (PeerIdentity)it.next();
-        if (!pollerState.getVotedPeers().contains(id)) {
+        if (!pollerState.hasPeerVoted(id)) {
           removeParticipant(id);
         }
       }
@@ -1968,7 +2052,9 @@ public class V3Poller extends BasePoll {
    */
   private class BlockEventHandler implements BlockHasher.EventHandler {
     public void blockDone(HashBlock block) {
-      tallyBlock(block, new BlockTally(pollerState.getQuorum()));
+      if (pollerState != null) {
+        tallyBlock(block, new BlockTally(pollerState.getQuorum()));
+      }
     }
   }
   
@@ -2155,23 +2241,23 @@ public class V3Poller extends BasePoll {
   }
 
   public Set getAgreedUrls() {
-    return pollerState.getTallyStatus().agreedUrls;
+    return pollerState.getTallyStatus().getAgreedUrls();
   }
 
   public Set getDisagreedUrls() {
-    return pollerState.getTallyStatus().disagreedUrls;
+    return pollerState.getTallyStatus().getDisagreedUrls();
   }
 
   public Set getTooCloseUrls() {
-    return pollerState.getTallyStatus().tooCloseUrls;
+    return pollerState.getTallyStatus().getTooCloseUrls();
   }
 
   public Set getNoQuorumUrls() {
-    return pollerState.getTallyStatus().noQuorumUrls;
+    return pollerState.getTallyStatus().getNoQuorumUrls();
   }
   
   public Map<String,String> getErrorUrls() {
-    return pollerState.getTallyStatus().errorUrls;
+    return pollerState.getTallyStatus().getErrorUrls();
   }
 
   /**

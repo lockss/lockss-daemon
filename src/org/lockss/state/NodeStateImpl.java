@@ -1,5 +1,5 @@
 /*
- * $Id: NodeStateImpl.java,v 1.37 2007-01-31 00:37:10 smorabito Exp $
+ * $Id: NodeStateImpl.java,v 1.37.8.1 2007-08-30 09:55:33 smorabito Exp $
  */
 
 /*
@@ -351,7 +351,7 @@ public class NodeStateImpl
 
     // XXX: Hacked on for V3 history.  Trim V3 list for age and length.
 
-    if (completedV3Polls.size() > 0) {
+    if (completedV3Polls != null && completedV3Polls.size() > 0) {
       // trim any that are too old.
       for (int ix = 0; ix < completedV3Polls.size() - 1; ix++ ) {
         V3PollState ps = (V3PollState)completedV3Polls.get(ix);

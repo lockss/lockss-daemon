@@ -58,7 +58,7 @@ class Framework:
             self.startPort = startPort
         self.username = config.get('username', 'testuser')
         self.password = config.get('password', 'testpass')
-        self.logLevel = config.get('daemonLogLevel', 'debug3')
+        self.logLevel = config.get('daemonLogLevel', 'debug2')
         self.hostname = config.get('hostname', 'localhost')
 
         self.clientList = [] # ordered list of clients.

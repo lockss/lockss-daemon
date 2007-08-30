@@ -322,7 +322,7 @@ class SimpleDamageV3TestCase(V3TestCase):
                 self.fail("AUs never completed initial crawl.")
         log.info("AUs completed initial crawl.")
 
-        client = self.clients[2]
+        client = self.clients[0]
 
         ##
         ## Damage the AU.
@@ -353,9 +353,9 @@ class RandomDamageV3TestCase(V3TestCase):
     def runTest(self):
         # Reasonably complex AU for testing.
         simAu = SimulatedAu('simContent', depth=1, branch=1,
-                            numFiles=10,
+                            numFiles=30,
                             fileTypes=(FILE_TYPE_TEXT + FILE_TYPE_BIN),
-                            binFileSize=1024, protocolVersion=3)
+                            binFileSize=2024, protocolVersion=3)
 
         ##
         ## Create simulated AUs
@@ -373,12 +373,12 @@ class RandomDamageV3TestCase(V3TestCase):
                 self.fail("AUs never completed initial crawl.")
         log.info("AUs completed initial crawl.")
 
-        client = self.clients[2]
+        client = self.clients[0]
 
         ##
         ## Damage the AU.
         ##
-        nodeList = client.randomDamageRandomNodes(simAu, 15, 20)
+        nodeList = client.randomDamageRandomNodes(simAu, 30, 50)
         log.info("Damaged the following nodes on client %s:\n        %s" %
             (client, '\n        '.join([str(n) for n in nodeList])))
 
@@ -431,7 +431,7 @@ class RepairFromPublisherV3TestCase(V3TestCase):
                 self.fail("AUs never completed initial crawl.")
         log.info("AUs completed initial crawl.")
 
-        client = self.clients[2]
+        client = self.clients[0]
 
         ##
         ## Damage the AU.
@@ -477,6 +477,11 @@ class RepairFromPeerV3TestCase(V3TestCase):
                             numFiles=10,
                             fileTypes=(FILE_TYPE_TEXT + FILE_TYPE_BIN),
                             binFileSize=1024, protocolVersion=3)
+        
+        ## Enable polling on all peers.
+        pollingConf = {"org.lockss.poller.v3.enableV3Poller":"true",
+                       "org.lockss.poller.v3.enableV3Voter":"true"}
+
 
         ##
         ## Create simulated AUs
@@ -484,6 +489,8 @@ class RepairFromPeerV3TestCase(V3TestCase):
         log.info("Creating V3 simulated AUs.")
         for client in self.clients:
             client.createAu(simAu)
+            self.framework.appendLocalConfig(pollingConf, client)
+
 
         ##
         ## Assert that the AUs have been crawled.
@@ -494,7 +501,28 @@ class RepairFromPeerV3TestCase(V3TestCase):
                 self.fail("AUs never completed initial crawl.")
         log.info("AUs completed initial crawl.")
 
-        client = self.clients[2]
+        client = self.clients[0]
+
+        #
+        # We need agreement from all the peers before we can continue.
+        #
+
+        # Request a tree walk (deactivate and reactivate AU)
+        log.info("Requesting tree walk.")
+        client.requestTreeWalk(simAu)
+
+        # expect to see a top level content poll called by all peers.
+        log.info("Waiting for a V3 poll by all simulated caches")
+        for c in self.clients:
+            assert c.waitForV3Poller(simAu), "Never called V3 poll."
+            log.info("Client on port %s called V3 poll..." % c.port)
+
+        # expect that each client will have wone a top-level v3 poll
+        log.info("Waiting for all peers to win their polls")
+        for c in self.clients:
+            assert c.waitForWonV3Poll(simAu, timeout=self.timeout),\
+                   ("Client on port %s never won V3 poll" % c.port)
+            log.info("Client on port %s won V3 poll..." % c.port)
 
         ##
         ## Damage the AU.
@@ -552,7 +580,7 @@ class SimpleDeleteV3TestCase(V3TestCase):
                 self.fail("AUs never completed initial crawl.")
         log.info("AUs completed initial crawl.")
 
-        client = self.clients[2]
+        client = self.clients[0]
 
         ##
         ## Damage the AU.
@@ -603,7 +631,7 @@ class LastFileDeleteV3TestCase(V3TestCase):
                 self.fail("AUs never completed initial crawl.")
         log.info("AUs completed initial crawl.")
 
-        client = self.clients[2]
+        client = self.clients[0]
 
         ##
         ## Damage the AU.
@@ -655,7 +683,7 @@ class RandomDeleteV3TestCase(V3TestCase):
                 self.fail("AUs never completed initial crawl.")
         log.info("AUs completed initial crawl.")
 
-        client = self.clients[2]
+        client = self.clients[0]
 
         ##
         ## Damage the AU.
@@ -706,7 +734,7 @@ class SimpleExtraFileV3TestCase(V3TestCase):
                 self.fail("AUs never completed initial crawl.")
         log.info("AUs completed initial crawl.")
 
-        client = self.clients[2]
+        client = self.clients[0]
 
         ##
         ## Damage the AU by creating an extra node.
@@ -757,7 +785,7 @@ class LastFileExtraV3TestCase(V3TestCase):
                 self.fail("AUs never completed initial crawl.")
         log.info("AUs completed initial crawl.")
 
-        client = self.clients[2]
+        client = self.clients[0]
 
         ##
         ## Damage the AU by creating an extra node that should sort LAST
@@ -810,7 +838,7 @@ class RandomExtraFileV3TestCase(V3TestCase):
         log.info("AUs completed initial crawl.")
 
         ## To use a specific client, uncomment this line.
-        client = self.clients[2]
+        client = self.clients[0]
 
         ##
         ## Damage the AU by creating an extra node.
@@ -874,7 +902,7 @@ class VotersDontParticipateV3TestCase(V3TestCase):
         log.info("AUs completed initial crawl.")
 
         ## To use a specific client, uncomment this line.
-        client = self.clients[2]
+        client = self.clients[0]
 
         ##
         ## Damage the AU by creating an extra node.
@@ -937,7 +965,7 @@ class NoQuorumV3TestCase(V3TestCase):
         log.info("AUs completed initial crawl.")
 
         ## To use a specific client, uncomment this line.
-        client = self.clients[2]
+        client = self.clients[0]
 
         ##
         ## Damage the AU by creating an extra node.
@@ -1101,8 +1129,6 @@ def tinyUiTests():
 def simpleV3Tests():
     suite = unittest.TestSuite()
     suite.addTest(SimpleDamageV3TestCase())
-###    suite.addTest(RepairFromPublisherV3TestCase())
-###    suite.addTest(RepairFromPeerV3TestCase())
     suite.addTest(SimpleDeleteV3TestCase())
     suite.addTest(SimpleExtraFileV3TestCase())
     suite.addTest(LastFileDeleteV3TestCase())
@@ -1110,6 +1136,8 @@ def simpleV3Tests():
     suite.addTest(VotersDontParticipateV3TestCase())
     suite.addTest(NoQuorumV3TestCase())
     suite.addTest(TotalLossRecoveryV3TestCase())
+    # suite.addTest(RepairFromPublisherV3TestCase())
+    suite.addTest(RepairFromPeerV3TestCase())
     return suite
 
 def randomV3Tests():

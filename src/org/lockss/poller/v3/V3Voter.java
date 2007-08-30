@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.40.2.1 2007-08-23 01:29:52 smorabito Exp $
+ * $Id: V3Voter.java,v 1.40.2.2 2007-08-30 09:55:34 smorabito Exp $
  */
 
 /*
@@ -532,6 +532,11 @@ public class V3Voter extends BasePoll {
   public void nominatePeers() {
     // XXX:  'allPeers' should probably contain only peers that have agreed with
     //       us in the past for this au.
+    if (idManager == null || voterUserData == null) {
+      log.warning("nominatePeers called on a possibly closed poll: "
+                  + getKey());
+      return;
+    }
     Collection allPeers = idManager.getTcpPeerIdentities();
     allPeers.remove(voterUserData.getPollerId()); // Never nominate the poller
     if (nomineeCount <= allPeers.size()) {
@@ -820,6 +825,11 @@ public class V3Voter extends BasePoll {
    * given AU and URL.
    */
   boolean serveRepairs(PeerIdentity pid, ArchivalUnit au, String url) {
+    if (idManager == null) {
+      log.warning("serveRepairs called on a possibly closed poll: "
+                  + getKey());
+      return false;
+    }
     boolean allowRepairs = 
       CurrentConfig.getBooleanParam(PARAM_ALLOW_V3_REPAIRS,
                                     DEFAULT_ALLOW_V3_REPAIRS);

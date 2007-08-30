@@ -1,6 +1,6 @@
 ## Polling test suite properties file.
 ##
-## $Id: testsuite.props,v 1.5 2005-10-12 23:35:09 smorabito Exp $
+## $Id: testsuite.props,v 1.5.38.1 2007-08-30 09:55:33 smorabito Exp $
 ##
 
 ## For the most part, you don't need to change anything in this file.
@@ -10,7 +10,7 @@
 # daemonCount = 4
 
 ## Log level for the daemon
-# daemonLogLevel = debug3
+# daemonLogLevel = debug2
 
 ## Log level for the script
 # scriptLogLevel = info
@@ -48,5 +48,10 @@
 ## Extra properties.  Anything starting with 'org.lockss.' will
 ## be passed to the daemon config.
 ##
+##
+## Example: Enable repair-from-cache as default.
+##
 
-#org.lockss.daemon.foo = bar
+# org.lockss.poll.v3.enablePerUrlAgreement=false
+# org.lockss.poll.v3.repairFromCachePercent=90
+# org.lockss.poll.v3.minPercentAgreementForRepairs=0
