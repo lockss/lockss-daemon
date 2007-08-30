@@ -53,9 +53,10 @@
     List the plugins that should be included in UI menus. -->
     <property name="plugin.registry">
       <list>
+	<value>org.lockss.plugin.anthrosource.AnthroSourcePlugin</value>
 	<value>uk.org.lockss.plugin.annualreviews.AnnualReviewsPlugin</value>
-        <value>org.lockss.plugin.emls.EmlsPlugin</value>
-        <value>org.lockss.plugin.emc.EarlyModernCulturePlugin</value>
+	<value>org.lockss.plugin.emls.EmlsPlugin</value>
+	<value>org.lockss.plugin.emc.EarlyModernCulturePlugin</value>
 	<value>org.lockss.plugin.histcoop.HistoryCooperativePlugin</value>
 	<value>org.lockss.plugin.highwire.HighWirePlugin</value>
 	<value>org.lockss.plugin.highwire.HighWireStrVolPlugin</value>
