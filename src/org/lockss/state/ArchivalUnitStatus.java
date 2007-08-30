@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.58 2007-08-16 02:22:27 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.59 2007-08-30 00:30:34 tlipkis Exp $
  */
 
 /*
@@ -63,6 +63,13 @@ public class ArchivalUnitStatus
     PREFIX + "contentUrlIsLink";
   static final boolean DEFAULT_CONTENT_IS_LINK = true;
 
+  /**
+   * Include number of AUs needing recrawl in overview if true
+   */
+  public static final String PARAM_INCLUDE_NEEDS_RECRAWL =
+    PREFIX + "includeNeedsRecrawl";
+  static final boolean DEFAULT_INCLUDE_NEEDS_RECRAWL = true;
+
   public static final String SERVICE_STATUS_TABLE_NAME =
       "ArchivalUnitStatusTable";
   public static final String AUIDS_TABLE_NAME = "AuIds";
@@ -75,6 +82,7 @@ public class ArchivalUnitStatus
   private static Logger logger = Logger.getLogger("AuStatus");
   private static int defaultNumRows = DEFAULT_MAX_NODES_TO_DISPLAY;
   private static boolean isContentIsLink = DEFAULT_CONTENT_IS_LINK;
+  private static boolean includeNeedsRecrawl = DEFAULT_INCLUDE_NEEDS_RECRAWL;
   
   private static final DecimalFormat agreementFormat =
     new DecimalFormat("0.00");
@@ -125,6 +133,8 @@ public class ArchivalUnitStatus
                                    DEFAULT_MAX_NODES_TO_DISPLAY);
     isContentIsLink = config.getBoolean(PARAM_CONTENT_IS_LINK,
 					DEFAULT_CONTENT_IS_LINK);
+    includeNeedsRecrawl = config.getBoolean(PARAM_INCLUDE_NEEDS_RECRAWL,
+					    DEFAULT_INCLUDE_NEEDS_RECRAWL);
   }
 
   static class AuSummary implements StatusAccessor {
@@ -1009,7 +1019,8 @@ public class ArchivalUnitStatus
       List res = new ArrayList();
       int total = 0;
       int internal = 0;
-      int needsCrawl = 0;
+      int neverCrawled = 0;
+      int needsRecrawl = 0;
       for (ArchivalUnit au : pluginMgr.getAllAus()) {
 	if (pluginMgr.isInternalAu(au)) {
 	  internal++;
@@ -1020,7 +1031,9 @@ public class ArchivalUnitStatus
 	total++;
 	AuState aus = AuUtil.getAuState(au);
 	if (aus.getLastCrawlTime() <= 0) {
-	  needsCrawl++;
+	  neverCrawled++;
+	} else if (au.shouldCrawlForNewContent(aus)) {
+	  needsRecrawl++;
 	}
       }
       StringBuilder sb = new StringBuilder();
@@ -1031,10 +1044,15 @@ public class ArchivalUnitStatus
 	sb.append(internal);
 	sb.append(" internal)");
       }
-      if (needsCrawl != 0) {
+      if (neverCrawled != 0) {
 	sb.append(", ");
-	sb.append(needsCrawl);
+	sb.append(neverCrawled);
 	sb.append(" not collected");
+      }
+      if (includeNeedsRecrawl && needsRecrawl != 0) {
+	sb.append(", ");
+	sb.append(StringUtil.numberOfUnits(needsRecrawl,
+					   " needs recrawl", " need recrawl"));
       }
       return new StatusTable.Reference(sb.toString(),
 				       SERVICE_STATUS_TABLE_NAME);
