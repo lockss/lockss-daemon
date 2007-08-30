@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Voter.java,v 1.4 2007-08-23 01:29:56 smorabito Exp $
+ * $Id: TestV3Voter.java,v 1.5 2007-08-30 09:55:43 smorabito Exp $
  */
 
 /*
@@ -33,6 +33,7 @@
 package org.lockss.poller.v3;
 
 import org.lockss.app.*;
+import org.lockss.config.ConfigManager;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
 import org.lockss.poller.*;
@@ -42,6 +43,9 @@ import org.lockss.repository.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 
+import java.io.*;
+import java.util.Properties;
+
 public class TestV3Voter extends LockssTestCase {
   
   V3Voter voter;
@@ -49,6 +53,7 @@ public class TestV3Voter extends LockssTestCase {
   PeerIdentity repairRequestor;
   ArchivalUnit au;
   RepositoryNode repoNode;
+  V3LcapMessage startMsg;
   
 
   String repairUrl = "http://www.example.com/foo/bar.html";
@@ -57,10 +62,41 @@ public class TestV3Voter extends LockssTestCase {
     super.setUp();
     repairRequestor = 
       new MockPeerIdentity("TCP:[192.168.0.100]:9723");
-
-    
     lockssDaemon = getMockLockssDaemon();
-    voter = new V3Voter();
+    
+    File tempDir = getTempDir();
+    String tempDirPath = tempDir.getAbsolutePath();
+    
+    Properties p = new Properties();
+    p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
+    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
+    p.setProperty(IdentityManager.PARAM_LOCAL_V3_IDENTITY, "TCP:[127.0.0.1]:9729");
+    p.setProperty(ConfigManager.PARAM_NEW_SCHEDULER, "true");
+    p.setProperty(V3Poller.PARAM_MIN_POLL_SIZE, "4");
+    p.setProperty(V3Poller.PARAM_MAX_POLL_SIZE, "4");
+    p.setProperty(V3Poller.PARAM_QUORUM, "3");
+    p.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
+    p.setProperty(V3Serializer.PARAM_V3_STATE_LOCATION, tempDirPath);
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+    
+    startMsg = new V3LcapMessage("auid", "key", "1",
+                                 ByteArray.makeRandomBytes(20),
+                                 ByteArray.makeRandomBytes(20),
+                                 V3LcapMessage.MSG_POLL,
+                                 987654321,
+                                 repairRequestor,
+                                 tempDir, lockssDaemon);
+    
+    IdentityManager idmgr = lockssDaemon.getIdentityManager();
+    idmgr.startService();
+    lockssDaemon.getSchedService().startService();
+    lockssDaemon.getDatagramRouterManager().startService();
+    lockssDaemon.getRouterManager().startService();
+    lockssDaemon.getSystemMetrics().startService();
+    lockssDaemon.getPluginManager().startService();
+
+    voter = new V3Voter(lockssDaemon, startMsg);
 
     // Create an AU
     au = new MockArchivalUnit(new MockPlugin(lockssDaemon));

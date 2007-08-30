@@ -1,5 +1,5 @@
 /*
- * $Id: PollerStateBean.java,v 1.25 2007-08-15 08:32:41 smorabito Exp $
+ * $Id: PollerStateBean.java,v 1.26 2007-08-30 09:55:44 smorabito Exp $
  */
 
 /*
@@ -73,6 +73,9 @@ public class PollerStateBean implements LockssSerializable {
   private String statusString;
   private int status;
   private RepairQueue repairQueue;
+  /** @deprecated
+   * Left here only for deserialization compatibility.
+   */
   private ArrayList hashedBlocks; // This will need to be disk-based in 1.16!
   private boolean hashStarted;
   private Collection votedPeers;
@@ -128,7 +131,6 @@ public class PollerStateBean implements LockssSerializable {
     this.quorum = quorum;
     this.statusString = "Initializing";
     this.repairQueue = new RepairQueue();
-    this.hashedBlocks = new ArrayList();
     this.votedPeers = new ArrayList();
     this.tallyStatus = new TallyStatus();
   }
@@ -276,11 +278,21 @@ public class PollerStateBean implements LockssSerializable {
 
   // Simple counter
   public void addVotedPeer(PeerIdentity id) {
-    votedPeers.add(id);
+    synchronized(votedPeers) {
+      votedPeers.add(id);
+    }
   }
 
-  public Collection getVotedPeers() {
-    return votedPeers;
+  public boolean hasPeerVoted(PeerIdentity id) {
+    synchronized(votedPeers) {
+      return votedPeers.contains(id);
+    }
+  }
+  
+  public int votedPeerCount() {
+    synchronized(votedPeers) {
+      return votedPeers.size();
+    }
   }
 
   public int getOuterCircleTarget() {
@@ -318,13 +330,19 @@ public class PollerStateBean implements LockssSerializable {
 
   /**
    * Return the ordered list of hashed blocks.
+   * @deprecated
    */
   public ArrayList getHashedBlocks() {
-    return hashedBlocks;
+    throw new UnsupportedOperationException("getHashedBlocks is no longer "
+                                            + "implemented.");
   }
 
+  /**
+   * @deprecated 
+   */
   public void addHashBlock(HashBlock hb) {
-    hashedBlocks.add(hb);
+    throw new UnsupportedOperationException("addHashBlock is no longer "
+                                            + "implemented.");
   }
   
   public String toString() {
@@ -391,11 +409,11 @@ public class PollerStateBean implements LockssSerializable {
    * Simple object to hold tally status.
    */
   public static class TallyStatus implements LockssSerializable {
-    public Set agreedUrls;
-    public Set disagreedUrls;
-    public Set tooCloseUrls;
-    public Set noQuorumUrls;
-    public Map<String,String> errorUrls;
+    private Set agreedUrls;
+    private Set disagreedUrls;
+    private Set tooCloseUrls;
+    private Set noQuorumUrls;
+    private Map<String,String> errorUrls;
 
     public TallyStatus() {
       agreedUrls = new HashSet();
@@ -405,37 +423,59 @@ public class PollerStateBean implements LockssSerializable {
       errorUrls = new HashMap();
     }
 
-    public void addAgreedUrl(String url) {
+    public synchronized void addAgreedUrl(String url) {
       removeUrl(url);
       agreedUrls.add(url);
     }
 
-    public void addDisagreedUrl(String url) {
+    public synchronized void addDisagreedUrl(String url) {
       removeUrl(url);
       disagreedUrls.add(url);
     }
 
-    public void addTooCloseUrl(String url) {
+    public synchronized void addTooCloseUrl(String url) {
       removeUrl(url);
       tooCloseUrls.add(url);
     }
 
-    public void addNoQuorumUrl(String url) {
+    public synchronized void addNoQuorumUrl(String url) {
       removeUrl(url);
       noQuorumUrls.add(url);
     }
     
-    public void addErrorUrl(String url, Throwable t) {
+    public synchronized void addErrorUrl(String url, Throwable t) {
       removeUrl(url);
       errorUrls.put(url, t.getMessage());
     }
 
-    private void removeUrl(String url) {
+    private synchronized void removeUrl(String url) {
       agreedUrls.remove(url);
       disagreedUrls.remove(url);
       tooCloseUrls.remove(url);
       noQuorumUrls.remove(url);
       errorUrls.remove(url);
+    }
+
+    /* Getters are copy-on-read */
+
+    public synchronized Set getAgreedUrls() {
+      return new HashSet(agreedUrls);
+    }
+    
+    public synchronized Set getDisagreedUrls() {
+      return new HashSet(disagreedUrls);
+    }
+    
+    public synchronized Set getTooCloseUrls() {
+      return new HashSet(tooCloseUrls);
+    }
+    
+    public synchronized Set getNoQuorumUrls() {
+      return new HashSet(noQuorumUrls);
+    }
+    
+    public synchronized Map getErrorUrls() {
+      return new HashMap(errorUrls);
     }
   }
 
@@ -604,7 +644,7 @@ public class PollerStateBean implements LockssSerializable {
       return completedRepairs;
     }
 
-    public int size() {
+    public synchronized int size() {
       return pendingRepairs.size() + activeRepairs.size() + 
              completedRepairs.size();
     }
@@ -621,10 +661,10 @@ public class PollerStateBean implements LockssSerializable {
     }
 
     public synchronized void markActive(String url) {
-      Repair r = (Repair)pendingRepairs.remove(url);
-      if (r != null) {
-        activeRepairs.put(url, r);
-      }
+        Repair r = (Repair)pendingRepairs.remove(url);
+        if (r != null) {
+          activeRepairs.put(url, r);
+        }
     }
     
     /** Deletions go directly from 'pending' to 'completed' */
