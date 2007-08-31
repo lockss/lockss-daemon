@@ -661,6 +661,25 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
+       <property name="BePressCapitalismandSociety2">
+        <property name="title" value="Capitalism and Society Volume 2" />
+        <property name="journalTitle" value="Capitalism and Society" />
+        <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://www.bepress.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="volume" />
+          <property name="value" value="2" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="journal_abbr" />
+          <property name="value" value="cas" />
+        </property>
+        <property name="attributes.publisher" value="Berkeley Electronic Press" />
+      </property>
+
        <property name="BePressChemicalProductandProcessModeling1">
         <property name="title" value="Chemical Product and Process Modeling Volume 1" />
         <property name="journalTitle" value="Chemical Product and Process Modeling" />
