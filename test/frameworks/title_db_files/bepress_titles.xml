@@ -34,7 +34,7 @@
 <lockss-config>
   <property name="org.lockss.title">
 
-      <property name="BePressAsianJournalofComparativeLaw1"> 
+      <property name="BePressAsianJournalofComparativeLaw1">
         <property name="title" value="Asian Journal of Comparative Law Volume 1" />
         <property name="journalTitle" value="Asian Journal of Comparative Law" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -53,7 +53,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressAsianJournalofComparativeLaw2"> 
+       <property name="BePressAsianJournalofComparativeLaw2">
         <property name="title" value="Asian Journal of Comparative Law Volume 2" />
         <property name="journalTitle" value="Asian Journal of Comparative Law" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -72,7 +72,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressTheBEJournalofEconomicAnalysisandPolicy1"> 
+       <property name="BePressTheBEJournalofEconomicAnalysisandPolicy1">
         <property name="title" value=" The B.E. Journal of Economic Analysis &amp; Policy Volume 1" />
         <property name="journalTitle" value=" The B.E. Journal of Economic Analysis &amp; Policy" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -91,7 +91,121 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressTheBEJournalofMacroeconomics1"> 
+       <property name="BePressTheBEJournalofEconomicAnalysisandPolicy2">
+        <property name="title" value=" The B.E. Journal of Economic Analysis &amp; Policy Volume 2" />
+        <property name="journalTitle" value=" The B.E. Journal of Economic Analysis &amp; Policy" />
+        <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://www.bepress.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="volume" />
+          <property name="value" value="2" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="journal_abbr" />
+          <property name="value" value="bejeap" />
+        </property>
+        <property name="attributes.publisher" value="Berkeley Electronic Press" />
+      </property>
+
+       <property name="BePressTheBEJournalofEconomicAnalysisandPolicy3">
+        <property name="title" value=" The B.E. Journal of Economic Analysis &amp; Policy Volume 3" />
+        <property name="journalTitle" value=" The B.E. Journal of Economic Analysis &amp; Policy" />
+        <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://www.bepress.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="volume" />
+          <property name="value" value="3" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="journal_abbr" />
+          <property name="value" value="bejeap" />
+        </property>
+        <property name="attributes.publisher" value="Berkeley Electronic Press" />
+      </property>
+
+       <property name="BePressTheBEJournalofEconomicAnalysisandPolicy4">
+        <property name="title" value=" The B.E. Journal of Economic Analysis &amp; Policy Volume 4" />
+        <property name="journalTitle" value=" The B.E. Journal of Economic Analysis &amp; Policy" />
+        <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://www.bepress.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="volume" />
+          <property name="value" value="4" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="journal_abbr" />
+          <property name="value" value="bejeap" />
+        </property>
+        <property name="attributes.publisher" value="Berkeley Electronic Press" />
+      </property>
+
+       <property name="BePressTheBEJournalofEconomicAnalysisandPolicy5">
+        <property name="title" value=" The B.E. Journal of Economic Analysis &amp; Policy Volume 5" />
+        <property name="journalTitle" value=" The B.E. Journal of Economic Analysis &amp; Policy" />
+        <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://www.bepress.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="volume" />
+          <property name="value" value="5" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="journal_abbr" />
+          <property name="value" value="bejeap" />
+        </property>
+        <property name="attributes.publisher" value="Berkeley Electronic Press" />
+      </property>
+
+       <property name="BePressTheBEJournalofEconomicAnalysisandPolicy6">
+        <property name="title" value=" The B.E. Journal of Economic Analysis &amp; Policy Volume 6" />
+        <property name="journalTitle" value=" The B.E. Journal of Economic Analysis &amp; Policy" />
+        <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://www.bepress.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="volume" />
+          <property name="value" value="6" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="journal_abbr" />
+          <property name="value" value="bejeap" />
+        </property>
+        <property name="attributes.publisher" value="Berkeley Electronic Press" />
+      </property>
+
+       <property name="BePressTheBEJournalofEconomicAnalysisandPolicy7">
+        <property name="title" value=" The B.E. Journal of Economic Analysis &amp; Policy Volume 7" />
+        <property name="journalTitle" value=" The B.E. Journal of Economic Analysis &amp; Policy" />
+        <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://www.bepress.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="volume" />
+          <property name="value" value="7" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="journal_abbr" />
+          <property name="value" value="bejeap" />
+        </property>
+        <property name="attributes.publisher" value="Berkeley Electronic Press" />
+      </property>
+
+       <property name="BePressTheBEJournalofMacroeconomics1">
         <property name="title" value="The B.E. Journal of Macroeconomics Volume 1" />
         <property name="journalTitle" value="The B.E. Journal of Macroeconomics" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -110,7 +224,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressTheBEJournalofMacroeconomics2"> 
+       <property name="BePressTheBEJournalofMacroeconomics2">
         <property name="title" value="The B.E. Journal of Macroeconomics Volume 2" />
         <property name="journalTitle" value="The B.E. Journal of Macroeconomics" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -129,7 +243,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressTheBEJournalofMacroeconomics3"> 
+       <property name="BePressTheBEJournalofMacroeconomics3">
         <property name="title" value="The B.E. Journal of Macroeconomics Volume 3" />
         <property name="journalTitle" value="The B.E. Journal of Macroeconomics" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -148,7 +262,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressTheBEJournalofMacroeconomics4"> 
+       <property name="BePressTheBEJournalofMacroeconomics4">
         <property name="title" value="The B.E. Journal of Macroeconomics Volume 4" />
         <property name="journalTitle" value="The B.E. Journal of Macroeconomics" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -167,7 +281,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressTheBEJournalofMacroeconomics5"> 
+       <property name="BePressTheBEJournalofMacroeconomics5">
         <property name="title" value="The B.E. Journal of Macroeconomics Volume 5" />
         <property name="journalTitle" value="The B.E. Journal of Macroeconomics" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -186,7 +300,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressTheBEJournalofMacroeconomics6"> 
+       <property name="BePressTheBEJournalofMacroeconomics6">
         <property name="title" value="The B.E. Journal of Macroeconomics Volume 6" />
         <property name="journalTitle" value="The B.E. Journal of Macroeconomics" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -205,7 +319,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressTheBEJournalofMacroeconomics7"> 
+       <property name="BePressTheBEJournalofMacroeconomics7">
         <property name="title" value="The B.E. Journal of Macroeconomics Volume 7" />
         <property name="journalTitle" value="The B.E. Journal of Macroeconomics" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -224,7 +338,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressTheBEJournalofTheoreticalEconomics1"> 
+       <property name="BePressTheBEJournalofTheoreticalEconomics1">
         <property name="title" value="The B.E. Journal of Theoretical Economics Volume 1" />
         <property name="journalTitle" value="The B.E. Journal of Theoretical Economics" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -243,7 +357,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressTheBEJournalofTheoreticalEconomics2"> 
+       <property name="BePressTheBEJournalofTheoreticalEconomics2">
         <property name="title" value="The B.E. Journal of Theoretical Economics Volume 2" />
         <property name="journalTitle" value="The B.E. Journal of Theoretical Economics" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -262,7 +376,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressTheBEJournalofTheoreticalEconomics3"> 
+       <property name="BePressTheBEJournalofTheoreticalEconomics3">
         <property name="title" value="The B.E. Journal of Theoretical Economics Volume 3" />
         <property name="journalTitle" value="The B.E. Journal of Theoretical Economics" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -281,7 +395,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressTheBEJournalofTheoreticalEconomics4"> 
+       <property name="BePressTheBEJournalofTheoreticalEconomics4">
         <property name="title" value="The B.E. Journal of Theoretical Economics Volume 4" />
         <property name="journalTitle" value="The B.E. Journal of Theoretical Economics" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -300,7 +414,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressTheBEJournalofTheoreticalEconomics5"> 
+       <property name="BePressTheBEJournalofTheoreticalEconomics5">
         <property name="title" value="The B.E. Journal of Theoretical Economics Volume 5" />
         <property name="journalTitle" value="The B.E. Journal of Theoretical Economics" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -319,7 +433,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressTheBEJournalofTheoreticalEconomics6"> 
+       <property name="BePressTheBEJournalofTheoreticalEconomics6">
         <property name="title" value="The B.E. Journal of Theoretical Economics Volume 6" />
         <property name="journalTitle" value="The B.E. Journal of Theoretical Economics" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -338,7 +452,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressTheBEJournalofTheoreticalEconomics7"> 
+       <property name="BePressTheBEJournalofTheoreticalEconomics7">
         <property name="title" value="The B.E. Journal of Theoretical Economics Volume 7" />
         <property name="journalTitle" value="The B.E. Journal of Theoretical Economics" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -357,7 +471,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressBasicIncomeStudies1"> 
+       <property name="BePressBasicIncomeStudies1">
         <property name="title" value="Basic Income Studies Volume 1" />
         <property name="journalTitle" value="Basic Income Studies" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -376,7 +490,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressBusinessandPolitics2"> 
+       <property name="BePressBusinessandPolitics2">
         <property name="title" value="Business and Politics Volume 2" />
         <property name="journalTitle" value="Business and Politics" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -395,7 +509,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressBusinessandPolitics3"> 
+       <property name="BePressBusinessandPolitics3">
         <property name="title" value="Business and Politics Volume 3" />
         <property name="journalTitle" value="Business and Politics" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -414,7 +528,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressBusinessandPolitics4"> 
+       <property name="BePressBusinessandPolitics4">
         <property name="title" value="Business and Politics Volume 4" />
         <property name="journalTitle" value="Business and Politics" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -433,7 +547,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressBusinessandPolitics5"> 
+       <property name="BePressBusinessandPolitics5">
         <property name="title" value="Business and Politics Volume 5" />
         <property name="journalTitle" value="Business and Politics" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -452,7 +566,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressBusinessandPolitics6"> 
+       <property name="BePressBusinessandPolitics6">
         <property name="title" value="Business and Politics Volume 6" />
         <property name="journalTitle" value="Business and Politics" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -471,7 +585,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressBusinessandPolitics7"> 
+       <property name="BePressBusinessandPolitics7">
         <property name="title" value="Business and Politics Volume 7" />
         <property name="journalTitle" value="Business and Politics" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -490,7 +604,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressBusinessandPolitics8"> 
+       <property name="BePressBusinessandPolitics8">
         <property name="title" value="Business and Politics Volume 8" />
         <property name="journalTitle" value="Business and Politics" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -509,7 +623,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressBusinessandPolitics9"> 
+       <property name="BePressBusinessandPolitics9">
         <property name="title" value="Business and Politics Volume 9" />
         <property name="journalTitle" value="Business and Politics" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -528,7 +642,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressCapitalismandSociety1"> 
+       <property name="BePressCapitalismandSociety1">
         <property name="title" value="Capitalism and Society Volume 1" />
         <property name="journalTitle" value="Capitalism and Society" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -547,7 +661,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressChemicalProductandProcessModeling1"> 
+       <property name="BePressChemicalProductandProcessModeling1">
         <property name="title" value="Chemical Product and Process Modeling Volume 1" />
         <property name="journalTitle" value="Chemical Product and Process Modeling" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -566,7 +680,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressChemicalProductandProcessModeling2"> 
+       <property name="BePressChemicalProductandProcessModeling2">
         <property name="title" value="Chemical Product and Process Modeling Volume 2" />
         <property name="journalTitle" value="Chemical Product and Process Modeling" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -585,7 +699,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressTheEconomists'Voice1"> 
+       <property name="BePressTheEconomists'Voice1">
         <property name="title" value="The Economists' Voice Volume 1" />
         <property name="journalTitle" value="The Economists' Voice" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -604,7 +718,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressTheEconomists'Voice2"> 
+       <property name="BePressTheEconomists'Voice2">
         <property name="title" value="The Economists' Voice Volume 2" />
         <property name="journalTitle" value="The Economists' Voice" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -623,7 +737,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressTheEconomists'Voice3"> 
+       <property name="BePressTheEconomists'Voice3">
         <property name="title" value="The Economists' Voice Volume 3" />
         <property name="journalTitle" value="The Economists' Voice" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -642,7 +756,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressTheEconomists'Voice4"> 
+       <property name="BePressTheEconomists'Voice4">
         <property name="title" value="The Economists' Voice Volume 4" />
         <property name="journalTitle" value="The Economists' Voice" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -661,7 +775,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressForumforHealthEconomicsandPolicy1"> 
+       <property name="BePressForumforHealthEconomicsandPolicy1">
         <property name="title" value="Forum for Health Economics &amp; Policy Volume 1" />
         <property name="journalTitle" value="Forum for Health Economics &amp; Policy" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -680,7 +794,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressForumforHealthEconomicsandPolicy2"> 
+       <property name="BePressForumforHealthEconomicsandPolicy2">
         <property name="title" value="Forum for Health Economics &amp; Policy Volume 2" />
         <property name="journalTitle" value="Forum for Health Economics &amp; Policy" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -699,7 +813,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressForumforHealthEconomicsandPolicy3"> 
+       <property name="BePressForumforHealthEconomicsandPolicy3">
         <property name="title" value="Forum for Health Economics &amp; Policy Volume 3" />
         <property name="journalTitle" value="Forum for Health Economics &amp; Policy" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -718,7 +832,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressForumforHealthEconomicsandPolicy4"> 
+       <property name="BePressForumforHealthEconomicsandPolicy4">
         <property name="title" value="Forum for Health Economics &amp; Policy Volume 4" />
         <property name="journalTitle" value="Forum for Health Economics &amp; Policy" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -737,7 +851,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressForumforHealthEconomicsandPolicy5"> 
+       <property name="BePressForumforHealthEconomicsandPolicy5">
         <property name="title" value="Forum for Health Economics &amp; Policy Volume 5" />
         <property name="journalTitle" value="Forum for Health Economics &amp; Policy" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -756,7 +870,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressForumforHealthEconomicsandPolicy6"> 
+       <property name="BePressForumforHealthEconomicsandPolicy6">
         <property name="title" value="Forum for Health Economics &amp; Policy Volume 6" />
         <property name="journalTitle" value="Forum for Health Economics &amp; Policy" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -775,7 +889,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressForumforHealthEconomicsandPolicy7"> 
+       <property name="BePressForumforHealthEconomicsandPolicy7">
         <property name="title" value="Forum for Health Economics &amp; Policy Volume 7" />
         <property name="journalTitle" value="Forum for Health Economics &amp; Policy" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -794,7 +908,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressForumforHealthEconomicsandPolicy8"> 
+       <property name="BePressForumforHealthEconomicsandPolicy8">
         <property name="title" value="Forum for Health Economics &amp; Policy Volume 8" />
         <property name="journalTitle" value="Forum for Health Economics &amp; Policy" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -813,7 +927,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressForumforHealthEconomicsandPolicy9"> 
+       <property name="BePressForumforHealthEconomicsandPolicy9">
         <property name="title" value="Forum for Health Economics &amp; Policy Volume 9" />
         <property name="journalTitle" value="Forum for Health Economics &amp; Policy" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -832,7 +946,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressForumforHealthEconomicsandPolicy10"> 
+       <property name="BePressForumforHealthEconomicsandPolicy10">
         <property name="title" value="Forum for Health Economics &amp; Policy Volume 10" />
         <property name="journalTitle" value="Forum for Health Economics &amp; Policy" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -851,7 +965,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressTheForum1"> 
+       <property name="BePressTheForum1">
         <property name="title" value="The Forum Volume 1" />
         <property name="journalTitle" value="The Forum" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -870,7 +984,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressTheForum2"> 
+       <property name="BePressTheForum2">
         <property name="title" value="The Forum Volume 2" />
         <property name="journalTitle" value="The Forum" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -889,7 +1003,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressTheForum3"> 
+       <property name="BePressTheForum3">
         <property name="title" value="The Forum Volume 3" />
         <property name="journalTitle" value="The Forum" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -908,7 +1022,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressTheForum4"> 
+       <property name="BePressTheForum4">
         <property name="title" value="The Forum Volume 4" />
         <property name="journalTitle" value="The Forum" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -927,7 +1041,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressTheForum5"> 
+       <property name="BePressTheForum5">
         <property name="title" value="The Forum Volume 5" />
         <property name="journalTitle" value="The Forum" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -946,7 +1060,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressGlobalEconomyJournal1"> 
+       <property name="BePressGlobalEconomyJournal1">
         <property name="title" value="Global Economy Journal Volume 1" />
         <property name="journalTitle" value="Global Economy Journal" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -965,7 +1079,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressGlobalEconomyJournal2"> 
+       <property name="BePressGlobalEconomyJournal2">
         <property name="title" value="Global Economy Journal Volume 2" />
         <property name="journalTitle" value="Global Economy Journal" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -984,7 +1098,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressGlobalEconomyJournal3"> 
+       <property name="BePressGlobalEconomyJournal3">
         <property name="title" value="Global Economy Journal Volume 3" />
         <property name="journalTitle" value="Global Economy Journal" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -1003,7 +1117,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressGlobalEconomyJournal4"> 
+       <property name="BePressGlobalEconomyJournal4">
         <property name="title" value="Global Economy Journal Volume 4" />
         <property name="journalTitle" value="Global Economy Journal" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -1022,7 +1136,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressGlobalEconomyJournal5"> 
+       <property name="BePressGlobalEconomyJournal5">
         <property name="title" value="Global Economy Journal Volume 5" />
         <property name="journalTitle" value="Global Economy Journal" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -1041,7 +1155,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressGlobalEconomyJournal6"> 
+       <property name="BePressGlobalEconomyJournal6">
         <property name="title" value="Global Economy Journal Volume 6" />
         <property name="journalTitle" value="Global Economy Journal" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -1060,7 +1174,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressGlobalEconomyJournal7"> 
+       <property name="BePressGlobalEconomyJournal7">
         <property name="title" value="Global Economy Journal Volume 7" />
         <property name="journalTitle" value="Global Economy Journal" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -1079,7 +1193,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressGlobalJurist1"> 
+       <property name="BePressGlobalJurist1">
         <property name="title" value="Global Jurist Volume 1" />
         <property name="journalTitle" value="Global Jurist" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -1098,7 +1212,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressGlobalJurist2"> 
+       <property name="BePressGlobalJurist2">
         <property name="title" value="Global Jurist Volume 2" />
         <property name="journalTitle" value="Global Jurist" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -1117,7 +1231,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressGlobalJurist3"> 
+       <property name="BePressGlobalJurist3">
         <property name="title" value="Global Jurist Volume 3" />
         <property name="journalTitle" value="Global Jurist" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -1136,7 +1250,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressGlobalJurist4"> 
+       <property name="BePressGlobalJurist4">
         <property name="title" value="Global Jurist Volume 4" />
         <property name="journalTitle" value="Global Jurist" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -1155,7 +1269,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressGlobalJurist5"> 
+       <property name="BePressGlobalJurist5">
         <property name="title" value="Global Jurist Volume 5" />
         <property name="journalTitle" value="Global Jurist" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -1174,7 +1288,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressGlobalJurist6"> 
+       <property name="BePressGlobalJurist6">
         <property name="title" value="Global Jurist Volume 6" />
         <property name="journalTitle" value="Global Jurist" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -1193,7 +1307,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressGlobalJurist7"> 
+       <property name="BePressGlobalJurist7">
         <property name="title" value="Global Jurist Volume 7" />
         <property name="journalTitle" value="Global Jurist" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -1212,7 +1326,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressInternationalCommentaryonEvidence1"> 
+       <property name="BePressInternationalCommentaryonEvidence1">
         <property name="title" value="International Commentary on Evidence Volume 1" />
         <property name="journalTitle" value="International Commentary on Evidence" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -1231,7 +1345,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressInternationalCommentaryonEvidence2"> 
+       <property name="BePressInternationalCommentaryonEvidence2">
         <property name="title" value="International Commentary on Evidence Volume 2" />
         <property name="journalTitle" value="International Commentary on Evidence" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -1250,7 +1364,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressInternationalCommentaryonEvidence3"> 
+       <property name="BePressInternationalCommentaryonEvidence3">
         <property name="title" value="International Commentary on Evidence Volume 3" />
         <property name="journalTitle" value="International Commentary on Evidence" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -1269,7 +1383,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressInternationalCommentaryonEvidence4"> 
+       <property name="BePressInternationalCommentaryonEvidence4">
         <property name="title" value="International Commentary on Evidence Volume 4" />
         <property name="journalTitle" value="International Commentary on Evidence" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -1288,7 +1402,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressTheInternationalJournalofBiostatistics1"> 
+       <property name="BePressTheInternationalJournalofBiostatistics1">
         <property name="title" value="The International Journal of Biostatistics Volume 1" />
         <property name="journalTitle" value="The International Journal of Biostatistics" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -1307,7 +1421,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressTheInternationalJournalofBiostatistics2"> 
+       <property name="BePressTheInternationalJournalofBiostatistics2">
         <property name="title" value="The International Journal of Biostatistics Volume 2" />
         <property name="journalTitle" value="The International Journal of Biostatistics" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -1326,7 +1440,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressTheInternationalJournalofBiostatistics3"> 
+       <property name="BePressTheInternationalJournalofBiostatistics3">
         <property name="title" value="The International Journal of Biostatistics Volume 3" />
         <property name="journalTitle" value="The International Journal of Biostatistics" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -1345,7 +1459,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressInternationalJournalofChemicalReactorEngineering1"> 
+       <property name="BePressInternationalJournalofChemicalReactorEngineering1">
         <property name="title" value="International Journal of Chemical Reactor Engineering Volume 1" />
         <property name="journalTitle" value="International Journal of Chemical Reactor Engineering" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -1364,7 +1478,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressInternationalJournalofChemicalReactorEngineering2"> 
+       <property name="BePressInternationalJournalofChemicalReactorEngineering2">
         <property name="title" value="International Journal of Chemical Reactor Engineering Volume 2" />
         <property name="journalTitle" value="International Journal of Chemical Reactor Engineering" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -1383,7 +1497,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressInternationalJournalofChemicalReactorEngineering3"> 
+       <property name="BePressInternationalJournalofChemicalReactorEngineering3">
         <property name="title" value="International Journal of Chemical Reactor Engineering Volume 3" />
         <property name="journalTitle" value="International Journal of Chemical Reactor Engineering" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -1402,7 +1516,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressInternationalJournalofChemicalReactorEngineering4"> 
+       <property name="BePressInternationalJournalofChemicalReactorEngineering4">
         <property name="title" value="International Journal of Chemical Reactor Engineering Volume 4" />
         <property name="journalTitle" value="International Journal of Chemical Reactor Engineering" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -1421,7 +1535,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressInternationalJournalofChemicalReactorEngineering5"> 
+       <property name="BePressInternationalJournalofChemicalReactorEngineering5">
         <property name="title" value="International Journal of Chemical Reactor Engineering Volume 5" />
         <property name="journalTitle" value="International Journal of Chemical Reactor Engineering" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -1440,7 +1554,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressInternationalJournalofEmergingElectricPowerSystems1"> 
+       <property name="BePressInternationalJournalofEmergingElectricPowerSystems1">
         <property name="title" value="International Journal of Emerging Electric Power Systems Volume 1" />
         <property name="journalTitle" value="International Journal of Emerging Electric Power Systems" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -1459,7 +1573,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressInternationalJournalofEmergingElectricPowerSystems2"> 
+       <property name="BePressInternationalJournalofEmergingElectricPowerSystems2">
         <property name="title" value="International Journal of Emerging Electric Power Systems Volume 2" />
         <property name="journalTitle" value="International Journal of Emerging Electric Power Systems" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -1478,7 +1592,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressInternationalJournalofEmergingElectricPowerSystems3"> 
+       <property name="BePressInternationalJournalofEmergingElectricPowerSystems3">
         <property name="title" value="International Journal of Emerging Electric Power Systems Volume 3" />
         <property name="journalTitle" value="International Journal of Emerging Electric Power Systems" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -1497,7 +1611,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressInternationalJournalofEmergingElectricPowerSystems4"> 
+       <property name="BePressInternationalJournalofEmergingElectricPowerSystems4">
         <property name="title" value="International Journal of Emerging Electric Power Systems Volume 4" />
         <property name="journalTitle" value="International Journal of Emerging Electric Power Systems" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -1516,7 +1630,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressInternationalJournalofEmergingElectricPowerSystems5"> 
+       <property name="BePressInternationalJournalofEmergingElectricPowerSystems5">
         <property name="title" value="International Journal of Emerging Electric Power Systems Volume 5" />
         <property name="journalTitle" value="International Journal of Emerging Electric Power Systems" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -1535,7 +1649,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressInternationalJournalofEmergingElectricPowerSystems6"> 
+       <property name="BePressInternationalJournalofEmergingElectricPowerSystems6">
         <property name="title" value="International Journal of Emerging Electric Power Systems Volume 6" />
         <property name="journalTitle" value="International Journal of Emerging Electric Power Systems" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -1554,7 +1668,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressInternationalJournalofEmergingElectricPowerSystems7"> 
+       <property name="BePressInternationalJournalofEmergingElectricPowerSystems7">
         <property name="title" value="International Journal of Emerging Electric Power Systems Volume 7" />
         <property name="journalTitle" value="International Journal of Emerging Electric Power Systems" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -1573,7 +1687,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressInternationalJournalofEmergingElectricPowerSystems8"> 
+       <property name="BePressInternationalJournalofEmergingElectricPowerSystems8">
         <property name="title" value="International Journal of Emerging Electric Power Systems Volume 8" />
         <property name="journalTitle" value="International Journal of Emerging Electric Power Systems" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -1592,7 +1706,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressInternationalJournalofFoodEngineering1"> 
+       <property name="BePressInternationalJournalofFoodEngineering1">
         <property name="title" value="International Journal of Food Engineering Volume 1" />
         <property name="journalTitle" value="International Journal of Food Engineering" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -1611,7 +1725,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressInternationalJournalofFoodEngineering2"> 
+       <property name="BePressInternationalJournalofFoodEngineering2">
         <property name="title" value="International Journal of Food Engineering Volume 2" />
         <property name="journalTitle" value="International Journal of Food Engineering" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -1630,7 +1744,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressInternationalJournalofFoodEngineering3"> 
+       <property name="BePressInternationalJournalofFoodEngineering3">
         <property name="title" value="International Journal of Food Engineering Volume 3" />
         <property name="journalTitle" value="International Journal of Food Engineering" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -1649,7 +1763,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressInternationalJournalofNursingEducationScholarship1"> 
+       <property name="BePressInternationalJournalofNursingEducationScholarship1">
         <property name="title" value="International Journal of Nursing Education Scholarship Volume 1" />
         <property name="journalTitle" value="International Journal of Nursing Education Scholarship" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -1668,7 +1782,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressInternationalJournalofNursingEducationScholarship2"> 
+       <property name="BePressInternationalJournalofNursingEducationScholarship2">
         <property name="title" value="International Journal of Nursing Education Scholarship Volume 2" />
         <property name="journalTitle" value="International Journal of Nursing Education Scholarship" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -1687,7 +1801,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressInternationalJournalofNursingEducationScholarship3"> 
+       <property name="BePressInternationalJournalofNursingEducationScholarship3">
         <property name="title" value="International Journal of Nursing Education Scholarship Volume 3" />
         <property name="journalTitle" value="International Journal of Nursing Education Scholarship" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -1706,7 +1820,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressInternationalJournalofNursingEducationScholarship4"> 
+       <property name="BePressInternationalJournalofNursingEducationScholarship4">
         <property name="title" value="International Journal of Nursing Education Scholarship Volume 4" />
         <property name="journalTitle" value="International Journal of Nursing Education Scholarship" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -1725,7 +1839,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressJournalofAgriculturalandFoodIndustrialOrganization1"> 
+       <property name="BePressJournalofAgriculturalandFoodIndustrialOrganization1">
         <property name="title" value="Journal of Agricultural &amp; Food Industrial Organization Volume 1" />
         <property name="journalTitle" value="Journal of Agricultural &amp; Food Industrial Organization" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -1744,7 +1858,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressJournalofAgriculturalandFoodIndustrialOrganization2"> 
+       <property name="BePressJournalofAgriculturalandFoodIndustrialOrganization2">
         <property name="title" value="Journal of Agricultural &amp; Food Industrial Organization Volume 2" />
         <property name="journalTitle" value="Journal of Agricultural &amp; Food Industrial Organization" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -1763,7 +1877,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressJournalofAgriculturalandFoodIndustrialOrganization3"> 
+       <property name="BePressJournalofAgriculturalandFoodIndustrialOrganization3">
         <property name="title" value="Journal of Agricultural &amp; Food Industrial Organization Volume 3" />
         <property name="journalTitle" value="Journal of Agricultural &amp; Food Industrial Organization" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -1782,7 +1896,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressJournalofAgriculturalandFoodIndustrialOrganization4"> 
+       <property name="BePressJournalofAgriculturalandFoodIndustrialOrganization4">
         <property name="title" value="Journal of Agricultural &amp; Food Industrial Organization Volume 4" />
         <property name="journalTitle" value="Journal of Agricultural &amp; Food Industrial Organization" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -1801,7 +1915,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressJournalofAgriculturalandFoodIndustrialOrganization5"> 
+       <property name="BePressJournalofAgriculturalandFoodIndustrialOrganization5">
         <property name="title" value="Journal of Agricultural &amp; Food Industrial Organization Volume 5" />
         <property name="journalTitle" value="Journal of Agricultural &amp; Food Industrial Organization" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -1820,7 +1934,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressJournalofBusinessValuationandEconomicLossAnalysis1"> 
+       <property name="BePressJournalofBusinessValuationandEconomicLossAnalysis1">
         <property name="title" value="Journal of Business Valuation and Economic Loss Analysis Volume 1" />
         <property name="journalTitle" value="Journal of Business Valuation and Economic Loss Analysis" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -1839,7 +1953,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressJournalofBusinessValuationandEconomicLossAnalysis2"> 
+       <property name="BePressJournalofBusinessValuationandEconomicLossAnalysis2">
         <property name="title" value="Journal of Business Valuation and Economic Loss Analysis Volume 2" />
         <property name="journalTitle" value="Journal of Business Valuation and Economic Loss Analysis" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -1858,7 +1972,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressJournalofComplementaryandIntegrativeMedicine1"> 
+       <property name="BePressJournalofComplementaryandIntegrativeMedicine1">
         <property name="title" value="Journal of Complementary and Integrative Medicine Volume 1" />
         <property name="journalTitle" value="Journal of Complementary and Integrative Medicine" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -1877,7 +1991,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressJournalofComplementaryandIntegrativeMedicine2"> 
+       <property name="BePressJournalofComplementaryandIntegrativeMedicine2">
         <property name="title" value="Journal of Complementary and Integrative Medicine Volume 2" />
         <property name="journalTitle" value="Journal of Complementary and Integrative Medicine" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -1896,7 +2010,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressJournalofComplementaryandIntegrativeMedicine3"> 
+       <property name="BePressJournalofComplementaryandIntegrativeMedicine3">
         <property name="title" value="Journal of Complementary and Integrative Medicine Volume 3" />
         <property name="journalTitle" value="Journal of Complementary and Integrative Medicine" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -1915,7 +2029,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressJournalofComplementaryandIntegrativeMedicine4"> 
+       <property name="BePressJournalofComplementaryandIntegrativeMedicine4">
         <property name="title" value="Journal of Complementary and Integrative Medicine Volume 4" />
         <property name="journalTitle" value="Journal of Complementary and Integrative Medicine" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -1934,7 +2048,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressJournalofHomelandSecurityandEmergencyManagement1"> 
+       <property name="BePressJournalofHomelandSecurityandEmergencyManagement1">
         <property name="title" value="Journal of Homeland Security and Emergency Management Volume 1" />
         <property name="journalTitle" value="Journal of Homeland Security and Emergency Management" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -1953,7 +2067,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressJournalofHomelandSecurityandEmergencyManagement2"> 
+       <property name="BePressJournalofHomelandSecurityandEmergencyManagement2">
         <property name="title" value="Journal of Homeland Security and Emergency Management Volume 2" />
         <property name="journalTitle" value="Journal of Homeland Security and Emergency Management" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -1972,7 +2086,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressJournalofHomelandSecurityandEmergencyManagement3"> 
+       <property name="BePressJournalofHomelandSecurityandEmergencyManagement3">
         <property name="title" value="Journal of Homeland Security and Emergency Management Volume 3" />
         <property name="journalTitle" value="Journal of Homeland Security and Emergency Management" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -1991,7 +2105,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressJournalofHomelandSecurityandEmergencyManagement4"> 
+       <property name="BePressJournalofHomelandSecurityandEmergencyManagement4">
         <property name="title" value="Journal of Homeland Security and Emergency Management Volume 4" />
         <property name="journalTitle" value="Journal of Homeland Security and Emergency Management" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -2010,7 +2124,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressJournalofImageryResearchinSportandPhysicalActivity1"> 
+       <property name="BePressJournalofImageryResearchinSportandPhysicalActivity1">
         <property name="title" value="Journal of Imagery Research in Sport and Physical Activity Volume 1" />
         <property name="journalTitle" value="Journal of Imagery Research in Sport and Physical Activity" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -2029,7 +2143,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressJournalofImageryResearchinSportandPhysicalActivity2"> 
+       <property name="BePressJournalofImageryResearchinSportandPhysicalActivity2">
         <property name="title" value="Journal of Imagery Research in Sport and Physical Activity Volume 2" />
         <property name="journalTitle" value="Journal of Imagery Research in Sport and Physical Activity" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -2048,7 +2162,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressJournalofIndustrialOrganizationEducation1"> 
+       <property name="BePressJournalofIndustrialOrganizationEducation1">
         <property name="title" value="Journal of Industrial Organization Education Volume 1" />
         <property name="journalTitle" value="Journal of Industrial Organization Education" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -2067,7 +2181,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressJournalofQuantitativeAnalysisinSports1"> 
+       <property name="BePressJournalofQuantitativeAnalysisinSports1">
         <property name="title" value="Journal of Quantitative Analysis in Sports Volume 1" />
         <property name="journalTitle" value="Journal of Quantitative Analysis in Sports" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -2086,7 +2200,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressJournalofQuantitativeAnalysisinSports2"> 
+       <property name="BePressJournalofQuantitativeAnalysisinSports2">
         <property name="title" value="Journal of Quantitative Analysis in Sports Volume 2" />
         <property name="journalTitle" value="Journal of Quantitative Analysis in Sports" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -2105,7 +2219,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressJournalofQuantitativeAnalysisinSports3"> 
+       <property name="BePressJournalofQuantitativeAnalysisinSports3">
         <property name="title" value="Journal of Quantitative Analysis in Sports Volume 3" />
         <property name="journalTitle" value="Journal of Quantitative Analysis in Sports" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -2124,7 +2238,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressJournalofTortLaw1"> 
+       <property name="BePressJournalofTortLaw1">
         <property name="title" value="Journal of Tort Law Volume 1" />
         <property name="journalTitle" value="Journal of Tort Law" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -2143,7 +2257,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressMuslimWorldJournalofHumanRights1"> 
+       <property name="BePressMuslimWorldJournalofHumanRights1">
         <property name="title" value="Muslim World Journal of Human Rights Volume 1" />
         <property name="journalTitle" value="Muslim World Journal of Human Rights" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -2162,7 +2276,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressMuslimWorldJournalofHumanRights2"> 
+       <property name="BePressMuslimWorldJournalofHumanRights2">
         <property name="title" value="Muslim World Journal of Human Rights Volume 2" />
         <property name="journalTitle" value="Muslim World Journal of Human Rights" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -2181,7 +2295,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressMuslimWorldJournalofHumanRights3"> 
+       <property name="BePressMuslimWorldJournalofHumanRights3">
         <property name="title" value="Muslim World Journal of Human Rights Volume 3" />
         <property name="journalTitle" value="Muslim World Journal of Human Rights" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -2200,7 +2314,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressPeaceEconomicsPeaceScienceandPublicPolicy1"> 
+       <property name="BePressPeaceEconomicsPeaceScienceandPublicPolicy1">
         <property name="title" value="Peace Economics, Peace Science and Public Policy Volume 1" />
         <property name="journalTitle" value="Peace Economics, Peace Science and Public Policy" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -2219,7 +2333,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressPeaceEconomicsPeaceScienceandPublicPolicy2"> 
+       <property name="BePressPeaceEconomicsPeaceScienceandPublicPolicy2">
         <property name="title" value="Peace Economics, Peace Science and Public Policy Volume 2" />
         <property name="journalTitle" value="Peace Economics, Peace Science and Public Policy" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -2238,7 +2352,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressPeaceEconomicsPeaceScienceandPublicPolicy3"> 
+       <property name="BePressPeaceEconomicsPeaceScienceandPublicPolicy3">
         <property name="title" value="Peace Economics, Peace Science and Public Policy Volume 3" />
         <property name="journalTitle" value="Peace Economics, Peace Science and Public Policy" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -2257,7 +2371,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressPeaceEconomicsPeaceScienceandPublicPolicy4"> 
+       <property name="BePressPeaceEconomicsPeaceScienceandPublicPolicy4">
         <property name="title" value="Peace Economics, Peace Science and Public Policy Volume 4" />
         <property name="journalTitle" value="Peace Economics, Peace Science and Public Policy" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -2276,7 +2390,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressPeaceEconomicsPeaceScienceandPublicPolicy5"> 
+       <property name="BePressPeaceEconomicsPeaceScienceandPublicPolicy5">
         <property name="title" value="Peace Economics, Peace Science and Public Policy Volume 5" />
         <property name="journalTitle" value="Peace Economics, Peace Science and Public Policy" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -2295,7 +2409,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressPeaceEconomicsPeaceScienceandPublicPolicy6"> 
+       <property name="BePressPeaceEconomicsPeaceScienceandPublicPolicy6">
         <property name="title" value="Peace Economics, Peace Science and Public Policy Volume 6" />
         <property name="journalTitle" value="Peace Economics, Peace Science and Public Policy" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -2314,7 +2428,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressPeaceEconomicsPeaceScienceandPublicPolicy7"> 
+       <property name="BePressPeaceEconomicsPeaceScienceandPublicPolicy7">
         <property name="title" value="Peace Economics, Peace Science and Public Policy Volume 7" />
         <property name="journalTitle" value="Peace Economics, Peace Science and Public Policy" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -2333,7 +2447,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressPeaceEconomicsPeaceScienceandPublicPolicy8"> 
+       <property name="BePressPeaceEconomicsPeaceScienceandPublicPolicy8">
         <property name="title" value="Peace Economics, Peace Science and Public Policy Volume 8" />
         <property name="journalTitle" value="Peace Economics, Peace Science and Public Policy" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -2352,7 +2466,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressPeaceEconomicsPeaceScienceandPublicPolicy9"> 
+       <property name="BePressPeaceEconomicsPeaceScienceandPublicPolicy9">
         <property name="title" value="Peace Economics, Peace Science and Public Policy Volume 9" />
         <property name="journalTitle" value="Peace Economics, Peace Science and Public Policy" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -2371,7 +2485,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressPeaceEconomicsPeaceScienceandPublicPolicy10"> 
+       <property name="BePressPeaceEconomicsPeaceScienceandPublicPolicy10">
         <property name="title" value="Peace Economics, Peace Science and Public Policy Volume 10" />
         <property name="journalTitle" value="Peace Economics, Peace Science and Public Policy" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -2390,7 +2504,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressPeaceEconomicsPeaceScienceandPublicPolicy11"> 
+       <property name="BePressPeaceEconomicsPeaceScienceandPublicPolicy11">
         <property name="title" value="Peace Economics, Peace Science and Public Policy Volume 11" />
         <property name="journalTitle" value="Peace Economics, Peace Science and Public Policy" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -2409,7 +2523,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressPeaceEconomicsPeaceScienceandPublicPolicy12"> 
+       <property name="BePressPeaceEconomicsPeaceScienceandPublicPolicy12">
         <property name="title" value="Peace Economics, Peace Science and Public Policy Volume 12" />
         <property name="journalTitle" value="Peace Economics, Peace Science and Public Policy" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -2428,7 +2542,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressReviewofLawandEconomics1"> 
+       <property name="BePressReviewofLawandEconomics1">
         <property name="title" value="Review of Law &amp; Economics Volume 1" />
         <property name="journalTitle" value="Review of Law &amp; Economics" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -2447,7 +2561,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressReviewofLawandEconomics2"> 
+       <property name="BePressReviewofLawandEconomics2">
         <property name="title" value="Review of Law &amp; Economics Volume 2" />
         <property name="journalTitle" value="Review of Law &amp; Economics" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -2466,7 +2580,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressReviewofLawandEconomics3"> 
+       <property name="BePressReviewofLawandEconomics3">
         <property name="title" value="Review of Law &amp; Economics Volume 3" />
         <property name="journalTitle" value="Review of Law &amp; Economics" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -2485,7 +2599,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressReviewofMarketingScience1"> 
+       <property name="BePressReviewofMarketingScience1">
         <property name="title" value="Review of Marketing Science Volume 1" />
         <property name="journalTitle" value="Review of Marketing Science" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -2504,7 +2618,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressReviewofMarketingScience2"> 
+       <property name="BePressReviewofMarketingScience2">
         <property name="title" value="Review of Marketing Science Volume 2" />
         <property name="journalTitle" value="Review of Marketing Science" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -2523,7 +2637,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressReviewofMarketingScience3"> 
+       <property name="BePressReviewofMarketingScience3">
         <property name="title" value="Review of Marketing Science Volume 3" />
         <property name="journalTitle" value="Review of Marketing Science" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -2542,7 +2656,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressReviewofMarketingScience4"> 
+       <property name="BePressReviewofMarketingScience4">
         <property name="title" value="Review of Marketing Science Volume 4" />
         <property name="journalTitle" value="Review of Marketing Science" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -2561,7 +2675,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressReviewofMarketingScience5"> 
+       <property name="BePressReviewofMarketingScience5">
         <property name="title" value="Review of Marketing Science Volume 5" />
         <property name="journalTitle" value="Review of Marketing Science" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -2580,7 +2694,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressStatisticalApplicationsinGeneticsandMolecularBiology1"> 
+       <property name="BePressStatisticalApplicationsinGeneticsandMolecularBiology1">
         <property name="title" value="Statistical Applications in Genetics and Molecular Biology Volume 1" />
         <property name="journalTitle" value="Statistical Applications in Genetics and Molecular Biology" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -2599,7 +2713,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressStatisticalApplicationsinGeneticsandMolecularBiology2"> 
+       <property name="BePressStatisticalApplicationsinGeneticsandMolecularBiology2">
         <property name="title" value="Statistical Applications in Genetics and Molecular Biology Volume 2" />
         <property name="journalTitle" value="Statistical Applications in Genetics and Molecular Biology" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -2618,7 +2732,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressStatisticalApplicationsinGeneticsandMolecularBiology3"> 
+       <property name="BePressStatisticalApplicationsinGeneticsandMolecularBiology3">
         <property name="title" value="Statistical Applications in Genetics and Molecular Biology Volume 3" />
         <property name="journalTitle" value="Statistical Applications in Genetics and Molecular Biology" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -2637,7 +2751,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressStatisticalApplicationsinGeneticsandMolecularBiology4"> 
+       <property name="BePressStatisticalApplicationsinGeneticsandMolecularBiology4">
         <property name="title" value="Statistical Applications in Genetics and Molecular Biology Volume 4" />
         <property name="journalTitle" value="Statistical Applications in Genetics and Molecular Biology" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -2656,7 +2770,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressStatisticalApplicationsinGeneticsandMolecularBiology5"> 
+       <property name="BePressStatisticalApplicationsinGeneticsandMolecularBiology5">
         <property name="title" value="Statistical Applications in Genetics and Molecular Biology Volume 5" />
         <property name="journalTitle" value="Statistical Applications in Genetics and Molecular Biology" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -2675,7 +2789,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressStatisticalApplicationsinGeneticsandMolecularBiology6"> 
+       <property name="BePressStatisticalApplicationsinGeneticsandMolecularBiology6">
         <property name="title" value="Statistical Applications in Genetics and Molecular Biology Volume 6" />
         <property name="journalTitle" value="Statistical Applications in Genetics and Molecular Biology" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -2694,7 +2808,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressStudiesinNonlinearDynamicsandEconometrics1"> 
+       <property name="BePressStudiesinNonlinearDynamicsandEconometrics1">
         <property name="title" value="Studies in Nonlinear Dynamics &amp; Econometrics Volume 1" />
         <property name="journalTitle" value="Studies in Nonlinear Dynamics &amp; Econometrics" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -2713,7 +2827,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressStudiesinNonlinearDynamicsandEconometrics2"> 
+       <property name="BePressStudiesinNonlinearDynamicsandEconometrics2">
         <property name="title" value="Studies in Nonlinear Dynamics &amp; Econometrics Volume 2" />
         <property name="journalTitle" value="Studies in Nonlinear Dynamics &amp; Econometrics" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -2732,7 +2846,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressStudiesinNonlinearDynamicsandEconometrics3"> 
+       <property name="BePressStudiesinNonlinearDynamicsandEconometrics3">
         <property name="title" value="Studies in Nonlinear Dynamics &amp; Econometrics Volume 3" />
         <property name="journalTitle" value="Studies in Nonlinear Dynamics &amp; Econometrics" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -2751,7 +2865,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressStudiesinNonlinearDynamicsandEconometrics4"> 
+       <property name="BePressStudiesinNonlinearDynamicsandEconometrics4">
         <property name="title" value="Studies in Nonlinear Dynamics &amp; Econometrics Volume 4" />
         <property name="journalTitle" value="Studies in Nonlinear Dynamics &amp; Econometrics" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -2770,7 +2884,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressStudiesinNonlinearDynamicsandEconometrics5"> 
+       <property name="BePressStudiesinNonlinearDynamicsandEconometrics5">
         <property name="title" value="Studies in Nonlinear Dynamics &amp; Econometrics Volume 5" />
         <property name="journalTitle" value="Studies in Nonlinear Dynamics &amp; Econometrics" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -2789,7 +2903,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressStudiesinNonlinearDynamicsandEconometrics6"> 
+       <property name="BePressStudiesinNonlinearDynamicsandEconometrics6">
         <property name="title" value="Studies in Nonlinear Dynamics &amp; Econometrics Volume 6" />
         <property name="journalTitle" value="Studies in Nonlinear Dynamics &amp; Econometrics" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -2808,7 +2922,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressStudiesinNonlinearDynamicsandEconometrics7"> 
+       <property name="BePressStudiesinNonlinearDynamicsandEconometrics7">
         <property name="title" value="Studies in Nonlinear Dynamics &amp; Econometrics Volume 7" />
         <property name="journalTitle" value="Studies in Nonlinear Dynamics &amp; Econometrics" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -2827,7 +2941,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressStudiesinNonlinearDynamicsandEconometrics8"> 
+       <property name="BePressStudiesinNonlinearDynamicsandEconometrics8">
         <property name="title" value="Studies in Nonlinear Dynamics &amp; Econometrics Volume 8" />
         <property name="journalTitle" value="Studies in Nonlinear Dynamics &amp; Econometrics" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -2846,7 +2960,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressStudiesinNonlinearDynamicsandEconometrics9"> 
+       <property name="BePressStudiesinNonlinearDynamicsandEconometrics9">
         <property name="title" value="Studies in Nonlinear Dynamics &amp; Econometrics Volume 9" />
         <property name="journalTitle" value="Studies in Nonlinear Dynamics &amp; Econometrics" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -2865,7 +2979,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressStudiesinNonlinearDynamicsandEconometrics10"> 
+       <property name="BePressStudiesinNonlinearDynamicsandEconometrics10">
         <property name="title" value="Studies in Nonlinear Dynamics &amp; Econometrics Volume 10" />
         <property name="journalTitle" value="Studies in Nonlinear Dynamics &amp; Econometrics" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -2884,7 +2998,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressStudiesinNonlinearDynamicsandEconometrics11"> 
+       <property name="BePressStudiesinNonlinearDynamicsandEconometrics11">
         <property name="title" value="Studies in Nonlinear Dynamics &amp; Econometrics Volume 11" />
         <property name="journalTitle" value="Studies in Nonlinear Dynamics &amp; Econometrics" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -2903,7 +3017,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressTheoreticalInquiriesinLaw1"> 
+       <property name="BePressTheoreticalInquiriesinLaw1">
         <property name="title" value="Theoretical Inquiries in Law Volume 1" />
         <property name="journalTitle" value="Theoretical Inquiries in Law" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -2922,7 +3036,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressTheoreticalInquiriesinLaw2"> 
+       <property name="BePressTheoreticalInquiriesinLaw2">
         <property name="title" value="Theoretical Inquiries in Law Volume 2" />
         <property name="journalTitle" value="Theoretical Inquiries in Law" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -2941,7 +3055,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressTheoreticalInquiriesinLaw3"> 
+       <property name="BePressTheoreticalInquiriesinLaw3">
         <property name="title" value="Theoretical Inquiries in Law Volume 3" />
         <property name="journalTitle" value="Theoretical Inquiries in Law" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -2960,7 +3074,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressTheoreticalInquiriesinLaw4"> 
+       <property name="BePressTheoreticalInquiriesinLaw4">
         <property name="title" value="Theoretical Inquiries in Law Volume 4" />
         <property name="journalTitle" value="Theoretical Inquiries in Law" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -2979,7 +3093,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressTheoreticalInquiriesinLaw5"> 
+       <property name="BePressTheoreticalInquiriesinLaw5">
         <property name="title" value="Theoretical Inquiries in Law Volume 5" />
         <property name="journalTitle" value="Theoretical Inquiries in Law" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -2998,7 +3112,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressTheoreticalInquiriesinLaw6"> 
+       <property name="BePressTheoreticalInquiriesinLaw6">
         <property name="title" value="Theoretical Inquiries in Law Volume 6" />
         <property name="journalTitle" value="Theoretical Inquiries in Law" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -3017,7 +3131,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressTheoreticalInquiriesinLaw7"> 
+       <property name="BePressTheoreticalInquiriesinLaw7">
         <property name="title" value="Theoretical Inquiries in Law Volume 7" />
         <property name="journalTitle" value="Theoretical Inquiries in Law" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -3036,7 +3150,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressTheoreticalInquiriesinLaw8"> 
+       <property name="BePressTheoreticalInquiriesinLaw8">
         <property name="title" value="Theoretical Inquiries in Law Volume 8" />
         <property name="journalTitle" value="Theoretical Inquiries in Law" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -3055,7 +3169,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressWorldPoliticalScienceReview1"> 
+       <property name="BePressWorldPoliticalScienceReview1">
         <property name="title" value="World Political Science Review Volume 1" />
         <property name="journalTitle" value="World Political Science Review" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -3074,7 +3188,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressWorldPoliticalScienceReview2"> 
+       <property name="BePressWorldPoliticalScienceReview2">
         <property name="title" value="World Political Science Review Volume 2" />
         <property name="journalTitle" value="World Political Science Review" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
@@ -3093,7 +3207,7 @@
         <property name="attributes.publisher" value="Berkeley Electronic Press" />
       </property>
 
-       <property name="BePressWorldPoliticalScienceReview3"> 
+       <property name="BePressWorldPoliticalScienceReview3">
         <property name="title" value="World Political Science Review Volume 3" />
         <property name="journalTitle" value="World Political Science Review" />
         <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
