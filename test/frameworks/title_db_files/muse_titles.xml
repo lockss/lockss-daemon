@@ -585,44 +585,6 @@
         <property name="attributes.publisher" value="Australian and New Zealand Association of Medieval and Early Modern Studies" />
       </property>
 
-       <property name="ProjectMusePhilosophyandPublicAffairs30"> 
-        <property name="title" value="Philosophy &amp; Public Affairs Volume 30" />
-        <property name="journalTitle" value="Philosophy &amp; Public Affairs" />
-        <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
-        <property name="param.1">
-          <property name="key" value="base_url" />
-          <property name="value" value="http://muse.jhu.edu/" />
-        </property>
-        <property name="param.2">
-          <property name="key" value="journal_dir" />
-          <property name="value" value="philosophy_and_public_affairs" />
-        </property>
-        <property name="param.3">
-          <property name="key" value="volume" />
-          <property name="value" value="30" />
-        </property>
-        <property name="attributes.publisher" value="Wiley-Blackwell" />
-      </property>
-
-       <property name="ProjectMusePhilosophyandPublicAffairs31"> 
-        <property name="title" value="Philosophy &amp; Public Affairs Volume 31" />
-        <property name="journalTitle" value="Philosophy &amp; Public Affairs" />
-        <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
-        <property name="param.1">
-          <property name="key" value="base_url" />
-          <property name="value" value="http://muse.jhu.edu/" />
-        </property>
-        <property name="param.2">
-          <property name="key" value="journal_dir" />
-          <property name="value" value="philosophy_and_public_affairs" />
-        </property>
-        <property name="param.3">
-          <property name="key" value="volume" />
-          <property name="value" value="31" />
-        </property>
-        <property name="attributes.publisher" value="Wiley-Blackwell" />
-      </property>
-
        <property name="ProjectMuseBrookingsPapersonEconomicActivity2000"> 
         <property name="title" value="Brookings Papers on Economic Activity 2000" />
         <property name="journalTitle" value="Brookings Papers on Economic Activity" />
@@ -37462,6 +37424,44 @@
           <property name="value" value="41" />
         </property>
         <property name="attributes.publisher" value="Western Michigan University" />
+      </property>
+
+       <property name="ProjectMusePhilosophyandPublicAffairs30"> 
+        <property name="title" value="Philosophy &amp; Public Affairs Volume 30" />
+        <property name="journalTitle" value="Philosophy &amp; Public Affairs" />
+        <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://muse.jhu.edu/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_dir" />
+          <property name="value" value="philosophy_and_public_affairs" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume" />
+          <property name="value" value="30" />
+        </property>
+        <property name="attributes.publisher" value="Wiley-Blackwell" />
+      </property>
+
+       <property name="ProjectMusePhilosophyandPublicAffairs31"> 
+        <property name="title" value="Philosophy &amp; Public Affairs Volume 31" />
+        <property name="journalTitle" value="Philosophy &amp; Public Affairs" />
+        <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://muse.jhu.edu/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="journal_dir" />
+          <property name="value" value="philosophy_and_public_affairs" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume" />
+          <property name="value" value="31" />
+        </property>
+        <property name="attributes.publisher" value="Wiley-Blackwell" />
       </property>
 
    </property>
