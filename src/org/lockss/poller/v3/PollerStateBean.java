@@ -1,5 +1,5 @@
 /*
- * $Id: PollerStateBean.java,v 1.27 2007-09-07 01:56:58 smorabito Exp $
+ * $Id: PollerStateBean.java,v 1.28 2007-09-07 03:05:53 smorabito Exp $
  */
 
 /*
@@ -459,23 +459,43 @@ public class PollerStateBean implements LockssSerializable {
     /* Getters are copy-on-read */
 
     public synchronized Set getAgreedUrls() {
-      return agreedUrls;
+      if (agreedUrls == null) {
+        return new HashSet();
+      } else {
+        return new HashSet(agreedUrls);
+      }
     }
     
     public synchronized Set getDisagreedUrls() {
-      return disagreedUrls;
+      if (disagreedUrls == null) {
+        return new HashSet();
+      } else {
+        return new HashSet(disagreedUrls);
+      }
     }
     
     public synchronized Set getTooCloseUrls() {
-      return tooCloseUrls;
+      if (tooCloseUrls == null) {
+        return new HashSet();
+      } else {
+        return new HashSet(tooCloseUrls);
+      }
     }
     
     public synchronized Set getNoQuorumUrls() {
-      return noQuorumUrls;
+      if (noQuorumUrls == null) {
+        return new HashSet();
+      } else {
+        return new HashSet(noQuorumUrls);
+      }
     }
     
     public synchronized Map getErrorUrls() {
-      return errorUrls;
+      if (errorUrls == null) {
+        return new HashMap();
+      } else {
+        return new HashMap(errorUrls);
+      }
     }
   }
 
