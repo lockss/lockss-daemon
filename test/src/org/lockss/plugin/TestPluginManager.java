@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.79 2007-02-20 01:36:15 tlipkis Exp $
+ * $Id: TestPluginManager.java,v 1.80 2007-09-08 01:47:40 tlipkis Exp $
  */
 
 /*
@@ -219,6 +219,29 @@ public class TestPluginManager extends LockssTestCase {
     setDaemonVersion("11.1.1");
     // it should load.
     assertTrue(mgr.ensurePluginLoaded(key));
+  }
+
+  static class APlugin extends MockPlugin {
+    private List initArgs = new ArrayList();
+
+    public void initPlugin(LockssDaemon daemon) {
+      initArgs.add(daemon);
+      super.initPlugin(daemon);
+    }
+
+    List getInitArgs() {
+      return initArgs;
+    }
+  }
+
+
+  public void testLoadBuiltinPlugin() throws Exception {
+    // Non-plugin class shouldn't load
+    assertNull(mgr.loadBuiltinPlugin(String.class));
+    Plugin plug = mgr.loadBuiltinPlugin(APlugin.class);
+    assertTrue(plug instanceof APlugin);
+    assertSame(plug, mgr.loadBuiltinPlugin(APlugin.class));
+    assertEquals(1, ((APlugin)plug).getInitArgs().size());
   }
 
   public void testInitPluginRegistry() {

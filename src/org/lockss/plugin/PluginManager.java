@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.182 2007-08-15 07:09:37 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.183 2007-09-08 01:47:40 tlipkis Exp $
  */
 
 /*
@@ -1221,6 +1221,10 @@ public class PluginManager
    * @return true if loaded
    */
   public boolean ensurePluginLoaded(String pluginKey) {
+    if (pluginMap.containsKey(pluginKey)) {
+      return true;
+    }
+
     ClassLoader loader = null;
     PluginInfo info = (PluginInfo)pluginfoMap.get(pluginKey);
     if (info != null) {
@@ -1228,10 +1232,6 @@ public class PluginManager
     }
     if (loader == null) {
       loader = this.getClass().getClassLoader();
-    }
-
-    if (pluginMap.containsKey(pluginKey)) {
-      return true;
     }
 
     String pluginName = "";
@@ -1251,6 +1251,18 @@ public class PluginManager
       log.error("Error instantiating " + pluginName, e);
       return false;
     }
+  }
+
+  public Plugin loadBuiltinPlugin(Class pluginClass) {
+    return loadBuiltinPlugin(pluginClass.getName());
+  }
+
+  protected Plugin loadBuiltinPlugin(String pluginClassName) {
+    String pluginKey = pluginKeyFromName(pluginClassName);
+    if (ensurePluginLoaded(pluginKey)) {
+      return (Plugin)pluginMap.get(pluginKey);
+    }
+    return null;
   }
 
   // separate method so can be called by test code
