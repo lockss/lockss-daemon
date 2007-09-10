@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.56 2007-08-12 01:48:05 tlipkis Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.57 2007-09-10 22:22:49 tlipkis Exp $
  */
 
 /*
@@ -916,6 +916,30 @@ public class TestBaseUrlCacher extends LockssTestCase {
     assertEquals(UrlCacher.CACHE_RESULT_FETCHED, cacher.cache());
 
     assertTrue(loginPageChecker.wasCalled());
+  }
+
+  public void testCacheLPCNotModified() throws IOException {
+    MyMockLoginPageChecker loginPageChecker =
+      new MyMockLoginPageChecker(false);
+    mau.setCrawlSpec(new SpiderCrawlSpec(ListUtil.list("http://example.com"),
+                                         ListUtil.list("http://example.com"),
+                                         null, 99, null,
+                                         loginPageChecker));
+
+    // add the 'cached' version
+    CIProperties cachedProps = new CIProperties();
+    cachedProps.setProperty(CachedUrl.PROPERTY_LAST_MODIFIED, GMT_DATE_FORMAT
+        .format(new Date(12345)));
+    // mcus.addUrl("test stream", TEST_URL, true, true, cachedProps);
+    mau.addUrl(TEST_URL, true, true, cachedProps);
+
+    TimeBase.setSimulated(10000);
+    cacher._input = new StringInputStream("test stream");
+    cacher._headers = new CIProperties();
+    // shouldn't cache
+    assertEquals(UrlCacher.CACHE_RESULT_NOT_MODIFIED, cacher.cache());
+    assertFalse(cacher.wasStored);
+    assertFalse(loginPageChecker.wasCalled());
   }
 
   public void testCacheLPCResetAndMarkCalled() throws IOException {
