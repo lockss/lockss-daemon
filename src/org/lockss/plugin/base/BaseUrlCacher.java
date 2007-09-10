@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.74 2007-08-12 01:48:05 tlipkis Exp $
+ * $Id: BaseUrlCacher.java,v 1.74.2.1 2007-09-10 22:15:20 tlipkis Exp $
  */
 
 /*
@@ -452,7 +452,10 @@ public class BaseUrlCacher implements UrlCacher {
   protected final InputStream getUncachedInputStream(String lastModified)
       throws IOException {
     InputStream is = getUncachedInputStreamOnly(lastModified);
-    is = checkLoginPage(is, getHeaders(), lastModified);
+    if (is != null) {
+      // Check for login page iff got new content
+      is = checkLoginPage(is, getHeaders(), lastModified);
+    }
     return is;
   }
 
