@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.59 2007-08-30 09:55:44 smorabito Exp $
+ * $Id: V3Poller.java,v 1.60 2007-09-11 06:34:57 smorabito Exp $
  */
 
 /*
@@ -712,13 +712,19 @@ public class V3Poller extends BasePoll {
    * Stop the poll, and set the supplied status.
    */
   public void stopPoll(final int status) {
+    if (activePoll) {
+      activePoll = false;
+    } else {
+      log.debug("Poll has already been closed: " + getKey());
+      return;
+    }
+
     // Want this action to be serialized with the other poll actions.
     pollManager.runTask(new PollRunner.Task("Stopping Poll", getKey()) {
       public void lockssRun() {
         log.info("Stopping poll " + getKey() + " with status " + 
                  V3Poller.POLLER_STATUS_STRINGS[status]);
         setStatus(status);
-        activePoll = false;
         if (task != null && !task.isExpired()) {
           log.debug2("Cancelling task");
           task.cancel();
@@ -1429,6 +1435,14 @@ public class V3Poller extends BasePoll {
    * been received.
    */
   public void receivedRepair(final String url) {
+    // It is possible that a repair may come in after the poll has been closed
+    // and its resources released.  If pollManager is null, just return.
+    if (pollManager == null) {
+      log.debug("Repair was received after the poll was closed. " +
+                "Poll key = " + getKey());
+      return;
+    }
+    
     final BlockHasher.EventHandler blockDone =
       new BlockHasher.EventHandler() {
         public void blockDone(final HashBlock hblock) {

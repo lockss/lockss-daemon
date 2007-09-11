@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.42 2007-08-30 09:55:44 smorabito Exp $
+ * $Id: V3Voter.java,v 1.43 2007-09-11 06:34:57 smorabito Exp $
  */
 
 /*
@@ -625,9 +625,18 @@ public class V3Voter extends BasePoll {
    * complete.
    */
   public void hashComplete() {
-    log.debug("Hashing complete for poll " + voterUserData.getPollKey());
+    // The task should have been canceled by now if the poll ended before
+    // hashing was complete, but it may not have been.  If stateMachine
+    // is null, the poll has ended and its resources have been released.
+    if (stateMachine == null) {
+      log.debug("HashService callback called hashComplete() on a poll " +
+      		"that was over.  Poll key = " + getKey());
+      return;
+    }
+    
     // If we've received a vote request, send our vote right away.  Otherwise,
     // wait for a vote request.
+    log.debug("Hashing complete for poll " + voterUserData.getPollKey());
     voterUserData.hashingDone(true);
     try {
       if (voterUserData.voteRequested()) {
