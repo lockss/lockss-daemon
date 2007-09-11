@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedContentGenerator.java,v 1.25 2007-03-17 21:31:32 dshr Exp $
+ * $Id: SimulatedContentGenerator.java,v 1.25.10.1 2007-09-11 19:15:00 dshr Exp $
  */
 
 /*
@@ -182,14 +182,32 @@ public class SimulatedContentGenerator {
 
   static SimulatedContentGenerator getInstance(String rootPath) {
     SimulatedContentGenerator ret = null;
+    logger.debug3("SimulatedContentGenerator.getInstance(" + rootPath + ")");
     boolean arc = CurrentConfig.getBooleanParam("org.lockss.plugin.simulated.SimulatedContentGenerator.doArcFile", false);
-    logger.debug3("SimulatedContentGenerator.getInstance(" + rootPath + "," + arc + ")");
+    boolean zip = CurrentConfig.getBooleanParam("org.lockss.plugin.simulated.SimulatedContentGenerator.doZipFile", false);
+    boolean tar = CurrentConfig.getBooleanParam("org.lockss.plugin.simulated.SimulatedContentGenerator.doTarFile", false);
+    logger.debug3("SimulatedContentGenerator: arc " + arc + " zip " + zip +
+		  " tar " + tar);
     if (arc) {
       boolean actual = CurrentConfig.getBooleanParam("org.lockss.plugin.simulated.SimulatedContentGenerator.actualArcFile", false);
       if (actual) {
 	ret = new ActualArcContentGenerator(rootPath);
       } else {
 	ret = new SimulatedArcContentGenerator(rootPath);
+      }
+    } else if (zip) {
+      boolean actual = CurrentConfig.getBooleanParam("org.lockss.plugin.simulated.SimulatedContentGenerator.actualZipFile", false);
+      if (actual) {
+	ret = new ActualZipContentGenerator(rootPath);
+      } else {
+	ret = new SimulatedZipContentGenerator(rootPath);
+      }
+    } else if (tar) {
+      boolean actual = CurrentConfig.getBooleanParam("org.lockss.plugin.simulated.SimulatedContentGenerator.actualTarFile", false);
+      if (actual) {
+	ret = /* new ActualTarContentGenerator(rootPath) */ null;
+      } else {
+	ret = /* new SimulatedTarContentGenerator(rootPath) */ null;
       }
     } else {
       ret = new SimulatedContentGenerator(rootPath);

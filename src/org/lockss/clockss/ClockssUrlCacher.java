@@ -1,5 +1,5 @@
 /*
- * $Id: ClockssUrlCacher.java,v 1.7 2007-07-17 06:03:49 tlipkis Exp $
+ * $Id: ClockssUrlCacher.java,v 1.7.4.1 2007-09-11 19:14:54 dshr Exp $
  */
 
 /*
@@ -95,6 +95,10 @@ public class ClockssUrlCacher implements UrlCacher {
 
   public void setFetchFlags(BitSet fetchFlags) {
     uc.setFetchFlags(fetchFlags);
+  }
+
+  public BitSet getFetchFlags() {
+    return uc.getFetchFlags();
   }
 
   public void setRequestProperty(String key, String value) {

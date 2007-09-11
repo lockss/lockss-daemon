@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.182 2007-08-15 07:09:37 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.182.4.1 2007-09-11 19:14:57 dshr Exp $
  */
 
 /*
@@ -244,6 +244,9 @@ public class PluginManager
   private Map titleSetMap;
   private TreeSet titleSets;
 
+  private boolean explodedPluginLoaded = false;
+  private Plugin explodedPlugin = null;
+
   public static final int PREFER_XML_PLUGIN = 0;
   public static final int PREFER_CLASS_PLUGIN = 1;
 
@@ -293,6 +296,19 @@ public class PluginManager
     log.debug("Initializing loadable plugin registries before starting AUs");
     initLoadablePluginRegistries(getPluginRegistryUrls(config));
     initPluginRegistry(config);
+    Class explodedPluginClass = null;
+    String name = "org.lockss.plugin.exploded.ExplodedPlugin";
+    if (!explodedPluginLoaded) {
+      explodedPluginLoaded = true;
+      try {
+	explodedPluginClass = Class.forName(name);
+      } catch (ClassNotFoundException ex) {
+	log.warning("No class " + name);
+      }
+      if (explodedPluginClass != null) {
+	explodedPlugin = loadBuiltinPlugin(explodedPluginClass);
+      }
+    }
     configureAllPlugins(config);
     loadablePluginsReady = true;
   }
@@ -1251,6 +1267,18 @@ public class PluginManager
       log.error("Error instantiating " + pluginName, e);
       return false;
     }
+  }
+
+  public Plugin loadBuiltinPlugin(Class pluginClass) {
+    return loadBuiltinPlugin(pluginClass.getName());
+  }
+
+  protected Plugin loadBuiltinPlugin(String pluginClassName) {
+    String pluginKey = pluginKeyFromName(pluginClassName);
+    if (ensurePluginLoaded(pluginKey)) {
+      return (Plugin)pluginMap.get(pluginKey);
+    }
+    return null;
   }
 
   // separate method so can be called by test code

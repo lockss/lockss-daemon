@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.74.2.1 2007-09-10 22:15:20 tlipkis Exp $
+ * $Id: BaseUrlCacher.java,v 1.74.2.1.2.1 2007-09-11 19:14:58 dshr Exp $
  */
 
 /*
@@ -176,6 +176,10 @@ public class BaseUrlCacher implements UrlCacher {
 
   public void setFetchFlags(BitSet fetchFlags) {
     this.fetchFlags = fetchFlags;
+  }
+
+  public BitSet getFetchFlags() {
+    return fetchFlags;
   }
 
   public void setRequestProperty(String key, String value) {
@@ -409,7 +413,9 @@ public class BaseUrlCacher implements UrlCacher {
 
       OutputStream os = leaf.getNewOutputStream();
       StreamUtil.copy(input, os, wdog);
-      input.close();
+      if (!fetchFlags.get(DONT_CLOSE_INPUT_STREAM_FLAG)) {
+	input.close();
+      }
       os.close();
       headers.setProperty(CachedUrl.PROPERTY_NODE_URL, url);
       leaf.setNewProperties(headers);

@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.111 2007-08-15 07:09:37 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.111.4.1 2007-09-11 19:14:55 dshr Exp $
  */
 
 /*
@@ -630,7 +630,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     if (spec instanceof OaiCrawlSpec) {
       logger.debug("Creating OaiCrawler for " + au);
       return new OaiCrawler(au, spec, AuUtil.getAuState(au));
-    } else if (spec.arcFilePattern() != null) {
+    } else if (spec.getExploderPattern() != null) {  // XXX goes away
       logger.debug("Creating ArcCrawler for " + au);
       return new ArcCrawler(au, spec, AuUtil.getAuState(au));
     } else {

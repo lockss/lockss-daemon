@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.63 2007-07-26 03:43:33 tlipkis Exp $
+ * $Id: FollowLinkCrawler.java,v 1.63.4.1 2007-09-11 19:14:55 dshr Exp $
  */
 
 /*
@@ -102,6 +102,14 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
     Configuration.PREFIX + "BaseCrawler.refetchIfDamaged";
   public static final boolean DEFAULT_REFETCH_IF_DAMAGED = true;
 
+  public static final String PARAM_EXPLODE_ARCHIVES =
+    Configuration.PREFIX + "BaseCrawler.explodeArchives";
+  public static final boolean DEFAULT_EXPLODE_ARCHIVES = true;
+
+  public static final String PARAM_STORE_ARCHIVES =
+    Configuration.PREFIX + "BaseCrawler.storeArchives";
+  public static final boolean DEFAULT_STORE_ARCHIVES = false;
+
   private boolean alwaysReparse = DEFAULT_REPARSE_ALL;
   private boolean usePersistantList = DEFAULT_PERSIST_CRAWL_LIST;
   private boolean parseUseCharset = DEFAULT_PARSE_USE_CHARSET;
@@ -115,9 +123,15 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
   protected boolean cachingStartUrls = false; //added to report an error when
                                               //not able to cache a starting Url
   protected BitSet fetchFlags = new BitSet();
+  protected String exploderPattern = null;
+  protected CrawlSpec crawlSpec = null;
+  protected boolean explodeFiles = true;
+  protected boolean storeArchive = false;  // XXX need to keep stub archive
 
   public FollowLinkCrawler(ArchivalUnit au, CrawlSpec crawlSpec, AuState aus) {
     super(au, crawlSpec, aus);
+    exploderPattern = crawlSpec.getExploderPattern();
+    this.crawlSpec = crawlSpec;
   }
 
   /**
@@ -156,6 +170,10 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
     }
     parseUseCharset = config.getBoolean(PARAM_PARSE_USE_CHARSET,
 					DEFAULT_PARSE_USE_CHARSET);
+    explodeFiles = config.getBoolean(PARAM_EXPLODE_ARCHIVES,
+					DEFAULT_EXPLODE_ARCHIVES);
+    storeArchive = config.getBoolean(PARAM_STORE_ARCHIVES,
+					DEFAULT_STORE_ARCHIVES);
 
   }
 
@@ -328,9 +346,13 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	    return false;
 	  }
 
-	  cacheWithRetries(uc, maxRetries);
-	  // Successfully fetched URL, call hook
-	  fetchedUrlHook(uc);
+	  if (exploderPattern != null &&
+	      RegexpUtil.isMatchRe(uc.getUrl(), exploderPattern)) {
+	    // This url matches the pattern for archives to be exploded.
+	    explodeArchive(uc, maxRetries);
+	  } else {
+	    cacheWithRetries(uc, maxRetries);
+	  }
 	}
       } catch (CacheException.RepositoryException ex) {
 	// Failed.  Don't try this one again during this crawl.
@@ -449,7 +471,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
     return res;
   }
 
-  private void cacheWithRetries(UrlCacher uc, int maxTries)
+  protected void cacheWithRetries(UrlCacher uc, int maxTries)
       throws IOException {
     int retriesLeft = maxTries;
     logger.debug2("Fetching " + uc.getUrl());
@@ -494,7 +516,31 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
     }
   }
 
-  protected void fetchedUrlHook(UrlCacher uc) {
+  protected Exploder getExploder(UrlCacher uc, int maxRetries) {
+    Exploder ret = null;
+    String url = uc.getUrl();
+    if (url.endsWith(".arc.gz")) {
+      ret = new ArcExploder(uc, maxRetries, crawlSpec, this,
+			    explodeFiles, storeArchive);
+    } else if (url.endsWith(".zip")) {
+      ret = new ZipExploder(uc, maxRetries, crawlSpec, this,
+			    explodeFiles, storeArchive);
+    } else if (url.endsWith(".tar")) {
+      ret = new TarExploder(uc, maxRetries, crawlSpec, this,
+			    explodeFiles, storeArchive);
+    }
+    return ret;
+  }
+
+  protected void explodeArchive(UrlCacher uc, int maxRetries)
+      throws IOException {
+    Exploder exploder = getExploder(uc, maxRetries);
+    if (exploder != null) {
+      exploder.explodeUrl();
+    } else {
+      logger.warning("No exploder for " + uc.getUrl());
+      cacheWithRetries(uc, maxRetries);
+    }
   }
 
   private LinkExtractor getLinkExtractor(CachedUrl cu) {

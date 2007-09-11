@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawler.java,v 1.25 2007-08-10 07:12:11 tlipkis Exp $
+ * $Id: BaseCrawler.java,v 1.25.4.1 2007-09-11 19:14:54 dshr Exp $
  */
 
 /*
@@ -421,5 +421,9 @@ public abstract class BaseCrawler
 
   public CrawlerStatus getCrawlStatus() {
     return crawlStatus;
+  }
+
+  protected void cacheWithRetries(UrlCacher uc, int maxRetries)
+      throws IOException {
   }
 }

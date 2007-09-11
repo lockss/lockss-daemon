@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCrawlSpec.java,v 1.6 2007-03-17 21:31:31 dshr Exp $
+ * $Id: TestBaseCrawlSpec.java,v 1.6.10.1 2007-09-11 19:14:59 dshr Exp $
  */
 
 /*
@@ -150,7 +150,7 @@ public class TestBaseCrawlSpec extends LockssTestCase {
   public void testArcFilePattern() {
     List l1 = ListUtil.list("one", "two");
     BaseCrawlSpec cs = new TestableBaseCrawlSpec(l1, rule, null, null);
-    assertNull(cs.arcFilePattern());
+    assertNull(cs.getExploderPattern());
   }
     
   private static class TestableBaseCrawlSpec extends BaseCrawlSpec {

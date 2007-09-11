@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.59 2007-08-12 01:48:58 tlipkis Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.59.4.1 2007-09-11 19:14:58 dshr Exp $
  */
 
 /*
@@ -67,6 +67,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
   public static final String KEY_AU_ARC_PATTERN = "au_arc_pattern";
   public static final String KEY_AU_MANIFEST = "au_manifest";
   //public static final String KEY_AU_URL_NORMALIZER = "au_url_normalizer";
+  public static final String KEY_AU_EXPLODER_HELPER = "au_exploder_helper";
 
   public static final String SUFFIX_PARSER = "_parser";
   public static final String SUFFIX_LINK_EXTRACTOR_FACTORY =
@@ -268,6 +269,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
       int depth = definitionMap.getInt(KEY_AU_CRAWL_DEPTH, DEFAULT_AU_CRAWL_DEPTH);
       String arcPattern = definitionMap.getString(KEY_AU_ARC_PATTERN,
 						  DEFAULT_AU_ARC_PATTERN);
+      ExploderHelper eh = getDefinablePlugin().getExploderHelper();
       //XXX change to a list
 //       String startUrl = paramMap.getString(AU_START_URL);
 
@@ -275,7 +277,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
       return new SpiderCrawlSpec(ListUtil.list(startUrlString),
 				 getPermissionPages(), rule, depth,
 				 makePermissionChecker(),
-				 makeLoginPageChecker(), arcPattern);
+				 makeLoginPageChecker(), arcPattern, eh);
     }
   }
 

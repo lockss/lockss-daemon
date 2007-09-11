@@ -1,5 +1,5 @@
 /*
- * $Id: SpiderCrawlSpec.java,v 1.6 2007-03-17 21:31:31 dshr Exp $
+ * $Id: SpiderCrawlSpec.java,v 1.6.10.1 2007-09-11 19:14:57 dshr Exp $
  */
 
 /*
@@ -43,7 +43,8 @@ public final class SpiderCrawlSpec extends BaseCrawlSpec {
 
   private List startList;
   private int refetchDepth = -1;
-  private String arcPattern = null;
+  private String exploderPattern = null;
+  private ExploderHelper exploderHelper = null;
 
   /**
    * Create a SpiderCrawlSpec with the specified start list and rule.
@@ -99,7 +100,7 @@ public final class SpiderCrawlSpec extends BaseCrawlSpec {
    * should themselves be crawled.  A null rule is always true.
    * @param refetchDepth depth to always refetch
    * @param permissionChecker a permissionChecker specified by plugin
-   * @param arcPattern regexp to recognize ARC files
+   * @param exploderPattern regexp to recognize archive files to be exploded.
    * @throws IllegalArgumentException if the url list is empty.
    * @throws NullPointerException if any elements of startUrls is null.
    * @throws ClassCastException if any elements of startUrls is not a String.
@@ -110,7 +111,36 @@ public final class SpiderCrawlSpec extends BaseCrawlSpec {
 			 int refetchDepth,
 			 PermissionChecker permissionChecker,
 			 LoginPageChecker loginPageChecker,
-			 String arcPattern)
+			 String exploderPattern)
+      throws ClassCastException {
+    this(startUrls, permissionUrls, rule, refetchDepth,
+	 permissionChecker, loginPageChecker, exploderPattern,
+	 null);
+  }
+
+  /**
+   * Create a SpiderCrawlSpec with the specified start list and rule.
+   * @param startUrls a list of Strings specifying starting points
+   * for the crawl
+   * @param permissionUrls a list of urls from which permission can be obtained.
+   * @param rule filter to determine which URLs encountered in the crawl
+   * should themselves be crawled.  A null rule is always true.
+   * @param refetchDepth depth to always refetch
+   * @param permissionChecker a permissionChecker specified by plugin
+   * @param exploderPattern regexp to recognize archive files to be exploded.
+   * @param exploderHelper helper class with publisher info
+   * @throws IllegalArgumentException if the url list is empty.
+   * @throws NullPointerException if any elements of startUrls is null.
+   * @throws ClassCastException if any elements of startUrls is not a String.
+   */
+  public SpiderCrawlSpec(List startUrls,
+			 List permissionUrls,
+			 CrawlRule rule,
+			 int refetchDepth,
+			 PermissionChecker permissionChecker,
+			 LoginPageChecker loginPageChecker,
+			 String exploderPattern,
+			 ExploderHelper eh)
       throws ClassCastException {
     super(permissionUrls, rule, permissionChecker, loginPageChecker);
     if(startUrls.isEmpty()) {
@@ -123,7 +153,8 @@ public final class SpiderCrawlSpec extends BaseCrawlSpec {
     }
     startList = ListUtil.immutableListOfType(startUrls, String.class);
     this.refetchDepth = refetchDepth;
-    this.arcPattern = arcPattern;
+    this.exploderPattern = exploderPattern;
+    exploderHelper = eh;
   }
 
   /**
@@ -185,9 +216,25 @@ public final class SpiderCrawlSpec extends BaseCrawlSpec {
   /**
    * @return pattern to recognize ARC files
    */
-  public String arcFilePattern() {
-    return arcPattern;
+  public String getExploderPattern() {
+    return exploderPattern;
   }
+  // XXX temporary
+  public void setExploderPattern(String pat) {
+    exploderPattern = pat;
+  }
+
+  /**
+   * @return ExploderHelper
+   */
+  public ExploderHelper getExploderHelper() {
+    return exploderHelper;
+  }
+  // XXX temporary
+  public void setExploderHelper(ExploderHelper eh) {
+    exploderHelper = eh;
+  }
+
 
 }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawlSpec.java,v 1.8 2007-03-17 21:31:31 dshr Exp $
+ * $Id: BaseCrawlSpec.java,v 1.8.10.1 2007-09-11 19:14:57 dshr Exp $
  */
 
 /*
@@ -130,8 +130,20 @@ public abstract class BaseCrawlSpec implements CrawlSpec {
     return loginPageChecker;
   }
 
-  public String arcFilePattern() {
+  public String getExploderPattern() {
     return null;
+  }
+
+  // XXX temporary
+  public void setExploderPattern(String pat) {
+  }
+
+  public ExploderHelper getExploderHelper() {
+    return null;
+  }
+
+  // XXX temporary
+  public void setExploderHelper(ExploderHelper eh) {
   }
 
 }
