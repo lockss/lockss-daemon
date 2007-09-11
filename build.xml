@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.222 2007-08-07 00:55:40 tlipkis Exp $
+ $Id: build.xml,v 1.223 2007-09-11 03:18:27 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -200,6 +200,7 @@ Args:
 	        value="${lib}/commons-io-1.3.2.jar" />
   <property name="commons.jxpath.jar"
 				  value="${lib}/commons-jxpath-1.2.jar"/>
+  <property name="javatar.jar"    value="${lib}/tar-2.3.jar"/>
   <property name="concurrent.jar" value="${lib}/concurrent.jar"/>
   <property name="htmlparser.jar" value="${lib}/htmlparser-1.6.jar"/>
   <!-- W3C RDF Parser -->
@@ -249,6 +250,7 @@ Args:
   <property name="lockss.platform.jar"   value="${lib}/lockss-platform.jar"/>
 
   <!--  Files -->
+  <property name="default.releasename.file" value="${src}/defaultreleasename"/>
   <property name="test.classpath.file" value="${test}/test-classpath"/>
   <property name="production.classpath.file" value="${lib}/run-classpath"/>
   <property name="production.packinglist.file" value="${lib}/packing-list"/>
@@ -295,6 +297,7 @@ Args:
     <pathelement path="${commons.httpclient.jar}" />
   	<pathelement path="${commons.io.jar}" />
     <pathelement path="${commons.jxpath.jar}" />
+    <pathelement path="${javatar.jar}" />
     <pathelement path="${log4j.jar}" />
     <pathelement path="${concurrent.jar}" />
     <pathelement path="${jetty.jar}" />
@@ -805,7 +808,21 @@ The target you have selected requires compiling under JDK 1.6.  Use the rant -1.
   </target>
 
   <!-- ==================================================================== -->
-  <target name="build-info" depends="build-info-if-needed,-set.hostname"
+  <!--  -->
+  <target name="-set.releasename">
+    <loadfile property="releasename" srcfile="${default.releasename.file}"
+        failonerror="no">
+      <filterchain>
+        <striplinecomments>
+          <comment value="#"/>
+        </striplinecomments>
+        <striplinebreaks/>
+      </filterchain>
+    </loadfile>
+  </target>
+
+  <!-- ==================================================================== -->
+  <target name="build-info" depends="build-info-if-needed,-set.hostname,-set.releasename"
        unless="jar.is.up.to.date">
     <!--  The prop names used here are also known to
           org.lockss.util.BuildInfo class -->
@@ -828,7 +845,12 @@ The target you have selected requires compiling under JDK 1.6.  Use the rant -1.
       <entry key="build.releasename" value="${releasename}"/>
       <entry key="build.cvs.tag" value="$Name: not supported by cvs2svn $"/>
     </propertyfile>
-
+    <if>
+      <isset property="releasename" />
+      <then>
+        <echo message="Building daemon ${releasename}" />
+      </then>
+    </if>
     <!-- Build file with CVS revision info for all files -->
 
     <!-- Concatenate all CVS/Entries files.   Not ideal, as dir names
