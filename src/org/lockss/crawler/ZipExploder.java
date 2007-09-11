@@ -1,5 +1,5 @@
 /*
- * $Id: ZipExploder.java,v 1.1.2.1 2007-09-11 19:14:56 dshr Exp $
+ * $Id: ZipExploder.java,v 1.1.2.2 2007-09-11 22:24:19 dshr Exp $
  */
 
 /*
@@ -143,8 +143,12 @@ public class ZipExploder extends Exploder {
     PluginManager pluginMgr = crawler.getDaemon().getPluginManager();
     ArchivalUnit au = null;
     String baseUrl = ae.getBaseUrl();
-    String auId = ExplodedArchivalUnit.findAuId(baseUrl);
-    if (auId == null) {
+    CachedUrl cu = pluginMgr.findCachedUrl(baseUrl + ae.getRestOfUrl(), false);
+    if (cu != null) {
+      au = cu.getArchivalUnit();
+      logger.debug(baseUrl + ae.getRestOfUrl() + " old au " + au.getAuId());
+    }
+    if (au == null) {
       // There's no AU for this baseUrl,  so create one
       CIProperties props = new CIProperties();
       props.put("base_url", baseUrl);
@@ -164,10 +168,8 @@ public class ZipExploder extends Exploder {
 	throw new IOException(pluginName + " not initialized for " +
 			      ae.getBaseUrl());
       }
-    } else {
-      au = pluginMgr.getAuFromId(auId);
     }
-    String newUrl = ae.getBaseUrl() + ae.getRestOfUrl();
+    String newUrl = baseUrl + ae.getRestOfUrl();
     // Create a new UrlCacher from the ArchivalUnit and store the
     // element using it.
     UrlCacher newUc = au.makeUrlCacher(newUrl);

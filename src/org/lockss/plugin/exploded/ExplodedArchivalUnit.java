@@ -1,5 +1,5 @@
 /*
- * $Id: ExplodedArchivalUnit.java,v 1.1.2.1 2007-09-11 19:14:58 dshr Exp $
+ * $Id: ExplodedArchivalUnit.java,v 1.1.2.2 2007-09-11 22:24:19 dshr Exp $
  */
 
 /*
@@ -48,27 +48,15 @@ import org.lockss.plugin.base.*;
 public class ExplodedArchivalUnit extends BaseArchivalUnit {
   private String m_explodedHandlerUrl = null;
   protected Logger logger = Logger.getLogger("ExplodedArchivalUnit");
-  private static HashMap baseUrlIndex = null; // Map from baseUrl to AuId
-
-  public static String findAuId(String baseUrl) {
-    if (baseUrlIndex == null) {
-      baseUrlIndex = new HashMap();
-    }
-    return (String)baseUrlIndex.get(baseUrl);
-  }
 
   public ExplodedArchivalUnit(ExplodedPlugin plugin) {
     super(plugin);
-    if (baseUrlIndex == null) {
-      baseUrlIndex = new HashMap();
-    }
   }
 
   public void loadAuConfigDescrs(Configuration config)
       throws ConfigurationException {
     super.loadAuConfigDescrs(config);
     this.m_explodedHandlerUrl = config.get(ConfigParamDescr.BASE_URL.getKey());
-    baseUrlIndex.put(this.m_explodedHandlerUrl, this.getAuId());
   }
 
 
@@ -98,10 +86,30 @@ public class ExplodedArchivalUnit extends BaseArchivalUnit {
     return m_explodedHandlerUrl;
   }
 
-  protected CrawlRule makeRules() {
-    return null;
+  /**
+   * Determine whether the url falls within the CrawlSpec.
+   * @param url the url
+   * @return true if it is included
+   */
+  public boolean shouldBeCached(String url) {
+    return url.startsWith(m_explodedHandlerUrl);
   }
 
+  protected CrawlRule makeRules() {
+    return new ExplodedCrawlRule();
+  }
+
+  private class ExplodedCrawlRule implements CrawlRule {
+    protected ExplodedCrawlRule() {
+    }
+
+    public int match(String url) {
+      if (url.startsWith(m_explodedHandlerUrl)) {
+	return INCLUDE;
+      }
+      return IGNORE;
+    }
+  }
   /**
    * Return a new CrawlSpec with the appropriate collect AND redistribute
    * permissions, and with the maximum refetch depth.

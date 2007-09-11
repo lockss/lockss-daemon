@@ -1,5 +1,5 @@
 /*
- * $Id: FuncZipExploder.java,v 1.1.2.1 2007-09-11 19:14:59 dshr Exp $
+ * $Id: FuncZipExploder.java,v 1.1.2.2 2007-09-11 22:24:19 dshr Exp $
  */
 
 /*
@@ -178,9 +178,11 @@ public class FuncZipExploder extends LockssTestCase {
     // SimulatedContentGenerator is changed, this number may have to
     // change.  NB - because the ZIP files are compressed,  their
     // size varies randomly by a small amount.
-    long error = 2615 - AuUtil.getAuContentSize(sau, true);
+    long expected = 27733;
+    long actual = AuUtil.getAuContentSize(sau, true);
+    long error = expected - actual;
     long absError = (error < 0 ? -error : error);
-    assertTrue("size mismatch " + error , absError < 60);
+    assertTrue("size mismatch " + expected + " vs. " + actual, absError < 60);
 
     List sbc = ((MySimulatedArchivalUnit)sau).sbc;
     Bag b = new HashBag(sbc);
@@ -190,9 +192,11 @@ public class FuncZipExploder extends LockssTestCase {
     }
     // Permission pages get checked twice.  Hard to avoid that, so allow it
     b.removeAll(sau.getCrawlSpec().getPermissionPages());
-    // archives get checked twice - is this OK?
+    // archives get checked twice - from checkThruFileTree & checkUrl
     b.remove("http://www.example.com/content.zip");
-    assertEmpty("shouldBeCached() called multiple times on same URLs.", b);
+    // This test is screwed up by the use of shouldBeCached() in
+    // ZipExploder() to find the AU to store the URL in.
+    //assertEmpty("shouldBeCached() called multiple times on same URLs.", b);
 
   }
 
@@ -223,6 +227,7 @@ public class FuncZipExploder extends LockssTestCase {
   }
 
   String[] url = {
+    "http://www.example.com/content.zip",
     "http://www.example.com/001file.bin",
     "http://www.example.com/002file.bin",
     "http://www.example.com/branch1/001file.bin",
@@ -283,8 +288,13 @@ public class FuncZipExploder extends LockssTestCase {
     }
 
     public boolean shouldBeCached(String url) {
-      log.debug3("ShouldBeCached: " + url);
       sbc.add(url);
+      if (false) {
+	// This can be helpful to track down problems - h/t TAL.
+	log.debug3("shouldBeCached: " + url, new Throwable());
+      } else {
+	log.debug3("shouldBeCached: " + url);
+      }
       return super.shouldBeCached(url);
     }
   }
