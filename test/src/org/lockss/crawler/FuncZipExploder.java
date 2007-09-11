@@ -1,5 +1,5 @@
 /*
- * $Id: FuncZipExploder.java,v 1.1.2.2 2007-09-11 22:24:19 dshr Exp $
+ * $Id: FuncZipExploder.java,v 1.1.2.3 2007-09-11 23:47:11 dshr Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.simulated.*;
+import org.lockss.plugin.exploded.*;
 import org.lockss.repository.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
@@ -164,7 +165,9 @@ public class FuncZipExploder extends LockssTestCase {
       File f[] = dir.listFiles();
       log.debug("Checking simulated content.");
       checkThruFileTree(f, myCUS);
-      checkUrl();
+      log.debug("Checking simulated content done.");
+      checkExplodedUrls();
+      checkUnExplodedUrls();
 
       log.debug("Check finished.");
     } else {
@@ -178,7 +181,7 @@ public class FuncZipExploder extends LockssTestCase {
     // SimulatedContentGenerator is changed, this number may have to
     // change.  NB - because the ZIP files are compressed,  their
     // size varies randomly by a small amount.
-    long expected = 27733;
+    long expected = 2615;
     long actual = AuUtil.getAuContentSize(sau, true);
     long error = expected - actual;
     long absError = (error < 0 ? -error : error);
@@ -192,7 +195,7 @@ public class FuncZipExploder extends LockssTestCase {
     }
     // Permission pages get checked twice.  Hard to avoid that, so allow it
     b.removeAll(sau.getCrawlSpec().getPermissionPages());
-    // archives get checked twice - from checkThruFileTree & checkUrl
+    // archives get checked twice - from checkThruFileTree & checkExplodedUrls
     b.remove("http://www.example.com/content.zip");
     // This test is screwed up by the use of shouldBeCached() in
     // ZipExploder() to find the AU to store the URL in.
@@ -227,27 +230,50 @@ public class FuncZipExploder extends LockssTestCase {
   }
 
   String[] url = {
-    "http://www.example.com/content.zip",
-    "http://www.example.com/001file.bin",
-    "http://www.example.com/002file.bin",
-    "http://www.example.com/branch1/001file.bin",
-    "http://www.example.com/branch1/002file.bin",
-    "http://www.example.com/branch1/branch1/001file.bin",
-    "http://www.example.com/branch1/branch1/002file.bin",
-    "http://www.example.com/branch1/branch1/branch1/001file.bin",
-    "http://www.example.com/branch1/branch1/branch1/002file.bin",
-    "http://www.example.com/branch1/branch1/branch1/index.html",
-    "http://www.example.com/branch1/branch1/index.html",
-    "http://www.example.com/branch1/index.html",
+    "http://www.content.org/001file.bin",
+    "http://www.content.org/002file.bin",
+    "http://www.content.org/branch1/001file.bin",
+    "http://www.content.org/branch1/002file.bin",
+    "http://www.content.org/branch1/branch1/001file.bin",
+    "http://www.content.org/branch1/branch1/002file.bin",
+    "http://www.content.org/branch1/branch1/branch1/001file.bin",
+    "http://www.content.org/branch1/branch1/branch1/002file.bin",
+    "http://www.content.org/branch1/branch1/branch1/index.html",
+    "http://www.content.org/branch1/branch1/index.html",
+    "http://www.content.org/branch1/index.html",
   };
 
-  private void checkUrl() {
+  private void checkExplodedUrls() {
+    log.debug2("Checking Exploded URLs.");
     for (int i = 0; i < url.length; i++) {
       CachedUrl cu = theDaemon.getPluginManager().findCachedUrl(url[i]);
-      log.debug3("Check: " + cu + " au " + cu.getArchivalUnit().getAuId());
+      log.debug2("Check: " + url[i] + " cu " + cu + " au " + cu.getArchivalUnit().getAuId());
       assertTrue(cu + " has no content", cu.hasContent());
+      assertTrue(cu + " isn't ExplodedArchivalUnit",
+		 !(cu instanceof ExplodedArchivalUnit));
+      assertNotEquals(sau, cu.getArchivalUnit());
     }
+    log.debug2("Checking Exploded URLs done.");
   }
+
+  String[] url2 = {
+    "http://www.example.com/index.html",
+    "http://www.example.com/content.zip",
+  };
+
+  private void checkUnExplodedUrls() {
+    log.debug2("Checking UnExploded URLs.");
+    for (int i = 0; i < url2.length; i++) {
+      CachedUrl cu = theDaemon.getPluginManager().findCachedUrl(url2[i]);
+      log.debug2("Check: " + url2[i] + " cu " + cu + " au " + cu.getArchivalUnit().getAuId());
+      assertTrue(cu + " has no content", cu.hasContent());
+      assertTrue(cu + " isn't MySimulatedArchivalUnit",
+		 !(cu instanceof MySimulatedArchivalUnit));
+      assertEquals(sau, cu.getArchivalUnit());
+    }
+    log.debug2("Checking UnExploded URLs done.");
+  }
+
 
   private void createContent() {
     log.debug("Generating tree of size 3x1x2 with "+fileSize
@@ -261,7 +287,7 @@ public class FuncZipExploder extends LockssTestCase {
     CrawlSpec spec =
       new SpiderCrawlSpec(urls,
 			  urls, // permissionUrls
-			  null, // crawl rules
+			  new MyCrawlRule(), // crawl rules
 			  1,    // refetch depth
 			  null, // PermissionChecker
 			  null, // LoginPageChecker
@@ -287,6 +313,10 @@ public class FuncZipExploder extends LockssTestCase {
       super(owner);
     }
 
+    protected CrawlRule makeRules() {
+      return new MyCrawlRule();
+    }
+
     public boolean shouldBeCached(String url) {
       sbc.add(url);
       if (false) {
@@ -296,6 +326,15 @@ public class FuncZipExploder extends LockssTestCase {
 	log.debug3("shouldBeCached: " + url);
       }
       return super.shouldBeCached(url);
+    }
+  }
+
+  public static class MyCrawlRule implements CrawlRule {
+    public int match(String url) {
+      if (url.startsWith("http://www.example.com")) {
+	return CrawlRule.INCLUDE;
+      }
+      return CrawlRule.EXCLUDE;
     }
   }
 
@@ -319,7 +358,7 @@ public class FuncZipExploder extends LockssTestCase {
     };
 
     public void process(ArchiveEntry ae) {
-      String baseUrl = "http://www.example.com/";
+      String baseUrl = "http://www.content.org/";
       String restOfUrl = ae.getName();
       CIProperties headerFields = new CIProperties();
       for (int i = 0; i < suffix.length; i++) {

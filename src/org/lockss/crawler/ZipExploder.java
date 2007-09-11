@@ -1,5 +1,5 @@
 /*
- * $Id: ZipExploder.java,v 1.1.2.2 2007-09-11 22:24:19 dshr Exp $
+ * $Id: ZipExploder.java,v 1.1.2.3 2007-09-11 23:47:11 dshr Exp $
  */
 
 /*
@@ -178,6 +178,7 @@ public class ZipExploder extends Exploder {
     newUc.setFetchFlags(flags);
     // XXX either fetch or storeContent synthesizes some properties
     // XXX for the URL - check and move the place to storeContent
+    logger.debug3("Storing " + newUrl + " in " + au.toString());
     newUc.storeContent(ae.getInputStream(), ae.getHeaderFields());
   }
 
