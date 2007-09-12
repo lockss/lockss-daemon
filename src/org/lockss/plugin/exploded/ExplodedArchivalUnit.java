@@ -1,5 +1,5 @@
 /*
- * $Id: ExplodedArchivalUnit.java,v 1.1.2.2 2007-09-11 22:24:19 dshr Exp $
+ * $Id: ExplodedArchivalUnit.java,v 1.1.2.3 2007-09-12 02:55:02 dshr Exp $
  */
 
 /*
@@ -92,6 +92,7 @@ public class ExplodedArchivalUnit extends BaseArchivalUnit {
    * @return true if it is included
    */
   public boolean shouldBeCached(String url) {
+    logger.debug3(url + " vs. " + m_explodedHandlerUrl);
     return url.startsWith(m_explodedHandlerUrl);
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerExploderHelper.java,v 1.1.2.1 2007-09-11 19:14:53 dshr Exp $
+ * $Id: SpringerExploderHelper.java,v 1.1.2.2 2007-09-12 02:55:02 dshr Exp $
  */
 
 /*
@@ -81,7 +81,7 @@ public class SpringerExploderHelper implements ExploderHelper {
   static final int minimumPathLength = 5;
   static Logger logger = Logger.getLogger("SpringerExploderHelper");
 
-  SpringerExploderHelper() {
+  public SpringerExploderHelper() {
   }
 
   public void process(ArchiveEntry ae) {

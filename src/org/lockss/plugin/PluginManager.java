@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.182.4.2 2007-09-11 22:24:19 dshr Exp $
+ * $Id: PluginManager.java,v 1.182.4.3 2007-09-12 02:55:02 dshr Exp $
  */
 
 /*
@@ -1460,6 +1460,7 @@ public class PluginManager
       int auIx = 0;
       for (Iterator iter = candidateAus.iterator(); iter.hasNext(); auIx++) {
 	ArchivalUnit au = (ArchivalUnit)iter.next();
+	log.debug3("findTheCachedUrl: " + normUrl + " check " + au.toString());
 	if (au.shouldBeCached(normUrl)) {
 	  log.debug3("findTheCachedUrl: " + normUrl + " should be in "
 		     + au.getAuId());

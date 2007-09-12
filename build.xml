@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.222 2007-08-07 00:55:40 tlipkis Exp $
+ $Id: build.xml,v 1.222.4.1 2007-09-12 02:55:01 dshr Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -714,6 +714,7 @@ The target you have selected requires compiling under JDK 1.6.  Use the rant -1.
           <include name="**/*.keystore"/> <!-- test keystores -->
 	  <include name="**/*.jar"/> <!-- test jar files -->
 	  <include name="**/IAH*.arc.gz"/> <!-- test ARC files -->
+	  <include name="**/SpringerSample.zip"/> <!-- test ZIP file -->
        </fileset>
      </copy>
    </target>

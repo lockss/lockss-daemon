@@ -1,5 +1,5 @@
 /*
- * $Id: FuncZipExploder.java,v 1.1.2.3 2007-09-11 23:47:11 dshr Exp $
+ * $Id: FuncZipExploder.java,v 1.1.2.4 2007-09-12 02:55:02 dshr Exp $
  */
 
 /*
@@ -243,10 +243,12 @@ public class FuncZipExploder extends LockssTestCase {
     "http://www.content.org/branch1/index.html",
   };
 
+
   private void checkExplodedUrls() {
     log.debug2("Checking Exploded URLs.");
     for (int i = 0; i < url.length; i++) {
       CachedUrl cu = theDaemon.getPluginManager().findCachedUrl(url[i]);
+      assertTrue(url[i] + " not in any AU", cu != null);
       log.debug2("Check: " + url[i] + " cu " + cu + " au " + cu.getArchivalUnit().getAuId());
       assertTrue(cu + " has no content", cu.hasContent());
       assertTrue(cu + " isn't ExplodedArchivalUnit",
@@ -265,6 +267,7 @@ public class FuncZipExploder extends LockssTestCase {
     log.debug2("Checking UnExploded URLs.");
     for (int i = 0; i < url2.length; i++) {
       CachedUrl cu = theDaemon.getPluginManager().findCachedUrl(url2[i]);
+      assertTrue(url2[i] + " not in any AU", cu != null);
       log.debug2("Check: " + url2[i] + " cu " + cu + " au " + cu.getArchivalUnit().getAuId());
       assertTrue(cu + " has no content", cu.hasContent());
       assertTrue(cu + " isn't MySimulatedArchivalUnit",
@@ -337,7 +340,6 @@ public class FuncZipExploder extends LockssTestCase {
       return CrawlRule.EXCLUDE;
     }
   }
-
   public static class MyExploderHelper implements ExploderHelper {
     public MyExploderHelper() {
     }
