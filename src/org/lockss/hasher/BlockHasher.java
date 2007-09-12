@@ -1,5 +1,5 @@
 /*
- * $Id: BlockHasher.java,v 1.9 2007-05-09 10:34:16 smorabito Exp $
+ * $Id: BlockHasher.java,v 1.10 2007-09-12 18:32:20 tlipkis Exp $
  */
 
 /*
@@ -52,25 +52,21 @@ public class BlockHasher extends GenericHasher {
   
   protected static Logger log = Logger.getLogger("BlockHasher");
 
-  private HashBlock hblock;
-  byte[][] initByteArrays;
-  // 2D array of content buffers, one array per version.
-  private byte[][] contentBytes = null;
-  // The initial digests passed in at construction time.
-  MessageDigest[] initialDigests;
-  // 2D Array of message digests, one array per version 
-  MessageDigest[][] perVersionDigests;
-  // Event handler to be called at the end of every block.
-  EventHandler cb;
-  // Array of input streams, one per version.
-  private InputStream[] is = null;
-  // Total bytes hashed per version of this node.  Used for filtered
-  // content length
-  private long[] versionBytesHashed;
   private int maxVersions = DEFAULT_HASH_MAX_VERSIONS;
-  // A counter of versions that have not yet finished hashing.  Used in the
-  // per-version loop in hashNodeUpToNumBytes
-  private int remainingVersions;
+
+  MessageDigest[] initialDigests;
+  byte[][] initByteArrays;
+  EventHandler cb;
+
+  private HashBlock hblock;
+  private byte[] contentBytes = null;
+
+  CachedUrl[] cuVersions;
+  CachedUrl curVer;
+  int vix = -1;
+  private long verBytesRead;
+  InputStream is = null;
+  MessageDigest[] peerDigests;
 
   public BlockHasher(CachedUrlSet cus, MessageDigest[] digests,
 		     byte[][]initByteArrays, EventHandler cb) {
@@ -97,9 +93,11 @@ public class BlockHasher extends GenericHasher {
     }
     
     this.initialDigests = digests;
+    this.peerDigests = new MessageDigest[digests.length];
     this.initByteArrays = initByteArrays;
     this.cb = cb;
     setConfig();
+    initDigests();
   }
   
   /** Constuctor that allows specifying number of CU versions to hash */
@@ -140,164 +138,44 @@ public class BlockHasher extends GenericHasher {
   }
 
   public MessageDigest[] getDigests() {
-    return initialDigests;
+    throw
+      new UnsupportedOperationException("getDigests() has no meaning for V3");
   }
   
-  /**
-   * Return all the digests used by this hasher.
-   * 
-   * @return Array of message digest arrays, one per version of the content.
-   */
-  public MessageDigest[][] getAllDigests() {
-    return perVersionDigests;
-  }
-
   public int getMaxVersions() {
     return maxVersions;
   }
   
-  protected int hashNodeUpToNumBytes(int numBytes)
-      throws IOException {
+  // return false iff no more versions
+  protected boolean startVersion() {
+    if (++vix >= cuVersions.length) {
+      return false;
+    }
+    curVer = cuVersions[vix];
+    verBytesRead = 0;
+    cloneDigests();
+    try {
+      is = getInputStream(curVer);
+      return true;
+    } catch (OutOfMemoryError e) {
+      // Log and rethrow OutOfMemoryError so can see what file caused it.
+      // No stack trace, as it's uninformative and reduces chance message
+      // will actually be logged.
+      log.error("OutOfMemoryError opening CU for hashing: " + curVer);
+      throw e;
+    } catch (RuntimeException e) {
+      log.error("Error opening CU for hashing: " + curVer, e);
+      endVersion(e);
+      return true;
+    }
+  }
+
+  protected void startNode() {
     getCurrentCu();
-    int bytesHashed = 0;
-    if (isTrace) log.debug3("hashing content");
-    if (is == null) { // end of block
-      if (!curCu.hasContent()) {
-        // shouldn't happen
-        log.warning("No content: " + curCu);
-        endOfNode();
-        return 0;
-      }
-      startNode(curCu.getCuVersions(getMaxVersions()));
-    }
-    CachedUrl[] cuVersions = curCu.getCuVersions(getMaxVersions());
-    contentBytes = new byte[cuVersions.length][];
-
-    outer:
-    for (int ix = 0; ix < cuVersions.length; ix++) {
-      CachedUrl version = cuVersions[ix];
-      int remaining = numBytes; 
-      if (contentBytes[ix] == null || contentBytes[ix].length < (remaining)) {
-        contentBytes[ix] = new byte[numBytes + 100];
-      }
-      while (remaining > 0 && is[ix] != null) {
-        HashBlock.Version hbVersion = null;
-        try {
-          int bytesRead = is[ix].read(contentBytes[ix], 0, remaining);
-          if (isTrace) log.debug3("Read "+bytesRead+" bytes from input stream");
-          if (bytesRead >= 0) {
-            int hashed = updateDigests(ix, contentBytes[ix], bytesRead);
-            versionBytesHashed[ix] += bytesRead;
-            bytesHashed += hashed;
-            remaining -= bytesRead;
-          } else {
-            // This version has no more content to hash.
-            if (isTrace) log.debug3("done hashing content: "+version);
-            is[ix].close();
-            is[ix] = null;
-            hbVersion = endVersion(ix, version, versionBytesHashed[ix]);
-            if (--remainingVersions == 0) {
-              is = null;
-              endOfNode();
-              break outer;
-            }
-          }
-        } catch (Throwable t) {
-          log.error("Caught exception while trying to hash", t);
-          if (hbVersion == null) {
-            endVersion(ix, version, versionBytesHashed[ix], t);
-            if (--remainingVersions == 0) {
-              is = null;
-              endOfNode();
-              break outer;
-            }
-          } else {
-            hbVersion.setHashError(t);
-          }
-          continue outer;
-        }
-      }
-    }
-
-    
-    if (isTrace) log.debug3(bytesHashed+" bytes hashed in this step");
-    return bytesHashed;
-  }
-
-  public void abortHash() {
-    if (is != null) {
-      for (int ix = 0; ix < is.length; ix++) {
-	IOUtil.safeClose(is[ix]);
-	is[ix] = null;
-      }
-      is = null;
-    }
-    super.abortHash();
-  }
-
-  private int updateDigests(int index, byte[] content, int len) {
-    int nhashes = perVersionDigests[index].length;
-    for (int ix = 0; ix < nhashes; ix++) {
-      if (isTrace) log.debug3("Updating digest " + ix + ", len = " + len);
-      perVersionDigests[index][ix].update(content, 0, len);
-    }
-    log.debug3("updateDigests(" + index + ",, " + len + "): " + len * nhashes);
-    return len * nhashes;
-  }
-
-  private void initDigests(int size) {
-    for (int ix = 0; ix < initialDigests.length; ix++) {
-      byte[] initArr = initByteArrays[ix];
-      int len;
-      if (initArr != null && (len = initArr.length) != 0) {
-	initialDigests[ix].update(initArr, 0, len);
-      }
-    }
-    // Clone initialDigests into each slot of perVersionDigests.
-    perVersionDigests = new MessageDigest[size][];
-    try {
-      for (int versionIdx = 0; versionIdx < size; versionIdx++) {
-        perVersionDigests[versionIdx] = new MessageDigest[initialDigests.length];
-        for (int digestIdx = 0; digestIdx < initialDigests.length; digestIdx++) {
-          perVersionDigests[versionIdx][digestIdx] =
-            (MessageDigest)initialDigests[digestIdx].clone();
-        }
-      }
-    } catch (CloneNotSupportedException ex) {
-      // Should *never* happen.  Should be caught in the constructor.
-      log.critical("Caught CloneNotSupportedException!", ex);
-    }
-  }
-
-  private void resetDigests() {
-    for (int ix = 0; ix < initialDigests.length; ix++) {
-      initialDigests[ix].reset();
-    }
-    perVersionDigests = new MessageDigest[perVersionDigests.length][];
-    try {
-      for (int versionIdx = 0; versionIdx < perVersionDigests.length; versionIdx++) {
-        perVersionDigests[versionIdx] = new MessageDigest[initialDigests.length];
-        for (int digestIdx = 0; digestIdx < initialDigests.length; digestIdx++) {
-          perVersionDigests[versionIdx][digestIdx] =
-            (MessageDigest)initialDigests[digestIdx].clone();
-        }
-      } 
-    } catch (CloneNotSupportedException ex) {
-      // Should *never* happen.  Should be caught in the constructor.
-      log.critical("Caught CloneNotSupportedException!", ex);
-    }
-  }
-
-  protected void startNode(CachedUrl[] versions) {
+    if (isTrace) log.debug3("startNode(" + curCu + ")");
     hblock = new HashBlock(curCu);    
-    if (isTrace) log.debug3("opening "+curCu+" for hashing");
-    is = new InputStream[versions.length];
-    for (int ix = 0; ix < versions.length; ix++) {
-      is[ix] = getInputStream(versions[ix]);
-    }
-    remainingVersions = versions.length;
-    versionBytesHashed = new long[remainingVersions];
-    initDigests(versions.length);
+    vix = -1;
+    cuVersions = curCu.getCuVersions(getMaxVersions());
   }
   
   protected InputStream getInputStream(CachedUrl cu) {
@@ -309,24 +187,113 @@ public class BlockHasher extends GenericHasher {
     if (hblock != null) {
       if (cb != null) cb.blockDone(hblock);
       hblock = null;
-      resetDigests();
     }
   }
   
-  protected HashBlock.Version endVersion(int index, CachedUrl version,
-                                         long bytesHashed, 
-                                         Throwable hashError) {
+  protected int hashNodeUpToNumBytes(int numBytes) {
+    if (isTrace) log.debug3("hashing content");
+    int remaining = numBytes; 
+    int bytesHashed = 0;
+
+    if (is == null) {
+      if (curCu == null) {
+	startNode();
+      }
+      if (!startVersion()) {
+	endOfNode();
+	return 0;
+      }
+    }
+    if (contentBytes == null || contentBytes.length < remaining) {
+      contentBytes = new byte[numBytes + 100];
+    }
+    while (remaining > 0 && is != null) {
+      HashBlock.Version hbVersion = null;
+      try {
+	int bytesRead = is.read(contentBytes, 0, remaining);
+	if (isTrace) log.debug3("Read "+bytesRead+" bytes from input stream");
+	if (bytesRead >= 0) {
+	  int hashed = updateDigests(contentBytes, bytesRead);
+	  bytesHashed += hashed;
+	  verBytesRead += bytesRead;
+	  remaining -= bytesRead;
+	} else {
+	  // end of file
+	  if (isTrace) log.debug3("done hashing version ix "+ vix +
+				  ", bytesHashed: " + bytesHashed);
+	  is.close();
+	  is = null;
+	  hbVersion = endVersion(null);
+	}
+      } catch (OutOfMemoryError e) {
+	// Log and rethrow OutOfMemoryError so can see what file caused it.
+	// No stack trace, as it's uninformative and reduces chance message
+	// will actually be logged.
+	log.error("OutOfMemoryError opening CU for hashing: " + curVer);
+	throw e;
+      } catch (Exception e) {
+	log.error("Error hashing CU: " + curVer, e);
+	if (hbVersion == null) {
+	  endVersion(e);
+	} else {
+	  hbVersion.setHashError(e);
+	}
+	IOUtil.safeClose(is);
+	is = null;
+      }
+    }
+    if (is == null && vix == (cuVersions.length - 1)) {
+      endOfNode();
+    }
+    if (isTrace) log.debug3(bytesHashed+" bytes hashed in this step");
+    return bytesHashed;
+  }
+
+  public void abortHash() {
+    if (is != null) {
+      IOUtil.safeClose(is);
+      is = null;
+    }
+    super.abortHash();
+  }
+
+  private int updateDigests(byte[] content, int len) {
+    for (int ix = 0; ix < peerDigests.length; ix++) {
+      if (isTrace) log.debug3("Updating digest " + ix + ", len = " + len);
+      peerDigests[ix].update(content, 0, len);
+    }
+    return len * peerDigests.length;
+  }
+
+  private void initDigests() {
+    for (int ix = 0; ix < initialDigests.length; ix++) {
+      byte[] initArr = initByteArrays[ix];
+      int len;
+      if (initArr != null && (len = initArr.length) != 0) {
+	initialDigests[ix].update(initArr, 0, len);
+      }
+    }
+  }
+
+  private void cloneDigests() {
+    // Clone initialDigests into peerDigests.
+    try {
+      for (int ix = 0; ix < initialDigests.length; ix++) {
+	peerDigests[ix] = (MessageDigest)initialDigests[ix].clone();
+      }
+    } catch (CloneNotSupportedException ex) {
+      // Should *never* happen.  Should be caught in the constructor.
+      log.critical("Caught CloneNotSupportedException!", ex);
+    }
+  }
+
+  protected HashBlock.Version endVersion(Throwable hashError) {
     if (hblock != null) {
-      hblock.addVersion(0, version.getContentSize(), 0, bytesHashed,
-                        perVersionDigests[index], version.getVersion(),
-                        hashError);
+      hblock.addVersion(0, curVer.getContentSize(), 0, verBytesRead,
+                        peerDigests, curVer.getVersion(), hashError);
       return hblock.lastVersion();
     }
     return null;
-  }
-
-  protected HashBlock.Version endVersion(int index, CachedUrl version, long bytesHashed) {
-    return endVersion(index, version, bytesHashed, null);
   }
 
   public interface EventHandler {
@@ -337,5 +304,4 @@ public class BlockHasher extends GenericHasher {
      */
     void blockDone(HashBlock hblock);
   }
-
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockHasher.java,v 1.8 2007-05-09 10:34:12 smorabito Exp $
+ * $Id: TestBlockHasher.java,v 1.9 2007-09-12 18:32:20 tlipkis Exp $
  */
 
 /*
@@ -93,9 +93,9 @@ public class TestBlockHasher extends LockssTestCase {
     cu.setContent(content);
   }
   
-  void addVersion(MockArchivalUnit mau, String url, String content) {
+  CachedUrl addVersion(MockArchivalUnit mau, String url, String content) {
     MockCachedUrl cu = (MockCachedUrl)mau.makeCachedUrl(url);
-    cu.addVersion(content);
+    return cu.addVersion(content);
   }
 
   private long hashToEnd(CachedUrlSetHasher hasher, int stepSize)
@@ -141,7 +141,7 @@ public class TestBlockHasher extends LockssTestCase {
     assertEquals(expectedLength, curver.getUnfilteredLength());
     assertEquals(expectedLength, curver.getFilteredLength());
     for (int ix = 0; ix < event.byteArrays.length; ix++) {
-      assertEquals(expectedHashed[ix], event.byteArrays[ix]);
+      assertEquals(""+ix, expectedHashed[ix], event.byteArrays[ix]);
     }
     for (HashBlock.Version v : hblock.getVersions()) {
       assertNull("Hash error should have been null", v.getHashError());
@@ -254,7 +254,6 @@ public class TestBlockHasher extends LockssTestCase {
     assertEquals("B(2)", hasher.typeString());
     hasher.storeActualHashDuration(12345, null);
     assertEquals(12345, cus.getActualHashDuration());
-    assertEquals(digs, hasher.getDigests());
   }
 
   public void testNoContent() throws Exception {
@@ -437,16 +436,19 @@ public class TestBlockHasher extends LockssTestCase {
     addContent(mau, urls[9], s5);
     MessageDigest[] digs = { dig };
     byte[][] inits = {null};
-    CachedUrlSetHasher hasher = new MyMockBlockHasher(cus, digs, inits, handRec);
+    MyMockBlockHasher hasher =
+      new MyMockBlockHasher(cus, digs, inits, handRec);
+    hasher.throwOnOpen(urls[6]);
+
     hashToEnd(hasher, stepSize);
     assertTrue(hasher.finished());
     List events = handRec.getEvents();
     assertEquals(5, events.size());
-    assertEventWithError(urls[4], events.get(0));
+    assertEvent(urls[4], s1, events.get(0));
     assertEventWithError(urls[6], events.get(1));
-    assertEventWithError(urls[7], events.get(2));
-    assertEventWithError(urls[8], events.get(3));
-    assertEventWithError(urls[9], events.get(4));
+    assertEvent(urls[7], s3, events.get(2));
+    assertEvent(urls[8], s4, events.get(3));
+    assertEvent(urls[9], s5, events.get(4));
   }
   
   public void testSeveralContent() throws Exception {
@@ -498,7 +500,8 @@ public class TestBlockHasher extends LockssTestCase {
     
     MessageDigest[] digs = { dig };
     byte[][] inits = {null};
-    CachedUrlSetHasher hasher = new BlockHasher(cus, digs, inits, handler);
+    BlockHasher hasher = new BlockHasher(cus, digs, inits, handler);
+
     int len = url4v1.length() + url5v1.length() + url5v2.length() + 
               url5v3.length() + url5v3.length() + url6v1.length() +
               url6v2.length() + url7v1.length() + url7v2.length() +
@@ -533,7 +536,8 @@ public class TestBlockHasher extends LockssTestCase {
     assertEqualBytes(bytes(url7v1), block3.getVersions()[2].getHashes());
   }
   
-  public void testSeveralContentSeveralVersionsWithThrowing(int stepSize) throws Exception {
+  public void testSeveralContentSeveralVersionsWithThrowing(int stepSize)
+      throws Exception {
     CaptureBlocksEventHandler handler = new CaptureBlocksEventHandler();
     
     MockArchivalUnit mau = setupContentTree();
@@ -557,7 +561,7 @@ public class TestBlockHasher extends LockssTestCase {
     addVersion(mau, urls[4], url4v1);
 
     addVersion(mau, urls[5], url5v1);
-    addVersion(mau, urls[5], url5v2);
+    CachedUrl errcu1 = addVersion(mau, urls[5], url5v2);
     addVersion(mau, urls[5], url5v3);
     addVersion(mau, urls[5], url5v4);
 
@@ -565,13 +569,17 @@ public class TestBlockHasher extends LockssTestCase {
     addVersion(mau, urls[6], url6v2);
 
     addVersion(mau, urls[7], url7v1);
-    addVersion(mau, urls[7], url7v2);
+    CachedUrl errcu2 = addVersion(mau, urls[7], url7v2);
     addVersion(mau, urls[7], url7v3);
     
     MessageDigest[] digs = { dig };
     byte[][] inits = {null};
-    BlockHasher hasher = new MyMockBlockHasher(cus, digs, inits, handler);
+    MyMockBlockHasher hasher =
+      new MyMockBlockHasher(cus, digs, inits, handler);
     
+    hasher.throwOnRead(errcu1);
+    hasher.throwOnOpen(errcu2);
+
     hashToEnd(hasher, stepSize);
     assertTrue(hasher.finished());
     
@@ -582,25 +590,35 @@ public class TestBlockHasher extends LockssTestCase {
     HashBlock block0 = (HashBlock)blocks.get(0);
     assertEquals(1, block0.size());
     for (HashBlock.Version v : block0.getVersions()) {
-      assertNotNull(v.getHashError());
+      assertNull(v.getHashError());
     }
 
     HashBlock block1 = (HashBlock)blocks.get(1);
     assertEquals(4, block1.size());
+    int ix = 0;
     for (HashBlock.Version v : block1.getVersions()) {
-      assertNotNull(v.getHashError());
+      if (++ix == 3) {
+	assertNotNull(v.getHashError());
+      } else {
+	assertNull(v.getHashError());
+      }
     }
   
     HashBlock block2 = (HashBlock)blocks.get(2);
     assertEquals(2, block2.size());
     for (HashBlock.Version v : block2.getVersions()) {
-      assertNotNull(v.getHashError());
+      assertNull(v.getHashError());
     }
 
     HashBlock block3 = (HashBlock)blocks.get(3);
     assertEquals(3, block3.size());
+    ix = 0;
     for (HashBlock.Version v : block3.getVersions()) {
-      assertNotNull(v.getHashError());
+      if (++ix == 2) {
+	assertNotNull(v.getHashError());
+      } else {
+	assertNull(v.getHashError());
+      }
     }
   }
 
@@ -642,8 +660,11 @@ public class TestBlockHasher extends LockssTestCase {
 		events.get(2));
   }
 
-  public void testInitBytes() throws Exception {
+  public void testInitBytes1() throws Exception {
     testInitBytes(1);
+  }
+
+  public void testInitBytes1000() throws Exception {
     testInitBytes(1000);
   }
 
@@ -748,6 +769,9 @@ public class TestBlockHasher extends LockssTestCase {
   }
   
   class MyMockBlockHasher extends BlockHasher {
+    Map throwOnOpen = new HashMap();
+    Map throwOnRead = new HashMap();
+
     public MyMockBlockHasher(CachedUrlSet cus, MessageDigest[] digests,
                      byte[][]initByteArrays, EventHandler cb) {
       super(cus, digests, initByteArrays, cb);
@@ -760,50 +784,71 @@ public class TestBlockHasher extends LockssTestCase {
       super(cus, maxVersions, digests, initByteArrays, cb);
     }
     
+    public void throwOnOpen(CachedUrl cu) {
+      throwOnOpen.put(cu.getUrl(), cu.getVersion());
+    }
+
+    public void throwOnOpen(String url) {
+      throwOnOpen.put(url, -1);
+    }
+
+    public void throwOnRead(CachedUrl cu) {
+      throwOnRead.put(cu.getUrl(), cu.getVersion());
+    }
+
+    public void throwOnRead(String url) {
+      throwOnRead.put(url, -1);
+    }
+
     protected InputStream getInputStream(CachedUrl cu) {
-      return new ThrowingInputStream(true, false);
+      Integer over = (Integer)throwOnOpen.get(cu.getUrl());
+      if (over != null && (over == -1 || over == cu.getVersion())) {
+	throw new ExpectedRuntimeException("Opening hash input stream");
+      }
+      Integer rver = (Integer)throwOnRead.get(cu.getUrl());
+      return new ThrowingInputStream(cu.openForHashing(),
+				     (rver != null &&
+				      (rver == -1 || rver == cu.getVersion())),
+				     false);
     }
   }
   
-  // A throwing input stream.  Read will return up to 
-  class ThrowingInputStream extends InputStream {
-    private char[] data = "abcdefghijklmnopqrstuvwxyz".toCharArray();
-    private int charAt = 0;
-    private int readCount = 0;
-
-    public boolean doRuntimeException = false;
+  // An input stream that can throw an exception on demand.
+  class ThrowingInputStream extends FilterInputStream {
     public boolean doIOException = false;
+    public boolean doRuntimeException = false;
  
-    public int readMax = 100;
-    public int readBeforeIOException = 0;
-
-    public ThrowingInputStream() {
-      this(false, false);
-    }
-
-    public ThrowingInputStream(boolean doRuntimeException, boolean doIOException) {
+    public ThrowingInputStream(InputStream in,
+			       boolean doIOException,
+			       boolean doRuntimeException) {
+      super(in);
       this.doRuntimeException = doRuntimeException;
       this.doIOException = doIOException;
     }
 
     public int read() throws IOException {
-      int result = -1;
-      if (doRuntimeException) {
-        throw new RuntimeException("ThrowingInputStream: Runtime Exception");
-      } else if (doIOException) {
-        throw new IOException("ThrowingInputStream: IO Exception");
+      if (doIOException) {
+        throw new IOException("Reading from hash input stream");
       } else {
-        if (charAt == data.length) {
-          charAt = 0;
-        }
-        readCount++;
-        if (readBeforeIOException > 0 && readCount > readBeforeIOException) {
-          throw new IOException("ThrowingInputStream: IO Exception");
-        }
-        if (readCount++ == readMax)
-          return -1;
-        else
-          return data[charAt++];
+	return in.read();
+      }
+    }
+
+    public int read(byte[] b, int off, int len) throws IOException {
+      int ret = in.read(b, off, len);
+      if (doIOException) {
+        throw new IOException("Reading from hash input stream");
+      } else {
+	return ret;
+      }
+    }
+
+    public int read(byte[] b) throws IOException {
+      int ret = in.read(b);
+      if (doIOException) {
+        throw new IOException("Reading from hash input stream");
+      } else {
+	return ret;
       }
     }
   }
