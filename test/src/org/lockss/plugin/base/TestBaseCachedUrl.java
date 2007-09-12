@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCachedUrl.java,v 1.19 2007-07-31 06:31:28 tlipkis Exp $
+ * $Id: TestBaseCachedUrl.java,v 1.20 2007-09-12 18:32:51 tlipkis Exp $
  */
 
 /*
@@ -485,6 +485,10 @@ public class TestBaseCachedUrl extends LockssTestCase {
       CachedUrl curcu = mau.makeCachedUrl(url1);
       assertEquals(2, cu.getVersion());
       assertEquals(2, curcu.getVersion());
+      assertEquals("[BCU: http://www.example.com/testDir/leaf1]",
+		   curcu.toString());
+      assertEquals("[BCU: http://www.example.com/testDir/leaf1]",
+		   cu.toString());
     }
   }
 
@@ -517,6 +521,10 @@ public class TestBaseCachedUrl extends LockssTestCase {
       CachedUrl curcu = mau.makeCachedUrl(url1);
       assertEquals(2, cu.getVersion());
       assertEquals(3, curcu.getVersion());
+      assertEquals("[BCU: http://www.example.com/testDir/leaf1]",
+		   curcu.toString());
+      assertEquals("[BCU: v=2 http://www.example.com/testDir/leaf1]",
+		   cu.toString());
     }
 
     public void testGetCuVersion() throws Exception {

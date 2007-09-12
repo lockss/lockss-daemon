@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrl.java,v 1.28 2007-02-06 00:55:13 tlipkis Exp $
+ * $Id: BaseCachedUrl.java,v 1.29 2007-09-12 18:32:51 tlipkis Exp $
  */
 
 /*
@@ -80,13 +80,12 @@ public class BaseCachedUrl implements CachedUrl {
   }
 
   /**
-   * Overrides normal <code>toString()</code> to return a string like "BCU: <url>"
+   * return a string "[BCU: <url>]"
    * @return the string form
    */
   public String toString() {
     return "[BCU: "+url+"]";
   }
-
 
   /**
    * Return the ArchivalUnit to which this CachedUrl belongs.
@@ -234,6 +233,7 @@ public class BaseCachedUrl implements CachedUrl {
 
   protected InputStream getFilteredStream() {
     String contentType = getContentType();
+    InputStream is = null;
     // first look for a FilterFactory
     FilterFactory fact = au.getFilterFactory(contentType);
     if (fact != null) {
@@ -241,11 +241,11 @@ public class BaseCachedUrl implements CachedUrl {
 	logger.debug3("Filtering " + contentType +
 		      " with " + fact.getClass().getName());
       }
+      InputStream unfis = getUnfilteredInputStream();
       try {
-	return fact.createFilteredInputStream(au,
-					      getUnfilteredInputStream(),
-					      getEncoding());
+	return fact.createFilteredInputStream(au, unfis, getEncoding());
       } catch (PluginException e) {
+	IOUtil.safeClose(unfis);
 	throw new RuntimeException(e);
       }
     }
@@ -256,10 +256,12 @@ public class BaseCachedUrl implements CachedUrl {
 	logger.debug3("Filtering " + contentType +
 		      " with " + fr.getClass().getName());
       }
+      Reader unfrdr = openForReading();
       try {
-	Reader rd = fr.createFilteredReader(openForReading());
+	Reader rd = fr.createFilteredReader(unfrdr);
 	return new ReaderInputStream(rd);
       } catch (PluginException e) {
+	IOUtil.safeClose(unfrdr);
         throw new RuntimeException(e);
       }
     }
@@ -285,6 +287,13 @@ public class BaseCachedUrl implements CachedUrl {
       return getNodeVersion().hasContent();
     }
 
+    /**
+     * return a string "[BCU: v=n <url>]"
+     * @return the string form
+     */
+    public String toString() {
+      return "[BCU: v=" + getVersion() + " " + url+"]";
+    }
   }
 
 }
