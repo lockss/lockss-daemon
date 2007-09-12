@@ -1,5 +1,5 @@
 /*
- * $Id: ZipExploder.java,v 1.1.2.3 2007-09-11 23:47:11 dshr Exp $
+ * $Id: ZipExploder.java,v 1.1.2.4 2007-09-12 18:45:48 dshr Exp $
  */
 
 /*
@@ -57,6 +57,8 @@ public class ZipExploder extends Exploder {
   protected ExploderHelper helper = null;
   private CrawlSpec crawlSpec = null;
   private BaseCrawler crawler;
+  private Hashtable addTextTo = null;
+  private PluginManager pluginMgr = null;
 
   /**
    * Constructor
@@ -77,6 +79,7 @@ public class ZipExploder extends Exploder {
     }
     this.crawlSpec = crawlSpec;
     this.crawler = crawler;
+    pluginMgr = crawler.getDaemon().getPluginManager();
   }
 
   /**
@@ -106,17 +109,18 @@ public class ZipExploder extends Exploder {
 	  crawler.wdog.pokeWDog();
 	}
 	if (!ze.isDirectory()) {
-	  ArchiveEntry component = new ArchiveEntry(ze.getName(),
+	  ArchiveEntry ae = new ArchiveEntry(ze.getName(),
 						    ze.getSize(),
 						    ze.getTime(),
 						    zis, crawlSpec);
-	  logger.debug3("ArchiveEntry: " + component.getName()
-			+ " bytes "  + component.getSize());
-	  helper.process(component);
-	  if (component.getBaseUrl() != null &&
-	      component.getRestOfUrl() != null &&
-	      component.getHeaderFields() != null) {
-	    storeEntry(component);
+	  logger.debug3("ArchiveEntry: " + ae.getName()
+			+ " bytes "  + ae.getSize());
+	  helper.process(ae);
+	  if (ae.getBaseUrl() != null &&
+	      ae.getRestOfUrl() != null &&
+	      ae.getHeaderFields() != null) {
+	    storeEntry(ae);
+	    handleAddText(ae);
 	  } else {
 	    logger.debug("Can't map " + ze.getName());
 	  }
@@ -124,6 +128,7 @@ public class ZipExploder extends Exploder {
 	  logger.debug("Directory " + ze.getName() + " in " + zipUrl);
 	}
       }
+      addText();
     } catch (IOException ex) {
       logger.siteError("ZipExploder.explodeUrl() threw", ex);
     } finally {
@@ -140,13 +145,13 @@ public class ZipExploder extends Exploder {
     // AUs which each contain only URLs starting with the AUs
     // base_url.  This allows ExplodedArchivalUnit to maintain
     // a map from a baseUrl to one of its AUs.
-    PluginManager pluginMgr = crawler.getDaemon().getPluginManager();
     ArchivalUnit au = null;
     String baseUrl = ae.getBaseUrl();
-    CachedUrl cu = pluginMgr.findCachedUrl(baseUrl + ae.getRestOfUrl(), false);
+    String restOfUrl = ae.getRestOfUrl();
+    CachedUrl cu = pluginMgr.findCachedUrl(baseUrl + restOfUrl, false);
     if (cu != null) {
       au = cu.getArchivalUnit();
-      logger.debug(baseUrl + ae.getRestOfUrl() + " old au " + au.getAuId());
+      logger.debug(baseUrl + restOfUrl + " old au " + au.getAuId());
     }
     if (au == null) {
       // There's no AU for this baseUrl,  so create one
@@ -169,7 +174,7 @@ public class ZipExploder extends Exploder {
 			      ae.getBaseUrl());
       }
     }
-    String newUrl = baseUrl + ae.getRestOfUrl();
+    String newUrl = baseUrl + restOfUrl;
     // Create a new UrlCacher from the ArchivalUnit and store the
     // element using it.
     UrlCacher newUc = au.makeUrlCacher(newUrl);
@@ -180,6 +185,54 @@ public class ZipExploder extends Exploder {
     // XXX for the URL - check and move the place to storeContent
     logger.debug3("Storing " + newUrl + " in " + au.toString());
     newUc.storeContent(ae.getInputStream(), ae.getHeaderFields());
+  }
+
+  private void handleAddText(ArchiveEntry ae) {
+    Hashtable addText = ae.getAddText();
+    String addBaseUrl = ae.getBaseUrl();
+    if (addText != null) {
+      if (addTextTo == null) {
+	addTextTo = new Hashtable();
+      }
+      for (Enumeration en = addText.keys(); en.hasMoreElements(); ) {
+	String restOfUrl = (String)en.nextElement();
+	String newText = "";
+	if (addTextTo.containsKey(addBaseUrl + restOfUrl)) {
+	  newText = (String)addTextTo.get(addBaseUrl + restOfUrl);
+	}
+	newText += (String)addText.get(restOfUrl);
+	addTextTo.put(addBaseUrl + restOfUrl, newText);
+	logger.debug3("addText for " + addBaseUrl + restOfUrl +
+		      " now " + newText);
+      }
+    }
+  }
+
+  private void addText() {
+    for (Enumeration en = addTextTo.keys(); en.hasMoreElements(); ) {
+      String url = (String) en.nextElement();
+      String text = (String) addTextTo.get(url);
+
+      CachedUrl cu = pluginMgr.findCachedUrl(url, false);
+      if (cu == null) {
+	logger.error("Trying to update page outside AU" +
+		     url);
+      } else {
+	addTextToPage(cu, url, text);
+      }
+    }
+  }
+
+  private void addTextToPage(CachedUrl cu, String url, String text) {
+    ArchivalUnit au = cu.getArchivalUnit();
+    if (!cu.hasContent()) {
+      // Create a new page
+      logger.debug3("Create new page " + url + " in " + au.getAuId());
+      // XXX
+    }
+    logger.debug3("Adding text " + text + " to page " + url +
+		  " in " + au.getAuId());
+    // XXX add the text to the page
   }
 
   protected class DefaultExploderHelper implements ExploderHelper {

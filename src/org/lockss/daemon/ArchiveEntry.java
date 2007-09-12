@@ -1,5 +1,5 @@
 /*
- * $Id: ArchiveEntry.java,v 1.1.2.1 2007-09-11 19:14:56 dshr Exp $
+ * $Id: ArchiveEntry.java,v 1.1.2.2 2007-09-12 18:45:48 dshr Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.daemon;
 
 import java.io.*;
+import java.util.*;
 import org.lockss.util.CIProperties;
 import org.lockss.daemon.CrawlSpec;
 
@@ -46,14 +47,17 @@ import org.lockss.daemon.CrawlSpec;
  */
 
 public class ArchiveEntry {
+  // Input fields
   private String name;
   private long bytes;
   private long date;
   private InputStream is;
+  private CrawlSpec crawlSpec;
+  // Output fields
   private String baseUrl;
   private String restOfUrl;
   private CIProperties header;
-  private CrawlSpec crawlSpec;
+  private Hashtable addText;
 
   public ArchiveEntry(String name, long bytes, long date, InputStream is,
 		      CrawlSpec crawlSpec) {
@@ -65,7 +69,10 @@ public class ArchiveEntry {
     baseUrl = null;
     restOfUrl = null;
     header = null;
+    addText = null;
   }
+
+  // Input field accessors
 
   public String getName() {
     return name;
@@ -86,6 +93,8 @@ public class ArchiveEntry {
   public CrawlSpec getCrawlSpec() {
     return crawlSpec;
   }
+
+  // Output field accessors
 
   public String getBaseUrl() {
     return baseUrl;
@@ -109,5 +118,27 @@ public class ArchiveEntry {
 
   public void setHeaderFields(CIProperties cip) {
     header = cip;
+  }
+
+  public Hashtable getAddText() {
+    return addText;
+  }
+
+  /**
+   * After explosion, the collected set of (text,where) pairs
+   * will be processed to add <code>text</code> to the file
+   * in the AU specified by <code>restOfUrl</code>.  The file
+   * will be created if needed.  The file is expected to contain
+   * HTML - it will have head and tail HTML auto-generated. The
+   * goal is to auto-generate manifest pages linking to the
+   * exploded content.
+   * @param text to be added
+   * @param restOfUrl where to add it.
+   */
+  public void addTextTo(String text, String restOfUrl) {
+    if (addText == null) {
+      addText = new Hashtable();
+    }
+    addText.put(restOfUrl, text);
   }
 }
