@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.61 2007-08-12 04:53:29 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.62 2007-09-12 18:33:10 tlipkis Exp $
  */
 
 /*
@@ -463,9 +463,7 @@ public class RemoteApi
       new CloseCallbackInputStream(fileStream,
 				   new CloseCallbackInputStream.Callback() {
 				     public void streamClosed(Object file) {
-				       try {
-					 ((File)file).delete();
-				       } catch (Exception e) {}
+				       ((File)file).delete();
 				     }},
 				   file);
   }
