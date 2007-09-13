@@ -1,5 +1,5 @@
 /*
- * $Id: ZipExploder.java,v 1.1.2.4 2007-09-12 18:45:48 dshr Exp $
+ * $Id: ZipExploder.java,v 1.1.2.5 2007-09-13 21:43:22 dshr Exp $
  */
 
 /*
@@ -209,16 +209,18 @@ public class ZipExploder extends Exploder {
   }
 
   private void addText() {
-    for (Enumeration en = addTextTo.keys(); en.hasMoreElements(); ) {
-      String url = (String) en.nextElement();
-      String text = (String) addTextTo.get(url);
+    if (addTextTo != null) {
+      for (Enumeration en = addTextTo.keys(); en.hasMoreElements(); ) {
+	String url = (String) en.nextElement();
+	String text = (String) addTextTo.get(url);
 
-      CachedUrl cu = pluginMgr.findCachedUrl(url, false);
-      if (cu == null) {
-	logger.error("Trying to update page outside AU" +
-		     url);
-      } else {
-	addTextToPage(cu, url, text);
+	CachedUrl cu = pluginMgr.findCachedUrl(url, false);
+	if (cu == null) {
+	  logger.error("Trying to update page outside AU" +
+		       url);
+	} else {
+	  addTextToPage(cu, url, text);
+	}
       }
     }
   }

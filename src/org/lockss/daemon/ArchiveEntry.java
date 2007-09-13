@@ -1,5 +1,5 @@
 /*
- * $Id: ArchiveEntry.java,v 1.1.2.2 2007-09-12 18:45:48 dshr Exp $
+ * $Id: ArchiveEntry.java,v 1.1.2.3 2007-09-13 21:43:22 dshr Exp $
  */
 
 /*
@@ -126,16 +126,17 @@ public class ArchiveEntry {
 
   /**
    * After explosion, the collected set of (text,where) pairs
-   * will be processed to add <code>text</code> to the file
-   * in the AU specified by <code>restOfUrl</code>.  The file
-   * will be created if needed.  The file is expected to contain
-   * HTML - it will have head and tail HTML auto-generated. The
-   * goal is to auto-generate manifest pages linking to the
-   * exploded content.
-   * @param text to be added
+   * will be processed to ensure that <code>text</code> appears
+   * once in the filein the AU specified by <code>url</code>.
+   * The file will be created if needed.  The file is expected
+   * to contain HTML - it will have head and tail HTML
+   * auto-generated with <ul></ul> where the links should go.
+   * The goal is to auto-generate manifest pages linking
+   * to the exploded content.
    * @param restOfUrl where to add it.
+   * @param text to be added
    */
-  public void addTextTo(String text, String restOfUrl) {
+  public void addTextTo(String restOfUrl, String text) {
     if (addText == null) {
       addText = new Hashtable();
     }

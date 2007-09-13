@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerExploderHelper.java,v 1.1.2.2 2007-09-12 02:55:02 dshr Exp $
+ * $Id: SpringerExploderHelper.java,v 1.1.2.3 2007-09-13 21:43:22 dshr Exp $
  */
 
 /*
@@ -130,5 +130,27 @@ public class SpringerExploderHelper implements ExploderHelper {
     ae.setBaseUrl(baseUrl);
     ae.setRestOfUrl(restOfUrl);
     ae.setHeaderFields(headerFields);
+    if (fileName.endsWith(".pdf")) {
+      // Now add a link for the URL to the volume TOC page at
+      // PUB=foo/JOU=bar/VOL=bletch/index.html
+      Hashtable addText = new Hashtable();
+      String volTOC = pathElements[0] + "/" +
+	pathElements[1] + "/" +
+	pathElements[2] + "/index.html";
+      String link = "<li><a href=\"" + baseUrl + restOfUrl + "\">" +
+	pathElements[4].substring(4) + "</a></li>\n";
+      logger.debug3("volTOC = " + volTOC + " link " + link);
+      ae.addTextTo(volTOC, link);
+      // Now add a link to the volume TOC page to the journal TOC at
+      // PUB=foo/JOU=bar/index.html
+      String journalTOC = "index.html";
+      link = "<li><a href=\"" + volTOC + "\">" +
+	pathElements[2].substring(4) + "</a></li>\n";
+      logger.debug3("journalTOC = " + journalTOC + " link " + link);
+      ae.addTextTo(journalTOC, link);
+    } else if (fileName.endsWith(".xml")) {
+      // XXX it would be great to be able to get the DOI from the
+      // XXX metadata files and put it in the text here
+    }      
   }
 }

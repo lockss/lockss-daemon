@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.59.4.1 2007-09-11 19:14:58 dshr Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.59.4.2 2007-09-13 21:43:22 dshr Exp $
  */
 
 /*
@@ -57,17 +57,17 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 
   public static final String PREFIX_NUMERIC = "numeric_";
   public static final int DEFAULT_AU_CRAWL_DEPTH = 1;
-  public static final String DEFAULT_AU_ARC_PATTERN = null;
+  public static final String DEFAULT_AU_EXPLODER_PATTERN = null;
   public static final String KEY_AU_NAME = "au_name";
   public static final String KEY_AU_CRAWL_RULES = "au_crawlrules";
   public static final String KEY_AU_CRAWL_WINDOW = "au_crawlwindow";
   public static final String KEY_AU_CRAWL_WINDOW_SER = "au_crawlwindow_ser";
   public static final String KEY_AU_EXPECTED_BASE_PATH = "au_expected_base_path";
   public static final String KEY_AU_CRAWL_DEPTH = "au_crawl_depth";
-  public static final String KEY_AU_ARC_PATTERN = "au_arc_pattern";
   public static final String KEY_AU_MANIFEST = "au_manifest";
   //public static final String KEY_AU_URL_NORMALIZER = "au_url_normalizer";
   public static final String KEY_AU_EXPLODER_HELPER = "au_exploder_helper";
+  public static final String KEY_AU_EXPLODER_PATTERN = "au_exploder_pattern";
 
   public static final String SUFFIX_PARSER = "_parser";
   public static final String SUFFIX_LINK_EXTRACTOR_FACTORY =
@@ -267,8 +267,8 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
                               makeLoginPageChecker());
     } else { // for now use the default spider crawl spec
       int depth = definitionMap.getInt(KEY_AU_CRAWL_DEPTH, DEFAULT_AU_CRAWL_DEPTH);
-      String arcPattern = definitionMap.getString(KEY_AU_ARC_PATTERN,
-						  DEFAULT_AU_ARC_PATTERN);
+      String exploderPattern = definitionMap.getString(KEY_AU_EXPLODER_PATTERN,
+						  DEFAULT_AU_EXPLODER_PATTERN);
       ExploderHelper eh = getDefinablePlugin().getExploderHelper();
       //XXX change to a list
 //       String startUrl = paramMap.getString(AU_START_URL);
@@ -277,7 +277,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
       return new SpiderCrawlSpec(ListUtil.list(startUrlString),
 				 getPermissionPages(), rule, depth,
 				 makePermissionChecker(),
-				 makeLoginPageChecker(), arcPattern, eh);
+				 makeLoginPageChecker(), exploderPattern, eh);
     }
   }
 
