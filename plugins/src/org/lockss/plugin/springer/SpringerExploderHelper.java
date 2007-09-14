@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerExploderHelper.java,v 1.1.2.4 2007-09-14 03:27:17 dshr Exp $
+ * $Id: SpringerExploderHelper.java,v 1.1.2.5 2007-09-14 04:58:50 dshr Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.util.*;
 import org.lockss.daemon.ExploderHelper;
 import org.lockss.daemon.ArchiveEntry;
 import org.lockss.util.*;
+import org.lockss.plugin.*;
 
 /**
  * This ExploderHelper encapsulates knowledge about the way
@@ -110,15 +111,22 @@ public class SpringerExploderHelper implements ExploderHelper {
     }
     CIProperties headerFields = new CIProperties();
     String fileName = pathElements[pathElements.length-1];
+    String contentType = null;
     if (fileName.endsWith(".pdf")) {
-      headerFields.setProperty("Content-Type", "application/pdf");
-    } else if (fileName.endsWith(".xml")) {
-      headerFields.setProperty("Content-Type", "text/xml");
-    } else if (fileName.endsWith(".xml.meta")) {
-      headerFields.setProperty("Content-Type", "text/xml");
+      contentType = "application/pdf";
+    } else if (fileName.endsWith(".xml") ||
+	       fileName.endsWith(".xml.meta")) {
+      contentType = "text/xml";
+    }
+    if (contentType != null) {
+      headerFields.setProperty("Content-Type", contentType);
+      headerFields.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE,
+			       contentType);
     }
     headerFields.setProperty("Content-Length",
 			     Long.toString(ae.getSize()));
+    headerFields.setProperty(CachedUrl.PROPERTY_NODE_URL,
+			     baseUrl + restOfUrl);
     logger.debug(ae.getName() + " mapped to " +
 		 baseUrl + " plus " + restOfUrl);
     for (Enumeration e = headerFields.propertyNames();
