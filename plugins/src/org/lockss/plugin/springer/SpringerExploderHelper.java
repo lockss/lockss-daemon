@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerExploderHelper.java,v 1.1.2.5 2007-09-14 04:58:50 dshr Exp $
+ * $Id: SpringerExploderHelper.java,v 1.1.2.6 2007-09-14 22:55:43 dshr Exp $
  */
 
 /*
@@ -33,8 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.springer;
 
 import java.util.*;
-import org.lockss.daemon.ExploderHelper;
-import org.lockss.daemon.ArchiveEntry;
+import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
 
@@ -78,6 +77,11 @@ import org.lockss.plugin.*;
  */
 public class SpringerExploderHelper implements ExploderHelper {
   static final String[] tags = { "PUB=", "JOU=", "VOL=", "ISU=", "ART=" };
+  private static final int PUB_INDEX = 0;
+  private static final int JOU_INDEX = 1;
+  private static final int VOL_INDEX = 2;
+  private static final int ISU_INDEX = 3;
+  private static final int ART_INDEX = 4;
   static final int endOfBase = 1;
   static final int minimumPathLength = 5;
   static Logger logger = Logger.getLogger("SpringerExploderHelper");
@@ -159,6 +163,13 @@ public class SpringerExploderHelper implements ExploderHelper {
     } else if (fileName.endsWith(".xml")) {
       // XXX it would be great to be able to get the DOI from the
       // XXX metadata files and put it in the text here
-    }      
+    }
+    CIProperties props = new CIProperties();
+    props.put(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
+    props.put(ConfigParamDescr.PUBLISHER_NAME.getKey(),
+	      pathElements[PUB_INDEX].substring(4));
+    props.put(ConfigParamDescr.JOURNAL_ID.getKey(),
+	      pathElements[JOU_INDEX].substring(4));
+    ae.setAuProps(props);
   }
 }
