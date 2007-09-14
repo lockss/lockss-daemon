@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.111.4.1 2007-09-11 19:14:55 dshr Exp $
+ * $Id: CrawlManagerImpl.java,v 1.111.4.2 2007-09-14 03:27:18 dshr Exp $
  */
 
 /*
@@ -44,6 +44,7 @@ import org.lockss.util.*;
 import org.lockss.app.*;
 import org.lockss.state.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.exploded.*;
 
 /**
  * This is the interface for the object that will sit between the crawler
@@ -530,6 +531,11 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     if (au == null) {
       throw new IllegalArgumentException("Called with null AU");
     }
+    if (au instanceof ExplodedArchivalUnit) {
+      logger.debug("Can't crawl ExplodedArchivalUnit");
+      callCallback(cb, cookie, false, null);
+      return;
+    }
     if (!crawlerEnabled) {
       logger.warning("Crawler disabled, not crawling: " + au);
       callCallback(cb, cookie, false, null);
@@ -630,7 +636,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     if (spec instanceof OaiCrawlSpec) {
       logger.debug("Creating OaiCrawler for " + au);
       return new OaiCrawler(au, spec, AuUtil.getAuState(au));
-    } else if (spec.getExploderPattern() != null) {  // XXX goes away
+    } else if (spec.getExploderPattern().equals(".arc.gz$")) {  // XXX goes away
       logger.debug("Creating ArcCrawler for " + au);
       return new ArcCrawler(au, spec, AuUtil.getAuState(au));
     } else {

@@ -14,7 +14,7 @@ public class TestSpringerExploderHelper extends LockssTestCase {
   private static final String xmlPath = 
     "12345_2004_Article_34567.xml";
   private static final String metaPath =
-    "12345_2004_Article_34567.xml.Meta";
+    "12345_2004_Article_34567.xml.meta";
   private static final String shortPath = 
     "PUB=foo/JOU=12345/VOL=23456/ISU=5";
   private static final String badPaths[] = {
@@ -56,10 +56,10 @@ public class TestSpringerExploderHelper extends LockssTestCase {
     SpringerExploderHelper seh = new SpringerExploderHelper();
 
     seh.process(ae);
-    assertEquals(ae.getBaseUrl(), urlStem + basePath);
-    assertEquals(ae.getRestOfUrl(), pathStem + metaPath);
-    assertEquals(ae.getHeaderFields().get("Content-Type"), "text/xml");
-    assertEquals(ae.getHeaderFields().get("Content-Length"), "765432");
+    assertEquals(urlStem + basePath, ae.getBaseUrl());
+    assertEquals(pathStem + metaPath, ae.getRestOfUrl());
+    assertEquals("text/xml", ae.getHeaderFields().get("Content-Type"));
+    assertEquals("765432", ae.getHeaderFields().get("Content-Length"));
   }
 
   public void testProcessShortName() throws Exception {

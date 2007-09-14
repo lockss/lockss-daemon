@@ -1,5 +1,5 @@
 /*
- * $Id: ExplodedArchivalUnit.java,v 1.1.2.3 2007-09-12 02:55:02 dshr Exp $
+ * $Id: ExplodedArchivalUnit.java,v 1.1.2.4 2007-09-14 03:27:18 dshr Exp $
  */
 
 /*
@@ -74,7 +74,17 @@ public class ExplodedArchivalUnit extends BaseArchivalUnit {
    * @return The base URL.
    */
   protected String makeName() {
-    return "Exploded Test Repository, handler at '" + m_explodedHandlerUrl + "'";
+    String[] pathElements = m_explodedHandlerUrl.split("/");
+    // pathLements[length-2] is PUB=
+    // pathLements[length-1] is JOU=
+    int l = pathElements.length;
+    if (l > 2 &&
+	pathElements[l-2].startsWith("PUB=") &&
+	pathElements[l-1].startsWith("JOU=")) {
+      return pathElements[l-2].substring(4) + " journal # " +
+	pathElements[l-1].substring(4);
+    }
+    return m_explodedHandlerUrl;
   }
 
   /**

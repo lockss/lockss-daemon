@@ -1,5 +1,5 @@
 /*
- * $Id: ZipExploder.java,v 1.1.2.5 2007-09-13 21:43:22 dshr Exp $
+ * $Id: ZipExploder.java,v 1.1.2.6 2007-09-14 03:27:18 dshr Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import java.io.*;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.base.*;
 import org.lockss.plugin.exploded.*;
 import org.lockss.crawler.BaseCrawler;
 import org.lockss.config.Configuration;
@@ -174,17 +175,23 @@ public class ZipExploder extends Exploder {
 			      ae.getBaseUrl());
       }
     }
+    if (au == null) {
+      logger.error("Failed to create new AU", new Throwable());
+    } else if (!(au instanceof ExplodedArchivalUnit)) {
+      logger.error("New AU not ExplodedArchivalUnit " + au.toString(),
+		   new Throwable());
+    }
     String newUrl = baseUrl + restOfUrl;
     // Create a new UrlCacher from the ArchivalUnit and store the
     // element using it.
-    UrlCacher newUc = au.makeUrlCacher(newUrl);
+    BaseUrlCacher newUc = (BaseUrlCacher)au.makeUrlCacher(newUrl);
     BitSet flags = newUc.getFetchFlags();
     flags.set(UrlCacher.DONT_CLOSE_INPUT_STREAM_FLAG);
     newUc.setFetchFlags(flags);
     // XXX either fetch or storeContent synthesizes some properties
     // XXX for the URL - check and move the place to storeContent
     logger.debug3("Storing " + newUrl + " in " + au.toString());
-    newUc.storeContent(ae.getInputStream(), ae.getHeaderFields());
+    newUc.storeContentIn(newUrl, ae.getInputStream(), ae.getHeaderFields());
   }
 
   private void handleAddText(ArchiveEntry ae) {

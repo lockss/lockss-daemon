@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerExploderHelper.java,v 1.1.2.3 2007-09-13 21:43:22 dshr Exp $
+ * $Id: SpringerExploderHelper.java,v 1.1.2.4 2007-09-14 03:27:17 dshr Exp $
  */
 
 /*
@@ -114,7 +114,7 @@ public class SpringerExploderHelper implements ExploderHelper {
       headerFields.setProperty("Content-Type", "application/pdf");
     } else if (fileName.endsWith(".xml")) {
       headerFields.setProperty("Content-Type", "text/xml");
-    } else if (fileName.endsWith(".xml.Meta")) {
+    } else if (fileName.endsWith(".xml.meta")) {
       headerFields.setProperty("Content-Type", "text/xml");
     }
     headerFields.setProperty("Content-Length",
@@ -125,7 +125,7 @@ public class SpringerExploderHelper implements ExploderHelper {
 	 e.hasMoreElements(); ) {
       String key = (String)e.nextElement();
       String value = (String)headerFields.get(key);
-      logger.debug(key + "=" + value);
+      logger.debug(key + " = " + value);
     }
     ae.setBaseUrl(baseUrl);
     ae.setRestOfUrl(restOfUrl);
