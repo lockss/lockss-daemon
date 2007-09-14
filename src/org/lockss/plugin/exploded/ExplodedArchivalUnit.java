@@ -1,5 +1,5 @@
 /*
- * $Id: ExplodedArchivalUnit.java,v 1.1.2.4 2007-09-14 03:27:18 dshr Exp $
+ * $Id: ExplodedArchivalUnit.java,v 1.1.2.5 2007-09-14 22:54:27 dshr Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import org.lockss.util.*;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.base.*;
+import org.lockss.state.AuState;
 
 /**
  * <p>ExplodedArchivalUnit: The Archival Unit Class for ExplodedPlugin.
@@ -46,7 +47,8 @@ import org.lockss.plugin.base.*;
  */
 
 public class ExplodedArchivalUnit extends BaseArchivalUnit {
-  private String m_explodedHandlerUrl = null;
+  private String m_explodedBaseUrl = null;
+  private String m_auName = null;
   protected Logger logger = Logger.getLogger("ExplodedArchivalUnit");
 
   public ExplodedArchivalUnit(ExplodedPlugin plugin) {
@@ -56,7 +58,22 @@ public class ExplodedArchivalUnit extends BaseArchivalUnit {
   public void loadAuConfigDescrs(Configuration config)
       throws ConfigurationException {
     super.loadAuConfigDescrs(config);
-    this.m_explodedHandlerUrl = config.get(ConfigParamDescr.BASE_URL.getKey());
+    this.m_explodedBaseUrl = config.get(ConfigParamDescr.BASE_URL.getKey());
+    String pubName = config.get(ConfigParamDescr.PUBLISHER_NAME.getKey());
+    if (pubName != null) {
+      auName = pubName;
+      // We have some config info to work with
+      String journalId = config.get(ConfigParamDescr.JOURNAL_ID.getKey());
+      if (journalId == null) {
+	journalId = config.get(ConfigParamDescr.JOURNAL_ABBR.getKey());
+	if (journalId == null) {
+	  journalId = config.get(ConfigParamDescr.JOURNAL_DIR.getKey());
+	}
+      }
+      if (journalId != null) {
+	auName += " " + journalId;
+      }
+    }
   }
 
 
@@ -70,21 +87,11 @@ public class ExplodedArchivalUnit extends BaseArchivalUnit {
 
   /**
    * return a string that represents the plugin registry.  This is
-   * just the base URL.
+   * just the base URL unless overridden by the config.
    * @return The base URL.
    */
   protected String makeName() {
-    String[] pathElements = m_explodedHandlerUrl.split("/");
-    // pathLements[length-2] is PUB=
-    // pathLements[length-1] is JOU=
-    int l = pathElements.length;
-    if (l > 2 &&
-	pathElements[l-2].startsWith("PUB=") &&
-	pathElements[l-1].startsWith("JOU=")) {
-      return pathElements[l-2].substring(4) + " journal # " +
-	pathElements[l-1].substring(4);
-    }
-    return m_explodedHandlerUrl;
+    return (auName != null ? auName : m_explodedBaseUrl);
   }
 
   /**
@@ -93,7 +100,7 @@ public class ExplodedArchivalUnit extends BaseArchivalUnit {
    * this registry.  This is just the base URL.
    */
   protected String makeStartUrl() {
-    return m_explodedHandlerUrl;
+    return m_explodedBaseUrl;
   }
 
   /**
@@ -102,8 +109,8 @@ public class ExplodedArchivalUnit extends BaseArchivalUnit {
    * @return true if it is included
    */
   public boolean shouldBeCached(String url) {
-    logger.debug3(url + " vs. " + m_explodedHandlerUrl);
-    return url.startsWith(m_explodedHandlerUrl);
+    logger.debug3(url + " vs. " + m_explodedBaseUrl);
+    return url.startsWith(m_explodedBaseUrl);
   }
 
   protected CrawlRule makeRules() {
@@ -115,7 +122,7 @@ public class ExplodedArchivalUnit extends BaseArchivalUnit {
     }
 
     public int match(String url) {
-      if (url.startsWith(m_explodedHandlerUrl)) {
+      if (url.startsWith(m_explodedBaseUrl)) {
 	return INCLUDE;
       }
       return IGNORE;
@@ -131,6 +138,15 @@ public class ExplodedArchivalUnit extends BaseArchivalUnit {
     ArrayList startUrls = new ArrayList();
     startUrls.add(startUrlString);
     return new ExplodedCrawlSpec(startUrls);
+  }
+
+  /**
+   * ExplodedArchivalUnits should never be crawled.
+   * @param aus ignored
+   * @return false
+   */
+  public boolean shouldCrawlForNewContent(AuState aus) {
+    return false;
   }
 
   // Exploded AU crawl spec implementation

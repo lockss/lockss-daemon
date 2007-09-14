@@ -1,5 +1,5 @@
 /*
- * $Id: ArchiveEntry.java,v 1.1.2.3 2007-09-13 21:43:22 dshr Exp $
+ * $Id: ArchiveEntry.java,v 1.1.2.4 2007-09-14 22:54:27 dshr Exp $
  */
 
 /*
@@ -57,6 +57,7 @@ public class ArchiveEntry {
   private String baseUrl;
   private String restOfUrl;
   private CIProperties header;
+  private CIProperties auProps;
   private Hashtable addText;
 
   public ArchiveEntry(String name, long bytes, long date, InputStream is,
@@ -69,6 +70,7 @@ public class ArchiveEntry {
     baseUrl = null;
     restOfUrl = null;
     header = null;
+    auProps = null;
     addText = null;
   }
 
@@ -118,6 +120,14 @@ public class ArchiveEntry {
 
   public void setHeaderFields(CIProperties cip) {
     header = cip;
+  }
+
+  public CIProperties getAuProps() {
+    return auProps;
+  }
+
+  public void setAuProps(CIProperties cip) {
+    auProps = cip;
   }
 
   public Hashtable getAddText() {

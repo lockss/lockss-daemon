@@ -1,5 +1,5 @@
 /*
- * $Id: ZipExploder.java,v 1.1.2.6 2007-09-14 03:27:18 dshr Exp $
+ * $Id: ZipExploder.java,v 1.1.2.7 2007-09-14 22:54:27 dshr Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ import org.lockss.plugin.exploded.*;
 import org.lockss.crawler.BaseCrawler;
 import org.lockss.config.Configuration;
 import org.lockss.app.LockssDaemon;
+import org.lockss.state.HistoryRepository;
 
 /**
  * The Exploder for ZIP archives.
@@ -60,6 +61,7 @@ public class ZipExploder extends Exploder {
   private BaseCrawler crawler;
   private Hashtable addTextTo = null;
   private PluginManager pluginMgr = null;
+  private Hashtable touchedAus = new Hashtable();
 
   /**
    * Constructor
@@ -136,6 +138,12 @@ public class ZipExploder extends Exploder {
       if (cachedUrl != null) {
 	cachedUrl.release();
       }
+      // Make it look like a new crawl finished on each AU to which
+      // URLs were added.
+      for (Enumeration en = touchedAus.keys(); en.hasMoreElements(); ) {
+	ExplodedArchivalUnit eau = (ExplodedArchivalUnit)en.nextElement();
+	crawler.getDaemon().getNodeManager(eau).newContentCrawlFinished();
+      }
       IOUtil.safeClose(zis);
       IOUtil.safeClose(arcStream);
     }
@@ -156,8 +164,12 @@ public class ZipExploder extends Exploder {
     }
     if (au == null) {
       // There's no AU for this baseUrl,  so create one
-      CIProperties props = new CIProperties();
-      props.put("base_url", baseUrl);
+      CIProperties props = ae.getAuProps();
+      if (props == null) {
+	props = new CIProperties();
+	props.put(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
+      }
+      props.put(ConfigParamDescr.PUB_NEVER.getKey(), "true");
       String pluginName = ExplodedPlugin.class.getName();
       String key = PluginManager.pluginKeyFromName(pluginName);
       logger.debug3(pluginName + " has key: " + key);
@@ -167,20 +179,28 @@ public class ZipExploder extends Exploder {
 	throw new IOException(pluginName + " not found");
       }
       logger.debug3(pluginName + ": " + plugin.toString());
+      if (logger.isDebug3()) {
+	for (Enumeration en = props.keys(); en.hasMoreElements(); ) {
+	  String prop = (String)en.nextElement();
+	  logger.debug3("AU prop key " + prop + " value " + props.get(prop));
+	}
+      }
       try {
 	au = pluginMgr.createAndSaveAuConfiguration(plugin, props);
       } catch (ArchivalUnit.ConfigurationException ex) {
 	logger.error("createAndSaveAuConfiguration() threw " + ex.toString());
-	throw new IOException(pluginName + " not initialized for " +
-			      ae.getBaseUrl());
+	throw new IOException(pluginName + " not initialized for " + baseUrl);
+      }
+      if (au == null) {
+	logger.error("Failed to create new AU", new Throwable());
+	throw new IOException("Can't create au for " + baseUrl);
       }
     }
-    if (au == null) {
-      logger.error("Failed to create new AU", new Throwable());
-    } else if (!(au instanceof ExplodedArchivalUnit)) {
+    if (!(au instanceof ExplodedArchivalUnit)) {
       logger.error("New AU not ExplodedArchivalUnit " + au.toString(),
 		   new Throwable());
     }
+    touchedAus.put(baseUrl, au);
     String newUrl = baseUrl + restOfUrl;
     // Create a new UrlCacher from the ArchivalUnit and store the
     // element using it.
@@ -192,6 +212,8 @@ public class ZipExploder extends Exploder {
     // XXX for the URL - check and move the place to storeContent
     logger.debug3("Storing " + newUrl + " in " + au.toString());
     newUc.storeContentIn(newUrl, ae.getInputStream(), ae.getHeaderFields());
+    crawler.getCrawlStatus().signalUrlFetched(newUrl);
+    // crawler.getCrawlStatus().signalMimeTypeOfUrl(newUrl, mimeType);
   }
 
   private void handleAddText(ArchiveEntry ae) {
