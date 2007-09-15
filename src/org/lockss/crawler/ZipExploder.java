@@ -1,5 +1,5 @@
 /*
- * $Id: ZipExploder.java,v 1.1.2.8 2007-09-15 02:49:51 dshr Exp $
+ * $Id: ZipExploder.java,v 1.1.2.9 2007-09-15 15:02:31 dshr Exp $
  */
 
 /*
@@ -56,6 +56,7 @@ public class ZipExploder extends Exploder {
 
   private static Logger logger = Logger.getLogger("ZipExploder");
   protected ExploderHelper helper = null;
+  protected int reTry = 0;
 
   /**
    * Constructor
@@ -84,7 +85,7 @@ public class ZipExploder extends Exploder {
     ZipInputStream zis = null;
     logger.info((storeArchive ? "Storing" : "Fetching") + " a ZIP file: " +
 		archiveUrl + (explodeFiles ? " will" : " won't") + " explode");
-    try {
+    while (++reTry < maxRetries) try {
       if (storeArchive) {
 	crawler.cacheWithRetries(urlCacher, maxRetries);
 	// Get a stream from which the ZIP data can be read
@@ -124,10 +125,15 @@ public class ZipExploder extends Exploder {
       addText();
     } catch (IOException ex) {
       logger.siteError("ZipExploder.explodeUrl() threw", ex);
+      continue;
     } finally {
       if (cachedUrl != null) {
 	cachedUrl.release();
       }
+      IOUtil.safeClose(zis);
+      IOUtil.safeClose(arcStream);
+    }
+    if (reTry >= maxRetries) {
       // Make it look like a new crawl finished on each AU to which
       // URLs were added.
       for (Enumeration en = touchedAus.keys(); en.hasMoreElements(); ) {
@@ -135,8 +141,6 @@ public class ZipExploder extends Exploder {
 	ExplodedArchivalUnit eau = (ExplodedArchivalUnit)touchedAus.get(key);
 	crawler.getDaemon().getNodeManager(eau).newContentCrawlFinished();
       }
-      IOUtil.safeClose(zis);
-      IOUtil.safeClose(arcStream);
     }
   }
 
