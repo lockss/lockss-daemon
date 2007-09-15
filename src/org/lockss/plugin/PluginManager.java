@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.182.4.3 2007-09-12 02:55:02 dshr Exp $
+ * $Id: PluginManager.java,v 1.182.4.4 2007-09-15 02:49:51 dshr Exp $
  */
 
 /*
@@ -1415,6 +1415,14 @@ public class PluginManager
     // will likely be looked up twice in quick succession
 
     CachedUrl res = (CachedUrl)recentCuMap.get(url);
+    if (log.isDebug3()) {
+      if (res != null) {
+	log.debug3("cache hit " + res.toString() +
+		   (res.hasContent() ? "with" : "without") + " content.");
+      } else {
+	log.debug3("cache miss for " + url);
+      }
+    }
     if (res == null || (withContent && !res.hasContent())) {
       res = findTheCachedUrl0(url, withContent);
       if (res != null) {

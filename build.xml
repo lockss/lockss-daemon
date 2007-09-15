@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.222.4.1 2007-09-12 02:55:01 dshr Exp $
+ $Id: build.xml,v 1.222.4.2 2007-09-15 02:49:51 dshr Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -200,6 +200,7 @@ Args:
 	        value="${lib}/commons-io-1.3.2.jar" />
   <property name="commons.jxpath.jar"
 				  value="${lib}/commons-jxpath-1.2.jar"/>
+  <property name="javatar.jar"    value="${lib}/tar-2.3.jar"/>
   <property name="concurrent.jar" value="${lib}/concurrent.jar"/>
   <property name="htmlparser.jar" value="${lib}/htmlparser-1.6.jar"/>
   <!-- W3C RDF Parser -->
@@ -295,6 +296,7 @@ Args:
     <pathelement path="${commons.httpclient.jar}" />
   	<pathelement path="${commons.io.jar}" />
     <pathelement path="${commons.jxpath.jar}" />
+    <pathelement path="${javatar.jar}" />
     <pathelement path="${log4j.jar}" />
     <pathelement path="${concurrent.jar}" />
     <pathelement path="${jetty.jar}" />

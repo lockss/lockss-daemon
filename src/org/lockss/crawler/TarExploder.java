@@ -1,5 +1,5 @@
 /*
- * $Id: TarExploder.java,v 1.1.2.1 2007-09-11 19:14:55 dshr Exp $
+ * $Id: TarExploder.java,v 1.1.2.2 2007-09-15 02:49:51 dshr Exp $
  */
 
 /*
@@ -32,10 +32,18 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.crawler;
 
-import java.util.zip.*;
-import org.lockss.daemon.CrawlSpec;
-import org.lockss.plugin.UrlCacher;
+import java.util.*;
+import java.io.*;
+import org.lockss.daemon.*;
+import org.lockss.util.*;
+import org.lockss.plugin.*;
+import org.lockss.plugin.base.*;
+import org.lockss.plugin.exploded.*;
 import org.lockss.crawler.BaseCrawler;
+import org.lockss.config.Configuration;
+import org.lockss.app.LockssDaemon;
+import org.lockss.state.HistoryRepository;
+import com.ice.tar.*;
 
 /**
  * The Exploder for TAR archives.
@@ -45,6 +53,9 @@ import org.lockss.crawler.BaseCrawler;
  */
 
 public class TarExploder extends Exploder {
+
+  private static Logger logger = Logger.getLogger("TarExploder");
+  protected ExploderHelper helper = null;
 
   /**
    * Constructor
@@ -58,13 +69,75 @@ public class TarExploder extends Exploder {
   protected TarExploder(UrlCacher uc, int maxRetries, CrawlSpec crawlSpec,
 		     BaseCrawler crawler, boolean explode, boolean store) {
     super(uc, maxRetries, crawlSpec, crawler, explode, store);
+    helper = crawlSpec.getExploderHelper();
+    if (helper == null) {
+      helper = new DefaultExploderHelper(uc, crawlSpec, crawler);
+    }
   }
 
   /**
    * Explode the archive into its constituent elements
    */
   protected void explodeUrl() {
-    // XXX
+    InputStream arcStream = null;
+    CachedUrl cachedUrl = null;
+    TarInputStream tis = null;
+    logger.info((storeArchive ? "Storing" : "Fetching") + " a TAR file: " +
+		archiveUrl + (explodeFiles ? " will" : " won't") + " explode");
+    try {
+      if (storeArchive) {
+	crawler.cacheWithRetries(urlCacher, maxRetries);
+	// Get a stream from which the TAR data can be read
+	logger.debug3("About to get TAR stream from " + urlCacher.toString());
+	cachedUrl = urlCacher.getCachedUrl();
+	arcStream = cachedUrl.getUnfilteredInputStream();
+      } else {
+	arcStream = urlCacher.getUncachedInputStream();
+      }
+      tis = new TarInputStream(arcStream);
+      TarEntry te;
+      while ((te = tis.getNextEntry()) != null) {
+	// XXX probably not necessary
+	if (crawler.wdog != null) {
+	  crawler.wdog.pokeWDog();
+	}
+	if (!te.isDirectory()) {
+	  ArchiveEntry ae = new ArchiveEntry(te.getName(),
+					     te.getSize(),
+					     te.getModTime().getTime(),
+					     tis, crawlSpec);
+	  logger.debug3("ArchiveEntry: " + ae.getName()
+			+ " bytes "  + ae.getSize());
+	  helper.process(ae);
+	  if (ae.getBaseUrl() != null &&
+	      ae.getRestOfUrl() != null &&
+	      ae.getHeaderFields() != null) {
+	    storeEntry(ae);
+	    handleAddText(ae);
+	  } else {
+	    logger.debug("Can't map " + te.getName());
+	  }
+	} else {
+	  logger.debug("Directory " + te.getName() + " in " + archiveUrl);
+	}
+      }
+      addText();
+    } catch (IOException ex) {
+      logger.siteError("TarExploder.explodeUrl() threw", ex);
+    } finally {
+      if (cachedUrl != null) {
+	cachedUrl.release();
+      }
+      // Make it look like a new crawl finished on each AU to which
+      // URLs were added.
+      for (Enumeration en = touchedAus.keys(); en.hasMoreElements(); ) {
+	String key = (String)en.nextElement();
+	ExplodedArchivalUnit eau = (ExplodedArchivalUnit)touchedAus.get(key);
+	crawler.getDaemon().getNodeManager(eau).newContentCrawlFinished();
+      }
+      IOUtil.safeClose(tis);
+      IOUtil.safeClose(arcStream);
+    }
   }
 
 }

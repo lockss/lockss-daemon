@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedContentGenerator.java,v 1.25.10.1 2007-09-11 19:15:00 dshr Exp $
+ * $Id: SimulatedContentGenerator.java,v 1.25.10.2 2007-09-15 02:49:51 dshr Exp $
  */
 
 /*
@@ -207,7 +207,7 @@ public class SimulatedContentGenerator {
       if (actual) {
 	ret = /* new ActualTarContentGenerator(rootPath) */ null;
       } else {
-	ret = /* new SimulatedTarContentGenerator(rootPath) */ null;
+	ret = new SimulatedTarContentGenerator(rootPath);
       }
     } else {
       ret = new SimulatedContentGenerator(rootPath);

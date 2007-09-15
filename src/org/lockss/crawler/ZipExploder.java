@@ -1,5 +1,5 @@
 /*
- * $Id: ZipExploder.java,v 1.1.2.7 2007-09-14 22:54:27 dshr Exp $
+ * $Id: ZipExploder.java,v 1.1.2.8 2007-09-15 02:49:51 dshr Exp $
  */
 
 /*
@@ -55,13 +55,7 @@ import org.lockss.state.HistoryRepository;
 public class ZipExploder extends Exploder {
 
   private static Logger logger = Logger.getLogger("ZipExploder");
-  private String zipUrl = null;
   protected ExploderHelper helper = null;
-  private CrawlSpec crawlSpec = null;
-  private BaseCrawler crawler;
-  private Hashtable addTextTo = null;
-  private PluginManager pluginMgr = null;
-  private Hashtable touchedAus = new Hashtable();
 
   /**
    * Constructor
@@ -75,14 +69,10 @@ public class ZipExploder extends Exploder {
   protected ZipExploder(UrlCacher uc, int maxRetries, CrawlSpec crawlSpec,
 		     BaseCrawler crawler, boolean explode, boolean store) {
     super(uc, maxRetries, crawlSpec, crawler, explode, store);
-    zipUrl = uc.getUrl();
     helper = crawlSpec.getExploderHelper();
     if (helper == null) {
       helper = new DefaultExploderHelper(uc, crawlSpec, crawler);
     }
-    this.crawlSpec = crawlSpec;
-    this.crawler = crawler;
-    pluginMgr = crawler.getDaemon().getPluginManager();
   }
 
   /**
@@ -93,7 +83,7 @@ public class ZipExploder extends Exploder {
     CachedUrl cachedUrl = null;
     ZipInputStream zis = null;
     logger.info((storeArchive ? "Storing" : "Fetching") + " a ZIP file: " +
-		zipUrl + (explodeFiles ? " will" : " won't") + " explode");
+		archiveUrl + (explodeFiles ? " will" : " won't") + " explode");
     try {
       if (storeArchive) {
 	crawler.cacheWithRetries(urlCacher, maxRetries);
@@ -128,7 +118,7 @@ public class ZipExploder extends Exploder {
 	    logger.debug("Can't map " + ze.getName());
 	  }
 	} else {
-	  logger.debug("Directory " + ze.getName() + " in " + zipUrl);
+	  logger.debug("Directory " + ze.getName() + " in " + archiveUrl);
 	}
       }
       addText();
@@ -141,7 +131,8 @@ public class ZipExploder extends Exploder {
       // Make it look like a new crawl finished on each AU to which
       // URLs were added.
       for (Enumeration en = touchedAus.keys(); en.hasMoreElements(); ) {
-	ExplodedArchivalUnit eau = (ExplodedArchivalUnit)en.nextElement();
+	String key = (String)en.nextElement();
+	ExplodedArchivalUnit eau = (ExplodedArchivalUnit)touchedAus.get(key);
 	crawler.getDaemon().getNodeManager(eau).newContentCrawlFinished();
       }
       IOUtil.safeClose(zis);
@@ -149,151 +140,4 @@ public class ZipExploder extends Exploder {
     }
   }
 
-  protected void storeEntry(ArchiveEntry ae) throws IOException {
-    // We assume that all exploded content is organized into
-    // AUs which each contain only URLs starting with the AUs
-    // base_url.  This allows ExplodedArchivalUnit to maintain
-    // a map from a baseUrl to one of its AUs.
-    ArchivalUnit au = null;
-    String baseUrl = ae.getBaseUrl();
-    String restOfUrl = ae.getRestOfUrl();
-    CachedUrl cu = pluginMgr.findCachedUrl(baseUrl + restOfUrl, false);
-    if (cu != null) {
-      au = cu.getArchivalUnit();
-      logger.debug(baseUrl + restOfUrl + " old au " + au.getAuId());
-    }
-    if (au == null) {
-      // There's no AU for this baseUrl,  so create one
-      CIProperties props = ae.getAuProps();
-      if (props == null) {
-	props = new CIProperties();
-	props.put(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
-      }
-      props.put(ConfigParamDescr.PUB_NEVER.getKey(), "true");
-      String pluginName = ExplodedPlugin.class.getName();
-      String key = PluginManager.pluginKeyFromName(pluginName);
-      logger.debug3(pluginName + " has key: " + key);
-      Plugin plugin = pluginMgr.getPlugin(key);
-      if (plugin == null) {
-	logger.error(pluginName + " key " + key + " not found");
-	throw new IOException(pluginName + " not found");
-      }
-      logger.debug3(pluginName + ": " + plugin.toString());
-      if (logger.isDebug3()) {
-	for (Enumeration en = props.keys(); en.hasMoreElements(); ) {
-	  String prop = (String)en.nextElement();
-	  logger.debug3("AU prop key " + prop + " value " + props.get(prop));
-	}
-      }
-      try {
-	au = pluginMgr.createAndSaveAuConfiguration(plugin, props);
-      } catch (ArchivalUnit.ConfigurationException ex) {
-	logger.error("createAndSaveAuConfiguration() threw " + ex.toString());
-	throw new IOException(pluginName + " not initialized for " + baseUrl);
-      }
-      if (au == null) {
-	logger.error("Failed to create new AU", new Throwable());
-	throw new IOException("Can't create au for " + baseUrl);
-      }
-    }
-    if (!(au instanceof ExplodedArchivalUnit)) {
-      logger.error("New AU not ExplodedArchivalUnit " + au.toString(),
-		   new Throwable());
-    }
-    touchedAus.put(baseUrl, au);
-    String newUrl = baseUrl + restOfUrl;
-    // Create a new UrlCacher from the ArchivalUnit and store the
-    // element using it.
-    BaseUrlCacher newUc = (BaseUrlCacher)au.makeUrlCacher(newUrl);
-    BitSet flags = newUc.getFetchFlags();
-    flags.set(UrlCacher.DONT_CLOSE_INPUT_STREAM_FLAG);
-    newUc.setFetchFlags(flags);
-    // XXX either fetch or storeContent synthesizes some properties
-    // XXX for the URL - check and move the place to storeContent
-    logger.debug3("Storing " + newUrl + " in " + au.toString());
-    newUc.storeContentIn(newUrl, ae.getInputStream(), ae.getHeaderFields());
-    crawler.getCrawlStatus().signalUrlFetched(newUrl);
-    // crawler.getCrawlStatus().signalMimeTypeOfUrl(newUrl, mimeType);
-  }
-
-  private void handleAddText(ArchiveEntry ae) {
-    Hashtable addText = ae.getAddText();
-    String addBaseUrl = ae.getBaseUrl();
-    if (addText != null) {
-      if (addTextTo == null) {
-	addTextTo = new Hashtable();
-      }
-      for (Enumeration en = addText.keys(); en.hasMoreElements(); ) {
-	String restOfUrl = (String)en.nextElement();
-	String newText = "";
-	if (addTextTo.containsKey(addBaseUrl + restOfUrl)) {
-	  newText = (String)addTextTo.get(addBaseUrl + restOfUrl);
-	}
-	newText += (String)addText.get(restOfUrl);
-	addTextTo.put(addBaseUrl + restOfUrl, newText);
-	logger.debug3("addText for " + addBaseUrl + restOfUrl +
-		      " now " + newText);
-      }
-    }
-  }
-
-  private void addText() {
-    if (addTextTo != null) {
-      for (Enumeration en = addTextTo.keys(); en.hasMoreElements(); ) {
-	String url = (String) en.nextElement();
-	String text = (String) addTextTo.get(url);
-
-	CachedUrl cu = pluginMgr.findCachedUrl(url, false);
-	if (cu == null) {
-	  logger.error("Trying to update page outside AU" +
-		       url);
-	} else {
-	  addTextToPage(cu, url, text);
-	}
-      }
-    }
-  }
-
-  private void addTextToPage(CachedUrl cu, String url, String text) {
-    ArchivalUnit au = cu.getArchivalUnit();
-    if (!cu.hasContent()) {
-      // Create a new page
-      logger.debug3("Create new page " + url + " in " + au.getAuId());
-      // XXX
-    }
-    logger.debug3("Adding text " + text + " to page " + url +
-		  " in " + au.getAuId());
-    // XXX add the text to the page
-  }
-
-  protected class DefaultExploderHelper implements ExploderHelper {
-    private UrlCacher uc = null;
-    private CrawlSpec crawlSpec = null;
-    private Crawler crawler = null;
-    private LockssDaemon theDaemon;
-
-    DefaultExploderHelper(UrlCacher uc, CrawlSpec crawlSpec,
-			  BaseCrawler crawler) {
-      this.uc = uc;
-      this.crawlSpec = crawlSpec;
-      this.crawler = crawler;
-    }
-
-    public void process(ArchiveEntry ae) {
-      // By default the files have to go in the crawler's AU
-      ArchivalUnit au = crawler.getAu();
-      // By default the path should start at the AU's base url.
-      Configuration config = au.getConfiguration();
-      String url = config.get(ConfigParamDescr.BASE_URL.getKey());
-      ae.setBaseUrl(url);
-      ae.setRestOfUrl(ae.getName());
-      CIProperties cip = new CIProperties();
-      // XXX do something here to invent header fields
-      ae.setHeaderFields(cip);
-    }
-
-    public void setDaemon(LockssDaemon daemon) {
-      theDaemon = daemon;
-    }
-  }
 }
