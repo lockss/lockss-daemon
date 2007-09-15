@@ -1,0 +1,61 @@
+<map>
+  <entry>
+    <string>text/xml_link_extractor_factory</string>
+    <string>org.lockss.plugin.elsevier.ElsevierLinkExtractorFactory</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;%s, vol. %d&quot;, base_url_host, volume</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Elsevier CLOCKSS</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;%slockss/lockss-volume%d.htm&quot;, base_url, volume</string>
+      <string>1,&quot;%slockss_media/v%dn[0-9]*/.*\.rm&quot;, base_url, volume</string>
+      <string>1,&quot;%sv%dn[0-9]*/.*&quot;, base_url, volume</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%slockss/lockss-volume%d.htm&quot;, base_url, volume</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume</key>
+        <displayName>Volume No.</displayName>
+        <type>6</type>
+        <size>8</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+</map>
