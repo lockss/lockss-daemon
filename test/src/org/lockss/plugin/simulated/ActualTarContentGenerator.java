@@ -1,5 +1,5 @@
 /*
- * $Id: ActualZipContentGenerator.java,v 1.1.2.2 2007-09-15 16:29:45 dshr Exp $
+ * $Id: ActualTarContentGenerator.java,v 1.1.2.1 2007-09-15 16:29:45 dshr Exp $
  */
 
 /*
@@ -34,7 +34,6 @@ package org.lockss.plugin.simulated;
 
 import java.io.*;
 import java.util.*;
-import java.util.zip.*;
 import java.util.concurrent.atomic.*;
 import java.net.*;
 import java.text.*;
@@ -43,20 +42,19 @@ import org.lockss.test.*;
 import org.lockss.plugin.base.*;
 import org.lockss.crawler.*;
 import org.lockss.daemon.*;
+import com.ice.tar.*;
 
 /**
  * A convenience class which takes care of handling the content
- * tree itself for the case where the content is in a ZIP file.
+ * tree itself for the case where the content is in a TAR file.
  *
  * @author  David S. H. Rosenthal
  * @version 0.0
  */
 
-public class ActualZipContentGenerator extends SimulatedContentGenerator {
-  private static Logger logger = Logger.getLogger("ActualZipContentGenerator");
-  String zipFilePrefix = "SimulatedCrawl";
-  AtomicInteger serialNo = new AtomicInteger(0);
-  int maxSize = 100000000;
+public class ActualTarContentGenerator extends SimulatedContentGenerator {
+  private static Logger logger = Logger.getLogger("ActualTarContentGenerator");
+  String tarFilePrefix = "SimulatedCrawl";
   String[] suffix = {
     ".txt",
     ".html",
@@ -73,34 +71,34 @@ public class ActualZipContentGenerator extends SimulatedContentGenerator {
   };
   String stem = "http://www.content.org/";
 
-  public ActualZipContentGenerator(String rootPath) {
+  public ActualTarContentGenerator(String rootPath) {
     super(rootPath);
     logger.debug3("Created instance for " + rootPath);
   }
 
   public String generateContentTree() {
     String ret = super.generateContentTree();
-    String zipName = "SpringerSample.zip";
+    String tarName = "ElsevierSample.tar";
 
     //  There should now be a suitable hierarchy at contentRoot,
-    //  except that we need to copy the ZIP file into place and
+    //  except that we need to copy the TAR file into place and
     //  create a link to it.
     InputStream in = null;
     OutputStream os = null;
     try {
-      in = this.getClass().getResourceAsStream(zipName);
+      in = this.getClass().getResourceAsStream(tarName);
       if (in == null) {
-	throw new IOException(zipName + " missing");
+	throw new IOException(tarName + " missing");
       }
-      File of = new File(contentRoot + File.separator + zipName);
+      File of = new File(contentRoot + File.separator + tarName);
       os = new FileOutputStream(of);
       byte[] buffer = new byte[4096];
       int i = 0;
       while ((i = in.read(buffer)) > 0) {
 	os.write(buffer, 0, i);
-	logger.debug2("Wrote " + i + " bytes of ZIP");
+	logger.debug2("Wrote " + i + " bytes of TAR");
       }
-      linkToZipFiles();
+      linkToTarFiles();
     } catch (IOException ex) {
       logger.error("copy threw " + ex);
       return null;
@@ -108,11 +106,11 @@ public class ActualZipContentGenerator extends SimulatedContentGenerator {
       IOUtil.safeClose(os);
       IOUtil.safeClose(in);
     }
-    printZipFiles(0);
+    printTarFiles(0);
     return ret;
   }
 
-  private void linkToZipFiles() {
+  private void linkToTarFiles() {
     File dir = new File(contentRoot);
     if (dir.isDirectory()) {
       File index = new File(dir, INDEX_NAME);
@@ -127,7 +125,7 @@ public class ActualZipContentGenerator extends SimulatedContentGenerator {
 	pw.close();
 	fos.close();
       } catch (IOException ex) {
-	logger.error("linkToZipFiles() threw " + ex);
+	logger.error("linkToTarFiles() threw " + ex);
       } else {
 	logger.error("index.html missing");
       }
@@ -136,19 +134,20 @@ public class ActualZipContentGenerator extends SimulatedContentGenerator {
     }
   }
 
-  private void printZipFiles(long startPosition) {
+  private void printTarFiles(long startPosition) {
     File dir = new File(contentRoot);
     if (dir.isDirectory()) try {
       String[] fileNames = dir.list();
 
       for (int i = 0; i < fileNames.length; i++) {
-	if (fileNames[i].endsWith(".zip")) {
+	if (fileNames[i].endsWith(".tar")) {
 	  logger.debug3(fileNames[i] + " headers offset" + startPosition);
 		    
 	  File aFile = new File(dir, fileNames[i]);
-	  ZipFile zFile = new ZipFile(aFile);
-	  for (Enumeration e = zFile.entries(); e.hasMoreElements(); ) {
-	    ZipEntry ze = (ZipEntry)e.nextElement();
+	  TarInputStream tis = new TarInputStream(new FileInputStream(aFile));
+	  for (Enumeration e = new TarEntryEnumerator(tis);
+	       e.hasMoreElements(); ) {
+	    TarEntry ze = (TarEntry)e.nextElement();
 	    if (ze.isDirectory()) {
 	      logger.debug3("Dir: " + ze.getName());
 	    } else {
@@ -158,7 +157,7 @@ public class ActualZipContentGenerator extends SimulatedContentGenerator {
 	}
       }
     } catch (IOException ex) {
-      logger.error("printZipFiles() threw " + ex);
+      logger.error("printTarFiles() threw " + ex);
     } else {
       logger.error("Directory " + contentRoot + " missing");
     }

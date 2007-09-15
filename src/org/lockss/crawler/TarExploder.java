@@ -1,5 +1,5 @@
 /*
- * $Id: TarExploder.java,v 1.1.2.2 2007-09-15 02:49:51 dshr Exp $
+ * $Id: TarExploder.java,v 1.1.2.3 2007-09-15 16:29:45 dshr Exp $
  */
 
 /*
@@ -56,6 +56,7 @@ public class TarExploder extends Exploder {
 
   private static Logger logger = Logger.getLogger("TarExploder");
   protected ExploderHelper helper = null;
+  protected int reTry = 0;
 
   /**
    * Constructor
@@ -84,7 +85,7 @@ public class TarExploder extends Exploder {
     TarInputStream tis = null;
     logger.info((storeArchive ? "Storing" : "Fetching") + " a TAR file: " +
 		archiveUrl + (explodeFiles ? " will" : " won't") + " explode");
-    try {
+    while (++reTry < maxRetries) try {
       if (storeArchive) {
 	crawler.cacheWithRetries(urlCacher, maxRetries);
 	// Get a stream from which the TAR data can be read
@@ -124,10 +125,15 @@ public class TarExploder extends Exploder {
       addText();
     } catch (IOException ex) {
       logger.siteError("TarExploder.explodeUrl() threw", ex);
+      continue;
     } finally {
       if (cachedUrl != null) {
 	cachedUrl.release();
       }
+      IOUtil.safeClose(tis);
+      IOUtil.safeClose(arcStream);
+    }
+    if (reTry >= maxRetries) {
       // Make it look like a new crawl finished on each AU to which
       // URLs were added.
       for (Enumeration en = touchedAus.keys(); en.hasMoreElements(); ) {
@@ -135,8 +141,6 @@ public class TarExploder extends Exploder {
 	ExplodedArchivalUnit eau = (ExplodedArchivalUnit)touchedAus.get(key);
 	crawler.getDaemon().getNodeManager(eau).newContentCrawlFinished();
       }
-      IOUtil.safeClose(tis);
-      IOUtil.safeClose(arcStream);
     }
   }
 

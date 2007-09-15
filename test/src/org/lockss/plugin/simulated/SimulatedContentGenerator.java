@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedContentGenerator.java,v 1.25.10.2 2007-09-15 02:49:51 dshr Exp $
+ * $Id: SimulatedContentGenerator.java,v 1.25.10.3 2007-09-15 16:29:45 dshr Exp $
  */
 
 /*
@@ -205,7 +205,7 @@ public class SimulatedContentGenerator {
     } else if (tar) {
       boolean actual = CurrentConfig.getBooleanParam("org.lockss.plugin.simulated.SimulatedContentGenerator.actualTarFile", false);
       if (actual) {
-	ret = /* new ActualTarContentGenerator(rootPath) */ null;
+	ret = new ActualTarContentGenerator(rootPath);
       } else {
 	ret = new SimulatedTarContentGenerator(rootPath);
       }

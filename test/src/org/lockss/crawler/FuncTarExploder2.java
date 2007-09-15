@@ -1,5 +1,5 @@
 /*
- * $Id: FuncZipExploder2.java,v 1.1.2.2 2007-09-15 16:29:45 dshr Exp $
+ * $Id: FuncTarExploder2.java,v 1.1.2.1 2007-09-15 16:29:45 dshr Exp $
  */
 
 /*
@@ -42,27 +42,27 @@ import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.simulated.*;
 import org.lockss.plugin.exploded.*;
-import org.lockss.plugin.springer.*;
+import org.lockss.plugin.elsevier.*;
 import org.lockss.repository.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.state.*;
 
 /**
- * Functional tests for the ZIP file exploder.  It
- * does not test the non-ZIP file functionality,
+ * Functional tests for the TAR file exploder.  It
+ * does not test the non-TAR file functionality,
  * which is provided by FollowLinkCrawler.
  *
- * Uses ActualZipContentGenerator to create a
+ * Uses ActualTarContentGenerator to create a
  * web site with a permission page that links to
- * a ZIP file containing the rest of the content
+ * a TAR file containing the rest of the content
  *
  * @author  David S. H. Rosenthal
  * @version 0.0
  */
 
-public class FuncZipExploder2 extends LockssTestCase {
-  static Logger log = Logger.getLogger("FuncZipExploder2");
+public class FuncTarExploder2 extends LockssTestCase {
+  static Logger log = Logger.getLogger("FuncTarExploder2");
 
   private SimulatedArchivalUnit sau;
   private MockLockssDaemon theDaemon;
@@ -73,7 +73,7 @@ public class FuncZipExploder2 extends LockssTestCase {
 
   public static void main(String[] args) throws Exception {
     // XXX should be much simpler.
-    FuncZipExploder test = new FuncZipExploder();
+    FuncTarExploder test = new FuncTarExploder();
     if (args.length>0) {
       try {
         maxDepth = Integer.parseInt(args[0]);
@@ -95,7 +95,7 @@ public class FuncZipExploder2 extends LockssTestCase {
   public void setUp(int max) throws Exception {
 
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    String auId = "org|lockss|crawler|FuncZipExploder$MySimulatedPlugin.root~" +
+    String auId = "org|lockss|crawler|FuncTarExploder$MySimulatedPlugin.root~" +
       PropKeyEncoder.encode(tempDirPath);
     Properties props = new Properties();
     props.setProperty(FollowLinkCrawler.PARAM_MAX_CRAWL_DEPTH, ""+max);
@@ -116,8 +116,8 @@ public class FuncZipExploder2 extends LockssTestCase {
                       ""+SimulatedContentGenerator.FILE_TYPE_BIN);
     props.setProperty("org.lockss.au." + auId + "." +
                       SimulatedPlugin.AU_PARAM_BIN_FILE_SIZE, ""+fileSize);
-    props.setProperty("org.lockss.plugin.simulated.SimulatedContentGenerator.doZipFile", "true");
-    props.setProperty("org.lockss.plugin.simulated.SimulatedContentGenerator.actualZipFile", "true");
+    props.setProperty("org.lockss.plugin.simulated.SimulatedContentGenerator.doTarFile", "true");
+    props.setProperty("org.lockss.plugin.simulated.SimulatedContentGenerator.actualTarFile", "true");
 
     props.setProperty(FollowLinkCrawler.PARAM_EXPLODE_ARCHIVES, "true");
     props.setProperty(FollowLinkCrawler.PARAM_STORE_ARCHIVES, "true");
@@ -152,6 +152,7 @@ public class FuncZipExploder2 extends LockssTestCase {
 
     // get the root of the simContent
     String simDir = sau.getSimRoot();
+    assertTrue("No simulated content", simDir != null);
 
     log.debug3("About to crawl content");
     crawlContent();
@@ -179,9 +180,9 @@ public class FuncZipExploder2 extends LockssTestCase {
     // convenient place to do it.  (And ArcCrawler calls it at the
     // end.)  If the simulated AU params are changed, or
     // SimulatedContentGenerator is changed, this number may have to
-    // change.  NB - because the ZIP files are compressed,  their
+    // change.  NB - because the TAR files are compressed,  their
     // size varies randomly by a small amount.
-    long expected = 285227;
+    long expected = 261173;
     long actual = AuUtil.getAuContentSize(sau, true);
     long error = expected - actual;
     long absError = (error < 0 ? -error : error);
@@ -197,9 +198,9 @@ public class FuncZipExploder2 extends LockssTestCase {
       // Permission pages get checked twice.  Hard to avoid that, so allow it
       b.removeAll(sau.getCrawlSpec().getPermissionPages());
       // archives get checked twice - from checkThruFileTree & checkExplodedUrls
-      b.remove("http://www.example.com/content.zip");
+      b.remove("http://www.example.com/content.tar");
       // This test is screwed up by the use of shouldBeCached() in
-      // ZipExploder() to find the AU to store the URL in.
+      // TarExploder() to find the AU to store the URL in.
       //assertEmpty("shouldBeCached() called multiple times on same URLs.", b);
     }
   }
@@ -231,14 +232,20 @@ public class FuncZipExploder2 extends LockssTestCase {
   }
 
   private static String URL_PREFIX =
-    "http://www.springer.com/CLOCKSS/PUB=Springer-Verlag-Berlin-Heidelberg/JOU=00109/VOL=83/ISU=12";
+    "http://www.elsevier.com/CLOCKSS/20070004";
   String[] url = {
-    URL_PREFIX + "/ART=2005_719/109_2005_Article_719.xml.meta",
-    URL_PREFIX + "/ART=2005_719/BodyRef/PDF/109_2005_Article_719.pdf",
-    URL_PREFIX + "/ART=2005_721/109_2005_Article_721.xml.meta",
-    URL_PREFIX + "/ART=2005_721/BodyRef/PDF/109_2005_Article_721.pdf",
-    URL_PREFIX + "/ART=2005_724/109_2005_Article_724.xml.meta",
-    URL_PREFIX + "/ART=2005_724/BodyRef/PDF/109_2005_Article_724.pdf",
+    URL_PREFIX + "/07700618/main.raw",
+    URL_PREFIX + "/07700618/main.pdf",
+    URL_PREFIX + "/07700618/main.xml",
+    URL_PREFIX + "/07700618/checkmd5.fil",
+    URL_PREFIX + "/07700606/main.pdf",
+    URL_PREFIX + "/07700606/main.xml",
+    URL_PREFIX + "/07700606/main.raw",
+    URL_PREFIX + "/07700606/checkmd5.fil",
+    URL_PREFIX + "/0770062X/main.raw",
+    URL_PREFIX + "/0770062X/main.pdf",
+    URL_PREFIX + "/0770062X/main.xml",
+    URL_PREFIX + "/0770062X/checkmd5.fil",
   };
 
   private void checkExplodedUrls() {
@@ -257,7 +264,7 @@ public class FuncZipExploder2 extends LockssTestCase {
 
   String[] url2 = {
     "http://www.example.com/index.html",
-    "http://www.example.com/SpringerSample.zip",
+    "http://www.example.com/ElsevierSample.tar",
     "http://www.example.com/001file.bin",
     "http://www.example.com/002file.bin",
     "http://www.example.com/branch1/001file.bin",
@@ -302,8 +309,8 @@ public class FuncZipExploder2 extends LockssTestCase {
 			  1,    // refetch depth
 			  null, // PermissionChecker
 			  null, // LoginPageChecker
-			  ".zip$", // exploder pattern
-			  new SpringerExploderHelper() );
+			  ".tar$", // exploder pattern
+			  new ElsevierExploderHelper() );
     Crawler crawler = new NewContentCrawler(sau, spec, new MockAuState());
     crawler.doCrawl();
   }
