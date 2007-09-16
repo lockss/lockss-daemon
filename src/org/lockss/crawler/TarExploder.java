@@ -1,5 +1,5 @@
 /*
- * $Id: TarExploder.java,v 1.1.2.3 2007-09-15 16:29:45 dshr Exp $
+ * $Id: TarExploder.java,v 1.1.2.4 2007-09-16 20:47:21 dshr Exp $
  */
 
 /*
@@ -123,6 +123,7 @@ public class TarExploder extends Exploder {
 	}
       }
       addText();
+      reTry = maxRetries+1;
     } catch (IOException ex) {
       logger.siteError("TarExploder.explodeUrl() threw", ex);
       continue;

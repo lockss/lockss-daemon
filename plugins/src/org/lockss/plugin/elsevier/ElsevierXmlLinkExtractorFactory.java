@@ -1,5 +1,5 @@
 /*
- * $Id: ElsevierXmlLinkExtractorFactory.java,v 1.1.2.1 2007-09-15 21:00:35 dshr Exp $
+ * $Id: ElsevierXmlLinkExtractorFactory.java,v 1.1.2.2 2007-09-16 20:47:20 dshr Exp $
  */
 
 /*
@@ -78,6 +78,11 @@ public class ElsevierXmlLinkExtractorFactory
       if (cb == null) {
 	throw new IllegalArgumentException("Called with null callback");
       }
+      int ix = srcUrl.lastIndexOf("/");
+      if (ix <= 0) {
+	throw new IllegalArgumentException("Malformed URL: " + srcUrl);
+      }
+      String stem = srcUrl.substring(0, ix + 1);
       BufferedReader bReader =
 	new BufferedReader(StreamUtil.getReader(in, encoding));
       for (String line = bReader.readLine();
@@ -94,7 +99,7 @@ public class ElsevierXmlLinkExtractorFactory
 	  if (endOfName - startOfName > 0) {
 	    String fileName = line.substring(startOfName, endOfName);
 	    logger.debug3("Found: " + fileName);
-	    cb.foundLink(srcUrl + fileName);
+	    cb.foundLink(stem + fileName);
 	  }
 	}
       }

@@ -39,7 +39,7 @@ public class TestElsevierExploderHelper extends LockssTestCase {
     eeh.process(ae);
     assertEquals(ae.getBaseUrl(), urlStem + basePath);
     assertEquals(ae.getRestOfUrl(), pathStem + xmlPath);
-    assertEquals(ae.getHeaderFields().get("Content-Type"), "text/xml");
+    assertEquals(ae.getHeaderFields().get("Content-Type"), "application/xml");
     assertEquals(ae.getHeaderFields().get("Content-Length"), "76543");
   }
 

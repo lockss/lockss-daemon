@@ -1,5 +1,5 @@
 /*
- * $Id: ElsevierExploderHelper.java,v 1.1.2.1 2007-09-15 16:41:06 dshr Exp $
+ * $Id: ElsevierExploderHelper.java,v 1.1.2.2 2007-09-16 20:47:20 dshr Exp $
  */
 
 /*
@@ -74,7 +74,7 @@ public class ElsevierExploderHelper implements ExploderHelper {
   private static final int JOU_INDEX = 0;
   private static final int ISU_INDEX = 1;
   private static final int ART_INDEX = 2;
-  static final int endOfBase = 0;
+  static final int endOfBase = 1;
   static final int minimumPathLength = 3;
   static Logger logger = Logger.getLogger("ElsevierExploderHelper");
   private static final String[] extensions = {
@@ -85,17 +85,19 @@ public class ElsevierExploderHelper implements ExploderHelper {
     ".jpg",
     ".xml",
     ".toc",
-    ".fil"
+    ".fil",
+    ".sml",
   };
   private static final String[] mimeType = {
     "application/pdf",
     "text/plain",
-    "text/sgml",
+    "application/sgml",
     "image/gif",
     "image/jpeg",
-    "text/xml",
+    "application/xml",
     "text/plain", // XXX check
-    "text/plain"  // XXX check
+    "text/plain", // XXX check
+    "application/sgml",
   };
   private HashMap mimeMap = null;
   
@@ -115,7 +117,7 @@ public class ElsevierExploderHelper implements ExploderHelper {
       logger.warning("Path " + ae.getName() + " too short");
       return;
     }
-    for (int i = 0; i <= endOfBase; i++) {
+    for (int i = 0; i < endOfBase; i++) {
       try {
 	int journal = Integer.parseInt(pathElements[i]);
 	baseUrl += pathElements[i] + "/";
@@ -126,7 +128,7 @@ public class ElsevierExploderHelper implements ExploderHelper {
       }
     }
     String restOfUrl = "";
-    for (int i = (endOfBase + 1); i < pathElements.length ; i++) {
+    for (int i = endOfBase; i < pathElements.length ; i++) {
       restOfUrl += pathElements[i];
       if ((i + 1) < pathElements.length) {
 	restOfUrl += "/";
@@ -181,7 +183,7 @@ public class ElsevierExploderHelper implements ExploderHelper {
     props.put(ConfigParamDescr.PUBLISHER_NAME.getKey(),
 	      "Elsevier");
     props.put(ConfigParamDescr.JOURNAL_ID.getKey(),
-	      pathElements[JOU_INDEX].substring(4));
+	      pathElements[JOU_INDEX]);
     ae.setAuProps(props);
   }
 
@@ -194,6 +196,7 @@ public class ElsevierExploderHelper implements ExploderHelper {
 	res = mt;
       }
     }
+    logger.debug(filename + " mime-type " + res);
     return (res);
   }
 }

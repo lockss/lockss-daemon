@@ -1,7 +1,7 @@
 <map>
   <entry>
-    <string>text/xml_link_extractor_factory</string>
-    <string>org.lockss.plugin.elsevier.ElsevierLinkExtractorFactory</string>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.elsevier.ElsevierClockssPlugin</string>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
@@ -13,28 +13,34 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;%s, vol. %d&quot;, base_url_host, volume</string>
-  </entry>
-  <entry>
-    <string>au_def_new_content_crawl</string>
-    <long>1209600000</long>
+    <string>&quot;Elsevier %d&quot;, year</string>
   </entry>
   <entry>
     <string>plugin_name</string>
     <string>Elsevier CLOCKSS</string>
   </entry>
   <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1800000</long>
+  </entry>
+  <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;%slockss/lockss-volume%d.htm&quot;, base_url, volume</string>
-      <string>1,&quot;%slockss_media/v%dn[0-9]*/.*\.rm&quot;, base_url, volume</string>
-      <string>1,&quot;%sv%dn[0-9]*/.*&quot;, base_url, volume</string>
+      <string>4,&quot;^%s%d/&quot;, base_url, year</string>
+      <string>1,&quot;.*&quot;</string>
     </list>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%slockss/lockss-volume%d.htm&quot;, base_url, volume</string>
+    <string>&quot;%s%d/index.html&quot;, base_url, year</string>
+  </entry>
+  <entry>
+    <string>au_exploder_helper</string>
+    <string>org.lockss.plugin.elsevier.ElsevierExploderHelper</string>
+  </entry>
+  <entry>
+    <string>au_exploder_pattern</string>
+    <string>.tar$</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -49,13 +55,22 @@
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
-        <key>volume</key>
-        <displayName>Volume No.</displayName>
-        <type>6</type>
-        <size>8</size>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
     </list>
+  </entry>
+  <entry>
+    <string>application/xml_parser</string>
+    <string>org.lockss.plugin.elsevier.ElsevierXmlParser</string>
+  </entry>
+  <entry>
+    <string>application/xml_link_extractor_factory</string>
+    <string>org.lockss.plugin.elsevier.ElsevierXmlLinkExtractorFactory</string>
   </entry>
 </map>
