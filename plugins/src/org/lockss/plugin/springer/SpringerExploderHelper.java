@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerExploderHelper.java,v 1.1.2.7 2007-09-20 04:15:52 dshr Exp $
+ * $Id: SpringerExploderHelper.java,v 1.1.2.8 2007-09-20 18:33:24 dshr Exp $
  */
 
 /*
@@ -154,9 +154,9 @@ public class SpringerExploderHelper implements ExploderHelper {
       ae.addTextTo(volTOC, link);
       // Now add a link to the volume TOC page to the journal TOC at
       // baseUrl + index.html
-      String journalTOC = baseUrl + "/index.html";
+      String journalTOC = baseUrl + "index.html";
       link = "<li><a href=\"" + volTOC + "\">" +
-	pathElements[VOL_INDEX].substring(4) + "</a></li>\n";
+	"vol #" + pathElements[VOL_INDEX].substring(4) + "</a></li>\n";
       logger.debug3("journalTOC = " + journalTOC + " link " + link);
       ae.addTextTo(journalTOC, link);
     } else if (fileName.endsWith(".xml")) {

@@ -1,5 +1,5 @@
 /*
- * $Id: Exploder.java,v 1.1.2.3 2007-09-20 04:15:52 dshr Exp $
+ * $Id: Exploder.java,v 1.1.2.4 2007-09-20 18:33:24 dshr Exp $
  */
 
 /*
@@ -68,19 +68,9 @@ public abstract class Exploder {
   protected Hashtable touchedAus = new Hashtable();
 
   protected static final String indexTag = "<!-- Next Entry Goes Here -->\n";
-  protected static final String indexPage = 
-    "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\n" +
-    "  \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n" +
-    "<html xmlns=\"http://www.w3.org/1999/xhtml\">\n" +
-    "<head>\n" +
-    "<title>Manifest page</title>\n" +
-    "</head>\n" +
-    "<body>\n" +
-    "<ul>\n" +
-    indexTag +
-    "</ul>\n" +
-    "</body>\n" +
-    "</html>\n";
+  protected static final String manifestPageTag = "</body>\n";
+  protected static final String manifestPageAdd = "<ul>\n" + indexTag +
+    "</ul>\n" + manifestPageTag;
 
   /**
    * Constructor
@@ -229,10 +219,23 @@ public abstract class Exploder {
     Reader oldPage = null;
     CIProperties props = new CIProperties();
     if (!indexCu.hasContent()) {
-      // Create a new page
+      // Create a new page by copying the manifest page and adding the
+      // tag that locates the added text.
       logger.debug3("Create new page " + url + " in " + au.getAuId());
-      oldPage = new StringReader(indexPage);
-      props = syntheticHeaders(url, indexPage.length() + newText.length());
+      List manifestPages = crawlSpec.getPermissionPages();
+      if (manifestPages.isEmpty()) {
+	throw new IOException("Permission page list empty for " + url);
+      }
+      CachedUrl manifestCu =
+	pluginMgr.findCachedUrl((String)manifestPages.get(0));
+      if (manifestCu == null) {
+	throw new IOException("Can't get CachedUrl for " +
+			      (String)manifestPages.get(0));
+      }
+      oldPage = new StringFilter(manifestCu.openForReading(),
+				 manifestPageTag, manifestPageAdd);
+      props = manifestCu.getProperties();
+      props.setProperty("x-lockss-node-url", UrlUtil.minimallyEncodeUrl(url));
     } else {
       logger.debug3("Adding text " + newText + " to page " + url +
 		    " in " + au.getAuId());

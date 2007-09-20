@@ -1,5 +1,5 @@
 /*
- * $Id: ElsevierExploderHelper.java,v 1.1.2.3 2007-09-20 04:15:52 dshr Exp $
+ * $Id: ElsevierExploderHelper.java,v 1.1.2.4 2007-09-20 18:33:24 dshr Exp $
  */
 
 /*
@@ -158,7 +158,7 @@ public class ElsevierExploderHelper implements ExploderHelper {
       // Add a link to the article to the journal TOC page at
       // ${JOURNAL_ID}/index.html
       Hashtable addText = new Hashtable();
-      String journalTOC = baseUrl + "/index.html";
+      String journalTOC = baseUrl + "index.html";
       String link = "<li><a href=\"" + baseUrl + restOfUrl + "\">" +
 	"art #" + pathElements[ART_INDEX] + "</a></li>\n";
       logger.debug3("journalTOC " + journalTOC + " link " + link);
