@@ -28,6 +28,10 @@
     <string>.zip$</string>
   </entry>
   <entry>
+    <string>au_dont_poll</string>
+    <boolean>true</boolean>
+  </entry>
+  <entry>
     <string>plugin_notes</string>
     <string>Test plugin for CLOCKSS ingest of Springer source files</string>
   </entry>

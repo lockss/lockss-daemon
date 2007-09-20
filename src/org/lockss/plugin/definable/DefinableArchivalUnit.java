@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.59.4.2 2007-09-13 21:43:22 dshr Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.59.4.3 2007-09-20 21:29:43 dshr Exp $
  */
 
 /*
@@ -44,6 +44,7 @@ import org.lockss.plugin.base.*;
 import org.lockss.util.*;
 import org.lockss.plugin.definable.DefinablePlugin.*;
 import org.lockss.oai.*;
+import org.lockss.state.AuState;
 
 /**
  * <p>ConfigurableArchivalUnit: An implementatation of Base Archival Unit used
@@ -83,6 +84,8 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     "au_login_page_checker";
   public static final String KEY_AU_REDIRECT_TO_LOGIN_URL_PATTERN =
     "au_redirect_to_login_url_pattern";
+  public static final String KEY_DONT_POLL =
+    "au_dont_poll";
 
   public static final String RANGE_SUBSTITUTION_STRING = "(.*)";
   public static final String NUM_SUBSTITUTION_STRING = "(\\d+)";
@@ -321,6 +324,13 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 
   protected CrawlWindow makeCrawlWindow() {
     return getDefinablePlugin().makeCrawlWindow();
+  }
+
+  public boolean shouldCallTopLevelPoll(AuState aus) {
+    if (definitionMap.getBoolean(KEY_DONT_POLL, false)) {
+      return false;
+    }
+    return super.shouldCallTopLevelPoll(aus);
   }
 
 // ---------------------------------------------------------------------

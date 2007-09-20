@@ -43,6 +43,10 @@
     <string>.tar$</string>
   </entry>
   <entry>
+    <string>au_dont_poll</string>
+    <boolean>true</boolean>
+  </entry>
+  <entry>
     <string>plugin_config_props</string>
     <list>
       <org.lockss.daemon.ConfigParamDescr>
