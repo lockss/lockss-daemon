@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerExploderHelper.java,v 1.1.2.6 2007-09-14 22:55:43 dshr Exp $
+ * $Id: SpringerExploderHelper.java,v 1.1.2.7 2007-09-20 04:15:52 dshr Exp $
  */
 
 /*
@@ -143,21 +143,20 @@ public class SpringerExploderHelper implements ExploderHelper {
     ae.setRestOfUrl(restOfUrl);
     ae.setHeaderFields(headerFields);
     if (fileName.endsWith(".pdf")) {
+      // XXX should have issue TOC
       // Now add a link for the URL to the volume TOC page at
-      // PUB=foo/JOU=bar/VOL=bletch/index.html
+      // baseUrl + /VOL=bletch/index.html
       Hashtable addText = new Hashtable();
-      String volTOC = pathElements[0] + "/" +
-	pathElements[1] + "/" +
-	pathElements[2] + "/index.html";
+      String volTOC = baseUrl + pathElements[VOL_INDEX] + "/index.html";
       String link = "<li><a href=\"" + baseUrl + restOfUrl + "\">" +
-	pathElements[4].substring(4) + "</a></li>\n";
+	"art #" + pathElements[ART_INDEX].substring(4) + "</a></li>\n";
       logger.debug3("volTOC = " + volTOC + " link " + link);
       ae.addTextTo(volTOC, link);
       // Now add a link to the volume TOC page to the journal TOC at
-      // PUB=foo/JOU=bar/index.html
-      String journalTOC = "index.html";
+      // baseUrl + index.html
+      String journalTOC = baseUrl + "/index.html";
       link = "<li><a href=\"" + volTOC + "\">" +
-	pathElements[2].substring(4) + "</a></li>\n";
+	pathElements[VOL_INDEX].substring(4) + "</a></li>\n";
       logger.debug3("journalTOC = " + journalTOC + " link " + link);
       ae.addTextTo(journalTOC, link);
     } else if (fileName.endsWith(".xml")) {

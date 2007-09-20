@@ -1,5 +1,5 @@
 /*
- * $Id: ElsevierExploderHelper.java,v 1.1.2.2 2007-09-16 20:47:20 dshr Exp $
+ * $Id: ElsevierExploderHelper.java,v 1.1.2.3 2007-09-20 04:15:52 dshr Exp $
  */
 
 /*
@@ -45,9 +45,7 @@ import org.lockss.plugin.*;
  *
  * 1. <code>${JOURNAL_ID}</code> JOURNAL_ID is the ISSN without the dash.
  *
- * 2. <code>${ISSUE_ID}</code> ISSUE_ID is a unique number
- *
- * 5. <code>${ARTICLE_ID}</code> ARTICLE_ID is a number (I think it is unique)
+ * 2. <code>${ARTICLE_ID}</code> ARTICLE_ID is a number (I think it is unique)
  * This directory contains files called
  * - *.pdf PDF
  * - *.raw ASCII
@@ -72,8 +70,7 @@ import org.lockss.plugin.*;
  */
 public class ElsevierExploderHelper implements ExploderHelper {
   private static final int JOU_INDEX = 0;
-  private static final int ISU_INDEX = 1;
-  private static final int ART_INDEX = 2;
+  private static final int ART_INDEX = 1;
   static final int endOfBase = 1;
   static final int minimumPathLength = 3;
   static Logger logger = Logger.getLogger("ElsevierExploderHelper");
@@ -158,21 +155,13 @@ public class ElsevierExploderHelper implements ExploderHelper {
     ae.setRestOfUrl(restOfUrl);
     ae.setHeaderFields(headerFields);
     if (fileName.endsWith(".pdf")) {
-      // Now add a link for the URL to the issue TOC page at
-      // ${JOURNAL_ID}/${ISSUE_ID}/index.html
-      Hashtable addText = new Hashtable();
-      String issueTOC = pathElements[JOU_INDEX] + "/" +
-	pathElements[ISU_INDEX] + "/" + "/index.html";
-      String link = "<li><a href=\"" + baseUrl + restOfUrl + "\">" +
-	pathElements[ART_INDEX] + "</a></li>\n";
-      logger.debug3("issueTOC = " + issueTOC + " link " + link);
-      ae.addTextTo(issueTOC, link);
-      // Now add a link to the issue TOC page to the journal TOC at
+      // Add a link to the article to the journal TOC page at
       // ${JOURNAL_ID}/index.html
-      String journalTOC = "index.html";
-      link = "<li><a href=\"" + issueTOC + "\">" +
-	pathElements[ISU_INDEX] + "</a></li>\n";
-      logger.debug3("journalTOC = " + journalTOC + " link " + link);
+      Hashtable addText = new Hashtable();
+      String journalTOC = baseUrl + "/index.html";
+      String link = "<li><a href=\"" + baseUrl + restOfUrl + "\">" +
+	"art #" + pathElements[ART_INDEX] + "</a></li>\n";
+      logger.debug3("journalTOC " + journalTOC + " link " + link);
       ae.addTextTo(journalTOC, link);
     } else if (fileName.endsWith(".xml")) {
       // XXX it would be great to be able to get the DOI from the

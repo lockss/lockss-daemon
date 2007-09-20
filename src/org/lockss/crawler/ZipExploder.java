@@ -1,5 +1,5 @@
 /*
- * $Id: ZipExploder.java,v 1.1.2.9 2007-09-15 15:02:31 dshr Exp $
+ * $Id: ZipExploder.java,v 1.1.2.10 2007-09-20 04:15:52 dshr Exp $
  */
 
 /*
@@ -123,6 +123,7 @@ public class ZipExploder extends Exploder {
 	}
       }
       addText();
+      reTry = maxRetries + 1;
     } catch (IOException ex) {
       logger.siteError("ZipExploder.explodeUrl() threw", ex);
       continue;

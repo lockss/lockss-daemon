@@ -1,5 +1,5 @@
 /*
- * $Id: Exploder.java,v 1.1.2.2 2007-09-15 02:49:51 dshr Exp $
+ * $Id: Exploder.java,v 1.1.2.3 2007-09-20 04:15:52 dshr Exp $
  */
 
 /*
@@ -44,6 +44,7 @@ import org.lockss.config.Configuration;
 import org.lockss.app.LockssDaemon;
 import org.lockss.state.HistoryRepository;
 import org.lockss.plugin.UrlCacher;
+import org.lockss.filter.StringFilter;
 
 /**
  * The abstract base class for exploders, which handle extracting files from
@@ -65,6 +66,21 @@ public abstract class Exploder {
   protected Hashtable addTextTo = null;
   protected PluginManager pluginMgr = null;
   protected Hashtable touchedAus = new Hashtable();
+
+  protected static final String indexTag = "<!-- Next Entry Goes Here -->\n";
+  protected static final String indexPage = 
+    "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\n" +
+    "  \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n" +
+    "<html xmlns=\"http://www.w3.org/1999/xhtml\">\n" +
+    "<head>\n" +
+    "<title>Manifest page</title>\n" +
+    "</head>\n" +
+    "<body>\n" +
+    "<ul>\n" +
+    indexTag +
+    "</ul>\n" +
+    "</body>\n" +
+    "</html>\n";
 
   /**
    * Constructor
@@ -168,15 +184,20 @@ public abstract class Exploder {
 	addTextTo = new Hashtable();
       }
       for (Enumeration en = addText.keys(); en.hasMoreElements(); ) {
-	String restOfUrl = (String)en.nextElement();
-	String newText = "";
-	if (addTextTo.containsKey(addBaseUrl + restOfUrl)) {
-	  newText = (String)addTextTo.get(addBaseUrl + restOfUrl);
+	String addToUrl = (String)en.nextElement();
+	String oldText = "";
+	if (addTextTo.containsKey(addToUrl)) {
+	  oldText = (String)addTextTo.get(addToUrl);
 	}
-	newText += (String)addText.get(restOfUrl);
-	addTextTo.put(addBaseUrl + restOfUrl, newText);
-	logger.debug3("addText for " + addBaseUrl + restOfUrl +
-		      " now " + newText);
+	String addition = (String)addText.get(addToUrl);
+	if (oldText.indexOf(addition) < 0) {
+	  oldText += addition;
+	  addTextTo.put(addToUrl, oldText);
+	  logger.debug3("addText for " + addToUrl +
+			" now " + oldText);
+	} else {
+	  logger.debug3(oldText + " contains " + addition);
+	}
       }
     }
   }
@@ -191,24 +212,72 @@ public abstract class Exploder {
 	if (cu == null) {
 	  logger.error("Trying to update page outside AU" +
 		       url);
-	} else {
+	} else try {
 	  addTextToPage(cu, url, text);
+	} catch (IOException e) {
+	  logger.error("addTextToPage(" + url + ") threw " + e.toString());
+	} finally {
 	  cu.release();
-	}
+	}	  
       }
     }
   }
 
-  protected void addTextToPage(CachedUrl cu, String url, String text) {
-    ArchivalUnit au = cu.getArchivalUnit();
-    if (!cu.hasContent()) {
+  protected void addTextToPage(CachedUrl indexCu, String url, String newText)
+      throws IOException {
+    ArchivalUnit au = indexCu.getArchivalUnit();
+    Reader oldPage = null;
+    CIProperties props = new CIProperties();
+    if (!indexCu.hasContent()) {
       // Create a new page
       logger.debug3("Create new page " + url + " in " + au.getAuId());
-      // XXX
+      oldPage = new StringReader(indexPage);
+      props = syntheticHeaders(url, indexPage.length() + newText.length());
+    } else {
+      logger.debug3("Adding text " + newText + " to page " + url +
+		    " in " + au.getAuId());
+      oldPage = indexCu.openForReading();
+      props = indexCu.getProperties();
     }
-    logger.debug3("Adding text " + text + " to page " + url +
-		  " in " + au.getAuId());
-    // XXX add the text to the page
+    BaseUrlCacher indexUc = (BaseUrlCacher)au.makeUrlCacher(url);
+    if (indexUc != null) {
+      Reader rdr = new StringFilter(oldPage, indexTag, newText + indexTag);
+      indexUc.storeContent(new ReaderInputStream(rdr), props);
+      logger.debug3("stored filtered text at " + url);
+    } else {
+      logger.error("No URL cacher for " + url);
+    }
+  }
+
+  protected static final String[] extension = {
+    ".html",
+    ".htm",
+    ".txt",
+    ".xml",
+  };
+  protected static final String[] contentType = {
+    "text/html",
+    "text/html",
+    "text/plain",
+    "application/xml",
+  };
+
+  /**
+   * Return a CIProperties object containing a set of header fields
+   * and values that seem appropriate for the URL in question.
+   */
+  protected CIProperties syntheticHeaders(String url, int size) {
+    CIProperties ret = new CIProperties();
+    ret.setProperty(CachedUrl.PROPERTY_NODE_URL, url);
+    if (size >= 0) {
+      ret.setProperty("Content-Length", Integer.toString(size));
+    }
+    for (int i = 0; i < extension.length; i++) {
+      if (url.endsWith(extension[i])) {
+	ret.setProperty("Content-Type", contentType[i]);
+      }
+    }
+    return ret;
   }
 
   protected class DefaultExploderHelper implements ExploderHelper {
