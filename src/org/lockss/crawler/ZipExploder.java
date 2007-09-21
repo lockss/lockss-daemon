@@ -1,5 +1,5 @@
 /*
- * $Id: ZipExploder.java,v 1.1.2.10 2007-09-20 04:15:52 dshr Exp $
+ * $Id: ZipExploder.java,v 1.1.2.11 2007-09-21 17:15:30 dshr Exp $
  */
 
 /*
@@ -57,6 +57,7 @@ public class ZipExploder extends Exploder {
   private static Logger logger = Logger.getLogger("ZipExploder");
   protected ExploderHelper helper = null;
   protected int reTry = 0;
+  protected CIProperties arcProps = null;
 
   /**
    * Constructor
@@ -94,6 +95,7 @@ public class ZipExploder extends Exploder {
 	arcStream = cachedUrl.getUnfilteredInputStream();
       } else {
 	arcStream = urlCacher.getUncachedInputStream();
+	arcProps = urlCacher.getUncachedProperties();
       }
       zis = new ZipInputStream(arcStream);
       ZipEntry ze;
@@ -122,7 +124,13 @@ public class ZipExploder extends Exploder {
 	  logger.debug("Directory " + ze.getName() + " in " + archiveUrl);
 	}
       }
+      // Success
       addText();
+      if (!storeArchive) {
+	// Leave stub archive behind to prevent re-fetch
+	byte[] dummy = { 0, };
+	urlCacher.storeContent(new ByteArrayInputStream(dummy), arcProps);
+      }
       reTry = maxRetries + 1;
     } catch (IOException ex) {
       logger.siteError("ZipExploder.explodeUrl() threw", ex);

@@ -1,5 +1,5 @@
 /*
- * $Id: TarExploder.java,v 1.1.2.4 2007-09-16 20:47:21 dshr Exp $
+ * $Id: TarExploder.java,v 1.1.2.5 2007-09-21 17:15:30 dshr Exp $
  */
 
 /*
@@ -57,6 +57,7 @@ public class TarExploder extends Exploder {
   private static Logger logger = Logger.getLogger("TarExploder");
   protected ExploderHelper helper = null;
   protected int reTry = 0;
+  protected CIProperties arcProps = null;
 
   /**
    * Constructor
@@ -94,6 +95,7 @@ public class TarExploder extends Exploder {
 	arcStream = cachedUrl.getUnfilteredInputStream();
       } else {
 	arcStream = urlCacher.getUncachedInputStream();
+	arcProps = urlCacher.getUncachedProperties();
       }
       tis = new TarInputStream(arcStream);
       TarEntry te;
@@ -123,6 +125,11 @@ public class TarExploder extends Exploder {
 	}
       }
       addText();
+      if (!storeArchive) {
+	// Leave stub archive behind to prevent re-fetch
+	byte[] dummy = { 0, };
+	urlCacher.storeContent(new ByteArrayInputStream(dummy), arcProps);
+      }
       reTry = maxRetries+1;
     } catch (IOException ex) {
       logger.siteError("TarExploder.explodeUrl() threw", ex);
