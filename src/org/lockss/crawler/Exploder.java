@@ -1,5 +1,5 @@
 /*
- * $Id: Exploder.java,v 1.1.2.4 2007-09-20 18:33:24 dshr Exp $
+ * $Id: Exploder.java,v 1.1.2.5 2007-09-21 03:22:24 dshr Exp $
  */
 
 /*
@@ -257,28 +257,64 @@ public abstract class Exploder {
     ".htm",
     ".txt",
     ".xml",
+    ".pdf",
+    ".raw",
+    ".sgm",
+    ".gif",
+    ".jpg",
+    ".toc",
+    ".fil",
+    ".sml",
+    ".tiff",
+    ".doc",
   };
   protected static final String[] contentType = {
     "text/html",
     "text/html",
     "text/plain",
     "application/xml",
+    "application/pdf",
+    "text/plain",
+    "application/sgml",
+    "image/gif",
+    "image/jpeg",
+    "text/plain", // XXX check
+    "text/plain", // XXX check
+    "application/sgml",
+    "image/tiff",
+    "application/msword",
   };
+  private static HashMap mimeMap = null;
 
   /**
    * Return a CIProperties object containing a set of header fields
    * and values that seem appropriate for the URL in question.
    */
-  protected CIProperties syntheticHeaders(String url, int size) {
+  public static CIProperties syntheticHeaders(String url, long size) {
     CIProperties ret = new CIProperties();
+
+    if (mimeMap == null) {
+      mimeMap = new HashMap();
+      for (int i = 0; i < extension.length; i++) {
+	mimeMap.put(extension[i], contentType[i]);
+      }
+    }
+
+    String mimeType = "text/plain";
+    int ix = url.lastIndexOf(".");
+    if (ix > 0) {
+      String mt = (String)mimeMap.get(url.substring(ix));
+      if (mt !=null) {
+	mimeType = mt;
+      }
+    }
+    logger.debug3(url + " mime-type " + mimeType);
+    ret.setProperty("Content-Type", mimeType);
+    ret.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, mimeType);
+
     ret.setProperty(CachedUrl.PROPERTY_NODE_URL, url);
     if (size >= 0) {
-      ret.setProperty("Content-Length", Integer.toString(size));
-    }
-    for (int i = 0; i < extension.length; i++) {
-      if (url.endsWith(extension[i])) {
-	ret.setProperty("Content-Type", contentType[i]);
-      }
+      ret.setProperty("Content-Length", Long.toString(size));
     }
     return ret;
   }
