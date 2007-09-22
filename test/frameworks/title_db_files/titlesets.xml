@@ -109,6 +109,12 @@
         <property name="xpath" value="[attributes/publisher='American Academy of Pediatrics']" />
       </property>
 
+      <property name="American Anthropological Association">
+        <property name="name" value="All American Anthropological Association Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='American Anthropological Association']" />
+      </property>
+
       <property name="American Association for Clinical Chemistry">
         <property name="name" value="All American Association for Clinical Chemistry Titles" />
         <property name="class" value="xpath" />
