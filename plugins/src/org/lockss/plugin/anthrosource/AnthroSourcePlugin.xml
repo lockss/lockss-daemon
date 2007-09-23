@@ -29,7 +29,7 @@
       <string>4,&quot;^%s&quot;, base_url</string>
       <string>1,&quot;^%slockss/%s/%d/index.html&quot;, base_url, journal_id, volume</string>
       <string>1,&quot;^%s.*\.([cC][sS][sS]|[gG][iI][fF]|[iI][cC][oO]|[jJ][pP][eE]?[gG]|[jJ][sS]|[pP][nN][gG]|[tT][iI][fF]?[fF])$&quot;, base_url</string>
-      <string>1,&quot;^%stoc/%s/([0-9]{4}/)?%d/&quot;, base_url, journal_id, volume</string>
+      <string>1,&quot;^%stoc/%s/([0-9]+/)?%d/&quot;, base_url, journal_id, volume</string>
       <string>1,&quot;^%sdoi/(pdf|pdfplus|abs)/[.0-9]+/%s\.[0-9]+\.%d\.&quot;, base_url, journal_id, volume</string>
     </list>
   </entry>
@@ -71,5 +71,13 @@
   <entry>
     <string>au_url_normalizer</string>
     <string>org.lockss.plugin.anthrosource.AnthroSourceUrlNormalizer</string>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.bepress.BePressHtmlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_au_config_user_msg</string>
+    <string>&quot;Your institutional administrator must &lt;a href='http://www.anthrosource.net/action/institutionLockssIpChange'&gt;register the IP address of this LOCKSS box with AnthroSource&lt;/a&gt;, or your LOCKSS box may be banned from collecting this Archival Unit.&quot;</string>
   </entry>
 </map>
