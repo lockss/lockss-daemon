@@ -1686,7 +1686,7 @@
       <property name="attributes.publisher" value="Oxford University Press"/>
     </property>
 
-    <property name="HighWireEnterpriseampSociety7">
+    <property name="HighWireEnterpriseandSociety7">
       <property name="title" value="Enterprise &amp; Society Volume 7"/>
       <property name="journalTitle" value="Enterprise &amp; Society"/>
       <property name="estSize" value="50MB"/>
@@ -7875,12 +7875,12 @@
       <property name="journalTitle" value="Literary Imagination" />
       <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http//litimag.oxfordjournals.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://litimag.oxfordjournals.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="volume_name" />
-	<property name="value" value="8" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="8" />
       </property>
       <property name="attributes.publisher" value="Oxford University Press" />
     </property>
