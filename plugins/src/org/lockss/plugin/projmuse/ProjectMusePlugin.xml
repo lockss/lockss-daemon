@@ -21,7 +21,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;%s, %s, Volume %d&quot;, base_url_host, journal_dir, volume</string>
+    <string>&quot;%s, %s, Volume %d&quot;, base_url, journal_dir, volume</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>

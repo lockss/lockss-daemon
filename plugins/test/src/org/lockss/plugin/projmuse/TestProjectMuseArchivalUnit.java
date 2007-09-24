@@ -1,10 +1,10 @@
 /*
- * $Id: TestProjectMuseArchivalUnit.java,v 1.5 2007-01-14 08:13:18 tlipkis Exp $
+ * $Id: TestProjectMuseArchivalUnit.java,v 1.6 2007-09-24 17:43:04 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -230,10 +230,10 @@ public class TestProjectMuseArchivalUnit extends LockssTestCase {
 
   public void testGetName() throws Exception {
     DefinableArchivalUnit au = makeAu(new URL(ROOT_URL), 60, DIR);
-    assertEquals("muse.jhu.edu, american_imago, vol. 60", au.getName());
+    assertEquals("http://muse.jhu.edu/, american_imago, Volume 60", au.getName());
     DefinableArchivalUnit au1 =
         makeAu(new URL("http://www.bmj.com/"), 61, "bmj");
-    assertEquals("www.bmj.com, bmj, vol. 61", au1.getName());
+    assertEquals("http://www.bmj.com/, bmj, Volume 61", au1.getName());
   }
 
   public void testGetFilterRules() throws Exception {
