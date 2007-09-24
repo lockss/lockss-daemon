@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.52 2007-08-23 06:21:11 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.53 2007-09-24 18:37:11 dshr Exp $
  */
 
 /*
@@ -334,6 +334,10 @@ public class ConfigManager implements LockssManager {
     Configuration config = new ConfigurationPropTreeImpl();
     for (Iterator iter = props.keySet().iterator(); iter.hasNext(); ) {
       String key = (String)iter.next();
+      if (props.getProperty(key) == null) {
+	log.error(key + " has no value");
+	throw new RuntimeException("no value for " + key);
+      }
       config.put(key, props.getProperty(key));
     }
     return config;

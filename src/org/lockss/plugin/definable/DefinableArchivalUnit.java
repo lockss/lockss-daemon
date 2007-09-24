@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.59 2007-08-12 01:48:58 tlipkis Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.60 2007-09-24 18:37:12 dshr Exp $
  */
 
 /*
@@ -44,6 +44,7 @@ import org.lockss.plugin.base.*;
 import org.lockss.util.*;
 import org.lockss.plugin.definable.DefinablePlugin.*;
 import org.lockss.oai.*;
+import org.lockss.state.AuState;
 
 /**
  * <p>ConfigurableArchivalUnit: An implementatation of Base Archival Unit used
@@ -57,16 +58,17 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 
   public static final String PREFIX_NUMERIC = "numeric_";
   public static final int DEFAULT_AU_CRAWL_DEPTH = 1;
-  public static final String DEFAULT_AU_ARC_PATTERN = null;
+  public static final String DEFAULT_AU_EXPLODER_PATTERN = null;
   public static final String KEY_AU_NAME = "au_name";
   public static final String KEY_AU_CRAWL_RULES = "au_crawlrules";
   public static final String KEY_AU_CRAWL_WINDOW = "au_crawlwindow";
   public static final String KEY_AU_CRAWL_WINDOW_SER = "au_crawlwindow_ser";
   public static final String KEY_AU_EXPECTED_BASE_PATH = "au_expected_base_path";
   public static final String KEY_AU_CRAWL_DEPTH = "au_crawl_depth";
-  public static final String KEY_AU_ARC_PATTERN = "au_arc_pattern";
   public static final String KEY_AU_MANIFEST = "au_manifest";
   //public static final String KEY_AU_URL_NORMALIZER = "au_url_normalizer";
+  public static final String KEY_AU_EXPLODER_HELPER = "au_exploder_helper";
+  public static final String KEY_AU_EXPLODER_PATTERN = "au_exploder_pattern";
 
   public static final String SUFFIX_PARSER = "_parser";
   public static final String SUFFIX_LINK_EXTRACTOR_FACTORY =
@@ -82,6 +84,8 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     "au_login_page_checker";
   public static final String KEY_AU_REDIRECT_TO_LOGIN_URL_PATTERN =
     "au_redirect_to_login_url_pattern";
+  public static final String KEY_DONT_POLL =
+    "au_dont_poll";
 
   public static final String RANGE_SUBSTITUTION_STRING = "(.*)";
   public static final String NUM_SUBSTITUTION_STRING = "(\\d+)";
@@ -266,8 +270,9 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
                               makeLoginPageChecker());
     } else { // for now use the default spider crawl spec
       int depth = definitionMap.getInt(KEY_AU_CRAWL_DEPTH, DEFAULT_AU_CRAWL_DEPTH);
-      String arcPattern = definitionMap.getString(KEY_AU_ARC_PATTERN,
-						  DEFAULT_AU_ARC_PATTERN);
+      String exploderPattern = definitionMap.getString(KEY_AU_EXPLODER_PATTERN,
+						  DEFAULT_AU_EXPLODER_PATTERN);
+      ExploderHelper eh = getDefinablePlugin().getExploderHelper();
       //XXX change to a list
 //       String startUrl = paramMap.getString(AU_START_URL);
 
@@ -275,7 +280,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
       return new SpiderCrawlSpec(ListUtil.list(startUrlString),
 				 getPermissionPages(), rule, depth,
 				 makePermissionChecker(),
-				 makeLoginPageChecker(), arcPattern);
+				 makeLoginPageChecker(), exploderPattern, eh);
     }
   }
 
@@ -319,6 +324,13 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 
   protected CrawlWindow makeCrawlWindow() {
     return getDefinablePlugin().makeCrawlWindow();
+  }
+
+  public boolean shouldCallTopLevelPoll(AuState aus) {
+    if (definitionMap.getBoolean(KEY_DONT_POLL, false)) {
+      return false;
+    }
+    return super.shouldCallTopLevelPoll(aus);
   }
 
 // ---------------------------------------------------------------------

@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.29 2007-08-12 04:53:30 tlipkis Exp $
+ * $Id: DefinablePlugin.java,v 1.30 2007-09-24 18:37:12 dshr Exp $
  */
 
 /*
@@ -351,6 +351,19 @@ public class DefinablePlugin extends BasePlugin {
       }
     }
     return urlNorm;
+  }
+
+  protected ExploderHelper getExploderHelper() {
+    if (exploderHelper == null) {
+      String helperClass =
+	definitionMap.getString(DefinableArchivalUnit.KEY_AU_EXPLODER_HELPER,
+				null);
+      if (helperClass != null) {
+	exploderHelper =
+	  (ExploderHelper)newAuxClass(helperClass, ExploderHelper.class);
+      }
+    }
+    return exploderHelper;
   }
 
   protected FilterRule constructFilterRule(String contentType) {

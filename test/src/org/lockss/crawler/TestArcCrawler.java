@@ -1,5 +1,5 @@
 /*
- * $Id: TestArcCrawler.java,v 1.3 2007-03-17 21:31:31 dshr Exp $
+ * $Id: TestArcCrawler.java,v 1.4 2007-09-24 18:37:13 dshr Exp $
  */
 
 /*
@@ -98,6 +98,8 @@ public class TestArcCrawler extends TestNewContentCrawler {
 
   protected BaseCrawler crawler = null;
   protected boolean streamWrapped = false;
+  protected Exploder realExploder = null;
+  private boolean mockArchiveReader = false;
 
   public void setUp() throws Exception {
     super.setUp();
@@ -182,7 +184,6 @@ public class TestArcCrawler extends TestNewContentCrawler {
   // XXX should test ArchiveReader throwing, also during iteration
 
   private class MyArcCrawler extends ArcCrawler {
-    private boolean mockArchiveReader = false;
 
     protected MyArcCrawler(ArchivalUnit au, CrawlSpec spec,
 			   AuState aus) {
@@ -204,6 +205,23 @@ public class TestArcCrawler extends TestNewContentCrawler {
 
     protected void setMock(boolean mock) {
       mockArchiveReader = mock;
+    }
+
+    protected Exploder getExploder(UrlCacher uc, int maxRetries) {
+      Exploder ret = null;
+      if (uc.getUrl().endsWith(".arc.gz")) {
+	ret = new MyArcExploder(uc, maxRetries, crawlSpec, this, explodeFiles,
+				storeArchive);
+      }
+      return ret;
+    }
+  }
+
+  protected class MyArcExploder extends ArcExploder {
+
+    protected MyArcExploder(UrlCacher uc, int maxRetries, CrawlSpec crawlSpec,
+			    BaseCrawler crawler, boolean explode, boolean store) {
+      super(uc, maxRetries, crawlSpec, crawler, explode, store);
     }
 
     protected ArchiveReader wrapStream(UrlCacher uc, InputStream arcStream)

@@ -1,5 +1,5 @@
 /*
- * $Id: TestSpiderCrawlSpec.java,v 1.3 2007-03-17 21:31:31 dshr Exp $
+ * $Id: TestSpiderCrawlSpec.java,v 1.4 2007-09-24 18:37:13 dshr Exp $
  */
 
 /*
@@ -105,13 +105,13 @@ public class TestSpiderCrawlSpec extends LockssTestCase {
     List l2 = ListUtil.list("three", "four");
     {
       SpiderCrawlSpec cs = new SpiderCrawlSpec(l1, l2, rule, 1, null, null);
-      assertNull(cs.arcFilePattern());
+      assertNull(cs.getExploderPattern());
     }
     {
       String pattern = "pattern";
       SpiderCrawlSpec cs = new SpiderCrawlSpec(l1, l2, rule, 2, null, null,
 					       pattern);
-      assertEquals(cs.arcFilePattern(), pattern);
+      assertEquals(cs.getExploderPattern(), pattern);
     }
   }
     

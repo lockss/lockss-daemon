@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlSpec.java,v 1.19 2007-03-17 21:31:31 dshr Exp $
+ * $Id: CrawlSpec.java,v 1.20 2007-09-24 18:37:11 dshr Exp $
  */
 
 /*
@@ -88,14 +88,29 @@ public interface CrawlSpec {
   public PermissionChecker getPermissionChecker();
 
   /**
+   * Gets the login page checker
    * @return the LoginPageChecker for this crawl, or null if there isn't one
    */
   public LoginPageChecker getLoginPageChecker();
 
   /**
-   * @return pattern to recognize ARC files
+   * Gets the pattern to recognize archive files
+   * @return pattern to recognize archive files to be exploded
    */
-  public String arcFilePattern();
+  public String getExploderPattern();
+
+  // XXX temporary
+  public void setExploderPattern(String pat);
+
+  /**
+   * Gets the ExploderHelper that provides publisher-specific info
+   * for the process of exploding archives.
+   * @return instance of ExploderHelper
+   */
+  public ExploderHelper getExploderHelper();
+
+  // XXX temporary
+  public void setExploderHelper(ExploderHelper eh);
 
 }
 

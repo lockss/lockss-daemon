@@ -1,0 +1,68 @@
+# Don't make local changes in this file; put local settings in lockss.opt
+
+# LOCKSS & LCAP tuning parameters
+
+org.lockss.log.default.level=info
+
+org.lockss.ui.access.ip.logForbidden=true
+org.lockss.proxy.access.ip.logForbidden=true
+
+
+
+org.lockss.platform.diskSpacePaths=./cache
+
+
+# spepcific paths not used, computed from platform.diskSpacePaths
+#lockss repository settings
+#org.lockss.cache.location=./
+#identity manager settings
+#org.lockss.id.database.dir=./iddb
+#lockss state settings
+#org.lockss.history.location=./history
+
+org.lockss.config.reloadInterval = 30m
+
+#hasher settings
+#org.lockss.hasher.numSteps
+#org.lockss.hasher.priority
+#org.lockss.hasher.stepBytes
+
+
+#comm settings
+
+org.lockss.localIPAddress=1.1.1.1
+
+#org.lockss.comm.unicast.sendToPort=9001
+org.lockss.comm.unicast.sendToAddr=127.0.0.1
+
+org.lockss.comm.multicast.group=239.4.5.6
+#org.lockss.comm.multicast.port=3456
+org.lockss.comm.multicast.port=localIp
+org.lockss.comm.unicast.port=1025
+org.lockss.comm.multicast.verify=no
+
+# lcap protocol settings
+org.lockss.protocol.ttl=2
+org.lockss.protocol.hashAlgorithm=SHA-1
+
+# poll settings
+org.lockss.poll.maxpolls=12
+org.lockss.poll.quorum=3
+org.lockss.poll.agreeVerify=0
+org.lockss.poll.disagreeVerify=0
+org.lockss.poll.namepoll.deadline=300000
+org.lockss.poll.contentpoll.min=180000
+org.lockss.poll.contentpoll.max=300000
+
+org.lockss.daemon.exit=false
+#org.lockss.shouldRegisterSimSA=true
+
+org.lockss.proxy.icp.enabled=true
+org.lockss.proxy.icp.port=3131
+
+org.lockss.crawler.startCrawlsInterval=5m
+org.lockss.crawler.threadPool.max=5
+
+org.lockss.crawlStatus.keepUrls=all
+
+org.lockss.platform.project=CLOCKSS

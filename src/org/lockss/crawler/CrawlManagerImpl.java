@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.111 2007-08-15 07:09:37 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.112 2007-09-24 18:37:11 dshr Exp $
  */
 
 /*
@@ -44,6 +44,7 @@ import org.lockss.util.*;
 import org.lockss.app.*;
 import org.lockss.state.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.exploded.*;
 
 /**
  * This is the interface for the object that will sit between the crawler
@@ -530,6 +531,11 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     if (au == null) {
       throw new IllegalArgumentException("Called with null AU");
     }
+    if (au instanceof ExplodedArchivalUnit) {
+      logger.debug("Can't crawl ExplodedArchivalUnit");
+      callCallback(cb, cookie, false, null);
+      return;
+    }
     if (!crawlerEnabled) {
       logger.warning("Crawler disabled, not crawling: " + au);
       callCallback(cb, cookie, false, null);
@@ -578,10 +584,10 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       return;
     }
     Crawler crawler = null;
+    CrawlRunner runner = null;
     try {
       crawler = makeNewContentCrawler(au, spec);
-      CrawlRunner runner =
-	new CrawlRunner(crawler, spec, cb, cookie, SetUtil.set(lock),
+      runner = new CrawlRunner(crawler, spec, cb, cookie, SetUtil.set(lock),
 			limiter, newContentStartRateLimiter);
       // To avoid race, must add to running crawls before starting
       // execution
@@ -596,9 +602,14 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       if (e.getMessage() != null &&
 	  e.getMessage().endsWith("Pool is blocked")) {
 	logger.warning("Couldn't start/schedule " + au + " crawl: " +
-		       e.toString());
+		       e.toString() + " " +
+		       (crawler == null ? "no crawler" : crawler.toString()) +
+		       " " + (runner == null ? "no runner" : runner.toString()));
       } else {
-	logger.warning("Couldn't start/schedule " + au + " crawl", e);
+	logger.warning("Couldn't start/schedule " + au + " crawl"  +
+		       " " +
+		       (crawler == null ? "no crawler" : crawler.toString()) +
+		       " " + (runner == null ? "no runner" : runner.toString()), e);
       }
       logger.debug("Freeing crawl lock");
       lock.expire();
@@ -630,7 +641,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     if (spec instanceof OaiCrawlSpec) {
       logger.debug("Creating OaiCrawler for " + au);
       return new OaiCrawler(au, spec, AuUtil.getAuState(au));
-    } else if (spec.arcFilePattern() != null) {
+    } else if (".arc.gz$".equals(spec.getExploderPattern())) {  // XXX goes away
       logger.debug("Creating ArcCrawler for " + au);
       return new ArcCrawler(au, spec, AuUtil.getAuState(au));
     } else {

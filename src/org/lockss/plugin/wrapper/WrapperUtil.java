@@ -1,5 +1,5 @@
 /*
- * $Id: WrapperUtil.java,v 1.2 2007-02-06 01:03:07 tlipkis Exp $
+ * $Id: WrapperUtil.java,v 1.3 2007-09-24 18:37:12 dshr Exp $
  */
 
 /*
@@ -67,6 +67,8 @@ public class WrapperUtil {
 			   new ConfigurableCrawlWindowWrapper.Factory());
     registerWrapperFactory(org.lockss.util.urlconn.CacheResultHandler.class,
 			   new CacheResultHandlerWrapper.Factory());
+    registerWrapperFactory(ExploderHelper.class,
+			   new ExploderHelperWrapper.Factory());
   }
 
   /** Register a wrapper factory for instances of the interface */

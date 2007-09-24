@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.49 2007-08-12 06:29:51 tlipkis Exp $
+ * $Id: BasePlugin.java,v 1.50 2007-09-24 18:37:12 dshr Exp $
  */
 
 /*
@@ -399,6 +399,11 @@ public abstract class BasePlugin
       return url;
     }
   }
+
+  protected ExploderHelper getExploderHelper() {
+    return null;
+  }
+  protected ExploderHelper exploderHelper = null;
 
   /**
    * Returns a filter rule from the cache if found, otherwise calls

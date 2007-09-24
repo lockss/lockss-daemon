@@ -1,5 +1,5 @@
 /*
- * $Id: UrlCacher.java,v 1.28 2007-07-17 06:03:49 tlipkis Exp $
+ * $Id: UrlCacher.java,v 1.29 2007-09-24 18:37:11 dshr Exp $
  */
 
 /*
@@ -87,6 +87,7 @@ public interface UrlCacher {
   public static final int REFETCH_FLAG = 0;
   public static final int CLEAR_DAMAGE_FLAG = 1;
   public static final int REFETCH_IF_DAMAGE_FLAG = 2;
+  public static final int DONT_CLOSE_INPUT_STREAM_FLAG = 4;
 
 
   /**
@@ -139,9 +140,15 @@ public interface UrlCacher {
    * refetch - refetch the content even if it's already present and up to date
    * clear damage - clear the damage flag for this node if we fetch it
    * refetch if damage - refetch this content if damaged
+   * don't close input stream - needed for archives
    * @param fetchFlags BitSet encapsulating the fetch flags
    */
   public void setFetchFlags(BitSet fetchFlags);
+
+  /**
+   * Gest the fetch flags
+   */
+  public BitSet getFetchFlags();
 
   /** Set a request header, overwriting any previous value */
   public void setRequestProperty(String key, String value);
@@ -188,7 +195,8 @@ public interface UrlCacher {
 
   /**
    * Stores the content and headers into the repository.
-   * @param input the InputStream from which the content will be read
+   * @param input the InputStream from which the content will be read. OK
+   * to close the stream unless DONT_CLOSE_INPUT_STREAM_FLAG is set
    * @param headers the server's response headers, augmented with
    * LOCKSS-specific properties
    * @throws IOException if can't open connection, get error reponse or can't

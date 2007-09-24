@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.86 2007-08-12 04:53:29 tlipkis Exp $
+ * $Id: NullPlugin.java,v 1.87 2007-09-24 18:37:14 dshr Exp $
  */
 
 /*
@@ -240,6 +240,10 @@ public class NullPlugin {
     }
 
     public void setFetchFlags(BitSet fetchFlags) {
+    }
+
+    public BitSet getFetchFlags() {
+      return new BitSet();
     }
 
     public void setRequestProperty(String key, String value) {

@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.213 2007-06-17 05:23:14 smorabito Exp $
+ * $Id: NodeManagerImpl.java,v 1.214 2007-09-24 18:37:12 dshr Exp $
  */
 
 /*
@@ -909,7 +909,12 @@ public class NodeManagerImpl
                          "on " + managedAu.getName());
             return;
           }
-          
+
+	  // If polling is disabled, don't call a poll
+	  if (!managedAu.shouldCallTopLevelPoll(getAuState())) {
+	    logger.debug("Not calling poll on " + managedAu.getName());
+	    return;
+	  }
           // If this AU has successfully crawled in the past, or if it
           // is a closed AU (publisher is no longer available), then
           // start a poll.

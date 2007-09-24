@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.183 2007-09-08 01:47:40 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.184 2007-09-24 18:37:11 dshr Exp $
  */
 
 /*
@@ -244,6 +244,9 @@ public class PluginManager
   private Map titleSetMap;
   private TreeSet titleSets;
 
+  private boolean explodedPluginLoaded = false;
+  private Plugin explodedPlugin = null;
+
   public static final int PREFER_XML_PLUGIN = 0;
   public static final int PREFER_CLASS_PLUGIN = 1;
 
@@ -293,6 +296,19 @@ public class PluginManager
     log.debug("Initializing loadable plugin registries before starting AUs");
     initLoadablePluginRegistries(getPluginRegistryUrls(config));
     initPluginRegistry(config);
+    Class explodedPluginClass = null;
+    String name = "org.lockss.plugin.exploded.ExplodedPlugin";
+    if (!explodedPluginLoaded) {
+      explodedPluginLoaded = true;
+      try {
+	explodedPluginClass = Class.forName(name);
+      } catch (ClassNotFoundException ex) {
+	log.warning("No class " + name);
+      }
+      if (explodedPluginClass != null) {
+	explodedPlugin = loadBuiltinPlugin(explodedPluginClass);
+      }
+    }
     configureAllPlugins(config);
     loadablePluginsReady = true;
   }
@@ -1332,12 +1348,19 @@ public class PluginManager
    * @return a CachedUrl, or null if URL not present in any AU
    */
   public CachedUrl findCachedUrl(String url) {
-    return findTheCachedUrl(url, false);
+    return findTheCachedUrl(url, true);
   }
 
-//   public CachedUrl findMostRecentCachedUrl(String url) {
-//     return findTheCachedUrl(url, true);
-//   }
+  /**
+   * Searches for an AU that contains the URL and returns the corresponding
+   * CachedUrl.
+   * @param url The URL to search for.
+   * @param withContent true if the CachedUrl must have content
+   * @return a CachedUrl, or null if URL not present in any AU
+   */
+  public CachedUrl findCachedUrl(String url, boolean withContent) {
+    return findTheCachedUrl(url, withContent);
+  }
 
   /** Return a collection of all AUs that have content on the host of this
    * url, sorted in AU title order.  */
@@ -1387,23 +1410,43 @@ public class PluginManager
 
   /** Find a CachedUrl for the URL.  
    */
-  private CachedUrl findTheCachedUrl(String url, boolean findMostRecent) {
+  private CachedUrl findTheCachedUrl(String url, boolean withContent) {
     // Maintain a small cache of URL -> CU.  When ICP is in use, each URL
     // will likely be looked up twice in quick succession
 
     CachedUrl res = (CachedUrl)recentCuMap.get(url);
-    if (res == null) {
-      res = findTheCachedUrl0(url, findMostRecent);
-      recentCuMap.put(url, res);
+    if (log.isDebug3()) {
+      if (res != null) {
+	log.debug3("cache hit " + res.toString() +
+		   (res.hasContent() ? "with" : "without") + " content.");
+      } else {
+	log.debug3("cache miss for " + url);
+      }
+    }
+    if (res == null || (withContent && !res.hasContent())) {
+      res = findTheCachedUrl0(url, withContent);
+      if (res != null) {
+	recentCuMap.put(url, res);
+      }
     }
     return res;
   }
 
-  private CachedUrl findTheCachedUrl0(String url, boolean findMostRecent) {
+  private CachedUrl findTheCachedUrl0(String url, boolean withContent) {
     // We don't know what AU it might be in, so can't do plugin-dependent
     // normalization yet.  But only need to do generic normalization once.
     // XXX This is wrong, as plugin-specific normalization is normally done
     // first.
+    //
+    // XXX There is a problem with this when used by *Exploder() classes.
+    // In the CLOCKSS case,  we expect huge numbers of AUs to share
+    // the same stem,  eg. http://www.elsevier.com/ and each archive
+    // that is exploded to include URLs for a large number of them.
+    // The optimization that returns the most recent one if it matches
+    // will help,  but perhaps not enough.  Ideally we want to search
+    // for AUs on the basis of their base_url,  which for
+    // ExplodedArchiveUnits is their sole definitional parameter,  so
+    // is known unique.
     String normUrl;
     String normStem;
     try {
@@ -1416,6 +1459,7 @@ public class PluginManager
     synchronized (hostAus) {
       ArrayList candidateAus = (ArrayList)hostAus.get(normStem);
       if (candidateAus == null) {
+	log.debug3("findTheCachedUrl: No AUs for " + normStem);
 	return null;
       }
       CachedUrl bestCu = null;
@@ -1424,14 +1468,20 @@ public class PluginManager
       int auIx = 0;
       for (Iterator iter = candidateAus.iterator(); iter.hasNext(); auIx++) {
 	ArchivalUnit au = (ArchivalUnit)iter.next();
+	log.debug3("findTheCachedUrl: " + normUrl + " check " + au.toString());
 	if (au.shouldBeCached(normUrl)) {
+	  log.debug3("findTheCachedUrl: " + normUrl + " should be in "
+		     + au.getAuId());
 	  try {
 	    String siteUrl = UrlUtil.normalizeUrl(normUrl, au);
 	    CachedUrl cu = au.makeCachedUrl(siteUrl);
-	    if (cu != null && cu.hasContent()) {
+	    log.debug3("findTheCachedUrl: " + siteUrl + " got " +
+		       (cu == null ? "no cu" : cu.toString()));
+	    if (cu != null && (!withContent || cu.hasContent())) {
 	      int score = score(au, cu);
 	      if (score == 0) {
 		makeFirstCandidate(candidateAus, auIx);
+		log.debug3("findTheCachedUrl: " + siteUrl + " is it");
 		return cu;
 	      }
 	      if (score < bestScore) {
@@ -1451,6 +1501,7 @@ public class PluginManager
 	}
       }
       makeFirstCandidate(candidateAus, bestAuIx);
+      log.debug3("bestCu was " + (bestCu == null ? "null" : bestCu.toString()));
       return bestCu;
     }
   }
