@@ -36,8 +36,6 @@
 
     <!-- Miscellaneous Title Database -->
 
-    <property name="title">
-
       <property name="AlaskaStateDocuments2006">
         <property name="title" value="Alaska State Documents 2006" />
         <property name="journalTitle" value="Alaska State Documents" />
@@ -422,7 +420,7 @@
 	  <property name="value" value="http://www.maxwell.lambda.ele.puc-rio.br/" />
 	</property>
       </property>
-    </property>
+
       <!-- End title database -->
   </property>
 </lockss-config>
