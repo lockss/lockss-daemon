@@ -34,6 +34,20 @@
 <lockss-config>
   <property name="org.lockss.title">
 
+    <property name="ClockssWiley2006">
+     <property name="title" value="Wiley 2006" />
+     <property name="journalTitle" value="Wiley" />
+     <property name="plugin" value="org.lockss.plugin.wiley.ClockssWileyPlugin" />
+     <property name="param.1">
+      <property name="key" value="base_url" />
+      <property name="value" value="http://source-stage.lockss.org/sourcefiles/wiley/" />
+     </property>
+     <property name="param.2">
+      <property name="key" value="year" />
+      <property name="value" value="2006" />
+     </property>
+    </property>
+
     <property name="AIChEJournal2006">
      <property name="title" value="AIChE Journal 2006" />
      <property name="journalTitle" value="AIChE Journal" />

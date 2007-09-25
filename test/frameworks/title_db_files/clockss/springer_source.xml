@@ -34,6 +34,20 @@
 <lockss-config>
   <property name="org.lockss.title">
 
+    <property name="ClockssSpringer2007">
+     <property name="title" value="Springer 2007" />
+     <property name="journalTitle" value="Springer" />
+     <property name="plugin" value="org.lockss.plugin.springer.ClockssSpringerPlugin" />
+     <property name="param.1">
+      <property name="key" value="base_url" />
+      <property name="value" value="http://source-stage.lockss.org/sourcefiles/springer/" />
+     </property>
+     <property name="param.2">
+      <property name="key" value="year" />
+      <property name="value" value="2007" />
+     </property>
+    </property>
+
     <property name="JournalofMolecularMedicine83">
      <property name="title" value="Journal of Molecular Medicine Volume 83" />
      <property name="journalTitle" value="Journal of Molecular Medicine" />
