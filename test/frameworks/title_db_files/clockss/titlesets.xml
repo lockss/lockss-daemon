@@ -97,13 +97,13 @@
         <property name="xpath" value="[pluginName='org.lockss.plugin.elsevier.ClockssElsevierPlugin']" />
       </property>
 
-      <property name="elsevier">
+      <property name="springer">
         <property name="name" value="All Springer Titles" />
         <property name="class" value="xpath" />
         <property name="xpath" value="[pluginName='org.lockss.plugin.springer.ClockssSpringerPlugin']" />
       </property>
 
-      <property name="elsevier">
+      <property name="wiley">
         <property name="name" value="All Wiley Titles" />
         <property name="class" value="xpath" />
         <property name="xpath" value="[pluginName='org.lockss.plugin.wiley.ClockssWileyPlugin']" />
