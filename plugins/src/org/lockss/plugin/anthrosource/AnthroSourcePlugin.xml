@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -73,8 +73,12 @@
     <string>org.lockss.plugin.anthrosource.AnthroSourceUrlNormalizer</string>
   </entry>
   <entry>
+    <string>application/pdf_filter_factory</string>
+    <string>org.lockss.plugin.anthrosource.AnthroSourcePdfFilterFactory</string>
+  </entry>
+  <entry>
     <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.bepress.BePressHtmlFilterFactory</string>
+    <string>org.lockss.plugin.anthrosource.AnthroSourceHtmlFilterFactory</string>
   </entry>
   <entry>
     <string>plugin_au_config_user_msg</string>
