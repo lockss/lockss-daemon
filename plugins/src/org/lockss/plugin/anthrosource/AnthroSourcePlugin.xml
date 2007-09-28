@@ -9,11 +9,11 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;AnthroSource, %s, Volume %d&quot;, journal_id, volume</string>
+    <string>&quot;AnthroSource Plugin, Base URL %s, Journal ID %s, Volume %d&quot;, base_url, journal_id, volume</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -30,6 +30,7 @@
       <string>1,&quot;^%slockss/%s/%d/index.html&quot;, base_url, journal_id, volume</string>
       <string>1,&quot;^%s.*\.([cC][sS][sS]|[gG][iI][fF]|[iI][cC][oO]|[jJ][pP][eE]?[gG]|[jJ][sS]|[pP][nN][gG]|[tT][iI][fF]?[fF])$&quot;, base_url</string>
       <string>1,&quot;^%stoc/%s/([0-9]+/)?%d/&quot;, base_url, journal_id, volume</string>
+      <string>2,&quot;^%sdoi/(pdf|pdfplus|abs)/[.0-9]+/[-.9]+$&quot;, base_url</string>
       <string>1,&quot;^%sdoi/(pdf|pdfplus|abs)/[.0-9]+/%s\.[0-9]+\.%d\.&quot;, base_url, journal_id, volume</string>
     </list>
   </entry>
