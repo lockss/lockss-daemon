@@ -1,5 +1,5 @@
 /*
- * $Id: ExploderHelperWrapper.java,v 1.2 2007-09-24 18:37:12 dshr Exp $
+ * $Id: ExploderHelperWrapper.java,v 1.3 2007-09-29 13:56:59 dshr Exp $
  */
 
 /*
@@ -49,8 +49,12 @@ public class ExploderHelperWrapper
     return inst;
   }
 
-  public void process(ArchiveEntry ae) {
+  public void process(ArchiveEntry ae) throws PluginException {
+    try {
       inst.process(ae);
+    } catch (LinkageError e) {
+      throw new PluginException.LinkageError(e);
+    }
   }
 
   static class Factory implements WrapperFactory {

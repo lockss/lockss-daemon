@@ -1,5 +1,5 @@
 /*
- * $Id: TarExploder.java,v 1.2 2007-09-24 18:37:11 dshr Exp $
+ * $Id: TarExploder.java,v 1.3 2007-09-29 13:56:59 dshr Exp $
  */
 
 /*
@@ -111,7 +111,11 @@ public class TarExploder extends Exploder {
 					     tis, crawlSpec);
 	  logger.debug3("ArchiveEntry: " + ae.getName()
 			+ " bytes "  + ae.getSize());
-	  helper.process(ae);
+          try {
+	    helper.process(ae);
+          } catch (PluginException ex) {
+            logger.error("Helper process() threw " + ex);
+          }
 	  if (ae.getBaseUrl() != null &&
 	      ae.getRestOfUrl() != null &&
 	      ae.getHeaderFields() != null) {

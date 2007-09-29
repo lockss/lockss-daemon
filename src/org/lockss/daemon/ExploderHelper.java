@@ -1,5 +1,5 @@
 /*
- * $Id: ExploderHelper.java,v 1.2 2007-09-24 18:37:11 dshr Exp $
+ * $Id: ExploderHelper.java,v 1.3 2007-09-29 13:56:59 dshr Exp $
  */
 
 /*
@@ -52,6 +52,6 @@ public interface ExploderHelper {
    * up in, the URL it is to be assigned, and the header fields.
    * @param ae the entry to be processed
    */
-  public void process(ArchiveEntry ae);
+  public void process(ArchiveEntry ae) throws PluginException;
 
 }
