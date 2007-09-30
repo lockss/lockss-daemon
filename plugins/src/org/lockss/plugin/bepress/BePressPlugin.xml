@@ -1,11 +1,11 @@
 <map>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>6</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Berkeley Electronic Press, %s, %s, Volume %d&quot;, base_url, journal_abbr, volume</string>
+    <string>&quot;Berkeley Electronic Press Plugin, Base URL %s, Journal Code %s, Volume %d&quot;, base_url, journal_abbr, volume</string>
   </entry>
   <entry>
     <string>plugin_name</string>

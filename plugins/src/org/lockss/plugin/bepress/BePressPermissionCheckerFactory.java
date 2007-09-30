@@ -1,5 +1,5 @@
 /*
- * $Id: BePressPermissionCheckerFactory.java,v 1.1 2007-08-23 17:46:26 thib_gc Exp $
+ * $Id: BePressPermissionCheckerFactory.java,v 1.2 2007-09-30 01:09:05 thib_gc Exp $
  */
 
 /*
@@ -41,7 +41,7 @@ import org.lockss.util.ListUtil;
 public class BePressPermissionCheckerFactory implements PermissionCheckerFactory {
 
   public List createPermissionCheckers(ArchivalUnit au) throws PluginException {
-    return ListUtil.list(new ProbePermissionChecker(au));
+    return ListUtil.list(new ProbePermissionChecker(null, au));
   }
 
 }
