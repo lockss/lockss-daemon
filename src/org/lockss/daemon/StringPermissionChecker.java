@@ -1,5 +1,5 @@
 /*
- * $Id: StringPermissionChecker.java,v 1.9 2006-12-09 07:09:01 tlipkis Exp $
+ * $Id: StringPermissionChecker.java,v 1.10 2007-10-01 08:16:05 tlipkis Exp $
  */
 
 /*
@@ -45,7 +45,6 @@ public class StringPermissionChecker implements PermissionChecker {
   FilterRule m_filter;
   String m_encoding;
   static Logger m_logger = Logger.getLogger("PermissionCheck");
-  private static final int PERM_BUFFER_MAX = 20000;
 
   public StringPermissionChecker(String matchString, FilterRule filterRule) {
       m_matchString = matchString;

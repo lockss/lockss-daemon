@@ -1,5 +1,5 @@
 /*
- * $Id: ProbePermissionChecker.java,v 1.20 2007-08-20 22:48:50 tlipkis Exp $
+ * $Id: ProbePermissionChecker.java,v 1.21 2007-10-01 08:16:05 tlipkis Exp $
  */
 
 /*
@@ -47,8 +47,6 @@ import org.lockss.extractor.*;
  */
 
 public class ProbePermissionChecker implements PermissionChecker {
-//   static final int PERM_BUFFER_MAX = 16 * 1024;
-
 
   String probeUrl = null;
 

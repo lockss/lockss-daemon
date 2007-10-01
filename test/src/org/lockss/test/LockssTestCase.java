@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.91 2006-11-27 07:17:28 tlipkis Exp $
+ * $Id: LockssTestCase.java,v 1.92 2007-10-01 08:16:04 tlipkis Exp $
  */
 
 /*
@@ -996,7 +996,7 @@ public class LockssTestCase extends TestCase {
 	sb.append(message);
 	sb.append(" ");
       }
-      sb.append("Expected empty Collection, but containted ");
+      sb.append("Expected empty Collection, but contained ");
       sb.append(coll);
       fail(sb.toString());
     }
