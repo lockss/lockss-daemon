@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockHasher.java,v 1.9 2007-09-12 18:32:20 tlipkis Exp $
+ * $Id: TestBlockHasher.java,v 1.10 2007-10-01 08:11:25 tlipkis Exp $
  */
 
 /*
@@ -121,8 +121,26 @@ public class TestBlockHasher extends LockssTestCase {
 
   void assertEvent(String expectedUrl, String expectedString,
 		   Object eventObj) {
-    assertEvent(expectedUrl, expectedString.length(),
-		ListUtil.list(bytes(expectedString)), eventObj);
+    assertEvent(expectedUrl, expectedString, eventObj, false);
+  }
+
+  void assertEvent(String expectedUrl, String expectedString,
+		   Object eventObj, boolean includeUrl) {
+    assertEvent(expectedUrl, expectedString.length(), expectedString,
+		eventObj, includeUrl);
+  }
+
+  void assertEvent(String expectedUrl, int expectedLength,
+		   String expectedString,
+		   Object eventObj, boolean includeUrl) {
+    if (includeUrl) {
+      assertEvent(expectedUrl, expectedLength,
+		  ListUtil.list(bytes(expectedUrl + expectedString)),
+		  eventObj);
+    } else {
+      assertEvent(expectedUrl, expectedLength,
+		  ListUtil.list(bytes(expectedString)), eventObj);
+    }
   }
 
   void assertEvent(String expectedUrl, long expectedLength, List hashed,
@@ -268,19 +286,25 @@ public class TestBlockHasher extends LockssTestCase {
     assertEmpty(handRec.getEvents());
   }
 
-  public void testOneContent(int stepSize) throws Exception {
+  public void testOneContent(int stepSize, boolean includeUrl)
+      throws Exception {
     RecordingEventHandler handRec = new RecordingEventHandler();
     MockArchivalUnit mau = setupContentTree();
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     addContent(mau, urls[4], "foo");
     MessageDigest[] digs = { dig };
     byte[][] inits = {null};
-    CachedUrlSetHasher hasher = new BlockHasher(cus, digs, inits, handRec);
-    assertEquals(3, hashToEnd(hasher, stepSize));
+    BlockHasher hasher = new BlockHasher(cus, digs, inits, handRec);
+    if (includeUrl) {
+      hasher.includeUrl(includeUrl);
+      assertEquals(urls[4].length() + 3, hashToEnd(hasher, stepSize));
+    } else {
+      assertEquals(3, hashToEnd(hasher, stepSize));
+    }
     assertTrue(hasher.finished());
     List events = handRec.getEvents();
     assertEquals(1, events.size());
-    assertEvent(urls[4], 3, ListUtil.list(bytes("foo")), events.get(0));
+    assertEvent(urls[4], 3, "foo", events.get(0), includeUrl);
   }
   
   /**
@@ -309,12 +333,19 @@ public class TestBlockHasher extends LockssTestCase {
   }
   
   public void testOneContent() throws Exception {
-    testOneContent(1);
-    testOneContent(3);
-    testOneContent(100);
+    testOneContent(1, false);
+    testOneContent(3, false);
+    testOneContent(100, false);
   }
   
-  public void testOneContentThreeVersions(int stepSize) throws Exception {
+  public void testOneContentIncludeUrl() throws Exception {
+    testOneContent(1, true);
+    testOneContent(3, true);
+    testOneContent(100, true);
+  }
+  
+  public void testOneContentThreeVersions(int stepSize, boolean includeUrl)
+      throws Exception {
     CaptureBlocksEventHandler blockHandler = 
       new CaptureBlocksEventHandler();
     MockArchivalUnit mau = setupContentTree();
@@ -327,9 +358,14 @@ public class TestBlockHasher extends LockssTestCase {
     
     MessageDigest[] digs = { dig };
     byte[][] inits = {null};
-    CachedUrlSetHasher hasher = new BlockHasher(cus, digs, inits, blockHandler);
+    BlockHasher hasher = new BlockHasher(cus, digs, inits, blockHandler);
+    hasher.includeUrl(includeUrl);
     // 9 bytes total for all three versions.
-    assertEquals(9, hashToEnd(hasher, stepSize));
+    if (includeUrl) {
+      assertEquals(urls[2].length() * 3 + 9, hashToEnd(hasher, stepSize));
+    } else {
+      assertEquals(9, hashToEnd(hasher, stepSize));
+    }
     assertTrue(hasher.finished());
     List blocks = blockHandler.getBlocks();
     assertEquals(1, blocks.size());
@@ -338,15 +374,27 @@ public class TestBlockHasher extends LockssTestCase {
     
     HashBlock.Version[] versions = b.getVersions();
 
-    assertEqualBytes(bytes("ccc"), versions[0].getHashes());
-    assertEqualBytes(bytes("bb"), versions[1].getHashes());
-    assertEqualBytes(bytes("aaaa"), versions[2].getHashes());
+    if (includeUrl) {
+      assertEqualBytes(bytes( urls[2] + "ccc"), versions[0].getHashes());
+      assertEqualBytes(bytes( urls[2] + "bb"), versions[1].getHashes());
+      assertEqualBytes(bytes( urls[2] + "aaaa"), versions[2].getHashes());
+    } else {
+      assertEqualBytes(bytes("ccc"), versions[0].getHashes());
+      assertEqualBytes(bytes("bb"), versions[1].getHashes());
+      assertEqualBytes(bytes("aaaa"), versions[2].getHashes());
+    }
   }
   
   public void testOneContentThreeVersions() throws Exception {
-    testOneContentThreeVersions(1);
-    testOneContentThreeVersions(3);
-    testOneContentThreeVersions(100);
+    testOneContentThreeVersions(1, false);
+    testOneContentThreeVersions(3, false);
+    testOneContentThreeVersions(100, false);
+  }
+
+  public void testOneContentThreeVersionsIncludeUrl() throws Exception {
+    testOneContentThreeVersions(1, true);
+    testOneContentThreeVersions(3, true);
+    testOneContentThreeVersions(100, true);
   }
 
   public void testInputStreamIsClosed() throws IOException {
@@ -400,7 +448,8 @@ public class TestBlockHasher extends LockssTestCase {
     return sb.toString();
   }
 
-  public void testSeveralContent(int stepSize) throws Exception {
+  public void testSeveralContent(int stepSize, boolean includeUrl)
+      throws Exception {
     RecordingEventHandler handRec = new RecordingEventHandler();
     MockArchivalUnit mau = setupContentTree();
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
@@ -411,18 +460,23 @@ public class TestBlockHasher extends LockssTestCase {
     addContent(mau, urls[9], s5);
     MessageDigest[] digs = { dig };
     byte[][] inits = {null};
-    CachedUrlSetHasher hasher = new BlockHasher(cus, digs, inits, handRec);
-    int len = s1.length() + s2.length() + s3.length() +
-      s4.length() + s5.length();
+    BlockHasher hasher = new BlockHasher(cus, digs, inits, handRec);
+    hasher.includeUrl(includeUrl);
+    int len =
+      s1.length() + s2.length() + s3.length() + s4.length() + s5.length();
+    if (includeUrl) {
+      len += urls[4].length() + urls[6].length() + urls[7].length() +
+	urls[8].length() + urls[9].length();
+    }
     assertEquals(len, hashToEnd(hasher, stepSize));
     assertTrue(hasher.finished());
     List events = handRec.getEvents();
     assertEquals(5, events.size());
-    assertEvent(urls[4], s1, events.get(0));
-    assertEvent(urls[6], s2, events.get(1));
-    assertEvent(urls[7], s3, events.get(2));
-    assertEvent(urls[8], s4, events.get(3));
-    assertEvent(urls[9], s5, events.get(4));
+    assertEvent(urls[4], s1, events.get(0), includeUrl);
+    assertEvent(urls[6], s2, events.get(1), includeUrl);
+    assertEvent(urls[7], s3, events.get(2), includeUrl);
+    assertEvent(urls[8], s4, events.get(3), includeUrl);
+    assertEvent(urls[9], s5, events.get(4), includeUrl);
   }
   
   public void testSeveralContentWithThrowing(int stepSize) throws Exception {
@@ -452,9 +506,15 @@ public class TestBlockHasher extends LockssTestCase {
   }
   
   public void testSeveralContent() throws Exception {
-    testSeveralContent(1);
-    testSeveralContent(3);
-    testSeveralContent(10000);
+    testSeveralContent(1, false);
+    testSeveralContent(3, false);
+    testSeveralContent(10000, false);
+  }
+  
+  public void testSeveralContentIncludeUrl() throws Exception {
+    testSeveralContent(1, true);
+    testSeveralContent(3, true);
+    testSeveralContent(10000, true);
   }
   
   public void testSeveralContentWithThrowing() throws Exception {
@@ -646,18 +706,20 @@ public class TestBlockHasher extends LockssTestCase {
     addContent(mau, urls[7], s3);
     MessageDigest[] digs = { dig };
     byte[][] inits = { bytes(chal) };
-    CachedUrlSetHasher hasher = new BlockHasher(cus, digs, inits, handRec);
-    int len = s1.length() + s2.length() + s3.length();
+    BlockHasher hasher = new BlockHasher(cus, digs, inits, handRec);
+    hasher.includeUrl(true);
+    int len = s1.length() + s2.length() + s3.length() +
+      urls[4].length() + urls[6].length() + urls[7].length();
     assertEquals(len, hashToEnd(hasher, stepSize));
     assertTrue(hasher.finished());
     List events = handRec.getEvents();
     assertEquals(3, events.size());
-    assertEvent(urls[4], s1.length(), ListUtil.list(bytes(chal, s1)),
-		events.get(0));
-    assertEvent(urls[6], s2.length(), ListUtil.list(bytes(chal, s2)),
-		events.get(1));
-    assertEvent(urls[7], s3.length(), ListUtil.list(bytes(chal, s3)),
-		events.get(2));
+    assertEvent(urls[4], s1.length(), chal + urls[4] + s1, events.get(0),
+		false);
+    assertEvent(urls[6], s2.length(), chal + urls[6] + s2, events.get(1),
+		false);
+    assertEvent(urls[7], s3.length(), chal + urls[7] + s3, events.get(2),
+		false);
   }
 
   public void testInitBytes1() throws Exception {
@@ -678,17 +740,22 @@ public class TestBlockHasher extends LockssTestCase {
     MessageDigest dig2 = new MockMessageDigest();
     MessageDigest[] digs = { dig, dig2 };
     byte[][] inits = {null, null};
-    CachedUrlSetHasher hasher = new BlockHasher(cus, digs, inits, handRec);
-    int len = s1.length() + s2.length() + s3.length();
+    BlockHasher hasher = new BlockHasher(cus, digs, inits, handRec);
+    hasher.includeUrl(true);
+    int len = s1.length() + s2.length() + s3.length() +
+      urls[4].length() + urls[6].length() + urls[7].length();
     assertEquals(len * digs.length, hashToEnd(hasher, stepSize));
     assertTrue(hasher.finished());
     List events = handRec.getEvents();
     assertEquals(3, events.size());
-    assertEvent(urls[4], s1.length(), ListUtil.list(bytes(s1), bytes(s1)),
+    assertEvent(urls[4], s1.length(),
+		ListUtil.list(bytes(urls[4] + s1), bytes(urls[4] + s1)),
 		events.get(0));
-    assertEvent(urls[6], s2.length(), ListUtil.list(bytes(s2), bytes(s2)),
+    assertEvent(urls[6], s2.length(),
+		ListUtil.list(bytes(urls[6] + s2), bytes(urls[6] + s2)),
 		events.get(1));
-    assertEvent(urls[7], s3.length(), ListUtil.list(bytes(s3), bytes(s3)),
+    assertEvent(urls[7], s3.length(), 
+		ListUtil.list(bytes(urls[7] + s3), bytes(urls[7] + s3)),
 		events.get(2));
   }
 
@@ -709,20 +776,28 @@ public class TestBlockHasher extends LockssTestCase {
     MessageDigest dig3 = new MockMessageDigest();
     MessageDigest[] digs = { dig, dig2, dig3 };
     byte[][] inits = { null, bytes(chal2), bytes(chal3) };
-    CachedUrlSetHasher hasher = new BlockHasher(cus, digs, inits, handRec);
-    int len = s1.length() + s2.length() + s3.length();
+    BlockHasher hasher = new BlockHasher(cus, digs, inits, handRec);
+    hasher.includeUrl(true);
+    int len = s1.length() + s2.length() + s3.length() +
+      urls[4].length() + urls[6].length() + urls[7].length();
     assertEquals(len * digs.length, hashToEnd(hasher, stepSize));
     assertTrue(hasher.finished());
     List events = handRec.getEvents();
     assertEquals(3, events.size());
     assertEvent(urls[4], s1.length(),
-		ListUtil.list(bytes(s1), bytes(chal2, s1), bytes(chal3, s1)),
+		ListUtil.list(bytes(urls[4] + s1),
+			      bytes(chal2 + urls[4] + s1),
+			      bytes(chal3 + urls[4] + s1)),
 		events.get(0));
     assertEvent(urls[6], s2.length(),
-		ListUtil.list(bytes(s2), bytes(chal2, s2), bytes(chal3, s2)),
+		ListUtil.list(bytes(urls[6] + s2),
+			      bytes(chal2 + urls[6] + s2),
+			      bytes(chal3 + urls[6] + s2)),
 		events.get(1));
     assertEvent(urls[7], s3.length(),
-		ListUtil.list(bytes(s3), bytes(chal2, s3), bytes(chal3, s3)),
+		ListUtil.list(bytes(urls[7] + s3),
+			      bytes(chal2 + urls[7] + s3),
+			      bytes(chal3 + urls[7] + s3)),
 		events.get(2));
   }
 

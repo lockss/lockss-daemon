@@ -1,5 +1,5 @@
 /*
- * $Id: BlockHasher.java,v 1.10 2007-09-12 18:32:20 tlipkis Exp $
+ * $Id: BlockHasher.java,v 1.11 2007-10-01 08:11:25 tlipkis Exp $
  */
 
 /*
@@ -53,6 +53,7 @@ public class BlockHasher extends GenericHasher {
   protected static Logger log = Logger.getLogger("BlockHasher");
 
   private int maxVersions = DEFAULT_HASH_MAX_VERSIONS;
+  private boolean includeUrl = false;
 
   MessageDigest[] initialDigests;
   byte[][] initByteArrays;
@@ -111,6 +112,11 @@ public class BlockHasher extends GenericHasher {
   private void setConfig() {
     maxVersions = CurrentConfig.getIntParam(PARAM_HASH_MAX_VERSIONS,
                                             DEFAULT_HASH_MAX_VERSIONS);
+  }
+
+  /** Tell the hasher whether to include the URL in the hash */
+  public void includeUrl(boolean val) {
+    includeUrl = val;
   }
 
   private String ts = null;
@@ -202,6 +208,11 @@ public class BlockHasher extends GenericHasher {
       if (!startVersion()) {
 	endOfNode();
 	return 0;
+      }
+      if (includeUrl) {
+	byte [] nameBytes = curCu.getUrl().getBytes();
+	int hashed = updateDigests(nameBytes, nameBytes.length);
+	bytesHashed += hashed;
       }
     }
     if (contentBytes == null || contentBytes.length < remaining) {
