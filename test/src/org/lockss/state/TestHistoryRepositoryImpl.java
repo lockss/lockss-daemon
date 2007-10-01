@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.64 2007-06-28 07:14:25 smorabito Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.65 2007-10-01 08:22:21 tlipkis Exp $
  */
 
 /*
@@ -61,6 +61,10 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
       super.setUp();
       ConfigurationUtil.addFromArgs(CXSerializer.PARAM_COMPATIBILITY_MODE,
                                     Integer.toString(CXSerializer.CASTOR_MODE));
+    }
+
+    public void testStoreAuState() throws Exception {
+      // Not bothering to update castor mapping file
     }
   }
 
@@ -291,9 +295,13 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
   public void testStoreAuState() throws Exception {
     HashSet strCol = new HashSet();
     strCol.add("test");
-    AuState auState = new AuState(mau, 123000, 321000, 456000,
+    AuState auState = new AuState(mau, 123000, 123123,
+				  "woop woop", 41,
+				  321000, 456000,
 				  strCol, 2, 1.0, repository);
     repository.storeAuState(auState);
+    log.info("auState: " + auState);
+
     String filePath = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath,
 							       mau);
     filePath += HistoryRepositoryImpl.AU_FILE_NAME;
@@ -302,8 +310,12 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
 
     auState = null;
     auState = repository.loadAuState();
+    log.info("auState: " + auState);
     assertEquals(123000, auState.getLastCrawlTime());
+    assertEquals(123123, auState.getLastCrawlAttempt());
     assertEquals(321000, auState.getLastTopLevelPollTime());
+    assertEquals(41, auState.getLastCrawlResultCode());
+    assertEquals("woop woop", auState.getLastCrawlResult());
     assertEquals(2, auState.getClockssSubscriptionStatus());
     // doesn't store last treewalk time, so should reset to -1
     assertEquals(-1, auState.getLastTreeWalkTime());
@@ -370,7 +382,7 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
   }
 
   public void testStoreOverwrite() throws Exception {
-    AuState auState = new AuState(mau, 123, 321, -1, null, 1, 1.0, repository);
+    AuState auState = new AuState(mau, 123, 321, 321, -1, null, 1, 1.0, repository);
     repository.storeAuState(auState);
     String filePath = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath,
 							       mau);
@@ -381,7 +393,7 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
     StreamUtil.copy(fis, baos);
     String expectedStr = baos.toString();
 
-    auState = new AuState(mau, 1234, 4321, -1, null, 1, 1.0, repository);
+    auState = new AuState(mau, 1234, 4321, 4321, -1, null, 1, 1.0, repository);
     repository.storeAuState(auState);
 
     auState = null;
@@ -390,7 +402,7 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
     assertEquals(4321, auState.getLastTopLevelPollTime());
     assertEquals(mau.getAuId(), auState.getArchivalUnit().getAuId());
 
-    auState = new AuState(mau, 123, 321, -1, null, 1, 1.0, repository);
+    auState = new AuState(mau, 123, 321, 321, -1, null, 1, 1.0, repository);
     repository.storeAuState(auState);
     fis = new FileInputStream(xmlFile);
     baos = new ByteArrayOutputStream(expectedStr.length());

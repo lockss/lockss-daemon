@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.70 2007-07-31 06:31:28 tlipkis Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.71 2007-10-01 08:22:21 tlipkis Exp $
  */
 
 /*
@@ -120,8 +120,9 @@ public class TestCrawlManagerImpl extends LockssTestCase {
   }
 
   MockArchivalUnit newMockArchivalUnit(String auid) {
-    MockArchivalUnit mau = new MockArchivalUnit(auid);
-    theDaemon.setNodeManager(nodeManager, mau);
+    MockArchivalUnit mau = new MockArchivalUnit(plugin, auid);
+    MockNodeManager nodeMgr = new MockNodeManager();
+    theDaemon.setNodeManager(nodeMgr, mau);
     return mau;
   }
 
@@ -147,6 +148,9 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     public void setUp() throws Exception {
       super.setUp();
       setUpMockAu();
+      theDaemon.setAusStarted(true);
+      cprops.put(CrawlManagerImpl.PARAM_USE_ODC, "false");
+      ConfigurationUtil.addFromProps(cprops);
       crawlManager.startService();
     }
 
@@ -239,12 +243,12 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     private void setNewContentRateLimit(String rate, String startRate) {
       cprops.put(CrawlManagerImpl.PARAM_MAX_NEW_CONTENT_RATE, rate);
       cprops.put(CrawlManagerImpl.PARAM_NEW_CONTENT_START_RATE, startRate);
-      ConfigurationUtil.setCurrentConfigFromProps(cprops);
+      ConfigurationUtil.addFromProps(cprops);
     }
 
     private void setRepairRateLimit(int events, long interval) {
       cprops.put(CrawlManagerImpl.PARAM_MAX_REPAIR_RATE, events+"/"+interval);
-      ConfigurationUtil.setCurrentConfigFromProps(cprops);
+      ConfigurationUtil.addFromProps(cprops);
     }
 
     private void assertDoesCrawlNew(MockCrawler crawler) {
@@ -608,7 +612,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     //StatusSource tests
 
     public void testGetCrawlStatusListReturnsEmptyListIfNoCrawls() {
-      List list = statusSource.getStatus().getCrawlStatusList();
+      List list = statusSource.getStatus().getCrawlerStatusList();
       assertEquals(0, list.size());
     }
 
@@ -617,7 +621,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
       crawlManager.startRepair(mau, ListUtil.list(GENERIC_URL),
 			       new TestCrawlCB(sem), null, null);
-      List actual = statusSource.getStatus().getCrawlStatusList();
+      List actual = statusSource.getStatus().getCrawlerStatusList();
       List expected = ListUtil.list(crawler.getStatus());
 
       assertEquals(expected, actual);
@@ -627,7 +631,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     public void testGetCrawlsOneNCCrawl() {
       SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
       crawlManager.startNewContentCrawl(mau, new TestCrawlCB(sem), null, null);
-      List actual = statusSource.getStatus().getCrawlStatusList();
+      List actual = statusSource.getStatus().getCrawlerStatusList();
       List expected = ListUtil.list(crawler.getStatus());
       assertEquals(expected, actual);
       waitForCrawlToFinish(sem);
@@ -643,7 +647,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       crawlManager.setTestCrawler(crawler2);
       crawlManager.startNewContentCrawl(mau, new TestCrawlCB(sem2), null, null);
 
-      List actual = statusSource.getStatus().getCrawlStatusList();
+      List actual = statusSource.getStatus().getCrawlerStatusList();
       List expected = ListUtil.list(crawler.getStatus(), crawler2.getStatus());
       assertEquals(expected, actual);
       waitForCrawlToFinish(sem1);
@@ -661,15 +665,17 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     public void testNoQueuePoolSize(int max) {
       setUpMockAu();
       cprops.put(CrawlManagerImpl.PARAM_CRAWLER_QUEUE_ENABLED, "false");
+      cprops.put(CrawlManagerImpl.PARAM_USE_ODC, "false");
       cprops.put(CrawlManagerImpl.PARAM_CRAWLER_THREAD_POOL_MAX,
 		 Integer.toString(max));
       cprops.put(CrawlManagerImpl.PARAM_MAX_NEW_CONTENT_RATE, (max*2)+"/1h");
       cprops.put(CrawlManagerImpl.PARAM_NEW_CONTENT_START_RATE, "unlimited");
-      ConfigurationUtil.setCurrentConfigFromProps(cprops);
+      ConfigurationUtil.addFromProps(cprops);
       crawlManager.startService();
       SimpleBinarySemaphore[] startSem = new SimpleBinarySemaphore[max];
       SimpleBinarySemaphore[] endSem = new SimpleBinarySemaphore[max];
       SimpleBinarySemaphore[] finishedSem = new SimpleBinarySemaphore[max];
+      HangingCrawler[] crawler = new HangingCrawler[max];
       TestCrawlCB[] cb = new TestCrawlCB[max];
       for (int ix = 0; ix < max; ix++) {
         finishedSem[ix] = new SimpleBinarySemaphore();
@@ -678,23 +684,26 @@ public class TestCrawlManagerImpl extends LockssTestCase {
         startSem[ix] = new SimpleBinarySemaphore();
         endSem[ix] = new SimpleBinarySemaphore();
         //gives sem1 when doCrawl is entered, then takes sem2
-        MockCrawler crawler = new HangingCrawler("testNoQueuePoolSize " + ix,
+	crawler[ix] = new HangingCrawler("testNoQueuePoolSize " + ix,
 						 startSem[ix], endSem[ix]);
+	MockArchivalUnit au = newMockArchivalUnit("mau" + ix);
+	au.setCrawlSpec(crawlSpec);
+	PluginTestUtil.registerArchivalUnit(plugin, au);
+	setupAuToCrawl(au, crawler[ix]);
 	semToGive(endSem[ix]);
-        crawlManager.setTestCrawler(crawler);
 
-        crawlManager.startNewContentCrawl(mau, cb[ix], null, null);
+	crawlManager.startNewContentCrawl(au, cb[ix], null, null);
       }
       for (int ix = 0; ix < max; ix++) {
         assertTrue(didntMsg("start("+ix+")", TIMEOUT_SHOULDNT),
 		   startSem[ix].take(TIMEOUT_SHOULDNT));
         //we know that doCrawl started
       }
-      MockCrawler crawler =
+      MockCrawler crawlerN =
 	new HangingCrawler("testNoQueuePoolSize ix+1",
 			   new SimpleBinarySemaphore(),
 			   semToGive(new SimpleBinarySemaphore()));
-      crawlManager.setTestCrawler(crawler);
+      crawlManager.setTestCrawler(crawlerN);
       TestCrawlCB onecb = new TestCrawlCB();
       crawlManager.startNewContentCrawl(mau, onecb, null, null);
       assertTrue("Callback for non schedulable crawl wasn't triggered",
@@ -718,6 +727,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       setUpMockAu();
       int tot = qMax + poolMax;
       cprops.put(CrawlManagerImpl.PARAM_CRAWLER_QUEUE_ENABLED, "true");
+      cprops.put(CrawlManagerImpl.PARAM_USE_ODC, "false");
       cprops.put(CrawlManagerImpl.PARAM_CRAWLER_THREAD_POOL_MAX,
 		 Integer.toString(poolMax));
       cprops.put(CrawlManagerImpl.PARAM_CRAWLER_THREAD_POOL_QUEUE_SIZE,
@@ -726,7 +736,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       int startInterval = 10;
       cprops.put(CrawlManagerImpl.PARAM_NEW_CONTENT_START_RATE,
 		 "1/" + startInterval);
-      ConfigurationUtil.setCurrentConfigFromProps(cprops);
+      ConfigurationUtil.addFromProps(cprops);
       crawlManager.startService();
       HangingCrawler[] crawler = new HangingCrawler[tot];
       SimpleBinarySemaphore[] startSem = new SimpleBinarySemaphore[tot];
@@ -745,10 +755,14 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 	//gives sem1 when doCrawl is entered, then takes sem2
 	crawler[ix] = new HangingCrawler("testQueuedPool " + ix,
 					 startSem[ix], endSem[ix]);
+	MockArchivalUnit au = newMockArchivalUnit("mau" + ix);
+	au.setCrawlSpec(crawlSpec);
+	PluginTestUtil.registerArchivalUnit(plugin, au);
+	setupAuToCrawl(au, crawler[ix]);
 	semToGive(endSem[ix]);
+
 	// queue the crawl directly
-	crawlManager.setTestCrawler(crawler[ix]);
-	crawlManager.startNewContentCrawl(mau, cb[ix], null, null);
+	crawlManager.startNewContentCrawl(au, cb[ix], null, null);
       }
       // wait for the first poolMax crawlers to start.  Keep track of their
       // start times
@@ -808,6 +822,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       Properties p = new Properties();
       p.put(CrawlManagerImpl.PARAM_CRAWLER_QUEUE_ENABLED,
 	    "true");
+      p.put(CrawlManagerImpl.PARAM_USE_ODC, "false");
       p.put(CrawlManagerImpl.PARAM_CRAWLER_THREAD_POOL_MAX,
 	    Integer.toString(poolMax));
       p.put(CrawlManagerImpl.PARAM_CRAWLER_THREAD_POOL_QUEUE_SIZE,
@@ -816,7 +831,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       p.put(CrawlManagerImpl.PARAM_START_CRAWLS_INITIAL_DELAY, "100");
       p.put(CrawlManagerImpl.PARAM_START_CRAWLS_INTERVAL, "1s");
       theDaemon.setAusStarted(true);
-      ConfigurationUtil.setCurrentConfigFromProps(p);
+      ConfigurationUtil.addFromProps(p);
       crawlManager.ausStartedSem = new SimpleBinarySemaphore();
       crawlManager.startService();
       HangingCrawler[] crawler = new HangingCrawler[tot];
@@ -838,8 +853,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 	PluginTestUtil.registerArchivalUnit(plugin, au);
       }
       // Last one is a RegistryArchivalUnit crawl
-      RegistryArchivalUnit rau =
-	new MyRegistryArchivalUnit(new RegistryPlugin());
+      RegistryArchivalUnit rau = makeRegistryAu();
       crawler[tot-1] = new HangingCrawler("testQueuedPool(reg au) " + (tot-1),
 					 null, endSem);
       setupAuToCrawl(rau, crawler[tot-1]);
@@ -871,7 +885,6 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       MockActivityRegulator act = new MockActivityRegulator(au);
       act.setStartAuActivity(true);
       theDaemon.setActivityRegulator(act, au);
-      theDaemon.setNodeManager(new MockNodeManager(), au);
       crawlManager.setTestCrawler(au, crawler);
     }
 
@@ -903,6 +916,310 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       testCrawlStarter(10, 3);
     }
 
+
+    // ODC tests
+
+    MockArchivalUnit[] makeMockAus(int n) {
+      MockArchivalUnit[] res = new MockArchivalUnit[n];
+      for (int ix = 0; ix < n; ix++) {
+	res[ix] = newMockArchivalUnit("mau" + ix);
+      }
+      return res;
+    }
+
+    CrawlReq[] makeReqs(int n) {
+      CrawlReq[] res = new CrawlReq[n];
+      for (int ix = 0; ix < n; ix++) {
+	res[ix] = new CrawlReq(newMockArchivalUnit("mau" + ix));
+      }
+      return res;
+    }
+
+    void setReq(CrawlReq req,
+		int pri, int crawlResult,
+		long crawlAttempt, long crawlFinish) {
+      setReq(req, pri, crawlResult, crawlAttempt, crawlFinish, null);
+    }
+
+    void setReq(CrawlReq req,
+		int pri, int crawlResult,
+		long crawlAttempt, long crawlFinish,
+		String limiterKey) {
+      req.priority = pri;
+      setAu((MockArchivalUnit)req.au,
+	    crawlResult, crawlAttempt, crawlFinish, limiterKey);
+    }
+
+    void setAu(MockArchivalUnit mau,
+	       int crawlResult, long crawlAttempt, long crawlFinish) {
+       setAu(mau, crawlResult, crawlAttempt, crawlFinish, null);
+    }
+
+    void setAu(MockArchivalUnit mau,
+	       int crawlResult, long crawlAttempt, long crawlFinish,
+	       String limiterKey) {
+      MockAuState aus = (MockAuState)AuUtil.getAuState(mau);
+      aus.setLastCrawlTime(crawlFinish);
+      aus.setLastCrawlAttempt(crawlAttempt);
+      aus.setLastCrawlResult(crawlResult, "foo");
+      mau.setFetchRateLimiterKey(limiterKey);
+    }	   
+
+    CrawlManagerImpl.CrawlPriorityComparator cmprtr() {
+      return new CrawlManagerImpl.CrawlPriorityComparator();
+    }
+
+    void assertCompareLess(CrawlReq r1, CrawlReq r2) {
+      assertTrue(cmprtr().compare(r1, r2) < 0);
+    }
+
+    public void testCrawlPriorityComparator() {
+      CrawlReq[] reqs = makeReqs(7);
+      setReq(reqs[0], 1, Crawler.STATUS_WINDOW_CLOSED, 9999, 9999);
+      setReq(reqs[1], 1, 0, 5000, 5000);
+      setReq(reqs[2], 0, Crawler.STATUS_WINDOW_CLOSED, -1, 2000);
+      setReq(reqs[3], 0, Crawler.STATUS_WINDOW_CLOSED, 1000, 1000);
+      setReq(reqs[4], 0, 0, -1, 1000);
+      setReq(reqs[5], 0, 0, 123, -1);
+      setReq(reqs[6], 0, 0, 123, 456);
+      for (int ix = 0; ix <= 5; ix++) {
+	assertCompareLess(reqs[ix], reqs[ix+1]);
+      }
+      List lst = ListUtil.fromArray(reqs);
+      for (int ix = 0; ix <= 5; ix++) {
+	TreeSet sorted = new TreeSet(cmprtr());
+	sorted.addAll(CollectionUtil.randomPermutation(lst)); 
+	assertIsomorphic(reqs, sorted);
+      }
+    }
+
+    void registerAus(MockArchivalUnit[] aus) {
+      List lst = ListUtil.fromArray(aus);
+      List<MockArchivalUnit> rand = CollectionUtil.randomPermutation(lst);
+      for (MockArchivalUnit mau : rand) {
+	PluginTestUtil.registerArchivalUnit(plugin, mau);
+      }
+    }    
+
+    public void testOdcQueue() throws Exception {
+      Properties p = new Properties();
+      p.put(CrawlManagerImpl.PARAM_START_CRAWLS_INTERVAL, "-1");
+      p.put(CrawlManagerImpl.PARAM_SHARED_QUEUE_MAX, "4");
+      p.put(CrawlManagerImpl.PARAM_UNSHARED_QUEUE_MAX, "3");
+      p.put(CrawlManagerImpl.PARAM_CRAWLER_THREAD_POOL_MAX, "3"); 
+      p.put(CrawlManagerImpl.PARAM_FAVOR_SHARED_RATE_THREADS, "2"); 
+      theDaemon.setAusStarted(true);
+      ConfigurationUtil.addFromProps(p);
+      crawlManager.startService();
+
+      MockArchivalUnit[] aus = makeMockAus(15);
+      registerAus(aus);
+      MockArchivalUnit auPri = newMockArchivalUnit("auPri");
+      setAu(auPri, 0, 9999, 9999);
+
+      setAu(aus[0], Crawler.STATUS_WINDOW_CLOSED, -1, 2000);
+      setAu(aus[1], Crawler.STATUS_WINDOW_CLOSED, 1000, 1000);
+      setAu(aus[2], 0, -1, 1000);
+      setAu(aus[3], 0, 123, -1);
+      setAu(aus[4], 0, 123, 456);
+
+      setAu(aus[5], Crawler.STATUS_WINDOW_CLOSED, -1, 2001, "foo");
+      setAu(aus[6], Crawler.STATUS_WINDOW_CLOSED, 1001, 1001, "foo");
+      setAu(aus[7], 0, -1, 1001, "foo");
+      setAu(aus[8], 0, 124, -1, "foo");
+      setAu(aus[9], 0, 124, 457, "foo");
+
+      setAu(aus[10], Crawler.STATUS_WINDOW_CLOSED, -1, 2002, "bar");
+      setAu(aus[11], Crawler.STATUS_WINDOW_CLOSED, 1002, 1002, "bar");
+      setAu(aus[12], 0, -1, 1002, "bar");
+      setAu(aus[13], 0, 125, -1, "bar");
+      setAu(aus[14], 0, 125, 458, "bar");
+
+      assertEquals(0, crawlManager.rebuildCount);
+      assertEquals(aus[5], crawlManager.nextReq().au);
+      assertEquals(1, crawlManager.rebuildCount);
+      crawlManager.addToRunningRateKeys(aus[5]);
+      assertEquals(aus[10], crawlManager.nextReq().au);
+      crawlManager.addToRunningRateKeys(aus[10]);
+      assertEquals(aus[0], crawlManager.nextReq().au);
+      assertEquals(aus[1], crawlManager.nextReq().au);
+      crawlManager.delFromRunningRateKeys(aus[10]);
+      assertEquals(aus[11], crawlManager.nextReq().au);
+      crawlManager.addToRunningRateKeys(aus[11]);
+      aus[5].setShouldCrawlForNewContent(false);
+      aus[10].setShouldCrawlForNewContent(false);
+      aus[0].setShouldCrawlForNewContent(false);
+      aus[1].setShouldCrawlForNewContent(false);
+      aus[11].setShouldCrawlForNewContent(false);
+      assertEquals(aus[2], crawlManager.nextReq().au);
+      crawlManager.delFromRunningRateKeys(aus[5]);
+      assertEquals(aus[6], crawlManager.nextReq().au);
+      crawlManager.addToRunningRateKeys(aus[6]);
+      aus[2].setShouldCrawlForNewContent(false);
+      aus[6].setShouldCrawlForNewContent(false);
+      assertEquals(1, crawlManager.rebuildCount);
+      assertEquals(aus[3], crawlManager.nextReq().au);
+      assertEquals(2, crawlManager.rebuildCount);
+      assertEquals(aus[4], crawlManager.nextReq().au);
+      aus[3].setShouldCrawlForNewContent(false);
+      aus[4].setShouldCrawlForNewContent(false);
+      assertEquals(null, crawlManager.nextReq());
+      crawlManager.delFromRunningRateKeys(aus[11]);
+      assertEquals(aus[12], crawlManager.nextReq().au);
+      crawlManager.addToRunningRateKeys(aus[12]);
+      assertEquals(null, crawlManager.nextReq());
+      crawlManager.delFromRunningRateKeys(aus[12]);
+      crawlManager.delFromRunningRateKeys(aus[6]);
+      PluginTestUtil.registerArchivalUnit(plugin, auPri);
+      assertEquals(aus[7], crawlManager.nextReq().au);
+      crawlManager.addToRunningRateKeys(aus[7]);
+      aus[12].setShouldCrawlForNewContent(false);
+      aus[7].setShouldCrawlForNewContent(false);
+      auPri.setShouldCrawlForNewContent(false);
+      crawlManager.startNewContentCrawl(auPri, null, null, null);
+      assertEquals(auPri, crawlManager.nextReq().au);
+      crawlManager.addToRunningRateKeys(auPri);
+      auPri.setShouldCrawlForNewContent(false);
+      assertEquals(aus[13], crawlManager.nextReq().au);
+      crawlManager.addToRunningRateKeys(aus[13]);
+      assertEquals(null, crawlManager.nextReq());
+    }
+
+    public void testOdcCrawlStarter() {
+      int num = 15;
+      int tot = num+1;
+      int rauix = tot-1;
+      int nthreads = 3;
+      Properties p = new Properties();
+      p.put(CrawlManagerImpl.PARAM_USE_ODC, "true");
+      p.put(CrawlManagerImpl.PARAM_CRAWLER_THREAD_POOL_MAX, ""+nthreads);
+      p.put(CrawlManagerImpl.PARAM_MAX_NEW_CONTENT_RATE, "1/1w");
+      p.put(CrawlManagerImpl.PARAM_NEW_CONTENT_START_RATE, (tot*2)+"/1h");
+      p.put(CrawlManagerImpl.PARAM_START_CRAWLS_INITIAL_DELAY, "10");
+      p.put(CrawlManagerImpl.PARAM_START_CRAWLS_INTERVAL, "10");
+
+      p.put(CrawlManagerImpl.PARAM_SHARED_QUEUE_MAX, "10");
+      p.put(CrawlManagerImpl.PARAM_UNSHARED_QUEUE_MAX, "10");
+      p.put(CrawlManagerImpl.PARAM_FAVOR_SHARED_RATE_THREADS,
+	    ""+(nthreads-1)); 
+      theDaemon.setAusStarted(true);
+      ConfigurationUtil.addFromProps(p);
+      crawlManager.ausStartedSem = new SimpleBinarySemaphore();
+      crawlManager.startService();
+
+      MockArchivalUnit[] aus = makeMockAus(num);
+      RegistryArchivalUnit rau = makeRegistryAu();
+
+      setAu(aus[0], Crawler.STATUS_WINDOW_CLOSED, -1, 2000);
+      setAu(aus[1], Crawler.STATUS_WINDOW_CLOSED, 1000, 1000);
+      setAu(aus[2], 0, -1, -2);
+      setAu(aus[3], 0, 123, -1);
+      setAu(aus[4], 0, 123, 456);
+
+      setAu(aus[5], Crawler.STATUS_WINDOW_CLOSED, -1, 2001, "foo");
+      setAu(aus[6], Crawler.STATUS_WINDOW_CLOSED, 1001, 1001, "foo");
+      setAu(aus[7], 0, -1, 1001, "foo");
+      setAu(aus[8], 0, 124, -1, "foo");
+      setAu(aus[9], 0, 124, 457, "foo");
+
+      setAu(aus[10], Crawler.STATUS_WINDOW_CLOSED, -1, 2002, "bar");
+      setAu(aus[11], Crawler.STATUS_WINDOW_CLOSED, 1002, 1002, "bar");
+      setAu(aus[12], 0, -1, 1002, "bar");
+      setAu(aus[13], 0, 125, -1, "bar");
+      setAu(aus[14], 0, 125, 458, "bar");
+
+      assertEmpty(pluginMgr.getAllAus());
+      registerAus(aus);
+      pluginMgr.addRegistryAu(rau);
+
+      HangingCrawler[] crawler = new HangingCrawler[tot];
+      TestCrawlCB[] cb = new TestCrawlCB[tot];
+      SimpleBinarySemaphore[] startSem = new SimpleBinarySemaphore[tot];
+      SimpleBinarySemaphore[] endSem = new SimpleBinarySemaphore[tot];
+      SimpleBinarySemaphore[] finishedSem = new SimpleBinarySemaphore[tot];
+      long startTime[] = new long[tot];
+      crawlManager.recordExecute(true);
+
+      // Create AUs and build the pieces necessary for the crawl starter to
+      // get the list of AUs from the PluginManager and a NodeManager and
+      // Activityregulator for each.  The crawl starter should then shortly
+      // start poolMax of them.  We only check that it called
+      // startNewContentCrawl() on each.
+      for (int ix = 0; ix < tot; ix++) {
+        startSem[ix] = new SimpleBinarySemaphore();
+        endSem[ix] = new SimpleBinarySemaphore();
+        finishedSem[ix] = new SimpleBinarySemaphore();
+	if (ix == rauix) {
+	  // Last one is a RegistryArchivalUnit crawl
+	  crawler[ix] = new HangingCrawler("testOdcCrawlStarter(reg au) " + ix,
+					   startSem[ix], endSem[ix]);
+	  setupAuToCrawl(rau, crawler[ix]);
+	} else {
+	  crawler[ix] = new HangingCrawler("testOdcCrawlStarter " + ix,
+					   startSem[ix], endSem[ix]);
+	  aus[ix].setCrawlSpec(crawlSpec);
+	  setupAuToCrawl(aus[ix], crawler[ix]);
+	}
+	semToGive(endSem[ix]);
+      }
+      
+      // now let the crawl starter proceed
+      crawlManager.ausStartedSem.give();
+      // Ensure they all got queued
+      List exe = Collections.EMPTY_LIST;
+      Interrupter intr = interruptMeIn(TIMEOUT_SHOULDNT * 2, true);
+
+      int pokeOrder[] =
+	{ -1, -1, -1, 0, 10, 1, 5, 6, 7, 8, 9, 3,  4, 11, 12, 13, 14};
+      int expStartOrder[] =
+	{  5, 10,  0, 1, 11, 2, 6, 7, 8, 9, 3, 4, -1, 12, 13, 14, -1};
+
+      // wait for first nthreads to start
+      // check correct three (unordered)
+      // repeat until done
+      //    let one finish
+      //    correct next one starts
+
+      List expExec = new ArrayList();
+      List expRun = new ArrayList();
+      List expEnd = new ArrayList();
+
+      for (int ix = 0; ix < tot; ix++) {
+	int poke = pokeOrder[ix];
+	if (poke >= 0) {
+	  log.info("poke(" + poke + ")");
+	  endSem[poke].give();
+	}
+	int wait = expStartOrder[ix];
+	if (wait >= 0) {
+	  assertTrue(didntMsg("start("+ix+") = " + wait, TIMEOUT_SHOULDNT),
+		     startSem[wait].take(TIMEOUT_SHOULDNT));
+	  expExec.add(crawler[wait]);
+	}
+	if (ix >= nthreads - 1) {
+	  while (exe.size() < expExec.size()) {
+	    crawlManager.waitExecuted();
+	    assertFalse("Expected " + expExec +
+			", but timed out and was " + exe,
+			intr.did());
+	    exe = crawlManager.getExecuted();
+	  }
+	  assertEquals(expExec, crawlersOf(exe));
+	}
+      }
+    }
+  }
+
+  RegistryPlugin regplugin;
+
+  RegistryArchivalUnit makeRegistryAu() {
+    if (regplugin == null) {
+      regplugin = new RegistryPlugin();
+      regplugin.initPlugin(theDaemon);
+    }
+    RegistryArchivalUnit res = new MyRegistryArchivalUnit(regplugin);
+    theDaemon.setNodeManager(new MockNodeManager(), res);
+    return res;
   }
 
   class MyRegistryArchivalUnit extends RegistryArchivalUnit {
@@ -1014,11 +1331,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       return crawler;
     }
 
-    protected boolean shouldCrawlForNewContent(ArchivalUnit au) {
-      return true;
-    }
-
-    protected void execute(Runnable run) {
+    protected void execute(Runnable run) throws InterruptedException {
       if (recordExecute) {
 	executed.add(run);
 	executedSem.give();
@@ -1033,6 +1346,22 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       else {
 	super.waitUntilAusStarted();
       }
+    }
+
+    void addToRunningRateKeys(ArchivalUnit au) {
+      if (au.getFetchRateLimiterKey() != null) {
+	runningRateKeys.add(au.getFetchRateLimiterKey());
+      }
+      highPriorityCrawlRequests.remove(au);
+    }
+    void delFromRunningRateKeys(ArchivalUnit au) {
+      runningRateKeys.remove(au.getFetchRateLimiterKey());
+    }
+
+    int rebuildCount = 0;
+    void rebuildCrawlQueue() {
+      rebuildCount++;
+      super.rebuildCrawlQueue();
     }
 
     public void recordExecute(boolean val) {
@@ -1068,6 +1397,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 	((MockCrawler)crawler).setStartTime(TimeBase.nowMs());
       }
     }
+
   }
 
   private static class ThrowingCrawler extends MockCrawler {
@@ -1076,7 +1406,8 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       this.e = e;
     }
 
-    public boolean doCrawl(Deadline deadline) {
+    public boolean doCrawl() {
+      if (false) return super.doCrawl();
       throw e;
     }
   }
@@ -1095,6 +1426,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     }
 
     public boolean doCrawl() {
+      if (false) return super.doCrawl();
       if (sem1 != null) sem1.give();
       if (sem2 != null) sem2.take();
       return false;
@@ -1112,6 +1444,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     }
 
     public boolean doCrawl() {
+      if (false) return super.doCrawl();
       sem.give();
       return true;
     }

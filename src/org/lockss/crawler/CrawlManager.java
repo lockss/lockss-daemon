@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManager.java,v 1.31 2006-11-14 19:21:29 tlipkis Exp $
+ * $Id: CrawlManager.java,v 1.32 2007-10-01 08:22:22 tlipkis Exp $
  */
 
 /*
@@ -99,5 +99,8 @@ public interface CrawlManager {
 
     /** Return true if the crawler is enabled */
     public boolean isCrawlerEnabled();
+
+    /** Return collection of pending CrawlReq */
+    Collection<CrawlReq> getPendingQueue();
   }
 }

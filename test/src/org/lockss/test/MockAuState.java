@@ -1,5 +1,5 @@
 /*
- * $Id: MockAuState.java,v 1.16 2007-06-28 07:14:25 smorabito Exp $
+ * $Id: MockAuState.java,v 1.17 2007-10-01 08:22:21 tlipkis Exp $
  */
 
 /*
@@ -54,15 +54,27 @@ public class MockAuState extends AuState {
     this(null, -1, -1, -1, new MockHistoryRepository());
   }
 
-  public MockAuState(ArchivalUnit au, long lastCrawlTime, long lastPollTime,
+  public MockAuState(ArchivalUnit au,
+		     long lastCrawlTime, long lastPollTime,
                      long lastTreeWalk, HistoryRepository historyRepo) {
-    this(au, lastCrawlTime, lastPollTime, lastTreeWalk, null, historyRepo);
+    this(au, lastCrawlTime, -1, lastPollTime, lastTreeWalk,
+	 null, historyRepo);
   }
 
-  public MockAuState(ArchivalUnit au, long lastCrawlTime, long lastPollTime,
+  public MockAuState(ArchivalUnit au,
+		     long lastCrawlTime, long lastCrawlAttempt,
+		     long lastPollTime,
+                     long lastTreeWalk, HistoryRepository historyRepo) {
+    this(au, lastCrawlTime, lastCrawlAttempt, lastPollTime, lastTreeWalk,
+	 null, historyRepo);
+  }
+
+  public MockAuState(ArchivalUnit au,
+		     long lastCrawlTime, long lastCrawlAttempt,
+		     long lastPollTime,
                      long lastTreeWalk, HashSet crawlUrls,
                      HistoryRepository historyRepo) {
-    super(au, lastCrawlTime, lastPollTime, lastTreeWalk,
+    super(au, lastCrawlTime, lastCrawlAttempt, lastPollTime, lastTreeWalk,
 	  crawlUrls, 0, 1.0, historyRepo);
   }
 
@@ -76,6 +88,10 @@ public class MockAuState extends AuState {
 
   public void setLastTreeWalkTime(long newTreeWalkTime) {
     lastTreeWalk = newTreeWalkTime;
+  }
+
+  public void setLastCrawlAttempt(long lastCrawlAttempt) {
+    this.lastCrawlAttempt = lastCrawlAttempt;
   }
 
   public void newCrawlFinished() {

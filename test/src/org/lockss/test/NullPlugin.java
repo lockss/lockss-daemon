@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.87 2007-09-24 18:37:14 dshr Exp $
+ * $Id: NullPlugin.java,v 1.88 2007-10-01 08:22:21 tlipkis Exp $
  */
 
 /*
@@ -443,6 +443,10 @@ public class NullPlugin {
 
     public RateLimiter findFetchRateLimiter() {
       return RateLimiter.UNLIMITED;
+    }
+
+    public Object getFetchRateLimiterKey() {
+      return null;
     }
 
     public int hashCode() {

@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerStatus.java,v 1.34 2006-11-14 19:21:29 tlipkis Exp $
+ * $Id: CrawlManagerStatus.java,v 1.35 2007-10-01 08:22:22 tlipkis Exp $
  */
 
 /*
@@ -49,6 +49,9 @@ public class CrawlManagerStatus {
   private int successful = 0;
   private int failed = 0;
   private Deadline nextCrawlStarter;
+  private int ausWantCrawl;
+  private int ausEligibleCrawl;
+  private boolean isOdc = false;
 
   /** Create CrawlManagerStatus with specified fixed size history */
   public CrawlManagerStatus(int histSize) {
@@ -73,7 +76,7 @@ public class CrawlManagerStatus {
   }
 
   /** Return a list of CrawlerStatus for each crawl in the history. */
-  public synchronized List getCrawlStatusList() {
+  public synchronized List getCrawlerStatusList() {
     List res = new ArrayList(statusMap.size());
     for (OrderedMapIterator iter = statusMap.orderedMapIterator();
 	 iter.hasNext(); ) {
@@ -89,7 +92,7 @@ public class CrawlManagerStatus {
   }
 
   /** Retrieve the CrawlerStatus object with the given key */
-  public synchronized CrawlerStatus getCrawlStatus(String key) {
+  public synchronized CrawlerStatus getCrawlerStatus(String key) {
     return (CrawlerStatus)statusMap.get(key);
   }
 
@@ -101,11 +104,35 @@ public class CrawlManagerStatus {
     }
   }
 
+  public boolean isOdc() {
+    return isOdc;
+  }
+
+  void setOdc(boolean val) {
+    isOdc = val;
+  }
+
   public int getSuccessCount() {
     return successful;
   }
 
   public int getFailedCount() {
     return failed;
+  }
+
+  public int getWaitingCount() {
+    return ausWantCrawl;
+  }
+
+  public int getEligibleCount() {
+    return ausEligibleCrawl;
+  }
+
+  public void setWaitingCount(int val) {
+    ausWantCrawl = val;
+  }
+
+  public void setEligibleCount(int val) {
+    ausEligibleCrawl = val;
   }
 }

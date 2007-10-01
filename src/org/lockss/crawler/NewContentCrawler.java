@@ -1,5 +1,5 @@
 /*
- * $Id: NewContentCrawler.java,v 1.54 2006-11-14 22:15:48 tlipkis Exp $
+ * $Id: NewContentCrawler.java,v 1.55 2007-10-01 08:22:22 tlipkis Exp $
  */
 
 /*
@@ -85,7 +85,8 @@ public class NewContentCrawler extends FollowLinkCrawler {
     if (refetchDepth > maxDepth){ //it should not happen
       logger.error("Max. depth is set smaller than refetchDepth." +
 		   " Abort Crawl of " + au);
-      crawlStatus.setCrawlError("Max. Crawl depth too small");
+      crawlStatus.setCrawlStatus(Crawler.STATUS_PLUGIN_ERROR,
+				 "Max crawl depth less than refetch depth");
       abortCrawl();
       //return null;
     }
@@ -117,7 +118,7 @@ public class NewContentCrawler extends FollowLinkCrawler {
 
         // check crawl window during crawl
 	if (!withinCrawlWindow()) {
-	  crawlStatus.setCrawlError(Crawler.STATUS_WINDOW_CLOSED);
+	  crawlStatus.setCrawlStatus(Crawler.STATUS_WINDOW_CLOSED);
 	  abortCrawl();
 	  //return null;
 	}
@@ -131,13 +132,14 @@ public class NewContentCrawler extends FollowLinkCrawler {
 	//that we shouldn't cache
  	if (spec.isIncluded(url)) {
 	  if (!fetchAndParse(url, extractedUrls, parsedPages, true, true)) {
-	    if (crawlStatus.getCrawlError() == null) {
-	      crawlStatus.setCrawlError(Crawler.STATUS_ERROR);
+	    if (!crawlStatus.isCrawlError()) {
+	      crawlStatus.setCrawlStatus(Crawler.STATUS_ERROR);
 	    }
 	  }
 	} else if (ix == 0) {
 	  logger.warning("Starting url not in crawl spec: " + url);
-	  crawlStatus.setCrawlError(Crawler.STATUS_PLUGIN_ERROR);
+	  crawlStatus.setCrawlStatus(Crawler.STATUS_PLUGIN_ERROR,
+				     "Starting url not in crawl spec: " + url);
 	}
       } // end while loop
       lvlCnt++;

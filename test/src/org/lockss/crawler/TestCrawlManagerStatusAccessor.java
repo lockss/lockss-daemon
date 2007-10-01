@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerStatusAccessor.java,v 1.11 2007-08-15 07:09:36 tlipkis Exp $
+ * $Id: TestCrawlManagerStatusAccessor.java,v 1.12 2007-10-01 08:22:21 tlipkis Exp $
  */
 
 /*
@@ -333,8 +333,10 @@ public class TestCrawlManagerStatusAccessor extends LockssTestCase {
   public void testCrawlType() {
     StatusTable table = new StatusTable("test");
 
-    MockCrawlStatus status = makeStatus(NC_TYPE, "Unknown");
-    MockCrawlStatus status2 = makeStatus(REPAIR_TYPE, "Unknown");
+    MockCrawlStatus status = makeStatus(NC_TYPE,
+					Crawler.STATUS_UNKNOWN, "Unknown");
+    MockCrawlStatus status2 = makeStatus(REPAIR_TYPE, Crawler.STATUS_UNKNOWN,
+					 "Unknown");
 
     statusSource.setCrawlStatusList(ListUtil.list(status, status2));
 
@@ -358,10 +360,10 @@ public class TestCrawlManagerStatusAccessor extends LockssTestCase {
 					Crawler.STATUS_ACTIVE);
 
     MockCrawlStatus status2 = makeStatus(REPAIR_TYPE,
-					Crawler.STATUS_SUCCESSFUL);
+					 Crawler.STATUS_SUCCESSFUL);
 
     MockCrawlStatus status3 = makeStatus(REPAIR_TYPE,
-					Crawler.STATUS_ERROR);
+					 Crawler.STATUS_ERROR);
 
     statusSource.setCrawlStatusList(ListUtil.list(status, status2, status3));
 
@@ -373,7 +375,7 @@ public class TestCrawlManagerStatusAccessor extends LockssTestCase {
 
     Map map = (Map)rows.get(0);
     assertEquals(STATUS_INCOMPLETE,
-		 StatusTable.getActualValue(map.get(CRAWL_STATUS)));
+ 		 StatusTable.getActualValue(map.get(CRAWL_STATUS)));
 
     map = (Map)rows.get(1);
     assertEquals(STATUS_SUCCESSFUL,
@@ -422,17 +424,26 @@ public class TestCrawlManagerStatusAccessor extends LockssTestCase {
 
   /** @deprecated */
   private static MockCrawlStatus makeStatus(String type, long start, long end) {
-    MockCrawlStatus status = makeStatus(type, "Unknown");
+    MockCrawlStatus status = makeStatus(type, Crawler.STATUS_UNKNOWN);
     status.setStartTime(start);
     status.setEndTime(end);
     return status;
   }
 
-  private static MockCrawlStatus makeStatus(String type, String crawlStatus) {
+  private static MockCrawlStatus makeStatus(String type, int code) {
     MockCrawlStatus status = new MockCrawlStatus();
     status.setType(type);
     status.setAu(new MockArchivalUnit());
-    status.setCrawlStatus(crawlStatus);
+    status.setCrawlStatus(code);
+    return status;
+  }
+
+  private static MockCrawlStatus makeStatus(String type, int code,
+					    String crawlStatus) {
+    MockCrawlStatus status = new MockCrawlStatus();
+    status.setType(type);
+    status.setAu(new MockArchivalUnit());
+    status.setCrawlStatus(code, crawlStatus);
     return status;
   }
 }

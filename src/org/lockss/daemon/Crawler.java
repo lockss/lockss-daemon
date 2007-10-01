@@ -1,5 +1,5 @@
 /*
- * $Id: Crawler.java,v 1.50 2007-02-25 23:06:38 dshr Exp $
+ * $Id: Crawler.java,v 1.51 2007-10-01 08:22:22 tlipkis Exp $
  */
 
 /*
@@ -58,17 +58,17 @@ public interface Crawler {
   public static final int OAI = 3;
   public static final int ARC = 4;
 
-  public static final String STATUS_QUEUED = "Pending";
-  public static final String STATUS_ACTIVE = "Active";
-  public static final String STATUS_SUCCESSFUL = "Successful";
-  public static final String STATUS_ERROR = "Error";
-  public static final String STATUS_ABORTED = "Aborted";
-  public static final String STATUS_WINDOW_CLOSED = "Crawl window closed";
-  public static final String STATUS_FETCH_ERROR = "Fetch error";
-  public static final String STATUS_NO_PUB_PERMISSION = "No permission from publisher";
-  public static final String STATUS_PLUGIN_ERROR = "Plugin error";
-  public static final String STATUS_REPO_ERR = "Repository error";
-  //public static final String STATUS_UNKNOWN = "Unknown";
+  public static final int STATUS_UNKNOWN = 0;
+  public static final int STATUS_QUEUED = 1;
+  public static final int STATUS_ACTIVE = 2;
+  public static final int STATUS_SUCCESSFUL = 3;
+  public static final int STATUS_ERROR = 4;
+  public static final int STATUS_ABORTED = 5;
+  public static final int STATUS_WINDOW_CLOSED = 6;
+  public static final int STATUS_FETCH_ERROR = 7;
+  public static final int STATUS_NO_PUB_PERMISSION = 8;
+  public static final int STATUS_PLUGIN_ERROR = 9;
+  public static final int STATUS_REPO_ERR = 10;
 
   /**
    * Initiate a crawl starting with all the urls in urls
@@ -131,7 +131,7 @@ public interface Crawler {
 
     public void refetchPermissionPage(String url) throws IOException;
 
-    public CrawlerStatus getCrawlStatus();
+    public CrawlerStatus getCrawlerStatus();
 
   }
 }

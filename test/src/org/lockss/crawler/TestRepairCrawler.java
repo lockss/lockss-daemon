@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepairCrawler.java,v 1.45 2007-08-30 09:55:44 smorabito Exp $
+ * $Id: TestRepairCrawler.java,v 1.46 2007-10-01 08:22:21 tlipkis Exp $
  */
 
 /*
@@ -167,7 +167,7 @@ public class TestRepairCrawler extends LockssTestCase {
     Set cachedUrls = cus.getForceCachedUrls();
     assertEquals(0, cachedUrls.size());
     assertEquals(Crawler.STATUS_WINDOW_CLOSED,
-                 crawler.getStatus().getCrawlError());
+                 crawler.getStatus().getCrawlStatus());
   }
 
   public void testRepairCrawlIgnoreCrawlWindow() {
@@ -376,7 +376,7 @@ public class TestRepairCrawler extends LockssTestCase {
                crawler.getFetchPubCnt() == 0);
     CrawlerStatus status = crawler.getStatus();
     assertEquals(ListUtil.list("127.0.0.1"), status.getSources());
-    assertEquals("Successful", status.getCrawlStatus());
+    assertEquals(Crawler.STATUS_SUCCESSFUL, status.getCrawlStatus());
     assertEquals(1234, status.getContentBytesFetched());
   }
 
@@ -409,7 +409,7 @@ public class TestRepairCrawler extends LockssTestCase {
                crawler.getFetchPubCnt() == 0);
     CrawlerStatus status = crawler.getStatus();
     assertEquals(ListUtil.list("127.0.0.1"), status.getSources());
-    assertEquals("Successful", status.getCrawlStatus());
+    assertEquals(Crawler.STATUS_SUCCESSFUL, status.getCrawlStatus());
   }
 
   public void testFetchFromCacheIgnoresLocalHost()
@@ -729,7 +729,7 @@ public class TestRepairCrawler extends LockssTestCase {
     assertEquals(1, crawlStatus.getNumFetched()); //permission page
     assertEquals(0, crawlStatus.getNumParsed());
     Map errorUrls = crawlStatus.getUrlsWithErrors();
-    assertEquals("Unexpected Exception", (String)errorUrls.get(repairUrl));
+    assertEquals("Unexpected error: Test exception", errorUrls.get(repairUrl));
     assertEquals(ListUtil.list(permissionPage), crawlStatus.getUrlsFetched());
   }
 
@@ -767,7 +767,8 @@ public class TestRepairCrawler extends LockssTestCase {
     assertEquals(0, crawlStatus.getNumParsed());
 
     Map errorUrls = crawlStatus.getUrlsWithErrors();
-    assertEquals(Crawler.STATUS_FETCH_ERROR, (String)errorUrls.get(repairUrl));
+    assertEquals(repairUrl + " couldn't repair from other caches",
+		 errorUrls.get(repairUrl));
     assertEquals(ListUtil.list(permissionPage), crawlStatus.getUrlsFetched());
   }
   /**

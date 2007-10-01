@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawlManagerStatusSource.java,v 1.8 2006-10-07 07:16:22 tlipkis Exp $
+ * $Id: MockCrawlManagerStatusSource.java,v 1.9 2007-10-01 08:22:21 tlipkis Exp $
  */
 
 /*
@@ -84,15 +84,19 @@ public class MockCrawlManagerStatusSource
     return true;
   }
 
+  public Collection<CrawlReq> getPendingQueue() {
+    return new ArrayList();
+  }
+
   static class MyCrawlManagerStatus extends CrawlManagerStatus {
     List clist;
     MyCrawlManagerStatus(List clist) {
       super(2);
       this.clist = clist;
     }
-    public List getCrawlStatusList() {
+    public List getCrawlerStatusList() {
       if (clist != null) return clist;
-      return super.getCrawlStatusList();
+      return super.getCrawlerStatusList();
     }
   }
 }

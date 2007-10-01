@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.64 2007-09-24 18:37:11 dshr Exp $
+ * $Id: FollowLinkCrawler.java,v 1.65 2007-10-01 08:22:22 tlipkis Exp $
  */
 
 /*
@@ -192,7 +192,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
     //XXX short term hack to work around populatePermissionMap not
     //indicating when a crawl window is the problem
     if (!withinCrawlWindow()) {
-      crawlStatus.setCrawlError(Crawler.STATUS_WINDOW_CLOSED);
+      crawlStatus.setCrawlStatus(Crawler.STATUS_WINDOW_CLOSED);
       return aborted();
     }
 
@@ -228,7 +228,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 
 	// check crawl window during crawl
 	if (!withinCrawlWindow()) {
-	  crawlStatus.setCrawlError(Crawler.STATUS_WINDOW_CLOSED);
+	  crawlStatus.setCrawlStatus(Crawler.STATUS_WINDOW_CLOSED);
 	  return false;
 	}
         crawlStatus.removePendingUrl(nextUrl);
@@ -246,8 +246,8 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	}
 	urlsToCrawl.remove(nextUrl);
 	if  (!crawlRes) {
-	  if (crawlStatus.getCrawlError() == null) {
-	    crawlStatus.setCrawlError(Crawler.STATUS_ERROR);
+	  if (!crawlStatus.isCrawlError()) {
+	    crawlStatus.setCrawlStatus(Crawler.STATUS_ERROR);
 	  }
 	}
 	if (usePersistantList) {
@@ -264,7 +264,8 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
       //when there are more Url to crawl in  new content crawl or follow link moded oai crawl
       logger.error("Site depth exceeds max. crawl depth. Stopped Crawl of " +
 		   au.getName() + " at depth " + lvlCnt);
-      crawlStatus.setCrawlError("Site depth exceeded max. crawl depth");
+      crawlStatus.setCrawlStatus(Crawler.STATUS_ERROR,
+				 "Site depth exceeded max. crawl depth");
       logger.debug("urlsToCrawl contains: " + urlsToCrawl);
     }
     logger.info("Crawled depth = " + lvlCnt);
@@ -273,15 +274,15 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
       return aborted();
     }
 
-    if (crawlStatus.getCrawlError() != null) {
-      logger.info("Finished crawl (errors) of "+au.getName());
-      logger.debug2("Error status = " + crawlStatus.getCrawlError());
+    if (crawlStatus.isCrawlError()) {
+      logger.info("Unfinished crawl of " + au.getName() + ", " +
+		  crawlStatus.getCrawlStatusString());
     } else {
       logger.info("Finished crawl of "+au.getName());
     }
 
     doCrawlEndActions();
-    return (crawlStatus.getCrawlError() == null);
+    return (!crawlStatus.isCrawlError());
   }
 
   // Default Set impl overridden for some tests
@@ -323,7 +324,6 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 				  Set parsedPages, boolean fetchIfChanged,
 				  boolean reparse) {
 
-    String error = null;
     logger.debug3("Dequeued url from list: "+url);
 
     //makeUrlCacher needed to handle connection pool
@@ -340,8 +340,9 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 
 	  // checking the crawl permission of the url's host
 	  if (!permissionMap.hasPermission(uc.getUrl())) {
-	    if (crawlStatus.getCrawlError() == null) {
-	      crawlStatus.setCrawlError("No permission to collect " + url);
+	    if (!crawlStatus.isCrawlError()) {
+	      crawlStatus.setCrawlStatus(Crawler.STATUS_NO_PUB_PERMISSION,
+					 "No permission to collect " + url);
 	    }
 	    return false;
 	  }
@@ -360,7 +361,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	logger.error("Repository error with "+uc, ex);
 	crawlStatus.signalErrorForUrl(uc.getUrl(),
 				      "Can't store page: " + ex.getMessage());
- 	error = Crawler.STATUS_REPO_ERR;
+ 	crawlStatus.setCrawlStatus(Crawler.STATUS_REPO_ERR);
       } catch (CacheException.RedirectOutsideCrawlSpecException ex) {
 	// Count this as an excluded URL
 	crawlStatus.signalUrlExcluded(uc.getUrl());
@@ -372,7 +373,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	crawlStatus.signalErrorForUrl(uc.getUrl(), ex.getMessage());
 	if (ex.isAttributeSet(CacheException.ATTRIBUTE_FAIL)) {
 	  logger.siteError("Problem caching "+uc+". Continuing", ex);
-	  error = Crawler.STATUS_FETCH_ERROR;
+	  crawlStatus.setCrawlStatus(Crawler.STATUS_FETCH_ERROR);
 	} else {
 	  logger.warning(uc+" not found on publisher's site", ex);
 	}
@@ -389,7 +390,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	  crawlStatus.signalErrorForUrl(uc.getUrl(), ex.toString());
 	  //XXX not expected
 	  logger.error("Unexpected Exception during crawl, continuing", ex);
-	  error = Crawler.STATUS_FETCH_ERROR;
+	  crawlStatus.setCrawlStatus(Crawler.STATUS_FETCH_ERROR);
 	}
       }
     } else {
@@ -405,7 +406,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 
     // don't parse if not following links
     if (!shouldFollowLink()) {
-      return (error == null);
+      return (!crawlStatus.isCrawlError());
     }
 
     // parse the page
@@ -440,7 +441,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 		crawlStatus.signalErrorForUrl(uc.getUrl(),
 					      "Plugin LinkExtractor error: " +
 					      e.getMessage());
-		error = Crawler.STATUS_PLUGIN_ERROR;
+		crawlStatus.setCrawlStatus(Crawler.STATUS_PLUGIN_ERROR);
 	      } finally {
 		IOUtil.safeClose(in);
 	      }
@@ -454,10 +455,10 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
     } catch (IOException ioe) {
       //XXX handle this better.  Requeue?
       logger.error("Problem parsing "+uc+". Ignoring", ioe);
-      error = Crawler.STATUS_FETCH_ERROR;
+      crawlStatus.setCrawlStatus(Crawler.STATUS_FETCH_ERROR);
     }
     logger.debug3("Removing from parsing list: "+uc.getUrl());
-    return (error == null);
+    return (!crawlStatus.isCrawlError());
   }
 
   private String getCharset(CachedUrl cu) {
@@ -505,7 +506,9 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	  if (cachingStartUrls) { //if cannot fetch anyone of StartUrls
 	    logger.error("Failed to cache " + maxTries +" times on start url " +
 			 uc.getUrl() + " .Skipping it.");
-	    crawlStatus.setCrawlError("Fail to cache start url: "+ uc.getUrl() );
+	    crawlStatus.setCrawlStatus(Crawler.STATUS_ERROR,
+				       "Failed to cache start url: "+
+				       uc.getUrl() );
 	  } else {
 	    logger.warning("Failed to cache "+ maxTries +" times.  Skipping "
 			   + uc);

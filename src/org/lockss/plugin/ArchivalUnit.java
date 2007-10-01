@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.41 2007-07-17 06:03:49 tlipkis Exp $
+ * $Id: ArchivalUnit.java,v 1.42 2007-10-01 08:22:22 tlipkis Exp $
  */
 
 /*
@@ -173,6 +173,13 @@ public interface ArchivalUnit {
    * @return the RateLimiter
    */
   public RateLimiter findFetchRateLimiter();
+
+  /**
+   * If the fetch rate limiter key is non-null, all AU with the same fetch
+   * rate limiter key share a fetch rate limiter.  If the key is null the
+   * AU doesn't share its fetch rate limiter.
+   */
+  public Object getFetchRateLimiterKey();
 
   /**
    * Return a list of urls which need to be recrawled during a new content

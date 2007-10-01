@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawler.java,v 1.26 2007-09-24 18:37:11 dshr Exp $
+ * $Id: BaseCrawler.java,v 1.27 2007-10-01 08:22:22 tlipkis Exp $
  */
 
 /*
@@ -99,9 +99,6 @@ public abstract class BaseCrawler
     Configuration.PREFIX + "crawler.mimeTypePauseAfter304";
   public static final boolean DEFAULT_MIME_TYPE_PAUSE_AFTER_304 =
     false;
-
-  // Max amount we'll buffer up to avoid refetching the permissions page
-  static final int PERM_BUFFER_MAX = 16 * 1024;
 
   protected ArchivalUnit au;
 
@@ -231,6 +228,9 @@ public abstract class BaseCrawler
    * @return true if no errors
    */
   public boolean doCrawl() {
+    if (isWholeAU()) {
+      aus.newCrawlAttempted();
+    }
     setCrawlConfig(ConfigManager.getCurrentConfig());
     // do this even if already aborted, so status doesn't get confused
     crawlStatus.signalCrawlStarted();
@@ -241,14 +241,18 @@ public abstract class BaseCrawler
       }
       logger.info("Beginning crawl of "+au);
       boolean res = doCrawl0();
-      if (res == false || crawlStatus.getCrawlError() != null) {
+      if (res == false || crawlStatus.isCrawlError()) {
 	alertMgr.raiseAlert(Alert.auAlert(Alert.CRAWL_FAILED, au),
 			    getTypeString() + " Crawl failed: " +
-			    crawlStatus.getCrawlError());
+			    crawlStatus.getCrawlStatusString());
       }
-      if (res && isWholeAU()) {
-	NodeManager nodeManager = getDaemon().getNodeManager(au);
-	nodeManager.newContentCrawlFinished();
+      if (isWholeAU()) {
+	aus.setLastCrawlResult(crawlStatus.getCrawlStatus(),
+			       crawlStatus.getCrawlStatusString());
+	if (res) {
+	  NodeManager nodeManager = getDaemon().getNodeManager(au);
+	  nodeManager.newContentCrawlFinished();
+	}
       }
       return res;
     } catch (RuntimeException e) {
@@ -274,12 +278,6 @@ public abstract class BaseCrawler
       // get the permission list from crawl spec
     permissionMap = new PermissionMap(au, this, getDaemonPermissionCheckers(),
 				      pluginPermissionChecker);
-//    List permissionList = spec.getPermissionPages();
-//    if (permissionList == null || permissionList.size() == 0) {
-//      logger.error("spec.getPermissionPages() return null list or nothing in the list!");
-//      crawlStatus.setCrawlError("Nothing in permission list");
-//      return false;
-//    }
     return permissionMap.init();
   }
 
@@ -298,6 +296,7 @@ public abstract class BaseCrawler
       uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW_ON_HOST);
       is = new BufferedInputStream(uc.getUncachedInputStream());
 //       crawlStatus.signalUrlFetched(uc.getUrl());
+
     }
     return is;
   }
@@ -413,13 +412,13 @@ public abstract class BaseCrawler
 
   protected boolean aborted() {
     logger.info("Crawl aborted: "+au);
-    if (crawlStatus.getCrawlError() == null) {
-      crawlStatus.setCrawlError(Crawler.STATUS_ABORTED);
+    if (!crawlStatus.isCrawlError()) {
+      crawlStatus.setCrawlStatus(Crawler.STATUS_ABORTED);
     }
     return false;
   }
 
-  public CrawlerStatus getCrawlStatus() {
+  public CrawlerStatus getCrawlerStatus() {
     return crawlStatus;
   }
 

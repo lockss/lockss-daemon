@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.59 2007-08-30 00:30:34 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.60 2007-10-01 08:22:22 tlipkis Exp $
  */
 
 /*
@@ -159,7 +159,11 @@ public class ArchivalUnitStatus
 			   FOOT_STATUS),
       new ColumnDescriptor("AuLastPoll", "Last Poll",
                            ColumnDescriptor.TYPE_DATE),
-      new ColumnDescriptor("AuLastCrawl", "Last Crawl",
+      new ColumnDescriptor("AuLastCrawlAttempt", "Last Crawl Attempt",
+                           ColumnDescriptor.TYPE_DATE),
+      new ColumnDescriptor("AuLastCrawlResult", "Last Crawl Result",
+                           ColumnDescriptor.TYPE_STRING),
+      new ColumnDescriptor("AuLastCrawl", "Last Successful Crawl",
                            ColumnDescriptor.TYPE_DATE)
       );
 
@@ -249,30 +253,48 @@ public class ArchivalUnitStatus
       if (du != -1) {
 	rowMap.put("DiskUsage", new Double(((double)du) / (1024*1024)));
       }
-      rowMap.put("AuLastCrawl", new Long(auState.getLastCrawlTime()));
+      long lastCrawl = auState.getLastCrawlTime();
+      long lastAttempt = auState.getLastCrawlAttempt();
+      long lastResultCode = auState.getLastCrawlResultCode();
+      String lastResult = auState.getLastCrawlResult();
+      rowMap.put("AuLastCrawl", new Long(lastCrawl));
+      if (lastCrawl > 0 && lastAttempt <= 0) {
+	lastAttempt = lastCrawl;
+	lastResultCode = Crawler.STATUS_SUCCESSFUL;
+	lastResult = "Successful";
+      }
+      rowMap.put("AuLastCrawlAttempt", new Long(lastAttempt));
+      if (lastResultCode > 0) {
+	rowMap.put("AuLastCrawlResult", lastResult);
+      }
       rowMap.put("Peers", PeerRepair.makeAuRef("peers", au.getAuId()));
       rowMap.put("AuLastPoll", new Long(auState.getLastTopLevelPollTime()));
       
       Object stat;
       if (isV3) {
-        rowMap.put("AuPolls",
-                   new StatusTable.Reference(new Integer(v3status.getNumPolls(au.getAuId())),
-                                             V3PollStatus.POLLER_STATUS_TABLE_NAME,
-                                             au.getAuId()));
+	int numPolls = v3status.getNumPolls(au.getAuId());
+	rowMap.put("AuPolls", pollsRef(new Integer(numPolls), au));
         // Percent damaged.  It's scary to see '0% Agreement' if there's no
         // history, so we just show a friendlier message.
         //
         // XXX: hasV3Poll() is a stopgap added for daemon 1.21.  See
         //      the method declaration for more information.  It should
         //      eventually be removed, but is harmless for now.
-        if (auState.getV3Agreement() < 0) {
+        if (auState.getV3Agreement() < 0 ||
+	    auState.getLastTopLevelPollTime() < 0) {
           if (auState.lastCrawlTime > 0 || AuUtil.isPubDown(au)) {
             stat = "Waiting for Poll";
+// 	    if (numPolls > 0) {
+// 	      stat = pollsRef(stat, au);
+// 	    }
           } else {
             stat = "Waiting for Crawl";
           }
         } else {
           stat = doubleToPercent(auState.getV3Agreement()) + "% Agreement";
+// 	  if (numPolls > 0) {
+// 	    stat = pollsRef(stat, au);
+// 	  }
         }
       } else {
         rowMap.put("AuPolls",
@@ -306,6 +328,12 @@ public class ArchivalUnitStatus
       }
 
       return rowMap;
+    }
+
+    Object pollsRef(Object val, ArchivalUnit au) {
+      return new StatusTable.Reference(val,
+				       V3PollStatus.POLLER_STATUS_TABLE_NAME,
+				       au.getAuId());
     }
 
     private List getSummaryInfo(Stats stats) {

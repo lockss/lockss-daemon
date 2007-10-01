@@ -1,5 +1,5 @@
 /*
- * $Id: MockPermissionHelper.java,v 1.3 2007-01-22 22:11:27 troberts Exp $
+ * $Id: MockPermissionHelper.java,v 1.4 2007-10-01 08:22:21 tlipkis Exp $
  */
 
 /*
@@ -54,7 +54,7 @@ public class MockPermissionHelper implements PermissionHelper {
     throw new UnsupportedOperationException("not implemented");
   }
 
-  public CrawlerStatus getCrawlStatus() {
+  public CrawlerStatus getCrawlerStatus() {
     return new CrawlerStatus(null, null, null);
   }
 

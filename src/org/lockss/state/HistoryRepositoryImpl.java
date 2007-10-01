@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.75 2007-08-22 06:47:00 tlipkis Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.76 2007-10-01 08:22:22 tlipkis Exp $
  */
 
 /*
@@ -159,6 +159,9 @@ public class HistoryRepositoryImpl
       AuState auState = (AuState)unwrap(deserializer.deserialize(auFile));
       return new AuState(storedAu,
                          auState.getLastCrawlTime(),
+                         auState.getLastCrawlAttempt(),
+                         auState.getLastCrawlResult(),
+                         auState.getLastCrawlResultCode(),
                          auState.getLastTopLevelPollTime(),
                          -1,
                          auState.getCrawlUrls(),

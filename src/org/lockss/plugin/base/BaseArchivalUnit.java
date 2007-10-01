@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.120 2007-07-17 06:03:48 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.121 2007-10-01 08:22:22 tlipkis Exp $
  */
 
 /*
@@ -512,8 +512,17 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   }
 
   protected RateLimiter recomputeFetchRateLimiter(RateLimiter oldLimiter) {
-    RateLimiter limit;
     long interval = paramMap.getLong(KEY_AU_FETCH_DELAY, defaultFetchDelay);
+    Object limiterKey = getFetchRateLimiterKey();
+    if (limiterKey == null) {
+      return getLimiterWithRate(oldLimiter, 1, interval);
+    } else {
+      RateLimiter.Pool pool = RateLimiter.getPool();
+      return pool.findNamedRateLimiter(limiterKey, 1, interval);
+    }
+  }
+
+  public Object getFetchRateLimiterKey() {
     String defaultSource =
       CurrentConfig.getParam(PARAM_DEFAULT_FETCH_RATE_LIMITER_SOURCE,
 			     DEFAULT_DEFAULT_FETCH_RATE_LIMITER_SOURCE);
@@ -521,9 +530,8 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
       paramMap.getString(KEY_AU_FETCH_RATE_LIMITER_SOURCE, defaultSource);
     if (logger.isDebug3()) logger.debug3("Limiter source: " + limiterSource);
     if ("au".equalsIgnoreCase(limiterSource)) {
-      limit = getLimiterWithRate(oldLimiter, 1, interval);
+      return null;
     } else {
-      RateLimiter.Pool pool = RateLimiter.getPool();
       Object key = null;
       if ("plugin".equalsIgnoreCase(limiterSource)) {
 	key = plugin;
@@ -534,23 +542,19 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 	if (key != null) {
 	  key = attr + ":" + key;
 	}
-      } else if (StringUtil.startsWithIgnoreCase(limiterSource,
-						 "host:")) {
+      } else if (StringUtil.startsWithIgnoreCase(limiterSource, "host:")) {
 	String param = limiterSource.substring("host:".length());
 	key = paramMap.getString(param + SUFFIX_AU_HOST);
 	if (key != null) {
 	  key = "host:" + key;
 	}
       }
-      if (key != null) {
-	limit = pool.findNamedRateLimiter(key, 1, interval);
-      } else {
+      if (key == null) {
 	logger.warning("Rate limiter source (" + limiterSource +
 		       ") is null, using AU");
-	limit = getLimiterWithRate(oldLimiter, 1, interval);
       }
+      return key;
     }
-    return limit;
   }
 
   private RateLimiter getLimiterWithRate(RateLimiter oldLimiter,

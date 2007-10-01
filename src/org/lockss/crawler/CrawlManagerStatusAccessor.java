@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerStatusAccessor.java,v 1.15 2007-08-15 07:09:37 tlipkis Exp $
+ * $Id: CrawlManagerStatusAccessor.java,v 1.16 2007-10-01 08:22:22 tlipkis Exp $
  */
 
 /*
@@ -54,10 +54,10 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
   private static final String NUM_URLS_PENDING = "num_urls_pending";
   private static final String NUM_URLS_WITH_ERRORS = "num_urls_with_errors";
   private static final String NUM_URLS_NOT_MODIFIED = "num_urls_not_modified";
-  private static final String CRAWL_URLS_STATUS_ACCESSOR =  
-                                CrawlManagerImpl.CRAWL_URLS_STATUS_TABLE; 
-  private static final String SINGLE_CRAWL_STATUS_ACCESSOR =  
-                                CrawlManagerImpl.SINGLE_CRAWL_STATUS_TABLE; 
+  private static final String CRAWL_URLS_STATUS_ACCESSOR =
+                                CrawlManagerImpl.CRAWL_URLS_STATUS_TABLE;
+  private static final String SINGLE_CRAWL_STATUS_ACCESSOR =
+                                CrawlManagerImpl.SINGLE_CRAWL_STATUS_TABLE;
   private static final String NUM_OF_MIME_TYPES = "num_of_mime_types";
 
 //   private static final String START_URLS = "start_urls";
@@ -72,7 +72,7 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
 
   private List sortRules = null;
 
-  private List colDescs =
+  private List<ColumnDescriptor> colDescs =
     ListUtil.fromArray(new ColumnDescriptor[] {
       new ColumnDescriptor(AU_COL_NAME, "Journal Volume",
 			   ColumnDescriptor.TYPE_STRING)
@@ -153,22 +153,40 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
     CrawlManagerStatus cms = statusSource.getStatus();
     String key = table.getKey();
     Counts ct = new Counts();
-    table.setColumnDescriptors(colDescs);
     boolean includeInternalAus =
       table.getOptions().get(StatusTable.OPTION_DEBUG_USER);
     table.setRows(getRows(cms, key, includeInternalAus, ct));
-
     table.setDefaultSortRules(makeSortRules());
+    table.setColumnDescriptors(getColDescs(cms, ct));
     table.setSummaryInfo(getSummaryInfo(cms, ct));
+  }
+
+  static final String ODC_PENDING_FOOTNOTE =
+    "Only the next few pending crawls are shown, " +
+    "and only in the approximate order they'll run.";
+
+  private List getColDescs(CrawlManagerStatus cms, Counts ct) {
+    boolean includePendingFoot = cms.isOdc() && ct.waiting > 0;
+    List res = new ArrayList(colDescs.size());
+    for (ColumnDescriptor desc : colDescs) {
+      if (includePendingFoot && desc.getColumnName() == CRAWL_STATUS) {
+	res.add(new ColumnDescriptor(desc.getColumnName(),
+				     desc.getTitle(),
+				     desc.getType(),
+				     ODC_PENDING_FOOTNOTE));
+      } else {
+	res.add(desc);
+      }
+    }
+    return res;
   }
 
   private List getRows(CrawlManagerStatus cms, String key,
 		       boolean includeInternalAus, Counts ct) {
-    List allCrawls = cms.getCrawlStatusList();
+    List allCrawls = cms.getCrawlerStatusList();
     List rows = new ArrayList();
+    int rowNum = 0;
     if (allCrawls != null) {
-
-      int rowNum = 0;
       for (Iterator it = allCrawls.iterator(); it.hasNext();) {
 	CrawlerStatus crawlStat = (CrawlerStatus)it.next();
 	if (!includeInternalAus &&
@@ -180,13 +198,40 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
 	rows.add(makeRow(crawlStat, ct, rowNum++));
       }
     }
+    Collection<CrawlReq> pendingQ = statusSource.getPendingQueue();
+    if (pendingQ != null) {
+      for (CrawlReq req : pendingQ) {
+	if (!includeInternalAus && pluginMgr.isInternalAu(req.au)) {
+	  continue;
+	} else if (key != null && !key.equals(req.au.getAuId())) {
+	  continue;
+	}
+	ct.waiting++;
+	rows.add(makeRow(req, ct, rowNum++));
+      }
+    }
     return rows;
+  }
+
+  private Map makeRow(CrawlReq req, Counts ct, int rowNum) {
+    Map row = new HashMap();
+    ArchivalUnit au = req.au;
+    row.put(AU_COL_NAME,
+	    new StatusTable.Reference(au.getName(),
+				      ArchivalUnitStatus.AU_STATUS_TABLE_NAME,
+				      au.getAuId()));
+    row.put(CRAWL_TYPE, "New Content");
+    row.put(CRAWL_STATUS, "Pending");
+    row.put(SORT_KEY, new Integer(rowNum + SORT_BASE_WAITING));
+    ct.waiting++;
+    return row;
   }
 
   private Map makeRow(CrawlerStatus status, Counts ct, int rowNum) {
     String key = status.getKey();
 
     Map row = new HashMap();
+    Object statusColRef = null;
     ArchivalUnit au = status.getAu();
     row.put(AU_COL_NAME,
 	    new StatusTable.Reference(au.getName(),
@@ -216,6 +261,18 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
 	row.put(DURATION_COL_NAME, new Long(status.getEndTime() -
 					    status.getStartTime()));
 	row.put(SORT_KEY, new Integer(SORT_BASE_DONE));
+	if (status.getErrorCtr().getCount() > 0) {
+	  switch (status.getCrawlStatus()) {
+	  case Crawler.STATUS_ERROR:
+	  case Crawler.STATUS_ABORTED:
+	  case Crawler.STATUS_FETCH_ERROR:
+	  case Crawler.STATUS_NO_PUB_PERMISSION:
+	  case Crawler.STATUS_PLUGIN_ERROR:
+	  case Crawler.STATUS_REPO_ERR:
+	    statusColRef = makeRef(status.getCrawlStatusString(),
+				   CRAWL_URLS_STATUS_ACCESSOR, key + ".error");
+	  }
+	}
       } else {
 	row.put(DURATION_COL_NAME, new Long(TimeBase.nowMs() -
 					    status.getStartTime()));
@@ -231,8 +288,11 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
 // 	    (StringUtil.separatedString(status.getStartUrls(), "\n")));
 //     row.put(SOURCES,
 // 	    (StringUtil.separatedString(status.getSources(), "\n")));
-    row.put(CRAWL_STATUS, makeRef(status.getCrawlStatus(),
-				  SINGLE_CRAWL_STATUS_ACCESSOR, key));
+    if (statusColRef == null) {
+      statusColRef = makeRef(status.getCrawlStatusString(),
+			     SINGLE_CRAWL_STATUS_ACCESSOR, key);
+    }
+    row.put(CRAWL_STATUS, statusColRef);
     return row;
   }
 
@@ -322,7 +382,7 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
       List res = new ArrayList();
       boolean includeInternalAus = options.get(StatusTable.OPTION_DEBUG_USER);
       CrawlManagerStatus cms = statusSource.getStatus();
-      List<CrawlerStatus> allCrawls = cms.getCrawlStatusList();
+      List<CrawlerStatus> allCrawls = cms.getCrawlerStatusList();
       if (allCrawls != null) {
 	int active = 0;
 	for (CrawlerStatus crawlStat : allCrawls) {
@@ -330,7 +390,7 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
 	      pluginMgr.isInternalAu(crawlStat.getAu())) {
 	    continue;
 	  }
-	  if (Crawler.STATUS_ACTIVE.equals(crawlStat.getCrawlStatus())) {
+	  if (crawlStat.getCrawlStatus() == Crawler.STATUS_ACTIVE) {
 	    active++;
 	  }
 	}

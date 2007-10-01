@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.112 2007-09-24 18:37:11 dshr Exp $
+ * $Id: CrawlManagerImpl.java,v 1.113 2007-10-01 08:22:22 tlipkis Exp $
  */
 
 /*
@@ -33,8 +33,11 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.crawler;
 
 import java.util.*;
+import org.apache.commons.lang.builder.CompareToBuilder;
 import org.apache.commons.collections.*;
 import org.apache.commons.collections.map.*;
+import org.apache.commons.collections.bag.HashBag; // needed to disambiguate
+import org.apache.commons.collections.set.ListOrderedSet;
 import EDU.oswego.cs.dl.util.concurrent.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
@@ -99,6 +102,12 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     PREFIX + "threadPool.max";
   static final int DEFAULT_CRAWLER_THREAD_POOL_MAX = 15;
 
+  /** Thread pool on-demand choice mode.  If true, crawl starter thread
+      blocks in execute until a thread is ready, then chooses the best next
+      crawl.  Only takes effect at startup. */
+  public static final String PARAM_USE_ODC = PREFIX + "threadPool.onDemand";
+  static final boolean DEFAULT_USE_ODC = true;
+
   /** Max size of crawl queue, cannot be changed except at startup */
   public static final String PARAM_CRAWLER_THREAD_POOL_MAX_QUEUE_SIZE =
     PREFIX + "threadPool.maxQueueSize";
@@ -127,6 +136,42 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     PREFIX + "startCrawlsInitialDelay";
   static final long DEFAULT_START_CRAWLS_INITIAL_DELAY = 2 * Constants.MINUTE;
 
+  // ODC params
+
+  static String ODC_PREFIX = PREFIX + "odc.";
+
+  /** Max interval between recalculating crawl queue order */
+  public static final String PARAM_REBUILD_CRAWL_QUEUE_INTERVAL =
+    ODC_PREFIX + "queueRecalcInterval";
+  static final long DEFAULT_REBUILD_CRAWL_QUEUE_INTERVAL = Constants.HOUR;
+
+  /** Interval after new AU creation to recalc queue.  Should be large
+   * enough that it only happens once when a batch of AUs is finished. */
+  public static final String PARAM_QUEUE_RECALC_AFTER_NEW_AU =
+    ODC_PREFIX + "queueRecalcAfterNewAu";
+  static final long DEFAULT_QUEUE_RECALC_AFTER_NEW_AU = 1 * Constants.MINUTE;
+
+  /** Interval to sleep when queue empty, before recalc. */
+  public static final String PARAM_QUEUE_EMPTY_SLEEP =
+    ODC_PREFIX + "queueEmptySleep";
+  static final long DEFAULT_QUEUE_EMPTY_SLEEP = 15 * Constants.MINUTE;
+
+  /** Size of queue of unshared rate AUs. */
+  public static final String PARAM_UNSHARED_QUEUE_MAX =
+    ODC_PREFIX + "unsharedQueueMax";
+  static final int DEFAULT_UNSHARED_QUEUE_MAX = 5;
+
+  /** Size of queue of shared rate AUs. */
+  public static final String PARAM_SHARED_QUEUE_MAX =
+    ODC_PREFIX + "sharedQueueMax";
+  static final int DEFAULT_SHARED_QUEUE_MAX = 5;
+
+  /** Min number of threads available to AUs with unshared rate limiters */
+  public static final String PARAM_FAVOR_SHARED_RATE_THREADS =
+    ODC_PREFIX + "favorSharedRateThreads";
+  static final int DEFAULT_FAVOR_SHARED_RATE_THREADS =
+    DEFAULT_CRAWLER_THREAD_POOL_MAX - 1;
+
   /** Maximum rate at which we will start repair crawls for any particular
    * AU */
   public static final String PARAM_MAX_REPAIR_RATE =
@@ -146,6 +191,10 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   public static final String PARAM_NEW_CONTENT_START_RATE =
     PREFIX + "newContentStartRate";
   public static final String DEFAULT_NEW_CONTENT_START_RATE = "1/730";
+
+  public static final String PARAM_MIN_WINDOW_OPEN_FOR =
+    PREFIX + "minWindowOpenFor";
+  public static final long DEFAULT_MIN_WINDOW_OPEN_FOR = 15 * Constants.MINUTE;
 
   /** Number of most recent crawls for which status will be available.
    * This must be larger than the thread pool + queue size or status table
@@ -171,6 +220,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   //Tracking crawls for the status info
   private CrawlManagerStatus cmStatus;
   private MultiMap runningCrawls = new MultiValueMap();
+  protected Bag runningRateKeys = new HashBag();
 
   private long contentCrawlExpiration;
   private long repairCrawlExpiration;
@@ -178,6 +228,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   private boolean crawlerEnabled = DEFAULT_CRAWLER_ENABLED;
   private boolean paramQueueEnabled = DEFAULT_CRAWLER_QUEUE_ENABLED;
   private int paramMaxPoolSize = DEFAULT_CRAWLER_THREAD_POOL_MAX;
+  private boolean paramOdc = DEFAULT_USE_ODC;
   private int paramPoolQueueSize = DEFAULT_CRAWLER_THREAD_POOL_QUEUE_SIZE;
   private int paramPoolMaxQueueSize =
     DEFAULT_CRAWLER_THREAD_POOL_MAX_QUEUE_SIZE;
@@ -185,6 +236,8 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   private long paramStartCrawlsInterval = DEFAULT_START_CRAWLS_INTERVAL;
   private long paramStartCrawlsInitialDelay =
     DEFAULT_START_CRAWLS_INITIAL_DELAY;
+  private long paramMinWindowOpenFor = DEFAULT_MIN_WINDOW_OPEN_FOR;
+
   private int histSize = DEFAULT_HISTORY_MAX;
 
   private Map repairRateLimiters = new HashMap();
@@ -203,7 +256,10 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   public void startService() {
     super.startService();
 
+    paramOdc = CurrentConfig.getBooleanParam(PARAM_USE_ODC, DEFAULT_USE_ODC);
+
     cmStatus = new CrawlManagerStatus(histSize);
+    cmStatus.setOdc(paramOdc);
 
     pluginMgr = getDaemon().getPluginManager();
     StatusService statusServ = getDaemon().getStatusService();
@@ -219,10 +275,14 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     auEventHandler = new AuEventHandler.Base() {
 	public void auDeleted(ArchivalUnit au) {
 	  cancelAuCrawls(au);
-	}};
+	}
+	public void auCreated(ArchivalUnit au) {
+	  rebuildQueueSoon();
+	}
+      };
     pluginMgr.registerAuEventHandler(auEventHandler);
 
-    if (paramQueueEnabled) {
+    if (!paramOdc && paramQueueEnabled) {
       poolQueue = new BoundedPriorityQueue(paramPoolQueueSize,
 					   new CrawlQueueComparator());
       pool = new PooledExecutor(poolQueue, paramMaxPoolSize);
@@ -234,12 +294,16 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     // threads equal to max threads
     pool.setMinimumPoolSize(paramMaxPoolSize);
     pool.setKeepAliveTime(paramPoolKeepaliveTime);
-    pool.abortWhenBlocked();
+    if (paramOdc) {
+      pool.waitWhenBlocked();
+    } else {
+      pool.abortWhenBlocked();
+    }
     logger.debug2("Crawler thread pool min, max, queuelen: " +
 		  pool.getMinimumPoolSize() + ", " +
 		  pool.getMaximumPoolSize() + ", " +
 		  (poolQueue != null ? poolQueue.capacity() : 0));
-    if (paramStartCrawlsInterval > 0) {
+    if (paramOdc || paramStartCrawlsInterval > 0) {
       enableCrawlStarter();
     }
   }
@@ -249,6 +313,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
    * @see org.lockss.app.LockssManager#stopService()
    */
   public void stopService() {
+    shuttingDown = true;
     disableCrawlStarter();
     if (pool != null) {
       pool.shutdownNow();
@@ -309,6 +374,29 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 // 	poolQueue.setCapacity(paramPoolQueueSize);
       }
 
+      paramQueueEmptySleep = config.getTimeInterval(PARAM_QUEUE_EMPTY_SLEEP,
+						    DEFAULT_QUEUE_EMPTY_SLEEP);
+      paramQueueRecalcAfterNewAu =
+	config.getTimeInterval(PARAM_QUEUE_RECALC_AFTER_NEW_AU,
+			       DEFAULT_QUEUE_RECALC_AFTER_NEW_AU);
+
+      paramUnsharedQueueMax = config.getInt(PARAM_UNSHARED_QUEUE_MAX,
+					    DEFAULT_UNSHARED_QUEUE_MAX);
+      paramSharedQueueMax = config.getInt(PARAM_SHARED_QUEUE_MAX,
+					  DEFAULT_SHARED_QUEUE_MAX);
+      unsharedRateReqs.setMaxSize(paramUnsharedQueueMax);
+      sharedRateReqs.setTreeSetSize(paramSharedQueueMax);
+
+      paramFavorSharedRateThreads =
+	config.getInt(PARAM_FAVOR_SHARED_RATE_THREADS,
+		      DEFAULT_FAVOR_SHARED_RATE_THREADS);
+
+      paramRebuildCrawlQueueInterval =
+	config.getTimeInterval(PARAM_REBUILD_CRAWL_QUEUE_INTERVAL,
+			       DEFAULT_REBUILD_CRAWL_QUEUE_INTERVAL);
+      paramMinWindowOpenFor =
+	config.getTimeInterval(PARAM_MIN_WINDOW_OPEN_FOR,
+			       DEFAULT_MIN_WINDOW_OPEN_FOR);
       paramStartCrawlsInitialDelay =
 	config.getTimeInterval(PARAM_START_CRAWLS_INITIAL_DELAY,
 			       DEFAULT_START_CRAWLS_INITIAL_DELAY);
@@ -355,31 +443,47 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     return crawlerEnabled;
   }
 
+  static final Runnable NULL_RUNNER = new Runnable() {
+      public void run() {}
+    };
+
   /**
    * Execute the runnable in a pool thread
    * @param run the Runnable to be run
    * @throws RuntimeException if no pool thread or queue space is available
    */
-  protected void execute(Runnable run) {
-    try {
-      pool.execute(run);
-      if (logger.isDebug3()) logger.debug3("Queued/started " + run);
-    } catch (InterruptedException e) {
-      logger.warning("Unexpectedly interrupted", e);
-      throw new RuntimeException("Unexpectedly interrupted", e);
+  protected void execute(Runnable run) throws InterruptedException {
+    pool.execute(run);
+    if (logger.isDebug3()) logger.debug3("Queued/started " + run);
+    if (paramOdc) {
+      if (logger.isDebug3()) logger.debug3("waiting");
+      pool.execute(NULL_RUNNER);
+      if (logger.isDebug3()) logger.debug3("waited");
     }
   }
 
   private void addToRunningCrawls(ArchivalUnit au, Crawler crawler) {
     synchronized (runningCrawls) {
       runningCrawls.put(au, crawler);
+      
+      Object key = au.getFetchRateLimiterKey();
+      if (key != null) {
+	runningRateKeys.add(key);
+      }
     }
+    highPriorityCrawlRequests.remove(au);
   }
 
   private void removeFromRunningCrawls(Crawler crawler) {
     if (crawler != null) {
+      ArchivalUnit au = crawler.getAu();
       synchronized (runningCrawls) {
-	runningCrawls.remove(crawler.getAu(), crawler);
+	runningCrawls.remove(au, crawler);
+	Object key = au.getFetchRateLimiterKey();
+	if (key != null) {
+	  runningRateKeys.remove(key);
+	  startOneWait.expire();
+	}
       }
     }
   }
@@ -415,6 +519,13 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       }
     }
     return limiter;
+  }
+
+  public RateLimiter getNewContentRateLimiter(ArchivalUnit au) {
+    if (pluginMgr.isInternalAu(au)) return null;
+    return getRateLimiter(au, newContentRateLimiters,
+			  PARAM_MAX_NEW_CONTENT_RATE,
+			  DEFAULT_MAX_NEW_CONTENT_RATE);
   }
 
   /** Reset the parameters of all the rate limiters in the map. */
@@ -526,22 +637,23 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     return au.makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(url));
   }
 
-  public void startNewContentCrawl(ArchivalUnit au, CrawlManager.Callback cb,
-                                   Object cookie, ActivityRegulator.Lock lock) {
-    if (au == null) {
-      throw new IllegalArgumentException("Called with null AU");
+  public boolean isEligibleForNewContentCrawl(ArchivalUnit au) {
+    synchronized (runningCrawls) {
+      Collection<Crawler> aucrawls =
+	(Collection<Crawler>)runningCrawls.get(au);
+      if (aucrawls != null) {
+	for (Crawler crawler : (Collection<Crawler>)runningCrawls.get(au)) {
+	  if (crawler.isWholeAU()) {
+	    logger.debug3("Already crawling " + au + " in " + crawler);
+	    return false;
+	  }
+	}
+      }
     }
     if (au instanceof ExplodedArchivalUnit) {
       logger.debug("Can't crawl ExplodedArchivalUnit");
-      callCallback(cb, cookie, false, null);
-      return;
+      return false;
     }
-    if (!crawlerEnabled) {
-      logger.warning("Crawler disabled, not crawling: " + au);
-      callCallback(cb, cookie, false, null);
-      return;
-    }
-    // check crawl window and rate limiter before obtaining lock
     CrawlSpec spec;
     try {
       spec = au.getCrawlSpec();
@@ -549,27 +661,55 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       // not clear this can ever happen in real use, but some tests force
       // getCrawlSpec() to throw
       logger.error("Couldn't get CrawlSpec: " + au, e);
+      return false;
+    }
+    if (spec != null && !windowOkToStart(spec.getCrawlWindow())) {
+      logger.debug3("Not crawlable: crawl window: " + au);
+      return false;
+    }
+    RateLimiter limiter = getNewContentRateLimiter(au);
+    if (limiter != null && !limiter.isEventOk()) {
+      logger.debug3("Not crawlable: rate limiter: " + au);
+      return false;
+    }
+    return true;
+  }
+
+  public void startNewContentCrawl(ArchivalUnit au, CrawlManager.Callback cb,
+				   Object cookie, ActivityRegulator.Lock lock) {
+    if (au == null) {
+      throw new IllegalArgumentException("Called with null AU");
+    }
+    if (!crawlerEnabled) {
+      logger.warning("Crawler disabled, not crawling: " + au);
       callCallback(cb, cookie, false, null);
       return;
     }
-    if (spec != null && !spec.inCrawlWindow()) {
-      logger.debug2("Not starting new content crawl due to crawl window: "
-		    + au);
+    CrawlReq req;
+    try {
+      req = new CrawlReq(au, cb, cookie, lock);
+      req.setPriority(1);
+    } catch (RuntimeException e) {
+      logger.error("Couldn't create CrawlReq: " + au, e);
       callCallback(cb, cookie, false, null);
       return;
     }
-    RateLimiter limiter = null;
-    if (!pluginMgr.isInternalAu(au)) {
-      // Don't apply per-au rate limiter to plugin registries
-      limiter = getRateLimiter(au, newContentRateLimiters,
-			       PARAM_MAX_NEW_CONTENT_RATE,
-			       DEFAULT_MAX_NEW_CONTENT_RATE);
-      if (!limiter.isEventOk()) {
-	logger.debug2("Not starting new content crawl due to rate limiter: "
-		      + au);
-	callCallback(cb, cookie, false, null);
-	return;
-      }
+    if (paramOdc) {
+      enqueueHighPriorityCrawl(req);
+    } else {
+      handReqToPool(req);
+    }
+  }
+
+  void handReqToPool(CrawlReq req) {
+    ArchivalUnit au = req.au;
+    CrawlManager.Callback cb = req.cb;
+    Object cookie = req.cookie;
+    ActivityRegulator.Lock lock = req.lock;
+
+    if (!isEligibleForNewContentCrawl(au)) {
+      callCallback(cb, cookie, false, null);
+      return;
     }
     if ((lock==null) || (lock.isExpired())) {
       lock = getNewContentLock(au);
@@ -583,38 +723,62 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       callCallback(cb, cookie, false, null);
       return;
     }
+    CrawlSpec spec = au.getCrawlSpec();
     Crawler crawler = null;
     CrawlRunner runner = null;
     try {
       crawler = makeNewContentCrawler(au, spec);
       runner = new CrawlRunner(crawler, spec, cb, cookie, SetUtil.set(lock),
-			limiter, newContentStartRateLimiter);
+			       getNewContentRateLimiter(au),
+			       newContentStartRateLimiter);
       // To avoid race, must add to running crawls before starting
       // execution
       addToRunningCrawls(au, crawler);
-      execute(runner);
-      // Add to status only if successfully queued or started.  (No race
-      // here; appearance in status might be delayed.)
-      cmStatus.addCrawlStatus(crawler.getStatus());
-    } catch (RuntimeException e) {
-      // thrown by pool if can't execute (pool & queue full, or poll full
-      // and no queue)
-      if (e.getMessage() != null &&
-	  e.getMessage().endsWith("Pool is blocked")) {
-	logger.warning("Couldn't start/schedule " + au + " crawl: " +
-		       e.toString() + " " +
-		       (crawler == null ? "no crawler" : crawler.toString()) +
-		       " " + (runner == null ? "no runner" : runner.toString()));
+      if (paramOdc) {
+	// Add status first.  execute might not return for a long time, and
+	// we're expecting this crawl to be accepted.
+	cmStatus.addCrawlStatus(crawler.getStatus());
+	execute(runner);
+	return;
       } else {
-	logger.warning("Couldn't start/schedule " + au + " crawl"  +
-		       " " +
-		       (crawler == null ? "no crawler" : crawler.toString()) +
-		       " " + (runner == null ? "no runner" : runner.toString()), e);
+	// Add to status only if successfully queued or started.  (No
+	// race here; appearance in status might be delayed.)
+	execute(runner);
+	cmStatus.addCrawlStatus(crawler.getStatus());
+	return;
       }
-      logger.debug("Freeing crawl lock");
+    } catch (InterruptedException e) {
+      if (!isShuttingDown()) {
+	// thrown by pool if can't execute (pool & queue full, or pool full
+	// and no queue.  In on-demand mode should throw only on shutdown.)
+	String crawlerRunner =
+	  (crawler == null ? "no crawler" : crawler.toString()) + " " +
+	  (runner == null ? "no runner" : runner.toString());
+	if (e.getMessage() != null &&
+	    e.getMessage().endsWith("Pool is blocked")) {
+	  logger.warning("Couldn't start/schedule " + au + " crawl: " +
+			 e.toString() + " " + crawlerRunner);
+	} else {
+	  logger.warning("Couldn't start/schedule " + au + " crawl"  + " " +
+			 crawlerRunner, e);
+	}
+      }
+      logger.debug2("Freeing crawl lock");
       lock.expire();
       removeFromRunningCrawls(crawler);
       callCallback(cb, cookie, false, null);
+      return;
+    } catch (RuntimeException e) {
+      String crawlerRunner =
+	(crawler == null ? "no crawler" : crawler.toString()) + " " +
+	(runner == null ? "no runner" : runner.toString());
+      logger.error("Unexpected error attempting to start/schedule " + au +
+		   " crawl"  + " " + crawlerRunner, e);
+      logger.debug2("Freeing crawl lock");
+      lock.expire();
+      removeFromRunningCrawls(crawler);
+      callCallback(cb, cookie, false, null);
+      return;
     }
   }
 
@@ -698,6 +862,10 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       }
     }
 
+    public String toString() {
+      return "[CrawlRunner: " + crawler.getAu() + "]";
+    }
+
     public Crawler getCrawler() {
       return crawler;
     }
@@ -712,7 +880,8 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       if (logger.isDebug3()) logger.debug3("Runner started");
       try {
 	if (!crawlerEnabled) {
-	  crawler.getStatus().setCrawlError(Crawler.STATUS_ABORTED);
+	  crawler.getStatus().setCrawlStatus(Crawler.STATUS_ABORTED,
+					     "Crawler disabled");
 	  nowRunning();
 	  // exit immediately
 	} else {
@@ -743,9 +912,9 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 	  }
 	  crawlSuccessful = crawler.doCrawl();
 
-	  // If aborted due to crawl window, undo the charge against its
-	  // rate limiter so it can start again when window opens
 	  if (!crawlSuccessful && spec != null && !spec.inCrawlWindow()) {
+	    // If aborted due to crawl window, undo the charge against its
+	    // rate limiter so it can start again when window opens
 	    if (auRateLimiter != null) {
 	      auRateLimiter.unevent();
 	    }
@@ -839,29 +1008,44 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 
       if (goOn) {
 	try {
-	  logger.debug("Waiting until AUs started");
-	  waitUntilAusStarted();
-	  Deadline initial = Deadline.in(paramStartCrawlsInitialDelay);
-	  cmStatus.setNextCrawlStarter(initial);
-	  initial.sleep();
+	  if (paramOdc) {
+	    startOneWait.expireIn(paramStartCrawlsInitialDelay);
+	    cmStatus.setNextCrawlStarter(startOneWait);
+	    startOneWait.sleep();
+	  } else {
+	    logger.debug("Waiting until AUs started");
+	    waitUntilAusStarted();
+	    logger.debug3("AUs started");
+	    Deadline initial = Deadline.in(paramStartCrawlsInitialDelay);
+	    cmStatus.setNextCrawlStarter(initial);
+	    initial.sleep();
+	  }
 	} catch (InterruptedException e) {
-	  // just wakeup and check for exit
+	  // just wakeup, check for exit and start running
 	}
       }
       while (goOn) {
 // 	pokeWDog();
-	startSomeCrawls();
-	Deadline timer = Deadline.in(paramStartCrawlsInterval);
-	cmStatus.setNextCrawlStarter(timer);
-	if (goOn) {
-	  try {
-	    timer.sleep();
-	  } catch (InterruptedException e) {
-	    // just wakeup and check for exit
+	try {
+	  if (paramOdc) {
+	    startOneCrawl();
+	  } else {
+	    startSomeCrawls();
+	    Deadline timer = Deadline.in(paramStartCrawlsInterval);
+	    cmStatus.setNextCrawlStarter(timer);
+	    if (goOn) {
+	      try {
+		timer.sleep();
+	      } catch (InterruptedException e) {
+		// just wakeup and check for exit
+	      }
+	    }
+	    cmStatus.setNextCrawlStarter(null);
 	  }
+	} catch (InterruptedException e) {
+	  // just wakeup and check for exit
 	}
       }
-      cmStatus.setNextCrawlStarter(null);
       if (!goOn) {
 	triggerWDogOnExit(false);
       }
@@ -878,6 +1062,246 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     getDaemon().waitUntilAusStarted();
   }
 
+  static Object UNSHARED_RATE_KEY = new Object();
+
+  long paramRebuildCrawlQueueInterval = DEFAULT_REBUILD_CRAWL_QUEUE_INTERVAL;
+  long paramQueueRecalcAfterNewAu = DEFAULT_QUEUE_RECALC_AFTER_NEW_AU;
+  long paramQueueEmptySleep = DEFAULT_QUEUE_EMPTY_SLEEP;
+  int paramUnsharedQueueMax = DEFAULT_UNSHARED_QUEUE_MAX;
+  int paramSharedQueueMax = DEFAULT_SHARED_QUEUE_MAX;
+  int paramFavorSharedRateThreads = DEFAULT_FAVOR_SHARED_RATE_THREADS;
+
+  Deadline timeToRebuildCrawlQueue = Deadline.in(0);
+  Deadline startOneWait = Deadline.in(0);
+  Map<ArchivalUnit,CrawlReq> highPriorityCrawlRequests =
+    Collections.synchronizedMap(new ListOrderedMap());
+  Comparator CPC = new CrawlPriorityComparator();
+
+  Object queueLock = new Object();	// lock for sharedRateReqs and
+					// unsharedRateReqs
+  MultiCrawlPriorityMap sharedRateReqs =
+    new MultiCrawlPriorityMap(paramSharedQueueMax);
+  BoundedTreeSet unsharedRateReqs =
+    new BoundedTreeSet(paramUnsharedQueueMax, CPC);
+
+  private class MultiCrawlPriorityMap extends MultiValueMap {
+    MultiCrawlPriorityMap(final int maxAus) {
+      super(new HashMap(), new org.apache.commons.collections.Factory() {
+	  public Object create() {
+	    return new BoundedTreeSet(maxAus, CPC);
+	  }});
+    }
+    public void setTreeSetSize(int maxAus) {
+      for (BoundedTreeSet ts : (Collection<BoundedTreeSet>)values()) {
+	ts.setMaxSize(maxAus);
+      }
+    }
+  }
+
+  boolean windowOkToStart(CrawlWindow window) {
+    if (window == null) return true;
+    if (!window.canCrawl()) return false;
+    Date soon = new Date(TimeBase.nowMs() + paramMinWindowOpenFor);
+    return window.canCrawl(soon);
+  }
+
+  CrawlReq nextReq() throws InterruptedException {
+    boolean rebuilt = false;
+
+    if (timeToRebuildCrawlQueue.expired()) {
+      rebuildCrawlQueue();
+      rebuilt = true;
+    }
+    CrawlReq res = nextReqFromBuiltQueue();
+    if (res != null) {
+      return res;
+    }
+    if (!rebuilt) {
+      rebuildCrawlQueue();
+    }
+    return nextReqFromBuiltQueue();
+  }
+
+  CrawlReq nextReqFromBuiltQueue() {
+    Collection runKeys = copyRunKeys();
+    synchronized (queueLock) {
+      if (logger.isDebug3()) {
+	logger.debug3("nextReqFromBuiltQueue(), " +
+		      sharedRateReqs.size() + " shared, " +
+		      unsharedRateReqs.size() + " unshared, " +
+		      " runKeys: " + runKeys);
+      }    
+      // preferentially start those with shared rate limites, but give
+      // unshared a minimum number of threads
+
+
+      BoundedTreeSet finalSort = new BoundedTreeSet(1, CPC);
+      for (Iterator iter = sharedRateReqs.entrySet().iterator();
+	   iter.hasNext();) {
+	Map.Entry ent = (Map.Entry)iter.next();
+	Object rateKey = ent.getKey();
+	if (runKeys.contains(rateKey)) {
+	  continue;
+	}
+	CrawlReq req = (CrawlReq)((TreeSet)ent.getValue()).first();
+	finalSort.add(req);
+      }
+
+      if (!unsharedRateReqs.isEmpty() &&
+	  (  finalSort.isEmpty() ||
+	     runKeys.size() >= paramFavorSharedRateThreads ||
+	     ((CrawlReq)unsharedRateReqs.first()).isHiPri())) {
+	CrawlReq req = (CrawlReq)unsharedRateReqs.first();
+	finalSort.add(req);
+      }
+      if (finalSort.isEmpty()) {
+	if (logger.isDebug3()) {
+	  logger.debug3("nextReqFromBuiltQueue(): null, " +
+			sharedRateReqs.size() + " shared");
+	}
+	return null;
+      }
+      CrawlReq bestReq = (CrawlReq)finalSort.first();
+      if (bestReq.rateKey != null) {
+	sharedRateReqs.remove(bestReq.rateKey, bestReq);
+      } else {
+	unsharedRateReqs.remove(bestReq);
+      }
+      return bestReq;
+    }
+  }
+
+  Collection copyRunKeys() {
+    synchronized (runningCrawls) {
+      return new HashBag(runningRateKeys);
+    }
+  }
+
+  public Collection<CrawlReq> getPendingQueue() {
+    Collection runKeys = copyRunKeys();
+    TreeSet<CrawlReq> finalSort = new TreeSet(CPC);
+    synchronized (queueLock) {
+      for (Iterator iter = sharedRateReqs.entrySet().iterator();
+	   iter.hasNext();) {
+	Map.Entry ent = (Map.Entry)iter.next();
+	Object rateKey = ent.getKey();
+	if (runKeys.contains(rateKey)) {
+	  // mark it somehow
+	}
+	finalSort.addAll((TreeSet)ent.getValue());
+      }
+      finalSort.addAll(unsharedRateReqs);
+    }
+    return finalSort;
+  }
+
+  void enqueueHighPriorityCrawl(CrawlReq req) {
+    logger.debug("enqueueHighPriorityCrawl(" + req.au + ")");
+    highPriorityCrawlRequests.put(req.au, req);
+    startOneWait.expire();
+    timeToRebuildCrawlQueue.expire();
+  }
+
+  public void rebuildQueueSoon() {
+    // Don't push forward if already expired.
+    if (!timeToRebuildCrawlQueue.expired()) {
+      timeToRebuildCrawlQueue.expireIn(paramQueueRecalcAfterNewAu);
+    }
+  }
+
+  void rebuildCrawlQueue() {
+    long startTime = TimeBase.nowMs();
+    rebuildCrawlQueue0();
+    logger.debug("rebuildCrawlQueue(): "+
+		 (TimeBase.nowMs() - startTime)+"ms");
+    timeToRebuildCrawlQueue.expireIn(paramRebuildCrawlQueueInterval);
+  }
+
+  void rebuildCrawlQueue0() {
+    int ausWantCrawl = 0;
+    int ausEligibleCrawl = 0;
+    synchronized (queueLock) {
+      unsharedRateReqs.clear();
+      sharedRateReqs.clear();
+      for (ArchivalUnit au : (pluginMgr.areAusStarted()
+			      ? pluginMgr.getAllAus()
+			      : pluginMgr.getAllRegistryAus())) {
+
+	CrawlReq req = highPriorityCrawlRequests.get(au);
+	if ((req != null || shouldCrawlForNewContent(au))) {
+	  ausWantCrawl++;
+	  if (isEligibleForNewContentCrawl(au)) {
+	    ausEligibleCrawl++;
+	    if (req == null) {
+	      req = new CrawlReq(au);
+	    }
+	    Object rateKey = au.getFetchRateLimiterKey();
+	    if (rateKey == null) {
+	      unsharedRateReqs.add(req);
+	    } else {
+	      sharedRateReqs.put(rateKey, req);
+	    }
+	  }
+	}
+      }
+    }
+    cmStatus.setWaitingCount(ausWantCrawl);
+    cmStatus.setEligibleCount(ausEligibleCrawl);
+  }
+
+  /** Orders AUs (wrapped in CrawlReq) by crawl priority:<ol>
+   * <li>Explicit request priority
+   * <li>Plugin registry AUs
+   * <li>Crawl window reopened
+   * <li>Least recent crawl attempt
+   * <li>Least recent crawl success
+   * </ol>
+   */
+  static class CrawlPriorityComparator implements Comparator {
+    public int compare(Object o1, Object o2) {
+      CrawlReq r1 = (CrawlReq)o1;
+      CrawlReq r2 = (CrawlReq)o2;
+      ArchivalUnit au1 = r1.au;
+      ArchivalUnit au2 = r2.au;
+      AuState aus1 = r1.aus;
+      AuState aus2 = r2.aus;
+      return new CompareToBuilder()
+	.append(-r1.priority, -r2.priority)
+	.append(!(au1 instanceof RegistryArchivalUnit),
+		!(au2 instanceof RegistryArchivalUnit))
+	.append(windowOrder(aus1.getLastCrawlResultCode()),
+		windowOrder(aus2.getLastCrawlResultCode()))
+	.append(aus1.getLastCrawlAttempt(), aus2.getLastCrawlAttempt())
+	.append(aus1.getLastCrawlTime(), aus2.getLastCrawlTime())
+// 	.append(au1.toString(), au2.toString())
+	.append(System.identityHashCode(r1), System.identityHashCode(r2))
+	.toComparison();
+    }
+
+    int windowOrder(int crawlResult) {
+      return crawlResult == Crawler.STATUS_WINDOW_CLOSED ? 0 : 1;
+    }
+  }
+
+
+  boolean startOneCrawl() throws InterruptedException {
+    startOneWait.expireIn(paramQueueEmptySleep);
+    if (crawlerEnabled) {
+      CrawlReq req = nextReq();
+      if (req != null) {
+	startCrawl(req);
+	return true;
+      }
+    }
+    cmStatus.setNextCrawlStarter(startOneWait);
+    try {
+      startOneWait.sleep();
+    } catch (InterruptedException e) {
+      // just wakeup and check
+    }
+    return false;
+  }
+
   // Each invocation of startSomeCrawls() tries to fill queue with AUs that
   // need a crawl.  The same random iterator is used across multiple
   // invocations to ensure we examine all AUs before starting over with a
@@ -886,7 +1310,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   private Iterator crawlStartIter = null;
 
   void startSomeCrawls() {
-    if (crawlerEnabled && poolQueue != null) {
+    if (crawlerEnabled && (poolQueue != null)) {
       if (poolQueue.size() < paramPoolQueueSize) {
 	logger.debug("Checking for AUs that need crawls");
 	// get a new iterator if don't have one or if have exhausted
@@ -912,19 +1336,8 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 
   void possiblyStartCrawl(ArchivalUnit au) {
     try {
-      if (logger.isDebug3()) logger.debug3("checking au: " + au.getAuId());
       if (shouldCrawlForNewContent(au)) {
-	CrawlManager.Callback rc = null;
-	if (au instanceof RegistryArchivalUnit) {
-	  if (logger.isDebug3()) {
-	    logger.debug3("Adding callback to registry AU: " + au.getName());
-	  }
-	  rc = new PluginManager.RegistryCallback(pluginMgr, au);
-	}
-	// Activity lock prevents AUs with pending crawls from being
-	// queued twice.  If ActivityRegulator goes away some other
-	// mechanism will be needed.
-	startNewContentCrawl(au, rc, null, null);
+	startCrawl(au);
       }
     } catch (IllegalArgumentException e) {
       // XXX When NoSuchAuException is created, this should catch that
@@ -932,8 +1345,44 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     }
   }
 
+
+  void startCrawl(ArchivalUnit au) {
+    CrawlManager.Callback rc = null;
+    if (au instanceof RegistryArchivalUnit) {
+      if (logger.isDebug3()) {
+	logger.debug3("Adding callback to registry AU: " + au.getName());
+      }
+      rc = new PluginManager.RegistryCallback(pluginMgr, au);
+    }
+    // Activity lock prevents AUs with pending crawls from being
+    // queued twice.  If ActivityRegulator goes away some other
+    // mechanism will be needed.
+    startNewContentCrawl(au, rc, null, null);
+  }
+
+  void startCrawl(CrawlReq req) {
+    ArchivalUnit au = req.au;
+    if (pluginMgr.isRegistryAu(au) && req.cb == null) {
+      if (logger.isDebug3()) {
+	logger.debug3("Adding callback to registry AU: " + au.getName());
+      }
+      req.setCb(new PluginManager.RegistryCallback(pluginMgr, au));
+    }
+    // doesn't return until thread available for next request
+    handReqToPool(req);
+  }
+
   boolean shouldCrawlForNewContent(ArchivalUnit au) {
-    return au.shouldCrawlForNewContent(AuUtil.getAuState(au));
+    try {
+      boolean res = au.shouldCrawlForNewContent(AuUtil.getAuState(au));
+      if (logger.isDebug3()) logger.debug3("Should " + (res ? "" : " not ") +
+					   "crawl " + au);
+      return res;
+    } catch (IllegalArgumentException e) {
+      // XXX When NoSuchAuException is created, this should catch that
+      logger.warning("AU disappeared: " + au.getName());
+    }
+    return false;
   }
 
   private static class FailingCallbackWrapper

@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.77 2007-07-17 06:03:48 tlipkis Exp $
+ * $Id: MockArchivalUnit.java,v 1.78 2007-10-01 08:22:21 tlipkis Exp $
  */
 
 /*
@@ -73,6 +73,7 @@ public class MockArchivalUnit implements ArchivalUnit {
   private TypedEntryMap propertyMap = new TypedEntryMap();
   private List urlStems = Collections.EMPTY_LIST;
   private Collection loginUrls;
+  private String fetchRateLimiterKey;
 
   private static final Logger logger = Logger.getLogger("MockArchivalUnit");
 
@@ -85,6 +86,11 @@ public class MockArchivalUnit implements ArchivalUnit {
 
   public MockArchivalUnit(Plugin plugin) {
     this.plugin = plugin;
+  }
+
+  public MockArchivalUnit(Plugin plugin, String auId) {
+    this.plugin = plugin;
+    this.auId = auId;
   }
 
   public MockArchivalUnit(CrawlSpec spec) {
@@ -395,6 +401,14 @@ public class MockArchivalUnit implements ArchivalUnit {
 
   public RateLimiter findFetchRateLimiter() {
     return RateLimiter.UNLIMITED;
+  }
+
+  public Object getFetchRateLimiterKey() {
+    return fetchRateLimiterKey;
+  }
+
+  public void setFetchRateLimiterKey(String key) {
+    fetchRateLimiterKey = key;
   }
 
   public void setPauseCallback(MockObjectCallback callback) {

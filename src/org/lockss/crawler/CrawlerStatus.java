@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerStatus.java,v 1.3 2007-05-28 05:23:26 tlipkis Exp $
+ * $Id: CrawlerStatus.java,v 1.4 2007-10-01 08:22:22 tlipkis Exp $
  */
 
 /*
@@ -79,12 +79,29 @@ public class CrawlerStatus {
     Configuration.PREFIX + "crawlStatus.keepOffHostExcludes";
   public static final int DEFAULT_KEEP_OFF_HOST_EXCLUDES = 50;
 
+  static Map<Integer,String> DEFAULT_MESSAGES = new HashMap();
+  static {
+    DEFAULT_MESSAGES.put(Crawler.STATUS_UNKNOWN, "Unknown");
+    DEFAULT_MESSAGES.put(Crawler.STATUS_QUEUED, "Pending");
+    DEFAULT_MESSAGES.put(Crawler.STATUS_ACTIVE, "Active");
+    DEFAULT_MESSAGES.put(Crawler.STATUS_SUCCESSFUL, "Successful");
+    DEFAULT_MESSAGES.put(Crawler.STATUS_ERROR, "Error");
+    DEFAULT_MESSAGES.put(Crawler.STATUS_ABORTED, "Aborted");
+    DEFAULT_MESSAGES.put(Crawler.STATUS_WINDOW_CLOSED, "Crawl window closed");
+    DEFAULT_MESSAGES.put(Crawler.STATUS_FETCH_ERROR, "Fetch error");
+    DEFAULT_MESSAGES.put(Crawler.STATUS_NO_PUB_PERMISSION,
+			 "No permission from publisher");
+    DEFAULT_MESSAGES.put(Crawler.STATUS_PLUGIN_ERROR, "Plugin error");
+    DEFAULT_MESSAGES.put(Crawler.STATUS_REPO_ERR, "Repository error");
+  }
+
   private static int ctr = 0;		// Instance counter (for getKey())
 
   private String key;
   protected long startTime = -1;
   protected long endTime = -1;
-  protected String crawlError = null;
+  protected String statusMessage = null;
+  protected int status = Crawler.STATUS_QUEUED;
   protected Collection startUrls = null;
   protected ArchivalUnit au = null;
   protected String type;
@@ -226,6 +243,7 @@ public class CrawlerStatus {
   again here because it's easier for tests */
   public void signalCrawlStarted() {
     startTime = TimeBase.nowMs();
+    setCrawlStatus(Crawler.STATUS_ACTIVE);
     initCounters();
   }
 
@@ -239,6 +257,9 @@ public class CrawlerStatus {
   /** Signal that crawl has ended. */
   public void signalCrawlEnded() {
     endTime = TimeBase.nowMs();
+    if (!isCrawlError()) {
+      setCrawlStatus(Crawler.STATUS_SUCCESSFUL);
+    }
   }
 
   /**
@@ -248,12 +269,13 @@ public class CrawlerStatus {
     return endTime;
   }
 
-  public void setCrawlError(String crawlError) {
-    this.crawlError = crawlError;
+  public void setCrawlStatus(int status) {
+    setCrawlStatus(status, null);
   }
 
-  public String getCrawlError() {
-    return crawlError;
+  public void setCrawlStatus(int status, String message) {
+    this.status = status;
+    this.statusMessage = message;
   }
 
   /** Return true if crawl hasn't started yet */
@@ -266,16 +288,43 @@ public class CrawlerStatus {
     return (startTime != -1) && (endTime == -1);
   }
 
-  /** Return crawl status: Pending, Active, Successful, or error message */
-  public String getCrawlStatus() {
-    if (startTime == -1) {
-      return Crawler.STATUS_QUEUED;
-    } else if (endTime == -1) {
-      return Crawler.STATUS_ACTIVE;
-    } else if (crawlError != null) {
-      return crawlError;
+  /** Return true if any error has been recorded */
+  public boolean isCrawlError() {
+    switch (status) {
+    case Crawler.STATUS_UNKNOWN:
+    case Crawler.STATUS_SUCCESSFUL:
+    case Crawler.STATUS_ACTIVE:
+    case Crawler.STATUS_QUEUED:
+      return false;
+    default:
+      return true;
     }
-    return Crawler.STATUS_SUCCESSFUL;
+  }
+
+  public int getCrawlStatus() {
+    return status;
+  }
+
+  /** Return crawl status: Pending, Active, Successful, or error message */
+  public String getCrawlStatusString() {
+//     if (startTime == -1) {
+//       return getDefaultMessage(Crawler.STATUS_QUEUED);
+//     } else if (endTime == -1) {
+//       return getDefaultMessage(Crawler.STATUS_ACTIVE);
+//     } else if (statusMessage != null) {
+    if (statusMessage != null) {
+      return statusMessage;
+    } else {
+      return getDefaultMessage(status);
+    }
+  }
+
+  public static String getDefaultMessage(int code) {
+    String msg = DEFAULT_MESSAGES.get(code);
+    if (msg == null) {
+      return "Unknown code " + code;
+    }
+    return msg;
   }
 
   /** Increment counter of total bytes fetched */
@@ -616,8 +665,9 @@ public class CrawlerStatus {
     }
 
     public UrlCount seal(boolean keepColl) {
-      chkUpdate();
-      cnt = -1 - cnt;
+      if (!isSealed()) {
+	cnt = -1 - cnt;
+      }
       return this;
     }
 

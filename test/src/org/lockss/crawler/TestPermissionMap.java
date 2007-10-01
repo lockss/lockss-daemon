@@ -1,5 +1,5 @@
 /*
- * $Id: TestPermissionMap.java,v 1.9 2007-01-22 23:57:19 troberts Exp $
+ * $Id: TestPermissionMap.java,v 1.10 2007-10-01 08:22:21 tlipkis Exp $
  */
 
 /*
@@ -109,7 +109,7 @@ public class TestPermissionMap extends LockssTestCase {
                         null);
     map.init();
     assertTrue(map.hasPermission("http://www.example.com/"));
-    assertNull(helper.getCrawlStatus().getCrawlError());
+    assertFalse(helper.getCrawlerStatus().isCrawlError());
   }
 
   public void testCheckPermissionDaemonAndPluginPermission() throws Exception {
@@ -119,7 +119,7 @@ public class TestPermissionMap extends LockssTestCase {
                         new MockPermissionChecker(999));
     map.init();
     assertTrue(map.hasPermission("http://www.example.com/"));
-    assertNull(helper.getCrawlStatus().getCrawlError());
+    assertFalse(helper.getCrawlerStatus().isCrawlError());
   }
 
   public void testCheckPermissionDaemonPermissionRefuses() throws Exception {
@@ -130,7 +130,7 @@ public class TestPermissionMap extends LockssTestCase {
     map.init();
     assertFalse(map.hasPermission("http://www.example.com/"));
     assertEquals("No permission statement on manifest page.",
-                 helper.getCrawlStatus().getCrawlError());
+                 helper.getCrawlerStatus().getCrawlStatusString());
   }
 
   public void testCheckPermissionPluginPermissionRefuses() throws Exception {
@@ -141,7 +141,7 @@ public class TestPermissionMap extends LockssTestCase {
     map.init();
     assertFalse(map.hasPermission("http://www.example.com/"));
     assertEquals("No permission statement on manifest page.",
-                 helper.getCrawlStatus().getCrawlError());
+                 helper.getCrawlerStatus().getCrawlStatusString());
   }
 
   public void testCheckPermissionPluginCrawlWindowClosed() throws Exception {
@@ -154,8 +154,8 @@ public class TestPermissionMap extends LockssTestCase {
                         new MockPermissionChecker(999));
     map.init();
     assertFalse(map.hasPermission("http://www.example.com/"));
-    assertEquals("Crawl window closed.",
-                 helper.getCrawlStatus().getCrawlError());
+    assertEquals("Crawl window closed",
+                 helper.getCrawlerStatus().getCrawlStatusString());
   }
 
   // XXX unfinished
@@ -178,7 +178,7 @@ public class TestPermissionMap extends LockssTestCase {
       throw new UnsupportedOperationException("not implemented");
     }
 
-    public CrawlerStatus getCrawlStatus() {
+    public CrawlerStatus getCrawlerStatus() {
       return cStatus;
     }
 

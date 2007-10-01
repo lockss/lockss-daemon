@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlerStatus.java,v 1.2 2007-05-28 05:23:25 tlipkis Exp $
+ * $Id: TestCrawlerStatus.java,v 1.3 2007-10-01 08:22:21 tlipkis Exp $
  */
 
 /*
@@ -73,17 +73,35 @@ public class TestCrawlerStatus extends LockssTestCase {
     assertNotEquals(c1.getKey(), c2.getKey());
   }
 
+  public void testGetDefaultMessage() {
+    CrawlerStatus c1 = new CrawlerStatus(mau, null, "Type 42");
+    assertEquals("Unknown", c1.getDefaultMessage(Crawler.STATUS_UNKNOWN));
+    assertEquals("Pending", c1.getDefaultMessage(Crawler.STATUS_QUEUED));
+    assertEquals("Active", c1.getDefaultMessage(Crawler.STATUS_ACTIVE));
+    assertEquals("Successful", c1.getDefaultMessage(Crawler.STATUS_SUCCESSFUL));
+    assertEquals("Error", c1.getDefaultMessage(Crawler.STATUS_ERROR));
+    assertEquals("Aborted", c1.getDefaultMessage(Crawler.STATUS_ABORTED));
+    assertEquals("Crawl window closed", c1.getDefaultMessage(Crawler.STATUS_WINDOW_CLOSED));
+    assertEquals("Fetch error", c1.getDefaultMessage(Crawler.STATUS_FETCH_ERROR));
+    assertEquals("No permission from publisher", c1.getDefaultMessage(Crawler.STATUS_NO_PUB_PERMISSION));
+    assertEquals("Plugin error", c1.getDefaultMessage(Crawler.STATUS_PLUGIN_ERROR));
+    assertEquals("Repository error", c1.getDefaultMessage(Crawler.STATUS_REPO_ERR));
+  }
+
   public void testGetCrawlStatus() {
     CrawlerStatus c1 = new CrawlerStatus(mau, null, "Type 42");
     assertTrue(c1.isCrawlWaiting());
     assertFalse(c1.isCrawlActive());
-    assertEquals("Pending", c1.getCrawlStatus());
+    assertFalse(c1.isCrawlError());
+    assertEquals("Pending", c1.getCrawlStatusString());
     c1.signalCrawlStarted();
     assertFalse(c1.isCrawlWaiting());
     assertTrue(c1.isCrawlActive());
-    assertEquals("Active", c1.getCrawlStatus());
+    assertFalse(c1.isCrawlError());
+    assertEquals("Active", c1.getCrawlStatusString());
     c1.signalCrawlEnded();
-    assertEquals("Successful", c1.getCrawlStatus());
+    assertFalse(c1.isCrawlError());
+    assertEquals("Successful", c1.getCrawlStatusString());
   }
 
   void setRecord(String types) {
