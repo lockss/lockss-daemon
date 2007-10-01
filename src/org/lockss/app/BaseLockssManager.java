@@ -1,5 +1,5 @@
 /*
- * $Id: BaseLockssManager.java,v 1.20 2006-11-11 06:56:30 tlipkis Exp $
+ * $Id: BaseLockssManager.java,v 1.21 2007-10-01 08:13:44 tlipkis Exp $
  */
 
 /*
@@ -41,9 +41,11 @@ import org.lockss.util.*;
 
 public abstract class BaseLockssManager implements LockssManager {
 
+  private static Logger log = Logger.getLogger("BaseLockssManager");
+
   protected LockssApp theApp = null;
   private Configuration.Callback configCallback;
-  private static Logger log = Logger.getLogger("BaseLockssManager");
+  protected boolean shuttingDown = false;
 
   protected String getClassName() {
     return ClassUtil.getClassNameWithoutPackage(getClass());
@@ -78,6 +80,7 @@ public abstract class BaseLockssManager implements LockssManager {
   /** Called to stop a service.  Service should extend this to stop all
    * ongoing activity (<i>eg</i>, threads). */
   public void stopService() {
+    shuttingDown = true;
     // checkpoint here
     unregisterConfig();
     // Logically, we should set theApp = null here, but that breaks several
@@ -88,6 +91,11 @@ public abstract class BaseLockssManager implements LockssManager {
   /** Return the app instance in which this manager is running */
   public LockssApp getApp() {
     return theApp;
+  }
+
+  /** Return true if the manager is shutting down */
+  public boolean isShuttingDown() {
+    return shuttingDown;
   }
 
   /**
