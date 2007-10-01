@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.224 2007-09-24 18:37:10 dshr Exp $
+ $Id: build.xml,v 1.225 2007-10-01 08:09:56 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -181,6 +181,8 @@ Args:
   <property name="jimi.jar"       value="${lib}/JimiProClasses.jar"/>
   <property name="jetty.jar"      value="${lib}/jetty-5.1.5.jar"/>
   <property name="servlet.jar"    value="${lib}/javax.servlet.jar"/>
+  <property name="pjl-comp-filter.jar"
+                                  value="${lib}/pjl-comp-filter-1.6.5.jar"/>
   <property name="jaxp.jar"       value="${lib}/javax.xml.jaxp.jar"/>
 <!--    <property name="xml.jar"  value="${lib}/org.apache.crimson.jar"/> -->
   <property name="log4j.jar" value="${lib}/log4j-1.2.13.jar"/>
@@ -295,13 +297,14 @@ Args:
     <pathelement path="${commons.logging.jar}" />
     <pathelement path="${commons.codec.jar}" />
     <pathelement path="${commons.httpclient.jar}" />
-  	<pathelement path="${commons.io.jar}" />
+    <pathelement path="${commons.io.jar}" />
     <pathelement path="${commons.jxpath.jar}" />
     <pathelement path="${javatar.jar}" />
     <pathelement path="${log4j.jar}" />
     <pathelement path="${concurrent.jar}" />
     <pathelement path="${jetty.jar}" />
     <pathelement path="${servlet.jar}" />
+    <pathelement path="${pjl-comp-filter.jar}" />
     <pathelement path="${mailapi.jar}" />
     <pathelement path="${activation.jar}" />
     <pathelement path="${castor.jar}" />
@@ -1374,13 +1377,6 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
   <!-- ==================================================================== -->
   <target name="javadoc-test" depends="compile-tests,-load-build-info"
    description="Build the javadoc for the test hierarchy">
-    <!-- Using 'packagenames="org.lockss.*"' as above results in the doc set
-	 including all the referenced classes in those packages, but with
-	 none of the javadoc comments, because the source isn't available.
-	 So the test classes are included individually instead, which
-	 results in no package index.
-	 An alternative would be to fully include the non-test classes,
-	 by putting them on the sourcepath.  -->
     <mkdir dir="${test.javadoc}"/>
     <!-- Old files can result in misleading stuff in the docs.  Since
          javadoc regenerates everything from scratch each time anyway,
@@ -1392,6 +1388,7 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
     <property name="javadoc.test.header"
               value="Built ${build.timestamp} on ${build.host}" />
     <javadoc
+             packagenames="org.lockss.*"
 	     failonerror="true"
              sourcepath="${test.src}"
              destdir="${test.javadoc}"
@@ -1404,7 +1401,7 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
              header="${javadoc.test.header}"
              bottom="Copyright &amp;copy; 2000-2006 Board of Trustees of Leland Stanford Jr. University, all rights reserved.">
 <!--         <fileset dir="${test.src}" includes="**/*.java"/> -->
-       <fileset dir="${test.src}" includes="**/*.java" excludes="**/Test*.java"/>
+<!--        <fileset dir="${test.src}" includes="**/*.java" excludes="**/Test*.java"/> -->
        <classpath refid="test.compile.classpath" />
     </javadoc>
   </target>
@@ -1449,7 +1446,7 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
     <property name="doctar" value="/tmp/lockss-javadoc.tgz" />
     <property name="script" value="lockss-jdftp" />
 
-    <tar destfile="${doctar}" compression="gzip">
+    <tar destfile="${doctar}" compression="gzip" longfile="gnu">
       <tarfileset dir="${javadoc}" prefix="daemon" />
       <tarfileset dir="${test.javadoc}" prefix="test" />
     </tar>
@@ -1472,7 +1469,7 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
     <property name="doctar" value="/tmp/lockss-jcoverage.tgz" />
     <property name="script" value="lockss-jdftp" />
 
-    <tar destfile="${doctar}" compression="gzip">
+    <tar destfile="${doctar}" compression="gzip" longfile="gnu">
       <tarfileset dir="${test.results}" prefix="jcoverage" excludes="TEST-*" />
     </tar>
 
