@@ -1,5 +1,5 @@
 /*
- * $Id: TimerQueue.java,v 1.32 2007-08-10 07:28:02 tlipkis Exp $
+ * $Id: TimerQueue.java,v 1.33 2007-10-01 08:17:24 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -207,9 +207,10 @@ public class TimerQueue {
   synchronized void startOrKickThread() {
     if (timerThread == null) {
       log.debug("Starting thread");
-      timerThread = new TimerThread("TimerQ");
-      timerThread.start();
-      timerThread.waitRunning();
+      TimerThread th = new TimerThread("TimerQ");
+      timerThread = th;
+      th.start();
+      th.waitRunning();
     } else {
       threadWait.give();
     }
