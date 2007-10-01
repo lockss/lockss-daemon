@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.92 2007-08-15 07:09:37 tlipkis Exp $
+ * $Id: LockssDaemon.java,v 1.93 2007-10-01 08:14:00 tlipkis Exp $
  */
 
 /*
@@ -777,6 +777,11 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
    * thread.) */
   public void waitUntilAusStarted() throws InterruptedException {
     ausStarted.waitFull(Deadline.MAX);
+  }
+
+  /** Return true if all AUs have been started */
+  public boolean areAusStarted() {
+    return ausStarted.isFull();
   }
 
   protected void setConfig(Configuration config, Configuration prevConfig,
