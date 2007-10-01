@@ -1,5 +1,5 @@
 /*
- * $Id: Exploder.java,v 1.2 2007-09-24 18:37:11 dshr Exp $
+ * $Id: Exploder.java,v 1.3 2007-10-01 08:13:21 tlipkis Exp $
  */
 
 /*
@@ -40,10 +40,9 @@ import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
 import org.lockss.plugin.exploded.*;
 import org.lockss.crawler.BaseCrawler;
-import org.lockss.config.Configuration;
+import org.lockss.config.*;
 import org.lockss.app.LockssDaemon;
 import org.lockss.state.HistoryRepository;
-import org.lockss.plugin.UrlCacher;
 import org.lockss.filter.StringFilter;
 
 /**
@@ -56,6 +55,12 @@ import org.lockss.filter.StringFilter;
 
 public abstract class Exploder {
   private static Logger logger = Logger.getLogger("Exploder");
+
+  public static final String PARAM_EXPLODED_PLUGIN_NAME =
+    Configuration.PREFIX + "crawler.exploder.explodedPluginName";
+  public static final String DEFAULT_EXPLODED_PLUGIN_NAME =
+    ExplodedPlugin.class.getName();
+
   protected UrlCacher urlCacher;
   protected int maxRetries;
   protected CrawlSpec crawlSpec;
@@ -120,7 +125,8 @@ public abstract class Exploder {
 	props.put(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
       }
       props.put(ConfigParamDescr.PUB_NEVER.getKey(), "true");
-      String pluginName = ExplodedPlugin.class.getName();
+      String pluginName = CurrentConfig.getParam(PARAM_EXPLODED_PLUGIN_NAME,
+						 DEFAULT_EXPLODED_PLUGIN_NAME);
       String key = PluginManager.pluginKeyFromName(pluginName);
       logger.debug3(pluginName + " has key: " + key);
       Plugin plugin = pluginMgr.getPlugin(key);
@@ -162,8 +168,8 @@ public abstract class Exploder {
     // XXX for the URL - check and move the place to storeContent
     logger.debug3("Storing " + newUrl + " in " + au.toString());
     newUc.storeContentIn(newUrl, ae.getInputStream(), ae.getHeaderFields());
-    crawler.getCrawlStatus().signalUrlFetched(newUrl);
-    // crawler.getCrawlStatus().signalMimeTypeOfUrl(newUrl, mimeType);
+    crawler.getCrawlerStatus().signalUrlFetched(newUrl);
+    // crawler.getCrawlerStatus().signalMimeTypeOfUrl(newUrl, mimeType);
   }
 
   protected void handleAddText(ArchiveEntry ae) {

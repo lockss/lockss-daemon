@@ -1,5 +1,5 @@
 /*
- * $Id: FuncZipExploder2.java,v 1.2 2007-09-24 18:37:13 dshr Exp $
+ * $Id: FuncZipExploder2.java,v 1.3 2007-10-01 08:13:21 tlipkis Exp $
  */
 
 /*
@@ -66,6 +66,8 @@ public class FuncZipExploder2 extends LockssTestCase {
 
   private SimulatedArchivalUnit sau;
   private MockLockssDaemon theDaemon;
+  PluginManager pluginMgr;
+
   private static final int DEFAULT_MAX_DEPTH = 1000;
   private static final int DEFAULT_FILESIZE = 3000;
   private static int fileSize = DEFAULT_FILESIZE;
@@ -124,14 +126,17 @@ public class FuncZipExploder2 extends LockssTestCase {
     props.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
     props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     props.setProperty(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION, tempDirPath);
-    
+    props.setProperty(Exploder.PARAM_EXPLODED_PLUGIN_NAME,
+		      MockExplodedPlugin.class.getName());
 
     theDaemon = getMockLockssDaemon();
     theDaemon.getAlertManager();
-    // theDaemon.getPluginManager().setLoadablePluginsReady(true);
+    pluginMgr = theDaemon.getPluginManager();
+    // pluginMgr.setLoadablePluginsReady(true);
     theDaemon.setDaemonInited(true);
-    theDaemon.getPluginManager().startService();
-    theDaemon.getPluginManager().startLoadablePlugins();
+    pluginMgr.startService();
+    pluginMgr.startLoadablePlugins();
+    pluginMgr.loadBuiltinPlugin(MockExplodedPlugin.class);
 
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
