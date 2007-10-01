@@ -1,5 +1,5 @@
 /*
- * $Id: DebugPanel.java,v 1.11 2007-07-04 06:48:08 tlipkis Exp $
+ * $Id: DebugPanel.java,v 1.12 2007-10-01 08:16:42 tlipkis Exp $
  */
 
 /*
@@ -45,6 +45,7 @@ import org.lockss.app.*;
 import org.lockss.util.*;
 import org.lockss.mail.*;
 import org.lockss.poller.*;
+import org.lockss.crawler.*;
 import org.lockss.state.*;
 import org.lockss.config.*;
 import org.lockss.remote.*;
@@ -66,6 +67,8 @@ public class DebugPanel extends LockssServlet {
   static final String ACTION_THROW_IOEXCEPTION = "Throw IOException";
   static final String ACTION_START_V3_POLL = "Start V3 Poll";
   static final String ACTION_FORCE_START_V3_POLL = "Force V3 Poll";
+  static final String ACTION_START_CRAWL = "Start Crawl";
+  static final String ACTION_FORCE_START_CRAWL = "Force Start Crawl";
 
   static final String COL2 = "colspan=2";
   static final String COL2CENTER = COL2 + " align=center";
@@ -75,13 +78,15 @@ public class DebugPanel extends LockssServlet {
   private LockssDaemon daemon;
   private PluginManager pluginMgr;
   private PollManager pollManager;
+  private CrawlManager crawlMgr;
   private RemoteApi rmtApi;
 
   String auid;
   String name;
   String text;
   boolean showResult;
-  boolean showForce;
+  boolean showForcePoll;
+  boolean showForceCrawl;
   protected void resetLocals() {
     resetVars();
     super.resetLocals();
@@ -91,7 +96,8 @@ public class DebugPanel extends LockssServlet {
     auid = null;
     errMsg = null;
     statusMsg = null;
-    showForce = false;
+    showForcePoll = false;
+    showForceCrawl = false;
   }
 
   public void init(ServletConfig config) throws ServletException {
@@ -99,6 +105,7 @@ public class DebugPanel extends LockssServlet {
     daemon = getLockssDaemon();
     pluginMgr = daemon.getPluginManager();
     pollManager = daemon.getPollManager();
+    crawlMgr = daemon.getCrawlManager();
     rmtApi = daemon.getRemoteApi();
   }
 
@@ -121,6 +128,12 @@ public class DebugPanel extends LockssServlet {
     if (ACTION_FORCE_START_V3_POLL.equals(action)) {
       forceV3Poll();
     }
+    if (ACTION_START_CRAWL.equals(action)) {
+      doCrawl();
+    }
+    if (ACTION_FORCE_START_CRAWL.equals(action)) {
+      forceCrawl();
+    }
     displayPage();
   }
 
@@ -137,6 +150,45 @@ public class DebugPanel extends LockssServlet {
     throw new IOException(msg != null ? msg : "Test message");
   }
 
+  private void doCrawl() {
+    ArchivalUnit au = getAu();
+    if (au == null) return;
+    try {
+      if (((CrawlManagerImpl)crawlMgr).isEligibleForNewContentCrawl(au)) {
+	crawlMgr.startNewContentCrawl(au, null, null, null);
+	statusMsg = "Crawl requested for " + au.getName();
+      } else {
+ 	errMsg = "Not eligible for crawl.  Click again to override rate limiter.";
+ 	showForceCrawl = true;
+ 	return;
+      }
+    } catch (Exception e) {
+      log.error("Can't start crawl", e);
+      errMsg = "Error: " + e.toString();
+    }
+  }
+
+  private void forceCrawl() {
+    ArchivalUnit au = getAu();
+    if (au == null) return;
+    try {
+      CrawlManagerImpl cmi = (CrawlManagerImpl)crawlMgr;
+      RateLimiter limit = cmi.getNewContentRateLimiter(au);
+      if (!limit.isEventOk()) {
+	limit.unevent();
+      }
+      if (cmi.isEligibleForNewContentCrawl(au)) {
+	doCrawl();
+      } else {
+ 	errMsg = "Sorry, crawl still won't start, see log.";
+ 	return;
+      }
+    } catch (Exception e) {
+      log.error("Can't start crawl", e);
+      errMsg = "Error: " + e.toString();
+    }
+  }
+
   private void doV3Poll() {
     ArchivalUnit au = getAu();
     if (au == null) return;
@@ -147,14 +199,14 @@ public class DebugPanel extends LockssServlet {
       // Don't call a poll on this if we're already running a V3 poll on it.
       if (pollManager.isV3PollerRunning(spec)) {
 	errMsg = "Poll already running.  Click again to force new poll.";
-	showForce = true;
+	showForcePoll = true;
 	return;
       }
       // Don't poll if never crawled & not down
       if (nodeMgr.getAuState().getLastCrawlTime() < 0 &&
 	  !AuUtil.isPubDown(au)) {
 	errMsg = "Not crawled yet.  Click again to force new poll.";
-	showForce = true;
+	showForcePoll = true;
 	return;
       }
       callV3ContentPoll(au);
@@ -228,10 +280,15 @@ public class DebugPanel extends LockssServlet {
     setTabOrder(ausel);
 
     Input v3Poll = new Input(Input.Submit, KEY_ACTION,
-			     ( showForce
+			     ( showForcePoll
 			       ? ACTION_FORCE_START_V3_POLL
 			       : ACTION_START_V3_POLL));
     frm.add("<br><center>" + v3Poll + "</center>");
+    Input crawl = new Input(Input.Submit, KEY_ACTION,
+			    ( showForceCrawl
+			      ? ACTION_FORCE_START_CRAWL
+			      : ACTION_START_CRAWL));
+    frm.add("<br><center>" + crawl + "</center>");
     comp.add(frm);
     return comp;
   }
