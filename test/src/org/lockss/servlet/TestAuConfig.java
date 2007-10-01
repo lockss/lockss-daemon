@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuConfig.java,v 1.8 2006-05-23 03:16:52 tlipkis Exp $
+ * $Id: TestAuConfig.java,v 1.9 2007-10-01 08:16:27 tlipkis Exp $
  */
 
 /*
@@ -99,7 +99,7 @@ public class TestAuConfig extends LockssServletTestCase {
 
   public void testAfterAusLoaded() throws Exception {
     // Force PluginManager to think all AUs have started.
-    pluginMgr.setLoadablePluginsReady(true);
+    theDaemon.setAusStarted(true);
     initServletRunner();
     WebRequest request =
       new GetMethodWebRequest("http://null/AuConfig" );

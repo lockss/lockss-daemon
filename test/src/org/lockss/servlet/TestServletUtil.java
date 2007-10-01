@@ -1,5 +1,5 @@
 /*
- * $Id: TestServletUtil.java,v 1.4 2007-08-16 02:38:54 tlipkis Exp $
+ * $Id: TestServletUtil.java,v 1.5 2007-10-01 08:16:27 tlipkis Exp $
  */
 
 /*
@@ -67,6 +67,7 @@ public class TestServletUtil extends LockssTestCase {
 
   public void testManifestIndex(boolean started) throws Exception {
     MockLockssDaemon daemon = getMockLockssDaemon();
+    daemon.setAusStarted(started);
     daemon.getPluginManager().setLoadablePluginsReady(started);
 
     Plugin pl = new MockPlugin();

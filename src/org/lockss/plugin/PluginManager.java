@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.184 2007-09-24 18:37:11 dshr Exp $
+ * $Id: PluginManager.java,v 1.185 2007-10-01 08:16:27 tlipkis Exp $
  */
 
 /*
@@ -327,7 +327,7 @@ public class PluginManager
   }
 
   public boolean areAusStarted() {
-    return loadablePluginsReady;
+    return getDaemon().areAusStarted();
   }
 
   Configuration currentAllPlugs = ConfigManager.EMPTY_CONFIGURATION;
@@ -1020,9 +1020,16 @@ public class PluginManager
 
   /**
    * Return true if the specified Archival Unit is used internally
-   * by the LOCKSS daemon.
+   * by the LOCKSS daemon.  Currently this is only registry AUs
    */
   public boolean isInternalAu(ArchivalUnit au) {
+    return au instanceof RegistryArchivalUnit;
+  }
+
+  /**
+   * Return true if the specified Archival Unit is a plugin registry AU
+   */
+  public boolean isRegistryAu(ArchivalUnit au) {
     return au instanceof RegistryArchivalUnit;
   }
 
@@ -1149,9 +1156,9 @@ public class PluginManager
 		    xmlPlugin.getRequiredDaemonVersion());
       }
     } catch (FileNotFoundException ex) {
-      log.warning(pluginName + ": Couldn't find plugin: " + ex);
+      log.debug2("No XML plugin: " + pluginName + ": " + ex);
     } catch (Exception ex) {
-      log.warning(pluginName + ": Couldn't load plugin", ex);
+      log.debug2("No XML plugin: " + pluginName, ex);
     }
 
     // If both are found, decide which one to favor.
@@ -1580,7 +1587,7 @@ public class PluginManager
 
   /** Return a collection of all RegistryArchivalUnits.  This is a subset
    * of getAllAus() */
-  public Collection getAllRegistryAus() {
+  public Collection<ArchivalUnit> getAllRegistryAus() {
     return new ArrayList(getRegistryPlugin().getAllAus());
   }
 
