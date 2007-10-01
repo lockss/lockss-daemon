@@ -1,5 +1,5 @@
 /*
- * $Id: LocalServletManager.java,v 1.23 2007-05-29 06:23:44 tlipkis Exp $
+ * $Id: LocalServletManager.java,v 1.24 2007-10-01 08:10:14 tlipkis Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import org.lockss.jetty.*;
 import org.mortbay.http.*;
 import org.mortbay.http.handler.*;
 import org.mortbay.jetty.servlet.*;
+import com.planetj.servlet.filter.compression.*;
 
 /**
  * Local UI servlet starter
@@ -70,6 +71,24 @@ public class LocalServletManager extends BaseServletManager {
   public static final String PARAM_REDIRECT_ROOT = PREFIX + "redirectRoot";
   public static final String DEFAULT_REDIRECT_ROOT = null;
 
+  static final String COMPRESSOR_PREFIX = PREFIX + "compressor.";
+
+  public static final String PARAM_COMPRESSOR_ENABLED =
+    COMPRESSOR_PREFIX + "enabled";
+  public static final boolean DEFAULT_COMPRESSOR_ENABLED = true;
+
+  /** See documentation of pjl-comp-filter's CompressingFilter for legal
+      keys and values.  Defaults: <code><br>compressionThreshold =
+      4096<br>includeContentTypes = text/html,text/xml,test/plain</code> */
+  static final String PARAM_DOC_ONLY = COMPRESSOR_PREFIX + "<key>=<val>";
+
+  static final Map<String,String> COMPRESSOR_DEFAULTS = new HashMap();
+  static {
+    COMPRESSOR_DEFAULTS.put("compressionThreshold", "4096");
+    COMPRESSOR_DEFAULTS.put("includeContentTypes",
+			    "text/html,text/xml,text/plain");
+  }
+
   static final String PARAM_INFRAME_CONTENT_TYPES =
     PREFIX + "view.inFrameTypes";
   static final String DEFAULT_INFRAME_CONTENT_TYPES =
@@ -80,6 +99,7 @@ public class LocalServletManager extends BaseServletManager {
   private LockssResourceHandler rootResourceHandler;
   private List inFrameContentTypes;
   private boolean hasIsoFiles = false;
+  private boolean compressorEnabled = DEFAULT_COMPRESSOR_ENABLED;
 
   public LocalServletManager() {
     super(SERVER_NAME);
@@ -101,7 +121,8 @@ public class LocalServletManager extends BaseServletManager {
       LockssServlet.setContactAddr(config.get(PARAM_CONTACT_ADDR,
 					      DEFAULT_CONTACT_ADDR));
       LockssServlet.setHelpUrl(config.get(PARAM_HELP_URL, DEFAULT_HELP_URL));
-
+      compressorEnabled = config.getBoolean(PARAM_COMPRESSOR_ENABLED,
+					    DEFAULT_COMPRESSOR_ENABLED);
       if (changedKeys.contains(PARAM_INFRAME_CONTENT_TYPES)) {
 	inFrameContentTypes = config.getList(PARAM_INFRAME_CONTENT_TYPES);
 	if (inFrameContentTypes == null || inFrameContentTypes.isEmpty()) {
@@ -183,8 +204,11 @@ public class LocalServletManager extends BaseServletManager {
     // user authentication handler
     setContextAuthHandler(context, realm);
 
-    // Create a servlet container
-    ServletHandler handler = new ServletHandler();
+    // Create a servlet container.  WebApplicationHandler is a
+    // ServletHandler that can apply filters (e.g., compression) around
+    // servlets.
+    WebApplicationHandler handler = new WebApplicationHandler();
+    addCompressionFilter(handler);
 
     // Request dump servlet
     handler.addServlet("Dump", "/Dump", "org.mortbay.servlet.Dump");
@@ -238,6 +262,31 @@ public class LocalServletManager extends BaseServletManager {
     context.addHandler(new NotFoundHandler());
 
     //       context.addHandler(new DumpHandler());
+  }
+
+  void addCompressionFilter(WebApplicationHandler handler) {
+    Configuration config = ConfigManager.getCurrentConfig();
+    if (config.getBoolean(PARAM_COMPRESSOR_ENABLED,
+			  DEFAULT_COMPRESSOR_ENABLED)) {
+      String filterName = "CompressingFilter";
+      FilterHolder holder =
+	handler.defineFilter(filterName, CompressingFilter.class.getName());
+      // Set default compressor params unless in config
+      Configuration compressorConfig = config.getConfigTree(COMPRESSOR_PREFIX);
+      for (Map.Entry<String,String> ent : COMPRESSOR_DEFAULTS.entrySet()) {
+	String key = ent.getKey();
+	if (compressorConfig.get(key) == null) {
+	  holder.put(key, ent.getValue());
+	}
+      }
+      // Set compressor params from config
+      for (Iterator iter = compressorConfig.nodeIterator(); iter.hasNext(); ) {
+	String key = (String)iter.next();
+	String val = compressorConfig.get(key);
+	holder.put(key, val);
+      }
+      handler.addFilterPathMapping("/*", filterName, Dispatcher.__DEFAULT);
+    }
   }
 
   void setupImageContext(HttpServer server) throws MalformedURLException {
