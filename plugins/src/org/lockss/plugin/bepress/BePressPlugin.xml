@@ -1,7 +1,11 @@
 <map>
   <entry>
+    <string>required_daemon_version</string>
+    <string>1.27.0</string>
+  </entry>
+  <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>7</string>
   </entry>
   <entry>
     <string>au_name</string>
