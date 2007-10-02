@@ -1,5 +1,5 @@
 /*
- * $Id: AnthroSourceHtmlFilterFactory.java,v 1.2 2007-09-28 20:48:59 thib_gc Exp $
+ * $Id: AnthroSourceHtmlFilterFactory.java,v 1.3 2007-10-02 21:02:17 thib_gc Exp $
  */
 
 /*
@@ -44,20 +44,27 @@ public class AnthroSourceHtmlFilterFactory implements FilterFactory {
                                                InputStream in,
                                                String encoding)
       throws PluginException {
-    return new HtmlFilterInputStream(in,
+    InputStream ret = new HtmlFilterInputStream(in,
+                                                encoding,
+                                                new HtmlCompoundTransform(// Filter out <td class="rightRegion">...</td>
+                                                                          HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("td",
+                                                                                                                                           "class",
+                                                                                                                                           "rightRegion")),
+                                                                          // Filter out <img class="JournalCover">...</img>
+                                                                          HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("img",
+                                                                                                                                           "class",
+                                                                                                                                           "JournalCover"))));
+    // Need to nest them by hand in 1.26 becase 'new HtmlCompoundTransform(HtmlTransform[])' only in 1.27
+    return new HtmlFilterInputStream(ret,
                                      encoding,
-                                     new HtmlCompoundTransform(// Filter out <td class="rightRegion">...</td>
-                                                               HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("td",
-                                                                                                                                "class",
-                                                                                                                                "rightRegion")),
-                                                               // Filter out <img class="JournalCover">...</img>
-                                                               HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("img",
-                                                                                                                                "class",
-                                                                                                                                "JournalCover")),
-                                                               // Filter out <div class="institutionBanner">...</img>
+                                     new HtmlCompoundTransform(// Filter out <div class="institutionBanner">...</img>
                                                                HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
                                                                                                                                 "class",
-                                                                                                                                "institutionBanner"))));
+                                                                                                                                "institutionBanner")),
+                                                               // Filter out <div class="citedBySection">...</div>
+                                                               HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
+                                                                                                                                "class",
+                                                                                                                                "citedBySection"))));
   }
 
 }
