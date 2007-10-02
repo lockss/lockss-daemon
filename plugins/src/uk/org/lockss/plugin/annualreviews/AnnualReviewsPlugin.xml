@@ -35,9 +35,9 @@
       <string>2,&quot;^%s(action|loi|search|feedback|edcom)&quot;, base_url</string>
       <string>1,&quot;^%s.*\.(js|css|ico|gif|jpe?g|png)$&quot;, base_url</string>
       <string>1,&quot;^%stoc/%s/%d/&quot;, base_url, journal_id, volume</string>
-      <string>2,&quot;^%sdoi/(pdf|abs|full|suppl)/[.0-9]+/annurev\.0?%s\.%d.*\?prevSearch=\${resultBean\.text}&quot;, base_url, short_journal_id, volume</string>
-      <string>1,&quot;^%sdoi/(pdf|abs|full|suppl)/[.0-9]+/annurev\.0?%s\.%d&quot;, base_url, short_journal_id, volume</string>
-      <string>1,&quot;^%sdoi/(pdf|abs|full|suppl)/[.0-9]+/annurev\.0?%s\.%d&quot;, base_url, journal_id, volume</string>
+      <string>2,&quot;^%sdoi/(pdf|abs|full|suppl)/[.0-9]+/annurev\.%s\.0?%d\..*\?prevSearch=\${resultBean\.text}&quot;, base_url, short_journal_id, volume</string>
+      <string>1,&quot;^%sdoi/(pdf|abs|full|suppl)/[.0-9]+/annurev\.%s\.0?%d\.&quot;, base_url, short_journal_id, volume</string>
+      <string>1,&quot;^%sdoi/(pdf|abs|full|suppl)/[.0-9]+/annurev\.%s\.0?%d\.&quot;, base_url, journal_id, volume</string>
     </list>
   </entry>
   <entry>
