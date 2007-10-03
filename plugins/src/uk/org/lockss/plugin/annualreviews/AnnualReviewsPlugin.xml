@@ -75,8 +75,8 @@
       </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
         <key>short_journal_id</key>
-        <displayName>Two-letter Journal Identifier</displayName>
-        <description>Legacy two-letter identifier for journal</description>
+        <displayName>Short Journal Identifier</displayName>
+        <description>Legacy short identifier for journal</description>
         <type>1</type>
         <size>2</size>
         <definitional>false</definitional>
