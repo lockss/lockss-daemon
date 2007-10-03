@@ -1,5 +1,5 @@
 /*
- * $Id: AnthroSourceHtmlFilterFactory.java,v 1.3 2007-10-02 21:02:17 thib_gc Exp $
+ * $Id: AnthroSourceHtmlFilterFactory.java,v 1.4 2007-10-03 16:25:56 thib_gc Exp $
  */
 
 /*
@@ -32,39 +32,51 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.anthrosource;
 
-import java.io.InputStream;
+import java.io.*;
 
+import org.htmlparser.util.NodeList;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 
 public class AnthroSourceHtmlFilterFactory implements FilterFactory {
 
+  // A re-implementation of HtmlCompoundTransform to ship with 1.26
+  // Revisit after 1.27
+  public static class HtmlCompoundTransform implements HtmlTransform {
+    protected HtmlTransform[] transforms;
+    public HtmlCompoundTransform(HtmlTransform[] transforms) { this.transforms = transforms; }
+    public NodeList transform(NodeList nodeList) throws IOException {
+      for (int ix = 0; ix < transforms.length; ix++) { nodeList = transforms[ix].transform(nodeList); }
+      return nodeList;
+    }
+  }
+
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
                                                String encoding)
       throws PluginException {
-    InputStream ret = new HtmlFilterInputStream(in,
-                                                encoding,
-                                                new HtmlCompoundTransform(// Filter out <td class="rightRegion">...</td>
-                                                                          HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("td",
-                                                                                                                                           "class",
-                                                                                                                                           "rightRegion")),
-                                                                          // Filter out <img class="JournalCover">...</img>
-                                                                          HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("img",
-                                                                                                                                           "class",
-                                                                                                                                           "JournalCover"))));
-    // Need to nest them by hand in 1.26 becase 'new HtmlCompoundTransform(HtmlTransform[])' only in 1.27
-    return new HtmlFilterInputStream(ret,
+    HtmlTransform[] transforms = new HtmlTransform[] {
+        // Filter out <td class="rightRegion">...</td>
+        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("td",
+                                                                         "class",
+                                                                         "rightRegion")),
+        // Filter out <img class="JournalCover">...</img>
+        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("img",
+                                                                         "class",
+                                                                         "JournalCover")),
+        // Filter out <div class="institutionBanner">...</img>
+        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
+                                                                         "class",
+                                                                         "institutionBanner")),
+        // Filter out <div class="citedBySection">...</div>
+        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
+                                                                         "class",
+                                                                         "citedBySection")),
+    };
+    return new HtmlFilterInputStream(in,
                                      encoding,
-                                     new HtmlCompoundTransform(// Filter out <div class="institutionBanner">...</img>
-                                                               HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
-                                                                                                                                "class",
-                                                                                                                                "institutionBanner")),
-                                                               // Filter out <div class="citedBySection">...</div>
-                                                               HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
-                                                                                                                                "class",
-                                                                                                                                "citedBySection"))));
+                                     new HtmlCompoundTransform(transforms));
   }
 
 }
