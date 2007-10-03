@@ -1,5 +1,5 @@
 /*
-* $Id: MockIdentityManager.java,v 1.14 2007-07-13 21:23:50 tlipkis Exp $
+* $Id: MockIdentityManager.java,v 1.15 2007-10-03 00:35:53 smorabito Exp $
  */
 
 /*
@@ -327,6 +327,11 @@ public class MockIdentityManager implements IdentityManager {
 
   public PeerIdentityStatus getPeerIdentityStatus(String key) {
     throw new UnsupportedOperationException("not implemented");
+  }
+
+  public float getHighestPercentAgreement(PeerIdentity pid, ArchivalUnit au) {
+    // TODO Auto-generated method stub
+    return 0.0f;
   }
 
 //   protected String getLocalIpParam(Configuration config) {

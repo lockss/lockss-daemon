@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.214 2007-09-24 18:37:12 dshr Exp $
+ * $Id: NodeManagerImpl.java,v 1.215 2007-10-03 00:35:53 smorabito Exp $
  */
 
 /*
@@ -893,44 +893,7 @@ public class NodeManagerImpl
       checkCurrentState(lastOrCurrentPoll, results, nodeState, stateToUse, false);
       return;
     case Poll.V3_PROTOCOL:
-      // If calling V3 polls has been disabled through the appropriate
-      // parameter, just return.  Having this call here is less than ideal,
-      // but will be moved out when we ditch the NodeManager.
-      boolean enableV3Poller =
-        CurrentConfig.getBooleanParam(PARAM_ENABLE_V3_POLLER,
-                                      DEFAULT_ENABLE_V3_POLLER);
-      if (enableV3Poller) {
-        CachedUrlSet cus = nodeState.getCachedUrlSet();
-        if (cus.getSpec().isAu()) {
-          PollSpec spec = new PollSpec(cus, Poll.V3_POLL);
-          // Don't call a poll on this if we're already running a V3 poll on it.
-          if (pollManager.isV3PollerRunning(spec)) {
-            logger.debug("Poll already running, not calling another poll " +
-                         "on " + managedAu.getName());
-            return;
-          }
-
-	  // If polling is disabled, don't call a poll
-	  if (!managedAu.shouldCallTopLevelPoll(getAuState())) {
-	    logger.debug("Not calling poll on " + managedAu.getName());
-	    return;
-	  }
-          // If this AU has successfully crawled in the past, or if it
-          // is a closed AU (publisher is no longer available), then
-          // start a poll.
-          if (getAuState().getLastCrawlTime() > 0 ||
-              AuUtil.isPubDown(managedAu)) {
-            logger.debug("Starting V3 poll for " + managedAu.getName());
-            callV3ContentPoll();
-          } else {
-            logger.debug("AU is not closed, and no crawl has finished.  Not " +
-                         "starting new poll on " + managedAu.getName());
-          }
-        }
-      } else {
-        logger.debug("Skipping poll on " + managedAu.getName() + 
-                     " due to configuration");
-      }
+      // No longer supported.  Just ignore.
       return;
     default:
       logger.critical("Unsupported protocol version: " + protocolVersion);

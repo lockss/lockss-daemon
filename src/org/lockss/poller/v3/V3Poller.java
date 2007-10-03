@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.60 2007-09-11 06:34:57 smorabito Exp $
+ * $Id: V3Poller.java,v 1.61 2007-10-03 00:35:52 smorabito Exp $
  */
 
 /*
@@ -115,7 +115,7 @@ public class V3Poller extends BasePoll {
 
   /** Maximum number of participants for a V3 poll. */
   public static final String PARAM_MAX_POLL_SIZE = PREFIX + "maxPollSize";
-  public static final int DEFAULT_MAX_POLL_SIZE = 10;
+  public static final int DEFAULT_MAX_POLL_SIZE = 5;
 
   /** Target size of the outer circle poll. */
   public static final String PARAM_TARGET_OUTER_CIRCLE_SIZE =
@@ -191,7 +191,7 @@ public class V3Poller extends BasePoll {
    */
   public static final String PARAM_VOTE_DURATION_MULTIPLIER =
     PREFIX + "voteDeadlineMultiplier";
-  public static final int DEFAULT_VOTE_DURATION_MULTIPLIER = 15;
+  public static final int DEFAULT_VOTE_DURATION_MULTIPLIER = 5;
 
   /**
    * Padding to add to the scheduled vote deadline, in ms.
@@ -199,7 +199,7 @@ public class V3Poller extends BasePoll {
   public static final String PARAM_VOTE_DEADLINE_PADDING =
     PREFIX + "voteDeadlinePadding";
   public static final long DEFAULT_VOTE_DEADLINE_PADDING =
-    1000 * 60 * 10; // ten minutes
+    1000 * 60 * 60; // 60 minutes
 
   public static final String PARAM_V3_TRUSTED_WEIGHT =
     PREFIX + "trustedWeight";
@@ -232,7 +232,8 @@ public class V3Poller extends BasePoll {
   public static final String PARAM_V3_EXTRA_POLL_TIME =
     PREFIX + "extraPollTime";
   public static final long DEFAULT_V3_EXTRA_POLL_TIME = 
-    1000 * 60 * 60; // 60 minutes
+    1000 * 60 * 20; // 20 minutes
+
   /**
    * The probability of requesting a repair from other caches.
    */
@@ -302,6 +303,7 @@ public class V3Poller extends BasePoll {
   private long bytesHashedSinceLastCheckpoint = 0;
   private int voteDeadlineMultiplier = DEFAULT_VOTE_DURATION_MULTIPLIER;
   private boolean enableDiscovery = DEFAULT_ENABLE_DISCOVERY;
+  private VoteTallyCallback voteTallyCallback;
   
   // Probability of repairing from another cache.  A number between
   // 0.0 and 1.0.
@@ -622,6 +624,8 @@ public class V3Poller extends BasePoll {
       constructInnerCircle(pollerState.getPollSize());
       setStatus(V3Poller.POLLER_STATUS_INVITING_PEERS);
     }
+    
+    voteTallyCallback = new VoteTallyCallback();
 
     log.debug("Scheduling V3 poll " + pollerState.getPollKey() +
               " to complete by " + pollerState.getPollDeadline());
@@ -650,8 +654,7 @@ public class V3Poller extends BasePoll {
       return;
     } else {
       voteCompleteRequest =
-        TimerQueue.schedule(voteCompleteDeadline,
-                            new VoteTallyCallback(), this);
+        TimerQueue.schedule(voteCompleteDeadline, voteTallyCallback, this);
     }
 
     if (reserveScheduleTime(theParticipants.size())) {
@@ -995,7 +998,8 @@ public class V3Poller extends BasePoll {
                       + " in poll " + getKey() + ".  It is possible that the " 
                       + " poller had no votes to cast, but it could also be "
                       + " a problem.");
-          // Next voter.
+          // Skip this voter's digest index, and go to the next voter.
+          digestIndex++;
           continue;
         }
 
@@ -1200,6 +1204,23 @@ public class V3Poller extends BasePoll {
   boolean tallyVoter(PeerIdentity id) {
     pollerState.addVotedPeer(id);
     checkpointPoll();
+    
+    // A shortcut 
+    if (pollerState.votedPeerCount() == theParticipants.size()) {
+      log.debug("All invited peers have voted.  Rescheduling vote deadline.");
+
+      TimerQueue.cancel(voteCompleteRequest);
+      // Running in another thread, so we must be careful not to make this
+      // run twice.  It may have been ready to go moments before we sent
+      // the cancel request, and too late to stop.
+      if (!voteTallyCallback.tallyStarted()) {
+        voteCompleteRequest =
+          TimerQueue.schedule(Deadline.EXPIRED,
+                              voteTallyCallback,
+                              this);
+      }
+    }
+    
     return true;
   }
 
@@ -1942,10 +1963,19 @@ public class V3Poller extends BasePoll {
    *
    */
   private class VoteTallyCallback implements TimerQueue.Callback {
+    
+    private volatile boolean tallyStarted = false;
+
+    public boolean tallyStarted() {
+      return tallyStarted;
+    }
+    
     public void timerExpired(Object cookie) {
       
+      tallyStarted = true;
+      
       // Ensure that the invitation timer is cancelled.
-      if ( invitationRequest != null) {
+      if (invitationRequest != null) {
         TimerQueue.cancel(invitationRequest);
         invitationRequest = null;
       }

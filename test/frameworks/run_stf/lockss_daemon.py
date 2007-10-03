@@ -58,7 +58,7 @@ class Framework:
             self.startPort = startPort
         self.username = config.get('username', 'testuser')
         self.password = config.get('password', 'testpass')
-        self.logLevel = config.get('daemonLogLevel', 'debug2')
+        self.logLevel = config.get('daemonLogLevel', 'debug')
         self.hostname = config.get('hostname', 'localhost')
 
         self.clientList = [] # ordered list of clients.
@@ -310,17 +310,6 @@ class Client:
         if not self.waitForPublisherDown(au):
             raise LockssError("Timed out waiting for AU %s to be marked "\
                               "'Publisher Down'." % au)
-
-    def requestTreeWalk(self, au):
-        """
-        Possibly a poorly named method.  This will merely deactivate
-        and then reactivate the specified AU, which may or may not
-        trigger a tree walk.  Worst case, it actually pushes the
-        schedule back and the tree walk occurs later than it would
-        have.  Best case, a tree walk happens in about 10 seconds.
-        """
-        self.deactivateAu(au, True)
-        self.reactivateAu(au, True)
 
     def reactivateAu(self, au, doWait=True):
         """
@@ -1833,42 +1822,34 @@ org.lockss.log.default.level=%(logLevel)s
 org.lockss.config.reloadInterval=60m
 
 #comm settings
-org.lockss.ui.start=yes
-org.lockss.proxy.start=no
-org.lockss.comm.multicast.group=239.4.5.6
-#org.lockss.comm.multicast.port=3456
-org.lockss.comm.multicast.port=localIp
-org.lockss.comm.unicast.port=1025
-org.lockss.comm.multicast.verify=no
+org.lockss.comm.enabled=false
+org.lockss.scomm.enabled=true
 
 # lcap protocol settings
 org.lockss.protocol.ttl=2
 org.lockss.protocol.hashAlgorithm=SHA-1
 
 # crawl settings
-org.lockss.crawler.startCrawlsInitialDelay=1m
-org.lockss.crawler.startCrawlsInterval=30s
+org.lockss.crawler.startCrawlsInitialDelay=2m
+org.lockss.crawler.startCrawlsInterval=2m
 
 # poll settings
-org.lockss.poll.maxpolls=20
-org.lockss.poll.quorum=3
-org.lockss.poll.agreeVerify=10
-org.lockss.poll.disagreeVerify=50
-org.lockss.poll.voteMargin=51
-org.lockss.poll.trustedWeight=350
-org.lockss.poll.namepoll.deadline=5m
-
-org.lockss.poll.contentpoll.min=4m
-org.lockss.poll.contentpoll.max=6m
-
-org.lockss.treewalk.initial.estimate=20s
-org.lockss.treewalk.interval.min=3m
-org.lockss.treewalk.interval.max=5m
-org.lockss.treewalk.start.delay=20s
-org.lockss.comm.router.beacon.interval=1m
-org.lockss.baseau.toplevel.poll.interval.min=4m
-org.lockss.baseau.toplevel.poll.interval.max=6m
-org.lockss.baseau.toplevel.poll.prob.initial=100
+org.lockss.poll.v3.maxSimultaneousV3Pollers=1
+org.lockss.poll.v3.maxSimultaneousV3Voters=100
+org.lockss.poll.v3.quorum=3
+org.lockss.poll.v3.pollStarterInitialDelay=3m
+org.lockss.poll.v3.pollStarterInterval=2m
+org.lockss.poll.v3.defaultPollProbability=100
+org.lockss.comm.enabled=false
+org.lockss.scomm.enabled=true
+org.lockss.scomm.maxMessageSize=33554432
+org.lockss.poll.v3.deleteExtraFiles=true
+org.lockss.poll.v3.quorum=3
+org.lockss.poll.v3.minPollSize=4
+org.lockss.poll.v3.maxPollSize=4
+org.lockss.poll.v3.minNominationSize=1
+org.lockss.poll.v3.maxNominationSize=1
+org.lockss.poll.v3.voteDeadlinePadding=30s
 
 # Set the v3 poll state dir to /tmp
 org.lockss.poll.v3.messageDir=/tmp

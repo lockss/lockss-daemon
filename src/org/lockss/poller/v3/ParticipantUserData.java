@@ -1,5 +1,5 @@
 /*
- * $Id: ParticipantUserData.java,v 1.14 2007-08-14 03:10:25 smorabito Exp $
+ * $Id: ParticipantUserData.java,v 1.15 2007-10-03 00:35:52 smorabito Exp $
  */
 
 /*
@@ -348,7 +348,10 @@ public class ParticipantUserData implements LockssSerializable {
    * 
    * @return The percent agreement for this peer (a number between 0.0 and 1.0)
    */
+  private static Logger log = Logger.getLogger("V3Poller");
   public float getPercentAgreement() {
+    log.debug2("*** [getPercentAgreement] agreeUrls = "
+               + agreeUrls + "; talliedUrls = " + talliedUrls);
     if (agreeUrls > 0 && talliedUrls > 0) {
       return (float)agreeUrls / (float)talliedUrls;
     } else {

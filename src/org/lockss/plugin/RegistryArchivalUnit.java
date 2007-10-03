@@ -1,5 +1,5 @@
 /*
- * $Id: RegistryArchivalUnit.java,v 1.21 2007-05-29 01:04:57 tlipkis Exp $
+ * $Id: RegistryArchivalUnit.java,v 1.22 2007-10-03 00:35:52 smorabito Exp $
  */
 
 /*
@@ -69,12 +69,6 @@ public class RegistryArchivalUnit extends BaseArchivalUnit {
     RegistryPlugin.PREFIX + "fetchRate";
   static final String DEFAULT_REGISTRY_FETCH_RATE = "20/10s";
 
-  /** Delay after startup for registry treewalks.  Can be much longer than
-   * for normal AUs, as a crawl is automatically run on startup */
-  static final String PARAM_REGISTRY_TREEWALK_START =
-    RegistryPlugin.PREFIX + "treewalk.start.delay";
-  static final long DEFAULT_REGISTRY_TREEWALK_START = 12 * Constants.HOUR;
-
   private String m_registryUrl = null;
   private int m_maxRefetchDepth = NewContentCrawler.DEFAULT_MAX_CRAWL_DEPTH;
   private List m_permissionCheckers = null;
@@ -105,10 +99,6 @@ public class RegistryArchivalUnit extends BaseArchivalUnit {
 //       ListUtil.list(new CreativeCommonsPermissionChecker(m_registryUrl));
       ListUtil.list(new CreativeCommonsPermissionChecker());
 
-    paramMap.putLong(TreeWalkManager.PARAM_TREEWALK_START_DELAY,
-		     CurrentConfig
-		     .getTimeIntervalParam(PARAM_REGISTRY_TREEWALK_START,
-					   DEFAULT_REGISTRY_TREEWALK_START));
     paramMap.putLong(KEY_AU_NEW_CONTENT_CRAWL_INTERVAL,
 		     CurrentConfig
 		     .getTimeIntervalParam(PARAM_REGISTRY_CRAWL_INTERVAL,

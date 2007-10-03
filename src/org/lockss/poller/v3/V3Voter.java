@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.43 2007-09-11 06:34:57 smorabito Exp $
+ * $Id: V3Voter.java,v 1.44 2007-10-03 00:35:52 smorabito Exp $
  */
 
 /*
@@ -871,10 +871,14 @@ public class V3Voter extends BasePoll {
       }
     } else {
       // Use per-AU agreement.
-      float percentAgreement = idManager.getPercentAgreement(pid, au);
+      float percentAgreement = idManager.getHighestPercentAgreement(pid, au);
+      log.debug2("Checking highest percent agreement for au and peer " + pid + ": " 
+                 + percentAgreement);
       float minPercentForRepair =
         CurrentConfig.getCurrentConfig().getPercentage(PARAM_MIN_PERCENT_AGREEMENT_FOR_REPAIRS,
                                                        DEFAULT_MIN_PERCENT_AGREEMENT_FOR_REPAIRS);
+      log.debug2("Minimum percent agreement required for repair: "
+                 + minPercentForRepair);
       return (percentAgreement >= minPercentForRepair);
     }
   }

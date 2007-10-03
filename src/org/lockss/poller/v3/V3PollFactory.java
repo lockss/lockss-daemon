@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollFactory.java,v 1.16 2007-08-14 03:10:25 smorabito Exp $
+ * $Id: V3PollFactory.java,v 1.17 2007-10-03 00:35:52 smorabito Exp $
  */
 
 /*
@@ -57,11 +57,11 @@ public class V3PollFactory extends BasePollFactory {
   /** The duration multiplier for the minimum length of a V3 poll.  */
   public static final String PARAM_DURATION_MULTIPLIER_MIN =
     PREFIX + "minMultiplier";
-  public static final int DEFAULT_DURATION_MULTIPLIER_MIN = 10;
+  public static final int DEFAULT_DURATION_MULTIPLIER_MIN = 4;
   /** The duration multiplier for the maximum length of a V3 poll */
   public static final String PARAM_DURATION_MULTIPLIER_MAX =
     PREFIX + "maxMultiplier";
-  public static final int DEFAULT_DURATION_MULTIPLIER_MAX = 20;
+  public static final int DEFAULT_DURATION_MULTIPLIER_MAX = 5;
   /** The minimum duration for a V3 poll.  The minimum duration is calculated
    * from the hash duration and maximum number of participants, and this
    * parameter is no longer used.
@@ -69,11 +69,11 @@ public class V3PollFactory extends BasePollFactory {
    *  @deprecated */
   public static final String PARAM_POLL_DURATION_MIN =
     PREFIX + "minPollDuration";
-  public static long DEFAULT_POLL_DURATION_MIN = 24 * Constants.HOUR;
+  public static long DEFAULT_POLL_DURATION_MIN = 10 * Constants.MINUTE;
   /** The maximum duration for a V3 poll */
   public static final String PARAM_POLL_DURATION_MAX = 
     PREFIX + "maxPollDuration";
-  public static long DEFAULT_POLL_DURATION_MAX = 8 * Constants.WEEK;
+  public static long DEFAULT_POLL_DURATION_MAX = 1 * Constants.YEAR;
   
   /** If set to 'false', do not start V3 Voters when vote requests are
    * received.  This parameter is used by V3PollFactory and PollManager.
@@ -169,17 +169,6 @@ public class V3PollFactory extends BasePollFactory {
                                 PeerIdentity orig, long duration,
                                 String hashAlg)
       throws V3Serializer.PollSerializerException {
-    // Check to see if we're already running too many polls.
-    int maxPolls =
-      CurrentConfig.getIntParam(V3Poller.PARAM_MAX_SIMULTANEOUS_V3_POLLERS,
-                                V3Poller.DEFAULT_MAX_SIMULTANEOUS_V3_POLLERS);
-    int activePolls = daemon.getPollManager().getActiveV3Pollers().size();
-    if (activePolls >= maxPolls) {
-      log.info("Not starting new V3 Poll on AU " + pollspec.getAuId()
-               + ".  Maximum number of active pollers is " + maxPolls 
-               + "; " + activePolls + " are already running.");
-      return null;
-    }
     log.debug("Creating V3Poller to call a new poll...");
     String key =
       String.valueOf(B64Code.encode(ByteArray.makeRandomBytes(20)));
@@ -329,8 +318,8 @@ public class V3PollFactory extends BasePollFactory {
                                 V3Poller.DEFAULT_MAX_POLL_SIZE);
     
     long voteDurationPadding =
-      CurrentConfig.getLongParam(V3Poller.PARAM_V3_EXTRA_POLL_TIME,
-                                 V3Poller.DEFAULT_V3_EXTRA_POLL_TIME);
+      CurrentConfig.getLongParam(V3Poller.PARAM_VOTE_DEADLINE_PADDING,
+                                 V3Poller.DEFAULT_VOTE_DEADLINE_PADDING);
 
     long voteDurationMultiplier =
       CurrentConfig.getLongParam(V3Poller.PARAM_VOTE_DURATION_MULTIPLIER,

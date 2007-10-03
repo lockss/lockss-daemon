@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.93 2007-10-01 08:14:00 tlipkis Exp $
+ * $Id: LockssDaemon.java,v 1.94 2007-10-03 00:35:52 smorabito Exp $
  */
 
 /*
@@ -107,7 +107,6 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   public static final String LOCKSS_REPOSITORY = "LockssRepository";
   public static final String HISTORY_REPOSITORY = "HistoryRepository";
   public static final String NODE_MANAGER = "NodeManager";
-  public static final String TREEWALK_MANAGER = "TreeWalkManager";
   public static final String PROXY_MANAGER = "ProxyManager";
   public static final String AUDIT_PROXY_MANAGER = "AuditProxyManager";
   public static final String FAIL_OVER_PROXY_MANAGER = "FailOverProxyManager";
@@ -115,7 +114,6 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   public static final String REMOTE_API = "RemoteApi";
   public static final String URL_MANAGER = "UrlManager";
   public static final String NODE_MANAGER_MANAGER = "NodeManagerManager";
-  public static final String AU_TREEWALK_MANAGER = "AuTreeWalkManager";
   public static final String REPOSITORY_STATUS = "RepositoryStatus";
   public static final String ARCHIVAL_UNIT_STATUS = "ArchivalUnitStatus";
   public static final String PLATFORM_CONFIG_STATUS = "PlatformConfigStatus";
@@ -141,7 +139,6 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     new ManagerDesc(CRAWL_MANAGER, "org.lockss.crawler.CrawlManagerImpl"),
     new ManagerDesc(REPOSITORY_MANAGER,
 		    "org.lockss.repository.RepositoryManager"),
-    new ManagerDesc(TREEWALK_MANAGER, "org.lockss.state.TreeWalkManager"),
     // start plugin manager after generic services
     new ManagerDesc(PLUGIN_MANAGER, "org.lockss.plugin.PluginManager"),
     // start proxy and servlets after plugin manager
@@ -195,9 +192,6 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     // NodeManager uses LockssRepository, HistoryRepository, and
     // ActivityRegulator
     new ManagerDesc(NODE_MANAGER, "org.lockss.state.NodeManagerImpl$Factory"),
-    // AuTreeWalkManager uses NodeManager
-    new ManagerDesc(AU_TREEWALK_MANAGER,
-		    "org.lockss.state.AuTreeWalkManager$Factory"),
   };
 
   // Maps au to sequenced map of managerKey -> manager instance
@@ -358,15 +352,6 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   }
 
   /**
-   * return the treewalk manager instance
-   * @return the TreeWalkManager
-   * @throws IllegalArgumentException if the manager is not available.
-   */
-  public TreeWalkManager getTreeWalkManager()  {
-    return (TreeWalkManager)getManager(TREEWALK_MANAGER);
-  }
-
-  /**
    * return the repository manager instance
    * @return the RepositoryManager
    * @throws IllegalArgumentException if the manager is not available.
@@ -503,16 +488,6 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
    */
   public NodeManager getNodeManager(ArchivalUnit au) {
     return (NodeManager)getAuManager(NODE_MANAGER, au);
-  }
-
-  /**
-   * Return the AuTreeWalkManager instance
-   * @param au the ArchivalUnit
-   * @return the AuTreeWalkManager
-   * @throws IllegalArgumentException if the manager is not available.
-   */
-  public AuTreeWalkManager getAuTreeWalkManager(ArchivalUnit au) {
-    return (AuTreeWalkManager)getAuManager(AU_TREEWALK_MANAGER, au);
   }
 
   /**

@@ -10,19 +10,12 @@ org.lockss.ui.start=yes
 org.lockss.proxy.start=no
 org.lockss.comm.enabled=false
 
-# Treewalk settings - to be removed when treewalk goes away
-org.lockss.treewalk.initial.estimate=15m
-org.lockss.treewalk.interval.min=1h
-org.lockss.treewalk.interval.max=3h
-org.lockss.treewalk.start.delay=10s
-org.lockss.comm.router.beacon.interval=1m
-org.lockss.baseau.toplevel.poll.interval.min=5m
-org.lockss.baseau.toplevel.poll.interval.max=15m
-
 # V3
 org.lockss.poll.defaultPollProtocol=3
 org.lockss.scomm.enabled=true
 org.lockss.scomm.maxMessageSize=33554430
+org.lockss.poll.v3.pollStarterInitialDelay=2m
+org.lockss.poll.v3.pollStarterInterval=2m
 org.lockss.poll.v3.quorum=2
 org.lockss.poll.v3.minPollSize=3
 org.lockss.poll.v3.maxPollSize=3

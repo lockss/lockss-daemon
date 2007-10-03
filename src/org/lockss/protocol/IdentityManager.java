@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManager.java,v 1.77 2007-08-23 01:29:56 smorabito Exp $
+ * $Id: IdentityManager.java,v 1.78 2007-10-03 00:35:52 smorabito Exp $
  */
 
 /*
@@ -384,6 +384,15 @@ public interface IdentityManager extends LockssManager {
    */
   public float getPercentAgreement(PeerIdentity pid, ArchivalUnit au);
   
+  /** Return the highest percent agreement recorded for the given peer
+   * on a given {@link ArchivalUnit}.
+   * 
+   * @param pid The {@link PeerIdentity}.
+   * @param au The {@link ArchivalUnit}.
+   * @return The highest percent agreement for the peer on the au.
+   */
+  public float getHighestPercentAgreement(PeerIdentity pid, ArchivalUnit au);
+  
   /**
    * <p>Peers with whom we have had any disagreement since the last
    * toplevel agreement are placed at the end of the list.</p>
@@ -459,6 +468,7 @@ public interface IdentityManager extends LockssManager {
     private long lastAgree = 0;
     private long lastDisagree = 0;
     private float percentAgreement = 0.0f;
+    private float highestPercentAgreement = 0.0f;
     private String id = null;
 
     public IdentityAgreement(PeerIdentity pid) {
@@ -484,12 +494,23 @@ public interface IdentityManager extends LockssManager {
       this.lastDisagree = lastDisagree;
     }
     
+    public float getHighestPercentAgreement() {
+      return highestPercentAgreement;
+    }
+    
+    public void setHighestPercentAgreement(float agreement) {
+      this.highestPercentAgreement = agreement;
+    }
+    
     public float getPercentAgreement() {
       return percentAgreement;
     }
     
     public void setPercentAgreement(float percentAgreement) {
       this.percentAgreement = percentAgreement;
+      if (percentAgreement > highestPercentAgreement) {
+        setHighestPercentAgreement(percentAgreement);
+      }
     }
 
     public String getId() {

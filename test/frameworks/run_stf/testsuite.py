@@ -114,8 +114,8 @@ class LockssAutoStartTestCase(LockssTestCase):
 
         # Block return until all clients are ready to go.
         log.info("Waiting for framework to come ready.")
-        for client in self.clients:
-            client.waitForDaemonReady()
+        for c in self.clients:
+            c.waitForDaemonReady()
 
 
 ##
@@ -250,23 +250,14 @@ class V3TestCase(LockssTestCase):
         LockssTestCase.setUp(self)
         # V3 has a much shorter default timeout, 8 minutes.
         self.timeout = int(config.get('timeout', 60 * 8))
+        self.targetClient = self.clients[0]
 
         for i in range(0, len(self.clients)):
+                
             extraConf = {"org.lockss.auconfig.allowEditDefaultOnlyParams": "true",
                          "org.lockss.localV3Identity": "TCP:[127.0.0.1]:%d" % (self.getBaseV3Port() + i),
-                         "org.lockss.comm.enabled": "false",
-                         "org.lockss.scomm.enabled": "true",
-                         "org.lockss.scomm.maxMessageSize": "33554432",  # 32MB
-                         "org.lockss.poll.v3.deleteExtraFiles": "true",
-                         "org.lockss.poll.v3.quorum": "3",
-                         "org.lockss.poll.v3.minPollSize": "4",
-                         "org.lockss.poll.v3.maxPollSize": "4",
-                         "org.lockss.poll.v3.minNominationSize": "1",
-                         "org.lockss.poll.v3.maxNominationSize": "1",
-                         "org.lockss.poll.v3.voteDeadlinePadding": "30s",
                          "org.lockss.id.initialV3PeerList": self.getInitialPeerList() }
             extraConf.update(self.getTestLocalConf())
-
             self.framework.appendLocalConfig(extraConf, self.clients[i])
 
         ##
@@ -278,8 +269,8 @@ class V3TestCase(LockssTestCase):
 
         # Block return until all clients are ready to go.
         log.info("Waiting for framework to come ready.")
-        for client in self.clients:
-            client.waitForDaemonReady()
+        for c in self.clients:
+            c.waitForDaemonReady()
 
     def getDaemonCount(self):
         return 5
@@ -310,39 +301,35 @@ class SimpleDamageV3TestCase(V3TestCase):
         ## Create simulated AUs
         ##
         log.info("Creating V3 simulated AUs.")
-        for client in self.clients:
-            client.createAu(simAu)
+        for c in self.clients:
+            c.createAu(simAu)
 
         ##
         ## Assert that the AUs have been crawled.
         ##
         log.info("Waiting for simulated AUs to crawl.")
-        for client in self.clients:
-            if not (client.waitForSuccessfulCrawl(simAu)):
+        for c in self.clients:
+            if not (c.waitForSuccessfulCrawl(simAu)):
                 self.fail("AUs never completed initial crawl.")
         log.info("AUs completed initial crawl.")
 
-        client = self.clients[0]
+        victim = self.clients[0]
 
         ##
         ## Damage the AU.
         ##
-        node = client.randomDamageSingleNode(simAu)
-        log.info("Damaged node %s on client %s" % (node.url, client))
-
-        # Request a tree walk (deactivate and reactivate AU)
-        log.info("Requesting tree walk.")
-        client.requestTreeWalk(simAu)
+        node = victim.randomDamageSingleNode(simAu)
+        log.info("Damaged node %s on client %s" % (node.url, victim))
 
         log.info("Waiting for a V3 poll to be called...")
-        client.waitForV3Poller(simAu)
+        victim.waitForV3Poller(simAu)
 
         log.info("Successfully called a V3 poll.")
 
         ## Just pause until we have better tests.
         log.info("Waiting for V3 repair...")
         # waitForV3Repair takes a list of nodes
-        client.waitForV3Repair(simAu, [node], timeout=self.timeout)
+        victim.waitForV3Repair(simAu, [node], timeout=self.timeout)
         log.info("AU successfully repaired.")
 
 def simpleDamageV3TestCase():
@@ -361,40 +348,36 @@ class RandomDamageV3TestCase(V3TestCase):
         ## Create simulated AUs
         ##
         log.info("Creating V3 simulated AUs.")
-        for client in self.clients:
-            client.createAu(simAu)
+        for c in self.clients:
+            c.createAu(simAu)
 
         ##
         ## Assert that the AUs have been crawled.
         ##
         log.info("Waiting for simulated AUs to crawl.")
-        for client in self.clients:
-            if not (client.waitForSuccessfulCrawl(simAu)):
+        for c in self.clients:
+            if not (c.waitForSuccessfulCrawl(simAu)):
                 self.fail("AUs never completed initial crawl.")
         log.info("AUs completed initial crawl.")
 
-        client = self.clients[0]
+        victim = self.clients[0]
 
         ##
         ## Damage the AU.
         ##
-        nodeList = client.randomDamageRandomNodes(simAu, 30, 50)
+        nodeList = victim.randomDamageRandomNodes(simAu, 30, 50)
         log.info("Damaged the following nodes on client %s:\n        %s" %
-            (client, '\n        '.join([str(n) for n in nodeList])))
-
-        # Request a tree walk (deactivate and reactivate AU)
-        log.info("Requesting tree walk.")
-        client.requestTreeWalk(simAu)
+            (victim, '\n        '.join([str(n) for n in nodeList])))
 
         log.info("Waiting for a V3 poll to be called...")
-        client.waitForV3Poller(simAu)
+        victim.waitForV3Poller(simAu)
 
         log.info("Successfully called a V3 poll.")
 
         ## Just pause until we have better tests.
         log.info("Waiting for V3 repair...")
         # waitForV3Repair takes a list of nodes
-        client.waitForV3Repair(simAu, nodeList, timeout=self.timeout)
+        victim.waitForV3Repair(simAu, nodeList, timeout=self.timeout)
 
         log.info("AU successfully repaired.")
 
@@ -419,44 +402,40 @@ class RepairFromPublisherV3TestCase(V3TestCase):
         ## Create simulated AUs
         ##
         log.info("Creating V3 simulated AUs.")
-        for client in self.clients:
-            client.createAu(simAu)
+        for c in self.clients:
+            c.createAu(simAu)
 
         ##
         ## Assert that the AUs have been crawled.
         ##
         log.info("Waiting for simulated AUs to crawl.")
-        for client in self.clients:
-            if not (client.waitForSuccessfulCrawl(simAu)):
+        for c in self.clients:
+            if not (c.waitForSuccessfulCrawl(simAu)):
                 self.fail("AUs never completed initial crawl.")
         log.info("AUs completed initial crawl.")
 
-        client = self.clients[0]
+        victim = self.clients[0]
 
         ##
         ## Damage the AU.
         ##
-        nodeList = client.randomDamageRandomNodes(simAu, 15, 20)
+        nodeList = victim.randomDamageRandomNodes(simAu, 15, 20)
         log.info("Damaged the following nodes on client %s:\n        %s" %
-            (client, '\n        '.join([str(n) for n in nodeList])))
-
-        # Request a tree walk (deactivate and reactivate AU)
-        log.info("Requesting tree walk.")
-        client.requestTreeWalk(simAu)
+            (victim, '\n        '.join([str(n) for n in nodeList])))
 
         log.info("Waiting for a V3 poll to be called...")
-        client.waitForV3Poller(simAu)
+        victim.waitForV3Poller(simAu)
 
         log.info("Successfully called a V3 poll.")
 
         ## Just pause until we have better tests.
         log.info("Waiting for V3 repair...")
         # waitForV3Repair takes a list of nodes
-        client.waitForV3Repair(simAu, nodeList, timeout=self.timeout)
+        victim.waitForV3Repair(simAu, nodeList, timeout=self.timeout)
 
         ## Verify that all repairs came from peers.
         for node in nodeList:
-            if not (client.isNodeRepairedFromPublisherByV3(simAu, node)):
+            if not (victim.isNodeRepairedFromPublisherByV3(simAu, node)):
                 self.fail("Node %s was not repaired from the publisher!" % node)
 
         log.info("AU successfully repaired.")
@@ -479,37 +458,33 @@ class RepairFromPeerV3TestCase(V3TestCase):
                             binFileSize=1024, protocolVersion=3)
         
         ## Enable polling on all peers.
-        pollingConf = {"org.lockss.poller.v3.enableV3Poller":"true",
-                       "org.lockss.poller.v3.enableV3Voter":"true"}
+        pollingConf = {"org.lockss.poll.v3.enableV3Poller":"true",
+                       "org.lockss.poll.v3.enableV3Voter":"true"}
 
 
         ##
         ## Create simulated AUs
         ##
         log.info("Creating V3 simulated AUs.")
-        for client in self.clients:
-            client.createAu(simAu)
-            self.framework.appendLocalConfig(pollingConf, client)
+        for c in self.clients:
+            c.createAu(simAu)
+            self.framework.appendLocalConfig(pollingConf, c)
 
 
         ##
         ## Assert that the AUs have been crawled.
         ##
         log.info("Waiting for simulated AUs to crawl.")
-        for client in self.clients:
-            if not (client.waitForSuccessfulCrawl(simAu)):
+        for c in self.clients:
+            if not (c.waitForSuccessfulCrawl(simAu)):
                 self.fail("AUs never completed initial crawl.")
         log.info("AUs completed initial crawl.")
 
-        client = self.clients[0]
+        victim = self.clients[0]
 
         #
         # We need agreement from all the peers before we can continue.
         #
-
-        # Request a tree walk (deactivate and reactivate AU)
-        log.info("Requesting tree walk.")
-        client.requestTreeWalk(simAu)
 
         # expect to see a top level content poll called by all peers.
         log.info("Waiting for a V3 poll by all simulated caches")
@@ -527,27 +502,23 @@ class RepairFromPeerV3TestCase(V3TestCase):
         ##
         ## Damage the AU.
         ##
-        nodeList = client.randomDamageRandomNodes(simAu, 15, 20)
+        nodeList = victim.randomDamageRandomNodes(simAu, 15, 20)
         log.info("Damaged the following nodes on client %s:\n        %s" %
-            (client, '\n        '.join([str(n) for n in nodeList])))
-
-        # Request a tree walk (deactivate and reactivate AU)
-        log.info("Requesting tree walk.")
-        client.requestTreeWalk(simAu)
+            (victim, '\n        '.join([str(n) for n in nodeList])))
 
         log.info("Waiting for a V3 poll to be called...")
-        client.waitForV3Poller(simAu)
+        victim.waitForV3Poller(simAu)
 
         log.info("Successfully called a V3 poll.")
 
         ## Just pause until we have better tests.
         log.info("Waiting for V3 repair...")
         # waitForV3Repair takes a list of nodes
-        client.waitForV3Repair(simAu, nodeList, timeout=self.timeout)
+        victim.waitForV3Repair(simAu, nodeList, timeout=self.timeout)
         
         ## Verify that all repairs came from peers.
         for node in nodeList:
-            if not (client.isNodeRepairedFromPeerByV3(simAu, node)):
+            if not (victim.isNodeRepairedFromPeerByV3(simAu, node)):
                 self.fail("Node %s was not repaired from a peer!" % node)
 
         log.info("AU successfully repaired.")
@@ -568,39 +539,35 @@ class SimpleDeleteV3TestCase(V3TestCase):
         ## Create simulated AUs
         ##
         log.info("Creating V3 simulated AUs.")
-        for client in self.clients:
-            client.createAu(simAu)
+        for c in self.clients:
+            c.createAu(simAu)
 
         ##
         ## Assert that the AUs have been crawled.
         ##
         log.info("Waiting for simulated AUs to crawl.")
-        for client in self.clients:
-            if not (client.waitForSuccessfulCrawl(simAu)):
+        for c in self.clients:
+            if not (c.waitForSuccessfulCrawl(simAu)):
                 self.fail("AUs never completed initial crawl.")
         log.info("AUs completed initial crawl.")
 
-        client = self.clients[0]
+        victim = self.clients[0]
 
         ##
         ## Damage the AU.
         ##
-        node = client.randomDelete(simAu)
-        log.info("Deleted node %s on client %s" % (node.url, client))
-
-        # Request a tree walk (deactivate and reactivate AU)
-        log.info("Requesting tree walk.")
-        client.requestTreeWalk(simAu)
-
+        node = victim.randomDelete(simAu)
+        log.info("Deleted node %s on client %s" % (node.url, victim))
+        
         log.info("Waiting for a V3 poll to be called...")
-        client.waitForV3Poller(simAu)
+        victim.waitForV3Poller(simAu)
 
         log.info("Successfully called a V3 poll.")
 
         ## Just pause until we have better tests.
         log.info("Waiting for V3 repair...")
         # waitForV3Repair takes a list of nodes
-        client.waitForV3Repair(simAu, [node], timeout=self.timeout)
+        victim.waitForV3Repair(simAu, [node], timeout=self.timeout)
         log.info("AU successfully repaired.")
 
 def simpleDeleteV3TestCase():
@@ -619,40 +586,36 @@ class LastFileDeleteV3TestCase(V3TestCase):
         ## Create simulated AUs
         ##
         log.info("Creating V3 simulated AUs.")
-        for client in self.clients:
-            client.createAu(simAu)
+        for c in self.clients:
+            c.createAu(simAu)
 
         ##
         ## Assert that the AUs have been crawled.
         ##
         log.info("Waiting for simulated AUs to crawl.")
-        for client in self.clients:
-            if not (client.waitForSuccessfulCrawl(simAu)):
+        for c in self.clients:
+            if not (c.waitForSuccessfulCrawl(simAu)):
                 self.fail("AUs never completed initial crawl.")
         log.info("AUs completed initial crawl.")
 
-        client = self.clients[0]
+        victim = self.clients[0]
 
         ##
         ## Damage the AU.
         ##
-        node = client.getAuNode(simAu, "http://www.example.com/index.html")
-        client.deleteNode(node)
-        log.info("Deleted node %s on client %s" % (node.url, client))
-
-        # Request a tree walk (deactivate and reactivate AU)
-        log.info("Requesting tree walk.")
-        client.requestTreeWalk(simAu)
+        node = victim.getAuNode(simAu, "http://www.example.com/index.html")
+        victim.deleteNode(node)
+        log.info("Deleted node %s on client %s" % (node.url, victim))
 
         log.info("Waiting for a V3 poll to be called...")
-        client.waitForV3Poller(simAu)
+        victim.waitForV3Poller(simAu)
 
         log.info("Successfully called a V3 poll.")
 
         ## Just pause until we have better tests.
         log.info("Waiting for V3 repair...")
         # waitForV3Repair takes a list of nodes
-        client.waitForV3Repair(simAu, [node], timeout=self.timeout)
+        victim.waitForV3Repair(simAu, [node], timeout=self.timeout)
         log.info("AU successfully repaired.")
 
 def lastFileDeleteV3TestCase():
@@ -671,40 +634,36 @@ class RandomDeleteV3TestCase(V3TestCase):
         ## Create simulated AUs
         ##
         log.info("Creating V3 simulated AUs.")
-        for client in self.clients:
-            client.createAu(simAu)
+        for c in self.clients:
+            c.createAu(simAu)
 
         ##
         ## Assert that the AUs have been crawled.
         ##
         log.info("Waiting for simulated AUs to crawl.")
-        for client in self.clients:
-            if not (client.waitForSuccessfulCrawl(simAu)):
+        for c in self.clients:
+            if not (c.waitForSuccessfulCrawl(simAu)):
                 self.fail("AUs never completed initial crawl.")
         log.info("AUs completed initial crawl.")
 
-        client = self.clients[0]
+        victim = self.clients[0]
 
         ##
         ## Damage the AU.
         ##
-        nodeList = client.randomDeleteRandomNodes(simAu, 5, 15)
+        nodeList = victim.randomDeleteRandomNodes(simAu, 5, 15)
         log.info("Damaged the following nodes on client %s:\n        %s" %
-            (client, '\n        '.join([str(n) for n in nodeList])))
-
-        # Request a tree walk (deactivate and reactivate AU)
-        log.info("Requesting tree walk.")
-        client.requestTreeWalk(simAu)
+            (victim, '\n        '.join([str(n) for n in nodeList])))
 
         log.info("Waiting for a V3 poll to be called...")
-        client.waitForV3Poller(simAu)
+        victim.waitForV3Poller(simAu)
 
         log.info("Successfully called a V3 poll.")
 
         ## Just pause until we have better tests.
         log.info("Waiting for V3 repair...")
         # waitForV3Repair takes a list of nodes
-        client.waitForV3Repair(simAu, nodeList, timeout=self.timeout)
+        victim.waitForV3Repair(simAu, nodeList, timeout=self.timeout)
         log.info("AU successfully repaired.")
 
 def randomDeleteV3TestCase():
@@ -722,39 +681,35 @@ class SimpleExtraFileV3TestCase(V3TestCase):
         ## Create simulated AUs
         ##
         log.info("Creating V3 simulated AUs.")
-        for client in self.clients:
-            client.createAu(simAu)
+        for c in self.clients:
+            c.createAu(simAu)
 
         ##
         ## Assert that the AUs have been crawled.
         ##
         log.info("Waiting for simulated AUs to crawl.")
-        for client in self.clients:
-            if not (client.waitForSuccessfulCrawl(simAu)):
+        for c in self.clients:
+            if not (c.waitForSuccessfulCrawl(simAu)):
                 self.fail("AUs never completed initial crawl.")
         log.info("AUs completed initial crawl.")
 
-        client = self.clients[0]
+        victim = self.clients[0]
 
         ##
         ## Damage the AU by creating an extra node.
         ##
-        node = client.createNode(simAu, '004extrafile.txt')
-        log.info("Created file %s on client %s" % (node.url, client))
-
-        # Request a tree walk (deactivate and reactivate AU)
-        log.info("Requesting tree walk.")
-        client.requestTreeWalk(simAu)
+        node = victim.createNode(simAu, '004extrafile.txt')
+        log.info("Created file %s on client %s" % (node.url, victim))
 
         log.info("Waiting for a V3 poll to be called...")
-        client.waitForV3Poller(simAu)
+        victim.waitForV3Poller(simAu)
 
         log.info("Successfully called a V3 poll.")
 
         ## Just pause until we have better tests.
         log.info("Waiting for V3 repair...")
         # waitForV3Repair takes a list of nodes
-        client.waitForV3RepairExtraFiles(simAu, timeout=self.timeout)
+        victim.waitForV3RepairExtraFiles(simAu, timeout=self.timeout)
         log.info("AU successfully repaired.")
 
 def simpleExtraFileV3TestCase():
@@ -773,40 +728,36 @@ class LastFileExtraV3TestCase(V3TestCase):
         ## Create simulated AUs
         ##
         log.info("Creating V3 simulated AUs.")
-        for client in self.clients:
-            client.createAu(simAu)
+        for c in self.clients:
+            c.createAu(simAu)
 
         ##
         ## Assert that the AUs have been crawled.
         ##
         log.info("Waiting for simulated AUs to crawl.")
-        for client in self.clients:
-            if not (client.waitForSuccessfulCrawl(simAu)):
+        for c in self.clients:
+            if not (c.waitForSuccessfulCrawl(simAu)):
                 self.fail("AUs never completed initial crawl.")
         log.info("AUs completed initial crawl.")
 
-        client = self.clients[0]
+        victim = self.clients[0]
 
         ##
         ## Damage the AU by creating an extra node that should sort LAST
         ## in the list of CachedUrls..
         ##
-        node = client.createNode(simAu, 'zzzzzzzzzzzzz.txt')
-        log.info("Created file %s on client %s" % (node.url, client))
-
-        # Request a tree walk (deactivate and reactivate AU)
-        log.info("Requesting tree walk.")
-        client.requestTreeWalk(simAu)
+        node = victim.createNode(simAu, 'zzzzzzzzzzzzz.txt')
+        log.info("Created file %s on client %s" % (node.url, victim))
 
         log.info("Waiting for a V3 poll to be called...")
-        client.waitForV3Poller(simAu)
+        victim.waitForV3Poller(simAu)
 
         log.info("Successfully called a V3 poll.")
 
         ## Just pause until we have better tests.
         log.info("Waiting for V3 repair...")
         # waitForV3Repair takes a list of nodes
-        client.waitForV3RepairExtraFiles(simAu, timeout=self.timeout)
+        victim.waitForV3RepairExtraFiles(simAu, timeout=self.timeout)
         log.info("AU successfully repaired.")
 
 def lastFileExtraV3TestCase():
@@ -825,41 +776,37 @@ class RandomExtraFileV3TestCase(V3TestCase):
         ## Create simulated AUs
         ##
         log.info("Creating simulated AUs.")
-        for client in self.clients:
-            client.createAu(simAu)
+        for c in self.clients:
+            c.createAu(simAu)
 
         ##
         ## Assert that the AUs have been crawled.
         ##
         log.info("Waiting for simulated AUs to crawl.")
-        for client in self.clients:
-            if not (client.waitForSuccessfulCrawl(simAu)):
+        for c in self.clients:
+            if not (c.waitForSuccessfulCrawl(simAu)):
                 self.fail("AUs never completed initial crawl.")
         log.info("AUs completed initial crawl.")
 
         ## To use a specific client, uncomment this line.
-        client = self.clients[0]
+        victim = self.clients[0]
 
         ##
         ## Damage the AU by creating an extra node.
         ##
-        nodeList = client.randomCreateRandomNodes(simAu, 5, 15)
+        nodeList = victim.randomCreateRandomNodes(simAu, 5, 15)
         log.info("Created the following nodes on client %s:\n        %s" %
-                 (client, '\n        '.join([str(n) for n in nodeList])))
-
-        # Request a tree walk (deactivate and reactivate AU)
-        log.info("Requesting tree walk.")
-        client.requestTreeWalk(simAu)
+                 (victim, '\n        '.join([str(n) for n in nodeList])))
 
         log.info("Waiting for a V3 poll to be called...")
-        client.waitForV3Poller(simAu)
+        victim.waitForV3Poller(simAu)
 
         log.info("Successfully called a V3 poll.")
 
         ## Just pause until we have better tests.
         log.info("Waiting for V3 repair...")
         # waitForV3Repair takes a list of nodes
-        client.waitForV3RepairExtraFiles(simAu, timeout=self.timeout)
+        victim.waitForV3RepairExtraFiles(simAu, timeout=self.timeout)
         log.info("AU successfully repaired.")
 
 def randomExtraFileV3TestCase():
@@ -889,41 +836,37 @@ class VotersDontParticipateV3TestCase(V3TestCase):
         ## Create simulated AUs
         ##
         log.info("Creating simulated AUs.")
-        for client in self.clients:
-            client.createAu(simAu)
+        for c in self.clients:
+            c.createAu(simAu)
 
         ##
         ## Assert that the AUs have been crawled.
         ##
         log.info("Waiting for simulated AUs to crawl.")
-        for client in self.clients:
-            if not (client.waitForSuccessfulCrawl(simAu)):
+        for c in self.clients:
+            if not (c.waitForSuccessfulCrawl(simAu)):
                 self.fail("AUs never completed initial crawl.")
         log.info("AUs completed initial crawl.")
 
         ## To use a specific client, uncomment this line.
-        client = self.clients[0]
+        victim = self.clients[0]
 
         ##
         ## Damage the AU by creating an extra node.
         ##
-        nodeList = client.randomCreateRandomNodes(simAu, 5, 15)
+        nodeList = victim.randomCreateRandomNodes(simAu, 5, 15)
         log.info("Created the following nodes on client %s:\n        %s" %
-                 (client, '\n        '.join([str(n) for n in nodeList])))
-
-        # Request a tree walk (deactivate and reactivate AU)
-        log.info("Requesting tree walk.")
-        client.requestTreeWalk(simAu)
+                 (victim, '\n        '.join([str(n) for n in nodeList])))
 
         log.info("Waiting for a V3 poll to be called...")
-        client.waitForV3Poller(simAu)
+        victim.waitForV3Poller(simAu)
 
         log.info("Successfully called a V3 poll.")
 
         ## Just pause until we have better tests.
         log.info("Waiting for V3 repair...")
         # waitForV3Repair takes a list of nodes
-        client.waitForV3RepairExtraFiles(simAu, timeout=self.timeout)
+        victim.waitForV3RepairExtraFiles(simAu, timeout=self.timeout)
         log.info("AU successfully repaired.")
     
 def votersDontParticipateV3TestCase():
@@ -952,40 +895,36 @@ class NoQuorumV3TestCase(V3TestCase):
         ## Create simulated AUs
         ##
         log.info("Creating simulated AUs.")
-        for client in self.clients:
-            client.createAu(simAu)
+        for c in self.clients:
+            c.createAu(simAu)
 
         ##
         ## Assert that the AUs have been crawled.
         ##
         log.info("Waiting for simulated AUs to crawl.")
-        for client in self.clients:
-            if not (client.waitForSuccessfulCrawl(simAu)):
+        for c in self.clients:
+            if not (c.waitForSuccessfulCrawl(simAu)):
                 self.fail("AUs never completed initial crawl.")
         log.info("AUs completed initial crawl.")
 
         ## To use a specific client, uncomment this line.
-        client = self.clients[0]
+        victim = self.clients[0]
 
         ##
         ## Damage the AU by creating an extra node.
         ##
-        nodeList = client.randomCreateRandomNodes(simAu, 5, 15)
+        nodeList = victim.randomCreateRandomNodes(simAu, 5, 15)
         log.info("Created the following nodes on client %s:\n        %s" %
-                 (client, '\n        '.join([str(n) for n in nodeList])))
-
-        # Request a tree walk (deactivate and reactivate AU)
-        log.info("Requesting tree walk.")
-        client.requestTreeWalk(simAu)
+                 (victim, '\n        '.join([str(n) for n in nodeList])))
 
         log.info("Waiting for a V3 poll to be called...")
-        client.waitForV3Poller(simAu)
+        victim.waitForV3Poller(simAu)
 
         log.info("Successfully called a V3 poll.")
 
         ## Just pause until we have better tests.
         log.info("Waiting for V3 poll to report no quorum...")
-        client.waitForV3NoQuorum(simAu)
+        victim.waitForV3NoQuorum(simAu)
         log.info("AU successfully reported No Quorum.")
     
 def noQuorumV3TestCase():
@@ -994,35 +933,28 @@ def noQuorumV3TestCase():
 class TotalLossRecoveryV3TestCase(V3TestCase):
     """ Test repairing a cache under V3 that has lost all its contents """
     def runTest(self):
-        # Pick a client to damage.
-        self.damagedClient = self.clients[0]
         
         ## Define a simulated AU
         simAu = SimulatedAu('simContent', 0, 0, 30, protocolVersion=3)
 
         ## Enable polling on all peers.
-        pollingConf = {"org.lockss.poller.v3.enableV3Poller":"true",
-                       "org.lockss.poller.v3.enableV3Voter":"true"}
+        pollingConf = {"org.lockss.poll.v3.enableV3Poller":"true",
+                       "org.lockss.poll.v3.enableV3Voter":"true"}
 
+        victim = self.clients[0]
+        
         ## Create simulated AUs
         log.info("Creating simulated AUs.")
-        for client in self.clients:
-            client.createAu(simAu)
-            self.framework.appendLocalConfig(pollingConf, client)
+        for c in self.clients:
+            c.createAu(simAu)
+            self.framework.appendLocalConfig(pollingConf, c)
 
         ## Assert that the AUs have been crawled.
         log.info("Waiting for simulated AUs to crawl.")
-        for client in self.clients:
-            if not (client.waitForSuccessfulCrawl(simAu)):
+        for c in self.clients:
+            if not (c.waitForSuccessfulCrawl(simAu)):
                 self.fail("AUs never completed initial crawl.")
         log.info("AUs completed initial crawl.")
-
-        # Select the appropriate client
-        client = self.damagedClient
-
-        # Request a tree walk (deactivate and reactivate AU)
-        log.info("Requesting tree walk.")
-        client.requestTreeWalk(simAu)
 
         # expect to see a top level content poll called by all peers.
         log.info("Waiting for a V3 poll by all simulated caches")
@@ -1038,15 +970,15 @@ class TotalLossRecoveryV3TestCase(V3TestCase):
             log.info("Client on port %s won V3 poll..." % c.port)
 
         log.info("Backing up cache configuration on victim cache...")
-        client.backupConfiguration()
+        victim.backupConfiguration()
         log.info("Backed up successfully.")
 
         # All daemons should have recorded their agreeing peers at this
         # point, so stop the client we're going to damage.
-        client.daemon.stop()
-        log.info("Stopped daemon running on UI port %s" % client.port)
+        victim.daemon.stop()
+        log.info("Stopped daemon running on UI port %s" % victim.port)
 
-        client.simulateDiskFailure()
+        victim.simulateDiskFailure()
         log.info("Deleted entire contents of cache on stopped daemon.")
 
         #
@@ -1071,39 +1003,35 @@ class TotalLossRecoveryV3TestCase(V3TestCase):
 #                     "org.lockss.title.sim1.param.protocol.key": "protocol_version",
 #                     "org.lockss.title.sim1.param.protocol.value": "3"}
 
-        self.framework.appendLocalConfig(extraConf, client)
+        self.framework.appendLocalConfig(extraConf, victim)
 
         time.sleep(5) # Give time for things to settle before starting again
 
-        client.daemon.start()
+        victim.daemon.start()
 
         # Wait for the client to come up
-        assert client.waitForDaemonReady(), "Daemon never became ready"
-        log.info("Started daemon running on UI port %s" % client.port)
+        assert victim.waitForDaemonReady(), "Daemon never became ready"
+        log.info("Started daemon running on UI port %s" % victim.port)
 
-        assert not client.hasAu(simAu)
+        assert not victim.hasAu(simAu)
 
         # Now restore the backup file
         log.info("Restoring cache configuration...")
-        client.restoreConfiguration(simAu)
+        victim.restoreConfiguration(simAu)
         log.info("Restored successfully.")
 
         # These should be equal AU IDs, so both should return true
-        assert client.hasAu(simAu)
-
-        # Request a tree walk.
-        log.info("Requesting tree walk.")
-        client.requestTreeWalk(simAu)
+        assert victim.hasAu(simAu)
         
         # expect to see a V3 poll called
         log.info("Waiting for a V3 poll.")
-        assert client.waitForV3Poller(simAu),\
+        assert victim.waitForV3Poller(simAu),\
             "Never called V3 poll."
         log.info("Called V3 poll.")
 
         # expect to see the AU successfully repaired
         log.info("Waiting for successful V3 repair of AU.")
-        assert client.waitForCompleteV3Repair(simAu, timeout=self.timeout),\
+        assert victim.waitForCompleteV3Repair(simAu, timeout=self.timeout),\
                "AU never repaired by V3."
         log.info("AU successfully repaired by V3.")
 

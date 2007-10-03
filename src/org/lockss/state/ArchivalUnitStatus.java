@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.60 2007-10-01 08:22:22 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.61 2007-10-03 00:35:52 smorabito Exp $
  */
 
 /*
@@ -802,6 +802,8 @@ public class ArchivalUnitStatus
       long lastAgreeTime = 0;
       Vote lastDisagree;
       long lastDisagreeTime = 0;
+      float highestAgreement = 0.0f;
+      float lastAgreement = 0.0f;
 
       CacheStats(PeerIdentity peer) {
 	this.peer = peer;
@@ -939,6 +941,10 @@ public class ArchivalUnitStatus
                            ColumnDescriptor.TYPE_STRING),
       new ColumnDescriptor("Last", "Complete Consensus",
                            ColumnDescriptor.TYPE_STRING),
+      new ColumnDescriptor("HighestPercentAgreement", "Highest Agreement",
+                           ColumnDescriptor.TYPE_PERCENT),
+      new ColumnDescriptor("LastPercentAgreement", "Last Agreement",
+                           ColumnDescriptor.TYPE_PERCENT),                           
       new ColumnDescriptor("LastAgree",
 			   "Last Complete Consensus",
                            ColumnDescriptor.TYPE_DATE),
@@ -998,6 +1004,8 @@ public class ArchivalUnitStatus
 	    statsMap.put(pid, stats);
 	    stats.lastAgreeTime = ida.getLastAgree();
 	    stats.lastDisagreeTime = ida.getLastDisagree();
+	    stats.highestAgreement = ida.getHighestPercentAgreement();
+	    stats.lastAgreement = ida.getPercentAgreement();
 	  }
 	} catch (IdentityManager.MalformedIdentityKeyException e) {
 	  logger.warning("Malformed id key in IdentityAgreement", e);
@@ -1010,6 +1018,8 @@ public class ArchivalUnitStatus
     protected Map makeRow(CacheStats stats) {
       Map rowMap = super.makeRow(stats);
       rowMap.put("Last", stats.isLastAgree() ? "Yes" : "No");
+      rowMap.put("LastPercentAgreement", new Float(stats.lastAgreement));
+      rowMap.put("HighestPercentAgreement", new Float(stats.highestAgreement));
       rowMap.put("LastAgree", new Long(stats.lastAgreeTime));
       rowMap.put("LastDisagree", new Long(stats.lastDisagreeTime));
       return rowMap;

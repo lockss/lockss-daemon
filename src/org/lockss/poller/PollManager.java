@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.179 2007-08-17 07:37:02 smorabito Exp $
+ * $Id: PollManager.java,v 1.180 2007-10-03 00:35:52 smorabito Exp $
  */
 
 /*
@@ -33,6 +33,19 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.poller;
 
+import static org.lockss.poller.PollManager.DEFAULT_DEFAULT_POLL_PROBABILITY;
+import static org.lockss.poller.PollManager.DEFAULT_ENABLE_V3_POLLER;
+import static org.lockss.poller.PollManager.DEFAULT_MAX_TIME_BETWEEN_POLLS;
+import static org.lockss.poller.PollManager.DEFAULT_START_POLLS_INITIAL_DELAY;
+import static org.lockss.poller.PollManager.DEFAULT_START_POLLS_INTERVAL;
+import static org.lockss.poller.PollManager.PARAM_DEFAULT_POLL_PROBABILITY;
+import static org.lockss.poller.PollManager.PARAM_ENABLE_V3_POLLER;
+import static org.lockss.poller.PollManager.PARAM_MAX_TIME_BETWEEN_POLLS;
+import static org.lockss.poller.PollManager.PARAM_START_POLLS_INITIAL_DELAY;
+import static org.lockss.poller.PollManager.PARAM_START_POLLS_INTERVAL;
+import static org.lockss.poller.v3.V3Poller.DEFAULT_MAX_SIMULTANEOUS_V3_POLLERS;
+import static org.lockss.poller.v3.V3Poller.PARAM_MAX_SIMULTANEOUS_V3_POLLERS;
+
 import java.io.*;
 import java.util.*;
 
@@ -48,7 +61,10 @@ import org.lockss.poller.v3.V3Serializer.PollSerializerException;
 import org.lockss.protocol.*;
 import org.lockss.state.*;
 import org.lockss.util.*;
+
 import EDU.oswego.cs.dl.util.concurrent.*;
+import static org.lockss.poller.v3.V3Poller.*;
+
 
 /**
  * <p>Class that manages the polling process.</p>
@@ -82,6 +98,38 @@ public class PollManager
     org.lockss.poller.v3.V3PollFactory.PARAM_ENABLE_V3_VOTER;
   public static final boolean DEFAULT_ENABLE_V3_VOTER =
     org.lockss.poller.v3.V3PollFactory.DEFAULT_ENABLE_V3_VOTER;
+  
+  public static final String PARAM_START_POLLS_INITIAL_DELAY = 
+    PREFIX + "v3.pollStarterInitialDelay";
+  public static final long DEFAULT_START_POLLS_INITIAL_DELAY = 
+    1000 * 60 * 10; /* 10 Minutes */
+  
+  public static final String PARAM_START_POLLS_INTERVAL =
+    PREFIX + "v3.pollStarterInterval";
+  public static final long DEFAULT_START_POLLS_INTERVAL =
+    1000 * 60 * 60; /* 1 Hour */
+  
+  /** The default probability of starting a poll on any given
+   * AU.  This is the probability that will be used by the PollStarter
+   * if no other factors come into play, i.e., if the AU has
+   * been polled less than &quo;maxTimeBetweenPolls&quo; ago.
+   */
+  public static final String PARAM_DEFAULT_POLL_PROBABILITY =
+    PREFIX + "v3.defaultPollProbability";
+  public static final float DEFAULT_DEFAULT_POLL_PROBABILITY =
+    0.25f;
+
+  /** The maximum time between polls on an AU.  Note that this does NOT
+   * mean that a poll is guaranteed to run once this time has passed.
+   * It merely means that the probability of the PollStarter deciding
+   * to call a poll on the given AU is 100%, IF and ONLY IF the PollStarter
+   * runs and selects the given AU for consideration, and if the maximum
+   * number of simultaneous polls is not already running.
+   */
+  public static final String PARAM_MAX_TIME_BETWEEN_POLLS =
+    PREFIX + "v3.maxTimeBetweenPolls";
+  public static final long DEFAULT_MAX_TIME_BETWEEN_POLLS =
+    1000L * 60L * 60L * 24L * 30;  // 30 Days. 
 
   // Items are moved between thePolls and theRecentPolls, so it's simplest
   // to synchronize all accesses on a single object.  That object is
@@ -108,6 +156,14 @@ public class PollManager
   private V3PollStatusAccessor v3Status;
   private boolean deleteInvalidPollStateDirs =
     DEFAULT_DELETE_INVALID_POLL_STATE_DIRS;
+  private long pollStartInterval = DEFAULT_START_POLLS_INTERVAL;
+  private long pollStartInitialDelay = DEFAULT_START_POLLS_INITIAL_DELAY;
+  private boolean enableV3Poller = DEFAULT_ENABLE_V3_POLLER;
+  private float defaultPollProbability = DEFAULT_DEFAULT_POLL_PROBABILITY;
+  private long maxTimeBetweenPolls = DEFAULT_MAX_TIME_BETWEEN_POLLS;
+  private int maxSimultaneousPollers = DEFAULT_MAX_SIMULTANEOUS_V3_POLLERS;
+  private PollStarter pollStarter;
+  private boolean isPollStarterEnabled = false;
   
   // If true, restore V3 Voters
   private boolean enablePollers = DEFAULT_ENABLE_V3_POLLER;
@@ -207,6 +263,31 @@ public class PollManager
     
     // One time load of an in-memory map of AU IDs to directories. 
     preloadStoredPolls();
+    
+    // Enable the poll starter.
+    enablePollStarter();
+  }
+
+  private void enablePollStarter() {
+    theLog.info("Starting PollStarter");
+    if (pollStarter != null) {
+      theLog.debug("PollStarter already running. " + 
+                   "Stopping old one first");
+      disablePollStarter();
+    }
+    pollStarter = new PollStarter(getDaemon(), this);
+    new Thread(pollStarter).start();
+    isPollStarterEnabled = true;
+  }
+  
+  private void disablePollStarter() {
+    if (pollStarter != null) {
+      theLog.info("Stopping PollStarter");
+      pollStarter.stopPollStarter();
+      pollStarter.waitExited(Deadline.in(Constants.SECOND));
+      pollStarter = null;
+    }
+    isPollStarterEnabled = false;
   }
 
   /**
@@ -214,6 +295,7 @@ public class PollManager
    * @see org.lockss.app.LockssManager#stopService()
    */
   public void stopService() {
+    disablePollStarter();
     if (auEventHandler != null) {
       getDaemon().getPluginManager().unregisterAuEventHandler(auEventHandler);
       auEventHandler = null;
@@ -283,7 +365,7 @@ public class PollManager
   }
 
   /**
-   * Call a poll.  Only used by the tree walk.
+   * Call a poll.  Used by PollStarter.
    * @param pollspec the <code>PollSpec</code> that defines the subject of
    *                 the <code>Poll</code>.
    * @return the poll, if it was successfuly called, else null.
@@ -324,6 +406,8 @@ public class PollManager
    * Is a poll of the given type and spec currently running
    * @param spec the PollSpec definining the location of the poll.
    * @return true if we have a poll which is running that matches pollspec
+   * 
+   * @deprecated  This method may be removed in a future release.
    */
   public boolean isPollRunning(PollSpec spec) {
     synchronized (pollMapLock) {
@@ -337,17 +421,20 @@ public class PollManager
     return false;
   }
   
-  public boolean isV3PollerRunning(PollSpec spec) {
+  public boolean isPollRunning(ArchivalUnit au) {
+    if (au == null || au.getAuId() == null) {
+      throw new NullPointerException("Passed a null AU or AU with null ID " 
+                                     + "to isPollRunning!");
+    }
     synchronized (pollMapLock) {
       for (Iterator it = thePolls.values().iterator(); it.hasNext(); ) {
         PollManagerEntry pme = (PollManagerEntry)it.next();
-        if (pme.getPoll() instanceof V3Poller &&
-            pme.getPollSpec().getAuId().equals(spec.getAuId())) {
-          return !pme.isPollCompleted();
+        if (au.getAuId().equals(pme.getPollSpec().getAuId())) {
+          return (pme.getPoll() instanceof V3Poller) && !pme.isPollCompleted();
         }
       }
     }
-    return false;
+    return false;      
   }
 
   /** Return the PollManagerEntry for the poll with the specified key. */
@@ -731,6 +818,7 @@ public class PollManager
   public void setConfig(Configuration newConfig,
 			Configuration oldConfig,
 			Configuration.Differences changedKeys) {
+
     if (changedKeys.contains(PREFIX)) {
       m_recentPollExpireTime =
 	newConfig.getTimeInterval(PARAM_RECENT_EXPIRATION,
@@ -748,6 +836,24 @@ public class PollManager
       deleteInvalidPollStateDirs =
         newConfig.getBoolean(PARAM_DELETE_INVALID_POLL_STATE_DIRS,
                              DEFAULT_DELETE_INVALID_POLL_STATE_DIRS);
+      pollStartInterval =
+        newConfig.getTimeInterval(PARAM_START_POLLS_INTERVAL,
+                                  DEFAULT_START_POLLS_INTERVAL);
+      pollStartInitialDelay =
+        newConfig.getTimeInterval(PARAM_START_POLLS_INITIAL_DELAY,
+                                  DEFAULT_START_POLLS_INITIAL_DELAY);
+      enableV3Poller =
+        newConfig.getBoolean(PARAM_ENABLE_V3_POLLER,
+                             DEFAULT_ENABLE_V3_POLLER);
+      defaultPollProbability = 
+        newConfig.getPercentage(PARAM_DEFAULT_POLL_PROBABILITY,
+                                DEFAULT_DEFAULT_POLL_PROBABILITY);
+      maxTimeBetweenPolls =
+        newConfig.getLong(PARAM_MAX_TIME_BETWEEN_POLLS,
+                          DEFAULT_MAX_TIME_BETWEEN_POLLS);
+      maxSimultaneousPollers =
+        newConfig.getInt(PARAM_MAX_SIMULTANEOUS_V3_POLLERS,
+                         DEFAULT_MAX_SIMULTANEOUS_V3_POLLERS);
     }
     for (int i = 0; i < pf.length; i++) {
       if (pf[i] != null) {
@@ -1217,6 +1323,8 @@ public class PollManager
   public class V3PollStatusAccessor {
     HashMap map;
     
+    long nextPollStartTime = -1;
+    
     public V3PollStatusAccessor() {
       map = new HashMap();
     }
@@ -1292,6 +1400,22 @@ public class PollManager
     public float getAgreement(String auId) {
       return getEntry(auId).agreement;
     }
+    
+    public void setNextPollStartTime(Deadline when) {
+      if (when == null) {
+        nextPollStartTime = -1;
+      } else {
+        nextPollStartTime = when.getExpirationTime();
+      }
+    }
+    
+    public Deadline getNextPollStartTime() {
+      if (nextPollStartTime > -1) {
+        return Deadline.restoreDeadlineAt(nextPollStartTime);
+      } else {
+        return null;
+      }
+    }
 
     /**
      * Clear the poll history map.
@@ -1309,5 +1433,176 @@ public class PollManager
     public int numPolls = 0;
     public float agreement = 0.0f;
   }
+  
+  /** LOCKSS Runnable responsible for occasionally scanning for AUs that
+   * need polls.
+   */
+  private class PollStarter extends LockssRunnable {
+    
+    static final String PRIORITY_PARAM_POLLER = "Poller";
+    static final int PRIORITY_DEFAULT_POLLER = Thread.NORM_PRIORITY - 1;
+    static final String PREFIX = Configuration.PREFIX + "poll.";
+        
+    private LockssDaemon lockssDaemon;
+    private PollManager pollManager;
+    private PluginManager pluginManager;
+    
+    private Iterator auIterator;
+
+    private volatile boolean goOn = true;
+
+    public PollStarter(LockssDaemon lockssDaemon,
+                       PollManager pollManager) {
+      super("PollStarter");
+      this.lockssDaemon = lockssDaemon;
+      this.pollManager = pollManager;
+      this.pluginManager = lockssDaemon.getPluginManager();
+
+      Configuration config = CurrentConfig.getCurrentConfig();
+    }
+
+    public void lockssRun() {
+      setPriority(PRIORITY_PARAM_POLLER, PRIORITY_DEFAULT_POLLER);
+      
+      if (goOn) {
+        try {
+          theLog.debug("Waiting until AUs started");
+          lockssDaemon.waitUntilAusStarted();
+          Deadline initial = Deadline.in(pollStartInitialDelay);
+          theLog.debug("pollStartInitialDelay=" + pollStartInitialDelay);
+          theLog.debug("Setting initial Poll Starter delay to " + initial);
+          pollManager.getV3Status().setNextPollStartTime(initial);
+          initial.sleep();
+        } catch (InterruptedException e) {
+          // just wakeup and check for exit
+        }
+      }
+      
+      while (goOn) {
+        startSomePolls();
+        Deadline timer = Deadline.in(pollStartInterval);
+        pollManager.getV3Status().setNextPollStartTime(timer);
+        if (goOn) {
+          try {
+            timer.sleep();
+          } catch (InterruptedException e) {
+            // just wakeup and check for exit
+          }
+        }
+      }
+
+      pollManager.getV3Status().setNextPollStartTime(null);
+    }
+    
+    void startSomePolls() {
+
+      if (! enableV3Poller) {
+        theLog.debug("Not calling any polls due to configuration ("
+                     + PARAM_ENABLE_V3_POLLER
+                     + ")");
+        return;
+      }
+
+      theLog.debug("Checking for AUs that need polls");
+
+      // Get list of all AUs
+      if (auIterator == null || !auIterator.hasNext()) {
+        auIterator = pluginManager.getRandomizedAus().iterator();
+      }
+
+      while (auIterator.hasNext()) {
+        ArchivalUnit au = (ArchivalUnit)auIterator.next();
+        if (!pluginManager.isInternalAu(au)) {
+          possiblyStartPoll(au);
+        }
+      }
+
+    }
+    
+    void possiblyStartPoll(ArchivalUnit au) {
+      theLog.debug("Deciding whether to call poll on AU: " + au.getName());
+      
+      AuState auState = AuUtil.getAuState(au);
+
+      // Do not call polls on AUs if the maximum number of pollers are already
+      // running.
+      int activePolls = pollManager.getActiveV3Pollers().size(); 
+      if (activePolls >= maxSimultaneousPollers) {
+        theLog.debug("Not starting new V3 Poll on " + au
+                     + ".  Maximum number of active pollers is "
+                     + maxSimultaneousPollers + "; " + activePolls
+                     + " are already running.");
+        return;
+      }
+
+      // If a poll is already running, don't start another one.
+      if (pollManager.isPollRunning(au)) {
+        theLog.debug("Not calling a poll on " + au
+                     + " because another poll is already running.");
+        return;
+      }
+      
+      // Do not call polls on AUs that have not crawled, UNLESS that AU
+      // is marked pubdown.
+      if (auState.getLastCrawlTime() == -1 && !AuUtil.isPubDown(au)) {
+        theLog.debug("Not calling a poll on " + au
+                     + ", because it has not crawled and it is not marked DOWN.");
+        return;
+      }
+      
+      float prob = pollProbability(auState);
+      boolean callPoll = ProbabilisticChoice.choose(prob);
+      
+      if (callPoll) {
+        PollSpec spec = new PollSpec(au.getAuCachedUrlSet(), Poll.V3_POLL);
+        theLog.debug("Calling a V3 poll on AU " + au);
+
+        if (pollManager.callPoll(spec) == null) {
+          if (theLog.isDebug2()) {
+            theLog.debug2("Failed to call a V3 poll on " + spec);
+          }
+        }
+      } else {
+        theLog.debug("Chose not to call a V3 poll on AU " + au);
+      }
+    }
+    
+    /**
+     * Return the probability of calling a poll on the given AU.
+     *  
+     * @param au
+     * @return
+     */
+    float pollProbability(AuState auState) {
+      long lastPollTime = auState.getLastTopLevelPollTime();
+      
+      // If there's never been a poll, return 100%.
+      if (lastPollTime == -1) {
+        theLog.debug("Returning 100% poll probability.");
+        return 1.0f;
+      }
+      
+      long delta = TimeBase.nowMs() - lastPollTime;
+      theLog.debug("Poll Probability Delta: " + delta);
+      theLog.debug("Max Time Between Polls: " + maxTimeBetweenPolls);
+      // If it's been more than maxTimeBetweenPolls, return 100%
+      if (delta > maxTimeBetweenPolls) {
+        theLog.debug("Returning 100% poll probability because delta is larger "
+                     + "than max time.");
+        return 1.0f;
+      }
+      
+      // Otherwise, return defaultPollProbability.
+      theLog.debug("Returning default poll probability: " +
+                   defaultPollProbability);
+      return defaultPollProbability;
+    }
+    
+    public void stopPollStarter() {
+      goOn = false;
+      interruptThread();
+    }
+  }
+
 
 }

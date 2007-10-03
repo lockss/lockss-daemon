@@ -1,5 +1,5 @@
 /*
- * $Id: DebugPanel.java,v 1.12 2007-10-01 08:16:42 tlipkis Exp $
+ * $Id: DebugPanel.java,v 1.13 2007-10-03 00:35:52 smorabito Exp $
  */
 
 /*
@@ -193,11 +193,9 @@ public class DebugPanel extends LockssServlet {
     ArchivalUnit au = getAu();
     if (au == null) return;
     try {
-      CachedUrlSet cus = au.getAuCachedUrlSet();
       NodeManager nodeMgr = daemon.getNodeManager(au);
-      PollSpec spec = new PollSpec(cus, Poll.V3_POLL);
       // Don't call a poll on this if we're already running a V3 poll on it.
-      if (pollManager.isV3PollerRunning(spec)) {
+      if (pollManager.isPollRunning(au)) {
 	errMsg = "Poll already running.  Click again to force new poll.";
 	showForcePoll = true;
 	return;

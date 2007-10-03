@@ -1,5 +1,5 @@
 /*
-* $Id: V3PollStatus.java,v 1.16 2007-08-24 00:41:22 smorabito Exp $
+* $Id: V3PollStatus.java,v 1.17 2007-10-03 00:35:52 smorabito Exp $
  */
 
 /*
@@ -136,8 +136,20 @@ public class V3PollStatus {
         throws StatusService.NoSuchTableException {
       String key = table.getKey();
       table.setColumnDescriptors(colDescs);
+      table.setSummaryInfo(getSummary(pollManager));
       table.setDefaultSortRules(sortRules);
       table.setRows(getRows(key));
+    }
+    
+    private List getSummary(PollManager pollManager) {
+      List summary = new ArrayList();
+      V3PollStatusAccessor status = pollManager.getV3Status();
+      if (status.getNextPollStartTime() != null) {
+        summary.add(new SummaryInfo("Poll Starter",
+                                    ColumnDescriptor.TYPE_TIME_INTERVAL,
+                                    status.getNextPollStartTime().getRemainingTime()));
+      }
+      return summary;
     }
 
     public boolean requiresKey() {

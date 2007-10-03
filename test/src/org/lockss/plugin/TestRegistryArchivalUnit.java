@@ -1,5 +1,5 @@
 /*
- * $Id: TestRegistryArchivalUnit.java,v 1.5 2006-10-31 07:01:06 thib_gc Exp $
+ * $Id: TestRegistryArchivalUnit.java,v 1.6 2007-10-03 00:35:53 smorabito Exp $
  */
 
 /*
@@ -79,8 +79,6 @@ public class TestRegistryArchivalUnit extends LockssTestCase {
     Configuration auConfig = ConfigurationUtil.fromProps(auProps);
 
     Properties props = new Properties();
-    props.setProperty(RegistryArchivalUnit.PARAM_REGISTRY_TREEWALK_START,
-		      "93m");
     props.setProperty(RegistryArchivalUnit.PARAM_REGISTRY_CRAWL_INTERVAL,
 		      "107m");
     props.setProperty(RegistryArchivalUnit.PARAM_REGISTRY_FETCH_RATE,
@@ -88,8 +86,6 @@ public class TestRegistryArchivalUnit extends LockssTestCase {
     ConfigurationUtil.setCurrentConfigFromProps(props);
     ArchivalUnit au = regPlugin.createAu(auConfig);
     TypedEntryMap paramMap = au.getProperties();
-    assertEquals(93 * Constants.MINUTE,
-		 paramMap.getLong(TreeWalkManager.PARAM_TREEWALK_START_DELAY));
     assertEquals(107 * Constants.MINUTE,
 		 paramMap.getLong(ArchivalUnit.KEY_AU_NEW_CONTENT_CRAWL_INTERVAL));
     RateLimiter limiter = au.findFetchRateLimiter();

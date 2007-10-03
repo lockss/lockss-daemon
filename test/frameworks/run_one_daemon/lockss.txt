@@ -1,67 +1,38 @@
 # Don't make local changes in this file; put local settings in lockss.opt
 
-# LOCKSS & LCAP tuning parameters
-
-org.lockss.log.default.level=info
+org.lockss.log.default.level=debug
 
 org.lockss.platform.ui.username=test
 org.lockss.platform.ui.password=SHA1:a94a8fe5ccb19ba61c4c0873d391e987982fbbd3
 org.lockss.ui.access.ip.logForbidden=true
 org.lockss.proxy.access.ip.logForbidden=true
 
-
-
 org.lockss.platform.diskSpacePaths=./cache
-
-
-# spepcific paths not used, computed from platform.diskSpacePaths
-#lockss repository settings
-#org.lockss.cache.location=./
-#identity manager settings
-#org.lockss.id.database.dir=./iddb
-#lockss state settings
-#org.lockss.history.location=./history
 
 org.lockss.config.reloadInterval = 30m
 
-#hasher settings
-#org.lockss.hasher.numSteps
-#org.lockss.hasher.priority
-#org.lockss.hasher.stepBytes
+org.lockss.ui.start=yes
+org.lockss.proxy.start=no
 
+# Turn off V1 -- This will be the default some day.
+org.lockss.comm.enabled=false
 
-#comm settings
+# Identity
+org.lockss.localV3Identity=TCP:[127.0.0.1]:9720
 
-org.lockss.localIPAddress=1.1.1.1
+# Comm settings
+org.lockss.scomm.maxMessageSize=33554430
 
-#org.lockss.comm.unicast.sendToPort=9001
-org.lockss.comm.unicast.sendToAddr=127.0.0.1
+# Poller settings
+org.lockss.poll.v3.quorum=2
+org.lockss.poll.v3.pollStarterInitialDelay=5m
+org.lockss.poll.v3.pollStarterInterval=5m
 
-org.lockss.comm.multicast.group=239.4.5.6
-#org.lockss.comm.multicast.port=3456
-org.lockss.comm.multicast.port=localIp
-org.lockss.comm.unicast.port=1025
-org.lockss.comm.multicast.verify=no
-
-# lcap protocol settings
-org.lockss.protocol.ttl=2
-org.lockss.protocol.hashAlgorithm=SHA-1
-
-# poll settings
-org.lockss.poll.maxpolls=12
-org.lockss.poll.quorum=3
-org.lockss.poll.agreeVerify=0
-org.lockss.poll.disagreeVerify=0
-org.lockss.poll.namepoll.deadline=300000
-org.lockss.poll.contentpoll.min=180000
-org.lockss.poll.contentpoll.max=300000
-
-org.lockss.daemon.exit=false
-#org.lockss.shouldRegisterSimSA=true
-
+# Turn on ICP on port 3131
 org.lockss.proxy.icp.enabled=true
 org.lockss.proxy.icp.port=3131
 
+# Cral starter interval
 org.lockss.crawler.startCrawlsInterval=5m
 org.lockss.crawler.threadPool.max=5
 
