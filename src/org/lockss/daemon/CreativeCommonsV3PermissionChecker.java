@@ -1,5 +1,5 @@
 /*
- * $Id: CreativeCommonsV3PermissionChecker.java,v 1.1 2007-08-08 22:45:27 dshr Exp $
+ * $Id: CreativeCommonsV3PermissionChecker.java,v 1.2 2007-10-04 09:43:41 tlipkis Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.util.*;
 
 import org.lockss.plugin.*;
 import org.lockss.util.*;
+import org.lockss.state.*;
 import org.lockss.crawler.*;
 import org.lockss.extractor.*;
 
@@ -46,7 +47,7 @@ import org.lockss.extractor.*;
  * appropriate Creative Commons V3 license pages.
  */
 
-public class CreativeCommonsV3PermissionChecker implements PermissionChecker {
+public class CreativeCommonsV3PermissionChecker extends BasePermissionChecker {
 
   private static Logger logger =
     Logger.getLogger("CreativeCommonsV3PermissionChecker");
@@ -66,7 +67,7 @@ public class CreativeCommonsV3PermissionChecker implements PermissionChecker {
     ArchivalUnit au = null;
     if (pHelper != null) {
       logger.debug3("pHelper is "+pHelper.toString());
-      au = pHelper.makeUrlCacher(permissionUrl).getArchivalUnit();
+      au = pHelper.getAu();
       logger.debug3("AU is "+au.toString());
     }
     CustomHtmlLinkExtractor extractor = new CustomHtmlLinkExtractor();
@@ -82,6 +83,7 @@ public class CreativeCommonsV3PermissionChecker implements PermissionChecker {
     }
     if (licenseUrl != null) {
       logger.debug3("Found licenseUrl "+licenseUrl);
+      setAuAccessType(pHelper, AuState.AccessType.OpenAccess);
       return true;
     }
     return false;

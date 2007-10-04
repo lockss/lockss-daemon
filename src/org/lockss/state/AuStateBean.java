@@ -1,5 +1,5 @@
 /*
- * $Id: AuStateBean.java,v 1.22 2007-10-04 04:06:17 tlipkis Exp $
+ * $Id: AuStateBean.java,v 1.23 2007-10-04 09:43:41 tlipkis Exp $
  */
 
 /*
@@ -58,6 +58,7 @@ public class AuStateBean extends AuState {
 				      auState.lastCrawlResultMsg,
 				      auState.lastTopLevelPoll,
 				      auState.lastTreeWalk, auState.crawlUrls,
+				      auState.accessType,
 				      auState.clockssSubscriptionStatus,
 				      auState.v3Agreement, null);
   }

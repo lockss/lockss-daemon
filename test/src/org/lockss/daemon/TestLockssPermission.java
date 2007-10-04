@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssPermission.java,v 1.5 2007-08-22 22:31:56 tlipkis Exp $
+ * $Id: TestLockssPermission.java,v 1.6 2007-10-04 09:43:40 tlipkis Exp $
  */
 
 /*
@@ -33,10 +33,11 @@ package org.lockss.daemon;
 import java.io.*;
 import java.util.*;
 
+import org.lockss.state.*;
 import org.lockss.clockss.*;
 import org.lockss.test.*;
 
-public class TestLockssPermission extends LockssTestCase {
+public class TestLockssPermission extends LockssPermissionCheckerTestCase {
 
   private String PERM_STRING = "LOCKSS system has permission to collect, " +
     "preserve, and serve this Archival Unit";
@@ -44,6 +45,10 @@ public class TestLockssPermission extends LockssTestCase {
   private String OPEN_ACCESS_STRING =
     "LOCKSS system has permission to collect, preserve, " +
     "and serve this open access Archival Unit";
+
+  public void setUp() throws Exception {
+    super.setUp();
+  }
 
   public void testStrings() {
     assertEquals(PERM_STRING, LockssPermission.LOCKSS_PERMISSION_STRING);
@@ -53,28 +58,37 @@ public class TestLockssPermission extends LockssTestCase {
 
   private boolean hasPermission(String page) throws IOException {
     return MiscTestUtil.hasPermission(new LockssPermission().getCheckers(),
-				      page);
+				      page, pHelper);
   }
 
   public void testNoPermission() throws IOException {
     assertFalse(hasPermission("LOCKSS system does not have permission to collect, preserve, and serve this Archival Unit"));
     assertFalse(hasPermission("LOCKSS system does not have permission to collect, preserve, and serve this open access Archival Unit"));
+    assertNotEquals(AuState.AccessType.OpenAccess, aus.getAccessType());
   }
 
   public void testLockssPermission() throws IOException {
     String padding = org.apache.commons.lang.StringUtils.repeat("Blah ", 50);
     assertTrue(hasPermission("LOCKSS system has permission to collect, preserve, and serve this Archival Unit"));
+    assertEquals(AuState.AccessType.Subscription, aus.getAccessType());
     assertTrue(hasPermission(padding + "LOCKSS system has permission to collect, preserve, and serve this Archival Unit"));
+    assertEquals(AuState.AccessType.Subscription, aus.getAccessType());
     assertTrue(hasPermission("LOCKSS system has permission to collect, preserve, and serve this Archival Unit" + padding));
+    assertEquals(AuState.AccessType.Subscription, aus.getAccessType());
     assertTrue(hasPermission(padding + "LOCKSS system has permission to collect, preserve, and serve this Archival Unit" + padding));
+    assertEquals(AuState.AccessType.Subscription, aus.getAccessType());
   }
 
   public void testLockssOpenAccessPermission() throws IOException {
     String padding = org.apache.commons.lang.StringUtils.repeat("Blah ", 50);
     assertTrue(hasPermission("LOCKSS system has permission to collect, preserve, and serve this open access Archival Unit"));
+    assertEquals(AuState.AccessType.OpenAccess, aus.getAccessType());
     assertTrue(hasPermission(padding + "LOCKSS system has permission to collect, preserve, and serve this open access Archival Unit"));
+    assertEquals(AuState.AccessType.OpenAccess, aus.getAccessType());
     assertTrue(hasPermission("LOCKSS system has permission to collect, preserve, and serve this open access Archival Unit" + padding));
+    assertEquals(AuState.AccessType.OpenAccess, aus.getAccessType());
     assertTrue(hasPermission(padding + "LOCKSS system has permission to collect, preserve, and serve this open access Archival Unit" + padding));
+    assertEquals(AuState.AccessType.OpenAccess, aus.getAccessType());
   }
 
   public void testNoMatchClockssPermission() throws IOException {

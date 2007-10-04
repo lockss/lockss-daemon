@@ -1,5 +1,5 @@
 /*
- * $Id: LockssPermission.java,v 1.5 2007-08-22 22:31:56 tlipkis Exp $
+ * $Id: LockssPermission.java,v 1.6 2007-10-04 09:43:41 tlipkis Exp $
  */
 
 /*
@@ -32,6 +32,8 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.daemon;
 
 import java.util.*;
+import org.lockss.plugin.*;
+import org.lockss.state.*;
 
 /** The acceptable permission statements, one of which LOCKSS needs to see
  * before it will collect content
@@ -52,10 +54,12 @@ public class LockssPermission {
 
     spc = new StringPermissionChecker(LOCKSS_PERMISSION_STRING,
 				      new StringPermissionChecker.StringFilterRule());
+    spc.doSetAccessType(AuState.AccessType.Subscription);
     lst.add(spc);
 
     spc = new StringPermissionChecker(LOCKSS_OPEN_ACCESS_PERMISSION_STRING,
 				      new StringPermissionChecker.StringFilterRule());
+    spc.doSetAccessType(AuState.AccessType.OpenAccess);
     lst.add(spc);
 
     lst.add(new CreativeCommonsPermissionChecker());

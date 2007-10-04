@@ -1,5 +1,5 @@
 /*
- * $Id: CreativeCommonsPermissionChecker.java,v 1.10 2007-02-22 01:07:53 smorabito Exp $
+ * $Id: CreativeCommonsPermissionChecker.java,v 1.11 2007-10-04 09:43:41 tlipkis Exp $
  */
 
 /*
@@ -45,6 +45,7 @@ import org.w3c.rdf.util.*;
 import org.xml.sax.*;
 
 import org.lockss.util.*;
+import org.lockss.state.*;
 
 /**
  * An implementation of PermissionChecker that looks for an RDF
@@ -55,8 +56,7 @@ import org.lockss.util.*;
  * Currently does not support checking any other license restrictions
  * or permissions.
  */
-public class CreativeCommonsPermissionChecker
-  implements PermissionChecker {
+public class CreativeCommonsPermissionChecker extends BasePermissionChecker {
 
   private static String RDF_START = "<rdf:RDF";
   private static String RDF_END = "</rdf:RDF>";
@@ -172,7 +172,12 @@ public class CreativeCommonsPermissionChecker
         new StatementImpl(licenseType, PERMITS, DISTRIBUTION);
       StatementImpl requiresDistribution =
         new StatementImpl(licenseType, REQUIRES, DISTRIBUTION);
-      return model.contains(permitsDistribution) || model.contains(requiresDistribution);
+      boolean res = model.contains(permitsDistribution)
+	|| model.contains(requiresDistribution);
+      if (res) {
+	setAuAccessType(pHelper, AuState.AccessType.OpenAccess);
+      }
+      return res;
     } catch (ModelException ex) {
       log.warning("Couldn't parse RDF", ex);
     }

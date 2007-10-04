@@ -1,5 +1,5 @@
 /*
- * $Id: AuState.java,v 1.30 2007-10-04 04:06:17 tlipkis Exp $
+ * $Id: AuState.java,v 1.31 2007-10-04 09:43:41 tlipkis Exp $
  */
 
 /*
@@ -49,6 +49,8 @@ public class AuState implements LockssSerializable {
   /** The number of updates between writing to file  (currently unused) */
   static final int URL_UPDATE_LIMIT = 1;
 
+  public enum AccessType {OpenAccess, Subscription};
+
   // State vars
   protected long lastCrawlTime;		// last successful crawl
   protected long lastCrawlAttempt;
@@ -57,7 +59,7 @@ public class AuState implements LockssSerializable {
   protected long lastTopLevelPoll;
   protected int clockssSubscriptionStatus;
   protected double v3Agreement = -1.0;
-//   protected AccessType accessType;
+  protected AccessType accessType;
 
   // saves previous lastCrawl* state while crawl is running
   protected transient AuState previousCrawlState = null;
@@ -67,7 +69,7 @@ public class AuState implements LockssSerializable {
   private transient HistoryRepository historyRepo;
 
   // deprecated, kept for compatibility with old state files
-  protected transient long lastTreeWalk;
+  protected transient long lastTreeWalk = -1;
   // should be deprecated?
   protected HashSet crawlUrls;
   // XXX does this still need to be saved in file?
@@ -84,13 +86,13 @@ public class AuState implements LockssSerializable {
   protected AuState(ArchivalUnit au,
 		    long lastCrawlTime, long lastCrawlAttempt,
 		    long lastTopLevelPoll,
-                    long lastTreeWalk, HashSet crawlUrls,
+		    long lastTreeWalk, HashSet crawlUrls,
 		    int clockssSubscriptionStatus, double v3Agreement,
-                    HistoryRepository historyRepo) {
+		    HistoryRepository historyRepo) {
     this(au, lastCrawlTime, lastCrawlAttempt,
 	 -1, null,
 	 lastTopLevelPoll, lastTreeWalk,
-	 crawlUrls, clockssSubscriptionStatus,
+	 crawlUrls, null, clockssSubscriptionStatus,
 	 v3Agreement, historyRepo);
   }
 
@@ -98,9 +100,10 @@ public class AuState implements LockssSerializable {
 		    long lastCrawlTime, long lastCrawlAttempt,
 		    int lastCrawlResult, String lastCrawlResultMsg,
 		    long lastTopLevelPoll,
-                    long lastTreeWalk, HashSet crawlUrls,
+		    long lastTreeWalk, HashSet crawlUrls,
+		    AccessType accessType,
 		    int clockssSubscriptionStatus, double v3Agreement,
-                    HistoryRepository historyRepo) {
+		    HistoryRepository historyRepo) {
     this.au = au;
     this.lastCrawlTime = lastCrawlTime;
     this.lastCrawlAttempt = lastCrawlAttempt;
@@ -109,6 +112,7 @@ public class AuState implements LockssSerializable {
     this.lastTopLevelPoll = lastTopLevelPoll;
     this.lastTreeWalk = lastTreeWalk;
     this.crawlUrls = crawlUrls;
+    this.accessType = accessType;
     this.clockssSubscriptionStatus = clockssSubscriptionStatus;
     this.v3Agreement = v3Agreement;
     this.historyRepo = historyRepo;
@@ -194,6 +198,7 @@ public class AuState implements LockssSerializable {
 		  lastCrawlTime, lastCrawlAttempt,
 		  lastCrawlResult, lastCrawlResultMsg,
 		  lastTopLevelPoll, lastTreeWalk, crawlUrls,
+		  accessType,
 		  clockssSubscriptionStatus, v3Agreement,
 		  null);
   }
@@ -299,6 +304,15 @@ public class AuState implements LockssSerializable {
       historyRepo.storeAuState(this);
       urlUpdateCntr = 0;
     }
+  }
+
+  public void setAccessType(AccessType accessType) {
+    // don't store, this will get stored at end of crawl
+    this.accessType = accessType;
+  }
+
+  public AccessType getAccessType() {
+    return accessType;
   }
 
   // CLOCKSS status

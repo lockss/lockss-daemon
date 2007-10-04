@@ -1,16 +1,16 @@
 /*
- * $Id: MockPermissionHelper.java,v 1.6 2007-10-04 09:43:40 tlipkis Exp $
+ * $Id: BasePermissionChecker.java,v 1.1 2007-10-04 09:43:41 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
-nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, and to permit persons to whom the Software is
 furnished to do so, subject to the following conditions:
 
@@ -29,42 +29,20 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
 */
-
-package org.lockss.test;
+package org.lockss.daemon;
 
 import java.io.*;
 
-import org.lockss.daemon.Crawler;
-import org.lockss.daemon.Crawler.PermissionHelper;
-import org.lockss.crawler.*;
 import org.lockss.plugin.*;
+import org.lockss.state.*;
+import org.lockss.util.*;
 
-public class MockPermissionHelper implements PermissionHelper {
-  private ArchivalUnit au;
+public abstract class BasePermissionChecker implements PermissionChecker {
 
-  public ArchivalUnit getAu() {
-    return au;
+  protected void setAuAccessType(Crawler.PermissionHelper pHelper,
+				 AuState.AccessType accessType) {
+    ArchivalUnit au = pHelper.getAu();
+    AuState aus = AuUtil.getAuState(au);
+    aus.setAccessType(accessType);
   }
-
-  public void setAu(ArchivalUnit au) {
-    this.au = au;
-  }
-
-  public UrlCacher makeUrlCacher(String url) {
-    throw new UnsupportedOperationException("not implemented");
-  }
-
-  public BufferedInputStream resetInputStream(BufferedInputStream is,
-                                              String url) throws IOException {
-    throw new UnsupportedOperationException("not implemented");
-  }
-
-  public void refetchPermissionPage(String url) {
-    throw new UnsupportedOperationException("not implemented");
-  }
-
-  public CrawlerStatus getCrawlerStatus() {
-    return new CrawlerStatus(null, null, null);
-  }
-
 }

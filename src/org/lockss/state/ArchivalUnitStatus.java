@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.62 2007-10-04 04:06:17 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.63 2007-10-04 09:43:41 tlipkis Exp $
  */
 
 /*
@@ -722,6 +722,12 @@ public class ArchivalUnitStatus
       res.add(new StatusTable.SummaryInfo("Volume",
 					  ColumnDescriptor.TYPE_STRING,
 					  au.getName()));
+      AuState.AccessType atype = state.getAccessType();
+      if (atype != null) {
+	res.add(new StatusTable.SummaryInfo("Access Type",
+					    ColumnDescriptor.TYPE_STRING,
+					    atype.toString()));
+      }
       if (contentSize != -1) {
 	res.add(new StatusTable.SummaryInfo("Content Size",
 					    ColumnDescriptor.TYPE_INT,

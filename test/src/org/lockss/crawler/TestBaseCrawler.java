@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCrawler.java,v 1.13 2007-10-01 08:22:21 tlipkis Exp $
+ * $Id: TestBaseCrawler.java,v 1.14 2007-10-04 09:43:40 tlipkis Exp $
  */
 
 /*
@@ -52,7 +52,7 @@ import org.lockss.test.*;
  * @author  Thomas S. Robertson
  * @version 0.0
  */
-public class TestBaseCrawler extends LockssTestCase {
+public class TestBaseCrawler extends LockssPermissionCheckerTestCase {
 //   private PermissionChecker checker;
   private MockArchivalUnit mau = null;
   private List startUrls = null;
@@ -321,33 +321,26 @@ public class TestBaseCrawler extends LockssTestCase {
     assertSameElements(ListUtil.list(permissionPage), cachedUrls);
   }
 
+  private boolean hasPermission(String page) throws IOException {
+    return MiscTestUtil.hasPermission(crawler.getDaemonPermissionCheckers(),
+				      page, pHelper);
+  }
+
   public void testGetDaemonPermissionCheckers() throws IOException {
     setDaemonPermissionCheckers(null);
 
-    assertTrue(MiscTestUtil.
-	       hasPermission(crawler.getDaemonPermissionCheckers(),
-			     LockssPermission.LOCKSS_PERMISSION_STRING));
-    assertFalse(MiscTestUtil.
-	       hasPermission(crawler.getDaemonPermissionCheckers(),
-			     ClockssPermission.CLOCKSS_PERMISSION_STRING));
+    assertTrue(hasPermission(LockssPermission.LOCKSS_PERMISSION_STRING));
+    assertFalse(hasPermission(ClockssPermission.CLOCKSS_PERMISSION_STRING));
     ConfigurationUtil.setFromArgs(ConfigManager.PARAM_PLATFORM_PROJECT,
 				  "clockss");
     setDaemonPermissionCheckers(null);
-    assertFalse(MiscTestUtil.
-	       hasPermission(crawler.getDaemonPermissionCheckers(),
-			     LockssPermission.LOCKSS_PERMISSION_STRING));
-    assertTrue(MiscTestUtil.
-	       hasPermission(crawler.getDaemonPermissionCheckers(),
-			     ClockssPermission.CLOCKSS_PERMISSION_STRING));
+    assertFalse(hasPermission(LockssPermission.LOCKSS_PERMISSION_STRING));
+    assertTrue(hasPermission(ClockssPermission.CLOCKSS_PERMISSION_STRING));
     ConfigurationUtil.setFromArgs(ConfigManager.PARAM_PLATFORM_PROJECT,
 				  "lockss");
     setDaemonPermissionCheckers(null);
-    assertTrue(MiscTestUtil.
-	       hasPermission(crawler.getDaemonPermissionCheckers(),
-			     LockssPermission.LOCKSS_PERMISSION_STRING));
-    assertFalse(MiscTestUtil.
-	       hasPermission(crawler.getDaemonPermissionCheckers(),
-			     ClockssPermission.CLOCKSS_PERMISSION_STRING));
+    assertTrue(hasPermission(LockssPermission.LOCKSS_PERMISSION_STRING));
+    assertFalse(hasPermission(ClockssPermission.CLOCKSS_PERMISSION_STRING));
   }
 
   public void testToString() {

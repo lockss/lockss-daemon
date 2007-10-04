@@ -1,5 +1,5 @@
 /*
- * $Id: StringPermissionChecker.java,v 1.10 2007-10-01 08:16:05 tlipkis Exp $
+ * $Id: StringPermissionChecker.java,v 1.11 2007-10-04 09:43:41 tlipkis Exp $
  */
 
 /*
@@ -35,16 +35,20 @@ import java.io.*;
 import java.util.*;
 
 import org.lockss.plugin.*;
+import org.lockss.state.*;
 import org.lockss.util.*;
 import org.lockss.filter.*;
 
-public class StringPermissionChecker implements PermissionChecker {
+public class StringPermissionChecker extends BasePermissionChecker {
+  static Logger m_logger = Logger.getLogger("PermissionCheck");
   public static final int IGNORE_CASE = 0;
+
   String m_matchString;
   BitSet m_flags = new BitSet(8);
   FilterRule m_filter;
   String m_encoding;
-  static Logger m_logger = Logger.getLogger("PermissionCheck");
+  AuState.AccessType accessType;
+  boolean setAccessType = false;
 
   public StringPermissionChecker(String matchString, FilterRule filterRule) {
       m_matchString = matchString;
@@ -70,8 +74,22 @@ public class StringPermissionChecker implements PermissionChecker {
     m_encoding = encoding;
   }
 
+  public void doSetAccessType(AuState.AccessType type) {
+    this.accessType = type;
+    setAccessType = true;
+  }
+
   public boolean checkPermission(Crawler.PermissionHelper pHelper,
 				 Reader reader, String permissionUrl) {
+    boolean res =  checkPermission0(pHelper, reader, permissionUrl);
+    if (res && setAccessType) {
+      setAuAccessType(pHelper,accessType);
+    }
+    return res;
+  }
+
+  private boolean checkPermission0(Crawler.PermissionHelper pHelper,
+				  Reader reader, String permissionUrl) {
     if (m_filter != null) {
       try {
 	reader = m_filter.createFilteredReader(reader);
@@ -79,7 +97,7 @@ public class StringPermissionChecker implements PermissionChecker {
 	m_logger.warning("Plugin error checking permission at " +
 			 permissionUrl, e);
 	return false;
-      }	
+      }
       m_logger.debug3("Creating filtered reader to check permissions");
     }
 
@@ -100,5 +118,4 @@ public class StringPermissionChecker implements PermissionChecker {
       return new WhiteSpaceFilter(filteredReader);
     }
   }
-
 }

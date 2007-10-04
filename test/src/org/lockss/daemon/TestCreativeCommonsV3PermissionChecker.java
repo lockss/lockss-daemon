@@ -1,5 +1,5 @@
 /*
- * $Id: TestCreativeCommonsV3PermissionChecker.java,v 1.1 2007-08-08 22:45:27 dshr Exp $
+ * $Id: TestCreativeCommonsV3PermissionChecker.java,v 1.2 2007-10-04 09:43:40 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.daemon;
 import org.lockss.test.*;
 import java.io.*;
 import org.lockss.plugin.*;
+import org.lockss.state.*;
 import org.lockss.util.*;
 import org.lockss.filter.*;
 
@@ -42,7 +43,9 @@ import org.lockss.filter.*;
  * <p>@author Claire Griffin</p>
  * <p>@version 1.0</p>
  */
-public class TestCreativeCommonsV3PermissionChecker extends LockssTestCase {
+public class TestCreativeCommonsV3PermissionChecker
+  extends LockssPermissionCheckerTestCase {
+
   private CreativeCommonsV3PermissionChecker checker = null;
   private String LEAD_IN = "<html>/n<head>/n<title>FOO</title>\n</head>"+
     "laa-dee-dah-LOCK-KCOL\n\n";
@@ -61,6 +64,10 @@ public class TestCreativeCommonsV3PermissionChecker extends LockssTestCase {
   StringBuffer sb;
   private String TEST_URL = "http://www.example.com/";
 
+  public void setUp() throws Exception {
+    super.setUp();
+  }
+
   public void testValidPermissions() {
     for (int i = 0; i < TYPE_STRINGS.length; i++) {
       // <a href="foo" rel="license">
@@ -78,7 +85,8 @@ public class TestCreativeCommonsV3PermissionChecker extends LockssTestCase {
       checker = new CreativeCommonsV3PermissionChecker();
       // check the correct string
       Reader reader = new StringReader(s_ok);
-      assertTrue(checker.checkPermission(null, reader, TEST_URL));
+      assertTrue(checker.checkPermission(pHelper, reader, TEST_URL));
+      assertEquals(AuState.AccessType.OpenAccess, aus.getAccessType());
     }
     for (int i = 0; i < TYPE_STRINGS.length; i++) {
       // <a rel="license" href="foo">
@@ -97,7 +105,8 @@ public class TestCreativeCommonsV3PermissionChecker extends LockssTestCase {
       checker = new CreativeCommonsV3PermissionChecker();
       // check the correct string
       Reader reader = new StringReader(s_ok);
-      assertTrue(checker.checkPermission(null, reader, TEST_URL));
+      assertTrue(checker.checkPermission(pHelper, reader, TEST_URL));
+      assertEquals(AuState.AccessType.OpenAccess, aus.getAccessType());
     }
   }
 
@@ -119,7 +128,8 @@ public class TestCreativeCommonsV3PermissionChecker extends LockssTestCase {
       checker = new CreativeCommonsV3PermissionChecker();
       // check the correct string
       Reader reader = new StringReader(s_ok);
-      assertTrue(checker.checkPermission(null, reader, TEST_URL));
+      assertTrue(checker.checkPermission(pHelper, reader, TEST_URL));
+      assertEquals(AuState.AccessType.OpenAccess, aus.getAccessType());
     }
     for (int i = 0; i < TYPE_STRINGS.length; i++) {
       // <a rel="license" href="foo">
@@ -138,7 +148,8 @@ public class TestCreativeCommonsV3PermissionChecker extends LockssTestCase {
       checker = new CreativeCommonsV3PermissionChecker();
       // check the correct string
       Reader reader = new StringReader(s_ok);
-      assertTrue(checker.checkPermission(null, reader, TEST_URL));
+      assertTrue(checker.checkPermission(pHelper, reader, TEST_URL));
+      assertEquals(AuState.AccessType.OpenAccess, aus.getAccessType());
     }
   }
 
@@ -163,7 +174,8 @@ public class TestCreativeCommonsV3PermissionChecker extends LockssTestCase {
       checker = new CreativeCommonsV3PermissionChecker();
       // check the correct string
       Reader reader = new StringReader(s_ok);
-      assertTrue(checker.checkPermission(null, reader, TEST_URL));
+      assertTrue(checker.checkPermission(pHelper, reader, TEST_URL));
+      assertEquals(AuState.AccessType.OpenAccess, aus.getAccessType());
     }
   }
 
@@ -184,7 +196,8 @@ public class TestCreativeCommonsV3PermissionChecker extends LockssTestCase {
       checker = new CreativeCommonsV3PermissionChecker();
       // check the correct string
       Reader reader = new StringReader(s_ok);
-      assertFalse(checker.checkPermission(null, reader, null));
+      assertFalse(checker.checkPermission(pHelper, reader, null));
+      assertNotEquals(AuState.AccessType.OpenAccess, aus.getAccessType());
     }
   }
 
@@ -201,7 +214,8 @@ public class TestCreativeCommonsV3PermissionChecker extends LockssTestCase {
       checker = new CreativeCommonsV3PermissionChecker();
       // check the correct string
       Reader reader = new StringReader(s_ok);
-      assertFalse(checker.checkPermission(null, reader, TEST_URL));
+      assertFalse(checker.checkPermission(pHelper, reader, TEST_URL));
+      assertNotEquals(AuState.AccessType.OpenAccess, aus.getAccessType());
     }
   }
 
@@ -221,7 +235,8 @@ public class TestCreativeCommonsV3PermissionChecker extends LockssTestCase {
       checker = new CreativeCommonsV3PermissionChecker();
       // check the correct string
       Reader reader = new StringReader(s_ok);
-      assertFalse(checker.checkPermission(null, reader, TEST_URL));
+      assertFalse(checker.checkPermission(pHelper, reader, TEST_URL));
+      assertNotEquals(AuState.AccessType.OpenAccess, aus.getAccessType());
     }
   }
 
@@ -242,7 +257,8 @@ public class TestCreativeCommonsV3PermissionChecker extends LockssTestCase {
       checker = new CreativeCommonsV3PermissionChecker();
       // check the correct string
       Reader reader = new StringReader(s_ok);
-      assertFalse(checker.checkPermission(null, reader, TEST_URL));
+      assertFalse(checker.checkPermission(pHelper, reader, TEST_URL));
+      assertNotEquals(AuState.AccessType.OpenAccess, aus.getAccessType());
     }
   }
 
@@ -263,7 +279,8 @@ public class TestCreativeCommonsV3PermissionChecker extends LockssTestCase {
       checker = new CreativeCommonsV3PermissionChecker();
       // check the correct string
       Reader reader = new StringReader(s_ok);
-      assertFalse(checker.checkPermission(null, reader, TEST_URL));
+      assertFalse(checker.checkPermission(pHelper, reader, TEST_URL));
+      assertNotEquals(AuState.AccessType.OpenAccess, aus.getAccessType());
     }
   }
 
@@ -285,7 +302,8 @@ public class TestCreativeCommonsV3PermissionChecker extends LockssTestCase {
       checker = new CreativeCommonsV3PermissionChecker();
       // check the correct string
       Reader reader = new StringReader(s_ok);
-      assertFalse(checker.checkPermission(null, reader, TEST_URL));
+      assertFalse(checker.checkPermission(pHelper, reader, TEST_URL));
+      assertNotEquals(AuState.AccessType.OpenAccess, aus.getAccessType());
     }
   }
 }
