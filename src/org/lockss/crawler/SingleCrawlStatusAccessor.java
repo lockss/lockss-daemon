@@ -1,5 +1,5 @@
 /*
- * $Id: SingleCrawlStatusAccessor.java,v 1.6 2007-10-01 08:22:22 tlipkis Exp $
+ * $Id: SingleCrawlStatusAccessor.java,v 1.7 2007-10-04 18:29:53 tlipkis Exp $
  */
 
 /*
@@ -54,7 +54,7 @@ public class SingleCrawlStatusAccessor implements StatusAccessor {
                            ColumnDescriptor.TYPE_STRING),
       new ColumnDescriptor(MIME_TYPE_NUM_URLS, "URLs Found",
                            ColumnDescriptor.TYPE_INT,
-                           "Number of URLs found with this Mime Type"),
+                           "Number of pages of that mime type fetched during this crawl"),
     });
 
   private static final List statusSortRules =
@@ -148,7 +148,7 @@ public class SingleCrawlStatusAccessor implements StatusAccessor {
     Collection startUrls = status.getStartUrls();
     res.add(new StatusTable.SummaryInfo("Status",
 					ColumnDescriptor.TYPE_STRING,
-					status.getCrawlStatus()));
+					status.getCrawlStatusMsg()));
     res.add(new StatusTable.SummaryInfo("Source",
 					ColumnDescriptor.TYPE_STRING,
 					status.getSources()));
