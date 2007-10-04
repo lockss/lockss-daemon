@@ -1,5 +1,5 @@
 /*
- * $Id: AuState.java,v 1.29 2007-10-01 08:22:22 tlipkis Exp $
+ * $Id: AuState.java,v 1.30 2007-10-04 04:06:17 tlipkis Exp $
  */
 
 /*
@@ -43,28 +43,39 @@ import org.lockss.crawler.CrawlerStatus;
  * AuState contains the state information for an au.
  */
 public class AuState implements LockssSerializable {
-  protected transient ArchivalUnit au;
+
+  private static final Logger log = Logger.getLogger("AuState");
+
+  /** The number of updates between writing to file  (currently unused) */
+  static final int URL_UPDATE_LIMIT = 1;
+
+  // State vars
   protected long lastCrawlTime;		// last successful crawl
   protected long lastCrawlAttempt;
-  protected String lastCrawlResult;
-  protected int lastCrawlResultCode;
+  protected String lastCrawlResultMsg;
+  protected int lastCrawlResult;
   protected long lastTopLevelPoll;
-  protected long lastTreeWalk;
-  private transient HistoryRepository historyRepo;
-  protected HashSet crawlUrls;
-//   protected AccessType accessType;
   protected int clockssSubscriptionStatus;
   protected double v3Agreement = -1.0;
+//   protected AccessType accessType;
+
+  // saves previous lastCrawl* state while crawl is running
+  protected transient AuState previousCrawlState = null;
+
+  // Runtime (non-state) vars
+  protected transient ArchivalUnit au;
+  private transient HistoryRepository historyRepo;
+
+  // deprecated, kept for compatibility with old state files
+  protected transient long lastTreeWalk;
+  // should be deprecated?
+  protected HashSet crawlUrls;
+  // XXX does this still need to be saved in file?
   //Has there ever been a completed V3 poll?
   /** @deprecated */
   protected boolean hasV3Poll = false;
 
-  private static final Logger log = Logger.getLogger("AuState");
-
   transient int urlUpdateCntr = 0;
-
-  /** The number of updates between writing to file */
-  static final int URL_UPDATE_LIMIT = 1;
 
   public AuState(ArchivalUnit au, HistoryRepository historyRepo) {
     this(au, -1, -1, -1, -1, null, CLOCKSS_SUB_UNKNOWN, -1.0, historyRepo);
@@ -77,7 +88,7 @@ public class AuState implements LockssSerializable {
 		    int clockssSubscriptionStatus, double v3Agreement,
                     HistoryRepository historyRepo) {
     this(au, lastCrawlTime, lastCrawlAttempt,
-	 null, -1,
+	 -1, null,
 	 lastTopLevelPoll, lastTreeWalk,
 	 crawlUrls, clockssSubscriptionStatus,
 	 v3Agreement, historyRepo);
@@ -85,7 +96,7 @@ public class AuState implements LockssSerializable {
 
   protected AuState(ArchivalUnit au,
 		    long lastCrawlTime, long lastCrawlAttempt,
-		    String lastCrawlResult, int lastCrawlResultCode,
+		    int lastCrawlResult, String lastCrawlResultMsg,
 		    long lastTopLevelPoll,
                     long lastTreeWalk, HashSet crawlUrls,
 		    int clockssSubscriptionStatus, double v3Agreement,
@@ -93,8 +104,8 @@ public class AuState implements LockssSerializable {
     this.au = au;
     this.lastCrawlTime = lastCrawlTime;
     this.lastCrawlAttempt = lastCrawlAttempt;
+    this.lastCrawlResultMsg = lastCrawlResultMsg;
     this.lastCrawlResult = lastCrawlResult;
-    this.lastCrawlResultCode = lastCrawlResultCode;
     this.lastTopLevelPoll = lastTopLevelPoll;
     this.lastTreeWalk = lastTreeWalk;
     this.crawlUrls = crawlUrls;
@@ -111,6 +122,11 @@ public class AuState implements LockssSerializable {
     return au;
   }
 
+  public boolean isCrawlActive() {
+    return previousCrawlState != null;
+  }
+
+
   /**
    * Returns the last new content crawl time of the au.
    * @return the last crawl time in ms
@@ -124,24 +140,33 @@ public class AuState implements LockssSerializable {
    * @return the last crawl time in ms
    */
   public long getLastCrawlAttempt() {
-    return lastCrawlAttempt;
-  }
-
-  /**
-   * Returns the result of the last new content crawl
-   */
-  public String getLastCrawlResult() {
-    if (lastCrawlResult == null) {
-      return CrawlerStatus.getDefaultMessage(lastCrawlResultCode);
+    if (isCrawlActive()) {
+      return previousCrawlState.getLastCrawlAttempt();
     }
-    return lastCrawlResult;
+    return lastCrawlAttempt;
   }
 
   /**
    * Returns the result code of the last new content crawl
    */
-  public int getLastCrawlResultCode() {
-    return lastCrawlResultCode;
+  public int getLastCrawlResult() {
+    if (isCrawlActive()) {
+      return previousCrawlState.getLastCrawlResult();
+    }
+    return lastCrawlResult;
+  }
+
+  /**
+   * Returns the result of the last new content crawl
+   */
+  public String getLastCrawlResultMsg() {
+    if (isCrawlActive()) {
+      return previousCrawlState.getLastCrawlResultMsg();
+    }
+    if (lastCrawlResultMsg == null) {
+      return CrawlerStatus.getDefaultMessage(lastCrawlResult);
+    }
+    return lastCrawlResultMsg;
   }
 
   /**
@@ -160,31 +185,48 @@ public class AuState implements LockssSerializable {
     return lastTreeWalk;
   }
 
-  /**
-   * Sets the last crawl time to the current time.  Saves itself to disk.
-   */
-  protected void newCrawlFinished() {
-    lastCrawlTime = TimeBase.nowMs();
-    lastCrawlResult = null;
-    lastCrawlResultCode = Crawler.STATUS_SUCCESSFUL;
-    lastCrawlResult = null;
-    historyRepo.storeAuState(this);
+  private void saveLastCrawl() {
+    if (previousCrawlState != null) {
+      log.error("saveLastCrawl() called twice", new Throwable());
+    }
+    previousCrawlState =
+      new AuState(au,
+		  lastCrawlTime, lastCrawlAttempt,
+		  lastCrawlResult, lastCrawlResultMsg,
+		  lastTopLevelPoll, lastTreeWalk, crawlUrls,
+		  clockssSubscriptionStatus, v3Agreement,
+		  null);
   }
 
   /**
    * Sets the last time a crawl was attempted.
    */
-  public void newCrawlAttempted() {
+  public void newCrawlStarted() {
+    saveLastCrawl();
     lastCrawlAttempt = TimeBase.nowMs();
+    lastCrawlResult = Crawler.STATUS_RUNNING_AT_CRASH;
+    lastCrawlResultMsg = null;
     historyRepo.storeAuState(this);
   }
 
   /**
-   * Sets the result of the most recent crawl.
+   * Sets the last crawl time to the current time.  Saves itself to disk.
    */
-  public void setLastCrawlResult(int resultCode, String result) {
-    lastCrawlResult = result;
-    lastCrawlResultCode = resultCode;
+  protected void newCrawlFinished(int result, String resultMsg) {
+    lastCrawlResultMsg = resultMsg;
+    switch (result) {
+    case Crawler.STATUS_SUCCESSFUL:
+      lastCrawlTime = TimeBase.nowMs();
+      // fall through
+    default:
+      lastCrawlResult = result;
+      lastCrawlResultMsg = resultMsg;
+      break;
+    case Crawler.STATUS_ACTIVE:
+      log.warning("Storing Active state", new Throwable());
+      break;
+    }
+    previousCrawlState = null;
     historyRepo.storeAuState(this);
   }
 
@@ -303,8 +345,8 @@ public class AuState implements LockssSerializable {
     sb.append("lastCrawlAttempt=");
     sb.append(new Date(lastCrawlAttempt));
     sb.append(", ");
-    sb.append("lastCrawlResultCode=");
-    sb.append(lastCrawlResultCode);
+    sb.append("lastCrawlResult=");
+    sb.append(lastCrawlResult);
     sb.append(", ");
     sb.append("lastTopLevelPoll=");
     sb.append(new Date(lastTopLevelPoll));

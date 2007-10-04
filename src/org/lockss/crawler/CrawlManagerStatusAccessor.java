@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerStatusAccessor.java,v 1.16 2007-10-01 08:22:22 tlipkis Exp $
+ * $Id: CrawlManagerStatusAccessor.java,v 1.17 2007-10-04 04:06:17 tlipkis Exp $
  */
 
 /*
@@ -269,7 +269,7 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
 	  case Crawler.STATUS_NO_PUB_PERMISSION:
 	  case Crawler.STATUS_PLUGIN_ERROR:
 	  case Crawler.STATUS_REPO_ERR:
-	    statusColRef = makeRef(status.getCrawlStatusString(),
+	    statusColRef = makeRef(status.getCrawlStatusMsg(),
 				   CRAWL_URLS_STATUS_ACCESSOR, key + ".error");
 	  }
 	}
@@ -289,7 +289,7 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
 //     row.put(SOURCES,
 // 	    (StringUtil.separatedString(status.getSources(), "\n")));
     if (statusColRef == null) {
-      statusColRef = makeRef(status.getCrawlStatusString(),
+      statusColRef = makeRef(status.getCrawlStatusMsg(),
 			     SINGLE_CRAWL_STATUS_ACCESSOR, key);
     }
     row.put(CRAWL_STATUS, statusColRef);

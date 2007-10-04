@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuState.java,v 1.9 2007-10-01 08:22:21 tlipkis Exp $
+ * $Id: TestAuState.java,v 1.10 2007-10-04 04:06:16 tlipkis Exp $
  */
 
 /*
@@ -35,6 +35,10 @@ package org.lockss.state;
 
 import java.util.*;
 import org.lockss.test.*;
+import org.lockss.daemon.*;
+import org.lockss.crawler.*;
+import org.lockss.plugin.*;
+import org.lockss.state.*;
 import org.lockss.util.TimeBase;
 
 public class TestAuState extends LockssTestCase {
@@ -54,15 +58,95 @@ public class TestAuState extends LockssTestCase {
     super.tearDown();
   }
 
-  public void testCrawlFinished() {
-    AuState auState = new AuState(mau, 123, -1, -1, -1, null, 1, -1.0, historyRepo);
-    assertEquals(123, auState.getLastCrawlTime());
+  int t1 = 456;
+  int t2 = 12000;
+  int t3 = 14000;
+  int t4 = 17000;
+
+  public void testCrawlStarted() throws Exception {
+    MyAuState aus = new MyAuState(mau, historyRepo);
+    assertEquals(-1, aus.getLastCrawlTime());
+    assertEquals(-1, aus.getLastCrawlAttempt());
+    assertEquals(-1, aus.getLastCrawlResult());
+    assertFalse(aus.isCrawlActive());
     assertNull(historyRepo.theAuState);
 
-    TimeBase.setSimulated(456);
-    auState.newCrawlFinished();
-    assertEquals(456, auState.getLastCrawlTime());
+    TimeBase.setSimulated(t1);
+    aus.newCrawlStarted();
+    // these should now reflect the previoud crawl, not the active one
+    assertEquals(-1, aus.getLastCrawlTime());
+    assertEquals(-1, aus.getLastCrawlAttempt());
+    assertEquals(-1, aus.getLastCrawlResult());
+    assertTrue(aus.isCrawlActive());
     assertNotNull(historyRepo.theAuState);
+
+    TimeBase.setSimulated(t2);
+    aus.newCrawlFinished(Crawler.STATUS_ERROR, "Plorg");
+    assertEquals(-1, aus.getLastCrawlTime());
+    assertEquals(t1, aus.getLastCrawlAttempt());
+    assertEquals(Crawler.STATUS_ERROR, aus.getLastCrawlResult());
+    assertEquals("Plorg", aus.getLastCrawlResultMsg());
+    assertFalse(aus.isCrawlActive());
+
+    TimeBase.setSimulated(t3);
+    aus.newCrawlFinished(Crawler.STATUS_SUCCESSFUL, "Syrah");
+    assertEquals(t3, aus.getLastCrawlTime());
+    assertEquals(t1, aus.getLastCrawlAttempt());
+    assertEquals(Crawler.STATUS_SUCCESSFUL, aus.getLastCrawlResult());
+    assertEquals("Syrah", aus.getLastCrawlResultMsg());
+    assertFalse(aus.isCrawlActive());
+
+    aus = aus.simulateStoreLoad();
+    assertEquals(t3, aus.getLastCrawlTime());
+    assertEquals(t1, aus.getLastCrawlAttempt());
+    assertEquals(Crawler.STATUS_SUCCESSFUL, aus.getLastCrawlResult());
+    assertEquals("Syrah", aus.getLastCrawlResultMsg());
+    assertFalse(aus.isCrawlActive());
+
+    TimeBase.setSimulated(t4);
+    aus.newCrawlStarted();
+    assertEquals(t3, aus.getLastCrawlTime());
+    assertEquals(t1, aus.getLastCrawlAttempt());
+    assertEquals(Crawler.STATUS_SUCCESSFUL, aus.getLastCrawlResult());
+    assertEquals("Syrah", aus.getLastCrawlResultMsg());
+
+  }
+
+  public void testDaemonCrashedDuringCrawl() throws Exception {
+    MyAuState aus = new MyAuState(mau, historyRepo);
+    assertEquals(-1, aus.getLastCrawlTime());
+    assertEquals(-1, aus.getLastCrawlAttempt());
+    assertEquals(-1, aus.getLastCrawlResult());
+    assertFalse(aus.isCrawlActive());
+    assertNull(historyRepo.theAuState);
+
+    TimeBase.setSimulated(t1);
+    aus.newCrawlStarted();
+    // these should now reflect the previoud crawl, not the active one
+    assertEquals(-1, aus.getLastCrawlTime());
+    assertEquals(-1, aus.getLastCrawlAttempt());
+    assertEquals(-1, aus.getLastCrawlResult());
+    assertTrue(aus.isCrawlActive());
+    assertNotNull(historyRepo.theAuState);
+
+    TimeBase.setSimulated(t2);
+    aus = aus.simulateStoreLoad();
+    assertEquals(-1, aus.getLastCrawlTime());
+    assertEquals(t1, aus.getLastCrawlAttempt());
+    assertEquals(Crawler.STATUS_RUNNING_AT_CRASH, aus.getLastCrawlResult());
+    assertFalse(aus.isCrawlActive());
+
+    TimeBase.setSimulated(t3);
+    aus.newCrawlStarted();
+    assertEquals(-1, aus.getLastCrawlTime());
+    assertEquals(t1, aus.getLastCrawlAttempt());
+    assertEquals(Crawler.STATUS_RUNNING_AT_CRASH, aus.getLastCrawlResult());
+
+    TimeBase.setSimulated(t4);
+    aus.newCrawlFinished(Crawler.STATUS_SUCCESSFUL, "Plorg");
+    assertEquals(t4, aus.getLastCrawlTime());
+    assertEquals(t3, aus.getLastCrawlAttempt());
+    assertEquals(Crawler.STATUS_SUCCESSFUL, aus.getLastCrawlResult());
   }
 
   public void testPollFinished() {
@@ -99,8 +183,7 @@ public class TestAuState extends LockssTestCase {
   }
 
   public void testUpdateUrls() {
-    AuState auState =
-      new AuState(mau, -1, -1, -1, 123, new HashSet(), 1, -1.0, historyRepo);
+    AuState auState = new AuState(mau, historyRepo);
     assertNull(historyRepo.theAuState);
 
     Collection col = auState.getCrawlUrls();
@@ -125,8 +208,7 @@ public class TestAuState extends LockssTestCase {
   }
 
   public void testForceUpdateUrls() {
-    AuState auState =
-      new AuState(mau, -1, -1, -1, 123, new HashSet(), 1, -1.0, historyRepo);
+    AuState auState = new AuState(mau, historyRepo);
     assertNull(historyRepo.theAuState);
 
     Collection col = auState.getCrawlUrls();
@@ -166,4 +248,15 @@ public class TestAuState extends LockssTestCase {
     junit.swingui.TestRunner.main(testCaseList);
   }
 
+
+  static class MyAuState extends AuState implements Cloneable {
+    public MyAuState(ArchivalUnit au, HistoryRepository historyRepo) {
+      super(au, historyRepo);
+    }
+    MyAuState simulateStoreLoad() throws CloneNotSupportedException {
+      MyAuState ret = (MyAuState)this.clone();
+      ret.previousCrawlState = null;
+      return ret;
+    }
+  }
 }

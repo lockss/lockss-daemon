@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerManager.java,v 1.12 2007-08-15 07:10:42 tlipkis Exp $
+ * $Id: NodeManagerManager.java,v 1.13 2007-10-04 04:06:17 tlipkis Exp $
  */
 
 /*
@@ -156,7 +156,7 @@ public class NodeManagerManager
     for (Iterator iter = getDaemon().getAllNodeManagers().iterator();
 	 iter.hasNext(); ) {
       NodeManager manager = (NodeManager)iter.next();
-      if (manager.getAuState().au.getAuId().equals(key)) {
+      if (manager.getAuState().getArchivalUnit().getAuId().equals(key)) {
         return (NodeManagerImpl)manager;
       }
     }

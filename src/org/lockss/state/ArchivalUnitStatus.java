@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.61 2007-10-03 00:35:52 smorabito Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.62 2007-10-04 04:06:17 tlipkis Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import org.lockss.daemon.status.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
 import org.lockss.app.*;
+import org.lockss.crawler.*;
 import org.lockss.poller.*;
 import org.lockss.poller.v3.*;
 import org.lockss.protocol.*;
@@ -137,6 +138,13 @@ public class ArchivalUnitStatus
 					    DEFAULT_INCLUDE_NEEDS_RECRAWL);
   }
 
+  static CrawlManagerStatus getCMStatus(LockssDaemon daemon) {
+    CrawlManager crawlMgr = daemon.getCrawlManager();
+    CrawlManager.StatusSource source = crawlMgr.getStatusSource();
+    return source.getStatus();
+  }
+
+
   static class AuSummary implements StatusAccessor {
     static final String TABLE_TITLE = "Archival Units";
 
@@ -159,9 +167,9 @@ public class ArchivalUnitStatus
 			   FOOT_STATUS),
       new ColumnDescriptor("AuLastPoll", "Last Poll",
                            ColumnDescriptor.TYPE_DATE),
-      new ColumnDescriptor("AuLastCrawlAttempt", "Last Crawl Attempt",
+      new ColumnDescriptor("AuLastCrawlAttempt", "Last Crawl Start",
                            ColumnDescriptor.TYPE_DATE),
-      new ColumnDescriptor("AuLastCrawlResult", "Last Crawl Result",
+      new ColumnDescriptor("AuLastCrawlResultMsg", "Last Crawl Result",
                            ColumnDescriptor.TYPE_STRING),
       new ColumnDescriptor("AuLastCrawl", "Last Successful Crawl",
                            ColumnDescriptor.TYPE_DATE)
@@ -174,10 +182,12 @@ public class ArchivalUnitStatus
 
     private LockssDaemon theDaemon;
     private RepositoryManager repoMgr;
+    private CrawlManagerStatus cmStatus;
 
     AuSummary(LockssDaemon theDaemon) {
       this.theDaemon = theDaemon;
       repoMgr = theDaemon.getRepositoryManager();
+      cmStatus = getCMStatus(theDaemon);
     }
 
     public String getDisplayName() {
@@ -255,9 +265,12 @@ public class ArchivalUnitStatus
       }
       long lastCrawl = auState.getLastCrawlTime();
       long lastAttempt = auState.getLastCrawlAttempt();
-      long lastResultCode = auState.getLastCrawlResultCode();
-      String lastResult = auState.getLastCrawlResult();
+      long lastResultCode = auState.getLastCrawlResult();
+      String lastResult = auState.getLastCrawlResultMsg();
       rowMap.put("AuLastCrawl", new Long(lastCrawl));
+      // AuState files that show a successful crawl but no lastAttempt just
+      // have uninitialized lastXxx fields.  Display time and status of
+      // last successful instead
       if (lastCrawl > 0 && lastAttempt <= 0) {
 	lastAttempt = lastCrawl;
 	lastResultCode = Crawler.STATUS_SUCCESSFUL;
@@ -265,7 +278,7 @@ public class ArchivalUnitStatus
       }
       rowMap.put("AuLastCrawlAttempt", new Long(lastAttempt));
       if (lastResultCode > 0) {
-	rowMap.put("AuLastCrawlResult", lastResult);
+	rowMap.put("AuLastCrawlResultMsg", lastResult);
       }
       rowMap.put("Peers", PeerRepair.makeAuRef("peers", au.getAuId()));
       rowMap.put("AuLastPoll", new Long(auState.getLastTopLevelPollTime()));
@@ -281,14 +294,22 @@ public class ArchivalUnitStatus
         //      the method declaration for more information.  It should
         //      eventually be removed, but is harmless for now.
         if (auState.getV3Agreement() < 0 ||
-	    auState.getLastTopLevelPollTime() < 0) {
+	    auState.getLastTopLevelPollTime() <= 0) {
           if (auState.lastCrawlTime > 0 || AuUtil.isPubDown(au)) {
-            stat = "Waiting for Poll";
+	    if (cmStatus.isRunningNCCrawl(au)) {
+	      stat = "Crawling";
+	    } else {
+	      stat = "Waiting for Poll";
+	    }
 // 	    if (numPolls > 0) {
 // 	      stat = pollsRef(stat, au);
 // 	    }
           } else {
-            stat = "Waiting for Crawl";
+	    if (cmStatus.isRunningNCCrawl(au)) {
+	      stat = "Crawling";
+	    } else {
+	      stat = "Waiting for Crawl";
+	    }
           }
         } else {
           stat = doubleToPercent(auState.getV3Agreement()) + "% Agreement";
@@ -445,9 +466,11 @@ public class ArchivalUnitStatus
   abstract static class PerAuTable implements StatusAccessor {
 
     protected LockssDaemon theDaemon;
+    protected CrawlManagerStatus cmStatus;
 
     PerAuTable(LockssDaemon theDaemon) {
       this.theDaemon = theDaemon;
+      cmStatus = getCMStatus(theDaemon);
     }
 
     public boolean requiresKey() {
@@ -737,18 +760,37 @@ public class ArchivalUnitStatus
 // 	    res.add(new StatusTable.SummaryInfo("Polling Protocol Version",
 // 						ColumnDescriptor.TYPE_INT,
 // 						new Integer(AuUtil.getProtocolVersion(au))));
-            res.add(new StatusTable.SummaryInfo("Last Crawl Time",
-						ColumnDescriptor.TYPE_DATE,
-						new Long(state.getLastCrawlTime())));
-            res.add(new StatusTable.SummaryInfo("Last Top-level Poll",
-						ColumnDescriptor.TYPE_DATE,
-						new Long(state.getLastTopLevelPollTime())));
-            res.add(new StatusTable.SummaryInfo(null,
-						ColumnDescriptor.TYPE_STRING,
-						urlListLink));
-//             res.add(new StatusTable.SummaryInfo("Current Activity",
-// 						ColumnDescriptor.TYPE_STRING,
-// 						"-"));
+
+      long lastAttempt = state.getLastCrawlAttempt();
+      long lastCrawl = state.getLastCrawlTime();
+      res.add(new StatusTable.SummaryInfo("Last Completed Crawl",
+					  ColumnDescriptor.TYPE_DATE,
+					  new Long(state.getLastCrawlTime())));
+      if (lastAttempt > 0) {
+	res.add(new StatusTable.SummaryInfo("Last Crawl",
+					    ColumnDescriptor.TYPE_DATE,
+					    new Long(lastAttempt)));
+	res.add(new StatusTable.SummaryInfo("Last Crawl Result",
+					    ColumnDescriptor.TYPE_STRING,
+					    state.getLastCrawlResultMsg()));
+      }
+      res.add(new StatusTable.SummaryInfo("Last Poll",
+					  ColumnDescriptor.TYPE_DATE,
+					  new Long(state.getLastTopLevelPollTime())));
+      boolean isCrawling = cmStatus.isRunningNCCrawl(au);
+      boolean isPolling = false;
+      List lst = new ArrayList();
+      if (isCrawling) {
+	lst.add(makeCrawlRef("Crawling", au));
+      }
+      if (isPolling) {
+	lst.add(makePollRef("Polling", au));
+      }
+      if (!lst.isEmpty()) {
+	res.add(new StatusTable.SummaryInfo("Current Activity",
+					    ColumnDescriptor.TYPE_STRING,
+					    lst));
+      }
       if (theDaemon.isDetectClockssSubscription()) {
 	String subStatus =
 	  AuUtil.getAuState(au).getClockssSubscriptionStatusString();
@@ -757,6 +799,15 @@ public class ArchivalUnitStatus
 					    ColumnDescriptor.TYPE_STRING,
 					    subStatus));
       }
+      Object peers = PeerRepair.makeAuRef("Repair candidates",
+					      au.getAuId());
+      res.add(new StatusTable.SummaryInfo(null,
+					  ColumnDescriptor.TYPE_STRING,
+					  peers));
+
+      res.add(new StatusTable.SummaryInfo(null,
+					  ColumnDescriptor.TYPE_STRING,
+					  urlListLink));
       return res;
     }
 
@@ -1036,9 +1087,9 @@ public class ArchivalUnitStatus
 
     // utility method for making a Reference
     public static StatusTable.Reference makeAuRef(Object value,
-                                                  String key) {
+						  String key) {
       return new StatusTable.Reference(value, PEERS_REPAIR_TABLE_NAME,
-                                       key);
+				       key);
     }
   }
 
@@ -1096,4 +1147,19 @@ public class ArchivalUnitStatus
 				       SERVICE_STATUS_TABLE_NAME);
     }
   }
+
+  public static StatusTable.Reference makeCrawlRef(Object value,
+						   ArchivalUnit au) {
+    return new StatusTable.Reference(value,
+				     CrawlManagerImpl.CRAWL_STATUS_TABLE_NAME,
+				     au.getAuId());
+  }
+
+  public static StatusTable.Reference makePollRef(Object value,
+						   ArchivalUnit au) {
+    return new StatusTable.Reference(value,
+				     V3PollStatus.POLLER_STATUS_TABLE_NAME,
+				     au.getAuId());
+  }
+
 }

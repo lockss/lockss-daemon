@@ -1,5 +1,5 @@
 /*
- * $Id: MockPermissionHelper.java,v 1.4 2007-10-01 08:22:21 tlipkis Exp $
+ * $Id: MockPermissionHelper.java,v 1.5 2007-10-04 04:06:16 tlipkis Exp $
  */
 
 /*
@@ -41,7 +41,11 @@ import org.lockss.plugin.*;
 
 public class MockPermissionHelper implements PermissionHelper {
 
-    public UrlCacher makeUrlCacher(String url) {
+  public ArchivalUnit getAu() {
+    throw new UnsupportedOperationException("not implemented");
+  }
+
+  public UrlCacher makeUrlCacher(String url) {
     throw new UnsupportedOperationException("not implemented");
   }
 

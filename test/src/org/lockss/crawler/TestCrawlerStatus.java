@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlerStatus.java,v 1.3 2007-10-01 08:22:21 tlipkis Exp $
+ * $Id: TestCrawlerStatus.java,v 1.4 2007-10-04 04:06:16 tlipkis Exp $
  */
 
 /*
@@ -75,17 +75,30 @@ public class TestCrawlerStatus extends LockssTestCase {
 
   public void testGetDefaultMessage() {
     CrawlerStatus c1 = new CrawlerStatus(mau, null, "Type 42");
-    assertEquals("Unknown", c1.getDefaultMessage(Crawler.STATUS_UNKNOWN));
-    assertEquals("Pending", c1.getDefaultMessage(Crawler.STATUS_QUEUED));
-    assertEquals("Active", c1.getDefaultMessage(Crawler.STATUS_ACTIVE));
-    assertEquals("Successful", c1.getDefaultMessage(Crawler.STATUS_SUCCESSFUL));
-    assertEquals("Error", c1.getDefaultMessage(Crawler.STATUS_ERROR));
-    assertEquals("Aborted", c1.getDefaultMessage(Crawler.STATUS_ABORTED));
-    assertEquals("Crawl window closed", c1.getDefaultMessage(Crawler.STATUS_WINDOW_CLOSED));
-    assertEquals("Fetch error", c1.getDefaultMessage(Crawler.STATUS_FETCH_ERROR));
-    assertEquals("No permission from publisher", c1.getDefaultMessage(Crawler.STATUS_NO_PUB_PERMISSION));
-    assertEquals("Plugin error", c1.getDefaultMessage(Crawler.STATUS_PLUGIN_ERROR));
-    assertEquals("Repository error", c1.getDefaultMessage(Crawler.STATUS_REPO_ERR));
+    assertEquals("Unknown",
+		 c1.getDefaultMessage(Crawler.STATUS_UNKNOWN));
+    assertEquals("Pending",
+		 c1.getDefaultMessage(Crawler.STATUS_QUEUED));
+    assertEquals("Active",
+		 c1.getDefaultMessage(Crawler.STATUS_ACTIVE));
+    assertEquals("Successful",
+		 c1.getDefaultMessage(Crawler.STATUS_SUCCESSFUL));
+    assertEquals("Error",
+		 c1.getDefaultMessage(Crawler.STATUS_ERROR));
+    assertEquals("Aborted",
+		 c1.getDefaultMessage(Crawler.STATUS_ABORTED));
+    assertEquals("Interrupted by crawl window",
+		 c1.getDefaultMessage(Crawler.STATUS_WINDOW_CLOSED));
+    assertEquals("Fetch error",
+		 c1.getDefaultMessage(Crawler.STATUS_FETCH_ERROR));
+    assertEquals("No permission from publisher",
+		 c1.getDefaultMessage(Crawler.STATUS_NO_PUB_PERMISSION));
+    assertEquals("Plugin error",
+		 c1.getDefaultMessage(Crawler.STATUS_PLUGIN_ERROR));
+    assertEquals("Repository error",
+		 c1.getDefaultMessage(Crawler.STATUS_REPO_ERR));
+    assertEquals("Interrupted by daemon exit",
+		 c1.getDefaultMessage(Crawler.STATUS_RUNNING_AT_CRASH));
   }
 
   public void testGetCrawlStatus() {
@@ -93,15 +106,48 @@ public class TestCrawlerStatus extends LockssTestCase {
     assertTrue(c1.isCrawlWaiting());
     assertFalse(c1.isCrawlActive());
     assertFalse(c1.isCrawlError());
-    assertEquals("Pending", c1.getCrawlStatusString());
+    assertEquals("Pending", c1.getCrawlStatusMsg());
+    assertEquals("Pending", c1.getCrawlErrorMsg());
     c1.signalCrawlStarted();
     assertFalse(c1.isCrawlWaiting());
     assertTrue(c1.isCrawlActive());
     assertFalse(c1.isCrawlError());
-    assertEquals("Active", c1.getCrawlStatusString());
+    assertEquals("Active", c1.getCrawlStatusMsg());
+    assertEquals("Active", c1.getCrawlErrorMsg());
     c1.signalCrawlEnded();
+    assertFalse(c1.isCrawlWaiting());
+    assertFalse(c1.isCrawlActive());
     assertFalse(c1.isCrawlError());
-    assertEquals("Successful", c1.getCrawlStatusString());
+    assertEquals("Successful", c1.getCrawlStatusMsg());
+    assertEquals("Successful", c1.getCrawlErrorMsg());
+  }
+
+  public void testGetCrawlStatusError() {
+    CrawlerStatus c1 = new CrawlerStatus(mau, null, "Type 42");
+    assertTrue(c1.isCrawlWaiting());
+    assertFalse(c1.isCrawlActive());
+    assertFalse(c1.isCrawlError());
+    assertEquals("Pending", c1.getCrawlStatusMsg());
+    c1.signalCrawlStarted();
+    assertFalse(c1.isCrawlWaiting());
+    assertTrue(c1.isCrawlActive());
+    assertFalse(c1.isCrawlError());
+    assertEquals("Active", c1.getCrawlStatusMsg());
+    assertEquals("Active", c1.getCrawlErrorMsg());
+    // code sets error as soon as one happens, crawl must still appear
+    // active
+    c1.setCrawlStatus(Crawler.STATUS_NO_PUB_PERMISSION);
+    assertFalse(c1.isCrawlWaiting());
+    assertTrue(c1.isCrawlActive());
+    assertTrue(c1.isCrawlError());
+    assertEquals("Active", c1.getCrawlStatusMsg());
+    assertEquals("No permission from publisher", c1.getCrawlErrorMsg());
+    c1.signalCrawlEnded();
+    assertFalse(c1.isCrawlWaiting());
+    assertFalse(c1.isCrawlActive());
+    assertTrue(c1.isCrawlError());
+    assertEquals("No permission from publisher", c1.getCrawlStatusMsg());
+    assertEquals("No permission from publisher", c1.getCrawlErrorMsg());
   }
 
   void setRecord(String types) {

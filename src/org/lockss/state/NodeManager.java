@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManager.java,v 1.32 2006-03-01 02:50:13 smorabito Exp $
+ * $Id: NodeManager.java,v 1.33 2007-10-04 04:06:17 tlipkis Exp $
  */
 
 /*
@@ -86,6 +86,11 @@ public interface NodeManager extends LockssAuManager {
    * Alerts the NodeManager that a new top-level content crawl has finished.
    */
   public void newContentCrawlFinished();
+
+  /**
+   * Alerts the NodeManager that a new top-level content crawl has finished.
+   */
+  public void newContentCrawlFinished(int result, String msg);
 
   /**
    * Alerts the NodeManager that a hash finished on a specific

@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.79 2007-08-23 06:21:11 tlipkis Exp $
+ * $Id: StringUtil.java,v 1.80 2007-10-04 04:06:16 tlipkis Exp $
  */
 
 /*
@@ -99,6 +99,15 @@ public class StringUtil {
       }
       return sb.toString();
     }
+  }
+
+  /**
+   * Concatenate elements of collection into string, separated by commas
+   * @param c - Collection of object (on which toString() will be called)
+   * @return Concatenated string
+   */
+  public static String separatedString(Collection c) {
+    return separatedString(c, ", ");
   }
 
   /**

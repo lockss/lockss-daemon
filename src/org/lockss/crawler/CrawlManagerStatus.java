@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerStatus.java,v 1.35 2007-10-01 08:22:22 tlipkis Exp $
+ * $Id: CrawlManagerStatus.java,v 1.36 2007-10-04 04:06:17 tlipkis Exp $
  */
 
 /*
@@ -52,6 +52,7 @@ public class CrawlManagerStatus {
   private int ausWantCrawl;
   private int ausEligibleCrawl;
   private boolean isOdc = false;
+  private Collection runningNCCrawls = Collections.EMPTY_LIST;
 
   /** Create CrawlManagerStatus with specified fixed size history */
   public CrawlManagerStatus(int histSize) {
@@ -94,6 +95,14 @@ public class CrawlManagerStatus {
   /** Retrieve the CrawlerStatus object with the given key */
   public synchronized CrawlerStatus getCrawlerStatus(String key) {
     return (CrawlerStatus)statusMap.get(key);
+  }
+
+  public void setRunningNCCrawls(Collection coll) {
+    runningNCCrawls = coll;
+  }
+
+  public boolean isRunningNCCrawl(ArchivalUnit au) {
+    return runningNCCrawls.contains(au);
   }
 
   public void incrFinished(boolean success) {

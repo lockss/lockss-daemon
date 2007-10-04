@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.67 2007-08-23 06:21:11 tlipkis Exp $
+ * $Id: TestStringUtil.java,v 1.68 2007-10-04 04:06:16 tlipkis Exp $
  */
 
 /*
@@ -119,6 +119,8 @@ public class TestStringUtil extends LockssTestCase {
   }
 
   public void testSeparatedString() {
+    assertEquals("1, 2, 3",
+		 StringUtil.separatedString(ListUtil.list("1","2","3")));
     assertEquals("1,2,3",
 		 StringUtil.separatedString(ListUtil.list("1","2","3"), ","));
     assertEquals("'1','2','3'",

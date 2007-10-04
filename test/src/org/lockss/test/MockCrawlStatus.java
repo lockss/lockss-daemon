@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawlStatus.java,v 1.16 2007-10-01 08:22:21 tlipkis Exp $
+ * $Id: MockCrawlStatus.java,v 1.17 2007-10-04 04:06:16 tlipkis Exp $
  */
 
 /*
@@ -68,7 +68,7 @@ public class MockCrawlStatus extends CrawlerStatus {
     this.crawlStatusString = crawlStatusString;
   }
 
-  public String getCrawlStatusString() {
+  public String getCrawlStatusMsg() {
     return crawlStatusString;
   }
 

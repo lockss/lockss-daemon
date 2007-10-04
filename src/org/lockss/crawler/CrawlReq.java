@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlReq.java,v 1.1 2007-10-01 08:22:22 tlipkis Exp $
+ * $Id: CrawlReq.java,v 1.2 2007-10-04 04:06:17 tlipkis Exp $
  */
 
 /*
@@ -113,6 +113,6 @@ public class CrawlReq {
   }
 
   public String toString() {
-    return "[CrawlReq: " + au + "]";
+    return "[CrawlReq: " + au + ", pri: " + priority + ", cb: " + cb + "]";
   }
 }

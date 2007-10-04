@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManager.java,v 1.32 2007-10-01 08:22:22 tlipkis Exp $
+ * $Id: CrawlManager.java,v 1.33 2007-10-04 04:06:17 tlipkis Exp $
  */
 
 /*
@@ -74,6 +74,9 @@ public interface CrawlManager {
 
   /** Return true if the periodic crawl starter is running */
   public boolean isCrawlStarterEnabled();
+
+  /** Return the StatusSource */
+  public StatusSource getStatusSource();
 
   public interface Callback {
     /**

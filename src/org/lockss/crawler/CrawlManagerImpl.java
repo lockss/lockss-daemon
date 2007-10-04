@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.113 2007-10-01 08:22:22 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.114 2007-10-04 04:06:17 tlipkis Exp $
  */
 
 /*
@@ -219,7 +219,10 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 
   //Tracking crawls for the status info
   private CrawlManagerStatus cmStatus;
+  // Map AU to all active crawlers (new content and repair)
   private MultiMap runningCrawls = new MultiValueMap();
+  // AUs running new content crawls
+  private Set runningNCCrawls = new HashSet();
   protected Bag runningRateKeys = new HashBag();
 
   private long contentCrawlExpiration;
@@ -465,7 +468,10 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   private void addToRunningCrawls(ArchivalUnit au, Crawler crawler) {
     synchronized (runningCrawls) {
       runningCrawls.put(au, crawler);
-      
+      if (crawler.isWholeAU()) {
+	runningNCCrawls.add(au);
+	cmStatus.setRunningNCCrawls(new ArrayList(runningNCCrawls));
+      }      
       Object key = au.getFetchRateLimiterKey();
       if (key != null) {
 	runningRateKeys.add(key);
@@ -479,6 +485,10 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       ArchivalUnit au = crawler.getAu();
       synchronized (runningCrawls) {
 	runningCrawls.remove(au, crawler);
+	if (crawler.isWholeAU()) {
+	  runningNCCrawls.remove(au);
+	  cmStatus.setRunningNCCrawls(new ArrayList(runningNCCrawls));
+	}      
 	Object key = au.getFetchRateLimiterKey();
 	if (key != null) {
 	  runningRateKeys.remove(key);
@@ -489,12 +499,11 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   }
 
   void cancelAuCrawls(ArchivalUnit au) {
+    highPriorityCrawlRequests.remove(au);
     synchronized(runningCrawls) {
-      Collection crawls = (Collection) runningCrawls.get(au);
+      Collection<Crawler> crawls = (Collection) runningCrawls.get(au);
       if (crawls != null) {
-	Iterator it = crawls.iterator();
-	while (it.hasNext()) {
-	  Crawler crawler = (Crawler)it.next();
+	for (Crawler crawler : crawls) {
 	  crawler.abortCrawl();
 	}
       }
@@ -637,18 +646,15 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     return au.makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(url));
   }
 
-  public boolean isEligibleForNewContentCrawl(ArchivalUnit au) {
+  private boolean isRunningNCCrawl(ArchivalUnit au) {
     synchronized (runningCrawls) {
-      Collection<Crawler> aucrawls =
-	(Collection<Crawler>)runningCrawls.get(au);
-      if (aucrawls != null) {
-	for (Crawler crawler : (Collection<Crawler>)runningCrawls.get(au)) {
-	  if (crawler.isWholeAU()) {
-	    logger.debug3("Already crawling " + au + " in " + crawler);
-	    return false;
-	  }
-	}
-      }
+      return runningNCCrawls.contains(au);
+    }
+  }
+
+  public boolean isEligibleForNewContentCrawl(ArchivalUnit au) {
+    if (isRunningNCCrawl(au)) {
+      return false;
     }
     if (au instanceof ExplodedArchivalUnit) {
       logger.debug("Can't crawl ExplodedArchivalUnit");
@@ -1198,8 +1204,8 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   void enqueueHighPriorityCrawl(CrawlReq req) {
     logger.debug("enqueueHighPriorityCrawl(" + req.au + ")");
     highPriorityCrawlRequests.put(req.au, req);
-    startOneWait.expire();
     timeToRebuildCrawlQueue.expire();
+    startOneWait.expire();
   }
 
   public void rebuildQueueSoon() {
@@ -1207,14 +1213,17 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     if (!timeToRebuildCrawlQueue.expired()) {
       timeToRebuildCrawlQueue.expireIn(paramQueueRecalcAfterNewAu);
     }
+    if (!startOneWait.expired()) {
+      startOneWait.expireIn(paramQueueRecalcAfterNewAu);
+    }
   }
 
   void rebuildCrawlQueue() {
+    timeToRebuildCrawlQueue.expireIn(paramRebuildCrawlQueueInterval);
     long startTime = TimeBase.nowMs();
     rebuildCrawlQueue0();
     logger.debug("rebuildCrawlQueue(): "+
 		 (TimeBase.nowMs() - startTime)+"ms");
-    timeToRebuildCrawlQueue.expireIn(paramRebuildCrawlQueueInterval);
   }
 
   void rebuildCrawlQueue0() {
@@ -1225,7 +1234,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       sharedRateReqs.clear();
       for (ArchivalUnit au : (pluginMgr.areAusStarted()
 			      ? pluginMgr.getAllAus()
-			      : pluginMgr.getAllRegistryAus())) {
+			      : highPriorityCrawlRequests.keySet())) {
 
 	CrawlReq req = highPriorityCrawlRequests.get(au);
 	if ((req != null || shouldCrawlForNewContent(au))) {
@@ -1269,8 +1278,8 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 	.append(-r1.priority, -r2.priority)
 	.append(!(au1 instanceof RegistryArchivalUnit),
 		!(au2 instanceof RegistryArchivalUnit))
-	.append(windowOrder(aus1.getLastCrawlResultCode()),
-		windowOrder(aus2.getLastCrawlResultCode()))
+	.append(windowOrder(aus1.getLastCrawlResult()),
+		windowOrder(aus2.getLastCrawlResult()))
 	.append(aus1.getLastCrawlAttempt(), aus2.getLastCrawlAttempt())
 	.append(aus1.getLastCrawlTime(), aus2.getLastCrawlTime())
 // 	.append(au1.toString(), au2.toString())
@@ -1294,10 +1303,12 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       }
     }
     cmStatus.setNextCrawlStarter(startOneWait);
-    try {
-      startOneWait.sleep();
-    } catch (InterruptedException e) {
-      // just wakeup and check
+    while (!startOneWait.expired()) {
+      try {
+	startOneWait.sleep();
+      } catch (InterruptedException e) {
+	// just wakeup and check
+      }
     }
     return false;
   }
@@ -1396,6 +1407,11 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 					    CrawlerStatus status) {
       callCallback(cb, cookie, false, null);
     }
+  }
+
+  /** Return the StatusSource */
+  public StatusSource getStatusSource() {
+    return this;
   }
 
   //CrawlManager.StatusSource methods

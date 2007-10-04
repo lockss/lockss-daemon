@@ -1,5 +1,5 @@
 /*
- * $Id: MockAuState.java,v 1.17 2007-10-01 08:22:21 tlipkis Exp $
+ * $Id: MockAuState.java,v 1.18 2007-10-04 04:06:16 tlipkis Exp $
  */
 
 /*
@@ -94,8 +94,13 @@ public class MockAuState extends AuState {
     this.lastCrawlAttempt = lastCrawlAttempt;
   }
 
-  public void newCrawlFinished() {
-    super.newCrawlFinished();
+  public void newCrawlFinished(int result, String resultMsg) {
+    super.newCrawlFinished(result, resultMsg);
+  }
+
+  public void setLastCrawlResult(int result, String resultMsg) {
+    lastCrawlResult = result;
+    lastCrawlResultMsg = resultMsg;
   }
 
   public HashSet getCrawlUrls() {

@@ -1,5 +1,5 @@
 /*
- * $Id: Crawler.java,v 1.51 2007-10-01 08:22:22 tlipkis Exp $
+ * $Id: Crawler.java,v 1.52 2007-10-04 04:06:17 tlipkis Exp $
  */
 
 /*
@@ -69,6 +69,7 @@ public interface Crawler {
   public static final int STATUS_NO_PUB_PERMISSION = 8;
   public static final int STATUS_PLUGIN_ERROR = 9;
   public static final int STATUS_REPO_ERR = 10;
+  public static final int STATUS_RUNNING_AT_CRASH = 11;
 
   /**
    * Initiate a crawl starting with all the urls in urls
@@ -118,6 +119,9 @@ public interface Crawler {
    *
    */
   public static interface PermissionHelper {
+
+    public ArchivalUnit getAu();
+
     /**
      * Generate a URL cacher  for the given URL
      * @param url

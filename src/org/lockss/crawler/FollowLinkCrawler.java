@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.65 2007-10-01 08:22:22 tlipkis Exp $
+ * $Id: FollowLinkCrawler.java,v 1.66 2007-10-04 04:06:17 tlipkis Exp $
  */
 
 /*
@@ -276,7 +276,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 
     if (crawlStatus.isCrawlError()) {
       logger.info("Unfinished crawl of " + au.getName() + ", " +
-		  crawlStatus.getCrawlStatusString());
+		  crawlStatus.getCrawlErrorMsg());
     } else {
       logger.info("Finished crawl of "+au.getName());
     }

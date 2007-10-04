@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawler.java,v 1.27 2007-10-01 08:22:22 tlipkis Exp $
+ * $Id: BaseCrawler.java,v 1.28 2007-10-04 04:06:17 tlipkis Exp $
  */
 
 /*
@@ -229,7 +229,7 @@ public abstract class BaseCrawler
    */
   public boolean doCrawl() {
     if (isWholeAU()) {
-      aus.newCrawlAttempted();
+      aus.newCrawlStarted();
     }
     setCrawlConfig(ConfigManager.getCurrentConfig());
     // do this even if already aborted, so status doesn't get confused
@@ -241,18 +241,22 @@ public abstract class BaseCrawler
       }
       logger.info("Beginning crawl of "+au);
       boolean res = doCrawl0();
-      if (res == false || crawlStatus.isCrawlError()) {
+      if (!res && !crawlStatus.isCrawlError()) {
+	crawlStatus.setCrawlStatus(Crawler.STATUS_ERROR);
+      }
+      if (crawlStatus.isCrawlError()) {
 	alertMgr.raiseAlert(Alert.auAlert(Alert.CRAWL_FAILED, au),
 			    getTypeString() + " Crawl failed: " +
-			    crawlStatus.getCrawlStatusString());
+			    crawlStatus.getCrawlErrorMsg());
       }
       if (isWholeAU()) {
-	aus.setLastCrawlResult(crawlStatus.getCrawlStatus(),
-			       crawlStatus.getCrawlStatusString());
+	NodeManager nodeManager = getDaemon().getNodeManager(au);
 	if (res) {
-	  NodeManager nodeManager = getDaemon().getNodeManager(au);
-	  nodeManager.newContentCrawlFinished();
-	}
+	  nodeManager.newContentCrawlFinished(Crawler.STATUS_SUCCESSFUL, null);
+	  } else {
+	    nodeManager.newContentCrawlFinished(crawlStatus.getCrawlStatus(),
+					      crawlStatus.getCrawlErrorMsg());
+	}	  
       }
       return res;
     } catch (RuntimeException e) {
@@ -260,6 +264,11 @@ public abstract class BaseCrawler
       alertMgr.raiseAlert(Alert.auAlert(Alert.CRAWL_FAILED, au),
 			  "Crawl of " + au.getName() +
 			  "threw " + e.getMessage());
+      if (isWholeAU()) {
+	NodeManager nodeManager = getDaemon().getNodeManager(au);
+	nodeManager.newContentCrawlFinished(Crawler.STATUS_ABORTED,
+					    e.getMessage());
+      }
       throw e;
     } finally {
       crawlStatus.signalCrawlEnded();

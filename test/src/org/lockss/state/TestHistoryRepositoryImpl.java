@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.65 2007-10-01 08:22:21 tlipkis Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.66 2007-10-04 04:06:16 tlipkis Exp $
  */
 
 /*
@@ -296,7 +296,7 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
     HashSet strCol = new HashSet();
     strCol.add("test");
     AuState auState = new AuState(mau, 123000, 123123,
-				  "woop woop", 41,
+				  41, "woop woop",
 				  321000, 456000,
 				  strCol, 2, 1.0, repository);
     repository.storeAuState(auState);
@@ -314,8 +314,8 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
     assertEquals(123000, auState.getLastCrawlTime());
     assertEquals(123123, auState.getLastCrawlAttempt());
     assertEquals(321000, auState.getLastTopLevelPollTime());
-    assertEquals(41, auState.getLastCrawlResultCode());
-    assertEquals("woop woop", auState.getLastCrawlResult());
+    assertEquals(41, auState.getLastCrawlResult());
+    assertEquals("woop woop", auState.getLastCrawlResultMsg());
     assertEquals(2, auState.getClockssSubscriptionStatus());
     // doesn't store last treewalk time, so should reset to -1
     assertEquals(-1, auState.getLastTreeWalkTime());

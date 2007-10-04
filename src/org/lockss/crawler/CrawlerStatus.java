@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerStatus.java,v 1.4 2007-10-01 08:22:22 tlipkis Exp $
+ * $Id: CrawlerStatus.java,v 1.5 2007-10-04 04:06:17 tlipkis Exp $
  */
 
 /*
@@ -87,12 +87,15 @@ public class CrawlerStatus {
     DEFAULT_MESSAGES.put(Crawler.STATUS_SUCCESSFUL, "Successful");
     DEFAULT_MESSAGES.put(Crawler.STATUS_ERROR, "Error");
     DEFAULT_MESSAGES.put(Crawler.STATUS_ABORTED, "Aborted");
-    DEFAULT_MESSAGES.put(Crawler.STATUS_WINDOW_CLOSED, "Crawl window closed");
+    DEFAULT_MESSAGES.put(Crawler.STATUS_WINDOW_CLOSED,
+			 "Interrupted by crawl window");
     DEFAULT_MESSAGES.put(Crawler.STATUS_FETCH_ERROR, "Fetch error");
     DEFAULT_MESSAGES.put(Crawler.STATUS_NO_PUB_PERMISSION,
 			 "No permission from publisher");
     DEFAULT_MESSAGES.put(Crawler.STATUS_PLUGIN_ERROR, "Plugin error");
     DEFAULT_MESSAGES.put(Crawler.STATUS_REPO_ERR, "Repository error");
+    DEFAULT_MESSAGES.put(Crawler.STATUS_RUNNING_AT_CRASH,
+			 "Interrupted by daemon exit");
   }
 
   private static int ctr = 0;		// Instance counter (for getKey())
@@ -305,13 +308,20 @@ public class CrawlerStatus {
     return status;
   }
 
-  /** Return crawl status: Pending, Active, Successful, or error message */
-  public String getCrawlStatusString() {
-//     if (startTime == -1) {
+  /** Return current status of crawl.  If crawl is still running, this will
+   * be "Active" even if an error has occurred */
+  public String getCrawlStatusMsg() {
+    if (startTime != -1 && endTime == -1) {
+      return getDefaultMessage(Crawler.STATUS_ACTIVE);
+//     } else if (startTime == -1 && status != null) {
 //       return getDefaultMessage(Crawler.STATUS_QUEUED);
-//     } else if (endTime == -1) {
-//       return getDefaultMessage(Crawler.STATUS_ACTIVE);
-//     } else if (statusMessage != null) {
+    } else {
+      return getCrawlErrorMsg();
+    }
+  }
+
+  /** Return crawl error message, even if crawl is still running */
+  public String getCrawlErrorMsg() {
     if (statusMessage != null) {
       return statusMessage;
     } else {

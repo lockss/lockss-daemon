@@ -1,5 +1,5 @@
 /*
- * $Id: MockNodeManager.java,v 1.23 2006-11-30 04:34:07 smorabito Exp $
+ * $Id: MockNodeManager.java,v 1.24 2007-10-04 04:06:16 tlipkis Exp $
  */
 
 /*
@@ -136,7 +136,11 @@ public class MockNodeManager implements NodeManager {
   }
 
   public void newContentCrawlFinished() {
-    aus.newCrawlFinished();
+    aus.newCrawlFinished(Crawler.STATUS_SUCCESSFUL, null);
+  }
+
+  public void newContentCrawlFinished(int result, String msg) {
+    aus.newCrawlFinished(result, msg);
   }
 
   public void hashFinished(CachedUrlSet cus, long hashDuration) {
