@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerStatusAccessor.java,v 1.17 2007-10-04 04:06:17 tlipkis Exp $
+ * $Id: CrawlManagerStatusAccessor.java,v 1.18 2007-10-04 21:36:35 tlipkis Exp $
  */
 
 /*
@@ -390,7 +390,7 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
 	      pluginMgr.isInternalAu(crawlStat.getAu())) {
 	    continue;
 	  }
-	  if (crawlStat.getCrawlStatus() == Crawler.STATUS_ACTIVE) {
+	  if (crawlStat.isCrawlActive()) {
 	    active++;
 	  }
 	}
