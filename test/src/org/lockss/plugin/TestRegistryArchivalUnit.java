@@ -1,5 +1,5 @@
 /*
- * $Id: TestRegistryArchivalUnit.java,v 1.6 2007-10-03 00:35:53 smorabito Exp $
+ * $Id: TestRegistryArchivalUnit.java,v 1.7 2007-10-04 04:03:31 tlipkis Exp $
  */
 
 /*
@@ -81,20 +81,37 @@ public class TestRegistryArchivalUnit extends LockssTestCase {
     Properties props = new Properties();
     props.setProperty(RegistryArchivalUnit.PARAM_REGISTRY_CRAWL_INTERVAL,
 		      "107m");
-    props.setProperty(RegistryArchivalUnit.PARAM_REGISTRY_FETCH_RATE,
-		      "4/2s");
     ConfigurationUtil.setCurrentConfigFromProps(props);
     ArchivalUnit au = regPlugin.createAu(auConfig);
     TypedEntryMap paramMap = au.getProperties();
     assertEquals(107 * Constants.MINUTE,
 		 paramMap.getLong(ArchivalUnit.KEY_AU_NEW_CONTENT_CRAWL_INTERVAL));
+    assertEquals("org|lockss|plugin|TestRegistryArchivalUnit$MyRegistryPlugin&base_url~http%3A%2F%2Ffoo%2Ecom%2Fbar", au.getAuId());
+  }
+
+  public void testRateLimiter() throws Exception {
+    Configuration auConfig =
+      ConfigurationUtil.fromArgs(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
+    ArchivalUnit au = regPlugin.createAu(auConfig);
+    // default limiter source is au, which is null key
+    assertEquals(null, au.getFetchRateLimiterKey());
+
+    Properties props = new Properties();
+    props.setProperty(RegistryArchivalUnit.PARAM_REGISTRY_FETCH_RATE,
+		      "4/2s");
+    props.setProperty(RegistryArchivalUnit.PARAM_REGISTRY_FETCH_RATE_LIMITER_SOURCE,
+		      "au");
+    ConfigurationUtil.setCurrentConfigFromProps(props);
     RateLimiter limiter = au.findFetchRateLimiter();
     assertEquals("4/2s", limiter.getRate());
-    assertEquals("org|lockss|plugin|TestRegistryArchivalUnit$MyRegistryPlugin&base_url~http%3A%2F%2Ffoo%2Ecom%2Fbar", au.getAuId());
+    assertEquals(null, au.getFetchRateLimiterKey());
     props.setProperty(RegistryArchivalUnit.PARAM_REGISTRY_FETCH_RATE,
 		      "3/7s");
+    props.setProperty(RegistryArchivalUnit.PARAM_REGISTRY_FETCH_RATE_LIMITER_SOURCE,
+		      "plugin");
     ConfigurationUtil.setCurrentConfigFromProps(props);
     assertEquals("3/7s", au.findFetchRateLimiter().getRate());
+    assertSame(regPlugin, au.getFetchRateLimiterKey());
   }
 
   public void testShouldCallTopLevelPoll() throws Exception {

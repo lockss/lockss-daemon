@@ -1,5 +1,5 @@
 /*
- * $Id: RegistryArchivalUnit.java,v 1.22 2007-10-03 00:35:52 smorabito Exp $
+ * $Id: RegistryArchivalUnit.java,v 1.23 2007-10-04 04:03:32 tlipkis Exp $
  */
 
 /*
@@ -63,6 +63,13 @@ public class RegistryArchivalUnit extends BaseArchivalUnit {
   static final String PARAM_REGISTRY_CRAWL_INTERVAL =
     RegistryPlugin.PREFIX + "crawlInterval";
   static final long DEFAULT_REGISTRY_CRAWL_INTERVAL = Constants.DAY;
+
+  /** If "au", registry AUs will crawl in parallel using individual
+   * rate limiters; if "plugin" they'll crawl sequentially using a shared
+   * rate limiter */
+  static final String PARAM_REGISTRY_FETCH_RATE_LIMITER_SOURCE =
+    RegistryPlugin.PREFIX + "fetchRateLimiterSource";
+  static final String DEFAULT_REGISTRY_FETCH_RATE_LIMITER_SOURCE = "au";
 
   /** Limits fetch rate of registry crawls */
   static final String PARAM_REGISTRY_FETCH_RATE =
@@ -215,13 +222,24 @@ public class RegistryArchivalUnit extends BaseArchivalUnit {
     return super.makeUrlCacher(url);
   }
 
-  protected synchronized RateLimiter
-    recomputeFetchRateLimiter(RateLimiter oldLimiter) {
-    return
-      RateLimiter.getConfiguredRateLimiter(CurrentConfig.getCurrentConfig(),
-					   oldLimiter,
-					   PARAM_REGISTRY_FETCH_RATE,
-					   DEFAULT_REGISTRY_FETCH_RATE);
+  protected RateLimiter recomputeFetchRateLimiter(RateLimiter oldLimiter) {
+    String rate = CurrentConfig.getParam(PARAM_REGISTRY_FETCH_RATE,
+					 DEFAULT_REGISTRY_FETCH_RATE);
+    Object limiterKey = getFetchRateLimiterKey();
+
+    if (limiterKey == null) {
+      return RateLimiter.getRateLimiter(oldLimiter, rate,
+					DEFAULT_REGISTRY_FETCH_RATE);
+    } else {
+      RateLimiter.Pool pool = RateLimiter.getPool();
+      return pool.findNamedRateLimiter(limiterKey, rate,
+				       DEFAULT_REGISTRY_FETCH_RATE);
+    }
+  }
+
+  protected String getFetchRateLimiterSource() {
+    return CurrentConfig.getParam(PARAM_REGISTRY_FETCH_RATE_LIMITER_SOURCE,
+				  DEFAULT_REGISTRY_FETCH_RATE_LIMITER_SOURCE);
   }
 
   // Registry AU crawl rule implementation
