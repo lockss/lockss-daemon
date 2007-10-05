@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerStatusAccessor.java,v 1.12 2007-10-01 08:22:21 tlipkis Exp $
+ * $Id: TestCrawlManagerStatusAccessor.java,v 1.13 2007-10-05 23:31:10 tlipkis Exp $
  */
 
 /*
@@ -310,7 +310,7 @@ public class TestCrawlManagerStatusAccessor extends LockssTestCase {
       new CrawlManagerStatusAccessor.CrawlOverview(statusSource);
 
     MockCrawlStatus status = new MockCrawlStatus();
-    status.setCrawlStatus(Crawler.STATUS_ACTIVE);
+    status.signalCrawlStarted();
 
     MockCrawlStatus status2 = new MockCrawlStatus();
 
@@ -322,7 +322,7 @@ public class TestCrawlManagerStatusAccessor extends LockssTestCase {
     assertEquals("crawl_status_table", ref.getTableName());
     assertEquals("1 active crawl", ref.getValue());
 
-    status2.setCrawlStatus(Crawler.STATUS_ACTIVE);
+    status2.signalCrawlStarted();
     over = acc.getOverview("foo", new BitSet());
     lst = (List)over;
     ref = (StatusTable.Reference)lst.get(0);
