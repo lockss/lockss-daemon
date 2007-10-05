@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.114 2007-10-04 04:06:17 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.115 2007-10-05 06:41:50 tlipkis Exp $
  */
 
 /*
@@ -471,11 +471,11 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       if (crawler.isWholeAU()) {
 	runningNCCrawls.add(au);
 	cmStatus.setRunningNCCrawls(new ArrayList(runningNCCrawls));
+	Object key = au.getFetchRateLimiterKey();
+	if (key != null) {
+	  runningRateKeys.add(key);
+	}
       }      
-      Object key = au.getFetchRateLimiterKey();
-      if (key != null) {
-	runningRateKeys.add(key);
-      }
     }
     highPriorityCrawlRequests.remove(au);
   }
@@ -488,12 +488,12 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 	if (crawler.isWholeAU()) {
 	  runningNCCrawls.remove(au);
 	  cmStatus.setRunningNCCrawls(new ArrayList(runningNCCrawls));
+	  Object key = au.getFetchRateLimiterKey();
+	  if (key != null) {
+	    runningRateKeys.remove(key);
+	    startOneWait.expire();
+	  }
 	}      
-	Object key = au.getFetchRateLimiterKey();
-	if (key != null) {
-	  runningRateKeys.remove(key);
-	  startOneWait.expire();
-	}
       }
     }
   }
