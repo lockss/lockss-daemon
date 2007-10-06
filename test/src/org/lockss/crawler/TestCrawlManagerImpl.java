@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.71 2007-10-01 08:22:21 tlipkis Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.72 2007-10-06 02:45:33 tlipkis Exp $
  */
 
 /*
@@ -966,22 +966,15 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     }	   
 
     CrawlManagerImpl.CrawlPriorityComparator cmprtr() {
-      return new CrawlManagerImpl.CrawlPriorityComparator();
+      return crawlManager.cmprtr();
     }
 
     void assertCompareLess(CrawlReq r1, CrawlReq r2) {
-      assertTrue(cmprtr().compare(r1, r2) < 0);
+      assertTrue("Expected " + r1 + " less than " + r2 + " but wasn't",
+		 cmprtr().compare(r1, r2) < 0);
     }
 
-    public void testCrawlPriorityComparator() {
-      CrawlReq[] reqs = makeReqs(7);
-      setReq(reqs[0], 1, Crawler.STATUS_WINDOW_CLOSED, 9999, 9999);
-      setReq(reqs[1], 1, 0, 5000, 5000);
-      setReq(reqs[2], 0, Crawler.STATUS_WINDOW_CLOSED, -1, 2000);
-      setReq(reqs[3], 0, Crawler.STATUS_WINDOW_CLOSED, 1000, 1000);
-      setReq(reqs[4], 0, 0, -1, 1000);
-      setReq(reqs[5], 0, 0, 123, -1);
-      setReq(reqs[6], 0, 0, 123, 456);
+    public void testCrawlPriorityComparator(CrawlReq[] reqs) {
       for (int ix = 0; ix <= 5; ix++) {
 	assertCompareLess(reqs[ix], reqs[ix+1]);
       }
@@ -991,6 +984,36 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 	sorted.addAll(CollectionUtil.randomPermutation(lst)); 
 	assertIsomorphic(reqs, sorted);
       }
+    }
+
+    public void testCrawlPriorityComparator1() {
+      ConfigurationUtil.setFromArgs(CrawlManagerImpl.PARAM_RESTART_AFTER_CRASH,
+				    "true"); 
+      CrawlReq[] reqs = makeReqs(8);
+      setReq(reqs[0], 1, Crawler.STATUS_WINDOW_CLOSED, 9999, 9999);
+      setReq(reqs[1], 1, 0, 5000, 5000);
+      setReq(reqs[2], 0, Crawler.STATUS_WINDOW_CLOSED, -1, 2000);
+      setReq(reqs[3], 0, Crawler.STATUS_WINDOW_CLOSED, 1000, 1000);
+      setReq(reqs[4], 0, Crawler.STATUS_RUNNING_AT_CRASH, 1000, 1000);
+      setReq(reqs[5], 0, 0, -1, 500);
+      setReq(reqs[6], 0, 0, 123, -1);
+      setReq(reqs[7], 0, 0, 123, 456);
+      testCrawlPriorityComparator(reqs);
+    }
+
+    public void testCrawlPriorityComparator2() {
+      ConfigurationUtil.setFromArgs(CrawlManagerImpl.PARAM_RESTART_AFTER_CRASH,
+				    "false"); 
+      CrawlReq[] reqs = makeReqs(8);
+      setReq(reqs[0], 1, Crawler.STATUS_WINDOW_CLOSED, 9999, 9999);
+      setReq(reqs[1], 1, 0, 5000, 5000);
+      setReq(reqs[2], 0, Crawler.STATUS_WINDOW_CLOSED, -1, 2000);
+      setReq(reqs[3], 0, Crawler.STATUS_WINDOW_CLOSED, 1000, 1000);
+      setReq(reqs[4], 0, 0, -1, 500);
+      setReq(reqs[5], 0, 0, 123, -1);
+      setReq(reqs[6], 0, 0, 123, 456);
+      setReq(reqs[7], 0, Crawler.STATUS_RUNNING_AT_CRASH, 1000, 1000);
+      testCrawlPriorityComparator(reqs);
     }
 
     void registerAus(MockArchivalUnit[] aus) {
@@ -1396,6 +1419,10 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       if (crawler instanceof MockCrawler) {
 	((MockCrawler)crawler).setStartTime(TimeBase.nowMs());
       }
+    }
+
+    CrawlPriorityComparator cmprtr() {
+      return new CrawlPriorityComparator();
     }
 
   }

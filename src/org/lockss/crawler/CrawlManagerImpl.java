@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.115 2007-10-05 06:41:50 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.116 2007-10-06 02:45:33 tlipkis Exp $
  */
 
 /*
@@ -192,9 +192,15 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     PREFIX + "newContentStartRate";
   public static final String DEFAULT_NEW_CONTENT_START_RATE = "1/730";
 
+  /** Don't start crawl if window will close before this interval */
   public static final String PARAM_MIN_WINDOW_OPEN_FOR =
     PREFIX + "minWindowOpenFor";
   public static final long DEFAULT_MIN_WINDOW_OPEN_FOR = 15 * Constants.MINUTE;
+
+  /** If true, give priority to crawls that were running when daemon died */
+  public static final String PARAM_RESTART_AFTER_CRASH =
+  PREFIX + "restartAfterCrash";
+  public static final boolean DEFAULT_RESTART_AFTER_CRASH = true;
 
   /** Number of most recent crawls for which status will be available.
    * This must be larger than the thread pool + queue size or status table
@@ -240,6 +246,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   private long paramStartCrawlsInitialDelay =
     DEFAULT_START_CRAWLS_INITIAL_DELAY;
   private long paramMinWindowOpenFor = DEFAULT_MIN_WINDOW_OPEN_FOR;
+  private boolean paramRestartAfterCrash = DEFAULT_RESTART_AFTER_CRASH;
 
   private int histSize = DEFAULT_HISTORY_MAX;
 
@@ -400,6 +407,9 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       paramMinWindowOpenFor =
 	config.getTimeInterval(PARAM_MIN_WINDOW_OPEN_FOR,
 			       DEFAULT_MIN_WINDOW_OPEN_FOR);
+      paramRestartAfterCrash =
+	config.getBoolean(PARAM_RESTART_AFTER_CRASH,
+			  DEFAULT_RESTART_AFTER_CRASH);
       paramStartCrawlsInitialDelay =
 	config.getTimeInterval(PARAM_START_CRAWLS_INITIAL_DELAY,
 			       DEFAULT_START_CRAWLS_INITIAL_DELAY);
@@ -1266,7 +1276,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
    * <li>Least recent crawl success
    * </ol>
    */
-  static class CrawlPriorityComparator implements Comparator {
+  class CrawlPriorityComparator implements Comparator {
     public int compare(Object o1, Object o2) {
       CrawlReq r1 = (CrawlReq)o1;
       CrawlReq r2 = (CrawlReq)o2;
@@ -1278,8 +1288,8 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 	.append(-r1.priority, -r2.priority)
 	.append(!(au1 instanceof RegistryArchivalUnit),
 		!(au2 instanceof RegistryArchivalUnit))
-	.append(windowOrder(aus1.getLastCrawlResult()),
-		windowOrder(aus2.getLastCrawlResult()))
+	.append(previousResultOrder(aus1.getLastCrawlResult()),
+		previousResultOrder(aus2.getLastCrawlResult()))
 	.append(aus1.getLastCrawlAttempt(), aus2.getLastCrawlAttempt())
 	.append(aus1.getLastCrawlTime(), aus2.getLastCrawlTime())
 // 	.append(au1.toString(), au2.toString())
@@ -1287,8 +1297,15 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 	.toComparison();
     }
 
-    int windowOrder(int crawlResult) {
-      return crawlResult == Crawler.STATUS_WINDOW_CLOSED ? 0 : 1;
+    int previousResultOrder(int crawlResult) {
+      final int DEFAULT = 2;
+      switch (crawlResult) {
+      case Crawler.STATUS_WINDOW_CLOSED:
+	return 0;
+      case Crawler.STATUS_RUNNING_AT_CRASH: 
+	return paramRestartAfterCrash ? 1 : DEFAULT;
+      default: return DEFAULT;
+      }
     }
   }
 
