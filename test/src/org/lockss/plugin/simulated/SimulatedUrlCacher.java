@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedUrlCacher.java,v 1.22 2007-08-12 01:48:05 tlipkis Exp $
+ * $Id: SimulatedUrlCacher.java,v 1.23 2007-10-08 08:05:05 tlipkis Exp $
  */
 
 /*
@@ -77,14 +77,8 @@ public class SimulatedUrlCacher extends BaseUrlCacher {
     if (getUrl().indexOf("xxxfail") > 0) {
       throw new CacheException.NoRetryDeadLinkException("Simulated failed fetch");
     }
-    long lastCached = 0;
-    if (lastModified != null) {
-      try {
-	lastCached = GMT_DATE_FORMAT.parse(lastModified).getTime();
-      } catch (ParseException e) {}
-    }
     if (contentFile!=null) {
-      return getDefaultStream(contentFile, lastCached);
+      return getDefaultStream(contentFile, lastModified);
     }
     makeContentName();
     contentFile = new File(contentName);
@@ -92,21 +86,25 @@ public class SimulatedUrlCacher extends BaseUrlCacher {
       File dirContentFile = new File(
           SimulatedContentGenerator.getDirectoryContentFile(contentName));
       if (dirContentFile.exists()) {
-        return getDefaultStream(dirContentFile, lastCached);
+        return getDefaultStream(dirContentFile, lastModified);
       } else {
         logger.error("Couldn't find file: "+dirContentFile.getAbsolutePath());
         return null;
       }
     } else {
-      return getDefaultStream(contentFile, lastCached);
+      return getDefaultStream(contentFile, lastModified);
     }
   }
 
-  protected InputStream getDefaultStream(File file, long lastCached)
+  protected InputStream getDefaultStream(File file, String lastModified)
       throws IOException {
-    if ((file.lastModified() <= lastCached) && !toBeDamaged()) {
-      logger.debug2("Unmodified content not cached for url '"+origUrl+"'");
-      return null;
+    if (lastModified != null) {
+      try {
+	long lastCached = GMT_DATE_FORMAT.parse(lastModified).getTime();
+	if ((file.lastModified() <= lastCached) && !toBeDamaged()) {
+	  return null;
+	}
+      } catch (ParseException e) {}
     }
     return new SimulatedContentStream(new FileInputStream(file),toBeDamaged());
   }
