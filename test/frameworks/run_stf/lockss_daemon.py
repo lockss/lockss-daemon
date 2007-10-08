@@ -1691,7 +1691,7 @@ class LockssDaemon:
 
     def stop(self):
         if self.isRunning:
-            os.kill(self.pid, signal.SIGTERM)
+            os.kill(self.pid, signal.SIGKILL)
             self.isRunning = False
 
     def requestThreadDump(self):
