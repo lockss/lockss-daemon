@@ -1,5 +1,5 @@
 /*
- * $Id: PermissionMap.java,v 1.22 2007-10-08 08:04:46 tlipkis Exp $
+ * $Id: PermissionMap.java,v 1.23 2007-10-09 02:06:17 tlipkis Exp $
  */
 
 /*
@@ -405,11 +405,11 @@ public class PermissionMap {
     uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW_ON_HOST);
 
     InputStream uis = uc.getUncachedInputStream();
-    if (uis == null) {
-      String msg = "getUncachedInputStream("+ uc.getUrl()+") returned null";
-      logger.critical(msg);
-      throw new PluginException.BehaviorException(msg);
-    }
+//     if (uis == null) {
+//       String msg = "getUncachedInputStream("+ uc.getUrl()+") returned null";
+//       logger.critical(msg);
+//       throw new PluginException.BehaviorException(msg);
+//     }
     BufferedInputStream is = new BufferedInputStream(uis);
 
     crawlStatus.signalUrlFetched(uc.getUrl());
