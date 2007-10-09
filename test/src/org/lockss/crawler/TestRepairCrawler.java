@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepairCrawler.java,v 1.46 2007-10-01 08:22:21 tlipkis Exp $
+ * $Id: TestRepairCrawler.java,v 1.47 2007-10-09 00:57:41 tlipkis Exp $
  */
 
 /*
@@ -547,24 +547,27 @@ public class TestRepairCrawler extends LockssTestCase {
 
   public void testFetchFromPublisherOnly()
       throws MalformedIdentityKeyException {
-    String repairUrl = "http://example.com/blah.html";
+    String repairUrl1 = "http://example.com/blah.html";
+    String repairUrl2 = "http://example.com/flurb.html";
     MyRepairCrawler crawler =
-      makeCrawlerWPermission(mau, spec, aus, ListUtil.list(repairUrl),0);
+      makeCrawlerWPermission(mau, spec, aus,
+			     ListUtil.list(repairUrl1, repairUrl2),
+			     0);
 
-    mau.addUrl(repairUrl).setContentSize(4321);
-    crawlRule.addUrlToCrawl(repairUrl);
+    mau.addUrl(repairUrl1).setContentSize(4321);
+    mau.addUrl(repairUrl2).setContentSize(1357);
+    crawlRule.addUrlToCrawl(repairUrl1);
+    crawlRule.addUrlToCrawl(repairUrl2);
 
     //ConfigurationUtil.addFromArgs(RepairCrawler.PARAM_FETCH_FROM_OTHER_CACHES_ONLY, "false");
     ConfigurationUtil.addFromArgs(RepairCrawler.PARAM_FETCH_FROM_PUBLISHER_ONLY, "true");
 
     assertTrue("doCrawl() returned false", crawler.doCrawl());
-    assertTrue("Fetch from caches occur, fetchCacheCnt = " +
-                crawler.getFetchCacheCnt() , crawler.getFetchCacheCnt() == 0);
-    assertTrue("Fetch from publisher" +
-               crawler.getFetchPubCnt(), crawler.getFetchPubCnt() == 1);
+    assertEquals(0, crawler.getFetchCacheCnt());
+    assertEquals(2, crawler.getFetchPubCnt());
     CrawlerStatus status = crawler.getStatus();
     assertEquals(ListUtil.list("Publisher"), status.getSources());
-    assertEquals(4321, status.getContentBytesFetched());
+    assertEquals(4321+1357, status.getContentBytesFetched());
   }
 
   public void testFetchFromPublisherOnlyFailure()

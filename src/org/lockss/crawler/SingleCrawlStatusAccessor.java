@@ -1,5 +1,5 @@
 /*
- * $Id: SingleCrawlStatusAccessor.java,v 1.7 2007-10-04 18:29:53 tlipkis Exp $
+ * $Id: SingleCrawlStatusAccessor.java,v 1.8 2007-10-09 00:57:41 tlipkis Exp $
  */
 
 /*
@@ -145,13 +145,14 @@ public class SingleCrawlStatusAccessor implements StatusAccessor {
 
   private List getSummaryInfo(CrawlerStatus status) {
     List res = new ArrayList();
-    Collection startUrls = status.getStartUrls();
     res.add(new StatusTable.SummaryInfo("Status",
 					ColumnDescriptor.TYPE_STRING,
 					status.getCrawlStatusMsg()));
+    String sources = StringUtil.separatedString(status.getSources());
     res.add(new StatusTable.SummaryInfo("Source",
 					ColumnDescriptor.TYPE_STRING,
-					status.getSources()));
+					sources));
+    String startUrls = StringUtil.separatedString(status.getStartUrls());
     res.add(new StatusTable.SummaryInfo("Starting Url(s)",
 					ColumnDescriptor.TYPE_STRING,
 					startUrls));

@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerStatus.java,v 1.5 2007-10-04 04:06:17 tlipkis Exp $
+ * $Id: CrawlerStatus.java,v 1.6 2007-10-09 00:57:41 tlipkis Exp $
  */
 
 /*
@@ -161,7 +161,7 @@ public class CrawlerStatus {
       excluded = newSetCounter("excluded", recordUrls);
       notModified = newListCounter("notModified", recordUrls);
       parsed = newListCounter("parsed", recordUrls);
-      sources = newListCounter("source", recordUrls);
+      sources = newSetCounter("source", recordUrls);
       pending = newSetCounter("pending", recordUrls);
       errors = newMapCounter("error", recordUrls);
       paramRecordUrls = recordUrls;
