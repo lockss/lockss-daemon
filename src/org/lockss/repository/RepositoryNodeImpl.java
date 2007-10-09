@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.74 2007-08-22 06:47:00 tlipkis Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.75 2007-10-09 05:52:56 smorabito Exp $
  */
 
 /*
@@ -1768,7 +1768,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
   private static class FileComparator implements Comparator {
     public int compare(Object o1, Object o2) {
       // compares file pathnames
-      return ((File)o1).getName().compareToIgnoreCase(((File)o2).getName());
+      return ((File)o1).getName().compareTo(((File)o2).getName());
     }
   }
 }
