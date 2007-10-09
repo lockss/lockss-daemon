@@ -1,5 +1,5 @@
 /*
- * $Id: BlockTally.java,v 1.13 2007-03-17 04:19:29 smorabito Exp $
+ * $Id: BlockTally.java,v 1.14 2007-10-09 00:49:55 smorabito Exp $
  */
 
 /*
@@ -133,9 +133,9 @@ public class BlockTally {
       result = RESULT_NOQUORUM;
     } else if (!isWithinMargin()) { 
       result = RESULT_TOO_CLOSE;
-    } else if (extraBlocks > quorum) {
+    } else if (extraBlocks >= quorum) {
       result = RESULT_LOST_EXTRA_BLOCK;
-    } else if (missingBlocks > quorum) {
+    } else if (missingBlocks >= quorum) {
       // Attempt to find the name of the missing block, if possible.
       String missingUrl = null;
       int maxMissingUrlCount = 0;
@@ -147,7 +147,7 @@ public class BlockTally {
           missingUrl = url;
         }
       }
-      if (maxMissingUrlCount > quorum) {
+      if (maxMissingUrlCount >= quorum) {
         log.debug("Found agreement on missing URL name: " + missingUrl);
         result = RESULT_LOST_MISSING_BLOCK;
         this.missingBlockUrl = missingUrl;

@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingStreamComm.java,v 1.27 2007-07-26 03:43:49 tlipkis Exp $
+ * $Id: BlockingStreamComm.java,v 1.28 2007-10-09 00:49:56 smorabito Exp $
  */
 
 /*
@@ -63,54 +63,54 @@ public class BlockingStreamComm
 
   /** Use V3 over SSL **/
   public static final String PARAM_USE_V3_OVER_SSL = PREFIX + "v3OverSsl";
-  static final boolean DEFAULT_USE_V3_OVER_SSL = false;
+  public static final boolean DEFAULT_USE_V3_OVER_SSL = false;
 
   /** Use client authentication for SSL **/
   public static final String PARAM_USE_SSL_CLIENT_AUTH = PREFIX + "SslClientAuth";
-  static final boolean DEFAULT_USE_SSL_CLIENT_AUTH = true;
+  public static final boolean DEFAULT_USE_SSL_CLIENT_AUTH = true;
 
   /** Use temporary SSL keystore**/
   public static final String PARAM_SSL_TEMP_KEYSTORE = PREFIX + "SslTempKeystore";
-  static final boolean DEFAULT_SSL_TEMP_KEYSTORE = true;
+  public static final boolean DEFAULT_SSL_TEMP_KEYSTORE = true;
 
   /** File name for SSL key store **/
   public static final String PARAM_SSL_KEYSTORE = PREFIX + "SslKeyStore";
-  static final String DEFAULT_SSL_KEYSTORE = ".keystore";
+  public static final String DEFAULT_SSL_KEYSTORE = ".keystore";
 
   /** File name for SSL key store password **/
   public static final String PARAM_SSL_PRIVATE_KEY_PASSWORD_FILE = PREFIX + "SslPrivateKeyPasswordFile";
-  static final String DEFAULT_SSL_PRIVATE_KEY_PASSWORD_FILE = ".password";
+  public static final String DEFAULT_SSL_PRIVATE_KEY_PASSWORD_FILE = ".password";
 
   /** SSL protocol to use **/
   public static final String PARAM_SSL_PROTOCOL = PREFIX + "SslProtocol";
-  static final String DEFAULT_SSL_PROTOCOL = "TLSv1";
+  public static final String DEFAULT_SSL_PROTOCOL = "TLSv1";
 
   /** Max peer channels.  Only affects outgoing messages; incoming
    * connections are always accepted. */
   public static final String PARAM_MAX_CHANNELS =
     PREFIX + "maxChannels";
-  static final int DEFAULT_MAX_CHANNELS = 50;
+  public static final int DEFAULT_MAX_CHANNELS = 50;
 
   /** Min threads in channel thread pool */
   public static final String PARAM_CHANNEL_THREAD_POOL_MIN =
     PREFIX + "threadPool.min";
-  static final int DEFAULT_CHANNEL_THREAD_POOL_MIN = 3;
+  public static final int DEFAULT_CHANNEL_THREAD_POOL_MIN = 3;
 
   /** Max threads in channel thread pool */
   public static final String PARAM_CHANNEL_THREAD_POOL_MAX =
     PREFIX + "threadPool.max";
-  static final int DEFAULT_CHANNEL_THREAD_POOL_MAX = 3 * DEFAULT_MAX_CHANNELS;
+  public static final int DEFAULT_CHANNEL_THREAD_POOL_MAX = 3 * DEFAULT_MAX_CHANNELS;
 
   /** Duration after which idle threads will be terminated..  -1 = never */
   public static final String PARAM_CHANNEL_THREAD_POOL_KEEPALIVE =
     PREFIX + "threadPool.keepAlive";
-  static final long DEFAULT_CHANNEL_THREAD_POOL_KEEPALIVE =
+  public static final long DEFAULT_CHANNEL_THREAD_POOL_KEEPALIVE =
     10 * Constants.MINUTE;
 
   /** Connect timeout */
   public static final String PARAM_CONNECT_TIMEOUT =
     PREFIX + "timeout.connect";
-  static final long DEFAULT_CONNECT_TIMEOUT = 2 * Constants.MINUTE;
+  public static final long DEFAULT_CONNECT_TIMEOUT = 2 * Constants.MINUTE;
 
   /** Data timeout (SO_TIMEOUT), channel is aborted if read times out.
    * This should be disabled (zero) because the read side of a channel may
@@ -119,47 +119,47 @@ public class BlockingStreamComm
    * channel is truly idle, the send side should close it. */
   public static final String PARAM_DATA_TIMEOUT =
     PREFIX + "timeout.data";
-  static final long DEFAULT_DATA_TIMEOUT = 0;
+  public static final long DEFAULT_DATA_TIMEOUT = 0;
 
   /** Time after which idle channel will be closed */
   public static final String PARAM_CHANNEL_IDLE_TIME =
     PREFIX + "channelIdleTime";
-  static final long DEFAULT_CHANNEL_IDLE_TIME = 2 * Constants.MINUTE;
+  public static final long DEFAULT_CHANNEL_IDLE_TIME = 2 * Constants.MINUTE;
 
   /** Interval at which send thread checks idle timer */
   public static final String PARAM_SEND_WAKEUP_TIME =
     PREFIX + "sendWakeupTime";
-  static final long DEFAULT_SEND_WAKEUP_TIME = 1 * Constants.MINUTE;
+  public static final long DEFAULT_SEND_WAKEUP_TIME = 1 * Constants.MINUTE;
 
   /** FilePeerMessage will be used for messages larger than this, else
    * MemoryPeerMessage */
   public static final String PARAM_MIN_FILE_MESSAGE_SIZE =
     PREFIX + "minFileMessageSize";
-  static final int DEFAULT_MIN_FILE_MESSAGE_SIZE = 1024;
+  public static final int DEFAULT_MIN_FILE_MESSAGE_SIZE = 1024;
 
   /** FilePeerMessage will be used for messages larger than this, else
    * MemoryPeerMessage */
   public static final String PARAM_MAX_MESSAGE_SIZE =
     PREFIX + "maxMessageSize";
-  static final int DEFAULT_MAX_MESSAGE_SIZE = 100 * 1024;
+  public static final int DEFAULT_MAX_MESSAGE_SIZE = 100 * 1024;
 
   /** Dir for PeerMessage data storage */
   public static final String PARAM_DATA_DIR = PREFIX + "messageDataDir";
   /** Default is PlatformInfo.getSystemTempDir() */
-  static final String DEFAULT_DATA_DIR = "Platform tmp dir";
+  public static final String DEFAULT_DATA_DIR = "Platform tmp dir";
 
   /** Wrap Socket OutputStream in BufferedOutputStream? */
   public static final String PARAM_IS_BUFFERED_SEND = PREFIX + "bufferedSend";
-  static final boolean DEFAULT_IS_BUFFERED_SEND = true;
+  public static final boolean DEFAULT_IS_BUFFERED_SEND = true;
 
   /** TCP_NODELAY */
   public static final String PARAM_TCP_NODELAY = PREFIX + "tcpNodelay";
-  static final boolean DEFAULT_TCP_NODELAY = true;
+  public static final boolean DEFAULT_TCP_NODELAY = true;
 
   /** Amount of time BlockingStreamComm.stopService() should wait for
    * worker threads to exit.  Zero disables wait.  */
   public static final String PARAM_WAIT_EXIT = PREFIX + "waitExit";
-  static final long DEFAULT_WAIT_EXIT = 2 * Constants.SECOND;
+  public static final long DEFAULT_WAIT_EXIT = 2 * Constants.SECOND;
 
   static final String WDOG_PARAM_SCOMM = "SComm";
   static final long WDOG_DEFAULT_SCOMM = 1 * Constants.HOUR;

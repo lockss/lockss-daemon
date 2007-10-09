@@ -1,5 +1,5 @@
 /*
-* $Id: V3PollStatus.java,v 1.17 2007-10-03 00:35:52 smorabito Exp $
+* $Id: V3PollStatus.java,v 1.18 2007-10-09 00:49:56 smorabito Exp $
  */
 
 /*
@@ -82,7 +82,7 @@ public class V3PollStatus {
   public static class V3PollerStatus
       extends V3PollStatus implements StatusAccessor {
 
-    static final String TABLE_TITLE = "V3 Polls (Mine)";
+    static final String TABLE_TITLE = "Polls";
 
     private static final DecimalFormat agreementFormat =
       new DecimalFormat("0.00");
@@ -145,9 +145,12 @@ public class V3PollStatus {
       List summary = new ArrayList();
       V3PollStatusAccessor status = pollManager.getV3Status();
       if (status.getNextPollStartTime() != null) {
+        long remainingTime = status.getNextPollStartTime().getRemainingTime();
+        String timeStr = remainingTime > 0 ?
+            StringUtil.timeIntervalToString(remainingTime) : "running";
         summary.add(new SummaryInfo("Poll Starter",
-                                    ColumnDescriptor.TYPE_TIME_INTERVAL,
-                                    status.getNextPollStartTime().getRemainingTime()));
+                                    ColumnDescriptor.TYPE_STRING,
+                                    timeStr));
       }
       return summary;
     }
@@ -204,7 +207,7 @@ public class V3PollStatus {
   public static class V3VoterStatus
         extends V3PollStatus implements StatusAccessor {
 
-    static final String TABLE_TITLE = "V3 Polls (Others)";
+    static final String TABLE_TITLE = "Votes";
 
     // Sort by deadline, descending
     private final List sortRules =

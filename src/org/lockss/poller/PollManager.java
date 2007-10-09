@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.180 2007-10-03 00:35:52 smorabito Exp $
+ * $Id: PollManager.java,v 1.181 2007-10-09 00:49:55 smorabito Exp $
  */
 
 /*
@@ -100,22 +100,36 @@ public class PollManager
     org.lockss.poller.v3.V3PollFactory.DEFAULT_ENABLE_V3_VOTER;
   
   public static final String PARAM_START_POLLS_INITIAL_DELAY = 
-    PREFIX + "v3.pollStarterInitialDelay";
+    PREFIX + "pollStarterInitialDelay";
   public static final long DEFAULT_START_POLLS_INITIAL_DELAY = 
     1000 * 60 * 10; /* 10 Minutes */
   
   public static final String PARAM_START_POLLS_INTERVAL =
-    PREFIX + "v3.pollStarterInterval";
+    PREFIX + "pollStarterInterval";
   public static final long DEFAULT_START_POLLS_INTERVAL =
     1000 * 60 * 60; /* 1 Hour */
   
+  /** The time, in ms, that will be added between launching new polls.
+   * This time is added to the channel timeout time provided by SCOMM.
+   */
+  public static final String PARAM_ADDED_POLL_DELAY =
+    PREFIX + "pollStarterAdditionalDelayBetweenPolls";
+  public static final long DEFAULT_ADDED_POLL_DELAY = 1000;
+  
+  /**
+   * If set, poll starting will be throttled.  This is the default.
+   */
+  public static final String PARAM_ENABLE_POLL_STARTER_THROTTLE =
+    PREFIX + "enablePollStarterThrottle";
+  public static boolean DEFAULT_ENABLE_POLL_STARTER_THROTTLE = true; 
+   
   /** The default probability of starting a poll on any given
    * AU.  This is the probability that will be used by the PollStarter
    * if no other factors come into play, i.e., if the AU has
    * been polled less than &quo;maxTimeBetweenPolls&quo; ago.
    */
   public static final String PARAM_DEFAULT_POLL_PROBABILITY =
-    PREFIX + "v3.defaultPollProbability";
+    PREFIX + "defaultPollProbability";
   public static final float DEFAULT_DEFAULT_POLL_PROBABILITY =
     0.25f;
 
@@ -127,7 +141,7 @@ public class PollManager
    * number of simultaneous polls is not already running.
    */
   public static final String PARAM_MAX_TIME_BETWEEN_POLLS =
-    PREFIX + "v3.maxTimeBetweenPolls";
+    PREFIX + "maxTimeBetweenPolls";
   public static final long DEFAULT_MAX_TIME_BETWEEN_POLLS =
     1000L * 60L * 60L * 24L * 30;  // 30 Days. 
 
@@ -164,6 +178,8 @@ public class PollManager
   private int maxSimultaneousPollers = DEFAULT_MAX_SIMULTANEOUS_V3_POLLERS;
   private PollStarter pollStarter;
   private boolean isPollStarterEnabled = false;
+  private boolean enablePollStarterThrottle =
+    DEFAULT_ENABLE_POLL_STARTER_THROTTLE;
   
   // If true, restore V3 Voters
   private boolean enablePollers = DEFAULT_ENABLE_V3_POLLER;
@@ -212,14 +228,6 @@ public class PollManager
     theSystemMetrics = theDaemon.getSystemMetrics();
     // register our status
     StatusService statusServ = theDaemon.getStatusService();
-    statusServ.registerStatusAccessor(PollerStatus.MANAGER_STATUS_TABLE_NAME,
-				      new PollerStatus.ManagerStatus(this));
-    statusServ.registerStatusAccessor(PollerStatus.POLL_STATUS_TABLE_NAME,
-				      new PollerStatus.PollStatus(this));
-    statusServ.registerObjectReferenceAccessor(PollerStatus.MANAGER_STATUS_TABLE_NAME,
-                                               ArchivalUnit.class,
-                                               new PollerStatus.ManagerStatusAuRef(this));
-    // V3 status
     statusServ.registerStatusAccessor(V3PollStatus.POLLER_STATUS_TABLE_NAME,
                                       new V3PollStatus.V3PollerStatus(this));
     statusServ.registerOverviewAccessor(V3PollStatus.POLLER_STATUS_TABLE_NAME,
@@ -302,8 +310,6 @@ public class PollManager
     }
     // unregister our status
     StatusService statusServ = getDaemon().getStatusService();
-    statusServ.unregisterStatusAccessor(PollerStatus.MANAGER_STATUS_TABLE_NAME);
-    statusServ.unregisterStatusAccessor(PollerStatus.POLL_STATUS_TABLE_NAME);
     statusServ.unregisterStatusAccessor(V3PollStatus.POLLER_STATUS_TABLE_NAME);
     statusServ.unregisterOverviewAccessor(V3PollStatus.POLLER_STATUS_TABLE_NAME);
     statusServ.unregisterStatusAccessor(V3PollStatus.VOTER_STATUS_TABLE_NAME);
@@ -317,8 +323,6 @@ public class PollManager
     statusServ.unregisterStatusAccessor(V3PollStatus.AGREE_TABLE_NAME);
     statusServ.unregisterStatusAccessor(V3PollStatus.DISAGREE_TABLE_NAME);
     statusServ.unregisterStatusAccessor(V3PollStatus.ERROR_TABLE_NAME);
-    statusServ.unregisterObjectReferenceAccessor(PollerStatus.MANAGER_STATUS_TABLE_NAME,
-                                                 ArchivalUnit.class);
 
     // unregister our router
     theRouter.unregisterMessageHandler(m_msgHandler);
@@ -667,7 +671,7 @@ public class PollManager
    */
   public void closeThePoll(String key)  {
     PollManagerEntry pme = (PollManagerEntry)thePolls.remove(key);
-    if(pme== null || pme.poll == null) {
+    if(pme == null || pme.poll == null) {
       theLog.warning("Attempt to close unknown poll : " + key);
       return;
     }
@@ -854,6 +858,9 @@ public class PollManager
       maxSimultaneousPollers =
         newConfig.getInt(PARAM_MAX_SIMULTANEOUS_V3_POLLERS,
                          DEFAULT_MAX_SIMULTANEOUS_V3_POLLERS);
+      enablePollStarterThrottle =
+        newConfig.getBoolean(PARAM_ENABLE_POLL_STARTER_THROTTLE,
+                             DEFAULT_ENABLE_POLL_STARTER_THROTTLE);
     }
     for (int i = 0; i < pf.length; i++) {
       if (pf[i] != null) {
@@ -1524,29 +1531,37 @@ public class PollManager
       
       AuState auState = AuUtil.getAuState(au);
 
+      // Defer to the AU's shouldCallTopLevelPoll method, which checks
+      // the AuState.
+      if (!au.shouldCallTopLevelPoll(auState)) {
+        theLog.debug2("AU shouldCallTopLevelPoll returns false.  Not starting " 
+                      + "a poll");
+        return;
+      }
+
+      // Do not call polls on AUs that have not crawled, UNLESS that AU
+      // is marked pubdown.
+      if (auState.getLastCrawlTime() == -1 && !AuUtil.isPubDown(au)) {
+        theLog.debug("Not calling a poll on " + au + ", because it has not "
+                     + "crawled and it is not marked pubdown.");
+        return;
+      }
+
       // Do not call polls on AUs if the maximum number of pollers are already
       // running.
       int activePolls = pollManager.getActiveV3Pollers().size(); 
       if (activePolls >= maxSimultaneousPollers) {
-        theLog.debug("Not starting new V3 Poll on " + au
-                     + ".  Maximum number of active pollers is "
-                     + maxSimultaneousPollers + "; " + activePolls
-                     + " are already running.");
+        theLog.debug2("Not starting new V3 Poll on " + au
+                      + ".  Maximum number of active pollers is "
+                      + maxSimultaneousPollers + "; " + activePolls
+                      + " are already running.");
         return;
       }
 
       // If a poll is already running, don't start another one.
       if (pollManager.isPollRunning(au)) {
-        theLog.debug("Not calling a poll on " + au
-                     + " because another poll is already running.");
-        return;
-      }
-      
-      // Do not call polls on AUs that have not crawled, UNLESS that AU
-      // is marked pubdown.
-      if (auState.getLastCrawlTime() == -1 && !AuUtil.isPubDown(au)) {
-        theLog.debug("Not calling a poll on " + au
-                     + ", because it has not crawled and it is not marked DOWN.");
+        theLog.debug2("Not calling a poll on " + au
+                      + " because another poll is already running.");
         return;
       }
       
@@ -1558,8 +1573,22 @@ public class PollManager
         theLog.debug("Calling a V3 poll on AU " + au);
 
         if (pollManager.callPoll(spec) == null) {
-          if (theLog.isDebug2()) {
-            theLog.debug2("Failed to call a V3 poll on " + spec);
+          theLog.debug2("Failed to call a V3 poll on " + spec);
+        }
+        
+        // Add a delay to throttle poll starting.  The delay is the sum of 
+        // the scomm timeout and an additional number of milliseconds.
+        if (enablePollStarterThrottle) {
+          long scommTimeout =
+            CurrentConfig.getLongParam(BlockingStreamComm.PARAM_CONNECT_TIMEOUT,
+                                       BlockingStreamComm.DEFAULT_CONNECT_TIMEOUT);
+          long addedTimeout = 
+            CurrentConfig.getLongParam(PARAM_ADDED_POLL_DELAY,
+                                       DEFAULT_ADDED_POLL_DELAY);
+          try {
+            Thread.sleep(scommTimeout + addedTimeout);
+          } catch (InterruptedException ex) {
+            // Just proceed to the next poll.
           }
         }
       } else {

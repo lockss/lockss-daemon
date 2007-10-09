@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.44 2007-10-03 00:35:52 smorabito Exp $
+ * $Id: V3Voter.java,v 1.45 2007-10-09 00:49:55 smorabito Exp $
  */
 
 /*
@@ -224,9 +224,12 @@ public class V3Voter extends BasePoll {
                                         DEFAULT_MIN_NOMINATION_SIZE);
     int max = CurrentConfig.getIntParam(PARAM_MAX_NOMINATION_SIZE,
                                         DEFAULT_MAX_NOMINATION_SIZE);
+    if (min < 0) min = 0;
+    if (max < 0) max = 0;
     if (min > max) {
-      throw new IllegalArgumentException("Impossible nomination size range: "
-                                         + (max - min));
+      log.warning("Impossible nomination size range (" + (max - min) 
+                  + "). Using min size.");
+      nomineeCount = min;
     } else if (min == max) {
       log.debug2("Minimum nominee size is same as maximum nominee size: " +
                  min);
@@ -295,39 +298,36 @@ public class V3Voter extends BasePoll {
    * @return True if time could be scheduled, false otherwise.
    */
   public boolean reserveScheduleTime() {
-    // XXX:  We need to reserve some padding for the estimated time it will
-    // take to send the message.  'estimatedHashDuration' is probably way
-    // too much for this, but a better estimate would require taking into 
-    // account the number of URLs and versions that we expect to hash, since
-    // the message size is proportional to the number of VoteBlock.Versions
-    
     long voteDeadline = voterUserData.getVoteDeadline();
     long estimatedHashDuration = getCachedUrlSet().estimatedHashDuration();
     long now = TimeBase.nowMs();
 
     // Ensure the vote deadline has not already passed.
     if (voteDeadline < now) {
-      log.warning("In poll " + getKey() + " called by peer "
-                  + voterUserData.getPollerId()
-                  + ", vote deadline (" + voteDeadline + ") has already "
-                  + "passed!  Can't reserve schedule time.");
+      String msg = "Vote deadline has already "
+        + "passed.  Can't reserve schedule time.";
+      voterUserData.setErrorDetail(msg);
+      log.warning(msg);
       return false;
     }
     
     if (estimatedHashDuration > (voteDeadline - now)) {
-      log.warning("In poll " + getKey() + " called by peer " + 
-                  voterUserData.getPollerId() +
-                  ", my estimated hash duration (" + estimatedHashDuration + 
-                  "ms) is too long to complete within the voting period (" +
-                  (voteDeadline - now) + "ms)");
+      String msg = "Estimated hash duration (" 
+        + StringUtil.timeIntervalToString(estimatedHashDuration) 
+        + ") is too long to complete within the voting period ("
+        + StringUtil.timeIntervalToString(voteDeadline - now) + ")";
+      voterUserData.setErrorDetail(msg);
+      log.warning(msg);
       return false;
     }
 
     Deadline earliestStart = Deadline.at(now + estimatedHashDuration);
+
+    long messageSendPadding = calculateMessageSendPadding(estimatedHashDuration);
+
     Deadline latestFinish =
-      Deadline.at(voterUserData.getVoteDeadline() - estimatedHashDuration);
-    log.debug("Voter " + getKey() + ": Earliest Start = " +
-              earliestStart + "; Latest Finish = " + latestFinish);
+      Deadline.at(voterUserData.getVoteDeadline() - messageSendPadding);
+
     TaskCallback tc = new TaskCallback() {
       public void taskEvent(SchedulableTask task, EventType type) {
         // do nothing... yet!
@@ -356,6 +356,17 @@ public class V3Voter extends BasePoll {
       log.warning(msg);
     }
     return suc;
+  }
+
+  /* This is wrong.  We want to get the number of URLs in the AU to make a
+   * WAG about how long the message might take to send.  I can't seem to do
+   * that, so instead this will compute a percentage of the hash estimate,
+   * with a lower bound of 500ms. 
+   */
+  private long calculateMessageSendPadding(long hashEst) {
+    long minVal = 500;
+    long computedVal = (long)(0.02 * hashEst);  
+    return Math.max(computedVal, minVal);
   }
 
   /**
@@ -396,7 +407,14 @@ public class V3Voter extends BasePoll {
       }
       log.debug("Found enough time to participate in poll " + getKey());
     } else {
-      log.warning("Not enough time found to participate in poll " + getKey());
+      V3LcapMessage nak = voterUserData.makeMessage(V3LcapMessage.MSG_POLL_ACK);
+      nak.setVoterNonce(null);
+      nak.setNak(V3LcapMessage.PollNak.NAK_NO_TIME);
+      try {
+        this.sendMessageTo(nak, this.getPollerId());
+      } catch (IOException ex) {
+        log.error("Unable to send POLL NAK message in poll " + getKey(), ex);
+      }
       stopPoll(STATUS_NO_TIME);
       return;
     }

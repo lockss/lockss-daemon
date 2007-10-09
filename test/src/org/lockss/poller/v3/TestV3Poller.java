@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.25 2007-08-17 07:37:03 smorabito Exp $
+ * $Id: TestV3Poller.java,v 1.26 2007-10-09 00:49:57 smorabito Exp $
  */
 
 /*
@@ -740,8 +740,6 @@ public class TestV3Poller extends LockssTestCase {
     p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
     p.setProperty(IdentityManager.PARAM_LOCAL_V3_IDENTITY, localPeerKey);
     p.setProperty(ConfigManager.PARAM_NEW_SCHEDULER, "true");
-    p.setProperty(V3Poller.PARAM_MIN_POLL_SIZE, "4");
-    p.setProperty(V3Poller.PARAM_MAX_POLL_SIZE, "4");
     p.setProperty(IdentityManagerImpl.PARAM_INITIAL_PEERS,
                   StringUtil.separatedString(initialPeers, ";"));
     p.setProperty(V3Poller.PARAM_QUORUM, "3");

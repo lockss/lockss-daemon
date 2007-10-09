@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.63 2007-10-04 09:43:41 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.64 2007-10-09 00:49:57 smorabito Exp $
  */
 
 /*
@@ -783,8 +783,9 @@ public class ArchivalUnitStatus
       res.add(new StatusTable.SummaryInfo("Last Poll",
 					  ColumnDescriptor.TYPE_DATE,
 					  new Long(state.getLastTopLevelPollTime())));
+      PollManager pm = theDaemon.getPollManager();
       boolean isCrawling = cmStatus.isRunningNCCrawl(au);
-      boolean isPolling = false;
+      boolean isPolling = pm.isPollRunning(au);
       List lst = new ArrayList();
       if (isCrawling) {
 	lst.add(makeCrawlRef("Crawling", au));

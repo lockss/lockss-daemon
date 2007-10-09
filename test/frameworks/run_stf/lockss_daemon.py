@@ -480,6 +480,19 @@ class Client:
                 return row['NodeStatus'] == "Damaged"
         # au wasn't found.
         return False
+    
+    def hasCompletedFullAuCrawl(self, au):
+        tbl = self.getCrawlStatus(au)
+        return tbl and \
+            tbl[0]['crawl_status']['value'] == 'Successful' and \
+            tbl[0]['num_urls_fetched']['value'] == str(au.expectedUrlCount())
+
+    def getActualCrawledUrlCount(self, au):
+        tbl = self.getCrawlStatus(au)
+        if tbl[0]['crawl_status']['value'] == 'Successful':
+            return int(tbl[0]['num_urls_fetched']['value'])
+        else:
+            return -1
 
     def isPublisherDown(self, au):
         """ Return true if the AU is marked 'publisher down' (i.e., if
@@ -1050,7 +1063,26 @@ class Client:
         successful new content crawl."""
         def waitFunc():
             tbl = self.getCrawlStatus(au)
-            return tbl and tbl[0]['crawl_status']['value'] == 'Successful'
+            status = tbl[0]['crawl_status']['value'] 
+            if status == 'Successful':
+                numCrawled = int(tbl[0]['num_urls_fetched'])
+                numExpected = au.expectedUrlCount()
+                if numCrawled == numExpected:
+                    return True
+                else:
+                    raise LockssError("Crawl on client " +
+                                      str(self.port) +
+                                      " should have collected " +
+                                      str(numExpected) +
+                                      " urls, but only collected " +
+                                      str(numCrawled))
+            elif (status == 'No permission from publisher'):
+                raise LockssError("Crawl on client " +
+                                  str(self.port) +
+                                  " did not receive permission!")
+            else:
+                return False
+        
         return self.wait(waitFunc, timeout, sleep)
 
     def waitForV3Poller(self, au, timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):
@@ -1621,7 +1653,7 @@ class SimulatedAu:
     """ A Python abstraction of a SimulatedPlugin ArchivalUnit for use
     in the functional test framework. """
     def __init__(self, root, depth=-1, branch=-1, numFiles=-1,
-                 binFileSize=-1, maxFileName=-1, fileTypes=-1,
+                 binFileSize=-1, maxFileName=-1, fileTypes=[],
                  oddBranchContent=-1, badFileLoc=None, badFileNum=-1,
                  publisherDown=False, protocolVersion=-1):
         self.root = root
@@ -1630,7 +1662,8 @@ class SimulatedAu:
         self.numFiles = numFiles
         self.binFileSize = binFileSize
         self.maxFileName = maxFileName
-        self.fileTypes = fileTypes
+        self.fileTypeArray = fileTypes
+        self.fileTypes = sum(self.fileTypeArray)
         self.oddBranchContent = oddBranchContent
         self.badFileLoc = badFileLoc
         self.badFileNum = badFileNum
@@ -1645,6 +1678,19 @@ class SimulatedAu:
 
     def __str__(self):
         return self.title
+    
+    def expectedUrlCount(self):
+        if self.depth == 0:
+            dp = 1
+        else:
+            dp = self.depth
+
+        numFileTypes = len(self.fileTypeArray)
+        # Each branch has an index, plus there's a top level index, and
+        # the top-level starting URL counts too.
+        return (numFileTypes * self.numFiles * self.branch) + \
+               (numFileTypes * self.numFiles * dp) + \
+               (self.branch + 2) 
 
     def getAuId(self):
         auIdKey = self.pluginId.replace('.', '|')
@@ -1680,6 +1726,8 @@ class LockssDaemon:
 
     def start(self):
         if not self.isRunning:
+            oldcwd = os.getcwd()
+            os.chdir(self.daemonDir)
             cmd = '%s -server -cp %s -Dorg.lockss.defaultLogLevel=debug '\
                   'org.lockss.app.LockssDaemon %s > %s 2>&1 & '\
                   'echo $! > %s/dpid'\
@@ -1688,6 +1736,7 @@ class LockssDaemon:
             os.system(cmd)
             self.pid = int(open(path.join(self.daemonDir, 'dpid'), 'r').readline())
             self.isRunning = True
+            os.chdir(oldcwd)
 
     def stop(self):
         if self.isRunning:
@@ -1834,21 +1883,18 @@ org.lockss.crawler.startCrawlsInitialDelay=2m
 org.lockss.crawler.startCrawlsInterval=2m
 
 # poll settings
-org.lockss.poll.v3.maxSimultaneousV3Pollers=1
-org.lockss.poll.v3.maxSimultaneousV3Voters=100
-org.lockss.poll.v3.quorum=3
-org.lockss.poll.v3.pollStarterInitialDelay=3m
-org.lockss.poll.v3.pollStarterInterval=2m
-org.lockss.poll.v3.defaultPollProbability=100
 org.lockss.comm.enabled=false
 org.lockss.scomm.enabled=true
 org.lockss.scomm.maxMessageSize=33554432
+org.lockss.poll.pollStarterInitialDelay=1m
+org.lockss.poll.pollStarterInterval=2m
+org.lockss.poll.defaultPollProbability=100
+org.lockss.poll.v3.maxSimultaneousV3Pollers=1
+org.lockss.poll.v3.maxSimultaneousV3Voters=100
 org.lockss.poll.v3.deleteExtraFiles=true
-org.lockss.poll.v3.quorum=3
-org.lockss.poll.v3.minPollSize=4
-org.lockss.poll.v3.maxPollSize=4
-org.lockss.poll.v3.minNominationSize=1
-org.lockss.poll.v3.maxNominationSize=1
+org.lockss.poll.v3.quorum=4
+arg.lockss.poll.v3.minNominationSize=0
+org.lockss.poll.v3.maxNominationSize=0
 org.lockss.poll.v3.voteDeadlinePadding=30s
 
 # Set the v3 poll state dir to /tmp

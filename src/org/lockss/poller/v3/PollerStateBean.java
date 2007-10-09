@@ -1,5 +1,5 @@
 /*
- * $Id: PollerStateBean.java,v 1.28 2007-09-07 03:05:53 smorabito Exp $
+ * $Id: PollerStateBean.java,v 1.29 2007-10-09 00:49:55 smorabito Exp $
  */
 
 /*
@@ -62,13 +62,16 @@ public class PollerStateBean implements LockssSerializable {
   private PeerIdentity pollerId;
   private String hashAlgorithm;
   private long createTime;
-  private int pollSize;
+  /** @deprecated
+   * Left here only for deserialization compatibility.
+   */
+  private transient int pollSize;
   private int quorum;
   private boolean activePoll;
   /** @deprecated
    * Left here only for deserialization compatibility.
    */
-  private int hashBlockIndex;
+  private transient int hashBlockIndex;
   private int outerCircleTarget;
   private String statusString;
   private int status;
@@ -76,7 +79,7 @@ public class PollerStateBean implements LockssSerializable {
   /** @deprecated
    * Left here only for deserialization compatibility.
    */
-  private ArrayList hashedBlocks; // This will need to be disk-based in 1.16!
+  private transient ArrayList hashedBlocks; // This will need to be disk-based in 1.16!
   private boolean hashStarted;
   private Collection votedPeers;
   private TallyStatus tallyStatus;
@@ -88,16 +91,9 @@ public class PollerStateBean implements LockssSerializable {
   private transient CachedUrlSet cus;
 
   /**
-   * Counter of participants whose state machines do not want to allow the next
-   * block to hash. When the poller checks to see if it can start hashing the
-   * next block, it will consult this counter and only proceed if it is '0'.
-   */
-  //private volatile int hashReadyCounter;
-
-  /**
    * Counter of participants who have not yet nominated any peers.
    */
-  private volatile int nomineeCounter;
+  private int nomineeCounter = 0;
 
   /**
    * The target URL of the most recently hashed block. Updated after each block
@@ -110,15 +106,12 @@ public class PollerStateBean implements LockssSerializable {
   protected PollerStateBean() {}
 
   public PollerStateBean(PollSpec spec, PeerIdentity orig, String pollKey,
-                         long duration, int pollSize, int outerCircleTarget,
+                         long duration, int outerCircleTarget,
                          int quorum, String hashAlg) {
     this.pollerId = orig;
     this.pollKey = pollKey;
     this.duration = duration;
     this.pollDeadline = Deadline.in(duration).getExpirationTime();
-    this.pollSize = pollSize;
-    //this.hashReadyCounter = pollSize;
-    this.nomineeCounter = pollSize;
     this.outerCircleTarget = outerCircleTarget;
     this.auId = spec.getAuId();
     this.protocolVersion = spec.getProtocolVersion();
@@ -145,14 +138,6 @@ public class PollerStateBean implements LockssSerializable {
 
   public String getPollKey() {
     return pollKey;
-  }
-
-  public int getPollSize() {
-    return pollSize;
-  }
-
-  public void setPollSize(int pollSize) {
-    this.pollSize = pollSize;
   }
 
   public void setPollerId(PeerIdentity pollerId) {
@@ -304,7 +289,7 @@ public class PollerStateBean implements LockssSerializable {
   }
 
   public void signalVoterNominated(PeerIdentity id) {
-    nomineeCounter--;
+    nomineeCounter++;
   }
   
   public boolean isPollActive() {

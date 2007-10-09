@@ -294,7 +294,7 @@ class SimpleDamageV3TestCase(V3TestCase):
         # Reasonably complex AU for testing.
         simAu = SimulatedAu('simContent', depth=0, branch=0,
                             numFiles=15,
-                            fileTypes=(FILE_TYPE_TEXT + FILE_TYPE_BIN),
+                            fileTypes=[FILE_TYPE_TEXT, FILE_TYPE_BIN],
                             binFileSize=1024, protocolVersion=3)
 
         ##
@@ -341,7 +341,7 @@ class RandomDamageV3TestCase(V3TestCase):
         # Reasonably complex AU for testing.
         simAu = SimulatedAu('simContent', depth=1, branch=1,
                             numFiles=30,
-                            fileTypes=(FILE_TYPE_TEXT + FILE_TYPE_BIN),
+                            fileTypes=[FILE_TYPE_TEXT, FILE_TYPE_BIN],
                             binFileSize=2024, protocolVersion=3)
 
         ##
@@ -395,7 +395,7 @@ class RepairFromPublisherV3TestCase(V3TestCase):
         # Reasonably complex AU for testing.
         simAu = SimulatedAu('simContent', depth=1, branch=1,
                             numFiles=10,
-                            fileTypes=(FILE_TYPE_TEXT + FILE_TYPE_BIN),
+                            fileTypes=[FILE_TYPE_TEXT, FILE_TYPE_BIN],
                             binFileSize=1024, protocolVersion=3)
 
         ##
@@ -454,7 +454,7 @@ class RepairFromPeerV3TestCase(V3TestCase):
         # Reasonably complex AU for testing.
         simAu = SimulatedAu('simContent', depth=1, branch=1,
                             numFiles=10,
-                            fileTypes=(FILE_TYPE_TEXT + FILE_TYPE_BIN),
+                            fileTypes=[FILE_TYPE_TEXT, FILE_TYPE_BIN],
                             binFileSize=1024, protocolVersion=3)
         
         ## Enable polling on all peers.
@@ -533,7 +533,7 @@ class SimpleDeleteV3TestCase(V3TestCase):
         # Reasonably complex AU for testing.
         simAu = SimulatedAu('simContent', depth=0, branch=0,
                             numFiles=15,
-                            fileTypes=(FILE_TYPE_TEXT + FILE_TYPE_BIN),
+                            fileTypes=[FILE_TYPE_TEXT, FILE_TYPE_BIN],
                             binFileSize=1024, protocolVersion=3)
         ##
         ## Create simulated AUs
@@ -580,7 +580,7 @@ class LastFileDeleteV3TestCase(V3TestCase):
         # Reasonably complex AU for testing.
         simAu = SimulatedAu('simContent', depth=0, branch=0,
                             numFiles=15,
-                            fileTypes=(FILE_TYPE_TEXT + FILE_TYPE_BIN),
+                            fileTypes=[FILE_TYPE_TEXT, FILE_TYPE_BIN],
                             binFileSize=1024, protocolVersion=3)
         ##
         ## Create simulated AUs
@@ -628,7 +628,7 @@ class RandomDeleteV3TestCase(V3TestCase):
         # Reasonably complex AU for testing.
         simAu = SimulatedAu('simContent', depth=1, branch=1,
                             numFiles=15,
-                            fileTypes=(FILE_TYPE_TEXT + FILE_TYPE_BIN),
+                            fileTypes=[FILE_TYPE_TEXT, FILE_TYPE_BIN],
                             binFileSize=1024, protocolVersion=3)
         ##
         ## Create simulated AUs
@@ -674,7 +674,7 @@ class SimpleExtraFileV3TestCase(V3TestCase):
     def runTest(self):
         # Reasonably complex AU for testing
         simAu = SimulatedAu('simContent', depth=0, branch=0,
-                            fileTypes=(FILE_TYPE_TEXT + FILE_TYPE_BIN),
+                            fileTypes=[FILE_TYPE_TEXT, FILE_TYPE_BIN],
                             binFileSize=1024,
                             numFiles=20, protocolVersion=3)
         ##
@@ -721,7 +721,7 @@ class LastFileExtraV3TestCase(V3TestCase):
     def runTest(self):
         # Reasonably complex AU for testing
         simAu = SimulatedAu('simContent', depth=0, branch=0,
-                            fileTypes=(FILE_TYPE_TEXT + FILE_TYPE_BIN),
+                            fileTypes=[FILE_TYPE_TEXT, FILE_TYPE_BIN],
                             binFileSize=1024,
                             numFiles=20, protocolVersion=3)
         ##
@@ -768,7 +768,7 @@ class RandomExtraFileV3TestCase(V3TestCase):
     def runTest(self):
         # Reasonably complex AU for testing
         simAu = SimulatedAu('simContent', depth=1, branch=1,
-                            fileTypes=(FILE_TYPE_TEXT + FILE_TYPE_BIN),
+                            fileTypes=[FILE_TYPE_TEXT, FILE_TYPE_BIN],
                             binFileSize=1024,
                             numFiles=20, protocolVersion=3)
 
@@ -828,7 +828,7 @@ class VotersDontParticipateV3TestCase(V3TestCase):
     def runTest(self):
         # Reasonably complex AU for testing
         simAu = SimulatedAu('simContent', depth=1, branch=1,
-                            fileTypes=(FILE_TYPE_TEXT + FILE_TYPE_BIN),
+                            fileTypes=[FILE_TYPE_TEXT, FILE_TYPE_BIN],
                             binFileSize=1024,
                             numFiles=20, protocolVersion=3)
 
@@ -887,7 +887,7 @@ class NoQuorumV3TestCase(V3TestCase):
     def runTest(self):
         # Reasonably complex AU for testing
         simAu = SimulatedAu('simContent', depth=1, branch=1,
-                            fileTypes=(FILE_TYPE_TEXT + FILE_TYPE_BIN),
+                            fileTypes=[FILE_TYPE_TEXT, FILE_TYPE_BIN],
                             binFileSize=1024,
                             numFiles=20, protocolVersion=3)
 
@@ -1138,11 +1138,9 @@ if __name__ == "__main__":
             if deleteAfterSuccess:
                 for fw in frameworkList:
                     fw.clean()
-
     except KeyboardInterrupt:
         for fw in frameworkList:
             if fw.isRunning: fw.stop()
-
     except Exception, e:
         # Unhandled exception occured.
         log.error("%s" % e)

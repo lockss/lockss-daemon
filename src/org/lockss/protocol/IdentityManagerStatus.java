@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManagerStatus.java,v 1.6 2007-08-17 07:37:02 smorabito Exp $
+ * $Id: IdentityManagerStatus.java,v 1.7 2007-10-09 00:49:56 smorabito Exp $
  */
 
 /*
@@ -48,46 +48,47 @@ public class IdentityManagerStatus
 
   private static final List statusColDescs =
     ListUtil.list(
-		  new ColumnDescriptor("ip", "IP",
+		  new ColumnDescriptor("ip", "Peer",
 				       ColumnDescriptor.TYPE_STRING),
 		  new ColumnDescriptor("lastMessage", "Last Message",
 				       ColumnDescriptor.TYPE_DATE,
-				       "Last time a message that originated " +
-				       "at IP was received."),
+				       "Last time a message was received " +
+				       "from this peer."),
 		  new ColumnDescriptor("lastOp", "Mesage Type",
 				       ColumnDescriptor.TYPE_STRING,
 				       "Last message type that " +
-				       "originated at IP."),
+				       "was sent from this peer."),
 		  new ColumnDescriptor("origTot", "Messages",
 				       ColumnDescriptor.TYPE_INT,
-				       "Total messages received that " +
-				       "originated at IP."),
+				       "Total number of messages received " +
+				       "from this peer."),
 		  new ColumnDescriptor("origLastPoller", "Last Poll",
 		                       ColumnDescriptor.TYPE_DATE,
-		                       "Last time that IP called a poll " +
-		                       "in which this cache participated " +
-		                       "as a voter."),
+		                       "Last time that the local peer " +
+		                       "participated in a poll with this peer."),
                   new ColumnDescriptor("origLastVoter", "Last Vote",
                                        ColumnDescriptor.TYPE_DATE,
-                                       "Last time that IP agreed to " +
+                                       "Last time that this peer " +
                                        "participate as a voter in a poll " +
-                                       "called by this cache."),
+                                       "called by the local peer."),
                   new ColumnDescriptor("origLastInvitation", "Last Invitation",
                                        ColumnDescriptor.TYPE_DATE,
                                        "Last time this peer was invited into " +
-                                       "a poll."),
+                                       "a poll called by the local peer."),
                   new ColumnDescriptor("origTotalInvitations", "Invitations",
-                                       ColumnDescriptor.TYPE_DATE,
+                                       ColumnDescriptor.TYPE_INT,
                                        "Total number of invitations sent to " +
-                                       "this peer."),
+                                       "this peer by the local peer."),
                   new ColumnDescriptor("origPoller", "Polls Called",
                                        ColumnDescriptor.TYPE_INT,
-                                       "Total number of polls in which " +
-                                       "IP participated as the Poller."),
+                                       "Total number of polls called by " +
+                                       "this peer in which the local peer " +
+                                       "voted."),
                   new ColumnDescriptor("origVoter", "Votes Cast",
                                        ColumnDescriptor.TYPE_INT,
-                                       "Total number of polls in which " +
-                                       "IP participated as a Voter."),
+                                       "Total number of polls called by " +
+                                       "the local peer in which this peer " +
+                                       "voted."),
                   new ColumnDescriptor("pollsRejected", "Polls Rejected",
                                        ColumnDescriptor.TYPE_INT,
                                        "Total number of poll requests "
@@ -99,7 +100,7 @@ public class IdentityManagerStatus
 		  );
 
   public String getDisplayName() {
-    return "Cache Identities";
+    return "Peer Identities";
   }
 
   public void populateTable(StatusTable table) {
@@ -107,7 +108,7 @@ public class IdentityManagerStatus
     table.setColumnDescriptors(statusColDescs);
     table.setDefaultSortRules(statusSortRules);
     table.setRows(getRows(key));
-    //       table.setSummaryInfo(getSummaryInfo(key));
+    table.setSummaryInfo(getSummaryInfo(key));
   }
 
   public boolean requiresKey() {
@@ -117,21 +118,33 @@ public class IdentityManagerStatus
   private List getRows(String key) {
     List table = new ArrayList();
     for (PeerIdentity pid : theIdentities.keySet()) {
-      table.add(makeRow(pid, theIdentities.get(pid)));
+      if (!pid.isLocalIdentity()) {
+        table.add(makeRow(pid, theIdentities.get(pid)));
+      }
     }
     return table;
+  }
+  
+  private List getSummaryInfo(String key) {
+    List res = new ArrayList();
+    List<String> localIds = new ArrayList();
+    for (PeerIdentity pid : theIdentities.keySet()) {
+      if (pid.isLocalIdentity()) {
+        localIds.add(pid.getIdString());
+      }
+    }
+    if (!localIds.isEmpty()) {
+      String idList =  StringUtil.separatedString(localIds, ", ");
+      res.add(new StatusTable.SummaryInfo("Local Identities",
+                                          ColumnDescriptor.TYPE_STRING,
+                                          idList));
+    }
+    return res;
   }
 
   private Map makeRow(PeerIdentity pid, PeerIdentityStatus status) {
     Map row = new HashMap();
-    if (pid.isLocalIdentity()) {
-      StatusTable.DisplayedValue val =
-	new StatusTable.DisplayedValue(pid.getIdString());
-      val.setBold(true);
-      row.put("ip", val);
-    } else {
-      row.put("ip", pid.getIdString());
-    }
+    row.put("ip", pid.getIdString());
     row.put("lastMessage", new Long(status.getLastMessageTime()));
     row.put("lastOp", getMessageType(status.getLastMessageOpCode()));
     row.put("origTot", new Long(status.getTotalMessages()));
@@ -140,7 +153,7 @@ public class IdentityManagerStatus
     row.put("origLastPoller",
             new Long(status.getLastPollerTime()));
     row.put("origVoter",
-	    new Long(status.getTotalVoterPolls()));
+            new Long(status.getTotalVoterPolls()));
     row.put("origLastVoter",
             new Long(status.getLastVoterTime()));
     row.put("origLastInvitation",
@@ -154,13 +167,6 @@ public class IdentityManagerStatus
     return row;
   }
 
-  private List getSummaryInfo(String key) {
-    List res = new ArrayList();
-    //       res.add(new StatusTable.SummaryInfo("Total bytes hashed",
-    // 					  ColumnDescriptor.TYPE_INT,
-    // 					  new Integer(0)));
-    return res;
-  }
   
   private String getMessageType(int opcode) {
     if (opcode >= V3LcapMessage.POLL_MESSAGES_BASE && 

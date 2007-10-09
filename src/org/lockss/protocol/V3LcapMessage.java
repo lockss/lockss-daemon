@@ -1,5 +1,5 @@
 /*
- * $Id: V3LcapMessage.java,v 1.32 2007-08-24 00:41:22 smorabito Exp $
+ * $Id: V3LcapMessage.java,v 1.33 2007-10-09 00:49:56 smorabito Exp $
  */
 
 /*
@@ -118,7 +118,7 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
   
   /** For poll messages, the time by which a participant must have voted. 
    * @deprecated */
-  long m_voteDeadline;
+  transient long m_voteDeadline;
 
   /** For poll messages, the time left until a participant must have voted. */
   long m_voteDuration;

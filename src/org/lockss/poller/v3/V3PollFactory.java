@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollFactory.java,v 1.17 2007-10-03 00:35:52 smorabito Exp $
+ * $Id: V3PollFactory.java,v 1.18 2007-10-09 00:49:56 smorabito Exp $
  */
 
 /*
@@ -54,26 +54,6 @@ public class V3PollFactory extends BasePollFactory {
 
   private static final String PREFIX = Configuration.PREFIX + "poll.v3.";
 
-  /** The duration multiplier for the minimum length of a V3 poll.  */
-  public static final String PARAM_DURATION_MULTIPLIER_MIN =
-    PREFIX + "minMultiplier";
-  public static final int DEFAULT_DURATION_MULTIPLIER_MIN = 4;
-  /** The duration multiplier for the maximum length of a V3 poll */
-  public static final String PARAM_DURATION_MULTIPLIER_MAX =
-    PREFIX + "maxMultiplier";
-  public static final int DEFAULT_DURATION_MULTIPLIER_MAX = 5;
-  /** The minimum duration for a V3 poll.  The minimum duration is calculated
-   * from the hash duration and maximum number of participants, and this
-   * parameter is no longer used.
-   * 
-   *  @deprecated */
-  public static final String PARAM_POLL_DURATION_MIN =
-    PREFIX + "minPollDuration";
-  public static long DEFAULT_POLL_DURATION_MIN = 10 * Constants.MINUTE;
-  /** The maximum duration for a V3 poll */
-  public static final String PARAM_POLL_DURATION_MAX = 
-    PREFIX + "maxPollDuration";
-  public static long DEFAULT_POLL_DURATION_MAX = 1 * Constants.YEAR;
   
   /** If set to 'false', do not start V3 Voters when vote requests are
    * received.  This parameter is used by V3PollFactory and PollManager.
@@ -89,13 +69,7 @@ public class V3PollFactory extends BasePollFactory {
     PREFIX + "enableV3Poller";
   public static final boolean DEFAULT_ENABLE_V3_POLLER = true;
 
-  private int minDurationMultiplier = DEFAULT_DURATION_MULTIPLIER_MIN;
-  private int maxDurationMultiplier = DEFAULT_DURATION_MULTIPLIER_MAX;
-  private long minPollDuration = DEFAULT_POLL_DURATION_MIN;
-  private long maxPollDuration = DEFAULT_POLL_DURATION_MAX;
-
   public static Logger log = Logger.getLogger("V3PollFactory");
-
 
   public boolean callPoll(Poll poll, LockssDaemon daemon) {
     poll.startPoll();
@@ -246,9 +220,6 @@ public class V3PollFactory extends BasePollFactory {
         log.debug("Creating V3Voter to participate in poll " + m.getKey());
         voter = new V3Voter(daemon, m);
         voter.startPoll(); // Voters need to be started immediately.
-        if (((V3Voter)voter).isPollCompleted()) {
-          return null;
-        }
       } else {
         log.debug("Have not completed new content crawl, and publisher " +
                   "is not down, so not participating in poll " + m.getKey());
@@ -273,80 +244,15 @@ public class V3PollFactory extends BasePollFactory {
 
   public void setConfig(Configuration newConfig, Configuration oldConfig,
                         Differences changedKeys) {
-    if (changedKeys.contains(PREFIX)) {
-      minDurationMultiplier =
-        newConfig.getInt(PARAM_DURATION_MULTIPLIER_MIN,
-                         DEFAULT_DURATION_MULTIPLIER_MIN);
-      maxDurationMultiplier =
-        newConfig.getInt(PARAM_DURATION_MULTIPLIER_MAX,
-                         DEFAULT_DURATION_MULTIPLIER_MAX);
-      minPollDuration =
-        newConfig.getTimeInterval(PARAM_POLL_DURATION_MIN,
-                                  DEFAULT_POLL_DURATION_MIN);
-      maxPollDuration =
-        newConfig.getTimeInterval(PARAM_POLL_DURATION_MAX,
-                                  DEFAULT_POLL_DURATION_MAX);
-    }
   }
 
-  // Not used.
+  /** Not used.  Only implemented because our interface demands it. */
   public long getMaxPollDuration(int pollType) {
-    // only one type of V3 poll.
-    return maxPollDuration;
-  }
-
-  // Not used.
-  public long getMinPollDuration(int pollType) {
-    // only one type of V3 poll.
-    return minPollDuration;
+    return 0;
   }
 
   public long calcDuration(PollSpec ps, PollManager pm) {
-    CachedUrlSet cus = ps.getCachedUrlSet();
-
-    long hashEst = cus.estimatedHashDuration();
-    log.debug3("CUS estimated hash duration: " + hashEst);
-
-    hashEst = getAdjustedEstimate(hashEst, pm);
-    log.debug3("My adjusted hash duration: " + hashEst);
-
-    // In order to calculate the min and max duration, we'll need to find
-    // the maximum possible number of participants (the size of the invitation
-    // list) from V3Poller, as well as the V3 vote timer padding.
-    int maxPollParticipants =
-      CurrentConfig.getIntParam(V3Poller.PARAM_MAX_POLL_SIZE,
-                                V3Poller.DEFAULT_MAX_POLL_SIZE);
-    
-    long voteDurationPadding =
-      CurrentConfig.getLongParam(V3Poller.PARAM_VOTE_DEADLINE_PADDING,
-                                 V3Poller.DEFAULT_VOTE_DEADLINE_PADDING);
-
-    long voteDurationMultiplier =
-      CurrentConfig.getLongParam(V3Poller.PARAM_VOTE_DURATION_MULTIPLIER,
-                                 V3Poller.DEFAULT_VOTE_DURATION_MULTIPLIER);
-      
-    long minHashTime = hashEst * (maxPollParticipants + 1);
-    
-    // Worst case minimum time to complete the poll.
-    // - Must hash n versions for each participant, plus myself.
-    // - Must account for Vote Deadline Padding and Vote Deadline Multiplier.
-    // - Can apply an additional multiplier for very slow machines, or for 
-    //   testing with run_multiple_daemons, etc.
-    // - Can't be shorter than the vote deadline duration.
-
-    long voteDuration = (hashEst * voteDurationMultiplier) + 
-                        voteDurationPadding;
-    
-    long minPoll = Math.max(minDurationMultiplier * minHashTime +
-			    voteDurationPadding,
-			    voteDuration);
-
-    // Maximum amount of time we want to allow the poll to run.
-    long maxPoll = Math.min(minPoll * maxDurationMultiplier,
-			    maxPollDuration);
-    
-    return findSchedulableDuration(minHashTime, minPoll, maxPoll, 
-                                   minHashTime, pm);
+    return PollUtil.calcDuration(ps, pm);
   }
 
   public boolean isDuplicateMessage(LcapMessage msg, PollManager pm) {

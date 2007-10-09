@@ -1,5 +1,5 @@
 /*
-* $Id: PollFactory.java,v 1.9 2005-10-20 22:57:49 troberts Exp $
+* $Id: PollFactory.java,v 1.10 2007-10-09 00:49:55 smorabito Exp $
  */
 
 /*
@@ -98,8 +98,6 @@ public interface PollFactory {
 			Configuration.Differences changedKeys);
 
   public long getMaxPollDuration(int pollType);
-
-  public long getMinPollDuration(int pollType);
 
   public long calcDuration(PollSpec ps, PollManager pm);
 
