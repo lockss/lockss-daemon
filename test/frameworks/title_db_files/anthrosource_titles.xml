@@ -3416,8 +3416,8 @@
         <property name="attributes.publisher" value="American Anthropological Association" />
       </property>
 
-       <property name="AnthroSourceCultureandAgriculture1977-1995 "> 
-        <property name="title" value="Culture &amp; Agriculture Volume 1977-1995" />
+       <property name="AnthroSourceCultureandAgriculture1977-1995"> 
+        <property name="title" value="Culture &amp; Agriculture 1977-1995" />
         <property name="journalTitle" value="Culture &amp; Agriculture" />
         <property name="plugin" value="org.lockss.plugin.anthrosource.AnthroSourcePlugin" />
         <property name="param.1">
@@ -3430,7 +3430,7 @@
         </property>
         <property name="param.3">
           <property name="key" value="volume_name" />
-          <property name="value" value="1977-1995" />
+          <property name="value" value="-" />
         </property>
         <property name="attributes.publisher" value="American Anthropological Association" />
       </property>
