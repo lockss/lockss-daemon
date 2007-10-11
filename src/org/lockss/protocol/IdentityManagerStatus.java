@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManagerStatus.java,v 1.7 2007-10-09 00:49:56 smorabito Exp $
+ * $Id: IdentityManagerStatus.java,v 1.8 2007-10-11 01:13:26 smorabito Exp $
  */
 
 /*
@@ -54,7 +54,7 @@ public class IdentityManagerStatus
 				       ColumnDescriptor.TYPE_DATE,
 				       "Last time a message was received " +
 				       "from this peer."),
-		  new ColumnDescriptor("lastOp", "Mesage Type",
+		  new ColumnDescriptor("lastOp", "Message Type",
 				       ColumnDescriptor.TYPE_STRING,
 				       "Last message type that " +
 				       "was sent from this peer."),
