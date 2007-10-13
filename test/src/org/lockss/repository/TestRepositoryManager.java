@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryManager.java,v 1.7 2007-08-15 07:09:36 tlipkis Exp $
+ * $Id: TestRepositoryManager.java,v 1.7.6.1 2007-10-13 03:06:09 tlipkis Exp $
  */
 
 /*
@@ -120,6 +120,15 @@ public class TestRepositoryManager extends LockssTestCase {
     assertNotNull(df);
   }
 
+  public void testFindLeastFullRepository () throws Exception {
+    Map repoMap = MapUtil.map("local:one", new MyDF("/one", 1000),
+			      "local:two",  new MyDF("/two", 3000),
+			      "local:three",  new MyDF("/three", 2000));
+    mgr.setRepoMap(repoMap);
+
+    assertEquals("local:two", mgr.findLeastFullRepository());
+  }
+
   public void testSizeCalc () throws Exception {
     SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
     mgr.setSem(sem);
@@ -148,6 +157,9 @@ public class TestRepositoryManager extends LockssTestCase {
   class MyRepositoryManager extends RepositoryManager {
     List nodes = new ArrayList();
     SimpleBinarySemaphore sem;
+    List repos;
+    Map repoMap;
+
     void setSem(SimpleBinarySemaphore sem) {
       this.sem = sem;
     }
@@ -159,6 +171,25 @@ public class TestRepositoryManager extends LockssTestCase {
       nodes.add(node);
       sem.give();
     }    
+    public List<String> getRepositoryList() {
+      if (repos != null) return repos;
+      return super.getRepositoryList();
+    }
+    public void setRepos(List repos) {
+      this.repos = repos;
+    }
+    public PlatformUtil.DF getRepositoryDF(String repoName) {
+      if (repoMap != null) return (PlatformUtil.DF)repoMap.get(repoName);
+      return super.getRepositoryDF(repoName);
+    }
+    public void setRepoMap(Map<String,PlatformUtil.DF> repoMap) {
+      List repos = new ArrayList();
+      this.repoMap = repoMap;
+      for (String repo : repoMap.keySet()) {
+	repos.add(repo);
+      }
+      setRepos(repos);
+    }
   }
 
   class MyMockLockssRepositoryImpl extends LockssRepositoryImpl {
@@ -172,6 +203,13 @@ public class TestRepositoryManager extends LockssTestCase {
     public void setNodeCacheSize(int size) {
       nodeCacheSize = size;
       cnt++;
+    }
+  }
+  class MyDF extends PlatformUtil.DF {
+    MyDF(String path, int avail) {
+      super();
+      this.path = path;
+      this.avail = avail;
     }
   }
 }

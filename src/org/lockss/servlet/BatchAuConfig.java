@@ -1,5 +1,5 @@
 /*
- * $Id: BatchAuConfig.java,v 1.37 2007-10-01 08:11:52 tlipkis Exp $
+ * $Id: BatchAuConfig.java,v 1.37.2.1 2007-10-13 03:06:10 tlipkis Exp $
  */
 
 /*
@@ -418,15 +418,11 @@ public class BatchAuConfig extends LockssServlet {
 
     if (verb.isAdd) {
       // display df for Add even if only one repo
-      OrderedMap repoChoices = new LinkedMap();
-      for (Iterator iter = repos.iterator(); iter.hasNext(); ) {
-	String repo = (String)iter.next();
-	PlatformUtil.DF df = remoteApi.getRepositoryDF(repo);
-	repoChoices.put(repo, df);
-      }
-      frm.add(ServletUtil.makeRepoTable(this, repoChoices, KEY_DEFAULT_REPO));
+      Map repoMap = remoteApi.getRepositoryMap();
+      frm.add(ServletUtil.makeRepoTable(this, remoteApi,
+					repoMap, KEY_DEFAULT_REPO));
       if (repoFlg) {
-	session.setAttribute(SESSION_KEY_REPO_MAP, repoChoices);
+	session.setAttribute(SESSION_KEY_REPO_MAP, repoMap);
       }
     }
 

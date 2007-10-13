@@ -1,5 +1,5 @@
 /*
- * $Id: Exploder.java,v 1.3 2007-10-01 08:13:21 tlipkis Exp $
+ * $Id: Exploder.java,v 1.3.2.1 2007-10-13 03:06:10 tlipkis Exp $
  */
 
 /*
@@ -42,6 +42,7 @@ import org.lockss.plugin.exploded.*;
 import org.lockss.crawler.BaseCrawler;
 import org.lockss.config.*;
 import org.lockss.app.LockssDaemon;
+import org.lockss.repository.*;
 import org.lockss.state.HistoryRepository;
 import org.lockss.filter.StringFilter;
 
@@ -69,6 +70,7 @@ public abstract class Exploder {
   protected boolean storeArchive;
   protected String archiveUrl = null;
   protected Hashtable addTextTo = null;
+  protected LockssDaemon daemon = null;
   protected PluginManager pluginMgr = null;
   protected Hashtable touchedAus = new Hashtable();
 
@@ -95,7 +97,8 @@ public abstract class Exploder {
     archiveUrl = uc.getUrl();
     explodeFiles = explode;
     storeArchive = store;
-    pluginMgr = crawler.getDaemon().getPluginManager();
+    daemon = crawler.getDaemon();
+    pluginMgr = daemon.getPluginManager();
   }
 
   /**
@@ -119,38 +122,7 @@ public abstract class Exploder {
     }
     if (au == null) {
       // There's no AU for this baseUrl,  so create one
-      CIProperties props = ae.getAuProps();
-      if (props == null) {
-	props = new CIProperties();
-	props.put(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
-      }
-      props.put(ConfigParamDescr.PUB_NEVER.getKey(), "true");
-      String pluginName = CurrentConfig.getParam(PARAM_EXPLODED_PLUGIN_NAME,
-						 DEFAULT_EXPLODED_PLUGIN_NAME);
-      String key = PluginManager.pluginKeyFromName(pluginName);
-      logger.debug3(pluginName + " has key: " + key);
-      Plugin plugin = pluginMgr.getPlugin(key);
-      if (plugin == null) {
-	logger.error(pluginName + " key " + key + " not found");
-	throw new IOException(pluginName + " not found");
-      }
-      logger.debug3(pluginName + ": " + plugin.toString());
-      if (logger.isDebug3()) {
-	for (Enumeration en = props.keys(); en.hasMoreElements(); ) {
-	  String prop = (String)en.nextElement();
-	  logger.debug3("AU prop key " + prop + " value " + props.get(prop));
-	}
-      }
-      try {
-	au = pluginMgr.createAndSaveAuConfiguration(plugin, props);
-      } catch (ArchivalUnit.ConfigurationException ex) {
-	logger.error("createAndSaveAuConfiguration() threw " + ex.toString());
-	throw new IOException(pluginName + " not initialized for " + baseUrl);
-      }
-      if (au == null) {
-	logger.error("Failed to create new AU", new Throwable());
-	throw new IOException("Can't create au for " + baseUrl);
-      }
+      au = createAu(ae, baseUrl);
     }
     if (!(au instanceof ExplodedArchivalUnit)) {
       logger.error("New AU not ExplodedArchivalUnit " + au.toString(),
@@ -170,6 +142,50 @@ public abstract class Exploder {
     newUc.storeContentIn(newUrl, ae.getInputStream(), ae.getHeaderFields());
     crawler.getCrawlerStatus().signalUrlFetched(newUrl);
     // crawler.getCrawlerStatus().signalMimeTypeOfUrl(newUrl, mimeType);
+  }
+
+  protected ArchivalUnit createAu(ArchiveEntry ae, String baseUrl)
+      throws IOException {
+    CIProperties props = ae.getAuProps();
+    if (props == null) {
+      props = new CIProperties();
+      props.put(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
+    }
+    props.put(ConfigParamDescr.PUB_NEVER.getKey(), "true");
+    addRepoProp(props);
+    String pluginName = CurrentConfig.getParam(PARAM_EXPLODED_PLUGIN_NAME,
+					       DEFAULT_EXPLODED_PLUGIN_NAME);
+    String key = PluginManager.pluginKeyFromName(pluginName);
+    logger.debug3(pluginName + " has key: " + key);
+    Plugin plugin = pluginMgr.getPlugin(key);
+    if (plugin == null) {
+      logger.error(pluginName + " key " + key + " not found");
+      throw new IOException(pluginName + " not found");
+    }
+    if (logger.isDebug3()) {
+      logger.debug3("Create AU, plugin: " + pluginName +
+		    ": " + plugin.toString());
+      logger.debug3("props: " + props);
+    }
+    try {
+      ArchivalUnit au = pluginMgr.createAndSaveAuConfiguration(plugin, props);
+      if (au == null) {
+	logger.error("Failed to create new AU", new Throwable());
+	throw new IOException("Can't create au for " + baseUrl);
+      }
+      return au;
+    } catch (ArchivalUnit.ConfigurationException ex) {
+      logger.error("createAndSaveAuConfiguration() threw " + ex.toString());
+      throw new IOException(pluginName + " not initialized for " + baseUrl);
+    }
+  }
+
+  protected void addRepoProp(Properties props) {
+    RepositoryManager repoMgr = daemon.getRepositoryManager();
+    String bestRepo = repoMgr.findLeastFullRepository();
+    if (bestRepo != null) {
+      props.put(PluginManager.AU_PARAM_REPOSITORY, bestRepo);
+    }
   }
 
   protected void handleAddText(ArchiveEntry ae) {
