@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryManager.java,v 1.11 2007-08-15 07:09:36 tlipkis Exp $
+ * $Id: RepositoryManager.java,v 1.12 2007-10-13 03:16:57 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,8 @@ package org.lockss.repository;
 
 import java.net.*;
 import java.util.*;
+import org.apache.commons.collections.map.LinkedMap;
+
 import org.lockss.app.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
@@ -171,7 +173,7 @@ public class RepositoryManager
 
   /** Return list of known repository names.  Needs a registration
    * mechanism if ever another repository implementation. */
-  public List getRepositoryList() {
+  public List<String> getRepositoryList() {
     return repoList;
   }
 
@@ -183,6 +185,32 @@ public class RepositoryManager
     } catch (PlatformUtil.UnsupportedException e) {
       return null;
     }
+  }
+
+  public Map<String,PlatformUtil.DF> getRepositoryMap() {
+    Map<String,PlatformUtil.DF> repoMap = new LinkedMap();
+    for (String repo : getRepositoryList()) {
+      repoMap.put(repo, getRepositoryDF(repo));
+    }
+    return repoMap;
+  }
+
+  public String findLeastFullRepository() {
+    return findLeastFullRepository(getRepositoryMap());
+  }
+
+  public String findLeastFullRepository(Map<String,PlatformUtil.DF> repoMap) {
+    String mostFree = null;
+    for (String repo : repoMap.keySet()) {
+      PlatformUtil.DF df = repoMap.get(repo);
+      if (df != null) {
+	if (mostFree == null ||
+	    (repoMap.get(mostFree)).getAvail() < df.getAvail()) {
+	  mostFree = repo;
+	}
+      }
+    }
+    return mostFree;
   }
 
   public PlatformUtil.DF getDiskWarnThreshold() {

@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.50 2007-08-16 02:22:17 tlipkis Exp $
+ * $Id: ServletUtil.java,v 1.51 2007-10-13 03:16:57 tlipkis Exp $
  */
 
 /*
@@ -886,21 +886,9 @@ public class ServletUtil {
     tbl.addHeading("Free");
     tbl.addHeading("%Full");
 
-    ListOrderedMap repomap = new ListOrderedMap();
-    String mostFree = null;
-    for (Iterator iter = repos.iterator(); iter.hasNext(); ) {
-      String repo = (String)iter.next();
-      PlatformUtil.DF df = remoteApi.getRepositoryDF(repo);
-      repomap.put(repo, df);
-      if (df != null) {
-	if (mostFree == null ||
-	    ((PlatformUtil.DF)repomap.get(mostFree)).getAvail() <
-	    df.getAvail()) {
-	  mostFree = repo;
-	}
-      }
-    }
-    for (Iterator iter = repomap.entrySet().iterator(); iter.hasNext(); ) {
+    Map repoMap = remoteApi.getRepositoryMap();
+    String mostFree = remoteApi.findLeastFullRepository(repoMap);
+    for (Iterator iter = repoMap.entrySet().iterator(); iter.hasNext(); ) {
       Map.Entry entry = (Map.Entry)iter.next();
       String repo = (String)entry.getKey();
       PlatformUtil.DF df = (PlatformUtil.DF)entry.getValue();
@@ -1181,6 +1169,7 @@ public class ServletUtil {
   }
 
   public static Element makeRepoTable(LockssServlet servlet,
+				      RemoteApi remoteApi,
                                       Map repoMap,
                                       String keyDefaultRepo) {
     RepositoryManager repoMgr =
@@ -1204,22 +1193,8 @@ public class ServletUtil {
     tbl.addHeading("Free");
     tbl.addHeading("%Full");
 
-    String mostFree = null;
-    if (isChoice) {
-      // find disk with most free space
-      for (Iterator iter = repoMap.entrySet().iterator(); iter.hasNext(); ) {
-	Map.Entry entry = (Map.Entry)iter.next();
-	String repo = (String)entry.getKey();
-	PlatformUtil.DF df = (PlatformUtil.DF)entry.getValue();
-	if (df != null) {
-	  if (mostFree == null ||
-	      df.getAvail() >
-	      ((PlatformUtil.DF)repoMap.get(mostFree)).getAvail()) {
-	    mostFree = repo;
-	  }
-	}
-      }
-    }
+    String mostFree =
+      isChoice ? remoteApi.findLeastFullRepository(repoMap) : null;
     int ix = 0;
     // Populate repo key table
     for (Iterator iter = repoMap.entrySet().iterator(); iter.hasNext(); ) {

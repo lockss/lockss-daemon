@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.62 2007-09-12 18:33:10 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.63 2007-10-13 03:16:57 tlipkis Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.io.*;
 import java.text.*;
 import java.util.*;
 import java.util.zip.*;
+
 import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
@@ -406,6 +407,18 @@ public class RemoteApi
 
   public PlatformUtil.DF getRepositoryDF(String repoName) {
     return repoMgr.getRepositoryDF(repoName);
+  }
+
+  public Map<String,PlatformUtil.DF> getRepositoryMap() {
+    return repoMgr.getRepositoryMap();
+  }
+
+  public String findLeastFullRepository() {
+    return repoMgr.findLeastFullRepository();
+  }
+
+  public String findLeastFullRepository(Map<String,PlatformUtil.DF> repoMap) {
+    return repoMgr.findLeastFullRepository(repoMap);
   }
 
   ArchivalUnit getAuFromId(String auid) {
