@@ -29,6 +29,8 @@ public class TestElsevierExploderHelper extends LockssTestCase {
     assertEquals(ae.getRestOfUrl(), pathStem + pdfPath);
     assertEquals(ae.getHeaderFields().get("Content-Type"), "application/pdf");
     assertEquals(ae.getHeaderFields().get("Content-Length"), "7654");
+    // XXX - check addText
+    // XXX - check auProps
   }
 
   public void testProcessCorrectXmlEntry() throws Exception {
