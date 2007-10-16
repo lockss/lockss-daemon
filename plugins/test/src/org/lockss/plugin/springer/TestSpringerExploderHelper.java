@@ -24,7 +24,7 @@ public class TestSpringerExploderHelper extends LockssTestCase {
   };
   private static final String jpgPath = 
     "12345_2004_Article_34567.jpg";
-  private static final String urlStem = "http://www.springer.com/CLOCKSS/";
+  private static final String urlStem = "http://springer.clockss.org/";
 
   public void testProcessCorrectPdfEntry() throws Exception {
     ArchiveEntry ae = new ArchiveEntry(basePath+ pathStem + pdfPath,
@@ -46,10 +46,10 @@ public class TestSpringerExploderHelper extends LockssTestCase {
     SpringerExploderHelper seh = new SpringerExploderHelper();
 
     seh.process(ae);
-    assertEquals(ae.getBaseUrl(), urlStem + basePath);
-    assertEquals(ae.getRestOfUrl(), pathStem + xmlPath);
-    assertEquals(ae.getHeaderFields().get("Content-Type"), "text/xml");
-    assertEquals(ae.getHeaderFields().get("Content-Length"), "76543");
+    assertEquals(urlStem + basePath, ae.getBaseUrl());
+    assertEquals(pathStem + xmlPath, ae.getRestOfUrl());
+    assertEquals("application/xml", ae.getHeaderFields().get("Content-Type"));
+    assertEquals("76543", ae.getHeaderFields().get("Content-Length"));
   }
 
   public void testProcessCorrectMetaEntry() throws Exception {
@@ -60,7 +60,7 @@ public class TestSpringerExploderHelper extends LockssTestCase {
     seh.process(ae);
     assertEquals(urlStem + basePath, ae.getBaseUrl());
     assertEquals(pathStem + metaPath, ae.getRestOfUrl());
-    assertEquals("text/xml", ae.getHeaderFields().get("Content-Type"));
+    assertEquals("application/xml", ae.getHeaderFields().get("Content-Type"));
     assertEquals("765432", ae.getHeaderFields().get("Content-Length"));
   }
 
@@ -92,10 +92,10 @@ public class TestSpringerExploderHelper extends LockssTestCase {
     SpringerExploderHelper seh = new SpringerExploderHelper();
 
     seh.process(ae);
-    assertEquals(ae.getBaseUrl(), urlStem + basePath);
-    assertEquals(ae.getRestOfUrl(), pathStem + jpgPath);
-    assertNull(ae.getHeaderFields().get("Content-Type"));
-    assertEquals(ae.getHeaderFields().get("Content-Length"), "7");
+    assertEquals(urlStem + basePath, ae.getBaseUrl());
+    assertEquals(pathStem + jpgPath, ae.getRestOfUrl());
+    assertEquals("image/jpeg", ae.getHeaderFields().get("Content-Type"));
+    assertEquals("7", ae.getHeaderFields().get("Content-Length"));
   }
 
  }

@@ -1,5 +1,5 @@
 /*
- * $Id: Exploder.java,v 1.4 2007-10-13 03:16:57 tlipkis Exp $
+ * $Id: Exploder.java,v 1.5 2007-10-16 23:47:25 dshr Exp $
  */
 
 /*
@@ -72,7 +72,7 @@ public abstract class Exploder {
   protected Hashtable addTextTo = null;
   protected LockssDaemon daemon = null;
   protected PluginManager pluginMgr = null;
-  protected Hashtable touchedAus = new Hashtable();
+  protected Set touchedAus = new HashSet();
 
   protected static final String indexTag = "<!-- Next Entry Goes Here -->\n";
   protected static final String manifestPageTag = "</body>\n";
@@ -125,10 +125,11 @@ public abstract class Exploder {
       au = createAu(ae, baseUrl);
     }
     if (!(au instanceof ExplodedArchivalUnit)) {
-      logger.error("New AU not ExplodedArchivalUnit " + au.toString(),
-		   new Throwable());
+      IOException ex = new IOException(au.toString() + " wrong type");
+      logger.error("New AU not ExplodedArchivalUnit " + au.toString(), ex);
+      throw ex;
     }
-    touchedAus.put(baseUrl, au);
+    touchedAus.add(au);
     String newUrl = baseUrl + restOfUrl;
     // Create a new UrlCacher from the ArchivalUnit and store the
     // element using it.
@@ -136,12 +137,13 @@ public abstract class Exploder {
     BitSet flags = newUc.getFetchFlags();
     flags.set(UrlCacher.DONT_CLOSE_INPUT_STREAM_FLAG);
     newUc.setFetchFlags(flags);
-    // XXX either fetch or storeContent synthesizes some properties
-    // XXX for the URL - check and move the place to storeContent
     logger.debug3("Storing " + newUrl + " in " + au.toString());
-    newUc.storeContentIn(newUrl, ae.getInputStream(), ae.getHeaderFields());
+    CIProperties newProps = ae.getHeaderFields();
+    newUc.storeContentIn(newUrl, ae.getInputStream(), newProps);
     crawler.getCrawlerStatus().signalUrlFetched(newUrl);
-    // crawler.getCrawlerStatus().signalMimeTypeOfUrl(newUrl, mimeType);
+    String mimeType = (String)newProps.get(CachedUrl.PROPERTY_CONTENT_TYPE);
+    crawler.getCrawlerStatus().signalMimeTypeOfUrl(newUrl, mimeType);
+    // XXX other stats to update?
   }
 
   protected ArchivalUnit createAu(ArchiveEntry ae, String baseUrl)
@@ -189,23 +191,23 @@ public abstract class Exploder {
   }
 
   protected void handleAddText(ArchiveEntry ae) {
-    Hashtable addText = ae.getAddText();
+    Hashtable stringsToAdd = ae.getAddText();
     String addBaseUrl = ae.getBaseUrl();
-    if (addText != null) {
+    if (stringsToAdd != null) {
       if (addTextTo == null) {
 	addTextTo = new Hashtable();
       }
-      for (Enumeration en = addText.keys(); en.hasMoreElements(); ) {
+      for (Enumeration en = stringsToAdd.keys(); en.hasMoreElements(); ) {
 	String addToUrl = (String)en.nextElement();
 	String oldText = "";
 	if (addTextTo.containsKey(addToUrl)) {
 	  oldText = (String)addTextTo.get(addToUrl);
 	}
-	String addition = (String)addText.get(addToUrl);
+	String addition = (String)stringsToAdd.get(addToUrl);
 	if (oldText.indexOf(addition) < 0) {
 	  oldText += addition;
 	  addTextTo.put(addToUrl, oldText);
-	  logger.debug3("addText for " + addToUrl +
+	  logger.debug3("stringsToAdd for " + addToUrl +
 			" now " + oldText);
 	} else {
 	  logger.debug3(oldText + " contains " + addition);
@@ -274,6 +276,9 @@ public abstract class Exploder {
     }
   }
 
+  // XXX move this to a MimeUtil class.  Needs ability to have local
+  // XXX override of some map entries.
+  // XXX One array with alternating keys and values is more readeable
   protected static final String[] extension = {
     ".html",
     ".htm",
@@ -289,6 +294,7 @@ public abstract class Exploder {
     ".sml",
     ".tiff",
     ".doc",
+    ".meta", // XXX for Springer - remove
   };
   protected static final String[] contentType = {
     "text/html",
@@ -305,6 +311,7 @@ public abstract class Exploder {
     "application/sgml",
     "image/tiff",
     "application/msword",
+    "application/xml", // XXX for Springer - remove
   };
   private static HashMap mimeMap = null;
 
@@ -315,6 +322,7 @@ public abstract class Exploder {
   public static CIProperties syntheticHeaders(String url, long size) {
     CIProperties ret = new CIProperties();
 
+    // XXX needs static initializer
     if (mimeMap == null) {
       mimeMap = new HashMap();
       for (int i = 0; i < extension.length; i++) {

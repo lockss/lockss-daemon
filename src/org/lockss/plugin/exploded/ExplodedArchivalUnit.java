@@ -1,5 +1,5 @@
 /*
- * $Id: ExplodedArchivalUnit.java,v 1.2 2007-09-24 19:20:02 dshr Exp $
+ * $Id: ExplodedArchivalUnit.java,v 1.3 2007-10-16 23:47:25 dshr Exp $
  */
 
 /*
@@ -48,7 +48,6 @@ import org.lockss.state.AuState;
 
 public class ExplodedArchivalUnit extends BaseArchivalUnit {
   private String m_explodedBaseUrl = null;
-  private String m_auName = null;
   protected Logger logger = Logger.getLogger("ExplodedArchivalUnit");
 
   public ExplodedArchivalUnit(ExplodedPlugin plugin) {
@@ -125,7 +124,7 @@ public class ExplodedArchivalUnit extends BaseArchivalUnit {
       if (url.startsWith(m_explodedBaseUrl)) {
 	return INCLUDE;
       }
-      return IGNORE;
+      return EXCLUDE;
     }
   }
   /**

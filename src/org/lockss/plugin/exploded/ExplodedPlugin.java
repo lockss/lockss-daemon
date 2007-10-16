@@ -1,5 +1,5 @@
 /*
- * $Id: ExplodedPlugin.java,v 1.2 2007-09-24 19:20:02 dshr Exp $
+ * $Id: ExplodedPlugin.java,v 1.3 2007-10-16 23:47:25 dshr Exp $
  */
 
 /*
@@ -50,7 +50,7 @@ import org.lockss.util.*;
 public class ExplodedPlugin extends BasePlugin {
   protected static final Logger log = Logger.getLogger("ExplodedPlugin");
 
-  private static String PLUGIN_NAME = "Exploded";
+  private static String PLUGIN_NAME = "Exploded Plugin";
   private static String CURRENT_VERSION = "1";
 
   public static final String PREFIX =
@@ -66,35 +66,12 @@ public class ExplodedPlugin extends BasePlugin {
   protected ArchivalUnit createAu0(Configuration auConfig)
       throws ArchivalUnit.ConfigurationException {
     // create a new archival unit
-    ArchivalUnit au = newExplodedArchivalUnit();
+    ArchivalUnit au = new ExplodedArchivalUnit(this);
 
     // Now configure it.
     au.setConfiguration(auConfig);
 
     return au;
-  }
-
-  protected ExplodedArchivalUnit newExplodedArchivalUnit() {
-    return new ExplodedArchivalUnit(this);
-  }
-
-  /**
-   * The global config has changed
-   */
-  protected void setConfig(Configuration newConfig,
-			   Configuration prevConfig,
-			   Configuration.Differences changedKeys) {
-    if (changedKeys.contains(PREFIX)) {
-      for (Iterator iter = getAllAus().iterator(); iter.hasNext(); ) {
-	//  They should all be ExplodedArchivalUnits, but just in case...
-	try {
-	  ExplodedArchivalUnit au = (ExplodedArchivalUnit)iter.next();
-	  au.setConfig(newConfig, prevConfig, changedKeys);
-	} catch (Exception e) {
-	  log.warning("setConfig: " + this, e);
-	}
-      }
-    }
   }
 
   /**
