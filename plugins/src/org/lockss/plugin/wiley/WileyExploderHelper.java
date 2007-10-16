@@ -1,5 +1,5 @@
 /*
- * $Id: WileyExploderHelper.java,v 1.2 2007-09-24 18:37:10 dshr Exp $
+ * $Id: WileyExploderHelper.java,v 1.2.2.1 2007-10-16 23:48:10 dshr Exp $
  */
 
 /*
@@ -78,7 +78,7 @@ import org.lockss.crawler.Exploder;
  * they are left null.
  */
 public class WileyExploderHelper implements ExploderHelper {
-  public static final String BASE_URL_STEM = "http://www.wiley.com/CLOCKSS/";
+  public static final String BASE_URL_STEM = "http://wiley.clockss.org/";
   private static final int JOU_INDEX = 0;
   private static final int YER_INDEX = 1;
   private static final int VOL_INDEX = 2;
@@ -109,18 +109,11 @@ public class WileyExploderHelper implements ExploderHelper {
 	restOfUrl += "/";
       }
     }
-    CIProperties headerFields = Exploder.syntheticHeaders(restOfUrl,
+    CIProperties headerFields = Exploder.syntheticHeaders(baseUrl + restOfUrl,
 							  ae.getSize());
-    headerFields.setProperty(CachedUrl.PROPERTY_NODE_URL,
-			     baseUrl + restOfUrl);
     logger.debug(ae.getName() + " mapped to " +
 		 baseUrl + " plus " + restOfUrl);
-    for (Enumeration e = headerFields.propertyNames();
-	 e.hasMoreElements(); ) {
-      String key = (String)e.nextElement();
-      String value = (String)headerFields.get(key);
-      logger.debug3(key + " = " + value);
-    }
+    logger.debug3(baseUrl + restOfUrl + " props " + headerFields);
     ae.setBaseUrl(baseUrl);
     ae.setRestOfUrl(restOfUrl);
     ae.setHeaderFields(headerFields);
@@ -156,14 +149,9 @@ public class WileyExploderHelper implements ExploderHelper {
     props.put(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
     props.put(ConfigParamDescr.PUBLISHER_NAME.getKey(),
 	      "Wiley");
-    props.put(ConfigParamDescr.JOURNAL_ID.getKey(),
+    props.put(ConfigParamDescr.JOURNAL_ISSN.getKey(),
 	      pathElements[JOU_INDEX]);
-    for (Enumeration e = props.propertyNames();
-	 e.hasMoreElements(); ) {
-      String key = (String)e.nextElement();
-      String value = (String)props.get(key);
-      logger.debug3(key + " = " + value);
-    }
+    logger.debug3(baseUrl + restOfUrl + " AU props " + props);
     ae.setAuProps(props);
   }
 }

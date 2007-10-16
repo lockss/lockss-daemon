@@ -17,7 +17,7 @@ public class TestElsevierExploderHelper extends LockssTestCase {
     basePath + basePath;
   private static final String jpgPath = 
     "fx1.jpg";
-  private static final String urlStem = "http://www.elsevier.com/CLOCKSS/";
+  private static final String urlStem = "http://elsevier.clockss.org/";
 
   public void testProcessCorrectPdfEntry() throws Exception {
     ArchiveEntry ae = new ArchiveEntry(basePath+ pathStem + pdfPath,
@@ -37,10 +37,10 @@ public class TestElsevierExploderHelper extends LockssTestCase {
     ElsevierExploderHelper eeh = new ElsevierExploderHelper();
 
     eeh.process(ae);
-    assertEquals(ae.getBaseUrl(), urlStem + basePath);
-    assertEquals(ae.getRestOfUrl(), pathStem + xmlPath);
-    assertEquals(ae.getHeaderFields().get("Content-Type"), "application/xml");
-    assertEquals(ae.getHeaderFields().get("Content-Length"), "76543");
+    assertEquals(urlStem + basePath, ae.getBaseUrl());
+    assertEquals(pathStem + xmlPath, ae.getRestOfUrl());
+    assertEquals("application/xml", ae.getHeaderFields().get("Content-Type"));
+    assertEquals("76543", ae.getHeaderFields().get("Content-Length"));
   }
 
   public void testProcessShortName() throws Exception {
@@ -59,10 +59,10 @@ public class TestElsevierExploderHelper extends LockssTestCase {
     ElsevierExploderHelper eeh = new ElsevierExploderHelper();
 
     eeh.process(ae);
-    assertEquals(ae.getBaseUrl(), urlStem + basePath);
-    assertEquals(ae.getRestOfUrl(), pathStem + jpgPath);
+    assertEquals(urlStem + basePath, ae.getBaseUrl());
+    assertEquals(pathStem + jpgPath, ae.getRestOfUrl());
     assertEquals("image/jpeg", ae.getHeaderFields().get("Content-Type"));
-    assertEquals(ae.getHeaderFields().get("Content-Length"), "7");
+    assertEquals("7", ae.getHeaderFields().get("Content-Length"));
   }
 
  }

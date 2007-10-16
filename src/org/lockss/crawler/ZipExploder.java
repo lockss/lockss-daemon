@@ -1,5 +1,5 @@
 /*
- * $Id: ZipExploder.java,v 1.3 2007-09-29 14:15:55 dshr Exp $
+ * $Id: ZipExploder.java,v 1.3.2.1 2007-10-16 23:48:11 dshr Exp $
  */
 
 /*
@@ -134,6 +134,7 @@ public class ZipExploder extends Exploder {
 	// Leave stub archive behind to prevent re-fetch
 	byte[] dummy = { 0, };
 	urlCacher.storeContent(new ByteArrayInputStream(dummy), arcProps);
+	// XXX update stats here
       }
       reTry = maxRetries + 1;
     } catch (IOException ex) {
@@ -149,9 +150,8 @@ public class ZipExploder extends Exploder {
     if (reTry >= maxRetries) {
       // Make it look like a new crawl finished on each AU to which
       // URLs were added.
-      for (Enumeration en = touchedAus.keys(); en.hasMoreElements(); ) {
-	String key = (String)en.nextElement();
-	ExplodedArchivalUnit eau = (ExplodedArchivalUnit)touchedAus.get(key);
+      for (Iterator it = touchedAus.iterator(); it.hasNext(); ) {
+	ExplodedArchivalUnit eau = (ExplodedArchivalUnit)it.next();
 	crawler.getDaemon().getNodeManager(eau).newContentCrawlFinished();
       }
     }

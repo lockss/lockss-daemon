@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerExploderHelper.java,v 1.2 2007-09-24 18:37:10 dshr Exp $
+ * $Id: SpringerExploderHelper.java,v 1.2.2.1 2007-10-16 23:48:10 dshr Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.util.*;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
+import org.lockss.crawler.Exploder;
 
 /**
  * This ExploderHelper encapsulates knowledge about the way
@@ -76,6 +77,7 @@ import org.lockss.plugin.*;
  * they are left null.
  */
 public class SpringerExploderHelper implements ExploderHelper {
+  private static final String BASE_URL_STEM = "http://springer.clockss.org/";
   static final String[] tags = { "PUB=", "JOU=", "VOL=", "ISU=", "ART=" };
   private static final int PUB_INDEX = 0;
   private static final int JOU_INDEX = 1;
@@ -90,7 +92,7 @@ public class SpringerExploderHelper implements ExploderHelper {
   }
 
   public void process(ArchiveEntry ae) {
-    String baseUrl = "http://www.springer.com/CLOCKSS/";
+    String baseUrl = BASE_URL_STEM;
     // Parse the name
     String[] pathElements = ae.getName().split("/");
     if (pathElements.length < minimumPathLength) {
@@ -113,36 +115,15 @@ public class SpringerExploderHelper implements ExploderHelper {
 	restOfUrl += "/";
       }
     }
-    CIProperties headerFields = new CIProperties();
-    String fileName = pathElements[pathElements.length-1];
-    String contentType = null;
-    if (fileName.endsWith(".pdf")) {
-      contentType = "application/pdf";
-    } else if (fileName.endsWith(".xml") ||
-	       fileName.endsWith(".xml.meta")) {
-      contentType = "text/xml";
-    }
-    if (contentType != null) {
-      headerFields.setProperty("Content-Type", contentType);
-      headerFields.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE,
-			       contentType);
-    }
-    headerFields.setProperty("Content-Length",
-			     Long.toString(ae.getSize()));
-    headerFields.setProperty(CachedUrl.PROPERTY_NODE_URL,
-			     baseUrl + restOfUrl);
+    CIProperties headerFields = Exploder.syntheticHeaders(baseUrl + restOfUrl,
+							  ae.getSize());
     logger.debug(ae.getName() + " mapped to " +
 		 baseUrl + " plus " + restOfUrl);
-    for (Enumeration e = headerFields.propertyNames();
-	 e.hasMoreElements(); ) {
-      String key = (String)e.nextElement();
-      String value = (String)headerFields.get(key);
-      logger.debug(key + " = " + value);
-    }
+    logger.debug3(baseUrl + restOfUrl + " props " + headerFields);
     ae.setBaseUrl(baseUrl);
     ae.setRestOfUrl(restOfUrl);
     ae.setHeaderFields(headerFields);
-    if (fileName.endsWith(".pdf")) {
+    if (restOfUrl.endsWith(".pdf")) {
       // XXX should have issue TOC
       // Now add a link for the URL to the volume TOC page at
       // baseUrl + /VOL=bletch/index.html
@@ -159,7 +140,7 @@ public class SpringerExploderHelper implements ExploderHelper {
 	"vol #" + pathElements[VOL_INDEX].substring(4) + "</a></li>\n";
       logger.debug3("journalTOC = " + journalTOC + " link " + link);
       ae.addTextTo(journalTOC, link);
-    } else if (fileName.endsWith(".xml")) {
+    } else if (restOfUrl.endsWith(".xml")) {
       // XXX it would be great to be able to get the DOI from the
       // XXX metadata files and put it in the text here
     }
@@ -167,7 +148,7 @@ public class SpringerExploderHelper implements ExploderHelper {
     props.put(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
     props.put(ConfigParamDescr.PUBLISHER_NAME.getKey(),
 	      pathElements[PUB_INDEX].substring(4));
-    props.put(ConfigParamDescr.JOURNAL_ID.getKey(),
+    props.put(ConfigParamDescr.JOURNAL_ISSN.getKey(),
 	      pathElements[JOU_INDEX].substring(4));
     ae.setAuProps(props);
   }

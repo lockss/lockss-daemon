@@ -1,5 +1,5 @@
 /*
- * $Id: FuncTarExploder2.java,v 1.3 2007-10-01 08:13:21 tlipkis Exp $
+ * $Id: FuncTarExploder2.java,v 1.3.2.1 2007-10-16 23:48:11 dshr Exp $
  */
 
 /*
@@ -238,7 +238,7 @@ public class FuncTarExploder2 extends LockssTestCase {
   }
 
   private static String URL_PREFIX =
-    "http://www.elsevier.com/CLOCKSS/20070004";
+    "http://elsevier.clockss.org/20070004";
   String[] url = {
     URL_PREFIX + "/07700618/main.raw",
     URL_PREFIX + "/07700618/main.pdf",

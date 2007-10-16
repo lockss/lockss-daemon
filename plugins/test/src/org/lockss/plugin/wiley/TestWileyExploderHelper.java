@@ -18,7 +18,7 @@ public class TestWileyExploderHelper extends LockssTestCase {
     basePath + basePath;
   private static final String jpgPath = 
     "image_m/mfig123.jpg";
-  private static final String urlStem = "http://www.wiley.com/CLOCKSS/";
+  private static final String urlStem = "http://wiley.clockss.org/";
 
   public void testProcessCorrectPdfEntry() throws Exception {
     ArchiveEntry ae = new ArchiveEntry(basePath + year + pathStem + pdfPath,

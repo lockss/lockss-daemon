@@ -1,5 +1,5 @@
 /*
- * $Id: ElsevierExploderHelper.java,v 1.2 2007-09-24 19:27:35 dshr Exp $
+ * $Id: ElsevierExploderHelper.java,v 1.2.2.1 2007-10-16 23:48:10 dshr Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.util.*;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
+import org.lockss.crawler.Exploder;
 
 /**
  * This ExploderHelper encapsulates knowledge about the way
@@ -71,43 +72,16 @@ import org.lockss.plugin.*;
 public class ElsevierExploderHelper implements ExploderHelper {
   private static final int JOU_INDEX = 0;
   private static final int ART_INDEX = 1;
+  private static final String BASE_URL = "http://elsevier.clockss.org/";
   static final int endOfBase = 1;
   static final int minimumPathLength = 3;
   static Logger logger = Logger.getLogger("ElsevierExploderHelper");
-  private static final String[] extensions = {
-    ".pdf",
-    ".raw",
-    ".sgm",
-    ".gif",
-    ".jpg",
-    ".xml",
-    ".toc",
-    ".fil",
-    ".sml",
-  };
-  private static final String[] mimeType = {
-    "application/pdf",
-    "text/plain",
-    "application/sgml",
-    "image/gif",
-    "image/jpeg",
-    "application/xml",
-    "text/plain", // XXX check
-    "text/plain", // XXX check
-    "application/sgml",
-  };
-  private HashMap mimeMap = null;
-  
 
   public ElsevierExploderHelper() {
-    mimeMap = new HashMap();
-    for (int i = 0; i < extensions.length; i++) {
-      mimeMap.put(extensions[i], mimeType[i]);
-    }
   }
 
   public void process(ArchiveEntry ae) {
-    String baseUrl = "http://www.elsevier.com/CLOCKSS/";
+    String baseUrl = BASE_URL;
     // Parse the name
     String[] pathElements = ae.getName().split("/");
     if (pathElements.length < minimumPathLength) {
@@ -131,30 +105,15 @@ public class ElsevierExploderHelper implements ExploderHelper {
 	restOfUrl += "/";
       }
     }
-    CIProperties headerFields = new CIProperties();
-    String fileName = pathElements[pathElements.length-1];
-    String contentType = mimeTypeOf(fileName);
-    if (contentType != null) {
-      headerFields.setProperty("Content-Type", contentType);
-      headerFields.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE,
-			       contentType);
-    }
-    headerFields.setProperty("Content-Length",
-			     Long.toString(ae.getSize()));
-    headerFields.setProperty(CachedUrl.PROPERTY_NODE_URL,
-			     baseUrl + restOfUrl);
+    CIProperties headerFields =
+      Exploder.syntheticHeaders(baseUrl + restOfUrl, ae.getSize());
     logger.debug(ae.getName() + " mapped to " +
 		 baseUrl + " plus " + restOfUrl);
-    for (Enumeration e = headerFields.propertyNames();
-	 e.hasMoreElements(); ) {
-      String key = (String)e.nextElement();
-      String value = (String)headerFields.get(key);
-      logger.debug(key + " = " + value);
-    }
+    logger.debug2(baseUrl + restOfUrl + " props " + headerFields);
     ae.setBaseUrl(baseUrl);
     ae.setRestOfUrl(restOfUrl);
     ae.setHeaderFields(headerFields);
-    if (fileName.endsWith(".pdf")) {
+    if (restOfUrl.endsWith(".pdf")) {
       // Add a link to the article to the journal TOC page at
       // ${JOURNAL_ID}/index.html
       Hashtable addText = new Hashtable();
@@ -163,7 +122,7 @@ public class ElsevierExploderHelper implements ExploderHelper {
 	"art #" + pathElements[ART_INDEX] + "</a></li>\n";
       logger.debug3("journalTOC " + journalTOC + " link " + link);
       ae.addTextTo(journalTOC, link);
-    } else if (fileName.endsWith(".xml")) {
+    } else if (restOfUrl.endsWith(".xml")) {
       // XXX it would be great to be able to get the DOI from the
       // XXX metadata files and put it in the text here
     }
@@ -171,21 +130,9 @@ public class ElsevierExploderHelper implements ExploderHelper {
     props.put(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
     props.put(ConfigParamDescr.PUBLISHER_NAME.getKey(),
 	      "Elsevier");
-    props.put(ConfigParamDescr.JOURNAL_ID.getKey(),
+    props.put(ConfigParamDescr.JOURNAL_ISSN.getKey(),
 	      pathElements[JOU_INDEX]);
     ae.setAuProps(props);
   }
 
-  private String mimeTypeOf(String filename) {
-    String res = "text/plain";
-    int ix = filename.lastIndexOf(".");
-    if (ix > 0) {
-      String mt = (String)mimeMap.get(filename.substring(ix));
-      if (mt !=null) {
-	res = mt;
-      }
-    }
-    logger.debug(filename + " mime-type " + res);
-    return (res);
-  }
 }
