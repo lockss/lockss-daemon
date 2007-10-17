@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.45 2007-10-09 00:49:55 smorabito Exp $
+ * $Id: V3Voter.java,v 1.46 2007-10-17 22:28:34 smorabito Exp $
  */
 
 /*
@@ -311,11 +311,13 @@ public class V3Voter extends BasePoll {
       return false;
     }
     
-    if (estimatedHashDuration > (voteDeadline - now)) {
+    long voteDuration = voteDeadline - now;
+
+    if (estimatedHashDuration > voteDuration) {
       String msg = "Estimated hash duration (" 
         + StringUtil.timeIntervalToString(estimatedHashDuration) 
         + ") is too long to complete within the voting period ("
-        + StringUtil.timeIntervalToString(voteDeadline - now) + ")";
+        + StringUtil.timeIntervalToString(voteDuration) + ")";
       voterUserData.setErrorDetail(msg);
       log.warning(msg);
       return false;
@@ -344,7 +346,7 @@ public class V3Voter extends BasePoll {
         return n;
       }
     };
-    
+
     boolean suc = theDaemon.getSchedService().scheduleTask(task);
     if (!suc) {
       String msg = "No time for V3 Voter in poll " + getKey() + ". " +
@@ -438,7 +440,7 @@ public class V3Voter extends BasePoll {
         if (!voterUserData.hashingDone()) {
           log.warning("Vote deadline has passed before my hashing was done " +
                       "in poll " + getKey() + ". Stopping the poll.");
-          stopPoll(V3Voter.STATUS_NO_TIME);
+          stopPoll(V3Voter.STATUS_EXPIRED);
         }
       }
     }, this);
@@ -789,8 +791,14 @@ public class V3Voter extends BasePoll {
       if (e == null) {
         hashComplete();
       } else {
-        log.warning("Hash failed : " + e.getMessage(), e);
-        abortPoll();
+        if (e instanceof SchedService.Timeout) {
+          stopPoll(STATUS_EXPIRED);
+          log.warning("Hash deadline passed before the hash was finished.");
+        } else {
+          log.warning("Hash failed : " + e.getMessage(), e);
+          voterUserData.setErrorDetail(e.getMessage());
+          abortPoll();
+        }
       }
     }
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: PollUtil.java,v 1.1 2007-10-09 00:49:55 smorabito Exp $
+ * $Id: PollUtil.java,v 1.2 2007-10-17 22:28:33 smorabito Exp $
  */
 
 /*
@@ -42,6 +42,9 @@ public class PollUtil {
 
   public static Logger log = Logger.getLogger("PollUtil");
 
+  /**
+   * @deprecated Only used by V1.  Remove when removing V1.
+   */
   public static long getAdjustedEstimate(PollSpec ps, PollManager pm) {
     CachedUrlSet cus = ps.getCachedUrlSet();
     long hashEst = cus.estimatedHashDuration();
@@ -67,85 +70,99 @@ public class PollUtil {
     return my_estimate;
   }
 
-  public static long findSchedulableDuration(long hashTime,
-                                             long min, long max, long incr,
+  /**
+   * Find a schedulable duration between the min and max time.
+   * 
+   * @param estDuration  The estimated hash duration.
+   * @param min  The minimum duration to try.
+   * @param max  The maximum duration to try.
+   * @param pm The PollManager
+   * @return -1 if no time could be found, otherwise the schedulable duration
+   *         that was found.
+   */
+  public static long findSchedulableDuration(long estDuration,
+                                             long min, long max,
                                              PollManager pm) {
-    // loop goes maybe one more because we don't want to stop before
-    // reaching max
+    // Can't go on.
     if (min > max) {
       log.info("Can't schedule a poll with min poll time [" +
                min + "] greater than max poll time [" +
                max + "]");
       return -1;
     }
-    for (long dur = min; dur <= (max + incr - 1); dur += incr) {
+
+    // Determine the increment to use while looping.  We would like to
+    // make it through the loop at least six times.
+    int incr = (int)((max - min) / 6);
+    
+    for (long dur = min; dur <= max; dur += incr) {
       if (dur > max) {
         dur = max;
       }
-      log.debug3("Trying to schedule poll of duration: " + dur);
-      if (PollUtil.canPollBeScheduled(dur, hashTime, pm)) {
-        log.debug2("Poll duration: " +
-                   StringUtil.timeIntervalToString(dur));
+      if (log.isDebug2()) {
+        log.debug2("Asking whether hash of "
+                   + StringUtil.timeIntervalToString(estDuration) 
+                   + " can be scheduled within duration "
+                   + StringUtil.timeIntervalToString(dur));
+      }
+      if (PollUtil.canPollBeScheduled(dur, estDuration, pm)) {
+        if (log.isDebug2()) {
+          log.debug2("Yes, found schedulable duration for hash: " +
+                     StringUtil.timeIntervalToString(dur));
+        }
         return dur;
       }
-      if (dur >= max) {
-        // Complete paranoia here.  This shouldn't be necessary, because if
-        // we've reset dur to max, the loop will exit on the next iteration
-        // because (max + incr) > (max + incr - 1).  But because we might
-        // reduce dur in the loop the possibility of an infinite loop has
-        // been raised; this is insurance against that.
-        break;
-      }
     }
-    log.info("Can't schedule poll within " +
+    log.info("Found no time for hash within " +
              StringUtil.timeIntervalToString(max));
     return -1;
   }
-
-  public static boolean canPollBeScheduled(long pollTime, long hashTime,
-                                            PollManager pm) {
-    log.debug("Try to schedule " + pollTime + " poll " + hashTime + " poll");
-    if (hashTime > pollTime) {
-      log.warning("Total hash time " +
-                  StringUtil.timeIntervalToString(hashTime) +
-                  " greater than max poll time " +
-                  StringUtil.timeIntervalToString(pollTime));
+  
+  public static boolean canPollBeScheduled(long scheduleWindow,
+                                           long hashTime,
+                                           PollManager pm) {
+    log.debug2("Inquiring whether it is possible to schedule a " +
+              scheduleWindow + "ms poll within a window of " + hashTime + "ms");
+    // Should really never happen.
+    if (hashTime > scheduleWindow) {
+      log.critical("Inconceivable!  Hash time [" +
+                   StringUtil.timeIntervalToString(hashTime) +
+                   "] is greater than schedule window of [" +
+                   StringUtil.timeIntervalToString(scheduleWindow) + "]!");
       return false;
     }
-    Deadline when = Deadline.in(pollTime);
-    return canHashBeScheduledBefore(hashTime, when, pm);
-  }
-
-  public static boolean canHashBeScheduledBefore(long duration, Deadline when,
-                                   PollManager pm) {
-    boolean ret = pm.getHashService().canHashBeScheduledBefore(duration, when);
-    log.debug("canHashBeScheduledBefore(" + duration + "," + when + ")" +
-              " returns " + ret);
-    return ret;
+    Deadline when = Deadline.in(scheduleWindow);
+    return pm.getHashService().canHashBeScheduledBefore(hashTime, when);
   }
   
   public static long calcDuration(PollSpec ps, PollManager pm) {
     long hashEst = ps.getCachedUrlSet().estimatedHashDuration();
     long estVoteDuration = estimateVoteDuration(hashEst);
-    long estTallyDuration = estimateTallyDuration(hashEst); 
+    long estTallyDuration = estimateTallyDuration(hashEst);
+    long minPollDuration = 
+      Math.max(estVoteDuration + estTallyDuration,
+               CurrentConfig.getLongParam(V3Poller.PARAM_MIN_POLL_DURATION,
+                                          V3Poller.DEFAULT_MIN_POLL_DURATION));
     long maxPollDuration =
       CurrentConfig.getLongParam(V3Poller.PARAM_MAX_POLL_DURATION,
                                  V3Poller.DEFAULT_MAX_POLL_DURATION);
-    
-    long minPoll = estVoteDuration + estTallyDuration;
-    long maxPoll = Math.min(minPoll, maxPollDuration);
 
-    log.debug("[calcDuration] Hash Estimate: " +
-              StringUtil.timeIntervalToString(hashEst));
-    log.debug("[calcDuration] Minimum Poll Duration: " +
-              StringUtil.timeIntervalToString(minPoll));
-    log.debug("[calcDuration] Maximum Poll Duration: " +
-              StringUtil.timeIntervalToString(maxPoll));
+    if (log.isDebug2()) {
+      log.debug2("[calcDuration] Hash Estimate: " +
+                 StringUtil.timeIntervalToString(hashEst));
+      log.debug2("[calcDuration] Minimum Poll Duration: " +
+                 StringUtil.timeIntervalToString(minPollDuration));
+      log.debug2("[calcDuration] Maximum Poll Duration: " +
+                 StringUtil.timeIntervalToString(maxPollDuration));
+    }
     
-    long scheduleTime = PollUtil.findSchedulableDuration(hashEst, minPoll,
-                                                         maxPoll, hashEst, pm);
-    log.debug("[calcDuration] findSchedulableDuration returns "
-              + StringUtil.timeIntervalToString(scheduleTime));
+    long scheduleTime = PollUtil.findSchedulableDuration(hashEst,
+                                                         minPollDuration,
+                                                         maxPollDuration, pm);
+    if (log.isDebug2()) {
+      log.debug("[calcDuration] findSchedulableDuration returns "
+                + StringUtil.timeIntervalToString(scheduleTime));
+    }
 
     return scheduleTime;
   }
