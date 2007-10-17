@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.181 2007-10-09 00:49:55 smorabito Exp $
+ * $Id: PollManager.java,v 1.181.2.1 2007-10-17 22:28:38 smorabito Exp $
  */
 
 /*
@@ -1448,13 +1448,12 @@ public class PollManager
     
     static final String PRIORITY_PARAM_POLLER = "Poller";
     static final int PRIORITY_DEFAULT_POLLER = Thread.NORM_PRIORITY - 1;
-    static final String PREFIX = Configuration.PREFIX + "poll.";
         
     private LockssDaemon lockssDaemon;
     private PollManager pollManager;
     private PluginManager pluginManager;
     
-    private Iterator auIterator;
+    private Iterator<ArchivalUnit> auIterator;
 
     private volatile boolean goOn = true;
 
@@ -1469,6 +1468,9 @@ public class PollManager
     }
 
     public void lockssRun() {
+      // Triggur the LockssRun thread watchdog on exit.
+      triggerWDogOnExit(true);
+
       setPriority(PRIORITY_PARAM_POLLER, PRIORITY_DEFAULT_POLLER);
       
       if (goOn) {
@@ -1510,7 +1512,7 @@ public class PollManager
         return;
       }
 
-      theLog.debug("Checking for AUs that need polls");
+      theLog.debug2("Checking for AUs that need polls");
 
       // Get list of all AUs
       if (auIterator == null || !auIterator.hasNext()) {
@@ -1518,24 +1520,37 @@ public class PollManager
       }
 
       while (auIterator.hasNext()) {
-        ArchivalUnit au = (ArchivalUnit)auIterator.next();
-        if (!pluginManager.isInternalAu(au)) {
-          possiblyStartPoll(au);
+
+        try {
+          possiblyStartPoll(auIterator.next());
+        } catch (RuntimeException ex) {
+          // Log and go on.
+          //
+          // PluginManager.getRandomizedAus() returns a new collection
+          // of AU references, and this should be the only thread
+          // iterating over it.  ConcurrentModificationExceptions should
+          // not occur.
+          
+          theLog.error("[PollStarter] Caught exception while iterating "
+                       + "over AUs: " + ex);
+          
+          // Not sure that we want a stack trace, so I'm leaving it out
+          // for now.
         }
       }
 
     }
     
     void possiblyStartPoll(ArchivalUnit au) {
-      theLog.debug("Deciding whether to call poll on AU: " + au.getName());
+      theLog.debug2("Deciding whether to call poll on AU: " + au.getName());
       
       AuState auState = AuUtil.getAuState(au);
 
       // Defer to the AU's shouldCallTopLevelPoll method, which checks
       // the AuState.
       if (!au.shouldCallTopLevelPoll(auState)) {
-        theLog.debug2("AU shouldCallTopLevelPoll returns false.  Not starting " 
-                      + "a poll");
+        theLog.debug("AU shouldCallTopLevelPoll returns false on " + au 
+                     + ".  Not starting a poll");
         return;
       }
 
@@ -1573,7 +1588,8 @@ public class PollManager
         theLog.debug("Calling a V3 poll on AU " + au);
 
         if (pollManager.callPoll(spec) == null) {
-          theLog.debug2("Failed to call a V3 poll on " + spec);
+          theLog.debug("pollManager.callPoll returned null. Failed to call "
+                       + "a V3 poll on " + au);
         }
         
         // Add a delay to throttle poll starting.  The delay is the sum of 
@@ -1592,7 +1608,7 @@ public class PollManager
           }
         }
       } else {
-        theLog.debug("Chose not to call a V3 poll on AU " + au);
+        theLog.debug2("Chose not to call a V3 poll on AU " + au);
       }
     }
     
@@ -1607,23 +1623,20 @@ public class PollManager
       
       // If there's never been a poll, return 100%.
       if (lastPollTime == -1) {
-        theLog.debug("Returning 100% poll probability.");
         return 1.0f;
       }
       
       long delta = TimeBase.nowMs() - lastPollTime;
-      theLog.debug("Poll Probability Delta: " + delta);
-      theLog.debug("Max Time Between Polls: " + maxTimeBetweenPolls);
       // If it's been more than maxTimeBetweenPolls, return 100%
       if (delta > maxTimeBetweenPolls) {
-        theLog.debug("Returning 100% poll probability because delta is larger "
-                     + "than max time.");
+        theLog.debug2("Returning 100% poll probability because delta is larger "
+                      + "than max time.");
         return 1.0f;
       }
       
       // Otherwise, return defaultPollProbability.
-      theLog.debug("Returning default poll probability: " +
-                   defaultPollProbability);
+      theLog.debug2("Returning default poll probability: " +
+                    defaultPollProbability);
       return defaultPollProbability;
     }
     

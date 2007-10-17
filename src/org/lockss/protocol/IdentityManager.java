@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManager.java,v 1.78.2.1 2007-10-11 01:09:59 smorabito Exp $
+ * $Id: IdentityManager.java,v 1.78.2.2 2007-10-17 22:28:38 smorabito Exp $
  */
 
 /*
@@ -475,13 +475,6 @@ public interface IdentityManager extends LockssManager {
 
     public IdentityAgreement(PeerIdentity pid) {
       this.id = pid.getIdString();
-      
-      // The highest percent agreement may need to be initialized to the
-      // most recent agreement level if this is the first time the agreement
-      // has been loaded since the highestPercentAgreement field was added.
-      if (highestPercentAgreement < percentAgreement) {
-        highestPercentAgreement = percentAgreement;
-      }
     }
 
     // needed for marshalling
@@ -542,6 +535,17 @@ public interface IdentityManager extends LockssManager {
       long dis = ida.getLastDisagree();
       if (dis > getLastDisagree()) {
         setLastDisagree(dis);
+      }
+    }
+
+    /** 
+     * The highest percent agreement may need to be initialized to the
+     * most recent agreement level if this is the first time the agreement
+     * has been loaded since the highestPercentAgreement field was added.
+     */
+    protected void postUnmarshal(LockssApp lockssContext) {
+      if (highestPercentAgreement < percentAgreement) {
+        highestPercentAgreement = percentAgreement;
       }
     }
 

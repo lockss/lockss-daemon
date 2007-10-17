@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.62 2007-10-09 00:49:55 smorabito Exp $
+ * $Id: V3Poller.java,v 1.62.2.1 2007-10-17 22:28:38 smorabito Exp $
  */
 
 /*
@@ -167,10 +167,15 @@ public class V3Poller extends BasePoll {
   public static final boolean DEFAULT_DELETE_EXTRA_FILES =
     true;
   
-  /** The maximum duration for a V3 poll */
+  /** The maximum allowable duration for a V3 poll */
   public static final String PARAM_MAX_POLL_DURATION =
     PREFIX + "maxPollDuration";
-  public static long DEFAULT_MAX_POLL_DURATION = 5 * Constants.DAY;
+  public static long DEFAULT_MAX_POLL_DURATION = 3 * Constants.WEEK;
+  
+  /** The minimum allowable duration for a V3 poll */
+  public static final String PARAM_MIN_POLL_DURATION =
+    PREFIX + "minPollDuration";
+  public static long DEFAULT_MIN_POLL_DURATION = 10 * Constants.MINUTE;
 
   /**
    * Directory in which to store message data.
@@ -184,7 +189,7 @@ public class V3Poller extends BasePoll {
 
   public static final String PARAM_TALLY_DURATION_MULTIPLIER =
     PREFIX + "tallyDurationMultiplier";
-  public static final int DEFAULT_TALLY_DURATION_MULTIPLIER = 4;
+  public static final int DEFAULT_TALLY_DURATION_MULTIPLIER = 5;
 
   public static final String PARAM_TALLY_DURATION_PADDING =
     PREFIX + "tallyDurationPadding";
@@ -197,13 +202,13 @@ public class V3Poller extends BasePoll {
    * the voteDeadlinePadding paramter as well.
    */
   public static final String PARAM_VOTE_DURATION_MULTIPLIER =
-    PREFIX + "voteDeadlineMultiplier";
-  public static final int DEFAULT_VOTE_DURATION_MULTIPLIER = 2;
+    PREFIX + "voteDurationMultiplier";
+  public static final int DEFAULT_VOTE_DURATION_MULTIPLIER = 4;
   /**
    * Padding to add to the scheduled vote deadline, in ms.
    */
   public static final String PARAM_VOTE_DURATION_PADDING =
-    PREFIX + "voteDeadlinePadding";
+    PREFIX + "voteDurationPadding";
   public static final long DEFAULT_VOTE_DURATION_PADDING =
     5 * Constants.MINUTE;
 
