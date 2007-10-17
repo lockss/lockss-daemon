@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.116 2007-10-06 02:45:33 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.117 2007-10-17 06:04:58 tlipkis Exp $
  */
 
 /*
@@ -1146,10 +1146,9 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 		      sharedRateReqs.size() + " shared, " +
 		      unsharedRateReqs.size() + " unshared, " +
 		      " runKeys: " + runKeys);
-      }    
-      // preferentially start those with shared rate limites, but give
+      }
+      // preferentially start those with shared rate limiters, but give
       // unshared a minimum number of threads
-
 
       BoundedTreeSet finalSort = new BoundedTreeSet(1, CPC);
       for (Iterator iter = sharedRateReqs.entrySet().iterator();
@@ -1245,22 +1244,26 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       for (ArchivalUnit au : (pluginMgr.areAusStarted()
 			      ? pluginMgr.getAllAus()
 			      : highPriorityCrawlRequests.keySet())) {
-
-	CrawlReq req = highPriorityCrawlRequests.get(au);
-	if ((req != null || shouldCrawlForNewContent(au))) {
-	  ausWantCrawl++;
-	  if (isEligibleForNewContentCrawl(au)) {
-	    ausEligibleCrawl++;
-	    if (req == null) {
-	      req = new CrawlReq(au);
-	    }
-	    Object rateKey = au.getFetchRateLimiterKey();
-	    if (rateKey == null) {
-	      unsharedRateReqs.add(req);
-	    } else {
-	      sharedRateReqs.put(rateKey, req);
+	try {
+	  CrawlReq req = highPriorityCrawlRequests.get(au);
+	  if ((req != null || shouldCrawlForNewContent(au))) {
+	    ausWantCrawl++;
+	    if (isEligibleForNewContentCrawl(au)) {
+	      ausEligibleCrawl++;
+	      if (req == null) {
+		req = new CrawlReq(au);
+	      }
+	      Object rateKey = au.getFetchRateLimiterKey();
+	      if (rateKey == null) {
+		unsharedRateReqs.add(req);
+	      } else {
+		sharedRateReqs.put(rateKey, req);
+	      }
 	    }
 	  }
+	} catch (RuntimeException e) {
+	  logger.warning("Checking for crawlworthiness: " + au.getName(), e);
+	  // ignore AU if it caused an error
 	}
       }
     }
@@ -1277,6 +1280,9 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
    * </ol>
    */
   class CrawlPriorityComparator implements Comparator {
+    // Comparator should not reference NodeManager, etc., else all sorted
+    // collection insertions, etc. must be protected against
+    // NoSuchAuException
     public int compare(Object o1, Object o2) {
       CrawlReq r1 = (CrawlReq)o1;
       CrawlReq r2 = (CrawlReq)o2;
@@ -1390,14 +1396,18 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 
   void startCrawl(CrawlReq req) {
     ArchivalUnit au = req.au;
-    if (pluginMgr.isRegistryAu(au) && req.cb == null) {
-      if (logger.isDebug3()) {
-	logger.debug3("Adding callback to registry AU: " + au.getName());
+    try {
+      if (pluginMgr.isRegistryAu(au) && req.cb == null) {
+	if (logger.isDebug3()) {
+	  logger.debug3("Adding callback to registry AU: " + au.getName());
+	}
+	req.setCb(new PluginManager.RegistryCallback(pluginMgr, au));
       }
-      req.setCb(new PluginManager.RegistryCallback(pluginMgr, au));
+      // doesn't return until thread available for next request
+      handReqToPool(req);
+    } catch (RuntimeException e) {
+      logger.warning("Starting crawl: " + au.getName(), e);
     }
-    // doesn't return until thread available for next request
-    handReqToPool(req);
   }
 
   boolean shouldCrawlForNewContent(ArchivalUnit au) {
