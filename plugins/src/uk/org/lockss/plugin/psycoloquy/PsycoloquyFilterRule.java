@@ -5,7 +5,7 @@ import java.io.*;
 import org.lockss.filter.*;
 import org.lockss.plugin.FilterRule;
 
-public class JeLitFilterRule implements FilterRule {
+public class PsycoloquyFilterRule implements FilterRule {
 
   private static final String filterStart = "<p>This list was generated on <strong>";
   private static final String filterEnd = "</strong>.</p>";
