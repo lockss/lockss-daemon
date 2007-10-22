@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -30,19 +30,26 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,&quot;%s\?DOI=&quot;, resolver_url</string>
+      <string>1,&quot;^%spublishing/journals/lockss/\?journalid=%s&amp;volume=%d&amp;year=%d&quot;, base_url, journal_id, volume, year</string>
+      <string>1,&quot;^%slockss.htm$&quot;, resolver_url</string>
+      <string>1,&quot;^%s\?DOI=&quot;, resolver_url</string>
       <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;%spublishing/journals/lockss/\?journalid=%s&amp;volume=%d&amp;year=%d&quot;, base_url, journal_id, volume, year</string>
       <string>1,&quot;^%s.*\.(js|css|ico|gif|jpg|jpeg|png)&quot;, base_url</string>
-      <string>1,&quot;%spublishing/journals/.*article\.asp\?doi=.*&quot;, base_url</string>
-      <string>1,&quot;%sej/.*\.pdf&quot;, base_url</string>
-      <string>1,&quot;%sdelivery/_ArticleLinking/DisplayArticleForFree\.cfm.*&quot;, base_url</string>
-      <string>1,&quot;%spublishing/journals/lockss/\?journalid=%s&amp;volume=%d&amp;year=%d&amp;issue=.*&quot;, base_url, journal_id, volume, year</string>
+      <string>1,&quot;^%spublishing/journals/.*article\.asp\?doi=&quot;, base_url</string>
+      <string>1,&quot;^%sej/.*\.pdf&quot;, base_url</string>
+      <string>1,&quot;^%sdelivery/_ArticleLinking/DisplayArticleForFree\.cfm&quot;, base_url</string>
     </list>
   </entry>
   <entry>
     <string>au_start_url</string>
     <string>&quot;%spublishing/journals/lockss/?journalid=%s&amp;volume=%d&amp;year=%d&quot;, base_url, journal_id, volume, year</string>
+  </entry>
+  <entry>
+    <string>au_manifest</string>
+    <list>
+     <string>&quot;%spublishing/journals/lockss/?journalid=%s&amp;volume=%d&amp;year=%d&quot;, base_url, journal_id, volume, year</string>
+     <string>&quot;^%slockss.htm&quot;, resolver_url</string>
+    </list>
   </entry>
   <entry>
     <string>plugin_config_props</string>
