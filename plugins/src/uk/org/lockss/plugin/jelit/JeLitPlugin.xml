@@ -31,7 +31,7 @@
     <string>au_crawlrules</string>
     <list>
       <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;%sLOCKSSmanifest.html&quot;, base_url</string>
+      <string>1,&quot;^%sLOCKSSmanifest.html&quot;, base_url</string>
       <string>2,&quot;^%sperl&quot;, base_url</string>
       <string>1,&quot;^%s&quot;, base_url</string>
     </list>
