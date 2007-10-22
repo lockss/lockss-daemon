@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Royal Society of Chemistry Plugin, Base URL %s, Resolver URL %s, Journal ID %s, Year %d, Volume %d&quot;, base_url, resolver_url, journal_id, volume, year</string>
+    <string>&quot;Royal Society of Chemistry Plugin, Base URL %s, Resolver URL %s, Journal ID %s, Year %d, Volume %d&quot;, base_url, resolver_url, journal_id, year, volume</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -48,7 +48,7 @@
     <string>au_manifest</string>
     <list>
      <string>&quot;%spublishing/journals/lockss/?journalid=%s&amp;volume=%d&amp;year=%d&quot;, base_url, journal_id, volume, year</string>
-     <string>&quot;^%slockss.htm&quot;, resolver_url</string>
+     <string>&quot;%slockss.htm&quot;, resolver_url</string>
     </list>
   </entry>
   <entry>
