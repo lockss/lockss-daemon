@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.182 2007-10-17 22:28:33 smorabito Exp $
+ * $Id: PollManager.java,v 1.183 2007-10-25 01:15:13 smorabito Exp $
  */
 
 /*
@@ -434,11 +434,18 @@ public class PollManager
       for (Iterator it = thePolls.values().iterator(); it.hasNext(); ) {
         PollManagerEntry pme = (PollManagerEntry)it.next();
         if (au.getAuId().equals(pme.getPollSpec().getAuId())) {
-          return (pme.getPoll() instanceof V3Poller) && !pme.isPollCompleted();
+          // Keep looking until we find a V3Poller that is active, or
+          // we run out of poll objects to examine.  If we find an active
+          // poller, return right away.
+          if (pme.getPoll() instanceof V3Poller) {
+            if (pme.isPollActive()) {
+              return true;
+            }
+          }
         }
       }
     }
-    return false;      
+    return false;
   }
 
   /** Return the PollManagerEntry for the poll with the specified key. */
@@ -661,6 +668,10 @@ public class PollManager
       return null;
     } else {
       thePolls.put(ret_poll.getKey(), new PollManagerEntry(ret_poll));
+      // If this is a V3 Voter, start it right away.
+      if (ret_poll instanceof V3Voter) {
+        ret_poll.startPoll();
+      }
       return ret_poll;
     }
   }

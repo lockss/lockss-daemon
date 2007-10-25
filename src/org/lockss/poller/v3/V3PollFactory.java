@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollFactory.java,v 1.18 2007-10-09 00:49:56 smorabito Exp $
+ * $Id: V3PollFactory.java,v 1.19 2007-10-25 01:15:14 smorabito Exp $
  */
 
 /*
@@ -219,7 +219,7 @@ public class V3PollFactory extends BasePollFactory {
           AuUtil.isPubDown(au)) { 
         log.debug("Creating V3Voter to participate in poll " + m.getKey());
         voter = new V3Voter(daemon, m);
-        voter.startPoll(); // Voters need to be started immediately.
+//        voter.startPoll(); // Voters need to be started immediately.
       } else {
         log.debug("Have not completed new content crawl, and publisher " +
                   "is not down, so not participating in poll " + m.getKey());
