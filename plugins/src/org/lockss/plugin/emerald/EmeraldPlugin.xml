@@ -4,6 +4,10 @@
     <string>org.lockss.plugin.emerald.EmeraldPlugin</string>
   </entry>
   <entry>
+    <string>plugin_version</string>
+    <string>2</string>
+  </entry>
+  <entry>
     <string>au_def_pause_time</string>
     <long>6000</long>
   </entry>
@@ -64,5 +68,9 @@
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
     </list>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.emerald.EmeraldUrlNormalizer</string>
   </entry>
 </map>
