@@ -34,10 +34,10 @@
 <lockss-config>
   <property name="org.lockss.title">
 
-      <property name="RoyalSocietyOfChemistryTheAnalyst122"> 
+      <property name="RoyalSocietyOfChemistryTheAnalyst122">
         <property name="title" value="The Analyst Volume 122" />
         <property name="journalTitle" value="The Analyst" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -61,10 +61,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryTheAnalyst123"> 
+       <property name="RoyalSocietyOfChemistryTheAnalyst123">
         <property name="title" value="The Analyst Volume 123" />
         <property name="journalTitle" value="The Analyst" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -88,10 +88,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryTheAnalyst124"> 
+       <property name="RoyalSocietyOfChemistryTheAnalyst124">
         <property name="title" value="The Analyst Volume 124" />
         <property name="journalTitle" value="The Analyst" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -115,10 +115,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryTheAnalyst125"> 
+       <property name="RoyalSocietyOfChemistryTheAnalyst125">
         <property name="title" value="The Analyst Volume 125" />
         <property name="journalTitle" value="The Analyst" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -142,10 +142,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryTheAnalyst126"> 
+       <property name="RoyalSocietyOfChemistryTheAnalyst126">
         <property name="title" value="The Analyst Volume 126" />
         <property name="journalTitle" value="The Analyst" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -169,10 +169,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryTheAnalyst127"> 
+       <property name="RoyalSocietyOfChemistryTheAnalyst127">
         <property name="title" value="The Analyst Volume 127" />
         <property name="journalTitle" value="The Analyst" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -196,10 +196,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryTheAnalyst128"> 
+       <property name="RoyalSocietyOfChemistryTheAnalyst128">
         <property name="title" value="The Analyst Volume 128" />
         <property name="journalTitle" value="The Analyst" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -223,10 +223,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryTheAnalyst129"> 
+       <property name="RoyalSocietyOfChemistryTheAnalyst129">
         <property name="title" value="The Analyst Volume 129" />
         <property name="journalTitle" value="The Analyst" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -250,10 +250,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryTheAnalyst130"> 
+       <property name="RoyalSocietyOfChemistryTheAnalyst130">
         <property name="title" value="The Analyst Volume 130" />
         <property name="journalTitle" value="The Analyst" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -277,10 +277,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryTheAnalyst131"> 
+       <property name="RoyalSocietyOfChemistryTheAnalyst131">
         <property name="title" value="The Analyst Volume 131" />
         <property name="journalTitle" value="The Analyst" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -304,10 +304,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryTheAnalyst132"> 
+       <property name="RoyalSocietyOfChemistryTheAnalyst132">
         <property name="title" value="The Analyst Volume 132" />
         <property name="journalTitle" value="The Analyst" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -331,10 +331,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryAnalyticalCommunications34"> 
+       <property name="RoyalSocietyOfChemistryAnalyticalCommunications34">
         <property name="title" value="Analytical Communications Volume 34" />
         <property name="journalTitle" value="Analytical Communications" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -358,10 +358,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryAnalyticalCommunications35"> 
+       <property name="RoyalSocietyOfChemistryAnalyticalCommunications35">
         <property name="title" value="Analytical Communications Volume 35" />
         <property name="journalTitle" value="Analytical Communications" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -385,10 +385,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryAnalyticalCommunications36"> 
+       <property name="RoyalSocietyOfChemistryAnalyticalCommunications36">
         <property name="title" value="Analytical Communications Volume 36" />
         <property name="journalTitle" value="Analytical Communications" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -412,10 +412,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryChemicalCommunications1997"> 
+       <property name="RoyalSocietyOfChemistryChemicalCommunications1997">
         <property name="title" value="Chemical Communications 1997" />
         <property name="journalTitle" value="Chemical Communications" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -439,10 +439,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryChemicalCommunications1998"> 
+       <property name="RoyalSocietyOfChemistryChemicalCommunications1998">
         <property name="title" value="Chemical Communications 1998" />
         <property name="journalTitle" value="Chemical Communications" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -466,10 +466,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryChemicalCommunications1999"> 
+       <property name="RoyalSocietyOfChemistryChemicalCommunications1999">
         <property name="title" value="Chemical Communications 1999" />
         <property name="journalTitle" value="Chemical Communications" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -493,10 +493,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryChemicalCommunications2000"> 
+       <property name="RoyalSocietyOfChemistryChemicalCommunications2000">
         <property name="title" value="Chemical Communications 2000" />
         <property name="journalTitle" value="Chemical Communications" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -520,10 +520,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryChemicalCommunications2001"> 
+       <property name="RoyalSocietyOfChemistryChemicalCommunications2001">
         <property name="title" value="Chemical Communications 2001" />
         <property name="journalTitle" value="Chemical Communications" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -547,10 +547,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryChemicalCommunications2002"> 
+       <property name="RoyalSocietyOfChemistryChemicalCommunications2002">
         <property name="title" value="Chemical Communications 2002" />
         <property name="journalTitle" value="Chemical Communications" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -574,10 +574,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryChemicalCommunications2003"> 
+       <property name="RoyalSocietyOfChemistryChemicalCommunications2003">
         <property name="title" value="Chemical Communications 2003" />
         <property name="journalTitle" value="Chemical Communications" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -601,10 +601,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryChemicalCommunications2004"> 
+       <property name="RoyalSocietyOfChemistryChemicalCommunications2004">
         <property name="title" value="Chemical Communications 2004" />
         <property name="journalTitle" value="Chemical Communications" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -628,10 +628,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryChemicalCommunications2005"> 
+       <property name="RoyalSocietyOfChemistryChemicalCommunications2005">
         <property name="title" value="Chemical Communications 2005" />
         <property name="journalTitle" value="Chemical Communications" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -655,10 +655,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryChemicalCommunications2006"> 
+       <property name="RoyalSocietyOfChemistryChemicalCommunications2006">
         <property name="title" value="Chemical Communications 2006" />
         <property name="journalTitle" value="Chemical Communications" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -682,10 +682,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryChemicalCommunications2007"> 
+       <property name="RoyalSocietyOfChemistryChemicalCommunications2007">
         <property name="title" value="Chemical Communications 2007" />
         <property name="journalTitle" value="Chemical Communications" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -709,10 +709,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryChemicalSocietyReviews26"> 
+       <property name="RoyalSocietyOfChemistryChemicalSocietyReviews26">
         <property name="title" value="Chemical Society Reviews Volume 26" />
         <property name="journalTitle" value="Chemical Society Reviews" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -736,10 +736,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryChemicalSocietyReviews27"> 
+       <property name="RoyalSocietyOfChemistryChemicalSocietyReviews27">
         <property name="title" value="Chemical Society Reviews Volume 27" />
         <property name="journalTitle" value="Chemical Society Reviews" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -763,10 +763,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryChemicalSocietyReviews28"> 
+       <property name="RoyalSocietyOfChemistryChemicalSocietyReviews28">
         <property name="title" value="Chemical Society Reviews Volume 28" />
         <property name="journalTitle" value="Chemical Society Reviews" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -790,10 +790,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryChemicalSocietyReviews29"> 
+       <property name="RoyalSocietyOfChemistryChemicalSocietyReviews29">
         <property name="title" value="Chemical Society Reviews Volume 29" />
         <property name="journalTitle" value="Chemical Society Reviews" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -817,10 +817,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryChemicalSocietyReviews30"> 
+       <property name="RoyalSocietyOfChemistryChemicalSocietyReviews30">
         <property name="title" value="Chemical Society Reviews Volume 30" />
         <property name="journalTitle" value="Chemical Society Reviews" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -844,10 +844,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryChemicalSocietyReviews31"> 
+       <property name="RoyalSocietyOfChemistryChemicalSocietyReviews31">
         <property name="title" value="Chemical Society Reviews Volume 31" />
         <property name="journalTitle" value="Chemical Society Reviews" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -871,10 +871,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryChemicalSocietyReviews32"> 
+       <property name="RoyalSocietyOfChemistryChemicalSocietyReviews32">
         <property name="title" value="Chemical Society Reviews Volume 32" />
         <property name="journalTitle" value="Chemical Society Reviews" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -898,10 +898,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryChemicalSocietyReviews33"> 
+       <property name="RoyalSocietyOfChemistryChemicalSocietyReviews33">
         <property name="title" value="Chemical Society Reviews Volume 33" />
         <property name="journalTitle" value="Chemical Society Reviews" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -925,10 +925,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryChemicalSocietyReviews34"> 
+       <property name="RoyalSocietyOfChemistryChemicalSocietyReviews34">
         <property name="title" value="Chemical Society Reviews Volume 34" />
         <property name="journalTitle" value="Chemical Society Reviews" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -952,10 +952,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryChemicalSocietyReviews35"> 
+       <property name="RoyalSocietyOfChemistryChemicalSocietyReviews35">
         <property name="title" value="Chemical Society Reviews Volume 35" />
         <property name="journalTitle" value="Chemical Society Reviews" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -979,10 +979,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryChemicalSocietyReviews36"> 
+       <property name="RoyalSocietyOfChemistryChemicalSocietyReviews36">
         <property name="title" value="Chemical Society Reviews Volume 36" />
         <property name="journalTitle" value="Chemical Society Reviews" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -1006,10 +1006,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryContemporaryOrganicSynthesis4"> 
+       <property name="RoyalSocietyOfChemistryContemporaryOrganicSynthesis4">
         <property name="title" value="Contemporary Organic Synthesis Volume 4" />
         <property name="journalTitle" value="Contemporary Organic Synthesis" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -1033,10 +1033,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryCrystEngComm1"> 
+       <property name="RoyalSocietyOfChemistryCrystEngComm1">
         <property name="title" value="CrystEngComm Volume 1" />
         <property name="journalTitle" value="CrystEngComm" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -1060,10 +1060,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryCrystEngComm2"> 
+       <property name="RoyalSocietyOfChemistryCrystEngComm2">
         <property name="title" value="CrystEngComm Volume 2" />
         <property name="journalTitle" value="CrystEngComm" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -1087,10 +1087,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryCrystEngComm3"> 
+       <property name="RoyalSocietyOfChemistryCrystEngComm3">
         <property name="title" value="CrystEngComm Volume 3" />
         <property name="journalTitle" value="CrystEngComm" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -1114,10 +1114,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryCrystEngComm4"> 
+       <property name="RoyalSocietyOfChemistryCrystEngComm4">
         <property name="title" value="CrystEngComm Volume 4" />
         <property name="journalTitle" value="CrystEngComm" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -1141,10 +1141,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryCrystEngComm5"> 
+       <property name="RoyalSocietyOfChemistryCrystEngComm5">
         <property name="title" value="CrystEngComm Volume 5" />
         <property name="journalTitle" value="CrystEngComm" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -1168,10 +1168,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryCrystEngComm6"> 
+       <property name="RoyalSocietyOfChemistryCrystEngComm6">
         <property name="title" value="CrystEngComm Volume 6" />
         <property name="journalTitle" value="CrystEngComm" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -1195,10 +1195,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryCrystEngComm7"> 
+       <property name="RoyalSocietyOfChemistryCrystEngComm7">
         <property name="title" value="CrystEngComm Volume 7" />
         <property name="journalTitle" value="CrystEngComm" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -1222,10 +1222,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryCrystEngComm8"> 
+       <property name="RoyalSocietyOfChemistryCrystEngComm8">
         <property name="title" value="CrystEngComm Volume 8" />
         <property name="journalTitle" value="CrystEngComm" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -1249,10 +1249,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryCrystEngComm9"> 
+       <property name="RoyalSocietyOfChemistryCrystEngComm9">
         <property name="title" value="CrystEngComm Volume 9" />
         <property name="journalTitle" value="CrystEngComm" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -1276,10 +1276,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryDaltonTransactions2003"> 
+       <property name="RoyalSocietyOfChemistryDaltonTransactions2003">
         <property name="title" value="Dalton Transactions 2003" />
         <property name="journalTitle" value="Dalton Transactions" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -1303,10 +1303,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryDaltonTransactions2004"> 
+       <property name="RoyalSocietyOfChemistryDaltonTransactions2004">
         <property name="title" value="Dalton Transactions 2004" />
         <property name="journalTitle" value="Dalton Transactions" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -1330,10 +1330,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryDaltonTransactions2005"> 
+       <property name="RoyalSocietyOfChemistryDaltonTransactions2005">
         <property name="title" value="Dalton Transactions 2005" />
         <property name="journalTitle" value="Dalton Transactions" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -1357,10 +1357,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryDaltonTransactions2006"> 
+       <property name="RoyalSocietyOfChemistryDaltonTransactions2006">
         <property name="title" value="Dalton Transactions 2006" />
         <property name="journalTitle" value="Dalton Transactions" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -1384,10 +1384,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryDaltonTransactions2007"> 
+       <property name="RoyalSocietyOfChemistryDaltonTransactions2007">
         <property name="title" value="Dalton Transactions 2007" />
         <property name="journalTitle" value="Dalton Transactions" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -1411,10 +1411,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryJournalofEnvironmentalMonitoring1"> 
+       <property name="RoyalSocietyOfChemistryJournalofEnvironmentalMonitoring1">
         <property name="title" value="Journal of Environmental Monitoring Volume 1" />
         <property name="journalTitle" value="Journal of Environmental Monitoring" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -1438,10 +1438,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryJournalofEnvironmentalMonitoring2"> 
+       <property name="RoyalSocietyOfChemistryJournalofEnvironmentalMonitoring2">
         <property name="title" value="Journal of Environmental Monitoring Volume 2" />
         <property name="journalTitle" value="Journal of Environmental Monitoring" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -1465,10 +1465,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryJournalofEnvironmentalMonitoring3"> 
+       <property name="RoyalSocietyOfChemistryJournalofEnvironmentalMonitoring3">
         <property name="title" value="Journal of Environmental Monitoring Volume 3" />
         <property name="journalTitle" value="Journal of Environmental Monitoring" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -1492,10 +1492,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryJournalofEnvironmentalMonitoring4"> 
+       <property name="RoyalSocietyOfChemistryJournalofEnvironmentalMonitoring4">
         <property name="title" value="Journal of Environmental Monitoring Volume 4" />
         <property name="journalTitle" value="Journal of Environmental Monitoring" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -1519,10 +1519,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryJournalofEnvironmentalMonitoring5"> 
+       <property name="RoyalSocietyOfChemistryJournalofEnvironmentalMonitoring5">
         <property name="title" value="Journal of Environmental Monitoring Volume 5" />
         <property name="journalTitle" value="Journal of Environmental Monitoring" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -1546,10 +1546,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryJournalofEnvironmentalMonitoring6"> 
+       <property name="RoyalSocietyOfChemistryJournalofEnvironmentalMonitoring6">
         <property name="title" value="Journal of Environmental Monitoring Volume 6" />
         <property name="journalTitle" value="Journal of Environmental Monitoring" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -1573,10 +1573,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryJournalofEnvironmentalMonitoring7"> 
+       <property name="RoyalSocietyOfChemistryJournalofEnvironmentalMonitoring7">
         <property name="title" value="Journal of Environmental Monitoring Volume 7" />
         <property name="journalTitle" value="Journal of Environmental Monitoring" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -1600,10 +1600,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryJournalofEnvironmentalMonitoring8"> 
+       <property name="RoyalSocietyOfChemistryJournalofEnvironmentalMonitoring8">
         <property name="title" value="Journal of Environmental Monitoring Volume 8" />
         <property name="journalTitle" value="Journal of Environmental Monitoring" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -1627,10 +1627,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryJournalofEnvironmentalMonitoring9"> 
+       <property name="RoyalSocietyOfChemistryJournalofEnvironmentalMonitoring9">
         <property name="title" value="Journal of Environmental Monitoring Volume 9" />
         <property name="journalTitle" value="Journal of Environmental Monitoring" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -1654,10 +1654,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryGeochemicalTransactions1"> 
+       <property name="RoyalSocietyOfChemistryGeochemicalTransactions1">
         <property name="title" value="Geochemical Transactions Volume 1" />
         <property name="journalTitle" value="Geochemical Transactions" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -1681,10 +1681,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryGeochemicalTransactions2"> 
+       <property name="RoyalSocietyOfChemistryGeochemicalTransactions2">
         <property name="title" value="Geochemical Transactions Volume 2" />
         <property name="journalTitle" value="Geochemical Transactions" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -1708,10 +1708,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryGeochemicalTransactions3"> 
+       <property name="RoyalSocietyOfChemistryGeochemicalTransactions3">
         <property name="title" value="Geochemical Transactions Volume 3" />
         <property name="journalTitle" value="Geochemical Transactions" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -1735,10 +1735,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryGeochemicalTransactions4"> 
+       <property name="RoyalSocietyOfChemistryGeochemicalTransactions4">
         <property name="title" value="Geochemical Transactions Volume 4" />
         <property name="journalTitle" value="Geochemical Transactions" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -1762,10 +1762,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryGreenChemistry1"> 
+       <property name="RoyalSocietyOfChemistryGreenChemistry1">
         <property name="title" value="Green Chemistry Volume 1" />
         <property name="journalTitle" value="Green Chemistry" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -1789,10 +1789,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryGreenChemistry2"> 
+       <property name="RoyalSocietyOfChemistryGreenChemistry2">
         <property name="title" value="Green Chemistry Volume 2" />
         <property name="journalTitle" value="Green Chemistry" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -1816,10 +1816,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryGreenChemistry3"> 
+       <property name="RoyalSocietyOfChemistryGreenChemistry3">
         <property name="title" value="Green Chemistry Volume 3" />
         <property name="journalTitle" value="Green Chemistry" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -1843,10 +1843,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryGreenChemistry4"> 
+       <property name="RoyalSocietyOfChemistryGreenChemistry4">
         <property name="title" value="Green Chemistry Volume 4" />
         <property name="journalTitle" value="Green Chemistry" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -1870,10 +1870,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryGreenChemistry5"> 
+       <property name="RoyalSocietyOfChemistryGreenChemistry5">
         <property name="title" value="Green Chemistry Volume 5" />
         <property name="journalTitle" value="Green Chemistry" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -1897,10 +1897,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryGreenChemistry6"> 
+       <property name="RoyalSocietyOfChemistryGreenChemistry6">
         <property name="title" value="Green Chemistry Volume 6" />
         <property name="journalTitle" value="Green Chemistry" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -1924,10 +1924,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryGreenChemistry7"> 
+       <property name="RoyalSocietyOfChemistryGreenChemistry7">
         <property name="title" value="Green Chemistry Volume 7" />
         <property name="journalTitle" value="Green Chemistry" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -1951,10 +1951,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryGreenChemistry8"> 
+       <property name="RoyalSocietyOfChemistryGreenChemistry8">
         <property name="title" value="Green Chemistry Volume 8" />
         <property name="journalTitle" value="Green Chemistry" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -1978,10 +1978,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryGreenChemistry9"> 
+       <property name="RoyalSocietyOfChemistryGreenChemistry9">
         <property name="title" value="Green Chemistry Volume 9" />
         <property name="journalTitle" value="Green Chemistry" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -2005,10 +2005,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryJournalofAnalyticalAtomicSpectrometry12"> 
+       <property name="RoyalSocietyOfChemistryJournalofAnalyticalAtomicSpectrometry12">
         <property name="title" value="Journal of Analytical Atomic Spectrometry Volume 12" />
         <property name="journalTitle" value="Journal of Analytical Atomic Spectrometry" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -2032,10 +2032,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryJournalofAnalyticalAtomicSpectrometry13"> 
+       <property name="RoyalSocietyOfChemistryJournalofAnalyticalAtomicSpectrometry13">
         <property name="title" value="Journal of Analytical Atomic Spectrometry Volume 13" />
         <property name="journalTitle" value="Journal of Analytical Atomic Spectrometry" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -2059,10 +2059,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryJournalofAnalyticalAtomicSpectrometry14"> 
+       <property name="RoyalSocietyOfChemistryJournalofAnalyticalAtomicSpectrometry14">
         <property name="title" value="Journal of Analytical Atomic Spectrometry Volume 14" />
         <property name="journalTitle" value="Journal of Analytical Atomic Spectrometry" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -2086,10 +2086,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryJournalofAnalyticalAtomicSpectrometry15"> 
+       <property name="RoyalSocietyOfChemistryJournalofAnalyticalAtomicSpectrometry15">
         <property name="title" value="Journal of Analytical Atomic Spectrometry Volume 15" />
         <property name="journalTitle" value="Journal of Analytical Atomic Spectrometry" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -2113,10 +2113,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryJournalofAnalyticalAtomicSpectrometry16"> 
+       <property name="RoyalSocietyOfChemistryJournalofAnalyticalAtomicSpectrometry16">
         <property name="title" value="Journal of Analytical Atomic Spectrometry Volume 16" />
         <property name="journalTitle" value="Journal of Analytical Atomic Spectrometry" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -2140,10 +2140,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryJournalofAnalyticalAtomicSpectrometry17"> 
+       <property name="RoyalSocietyOfChemistryJournalofAnalyticalAtomicSpectrometry17">
         <property name="title" value="Journal of Analytical Atomic Spectrometry Volume 17" />
         <property name="journalTitle" value="Journal of Analytical Atomic Spectrometry" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -2167,10 +2167,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryJournalofAnalyticalAtomicSpectrometry18"> 
+       <property name="RoyalSocietyOfChemistryJournalofAnalyticalAtomicSpectrometry18">
         <property name="title" value="Journal of Analytical Atomic Spectrometry Volume 18" />
         <property name="journalTitle" value="Journal of Analytical Atomic Spectrometry" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -2194,10 +2194,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryJournalofAnalyticalAtomicSpectrometry19"> 
+       <property name="RoyalSocietyOfChemistryJournalofAnalyticalAtomicSpectrometry19">
         <property name="title" value="Journal of Analytical Atomic Spectrometry Volume 19" />
         <property name="journalTitle" value="Journal of Analytical Atomic Spectrometry" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -2221,10 +2221,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryJournalofAnalyticalAtomicSpectrometry20"> 
+       <property name="RoyalSocietyOfChemistryJournalofAnalyticalAtomicSpectrometry20">
         <property name="title" value="Journal of Analytical Atomic Spectrometry Volume 20" />
         <property name="journalTitle" value="Journal of Analytical Atomic Spectrometry" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -2248,10 +2248,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryJournalofAnalyticalAtomicSpectrometry21"> 
+       <property name="RoyalSocietyOfChemistryJournalofAnalyticalAtomicSpectrometry21">
         <property name="title" value="Journal of Analytical Atomic Spectrometry Volume 21" />
         <property name="journalTitle" value="Journal of Analytical Atomic Spectrometry" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -2275,10 +2275,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryJournalofAnalyticalAtomicSpectrometry22"> 
+       <property name="RoyalSocietyOfChemistryJournalofAnalyticalAtomicSpectrometry22">
         <property name="title" value="Journal of Analytical Atomic Spectrometry Volume 22" />
         <property name="journalTitle" value="Journal of Analytical Atomic Spectrometry" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -2302,10 +2302,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryJournalofChemicalResearch(Synopses)1997"> 
+       <property name="RoyalSocietyOfChemistryJournalofChemicalResearch(Synopses)1997">
         <property name="title" value="Journal of Chemical Research (Synopses) 1997" />
         <property name="journalTitle" value="Journal of Chemical Research (Synopses)" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -2329,10 +2329,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryJournalofChemicalResearch(Synopses)1998"> 
+       <property name="RoyalSocietyOfChemistryJournalofChemicalResearch(Synopses)1998">
         <property name="title" value="Journal of Chemical Research (Synopses) 1998" />
         <property name="journalTitle" value="Journal of Chemical Research (Synopses)" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -2356,10 +2356,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryJournalofChemicalResearch(Synopses)1999"> 
+       <property name="RoyalSocietyOfChemistryJournalofChemicalResearch(Synopses)1999">
         <property name="title" value="Journal of Chemical Research (Synopses) 1999" />
         <property name="journalTitle" value="Journal of Chemical Research (Synopses)" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -2383,10 +2383,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryJournalofMaterialsChemistry7"> 
+       <property name="RoyalSocietyOfChemistryJournalofMaterialsChemistry7">
         <property name="title" value="Journal of Materials Chemistry Volume 7" />
         <property name="journalTitle" value="Journal of Materials Chemistry" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -2410,10 +2410,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryJournalofMaterialsChemistry8"> 
+       <property name="RoyalSocietyOfChemistryJournalofMaterialsChemistry8">
         <property name="title" value="Journal of Materials Chemistry Volume 8" />
         <property name="journalTitle" value="Journal of Materials Chemistry" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -2437,10 +2437,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryJournalofMaterialsChemistry9"> 
+       <property name="RoyalSocietyOfChemistryJournalofMaterialsChemistry9">
         <property name="title" value="Journal of Materials Chemistry Volume 9" />
         <property name="journalTitle" value="Journal of Materials Chemistry" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -2464,10 +2464,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryJournalofMaterialsChemistry10"> 
+       <property name="RoyalSocietyOfChemistryJournalofMaterialsChemistry10">
         <property name="title" value="Journal of Materials Chemistry Volume 10" />
         <property name="journalTitle" value="Journal of Materials Chemistry" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -2491,10 +2491,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryJournalofMaterialsChemistry11"> 
+       <property name="RoyalSocietyOfChemistryJournalofMaterialsChemistry11">
         <property name="title" value="Journal of Materials Chemistry Volume 11" />
         <property name="journalTitle" value="Journal of Materials Chemistry" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -2518,10 +2518,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryJournalofMaterialsChemistry12"> 
+       <property name="RoyalSocietyOfChemistryJournalofMaterialsChemistry12">
         <property name="title" value="Journal of Materials Chemistry Volume 12" />
         <property name="journalTitle" value="Journal of Materials Chemistry" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -2545,10 +2545,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryJournalofMaterialsChemistry13"> 
+       <property name="RoyalSocietyOfChemistryJournalofMaterialsChemistry13">
         <property name="title" value="Journal of Materials Chemistry Volume 13" />
         <property name="journalTitle" value="Journal of Materials Chemistry" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -2572,10 +2572,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryJournalofMaterialsChemistry14"> 
+       <property name="RoyalSocietyOfChemistryJournalofMaterialsChemistry14">
         <property name="title" value="Journal of Materials Chemistry Volume 14" />
         <property name="journalTitle" value="Journal of Materials Chemistry" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -2599,10 +2599,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryJournalofMaterialsChemistry15"> 
+       <property name="RoyalSocietyOfChemistryJournalofMaterialsChemistry15">
         <property name="title" value="Journal of Materials Chemistry Volume 15" />
         <property name="journalTitle" value="Journal of Materials Chemistry" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -2626,10 +2626,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryJournalofMaterialsChemistry16"> 
+       <property name="RoyalSocietyOfChemistryJournalofMaterialsChemistry16">
         <property name="title" value="Journal of Materials Chemistry Volume 16" />
         <property name="journalTitle" value="Journal of Materials Chemistry" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -2653,10 +2653,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryJournalofMaterialsChemistry17"> 
+       <property name="RoyalSocietyOfChemistryJournalofMaterialsChemistry17">
         <property name="title" value="Journal of Materials Chemistry Volume 17" />
         <property name="journalTitle" value="Journal of Materials Chemistry" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -2680,10 +2680,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryLabonaChip1"> 
+       <property name="RoyalSocietyOfChemistryLabonaChip1">
         <property name="title" value="Lab on a Chip Volume 1" />
         <property name="journalTitle" value="Lab on a Chip" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -2707,10 +2707,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryLabonaChip2"> 
+       <property name="RoyalSocietyOfChemistryLabonaChip2">
         <property name="title" value="Lab on a Chip Volume 2" />
         <property name="journalTitle" value="Lab on a Chip" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -2734,10 +2734,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryLabonaChip3"> 
+       <property name="RoyalSocietyOfChemistryLabonaChip3">
         <property name="title" value="Lab on a Chip Volume 3" />
         <property name="journalTitle" value="Lab on a Chip" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -2761,10 +2761,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryLabonaChip4"> 
+       <property name="RoyalSocietyOfChemistryLabonaChip4">
         <property name="title" value="Lab on a Chip Volume 4" />
         <property name="journalTitle" value="Lab on a Chip" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -2788,10 +2788,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryLabonaChip5"> 
+       <property name="RoyalSocietyOfChemistryLabonaChip5">
         <property name="title" value="Lab on a Chip Volume 5" />
         <property name="journalTitle" value="Lab on a Chip" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -2815,10 +2815,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryLabonaChip6"> 
+       <property name="RoyalSocietyOfChemistryLabonaChip6">
         <property name="title" value="Lab on a Chip Volume 6" />
         <property name="journalTitle" value="Lab on a Chip" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -2842,10 +2842,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryLabonaChip7"> 
+       <property name="RoyalSocietyOfChemistryLabonaChip7">
         <property name="title" value="Lab on a Chip Volume 7" />
         <property name="journalTitle" value="Lab on a Chip" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -2869,10 +2869,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryMolecularBioSystems1"> 
+       <property name="RoyalSocietyOfChemistryMolecularBioSystems1">
         <property name="title" value="Molecular BioSystems Volume 1" />
         <property name="journalTitle" value="Molecular BioSystems" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -2896,10 +2896,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryMolecularBioSystems2"> 
+       <property name="RoyalSocietyOfChemistryMolecularBioSystems2">
         <property name="title" value="Molecular BioSystems Volume 2" />
         <property name="journalTitle" value="Molecular BioSystems" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -2923,10 +2923,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryMolecularBioSystems3"> 
+       <property name="RoyalSocietyOfChemistryMolecularBioSystems3">
         <property name="title" value="Molecular BioSystems Volume 3" />
         <property name="journalTitle" value="Molecular BioSystems" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -2950,10 +2950,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryNaturalProductsReports14"> 
+       <property name="RoyalSocietyOfChemistryNaturalProductsReports14">
         <property name="title" value="Natural Products Reports Volume 14" />
         <property name="journalTitle" value="Natural Products Reports" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -2977,10 +2977,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryNaturalProductsReports15"> 
+       <property name="RoyalSocietyOfChemistryNaturalProductsReports15">
         <property name="title" value="Natural Products Reports Volume 15" />
         <property name="journalTitle" value="Natural Products Reports" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -3004,10 +3004,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryNaturalProductsReports16"> 
+       <property name="RoyalSocietyOfChemistryNaturalProductsReports16">
         <property name="title" value="Natural Products Reports Volume 16" />
         <property name="journalTitle" value="Natural Products Reports" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -3031,10 +3031,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryNaturalProductsReports17"> 
+       <property name="RoyalSocietyOfChemistryNaturalProductsReports17">
         <property name="title" value="Natural Products Reports Volume 17" />
         <property name="journalTitle" value="Natural Products Reports" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -3058,10 +3058,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryNaturalProductsReports18"> 
+       <property name="RoyalSocietyOfChemistryNaturalProductsReports18">
         <property name="title" value="Natural Products Reports Volume 18" />
         <property name="journalTitle" value="Natural Products Reports" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -3085,10 +3085,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryNaturalProductsReports19"> 
+       <property name="RoyalSocietyOfChemistryNaturalProductsReports19">
         <property name="title" value="Natural Products Reports Volume 19" />
         <property name="journalTitle" value="Natural Products Reports" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -3112,10 +3112,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryNaturalProductsReports20"> 
+       <property name="RoyalSocietyOfChemistryNaturalProductsReports20">
         <property name="title" value="Natural Products Reports Volume 20" />
         <property name="journalTitle" value="Natural Products Reports" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -3139,10 +3139,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryNaturalProductsReports21"> 
+       <property name="RoyalSocietyOfChemistryNaturalProductsReports21">
         <property name="title" value="Natural Products Reports Volume 21" />
         <property name="journalTitle" value="Natural Products Reports" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -3166,10 +3166,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryNaturalProductsReports22"> 
+       <property name="RoyalSocietyOfChemistryNaturalProductsReports22">
         <property name="title" value="Natural Products Reports Volume 22" />
         <property name="journalTitle" value="Natural Products Reports" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -3193,10 +3193,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryNaturalProductsReports23"> 
+       <property name="RoyalSocietyOfChemistryNaturalProductsReports23">
         <property name="title" value="Natural Products Reports Volume 23" />
         <property name="journalTitle" value="Natural Products Reports" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -3220,10 +3220,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryNaturalProductsReports24"> 
+       <property name="RoyalSocietyOfChemistryNaturalProductsReports24">
         <property name="title" value="Natural Products Reports Volume 24" />
         <property name="journalTitle" value="Natural Products Reports" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -3247,10 +3247,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryNewJournalofChemistry22"> 
+       <property name="RoyalSocietyOfChemistryNewJournalofChemistry22">
         <property name="title" value="New Journal of Chemistry Volume 22" />
         <property name="journalTitle" value="New Journal of Chemistry" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -3274,10 +3274,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryNewJournalofChemistry23"> 
+       <property name="RoyalSocietyOfChemistryNewJournalofChemistry23">
         <property name="title" value="New Journal of Chemistry Volume 23" />
         <property name="journalTitle" value="New Journal of Chemistry" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -3301,10 +3301,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryNewJournalofChemistry24"> 
+       <property name="RoyalSocietyOfChemistryNewJournalofChemistry24">
         <property name="title" value="New Journal of Chemistry Volume 24" />
         <property name="journalTitle" value="New Journal of Chemistry" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -3328,10 +3328,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryNewJournalofChemistry25"> 
+       <property name="RoyalSocietyOfChemistryNewJournalofChemistry25">
         <property name="title" value="New Journal of Chemistry Volume 25" />
         <property name="journalTitle" value="New Journal of Chemistry" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -3355,10 +3355,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryNewJournalofChemistry26"> 
+       <property name="RoyalSocietyOfChemistryNewJournalofChemistry26">
         <property name="title" value="New Journal of Chemistry Volume 26" />
         <property name="journalTitle" value="New Journal of Chemistry" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -3382,10 +3382,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryNewJournalofChemistry27"> 
+       <property name="RoyalSocietyOfChemistryNewJournalofChemistry27">
         <property name="title" value="New Journal of Chemistry Volume 27" />
         <property name="journalTitle" value="New Journal of Chemistry" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -3409,10 +3409,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryNewJournalofChemistry28"> 
+       <property name="RoyalSocietyOfChemistryNewJournalofChemistry28">
         <property name="title" value="New Journal of Chemistry Volume 28" />
         <property name="journalTitle" value="New Journal of Chemistry" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -3436,10 +3436,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryNewJournalofChemistry29"> 
+       <property name="RoyalSocietyOfChemistryNewJournalofChemistry29">
         <property name="title" value="New Journal of Chemistry Volume 29" />
         <property name="journalTitle" value="New Journal of Chemistry" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -3463,10 +3463,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryNewJournalofChemistry30"> 
+       <property name="RoyalSocietyOfChemistryNewJournalofChemistry30">
         <property name="title" value="New Journal of Chemistry Volume 30" />
         <property name="journalTitle" value="New Journal of Chemistry" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -3490,10 +3490,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryNewJournalofChemistry31"> 
+       <property name="RoyalSocietyOfChemistryNewJournalofChemistry31">
         <property name="title" value="New Journal of Chemistry Volume 31" />
         <property name="journalTitle" value="New Journal of Chemistry" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -3517,10 +3517,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryPCCP1"> 
+       <property name="RoyalSocietyOfChemistryPCCP1">
         <property name="title" value="PCCP Volume 1" />
         <property name="journalTitle" value="PCCP" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -3544,10 +3544,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryPCCP2"> 
+       <property name="RoyalSocietyOfChemistryPCCP2">
         <property name="title" value="PCCP Volume 2" />
         <property name="journalTitle" value="PCCP" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -3571,10 +3571,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryPCCP3"> 
+       <property name="RoyalSocietyOfChemistryPCCP3">
         <property name="title" value="PCCP Volume 3" />
         <property name="journalTitle" value="PCCP" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -3598,10 +3598,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryPCCP4"> 
+       <property name="RoyalSocietyOfChemistryPCCP4">
         <property name="title" value="PCCP Volume 4" />
         <property name="journalTitle" value="PCCP" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -3625,10 +3625,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryPCCP5"> 
+       <property name="RoyalSocietyOfChemistryPCCP5">
         <property name="title" value="PCCP Volume 5" />
         <property name="journalTitle" value="PCCP" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -3652,10 +3652,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryPCCP6"> 
+       <property name="RoyalSocietyOfChemistryPCCP6">
         <property name="title" value="PCCP Volume 6" />
         <property name="journalTitle" value="PCCP" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -3679,10 +3679,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryPCCP7"> 
+       <property name="RoyalSocietyOfChemistryPCCP7">
         <property name="title" value="PCCP Volume 7" />
         <property name="journalTitle" value="PCCP" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -3706,10 +3706,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryPCCP8"> 
+       <property name="RoyalSocietyOfChemistryPCCP8">
         <property name="title" value="PCCP Volume 8" />
         <property name="journalTitle" value="PCCP" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -3733,10 +3733,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryPCCP9"> 
+       <property name="RoyalSocietyOfChemistryPCCP9">
         <property name="title" value="PCCP Volume 9" />
         <property name="journalTitle" value="PCCP" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -3760,10 +3760,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryOrganicandBiomol.Chem1"> 
+       <property name="RoyalSocietyOfChemistryOrganicandBiomol.Chem1">
         <property name="title" value="Organic &amp; Biomol. Chem Volume 1" />
         <property name="journalTitle" value="Organic &amp; Biomol. Chem" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -3787,10 +3787,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryOrganicandBiomol.Chem2"> 
+       <property name="RoyalSocietyOfChemistryOrganicandBiomol.Chem2">
         <property name="title" value="Organic &amp; Biomol. Chem Volume 2" />
         <property name="journalTitle" value="Organic &amp; Biomol. Chem" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -3814,10 +3814,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryOrganicandBiomol.Chem3"> 
+       <property name="RoyalSocietyOfChemistryOrganicandBiomol.Chem3">
         <property name="title" value="Organic &amp; Biomol. Chem Volume 3" />
         <property name="journalTitle" value="Organic &amp; Biomol. Chem" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -3841,10 +3841,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryOrganicandBiomol.Chem4"> 
+       <property name="RoyalSocietyOfChemistryOrganicandBiomol.Chem4">
         <property name="title" value="Organic &amp; Biomol. Chem Volume 4" />
         <property name="journalTitle" value="Organic &amp; Biomol. Chem" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -3868,10 +3868,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryOrganicandBiomol.Chem5"> 
+       <property name="RoyalSocietyOfChemistryOrganicandBiomol.Chem5">
         <property name="title" value="Organic &amp; Biomol. Chem Volume 5" />
         <property name="journalTitle" value="Organic &amp; Biomol. Chem" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -3895,10 +3895,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryPesticideOutlook11"> 
+       <property name="RoyalSocietyOfChemistryPesticideOutlook11">
         <property name="title" value="Pesticide Outlook Volume 11" />
         <property name="journalTitle" value="Pesticide Outlook" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -3922,10 +3922,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryPesticideOutlook12"> 
+       <property name="RoyalSocietyOfChemistryPesticideOutlook12">
         <property name="title" value="Pesticide Outlook Volume 12" />
         <property name="journalTitle" value="Pesticide Outlook" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -3949,10 +3949,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryPesticideOutlook13"> 
+       <property name="RoyalSocietyOfChemistryPesticideOutlook13">
         <property name="title" value="Pesticide Outlook Volume 13" />
         <property name="journalTitle" value="Pesticide Outlook" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -3976,10 +3976,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryPesticideOutlook14"> 
+       <property name="RoyalSocietyOfChemistryPesticideOutlook14">
         <property name="title" value="Pesticide Outlook Volume 14" />
         <property name="journalTitle" value="Pesticide Outlook" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -4003,10 +4003,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryPhysChemComm1"> 
+       <property name="RoyalSocietyOfChemistryPhysChemComm1">
         <property name="title" value="PhysChemComm Volume 1" />
         <property name="journalTitle" value="PhysChemComm" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -4030,10 +4030,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryPhysChemComm2"> 
+       <property name="RoyalSocietyOfChemistryPhysChemComm2">
         <property name="title" value="PhysChemComm Volume 2" />
         <property name="journalTitle" value="PhysChemComm" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -4057,10 +4057,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryPhysChemComm3"> 
+       <property name="RoyalSocietyOfChemistryPhysChemComm3">
         <property name="title" value="PhysChemComm Volume 3" />
         <property name="journalTitle" value="PhysChemComm" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -4084,10 +4084,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryPhysChemComm4"> 
+       <property name="RoyalSocietyOfChemistryPhysChemComm4">
         <property name="title" value="PhysChemComm Volume 4" />
         <property name="journalTitle" value="PhysChemComm" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -4111,10 +4111,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryPhysChemComm5"> 
+       <property name="RoyalSocietyOfChemistryPhysChemComm5">
         <property name="title" value="PhysChemComm Volume 5" />
         <property name="journalTitle" value="PhysChemComm" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -4138,10 +4138,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryPhysChemComm6"> 
+       <property name="RoyalSocietyOfChemistryPhysChemComm6">
         <property name="title" value="PhysChemComm Volume 6" />
         <property name="journalTitle" value="PhysChemComm" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -4165,10 +4165,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryPhotochemicalandPhotobiologicalSciences1"> 
+       <property name="RoyalSocietyOfChemistryPhotochemicalandPhotobiologicalSciences1">
         <property name="title" value="Photochemical &amp; Photobiological Sciences Volume 1" />
         <property name="journalTitle" value="Photochemical &amp; Photobiological Sciences" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -4192,10 +4192,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryPhotochemicalandPhotobiologicalSciences2"> 
+       <property name="RoyalSocietyOfChemistryPhotochemicalandPhotobiologicalSciences2">
         <property name="title" value="Photochemical &amp; Photobiological Sciences Volume 2" />
         <property name="journalTitle" value="Photochemical &amp; Photobiological Sciences" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -4219,10 +4219,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryPhotochemicalandPhotobiologicalSciences3"> 
+       <property name="RoyalSocietyOfChemistryPhotochemicalandPhotobiologicalSciences3">
         <property name="title" value="Photochemical &amp; Photobiological Sciences Volume 3" />
         <property name="journalTitle" value="Photochemical &amp; Photobiological Sciences" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -4246,10 +4246,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryPhotochemicalandPhotobiologicalSciences4"> 
+       <property name="RoyalSocietyOfChemistryPhotochemicalandPhotobiologicalSciences4">
         <property name="title" value="Photochemical &amp; Photobiological Sciences Volume 4" />
         <property name="journalTitle" value="Photochemical &amp; Photobiological Sciences" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -4273,10 +4273,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryPhotochemicalandPhotobiologicalSciences5"> 
+       <property name="RoyalSocietyOfChemistryPhotochemicalandPhotobiologicalSciences5">
         <property name="title" value="Photochemical &amp; Photobiological Sciences Volume 5" />
         <property name="journalTitle" value="Photochemical &amp; Photobiological Sciences" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -4300,10 +4300,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryPhotochemicalandPhotobiologicalSciences6"> 
+       <property name="RoyalSocietyOfChemistryPhotochemicalandPhotobiologicalSciences6">
         <property name="title" value="Photochemical &amp; Photobiological Sciences Volume 6" />
         <property name="journalTitle" value="Photochemical &amp; Photobiological Sciences" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -4327,10 +4327,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistrySoftMatter1"> 
+       <property name="RoyalSocietyOfChemistrySoftMatter1">
         <property name="title" value="Soft Matter Volume 1" />
         <property name="journalTitle" value="Soft Matter" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -4354,10 +4354,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistrySoftMatter2"> 
+       <property name="RoyalSocietyOfChemistrySoftMatter2">
         <property name="title" value="Soft Matter Volume 2" />
         <property name="journalTitle" value="Soft Matter" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -4381,10 +4381,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistrySoftMatter3"> 
+       <property name="RoyalSocietyOfChemistrySoftMatter3">
         <property name="title" value="Soft Matter Volume 3" />
         <property name="journalTitle" value="Soft Matter" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -4408,10 +4408,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryPerkinTransactions11997"> 
+       <property name="RoyalSocietyOfChemistryPerkinTransactions11997">
         <property name="title" value="Perkin Transactions 1 1997" />
         <property name="journalTitle" value="Perkin Transactions 1" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -4435,10 +4435,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryPerkinTransactions11998"> 
+       <property name="RoyalSocietyOfChemistryPerkinTransactions11998">
         <property name="title" value="Perkin Transactions 1 1998" />
         <property name="journalTitle" value="Perkin Transactions 1" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -4462,10 +4462,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryPerkinTransactions11999"> 
+       <property name="RoyalSocietyOfChemistryPerkinTransactions11999">
         <property name="title" value="Perkin Transactions 1 1999" />
         <property name="journalTitle" value="Perkin Transactions 1" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -4489,10 +4489,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryPerkinTransactions12000"> 
+       <property name="RoyalSocietyOfChemistryPerkinTransactions12000">
         <property name="title" value="Perkin Transactions 1 2000" />
         <property name="journalTitle" value="Perkin Transactions 1" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -4516,10 +4516,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryPerkinTransactions12001"> 
+       <property name="RoyalSocietyOfChemistryPerkinTransactions12001">
         <property name="title" value="Perkin Transactions 1 2001" />
         <property name="journalTitle" value="Perkin Transactions 1" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -4543,10 +4543,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryPerkinTransactions12002"> 
+       <property name="RoyalSocietyOfChemistryPerkinTransactions12002">
         <property name="title" value="Perkin Transactions 1 2002" />
         <property name="journalTitle" value="Perkin Transactions 1" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -4570,10 +4570,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryPerkinTransactions21997"> 
+       <property name="RoyalSocietyOfChemistryPerkinTransactions21997">
         <property name="title" value="Perkin Transactions 2 1997" />
         <property name="journalTitle" value="Perkin Transactions 2" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -4597,10 +4597,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryPerkinTransactions21998"> 
+       <property name="RoyalSocietyOfChemistryPerkinTransactions21998">
         <property name="title" value="Perkin Transactions 2 1998" />
         <property name="journalTitle" value="Perkin Transactions 2" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -4624,10 +4624,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryPerkinTransactions21999"> 
+       <property name="RoyalSocietyOfChemistryPerkinTransactions21999">
         <property name="title" value="Perkin Transactions 2 1999" />
         <property name="journalTitle" value="Perkin Transactions 2" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -4651,10 +4651,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryPerkinTransactions22000"> 
+       <property name="RoyalSocietyOfChemistryPerkinTransactions22000">
         <property name="title" value="Perkin Transactions 2 2000" />
         <property name="journalTitle" value="Perkin Transactions 2" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -4678,10 +4678,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryPerkinTransactions22001"> 
+       <property name="RoyalSocietyOfChemistryPerkinTransactions22001">
         <property name="title" value="Perkin Transactions 2 2001" />
         <property name="journalTitle" value="Perkin Transactions 2" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -4705,10 +4705,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryPerkinTransactions22002"> 
+       <property name="RoyalSocietyOfChemistryPerkinTransactions22002">
         <property name="title" value="Perkin Transactions 2 2002" />
         <property name="journalTitle" value="Perkin Transactions 2" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -4732,10 +4732,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryDaltonTransactions1997"> 
+       <property name="RoyalSocietyOfChemistryDaltonTransactions1997">
         <property name="title" value="Dalton Transactions 1997" />
         <property name="journalTitle" value="Dalton Transactions" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -4759,10 +4759,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryDaltonTransactions1998"> 
+       <property name="RoyalSocietyOfChemistryDaltonTransactions1998">
         <property name="title" value="Dalton Transactions 1998" />
         <property name="journalTitle" value="Dalton Transactions" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -4786,10 +4786,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryDaltonTransactions1999"> 
+       <property name="RoyalSocietyOfChemistryDaltonTransactions1999">
         <property name="title" value="Dalton Transactions 1999" />
         <property name="journalTitle" value="Dalton Transactions" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -4813,10 +4813,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryDaltonTransactions2000"> 
+       <property name="RoyalSocietyOfChemistryDaltonTransactions2000">
         <property name="title" value="Dalton Transactions 2000" />
         <property name="journalTitle" value="Dalton Transactions" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -4840,10 +4840,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryDaltonTransactions2001"> 
+       <property name="RoyalSocietyOfChemistryDaltonTransactions2001">
         <property name="title" value="Dalton Transactions 2001" />
         <property name="journalTitle" value="Dalton Transactions" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
@@ -4867,10 +4867,10 @@
         <property name="attributes.publisher" value="Royal Society of Chemistry" />
       </property>
 
-       <property name="RoyalSocietyOfChemistryDaltonTransactions2002"> 
+       <property name="RoyalSocietyOfChemistryDaltonTransactions2002">
         <property name="title" value="Dalton Transactions 2002" />
         <property name="journalTitle" value="Dalton Transactions" />
-        <property name="plugin" value="uk.org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
+        <property name="plugin" value="org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin" />
         <property name="param.1">
           <property name="key" value="base_url" />
           <property name="value" value="http://www.rsc.org/" />
