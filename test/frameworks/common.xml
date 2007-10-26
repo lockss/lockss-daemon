@@ -53,6 +53,7 @@
     List the plugins that should be included in UI menus. -->
     <property name="plugin.registry">
       <list>
+	<value>org.lockss.plugin.hindawi.HindawiPlugin</value>
 	<value>org.lockss.plugin.anthrosource.AnthroSourcePlugin</value>
 	<value>uk.org.lockss.plugin.jelit.JeLitPlugin</value>
 	<value>uk.org.lockss.plugin.psycoloquy.PsycoloquyPlugin</value>
