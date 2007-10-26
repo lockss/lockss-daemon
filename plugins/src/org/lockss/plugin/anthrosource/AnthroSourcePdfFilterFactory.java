@@ -1,5 +1,5 @@
 /*
- * $Id: AnthroSourcePdfFilterFactory.java,v 1.2 2007-09-25 17:51:12 thib_gc Exp $
+ * $Id: AnthroSourcePdfFilterFactory.java,v 1.3 2007-10-26 07:36:40 thib_gc Exp $
  */
 
 /*
@@ -90,7 +90,33 @@ public class AnthroSourcePdfFilterFactory
                                                InputStream in,
                                                String encoding)
       throws PluginException {
-    return PdfUtil.applyFromInputStream(this, in);
+    logger.debug2("PDF filter factory for: " + au.getName());
+    OutputDocumentTransform documentTransform = null;
+    try {
+      documentTransform =
+        (OutputDocumentTransform)au.getPlugin().newAuxClass(getClass().getName(),
+                                                            OutputDocumentTransform.class);
+      logger.debug2("Successfully loaded and instantiated " + documentTransform.getClass().getName());
+    }
+    catch (PluginException.InvalidDefinition id) {
+      logger.error("Can't load PDF transform; unfiltered", id);
+      return in;
+    }
+    catch (RuntimeException rte) {
+      logger.error("Can't load PDF transform; unfiltered", rte);
+      return in;
+    }
+
+    if (documentTransform == null) {
+      logger.debug2("Unfiltered");
+      return in;
+    }
+    else {
+      logger.debug2("Filtered with " + documentTransform.getClass().getName());
+      return PdfUtil.applyFromInputStream(documentTransform, in);
+    }
   }
+
+  private static Logger logger = Logger.getLogger("AnthroSourcePdfFilterFactory");
 
 }
