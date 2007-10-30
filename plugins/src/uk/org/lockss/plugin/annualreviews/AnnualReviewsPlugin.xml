@@ -5,11 +5,11 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>6</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
-    <string>1.26.0</string>
+    <string>1.27.0</string>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
@@ -17,7 +17,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;%s, vol. %d&quot;, journal_id, volume</string>
+    <string>&quot;Annual Reviews Plugin, Base URL %s, Journal ID %s (%s), Volume %d&quot;, base_url, journal_id, short_journal_id, volume</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>

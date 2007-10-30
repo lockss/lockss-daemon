@@ -12,12 +12,23 @@ public class AnnualReviewsHtmlFilterFactory implements FilterFactory {
                                                InputStream in,
                                                String encoding)
       throws PluginException {
-    // Filter out <select name="url">...</select>
+    HtmlTransform[] transforms = new HtmlTransform[] {
+        // Filter out <select name="url">...</select>
+        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("tr",
+                                                                         "class",
+                                                                         "identitiesBar")),
+        // Filter out <div class="CitedBySectionContent">...</div>
+        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
+                                                                         "class",
+                                                                         "CitedBySectionContent")),
+        // Filter out <table class="articleEntry">...</table>
+        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("table",
+                                                                         "class",
+                                                                         "articleEntry")),
+    };
     return new HtmlFilterInputStream(in,
                                      encoding,
-                                     HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("tr",
-                                                                                                      "class",
-                                                                                                      "identitiesBar")));
+                                     new HtmlCompoundTransform(transforms));
   }
 
 }
