@@ -13,11 +13,11 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>6</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;BioOne %s Volume %d&quot;, journal_id, volume</string>
+    <string>&quot;BioOne Plugin, Base URL %s, Journal ID %s, Volume %d&quot;, base_url, journal_id, volume</string>
   </entry>
   <entry>
     <string>plugin_name</string>

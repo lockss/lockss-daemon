@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>16</string>
+    <string>17</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -17,7 +17,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;%s Volume %s&quot;, base_url, volume_name</string>
+    <string>&quot;HighWire Press Plugin (CLOCKSS), Base URL %s, Volume %s&quot;, base_url, volume_name</string>
   </entry>
   <entry>
     <string>plugin_name</string>

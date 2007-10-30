@@ -23,7 +23,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>12</string>
+    <string>13</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -35,7 +35,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;%s, vol. %d&quot;, base_url_host, volume</string>
+    <string>&quot;HighWire Press Plugin (Legacy), Base URL %s, Volume %d&quot;, base_url_host, volume</string>
   </entry>
   <entry>
     <string>plugin_name</string>
