@@ -1,10 +1,10 @@
 /*
- * $Id: TestHighWirePlugin.java,v 1.5 2007-01-14 08:06:13 tlipkis Exp $
+ * $Id: TestHighWirePlugin.java,v 1.6 2007-10-31 19:04:49 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -117,7 +117,7 @@ public class TestHighWirePlugin extends LockssTestCase {
 //     props.setProperty(YEAR_KEY, "2004");
 
     DefinableArchivalUnit au = makeAuFromProps(props);
-    assertEquals("www.example.com, vol. 322", au.getName());
+    assertEquals("HighWire Press Plugin (Legacy), Base URL http://www.example.com/, Volume 322", au.getName());
   }
 
   public void testGetPluginId() {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestProjectMuseArchivalUnit.java,v 1.6 2007-09-24 17:43:04 thib_gc Exp $
+ * $Id: TestProjectMuseArchivalUnit.java,v 1.7 2007-10-31 19:04:48 thib_gc Exp $
  */
 
 /*
@@ -230,10 +230,10 @@ public class TestProjectMuseArchivalUnit extends LockssTestCase {
 
   public void testGetName() throws Exception {
     DefinableArchivalUnit au = makeAu(new URL(ROOT_URL), 60, DIR);
-    assertEquals("http://muse.jhu.edu/, american_imago, Volume 60", au.getName());
+    assertEquals("Project Muse Plugin, Base URL http://muse.jhu.edu/, Journal ID american_imago, Volume 60", au.getName());
     DefinableArchivalUnit au1 =
         makeAu(new URL("http://www.bmj.com/"), 61, "bmj");
-    assertEquals("http://www.bmj.com/, bmj, Volume 61", au1.getName());
+    assertEquals("Project Muse Plugin, Base URL http://www.bmj.com/, Journal ID bmj, Volume 61", au1.getName());
   }
 
   public void testGetFilterRules() throws Exception {

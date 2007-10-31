@@ -1,5 +1,5 @@
 /*
- * $Id: TestProjectMusePlugin.java,v 1.4 2007-09-24 17:43:04 thib_gc Exp $
+ * $Id: TestProjectMusePlugin.java,v 1.5 2007-10-31 19:04:48 thib_gc Exp $
  */
 
 /*
@@ -110,7 +110,7 @@ public class TestProjectMusePlugin extends LockssTestCase {
     props.setProperty(VOL_KEY, "322");
 
     DefinableArchivalUnit au = makeAuFromProps(props);
-    assertEquals("http://www.example.com/, journal_dir, Volume 322", au.getName());
+    assertEquals("Project Muse Plugin, Base URL http://www.example.com/, Journal ID journal_dir, Volume 322", au.getName());
   }
 
   public void testGetPluginId() {

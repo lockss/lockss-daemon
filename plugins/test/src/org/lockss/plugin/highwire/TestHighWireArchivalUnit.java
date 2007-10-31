@@ -1,10 +1,10 @@
 /*
- * $Id: TestHighWireArchivalUnit.java,v 1.8 2007-01-14 08:13:28 tlipkis Exp $
+ * $Id: TestHighWireArchivalUnit.java,v 1.9 2007-10-31 19:04:49 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,20 +33,19 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.highwire;
 
 import java.io.File;
-import java.net.*;
-import java.util.*;
+import java.net.URL;
+import java.util.Properties;
 
 import org.lockss.config.Configuration;
-import org.lockss.crawler.*;
 import org.lockss.daemon.*;
-import org.lockss.util.*;
-import org.lockss.state.*;
-import org.lockss.test.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
-import org.lockss.plugin.wrapper.*;
 import org.lockss.plugin.definable.*;
+import org.lockss.plugin.wrapper.WrapperUtil;
 import org.lockss.repository.LockssRepositoryImpl;
+import org.lockss.state.AuState;
+import org.lockss.test.*;
+import org.lockss.util.*;
 
 public class TestHighWireArchivalUnit extends LockssTestCase {
   private MockLockssDaemon theDaemon;
@@ -196,13 +195,13 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
   public void testgetName() throws Exception {
     DefinableArchivalUnit au =
       makeAu(new URL("http://shadow1.stanford.edu/"), 42);
-    assertEquals("shadow1.stanford.edu, vol. 42", au.getName());
+    assertEquals("HighWire Press Plugin (Legacy), Base URL http://shadow1.stanford.edu/, Volume 42", au.getName());
     DefinableArchivalUnit au1 =
       makeAu(new URL("http://www.bmj.com/"), 42);
-    assertEquals("www.bmj.com, vol. 42", au1.getName());
+    assertEquals("HighWire Press Plugin (Legacy), Base URL http://www.bmj.com/, Volume 42", au1.getName());
   }
 
- public void testGetFilterRuleNoContentType() throws Exception {
+ public void testGetFilterRuleNoContentTytpe() throws Exception {
     DefinableArchivalUnit au =
       makeAu(new URL("http://shadow1.stanford.edu/"), 42);
     assertNull(au.getFilterRule(null));
