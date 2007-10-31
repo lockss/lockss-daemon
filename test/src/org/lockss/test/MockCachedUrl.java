@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrl.java,v 1.38 2007-09-12 18:32:20 tlipkis Exp $
+ * $Id: MockCachedUrl.java,v 1.39 2007-10-31 04:02:57 dshr Exp $
  */
 
 /*
@@ -153,6 +153,11 @@ public class MockCachedUrl implements CachedUrl {
     }
 
     return new StringReader("");
+  }
+
+  public Reader openWithUrlRewriting() {
+    // XXX needs to be able to provide rewriting
+    return null;
   }
 
   public boolean hasContent() {

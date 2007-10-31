@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrl.java,v 1.29 2007-09-12 18:32:51 tlipkis Exp $
+ * $Id: BaseCachedUrl.java,v 1.30 2007-10-31 04:02:57 dshr Exp $
  */
 
 /*
@@ -190,6 +190,11 @@ public class BaseCachedUrl implements CachedUrl {
       throw new LockssRepository.RepositoryStateException
 	("Couldn't create InputStreamReader:" + e.toString());
     }
+  }
+
+  public Reader openWithUrlRewriting() {
+    // Default is no URL re-writing
+    return null;
   }
 
  public CIProperties getProperties() {

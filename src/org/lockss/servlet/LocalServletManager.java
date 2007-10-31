@@ -1,5 +1,5 @@
 /*
- * $Id: LocalServletManager.java,v 1.24 2007-10-01 08:10:14 tlipkis Exp $
+ * $Id: LocalServletManager.java,v 1.25 2007-10-31 04:02:57 dshr Exp $
  */
 
 /*
@@ -223,6 +223,8 @@ public class LocalServletManager extends BaseServletManager {
 		       "org.lockss.servlet.DaemonStatus");
     handler.addServlet("ViewContent", "/ViewContent",
 		       "org.lockss.servlet.ViewContent");
+    handler.addServlet("ServeContent", "/ServeContent",
+		       "org.lockss.servlet.ServeContent");
     handler.addServlet("ListUrls", "/ListUrls",
 		       "org.lockss.servlet.ListUrls");
     handler.addServlet("AdminIpAccess", "/AdminIpAccess",

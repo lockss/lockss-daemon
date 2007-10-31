@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.93 2007-08-16 02:22:17 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.94 2007-10-31 04:02:57 dshr Exp $
  */
 
 /*
@@ -189,6 +189,10 @@ public abstract class LockssServlet extends HttpServlet
     new ServletDescr(ViewContent.class,
                      "View Content",
                      ServletDescr.DEBUG_ONLY | ServletDescr.NOT_IN_NAV);
+  public static final ServletDescr SERVLET_SERVE_CONTENT =
+    new ServletDescr(ServeContent.class,
+                     "Serve Content",
+                     ServletDescr.NOT_IN_NAV);
   public static final ServletDescr SERVLET_LIST_URLS =
     new ServletDescr(ListUrls.class,
                      "List URLs",
@@ -265,6 +269,7 @@ public abstract class LockssServlet extends HttpServlet
      SERVLET_PROXY_INFO,
      SERVLET_DAEMON_STATUS,
      SERVLET_DISPLAY_CONTENT,
+     SERVLET_SERVE_CONTENT,
      SERVLET_LIST_URLS,
      SERVLET_HASH_CUS,
      LINK_LOGS,
