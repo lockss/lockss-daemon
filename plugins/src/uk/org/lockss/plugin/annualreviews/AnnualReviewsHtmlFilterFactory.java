@@ -1,5 +1,5 @@
 /*
- * $Id: AnnualReviewsHtmlFilterFactory.java,v 1.3 2007-11-05 06:27:03 thib_gc Exp $
+ * $Id: AnnualReviewsHtmlFilterFactory.java,v 1.4 2007-11-05 06:33:35 thib_gc Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package uk.org.lockss.plugin.annualreviews;
 
 import java.io.InputStream;
 
+import org.htmlparser.filters.TagNameFilter;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
@@ -57,6 +58,8 @@ public class AnnualReviewsHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("table",
                                                                          "class",
                                                                          "articleEntry")),
+        // Filter out <script>...</script>
+        HtmlNodeFilterTransform.exclude(new TagNameFilter("script")),
     };
     return new HtmlFilterInputStream(in,
                                      encoding,
