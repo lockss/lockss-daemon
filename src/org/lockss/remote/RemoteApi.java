@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.63 2007-10-13 03:16:57 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.64 2007-11-06 07:10:50 tlipkis Exp $
  */
 
 /*
@@ -509,7 +509,7 @@ public class RemoteApi
       } catch (Exception e) {
       }
       addPropsToZip(zip, platConfig, BACK_FILE_PROPS,
-		    "Configuration and repair info for LOCKSS cache " +
+		    "Configuration and repair info for LOCKSS box " +
 		    machineName);
 
       // add all the cache config files
@@ -997,7 +997,7 @@ public class RemoteApi
 	  }
 	} else {
 	  if (doCreate) {
-	    log.debug(addOpName(addOp) + auid);
+	    log.debug(addOpName(addOp) + ": " + auid);
 	    AuProxy aup = createAndSaveAuConfiguration(pluginp, auConfig);
 	    stat.setStatus("Added", STATUS_ORDER_NORM);
 	    stat.setName(aup.getName(), aup.getPlugin());
@@ -1365,7 +1365,7 @@ public class RemoteApi
 	this.name = s;
       }
       void setName(String s, Plugin plugin) {
-	if (s == null) {
+	if (plugin == null) {
 	  this.name = s;
 	  return;
 	}
@@ -1373,7 +1373,7 @@ public class RemoteApi
 	this.name = (plat != null) ? (s + " (" + plat + ")") : s;
       }
       void setName(String s, PluginProxy pluginp) {
-	if (s == null) {
+	if (pluginp == null) {
 	  this.name = s;
 	  return;
 	}
@@ -1531,7 +1531,7 @@ public class RemoteApi
 
   /** printf string applied to cache-name, email-sender */
   static final String PARAM_BACKUP_EMAIL_FROM = BACKUP_PREFIX + "from";
-  static final String DEFAULT_BACKUP_EMAIL_FROM = "LOCKSS cache %s <%s>";
+  static final String DEFAULT_BACKUP_EMAIL_FROM = "LOCKSS box %s <%s>";
 
   /** URL for more info about backup file */
   static final String PARAM_BACKUP_EMAIL_INFO_URL = BACKUP_PREFIX + "infoUrl";
@@ -1545,7 +1545,7 @@ public class RemoteApi
 
   static final String BACK_MAIL_TEXT =
     "The attached file is a backup of configuration and state information\n" +
-    "from LOCKSS cache %s (%s).\n" +
+    "from LOCKSS box %s (%s).\n" +
     "This file will be needed if the cache ever suffers a disk crash or\n" +
     "other serious loss of content.\n\n" +
     "(If your mail system blocked the attachment, you may retrieve the file\n"+
@@ -1607,7 +1607,7 @@ public class RemoteApi
       msg.addHeader("To", to);
       msg.addHeader("Date", headerDf.format(TimeBase.nowDate()));
       msg.addHeader("Subject",
-		    "Backup file for LOCKSS cache " + machineName);
+		    "Backup file for LOCKSS box " + machineName);
       //     msg.addHeader("X-Mailer", getXMailer());
       mailSvc.sendMail(getBackEmailSender(config), to, msg);
       log.info("sent");
@@ -1639,7 +1639,7 @@ public class RemoteApi
       return sprintf(fmt, args);
     } catch (Exception e) {
       log.warning("getBackEmailFrom()", e);
-      return "LOCKSS cache";
+      return "LOCKSS box";
     }
   }
 

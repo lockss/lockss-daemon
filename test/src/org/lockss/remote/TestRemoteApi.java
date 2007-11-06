@@ -1,5 +1,5 @@
 /*
- * $Id: TestRemoteApi.java,v 1.20 2006-11-09 01:44:54 thib_gc Exp $
+ * $Id: TestRemoteApi.java,v 1.21 2007-11-06 07:10:50 tlipkis Exp $
  */
 
 /*
@@ -428,8 +428,17 @@ public class TestRemoteApi extends LockssTestCase {
   }
 
   void assertEntry(Properties exp, RemoteApi.BatchAuStatus bas, String auid) {
+    assertEntry(exp, bas, auid, null);
+  }
+
+  void assertEntry(Properties exp, RemoteApi.BatchAuStatus bas, String auid,
+		   String name) {
     RemoteApi.BatchAuStatus.Entry ent = findEntry(bas, auid);
     assertNotNull("No entry for auid " + auid, ent);
+    if (name != null) {
+      assertEquals(name, ent.getName());
+    }
+
     assertEquals(ConfigManager.fromProperties(exp), ent.getConfig());
   }
 
@@ -475,9 +484,11 @@ public class TestRemoteApi extends LockssTestCase {
     Properties p2 = new Properties();
     p2.put(ConfigParamDescr.BASE_URL.getKey(), "http://example.com/");
     p2.put(ConfigParamDescr.VOLUME_NUMBER.getKey(), "42");
+
     String auid1 = PluginManager.generateAuId(PID1, p1);
     String auid2 = PluginManager.generateAuId(PID1, p2);
     Configuration config = addAuTree(null, auid1, p1);
+    p2.put(PluginManager.AU_PARAM_DISPLAY_NAME, "A name");
     config = addAuTree(config, auid2, p2);
 
     Map auagreemap = new HashMap();
@@ -491,7 +502,7 @@ public class TestRemoteApi extends LockssTestCase {
     assertEquals(2, statlist.size());
 
     assertEntry(p1, bas, auid1);
-    assertEntry(p2, bas, auid2);
+    assertEntry(p2, bas, auid2, "A name");
 
     RemoteApi.BackupInfo bi = bas.getBackupInfo();
     try {
@@ -542,6 +553,37 @@ public class TestRemoteApi extends LockssTestCase {
     RemoteApi.BatchAuStatus bas = rapi.processSavedConfig(in);
     List statlist = bas.getStatusList();
     assertEquals(loop, statlist.size());
+  }
+
+  public void testProcessSavedConfigNoPlugin()  throws Exception {
+    Properties p1 = new Properties();
+    p1.put(ConfigParamDescr.BASE_URL.getKey(), "http://foo.bar/");
+    p1.put(ConfigParamDescr.VOLUME_NUMBER.getKey(), "7");
+    Properties p2 = new Properties();
+    p2.put(ConfigParamDescr.BASE_URL.getKey(), "http://example.com/");
+    p2.put(ConfigParamDescr.VOLUME_NUMBER.getKey(), "42");
+    String auid1 = PluginManager.generateAuId(PID1 + "bogus", p1);
+    String auid2 = PluginManager.generateAuId(PID1, p2);
+    p1.put(PluginManager.AU_PARAM_DISPLAY_NAME, "A name");
+    Configuration config = addAuTree(null, auid1, p1);
+    config = addAuTree(config, auid2, p2);
+
+    Map auagreemap = new HashMap();
+    auagreemap.put(auid1, "zippity agree map 1");
+    auagreemap.put(auid2, "doodah agree map 2");
+
+    File file = writeZipBackup(config, auagreemap);
+    InputStream in = new FileInputStream(file);
+    RemoteApi.BatchAuStatus bas = rapi.processSavedConfig(in);
+    List statlist = bas.getStatusList();
+    assertEquals(2, statlist.size());
+
+    assertEntry(p2, bas, auid2);
+
+    RemoteApi.BatchAuStatus.Entry ent1 = findEntry(bas, auid1);
+    assertNotNull("No entry for auid " + auid1, ent1);
+    assertEquals("A name", ent1.getName());
+    assertNull(ent1.getConfig());
   }
 
 
@@ -691,10 +733,10 @@ public class TestRemoteApi extends LockssTestCase {
     MimeMessage msg = (MimeMessage)rec.getMsg();
     try {
       assertNotNull(msg);
-      assertEquals("LOCKSS cache lockss42.example.com <foo@bar>",
+      assertEquals("LOCKSS box lockss42.example.com <foo@bar>",
 		   msg.getHeader("From"));
       assertEquals("foo@bar", msg.getHeader("To"));
-      assertEquals("Backup file for LOCKSS cache lockss42.example.com",
+      assertEquals("Backup file for LOCKSS box lockss42.example.com",
 		   msg.getHeader("Subject"));
       assertMatchesRE("^\\w\\w\\w, ",
 		      msg.getHeader("Date"));
@@ -742,7 +784,7 @@ public class TestRemoteApi extends LockssTestCase {
       assertNotNull(msg);
       assertEquals("fff@ccc", msg.getHeader("From"));
       assertEquals("rrr@ccc", msg.getHeader("To"));
-      assertEquals("Backup file for LOCKSS cache lockss42.example.com",
+      assertEquals("Backup file for LOCKSS box lockss42.example.com",
 		   msg.getHeader("Subject"));
 
       javax.mail.internet.MimeBodyPart[] parts = msg.getParts();
