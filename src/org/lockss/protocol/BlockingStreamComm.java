@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingStreamComm.java,v 1.28 2007-10-09 00:49:56 smorabito Exp $
+ * $Id: BlockingStreamComm.java,v 1.29 2007-11-06 07:10:26 tlipkis Exp $
  */
 
 /*
@@ -126,6 +126,11 @@ public class BlockingStreamComm
     PREFIX + "channelIdleTime";
   public static final long DEFAULT_CHANNEL_IDLE_TIME = 2 * Constants.MINUTE;
 
+  /** Time channel remains in DRAIN_INPUT state before closing */
+  public static final String PARAM_DRAIN_INPUT_TIME =
+    PREFIX + "drainInputTime";
+  public static final long DEFAULT_DRAIN_INPUT_TIME = 10 * Constants.SECOND;
+
   /** Interval at which send thread checks idle timer */
   public static final String PARAM_SEND_WAKEUP_TIME =
     PREFIX + "sendWakeupTime";
@@ -195,7 +200,8 @@ public class BlockingStreamComm
   private long paramConnectTimeout = DEFAULT_CONNECT_TIMEOUT;
   private long paramSoTimeout = DEFAULT_DATA_TIMEOUT;
   private long paramSendWakeupTime = DEFAULT_SEND_WAKEUP_TIME;
-  private long paramChannelIdleTime = DEFAULT_CHANNEL_IDLE_TIME;
+  protected long paramChannelIdleTime = DEFAULT_CHANNEL_IDLE_TIME;
+  private long paramDrainInputTime = DEFAULT_DRAIN_INPUT_TIME;
   private boolean paramIsBufferedSend = DEFAULT_IS_BUFFERED_SEND;
   private boolean paramIsTcpNodelay = DEFAULT_TCP_NODELAY;
   private long paramWaitExit = DEFAULT_WAIT_EXIT;
@@ -226,6 +232,8 @@ public class BlockingStreamComm
   MaxSizeRecordingMap channels = new MaxSizeRecordingMap();
   // Maps PeerIdentity to secondary PeerChannel
   MaxSizeRecordingMap rcvChannels = new MaxSizeRecordingMap();
+  Set<BlockingPeerChannel> drainingChannels = new HashSet();
+  int maxDrainingChannels = 0;
 
   private Vector messageHandlers = new Vector(); // Vector is synchronized
 
@@ -238,7 +246,8 @@ public class BlockingStreamComm
    */
   public void startService() {
     super.startService();
-    idMgr = getDaemon().getIdentityManager();
+    LockssDaemon daemon = getDaemon();
+    idMgr = daemon.getIdentityManager();
     resetConfig();
     try {
       myPeerId = getLocalPeerIdentity();
@@ -262,9 +271,14 @@ public class BlockingStreamComm
     }
     if (enabled) {
       start();
-//       getDaemon().getStatusService().registerStatusAccessor("SCommStats",
-// 							    new Status());
+      daemon.getStatusService().
+	registerStatusAccessor(getStatusAccessorName("SCommChans"),
+			       new ChannelStatus());
     }
+  }
+
+  protected String getStatusAccessorName(String base) {
+    return base;
   }
 
   /**
@@ -272,7 +286,8 @@ public class BlockingStreamComm
    * @see org.lockss.app.LockssManager#stopService()
    */
   public void stopService() {
-//     getDaemon().getStatusService().unregisterStatusAccessor("SCommStats");
+    getDaemon().getStatusService().
+      unregisterStatusAccessor(getStatusAccessorName("SCommChans"));
     if (running) {
       stop();
     }
@@ -328,6 +343,8 @@ public class BlockingStreamComm
 						   DEFAULT_SEND_WAKEUP_TIME);
       paramChannelIdleTime = config.getTimeInterval(PARAM_CHANNEL_IDLE_TIME,
 						    DEFAULT_CHANNEL_IDLE_TIME);
+      paramDrainInputTime = config.getTimeInterval(PARAM_DRAIN_INPUT_TIME,
+						    DEFAULT_DRAIN_INPUT_TIME);
     }
   }
 
@@ -581,6 +598,10 @@ public class BlockingStreamComm
     return paramChannelIdleTime;
   }
 
+  long getDrainInputTime() {
+    return paramDrainInputTime;
+  }
+
   long getChannelHungTime() {
     return paramChannelIdleTime + 1000;
   }
@@ -644,6 +665,18 @@ public class BlockingStreamComm
 	rcvChannels.remove(peer);
 	log.debug2("Removed secondary: " + chan);
       }
+      drainingChannels.remove(chan);
+    }
+  }
+
+  /**
+   * Called by channel when draining channel is dissociated, so it can be
+   * included in stats
+   */
+  void addDrainingChannel(BlockingPeerChannel chan) {
+    drainingChannels.add(chan);
+    if (drainingChannels.size() > maxDrainingChannels) {
+      maxDrainingChannels = drainingChannels.size();
     }
   }
 
@@ -1196,7 +1229,7 @@ public class BlockingStreamComm
 				       ColumnDescriptor.TYPE_STRING)
 		  );
 
-  private class Status implements StatusAccessor {
+  private class Status implements StatusAccessor, StatusAccessor.DebugOnly {
     // port, proto, u/m, direction, compressed, pkts, bytes
     long start;
 
@@ -1248,4 +1281,113 @@ public class BlockingStreamComm
       return row;
     }
   }
+
+  private static final List chanStatusColDescs =
+    ListUtil.list(
+		  new ColumnDescriptor("Peer", "Peer",
+				       ColumnDescriptor.TYPE_STRING),
+		  new ColumnDescriptor("State", "State",
+				       ColumnDescriptor.TYPE_STRING),
+		  new ColumnDescriptor("Flags", "Flags",
+				       ColumnDescriptor.TYPE_STRING),
+		  new ColumnDescriptor("SendQ", "SendQ",
+				       ColumnDescriptor.TYPE_INT),
+		  new ColumnDescriptor("LastSend", "LastSend",
+				       ColumnDescriptor.TYPE_STRING),
+		  new ColumnDescriptor("LastRcv", "LastRcv",
+				       ColumnDescriptor.TYPE_STRING),
+		  new ColumnDescriptor("PrevState", "PrevState",
+				       ColumnDescriptor.TYPE_STRING),
+		  new ColumnDescriptor("PrevStateChange", "Change",
+				       ColumnDescriptor.TYPE_STRING)
+		  );
+
+  private class ChannelStatus implements StatusAccessor {
+    long start;
+
+    public String getDisplayName() {
+      return "Comm Channels";
+    }
+
+    public boolean requiresKey() {
+      return false;
+    }
+
+    public void populateTable(StatusTable table) {
+//       table.setResortable(false);
+//       table.setDefaultSortRules(statusSortRules);
+      String key = table.getKey();
+      table.setColumnDescriptors(chanStatusColDescs);
+      table.setRows(getRows(key));
+      table.setSummaryInfo(getSummaryInfo(key));
+    }
+
+    private List getSummaryInfo(String key) {
+      List res = new ArrayList();
+      res.add(new StatusTable.SummaryInfo("Channels",
+					  ColumnDescriptor.TYPE_STRING,
+					  channels.size() + "/"
+					  + paramMaxChannels + ", "
+					  + channels.getMaxSize() + " max"));
+      res.add(new StatusTable.SummaryInfo("RcvChannels",
+					  ColumnDescriptor.TYPE_STRING,
+					  rcvChannels.size() + ", "
+					  + rcvChannels.getMaxSize() +" max"));
+      res.add(new StatusTable.SummaryInfo("Draining",
+					  ColumnDescriptor.TYPE_STRING,
+					  drainingChannels.size() + ", "
+					  + maxDrainingChannels + " max"));
+      return res;
+    }
+
+    private List getRows(String key) {
+      List table = new ArrayList();
+      synchronized (channels) {
+
+	for (Iterator iter = channels.entrySet().iterator(); iter.hasNext();) {
+	  Map.Entry ent = (Map.Entry)iter.next();
+	  PeerIdentity pid = (PeerIdentity)ent.getKey();
+	  BlockingPeerChannel chan = (BlockingPeerChannel)ent.getValue();
+	  table.add(makeRow(pid, chan, ""));
+	}
+	for (Iterator iter = rcvChannels.entrySet().iterator();
+	     iter.hasNext();) {
+	  Map.Entry ent = (Map.Entry)iter.next();
+	  PeerIdentity pid = (PeerIdentity)ent.getKey();
+	  BlockingPeerChannel chan = (BlockingPeerChannel)ent.getValue();
+	  table.add(makeRow(pid, chan, "2"));
+	}
+	for (BlockingPeerChannel chan : drainingChannels) {
+	  table.add(makeRow(chan.getPeer(), chan, "D"));
+	}
+      }
+      return table;
+    }
+
+    private Map makeRow(PeerIdentity pid, BlockingPeerChannel chan,
+			String flags) {
+      Map row = new HashMap();
+      row.put("Peer", pid.getIdString());
+      row.put("State", chan.getState());
+      row.put("SendQ", chan.getSendQueueSize());
+      StringBuilder sb = new StringBuilder(flags);
+      if (chan.hasConnecter()) sb.append("C");
+      if (chan.hasReader()) sb.append("R");
+      if (chan.hasWriter()) sb.append("W");
+      row.put("Flags", sb.toString());
+      row.put("LastSend", lastTime(chan.getLastSendTime()));
+      row.put("LastRcv", lastTime(chan.getLastRcvTime()));
+      if (chan.getPrevState() != BlockingPeerChannel.ChannelState.NONE) {
+	row.put("PrevState", chan.getPrevState());
+	row.put("PrevStateChange", lastTime(chan.getLastStateChange()));
+      }
+      return row;
+    }
+
+    String lastTime(long time) {
+      if (time <= 0) return "";
+      return StringUtil.timeIntervalToString(TimeBase.msSince(time));
+    }
+  }
+
 }

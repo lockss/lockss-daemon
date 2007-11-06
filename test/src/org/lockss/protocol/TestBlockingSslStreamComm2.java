@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockingSslStreamComm2.java,v 1.3 2006-09-28 02:00:04 tlipkis Exp $
+ * $Id: TestBlockingSslStreamComm2.java,v 1.4 2007-11-06 07:10:26 tlipkis Exp $
  */
 
 /*
@@ -81,6 +81,11 @@ public class TestBlockingSslStreamComm2 extends TestBlockingStreamComm {
     } catch (IOException e) {
       // do nothing
     }
+  }
+
+  public void setUp() throws Exception {
+    super.setUp();
+    shutdownOutputSupported = false;
   }
 
   void setupCommArrayEntry(int ix) {

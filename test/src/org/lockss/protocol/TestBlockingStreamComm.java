@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockingStreamComm.java,v 1.20 2006-09-24 19:30:56 dshr Exp $
+ * $Id: TestBlockingStreamComm.java,v 1.21 2007-11-06 07:10:26 tlipkis Exp $
  */
 
 /*
@@ -38,6 +38,8 @@ import java.net.*;
 import javax.net.*;
 import javax.net.ssl.*;
 import junit.framework.*;
+import org.lockss.protocol.BlockingPeerChannel.ChannelState;
+
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
@@ -103,9 +105,11 @@ public class TestBlockingStreamComm extends LockssTestCase {
 
   Properties cprops;			// some tests add more to this and
 					// reconfigure
-  SimpleBinarySemaphore sem;
+  SimpleBinarySemaphore sem1;
+  SimpleBinarySemaphore sem2;
   SimpleQueue assocQ;
   boolean useInternalSockets = false;
+  protected boolean shutdownOutputSupported = true;
 
   TestBlockingStreamComm(String name) {
     super(name);
@@ -116,7 +120,8 @@ public class TestBlockingStreamComm extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-    sem = new SimpleBinarySemaphore();
+    sem1 = new SimpleBinarySemaphore();
+    sem2 = new SimpleBinarySemaphore();
     assocQ = new SimpleQueue.Fifo();
     daemon = getMockLockssDaemon();
     String tempDirPath = null;
@@ -377,21 +382,25 @@ public class TestBlockingStreamComm extends LockssTestCase {
     setupComm1();
     BlockingPeerChannel chan =
       new BlockingPeerChannel(comm1, pid1, null, null);
-    assertEquals(0, chan.getState());
-    assertFalse(chan.stateTrans(1, 2));
-    assertEquals(0, chan.getState());
-    assertTrue(chan.stateTrans(0, 3));
-    assertEquals(3, chan.getState());
-    assertTrue(chan.stateTrans(3, 4, "shouldn't"));
-    assertEquals(4, chan.getState());
+    assertEquals(ChannelState.INIT, chan.getState());
+    assertFalse(chan.stateTrans(ChannelState.CONNECTING,
+				ChannelState.CONNECT_FAIL));
+    assertEquals(ChannelState.INIT, chan.getState());
+    assertTrue(chan.stateTrans(ChannelState.INIT, ChannelState.ACCEPTED));
+    assertEquals(ChannelState.ACCEPTED, chan.getState());
+    assertTrue(chan.stateTrans(ChannelState.ACCEPTED, ChannelState.STARTING,
+			       "shouldn't"));
+    assertEquals(ChannelState.STARTING, chan.getState());
     try {
-      chan.stateTrans(3, 4, "should error");
+      chan.stateTrans(ChannelState.ACCEPTED, ChannelState.STARTING,
+		      "should error");
       fail("stateTrans should have thrown");
     } catch (IllegalStateException e) {
     }
     // array version of stateTrans() nyi
-//     int[] lst = {2, 4, 6};
-//     assertTrue(chan.stateTrans(lst, 6, "shouldn't"));
+//     int[] lst = {ChannelState.CONNECT_FAIL, ChannelState.STARTING,
+// 		 ChannelState.DRAIN_INPUT};
+//     assertTrue(chan.stateTrans(lst, ChannelState.DRAIN_INPUT, "shouldn't"));
 //     assertTrue(chan.stateTrans(lst, 8, "shouldn't"));
 //     assertFalse(chan.stateTrans(lst, 8));
 //     assertEquals(8, chan.getState());
@@ -401,24 +410,30 @@ public class TestBlockingStreamComm extends LockssTestCase {
     setupComm1();
     BlockingPeerChannel chan =
       new BlockingPeerChannel(comm1, pid1, null, null);
-    assertEquals(0, chan.getState());
-    assertFalse(chan.notStateTrans(0, 2));
-    assertEquals(0, chan.getState());
-    assertTrue(chan.notStateTrans(1, 3));
-    assertEquals(3, chan.getState());
-    assertTrue(chan.notStateTrans(2, 5, "shouldn't"));
-    assertEquals(5, chan.getState());
+    assertEquals(ChannelState.INIT, chan.getState());
+    assertFalse(chan.notStateTrans(ChannelState.INIT,
+				   ChannelState.CONNECT_FAIL));
+    assertEquals(ChannelState.INIT, chan.getState());
+    assertTrue(chan.notStateTrans(ChannelState.CONNECTING,
+				  ChannelState.ACCEPTED));
+    assertEquals(ChannelState.ACCEPTED, chan.getState());
+    assertTrue(chan.notStateTrans(ChannelState.CONNECT_FAIL, ChannelState.OPEN,
+				  "shouldn't"));
+    assertEquals(ChannelState.OPEN, chan.getState());
     try {
-      chan.notStateTrans(5, 4, "should error");
+      chan.notStateTrans(ChannelState.OPEN, ChannelState.STARTING,
+			 "should error");
       fail("notStateTrans should have thrown");
     } catch (IllegalStateException e) {
     }
-    assertEquals(5, chan.getState());
-    int[] lst = {2, 4, 6};
-    assertTrue(chan.notStateTrans(lst, 3, "shouldn't"));
-    assertTrue(chan.notStateTrans(lst, 4, "shouldn't"));
-    assertFalse(chan.notStateTrans(lst, 8));
-    assertEquals(4, chan.getState());
+    assertEquals(ChannelState.OPEN, chan.getState());
+    ChannelState[] lst = {ChannelState.CONNECT_FAIL,
+			  ChannelState.STARTING,
+			  ChannelState.DRAIN_INPUT};
+    assertTrue(chan.notStateTrans(lst, ChannelState.ACCEPTED, "shouldn't"));
+    assertTrue(chan.notStateTrans(lst, ChannelState.STARTING, "shouldn't"));
+    assertFalse(chan.notStateTrans(lst, ChannelState.CLOSING));
+    assertEquals(ChannelState.STARTING, chan.getState());
   }
 
   public void testReadHeader() throws IOException {
@@ -881,7 +896,6 @@ public class TestBlockingStreamComm extends LockssTestCase {
   // force delayed connect in one direction
   public void testSimultaneousConnect1() throws IOException {
     PeerMessage msgIn;
-    SimpleBinarySemaphore sem2 = new SimpleBinarySemaphore();
     setupComm1();
     setupComm2();
     // delay comm2's accept()
@@ -906,8 +920,6 @@ public class TestBlockingStreamComm extends LockssTestCase {
   // force delayed connect in both directions
   public void testSimultaneousConnect2() throws IOException {
     PeerMessage msgIn;
-    SimpleBinarySemaphore sem1 = new SimpleBinarySemaphore();
-    SimpleBinarySemaphore sem2 = new SimpleBinarySemaphore();
     setupComm1();
     setupComm2();
     // delay accept() in both channels
@@ -949,6 +961,10 @@ public class TestBlockingStreamComm extends LockssTestCase {
     ConfigurationUtil.setCurrentConfigFromProps(cprops);
     setupComm1();
     setupComm2();
+    // prevent comm2 from timing out and closing, thereby closing comm1's
+    // input socket, invalidating the test
+    comm2.setChannelIdleTime(10000);
+
     comm1.setAssocQueue(assocQ);
     comm1.sendTo(msg1, pid2, null);
     msgIn = (PeerMessage)rcvdMsgs2.get(TIMEOUT_SHOULDNT);
@@ -964,25 +980,90 @@ public class TestBlockingStreamComm extends LockssTestCase {
       (MyBlockingPeerChannel)comm1.channels.get(pid2);
     assertNotNull(chan);
 
-    chan.setCalcSendWaitSem(sem);
+    chan.setCalcSendWaitSem(sem1);
+    chan.setStopSem(sem2);
     comm1.sendTo(msg1, pid2, null);
     msgIn = (PeerMessage)rcvdMsgs2.get(TIMEOUT_SHOULDNT);
-    assertTrue(sem.take(TIMEOUT_SHOULDNT));
+    assertTrue(sem1.take(TIMEOUT_SHOULDNT));
     if (chan.calcSendWaitCtr < 3) {
-      assertTrue(sem.take(TIMEOUT_SHOULDNT));
+      assertTrue(sem1.take(TIMEOUT_SHOULDNT));
     }
     assertEquals(3, chan.calcSendWaitCtr);
 
     TimeBase.step(4000);
     assertEquals(1, comm1.channels.size());
+
     TimeBase.step(2000);
     List event;
-    assertNotNull("Channel didn't close automatically after timeout",
+    assertNotNull("Channel wasn't dissociated after timeout",
 		  (event = (List)assocQ.get(TIMEOUT_SHOULDNT)));
-    assertEquals("Channel didn't close automatically after timeout",
+    assertEquals("Channel wasn't dissociated after timeout",
 		 "dissoc", event.get(0));
     assertEquals(0, comm1.channels.size());
     assertEquals(0, comm1.rcvChannels.size());
+    assertTrue("Channel didn't stop", sem2.take(TIMEOUT_SHOULDNT));
+  }
+
+  // allow channel to timeout and close after use
+  public void testChannelCloseAfterTimeoutDrainTimeout() throws IOException {
+    TimeBase.setSimulated(1000);
+    PeerMessage msgIn;
+    cprops.setProperty(BlockingStreamComm.PARAM_CHANNEL_IDLE_TIME, "5000");
+    cprops.setProperty(BlockingStreamComm.PARAM_DRAIN_INPUT_TIME, "3000");
+    ConfigurationUtil.setCurrentConfigFromProps(cprops);
+    setupComm1();
+    setupComm2();
+    // prevent comm2 from timing out and closing, thereby closing comm1's
+    // input socket, invalidating the test
+    comm2.setChannelIdleTime(20000);
+
+    comm1.setAssocQueue(assocQ);
+    comm1.sendTo(msg1, pid2, null);
+    msgIn = (PeerMessage)rcvdMsgs2.get(TIMEOUT_SHOULDNT);
+    comm2.sendTo(msg2, pid1, null);
+    msgIn = (PeerMessage)rcvdMsgs1.get(TIMEOUT_SHOULDNT);
+
+    // Must ensure we don't step time until after channel has calculated
+    // the send wait time.  Set up a post-calcSendWaitTime semaphore, send
+    // another message, wait on sem until calcSendWaitTime has been called
+    // 3 times (before each of 2 messages pulled from queue, plus final
+    // wait for (nonexistent) 3rd message).
+    MyBlockingPeerChannel chan1 =
+      (MyBlockingPeerChannel)comm1.channels.get(pid2);
+    MyBlockingPeerChannel chan2 =
+      (MyBlockingPeerChannel)comm2.channels.get(pid1);
+    assertNotNull(chan1);
+    assertNotNull(chan2);
+
+    chan1.setCalcSendWaitSem(sem1);
+    chan1.setStopSem(sem2);
+    chan2.setSimulateSendBusy(true);
+    comm1.sendTo(msg1, pid2, null);
+    msgIn = (PeerMessage)rcvdMsgs2.get(TIMEOUT_SHOULDNT);
+    assertTrue(sem1.take(TIMEOUT_SHOULDNT));
+    if (chan1.calcSendWaitCtr < 3) {
+      assertTrue(sem1.take(TIMEOUT_SHOULDNT));
+    }
+    assertEquals(3, chan1.calcSendWaitCtr);
+
+    TimeBase.step(4000);
+    assertEquals(1, comm1.channels.size());
+
+    TimeBase.step(2000);
+    List event;
+    assertNotNull("Channel wasn't dissociated after timeout",
+		  (event = (List)assocQ.get(TIMEOUT_SHOULDNT)));
+    assertEquals("Channel wasn't dissociated after timeout",
+		 "dissoc", event.get(0));
+    assertEquals(0, comm1.channels.size());
+    assertEquals(0, comm1.rcvChannels.size());
+    if (shutdownOutputSupported) {
+      assertFalse("Channel stopped before drain input timer",
+		  sem2.take(TIMEOUT_SHOULD));
+    }
+    TimeBase.step(4000);
+    assertTrue("Drain input timer didn't stop channel",
+	       sem2.take(TIMEOUT_SHOULDNT));
   }
 
   // read (so) timeout should abort channel
@@ -1041,16 +1122,25 @@ public class TestBlockingStreamComm extends LockssTestCase {
     return SetUtil.fromArray(pids);
   }
 
+  static int createCounter = 1;
   class MyBlockingStreamComm extends BlockingStreamComm {
+
     SocketFactory sockFact;
     PeerIdentity localId;
     SimpleQueue assocEvents;
     SimpleBinarySemaphore acceptSem;
     BlockingStreamComm.SocketFactory superSockFact;
+    int uniqueId;
 
     MyBlockingStreamComm(PeerIdentity localId) {
       this.localId = localId;
       sockFact = null;
+      uniqueId = createCounter++;
+    }
+
+    protected String getStatusAccessorName(String base) {
+      if (false) super.getStatusAccessorName(base);
+      return base + uniqueId;
     }
 
     SocketFactory getSocketFactory() {
@@ -1087,14 +1177,16 @@ public class TestBlockingStreamComm extends LockssTestCase {
       super.processIncomingConnection(sock);
     }
 
-    void setAssocQueue(SimpleQueue sem) {
-      assocEvents = sem;
+    void setAssocQueue(SimpleQueue sem1) {
+      assocEvents = sem1;
     }
-    void setAcceptSem(SimpleBinarySemaphore sem) {
-      acceptSem = sem;
+    void setAcceptSem(SimpleBinarySemaphore sem1) {
+      acceptSem = sem1;
     }
 
-
+    void setChannelIdleTime(long time) {
+      paramChannelIdleTime = time;
+    }
   }
 
   /** Socket factory creates either real or internal sockets, and
@@ -1103,40 +1195,40 @@ public class TestBlockingStreamComm extends LockssTestCase {
   class MySocketFactory implements BlockingStreamComm.SocketFactory {
     protected BlockingStreamComm.SocketFactory sf;
     MySocketFactory(BlockingStreamComm.SocketFactory s) {
-	  sf = s;
+      sf = s;
     }
 
     public ServerSocket newServerSocket(int port, int backlog)
-	  throws IOException {
-	if (useInternalSockets) {
-	  return new InternalServerSocket(port, backlog);
-	} else {
+	throws IOException {
+      if (useInternalSockets) {
+	return new InternalServerSocket(port, backlog);
+      } else {
 	ServerSocket ss = sf.newServerSocket(port, backlog);
 	assertFalse(ss instanceof SSLServerSocket);
         return ss;
-	}
+      }
     }
 
     public Socket newSocket(IPAddr addr, int port) throws IOException {
-	if (useInternalSockets) {
-	  return new InternalSocket(addr.getInetAddr(), port);
-	} else {
+      if (useInternalSockets) {
+	return new InternalSocket(addr.getInetAddr(), port);
+      } else {
 	Socket s = sf.newSocket(addr, port);
 	assertFalse(s instanceof SSLSocket);
         return s;
-	}
+      }
     }
 
     public BlockingPeerChannel newPeerChannel(BlockingStreamComm comm,
-						Socket sock)
-	  throws IOException {
-	return new MyBlockingPeerChannel(comm, sock);
+					      Socket sock)
+	throws IOException {
+      return new MyBlockingPeerChannel(comm, sock);
     }
 
     public BlockingPeerChannel newPeerChannel(BlockingStreamComm comm,
-						PeerIdentity peer)
-	  throws IOException {
-	return new MyBlockingPeerChannel(comm, peer);
+					      PeerIdentity peer)
+	throws IOException {
+      return new MyBlockingPeerChannel(comm, peer);
     }
 
   }
@@ -1145,6 +1237,7 @@ public class TestBlockingStreamComm extends LockssTestCase {
     volatile SimpleBinarySemaphore stopSem;
     volatile SimpleBinarySemaphore calcSendWaitSem;
     volatile int calcSendWaitCtr = 0;
+    boolean simulateSendBusy = false;
 
     MyBlockingPeerChannel(BlockingStreamComm scomm, PeerIdentity peer) {
       super(scomm, peer);
@@ -1154,14 +1247,14 @@ public class TestBlockingStreamComm extends LockssTestCase {
       super(scomm, sock);
     }
 
-    void stopChannel() {
-      super.stopChannel();
+    void stopChannel(boolean abort, String msg, Throwable t) {
+      super.stopChannel(abort, msg, t);
       if (stopSem != null) {
 	stopSem.give();
       }
     }
-    void setStopSem(SimpleBinarySemaphore sem) {
-      stopSem = sem;
+    void setStopSem(SimpleBinarySemaphore sem1) {
+      stopSem = sem1;
     }
 
     Deadline calcSendWaitDeadline() {
@@ -1172,9 +1265,22 @@ public class TestBlockingStreamComm extends LockssTestCase {
       }
       return res;
     }
-    void setCalcSendWaitSem(SimpleBinarySemaphore sem) {
-      calcSendWaitSem = sem;
+
+    void setCalcSendWaitSem(SimpleBinarySemaphore sem1) {
+      calcSendWaitSem = sem1;
     }
+
+    void setSimulateSendBusy(boolean val) {
+      simulateSendBusy = val;
+    }
+
+    boolean isSendIdle() {
+      if (simulateSendBusy) {
+	return false;
+      }
+      return super.isSendIdle();
+    }
+
   }
 
   class MessageHandler implements BlockingStreamComm.MessageHandler {
