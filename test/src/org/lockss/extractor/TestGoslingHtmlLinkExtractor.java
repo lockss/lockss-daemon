@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingHtmlLinkExtractor.java,v 1.3 2007-04-26 01:38:58 tlipkis Exp $
+ * $Id: TestGoslingHtmlLinkExtractor.java,v 1.4 2007-11-06 07:11:29 tlipkis Exp $
  */
 
 /*
@@ -183,6 +183,8 @@ public class TestGoslingHtmlLinkExtractor extends LockssTestCase {
   public void testDoCrawlLink() throws IOException {
     singleTagShouldParse("http://www.example.com/web_link.css",
 			 "<link href=", "</link>");
+    singleTagShouldParse("http://www.example.com/web_link.css",
+			 "<link rel=\"stylesheet\" type=\"text/css\" media=\"screen\"  href=", "</link>");
   }
   
   public void testDoCrawlStyleAbsolute() throws IOException {
@@ -992,13 +994,16 @@ public class TestGoslingHtmlLinkExtractor extends LockssTestCase {
     String url1= "http://www.example.com/blah/branch1/index.html";
     String url2= "http://www.example.com/blah/branch2/index.html";
     String url3= "http://www.example.com/journals/american_imago/toc/aim60.1.html";
-
+    String url4= "http://www.example.com/css/foo.css";
+    String url5= "http://www.example.com/javascript/bar.js";
     String source =
       "<html><head><title>Test</title></head><body>"+
       "<a href= branch1/index.html>link1</a>"+
       "Filler, with <b>bold</b> tags and<i>others</i>"+
       "<a href=\" branch2/index.html\">link2</a>"+
       "<a href =\" /journals/american_imago/toc/aim60.1.html\">" +
+      "<link rel=\"stylesheet\" href=\"/css/foo.css\" >"+
+      "<script type=\"text/javascript\" src=\"/javascript/bar.js\"></script>"+
       "Number 1, Spring 2003</a>";
 
     MockCachedUrl mcu = new MockCachedUrl("http://www.example.com/blah/");
@@ -1007,7 +1012,7 @@ public class TestGoslingHtmlLinkExtractor extends LockssTestCase {
     extractor.extractUrls(mau, new StringInputStream(source), ENC,
 			  "http://www.example.com/blah/", cb);
 
-    Set expected = SetUtil.set(url1, url2, url3);
+    Set expected = SetUtil.set(url1, url2, url3, url4, url5);
     assertEquals(expected, cb.getFoundUrls());
   }
 
