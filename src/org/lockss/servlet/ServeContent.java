@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.1 2007-10-31 04:02:57 dshr Exp $
+ * $Id: ServeContent.java,v 1.2 2007-11-06 03:35:23 dshr Exp $
  */
 
 /*
@@ -58,6 +58,8 @@ public class ServeContent extends LockssServlet {
   private String action;
   private String verbose;
   private String url;
+  private String doi;
+  private String openUrl;
   private String ctype;
   private CachedUrl cu;
   private long clen;
@@ -65,12 +67,15 @@ public class ServeContent extends LockssServlet {
   private PluginManager pluginMgr;
   private LocalServletManager srvltMgr;
 
+  // If we can't resolve a DOI, here is where to send it
+  private static final String DOI_LOOKUP_URL = "http://dx.doi.org/";
+  // If we can't resolve an OpenURL, here is where to send it
+  // XXX find the place to send it
+  private static final String OPENURL_LOOKUP_URL = "http://www.lockss.org/";
+
   // Insert Javascript at this tag
-  // XXX tag should be case-insensitive
   private static final String jsTag = "</html>";
   // Javascript to insert
-  // XXX - must only rewrite URLs starting with host part of AU's base url
-  // XXX - what was "mode" used for before excision?
   private String jsText = 
     "<SCRIPT language=\"Javascript\">\n" +
     "<!-- \n" +
@@ -85,28 +90,59 @@ public class ServeContent extends LockssServlet {
     "   function xLateUrl(aCollection, sProp, mode) {\n" +
     "      var i = 0;\n" +
     "      for(i = 0; i < aCollection.length; i++) {\n" +
-    "        if (typeof(aCollection[i][sProp]) == \"string\") { \n" +
-    "          if (aCollection[i][sProp].indexOf(\"mailto:\") == -1 && aCollection[i][sProp].indexOf(\"javascript:\") == -1) {\n" +
-    "               aCollection[i][\"target\"] = \"_top\";\n" +
-    "               if(aCollection[i][sProp].indexOf(urlTarget) == 0) {\n" +
-    "                 aCollection[i][sProp] = urlPrefix + encodeURIComponent(aCollection[i][sProp]);\n" +
-    "               } else if (aCollection[i][sProp].indexOf(urlLocalPrefix) == 0) {\n" +
-    "                 aCollection[i][sProp] = urlPrefix + urlTarget + encodeURIComponent(aCollection[i][sProp].substring(urlLocalPrefix.length+1));\n" +
-    "               }\n" +
+    "        var prop = aCollection[i][sProp];\n" +
+    "        if (typeof(prop) == \"string\") { \n" +
+    "          if (prop.indexOf(\"mailto:\") == -1 && prop.indexOf(\"javascript:\") == -1) {\n" +
+    "            // aCollection[i][\"target\"] = \"_top\";\n" +
+    "            if(prop.indexOf(\"/cgi/reprint\") >= 0) {\n" +
+    "              //alert(\"PDF(\" + prop + \"): \" + sProp);\n" +
+    "              prop = prop + \".pdf\";\n" +
+    "            }\n" +
+    "            if(prop.indexOf(urlTarget) == 0) {\n" +
+    "              //alert(\"Journal(\" + prop + \"): \" + sProp);\n" +
+    "              prop = urlPrefix + encodeURIComponent(prop);\n" +
+    "            } else if (prop.indexOf(urlLocalPrefix) == 0) {\n" +
+    "              //alert(\"Local(\" + prop + \"): \" + sProp);\n" +
+    "              prop = urlPrefix + urlTarget + encodeURIComponent(prop.substring(urlLocalPrefix.length+1));\n" +
+    "            } else if (prop.indexOf(\"/\") == 0) {\n" +
+    "              //alert(\"Relative(\" + prop + \"): \" + sProp);\n" +
+    "              prop = urlPrefix + urlTarget + encodeURIComponent(prop.substring(1));\n" +
+    "            } else if (prop.indexOf(\"http\") != 0) {\n" +
+    "              //alert(\"Relative2(\" + prop + \"): \" + sProp);\n" +
+    "              prop = urlPrefix + urlTarget + encodeURIComponent(prop);\n" +
+    "            }\n" +
+    "            //alert(\"xLatedUrl(\" + prop + \"): \" + sProp);\n" +
+    "            aCollection[i][sProp] = prop;\n" +
     "          }\n" +
     "        }\n" +
     "      }\n" +
     "   }\n" +
     "\n" +
+    "   //debugger;\n" +
     "   xLateUrl(document.getElementsByTagName(\"IMG\"),\"src\",\"inline\");\n" +
     "   xLateUrl(document.getElementsByTagName(\"A\"),\"href\",\"standalone\");\n" +
     "   xLateUrl(document.getElementsByTagName(\"AREA\"),\"href\",\"standalone\");\n" +
+    "   xLateUrl(document.getElementsByTagName(\"LINK\"),\"href\",\"inline\");\n" +
     "   xLateUrl(document.getElementsByTagName(\"OBJECT\"),\"codebase\",\"inline\");\n" +
     "   xLateUrl(document.getElementsByTagName(\"OBJECT\"),\"data\",\"inline\");\n" +
     "   xLateUrl(document.getElementsByTagName(\"APPLET\"),\"codebase\",\"inline\");\n" +
     "   xLateUrl(document.getElementsByTagName(\"APPLET\"),\"archive\",\"inline\");\n" +
     "   xLateUrl(document.getElementsByTagName(\"EMBED\"),\"src\",\"inline\");\n" +
     "   xLateUrl(document.getElementsByTagName(\"BODY\"),\"background\",\"inline\");\n" +
+    "   xLateUrl(document.getElementsByTagName(\"SCRIPT\"),\"src\",\"inline\");\n" +
+    "   xLateUrl(document.getElementsByTagName(\"FRAME\"),\"src\",\"inline\");\n" +
+    "   var frames = document.getElementsByTagName(\"FRAME\",\"inline\");\n" +
+    "   if (frames) {\n" +
+    "       for (k = 0; k < frames.length; k++) {\n" +
+    "           if (typeof(frames[i][\"src\"]) == \"string\") {\n" +
+    "               var l = frames[i][\"src\"].indexOf(\"frameset_url=\");\n" +
+    "               if (l > -1) {\n" +
+    "                   frames[i][\"src\"] = frames[i][\"src\"].substring(0,l+13) +\n" +
+    "                       urlPrefix + xLateUrl(frames[i][\"src\"].substring(l+14));\n" +
+    "               }\n" +
+    "           }\n" +
+    "       }\n" +
+    "   }\n" +
     "   var forms = document.getElementsByTagName(\"FORM\",\"inline\");\n" +
     "   if (forms) {\n" +
     "       var j = 0;\n" +
@@ -191,6 +227,8 @@ public class ServeContent extends LockssServlet {
     cu = null;
     ctype = null;
     url = null;
+    doi = null;
+    openUrl = null;
     super.resetLocals();
   }
 
@@ -203,7 +241,6 @@ public class ServeContent extends LockssServlet {
     } catch (RuntimeException e) {
       log.warning("Can't find LocalServletManager", e);
     }
-    // XXX initialize the Javascript based on the config
   }
 
   /**
@@ -217,21 +254,37 @@ public class ServeContent extends LockssServlet {
     }
     verbose = getParameter("verbose");
     url = getParameter("url");
-    if (StringUtil.isNullString(url)) {
-      log.warning("url is null");
-      displayError("ServeContent needs a non-null URL to display");
+    if (!StringUtil.isNullString(url)) {
+      handleUrlRequest();
       return;
     }
+    doi = getParameter("doi");
+    if (!StringUtil.isNullString(doi)) {
+      handleDoiRequest();
+      return;
+    }
+    openUrl = getParameter("openurl");
+    if (!StringUtil.isNullString(openUrl)) {
+      handleOpenUrlRequest();
+      return;
+    }
+    log.warning("url, doi, openUrl all null");
+    displayError("ServeContent needs a non-null URL, DOI or OpenURL to display");
+  }
+
+  protected void handleUrlRequest() throws IOException {
     log.debug("url " + url);
     // Get the CachedUrl for the URL, only if it has content.
     cu = pluginMgr.findCachedUrl(url, true);
     if (cu == null || !cu.hasContent()) {
       log.debug(url + " not found");
-      // XXX the right thing to do here is to forward the request
-      // XXX to the original URL,  at least if configured to do so
-      displayError("URL " + url + " not found");
+      handleMissingUrlRequest(url);
       return;
     }
+    handleCuRequest();
+  }
+
+  protected void handleCuRequest() {
     clen = cu.getContentSize();
     try {
       CIProperties props = cu.getProperties();
@@ -241,6 +294,37 @@ public class ServeContent extends LockssServlet {
     } finally {
       cu.release();
     }
+  }
+
+  protected void handleDoiRequest() throws IOException {
+    log.debug("doi " + doi);
+    // find the URL for the DOI
+    url = Metadata.doiToUrl(doi);
+    log.debug(doi + " = " + (url == null ? "null" : url));
+    if (url == null) {
+      handleMissingUrlRequest(DOI_LOOKUP_URL + doi);
+    } else {
+      handleUrlRequest();
+    }
+  }
+
+  protected void handleOpenUrlRequest() throws IOException {
+    log.debug("OpenUrl " + openUrl);
+    // find the URL for the OpenURL
+    url = Metadata.openUrlToUrl(openUrl);
+    log.debug(openUrl + " = " + (url == null ? "null" : url));
+    if (url == null) {
+      handleMissingUrlRequest(OPENURL_LOOKUP_URL + openUrl);
+    } else {
+      handleUrlRequest();
+    }
+  }
+
+  protected void handleMissingUrlRequest(String missingUrl)
+      throws IOException {
+    // XXX the right thing to do here is to forward the request
+    // XXX to the original URL,  at least if configured to do so
+    displayError("URL " + missingUrl + " not found");
   }
 
   void displayContent() {
@@ -253,34 +337,39 @@ public class ServeContent extends LockssServlet {
     if (clen <= Integer.MAX_VALUE) {
       resp.setContentLength((int)clen);
     }
-    Writer out = null;
-    Reader in = null;
+    Writer outW = null;
+    Reader inR = null;
+    OutputStream outS = null;
+    InputStream inS = null;
     try {
-      out = resp.getWriter();
-      // Does the plugin provide URL rewriting?
-      in = cu.openWithUrlRewriting();
-      if (in == null) {
-	// No plugin URL rewriting, is it HTML?
-	if (ctype.startsWith("text/html")) {
-	  log.debug(url + " default rewriting");
-	  // HTML gets default URL rewriting
-	  StringBuffer jsInit = initializeJs();
-	  in = new StringFilter(cu.openForReading(), jsTag,
-				jsInit.toString() + jsText);
-	} else {
-	  // Non-HTML not rewritten
-	  log.debug(url + " no rewriting");
-	  in = cu.openForReading();
-	}
+      // XXX need interface to plugin for URL rewriting
+      if (ctype.startsWith("text/html")) {
+        outW = resp.getWriter();
+        inR = cu.openWithUrlRewriting();
+        if (inR == null) {
+          log.debug(url + " default rewriting");
+          // HTML gets default URL rewriting
+          StringBuffer jsInit = initializeJs();
+          StringFilter sf = new StringFilter(cu.openForReading(), jsTag,
+                                             jsInit.toString() + jsText + "\n" + jsTag);
+          sf.setIgnoreCase(true);
+          inR = sf;
+        }
+	StreamUtil.copy(inR, outW);
       } else {
-	log.debug(url + " plugin rewriting");
+	// Non-HTML not rewritten
+	log.debug(url + " no rewriting");
+	inS = cu.getUnfilteredInputStream();
+	outS = resp.getOutputStream();
+	StreamUtil.copy(inS, outS);
       }
-      StreamUtil.copy(in, out);
     } catch (IOException e) {
       log.warning("Copying CU to HTTP stream", e);
     } finally {
-      if (in != null) try {in.close();} catch (IOException ignore) {}
-      if (out != null) try {out.close();} catch (IOException ignore) {}
+      IOUtil.safeClose(outW);
+      IOUtil.safeClose(inR);
+      IOUtil.safeClose(outS);
+      IOUtil.safeClose(inS);
     }
     cu.release();
   }
@@ -308,6 +397,7 @@ public class ServeContent extends LockssServlet {
 	       myAdminPort + "\"\n");
     ret.append("urlPrefix = urlLocalPrefix + \"/ServeContent?url=\"\n");
     ret.append("urlSuffix = \"" + url + "\"\n");
+    // XXX bug if more than 1 URL stem for the AU
     ret.append("urlTarget = \"" + (String)(urlStems.toArray()[0]) + "\"\n");
     ret.append("weraNotice = \"LOCKSS: external links, forms and search may not work\"\n");
     ret.append("weraHideNotice = \"hide\"\n");
