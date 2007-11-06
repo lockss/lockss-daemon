@@ -1,5 +1,5 @@
 /*
- * $Id: BaseProxyManager.java,v 1.14 2007-08-10 07:12:35 tlipkis Exp $
+ * $Id: BaseProxyManager.java,v 1.15 2007-11-06 07:09:17 tlipkis Exp $
  */
 
 /*
@@ -49,6 +49,11 @@ public abstract class BaseProxyManager extends JettyManager {
 
   private static Logger log = Logger.getLogger("BaseProxy");
 
+  public static final String PARAM_403_MSG =
+    Configuration.PREFIX + "proxy.403Msg";
+  public static final String DEFAULT_403_MSG =
+    "Access to content in this LOCKSS box is not allowed from your IP address (%IP%)";
+
   protected int port;
   protected boolean start = false;
   protected String includeIps;
@@ -56,6 +61,7 @@ public abstract class BaseProxyManager extends JettyManager {
   protected boolean logForbidden;
   protected IpAccessHandler accessHandler;
   protected ProxyHandler handler;
+  private String _403Msg;
 
   /* ------- LockssManager implementation ------------------ */
   /**
@@ -87,6 +93,7 @@ public abstract class BaseProxyManager extends JettyManager {
   public void setConfig(Configuration config, Configuration prevConfig,
 			Configuration.Differences changedKeys) {
     super.setConfig(config, prevConfig, changedKeys);
+    _403Msg = config.get(PARAM_403_MSG, DEFAULT_403_MSG);
   }
 
   void setIpFilter() {
@@ -100,6 +107,7 @@ public abstract class BaseProxyManager extends JettyManager {
       }
       accessHandler.setLogForbidden(logForbidden);
       accessHandler.setAllowLocal(true);
+      accessHandler.set403Msg(_403Msg);
     }
   }
 

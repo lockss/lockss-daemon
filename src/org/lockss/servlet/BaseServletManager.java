@@ -1,5 +1,5 @@
 /*
- * $Id: BaseServletManager.java,v 1.16 2006-09-22 06:26:09 tlipkis Exp $
+ * $Id: BaseServletManager.java,v 1.17 2007-11-06 07:09:17 tlipkis Exp $
  */
 
 /*
@@ -71,6 +71,11 @@ public abstract class BaseServletManager
 
   public static final String PARAM_USER_AUTH = PREFIX + "access.auth";
   public static final boolean DEFAULT_USER_AUTH = true;
+
+  public static final String PARAM_403_MSG = PREFIX + "403Msg";
+  public static final String DEFAULT_403_MSG =
+    "Access to the admin UI is not allowed from this IP address (%IP%)";
+
   public static final String PARAM_LOGDIR =
     Configuration.PREFIX +  "platform.logdirectory";
 
@@ -102,6 +107,7 @@ public abstract class BaseServletManager
   protected boolean doAuth;
   protected String logdir;
   List accessHandlers = new ArrayList();
+  private String _403Msg;
 
   public BaseServletManager(String serverName) {
     super(serverName);
@@ -132,6 +138,7 @@ public abstract class BaseServletManager
     start = config.getBoolean(PARAM_START, DEFAULT_START);
     logdir = config.get(PARAM_LOGDIR);
     doAuth = config.getBoolean(PARAM_USER_AUTH, DEFAULT_USER_AUTH);
+    _403Msg = config.get(PARAM_403_MSG, DEFAULT_403_MSG);
 
     if (changedKeys.contains(PARAM_IP_INCLUDE) ||
 	changedKeys.contains(PARAM_IP_EXCLUDE) ||
@@ -162,6 +169,7 @@ public abstract class BaseServletManager
     }
     ah.setLogForbidden(logForbidden);
     ah.setAllowLocal(true);
+    ah.set403Msg(_403Msg);
   }
 
   void setupAuthRealm() {

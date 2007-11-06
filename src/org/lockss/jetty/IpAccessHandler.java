@@ -1,5 +1,5 @@
 /*
- * $Id: IpAccessHandler.java,v 1.6 2005-10-11 05:44:38 tlipkis Exp $
+ * $Id: IpAccessHandler.java,v 1.7 2007-11-06 07:09:17 tlipkis Exp $
  */
 
 /*
@@ -31,7 +31,7 @@ in this Software without prior written authorization from Stanford University.
 */
 // ===========================================================================
 // Copyright (c) 1996-2002 Mort Bay Consulting Pty. Ltd. All rights reserved.
-// $Id: IpAccessHandler.java,v 1.6 2005-10-11 05:44:38 tlipkis Exp $
+// $Id: IpAccessHandler.java,v 1.7 2007-11-06 07:09:17 tlipkis Exp $
 // ---------------------------------------------------------------------------
 
 package org.lockss.jetty;
@@ -55,6 +55,7 @@ public class IpAccessHandler extends AbstractHttpHandler {
   private boolean allowLocal = false;
   private Set localIps;
   private boolean logForbidden;
+  private String _403Msg;
 
   public IpAccessHandler(String serverName) {
     this.serverName = serverName;
@@ -80,6 +81,10 @@ public class IpAccessHandler extends AbstractHttpHandler {
       // tk - add local interfaces
     }
     this.allowLocal = allowLocal;
+  }
+
+  public void set403Msg(String text) {
+    _403Msg = text;
   }
 
   public boolean isIpAuthorized(String ip) throws IpFilter.MalformedException {
@@ -109,7 +114,12 @@ public class IpAccessHandler extends AbstractHttpHandler {
 	if (logForbidden) {
 	  log.info("Access to " + serverName + " forbidden from " + ip);
 	}
-	response.sendError(HttpResponse.__403_Forbidden);
+	if (_403Msg != null) {
+	  response.sendError(HttpResponse.__403_Forbidden,
+			     StringUtil.replaceString(_403Msg, "%IP%", ip));
+	} else {
+	  response.sendError(HttpResponse.__403_Forbidden);
+	}
 	request.setHandled(true);
 	return;
       } else {
