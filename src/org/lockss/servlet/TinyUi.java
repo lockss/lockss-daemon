@@ -1,5 +1,5 @@
 /*
- * $Id: TinyUi.java,v 1.15 2007-01-14 08:07:51 tlipkis Exp $
+ * $Id: TinyUi.java,v 1.16 2007-11-06 07:09:51 tlipkis Exp $
  */
 
 /*
@@ -182,7 +182,7 @@ public class TinyUi extends BaseServletManager {
 		      HttpServletResponse response)
 	throws ServletException, IOException {
       Page page= new Page();
-      page.title("LOCKSS cache");
+      page.title("LOCKSS box");
       page.addHeader("");
 
       Table table = new Table(0, "cellspacing=0 cellpadding=0 align=center");
@@ -193,7 +193,7 @@ public class TinyUi extends BaseServletManager {
       table.add(ServletUtil.IMAGE_TM);
 
       Composite b = new Font(1, true);
-      b.add("<br>This LOCKSS cache");
+      b.add("<br>This LOCKSS box");
       String name = PlatformUtil.getLocalHostname();
       if (name != null) {
 	b.add(" (");

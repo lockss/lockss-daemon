@@ -1,5 +1,5 @@
 /*
- * $Id: UiHome.java,v 1.17 2006-05-23 02:59:18 tlipkis Exp $
+ * $Id: UiHome.java,v 1.18 2007-11-06 07:09:51 tlipkis Exp $
  */
 
 /*
@@ -65,7 +65,7 @@ public class UiHome extends LockssServlet {
     Table tab = new Table(0, "align=\"center\" width=\"80%\"");
     tab.newRow();
     tab.newCell("align=\"center\"");
-    tab.add("Welcome to the administration page for LOCKSS cache <b>");
+    tab.add("Welcome to the administration page for LOCKSS box <b>");
     tab.add(getMachineName());
     tab.add("</b>.");
     tab.newRow();

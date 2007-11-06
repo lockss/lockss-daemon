@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.94 2007-10-31 04:02:57 dshr Exp $
+ * $Id: LockssServlet.java,v 1.95 2007-11-06 07:09:51 tlipkis Exp $
  */
 
 /*
@@ -95,7 +95,7 @@ public abstract class LockssServlet extends HttpServlet
     "org/lockss/htdocs/admin.js";
 
   protected static final String footAccessDenied =
-    "Clicking on this link will result in an access denied error, unless your browser is configured to proxy through a LOCKSS cache, or your workstation is allowed access by the publisher.";
+    "Clicking on this link will result in an access denied error, unless your browser is configured to proxy through a LOCKSS box, or your workstation is allowed access by the publisher.";
 
   protected static Logger log = Logger.getLogger("LockssServlet");
 

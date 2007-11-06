@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.57 2007-08-12 01:47:15 tlipkis Exp $
+ * $Id: ProxyHandler.java,v 1.58 2007-11-06 07:09:51 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.57 2007-08-12 01:47:15 tlipkis Exp $
+// $Id: ProxyHandler.java,v 1.58 2007-11-06 07:09:51 tlipkis Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -1075,7 +1075,7 @@ public class ProxyHandler extends AbstractHttpHandler {
       throws IOException {
     if (true) {
       if (candidateAus != null && !candidateAus.isEmpty()) {
-	writer.write("<br>This LOCKSS cache (" +
+	writer.write("<br>This LOCKSS box (" +
 		     PlatformUtil.getLocalHostname() +
 		     ") does not contain content for that URL, " +
 		     "but it does contain possibly related content " +
