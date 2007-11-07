@@ -1,5 +1,5 @@
 /*
- * $Id: ThreadDump.java,v 1.7 2007-05-10 23:41:53 tlipkis Exp $
+ * $Id: ThreadDump.java,v 1.8 2007-11-07 08:15:39 tlipkis Exp $
  */
 
 /*
@@ -106,9 +106,15 @@ public class ThreadDump extends LockssServlet {
     if ("Change".equals(getParameter(KEY_ACTION))) {
       doForm(tmxb);
     }
+    Map<Thread, StackTraceElement[]> map = Thread.getAllStackTraces();
+    Map<Long,Thread> idMap = new HashMap();
+    for (Thread th : map.keySet()) {
+      idMap.put(th.getId(), th);
+    }
+
     Page page = newPage();
     page.add(makeHeader(tmxb));
-    page.add(makeThreads(tmxb));
+    page.add(makeThreads(tmxb, idMap));
     layoutFooter(page);
     ServletUtil.writePage(resp, page);
   }
@@ -173,7 +179,7 @@ public class ThreadDump extends LockssServlet {
     return comp;
   }
 
-  private Element makeThreads(ThreadMXBean tmxb) {
+  private Element makeThreads(ThreadMXBean tmxb, Map<Long,Thread> idMap) {
     Composite comp = new Composite();
     boolean isThreadContentionMonitoringSupported =
       tmxb.isThreadContentionMonitoringSupported();
@@ -190,6 +196,7 @@ public class ThreadDump extends LockssServlet {
     tbl.newRow();
     tbl.addHeading("Name");
     tbl.addHeading("Id");
+    tbl.addHeading("Prio");
     tbl.addHeading("Status");
     if (isThreadCpuTimeEnabled) {
       tbl.addHeading("Time (user)");
@@ -215,6 +222,7 @@ public class ThreadDump extends LockssServlet {
     for (int ix = 0; ix < threadIds.length; ix++) {
       long tId = threadIds[ix];
       ThreadInfo tInfo = tmxb.getThreadInfo(tId, 500);
+      Thread th = idMap.get(tId);
       String tName = tInfo.getThreadName();
 
       tbl.newRow(deadIds.contains(new Long(ix))
@@ -223,6 +231,10 @@ public class ThreadDump extends LockssServlet {
       tbl.add(tName);
       tbl.newCell("align = \"right\"");
       tbl.add(Long.toString(tId));
+      tbl.newCell("align = \"center\"");
+      if (th != null) {
+	tbl.add(th.getPriority());
+      }
       tbl.newCell();
       String status =
 // 	"Prio: " + t.getPriority() +
