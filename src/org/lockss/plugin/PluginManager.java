@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.185 2007-10-01 08:16:27 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.186 2007-11-07 08:14:51 tlipkis Exp $
  */
 
 /*
@@ -1588,7 +1588,7 @@ public class PluginManager
   /** Return a collection of all RegistryArchivalUnits.  This is a subset
    * of getAllAus() */
   public Collection<ArchivalUnit> getAllRegistryAus() {
-    return new ArrayList(getRegistryPlugin().getAllAus());
+    return getRegistryPlugin().getAllAus();
   }
 
   Object titleMonitor = new Object();
