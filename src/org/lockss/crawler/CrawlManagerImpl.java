@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.117 2007-10-17 06:04:58 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.118 2007-11-07 08:14:32 tlipkis Exp $
  */
 
 /*
@@ -1100,7 +1100,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   BoundedTreeSet unsharedRateReqs =
     new BoundedTreeSet(paramUnsharedQueueMax, CPC);
 
-  private class MultiCrawlPriorityMap extends MultiValueMap {
+  class MultiCrawlPriorityMap extends MultiValueMap {
     MultiCrawlPriorityMap(final int maxAus) {
       super(new HashMap(), new org.apache.commons.collections.Factory() {
 	  public Object create() {
@@ -1108,7 +1108,8 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 	  }});
     }
     public void setTreeSetSize(int maxAus) {
-      for (BoundedTreeSet ts : (Collection<BoundedTreeSet>)values()) {
+      for (Map.Entry ent : (Collection<Map.Entry>)entrySet()) {
+	BoundedTreeSet ts = (BoundedTreeSet)ent.getValue();
 	ts.setMaxSize(maxAus);
       }
     }

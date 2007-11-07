@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.72 2007-10-06 02:45:33 tlipkis Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.73 2007-11-07 08:14:32 tlipkis Exp $
  */
 
 /*
@@ -1106,6 +1106,16 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       assertEquals(aus[13], crawlManager.nextReq().au);
       crawlManager.addToRunningRateKeys(aus[13]);
       assertEquals(null, crawlManager.nextReq());
+
+      // ensure can dynamically resize queues
+      p.put(CrawlManagerImpl.PARAM_SHARED_QUEUE_MAX, "3");
+      ConfigurationUtil.addFromProps(p);
+      for (Iterator iter = crawlManager.sharedRateReqs.entrySet().iterator();
+	   iter.hasNext();) {
+	Map.Entry ent = (Map.Entry)iter.next();
+	BoundedTreeSet coll = (BoundedTreeSet)ent.getValue();
+	assertEquals(3, coll.getMaxSize());
+      }
     }
 
     public void testOdcCrawlStarter() {
