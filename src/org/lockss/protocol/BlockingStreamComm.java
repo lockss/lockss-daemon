@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingStreamComm.java,v 1.29 2007-11-06 07:10:26 tlipkis Exp $
+ * $Id: BlockingStreamComm.java,v 1.30 2007-11-07 08:15:24 tlipkis Exp $
  */
 
 /*
@@ -233,7 +233,9 @@ public class BlockingStreamComm
   // Maps PeerIdentity to secondary PeerChannel
   MaxSizeRecordingMap rcvChannels = new MaxSizeRecordingMap();
   Set<BlockingPeerChannel> drainingChannels = new HashSet();
+
   int maxDrainingChannels = 0;
+  ChannelStats globalStats = new ChannelStats();
 
   private Vector messageHandlers = new Vector(); // Vector is synchronized
 
@@ -657,11 +659,13 @@ public class BlockingStreamComm
       BlockingPeerChannel currentChan =
 	(BlockingPeerChannel)channels.get(peer);
       if (currentChan == chan) {
+	globalStats.add(chan.getStats());
 	channels.remove(peer);
 	log.debug2("Removed: " + chan);
       }
       BlockingPeerChannel rcvChan = (BlockingPeerChannel)rcvChannels.get(peer);
       if (rcvChan == chan) {
+	globalStats.add(chan.getStats());
 	rcvChannels.remove(peer);
 	log.debug2("Removed secondary: " + chan);
       }
@@ -1292,6 +1296,14 @@ public class BlockingStreamComm
 				       ColumnDescriptor.TYPE_STRING),
 		  new ColumnDescriptor("SendQ", "SendQ",
 				       ColumnDescriptor.TYPE_INT),
+		  new ColumnDescriptor("Sent", "Msgs Sent",
+				       ColumnDescriptor.TYPE_INT),
+		  new ColumnDescriptor("Rcvd", "Msgs Rcvd",
+				       ColumnDescriptor.TYPE_INT),
+		  new ColumnDescriptor("SentBytes", "Bytes Sent",
+				       ColumnDescriptor.TYPE_INT),
+		  new ColumnDescriptor("RcvdBytes", "Bytes Rcvd",
+				       ColumnDescriptor.TYPE_INT),
 		  new ColumnDescriptor("LastSend", "LastSend",
 				       ColumnDescriptor.TYPE_STRING),
 		  new ColumnDescriptor("LastRcv", "LastRcv",
@@ -1317,12 +1329,14 @@ public class BlockingStreamComm
 //       table.setResortable(false);
 //       table.setDefaultSortRules(statusSortRules);
       String key = table.getKey();
+      ChannelStats cumulative = new ChannelStats();
       table.setColumnDescriptors(chanStatusColDescs);
-      table.setRows(getRows(key));
-      table.setSummaryInfo(getSummaryInfo(key));
+      table.setRows(getRows(key, cumulative));
+      cumulative.add(globalStats);
+      table.setSummaryInfo(getSummaryInfo(key, cumulative));
     }
 
-    private List getSummaryInfo(String key) {
+    private List getSummaryInfo(String key, ChannelStats stats) {
       List res = new ArrayList();
       res.add(new StatusTable.SummaryInfo("Channels",
 					  ColumnDescriptor.TYPE_STRING,
@@ -1337,10 +1351,24 @@ public class BlockingStreamComm
 					  ColumnDescriptor.TYPE_STRING,
 					  drainingChannels.size() + ", "
 					  + maxDrainingChannels + " max"));
+      ChannelStats.Count count = stats.getInCount();
+      res.add(new StatusTable.SummaryInfo("Msgs Sent",
+					  ColumnDescriptor.TYPE_INT,
+					  count.getMsgs()));
+      res.add(new StatusTable.SummaryInfo("Bytes Sent",
+					  ColumnDescriptor.TYPE_INT,
+					  count.getBytes()));
+      count = stats.getOutCount();
+      res.add(new StatusTable.SummaryInfo("Msgs Rcvd",
+					  ColumnDescriptor.TYPE_INT,
+					  count.getMsgs()));
+      res.add(new StatusTable.SummaryInfo("Bytes Rcvd",
+					  ColumnDescriptor.TYPE_INT,
+					  count.getBytes()));
       return res;
     }
 
-    private List getRows(String key) {
+    private List getRows(String key, ChannelStats cumulative) {
       List table = new ArrayList();
       synchronized (channels) {
 
@@ -1348,29 +1376,38 @@ public class BlockingStreamComm
 	  Map.Entry ent = (Map.Entry)iter.next();
 	  PeerIdentity pid = (PeerIdentity)ent.getKey();
 	  BlockingPeerChannel chan = (BlockingPeerChannel)ent.getValue();
-	  table.add(makeRow(pid, chan, ""));
+	  table.add(makeRow(pid, chan, "", cumulative));
 	}
 	for (Iterator iter = rcvChannels.entrySet().iterator();
 	     iter.hasNext();) {
 	  Map.Entry ent = (Map.Entry)iter.next();
 	  PeerIdentity pid = (PeerIdentity)ent.getKey();
 	  BlockingPeerChannel chan = (BlockingPeerChannel)ent.getValue();
-	  table.add(makeRow(pid, chan, "2"));
+	  table.add(makeRow(pid, chan, "2", cumulative));
 	}
 	for (BlockingPeerChannel chan : drainingChannels) {
-	  table.add(makeRow(chan.getPeer(), chan, "D"));
+	  table.add(makeRow(chan.getPeer(), chan, "D", cumulative));
 	}
       }
       return table;
     }
 
     private Map makeRow(PeerIdentity pid, BlockingPeerChannel chan,
-			String flags) {
+			String flags, ChannelStats cumulative) {
       Map row = new HashMap();
       row.put("Peer", pid.getIdString());
       row.put("State", chan.getState());
       row.put("SendQ", chan.getSendQueueSize());
+      ChannelStats stats = chan.getStats();
+      cumulative.add(stats);
+      ChannelStats.Count count = stats.getInCount();
+      row.put("Sent", count.getMsgs());
+      row.put("SentBytes", count.getBytes());
+      count = stats.getOutCount();
+      row.put("Rcvd", count.getMsgs());
+      row.put("RcvdBytes", count.getBytes());
       StringBuilder sb = new StringBuilder(flags);
+      if (chan.isOriginate()) sb.append("O");
       if (chan.hasConnecter()) sb.append("C");
       if (chan.hasReader()) sb.append("R");
       if (chan.hasWriter()) sb.append("W");
