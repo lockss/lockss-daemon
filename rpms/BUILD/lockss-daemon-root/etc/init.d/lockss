@@ -1,5 +1,10 @@
 #!/bin/sh
 
+# Start and stop LOCKSS daemon
+#
+# chkconfig: 345 99 01
+# description: LOCKSS daemon
+
 . /etc/init.d/functions
 . /etc/profile
 
@@ -12,7 +17,7 @@ SunOS)
         fi
         if [ "X${LOCKSS_HOME}" = X ]
         then
-                # Next line wierd because of evaluation order of
+                # Next line weird because of evaluation order of
                 # ~ and shell parameters
                 LOCKSS_HOME=`echo "cd ~${LOCKSS_USER} ; pwd" | bash`
         fi
