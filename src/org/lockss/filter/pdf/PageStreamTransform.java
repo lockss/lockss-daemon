@@ -1,5 +1,5 @@
 /*
- * $Id: PageStreamTransform.java,v 1.11 2007-07-31 08:40:05 thib_gc Exp $
+ * $Id: PageStreamTransform.java,v 1.11.6.1 2007-11-08 22:41:42 thib_gc Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import org.lockss.util.*;
 import org.pdfbox.pdfwriter.ContentStreamWriter;
 import org.pdfbox.pdmodel.common.PDStream;
 import org.pdfbox.util.PDFStreamEngine;
+import org.pdfbox.util.PDFStreamEngine.OperatorProcessorFactory;
 import org.pdfbox.util.operator.OperatorProcessor;
 
 /**
@@ -267,9 +268,21 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
    * all PDF operators with {@link SimpleOperatorProcessor}.</p>
    * @throws IOException if any processing error occurs.
    * @see #PageStreamTransform(Properties)
+   * @deprecated Use {@link #PageStreamTransform(OperatorProcessorFactory)}.
    */
   public PageStreamTransform() throws IOException {
     this(new Properties());
+  }
+
+  /**
+   * <p>Builds a new identity PDF page stream transform that processes
+   * all PDF operators with {@link SimpleOperatorProcessor}.</p>
+   * @param factory A {@link PdfOperatorProcessor} factory.
+   * @throws IOException if any processing error occurs.
+   * @see #PageStreamTransform(OperatorProcessorFactory, Properties)
+   */
+  public PageStreamTransform(OperatorProcessorFactory factory) throws IOException {
+    this(factory, new Properties());
   }
 
   /**
@@ -293,9 +306,40 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
    * @see PdfUtil#getPdfOperators
    * @see <a href="http://sourceforge.net/tracker/index.php?func=detail&aid=1544943&group_id=78314&atid=552832">PDFBox
    *      Bug #1544943</a>
+   * @deprecated Use {@link #PageStreamTransform(OperatorProcessorFactory, Properties)}.
    */
   public PageStreamTransform(Properties customOperatorProcessors) throws IOException {
     super(rewriteProperties(customOperatorProcessors));
+    this.listStack = new Stack();
+  }
+
+  /**
+   * <p>Builds a new page stream transform, using the given class
+   * name strings to instantiate PDF operator processors for the given
+   * PDF operator strings, and imposing a default of
+   * {@link SimpleOperatorProcessor} for all others.</p>
+   * <p>Though most implementations of {@link PDFStreamEngine} do
+   * not, this implementation takes advantage of a {@link Properties}
+   * argument that uses the defaults mechanism of the
+   * {@link Properties#Properties(Properties)} constructor.</p>
+   * @param factory                  A {@link PdfOperatorProcessor}
+   *                                 factory.
+   * @param customOperatorProcessors A {@link Properties} instance
+   *                                 that maps PDF operator strings
+   *                                 to the string names of
+   *                                 {@link PdfOperatorProcessor}
+   *                                 classes to use for those PDF
+   *                                 operators.
+   * @throws NullPointerException if the argument is null.
+   * @throws IOException          if any processing error occurs.
+   * @see PDFStreamEngine#PDFStreamEngine(OperatorProcessorFactory, Properties)
+   * @see PdfUtil#getPdfOperators
+   * @see <a href="http://sourceforge.net/tracker/index.php?func=detail&aid=1544943&group_id=78314&atid=552832">PDFBox
+   *      Bug #1544943</a>
+   */
+  public PageStreamTransform(OperatorProcessorFactory factory,
+                             Properties customOperatorProcessors) throws IOException {
+    super(factory, rewriteProperties(customOperatorProcessors));
     this.listStack = new Stack();
   }
 
@@ -311,10 +355,33 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
    * @throws IOException if any processing error occurs.
    * @see #PageStreamTransform(Properties)
    * @see PropUtil#fromArgs(String, String)
+   * @deprecated Use {@link #PageStreamTransform(OperatorProcessorFactory, String, Class)}.
    */
   public PageStreamTransform(String pdfOperatorString, Class pdfOperatorProcessor)
       throws IOException {
     this(PropUtil.fromArgs(pdfOperatorString, pdfOperatorProcessor.getName()));
+  }
+
+  /**
+   * <p>Builds a new page stream transform using the given
+   * PDF operator processor (represented by its class) to process the
+   * given PDF operator (represented by its operator string),
+   * and imposing a default of {@link SimpleOperatorProcessor} for all
+   * others.</p>
+   * @param factory              A {@link PdfOperatorProcessor}
+   *                             factory.
+   * @param pdfOperatorString    A PDF operator string.
+   * @param pdfOperatorProcessor A PDF operator processor class for
+   *                             <code>pdfOperatorString</code>..
+   * @throws IOException if any processing error occurs.
+   * @see #PageStreamTransform(OperatorProcessorFactory, Properties)
+   * @see PropUtil#fromArgs(String, String)
+   */
+  public PageStreamTransform(OperatorProcessorFactory factory,
+                             String pdfOperatorString, Class pdfOperatorProcessor)
+      throws IOException {
+    this(factory,
+         PropUtil.fromArgs(pdfOperatorString, pdfOperatorProcessor.getName()));
   }
 
   /**
@@ -332,11 +399,39 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
    * @throws IOException if any processing error occurs.
    * @see #PageStreamTransform(Properties)
    * @see PropUtil#fromArgs(String, String, String, String)
+   * @deprecated Use {@link #PageStreamTransform(OperatorProcessorFactory, String, Class, String, Class)}.
    */
   public PageStreamTransform(String pdfOperatorString1, Class pdfOperatorProcessor1,
                              String pdfOperatorString2, Class pdfOperatorProcessor2)
       throws IOException {
     this(PropUtil.fromArgs(pdfOperatorString1, pdfOperatorProcessor1.getName(),
+                           pdfOperatorString2, pdfOperatorProcessor2.getName()));
+  }
+
+  /**
+   * <p>Builds a new page stream transform using the given
+   * PDF operator processors (represented by their class) to process the
+   * given PDF operators (represented by their operator string),
+   * and imposing a default of {@link SimpleOperatorProcessor} for all
+   * others.</p>
+   * @param factory               A {@link PdfOperatorProcessor}
+   *                              factory.
+   * @param pdfOperatorString1    A PDF operator string.
+   * @param pdfOperatorProcessor1 A PDF operator processor class for
+   *                              <code>pdfOperatorString1</code>.
+   * @param pdfOperatorString2    A PDF operator string.
+   * @param pdfOperatorProcessor2 A PDF operator processor class for
+   *                              <code>pdfOperatorString2</code>.
+   * @throws IOException if any processing error occurs.
+   * @see #PageStreamTransform(OperatorProcessorFactory, Properties)
+   * @see PropUtil#fromArgs(String, String, String, String)
+   */
+  public PageStreamTransform(OperatorProcessorFactory factory,
+                             String pdfOperatorString1, Class pdfOperatorProcessor1,
+                             String pdfOperatorString2, Class pdfOperatorProcessor2)
+      throws IOException {
+    this(factory,
+         PropUtil.fromArgs(pdfOperatorString1, pdfOperatorProcessor1.getName(),
                            pdfOperatorString2, pdfOperatorProcessor2.getName()));
   }
 
@@ -358,12 +453,45 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
    * @throws IOException if any processing error occurs.
    * @see #PageStreamTransform(Properties)
    * @see PropUtil#fromArgs(String, String, String, String, String, String)
+   * @deprecated Use {@link #PageStreamTransform(OperatorProcessorFactory, String, Class, String, Class, String, Class)}.
    */
   public PageStreamTransform(String pdfOperatorString1, Class pdfOperatorProcessor1,
                              String pdfOperatorString2, Class pdfOperatorProcessor2,
                              String pdfOperatorString3, Class pdfOperatorProcessor3)
       throws IOException {
     this(PropUtil.fromArgs(pdfOperatorString1, pdfOperatorProcessor1.getName(),
+                           pdfOperatorString2, pdfOperatorProcessor2.getName(),
+                           pdfOperatorString3, pdfOperatorProcessor3.getName()));
+  }
+
+  /**
+   * <p>Builds a new page stream transform using the given
+   * PDF operator processors (represented by their class) to process the
+   * given PDF operators (represented by their operator string),
+   * and imposing a default of {@link SimpleOperatorProcessor} for all
+   * others.</p>
+   * @param factory               A {@link PdfOperatorProcessor}
+   *                              factory.
+   * @param pdfOperatorString1    A PDF operator string.
+   * @param pdfOperatorProcessor1 A PDF operator processor class for
+   *                              <code>pdfOperatorString1</code>.
+   * @param pdfOperatorString2    A PDF operator string.
+   * @param pdfOperatorProcessor2 A PDF operator processor class for
+   *                              <code>pdfOperatorString2</code>.
+   * @param pdfOperatorString3    A PDF operator string.
+   * @param pdfOperatorProcessor3 A PDF operator processor class for
+   *                              <code>pdfOperatorString3</code>.
+   * @throws IOException if any processing error occurs.
+   * @see #PageStreamTransform(OperatorProcessorFactory, Properties)
+   * @see PropUtil#fromArgs(String, String, String, String, String, String)
+   */
+  public PageStreamTransform(OperatorProcessorFactory factory,
+                             String pdfOperatorString1, Class pdfOperatorProcessor1,
+                             String pdfOperatorString2, Class pdfOperatorProcessor2,
+                             String pdfOperatorString3, Class pdfOperatorProcessor3)
+      throws IOException {
+    this(factory,
+         PropUtil.fromArgs(pdfOperatorString1, pdfOperatorProcessor1.getName(),
                            pdfOperatorString2, pdfOperatorProcessor2.getName(),
                            pdfOperatorString3, pdfOperatorProcessor3.getName()));
   }
@@ -387,8 +515,9 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
    * @param pdfOperatorProcessor4 A PDF operator processor class for
    *                              <code>pdfOperatorString4</code>.
    * @throws IOException if any processing error occurs.
-   * @see #PageStreamTransform(Properties)
+   * @see #PageStreamTransform(OperatorProcessorFactory, Properties)
    * @see PropUtil#fromArgs(String, String, String, String, String, String, String, String)
+   * @deprecated Use {@link #PageStreamTransform(OperatorProcessorFactory, String, Class, String, Class, String, Class, String, Class)}
    */
   public PageStreamTransform(String pdfOperatorString1, Class pdfOperatorProcessor1,
                              String pdfOperatorString2, Class pdfOperatorProcessor2,
@@ -396,6 +525,43 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
                              String pdfOperatorString4, Class pdfOperatorProcessor4)
       throws IOException {
     this(PropUtil.fromArgs(pdfOperatorString1, pdfOperatorProcessor1.getName(),
+                           pdfOperatorString2, pdfOperatorProcessor2.getName(),
+                           pdfOperatorString3, pdfOperatorProcessor3.getName(),
+                           pdfOperatorString4, pdfOperatorProcessor4.getName()));
+  }
+
+  /**
+   * <p>Builds a new page stream transform using the given
+   * PDF operator processors (represented by their class) to process the
+   * given PDF operators (represented by their operator string),
+   * and imposing a default of {@link SimpleOperatorProcessor} for all
+   * others.</p>
+   * @param factory               A {@link PdfOperatorProcessor}
+   *                              factory.
+   * @param pdfOperatorString1    A PDF operator string.
+   * @param pdfOperatorProcessor1 A PDF operator processor class for
+   *                              <code>pdfOperatorString1</code>.
+   * @param pdfOperatorString2    A PDF operator string.
+   * @param pdfOperatorProcessor2 A PDF operator processor class for
+   *                              <code>pdfOperatorString2</code>.
+   * @param pdfOperatorString3    A PDF operator string.
+   * @param pdfOperatorProcessor3 A PDF operator processor class for
+   *                              <code>pdfOperatorString3</code>.
+   * @param pdfOperatorString4    A PDF operator string.
+   * @param pdfOperatorProcessor4 A PDF operator processor class for
+   *                              <code>pdfOperatorString4</code>.
+   * @throws IOException if any processing error occurs.
+   * @see #PageStreamTransform(Properties)
+   * @see PropUtil#fromArgs(String, String, String, String, String, String, String, String)
+   */
+  public PageStreamTransform(OperatorProcessorFactory factory,
+                             String pdfOperatorString1, Class pdfOperatorProcessor1,
+                             String pdfOperatorString2, Class pdfOperatorProcessor2,
+                             String pdfOperatorString3, Class pdfOperatorProcessor3,
+                             String pdfOperatorString4, Class pdfOperatorProcessor4)
+      throws IOException {
+    this(factory,
+         PropUtil.fromArgs(pdfOperatorString1, pdfOperatorProcessor1.getName(),
                            pdfOperatorString2, pdfOperatorProcessor2.getName(),
                            pdfOperatorString3, pdfOperatorProcessor3.getName(),
                            pdfOperatorString4, pdfOperatorProcessor4.getName()));
