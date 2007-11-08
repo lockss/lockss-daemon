@@ -1,6 +1,6 @@
-diff -ur /tmp/PDFBox-0.7.3/src/org/pdfbox/filter/FlateFilter.java src/org/pdfbox/filter/FlateFilter.java
---- /tmp/PDFBox-0.7.3/src/org/pdfbox/filter/FlateFilter.java	2006-09-26 21:18:54.000000000 -0700
-+++ src/org/pdfbox/filter/FlateFilter.java	2006-12-06 15:18:24.000000000 -0800
+diff -aur ../../../pdfbox073/PDFBox-0.7.3/src/org/pdfbox/filter/FlateFilter.java ./org/pdfbox/filter/FlateFilter.java
+--- ../../../pdfbox073/PDFBox-0.7.3/src/org/pdfbox/filter/FlateFilter.java	2007-11-05 00:47:10.000000000 -0800
++++ ./org/pdfbox/filter/FlateFilter.java	2007-11-05 00:55:19.000000000 -0800
 @@ -91,7 +91,7 @@
              int amountRead;
  
@@ -10,10 +10,64 @@ diff -ur /tmp/PDFBox-0.7.3/src/org/pdfbox/filter/FlateFilter.java src/org/pdfbox
              {
                  // decoding not needed
                  while ((amountRead = decompressor.read(buffer, 0, BUFFER_SIZE)) != -1)
-diff -ur /tmp/PDFBox-0.7.3/src/org/pdfbox/util/PDFStreamEngine.java src/org/pdfbox/util/PDFStreamEngine.java
---- /tmp/PDFBox-0.7.3/src/org/pdfbox/util/PDFStreamEngine.java	2006-09-30 18:55:14.000000000 -0700
-+++ src/org/pdfbox/util/PDFStreamEngine.java	2006-12-06 15:45:56.000000000 -0800
-@@ -213,7 +213,7 @@
+diff -aur ../../../pdfbox073/PDFBox-0.7.3/src/org/pdfbox/util/PDFStreamEngine.java ./org/pdfbox/util/PDFStreamEngine.java
+--- ../../../pdfbox073/PDFBox-0.7.3/src/org/pdfbox/util/PDFStreamEngine.java	2007-11-05 00:47:10.000000000 -0800
++++ ./org/pdfbox/util/PDFStreamEngine.java	2007-11-08 10:33:36.000000000 -0800
+@@ -100,17 +100,17 @@
+     {
+         //default constructor
+     }
+     
+     /**
+      * Constructor with engine properties.  The property keys are all
+      * PDF operators, the values are class names used to execute those
+      * operators.
+      * 
+      * @param properties The engine properties.
+      * 
+      * @throws IOException If there is an error setting the engine properties.
+      */
+-    public PDFStreamEngine( Properties properties ) throws IOException
++    public PDFStreamEngine( OperatorProcessorFactory factory, Properties properties ) throws IOException
+     {
+         try
+         {
+@@ -119,19 +119,32 @@
+             {
+                 String operator = (String)keys.next();
+                 String operatorClass = properties.getProperty( operator );
+-                OperatorProcessor op = (OperatorProcessor)Class.forName( operatorClass ).newInstance();
++                OperatorProcessor op = factory.newInstanceForName(operatorClass);
+                 registerOperatorProcessor(operator, op);
+             }
+         }
+         catch( Exception e )
+         {
+-            throw new WrappedIOException( e );
++            IOException ioe = new IOException(); ioe.initCause(e); throw ioe;
+         }
+     }
+     
++    public interface OperatorProcessorFactory {
++      OperatorProcessor newInstanceForName(String className) throws LinkageError, ExceptionInInitializerError, ClassNotFoundException, IllegalAccessException, InstantiationException, SecurityException;
++    }
++
++    public PDFStreamEngine( Properties properties ) throws IOException {
++      this(new OperatorProcessorFactory() {
++             public OperatorProcessor newInstanceForName(String className) throws LinkageError, ExceptionInInitializerError, ClassNotFoundException, IllegalAccessException, InstantiationException, SecurityException {
++               return (OperatorProcessor)Class.forName(className).newInstance();
++             }
++           },
++           properties);
++    }
++
+     /**
+      * Register a custom operator processor with the engine.
+      * 
+      * @param operator The operator as a string.
+      * @param op Processor instance.
+      */
+@@ -213,7 +226,7 @@
                      else if( next instanceof PDFOperator )
                      {
                          processOperator( (PDFOperator)next, arguments );
