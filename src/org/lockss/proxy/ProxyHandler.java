@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.58 2007-11-06 07:09:51 tlipkis Exp $
+ * $Id: ProxyHandler.java,v 1.59 2007-11-08 10:07:10 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.58 2007-11-06 07:09:51 tlipkis Exp $
+// $Id: ProxyHandler.java,v 1.59 2007-11-08 10:07:10 tlipkis Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -355,7 +355,8 @@ public class ProxyHandler extends AbstractHttpHandler {
 	  && proxyMgr.isHostDown(uri.getHost())) {
 	sendErrorPage(request, response, 504,
 		      hostMsg("Can't connect to", uri.getHost(),
-			      "Host not responding (cached status)"));
+			      "Host not responding (cached status)"),
+		      pluginMgr.getCandidateAus(urlString));
 	return;
       }
       if (UrlUtil.isHttpUrl(urlString)) {
@@ -672,7 +673,8 @@ public class ProxyHandler extends AbstractHttpHandler {
 	  serveFromCache(pathInContext, pathParams, request, response, cu);
 	} else {
 	  // else generate an error page
-	  sendProxyErrorPage(e, request, response);
+	  sendProxyErrorPage(e, request, response,
+			     pluginMgr.getCandidateAus(urlString));
 	}
 	return;
       }
@@ -968,26 +970,30 @@ public class ProxyHandler extends AbstractHttpHandler {
 
   void sendProxyErrorPage(IOException e,
 			  HttpRequest request,
-			  HttpResponse response)
+			  HttpResponse response,
+			  Collection candidateAus)
       throws IOException {
     URI uri = request.getURI();
     if (e instanceof java.net.UnknownHostException) {
       // DNS failure
       sendErrorPage(request, response, 502,
 		    hostMsg("Can't connect to", uri.getHost(),
-			    "Unknown host"));
+			    "Unknown host"),
+		    candidateAus);
       return;
     }
     if (e instanceof java.net.NoRouteToHostException) {
       sendErrorPage(request, response, 502,
 		    hostMsg("Can't connect to", uri.getHost(),
-			    "No route to host"));
+			    "No route to host"),
+		    candidateAus);
       return;
     }
     if (e instanceof LockssUrlConnection.ConnectionTimeoutException) {
       sendErrorPage(request, response, 504,
 		    hostMsg("Can't connect to", uri.getHost(),
-			    "Host not responding"));
+			    "Host not responding"),
+		    candidateAus);
       return;
     }
     if (e instanceof java.net.ConnectException) {
@@ -995,19 +1001,22 @@ public class ProxyHandler extends AbstractHttpHandler {
 		    hostMsg("Can't connect to",
 			    uri.getHost() +
 			    (uri.getPort() != 80 ? (":" + uri.getPort()) : ""),
-			    "Connection refused"));
+			    "Connection refused"),
+		    candidateAus);
       return;
     }
     if (e instanceof java.io.InterruptedIOException) {
       sendErrorPage(request, response, 504,
 		    hostMsg("Timeout waiting for data from", uri.getHost(),
-			    "Server not responding"));
+			    "Server not responding"),
+		    candidateAus);
       return;
     }
 //     if (e instanceof java.io.IOException) {
     sendErrorPage(request, response, 502,
 		  hostMsg("Error communicating with", uri.getHost(),
-			  e.getMessage()));
+			  e.getMessage()),
+		  candidateAus);
     return;
 //     }
   }
@@ -1089,8 +1098,9 @@ public class ProxyHandler extends AbstractHttpHandler {
   void writeFooter(Writer writer) throws IOException {
     writer.write("<p><i><small>");
     writer.write("<a href=\"" + Constants.LOCKSS_HOME_URL +
-		 "\">LOCKSS proxy</a>, ");
-    writer.write("<a href=\"http://jetty.mortbay.org/\">powered by Jetty</a>");
+		 "\">LOCKSS proxy</a> " +
+		 ConfigManager.getDaemonVersion().displayString() + " on " +
+		 ConfigManager.getPlatformHostname());
     writer.write("</small></i></p>");
     writer.write("\n</body>\n</html>\n");
   }
