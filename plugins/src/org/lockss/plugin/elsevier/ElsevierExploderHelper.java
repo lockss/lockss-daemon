@@ -1,10 +1,10 @@
 /*
- * $Id: ElsevierExploderHelper.java,v 1.3 2007-10-16 23:47:25 dshr Exp $
+ * $Id: ElsevierExploderHelper.java,v 1.4 2007-11-08 00:56:33 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -59,7 +59,7 @@ import org.lockss.crawler.Exploder;
  *
  * This class maps this into base URLs that look like:
  *
- * <code>http://www.elsevier.com/CLOCKSS/JOU=${JOURNAL_ID}/
+ * <code>http://elsevier.clockss.org/JOU=${JOURNAL_ID}/
  *
  * and the rest of the url inside the AU is the rest of the name of the entry.
  * It synthesizes suitable header fields for the files based on their
