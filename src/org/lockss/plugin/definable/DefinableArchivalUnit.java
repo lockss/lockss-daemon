@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.60 2007-09-24 18:37:12 dshr Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.61 2007-11-08 10:07:47 tlipkis Exp $
  */
 
 /*
@@ -36,7 +36,7 @@ import java.util.*;
 
 import org.apache.commons.collections.*;
 import org.apache.oro.text.regex.*;
-import org.lockss.config.Configuration;
+import org.lockss.config.*;
 import org.lockss.crawler.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
@@ -56,11 +56,21 @@ import org.lockss.state.AuState;
 public class DefinableArchivalUnit extends BaseArchivalUnit {
   static Logger log = Logger.getLogger("DefinableArchivalUnit");
 
+  /** If true, crawl rules in definable plugins are case-independent by
+   * default.  Can override per-plugin with
+   * <code>au_crawlrules_ignore_case</code> */
+  static final String PARAM_CRAWL_RULES_IGNORE_CASE =
+    Configuration.PREFIX + "plugin.crawlRulesIgnoreCase";
+  static final boolean DEFAULT_CRAWL_RULES_IGNORE_CASE = true;
+
+
   public static final String PREFIX_NUMERIC = "numeric_";
   public static final int DEFAULT_AU_CRAWL_DEPTH = 1;
   public static final String DEFAULT_AU_EXPLODER_PATTERN = null;
   public static final String KEY_AU_NAME = "au_name";
   public static final String KEY_AU_CRAWL_RULES = "au_crawlrules";
+  public static final String KEY_AU_CRAWL_RULES_IGNORE_CASE =
+    "au_crawlrules_ignore_case";
   public static final String KEY_AU_CRAWL_WINDOW = "au_crawlwindow";
   public static final String KEY_AU_CRAWL_WINDOW_SER = "au_crawlwindow_ser";
   public static final String KEY_AU_EXPECTED_BASE_PATH = "au_expected_base_path";
@@ -207,21 +217,24 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 
   protected CrawlRule makeRules() throws LockssRegexpException {
     Object rule = definitionMap.getMapElement(KEY_AU_CRAWL_RULES);
+    boolean defaultIgnoreCase =
+      CurrentConfig.getBooleanParam(PARAM_CRAWL_RULES_IGNORE_CASE,
+				    DEFAULT_CRAWL_RULES_IGNORE_CASE);
+    boolean ignoreCase =
+      definitionMap.getBoolean(KEY_AU_CRAWL_RULES_IGNORE_CASE,
+			       defaultIgnoreCase);
 
     if (rule instanceof String) {
 	CrawlRuleFromAuFactory fact = (CrawlRuleFromAuFactory)
             newAuxClass((String) rule, CrawlRuleFromAuFactory.class);
 	return fact.createCrawlRule(this);
     }
-    List rules = new LinkedList();
-    if(rule instanceof List) {
-      List templates = (List) rule;
-      Iterator it = templates.iterator();
-
-      while (it.hasNext()) {
-	String rule_template = (String) it.next();
-
-	rules.add(convertRule(rule_template));
+    List rules = Collections.EMPTY_LIST;
+    if (rule instanceof List) {
+      List<String> templates = (List<String>)rule;
+      rules = new ArrayList(templates.size());
+      for (String rule_template : templates) {
+	rules.add(convertRule(rule_template, ignoreCase));
       }
     }
 
@@ -392,7 +405,8 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     return converted_string;
   }
 
-  CrawlRule convertRule(String printfString) throws LockssRegexpException {
+  CrawlRule convertRule(String printfString, boolean ignoreCase)
+      throws LockssRegexpException {
     String rule = convertVariableRegexpString(printfString);
     String action_str = printfString.substring(0, printfString.indexOf(","));
     int action = Integer.valueOf(action_str).intValue();
@@ -408,6 +422,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
             vec = (Vector)paramMap.getMapElement(descr.getKey());
             if (vec != null) {
               return new CrawlRules.REMatchRange(rule,
+						 ignoreCase,
                                                  action,
                                                  (String)vec.elementAt(0),
                                                  (String)vec.elementAt(1));
@@ -417,6 +432,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
             vec = (Vector)paramMap.getMapElement(descr.getKey());
             if (vec != null) {
               return new CrawlRules.REMatchRange(rule,
+						 ignoreCase,
                                                  action,
                                                  ((Long)vec.elementAt(0)).longValue(),
                                                  ((Long)vec.elementAt(1)).longValue());
@@ -426,6 +442,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
             vec = (Vector)paramMap.getMapElement(descr.getKey());
             if (vec != null) {
               return new CrawlRules.REMatchSet(rule,
+					       ignoreCase,
                                                action,
                                                new HashSet(vec));
             }
@@ -435,7 +452,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 
     }
 
-    return new CrawlRules.RE(rule, action);
+    return new CrawlRules.RE(rule, ignoreCase, action);
   }
 
   public interface ConfigurableCrawlWindow {

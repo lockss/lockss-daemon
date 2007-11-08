@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlRules.java,v 1.3 2004-12-09 09:45:34 tlipkis Exp $
+ * $Id: TestCrawlRules.java,v 1.4 2007-11-08 10:07:47 tlipkis Exp $
  */
 
 /*
@@ -115,6 +115,31 @@ public class TestCrawlRules extends LockssTestCase {
     }
   }
 
+  public void testRECase() throws LockssRegexpException {
+    CrawlRule cr;
+
+    cr = new CrawlRules.RE("^foo$", CrawlRules.RE.MATCH_INCLUDE);
+    assertEquals(CrawlRule.INCLUDE, cr.match("foo"));
+    assertEquals(CrawlRule.IGNORE, cr.match("Foo"));
+    assertEquals(CrawlRule.IGNORE, cr.match("FOO"));
+
+    cr = new CrawlRules.RE("^foo$", false, CrawlRules.RE.MATCH_INCLUDE);
+    assertEquals(CrawlRule.INCLUDE, cr.match("foo"));
+    assertEquals(CrawlRule.IGNORE, cr.match("Foo"));
+    assertEquals(CrawlRule.IGNORE, cr.match("FOO"));
+
+    cr = new CrawlRules.RE("^foo$", true, CrawlRules.RE.MATCH_INCLUDE);
+    assertEquals(CrawlRule.INCLUDE, cr.match("foo"));
+    assertEquals(CrawlRule.INCLUDE, cr.match("Foo"));
+    assertEquals(CrawlRule.INCLUDE, cr.match("FOO"));
+
+    cr = new CrawlRules.RE("^FOO$", true, CrawlRules.RE.MATCH_INCLUDE);
+    assertEquals(CrawlRule.INCLUDE, cr.match("foo"));
+    assertEquals(CrawlRule.INCLUDE, cr.match("Foo"));
+    assertEquals(CrawlRule.INCLUDE, cr.match("FOO"));
+
+  }
+
   public void testMatchExcl() throws LockssRegexpException {
     CrawlRule cr = new CrawlRules.RE("blahblah.*",
 				     CrawlRules.RE.MATCH_EXCLUDE);
@@ -219,7 +244,27 @@ public class TestCrawlRules extends LockssTestCase {
     assertEquals(CrawlRule.EXCLUDE, cr.match("no_trailingslash/issue/bar"));
     assertEquals(CrawlRule.EXCLUDE, cr.match("foo/issue/17/bar"));
     assertEquals(CrawlRule.INCLUDE, cr.match("foo/issue/aab/bar"));
+    assertEquals(CrawlRule.EXCLUDE, cr.match("foo/Issue/aab/bar"));
+    assertEquals(CrawlRule.EXCLUDE, cr.match("foo/issue/AAB/BAR"));
     assertEquals(CrawlRule.INCLUDE, cr.match("/issue/ddd/bar"));
+    assertEquals(CrawlRule.INCLUDE, cr.match("/issue/def/bar"));
+    assertEquals(CrawlRule.EXCLUDE, cr.match("/issue/deg/bar"));
+  }
+
+  public void testMatchStringRangeCase() throws Exception {
+    CrawlRule cr =
+      new CrawlRules.REMatchRange("/Issue/(.*)/", true,
+				  CrawlRules.RE.MATCH_INCLUDE_ELSE_EXCLUDE,
+				  "aab", "def");
+    assertEquals(CrawlRule.EXCLUDE, cr.match("no/match"));
+    assertEquals(CrawlRule.EXCLUDE, cr.match("no_trailingslash/issue/bar"));
+    assertEquals(CrawlRule.EXCLUDE, cr.match("foo/issue/17/bar"));
+    assertEquals(CrawlRule.INCLUDE, cr.match("foo/issue/aab/bar"));
+    assertEquals(CrawlRule.INCLUDE, cr.match("foo/Issue/aab/bar"));
+    assertEquals(CrawlRule.INCLUDE, cr.match("foo/issue/AAB/BAR"));
+    assertEquals(CrawlRule.INCLUDE, cr.match("FOO/ISSUE/AAB/BAR"));
+    assertEquals(CrawlRule.INCLUDE, cr.match("/issue/ddd/bar"));
+    assertEquals(CrawlRule.INCLUDE, cr.match("/ISSUE/dDd/Bar"));
     assertEquals(CrawlRule.INCLUDE, cr.match("/issue/def/bar"));
     assertEquals(CrawlRule.EXCLUDE, cr.match("/issue/deg/bar"));
   }
@@ -233,6 +278,21 @@ public class TestCrawlRules extends LockssTestCase {
     assertEquals(CrawlRule.EXCLUDE, cr.match("empty/issue/bar"));
     assertEquals(CrawlRule.INCLUDE, cr.match("foo/issue17/bar"));
     assertEquals(CrawlRule.INCLUDE, cr.match("foo/issue18/bar"));
+    assertEquals(CrawlRule.EXCLUDE, cr.match("foo/Issue18/bar"));
+    assertEquals(CrawlRule.INCLUDE, cr.match("foo/issue26/bar"));
+    assertEquals(CrawlRule.EXCLUDE, cr.match("foo/issue27/bar"));
+  }
+
+  public void testMatchIntRangeCase() throws Exception {
+    CrawlRule cr =
+      new CrawlRules.REMatchRange("/issue(\\d+)", true,
+				  CrawlRules.RE.MATCH_INCLUDE_ELSE_EXCLUDE,
+				  17, 26);
+    assertEquals(CrawlRule.EXCLUDE, cr.match("no/match"));
+    assertEquals(CrawlRule.EXCLUDE, cr.match("empty/issue/bar"));
+    assertEquals(CrawlRule.INCLUDE, cr.match("foo/issue17/bar"));
+    assertEquals(CrawlRule.INCLUDE, cr.match("foo/issue18/bar"));
+    assertEquals(CrawlRule.INCLUDE, cr.match("foo/Issue18/bar"));
     assertEquals(CrawlRule.INCLUDE, cr.match("foo/issue26/bar"));
     assertEquals(CrawlRule.EXCLUDE, cr.match("foo/issue27/bar"));
   }
@@ -262,12 +322,33 @@ public class TestCrawlRules extends LockssTestCase {
     CrawlRule cr =
       new CrawlRules.REMatchSet("/issue/(.*)/",
 				CrawlRules.RE.MATCH_INCLUDE_ELSE_EXCLUDE,
-				SetUtil.set("one", "two", "three"));
+				SetUtil.set("one", "two", "Three"));
     assertEquals(CrawlRule.EXCLUDE, cr.match("no/match"));
     assertEquals(CrawlRule.EXCLUDE, cr.match("no_trailingslash/issue/bar"));
     assertEquals(CrawlRule.EXCLUDE, cr.match("foo/issue/17/bar"));
     assertEquals(CrawlRule.INCLUDE, cr.match("foo/issue/one/bar"));
+    assertEquals(CrawlRule.EXCLUDE, cr.match("foo/Issue/one/bar"));
     assertEquals(CrawlRule.INCLUDE, cr.match("/issue/two/bar"));
+    assertEquals(CrawlRule.EXCLUDE, cr.match("/issue/TWO/bar"));
+    assertEquals(CrawlRule.INCLUDE, cr.match("/issue/Three/bar"));
+    assertEquals(CrawlRule.EXCLUDE, cr.match("/issue/three/bar"));
+    assertEquals(CrawlRule.EXCLUDE, cr.match("/issue/frog/bar"));
+  }
+
+  public void testMatchSetCase() throws Exception {
+    CrawlRule cr =
+      new CrawlRules.REMatchSet("/issue/(.*)/", true,
+				CrawlRules.RE.MATCH_INCLUDE_ELSE_EXCLUDE,
+				SetUtil.set("one", "two", "Three"));
+    assertEquals(CrawlRule.EXCLUDE, cr.match("no/match"));
+    assertEquals(CrawlRule.EXCLUDE, cr.match("no_trailingslash/issue/bar"));
+    assertEquals(CrawlRule.EXCLUDE, cr.match("foo/issue/17/bar"));
+    assertEquals(CrawlRule.INCLUDE, cr.match("foo/issue/one/bar"));
+    assertEquals(CrawlRule.INCLUDE, cr.match("foo/Issue/one/bar"));
+    assertEquals(CrawlRule.INCLUDE, cr.match("/issue/two/bar"));
+    assertEquals(CrawlRule.INCLUDE, cr.match("/issue/TWO/bar"));
+    assertEquals(CrawlRule.INCLUDE, cr.match("/issue/Three/bar"));
+    assertEquals(CrawlRule.INCLUDE, cr.match("/issue/three/bar"));
     assertEquals(CrawlRule.EXCLUDE, cr.match("/issue/frog/bar"));
   }
 

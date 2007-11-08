@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlRules.java,v 1.9 2006-02-14 05:20:23 tlipkis Exp $
+ * $Id: CrawlRules.java,v 1.10 2007-11-08 10:07:47 tlipkis Exp $
  */
 
 /*
@@ -86,10 +86,23 @@ public class CrawlRules {
      * provided.
      */
     public RE(String reString, int action) throws LockssRegexpException {
+      this(reString, false, action);
+    }
+
+    /**
+     * Create a rule matching the given RE
+     * @param reString regular expression string
+     * @param ignoreCase if true, match is case insensitive.
+     * @param action one of the constants above.
+     * @throws LockssRegexpException if an illegal regular expression is
+     * provided.
+     */
+    public RE(String reString, boolean ignoreCase, int action)
+	throws LockssRegexpException {
       try {
-	regexp =
-	  RegexpUtil.getCompiler().compile(reString,
-					   Perl5Compiler.READ_ONLY_MASK);
+	int flags = Perl5Compiler.READ_ONLY_MASK;
+	if (ignoreCase) flags |= Perl5Compiler.CASE_INSENSITIVE_MASK;
+	regexp = RegexpUtil.getCompiler().compile(reString, flags);
 	this.action = action;
       } catch (MalformedPatternException e) {
 	throw new LockssRegexpException(e.getMessage());
@@ -166,7 +179,13 @@ public class CrawlRules {
 
     public REMatchCondition(String reString, int action)
 	throws LockssRegexpException {
-      super(reString, action);
+      this(reString, false, action);
+    }
+
+    public REMatchCondition(String reString, boolean ignoreCase,
+			    int action)
+	throws LockssRegexpException {
+      super(reString, ignoreCase, action);
     }
 
     /** Apply a condition to the result of a match */
@@ -193,10 +212,9 @@ public class CrawlRules {
    * subexpression falls within the specified range (inclusive).
    */
   public static class REMatchRange extends REMatchCondition {
-    static final int MODE_LONG = 0;
-    static final int MODE_COMP = 1;
+    static enum CompareMode { LONG, COMP, COMP_IGN_CASE };
 
-    int mode;
+    CompareMode mode;
 
     long minLong;
     long maxLong;
@@ -214,10 +232,25 @@ public class CrawlRules {
      */
     public REMatchRange(String reString, int action, long min, long max)
 	throws LockssRegexpException {
-      super(reString, action);
+      this(reString, false, action, min, max);
+    }
+
+    /** Create an integer range matcher.
+     * @param reString regular expression string
+     * @param ignoreCase if true, match is case insensitive.
+     * @param action one of the constants above.
+     * @param min the minimum subexpression value
+     * @param max the maximum subexpression value
+     * @throws LockssRegexpException if an illegal regular expression is
+     * provided.
+     */
+    public REMatchRange(String reString, boolean ignoreCase,
+			int action, long min, long max)
+	throws LockssRegexpException {
+      super(reString, ignoreCase, action);
       this.minLong = min;
       this.maxLong = max;
-      mode = MODE_LONG;
+      mode = CompareMode.LONG;
     }
 
     /** Create a String (alphabetical) range matcher.
@@ -230,13 +263,28 @@ public class CrawlRules {
      */
     public REMatchRange(String reString, int action, String min, String max)
 	throws LockssRegexpException {
-      super(reString, action);
+      this(reString, false, action, min, max);
+    }
+
+    /** Create a String (alphabetical) range matcher.
+     * @param reString regular expression string
+     * @param ignoreCase if true, match is case insensitive.
+     * @param action one of the constants above.
+     * @param min the minimum subexpression value
+     * @param max the maximum subexpression value
+     * @throws LockssRegexpException if an illegal regular expression is
+     * provided.
+     */
+    public REMatchRange(String reString, boolean ignoreCase,
+			int action, String min, String max)
+	throws LockssRegexpException {
+      super(reString, ignoreCase, action);
       if (min == null || max == null) {
 	throw new NullPointerException("REMatchRange has null min or max");
       }
-      this.minComp = min;
-      this.maxComp = max;
-      mode = MODE_COMP;
+      this.minComp = min.toLowerCase();
+      this.maxComp = max.toLowerCase();
+      mode = ignoreCase ? CompareMode.COMP_IGN_CASE : CompareMode.COMP;
     }
 
     /** Return true iff the subexpression falls within the range */
@@ -246,14 +294,17 @@ public class CrawlRules {
 	return false;
       }
       switch (mode) {
-      case MODE_LONG:
+      case LONG:
 	try {
 	  long val = Long.parseLong(sub);
 	  return minLong <= val && val <= maxLong;
 	} catch (NumberFormatException e) {
 	  return false;
 	}
-      case MODE_COMP:
+      case COMP_IGN_CASE:
+	sub = sub.toLowerCase();
+	// fall through
+      case COMP:
 	return minComp.compareTo(sub) <= 0 && maxComp.compareTo(sub) >= 0;
       }
       return false;
@@ -265,6 +316,9 @@ public class CrawlRules {
    * subexpression is contained within the specified set.
    */
   public static class REMatchSet extends REMatchCondition {
+    static enum CompareMode { EQUAL, IGN_CASE };
+
+    CompareMode mode;
     Set set;
 
     /** Create a set matcher.
@@ -274,13 +328,37 @@ public class CrawlRules {
      * @throws LockssRegexpException if an illegal regular expression is
      * provided.
      */
-    public REMatchSet(String reString, int action, Set set)
+    public REMatchSet(String reString, int action, Set<String> set)
 	throws LockssRegexpException {
-      super(reString, action);
+      this(reString, false, action, set);
+    }
+
+    /** Create a set matcher.
+     * @param reString regular expression string
+     * @param ignoreCase if true, match is case insensitive.
+     * @param action one of the constants above.
+     * @param set a Set of Strings
+     * @throws LockssRegexpException if an illegal regular expression is
+     * provided.
+     */
+    public REMatchSet(String reString, boolean ignoreCase,
+		      int action, Set<String> set)
+	throws LockssRegexpException {
+      super(reString, ignoreCase, action);
       if (set == null) {
 	throw new NullPointerException("REMatchSet has null set");
       }
-      this.set = set;
+      if (ignoreCase) {
+	Set low = new HashSet();
+	for (String s : set) {
+	  low.add(s.toLowerCase());
+	}
+	this.set = low;
+	mode = CompareMode.IGN_CASE;
+      } else {
+	this.set = set;
+	mode = CompareMode.EQUAL;
+      }
     }
 
     /** Return true iff the subexpression is a member of the set */
@@ -288,6 +366,13 @@ public class CrawlRules {
       String sub = matchResult.group(1);
       if (sub == null) {
 	return false;
+      }
+      switch (mode) {
+      case IGN_CASE:
+	sub = sub.toLowerCase();
+	break;
+      case EQUAL:
+	break;
       }
       if (logger.isDebug3()) {
 	logger.debug3("Checking if "+sub+" is in "+set);

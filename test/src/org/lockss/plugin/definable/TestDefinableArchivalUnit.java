@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.32 2007-06-23 05:37:43 tlipkis Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.33 2007-11-08 10:07:47 tlipkis Exp $
  */
 
 /*
@@ -186,11 +186,19 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     String rule1 = "1,\".*\\.gif\"";
     String rule2 = "1,\"%s\",URL";
 
-    CrawlRule rule = cau.convertRule(rule1);
+    CrawlRule rule = cau.convertRule(rule1, false);
     assertEquals(CrawlRule.INCLUDE,
                  rule.match("http://www.example.com/mygif.gif"));
+    assertEquals(CrawlRule.IGNORE,
+                 rule.match("http://www.example.com/mygif.GIF"));
 
-    rule = cau.convertRule(rule2);
+    rule = cau.convertRule(rule1, true);
+    assertEquals(CrawlRule.INCLUDE,
+                 rule.match("http://www.example.com/mygif.gif"));
+    assertEquals(CrawlRule.INCLUDE,
+                 rule.match("http://www.example.com/mygif.GIF"));
+
+    rule = cau.convertRule(rule2, false);
     assertEquals(CrawlRule.INCLUDE,
                  rule.match("http://www.example.com/"));
 
@@ -210,12 +218,23 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     defMap.putCollection(DefinablePlugin.KEY_PLUGIN_CONFIG_PROPS, configProps);
 
     String rule = "1,\"http://www.example.com/%sissue.html\", " + key;
-    CrawlRule crule = cau.convertRule(rule);
+    CrawlRule crule = cau.convertRule(rule, false);
     assertEquals(CrawlRule.INCLUDE,
                  crule.match("http://www.example.com/abxissue.html"));
     assertEquals(CrawlRule.IGNORE,
+                 crule.match("http://www.example.com/Abxissue.html"));
+    assertEquals(CrawlRule.IGNORE,
+                 crule.match("http://www.example.com/zylophoneissue.html"));
+
+    crule = cau.convertRule(rule, true);
+    assertEquals(CrawlRule.INCLUDE,
+                 crule.match("http://www.example.com/abxissue.html"));
+    assertEquals(CrawlRule.INCLUDE,
+                 crule.match("http://www.example.com/Abxissue.html"));
+    assertEquals(CrawlRule.IGNORE,
                  crule.match("http://www.example.com/zylophoneissue.html"));
   }
+
   public void testConvertNumRangeRule() throws LockssRegexpException {
     Vector vec = new Vector(2);
     String key = ConfigParamDescr.NUM_ISSUE_RANGE.getKey();
@@ -227,9 +246,19 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     defMap.putCollection(DefinablePlugin.KEY_PLUGIN_CONFIG_PROPS, configProps);
 
     String rule = "1,\"http://www.example.com/issue%s.html\", " + key;
-    CrawlRule crule = cau.convertRule(rule);
+    CrawlRule crule = cau.convertRule(rule, false);
     assertEquals(CrawlRule.INCLUDE,
                  crule.match("http://www.example.com/issue13.html"));
+    assertEquals(CrawlRule.IGNORE,
+                 crule.match("http://www.example.com/Issue13.html"));
+    assertEquals(CrawlRule.IGNORE,
+                 crule.match("http://www.example.com/issue44.html"));
+
+    crule = cau.convertRule(rule, true);
+    assertEquals(CrawlRule.INCLUDE,
+                 crule.match("http://www.example.com/issue13.html"));
+    assertEquals(CrawlRule.INCLUDE,
+                 crule.match("http://www.example.com/Issue13.html"));
     assertEquals(CrawlRule.IGNORE,
                  crule.match("http://www.example.com/issue44.html"));
   }
@@ -247,9 +276,23 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     defMap.putCollection(DefinablePlugin.KEY_PLUGIN_CONFIG_PROPS, configProps);
 
     String rule = "1,\"http://www.example.com/%sissue.html\", " + key;
-    CrawlRule crule = cau.convertRule(rule);
+    CrawlRule crule = cau.convertRule(rule, false);
     assertEquals(CrawlRule.INCLUDE,
                  crule.match("http://www.example.com/appleissue.html"));
+    assertEquals(CrawlRule.IGNORE,
+                 crule.match("http://www.example.com/appleIssue.html"));
+    assertEquals(CrawlRule.IGNORE,
+                 crule.match("http://www.example.com/Appleissue.html"));
+    assertEquals(CrawlRule.IGNORE,
+                 crule.match("http://www.example.com/orangeissue.html"));
+
+    crule = cau.convertRule(rule, true);
+    assertEquals(CrawlRule.INCLUDE,
+                 crule.match("http://www.example.com/appleissue.html"));
+    assertEquals(CrawlRule.INCLUDE,
+                 crule.match("http://www.example.com/appleIssue.html"));
+    assertEquals(CrawlRule.INCLUDE,
+                 crule.match("http://www.example.com/Appleissue.html"));
     assertEquals(CrawlRule.IGNORE,
                  crule.match("http://www.example.com/orangeissue.html"));
   }
@@ -271,6 +314,40 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     CrawlRule rules = cau.makeRules();
     assertEquals(CrawlRule.INCLUDE,
                  rules.match("http://www.example.com/mygif.gif"));
+    assertEquals(CrawlRule.INCLUDE,
+                 rules.match("http://www.example.com/"));
+  }
+
+  public void testMakeRulesIgnCase() throws LockssRegexpException {
+    configMap.putString("base_url", "http://www.example.com/");
+    defMap.putCollection(DefinableArchivalUnit.KEY_AU_CRAWL_RULES, crawlRules);
+    defMap.putBoolean(DefinableArchivalUnit.KEY_AU_CRAWL_RULES_IGNORE_CASE,
+		      true);
+
+    CrawlRule rules = cau.makeRules();
+    assertEquals(CrawlRule.INCLUDE,
+                 rules.match("http://www.example.com/mygif.gif"));
+    assertEquals(CrawlRule.INCLUDE,
+                 rules.match("http://www.example.com/mygif.GIF"));
+    assertEquals(CrawlRule.INCLUDE,
+                 rules.match("http://www.EXAMPLE.com/mygif.GIF"));
+    assertEquals(CrawlRule.INCLUDE,
+                 rules.match("http://www.example.com/"));
+  }
+
+  public void testMakeRulesDontIgnCase() throws LockssRegexpException {
+    configMap.putString("base_url", "http://www.example.com/");
+    defMap.putCollection(DefinableArchivalUnit.KEY_AU_CRAWL_RULES, crawlRules);
+    defMap.putBoolean(DefinableArchivalUnit.KEY_AU_CRAWL_RULES_IGNORE_CASE,
+		      false);
+
+    CrawlRule rules = cau.makeRules();
+    assertEquals(CrawlRule.INCLUDE,
+                 rules.match("http://www.example.com/mygif.gif"));
+    assertEquals(CrawlRule.INCLUDE,
+                 rules.match("http://www.example.com/mygif.GIF"));
+    assertEquals(CrawlRule.IGNORE,
+                 rules.match("http://www.EXAMPLE.com/mygif.GIF"));
     assertEquals(CrawlRule.INCLUDE,
                  rules.match("http://www.example.com/"));
   }
