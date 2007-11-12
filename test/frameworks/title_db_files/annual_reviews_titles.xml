@@ -34,30 +34,7 @@
 <lockss-config>
   <property name="org.lockss.title">
 
-      <property name="AnnualReviewsAnnualReviewofAnalyticalChemistry0"> 
-        <property name="title" value="Annual Review of Analytical Chemistry Volume 0" />
-        <property name="journalTitle" value="Annual Review of Analytical Chemistry" />
-        <property name="plugin" value="uk.org.lockss.plugin.annualreviews.AnnualReviewsPlugin" />
-        <property name="param.1">
-          <property name="key" value="base_url" />
-          <property name="value" value="http://arjournals.annualreviews.org/" />
-        </property>
-        <property name="param.2">
-          <property name="key" value="journal_id" />
-          <property name="value" value="anchem" />
-        </property>
-        <property name="param.3">
-          <property name="key" value="short_journal_id" />
-          <property name="value" value="" />
-        </property>
-        <property name="param.4">
-          <property name="key" value="volume" />
-          <property name="value" value="0" />
-        </property>
-        <property name="attributes.publisher" value="Annual Reviews" />
-      </property>
-
-       <property name="AnnualReviewsAnnualReviewofAnthropology1"> 
+      <property name="AnnualReviewsAnnualReviewofAnthropology1"> 
         <property name="title" value="Annual Review of Anthropology Volume 1" />
         <property name="journalTitle" value="Annual Review of Anthropology" />
         <property name="plugin" value="uk.org.lockss.plugin.annualreviews.AnnualReviewsPlugin" />
@@ -3829,29 +3806,6 @@
         <property name="attributes.publisher" value="Annual Reviews" />
       </property>
 
-       <property name="AnnualReviewsAnnualReviewofBiophysics0"> 
-        <property name="title" value="Annual Review of Biophysics Volume 0" />
-        <property name="journalTitle" value="Annual Review of Biophysics" />
-        <property name="plugin" value="uk.org.lockss.plugin.annualreviews.AnnualReviewsPlugin" />
-        <property name="param.1">
-          <property name="key" value="base_url" />
-          <property name="value" value="http://arjournals.annualreviews.org/" />
-        </property>
-        <property name="param.2">
-          <property name="key" value="journal_id" />
-          <property name="value" value="biophys" />
-        </property>
-        <property name="param.3">
-          <property name="key" value="short_journal_id" />
-          <property name="value" value="" />
-        </property>
-        <property name="param.4">
-          <property name="key" value="volume" />
-          <property name="value" value="0" />
-        </property>
-        <property name="attributes.publisher" value="Annual Reviews" />
-      </property>
-
        <property name="AnnualReviewsAnnualReviewofBiophysicsandBioengineering1"> 
         <property name="title" value="Annual Review of Biophysics and Bioengineering Volume 1" />
         <property name="journalTitle" value="Annual Review of Biophysics and Bioengineering" />
@@ -5200,7 +5154,7 @@
         </property>
         <property name="param.3">
           <property name="key" value="short_journal_id" />
-          <property name="value" value="" />
+          <property name="value" value="none" />
         </property>
         <property name="param.4">
           <property name="key" value="volume" />
@@ -5223,7 +5177,7 @@
         </property>
         <property name="param.3">
           <property name="key" value="short_journal_id" />
-          <property name="value" value="" />
+          <property name="value" value="none" />
         </property>
         <property name="param.4">
           <property name="key" value="volume" />
@@ -5246,7 +5200,7 @@
         </property>
         <property name="param.3">
           <property name="key" value="short_journal_id" />
-          <property name="value" value="" />
+          <property name="value" value="none" />
         </property>
         <property name="param.4">
           <property name="key" value="volume" />
@@ -10651,7 +10605,7 @@
         </property>
         <property name="param.3">
           <property name="key" value="short_journal_id" />
-          <property name="value" value="" />
+          <property name="value" value="none" />
         </property>
         <property name="param.4">
           <property name="key" value="volume" />
@@ -10674,7 +10628,7 @@
         </property>
         <property name="param.3">
           <property name="key" value="short_journal_id" />
-          <property name="value" value="" />
+          <property name="value" value="none" />
         </property>
         <property name="param.4">
           <property name="key" value="volume" />
@@ -10697,7 +10651,7 @@
         </property>
         <property name="param.3">
           <property name="key" value="short_journal_id" />
-          <property name="value" value="" />
+          <property name="value" value="none" />
         </property>
         <property name="param.4">
           <property name="key" value="volume" />
@@ -10720,7 +10674,7 @@
         </property>
         <property name="param.3">
           <property name="key" value="short_journal_id" />
-          <property name="value" value="" />
+          <property name="value" value="none" />
         </property>
         <property name="param.4">
           <property name="key" value="volume" />
@@ -10743,7 +10697,7 @@
         </property>
         <property name="param.3">
           <property name="key" value="short_journal_id" />
-          <property name="value" value="" />
+          <property name="value" value="none" />
         </property>
         <property name="param.4">
           <property name="key" value="volume" />
@@ -10766,7 +10720,7 @@
         </property>
         <property name="param.3">
           <property name="key" value="short_journal_id" />
-          <property name="value" value="" />
+          <property name="value" value="none" />
         </property>
         <property name="param.4">
           <property name="key" value="volume" />
@@ -10789,7 +10743,7 @@
         </property>
         <property name="param.3">
           <property name="key" value="short_journal_id" />
-          <property name="value" value="" />
+          <property name="value" value="none" />
         </property>
         <property name="param.4">
           <property name="key" value="volume" />
@@ -11387,7 +11341,7 @@
         </property>
         <property name="param.3">
           <property name="key" value="short_journal_id" />
-          <property name="value" value="" />
+          <property name="value" value="none" />
         </property>
         <property name="param.4">
           <property name="key" value="volume" />
@@ -11410,7 +11364,7 @@
         </property>
         <property name="param.3">
           <property name="key" value="short_journal_id" />
-          <property name="value" value="" />
+          <property name="value" value="none" />
         </property>
         <property name="param.4">
           <property name="key" value="volume" />
@@ -23945,7 +23899,7 @@
         </property>
         <property name="param.3">
           <property name="key" value="short_journal_id" />
-          <property name="value" value="" />
+          <property name="value" value="none" />
         </property>
         <property name="param.4">
           <property name="key" value="volume" />
@@ -23968,7 +23922,7 @@
         </property>
         <property name="param.3">
           <property name="key" value="short_journal_id" />
-          <property name="value" value="" />
+          <property name="value" value="none" />
         </property>
         <property name="param.4">
           <property name="key" value="volume" />
@@ -23991,7 +23945,7 @@
         </property>
         <property name="param.3">
           <property name="key" value="short_journal_id" />
-          <property name="value" value="" />
+          <property name="value" value="none" />
         </property>
         <property name="param.4">
           <property name="key" value="volume" />
@@ -24014,7 +23968,7 @@
         </property>
         <property name="param.3">
           <property name="key" value="short_journal_id" />
-          <property name="value" value="" />
+          <property name="value" value="none" />
         </property>
         <property name="param.4">
           <property name="key" value="volume" />
@@ -24037,7 +23991,7 @@
         </property>
         <property name="param.3">
           <property name="key" value="short_journal_id" />
-          <property name="value" value="" />
+          <property name="value" value="none" />
         </property>
         <property name="param.4">
           <property name="key" value="volume" />
@@ -24060,7 +24014,7 @@
         </property>
         <property name="param.3">
           <property name="key" value="short_journal_id" />
-          <property name="value" value="" />
+          <property name="value" value="none" />
         </property>
         <property name="param.4">
           <property name="key" value="volume" />
@@ -24083,7 +24037,7 @@
         </property>
         <property name="param.3">
           <property name="key" value="short_journal_id" />
-          <property name="value" value="" />
+          <property name="value" value="none" />
         </property>
         <property name="param.4">
           <property name="key" value="volume" />
@@ -24106,7 +24060,7 @@
         </property>
         <property name="param.3">
           <property name="key" value="short_journal_id" />
-          <property name="value" value="" />
+          <property name="value" value="none" />
         </property>
         <property name="param.4">
           <property name="key" value="volume" />
@@ -24129,7 +24083,7 @@
         </property>
         <property name="param.3">
           <property name="key" value="short_journal_id" />
-          <property name="value" value="" />
+          <property name="value" value="none" />
         </property>
         <property name="param.4">
           <property name="key" value="volume" />
@@ -24152,7 +24106,7 @@
         </property>
         <property name="param.3">
           <property name="key" value="short_journal_id" />
-          <property name="value" value="" />
+          <property name="value" value="none" />
         </property>
         <property name="param.4">
           <property name="key" value="volume" />
