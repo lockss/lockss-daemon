@@ -1,5 +1,5 @@
 /*
- * $Id: Exploder.java,v 1.5 2007-10-16 23:47:25 dshr Exp $
+ * $Id: Exploder.java,v 1.6 2007-11-13 22:33:28 tlipkis Exp $
  */
 
 /*
@@ -142,7 +142,7 @@ public abstract class Exploder {
     newUc.storeContentIn(newUrl, ae.getInputStream(), newProps);
     crawler.getCrawlerStatus().signalUrlFetched(newUrl);
     String mimeType = (String)newProps.get(CachedUrl.PROPERTY_CONTENT_TYPE);
-    crawler.getCrawlerStatus().signalMimeTypeOfUrl(newUrl, mimeType);
+    crawler.getCrawlerStatus().signalMimeTypeOfUrl(mimeType, newUrl);
     // XXX other stats to update?
   }
 
