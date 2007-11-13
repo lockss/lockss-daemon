@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.64 2007-11-06 07:10:50 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.64.2.1 2007-11-13 22:34:04 tlipkis Exp $
  */
 
 /*
@@ -1365,20 +1365,24 @@ public class RemoteApi
 	this.name = s;
       }
       void setName(String s, Plugin plugin) {
-	if (plugin == null) {
-	  this.name = s;
-	  return;
+	if (s != null) {
+	  if (plugin == null) {
+	    this.name = s;
+	  } else {
+	    String plat = plugin.getPublishingPlatform();
+	    this.name = (plat != null) ? (s + " (" + plat + ")") : s;
+	  }
 	}
-	String plat = plugin.getPublishingPlatform();
-	this.name = (plat != null) ? (s + " (" + plat + ")") : s;
       }
       void setName(String s, PluginProxy pluginp) {
-	if (pluginp == null) {
-	  this.name = s;
-	  return;
+	if (s != null) {
+	  if (pluginp == null) {
+	    this.name = s;
+	  } else {
+	    String plat = pluginp.getPublishingPlatform();
+	    this.name = (plat != null) ? (s + " (" + plat + ")") : s;
+	  }
 	}
-	String plat = pluginp.getPublishingPlatform();
-	this.name = (plat != null) ? (s + " (" + plat + ")") : s;
       }
       void setAuid(String auid) {
 	this.auid = auid;
