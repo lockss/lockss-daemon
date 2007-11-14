@@ -2199,6 +2199,40 @@
                value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
       </property>
  
+      <property name="HighWireGraft4">
+	<property name="title" value="Graft Volume 4" />
+	<property name="journalTitle" value="Graft" />
+	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://gft.sagepub.com/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="4" />
+	</property>
+	<property name="attributes.publisher" value="sage" />
+     <property name="attributes.hint_application/pdf_filter_factory"
+               value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
+      </property>
+ 
+      <property name="HighWireGraft5">
+	<property name="title" value="Graft Volume 5" />
+	<property name="journalTitle" value="Graft" />
+	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://gft.sagepub.com/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="5" />
+	</property>
+	<property name="attributes.publisher" value="sage" />
+     <property name="attributes.hint_application/pdf_filter_factory"
+               value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
+      </property>
+ 
       <property name="HighWireGraft6">
 	<property name="title" value="Graft Volume 6" />
 	<property name="journalTitle" value="Graft" />
