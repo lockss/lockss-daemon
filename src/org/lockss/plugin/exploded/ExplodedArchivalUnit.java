@@ -1,5 +1,5 @@
 /*
- * $Id: ExplodedArchivalUnit.java,v 1.3 2007-10-16 23:47:25 dshr Exp $
+ * $Id: ExplodedArchivalUnit.java,v 1.3.2.1 2007-11-15 23:17:06 tlipkis Exp $
  */
 
 /*
@@ -62,7 +62,7 @@ public class ExplodedArchivalUnit extends BaseArchivalUnit {
     if (pubName != null) {
       auName = pubName;
       // We have some config info to work with
-      String journalId = config.get(ConfigParamDescr.JOURNAL_ID.getKey());
+      String journalId = config.get(ConfigParamDescr.JOURNAL_ISSN.getKey());
       if (journalId == null) {
 	journalId = config.get(ConfigParamDescr.JOURNAL_ABBR.getKey());
 	if (journalId == null) {
