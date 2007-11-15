@@ -329,6 +329,12 @@
         <property name="xpath" value="[attributes/publisher='Genetics Society of America']" />
       </property>
 
+      <property name="Hindawi Publishing Corporation">
+        <property name="name" value="All Hindawi Publishing Corporation Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='Hindawi Publishing Corporation']" />
+      </property>
+
       <property name="Histochemical Society">
         <property name="name" value="All Histochemical Society Titles" />
         <property name="class" value="xpath" />
