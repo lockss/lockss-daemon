@@ -5,7 +5,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>7</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -95,5 +95,9 @@
   <entry>
     <string>au_url_normalizer</string>
     <string>uk.org.lockss.plugin.annualreviews.AnnualReviewsUrlNormalizer</string>
+  </entry>
+  <entry>
+    <string>plugin_au_config_user_msg</string>
+    <string>&quot;This volume is currently only available to LOCKSS participants in the UK. The LOCKSS Team is working with Annual Reviews to register the IP addresses of UK LOCKSS boxes as crawlers.&quot;</string>
   </entry>
 </map>
