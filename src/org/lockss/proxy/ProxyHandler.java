@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.59 2007-11-08 10:07:10 tlipkis Exp $
+ * $Id: ProxyHandler.java,v 1.60 2007-11-20 23:18:45 dshr Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.59 2007-11-08 10:07:10 tlipkis Exp $
+// $Id: ProxyHandler.java,v 1.60 2007-11-20 23:18:45 dshr Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -307,6 +307,14 @@ public class ProxyHandler extends AbstractHttpHandler {
     String urlString = uri.toString();
     if (MANIFEST_INDEX_URL_PATH.equals(urlString)) {
       sendIndexPage(request, response);
+      return;
+    }
+    // Does the URL point to a resolver rather than a
+    // server?
+    String resolvedUrl = Metadata.proxyResolver(urlString);
+    if (resolvedUrl != null) {
+      // Yes - send a redirect
+      sendRedirect(request, response, resolvedUrl);
       return;
     }
     CachedUrl cu = pluginMgr.findCachedUrl(urlString);
@@ -1121,6 +1129,17 @@ public class ProxyHandler extends AbstractHttpHandler {
     } catch (RuntimeException e) {
       log.error("sendIndexPage", e);
       throw e;
+    }
+  }
+
+  void sendRedirect(HttpRequest request,
+		    HttpResponse response,
+		    String toUrl) throws IOException {
+    try {
+      log.debug("Redirecting to " + toUrl);
+      response.sendRedirect(toUrl);
+    } catch (RuntimeException e) {
+      log.error("sendRedirect ", e);
     }
   }
 

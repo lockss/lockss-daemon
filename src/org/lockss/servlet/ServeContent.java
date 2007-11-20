@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.2 2007-11-06 03:35:23 dshr Exp $
+ * $Id: ServeContent.java,v 1.3 2007-11-20 23:18:46 dshr Exp $
  */
 
 /*
@@ -59,7 +59,10 @@ public class ServeContent extends LockssServlet {
   private String verbose;
   private String url;
   private String doi;
-  private String openUrl;
+  private String issn;
+  private String volume;
+  private String issue;
+  private String spage;
   private String ctype;
   private CachedUrl cu;
   private long clen;
@@ -101,14 +104,23 @@ public class ServeContent extends LockssServlet {
     "            if(prop.indexOf(urlTarget) == 0) {\n" +
     "              //alert(\"Journal(\" + prop + \"): \" + sProp);\n" +
     "              prop = urlPrefix + encodeURIComponent(prop);\n" +
+    "            } else if (prop.indexOf(urlPrefix+urlTarget) == 0) {\n" +
+    "              //alert(\"Munged(\" + prop + \"): \" + sProp);\n" +
+    "              //prop = urlPrefix + urlTarget + encodeURIComponent(prop.substring(urlPrefix.length+urlTarget.length+1));\n" +
+    "            } else if (prop.indexOf(urlPrefix) == 0) {\n" +
+    "              //alert(\"Local(\" + prop + \"): \" + sProp);\n" +
+    "              //prop = encodeURIComponent(prop);\n" +
     "            } else if (prop.indexOf(urlLocalPrefix) == 0) {\n" +
     "              //alert(\"Local(\" + prop + \"): \" + sProp);\n" +
     "              prop = urlPrefix + urlTarget + encodeURIComponent(prop.substring(urlLocalPrefix.length+1));\n" +
     "            } else if (prop.indexOf(\"/\") == 0) {\n" +
     "              //alert(\"Relative(\" + prop + \"): \" + sProp);\n" +
     "              prop = urlPrefix + urlTarget + encodeURIComponent(prop.substring(1));\n" +
-    "            } else if (prop.indexOf(\"http\") != 0) {\n" +
+    "            } else if (prop.indexOf(\"#\") == 0) {\n" +
     "              //alert(\"Relative2(\" + prop + \"): \" + sProp);\n" +
+    "              prop = urlPrefix + encodeURIComponent(urlSuffix + prop);\n" +
+    "            } else if (prop.indexOf(\"http\") != 0) {\n" +
+    "              //alert(\"Relative3(\" + prop + \"): \" + sProp);\n" +
     "              prop = urlPrefix + urlTarget + encodeURIComponent(prop);\n" +
     "            }\n" +
     "            //alert(\"xLatedUrl(\" + prop + \"): \" + sProp);\n" +
@@ -228,7 +240,10 @@ public class ServeContent extends LockssServlet {
     ctype = null;
     url = null;
     doi = null;
-    openUrl = null;
+    issn = null;
+    volume = null;
+    issue = null;
+    spage = null;
     super.resetLocals();
   }
 
@@ -263,8 +278,15 @@ public class ServeContent extends LockssServlet {
       handleDoiRequest();
       return;
     }
-    openUrl = getParameter("openurl");
-    if (!StringUtil.isNullString(openUrl)) {
+    issn = getParameter("issn");
+    volume = getParameter("volume");
+    issue = getParameter("issue");
+    spage = getParameter("spage");
+    log.debug("issn " + issn + " volume " + volume + " issue " + issue + " spage " + spage);
+    if (!StringUtil.isNullString(issn) &&
+	!StringUtil.isNullString(volume) &&
+	!StringUtil.isNullString(issue) &&
+	!StringUtil.isNullString(spage)) {
       handleOpenUrlRequest();
       return;
     }
@@ -309,6 +331,7 @@ public class ServeContent extends LockssServlet {
   }
 
   protected void handleOpenUrlRequest() throws IOException {
+    String openUrl = issn + "/" + volume + "/" + issue + "/" + spage;
     log.debug("OpenUrl " + openUrl);
     // find the URL for the OpenURL
     url = Metadata.openUrlToUrl(openUrl);

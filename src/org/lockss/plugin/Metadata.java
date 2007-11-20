@@ -1,5 +1,5 @@
 /*
- * $Id: Metadata.java,v 1.1 2007-11-06 03:35:22 dshr Exp $
+ * $Id: Metadata.java,v 1.2 2007-11-20 23:18:45 dshr Exp $
  */
 
 /*
@@ -137,5 +137,87 @@ public class Metadata {
       openUrlMap.setProperty(openUrl, url);
     }
   }
+
+  private static String[] doiResolvers = {
+    "http://dx.doi.org/",
+  };
+  private static String[] openUrlResolvers = {
+    "http://www.crossref.org/openurl?",
+  };
+  // If the URL specifies a publisher's DOI or OpenURL resolver,
+  // strip the stuff before the ?, reformat the rest and hand it
+  // to the Metadata resolver to get the URL for the content in
+  // the cache.
+  public static String proxyResolver(String url) {
+    String ret = null;
+    if (StringUtil.isNullString(url)) {
+      return ret;
+    }
+    log.debug("proxyResolver(" + url + ")");
+    boolean found = false;
+    // Is it a DOI resolver URL?
+    // XXX should use host part to find plugin, then ask plugin if
+    // XXX URL specifies resolver, and if so get it to reformat
+    // XXX resolver query and feed to Metadata.
+    for (int i = 0; i < doiResolvers.length; i++) {
+      if (url.startsWith(doiResolvers[i])) {
+	String param = url.substring(doiResolvers[i].length());
+	log.debug("doiResolver: " + url + " doi " + param);
+	String newUrl =
+	  Metadata.doiToUrl(param);
+	if (newUrl != null) {
+	  ret = newUrl;
+	  found = true;
+	}
+      }
+    }
+    if (!found) {
+      for (int i = 0; i < openUrlResolvers.length; i++) {
+	if (url.startsWith(openUrlResolvers[i])) {
+	  // issn/volume/issue/spage
+	  String query = url.substring(openUrlResolvers[i].length());
+	  log.debug("openUrlResolver: " + url + " openUrl " + query);
+	  if (!StringUtil.isNullString(query)) {
+	    String[] params = query.split("&");
+	    String issn = null;
+	    String volume = null;
+	    String issue = null;
+	    String spage = null;
+	    for (int j = 0; j < params.length; j++) {
+	      if (params[j].startsWith("issn=")) {
+		issn = params[j].substring(5);
+	      }
+	      if (params[j].startsWith("volume=")) {
+		volume = params[j].substring(7);
+	      }
+	      if (params[j].startsWith("issue=")) {
+		issue = params[j].substring(6);
+	      }
+	      if (params[j].startsWith("spage=")) {
+		spage = params[j].substring(6);
+	      }
+	    }
+	    if (issn != null &&
+		volume != null &&
+		issue != null &&
+		spage != null) {
+	      String openUrl = issn + "/" + volume + "/" +
+		issue + "/" + spage;
+	      log.debug("openUrl: " + openUrl);
+	      String newUrl =
+		Metadata.openUrlToUrl(openUrl);
+	      if (newUrl != null) {
+		ret = newUrl;
+		found = true;
+	      }
+	    }
+	  }
+	}
+      }
+    }
+    log.debug("proxyResolver returns " + ret);
+    return ret;
+  }
+  
 
 }
