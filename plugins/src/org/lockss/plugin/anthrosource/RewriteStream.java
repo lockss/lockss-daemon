@@ -1,5 +1,5 @@
 /*
- * $Id: AnthroSourcePdfFilterFactory.java,v 1.4 2007-11-21 02:04:18 thib_gc Exp $
+ * $Id: RewriteStream.java,v 1.1 2007-11-21 02:04:18 thib_gc Exp $
  */
 
 /*
@@ -32,30 +32,24 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.anthrosource;
 
-import java.io.*;
+import java.io.IOException;
+import java.util.*;
 
-import org.lockss.daemon.PluginException;
 import org.lockss.filter.pdf.*;
-import org.lockss.plugin.*;
-import org.lockss.util.*;
+import org.lockss.plugin.ArchivalUnit;
+import org.pdfbox.util.operator.OperatorProcessor;
 
-public class AnthroSourcePdfFilterFactory implements FilterFactory {
+public class RewriteStream extends PageStreamTransform {
 
-  public InputStream createFilteredInputStream(ArchivalUnit au,
-                                               InputStream in,
-                                               String encoding)
-      throws PluginException {
-    try {
-      logger.debug2("PDF filter factory for: " + au.getName());
-      OutputDocumentTransform documentTransform = new AnthroSourcePdfTransform(au);
-      return PdfUtil.applyFromInputStream(documentTransform, in);
-    }
-    catch (Exception exc) {
-      logger.error("Exception in PDF transform; unfiltered", exc);
-      return in;
-    }
+  public RewriteStream(final ArchivalUnit au) throws IOException {
+    super(new OperatorProcessorFactory() {
+            public OperatorProcessor newInstanceForName(String className) throws LinkageError, ExceptionInInitializerError, ClassNotFoundException, IllegalAccessException, InstantiationException, SecurityException {
+              return (OperatorProcessor)au.getPlugin().newAuxClass(className,
+                                                                   OperatorProcessor.class);
+            }
+          },
+          PageStreamTransform.rewriteProperties(new Properties(),
+                                                AlwaysChanged.class.getName()));
   }
-
-  private static Logger logger = Logger.getLogger("AnthroSourcePdfFilterFactory");
 
 }

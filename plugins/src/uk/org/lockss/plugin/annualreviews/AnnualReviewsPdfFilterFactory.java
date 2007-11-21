@@ -1,5 +1,5 @@
 /*
- * $Id: AnnualReviewsPdfFilterFactory.java,v 1.2 2007-11-19 21:05:08 thib_gc Exp $
+ * $Id: AnnualReviewsPdfFilterFactory.java,v 1.3 2007-11-21 02:04:18 thib_gc Exp $
  */
 
 /*
@@ -33,215 +33,32 @@ in this Software without prior written authorization from Stanford University.
 package uk.org.lockss.plugin.annualreviews;
 
 import java.io.*;
-import java.util.List;
 
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.pdf.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
-import org.pdfbox.cos.*;
 
-public class AnnualReviewsPdfFilterFactory
-    extends SimpleOutputDocumentTransform
-    implements FilterFactory {
-
-  public static class NormalizeMetadata implements DocumentTransform {
-
-    public boolean transform(PdfDocument pdfDocument) throws IOException {
-      pdfDocument.removeCreationDate();
-      pdfDocument.removeModificationDate();
-      return true;
-    }
-
-  }
-
-  public static class NormalizeXObjects extends AggregatePageTransform {
-
-    public static class NormalizeDownloadedFrom extends PageStreamTransform {
-
-      public static class ProcessEndTextObject extends ConditionalMergeOperatorProcessor {
-
-        @Override
-        public List getReplacement(List tokens) {
-          // Replace by an empty text object
-          return ListUtil.list(// Known to be "BT"
-                               tokens.get(0),
-                               // Known to be "ET"
-                               tokens.get(tokens.size() - 1));
-        }
-
-        @Override
-        public boolean identify(List tokens) {
-          boolean ret = false;
-          int progress = 0;
-          // Iterate from the end
-          iteration: for (int tok = tokens.size() - 1 ; tok >= 0 ; --tok) {
-            switch (progress) {
-              case 0:
-                // End of subsequence
-                if (tok != tokens.size() - 1) { break iteration; }
-                // ET
-                if (PdfUtil.isEndTextObject(tokens, tok)) { ++progress; }
-                break;
-              case 1:
-                // Not BT
-                if (PdfUtil.isBeginTextObject(tokens,tok)) { break iteration; }
-                // Tj and its argument ends with the string "Downloaded from " followed by a domain string
-                if (PdfUtil.matchShowTextMatches(tokens, tok, ".*Downloaded from (?:http://)?[-0-9A-Za-z]+(?:\\.[-0-9A-Za-z]+)+")) { ++progress; }
-                break;
-              case 2:
-                // Not BT
-                if (PdfUtil.isBeginTextObject(tokens,tok)) { break iteration; }
-                // Tm
-                if (PdfUtil.matchSetTextMatrix(tokens, tok)) { ++progress; }
-                break;
-              case 3:
-                // BT; beginning of subsequence
-                if (PdfUtil.isBeginTextObject(tokens,tok)) { ret = (tok == 0); break iteration; }
-                break;
-            }
-          }
-          if (logger.isDebug3()) {
-            logger.debug3("NormalizeDownloadedFrom.ProcessEndTextObject candidate match: " + ret);
-          }
-          return ret;
-        }
-
-      }
-
-      public NormalizeDownloadedFrom() throws IOException {
-        super(PdfUtil.INVOKE_NAMED_XOBJECT, FormXObjectOperatorProcessor.class,
-              PdfUtil.BEGIN_TEXT_OBJECT, SplitOperatorProcessor.class,
-              PdfUtil.END_TEXT_OBJECT, ProcessEndTextObject.class);
-      }
-
-    }
-
-    public static class NormalizePersonalUse extends PageStreamTransform {
-
-      public static class ProcessEndTextObject extends ConditionalMergeOperatorProcessor {
-
-        @Override
-        public List getReplacement(List tokens) {
-          // Replace by an empty text object
-          return ListUtil.list(// Known to be "BT"
-                               tokens.get(0),
-                               // Known to be "ET"
-                               tokens.get(tokens.size() - 1));
-        }
-
-        @Override
-        public boolean identify(List tokens) {
-          boolean ret = false;
-          int progress = 0;
-          // Iterate from the end
-          iteration: for (int tok = tokens.size() - 1 ; tok >= 0 ; --tok) {
-            switch (progress) {
-              case 0:
-                // End of subsequence
-                if (tok != tokens.size() - 1) { break iteration; }
-                // ET
-                if (PdfUtil.isEndTextObject(tokens, tok)) { ++progress; }
-                break;
-              case 1:
-                // Not BT
-                if (PdfUtil.isBeginTextObject(tokens,tok)) { break iteration; }
-                // Tj and its argument begins with the string "by", contains a date, and ends with the string "For personal use only."
-                if (PdfUtil.matchShowTextMatches(tokens, tok, "by .* on [0-9]{2}/[0-9]{2}/[0-9]{2}. For personal use only.")) { ++progress; }
-                break;
-              case 2:
-                // Not BT
-                if (PdfUtil.isBeginTextObject(tokens,tok)) { break iteration; }
-                // Tm
-                if (PdfUtil.matchSetTextMatrix(tokens, tok)) { ++progress; }
-                break;
-              case 3:
-                // BT; beginning of subsequence
-                if (PdfUtil.isBeginTextObject(tokens,tok)) { ret = (tok == 0); break iteration; }
-                break;
-            }
-          }
-          if (logger.isDebug3()) {
-            logger.debug3("NormalizePersonalUse.ProcessEndTextObject candidate match: " + ret);
-          }
-          return ret;
-        }
-
-      }
-
-      public NormalizePersonalUse() throws IOException {
-        super(PdfUtil.INVOKE_NAMED_XOBJECT, FormXObjectOperatorProcessor.class,
-              PdfUtil.BEGIN_TEXT_OBJECT, SplitOperatorProcessor.class,
-              PdfUtil.END_TEXT_OBJECT, ProcessEndTextObject.class);
-      }
-
-    }
-
-    public NormalizeXObjects() throws IOException {
-      super(new NormalizeDownloadedFrom(),
-            new NormalizePersonalUse());
-    }
-
-  }
-
-  public static class NormalizeTrailerId implements DocumentTransform {
-
-    public boolean transform(PdfDocument pdfDocument) throws IOException {
-      COSDictionary trailer = pdfDocument.getTrailer();
-      if (trailer != null) {
-        // Put bogus ID to prevent autogenerated (variable) ID
-        COSArray id = new COSArray();
-        id.add(new COSString("12345678901234567890123456789012"));
-        id.add(id.get(0));
-        trailer.setItem(COSName.getPDFName("ID"), id);
-        return true; // success
-      }
-      return false; // all other cases are unexpected
-    }
-
-  }
-
-  public AnnualReviewsPdfFilterFactory() throws IOException {
-    super(new ConditionalDocumentTransform(new TransformFirstPage(new NormalizeXObjects()),
-                                           new TransformEachPageExceptFirst(new NormalizeXObjects()),
-                                           new NormalizeMetadata(),
-                                           new NormalizeTrailerId()));
-  }
+public class AnnualReviewsPdfFilterFactory implements FilterFactory {
 
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
                                                String encoding)
       throws PluginException {
-    logger.debug2("PDF filter factory for: " + au.getName());
-    OutputDocumentTransform documentTransform = null;
     try {
-      documentTransform =
-        (OutputDocumentTransform)au.getPlugin().newAuxClass(getClass().getName(),
-                                                            OutputDocumentTransform.class);
-      logger.debug2("Successfully loaded and instantiated " + documentTransform.getClass().getName());
-    }
-    catch (PluginException.InvalidDefinition id) {
-      logger.error("Can't load PDF transform; unfiltered", id);
-      return in;
-    }
-    catch (RuntimeException rte) {
-      logger.error("Can't load PDF transform; unfiltered", rte);
-      return in;
-    }
-
-    if (documentTransform == null) {
-      logger.debug2("Unfiltered");
-      return in;
-    }
-    else {
-      logger.debug2("Filtered with " + documentTransform.getClass().getName());
+      logger.debug2("PDF filter factory for: " + au.getName());
+      OutputDocumentTransform documentTransform = new AnnualReviewsPdfTransform(au);
       return PdfUtil.applyFromInputStream(documentTransform, in);
+    }
+    catch (Exception exc) {
+      logger.error("Exception in PDF transform; unfiltered", exc);
+      return in;
     }
   }
 
   /**
    * <p>A logger for use by this class.</p>
    */
-  private static Logger logger = Logger.getLogger("AnnualReviewsPdfFilterFactory");
+  static Logger logger = Logger.getLogger("AnnualReviewsPdfFilterFactory");
 
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: AnthroSourcePdfFilterFactory.java,v 1.4 2007-11-21 02:04:18 thib_gc Exp $
+ * $Id: AnnualReviewsPdfTransform.java,v 1.1 2007-11-21 02:04:18 thib_gc Exp $
  */
 
 /*
@@ -30,32 +30,21 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.anthrosource;
+package uk.org.lockss.plugin.annualreviews;
 
-import java.io.*;
+import java.io.IOException;
 
-import org.lockss.daemon.PluginException;
 import org.lockss.filter.pdf.*;
-import org.lockss.plugin.*;
-import org.lockss.util.*;
+import org.lockss.plugin.ArchivalUnit;
 
-public class AnthroSourcePdfFilterFactory implements FilterFactory {
+public class AnnualReviewsPdfTransform extends SimpleOutputDocumentTransform {
 
-  public InputStream createFilteredInputStream(ArchivalUnit au,
-                                               InputStream in,
-                                               String encoding)
-      throws PluginException {
-    try {
-      logger.debug2("PDF filter factory for: " + au.getName());
-      OutputDocumentTransform documentTransform = new AnthroSourcePdfTransform(au);
-      return PdfUtil.applyFromInputStream(documentTransform, in);
-    }
-    catch (Exception exc) {
-      logger.error("Exception in PDF transform; unfiltered", exc);
-      return in;
-    }
+  public AnnualReviewsPdfTransform(ArchivalUnit au) throws IOException {
+    super(new ConditionalDocumentTransform(new TransformFirstPage(new NormalizeXObjects(au)),
+                                           new TransformEachPageExceptFirst(new NormalizeXObjects(au)),
+                                           new NormalizeMetadata(),
+                                           new NormalizeTrailerId()));
+
   }
-
-  private static Logger logger = Logger.getLogger("AnthroSourcePdfFilterFactory");
 
 }
