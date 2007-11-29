@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePdfFilterFactory.java,v 1.17 2007-08-14 23:55:36 thib_gc Exp $
+ * $Id: HighWirePdfFilterFactory.java,v 1.18 2007-11-29 00:00:44 thib_gc Exp $
  */
 
 /*
@@ -36,11 +36,14 @@ import java.io.*;
 import java.util.*;
 
 import org.lockss.filter.pdf.*;
+import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.*;
 import org.pdfbox.cos.*;
 import org.pdfbox.pdmodel.common.PDRectangle;
 import org.pdfbox.pdmodel.interactive.action.type.*;
 import org.pdfbox.pdmodel.interactive.annotation.*;
+import org.pdfbox.util.PDFStreamEngine.OperatorProcessorFactory;
+import org.pdfbox.util.operator.OperatorProcessor;
 
 public class HighWirePdfFilterFactory extends BasicPdfFilterFactory {
 
@@ -163,10 +166,21 @@ public class HighWirePdfFilterFactory extends BasicPdfFilterFactory {
 
   public static class CollapseDownloadedFrom extends AggregatePageTransform {
 
+    /**
+     * @throws IOException
+     * @deprecated Use {@link #CollapseDownloadedFrom(ArchivalUnit)} instead.
+     */
+    @Deprecated
     public CollapseDownloadedFrom() throws IOException {
       super(PdfUtil.OR,
             new CollapseOnePartDownloadedFrom(),
             new CollapseThreePartDownloadedFrom());
+    }
+
+    public CollapseDownloadedFrom(ArchivalUnit au) throws IOException {
+      super(PdfUtil.OR,
+            new CollapseOnePartDownloadedFrom(au),
+            new CollapseThreePartDownloadedFrom(au));
     }
 
   }
@@ -174,8 +188,18 @@ public class HighWirePdfFilterFactory extends BasicPdfFilterFactory {
   public static class CollapseDownloadedFromAndNormalizeHyperlinks
       extends AggregatePageTransform {
 
+    /**
+     * @throws IOException
+     * @deprecated
+     */
+    @Deprecated
     public CollapseDownloadedFromAndNormalizeHyperlinks() throws IOException {
       super(new CollapseDownloadedFrom(),
+            new NormalizeHyperlinks());
+    }
+
+    public CollapseDownloadedFromAndNormalizeHyperlinks(ArchivalUnit au) throws IOException {
+      super(new CollapseDownloadedFrom(au),
             new NormalizeHyperlinks());
     }
 
@@ -196,8 +220,26 @@ public class HighWirePdfFilterFactory extends BasicPdfFilterFactory {
 
     }
 
+    /**
+     * @throws IOException
+     * @deprecated Use {@link #CollapseOnePartDownloadedFrom(ArchivalUnit)} instead.
+     */
+    @Deprecated
     public CollapseOnePartDownloadedFrom() throws IOException {
       super(// "BT" operator: split unconditionally
+            PdfUtil.BEGIN_TEXT_OBJECT, SplitOperatorProcessor.class,
+            // "ET" operator: merge conditionally using CollapseOnePartDownloadedFromOperatorProcessor
+            PdfUtil.END_TEXT_OBJECT, CollapseOnePartDownloadedFromOperatorProcessor.class);
+    }
+
+    public CollapseOnePartDownloadedFrom(final ArchivalUnit au) throws IOException {
+      super(new OperatorProcessorFactory() {
+              public OperatorProcessor newInstanceForName(String className) throws LinkageError, ExceptionInInitializerError, ClassNotFoundException, IllegalAccessException, InstantiationException, SecurityException {
+                return (OperatorProcessor)au.getPlugin().newAuxClass(className,
+                                                                     OperatorProcessor.class);
+              }
+            },
+            // "BT" operator: split unconditionally
             PdfUtil.BEGIN_TEXT_OBJECT, SplitOperatorProcessor.class,
             // "ET" operator: merge conditionally using CollapseOnePartDownloadedFromOperatorProcessor
             PdfUtil.END_TEXT_OBJECT, CollapseOnePartDownloadedFromOperatorProcessor.class);
@@ -232,8 +274,24 @@ public class HighWirePdfFilterFactory extends BasicPdfFilterFactory {
 
     }
 
+    /**
+     * @throws IOException
+     * @deprecated
+     */
+    @Deprecated
     public CollapseThreePartDownloadedFrom() throws IOException {
       super(// "ET" operator: inspect subsequences ending in "ET" using CollapseThreePartDownloadedFromOperatorProcessor
+            PdfUtil.END_TEXT_OBJECT, CollapseThreePartDownloadedFromOperatorProcessor.class);
+    }
+
+    public CollapseThreePartDownloadedFrom(final ArchivalUnit au) throws IOException {
+      super(new OperatorProcessorFactory() {
+              public OperatorProcessor newInstanceForName(String className) throws LinkageError, ExceptionInInitializerError, ClassNotFoundException, IllegalAccessException, InstantiationException, SecurityException {
+                return (OperatorProcessor)au.getPlugin().newAuxClass(className,
+                                                                     OperatorProcessor.class);
+              }
+            },
+            // "ET" operator: inspect subsequences ending in "ET" using CollapseThreePartDownloadedFromOperatorProcessor
             PdfUtil.END_TEXT_OBJECT, CollapseThreePartDownloadedFromOperatorProcessor.class);
     }
 

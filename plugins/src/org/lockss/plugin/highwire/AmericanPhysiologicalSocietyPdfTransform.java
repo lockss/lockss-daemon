@@ -1,5 +1,5 @@
 /*
- * $Id: AmericanPhysiologicalSocietyPdfTransform.java,v 1.27 2007-02-23 23:54:04 thib_gc Exp $
+ * $Id: AmericanPhysiologicalSocietyPdfTransform.java,v 1.28 2007-11-29 00:00:45 thib_gc Exp $
  */
 
 /*
@@ -35,9 +35,12 @@ package org.lockss.plugin.highwire;
 import java.io.*;
 
 import org.lockss.filter.pdf.*;
+import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform.NormalizeCurrentAsOf.ReplaceCurrentAsOf;
 import org.lockss.plugin.highwire.HighWirePdfFilterFactory.*;
 import org.lockss.util.*;
+import org.pdfbox.util.PDFStreamEngine.OperatorProcessorFactory;
+import org.pdfbox.util.operator.OperatorProcessor;
 
 /**
  * <p>A PDF transform for PDF files of the American Physiological
@@ -88,7 +91,9 @@ import org.lockss.util.*;
  * @see NormalizeCurrentAsOf
  * @see Simplified
  */
-public class AmericanPhysiologicalSocietyPdfTransform extends SimpleOutputDocumentTransform {
+public class AmericanPhysiologicalSocietyPdfTransform
+    implements OutputDocumentTransform,
+               ArchivalUnitDependent {
 
   /**
    * <p>A page stream transform that normalizes the variable date
@@ -125,9 +130,22 @@ public class AmericanPhysiologicalSocietyPdfTransform extends SimpleOutputDocume
     /**
      * <p>Builds a new page stream transform.</p>
      * @throws IOException if any processing error occurs.
+     * @deprecated
      */
+    @Deprecated
     public NormalizeCurrentAsOf() throws IOException {
       super(// "Tj" operator: replace string conditionally using ReplaceCurrentAsOf
+            PdfUtil.SHOW_TEXT, ReplaceCurrentAsOf.class);
+    }
+
+    public NormalizeCurrentAsOf(final ArchivalUnit au) throws IOException {
+      super(new OperatorProcessorFactory() {
+              public OperatorProcessor newInstanceForName(String className) throws LinkageError, ExceptionInInitializerError, ClassNotFoundException, IllegalAccessException, InstantiationException, SecurityException {
+                return (OperatorProcessor)au.getPlugin().newAuxClass(className,
+                                                                     OperatorProcessor.class);
+              }
+            },
+            // "Tj" operator: replace string conditionally using ReplaceCurrentAsOf
             PdfUtil.SHOW_TEXT, ReplaceCurrentAsOf.class);
     }
 
@@ -142,38 +160,61 @@ public class AmericanPhysiologicalSocietyPdfTransform extends SimpleOutputDocume
    * @author Thib Guicherd-Callin
    * @see AmericanPhysiologicalSocietyPdfTransform
    */
-  public static class Simplified extends TextScrapingDocumentTransform {
+  public static class Simplified
+      extends TextScrapingDocumentTransform
+      implements ArchivalUnitDependent {
+
+    protected ArchivalUnit au;
+
+    public void setArchivalUnit(ArchivalUnit au) {
+      this.au = au;
+    }
 
     public DocumentTransform makePreliminaryTransform() throws IOException {
+      if (au == null) throw new IOException("Uninitialized AU-dependent transform");
       return new ConditionalDocumentTransform(// If...
                                               new AggregateDocumentTransform(// ...on the first page...
                                                                              new TransformFirstPage(// ...collapsing "Donwloaded from" succeeds...
-                                                                                                    new CollapseDownloadedFrom()),
+                                                                                                    new CollapseDownloadedFrom(au)),
                                                                              // ...and on at least one page...
                                                                              new TransformEachPage(PdfUtil.OR,
                                                                                                    // ...normalizing "This information is current as of" succeeds,
-                                                                                                   new NormalizeCurrentAsOf())),
+                                                                                                   new NormalizeCurrentAsOf(au))),
                                               // ...then on every page except the first...
                                               new TransformEachPageExceptFirst(// ...collapse "Downloaded from"
-                                                                               new CollapseDownloadedFrom()));
+                                                                               new CollapseDownloadedFrom(au)));
     }
 
   }
 
-  public AmericanPhysiologicalSocietyPdfTransform() throws IOException {
-    super(new ConditionalDocumentTransform(// If...
-                                           new AggregateDocumentTransform(// ...on the first page...
-                                                                          new TransformFirstPage(// ...collapsing "Downloaded from" and normalizing its hyperlink succeeds...
-                                                                                                 new CollapseDownloadedFromAndNormalizeHyperlinks()),
-                                                                          // ...and on at least one page...
-                                                                          new TransformEachPage(PdfUtil.OR,
-                                                                                                // ...normalizing "This information is current as of" succeeds,
-                                                                                                new NormalizeCurrentAsOf())),
-                                           // ...then on every page except the first...
-                                           new TransformEachPageExceptFirst(// ...collapse "Downloaded from" and normalize its hyperlink,
-                                                                            new CollapseDownloadedFromAndNormalizeHyperlinks()),
-                                           // ...and normalize the metadata
-                                           new NormalizeMetadata()));
+  protected ArchivalUnit au;
+
+  public void setArchivalUnit(ArchivalUnit au) {
+    this.au = au;
   }
 
+  public boolean transform(PdfDocument pdfDocument,
+                           OutputStream outputStream) {
+    return PdfUtil.applyAndSave(this,
+                                pdfDocument,
+                                outputStream);
+  }
+
+  public boolean transform(PdfDocument pdfDocument) throws IOException {
+    if (au == null) throw new IOException("Uninitialized AU-dependent transform");
+    DocumentTransform documentTransform = new ConditionalDocumentTransform(// If...
+                                                                           new AggregateDocumentTransform(// ...on the first page...
+                                                                                                          new TransformFirstPage(// ...collapsing "Downloaded from" and normalizing its hyperlink succeeds...
+                                                                                                                                 new CollapseDownloadedFromAndNormalizeHyperlinks(au)),
+                                                                                                          // ...and on at least one page...
+                                                                                                          new TransformEachPage(PdfUtil.OR,
+                                                                                                                                // ...normalizing "This information is current as of" succeeds,
+                                                                                                                                new NormalizeCurrentAsOf(au))),
+                                                                           // ...then on every page except the first...
+                                                                           new TransformEachPageExceptFirst(// ...collapse "Downloaded from" and normalize its hyperlink,
+                                                                                                            new CollapseDownloadedFromAndNormalizeHyperlinks(au)),
+                                                                           // ...and normalize the metadata
+                                                                           new NormalizeMetadata());
+    return documentTransform.transform(pdfDocument);
+  }
 }

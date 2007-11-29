@@ -1,5 +1,5 @@
 /*
- * $Id: AmericanMedicalAssociationPdfTransform.java,v 1.4 2007-02-23 23:54:04 thib_gc Exp $
+ * $Id: AmericanMedicalAssociationPdfTransform.java,v 1.5 2007-11-29 00:00:38 thib_gc Exp $
  */
 
 /*
@@ -32,35 +32,62 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.highwire;
 
-import java.io.IOException;
+import java.io.*;
 
 import org.lockss.filter.pdf.*;
+import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.highwire.HighWirePdfFilterFactory.*;
+import org.lockss.util.*;
 
-public class AmericanMedicalAssociationPdfTransform extends SimpleOutputDocumentTransform {
+public class AmericanMedicalAssociationPdfTransform
+    implements OutputDocumentTransform,
+               ArchivalUnitDependent {
 
-  public static class Simplified extends TextScrapingDocumentTransform {
-    
+  public static class Simplified
+      extends TextScrapingDocumentTransform
+      implements ArchivalUnitDependent {
+
+    protected ArchivalUnit au;
+
+    public void setArchivalUnit(ArchivalUnit au) {
+      this.au = au;
+    }
+
     public DocumentTransform makePreliminaryTransform() throws IOException {
+      if (au == null) throw new IOException("Uninitialized AU-dependent transform");
       return new ConditionalDocumentTransform(// If on the first page...
                                               new TransformFirstPage(// ...collapsing "Downloaded from" succeeds,
-                                                                     new CollapseDownloadedFrom()),
+                                                                     new CollapseDownloadedFrom(au)),
                                               // Then on all other pages...
                                               new TransformEachPageExceptFirst(// ...collapse "Downloaded from"
-                                                                               new CollapseDownloadedFrom()));
+                                                                               new CollapseDownloadedFrom(au)));
     }
-    
+
   }
-  
-  public AmericanMedicalAssociationPdfTransform() throws IOException {
-    super(new ConditionalDocumentTransform(// If on the first page...
-                                           new TransformFirstPage(// ...collapsing "Downloaded from" and normalizing the hyperlinks succeeds,
-                                                                  new CollapseDownloadedFromAndNormalizeHyperlinks()),
-                                           // Then on all other pages...
-                                           new TransformEachPageExceptFirst(// ...collapse "Downloaded from" and normalize the hyperlink,
-                                                                            new CollapseDownloadedFromAndNormalizeHyperlinks()),
-                                           // ...and normalize the metadata
-                                           new NormalizeMetadata()));
+
+  protected ArchivalUnit au;
+
+  public void setArchivalUnit(ArchivalUnit au) {
+    this.au = au;
   }
-  
+
+  public boolean transform(PdfDocument pdfDocument,
+                           OutputStream outputStream) {
+    return PdfUtil.applyAndSave(this,
+                                pdfDocument,
+                                outputStream);
+  }
+
+  public boolean transform(PdfDocument pdfDocument) throws IOException {
+    DocumentTransform documentTransform = new ConditionalDocumentTransform(// If on the first page...
+                                                                           new TransformFirstPage(// ...collapsing "Downloaded from" and normalizing the hyperlinks succeeds,
+                                                                                                  new CollapseDownloadedFromAndNormalizeHyperlinks()),
+                                                                           // Then on all other pages...
+                                                                           new TransformEachPageExceptFirst(// ...collapse "Downloaded from" and normalize the hyperlink,
+                                                                                                            new CollapseDownloadedFromAndNormalizeHyperlinks()),
+                                                                           // ...and normalize the metadata
+                                                                           new NormalizeMetadata());
+    return documentTransform.transform(pdfDocument);
+  }
+
 }
