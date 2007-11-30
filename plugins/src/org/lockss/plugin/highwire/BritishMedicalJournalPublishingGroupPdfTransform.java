@@ -1,5 +1,5 @@
 /*
- * $Id: BritishMedicalJournalPublishingGroupPdfTransform.java,v 1.1 2007-06-08 23:57:41 thib_gc Exp $
+ * $Id: BritishMedicalJournalPublishingGroupPdfTransform.java,v 1.2 2007-11-30 00:48:06 thib_gc Exp $
  */
 
 /*
@@ -32,73 +32,85 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.highwire;
 
-import java.io.IOException;
+import java.io.*;
 import java.util.List;
 
 import org.lockss.filter.pdf.*;
+import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.highwire.HighWirePdfFilterFactory.*;
 import org.lockss.util.*;
 
-public class BritishMedicalJournalPublishingGroupPdfTransform extends SimpleOutputDocumentTransform {
+public class BritishMedicalJournalPublishingGroupPdfTransform
+    implements OutputDocumentTransform,
+               ArchivalUnitDependent {
 
   public static class RecognizeSyntheticPage implements PageTransform {
-    
+
     public boolean transform(PdfPage pdfPage) throws IOException {
       // Initially, assume the recognition fails
       boolean ret = false;
-      
+
       // Get the tokens for the entire page
       List tokens = pdfPage.getStreamTokens();
-      
+
       // Iterate through the tokens (forward)
       int progress = 0;
       iteration: for (int tok = 0 ; tok < tokens.size() ; ++tok) {
         // Select the current step in the recognition
         switch (progress) {
-          
+
           case 0:
             // Beginning of sequence
             if (tok != 0) { break iteration; } else { ++progress; }
             break;
-            
+
           case 1:
             // Text: "Updated information and services can be found at: "
             if (PdfUtil.matchShowText(tokens, tok, "Updated information and services can be found at: ")) { ++progress; }
             break;
-            
+
           case 2:
             // Text: "Downloaded from "
             if (PdfUtil.matchShowText(tokens, tok, "Downloaded from ")) { ret = true; break iteration; }
             break;
-  
+
           default:
             // Should never happen
             break iteration;
-            
+
         }
-  
+
       }
-  
+
       // Return true if only if all the steps were visited successfully
       return ret;
     }
-    
+
   }
 
   public static class RemovePage implements PageTransform {
-    
+
     public boolean transform(PdfPage pdfPage) throws IOException {
       // Remove this page from the document
       pdfPage.getPdfDocument().removePage(pdfPage);
       return true;
     }
-    
+
   }
 
-  public static class Simplified extends TextScrapingDocumentTransform {
+  public static class Simplified
+      extends TextScrapingDocumentTransform
+      implements ArchivalUnitDependent {
+
+    protected ArchivalUnit au;
+
+    public void setArchivalUnit(ArchivalUnit au) {
+      this.au = au;
+    }
 
     @Override
     public DocumentTransform makePreliminaryTransform() throws IOException {
+      if (au == null) throw new IOException("Uninitialized AU-dependent transform");
       return new ConditionalDocumentTransform(// If the first page...
                                               new TransformFirstPage(// ...is recognized as a synthetic page,
                                                                      new RecognizeSyntheticPage()),
@@ -109,29 +121,44 @@ public class BritishMedicalJournalPublishingGroupPdfTransform extends SimpleOutp
                                                                        new RemovePage()),
                                                 // ...and on all the pages now that the first is gone...
                                                 new TransformEachPage(// ...collapse "Downloaded from"
-                                                                      new CollapseDownloadedFrom())
+                                                                      new CollapseDownloadedFrom(au))
                                               });
     }
 
   }
-  
-  public BritishMedicalJournalPublishingGroupPdfTransform() throws IOException {
-    super(new ConditionalDocumentTransform(// If the first page...
-                                           new TransformFirstPage(// ...is recognized as a synthetic page,
-                                                                  new RecognizeSyntheticPage()),
-                                           // Then...
-                                           new DocumentTransform[] {
-                                             // The first page...
-                                             new TransformFirstPage(// ...has its hyperlinks normalized,
-                                                                    new NormalizeHyperlinks(),
-                                                                    // ...and is removed,
-                                                                    new RemovePage()),
-                                             // ...and on all the pages now that the first is gone...
-                                             new TransformEachPage(// ...collapse "Downloaded from" and normalize the hyperlink,
-                                                                   new CollapseDownloadedFromAndNormalizeHyperlinks()),
-                                             // ...and normalize the metadata
-                                             new NormalizeMetadata()
-                                           }));
+
+  protected ArchivalUnit au;
+
+  public void setArchivalUnit(ArchivalUnit au) {
+    this.au = au;
   }
-  
+
+  public boolean transform(PdfDocument pdfDocument,
+                           OutputStream outputStream) {
+    return PdfUtil.applyAndSave(this,
+                                pdfDocument,
+                                outputStream);
+  }
+
+  public boolean transform(PdfDocument pdfDocument) throws IOException {
+    if (au == null) throw new IOException("Uninitialized AU-dependent transform");
+    DocumentTransform documentTransform = new ConditionalDocumentTransform(// If the first page...
+                                                                           new TransformFirstPage(// ...is recognized as a synthetic page,
+                                                                                                  new RecognizeSyntheticPage()),
+                                                                           // Then...
+                                                                           new DocumentTransform[] {
+                                                                             // The first page...
+                                                                             new TransformFirstPage(// ...has its hyperlinks normalized,
+                                                                                                    new NormalizeHyperlinks(),
+                                                                                                    // ...and is removed,
+                                                                                                    new RemovePage()),
+                                                                                                    // ...and on all the pages now that the first is gone...
+                                                                                                    new TransformEachPage(// ...collapse "Downloaded from" and normalize the hyperlink,
+                                                                                                                          new CollapseDownloadedFromAndNormalizeHyperlinks(au)),
+                                                                                                                          // ...and normalize the metadata
+                                                                                                                          new NormalizeMetadata()
+                                                                           });
+    return documentTransform.transform(pdfDocument);
+  }
+
 }
