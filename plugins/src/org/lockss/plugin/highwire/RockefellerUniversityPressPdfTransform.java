@@ -1,5 +1,5 @@
 /*
- * $Id: RockefellerUniversityPressPdfTransform.java,v 1.2 2007-02-02 22:06:53 thib_gc Exp $
+ * $Id: RockefellerUniversityPressPdfTransform.java,v 1.3 2007-12-06 23:47:45 thib_gc Exp $
  */
 
 /*
@@ -32,35 +32,63 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.highwire;
 
-import java.io.IOException;
+import java.io.*;
 
 import org.lockss.filter.pdf.*;
+import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.highwire.HighWirePdfFilterFactory.*;
+import org.lockss.util.*;
 
-public class RockefellerUniversityPressPdfTransform extends SimpleOutputDocumentTransform {
+public class RockefellerUniversityPressPdfTransform
+    implements OutputDocumentTransform,
+               ArchivalUnitDependent {
 
-  public static class Simplified extends TextScrapingDocumentTransform {
-    
+  public static class Simplified
+      extends TextScrapingDocumentTransform
+      implements ArchivalUnitDependent {
+
+    protected ArchivalUnit au;
+
+    public void setArchivalUnit(ArchivalUnit au) {
+      this.au = au;
+    }
+
     public DocumentTransform makePreliminaryTransform() throws IOException {
+      if (au == null) throw new IOException("Uninitialized AU-dependent transform");
       return new ConditionalDocumentTransform(// If on the first page...
                                               new TransformFirstPage(// ...collpasing "Downloaded from" succeeds,
-                                                                     new CollapseDownloadedFrom()),
+                                                                     new CollapseDownloadedFrom(au)),
                                               // Then on all other pages...
                                               new TransformEachPageExceptFirst(// ...collapse "Downloaded from"
-                                                                               new CollapseDownloadedFrom()));
+                                                                               new CollapseDownloadedFrom(au)));
     }
-    
+
   }
 
-  public RockefellerUniversityPressPdfTransform() throws IOException{
-    super(new ConditionalDocumentTransform(// If on the first page...
-                                           new TransformFirstPage(// ...collapsing "Downloaded from" succeeds,
-                                                                  new CollapseDownloadedFrom()),
-                                           // Then on all other pages...
-                                           new TransformEachPageExceptFirst(// ...collapse "Downloaded from" ,
-                                                                            new CollapseDownloadedFrom()),
-                                           // ...and normalize the metadata
-                                           new NormalizeMetadata()));
+  protected ArchivalUnit au;
+
+  public void setArchivalUnit(ArchivalUnit au) {
+    this.au = au;
   }
-  
+
+  public boolean transform(PdfDocument pdfDocument,
+                           OutputStream outputStream) {
+    return PdfUtil.applyAndSave(this,
+                                pdfDocument,
+                                outputStream);
+  }
+
+  public boolean transform(PdfDocument pdfDocument) throws IOException {
+    if (au == null) throw new IOException("Uninitialized AU-dependent transform");
+    DocumentTransform documentTransform = new ConditionalDocumentTransform(// If on the first page...
+                                                                           new TransformFirstPage(// ...collapsing "Downloaded from" succeeds,
+                                                                                                  new CollapseDownloadedFrom(au)),
+                                                                           // Then on all other pages...
+                                                                           new TransformEachPageExceptFirst(// ...collapse "Downloaded from" ,
+                                                                                                            new CollapseDownloadedFrom(au)),
+                                                                           // ...and normalize the metadata
+                                                                           new NormalizeMetadata());
+    return documentTransform.transform(pdfDocument);
+  }
+
 }

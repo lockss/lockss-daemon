@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePdfFilterFactory.java,v 1.18 2007-11-29 00:00:44 thib_gc Exp $
+ * $Id: HighWirePdfFilterFactory.java,v 1.19 2007-12-06 23:47:45 thib_gc Exp $
  */
 
 /*
@@ -36,16 +36,15 @@ import java.io.*;
 import java.util.*;
 
 import org.lockss.filter.pdf.*;
-import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.*;
 import org.lockss.util.*;
 import org.pdfbox.cos.*;
 import org.pdfbox.pdmodel.common.PDRectangle;
 import org.pdfbox.pdmodel.interactive.action.type.*;
 import org.pdfbox.pdmodel.interactive.annotation.*;
-import org.pdfbox.util.PDFStreamEngine.OperatorProcessorFactory;
 import org.pdfbox.util.operator.OperatorProcessor;
 
-public class HighWirePdfFilterFactory extends BasicPdfFilterFactory {
+public class HighWirePdfFilterFactory implements FilterFactory {
 
   public static abstract class AbstractOnePartDownloadedFromOperatorProcessor
       extends ConditionalMergeOperatorProcessor {
@@ -166,17 +165,6 @@ public class HighWirePdfFilterFactory extends BasicPdfFilterFactory {
 
   public static class CollapseDownloadedFrom extends AggregatePageTransform {
 
-    /**
-     * @throws IOException
-     * @deprecated Use {@link #CollapseDownloadedFrom(ArchivalUnit)} instead.
-     */
-    @Deprecated
-    public CollapseDownloadedFrom() throws IOException {
-      super(PdfUtil.OR,
-            new CollapseOnePartDownloadedFrom(),
-            new CollapseThreePartDownloadedFrom());
-    }
-
     public CollapseDownloadedFrom(ArchivalUnit au) throws IOException {
       super(PdfUtil.OR,
             new CollapseOnePartDownloadedFrom(au),
@@ -187,16 +175,6 @@ public class HighWirePdfFilterFactory extends BasicPdfFilterFactory {
 
   public static class CollapseDownloadedFromAndNormalizeHyperlinks
       extends AggregatePageTransform {
-
-    /**
-     * @throws IOException
-     * @deprecated
-     */
-    @Deprecated
-    public CollapseDownloadedFromAndNormalizeHyperlinks() throws IOException {
-      super(new CollapseDownloadedFrom(),
-            new NormalizeHyperlinks());
-    }
 
     public CollapseDownloadedFromAndNormalizeHyperlinks(ArchivalUnit au) throws IOException {
       super(new CollapseDownloadedFrom(au),
@@ -218,18 +196,6 @@ public class HighWirePdfFilterFactory extends BasicPdfFilterFactory {
                              tokens.get(tokens.size() - 1));
       }
 
-    }
-
-    /**
-     * @throws IOException
-     * @deprecated Use {@link #CollapseOnePartDownloadedFrom(ArchivalUnit)} instead.
-     */
-    @Deprecated
-    public CollapseOnePartDownloadedFrom() throws IOException {
-      super(// "BT" operator: split unconditionally
-            PdfUtil.BEGIN_TEXT_OBJECT, SplitOperatorProcessor.class,
-            // "ET" operator: merge conditionally using CollapseOnePartDownloadedFromOperatorProcessor
-            PdfUtil.END_TEXT_OBJECT, CollapseOnePartDownloadedFromOperatorProcessor.class);
     }
 
     public CollapseOnePartDownloadedFrom(final ArchivalUnit au) throws IOException {
@@ -272,16 +238,6 @@ public class HighWirePdfFilterFactory extends BasicPdfFilterFactory {
         return ret;
       }
 
-    }
-
-    /**
-     * @throws IOException
-     * @deprecated
-     */
-    @Deprecated
-    public CollapseThreePartDownloadedFrom() throws IOException {
-      super(// "ET" operator: inspect subsequences ending in "ET" using CollapseThreePartDownloadedFromOperatorProcessor
-            PdfUtil.END_TEXT_OBJECT, CollapseThreePartDownloadedFromOperatorProcessor.class);
     }
 
     public CollapseThreePartDownloadedFrom(final ArchivalUnit au) throws IOException {
@@ -370,6 +326,28 @@ public class HighWirePdfFilterFactory extends BasicPdfFilterFactory {
       return true;
     }
 
+  }
+
+  public InputStream createFilteredInputStream(ArchivalUnit au,
+                                               InputStream in,
+                                               String encoding) {
+    logger.debug2("PDF filter factory for: " + au.getName());
+    OutputDocumentTransform documentTransform = PdfUtil.getOutputDocumentTransform(au);
+    if (documentTransform == null) {
+      logger.debug2("Unfiltered");
+      return in;
+    }
+    else {
+      if (documentTransform instanceof ArchivalUnitDependent) {
+        logger.debug2("Filtered with " + documentTransform.getClass().getName());
+        ArchivalUnitDependent aud = (ArchivalUnitDependent)documentTransform;
+        aud.setArchivalUnit(au);
+      }
+      else {
+        logger.debug2("Filtered with " + documentTransform.getClass().getName() + " but not AU-dependent");
+      }
+      return PdfUtil.applyFromInputStream(documentTransform, in);
+    }
   }
 
   /**

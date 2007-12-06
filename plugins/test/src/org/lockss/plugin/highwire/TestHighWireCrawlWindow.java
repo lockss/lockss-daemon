@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireCrawlWindow.java,v 1.3 2006-09-11 17:22:23 troberts Exp $
+ * $Id: TestHighWireCrawlWindow.java,v 1.4 2007-12-06 23:47:45 thib_gc Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ public class TestHighWireCrawlWindow extends LockssTestCase {
   public void testCrawlWindowCA() throws ParseException {
     TimeZone.setDefault(TimeZone.getTimeZone("GMT"));
 
-    HighwireCrawlWindow windowFactory = new HighwireCrawlWindow();
+    HighWireCrawlWindow windowFactory = new HighWireCrawlWindow();
     CrawlWindow window = windowFactory.makeCrawlWindow();
     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.S");
     sdf.setTimeZone(TimeZone.getTimeZone("America/Los_Angeles"));
@@ -74,7 +74,7 @@ public class TestHighWireCrawlWindow extends LockssTestCase {
   public void testCrawlWindowNY() throws ParseException {
     TimeZone.setDefault(TimeZone.getTimeZone("GMT"));
 
-    HighwireCrawlWindow windowFactory = new HighwireCrawlWindow();
+    HighWireCrawlWindow windowFactory = new HighWireCrawlWindow();
     CrawlWindow window = windowFactory.makeCrawlWindow();
     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.S");
     sdf.setTimeZone(TimeZone.getTimeZone("America/New_York"));
@@ -97,7 +97,7 @@ public class TestHighWireCrawlWindow extends LockssTestCase {
   public void testCrawlWindowDSTCheck() throws ParseException {
     TimeZone.setDefault(TimeZone.getTimeZone("GMT"));
 
-    HighwireCrawlWindow windowFactory = new HighwireCrawlWindow();
+    HighWireCrawlWindow windowFactory = new HighWireCrawlWindow();
     CrawlWindow window = windowFactory.makeCrawlWindow();
     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.S z");
 //     sdf.setTimeZone(TimeZone.getTimeZone("PDT"));

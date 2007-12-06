@@ -1,5 +1,5 @@
 /*
- * $Id: SagePublicationsPdfTransform.java,v 1.1 2007-05-05 00:10:37 thib_gc Exp $
+ * $Id: SagePublicationsPdfTransform.java,v 1.2 2007-12-06 23:47:45 thib_gc Exp $
  */
 
 /*
@@ -32,101 +32,112 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.highwire;
 
-import java.io.IOException;
+import java.io.*;
 import java.util.List;
 
 import org.lockss.filter.pdf.*;
+import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.highwire.HighWirePdfFilterFactory.*;
 import org.lockss.util.*;
 
-public class SagePublicationsPdfTransform extends SimpleOutputDocumentTransform {
+public class SagePublicationsPdfTransform
+    implements OutputDocumentTransform,
+               ArchivalUnitDependent {
 
   public static class RecognizeSyntheticPage implements PageTransform {
-    
+
     public boolean transform(PdfPage pdfPage) throws IOException {
       // Initially, assume the recognition fails
       boolean ret = false;
-      
+
       // Get the tokens for the entire page
       List tokens = pdfPage.getStreamTokens();
-      
+
       // Iterate through the tokens (forward)
       int progress = 0;
       iteration: for (int tok = 0 ; tok < tokens.size() ; ++tok) {
         // Select the current step in the recognition
         switch (progress) {
-          
+
           case 0:
             // Beginning of sequence
             if (tok != 0) { break iteration; } else { ++progress; }
             break;
-            
+
           case 1:
           case 7:
             // Text: http://<something>.sagepub.com
             if (PdfUtil.matchShowTextMatches(tokens, tok, "http://[-0-9A-Za-z]+\\.sagepub\\.com")) { ++progress; }
             break;
-            
+
           case 2:
             // Text: "The online version of this article can be found at:"
             if (PdfUtil.matchShowText(tokens, tok, "The online version of this article can be found at:")) { ++progress; }
             break;
-            
+
           case 3:
             // Text: "Published by:"
             if (PdfUtil.matchShowText(tokens, tok, "Published by:")) { ++progress; }
             break;
-            
+
           case 4:
             // Text: "http://www.sagepublications.com"
             if (PdfUtil.matchShowText(tokens, tok, "http://www.sagepublications.com")) { ++progress; }
             break;
-            
+
           case 5:
             // Text: "can be found at:"
             if (PdfUtil.matchShowText(tokens, tok, "can be found at:")) { ++progress; }
             break;
-          
+
           case 6:
             // Text: "Additional services and information for "
             if (PdfUtil.matchShowText(tokens, tok, "Additional services and information for ")) { ++progress; }
             break;
-            
+
           // case 7: see case 2
-            
+
           case 8:
             // Text: "Downloaded from "
             if (PdfUtil.matchShowText(tokens, tok, "Downloaded from ")) { ret = true; break iteration; }
             break;
-  
+
           default:
             // Should never happen
             break iteration;
-            
+
         }
-  
+
       }
-  
+
       // Return true if only if all the steps were visited successfully
       return ret;
     }
-    
+
   }
 
   public static class RemovePage implements PageTransform {
-    
+
     public boolean transform(PdfPage pdfPage) throws IOException {
       // Remove this page from the document
       pdfPage.getPdfDocument().removePage(pdfPage);
       return true;
     }
-    
+
   }
 
-  public static class Simplified extends TextScrapingDocumentTransform {
+  public static class Simplified
+      extends TextScrapingDocumentTransform
+      implements ArchivalUnitDependent {
 
-    @Override
+    protected ArchivalUnit au;
+
+    public void setArchivalUnit(ArchivalUnit au) {
+      this.au = au;
+    }
+
     public DocumentTransform makePreliminaryTransform() throws IOException {
+      if (au == null) throw new IOException("Uninitialized AU-dependent transform");
       return new ConditionalDocumentTransform(// If the first page...
                                               new TransformFirstPage(// ...is recognized as a synthetic page,
                                                                      new RecognizeSyntheticPage()),
@@ -137,29 +148,44 @@ public class SagePublicationsPdfTransform extends SimpleOutputDocumentTransform 
                                                                        new RemovePage()),
                                                 // ...and on all the pages now that the first is gone...
                                                 new TransformEachPage(// ...collapse "Downloaded from"
-                                                                      new CollapseDownloadedFrom())
+                                                                      new CollapseDownloadedFrom(au))
                                               });
     }
 
   }
-  
-  public SagePublicationsPdfTransform() throws IOException {
-    super(new ConditionalDocumentTransform(// If the first page...
-                                           new TransformFirstPage(// ...is recognized as a synthetic page,
-                                                                  new RecognizeSyntheticPage()),
-                                           // Then...
-                                           new DocumentTransform[] {
-                                             // The first page...
-                                             new TransformFirstPage(// ...has its hyperlinks normalized,
-                                                                    new NormalizeHyperlinks(),
-                                                                    // ...and is removed,
-                                                                    new RemovePage()),
-                                             // ...and on all the pages now that the first is gone...
-                                             new TransformEachPage(// ...collapse "Downloaded from" and normalize the hyperlink,
-                                                                   new CollapseDownloadedFromAndNormalizeHyperlinks()),
-                                             // ...and normalize the metadata
-                                             new NormalizeMetadata()
-                                           }));
+
+  protected ArchivalUnit au;
+
+  public void setArchivalUnit(ArchivalUnit au) {
+    this.au = au;
   }
-  
+
+  public boolean transform(PdfDocument pdfDocument,
+                           OutputStream outputStream) {
+    return PdfUtil.applyAndSave(this,
+                                pdfDocument,
+                                outputStream);
+  }
+
+  public boolean transform(PdfDocument pdfDocument) throws IOException {
+    if (au == null) throw new IOException("Uninitialized AU-dependent transform");
+    DocumentTransform documentTransform = new ConditionalDocumentTransform(// If the first page...
+                                                                           new TransformFirstPage(// ...is recognized as a synthetic page,
+                                                                                                  new RecognizeSyntheticPage()),
+                                                                           // Then...
+                                                                           new DocumentTransform[] {
+                                                                             // The first page...
+                                                                             new TransformFirstPage(// ...has its hyperlinks normalized,
+                                                                                                    new NormalizeHyperlinks(),
+                                                                                                    // ...and is removed,
+                                                                                                    new RemovePage()),
+                                                                             // ...and on all the pages now that the first is gone...
+                                                                             new TransformEachPage(// ...collapse "Downloaded from" and normalize the hyperlink,
+                                                                                                   new CollapseDownloadedFromAndNormalizeHyperlinks(au)),
+                                                                             // ...and normalize the metadata
+                                                                             new NormalizeMetadata()
+                                                                           });
+    return documentTransform.transform(pdfDocument);
+  }
+
 }

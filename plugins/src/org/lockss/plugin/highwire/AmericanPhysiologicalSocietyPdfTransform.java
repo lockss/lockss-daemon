@@ -1,5 +1,5 @@
 /*
- * $Id: AmericanPhysiologicalSocietyPdfTransform.java,v 1.28 2007-11-29 00:00:45 thib_gc Exp $
+ * $Id: AmericanPhysiologicalSocietyPdfTransform.java,v 1.29 2007-12-06 23:47:45 thib_gc Exp $
  */
 
 /*
@@ -125,17 +125,6 @@ public class AmericanPhysiologicalSocietyPdfTransform
         return candidate.startsWith("This information is current as of ");
       }
 
-    }
-
-    /**
-     * <p>Builds a new page stream transform.</p>
-     * @throws IOException if any processing error occurs.
-     * @deprecated
-     */
-    @Deprecated
-    public NormalizeCurrentAsOf() throws IOException {
-      super(// "Tj" operator: replace string conditionally using ReplaceCurrentAsOf
-            PdfUtil.SHOW_TEXT, ReplaceCurrentAsOf.class);
     }
 
     public NormalizeCurrentAsOf(final ArchivalUnit au) throws IOException {

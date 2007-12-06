@@ -1,5 +1,5 @@
 /*
- * $Id: NewEnglandJournalOfMedicinePdfTransform.java,v 1.10 2007-01-26 21:46:28 thib_gc Exp $
+ * $Id: NewEnglandJournalOfMedicinePdfTransform.java,v 1.11 2007-12-06 23:47:45 thib_gc Exp $
  */
 
 /*
@@ -36,9 +36,11 @@ import java.io.*;
 import java.util.List;
 
 import org.lockss.filter.pdf.*;
+import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.highwire.HighWirePdfFilterFactory.NormalizeMetadata;
 import org.lockss.plugin.highwire.NewEnglandJournalOfMedicinePdfTransform.EraseVariableFooter.ProcessEndTextObject;
 import org.lockss.util.*;
+import org.pdfbox.util.operator.OperatorProcessor;
 
 /**
  * <p>A PDF transform for New England Journal of Medicine PDF files.</p>
@@ -73,7 +75,9 @@ import org.lockss.util.*;
  * @see EraseVariableFooter
  * @see Simplified
  */
-public class NewEnglandJournalOfMedicinePdfTransform extends SimpleOutputDocumentTransform {
+public class NewEnglandJournalOfMedicinePdfTransform
+    implements OutputDocumentTransform,
+               ArchivalUnitDependent {
 
   /**
    * <p>A page stream transform that erases the variable footer text
@@ -249,9 +253,24 @@ public class NewEnglandJournalOfMedicinePdfTransform extends SimpleOutputDocumen
     /**
      * <p>Builds a new page stream transform.</p>
      * @throws IOException if any processing error occurs.
+     * @deprecated
      */
+    @Deprecated
     public EraseVariableFooter() throws IOException {
       super(// "BT" operator: split unconditionally
+            PdfUtil.BEGIN_TEXT_OBJECT, SplitOperatorProcessor.class,
+            // "ET" operator: merge conditionally using ProcessEndTextObject
+            PdfUtil.END_TEXT_OBJECT, ProcessEndTextObject.class);
+    }
+
+    public EraseVariableFooter(final ArchivalUnit au) throws IOException {
+      super(new OperatorProcessorFactory() {
+              public OperatorProcessor newInstanceForName(String className) throws LinkageError, ExceptionInInitializerError, ClassNotFoundException, IllegalAccessException, InstantiationException, SecurityException {
+                return (OperatorProcessor)au.getPlugin().newAuxClass(className,
+                                                                     OperatorProcessor.class);
+              }
+            },
+            // "BT" operator: split unconditionally
             PdfUtil.BEGIN_TEXT_OBJECT, SplitOperatorProcessor.class,
             // "ET" operator: merge conditionally using ProcessEndTextObject
             PdfUtil.END_TEXT_OBJECT, ProcessEndTextObject.class);
@@ -272,7 +291,15 @@ public class NewEnglandJournalOfMedicinePdfTransform extends SimpleOutputDocumen
    * @see NewEnglandJournalOfMedicinePdfTransform
    * @see SimplifiedEraseVariableFooter
    */
-  public static class Simplified extends TextScrapingDocumentTransform {
+  public static class Simplified
+      extends TextScrapingDocumentTransform
+      implements ArchivalUnitDependent {
+
+    protected ArchivalUnit au;
+
+    public void setArchivalUnit(ArchivalUnit au) {
+      this.au = au;
+    }
 
     /**
      * <p>A simplified version of {@link EraseVariableFooter}
@@ -312,9 +339,22 @@ public class NewEnglandJournalOfMedicinePdfTransform extends SimpleOutputDocumen
       /**
        * <p>Builds a new page stream transform.</p>
        * @throws IOException if any processing error occurs.
+       * @deprecated
        */
+      @Deprecated
       public SimplifiedEraseVariableFooter() throws IOException {
         super(// "Tj" operator: replace string conditionally using SimplifiedProcessShowText
+              PdfUtil.SHOW_TEXT, SimplifiedProcessShowText.class);
+      }
+
+      public SimplifiedEraseVariableFooter(final ArchivalUnit au) throws IOException {
+        super(new OperatorProcessorFactory() {
+                public OperatorProcessor newInstanceForName(String className) throws LinkageError, ExceptionInInitializerError, ClassNotFoundException, IllegalAccessException, InstantiationException, SecurityException {
+                  return (OperatorProcessor)au.getPlugin().newAuxClass(className,
+                                                                       OperatorProcessor.class);
+                }
+              },
+              // "Tj" operator: replace string conditionally using SimplifiedProcessShowText
               PdfUtil.SHOW_TEXT, SimplifiedProcessShowText.class);
       }
 
@@ -322,37 +362,37 @@ public class NewEnglandJournalOfMedicinePdfTransform extends SimpleOutputDocumen
 
     /* Inherit documentation */
     public DocumentTransform makePreliminaryTransform() throws IOException {
+      if (au == null) throw new IOException("Uninitialized AU-dependent transform");
       return new ConditionalDocumentTransform(// If erasing the variable string of the first page succeeds
-                                              new TransformFirstPage(new SimplifiedEraseVariableFooter()),
+                                              new TransformFirstPage(new SimplifiedEraseVariableFooter(au)),
                                               // Then erase the variable string on other pages
-                                              new TransformEachPageExceptFirst(new SimplifiedEraseVariableFooter()));
+                                              new TransformEachPageExceptFirst(new SimplifiedEraseVariableFooter(au)));
     }
 
   }
 
-  /**
-   * <p>Builds a a new transform for New England Journal of Medicine
-   * PDF files.</p>
-   * <p>The overall transform is expressed as a strict conditional.
-   * The "if" transform is removing the variable text on the first
-   * page with {@link TransformFirstPage} and
-   * {@link EraseVariableFooter}. The "then" transform is the
-   * (implicit) aggregation of removing the variable text on every
-   * page except the first with {@link TransformEachPageExceptFirst}
-   * and {@link EraseVariableFooter}, and of sanitizing the metadata
-   * with {@link NormalizeMetadata}.</p>
-   * <p>Because the conditional is strict (default), if the "if" part
-   * succeeds but the "else" part does not, a
-   * {@link DocumentTransformException} is thrown.</p>
-   * @throws IOException if any processing error occurs.
-   */
-  public NewEnglandJournalOfMedicinePdfTransform() throws IOException {
-    super(new ConditionalDocumentTransform(// If erasing the variable footer of the first page succeeds
-                                           new TransformFirstPage(new EraseVariableFooter()),
-                                           // Then erase the variable footer on other pages
-                                           new TransformEachPageExceptFirst(new EraseVariableFooter()),
-                                           // ...and sanitize the metadata
-                                           new NormalizeMetadata()));
+  protected ArchivalUnit au;
+
+  public void setArchivalUnit(ArchivalUnit au) {
+    this.au = au;
+  }
+
+  public boolean transform(PdfDocument pdfDocument,
+                           OutputStream outputStream) {
+    return PdfUtil.applyAndSave(this,
+                                pdfDocument,
+                                outputStream);
+  }
+
+  public boolean transform(PdfDocument pdfDocument) throws IOException {
+    if (au == null) throw new IOException("Uninitialized AU-dependent transform");
+    DocumentTransform documentTransform = new ConditionalDocumentTransform(// If erasing the variable footer of the first page succeeds
+                                                                           new TransformFirstPage(new EraseVariableFooter(au)),
+                                                                           // Then erase the variable footer on other pages
+                                                                           new TransformEachPageExceptFirst(new EraseVariableFooter(au)),
+                                                                           // ...and sanitize the metadata
+                                                                           new NormalizeMetadata());
+    return documentTransform.transform(pdfDocument);
   }
 
   /**
