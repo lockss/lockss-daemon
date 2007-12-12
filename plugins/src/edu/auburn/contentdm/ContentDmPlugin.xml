@@ -4,6 +4,10 @@
     <string>edu.auburn.contentdm.ContentDmPlugin</string>
   </entry>
   <entry>
+    <string>plugin_version</string>
+    <string>2</string>
+  </entry>
+  <entry>
     <string>au_def_pause_time</string>
     <long>6000</long>
   </entry>
@@ -40,7 +44,7 @@
   </entry>
   <entry>
     <string>text/xml_link_extractor_factory</string>
-    <string>edu.auburn.contentdm.ContentDmPluginLinkExtractorFactory</string>
+    <string>org.lockss.extractor.DublinCoreLinkExtractor$Factory</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
