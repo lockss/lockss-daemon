@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.55 2007-08-22 06:46:59 tlipkis Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.55.4.1 2007-12-13 20:24:59 tlipkis Exp $
  */
 
 /*
@@ -379,7 +379,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     return node.normalize(new File(name)).getPath();
   }
 
-  public void testNormalize() throws Exception {
+  public void testNormalizeUrlEncodingCase() throws Exception {
     RepositoryNodeImpl node = new RepositoryNodeImpl("foo", "bar", null);
     // nothing to normalize
     File file = new File("foo/bar/baz");
@@ -398,6 +398,24 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertEquals("foo/bar/ba%ABz", normalizeName(node, "foo/bar/ba%Abz"));
     assertEquals("foo/bar/ba%ABz", normalizeName(node, "foo/bar/ba%abz"));
     assertEquals("foo/bar/ba%abz/ba%ABz", normalizeName(node, "foo/bar/ba%abz/ba%abz"));
+  }
+
+  public void testNormalizeTrailingQuestion() throws Exception {
+    RepositoryNodeImpl node = new RepositoryNodeImpl("foo", "bar", null);
+    // nothing to normalize
+    File file = new File("foo/bar/baz");
+    assertSame(file, node.normalize(file));
+    file = new File("foo/bar/ba?z");
+    assertSame(file, node.normalize(file));
+    // unnormalized in parent dir name is left alone
+    file = new File("ba?/bar");
+    assertSame(file, node.normalize(file));
+    // should be normalized
+    assertEquals("baz", normalizeName(node, "baz?"));
+    assertEquals("/ba", normalizeName(node, "/ba?"));
+    assertEquals("foo/bar/bar", normalizeName(node, "foo/bar/bar?"));
+    assertEquals("foo/ba?r/bar", normalizeName(node, "foo/ba?r/bar?"));
+    assertEquals("foo/bar?/bar", normalizeName(node, "foo/bar?/bar?"));
   }
 
   List getChildNames(String nodeName) throws MalformedURLException {

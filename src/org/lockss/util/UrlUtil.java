@@ -1,5 +1,5 @@
 /*
- * $Id: UrlUtil.java,v 1.47 2007-10-01 08:16:04 tlipkis Exp $
+ * $Id: UrlUtil.java,v 1.47.4.1 2007-12-13 20:24:59 tlipkis Exp $
  *
 
 Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
@@ -79,6 +79,11 @@ public class UrlUtil {
     PREFIX + "normalizeUrlEncodingCase";
   public static final boolean DEFAULT_NORMALIZE_URL_ENCODING_CASE = true;
 
+  /** If true, trailing ? is removed from URLs */
+  public static final String PARAM_NORMALIZE_EMPTY_QUERY =
+    PREFIX + "normalizeEmptyQuery";
+  public static final boolean DEFAULT_NORMALIZE_EMPTY_QUERY = true;
+
   /** If true, use Apache Commons HttpClient, if false use native Java
    * HttpURLConnection */
   static final String PARAM_USE_HTTPCLIENT = PREFIX + "useHttpClient";
@@ -88,6 +93,7 @@ public class UrlUtil {
   private static int pathTraversalAction = DEFAULT_PATH_TRAVERSAL_ACTION;
   private static boolean normalizeUrlEncodingCase =
     DEFAULT_NORMALIZE_URL_ENCODING_CASE;
+  private static boolean normalizeEmptyQuery = DEFAULT_NORMALIZE_EMPTY_QUERY;
 
 
   /** Called by org.lockss.config.MiscConfig
@@ -103,6 +109,8 @@ public class UrlUtil {
       normalizeUrlEncodingCase =
 	config.getBoolean(PARAM_NORMALIZE_URL_ENCODING_CASE,
 			  DEFAULT_NORMALIZE_URL_ENCODING_CASE);
+      normalizeEmptyQuery = config.getBoolean(PARAM_NORMALIZE_EMPTY_QUERY,
+					      DEFAULT_NORMALIZE_EMPTY_QUERY);
     }
   }
 
@@ -190,6 +198,9 @@ public class UrlUtil {
 	query = normQuery;
 	changed = true;
       }
+    } else if (normalizeEmptyQuery && "".equals(query)) {
+      query = null;
+      changed = true;
     }
 
     if (url.getRef() != null) {		// remove the ref
