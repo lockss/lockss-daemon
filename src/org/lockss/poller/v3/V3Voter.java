@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.46 2007-10-17 22:28:34 smorabito Exp $
+ * $Id: V3Voter.java,v 1.47 2007-12-15 00:37:22 tlipkis Exp $
  */
 
 /*
@@ -117,6 +117,7 @@ public class V3Voter extends BasePoll {
    * The minimum percent agreement required before we're willing to serve
    * repairs, if using per-AU agreement.
    */
+  // CR: apply to bytes, not URLs
   public static final String PARAM_MIN_PERCENT_AGREEMENT_FOR_REPAIRS =
     PREFIX + "minPercentAgreementForRepairs";
   public static final double DEFAULT_MIN_PERCENT_AGREEMENT_FOR_REPAIRS = 0.5f; 
@@ -138,6 +139,7 @@ public class V3Voter extends BasePoll {
 
   private PsmInterp stateMachine;
   private VoterUserData voterUserData;
+  // CR: use global random
   private LockssRandom theRandom = new LockssRandom();
   private LockssDaemon theDaemon;
   private V3VoterSerializer pollSerializer;
@@ -155,6 +157,7 @@ public class V3Voter extends BasePoll {
 
   private static final Logger log = Logger.getLogger("V3Voter");
 
+  // CR: refactor common parts of constructors
   /**
    * <p>Upon receipt of a request to participate in a poll, create a new
    * V3Voter.  The voter will not start running until {@link #startPoll()}
@@ -176,7 +179,7 @@ public class V3Voter extends BasePoll {
     // Determine the proper location for the V3 message dir.
     List dSpaceList =
       CurrentConfig.getList(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST);
-    String relPluginPath =
+    String relStatePath =
       CurrentConfig.getParam(PARAM_V3_MESSAGE_REL_DIR,
                              DEFAULT_V3_MESSAGE_REL_DIR);
     
@@ -188,7 +191,7 @@ public class V3Voter extends BasePoll {
       log.error(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST +
                 " not specified, not configuring V3 message dir.");
     } else {
-      stateDir = new File((String)dSpaceList.get(0), relPluginPath);
+      stateDir = new File((String)dSpaceList.get(0), relStatePath);
     }
 
     if (stateDir == null ||
@@ -252,6 +255,8 @@ public class V3Voter extends BasePoll {
   public V3Voter(LockssDaemon daemon, File pollDir)
       throws V3Serializer.PollSerializerException {
     this.theDaemon = daemon;
+    // CR: why pollDir passed to some V3VoterSerializer constructors, not
+    // others?
     this.pollSerializer = new V3VoterSerializer(theDaemon, pollDir);
     this.voterUserData = pollSerializer.loadVoterUserData();
     this.pollManager = daemon.getPollManager();
@@ -324,6 +329,7 @@ public class V3Voter extends BasePoll {
     }
 
     Deadline earliestStart = Deadline.at(now + estimatedHashDuration);
+    // CR: eliminate reservation task; schedule hash here
 
     long messageSendPadding = calculateMessageSendPadding(estimatedHashDuration);
 
@@ -404,6 +410,7 @@ public class V3Voter extends BasePoll {
         log.warning("Voting deadline (" + voteDeadline + ") is later than " +
                     "the poll deadline (" + pollDeadline.getExpirationTime() + 
                     ").  Can't participate in poll " + getKey());
+	// CR: s.b. poller error, not expired
         stopPoll(STATUS_EXPIRED);
         return;
       }
@@ -426,6 +433,7 @@ public class V3Voter extends BasePoll {
 
     // Register a callback for the end of the voting period.  We must have
     // voted by this time, or we can't participate.
+    // CR: could be folded into hash done cb
     TimerQueue.schedule(Deadline.at(voterUserData.getVoteDeadline()),
                         new TimerQueue.Callback() {
       public void timerExpired(Object cookie) {
@@ -557,8 +565,10 @@ public class V3Voter extends BasePoll {
                   + getKey());
       return;
     }
+    // CR: getTcpPeerIdentities() -> getV3PeerIdentities()
     Collection allPeers = idManager.getTcpPeerIdentities();
     allPeers.remove(voterUserData.getPollerId()); // Never nominate the poller
+    // CR: collect min(allPeers, nomineeCount) peers
     if (nomineeCount <= allPeers.size()) {
       Collection nominees =
         CollectionUtil.randomSelection(allPeers, nomineeCount);
@@ -659,6 +669,8 @@ public class V3Voter extends BasePoll {
     log.debug("Hashing complete for poll " + voterUserData.getPollKey());
     voterUserData.hashingDone(true);
     try {
+      // CR: send evtReadyToVote unconditionally, let state machine
+      // determine what to do with it based on current state
       if (voterUserData.voteRequested()) {
 	stateMachine.handleEvent(V3Events.evtReadyToVote);
       } else {

@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollFactory.java,v 1.19 2007-10-25 01:15:14 smorabito Exp $
+ * $Id: V3PollFactory.java,v 1.20 2007-12-15 00:37:22 tlipkis Exp $
  */
 
 /*
@@ -209,6 +209,7 @@ public class V3PollFactory extends BasePollFactory {
       return null;
     }
 
+    // CR: move earlier in method
     // Only participate if we have and have successfully crawled this AU,
     // and if 'enableV3Voter' is set.
     boolean enableV3Voter =

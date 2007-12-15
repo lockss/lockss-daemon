@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.183 2007-10-25 01:15:13 smorabito Exp $
+ * $Id: PollManager.java,v 1.184 2007-12-15 00:37:23 tlipkis Exp $
  */
 
 /*
@@ -71,6 +71,11 @@ import static org.lockss.poller.v3.V3Poller.*;
  * @author Claire Griffin
  * @version 1.0
  */
+
+// CR: Code review comments are marked with CR:
+
+// CR: some accesses to thePolls, theRecentPolls are not synchronized, some
+// are synchronized on the PollManager instance instead of pollMapLock
 
 public class PollManager
   extends BaseLockssDaemonManager implements ConfigurableManager {
@@ -165,6 +170,8 @@ public class PollManager
   private AlertManager theAlertManager = null;
   private static SystemMetrics theSystemMetrics = null;
   private AuEventHandler auEventHandler;
+  // CR: serializedPollers and serializedVoters s.b. updated as new
+  // polls/votes are created, in case AU is deactivated & reactivated
   private HashMap serializedPollers;
   private HashMap serializedVoters;
   private V3PollStatusAccessor v3Status;
@@ -383,6 +390,7 @@ public class PollManager
       long duration = pollFact.calcDuration(pollspec, this);
       if (duration <= 0) {
 	theLog.debug("Duration for " + pollspec + " too short " + duration);
+	// CR: signal poll error (bad duration calc'ed)
 	return null;
       }
       try {
@@ -557,6 +565,7 @@ public class PollManager
       return;
     }
     String key = msg.getKey();
+    // CR: look in thePolls only, not theRecentPolls
     PollManagerEntry pme = getCurrentOrRecentPollEntry(key);
     if(pme != null) {
       if(pme.isPollCompleted() || pme.isPollSuspended()) {
@@ -808,6 +817,7 @@ public class PollManager
   /**
    * @return the state directory for the given V3 poll.
    */
+  // CR: add getStateDir() to BasePoll to avoid downcast
   public File getStateDir(String pollKey) {
     if (pollKey == null) return null;
 
@@ -921,7 +931,7 @@ public class PollManager
       if (enablePollers) {
         File poller = new File(dirs[ix],
                                V3PollerSerializer.POLLER_STATE_BEAN);
-        if (poller != null && poller.exists()) {
+        if (poller.exists()) {
           // Add this poll dir to the serialized polls map.
           try {
             V3PollerSerializer pollSerializer =
@@ -938,6 +948,8 @@ public class PollManager
             
             theLog.debug2("Found saved poll for AU " + psb.getAuId()
                           + " in directory " + dirs[ix]);
+	    // CR: Should never be more than one saved poll per AU.  Don't
+	    // need Set, and error if find more than one
             Set pollsForAu = null;
             if ((pollsForAu = (Set)serializedPollers.get(psb.getAuId())) == null) {
               pollsForAu = new HashSet();
@@ -1018,6 +1030,7 @@ public class PollManager
       throw new NullPointerException("Null serialized voter map.");
     }
     // Restore any pollers for this AU.
+    // CR: Don't need loop here, s.b. max 1 poller per AU
     Set pollDirs = (Set)serializedPollers.get(au.getAuId());
     if (pollDirs != null) {
       Iterator pollDirIter = pollDirs.iterator();
@@ -1446,6 +1459,7 @@ public class PollManager
   /*
    * Just a struct to hold status information per-au
    */
+  // CR: Seth thinks this is redundant
   private class V3PollStatusAccessorEntry {
     public long lastPollTime = -1;
     public int numPolls = 0;

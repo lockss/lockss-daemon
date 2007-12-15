@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.63 2007-10-17 22:28:34 smorabito Exp $
+ * $Id: V3Poller.java,v 1.64 2007-12-15 00:37:22 tlipkis Exp $
  */
 
 /*
@@ -240,6 +240,7 @@ public class V3Poller extends BasePoll {
    * The amount of time, in ms, to hold the poll open past normal closing time
    * if we are waiting for pending repairs.
    */
+  // CR: should keep stats on use of this to extend polls
   public static final String PARAM_V3_EXTRA_POLL_TIME =
     PREFIX + "extraPollTime";
   public static final long DEFAULT_V3_EXTRA_POLL_TIME = 
@@ -268,13 +269,15 @@ public class V3Poller extends BasePoll {
   public static final String PARAM_V3_HASH_BYTES_BEFORE_CHECKPOINT =
     PREFIX + "hashBytesBeforeCheckpoint";
   public static final long DEFAULT_V3_HASH_BYTES_BEFORE_CHECKPOINT =
-    1024 * 1024; // 1 MB
+    100 * 1024 * 1024; // 100 MB
 
 
   // Global state for the poll.
   private PollerStateBean pollerState;
   // Map of PeerIdentity => ParticipantState for all participants in
   // this poll, both inner and outer circle
+  // CR: need explicit synchronization for theParticipants, as we sometimes
+  // iterate over it
   protected Map theParticipants =
     Collections.synchronizedMap(new LinkedHashMap());
   private LockssDaemon theDaemon;
@@ -298,7 +301,7 @@ public class V3Poller extends BasePoll {
 
   private static Logger log = Logger.getLogger("V3Poller");
   private static LockssRandom theRandom = new LockssRandom();
-  private int blockErrorCount = 0;
+  private int blockErrorCount = 0;	// CR: s.b. in PollerStateBean
   private int maxBlockErrorCount = DEFAULT_MAX_BLOCK_ERROR_COUNT;
   private boolean enableInvitations = DEFAULT_ENABLE_INVITATIONS;
   private long timeBetweenInvitations = DEFAULT_TIME_BETWEEN_INVITATIONS;
@@ -315,12 +318,14 @@ public class V3Poller extends BasePoll {
   
   // Probability of repairing from another cache.  A number between
   // 0.0 and 1.0.
+  // CR: not a percentage; fix name
   private double repairFromCache =
     V3Poller.DEFAULT_V3_REPAIR_FROM_CACHE_PERCENT;
   
   private boolean enableRepairFromCache =
     V3Poller.DEFAULT_V3_ENABLE_REPAIR_FROM_CACHE;
 
+  // CR: Factor out common elements of the two constructors
   /**
    * <p>Create a new Poller to call a V3 Poll.</p>
    * 
@@ -348,6 +353,7 @@ public class V3Poller extends BasePoll {
     this.serializer = new V3PollerSerializer(theDaemon);
 
     // Get set-up information from config.
+    // CR: move to beginning of constructor
     setConfig();
 
     pollerState = new PollerStateBean(spec, orig, key, duration,
@@ -393,6 +399,7 @@ public class V3Poller extends BasePoll {
     PluginManager plugMgr = theDaemon.getPluginManager();
     CachedUrlSet cus = plugMgr.findCachedUrlSet(pollerState.getAuId());
     if (cus == null) {
+      // CR: NoSuchAuException
       throw new NullPointerException("CUS for AU " + pollerState.getAuId() +
                                      " is null!");
     }
@@ -507,6 +514,8 @@ public class V3Poller extends BasePoll {
     return suc;
   }
   
+  // CR: add fixed (configurable) amount of time to end of poll.  No reason
+  // to be proportional to hash time or connect timeout
   private long calculateReceiptBuffer(long hashEst) {
     // Latest time that we want to stop tallying.  This is our deadline.
     // But we must also reserve a little time to send receipts, so we subtract
@@ -674,6 +683,8 @@ public class V3Poller extends BasePoll {
             }
           } catch (PsmException e) {
             log.warning("State machine error", e);
+	    // CR: drop participant, don't stop entire poll.  (And at end
+	    // of loop, check that there are still enough participants)
             stopPoll(POLLER_STATUS_ERROR);
           }
         }
@@ -767,9 +778,11 @@ public class V3Poller extends BasePoll {
    * remove it from the poll.</p>
    */
   private void pollOuterCircle() {
-    // Calculate the correct number to request from each host.
+    // Calculate the correct number of invitees to choose from each peer's
+    // invitee list.
     int targetSize =
-      (int)(pollerState.getOuterCircleTarget() / theParticipants.size());
+      (int)((pollerState.getOuterCircleTarget() + theParticipants.size() - 1)
+	    / theParticipants.size());
     log.debug2("Target for nominees from each inner circle participant: " +
                targetSize);
     Collection outerCircle = constructOuterCircle(targetSize);
@@ -778,6 +791,8 @@ public class V3Poller extends BasePoll {
       for (Iterator it = outerCircle.iterator(); it.hasNext(); ) {
         String idStr = (String) it.next();
         PeerIdentity id = idManager.findPeerIdentity(idStr);
+	// CR: constructOuterCircle() should eliminate invitees who are
+	// already participating
         if (!theParticipants.keySet().contains(id)) {
           log.debug2("Adding new peer " + id + " to the outer circle");
           ParticipantUserData participant = makeParticipant(id);
@@ -812,6 +827,7 @@ public class V3Poller extends BasePoll {
         List<String> nominees = new ArrayList<String>();
         
         // Reject any nominees we should not include.
+	// CR: reject us and inner circle first
         for (String pidKey : (List<String>)participant.getNominees()) {
           if (shouldIncludePeer(pidKey)) {
             nominees.add(pidKey);
@@ -924,6 +940,7 @@ public class V3Poller extends BasePoll {
    *
    * @param hb  The {@link HashBlock} to tally.
    */
+  // CR: simplify to single loop
   void tallyBlock(HashBlock hb, BlockTally tally) {
     setStatus(V3Poller.POLLER_STATUS_TALLYING);
 
@@ -944,6 +961,7 @@ public class V3Poller extends BasePoll {
       // Iterate over the peers looking for the lowest-sorted URL.
       // lowestUrl will be null if there is no URL lower than the poller's
       
+      // CR: s.b. boolean (foundURLLowerThanOurs)
       String lowestUrl = null;
       synchronized(theParticipants) {
         for (Iterator it = theParticipants.values().iterator(); it.hasNext();) {
@@ -962,10 +980,12 @@ public class V3Poller extends BasePoll {
           
           VoteBlock vb = null;
           try {
-            vb = iter.peek();
+            vb = iter.peek();		// CR: call hasNext() first?
             if (vb == null) {
               continue;
             } else {
+	      // CR: seems like final clause s.b.
+	      // vb.getUrl().compareTo(lowestUrl) < 0
               if (hb.getUrl().compareTo(vb.getUrl()) > 0 &&
                   (lowestUrl == null || hb.getUrl().compareTo(lowestUrl) > 0)) { 
                 lowestUrl = vb.getUrl();
@@ -1074,6 +1094,7 @@ public class V3Poller extends BasePoll {
             continue;
           }
 
+	  // CR: iterate through all peer's remaining votes
           try {
             if (iter.peek() != null) {
               VoteBlock vb = iter.next();
@@ -1091,9 +1112,10 @@ public class V3Poller extends BasePoll {
 
       // Do not tally if this is the last time through the loop.
       if (missingBlockVoters > 0) {
-        tally.tallyVotes();
+        tally.tallyVotes();		// CR: need to call this in loop?
         // This may be null if the tally does not yet have consensus on what
         // the name of the missing block is.
+	// CR: this is suspicious
         if (tally.getMissingBlockUrl() != null) {
           checkTally(tally, tally.getMissingBlockUrl(), false);
         }
@@ -1306,6 +1328,8 @@ public class V3Poller extends BasePoll {
     
     // If we already have more than maxRepairs and maxRepairs is >= 0, 
     // just return.  A value less than 0 means "unlimited repairs".
+    // CR: need test for maxRepairs < 0, no test for len < 0
+    // CR: log if repairs limites
     int len = repairQueue.size();
     if (len >= 0 &&  len > maxRepairs) {
       return;
@@ -1454,6 +1478,7 @@ public class V3Poller extends BasePoll {
     if (pollManager == null) {
       log.debug("Repair was received after the poll was closed. " +
                 "Poll key = " + getKey());
+      // CR: Race?  Have stored content, but not going to check it
       return;
     }
     
@@ -1463,6 +1488,8 @@ public class V3Poller extends BasePoll {
           // XXX: Handle errors here
           pollManager.runTask(new PollRunner.Task("Received Repair Block Complete", getKey()) {
             public void lockssRun() {
+	      // CR: should keep track of exitence of pending repairs to
+	      // update status when done
               PollerStateBean.RepairQueue rq = pollerState.getRepairQueue();
               log.debug3("Finished hashing repair sent for block " + hblock);
               // Replay the block comparison using the new hash results.
@@ -1508,6 +1535,7 @@ public class V3Poller extends BasePoll {
               // If there are no more repairs outstanding, go ahead and
               // stop the poll at this point.
               PollerStateBean.RepairQueue queue = pollerState.getRepairQueue();
+	      // CR: push size() methods lower
               int pending = queue.getPendingRepairs().size();
               int active = queue.getActiveRepairs().size();
               log.debug2("Repair hash on one block done.  Pending repairs="
@@ -1526,6 +1554,7 @@ public class V3Poller extends BasePoll {
 
     
     // Serialize these
+    // CR: don't need to serialize this
     pollManager.runTask(new PollRunner.Task("Scheduling Repair Hash", getKey()) {
       public void lockssRun() {
         CachedUrlSet blockCus =
@@ -1535,6 +1564,7 @@ public class V3Poller extends BasePoll {
                                        hashDone,
                                        blockDone);
         if (!hashing) {
+	  // CR: leave repair pending
           log.warning("Failed to schedule a repair check hash for block " + url);
         }
       }
@@ -1617,6 +1647,7 @@ public class V3Poller extends BasePoll {
       }
     }
 
+    // CR: replace count comparison with isAnyAgree boolean
     if (disagreementCount == (vbVersions.length * hbVersions.length)) {
       log.debug3("No agreement found for any version of block " +
                  voteBlock.getUrl() + ".  Lost tally, adding voter " + id +
@@ -1633,6 +1664,7 @@ public class V3Poller extends BasePoll {
                   + getKey());
       return;
     }
+    // CR: repair thread holds this lock for a long time?
     synchronized(theParticipants) {
       for (Iterator iter = theParticipants.values().iterator(); iter.hasNext();) {
         ParticipantUserData ud = (ParticipantUserData)iter.next();
@@ -1641,6 +1673,7 @@ public class V3Poller extends BasePoll {
           interp.handleEvent(V3Events.evtVoteComplete);
         } catch (PsmException e) {
           log.warning("State machine error", e);
+	  // CR: too soon.  remember error and stop poll at end of loop
           stopPoll(POLLER_STATUS_ERROR);
         }
         if (log.isDebug2()) {
@@ -1846,6 +1879,8 @@ public class V3Poller extends BasePoll {
       
       // Never include a peer that has rejected one of our polls in
       // the past because of a group mismatch.
+      // CR: allow peer if group mismatch more than a few weeks old, in
+      // case changes group
       if (status.getLastPollNak() != null &&
           status.getLastPollNak() == PollNak.NAK_GROUP_MISMATCH) {
         return false;
@@ -1873,6 +1908,7 @@ public class V3Poller extends BasePoll {
    * @return A number between 0.0 and 1.0 representing the probability
    *      that we want to try to invite this peer into a poll.
    */
+  // CR: poll policy
   double inviteProb(long lastPollInvitationTime,
                     long lastMessageTime) {
     // If we have never tried to contact this peer, we definitely want to try
@@ -1922,6 +1958,7 @@ public class V3Poller extends BasePoll {
                   "quorum.  Count=" + participatingPeers);
       } else {
         // Invite 'quorum' new peers to participate.
+	// CR: use invitationSize - participatingPeers?
         Collection newPeers =
           choosePeers(getReferenceList(), theParticipants.keySet(),
                       invitationSize);
@@ -1929,6 +1966,7 @@ public class V3Poller extends BasePoll {
         log.debug("[InvitationCallback] Inviting " + newPeers.size()
                   + " new peers to participate.");
 
+	// CR: refactor
         for (Iterator it = newPeers.iterator(); it.hasNext(); ) {
           PeerIdentity id = (PeerIdentity)it.next();
           ParticipantUserData participant = makeParticipant(id);
@@ -2083,6 +2121,7 @@ public class V3Poller extends BasePoll {
                                 CachedUrlSetHasher hasher, Exception e) {
       if (e != null) {
         log.warning("Poll hash failed", e);
+	// CR: too extreme.  what if pending repairs?
         stopPoll(POLLER_STATUS_ERROR);
       } else {
         finishTally();
