@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyAndContent.java,v 1.24 2007-10-26 07:36:13 thib_gc Exp $
+ * $Id: ProxyAndContent.java,v 1.25 2007-12-19 05:15:31 tlipkis Exp $
  */
 
 /*
@@ -637,6 +637,6 @@ public class ProxyAndContent extends LockssServlet {
     "Manage this cache's audit proxy and ICP server.";
 
   private static final String PROXY_CLIENT_EXPLANATION =
-    "Configure the LCOKSS crawler to access the net through a proxy server.";
+    "Configure the LOCKSS crawler to access the net through a proxy server.";
 
 }
