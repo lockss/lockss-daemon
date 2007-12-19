@@ -1,5 +1,5 @@
 /*
- * $Id: DebugPanel.java,v 1.13 2007-10-03 00:35:52 smorabito Exp $
+ * $Id: DebugPanel.java,v 1.14 2007-12-19 05:14:44 tlipkis Exp $
  */
 
 /*
@@ -69,6 +69,7 @@ public class DebugPanel extends LockssServlet {
   static final String ACTION_FORCE_START_V3_POLL = "Force V3 Poll";
   static final String ACTION_START_CRAWL = "Start Crawl";
   static final String ACTION_FORCE_START_CRAWL = "Force Start Crawl";
+  static final String ACTION_RELOAD_CONFIG = "Reload Config";
 
   static final String COL2 = "colspan=2";
   static final String COL2CENTER = COL2 + " align=center";
@@ -79,6 +80,7 @@ public class DebugPanel extends LockssServlet {
   private PluginManager pluginMgr;
   private PollManager pollManager;
   private CrawlManager crawlMgr;
+  private ConfigManager cfgMgr;
   private RemoteApi rmtApi;
 
   String auid;
@@ -106,6 +108,7 @@ public class DebugPanel extends LockssServlet {
     pluginMgr = daemon.getPluginManager();
     pollManager = daemon.getPollManager();
     crawlMgr = daemon.getCrawlManager();
+    cfgMgr = daemon.getConfigManager();
     rmtApi = daemon.getRemoteApi();
   }
 
@@ -118,6 +121,9 @@ public class DebugPanel extends LockssServlet {
     }
     if (ACTION_MAIL_BACKUP.equals(action)) {
       doMailBackup();
+    }
+    if (ACTION_RELOAD_CONFIG.equals(action)) {
+      doReloadConfig();
     }
     if (ACTION_THROW_IOEXCEPTION.equals(action)) {
       doThrow();
@@ -143,6 +149,10 @@ public class DebugPanel extends LockssServlet {
     } catch (Exception e) {
       errMsg = "Error: " + e.getMessage();
     }
+  }
+
+  private void doReloadConfig() {
+    cfgMgr.requestReload();
   }
 
   private void doThrow() throws IOException {
@@ -264,6 +274,9 @@ public class DebugPanel extends LockssServlet {
     frm.method("POST");
 
 
+    Input reload = new Input(Input.Submit, KEY_ACTION, ACTION_RELOAD_CONFIG);
+    setTabOrder(reload);
+    frm.add("<br><center>"+reload+"</center>");
     Input backup = new Input(Input.Submit, KEY_ACTION, ACTION_MAIL_BACKUP);
     setTabOrder(backup);
     frm.add("<br><center>"+backup+"</center>");
@@ -281,11 +294,11 @@ public class DebugPanel extends LockssServlet {
 			     ( showForcePoll
 			       ? ACTION_FORCE_START_V3_POLL
 			       : ACTION_START_V3_POLL));
-    frm.add("<br><center>" + v3Poll + "</center>");
     Input crawl = new Input(Input.Submit, KEY_ACTION,
 			    ( showForceCrawl
 			      ? ACTION_FORCE_START_CRAWL
 			      : ACTION_START_CRAWL));
+    frm.add("<br><center>" + v3Poll + "</center>");
     frm.add("<br><center>" + crawl + "</center>");
     comp.add(frm);
     return comp;
