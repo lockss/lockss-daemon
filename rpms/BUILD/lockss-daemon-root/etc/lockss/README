@@ -8,10 +8,10 @@ of the underlying Linux platform.
 
 Prerequisites:
 - Public (routable) IP address
-- Java 1.4 or higher
+- Java 1.5
 
 Java:
-At present th daemon will only work with the Sun JDK or JRE.  It has been
+At present the daemon will only work with the Sun JDK or JRE.  It has been
 reported that Fedora's SELinux support must be disabled in order for this
 JVM to run.
 
@@ -19,20 +19,26 @@ Configuration:
 After installing the RPM, run /etc/locks/hostconfig as root.  You will be
 asked for the following information.  Most values will default to reasonable
 guesses, or to their previous value if hostconfig has previously been run.
+hostconfig should also be run after upgrading to a new version of the LOCKSS
+daemon, in case any new configuration values are needed.
 
 - Fully qualified hostname (FQDN) of this machine.
 
 - IP address of this machine.
 
 - Initial subnet for admin UI access.
-    The subnet (in CIDR, IP/MASK or X.Y.Z.* notation) that will initially
-    be granted access to the web-based administrative UI.  The local host
-    is implicitly allowed.
+    The subnet (in CIDR or X.Y.Z.* notation) that will initially be
+    granted access to the web-based administrative UI.  The local host is
+    implicitly allowed.
+
+- LCAP V3 protocol port.
+    The TCP port at which this daemon will receive polling messages from
+    peers.
 
 - Mail relay for this machine
     If the machine is configured to handle mail, "localhost" should work.
-    Otherwise, should be an SMTP relay that will accept mail from this
-    machine.
+    Otherwise, should be an SMTP relay that will accept and relay mail
+    from this machine.  Will also prompt for username/passwd if required.
 
 - E-mail address for administrator
     Occasional alerts may be sent to this address.
@@ -52,10 +58,10 @@ guesses, or to their previous value if hostconfig has previously been run.
     string of the form "-p <url1> -p <url2> ..."  to load multiple config
     files.
 
-- Preservation group
+- Preservation group(s)
     Used to select group-specific options in the config file.  Use the
     default value to participate in the global LOCKSS preservation
-    community.
+    community.  Multiple groups may be entered, separated by semicolon.
 
 - Cache storage directories
     The full path of the directory under which LOCKSS will store
@@ -71,7 +77,10 @@ guesses, or to their previous value if hostconfig has previously been run.
 The script will then echo the values and ask for confirmation, store the
 configuration and create any necessary cache directories.
 
-The LOCKSS daemon can be started by running "/etc/init.d/lockss start",
-which will happen automatically at the next reboot.  To further administer
-the daemon, go to http://<hostname>:8081/ (or other port, if not using the
-standard daemon configuration).
+The LOCKSS daemon can be started by running "/etc/init.d/lockss start".
+To have the daemon start automatically at boot time run
+  /sbin/chkconfig -add lockss
+as root.  This only needs to be done once, after the initial install.
+
+To further administer the daemon, go to http://<hostname>:8081/ (or other
+port, if not using the standard daemon configuration).
