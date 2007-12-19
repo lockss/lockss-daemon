@@ -18,6 +18,7 @@ SunOS)
         CFG_SCRIPT=${LOCKSS_HOME}/etc/lockss/hostconfig
         LOGFILE=${LOCKSS_HOME}/var/log/lockss/stdout
 	RUNSCRIPT=${LOCKSS_HOME}/etc/lockss/rundaemon
+	KEEP_GOING=${LOCKSS_HOME}/KeepGoing
         ;;
 Linux)
         LOCKSS_USER=lockss
@@ -26,6 +27,8 @@ Linux)
         CFG_SCRIPT=/etc/lockss/hostconfig
         LOGFILE=/var/log/lockss/stdout
 	RUNSCRIPT=/etc/lockss/rundaemon
+	KEEP_GOING=~/KeepGoing
+	LOCKSS_HOME=""
         ;;
 esac
 
@@ -36,11 +39,10 @@ else
   exit 1
 fi
 
-KEEP_GOING=~/KeepGoing
-touch ~/KeepGoing
+touch ${KEEP_GOING}
 
 while [ -f ${KEEP_GOING} ]; do
-    /etc/lockss/rundaemon wait
+    ${LOCKSS_HOME}/etc/lockss/rundaemon wait
     EXIT_CODE=$?
     echo stopped with status ${EXIT_CODE} at `date` >>${LOGFILE}
     if [ -f ${KEEP_GOING} ]; then
