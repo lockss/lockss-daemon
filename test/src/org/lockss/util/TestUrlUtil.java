@@ -1,5 +1,5 @@
 /*
- * $Id: TestUrlUtil.java,v 1.31 2007-02-20 01:36:46 tlipkis Exp $
+ * $Id: TestUrlUtil.java,v 1.32 2007-12-19 05:14:18 tlipkis Exp $
  */
 
 /*
@@ -304,6 +304,17 @@ public class TestUrlUtil extends LockssTestCase {
     ConfigurationUtil.addFromArgs(UrlUtil.PARAM_PATH_TRAVERSAL_ACTION,
 				  "3");
     assertMode3();
+
+    // Empty query removal
+
+    ConfigurationUtil.addFromArgs(UrlUtil.PARAM_NORMALIZE_EMPTY_QUERY,
+				  "false");
+    assertEquals("http://a.b/bar?", UrlUtil.normalizeUrl("http://a.b/bar?"));
+    assertEquals("http://a.b/ba?r", UrlUtil.normalizeUrl("http://a.b/ba?r"));
+    ConfigurationUtil.addFromArgs(UrlUtil.PARAM_NORMALIZE_EMPTY_QUERY,
+				  "true");
+    assertEquals("http://a.b/bar", UrlUtil.normalizeUrl("http://a.b/bar?"));
+    assertEquals("http://a.b/ba?r", UrlUtil.normalizeUrl("http://a.b/ba?r"));
   }
 
   // mode 1 leaves extra ".."s alone.
