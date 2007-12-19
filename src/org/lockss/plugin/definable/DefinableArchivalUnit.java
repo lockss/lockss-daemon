@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.61 2007-11-08 10:07:47 tlipkis Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.62 2007-12-19 05:13:26 tlipkis Exp $
  */
 
 /*
@@ -132,15 +132,22 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     List permission_list = new ArrayList(templateList.size());
     for(Iterator it = templateList.iterator(); it.hasNext();) {
       String permissionPage = convertVariableString((String)it.next());
-      log.debug3("Adding permission page: "+permissionPage);
-      permission_list.add(permissionPage);
+      if (permissionPage != null) {
+	log.debug3("Adding permission page: "+permissionPage);
+	permission_list.add(permissionPage);
+      }
     }
     return permission_list;
   }
 
-  protected String makeStartUrl() {
+  protected String makeStartUrl() throws ConfigurationException {
     String startstr = definitionMap.getString(KEY_AU_START_URL, "");
     String convstr = convertVariableString(startstr);
+    if (convstr == null) {
+      String msg = "Missing params in start url: " + startstr;
+      log.error(msg);
+      throw new ConfigurationException(msg);
+    }
     log.debug2("setting start url " + convstr);
     return convstr;
   }
@@ -188,6 +195,11 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
       throws ArchivalUnit.ConfigurationException {
 
     String patStr = convertVariableRegexpString(val);
+    if (patStr == null) {
+      String msg = "Missing regexp args: " + val;
+      log.error(msg);
+      throw new ConfigurationException(msg);
+    }
     try {
       return
 	RegexpUtil.getCompiler().compile(patStr, Perl5Compiler.READ_ONLY_MASK);
@@ -211,6 +223,10 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
   protected String makeName() {
     String namestr = definitionMap.getString(KEY_AU_NAME, "");
     String convstr = convertVariableString(namestr);
+    if (convstr == null) {
+      log.error("missing args in name: " + namestr);
+      return namestr;
+    }
     log.debug2("setting name string: " + convstr);
     return convstr;
   }
@@ -229,21 +245,26 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
             newAuxClass((String) rule, CrawlRuleFromAuFactory.class);
 	return fact.createCrawlRule(this);
     }
-    List rules = Collections.EMPTY_LIST;
+    ArrayList rules = null;
     if (rule instanceof List) {
       List<String> templates = (List<String>)rule;
       rules = new ArrayList(templates.size());
       for (String rule_template : templates) {
-	rules.add(convertRule(rule_template, ignoreCase));
+	CrawlRule cr = convertRule(rule_template, ignoreCase);
+	if (cr != null) {
+	  rules.add(cr);
+	}
+      }
+      rules.trimToSize();
+
+      if (rules.size() > 0) {
+	return new CrawlRules.FirstMatch(rules);
+      } else {
+	log.error("No crawl rules found for plugin: " + makeName());
+	return null;
       }
     }
-
-    if (rules.size() > 0) {
-      return new CrawlRules.FirstMatch(rules);
-    } else {
-      log.error("No crawl rules found for plugin: " + makeName());
-      return null;
-    }
+    return null;
   }
 
   protected OaiRequestData makeOaiData() {
@@ -357,16 +378,18 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 // ---------------------------------------------------------------------
 //   VARIABLE ARGUMENT REPLACEMENT SUPPORT ROUTINES
 // ---------------------------------------------------------------------
+  static final int CONVERT_QUOTE_REGEXP_META_CHARS = 1;
+
   String convertVariableRegexpString(String printfString) {
-    return convertVariableString(printfString, true);
+    return convertVariableString(printfString,
+				 CONVERT_QUOTE_REGEXP_META_CHARS);
   }
 
   String convertVariableString(String printfString) {
-    return convertVariableString(printfString, false);
+    return convertVariableString(printfString, 0);
   }    
 
-  String convertVariableString(String printfString, boolean quoteRegexp) {
-    String converted_string = printfString;
+  String convertVariableString(String printfString, int options) {
     PrintfUtil.PrintfData p_data = PrintfUtil.stringToPrintf(printfString);
     String format = p_data.getFormat();
     Collection p_args = p_data.getArguments();
@@ -376,7 +399,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     for (Iterator it = p_args.iterator(); it.hasNext(); ) {
       String key = (String) it.next();
       Object val = paramMap.getMapElement(key);
-      if (val != null){
+      if (val != null) {
         if (val instanceof Vector) {
           Vector vec = (Vector) val;
           if(vec.elementAt(0) instanceof Long) {
@@ -385,7 +408,8 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
             substitute_args.add(RANGE_SUBSTITUTION_STRING);
           }
         } else {
-	  if (quoteRegexp && val instanceof String) {
+	  if ((options & CONVERT_QUOTE_REGEXP_META_CHARS) != 0 &&
+	      val instanceof String) {
 	    val = Perl5Compiler.quotemeta((String)val);
 	  }
           substitute_args.add(val);
@@ -398,11 +422,11 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 
     if (has_all_args) {
       PrintfFormat pf = new PrintfFormat(format);
-      converted_string = pf.sprintf(substitute_args.toArray());
+      return pf.sprintf(substitute_args.toArray());
     } else {
-      log.warning("missing variable arguments");
+      log.warning("Missing variable arguments: " + printfString);
+      return null;
     }
-    return converted_string;
   }
 
   CrawlRule convertRule(String printfString, boolean ignoreCase)

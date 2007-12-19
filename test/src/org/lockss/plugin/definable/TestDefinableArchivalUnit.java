@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.33 2007-11-08 10:07:47 tlipkis Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.34 2007-12-19 05:13:26 tlipkis Exp $
  */
 
 /*
@@ -149,6 +149,9 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     expectedReturn = "My Test Short Year = 03";
     actualReturn = cau.convertVariableString(substr);
     assertEquals("return value", expectedReturn, actualReturn);
+
+    substr = "\"My Test no param = %s\", no_param";
+    assertNull(cau.convertVariableString(substr));
   }
 
   public void testConvertRegexpString() {
@@ -352,7 +355,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
                  rules.match("http://www.example.com/"));
   }
 
-  public void testMakeStartUrl() {
+  public void testMakeStartUrl() throws Exception {
     configMap.putInt("VOLUME", 43);
     configMap.putString("URL", "http://www.example.com/");
     defMap.putString(ArchivalUnit.KEY_AU_START_URL,

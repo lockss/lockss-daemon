@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.123 2007-10-09 00:49:57 smorabito Exp $
+ * $Id: BaseArchivalUnit.java,v 1.124 2007-12-19 05:13:26 tlipkis Exp $
  */
 
 /*
@@ -633,7 +633,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    * this au will start.
    * @return the starting url as a String
    */
-  abstract protected String makeStartUrl();
+  abstract protected String makeStartUrl() throws ConfigurationException;
 
   /**
    * subclasses must implement to make and return the name for this au
