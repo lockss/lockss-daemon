@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedContentGenerator.java,v 1.26 2007-09-24 18:37:14 dshr Exp $
+ * $Id: SimulatedContentGenerator.java,v 1.27 2007-12-19 05:16:24 tlipkis Exp $
  */
 
 /*
@@ -396,6 +396,7 @@ public class SimulatedContentGenerator {
 		   (alterFile && (jj==getAbnormalFileNumber())));
     }
     generateIndexFile(treeRoot, LockssPermission.LOCKSS_PERMISSION_STRING);
+    logger.debug("Generated content tree: " + contentRoot);
     return treeRoot.toString();
   }
 
