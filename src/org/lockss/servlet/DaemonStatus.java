@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.70 2007-08-23 06:21:25 tlipkis Exp $
+ * $Id: DaemonStatus.java,v 1.71 2007-12-19 05:14:31 tlipkis Exp $
  */
 
 /*
@@ -334,7 +334,8 @@ public class DaemonStatus extends LockssServlet {
 
       table.newRow();
       table.addHeading(title, "ALIGN=CENTER COLSPAN=" + (cols * 2 - 1));
-      table.newRow();
+      table.newRow("\"background=#e0e0e0'|");
+
       addSummaryInfo(table, statTable, cols);
 
       if (colList != null) {
@@ -519,7 +520,7 @@ public class DaemonStatus extends LockssServlet {
 				  java.util.List rules) {
     Composite elem = new Composite();
     Image sortArrow = null;
-    boolean ascending = true;
+    boolean ascending = getDefaultSortAscending(cd);
     String colTitle = cd.getTitle();
     if (true && statTable.isResortable() && cd.isSortable()) {
       String ruleParam;
@@ -672,6 +673,21 @@ public class DaemonStatus extends LockssServlet {
     case ColumnDescriptor.TYPE_PERCENT:
     case ColumnDescriptor.TYPE_FLOAT:	// tk - should align decimal points?
       return "right";
+    }
+  }
+
+  private boolean getDefaultSortAscending(ColumnDescriptor cd) {
+    switch (cd.getType()) {
+    case ColumnDescriptor.TYPE_STRING:
+    case ColumnDescriptor.TYPE_DATE:
+    case ColumnDescriptor.TYPE_IP_ADDRESS:
+    case ColumnDescriptor.TYPE_TIME_INTERVAL:
+    default:
+      return true;
+    case ColumnDescriptor.TYPE_INT:
+    case ColumnDescriptor.TYPE_PERCENT:
+    case ColumnDescriptor.TYPE_FLOAT:	// tk - should align decimal points?
+      return false;
     }
   }
 
