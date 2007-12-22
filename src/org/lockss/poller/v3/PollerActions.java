@@ -1,5 +1,5 @@
 /*
- * $Id: PollerActions.java,v 1.21 2007-08-24 00:41:22 smorabito Exp $
+ * $Id: PollerActions.java,v 1.22 2007-12-22 22:13:32 smorabito Exp $
  */
 
 /*
@@ -264,6 +264,7 @@ public class PollerActions {
                + " in poll " + ud.getKey());
     V3LcapMessage msg = ud.makeMessage(V3LcapMessage.MSG_EVALUATION_RECEIPT);
     msg.setEffortProof(ud.getReceiptEffortProof());
+    msg.setAgreementHint(ud.getPercentAgreement());
     try {
       ud.sendMessageTo(msg, ud.getVoterId());
       ud.setStatus(V3Poller.PEER_STATUS_COMPLETE);

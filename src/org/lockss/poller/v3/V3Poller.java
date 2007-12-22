@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.64 2007-12-15 00:37:22 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.65 2007-12-22 22:13:32 smorabito Exp $
  */
 
 /*
@@ -315,7 +315,7 @@ public class V3Poller extends BasePoll {
   private int voteDeadlineMultiplier = DEFAULT_VOTE_DURATION_MULTIPLIER;
   private boolean enableDiscovery = DEFAULT_ENABLE_DISCOVERY;
   private VoteTallyCallback voteTallyCallback;
-  
+
   // Probability of repairing from another cache.  A number between
   // 0.0 and 1.0.
   // CR: not a percentage; fix name
@@ -716,52 +716,47 @@ public class V3Poller extends BasePoll {
       return;
     }
 
-    // Want this action to be serialized with the other poll actions.
-    pollManager.runTask(new PollRunner.Task("Stopping Poll", getKey()) {
-      public void lockssRun() {
-        log.info("Stopping poll " + getKey() + " with status " + 
-                 V3Poller.POLLER_STATUS_STRINGS[status]);
-        setStatus(status);
-        if (task != null && !task.isExpired()) {
-          log.debug2("Cancelling task");
-          task.cancel();
+    log.info("Stopping poll " + getKey() + " with status " + 
+             V3Poller.POLLER_STATUS_STRINGS[status]);
+    setStatus(status);
+    if (task != null && !task.isExpired()) {
+      log.debug2("Cancelling task");
+      task.cancel();
+    }
+    if (invitationRequest != null) {
+      log.debug2("Cancelling invitation request timer event.");
+      TimerQueue.cancel(invitationRequest);
+    }
+    if (voteCompleteRequest != null) {
+      log.debug2("Cancelling vote completion timer event.");
+      TimerQueue.cancel(voteCompleteRequest);
+    }
+    if (pollCompleteRequest != null) {
+      log.debug2("Cancelling poll completion timer event.");
+      TimerQueue.cancel(pollCompleteRequest);
+    }
+    // Reset the duration and deadline to reflect reality
+    long oldDeadline = pollerState.getPollDeadline();
+    long now = TimeBase.nowMs();
+    pollerState.setPollDeadline(now);
+    pollerState.setDuration(now - pollerState.getCreateTime());
+    // Clean up any lingering participants.
+    synchronized(theParticipants) {
+      for (Iterator voters = theParticipants.values().iterator(); voters.hasNext(); ) {
+        ParticipantUserData ud = (ParticipantUserData)voters.next();
+        VoteBlocks vb = ud.getVoteBlocks();
+        if (vb != null) {
+          vb.release();
         }
-        if (invitationRequest != null) {
-          log.debug2("Cancelling invitation request timer event.");
-          TimerQueue.cancel(invitationRequest);
-        }
-        if (voteCompleteRequest != null) {
-          log.debug2("Cancelling vote completion timer event.");
-          TimerQueue.cancel(voteCompleteRequest);
-        }
-        if (pollCompleteRequest != null) {
-          log.debug2("Cancelling poll completion timer event.");
-          TimerQueue.cancel(pollCompleteRequest);
-        }
-        // Reset the duration and deadline to reflect reality
-        long oldDeadline = pollerState.getPollDeadline();
-        long now = TimeBase.nowMs();
-        pollerState.setPollDeadline(now);
-        pollerState.setDuration(now - pollerState.getCreateTime());
-        // Clean up any lingering participants.
-        synchronized(theParticipants) {
-          for (Iterator voters = theParticipants.values().iterator(); voters.hasNext(); ) {
-            ParticipantUserData ud = (ParticipantUserData)voters.next();
-            VoteBlocks vb = ud.getVoteBlocks();
-            if (vb != null) {
-              vb.release();
-            }
-          }
-        }
-        serializer.closePoll();
-        pollManager.closeThePoll(pollerState.getPollKey());      
-        
-        log.debug("Closed poll " + pollerState.getPollKey());
-
-        // Finally, release unneeded resources
-        release();
       }
-    });
+    }
+    serializer.closePoll();
+    pollManager.closeThePoll(pollerState.getPollKey());      
+    
+    log.debug("Closed poll " + pollerState.getPollKey());
+    
+    // Finally, release unneeded resources
+    release();
   }
 
   /**
@@ -1484,96 +1479,67 @@ public class V3Poller extends BasePoll {
     
     final BlockHasher.EventHandler blockDone =
       new BlockHasher.EventHandler() {
-        public void blockDone(final HashBlock hblock) {
-          // XXX: Handle errors here
-          pollManager.runTask(new PollRunner.Task("Received Repair Block Complete", getKey()) {
-            public void lockssRun() {
-	      // CR: should keep track of exitence of pending repairs to
-	      // update status when done
-              PollerStateBean.RepairQueue rq = pollerState.getRepairQueue();
-              log.debug3("Finished hashing repair sent for block " + hblock);
-              // Replay the block comparison using the new hash results.
-              int digestIndex = 0;
-              BlockTally tally = new BlockTally(pollerState.getQuorum());
-              synchronized(theParticipants) {
-                for (Iterator iter = theParticipants.keySet().iterator();
-                     iter.hasNext(); ) {
-                  digestIndex++;
-                  PeerIdentity id = (PeerIdentity)iter.next();
-                  VoteBlock vb = 
-                    ((ParticipantUserData)theParticipants.get(id)).getVoteBlocks().getVoteBlock(url);
-                  if (vb == null) {
-                    log.debug("Voter " + id + " does not seem to have url " + url + " in his vote blocks.");
-                    // The voter did not have this URL in the first place.
-                    tally.addMissingBlockVoter(id, url);
-                  } else {
-                    compareBlocks(id, digestIndex, vb, hblock, tally);
-                  }
-                }
-              }
-              tally.tallyVotes();
-              log.debug3("After-vote hash tally for repaired block " + url
-                         + ": " + tally.getStatusString());
-              setStatus(V3Poller.POLLER_STATUS_TALLYING);
-              checkTally(tally, url, true);
+      public void blockDone(final HashBlock hblock) {
+        // CR: should keep track of exitence of pending repairs to
+        // update status when done
+        PollerStateBean.RepairQueue rq = pollerState.getRepairQueue();
+        log.debug3("Finished hashing repair sent for block " + hblock);
+        // Replay the block comparison using the new hash results.
+        int digestIndex = 0;
+        BlockTally tally = new BlockTally(pollerState.getQuorum());
+        synchronized(theParticipants) {
+          for (Iterator iter = theParticipants.keySet().iterator();
+          iter.hasNext(); ) {
+            digestIndex++;
+            PeerIdentity id = (PeerIdentity)iter.next();
+            VoteBlock vb = 
+              ((ParticipantUserData)theParticipants.get(id)).getVoteBlocks().getVoteBlock(url);
+            if (vb == null) {
+              log.debug("Voter " + id + " does not seem to have url " + url + " in his vote blocks.");
+              // The voter did not have this URL in the first place.
+              tally.addMissingBlockVoter(id, url);
+            } else {
+              compareBlocks(id, digestIndex, vb, hblock, tally);
             }
-            
-            public String toString() {
-              return "[After-repair tally of " + url + " in poll " 
-                     + getKey() + "]";
-            }
-          });
+          }
         }
+        tally.tallyVotes();
+        log.debug3("After-vote hash tally for repaired block " + url
+                   + ": " + tally.getStatusString());
+        setStatus(V3Poller.POLLER_STATUS_TALLYING);
+        checkTally(tally, url, true);
+      }
     };
 
     final HashService.Callback hashDone =
       new HashService.Callback() {
         public void hashingFinished(CachedUrlSet urlset, Object cookie,
                                     CachedUrlSetHasher hasher, Exception e) {
-          pollManager.runTask(new PollRunner.Task("Received Repair Hash Complete", getKey()) {
-            public void lockssRun() {
               // If there are no more repairs outstanding, go ahead and
-              // stop the poll at this point.
-              PollerStateBean.RepairQueue queue = pollerState.getRepairQueue();
-	      // CR: push size() methods lower
-              int pending = queue.getPendingRepairs().size();
-              int active = queue.getActiveRepairs().size();
-              log.debug2("Repair hash on one block done.  Pending repairs="
-                         + pending + "; Active repairs=" + active);
-              if (pending == 0 && active == 0) {
-                voteComplete();
-              }
-            }
-            
-            public String toString() {
-              return "[Repairs complete check for poll " + getKey() + "]";
-            }
-          });
+          // stop the poll at this point.
+          PollerStateBean.RepairQueue queue = pollerState.getRepairQueue();
+          // CR: push size() methods lower
+          int pending = queue.getPendingRepairs().size();
+          int active = queue.getActiveRepairs().size();
+          log.debug2("Repair hash on one block done.  Pending repairs="
+                     + pending + "; Active repairs=" + active);
+          if (pending == 0 && active == 0) {
+            voteComplete();
+          }
         }
     };
 
     
-    // Serialize these
-    // CR: don't need to serialize this
-    pollManager.runTask(new PollRunner.Task("Scheduling Repair Hash", getKey()) {
-      public void lockssRun() {
-        CachedUrlSet blockCus =
-          getAu().makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(url));
-        boolean hashing = scheduleHash(blockCus,
-                                       Deadline.at(pollerState.getPollDeadline()),
-                                       hashDone,
-                                       blockDone);
-        if (!hashing) {
-	  // CR: leave repair pending
-          log.warning("Failed to schedule a repair check hash for block " + url);
-        }
-      }
-      
-      public String toString() {
-        return "[Scheduling repair hash of " + url + " in poll "
-                + getKey() + "]";
-      }
-    });
+    CachedUrlSet blockCus =
+      getAu().makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(url));
+    boolean hashing = scheduleHash(blockCus,
+                                   Deadline.at(pollerState.getPollDeadline()),
+                                   hashDone,
+                                   blockDone);
+    if (!hashing) {
+      // CR: leave repair pending
+      log.warning("Failed to schedule a repair check hash for block " + url);
+    }
     
   }
   
@@ -1942,6 +1908,9 @@ public class V3Poller extends BasePoll {
    */
   private class InvitationCallback implements TimerQueue.Callback {
     public void timerExpired(Object cookie) {
+      // Check to see if the poll has ended.  If so, immediately return.
+      if (!activePoll) return;
+
       // Get a list of peers who have decided to participate.
       int participatingPeers = 0;
       synchronized(theParticipants) {

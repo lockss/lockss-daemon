@@ -1,5 +1,5 @@
 /*
- * $Id: V3LcapMessage.java,v 1.33 2007-10-09 00:49:56 smorabito Exp $
+ * $Id: V3LcapMessage.java,v 1.34 2007-12-22 22:13:32 smorabito Exp $
  */
 
 /*
@@ -144,6 +144,12 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
    * Repair Data.
    */
   private EncodedProperty m_repairProps;
+  
+  /**
+   * A hint sent in the receipt for a poll indicating what level of agreement
+   * the poller had with a participant.
+   */
+  private double m_agreementHint;
 
   // InputStream from which to read repair data when encoding this message.
   private transient InputStream m_repairDataInputStream;
@@ -310,6 +316,7 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     m_lastVoteBlockURL = m_props.getProperty("lastvoteblockurl");
     m_voteComplete = m_props.getBoolean("votecomplete", false);
     m_repairProps = m_props.getEncodedProperty("repairProps");
+    m_agreementHint = m_props.getDouble("agreementHint", -1.0);
     m_groups = m_props.getProperty("groups");
     String nakString = m_props.getProperty("nak");
     if (nakString != null) {
@@ -480,6 +487,9 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     if (m_repairProps != null) {
       m_props.putEncodedProperty("repairProps", m_repairProps);
     }
+    if (m_agreementHint > 0.0) {
+      m_props.putDouble("agreementHint", m_agreementHint);
+    }
   }
 
   /**
@@ -576,6 +586,14 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
   
   public PollNak getNak() {
     return m_nak;
+  }
+
+  public void setAgreementHint(double d) {
+    m_agreementHint = d;
+  }
+  
+  public double getAgreementHint() {
+    return m_agreementHint;
   }
 
   /**

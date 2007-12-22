@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.184 2007-12-15 00:37:23 tlipkis Exp $
+ * $Id: PollManager.java,v 1.185 2007-12-22 22:13:32 smorabito Exp $
  */
 
 /*
@@ -718,7 +718,7 @@ public class PollManager
     if (p.getType() == Poll.V3_POLL) {
       // Retrieve the node state for the top-level AU
       NodeStateImpl ns = (NodeStateImpl)nm.getNodeState(p.getCachedUrlSet());
-      ns.closeV3Poll(p.getKey());
+      if (ns != null) ns.closeV3Poll(p.getKey());
     }
 
     // XXX: V3 -- Only required for V1 polls.
@@ -1062,7 +1062,11 @@ public class PollManager
       }
     }
   }
-  
+
+  public PollRunner getPollRunner() {
+    return theTaskRunner;
+  }
+
   //--------------- PollerStatus Accessors -----------------------------
   public Collection getV1Polls() {
     Collection polls = new ArrayList();
