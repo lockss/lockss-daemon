@@ -68,7 +68,7 @@
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.highwire.HighWireHtmlFilterFactoryNew</string>
+    <string>org.lockss.plugin.highwire.ClockssHighWireHtmlFilterFactory</string>
   </entry>
   <entry>
     <string>au_login_page_checker</string>

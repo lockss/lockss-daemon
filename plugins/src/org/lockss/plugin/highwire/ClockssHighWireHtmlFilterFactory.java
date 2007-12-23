@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireHtmlFilterFactoryNew.java,v 1.3 2007-06-29 18:27:13 troberts Exp $
+ * $Id: ClockssHighWireHtmlFilterFactory.java,v 1.1 2007-12-23 21:18:12 thib_gc Exp $
  */
 
 /*
@@ -42,11 +42,13 @@ import org.lockss.filter.*;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 
-public class HighWireHtmlFilterFactoryNew implements FilterFactory {
+public class ClockssHighWireHtmlFilterFactory implements FilterFactory {
 
   // Remove everything on the line after these comments
   static HtmlTagFilter.TagPair[] tagpairs = {
-    new HtmlTagFilter.TagPair("<A NAME=\"relation_type_", "</HTML>", 
+    new HtmlTagFilter.TagPair("<STRONG>Institution:",
+                                  "</A>", true),
+    new HtmlTagFilter.TagPair("<A NAME=\"relation_type_", "</HTML>",
 			      true, false),
     new HtmlTagFilter.TagPair("<A NAME=\"otherarticles\">", "</HTML>"),
     new HtmlTagFilter.TagPair("<", ">"),
@@ -57,28 +59,32 @@ public class HighWireHtmlFilterFactoryNew implements FilterFactory {
 					       InputStream in,
 					       String encoding) {
 
-    NodeFilter[] filters = new NodeFilter[8];
+    NodeFilter[] filters = new NodeFilter[9];
     filters[0] =
+      new TagNameFilter("script");
+
+    filters[1] =
       HtmlNodeFilters.tagWithAttribute("div", "id", "authenticationstring");
 
-    filters[1] = new TagNameFilter("script");
-
     filters[2] =
-      HtmlNodeFilters.tagWithAttribute("div", "id", "user_nav");
+      HtmlNodeFilters.tagWithAttribute("div", "id", "universityarea");
 
     filters[3] =
-      HtmlNodeFilters.tagWithAttribute("table", "class", "content_box_inner_table");
+      HtmlNodeFilters.tagWithAttribute("div", "id", "user_nav");
 
     filters[4] =
-      HtmlNodeFilters.tagWithAttribute("a", "class", "contentbox");
+      HtmlNodeFilters.tagWithAttribute("table", "class", "content_box_inner_table");
 
     filters[5] =
-      HtmlNodeFilters.tagWithAttribute("div", "id", "ArchivesNav");
+      HtmlNodeFilters.tagWithAttribute("a", "class", "contentbox");
 
     filters[6] =
-      HtmlNodeFilters.tagWithText("strong", "related", true);
+      HtmlNodeFilters.tagWithAttribute("div", "id", "ArchivesNav");
 
     filters[7] =
+      HtmlNodeFilters.tagWithText("strong", "related", true);
+
+    filters[8] =
       HtmlNodeFilters.lowestLevelMatchFilter(HtmlNodeFilters.tagWithText("table", "Related Content", false));
 
     OrFilter combineFilter = new OrFilter();
