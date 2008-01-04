@@ -4,12 +4,16 @@
     <string>org.lockss.plugin.bmc.BMCPlugin</string>
   </entry>
   <entry>
+    <string>plugin_version</string>
+    <string>2</string>
+  </entry>
+  <entry>
     <string>au_def_pause_time</string>
     <long>6000</long>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;BioMed Central %s %s&quot;, base_url, volume_name</string>
+    <string>&quot;BioMed Central Plugin, Base URL %s, ISSN %s, Volume %s&quot;, base_url, journal_issn, volume_name</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -21,7 +25,7 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Biomed Central Plugin</string>
+    <string>BioMed Central Plugin</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
