@@ -34,7 +34,7 @@
       <string>1,&quot;%slockss/&quot;, base_url</string>
       <string>2,&quot;postcomment$&quot;</string>
       <string>1,&quot;%s%s/%s&quot;, base_url, journal_issn, volume_name</string>
-      <string>1,&quot;.*\.([cC][sS][sS]|[gG][iI][fF]|[jJ][pP][eE][gG]|[jJ][pP][gG]|[jJ][sS]|[pP][nN][gG])$&quot;</string>
+      <string>1,&quot;.*\.(css|gif|ico|jpe?g|js|png|tif?f)$&quot;</string>
       <string>1,&quot;%scontent/.*/%s-%s[^/]+\.[^/]+&quot;, base_url, journal_issn, volume_name</string>
     </list>
   </entry>
