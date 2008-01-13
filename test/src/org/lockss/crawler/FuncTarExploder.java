@@ -1,5 +1,5 @@
 /*
- * $Id: FuncTarExploder.java,v 1.4 2007-10-16 23:47:25 dshr Exp $
+ * $Id: FuncTarExploder.java,v 1.4.2.1 2008-01-13 00:00:43 dshr Exp $
  */
 
 /*
@@ -269,6 +269,11 @@ public class FuncTarExploder extends LockssTestCase {
     "http://www.example.com/content.tar",
   };
 
+  String[] url3 = {
+    "http://www.example.com/simcontent/index.html",
+    "http://www.example.com/branch1/index.html",
+  };
+
   private void checkUnExplodedUrls() {
     log.debug2("Checking UnExploded URLs.");
     for (int i = 0; i < url2.length; i++) {
@@ -279,6 +284,11 @@ public class FuncTarExploder extends LockssTestCase {
       assertTrue(cu + " isn't MySimulatedArchivalUnit",
 		 (cu.getArchivalUnit() instanceof MySimulatedArchivalUnit));
       assertEquals(sau, cu.getArchivalUnit());
+    }
+    for (int i = 0; i < url3.length; i++) {
+      CachedUrl cu = pluginMgr.findCachedUrl(url3[i]);
+      assertTrue(url3[i] + " in AU " + (cu == null ? "null" : cu.toString()),
+		 cu == null);
     }
     log.debug2("Checking UnExploded URLs done.");
   }

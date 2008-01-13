@@ -1,5 +1,5 @@
 /*
- * $Id: ElsevierExploderHelper.java,v 1.4 2007-11-08 00:56:33 thib_gc Exp $
+ * $Id: ElsevierExploderHelper.java,v 1.4.2.1 2008-01-13 00:00:41 dshr Exp $
  */
 
 /*
@@ -44,9 +44,10 @@ import org.lockss.crawler.Exploder;
  * archives containing additions to a directory tree whose
  * layers are:
  *
- * 1. <code>${JOURNAL_ID}</code> JOURNAL_ID is the ISSN without the dash.
+ * 1. <code>${JOURNAL_ID}</code> JOURNAL_ID is the ISSN (or an
+ *    ISSN-like string) without the dash.
  *
- * 2. <code>${ARTICLE_ID}</code> ARTICLE_ID is a number (I think it is unique)
+ * 2. <code>${ARTICLE_ID}</code> ARTICLE_ID is a similar string
  * This directory contains files called
  * - *.pdf PDF
  * - *.raw ASCII
@@ -89,14 +90,17 @@ public class ElsevierExploderHelper implements ExploderHelper {
       return;
     }
     for (int i = 0; i < endOfBase; i++) {
-      try {
-	int journal = Integer.parseInt(pathElements[i]);
-	baseUrl += pathElements[i] + "/";
-      } catch (NumberFormatException e) {
-	logger.warning("Element " + i + " of " + ae.getName() +
-		       " should be an integer");
-	return;
+      if (false) {
+	// XXX should do a parse check of an ISSN
+	try {
+	  int journal = Integer.parseInt(pathElements[i]);
+	} catch (NumberFormatException e) {
+	  logger.warning("Element " + i + " of " + ae.getName() +
+			 " should be an integer");
+	  return;
+	}
       }
+      baseUrl += pathElements[i] + "/";
     }
     String restOfUrl = "";
     for (int i = endOfBase; i < pathElements.length ; i++) {

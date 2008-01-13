@@ -1,5 +1,5 @@
 /*
- * $Id: TarExploder.java,v 1.4 2007-10-16 23:47:25 dshr Exp $
+ * $Id: TarExploder.java,v 1.4.2.1 2008-01-13 00:00:42 dshr Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import org.lockss.plugin.exploded.*;
 import org.lockss.crawler.BaseCrawler;
 import org.lockss.config.Configuration;
 import org.lockss.app.LockssDaemon;
-import org.lockss.state.HistoryRepository;
+import org.lockss.state.*;
 import com.ice.tar.*;
 
 /**
@@ -84,9 +84,13 @@ public class TarExploder extends Exploder {
     InputStream arcStream = null;
     CachedUrl cachedUrl = null;
     TarInputStream tis = null;
+    int goodEntries = 0;
+    int badEntries = 0;
     logger.info((storeArchive ? "Storing" : "Fetching") + " a TAR file: " +
 		archiveUrl + (explodeFiles ? " will" : " won't") + " explode");
     while (++reTry < maxRetries) try {
+      goodEntries = 0;
+      badEntries = 0;
       if (storeArchive) {
 	crawler.cacheWithRetries(urlCacher, maxRetries);
 	// Get a stream from which the TAR data can be read
@@ -104,6 +108,7 @@ public class TarExploder extends Exploder {
 	if (crawler.wdog != null) {
 	  crawler.wdog.pokeWDog();
 	}
+	// XXX sleep every N cycles
 	if (!te.isDirectory()) {
 	  ArchiveEntry ae = new ArchiveEntry(te.getName(),
 					     te.getSize(),
@@ -121,23 +126,31 @@ public class TarExploder extends Exploder {
 	      ae.getHeaderFields() != null) {
 	    storeEntry(ae);
 	    handleAddText(ae);
+	    goodEntries++;
 	  } else {
-	    logger.debug("Can't map " + te.getName());
+	    badEntries++;
+	    logger.debug2("Can't map " + te.getName() + " from " + archiveUrl);
 	  }
 	} else {
-	  logger.debug("Directory " + te.getName() + " in " + archiveUrl);
+	  logger.debug2("Directory " + te.getName() + " in " + archiveUrl);
 	}
       }
       addText();
-      if (!storeArchive) {
-	// Leave stub archive behind to prevent re-fetch
-	byte[] dummy = { 0, };
-	urlCacher.storeContent(new ByteArrayInputStream(dummy), arcProps);
-	// XXX update stats
+      if (badEntries > 0) {
+	logger.error(archiveUrl + " had " + badEntries + "/" +
+		     goodEntries + " bad entries");
+      } else {
+	logger.info(archiveUrl + " had " + goodEntries + " entries");
+	if (!storeArchive) {
+	  // Leave stub archive behind to prevent re-fetch
+	  byte[] dummy = { 0, };
+	  urlCacher.storeContent(new ByteArrayInputStream(dummy), arcProps);
+	  // XXX update stats
+	}
+	reTry = maxRetries+1;
       }
-      reTry = maxRetries+1;
     } catch (IOException ex) {
-      logger.siteError("TarExploder.explodeUrl() threw", ex);
+      logger.siteError("TarExploder.explodeUrl(" + archiveUrl + ") threw", ex);
       continue;
     } finally {
       if (cachedUrl != null) {
@@ -146,13 +159,21 @@ public class TarExploder extends Exploder {
       IOUtil.safeClose(tis);
       IOUtil.safeClose(arcStream);
     }
-    if (reTry >= maxRetries) {
-      // Make it look like a new crawl finished on each AU to which
-      // URLs were added.
-      for (Iterator it = touchedAus.iterator(); it.hasNext(); ) {
-	ExplodedArchivalUnit eau = (ExplodedArchivalUnit)it.next();
-	crawler.getDaemon().getNodeManager(eau).newContentCrawlFinished();
+    if (badEntries > 0) {
+      if (reTry >= maxRetries && goodEntries > 0) {
+	// Make it look like a new crawl finished on each AU to which
+	// URLs were added.
+	for (Iterator it = touchedAus.iterator(); it.hasNext(); ) {
+	  ExplodedArchivalUnit eau = (ExplodedArchivalUnit)it.next();
+	  crawler.getDaemon().getNodeManager(eau).newContentCrawlFinished();
+	}
       }
+    } else {
+      ArchivalUnit au = crawler.getAu();
+      NodeManager nm = crawler.getDaemon().getNodeManager(au);
+      nm.newContentCrawlFinished(Crawler.STATUS_PLUGIN_ERROR,
+				 archiveUrl + ": " + badEntries + "/" +
+				 goodEntries + " bad entries");
     }
   }
 
