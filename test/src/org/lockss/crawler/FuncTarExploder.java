@@ -1,5 +1,5 @@
 /*
- * $Id: FuncTarExploder.java,v 1.4.2.1 2008-01-13 00:00:43 dshr Exp $
+ * $Id: FuncTarExploder.java,v 1.4.2.2 2008-01-13 05:11:12 dshr Exp $
  */
 
 /*
@@ -68,11 +68,33 @@ public class FuncTarExploder extends LockssTestCase {
   private SimulatedArchivalUnit sau;
   private MockLockssDaemon theDaemon;
   PluginManager pluginMgr;
+  int lastCrawlResult = Crawler.STATUS_UNKNOWN;
+  String lastCrawlMessage = null;
 
   private static final int DEFAULT_MAX_DEPTH = 1000;
   private static final int DEFAULT_FILESIZE = 3000;
   private static int fileSize = DEFAULT_FILESIZE;
   private static int maxDepth=DEFAULT_MAX_DEPTH;
+
+  static String[] url = {
+    "http://www.content.org/001file.bin",
+    "http://www.content.org/002file.bin",
+    "http://www.content.org/branch1/001file.bin",
+    "http://www.content.org/branch1/002file.bin",
+    "http://www.content.org/branch1/branch1/001file.bin",
+    "http://www.content.org/branch1/branch1/002file.bin",
+    "http://www.content.org/branch1/branch1/branch1/001file.bin",
+    "http://www.content.org/branch1/branch1/branch1/002file.bin",
+    "http://www.content.org/branch1/branch1/branch1/index.html",
+    "http://www.content.org/branch1/branch1/index.html",
+    "http://www.content.org/branch1/index.html",
+  };
+
+  static String[] url2 = {
+    "http://www.example.com/index.html",
+    "http://www.example.com/content.tar",
+  };
+
 
   public static void main(String[] args) throws Exception {
     // XXX should be much simpler.
@@ -86,7 +108,7 @@ public class FuncTarExploder extends LockssTestCase {
     log.info("Setting up for depth " + maxDepth);
     test.setUp(maxDepth);
     log.info("Running up for depth " + maxDepth);
-    test.testRunSelf();
+    test.testRunSelf1();
     test.tearDown();
   }
 
@@ -152,7 +174,15 @@ public class FuncTarExploder extends LockssTestCase {
     super.tearDown();
   }
 
-  public void testRunSelf() throws Exception {
+  public void testRunSelf1() throws Exception {
+    runTest(false);
+  }
+
+  public void testRunSelf2() throws Exception {
+    runTest(true);
+  }
+
+  public void runTest(boolean good) throws Exception {
     log.debug3("About to create content");
     createContent();
 
@@ -160,7 +190,20 @@ public class FuncTarExploder extends LockssTestCase {
     String simDir = sau.getSimRoot();
 
     log.debug3("About to crawl content");
-    crawlContent();
+    boolean res = crawlContent(good ? null : "002file.bin");
+    if (good) {
+      assertTrue("Crawl failed", res);
+      if (false) assertTrue("Crawl should succeed but got " + lastCrawlResult +
+		 (lastCrawlMessage == null ? "" : " with " + lastCrawlMessage),
+		 lastCrawlResult == Crawler.STATUS_SUCCESSFUL);
+    } else {
+      assertFalse("Crawl succeeded", res);
+      if (false) assertTrue("Crawl should get STATUS_PLUGIN_ERROR but got " +
+		 lastCrawlResult +
+		 (lastCrawlMessage == null ? "" : " with " + lastCrawlMessage),
+		 lastCrawlResult == Crawler.STATUS_PLUGIN_ERROR);
+      return;
+    }
 
     // read all the files links from the root of the simcontent
     // check the link level of the file and see if it contains
@@ -235,20 +278,6 @@ public class FuncTarExploder extends LockssTestCase {
     return; // when all "File" in the array are checked
   }
 
-  String[] url = {
-    "http://www.content.org/001file.bin",
-    "http://www.content.org/002file.bin",
-    "http://www.content.org/branch1/001file.bin",
-    "http://www.content.org/branch1/002file.bin",
-    "http://www.content.org/branch1/branch1/001file.bin",
-    "http://www.content.org/branch1/branch1/002file.bin",
-    "http://www.content.org/branch1/branch1/branch1/001file.bin",
-    "http://www.content.org/branch1/branch1/branch1/002file.bin",
-    "http://www.content.org/branch1/branch1/branch1/index.html",
-    "http://www.content.org/branch1/branch1/index.html",
-    "http://www.content.org/branch1/index.html",
-  };
-
 
   private void checkExplodedUrls() {
     log.debug2("Checking Exploded URLs.");
@@ -264,16 +293,6 @@ public class FuncTarExploder extends LockssTestCase {
     log.debug2("Checking Exploded URLs done.");
   }
 
-  String[] url2 = {
-    "http://www.example.com/index.html",
-    "http://www.example.com/content.tar",
-  };
-
-  String[] url3 = {
-    "http://www.example.com/simcontent/index.html",
-    "http://www.example.com/branch1/index.html",
-  };
-
   private void checkUnExplodedUrls() {
     log.debug2("Checking UnExploded URLs.");
     for (int i = 0; i < url2.length; i++) {
@@ -285,11 +304,6 @@ public class FuncTarExploder extends LockssTestCase {
 		 (cu.getArchivalUnit() instanceof MySimulatedArchivalUnit));
       assertEquals(sau, cu.getArchivalUnit());
     }
-    for (int i = 0; i < url3.length; i++) {
-      CachedUrl cu = pluginMgr.findCachedUrl(url3[i]);
-      assertTrue(url3[i] + " in AU " + (cu == null ? "null" : cu.toString()),
-		 cu == null);
-    }
     log.debug2("Checking UnExploded URLs done.");
   }
 
@@ -300,8 +314,8 @@ public class FuncTarExploder extends LockssTestCase {
     sau.generateContentTree();
   }
 
-  private void crawlContent() {
-    log.debug("Crawling tree...");
+  private boolean crawlContent(String bad) {
+    log.debug("Crawling tree..." + (bad == null ? "" : " fail at " + bad));
     List urls = ListUtil.list(SimulatedArchivalUnit.SIMULATED_URL_START);
     CrawlSpec spec =
       new SpiderCrawlSpec(urls,
@@ -311,9 +325,15 @@ public class FuncTarExploder extends LockssTestCase {
 			  null, // PermissionChecker
 			  null, // LoginPageChecker
 			  ".tar$", // exploder pattern
-			  new MyExploderHelper() );
-    Crawler crawler = new NewContentCrawler(sau, spec, new MockAuState());
-    crawler.doCrawl();
+			  new MyExploderHelper(bad) );
+    AuState maus = new MyMockAuState();
+    Crawler crawler = new NewContentCrawler(sau, spec, maus);
+    boolean res = crawler.doCrawl();
+    lastCrawlResult = maus.getLastCrawlResult();
+    lastCrawlMessage = maus.getLastCrawlResultMsg();
+    log.debug2("End crawl " + res + " " + lastCrawlResult + " " +
+	       (lastCrawlMessage != null ? lastCrawlMessage : "null"));
+    return res;
   }
 
   public static class MySimulatedPlugin extends SimulatedPlugin {
@@ -345,14 +365,19 @@ public class FuncTarExploder extends LockssTestCase {
     }
 
     public boolean shouldBeCached(String url) {
-      sbc.add(url);
       if (false) {
 	// This can be helpful to track down problems - h/t TAL.
 	log.debug3("shouldBeCached: " + url, new Throwable());
       } else {
 	log.debug3("shouldBeCached: " + url);
       }
-      return super.shouldBeCached(url);
+      for (int i = 0; i < url2.length; i++) {
+	if (url2[i].equals(url)) {
+	  sbc.add(url);
+	  return super.shouldBeCached(url);
+	}
+      }
+      return (false);
     }
   }
 
@@ -364,8 +389,22 @@ public class FuncTarExploder extends LockssTestCase {
       return CrawlRule.EXCLUDE;
     }
   }
+
+  public static class MyMockAuState extends MockAuState {
+
+    public MyMockAuState() {
+      super();
+    }
+
+    public void newCrawlFinished(int result, String msg) {
+      log.debug("Crawl finished " + result + " " + msg);
+    }
+  }
+
   public static class MyExploderHelper implements ExploderHelper {
-    public MyExploderHelper() {
+    private static String badName;
+    public MyExploderHelper(String bad) {
+      badName = bad;
     }
 
     private static final String suffix[] = {
@@ -386,6 +425,9 @@ public class FuncTarExploder extends LockssTestCase {
     public void process(ArchiveEntry ae) {
       String baseUrl = "http://www.content.org/";
       String restOfUrl = ae.getName();
+      if (restOfUrl == null || restOfUrl.equals(badName)) {
+	return;
+      }
       CIProperties headerFields = new CIProperties();
       for (int i = 0; i < suffix.length; i++) {
 	if (restOfUrl.endsWith(suffix[i])) {
