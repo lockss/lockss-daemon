@@ -1,5 +1,5 @@
 /*
- * $Id: FuncTarExploder2.java,v 1.4 2007-10-16 23:47:25 dshr Exp $
+ * $Id: FuncTarExploder2.java,v 1.5 2008-01-14 14:45:14 dshr Exp $
  */
 
 /*
@@ -73,9 +73,42 @@ public class FuncTarExploder2 extends LockssTestCase {
   private static int fileSize = DEFAULT_FILESIZE;
   private static int maxDepth=DEFAULT_MAX_DEPTH;
 
+  private static String URL_PREFIX =
+    "http://elsevier.clockss.org/20070004";
+  static String[] url = {
+    URL_PREFIX + "/07700618/main.raw",
+    URL_PREFIX + "/07700618/main.pdf",
+    URL_PREFIX + "/07700618/main.xml",
+    URL_PREFIX + "/07700618/checkmd5.fil",
+    URL_PREFIX + "/07700606/main.pdf",
+    URL_PREFIX + "/07700606/main.xml",
+    URL_PREFIX + "/07700606/main.raw",
+    URL_PREFIX + "/07700606/checkmd5.fil",
+    URL_PREFIX + "/0770062X/main.raw",
+    URL_PREFIX + "/0770062X/main.pdf",
+    URL_PREFIX + "/0770062X/main.xml",
+    URL_PREFIX + "/0770062X/checkmd5.fil",
+  };
+
+  static String[] url2 = {
+    "http://www.example.com/index.html",
+    "http://www.example.com/ElsevierSample.tar",
+    "http://www.example.com/001file.bin",
+    "http://www.example.com/002file.bin",
+    "http://www.example.com/branch1/001file.bin",
+    "http://www.example.com/branch1/002file.bin",
+    "http://www.example.com/branch1/branch1/001file.bin",
+    "http://www.example.com/branch1/branch1/002file.bin",
+    "http://www.example.com/branch1/branch1/branch1/001file.bin",
+    "http://www.example.com/branch1/branch1/branch1/002file.bin",
+    "http://www.example.com/branch1/branch1/branch1/index.html",
+    "http://www.example.com/branch1/branch1/index.html",
+    "http://www.example.com/branch1/index.html",
+  };
+
   public static void main(String[] args) throws Exception {
     // XXX should be much simpler.
-    FuncTarExploder test = new FuncTarExploder();
+    FuncTarExploder2 test = new FuncTarExploder2();
     if (args.length>0) {
       try {
         maxDepth = Integer.parseInt(args[0]);
@@ -97,7 +130,7 @@ public class FuncTarExploder2 extends LockssTestCase {
   public void setUp(int max) throws Exception {
 
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    String auId = "org|lockss|crawler|FuncTarExploder$MySimulatedPlugin.root~" +
+    String auId = "org|lockss|crawler|FuncTarExploder2$MySimulatedPlugin.root~" +
       PropKeyEncoder.encode(tempDirPath);
     Properties props = new Properties();
     props.setProperty(FollowLinkCrawler.PARAM_MAX_CRAWL_DEPTH, ""+max);
@@ -227,6 +260,7 @@ public class FuncTarExploder2 extends LockssTestCase {
 
 	CachedUrl cu = theDaemon.getPluginManager().findCachedUrl(fileUrl);
 	if (fileLevel <= maxDepth) {
+	  assertNotNull("Can't find CU for " + fileUrl, cu);
 	  assertTrue(cu + " has no content", cu.hasContent());
 	} else {
 	  assertFalse(cu + " has content when it shouldn't",
@@ -236,23 +270,6 @@ public class FuncTarExploder2 extends LockssTestCase {
     }
     return; // when all "File" in the array are checked
   }
-
-  private static String URL_PREFIX =
-    "http://elsevier.clockss.org/20070004";
-  String[] url = {
-    URL_PREFIX + "/07700618/main.raw",
-    URL_PREFIX + "/07700618/main.pdf",
-    URL_PREFIX + "/07700618/main.xml",
-    URL_PREFIX + "/07700618/checkmd5.fil",
-    URL_PREFIX + "/07700606/main.pdf",
-    URL_PREFIX + "/07700606/main.xml",
-    URL_PREFIX + "/07700606/main.raw",
-    URL_PREFIX + "/07700606/checkmd5.fil",
-    URL_PREFIX + "/0770062X/main.raw",
-    URL_PREFIX + "/0770062X/main.pdf",
-    URL_PREFIX + "/0770062X/main.xml",
-    URL_PREFIX + "/0770062X/checkmd5.fil",
-  };
 
   private void checkExplodedUrls() {
     log.debug2("Checking Exploded URLs.");
@@ -267,22 +284,6 @@ public class FuncTarExploder2 extends LockssTestCase {
     }
     log.debug2("Checking Exploded URLs done.");
   }
-
-  String[] url2 = {
-    "http://www.example.com/index.html",
-    "http://www.example.com/ElsevierSample.tar",
-    "http://www.example.com/001file.bin",
-    "http://www.example.com/002file.bin",
-    "http://www.example.com/branch1/001file.bin",
-    "http://www.example.com/branch1/002file.bin",
-    "http://www.example.com/branch1/branch1/001file.bin",
-    "http://www.example.com/branch1/branch1/002file.bin",
-    "http://www.example.com/branch1/branch1/branch1/001file.bin",
-    "http://www.example.com/branch1/branch1/branch1/002file.bin",
-    "http://www.example.com/branch1/branch1/branch1/index.html",
-    "http://www.example.com/branch1/branch1/index.html",
-    "http://www.example.com/branch1/index.html",
-  };
 
   private void checkUnExplodedUrls() {
     log.debug2("Checking UnExploded URLs.");
@@ -342,14 +343,19 @@ public class FuncTarExploder2 extends LockssTestCase {
     }
 
     public boolean shouldBeCached(String url) {
-      sbc.add(url);
       if (false) {
 	// This can be helpful to track down problems - h/t TAL.
 	log.debug3("shouldBeCached: " + url, new Throwable());
       } else {
 	log.debug3("shouldBeCached: " + url);
       }
-      return super.shouldBeCached(url);
+      for (int i = 0; i < url2.length; i++) {
+	if (url2[i].equals(url)) {
+	  sbc.add(url);
+	  return super.shouldBeCached(url);
+	}
+      }
+      return (false);
     }
   }
 

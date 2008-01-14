@@ -5,44 +5,57 @@ import org.lockss.daemon.ArchiveEntry;
 import org.lockss.util.CIProperties;
 
 public class TestElsevierExploderHelper extends LockssTestCase {
-  private static final String basePath =
-    "01234567/";
-  private static final String pathStem =
-    "23456789/34567890/";
+  private static final String[] basePath = {
+    "01234567/",
+    "1234567X/",
+    "234567S1/",
+  };
+  private static final String[] pathStem = {
+    "23456789/",
+    "3456789X/",
+  };
   private static final String pdfPath = 
     "main.pdf";
   private static final String xmlPath = 
     "main.xml";
   private static final String shortPath = 
-    basePath + basePath;
+    basePath[0] + basePath[0];
   private static final String jpgPath = 
     "fx1.jpg";
   private static final String urlStem = "http://elsevier.clockss.org/";
 
   public void testProcessCorrectPdfEntry() throws Exception {
-    ArchiveEntry ae = new ArchiveEntry(basePath+ pathStem + pdfPath,
-				      7654, 0, null, null);
-    ElsevierExploderHelper eeh = new ElsevierExploderHelper();
+    for (int i = 0; i < basePath.length; i++) {
+      for (int j = 0; j < pathStem.length; j++) {
+	ArchiveEntry ae = new ArchiveEntry(basePath[i] + pathStem[j] + pdfPath,
+					   7654, 0, null, null);
+	ElsevierExploderHelper eeh = new ElsevierExploderHelper();
 
-    eeh.process(ae);
-    assertEquals(ae.getBaseUrl(), urlStem + basePath);
-    assertEquals(ae.getRestOfUrl(), pathStem + pdfPath);
-    assertEquals(ae.getHeaderFields().get("Content-Type"), "application/pdf");
-    assertEquals(ae.getHeaderFields().get("Content-Length"), "7654");
-    // XXX - check addText
-    // XXX - check auProps
+	eeh.process(ae);
+	assertEquals(urlStem + basePath[i], ae.getBaseUrl());
+	assertEquals(pathStem[j] + pdfPath, ae.getRestOfUrl());
+	assertEquals("application/pdf", ae.getHeaderFields().get("Content-Type"));
+	assertEquals("7654", ae.getHeaderFields().get("Content-Length"));
+	// XXX - check addText
+	// XXX - check auProps
+      }
+    }
   }
 
   public void testProcessCorrectXmlEntry() throws Exception {
-    ArchiveEntry ae = new ArchiveEntry(basePath+ pathStem + xmlPath,
-				      76543, 0, null, null);
-    ElsevierExploderHelper eeh = new ElsevierExploderHelper();
+    for (int i = 0; i < basePath.length; i++) {
+      for (int j = 0; j < pathStem.length; j++) {
+	ArchiveEntry ae = new ArchiveEntry(basePath[i] + pathStem[j] + xmlPath,
+					   76543, 0, null, null);
+	ElsevierExploderHelper eeh = new ElsevierExploderHelper();
 
-    eeh.process(ae);
-    assertEquals(urlStem + basePath, ae.getBaseUrl());
-    assertEquals(pathStem + xmlPath, ae.getRestOfUrl());
-    assertEquals("application/xml", ae.getHeaderFields().get("Content-Type"));
-    assertEquals("76543", ae.getHeaderFields().get("Content-Length"));
+	eeh.process(ae);
+	assertEquals(ae.getBaseUrl(), urlStem + basePath[i]);
+	assertEquals(ae.getRestOfUrl(), pathStem[j] + xmlPath);
+	assertEquals(ae.getHeaderFields().get("Content-Type"), "application/xml");
+	assertEquals(ae.getHeaderFields().get("Content-Length"), "76543");
+      }
+    }
   }
 
   public void testProcessShortName() throws Exception {
@@ -56,15 +69,18 @@ public class TestElsevierExploderHelper extends LockssTestCase {
   }
 
   public void testProcessJpgName() throws Exception {
-    ArchiveEntry ae = new ArchiveEntry(basePath + pathStem + jpgPath,
-				       7, 0, null, null);
-    ElsevierExploderHelper eeh = new ElsevierExploderHelper();
+    for (int i = 0; i < basePath.length; i++) {
+      for (int j = 0; j < pathStem.length; j++) {
+	ArchiveEntry ae = new ArchiveEntry(basePath[i] + pathStem[j] + jpgPath,
+					   7, 0, null, null);
+	ElsevierExploderHelper eeh = new ElsevierExploderHelper();
 
-    eeh.process(ae);
-    assertEquals(urlStem + basePath, ae.getBaseUrl());
-    assertEquals(pathStem + jpgPath, ae.getRestOfUrl());
-    assertEquals("image/jpeg", ae.getHeaderFields().get("Content-Type"));
-    assertEquals("7", ae.getHeaderFields().get("Content-Length"));
+	eeh.process(ae);
+	assertEquals(ae.getBaseUrl(), urlStem + basePath[i]);
+	assertEquals(ae.getRestOfUrl(), pathStem[j] + jpgPath);
+	assertEquals(ae.getHeaderFields().get("Content-Type"), "image/jpeg");
+	assertEquals(ae.getHeaderFields().get("Content-Length"), "7");
+      }
+    }
   }
-
- }
+}

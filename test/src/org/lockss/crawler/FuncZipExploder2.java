@@ -1,5 +1,5 @@
 /*
- * $Id: FuncZipExploder2.java,v 1.4 2007-10-16 23:47:26 dshr Exp $
+ * $Id: FuncZipExploder2.java,v 1.5 2008-01-14 14:45:14 dshr Exp $
  */
 
 /*
@@ -68,6 +68,33 @@ public class FuncZipExploder2 extends LockssTestCase {
   private MockLockssDaemon theDaemon;
   PluginManager pluginMgr;
 
+  private static String URL_PREFIX =
+    "http://springer.clockss.org/PUB=Springer-Verlag-Berlin-Heidelberg/JOU=00109/VOL=83/ISU=12";
+  static String[] url = {
+    URL_PREFIX + "/ART=2005_719/109_2005_Article_719.xml.meta",
+    URL_PREFIX + "/ART=2005_719/BodyRef/PDF/109_2005_Article_719.pdf",
+    URL_PREFIX + "/ART=2005_721/109_2005_Article_721.xml.meta",
+    URL_PREFIX + "/ART=2005_721/BodyRef/PDF/109_2005_Article_721.pdf",
+    URL_PREFIX + "/ART=2005_724/109_2005_Article_724.xml.meta",
+    URL_PREFIX + "/ART=2005_724/BodyRef/PDF/109_2005_Article_724.pdf",
+  };
+
+  static String[] url2 = {
+    "http://www.example.com/index.html",
+    "http://www.example.com/SpringerSample.zip",
+    "http://www.example.com/001file.bin",
+    "http://www.example.com/002file.bin",
+    "http://www.example.com/branch1/001file.bin",
+    "http://www.example.com/branch1/002file.bin",
+    "http://www.example.com/branch1/branch1/001file.bin",
+    "http://www.example.com/branch1/branch1/002file.bin",
+    "http://www.example.com/branch1/branch1/branch1/001file.bin",
+    "http://www.example.com/branch1/branch1/branch1/002file.bin",
+    "http://www.example.com/branch1/branch1/branch1/index.html",
+    "http://www.example.com/branch1/branch1/index.html",
+    "http://www.example.com/branch1/index.html",
+  };
+
   private static final int DEFAULT_MAX_DEPTH = 1000;
   private static final int DEFAULT_FILESIZE = 3000;
   private static int fileSize = DEFAULT_FILESIZE;
@@ -75,7 +102,7 @@ public class FuncZipExploder2 extends LockssTestCase {
 
   public static void main(String[] args) throws Exception {
     // XXX should be much simpler.
-    FuncZipExploder test = new FuncZipExploder();
+    FuncZipExploder2 test = new FuncZipExploder2();
     if (args.length>0) {
       try {
         maxDepth = Integer.parseInt(args[0]);
@@ -97,7 +124,7 @@ public class FuncZipExploder2 extends LockssTestCase {
   public void setUp(int max) throws Exception {
 
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    String auId = "org|lockss|crawler|FuncZipExploder$MySimulatedPlugin.root~" +
+    String auId = "org|lockss|crawler|FuncZipExploder2$MySimulatedPlugin.root~" +
       PropKeyEncoder.encode(tempDirPath);
     Properties props = new Properties();
     props.setProperty(FollowLinkCrawler.PARAM_MAX_CRAWL_DEPTH, ""+max);
@@ -225,6 +252,7 @@ public class FuncZipExploder2 extends LockssTestCase {
 
 	CachedUrl cu = theDaemon.getPluginManager().findCachedUrl(fileUrl);
 	if (fileLevel <= maxDepth) {
+	  assertNotNull("Can't find CU for " + fileUrl, cu);
 	  assertTrue(cu + " has no content", cu.hasContent());
 	} else {
 	  assertFalse(cu + " has content when it shouldn't",
@@ -234,17 +262,6 @@ public class FuncZipExploder2 extends LockssTestCase {
     }
     return; // when all "File" in the array are checked
   }
-
-  private static String URL_PREFIX =
-    "http://springer.clockss.org/PUB=Springer-Verlag-Berlin-Heidelberg/JOU=00109/VOL=83/ISU=12";
-  String[] url = {
-    URL_PREFIX + "/ART=2005_719/109_2005_Article_719.xml.meta",
-    URL_PREFIX + "/ART=2005_719/BodyRef/PDF/109_2005_Article_719.pdf",
-    URL_PREFIX + "/ART=2005_721/109_2005_Article_721.xml.meta",
-    URL_PREFIX + "/ART=2005_721/BodyRef/PDF/109_2005_Article_721.pdf",
-    URL_PREFIX + "/ART=2005_724/109_2005_Article_724.xml.meta",
-    URL_PREFIX + "/ART=2005_724/BodyRef/PDF/109_2005_Article_724.pdf",
-  };
 
   private void checkExplodedUrls() {
     log.debug2("Checking Exploded URLs.");
@@ -259,22 +276,6 @@ public class FuncZipExploder2 extends LockssTestCase {
     }
     log.debug2("Checking Exploded URLs done.");
   }
-
-  String[] url2 = {
-    "http://www.example.com/index.html",
-    "http://www.example.com/SpringerSample.zip",
-    "http://www.example.com/001file.bin",
-    "http://www.example.com/002file.bin",
-    "http://www.example.com/branch1/001file.bin",
-    "http://www.example.com/branch1/002file.bin",
-    "http://www.example.com/branch1/branch1/001file.bin",
-    "http://www.example.com/branch1/branch1/002file.bin",
-    "http://www.example.com/branch1/branch1/branch1/001file.bin",
-    "http://www.example.com/branch1/branch1/branch1/002file.bin",
-    "http://www.example.com/branch1/branch1/branch1/index.html",
-    "http://www.example.com/branch1/branch1/index.html",
-    "http://www.example.com/branch1/index.html",
-  };
 
   private void checkUnExplodedUrls() {
     log.debug2("Checking UnExploded URLs.");
@@ -334,14 +335,19 @@ public class FuncZipExploder2 extends LockssTestCase {
     }
 
     public boolean shouldBeCached(String url) {
-      sbc.add(url);
       if (false) {
 	// This can be helpful to track down problems - h/t TAL.
 	log.debug3("shouldBeCached: " + url, new Throwable());
       } else {
 	log.debug3("shouldBeCached: " + url);
       }
-      return super.shouldBeCached(url);
+      for (int i = 0; i < url2.length; i++) {
+	if (url2[i].equals(url)) {
+	  sbc.add(url);
+	  return super.shouldBeCached(url);
+	}
+      }
+      return (false);
     }
   }
 

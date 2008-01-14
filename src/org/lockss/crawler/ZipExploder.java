@@ -1,5 +1,5 @@
 /*
- * $Id: ZipExploder.java,v 1.4 2007-10-16 23:47:25 dshr Exp $
+ * $Id: ZipExploder.java,v 1.5 2008-01-14 14:45:14 dshr Exp $
  */
 
 /*
@@ -43,7 +43,7 @@ import org.lockss.plugin.exploded.*;
 import org.lockss.crawler.BaseCrawler;
 import org.lockss.config.Configuration;
 import org.lockss.app.LockssDaemon;
-import org.lockss.state.HistoryRepository;
+import org.lockss.state.*;
 
 /**
  * The Exploder for ZIP archives.
@@ -84,9 +84,13 @@ public class ZipExploder extends Exploder {
     InputStream arcStream = null;
     CachedUrl cachedUrl = null;
     ZipInputStream zis = null;
+    int goodEntries = 0;
+    int badEntries = 0;
     logger.info((storeArchive ? "Storing" : "Fetching") + " a ZIP file: " +
 		archiveUrl + (explodeFiles ? " will" : " won't") + " explode");
     while (++reTry < maxRetries) try {
+      goodEntries = 0;
+      badEntries = 0;
       if (storeArchive) {
 	crawler.cacheWithRetries(urlCacher, maxRetries);
 	// Get a stream from which the ZIP data can be read
@@ -104,11 +108,12 @@ public class ZipExploder extends Exploder {
 	if (crawler.wdog != null) {
 	  crawler.wdog.pokeWDog();
 	}
+	// XXX Sleep every N cycles
 	if (!ze.isDirectory()) {
 	  ArchiveEntry ae = new ArchiveEntry(ze.getName(),
-						    ze.getSize(),
-						    ze.getTime(),
-						    zis, crawlSpec);
+					     ze.getSize(),
+					     ze.getTime(),
+					     zis, crawlSpec);
 	  logger.debug3("ArchiveEntry: " + ae.getName()
 			+ " bytes "  + ae.getSize());
           try {
@@ -121,24 +126,32 @@ public class ZipExploder extends Exploder {
 	      ae.getHeaderFields() != null) {
 	    storeEntry(ae);
 	    handleAddText(ae);
+	    goodEntries++;
 	  } else {
-	    logger.debug("Can't map " + ze.getName());
+	    badEntries++;
+	    logger.debug2("Can't map " + ze.getName() + " from " + archiveUrl);
 	  }
 	} else {
-	  logger.debug("Directory " + ze.getName() + " in " + archiveUrl);
+	  logger.debug2("Directory " + ze.getName() + " in " + archiveUrl);
 	}
       }
       // Success
       addText();
-      if (!storeArchive) {
-	// Leave stub archive behind to prevent re-fetch
-	byte[] dummy = { 0, };
-	urlCacher.storeContent(new ByteArrayInputStream(dummy), arcProps);
-	// XXX update stats here
+      if (badEntries > 0) {
+	logger.error(archiveUrl + " had " + badEntries + "/" +
+		     (goodEntries + badEntries) + " bad entries");
+      } else {
+	logger.info(archiveUrl + " had " + goodEntries + " entries");
+	if (!storeArchive) {
+	  // Leave stub archive behind to prevent re-fetch
+	  byte[] dummy = { 0, };
+	  urlCacher.storeContent(new ByteArrayInputStream(dummy), arcProps);
+	  // XXX update stats
+	}
+	reTry = maxRetries+1;
       }
-      reTry = maxRetries + 1;
     } catch (IOException ex) {
-      logger.siteError("ZipExploder.explodeUrl() threw", ex);
+      logger.siteError("TarExploder.explodeUrl(" + archiveUrl + ") threw", ex);
       continue;
     } finally {
       if (cachedUrl != null) {
@@ -147,14 +160,26 @@ public class ZipExploder extends Exploder {
       IOUtil.safeClose(zis);
       IOUtil.safeClose(arcStream);
     }
-    if (reTry >= maxRetries) {
-      // Make it look like a new crawl finished on each AU to which
-      // URLs were added.
-      for (Iterator it = touchedAus.iterator(); it.hasNext(); ) {
-	ExplodedArchivalUnit eau = (ExplodedArchivalUnit)it.next();
-	crawler.getDaemon().getNodeManager(eau).newContentCrawlFinished();
+    if (badEntries == 0) {
+      if (reTry >= maxRetries && goodEntries > 0) {
+	// Make it look like a new crawl finished on each AU to which
+	// URLs were added.
+	for (Iterator it = touchedAus.iterator(); it.hasNext(); ) {
+	  ExplodedArchivalUnit eau = (ExplodedArchivalUnit)it.next();
+	  logger.debug3(archiveUrl + " touching " + eau.toString());
+	  crawler.getDaemon().getNodeManager(eau).newContentCrawlFinished();
+	}
       }
+    } else {
+      ArchivalUnit au = crawler.getAu();
+      String msg = archiveUrl + ": " + badEntries + "/" +
+	goodEntries + " bad entries";
+      logger.debug(archiveUrl + " setting " + au.toString() + " to PLUGIN_ERROR");
+      NodeManager nm = crawler.getDaemon().getNodeManager(au);
+      nm.newContentCrawlFinished(Crawler.STATUS_PLUGIN_ERROR, msg);
+      crawler.getCrawlerStatus().setCrawlStatus(Crawler.STATUS_PLUGIN_ERROR,
+						msg);
+      crawler.abortCrawl();
     }
   }
-
 }
