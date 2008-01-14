@@ -1,5 +1,5 @@
 /*
- * $Id: TarExploder.java,v 1.4.2.2 2008-01-13 05:11:12 dshr Exp $
+ * $Id: TarExploder.java,v 1.4.2.3 2008-01-14 01:31:30 dshr Exp $
  */
 
 /*
@@ -137,8 +137,12 @@ public class TarExploder extends Exploder {
       }
       addText();
       if (badEntries > 0) {
-	logger.error(archiveUrl + " had " + badEntries + "/" +
-		     (goodEntries + badEntries) + " bad entries");
+	String msg = archiveUrl + " had " + badEntries + "/" +
+	  (goodEntries + badEntries) + " bad entries";
+	logger.error(msg);
+	crawler.getCrawlerStatus().setCrawlStatus(Crawler.STATUS_PLUGIN_ERROR,
+						  msg);
+	crawler.abortCrawl();
       } else {
 	logger.info(archiveUrl + " had " + goodEntries + " entries");
 	if (!storeArchive) {
@@ -171,11 +175,13 @@ public class TarExploder extends Exploder {
       }
     } else {
       ArchivalUnit au = crawler.getAu();
+      String msg = archiveUrl + ": " + badEntries + "/" +
+	goodEntries + " bad entries";
       logger.debug(archiveUrl + " setting " + au.toString() + " to PLUGIN_ERROR");
       NodeManager nm = crawler.getDaemon().getNodeManager(au);
-      nm.newContentCrawlFinished(Crawler.STATUS_PLUGIN_ERROR,
-				 archiveUrl + ": " + badEntries + "/" +
-				 goodEntries + " bad entries");
+      nm.newContentCrawlFinished(Crawler.STATUS_PLUGIN_ERROR, msg);
+      crawler.getCrawlerStatus().setCrawlStatus(Crawler.STATUS_PLUGIN_ERROR,
+						msg);
       crawler.abortCrawl();
     }
   }
