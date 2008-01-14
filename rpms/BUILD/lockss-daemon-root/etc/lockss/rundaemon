@@ -79,8 +79,9 @@ org.lockss.log.targets=org.lockss.util.FileTarget
 org.lockss.platform.fqdn=${LOCKSS_HOSTNAME}
 org.lockss.platform.ui.username=${LOCKSS_ADMIN_USER}
 org.lockss.platform.ui.password=${LOCKSS_ADMIN_PASSWD}
+org.lockss.proxy.port=${LOCKSS_PROXY_PORT}
+org.lockss.ui.port=${LOCKSS_UI_PORT}
 EOF
-
 cd ${LOCKSS_HOME}
 echo "Starting daemon at `date`" >> ${LOGFILE}
 ${LOCKSS_JAVA_CMD} ${LOCKSS_JAVA_SWITCHES} -classpath ${CLASSPATH} ${DAEMON_CLASS} ${DAEMON_ARGS} >> "$LOGFILE" 2>&1 &

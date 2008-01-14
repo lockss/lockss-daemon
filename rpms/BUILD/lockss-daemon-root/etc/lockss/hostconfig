@@ -260,6 +260,22 @@ until is_yes ${CONFIG_OK}; do
 	LOCKSS_V3_PORT="${ANS}"
     fi
 
+    if [ "X${LOCKSS_PROXY_PORT}" = X ]; then
+	LOCKSS_PROXY_PORT=9090
+    fi
+    ask_for_input "PROXY port" ${LOCKSS_PROXY_PORT}
+    if [ "X${ANS}" != "X" ]; then
+	LOCKSS_PROXY_PORT="${ANS}"
+    fi
+
+    if [ "X${LOCKSS_UI_PORT}" = X ]; then
+	LOCKSS_UI_PORT=8081
+    fi
+    ask_for_input "Admin UI port" ${LOCKSS_UI_PORT}
+    if [ "X${ANS}" != "X" ]; then
+	LOCKSS_UI_PORT="${ANS}"
+    fi
+
     if [ "X${LOCKSS_MAILHUB}" = X ]; then
 	LOCKSS_MAILHUB=localhost
     fi
@@ -357,6 +373,8 @@ LOCKSS_TEST_GROUP="${LOCKSS_TEST_GROUP}"
 LOCKSS_DISK_PATHS="${LOCKSS_DISK_PATHS}"
 LOCKSS_ADMIN_USER=${LOCKSS_ADMIN_USER}
 LOCKSS_ADMIN_PASSWD=${LOCKSS_ADMIN_PASSWD}
+LOCKSS_PROXY_PORT=${LOCKSS_PROXY_PORT}
+LOCKSS_UI_PORT=${LOCKSS_UI_PORT}
 EOF
 
     echo
