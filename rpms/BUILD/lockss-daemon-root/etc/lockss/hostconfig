@@ -395,9 +395,9 @@ EOF
 	CONFIG_OK=Y
     fi
     if [ ! -d ${LOCKSS_HOME}/var/run ] ; then
-	mkdir -p ${LOCKSS_HOME}/var/run
+	init_one_dir ${LOCKSS_HOME}/var/run
     fi
     if [ ! -d ${LOCKSS_HOME}/var/log/lockss ] ; then
-	mkdir -p ${LOCKSS_HOME}/var/log/lockss
+	init_one_dir ${LOCKSS_HOME}/var/log/lockss
     fi
 done
