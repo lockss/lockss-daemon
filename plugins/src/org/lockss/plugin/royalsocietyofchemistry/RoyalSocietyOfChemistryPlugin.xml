@@ -1,9 +1,5 @@
 <map>
   <entry>
-    <string>plugin_version</string>
-    <string>4</string>
-  </entry>
-  <entry>
     <string>plugin_identifier</string>
     <string>org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin</string>
   </entry>
@@ -12,8 +8,16 @@
     <long>6000</long>
   </entry>
   <entry>
+    <string>plugin_version</string>
+    <string>5</string>
+  </entry>
+  <entry>
     <string>au_name</string>
-    <string>&quot;Royal Society of Chemistry Plugin, Base URL %s, Resolver URL %s, Journal ID %s, Year %d, Volume %d&quot;, base_url, resolver_url, journal_id, year, volume</string>
+    <string>&quot;Royal Society of Chemistry Plugin, Base URL %s, Resolver URL %s, Journal Code %s, Journal ID %s, Year %d, Volume %s&quot;, base_url, resolver_url, journal_code, journal_id, year, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_redirect_to_login_url_pattern</string>
+    <string>&quot;%sdenial/denial\.cfm&quot;, base_url</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -30,38 +34,23 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,&quot;^%spublishing/journals/lockss/\?journalid=%s&amp;volume=%d&amp;year=%d&quot;, base_url, journal_id, volume, year</string>
+      <string>1,&quot;^%spublishing/journals/lockss/\?journalid=%s&amp;volume=%s&amp;year=%d&quot;, base_url, journal_id, volume_name, year</string>
       <string>1,&quot;^%slockss.htm$&quot;, resolver_url</string>
       <string>1,&quot;^%s\?DOI=&quot;, resolver_url</string>
       <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;^%s.*\.(js|css|ico|gif|jpg|jpeg|png)&quot;, base_url</string>
       <string>1,&quot;^%spublishing/journals/.*article\.asp\?doi=&quot;, base_url</string>
       <string>1,&quot;^%sej/.*\.pdf&quot;, base_url</string>
       <string>1,&quot;^%sdelivery/_ArticleLinking/DisplayArticleForFree\.cfm&quot;, base_url</string>
+      <string>1,&quot;^%s.*\.(css|ico|gif|jpe?g|js|png|tif?f)&quot;, base_url</string>
     </list>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%spublishing/journals/lockss/?journalid=%s&amp;volume=%d&amp;year=%d&quot;, base_url, journal_id, volume, year</string>
-  </entry>
-  <entry>
-    <string>au_manifest</string>
-    <list>
-     <string>&quot;%spublishing/journals/lockss/?journalid=%s&amp;volume=%d&amp;year=%d&quot;, base_url, journal_id, volume, year</string>
-     <string>&quot;%slockss.htm&quot;, resolver_url</string>
-    </list>
+    <string>&quot;%spublishing/journals/lockss/?journalid=%s&amp;volume=%s&amp;year=%d&quot;, base_url, journal_id, volume_name, year</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
     <list>
-      <org.lockss.daemon.ConfigParamDescr>
-        <key>volume</key>
-        <displayName>Volume No.</displayName>
-        <type>2</type>
-        <size>4</size>
-        <definitional>true</definitional>
-        <defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
         <key>resolver_url</key>
         <displayName>Resolver Url</displayName>
@@ -74,7 +63,16 @@
       <org.lockss.daemon.ConfigParamDescr>
         <key>journal_id</key>
         <displayName>Journal Identifier</displayName>
-        <description>Identifier for journal (often used as part of file names)</description>
+        <description>The journal&apos;s internal numeric identification number</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_code</key>
+        <displayName>Journal Code</displayName>
+        <description>The journal&apos;s short journal code</description>
         <type>1</type>
         <size>40</size>
         <definitional>true</definitional>
@@ -98,6 +96,21 @@
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume_name</key>
+        <displayName>Volume Name</displayName>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_manifest</string>
+    <list>
+      <string>&quot;%spublishing/journals/lockss/?journalid=%s&amp;volume=%s&amp;year=%d&quot;, base_url, journal_id, volume_name, year</string>
+      <string>&quot;%slockss.htm&quot;, resolver_url</string>
     </list>
   </entry>
 </map>
