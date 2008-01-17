@@ -34,14 +34,17 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
+      <string>4,&quot;^(%s|%s)&quot;, base_url, resolver_url</string>
       <string>1,&quot;^%spublishing/journals/lockss/\?journalid=%s&amp;volume=%s&amp;year=%d&quot;, base_url, journal_id, volume_name, year</string>
       <string>1,&quot;^%slockss.htm$&quot;, resolver_url</string>
       <string>1,&quot;^%s\?DOI=&quot;, resolver_url</string>
-      <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;^%spublishing/journals/.*article\.asp\?doi=&quot;, base_url</string>
-      <string>1,&quot;^%sej/.*\.pdf&quot;, base_url</string>
-      <string>1,&quot;^%sdelivery/_ArticleLinking/DisplayArticleForFree\.cfm&quot;, base_url</string>
-      <string>1,&quot;^%s.*\.(css|ico|gif|jpe?g|js|png|tif?f)&quot;, base_url</string>
+      <string>2,&quot;^%spublishing/journals/(%s/)?article\.asp\?doi=.*&amp;type=ForwardLink&quot;, base_url, journal_code</string>
+      <string>1,&quot;^%spublishing/journals/(%s/)?article\.asp\?doi=&quot;, base_url, journal_code</string>
+      <string>1,&quot;^%sdelivery/_ArticleLinking/DisplayArticleForFree\.(cfm|asp)\?doi=.*&amp;JournalCode=%s&quot;, base_url, journal_code</string>
+      <string>1,&quot;^%sdelivery/_ArticleLinking/(ArticleLinking|DisplayHTMLArticleforfree)\.(cfm|asp)\?JournalCode=%s&quot;, base_url, journal_code</string>      <string>1,&quot;^%sej/.*\.pdf&quot;, base_url</string>
+      <string>1,&quot;^%ssuppdata/%s/&quot;, base_url, journal_code</string>
+      <string>1,&quot;^%sej/%s/.*\.pdf&quot;, base_url, journal_code</string>
+      <string>1,&quot;^%s.*\.(css|ico|gif|jpe?g|js|mol|png|tif?f)&quot;, base_url</string>
     </list>
   </entry>
   <entry>
