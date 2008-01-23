@@ -1,5 +1,5 @@
 /*
- * $Id: HispanicIssuesOnLineHtmlFilterFactory.java,v 1.1 2008-01-23 08:06:44 thib_gc Exp $
+ * $Id: HispanicIssuesOnLineHtmlFilterFactory.java,v 1.2 2008-01-23 08:08:13 thib_gc Exp $
  */
 
 /*
@@ -37,9 +37,7 @@ import java.util.List;
 
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.*;
-import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.highwire.HighWireFilterRule;
 import org.lockss.util.*;
 
 public class HispanicIssuesOnLineHtmlFilterFactory implements FilterFactory {
