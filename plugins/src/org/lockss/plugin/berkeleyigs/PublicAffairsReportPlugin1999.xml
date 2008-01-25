@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.berkeleyigs.PublicAffairsReportPlugin</string>
+    <string>org.lockss.plugin.berkeleyigs.PublicAffairsReportPlugin1999</string>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Public Affairs Report Plugin, Year %d&quot;, year</string>
+    <string>&quot;Public Affairs Report Plugin (1999), Year %d&quot;, year</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -21,7 +21,7 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Public Affairs Report Plugin</string>
+    <string>Public Affairs Report Plugin (1999)</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
@@ -29,6 +29,7 @@
       <string>4,&quot;^%s&quot;, base_url</string>
       <string>1,&quot;^%sindex.html&quot;, base_url</string>
       <string>1,&quot;^%s(jan|feb|mar|apr|may|june?|july?|aug|sept?|oct|nov|dec|winter|spring|summer|fall)?_?%d&quot;, base_url, year</string>
+      <string>1,&quot;^%s[12]/&quot;</string>
       <string>1,&quot;^%s.*\.(css|gif|ico|js|jpe?g|png|tif?f)$&quot;, base_url</string>
     </list>
   </entry>
