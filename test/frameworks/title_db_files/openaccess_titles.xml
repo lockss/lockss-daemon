@@ -41,7 +41,6 @@
     <property name="org.lockss.title">
 
     <property name="HispanicIssuesOnLine2006">
-     <property name="" value="" />
      <property name="title" value="Hispanic Issues On Line 2006" />
      <property name="journalTitle" value="Hispanic Issues On Line" />
      <property name="plugin" value="org.lockss.plugin.hispanicissuesonline.HispanicIssuesOnLinePlugin" />
@@ -49,7 +48,7 @@
         <property name="key" value="base_url" />
         <property name="value" value="http://spanport.cla.umn.edu/publications/HispanicIssues/" />
       </property>
-      <property name="param.1">
+      <property name="param.2">
         <property name="key" value="volume_name" />
         <property name="value" value="Online_2006" />
       </property>
@@ -57,7 +56,6 @@
     </property>
 
     <property name="HispanicIssuesOnLine2007">
-     <property name="" value="" />
      <property name="title" value="Hispanic Issues On Line 2007" />
      <property name="journalTitle" value="Hispanic Issues On Line" />
      <property name="plugin" value="org.lockss.plugin.hispanicissuesonline.HispanicIssuesOnLinePlugin" />
@@ -65,7 +63,7 @@
         <property name="key" value="base_url" />
         <property name="value" value="http://spanport.cla.umn.edu/publications/HispanicIssues/" />
       </property>
-      <property name="param.1">
+      <property name="param.2">
         <property name="key" value="volume_name" />
         <property name="value" value="Online_2007" />
       </property>
