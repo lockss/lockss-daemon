@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssDaemon.java,v 1.62 2007-10-03 00:35:54 smorabito Exp $
+ * $Id: MockLockssDaemon.java,v 1.63 2008-01-27 06:43:40 tlipkis Exp $
  */
 
 /*
@@ -47,6 +47,7 @@ import org.lockss.mail.MailService;
 import org.lockss.plugin.*;
 import org.lockss.poller.PollManager;
 import org.lockss.protocol.*;
+import org.lockss.protocol.psm.*;
 import org.lockss.proxy.ProxyManager;
 import org.lockss.proxy.icp.IcpManager;
 import org.lockss.remote.RemoteApi;
@@ -68,6 +69,7 @@ public class MockLockssDaemon extends LockssDaemon {
   SchedService schedService = null;
   SystemMetrics systemMetrics = null;
   PollManager pollManager = null;
+  PsmManager psmManager = null;
   LcapDatagramComm commManager = null;
   LcapStreamComm scommManager = null;
   LcapDatagramRouter datagramRouterManager = null;
@@ -122,6 +124,7 @@ public class MockLockssDaemon extends LockssDaemon {
     hashService = null;
     schedService = null;
     pollManager = null;
+    psmManager = null;
     commManager = null;
     scommManager = null;
     proxyManager = null;
@@ -266,6 +269,18 @@ public class MockLockssDaemon extends LockssDaemon {
       managerMap.put(LockssDaemon.POLL_MANAGER, pollManager);
     }
     return pollManager;
+  }
+
+  /**
+   * return the psm manager instance
+   * @return the PsmManager
+   */
+  public PsmManager getPsmManager() {
+    if (psmManager == null) {
+      psmManager = (PsmManager)newManager(LockssDaemon.PSM_MANAGER);
+      managerMap.put(LockssDaemon.PSM_MANAGER, psmManager);
+    }
+    return psmManager;
   }
 
   /**
