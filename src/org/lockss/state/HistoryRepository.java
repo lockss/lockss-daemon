@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepository.java,v 1.12 2005-07-18 08:03:50 tlipkis Exp $
+ * $Id: HistoryRepository.java,v 1.13 2008-01-27 06:47:53 tlipkis Exp $
  */
 
 /*
@@ -86,6 +86,10 @@ public interface HistoryRepository extends LockssAuManager {
   /** Return identity agreement File for this AU
    */
   public File getIdentityAgreementFile();
+
+  /** Return AuState File for this AU
+   */
+  public File getAuStateFile();
 
   /**
    * Stores the AuState for this ArchivalUnit

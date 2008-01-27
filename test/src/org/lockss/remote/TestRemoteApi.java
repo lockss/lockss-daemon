@@ -1,5 +1,5 @@
 /*
- * $Id: TestRemoteApi.java,v 1.21 2007-11-06 07:10:50 tlipkis Exp $
+ * $Id: TestRemoteApi.java,v 1.22 2008-01-27 06:47:53 tlipkis Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.mail.MimeMessage;
 import org.lockss.plugin.*;
 import org.lockss.protocol.MockIdentityManager;
+import org.lockss.state.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 
@@ -285,6 +286,10 @@ public class TestRemoteApi extends LockssTestCase {
     mpm.setAllAus(ListUtil.list(mau1, mau2, mau3));
     idMgr.setAgreeMap(mau1, "agree map 1");
     idMgr.setAgreeMap(mau3, "agree map 3");
+    MockHistoryRepository hr = new MockHistoryRepository();
+    daemon.setHistoryRepository(hr, mau1);
+    hr.setAuStateFile(FileTestUtil.writeTempFile("austate", "dummy austate"));
+
     InputStream in = rapi.getAuConfigBackupStream("machine_foo");
     File zip = FileTestUtil.tempFile("foo", ".zip");
     OutputStream out = new FileOutputStream(zip);
@@ -303,6 +308,7 @@ public class TestRemoteApi extends LockssTestCase {
     String[] dirfiles = tmpdir.list();
     List audirs = new ArrayList();
     Map auagreemap = new HashMap();
+    Map austatemap = new HashMap();
     for (int ix = 0; ix < dirfiles.length; ix++) {
       File audir = new File(tmpdir, dirfiles[ix]);
       if (!audir.isDirectory()) {
@@ -317,6 +323,10 @@ public class TestRemoteApi extends LockssTestCase {
       if (agreefile.exists()) {
 	auagreemap.put(auid, agreefile);
       }
+      File austatefile = new File(audir, RemoteApi.BACK_FILE_AUSTATE);
+      if (austatefile.exists()) {
+	austatemap.put(auid, austatefile);
+      }
     }
     assertEquals(3, audirs.size());
     File agreefile;
@@ -326,7 +336,12 @@ public class TestRemoteApi extends LockssTestCase {
     assertNotNull(agreefile = (File)auagreemap.get("mau3id"));
     assertEquals("agree map 3", StringUtil.fromFile(agreefile));
 
+    File statefile;
+    assertNotNull(statefile = (File)austatemap.get("mau1id"));
+    assertEquals("dummy austate", StringUtil.fromFile(statefile));
+
     assertEquals(2, auagreemap.size());
+    assertEquals(1, austatemap.size());
   }
 
   public void testCheckLegalAuConfigTree() throws Exception {

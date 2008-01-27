@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.65 2007-11-13 22:33:44 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.66 2008-01-27 06:47:53 tlipkis Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.poller.*;
 import org.lockss.protocol.*;
+import org.lockss.state.*;
 import org.lockss.repository.*;
 import org.lockss.servlet.ServletManager;
 import org.lockss.util.*;
@@ -88,6 +89,7 @@ public class RemoteApi
   static final String BACK_FILE_PROPS = "cacheprops";
   static final String BACK_FILE_AU_PROPS = "auprops";
   static final String BACK_FILE_AGREE_MAP = "idagreement";
+  static final String BACK_FILE_AUSTATE = "austate";
 
   static final String BACK_PROP_LOCAL_ID_V1 =
     Configuration.PREFIX + "localId.v1";
@@ -579,8 +581,20 @@ public class RemoteApi
 	} catch (FileNotFoundException e) {}
 	zip.closeEntry();
       }
+      File auStateFile = getAuStateFile(au);
+
+      if (auStateFile.exists()) {
+	try {
+	  addCfgFileToZip(zip, auStateFile, dir + BACK_FILE_AUSTATE);
+	} catch (FileNotFoundException e) {}
+      }
       dirn++;
     }
+  }
+
+  File getAuStateFile(ArchivalUnit au) {
+    HistoryRepository hRep = getDaemon().getHistoryRepository(au);
+    return hRep.getAuStateFile();
   }
 
   void addPropsToZip(ZipOutputStream zip, Properties props,
@@ -700,7 +714,7 @@ public class RemoteApi
     // (in case it doesn't find newline)
     char[] buf = new char[commentLen];
     int chars = StreamUtil.readChars(rdr, buf, commentLen);
-    log.debug("chars: " + chars);
+    log.debug3("chars: " + chars);
     if (chars == 0) {
       throw new InvalidAuConfigBackupFile("Uploaded file is empty");
     }

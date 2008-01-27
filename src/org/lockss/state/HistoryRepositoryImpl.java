@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.78 2007-10-04 09:43:41 tlipkis Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.79 2008-01-27 06:47:53 tlipkis Exp $
  */
 
 /*
@@ -130,6 +130,10 @@ public class HistoryRepositoryImpl
     return new File(rootLocation, IDENTITY_AGREEMENT_FILE_NAME);
   }
 
+  public File getAuStateFile() {
+    return new File(rootLocation, AU_FILE_NAME);
+  }
+
   /**
    * <p>Loads the state of an AU.</p>
    * @return An AuState instance loaded from file.
@@ -151,7 +155,7 @@ public class HistoryRepositoryImpl
    */
   AuState loadAuState(ObjectSerializer deserializer) {
     logger.debug3("Loading state for AU '" + storedAu.getName() + "'");
-    File auFile = new File(rootLocation, AU_FILE_NAME);
+    File auFile = getAuStateFile();
     String errorString = "Could not load AU state for AU '" + storedAu.getName() + "'";
 
     try {
@@ -724,7 +728,7 @@ public class HistoryRepositoryImpl
   /**
    * <p>The AU state file name.</p>
    */
-  static final String AU_FILE_NAME = "#au_state.xml";
+  public static final String AU_FILE_NAME = "#au_state.xml";
 
   /**
    * <p>The damaged nodes file name.</p>

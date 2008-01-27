@@ -1,5 +1,5 @@
 /*
- * $Id: MockHistoryRepository.java,v 1.15 2005-10-11 05:52:05 tlipkis Exp $
+ * $Id: MockHistoryRepository.java,v 1.16 2008-01-27 06:47:53 tlipkis Exp $
  */
 
 /*
@@ -48,6 +48,7 @@ public class MockHistoryRepository implements HistoryRepository {
   public AuState theAuState;
   public DamagedNodeSet theDamagedNodeSet;
   public HashMap storedNodes = new HashMap();
+  private File auStateFile = null;
 
   private List storedIdentityAgreement = null;
   private List loadedIdentityAgreement = null;
@@ -115,6 +116,14 @@ public class MockHistoryRepository implements HistoryRepository {
 
   public File getIdentityAgreementFile() {
     throw new UnsupportedOperationException();
+  }
+
+  public File getAuStateFile() {
+    return auStateFile;
+  }
+
+  public void setAuStateFile(File file) {
+    auStateFile = file;
   }
 
   public void storeIdentityAgreements(List list) {
