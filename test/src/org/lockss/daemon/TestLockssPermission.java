@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssPermission.java,v 1.6 2007-10-04 09:43:40 tlipkis Exp $
+ * $Id: TestLockssPermission.java,v 1.7 2008-01-27 06:43:57 tlipkis Exp $
  */
 
 /*
@@ -91,6 +91,19 @@ public class TestLockssPermission extends LockssPermissionCheckerTestCase {
     assertEquals(AuState.AccessType.OpenAccess, aus.getAccessType());
   }
 
+  public void testLockssOjsPermission() throws IOException {
+    String padding = org.apache.commons.lang.StringUtils.repeat("Blah ", 50);
+    String perm = "This journal utilizes the LOCKSS system to create a distributed archiving system among participating libraries and permits those libraries to create permanent archives of the journal for purposes of preservation and restoration";
+    assertTrue(hasPermission(perm));
+    assertEquals(AuState.AccessType.Subscription, aus.getAccessType());
+    assertTrue(hasPermission(padding + perm));
+    assertEquals(AuState.AccessType.Subscription, aus.getAccessType());
+    assertTrue(hasPermission(perm + padding));
+    assertEquals(AuState.AccessType.Subscription, aus.getAccessType());
+    assertTrue(hasPermission(padding + perm + padding));
+    assertEquals(AuState.AccessType.Subscription, aus.getAccessType());
+  }
+
   public void testNoMatchClockssPermission() throws IOException {
     assertFalse(hasPermission(ClockssPermission.CLOCKSS_PERMISSION_STRING));
   }
@@ -106,15 +119,17 @@ public class TestLockssPermission extends LockssPermissionCheckerTestCase {
   public void testGetCheckersHasProperCheckers() {
     List checkers = new LockssPermission().getCheckers();
     assertEquals("Expected four Permission checkers, but found ",
-		 4, checkers.size());
+		 5, checkers.size());
     assertTrue("First checker wasn't a StringPermission Checker",
 	       checkers.get(0) instanceof StringPermissionChecker);
     assertTrue("Second checker wasn't a StringPermission Checker",
 	       checkers.get(1) instanceof StringPermissionChecker);
-    assertTrue("Third checker wasn't a CreativeCommonsPermissionChecker",
-	       checkers.get(2) instanceof CreativeCommonsPermissionChecker);
-    assertTrue("Fourth checker wasn't a CreativeCommonsV3PermissionChecker",
-	       checkers.get(3) instanceof CreativeCommonsV3PermissionChecker);
+    assertTrue("Third checker wasn't a StringPermission Checker",
+	       checkers.get(2) instanceof StringPermissionChecker);
+    assertTrue("Fourth checker wasn't a CreativeCommonsPermissionChecker",
+	       checkers.get(3) instanceof CreativeCommonsPermissionChecker);
+    assertTrue("Fifth checker wasn't a CreativeCommonsV3PermissionChecker",
+	       checkers.get(4) instanceof CreativeCommonsV3PermissionChecker);
   }
 
   public void testGetCheckersNotModifiable() {

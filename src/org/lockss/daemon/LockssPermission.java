@@ -1,5 +1,5 @@
 /*
- * $Id: LockssPermission.java,v 1.6 2007-10-04 09:43:41 tlipkis Exp $
+ * $Id: LockssPermission.java,v 1.7 2008-01-27 06:43:57 tlipkis Exp $
  */
 
 /*
@@ -41,10 +41,13 @@ import org.lockss.state.*;
 
 public class LockssPermission {
   public static final String LOCKSS_PERMISSION_STRING =
-  "LOCKSS system has permission to collect, preserve, and serve this Archival Unit";
+    "LOCKSS system has permission to collect, preserve, and serve this Archival Unit";
 
   public static final String LOCKSS_OPEN_ACCESS_PERMISSION_STRING =
-  "LOCKSS system has permission to collect, preserve, and serve this open access Archival Unit";
+    "LOCKSS system has permission to collect, preserve, and serve this open access Archival Unit";
+
+  public static final String LOCKSS_OJS_PERMISSION_STRING =
+    "This journal utilizes the LOCKSS system to create a distributed archiving system among participating libraries and permits those libraries to create permanent archives of the journal for purposes of preservation and restoration";
 
   List permissionList;
 
@@ -60,6 +63,11 @@ public class LockssPermission {
     spc = new StringPermissionChecker(LOCKSS_OPEN_ACCESS_PERMISSION_STRING,
 				      new StringPermissionChecker.StringFilterRule());
     spc.doSetAccessType(AuState.AccessType.OpenAccess);
+    lst.add(spc);
+
+    spc = new StringPermissionChecker(LOCKSS_OJS_PERMISSION_STRING,
+				      new StringPermissionChecker.StringFilterRule());
+    spc.doSetAccessType(AuState.AccessType.Subscription);
     lst.add(spc);
 
     lst.add(new CreativeCommonsPermissionChecker());
