@@ -1,5 +1,5 @@
 /*
- * $Id: WrapperUtil.java,v 1.3 2007-09-24 18:37:12 dshr Exp $
+ * $Id: WrapperUtil.java,v 1.4 2008-01-27 06:44:14 tlipkis Exp $
  */
 
 /*
@@ -81,12 +81,24 @@ public class WrapperUtil {
   public static Object wrap(Object obj, Class inter) {
     WrapperFactory fact = (WrapperFactory)wrapperFactories.get(inter);
     if (fact == null) {
-      log.warning("No wrapper for " + obj.getClass().getName());
+      warnNoWrapper(obj);
       return obj;
     }
     Object wrapped = fact.wrap(obj);
     log.debug2("Wrapped " + obj + " in " + wrapped);
     return wrapped;
+  }
+
+  static Set missingWrappers = new HashSet();
+
+  static void warnNoWrapper(Object obj) {
+    String name = obj.getClass().getName();
+    synchronized (missingWrappers) {
+      if (!missingWrappers.contains(name)) {
+	missingWrappers.add(name);
+	log.warning("No wrapper for " + name);
+      }
+    }
   }
 
   /** For tests */
