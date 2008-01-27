@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.225 2007-10-01 08:09:56 tlipkis Exp $
+ $Id: build.xml,v 1.226 2008-01-27 06:43:18 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -268,7 +268,6 @@ Args:
   <property name="ant-contrib.resource"
                           value="net/sf/antcontrib/antcontrib.properties"/>
 
-  <property name="requires-1.4" value="test/requires-1.4"/>
   <property name="requires-1.5" value="test/requires-1.5"/>
   <property name="requires-1.6" value="test/requires-1.6"/>
 
@@ -501,15 +500,6 @@ Test results in ${test.results}
   <target name="prepare">
     <mkdir dir="${classes}" />
 
-    <condition property="is-java-1.4">
-     <or>
-      <equals arg1="1.4" arg2="${ant.java.version}"/>
-      <equals arg1="1.5" arg2="${ant.java.version}"/>
-      <equals arg1="1.6" arg2="${ant.java.version}"/>
-      <equals arg1="1.7" arg2="${ant.java.version}"/>
-     </or>
-    </condition>
-
     <condition property="is-java-1.5">
      <or>
       <equals arg1="1.5" arg2="${ant.java.version}"/>
@@ -569,12 +559,6 @@ Java ${ant.java.version} found, 1.5 required
       <property name="logtarget" value="" />
      </else>
     </if>
-  </target>
-
-  <target name="-check-if-1.4" depends="prepare" >
-    <fail unless="is-java-1.4">
-The target you have selected requires compiling under JDK 1.4.  Use the rant -1.4 option
-    </fail>
   </target>
 
   <target name="-check-if-1.5" depends="prepare" >
@@ -708,7 +692,6 @@ The target you have selected requires compiling under JDK 1.6.  Use the rant -1.
              cpid="test.compile.classpath" >
      <javacelem>
        <include name="**/*.java"/>
-       <excludesfile name="${requires-1.4}" unless="is-java-1.4" />
        <excludesfile name="${requires-1.5}" unless="is-java-1.5" />
        <excludesfile name="${requires-1.6}" unless="is-java-1.6" />
      </javacelem>
@@ -768,7 +751,7 @@ The target you have selected requires compiling under JDK 1.6.  Use the rant -1.
 
   <!-- ==================================================================== -->
   <target name="compile-tools"
-          depends="jar-lockss,-check-if-1.4"
+          depends="jar-lockss"
           description="Compile the LOCKSS tools">
     <mkdir dir="${tools.classes}" />
     <dojavac srcdir="${tools.src}" destdir="${tools.classes}"
@@ -1285,7 +1268,7 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
    description="Build the LOCKSS javadoc">
   </target>
 
-  <target name="-do-javadoc" depends="jar-tests,prepare-javadoc,-load-build-info,-param-docs-if-1.4">
+  <target name="-do-javadoc" depends="jar-tests,prepare-javadoc,-load-build-info,param-docs">
     <property name="javadoc.header"
               value="Built ${build.timestamp} on ${build.host}" />
     <!-- Write the text param doc into the doc tree -->
@@ -1320,10 +1303,6 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
   </target>
 
   <!-- ==================================================================== -->
-  <target name="-param-docs-if-1.4" if="is-java-1.4" >
-   <antcall target="param-docs"  />
-  </target>
-
   <target name="param-docs" depends="jar-tools,prepare-javadoc"
    description="Generate an HTML summary of LOCKSS configuration parameters.">
     <!-- Write the HTML param doc into the doc tree -->
@@ -1337,7 +1316,17 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
 	     access="private"/>
   </target>
 
-  <target name="dot" depends="check.contrib,prepare-javadoc"
+  <target name="states.dot" depends="jar-tools"
+   description="Generate Graphviz DOT files from state tables.">
+    <property name="dotfile" value="${classes}/states.dot" />
+    <java classname="org.lockss.doclet.PsmToDot" fork="true">
+       <classpath refid="tools.test.run.classpath" />
+       <arg line="-m org.lockss.poller.v3.PollerStateMachineFactory -l Poller -a org.lockss.poller.v3.PollerActions -m org.lockss.poller.v3.VoterStateMachineFactory -l Voter -a org.lockss.poller.v3.VoterActions -o ${dotfile}" />
+       <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
+    </java>
+  </target>
+
+  <target name="dot" depends="check.contrib,prepare-javadoc,states.dot"
    description="Generate drawings from Graphviz DOT files.">
     <!-- failifexecutionfails=false doesn't work due to bug in Ant
          (ExecuteOn.runExec()).  Don't want the build to fail if dot or
@@ -1347,13 +1336,13 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
      <apply executable="dot" dir="${basedir}" dest="${javadoc}"
            failifexecutionfails="no" >
       <arg value="-Tpng"/> <arg value="-o"/> <targetfile/> <srcfile/>
-      <fileset dir="${src}" includes="**/*.dot"/>
+      <fileset dir="${classes}" includes="**/*.dot"/>
       <mapper type="glob" from="*.dot" to="*.png"/>
      </apply>
      <apply executable="dot" dir="${basedir}" dest="${javadoc}"
            failifexecutionfails="no" >
       <arg value="-Tps2"/> <arg value="-o"/> <targetfile/> <srcfile/>
-      <fileset dir="${src}" includes="**/*.dot"/>
+      <fileset dir="${classes}" includes="**/*.dot"/>
       <mapper type="glob" from="*.dot" to="*.ps"/>
      </apply>
      <apply executable="ps2pdf" dir="${javadoc}" dest="${javadoc}"
@@ -1584,7 +1573,7 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
   </target>
  <!-- ==================================================================== -->
   <target name="run-tool"
-   depends="-check-if-1.4,jar-tools-tests,check.class.arg"
+   depends="jar-tools-tests,check.class.arg"
    description="Run a tools class named by class prop, with args in args prop" >
     <!-- default args empty if not supplied on command line -->
     <property name="args" value="" />
@@ -1613,7 +1602,6 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
           <include name="${include}" />
           <exclude name="${exclude}" />
           <excludesfile name="${excludesfile}" if="excludesfile" />
-          <excludesfile name="${requires-1.4}" unless="is-java-1.4" />
           <excludesfile name="${requires-1.5}" unless="is-java-1.5" />
           <excludesfile name="${requires-1.6}" unless="is-java-1.6" />
         </fileset>
@@ -1719,7 +1707,6 @@ Test results in ${test.results}
      <else>
       <fileset id="test.one.filesetid" dir="${test.src}">
 	 <include name="**/${class}.java" />
-         <excludesfile name="${requires-1.4}" unless="is-java-1.4" />
          <excludesfile name="${requires-1.5}" unless="is-java-1.5" />
          <excludesfile name="${requires-1.6}" unless="is-java-1.6" />
       </fileset>
@@ -1802,7 +1789,7 @@ Test results in ${test.results}
   </target>
 
   <target name="rebuild-tools"
-          depends="clean-tools,-check-if-1.4,test-tools"
+          depends="clean-tools,test-tools"
 	  description="Clean, build, and test tools">
   </target>
 
@@ -2040,7 +2027,7 @@ Test results in ${test.results}
 
   <target name="-load.findbugs"
           unless="findbugs.loaded"
-          depends="-check-if-1.4,check.contrib" >
+          depends="check.contrib" >
    <taskdef name="findbugs"
             classname="edu.umd.cs.findbugs.anttask.FindBugsTask"/>
    <property name="findbugs.loaded" value="true" />
