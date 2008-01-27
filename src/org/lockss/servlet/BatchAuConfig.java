@@ -1,5 +1,5 @@
 /*
- * $Id: BatchAuConfig.java,v 1.38 2007-10-13 03:16:57 tlipkis Exp $
+ * $Id: BatchAuConfig.java,v 1.39 2008-01-27 06:48:05 tlipkis Exp $
  */
 
 /*
@@ -334,7 +334,7 @@ public class BatchAuConfig extends LockssServlet {
       } else {
 	// Set chooser not needed
 	String msg = "All titles in all predefined collections of titles " +
-	  "already exist on this cache.";
+	  "already exist on this LOCKSS box.";
 	ServletUtil.layoutExplanationBlock(page, msg);
       }
     }
