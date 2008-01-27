@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurationUtil.java,v 1.18 2006-04-05 22:32:21 tlipkis Exp $
+ * $Id: ConfigurationUtil.java,v 1.19 2008-01-27 06:48:23 tlipkis Exp $
  *
 
 Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
@@ -43,6 +43,12 @@ public class ConfigurationUtil {
 
   private static ConfigManager mgr() {
     return ConfigManager.getConfigManager();
+  }
+
+  /** Read a Configuration from a file.
+   */
+  public static Configuration fromFile(String f) throws IOException {
+    return mgr().readConfig(ListUtil.list(f));
   }
 
   /** Create a Configuration from the supplied string.
