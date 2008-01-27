@@ -1,5 +1,5 @@
 /*
- * $Id: PollerStateMachineFactory.java,v 1.8 2007-05-09 10:34:11 smorabito Exp $
+ * $Id: PollerStateMachineFactory.java,v 1.9 2008-01-27 06:46:04 tlipkis Exp $
  */
 
 /*
@@ -34,7 +34,7 @@ package org.lockss.poller.v3;
 
 import org.lockss.protocol.psm.*;
 
-public class PollerStateMachineFactory {
+public class PollerStateMachineFactory implements PsmMachine.Factory {
 
   /**
    * Obtain a PsmMachine for the Poller state table.
@@ -43,7 +43,7 @@ public class PollerStateMachineFactory {
    * @param actionClass A class containing static handler methods for the state
    *          machine to call.
    */
-  public static PsmMachine getMachine(Class actionClass) {
+  public PsmMachine getMachine(Class actionClass) {
     return new PsmMachine("Poller", makeStates(actionClass), "ProveIntroEffort");
   }
 
@@ -68,7 +68,7 @@ public class PollerStateMachineFactory {
                                      new PsmMethodAction(actionClass,
                                                          "handleDeclinePoll")),
                      new PsmResponse(V3Events.evtFinalize,
-                                     "Finalize")).setResumable(true),
+                                     "FinalizePoller")).setResumable(true),
                               
         new PsmState("VerifyPollAckEffort",
                      new PsmMethodAction(actionClass,
@@ -101,16 +101,15 @@ public class PollerStateMachineFactory {
                      new PsmResponse(V3Events.msgRepair,
                                      new PsmMethodMsgAction(actionClass,
                                                             "handleReceiveRepair")),
-                     new PsmResponse(V3Events.evtWaitBlockComplete,
-                                     PsmWait.FOREVER),
+                     new PsmResponse(V3Events.evtWait, PsmWait.FOREVER),
                      new PsmResponse(V3Events.evtVoteIncomplete,
-                                     "SendVoteRequest"),
+				     "SendVoteRequest"),
                      new PsmResponse(V3Events.evtVoteComplete, "SendReceipt"),
                      new PsmResponse(V3Events.evtOk, "TallyVote")).setResumable(true),
         new PsmState("SendReceipt", new PsmMethodAction(actionClass,
                                                        "handleSendReceipt"),
-                     new PsmResponse(V3Events.evtOk, "Finalize")),
-        new PsmState("Finalize")
+                     new PsmResponse(V3Events.evtOk, "FinalizePoller")),
+        new PsmState("FinalizePoller")
     };
 
     return states;

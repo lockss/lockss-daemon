@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollFactory.java,v 1.20 2007-12-15 00:37:22 tlipkis Exp $
+ * $Id: V3PollFactory.java,v 1.21 2008-01-27 06:46:04 tlipkis Exp $
  */
 
 /*
@@ -76,6 +76,26 @@ public class V3PollFactory extends BasePollFactory {
     return true;
   }
 
+  private void sendNak(LockssDaemon daemon, PollNak nak,
+		       String auid, V3LcapMessage msg) {
+    IdentityManager idMgr = daemon.getIdentityManager();
+    V3LcapMessage response =
+      new V3LcapMessage(auid, msg.getKey(),
+			msg.getPluginVersion(), null, null,
+			V3LcapMessage.MSG_POLL_ACK,
+			TimeBase.nowMs() + msg.getDuration(),
+			idMgr.getLocalPeerIdentity(Poll.V3_PROTOCOL),
+			null, daemon);
+      
+    response.setNak(nak);
+
+    try {
+      daemon.getPollManager().sendMessageTo(response, msg.getOriginatorId());
+    } catch (IOException ex) {
+      log.error("IOException trying to send POLL_ACK message: " + ex);
+    }
+  }
+
   /**
    * Create a V3 Poller or V3 Voter, as appropriate.
    */
@@ -89,6 +109,8 @@ public class V3PollFactory extends BasePollFactory {
     // check for presence of item in the cache
     if (cus == null) {
       log.debug("Ignoring poll request, don't have AU: " + pollspec.getAuId());
+      sendNak(daemon, PollNak.NAK_NO_AU,
+	      pollspec.getAuId(), (V3LcapMessage)msg);
       return null;
     }
     ArchivalUnit au = cus.getArchivalUnit();
@@ -97,6 +119,8 @@ public class V3PollFactory extends BasePollFactory {
                    ", plugin version mismatch; have: " +
                    au.getPlugin().getVersion() +
                    ", need: " + pollspec.getPluginVersion());
+      sendNak(daemon, PollNak.NAK_PLUGIN_VERSION_MISMATCH,
+	      pollspec.getAuId(), (V3LcapMessage)msg);
       return null;
     }
     log.debug("Making poll from: " + pollspec);
@@ -170,6 +194,7 @@ public class V3PollFactory extends BasePollFactory {
       return null;
     }
     V3LcapMessage m = (V3LcapMessage)msg;
+
     // Ignore messages not coming from our group
     List ourGroups = ConfigManager.getPlatformGroupList();
     if (m.getGroupList() == null ||
@@ -177,22 +202,7 @@ public class V3PollFactory extends BasePollFactory {
 
       // Instantly reject the poll by sending a reply to the poller,
       // without a nonce or effort proof, and with the proper NAK code.
-      V3LcapMessage response =
-        new V3LcapMessage(au.getAuId(), msg.getKey(),
-                          msg.getPluginVersion(), null, null,
-                          V3LcapMessage.MSG_POLL_ACK,
-                          TimeBase.nowMs() + msg.getDuration(),
-                          idMgr.getLocalPeerIdentity(Poll.V3_PROTOCOL),
-                          null, daemon);
-      
-      response.setNak(PollNak.NAK_GROUP_MISMATCH);
-
-      try {
-        daemon.getPollManager().sendMessageTo(response, orig);
-      } catch (IOException ex) {
-        log.error("IOException trying to send POLL_ACK message: " + ex);
-      }
-
+      sendNak(daemon, PollNak.NAK_GROUP_MISMATCH, au.getAuId(), m);
       return null;
     }
     

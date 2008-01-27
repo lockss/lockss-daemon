@@ -1,5 +1,5 @@
 /*
- * $Id: VoterActions.java,v 1.19 2007-08-14 03:10:25 smorabito Exp $
+ * $Id: VoterActions.java,v 1.20 2008-01-27 06:46:04 tlipkis Exp $
  */
 
 /*
@@ -47,6 +47,7 @@ public class VoterActions {
   private static final Logger log = Logger.getLogger("VoterActions");
 
   // Start participating in a V3 poll when a POLL message is received
+  @ReturnEvents("evtOk")
   public static PsmEvent handleReceivePoll(PsmMsgEvent evt,
                                            PsmInterp interp) {
     V3LcapMessage msg = (V3LcapMessage)evt.getMessage();
@@ -56,12 +57,14 @@ public class VoterActions {
     return V3Events.evtOk;
   }
 
+  @ReturnEvents("evtOk")
   public static PsmEvent handleVerifyPollEffort(PsmEvent evt, 
                                                 PsmInterp interp) {
     // XXX: Implement effort service.
     return V3Events.evtOk;
   }
 
+  @ReturnEvents("evtOk")
   public static PsmEvent handleProvePollAck(PsmEvent evt, PsmInterp interp) {
     VoterUserData ud = getUserData(interp);
     // XXX: Implement effort service.
@@ -88,6 +91,8 @@ public class VoterActions {
                                                                pollerGroups);
   }
 
+  @ReturnEvents("evtOk,evtError")
+  @SendMessages("msgPollAck")
   public static PsmEvent handleSendPollAck(PsmEvent evt, PsmInterp interp) {
     // Note:  Poller Group membership checking will have happened
     // before this point.  See V3PollFactory.
@@ -113,6 +118,7 @@ public class VoterActions {
     }
   }
 
+  @ReturnEvents("evtOk")
   public static PsmEvent handleReceivePollProof(PsmMsgEvent evt,
                                                 PsmInterp interp) {
     log.debug2("Received PollProof message");
@@ -122,6 +128,7 @@ public class VoterActions {
     return V3Events.evtOk;
   }
 
+  @ReturnEvents("evtOk")
   public static PsmEvent handleVerifyPollProof(PsmEvent evt,
                                                PsmInterp interp) {
     VoterUserData ud = getUserData(interp);
@@ -131,6 +138,8 @@ public class VoterActions {
     return V3Events.evtOk;
   }
 
+  @ReturnEvents("evtOk,evtError")
+  @SendMessages("msgNominate")
   public static PsmEvent handleSendNominate(PsmEvent evt, PsmInterp interp) {
     VoterUserData ud = getUserData(interp);
     V3LcapMessage msg = ud.makeMessage(V3LcapMessage.MSG_NOMINATE);
@@ -144,6 +153,7 @@ public class VoterActions {
     return V3Events.evtOk;
   }
 
+  @ReturnEvents("evtOk,evtError")
   public static PsmEvent handleGenerateVote(PsmEvent evt, PsmInterp interp) {
     VoterUserData ud = getUserData(interp);
     try {
@@ -159,19 +169,33 @@ public class VoterActions {
     }
   }
 
+  @ReturnEvents("evtReadyToVote,evtWait")
   public static PsmEvent handleReceiveVoteRequest(PsmMsgEvent evt,
                                                   PsmInterp interp) {
     VoterUserData ud = getUserData(interp);
-    // If we're ready to cast our vote right away, do so.  Otherwise, wait
-    // until V3Voter tells us to.
+    // If we've finished hashing, vote, else wait
+    ud.voteRequested(true);
     if (ud.hashingDone()) {
       return V3Events.evtReadyToVote;
     } else {
-      ud.voteRequested(true);
-      return V3Events.evtWaitHashingDone;
+      return V3Events.evtWait;
     }
   }
 
+  @ReturnEvents("evtReadyToVote,evtWait")
+  public static PsmEvent handleHashingDone(PsmEvent evt, PsmInterp interp) {
+    VoterUserData ud = getUserData(interp);
+    // If we've gotten a vote request, vote, else wait
+    ud.hashingDone(true);
+    if (ud.voteRequested()) {
+      return V3Events.evtReadyToVote;
+    } else {
+      return V3Events.evtWait;
+    }
+  }
+
+  @ReturnEvents("evtOk,evtError")
+  @SendMessages("msgVote")
   public static PsmEvent handleSendVote(PsmEvent evt, PsmInterp interp) {
     VoterUserData ud = getUserData(interp);
     V3LcapMessage msg = ud.makeMessage(V3LcapMessage.MSG_VOTE);
@@ -189,6 +213,7 @@ public class VoterActions {
     return V3Events.evtOk;
   }
 
+  @ReturnEvents("evtRepairRequestOk,evtNoSuchRepair")
   public static PsmEvent handleReceiveRepairRequest(PsmMsgEvent evt,
                                                     PsmInterp interp) {
     VoterUserData ud = getUserData(interp);
@@ -212,6 +237,8 @@ public class VoterActions {
     }
   }
 
+  @ReturnEvents("evtOk,evtError")
+  @SendMessages("msgRepair")
   public static PsmEvent handleSendRepair(PsmEvent evt, PsmInterp interp) {
     VoterUserData ud = getUserData(interp);
     log.debug2("Sending repair to " + ud.getPollerId() + " for URL : " +
@@ -232,11 +259,13 @@ public class VoterActions {
     return V3Events.evtOk;
   }
 
+  @ReturnEvents("evtReceiptOk")
   public static PsmEvent handleReceiveReceipt(PsmMsgEvent evt, PsmInterp interp) {
     // XXX: Implement.
     return V3Events.evtReceiptOk;
   }
 
+  @ReturnEvents("evtOk")
   public static PsmEvent handleProcessReceipt(PsmEvent evt, PsmInterp interp) {
     VoterUserData ud = getUserData(interp);
     // XXX: Once the receipt is a bit more interesting, use it here.
@@ -244,6 +273,7 @@ public class VoterActions {
     return V3Events.evtOk;
   }
 
+  @ReturnEvents("evtOk")
   public static PsmEvent handleError(PsmEvent evt, PsmInterp interp) {
     // XXX: Implement.
     return V3Events.evtOk;

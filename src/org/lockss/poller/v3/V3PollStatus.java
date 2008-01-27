@@ -1,5 +1,5 @@
 /*
-* $Id: V3PollStatus.java,v 1.18 2007-10-09 00:49:56 smorabito Exp $
+* $Id: V3PollStatus.java,v 1.19 2008-01-27 06:46:04 tlipkis Exp $
  */
 
 /*
@@ -377,7 +377,8 @@ public class V3PollStatus {
     static final String TABLE_TITLE = "V3 Poll Status";
 
     private final List sortRules =
-      ListUtil.list(new StatusTable.SortRule("identity",
+      ListUtil.list(new StatusTable.SortRule("sort", true),
+		    new StatusTable.SortRule("identity",
                                              CatalogueOrderComparator.SINGLETON));
     private final List colDescs =
       ListUtil.list(new ColumnDescriptor("identity", "Peer",
@@ -409,18 +410,20 @@ public class V3PollStatus {
 
     private List getRows(V3Poller poll) {
       List rows = new ArrayList();
-      Iterator voters = poll.getParticipants();
-      while (voters.hasNext()) {
-        ParticipantUserData voter = (ParticipantUserData)voters.next();
-        rows.add(makeRow(voter));
+      for (ParticipantUserData voter : poll.getParticipants()) {
+        rows.add(makeRow(voter, "0"));
+      }
+      for (ParticipantUserData voter : poll.getExParticipants()) {
+        rows.add(makeRow(voter, "1"));
       }
       return rows;
     }
 
-    private Map makeRow(ParticipantUserData voter) {
+    private Map makeRow(ParticipantUserData voter, Object sort) {
       Map row = new HashMap();
       row.put("identity", voter.getVoterId().getIdString());
       row.put("peerStatus", voter.getStatusString());
+      row.put("sort", sort);
       return row;
     }
 

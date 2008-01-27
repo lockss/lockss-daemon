@@ -1,5 +1,5 @@
 /*
- * $Id: FuncV3Poller.java,v 1.16 2007-10-09 00:49:57 smorabito Exp $
+ * $Id: FuncV3Poller.java,v 1.17 2008-01-27 06:46:04 tlipkis Exp $
  */
 
 /*
@@ -107,6 +107,7 @@ public class FuncV3Poller extends LockssTestCase {
     tempDirPath = tempDir.getAbsolutePath();
     System.setProperty("java.io.tmpdir", tempDirPath);
     startDaemon();
+    getMockLockssDaemon().getPsmManager().startService();
   }
 
   public void tearDown() throws Exception {

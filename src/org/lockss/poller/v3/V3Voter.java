@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.47 2007-12-15 00:37:22 tlipkis Exp $
+ * $Id: V3Voter.java,v 1.48 2008-01-27 06:46:04 tlipkis Exp $
  */
 
 /*
@@ -150,6 +150,7 @@ public class V3Voter extends BasePoll {
   private File stateDir;
   private int blockErrorCount = 0;
   private int maxBlockErrorCount = V3Poller.DEFAULT_MAX_BLOCK_ERROR_COUNT;
+  private boolean isAsynch;
 
   // Task used to reserve time for hashing at the start of the poll.
   // This task is cancelled before the real hash is scheduled.
@@ -222,6 +223,7 @@ public class V3Voter extends BasePoll {
     this.idManager = theDaemon.getIdentityManager();
 
     this.pollManager = daemon.getPollManager();
+    isAsynch = pollManager.isAsynch();
 
     int min = CurrentConfig.getIntParam(PARAM_MIN_NOMINATION_SIZE,
                                         DEFAULT_MIN_NOMINATION_SIZE);
@@ -260,6 +262,7 @@ public class V3Voter extends BasePoll {
     this.pollSerializer = new V3VoterSerializer(theDaemon, pollDir);
     this.voterUserData = pollSerializer.loadVoterUserData();
     this.pollManager = daemon.getPollManager();
+    isAsynch = pollManager.isAsynch();
     this.continuedPoll = true;
     // Restore transient state.
     PluginManager plugMgr = theDaemon.getPluginManager();
@@ -276,10 +279,16 @@ public class V3Voter extends BasePoll {
     stateMachine = makeStateMachine(voterUserData);
   }
 
+  PsmInterp newPsmInterp(PsmMachine stateMachine, Object userData) {
+    PsmManager mgr = theDaemon.getPsmManager();
+    PsmInterp interp = mgr.newPsmInterp(stateMachine, userData);
+    interp.setThreaded(isAsynch);
+    return interp;
+  }
+
   private PsmInterp makeStateMachine(final VoterUserData ud) {
-    PsmMachine machine =
-      VoterStateMachineFactory.getMachine(getVoterActionsClass());
-    PsmInterp interp = new PsmInterp(machine, ud);
+    PsmMachine machine = makeMachine();
+    PsmInterp interp = newPsmInterp(machine, ud);
     interp.setCheckpointer(new PsmInterp.Checkpointer() {
       public void checkpoint(PsmInterpStateBean resumeStateBean) {
         voterUserData.setPsmState(resumeStateBean);
@@ -377,6 +386,15 @@ public class V3Voter extends BasePoll {
     return Math.max(computedVal, minVal);
   }
 
+  PsmInterp.ErrorHandler ehAbortPoll(final String msg) {
+    return new PsmInterp.ErrorHandler() {
+	public void handleError(PsmException e) {
+	  log.warning(msg, e);
+	  abortPoll();
+	}
+      };
+  }
+	  
   /**
    * <p>Start the V3Voter running and participate in the poll.  Called by
    * {@link org.lockss.poller.v3.V3PollFactory} when a vote request message
@@ -454,19 +472,40 @@ public class V3Voter extends BasePoll {
     }, this);
     
     // Resume or start the state machine running.
-    if (continuedPoll) {
-      try {
-	stateMachine.resume(voterUserData.getPsmState());
-      } catch (PsmException e) {
-	log.warning("Error resuming poll.", e);
-	abortPoll();
+    if (isAsynch) {
+      if (continuedPoll) {
+	String msg = "Error resuming poll";
+	try {
+	  stateMachine.enqueueResume(voterUserData.getPsmState(),
+				     ehAbortPoll(msg));
+	} catch (PsmException e) {
+	  log.warning(msg, e);
+	  abortPoll();
+	}
+      } else {
+	String msg = "Error starting poll";
+	try {
+	  stateMachine.enqueueStart(ehAbortPoll(msg));
+	} catch (PsmException e) {
+	  log.warning(msg, e);
+	  abortPoll();
+	}
       }
     } else {
-      try {
-	stateMachine.start();
-      } catch (PsmException e) {
-	log.warning("Error starting poll.", e);
-	abortPoll();
+      if (continuedPoll) {
+	try {
+	  stateMachine.resume(voterUserData.getPsmState());
+	} catch (PsmException e) {
+	  log.warning("Error resuming poll", e);
+	  abortPoll();
+	}
+      } else {
+	try {
+	  stateMachine.start();
+	} catch (PsmException e) {
+	  log.warning("Error starting poll", e);
+	  abortPoll();
+	}
       }
     }
   }
@@ -540,15 +579,25 @@ public class V3Voter extends BasePoll {
     // to close the poll, but before the PollManager knows we're closed.
     if (voterUserData.isPollCompleted()) return;
 
-    V3LcapMessage msg = (V3LcapMessage)message;
+    final V3LcapMessage msg = (V3LcapMessage)message;
     PeerIdentity sender = msg.getOriginatorId();
     PsmMsgEvent evt = V3Events.fromMessage(msg);
     log.debug3("Received message: " + message.getOpcodeString() + " " + message);
-    try {
-      stateMachine.handleEvent(evt);
-    } catch (PsmException e) {
-      log.warning("State machine error", e);
-      abortPoll();
+    String errmsg = "State machine error";
+    if (isAsynch) {
+      stateMachine.enqueueEvent(evt, ehAbortPoll(errmsg),
+				new PsmInterp.Action() {
+				  public void eval() {
+				    msg.delete();
+				  }
+				});
+    } else {
+      try {
+	stateMachine.handleEvent(evt);
+      } catch (PsmException e) {
+	log.warning(errmsg, e);
+	abortPoll();
+      }
     }
     // Finally, clean up after the V3LcapMessage
     msg.delete();    
@@ -668,17 +717,17 @@ public class V3Voter extends BasePoll {
     // wait for a vote request.
     log.debug("Hashing complete for poll " + voterUserData.getPollKey());
     voterUserData.hashingDone(true);
-    try {
-      // CR: send evtReadyToVote unconditionally, let state machine
-      // determine what to do with it based on current state
-      if (voterUserData.voteRequested()) {
-	stateMachine.handleEvent(V3Events.evtReadyToVote);
-      } else {
-	stateMachine.handleEvent(V3Events.evtWaitVoteRequest);
+    String errmsg = "State machine error";
+    if (isAsynch) {
+      stateMachine.enqueueEvent(V3Events.evtHashingDone,
+				ehAbortPoll(errmsg));
+    } else {
+      try {
+	stateMachine.handleEvent(V3Events.evtHashingDone);
+      } catch (PsmException e) {
+	log.warning(errmsg, e);
+	abortPoll();
       }
-    } catch (PsmException e) {
-      log.warning("State machine error", e);
-      abortPoll();
     }
   }
 
@@ -962,6 +1011,17 @@ public class V3Voter extends BasePoll {
     pollSerializer = null;
     stateMachine = null;
     theDaemon = null;
+  }
+
+  private PsmMachine makeMachine() {
+    try {
+      PsmMachine.Factory fact = VoterStateMachineFactory.class.newInstance();
+      return fact.getMachine(getVoterActionsClass());
+    } catch (Exception e) {
+      String msg = "Can't create voter state machine";
+      log.critical(msg, e);
+      throw new RuntimeException(msg, e);
+    }
   }
 
 }

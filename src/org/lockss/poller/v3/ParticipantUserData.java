@@ -1,5 +1,5 @@
 /*
- * $Id: ParticipantUserData.java,v 1.16 2007-12-22 22:13:32 smorabito Exp $
+ * $Id: ParticipantUserData.java,v 1.17 2008-01-27 06:46:04 tlipkis Exp $
  */
 
 /*
@@ -60,6 +60,7 @@ public class ParticipantUserData implements LockssSerializable {
   private boolean isOuterCircle = false;
   private PsmInterpStateBean psmState;
   private int status = V3Poller.PEER_STATUS_INITIALIZED;
+  private String statusMsg = null;
   private VoteBlocksIterator voteBlockIterator;
   /** The number of blocks that have been tallied for this peer */ 
   private long talliedUrls;
@@ -139,11 +140,20 @@ public class ParticipantUserData implements LockssSerializable {
   }
   
   public String getStatusString() {
-    return V3Poller.PEER_STATUS_STRINGS[getStatus()];
+    String msg = V3Poller.PEER_STATUS_STRINGS[getStatus()];
+    if (statusMsg != null) {
+      return msg + " (" + statusMsg + ")";
+    }
+    return msg;
   }
   
   public void setStatus(int s) {
     this.status = s;
+  }
+  
+  public void setStatus(int s, String msg) {
+    setStatus(s);
+    statusMsg = msg;
   }
   
   public int getStatus() {

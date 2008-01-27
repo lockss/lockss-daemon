@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.185 2007-12-22 22:13:32 smorabito Exp $
+ * $Id: PollManager.java,v 1.186 2008-01-27 06:46:04 tlipkis Exp $
  */
 
 /*
@@ -150,6 +150,11 @@ public class PollManager
   public static final long DEFAULT_MAX_TIME_BETWEEN_POLLS =
     1000L * 60L * 60L * 24L * 30;  // 30 Days. 
 
+  /** If true, state machines are run in their own thread */
+  public static final String PARAM_PSM_ASYNCH = PREFIX + "psmAsynch";
+  public static final boolean DEFAULT_PSM_ASYNCH = true;
+
+
   // Items are moved between thePolls and theRecentPolls, so it's simplest
   // to synchronize all accesses on a single object.  That object is
   // currently thePolls, which is itself synchronized.
@@ -187,6 +192,7 @@ public class PollManager
   private boolean isPollStarterEnabled = false;
   private boolean enablePollStarterThrottle =
     DEFAULT_ENABLE_POLL_STARTER_THROTTLE;
+  private boolean isAsynch = DEFAULT_PSM_ASYNCH;
   
   // If true, restore V3 Voters
   private boolean enablePollers = DEFAULT_ENABLE_V3_POLLER;
@@ -651,21 +657,25 @@ public class PollManager
 		    String hashAlg,
                     LcapMessage msg) throws ProtocolException {
     theLog.debug3("makePoll: From pollSpec " + spec);
+    boolean isV1 = msg instanceof V1LcapMessage;
     BasePoll ret_poll = null;
-    CachedUrlSet cus = spec.getCachedUrlSet();
-    // check for presence of item in the cache
-    if (cus == null) {
-      theLog.debug2("Ignoring poll request, don't have AU: " + spec.getAuId());
-      return null;
-    }
-    ArchivalUnit au = cus.getArchivalUnit();
-    if (!spec.getPluginVersion().equals(au.getPlugin().getVersion())) {
-      theLog.debug("Ignoring poll request for " + au.getName() +
-                   " from peer " + orig +
-                   ". plugin version mismatch; have: " +
-                   au.getPlugin().getVersion() +
-                   ", need: " + spec.getPluginVersion());
-      return null;
+    if (isV1) {
+      CachedUrlSet cus = spec.getCachedUrlSet();
+      // check for presence of item in the cache
+      if (cus == null) {
+	theLog.debug2("Ignoring poll request, don't have AU: " +
+		      spec.getAuId());
+	return null;
+      }
+      ArchivalUnit au = cus.getArchivalUnit();
+      if (!spec.getPluginVersion().equals(au.getPlugin().getVersion())) {
+	theLog.debug("Ignoring poll request for " + au.getName() +
+		     " from peer " + orig +
+		     ". plugin version mismatch; have: " +
+		     au.getPlugin().getVersion() +
+		     ", need: " + spec.getPluginVersion());
+	return null;
+      }
     }
     theLog.debug("Making poll from: " + spec);
     // create the appropriate poll for the message type
@@ -882,12 +892,18 @@ public class PollManager
       enablePollStarterThrottle =
         newConfig.getBoolean(PARAM_ENABLE_POLL_STARTER_THROTTLE,
                              DEFAULT_ENABLE_POLL_STARTER_THROTTLE);
+      isAsynch = newConfig.getBoolean(PARAM_PSM_ASYNCH,
+				      DEFAULT_PSM_ASYNCH); 
     }
     for (int i = 0; i < pf.length; i++) {
       if (pf[i] != null) {
 	pf[i].setConfig(newConfig, oldConfig, changedKeys);
       }
     }
+  }
+
+  public boolean isAsynch() {
+    return isAsynch;
   }
 
   public PollFactory getPollFactory(PollSpec spec) {

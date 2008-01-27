@@ -1,5 +1,5 @@
 /*
- * $Id: FuncV3Voter.java,v 1.21 2007-10-09 00:49:56 smorabito Exp $
+ * $Id: FuncV3Voter.java,v 1.22 2008-01-27 06:46:04 tlipkis Exp $
  */
 
 /*
@@ -87,6 +87,7 @@ public class FuncV3Voter extends LockssTestCase {
     tempDirPath = tempDir.getAbsolutePath();
     System.setProperty("java.io.tmpdir", tempDirPath);
     startDaemon();
+    getMockLockssDaemon().getPsmManager().startService();
   }
 
   public void tearDown() throws Exception {

@@ -1,5 +1,5 @@
 /*
- * $Id: V3Events.java,v 1.9 2007-05-09 10:34:11 smorabito Exp $
+ * $Id: V3Events.java,v 1.10 2008-01-27 06:46:04 tlipkis Exp $
  */
 
 /*
@@ -46,13 +46,11 @@ public class V3Events {
   public static class NeedRepair extends PsmEvent {}
   public static class RepairNotNeeded extends PsmEvent {}
   public static class RepairRequestOk extends PsmEvent {}
-  public static class WaitTallyComplete extends PsmEvent {}
   public static class ReadyToVote extends PsmEvent {}
-  public static class WaitHashingDone extends PsmEvent {}
-  public static class WaitVoteRequest extends PsmEvent {}
+  public static class Wait extends PsmEvent {}
   public static class NoSuchRepair extends PsmEvent {}
-  public static class WaitRepairRequestOrComplete extends PsmEvent {}
   public static class DeclinePoll extends PsmEvent {}
+  public static class HashingDone extends PsmEvent {}
   public static class Finalize extends PsmEvent {}
 
   // Each msg event here probably wants a corresponsing instance below, and
@@ -77,16 +75,13 @@ public class V3Events {
   public static PsmEvent evtReceiptOk = new ReceiptOk();
   public static PsmEvent evtRepairOk = new RepairOk();
   public static PsmEvent evtRepairRequestOk = new RepairRequestOk();
-  public static PsmEvent evtWaitBlockComplete = new WaitTallyComplete();
   public static PsmEvent evtNeedRepair = new NeedRepair();
   public static PsmEvent evtRepairNotNeeded = new RepairNotNeeded();
   public static PsmEvent evtReadyToVote = new ReadyToVote();
-  public static PsmEvent evtWaitHashingDone = new WaitHashingDone();
-  public static PsmEvent evtWaitVoteRequest = new WaitVoteRequest();
+  public static PsmEvent evtWait = new Wait();
   public static PsmEvent evtNoSuchRepair = new NoSuchRepair();
-  public static PsmEvent evtWaitRepairRequestOrComplete =
-    new WaitRepairRequestOrComplete();
   public static PsmEvent evtDeclinePoll = new DeclinePoll();
+  public static PsmEvent evtHashingDone = new HashingDone();
   public static PsmEvent evtFinalize = new Finalize();
 
   public static Poll msgPoll = new Poll();

@@ -1,5 +1,5 @@
 /*
- * $Id: PollerActions.java,v 1.22 2007-12-22 22:13:32 smorabito Exp $
+ * $Id: PollerActions.java,v 1.23 2008-01-27 06:46:04 tlipkis Exp $
  */
 
 /*
@@ -47,6 +47,7 @@ public class PollerActions {
 
   private static final Logger log = Logger.getLogger("PollerActions");
 
+  @ReturnEvents("evtOk")
   public static PsmEvent handleProveIntroEffort(PsmEvent evt,
                                                 PsmInterp interp) {
     ParticipantUserData ud = getUserData(interp);
@@ -64,6 +65,8 @@ public class PollerActions {
    * @param interp  The state machine interpreter.
    * @return  The next event.
    */
+  @ReturnEvents("evtOk,evtError")
+  @SendMessages("msgPoll")
   public static PsmEvent handleSendPoll(PsmEvent evt, PsmInterp interp) {
     ParticipantUserData ud = getUserData(interp);
     // For auditing purposes, log the poller nonce.
@@ -90,6 +93,7 @@ public class PollerActions {
     return V3Events.evtOk;
   }
 
+  @ReturnEvents("evtOk,evtDeclinePoll")
   public static PsmEvent handleReceivePollAck(PsmMsgEvent evt,
                                               PsmInterp interp) {
     ParticipantUserData ud = getUserData(interp);
@@ -126,11 +130,13 @@ public class PollerActions {
     }
   }
   
+  @ReturnEvents("evtFinalize")
   public static PsmEvent handleDeclinePoll(PsmEvent evt,  PsmInterp interp) {
     // Remove the participant from the poll.
     ParticipantUserData ud = getUserData(interp);
     IdentityManager idMgr = ud.getPoller().getIdentityManager();
-    ud.setStatus(V3Poller.PEER_STATUS_DECLINED_POLL);
+    ud.setStatus(V3Poller.PEER_STATUS_DECLINED_POLL,
+		 ud.getPollNak().toString());
     ud.removeParticipant();
     log.info("Removed peer " + ud.getVoterId() + " from peer list becase "
              + "it declined the poll.");
@@ -138,6 +144,7 @@ public class PollerActions {
     return V3Events.evtFinalize;
   }
 
+  @ReturnEvents("evtOk")
   public static PsmEvent handleVerifyPollAckEffort(PsmEvent evt,
                                                    PsmInterp interp) {
     ParticipantUserData ud = getUserData(interp);
@@ -148,6 +155,7 @@ public class PollerActions {
     return V3Events.evtOk;
   }
 
+  @ReturnEvents("evtOk")
   public static PsmEvent handleProveRemainingEffort(PsmEvent evt,
                                                     PsmInterp interp) {
     ParticipantUserData ud = getUserData(interp);
@@ -161,6 +169,8 @@ public class PollerActions {
     return V3Events.evtOk;
   }
 
+  @ReturnEvents("evtOk,evtError")
+  @SendMessages("msgPollProof")
   public static PsmEvent handleSendPollProof(PsmEvent evt, PsmInterp interp) {
     ParticipantUserData ud = getUserData(interp);
     log.debug2("Sending poll effort proof for voter " + ud.getVoterId()
@@ -176,6 +186,7 @@ public class PollerActions {
     return V3Events.evtOk;
   }
 
+  @ReturnEvents("evtOk")
   public static PsmEvent handleReceiveNominate(PsmMsgEvent evt,
                                                PsmInterp interp) {
     ParticipantUserData ud = getUserData(interp);
@@ -188,6 +199,8 @@ public class PollerActions {
     return V3Events.evtOk;
   }
 
+  @ReturnEvents("evtOk,evtError")
+  @SendMessages("msgVoteRequest")
   public static PsmEvent handleSendVoteRequest(PsmEvent evt,
                                                PsmInterp interp) {
     ParticipantUserData ud = getUserData(interp);
@@ -205,6 +218,7 @@ public class PollerActions {
     return V3Events.evtOk;
   }
 
+  @ReturnEvents("evtOk")
   public static PsmEvent handleReceiveVote(PsmMsgEvent evt, PsmInterp interp) {
     ParticipantUserData ud = getUserData(interp);
     V3LcapMessage msg = (V3LcapMessage) evt.getMessage();
@@ -216,14 +230,16 @@ public class PollerActions {
     return V3Events.evtOk;
   }
 
+  @ReturnEvents("evtWait")
   public static PsmEvent handleTallyVote(PsmEvent evt, PsmInterp interp) {
     ParticipantUserData ud = getUserData(interp);
     log.debug2("Tallying vote from voter " + ud.getVoterId() + " in poll "
                + ud.getKey());
     ud.tallyVoter();
-    return V3Events.evtWaitBlockComplete;
+    return V3Events.evtWait;
   }
 
+  @ReturnEvents("evtOk,evtError")
   public static PsmEvent handleReceiveRepair(PsmMsgEvent evt, PsmInterp interp) {
     ParticipantUserData ud = getUserData(interp);
     V3LcapMessage msg = (V3LcapMessage)evt.getMessage();
@@ -253,6 +269,8 @@ public class PollerActions {
     return V3Events.evtOk;
   }
 
+  @ReturnEvents("evtOk,evtError")
+  @SendMessages("msgReceipt")
   public static PsmEvent handleSendReceipt(PsmEvent evt, PsmInterp interp) {
     ParticipantUserData ud = getUserData(interp);
     // XXX: Prove receipt effort, TBD. This should probably be in its own state,
@@ -275,6 +293,7 @@ public class PollerActions {
     return V3Events.evtOk;
   }
 
+  @ReturnEvents("evtOk")
   public static PsmEvent handleError(PsmEvent evt, PsmInterp interp) {
     ParticipantUserData ud = getUserData(interp);
     ud.setStatus(V3Poller.PEER_STATUS_ERROR);

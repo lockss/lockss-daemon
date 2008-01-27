@@ -1,5 +1,5 @@
 /*
- * $Id: TestVoterStateMachineFactory.java,v 1.10 2006-11-08 16:42:58 smorabito Exp $
+ * $Id: TestVoterStateMachineFactory.java,v 1.11 2008-01-27 06:46:04 tlipkis Exp $
  */
 
 /*
@@ -114,12 +114,19 @@ public class TestVoterStateMachineFactory extends LockssTestCase {
 
   }
 
+  private PsmMachine makeMachine(Class factoryClass, Class actionsClass)
+      throws Exception {
+    PsmMachine.Factory fact = (PsmMachine.Factory)factoryClass.newInstance();
+    return fact.getMachine(actionsClass);
+  }
+
   /**
    * Ensure that a repair request is honored.
    */
   public void testRepairMachineOrder() throws Exception {
 
-    PsmMachine mach = VoterStateMachineFactory.getMachine(TestActions.class);
+    PsmMachine mach = makeMachine(VoterStateMachineFactory.class,
+				  TestActions.class);
     PsmInterp interp = new PsmInterp(mach, new ArrayList());
 
     interp.start();
@@ -163,7 +170,8 @@ public class TestVoterStateMachineFactory extends LockssTestCase {
    */
   public void testMultipleRepairMachineOrder() throws Exception {
 
-    PsmMachine mach = VoterStateMachineFactory.getMachine(TestActions.class);
+    PsmMachine mach = makeMachine(VoterStateMachineFactory.class,
+				  TestActions.class);
     PsmInterp interp = new PsmInterp(mach, new ArrayList());
 
     interp.start();
@@ -213,7 +221,8 @@ public class TestVoterStateMachineFactory extends LockssTestCase {
    * been requested.
    */
   public void testNoRepairMachineOrder() throws Exception {
-    PsmMachine mach = VoterStateMachineFactory.getMachine(TestActions.class);
+    PsmMachine mach = makeMachine(VoterStateMachineFactory.class,
+				  TestActions.class);
     PsmInterp interp = new PsmInterp(mach, new ArrayList());
     interp.start();
     // Verify that the poller is waiting in "Initialize"

@@ -1,5 +1,5 @@
 /*
- * $Id: VoterStateMachineFactory.java,v 1.9 2007-05-09 10:34:11 smorabito Exp $
+ * $Id: VoterStateMachineFactory.java,v 1.10 2008-01-27 06:46:04 tlipkis Exp $
  */
 
 /*
@@ -34,7 +34,7 @@ package org.lockss.poller.v3;
 
 import org.lockss.protocol.psm.*;
 
-public class VoterStateMachineFactory {
+public class VoterStateMachineFactory implements PsmMachine.Factory {
 
   /**
    * Obtain a PsmMachine for the Voter state table.
@@ -43,7 +43,7 @@ public class VoterStateMachineFactory {
    * @param actionClass A class containing static handler methods
    *                    for the state machine to call.
    */
-  public static PsmMachine getMachine(Class actionClass) {
+  public PsmMachine getMachine(Class actionClass) {
     return new PsmMachine("Voter",
                           makeStates(actionClass),
                           "Initialize");
@@ -69,7 +69,7 @@ public class VoterStateMachineFactory {
                    new PsmResponse(V3Events.evtOk, "SendPollAck")).setResumable(true),
       new PsmState("SendPollAck",
                    new PsmMethodAction(actionClass, "handleSendPollAck"),
-                   new PsmResponse(V3Events.evtDeclinePoll, "Finalize"),
+                   new PsmResponse(V3Events.evtDeclinePoll, "FinalizeVoter"),
                    new PsmResponse(V3Events.evtOk, "WaitPollProof")).setResumable(true),
       new PsmState("WaitPollProof", PsmWait.FOREVER,
                    new PsmResponse(V3Events.msgPollProof,
@@ -89,8 +89,10 @@ public class VoterStateMachineFactory {
                    new PsmResponse(V3Events.msgVoteRequest,
                                    new PsmMethodMsgAction(actionClass,
                                                           "handleReceiveVoteRequest")),
-                   new PsmResponse(V3Events.evtWaitVoteRequest, PsmWait.FOREVER),
-                   new PsmResponse(V3Events.evtWaitHashingDone, PsmWait.FOREVER),
+                   new PsmResponse(V3Events.evtHashingDone,
+                                   new PsmMethodAction(actionClass,
+                                                          "handleHashingDone")),
+                   new PsmResponse(V3Events.evtWait, PsmWait.FOREVER),
                    new PsmResponse(V3Events.evtReadyToVote, "SendVote")).setResumable(true),
       new PsmState("SendVote",
                    new PsmMethodAction(actionClass, "handleSendVote"),
@@ -114,8 +116,8 @@ public class VoterStateMachineFactory {
                    new PsmResponse(V3Events.evtOk, "WaitReceipt")),
       new PsmState("ProcessReceipt",
                    new PsmMethodAction(actionClass, "handleProcessReceipt"),
-                   new PsmResponse(V3Events.evtOk, "Finalize")).setResumable(true),
-      new PsmState("Finalize")
+                   new PsmResponse(V3Events.evtOk, "FinalizeVoter")).setResumable(true),
+      new PsmState("FinalizeVoter")
     };
     return states;
   }
