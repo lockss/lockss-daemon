@@ -1,5 +1,5 @@
 /*
- * $Id: TestPsmInterp.java,v 1.12 2005-10-17 07:49:03 tlipkis Exp $
+ * $Id: TestPsmInterp.java,v 1.13 2008-01-27 06:47:10 tlipkis Exp $
  */
 
 /*
@@ -34,8 +34,11 @@ package org.lockss.protocol.psm;
 
 import java.io.*;
 import java.util.*;
+
+import org.lockss.app.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
+import org.lockss.util.Queue;
 import org.lockss.protocol.*;
 
 
@@ -80,6 +83,26 @@ public class TestPsmInterp extends LockssTestCase {
   private static PsmMsgEvent RcvMsgB = new RcvMsgB().withMessage(lmB);
   private static PsmMsgEvent RcvMsgC = new RcvMsgC().withMessage(lmC);
 
+  private PsmManager psmMgr;
+  private SimpleQueue errs = new SimpleQueue.Fifo();
+
+  public void setUp() throws Exception {
+    super.setUp();
+    initPsmManager();
+  }
+
+  public void tearDown() throws Exception {
+    if (psmMgr != null) {
+      psmMgr.stopService();
+    }
+    super.tearDown();
+  }
+
+  void initPsmManager() {
+    psmMgr = getMockLockssDaemon().getPsmManager();
+    psmMgr.startService();
+  }
+
   public void testNullConstructorArgs() {
     PsmState[] states = {
       new PsmState("Start", PsmWait.FOREVER, new PsmResponse(Ok, "Start")),
@@ -107,6 +130,11 @@ public class TestPsmInterp extends LockssTestCase {
       fail("Second call to start() should throw");
     } catch (IllegalStateException e) {
     }
+    try {
+      interp.resume(null);
+      fail("Resume after start() should throw");
+    } catch (IllegalStateException e) {
+    }
   }
 
   // Can't call handleEvent() before start()
@@ -130,12 +158,16 @@ public class TestPsmInterp extends LockssTestCase {
       new PsmState("Start"),
     };
     PsmMachine mach = new PsmMachine("M1", states, "Start");
-    MyInterp interp = new MyInterp(mach, null);
+    MyInterp interp;
+
+    interp = new MyInterp(mach, null);
     try {
       interp.resume(null);
       fail("resume(null) should throw NPE");
     } catch (NullPointerException e) {
     }
+
+    interp = new MyInterp(mach, null);
     PsmInterpStateBean state = new PsmInterpStateBean();
     state.setLastResumableStateName(null);
     try {
@@ -143,9 +175,90 @@ public class TestPsmInterp extends LockssTestCase {
       fail("resume(state) should throw on no saved state");
     } catch (PsmException.IllegalResumptionState e) {
     }
+
+    interp = new MyInterp(mach, null);
     state.setLastResumableStateName("not-a-state");
     try {
       interp.resume(state);
+      fail("resume(state) should throw on unknown state");
+    } catch (PsmException.IllegalResumptionState e) {
+    }
+  }
+
+  class EH implements PsmInterp.ErrorHandler {
+    SimpleQueue errs;
+    EH() {
+      this.errs = new SimpleQueue.Fifo();
+    }
+    EH(SimpleQueue errs) {
+      this.errs = errs;
+    }
+    public void handleError(PsmException e) {
+      errs.put(e);
+    }
+    SimpleQueue getErrQueue() {
+      return errs;
+    }
+  }
+
+  // Can't call enqueueStart() twice
+  public void testAsynchStartTwice() throws PsmException {
+    PsmState[] states = {
+      new PsmState("Start"),
+    };
+    PsmMachine mach = new PsmMachine("M1", states, "Start");
+    MyInterp interp = newThreadedInterp(mach, null);
+    interp.enqueueStart(new EH());
+    try {
+      interp.enqueueStart(new EH());
+      fail("Second call to start() should throw");
+    } catch (IllegalStateException e) {
+    }
+  }
+
+  // Can't call handleEvent() before start()
+  public void testAsynchEventNoStart() throws PsmException {
+    PsmState[] states = {
+      new PsmState("Start", PsmWait.FOREVER,
+		   new PsmResponse(Ok, PsmWait.FOREVER)),
+    };
+    PsmMachine mach = new PsmMachine("M1", states, "Start");
+    MyInterp interp = new MyInterp(mach, null);
+    try {
+      interp.handleEvent(Ok);
+      fail("handleEvent() before start() should throw");
+    } catch (IllegalStateException e) {
+    }
+  }
+
+  // Illegal/unknown resumption state
+  public void testAsynchIllResume() throws PsmException {
+    PsmState[] states = {
+      new PsmState("Start"),
+    };
+    PsmMachine mach = new PsmMachine("M1", states, "Start");
+    MyInterp interp;
+
+    interp = newThreadedInterp(mach, null);
+    try {
+      interp.enqueueResume(null, new EH(errs));
+      fail("resume(null) should throw NPE");
+    } catch (NullPointerException e) {
+    }
+
+    interp = newThreadedInterp(mach, null);
+    PsmInterpStateBean state = new PsmInterpStateBean();
+    state.setLastResumableStateName(null);
+    try {
+      interp.enqueueResume(state, new EH(errs));
+      fail("resume(state) should throw on no saved state");
+    } catch (PsmException.IllegalResumptionState e) {
+    }
+
+    interp = newThreadedInterp(mach, null);
+    state.setLastResumableStateName("not-a-state");
+    try {
+      interp.enqueueResume(state, new EH(errs));
       fail("resume(state) should throw on unknown state");
     } catch (PsmException.IllegalResumptionState e) {
     }
@@ -161,7 +274,7 @@ public class TestPsmInterp extends LockssTestCase {
     MyInterp interp = new MyInterp(mach, null);
     try {
       interp.start();
-      fail("Should threw if state loop");
+      fail("Should throw if state loop");
     } catch (PsmException.MaxChainedEvents e) {
     }
   }
@@ -178,7 +291,7 @@ public class TestPsmInterp extends LockssTestCase {
     PsmInterp interp = new MyInterp(mach, null);
     try {
       interp.start();
-      fail("Should threw if state loop");
+      fail("Should throw if state loop");
     } catch (PsmException.MaxChainedEvents e) {
     }
   }
@@ -198,9 +311,62 @@ public class TestPsmInterp extends LockssTestCase {
     interp.start();
     try {
       interp.handleEvent(Sched);
-      fail("Should threw if state loop");
+      fail("Should throw if state loop");
     } catch (PsmException.MaxChainedEvents e) {
     }
+  }
+
+  MyInterp newThreadedInterp(PsmMachine mach, Object userData) {
+    MyInterp interp = new MyInterp(psmMgr, mach, userData);
+    interp.setThreaded(true);
+    return interp;
+  }
+
+  // Loop in Start state
+  public void testAsynchLoopStart() throws PsmException {
+    PsmState[] statesLoopStart = {
+      new PsmState("Start", new MyAction(Sched),
+		   new PsmResponse(Sched, new MyAction(Sched))),
+    };
+    PsmMachine mach = new PsmMachine("M1", statesLoopStart, "Start");
+    MyInterp interp = newThreadedInterp(mach, null);
+    interp.enqueueStart(new EH(errs));
+    assertTrue(errs.get(TIMEOUT_SHOULDNT)
+	       instanceof PsmException.MaxChainedEvents);
+  }
+
+  // Loop between two states, in start()
+  public void testAsynchLoopTwo() throws PsmException {
+    PsmState[] statesLoopTwo = {
+      new PsmState("Start", new MyAction(Sched),
+		   new PsmResponse(Sched, "two")),
+      new PsmState("two", new MyAction(SendOk),
+		   new PsmResponse(SendOk, "Start")),
+    };
+    PsmMachine mach = new PsmMachine("M1", statesLoopTwo, "Start");
+    MyInterp interp = newThreadedInterp(mach, null);
+    interp.enqueueStart(new EH(errs));
+    assertTrue(errs.get(TIMEOUT_SHOULDNT)
+	       instanceof PsmException.MaxChainedEvents);
+  }
+
+  // Loop between two states, in handleEvent()
+  public void testAsynchLoopHandle() throws PsmException {
+    PsmState[] statesLoopTwo = {
+      new PsmState("Start", PsmWait.FOREVER,
+		   new PsmResponse(Sched, "one")),
+      new PsmState("one", new MyAction(SendOk),
+		   new PsmResponse(SendOk, "two")),
+      new PsmState("two", new MyAction(SendOk),
+		   new PsmResponse(SendOk, "one")),
+    };
+    PsmMachine mach = new PsmMachine("M1", statesLoopTwo, "Start");
+    MyInterp interp = newThreadedInterp(mach, null);
+    interp.enqueueStart(new EH(errs));
+    assertTrue(errs.isEmpty());
+    interp.enqueueEvent(Sched, new EH(errs));
+    assertTrue(errs.get(TIMEOUT_SHOULDNT)
+	       instanceof PsmException.MaxChainedEvents);
   }
 
   // RuntimeException in action should become PsmException.ActionError
@@ -212,7 +378,7 @@ public class TestPsmInterp extends LockssTestCase {
     MyInterp interp = new MyInterp(mach, null);
     try {
       interp.start();
-      fail("Interp should threw if action throws");
+      fail("Interp should throw if action throws");
     } catch (PsmException.ActionError e) {
       assertEquals("abcd", e.getCause().getMessage());
     }
@@ -232,7 +398,7 @@ public class TestPsmInterp extends LockssTestCase {
     MyInterp interp = new MyInterp(mach, null);
     try {
       interp.start();
-      fail("Interp should threw if action returns null");
+      fail("Interp should throw if action returns null");
     } catch (PsmException.NullEvent e) {
     }
   }
@@ -247,7 +413,7 @@ public class TestPsmInterp extends LockssTestCase {
     interp.start();
     try {
       interp.handleEvent(Ok);
-      fail("Interp should threw if action returns null");
+      fail("Interp should throw if action returns null");
     } catch (PsmException.NullEvent e) {
     }
   }
@@ -266,7 +432,7 @@ public class TestPsmInterp extends LockssTestCase {
     MyInterp interp = new MyInterp(mach, null);
     try {
       interp.start();
-      fail("Interp should threw if non-wait action returns wait event");
+      fail("Interp should throw if non-wait action returns wait event");
     } catch (PsmException.IllegalEvent e) {
     }
   }
@@ -337,6 +503,69 @@ public class TestPsmInterp extends LockssTestCase {
       new ER(states1[2], SendOk, null, null),
     };
     assertIsomorphic(exp3, interp.events);
+  }
+
+  public void testAsynchSimple1() throws Exception {
+    PsmMachine mach = new PsmMachine("M1", states1, "Start");
+    MyInterp interp = newThreadedInterp(mach, null);
+    assertFalse(interp.isFinalState());
+    interp.enqueueStart(new EH(errs));
+    assertTrue(interp.waitIdle(TIMEOUT_SHOULDNT));
+    assertFalse(interp.isFinalState());
+    ER[] exp1 = {
+      new ER(null, PsmEvents.Start, null, states1[0]),
+      new ER(states1[0], PsmEvents.Start, states1[0].getEntryAction(), null),
+      new ER(states1[0], Sched, null, null),
+    };
+    assertIsomorphic(exp1, interp.events);
+    interp.clear();
+    interp.enqueueEvent(NotSched, new EH(errs));
+    assertTrue(interp.waitIdle(TIMEOUT_SHOULDNT));
+    ER[] exp2 = {
+      new ER(states1[0], NotSched, null, states1[3]),
+      new ER(states1[3], NotSched, null, null),
+    };
+    assertIsomorphic(exp2, interp.events);
+    assertTrue(errs.isEmpty());
+  }
+
+  boolean actionTriggered = false;
+
+  public void testAsynchSimple2() throws Exception {
+    PsmMachine mach = new PsmMachine("M1", states1, "Start");
+    MyInterp interp = newThreadedInterp(mach, null);
+    interp.enqueueStart(new EH(errs));
+    assertTrue(interp.waitIdle(TIMEOUT_SHOULDNT));
+    ER[] exp1 = {
+      new ER(null, PsmEvents.Start, null, states1[0]),
+      new ER(states1[0], PsmEvents.Start, states1[0].getEntryAction(), null),
+      new ER(states1[0], Sched, null, null),
+    };
+    assertIsomorphic(exp1, interp.events);
+    interp.clear();
+    interp.enqueueEvent(Sched, new EH(errs));
+    assertTrue(interp.waitIdle(TIMEOUT_SHOULDNT));
+    ER[] exp2 = {
+      new ER(states1[0], Sched, null, null),
+    };
+    assertIsomorphic(exp2, interp.events);
+    assertFalse(actionTriggered);
+    interp.enqueueEvent(TaskComplete, new EH(errs),
+			new PsmInterp.Action() {
+			  public void eval() {
+			    actionTriggered = true;
+			  }});
+    assertTrue(interp.waitIdle(TIMEOUT_SHOULDNT));
+    assertTrue(actionTriggered);
+    ER[] exp3 = {
+      new ER(states1[0], Sched, null, null),
+      new ER(states1[0], TaskComplete, null, states1[1]),
+      new ER(states1[1], TaskComplete, states1[1].getEntryAction(), null),
+      new ER(states1[1], SendOk, null, states1[2]),
+      new ER(states1[2], SendOk, null, null),
+    };
+    assertIsomorphic(exp3, interp.events);
+    assertTrue(errs.isEmpty());
   }
 
   class MyCheckpointer implements PsmInterp.Checkpointer {
@@ -427,6 +656,97 @@ public class TestPsmInterp extends LockssTestCase {
       new ER(statesCheck[1], PsmEvents.Resume, null, null),
     };
     assertIsomorphic(exp2, interp2.events);
+
+    try {
+      interp2.resume(null);
+      fail("Resume after resume() should throw");
+    } catch (IllegalStateException e) {
+    }
+  }
+
+  public void testAsynchCheckpoint() throws Exception {
+    PsmMachine mach = new PsmMachine("M1", statesCheck, "Start");
+    MyInterp interp = newThreadedInterp(mach, null);
+    assertEmpty(interp.events);
+    MyCheckpointer cptr = new MyCheckpointer();
+    interp.setCheckpointer(cptr);
+    interp.enqueueStart(new EH(errs));
+    assertTrue(interp.waitIdle(TIMEOUT_SHOULDNT));
+    ER[] exp1 = {
+      new ER(null, PsmEvents.Start, null, statesCheck[0]),
+      new ER(statesCheck[0], PsmEvents.Start, null, null),
+    };
+    assertIsomorphic(exp1, interp.events);
+    // no resumable states yet
+    assertEquals(0, cptr.cnt);
+    interp.clear();
+    interp.enqueueEvent(Sched, new EH(errs));
+    assertTrue(interp.waitIdle(TIMEOUT_SHOULDNT));
+    ER[] exp2 = {
+      new ER(statesCheck[0], Sched, null, statesCheck[1]),
+      new ER(statesCheck[1], Sched, null, null),
+    };
+    assertIsomorphic(exp2, interp.events);
+    // resumable state Yes entered
+    assertEquals(1, cptr.cnt);
+    assertEquals("Yes", cptr.lastBean.getLastResumableStateName());
+    interp.clear();
+    interp.enqueueEvent(Sched, new EH(errs));
+    assertTrue(interp.waitIdle(TIMEOUT_SHOULDNT));
+    ER[] exp3 = {
+      new ER(statesCheck[1], Sched, null, statesCheck[2]),
+      new ER(statesCheck[2], Sched, null, null),
+    };
+    assertIsomorphic(exp3, interp.events);
+    // resumable state Yes reentered with no other intervening resumable state
+    assertEquals(1, cptr.cnt);
+    assertEquals("Yes", cptr.lastBean.getLastResumableStateName());
+    assertTrue(errs.isEmpty());
+  }
+
+  public void testAsynchResume() throws Exception {
+    PsmMachine mach = new PsmMachine("M1", statesCheck, "Start");
+    MyInterp interp = newThreadedInterp(mach, null);
+    assertEmpty(interp.events);
+    MyCheckpointer cptr = new MyCheckpointer();
+    interp.setCheckpointer(cptr);
+    interp.enqueueStart(new EH(errs));
+    interp.enqueueEvent(Sched, new EH(errs));
+    interp.enqueueEvent(Sched, new EH(errs));
+
+    ER[] exp1 = {
+      new ER(null, PsmEvents.Start, null, statesCheck[0]),
+      new ER(statesCheck[0], PsmEvents.Start, null, null),
+      new ER(statesCheck[0], Sched, null, statesCheck[1]),
+      new ER(statesCheck[1], Sched, null, null),
+      new ER(statesCheck[1], Sched, null, statesCheck[2]),
+      new ER(statesCheck[2], Sched, null, null),
+    };
+    // Should get to state No, with last resumable state Yes
+    while (!CollectionUtil.isIsomorphic(exp1, interp.events)) {
+      assertTrue(interp.waitIdle(TIMEOUT_SHOULDNT));
+    }
+    assertIsomorphic(exp1, interp.events);
+    assertEquals(1, cptr.cnt);
+    PsmInterpStateBean resumeBean = cptr.lastBean;
+    assertEquals("Yes", resumeBean.getLastResumableStateName());
+
+    MyInterp interp2 = newThreadedInterp(mach, null);
+
+    interp2.enqueueResume(resumeBean, new EH(errs));
+    assertTrue(interp2.waitIdle(TIMEOUT_SHOULDNT));
+    ER[] exp2 = {
+      new ER(null, PsmEvents.Resume, null, statesCheck[1]),
+      new ER(statesCheck[1], PsmEvents.Resume, null, null),
+    };
+    assertIsomorphic(exp2, interp2.events);
+    assertTrue(errs.isEmpty());
+
+    try {
+      interp2.enqueueResume(resumeBean, new EH(errs));
+      fail("Resume after resume() should throw");
+    } catch (IllegalStateException e) {
+    }
   }
 
   PsmState[] states2 = {
@@ -446,6 +766,14 @@ public class TestPsmInterp extends LockssTestCase {
     interp.start();
     while (!interp.isFinalState()){
       interp.handleEvent((PsmEvent)events.remove(0));
+    }
+  }
+
+  // Feed interpreter all events from list
+  void runAsynchEvents(PsmInterp interp, List events) throws PsmException {
+    interp.enqueueStart(new EH(errs));
+    while (!events.isEmpty()){
+      interp.enqueueEvent((PsmEvent)events.remove(0), new EH(errs));
     }
   }
 
@@ -488,6 +816,48 @@ public class TestPsmInterp extends LockssTestCase {
       new ER(states2[3], RcvMsgC, null, null),
     };
     assertIsomorphic(exp1, interp.events);
+  }
+
+  public void testAsynchUntilFinal() throws Exception {
+    PsmMachine mach = new PsmMachine("M1", states2, "Start");
+    MyInterp interp = newThreadedInterp(mach, null);
+    runAsynchEvents(interp, ListUtil.list(RcvMsgA, RcvMsgA, RcvMsgB));
+    assertTrue(interp.waitFinal(TIMEOUT_SHOULDNT));
+    ER[] exp1 = {
+      new ER(null, PsmEvents.Start, null, states2[0]),
+      new ER(states2[0], PsmEvents.Start, states2[0].getEntryAction(), null),
+      new ER(states2[0], SendOk, null, states2[1]),
+      new ER(states2[1], SendOk, null, null),
+      new ER(states2[1], RcvMsgA, null, states2[1]),
+      new ER(states2[1], RcvMsgA, null, null),
+      new ER(states2[1], RcvMsgA, null, states2[1]),
+      new ER(states2[1], RcvMsgA, null, null),
+      new ER(states2[1], RcvMsgB, null, states2[2]),
+      new ER(states2[2], RcvMsgB, null, null),
+    };
+    assertIsomorphic(exp1, interp.events);
+    assertTrue(errs.isEmpty());
+  }
+
+  public void testAsynchUntilFinalError() throws Exception {
+    PsmMachine mach = new PsmMachine("M1", states2, "Start");
+    MyInterp interp = newThreadedInterp(mach, null);
+    runAsynchEvents(interp, ListUtil.list(RcvMsgA, RcvMsgA, RcvMsgC));
+    assertTrue(interp.waitFinal(TIMEOUT_SHOULDNT));
+    ER[] exp1 = {
+      new ER(null, PsmEvents.Start, null, states2[0]),
+      new ER(states2[0], PsmEvents.Start, states2[0].getEntryAction(), null),
+      new ER(states2[0], SendOk, null, states2[1]),
+      new ER(states2[1], SendOk, null, null),
+      new ER(states2[1], RcvMsgA, null, states2[1]),
+      new ER(states2[1], RcvMsgA, null, null),
+      new ER(states2[1], RcvMsgA, null, states2[1]),
+      new ER(states2[1], RcvMsgA, null, null),
+      new ER(states2[1], RcvMsgC, null, states2[3]),
+      new ER(states2[3], RcvMsgC, null, null),
+    };
+    assertIsomorphic(exp1, interp.events);
+    assertTrue(errs.isEmpty());
   }
 
   // A machine with some message actions, which record the message received
@@ -736,6 +1106,7 @@ public class TestPsmInterp extends LockssTestCase {
     testTimeout(5000, 1, 10, noTimeoutEvents, noTimeoutStates);
   }
 
+
   // Utility classes for everything above
 
   /** Event Record, records info passed to interpreter's eventMonitor
@@ -831,6 +1202,10 @@ public class TestPsmInterp extends LockssTestCase {
 
     public MyInterp(PsmMachine stateMachine, Object userData) {
       super(stateMachine, userData);
+    }
+
+    public MyInterp(PsmManager mgr, PsmMachine stateMachine, Object userData) {
+      super(mgr, stateMachine, userData);
     }
 
     protected void eventMonitor(PsmState curState, PsmEvent event,

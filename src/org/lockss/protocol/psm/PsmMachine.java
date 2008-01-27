@@ -1,5 +1,5 @@
 /*
-* $Id: PsmMachine.java,v 1.4 2005-10-05 23:12:40 troberts Exp $
+* $Id: PsmMachine.java,v 1.5 2008-01-27 06:47:10 tlipkis Exp $
  */
 
 /*
@@ -134,4 +134,9 @@ public class PsmMachine {
       stateMap = newmap;
     }
   }
+
+  public interface Factory {
+    public PsmMachine getMachine(Class actionClass);
+  }
+
 }

@@ -1,5 +1,5 @@
 /*
-* $Id: PsmInterp.java,v 1.13 2005-11-16 07:44:09 smorabito Exp $
+* $Id: PsmInterp.java,v 1.14 2008-01-27 06:47:10 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,10 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.protocol.psm;
 
 import java.util.*;
+import org.lockss.daemon.*;
+import org.lockss.app.*;
 import org.lockss.util.*;
+import org.lockss.util.Queue;
 
 /**
  * The state machine interpreter.
@@ -42,6 +45,7 @@ public class PsmInterp {
 
   private PsmMachine machine;
   private Object userData;
+  private boolean initted = false;
   private PsmState curState;
   private int maxChainedEvents = 10;
   private StateTimer timer;
@@ -49,6 +53,14 @@ public class PsmInterp {
   private int curEventNum;
   private PsmInterpStateBean stateBean;
   private Checkpointer checkpointer;
+  private FifoQueue eventQueue = new FifoQueue();
+  private PsmManager psmMgr;
+  private LockssRunnable runner;
+  private boolean threaded;
+  private Thread runnerThread;
+  private Object runnerLock = new Object();
+  private Object waitMonitor = new Object();
+  private String name;
 
   /** Create a state machine interpreter that will run the specified state
    * machine.  The newly created machine should be either {@link
@@ -62,6 +74,16 @@ public class PsmInterp {
       throw new NullPointerException("null stateMachine");
     this.machine = stateMachine;
     this.userData = userData;
+  }
+
+  public PsmInterp(PsmManager mgr, PsmMachine stateMachine, Object userData) {
+    this(stateMachine, userData);
+    this.psmMgr = mgr;
+  }
+
+  /** Set the name, used in toString() and thread name */
+  public void setName(String name) {
+    this.name = name;
   }
 
   /** Set the Checkpointer that will be called whenever the machine enters
@@ -79,15 +101,26 @@ public class PsmInterp {
    * action and following transitions until machine waits..  Must be called
    * before processing events. */
   public synchronized void start() throws PsmException {
+    checkThread();
+    start0();
+    enterState(machine.getInitialState(), PsmEvents.Start, maxChainedEvents);
+  }
+
+  private void start0() {
     init();
     stateBean = new PsmInterpStateBean();
-    enterState(machine.getInitialState(), PsmEvents.Start, maxChainedEvents);
   }
 
   /** Resume execution of the machine at the state indicated by
    * resumeStateBean.  The resumable state will receive a PsmEvents.Resume
    * event. */
   public synchronized void resume(PsmInterpStateBean resumeStateBean)
+      throws PsmException {
+    checkThread();
+    enterState(resume0(resumeStateBean), PsmEvents.Resume, maxChainedEvents);
+  }
+
+  private PsmState resume0(PsmInterpStateBean resumeStateBean)
       throws PsmException {
     init();
     stateBean = resumeStateBean;
@@ -102,20 +135,22 @@ public class PsmInterp {
     if (!state.isResumable()) {
       throw new PsmException.IllegalResumptionState("Not resumable: " + name);
     }
-    enterState(state, PsmEvents.Resume, maxChainedEvents);
+    return state;
   }
 
   private void init() {
-    if (curState != null) {
+    if (initted) {
       throw new IllegalStateException("already started or resumed");
     }
     isWaiting = false;
+    initted = true;
   }
 
-  /** Process an event generated from outside the state machine (such as
-   * message recept).  Perform any entry action, follow transitions until
-   * machine waits. */
+  /** Process an event synchronously, generally one generated within a
+   * state machine action.  Perform any entry action, follow transitions
+   * until machine waits. */
   public synchronized void handleEvent(PsmEvent event) throws PsmException {
+    checkThread();
     isWaiting = false;
     handleEvent1(event, maxChainedEvents);
   }
@@ -190,6 +225,17 @@ public class PsmInterp {
     }
   }
 
+  private void handleQueuedEvent(Req req) throws PsmException {
+    PsmEvent event = req.event;
+    if (event == PsmEvents.Start) {
+      enterState(machine.getInitialState(), event, maxChainedEvents);
+    } else if (event == PsmEvents.Resume) {
+      enterState(req.state, event, maxChainedEvents);
+    } else {
+      handleEvent(event);
+    }
+  }
+
   private void performAction(PsmAction action, PsmEvent triggerEvent,
 			     int eventCtr)
     throws PsmException {
@@ -231,6 +277,11 @@ public class PsmInterp {
     curState = newState;
     PsmAction entryAction = newState.getEntryAction();
     performAction(entryAction, triggerEvent, eventCtr);
+    if (eventQueue.isEmpty()) {
+      synchronized(waitMonitor) {
+	waitMonitor.notifyAll();
+      }
+    }
   }
 
   /** If the wait event has a timeout value start a timer before waiting */
@@ -241,6 +292,237 @@ public class PsmInterp {
       setCurrentStateTimeout(timeout);
     }
     isWaiting = true;
+  }
+
+  private void startRunner() throws InterruptedException {
+    synchronized (runnerLock) {
+      if (runner != null) return;
+      runner = new Runner(eventQueue);
+      psmMgr.execute(runner);
+    }
+  }
+
+  public String toString() {
+    return "[PsmInterp: " + name + "]";
+  }
+
+  // Asynch mode.  Interpreter runs in its own thread.
+
+  /** If true, warnings will be issued if events are signalled outside the
+   * interpreter's thread */
+  public void setThreaded(boolean val) {
+    threaded = val;
+  }
+
+  void checkThread() {
+    if (threaded && runnerThread != Thread.currentThread()) {
+      log.warning("Event signalled outside interpreter thread",
+		  new RuntimeException("Stack trace"));
+    }
+  }
+
+  void assertThreaded() {
+    if (!threaded) {
+      log.warning("Threaded method called in unthreaded mode",
+		  new RuntimeException("Stack trace"));
+    }
+  }
+
+  public boolean waitIdle(long timeout) throws InterruptedException {
+    return waitIdle(Deadline.in(timeout));
+  }
+
+  public boolean waitIdle(Deadline timer) throws InterruptedException {
+    return waitCondition(timer, new Condition() {
+	public boolean evaluate() {
+	  return eventQueue.isEmpty() && isWaiting;
+	}
+      });
+  }
+
+  public boolean waitFinal(long timeout) throws InterruptedException {
+    return waitFinal(Deadline.in(timeout));
+  }
+
+  public boolean waitFinal(Deadline timer) throws InterruptedException {
+    return waitCondition(timer, new Condition() {
+	public boolean evaluate() {
+	  return eventQueue.isEmpty() && curState.isFinal();
+	}
+      });
+  }
+
+  interface Condition {
+    boolean evaluate();
+  }
+
+  private boolean waitCondition(Deadline timer, Condition test)
+      throws InterruptedException {
+    if (timer != null) {
+      Deadline.InterruptCallback cb = new Deadline.InterruptCallback();
+      try {
+	timer.registerCallback(cb);
+	while (!timer.expired()) {
+	  long sleep = timer.getSleepTime();
+	  synchronized (waitMonitor) {
+	    if (test.evaluate()) {
+	      return true;
+	    }
+	  }
+	}
+      } finally {
+	cb.disable();
+	timer.unregisterCallback(cb);
+      }
+    }
+    return test.evaluate();
+  }
+
+
+  /** Enter the start state of the state machine, performing any entry
+   * action and following transitions until machine waits..  Must be called
+   * before processing events. */
+  public void enqueueStart(ErrorHandler errHandler) throws PsmException {
+    assertThreaded();
+    start0();
+    enqueueEvent(PsmEvents.Start, errHandler);
+  }
+
+  public void enqueueResume(PsmInterpStateBean resumeStateBean,
+			     ErrorHandler errHandler)
+      throws PsmException {
+    enqueueReq(new Req(resume0(resumeStateBean),
+		       PsmEvents.Resume,
+		       errHandler));
+  }
+
+  /** Process an event asynchronously, generally one generated from outside
+   * the state machine (such as message recept).  Perform any entry action,
+   * follow transitions until machine waits. */
+  public void enqueueEvent(PsmEvent event, ErrorHandler err) {
+    enqueueEvent(event, err, null);
+  }
+
+  /** Process an event asynchronously, generally one generated from outside
+   * the state machine (such as message recept).  Perform any entry action,
+   * follow transitions until machine waits. */
+  public void enqueueEvent(PsmEvent event, ErrorHandler err,
+			   Action completionAction) {
+    enqueueReq(new Req(event, err, completionAction));
+  }
+
+  private void enqueueReq(Req req) {
+    assertThreaded();
+    synchronized (runnerLock) {
+      eventQueue.put(req);
+      if (runner == null) {
+	try {
+	  startRunner();
+	} catch (InterruptedException e) {
+	  handleError(req,
+		      new PsmException("Couldn't start interp runner", e));
+	}
+      }
+    }
+  }
+
+  void handleError(Req req, PsmException e) {
+    if (req.errHandler != null) {
+      try {
+	req.errHandler.handleError(e);
+      } catch (Exception e2) {
+	log.warning("Asynch error handler, handling", e);
+	log.warning("Asynch error handler threw", e2);
+      }
+    } else {
+      log.warning("No error handler for asynchronous error", e);
+    }
+  }
+
+  class Req {
+    PsmEvent event;
+    PsmState state;
+    ErrorHandler errHandler;
+    Action completionAction;
+
+    Req(PsmEvent event, ErrorHandler errHandler) {
+      this(event, errHandler, null);
+    }
+
+    Req(PsmEvent event, ErrorHandler errHandler, Action completionAction) {
+      this.event = event;
+      this.errHandler = errHandler;
+      this.completionAction = completionAction;
+    }
+
+    Req(PsmState state, PsmEvent event, ErrorHandler errHandler) {
+      this(event, errHandler);
+      this.state = state;
+    }
+  }
+
+  public interface ErrorHandler {
+    void handleError(PsmException e);
+  }
+
+  public interface Action {
+    void eval();
+  }
+
+  public class Runner extends LockssRunnable {
+    private Queue reqQueue;
+    private String name;
+
+    private Runner(Queue reqQueue) {
+      super("PsmRunner");
+      this.reqQueue = reqQueue;
+    }
+
+    public String toString() {
+      return "[PsmRunner: " + name + "]";
+    }
+
+    public void lockssRun() {
+      setName(name);
+      runnerThread = Thread.currentThread();
+      try {
+	while (true) {
+	  try {
+	    Req req =
+	      (Req)reqQueue.get(Deadline.in(psmMgr.getRunnerIdleTimeout()));
+	    if (req != null) {
+	      try {
+		handleQueuedEvent(req);
+		if (req.completionAction != null) {
+		  req.completionAction.eval();
+		}
+	      } catch (PsmException e) {
+		handleError(req, e);
+	      }
+	      // XXX handle RuntimeException?
+	    } else {
+	      synchronized (runnerLock) {
+		if (reqQueue.isEmpty()) {
+		  runner = null;
+		  return;
+		}
+	      }
+	    }
+	  } catch (InterruptedException ignore) {
+	    // no action
+	  }
+	}
+      } finally {
+	synchronized (runnerLock) {
+	  if (runnerThread == Thread.currentThread()) {
+	    runnerThread = null;
+	  }
+	  if (this == runner) {
+	    runner = null;
+	  }
+	}
+      }
+    }
   }
 
   /** State timeout logic.  Refers to several members of PsmInterp. */

@@ -1,5 +1,5 @@
 /*
- * $Id: PsmMethodAction.java,v 1.4 2005-07-13 07:53:05 smorabito Exp $
+ * $Id: PsmMethodAction.java,v 1.5 2008-01-27 06:47:10 tlipkis Exp $
  */
 
 /*
@@ -83,6 +83,10 @@ public class PsmMethodAction extends PsmAction {
       throw new IllegalPsmMethodActionException("Method " + m +
 						" must be static and public.");
     }
+  }
+
+  public Method getMethod() {
+    return method;
   }
 
   public PsmEvent run(PsmEvent event, PsmInterp interp) {
