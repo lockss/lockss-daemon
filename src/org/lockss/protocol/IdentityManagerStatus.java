@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManagerStatus.java,v 1.8 2007-10-11 01:13:26 smorabito Exp $
+ * $Id: IdentityManagerStatus.java,v 1.9 2008-01-30 00:52:53 tlipkis Exp $
  */
 
 /*
@@ -30,23 +30,35 @@ in this Software without prior written authorization from Stanford University.
 
 */
 package org.lockss.protocol;
+
 import java.util.*;
+import org.apache.commons.collections.CollectionUtils;
+
 import org.lockss.daemon.status.*;
+import org.lockss.config.*;
+import org.lockss.poller.*;
 import org.lockss.util.*;
 
 public class IdentityManagerStatus
   implements StatusAccessor,  StatusAccessor.DebugOnly {
+  static Logger log=Logger.getLogger("IdentityManagerStatus");
 
-  private Map<PeerIdentity,PeerIdentityStatus> theIdentities;
+  private IdentityManager mgr;
+  private boolean includeV1 = false;
 
-  public IdentityManagerStatus(Map<PeerIdentity,PeerIdentityStatus> theIdentities) {
-    this.theIdentities = theIdentities;
+  public IdentityManagerStatus(IdentityManager mgr) {
+    this.mgr = mgr;
+    try {
+      includeV1 = (mgr.getLocalPeerIdentity(Poll.V1_PROTOCOL) != null);
+    } catch (IllegalArgumentException e) {
+      // ignore
+    }
   }
 
   private static final List statusSortRules =
     ListUtil.list(new StatusTable.SortRule("ip", true));
 
-  private static final List statusColDescs =
+  private static final List<ColumnDescriptor> statusColDescs =
     ListUtil.list(
 		  new ColumnDescriptor("ip", "Peer",
 				       ColumnDescriptor.TYPE_STRING),
@@ -96,7 +108,9 @@ public class IdentityManagerStatus
                   new ColumnDescriptor("pollNak", "NAK Reason",
                                        ColumnDescriptor.TYPE_INT,
                                        "Reason for most recent poll request " +
-                                       "rejection, if any.")
+                                       "rejection, if any."),
+		  new ColumnDescriptor("groups", "Groups",
+				       ColumnDescriptor.TYPE_STRING)
 		  );
 
   public String getDisplayName() {
@@ -105,9 +119,10 @@ public class IdentityManagerStatus
 
   public void populateTable(StatusTable table) {
     String key = table.getKey();
-    table.setColumnDescriptors(statusColDescs);
+    table.setColumnDescriptors(getColDescs(table));
     table.setDefaultSortRules(statusSortRules);
-    table.setRows(getRows(key));
+    table.setRows(getRows(key,
+			  table.getOptions().get(StatusTable.OPTION_DEBUG_USER)));
     table.setSummaryInfo(getSummaryInfo(key));
   }
 
@@ -115,11 +130,39 @@ public class IdentityManagerStatus
     return false;
   }
 
-  private List getRows(String key) {
+  private List getColDescs(StatusTable table) {
+    boolean includeGroups =
+      table.getOptions().get(StatusTable.OPTION_DEBUG_USER);
+    List res = new ArrayList(statusColDescs.size());
+    for (ColumnDescriptor desc : statusColDescs) {
+      if (includeGroups ||
+	  StringUtil.indexOfIgnoreCase(desc.getColumnName(), "group") < 0) {
+	res.add(desc);
+      }
+    }
+    return res;
+  }
+
+  private boolean isGroupMatch(PeerIdentityStatus status, List myGroups) {
+    Collection hisGroups = status.getGroups();
+    return hisGroups == null ||
+      CollectionUtils.containsAny(myGroups, hisGroups);
+  }
+
+  private List getRows(String key, boolean includeWrongGroup) {
+    List myGroups = ConfigManager.getPlatformGroupList();
     List table = new ArrayList();
-    for (PeerIdentity pid : theIdentities.keySet()) {
-      if (!pid.isLocalIdentity()) {
-        table.add(makeRow(pid, theIdentities.get(pid)));
+    for (PeerIdentityStatus status : mgr.getPeerIdentityStatusList()) {
+      PeerIdentity pid = status.getPeerIdentity();
+      if (!pid.isLocalIdentity() &&
+	  (includeWrongGroup || isGroupMatch(status, myGroups))) {
+	try {
+	  if (includeV1 || pid.getPeerAddress().isStream()) {
+	    table.add(makeRow(pid, status));
+	  }
+	} catch (IdentityManager.MalformedIdentityKeyException e) {
+	  log.error("Can't get peer status: " + pid, e);
+	}
       }
     }
     return table;
@@ -128,14 +171,14 @@ public class IdentityManagerStatus
   private List getSummaryInfo(String key) {
     List res = new ArrayList();
     List<String> localIds = new ArrayList();
-    for (PeerIdentity pid : theIdentities.keySet()) {
-      if (pid.isLocalIdentity()) {
-        localIds.add(pid.getIdString());
-      }
+    for (PeerIdentity pid : mgr.getLocalPeerIdentities()) {
+      localIds.add(pid.getIdString());
     }
     if (!localIds.isEmpty()) {
       String idList =  StringUtil.separatedString(localIds, ", ");
-      res.add(new StatusTable.SummaryInfo("Local Identities",
+      String label =
+	localIds.size() == 1 ? "Local Identity" : "Local Identities";
+      res.add(new StatusTable.SummaryInfo(label,
                                           ColumnDescriptor.TYPE_STRING,
                                           idList));
     }
@@ -164,6 +207,8 @@ public class IdentityManagerStatus
             new Long(status.getTotalRejectedPolls()));
     row.put("pollNak",
             status.getLastPollNak());
+    row.put("groups",
+            status.getGroups());
     return row;
   }
 
