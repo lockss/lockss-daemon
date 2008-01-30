@@ -1,5 +1,5 @@
 /*
- * $Id: PeerIdentityStatus.java,v 1.3 2007-08-17 07:37:02 smorabito Exp $
+ * $Id: PeerIdentityStatus.java,v 1.4 2008-01-30 00:53:03 tlipkis Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.protocol;
 
+import java.util.*;
 import org.lockss.protocol.V3LcapMessage.PollNak;
 import org.lockss.util.*;
 
@@ -78,6 +79,11 @@ public class PeerIdentityStatus implements LockssSerializable {
   // The PollNak code of the last rejection, if any.
   private PollNak lastPollNak;
 
+  // Polling group(s) he last said he was in, and the last time he said
+  // that
+  private String groups;
+  private long lastGroupTime;
+
   /**
    * Construct a new PeerIdentityStatus object.
    * 
@@ -92,6 +98,13 @@ public class PeerIdentityStatus implements LockssSerializable {
    */
   public LcapIdentity getLcapIdentity() {
     return lcapIdentity;
+  }
+
+  /**
+   * @return the PeerIdentity for this peer.
+   */
+  public PeerIdentity getPeerIdentity() {
+    return lcapIdentity.getPeerIdentity();
   }
 
   /**
@@ -278,14 +291,31 @@ public class PeerIdentityStatus implements LockssSerializable {
   }
 
   /**
-   * Signal the receipt of a message from the given peer.  As a side effect,
-   * the total number of messages, the last message opcode, and the last message
-   * time are all updated.
-   * 
-   * @param msg The message received.
+   * @return The groups he last told us he's in
    */
-  public void messageReceived(LcapMessage msg) {
-    messageReceived(msg.getOpcode());
+  public List getGroups() {
+    return StringUtil.breakAt(groups, ",");
+  }
+
+  /**
+   * @param groups The groups he said he's in
+   */
+  public void setGroups(List groups) {
+    this.groups = StringUtil.separatedString(groups, ",");
+  }
+
+  /**
+   * @return The last time he told us his groups
+   */
+  public long getLastGroupTime() {
+    return lastGroupTime;
+  }
+
+  /**
+   * @param lastGroupTime The last time he told us his groups
+   */
+  public void setLastGroupTime(long lastGroupTime) {
+    this.lastGroupTime = lastGroupTime;
   }
 
   /**
@@ -293,12 +323,23 @@ public class PeerIdentityStatus implements LockssSerializable {
    * the total number of messages, the last message opcode, and the last message
    * time are all updated.
    * 
-   * @param msgOpCode The opcode of the last message received.
+   * @param msg The message received.
    */
-  public void messageReceived(int msgOpCode) {
+  public void messageReceived(LcapMessage msg) {
+    int msgOpCode = msg.getOpcode();
     totalMessages++;
     setLastMessageOpCode(msgOpCode);
     setLastMessageTime(TimeBase.nowMs());
+    if (msg instanceof V3LcapMessage) {
+      messageReceived((V3LcapMessage)msg);
+    }
+  }
+  
+  public void messageReceived(V3LcapMessage msg) {
+    List groups = msg.getGroupList();
+    if (groups != null) {
+      setGroups(groups);
+    }
   }
   
   /**
