@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollFactory.java,v 1.21 2008-01-27 06:46:04 tlipkis Exp $
+ * $Id: V3PollFactory.java,v 1.22 2008-01-30 00:50:15 tlipkis Exp $
  */
 
 /*
@@ -142,7 +142,7 @@ public class V3PollFactory extends BasePollFactory {
         retPoll = makeV3Poller(daemon, pollspec, orig, duration, hashAlg);
       } else {
         // If there's a message, we're making a voter
-        retPoll = makeV3Voter(msg, daemon, orig, au);
+        retPoll = makeV3Voter(daemon, msg, pollspec, orig);
       }
     } catch (V3Serializer.PollSerializerException ex) {
       log.error("Serialization exception creating new V3Poller: ", ex);
@@ -176,37 +176,72 @@ public class V3PollFactory extends BasePollFactory {
   /**
    * Construct a new V3 Voter to participate in a poll.
    * 
-   * @param msg  The Poll message that invited this peer.
    * @param daemon  The LOCKSS Daemon
+   * @param msg  The Poll message that invited this peer.
    * @param orig  The caller of the poll
-   * @param au  The ArchivalUnit on which the poll is being run.
-   * @return  An active V3 Voter.
+   * @param pollspec  The Poll Spec fotr this poll.
+   * @return  An active V3 Voter or null if decide not to participate.
    * @throws V3Serializer.PollSerializerException
    */
-  private V3Voter makeV3Voter(LcapMessage msg, LockssDaemon daemon,
-                              PeerIdentity orig, ArchivalUnit au)
+  private V3Voter makeV3Voter(LockssDaemon daemon, LcapMessage msg,
+			      PollSpec pollspec, PeerIdentity orig)
       throws V3Serializer.PollSerializerException {
     IdentityManager idMgr = daemon.getIdentityManager();
-    V3Voter voter = null;
-    // Ignore messages from ourself.
-    if (orig == idMgr.getLocalPeerIdentity(Poll.V3_PROTOCOL)) {
-      log.info("Not responding to poll request from myself.");
-      return null;
-    }
     V3LcapMessage m = (V3LcapMessage)msg;
 
-    // Ignore messages not coming from our group
+    // Ignore messages from ourself.
+    if (orig == idMgr.getLocalPeerIdentity(Poll.V3_PROTOCOL)) {
+      log.warning("Got request from myself, ignoring.");
+      return null;
+    }
+
+    if (!CurrentConfig.getBooleanParam(PARAM_ENABLE_V3_VOTER,
+				       DEFAULT_ENABLE_V3_VOTER)) { 
+      log.debug("V3 Voter not enabled, so not participating in poll " +
+                m.getKey());
+      sendNak(daemon, PollNak.NAK_DISABLED, pollspec.getAuId(), m);
+      return null;
+    }
+
+    // check polling group
     List ourGroups = ConfigManager.getPlatformGroupList();
     if (m.getGroupList() == null ||
         !CollectionUtils.containsAny(ourGroups, m.getGroupList())) {
-
-      // Instantly reject the poll by sending a reply to the poller,
-      // without a nonce or effort proof, and with the proper NAK code.
-      sendNak(daemon, PollNak.NAK_GROUP_MISMATCH, au.getAuId(), m);
+      sendNak(daemon, PollNak.NAK_GROUP_MISMATCH, pollspec.getAuId(), m);
       return null;
     }
-    
+    // check that we have AU
+    CachedUrlSet cus = pollspec.getCachedUrlSet();
+    if (cus == null) {
+      log.debug("Ignoring poll request from " + orig + ", don't have AU: " +
+		pollspec.getAuId());
+      sendNak(daemon, PollNak.NAK_NO_AU,
+	      pollspec.getAuId(), m);
+      return null;
+    }
+    ArchivalUnit au = cus.getArchivalUnit();
+
+    if (AuUtil.getAuState(au).getLastCrawlTime() <= 0 &&
+	!AuUtil.isPubDown(au)) { 
+      log.debug("AU not crawled & pub not down, not voting: " +
+		pollspec.getAuId());
+      sendNak(daemon, PollNak.NAK_NOT_CRAWLED, pollspec.getAuId(), m);
+      return null;
+    }
+
+    // and that plugin version agrees
+    if (!pollspec.getPluginVersion().equals(au.getPlugin().getVersion())) {
+      log.debug("Ignoring poll request for " + au.getName() +
+                   ", plugin version mismatch; have: " +
+                   au.getPlugin().getVersion() +
+                   ", need: " + pollspec.getPluginVersion());
+      sendNak(daemon, PollNak.NAK_PLUGIN_VERSION_MISMATCH,
+	      pollspec.getAuId(), m);
+      return null;
+    }
+    V3Voter voter = null;
     // Check to see if we're running too many polls already.
+
     int maxVoters =
       CurrentConfig.getIntParam(V3Voter.PARAM_MAX_SIMULTANEOUS_V3_VOTERS,
                                 V3Voter.DEFAULT_MAX_SIMULTANEOUS_V3_VOTERS);
@@ -216,29 +251,13 @@ public class V3PollFactory extends BasePollFactory {
       log.info("Not starting new V3 Voter for poll on AU " 
                + au.getAuId() + ".  Maximum number of active voters is " 
                + maxVoters + "; " + activeVoters + " are already running.");
+      sendNak(daemon, PollNak.NAK_NOT_CRAWLED, pollspec.getAuId(), m);
       return null;
     }
 
-    // CR: move earlier in method
-    // Only participate if we have and have successfully crawled this AU,
-    // and if 'enableV3Voter' is set.
-    boolean enableV3Voter =
-      CurrentConfig.getBooleanParam(PARAM_ENABLE_V3_VOTER,
-                                    DEFAULT_ENABLE_V3_VOTER);
-    if (enableV3Voter) { 
-      if (AuUtil.getAuState(au).getLastCrawlTime() > 0 ||
-          AuUtil.isPubDown(au)) { 
-        log.debug("Creating V3Voter to participate in poll " + m.getKey());
-        voter = new V3Voter(daemon, m);
+    log.debug("Creating V3Voter to participate in poll " + m.getKey());
+    voter = new V3Voter(daemon, m);
 //        voter.startPoll(); // Voters need to be started immediately.
-      } else {
-        log.debug("Have not completed new content crawl, and publisher " +
-                  "is not down, so not participating in poll " + m.getKey());
-      }
-    } else {
-      log.debug("V3 Voter not enabled, so not participating in poll " +
-                m.getKey());
-    } 
     
     // Update the status of the peer that called this poll.
     PeerIdentityStatus status = idMgr.getPeerIdentityStatus(orig);
