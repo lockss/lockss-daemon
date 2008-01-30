@@ -1,5 +1,5 @@
 /*
-* $Id: V3PollStatus.java,v 1.19 2008-01-27 06:46:04 tlipkis Exp $
+* $Id: V3PollStatus.java,v 1.20 2008-01-30 00:50:44 tlipkis Exp $
  */
 
 /*
@@ -43,9 +43,12 @@ import org.lockss.plugin.*;
 import org.lockss.poller.*;
 import org.lockss.poller.PollManager.*;
 import org.lockss.poller.v3.*;
+import org.lockss.state.*;
+import org.lockss.protocol.*;
+import org.lockss.protocol.psm.*;
+
 import static org.lockss.poller.v3.V3Poller.*;
 import static org.lockss.poller.v3.V3Voter.*;
-import org.lockss.protocol.*;
 
 /**
  * Provides support for the PollManager and Polls to present
@@ -152,6 +155,16 @@ public class V3PollStatus {
                                     ColumnDescriptor.TYPE_STRING,
                                     timeStr));
       }
+      List<PollManager.PollReq> queue = pollManager.getPendingQueue();
+      if (!queue.isEmpty()) {
+        summary.add(new SummaryInfo("Queued",
+                                    ColumnDescriptor.TYPE_INT,
+                                    queue.size()));
+	ArchivalUnit au = queue.get(0).getAu();
+        summary.add(new SummaryInfo("Next",
+                                    ColumnDescriptor.TYPE_STRING,
+				    au.getName()));
+      }
       return summary;
     }
 
@@ -174,8 +187,11 @@ public class V3PollStatus {
 
     private Map makeRow(V3Poller poller) {
       Map row = new HashMap();
-      
-      row.put("auId", poller.getAu().getName());
+      ArchivalUnit au = poller.getAu();
+      row.put("auId", 
+	      new StatusTable.Reference(au.getName(),
+					ArchivalUnitStatus.AU_STATUS_TABLE_NAME,
+					au.getAuId()));
       row.put("participants", new Integer(poller.getPollSize()));
       row.put("status", poller.getStatusString());
       row.put("talliedUrls", new Integer(poller.getTalliedUrls().size()));
@@ -256,7 +272,11 @@ public class V3PollStatus {
 
     private Map makeRow(V3Voter voter) {
       Map row = new HashMap();
-      row.put("auId", voter.getAu().getName());
+      ArchivalUnit au = voter.getAu();
+      row.put("auId",
+	      new StatusTable.Reference(au.getName(),
+					ArchivalUnitStatus.AU_STATUS_TABLE_NAME,
+					au.getAuId()));
       row.put("caller", voter.getPollerId().getIdString());
       row.put("status", voter.getStatusString());
       row.put("start", new Long(voter.getCreateTime()));
@@ -380,10 +400,12 @@ public class V3PollStatus {
       ListUtil.list(new StatusTable.SortRule("sort", true),
 		    new StatusTable.SortRule("identity",
                                              CatalogueOrderComparator.SINGLETON));
-    private final List colDescs =
+    private final List<ColumnDescriptor> colDescs =
       ListUtil.list(new ColumnDescriptor("identity", "Peer",
                                          ColumnDescriptor.TYPE_STRING),
                     new ColumnDescriptor("peerStatus", "Status",
+                                         ColumnDescriptor.TYPE_STRING),
+                    new ColumnDescriptor("state", "PSM State",
                                          ColumnDescriptor.TYPE_STRING));
 
     public V3PollerStatusDetail(PollManager pollManager) {
@@ -401,11 +423,24 @@ public class V3PollStatus {
         return;
       }
       if (poll == null) return;
-      table.setColumnDescriptors(colDescs);
+      table.setColumnDescriptors(getColDescs(table));
       table.setDefaultSortRules(sortRules);
       table.setSummaryInfo(getSummary(poll));
       table.setTitle("Status for V3 Poll " + key);
       table.setRows(getRows(poll));
+    }
+
+    private List getColDescs(StatusTable table) {
+      boolean includeState =
+	table.getOptions().get(StatusTable.OPTION_DEBUG_USER);
+      List res = new ArrayList(colDescs.size());
+      for (ColumnDescriptor desc : colDescs) {
+	if (includeState ||
+	    StringUtil.indexOfIgnoreCase(desc.getColumnName(), "state") < 0) {
+	  res.add(desc);
+	}
+      }
+      return res;
     }
 
     private List getRows(V3Poller poll) {
@@ -424,6 +459,13 @@ public class V3PollStatus {
       row.put("identity", voter.getVoterId().getIdString());
       row.put("peerStatus", voter.getStatusString());
       row.put("sort", sort);
+      PsmInterp interp = voter.getPsmInterp();
+      if (interp != null) {
+	PsmState state = interp.getCurrentState();
+	if (state != null) {
+	  row.put("state", state.getName());
+	}
+      }	
       return row;
     }
 
@@ -898,11 +940,12 @@ public class V3PollStatus {
         return;
       }
       if (voter == null) return;
-      table.setSummaryInfo(getSummary(voter));
+      table.setSummaryInfo(getSummary(voter, table));
       table.setTitle("Status for V3 Poll " + key);
     }
 
-    private List getSummary(V3Voter voter) {
+    private List getSummary(V3Voter voter, StatusTable table) {
+      boolean isDebug = table.getOptions().get(StatusTable.OPTION_DEBUG_USER);
       List summary = new ArrayList();
       summary.add(new SummaryInfo("Volume",
                                   ColumnDescriptor.TYPE_STRING,
@@ -910,6 +953,17 @@ public class V3PollStatus {
       summary.add(new SummaryInfo("Status",
                                   ColumnDescriptor.TYPE_STRING,
                                   voter.getStatusString()));
+      if (isDebug) {
+	PsmInterp interp = voter.getPsmInterp();
+	if (interp != null) {
+	  PsmState state = interp.getCurrentState();
+	  if (state != null) {
+	    summary.add(new SummaryInfo("PSM State",
+					ColumnDescriptor.TYPE_STRING,
+					state.getName()));
+	  }
+	}
+      }
       if (voter.getVoterUserData().getErrorDetail() != null) {
         summary.add(new SummaryInfo("Error",
                                     ColumnDescriptor.TYPE_STRING,
