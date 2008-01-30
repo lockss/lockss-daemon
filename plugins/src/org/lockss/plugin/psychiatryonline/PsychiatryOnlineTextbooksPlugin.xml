@@ -1,0 +1,62 @@
+<map>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.psychiatryonline.PsychiatryOnlineTextbooksPlugin</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>au_crawl_depth</string>
+    <int>1</int>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;Psychiatry Online Textbooks Plugin, Base URL %s, Resource ID %d&quot;, base_url, resource_id</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Psychiatry Online Textbooks Plugin</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;^%s(resourceToc|copyrightBooks)\.aspx\?resourceID=%d&quot;, base_url, resource_id</string>
+      <string>1,&quot;^%scontent\.aspx\?aID=[0-9]+&quot;, base_url</string>
+      <string>1,&quot;^%s.*\.(css|gif|ico|js|jpeg?|png|tif?f)$&quot;, base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%sresourceToc.aspx?resourceID=%d&quot;, base_url, resource_id</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>resource_id</key>
+        <displayName>Resource ID</displayName>
+        <description>The resource ID number</description>
+        <type>2</type>
+        <size>6</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+</map>
