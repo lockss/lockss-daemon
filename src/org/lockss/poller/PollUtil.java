@@ -1,5 +1,5 @@
 /*
- * $Id: PollUtil.java,v 1.2 2007-10-17 22:28:33 smorabito Exp $
+ * $Id: PollUtil.java,v 1.3 2008-01-30 08:31:52 tlipkis Exp $
  */
 
 /*
@@ -41,6 +41,13 @@ import org.lockss.util.*;
 public class PollUtil {
 
   public static Logger log = Logger.getLogger("PollUtil");
+
+  public static String makeShortPollKey(String pollKey) {
+    if (pollKey == null || pollKey.length() <= 10) {
+      return pollKey;
+    }
+    return pollKey.substring(0, 10);
+  }
 
   /**
    * @deprecated Only used by V1.  Remove when removing V1.
