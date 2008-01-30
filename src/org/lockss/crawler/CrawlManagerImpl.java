@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.118 2007-11-07 08:14:32 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.119 2008-01-30 00:48:28 tlipkis Exp $
  */
 
 /*
@@ -487,7 +487,9 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 	}
       }      
     }
-    highPriorityCrawlRequests.remove(au);
+    synchronized (highPriorityCrawlRequests) {
+      highPriorityCrawlRequests.remove(au);
+    }
   }
 
   private void removeFromRunningCrawls(Crawler crawler) {
@@ -509,7 +511,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   }
 
   void cancelAuCrawls(ArchivalUnit au) {
-    highPriorityCrawlRequests.remove(au);
+    removeAuFromQueues(au);
     synchronized(runningCrawls) {
       Collection<Crawler> crawls = (Collection) runningCrawls.get(au);
       if (crawls != null) {
@@ -1089,8 +1091,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 
   Deadline timeToRebuildCrawlQueue = Deadline.in(0);
   Deadline startOneWait = Deadline.in(0);
-  Map<ArchivalUnit,CrawlReq> highPriorityCrawlRequests =
-    Collections.synchronizedMap(new ListOrderedMap());
+  Map<ArchivalUnit,CrawlReq> highPriorityCrawlRequests = new ListOrderedMap();
   Comparator CPC = new CrawlPriorityComparator();
 
   Object queueLock = new Object();	// lock for sharedRateReqs and
@@ -1120,6 +1121,18 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     if (!window.canCrawl()) return false;
     Date soon = new Date(TimeBase.nowMs() + paramMinWindowOpenFor);
     return window.canCrawl(soon);
+  }
+
+  // Force queues to be rebuilt. Overkill, but easy and this hardly
+  // ever happens
+  void removeAuFromQueues(ArchivalUnit au) {
+    synchronized (highPriorityCrawlRequests) {
+      highPriorityCrawlRequests.remove(au);
+    }
+    synchronized (queueLock) {
+      unsharedRateReqs.clear();
+      sharedRateReqs.clear();
+    }
   }
 
   CrawlReq nextReq() throws InterruptedException {
@@ -1213,7 +1226,9 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 
   void enqueueHighPriorityCrawl(CrawlReq req) {
     logger.debug("enqueueHighPriorityCrawl(" + req.au + ")");
-    highPriorityCrawlRequests.put(req.au, req);
+    synchronized (highPriorityCrawlRequests) {
+      highPriorityCrawlRequests.put(req.au, req);
+    }
     timeToRebuildCrawlQueue.expire();
     startOneWait.expire();
   }
@@ -1244,9 +1259,12 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       sharedRateReqs.clear();
       for (ArchivalUnit au : (pluginMgr.areAusStarted()
 			      ? pluginMgr.getAllAus()
-			      : highPriorityCrawlRequests.keySet())) {
+			      : getHighPriorityAus())) {
 	try {
-	  CrawlReq req = highPriorityCrawlRequests.get(au);
+	  CrawlReq req;
+	  synchronized (highPriorityCrawlRequests) {
+	    req = highPriorityCrawlRequests.get(au);
+	  }
 	  if ((req != null || shouldCrawlForNewContent(au))) {
 	    ausWantCrawl++;
 	    if (isEligibleForNewContentCrawl(au)) {
@@ -1271,6 +1289,13 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     cmStatus.setWaitingCount(ausWantCrawl);
     cmStatus.setEligibleCount(ausEligibleCrawl);
   }
+
+  List<ArchivalUnit> getHighPriorityAus() {
+    synchronized (highPriorityCrawlRequests) {
+      return new ArrayList(highPriorityCrawlRequests.keySet());
+    }
+  }
+
 
   /** Orders AUs (wrapped in CrawlReq) by crawl priority:<ol>
    * <li>Explicit request priority
