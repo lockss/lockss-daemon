@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArchivalUnit.java,v 1.42 2007-10-09 00:49:57 smorabito Exp $
+ * $Id: TestBaseArchivalUnit.java,v 1.43 2008-01-30 00:49:47 tlipkis Exp $
  */
 
 /*
@@ -664,10 +664,21 @@ public class TestBaseArchivalUnit extends LockssTestCase {
   }
 
   public void testShouldCallTopLevelPoll() throws IOException {
+    TimeBase.setSimulated(100);
     MockAuState state = new MockAuState(mbau, -1, TimeBase.nowMs(), -1, null);
 
-    // shouldCallTopLevelPoll always returns true from BaseArchivalUnit
+    // no interval yet
+    assertEquals(-1, mbau.nextPollInterval);
+    assertFalse(mbau.shouldCallTopLevelPoll(state));
+    // should determine random interval
+    assertTrue(mbau.nextPollInterval >= 5000);
+    assertTrue(mbau.nextPollInterval <= 10000);
+
+    // move to proper time
+    TimeBase.step(mbau.nextPollInterval);
     assertTrue(mbau.shouldCallTopLevelPoll(state));
+    // should have reset interval
+    assertEquals(-1, mbau.nextPollInterval);
   }
 
   public void testShouldCrawlForNewContent()
