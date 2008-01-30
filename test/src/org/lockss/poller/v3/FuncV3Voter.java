@@ -1,9 +1,9 @@
 /*
- * $Id: FuncV3Voter.java,v 1.23 2008-01-30 01:10:59 tlipkis Exp $
+ * $Id: FuncV3Voter.java,v 1.24 2008-01-30 02:43:05 tlipkis Exp $
  */
 
 /*
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -268,7 +268,8 @@ public class FuncV3Voter extends LockssTestCase {
     
     MyMockV3Voter voter1 = new MyMockV3Voter(theDaemon, msgPoll);
     voter1.startPoll();
-    
+    voter1.getPsmInterp().waitIdle(TIMEOUT_SHOULDNT);
+
     voter1.checkpointPoll();
     File stateDir = voter1.getStateDir();
     
@@ -280,6 +281,7 @@ public class FuncV3Voter extends LockssTestCase {
     assertEquals(voter1.getStateDir(), voter2.getStateDir());
     
     voter2.startPoll();
+    voter2.getPsmInterp().waitIdle(TIMEOUT_SHOULDNT);
     assertTrue(voter1.isPollActive());
     assertFalse(voter1.isPollCompleted());
     assertTrue(voter2.isPollActive());
@@ -305,7 +307,8 @@ public class FuncV3Voter extends LockssTestCase {
 
     public V3LcapMessage getSentMessage() throws InterruptedException {
       log.debug2("Waiting for next message...");
-      V3LcapMessage msg = (V3LcapMessage)sentMessages.get(Deadline.in(200));
+      V3LcapMessage msg =
+	(V3LcapMessage)sentMessages.get(Deadline.in(TIMEOUT_SHOULDNT));
       log.debug2("Got message: " + msg);
       return msg;
     }
