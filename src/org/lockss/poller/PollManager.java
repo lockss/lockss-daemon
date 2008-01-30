@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.186 2008-01-27 06:46:04 tlipkis Exp $
+ * $Id: PollManager.java,v 1.187 2008-01-30 00:50:07 tlipkis Exp $
  */
 
 /*
@@ -33,21 +33,18 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.poller;
 
-import static org.lockss.poller.PollManager.DEFAULT_DEFAULT_POLL_PROBABILITY;
-import static org.lockss.poller.PollManager.DEFAULT_ENABLE_V3_POLLER;
-import static org.lockss.poller.PollManager.DEFAULT_MAX_TIME_BETWEEN_POLLS;
-import static org.lockss.poller.PollManager.DEFAULT_START_POLLS_INITIAL_DELAY;
-import static org.lockss.poller.PollManager.DEFAULT_START_POLLS_INTERVAL;
-import static org.lockss.poller.PollManager.PARAM_DEFAULT_POLL_PROBABILITY;
-import static org.lockss.poller.PollManager.PARAM_ENABLE_V3_POLLER;
-import static org.lockss.poller.PollManager.PARAM_MAX_TIME_BETWEEN_POLLS;
-import static org.lockss.poller.PollManager.PARAM_START_POLLS_INITIAL_DELAY;
-import static org.lockss.poller.PollManager.PARAM_START_POLLS_INTERVAL;
-import static org.lockss.poller.v3.V3Poller.DEFAULT_MAX_SIMULTANEOUS_V3_POLLERS;
-import static org.lockss.poller.v3.V3Poller.PARAM_MAX_SIMULTANEOUS_V3_POLLERS;
+import static org.lockss.util.Constants.SECOND;
+import static org.lockss.util.Constants.MINUTE;
+import static org.lockss.util.Constants.HOUR;
+import static org.lockss.util.Constants.DAY;
+import static org.lockss.util.Constants.WEEK;
 
 import java.io.*;
 import java.util.*;
+
+import EDU.oswego.cs.dl.util.concurrent.*;
+import org.apache.commons.collections.map.*;
+import org.apache.commons.lang.builder.CompareToBuilder;
 
 import org.lockss.alert.*;
 import org.lockss.app.*;
@@ -59,10 +56,10 @@ import org.lockss.plugin.*;
 import org.lockss.poller.v3.*;
 import org.lockss.poller.v3.V3Serializer.PollSerializerException;
 import org.lockss.protocol.*;
+import org.lockss.protocol.psm.*;
 import org.lockss.state.*;
 import org.lockss.util.*;
 
-import EDU.oswego.cs.dl.util.concurrent.*;
 import static org.lockss.poller.v3.V3Poller.*;
 
 
@@ -85,7 +82,7 @@ public class PollManager
   static final String PREFIX = Configuration.PREFIX + "poll.";
   static final String PARAM_RECENT_EXPIRATION = PREFIX + "expireRecent";
 
-  static final long DEFAULT_RECENT_EXPIRATION = Constants.DAY;
+  static final long DEFAULT_RECENT_EXPIRATION = DAY;
   
   /** If true, empty poll state directories found at startup will be
    * deleted.
@@ -104,23 +101,46 @@ public class PollManager
   public static final boolean DEFAULT_ENABLE_V3_VOTER =
     org.lockss.poller.v3.V3PollFactory.DEFAULT_ENABLE_V3_VOTER;
   
+  // Poll starter
+
   public static final String PARAM_START_POLLS_INITIAL_DELAY = 
     PREFIX + "pollStarterInitialDelay";
   public static final long DEFAULT_START_POLLS_INITIAL_DELAY = 
-    1000 * 60 * 10; /* 10 Minutes */
+    MINUTE * 10;
   
   public static final String PARAM_START_POLLS_INTERVAL =
     PREFIX + "pollStarterInterval";
-  public static final long DEFAULT_START_POLLS_INTERVAL =
-    1000 * 60 * 60; /* 1 Hour */
+  public static final long DEFAULT_START_POLLS_INTERVAL = HOUR;
   
   /** The time, in ms, that will be added between launching new polls.
    * This time is added to the channel timeout time provided by SCOMM.
    */
   public static final String PARAM_ADDED_POLL_DELAY =
     PREFIX + "pollStarterAdditionalDelayBetweenPolls";
-  public static final long DEFAULT_ADDED_POLL_DELAY = 1000;
+  public static final long DEFAULT_ADDED_POLL_DELAY = SECOND;
   
+  /** Max interval between recalculating poll queue order */
+  public static final String PARAM_REBUILD_POLL_QUEUE_INTERVAL =
+    PREFIX + "queueRecalcInterval";
+  static final long DEFAULT_REBUILD_POLL_QUEUE_INTERVAL = HOUR;
+
+  /** Interval to sleep when queue empty, before recalc. */
+  public static final String PARAM_QUEUE_EMPTY_SLEEP =
+    PREFIX + "queueEmptySleep";
+  static final long DEFAULT_QUEUE_EMPTY_SLEEP = 30 * MINUTE;
+
+  /** Size of poll queue. */
+  public static final String PARAM_POLL_QUEUE_MAX =
+    PREFIX + "pollQueueMax";
+  static final int DEFAULT_POLL_QUEUE_MAX = 50;
+
+  /** The interval after which AUs that have not completed a poll will be
+   * given the same priority as AUs that have never completed a poll
+   */
+  public static final String PARAM_INCREASE_POLL_PRIORITY_AFTER =
+    PREFIX + "increasePollPriorityAfter";
+  public static final long DEFAULT_INCREASE_POLL_PRIORITY_AFTER = 6 * WEEK;;
+
   /**
    * If set, poll starting will be throttled.  This is the default.
    */
@@ -147,13 +167,17 @@ public class PollManager
    */
   public static final String PARAM_MAX_TIME_BETWEEN_POLLS =
     PREFIX + "maxTimeBetweenPolls";
-  public static final long DEFAULT_MAX_TIME_BETWEEN_POLLS =
-    1000L * 60L * 60L * 24L * 30;  // 30 Days. 
+  public static final long DEFAULT_MAX_TIME_BETWEEN_POLLS = 30 * DAY;
 
   /** If true, state machines are run in their own thread */
   public static final String PARAM_PSM_ASYNCH = PREFIX + "psmAsynch";
   public static final boolean DEFAULT_PSM_ASYNCH = true;
 
+  /** Interval after which we'll try inviting peers that we think are not
+   * in our polling group */
+  public static final String PARAM_WRONG_GROUP_RETRY_TIME =
+    PREFIX + "wrongGroupRetryTime";
+  public static final long DEFAULT_WRONG_GROUP_RETRY_TIME = 4 * WEEK;
 
   // Items are moved between thePolls and theRecentPolls, so it's simplest
   // to synchronize all accesses on a single object.  That object is
@@ -173,6 +197,7 @@ public class PollManager
   private static HashService theHashService;
   private static LcapRouter theRouter = null;
   private AlertManager theAlertManager = null;
+  private PluginManager pluginMgr = null;
   private static SystemMetrics theSystemMetrics = null;
   private AuEventHandler auEventHandler;
   // CR: serializedPollers and serializedVoters s.b. updated as new
@@ -192,8 +217,19 @@ public class PollManager
   private boolean isPollStarterEnabled = false;
   private boolean enablePollStarterThrottle =
     DEFAULT_ENABLE_POLL_STARTER_THROTTLE;
+  private long paramRebuildPollQueueInterval =
+    DEFAULT_REBUILD_POLL_QUEUE_INTERVAL;
+  private long paramQueueEmptySleep = DEFAULT_QUEUE_EMPTY_SLEEP;
+  private int paramPollQueueMax = DEFAULT_POLL_QUEUE_MAX;
+  private long interPollStartDelay = DEFAULT_ADDED_POLL_DELAY;
+  private long increasePollPriorityAfter =
+    DEFAULT_INCREASE_POLL_PRIORITY_AFTER;
+
   private boolean isAsynch = DEFAULT_PSM_ASYNCH;
-  
+  private long wrongGroupRetryTime = DEFAULT_WRONG_GROUP_RETRY_TIME;
+
+
+
   // If true, restore V3 Voters
   private boolean enablePollers = DEFAULT_ENABLE_V3_POLLER;
   // If true, restore V3 Voters
@@ -205,6 +241,57 @@ public class PollManager
 
   // our configuration variables
   protected long m_recentPollExpireTime = DEFAULT_RECENT_EXPIRATION;
+
+
+  Deadline timeToRebuildPollQueue = Deadline.in(0);
+  Deadline startOneWait = Deadline.in(0);
+  Map<ArchivalUnit,PollReq> highPriorityPollRequests =
+    Collections.synchronizedMap(new ListOrderedMap());
+  Comparator PPC = new PollPriorityComparator();
+
+  Object queueLock = new Object();	// lock for sharedRateReqs and
+					// pollQueue
+  BoundedTreeSet pollQueue = new BoundedTreeSet(paramPollQueueMax, PPC);
+
+
+  public class PollReq {
+    ArchivalUnit au;
+    AuState aus = null;
+    int priority = 0;
+
+    PollReq(ArchivalUnit au) {
+      this(au, AuUtil.getAuState(au));
+    }
+
+    PollReq(ArchivalUnit au, AuState aus) {
+      this.au = au;
+      this.aus = aus;
+    }
+
+    public void setPriority(int val) {
+      priority = val;
+    }
+
+    public ArchivalUnit getAu() {
+      return au;
+    }
+
+    public AuState getAuState() {
+      return aus;
+    }
+
+    public int getPriority() {
+      return priority;
+    }
+
+    public boolean isHiPri() {
+      return priority > 0;
+    }
+
+    public String toString() {
+      return "[PollReq: " + au + ", pri: " + priority;
+    }
+  }
 
   // The PollFactory instances
   PollFactory [] pf = {
@@ -231,6 +318,7 @@ public class PollManager
     theIDManager = theDaemon.getIdentityManager();
     theHashService = theDaemon.getHashService();
     theAlertManager = theDaemon.getAlertManager();
+    pluginMgr = theDaemon.getPluginManager();
 
     // register a message handler with the router
     theRouter = theDaemon.getRouterManager();
@@ -276,7 +364,7 @@ public class PollManager
 	public void auDeleted(ArchivalUnit au) {
 	  cancelAuPolls(au);
 	}};
-    getDaemon().getPluginManager().registerAuEventHandler(auEventHandler);
+    pluginMgr.registerAuEventHandler(auEventHandler);
 
     // Maintain the state of V3 polls, since these do not use the V1 per-node
     // history mechanism.
@@ -305,7 +393,7 @@ public class PollManager
     if (pollStarter != null) {
       theLog.info("Stopping PollStarter");
       pollStarter.stopPollStarter();
-      pollStarter.waitExited(Deadline.in(Constants.SECOND));
+      pollStarter.waitExited(Deadline.in(SECOND));
       pollStarter = null;
     }
     isPollStarterEnabled = false;
@@ -877,6 +965,15 @@ public class PollManager
       pollStartInitialDelay =
         newConfig.getTimeInterval(PARAM_START_POLLS_INITIAL_DELAY,
                                   DEFAULT_START_POLLS_INITIAL_DELAY);
+      paramQueueEmptySleep = newConfig.getTimeInterval(PARAM_QUEUE_EMPTY_SLEEP,
+						    DEFAULT_QUEUE_EMPTY_SLEEP);
+      paramPollQueueMax = newConfig.getInt(PARAM_POLL_QUEUE_MAX,
+					  DEFAULT_POLL_QUEUE_MAX);
+      pollQueue.setMaxSize(paramPollQueueMax);
+
+      paramRebuildPollQueueInterval =
+	newConfig.getTimeInterval(PARAM_REBUILD_POLL_QUEUE_INTERVAL,
+			       DEFAULT_REBUILD_POLL_QUEUE_INTERVAL);
       enableV3Poller =
         newConfig.getBoolean(PARAM_ENABLE_V3_POLLER,
                              DEFAULT_ENABLE_V3_POLLER);
@@ -894,7 +991,26 @@ public class PollManager
                              DEFAULT_ENABLE_POLL_STARTER_THROTTLE);
       isAsynch = newConfig.getBoolean(PARAM_PSM_ASYNCH,
 				      DEFAULT_PSM_ASYNCH); 
+      wrongGroupRetryTime =
+	newConfig.getTimeInterval(PARAM_WRONG_GROUP_RETRY_TIME,
+				  DEFAULT_WRONG_GROUP_RETRY_TIME); 
+      increasePollPriorityAfter =
+	newConfig.getTimeInterval(PARAM_INCREASE_POLL_PRIORITY_AFTER,
+				  DEFAULT_INCREASE_POLL_PRIORITY_AFTER); 
+
     }
+    long scommTimeout =
+      newConfig.getTimeInterval(BlockingStreamComm.PARAM_CONNECT_TIMEOUT,
+				BlockingStreamComm.DEFAULT_CONNECT_TIMEOUT);
+    long psmRunnerTimeout =
+      newConfig.getTimeInterval(PsmManager.PARAM_RUNNER_IDLE_TIME,
+				PsmManager.DEFAULT_RUNNER_IDLE_TIME);
+    long addedTimeout = 
+      newConfig.getTimeInterval(PARAM_ADDED_POLL_DELAY,
+				DEFAULT_ADDED_POLL_DELAY);
+    interPollStartDelay = (Math.max(scommTimeout, psmRunnerTimeout)
+			   + addedTimeout);
+
     for (int i = 0; i < pf.length; i++) {
       if (pf[i] != null) {
 	pf[i].setConfig(newConfig, oldConfig, changedKeys);
@@ -904,6 +1020,10 @@ public class PollManager
 
   public boolean isAsynch() {
     return isAsynch;
+  }
+
+  public long getWrongGroupRetryTime() {
+    return wrongGroupRetryTime;
   }
 
   public PollFactory getPollFactory(PollSpec spec) {
@@ -1496,10 +1616,7 @@ public class PollManager
         
     private LockssDaemon lockssDaemon;
     private PollManager pollManager;
-    private PluginManager pluginManager;
     
-    private Iterator<ArchivalUnit> auIterator;
-
     private volatile boolean goOn = true;
 
     public PollStarter(LockssDaemon lockssDaemon,
@@ -1507,7 +1624,6 @@ public class PollManager
       super("PollStarter");
       this.lockssDaemon = lockssDaemon;
       this.pollManager = pollManager;
-      this.pluginManager = lockssDaemon.getPluginManager();
 
       Configuration config = CurrentConfig.getCurrentConfig();
     }
@@ -1523,8 +1639,6 @@ public class PollManager
           theLog.debug("Waiting until AUs started");
           lockssDaemon.waitUntilAusStarted();
           Deadline initial = Deadline.in(pollStartInitialDelay);
-          theLog.debug("pollStartInitialDelay=" + pollStartInitialDelay);
-          theLog.debug("Setting initial Poll Starter delay to " + initial);
           pollManager.getV3Status().setNextPollStartTime(initial);
           initial.sleep();
         } catch (InterruptedException e) {
@@ -1533,163 +1647,203 @@ public class PollManager
       }
       
       while (goOn) {
-        startSomePolls();
-        Deadline timer = Deadline.in(pollStartInterval);
-        pollManager.getV3Status().setNextPollStartTime(timer);
-        if (goOn) {
-          try {
-            timer.sleep();
-          } catch (InterruptedException e) {
-            // just wakeup and check for exit
-          }
-        }
-      }
-
-      pollManager.getV3Status().setNextPollStartTime(null);
-    }
-    
-    void startSomePolls() {
-
-      if (! enableV3Poller) {
-        theLog.debug("Not calling any polls due to configuration ("
-                     + PARAM_ENABLE_V3_POLLER
-                     + ")");
-        return;
-      }
-
-      theLog.debug2("Checking for AUs that need polls");
-
-      // Get list of all AUs
-      if (auIterator == null || !auIterator.hasNext()) {
-        auIterator = pluginManager.getRandomizedAus().iterator();
-      }
-
-      while (auIterator.hasNext()) {
-
-        try {
-          possiblyStartPoll(auIterator.next());
-        } catch (RuntimeException ex) {
-          // Log and go on.
-          //
-          // PluginManager.getRandomizedAus() returns a new collection
-          // of AU references, and this should be the only thread
-          // iterating over it.  ConcurrentModificationExceptions should
-          // not occur.
-          
-          theLog.error("[PollStarter] Caught exception while iterating "
-                       + "over AUs: " + ex);
-          
-          // Not sure that we want a stack trace, so I'm leaving it out
-          // for now.
-        }
-      }
-
-    }
-    
-    void possiblyStartPoll(ArchivalUnit au) {
-      theLog.debug2("Deciding whether to call poll on AU: " + au.getName());
-      
-      AuState auState = AuUtil.getAuState(au);
-
-      // Defer to the AU's shouldCallTopLevelPoll method, which checks
-      // the AuState.
-      if (!au.shouldCallTopLevelPoll(auState)) {
-        theLog.debug("AU shouldCallTopLevelPoll returns false on " + au 
-                     + ".  Not starting a poll");
-        return;
-      }
-
-      // Do not call polls on AUs that have not crawled, UNLESS that AU
-      // is marked pubdown.
-      if (auState.getLastCrawlTime() == -1 && !AuUtil.isPubDown(au)) {
-        theLog.debug("Not calling a poll on " + au + ", because it has not "
-                     + "crawled and it is not marked pubdown.");
-        return;
-      }
-
-      // Do not call polls on AUs if the maximum number of pollers are already
-      // running.
-      int activePolls = pollManager.getActiveV3Pollers().size(); 
-      if (activePolls >= maxSimultaneousPollers) {
-        theLog.debug2("Not starting new V3 Poll on " + au
-                      + ".  Maximum number of active pollers is "
-                      + maxSimultaneousPollers + "; " + activePolls
-                      + " are already running.");
-        return;
-      }
-
-      // If a poll is already running, don't start another one.
-      if (pollManager.isPollRunning(au)) {
-        theLog.debug2("Not calling a poll on " + au
-                      + " because another poll is already running.");
-        return;
-      }
-      
-      float prob = pollProbability(auState);
-      boolean callPoll = ProbabilisticChoice.choose(prob);
-      
-      if (callPoll) {
-        PollSpec spec = new PollSpec(au.getAuCachedUrlSet(), Poll.V3_POLL);
-        theLog.debug("Calling a V3 poll on AU " + au);
-
-        if (pollManager.callPoll(spec) == null) {
-          theLog.debug("pollManager.callPoll returned null. Failed to call "
-                       + "a V3 poll on " + au);
-        }
-        
-        // Add a delay to throttle poll starting.  The delay is the sum of 
-        // the scomm timeout and an additional number of milliseconds.
-        if (enablePollStarterThrottle) {
-          long scommTimeout =
-            CurrentConfig.getLongParam(BlockingStreamComm.PARAM_CONNECT_TIMEOUT,
-                                       BlockingStreamComm.DEFAULT_CONNECT_TIMEOUT);
-          long addedTimeout = 
-            CurrentConfig.getLongParam(PARAM_ADDED_POLL_DELAY,
-                                       DEFAULT_ADDED_POLL_DELAY);
-          try {
-            Thread.sleep(scommTimeout + addedTimeout);
-          } catch (InterruptedException ex) {
-            // Just proceed to the next poll.
-          }
-        }
-      } else {
-        theLog.debug2("Chose not to call a V3 poll on AU " + au);
+	pollManager.getV3Status().setNextPollStartTime(null);
+	try {
+	  startOnePoll();
+	} catch (InterruptedException e) {
+	  // check goOn
+	}
       }
     }
-    
-    /**
-     * Return the probability of calling a poll on the given AU.
-     *  
-     * @param au
-     * @return
-     */
-    float pollProbability(AuState auState) {
-      long lastPollTime = auState.getLastTopLevelPollTime();
-      
-      // If there's never been a poll, return 100%.
-      if (lastPollTime == -1) {
-        return 1.0f;
-      }
-      
-      long delta = TimeBase.nowMs() - lastPollTime;
-      // If it's been more than maxTimeBetweenPolls, return 100%
-      if (delta > maxTimeBetweenPolls) {
-        theLog.debug2("Returning 100% poll probability because delta is larger "
-                      + "than max time.");
-        return 1.0f;
-      }
-      
-      // Otherwise, return defaultPollProbability.
-      theLog.debug2("Returning default poll probability: " +
-                    defaultPollProbability);
-      return defaultPollProbability;
-    }
-    
+
     public void stopPollStarter() {
       goOn = false;
       interruptThread();
     }
+    
   }
 
+  boolean startOnePoll() throws InterruptedException {
+    startOneWait.expireIn(paramQueueEmptySleep);
+    if (enableV3Poller) {
+      PollReq req = nextReq();
+      if (req != null) {
+	startPoll(req);
+	return true;
+      }
+    }
+    v3Status.setNextPollStartTime(startOneWait);
+    while (!startOneWait.expired()) {
+      try {
+	startOneWait.sleep();
+      } catch (InterruptedException e) {
+	// just wakeup and check
+      }
+    }
+    return false;
+  }
 
+  PollReq nextReq() throws InterruptedException {
+    boolean rebuilt = false;
+
+    if (timeToRebuildPollQueue.expired()) {
+      rebuildPollQueue();
+      rebuilt = true;
+    }
+    PollReq res = nextReqFromBuiltQueue();
+    if (res != null) {
+      return res;
+    }
+    if (!rebuilt) {
+      rebuildPollQueue();
+    }
+    return nextReqFromBuiltQueue();
+  }
+
+  PollReq nextReqFromBuiltQueue() {
+    synchronized (queueLock) {
+      if (theLog.isDebug3()) {
+	theLog.debug3("nextReqFromBuiltQueue(), " +
+		      pollQueue.size() + " in queue");
+      }
+      if (pollQueue.isEmpty()) {
+	if (theLog.isDebug3()) {
+	  theLog.debug3("nextReqFromBuiltQueue(): null");
+	}
+	return null;
+      }
+      PollReq bestReq = (PollReq)pollQueue.first();
+      pollQueue.remove(bestReq);
+      return bestReq;
+    }
+  }
+
+  public List<PollReq> getPendingQueue() {
+    return new ArrayList(pollQueue);
+  }
+
+  void enqueueHighPriorityPoll(PollReq req) {
+    theLog.debug("enqueueHighPriorityPoll(" + req.au + ")");
+    highPriorityPollRequests.put(req.au, req);
+    timeToRebuildPollQueue.expire();
+    startOneWait.expire();
+  }
+
+  void rebuildPollQueue() {
+    timeToRebuildPollQueue.expireIn(paramRebuildPollQueueInterval);
+    long startTime = TimeBase.nowMs();
+
+    rebuildPollQueue0();
+    theLog.debug("rebuildPollQueue(): "+
+		 (TimeBase.nowMs() - startTime)+"ms");
+  }
+
+  void rebuildPollQueue0() {
+    int ausWantPoll = 0;
+    int ausEligiblePoll = 0;
+    synchronized (queueLock) {
+      pollQueue.clear();
+      for (ArchivalUnit au : pluginMgr.getAllAus()) {
+	AuState auState = AuUtil.getAuState(au);
+	try {
+	  PollReq req = highPriorityPollRequests.get(au);
+	  if ((req != null || wantsPoll(au, auState))) {
+	    ausWantPoll++;
+	    if (isEligibleForPoll(au, auState)) {
+	      ausEligiblePoll++;
+	      if (req == null) {
+		req = new PollReq(au, auState);
+	      }
+	      pollQueue.add(req);
+	    }
+	  }
+	} catch (RuntimeException e) {
+	  theLog.warning("Checking for pollworthiness: " + au.getName(), e);
+	  // ignore AU if it caused an error
+	}
+      }
+    }
+  }
+
+  boolean wantsPoll(ArchivalUnit au, AuState auState) {
+    return au.shouldCallTopLevelPoll(auState);
+  }
+  
+  boolean isEligibleForPoll(ArchivalUnit au, AuState auState) {
+    // Do not call polls on AUs that have not crawled, UNLESS that AU
+    // is marked pubdown.
+    if (auState.getLastCrawlTime() == -1 && !AuUtil.isPubDown(au)) {
+      theLog.debug2("Not crawled or down, not calling a poll on " + au);
+      return false;
+    }
+
+    // If a poll is already running, don't start another one.
+    if (isPollRunning(au)) {
+      theLog.debug3("Already polling: " + au);
+      return false;
+    }
+    return true;
+  }
+
+  boolean startPoll(PollReq req) {
+    ArchivalUnit au = req.getAu();
+    PollSpec spec = new PollSpec(au.getAuCachedUrlSet(), Poll.V3_POLL);
+    theLog.debug("Calling a V3 poll on AU " + au);
+
+    if (callPoll(spec) == null) {
+      theLog.debug("pollManager.callPoll returned null. Failed to call "
+		   + "a V3 poll on " + au);
+      return false;
+    }
+        
+    // Add a delay to throttle poll starting.  The delay is the sum of 
+    // the scomm timeout and an additional number of milliseconds.
+    if (enablePollStarterThrottle) {
+      try {
+	Deadline.in(interPollStartDelay).sleep();
+      } catch (InterruptedException ex) {
+	// Just proceed to the next poll.
+      }
+    }
+    return true;
+  }
+  
+  /** Orders AUs (wrapped in PollReq) by poll priority:<ol>
+   * <li>Explicit request priority
+   * <li>no successful poll or last attempt > NNN ago
+   * <li>Least recent poll attempt
+   * <li>Least recent poll success
+   * </ol>
+   */
+  class PollPriorityComparator implements Comparator {
+    // Comparator should not reference NodeManager, etc., else all sorted
+    // collection insertions, etc. must be protected against
+    // NoSuchAuException
+    public int compare(Object o1, Object o2) {
+      PollReq r1 = (PollReq)o1;
+      PollReq r2 = (PollReq)o2;
+      ArchivalUnit au1 = r1.au;
+      ArchivalUnit au2 = r2.au;
+      AuState aus1 = r1.aus;
+      AuState aus2 = r2.aus;
+      return new CompareToBuilder()
+	.append(-r1.priority, -r2.priority)
+	.append(recentAttemptOrder(aus1),recentAttemptOrder(aus2))
+	.append(aus1.getLastPollAttempt(), aus2.getLastPollAttempt())
+	.append(aus1.getLastTopLevelPollTime(), aus2.getLastTopLevelPollTime())
+	.append(System.identityHashCode(r1), System.identityHashCode(r2))
+	.toComparison();
+    }
+
+    int recentAttemptOrder(AuState aus) {
+      if (aus.getLastTopLevelPollTime() <= 0) {
+	return 0;
+      }
+      long lastAttempt = aus.getLastPollAttempt();
+      if (TimeBase.msSince(lastAttempt) > increasePollPriorityAfter) {
+	return 0;
+      }
+      return 1;
+    }
+  }
 }
