@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.66 2008-01-27 06:46:04 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.67 2008-01-30 00:50:56 tlipkis Exp $
  */
 
 /*
@@ -280,8 +280,9 @@ public class V3Poller extends BasePoll {
   private PollerStateBean pollerState;
   // Map of PeerIdentity => ParticipantState for all participants in
   // this poll, both inner and outer circle
-  protected Map theParticipants = new LinkedHashMap();
-  protected Map exParticipants = new HashMap();
+  protected Map<PeerIdentity,ParticipantUserData> theParticipants =
+    new LinkedHashMap();
+  protected Map<PeerIdentity,ParticipantUserData> exParticipants = new HashMap();
   private LockssDaemon theDaemon;
   private PollManager pollManager;
   private IdentityManager idManager;
@@ -704,6 +705,12 @@ public class V3Poller extends BasePoll {
         stopPoll(POLLER_STATUS_EXPIRED);
         return;
       }
+
+      // XXX Should be in PollManager
+      if (!resumedPoll) {
+	AuState auState = theDaemon.getNodeManager(getAu()).getAuState();
+	auState.pollStarted();
+      }
     } else {
       log.warning("Unable to schedule time for poll " + getKey());
       stopPoll(POLLER_STATUS_NO_TIME);
@@ -711,8 +718,7 @@ public class V3Poller extends BasePoll {
     }
 
     synchronized(theParticipants) {
-      for (Iterator it = theParticipants.values().iterator(); it.hasNext();) {
-        ParticipantUserData ud = (ParticipantUserData)it.next();
+      for (ParticipantUserData ud : theParticipants.values()) {
         if (!ud.isOuterCircle()) { // Start polling only inner circle members.
 	  startParticipant(ud, resumedPoll);
         }
@@ -781,6 +787,8 @@ public class V3Poller extends BasePoll {
     log.info("Stopping poll " + getKey() + " with status " + 
              V3Poller.POLLER_STATUS_STRINGS[status]);
     setStatus(status);
+    AuState auState = theDaemon.getNodeManager(getAu()).getAuState();
+    auState.pollFinished(status);
     if (task != null && !task.isExpired()) {
       log.debug2("Cancelling task");
       task.cancel();
@@ -804,8 +812,7 @@ public class V3Poller extends BasePoll {
     pollerState.setDuration(now - pollerState.getCreateTime());
     // Clean up any lingering participants.
     synchronized(theParticipants) {
-      for (Iterator voters = theParticipants.values().iterator(); voters.hasNext(); ) {
-        ParticipantUserData ud = (ParticipantUserData)voters.next();
+      for (ParticipantUserData ud : theParticipants.values()) {
         VoteBlocks vb = ud.getVoteBlocks();
         if (vb != null) {
           vb.release();
@@ -849,17 +856,11 @@ public class V3Poller extends BasePoll {
       for (Iterator it = outerCircle.iterator(); it.hasNext(); ) {
         String idStr = (String) it.next();
         PeerIdentity id = idManager.findPeerIdentity(idStr);
-	// CR: constructOuterCircle() should eliminate invitees who are
-	// already participating
-        if (!theParticipants.keySet().contains(id)) {
-          log.debug2("Adding new peer " + id + " to the outer circle");
-          ParticipantUserData participant = makeParticipant(id);
-          participant.isOuterCircle(true);
-          theParticipants.put(id, participant);
-	  startParticipant(participant, false);
-        } else {
-          log.debug("We already have peer " + id + " in our list of voters");
-        }
+	log.debug2("Adding new peer " + id + " to the outer circle");
+	ParticipantUserData participant = makeParticipant(id);
+	participant.isOuterCircle(true);
+	theParticipants.put(id, participant);
+	startParticipant(participant, false);
       }
     }
   }
@@ -870,22 +871,19 @@ public class V3Poller extends BasePoll {
     // nominee list.  If there are not enough peers, just nominate whoever
     // we can.
     synchronized(theParticipants) {
-      for (Iterator it = theParticipants.values().iterator(); it.hasNext(); ) {
-        ParticipantUserData participant = (ParticipantUserData)it.next();
-        
+      for (ParticipantUserData participant : theParticipants.values()) {
         if (participant.getNominees() == null)
           continue;
         
-        List<String> nominees = new ArrayList<String>();
+        List<String> nominees = new ArrayList();
         
         // Reject any nominees we should not include.
-	// CR: reject us and inner circle first
         for (String pidKey : (List<String>)participant.getNominees()) {
           if (shouldIncludePeer(pidKey)) {
             nominees.add(pidKey);
           }
         }
-        
+
         if (nominees == null || nominees.size() == 0) {
           // If we want to drop peers that don't send any nominees,
           // they will have already been removed at this point,
@@ -1017,8 +1015,7 @@ public class V3Poller extends BasePoll {
       // CR: s.b. boolean (foundURLLowerThanOurs)
       String lowestUrl = null;
       synchronized(theParticipants) {
-        for (Iterator it = theParticipants.values().iterator(); it.hasNext();) {
-          ParticipantUserData voter = (ParticipantUserData)it.next();
+	for (ParticipantUserData voter : theParticipants.values()) {
           VoteBlocksIterator iter = voter.getVoteBlockIterator();
           
           if (iter == null) {
@@ -1049,8 +1046,7 @@ public class V3Poller extends BasePoll {
           }
         }
         
-        for (Iterator it = theParticipants.values().iterator(); it.hasNext();) {
-          ParticipantUserData voter = (ParticipantUserData)it.next();
+	for (ParticipantUserData voter : theParticipants.values()) {
           VoteBlocksIterator iter = voter.getVoteBlockIterator();
           
           digestIndex++;
@@ -1125,6 +1121,8 @@ public class V3Poller extends BasePoll {
    * more blocks to tally, but peers may still have blocks that have not been
    * checked.
    */
+  // CR: this has caused TaskNotifier watchdog to trip.  Move into state
+  // machine
   private void finishTally() {
     int digestIndex = 0;
     int missingBlockVoters = 0;
@@ -1133,8 +1131,7 @@ public class V3Poller extends BasePoll {
       missingBlockVoters = 0;
       BlockTally tally = new BlockTally(pollerState.getQuorum());
       synchronized(theParticipants) {
-        for (Iterator it = theParticipants.values().iterator(); it.hasNext();) {
-          ParticipantUserData voter = (ParticipantUserData)it.next();
+	for (ParticipantUserData voter : theParticipants.values()) {
           VoteBlocksIterator iter = voter.getVoteBlockIterator();
           
           if (iter == null) {
@@ -1330,8 +1327,7 @@ public class V3Poller extends BasePoll {
     initBytes[0] = new byte[0];
     int ix = 1;
     synchronized(theParticipants) {
-      for (Iterator it = theParticipants.values().iterator(); it.hasNext();) {
-        ParticipantUserData ud = (ParticipantUserData)it.next();
+      for (ParticipantUserData ud : theParticipants.values()) {
         log.debug2("Initting hasher byte arrays for voter " + ud.getVoterId());
         initBytes[ix] = ByteArray.concat(ud.getPollerNonce(),
                                          ud.getVoterNonce());
@@ -1432,7 +1428,7 @@ public class V3Poller extends BasePoll {
    */
   private void deleteBlock(String url) {
     try {
-      if (deleteExtraFiles) {
+      if (deleteExtraFiles && AuUtil.okDeleteExtraFiles(getAu())) {
         CachedUrlSetSpec cuss =
           new SingleNodeCachedUrlSetSpec(url);
         CachedUrlSet cus = getAu().makeCachedUrlSet(cuss);
@@ -1689,8 +1685,7 @@ public class V3Poller extends BasePoll {
     }
     // CR: repair thread holds this lock for a long time?
     synchronized(theParticipants) {
-      for (Iterator iter = theParticipants.values().iterator(); iter.hasNext();) {
-        ParticipantUserData ud = (ParticipantUserData)iter.next();
+      for (ParticipantUserData ud : theParticipants.values()) {
         PsmInterp interp = ud.getPsmInterp();
 	String msg = "Error processing VoteComplete";
 	if (isAsynch) {
@@ -1724,7 +1719,7 @@ public class V3Poller extends BasePoll {
     stats.incrementNumPolls(auId);
     // Update the last poll time on the AU.
     AuState auState = theDaemon.getNodeManager(getAu()).getAuState();
-    auState.newPollFinished();
+//     auState.pollFinished();
     auState.setV3Agreement(getPercentAgreement());
     stopPoll(POLLER_STATUS_COMPLETE);
   }
@@ -1886,55 +1881,61 @@ public class V3Poller extends BasePoll {
    * returned is either the full set of all known peers, or  
    */
   Collection getReferenceList() {
-    Collection initialPeers = new ArrayList();
-
     if (idManager == null) {
       log.warning("getReferenceList possibly called after poll closed!");
-      return initialPeers;
+      return Collections.EMPTY_LIST;
     }
     
     if (enableDiscovery) {
-      Collection allTCPPeers = idManager.getTcpPeerIdentities();
-      for (Iterator iter = allTCPPeers.iterator(); iter.hasNext(); ) {
-        PeerIdentity id = (PeerIdentity)iter.next();
-        if (shouldIncludePeer(id)) {
-          initialPeers.add(id);
-        }
-      }
+      return idManager.getTcpPeerIdentities(invitationPred);
     } else {
-      Collection keys =
+      Collection<String> keys =
         CurrentConfig.getList(IdentityManagerImpl.PARAM_INITIAL_PEERS,
                               IdentityManagerImpl.DEFAULT_INITIAL_PEERS);
-      for (Iterator iter = keys.iterator(); iter.hasNext(); ) {
-        String key = (String)iter.next();
+      Collection invitees = new ArrayList();
+      for (String key : keys) {
         PeerIdentity id = (PeerIdentity)idManager.findPeerIdentity(key);
         if (shouldIncludePeer(id)) {
-          initialPeers.add(id);
+          invitees.add(id);
         }
       }
+      return invitees;
     }
-    return initialPeers;
   }
   
+  Predicate invitationPred = new Predicate() {
+      public boolean evaluate(Object obj) {
+	if (obj instanceof PeerIdentity) {
+	  return shouldIncludePeer((PeerIdentity)obj);
+	}
+	return false;
+      }};
+
   private boolean shouldIncludePeer(String pidKey) {
     return shouldIncludePeer(idManager.findPeerIdentity(pidKey));
   }
   
   boolean shouldIncludePeer(PeerIdentity pid) {
     // Never include a local id.
-    if (pid.isLocalIdentity()) { return false; }
+    if (pid.isLocalIdentity()) {
+      return false;
+    }
+    if (theParticipants.containsKey(pid)) {
+      // already participating in this poll
+      return false;
+    }
+    if (exParticipants.containsKey(pid)) {
+      // already dropped out of this poll
+      return false;
+    }
     PeerIdentityStatus status = idManager.getPeerIdentityStatus(pid);
     if (status != null) {
       
-      // Never include a peer that has rejected one of our polls in
-      // the past because of a group mismatch.
-      // CR: allow peer if group mismatch more than a few weeks old, in
-      // case changes group
-      if (status.getLastPollNak() != null &&
-          status.getLastPollNak() == PollNak.NAK_GROUP_MISMATCH) {
+      // Never include a peer whose groups are known to be disjoint with ours
+      if (!isGroupMatch(status)) {
         return false;
       }
-      
+
       // Finally, make a probabilistic choice weighted by the last time that
       // we heard from this peer.
       return ProbabilisticChoice.choose(inviteProb(status.getLastPollInvitationTime(),
@@ -1945,6 +1946,25 @@ public class V3Poller extends BasePoll {
     return true;
   }
   
+  boolean isGroupMatch(PeerIdentityStatus status) {
+    List groups = status.getGroups();
+    // if we haven't recorded a group, allow it
+    if (groups == null) {
+      return true;
+    }
+    if (CollectionUtils.containsAny(groups,
+				    ConfigManager.getPlatformGroupList())) {
+      return true;
+    }
+    if (TimeBase.msSince(status.getLastGroupTime()) >
+	pollManager.getWrongGroupRetryTime()) {
+      // Don't want to keep trying him
+      status.setLastGroupTime(TimeBase.nowMs());
+      return true;
+    }
+    return false;      
+  }
+
   /**
    * Given a peer identity, compute a probability (a float between 0.0 and
    * 1.0) that the peer should be considered for invitation into the
@@ -1997,8 +2017,7 @@ public class V3Poller extends BasePoll {
       // Get a list of peers who have decided to participate.
       int participatingPeers = 0;
       synchronized(theParticipants) {
-        for (Iterator it = theParticipants.values().iterator(); it.hasNext(); ) {
-          ParticipantUserData peer = (ParticipantUserData)it.next();
+	for (ParticipantUserData peer : theParticipants.values()) {
           if (peer.isParticipating()) {
             participatingPeers++;
           }
@@ -2009,29 +2028,32 @@ public class V3Poller extends BasePoll {
         log.debug("[InvitationCallback] Enough peers are participating for " +
                   "quorum.  Count=" + participatingPeers);
       } else {
-        // Invite 'quorum' new peers to participate.
-	// CR: use invitationSize - participatingPeers?
+        // Invite  invitationSize more peers to participate.
         Collection newPeers =
           choosePeers(getReferenceList(), theParticipants.keySet(),
-                      invitationSize);
+                      invitationSize - participatingPeers);
 
-        log.debug("[InvitationCallback] Inviting " + newPeers.size()
-                  + " new peers to participate.");
+	if (newPeers.isEmpty()) {
+	  log.debug("[InvitationCallback] No more peers to invite");
+	} else {
+	  log.debug("[InvitationCallback] Inviting " + newPeers.size()
+		    + " new peers to participate.");
 
-	// CR: refactor
-        for (Iterator it = newPeers.iterator(); it.hasNext(); ) {
-          PeerIdentity id = (PeerIdentity)it.next();
-          ParticipantUserData participant = addInnerCircleVoter(id);
-          // Start the participant running to send in the invitation.
-	  startParticipant(participant, false);
-        }
+	  // CR: refactor
+	  for (Iterator it = newPeers.iterator(); it.hasNext(); ) {
+	    PeerIdentity id = (PeerIdentity)it.next();
+	    ParticipantUserData participant = addInnerCircleVoter(id);
+	    // Start the participant running to send in the invitation.
+	    startParticipant(participant, false);
+	  }
 
-	if (isPollActive()) {
-	  // Schedule another check
-	  invitationRequest =
-	    TimerQueue.schedule(Deadline.in(timeBetweenInvitations),
-				new InvitationCallback(),
-				cookie);
+	  if (isPollActive()) {
+	    // Schedule another check
+	    invitationRequest =
+	      TimerQueue.schedule(Deadline.in(timeBetweenInvitations),
+				  new InvitationCallback(),
+				  cookie);
+	  }
 	}
       }
     }
@@ -2068,9 +2090,11 @@ public class V3Poller extends BasePoll {
       // Prune "theParticipants", and remove any who have not cast a vote.
       // Iterate over a COPY of the participants, to avoid concurrent
       // modifications.
-      Collection peerListCopy = new ArrayList(theParticipants.keySet());
-      for (Iterator it = peerListCopy.iterator(); it.hasNext(); ) {
-        PeerIdentity id = (PeerIdentity)it.next();
+      Collection<PeerIdentity> peerListCopy;
+      synchronized (theParticipants) {
+	peerListCopy = new ArrayList(theParticipants.keySet());
+      }
+      for (PeerIdentity id : peerListCopy) {
 	ParticipantUserData ud = getParticipant(id);
         if (!pollerState.hasPeerVoted(id)) {
 	  // XXX move to state machine
@@ -2189,6 +2213,7 @@ public class V3Poller extends BasePoll {
   /**
    * Callback called after each block has been hashed during our tally.
    */
+  // CR: look into having this send event to state machine, run tally there
   private class BlockEventHandler implements BlockHasher.EventHandler {
     public void blockDone(HashBlock block) {
       if (pollerState != null) {
@@ -2366,6 +2391,10 @@ public class V3Poller extends BasePoll {
     }
   }
 
+  public static String getStatusString(int status) {
+    return V3Poller.POLLER_STATUS_STRINGS[status];
+  }
+  
   public long getVoteDeadline() {
     return pollerState.getVoteDeadline();
   }
@@ -2422,8 +2451,8 @@ public class V3Poller extends BasePoll {
     pollerState.release();
     
     synchronized(theParticipants) {
-      for (Iterator it = theParticipants.values().iterator(); it.hasNext(); ) {
-        ((ParticipantUserData)it.next()).release();
+      for (ParticipantUserData ud : theParticipants.values()) {
+        ud.release();
       }
     }
 
