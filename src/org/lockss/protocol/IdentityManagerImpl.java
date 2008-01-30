@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManagerImpl.java,v 1.23 2007-10-03 00:35:52 smorabito Exp $
+ * $Id: IdentityManagerImpl.java,v 1.24 2008-01-30 00:52:41 tlipkis Exp $
  */
 
 /*
@@ -35,6 +35,8 @@ package org.lockss.protocol;
 import java.io.*;
 import java.net.UnknownHostException;
 import java.util.*;
+
+import org.apache.commons.collections.*;
 
 import org.lockss.app.*;
 import org.lockss.config.*;
@@ -182,6 +184,12 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
   public static final List DEFAULT_INITIAL_PEERS = Collections.EMPTY_LIST;
 
   /**
+   * True to enable V1 identities
+   */
+  public static final String PARAM_ENABLE_V1 = PREFIX + "v1Enabled";
+  public static final boolean DEFAULT_ENABLE_V1 = true;
+
+  /**
    * <p>An instance of {@link LockssRandom} for use by this class.</p>
    */
   static LockssRandom theRandom = new LockssRandom();
@@ -219,7 +227,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
    * <p>A mapping of PeerIdentity objects to status objects.  This is
    * the map that is actually serialized onto disk for persistence</p>
    */
-  private Map<PeerIdentity,PeerIdentityStatus> theLcapIdentities;
+  protected Map<PeerIdentity,PeerIdentityStatus> theLcapIdentities;
 
   /**
    * <p>A mapping of human-readable Peer Identity keys (for example,
@@ -278,35 +286,36 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
     // Create local PeerIdentity and LcapIdentity instances
     Configuration config = ConfigManager.getCurrentConfig();
 
-    // Find local IP addr and create V1 identity if configured
     String localV1IdentityStr = getLocalIpParam(config);
-    if (localV1IdentityStr != null) {
-      try {
-        theLocalIPAddr = IPAddr.getByName(localV1IdentityStr);
-      } catch (UnknownHostException uhe) {
-        String msg = "Cannot start: Can't lookup \"" + localV1IdentityStr + "\"";
-        log.critical(msg);
-        throw new LockssAppException("IdentityManager: " + msg);
-      }
-      try {
-        localPeerIdentities[Poll.V1_PROTOCOL] =
-          findLocalPeerIdentity(localV1IdentityStr);
-      } catch (MalformedIdentityKeyException e) {
-        String msg = "Cannot start: Can't create local identity:" +
-        localV1IdentityStr;
-        log.critical(msg, e);
-        throw new LockssAppException("IdentityManager: " + msg);
-      }
+    if (config.getBoolean(PARAM_ENABLE_V1, DEFAULT_ENABLE_V1)) {
+      // Find local IP addr and create V1 identity if configured
+      if (localV1IdentityStr != null) {
+	try {
+	  theLocalIPAddr = IPAddr.getByName(localV1IdentityStr);
+	} catch (UnknownHostException uhe) {
+	  String msg = "Cannot start: Can't lookup \"" + localV1IdentityStr + "\"";
+	  log.critical(msg);
+	  throw new LockssAppException("IdentityManager: " + msg);
+	}
+	try {
+	  localPeerIdentities[Poll.V1_PROTOCOL] =
+	    findLocalPeerIdentity(localV1IdentityStr);
+	} catch (MalformedIdentityKeyException e) {
+	  String msg = "Cannot start: Can't create local identity:" +
+	    localV1IdentityStr;
+	  log.critical(msg, e);
+	  throw new LockssAppException("IdentityManager: " + msg);
+	}
 
-      hasLocalIdentity = true;
+	hasLocalIdentity = true;
+      }
     }
-
     // Create V3 identity if configured
     String v3idstr = config.get(PARAM_LOCAL_V3_IDENTITY);
     if (StringUtil.isNullString(v3idstr) &&
         config.containsKey(PARAM_LOCAL_V3_PORT)) {
       int localV3Port = config.getInt(PARAM_LOCAL_V3_PORT, -1);
-      if (localV3Port > 0) {
+      if (localV3Port > 0 && localV1IdentityStr != null) {
         v3idstr = IDUtil.ipAddrToKey(localV1IdentityStr, localV3Port);
       }
     }
@@ -376,7 +385,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
     if (localPeerIdentities[Poll.V3_PROTOCOL] != null)
       log.info("Local V3 identity: " + getLocalPeerIdentity(Poll.V3_PROTOCOL));
 
-    status = makeStatusAccessor(theLcapIdentities);
+    status = makeStatusAccessor();
     getDaemon().getStatusService().registerStatusAccessor("Identities",
 							  status);
 
@@ -384,8 +393,8 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
     LcapMessage.setIdentityManager(this);
   }
 
-  protected IdentityManagerStatus makeStatusAccessor(Map theIdentities) {
-    return new IdentityManagerStatus(theIdentities);
+  protected IdentityManagerStatus makeStatusAccessor() {
+    return new IdentityManagerStatus(this);
   }
 
   /**
@@ -401,6 +410,12 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
     getDaemon().getStatusService().unregisterStatusAccessor("Identities");
     Vote.setIdentityManager(null);
     LcapMessage.setIdentityManager(null);
+  }
+
+  public List<PeerIdentityStatus> getPeerIdentityStatusList() {
+    synchronized (theLcapIdentities) {
+      return new ArrayList(theLcapIdentities.values());
+    }
   }
 
   /**
@@ -602,7 +617,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
   }
 
   /**
-   * <p>Rturns the local peer identity.</p>
+   * Returns the local peer identity.
    * @param pollVersion The poll protocol version.
    * @return The local peer identity associated with the poll version.
    * @throws IllegalArgumentException if the pollVersion is not
@@ -621,6 +636,19 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
 					 pollVersion);
     }
     return pid;
+  }
+
+  /**
+   * @return a list of all local peer identities.
+   */
+  public List<PeerIdentity> getLocalPeerIdentities() {
+    List<PeerIdentity> res = new ArrayList();
+    for (PeerIdentity pid : localPeerIdentities) {
+      if (pid != null) {
+	res.add(pid);
+      }
+    }
+    return res;
   }
 
   /**
@@ -900,11 +928,21 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
    * <p>Return a collection of all V3-style PeerIdentities.</p>
    */
   public Collection getTcpPeerIdentities() {
+    return getTcpPeerIdentities(PredicateUtils.truePredicate());
+  }
+
+  /**
+   * Return a filtered collection of V3-style PeerIdentities.
+   */
+  public Collection getTcpPeerIdentities(Predicate peerPredicate) {
     Collection retVal = new ArrayList();
     for (PeerIdentity id : thePeerIdentities.values()) {
       try {
-        if (id.getPeerAddress() instanceof PeerAddress.Tcp && !id.isLocalIdentity())
+        if (id.getPeerAddress() instanceof PeerAddress.Tcp
+	    && !id.isLocalIdentity()
+	    && peerPredicate.evaluate(id)) {
           retVal.add(id);
+	}
       } catch (MalformedIdentityKeyException e) {
         log.warning("Malformed identity key: " + id);
       }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestIdentityManagerImpl.java,v 1.17 2007-08-23 01:29:56 smorabito Exp $
+ * $Id: TestIdentityManagerImpl.java,v 1.18 2008-01-30 00:52:41 tlipkis Exp $
  */
 
 /*
@@ -150,6 +150,7 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
     PeerAddress pa = pid1.getPeerAddress();
     assertTrue(pa instanceof PeerAddress.Udp);
     assertEquals(LOCAL_IP, ((PeerAddress.Udp)pa).getIPAddr().getHostAddress());
+    assertEquals(ListUtil.list(pid1), mgr.getLocalPeerIdentities());
   }
 
   public void testSetupLocalIdentitiesV3Normal()
@@ -169,6 +170,31 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
     assertTrue(pa instanceof PeerAddress.Tcp);
     assertEquals(LOCAL_IP, ((PeerAddress.Tcp)pa).getIPAddr().getHostAddress());
     assertEquals(LOCAL_PORT_NUM, ((PeerAddress.Tcp)pa).getPort());
+    assertEquals(ListUtil.list(mgr.stringToPeerIdentity(LOCAL_IP),pid1),
+		 mgr.getLocalPeerIdentities());
+  }
+  
+  public void testSetupLocalIdentitiesV3Only()
+      throws IdentityManager.MalformedIdentityKeyException {
+    ConfigurationUtil.addFromArgs(IdentityManager.PARAM_LOCAL_V3_PORT,
+                                  LOCAL_PORT);
+    ConfigurationUtil.addFromArgs(IdentityManagerImpl.PARAM_INITIAL_PEERS,
+                                  LOCAL_V3_ID);
+    ConfigurationUtil.addFromArgs(IdentityManagerImpl.PARAM_ENABLE_V1,
+				  "false");
+    IdentityManagerImpl mgr = new IdentityManagerImpl();
+    mgr.initService(theDaemon);
+    assertNull(mgr.localPeerIdentities[Poll.V1_PROTOCOL]);
+    PeerIdentity pid1 = mgr.localPeerIdentities[Poll.V3_PROTOCOL];
+    assertTrue("Peer ID is not a local identity.", pid1.isLocalIdentity());
+    String key = IDUtil.ipAddrToKey(LOCAL_IP, LOCAL_PORT_NUM);
+    PeerIdentity pid2 = mgr.stringToPeerIdentity(key);
+    assertSame(pid1, pid2);
+    PeerAddress pa = pid1.getPeerAddress();
+    assertTrue(pa instanceof PeerAddress.Tcp);
+    assertEquals(LOCAL_IP, ((PeerAddress.Tcp)pa).getIPAddr().getHostAddress());
+    assertEquals(LOCAL_PORT_NUM, ((PeerAddress.Tcp)pa).getPort());
+    assertEquals(ListUtil.list(pid1), mgr.getLocalPeerIdentities());
   }
   
   public void testSetupLocalIdentitiesV3FromLocalV3IdentityParam() 
@@ -902,6 +928,8 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
     }
 
     assertEquals(expectedAddresses.size(), idMap.size()); //2 above,plus me
+    assertEquals(SetUtil.theSet(idMap.values()),
+		 SetUtil.theSet(idmgr.getPeerIdentityStatusList()));
   }
 
   public void testGetUdpPeerIdentities() throws Exception {
@@ -947,11 +975,12 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
     Map identities = null;
 
     public Map getIdentityMap() {
+
       return identities;
     }
 
-    protected IdentityManagerStatus makeStatusAccessor(Map identities) {
-      this.identities = identities;
+    protected IdentityManagerStatus makeStatusAccessor() {
+      this.identities = theLcapIdentities;
       return new MockIdentityManagerStatus();
     }
 
@@ -963,10 +992,10 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
     }
   }
 
-  private static class MockIdentityManagerStatus
+  private class MockIdentityManagerStatus
     extends IdentityManagerStatus {
     public MockIdentityManagerStatus() {
-      super(null);
+      super(idmgr);
     }
     public String getDisplayName() {
       throw new UnsupportedOperationException();

@@ -1,5 +1,5 @@
 /*
- * $Id: TestIdentityManagerStatus.java,v 1.1 2004-12-02 14:49:46 troberts Exp $
+ * $Id: TestIdentityManagerStatus.java,v 1.2 2008-01-30 00:52:41 tlipkis Exp $
  */
 
 /*
@@ -35,8 +35,21 @@ import org.lockss.test.*;
 
 public class TestIdentityManagerStatus extends LockssTestCase {
 
+  MockLockssDaemon daemon;
+  MockIdentityManager idmgr;
+
+  public void setUp() throws Exception {
+    super.setUp();
+
+    daemon = getMockLockssDaemon();
+    idmgr = new MockIdentityManager();
+    idmgr.initService(daemon);
+    daemon.setIdentityManager(idmgr);
+//     idmgr.startService();
+  }
+
   public void testCreatedWithNull() {
-    new IdentityManagerStatus(null);
+    new IdentityManagerStatus(idmgr);
   }
 
 }

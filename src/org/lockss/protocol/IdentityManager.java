@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManager.java,v 1.80 2007-10-17 22:28:33 smorabito Exp $
+ * $Id: IdentityManager.java,v 1.81 2008-01-30 00:52:41 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,8 @@ package org.lockss.protocol;
 
 import java.io.*;
 import java.util.*;
+
+import org.apache.commons.collections.Predicate;
 
 import org.lockss.app.*;
 import org.lockss.config.Configuration;
@@ -245,7 +247,7 @@ public interface IdentityManager extends LockssManager {
   public IPAddr identityToIPAddr(PeerIdentity pid);
 
   /**
-   * <p>Rturns the local peer identity.</p>
+   * <p>Returns the local peer identity.</p>
    * @param pollVersion The poll protocol version.
    * @return The local peer identity associated with the poll version.
    * @throws IllegalArgumentException if the pollVersion is not
@@ -253,6 +255,11 @@ public interface IdentityManager extends LockssManager {
    *                                  legal range.
    */
   public PeerIdentity getLocalPeerIdentity(int pollVersion);
+
+  /**
+   * @return a list of all local peer identities.
+   */
+  public List<PeerIdentity> getLocalPeerIdentities();
 
   /**
    * <p>Returns the IPAddr of the local peer.</p>
@@ -340,9 +347,14 @@ public interface IdentityManager extends LockssManager {
   public Collection getUdpPeerIdentities();
 
   /**
-   * Return a list of all known TCP (suitable for V1 or V3), peer identities.
+   * Return a list of all known TCP (V3) peer identities.
    */
   public Collection getTcpPeerIdentities();
+
+  /**
+   * Return a filtered list of all known TCP (V3) peer identities.
+   */
+  public Collection getTcpPeerIdentities(Predicate peerPredicate);
 
   /**
    * <p>Signals that we've agreed with pid on a top level poll on
@@ -452,6 +464,11 @@ public interface IdentityManager extends LockssManager {
   public void readIdentityAgreementFrom(ArchivalUnit au, InputStream in)
       throws IOException;
   
+  /**
+   * @return List of  PeerIdentityStatus for all PeerIdentity.
+   */
+  public List<PeerIdentityStatus> getPeerIdentityStatusList();
+
   /**
    * @param pid The PeerIdentity.
    * @return The PeerIdentityStatus associated with the given PeerIdentity.
