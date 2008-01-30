@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.48 2008-01-27 06:46:04 tlipkis Exp $
+ * $Id: V3Voter.java,v 1.49 2008-01-30 00:51:18 tlipkis Exp $
  */
 
 /*
@@ -36,6 +36,8 @@ import java.io.*;
 import java.net.MalformedURLException;
 import java.security.*;
 import java.util.*;
+
+import org.apache.commons.collections.*;
 
 import org.lockss.app.*;
 import org.lockss.config.*;
@@ -299,6 +301,10 @@ public class V3Voter extends BasePoll {
     return interp;
   }
   
+  public PsmInterp getPsmInterp() {
+    return stateMachine;
+  }
+
   /**
    * Provides a default no-arg constructor to be used for unit testing.
    */
@@ -615,26 +621,48 @@ public class V3Voter extends BasePoll {
       return;
     }
     // CR: getTcpPeerIdentities() -> getV3PeerIdentities()
-    Collection allPeers = idManager.getTcpPeerIdentities();
-    allPeers.remove(voterUserData.getPollerId()); // Never nominate the poller
-    // CR: collect min(allPeers, nomineeCount) peers
-    if (nomineeCount <= allPeers.size()) {
-      Collection nominees =
-        CollectionUtil.randomSelection(allPeers, nomineeCount);
+    Collection<PeerIdentity> nominees =
+      idManager.getTcpPeerIdentities(nominationPred);
+    if (nomineeCount <= nominees.size()) {
+      nominees = CollectionUtil.randomSelection(nominees, nomineeCount);
+    }
+    if (!nominees.isEmpty()) {
       // VoterUserData expects the collection to be KEYS, not PeerIdentities.
-      ArrayList nomineeStrings = new ArrayList();
-      for (Iterator iter = nominees.iterator(); iter.hasNext(); ) {
-        PeerIdentity id = (PeerIdentity)iter.next();
-        nomineeStrings.add(id.getIdString());
+      ArrayList nomineeStrings = new ArrayList(nominees.size());
+      for (PeerIdentity id : nominees) {
+	nomineeStrings.add(id.getIdString());
       }
       voterUserData.setNominees(nomineeStrings);
       log.debug2("Nominating the following peers: " + nomineeStrings);
     } else {
-      log.warning("Not enough peers to nominate.  Need " + nomineeCount +
-                  ", only know about " + allPeers.size());
+      log.warning("No peers to nominate");
     }
     checkpointPoll();
   }
+
+  // Don't nominate peers unless have positive evidence of correct group.
+  // Also, no aging as with poll invites
+  Predicate nominationPred = new Predicate() {
+      public boolean evaluate(Object obj) {
+	if (obj instanceof PeerIdentity) {
+	  PeerIdentity pid = (PeerIdentity)obj;
+	  // Never nominate the poller
+	  if (pid == voterUserData.getPollerId()) {
+	    return false;
+	  }
+	  PeerIdentityStatus status = idManager.getPeerIdentityStatus(pid);
+	  if (status == null) {
+	    return false;
+	  }
+	  List hisGroups = status.getGroups();
+	  if (hisGroups == null) {
+	    return false;
+	  }
+	  List myGroups = ConfigManager.getPlatformGroupList();
+	  return CollectionUtils.containsAny(hisGroups, myGroups);
+	}
+	return false;
+      }};
 
   /**
    * Create an array of byte arrays containing hasher initializer bytes for
@@ -685,13 +713,18 @@ public class V3Voter extends BasePoll {
     // Cancel the old task.
     task.cancel();
 
-    // Schedule the hash using the old task's latest finish as the deadline.
-    boolean scheduled =
-      hashService.scheduleHash(hasher, hashDeadline,
-                               new HashingCompleteCallback(), null);
+    boolean scheduled = false;
+    try {
+      // Schedule the hash using the old task's latest finish as the deadline.
+      scheduled =
+	hashService.scheduleHash(hasher, hashDeadline,
+				 new HashingCompleteCallback(), null);
+    } catch (IllegalArgumentException e) {
+      log.error("Error scheduling hash time", e);
+    }
     if (scheduled) {
       log.debug("Successfully scheduled time for vote in poll " +
-                getKey());
+		getKey());
     } else {
       log.debug("Unable to schedule time for vote.  Dropping " +
                 "out of poll " + getKey());
