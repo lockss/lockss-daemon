@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedArchivalUnit.java,v 1.62 2007-09-24 18:37:14 dshr Exp $
+ * $Id: SimulatedArchivalUnit.java,v 1.63 2008-01-30 03:57:36 tlipkis Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
+import org.lockss.state.*;
 
 /**
  * This is ArchivalUnit of the simulated plugin, used for testing purposes.
@@ -107,6 +108,10 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
   }
 
   // public methods
+
+  public boolean shouldCallTopLevelPoll(AuState aus) {
+    return true;
+  }
 
   /**
    * Set the directory where simulated content is generated
