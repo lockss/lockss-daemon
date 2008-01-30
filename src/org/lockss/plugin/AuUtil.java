@@ -1,5 +1,5 @@
 /*
- * $Id: AuUtil.java,v 1.21 2007-08-12 01:47:15 tlipkis Exp $
+ * $Id: AuUtil.java,v 1.22 2008-01-30 00:48:43 tlipkis Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ import org.lockss.state.*;
 import org.lockss.poller.*;
 import org.lockss.repository.*;
 import org.lockss.plugin.definable.*;
+import org.lockss.plugin.exploded.*;
 
 /**
  * Static AU- and plugin-related utility methods.  These might logically
@@ -128,7 +129,12 @@ public class AuUtil {
   public static String getConfigUserMessage(ArchivalUnit au) {
     // XXX change this to not require string to be copied into each AU
     TypedEntryMap map = au.getProperties();
-    return map.getString(DefinableArchivalUnit.KEY_AU_CONFIG_USER_MSG, null);
+    String str =
+      map.getString(DefinableArchivalUnit.KEY_AU_CONFIG_USER_MSG, null);
+    if (str == null) {
+      return null;
+    }
+    return str;
   }
 
   /** Return true if the supplied AU config appears to be compatible with
@@ -189,6 +195,10 @@ public class AuUtil {
     return isPubNever(au) ||
       getBoolValue(getAuParamOrTitleDefault(au, ConfigParamDescr.PUB_DOWN),
 		   false);
+  }
+
+  public static boolean okDeleteExtraFiles(ArchivalUnit au) {
+    return !(au instanceof ExplodedArchivalUnit);
   }
 
   public static boolean isPubNever(ArchivalUnit au) {
