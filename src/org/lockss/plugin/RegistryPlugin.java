@@ -1,5 +1,5 @@
 /*
- * $Id: RegistryPlugin.java,v 1.8 2006-12-06 05:19:02 tlipkis Exp $
+ * $Id: RegistryPlugin.java,v 1.9 2008-01-30 00:49:12 tlipkis Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.util.*;
 
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
+import org.lockss.config.*;
 import org.lockss.plugin.base.BasePlugin;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.*;
@@ -64,11 +65,12 @@ public class RegistryPlugin extends BasePlugin {
   protected ArchivalUnit createAu0(Configuration auConfig)
       throws ArchivalUnit.ConfigurationException {
     // create a new archival unit
-    ArchivalUnit au = newRegistryArchivalUnit();
+    RegistryArchivalUnit au = newRegistryArchivalUnit();
 
     // Now configure it.
     au.setConfiguration(auConfig);
-
+    au.setConfig(ConfigManager.getCurrentConfig(), null,
+		 Configuration.DIFFERENCES_ALL);
     return au;
   }
 

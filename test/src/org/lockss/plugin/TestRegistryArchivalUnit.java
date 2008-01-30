@@ -1,5 +1,5 @@
 /*
- * $Id: TestRegistryArchivalUnit.java,v 1.7 2007-10-04 04:03:31 tlipkis Exp $
+ * $Id: TestRegistryArchivalUnit.java,v 1.8 2008-01-30 00:49:12 tlipkis Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.daemon.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.state.*;
+import org.lockss.repository.*;
 
 /**
  * Test class for org.lockss.plugin.RegistryArchivalUnit
@@ -115,9 +116,19 @@ public class TestRegistryArchivalUnit extends LockssTestCase {
   }
 
   public void testShouldCallTopLevelPoll() throws Exception {
-    RegistryArchivalUnit au = new RegistryArchivalUnit(regPlugin);
-    // Expect that "shouldCallTopLevelPoll" will always return false.
-    assertFalse(au.shouldCallTopLevelPoll(null));
+    Configuration auConfig =
+      ConfigurationUtil.fromArgs(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
+
+    ConfigurationUtil.setFromArgs(RegistryArchivalUnit.PARAM_ENABLE_REGISTRY_POLLS,
+				  "false");
+    ArchivalUnit au = regPlugin.createAu(auConfig);
+    AuState aus = new AuState(au, 123, 321, 0, 0,
+			  -1, null, 1, 1.0, (HistoryRepository)null);
+    assertFalse(au.shouldCallTopLevelPoll(aus));
+    ConfigurationUtil.setFromArgs(RegistryArchivalUnit.PARAM_ENABLE_REGISTRY_POLLS,
+				  "true");
+    ArchivalUnit au2 = regPlugin.createAu(auConfig);
+    assertTrue(au2.shouldCallTopLevelPoll(aus));
   }
 
   public void testRecomputeRegNameTitle() throws Exception {

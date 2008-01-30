@@ -1,5 +1,5 @@
 /*
- * $Id: RegistryArchivalUnit.java,v 1.23 2007-10-04 04:03:32 tlipkis Exp $
+ * $Id: RegistryArchivalUnit.java,v 1.24 2008-01-30 00:49:12 tlipkis Exp $
  */
 
 /*
@@ -76,10 +76,16 @@ public class RegistryArchivalUnit extends BaseArchivalUnit {
     RegistryPlugin.PREFIX + "fetchRate";
   static final String DEFAULT_REGISTRY_FETCH_RATE = "20/10s";
 
+  /** Run polls on Plugin registry AUs */
+  static final String PARAM_ENABLE_REGISTRY_POLLS =
+    RegistryPlugin.PREFIX + "enablePolls";
+  static final boolean DEFAULT_ENABLE_REGISTRY_POLLS = false;
+
   private String m_registryUrl = null;
   private int m_maxRefetchDepth = NewContentCrawler.DEFAULT_MAX_CRAWL_DEPTH;
   private List m_permissionCheckers = null;
   private boolean recomputeRegName = true;
+  private boolean enablePolls = DEFAULT_ENABLE_REGISTRY_POLLS;
   private String regName = null;
 
   public RegistryArchivalUnit(RegistryPlugin plugin) {
@@ -95,6 +101,8 @@ public class RegistryArchivalUnit extends BaseArchivalUnit {
       config.getInt(NewContentCrawler.PARAM_MAX_CRAWL_DEPTH,
 		    NewContentCrawler.DEFAULT_MAX_CRAWL_DEPTH);
     fetchRateLimiter = recomputeFetchRateLimiter(fetchRateLimiter);
+    enablePolls = config.getBoolean(PARAM_ENABLE_REGISTRY_POLLS,
+				    DEFAULT_ENABLE_REGISTRY_POLLS);
   }
 
   public void loadAuConfigDescrs(Configuration config)
@@ -186,10 +194,13 @@ public class RegistryArchivalUnit extends BaseArchivalUnit {
     return m_registryUrl;
   }
 
-  /** This AU should never call a top level poll.
+  /** Call top level polls iff configured to do so.
    */
   public boolean shouldCallTopLevelPoll(AuState aus) {
-    return false;
+    if (!enablePolls) {
+      return false;
+    }
+    return super.shouldCallTopLevelPoll(aus);
   }
 
   /**
