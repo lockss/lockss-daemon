@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.216 2007-10-04 04:06:17 tlipkis Exp $
+ * $Id: NodeManagerImpl.java,v 1.217 2008-01-30 00:55:12 tlipkis Exp $
  */
 
 /*
@@ -519,7 +519,7 @@ public class NodeManagerImpl
         // the proper status
         if (isTopLevelPollFinished(nodeState.getCachedUrlSet().getSpec(),
                                    pollState.getType())) {
-          getAuState().newPollFinished();
+          getAuState().pollFinished();
           logger.info("Top level poll finished.");
         }
 

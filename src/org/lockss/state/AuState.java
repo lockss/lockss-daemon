@@ -1,5 +1,5 @@
 /*
- * $Id: AuState.java,v 1.31 2007-10-04 09:43:41 tlipkis Exp $
+ * $Id: AuState.java,v 1.32 2008-01-30 00:55:12 tlipkis Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.crawler.CrawlerStatus;
+import org.lockss.poller.v3.*;
 
 /**
  * AuState contains the state information for an au.
@@ -57,12 +58,18 @@ public class AuState implements LockssSerializable {
   protected String lastCrawlResultMsg;
   protected int lastCrawlResult;
   protected long lastTopLevelPoll;
+  protected long lastPollAttempt;
+  protected String lastPollResultMsg;
+  protected int lastPollResult;
   protected int clockssSubscriptionStatus;
   protected double v3Agreement = -1.0;
   protected AccessType accessType;
 
   // saves previous lastCrawl* state while crawl is running
   protected transient AuState previousCrawlState = null;
+
+  // saves previous lastPoll* state while poll is running
+  protected transient AuState previousPollState = null;
 
   // Runtime (non-state) vars
   protected transient ArchivalUnit au;
@@ -72,26 +79,27 @@ public class AuState implements LockssSerializable {
   protected transient long lastTreeWalk = -1;
   // should be deprecated?
   protected HashSet crawlUrls;
-  // XXX does this still need to be saved in file?
-  //Has there ever been a completed V3 poll?
+  // deprecated, kept for compatibility with old state files
   /** @deprecated */
-  protected boolean hasV3Poll = false;
+  protected transient boolean hasV3Poll = false;
 
   transient int urlUpdateCntr = 0;
 
   public AuState(ArchivalUnit au, HistoryRepository historyRepo) {
-    this(au, -1, -1, -1, -1, null, CLOCKSS_SUB_UNKNOWN, -1.0, historyRepo);
+    this(au, -1, -1, -1, -1, -1, null,
+	 CLOCKSS_SUB_UNKNOWN, -1.0, historyRepo);
   }
 
-  protected AuState(ArchivalUnit au,
-		    long lastCrawlTime, long lastCrawlAttempt,
-		    long lastTopLevelPoll,
-		    long lastTreeWalk, HashSet crawlUrls,
-		    int clockssSubscriptionStatus, double v3Agreement,
-		    HistoryRepository historyRepo) {
-    this(au, lastCrawlTime, lastCrawlAttempt,
-	 -1, null,
-	 lastTopLevelPoll, lastTreeWalk,
+  public AuState(ArchivalUnit au,
+		 long lastCrawlTime, long lastCrawlAttempt,
+		 long lastTopLevelPoll, long lastPollAttempt,
+		 long lastTreeWalk, HashSet crawlUrls,
+		 int clockssSubscriptionStatus, double v3Agreement,
+		 HistoryRepository historyRepo) {
+    this(au,
+	 lastCrawlTime, lastCrawlAttempt, -1, null,
+	 lastTopLevelPoll, lastPollAttempt, -1, null,
+	 lastTreeWalk,
 	 crawlUrls, null, clockssSubscriptionStatus,
 	 v3Agreement, historyRepo);
   }
@@ -99,7 +107,8 @@ public class AuState implements LockssSerializable {
   protected AuState(ArchivalUnit au,
 		    long lastCrawlTime, long lastCrawlAttempt,
 		    int lastCrawlResult, String lastCrawlResultMsg,
-		    long lastTopLevelPoll,
+		    long lastTopLevelPoll, long lastPollAttempt,
+		    int lastPollResult, String lastPollResultMsg,
 		    long lastTreeWalk, HashSet crawlUrls,
 		    AccessType accessType,
 		    int clockssSubscriptionStatus, double v3Agreement,
@@ -107,9 +116,12 @@ public class AuState implements LockssSerializable {
     this.au = au;
     this.lastCrawlTime = lastCrawlTime;
     this.lastCrawlAttempt = lastCrawlAttempt;
-    this.lastCrawlResultMsg = lastCrawlResultMsg;
     this.lastCrawlResult = lastCrawlResult;
+    this.lastCrawlResultMsg = lastCrawlResultMsg;
     this.lastTopLevelPoll = lastTopLevelPoll;
+    this.lastPollAttempt = lastPollAttempt;
+    this.lastPollResult = lastPollResult;
+    this.lastPollResultMsg = lastPollResultMsg;
     this.lastTreeWalk = lastTreeWalk;
     this.crawlUrls = crawlUrls;
     this.accessType = accessType;
@@ -128,6 +140,10 @@ public class AuState implements LockssSerializable {
 
   public boolean isCrawlActive() {
     return previousCrawlState != null;
+  }
+
+  public boolean isPollActive() {
+    return previousPollState != null;
   }
 
 
@@ -174,11 +190,49 @@ public class AuState implements LockssSerializable {
   }
 
   /**
-   * Returns the last top level poll time for the au.
+   * Returns the last time a top level poll completed.
    * @return the last poll time in ms
    */
   public long getLastTopLevelPollTime() {
     return lastTopLevelPoll;
+  }
+
+  /**
+   * Returns the last time a poll was attempted.
+   * @return the last poll time in ms
+   */
+  public long getLastPollAttempt() {
+    if (isPollActive()) {
+      return previousPollState.getLastPollAttempt();
+    }
+    return lastPollAttempt;
+  }
+
+  /**
+   * Returns the result code of the last poll
+   */
+  public int getLastPollResult() {
+    if (isPollActive()) {
+      return previousPollState.getLastPollResult();
+    }
+    return lastPollResult;
+  }
+
+  /**
+   * Returns the result of the last poll
+   */
+  public String getLastPollResultMsg() {
+    if (isPollActive()) {
+      return previousPollState.getLastPollResultMsg();
+    }
+    if (lastPollResultMsg == null) {
+      try {
+	return V3Poller.getStatusString(lastPollResult);
+      } catch (IndexOutOfBoundsException e) {
+	return null;
+      }
+    }
+    return lastPollResultMsg;
   }
 
   /**
@@ -197,7 +251,9 @@ public class AuState implements LockssSerializable {
       new AuState(au,
 		  lastCrawlTime, lastCrawlAttempt,
 		  lastCrawlResult, lastCrawlResultMsg,
-		  lastTopLevelPoll, lastTreeWalk, crawlUrls,
+		  lastTopLevelPoll, lastPollAttempt,
+		  lastPollResult, lastPollResultMsg,
+		  lastTreeWalk, crawlUrls,
 		  accessType,
 		  clockssSubscriptionStatus, v3Agreement,
 		  null);
@@ -235,12 +291,63 @@ public class AuState implements LockssSerializable {
     historyRepo.storeAuState(this);
   }
 
+  private void saveLastPoll() {
+    if (previousPollState != null) {
+      log.error("saveLastPoll() called twice", new Throwable());
+    }
+    previousPollState =
+      new AuState(au,
+		  lastCrawlTime, lastCrawlAttempt,
+		  lastCrawlResult, lastCrawlResultMsg,
+		  lastTopLevelPoll, lastPollAttempt,
+		  lastPollResult, lastPollResultMsg,
+		  lastTreeWalk, crawlUrls,
+		  accessType,
+		  clockssSubscriptionStatus, v3Agreement,
+		  null);
+  }
+
+  /**
+   * Sets the last time a poll was attempted.
+   */
+  public void pollStarted() {
+    saveLastPoll();
+    lastPollAttempt = TimeBase.nowMs();
+    lastPollResult = Crawler.STATUS_RUNNING_AT_CRASH;
+    lastPollResultMsg = null;
+    historyRepo.storeAuState(this);
+  }
+
   /**
    * Sets the last poll time to the current time.  Saves itself to disk.
    */
-  public void newPollFinished() {
-    lastTopLevelPoll = TimeBase.nowMs();
+  protected void pollFinished(int result, String resultMsg) {
+    lastPollResultMsg = resultMsg;
+    switch (result) {
+    case V3Poller.POLLER_STATUS_COMPLETE:
+      lastTopLevelPoll = TimeBase.nowMs();
+      // fall through
+    default:
+      lastPollResult = result;
+      lastPollResultMsg = resultMsg;
+      break;
+    }
+    previousPollState = null;
     historyRepo.storeAuState(this);
+  }
+
+  /**
+   * Sets the last poll time to the current time.  Saves itself to disk.
+   */
+  public void pollFinished(int result) {
+    pollFinished(result, null);
+  }
+
+  /**
+   * Sets the last poll time to the current time.  Saves itself to disk.
+   */
+  public void pollFinished() {
+    pollFinished(V3Poller.POLLER_STATUS_COMPLETE, null);
   }
 
   public void setV3Agreement(double d) {
@@ -252,26 +359,6 @@ public class AuState implements LockssSerializable {
     return v3Agreement;
   }
   
-  /** 
-   * Deprecated in Daemon 1.25.  Please remove after a few
-   * daemon releases.
-   * 
-   * @deprecated
-   */
-  public void hasV3Poll(boolean b) {
-    hasV3Poll = b;
-  }
-  
-  /** 
-   * Deprecated in Daemon 1.25.  Please remove after a few
-   * daemon releases.
-   * 
-   * @deprecated
-   */
-  public boolean hasV3Poll() {
-    return hasV3Poll;
-  }
-
   /**
    * Sets the last treewalk time to the current time.  Does not save itself
    * to disk, as it is desireable for the treewalk to run every time the

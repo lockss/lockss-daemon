@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.67 2007-10-04 09:43:40 tlipkis Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.68 2008-01-30 00:55:11 tlipkis Exp $
  */
 
 /*
@@ -56,17 +56,17 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
    * {@link CXSerializer#CASTOR_MODE}.</p>
    * @author Thib Guicherd-Callin
    */
-  public static class WithCastor extends TestHistoryRepositoryImpl {
-    public void setUp() throws Exception {
-      super.setUp();
-      ConfigurationUtil.addFromArgs(CXSerializer.PARAM_COMPATIBILITY_MODE,
-                                    Integer.toString(CXSerializer.CASTOR_MODE));
-    }
+//   public static class WithCastor extends TestHistoryRepositoryImpl {
+//     public void setUp() throws Exception {
+//       super.setUp();
+//       ConfigurationUtil.addFromArgs(CXSerializer.PARAM_COMPATIBILITY_MODE,
+//                                     Integer.toString(CXSerializer.CASTOR_MODE));
+//     }
 
-    public void testStoreAuState() throws Exception {
-      // Not bothering to update castor mapping file
-    }
-  }
+//     public void testStoreAuState() throws Exception {
+//       // Not bothering to update castor mapping file
+//     }
+//   }
 
   /**
    * <p>A version of {@link TestHistoryRepositoryImpl} that forces the
@@ -295,13 +295,13 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
   public void testStoreAuState() throws Exception {
     HashSet strCol = new HashSet();
     strCol.add("test");
-    AuState auState = new AuState(mau, 123000, 123123,
+    AuState origState = new AuState(mau, 123000, 123123,
 				  41, "woop woop",
-				  321000, 456000, strCol,
+				  321000, 222000, 3, "pollres",
+				  456000, strCol,
 				  AuState.AccessType.OpenAccess,
 				  2, 1.0, repository);
-    repository.storeAuState(auState);
-    log.info("auState: " + auState);
+    repository.storeAuState(origState);
 
     String filePath = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath,
 							       mau);
@@ -309,20 +309,22 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
     File xmlFile = new File(filePath);
     assertTrue(xmlFile.exists());
 
-    auState = null;
-    auState = repository.loadAuState();
-    log.info("auState: " + auState);
-    assertEquals(123000, auState.getLastCrawlTime());
-    assertEquals(123123, auState.getLastCrawlAttempt());
-    assertEquals(321000, auState.getLastTopLevelPollTime());
-    assertEquals(41, auState.getLastCrawlResult());
-    assertEquals("woop woop", auState.getLastCrawlResultMsg());
-    assertEquals(2, auState.getClockssSubscriptionStatus());
-    assertEquals(AuState.AccessType.OpenAccess, auState.getAccessType());
-    assertEquals(mau.getAuId(), auState.getArchivalUnit().getAuId());
+    origState = null;
+    AuState loadedState = repository.loadAuState();
+    assertEquals(123000, loadedState.getLastCrawlTime());
+    assertEquals(123123, loadedState.getLastCrawlAttempt());
+    assertEquals(41, loadedState.getLastCrawlResult());
+    assertEquals("woop woop", loadedState.getLastCrawlResultMsg());
+    assertEquals(321000, loadedState.getLastTopLevelPollTime());
+    assertEquals(222000, loadedState.getLastPollAttempt());
+    assertEquals(3, loadedState.getLastPollResult());
+    assertEquals("pollres", loadedState.getLastPollResultMsg());
+    assertEquals(2, loadedState.getClockssSubscriptionStatus());
+    assertEquals(AuState.AccessType.OpenAccess, loadedState.getAccessType());
+    assertEquals(mau.getAuId(), loadedState.getArchivalUnit().getAuId());
 
     // check crawl urls
-    Collection col = auState.getCrawlUrls();
+    Collection col = loadedState.getCrawlUrls();
     Iterator colIter = col.iterator();
     assertTrue(colIter.hasNext());
     assertEquals("test", colIter.next());
@@ -382,7 +384,8 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
   }
 
   public void testStoreOverwrite() throws Exception {
-    AuState auState = new AuState(mau, 123, 321, 321, -1, null, 1, 1.0, repository);
+    AuState auState = new AuState(mau, 123, 321, 321, 333,
+				  -1, null, 1, 1.0, repository);
     repository.storeAuState(auState);
     String filePath = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath,
 							       mau);
@@ -393,16 +396,30 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
     StreamUtil.copy(fis, baos);
     String expectedStr = baos.toString();
 
-    auState = new AuState(mau, 1234, 4321, 4321, -1, null, 1, 1.0, repository);
+    auState = new AuState(mau, 1234, 4321, 4321, 5555,
+			  -1, null, 1, 1.0, repository);
     repository.storeAuState(auState);
+    assertEquals(1234, auState.getLastCrawlTime());
+    assertEquals(4321, auState.getLastCrawlAttempt());
+    assertEquals(4321, auState.getLastTopLevelPollTime());
+    assertEquals(5555, auState.getLastPollAttempt());
+    assertEquals(mau.getAuId(), auState.getArchivalUnit().getAuId());
+
+    fis = new FileInputStream(xmlFile);
+    baos = new ByteArrayOutputStream(expectedStr.length());
+    StreamUtil.copy(fis, baos);
+    log.info(baos.toString());
 
     auState = null;
     auState = repository.loadAuState();
     assertEquals(1234, auState.getLastCrawlTime());
+    assertEquals(4321, auState.getLastCrawlAttempt());
     assertEquals(4321, auState.getLastTopLevelPollTime());
+    assertEquals(5555, auState.getLastPollAttempt());
     assertEquals(mau.getAuId(), auState.getArchivalUnit().getAuId());
 
-    auState = new AuState(mau, 123, 321, 321, -1, null, 1, 1.0, repository);
+    auState = new AuState(mau, 123, 321, 321, 333,
+			  -1, null, 1, 1.0, repository);
     repository.storeAuState(auState);
     fis = new FileInputStream(xmlFile);
     baos = new ByteArrayOutputStream(expectedStr.length());
