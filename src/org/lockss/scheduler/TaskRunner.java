@@ -1,5 +1,5 @@
 /*
- * $Id: TaskRunner.java,v 1.40 2007-02-11 01:35:58 tlipkis Exp $
+ * $Id: TaskRunner.java,v 1.41 2008-01-30 00:54:07 tlipkis Exp $
  */
 
 /*
@@ -78,6 +78,12 @@ class TaskRunner {
   static final String WDOG_PARAM_STEPPER = "TaskRunner";
   static final long WDOG_DEFAULT_STEPPER = 1 * Constants.DAY;
 
+  /** Temporary priority while stepper thread has scheduler locked, to
+   * avoid priority inversion problems */
+  static final String PARAM_STEPPER_PRIORITY_LOCKED =
+    PREFIX + "TaskRunnerWhileLocked";
+  static final int DEFAULT_STEPPER_PRIORITY_LOCKED = Thread.NORM_PRIORITY + 1;
+
   static final String PRIORITY_PARAM_STEPPER = "TaskRunner";
   static final int PRIORITY_DEFAULT_STEPPER = Thread.NORM_PRIORITY - 1;
 
@@ -97,6 +103,7 @@ class TaskRunner {
   private long minCleanupInterval = DEFAULT_MIN_CLEANUP_INTERVAL;
   private long statsUpdateInterval = DEFAULT_STATS_UPDATE_INTERVAL;
   private int sortScheme = DEFAULT_SORT_SCHEME;
+  private int stepperHighPriority = DEFAULT_STEPPER_PRIORITY_LOCKED;
 
   private FifoQueue notifyQueue = new FifoQueue();
 
@@ -163,17 +170,20 @@ class TaskRunner {
 
   private void setConfig(Configuration config,
 			 Configuration.Differences changedKeys) {
-    maxDrop = config.getInt(PARAM_DROP_TASK_MAX, DEFAULT_DROP_TASK_MAX);
+    if (changedKeys.contains(PREFIX) ) {
+      maxDrop = config.getInt(PARAM_DROP_TASK_MAX, DEFAULT_DROP_TASK_MAX);
 
-    minCleanupInterval = config.getTimeInterval(PARAM_MIN_CLEANUP_INTERVAL,
-						DEFAULT_MIN_CLEANUP_INTERVAL);
+      minCleanupInterval =
+	config.getTimeInterval(PARAM_MIN_CLEANUP_INTERVAL,
+			       DEFAULT_MIN_CLEANUP_INTERVAL);
+      statsUpdateInterval =
+	config.getTimeInterval(PARAM_STATS_UPDATE_INTERVAL,
+			       DEFAULT_STATS_UPDATE_INTERVAL);
+      sortScheme = config.getInt(PARAM_SORT_SCHEME, DEFAULT_SORT_SCHEME);
 
-    statsUpdateInterval =
-      config.getTimeInterval(PARAM_STATS_UPDATE_INTERVAL,
-			     DEFAULT_STATS_UPDATE_INTERVAL);
-    sortScheme = config.getInt(PARAM_SORT_SCHEME, DEFAULT_SORT_SCHEME);
+      stepperHighPriority = config.getInt(PARAM_STEPPER_PRIORITY_LOCKED,
+					  DEFAULT_STEPPER_PRIORITY_LOCKED);
 
-    if (changedKeys.contains(PARAM_HISTORY_MAX) ) {
       int cMax = config.getInt(PARAM_HISTORY_MAX, DEFAULT_HISTORY_MAX);
       synchronized (history) {
 	history.setMax(cMax);
@@ -473,13 +483,15 @@ class TaskRunner {
   }
 
   synchronized void pokeStepThread() {
-    if (stepThread == null) {
+    StepThread th = stepThread;
+    if (th == null) {
       log.info("Starting Q runner");
-      stepThread = new StepThread("TaskRunner");
-      stepThread.start();
-      stepThread.waitRunning();
+      th = new StepThread("TaskRunner");
+      stepThread = th;
+      th.start();
+      th.waitRunning();
     } else {
-      stepThread.pokeStepper();
+      th.pokeStepper();
     }
   }
 
@@ -969,7 +981,17 @@ class TaskRunner {
       try {
 	while (!exit) {
 	  continueStepping.setValue(true);
-	  if (findTaskToRun()) {
+
+	  // findTaskToRun() grabs the scheduler lock, causing priority
+	  // inversion problems because this is a low priority thread.
+	  // Simple solution for now is to raise our priority temporarily.
+
+	  int oldPri = getPriority();
+	  setPriority(stepperHighPriority);
+	  boolean foundTask = findTaskToRun();
+	  setPriority(oldPri);
+
+	  if (foundTask) {
 	    runSteps(continueStepping, this);
 	  } else {
 	    stopWDog();
