@@ -1,5 +1,5 @@
 /*
- * $Id: Constants.java,v 1.18 2007-08-15 07:10:54 tlipkis Exp $
+ * $Id: Constants.java,v 1.19 2008-01-30 01:10:59 tlipkis Exp $
  */
 
 /*
@@ -62,6 +62,9 @@ public interface Constants {
 
   /** The line separator string on this system */
   public static String EOL = System.getProperty("line.separator");
+
+  /** Separator for polling groups */
+  public static String GROUP_SEPARATOR = ";";
 
   /** The RE string matching the EOL string */
   public static String EOL_RE = StringUtil.escapeNonAlphaNum(EOL);

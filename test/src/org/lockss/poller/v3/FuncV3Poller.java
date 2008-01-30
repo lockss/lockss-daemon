@@ -1,5 +1,5 @@
 /*
- * $Id: FuncV3Poller.java,v 1.17 2008-01-27 06:46:04 tlipkis Exp $
+ * $Id: FuncV3Poller.java,v 1.18 2008-01-30 01:10:59 tlipkis Exp $
  */
 
 /*
@@ -132,9 +132,9 @@ public class FuncV3Poller extends LockssTestCase {
 		  "TCP:[127.0.0.1]:3456");
     p.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
     p.setProperty(IdentityManagerImpl.PARAM_INITIAL_PEERS,
-                  "TCP:[127.0.0.2]:3456,TCP:[127.0.0.3]:3456,"
-                  + "TCP:[127.0.0.4]:3456,TCP:[127.0.0.5]:3456,"
-                  + "TCP:[127.0.0.6]:3456,TCP:[127.0.0.7]:3456");
+                  "TCP:[127.0.0.2]:3456;TCP:[127.0.0.3]:3456;"
+                  + "TCP:[127.0.0.4]:3456;TCP:[127.0.0.5]:3456;"
+                  + "TCP:[127.0.0.6]:3456;TCP:[127.0.0.7]:3456");
     ConfigurationUtil.setCurrentConfigFromProps(p);
     idmgr = theDaemon.getIdentityManager();
     pollmanager = theDaemon.getPollManager();

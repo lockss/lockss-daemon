@@ -1,5 +1,5 @@
 /*
- * $Id: PeerIdentityStatus.java,v 1.4 2008-01-30 00:53:03 tlipkis Exp $
+ * $Id: PeerIdentityStatus.java,v 1.5 2008-01-30 01:11:00 tlipkis Exp $
  */
 
 /*
@@ -294,14 +294,15 @@ public class PeerIdentityStatus implements LockssSerializable {
    * @return The groups he last told us he's in
    */
   public List getGroups() {
-    return StringUtil.breakAt(groups, ",");
+    return StringUtil.breakAt(groups, Constants.GROUP_SEPARATOR);
   }
 
   /**
    * @param groups The groups he said he's in
    */
   public void setGroups(List groups) {
-    this.groups = StringUtil.separatedString(groups, ",");
+    this.groups = StringUtil.separatedString(groups,
+					     Constants.GROUP_SEPARATOR);
   }
 
   /**
