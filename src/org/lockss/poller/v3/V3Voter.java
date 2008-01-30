@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.49 2008-01-30 00:51:18 tlipkis Exp $
+ * $Id: V3Voter.java,v 1.50 2008-01-30 08:32:22 tlipkis Exp $
  */
 
 /*
@@ -291,6 +291,7 @@ public class V3Voter extends BasePoll {
   private PsmInterp makeStateMachine(final VoterUserData ud) {
     PsmMachine machine = makeMachine();
     PsmInterp interp = newPsmInterp(machine, ud);
+    interp.setName(PollUtil.makeShortPollKey(getKey()));
     interp.setCheckpointer(new PsmInterp.Checkpointer() {
       public void checkpoint(PsmInterpStateBean resumeStateBean) {
         voterUserData.setPsmState(resumeStateBean);

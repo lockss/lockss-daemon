@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.67 2008-01-30 00:50:56 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.68 2008-01-30 08:32:22 tlipkis Exp $
  */
 
 /*
@@ -478,6 +478,7 @@ public class V3Poller extends BasePoll {
   PsmInterp newPsmInterp(PsmMachine stateMachine, Object userData) {
     PsmManager mgr = theDaemon.getPsmManager();
     PsmInterp interp = mgr.newPsmInterp(stateMachine, userData);
+    interp.setName(PollUtil.makeShortPollKey(getKey()));
     interp.setThreaded(isAsynch);
     return interp;
   }

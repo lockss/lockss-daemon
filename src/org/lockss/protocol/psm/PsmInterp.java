@@ -1,5 +1,5 @@
 /*
-* $Id: PsmInterp.java,v 1.14 2008-01-27 06:47:10 tlipkis Exp $
+* $Id: PsmInterp.java,v 1.15 2008-01-30 08:32:22 tlipkis Exp $
  */
 
 /*
@@ -483,7 +483,11 @@ public class PsmInterp {
     }
 
     public void lockssRun() {
-      setName(name);
+      if (name != null) {
+	setName("PsmRunner: " + name);
+      } else {
+	setName("PsmRunner");
+      }
       runnerThread = Thread.currentThread();
       try {
 	while (true) {
@@ -513,6 +517,7 @@ public class PsmInterp {
 	  }
 	}
       } finally {
+	setName("PsmRunner Idle");
 	synchronized (runnerLock) {
 	  if (runnerThread == Thread.currentThread()) {
 	    runnerThread = null;
