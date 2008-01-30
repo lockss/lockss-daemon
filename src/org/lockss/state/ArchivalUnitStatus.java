@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.64 2007-10-09 00:49:57 smorabito Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.65 2008-01-30 00:54:30 tlipkis Exp $
  */
 
 /*
@@ -290,9 +290,6 @@ public class ArchivalUnitStatus
         // Percent damaged.  It's scary to see '0% Agreement' if there's no
         // history, so we just show a friendlier message.
         //
-        // XXX: hasV3Poll() is a stopgap added for daemon 1.21.  See
-        //      the method declaration for more information.  It should
-        //      eventually be removed, but is harmless for now.
         if (auState.getV3Agreement() < 0 ||
 	    auState.getLastTopLevelPollTime() <= 0) {
           if (auState.lastCrawlTime > 0 || AuUtil.isPubDown(au)) {
@@ -746,6 +743,13 @@ public class ArchivalUnitStatus
 					    ColumnDescriptor.TYPE_STRING,
 					    "Awaiting recalc"));
       }
+      AuNodeImpl auNode = AuUtil.getAuRepoNode(au);
+      String spec = LockssRepositoryImpl.getRepositorySpec(au);
+      String repo = LockssRepositoryImpl.mapAuToFileLocation(LockssRepositoryImpl.getLocalRepositoryPath(spec), au);
+
+      res.add(new StatusTable.SummaryInfo("Repository",
+					  ColumnDescriptor.TYPE_STRING,
+					  repo));
       res.add(new StatusTable.SummaryInfo("Status",
 					  ColumnDescriptor.TYPE_STRING,
 					  stat));
@@ -767,22 +771,34 @@ public class ArchivalUnitStatus
 // 						ColumnDescriptor.TYPE_INT,
 // 						new Integer(AuUtil.getProtocolVersion(au))));
 
-      long lastAttempt = state.getLastCrawlAttempt();
-      long lastCrawl = state.getLastCrawlTime();
+      long lastCrawlAttempt = state.getLastCrawlAttempt();
       res.add(new StatusTable.SummaryInfo("Last Completed Crawl",
 					  ColumnDescriptor.TYPE_DATE,
 					  new Long(state.getLastCrawlTime())));
-      if (lastAttempt > 0) {
+      if (lastCrawlAttempt > 0) {
 	res.add(new StatusTable.SummaryInfo("Last Crawl",
 					    ColumnDescriptor.TYPE_DATE,
-					    new Long(lastAttempt)));
+					    new Long(lastCrawlAttempt)));
 	res.add(new StatusTable.SummaryInfo("Last Crawl Result",
 					    ColumnDescriptor.TYPE_STRING,
 					    state.getLastCrawlResultMsg()));
       }
-      res.add(new StatusTable.SummaryInfo("Last Poll",
+      long lastPollAttempt = state.getLastPollAttempt();
+      res.add(new StatusTable.SummaryInfo("Last Completed Poll",
 					  ColumnDescriptor.TYPE_DATE,
 					  new Long(state.getLastTopLevelPollTime())));
+      if (lastPollAttempt > 0) {
+	res.add(new StatusTable.SummaryInfo("Last Poll",
+					    ColumnDescriptor.TYPE_DATE,
+					    new Long(lastPollAttempt)));
+	String pollResult = state.getLastPollResultMsg();
+	if (!StringUtil.isNullString(pollResult)) {
+	  res.add(new StatusTable.SummaryInfo("Last Poll Result",
+					      ColumnDescriptor.TYPE_STRING,
+					      pollResult));
+	}
+      }
+
       PollManager pm = theDaemon.getPollManager();
       boolean isCrawling = cmStatus.isRunningNCCrawl(au);
       boolean isPolling = pm.isPollRunning(au);
