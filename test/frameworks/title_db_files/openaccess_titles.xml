@@ -6853,5 +6853,16 @@
       <property name="attributes.rights" value="openaccess" />
     </property>
 
+    <property name="JournaloftheIndianInstituteofScience">
+      <property name="title" value="Journal of the Indian Institute of Science" />
+      <property name="journalTitle" value="Journal of the Indian Institute of Science" />
+      <property name="plugin" value="in.ernet.iisc.plugin.JournalOfTheIndianInstituteOfSciencePlugin" />
+      <property name="param.1">
+	   <property name="key" value="base_url" />
+	   <property name="value" value="http://journal.library.iisc.ernet.in/" />
+      </property>
+      <property name="attributes.rights" value="openaccess" />
+    </property>
+
   </property>
 </lockss-config>
