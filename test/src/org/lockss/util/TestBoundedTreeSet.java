@@ -1,5 +1,5 @@
 /*
- * $Id: TestBoundedTreeSet.java,v 1.1 2007-10-01 08:16:57 tlipkis Exp $
+ * $Id: TestBoundedTreeSet.java,v 1.2 2008-02-01 01:47:16 tlipkis Exp $
  */
 
 /*
@@ -46,7 +46,6 @@ public class TestBoundedTreeSet extends LockssTestCase {
     Set set = new BoundedTreeSet(4);
     assertTrue(set.isEmpty());
     assertEquals(0, set.size());
-    assertFalse(set.contains(null));
     assertTrue(set.add("6"));
     assertTrue(set.add("2"));
     assertTrue(set.add("4"));
@@ -72,7 +71,6 @@ public class TestBoundedTreeSet extends LockssTestCase {
 	}});
     assertTrue(set.isEmpty());
     assertEquals(0, set.size());
-    assertFalse(set.contains(null));
     assertTrue(set.add("6"));
     assertTrue(set.add("2"));
     assertTrue(set.add("4"));
