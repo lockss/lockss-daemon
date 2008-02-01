@@ -1,5 +1,5 @@
 /*
- * $Id: TestFollowLinkCrawler.java,v 1.25 2007-06-27 08:07:47 tlipkis Exp $
+ * $Id: TestFollowLinkCrawler.java,v 1.26 2008-02-01 22:07:33 dshr Exp $
  */
 
 /*
@@ -33,6 +33,8 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.crawler;
 import java.util.*;
 import java.io.*;
+
+import org.apache.commons.collections.set.*;
 
 import org.lockss.config.*;
 import org.lockss.daemon.*;
@@ -149,7 +151,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     String url1="http://www.example.com/blah.html";
     mau.addUrl(startUrl, false, true);
-    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(SetUtil.set(url1));
+    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(ListUtil.list(url1));
     mau.addUrl(url1, false, true);
 
     assertTrue(crawler.doCrawl0());
@@ -160,7 +162,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
   public void testDoesNotCacheExistingFile() {
     String url1="http://www.example.com/blah.html";
 
-    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(SetUtil.set(url1));
+    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(ListUtil.list(url1));
 
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     mau.addUrl(startUrl, true, true);
@@ -175,7 +177,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
   public void testHandlesRedirects() {
     String url1="http://www.example.com/blah.html";
 
-    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(SetUtil.set(url1));
+    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(ListUtil.list(url1));
 
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     mau.addUrl(startUrl, false, true);
@@ -207,8 +209,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     String url2="http://www.example.com/two.html";
     String url3="http://www.example.com/three.html";
 
-    Set urls = SetUtil.set(url1, url2, url3);
-    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(urls);
+    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(ListUtil.list(url1, url2, url3));
 
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     mau.addUrl(startUrl, false, true);
@@ -243,8 +244,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     String url2="http://www.example.com/two.html";
     String url3="http://www.example.com/three.html";
 
-    Set urls = SetUtil.set(url1, url2, url3);
-    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(urls);
+    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(ListUtil.list(url1, url2, url3));
 
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     mau.addUrl(startUrl, false, true);
@@ -274,7 +274,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     String url1="http://www.example.com/blah.html";
     mau.addUrl(startUrl, false, true);
-    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(SetUtil.set(url1));
+    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(ListUtil.list(url1));
     MyMockUnretryableCacheException exception =
        new MyMockUnretryableCacheException("Test exception");
     mau.addUrl(url1, exception, DEFAULT_RETRY_TIMES);
@@ -287,7 +287,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     String url1="http://www.example.com/blah.html";
     mau.addUrl(startUrl, false, true);
-    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(SetUtil.set(url1));
+    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(ListUtil.list(url1));
     mau.addUrl(url1, new ExpectedIOException("Test exception"),
                DEFAULT_RETRY_TIMES);
     crawlRule.addUrlToCrawl(url1);
@@ -299,7 +299,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     String url1="http://www.example.com/blah.html";
     mau.addUrl(startUrl, false, true);
-    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(SetUtil.set(url1));
+    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(ListUtil.list(url1));
     MyMockCacheException exception =
       new MyMockCacheException("Test exception");
     mau.addUrl(url1, exception, DEFAULT_RETRY_TIMES);
@@ -312,7 +312,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     String url1="http://www.example.com/blah.html";
     mau.addUrl(startUrl, false, true);
-    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(SetUtil.set(url1));
+    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(ListUtil.list(url1));
     MyMockRetryableCacheException exception =
       new MyMockRetryableCacheException("Test exception");
     mau.addUrl(url1, exception, DEFAULT_RETRY_TIMES-1);
@@ -331,7 +331,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
 
     mau.addUrl(startUrl, false, true);
 
-    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(SetUtil.set(url1,
+    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(ListUtil.list(url1,
 								     url2,
 								     url3));
     MyMockRetryableCacheException exception =
@@ -354,7 +354,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     String url1="http://www.example.com/blah.html";
     mau.addUrl(startUrl, false, true);
-    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(SetUtil.set(url1));
+    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(ListUtil.list(url1));
 
     // extractor.addUrlsToReturn(startUrl, SetUtil.set(url1));
     MyMockUnretryableCacheException exception =
@@ -379,7 +379,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     String url1="http://www.example.com/blah.html";
     mau.addUrl(startUrl, false, true);
-    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(SetUtil.set(url1));
+    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(ListUtil.list(url1));
     mau.addUrl(url1,
 	       new MyMockRetryableCacheException("Test exception"),
 	       retryNum-1);
@@ -402,8 +402,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     String url2="http://www.example.com/blah2.html";
     String url3="http://www.example.com/blah3.html";
     mau.addUrl(startUrl, false, true);
-    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(
-        SetUtil.set(url1, url2, url3));
+    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(ListUtil.list(url1, url2, url3));
     mau.addUrl(url2,
 	       new CacheException.UnretryableException("Test exception"),
 	       retryNum);
@@ -433,7 +432,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     String url1="http://www.example.com/blah.html";
     String url2="http://www.example.com/alpha.html";
     mau.addUrl(startUrl, false, true);
-    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(SetUtil.set(url1,
+    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(ListUtil.list(url1,
 								     url2));
     mau.addUrl(url1,
 	       new CacheException.NoRetryDeadLinkException("Test exception"),
@@ -451,7 +450,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     String url1="http://www.example.com/blah.html";
     mau.addUrl(startUrl, false, true);
-    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(SetUtil.set(url1));
+    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(ListUtil.list(url1));
     mau.addUrl(url1, new ExpectedRuntimeException("Test exception"), 1);
     crawlRule.addUrlToCrawl(url1);
 
@@ -466,7 +465,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     String url1 = "http://www.example.com/link3.html";
     String url2 = "http://www.example.com/link4.html";
     startUrls = ListUtil.list(startUrl);
-    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(SetUtil.set(url1));
+    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(ListUtil.list(url1));
     extractor.addUrlsToReturn(url1, SetUtil.set(url2));
 
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
@@ -487,7 +486,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     String url1 = "http://www.example.com/link3.html";
     String url2 = "http://www.example.com/link4.html";
     startUrls = ListUtil.list(startUrl);
-    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(SetUtil.set(url1));
+    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(ListUtil.list(url1));
     extractor.addUrlsToReturn(url1, SetUtil.set(url2));
 
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
@@ -513,7 +512,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
 
     mau.addUrl(startUrl);
 
-    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(SetUtil.set(CW_URL1, CW_URL2, CW_URL3));
+    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(ListUtil.list(CW_URL1, CW_URL2, CW_URL3));
     mau.addUrl(CW_URL1);
     mau.addUrl(CW_URL2);
     mau.addUrl(CW_URL3);
@@ -561,7 +560,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
 
     String url1= "http://www.example.com/link1.html";
     spec.setCrawlWindow(new MyMockCrawlWindow(0));
-    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(SetUtil.set(url1));
+    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(ListUtil.list(url1));
     mau.addUrl(startUrl, false, true);
     mau.addUrl(url1);
     assertFalse(crawler.doCrawl());
@@ -569,7 +568,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
 
   public void testAborted1() {
     String url1= "http://www.example.com/link1.html";
-    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(SetUtil.set(url1));
+    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(ListUtil.list(url1));
     mau.addUrl(startUrl, true, true);
     crawler.abortCrawl();
     assertFalse(crawler.doCrawl());
@@ -579,7 +578,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
   public void testAborted2() {
     String url1= "http://www.example.com/link1.html";
     String url2 = "http://www.example.com/link4.html";
-    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(SetUtil.set(url1,
+    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(ListUtil.list(url1,
 								     url2));
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
 
@@ -599,7 +598,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     assertTrue(cached.contains(startUrl));
   }
 
-  private Set crawlUrls(Set urls) {
+  private Set crawlUrls(List urls) {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     mau.addUrl(startUrl);
     Iterator it = urls.iterator();
@@ -620,10 +619,10 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     String url2= "https://www.example.com/link2.html";
     String url3= "http://www.example.com/link3.html";
 
-    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(SetUtil.set(url1));
+    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(ListUtil.list(url1));
     extractor.addUrlsToReturn(url1, SetUtil.set(url1, url2, url3));
     assertEquals(SetUtil.set(startUrl, url1, url3),
-		 crawlUrls(SetUtil.set(url1, url2, url3)));
+		 crawlUrls(ListUtil.list(url1, url2, url3)));
   }
 
   public void testDoesCollectFtpAndGopher() {
@@ -635,10 +634,10 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     String url2= "ftp://www.example.com/link2.html";
     String url3= "gopher://www.example.com/link3.html";
 
-    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(SetUtil.set(url1));
+    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(ListUtil.list(url1));
     extractor.addUrlsToReturn(url1, SetUtil.set(url1, url2, url3));
     assertEquals(SetUtil.set(startUrl, url1),
-		 crawlUrls(SetUtil.set(url1, url2, url3)));
+		 crawlUrls(ListUtil.list(url1, url2, url3)));
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
   }
 
@@ -647,10 +646,10 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     String url2= "http://www.example.com/link2.html";
     String url3= "http://www.example.com/link3.html";
 
-    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(SetUtil.set(url1));
+    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(ListUtil.list(url1));
     extractor.addUrlsToReturn(url1, SetUtil.set(url1, url2, url3));
     assertEquals(SetUtil.set(startUrl, url1, url2, url3),
-		 crawlUrls(SetUtil.set(url1, url2, url3)));
+		 crawlUrls(ListUtil.list(url1, url2, url3)));
   }
 
   public void testDoesNotLoopOnSelfReferentialLoop() {
@@ -658,11 +657,10 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     String url2= "http://www.example.com/link2.html";
     String url3= "http://www.example.com/link3.html";
 
-    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(
-        SetUtil.set(url1, url2, url3, startUrl));
+    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(ListUtil.list(url1, url2, url3, startUrl));
     extractor.addUrlsToReturn(url1, SetUtil.set(startUrl));
     assertEquals(SetUtil.set(startUrl, url1, url2, url3),
-		 crawlUrls(SetUtil.set(url1, url2, url3)));
+		 crawlUrls(ListUtil.list(url1, url2, url3)));
   }
 
   public void testCrawlListEmptyOnExit() {
@@ -671,9 +669,8 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     String url2= "http://www.example.com/link2.html";
     String url3= "http://www.example.com/link3.html";
 
-    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(
-        SetUtil.set(url1, url2, url3));
-    crawlUrls(SetUtil.set(url1, url2, url3));
+    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(ListUtil.list(url1, url2, url3));
+    crawlUrls(ListUtil.list(url1, url2, url3));
     assertEmpty(aus.getCrawlUrls());
   }
 
@@ -684,9 +681,9 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     String url3= "http://www.example.com/link3.html";
 
     spec.setCrawlWindow(new MyMockCrawlWindow(3)); //permission page & first URL
-    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(SetUtil.set(url1, url2,
+    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(ListUtil.list(url1, url2,
                                                                      url3));
-    crawlUrls(SetUtil.set(url1, url2, url3));
+    crawlUrls(ListUtil.list(url1, url2, url3));
     assertEquals(SetUtil.set(url2, url3), aus.getCrawlUrls());
   }
 
@@ -697,9 +694,9 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     String url3= "http://www.example.com/link3.html";
 
     spec.setCrawlWindow(new MyMockCrawlWindow(3));
-    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(SetUtil.set(url1, url2,
+    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(ListUtil.list(url1, url2,
                                                                      url3));
-    crawlUrls(SetUtil.set(url1, url2, url3));
+    crawlUrls(ListUtil.list(url1, url2, url3));
     assertEquals(SetUtil.set(), aus.getCrawlUrls());
   }
 
@@ -709,9 +706,8 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     String url2= "http://www.example.com/link2.html";
     String url3= "http://www.example.com/link3.html";
 
-    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(
-        SetUtil.set(url1, url2, url3));
-    crawlUrls(SetUtil.set(url1, url2, url3));
+    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(ListUtil.list(url1, url2, url3));
+    crawlUrls(ListUtil.list(url1, url2, url3));
     aus.assertUpdatedCrawlListCalled(3); //not called for startUrl
   }
 
@@ -721,9 +717,8 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     String url2= "http://www.example.com/link2.html";
     String url3= "http://www.example.com/link3.html";
 
-    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(
-        SetUtil.set(url1, url2, url3));
-    crawlUrls(SetUtil.set(url1, url2, url3));
+    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(ListUtil.list(url1, url2, url3));
+    crawlUrls(ListUtil.list(url1, url2, url3));
     aus.assertUpdatedCrawlListCalled(0); //not called for startUrl
   }
 
@@ -769,12 +764,11 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     String url2= "http://www.example.com/link2.html";
     String url3= "http://www.example.com/link3.html";
 
-    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(
-        SetUtil.set(url1, url2, url3));
+    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(ListUtil.list(url1, url2, url3));
 
     MockLockssWatchdog wdog = new MockLockssWatchdog();
     crawler.setWatchdog(wdog);
-    crawlUrls(SetUtil.set(url1, url2, url3));
+    crawlUrls(ListUtil.list(url1, url2, url3));
     wdog.assertPoked(3); //not counted for startUrl
   }
 
@@ -834,8 +828,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
 
     MockCachedUrlSet cus = permissionPageTestSetup(permissionList,2,urls, mau);
 
-    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(
-        SetUtil.set(url1, url2, url3, url4));
+    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(ListUtil.list(url1, url2, url3, url4));
     assertTrue(crawler.doCrawl());
     Set expected = SetUtil.fromList(urls);
     assertEquals(expected, cus.getCachedUrls());
@@ -860,8 +853,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
 
     MockCachedUrlSet cus = permissionPageTestSetup(permissionList,1,urls, mau);
 
-    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(
-        SetUtil.set(url1, url2, url3, url4));
+    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(ListUtil.list(url1, url2, url3, url4));
     assertFalse(crawler.doCrawl());
     Set expected = SetUtil.set(permissionUrl1, url1, url2);
     assertEquals(expected, cus.getCachedUrls());
@@ -885,7 +877,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     setProperty(TestableFollowLinkCrawler.PARAM_ABORT_ON_FIRST_NO_PERMISSION,
 		"true");
 
-    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(SetUtil.set(url1,
+    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(ListUtil.list(url1,
                                                                      url3));
     assertFalse(crawler.doCrawl());
     Set expected = SetUtil.set(permissionUrl1);
@@ -912,7 +904,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     MockCachedUrlSet cus = permissionPageTestSetup(permissionList,100,
 						   urls, mau);
 
-    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(SetUtil.fromList(urls));
+    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(urls);
 
     assertFalse(crawler.doCrawl());
     assertEquals(SetUtil.set(permissionUrl2, url2), cus.getCachedUrls());
@@ -936,8 +928,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     MockCachedUrlSet cus = permissionPageTestSetup(permissionList,100,
 						   urls, mau);
 
-    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(
-        SetUtil.set(url1, url2));
+    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(ListUtil.list(url1, url2));
 
     assertTrue(crawler.doCrawl());
     Set expected = SetUtil.set(url1,url2,permissionUrl1);
@@ -957,7 +948,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     MockCachedUrlSet cus =
         permissionPageTestSetup(permissionList, 1, urls, mau);
 
-    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(SetUtil.set(url1, url3));
+    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(ListUtil.list(url1, url3));
     assertFalse(crawler.doCrawl());
     Set expected = SetUtil.set(permissionUrl1, url1);
     assertEquals(expected, cus.getCachedUrls());
@@ -1121,8 +1112,9 @@ public class TestFollowLinkCrawler extends LockssTestCase {
      * setUrlsToFollow set the urls set that will return when calling
      * getUrlsToFollow
      */
-    protected void setUrlsToFollow(Set urls) {
-      urlsToFollow = urls;
+    protected void setUrlsToFollow(List urls) {
+      urlsToFollow = new ListOrderedSet();
+      urlsToFollow.addAll(urls);
     }
 
     protected Set getUrlsToFollow(){
