@@ -1,5 +1,5 @@
 /*
- * $Id: ZipExploder.java,v 1.5 2008-01-14 14:45:14 dshr Exp $
+ * $Id: ZipExploder.java,v 1.6 2008-02-05 17:37:55 dshr Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.util.zip.*;
 import java.io.*;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
+import org.lockss.util.urlconn.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
 import org.lockss.plugin.exploded.*;
@@ -80,12 +81,13 @@ public class ZipExploder extends Exploder {
   /**
    * Explode the archive into its constituent elements
    */
-  protected void explodeUrl() {
+  protected void explodeUrl() throws CacheException {
     InputStream arcStream = null;
     CachedUrl cachedUrl = null;
     ZipInputStream zis = null;
     int goodEntries = 0;
     int badEntries = 0;
+    String zipArchiveUrl = archiveUrl;
     logger.info((storeArchive ? "Storing" : "Fetching") + " a ZIP file: " +
 		archiveUrl + (explodeFiles ? " will" : " won't") + " explode");
     while (++reTry < maxRetries) try {
@@ -119,7 +121,8 @@ public class ZipExploder extends Exploder {
           try {
 	    helper.process(ae);
           } catch (PluginException ex) {
-            logger.error("Helper process() threw " + ex);
+	    throw new CacheException.HostException("helper.process() threw " +
+						   ex);
           }
 	  if (ae.getBaseUrl() != null &&
 	      ae.getRestOfUrl() != null &&
@@ -138,8 +141,9 @@ public class ZipExploder extends Exploder {
       // Success
       addText();
       if (badEntries > 0) {
-	logger.error(archiveUrl + " had " + badEntries + "/" +
-		     (goodEntries + badEntries) + " bad entries");
+	String msg = archiveUrl + " had " + badEntries + "/" +
+	  (goodEntries + badEntries) + " bad entries";
+	throw new CacheException.HostException(msg);
       } else {
 	logger.info(archiveUrl + " had " + goodEntries + " entries");
 	if (!storeArchive) {
@@ -151,8 +155,7 @@ public class ZipExploder extends Exploder {
 	reTry = maxRetries+1;
       }
     } catch (IOException ex) {
-      logger.siteError("TarExploder.explodeUrl(" + archiveUrl + ") threw", ex);
-      continue;
+      throw new CacheException.HostException(ex);
     } finally {
       if (cachedUrl != null) {
 	cachedUrl.release();
@@ -174,12 +177,7 @@ public class ZipExploder extends Exploder {
       ArchivalUnit au = crawler.getAu();
       String msg = archiveUrl + ": " + badEntries + "/" +
 	goodEntries + " bad entries";
-      logger.debug(archiveUrl + " setting " + au.toString() + " to PLUGIN_ERROR");
-      NodeManager nm = crawler.getDaemon().getNodeManager(au);
-      nm.newContentCrawlFinished(Crawler.STATUS_PLUGIN_ERROR, msg);
-      crawler.getCrawlerStatus().setCrawlStatus(Crawler.STATUS_PLUGIN_ERROR,
-						msg);
-      crawler.abortCrawl();
+      throw new CacheException.UnretryableException(msg);
     }
   }
 }
