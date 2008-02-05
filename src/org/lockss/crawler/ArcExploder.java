@@ -1,5 +1,5 @@
 /*
- * $Id: ArcExploder.java,v 1.2 2007-09-24 18:37:11 dshr Exp $
+ * $Id: ArcExploder.java,v 1.2.4.1 2008-02-05 17:20:11 dshr Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.io.*;
 import org.archive.io.*;
 import org.archive.io.arc.*;
 import org.lockss.util.*;
+import org.lockss.util.urlconn.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
@@ -74,7 +75,7 @@ public class ArcExploder extends Exploder {
   /**
    * Explode the archive into its constituent elements
    */
-  protected void explodeUrl() {
+  protected void explodeUrl() throws CacheException {
     InputStream arcStream = null;
     CachedUrl cachedUrl = null;
     ArchiveReader arcReader = null;
@@ -100,13 +101,13 @@ public class ArcExploder extends Exploder {
 	explode(urlCacher.getUrl(), urlCacher.getArchivalUnit(), arcReader);
       }
     } catch (IOException ex) {
-      logger.siteError("ArcCrawler.explode() threw", ex);
+      throw new CacheException.HostException(ex);
     } finally {
       if (arcReader != null) try {
 	arcReader.close();
 	arcReader = null;
       } catch (IOException ex) {
-	logger.error(arcUrl + " arcReader.close() threw ", ex);
+	throw new CacheException.HostException(ex);
       }
       if (cachedUrl != null) {
 	cachedUrl.release();
@@ -115,7 +116,8 @@ public class ArcExploder extends Exploder {
     }
   }
 
-  protected CIProperties makeCIProperties(ArchiveRecordHeader elementHeader) {
+  protected CIProperties makeCIProperties(ArchiveRecordHeader elementHeader)
+      throws IOException {
     CIProperties ret = new CIProperties();
     Set elementHeaderFieldKeys = elementHeader.getHeaderFieldKeys();
     for (Iterator i = elementHeaderFieldKeys.iterator(); i.hasNext(); ) {
@@ -126,6 +128,7 @@ public class ArcExploder extends Exploder {
 	ret.put(key, value);
       } catch (ClassCastException ex) {
 	logger.error("makeCIProperties: " + key + " threw ", ex);
+	throw new CacheException.HostException(ex);
       }
     }
     return (ret);

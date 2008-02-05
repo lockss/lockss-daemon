@@ -1,5 +1,5 @@
 /*
- * $Id: ArchiveEntry.java,v 1.2 2007-09-24 18:37:11 dshr Exp $
+ * $Id: ArchiveEntry.java,v 1.2.4.1 2008-02-05 17:20:12 dshr Exp $
  */
 
 /*
@@ -62,7 +62,11 @@ public class ArchiveEntry {
 
   public ArchiveEntry(String name, long bytes, long date, InputStream is,
 		      CrawlSpec crawlSpec) {
-    this.name = name;
+    if (name.startsWith("./")) {
+      this.name = name.substring(2);
+    } else {
+      this.name = name;
+    }
     this.bytes = bytes;
     this.date = date;
     this.is = is;

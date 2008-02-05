@@ -1,5 +1,5 @@
 /*
- * $Id: Exploder.java,v 1.5.2.1 2007-11-13 22:34:10 tlipkis Exp $
+ * $Id: Exploder.java,v 1.5.2.2 2008-02-05 17:20:11 dshr Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.io.*;
 import java.util.*;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
+import org.lockss.util.urlconn.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
 import org.lockss.plugin.exploded.*;
@@ -104,7 +105,7 @@ public abstract class Exploder {
   /**
    * Explode the archive into its constituent elements
    */
-  protected abstract void explodeUrl();
+  protected abstract void explodeUrl() throws CacheException;
 
   protected void storeEntry(ArchiveEntry ae) throws IOException {
     // We assume that all exploded content is organized into
