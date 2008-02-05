@@ -1,0 +1,93 @@
+<map>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>10000</long>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>2</string>
+  </entry>
+  <entry>
+    <string>au_crawl_depth</string>
+    <int>2</int>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;American Chemical Society Plugin (CLOCKSS), Base URL %s, Journal Key %s, Volume %s&quot;, base_url, journal_key, volume_name</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>American Chemical Society Plugin (CLOCKSS)</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,&quot;^(%s|%s)&quot;, base_url, article_url</string>
+      <string>1,&quot;^(%s|%s)acs/journals/toc\.clockss_manifest\?incoden=%s&amp;involume=%s&quot;, base_url, article_url, journal_key, volume_name</string>
+      <string>1,&quot;^(%s|%s)acs/journals/toc\.page(\.printer_friendly)?\?incoden=%s(&amp;indecade=[^&amp;]*)?&amp;involume=%s&quot;, base_url, article_url, journal_key, volume_name</string>
+      <string>1,&quot;^(%s|%s)journals/%s/covers/%s/&quot;, base_url, article_url, journal_key, volume_name</string>
+      <string>1,&quot;^(%s|%s)cgi-bin/(abstract|archive|article)\.cgi/%s/[12][0-9]{3}/%s/&quot;, base_url, article_url, journal_key, volume_name</string>
+      <string>1,&quot;^(%s|%s)isubscribe/journals/%s/%s/&quot;, base_url, article_url, journal_key, volume_name</string>
+      <string>1,&quot;^(%s|%s)subscribe/journals/%s/suppinfo/&quot;, base_url, article_url, journal_key</string>
+      <string>1,&quot;^(%s|%s)acs/journals/supporting_information\.page\?in_manuscript=&quot;, base_url, article_url</string>
+      <string>1,&quot;^(%s|%s)cgi-bin/suppinfo\.pl\?&quot;, base_url, article_url</string>
+      <string>1,&quot;^(%s|%s)wls/journals/citation2/Citation\?jid=&quot;, base_url, article_url</string>
+      <string>1,&quot;^(%s|%s).*\.(css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url, article_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%sacs/journals/toc.clockss_manifest?incoden=%s&amp;involume=%s&quot;, base_url, journal_key, volume_name</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume_name</key>
+        <displayName>Volume Name</displayName>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>article_url</key>
+        <displayName>Article URL</displayName>
+        <description>base url for articles</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_key</key>
+        <displayName>Journal ID</displayName>
+        <description>Key used to identify journal in script (e.g. &apos;jcisd8&apos;).</description>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_manifest</string>
+    <list>
+      <string>&quot;%sacs/journals/toc.clockss_manifest?incoden=%s&amp;involume=%s&quot;, base_url, journal_key, volume_name</string>
+      <string>&quot;%sacs/journals/toc.clockss_manifest?incoden=%s&amp;involume=%s&quot;, article_url, journal_key, volume_name</string>
+    </list>
+  </entry>
+</map>

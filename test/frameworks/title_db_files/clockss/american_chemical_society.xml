@@ -34,25 +34,26 @@
 <lockss-config>
 
   <property name="org.lockss.title">
+
     <property name="ACSChemicalBiology1">
       <property name="title" value="ACS Chemical Biology Volume 1" />
       <property name="journalTitle" value="ACS Chemical Biology" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="acbcct" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="acbcct" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="1" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="1" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
@@ -60,2000 +61,2000 @@
     <property name="ACSChemicalBiology2">
       <property name="title" value="ACS Chemical Biology Volume 2" />
       <property name="journalTitle" value="ACS Chemical Biology" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="acbcct" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="acbcct" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="2" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="2" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="ChemistryofMaterials1">
+    <property name="ACSChemistryofMaterials1">
       <property name="title" value="Chemistry of Materials Volume 1" />
       <property name="journalTitle" value="Chemistry of Materials" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="cmatex" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="cmatex" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="1" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="1" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="ChemistryofMaterials2">
+    <property name="ACSChemistryofMaterials2">
       <property name="title" value="Chemistry of Materials Volume 2" />
       <property name="journalTitle" value="Chemistry of Materials" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="cmatex" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="cmatex" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="2" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="2" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="ChemistryofMaterials3">
+    <property name="ACSChemistryofMaterials3">
       <property name="title" value="Chemistry of Materials Volume 3" />
       <property name="journalTitle" value="Chemistry of Materials" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="cmatex" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="cmatex" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="3" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="3" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="ChemistryofMaterials4">
+    <property name="ACSChemistryofMaterials4">
       <property name="title" value="Chemistry of Materials Volume 4" />
       <property name="journalTitle" value="Chemistry of Materials" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="cmatex" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="cmatex" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="4" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="4" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="ChemistryofMaterials5">
+    <property name="ACSChemistryofMaterials5">
       <property name="title" value="Chemistry of Materials Volume 5" />
       <property name="journalTitle" value="Chemistry of Materials" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="cmatex" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="cmatex" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="5" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="5" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="ChemistryofMaterials6">
+    <property name="ACSChemistryofMaterials6">
       <property name="title" value="Chemistry of Materials Volume 6" />
       <property name="journalTitle" value="Chemistry of Materials" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="cmatex" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="cmatex" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="6" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="6" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="ChemistryofMaterials7">
+    <property name="ACSChemistryofMaterials7">
       <property name="title" value="Chemistry of Materials Volume 7" />
       <property name="journalTitle" value="Chemistry of Materials" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="cmatex" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="cmatex" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="7" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="7" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="ChemistryofMaterials8">
+    <property name="ACSChemistryofMaterials8">
       <property name="title" value="Chemistry of Materials Volume 8" />
       <property name="journalTitle" value="Chemistry of Materials" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="cmatex" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="cmatex" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="8" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="8" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="ChemistryofMaterials9">
+    <property name="ACSChemistryofMaterials9">
       <property name="title" value="Chemistry of Materials Volume 9" />
       <property name="journalTitle" value="Chemistry of Materials" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="cmatex" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="cmatex" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="9" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="9" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="ChemistryofMaterials10">
+    <property name="ACSChemistryofMaterials10">
       <property name="title" value="Chemistry of Materials Volume 10" />
       <property name="journalTitle" value="Chemistry of Materials" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="cmatex" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="cmatex" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="10" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="10" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="ChemistryofMaterials11">
+    <property name="ACSChemistryofMaterials11">
       <property name="title" value="Chemistry of Materials Volume 11" />
       <property name="journalTitle" value="Chemistry of Materials" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="cmatex" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="cmatex" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="11" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="11" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="ChemistryofMaterials12">
+    <property name="ACSChemistryofMaterials12">
       <property name="title" value="Chemistry of Materials Volume 12" />
       <property name="journalTitle" value="Chemistry of Materials" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="cmatex" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="cmatex" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="12" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="12" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="ChemistryofMaterials13">
+    <property name="ACSChemistryofMaterials13">
       <property name="title" value="Chemistry of Materials Volume 13" />
       <property name="journalTitle" value="Chemistry of Materials" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="cmatex" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="cmatex" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="13" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="13" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="ChemistryofMaterials14">
+    <property name="ACSChemistryofMaterials14">
       <property name="title" value="Chemistry of Materials Volume 14" />
       <property name="journalTitle" value="Chemistry of Materials" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="cmatex" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="cmatex" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="14" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="14" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="ChemistryofMaterials15">
+    <property name="ACSChemistryofMaterials15">
       <property name="title" value="Chemistry of Materials Volume 15" />
       <property name="journalTitle" value="Chemistry of Materials" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="cmatex" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="cmatex" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="15" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="15" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="ChemistryofMaterials16">
+    <property name="ACSChemistryofMaterials16">
       <property name="title" value="Chemistry of Materials Volume 16" />
       <property name="journalTitle" value="Chemistry of Materials" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="cmatex" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="cmatex" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="16" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="16" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="ChemistryofMaterials17">
+    <property name="ACSChemistryofMaterials17">
       <property name="title" value="Chemistry of Materials Volume 17" />
       <property name="journalTitle" value="Chemistry of Materials" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="cmatex" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="cmatex" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="17" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="17" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="ChemistryofMaterials18">
+    <property name="ACSChemistryofMaterials18">
       <property name="title" value="Chemistry of Materials Volume 18" />
       <property name="journalTitle" value="Chemistry of Materials" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="cmatex" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="cmatex" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="18" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="18" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="ChemistryofMaterials19">
+    <property name="ACSChemistryofMaterials19">
       <property name="title" value="Chemistry of Materials Volume 19" />
       <property name="journalTitle" value="Chemistry of Materials" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="cmatex" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="cmatex" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="19" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="19" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="EnvironmentalScience&amp;Technology1">
+    <property name="ACSEnvironmentalScienceandTechnology1">
       <property name="title" value="Environmental Science &amp; Technology Volume 1" />
       <property name="journalTitle" value="Environmental Science &amp; Technology" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="esthag" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="esthag" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="1" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="1" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="EnvironmentalScience&amp;Technology2">
+    <property name="ACSEnvironmentalScienceandTechnology2">
       <property name="title" value="Environmental Science &amp; Technology Volume 2" />
       <property name="journalTitle" value="Environmental Science &amp; Technology" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="esthag" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="esthag" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="2" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="2" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="EnvironmentalScience&amp;Technology3">
+    <property name="ACSEnvironmentalScienceandTechnology3">
       <property name="title" value="Environmental Science &amp; Technology Volume 3" />
       <property name="journalTitle" value="Environmental Science &amp; Technology" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="esthag" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="esthag" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="3" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="3" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="EnvironmentalScience&amp;Technology4">
+    <property name="ACSEnvironmentalScienceandTechnology4">
       <property name="title" value="Environmental Science &amp; Technology Volume 4" />
       <property name="journalTitle" value="Environmental Science &amp; Technology" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="esthag" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="esthag" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="4" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="4" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="EnvironmentalScience&amp;Technology5">
+    <property name="ACSEnvironmentalScienceandTechnology5">
       <property name="title" value="Environmental Science &amp; Technology Volume 5" />
       <property name="journalTitle" value="Environmental Science &amp; Technology" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="esthag" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="esthag" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="5" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="5" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="EnvironmentalScience&amp;Technology6">
+    <property name="ACSEnvironmentalScienceandTechnology6">
       <property name="title" value="Environmental Science &amp; Technology Volume 6" />
       <property name="journalTitle" value="Environmental Science &amp; Technology" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="esthag" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="esthag" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="6" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="6" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="EnvironmentalScience&amp;Technology7">
+    <property name="ACSEnvironmentalScienceandTechnology7">
       <property name="title" value="Environmental Science &amp; Technology Volume 7" />
       <property name="journalTitle" value="Environmental Science &amp; Technology" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="esthag" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="esthag" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="7" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="7" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="EnvironmentalScience&amp;Technology8">
+    <property name="ACSEnvironmentalScienceandTechnology8">
       <property name="title" value="Environmental Science &amp; Technology Volume 8" />
       <property name="journalTitle" value="Environmental Science &amp; Technology" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="esthag" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="esthag" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="8" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="8" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="EnvironmentalScience&amp;Technology9">
+    <property name="ACSEnvironmentalScienceandTechnology9">
       <property name="title" value="Environmental Science &amp; Technology Volume 9" />
       <property name="journalTitle" value="Environmental Science &amp; Technology" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="esthag" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="esthag" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="9" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="9" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="EnvironmentalScience&amp;Technology10">
+    <property name="ACSEnvironmentalScienceandTechnology10">
       <property name="title" value="Environmental Science &amp; Technology Volume 10" />
       <property name="journalTitle" value="Environmental Science &amp; Technology" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="esthag" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="esthag" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="10" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="10" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="EnvironmentalScience&amp;Technology11">
+    <property name="ACSEnvironmentalScienceandTechnology11">
       <property name="title" value="Environmental Science &amp; Technology Volume 11" />
       <property name="journalTitle" value="Environmental Science &amp; Technology" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="esthag" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="esthag" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="11" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="11" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="EnvironmentalScience&amp;Technology12">
+    <property name="ACSEnvironmentalScienceandTechnology12">
       <property name="title" value="Environmental Science &amp; Technology Volume 12" />
       <property name="journalTitle" value="Environmental Science &amp; Technology" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="esthag" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="esthag" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="12" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="12" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="EnvironmentalScience&amp;Technology13">
+    <property name="ACSEnvironmentalScienceandTechnology13">
       <property name="title" value="Environmental Science &amp; Technology Volume 13" />
       <property name="journalTitle" value="Environmental Science &amp; Technology" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="esthag" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="esthag" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="13" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="13" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="EnvironmentalScience&amp;Technology14">
+    <property name="ACSEnvironmentalScienceandTechnology14">
       <property name="title" value="Environmental Science &amp; Technology Volume 14" />
       <property name="journalTitle" value="Environmental Science &amp; Technology" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="esthag" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="esthag" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="14" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="14" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="EnvironmentalScience&amp;Technology15">
+    <property name="ACSEnvironmentalScienceandTechnology15">
       <property name="title" value="Environmental Science &amp; Technology Volume 15" />
       <property name="journalTitle" value="Environmental Science &amp; Technology" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="esthag" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="esthag" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="15" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="15" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="EnvironmentalScience&amp;Technology16">
+    <property name="ACSEnvironmentalScienceandTechnology16">
       <property name="title" value="Environmental Science &amp; Technology Volume 16" />
       <property name="journalTitle" value="Environmental Science &amp; Technology" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="esthag" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="esthag" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="16" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="16" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="EnvironmentalScience&amp;Technology17">
+    <property name="ACSEnvironmentalScienceandTechnology17">
       <property name="title" value="Environmental Science &amp; Technology Volume 17" />
       <property name="journalTitle" value="Environmental Science &amp; Technology" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="esthag" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="esthag" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="17" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="17" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="EnvironmentalScience&amp;Technology18">
+    <property name="ACSEnvironmentalScienceandTechnology18">
       <property name="title" value="Environmental Science &amp; Technology Volume 18" />
       <property name="journalTitle" value="Environmental Science &amp; Technology" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="esthag" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="esthag" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="18" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="18" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="EnvironmentalScience&amp;Technology19">
+    <property name="ACSEnvironmentalScienceandTechnology19">
       <property name="title" value="Environmental Science &amp; Technology Volume 19" />
       <property name="journalTitle" value="Environmental Science &amp; Technology" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="esthag" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="esthag" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="19" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="19" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="EnvironmentalScience&amp;Technology20">
+    <property name="ACSEnvironmentalScienceandTechnology20">
       <property name="title" value="Environmental Science &amp; Technology Volume 20" />
       <property name="journalTitle" value="Environmental Science &amp; Technology" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="esthag" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="esthag" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="20" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="20" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="EnvironmentalScience&amp;Technology21">
+    <property name="ACSEnvironmentalScienceandTechnology21">
       <property name="title" value="Environmental Science &amp; Technology Volume 21" />
       <property name="journalTitle" value="Environmental Science &amp; Technology" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="esthag" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="esthag" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="21" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="21" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="EnvironmentalScience&amp;Technology22">
+    <property name="ACSEnvironmentalScienceandTechnology22">
       <property name="title" value="Environmental Science &amp; Technology Volume 22" />
       <property name="journalTitle" value="Environmental Science &amp; Technology" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="esthag" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="esthag" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="22" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="22" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="EnvironmentalScience&amp;Technology23">
+    <property name="ACSEnvironmentalScienceandTechnology23">
       <property name="title" value="Environmental Science &amp; Technology Volume 23" />
       <property name="journalTitle" value="Environmental Science &amp; Technology" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="esthag" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="esthag" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="23" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="23" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="EnvironmentalScience&amp;Technology24">
+    <property name="ACSEnvironmentalScienceandTechnology24">
       <property name="title" value="Environmental Science &amp; Technology Volume 24" />
       <property name="journalTitle" value="Environmental Science &amp; Technology" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="esthag" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="esthag" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="24" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="24" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="EnvironmentalScience&amp;Technology25">
+    <property name="ACSEnvironmentalScienceandTechnology25">
       <property name="title" value="Environmental Science &amp; Technology Volume 25" />
       <property name="journalTitle" value="Environmental Science &amp; Technology" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="esthag" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="esthag" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="25" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="25" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="EnvironmentalScience&amp;Technology26">
+    <property name="ACSEnvironmentalScienceandTechnology26">
       <property name="title" value="Environmental Science &amp; Technology Volume 26" />
       <property name="journalTitle" value="Environmental Science &amp; Technology" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="esthag" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="esthag" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="26" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="26" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="EnvironmentalScience&amp;Technology27">
+    <property name="ACSEnvironmentalScienceandTechnology27">
       <property name="title" value="Environmental Science &amp; Technology Volume 27" />
       <property name="journalTitle" value="Environmental Science &amp; Technology" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="esthag" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="esthag" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="27" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="27" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="EnvironmentalScience&amp;Technology28">
+    <property name="ACSEnvironmentalScienceandTechnology28">
       <property name="title" value="Environmental Science &amp; Technology Volume 28" />
       <property name="journalTitle" value="Environmental Science &amp; Technology" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="esthag" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="esthag" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="28" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="28" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="EnvironmentalScience&amp;Technology29">
+    <property name="ACSEnvironmentalScienceandTechnology29">
       <property name="title" value="Environmental Science &amp; Technology Volume 29" />
       <property name="journalTitle" value="Environmental Science &amp; Technology" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="esthag" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="esthag" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="29" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="29" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="EnvironmentalScience&amp;Technology30">
+    <property name="ACSEnvironmentalScienceandTechnology30">
       <property name="title" value="Environmental Science &amp; Technology Volume 30" />
       <property name="journalTitle" value="Environmental Science &amp; Technology" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="esthag" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="esthag" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="30" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="30" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="EnvironmentalScience&amp;Technology31">
+    <property name="ACSEnvironmentalScienceandTechnology31">
       <property name="title" value="Environmental Science &amp; Technology Volume 31" />
       <property name="journalTitle" value="Environmental Science &amp; Technology" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="esthag" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="esthag" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="31" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="31" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="EnvironmentalScience&amp;Technology32">
+    <property name="ACSEnvironmentalScienceandTechnology32">
       <property name="title" value="Environmental Science &amp; Technology Volume 32" />
       <property name="journalTitle" value="Environmental Science &amp; Technology" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="esthag" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="esthag" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="32" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="32" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="EnvironmentalScience&amp;Technology33">
+    <property name="ACSEnvironmentalScienceandTechnology33">
       <property name="title" value="Environmental Science &amp; Technology Volume 33" />
       <property name="journalTitle" value="Environmental Science &amp; Technology" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="esthag" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="esthag" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="33" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="33" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="EnvironmentalScience&amp;Technology34">
+    <property name="ACSEnvironmentalScienceandTechnology34">
       <property name="title" value="Environmental Science &amp; Technology Volume 34" />
       <property name="journalTitle" value="Environmental Science &amp; Technology" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="esthag" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="esthag" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="34" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="34" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="EnvironmentalScience&amp;Technology35">
+    <property name="ACSEnvironmentalScienceandTechnology35">
       <property name="title" value="Environmental Science &amp; Technology Volume 35" />
       <property name="journalTitle" value="Environmental Science &amp; Technology" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="esthag" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="esthag" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="35" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="35" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="EnvironmentalScience&amp;Technology36">
+    <property name="ACSEnvironmentalScienceandTechnology36">
       <property name="title" value="Environmental Science &amp; Technology Volume 36" />
       <property name="journalTitle" value="Environmental Science &amp; Technology" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="esthag" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="esthag" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="36" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="36" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="EnvironmentalScience&amp;Technology37">
+    <property name="ACSEnvironmentalScienceandTechnology37">
       <property name="title" value="Environmental Science &amp; Technology Volume 37" />
       <property name="journalTitle" value="Environmental Science &amp; Technology" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="esthag" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="esthag" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="37" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="37" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="EnvironmentalScience&amp;Technology38">
+    <property name="ACSEnvironmentalScienceandTechnology38">
       <property name="title" value="Environmental Science &amp; Technology Volume 38" />
       <property name="journalTitle" value="Environmental Science &amp; Technology" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="esthag" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="esthag" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="38" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="38" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="EnvironmentalScience&amp;Technology39">
+    <property name="ACSEnvironmentalScienceandTechnology39">
       <property name="title" value="Environmental Science &amp; Technology Volume 39" />
       <property name="journalTitle" value="Environmental Science &amp; Technology" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="esthag" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="esthag" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="39" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="39" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="EnvironmentalScience&amp;Technology40">
+    <property name="ACSEnvironmentalScienceandTechnology40">
       <property name="title" value="Environmental Science &amp; Technology Volume 40" />
       <property name="journalTitle" value="Environmental Science &amp; Technology" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="esthag" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="esthag" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="40" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="40" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="EnvironmentalScience&amp;Technology41">
+    <property name="ACSEnvironmentalScienceandTechnology41">
       <property name="title" value="Environmental Science &amp; Technology Volume 41" />
       <property name="journalTitle" value="Environmental Science &amp; Technology" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="esthag" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="esthag" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="41" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="41" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="Organometallics1">
+    <property name="ACSOrganometallics1">
       <property name="title" value="Organometallics Volume 1" />
       <property name="journalTitle" value="Organometallics" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="orgnd7" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="orgnd7" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="1" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="1" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="Organometallics2">
+    <property name="ACSOrganometallics2">
       <property name="title" value="Organometallics Volume 2" />
       <property name="journalTitle" value="Organometallics" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="orgnd7" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="orgnd7" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="2" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="2" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="Organometallics3">
+    <property name="ACSOrganometallics3">
       <property name="title" value="Organometallics Volume 3" />
       <property name="journalTitle" value="Organometallics" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="orgnd7" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="orgnd7" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="3" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="3" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="Organometallics4">
+    <property name="ACSOrganometallics4">
       <property name="title" value="Organometallics Volume 4" />
       <property name="journalTitle" value="Organometallics" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="orgnd7" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="orgnd7" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="4" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="4" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="Organometallics5">
+    <property name="ACSOrganometallics5">
       <property name="title" value="Organometallics Volume 5" />
       <property name="journalTitle" value="Organometallics" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="orgnd7" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="orgnd7" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="5" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="5" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="Organometallics6">
+    <property name="ACSOrganometallics6">
       <property name="title" value="Organometallics Volume 6" />
       <property name="journalTitle" value="Organometallics" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="orgnd7" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="orgnd7" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="6" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="6" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="Organometallics7">
+    <property name="ACSOrganometallics7">
       <property name="title" value="Organometallics Volume 7" />
       <property name="journalTitle" value="Organometallics" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="orgnd7" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="orgnd7" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="7" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="7" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="Organometallics8">
+    <property name="ACSOrganometallics8">
       <property name="title" value="Organometallics Volume 8" />
       <property name="journalTitle" value="Organometallics" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="orgnd7" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="orgnd7" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="8" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="8" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="Organometallics9">
+    <property name="ACSOrganometallics9">
       <property name="title" value="Organometallics Volume 9" />
       <property name="journalTitle" value="Organometallics" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="orgnd7" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="orgnd7" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="9" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="9" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="Organometallics10">
+    <property name="ACSOrganometallics10">
       <property name="title" value="Organometallics Volume 10" />
       <property name="journalTitle" value="Organometallics" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="orgnd7" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="orgnd7" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="10" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="10" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="Organometallics11">
+    <property name="ACSOrganometallics11">
       <property name="title" value="Organometallics Volume 11" />
       <property name="journalTitle" value="Organometallics" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="orgnd7" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="orgnd7" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="11" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="11" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="Organometallics12">
+    <property name="ACSOrganometallics12">
       <property name="title" value="Organometallics Volume 12" />
       <property name="journalTitle" value="Organometallics" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="orgnd7" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="orgnd7" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="12" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="12" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="Organometallics13">
+    <property name="ACSOrganometallics13">
       <property name="title" value="Organometallics Volume 13" />
       <property name="journalTitle" value="Organometallics" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="orgnd7" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="orgnd7" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="13" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="13" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="Organometallics14">
+    <property name="ACSOrganometallics14">
       <property name="title" value="Organometallics Volume 14" />
       <property name="journalTitle" value="Organometallics" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="orgnd7" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="orgnd7" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="14" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="14" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="Organometallics15">
+    <property name="ACSOrganometallics15">
       <property name="title" value="Organometallics Volume 15" />
       <property name="journalTitle" value="Organometallics" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="orgnd7" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="orgnd7" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="15" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="15" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="Organometallics16">
+    <property name="ACSOrganometallics16">
       <property name="title" value="Organometallics Volume 16" />
       <property name="journalTitle" value="Organometallics" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="orgnd7" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="orgnd7" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="16" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="16" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="Organometallics17">
+    <property name="ACSOrganometallics17">
       <property name="title" value="Organometallics Volume 17" />
       <property name="journalTitle" value="Organometallics" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="orgnd7" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="orgnd7" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="17" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="17" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="Organometallics18">
+    <property name="ACSOrganometallics18">
       <property name="title" value="Organometallics Volume 18" />
       <property name="journalTitle" value="Organometallics" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="orgnd7" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="orgnd7" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="18" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="18" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="Organometallics19">
+    <property name="ACSOrganometallics19">
       <property name="title" value="Organometallics Volume 19" />
       <property name="journalTitle" value="Organometallics" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="orgnd7" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="orgnd7" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="19" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="19" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="Organometallics20">
+    <property name="ACSOrganometallics20">
       <property name="title" value="Organometallics Volume 20" />
       <property name="journalTitle" value="Organometallics" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="orgnd7" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="orgnd7" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="20" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="20" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="Organometallics21">
+    <property name="ACSOrganometallics21">
       <property name="title" value="Organometallics Volume 21" />
       <property name="journalTitle" value="Organometallics" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="orgnd7" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="orgnd7" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="21" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="21" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="Organometallics22">
+    <property name="ACSOrganometallics22">
       <property name="title" value="Organometallics Volume 22" />
       <property name="journalTitle" value="Organometallics" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="orgnd7" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="orgnd7" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="22" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="22" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="Organometallics23">
+    <property name="ACSOrganometallics23">
       <property name="title" value="Organometallics Volume 23" />
       <property name="journalTitle" value="Organometallics" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="orgnd7" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="orgnd7" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="23" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="23" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="Organometallics24">
+    <property name="ACSOrganometallics24">
       <property name="title" value="Organometallics Volume 24" />
       <property name="journalTitle" value="Organometallics" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="orgnd7" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="orgnd7" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="24" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="24" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="Organometallics25">
+    <property name="ACSOrganometallics25">
       <property name="title" value="Organometallics Volume 25" />
       <property name="journalTitle" value="Organometallics" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="orgnd7" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="orgnd7" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="25" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="25" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
 
-    <property name="Organometallics26">
+    <property name="ACSOrganometallics26">
       <property name="title" value="Organometallics Volume 26" />
       <property name="journalTitle" value="Organometallics" />
-      <property name="plugin" value="org.lockss.plugin.acs.AcsPlugin" />
+      <property name="plugin" value="org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin" />
       <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://pubs3.acs.org/" />
+        <property name="key" value="base_url" />
+        <property name="value" value="http://pubs3.acs.org/" />
       </property>
       <property name="param.2">
-	<property name="key" value="article_url" />
-	<property name="value" value="http://pubs.acs.org/" />
+        <property name="key" value="article_url" />
+        <property name="value" value="http://pubs.acs.org/" />
       </property>
       <property name="param.3">
-	<property name="key" value="journal_key" />
-	<property name="value" value="orgnd7" />
+        <property name="key" value="journal_key" />
+        <property name="value" value="orgnd7" />
       </property>
       <property name="param.4">
-	<property name="key" value="volume_name" />
-	<property name="value" value="26" />
+        <property name="key" value="volume_name" />
+        <property name="value" value="26" />
       </property>
       <property name="attributes.publisher" value="American Chemical Society" />
     </property>
