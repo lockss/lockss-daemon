@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.68 2008-01-30 08:32:22 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.69 2008-02-05 02:28:55 tlipkis Exp $
  */
 
 /*
@@ -1950,7 +1950,7 @@ public class V3Poller extends BasePoll {
   boolean isGroupMatch(PeerIdentityStatus status) {
     List groups = status.getGroups();
     // if we haven't recorded a group, allow it
-    if (groups == null) {
+    if (groups == null || groups.isEmpty()) {
       return true;
     }
     if (CollectionUtils.containsAny(groups,

@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManagerStatus.java,v 1.9 2008-01-30 00:52:53 tlipkis Exp $
+ * $Id: IdentityManagerStatus.java,v 1.10 2008-02-05 02:28:54 tlipkis Exp $
  */
 
 /*
@@ -145,7 +145,7 @@ public class IdentityManagerStatus
 
   private boolean isGroupMatch(PeerIdentityStatus status, List myGroups) {
     Collection hisGroups = status.getGroups();
-    return hisGroups == null ||
+    return hisGroups == null || hisGroups.isEmpty() ||
       CollectionUtils.containsAny(myGroups, hisGroups);
   }
 

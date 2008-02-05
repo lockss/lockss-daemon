@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.50 2008-01-30 08:32:22 tlipkis Exp $
+ * $Id: V3Voter.java,v 1.51 2008-02-05 02:28:55 tlipkis Exp $
  */
 
 /*
@@ -656,7 +656,7 @@ public class V3Voter extends BasePoll {
 	    return false;
 	  }
 	  List hisGroups = status.getGroups();
-	  if (hisGroups == null) {
+	  if (hisGroups == null || hisGroups.isEmpty()) {
 	    return false;
 	  }
 	  List myGroups = ConfigManager.getPlatformGroupList();
