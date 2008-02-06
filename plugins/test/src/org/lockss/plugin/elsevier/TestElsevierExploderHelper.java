@@ -23,6 +23,12 @@ public class TestElsevierExploderHelper extends LockssTestCase {
   private static final String jpgPath = 
     "fx1.jpg";
   private static final String urlStem = "http://elsevier.clockss.org/";
+  private static final String[] ignorePath = {
+    "V0008I05/CHECKMD5.FIL",
+    "CHECKMD5.FIL",
+    "checkmd5.fil",
+    "V0008I05/checkmd5.fil"
+  };
 
   public void testProcessCorrectPdfEntry() throws Exception {
     for (int i = 0; i < basePath.length; i++) {
@@ -68,6 +74,18 @@ public class TestElsevierExploderHelper extends LockssTestCase {
     assertNull(ae.getHeaderFields());
   }
 
+  public void testProcessIgnoredName() throws Exception {
+    for (int i = 0; i < ignorePath.length; i++) {
+      ArchiveEntry ae = new ArchiveEntry(ignorePath[i], 7, 0, null, null);
+      ElsevierExploderHelper eeh = new ElsevierExploderHelper();
+      
+      eeh.process(ae);
+      assertEquals(urlStem, ae.getBaseUrl());
+      assertNull(ae.getRestOfUrl());
+      assertNull(ae.getHeaderFields());
+    }
+  }
+
   public void testProcessJpgName() throws Exception {
     for (int i = 0; i < basePath.length; i++) {
       for (int j = 0; j < pathStem.length; j++) {
@@ -83,4 +101,23 @@ public class TestElsevierExploderHelper extends LockssTestCase {
       }
     }
   }
+
+  public void testProcessPdfEntryWithDotSlash() throws Exception {
+    for (int i = 0; i < basePath.length; i++) {
+      for (int j = 0; j < pathStem.length; j++) {
+	ArchiveEntry ae = new ArchiveEntry("./" + basePath[i] + pathStem[j] +
+					   pdfPath, 7654, 0, null, null);
+	ElsevierExploderHelper eeh = new ElsevierExploderHelper();
+
+	eeh.process(ae);
+	assertEquals(urlStem + basePath[i], ae.getBaseUrl());
+	assertEquals(pathStem[j] + pdfPath, ae.getRestOfUrl());
+	assertEquals("application/pdf", ae.getHeaderFields().get("Content-Type"));
+	assertEquals("7654", ae.getHeaderFields().get("Content-Length"));
+	// XXX - check addText
+	// XXX - check auProps
+      }
+    }
+  }
+
 }

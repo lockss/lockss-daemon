@@ -1,5 +1,5 @@
 /*
- * $Id: ElsevierExploderHelper.java,v 1.4.2.1 2008-01-13 00:00:41 dshr Exp $
+ * $Id: ElsevierExploderHelper.java,v 1.4.2.2 2008-02-06 20:46:09 dshr Exp $
  */
 
 /*
@@ -77,6 +77,9 @@ public class ElsevierExploderHelper implements ExploderHelper {
   static final int endOfBase = 1;
   static final int minimumPathLength = 3;
   static Logger logger = Logger.getLogger("ElsevierExploderHelper");
+  private static final String[] ignoreMe = {
+    "checkmd5.fil",
+  };
 
   public ElsevierExploderHelper() {
   }
@@ -84,9 +87,18 @@ public class ElsevierExploderHelper implements ExploderHelper {
   public void process(ArchiveEntry ae) {
     String baseUrl = BASE_URL;
     // Parse the name
-    String[] pathElements = ae.getName().split("/");
+    String fullName = ae.getName();
+    String[] pathElements = fullName.split("/");
     if (pathElements.length < minimumPathLength) {
-      logger.warning("Path " + ae.getName() + " too short");
+      for (int i = 0; i < ignoreMe.length; i++) {
+	if (fullName.toLowerCase().endsWith(ignoreMe[i])) {
+	  ae.setBaseUrl(baseUrl);
+	  ae.setRestOfUrl(null);
+	  logger.debug("Path " + fullName + " ignored");
+	  return;
+	}
+      }
+      logger.warning("Path " + fullName + " too short");
       return;
     }
     for (int i = 0; i < endOfBase; i++) {
