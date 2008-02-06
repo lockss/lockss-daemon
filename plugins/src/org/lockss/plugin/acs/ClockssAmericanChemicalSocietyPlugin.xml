@@ -90,4 +90,8 @@
       <string>&quot;%sacs/journals/toc.clockss_manifest?incoden=%s&amp;involume=%s&quot;, article_url, journal_key, volume_name</string>
     </list>
   </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.acs.AcsUrlNormalizer</string>
+  </entry>
 </map>

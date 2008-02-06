@@ -1,5 +1,5 @@
 /*
- * $Id: AcsUrlNormalizer.java,v 1.3 2008-02-05 20:07:21 thib_gc Exp $
+ * $Id: AcsUrlNormalizer.java,v 1.4 2008-02-06 00:54:29 thib_gc Exp $
  */
 
 /*
@@ -41,27 +41,14 @@ import org.lockss.plugin.*;
  */
 
 public class AcsUrlNormalizer implements UrlNormalizer {
-//  public String QUERY_ARG = "cookieSet=1";
-//  private String ONLY_QUERY = "?" + QUERY_ARG;
-//  private String FIRST_QUERY = "?" + QUERY_ARG + "&";
-//  private String NTH_QUERY = "&" + QUERY_ARG;
-//
-//  public String normalizeUrl (String url, ArchivalUnit au) {
-//    if (-1 == url.indexOf(QUERY_ARG)) {
-//      return url;
-//    }
-//    url = StringUtil.replaceFirst(url, FIRST_QUERY, "?");
-//    url = StringUtil.replaceFirst(url, ONLY_QUERY, "");
-//    url = StringUtil.replaceFirst(url, NTH_QUERY, "");
-//    return url;
-//  }
 
   private static final String QUERY_ARG = "?sessid=";
 
-  public String normalizeUrl(String url, ArchivalUnit au)
+  public String normalizeUrl(String url,
+                             ArchivalUnit au)
       throws PluginException {
     int idx = url.indexOf(QUERY_ARG);
-    return idx == -1 ? url : url.replaceFirst("sessid=[0-9]+", "sessid=LOCKSS-FAKE-SESSION-ID");
+    return idx < 0 ? url : url.replaceFirst("sessid=[0-9]+", "sessid=LOCKSS");
   }
 
 }
