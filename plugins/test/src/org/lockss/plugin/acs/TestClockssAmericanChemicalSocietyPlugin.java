@@ -1,10 +1,10 @@
 /*
- * $Id: TestAcsPlugin.java,v 1.5 2007-04-17 19:33:11 troberts Exp $
+ * $Id: TestClockssAmericanChemicalSocietyPlugin.java,v 1.1 2008-02-06 18:10:57 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -41,7 +41,8 @@ import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.definable.*;
 
-public class TestAcsPlugin extends LockssTestCase {
+public class TestClockssAmericanChemicalSocietyPlugin extends LockssTestCase {
+
   private DefinablePlugin plugin;
   static final ConfigParamDescr JOURNAL_KEY = new ConfigParamDescr();
   static {
@@ -70,7 +71,7 @@ public class TestAcsPlugin extends LockssTestCase {
     super.setUp();
     plugin = new DefinablePlugin();
     plugin.initPlugin(getMockLockssDaemon(),
-                      "org.lockss.plugin.acs.AcsPlugin");
+                      "org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin");
   }
 
   private DefinableArchivalUnit makeAuFromProps(Properties props)
@@ -105,11 +106,12 @@ public class TestAcsPlugin extends LockssTestCase {
     props.setProperty(BASE_URL_KEY, "http://www.example.com/");
 
     DefinableArchivalUnit au = makeAuFromProps(props);
-    assertEquals("www.example.com, abcd, vol. 322", au.getName());
+    assertEquals("American Chemical Society Plugin (CLOCKSS), Base URL http://www.example.com/, Journal Key abcd, Volume 322",
+                 au.getName());
   }
 
   public void testGetPluginId() {
-    assertEquals("org.lockss.plugin.acs.AcsPlugin",
+    assertEquals("org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin",
 		 plugin.getPluginId());
   }
 
@@ -122,7 +124,7 @@ public class TestAcsPlugin extends LockssTestCase {
   }
 
   public static void main(String[] argv) {
-    String[] testCaseList = {TestAcsPlugin.class.getName()};
+    String[] testCaseList = {TestClockssAmericanChemicalSocietyPlugin.class.getName()};
     junit.swingui.TestRunner.main(testCaseList);
   }
 }

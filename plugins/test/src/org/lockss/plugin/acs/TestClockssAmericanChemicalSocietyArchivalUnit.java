@@ -1,10 +1,10 @@
 /*
- * $Id: TestAcsArchivalUnit.java,v 1.10 2007-04-17 19:33:11 troberts Exp $
+ * $Id: TestClockssAmericanChemicalSocietyArchivalUnit.java,v 1.1 2008-02-06 18:10:57 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -46,14 +46,14 @@ import org.lockss.plugin.base.BaseCachedUrlSet;
 import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.plugin.definable.*;
 
-public class TestAcsArchivalUnit
+public class TestClockssAmericanChemicalSocietyArchivalUnit
     extends LockssTestCase {
   private MockLockssDaemon theDaemon;
 
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
   static final String VOL_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
-  static final String JRNL_KEY = TestAcsPlugin.JOURNAL_KEY.getKey();
-  static final String ARTICAL_KEY = TestAcsPlugin.ARTICLE_URL.getKey();
+  static final String JRNL_KEY = TestClockssAmericanChemicalSocietyPlugin.JOURNAL_KEY.getKey();
+  static final String ARTICAL_KEY = TestClockssAmericanChemicalSocietyPlugin.ARTICLE_URL.getKey();
 
   static final String ROOT_URL = "http://pubs3.acs.org/";
   static final String ARTICLE_ROOT = "http://pubs.acs.org/";
@@ -98,7 +98,7 @@ public class TestAcsArchivalUnit
 
     Configuration config = ConfigurationUtil.fromProps(props);
     DefinablePlugin ap = new DefinablePlugin();
-    ap.initPlugin(theDaemon, "org.lockss.plugin.acs.AcsPlugin");
+    ap.initPlugin(theDaemon, "org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin");
     DefinableArchivalUnit au = (DefinableArchivalUnit)ap.createAu(config);
     return au;
   }
@@ -137,7 +137,7 @@ public class TestAcsArchivalUnit
     String b_root = base_url.toString();
     String url;
 
-    DefinableArchivalUnit acsAu = 
+    DefinableArchivalUnit acsAu =
       makeAu(base_url, art_url, JOURNAL_KEY, VOL_ID);
 
     theDaemon.getLockssRepository(acsAu);
@@ -178,21 +178,20 @@ public class TestAcsArchivalUnit
         + VOL_ID + "/i01/abs/ci010133j.html";
     shouldCacheTest(url, true, acsAu, cus);
 
-    // we don't cache supporting info
+    // we do cache supporting info
 
     url = b_root +
         "acs/journals/supporting_information.page?in_manuscript=ci020047z";
-    shouldCacheTest(url, false, acsAu, cus);
+    shouldCacheTest(url, true, acsAu, cus);
 
     // we don't cache payment pages
     url = a_root +"UADB/xppview/cgi-bin/sample.cgi/" +
         JOURNAL_KEY +"/" + VOL_YEAR + "/" + VOL_ID + "i01/pdf/ci010133j.pdf";
     shouldCacheTest(url, false, acsAu, cus);
 
-    // we don't cache things in funny places
     url = b_root + "cgi-bin/article.cgi/" + JOURNAL_KEY +"/" + VOL_YEAR + "/" +
         VOL_ID + "/i01/pdf/ci010133j.pdf";
-    shouldCacheTest(url, false, acsAu, cus);
+    shouldCacheTest(url, true, acsAu, cus);
   }
 
   private void shouldCacheTest(String url, boolean shouldCache,
@@ -249,11 +248,11 @@ public class TestAcsArchivalUnit
     URL a_url = new URL(ARTICLE_ROOT);
     URL base = new URL(ROOT_URL);
     DefinableArchivalUnit au = makeAu(base, a_url, JOURNAL_KEY, VOL_ID);
-    assertEquals("pubs3.acs.org, jcisd8, vol. 43", au.getName());
-    DefinableArchivalUnit au1 = 
+    assertEquals("American Chemical Society Plugin (CLOCKSS), Base URL http://pubs3.acs.org/, Journal Key jcisd8, Volume 43", au.getName());
+    DefinableArchivalUnit au1 =
       makeAu(new URL("http://www.bmj.com/"),
 	     new URL("http://www.bmj.com/"), "bmj", "61");
-    assertEquals("www.bmj.com, bmj, vol. 61", au1.getName());
+    assertEquals("American Chemical Society Plugin (CLOCKSS), Base URL http://www.bmj.com/, Journal Key bmj, Volume 61", au1.getName());
   }
 
   public void testRefetchDepth() throws Exception {
@@ -261,19 +260,19 @@ public class TestAcsArchivalUnit
     URL base = new URL(ROOT_URL);
     DefinableArchivalUnit au = makeAu(base, a_url, JOURNAL_KEY, VOL_ID);
     SpiderCrawlSpec cs = (SpiderCrawlSpec) au.getCrawlSpec();
-    assertEquals(2, cs.getRefetchDepth());
+    assertEquals(1, cs.getRefetchDepth());
   }
 
   public void testDefPauseTime() throws Exception {
     URL a_url = new URL(ARTICLE_ROOT);
     URL base = new URL(ROOT_URL);
     DefinableArchivalUnit au = makeAu(base, a_url, JOURNAL_KEY, VOL_ID);
-    assertEquals("1/10s", au.findFetchRateLimiter().getRate());
+    assertEquals("1/6000ms", au.findFetchRateLimiter().getRate());
   }
 
   public static void main(String[] argv) {
     String[] testCaseList = {
-        TestAcsArchivalUnit.class.getName()};
+        TestClockssAmericanChemicalSocietyArchivalUnit.class.getName()};
     junit.swingui.TestRunner.main(testCaseList);
   }
 
