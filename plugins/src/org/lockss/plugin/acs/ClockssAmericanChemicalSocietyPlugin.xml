@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>au_def_pause_time</string>
-    <long>10000</long>
+    <long>6000</long>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -28,10 +28,11 @@
     <list>
       <string>4,&quot;^(%s|%s)&quot;, base_url, article_url</string>
       <string>1,&quot;^(%s|%s)acs/journals/toc\.clockss_manifest\?incoden=%s&amp;involume=%s&quot;, base_url, article_url, journal_key, volume_name</string>
-      <string>1,&quot;^(%s|%s)acs/journals/toc\.page(\.printer_friendly)?\?incoden=%s(&amp;indecade=[^&amp;]*)?&amp;involume=%s&quot;, base_url, article_url, journal_key, volume_name</string>
+      <string>1,&quot;^(%s|%s)acs/journals/toc(\.page|(\.page)?\.printer_friendly)\?incoden=%s(&amp;indecade=[^&amp;]*)?&amp;involume=%s&quot;, base_url, article_url, journal_key, volume_name</string>
       <string>1,&quot;^(%s|%s)journals/%s/covers/%s/&quot;, base_url, article_url, journal_key, volume_name</string>
-      <string>1,&quot;^(%s|%s)cgi-bin/(abstract|archive|article)\.cgi/%s/[12][0-9]{3}/%s/&quot;, base_url, article_url, journal_key, volume_name</string>
-      <string>1,&quot;^(%s|%s)isubscribe/journals/%s/%s/&quot;, base_url, article_url, journal_key, volume_name</string>
+      <string>1,&quot;^(%s|%s)cgi-bin/(abstract|archive|article|sample)\.cgi/%s/[12][0-9]{3}/%s/&quot;, base_url, article_url, journal_key, volume_name</string>
+      <string>1,&quot;^(%s|%s)subscribe/journals/%s/%s/&quot;, base_url, article_url, journal_key, volume_name</string>
+      <string>1,&quot;^(%s|%s)cgi-bin/citation\?%s/%s/&quot;, base_url, article_url, journal_key, volume_name</string>
       <string>1,&quot;^(%s|%s)subscribe/journals/%s/suppinfo/&quot;, base_url, article_url, journal_key</string>
       <string>1,&quot;^(%s|%s)acs/journals/supporting_information\.page\?in_manuscript=&quot;, base_url, article_url</string>
       <string>1,&quot;^(%s|%s)cgi-bin/suppinfo\.pl\?&quot;, base_url, article_url</string>
