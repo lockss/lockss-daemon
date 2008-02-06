@@ -23,6 +23,7 @@
     <string>au_crawlrules</string>
     <list>
       <string>4,&quot;^(%s|%s)&quot;, base_url, article_url</string>
+      <string>2,&quot;^(%s|%s)cgi-bin/(chemport|crossref|pubmed)/&quot;, base_url, article_url</string>
       <string>1,&quot;^(%s|%s)acs/journals/toc\.clockss_manifest\?incoden=%s&amp;involume=%s&quot;, base_url, article_url, journal_key, volume_name</string>
       <string>1,&quot;^(%s|%s)acs/journals/toc(\.page|(\.page)?\.printer_friendly)\?incoden=%s(&amp;indecade=[^&amp;]*)?&amp;involume=%s&quot;, base_url, article_url, journal_key, volume_name</string>
       <string>1,&quot;^(%s|%s)journals/%s/covers/%s/&quot;, base_url, article_url, journal_key, volume_name</string>
