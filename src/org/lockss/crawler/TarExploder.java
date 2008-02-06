@@ -1,5 +1,5 @@
 /*
- * $Id: TarExploder.java,v 1.6 2008-02-05 17:37:55 dshr Exp $
+ * $Id: TarExploder.java,v 1.7 2008-02-06 20:37:21 dshr Exp $
  */
 
 /*
@@ -87,6 +87,7 @@ public class TarExploder extends Exploder {
     TarInputStream tis = null;
     int goodEntries = 0;
     int badEntries = 0;
+    int ignoredEntries = 0;
     String tarArchiveUrl = archiveUrl;
     logger.info((storeArchive ? "Storing" : "Fetching") + " a TAR file: " +
 		archiveUrl + (explodeFiles ? " will" : " won't") + " explode");
@@ -124,12 +125,15 @@ public class TarExploder extends Exploder {
 	    throw new CacheException.HostException("helper.process() threw " +
 						   ex);
           }
-	  if (ae.getBaseUrl() != null &&
-	      ae.getRestOfUrl() != null &&
-	      ae.getHeaderFields() != null) {
-	    storeEntry(ae);
-	    handleAddText(ae);
-	    goodEntries++;
+	  if (ae.getBaseUrl() != null) {
+	    if (ae.getRestOfUrl() != null &&
+		ae.getHeaderFields() != null) {
+	      storeEntry(ae);
+	      handleAddText(ae);
+	      goodEntries++;
+	    } else {
+	      ignoredEntries++;
+	    }
 	  } else {
 	    badEntries++;
 	    logger.debug2("Can't map " + te.getName() + " from " + archiveUrl);
@@ -142,9 +146,16 @@ public class TarExploder extends Exploder {
       if (badEntries > 0) {
 	String msg = archiveUrl + " had " + badEntries + "/" +
 	  (goodEntries + badEntries) + " bad entries";
+	if (ignoredEntries > 0) {
+	  msg += " " + ignoredEntries + " ignored";
+	}
 	throw new CacheException.HostException(msg);
       } else {
-	logger.info(archiveUrl + " had " + goodEntries + " entries");
+	String msg = archiveUrl + " had " + goodEntries + " entries";
+	if (ignoredEntries > 0) {
+	  msg += " " + ignoredEntries + " ignored";
+	}
+	logger.info(msg);
 	if (!storeArchive) {
 	  // Leave stub archive behind to prevent re-fetch
 	  byte[] dummy = { 0, };
