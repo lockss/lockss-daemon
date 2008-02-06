@@ -1,5 +1,5 @@
 /*
- * $Id: AmericanChemicalSocietyUrlNormalizer.java,v 1.1 2008-02-06 06:33:13 thib_gc Exp $
+ * $Id: AmericanChemicalSocietyUrlNormalizer.java,v 1.2 2008-02-06 18:10:35 thib_gc Exp $
  */
 
 /*
@@ -46,7 +46,7 @@ public class AmericanChemicalSocietyUrlNormalizer implements UrlNormalizer {
                              ArchivalUnit au)
       throws PluginException {
     int idx = url.indexOf("?sessid=");
-    return idx < 0 ? url : url.replaceFirst("?sessid=[0-9]+", "");
+    return idx < 0 ? url : url.replaceFirst("\\?sessid=[0-9]+", "");
   }
 
 }
