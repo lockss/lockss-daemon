@@ -36,6 +36,21 @@
 
     <!-- Miscellaneous Title Database -->
 
+      <property name="APPITextbookofClinicalPsychiatry4thEdition">
+        <property name="title" value="The American Psychiatric Publishing Textbook of Clinical Psychiatry (4th Edition)" />
+        <property name="journalTitle" value="The American Psychiatric Publishing Textbook of Clinical Psychiatry" />
+        <property name="plugin" value="org.lockss.plugin.psychiatryonline.PsychiatryOnlineTextbooksPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://www.psychiatryonline.com/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="resource_id" />
+          <property name="value" value="5" />
+        </property>
+        <property name="attributes.publisher" value="American Psychiatric Publishing" />
+      </property>
+
       <property name="AlaskaStateDocuments2006">
         <property name="title" value="Alaska State Documents 2006" />
         <property name="journalTitle" value="Alaska State Documents" />

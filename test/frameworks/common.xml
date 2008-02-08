@@ -53,6 +53,7 @@
     List the plugins that should be included in UI menus. -->
     <property name="plugin.registry">
       <list>
+	<value>org.lockss.plugin.psychiatryonline.PsychiatryOnlineTextbooksPlugin</value>
 	<value>in.ernet.iisc.plugin.JournalOfTheIndianInstituteOfSciencePlugin</value>
 	<value>org.lockss.plugin.hispanicissuesonline.HispanicIssuesOnLinePlugin</value>
 	<value>org.lockss.plugin.hindawi.HindawiPlugin</value>

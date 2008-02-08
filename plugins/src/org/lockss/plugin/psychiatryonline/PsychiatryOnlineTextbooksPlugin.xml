@@ -8,10 +8,6 @@
     <long>6000</long>
   </entry>
   <entry>
-    <string>au_crawl_depth</string>
-    <int>1</int>
-  </entry>
-  <entry>
     <string>au_name</string>
     <string>&quot;Psychiatry Online Textbooks Plugin, Base URL %s, Resource ID %d&quot;, base_url, resource_id</string>
   </entry>
@@ -28,7 +24,8 @@
     <list>
       <string>4,&quot;^%s&quot;, base_url</string>
       <string>1,&quot;^%s(resourceToc|copyrightBooks)\.aspx\?resourceID=%d&quot;, base_url, resource_id</string>
-      <string>1,&quot;^%scontent\.aspx\?aID=[0-9]+&quot;, base_url</string>
+      <string>1,&quot;^%s(content|popup)\.aspx\?aID=[0-9]+&quot;, base_url</string>
+      <string>1,&quot;^%sbookInfo\.aspx\?file=.*%d\.html&quot;, base_url, resource_id</string>
       <string>1,&quot;^%s.*\.(css|gif|ico|js|jpeg?|png|tif?f)$&quot;, base_url</string>
     </list>
   </entry>
@@ -58,5 +55,9 @@
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
     </list>
+  </entry>
+  <entry>
+    <string>text/html_link_extractor_factory</string>
+    <string>org.lockss.plugin.psychiatryonline.PsychiatryOnlineTextbooksHtmlLinkExtractorFactory</string>
   </entry>
 </map>
