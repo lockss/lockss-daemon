@@ -1,5 +1,5 @@
 /*
- * $Id: PsychiatryOnlineTextbooksHtmlLinkExtractor.java,v 1.2 2008-02-08 00:35:42 thib_gc Exp $
+ * $Id: PsychiatryOnlineTextbooksHtmlLinkExtractor.java,v 1.3 2008-02-08 00:58:57 thib_gc Exp $
  */
 
 /*
@@ -56,6 +56,10 @@ public class PsychiatryOnlineTextbooksHtmlLinkExtractor extends GoslingHtmlLinkE
     if ((ch == 'a' || ch == 'A') && Character.isWhitespace(link.charAt(1))) {
       // <a href="...">
       String href = getAttributeValue(HREF, link);
+      if (href == null) {
+        return null;
+      }
+
       PatternMatcher matcher = RegexpUtil.getMatcher();
 
       // Try javascript:windowReference('Reference', 'popup.aspx...')
