@@ -1,5 +1,5 @@
 /*
- * $Id: PsychiatryOnlineTextbooksHtmlLinkExtractor.java,v 1.1 2008-02-08 00:15:06 thib_gc Exp $
+ * $Id: PsychiatryOnlineTextbooksHtmlLinkExtractor.java,v 1.2 2008-02-08 00:35:42 thib_gc Exp $
  */
 
 /*
@@ -88,7 +88,7 @@ public class PsychiatryOnlineTextbooksHtmlLinkExtractor extends GoslingHtmlLinkE
     return super.extractLinkFromTag(link, au, cb);
   }
 
-  protected static Logger logger = Logger.getLogger("PsychiatryOnlineTextbooksLinkExtractor");
+  protected static Logger logger = Logger.getLogger("PsychiatryOnlineTextbooksHtmlLinkExtractor");
 
   protected static PatternCache patternCache = new PatternCacheLRU(4, new Perl5Compiler());
 
