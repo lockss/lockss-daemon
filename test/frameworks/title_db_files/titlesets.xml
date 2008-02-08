@@ -162,10 +162,10 @@
         <property name="xpath" value="[attributes/publisher='American Physiological Society']" />
       </property>
 
-      <property name="American Psychiatric Publishing Inc.">
-        <property name="name" value="All American Psychiatric Publishing Inc. Titles" />
+      <property name="American Psychiatric Publishing">
+        <property name="name" value="All American Psychiatric Publishing Titles" />
         <property name="class" value="xpath" />
-        <property name="xpath" value="[attributes/publisher='American Psychiatric Publishing Inc.']" />
+        <property name="xpath" value="[attributes/publisher='American Psychiatric Publishing']" />
       </property>
 
       <property name="American Public Health Association">
