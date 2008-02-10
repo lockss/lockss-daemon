@@ -1,5 +1,5 @@
 /*
- * $Id: TarExploder.java,v 1.4.2.5 2008-02-06 20:46:09 dshr Exp $
+ * $Id: TarExploder.java,v 1.4.2.6 2008-02-10 05:02:30 dshr Exp $
  */
 
 /*
@@ -117,8 +117,9 @@ public class TarExploder extends Exploder {
 					     te.getSize(),
 					     te.getModTime().getTime(),
 					     tis, crawlSpec);
+	  long bytesStored = ae.getSize();
 	  logger.debug3("ArchiveEntry: " + ae.getName()
-			+ " bytes "  + ae.getSize());
+			+ " bytes "  + bytesStored);
           try {
 	    helper.process(ae);
           } catch (PluginException ex) {
@@ -131,6 +132,7 @@ public class TarExploder extends Exploder {
 	      storeEntry(ae);
 	      handleAddText(ae);
 	      goodEntries++;
+	      crawler.getCrawlerStatus().addContentBytesFetched(bytesStored);
 	    } else {
 	      ignoredEntries++;
 	    }
@@ -160,7 +162,6 @@ public class TarExploder extends Exploder {
 	  // Leave stub archive behind to prevent re-fetch
 	  byte[] dummy = { 0, };
 	  urlCacher.storeContent(new ByteArrayInputStream(dummy), arcProps);
-	  // XXX update stats
 	}
 	reTry = maxRetries+1;
       }
