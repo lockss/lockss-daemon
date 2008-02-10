@@ -5,7 +5,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -90,5 +90,9 @@
   <entry>
     <string>au_url_normalizer</string>
     <string>org.lockss.plugin.acs.AmericanChemicalSocietyUrlNormalizer</string>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.acs.AmericanChemicalSocietyHtmlFilterFactory</string>
   </entry>
 </map>

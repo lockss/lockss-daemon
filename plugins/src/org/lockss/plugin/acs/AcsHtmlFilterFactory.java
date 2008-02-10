@@ -1,5 +1,5 @@
 /*
- * $Id: AcsHtmlFilterFactory.java,v 1.2 2008-02-05 20:07:21 thib_gc Exp $
+ * $Id: AcsHtmlFilterFactory.java,v 1.3 2008-02-10 07:01:33 thib_gc Exp $
  */
 
 /*
@@ -42,6 +42,10 @@ import org.lockss.filter.*;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 
+/**
+ * @deprecated
+ */
+@Deprecated
 public class AcsHtmlFilterFactory implements FilterFactory {
 
   // Remove everything on the line after these comments
