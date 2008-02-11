@@ -1,5 +1,9 @@
 <map>
   <entry>
+    <string>plugin_version</string>
+    <string>2</string>
+  </entry>
+  <entry>
     <string>plugin_identifier</string>
     <string>org.lockss.plugin.psychiatryonline.PsychiatryOnlineTextbooksPlugin</string>
   </entry>
@@ -59,5 +63,13 @@
   <entry>
     <string>text/html_link_extractor_factory</string>
     <string>org.lockss.plugin.psychiatryonline.PsychiatryOnlineTextbooksHtmlLinkExtractorFactory</string>
+  </entry>
+  <entry>
+    <string>au_crawlwindow</string>
+    <string>org.lockss.plugin.psychiatryonline.PsychiatryOnlineCrawlWindow</string>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.psychiatryonline.PsychiatryOnlineUrlNormalizer</string>
   </entry>
 </map>
