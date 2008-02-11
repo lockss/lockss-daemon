@@ -1,5 +1,5 @@
 /*
- * $Id: Exploder.java,v 1.7 2008-02-05 17:37:55 dshr Exp $
+ * $Id: Exploder.java,v 1.8 2008-02-11 05:06:42 dshr Exp $
  */
 
 /*
@@ -62,6 +62,13 @@ public abstract class Exploder {
     Configuration.PREFIX + "crawler.exploder.explodedPluginName";
   public static final String DEFAULT_EXPLODED_PLUGIN_NAME =
     ExplodedPlugin.class.getName();
+  public static final String PARAM_EXPLODER_ENTRIES_PER_PAUSE =
+    Configuration.PREFIX + "crawler.exploder.entriesPerPause";
+  public static final long DEFAULT_EXPLODER_ENTRIES_PER_PAUSE = 200;
+  public static final String PARAM_RETRY_PAUSE =
+    Configuration.PREFIX + "crawler.exploder.retryPause";
+  public static final long DEFAULT_RETRY_PAUSE = 3*Constants.SECOND;
+
 
   protected UrlCacher urlCacher;
   protected int maxRetries;
@@ -74,6 +81,7 @@ public abstract class Exploder {
   protected LockssDaemon daemon = null;
   protected PluginManager pluginMgr = null;
   protected Set touchedAus = new HashSet();
+  protected long sleepAfter = 0;
 
   protected static final String indexTag = "<!-- Next Entry Goes Here -->\n";
   protected static final String manifestPageTag = "</body>\n";
@@ -100,6 +108,9 @@ public abstract class Exploder {
     storeArchive = store;
     daemon = crawler.getDaemon();
     pluginMgr = daemon.getPluginManager();
+    sleepAfter =
+      CurrentConfig.getLongParam(PARAM_EXPLODER_ENTRIES_PER_PAUSE,
+				 DEFAULT_EXPLODER_ENTRIES_PER_PAUSE);
   }
 
   /**

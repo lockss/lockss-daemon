@@ -1,5 +1,5 @@
 /*
- * $Id: ZipExploder.java,v 1.6 2008-02-05 17:37:55 dshr Exp $
+ * $Id: ZipExploder.java,v 1.7 2008-02-11 05:06:42 dshr Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
 import org.lockss.plugin.exploded.*;
 import org.lockss.crawler.BaseCrawler;
-import org.lockss.config.Configuration;
+import org.lockss.config.*;
 import org.lockss.app.LockssDaemon;
 import org.lockss.state.*;
 
@@ -87,6 +87,7 @@ public class ZipExploder extends Exploder {
     ZipInputStream zis = null;
     int goodEntries = 0;
     int badEntries = 0;
+    int entriesBetweenSleep = 0;
     String zipArchiveUrl = archiveUrl;
     logger.info((storeArchive ? "Storing" : "Fetching") + " a ZIP file: " +
 		archiveUrl + (explodeFiles ? " will" : " won't") + " explode");
@@ -110,14 +111,29 @@ public class ZipExploder extends Exploder {
 	if (crawler.wdog != null) {
 	  crawler.wdog.pokeWDog();
 	}
-	// XXX Sleep every N cycles
+	if ((++entriesBetweenSleep % sleepAfter) == 0) {
+	  long pauseTime =
+            CurrentConfig.getTimeIntervalParam(PARAM_RETRY_PAUSE,
+                                               DEFAULT_RETRY_PAUSE);
+	  Deadline pause = Deadline.in(pauseTime);
+	  logger.debug3("Sleeping for " +
+			StringUtil.timeIntervalToString(pauseTime));
+	  while (!pause.expired()) {
+	    try {
+	      pause.sleep();
+	    } catch (InterruptedException ie) {
+	      // no action
+	    }
+	  }
+	}
 	if (!ze.isDirectory()) {
 	  ArchiveEntry ae = new ArchiveEntry(ze.getName(),
 					     ze.getSize(),
 					     ze.getTime(),
 					     zis, crawlSpec);
+	  long bytesStored = ae.getSize();
 	  logger.debug3("ArchiveEntry: " + ae.getName()
-			+ " bytes "  + ae.getSize());
+			+ " bytes "  + bytesStored);
           try {
 	    helper.process(ae);
           } catch (PluginException ex) {
@@ -130,6 +146,7 @@ public class ZipExploder extends Exploder {
 	    storeEntry(ae);
 	    handleAddText(ae);
 	    goodEntries++;
+	    crawler.getCrawlerStatus().addContentBytesFetched(bytesStored);
 	  } else {
 	    badEntries++;
 	    logger.debug2("Can't map " + ze.getName() + " from " + archiveUrl);

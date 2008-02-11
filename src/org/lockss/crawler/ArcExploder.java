@@ -1,5 +1,5 @@
 /*
- * $Id: ArcExploder.java,v 1.3 2008-02-05 17:37:55 dshr Exp $
+ * $Id: ArcExploder.java,v 1.4 2008-02-11 05:06:42 dshr Exp $
  */
 
 /*
@@ -162,6 +162,7 @@ public class ArcExploder extends Exploder {
 	newUc.storeContent(element, makeCIProperties(elementHeader));
 	stemSet.add(UrlUtil.getUrlPrefix(elementUrl));
 	elementCount++;
+	crawler.getCrawlerStatus().addContentBytesFetched(elementHeader.getLength());
       }
     }
     // Now adjust the AU's host list and crawl rules if necessary

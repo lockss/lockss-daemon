@@ -1,5 +1,5 @@
 /*
- * $Id: TarExploder.java,v 1.8 2008-02-10 03:10:07 dshr Exp $
+ * $Id: TarExploder.java,v 1.9 2008-02-11 05:06:42 dshr Exp $
  */
 
 /*
@@ -44,6 +44,7 @@ import org.lockss.crawler.BaseCrawler;
 import org.lockss.config.Configuration;
 import org.lockss.app.LockssDaemon;
 import org.lockss.state.*;
+import org.lockss.config.*;
 import com.ice.tar.*;
 
 /**
@@ -88,6 +89,7 @@ public class TarExploder extends Exploder {
     int goodEntries = 0;
     int badEntries = 0;
     int ignoredEntries = 0;
+    int entriesBetweenSleep = 0;
     String tarArchiveUrl = archiveUrl;
     logger.info((storeArchive ? "Storing" : "Fetching") + " a TAR file: " +
 		archiveUrl + (explodeFiles ? " will" : " won't") + " explode");
@@ -111,7 +113,21 @@ public class TarExploder extends Exploder {
 	if (crawler.wdog != null) {
 	  crawler.wdog.pokeWDog();
 	}
-	// XXX sleep every N cycles
+	if ((++entriesBetweenSleep % sleepAfter) == 0) {
+	  long pauseTime =
+            CurrentConfig.getTimeIntervalParam(PARAM_RETRY_PAUSE,
+                                               DEFAULT_RETRY_PAUSE);
+	  Deadline pause = Deadline.in(pauseTime);
+	  logger.debug3("Sleeping for " +
+			StringUtil.timeIntervalToString(pauseTime));
+	  while (!pause.expired()) {
+	    try {
+	      pause.sleep();
+	    } catch (InterruptedException ie) {
+	      // no action
+	    }
+	  }
+	}
 	if (!te.isDirectory()) {
 	  ArchiveEntry ae = new ArchiveEntry(te.getName(),
 					     te.getSize(),
