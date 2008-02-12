@@ -1,5 +1,5 @@
 /*
- * $Id: PsychiatryOnlineHtmlLinkExtractor.java,v 1.1 2008-02-12 06:52:47 thib_gc Exp $
+ * $Id: PsychiatryOnlineHtmlLinkExtractor.java,v 1.2 2008-02-12 07:59:38 thib_gc Exp $
  */
 
 /*
@@ -34,7 +34,6 @@ package org.lockss.plugin.psychiatryonline;
 
 import java.io.IOException;
 
-import org.apache.oro.text.*;
 import org.apache.oro.text.regex.*;
 import org.lockss.extractor.GoslingHtmlLinkExtractor;
 import org.lockss.plugin.ArchivalUnit;
@@ -81,13 +80,11 @@ public class PsychiatryOnlineHtmlLinkExtractor extends GoslingHtmlLinkExtractor 
 
   protected static Logger logger = Logger.getLogger("PsychiatryOnlineHtmlLinkExtractor");
 
-  protected static PatternCache patternCache = new PatternCacheLRU(4, new Perl5Compiler());
+  protected static final Pattern WINDOW_REFERENCE_PATTERN = RegexpUtil.uncheckedCompile("javascript.*:.*windowReference.*\\([^']*'(?:\\.|[^'\\])*'.*,[^']*'(\\.|[^'\\])*'.*\\).*;",
+                                                                                        Perl5Compiler.READ_ONLY_MASK);
 
   public static Pattern getWindowReferencePattern() {
-    synchronized (patternCache) {
-      final String regex = "javascript.*:.*windowReference.*\\([^']*'(?:\\.|[^'\\])*'.*,[^']*'(\\.|[^'\\])*'.*\\).*;";
-      return patternCache.getPattern(regex, Perl5Compiler.READ_ONLY_MASK);
-    }
+    return WINDOW_REFERENCE_PATTERN;
   }
 
   public static String interpretWindowReferenceMatch(MatchResult windowReferenceMatch) {
