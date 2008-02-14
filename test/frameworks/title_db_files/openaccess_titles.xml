@@ -2976,15 +2976,83 @@
         <property name="attributes.rights" value="openaccess" />
       </property>
 
-      <!-- Title: EMLS (Early Modern Literary Studies) -->
-      <property name="emls12">
-	<property name="title" value="EMLS Volume 12" />
+      <!-- Title: EMLS (Early Modern Literary Studies) Old-->
+
+ <property name="emls12">
+        <property name="title" value="EMLS Volume 12 (Superseded)" />
+        <property name="estSize" value="2MB" />
+        <property name="journalTitle" value="EMLS" />
+        <property name="plugin" value="org.lockss.plugin.emls.EmlsPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://www.shu.ac.uk/emls/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="volume" />
+          <property name="value" value="12" />
+        </property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="emls11">
+        <property name="title" value="EMLS Volume 11 (Superseded)" />
+        <property name="estSize" value="2MB" />
+        <property name="journalTitle" value="EMLS" />
+        <property name="plugin" value="org.lockss.plugin.emls.EmlsPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://www.shu.ac.uk/emls/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="volume" />
+          <property name="value" value="11" />
+        </property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="emls10">
+        <property name="title" value="EMLS Volume 10 (Superseded)" />
+        <property name="estSize" value="2MB" />
+        <property name="journalTitle" value="EMLS" />
+        <property name="plugin" value="org.lockss.plugin.emls.EmlsPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://www.shu.ac.uk/emls/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="volume" />
+          <property name="value" value="10" />
+        </property>
+       <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="emls9">
+        <property name="title" value="EMLS Volume 9 (Superseded)" />
+        <property name="estSize" value="2MB" />
+        <property name="journalTitle" value="EMLS" />
+        <property name="plugin" value="org.lockss.plugin.emls.EmlsPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://www.shu.ac.uk/emls/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="volume" />
+          <property name="value" value="9" />
+        </property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+
+      <!-- Title: EMLS (Early Modern Literary Studies) NEW -->
+
+      <property name="EMLSEARLYMODERNLITERARYSTUDIES12">
+	<property name="title" value="EMLS (Early Modern Literary Studies) Volume 12" />
 	<property name="estSize" value="2MB" />
 	<property name="journalTitle" value="EMLS" />
 	<property name="plugin" value="org.lockss.plugin.emls.EmlsPlugin" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
-          <property name="value" value="http://www.shu.ac.uk/emls/" />
+          <property name="value" value="http://extra.shu.ac.uk/emls/" />
         </property>
         <property name="param.2">
 	  <property name="key" value="volume" />
@@ -2993,14 +3061,14 @@
         <property name="attributes.rights" value="openaccess" />
       </property>
 
-      <property name="emls11">
-	<property name="title" value="EMLS Volume 11" />
+      <property name="EMLSEARLYMODERNLITERARYSTUDIES11">
+	<property name="title" value="EMLS (Early Modern Literary Studies) Volume 11" />
 	<property name="estSize" value="2MB" />
 	<property name="journalTitle" value="EMLS" />
 	<property name="plugin" value="org.lockss.plugin.emls.EmlsPlugin" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
-          <property name="value" value="http://www.shu.ac.uk/emls/" />
+          <property name="value" value="http://extra.shu.ac.uk/emls/" />
         </property>
         <property name="param.2">
 	  <property name="key" value="volume" />
@@ -3009,14 +3077,14 @@
         <property name="attributes.rights" value="openaccess" />
       </property>
 
-      <property name="emls10">
-	<property name="title" value="EMLS Volume 10" />
+      <property name="EMLSEARLYMODERNLITERARYSTUDIES10">
+	<property name="title" value="EMLS (Early Modern Literary Studies) Volume 10" />
 	<property name="estSize" value="2MB" />
 	<property name="journalTitle" value="EMLS" />
 	<property name="plugin" value="org.lockss.plugin.emls.EmlsPlugin" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
-          <property name="value" value="http://www.shu.ac.uk/emls/" />
+          <property name="value" value="http://extra.shu.ac.uk/emls/" />
         </property>
         <property name="param.2">
 	  <property name="key" value="volume" />
@@ -3025,14 +3093,14 @@
         <property name="attributes.rights" value="openaccess" />
       </property>
 
-      <property name="emls9">
-	<property name="title" value="EMLS Volume 9" />
+      <property name="EMLSEARLYMODERNLITERARYSTUDIES9">
+	<property name="title" value="EMLS (Early Modern Literary Studies) Volume 9" />
 	<property name="estSize" value="2MB" />
 	<property name="journalTitle" value="EMLS" />
 	<property name="plugin" value="org.lockss.plugin.emls.EmlsPlugin" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
-          <property name="value" value="http://www.shu.ac.uk/emls/" />
+          <property name="value" value="http://extra.shu.ac.uk/emls/" />
         </property>
         <property name="param.2">
 	  <property name="key" value="volume" />
@@ -5507,6 +5575,147 @@
         <property name="attributes.rights" value="openaccess" />
       </property>
 
+      <property name="intermarium(Superseded)2004">
+        <property name="title" value="Intermarium (Superseded) 2004" />
+        <property name="estSize" value="1MB" />
+        <property name="journalTitle" value="Intermarium" />
+        <property name="plugin" value="edu.yale.library.lockss.plugin.intermarium.IntermariumPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://www.columbia.edu/cu/sipa/REGIONAL/ECE/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="year" />
+          <property name="value" value="2004" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="volume" />
+          <property name="value" value="7" />
+        </property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+
+      <property name="intermarium1997">
+	<property name="title" value="Intermarium 1997" />
+	<property name="estSize" value="1MB" />
+	<property name="journalTitle" value="Intermarium" />
+	<property name="plugin" value="edu.yale.library.lockss.plugin.intermarium.IntermariumPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.sipa.columbia.edu/ece/research/intermarium/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="1997" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="1" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="intermarium1998">
+	<property name="title" value="Intermarium 1998" />
+	<property name="estSize" value="1MB" />
+	<property name="journalTitle" value="Intermarium" />
+	<property name="plugin" value="edu.yale.library.lockss.plugin.intermarium.IntermariumPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.sipa.columbia.edu/ece/research/intermarium/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="1998" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="2" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="intermarium1999">
+	<property name="title" value="Intermarium 1999" />
+	<property name="estSize" value="1MB" />
+	<property name="journalTitle" value="Intermarium" />
+	<property name="plugin" value="edu.yale.library.lockss.plugin.intermarium.IntermariumPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.sipa.columbia.edu/ece/research/intermarium/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="1999" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="3" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="intermarium2000-2001">
+	<property name="title" value="Intermarium 2000-2001" />
+	<property name="estSize" value="1MB" />
+	<property name="journalTitle" value="Intermarium" />
+	<property name="plugin" value="edu.yale.library.lockss.plugin.intermarium.IntermariumPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.sipa.columbia.edu/ece/research/intermarium/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2000-2001" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="4" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="intermarium2002">
+	<property name="title" value="Intermarium 2002" />
+	<property name="estSize" value="1MB" />
+	<property name="journalTitle" value="Intermarium" />
+	<property name="plugin" value="edu.yale.library.lockss.plugin.intermarium.IntermariumPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.sipa.columbia.edu/ece/research/intermarium/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2002" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="5" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="intermarium2003">
+	<property name="title" value="Intermarium 2003" />
+	<property name="estSize" value="1MB" />
+	<property name="journalTitle" value="Intermarium" />
+	<property name="plugin" value="edu.yale.library.lockss.plugin.intermarium.IntermariumPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.sipa.columbia.edu/ece/research/intermarium/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2003" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="6" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
       <property name="intermarium2004">
 	<property name="title" value="Intermarium 2004" />
 	<property name="estSize" value="1MB" />
@@ -5514,7 +5723,7 @@
 	<property name="plugin" value="edu.yale.library.lockss.plugin.intermarium.IntermariumPlugin" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
-	  <property name="value" value="http://www.columbia.edu/cu/sipa/REGIONAL/ECE/" />
+	  <property name="value" value="http://www.sipa.columbia.edu/ece/research/intermarium/" />
 	</property>
 	<property name="param.2">
 	  <property name="key" value="year" />
@@ -5523,6 +5732,66 @@
 	<property name="param.3">
 	  <property name="key" value="volume" />
 	  <property name="value" value="7" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="intermarium2005">
+	<property name="title" value="Intermarium 2005" />
+	<property name="estSize" value="1MB" />
+	<property name="journalTitle" value="Intermarium" />
+	<property name="plugin" value="edu.yale.library.lockss.plugin.intermarium.IntermariumPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.sipa.columbia.edu/ece/research/intermarium/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2005" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="8" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="intermarium2006">
+	<property name="title" value="Intermarium 2006" />
+	<property name="estSize" value="1MB" />
+	<property name="journalTitle" value="Intermarium" />
+	<property name="plugin" value="edu.yale.library.lockss.plugin.intermarium.IntermariumPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.sipa.columbia.edu/ece/research/intermarium/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2006" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="9" />
+	</property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="intermarium2007">
+	<property name="title" value="Intermarium 2007" />
+	<property name="estSize" value="1MB" />
+	<property name="journalTitle" value="Intermarium" />
+	<property name="plugin" value="edu.yale.library.lockss.plugin.intermarium.IntermariumPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.sipa.columbia.edu/ece/research/intermarium/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2007" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="10" />
 	</property>
         <property name="attributes.rights" value="openaccess" />
       </property>
@@ -6516,13 +6785,204 @@
         <property name="attributes.rights" value="openaccess" />
       </property>
 
-      <property name="jbe10">
+     <property name="jbe10">
+        <property name="title" value="Journal of Buddhist Ethics (Superseded) Volume 10" />
+        <property name="journalTitle" value="Journal of Buddhist Ethics" />
+        <property name="plugin" value="edu.cornell.library.jbe.JBEPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://jbe.gold.ac.uk/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="volume" />
+          <property name="value" value="10" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="year" />
+          <property name="value" value="2003" />
+        </property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="jbe9">
+        <property name="title" value="Journal of Buddhist Ethics (Superseded) Volume 9" />
+        <property name="journalTitle" value="Journal of Buddhist Ethics" />
+        <property name="plugin" value="edu.cornell.library.jbe.JBEPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://jbe.gold.ac.uk/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="volume" />
+          <property name="value" value="9" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="year" />
+          <property name="value" value="2002" />
+        </property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+    <property name="jbe8">
+        <property name="title" value="Journal of Buddhist Ethics (Superseded) Volume 8" />
+        <property name="journalTitle" value="Journal of Buddhist Ethics" />
+        <property name="plugin" value="edu.cornell.library.jbe.JBEPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://jbe.gold.ac.uk/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="volume" />
+          <property name="value" value="8" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="year" />
+          <property name="value" value="2001" />
+        </property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="jbe7">
+        <property name="title" value="Journal of Buddhist Ethics (Superseded) Volume 7" />
+        <property name="journalTitle" value="Journal of Buddhist Ethics" />
+        <property name="plugin" value="edu.cornell.library.jbe.JBEPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://jbe.gold.ac.uk/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="volume" />
+          <property name="value" value="7" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="year" />
+          <property name="value" value="2000" />
+        </property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="jbe6">
+        <property name="title" value="Journal of Buddhist Ethics (Superseded) Volume 6" />
+        <property name="journalTitle" value="Journal of Buddhist Ethics" />
+        <property name="plugin" value="edu.cornell.library.jbe.JBEPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://jbe.gold.ac.uk/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="volume" />
+          <property name="value" value="6" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="year" />
+          <property name="value" value="1999" />
+        </property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="jbe5">
+        <property name="title" value="Journal of Buddhist Ethics (Superseded) Volume 5" />
+        <property name="journalTitle" value="Journal of Buddhist Ethics" />
+        <property name="plugin" value="edu.cornell.library.jbe.JBEPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://jbe.gold.ac.uk/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="volume" />
+          <property name="value" value="5" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="year" />
+          <property name="value" value="1998" />
+        </property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="jbe4">
+        <property name="title" value="Journal of Buddhist Ethics Volume (Superseded) 4" />
+        <property name="journalTitle" value="Journal of Buddhist Ethics" />
+        <property name="plugin" value="edu.cornell.library.jbe.JBEPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://jbe.gold.ac.uk/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="volume" />
+          <property name="value" value="4" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="year" />
+          <property name="value" value="1997" />
+        </property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="jbe3">
+        <property name="title" value="Journal of Buddhist Ethics (Superseded) Volume 3" />
+        <property name="journalTitle" value="Journal of Buddhist Ethics" />
+        <property name="plugin" value="edu.cornell.library.jbe.JBEPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://jbe.gold.ac.uk/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="volume" />
+          <property name="value" value="3" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="year" />
+          <property name="value" value="1996" />
+        </property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+    <property name="jbe2">
+        <property name="title" value="Journal of Buddhist Ethics (Superseded) Volume 2" />
+        <property name="journalTitle" value="Journal of Buddhist Ethics" />
+        <property name="plugin" value="edu.cornell.library.jbe.JBEPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://jbe.gold.ac.uk/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="volume" />
+          <property name="value" value="2" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="year" />
+          <property name="value" value="1995" />
+        </property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+      <property name="jbe1">
+        <property name="title" value="Journal of Buddhist Ethics (Superseded) Volume 1" />
+        <property name="journalTitle" value="Journal of Buddhist Ethics" />
+        <property name="plugin" value="edu.cornell.library.jbe.JBEPlugin" />
+        <property name="param.1">
+          <property name="key" value="base_url" />
+          <property name="value" value="http://jbe.gold.ac.uk/" />
+        </property>
+        <property name="param.2">
+          <property name="key" value="volume" />
+          <property name="value" value="1" />
+        </property>
+        <property name="param.3">
+          <property name="key" value="year" />
+          <property name="value" value="1994" />
+        </property>
+        <property name="attributes.rights" value="openaccess" />
+      </property>
+
+
+      <property name="JournalOfBuddhistEthics10">
 	<property name="title" value="Journal of Buddhist Ethics Volume 10" />
 	<property name="journalTitle" value="Journal of Buddhist Ethics" />
 	<property name="plugin" value="edu.cornell.library.jbe.JBEPlugin" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
-	  <property name="value" value="http://jbe.gold.ac.uk/" />
+	  <property name="value" value="http://www.buddhistethics.org/" />
 	</property>
 	<property name="param.2">
 	  <property name="key" value="volume" />
@@ -6535,13 +6995,13 @@
         <property name="attributes.rights" value="openaccess" />
       </property>
 
-      <property name="jbe9">
+      <property name="JournalOfBuddhistEthics9">
 	<property name="title" value="Journal of Buddhist Ethics Volume 9" />
 	<property name="journalTitle" value="Journal of Buddhist Ethics" />
 	<property name="plugin" value="edu.cornell.library.jbe.JBEPlugin" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
-	  <property name="value" value="http://jbe.gold.ac.uk/" />
+	  <property name="value" value="http://www.buddhistethics.org/" />
 	</property>
 	<property name="param.2">
 	  <property name="key" value="volume" />
@@ -6554,13 +7014,13 @@
         <property name="attributes.rights" value="openaccess" />
       </property>
 
-      <property name="jbe8">
+      <property name="JournalOfBuddhistEthics8">
 	<property name="title" value="Journal of Buddhist Ethics Volume 8" />
 	<property name="journalTitle" value="Journal of Buddhist Ethics" />
 	<property name="plugin" value="edu.cornell.library.jbe.JBEPlugin" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
-	  <property name="value" value="http://jbe.gold.ac.uk/" />
+	  <property name="value" value="http://www.buddhistethics.org/" />
 	</property>
 	<property name="param.2">
 	  <property name="key" value="volume" />
@@ -6573,13 +7033,13 @@
         <property name="attributes.rights" value="openaccess" />
       </property>
 
-      <property name="jbe7">
+      <property name="JournalOfBuddhistEthics7">
 	<property name="title" value="Journal of Buddhist Ethics Volume 7" />
 	<property name="journalTitle" value="Journal of Buddhist Ethics" />
 	<property name="plugin" value="edu.cornell.library.jbe.JBEPlugin" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
-	  <property name="value" value="http://jbe.gold.ac.uk/" />
+	  <property name="value" value="http://www.buddhistethics.org/" />
 	</property>
 	<property name="param.2">
 	  <property name="key" value="volume" />
@@ -6592,13 +7052,13 @@
         <property name="attributes.rights" value="openaccess" />
       </property>
 
-      <property name="jbe6">
+      <property name="JournalOfBuddhistEthics6">
 	<property name="title" value="Journal of Buddhist Ethics Volume 6" />
 	<property name="journalTitle" value="Journal of Buddhist Ethics" />
 	<property name="plugin" value="edu.cornell.library.jbe.JBEPlugin" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
-	  <property name="value" value="http://jbe.gold.ac.uk/" />
+	  <property name="value" value="http://www.buddhistethics.org/" />
 	</property>
 	<property name="param.2">
 	  <property name="key" value="volume" />
@@ -6611,13 +7071,13 @@
         <property name="attributes.rights" value="openaccess" />
       </property>
 
-      <property name="jbe5">
+      <property name="JournalOfBuddhistEthics5">
 	<property name="title" value="Journal of Buddhist Ethics Volume 5" />
 	<property name="journalTitle" value="Journal of Buddhist Ethics" />
 	<property name="plugin" value="edu.cornell.library.jbe.JBEPlugin" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
-	  <property name="value" value="http://jbe.gold.ac.uk/" />
+	  <property name="value" value="http://www.buddhistethics.org/" />
 	</property>
 	<property name="param.2">
 	  <property name="key" value="volume" />
@@ -6630,13 +7090,13 @@
         <property name="attributes.rights" value="openaccess" />
       </property>
 
-      <property name="jbe4">
+      <property name="JournalOfBuddhistEthics4">
 	<property name="title" value="Journal of Buddhist Ethics Volume 4" />
 	<property name="journalTitle" value="Journal of Buddhist Ethics" />
 	<property name="plugin" value="edu.cornell.library.jbe.JBEPlugin" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
-	  <property name="value" value="http://jbe.gold.ac.uk/" />
+	  <property name="value" value="http://www.buddhistethics.org/" />
 	</property>
 	<property name="param.2">
 	  <property name="key" value="volume" />
@@ -6649,13 +7109,13 @@
         <property name="attributes.rights" value="openaccess" />
       </property>
 
-      <property name="jbe3">
+      <property name="JournalOfBuddhistEthics3">
 	<property name="title" value="Journal of Buddhist Ethics Volume 3" />
 	<property name="journalTitle" value="Journal of Buddhist Ethics" />
 	<property name="plugin" value="edu.cornell.library.jbe.JBEPlugin" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
-	  <property name="value" value="http://jbe.gold.ac.uk/" />
+	  <property name="value" value="http://www.buddhistethics.org/" />
 	</property>
 	<property name="param.2">
 	  <property name="key" value="volume" />
@@ -6668,13 +7128,13 @@
         <property name="attributes.rights" value="openaccess" />
       </property>
 
-      <property name="jbe2">
+      <property name="JournalOfBuddhistEthics2">
 	<property name="title" value="Journal of Buddhist Ethics Volume 2" />
 	<property name="journalTitle" value="Journal of Buddhist Ethics" />
 	<property name="plugin" value="edu.cornell.library.jbe.JBEPlugin" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
-	  <property name="value" value="http://jbe.gold.ac.uk/" />
+	  <property name="value" value="http://www.buddhistethics.org/" />
 	</property>
 	<property name="param.2">
 	  <property name="key" value="volume" />
@@ -6687,13 +7147,13 @@
         <property name="attributes.rights" value="openaccess" />
       </property>
 
-      <property name="jbe1">
+      <property name="JournalOfBuddhistEthics1">
 	<property name="title" value="Journal of Buddhist Ethics Volume 1" />
 	<property name="journalTitle" value="Journal of Buddhist Ethics" />
 	<property name="plugin" value="edu.cornell.library.jbe.JBEPlugin" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
-	  <property name="value" value="http://jbe.gold.ac.uk/" />
+	  <property name="value" value="http://www.buddhistethics.org/" />
 	</property>
 	<property name="param.2">
 	  <property name="key" value="volume" />
