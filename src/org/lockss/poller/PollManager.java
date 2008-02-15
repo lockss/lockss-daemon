@@ -1,10 +1,10 @@
 /*
- * $Id: PollManager.java,v 1.188 2008-01-30 08:31:35 tlipkis Exp $
+ * $Id: PollManager.java,v 1.189 2008-02-15 09:09:13 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -112,6 +112,12 @@ public class PollManager
     PREFIX + "pollStarterInterval";
   public static final long DEFAULT_START_POLLS_INTERVAL = HOUR;
   
+  /** Minimum interval between poll attempts on an AU.  This takes effect
+   * even if the poll failed to start. */
+  public static final String PARAM_MIN_POLL_ATTEMPT_INTERVAL =
+    PREFIX + "minPollAttemptInterval";
+  public static final long DEFAULT_MIN_POLL_ATTEMPT_INTERVAL = 4 * HOUR;
+
   /** The time, in ms, that will be added between launching new polls.
    * This time is added to the channel timeout time provided by SCOMM.
    */
@@ -128,6 +134,12 @@ public class PollManager
   public static final String PARAM_QUEUE_EMPTY_SLEEP =
     PREFIX + "queueEmptySleep";
   static final long DEFAULT_QUEUE_EMPTY_SLEEP = 30 * MINUTE;
+
+  /** Interval to sleep when max number of pollers are active, before
+   * checking again. */
+  public static final String PARAM_MAX_POLLERS_SLEEP =
+    PREFIX + "maxPollersSleep";
+  static final long DEFAULT_MAX_POLLERS_SLEEP = 10 * MINUTE;
 
   /** Size of poll queue. */
   public static final String PARAM_POLL_QUEUE_MAX =
@@ -220,8 +232,10 @@ public class PollManager
   private long paramRebuildPollQueueInterval =
     DEFAULT_REBUILD_POLL_QUEUE_INTERVAL;
   private long paramQueueEmptySleep = DEFAULT_QUEUE_EMPTY_SLEEP;
+  private long paramMaxPollersSleep = DEFAULT_MAX_POLLERS_SLEEP;
   private int paramPollQueueMax = DEFAULT_POLL_QUEUE_MAX;
   private long interPollStartDelay = DEFAULT_ADDED_POLL_DELAY;
+  private long paramMinPollAttemptInterval = DEFAULT_MIN_POLL_ATTEMPT_INTERVAL;
   private long increasePollPriorityAfter =
     DEFAULT_INCREASE_POLL_PRIORITY_AFTER;
 
@@ -476,35 +490,53 @@ public class PollManager
    * @return the poll, if it was successfuly called, else null.
    */
   public Poll callPoll(PollSpec pollspec) {
-    BasePoll thePoll = null;
-    PollFactory pollFact = getPollFactory(pollspec);
-    if (pollFact == null) {
-      return null;
-    } else {
-      long duration = pollFact.calcDuration(pollspec, this);
-      if (duration <= 0) {
-	theLog.debug("Duration for " + pollspec + " too short " + duration);
-	// CR: signal poll error (bad duration calc'ed)
-	return null;
-      }
-      try {
-	thePoll = makePoll(pollspec, duration,
-			   theIDManager.getLocalPeerIdentity(pollspec.getProtocolVersion()),
-			   LcapMessage.getDefaultHashAlgorithm(),
-                           null);
-	if (thePoll != null) {
-	  if (pollFact.callPoll(thePoll, getDaemon())) {
-	    return thePoll;
-	  } else {
-	    theLog.debug("pollFact.callPoll() returned false");
-	  }
-	} else {
-	  theLog.debug("makePoll(" + pollspec + ") returned null");
-	}
-      } catch (ProtocolException ex) {
-	theLog.debug("Error in makePoll or callPoll", ex);
-      }
+    return callPoll(null, pollspec);
+  }
+  
+
+  /**
+   * Call a poll.  Used by PollStarter.
+   * @param pollspec the <code>PollSpec</code> that defines the subject of
+   *                 the <code>Poll</code>.
+   * @param au
+   * @return the poll, if it was successfuly called, else null.
+   */
+  public Poll callPoll(ArchivalUnit au, PollSpec pollspec) {
+    String errMsg = null;
+    if (au != null) {
+      AuState auState = AuUtil.getAuState(au);
+      auState.pollAttempted();
     }
+    PollFactory pollFact = getPollFactory(pollspec);
+    if (pollFact != null) {
+      long duration = pollFact.calcDuration(pollspec, this);
+      if (duration > 0) {
+	try {
+	  BasePoll thePoll =
+	    makePoll(pollspec, duration,
+		     theIDManager.getLocalPeerIdentity(pollspec.getProtocolVersion()),
+		     LcapMessage.getDefaultHashAlgorithm(),
+		     null);
+	  if (thePoll != null) {
+	    if (pollFact.callPoll(thePoll, getDaemon())) {
+	      return thePoll;
+	    } else {
+	      theLog.debug("pollFact.callPoll() returned false");
+	    }
+	  } else {
+	    theLog.debug("makePoll(" + pollspec + ") returned null");
+	  }
+	} catch (ProtocolException ex) {
+	  theLog.debug("Error in makePoll or callPoll", ex);
+	}
+      } else {
+	errMsg = "Too busy";
+	theLog.debug("No duration within limit");
+      }
+    } else {
+      errMsg = "Unknown poll version: " + pollspec.getProtocolVersion();
+    }
+    theLog.debug("Poll not started: " + errMsg + ", au: " + au.getName());
     return null;
   }
 
@@ -967,6 +999,9 @@ public class PollManager
                                   DEFAULT_START_POLLS_INITIAL_DELAY);
       paramQueueEmptySleep = newConfig.getTimeInterval(PARAM_QUEUE_EMPTY_SLEEP,
 						    DEFAULT_QUEUE_EMPTY_SLEEP);
+      paramMaxPollersSleep =
+	newConfig.getTimeInterval(PARAM_MAX_POLLERS_SLEEP,
+				  DEFAULT_MAX_POLLERS_SLEEP);
       paramPollQueueMax = newConfig.getInt(PARAM_POLL_QUEUE_MAX,
 					  DEFAULT_POLL_QUEUE_MAX);
       pollQueue.setMaxSize(paramPollQueueMax);
@@ -974,6 +1009,9 @@ public class PollManager
       paramRebuildPollQueueInterval =
 	newConfig.getTimeInterval(PARAM_REBUILD_POLL_QUEUE_INTERVAL,
 			       DEFAULT_REBUILD_POLL_QUEUE_INTERVAL);
+      paramMinPollAttemptInterval =
+	newConfig.getTimeInterval(PARAM_MIN_POLL_ATTEMPT_INTERVAL,
+				  DEFAULT_MIN_POLL_ATTEMPT_INTERVAL);
       enableV3Poller =
         newConfig.getBoolean(PARAM_ENABLE_V3_POLLER,
                              DEFAULT_ENABLE_V3_POLLER);
@@ -1664,12 +1702,18 @@ public class PollManager
   }
 
   boolean startOnePoll() throws InterruptedException {
-    startOneWait.expireIn(paramQueueEmptySleep);
     if (enableV3Poller) {
-      PollReq req = nextReq();
-      if (req != null) {
-	startPoll(req);
-	return true;
+      int activePollers = getActiveV3Pollers().size();
+      if (activePollers >= maxSimultaneousPollers) {
+	startOneWait.expireIn(paramMaxPollersSleep);
+      } else {
+	PollReq req = nextReq();
+	if (req != null) {
+	  startPoll(req);
+	  return true;
+	} else {
+	  startOneWait.expireIn(paramQueueEmptySleep);
+	}
       }
     }
     v3Status.setNextPollStartTime(startOneWait);
@@ -1773,7 +1817,16 @@ public class PollManager
     // Do not call polls on AUs that have not crawled, UNLESS that AU
     // is marked pubdown.
     if (auState.getLastCrawlTime() == -1 && !AuUtil.isPubDown(au)) {
-      theLog.debug2("Not crawled or down, not calling a poll on " + au);
+      theLog.debug3("Not crawled or down, not calling a poll on " + au);
+      return false;
+    }
+
+    long sinceLast = TimeBase.msSince(auState.getLastPollAttempt());
+    if (sinceLast < paramMinPollAttemptInterval) {
+      theLog.debug3("Poll attempted too recently (" +
+		    StringUtil.timeIntervalToString(sinceLast) +
+		    " < " + StringUtil.timeIntervalToString(paramMinPollAttemptInterval) +
+		    ") " + au);
       return false;
     }
 
@@ -1795,7 +1848,7 @@ public class PollManager
     PollSpec spec = new PollSpec(au.getAuCachedUrlSet(), Poll.V3_POLL);
     theLog.debug("Calling a V3 poll on AU " + au);
 
-    if (callPoll(spec) == null) {
+    if (callPoll(au, spec) == null) {
       theLog.debug("pollManager.callPoll returned null. Failed to call "
 		   + "a V3 poll on " + au);
       return false;
@@ -1805,10 +1858,13 @@ public class PollManager
     // the scomm timeout and an additional number of milliseconds.
     if (enablePollStarterThrottle) {
       try {
-	Deadline.in(interPollStartDelay).sleep();
+	Deadline dontStartPollBefore = Deadline.in(interPollStartDelay);
+	v3Status.setNextPollStartTime(dontStartPollBefore);
+	dontStartPollBefore.sleep();
       } catch (InterruptedException ex) {
 	// Just proceed to the next poll.
       }
+      v3Status.setNextPollStartTime(null);
     }
     return true;
   }
