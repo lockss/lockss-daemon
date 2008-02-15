@@ -1,10 +1,10 @@
 /*
-* $Id: PsmInterp.java,v 1.15 2008-01-30 08:32:22 tlipkis Exp $
+* $Id: PsmInterp.java,v 1.16 2008-02-15 09:13:36 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -47,6 +47,7 @@ public class PsmInterp {
   private Object userData;
   private boolean initted = false;
   private PsmState curState;
+  private long lastStateChange = -1;
   private int maxChainedEvents = 10;
   private StateTimer timer;
   private boolean isWaiting;
@@ -124,16 +125,18 @@ public class PsmInterp {
       throws PsmException {
     init();
     stateBean = resumeStateBean;
-    String name = stateBean.getLastResumableStateName();
-    if (name == null) {
+    String resumeStateName = stateBean.getLastResumableStateName();
+    if (resumeStateName == null) {
       throw new PsmException.IllegalResumptionState("No saved state");
     }
-    PsmState state = machine.getState(name);
+    PsmState state = machine.getState(resumeStateName);
     if (state == null) {
-      throw new PsmException.IllegalResumptionState("Not found: " + name);
+      throw new PsmException.IllegalResumptionState("Not found: " +
+						    resumeStateName);
     }
     if (!state.isResumable()) {
-      throw new PsmException.IllegalResumptionState("Not resumable: " + name);
+      throw new PsmException.IllegalResumptionState("Not resumable: " +
+						    resumeStateName);
     }
     return state;
   }
@@ -167,6 +170,10 @@ public class PsmInterp {
 
   public PsmState getCurrentState() {
     return curState;
+  }
+
+  public long getLastStateChange() {
+    return lastStateChange;
   }
 
   /** Return true if the machine is waiting for an event. */
@@ -275,6 +282,7 @@ public class PsmInterp {
     }
     eventMonitor(curState, triggerEvent, null, newState);
     curState = newState;
+    lastStateChange = TimeBase.nowMs();
     PsmAction entryAction = newState.getEntryAction();
     performAction(entryAction, triggerEvent, eventCtr);
     if (eventQueue.isEmpty()) {
@@ -471,7 +479,6 @@ public class PsmInterp {
 
   public class Runner extends LockssRunnable {
     private Queue reqQueue;
-    private String name;
 
     private Runner(Queue reqQueue) {
       super("PsmRunner");
@@ -484,9 +491,9 @@ public class PsmInterp {
 
     public void lockssRun() {
       if (name != null) {
-	setName("PsmRunner: " + name);
+	setThreadName("PsmRunner: " + name);
       } else {
-	setName("PsmRunner");
+	setThreadName("PsmRunner");
       }
       runnerThread = Thread.currentThread();
       try {
@@ -517,7 +524,7 @@ public class PsmInterp {
 	  }
 	}
       } finally {
-	setName("PsmRunner Idle");
+	setThreadName("PsmRunner Idle");
 	synchronized (runnerLock) {
 	  if (runnerThread == Thread.currentThread()) {
 	    runnerThread = null;
@@ -621,9 +628,9 @@ public class PsmInterp {
   /** Update the state bean and call the checkpointer to checkpoint the
    * state */
   private void checkpoint(PsmState state) {
-    String name = state.getName();
-    if (!name.equals(stateBean.getLastResumableStateName())) {
-      stateBean.setLastResumableStateName(name);
+    String stateName = state.getName();
+    if (!stateName.equals(stateBean.getLastResumableStateName())) {
+      stateBean.setLastResumableStateName(stateName);
       if (checkpointer != null) {
 	checkpointer.checkpoint(stateBean);
       }
