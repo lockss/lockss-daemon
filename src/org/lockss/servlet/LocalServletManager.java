@@ -1,10 +1,10 @@
 /*
- * $Id: LocalServletManager.java,v 1.25 2007-10-31 04:02:57 dshr Exp $
+ * $Id: LocalServletManager.java,v 1.26 2008-02-15 09:14:54 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -79,7 +79,7 @@ public class LocalServletManager extends BaseServletManager {
 
   /** See documentation of pjl-comp-filter's CompressingFilter for legal
       keys and values.  Defaults: <code><br>compressionThreshold =
-      4096<br>includeContentTypes = text/html,text/xml,test/plain</code> */
+      4096<br>includeContentTypes = text/html,text/xml,text/plain</code> */
   static final String PARAM_DOC_ONLY = COMPRESSOR_PREFIX + "<key>=<val>";
 
   static final Map<String,String> COMPRESSOR_DEFAULTS = new HashMap();
