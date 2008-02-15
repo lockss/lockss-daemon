@@ -1,5 +1,5 @@
 /*
- * $Id: TestCXSerializer.java,v 1.10 2006-10-03 05:47:36 thib_gc Exp $
+ * $Id: TestCXSerializer.java,v 1.11 2008-02-15 09:17:36 tlipkis Exp $
  */
 
 /*
@@ -168,7 +168,7 @@ public class TestCXSerializer extends ObjectSerializerTester {
   protected ObjectSerializer[] getObjectSerializers_ExtMapBean() {
     // Compatibility modes
     int[] compatModes = new int[] {
-        CXSerializer.CASTOR_MODE,
+//         CXSerializer.CASTOR_MODE,
         CXSerializer.XSTREAM_MODE,
         CXSerializer.XSTREAM_OVERWRITE_MODE,
     };
