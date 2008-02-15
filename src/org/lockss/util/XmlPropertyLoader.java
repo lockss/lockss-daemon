@@ -1,5 +1,5 @@
 /*
- * $Id: XmlPropertyLoader.java,v 1.30 2007-05-23 02:26:54 tlipkis Exp $
+ * $Id: XmlPropertyLoader.java,v 1.31 2008-02-15 19:40:47 edwardsb1 Exp $
  */
 
 /*
@@ -115,7 +115,7 @@ public class XmlPropertyLoader {
   private static final class If {
     public boolean inThen = false;
     public boolean inElse = false;
-    public boolean evalIf = true;
+    public boolean usedThen = false;
   }
 
   /**
@@ -125,21 +125,26 @@ public class XmlPropertyLoader {
 
     // Simple stack that helps us know what our current level in
     // the property tree is.
-    private Stack m_propStack = new Stack();
+    private Stack<String> m_propStack = new Stack<String>();
 
     // Stack of conditionals being evaluated.  Empty if not inside
     // a conditional statement.
-    private Stack m_condStack = new Stack();
+    private Stack<String> m_condStack = new Stack<String>();
 
     // Stack of if's (and corresponding 'then' and 'else' blocks, if
     // present) being evaluated.
-    private Stack m_ifStack = new Stack();
+    private Stack<If> m_ifStack = new Stack<If>();
 
-    // The state of the current test.  i.e.:
-    private boolean m_testEval = true;
+    // The state of the current test.  
+    // This is a stack of stacks: the outermost stack represents each 'if' statement,
+    // and the inner stack represents the evaluations of each condition within the
+    // 'if' statement.  
+    // Note that the users of this language expect that all items within an 'if'
+    // statement are 'and'ed together, even if no explicit 'and' is given.
+    private Stack<Stack<Boolean> > m_testEval = new Stack<Stack<Boolean> >();
 
     // When building a list of configuration values for a single key.
-    private List m_propList = null;
+    private List<String> m_propList = null;
 
     // True iff the parser is currently inside a "value" element.
     private boolean m_inValue = false;
@@ -165,6 +170,9 @@ public class XmlPropertyLoader {
      */
     public LockssConfigHandler(PropertyTree props) {
       super();
+      // Because the users expect to be able to put conditionals anywhere:
+      m_testEval.push(new Stack<Boolean>());
+      
       // Conditionals
       m_sysPlatformVer = getPlatformVersion();
       m_sysDaemonVer = getDaemonVersion();
@@ -183,6 +191,7 @@ public class XmlPropertyLoader {
     }
 
     /**
+     * Old way:
      * <p>Evaluate this property iff:</p>
      * <ol>
      *   <li>We're not in a propgroup conditional, or</li>
@@ -193,15 +202,16 @@ public class XmlPropertyLoader {
      *   <li>We're in a propgroup that we eval to true AND we're
      *      in neither  a &lt;then&gt; or an &lt;else&gt;</li>
      * </ol>
+     * 
+     * New way:
+     *   Take the 'and' of all elements in the m_testEval stack.
      */
     private boolean doEval() {
       if (m_ifStack.empty()) {
         return true;
       }
-      If curIf = (If)m_ifStack.peek();
-      return ((curIf.evalIf && curIf.inThen) ||
-          (!curIf.evalIf && curIf.inElse) ||
-          (curIf.evalIf && !curIf.inThen && !curIf.inElse));
+      
+      return andEvalStack(false);
     }
 
     /**
@@ -290,7 +300,13 @@ public class XmlPropertyLoader {
      * Handle encountering the start of an "else" tag.
      */
     private void startElseTag() {
-      ((If)m_ifStack.peek()).inElse = true;
+      m_ifStack.peek().inElse = true;
+      
+      // The easiest way to enter an 'else' is to reverse testEval...
+      boolean boTopValue;
+      boTopValue = m_testEval.peek().pop().booleanValue();
+      boTopValue = !boTopValue;
+      m_testEval.peek().push(new Boolean(boTopValue));
     }
 
     /**
@@ -299,7 +315,7 @@ public class XmlPropertyLoader {
     private void startListTag() {
       if (doEval()) {
 	m_inList = true;
-	m_propList = new ArrayList();
+	m_propList = new ArrayList<String>();
       }
     }
 
@@ -332,27 +348,26 @@ public class XmlPropertyLoader {
      */
     private void startIfTag(Attributes attrs) {
       If curIf = new If();
-      // If there's a previous 'if', and it's false, AND we're in a 'then'
-      // clause, don't even bother evaluating this one, the parent makes
-      // it false.
-      if (!m_ifStack.empty() &&
-          !((If)m_ifStack.peek()).evalIf &&
-          ((If)m_ifStack.peek()).inThen) {
-        curIf.evalIf = false;
-      } else if (attrs.getLength() > 0) {
-	curIf.evalIf = evaluateAttributes(attrs);
-      }
       m_ifStack.push(curIf);
+      
       // Reset m_testEval
-      m_testEval = true;
+      m_testEval.add(new Stack<Boolean>());
+
+      if (attrs.getLength() > 0) {
+	m_testEval.peek().push(new Boolean(evaluateAttributes(attrs)));
+      }
     }
 
     /**
      * Handle encountering a starting "then" tag.
      */
     private void startThenTag() {
-      If curIf = (If)m_ifStack.peek();
+      If curIf = m_ifStack.peek();
       curIf.inThen = true;
+      curIf.usedThen = true;
+      
+      // All of the conditions have been posted. Time to AND them together.
+      andEvalStack(true);
     }
 
     /**
@@ -374,19 +389,15 @@ public class XmlPropertyLoader {
      */
     private void startAndTag() {
       m_condStack.push(TAG_AND);
-      m_testEval = true;
+      m_testEval.push(new Stack<Boolean>());
     }
 
     /**
      * Handle encountering a starting "or" tag.
      */
     private void startOrTag() {
-      if (m_condStack.isEmpty()) {
-        // 'or' expressions start out false
-        ((If)m_ifStack.peek()).evalIf &= false;
-      }
-      m_testEval = false;
       m_condStack.push(TAG_OR);
+      m_testEval.push(new Stack<Boolean>());
     }
 
     /**
@@ -394,6 +405,7 @@ public class XmlPropertyLoader {
      */
     private void startNotTag() {
       m_condStack.push(TAG_NOT);
+      m_testEval.push(new Stack<Boolean>());
     }
 
 
@@ -403,13 +415,7 @@ public class XmlPropertyLoader {
     private void startTestTag(Attributes attrs) {
       if (attrs.getLength() > 0) {
         // Find the curent conditional
-        if (m_condStack.isEmpty() ||
-            m_condStack.peek() == TAG_AND ||
-            m_condStack.peek() == TAG_NOT) {
-          m_testEval &= evaluateAttributes(attrs);
-        } else if (m_condStack.peek() == TAG_OR) {
-          m_testEval |= evaluateAttributes(attrs);
-        }
+          m_testEval.peek().push(evaluateAttributes(attrs));
       }
     }
 
@@ -417,7 +423,7 @@ public class XmlPropertyLoader {
      * Handle encoutering the end of an "else" tag.
      */
     private void endElseTag() {
-      ((If)m_ifStack.peek()).inElse = false;
+      m_ifStack.peek().inElse = false;
     }
 
     /**
@@ -446,6 +452,12 @@ public class XmlPropertyLoader {
      * Handle encountering the end of a "propgroup" tag.
      */
     private void endIfTag() {
+      if (m_ifStack.peek().usedThen) {
+        m_testEval.peek().pop();  // We no longer need the result from this if test.
+      } else {
+        m_testEval.pop();  // Only pop if we didn't have an actual 'then'.
+      }
+      
       m_ifStack.pop();
     }
 
@@ -454,7 +466,7 @@ public class XmlPropertyLoader {
      * Handle encountering the end of a "then" tag.
      */
     private void endThenTag() {
-      ((If)m_ifStack.peek()).inThen = false;
+      m_ifStack.peek().inThen = false;
     }
 
     /**
@@ -485,24 +497,41 @@ public class XmlPropertyLoader {
     }
 
     private void endAndTag() {
+      boolean bo1;
+      boolean bo2;
+      boolean boResult;
+      
       m_condStack.pop();
 
-      If curIf = (If)m_ifStack.peek();
-      curIf.evalIf &= m_testEval;
-    }
+      andEvalStack(true);  // Reuse nice code...
+     }
 
     private void endOrTag() {
-      m_condStack.pop();
+      boolean boResult;
+      Iterator<Boolean> iterBo;
 
-      If curIf = (If)m_ifStack.peek();
-      curIf.evalIf |= m_testEval;
+      m_condStack.pop();
+      
+      boResult = false;
+      for (iterBo = m_testEval.peek().iterator(); iterBo.hasNext(); ) {
+        boResult |= iterBo.next().booleanValue();
+      }
+      
+        m_testEval.pop();
+        m_testEval.peek().push(new Boolean(boResult));
     }
 
     private void endNotTag() {
+      boolean bo1;
+      boolean boResult;
+      
       m_condStack.pop();
 
-      If curIf = (If)m_ifStack.peek();
-      curIf.evalIf = !m_testEval;
+      andEvalStack(true);
+      
+      bo1 = m_testEval.peek().pop().booleanValue();
+      boResult = !bo1;
+      m_testEval.peek().push(new Boolean(boResult));
     }
 
     
@@ -510,27 +539,6 @@ public class XmlPropertyLoader {
      * Handle encountering the end of a "test" tag.
      */
     private void endTestTag() {
-      if (m_condStack.isEmpty()) {
-        // If we're not in a conditional at all, this should be a single
-        // <test>, i.e. <if><test foo="bar"/><then>...</then></if>. Just
-        // apply the current test results
-        ((If)m_ifStack.peek()).evalIf &= m_testEval;
-      } else {
-        applyTestToCurrentCondStackLevel();
-      }
-    }
-
-    // Utility method used by endCondTag and endTestTag
-    private void applyTestToCurrentCondStackLevel() {
-      String cond = (String)m_condStack.peek();
-      If curIf = (If)m_ifStack.peek();
-      if (cond == TAG_AND) {
-        curIf.evalIf &= m_testEval;
-      } else if (cond == TAG_OR) {
-        curIf.evalIf |= m_testEval;
-      } else if (cond == TAG_NOT) {
-        curIf.evalIf &= !m_testEval;
-      }
     }
 
     /**
@@ -689,6 +697,26 @@ public class XmlPropertyLoader {
       }
 
       return returnVal;
+    }
+    
+    // We get many situations when the evaluation stack may have multiple elements.
+    // This method AND's together the elements into a single value.
+    
+    boolean andEvalStack(boolean boPopStack) {
+      boolean boResult;
+      Iterator<Boolean> iterBo;
+      
+      boResult = true;
+      for (iterBo = m_testEval.peek().iterator(); iterBo.hasNext(); ) {
+        boResult &= iterBo.next().booleanValue();
+      }
+      
+      if (boPopStack) {
+        m_testEval.pop();
+        m_testEval.peek().push(new Boolean(boResult));
+      }
+      
+      return boResult; 
     }
   }
 }
