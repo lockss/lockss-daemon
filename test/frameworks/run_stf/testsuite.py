@@ -250,13 +250,16 @@ class V3TestCase(LockssTestCase):
         LockssTestCase.setUp(self)
         # V3 has a much shorter default timeout, 8 minutes.
         self.timeout = int(config.get('timeout', 60 * 8))
-        self.targetClient = self.clients[0]
+        self.victim = self.clients[0]
 
         for i in range(0, len(self.clients)):
-                
+            isVictim = i == 0
             extraConf = {"org.lockss.auconfig.allowEditDefaultOnlyParams": "true",
                          "org.lockss.localV3Identity": "TCP:[127.0.0.1]:%d" % (self.getBaseV3Port() + i),
-                         "org.lockss.id.initialV3PeerList": self.getInitialPeerList() }
+                         "org.lockss.id.initialV3PeerList": self.getInitialPeerList(),
+                         "org.lockss.poll.v3.enableV3Poller": isVictim,
+                         "org.lockss.poll.v3.enableV3Voter": "true"
+                         }
             extraConf.update(self.getTestLocalConf())
             self.framework.appendLocalConfig(extraConf, self.clients[i])
 
@@ -313,12 +316,13 @@ class SimpleDamageV3TestCase(V3TestCase):
                 self.fail("AUs never completed initial crawl.")
         log.info("AUs completed initial crawl.")
 
-        victim = self.clients[0]
+        victim = self.victim
 
         ##
         ## Damage the AU.
         ##
         node = victim.randomDamageSingleNode(simAu)
+        assert not victim.isV3Repaired(simAu, [node]), "Failed to damage AU."
         log.info("Damaged node %s on client %s" % (node.url, victim))
 
         log.info("Waiting for a V3 poll to be called...")
@@ -360,7 +364,7 @@ class RandomDamageV3TestCase(V3TestCase):
                 self.fail("AUs never completed initial crawl.")
         log.info("AUs completed initial crawl.")
 
-        victim = self.clients[0]
+        victim = self.victim
 
         ##
         ## Damage the AU.
@@ -414,7 +418,7 @@ class RepairFromPublisherV3TestCase(V3TestCase):
                 self.fail("AUs never completed initial crawl.")
         log.info("AUs completed initial crawl.")
 
-        victim = self.clients[0]
+        victim = self.victim
 
         ##
         ## Damage the AU.
@@ -448,7 +452,11 @@ class RepairFromPeerV3TestCase(V3TestCase):
     """ Ensure that repairing from a V3 peer works correctly. """
     def getTestLocalConf(self):
         # ALWAYS repair from a cache
-        return {"org.lockss.poll.v3.repairFromCachePercent": "100"}
+        ## Enable polling on all peers.
+        return {"org.lockss.poll.v3.repairFromCachePercent": "100",
+                "org.lockss.poll.v3.enableV3Poller":"true",
+                "org.lockss.poll.minPollAttemptInterval":"10"
+                }
 
     def runTest(self):
         # Reasonably complex AU for testing.
@@ -457,19 +465,12 @@ class RepairFromPeerV3TestCase(V3TestCase):
                             fileTypes=[FILE_TYPE_TEXT, FILE_TYPE_BIN],
                             binFileSize=1024, protocolVersion=3)
         
-        ## Enable polling on all peers.
-        pollingConf = {"org.lockss.poll.v3.enableV3Poller":"true",
-                       "org.lockss.poll.v3.enableV3Voter":"true"}
-
-
         ##
         ## Create simulated AUs
         ##
         log.info("Creating V3 simulated AUs.")
         for c in self.clients:
             c.createAu(simAu)
-            self.framework.appendLocalConfig(pollingConf, c)
-
 
         ##
         ## Assert that the AUs have been crawled.
@@ -480,7 +481,7 @@ class RepairFromPeerV3TestCase(V3TestCase):
                 self.fail("AUs never completed initial crawl.")
         log.info("AUs completed initial crawl.")
 
-        victim = self.clients[0]
+        victim = self.victim
 
         #
         # We need agreement from all the peers before we can continue.
@@ -492,7 +493,7 @@ class RepairFromPeerV3TestCase(V3TestCase):
             assert c.waitForV3Poller(simAu), "Never called V3 poll."
             log.info("Client on port %s called V3 poll..." % c.port)
 
-        # expect that each client will have wone a top-level v3 poll
+        # expect that each client will have won a top-level v3 poll
         log.info("Waiting for all peers to win their polls")
         for c in self.clients:
             assert c.waitForWonV3Poll(simAu, timeout=self.timeout),\
@@ -506,6 +507,7 @@ class RepairFromPeerV3TestCase(V3TestCase):
         log.info("Damaged the following nodes on client %s:\n        %s" %
             (victim, '\n        '.join([str(n) for n in nodeList])))
 
+        ## XXX - this sees first poll, doesn't wait for second
         log.info("Waiting for a V3 poll to be called...")
         victim.waitForV3Poller(simAu)
 
@@ -551,7 +553,7 @@ class SimpleDeleteV3TestCase(V3TestCase):
                 self.fail("AUs never completed initial crawl.")
         log.info("AUs completed initial crawl.")
 
-        victim = self.clients[0]
+        victim = self.victim
 
         ##
         ## Damage the AU.
@@ -598,7 +600,7 @@ class LastFileDeleteV3TestCase(V3TestCase):
                 self.fail("AUs never completed initial crawl.")
         log.info("AUs completed initial crawl.")
 
-        victim = self.clients[0]
+        victim = self.victim
 
         ##
         ## Damage the AU.
@@ -646,7 +648,7 @@ class RandomDeleteV3TestCase(V3TestCase):
                 self.fail("AUs never completed initial crawl.")
         log.info("AUs completed initial crawl.")
 
-        victim = self.clients[0]
+        victim = self.victim
 
         ##
         ## Damage the AU.
@@ -693,7 +695,7 @@ class SimpleExtraFileV3TestCase(V3TestCase):
                 self.fail("AUs never completed initial crawl.")
         log.info("AUs completed initial crawl.")
 
-        victim = self.clients[0]
+        victim = self.victim
 
         ##
         ## Damage the AU by creating an extra node.
@@ -740,7 +742,7 @@ class LastFileExtraV3TestCase(V3TestCase):
                 self.fail("AUs never completed initial crawl.")
         log.info("AUs completed initial crawl.")
 
-        victim = self.clients[0]
+        victim = self.victim
 
         ##
         ## Damage the AU by creating an extra node that should sort LAST
@@ -789,7 +791,7 @@ class RandomExtraFileV3TestCase(V3TestCase):
         log.info("AUs completed initial crawl.")
 
         ## To use a specific client, uncomment this line.
-        victim = self.clients[0]
+        victim = self.victim
 
         ##
         ## Damage the AU by creating an extra node.
@@ -849,7 +851,7 @@ class VotersDontParticipateV3TestCase(V3TestCase):
         log.info("AUs completed initial crawl.")
 
         ## To use a specific client, uncomment this line.
-        victim = self.clients[0]
+        victim = self.victim
 
         ##
         ## Damage the AU by creating an extra node.
@@ -908,7 +910,7 @@ class NoQuorumV3TestCase(V3TestCase):
         log.info("AUs completed initial crawl.")
 
         ## To use a specific client, uncomment this line.
-        victim = self.clients[0]
+        victim = self.victim
 
         ##
         ## Damage the AU by creating an extra node.
@@ -932,22 +934,21 @@ def noQuorumV3TestCase():
 
 class TotalLossRecoveryV3TestCase(V3TestCase):
     """ Test repairing a cache under V3 that has lost all its contents """
+    def getTestLocalConf(self):
+        ## Enable polling on all peers.
+        return {"org.lockss.poll.v3.enableV3Poller":"true"}
+
     def runTest(self):
         
         ## Define a simulated AU
         simAu = SimulatedAu('simContent', 0, 0, 30, protocolVersion=3)
 
-        ## Enable polling on all peers.
-        pollingConf = {"org.lockss.poll.v3.enableV3Poller":"true",
-                       "org.lockss.poll.v3.enableV3Voter":"true"}
-
-        victim = self.clients[0]
+        victim = self.victim
         
         ## Create simulated AUs
         log.info("Creating simulated AUs.")
         for c in self.clients:
             c.createAu(simAu)
-            self.framework.appendLocalConfig(pollingConf, c)
 
         ## Assert that the AUs have been crawled.
         log.info("Waiting for simulated AUs to crawl.")
