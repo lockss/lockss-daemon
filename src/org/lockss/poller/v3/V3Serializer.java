@@ -1,10 +1,10 @@
 /*
- * $Id: V3Serializer.java,v 1.13 2006-11-14 22:15:57 tlipkis Exp $
+ * $Id: V3Serializer.java,v 1.14 2008-02-15 09:12:11 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -57,17 +57,17 @@ public abstract class V3Serializer {
     String path = config.get(PARAM_V3_STATE_LOCATION,
                              DEFAULT_V3_STATE_LOCATION);
     File stateDir =
-        ConfigManager.getConfigManager().getPlatformDir(path);
-      if (!stateDir.exists() && !stateDir.mkdirs()) {
-        throw new PollSerializerException("Could not create state directory "
-                                          + stateDir);
-      }
-      try {
-        this.pollDir = FileUtil.createTempDir("pollstate-", "", stateDir);
-      } catch (IOException ex) {
-        throw new PollSerializerException("Cannot create state directory "
-                                          + stateDir, ex);
-      }
+      ConfigManager.getConfigManager().getPlatformDir(path);
+    if (!FileUtil.ensureDirExists(stateDir)) {
+      throw new PollSerializerException("Could not create state directory "
+					+ stateDir);
+    }
+    try {
+      this.pollDir = FileUtil.createTempDir("pollstate-", "", stateDir);
+    } catch (IOException ex) {
+      throw new PollSerializerException("Cannot create temp dir in state directory"
+					+ stateDir, ex);
+    }
   }
 
   /**

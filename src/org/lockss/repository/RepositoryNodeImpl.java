@@ -1,10 +1,10 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.76 2007-12-19 05:14:19 tlipkis Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.77 2008-02-15 09:12:10 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -564,13 +564,11 @@ public class RepositoryNodeImpl implements RepositoryNode {
     }
     ensureCurrentInfoLoaded();
     if (currentVersion == 0) {
-      if (!contentDir.exists()) {
-        if (!contentDir.mkdirs()) {
-          logger.error("Couldn't create cache directory: " +contentDir);
-          throw new LockssRepository.RepositoryStateException("mkdirs(" +
-							      contentDir +
-							      ") failed.");
-        }
+      if (!FileUtil.ensureDirExists(contentDir)) {
+	logger.error("Couldn't create cache directory: " +contentDir);
+	throw new LockssRepository.RepositoryStateException("mkdirs(" +
+							    contentDir +
+							    ") failed.");
       }
     }
 

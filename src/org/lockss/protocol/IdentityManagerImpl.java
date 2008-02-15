@@ -1,10 +1,10 @@
 /*
- * $Id: IdentityManagerImpl.java,v 1.24 2008-01-30 00:52:41 tlipkis Exp $
+ * $Id: IdentityManagerImpl.java,v 1.25 2008-02-15 09:12:11 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -856,7 +856,9 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
     synchronized (iddbFile) {
       try {
         File dir = iddbFile.getParentFile();
-        if (dir != null && !dir.exists()) { dir.mkdirs(); }
+        if (dir != null) {
+	  FileUtil.ensureDirExists(dir);
+	}
         // CASTOR: Remove call to wrap()
         serializer.serialize(iddbFile, wrap(theLcapIdentities));
       }

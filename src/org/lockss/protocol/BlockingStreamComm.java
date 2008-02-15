@@ -1,10 +1,10 @@
 /*
- * $Id: BlockingStreamComm.java,v 1.31 2008-01-07 13:32:32 dshr Exp $
+ * $Id: BlockingStreamComm.java,v 1.32 2008-02-15 09:12:11 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -146,7 +146,7 @@ public class BlockingStreamComm
    * MemoryPeerMessage */
   public static final String PARAM_MAX_MESSAGE_SIZE =
     PREFIX + "maxMessageSize";
-  public static final int DEFAULT_MAX_MESSAGE_SIZE = 100 * 1024;
+  public static final int DEFAULT_MAX_MESSAGE_SIZE = 1024 * 1024;
 
   /** Dir for PeerMessage data storage */
   public static final String PARAM_DATA_DIR = PREFIX + "messageDataDir";
@@ -326,7 +326,7 @@ public class BlockingStreamComm
 	String paramDataDir = config.get(PARAM_DATA_DIR,
 					 PlatformUtil.getSystemTempDir());
 	File dir = new File(paramDataDir);
-	if (dir.exists() || dir.mkdirs()) {
+	if (FileUtil.ensureDirExists(dir)) {
 	  dataDir = dir;
 	  log.debug2("Message data dir: " + dataDir);
 	} else {
