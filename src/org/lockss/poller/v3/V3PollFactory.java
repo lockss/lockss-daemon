@@ -1,10 +1,10 @@
 /*
- * $Id: V3PollFactory.java,v 1.22 2008-01-30 00:50:15 tlipkis Exp $
+ * $Id: V3PollFactory.java,v 1.23 2008-02-15 09:11:26 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -251,7 +251,7 @@ public class V3PollFactory extends BasePollFactory {
       log.info("Not starting new V3 Voter for poll on AU " 
                + au.getAuId() + ".  Maximum number of active voters is " 
                + maxVoters + "; " + activeVoters + " are already running.");
-      sendNak(daemon, PollNak.NAK_NOT_CRAWLED, pollspec.getAuId(), m);
+      sendNak(daemon, PollNak.NAK_TOO_MANY_VOTERS, pollspec.getAuId(), m);
       return null;
     }
 
@@ -282,7 +282,7 @@ public class V3PollFactory extends BasePollFactory {
   }
 
   public long calcDuration(PollSpec ps, PollManager pm) {
-    return PollUtil.calcDuration(ps, pm);
+    return PollUtil.calcV3Duration(ps, pm);
   }
 
   public boolean isDuplicateMessage(LcapMessage msg, PollManager pm) {
