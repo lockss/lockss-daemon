@@ -1,8 +1,8 @@
 /*
- * $Id: FileUtil.java,v 1.8 2007-08-16 02:22:42 tlipkis Exp $
+ * $Id: FileUtil.java,v 1.9 2008-02-15 09:16:29 tlipkis Exp $
  *
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -268,6 +268,26 @@ public class FileUtil {
   public static File createTempDir(String prefix, String suffix)
       throws IOException {
     return createTempDir(prefix, suffix, null);
+  }
+
+  /** Ensure the directory exists, creating it and any parents if
+   * necessary.
+   * @param dir the directory
+   * @return true if the directory already exists, if it was successfully
+   * created, or if it came into being while we were trying to create it.
+   */
+  public static boolean ensureDirExists(File dir) {
+    if (dir.exists()) {
+      return true;
+    }
+    if (dir.mkdirs()) {
+      return true;
+    }
+    // If another thread is trying to create the same dir, it might have
+    // suceeded, causing our call to mkdirs to return false, so check again
+    // to see if it's there.  (I believe this happened creating the v3state
+    // dir
+    return dir.exists();
   }
 
   /** Delete the contents of a directory, leaving the empty directory.
