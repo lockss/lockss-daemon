@@ -1,10 +1,10 @@
 /*
- * $Id: TaskRunner.java,v 1.41 2008-01-30 00:54:07 tlipkis Exp $
+ * $Id: TaskRunner.java,v 1.42 2008-02-15 09:14:41 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -400,6 +400,7 @@ class TaskRunner {
     if (canAddToSchedule(scheduler, task, true)) {
       currentSchedule = scheduler.getSchedule();
       acceptedTasks = new ArrayList(scheduler.getTasks());
+      task.setAccepted(true);
       task.setTaskRunner(this);
       Collection schedOverron = currentSchedule.getOverrunTasks();
       if (schedOverron != null && !schedOverron.isEmpty()) {
@@ -464,6 +465,7 @@ class TaskRunner {
     if (task.isBackgroundTask()) {
       removeFromBackgroundTasks((BackgroundTask)task);
     } else {
+      overrunTasks.remove(task);
       // poke thread so it will recompute schedule
       pokeStepThread();
     }
@@ -809,13 +811,12 @@ class TaskRunner {
     if (log.isDebug3()) log.debug3("Removing " + chunk);
     StepTask task = chunk.getTask();
     if (task.isFinished() || task.isExpired()) {
-	removeTask(task);
+      removeTask(task);
     } else if (chunk.isTaskEnd()) {
-      if (task.isOverrunAllowed()) {
-	addOverrunner(task, task.hasOverrun() ? STAT_OVERRUN : STAT_DROPPED);
-      } else {
-	removeTask(task);
-      }
+      // Task hasn't gotten as much time as it was guaranteed.  Since it
+      // isn't expired, treat it as an overrunner.  If it does overrunner
+      // but doesn't allow that, runSteps() will terminate it.
+      addOverrunner(task, task.hasOverrun() ? STAT_OVERRUN : STAT_DROPPED);
     }
     currentSchedule.removeEvent(chunk);
     addToHistory(chunk);

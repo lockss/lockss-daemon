@@ -1,10 +1,10 @@
 /*
- * $Id: FuncHashService.java,v 1.13 2006-04-05 22:26:39 tlipkis Exp $
+ * $Id: FuncHashService.java,v 1.14 2008-02-15 09:14:41 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -341,6 +341,7 @@ public class FuncHashService extends LockssTestCase {
     }
     public void setUp() throws Exception {
       setUp("org.lockss.hasher.HashSvcSchedImpl");
+      ConfigurationUtil.addFromArgs(SortScheduler.PARAM_OVERHEAD_LOAD, "0");
       SchedService svc = this.theDaemon.getSchedService();
       svc.startService();
     }

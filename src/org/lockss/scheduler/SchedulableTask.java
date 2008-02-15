@@ -1,10 +1,10 @@
 /*
- * $Id: SchedulableTask.java,v 1.13 2006-09-18 16:27:56 tlipkis Exp $
+ * $Id: SchedulableTask.java,v 1.14 2008-02-15 09:14:41 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -55,6 +55,7 @@ public class SchedulableTask {
   protected long unaccountedTime = 0;
   protected Exception e;
   boolean overrunAllowed = false;
+  boolean isAccepted = false;
   boolean hasBeenNotified = false;
   boolean hasStarted = false;
   TaskRunner runner = null;
@@ -76,6 +77,15 @@ public class SchedulableTask {
     this.origEst = estimatedDuration;
     this.callback = callback;
     this.cookie = cookie;
+  }
+
+  public SchedulableTask(TimeInterval interval,
+		     long estimatedDuration,
+		     TaskCallback callback,
+		     Object cookie) {
+    this(Deadline.at(interval.getBeginTime()),
+	 Deadline.at(interval.getEndTime()),
+	 estimatedDuration, callback, cookie);
   }
 
   public Interval getWindow() {
@@ -164,6 +174,14 @@ public class SchedulableTask {
 
   public boolean isOverrunAllowed() {
     return overrunAllowed;
+  }
+
+  public void setAccepted(boolean val) {
+    isAccepted = val;
+  }
+
+  public boolean isAccepted() {
+    return isAccepted;
   }
 
   public boolean hasBeenNotified() {
@@ -271,11 +289,11 @@ public class SchedulableTask {
     }
     sb.append(" ");
     if (timeUsed != 0) {
-      sb.append(timeUsed);
+      sb.append(StringUtil.timeIntervalToString(timeUsed));
       sb.append("/");
     }
-    sb.append(origEst);
-    sb.append("ms between ");
+    sb.append(StringUtil.timeIntervalToString(origEst));
+    sb.append(" between ");
     sb.append(earliestStart.shortString());
     sb.append(" and ");
     sb.append(latestFinish.shortString());

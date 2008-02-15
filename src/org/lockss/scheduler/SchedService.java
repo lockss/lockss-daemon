@@ -1,10 +1,10 @@
 /*
- * $Id: SchedService.java,v 1.13 2006-04-05 22:26:41 tlipkis Exp $
+ * $Id: SchedService.java,v 1.14 2008-02-15 09:14:41 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,8 +36,8 @@ import java.util.*;
 import org.lockss.app.*;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
+import org.lockss.config.*;
 import org.lockss.util.*;
-import org.lockss.app.*;
 
 /**
  * SchedService schedules and executes requests for computations.
@@ -47,7 +47,19 @@ import org.lockss.app.*;
 public class SchedService extends BaseLockssDaemonManager {
   protected static Logger log = Logger.getLogger("SchedService");
 
+  public static final String PREFIX = Configuration.PREFIX + "sched.";
+
+  /**
+   * Initial offset into future at which to begin newly created schedule,
+   * to allow for time scheduler takes to run.  Not yet implemented.
+   */
+  public static final String PARAM_INITIAL_OFFSET =
+    PREFIX + "initialOffset";
+  private static final long DEFAULT_INITIAL_OFFSET =
+    1 * Constants.MINUTE;
+
   private TaskRunner runner = null;
+  private long initialOffset = DEFAULT_INITIAL_OFFSET;
 
   public SchedService() {}
 
@@ -82,6 +94,15 @@ public class SchedService extends BaseLockssDaemonManager {
     runner = null;
 
     super.stopService();
+  }
+
+  public void setConfig(Configuration config, Configuration oldConfig,
+			Configuration.Differences changedKeys) {
+    if (changedKeys.contains(PREFIX)) {
+      initialOffset =
+	config.getTimeInterval(PARAM_INITIAL_OFFSET,
+			       DEFAULT_INITIAL_OFFSET);
+    }
   }
 
   /** Attempt to add a task to the schedule.

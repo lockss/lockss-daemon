@@ -1,10 +1,10 @@
 /*
- * $Id: TestSortScheduler.java,v 1.7 2005-10-05 23:12:40 troberts Exp $
+ * $Id: TestSortScheduler.java,v 1.8 2008-02-15 09:14:41 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -47,6 +47,7 @@ public class TestSortScheduler extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     TimeBase.setSimulated();
+    ConfigurationUtil.setFromArgs(SortScheduler.PARAM_OVERHEAD_LOAD, "0");
     taskSet1();
     taskSet2();
   }
@@ -462,7 +463,7 @@ public class TestSortScheduler extends LockssTestCase {
   }
 
   public void testBackHintDelayDueToMaxLoad() {
-    ConfigurationUtil.setFromArgs(SortScheduler.PARAM_MAX_BACKGROUND_LOAD,
+    ConfigurationUtil.addFromArgs(SortScheduler.PARAM_MAX_BACKGROUND_LOAD,
 				  "25");
     BackgroundTask b1 = bTask(100, 200, .5);
     BackgroundTask b2 = bTask(200, 300, .5);
@@ -482,7 +483,7 @@ public class TestSortScheduler extends LockssTestCase {
   }
 
   public void testBackHintDelayDueToMaxLoadBetween() {
-    ConfigurationUtil.setFromArgs(SortScheduler.PARAM_MAX_BACKGROUND_LOAD,
+    ConfigurationUtil.addFromArgs(SortScheduler.PARAM_MAX_BACKGROUND_LOAD,
 				  "25");
     BackgroundTask b1 = bTask(100, 200, .5);
     BackgroundTask b2 = bTask(200, 300, .5);
@@ -496,7 +497,7 @@ public class TestSortScheduler extends LockssTestCase {
   }
 
   public void testBackHintUnaffectedByMaxLoad() {
-    ConfigurationUtil.setFromArgs(SortScheduler.PARAM_MAX_BACKGROUND_LOAD,
+    ConfigurationUtil.addFromArgs(SortScheduler.PARAM_MAX_BACKGROUND_LOAD,
 				  "50");
     BackgroundTask b1 = bTask(100, 200, .5);
     BackgroundTask b2 = bTask(200, 300, .5);
@@ -547,8 +548,7 @@ public class TestSortScheduler extends LockssTestCase {
   public void testHard2() {
     List sh1 = ListUtil.list(
 			     chunk(h6, 100, 133, 33, false),
-			     chunk(h7, 133, 150, 17, false),
-			     chunk(h7, 150, 166, 16),
+			     chunk(h7, 133, 166, 33),
 			     chunk(h6, 166, 200, 34),
 			     chunk(h3, 200, 235, 35),
 			     chunk(h2, 235, 270, 35),
@@ -575,8 +575,7 @@ public class TestSortScheduler extends LockssTestCase {
 
     List sh1 = ListUtil.list(
 			     chunk(h6a, 105, 133, 28, false),
-			     chunk(h7, 133, 150, 17, false),
-			     chunk(h7, 150, 166, 16),
+			     chunk(h7, 133, 166, 33),
 			     chunk(h6a, 166, 200, 34),
 			     chunk(h3, 200, 235, 35),
 			     chunk(h2, 235, 270, 35),
@@ -614,16 +613,14 @@ public class TestSortScheduler extends LockssTestCase {
   public void testBHard2() {
     Schedule.Event exparr[] = {
       chunk(h6, 100, 133, 33, false),
-      chunk(h7, 133, 150, 17, false),
-      chunk(h7, 150, 166, 16),
+      chunk(h7, 133, 166, 33),
       chunk(h6, 166, 200, 34),
       chunk(h3, 200, 235, 35),
       chunk(h2, 235, 270, 35),
       chunk(h1, 270, 300, 30, false),
       bevent(b1, 300, Schedule.EventType.START),
       chunk(h4b, 300, 344, 40),
-      chunk(h5, 344, 349, 5, false),
-      chunk(h5, 350, 400, 45),
+      chunk(h5, 344, 400, 50),
       bevent(b1, 400, Schedule.EventType.FINISH),
       chunk(h1, 400, 450, 50)
     };

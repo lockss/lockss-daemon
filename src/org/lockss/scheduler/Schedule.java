@@ -1,10 +1,10 @@
 /*
- * $Id: Schedule.java,v 1.7 2005-10-11 05:46:42 tlipkis Exp $
+ * $Id: Schedule.java,v 1.8 2008-02-15 09:14:41 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -238,6 +238,10 @@ public class Schedule {
       return task;
     }
 
+    public Deadline getStart() {
+      return start;
+    }
+
     public Deadline getFinish() {
       return finish;
     }
@@ -267,6 +271,25 @@ public class Schedule {
 
     public boolean isTaskEnd() {
       return taskEnd;
+    }
+
+    public boolean extend(Chunk ch) {
+      if (isContiguous(ch)) {
+	if (log.isDebug3()) {
+	  log.debug3("extending " + this + ", " + ch);
+	}
+	finish = ch.getFinish();
+	runTime += ch.getRunTime();
+	taskEnd = ch.isTaskEnd();
+	interval = null;
+	return true;
+      } else {
+	return false;
+      }
+    }
+
+    public boolean isContiguous(Chunk ch) {
+      return task == ch.getTask() && finish.equals(ch.getStart());
     }
 
     public boolean equals(Object o) {
