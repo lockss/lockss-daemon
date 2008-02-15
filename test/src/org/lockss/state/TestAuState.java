@@ -1,10 +1,10 @@
 /*
- * $Id: TestAuState.java,v 1.11 2008-01-30 00:55:11 tlipkis Exp $
+ * $Id: TestAuState.java,v 1.12 2008-02-15 09:16:15 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -153,7 +153,7 @@ public class TestAuState extends LockssTestCase {
   public void testPollStarted() throws Exception {
     MyAuState aus = new MyAuState(mau, historyRepo);
     assertEquals(-1, aus.getLastTopLevelPollTime());
-    assertEquals(-1, aus.getLastPollAttempt());
+    assertEquals(-1, aus.getLastPollStart());
     assertEquals(-1, aus.getLastPollResult());
     assertFalse(aus.isPollActive());
     assertNull(historyRepo.theAuState);
@@ -162,7 +162,7 @@ public class TestAuState extends LockssTestCase {
     aus.pollStarted();
     // these should now reflect the previoud poll, not the active one
     assertEquals(-1, aus.getLastTopLevelPollTime());
-    assertEquals(-1, aus.getLastPollAttempt());
+    assertEquals(-1, aus.getLastPollStart());
     assertEquals(-1, aus.getLastPollResult());
     assertTrue(aus.isPollActive());
     assertNotNull(historyRepo.theAuState);
@@ -170,7 +170,7 @@ public class TestAuState extends LockssTestCase {
     TimeBase.setSimulated(t2);
     aus.pollFinished(V3Poller.POLLER_STATUS_ERROR, "Plorg");
     assertEquals(-1, aus.getLastTopLevelPollTime());
-    assertEquals(t1, aus.getLastPollAttempt());
+    assertEquals(t1, aus.getLastPollStart());
     assertEquals(V3Poller.POLLER_STATUS_ERROR, aus.getLastPollResult());
     assertEquals("Plorg", aus.getLastPollResultMsg());
     assertFalse(aus.isPollActive());
@@ -178,14 +178,14 @@ public class TestAuState extends LockssTestCase {
     TimeBase.setSimulated(t3);
     aus.pollFinished(V3Poller.POLLER_STATUS_COMPLETE, "Syrah");
     assertEquals(t3, aus.getLastTopLevelPollTime());
-    assertEquals(t1, aus.getLastPollAttempt());
+    assertEquals(t1, aus.getLastPollStart());
     assertEquals(V3Poller.POLLER_STATUS_COMPLETE, aus.getLastPollResult());
     assertEquals("Syrah", aus.getLastPollResultMsg());
     assertFalse(aus.isPollActive());
 
     aus = aus.simulateStoreLoad();
     assertEquals(t3, aus.getLastTopLevelPollTime());
-    assertEquals(t1, aus.getLastPollAttempt());
+    assertEquals(t1, aus.getLastPollStart());
     assertEquals(V3Poller.POLLER_STATUS_COMPLETE, aus.getLastPollResult());
     assertEquals("Syrah", aus.getLastPollResultMsg());
     assertFalse(aus.isPollActive());
@@ -193,7 +193,7 @@ public class TestAuState extends LockssTestCase {
     TimeBase.setSimulated(t4);
     aus.pollStarted();
     assertEquals(t3, aus.getLastTopLevelPollTime());
-    assertEquals(t1, aus.getLastPollAttempt());
+    assertEquals(t1, aus.getLastPollStart());
     assertEquals(V3Poller.POLLER_STATUS_COMPLETE, aus.getLastPollResult());
     assertEquals("Syrah", aus.getLastPollResultMsg());
   }

@@ -1,10 +1,10 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.68 2008-01-30 00:55:11 tlipkis Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.69 2008-02-15 09:16:15 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -295,12 +295,12 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
   public void testStoreAuState() throws Exception {
     HashSet strCol = new HashSet();
     strCol.add("test");
-    AuState origState = new AuState(mau, 123000, 123123,
-				  41, "woop woop",
-				  321000, 222000, 3, "pollres",
-				  456000, strCol,
-				  AuState.AccessType.OpenAccess,
-				  2, 1.0, repository);
+    AuState origState = new AuState(mau,
+				    123000, 123123, 41, "woop woop",
+				    321000, 222000, 3, "pollres",
+				    456000, strCol,
+				    AuState.AccessType.OpenAccess,
+				    2, 1.0, repository);
     repository.storeAuState(origState);
 
     String filePath = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath,
@@ -316,7 +316,7 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
     assertEquals(41, loadedState.getLastCrawlResult());
     assertEquals("woop woop", loadedState.getLastCrawlResultMsg());
     assertEquals(321000, loadedState.getLastTopLevelPollTime());
-    assertEquals(222000, loadedState.getLastPollAttempt());
+    assertEquals(222000, loadedState.getLastPollStart());
     assertEquals(3, loadedState.getLastPollResult());
     assertEquals("pollres", loadedState.getLastPollResultMsg());
     assertEquals(2, loadedState.getClockssSubscriptionStatus());
@@ -402,7 +402,7 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
     assertEquals(1234, auState.getLastCrawlTime());
     assertEquals(4321, auState.getLastCrawlAttempt());
     assertEquals(4321, auState.getLastTopLevelPollTime());
-    assertEquals(5555, auState.getLastPollAttempt());
+    assertEquals(5555, auState.getLastPollStart());
     assertEquals(mau.getAuId(), auState.getArchivalUnit().getAuId());
 
     fis = new FileInputStream(xmlFile);
@@ -415,7 +415,7 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
     assertEquals(1234, auState.getLastCrawlTime());
     assertEquals(4321, auState.getLastCrawlAttempt());
     assertEquals(4321, auState.getLastTopLevelPollTime());
-    assertEquals(5555, auState.getLastPollAttempt());
+    assertEquals(5555, auState.getLastPollStart());
     assertEquals(mau.getAuId(), auState.getArchivalUnit().getAuId());
 
     auState = new AuState(mau, 123, 321, 321, 333,

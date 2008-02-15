@@ -1,10 +1,10 @@
 /*
- * $Id: MockAuState.java,v 1.19 2008-01-30 00:55:11 tlipkis Exp $
+ * $Id: MockAuState.java,v 1.20 2008-02-15 09:16:15 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -63,18 +63,18 @@ public class MockAuState extends AuState {
 
   public MockAuState(ArchivalUnit au,
 		     long lastCrawlTime, long lastCrawlAttempt,
-		     long lastPollTime, long lastPollAttempt,
+		     long lastPollTime, long lastPollStart,
                      long lastTreeWalk, HistoryRepository historyRepo) {
-    this(au, lastCrawlTime, lastCrawlAttempt, lastPollTime, lastPollAttempt,
+    this(au, lastCrawlTime, lastCrawlAttempt, lastPollTime, lastPollStart,
 	 lastTreeWalk, null, historyRepo);
   }
 
   public MockAuState(ArchivalUnit au,
 		     long lastCrawlTime, long lastCrawlAttempt,
-		     long lastPollTime, long lastPollAttempt,
+		     long lastPollTime, long lastPollStart,
                      long lastTreeWalk, HashSet crawlUrls,
                      HistoryRepository historyRepo) {
-    super(au, lastCrawlTime, lastCrawlAttempt, lastPollTime, lastPollAttempt,
+    super(au, lastCrawlTime, lastCrawlAttempt, lastPollTime, lastPollStart,
 	  lastTreeWalk, crawlUrls, 0, 1.0, historyRepo);
   }
 

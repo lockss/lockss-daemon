@@ -1,10 +1,10 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.80 2008-01-30 00:55:12 tlipkis Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.81 2008-02-15 09:16:15 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -167,7 +167,7 @@ public class HistoryRepositoryImpl
                          auState.getLastCrawlResult(),
                          auState.getLastCrawlResultMsg(),
                          auState.getLastTopLevelPollTime(),
-                         auState.getLastPollAttempt(),
+                         auState.getLastPollStart(),
                          auState.getLastPollResult(),
                          auState.getLastPollResultMsg(),
                          -1,
