@@ -1,10 +1,10 @@
 /*
- * $Id: TestXmlPropertyLoader.java,v 1.20 2007-01-23 21:44:37 smorabito Exp $
+ * $Id: TestXmlPropertyLoader.java,v 1.21 2008-02-15 19:43:02 edwardsb1 Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -831,6 +831,66 @@ public class TestXmlPropertyLoader extends LockssTestCase {
     assertNull(m_props.get("org.lockss.test.j"));
     assertNull(m_props.get("org.lockss.nulltest.g"));
     assertEquals("bar", m_props.get("org.lockss.nulltest.h"));
+  }
+
+  /* The following test comes from Issue 2790.  Here's the bug:
+
+     This construct resulted in machines in the test group (which are not
+     in the prod group) not getting any of the props in the <then> clause.
+
+    <if>
+      <and>
+        <test group="test" />
+        <not> <test group="prod" /> </not>
+      </and>
+
+      <then>
+        <property name="id.initialV3PeerList">
+        ...
+      </then>
+    </if>
+  */
+
+  public void testNotWithAnd2() throws Exception {
+    PropertyTree props = new PropertyTree();
+    InputStream istr;
+    StringBuffer sb;
+
+    sb = new StringBuffer();
+    sb.append("<if>\n");
+    sb.append("  <and>\n");
+    sb.append("    <test group=\"test\" />\n");
+    sb.append("    <not> <test group=\"prod\" /> </not>\n");
+    sb.append("  </and>\n");
+    sb.append("  <then>\n");
+    sb.append("    <property name=\"result\" value=\"foo\" />\n");
+    sb.append("  </then>\n");
+    sb.append("  <else>\n");
+    sb.append("    <property name=\"result\" value=\"bar\" />\n");
+    sb.append("  </else>\n");
+    sb.append("</if>\n");
+
+    // T
+    props = new PropertyTree();
+    istr = new ReaderInputStream(new StringReader(sb.toString()));
+    setVersions(null, null, null, "test");
+    m_xmlPropertyLoader.loadProperties(props, istr);
+    assertEquals("foo", props.getProperty("result"));
+
+    // F, type 1
+    props = new PropertyTree();
+    istr = new ReaderInputStream(new StringReader(sb.toString()));
+    setVersions(null, null, null, "prod");
+    m_xmlPropertyLoader.loadProperties(props, istr);
+    assertEquals("bar", props.getProperty("result"));
+
+    // F, type 2
+    props = new PropertyTree();
+    istr = new ReaderInputStream(new StringReader(sb.toString()));
+    setVersions(null, null, null, "experimental");
+    m_xmlPropertyLoader.loadProperties(props, istr);
+    assertEquals("bar", props.getProperty("result"));
+
   }
 
   /**
