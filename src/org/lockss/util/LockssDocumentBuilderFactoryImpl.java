@@ -1,10 +1,10 @@
 /*
- * $Id: LockssDocumentBuilderFactoryImpl.java,v 1.4 2005-10-11 05:48:30 tlipkis Exp $
+ * $Id: LockssDocumentBuilderFactoryImpl.java,v 1.5 2008-02-15 09:16:44 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -55,14 +55,14 @@ public class LockssDocumentBuilderFactoryImpl extends DocumentBuilderFactory {
   public LockssDocumentBuilderFactoryImpl() {
 //     fact = new org.apache.crimson.jaxp.DocumentBuilderFactoryImpl();
     fact = new org.apache.xerces.jaxp.DocumentBuilderFactoryImpl();
-    log.debug2("Created fact: " + fact);
+    log.debug3("Created fact: " + fact);
   }
 
   /** Forward to real factory, set error handler */
   public DocumentBuilder newDocumentBuilder()
       throws ParserConfigurationException {
     DocumentBuilder db = fact.newDocumentBuilder();
-    log.debug2("Created builder: " + db);
+    log.debug3("Created builder: " + db);
     db.setErrorHandler(new MyErrorHandler());
     return db;
   }
