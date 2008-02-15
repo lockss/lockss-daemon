@@ -1,10 +1,10 @@
 /*
- * $Id: TestConfiguration.java,v 1.10 2007-05-23 02:26:54 tlipkis Exp $
+ * $Id: TestConfiguration.java,v 1.11 2008-02-15 09:06:28 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -449,6 +449,48 @@ public class TestConfiguration extends LockssTestCase {
     try {
       config.getPercentage("p6");
       fail("getPercentage(foo) should throw");
+    } catch (Configuration.InvalidParam e) {
+    }
+  }
+
+  public void testDouble() throws Exception {
+    Properties props = new Properties();
+    props.put("p1", "-1");
+    props.put("p2", "0");
+    props.put("p3", "0.0");
+    props.put("p4", "1.0");
+    props.put("p5", "-10.25");
+    props.put("p6", "foo");
+    props.put("p7", "1.4e16");
+    props.put("p8", "1.4e-16");
+    props.put("p9", "10.0xx");
+    Configuration config = ConfigurationUtil.fromProps(props);
+    assertEquals(-1.0, config.getDouble("p1"), 0.0000001);
+    assertEquals(-1.0, config.getDouble("p1", 0.1), 0.0000001);
+    assertEquals(0.0, config.getDouble("p2"));
+    assertEquals(0.0, config.getDouble("p2"), 0.0);
+    assertEquals(0.0, config.getDouble("p3"));
+    assertEquals(0.0, config.getDouble("p3"), 0.0);
+    assertEquals(1.0, config.getDouble("p4"));
+    assertEquals(1.0, config.getDouble("p4"), 0.0);
+    assertEquals(-10.25, config.getDouble("p5"));
+    assertEquals(-10.25, config.getDouble("p5"), 0.0);
+    assertEquals(0.5, config.getDouble("p6", 0.5), 0.0);
+    assertEquals(14000000000000000.0, config.getDouble("p7"), 10);
+    assertEquals(14000000000000000.0, config.getDouble("p7", 0.1), 10);
+    assertEquals(0.00000000000000014, config.getDouble("p8"),
+		 .000000000000000001);
+    assertEquals(0.00000000000000014, config.getDouble("p8", 0.1),
+		 .000000000000000001);
+
+    try {
+      config.getDouble("p6");
+      fail("getDouble(foo) should throw");
+    } catch (Configuration.InvalidParam e) {
+    }
+    try {
+      config.getDouble("p9");
+      fail("getDouble(10.0xx) should throw");
     } catch (Configuration.InvalidParam e) {
     }
   }

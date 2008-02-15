@@ -1,10 +1,10 @@
 /*
- * $Id: CurrentConfig.java,v 1.4 2007-08-01 04:49:47 tlipkis Exp $
+ * $Id: CurrentConfig.java,v 1.5 2008-02-15 09:06:28 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2001-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2001-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -130,6 +130,22 @@ public class CurrentConfig {
       return dfault;
     }
     return cur.getTimeInterval(key, dfault);
+  }
+
+  /** Static convenience method to get param from current configuration.
+   */
+  public static double getDoubleParam(String key) throws InvalidParam {
+    return getCurrentConfig().getDouble(key);
+  }
+
+  /** Static convenience method to get param from current configuration.
+   */
+  public static double getDoubleParam(String key, double dfault) {
+    Configuration cur = getCurrentConfig();
+    if (cur == null) {
+      return dfault;
+    }
+    return cur.getDouble(key, dfault);
   }
 
   /** Static convenience method to get a <code>Configuration</code>

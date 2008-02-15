@@ -1,10 +1,10 @@
 /*
- * $Id: Configuration.java,v 1.22 2007-05-23 02:26:54 tlipkis Exp $
+ * $Id: Configuration.java,v 1.23 2008-02-15 09:06:28 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2001-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2001-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -484,6 +484,39 @@ public abstract class Configuration {
       return (float)dfault;
     }
     return ((float)val) / 100.0f;
+  }
+
+  /** Parse the config value as a floating point value
+   * @param key the configuration parameter name
+   * @return a double
+   * @throws Configuration.InvalidParam if the value is missing or not an
+   * float.
+   */
+  public double getDouble(String key) throws InvalidParam {
+    String val = get(key);
+    try {
+      return Double.parseDouble(val);
+    } catch (NumberFormatException e) {
+      throw newInvalid("Not a float value: ", key, val);
+    }
+  }
+
+  /** Parse the config value as a floating point value
+   * @param key the configuration parameter name
+   * @param dfault the default value
+   * @return a double
+   */
+  public double getDouble(String key, double dfault) {
+    String val = get(key);
+    if (val == null) {
+      return dfault;
+    }
+    try {
+      return Double.parseDouble(val);
+    } catch (NumberFormatException e) {
+      log.warning("getInt(\'" + key + "\") = \"" + val + "\"");
+      return dfault;
+    }
   }
 
   InvalidParam newInvalid(String msg, String key, String val) {
