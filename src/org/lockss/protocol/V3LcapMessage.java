@@ -1,9 +1,9 @@
 /*
- * $Id: V3LcapMessage.java,v 1.36 2008-01-30 00:53:56 tlipkis Exp $
+ * $Id: V3LcapMessage.java,v 1.37 2008-02-15 09:13:16 tlipkis Exp $
  */
 
 /*
- Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
@@ -96,6 +96,12 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     },
     NAK_TOO_MANY_VOTERS {
       public String toString() { return "Voter Limit"; }
+    },
+    NAK_HASH_TIMEOUT {
+      public String toString() { return "Hash Timeout"; }
+    },
+    NAK_HASH_ERROR {
+      public String toString() { return "Hash Error"; }
     }
    };
 
