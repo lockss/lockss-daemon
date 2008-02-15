@@ -1,10 +1,10 @@
 /*
- * $Id: V3Poller.java,v 1.69 2008-02-05 02:28:55 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.70 2008-02-15 09:10:28 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -122,7 +122,7 @@ public class V3Poller extends BasePoll {
   /** The maximum allowable number of simultaneous V3 Pollers */
   public static final String PARAM_MAX_SIMULTANEOUS_V3_POLLERS =
     PREFIX + "maxSimultaneousV3Pollers";
-  public static final int DEFAULT_MAX_SIMULTANEOUS_V3_POLLERS = 20;
+  public static final int DEFAULT_MAX_SIMULTANEOUS_V3_POLLERS = 10;
 
   /** If true, drop participants from this poll that do not send
    * outer circle nominees. */
@@ -149,7 +149,7 @@ public class V3Poller extends BasePoll {
    * participate.
    */
   public static final long DEFAULT_TIME_BETWEEN_INVITATIONS =
-    2 * 60 * 1000; // 2 minutes;
+    2 * Constants.MINUTE;
   
   /** The maximum number of peers to invite into the poll during each
    * followup invitation phase.
@@ -171,6 +171,16 @@ public class V3Poller extends BasePoll {
   public static final boolean DEFAULT_DELETE_EXTRA_FILES =
     true;
   
+  /**
+   * Directory in which to store message data.
+   */
+  public static final String PARAM_V3_MESSAGE_REL_DIR =
+    PREFIX + "messageRelDir";
+  // Default is for production.  Override this for
+  // testing.
+  public static final String DEFAULT_V3_MESSAGE_REL_DIR =
+    "v3state";
+
   /** The maximum allowable duration for a V3 poll */
   public static final String PARAM_MAX_POLL_DURATION =
     PREFIX + "maxPollDuration";
@@ -182,39 +192,59 @@ public class V3Poller extends BasePoll {
   public static long DEFAULT_MIN_POLL_DURATION = 10 * Constants.MINUTE;
 
   /**
-   * Directory in which to store message data.
+   * Multiplier to apply to the estimated hash duration to produce target
+   * vote duration
    */
-  public static final String PARAM_V3_MESSAGE_REL_DIR =
-    PREFIX + "messageRelDir";
-  // Default is for production.  Override this for
-  // testing.
-  public static final String DEFAULT_V3_MESSAGE_REL_DIR =
-    "v3state";
+  public static final String PARAM_VOTE_DURATION_MULTIPLIER =
+    PREFIX + "voteDurationMultiplier";
+  public static final int DEFAULT_VOTE_DURATION_MULTIPLIER = 4;
 
+  /**
+   * Padding to add to target vote duration
+   */
+  public static final String PARAM_VOTE_DURATION_PADDING =
+    PREFIX + "voteDurationPadding";
+  public static final long DEFAULT_VOTE_DURATION_PADDING =
+    5 * Constants.MINUTE;
+
+  /*
+   * Multiplier to apply to the estimated hash duration to produce target
+   * tally duration
+   */
   public static final String PARAM_TALLY_DURATION_MULTIPLIER =
     PREFIX + "tallyDurationMultiplier";
   public static final int DEFAULT_TALLY_DURATION_MULTIPLIER = 5;
 
+  /**
+   * Padding to add to target tally duration
+   */
   public static final String PARAM_TALLY_DURATION_PADDING =
     PREFIX + "tallyDurationPadding";
   public static final long DEFAULT_TALLY_DURATION_PADDING =
     5 * Constants.MINUTE;
   
   /**
-   * An optional multiplier to apply to the estimated hash duration
-   * when computing the vote deadline.  This can be fine-tuned with
-   * the voteDeadlinePadding paramter as well.
+   * Extra time to allow for vote receipts (and repairs)?
    */
-  public static final String PARAM_VOTE_DURATION_MULTIPLIER =
-    PREFIX + "voteDurationMultiplier";
-  public static final int DEFAULT_VOTE_DURATION_MULTIPLIER = 4;
-  /**
-   * Padding to add to the scheduled vote deadline, in ms.
-   */
-  public static final String PARAM_VOTE_DURATION_PADDING =
-    PREFIX + "voteDurationPadding";
-  public static final long DEFAULT_VOTE_DURATION_PADDING =
+  public static final String PARAM_RECEIPT_PADDING =
+    PREFIX + "receiptPadding";
+  public static final long DEFAULT_RECEIPT_PADDING =
     5 * Constants.MINUTE;
+  
+  /**
+   * Factor by which to extend poll duration and try again to find
+   * schedulable time
+   */
+  public static final String PARAM_POLL_EXTEND_MULTIPLIER =
+    PREFIX + "pollExtendMultiplier";
+  public static final double DEFAULT_POLL_EXTEND_MULTIPLIER = 2.0;
+
+  /**
+   * Max factor by which to extend poll duration
+   */
+  public static final String PARAM_MAX_POLL_EXTEND_MULTIPLIER =
+    PREFIX + "maxPollExtendMultiplier";
+  public static final int DEFAULT_MAX_POLL_EXTEND_MULTIPLIER = 10;
 
   public static final String PARAM_V3_TRUSTED_WEIGHT =
     PREFIX + "trustedWeight";
@@ -248,7 +278,7 @@ public class V3Poller extends BasePoll {
   public static final String PARAM_V3_EXTRA_POLL_TIME =
     PREFIX + "extraPollTime";
   public static final long DEFAULT_V3_EXTRA_POLL_TIME = 
-    1000 * 60 * 20; // 20 minutes
+    20 * Constants.MINUTE;
 
   /**
    * The probability of requesting a repair from other caches.
@@ -320,6 +350,8 @@ public class V3Poller extends BasePoll {
   private VoteTallyCallback voteTallyCallback;
   private boolean isAsynch;
 
+  private long tallyEnd;
+
   // Probability of repairing from another cache.  A number between
   // 0.0 and 1.0.
   // CR: not a percentage; fix name
@@ -345,8 +377,11 @@ public class V3Poller extends BasePoll {
       throws V3Serializer.PollSerializerException {
     this.theDaemon = daemon;
     this.pollManager = daemon.getPollManager();
-    isAsynch = pollManager.isAsynch();
     this.idManager = daemon.getIdentityManager();
+
+    isAsynch = pollManager.isAsynch();
+    setConfig();
+
     if (hashAlg == null) hashAlg = LcapMessage.DEFAULT_HASH_ALGORITHM;
     // If the hash algorithm is not available, fail the poll immediately.
     try {
@@ -356,12 +391,10 @@ public class V3Poller extends BasePoll {
                                          " is not supported");
     }
     this.serializer = new V3PollerSerializer(theDaemon);
+    long pollEnd = TimeBase.nowMs() + duration;
 
-    // Get set-up information from config.
-    // CR: move to beginning of constructor
-    setConfig();
-
-    pollerState = new PollerStateBean(spec, orig, key, duration,
+    pollerState = new PollerStateBean(spec, orig, key,
+				      duration, pollEnd,
                                       outerCircleTarget,
                                       quorum, hashAlg);
 
@@ -369,10 +402,14 @@ public class V3Poller extends BasePoll {
 
     // The vote deadline is the deadline by which all voters must have
     // voted.
-    long voteDeadline = TimeBase.nowMs() +
-                        PollUtil.estimateVoteDuration(estimatedHashTime);
+    TimeInterval tallyWindow = PollUtil.calcV3TallyWindow(estimatedHashTime,
+							  duration);
+    // XXX account for message send time?
+    long voteDeadline = tallyWindow.getBeginTime();
 
     pollerState.setVoteDeadline(voteDeadline);
+
+    tallyEnd = tallyWindow.getEndTime();
 
     // Checkpoint the poll.
     checkpointPoll();
@@ -411,6 +448,7 @@ public class V3Poller extends BasePoll {
     }
     pollerState.setCachedUrlSet(cus);
     pollerState.setPollSpec(new PollSpec(cus, Poll.V3_POLL));
+
     // Restore the peers for this poll.
     try {
       restoreParticipants();
@@ -492,12 +530,11 @@ public class V3Poller extends BasePoll {
   boolean reserveScheduleTime(int maxParticipants) {
     CachedUrlSet cus = this.getCachedUrlSet();
     long hashEst = cus.estimatedHashDuration();
-    long receiptBuffer = calculateReceiptBuffer(hashEst);
+    long receiptBuffer = calculateReceiptBuffer();
     long now = TimeBase.nowMs();
     
     // Estimate of when the vote is over and we can start tallying
-    Deadline earliestStart =
-      Deadline.at(now + PollUtil.estimateVoteDuration(hashEst));
+    Deadline earliestStart = Deadline.at(pollerState.getVoteDeadline());
     Deadline latestFinish =
       Deadline.at(getDeadline().getExpirationTime() - receiptBuffer);
 
@@ -517,10 +554,11 @@ public class V3Poller extends BasePoll {
     boolean suc = theDaemon.getSchedService().scheduleTask(task);
     if (!suc) {
       String msg = "No time for V3 Poller in poll " + getKey() + ". " +
-                   " Requested time for step task with earliest start at " +
-                   earliestStart +", latest finish at " + latestFinish + ", " +
-                   "with an estimated hash duration of " + hashEst +
-                   "ms as of " + TimeBase.nowDate();
+	" Requested time for step task with earliest start at " +
+	earliestStart +", latest finish at " + latestFinish + ", " +
+	"with an estimated hash duration of " +
+	StringUtil.timeIntervalToString(hashEst) +
+	"ms as of " + TimeBase.nowDate();
       pollerState.setErrorDetail(msg);
       log.warning(msg);
     }
@@ -528,20 +566,10 @@ public class V3Poller extends BasePoll {
     return suc;
   }
   
-  // CR: add fixed (configurable) amount of time to end of poll.  No reason
-  // to be proportional to hash time or connect timeout
-  private long calculateReceiptBuffer(long hashEst) {
-    // Latest time that we want to stop tallying.  This is our deadline.
-    // But we must also reserve a little time to send receipts, so we subtract
-    // a small buffer from the end (currently the SComm Timeout).
-    // This buffer may never be more than 5% of the total estimated tally
-    // duration!
-    long estimatedTallyDuration = PollUtil.estimateTallyDuration(hashEst);
-    long estReceiptBuffer =
-      CurrentConfig.getLongParam(BlockingStreamComm.PARAM_CONNECT_TIMEOUT,
-                                 BlockingStreamComm.DEFAULT_CONNECT_TIMEOUT);
-    long maxReceiptBuffer = (long)(0.05 * estimatedTallyDuration);
-    return Math.min(estReceiptBuffer, maxReceiptBuffer);    
+  private long calculateReceiptBuffer() {
+    return
+      CurrentConfig.getLongParam(PARAM_RECEIPT_PADDING,
+				 DEFAULT_RECEIPT_PADDING);
   }
 
   /**
@@ -660,7 +688,8 @@ public class V3Poller extends BasePoll {
     voteTallyCallback = new VoteTallyCallback();
 
     log.debug("Scheduling V3 poll " + pollerState.getPollKey() +
-              " to complete by " + pollerState.getPollDeadline());
+              " to complete by " +
+	      Deadline.restoreDeadlineAt(pollerState.getPollDeadline()));
 
     Deadline voteCompleteDeadline = null;
     Deadline pollDeadline = null;
@@ -674,14 +703,15 @@ public class V3Poller extends BasePoll {
       voteCompleteDeadline = Deadline.at(pollerState.getVoteDeadline());
       pollDeadline = Deadline.at(pollerState.getPollDeadline());
     }
+    tallyEnd = pollerState.getPollDeadline() - calculateReceiptBuffer();
 
     // Schedule the vote tally callback.  The poll will tally votes no earlier
     // than this deadline.
     if ((voteCompleteDeadline.expired() &&
-        pollerState.votedPeerCount() <= pollerState.getQuorum()) ||
+        pollerState.votedPeerCount() < pollerState.getQuorum()) ||
         pollDeadline.expired()) {
-      log.info("Poll expired before tallying could complete: " +
-               pollerState.getPollKey());
+      log.warning("Poll expired before tallying could complete: " +
+		  pollerState.getPollKey());
       stopPoll(V3Poller.POLLER_STATUS_EXPIRED);
       return;
     } else {
@@ -730,7 +760,7 @@ public class V3Poller extends BasePoll {
       // Set up an event on the timer queue to check for accepted peers.
       // If we haven't got enough peers, invite more.
       log.debug("Scheduling check for more peers to invite in " +
-                timeBetweenInvitations + "ms.");
+                StringUtil.timeIntervalToString(timeBetweenInvitations));
       invitationRequest = 
         TimerQueue.schedule(Deadline.in(timeBetweenInvitations),
                             new InvitationCallback(), this);
@@ -806,11 +836,9 @@ public class V3Poller extends BasePoll {
       log.debug2("Cancelling poll completion timer event.");
       TimerQueue.cancel(pollCompleteRequest);
     }
-    // Reset the duration and deadline to reflect reality
-    long oldDeadline = pollerState.getPollDeadline();
-    long now = TimeBase.nowMs();
-    pollerState.setPollDeadline(now);
-    pollerState.setDuration(now - pollerState.getCreateTime());
+//     // Reset the duration to reflect reality
+//     pollerState.setDuration(TimeBase.nowMs() - pollerState.getCreateTime());
+
     // Clean up any lingering participants.
     synchronized(theParticipants) {
       for (ParticipantUserData ud : theParticipants.values()) {
@@ -1987,15 +2015,15 @@ public class V3Poller extends BasePoll {
 
     long delta = lastPollInvitationTime - lastMessageTime;
     
-    if (delta <= 1000L*60L*60L*24L*5) {           // < 5 days, or negative
+    if (delta <= 5 * Constants.DAY) {           // < 5 days, or negative
       return 1.0;
-    } else if (delta <= 1000L*60L*60L*24L*15) {   // < 15 days
+    } else if (delta <= 15 * Constants.DAY) {   // < 15 days
       return 5.0/6.0;
-    } else if (delta <= 1000L*60L*60L*24L*30) {   // < 30 days
+    } else if (delta <= 30 * Constants.DAY) {   // < 30 days
       return 4.0/6.0;
-    } else if (delta <= 1000L*60L*60L*24L*60) {   // < 60 days
+    } else if (delta <= 60 * Constants.DAY) {   // < 60 days
       return 3.0/6.0;
-    } else if (delta <= 1000L*60L*60L*24L*90) {   // < 90 days
+    } else if (delta <= 90 * Constants.DAY) {   // < 90 days
       return 2.0/6.0;
     } else {                                      // > 90 days
       return 1.0/6.0;
@@ -2101,6 +2129,7 @@ public class V3Poller extends BasePoll {
 	  // XXX move to state machine
 	  switch (ud.getStatus()) {
 	  case PEER_STATUS_WAITING_POLL_ACK:
+	  case PEER_STATUS_NO_RESPONSE:
 	    removeParticipant(id, PEER_STATUS_NO_RESPONSE);
 	    break;
 	  default:
@@ -2124,7 +2153,7 @@ public class V3Poller extends BasePoll {
         //      existing step task.
         if (task != null) task.cancel();
         if (!scheduleHash(pollerState.getCachedUrlSet(),
-                          Deadline.at(pollerState.getPollDeadline()),
+                          Deadline.at(tallyEnd),
                           new HashingCompleteCallback(),
                           new BlockEventHandler())) {
           log.error("No time available to schedule our hash for poll "

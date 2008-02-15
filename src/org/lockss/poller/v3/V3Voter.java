@@ -1,10 +1,10 @@
 /*
- * $Id: V3Voter.java,v 1.51 2008-02-05 02:28:55 tlipkis Exp $
+ * $Id: V3Voter.java,v 1.52 2008-02-15 09:10:28 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -47,6 +47,7 @@ import org.lockss.plugin.*;
 import org.lockss.poller.*;
 import org.lockss.poller.v3.V3Serializer.PollSerializerException;
 import org.lockss.protocol.*;
+import org.lockss.protocol.V3LcapMessage.PollNak;
 import org.lockss.protocol.psm.*;
 import org.lockss.repository.RepositoryNode;
 import org.lockss.scheduler.*;
@@ -137,7 +138,16 @@ public class V3Voter extends BasePoll {
    * wait for a receipt message.
    */
   public static final String PARAM_RECEIPT_PADDING = PREFIX + "receiptPadding";
-  public static final long DEFAULT_RECEIPT_PADDING = 1000 * 60 * 10; // 10m
+  public static final long DEFAULT_RECEIPT_PADDING = 10 * Constants.MINUTE;
+
+  /** 
+   * Guess as to how long after we accept we'll get a vote request.
+   * S.b. used to send vote request deadline to poller
+   */
+  public static final String PARAM_VOTE_REQUEST_DELAY =
+    PREFIX + "voteRequestDelay";
+  public static final long DEFAULT_VOTE_REQUEST_DELAY =
+    30 * Constants.SECOND;
 
   private PsmInterp stateMachine;
   private VoterUserData voterUserData;
@@ -175,7 +185,7 @@ public class V3Voter extends BasePoll {
     long duration = msg.getDuration() + padding;
 
     log.debug3("Creating V3 Voter for poll: " + msg.getKey() +
-               "; duration=" + duration);
+               "; duration=" + StringUtil.timeIntervalToString(duration));
 
     pollSerializer = new V3VoterSerializer(theDaemon);
     
@@ -234,8 +244,8 @@ public class V3Voter extends BasePoll {
     if (min < 0) min = 0;
     if (max < 0) max = 0;
     if (min > max) {
-      log.warning("Impossible nomination size range (" + (max - min) 
-                  + "). Using min size.");
+      log.warning("Nomination size min (" +  min + ") > max (" + max
+                  + "). Using min.");
       nomineeCount = min;
     } else if (min == max) {
       log.debug2("Minimum nominee size is same as maximum nominee size: " +
@@ -324,7 +334,7 @@ public class V3Voter extends BasePoll {
     long now = TimeBase.nowMs();
 
     // Ensure the vote deadline has not already passed.
-    if (voteDeadline < now) {
+    if (voteDeadline <= now) {
       String msg = "Vote deadline has already "
         + "passed.  Can't reserve schedule time.";
       voterUserData.setErrorDetail(msg);
@@ -332,8 +342,19 @@ public class V3Voter extends BasePoll {
       return false;
     }
     
-    long voteDuration = voteDeadline - now;
+    long voteReqDelay =
+      CurrentConfig.getTimeIntervalParam(PARAM_VOTE_REQUEST_DELAY,
+                                         DEFAULT_VOTE_REQUEST_DELAY);
 
+    Deadline earliestStart = Deadline.at(now + voteReqDelay);
+    // CR: eliminate reservation task; schedule hash here
+
+    long messageSendPadding = calculateMessageSendPadding(estimatedHashDuration);
+
+    Deadline latestFinish =
+      Deadline.at(voterUserData.getVoteDeadline() - messageSendPadding);
+
+    long voteDuration = latestFinish.minus(earliestStart);
     if (estimatedHashDuration > voteDuration) {
       String msg = "Estimated hash duration (" 
         + StringUtil.timeIntervalToString(estimatedHashDuration) 
@@ -343,14 +364,6 @@ public class V3Voter extends BasePoll {
       log.warning(msg);
       return false;
     }
-
-    Deadline earliestStart = Deadline.at(now + estimatedHashDuration);
-    // CR: eliminate reservation task; schedule hash here
-
-    long messageSendPadding = calculateMessageSendPadding(estimatedHashDuration);
-
-    Deadline latestFinish =
-      Deadline.at(voterUserData.getVoteDeadline() - messageSendPadding);
 
     TaskCallback tc = new TaskCallback() {
       public void taskEvent(SchedulableTask task, EventType type) {
@@ -401,7 +414,18 @@ public class V3Voter extends BasePoll {
 	}
       };
   }
-	  
+
+  private void sendNak(PollNak nak) {
+    V3LcapMessage msg = voterUserData.makeMessage(V3LcapMessage.MSG_POLL_ACK);
+    msg.setVoterNonce(null);
+    msg.setNak(nak);
+    try {
+      sendMessageTo(msg, getPollerId());
+    } catch (IOException ex) {
+      log.error("Unable to send POLL NAK message in poll " + getKey(), ex);
+    }
+  }
+
   /**
    * <p>Start the V3Voter running and participate in the poll.  Called by
    * {@link org.lockss.poller.v3.V3PollFactory} when a vote request message
@@ -441,14 +465,7 @@ public class V3Voter extends BasePoll {
       }
       log.debug("Found enough time to participate in poll " + getKey());
     } else {
-      V3LcapMessage nak = voterUserData.makeMessage(V3LcapMessage.MSG_POLL_ACK);
-      nak.setVoterNonce(null);
-      nak.setNak(V3LcapMessage.PollNak.NAK_NO_TIME);
-      try {
-        this.sendMessageTo(nak, this.getPollerId());
-      } catch (IOException ex) {
-        log.error("Unable to send POLL NAK message in poll " + getKey(), ex);
-      }
+      sendNak(V3LcapMessage.PollNak.NAK_NO_TIME);
       stopPoll(STATUS_NO_TIME);
       return;
     }
@@ -750,7 +767,6 @@ public class V3Voter extends BasePoll {
     // If we've received a vote request, send our vote right away.  Otherwise,
     // wait for a vote request.
     log.debug("Hashing complete for poll " + voterUserData.getPollKey());
-    voterUserData.hashingDone(true);
     String errmsg = "State machine error";
     if (isAsynch) {
       stateMachine.enqueueEvent(V3Events.evtHashingDone,
@@ -887,11 +903,13 @@ public class V3Voter extends BasePoll {
         hashComplete();
       } else {
         if (e instanceof SchedService.Timeout) {
-          stopPoll(STATUS_EXPIRED);
           log.warning("Hash deadline passed before the hash was finished.");
+	  sendNak(V3LcapMessage.PollNak.NAK_HASH_TIMEOUT);
+          stopPoll(STATUS_EXPIRED);
         } else {
           log.warning("Hash failed : " + e.getMessage(), e);
           voterUserData.setErrorDetail(e.getMessage());
+	  sendNak(V3LcapMessage.PollNak.NAK_HASH_ERROR);
           abortPoll();
         }
       }

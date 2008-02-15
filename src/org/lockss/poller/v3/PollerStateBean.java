@@ -1,9 +1,9 @@
 /*
- * $Id: PollerStateBean.java,v 1.29 2007-10-09 00:49:55 smorabito Exp $
+ * $Id: PollerStateBean.java,v 1.30 2008-02-15 09:10:28 tlipkis Exp $
  */
 
 /*
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -106,12 +106,12 @@ public class PollerStateBean implements LockssSerializable {
   protected PollerStateBean() {}
 
   public PollerStateBean(PollSpec spec, PeerIdentity orig, String pollKey,
-                         long duration, int outerCircleTarget,
-                         int quorum, String hashAlg) {
+                         long duration, long pollDeadline,
+			 int outerCircleTarget, int quorum, String hashAlg) {
     this.pollerId = orig;
     this.pollKey = pollKey;
     this.duration = duration;
-    this.pollDeadline = Deadline.in(duration).getExpirationTime();
+    this.pollDeadline = pollDeadline;
     this.outerCircleTarget = outerCircleTarget;
     this.auId = spec.getAuId();
     this.protocolVersion = spec.getProtocolVersion();
