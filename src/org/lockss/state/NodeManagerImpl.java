@@ -1,9 +1,9 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.217 2008-01-30 00:55:12 tlipkis Exp $
+ * $Id: NodeManagerImpl.java,v 1.218 2008-02-15 09:12:46 tlipkis Exp $
  */
 
 /*
- Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
@@ -1438,19 +1438,6 @@ public class NodeManagerImpl
       return a_vote.getPollKey();
     }
     return "";
-  }
-
-  /**
-   * Convenience method to call a top-level V3 content poll.
-   */
-  void callV3ContentPoll() {
-    PollSpec spec = new PollSpec(managedAu.getAuCachedUrlSet(), Poll.V3_POLL);
-    logger.debug2("Calling a V3 Content Poll on " + spec);
-    if (pollManager.callPoll(spec) == null) {
-      if (logger.isDebug2()) {
-        logger.debug2("Failed to call a top level poll on " + spec);
-      }
-    }
   }
 
   /**

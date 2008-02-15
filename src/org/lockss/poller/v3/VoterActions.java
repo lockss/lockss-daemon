@@ -1,10 +1,10 @@
 /*
- * $Id: VoterActions.java,v 1.20 2008-01-27 06:46:04 tlipkis Exp $
+ * $Id: VoterActions.java,v 1.21 2008-02-15 09:12:46 tlipkis Exp $
  */
 
 /*
 
- Copyright (c) 2000-2002 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -76,21 +76,6 @@ public class VoterActions {
     return V3Events.evtOk;
   }
   
-  /* 
-   * Verify whether the poller is in our platform group.  If they
-   * are not, return false.
-   */
-  private static boolean isOurGroup(V3LcapMessage msgIn) {
-    List ourGroups = msgIn.getGroupList();
-    List pollerGroups = ConfigManager.getPlatformGroupList();
-
-    log.debug2("Our groups: " + ourGroups +
-               "; Their groups: " + pollerGroups);
-
-    return pollerGroups != null && CollectionUtils.containsAny(ourGroups,
-                                                               pollerGroups);
-  }
-
   @ReturnEvents("evtOk,evtError")
   @SendMessages("msgPollAck")
   public static PsmEvent handleSendPollAck(PsmEvent evt, PsmInterp interp) {

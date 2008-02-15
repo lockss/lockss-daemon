@@ -1,10 +1,10 @@
 /*
- * $Id: PsmToDot.java,v 1.1 2008-01-27 06:48:41 tlipkis Exp $
+ * $Id: PsmToDot.java,v 1.2 2008-02-15 09:12:46 tlipkis Exp $
  */
 
 /*
 
- Copyright (c) 2000-2002 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -384,7 +384,6 @@ public class PsmToDot {
       }
       List<String> msgs = getMsgs(method);
       if (msgs != null) {
-	log.info("foo: " + msgs);
 	for (String msg : msgs) {
 	  label += ("\\l  -> " + msg);
 	}
@@ -472,7 +471,6 @@ public class PsmToDot {
   static String replaceStrings(String template,
 			       String pat1, String sub1,
 			       String pat2, String sub2) {
-    String foo = StringUtil.replaceString(StringUtil.replaceString(template, pat1, sub1), pat2, sub2);
     return StringUtil.replaceString(StringUtil.replaceString(template, pat1, sub1), pat2, sub2);
   }
 
