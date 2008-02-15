@@ -1,10 +1,10 @@
 /*
- * $Id: CrawlManagerStatusAccessor.java,v 1.18 2007-10-04 21:36:35 tlipkis Exp $
+ * $Id: CrawlManagerStatusAccessor.java,v 1.19 2008-02-15 09:07:38 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -379,6 +379,9 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
     }
 
     public Object getOverview(String tableName, BitSet options) {
+      if (!statusSource.isCrawlerEnabled()) {
+	return "Crawler disabled";
+      }
       List res = new ArrayList();
       boolean includeInternalAus = options.get(StatusTable.OPTION_DEBUG_USER);
       CrawlManagerStatus cms = statusSource.getStatus();

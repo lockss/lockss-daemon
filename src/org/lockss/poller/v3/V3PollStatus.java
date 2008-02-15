@@ -1,10 +1,10 @@
 /*
-* $Id: V3PollStatus.java,v 1.21 2008-01-30 08:31:52 tlipkis Exp $
+* $Id: V3PollStatus.java,v 1.22 2008-02-15 09:07:37 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,6 +37,7 @@ import java.text.*;
 import org.lockss.daemon.status.*;
 import org.lockss.daemon.status.StatusService.*;
 import org.lockss.daemon.status.StatusTable.SummaryInfo;
+import org.lockss.config.*;
 import org.lockss.util.*;
 import org.lockss.app.*;
 import org.lockss.plugin.*;
@@ -143,6 +144,12 @@ public class V3PollStatus {
     private List getSummary(PollManager pollManager) {
       List summary = new ArrayList();
       V3PollStatusAccessor status = pollManager.getV3Status();
+      if (!CurrentConfig.getBooleanParam(V3PollFactory.PARAM_ENABLE_V3_POLLER,
+					 V3PollFactory.DEFAULT_ENABLE_V3_POLLER)) { 
+	summary.add(new StatusTable.SummaryInfo("Polling is disabled",
+						ColumnDescriptor.TYPE_STRING,
+						null));
+      }
       if (status.getNextPollStartTime() != null) {
         long remainingTime = status.getNextPollStartTime().getRemainingTime();
         String timeStr = remainingTime > 0 ?
@@ -249,6 +256,7 @@ public class V3PollStatus {
     public void populateTable(StatusTable table)
         throws StatusService.NoSuchTableException {
       table.setColumnDescriptors(colDescs);
+      table.setSummaryInfo(getSummary(pollManager));
       table.setDefaultSortRules(sortRules);
       table.setRows(getRows());
     }
@@ -283,6 +291,17 @@ public class V3PollStatus {
 						  voter.getKey()));
       return row;
     }
+
+    private List getSummary(PollManager pollManager) {
+      List summary = new ArrayList();
+      if (!CurrentConfig.getBooleanParam(V3PollFactory.PARAM_ENABLE_V3_VOTER,
+					 V3PollFactory.DEFAULT_ENABLE_V3_VOTER)) { 
+	summary.add(new StatusTable.SummaryInfo("Voting is disabled",
+						ColumnDescriptor.TYPE_STRING,
+						null));
+      }
+      return summary;
+    }
   }
 
   public static class PollOverview
@@ -293,6 +312,10 @@ public class V3PollStatus {
     }
 
     public Object getOverview(String tableName, BitSet options) {
+      if (!CurrentConfig.getBooleanParam(V3PollFactory.PARAM_ENABLE_V3_POLLER,
+					 V3PollFactory.DEFAULT_ENABLE_V3_POLLER)) { 
+	return "Polling Disabled";
+      }
       int nActive = 0;
       int nNoQuorum = 0;
       int nComplete = 0;
@@ -342,6 +365,10 @@ public class V3PollStatus {
     }
 
     public Object getOverview(String tableName, BitSet options) {
+      if (!CurrentConfig.getBooleanParam(V3PollFactory.PARAM_ENABLE_V3_VOTER,
+					 V3PollFactory.DEFAULT_ENABLE_V3_VOTER)) { 
+	return "Voting disabled";
+      }
       int nActive = 0;
       int nError = 0;
       int nComplete = 0;
@@ -402,7 +429,9 @@ public class V3PollStatus {
                     new ColumnDescriptor("peerStatus", "Status",
                                          ColumnDescriptor.TYPE_STRING),
                     new ColumnDescriptor("state", "PSM State",
-                                         ColumnDescriptor.TYPE_STRING));
+                                         ColumnDescriptor.TYPE_STRING),
+                    new ColumnDescriptor("when", "When",
+                                         ColumnDescriptor.TYPE_DATE));
 
     public V3PollerStatusDetail(PollManager pollManager) {
       super(pollManager);
@@ -460,6 +489,10 @@ public class V3PollStatus {
 	PsmState state = interp.getCurrentState();
 	if (state != null) {
 	  row.put("state", state.getName());
+	  long when = interp.getLastStateChange();
+	  if (when > 0) {
+	    row.put("when", when);
+	  }
 	}
       }	
       return row;
