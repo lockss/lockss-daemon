@@ -1,5 +1,5 @@
 /*
- * $Id: TestAmericanChemicalSocietyUrlNormalizer.java,v 1.2 2008-02-06 18:11:39 thib_gc Exp $
+ * $Id: TestAmericanChemicalSocietyUrlNormalizer.java,v 1.3 2008-02-16 03:53:57 thib_gc Exp $
  */
 
 /*
@@ -47,13 +47,17 @@ public class TestAmericanChemicalSocietyUrlNormalizer extends LockssTestCase {
     }
   }
 
-  public void testRemovesSessionId() throws Exception{
+  public void testNormalizesSessionId() throws Exception{
     AmericanChemicalSocietyUrlNormalizer norm = new AmericanChemicalSocietyUrlNormalizer();
     String[] urls = {
-	"http://pubs.acs.org/cgi-bin/abstract.cgi/cmatex/1989/1/i01/f-pdf/f_cm00001a001.pdf?sessid=6963",
+	"http://pubs.acs.org/cgi-bin/abstract.cgi/cmatex/1989/1/i01/f-pdf/f_cm00001a001.pdf?sessid=9",
+        "http://pubs.acs.org/cgi-bin/abstract.cgi/cmatex/1989/1/i01/f-pdf/f_cm00001a001.pdf?sessid=9999",
+        "http://pubs.acs.org/cgi-bin/abstract.cgi/cmatex/1989/1/i01/f-pdf/f_cm00001a001.pdf?sessid=99999999",
     };
     String[] normUrls = {
-	"http://pubs.acs.org/cgi-bin/abstract.cgi/cmatex/1989/1/i01/f-pdf/f_cm00001a001.pdf",
+	"http://pubs.acs.org/cgi-bin/abstract.cgi/cmatex/1989/1/i01/f-pdf/f_cm00001a001.pdf?sessid=LOCKSS",
+        "http://pubs.acs.org/cgi-bin/abstract.cgi/cmatex/1989/1/i01/f-pdf/f_cm00001a001.pdf?sessid=LOCKSS",
+        "http://pubs.acs.org/cgi-bin/abstract.cgi/cmatex/1989/1/i01/f-pdf/f_cm00001a001.pdf?sessid=LOCKSS",
     };
     for (int ix = 0; ix < urls.length; ix++) {
       assertEquals(normUrls[ix], norm.normalizeUrl(urls[ix], null));
