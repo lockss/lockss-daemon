@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingStreamComm.java,v 1.32 2008-02-15 09:12:11 tlipkis Exp $
+ * $Id: BlockingStreamComm.java,v 1.33 2008-02-19 01:35:27 dshr Exp $
  */
 
 /*
@@ -1015,7 +1015,7 @@ public class BlockingStreamComm
       java.security.cert.Certificate[] certs = session.getPeerCertificates();
       log.debug(session.getPeerHost() + " via " + session.getProtocol() + " verified");
     } catch (SSLPeerUnverifiedException ex) {
-      log.error(s.getInetAddress() + " threw " + ex);
+      log.error(s.getInetAddress() + " not verified");
       try {
         s.close();
       } catch (IOException ex2) {
