@@ -1,5 +1,5 @@
 /*
- * $Id: StatusTable.java,v 1.50 2007-08-15 07:09:37 tlipkis Exp $
+ * $Id: StatusTable.java,v 1.51 2008-02-19 01:42:07 tlipkis Exp $
  */
 
 /*
@@ -724,12 +724,14 @@ public class StatusTable {
 	  returnVal = compareHandlingNulls((Comparable)valA, (Comparable)valB);
 	  break;
 	case ColumnDescriptor.TYPE_STRING:
-	  if ( !(valA instanceof String) && valA != null && logger.isDebug2())
-	    logger.debug2("StatusTable.compare: valA not String but " +
-			  valA.getClass().toString());
-	  if ( !(valB instanceof String) && valB != null && logger.isDebug2())
-	    logger.debug2("StatusTable.compare: valB not String but " +
-			  valB.getClass().toString());
+	  // These warning are spruious; any object with a toString() can
+	  // be used as TYPE_STRING
+// 	  if ( !(valA instanceof String) && valA != null && logger.isDebug2())
+// 	    logger.debug2("StatusTable.compare: valA not String but " +
+// 			  valA.getClass().toString());
+// 	  if ( !(valB instanceof String) && valB != null && logger.isDebug2())
+// 	    logger.debug2("StatusTable.compare: valB not String but " +
+// 			  valB.getClass().toString());
 	  returnVal = compareHandlingNulls((Comparable)valA, (Comparable)valB);
 	  break;
 	default: //if we don't know the type, assume comparable
