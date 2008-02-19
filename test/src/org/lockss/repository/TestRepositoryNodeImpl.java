@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.56 2007-12-19 05:14:18 tlipkis Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.57 2008-02-19 23:34:27 edwardsb1 Exp $
  */
 
 /*
@@ -56,6 +56,8 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
   private String tempDirPath;
   MockArchivalUnit mau;
 
+  private MockIdentityManager idmgr;
+  
   Properties props;
 
   public void setUp() throws Exception {
@@ -68,6 +70,12 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     mau = new MockArchivalUnit();
 
     theDaemon = getMockLockssDaemon();
+    
+    // Create the identity manager...
+    idmgr = new MockIdentityManager();
+    theDaemon.setIdentityManager(idmgr);
+    idmgr.initService(theDaemon);
+    
     repo = (MyLockssRepositoryImpl)MyLockssRepositoryImpl.createNewLockssRepository(mau);
     theDaemon.setAuManager(LockssDaemon.LOCKSS_REPOSITORY, mau, repo);
     repo.initService(theDaemon);
@@ -154,6 +162,11 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     PeerIdentity testid_2 = new MockPeerIdentity("TCP:[192.168.0.2]:9723");
     PeerIdentity testid_3 = new MockPeerIdentity("TCP:[192.168.0.3]:9723");
     PeerIdentity testid_4 = new MockPeerIdentity("TCP:[192.168.0.4]:9723");
+    
+    idmgr.addPeerIdentity(testid_1.getIdString(), testid_1);
+    idmgr.addPeerIdentity(testid_2.getIdString(), testid_2);
+    idmgr.addPeerIdentity(testid_3.getIdString(), testid_3);
+    idmgr.addPeerIdentity(testid_4.getIdString(), testid_4);
     
     leaf.signalAgreement(ListUtil.list(testid_1, testid_3));
 

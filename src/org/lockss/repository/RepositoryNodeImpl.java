@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.77 2008-02-15 09:12:10 tlipkis Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.78 2008-02-19 23:33:30 edwardsb1 Exp $
  */
 
 /*
@@ -166,6 +166,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
   protected File nodePropsFile = null;
   protected File agreementFile = null;
   protected File tempAgreementFile = null;
+//  protected File ppisAgreementFile = null;
   protected File currentCacheFile;
   protected File currentPropsFile;
   File tempCacheFile;
@@ -958,15 +959,24 @@ public class RepositoryNodeImpl implements RepositoryNode {
   }
   
   public synchronized boolean hasAgreement(PeerIdentity id) {
-    Set agreeingPeers = loadAgreementHistory();
-    return (agreeingPeers.contains(id.getIdString()));
+    PersistentPeerIdSet agreeingPeers = loadAgreementHistory();
+    try {
+      return agreeingPeers.contains(id);
+    } catch (IOException e) {
+      return false;
+    }
   }
   
   public synchronized void signalAgreement(Collection peers) {
-    Set agreeingPeers = loadAgreementHistory();
+    PersistentPeerIdSet agreeingPeers = loadAgreementHistory();
     for (Iterator it = peers.iterator(); it.hasNext(); ) {
-      String key = ((PeerIdentity)it.next()).getIdString();
-      agreeingPeers.add(key);
+      PeerIdentity key = (PeerIdentity)it.next();
+      try {
+        agreeingPeers.add(key);
+      } catch (IOException e) {
+        logger.debug("signalAgreement: IO Exception: " + e.getMessage());
+        return;   /* TODO: Should this pass up an exception? */
+      }
     }
     storeAgreementHistory(agreeingPeers);
   }
@@ -1083,28 +1093,32 @@ public class RepositoryNodeImpl implements RepositoryNode {
   /**
    * Return a set of PeerIdentity keys that have agreed with this node.
    * 
-   * JAVA15: Set<String>
+   * The previous version of this routine used 'Set<String>' (without declaring
+   * that it was a set of String)'.  This version returns a PersistentPeerIdSet.
    */
-  Set loadAgreementHistory() {
-    if (agreementFile == null) {
+  PersistentPeerIdSet loadAgreementHistory() {
+    PersistentPeerIdSet ppisReturn;
+ 
+     if (agreementFile == null) {
       initAgreementFile();
     }
+    
     DataInputStream is = null;
     try {
-      if (agreementFile.exists()) {
-        is = new DataInputStream(new FileInputStream(agreementFile));
-        return decodeAgreementHistory(is);
-      } else {
-        // Return an empty (but mutable) set.
-        return new HashSet();
-      }
+//      ppisReturn = new PersistentPeerIdSetImpl(ppisAgreementFile, repository.getDaemon().getIdentityManager());
+      ppisReturn = new PersistentPeerIdSetImpl(agreementFile, repository.getDaemon().getIdentityManager());
+      ppisReturn.load();
+      
     } catch (Exception e) {
-      logger.error("Error loading agreement history", e);
+      logger.error("Error loading agreement history" + e.getMessage());
       throw new LockssRepository.RepositoryStateException("Couldn't load agreement file.");
     } finally {
       IOUtil.safeClose(is);
     }
+    
+    return ppisReturn;
   }
+  
   
   /** Consume the input stream, decoding peer identity keys  */
   Set decodeAgreementHistory(DataInputStream is) {
@@ -1141,7 +1155,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
    * Store a list of agreement histories.
    * @param peers A list of peer keys for which agreement has been found.
    */
-  synchronized void storeAgreementHistory(Collection peers) {
+  synchronized void storeAgreementHistory(PersistentPeerIdSet peers) {
     DataOutputStream dos = null;
     if (tempAgreementFile == null) {
       initTempAgreementFile();
@@ -1154,11 +1168,12 @@ public class RepositoryNodeImpl implements RepositoryNode {
       boolean errors = false;
       outer:
       do {
+        peers.load();
         dos = new DataOutputStream(new FileOutputStream(tempAgreementFile));
-        for (Iterator it = peers.iterator(); it.hasNext(); ) {
-          String key = (String)it.next();
+        for (Iterator<PeerIdentity> it = peers.iterator(); it.hasNext(); ) {
+          PeerIdentity key = it.next();
           try {
-            dos.write(IDUtil.encodeTCPKey(key));
+            dos.write(IDUtil.encodeTCPKey(key.getIdString()));
           } catch (IdentityParseException ex) {
             logger.error("Unable to store identity key: " + key);
             // Close the errored file.
@@ -1170,6 +1185,8 @@ public class RepositoryNodeImpl implements RepositoryNode {
             break outer;
           }
         }
+        peers.store();
+
         errors = false;
         if (!PlatformUtil.updateAtomically(tempAgreementFile, agreementFile)) {
           logger.error("Unable to rename temporary agreement history file " +
@@ -1526,6 +1543,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
   
   private void initAgreementFile() {
     agreementFile = new File(nodeLocation, AGREEMENT_FILENAME);
+//    ppisAgreementFile = new File(nodeLocation, AGREEMENT_FILENAME + ".ppis");
   }
   
   private void initTempAgreementFile() {
