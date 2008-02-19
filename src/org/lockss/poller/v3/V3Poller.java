@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.70 2008-02-15 09:10:28 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.71 2008-02-19 01:42:29 tlipkis Exp $
  */
 
 /*
@@ -163,7 +163,7 @@ public class V3Poller extends BasePoll {
     PREFIX + "enableDiscovery";
   public static final boolean DEFAULT_ENABLE_DISCOVERY = true;
 
-  /** If true, just log a message rather than deleting files that are
+  /** If false, just log a message rather than deleting files that are
    * considered to be missing from a majority of peers.
    */
   public static final String PARAM_DELETE_EXTRA_FILES =
@@ -553,12 +553,9 @@ public class V3Poller extends BasePoll {
     };
     boolean suc = theDaemon.getSchedService().scheduleTask(task);
     if (!suc) {
-      String msg = "No time for V3 Poller in poll " + getKey() + ". " +
-	" Requested time for step task with earliest start at " +
-	earliestStart +", latest finish at " + latestFinish + ", " +
-	"with an estimated hash duration of " +
-	StringUtil.timeIntervalToString(hashEst) +
-	"ms as of " + TimeBase.nowDate();
+      String msg = "No room in schedule for" + 
+	StringUtil.timeIntervalToString(hashEst) + " hash between " +
+	earliestStart + " and " + latestFinish + ", at " + TimeBase.nowDate();
       pollerState.setErrorDetail(msg);
       log.warning(msg);
     }
@@ -710,8 +707,9 @@ public class V3Poller extends BasePoll {
     if ((voteCompleteDeadline.expired() &&
         pollerState.votedPeerCount() < pollerState.getQuorum()) ||
         pollDeadline.expired()) {
-      log.warning("Poll expired before tallying could complete: " +
-		  pollerState.getPollKey());
+      String msg = "Poll expired before tallying could complete";
+      log.warning(msg + ": " + pollerState.getPollKey());
+      pollerState.setErrorDetail(msg);
       stopPoll(V3Poller.POLLER_STATUS_EXPIRED);
       return;
     } else {
@@ -1122,9 +1120,11 @@ public class V3Poller extends BasePoll {
           } catch (IOException ex) {
             // On IOExceptions, attempt to move the poll forward. Just skip
             // this block, but be sure to log the error.
-            log.error("IOException while iterating over vote blocks.", ex);
+            log.warning("IOException while iterating over vote blocks.", ex);
             if (++blockErrorCount > maxBlockErrorCount) {
-              pollerState.setErrorDetail("Too many errors during tally");
+	      log.error("Stopping poll after " + blockErrorCount +
+			" IOExceptions while iterating over vote blocks.");
+	      pollerState.setErrorDetail("Too many errors during tally");
               stopPoll(V3Poller.POLLER_STATUS_ERROR);
             }
           } finally {
@@ -1748,7 +1748,6 @@ public class V3Poller extends BasePoll {
     stats.incrementNumPolls(auId);
     // Update the last poll time on the AU.
     AuState auState = theDaemon.getNodeManager(getAu()).getAuState();
-//     auState.pollFinished();
     auState.setV3Agreement(getPercentAgreement());
     stopPoll(POLLER_STATUS_COMPLETE);
   }
@@ -2060,7 +2059,7 @@ public class V3Poller extends BasePoll {
         // Invite  invitationSize more peers to participate.
         Collection newPeers =
           choosePeers(getReferenceList(), theParticipants.keySet(),
-                      invitationSize - participatingPeers);
+                      invitationSize);
 
 	if (newPeers.isEmpty()) {
 	  log.debug("[InvitationCallback] No more peers to invite");
@@ -2152,12 +2151,17 @@ public class V3Poller extends BasePoll {
         // XXX: Refactor when our hash can be associated with an
         //      existing step task.
         if (task != null) task.cancel();
-        if (!scheduleHash(pollerState.getCachedUrlSet(),
+	CachedUrlSet cus = pollerState.getCachedUrlSet();
+        if (!scheduleHash(cus,
                           Deadline.at(tallyEnd),
                           new HashingCompleteCallback(),
                           new BlockEventHandler())) {
-          log.error("No time available to schedule our hash for poll "
-                    + pollerState.getPollKey());
+	  long hashEst = cus.estimatedHashDuration();
+	  String msg = "No time for" + 
+	    StringUtil.timeIntervalToString(hashEst) + " hash between " +
+	    TimeBase.nowDate() + " and " + Deadline.at(tallyEnd);
+          log.error(msg + ": " + pollerState.getPollKey());
+	  pollerState.setErrorDetail(msg);
           stopPoll(POLLER_STATUS_NO_TIME);
         }
         pollerState.hashStarted(true);
