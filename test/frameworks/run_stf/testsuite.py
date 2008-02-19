@@ -180,7 +180,7 @@ class TinyUiTests(LockssTestCase):
     def runTest(self):
         tinyui = self.tinyUiClient.getAdminUi()
         html = tinyui.read()
-        p = re.compile('This LOCKSS cache \(.*\) has not started because it is unable '
+        p = re.compile('This LOCKSS box \(.*\) has not started because it is unable '
                        'to load configuration data', re.MULTILINE | re.DOTALL);
         self.assertMatch(p, html)
         p = re.compile("Shouldn't happen", re.MULTILINE | re.DOTALL | re.I);
