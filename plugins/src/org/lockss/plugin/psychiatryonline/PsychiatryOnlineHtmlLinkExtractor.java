@@ -1,5 +1,5 @@
 /*
- * $Id: PsychiatryOnlineHtmlLinkExtractor.java,v 1.2 2008-02-12 07:59:38 thib_gc Exp $
+ * $Id: PsychiatryOnlineHtmlLinkExtractor.java,v 1.3 2008-02-19 07:51:03 thib_gc Exp $
  */
 
 /*
@@ -80,7 +80,7 @@ public class PsychiatryOnlineHtmlLinkExtractor extends GoslingHtmlLinkExtractor 
 
   protected static Logger logger = Logger.getLogger("PsychiatryOnlineHtmlLinkExtractor");
 
-  protected static final Pattern WINDOW_REFERENCE_PATTERN = RegexpUtil.uncheckedCompile("javascript.*:.*windowReference.*\\([^']*'(?:\\.|[^'\\])*'.*,[^']*'(\\.|[^'\\])*'.*\\).*;",
+  protected static final Pattern WINDOW_REFERENCE_PATTERN = RegexpUtil.uncheckedCompile("javascript.*:.*windowReference.*\\([^']*'(?:\\.|[^'\\\\])*'.*,[^']*'(\\.|[^'\\\\])*'.*\\).*;",
                                                                                         Perl5Compiler.READ_ONLY_MASK);
 
   public static Pattern getWindowReferencePattern() {
