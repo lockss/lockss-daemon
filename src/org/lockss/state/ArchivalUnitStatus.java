@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.66 2008-02-15 09:16:15 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.67 2008-02-19 01:44:23 tlipkis Exp $
  */
 
 /*
@@ -712,8 +712,9 @@ public class ArchivalUnitStatus
 
       StatusTable.SrvLink urlListLink =
 	new StatusTable.SrvLink("URL list",
-				LockssServlet.SERVLET_LIST_URLS,
-				PropUtil.fromArgs("auid", au.getAuId()));
+				LockssServlet.SERVLET_LIST_OBJECTS,
+				PropUtil.fromArgs("type", "urls",
+						  "auid", au.getAuId()));
 
       List res = new ArrayList();
       res.add(new StatusTable.SummaryInfo("Volume",
