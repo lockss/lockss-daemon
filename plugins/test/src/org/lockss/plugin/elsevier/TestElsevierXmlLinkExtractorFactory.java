@@ -1,3 +1,35 @@
+/*
+ * $Id: TestElsevierXmlLinkExtractorFactory.java,v 1.3 2008-02-20 19:11:55 tlipkis Exp $
+ */
+
+/*
+
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+all rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Except as contained in this notice, the name of Stanford University shall not
+be used in advertising or otherwise to promote the sale, use or other dealings
+in this Software without prior written authorization from Stanford University.
+
+*/
+
 package org.lockss.plugin.elsevier;
 
 import java.io.*;
@@ -11,17 +43,13 @@ import org.lockss.plugin.*;
 import org.lockss.plugin.simulated.*;
 import org.lockss.plugin.elsevier.*;
 
-public class TestElsevierXmlLinkExtractorFactory extends LockssTestCase {
+public class TestElsevierXmlLinkExtractorFactory
+  extends LinkExtractorTestCase {
+
   private static Logger logger =
     Logger.getLogger("TestElsevierXmlLinkExtractorFactory");
-  protected LinkExtractorFactory lef = null;
-  protected LinkExtractor le = null;
-  ArchivalUnit au = null;
-  String encoding = null;
+
   String srcUrl = "http://www.example.com/";
-  LinkExtractor.Callback cb = null;
-  InputStream in = null;
-  Hashtable calledBack = new Hashtable();
 
   private static final String withLinks =
     "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
@@ -51,50 +79,24 @@ public class TestElsevierXmlLinkExtractorFactory extends LockssTestCase {
     "01407007.tar", "03064530.tar", "dataset.toc",
   };
 
-  public void setUp() {
-    lef = new ElsevierXmlLinkExtractorFactory();
-    au = new SimulatedArchivalUnit();
-    cb = new MyCallback();
+  public String getMimeType() {
+    return "text/xml";
   }
 
-  public void testReturnsCorrectClass() throws Exception {
-    assertNotNull("factory is null", lef);
-    assertTrue("factory isn't a LinkExtractorFactory",
-	       lef instanceof LinkExtractorFactory);
-    Object o = lef.createLinkExtractor("text/xml");
-    assertNotNull("factory returns null", o);
-    assertTrue("Return is not LinkExtractor", o instanceof LinkExtractor);
+  public LinkExtractorFactory getFactory() {
+    return new ElsevierXmlLinkExtractorFactory();
   }
 
   public void testFindCorrectEntries () throws Exception {
-    le = lef.createLinkExtractor("text/xml");
-    in = new StringInputStream(withLinks);
-    for (int i = 0; i < links.length; i++) {
-      logger.debug3("Looking for " + srcUrl + links[i]);
-      calledBack.put(srcUrl + links[i], links[i]);
+    Set expected = new HashSet();
+    for (String link : links) {
+      expected.add(srcUrl + link);
     }
-
-    le.extractUrls(au, in, encoding, srcUrl, cb);
-    assertTrue("Some links missed", calledBack.isEmpty());
+    assertEquals(expected, extractUrls(withLinks));
   }
 
   public void testFindNoEntries () throws Exception {
-    le = lef.createLinkExtractor("text/xml");
-    in = new StringInputStream(withoutLinks);
-    le.extractUrls(au, in, encoding, srcUrl, cb);
-  }
-
-  private class MyCallback implements LinkExtractor.Callback {
-    MyCallback() {
-    }
-
-    public void foundLink(String url) {
-      logger.debug3("Found link " + url);
-      assertTrue(url + " doesn't start with " + srcUrl,
-		 url.startsWith(srcUrl));
-      assertTrue(url + " unexpected", calledBack.containsKey(url));
-      calledBack.remove(url);
-    }
+    assertEmpty(extractUrls(withoutLinks));
   }
 
  }

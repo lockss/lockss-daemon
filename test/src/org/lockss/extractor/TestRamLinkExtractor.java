@@ -1,5 +1,5 @@
 /*
- * $Id: TestRamLinkExtractor.java,v 1.2 2007-02-07 19:32:21 thib_gc Exp $
+ * $Id: TestRamLinkExtractor.java,v 1.3 2008-02-20 19:11:55 tlipkis Exp $
  */
 
 /*
@@ -34,150 +34,124 @@ package org.lockss.extractor;
 
 import java.io.*;
 import java.util.*;
+import junit.framework.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
 
-public class TestRamLinkExtractor extends LockssTestCase {
-  static String ENC = Constants.DEFAULT_ENCODING;
+public abstract class TestRamLinkExtractor extends LinkExtractorTestCase {
 
-  private RamLinkExtractor extractor = null;
-  private MyLinkExtractorCallback cb = null;
-  private MockArchivalUnit mau;
 
-  public void setUp() throws Exception {
-    super.setUp();
-    mau = new MockArchivalUnit();
-    extractor = RamLinkExtractor.makeBasicRamLinkExtractor();
-    cb = new MyLinkExtractorCallback();
+  public String getMimeType() {
+    return MIME_TYPE_RAM;
   }
 
-  public void testThrows() throws IOException {
-    try {
-      extractor.extractUrls(mau, null, ENC, "http://www.example.com/",
-			    new MyLinkExtractorCallback());
-      fail("Calling extractUrls with a null InputStream should have thrown");
-    } catch (IllegalArgumentException iae) {
-    }
-    try {
-      extractor.extractUrls(mau, new StringInputStream("blah"), ENC,
-			    "http://www.example.com/", null);
-      fail("Calling extractUrls with a null callback should have thrown");
-    } catch (IllegalArgumentException iae) {
-    }
-  }
-
-  private Set parseSourceForUrls(String source) throws IOException {
-    MockCachedUrl mcu = new MockCachedUrl("http://www.example.com/blah.ram");
-    mcu.setContent(source);
-
-    String enc = Constants.DEFAULT_ENCODING;
-
-    extractor.extractUrls(new MockArchivalUnit(),
-			  mcu.getUnfilteredInputStream(),
-			  enc, mcu.getUrl(), cb);
-    return cb.getFoundUrls();
-  }
-
-  public void testEmptyFileReturnsNoLinks() throws IOException {
-    assertEquals(SetUtil.set(), parseSourceForUrls(""));
-  }
-
-  public void testSingleLink() throws IOException {
-    assertEquals(SetUtil.set("http://www.example.com/blah.rm"),
-		 parseSourceForUrls("http://www.example.com/blah.rm"));
-  }
-
-  public void testSingleLinkWithSpaces() throws IOException {
-    assertEquals(SetUtil.set("http://www.example.com/blah.rm"),
-		 parseSourceForUrls(" \t  http://www.example.com/blah.rm  "));
-  }
-
-  //verify that we don't fetch links that start with rtsp:// by default
-  public void testBadLink() throws IOException {
-    assertEquals(SetUtil.set(),
-		 parseSourceForUrls("rtsp://www.example.com/blah.rm"));
-  }
-
-  public void testIgnoresCaseInProtocol() throws IOException {
-    assertEquals(SetUtil.set("http://www.example.com/blah.rm"),
-		 parseSourceForUrls("HTTP://www.example.com/blah.rm"));
-  }
-
-  public void testIgnoresCaseInHost() throws IOException {
-    assertEquals(SetUtil.set("http://www.EXAMPLE.com/blah.rm"),
-		 parseSourceForUrls("http://www.EXAMPLE.com/blah.rm"));
-  }
-  public void testDoesntIgnoreCaseInPath() throws IOException {
-    assertEquals(SetUtil.set("http://www.example.com/BLAH.rm"),
-		 parseSourceForUrls("http://www.example.com/BLAH.rm"));
-  }
-
-  public void testIgnoresComments() throws IOException {
-    Set expected = SetUtil.set("http://www.example.com/blah.rm",
-			       "http://www.example.com/blah3.rm");
-    Set actual = parseSourceForUrls("http://www.example.com/blah.rm\n"+
-				    "#http://www.example.com/blah2.rm\n\n"+
-				    "http://www.example.com/blah3.rm\n");
-    assertEquals(expected, actual);
-  }
-
-  public void testStripsParams() throws IOException {
-    Set expected = SetUtil.set("http://www.example.com/blah.rm",
-			       "http://www.example.com/blah3.rm");
-    Set actual =
-      parseSourceForUrls("http://www.example.com/blah.rm?blah=blah\n"+
-			 "http://www.example.com/blah3.rm?blah2=blah2&blah3=asdf\n");
-    assertEquals(expected, actual);
-  }
-
-  public void testMultipleLinks() throws IOException {
-    Set expected = SetUtil.set("http://www.example.com/blah.rm",
-			       "http://www.example.com/blah2.rm",
-			       "http://www.example.com/blah3.rm");
-    Set actual = parseSourceForUrls("http://www.example.com/blah.rm\n"+
-				    "http://www.example.com/blah2.rm\n\n"+
-				    "http://www.example.com/blah3.rm\n");
-    assertEquals(expected, actual);
-  }
-
-  public void testTranslateUrls() throws IOException {
-    extractor =
-      RamLinkExtractor.makeTranslatingRamLinkExtractor("rtsp://www.example.com/",
-						       "http://www.example.com/media/");
-
-    Set expected = SetUtil.set("http://www.example.com/media/blah.rm",
-			       "http://www.example.com/blah2.rm",
-			       "http://www.example.com/media/blah3.rm");
-    Set actual = parseSourceForUrls("rtsp://www.example.com/blah.rm\n"+
-				    "http://www.example.com/blah2.rm\n\n"+
-				    "rtsp://www.example.com/blah3.rm\n");
-    assertEquals(expected, actual);
-  }
-
-  public void testTranslateUrlsHandlesCase() throws IOException {
-    extractor =
-      RamLinkExtractor.makeTranslatingRamLinkExtractor("rtsp://www.example.com/",
-						       "http://www.example.com/media/");
-
-    Set expected = SetUtil.set("http://www.example.com/media/blah.rm",
-			       "http://www.example.com/media/blah2.rm",
-			       "http://www.example.com/media/blah3.rm");
-    Set actual = parseSourceForUrls("rtsp://www.example.com/blah.rm\n"+
-				    "rtsp://www.EXAMPLE.com/blah2.rm\n\n"+
-				    "RTSP://www.example.com/blah3.rm\n");
-    assertEquals(expected, actual);
-  }
-
-  private class MyLinkExtractorCallback implements LinkExtractor.Callback {
-    Set foundUrls = new HashSet();
-
-    public void foundLink(String url) {
-      foundUrls.add(url);
+  public static class TestSimple extends TestRamLinkExtractor {
+    public LinkExtractorFactory getFactory() {
+      return new LinkExtractorFactory() {
+	  public LinkExtractor createLinkExtractor(String mimeType) {
+	    return RamLinkExtractor.makeBasicRamLinkExtractor();
+	  }
+	};
     }
 
-    public Set getFoundUrls() {
-      return foundUrls;
+    public void testSingleLink() throws Exception {
+      assertEquals(SetUtil.set("http://www.example.com/blah.rm"),
+		   extractUrls("http://www.example.com/blah.rm"));
     }
+
+    public void testSingleLinkWithSpaces() throws Exception {
+      assertEquals(SetUtil.set("http://www.example.com/blah.rm"),
+		   extractUrls(" \t  http://www.example.com/blah.rm  "));
+    }
+
+    //verify that we don't fetch links that start with rtsp:// by default
+    public void testBadLink() throws Exception {
+      assertEquals(SetUtil.set(),
+		   extractUrls("rtsp://www.example.com/blah.rm"));
+    }
+
+    public void testIgnoresCaseInProtocol() throws Exception {
+      assertEquals(SetUtil.set("http://www.example.com/blah.rm"),
+		   extractUrls("HTTP://www.example.com/blah.rm"));
+    }
+
+    public void testIgnoresCaseInHost() throws Exception {
+      assertEquals(SetUtil.set("http://www.EXAMPLE.com/blah.rm"),
+		   extractUrls("http://www.EXAMPLE.com/blah.rm"));
+    }
+
+    public void testDoesntIgnoreCaseInPath() throws Exception {
+      assertEquals(SetUtil.set("http://www.example.com/BLAH.rm"),
+		   extractUrls("http://www.example.com/BLAH.rm"));
+    }
+
+    public void testIgnoresComments() throws Exception {
+      Set expected = SetUtil.set("http://www.example.com/blah.rm",
+				 "http://www.example.com/blah3.rm");
+      Set actual = extractUrls("http://www.example.com/blah.rm\n"+
+			       "#http://www.example.com/blah2.rm\n\n"+
+			       "http://www.example.com/blah3.rm\n");
+      assertEquals(expected, actual);
+    }
+
+    public void testStripsParams() throws Exception {
+      Set expected = SetUtil.set("http://www.example.com/blah.rm",
+				 "http://www.example.com/blah3.rm");
+      Set actual =
+	extractUrls("http://www.example.com/blah.rm?blah=blah\n"+
+		    "http://www.example.com/blah3.rm?blah2=blah2&blah3=asdf\n");
+      assertEquals(expected, actual);
+    }
+
+    public void testMultipleLinks() throws Exception {
+      Set expected = SetUtil.set("http://www.example.com/blah.rm",
+				 "http://www.example.com/blah2.rm",
+				 "http://www.example.com/blah3.rm");
+      Set actual = extractUrls("http://www.example.com/blah.rm\n"+
+			       "http://www.example.com/blah2.rm\n\n"+
+			       "http://www.example.com/blah3.rm\n");
+      assertEquals(expected, actual);
+    }
+  }
+
+  public static class TestTranslating extends TestRamLinkExtractor {
+    static String FROM_URL = "rtsp://www.example.com/";
+    static String TO_URL = "http://www.example.com/media/";
+
+    public LinkExtractorFactory getFactory() {
+      return new LinkExtractorFactory() {
+	  public LinkExtractor createLinkExtractor(String mimeType) {
+	    return
+	      RamLinkExtractor.makeTranslatingRamLinkExtractor(FROM_URL,
+							       TO_URL);
+	  }
+	};
+    }
+
+    public void testTranslateUrls() throws Exception {
+      Set expected = SetUtil.set("http://www.example.com/media/blah.rm",
+				 "http://www.example.com/blah2.rm",
+				 "http://www.example.com/media/blah3.rm");
+      Set actual = extractUrls("rtsp://www.example.com/blah.rm\n"+
+			       "http://www.example.com/blah2.rm\n\n"+
+			       "rtsp://www.example.com/blah3.rm\n");
+      assertEquals(expected, actual);
+    }
+
+    public void testTranslateUrlsHandlesCase() throws Exception {
+      Set expected = SetUtil.set("http://www.example.com/media/blah.rm",
+				 "http://www.example.com/media/blah2.rm",
+				 "http://www.example.com/media/blah3.rm");
+      Set actual = extractUrls("rtsp://www.example.com/blah.rm\n"+
+			       "rtsp://www.EXAMPLE.com/blah2.rm\n\n"+
+			       "RTSP://www.example.com/blah3.rm\n");
+      assertEquals(expected, actual);
+    }
+  }
+
+  public static Test suite() {
+    return variantSuites(new Class[] {TestSimple.class,
+				      TestTranslating.class});
   }
 }

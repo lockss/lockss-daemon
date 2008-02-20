@@ -1,5 +1,5 @@
 /*
- * $Id: TestCssLinkExtractor.java,v 1.2 2007-02-07 19:32:21 thib_gc Exp $
+ * $Id: TestCssLinkExtractor.java,v 1.3 2008-02-20 19:11:55 tlipkis Exp $
  */
 
 /*
@@ -40,45 +40,16 @@ import junit.framework.Assert;
 
 import org.lockss.test.*;
 import org.lockss.util.*;
+import org.lockss.daemon.*;
 
-public class TestCssLinkExtractor extends LockssTestCase {
+public class TestCssLinkExtractor extends LinkExtractorTestCase {
 
-  /**
-   * <p>An implementation of {@link FoundUrlCallback} that always
-   * fails by calling {@link Assert#fail(String)}.</p>
-   * @author Thib Guicherd-Callin
-   */
-  protected static class AlwaysFail implements LinkExtractor.Callback {
-    
-    /* Inherit documentation */
-    public void foundLink(String url) {
-      fail("Callback should not have been called");
-    }
-    
+  public String getMimeType() {
+    return "text/css";
   }
 
-  /**
-   * <p>An implementation of {@link LinkExtractor.Callback} that records
-   * URLs in a set.</p>
-   * @author Thib Guicherd-Callin
-   */
-  protected static class RecordInSet implements LinkExtractor.Callback {
-    
-    protected Set found;
-    
-    /**
-     * <p>Builds a new callback from the given set.</p>
-     * @param found A set into which URLs will be recorded.
-     */
-    public RecordInSet(Set found) {
-      this.found = found;
-    }
-    
-    /* Inherit documentation */
-    public void foundLink(String url) {
-      found.add(url);
-    }
-  
+  public LinkExtractorFactory getFactory() {
+    return new CssLinkExtractor.Factory();
   }
 
   public void testAbsoluteUrl() throws Exception {
@@ -95,25 +66,13 @@ public class TestCssLinkExtractor extends LockssTestCase {
     doTestOneUrl("bar { foo: url(\"", url, "\"); }", url);
   }
   
-  public void testHandlesEmptyInput() throws Exception {
-    new CssLinkExtractor().extractUrls(null,
-				       new StringInputStream(""),
-				       null,
-				       SOURCE_URL,
-				       new AlwaysFail());
-  }
-  
   public void testHandlesInputWithNoUrls() throws Exception {
     String source =
       "/* Comment */" +
       "foo {" +
       "  bar: baz;" +
       "}";
-    new CssLinkExtractor().extractUrls(null,
-				       new StringInputStream(source),
-				       null,
-				       SOURCE_URL,
-				       new AlwaysFail());
+    assertEmpty(extractUrls(source));
   }
   
   public void testRelativeUrl() throws Exception {
@@ -133,7 +92,7 @@ public class TestCssLinkExtractor extends LockssTestCase {
   
   public void testThrowsOnEmptyUrl() throws Exception {
     try {
-      doTestOneUrl("@import url(\'", "", "\');", null);
+      extractUrls("@import url(\'\');");
       fail("Parser did not throw a MalformedURLException on an empty URL");
     }
     catch (MalformedURLException expected) {
@@ -162,19 +121,13 @@ public class TestCssLinkExtractor extends LockssTestCase {
       "}\n" +
       "/* Comment */\n";
     
-    Set found = new HashSet();
-    new CssLinkExtractor().extractUrls(null,
-				       new StringInputStream(source),
-				       null,
-				       SOURCE_URL,
-				       new RecordInSet(found));
     assertEquals(SetUtil.set(expectedPrefix + url1,
                              expectedPrefix + url2,
                              expectedPrefix + url3,
                              givenPrefix + url4,
                              givenPrefix + url5,
                              givenPrefix + url6),
-                 found);
+                 extractUrls(source));
   }
   
   public void testThrowsOnMalformedUrl() throws Exception {
@@ -190,7 +143,7 @@ public class TestCssLinkExtractor extends LockssTestCase {
     }
     
     try {
-      doTestOneUrl("@import url(\'", badUrl, "\');", null);
+      extractUrls("@import url(\'" + badUrl + "\');");
       fail("Parser did not throw a MalformedURLException on " + badUrl);
     }
     catch (MalformedURLException expected) {
@@ -215,15 +168,9 @@ public class TestCssLinkExtractor extends LockssTestCase {
                               String middle,
                               String end,
                               String expectedUrl)
-      throws IOException {
-    Set found = new HashSet();
-    new CssLinkExtractor().extractUrls(null,
-				       new StringInputStream(beginning +
-							     middle + end),
-				       null,
-				       SOURCE_URL,
-				       new RecordInSet(found));
-    assertEquals(SetUtil.set(expectedUrl), found);
+      throws IOException, PluginException {
+    assertEquals(SetUtil.set(expectedUrl),
+		 extractUrls(beginning + middle + end));
   }  
 
   protected static final String SOURCE_URL =

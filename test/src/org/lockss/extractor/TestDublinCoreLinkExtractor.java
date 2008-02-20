@@ -1,5 +1,5 @@
 /*
- * $Id: TestDublinCoreLinkExtractor.java,v 1.1 2007-06-28 07:14:24 smorabito Exp $
+ * $Id: TestDublinCoreLinkExtractor.java,v 1.2 2008-02-20 19:11:55 tlipkis Exp $
  */
 
 /*
@@ -35,76 +35,45 @@ package org.lockss.extractor;
 import java.io.*;
 import java.util.*;
 
-import junit.framework.Assert;
+import junit.framework.*;
 
 import org.lockss.test.*;
 import org.lockss.util.*;
 
-public class TestDublinCoreLinkExtractor extends LockssTestCase {
+public class TestDublinCoreLinkExtractor extends LinkExtractorTestCase {
 
-  /**
-   * <p>An implementation of {@link FoundUrlCallback} that always
-   * fails by calling {@link Assert#fail(String)}.</p>
-   */
-  protected static class AlwaysFail implements LinkExtractor.Callback {
-    public void foundLink(String url) {
-      fail("Callback should not have been called");
-    }
+  public String getMimeType() {
+    return "text/xml";
   }
-  
-  /**
-   * <p>Implementation of LinkExtractor.Callback that appends URLs to a 
-   * list.</p>
-   */
-  protected static class ListBuilderCallback implements LinkExtractor.Callback {
-    private List list = null;
 
-    public ListBuilderCallback(List addTo) {
-      this.list = addTo;
-    }
-
-    public void foundLink(String url) {
-      list.add(url);
-    }
+  public String getUrl() {
+    return "http://www.foo.com/test.xml";
   }
-  
+
+  public LinkExtractorFactory getFactory() {
+    return new DublinCoreLinkExtractor.Factory();
+  }
+
+  /** This is an error for Dublin Core; supress this test */
+  public void testEmptyFileReturnsNoLinks() throws Exception {
+  }
+
   /**
    * Test that a single links is found.
    */
   public void testOneUrl() throws Exception {
-    List urls = new ArrayList();
-    urls.add("http://www.foo.com/blah.jpg");
-    String rdf = constructValidRDF(urls);
-    
-    // Construct DCLE
-    List parsedUrls = new ArrayList();
-    DublinCoreLinkExtractor dcle = new DublinCoreLinkExtractor();
-    dcle.extractUrls(null, new ByteArrayInputStream(rdf.getBytes()),
-                     null, "http://www.foo.com/test.xml",
-                     new ListBuilderCallback(parsedUrls));
-    
-    assertIsomorphic(urls, parsedUrls);
+    Set urls = SetUtil.set("http://www.foo.com/blah.jpg");
+    assertEquals(urls, extractUrls(constructValidRDF(urls)));
   }
   
   /**
    * Test that multiple links are found.
    */
   public void testMultipleUrls() throws Exception {
-    List urls = new ArrayList();
-    urls.add("http://www.foo.com/blah.jpg");
-    urls.add("http://www.foo.com/blatch.jpg");
-    urls.add("http://www.foo.com/burble.jpg");
-    String rdf = constructValidRDF(urls);
-    
-    // Construct DCLE
-    List parsedUrls = new ArrayList();
-    DublinCoreLinkExtractor dcle = new DublinCoreLinkExtractor();
-    dcle.extractUrls(null, new ByteArrayInputStream(rdf.getBytes()),
-                     null, "http://www.foo.com/test.xml",
-                     new ListBuilderCallback(parsedUrls));
-    Collections.sort(urls);
-    Collections.sort(parsedUrls);
-    assertIsomorphic(urls, parsedUrls);
+    Set urls = SetUtil.set("http://www.foo.com/blah.jpg",
+			   "http://www.foo.com/blatch.jpg",
+			   "http://www.foo.com/burble.jpg");
+    assertEquals(urls, extractUrls(constructValidRDF(urls)));
   }
   
   /**
@@ -114,16 +83,7 @@ public class TestDublinCoreLinkExtractor extends LockssTestCase {
    * @throws Exception
    */
   public void testNoUrls() throws Exception {
-    List urls = Collections.EMPTY_LIST;
-    String rdf = constructValidRDF(urls);
-
-    // Construct DCLE
-    DublinCoreLinkExtractor dcle = new DublinCoreLinkExtractor();
-
-    // This will fail if the callback finds any URLs
-    dcle.extractUrls(null, new ByteArrayInputStream(rdf.getBytes()),
-                     null, "http://www.foo.com/test.xml",
-                     new AlwaysFail());
+    assertEmpty(extractUrls(constructValidRDF(Collections.EMPTY_SET)));
   }
   
   /**
@@ -131,70 +91,21 @@ public class TestDublinCoreLinkExtractor extends LockssTestCase {
    * source RDF.  If these aren't there, it shouldn't find any links.
    */
   public void testNoIdentifiersMeansNoLinks() throws Exception {
-    List urls = new ArrayList();
-    urls.add("http://www.foo.com/blah.jpg");
-    urls.add("http://www.foo.com/blatch.jpg");
-    urls.add("http://www.foo.com/burble.jpg");
-    // Don't include identifiers (shouldn't have any links)
-    String rdf = constructRDFWithoutIdentifiers(urls);
-    
-    // Construct DCLE
-    List parsedUrls = new ArrayList();
-    DublinCoreLinkExtractor dcle = new DublinCoreLinkExtractor();
-    dcle.extractUrls(null, new ByteArrayInputStream(rdf.getBytes()),
-                     null, "http://www.foo.com/test.xml",
-                     new ListBuilderCallback(parsedUrls));
-
-    // Should be empty
-    assertEquals(0, parsedUrls.size());
+    Set urls = SetUtil.set("http://www.foo.com/blah.jpg",
+			   "http://www.foo.com/blatch.jpg",
+			   "http://www.foo.com/burble.jpg");
+    assertEmpty(extractUrls(constructRDFWithoutIdentifiers(urls)));
   }
   
-  public void testNullCallbackThrows() throws Exception {
-    List urls = new ArrayList();
-    urls.add("http://www.foo.com/blah.jpg");
-    urls.add("http://www.foo.com/blatch.jpg");
-    urls.add("http://www.foo.com/burble.jpg");
-    String rdf = constructValidRDF(urls);
-    DublinCoreLinkExtractor dcle = new DublinCoreLinkExtractor();
-    try {
-      dcle.extractUrls(null, new ByteArrayInputStream(rdf.getBytes()),
-                       null, "http://www.foo.com/test.xml",
-                       null);
-      fail("Should have thrown IllegalArgumentException");
-    } catch (IllegalArgumentException ex) {
-      ; // expected
-    }
-  }
-  
-
-  public void testNullInputStreamThrows() throws Exception {
-    List urls = new ArrayList();
-    urls.add("http://www.foo.com/blah.jpg");
-    urls.add("http://www.foo.com/blatch.jpg");
-    urls.add("http://www.foo.com/burble.jpg");
-    String rdf = constructValidRDF(urls);
-
-    List parsedUrls = new ArrayList();
-    DublinCoreLinkExtractor dcle = new DublinCoreLinkExtractor();
-    try {
-      dcle.extractUrls(null, null,
-                       null, "http://www.foo.com/test.xml",
-                       new ListBuilderCallback(parsedUrls));
-      fail("Should have thrown IllegalArgumentException");
-    } catch (IllegalArgumentException ex) {
-      ; // expected
-    }
-  }
-
-  public String constructRDFWithoutIdentifiers(List<String> urlList) {
+  public String constructRDFWithoutIdentifiers(Collection<String> urlList) {
     return constructRDF(urlList, false);    
   }
 
-  public String constructValidRDF(List<String> urlList) {
+  public String constructValidRDF(Collection<String> urlList) {
     return constructRDF(urlList, true);
   }
   
-  private String constructRDF(List<String> urlList, boolean withIdentifiers) {
+  private String constructRDF(Collection<String> urlList, boolean withIdentifiers) {
     StringBuilder sb = new StringBuilder("<?xml version=\"1.0\"?>\n");
     sb.append("<!DOCTYPE rdf:RDF SYSTEM \"http://purl.org/dc/schemas/dcmes-xml-20000714.dtd\">\n");
     sb.append("<rdf:RDF xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"\n" +

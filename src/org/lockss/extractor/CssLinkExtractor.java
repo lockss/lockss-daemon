@@ -1,5 +1,5 @@
 /*
- * $Id: CssLinkExtractor.java,v 1.3 2007-03-13 01:14:39 thib_gc Exp $
+ * $Id: CssLinkExtractor.java,v 1.4 2008-02-20 19:11:55 tlipkis Exp $
  */
 
 /*
@@ -165,6 +165,12 @@ public class CssLinkExtractor implements LinkExtractor {
 			  LinkExtractor.Callback cb)
       throws MalformedURLException, IOException {
     logger.debug2("Parsing " + srcUrl);
+    if (in == null) {
+      throw new IllegalArgumentException("Called with null InputStream");
+    }
+    if (cb == null) {
+      throw new IllegalArgumentException("Called with null callback");
+    }
     URL baseUrl = new URL(srcUrl);
     DocumentHandler documentHandler = new LockssDocumentHandler(baseUrl, cb);
     Parser parser = new Parser();
