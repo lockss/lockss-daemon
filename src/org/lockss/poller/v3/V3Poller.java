@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.71 2008-02-19 01:42:29 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.72 2008-02-21 01:08:20 tlipkis Exp $
  */
 
 /*
@@ -108,7 +108,7 @@ public class V3Poller extends BasePoll {
    "Waiting for Repairs",
   };
 
-  private static String PREFIX = Configuration.PREFIX + "poll.v3.";
+  private static final String PREFIX = Configuration.PREFIX + "poll.v3.";
 
   /** Quorum for V3 polls. */
   public static final String PARAM_QUORUM = PREFIX + "quorum";

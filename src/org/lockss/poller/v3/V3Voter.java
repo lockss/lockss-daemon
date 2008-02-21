@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.52 2008-02-15 09:10:28 tlipkis Exp $
+ * $Id: V3Voter.java,v 1.53 2008-02-21 01:08:20 tlipkis Exp $
  */
 
 /*
@@ -81,7 +81,7 @@ public class V3Voter extends BasePoll {
    "Declined Poll", "Vote Accepted"
   };
 
-  static String PREFIX = Configuration.PREFIX + "poll.v3.";
+  private static final String PREFIX = Configuration.PREFIX + "poll.v3.";
 
   /** The minimum number of peers to select for a nomination message.
    * If there are fewer than this number of peers available to nominate,

@@ -1,5 +1,5 @@
 /*
- * $Id: LockssApp.java,v 1.16 2007-07-26 03:42:39 tlipkis Exp $
+ * $Id: LockssApp.java,v 1.17 2008-02-21 01:08:21 tlipkis Exp $
  */
 
 /*
@@ -51,7 +51,7 @@ import org.apache.commons.collections.map.LinkedMap;
 public abstract class LockssApp {
   private static Logger log = Logger.getLogger("LockssApp");
 
-  private static String PREFIX = Configuration.PREFIX + "app.";
+  private static final String PREFIX = Configuration.PREFIX + "app.";
 
   public static final String PARAM_APP_EXIT_IMM = PREFIX + "exitImmediately";
   public static final boolean DEFAULT_APP_EXIT_IMM = false;

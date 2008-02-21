@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.95 2008-01-27 06:43:40 tlipkis Exp $
+ * $Id: LockssDaemon.java,v 1.96 2008-02-21 01:08:21 tlipkis Exp $
  */
 
 /*
@@ -58,7 +58,7 @@ import org.apache.commons.collections.map.LinkedMap;
 public class LockssDaemon extends LockssApp {
   private static Logger log = Logger.getLogger("LockssDaemon");
 
-  private static String PREFIX = Configuration.PREFIX + "daemon.";
+  private static final String PREFIX = Configuration.PREFIX + "daemon.";
 
   public static final float MIN_JAVA_VERSION = 1.5f;
 

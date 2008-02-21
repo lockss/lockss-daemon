@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingHtmlLinkExtractor.java,v 1.3 2007-04-26 01:38:58 tlipkis Exp $
+ * $Id: GoslingHtmlLinkExtractor.java,v 1.4 2008-02-21 01:08:21 tlipkis Exp $
  */
 
 /*
@@ -84,7 +84,7 @@ import org.lockss.config.*;
 
 public class GoslingHtmlLinkExtractor implements LinkExtractor {
 
-  static String PREFIX = Configuration.PREFIX + "extractor.gosling.";
+  static final String PREFIX = Configuration.PREFIX + "extractor.gosling.";
 
   public static final String PARAM_BUFFER_CAPACITY =
     PREFIX + "buffer_capacity";
