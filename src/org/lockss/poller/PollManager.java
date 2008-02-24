@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.189 2008-02-15 09:09:13 tlipkis Exp $
+ * $Id: PollManager.java,v 1.189.2.1 2008-02-24 02:31:15 tlipkis Exp $
  */
 
 /*
@@ -160,27 +160,6 @@ public class PollManager
     PREFIX + "enablePollStarterThrottle";
   public static boolean DEFAULT_ENABLE_POLL_STARTER_THROTTLE = true; 
    
-  /** The default probability of starting a poll on any given
-   * AU.  This is the probability that will be used by the PollStarter
-   * if no other factors come into play, i.e., if the AU has
-   * been polled less than &quo;maxTimeBetweenPolls&quo; ago.
-   */
-  public static final String PARAM_DEFAULT_POLL_PROBABILITY =
-    PREFIX + "defaultPollProbability";
-  public static final float DEFAULT_DEFAULT_POLL_PROBABILITY =
-    0.25f;
-
-  /** The maximum time between polls on an AU.  Note that this does NOT
-   * mean that a poll is guaranteed to run once this time has passed.
-   * It merely means that the probability of the PollStarter deciding
-   * to call a poll on the given AU is 100%, IF and ONLY IF the PollStarter
-   * runs and selects the given AU for consideration, and if the maximum
-   * number of simultaneous polls is not already running.
-   */
-  public static final String PARAM_MAX_TIME_BETWEEN_POLLS =
-    PREFIX + "maxTimeBetweenPolls";
-  public static final long DEFAULT_MAX_TIME_BETWEEN_POLLS = 30 * DAY;
-
   /** If true, state machines are run in their own thread */
   public static final String PARAM_PSM_ASYNCH = PREFIX + "psmAsynch";
   public static final boolean DEFAULT_PSM_ASYNCH = true;
@@ -222,8 +201,6 @@ public class PollManager
   private long pollStartInterval = DEFAULT_START_POLLS_INTERVAL;
   private long pollStartInitialDelay = DEFAULT_START_POLLS_INITIAL_DELAY;
   private boolean enableV3Poller = DEFAULT_ENABLE_V3_POLLER;
-  private float defaultPollProbability = DEFAULT_DEFAULT_POLL_PROBABILITY;
-  private long maxTimeBetweenPolls = DEFAULT_MAX_TIME_BETWEEN_POLLS;
   private int maxSimultaneousPollers = DEFAULT_MAX_SIMULTANEOUS_V3_POLLERS;
   private PollStarter pollStarter;
   private boolean isPollStarterEnabled = false;
@@ -1015,12 +992,6 @@ public class PollManager
       enableV3Poller =
         newConfig.getBoolean(PARAM_ENABLE_V3_POLLER,
                              DEFAULT_ENABLE_V3_POLLER);
-      defaultPollProbability = 
-        newConfig.getPercentage(PARAM_DEFAULT_POLL_PROBABILITY,
-                                DEFAULT_DEFAULT_POLL_PROBABILITY);
-      maxTimeBetweenPolls =
-        newConfig.getLong(PARAM_MAX_TIME_BETWEEN_POLLS,
-                          DEFAULT_MAX_TIME_BETWEEN_POLLS);
       maxSimultaneousPollers =
         newConfig.getInt(PARAM_MAX_SIMULTANEOUS_V3_POLLERS,
                          DEFAULT_MAX_SIMULTANEOUS_V3_POLLERS);
