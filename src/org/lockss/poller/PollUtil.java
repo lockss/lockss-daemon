@@ -1,5 +1,5 @@
 /*
- * $Id: PollUtil.java,v 1.4 2008-02-15 09:10:28 tlipkis Exp $
+ * $Id: PollUtil.java,v 1.4.2.1 2008-02-24 02:31:42 tlipkis Exp $
  */
 
 /*
@@ -156,8 +156,8 @@ public class PollUtil {
 
   static long getVoteDurationPadding() {
     return
-      CurrentConfig.getLongParam(V3Poller.PARAM_VOTE_DURATION_PADDING,
-				 V3Poller.DEFAULT_VOTE_DURATION_PADDING);
+      CurrentConfig.getTimeIntervalParam(V3Poller.PARAM_VOTE_DURATION_PADDING,
+					 V3Poller.DEFAULT_VOTE_DURATION_PADDING);
   }
 
   static int getTallyDurationMultiplier() {
@@ -168,8 +168,8 @@ public class PollUtil {
 
   static long getTallyDurationPadding() {
     return
-      CurrentConfig.getLongParam(V3Poller.PARAM_TALLY_DURATION_PADDING,
-				 V3Poller.DEFAULT_TALLY_DURATION_PADDING);
+      CurrentConfig.getTimeIntervalParam(V3Poller.PARAM_TALLY_DURATION_PADDING,
+					 V3Poller.DEFAULT_TALLY_DURATION_PADDING);
   }
 
   static long getReceiptPadding() {

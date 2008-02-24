@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.71 2008-02-19 01:42:29 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.71.2.1 2008-02-24 02:31:42 tlipkis Exp $
  */
 
 /*
@@ -478,8 +478,8 @@ public class V3Poller extends BasePoll {
       c.getTimeInterval(PARAM_TIME_BETWEEN_INVITATIONS,
                         DEFAULT_TIME_BETWEEN_INVITATIONS);
     invitationSize = c.getInt(PARAM_INVITATION_SIZE, DEFAULT_INVITATION_SIZE);
-    extraPollTime = c.getLong(PARAM_V3_EXTRA_POLL_TIME,
-                              DEFAULT_V3_EXTRA_POLL_TIME);
+    extraPollTime = c.getTimeInterval(PARAM_V3_EXTRA_POLL_TIME,
+				      DEFAULT_V3_EXTRA_POLL_TIME);
     enableDiscovery = c.getBoolean(PARAM_ENABLE_DISCOVERY,
                                    DEFAULT_ENABLE_DISCOVERY);
     hashBytesBeforeCheckpoint = 
@@ -565,8 +565,8 @@ public class V3Poller extends BasePoll {
   
   private long calculateReceiptBuffer() {
     return
-      CurrentConfig.getLongParam(PARAM_RECEIPT_PADDING,
-				 DEFAULT_RECEIPT_PADDING);
+      CurrentConfig.getTimeIntervalParam(PARAM_RECEIPT_PADDING,
+					 DEFAULT_RECEIPT_PADDING);
   }
 
   /**
