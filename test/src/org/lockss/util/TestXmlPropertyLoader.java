@@ -1,5 +1,5 @@
 /*
- * $Id: TestXmlPropertyLoader.java,v 1.21 2008-02-15 19:43:02 edwardsb1 Exp $
+ * $Id: TestXmlPropertyLoader.java,v 1.22 2008-02-26 01:47:58 edwardsb1 Exp $
  */
 
 /*
@@ -36,7 +36,6 @@ import java.util.*;
 import java.io.*;
 import java.net.URL;
 import javax.xml.parsers.*;
-import org.xml.sax.*;
 import org.xml.sax.helpers.*;
 import org.lockss.test.*;
 
@@ -604,7 +603,7 @@ public class TestXmlPropertyLoader extends LockssTestCase {
   public void testGetList() throws Exception {
     String s = m_props.getProperty("org.lockss.d");
     assertNotNull(s);
-    Vector v = StringUtil.breakAt(s, ';', -1, true, true);
+    Vector<String> v = StringUtil.breakAt(s, ';', -1, true, true);
     Collections.sort(v);
     assertEquals("1", (String)v.get(0));
     assertEquals("2", (String)v.get(1));
@@ -623,7 +622,6 @@ public class TestXmlPropertyLoader extends LockssTestCase {
    * 'testListEntities()' test may or may not be meaningful.
    */
   public void testValidateListEntitiesTest() throws Exception {
-    PropertyTree props = new PropertyTree();
     SAXParserFactory factory = SAXParserFactory.newInstance();
 
     factory.setValidating(false);
@@ -890,9 +888,41 @@ public class TestXmlPropertyLoader extends LockssTestCase {
     setVersions(null, null, null, "experimental");
     m_xmlPropertyLoader.loadProperties(props, istr);
     assertEquals("bar", props.getProperty("result"));
+  }
+  
+  /**
+   * This is a negative test: We should not accept "<else>" without a "<then>", or
+   * a "<then>" after an "<else>".
+   */
+  public void testElseBeforeThen() throws Exception {
+    PropertyTree props = new PropertyTree();
+    InputStream istr;
+    StringBuffer sb;
+
+    sb = new StringBuffer();
+    sb.append("<if>\n");
+    sb.append("  <test group=\"test\" />\n");
+    sb.append("  <else>\n");
+    sb.append("    <property name=\"result\" value=\"bar\" />\n");
+    sb.append("  </else>\n");
+    sb.append("  <then>\n");
+    sb.append("    <property name=\"result\" value=\"foo\" />\n");
+    sb.append("  </then>\n");
+    sb.append("</if>\n");
+
+    // T
+    props = new PropertyTree();
+    istr = new ReaderInputStream(new StringReader(sb.toString()));
+    setVersions(null, null, null, "test");
+    try {
+      m_xmlPropertyLoader.loadProperties(props, istr);
+      fail("An else before a then should cause an exception.");
+    } catch (IllegalArgumentException e) {
+      /*  Passes test */
+    }
 
   }
-
+  
   /**
    * Set default values for testing conditionals.
    */

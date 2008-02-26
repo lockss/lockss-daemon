@@ -1,5 +1,5 @@
 /*
- * $Id: XmlPropertyLoader.java,v 1.31 2008-02-15 19:40:47 edwardsb1 Exp $
+ * $Id: XmlPropertyLoader.java,v 1.32 2008-02-26 01:46:22 edwardsb1 Exp $
  */
 
 /*
@@ -300,6 +300,12 @@ public class XmlPropertyLoader {
      * Handle encountering the start of an "else" tag.
      */
     private void startElseTag() {
+      If currentStack = m_ifStack.peek();
+      
+      if (!currentStack.usedThen) {
+        throw new IllegalArgumentException("You may not have an <else> except after a <then>.");
+      }
+      
       m_ifStack.peek().inElse = true;
       
       // The easiest way to enter an 'else' is to reverse testEval...
@@ -496,11 +502,7 @@ public class XmlPropertyLoader {
       m_charBuffer = null;
     }
 
-    private void endAndTag() {
-      boolean bo1;
-      boolean bo2;
-      boolean boResult;
-      
+    private void endAndTag() {     
       m_condStack.pop();
 
       andEvalStack(true);  // Reuse nice code...
