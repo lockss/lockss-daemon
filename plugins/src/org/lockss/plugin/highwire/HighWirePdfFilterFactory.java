@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePdfFilterFactory.java,v 1.20 2008-02-27 21:48:25 thib_gc Exp $
+ * $Id: HighWirePdfFilterFactory.java,v 1.21 2008-02-27 23:17:57 thib_gc Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.filter.pdf.PageTransformUtil.ExtractStringsToOutputStream;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
 import org.pdfbox.cos.*;
+import org.pdfbox.pdmodel.*;
 import org.pdfbox.pdmodel.common.PDRectangle;
 import org.pdfbox.pdmodel.interactive.action.type.*;
 import org.pdfbox.pdmodel.interactive.annotation.*;
@@ -57,7 +58,14 @@ public class HighWirePdfFilterFactory implements FilterFactory {
     public DocumentTransform makeTransform() throws IOException {
       return new ConditionalDocumentTransform(makePreliminaryTransform(),
                                               false, // Difference with TextScrapingDocumentTransform
-                                              new TransformEachPage(new ExtractStringsToOutputStream(outputStream)));
+                                              new TransformEachPage(new ExtractStringsToOutputStream(outputStream) {
+                                                @Override
+                                                public void processStream(PDPage arg0, PDResources arg1, COSStream arg2) throws IOException {
+                                                  logger.debug3("ResilientTextScrapingDocumentTransform: unconditional signalChange()");
+                                                  signalChange(); // Difference with TextScrapingDocumentTransform
+                                                  super.processStream(arg0, arg1, arg2);
+                                                }
+                                              }));
     }
   }
 
