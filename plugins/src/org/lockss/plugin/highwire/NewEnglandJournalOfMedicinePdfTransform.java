@@ -1,10 +1,10 @@
 /*
- * $Id: NewEnglandJournalOfMedicinePdfTransform.java,v 1.11 2007-12-06 23:47:45 thib_gc Exp $
+ * $Id: NewEnglandJournalOfMedicinePdfTransform.java,v 1.12 2008-02-27 21:48:25 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,7 +37,7 @@ import java.util.List;
 
 import org.lockss.filter.pdf.*;
 import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.highwire.HighWirePdfFilterFactory.NormalizeMetadata;
+import org.lockss.plugin.highwire.HighWirePdfFilterFactory.*;
 import org.lockss.plugin.highwire.NewEnglandJournalOfMedicinePdfTransform.EraseVariableFooter.ProcessEndTextObject;
 import org.lockss.util.*;
 import org.pdfbox.util.operator.OperatorProcessor;
@@ -292,7 +292,7 @@ public class NewEnglandJournalOfMedicinePdfTransform
    * @see SimplifiedEraseVariableFooter
    */
   public static class Simplified
-      extends TextScrapingDocumentTransform
+      extends ResilientTextScrapingDocumentTransform
       implements ArchivalUnitDependent {
 
     protected ArchivalUnit au;

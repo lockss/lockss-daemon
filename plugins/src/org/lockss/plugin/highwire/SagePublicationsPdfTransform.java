@@ -1,10 +1,10 @@
 /*
- * $Id: SagePublicationsPdfTransform.java,v 1.2 2007-12-06 23:47:45 thib_gc Exp $
+ * $Id: SagePublicationsPdfTransform.java,v 1.3 2008-02-27 21:48:25 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -127,7 +127,7 @@ public class SagePublicationsPdfTransform
   }
 
   public static class Simplified
-      extends TextScrapingDocumentTransform
+      extends ResilientTextScrapingDocumentTransform
       implements ArchivalUnitDependent {
 
     protected ArchivalUnit au;
