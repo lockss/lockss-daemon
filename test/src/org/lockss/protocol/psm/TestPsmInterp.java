@@ -1,5 +1,5 @@
 /*
- * $Id: TestPsmInterp.java,v 1.13 2008-01-27 06:47:10 tlipkis Exp $
+ * $Id: TestPsmInterp.java,v 1.14 2008-02-27 06:07:35 tlipkis Exp $
  */
 
 /*
@@ -529,9 +529,8 @@ public class TestPsmInterp extends LockssTestCase {
     assertTrue(errs.isEmpty());
   }
 
-  boolean actionTriggered = false;
-
   public void testAsynchSimple2() throws Exception {
+    final SimpleBinarySemaphore actionTriggered = new SimpleBinarySemaphore();
     PsmMachine mach = new PsmMachine("M1", states1, "Start");
     MyInterp interp = newThreadedInterp(mach, null);
     interp.enqueueStart(new EH(errs));
@@ -549,14 +548,14 @@ public class TestPsmInterp extends LockssTestCase {
       new ER(states1[0], Sched, null, null),
     };
     assertIsomorphic(exp2, interp.events);
-    assertFalse(actionTriggered);
+    assertFalse(actionTriggered.take(0));
     interp.enqueueEvent(TaskComplete, new EH(errs),
 			new PsmInterp.Action() {
 			  public void eval() {
-			    actionTriggered = true;
+			    actionTriggered.give();
 			  }});
     assertTrue(interp.waitIdle(TIMEOUT_SHOULDNT));
-    assertTrue(actionTriggered);
+    assertTrue(actionTriggered.take(TIMEOUT_SHOULDNT));
     ER[] exp3 = {
       new ER(states1[0], Sched, null, null),
       new ER(states1[0], TaskComplete, null, states1[1]),
@@ -904,7 +903,7 @@ public class TestPsmInterp extends LockssTestCase {
     Interrupter intr = null;
     try {
       intr = interruptMeIn(Math.max(TIMEOUT_SHOULDNT, 10 * Constants.SECOND),
-				    true);
+			   true);
       while (!interp.isFinalState()) {
 	TimerUtil.sleep(10);
       }
@@ -1049,13 +1048,13 @@ public class TestPsmInterp extends LockssTestCase {
     testCallback(1, 10);
   }
 
-  public void testTimeout(long timeout, long computeTime, long delay,
-			  List okEvents, List expectedStates) throws PsmException {
+  public void testTimeout(long timeout, long computeTime,
+			  List okEvents, List expectedStates)
+      throws PsmException {
     PsmMachine mach = new PsmMachine("M1", states4, "Start");
     TestObj obj = new TestObj();
     obj.timeout = timeout;
     obj.computeTime = computeTime;
-    obj.delay = delay;
     MyInterp interp = new MyInterp(mach, obj);
     interp.start();
     // This machine doesn't need any more outside events to finish, so just
@@ -1087,23 +1086,18 @@ public class TestPsmInterp extends LockssTestCase {
     List timeoutStates =
       ListUtil.list("Start", "WaitCompute", "GiveUp");
     List timeoutEvents =
-      ListUtil.list(ListUtil.list(/*"set timeout", */"sched"),
-		    ListUtil.list(/*"set timeout", */"sched", "taskcomplete"));
+      ListUtil.list(ListUtil.list("sched"),
+		    ListUtil.list("sched", "taskcomplete"),
+		    ListUtil.list("sched", "taskcomplete", "done"));
     List noTimeoutStates =
       ListUtil.list("Start", "WaitCompute", "AlmostDone", "Done");
     List noTimeoutEvents =
-      ListUtil.list(ListUtil.list(/*"set timeout", */"sched",
-				  "taskcomplete", "done"),
-		    ListUtil.list(/*"set timeout", */"taskcomplete",
-				  "sched", "done"));
+      ListUtil.list(ListUtil.list("sched", "taskcomplete", "done"),
+		    ListUtil.list("taskcomplete", "sched", "done"));
     // timeout occurs
-    testTimeout(100, 5000, 0, timeoutEvents, timeoutStates);
-    // timeout occurs before sched action returns
-    testTimeout(1, 50, 10, timeoutEvents, timeoutStates);
+    testTimeout(100, 5000, timeoutEvents, timeoutStates);
     // timeout doesn't occur
-    testTimeout(5000, 10, 0, noTimeoutEvents, noTimeoutStates);
-    // timeout doesn't, occur, task completes before task sched completes
-    testTimeout(5000, 1, 10, noTimeoutEvents, noTimeoutStates);
+    testTimeout(5000, 10, noTimeoutEvents, noTimeoutStates);
   }
 
 
