@@ -1,5 +1,5 @@
 /*
- * $Id: TestProxyInfo.java,v 1.20 2007-02-20 01:35:47 tlipkis Exp $
+ * $Id: TestProxyInfo.java,v 1.21 2008-02-27 06:06:31 tlipkis Exp $
  */
 
 /*
@@ -255,8 +255,8 @@ public class TestProxyInfo extends LockssTestCase {
 							  url, url), 40));
     assertEquals(ListUtil.list("MockAU 1",
 			       "MockAU 10, MockAU 11",
-			       "MockAU 20, MockAU 21, 1 more AUs",
-			       "MockAU 40, MockAU 41, 3 more AUs"),
+			       "MockAU 20, MockAU 21, (1 more)",
+			       "MockAU 40, MockAU 41, (3 more)"),
 		 comments);
   }
 
