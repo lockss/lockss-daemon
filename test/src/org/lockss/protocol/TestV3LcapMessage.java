@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3LcapMessage.java,v 1.23 2008-02-24 02:33:12 tlipkis Exp $
+ * $Id: TestV3LcapMessage.java,v 1.24 2008-02-27 06:06:49 tlipkis Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import java.io.*;
 import java.util.*;
 
 import org.lockss.test.*;
+import org.lockss.app.*;
 import org.lockss.poller.*;
 import org.lockss.poller.v3.V3Events;
 import org.lockss.repository.LockssRepositoryImpl;
@@ -225,9 +226,8 @@ public class TestV3LcapMessage extends LockssTestCase {
     assertEqualMessages(src, copy);
     assertNotNull(src.getNak());
     assertNotNull(copy.getNak());
-    assertTrue(src.getNak().equals(V3LcapMessage.PollNak.NAK_GROUP_MISMATCH));
-    assertTrue(copy.getNak().equals(V3LcapMessage.PollNak.NAK_GROUP_MISMATCH));
-    assertEquals(src.getNak(), copy.getNak());
+    assertEquals(V3LcapMessage.PollNak.NAK_GROUP_MISMATCH, src.getNak());
+    assertEquals(V3LcapMessage.PollNak.NAK_GROUP_MISMATCH, copy.getNak());
   }
   
   public void testNonNullPollNak2() throws Exception {
@@ -238,9 +238,21 @@ public class TestV3LcapMessage extends LockssTestCase {
     assertEqualMessages(src, copy);
     assertNotNull(src.getNak());
     assertNotNull(copy.getNak());
-    assertTrue(src.getNak().equals(V3LcapMessage.PollNak.NAK_NO_TIME));
-    assertTrue(copy.getNak().equals(V3LcapMessage.PollNak.NAK_NO_TIME));
-    assertEquals(src.getNak(), copy.getNak());
+    assertEquals(V3LcapMessage.PollNak.NAK_NO_TIME, src.getNak());
+    assertEquals(V3LcapMessage.PollNak.NAK_NO_TIME, copy.getNak());
+  }
+
+  public void testUnknownPollNak() throws Exception {
+    MyV3LcapMessage src =
+      makePollAckMessage(V3LcapMessage.PollNak.NAK_NO_TIME);
+    src.setTestNak("KNACKERED");
+    InputStream srcStream = src.getInputStream();
+    V3LcapMessage copy = new V3LcapMessage(srcStream, tempDir, theDaemon);
+    assertEqualMessages(src, copy);
+    assertNotNull(src.getNak());
+    assertNotNull(copy.getNak());
+    assertEquals(V3LcapMessage.PollNak.NAK_NO_TIME, src.getNak());
+    assertEquals(V3LcapMessage.PollNak.NAK_UNKNOWN, copy.getNak());
   }
 
   public void testRequestMessageCreation() throws Exception {
@@ -329,13 +341,13 @@ public class TestV3LcapMessage extends LockssTestCase {
     return msg;
   }
   
-  private V3LcapMessage makePollAckMessage(V3LcapMessage.PollNak nak) {
-    V3LcapMessage msg = new V3LcapMessage("ArchivalID_2", "key", "Plug42",
-                                          m_testBytes,
-                                          m_testBytes,
-                                          V3LcapMessage.MSG_POLL_ACK,
-                                          987654321, m_testID, tempDir,
-                                          theDaemon);
+  private MyV3LcapMessage makePollAckMessage(V3LcapMessage.PollNak nak) {
+    MyV3LcapMessage msg = new MyV3LcapMessage("ArchivalID_2", "key", "Plug42",
+					      m_testBytes,
+					      m_testBytes,
+					      V3LcapMessage.MSG_POLL_ACK,
+					      987654321, m_testID, tempDir,
+					      theDaemon);
     if (nak != null) {
       msg.setNak(nak);
     }
@@ -379,4 +391,43 @@ public class TestV3LcapMessage extends LockssTestCase {
     msg.setPluginVersion("PlugVer42");
     return msg;
   }
+
+  static class MyV3LcapMessage extends V3LcapMessage {
+    String testNak;
+
+    public MyV3LcapMessage(File messageDir, LockssApp daemon) {
+      super(messageDir, daemon);
+    }
+
+    public MyV3LcapMessage(String auId, String pollKey, String pluginVersion,
+			   byte[] pollerNonce, byte[] voterNonce, int opcode,
+			   long deadline, PeerIdentity origin, File messageDir,
+			   LockssApp daemon) {
+      super(auId, pollKey, pluginVersion, pollerNonce, voterNonce, opcode,
+	    deadline, origin, messageDir, daemon);
+    }
+
+    public MyV3LcapMessage(byte[] encodedBytes, File messageDir,
+			   LockssApp daemon)
+	throws IOException {
+      super(encodedBytes, messageDir, daemon);
+    }
+
+    public MyV3LcapMessage(InputStream inputStream, File messageDir,
+			   LockssApp daemon) throws IOException {
+      super(inputStream, messageDir, daemon);
+    }
+
+    void setTestNak(String nakName) {
+      testNak = nakName;
+    }
+
+    public void storeProps() throws IOException {
+      super.storeProps();
+      if (testNak != null) {
+	m_props.setProperty("nak", testNak);
+      }
+    }
+  }
+
 }
