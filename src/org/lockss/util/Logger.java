@@ -1,5 +1,5 @@
 /*
- * $Id: Logger.java,v 1.51 2007-03-14 05:53:18 tlipkis Exp $
+ * $Id: Logger.java,v 1.52 2008-02-27 06:07:03 tlipkis Exp $
  */
 
 /*
@@ -651,6 +651,7 @@ public class Logger {
       String name = unannouncedName;
       unannouncedName = null;
       info("ThreadId " + id + " is " + name);
+      announcedName = name;
     }
     return id;
   }
