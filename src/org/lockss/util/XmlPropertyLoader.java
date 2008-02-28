@@ -1,5 +1,5 @@
 /*
- * $Id: XmlPropertyLoader.java,v 1.32 2008-02-26 01:46:22 edwardsb1 Exp $
+ * $Id: XmlPropertyLoader.java,v 1.33 2008-02-28 23:07:39 edwardsb1 Exp $
  */
 
 /*
@@ -150,6 +150,8 @@ public class XmlPropertyLoader {
     private boolean m_inValue = false;
     // True iff the parser is currently inside a "list" element.
     private boolean m_inList  = false;
+    // True iff the "list" element is an "append" element.
+    private boolean m_appendList = false;
 
     // The property tree we're adding to.
     private PropertyTree m_props;
@@ -221,13 +223,21 @@ public class XmlPropertyLoader {
     public void startElement(String namespaceURI, String localName,
 			     String qName, Attributes attrs)
 	throws SAXException {
-
+      int i;
+      
+      log.debug3("START TAG: namespaceURI = " + namespaceURI + "\nlocalName = " + localName +
+          "\nqName = " + qName + "\nattrs = {");
+      for (i=0; i < attrs.getLength(); i++) {
+        log.debug3("  " + attrs.getQName(i) + "--> " + attrs.getValue(i));
+      }
+      log.debug3("}");
+      
       if (TAG_IF.equals(qName)) {
 	startIfTag(attrs);
       } else if (TAG_ELSE.equals(qName)) {
 	startElseTag();
       } else if (TAG_LIST.equals(qName)) {
-	startListTag();
+	startListTag(attrs);
       } else if (TAG_PROPERTY.equals(qName)) {
 	startPropertyTag(attrs);
       } else if (TAG_THEN.equals(qName)) {
@@ -255,6 +265,8 @@ public class XmlPropertyLoader {
     public void endElement(String namespaceURI, String localName,
 			   String qName)
 	throws SAXException {
+      log.debug2("END TAG: namespaceURI = " + namespaceURI + "\nlocalName = " + localName +
+          "\nqName = " + qName + "\n");
 
       if (TAG_IF.equals(qName)) {
 	endIfTag();
@@ -318,10 +330,31 @@ public class XmlPropertyLoader {
     /**
      * Handle encountering the start of a "list" tag.
      */
-    private void startListTag() {
+    private void startListTag(Attributes attrs) {
+      String append;
+      String name;
+      String value;
+      
       if (doEval()) {
 	m_inList = true;
 	m_propList = new ArrayList<String>();
+        
+        append = attrs.getValue("append");
+        
+        if (append == null) {
+          m_appendList = false;
+        } else {
+          m_appendList = append.equals("true");
+        }
+        
+        // We may not append to a non-existing list.
+        name = getPropname();
+        value = getProperty(name);
+        
+        if (m_appendList && value == null) {
+          throw new IllegalArgumentException("You may not append to the non-existing list " + name);
+        }
+        
       }
     }
 
@@ -437,11 +470,30 @@ public class XmlPropertyLoader {
      */
     private void endListTag() {
       if (doEval()) {
-	setListProperty(m_propList);
+        
+        if (m_appendList) {
+          
+          // There is currently no method to 'append' to a list value.
+          // Since I don't see other methods needing this ability, I
+          // put it here.
+          String strValue;
 
+          strValue = getProperty(getPropname());
+          
+          if (strValue != null && strValue.length() > 0) {
+            strValue = strValue + ";";
+          } 
+          
+          strValue = strValue + StringUtil.separatedString(m_propList, ";");
+          setProperty(strValue);
+        } else {
+          setListProperty(m_propList);
+        }
+        
 	// Clean-up.
 	m_propList = null;
 	m_inList = false;
+        m_appendList = false;
       }
     }
 
@@ -556,12 +608,22 @@ public class XmlPropertyLoader {
     private void setProperty(String value) {
       m_props.put(getPropname(), value);
     }
+    
+    /**
+     * Return the property associated with a prop name.
+     */
+    private String getProperty(String name) {
+      return m_props.getProperty(name);
+    }
 
     /**
      * Set a list of property values.
      */
     private void setListProperty(List list) {
-      setProperty(StringUtil.separatedString(list, ";"));
+      String strValue;
+      
+      strValue = StringUtil.separatedString(list, ";");
+      setProperty(strValue);
     }
 
     /**

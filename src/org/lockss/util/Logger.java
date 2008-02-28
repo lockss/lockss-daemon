@@ -1,5 +1,5 @@
 /*
- * $Id: Logger.java,v 1.52 2008-02-27 06:07:03 tlipkis Exp $
+ * $Id: Logger.java,v 1.53 2008-02-28 23:07:39 edwardsb1 Exp $
  */
 
 /*
@@ -124,12 +124,12 @@ public class Logger {
   private static int paramStackTraceLevel = DEFAULT_STACKTRACE_LEVEL;
   private static int paramStackTraceSeverity = DEFAULT_STACKTRACE_SEVERITY;
 
-  private static/* final*/ Map logs = new HashMap();
-  private static List targets = new ArrayList();
+  private static/* final*/ Map<String, Logger> logs = new HashMap<String, Logger>();
+  private static List<LogTarget> targets = new ArrayList<LogTarget>();
 
   /** Experimental for use in unit tests */
   public static void resetLogs() {
-    logs = new HashMap();
+    logs = new HashMap<String, Logger>();
   }
 
   // allow default level to be specified on command line
@@ -299,11 +299,11 @@ public class Logger {
     return "Unnamed" + ++uncnt;
   }
 
-  static Vector levelNames = null;
+  static Vector<String> levelNames = null;
 
   // Make vector for fast level -> name lookup
   private static void initLevelNames() {
-    levelNames = new Vector();
+    levelNames = new Vector<String>();
     for (int ix = 0; ix < levelDescrs.length; ix++) {
       LevelDescr l = levelDescrs[ix];
       if (levelNames.size() < l.level + 1) {
@@ -413,7 +413,7 @@ public class Logger {
    * @param tgts list of targets to which target will be added after it is
    * initialize.
    */
-  static void addTargetTo(LogTarget target, List tgts) {
+  static void addTargetTo(LogTarget target, List<LogTarget> tgts) {
     if (!tgts.contains(target)) {
       try {
 	target.init();
@@ -428,11 +428,11 @@ public class Logger {
    * Install the targets, replacing any current targets
    * @param newTargets list of targets to be installed
    */
-  public static void setTargets(List newTargets) {
-    List tgts = new ArrayList();
+  public static void setTargets(List<LogTarget> newTargets) {
+    List<LogTarget> tgts = new ArrayList<LogTarget>();
     // make list of initialized targets
-    for (Iterator iter = newTargets.iterator(); iter.hasNext(); ) {
-      addTargetTo((LogTarget)iter.next(), tgts);
+    for (LogTarget lt : newTargets) {
+      addTargetTo(lt, tgts);
     }
     if (!tgts.isEmpty()) {		// ensure targets is never empty
       targets = tgts;
@@ -486,7 +486,7 @@ public class Logger {
   /** Change list of targets to that specified by config param
    */
   private static void setLogTargets() {
-    List tgts =
+    List<LogTarget> tgts =
       targetListFromString(CurrentConfig.getParam(PARAM_LOG_TARGETS));
     if (tgts != null && !tgts.isEmpty()) {
       setTargets(tgts);
@@ -499,9 +499,9 @@ public class Logger {
    * list of log target instances
    * @return List of instances, or null if any errors occurred
    */
-  static List targetListFromString(String s) {
+  static List<LogTarget> targetListFromString(String s) {
     boolean err = false;
-    List tgts = new ArrayList();
+    List<LogTarget> tgts = new ArrayList<LogTarget>();
     Vector names = StringUtil.breakAt(s, ';');
     for (Iterator iter = names.iterator(); iter.hasNext(); ) {
       String targetName = (String)iter.next();
@@ -518,7 +518,7 @@ public class Logger {
     return err ? null : tgts;
   }
 
-  static List getTargets() {
+  static List<LogTarget> getTargets() {
     return targets;
   }
 
