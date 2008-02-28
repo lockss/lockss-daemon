@@ -1,5 +1,5 @@
 /*
- * $Id: TestXmlPropertyLoader.java,v 1.22 2008-02-26 01:47:58 edwardsb1 Exp $
+ * $Id: TestXmlPropertyLoader.java,v 1.23 2008-02-28 23:09:32 edwardsb1 Exp $
  */
 
 /*
@@ -850,7 +850,7 @@ public class TestXmlPropertyLoader extends LockssTestCase {
   */
 
   public void testNotWithAnd2() throws Exception {
-    PropertyTree props = new PropertyTree();
+    PropertyTree props;
     InputStream istr;
     StringBuffer sb;
 
@@ -895,7 +895,7 @@ public class TestXmlPropertyLoader extends LockssTestCase {
    * a "<then>" after an "<else>".
    */
   public void testElseBeforeThen() throws Exception {
-    PropertyTree props = new PropertyTree();
+    PropertyTree props;
     InputStream istr;
     StringBuffer sb;
 
@@ -920,7 +920,379 @@ public class TestXmlPropertyLoader extends LockssTestCase {
     } catch (IllegalArgumentException e) {
       /*  Passes test */
     }
+  }
+  
+  /**
+   * Bug 2798: Add add-to-list functionality to XmlPropertyLoader.
+   * 
+   * XML read by XmlPropertyLoader.LockssConfigHandler includes the <list> ... 
+   * </list> tag. When put inside a <property name="...">, it stores the list in
+   * the property.
+   * 
+   * Tom would like XML files to be able to add lists in multiple points.  The following
+   * new action would be allowed:
+   * 
+   *   <property name="d">
+   *      <list>
+   *        <value>1</value>
+   *        <value>2</value>
+   *        <value>3</value>
+   *        <value>4</value>
+   *        <value>5</value>
+   *      </list>
+   *   </property>
+   *
+   *     . . . 
+   *
+   *   <property name="d">
+   *      <list append="true">
+   *        <value>6</value>
+   *        <value>7</value>
+   *        <value>8</value>
+   *      </list>
+   *  </property>
+   */
+  public void testListAppend() throws Exception {
+    PropertyTree props = new PropertyTree();
+    InputStream istr;
+    String s;
+    StringBuilder sb;
+    Vector<String> vs;
+    
+    // Test: list with append adds the element to the series.
+    sb = new StringBuilder();
+    sb.append("<lockss-config>\n");    
+    sb.append("<property name=\"listAppend\">");
+    // Original list
+    sb.append("  <list>");
+    sb.append("    <value>1</value>");
+    sb.append("    <value>2</value>");
+    sb.append("  </list>");
+    // Appended list
+    sb.append("  <list append=\"true\">");
+    sb.append("    <value>3</value>");
+    sb.append("    <value>4</value>");
+    sb.append("  </list>");
+    sb.append("</property>");
+    sb.append("</lockss-config>\n");    
+    
+    props = new PropertyTree();
+    istr = new ReaderInputStream(new StringReader(sb.toString()));
+    setVersions(null, null, null, "test");
+    m_xmlPropertyLoader.loadProperties(props, istr);
+    
+    // Get the elements in listAppend.
+    s = props.getProperty("listAppend");
+    assertNotNull(s);
+    vs = StringUtil.breakAt(s, ';', -1, true, true);
+    
+    // Verify that the original elements are present.
+    assertTrue(vs.contains("1"));
+    assertTrue(vs.contains("2"));
+    
+    // Verify that the added elements are present.
+    assertTrue(vs.contains("3"));
+    assertTrue(vs.contains("4"));
+    
+    
+    // Test: list with append adds the element to the series, with a break in the middle.
+    sb = new StringBuilder();
+    // Original list
+    sb.append("<lockss-config>\n");    
+    sb.append("<property name=\"listAppend\">");
+    sb.append("  <list>");
+    sb.append("    <value>1</value>");
+    sb.append("    <value>2</value>");
+    sb.append("  </list>");
+    sb.append("</property>");
+    // Break in the middle.
+    sb.append("<property name=\"foobar\">");
+    sb.append("  <list>");
+    sb.append("    <value>yarf</value>");
+    sb.append("    <value>yip</value>");
+    sb.append("  </list>");
+    sb.append("</property>");   
+    // Appended list
+    sb.append("<property name=\"listAppend\">");
+    sb.append("  <list append=\"true\">");
+    sb.append("    <value>3</value>");
+    sb.append("    <value>4</value>");
+    sb.append("  </list>");
+    sb.append("</property>");
+    sb.append("</lockss-config>\n");
 
+    
+    props = new PropertyTree();
+    istr = new ReaderInputStream(new StringReader(sb.toString()));
+    setVersions(null, null, null, "test");
+    m_xmlPropertyLoader.loadProperties(props, istr);
+    
+    // Get the elements in listAppend.
+    s = props.getProperty("listAppend");
+    assertNotNull(s);
+    vs = StringUtil.breakAt(s, ';', -1, true, true);
+    
+    // Verify that the original elements are present.
+    assertTrue(vs.contains("1"));
+    assertTrue(vs.contains("2"));
+    
+    // Verify that the added elements are present.
+    assertTrue(vs.contains("3"));
+    assertTrue(vs.contains("4"));
+    
+    // Verify that the interrupting elements are NOT present.
+    assertFalse(vs.contains("yarf"));
+    assertFalse(vs.contains("yip"));
+
+    
+    // Test: Lists can have multiple appends
+    sb = new StringBuilder();
+    
+    sb.append("<lockss-config>\n");    
+    sb.append("<property name=\"listAppend\">");
+    // Original list
+    sb.append("  <list>");
+    sb.append("    <value>1</value>");
+    sb.append("    <value>2</value>");
+    sb.append("  </list>");
+    // Appended list 1
+    sb.append("  <list append=\"true\">");
+    sb.append("    <value>3</value>");
+    sb.append("    <value>4</value>");
+    sb.append("    <value>5</value>");
+    sb.append("  </list>");
+    // Appended list 2
+    sb.append("  <list append=\"true\">");
+    sb.append("    <value>6</value>");
+    sb.append("  </list>");
+    // Appended list 3
+    sb.append("  <list append=\"true\">");
+    sb.append("    <value>7</value>");
+    sb.append("    <value>8</value>");
+    sb.append("    <value>9</value>");
+    sb.append("    <value>10</value>");
+    sb.append("  </list>");
+    sb.append("</property>");
+    sb.append("</lockss-config>\n");    
+
+    props = new PropertyTree();
+    istr = new ReaderInputStream(new StringReader(sb.toString()));
+    setVersions(null, null, null, "test");
+    m_xmlPropertyLoader.loadProperties(props, istr);
+    
+    // Get the elements in listAppend.
+    s = props.getProperty("listAppend");
+    assertNotNull(s);
+    vs = StringUtil.breakAt(s, ';', -1, true, true);
+
+    // Verify that original list is present.
+    assertTrue(vs.contains("1"));
+    assertTrue(vs.contains("2"));
+    
+    // Verify that appended list 1 is present.
+    assertTrue(vs.contains("3"));
+    assertTrue(vs.contains("4"));
+    assertTrue(vs.contains("5"));
+
+    // Verify that appended list 2 is present.
+    assertTrue(vs.contains("6"));
+    
+    // Verify that appended list 3 is present.
+    assertTrue(vs.contains("7"));
+    assertTrue(vs.contains("8"));
+    assertTrue(vs.contains("9"));
+    assertTrue(vs.contains("10"));
+    
+    
+    // Test: Lists can have multiple appends, with breaks...
+    sb = new StringBuilder();
+    
+    sb.append("<lockss-config>\n");    
+    // Original list
+    sb.append("<property name=\"listAppend\">");
+    sb.append("  <list>");
+    sb.append("    <value>1</value>");
+    sb.append("    <value>2</value>");
+    sb.append("  </list>");
+    sb.append("</property>");
+    // Interrupting list
+    sb.append("<property name=\"interrupt\">");
+    sb.append("  <list>");
+    sb.append("    <value>a</value>");
+    sb.append("    <value>b</value>");
+    sb.append("  </list>");
+    sb.append("</property>");
+    // Appended list 1
+    sb.append("<property name=\"listAppend\">");
+    sb.append("  <list append=\"true\">");
+    sb.append("    <value>3</value>");
+    sb.append("    <value>4</value>");
+    sb.append("    <value>5</value>");
+    sb.append("  </list>");
+    sb.append("</property>");
+    // Interrupting list with appends.
+    sb.append("<property name=\"interrupt\">");
+    sb.append("  <list append=\"true\">");
+    sb.append("    <value>c</value>");
+    sb.append("    <value>d</value>");
+    sb.append("  </list>");
+    sb.append("</property>");
+    // Appended list 2
+    sb.append("<property name=\"listAppend\">");
+    sb.append("  <list append=\"true\">");
+    sb.append("    <value>6</value>");
+    sb.append("  </list>");
+    sb.append("</property>");
+    // Different interrupting list.
+    sb.append("<property name=\"anotherInterrupt\">");
+    sb.append("  <list>");
+    sb.append("    <value>foo</value>");
+    sb.append("    <value>bar</value>");
+    sb.append("  </list>");
+    sb.append("</property>");
+    // Appended list 3
+    sb.append("<property name=\"listAppend\">");
+    sb.append("  <list append=\"true\">");
+    sb.append("    <value>7</value>");
+    sb.append("    <value>8</value>");
+    sb.append("    <value>9</value>");
+    sb.append("    <value>10</value>");
+    sb.append("  </list>");
+    sb.append("</property>");
+    sb.append("</lockss-config>\n");    
+
+    props = new PropertyTree();
+    istr = new ReaderInputStream(new StringReader(sb.toString()));
+    setVersions(null, null, null, "test");
+    m_xmlPropertyLoader.loadProperties(props, istr);
+
+    // Get the elements in listAppend.
+    s = props.getProperty("listAppend");
+    assertNotNull(s);
+    vs = StringUtil.breakAt(s, ';', -1, true, true);
+
+    // Verify that original list is present.
+    assertTrue(vs.contains("1"));
+    assertTrue(vs.contains("2"));
+    
+    // Verify that appended list 1 is present.
+    assertTrue(vs.contains("3"));
+    assertTrue(vs.contains("4"));
+    assertTrue(vs.contains("5"));
+
+    // Verify that appended list 2 is present.
+    assertTrue(vs.contains("6"));
+    
+    // Verify that appended list 3 is present.
+    assertTrue(vs.contains("7"));
+    assertTrue(vs.contains("8"));
+    assertTrue(vs.contains("9"));
+    assertTrue(vs.contains("10"));
+    
+    // Verify that interrupt is NOT present.
+    assertFalse(vs.contains("a"));
+    assertFalse(vs.contains("b"));
+    assertFalse(vs.contains("c"));
+    assertFalse(vs.contains("d"));
+    
+    // Verify that the other interrupting list is NOT present.
+    assertFalse(vs.contains("foo"));
+    assertFalse(vs.contains("bar"));
+    
+    
+    // Test: appending to a non-existent list causes an error.
+    sb = new StringBuilder();
+    sb.append("<lockss-config>\n");    
+    sb.append("<property name=\"listAppend\">");
+    // Append to non-existent list.
+    sb.append("  <list append=\"true\">");
+    sb.append("    <value>1</value>");
+    sb.append("    <value>2</value>");
+    sb.append("  </list>");
+    sb.append("</property>");
+    sb.append("</lockss-config>\n");    
+
+    props = new PropertyTree();
+    istr = new ReaderInputStream(new StringReader(sb.toString()));
+    setVersions(null, null, null, "test");
+    
+    try {
+      m_xmlPropertyLoader.loadProperties(props, istr);
+      fail("Appending to a non-existent list should have caused an error.");
+    } catch (IllegalArgumentException e) {
+      /* Passes test */
+    }
+    
+    // Test: "append=false" causes a new list to be created.
+    sb = new StringBuilder();
+    sb.append("<lockss-config>\n");    
+    sb.append("<property name=\"listAppend\">");
+    // Original list
+    sb.append("  <list>");
+    sb.append("    <value>1</value>");
+    sb.append("    <value>2</value>");
+    sb.append("  </list>");
+    // NOT-Appended list
+    sb.append("  <list append=\"false\">");
+    sb.append("    <value>3</value>");
+    sb.append("    <value>4</value>");
+    sb.append("  </list>");
+    sb.append("</property>");
+    sb.append("</lockss-config>\n");    
+
+    props = new PropertyTree();
+    istr = new ReaderInputStream(new StringReader(sb.toString()));
+    setVersions(null, null, null, "test");
+    m_xmlPropertyLoader.loadProperties(props, istr);
+
+    // Get the elements in listAppend.
+    s = props.getProperty("listAppend");
+    assertNotNull(s);
+    vs = StringUtil.breakAt(s, ';', -1, true, true);
+
+    // Verify that the original list is not present.
+    assertFalse(vs.contains("1"));
+    assertFalse(vs.contains("2"));
+    
+    // Verify that the added elements are present.
+    assertTrue(vs.contains("3"));
+    assertTrue(vs.contains("4"));
+    
+    
+    // Test: without "append=true", a new list is created.
+    sb = new StringBuilder();
+    sb.append("<lockss-config>\n");    
+    sb.append("<property name=\"listAppend\">");
+    // Original list
+    sb.append("  <list>");
+    sb.append("    <value>1</value>");
+    sb.append("    <value>2</value>");
+    sb.append("  </list>");
+    // NOT-Appended list
+    sb.append("  <list>");
+    sb.append("    <value>3</value>");
+    sb.append("    <value>4</value>");
+    sb.append("  </list>");
+    sb.append("</property>");
+    sb.append("</lockss-config>\n");    
+
+    props = new PropertyTree();
+    istr = new ReaderInputStream(new StringReader(sb.toString()));
+    setVersions(null, null, null, "test");
+    m_xmlPropertyLoader.loadProperties(props, istr);
+    
+    // Get the elements in listAppend.
+    s = props.getProperty("listAppend");
+    assertNotNull(s);
+    vs = StringUtil.breakAt(s, ';', -1, true, true);
+
+    // Verify that the original list is not present.
+    assertFalse(vs.contains("1"));
+    assertFalse(vs.contains("2"));
+    
+    // Verify that the added elements are present.
+    assertTrue(vs.contains("3"));
+    assertTrue(vs.contains("4"));
   }
   
   /**
