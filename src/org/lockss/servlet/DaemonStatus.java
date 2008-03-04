@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.71 2007-12-19 05:14:31 tlipkis Exp $
+ * $Id: DaemonStatus.java,v 1.71.2.1 2008-03-04 02:43:24 tlipkis Exp $
  */
 
 /*
@@ -334,7 +334,7 @@ public class DaemonStatus extends LockssServlet {
 
       table.newRow();
       table.addHeading(title, "ALIGN=CENTER COLSPAN=" + (cols * 2 - 1));
-      table.newRow("\"background=#e0e0e0'|");
+      table.newRow();
 
       addSummaryInfo(table, statTable, cols);
 
