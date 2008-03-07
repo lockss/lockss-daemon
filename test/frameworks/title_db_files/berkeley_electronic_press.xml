@@ -1,0 +1,3348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE lockss-config [
+<!ELEMENT lockss-config (if|property)+>
+<!ELEMENT property (property|list|value|if)*>
+<!ELEMENT list (value)+>
+<!ELEMENT value (#PCDATA)>
+<!ELEMENT test EMPTY>
+<!ELEMENT and (and|or|not|test)*>
+<!ELEMENT or (and|or|not|test)*>
+<!ELEMENT not (and|or|not|test)*>
+<!ELEMENT if (and|or|not|then|else|test|property)*>
+<!ELEMENT then (if|property)*>
+<!ELEMENT else (if|property)*>
+<!ATTLIST property name CDATA #REQUIRED>
+<!ATTLIST property value CDATA #IMPLIED>
+<!ATTLIST test hostname CDATA #IMPLIED>
+<!ATTLIST test group CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST test daemonVersion CDATA #IMPLIED>
+<!ATTLIST test platformVersionMin CDATA #IMPLIED>
+<!ATTLIST test platformVersionMax CDATA #IMPLIED>
+<!ATTLIST test platformVersion CDATA #IMPLIED>
+<!ATTLIST test platformName CDATA #IMPLIED>
+<!ATTLIST if hostname CDATA #IMPLIED>
+<!ATTLIST if group CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST if daemonVersion CDATA #IMPLIED>
+<!ATTLIST if platformVersionMin CDATA #IMPLIED>
+<!ATTLIST if platformVersionMax CDATA #IMPLIED>
+<!ATTLIST if platformVersion CDATA #IMPLIED>
+<!ATTLIST if platformName CDATA #IMPLIED>
+<!ATTLIST list append CDATA #IMPLIED>
+]>
+
+<lockss-config>
+ <property name="org.lockss.title">
+
+  <property name="BEPAsianJournalofComparativeLaw1">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Asian Journal of Comparative Law" />
+   <property name="title" value="Asian Journal of Comparative Law Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="asjcl" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="1" />
+   </property>
+  </property>
+
+  <property name="BEPAsianJournalofComparativeLaw2">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Asian Journal of Comparative Law" />
+   <property name="title" value="Asian Journal of Comparative Law Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="asjcl" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="2" />
+   </property>
+  </property>
+
+  <property name="BEPBasicIncomeStudies1">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Basic Income Studies" />
+   <property name="title" value="Basic Income Studies Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="bis" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="1" />
+   </property>
+  </property>
+
+  <property name="BEPBasicIncomeStudies2">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Basic Income Studies" />
+   <property name="title" value="Basic Income Studies Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="bis" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="2" />
+   </property>
+  </property>
+
+  <property name="BEPTheBEJournalofEconomicAnalysisandPolicy1">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="The B.E. Journal of Economic Analysis &amp; Policy" />
+   <property name="title" value="The B.E. Journal of Economic Analysis &amp; Policy Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="bejeap" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="1" />
+   </property>
+  </property>
+
+  <property name="BEPTheBEJournalofEconomicAnalysisandPolicy2">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="The B.E. Journal of Economic Analysis &amp; Policy" />
+   <property name="title" value="The B.E. Journal of Economic Analysis &amp; Policy Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="bejeap" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="2" />
+   </property>
+  </property>
+
+  <property name="BEPTheBEJournalofEconomicAnalysisandPolicy3">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="The B.E. Journal of Economic Analysis &amp; Policy" />
+   <property name="title" value="The B.E. Journal of Economic Analysis &amp; Policy Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="bejeap" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="3" />
+   </property>
+  </property>
+
+  <property name="BEPTheBEJournalofEconomicAnalysisandPolicy4">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="The B.E. Journal of Economic Analysis &amp; Policy" />
+   <property name="title" value="The B.E. Journal of Economic Analysis &amp; Policy Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="bejeap" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="4" />
+   </property>
+  </property>
+
+  <property name="BEPTheBEJournalofEconomicAnalysisandPolicy5">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="The B.E. Journal of Economic Analysis &amp; Policy" />
+   <property name="title" value="The B.E. Journal of Economic Analysis &amp; Policy Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="bejeap" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="5" />
+   </property>
+  </property>
+
+  <property name="BEPTheBEJournalofEconomicAnalysisandPolicy6">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="The B.E. Journal of Economic Analysis &amp; Policy" />
+   <property name="title" value="The B.E. Journal of Economic Analysis &amp; Policy Volume 6" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="bejeap" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="6" />
+   </property>
+  </property>
+
+  <property name="BEPTheBEJournalofEconomicAnalysisandPolicy7">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="The B.E. Journal of Economic Analysis &amp; Policy" />
+   <property name="title" value="The B.E. Journal of Economic Analysis &amp; Policy Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="bejeap" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="7" />
+   </property>
+  </property>
+
+  <property name="BEPTheBEJournalofMacroeconomics1">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="The B.E. Journal of Macroeconomics" />
+   <property name="title" value="The B.E. Journal of Macroeconomics Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="bejm" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="1" />
+   </property>
+  </property>
+
+  <property name="BEPTheBEJournalofMacroeconomics2">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="The B.E. Journal of Macroeconomics" />
+   <property name="title" value="The B.E. Journal of Macroeconomics Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="bejm" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="2" />
+   </property>
+  </property>
+
+  <property name="BEPTheBEJournalofMacroeconomics3">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="The B.E. Journal of Macroeconomics" />
+   <property name="title" value="The B.E. Journal of Macroeconomics Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="bejm" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="3" />
+   </property>
+  </property>
+
+  <property name="BEPTheBEJournalofMacroeconomics4">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="The B.E. Journal of Macroeconomics" />
+   <property name="title" value="The B.E. Journal of Macroeconomics Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="bejm" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="4" />
+   </property>
+  </property>
+
+  <property name="BEPTheBEJournalofMacroeconomics5">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="The B.E. Journal of Macroeconomics" />
+   <property name="title" value="The B.E. Journal of Macroeconomics Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="bejm" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="5" />
+   </property>
+  </property>
+
+  <property name="BEPTheBEJournalofMacroeconomics6">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="The B.E. Journal of Macroeconomics" />
+   <property name="title" value="The B.E. Journal of Macroeconomics Volume 6" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="bejm" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="6" />
+   </property>
+  </property>
+
+  <property name="BEPTheBEJournalofMacroeconomics7">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="The B.E. Journal of Macroeconomics" />
+   <property name="title" value="The B.E. Journal of Macroeconomics Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="bejm" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="7" />
+   </property>
+  </property>
+
+  <property name="BEPTheBEJournalofTheoreticalEconomics1">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="The B.E. Journal of Theoretical Economics" />
+   <property name="title" value="The B.E. Journal of Theoretical Economics Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="bejte" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="1" />
+   </property>
+  </property>
+
+  <property name="BEPTheBEJournalofTheoreticalEconomics2">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="The B.E. Journal of Theoretical Economics" />
+   <property name="title" value="The B.E. Journal of Theoretical Economics Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="bejte" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="2" />
+   </property>
+  </property>
+
+  <property name="BEPTheBEJournalofTheoreticalEconomics3">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="The B.E. Journal of Theoretical Economics" />
+   <property name="title" value="The B.E. Journal of Theoretical Economics Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="bejte" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="3" />
+   </property>
+  </property>
+
+  <property name="BEPTheBEJournalofTheoreticalEconomics4">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="The B.E. Journal of Theoretical Economics" />
+   <property name="title" value="The B.E. Journal of Theoretical Economics Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="bejte" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="4" />
+   </property>
+  </property>
+
+  <property name="BEPTheBEJournalofTheoreticalEconomics5">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="The B.E. Journal of Theoretical Economics" />
+   <property name="title" value="The B.E. Journal of Theoretical Economics Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="bejte" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="5" />
+   </property>
+  </property>
+
+  <property name="BEPTheBEJournalofTheoreticalEconomics6">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="The B.E. Journal of Theoretical Economics" />
+   <property name="title" value="The B.E. Journal of Theoretical Economics Volume 6" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="bejte" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="6" />
+   </property>
+  </property>
+
+  <property name="BEPTheBEJournalofTheoreticalEconomics7">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="The B.E. Journal of Theoretical Economics" />
+   <property name="title" value="The B.E. Journal of Theoretical Economics Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="bejte" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="7" />
+   </property>
+  </property>
+
+  <property name="BEPBusinessandPolitics2">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Business and Politics" />
+   <property name="title" value="Business and Politics Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="bap" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="2" />
+   </property>
+  </property>
+
+  <property name="BEPBusinessandPolitics3">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Business and Politics" />
+   <property name="title" value="Business and Politics Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="bap" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="3" />
+   </property>
+  </property>
+
+  <property name="BEPBusinessandPolitics4">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Business and Politics" />
+   <property name="title" value="Business and Politics Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="bap" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="4" />
+   </property>
+  </property>
+
+  <property name="BEPBusinessandPolitics5">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Business and Politics" />
+   <property name="title" value="Business and Politics Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="bap" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="5" />
+   </property>
+  </property>
+
+  <property name="BEPBusinessandPolitics6">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Business and Politics" />
+   <property name="title" value="Business and Politics Volume 6" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="bap" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="6" />
+   </property>
+  </property>
+
+  <property name="BEPBusinessandPolitics7">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Business and Politics" />
+   <property name="title" value="Business and Politics Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="bap" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="7" />
+   </property>
+  </property>
+
+  <property name="BEPBusinessandPolitics8">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Business and Politics" />
+   <property name="title" value="Business and Politics Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="bap" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="8" />
+   </property>
+  </property>
+
+  <property name="BEPBusinessandPolitics9">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Business and Politics" />
+   <property name="title" value="Business and Politics Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="bap" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="9" />
+   </property>
+  </property>
+
+  <property name="BEPCapitalismandSociety1">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Capitalism and Society" />
+   <property name="title" value="Capitalism and Society Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="cas" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="1" />
+   </property>
+  </property>
+
+  <property name="BEPCapitalismandSociety2">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Capitalism and Society" />
+   <property name="title" value="Capitalism and Society Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="cas" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="2" />
+   </property>
+  </property>
+
+  <property name="BEPChemicalProductandProcessModeling1">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Chemical Product and Process Modeling" />
+   <property name="title" value="Chemical Product and Process Modeling Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="cppm" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="1" />
+   </property>
+  </property>
+
+  <property name="BEPChemicalProductandProcessModeling2">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Chemical Product and Process Modeling" />
+   <property name="title" value="Chemical Product and Process Modeling Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="cppm" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="2" />
+   </property>
+  </property>
+
+  <property name="BEPTheEconomistsVoice1">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="The Economists' Voice" />
+   <property name="title" value="The Economists' Voice Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="ev" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="1" />
+   </property>
+  </property>
+
+  <property name="BEPTheEconomistsVoice2">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="The Economists' Voice" />
+   <property name="title" value="The Economists' Voice Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="ev" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="2" />
+   </property>
+  </property>
+
+  <property name="BEPTheEconomistsVoice3">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="The Economists' Voice" />
+   <property name="title" value="The Economists' Voice Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="ev" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="3" />
+   </property>
+  </property>
+
+  <property name="BEPTheEconomistsVoice4">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="The Economists' Voice" />
+   <property name="title" value="The Economists' Voice Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="ev" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="4" />
+   </property>
+  </property>
+
+  <property name="BEPTheForum1">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="The Forum" />
+   <property name="title" value="The Forum Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="forum" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="1" />
+   </property>
+  </property>
+
+  <property name="BEPTheForum2">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="The Forum" />
+   <property name="title" value="The Forum Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="forum" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="2" />
+   </property>
+  </property>
+
+  <property name="BEPTheForum3">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="The Forum" />
+   <property name="title" value="The Forum Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="forum" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="3" />
+   </property>
+  </property>
+
+  <property name="BEPTheForum4">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="The Forum" />
+   <property name="title" value="The Forum Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="forum" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="4" />
+   </property>
+  </property>
+
+  <property name="BEPTheForum5">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="The Forum" />
+   <property name="title" value="The Forum Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="forum" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="5" />
+   </property>
+  </property>
+
+  <property name="BEPForumforHealthEconomicsandPolicy1">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Forum for Health Economics &amp; Policy" />
+   <property name="title" value="Forum for Health Economics &amp; Policy Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="fhep" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="1" />
+   </property>
+  </property>
+
+  <property name="BEPForumforHealthEconomicsandPolicy2">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Forum for Health Economics &amp; Policy" />
+   <property name="title" value="Forum for Health Economics &amp; Policy Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="fhep" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="2" />
+   </property>
+  </property>
+
+  <property name="BEPForumforHealthEconomicsandPolicy3">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Forum for Health Economics &amp; Policy" />
+   <property name="title" value="Forum for Health Economics &amp; Policy Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="fhep" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="3" />
+   </property>
+  </property>
+
+  <property name="BEPForumforHealthEconomicsandPolicy4">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Forum for Health Economics &amp; Policy" />
+   <property name="title" value="Forum for Health Economics &amp; Policy Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="fhep" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="4" />
+   </property>
+  </property>
+
+  <property name="BEPForumforHealthEconomicsandPolicy5">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Forum for Health Economics &amp; Policy" />
+   <property name="title" value="Forum for Health Economics &amp; Policy Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="fhep" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="5" />
+   </property>
+  </property>
+
+  <property name="BEPForumforHealthEconomicsandPolicy6">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Forum for Health Economics &amp; Policy" />
+   <property name="title" value="Forum for Health Economics &amp; Policy Volume 6" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="fhep" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="6" />
+   </property>
+  </property>
+
+  <property name="BEPForumforHealthEconomicsandPolicy7">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Forum for Health Economics &amp; Policy" />
+   <property name="title" value="Forum for Health Economics &amp; Policy Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="fhep" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="7" />
+   </property>
+  </property>
+
+  <property name="BEPForumforHealthEconomicsandPolicy8">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Forum for Health Economics &amp; Policy" />
+   <property name="title" value="Forum for Health Economics &amp; Policy Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="fhep" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="8" />
+   </property>
+  </property>
+
+  <property name="BEPForumforHealthEconomicsandPolicy9">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Forum for Health Economics &amp; Policy" />
+   <property name="title" value="Forum for Health Economics &amp; Policy Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="fhep" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="9" />
+   </property>
+  </property>
+
+  <property name="BEPForumforHealthEconomicsandPolicy10">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Forum for Health Economics &amp; Policy" />
+   <property name="title" value="Forum for Health Economics &amp; Policy Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="fhep" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="10" />
+   </property>
+  </property>
+
+  <property name="BEPGlobalEconomyJournal1">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Global Economy Journal" />
+   <property name="title" value="Global Economy Journal Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="gej" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="1" />
+   </property>
+  </property>
+
+  <property name="BEPGlobalEconomyJournal2">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Global Economy Journal" />
+   <property name="title" value="Global Economy Journal Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="gej" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="2" />
+   </property>
+  </property>
+
+  <property name="BEPGlobalEconomyJournal3">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Global Economy Journal" />
+   <property name="title" value="Global Economy Journal Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="gej" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="3" />
+   </property>
+  </property>
+
+  <property name="BEPGlobalEconomyJournal4">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Global Economy Journal" />
+   <property name="title" value="Global Economy Journal Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="gej" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="4" />
+   </property>
+  </property>
+
+  <property name="BEPGlobalEconomyJournal5">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Global Economy Journal" />
+   <property name="title" value="Global Economy Journal Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="gej" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="5" />
+   </property>
+  </property>
+
+  <property name="BEPGlobalEconomyJournal6">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Global Economy Journal" />
+   <property name="title" value="Global Economy Journal Volume 6" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="gej" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="6" />
+   </property>
+  </property>
+
+  <property name="BEPGlobalEconomyJournal7">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Global Economy Journal" />
+   <property name="title" value="Global Economy Journal Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="gej" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="7" />
+   </property>
+  </property>
+
+  <property name="BEPGlobalJurist1">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Global Jurist" />
+   <property name="title" value="Global Jurist Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="gj" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="1" />
+   </property>
+  </property>
+
+  <property name="BEPGlobalJurist2">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Global Jurist" />
+   <property name="title" value="Global Jurist Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="gj" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="2" />
+   </property>
+  </property>
+
+  <property name="BEPGlobalJurist3">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Global Jurist" />
+   <property name="title" value="Global Jurist Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="gj" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="3" />
+   </property>
+  </property>
+
+  <property name="BEPGlobalJurist4">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Global Jurist" />
+   <property name="title" value="Global Jurist Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="gj" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="4" />
+   </property>
+  </property>
+
+  <property name="BEPGlobalJurist5">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Global Jurist" />
+   <property name="title" value="Global Jurist Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="gj" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="5" />
+   </property>
+  </property>
+
+  <property name="BEPGlobalJurist6">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Global Jurist" />
+   <property name="title" value="Global Jurist Volume 6" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="gj" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="6" />
+   </property>
+  </property>
+
+  <property name="BEPGlobalJurist7">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Global Jurist" />
+   <property name="title" value="Global Jurist Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="gj" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="7" />
+   </property>
+  </property>
+
+  <property name="BEPInternationalCommentaryonEvidence1">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="International Commentary on Evidence" />
+   <property name="title" value="International Commentary on Evidence Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="ice" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="1" />
+   </property>
+  </property>
+
+  <property name="BEPInternationalCommentaryonEvidence2">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="International Commentary on Evidence" />
+   <property name="title" value="International Commentary on Evidence Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="ice" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="2" />
+   </property>
+  </property>
+
+  <property name="BEPInternationalCommentaryonEvidence3">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="International Commentary on Evidence" />
+   <property name="title" value="International Commentary on Evidence Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="ice" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="3" />
+   </property>
+  </property>
+
+  <property name="BEPInternationalCommentaryonEvidence4">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="International Commentary on Evidence" />
+   <property name="title" value="International Commentary on Evidence Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="ice" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="4" />
+   </property>
+  </property>
+
+  <property name="BEPInternationalCommentaryonEvidence5">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="International Commentary on Evidence" />
+   <property name="title" value="International Commentary on Evidence Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="ice" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="5" />
+   </property>
+  </property>
+
+  <property name="BEPTheInternationalJournalofBiostatistics1">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="The International Journal of Biostatistics" />
+   <property name="title" value="The International Journal of Biostatistics Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="ijb" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="1" />
+   </property>
+  </property>
+
+  <property name="BEPTheInternationalJournalofBiostatistics2">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="The International Journal of Biostatistics" />
+   <property name="title" value="The International Journal of Biostatistics Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="ijb" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="2" />
+   </property>
+  </property>
+
+  <property name="BEPTheInternationalJournalofBiostatistics3">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="The International Journal of Biostatistics" />
+   <property name="title" value="The International Journal of Biostatistics Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="ijb" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="3" />
+   </property>
+  </property>
+
+  <property name="BEPInternationalJournalofChemicalReactorEngineering1">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="International Journal of Chemical Reactor Engineering" />
+   <property name="title" value="International Journal of Chemical Reactor Engineering Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="ijcre" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="1" />
+   </property>
+  </property>
+
+  <property name="BEPInternationalJournalofChemicalReactorEngineering2">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="International Journal of Chemical Reactor Engineering" />
+   <property name="title" value="International Journal of Chemical Reactor Engineering Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="ijcre" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="2" />
+   </property>
+  </property>
+
+  <property name="BEPInternationalJournalofChemicalReactorEngineering3">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="International Journal of Chemical Reactor Engineering" />
+   <property name="title" value="International Journal of Chemical Reactor Engineering Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="ijcre" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="3" />
+   </property>
+  </property>
+
+  <property name="BEPInternationalJournalofChemicalReactorEngineering4">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="International Journal of Chemical Reactor Engineering" />
+   <property name="title" value="International Journal of Chemical Reactor Engineering Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="ijcre" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="4" />
+   </property>
+  </property>
+
+  <property name="BEPInternationalJournalofChemicalReactorEngineering5">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="International Journal of Chemical Reactor Engineering" />
+   <property name="title" value="International Journal of Chemical Reactor Engineering Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="ijcre" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="5" />
+   </property>
+  </property>
+
+  <property name="BEPInternationalJournalofEmergingElectricPowerSystems1">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="International Journal of Emerging Electric Power Systems" />
+   <property name="title" value="International Journal of Emerging Electric Power Systems Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="ijeeps" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="1" />
+   </property>
+  </property>
+
+  <property name="BEPInternationalJournalofEmergingElectricPowerSystems2">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="International Journal of Emerging Electric Power Systems" />
+   <property name="title" value="International Journal of Emerging Electric Power Systems Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="ijeeps" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="2" />
+   </property>
+  </property>
+
+  <property name="BEPInternationalJournalofEmergingElectricPowerSystems3">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="International Journal of Emerging Electric Power Systems" />
+   <property name="title" value="International Journal of Emerging Electric Power Systems Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="ijeeps" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="3" />
+   </property>
+  </property>
+
+  <property name="BEPInternationalJournalofEmergingElectricPowerSystems4">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="International Journal of Emerging Electric Power Systems" />
+   <property name="title" value="International Journal of Emerging Electric Power Systems Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="ijeeps" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="4" />
+   </property>
+  </property>
+
+  <property name="BEPInternationalJournalofEmergingElectricPowerSystems5">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="International Journal of Emerging Electric Power Systems" />
+   <property name="title" value="International Journal of Emerging Electric Power Systems Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="ijeeps" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="5" />
+   </property>
+  </property>
+
+  <property name="BEPInternationalJournalofEmergingElectricPowerSystems6">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="International Journal of Emerging Electric Power Systems" />
+   <property name="title" value="International Journal of Emerging Electric Power Systems Volume 6" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="ijeeps" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="6" />
+   </property>
+  </property>
+
+  <property name="BEPInternationalJournalofEmergingElectricPowerSystems7">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="International Journal of Emerging Electric Power Systems" />
+   <property name="title" value="International Journal of Emerging Electric Power Systems Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="ijeeps" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="7" />
+   </property>
+  </property>
+
+  <property name="BEPInternationalJournalofEmergingElectricPowerSystems8">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="International Journal of Emerging Electric Power Systems" />
+   <property name="title" value="International Journal of Emerging Electric Power Systems Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="ijeeps" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="8" />
+   </property>
+  </property>
+
+  <property name="BEPInternationalJournalofFoodEngineering1">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="International Journal of Food Engineering" />
+   <property name="title" value="International Journal of Food Engineering Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="ijfe" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="1" />
+   </property>
+  </property>
+
+  <property name="BEPInternationalJournalofFoodEngineering2">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="International Journal of Food Engineering" />
+   <property name="title" value="International Journal of Food Engineering Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="ijfe" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="2" />
+   </property>
+  </property>
+
+  <property name="BEPInternationalJournalofFoodEngineering3">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="International Journal of Food Engineering" />
+   <property name="title" value="International Journal of Food Engineering Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="ijfe" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="3" />
+   </property>
+  </property>
+
+  <property name="BEPInternationalJournalofNursingEducationScholarship1">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="International Journal of Nursing Education Scholarship" />
+   <property name="title" value="International Journal of Nursing Education Scholarship Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="ijnes" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="1" />
+   </property>
+  </property>
+
+  <property name="BEPInternationalJournalofNursingEducationScholarship2">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="International Journal of Nursing Education Scholarship" />
+   <property name="title" value="International Journal of Nursing Education Scholarship Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="ijnes" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="2" />
+   </property>
+  </property>
+
+  <property name="BEPInternationalJournalofNursingEducationScholarship3">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="International Journal of Nursing Education Scholarship" />
+   <property name="title" value="International Journal of Nursing Education Scholarship Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="ijnes" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="3" />
+   </property>
+  </property>
+
+  <property name="BEPInternationalJournalofNursingEducationScholarship4">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="International Journal of Nursing Education Scholarship" />
+   <property name="title" value="International Journal of Nursing Education Scholarship Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="ijnes" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="4" />
+   </property>
+  </property>
+
+  <property name="BEPJournalofAgriculturalandFoodIndustrialOrganization1">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Journal of Agricultural &amp; Food Industrial Organization" />
+   <property name="title" value="Journal of Agricultural &amp; Food Industrial Organization Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="jafio" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="1" />
+   </property>
+  </property>
+
+  <property name="BEPJournalofAgriculturalandFoodIndustrialOrganization2">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Journal of Agricultural &amp; Food Industrial Organization" />
+   <property name="title" value="Journal of Agricultural &amp; Food Industrial Organization Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="jafio" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="2" />
+   </property>
+  </property>
+
+  <property name="BEPJournalofAgriculturalandFoodIndustrialOrganization3">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Journal of Agricultural &amp; Food Industrial Organization" />
+   <property name="title" value="Journal of Agricultural &amp; Food Industrial Organization Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="jafio" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="3" />
+   </property>
+  </property>
+
+  <property name="BEPJournalofAgriculturalandFoodIndustrialOrganization4">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Journal of Agricultural &amp; Food Industrial Organization" />
+   <property name="title" value="Journal of Agricultural &amp; Food Industrial Organization Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="jafio" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="4" />
+   </property>
+  </property>
+
+  <property name="BEPJournalofAgriculturalandFoodIndustrialOrganization5">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Journal of Agricultural &amp; Food Industrial Organization" />
+   <property name="title" value="Journal of Agricultural &amp; Food Industrial Organization Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="jafio" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="5" />
+   </property>
+  </property>
+
+  <property name="BEPJournalofBusinessValuationandEconomicLossAnalysis1">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Journal of Business Valuation and Economic Loss Analysis" />
+   <property name="title" value="Journal of Business Valuation and Economic Loss Analysis Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="jbvela" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="1" />
+   </property>
+  </property>
+
+  <property name="BEPJournalofBusinessValuationandEconomicLossAnalysis2">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Journal of Business Valuation and Economic Loss Analysis" />
+   <property name="title" value="Journal of Business Valuation and Economic Loss Analysis Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="jbvela" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="2" />
+   </property>
+  </property>
+
+  <property name="BEPJournalofComplementaryandIntegrativeMedicine1">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Journal of Complementary and Integrative Medicine" />
+   <property name="title" value="Journal of Complementary and Integrative Medicine Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="jcim" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="1" />
+   </property>
+  </property>
+
+  <property name="BEPJournalofComplementaryandIntegrativeMedicine2">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Journal of Complementary and Integrative Medicine" />
+   <property name="title" value="Journal of Complementary and Integrative Medicine Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="jcim" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="2" />
+   </property>
+  </property>
+
+  <property name="BEPJournalofComplementaryandIntegrativeMedicine3">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Journal of Complementary and Integrative Medicine" />
+   <property name="title" value="Journal of Complementary and Integrative Medicine Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="jcim" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="3" />
+   </property>
+  </property>
+
+  <property name="BEPJournalofComplementaryandIntegrativeMedicine4">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Journal of Complementary and Integrative Medicine" />
+   <property name="title" value="Journal of Complementary and Integrative Medicine Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="jcim" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="4" />
+   </property>
+  </property>
+
+  <property name="BEPJournalofHomelandSecurityandEmergencyManagement1">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Journal of Homeland Security and Emergency Management" />
+   <property name="title" value="Journal of Homeland Security and Emergency Management Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="jhsem" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="1" />
+   </property>
+  </property>
+
+  <property name="BEPJournalofHomelandSecurityandEmergencyManagement2">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Journal of Homeland Security and Emergency Management" />
+   <property name="title" value="Journal of Homeland Security and Emergency Management Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="jhsem" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="2" />
+   </property>
+  </property>
+
+  <property name="BEPJournalofHomelandSecurityandEmergencyManagement3">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Journal of Homeland Security and Emergency Management" />
+   <property name="title" value="Journal of Homeland Security and Emergency Management Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="jhsem" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="3" />
+   </property>
+  </property>
+
+  <property name="BEPJournalofHomelandSecurityandEmergencyManagement4">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Journal of Homeland Security and Emergency Management" />
+   <property name="title" value="Journal of Homeland Security and Emergency Management Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="jhsem" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="4" />
+   </property>
+  </property>
+
+  <property name="BEPJournalofImageryResearchinSportandPhysicalActivity1">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Journal of Imagery Research in Sport and Physical Activity" />
+   <property name="title" value="Journal of Imagery Research in Sport and Physical Activity Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="jirspa" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="1" />
+   </property>
+  </property>
+
+  <property name="BEPJournalofImageryResearchinSportandPhysicalActivity2">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Journal of Imagery Research in Sport and Physical Activity" />
+   <property name="title" value="Journal of Imagery Research in Sport and Physical Activity Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="jirspa" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="2" />
+   </property>
+  </property>
+
+  <property name="BEPJournalofIndustrialOrganizationEducation1">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Journal of Industrial Organization Education" />
+   <property name="title" value="Journal of Industrial Organization Education Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="jioe" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="1" />
+   </property>
+  </property>
+
+  <property name="BEPJournalofQuantitativeAnalysisinSports1">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Journal of Quantitative Analysis in Sports" />
+   <property name="title" value="Journal of Quantitative Analysis in Sports Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="jqas" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="1" />
+   </property>
+  </property>
+
+  <property name="BEPJournalofQuantitativeAnalysisinSports2">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Journal of Quantitative Analysis in Sports" />
+   <property name="title" value="Journal of Quantitative Analysis in Sports Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="jqas" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="2" />
+   </property>
+  </property>
+
+  <property name="BEPJournalofQuantitativeAnalysisinSports3">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Journal of Quantitative Analysis in Sports" />
+   <property name="title" value="Journal of Quantitative Analysis in Sports Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="jqas" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="3" />
+   </property>
+  </property>
+
+  <property name="BEPJournalofTortLaw1">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Journal of Tort Law" />
+   <property name="title" value="Journal of Tort Law Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="jtl" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="1" />
+   </property>
+  </property>
+
+  <property name="BEPMuslimWorldJournalofHumanRights1">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Muslim World Journal of Human Rights" />
+   <property name="title" value="Muslim World Journal of Human Rights Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="mwjhr" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="1" />
+   </property>
+  </property>
+
+  <property name="BEPMuslimWorldJournalofHumanRights2">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Muslim World Journal of Human Rights" />
+   <property name="title" value="Muslim World Journal of Human Rights Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="mwjhr" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="2" />
+   </property>
+  </property>
+
+  <property name="BEPMuslimWorldJournalofHumanRights3">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Muslim World Journal of Human Rights" />
+   <property name="title" value="Muslim World Journal of Human Rights Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="mwjhr" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="3" />
+   </property>
+  </property>
+
+  <property name="BEPPeaceEconomicsPeaceScienceandPublicPolicy1">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Peace Economics, Peace Science and Public Policy" />
+   <property name="title" value="Peace Economics, Peace Science and Public Policy Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="peps" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="1" />
+   </property>
+  </property>
+
+  <property name="BEPPeaceEconomicsPeaceScienceandPublicPolicy2">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Peace Economics, Peace Science and Public Policy" />
+   <property name="title" value="Peace Economics, Peace Science and Public Policy Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="peps" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="2" />
+   </property>
+  </property>
+
+  <property name="BEPPeaceEconomicsPeaceScienceandPublicPolicy3">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Peace Economics, Peace Science and Public Policy" />
+   <property name="title" value="Peace Economics, Peace Science and Public Policy Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="peps" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="3" />
+   </property>
+  </property>
+
+  <property name="BEPPeaceEconomicsPeaceScienceandPublicPolicy4">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Peace Economics, Peace Science and Public Policy" />
+   <property name="title" value="Peace Economics, Peace Science and Public Policy Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="peps" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="4" />
+   </property>
+  </property>
+
+  <property name="BEPPeaceEconomicsPeaceScienceandPublicPolicy5">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Peace Economics, Peace Science and Public Policy" />
+   <property name="title" value="Peace Economics, Peace Science and Public Policy Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="peps" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="5" />
+   </property>
+  </property>
+
+  <property name="BEPPeaceEconomicsPeaceScienceandPublicPolicy6">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Peace Economics, Peace Science and Public Policy" />
+   <property name="title" value="Peace Economics, Peace Science and Public Policy Volume 6" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="peps" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="6" />
+   </property>
+  </property>
+
+  <property name="BEPPeaceEconomicsPeaceScienceandPublicPolicy7">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Peace Economics, Peace Science and Public Policy" />
+   <property name="title" value="Peace Economics, Peace Science and Public Policy Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="peps" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="7" />
+   </property>
+  </property>
+
+  <property name="BEPPeaceEconomicsPeaceScienceandPublicPolicy8">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Peace Economics, Peace Science and Public Policy" />
+   <property name="title" value="Peace Economics, Peace Science and Public Policy Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="peps" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="8" />
+   </property>
+  </property>
+
+  <property name="BEPPeaceEconomicsPeaceScienceandPublicPolicy9">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Peace Economics, Peace Science and Public Policy" />
+   <property name="title" value="Peace Economics, Peace Science and Public Policy Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="peps" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="9" />
+   </property>
+  </property>
+
+  <property name="BEPPeaceEconomicsPeaceScienceandPublicPolicy10">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Peace Economics, Peace Science and Public Policy" />
+   <property name="title" value="Peace Economics, Peace Science and Public Policy Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="peps" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="10" />
+   </property>
+  </property>
+
+  <property name="BEPPeaceEconomicsPeaceScienceandPublicPolicy11">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Peace Economics, Peace Science and Public Policy" />
+   <property name="title" value="Peace Economics, Peace Science and Public Policy Volume 11" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="peps" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="11" />
+   </property>
+  </property>
+
+  <property name="BEPPeaceEconomicsPeaceScienceandPublicPolicy12">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Peace Economics, Peace Science and Public Policy" />
+   <property name="title" value="Peace Economics, Peace Science and Public Policy Volume 12" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="peps" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="12" />
+   </property>
+  </property>
+
+  <property name="BEPReviewofLawandEconomics1">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Review of Law &amp; Economics" />
+   <property name="title" value="Review of Law &amp; Economics Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="rle" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="1" />
+   </property>
+  </property>
+
+  <property name="BEPReviewofLawandEconomics2">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Review of Law &amp; Economics" />
+   <property name="title" value="Review of Law &amp; Economics Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="rle" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="2" />
+   </property>
+  </property>
+
+  <property name="BEPReviewofLawandEconomics3">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Review of Law &amp; Economics" />
+   <property name="title" value="Review of Law &amp; Economics Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="rle" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="3" />
+   </property>
+  </property>
+
+  <property name="BEPReviewofMarketingScience1">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Review of Marketing Science" />
+   <property name="title" value="Review of Marketing Science Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="romsjournal" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="1" />
+   </property>
+  </property>
+
+  <property name="BEPReviewofMarketingScience2">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Review of Marketing Science" />
+   <property name="title" value="Review of Marketing Science Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="romsjournal" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="2" />
+   </property>
+  </property>
+
+  <property name="BEPReviewofMarketingScience3">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Review of Marketing Science" />
+   <property name="title" value="Review of Marketing Science Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="romsjournal" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="3" />
+   </property>
+  </property>
+
+  <property name="BEPReviewofMarketingScience4">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Review of Marketing Science" />
+   <property name="title" value="Review of Marketing Science Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="romsjournal" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="4" />
+   </property>
+  </property>
+
+  <property name="BEPReviewofMarketingScience5">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Review of Marketing Science" />
+   <property name="title" value="Review of Marketing Science Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="romsjournal" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="5" />
+   </property>
+  </property>
+
+  <property name="BEPReviewofMiddleEastFinance1">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Review of Middle East Finance" />
+   <property name="title" value="Review of Middle East Finance Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="rmeef" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="1" />
+   </property>
+  </property>
+
+  <property name="BEPReviewofMiddleEastFinance2">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Review of Middle East Finance" />
+   <property name="title" value="Review of Middle East Finance Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="rmeef" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="2" />
+   </property>
+  </property>
+
+  <property name="BEPReviewofMiddleEastFinance3">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Review of Middle East Finance" />
+   <property name="title" value="Review of Middle East Finance Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="rmeef" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="3" />
+   </property>
+  </property>
+
+  <property name="BEPStatisticalApplicationsinGeneticsandMolecularBiology1">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Statistical Applications in Genetics and Molecular Biology" />
+   <property name="title" value="Statistical Applications in Genetics and Molecular Biology Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="sagmb" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="1" />
+   </property>
+  </property>
+
+  <property name="BEPStatisticalApplicationsinGeneticsandMolecularBiology2">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Statistical Applications in Genetics and Molecular Biology" />
+   <property name="title" value="Statistical Applications in Genetics and Molecular Biology Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="sagmb" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="2" />
+   </property>
+  </property>
+
+  <property name="BEPStatisticalApplicationsinGeneticsandMolecularBiology3">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Statistical Applications in Genetics and Molecular Biology" />
+   <property name="title" value="Statistical Applications in Genetics and Molecular Biology Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="sagmb" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="3" />
+   </property>
+  </property>
+
+  <property name="BEPStatisticalApplicationsinGeneticsandMolecularBiology4">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Statistical Applications in Genetics and Molecular Biology" />
+   <property name="title" value="Statistical Applications in Genetics and Molecular Biology Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="sagmb" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="4" />
+   </property>
+  </property>
+
+  <property name="BEPStatisticalApplicationsinGeneticsandMolecularBiology5">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Statistical Applications in Genetics and Molecular Biology" />
+   <property name="title" value="Statistical Applications in Genetics and Molecular Biology Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="sagmb" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="5" />
+   </property>
+  </property>
+
+  <property name="BEPStatisticalApplicationsinGeneticsandMolecularBiology6">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Statistical Applications in Genetics and Molecular Biology" />
+   <property name="title" value="Statistical Applications in Genetics and Molecular Biology Volume 6" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="sagmb" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="6" />
+   </property>
+  </property>
+
+  <property name="BEPStudiesinNonlinearDynamicsandEconometrics1">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Studies in Nonlinear Dynamics &amp; Econometrics" />
+   <property name="title" value="Studies in Nonlinear Dynamics &amp; Econometrics Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="snde" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="1" />
+   </property>
+  </property>
+
+  <property name="BEPStudiesinNonlinearDynamicsandEconometrics2">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Studies in Nonlinear Dynamics &amp; Econometrics" />
+   <property name="title" value="Studies in Nonlinear Dynamics &amp; Econometrics Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="snde" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="2" />
+   </property>
+  </property>
+
+  <property name="BEPStudiesinNonlinearDynamicsandEconometrics3">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Studies in Nonlinear Dynamics &amp; Econometrics" />
+   <property name="title" value="Studies in Nonlinear Dynamics &amp; Econometrics Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="snde" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="3" />
+   </property>
+  </property>
+
+  <property name="BEPStudiesinNonlinearDynamicsandEconometrics4">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Studies in Nonlinear Dynamics &amp; Econometrics" />
+   <property name="title" value="Studies in Nonlinear Dynamics &amp; Econometrics Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="snde" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="4" />
+   </property>
+  </property>
+
+  <property name="BEPStudiesinNonlinearDynamicsandEconometrics5">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Studies in Nonlinear Dynamics &amp; Econometrics" />
+   <property name="title" value="Studies in Nonlinear Dynamics &amp; Econometrics Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="snde" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="5" />
+   </property>
+  </property>
+
+  <property name="BEPStudiesinNonlinearDynamicsandEconometrics6">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Studies in Nonlinear Dynamics &amp; Econometrics" />
+   <property name="title" value="Studies in Nonlinear Dynamics &amp; Econometrics Volume 6" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="snde" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="6" />
+   </property>
+  </property>
+
+  <property name="BEPStudiesinNonlinearDynamicsandEconometrics7">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Studies in Nonlinear Dynamics &amp; Econometrics" />
+   <property name="title" value="Studies in Nonlinear Dynamics &amp; Econometrics Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="snde" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="7" />
+   </property>
+  </property>
+
+  <property name="BEPStudiesinNonlinearDynamicsandEconometrics8">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Studies in Nonlinear Dynamics &amp; Econometrics" />
+   <property name="title" value="Studies in Nonlinear Dynamics &amp; Econometrics Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="snde" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="8" />
+   </property>
+  </property>
+
+  <property name="BEPStudiesinNonlinearDynamicsandEconometrics9">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Studies in Nonlinear Dynamics &amp; Econometrics" />
+   <property name="title" value="Studies in Nonlinear Dynamics &amp; Econometrics Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="snde" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="9" />
+   </property>
+  </property>
+
+  <property name="BEPStudiesinNonlinearDynamicsandEconometrics10">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Studies in Nonlinear Dynamics &amp; Econometrics" />
+   <property name="title" value="Studies in Nonlinear Dynamics &amp; Econometrics Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="snde" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="10" />
+   </property>
+  </property>
+
+  <property name="BEPStudiesinNonlinearDynamicsandEconometrics11">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Studies in Nonlinear Dynamics &amp; Econometrics" />
+   <property name="title" value="Studies in Nonlinear Dynamics &amp; Econometrics Volume 11" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="snde" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="11" />
+   </property>
+  </property>
+
+  <property name="BEPTheoreticalInquiriesinLaw1">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Theoretical Inquiries in Law" />
+   <property name="title" value="Theoretical Inquiries in Law Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="til" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="1" />
+   </property>
+  </property>
+
+  <property name="BEPTheoreticalInquiriesinLaw2">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Theoretical Inquiries in Law" />
+   <property name="title" value="Theoretical Inquiries in Law Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="til" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="2" />
+   </property>
+  </property>
+
+  <property name="BEPTheoreticalInquiriesinLaw3">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Theoretical Inquiries in Law" />
+   <property name="title" value="Theoretical Inquiries in Law Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="til" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="3" />
+   </property>
+  </property>
+
+  <property name="BEPTheoreticalInquiriesinLaw4">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Theoretical Inquiries in Law" />
+   <property name="title" value="Theoretical Inquiries in Law Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="til" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="4" />
+   </property>
+  </property>
+
+  <property name="BEPTheoreticalInquiriesinLaw5">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Theoretical Inquiries in Law" />
+   <property name="title" value="Theoretical Inquiries in Law Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="til" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="5" />
+   </property>
+  </property>
+
+  <property name="BEPTheoreticalInquiriesinLaw6">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Theoretical Inquiries in Law" />
+   <property name="title" value="Theoretical Inquiries in Law Volume 6" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="til" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="6" />
+   </property>
+  </property>
+
+  <property name="BEPTheoreticalInquiriesinLaw7">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Theoretical Inquiries in Law" />
+   <property name="title" value="Theoretical Inquiries in Law Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="til" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="7" />
+   </property>
+  </property>
+
+  <property name="BEPTheoreticalInquiriesinLaw8">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Theoretical Inquiries in Law" />
+   <property name="title" value="Theoretical Inquiries in Law Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="til" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="8" />
+   </property>
+  </property>
+
+  <property name="BEPWorldPoliticalScienceReview1">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="World Political Science Review" />
+   <property name="title" value="World Political Science Review Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="wpsr" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="1" />
+   </property>
+  </property>
+
+  <property name="BEPWorldPoliticalScienceReview2">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="World Political Science Review" />
+   <property name="title" value="World Political Science Review Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="wpsr" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="2" />
+   </property>
+  </property>
+
+  <property name="BEPWorldPoliticalScienceReview3">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="World Political Science Review" />
+   <property name="title" value="World Political Science Review Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="wpsr" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="3" />
+   </property>
+  </property>
+
+ </property>
+</lockss-config>
+
